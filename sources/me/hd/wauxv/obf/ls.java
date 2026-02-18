@@ -83,7 +83,7 @@ public final /* synthetic */ class ls implements bfu {
                 return linkedHashMap.isEmpty() ? ave.a : linkedHashMap;
             case 4:
                 ayc aycVar = new ayc((String) ((dov) ((io) this.b).c).getValue(), (String) this.c);
-                String strZ = cnb.z(-29381871270698L);
+                String strZ = "WAuxiliary" /* cnb.z(-29381871270698L) */;
                 if (strZ.length() == 0) {
                     throw new NoSuchElementException("Char sequence is empty.");
                 }
@@ -132,24 +132,24 @@ public final /* synthetic */ class ls implements bfu {
                 cee ceeVar2 = (cee) this.b;
                 View view = (View) this.c;
                 String strValueOf = String.valueOf(ceeVar2.c.getText());
-                if (dnr.bi(strValueOf, cnb.z(-513020958604074L))) {
+                if (dnr.bi(strValueOf, "@chatroom" /* cnb.z(-513020958604074L) */)) {
                     Context context = view.getContext();
                     Intent intent = new Intent();
-                    intent.setClassName(context, cnb.z(-89438398970666L));
-                    intent.putExtra(cnb.z(-95253784689450L), strValueOf);
+                    intent.setClassName(context, "com.tencent.mm.chatroom.ui.ChatroomInfoUI" /* cnb.z(-89438398970666L) */);
+                    intent.putExtra("RoomInfo_Id" /* cnb.z(-95253784689450L) */, strValueOf);
                     context.startActivity(intent);
                 } else {
                     Context context2 = view.getContext();
                     Intent intent2 = new Intent();
-                    intent2.setClassName(context2, cnb.z(-89111981456170L));
-                    intent2.putExtra(cnb.z(-89442693937962L), strValueOf);
+                    intent2.setClassName(context2, "com.tencent.mm.plugin.profile.ui.ContactInfoUI" /* cnb.z(-89111981456170L) */);
+                    intent2.putExtra("Contact_User" /* cnb.z(-89442693937962L) */, strValueOf);
                     context2.startActivity(intent2);
                 }
                 return ens.a;
             case 7:
                 cua cuaVar = (cua) this.b;
                 ctx ctxVar = (ctx) this.c;
-                cnd.ar(cuaVar).j(R.id.codeFragment, bht.r(new csm(cnb.z(-418085001493290L), ctxVar.f), new csm(cnb.z(-417994807180074L), ctxVar.b.getAbsolutePath())));
+                cnd.ar(cuaVar).j(R.id.codeFragment, bht.r(new csm("pluginId" /* cnb.z(-418085001493290L) */, ctxVar.f), new csm("pluginPath" /* cnb.z(-417994807180074L) */, ctxVar.b.getAbsolutePath())));
                 return ens.a;
             case 8:
                 return ((dap) this.b).d((CharSequence) this.c);

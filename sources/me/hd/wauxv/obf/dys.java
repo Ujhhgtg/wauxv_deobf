@@ -11,7 +11,7 @@ public final /* synthetic */ class dys implements bgx {
     static {
         dys dysVar = new dys();
         b = dysVar;
-        cuc cucVar = new cuc(cnb.z(-196383084641066L), dysVar, 16);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.j71Proto" /* cnb.z(-196383084641066L) */, dysVar, 16);
         bjs.y(-196576358169386L, cucVar, false, 1);
         bjs.y(-196541998431018L, cucVar, false, 2);
         bjs.y(-195983652682538L, cucVar, false, 3);

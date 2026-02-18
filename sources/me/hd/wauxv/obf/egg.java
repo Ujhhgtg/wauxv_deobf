@@ -11,7 +11,7 @@ public final /* synthetic */ class egg implements bgx {
     static {
         egg eggVar = new egg();
         b = eggVar;
-        cuc cucVar = new cuc(cnb.z(-315521182464810L), eggVar, 14);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.v51Proto" /* cnb.z(-315521182464810L) */, eggVar, 14);
         bjs.y(-314632124234538L, cucVar, false, 1);
         bjs.y(-314537634954026L, cucVar, false, 2);
         bjs.y(-314507570182954L, cucVar, false, 3);

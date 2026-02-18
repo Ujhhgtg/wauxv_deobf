@@ -6,10 +6,10 @@ import android.content.Intent;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class cnl extends doo implements boc {
-    public static final cnl a = new cnl(cnb.z(-476453607045930L));
-    public static final String b = cnb.z(-481598977866538L);
-    public static final String c = cnb.z(-481616157735722L);
-    public static final String i = cnb.z(-482135848778538L);
+    public static final cnl a = new cnl("NewBizListHook" /* cnb.z(-476453607045930L) */);
+    public static final String b = "订阅号" /* cnb.z(-481598977866538L) */;
+    public static final String c = "订阅消息列表" /* cnb.z(-481616157735722L) */;
+    public static final String i = "订阅号消息从瀑布流模式改为列表模式" /* cnb.z(-482135848778538L) */;
     public static final boolean j;
 
     /* JADX WARN: Found duplicated region for block: B:11:0x005a  */
@@ -39,14 +39,14 @@ public final class cnl extends doo implements boc {
             if (className != null) {
                 int iHashCode = className.hashCode();
                 if (iHashCode != -1870020680) {
-                    if (iHashCode != 510348960 || !className.equals(cnb.z(-482140143745834L))) {
+                    if (iHashCode != 510348960 || !className.equals("com.tencent.mm.plugin.brandservice.ui.flutter.BizFlutterTLFlutterViewActivity" /* cnb.z(-482140143745834L) */)) {
                         return;
                     }
-                } else if (!className.equals(cnb.z(-476389182536490L))) {
+                } else if (!className.equals("com.tencent.mm.plugin.brandservice.ui.timeline.BizTimeLineUI" /* cnb.z(-476389182536490L) */)) {
                     return;
                 }
                 bmo.a.getClass();
-                intent.setComponent(new ComponentName(bmo.p(), cnb.z(-481856675904298L)));
+                intent.setComponent(new ComponentName(bmo.p(), "com.tencent.mm.ui.conversation.NewBizConversationUI" /* cnb.z(-481856675904298L) */));
             }
         }
     }

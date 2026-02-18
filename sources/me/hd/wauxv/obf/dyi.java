@@ -100,7 +100,7 @@ public final class dyi {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-209100482804522L));
+        sb.append("gt1Proto(docId=" /* cnb.z(-209100482804522L) */);
         yg.u(sb, this.a, -209031763327786L);
         yg.u(sb, this.b, -208975928752938L);
         yg.u(sb, this.c, -208941569014570L);

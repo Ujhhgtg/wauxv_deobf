@@ -62,7 +62,7 @@ public final class duk {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-299041392950058L));
+        sb.append("StreamvideoProto(streamvideourl=" /* cnb.z(-299041392950058L) */);
         yg.u(sb, this.a, -298899659029290L);
         bjs.w(sb, this.b, -298796579814186L);
         yg.u(sb, this.c, -298203874327338L);

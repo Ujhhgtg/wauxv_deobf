@@ -148,7 +148,7 @@ public final class eei {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-266927922477866L));
+        sb.append("sc1Proto(reward_product_id=" /* cnb.z(-266927922477866L) */);
         yg.u(sb, this.a, -266223547841322L);
         bjs.w(sb, this.b, -266167713266474L);
         yg.u(sb, this.c, -266605799930666L);
@@ -172,16 +172,16 @@ public final class eei {
         yg.u(sb, this.u, -264539920661290L);
         dkz.ad(sb, this.v, -264484086086442L);
         sb.append(this.w);
-        sb.append(cnb.z(-264939352619818L));
+        sb.append(", description=" /* cnb.z(-264939352619818L) */);
         yg.u(sb, this.x, -264857748241194L);
         sb.append(this.y);
-        sb.append(cnb.z(-264784733797162L));
+        sb.append(", need_unlock=" /* cnb.z(-264784733797162L) */);
         dts.g(sb, this.z, -264771848895274L);
         dts.g(sb, this.aa, -264097539029802L);
         sb.append(this.ab);
-        sb.append(cnb.z(-263994459814698L));
+        sb.append(", switch_skin_info=" /* cnb.z(-263994459814698L) */);
         sb.append(this.ac);
-        sb.append(cnb.z(-263942920207146L));
+        sb.append(", custom_gift_info=" /* cnb.z(-263942920207146L) */);
         sb.append(this.ad);
         sb.append(')');
         return sb.toString();

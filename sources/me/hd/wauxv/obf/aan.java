@@ -11,7 +11,7 @@ import me.hd.wauxv.R;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class aan extends bgr implements bgk {
-    public static final aan a = new aan(3, bdp.class, cnb.z(-420816600693546L), cnb.z(-420782240955178L), 0);
+    public static final aan a = new aan(3, bdp.class, "inflate" /* cnb.z(-420816600693546L) */, "inflate(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Z)Lme/hd/wauxv/databinding/FragmentCodeBinding;" /* cnb.z(-420782240955178L) */, 0);
 
     @Override // me.hd.wauxv.obf.bgk
     public final Object b(Object obj, Object obj2, Object obj3) {
@@ -30,6 +30,6 @@ public final /* synthetic */ class aan extends bgr implements bgk {
                 return new bdp((CoordinatorLayout) viewInflate, codeEditor, materialToolbar);
             }
         }
-        throw new NullPointerException(cnb.z(-634886360660778L).concat(viewInflate.getResources().getResourceName(i)));
+        throw new NullPointerException("Missing required view with ID: " /* cnb.z(-634886360660778L) */.concat(viewInflate.getResources().getResourceName(i)));
     }
 }

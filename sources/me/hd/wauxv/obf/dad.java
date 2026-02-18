@@ -6,10 +6,10 @@ import org.luckypray.dexkit.DexKitBridge;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class dad extends doo implements bng {
-    public static final dad a = new dad(cnb.z(-538838007020330L));
-    public static final String b = cnb.z(-536793602587434L);
-    public static final String c = cnb.z(-536797897554730L);
-    public static final String i = cnb.z(-536767832783658L);
+    public static final dad a = new dad("RedPacketDetailHook" /* cnb.z(-538838007020330L) */);
+    public static final String b = "红包" /* cnb.z(-536793602587434L) */;
+    public static final String c = "红包页面详情" /* cnb.z(-536797897554730L) */;
+    public static final String i = "红包领取页面显示更加详细的领取情况" /* cnb.z(-536767832783658L) */;
 
     @Override // me.hd.wauxv.obf.bmf
     public final void e() {
@@ -24,7 +24,7 @@ public final class dad extends doo implements bng {
         for (Class cls : aba.ag(declaringClass, emn.ba(clr.a).getDeclaringClass())) {
             int i2 = bte.a;
             cde cdeVarT = dqc.bi(cls).t();
-            cdeVarT.ab = cnb.z(-540848051714858L);
+            cdeVarT.ab = "onGYNetEnd" /* cnb.z(-540848051714858L) */;
             aki akiVarAd = dadVar.ad((cdk) dkz.n(new Object[]{dal.b(Integer.TYPE), dal.b(String.class), dal.b(JSONObject.class)}, 3, cdeVarT), exg.a);
             dadVar.y(akiVarAd, new cvc(17));
             akiVarAd.o();

@@ -3,5 +3,5 @@ package me.hd.wauxv.obf;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class cso extends amn {
-    public static final cso a = new cso(cnb.z(-474718440258346L));
+    public static final cso a = new cso("PanelEmojiHook.MethodAddAllGroupItems" /* cnb.z(-474718440258346L) */);
 }

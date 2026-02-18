@@ -22,9 +22,9 @@ public final class dgi extends LinearLayout {
         LinearLayout linearLayout = new LinearLayout(context);
         linearLayout.setOrientation(0);
         linearLayout.setLayoutParams(new LinearLayout.LayoutParams(-1, -2));
-        linearLayout.addView(b(0, cnb.z(-60760902335274L)));
-        linearLayout.addView(b(1, cnb.z(-60782377171754L)));
-        linearLayout.addView(b(2, cnb.z(-57969173592874L)));
+        linearLayout.addView(b(0, "普通" /* cnb.z(-60760902335274L) */));
+        linearLayout.addView(b(1, "插件" /* cnb.z(-60782377171754L) */));
+        linearLayout.addView(b(2, "开发" /* cnb.z(-57969173592874L) */));
         addView(linearLayout);
         addView(frameLayout);
     }

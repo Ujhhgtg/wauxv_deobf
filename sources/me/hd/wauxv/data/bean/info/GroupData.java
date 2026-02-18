@@ -219,13 +219,13 @@ public final class GroupData {
 
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-14491219655466L));
+        sb.append("GroupData(roomId=" /* cnb.z(-14491219655466L) */);
         yg.u(sb, this.roomId, -14431090113322L);
         yg.v(sb, this.memberIds, -14340895800106L);
         yg.v(sb, this.memberNames, -14826227104554L);
         dkz.ac(sb, this.memberCount, -14744622725930L);
         sb.append(this.membersHash);
-        sb.append(cnb.z(-14680198216490L));
+        sb.append(", mineRoomName=" /* cnb.z(-14680198216490L) */);
         yg.u(sb, this.mineRoomName, -14611478739754L);
         yg.u(sb, this.owner, -14572824034090L);
         yg.u(sb, this.notice, -3002182138666L);

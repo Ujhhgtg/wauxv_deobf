@@ -40,7 +40,7 @@ public final class dtn {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-224227357621034L));
+        sb.append("LiteappInfoProto(appId=" /* cnb.z(-224227357621034L) */);
         yg.u(sb, this.a, -224124278405930L);
         yg.u(sb, this.b, -224089918667562L);
         return bjs.q(sb, this.c, ')');

@@ -9,7 +9,7 @@ public final /* synthetic */ class dul implements bgx {
     static {
         dul dulVar = new dul();
         b = dulVar;
-        cuc cucVar = new cuc(cnb.z(-313807490513706L), dulVar, 2);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.VideoColdDLRuleProto" /* cnb.z(-313807490513706L) */, dulVar, 2);
         bjs.y(-301820236790570L, cucVar, false, 1);
         bjs.y(-301850301561642L, cucVar, false, 2);
         descriptor = cucVar;

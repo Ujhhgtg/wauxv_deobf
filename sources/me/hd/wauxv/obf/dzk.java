@@ -11,7 +11,7 @@ public final /* synthetic */ class dzk implements bgx {
     static {
         dzk dzkVar = new dzk();
         b = dzkVar;
-        cuc cucVar = new cuc(cnb.z(-201528455461674L), dzkVar, 1);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.kl1Proto" /* cnb.z(-201528455461674L) */, dzkVar, 1);
         bjs.y(-198491913583402L, cucVar, false, 1);
         descriptor = cucVar;
     }

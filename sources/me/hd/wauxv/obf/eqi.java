@@ -39,7 +39,7 @@ public final class eqi extends cyw {
             if (materialTextView != null) {
                 return new eqd(new bqq((LinearLayout) viewInflate, materialTextView, 1));
             }
-            throw new NullPointerException(cnb.z(-641620869380906L).concat(viewInflate.getResources().getResourceName(R.id.itemHeaderViewTextViewTitle)));
+            throw new NullPointerException("Missing required view with ID: " /* cnb.z(-641620869380906L) */.concat(viewInflate.getResources().getResourceName(R.id.itemHeaderViewTextViewTitle)));
         }
         if (i != 1) {
             if (i == 2) {
@@ -48,7 +48,7 @@ public final class eqi extends cyw {
             if (i == 3) {
                 return new eqe(bqs.g(LayoutInflater.from(viewGroup.getContext()), viewGroup), 0);
             }
-            throw new IllegalArgumentException(cnb.z(-394325242411818L));
+            throw new IllegalArgumentException("onCreateViewHolder Failed" /* cnb.z(-394325242411818L) */);
         }
         View viewInflate2 = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_rv_view_content, viewGroup, false);
         int i2 = R.id.itemContentViewImageViewNav;
@@ -64,7 +64,7 @@ public final class eqi extends cyw {
                 }
             }
         }
-        throw new NullPointerException(cnb.z(-641758308334378L).concat(viewInflate2.getResources().getResourceName(i2)));
+        throw new NullPointerException("Missing required view with ID: " /* cnb.z(-641758308334378L) */.concat(viewInflate2.getResources().getResourceName(i2)));
     }
 
     @Override // me.hd.wauxv.obf.cyw

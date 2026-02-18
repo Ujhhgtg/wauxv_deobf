@@ -44,7 +44,7 @@ public final class eha {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-299445119875882L));
+        sb.append("vq5Proto(d=" /* cnb.z(-299445119875882L) */);
         bjs.w(sb, this.a, -299359220529962L);
         bjs.w(sb, this.b, -299372105431850L);
         bjs.w(sb, this.c, -300982718167850L);

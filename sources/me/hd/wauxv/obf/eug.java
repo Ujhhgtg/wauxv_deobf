@@ -41,15 +41,15 @@ public final class eug extends doi implements bgj {
         bhu.bd(obj);
         long jCurrentTimeMillis = System.currentTimeMillis() - this.a;
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-58819577117482L));
+        sb.append("载入 " /* cnb.z(-58819577117482L) */);
         int i = this.e;
         sb.append(i + 1);
         sb.append('/');
         List list = this.f;
         sb.append(list.size());
-        sb.append(cnb.z(-58768037509930L));
+        sb.append(", 耗时 " /* cnb.z(-58768037509930L) */);
         sb.append(jCurrentTimeMillis);
-        sb.append(cnb.z(-58725087836970L));
+        sb.append("ms" /* cnb.z(-58725087836970L) */);
         this.d.setText(sb.toString());
         this.o.setProgress(((i + 1) * 100) / list.size());
         return ens.a;

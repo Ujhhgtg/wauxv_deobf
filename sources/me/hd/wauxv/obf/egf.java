@@ -62,7 +62,7 @@ public final class egf {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-308997127142186L));
+        sb.append("v40Proto(support_custom_text=" /* cnb.z(-308997127142186L) */);
         dts.g(sb, this.a, -309400854068010L);
         bjs.w(sb, this.b, -309340724525866L);
         bjs.v(sb, this.c, -309302069820202L);

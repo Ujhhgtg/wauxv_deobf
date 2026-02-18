@@ -72,7 +72,7 @@ public final class efa {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-296069275581226L));
+        sb.append("t10Proto(d=" /* cnb.z(-296069275581226L) */);
         yg.u(sb, this.a, -284438504143658L);
         bjs.w(sb, this.b, -284451389045546L);
         yg.u(sb, this.c, -284412734339882L);

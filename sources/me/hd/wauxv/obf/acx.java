@@ -10,9 +10,9 @@ public final class acx extends bws implements bng {
 
     public static String b() {
         Object objInvoke = emn.bb(acw.a).invoke(null, null);
-        bzo.o(objInvoke, cnb.z(-107949708016426L));
-        Object obj = ((Map) objInvoke).get(cnb.z(-108233175857962L));
-        bzo.o(obj, cnb.z(-108121506708266L));
+        bzo.o(objInvoke, "null cannot be cast to non-null type kotlin.collections.Map<*, *>" /* cnb.z(-107949708016426L) */);
+        Object obj = ((Map) objInvoke).get("login_weixin_username" /* cnb.z(-108233175857962L) */);
+        bzo.o(obj, "null cannot be cast to non-null type kotlin.String" /* cnb.z(-108121506708266L) */);
         return (String) obj;
     }
 

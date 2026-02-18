@@ -679,9 +679,9 @@ public abstract class cmz {
     public static String z() {
         Integer numValueOf;
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-119443040500522L));
-        String strZ = cnb.z(-122110215191338L);
-        String strZ2 = cnb.z(-122539711920938L);
+        sb.append("mm" /* cnb.z(-119443040500522L) */);
+        String strZ = "system_config_prefs" /* cnb.z(-122110215191338L) */;
+        String strZ2 = "default_uin" /* cnb.z(-122539711920938L) */;
         bmo.a.getClass();
         SharedPreferences sharedPreferences = bmo.n().getSharedPreferences(strZ, 0);
         zc zcVarB = dal.b(Integer.class);
@@ -689,7 +689,7 @@ public abstract class cmz {
         if (zcVarB.equals(dal.b(String.class))) {
             Object string2 = sharedPreferences.getString(strZ2, null);
             if (string2 == null) {
-                throw new NullPointerException(cnb.z(-122522532051754L));
+                throw new NullPointerException("null cannot be cast to non-null type kotlin.Int" /* cnb.z(-122522532051754L) */);
             }
             numValueOf = (Integer) string2;
         } else if (zcVarB.equals(dal.b(Integer.TYPE))) {
@@ -700,21 +700,21 @@ public abstract class cmz {
             numValueOf = (Integer) Float.valueOf(sharedPreferences.getFloat(strZ2, 0.0f));
         } else {
             if (!zcVarB.equals(dal.b(Long.TYPE))) {
-                throw new IllegalArgumentException(cnb.z(-119567594552106L));
+                throw new IllegalArgumentException("Unsupported type" /* cnb.z(-119567594552106L) */);
             }
             numValueOf = (Integer) Long.valueOf(sharedPreferences.getLong(strZ2, 0L));
         }
         sb.append(numValueOf.intValue());
         byte[] bytes = sb.toString().getBytes(uj.a);
-        bzo.p(bytes, cnb.z(-80569291504426L));
+        bzo.p(bytes, "getBytes(...)" /* cnb.z(-80569291504426L) */);
         try {
-            MessageDigest messageDigest = MessageDigest.getInstance(cnb.z(-47145856006954L));
+            MessageDigest messageDigest = MessageDigest.getInstance("MD5" /* cnb.z(-47145856006954L) */);
             messageDigest.update(bytes);
             byte[] bArrDigest = messageDigest.digest();
             StringBuffer stringBuffer = new StringBuffer();
             for (byte b2 : bArrDigest) {
                 String upperCase = Integer.toHexString(b2 & 255).toUpperCase(Locale.getDefault());
-                bzo.p(upperCase, cnb.z(-47218870450986L));
+                bzo.p(upperCase, "toUpperCase(...)" /* cnb.z(-47218870450986L) */);
                 if (upperCase.length() < 2) {
                     stringBuffer.append(0);
                 }
@@ -726,11 +726,11 @@ public abstract class cmz {
         }
         bzo.n(string);
         String lowerCase = string.toLowerCase(Locale.ROOT);
-        bzo.p(lowerCase, cnb.z(-119447335467818L));
+        bzo.p(lowerCase, "toLowerCase(...)" /* cnb.z(-119447335467818L) */);
         StringBuilder sb2 = new StringBuilder();
         bmo.a.getClass();
         sb2.append(bmo.n().getDataDir().getAbsolutePath());
-        sb2.append(cnb.z(-119391500892970L));
+        sb2.append("/MicroMsg/" /* cnb.z(-119391500892970L) */);
         sb2.append(lowerCase);
         sb2.append('/');
         return sb2.toString();

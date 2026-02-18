@@ -3,13 +3,13 @@ package me.hd.wauxv.obf;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes2.dex */
 public final class crp extends doo implements bny {
-    public static final crp a = new crp(cnb.z(-619729421073194L));
-    public static final String b = cnb.z(-620042953685802L);
-    public static final String c = cnb.z(-619922694601514L);
+    public static final crp a = new crp("OpenWayEnhanceVideo" /* cnb.z(-619729421073194L) */);
+    public static final String b = "测试-配置修复-v62-openWay" /* cnb.z(-620042953685802L) */;
+    public static final String c = "视频菜单加入打开方式" /* cnb.z(-619922694601514L) */;
 
     @Override // me.hd.wauxv.obf.bny
     public final void d(bmm bmmVar, String str) {
-        if (z() && str.equals(cnb.z(-619677881465642L))) {
+        if (z() && str.equals("RepairerConfig_OpenWayEnhanceVideo_Int" /* cnb.z(-619677881465642L) */)) {
             bmmVar.h(1);
         }
     }

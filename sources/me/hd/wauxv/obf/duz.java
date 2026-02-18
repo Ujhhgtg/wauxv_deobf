@@ -62,7 +62,7 @@ public final class duz {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-155941672581930L));
+        sb.append("a22Proto(latitudeString=" /* cnb.z(-155941672581930L) */);
         yg.u(sb, this.a, -155284542585642L);
         yg.u(sb, this.b, -155237297945386L);
         yg.u(sb, this.c, -155138513697578L);

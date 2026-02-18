@@ -9,7 +9,7 @@ public abstract class doo extends bmf {
     public final String[] ai = {ewi.a.e};
 
     public doo(String str) {
-        this.af = str.concat(cnb.z(-50770808404778L));
+        this.af = str.concat(".enabled" /* cnb.z(-50770808404778L) */);
     }
 
     @Override // me.hd.wauxv.obf.bmf
@@ -28,7 +28,7 @@ public abstract class doo extends bmf {
     public final void aj(boolean z) {
         io ioVar = cnf.ah;
         if (ioVar == null) {
-            throw new IllegalArgumentException(cnb.z(-5763846109994L).toString());
+            throw new IllegalArgumentException("DefaultConfig must be init" /* cnb.z(-5763846109994L) */.toString());
         }
         ioVar.at(this.af, z);
     }
@@ -55,6 +55,6 @@ public abstract class doo extends bmf {
         if (ioVar != null) {
             return ioVar.ah(this.af, false);
         }
-        throw new IllegalArgumentException(cnb.z(-5763846109994L).toString());
+        throw new IllegalArgumentException("DefaultConfig must be init" /* cnb.z(-5763846109994L) */.toString());
     }
 }

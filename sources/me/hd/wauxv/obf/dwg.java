@@ -71,7 +71,7 @@ public final class dwg {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-161726993529642L));
+        sb.append("cp1Proto(live_ad_id=" /* cnb.z(-161726993529642L) */);
         yg.u(sb, this.b, -162169375161130L);
         dkz.ad(sb, this.c, -162096360717098L);
         dkz.ad(sb, this.d, -161988986534698L);

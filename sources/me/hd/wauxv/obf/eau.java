@@ -9,7 +9,7 @@ public final /* synthetic */ class eau implements bgx {
     static {
         eau eauVar = new eau();
         b = eauVar;
-        cuc cucVar = new cuc(cnb.z(-229213814651690L), eauVar, 3);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.mg5Proto" /* cnb.z(-229213814651690L) */, eauVar, 3);
         bjs.y(-230506599807786L, cucVar, false, 1);
         bjs.y(-230467945102122L, cucVar, false, 2);
         bjs.y(-230446470265642L, cucVar, false, 3);

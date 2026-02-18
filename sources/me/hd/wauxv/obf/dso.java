@@ -44,7 +44,7 @@ public final class dso {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-147248658774826L));
+        sb.append("AppMsgProto(appid=" /* cnb.z(-147248658774826L) */);
         yg.u(sb, this.a, -147184234265386L);
         yg.u(sb, this.b, -147115514788650L);
         yg.u(sb, this.c, -146488449563434L);

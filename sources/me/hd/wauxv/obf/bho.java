@@ -73,13 +73,13 @@ public final class bho extends doi implements bgj {
                     if (objB != null) {
                         return (String) objB;
                     }
-                    throw new NullPointerException(cnb.z(-44667659877162L));
+                    throw new NullPointerException("null cannot be cast to non-null type kotlin.String" /* cnb.z(-44667659877162L) */);
                 } catch (NetException e) {
                     throw e;
                 } catch (CancellationException e2) {
                     throw e2;
                 } catch (Throwable th) {
-                    throw new ConvertException(responseExecute, cnb.z(-44946832751402L), th, null, 8, null);
+                    throw new ConvertException(responseExecute, "An unexpected error occurred in the converter" /* cnb.z(-44946832751402L) */, th, null, 8, null);
                 }
             case 1:
                 bhu.bd(obj);
@@ -98,13 +98,13 @@ public final class bho extends doi implements bgj {
                     if (objB2 != null) {
                         return (String) objB2;
                     }
-                    throw new NullPointerException(cnb.z(-482006999759658L));
+                    throw new NullPointerException("null cannot be cast to non-null type kotlin.String" /* cnb.z(-482006999759658L) */);
                 } catch (NetException e3) {
                     throw e3;
                 } catch (CancellationException e4) {
                     throw e4;
                 } catch (Throwable th2) {
-                    throw new ConvertException(responseExecute2, cnb.z(-483454403738410L), th2, null, 8, null);
+                    throw new ConvertException(responseExecute2, "An unexpected error occurred in the converter" /* cnb.z(-483454403738410L) */, th2, null, 8, null);
                 }
             default:
                 bhu.bd(obj);
@@ -123,13 +123,13 @@ public final class bho extends doi implements bgj {
                     if (objB3 != null) {
                         return (String) objB3;
                     }
-                    throw new NullPointerException(cnb.z(-483583252757290L));
+                    throw new NullPointerException("null cannot be cast to non-null type kotlin.String" /* cnb.z(-483583252757290L) */);
                 } catch (NetException e5) {
                     throw e5;
                 } catch (CancellationException e6) {
                     throw e6;
                 } catch (Throwable th3) {
-                    throw new ConvertException(responseExecute3, cnb.z(-482848813349674L), th3, null, 8, null);
+                    throw new ConvertException(responseExecute3, "An unexpected error occurred in the converter" /* cnb.z(-482848813349674L) */, th3, null, 8, null);
                 }
         }
     }

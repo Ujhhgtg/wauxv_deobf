@@ -27,18 +27,18 @@ public final class bbj extends doo implements bnp {
     public static final ayz m;
 
     static {
-        cnb.z(-550666346953514L);
-        cnb.z(-550640577149738L);
-        cnb.z(-550614807345962L);
-        cnb.z(-549970562251562L);
-        a = new bbj(cnb.z(-553153133017898L));
+        "#FFF7F7F7" /* cnb.z(-550666346953514L) */;
+        "#FF1E1E1E" /* cnb.z(-550640577149738L) */;
+        "#FF1E1E1E" /* cnb.z(-550614807345962L) */;
+        "#FFF7F7F7" /* cnb.z(-549970562251562L) */;
+        a = new bbj("FloatActionButtonHook" /* cnb.z(-553153133017898L) */);
         dov dovVar = ctf.a;
-        b = ctf.c(cnb.z(-48086453844778L), cnb.z(-48047799139114L));
-        c = aba.ag(new bbe(cnb.z(-549944792447786L), cnb.z(-549949087415082L), cnb.z(-549884662905642L), 0, cnb.z(-549846008199978L)), new bbe(cnb.z(-550228260289322L), cnb.z(-550176720681770L), cnb.z(-550159540812586L), 1, cnb.z(-550120886106922L)), new bbe(cnb.z(-551546815249194L), cnb.z(-551563995118378L), cnb.z(-551495275641642L), 2, cnb.z(-551473800805162L)), new bbe(cnb.z(-551722908908330L), cnb.z(-551740088777514L), cnb.z(-551113023552298L), 3, cnb.z(-551074368846634L)), new bbe(cnb.z(-551379311524650L), cnb.z(-551383606491946L), cnb.z(-551314887015210L), 4, cnb.z(-551293412178730L)), new bbe(cnb.z(-574705278909226L), cnb.z(-574726753745706L), cnb.z(-574649444334378L), 5, cnb.z(-574610789628714L)), new bbe(cnb.z(-575005926619946L), cnb.z(-574967271914282L), cnb.z(-574877077601066L), 6, cnb.z(-574902847404842L)));
+        b = ctf.c("Resource" /* cnb.z(-48086453844778L) */, "Fab" /* cnb.z(-48047799139114L) */);
+        c = aba.ag(new bbe("设置" /* cnb.z(-549944792447786L) */, "ic_setting.png" /* cnb.z(-549949087415082L) */, "activity" /* cnb.z(-549884662905642L) */, 0, "me.hd.wauxv.ui.activity.ModuleActivity" /* cnb.z(-549846008199978L) */), new bbe("扫一扫" /* cnb.z(-550228260289322L) */, "ic_scan.png" /* cnb.z(-550176720681770L) */, "activity" /* cnb.z(-550159540812586L) */, 1, "com.tencent.mm.plugin.scanner.ui.BaseScanUI" /* cnb.z(-550120886106922L) */), new bbe("朋友圈" /* cnb.z(-551546815249194L) */, "ic_timeline.png" /* cnb.z(-551563995118378L) */, "activity" /* cnb.z(-551495275641642L) */, 2, "com.tencent.mm.plugin.sns.ui.improve.ImproveSnsTimelineUI" /* cnb.z(-551473800805162L) */), new bbe("视频号" /* cnb.z(-551722908908330L) */, "ic_finder.png" /* cnb.z(-551740088777514L) */, "activity" /* cnb.z(-551113023552298L) */, 3, "com.tencent.mm.plugin.finder.ui.FinderHomeAffinityUI" /* cnb.z(-551074368846634L) */), new bbe("收藏" /* cnb.z(-551379311524650L) */, "ic_favorite.png" /* cnb.z(-551383606491946L) */, "activity" /* cnb.z(-551314887015210L) */, 4, "com.tencent.mm.plugin.fav.ui.FavoriteIndexUI" /* cnb.z(-551293412178730L) */), new bbe("钱包" /* cnb.z(-574705278909226L) */, "ic_wallet.png" /* cnb.z(-574726753745706L) */, "activity" /* cnb.z(-574649444334378L) */, 5, "com.tencent.mm.plugin.mall.ui.MallIndexUIv2" /* cnb.z(-574610789628714L) */), new bbe("清空未读" /* cnb.z(-575005926619946L) */, "ic_clear.png" /* cnb.z(-574967271914282L) */, "wauxv" /* cnb.z(-574877077601066L) */, 6, "clearUnreadCount" /* cnb.z(-574902847404842L) */));
         h = new dov(new amd(5));
-        i = cnb.z(-574778293353258L);
-        j = cnb.z(-574782588320554L);
-        l = cnb.z(-574202767735594L);
+        i = "界面" /* cnb.z(-574778293353258L) */;
+        j = "悬浮动作按钮" /* cnb.z(-574782588320554L) */;
+        l = "为主界面右下角添加一个悬浮动作按钮" /* cnb.z(-574202767735594L) */;
         m = new ayz(24);
     }
 
@@ -70,7 +70,7 @@ public final class bbj extends doo implements bnp {
     public final void t(Activity activity, ViewGroup viewGroup, Object obj) {
         if (z()) {
             ViewParent parent = viewGroup.getParent();
-            bzo.o(parent, cnb.z(-553449485761322L));
+            bzo.o(parent, "null cannot be cast to non-null type android.view.ViewGroup" /* cnb.z(-553449485761322L) */);
             ViewGroup viewGroup2 = (ViewGroup) parent;
             a.getClass();
             io ioVar = new io(viewGroup2, (List) h.getValue(), 18, false);

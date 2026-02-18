@@ -20,21 +20,21 @@ public final class qo extends doo {
     public static final boolean s;
 
     static {
-        cnb.z(-439323614772010L);
-        cnb.z(-439259190262570L);
-        cnb.z(-439280665099050L);
-        cnb.z(-439284960066346L);
-        a = new qo(cnb.z(-438546225691434L));
+        "微信" /* cnb.z(-439323614772010L) */;
+        "通讯" /* cnb.z(-439259190262570L) */;
+        "发现" /* cnb.z(-439280665099050L) */;
+        "我的" /* cnb.z(-439284960066346L) */;
+        a = new qo("BottomTabCustomHook" /* cnb.z(-438546225691434L) */);
         dov dovVar = ctf.a;
-        b = ctf.c(cnb.z(-46621869996842L), cnb.z(-46531675683626L));
+        b = ctf.c("Resource" /* cnb.z(-46621869996842L) */, "BottomTab" /* cnb.z(-46531675683626L) */);
         c = new dov(new h(8));
         d = new dov(new h(9));
         h = new dov(new h(10));
         i = new dov(new h(11));
         j = new dov(new h(12));
-        l = cnb.z(-439787471239978L);
-        m = cnb.z(-439791766207274L);
-        n = cnb.z(-439748816534314L);
+        l = "美化" /* cnb.z(-439787471239978L) */;
+        m = "底栏自定义" /* cnb.z(-439791766207274L) */;
+        n = "替换主页底部标签栏相关资源为自定义" /* cnb.z(-439748816534314L) */;
         r = new mj(11);
         s = true;
     }

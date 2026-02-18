@@ -40,7 +40,7 @@ public final class PolicyFragment extends bdo {
     public CountDownTimer l;
 
     static {
-        cnb.z(-412097817082666L);
+        "policyAcceptKey" /* cnb.z(-412097817082666L) */;
         a = new cbm(10);
         b = new dov(new cfh(17));
     }
@@ -63,7 +63,7 @@ public final class PolicyFragment extends bdo {
         Bundle bundle = this.ax;
         dov dovVar = b;
         cbm cbmVar = a;
-        if (bundle != null && bundle.getBoolean(cnb.z(-419072843971370L), false)) {
+        if (bundle != null && bundle.getBoolean("showOnly" /* cnb.z(-419072843971370L) */, false)) {
             eqj eqjVar = this.d;
             bzo.n(eqjVar);
             MaterialTextView materialTextView = ((bew) eqjVar).c;
@@ -71,7 +71,7 @@ public final class PolicyFragment extends bdo {
             materialTextView.setText(Html.fromHtml((String) dovVar.getValue(), 63));
             eqj eqjVar2 = this.d;
             bzo.n(eqjVar2);
-            ((bew) eqjVar2).b.setText(cnb.z(-419051369134890L));
+            ((bew) eqjVar2).b.setText("你已阅读并同意以上协议" /* cnb.z(-419051369134890L) */);
             eqj eqjVar3 = this.d;
             bzo.n(eqjVar3);
             ((bew) eqjVar3).b.setEnabled(true);
@@ -81,10 +81,10 @@ public final class PolicyFragment extends bdo {
             return;
         }
         cbmVar.getClass();
-        String strZ = cnb.z(-419652664556330L);
+        String strZ = "policyAcceptKey" /* cnb.z(-419652664556330L) */;
         io ioVar = cnf.ah;
         if (ioVar == null) {
-            throw new IllegalArgumentException(cnb.z(-5763846109994L).toString());
+            throw new IllegalArgumentException("DefaultConfig must be init" /* cnb.z(-5763846109994L) */.toString());
         }
         if (ioVar.aj().getInt(strZ, 0) != ((String) dovVar.getValue()).hashCode()) {
             eqj eqjVar5 = this.d;
@@ -96,12 +96,12 @@ public final class PolicyFragment extends bdo {
             return;
         }
         Context contextDc = dc();
-        String strZ2 = cnb.z(-72331544230698L);
+        String strZ2 = "68393b1dbc47b67d83776862" /* cnb.z(-72331544230698L) */;
         bmo.a.getClass();
-        UMConfigure.init(contextDc, strZ2, bmo.o(), 1, cnb.z(-71691594103594L));
+        UMConfigure.init(contextDc, strZ2, bmo.o(), 1, "" /* cnb.z(-71691594103594L) */);
         eui.a.getClass();
         if (eui.c()) {
-            String strZ3 = cnb.z(-71687299136298L);
+            String strZ3 = "wx" /* cnb.z(-71687299136298L) */;
             acx.a.getClass();
             MobclickAgent.onProfileSignIn(strZ3, acx.b());
             cnd.ar(this).j(R.id.action_policyFragment_to_moduleNavFragment, null);
@@ -109,10 +109,10 @@ public final class PolicyFragment extends bdo {
         }
         bzy bzyVar = new bzy(dc());
         eg egVar = (eg) bzyVar.d;
-        egVar.d = cnb.z(-418965469788970L);
-        egVar.f = cnb.z(-418969764756266L);
-        bzyVar.t(cnb.z(-419450801093418L), new amw(new cfh(18), 0));
-        bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar, cnb.z(-47455093652266L));
+        egVar.d = "提示" /* cnb.z(-418965469788970L) */;
+        egVar.f = "核心模块异常, 是否重启加载?" /* cnb.z(-418969764756266L) */;
+        bzyVar.t("确定" /* cnb.z(-419450801093418L) */, new amw(new cfh(18), 0));
+        bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar, "取消" /* cnb.z(-47455093652266L) */);
         egVar.m = false;
         bzyVar.i().show();
     }

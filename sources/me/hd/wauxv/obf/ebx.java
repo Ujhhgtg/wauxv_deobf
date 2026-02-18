@@ -32,7 +32,7 @@ public final class ebx {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-257079562468138L));
+        sb.append("nl1Proto(screen_orientation=" /* cnb.z(-257079562468138L) */);
         return bjs.p(sb, this.a, ')');
     }
 }

@@ -44,7 +44,7 @@ public final class ehy {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-332731116419882L));
+        sb.append("wq0Proto(highest_reward=" /* cnb.z(-332731116419882L) */);
         dkz.ad(sb, this.a, -332623742237482L);
         bjs.w(sb, this.b, -333053238967082L);
         yg.u(sb, this.c, -332997404392234L);

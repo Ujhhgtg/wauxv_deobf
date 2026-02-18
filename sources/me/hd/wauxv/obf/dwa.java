@@ -36,7 +36,7 @@ public final class dwa {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-175032802212650L));
+        sb.append("ca2Proto(url=" /* cnb.z(-175032802212650L) */);
         yg.u(sb, this.a, -175024212278058L);
         return bjs.q(sb, this.b, ')');
     }

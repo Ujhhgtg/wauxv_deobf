@@ -34,6 +34,6 @@ public final class dzs {
     }
 
     public final String toString() {
-        return cnb.z(-222694054296362L) + this.b + ')';
+        return "l23Proto(mic_contacts=" /* cnb.z(-222694054296362L) */ + this.b + ')';
     }
 }

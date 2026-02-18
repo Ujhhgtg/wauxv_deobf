@@ -9,8 +9,8 @@ public final /* synthetic */ class aym implements bgx {
     static {
         aym aymVar = new aym();
         b = aymVar;
-        cuc cucVar = new cuc(cnb.z(-123497489627946L), aymVar, 1);
-        cucVar.x(cnb.z(-124850404326186L), false);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.FavInfoProto.ChatInfoProto" /* cnb.z(-123497489627946L) */, aymVar, 1);
+        cucVar.x("senderId" /* cnb.z(-124850404326186L) */, false);
         cucVar.y(new aoz(2, 2));
         descriptor = cucVar;
     }

@@ -9,7 +9,7 @@ public final /* synthetic */ class edo implements bgx {
     static {
         edo edoVar = new edo();
         b = edoVar;
-        cuc cucVar = new cuc(cnb.z(-275517857069866L), edoVar, 2);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.qg1Proto" /* cnb.z(-275517857069866L) */, edoVar, 2);
         bjs.y(-275728310467370L, cucVar, false, 1);
         bjs.y(-275152784849706L, cucVar, false, 2);
         descriptor = cucVar;

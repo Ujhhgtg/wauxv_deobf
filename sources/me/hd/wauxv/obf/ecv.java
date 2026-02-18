@@ -48,9 +48,9 @@ public final class ecv {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-248816045390634L));
+        sb.append("or5Proto(tmpl_version_info=" /* cnb.z(-248816045390634L) */);
         sb.append(this.a);
-        sb.append(cnb.z(-250379413486378L));
+        sb.append(", tmpl_type=" /* cnb.z(-250379413486378L) */);
         bjs.w(sb, this.b, -250289219173162L);
         yg.u(sb, this.c, -250229089631018L);
         bjs.w(sb, this.d, -250654291393322L);

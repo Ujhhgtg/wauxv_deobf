@@ -11,7 +11,7 @@ public final /* synthetic */ class dxi implements bgx {
     static {
         dxi dxiVar = new dxi();
         b = dxiVar;
-        cuc cucVar = new cuc(cnb.z(-190202626702122L), dxiVar, 7);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.ff1Proto" /* cnb.z(-190202626702122L) */, dxiVar, 7);
         bjs.y(-189313568471850L, cucVar, false, 1);
         bjs.y(-189227669125930L, cucVar, false, 2);
         bjs.y(-189193309387562L, cucVar, false, 3);

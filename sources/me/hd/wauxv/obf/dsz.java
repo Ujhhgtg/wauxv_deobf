@@ -13,7 +13,7 @@ public final /* synthetic */ class dsz implements bgx {
     static {
         dsz dszVar = new dsz();
         b = dszVar;
-        cuc cucVar = new cuc(cnb.z(-190597763693354L), dszVar, 28);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.FinderFeedProto" /* cnb.z(-190597763693354L) */, dszVar, 28);
         bjs.y(-178735064021802L, cucVar, false, 1);
         bjs.y(-179194625522474L, cucVar, false, 2);
         bjs.y(-179155970816810L, cucVar, false, 3);

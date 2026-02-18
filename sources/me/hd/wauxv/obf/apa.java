@@ -9,14 +9,14 @@ public final /* synthetic */ class apa implements bgx {
     static {
         apa apaVar = new apa();
         b = apaVar;
-        cuc cucVar = new cuc(cnb.z(-338443422923562L), apaVar, 4);
-        cucVar.x(cnb.z(-337597314366250L), false);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.proto.DisturbSetting" /* cnb.z(-338443422923562L) */, apaVar, 4);
+        cucVar.x("NightSetting" /* cnb.z(-337597314366250L) */, false);
         cucVar.y(new aoz(1, 0));
-        cucVar.x(cnb.z(-338074055736106L), false);
+        cucVar.x("NightTime" /* cnb.z(-338074055736106L) */, false);
         cucVar.y(new aoz(2, 0));
-        cucVar.x(cnb.z(-338048285932330L), false);
+        cucVar.x("AllDaySetting" /* cnb.z(-338048285932330L) */, false);
         cucVar.y(new aoz(3, 0));
-        cucVar.x(cnb.z(-337970976521002L), false);
+        cucVar.x("AllDayTime" /* cnb.z(-337970976521002L) */, false);
         cucVar.y(new aoz(4, 0));
         descriptor = cucVar;
     }

@@ -80,19 +80,19 @@ public final class CodeFragment extends bdo {
         String strZ2;
         String strSubstring;
         Bundle bundle = this.ax;
-        if (bundle == null || (strZ = bundle.getString(cnb.z(-420846665464618L))) == null) {
-            strZ = cnb.z(-420258254945066L);
+        if (bundle == null || (strZ = bundle.getString("pluginId" /* cnb.z(-420846665464618L) */)) == null) {
+            strZ = "" /* cnb.z(-420258254945066L) */;
         }
         Bundle bundle2 = this.ax;
-        if (bundle2 == null || (strZ2 = bundle2.getString(cnb.z(-420271139846954L))) == null) {
-            strZ2 = cnb.z(-420241075075882L);
+        if (bundle2 == null || (strZ2 = bundle2.getString("pluginPath" /* cnb.z(-420271139846954L) */)) == null) {
+            strZ2 = "" /* cnb.z(-420241075075882L) */;
         }
         eqj eqjVar = this.d;
         bzo.n(eqjVar);
         MaterialToolbar materialToolbar = ((bdp) eqjVar).c;
         materialToolbar.setTitle(strZ);
         dov dovVar = ctf.a;
-        String strC = ctf.c(cnb.z(-47055661693738L));
+        String strC = ctf.c("Plugin" /* cnb.z(-47055661693738L) */);
         bzo.q(strC, "delimiter");
         int iAl = dnj.al(6, strZ2, strC);
         if (iAl == -1) {
@@ -102,7 +102,7 @@ public final class CodeFragment extends bdo {
             bzo.p(strSubstring, "substring(...)");
         }
         materialToolbar.setSubtitle(strSubstring);
-        MenuItem menuItemAdd = materialToolbar.getMenu().add(cnb.z(-420253959977770L));
+        MenuItem menuItemAdd = materialToolbar.getMenu().add("撤销" /* cnb.z(-420253959977770L) */);
         menuItemAdd.setShowAsAction(2);
         final int i = 0;
         menuItemAdd.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener(this) { // from class: me.hd.wauxv.obf.aal
@@ -129,7 +129,7 @@ public final class CodeFragment extends bdo {
                 return true;
             }
         });
-        MenuItem menuItemAdd2 = materialToolbar.getMenu().add(cnb.z(-420189535468330L));
+        MenuItem menuItemAdd2 = materialToolbar.getMenu().add("重做" /* cnb.z(-420189535468330L) */);
         menuItemAdd2.setShowAsAction(2);
         final int i2 = 1;
         menuItemAdd2.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener(this) { // from class: me.hd.wauxv.obf.aal
@@ -156,13 +156,13 @@ public final class CodeFragment extends bdo {
                 return true;
             }
         });
-        MenuItem menuItemAdd3 = materialToolbar.getMenu().add(cnb.z(-420211010304810L));
+        MenuItem menuItemAdd3 = materialToolbar.getMenu().add("保存" /* cnb.z(-420211010304810L) */);
         menuItemAdd3.setShowAsAction(2);
         menuItemAdd3.setOnMenuItemClickListener(new aam(strZ2, 0, this));
         eqj eqjVar2 = this.d;
         bzo.n(eqjVar2);
         CodeEditor codeEditor = ((bdp) eqjVar2).b;
-        codeEditor.setTypefaceText(Typeface.createFromAsset(codeEditor.getContext().getAssets(), cnb.z(-420215305272106L)));
+        codeEditor.setTypefaceText(Typeface.createFromAsset(codeEditor.getContext().getAssets(), "font/mono.ttf" /* cnb.z(-420215305272106L) */));
         codeEditor.setEditorLanguage(new brd());
         codeEditor.setText(bad.c(new File(strZ2)));
     }

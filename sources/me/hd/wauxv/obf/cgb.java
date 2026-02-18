@@ -15,13 +15,13 @@ public final class cgb extends doo implements bng {
     public static final bzk l;
 
     static {
-        cnb.z(-470277444074282L);
-        cnb.z(-470200134662954L);
-        a = new cgb(cnb.z(-469491465059114L));
-        b = aba.ag(cnb.z(-470178659826474L), cnb.z(-470092760480554L), cnb.z(-470058400742186L));
-        c = cnb.z(-470590976686890L);
-        i = cnb.z(-470526552177450L);
-        j = cnb.z(-470496487406378L);
+        "${sendText}喵~" /* cnb.z(-470277444074282L) */;
+        "HH:mm:ss" /* cnb.z(-470200134662954L) */;
+        a = new cgb("MsgFormatHook" /* cnb.z(-469491465059114L) */);
+        b = aba.ag("${sendText}" /* cnb.z(-470178659826474L) */, "${line}" /* cnb.z(-470092760480554L) */, "${sendTime}" /* cnb.z(-470058400742186L) */);
+        c = "聊天" /* cnb.z(-470590976686890L) */;
+        i = "发送文本格式" /* cnb.z(-470526552177450L) */;
+        j = "将聊天发送的文本进行自定义格式处理" /* cnb.z(-470496487406378L) */;
         l = new bzk(16);
     }
 

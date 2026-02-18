@@ -48,9 +48,9 @@ public final class dvx {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-174113679211306L));
+        sb.append("bf1Proto(mic_contact=" /* cnb.z(-174113679211306L) */);
         sb.append(this.a);
-        sb.append(cnb.z(-174002010061610L));
+        sb.append(", mic_type=" /* cnb.z(-174002010061610L) */);
         bjs.w(sb, this.b, -175634097634090L);
         yg.u(sb, this.c, -175518133517098L);
         yg.u(sb, this.d, -175505248615210L);

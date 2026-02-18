@@ -10,7 +10,7 @@ public final class xj extends bws implements bng {
 
     public static String b(String str, String str2) throws IllegalAccessException, InvocationTargetException {
         Object objInvoke = emn.bb(xi.a).invoke(null, str, str2);
-        bzo.o(objInvoke, cnb.z(-99454262704938L));
+        bzo.o(objInvoke, "null cannot be cast to non-null type kotlin.String" /* cnb.z(-99454262704938L) */);
         return (String) objInvoke;
     }
 

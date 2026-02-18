@@ -15,7 +15,7 @@ public final class bml {
     public static final HookEntry c;
 
     static {
-        cnb.z(-77412490541866L);
+        "me.hd.wauxv" /* cnb.z(-77412490541866L) */;
         a = new bml();
         c = HookEntry.a;
     }
@@ -37,13 +37,13 @@ public final class bml {
         if (!z2) {
             try {
                 c.getClass();
-                cna.d = cnb.z(-71829033057066L);
+                cna.d = "WAuxiliary" /* cnb.z(-71829033057066L) */;
                 cnb.k = false;
             } catch (Throwable th) {
                 objX = bhu.x(th);
             }
             if (!exm.b && exm.g != null) {
-                ewq.g(4, cnb.z(-77674483546922L), null);
+                ewq.g(4, "You cannot load a hooker in \"onInit\" or \"onXposedEvent\" method! Aborted" /* cnb.z(-77674483546922L) */, null);
                 return;
             }
             blx blxVar2 = new blx(4);
@@ -57,7 +57,7 @@ public final class bml {
             objX = objX3;
             Throwable thB = dcy.b(objX);
             if (thB != null) {
-                ewq.g(4, cnb.z(-77915001715498L), thB);
+                ewq.g(4, "YukiHookAPI try to load hook entry class failed" /* cnb.z(-77915001715498L) */, thB);
             }
         }
         bmk bmkVar2 = bmk.b;

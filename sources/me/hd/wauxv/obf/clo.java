@@ -32,7 +32,7 @@ public final /* synthetic */ class clo implements bgf {
             case 0:
                 bag bagVar = (bag) obj;
                 zb zbVar = new zb();
-                zbVar.k(cnb.z(-113838108179242L), cnb.z(-114310554581802L));
+                zbVar.k("MicroMsg.ChatroomMembersLogic" /* cnb.z(-113838108179242L) */, "/cgi-bin/micromsg-bin/delchatroommember" /* cnb.z(-114310554581802L) */);
                 bagVar.getClass();
                 bagVar.b = zbVar;
                 return ens.a;
@@ -58,11 +58,11 @@ public final /* synthetic */ class clo implements bgf {
                 return ens.a;
             case 3:
                 bag bagVar2 = (bag) obj;
-                String[] strArr = {cnb.z(-113335597005610L)};
+                String[] strArr = {"com.tencent.mm.plugin.luckymoney.model" /* cnb.z(-113335597005610L) */};
                 bagVar2.getClass();
                 bagVar2.a = la.ab(strArr);
                 zb zbVar2 = new zb();
-                zbVar2.k(cnb.z(-113700669225770L), cnb.z(-113571820206890L));
+                zbVar2.k("MicroMsg.NetSceneLuckyMoneyDetail" /* cnb.z(-113700669225770L) */, "/cgi-bin/mmpay-bin/qrydetailwxhb" /* cnb.z(-113571820206890L) */);
                 bagVar2.b = zbVar2;
                 return ens.a;
             case 4:
@@ -99,7 +99,7 @@ public final /* synthetic */ class clo implements bgf {
             case 7:
                 bag bagVar3 = (bag) obj;
                 zb zbVar3 = new zb();
-                zbVar3.k(cnb.z(-111037789502250L), cnb.z(-110857400875818L));
+                zbVar3.k("MicroMsg.NetSceneInviteChatRoomMember" /* cnb.z(-111037789502250L) */, "/cgi-bin/micromsg-bin/invitechatroommember" /* cnb.z(-110857400875818L) */);
                 bagVar3.getClass();
                 bagVar3.b = zbVar3;
                 return ens.a;
@@ -127,7 +127,7 @@ public final /* synthetic */ class clo implements bgf {
             case 10:
                 bah bahVar4 = (bah) obj;
                 cdj cdjVar4 = new cdj();
-                cdjVar4.t(cnb.z(-110436494080810L));
+                cdjVar4.t("/cgi-bin/micromsg-bin/modifycontactlabellist" /* cnb.z(-110436494080810L) */);
                 cls10 = LinkedList.class;
                 Class<LinkedList> clsBf13 = cnf.bf(dal.b(cls10));
                 cdjVar4.q(clsBf13 != null ? clsBf13 : LinkedList.class);
@@ -142,7 +142,7 @@ public final /* synthetic */ class clo implements bgf {
             case 12:
                 bag bagVar4 = (bag) obj;
                 zb zbVar4 = new zb();
-                zbVar4.k(cnb.z(-111609020152618L), cnb.z(-112051401784106L), cnb.z(-111926847732522L));
+                zbVar4.k("MicroMsg.NetSceneSendMsg" /* cnb.z(-111609020152618L) */, "/cgi-bin/micromsg-bin/newsendmsg" /* cnb.z(-112051401784106L) */, "NetSceneSendMsg:MsgSource:%s" /* cnb.z(-111926847732522L) */);
                 bagVar4.getClass();
                 bagVar4.b = zbVar4;
                 return ens.a;
@@ -176,11 +176,11 @@ public final /* synthetic */ class clo implements bgf {
                 return ens.a;
             case 15:
                 bag bagVar5 = (bag) obj;
-                String[] strArr2 = {cnb.z(-111583250348842L)};
+                String[] strArr2 = {"com.tencent.mm.plugin.luckymoney.model" /* cnb.z(-111583250348842L) */};
                 bagVar5.getClass();
                 bagVar5.a = la.ab(strArr2);
                 zb zbVar5 = new zb();
-                zbVar5.k(cnb.z(-111398566755114L), cnb.z(-134900627798826L));
+                zbVar5.k("MicroMsg.NetSceneOpenLuckyMoney" /* cnb.z(-111398566755114L) */, "/cgi-bin/mmpay-bin/openwxhb" /* cnb.z(-134900627798826L) */);
                 bagVar5.b = zbVar5;
                 return ens.a;
             case 16:
@@ -216,7 +216,7 @@ public final /* synthetic */ class clo implements bgf {
             case 19:
                 bah bahVar7 = (bah) obj;
                 cdj cdjVar7 = new cdj();
-                cdjVar7.t(cnb.z(-136305082104618L), cnb.z(-136189117987626L), cnb.z(-136098923674410L));
+                cdjVar7.t("MicroMsg.NetSceneQueue" /* cnb.z(-136305082104618L) */, "forbid in waiting: type=" /* cnb.z(-136189117987626L) */, "forbid in running: type=" /* cnb.z(-136098923674410L) */);
                 bahVar7.getClass();
                 bahVar7.d = cdjVar7;
                 return ens.a;
@@ -227,10 +227,10 @@ public final /* synthetic */ class clo implements bgf {
                 cdjVar8.o(emn.bb(cmc.a).getDeclaringClass());
                 fj fjVar = new fj();
                 cdj cdjVar9 = new cdj();
-                cdjVar9.t(cnb.z(-135441793678122L), cnb.z(-135244225182506L));
+                cdjVar9.t("MicroMsg.BigBallSysCmdMsgConsumer" /* cnb.z(-135441793678122L) */, "summercck emotionkv pcKeyStr len:%d, content[%s] pcId[%s]" /* cnb.z(-135244225182506L) */);
                 fjVar.f(cdjVar9);
                 cdj cdjVar10 = new cdj();
-                cdjVar10.t(cnb.z(-135562052762410L), cnb.z(-132718784412458L));
+                cdjVar10.t("MicroMsg.CommandProcessor" /* cnb.z(-135562052762410L) */, "summer processed log level[%s], need open debug ret false" /* cnb.z(-132718784412458L) */);
                 fjVar.f(cdjVar10);
                 cdjVar8.j = fjVar;
                 bahVar8.getClass();
@@ -243,11 +243,11 @@ public final /* synthetic */ class clo implements bgf {
                 return ens.a;
             case 22:
                 bag bagVar6 = (bag) obj;
-                String[] strArr3 = {cnb.z(-132778913954602L)};
+                String[] strArr3 = {"com.tencent.mm.plugin.luckymoney.model" /* cnb.z(-132778913954602L) */};
                 bagVar6.getClass();
                 bagVar6.a = la.ab(strArr3);
                 zb zbVar6 = new zb();
-                zbVar6.k(cnb.z(-132061654416170L), cnb.z(-132478266243882L));
+                zbVar6.k("MicroMsg.NetSceneReceiveLuckyMoney" /* cnb.z(-132061654416170L) */, "/cgi-bin/mmpay-bin/receivewxhb" /* cnb.z(-132478266243882L) */);
                 bagVar6.b = zbVar6;
                 return ens.a;
             case 23:
@@ -283,11 +283,11 @@ public final /* synthetic */ class clo implements bgf {
                 return ens.a;
             case 25:
                 bag bagVar7 = (bag) obj;
-                String[] strArr4 = {cnb.z(-133659382250282L)};
+                String[] strArr4 = {"com.tencent.mm.plugin.remittance.model" /* cnb.z(-133659382250282L) */};
                 bagVar7.getClass();
                 bagVar7.a = la.ab(strArr4);
                 zb zbVar7 = new zb();
-                zbVar7.k(cnb.z(-134024454470442L), cnb.z(-133298604997418L), cnb.z(-133156871076650L));
+                zbVar7.k("Micromsg.NetSceneTenpayRemittanceGen" /* cnb.z(-134024454470442L) */, "/cgi-bin/mmpay-bin/f2fplaceorder" /* cnb.z(-133298604997418L) */, "/cgi-bin/mmpay-bin/transferplaceorder" /* cnb.z(-133156871076650L) */);
                 bagVar7.b = zbVar7;
                 return ens.a;
             case 26:
@@ -304,11 +304,11 @@ public final /* synthetic */ class clo implements bgf {
                 return ens.a;
             case 28:
                 bag bagVar8 = (bag) obj;
-                String[] strArr5 = {cnb.z(-133320079833898L)};
+                String[] strArr5 = {"com.tencent.mm.modelsimple" /* cnb.z(-133320079833898L) */};
                 bagVar8.getClass();
                 bagVar8.a = la.ab(strArr5);
                 zb zbVar8 = new zb();
-                zbVar8.k(cnb.z(-139285789408042L), cnb.z(-139187005160234L));
+                zbVar8.k("MicroMsg.NetSceneRevokeMsg" /* cnb.z(-139285789408042L) */, "/cgi-bin/micromsg-bin/revokemsg" /* cnb.z(-139187005160234L) */);
                 bagVar8.b = zbVar8;
                 return ens.a;
             default:

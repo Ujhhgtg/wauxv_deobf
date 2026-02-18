@@ -32,7 +32,7 @@ public final class bhm implements Serializable {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-45346264709930L));
+        sb.append("VersionInfo(version=" /* cnb.z(-45346264709930L) */);
         yg.u(sb, this.a, -45221710658346L);
         dkz.ac(sb, this.b, -45217415691050L);
         return bjs.q(sb, this.c, ')');

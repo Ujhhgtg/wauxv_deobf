@@ -11,7 +11,7 @@ public final /* synthetic */ class eai implements bgx {
     static {
         eai eaiVar = new eai();
         b = eaiVar;
-        cuc cucVar = new cuc(cnb.z(-225764955913002L), eaiVar, 12);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.m40Proto" /* cnb.z(-225764955913002L) */, eaiVar, 12);
         bjs.y(-213880781404970L, cucVar, false, 1);
         bjs.y(-214400472447786L, cucVar, false, 2);
         bjs.y(-214310278134570L, cucVar, false, 3);

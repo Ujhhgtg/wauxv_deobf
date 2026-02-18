@@ -36,7 +36,7 @@ public final class Entry implements IXposedHookZygoteInit, IXposedHookLoadPackag
             return;
         }
         try {
-            String strZ = cnb.z(-77159087471402L);
+            String strZ = "me.hd.wauxv" /* cnb.z(-77159087471402L) */;
             String str = startupParam.modulePath;
             exm.a = true;
             exm.h = strZ;
@@ -58,7 +58,7 @@ public final class Entry implements IXposedHookZygoteInit, IXposedHookLoadPackag
         }
         Throwable thB = dcy.b(objX);
         if (thB != null) {
-            ewq.g(4, cnb.z(-77073188125482L), thB);
+            ewq.g(4, "An exception occurred when YukiHookAPI loading Xposed Module" /* cnb.z(-77073188125482L) */, thB);
         }
     }
 }

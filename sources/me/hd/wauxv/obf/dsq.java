@@ -12,7 +12,7 @@ public final /* synthetic */ class dsq implements bgx {
     static {
         dsq dsqVar = new dsq();
         b = dsqVar;
-        cuc cucVar = new cuc(cnb.z(-172215303666474L), dsqVar, 21);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.ContentObjProto" /* cnb.z(-172215303666474L) */, dsqVar, 21);
         bjs.y(-172447231900458L, cucVar, false, 1);
         bjs.y(-172361332554538L, cucVar, false, 2);
         bjs.y(-171738562296618L, cucVar, false, 3);

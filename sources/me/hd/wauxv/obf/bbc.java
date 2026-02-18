@@ -9,13 +9,13 @@ public final /* synthetic */ class bbc implements bgx {
     static {
         bbc bbcVar = new bbc();
         b = bbcVar;
-        cuc cucVar = new cuc(cnb.z(-552916909816618L), bbcVar, 6);
-        cucVar.x(cnb.z(-552100866030378L), false);
-        cucVar.x(cnb.z(-552113750932266L), false);
-        cucVar.x(cnb.z(-552070801259306L), false);
-        cucVar.x(cnb.z(-552032146553642L), false);
-        cucVar.x(cnb.z(-552045031455530L), false);
-        cucVar.x(cnb.z(-552014966684458L), false);
+        cuc cucVar = new cuc("wx.demo.hook.ui.FloatActionButtonHook.FabMenuItem" /* cnb.z(-552916909816618L) */, bbcVar, 6);
+        cucVar.x("desc" /* cnb.z(-552100866030378L) */, false);
+        cucVar.x("order" /* cnb.z(-552113750932266L) */, false);
+        cucVar.x("icon" /* cnb.z(-552070801259306L) */, false);
+        cucVar.x("type" /* cnb.z(-552032146553642L) */, false);
+        cucVar.x("action" /* cnb.z(-552045031455530L) */, false);
+        cucVar.x("enable" /* cnb.z(-552014966684458L) */, false);
         descriptor = cucVar;
     }
 

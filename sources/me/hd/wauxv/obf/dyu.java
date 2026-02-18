@@ -95,15 +95,15 @@ public final class dyu {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-197761769143082L));
+        sb.append("j71Proto(contact=" /* cnb.z(-197761769143082L) */);
         sb.append(this.b);
-        sb.append(cnb.z(-197701639600938L));
+        sb.append(", enableComment=" /* cnb.z(-197701639600938L) */);
         bjs.w(sb, this.c, -197027329735466L);
         bjs.w(sb, this.d, -196967200193322L);
         bjs.w(sb, this.e, -196859826010922L);
         bjs.w(sb, this.f, -197302207642410L);
         sb.append(this.g);
-        sb.append(cnb.z(-197293617707818L));
+        sb.append(", display_nickname=" /* cnb.z(-197293617707818L) */);
         yg.u(sb, this.h, -197173358623530L);
         bjs.w(sb, this.i, -197100344179498L);
         yg.u(sb, this.j, -194304320469802L);

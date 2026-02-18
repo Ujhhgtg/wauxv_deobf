@@ -64,7 +64,7 @@ public final class dzg {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-202035261602602L));
+        sb.append("kb3Proto(d=" /* cnb.z(-202035261602602L) */);
         bjs.w(sb, this.a, -201949362256682L);
         yg.u(sb, this.b, -201962247158570L);
         bjs.w(sb, this.c, -201923592452906L);

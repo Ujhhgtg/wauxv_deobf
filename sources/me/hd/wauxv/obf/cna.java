@@ -72,8 +72,8 @@ public abstract class cna {
     }
 
     public static boolean ac(byte[] bArr) {
-        byte[] bytes = cnb.z(-119301306579754L).getBytes(uj.a);
-        bzo.p(bytes, cnb.z(-119331371350826L));
+        byte[] bytes = "wxgf" /* cnb.z(-119301306579754L) */.getBytes(uj.a);
+        bzo.p(bytes, "getBytes(...)" /* cnb.z(-119331371350826L) */);
         if (bArr.length >= bytes.length) {
             Iterable bqiVar = new bqi(0, bytes.length - 1, 1);
             if (!(bqiVar instanceof Collection) || !((Collection) bqiVar).isEmpty()) {

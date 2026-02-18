@@ -74,7 +74,7 @@ public final class bhp extends doi implements bgj {
                 int i3 = this.d;
                 if (i3 == 0) {
                     bhu.bd(obj);
-                    String strZ = cnb.z(-44044889619242L);
+                    String strZ = "https://api.github.com/repos/HdShare/WAuxiliary_Public/releases/latest" /* cnb.z(-44044889619242L) */;
                     alc alcVar = aou.a;
                     akq akqVar = akq.f;
                     dob dobVar = new dob();
@@ -89,7 +89,7 @@ public final class bhp extends doi implements bgj {
                 }
                 if (i3 != 1) {
                     if (i3 != 2) {
-                        throw new IllegalStateException(cnb.z(-45801531243306L));
+                        throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine" /* cnb.z(-45801531243306L) */);
                     }
                     bhu.bd(obj);
                     return ensVar;
@@ -100,11 +100,11 @@ public final class bhp extends doi implements bgj {
                 String str = (String) this.f;
                 byx byxVar = (byx) this.o;
                 MainActivity mainActivity = (MainActivity) onCreateContextMenuListener;
-                String string = jSONObject.getString(cnb.z(-44289702755114L));
-                String string2 = jSONObject.getString(cnb.z(-45883135621930L));
-                String string3 = jSONObject.getString(cnb.z(-45861660785450L));
+                String string = jSONObject.getString("name" /* cnb.z(-44289702755114L) */);
+                String string2 = jSONObject.getString("html_url" /* cnb.z(-45883135621930L) */);
+                String string3 = jSONObject.getString("body" /* cnb.z(-45861660785450L) */);
                 bhq bhqVar = bhq.a;
-                String string4 = jSONObject.getString(cnb.z(-45805826210602L));
+                String string4 = jSONObject.getString("published_at" /* cnb.z(-45805826210602L) */);
                 bhqVar.getClass();
                 String strAg = cnh.ag(Instant.parse(string4).toEpochMilli(), null, null, 3);
                 bhl bhlVar = new bhl();
@@ -146,7 +146,7 @@ public final class bhp extends doi implements bgj {
                     bvzVar2 = bvzVar;
                 } else {
                     if (i4 != 1) {
-                        throw new IllegalStateException(cnb.z(-418836620770090L));
+                        throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine" /* cnb.z(-418836620770090L) */);
                     }
                     bvz bvzVar3 = (bvz) this.o;
                     bvzVar2 = (bvz) this.f;
@@ -158,7 +158,7 @@ public final class bhp extends doi implements bgj {
                 }
                 List<ctx> list = (List) objAk;
                 StringBuilder sb = new StringBuilder();
-                sb.append(cnb.z(-418896750312234L));
+                sb.append("插件(" /* cnb.z(-418896750312234L) */);
                 sb.append(list.size());
                 char c = ')';
                 sb.append(')');
@@ -169,7 +169,7 @@ public final class bhp extends doi implements bgj {
                     sb2.append('(');
                     String strQ = bjs.q(sb2, ctxVar.f, c);
                     StringBuilder sb3 = new StringBuilder();
-                    sb3.append(cnb.z(-418913930181418L));
+                    sb3.append("版本: " /* cnb.z(-418913930181418L) */);
                     yg.u(sb3, (String) ctxVar.i.getValue(), -418858095606570L);
                     sb3.append((String) ctxVar.j.getValue());
                     bvzVar.add(new oa(strQ, sb3.toString(), ctxVar, new aeh(cuaVar, i2, ctxVar)));
@@ -202,7 +202,7 @@ public final class bhp extends doi implements bgj {
                 }
                 if (i5 != 1) {
                     if (i5 != 2) {
-                        throw new IllegalStateException(cnb.z(-81471234636586L));
+                        throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine" /* cnb.z(-81471234636586L) */);
                     }
                     bhu.bd(obj);
                     return ensVar;

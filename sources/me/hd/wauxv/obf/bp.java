@@ -55,7 +55,7 @@ public final /* synthetic */ class bp implements bfu {
             case 1:
                 Context context = ((RelativeLayout) this.b).getContext();
                 Intent intent = new Intent();
-                intent.setClassName(context, cnb.z(-94811403057962L));
+                intent.setClassName(context, "com.tencent.mm.plugin.setting.ui.setting.SettingsPersonalInfoUI" /* cnb.z(-94811403057962L) */);
                 context.startActivity(intent);
                 return ens.a;
             case 2:
@@ -274,7 +274,7 @@ public final /* synthetic */ class bp implements bfu {
                 bjw.a.u(String.valueOf(cemVar2.d.getText()));
                 return ens.a;
             case 24:
-                bld.a.t(aaz.ad(dnj.as(String.valueOf(((cee) this.b).c.getText()), new String[]{cnb.z(-463053309082410L)})));
+                bld.a.t(aaz.ad(dnj.as(String.valueOf(((cee) this.b).c.getText()), new String[]{"," /* cnb.z(-463053309082410L) */})));
                 return ens.a;
             case 25:
                 cek cekVar3 = (cek) this.b;
@@ -282,7 +282,7 @@ public final /* synthetic */ class bp implements bfu {
                 blj.a.p(cekVar3.d.isChecked());
                 return ens.a;
             case 26:
-                return ((Context) this.b).getFilesDir().getAbsolutePath() + cnb.z(-5781025979178L);
+                return ((Context) this.b).getFilesDir().getAbsolutePath() + "/fastkv/" /* cnb.z(-5781025979178L) */;
             case 27:
                 return new amq(((cdf) this.b).f);
             case 28:

@@ -89,7 +89,7 @@ public final class eik {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-331288007408426L));
+        sb.append("x93Proto(start_timestamp=" /* cnb.z(-331288007408426L) */);
         bjs.w(sb, this.b, -319648646036266L);
         bjs.w(sb, this.c, -319575631592234L);
         yg.v(sb, this.d, -319502617148202L);

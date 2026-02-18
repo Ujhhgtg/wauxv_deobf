@@ -35,7 +35,7 @@ public final /* synthetic */ class wi implements bfu {
                 xx.a.getClass();
                 azg azgVarR2 = dqc.bi(gp.b((Class) la.p(emn.az(xw.a).getInterfaces()), objD)).r();
                 uq.a.getClass();
-                azgVarR2.a = ajn.ag(cnb.z(-75127567940394L));
+                azgVarR2.a = ajn.ag("com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* cnb.z(-75127567940394L) */);
                 Object objE = ((azk) aaz.e(azgVarR2.c())).e();
                 bzo.n(objE);
                 return (FrameLayout) objE;

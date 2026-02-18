@@ -200,7 +200,7 @@ public final class duh {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-294067820821290L));
+        sb.append("SpringFinderLiveProto(liveId=" /* cnb.z(-294067820821290L) */);
         yg.u(sb, this.a, -293921791933226L);
         yg.u(sb, this.b, -293904612064042L);
         yg.u(sb, this.c, -293878842260266L);

@@ -19,14 +19,14 @@ import org.xmlpull.v1.XmlPullParserFactory;
 /* JADX INFO: loaded from: classes.dex */
 public abstract class dnc {
     public static final String a(String str) {
-        return dnj.ba(dnr.bo(dnr.bo(dnr.bo(dnr.bo(str, cnb.z(-80706730457898L), cnb.z(-80646600915754L)), cnb.z(-80659485817642L), cnb.z(-80668075752234L)), cnb.z(-80663780784938L), cnb.z(-80672370719530L)), cnb.z(-80616536144682L), cnb.z(-80573586471722L))).toString();
+        return dnj.ba(dnr.bo(dnr.bo(dnr.bo(dnr.bo(str, "\r" /* cnb.z(-80706730457898L) */, "" /* cnb.z(-80646600915754L) */), "\n" /* cnb.z(-80659485817642L) */, "" /* cnb.z(-80668075752234L) */), "\t" /* cnb.z(-80663780784938L) */, "" /* cnb.z(-80672370719530L) */), "<?xml version=\"1.0\"?>" /* cnb.z(-80616536144682L) */, "" /* cnb.z(-80573586471722L) */)).toString();
     }
 
     public static final void b(Context context, String str) {
-        Object systemService = context.getSystemService(cnb.z(-80474802223914L));
-        bzo.o(systemService, cnb.z(-80449032420138L));
+        Object systemService = context.getSystemService("clipboard" /* cnb.z(-80474802223914L) */);
+        bzo.o(systemService, "null cannot be cast to non-null type android.content.ClipboardManager" /* cnb.z(-80449032420138L) */);
         ClipboardManager clipboardManager = (ClipboardManager) systemService;
-        ClipData clipDataNewPlainText = ClipData.newPlainText(cnb.z(-80680960654122L), str);
+        ClipData clipDataNewPlainText = ClipData.newPlainText("label" /* cnb.z(-80680960654122L) */, str);
         if (clipDataNewPlainText != null) {
             clipboardManager.setPrimaryClip(clipDataNewPlainText);
         }

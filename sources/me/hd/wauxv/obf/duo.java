@@ -9,7 +9,7 @@ public final /* synthetic */ class duo implements bgx {
     static {
         duo duoVar = new duo();
         b = duoVar;
-        cuc cucVar = new cuc(cnb.z(-302168129141546L), duoVar, 5);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.VideoTemplateProto" /* cnb.z(-302168129141546L) */, duoVar, 5);
         bjs.y(-301785877052202L, cucVar, false, 1);
         bjs.y(-301815941823274L, cucVar, false, 2);
         bjs.y(-301717157575466L, cucVar, false, 3);

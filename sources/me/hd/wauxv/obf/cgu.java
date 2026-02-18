@@ -48,17 +48,17 @@ public final /* synthetic */ class cgu implements bgf {
                 cdj cdjVar = new cdj();
                 cgy.a.getClass();
                 cdjVar.o(emn.az(cgv.a));
-                cdjVar.t(cnb.z(-371609160383274L));
+                cdjVar.t("MsgInfo processAddMsg insert db error" /* cnb.z(-371609160383274L) */);
                 bahVar.getClass();
                 bahVar.d = cdjVar;
                 return ensVar;
             case 1:
                 bag bagVar = (bag) obj;
-                String[] strArr = {cnb.z(-369904058366762L)};
+                String[] strArr = {"com.tencent.mm.storage" /* cnb.z(-369904058366762L) */};
                 bagVar.getClass();
                 bagVar.a = la.ab(strArr);
                 zb zbVar = new zb();
-                zbVar.k(cnb.z(-369805274118954L), cnb.z(-371351462345514L));
+                zbVar.k("MicroMsg.MsgInfoStorage" /* cnb.z(-369805274118954L) */, "deleted dirty msg ,count is %d" /* cnb.z(-371351462345514L) */);
                 bagVar.b = zbVar;
                 return ensVar;
             case 2:
@@ -67,13 +67,13 @@ public final /* synthetic */ class cgu implements bgf {
                 cgy.a.getClass();
                 cdjVar2.o(emn.az(cgv.a));
                 cdjVar2.p(new bqi(2, 3, 1));
-                cdjVar2.t(cnb.z(-371201138490154L), cnb.z(-371123829078826L), cnb.z(-371089469340458L));
+                cdjVar2.t("notifymessage" /* cnb.z(-371201138490154L) */, "msgId=?" /* cnb.z(-371123829078826L) */, "update" /* cnb.z(-371089469340458L) */);
                 bahVar2.getClass();
                 bahVar2.d = cdjVar2;
                 return ensVar;
             case 3:
                 ArrayList arrayList = new ArrayList();
-                Cursor cursorAc = arj.ac(cnb.z(-524896543177514L));
+                Cursor cursorAc = arj.ac("SELECT username FROM rconversation" /* cnb.z(-524896543177514L) */);
                 while (cursorAc.moveToNext()) {
                     try {
                         arrayList.add(cursorAc.getString(0));
@@ -89,13 +89,13 @@ public final /* synthetic */ class cgu implements bgf {
                 cursorAc.close();
                 agp agpVar = agp.a;
                 String[] strArr2 = (String[]) arrayList.toArray(new String[0]);
-                String strZ = cnb.z(-524763399191338L);
+                String strZ = "" /* cnb.z(-524763399191338L) */;
                 agpVar.getClass();
                 agp.d(strZ, strArr2);
                 return ensVar;
             case 4:
                 ArrayList arrayList2 = new ArrayList();
-                Cursor cursorAc2 = arj.ac(cnb.z(-524578715597610L));
+                Cursor cursorAc2 = arj.ac("SELECT username FROM rconversation" /* cnb.z(-524578715597610L) */);
                 while (cursorAc2.moveToNext()) {
                     try {
                         arrayList2.add(cursorAc2.getString(0));
@@ -111,7 +111,7 @@ public final /* synthetic */ class cgu implements bgf {
                 cursorAc2.close();
                 agp agpVar2 = agp.a;
                 String[] strArr3 = (String[]) arrayList2.toArray(new String[0]);
-                String strZ2 = cnb.z(-524995327425322L);
+                String strZ2 = "hidden_conv_parent" /* cnb.z(-524995327425322L) */;
                 agpVar2.getClass();
                 agp.d(strZ2, strArr3);
                 return ensVar;
@@ -148,9 +148,9 @@ public final /* synthetic */ class cgu implements bgf {
                                                 eg egVar = (eg) bzyVar.d;
                                                 chh.a.getClass();
                                                 egVar.d = chh.c;
-                                                bzyVar.t(cnb.z(-450138342423338L), new amw(new cfx(ceoVar, i3), 0));
-                                                bzyVar.s(cnb.z(-450142637390634L), new amw(new cfh(9), 2));
-                                                bjs.x((3 & 2) != 0 ? new amd(i2) : null, bzyVar, cnb.z(-47455093652266L));
+                                                bzyVar.t("保存" /* cnb.z(-450138342423338L) */, new amw(new cfx(ceoVar, i3), 0));
+                                                bzyVar.s("重置" /* cnb.z(-450142637390634L) */, new amw(new cfh(9), 2));
+                                                bjs.x((3 & 2) != 0 ? new amd(i2) : null, bzyVar, "取消" /* cnb.z(-47455093652266L) */);
                                                 if (linearLayout != null) {
                                                     egVar.r = linearLayout;
                                                 }
@@ -164,7 +164,7 @@ public final /* synthetic */ class cgu implements bgf {
                         }
                     }
                 }
-                throw new NullPointerException(cnb.z(-663589627099946L).concat(viewK.getResources().getResourceName(i5)));
+                throw new NullPointerException("Missing required view with ID: " /* cnb.z(-663589627099946L) */.concat(viewK.getResources().getResourceName(i5)));
             case 6:
                 bmm bmmVar = (bmm) obj;
                 bmmVar.getClass();
@@ -183,7 +183,7 @@ public final /* synthetic */ class cgu implements bgf {
                 if (str == null) {
                     str = "";
                 }
-                if (str.equals(cnb.z(-517182781913898L))) {
+                if (str.equals(".ui.timeline.preload.ui.TmplWebViewMMUI" /* cnb.z(-517182781913898L) */)) {
                     try {
                         objX2 = bmmVar.d()[3];
                         if (objX2 == null) {
@@ -205,23 +205,23 @@ public final /* synthetic */ class cgu implements bgf {
             case 8:
                 bah bahVar3 = (bah) obj;
                 cdj cdjVar3 = new cdj();
-                cdjVar3.t(cnb.z(-518660250663722L), cnb.z(-518548581514026L));
+                cdjVar3.t("MicroMsg.PluginHelper" /* cnb.z(-518660250663722L) */, "start multi webview!!!!!!!!!" /* cnb.z(-518548581514026L) */);
                 bahVar3.getClass();
                 bahVar3.d = cdjVar3;
                 return ensVar;
             case 9:
                 int i6 = bte.a;
                 azg azgVarR = dqc.bi(obj).r();
-                azgVarR.ab = cnb.z(-478429292002090L);
+                azgVarR.ab = "field_type" /* cnb.z(-478429292002090L) */;
                 Object objE = ((azk) yg.e(azgVarR)).e();
                 bzo.n(objE);
                 if (((Number) objE).intValue() == 3) {
                     azg azgVarR2 = dqc.bi(obj).r();
-                    azgVarR2.ab = cnb.z(-478416407100202L);
+                    azgVarR2.ab = "field_favProto" /* cnb.z(-478416407100202L) */;
                     Object objD = ((azk) yg.e(azgVarR2)).d();
                     bzo.n(objD);
                     cde cdeVarT = dqc.bi(objD).t();
-                    cdeVarT.ab = cnb.z(-478334802721578L);
+                    cdeVarT.ab = "getData" /* cnb.z(-478334802721578L) */;
                     Object objJ = ((cdk) dkz.m(cdeVarT)).j(new Object[0]);
                     bzo.n(objJ);
                     cwd cwdVar = cwd.a;
@@ -233,7 +233,7 @@ public final /* synthetic */ class cgu implements bgf {
                         String strZ3 = cmz.z();
                         String strValueOf = String.valueOf(str2.hashCode() & com.android.dx.io.Opcodes.CONST_METHOD_TYPE);
                         StringBuilder sbY = dkz.y(strZ3);
-                        sbY.append(cnb.z(-478300442983210L));
+                        sbY.append("/favorite/" /* cnb.z(-478300442983210L) */);
                         sbY.append(strValueOf);
                         sbY.append('/');
                         sbY.append(str2);
@@ -244,24 +244,24 @@ public final /* synthetic */ class cgu implements bgf {
                     if (new File(string).exists()) {
                         ewz.aq(cie.a, new cid(string, aysVar, i4));
                     } else {
-                        dnc.g(null, 3, cnb.z(-478837313895210L));
+                        dnc.g(null, 3, "获取语音路径失败, 请尝试播放后重发" /* cnb.z(-478837313895210L) */);
                     }
                 } else {
-                    dnc.g(null, 3, cnb.z(-478704169909034L));
+                    dnc.g(null, 3, "暂不支持的转发类型" /* cnb.z(-478704169909034L) */);
                 }
                 return ensVar;
             case 10:
                 int i7 = bte.a;
                 azg azgVarR3 = dqc.bi(obj).r();
-                azgVarR3.ab = cnb.z(-475856606591786L);
+                azgVarR3.ab = "field_type" /* cnb.z(-475856606591786L) */;
                 Integer num = (Integer) ((azk) yg.e(azgVarR3)).e();
                 if (num != null && num.intValue() == 3) {
                     azg azgVarR4 = dqc.bi(obj).r();
-                    azgVarR4.ab = cnb.z(-475826541820714L);
+                    azgVarR4.ab = "field_favProto" /* cnb.z(-475826541820714L) */;
                     Object objD2 = ((azk) yg.e(azgVarR4)).d();
                     bzo.n(objD2);
                     cde cdeVarT2 = dqc.bi(objD2).t();
-                    cdeVarT2.ab = cnb.z(-475212361497386L);
+                    cdeVarT2.ab = "getData" /* cnb.z(-475212361497386L) */;
                     Object objJ2 = ((cdk) dkz.m(cdeVarT2)).j(new Object[0]);
                     bzo.n(objJ2);
                     cwd cwdVar2 = cwd.a;
@@ -273,7 +273,7 @@ public final /* synthetic */ class cgu implements bgf {
                         String strZ4 = cmz.z();
                         String strValueOf2 = String.valueOf(str3.hashCode() & com.android.dx.io.Opcodes.CONST_METHOD_TYPE);
                         StringBuilder sbY2 = dkz.y(strZ4);
-                        sbY2.append(cnb.z(-475178001759018L));
+                        sbY2.append("/favorite/" /* cnb.z(-475178001759018L) */);
                         sbY2.append(strValueOf2);
                         sbY2.append('/');
                         sbY2.append(str3);
@@ -284,10 +284,10 @@ public final /* synthetic */ class cgu implements bgf {
                     if (new File(string2).exists()) {
                         ewz.aq(cif.a, new cid(string2, aysVar2, i3));
                     } else {
-                        dnc.g(null, 3, cnb.z(-475147936987946L));
+                        dnc.g(null, 3, "获取语音路径失败, 请尝试播放后重发" /* cnb.z(-475147936987946L) */);
                     }
                 } else {
-                    dnc.g(null, 3, cnb.z(-475031972870954L));
+                    dnc.g(null, 3, "暂不支持的转发类型" /* cnb.z(-475031972870954L) */);
                 }
                 return ensVar;
             case 11:
@@ -378,7 +378,7 @@ public final /* synthetic */ class cgu implements bgf {
             case 24:
                 bag bagVar2 = (bag) obj;
                 zb zbVar2 = new zb();
-                zbVar2.k(cnb.z(-112828790864682L), cnb.z(-113245402692394L));
+                zbVar2.k("MicroMsg.NetSceneAddChatRoomMember" /* cnb.z(-112828790864682L) */, "/cgi-bin/micromsg-bin/addchatroommember" /* cnb.z(-113245402692394L) */);
                 bagVar2.getClass();
                 bagVar2.b = zbVar2;
                 return ensVar;
@@ -407,11 +407,11 @@ public final /* synthetic */ class cgu implements bgf {
                 return ensVar;
             case 27:
                 bag bagVar3 = (bag) obj;
-                String[] strArr4 = {cnb.z(-112304804854570L)};
+                String[] strArr4 = {"com.tencent.mm.plugin.remittance.model" /* cnb.z(-112304804854570L) */};
                 bagVar3.getClass();
                 bagVar3.a = la.ab(strArr4);
                 zb zbVar3 = new zb();
-                zbVar3.k(cnb.z(-112669877074730L), cnb.z(-112532438121258L));
+                zbVar3.k("MicroMsg.NetSceneBeforeTransfer" /* cnb.z(-112669877074730L) */, "/cgi-bin/mmpay-bin/beforetransfer" /* cnb.z(-112532438121258L) */);
                 bagVar3.b = zbVar3;
                 return ensVar;
             case 28:

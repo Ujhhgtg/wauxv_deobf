@@ -36,7 +36,7 @@ public final class ejc {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-321985108245290L));
+        sb.append("yq3Proto(name=" /* cnb.z(-321985108245290L) */);
         yg.u(sb, this.a, -321903503866666L);
         return bjs.p(sb, this.b, ')');
     }

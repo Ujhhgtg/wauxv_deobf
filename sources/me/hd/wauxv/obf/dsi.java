@@ -36,7 +36,7 @@ public final class dsi {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-148734717459242L));
+        sb.append("AppJumpWordingKeyProto(installedWordingKey=" /* cnb.z(-148734717459242L) */);
         yg.u(sb, this.a, -145762600090410L);
         return bjs.q(sb, this.b, ')');
     }

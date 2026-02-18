@@ -14,11 +14,11 @@ public final class cdn {
     public final int g;
 
     static {
-        cdn cdnVar = new cdn(cnb.z(-517371760474922L), 0, 0, 4);
+        cdn cdnVar = new cdn("WECHAT_SCAN" /* cnb.z(-517371760474922L) */, 0, 0, 4);
         a = cdnVar;
-        cdn cdnVar2 = new cdn(cnb.z(-517354580605738L), 1, 1, 34);
+        cdn cdnVar2 = new cdn("ALBUM_SCAN" /* cnb.z(-517354580605738L) */, 1, 1, 34);
         b = cdnVar2;
-        cdn cdnVar3 = new cdn(cnb.z(-517805552171818L), 2, 4, 37);
+        cdn cdnVar3 = new cdn("LONG_PRESS_SCAN" /* cnb.z(-517805552171818L) */, 2, 4, 37);
         c = cdnVar3;
         cdn[] cdnVarArr = {cdnVar, cdnVar2, cdnVar3};
         d = cdnVarArr;

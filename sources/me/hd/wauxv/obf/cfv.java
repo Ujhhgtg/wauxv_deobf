@@ -16,15 +16,15 @@ public final class cfv extends doo implements bnc {
     public static final bzk j;
 
     static {
-        cnb.z(-448656578706218L);
-        cnb.z(-448630808902442L);
-        cnb.z(-449086075435818L);
-        cnb.z(-449060305632042L);
-        cnb.z(-449034535828266L);
-        a = new cfv(cnb.z(-449395313081130L));
-        b = cnb.z(-449008766024490L);
-        c = cnb.z(-448961521384234L);
-        h = cnb.z(-448914276743978L);
+        "#FFE4E9FC" /* cnb.z(-448656578706218L) */;
+        "#FFD7FAE4" /* cnb.z(-448630808902442L) */;
+        "#FF3D3D3D" /* cnb.z(-449086075435818L) */;
+        "#FFD7FAE4" /* cnb.z(-449060305632042L) */;
+        "#11000000" /* cnb.z(-449034535828266L) */;
+        a = new cfv("MsgBgColorHook" /* cnb.z(-449395313081130L) */);
+        b = "美化" /* cnb.z(-449008766024490L) */;
+        c = "消息背景颜色" /* cnb.z(-448961521384234L) */;
+        h = "仅支持配置部分消息, 与背景气泡冲突" /* cnb.z(-448914276743978L) */;
         j = new bzk(15);
     }
 
@@ -33,7 +33,7 @@ public final class cfv extends doo implements bnc {
         int color2;
         view.setPadding(32, 20, 32, 20);
         ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
-        bzo.o(layoutParams, cnb.z(-449330888571690L));
+        bzo.o(layoutParams, "null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams" /* cnb.z(-449330888571690L) */);
         ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) layoutParams;
         marginLayoutParams.leftMargin = 16;
         marginLayoutParams.rightMargin = 16;
@@ -85,7 +85,7 @@ public final class cfv extends doo implements bnc {
             }
             if (type != ewg.c.w) {
                 if (type == ewg.i.w) {
-                    View viewV2 = cnh.v(view, cnb.ab(ewk.c) ? cnb.z(-426915454253866L) : cnb.z(-428513182087978L));
+                    View viewV2 = cnh.v(view, cnb.ab(ewk.c) ? "bkg" /* cnb.z(-426915454253866L) */ : "" /* cnb.z(-428513182087978L) */);
                     if (viewV2 != null) {
                         l(viewV2, msgInfoBean.isSend());
                         return;

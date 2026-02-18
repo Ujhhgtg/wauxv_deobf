@@ -9,12 +9,12 @@ public final /* synthetic */ class bit implements bgx {
     static {
         bit bitVar = new bit();
         b = bitVar;
-        cuc cucVar = new cuc(cnb.z(-592868695604010L), bitVar, 5);
-        cucVar.x(cnb.z(-593186523183914L), false);
-        cucVar.x(cnb.z(-593143573510954L), false);
-        cucVar.x(cnb.z(-593100623837994L), false);
-        cucVar.x(cnb.z(-593113508739882L), false);
-        cucVar.x(cnb.z(-593083443968810L), false);
+        cuc cucVar = new cuc("wx.demo.hook.ui.group.factory.GroupConstFactory.GroupItem" /* cnb.z(-592868695604010L) */, bitVar, 5);
+        cucVar.x("title" /* cnb.z(-593186523183914L) */, false);
+        cucVar.x("order" /* cnb.z(-593143573510954L) */, false);
+        cucVar.x("icon" /* cnb.z(-593100623837994L) */, false);
+        cucVar.x("enable" /* cnb.z(-593113508739882L) */, false);
+        cucVar.x("idList" /* cnb.z(-593083443968810L) */, false);
         descriptor = cucVar;
     }
 

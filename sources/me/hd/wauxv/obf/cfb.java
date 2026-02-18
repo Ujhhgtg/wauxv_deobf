@@ -35,7 +35,7 @@ public final /* synthetic */ class cfb implements bgf {
                 break;
             default:
                 ael aelVar2 = (ael) obj;
-                aelVar2.f = cnb.z(-514120470231850L);
+                aelVar2.f = "搜索好友/群聊" /* cnb.z(-514120470231850L) */;
                 ArrayList arrayList = new ArrayList();
                 ArrayList arrayList2 = new ArrayList();
                 ArrayList arrayList3 = new ArrayList();
@@ -43,7 +43,7 @@ public final /* synthetic */ class cfb implements bgf {
                 if (cursorAb != null) {
                     while (cursorAb.moveToNext()) {
                         try {
-                            if (dnr.bi(cursorAb.getString(cursorAb.getColumnIndex(cnb.z(-514086110493482L))), cnb.z(-514545671994154L))) {
+                            if (dnr.bi(cursorAb.getString(cursorAb.getColumnIndex("username" /* cnb.z(-514086110493482L) */)), "@chatroom" /* cnb.z(-514545671994154L) */)) {
                                 GroupInfo groupInfoT = cnb.t(cursorAb);
                                 String roomId = groupInfoT.getRoomId();
                                 StringBuilder sb2 = new StringBuilder();
@@ -66,15 +66,15 @@ public final /* synthetic */ class cfb implements bgf {
                                 String wxid = friendInfoS.getWxid();
                                 StringBuilder sb4 = new StringBuilder();
                                 String nickname = friendInfoS.getNickname();
-                                if ((dfv.d(dap.b(new dap(cnb.z(-514519902190378L)), nickname)) > 3 ? nickname : null) != null) {
-                                    sb4.append(cnb.z(-514472657550122L));
+                                if ((dfv.d(dap.b(new dap("\r\n|\r|\n" /* cnb.z(-514519902190378L) */), nickname)) > 3 ? nickname : null) != null) {
+                                    sb4.append("已过滤此昵称..." /* cnb.z(-514472657550122L) */);
                                 } else {
                                     String str2 = nickname.length() > 8 ? nickname : null;
                                     if (str2 != null) {
                                         String strSubstring = str2.substring(0, 8);
-                                        bzo.p(strSubstring, cnb.z(-514446887746346L));
+                                        bzo.p(strSubstring, "substring(...)" /* cnb.z(-514446887746346L) */);
                                         sb4.append(strSubstring);
-                                        sb4.append(cnb.z(-514382463236906L));
+                                        sb4.append("..." /* cnb.z(-514382463236906L) */);
                                         sb = sb4;
                                     } else {
                                         sb = null;
@@ -106,10 +106,10 @@ public final /* synthetic */ class cfb implements bgf {
                 }
                 aelVar2.b = true;
                 aelVar2.c.addAll(arrayList3);
-                aelVar2.m(cnb.z(-514399643106090L), arrayList);
-                aelVar2.m(cnb.z(-514335218596650L), arrayList2);
+                aelVar2.m("好友" /* cnb.z(-514399643106090L) */, arrayList);
+                aelVar2.m("群聊" /* cnb.z(-514335218596650L) */, arrayList2);
                 aelVar2.g = R.drawable.ic_contact_send_24dp;
-                String strZ = cnb.z(-514356693433130L);
+                String strZ = "转发" /* cnb.z(-514356693433130L) */;
                 cic cicVar = new cic(this.b, this.c, 2);
                 aelVar2.j = strZ;
                 aelVar2.l = cicVar;

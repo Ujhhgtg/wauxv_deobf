@@ -35,6 +35,6 @@ public final class egx {
     }
 
     public final String toString() {
-        return cnb.z(-299956220984106L) + this.a + cnb.z(-299299090987818L) + this.b + ')';
+        return "vq0Proto(music_info=" /* cnb.z(-299956220984106L) */ + this.a + ", contact=" /* cnb.z(-299299090987818L) */ + this.b + ')';
     }
 }

@@ -230,7 +230,7 @@ public final class RContactInfo {
         if (!RContactInfo.class.equals(obj != null ? obj.getClass() : null)) {
             return false;
         }
-        bzo.o(obj, cnb.z(-17544941402922L));
+        bzo.o(obj, "null cannot be cast to non-null type me.hd.wauxv.data.bean.db.RContactInfo" /* cnb.z(-17544941402922L) */);
         RContactInfo rContactInfo = (RContactInfo) obj;
         return this.showHead == rContactInfo.showHead && this.type == rContactInfo.type && this.uiType == rContactInfo.uiType && this.weiboFlag == rContactInfo.weiboFlag && this.verifyFlag == rContactInfo.verifyFlag && this.chatroomFlag == rContactInfo.chatroomFlag && this.deleteFlag == rContactInfo.deleteFlag && this.usernameFlag == rContactInfo.usernameFlag && this.createTime == rContactInfo.createTime && bzo.f(this.username, rContactInfo.username) && bzo.f(this.alias, rContactInfo.alias) && bzo.f(this.conRemark, rContactInfo.conRemark) && bzo.f(this.domainList, rContactInfo.domainList) && bzo.f(this.nickname, rContactInfo.nickname) && bzo.f(this.pyInitial, rContactInfo.pyInitial) && bzo.f(this.quanPin, rContactInfo.quanPin) && bzo.f(this.weiboNickname, rContactInfo.weiboNickname) && bzo.f(this.conRemarkPYFull, rContactInfo.conRemarkPYFull) && bzo.f(this.conRemarkPYShort, rContactInfo.conRemarkPYShort) && Arrays.equals(this.lvbuff, rContactInfo.lvbuff) && bzo.f(this.encryptUsername, rContactInfo.encryptUsername) && bzo.f(this.contactLabelIds, rContactInfo.contactLabelIds) && bzo.f(this.descWordingId, rContactInfo.descWordingId) && bzo.f(this.openImAppid, rContactInfo.openImAppid) && bzo.f(this.sourceExtInfo, rContactInfo.sourceExtInfo) && bzo.f(this.ticket, rContactInfo.ticket) && Arrays.equals(this.contactExtra, rContactInfo.contactExtra);
     }
@@ -457,7 +457,7 @@ public final class RContactInfo {
 
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-16638703303466L));
+        sb.append("RContactInfo(username=" /* cnb.z(-16638703303466L) */);
         yg.u(sb, this.username, -16591458663210L);
         yg.u(sb, this.alias, -16501264349994L);
         yg.u(sb, this.conRemark, -17029545327402L);
@@ -468,13 +468,13 @@ public final class RContactInfo {
         dkz.ac(sb, this.showHead, -13997298416426L);
         dkz.ac(sb, this.type, -13962938678058L);
         sb.append(this.uiType);
-        sb.append(cnb.z(-13937168874282L));
+        sb.append(", weiboFlag=" /* cnb.z(-13937168874282L) */);
         dkz.ac(sb, this.weiboFlag, -13864154430250L);
         yg.u(sb, this.weiboNickname, -13791139986218L);
         yg.u(sb, this.conRemarkPYFull, -14293651159850L);
         yg.u(sb, this.conRemarkPYShort, -14173392075562L);
         sb.append(Arrays.toString(this.lvbuff));
-        sb.append(cnb.z(-14147622271786L));
+        sb.append(", verifyFlag=" /* cnb.z(-14147622271786L) */);
         dkz.ac(sb, this.verifyFlag, -14070312860458L);
         yg.u(sb, this.encryptUsername, -13456132537130L);
         dkz.ac(sb, this.chatroomFlag, -13387413060394L);
@@ -485,9 +485,9 @@ public final class RContactInfo {
         yg.u(sb, this.sourceExtInfo, -13602161425194L);
         yg.u(sb, this.ticket, -13507672144682L);
         sb.append(this.usernameFlag);
-        sb.append(cnb.z(-15088220109610L));
+        sb.append(", contactExtra=" /* cnb.z(-15088220109610L) */);
         sb.append(Arrays.toString(this.contactExtra));
-        sb.append(cnb.z(-15019500632874L));
+        sb.append(", createTime=" /* cnb.z(-15019500632874L) */);
         sb.append(this.createTime);
         sb.append(')');
         return sb.toString();

@@ -52,7 +52,7 @@ public final class eex {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-296868139498282L));
+        sb.append("sz0Proto(appid=" /* cnb.z(-296868139498282L) */);
         yg.u(sb, this.a, -296799420021546L);
         yg.u(sb, this.b, -296765060283178L);
         yg.u(sb, this.c, -296726405577514L);

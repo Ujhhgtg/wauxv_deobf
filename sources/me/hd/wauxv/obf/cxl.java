@@ -13,12 +13,12 @@ public final class cxl extends doo implements bng {
     public static final cvc j;
 
     static {
-        cnb.z(-459209313352490L);
-        cnb.z(-459162068712234L);
-        a = new cxl(cnb.z(-458324550089514L));
-        b = cnb.z(-459136298908458L);
-        c = cnb.z(-459089054268202L);
-        i = cnb.z(-459110529104682L);
+        "[有人回我]" /* cnb.z(-459209313352490L) */;
+        "#FFE14949" /* cnb.z(-459162068712234L) */;
+        a = new cxl("QuoteRemindMsgHook" /* cnb.z(-458324550089514L) */);
+        b = "聊天" /* cnb.z(-459136298908458L) */;
+        c = "引用消息提醒" /* cnb.z(-459089054268202L) */;
+        i = "主页列表添加有人回我消息的红字提醒" /* cnb.z(-459110529104682L) */;
         j = new cvc(11);
     }
 

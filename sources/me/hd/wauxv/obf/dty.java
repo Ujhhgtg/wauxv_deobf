@@ -72,7 +72,7 @@ public final class dty {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-273039660940074L));
+        sb.append("ReadershareProto(itemshowtype=" /* cnb.z(-273039660940074L) */);
         bjs.w(sb, this.a, -274538604526378L);
         bjs.w(sb, this.b, -274530014591786L);
         yg.u(sb, this.c, -274435525311274L);

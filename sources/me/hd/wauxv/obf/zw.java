@@ -3,10 +3,10 @@ package me.hd.wauxv.obf;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class zw extends doo implements bnx {
-    public static final zw a = new zw(cnb.z(-512110425537322L));
-    public static final String b = cnb.z(-511453295541034L);
-    public static final String c = cnb.z(-511457590508330L);
-    public static final String d = cnb.z(-511427525737258L);
+    public static final zw a = new zw("ClearUserInfoHook" /* cnb.z(-512110425537322L) */);
+    public static final String b = "杂项" /* cnb.z(-511453295541034L) */;
+    public static final String c = "清空用户信息" /* cnb.z(-511457590508330L) */;
+    public static final String d = "清空用户的性别及国家省份等相关信息" /* cnb.z(-511427525737258L) */;
 
     @Override // me.hd.wauxv.obf.bmf
     public final void e() {
@@ -29,9 +29,9 @@ public final class zw extends doo implements bnx {
             cdq cdqVar = cdr.Companion;
             cdr cdrVar = (cdr) cwdVar.c(cdqVar.serializer(), bArr);
             cdrVar.j = 0;
-            cdrVar.k = cnb.z(-511500540181290L);
-            cdrVar.l = cnb.z(-511513425083178L);
-            cdrVar.al = cnb.z(-511509130115882L);
+            cdrVar.k = "" /* cnb.z(-511500540181290L) */;
+            cdrVar.l = "" /* cnb.z(-511513425083178L) */;
+            cdrVar.al = "" /* cnb.z(-511509130115882L) */;
             btd btdVarSerializer = cdqVar.serializer();
             bzo.q(btdVarSerializer, "serializer");
             rw rwVar = new rw();

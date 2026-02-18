@@ -3,13 +3,13 @@ package me.hd.wauxv.obf;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes2.dex */
 public final class eky extends doo implements bny {
-    public static final eky a = new eky(cnb.z(-603271106394922L));
-    public static final String b = cnb.z(-603601818876714L);
-    public static final String c = cnb.z(-603563164171050L);
+    public static final eky a = new eky("TransOptimise" /* cnb.z(-603271106394922L) */);
+    public static final String b = "测试-配置修复-v58-chatting" /* cnb.z(-603601818876714L) */;
+    public static final String c = "翻译原文与译文一致，优化显示" /* cnb.z(-603563164171050L) */;
 
     @Override // me.hd.wauxv.obf.bny
     public final void d(bmm bmmVar, String str) {
-        if (z() && str.equals(cnb.z(-603193796983594L))) {
+        if (z() && str.equals("RepairerConfig_TransOptimise_Int" /* cnb.z(-603193796983594L) */)) {
             bmmVar.h(1);
         }
     }

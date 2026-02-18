@@ -44,10 +44,10 @@ public final class dvr {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-167456479902506L));
+        sb.append("bb3Proto(voice_live_img=" /* cnb.z(-167456479902506L) */);
         yg.u(sb, this.a, -169015553030954L);
         sb.append(this.b);
-        sb.append(cnb.z(-168852344273706L));
+        sb.append(", img_type=" /* cnb.z(-168852344273706L) */);
         bjs.w(sb, this.c, -168835164404522L);
         return bjs.p(sb, this.d, ')');
     }

@@ -56,7 +56,7 @@ public final class efp {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-288973989608234L));
+        sb.append("u40Proto(key=" /* cnb.z(-288973989608234L) */);
         yg.u(sb, this.a, -288965399673642L);
         dts.h(sb, this.b, -288325449546538L);
         dts.h(sb, this.c, -288312564644650L);

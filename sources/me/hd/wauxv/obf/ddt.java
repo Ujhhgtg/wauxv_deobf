@@ -9,8 +9,8 @@ public final /* synthetic */ class ddt implements bgx {
     static {
         ddt ddtVar = new ddt();
         b = ddtVar;
-        cuc cucVar = new cuc(cnb.z(-149937308302122L), ddtVar, 1);
-        cucVar.x(cnb.z(-151320287771434L), true);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.SKBuiltinString" /* cnb.z(-149937308302122L) */, ddtVar, 1);
+        cucVar.x("string" /* cnb.z(-151320287771434L) */, true);
         cucVar.y(new aoz(1, 7));
         descriptor = cucVar;
     }

@@ -13,7 +13,7 @@ public final /* synthetic */ class efx implements bgx {
     static {
         efx efxVar = new efx();
         b = efxVar;
-        cuc cucVar = new cuc(cnb.z(-286723426745130L), efxVar, 30);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.uq0Proto" /* cnb.z(-286723426745130L) */, efxVar, 30);
         bjs.y(-286366944459562L, cucVar, false, 1);
         bjs.y(-286293930015530L, cucVar, false, 2);
         bjs.y(-286259570277162L, cucVar, false, 3);

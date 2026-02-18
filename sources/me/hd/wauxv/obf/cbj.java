@@ -62,11 +62,11 @@ public final /* synthetic */ class cbj implements bgf {
             default:
                 Activity activity = (Activity) obj5;
                 Intent intent = new Intent();
-                intent.setClassName(activity, cnb.z(-96675418864426L));
-                intent.putExtra(cnb.z(-96516505074474L), 14);
-                intent.putExtra(cnb.z(-95898029783850L), (String) obj4);
-                intent.putExtra(cnb.z(-95799245536042L), (String) obj3);
-                intent.putExtra(cnb.z(-95730526059306L), (String) obj2);
+                intent.setClassName(activity, "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /* cnb.z(-96675418864426L) */);
+                intent.putExtra("Ksnsupload_type" /* cnb.z(-96516505074474L) */, 14);
+                intent.putExtra("KSightPath" /* cnb.z(-95898029783850L) */, (String) obj4);
+                intent.putExtra("KSightThumbPath" /* cnb.z(-95799245536042L) */, (String) obj3);
+                intent.putExtra("Kdescription" /* cnb.z(-95730526059306L) */, (String) obj2);
                 activity.startActivity(intent);
                 return ensVar;
         }

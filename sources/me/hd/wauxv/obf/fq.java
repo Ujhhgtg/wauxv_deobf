@@ -54,7 +54,7 @@ public final /* synthetic */ class fq implements bgj {
                     arrayList2.add(((adx) it2.next()).a);
                 }
                 frVar.t(aaz.ad(arrayList2));
-                dnc.g(null, 3, cnb.z(-491026431081258L));
+                dnc.g(null, 3, "已屏蔽" /* cnb.z(-491026431081258L) */);
                 return Boolean.FALSE;
             case 1:
                 String str = (String) obj;
@@ -113,7 +113,7 @@ public final /* synthetic */ class fq implements bgj {
                 bzo.n(objE);
                 cde cdeVarT2 = dqc.bi(objE).t();
                 cdeVarT2.a = dal.b(byte[].class);
-                Object objJ = ((cdk) dkz.n(new Object[]{cnb.z(-90430536416042L)}, 1, cdeVarT2)).j(objB);
+                Object objJ = ((cdk) dkz.n(new Object[]{"com.tencent.mm.api.IEmojiInfo" /* cnb.z(-90430536416042L) */}, 1, cdeVarT2)).j(objB);
                 bzo.n(objJ);
                 byte[] bArr = (byte[]) objJ;
                 try {
@@ -126,12 +126,12 @@ public final /* synthetic */ class fq implements bgj {
                     sb.append(SignatureVisitor.SUPER);
                     sb.append(System.currentTimeMillis());
                     sb.append(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
-                    sb.append(cna.ac(bArr) ? cnb.z(-519106927262506L) : cnb.z(-519055387654954L));
+                    sb.append(cna.ac(bArr) ? "gif" /* cnb.z(-519106927262506L) */ : "png" /* cnb.z(-519055387654954L) */);
                     String string = sb.toString();
                     File file2 = new File(file, string);
                     if (cna.ac(bArr)) {
-                        cde cdeVarT3 = dqc.bh(ajn.ag(cnb.z(-119803817753386L))).t();
-                        cdeVarT3.ab = cnb.z(-119614839192362L);
+                        cde cdeVarT3 = dqc.bh(ajn.ag("com.tencent.mm.plugin.gif.MMWXGFJNI" /* cnb.z(-119803817753386L) */)).t();
+                        cdeVarT3.ab = "nativeWxamToGif" /* cnb.z(-119614839192362L) */;
                         Object objJ2 = ((cdk) aaz.e(cdeVarT3.aj())).j(bArr);
                         bzo.n(objJ2);
                         bArr = (byte[]) objJ2;
@@ -140,7 +140,7 @@ public final /* synthetic */ class fq implements bgj {
                     try {
                         fileOutputStream.write(bArr);
                         fileOutputStream.close();
-                        dnc.g(null, 3, cnb.z(-519072567524138L) + file.getAbsolutePath() + '/' + string);
+                        dnc.g(null, 3, "已保存到: " /* cnb.z(-519072567524138L) */ + file.getAbsolutePath() + '/' + string);
                         objX = ensVar;
                     } catch (Throwable th) {
                         try {
@@ -155,9 +155,9 @@ public final /* synthetic */ class fq implements bgj {
                 }
                 Throwable thB = dcy.b(objX);
                 if (thB != null) {
-                    String strZ = cnb.z(-519025322883882L);
+                    String strZ = "保存失败: " /* cnb.z(-519025322883882L) */;
                     String message = thB.getMessage();
-                    dnc.g(null, 3, strZ.concat(message != null ? dnj.az(50, message) : cnb.z(-518995258112810L)));
+                    dnc.g(null, 3, strZ.concat(message != null ? dnj.az(50, message) : "未知错误" /* cnb.z(-518995258112810L) */));
                 }
                 return ensVar;
             case 8:

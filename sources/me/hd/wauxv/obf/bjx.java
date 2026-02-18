@@ -19,32 +19,32 @@ public final class bjx extends doo implements bng, bob {
     public static final bep m;
 
     static {
-        cnb.z(-506788961057578L);
-        cnb.z(-506754601319210L);
-        a = new bjx(cnb.z(-502979325066026L));
-        b = cnb.z(-506711651646250L);
-        c = cnb.z(-506715946613546L);
-        i = cnb.z(-506672996940586L);
+        "#28C445" /* cnb.z(-506788961057578L) */;
+        "退出了此群" /* cnb.z(-506754601319210L) */;
+        a = new bjx("HandleGroupMemberHook" /* cnb.z(-502979325066026L) */);
+        b = "群组" /* cnb.z(-506711651646250L) */;
+        c = "监听群成员" /* cnb.z(-506715946613546L) */;
+        i = "自动监听群成员退群时插入自定义提示" /* cnb.z(-506672996940586L) */;
         m = new bep(4);
     }
 
     public static String r(String str, String str2, String str3) throws IllegalAccessException, InvocationTargetException {
         xj.a.getClass();
         String strB = xj.b(str2, str);
-        String strB2 = xj.b(str2, cnb.z(-99252399242026L));
+        String strB2 = xj.b(str2, "" /* cnb.z(-99252399242026L) */);
         if (!strB.equals(strB2)) {
             strB = strB + TypePool.Default.LazyTypeDescription.GenericTypeToken.COMPONENT_TYPE_PATH + strB2 + ']';
         }
         String strO = bjv.a.o();
-        String str4 = cnb.z(-502841886112554L) + dnj.ax(str, cnb.z(-502867655916330L)) + cnb.z(-508683041635114L) + str2;
+        String str4 = "weixin://weixinhongbao/wauxv/chatroom_userinfo/" /* cnb.z(-502841886112554L) */ + dnj.ax(str, "@chatroom" /* cnb.z(-502867655916330L) */) + "__" /* cnb.z(-508683041635114L) */ + str2;
         StringBuilder sbY = dkz.y(strB);
-        sbY.append(cnb.z(-508635796994858L));
+        sbY.append("(<_wc_custom_link_ color=\"" /* cnb.z(-508635796994858L) */);
         sbY.append(strO);
-        sbY.append(cnb.z(-508537012747050L));
+        sbY.append("\" href=\"" /* cnb.z(-508537012747050L) */);
         sbY.append(str4);
-        sbY.append(cnb.z(-509065293724458L));
+        sbY.append("\">" /* cnb.z(-509065293724458L) */);
         sbY.append(str2);
-        sbY.append(cnb.z(-509069588691754L));
+        sbY.append("</_wc_custom_link_>)" /* cnb.z(-509069588691754L) */);
         sbY.append(str3);
         return sbY.toString();
     }
@@ -75,31 +75,31 @@ public final class bjx extends doo implements bng, bob {
 
     @Override // me.hd.wauxv.obf.bob
     public final void j(bmm bmmVar, String str, ContentValues contentValues, String str2, String[] strArr, int i2) throws IOException {
-        if (z() && str.equals(cnb.z(-508962214509354L))) {
-            String asString = contentValues.getAsString(cnb.z(-508923559803690L));
-            Integer asInteger = contentValues.getAsInteger(cnb.z(-508850545359658L));
-            String asString2 = contentValues.getAsString(cnb.z(-508833365490474L));
+        if (z() && str.equals("chatroom" /* cnb.z(-508962214509354L) */)) {
+            String asString = contentValues.getAsString("chatroomname" /* cnb.z(-508923559803690L) */);
+            Integer asInteger = contentValues.getAsInteger("memberCount" /* cnb.z(-508850545359658L) */);
+            String asString2 = contentValues.getAsString("memberlist" /* cnb.z(-508833365490474L) */);
             if (asString2 == null || dnj.ak(asString2)) {
                 return;
             }
-            Set setAd = aaz.ad(dnj.as(asString2, new String[]{cnb.z(-508184825428778L)}));
+            Set setAd = aaz.ad(dnj.as(asString2, new String[]{";" /* cnb.z(-508184825428778L) */}));
             int i3 = bte.a;
             dlx.a.getClass();
             cde cdeVarT = dqc.bi(dlx.b()).t();
-            cdeVarT.ab = cnb.z(-103246718827306L);
-            Object objJ = ((cdk) dkz.n(new Object[]{dal.b(String.class), dal.b(Object[].class)}, 2, cdeVarT)).j(cnb.z(-508193415363370L), new Object[]{asString});
+            cdeVarT.ab = "rawQuery" /* cnb.z(-103246718827306L) */;
+            Object objJ = ((cdk) dkz.n(new Object[]{dal.b(String.class), dal.b(Object[].class)}, 2, cdeVarT)).j("SELECT memberlist, memberCount FROM chatroom WHERE chatroomname = ?" /* cnb.z(-508193415363370L) */, new Object[]{asString});
             bzo.n(objJ);
             Cursor cursor = (Cursor) objJ;
             try {
                 if (cursor.moveToFirst()) {
-                    int i4 = cursor.getInt(cursor.getColumnIndex(cnb.z(-508485473139498L)));
+                    int i4 = cursor.getInt(cursor.getColumnIndex("memberCount" /* cnb.z(-508485473139498L) */));
                     if (i4 == 0) {
                         cursor.close();
                         return;
                     }
-                    String string = cursor.getString(cursor.getColumnIndex(cnb.z(-508399573793578L)));
+                    String string = cursor.getString(cursor.getColumnIndex("memberlist" /* cnb.z(-508399573793578L) */));
                     if (string != null && !dnj.ak(string)) {
-                        Set setAd2 = aaz.ad(dnj.as(string, new String[]{cnb.z(-508386688891690L)}));
+                        Set setAd2 = aaz.ad(dnj.as(string, new String[]{";" /* cnb.z(-508386688891690L) */}));
                         if (asInteger.intValue() < i4) {
                             for (String str3 : dgg.a(setAd2, setAd)) {
                                 bjx bjxVar = a;

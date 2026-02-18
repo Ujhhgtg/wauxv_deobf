@@ -47,7 +47,7 @@ public final class dzv {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-222105643776810L));
+        sb.append("lh1Proto(members=" /* cnb.z(-222105643776810L) */);
         yg.v(sb, this.b, -222595270048554L);
         dkz.ad(sb, this.c, -222539435473706L);
         bjs.w(sb, this.d, -222513665669930L);

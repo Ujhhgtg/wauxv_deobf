@@ -81,10 +81,10 @@ public final class efd {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-285400576817962L));
+        sb.append("t40Proto(reward_product_id=" /* cnb.z(-285400576817962L) */);
         yg.v(sb, this.b, -285864433285930L);
         sb.append(this.c);
-        sb.append(cnb.z(-285791418841898L));
+        sb.append(", thumbnail_file_url=" /* cnb.z(-285791418841898L) */);
         yg.v(sb, this.d, -285679749692202L);
         dts.h(sb, this.e, -285632505051946L);
         dts.h(sb, this.f, -284958195186474L);

@@ -85,7 +85,7 @@ public final class PluginHttpMethod$download$1$invokeSuspend$$inlined$Get$defaul
         } catch (CancellationException e2) {
             throw e2;
         } catch (Throwable th) {
-            throw new ConvertException(responseExecute, cnb.z(-396927992593194L), th, null, 8, null);
+            throw new ConvertException(responseExecute, "An unexpected error occurred in the converter" /* cnb.z(-396927992593194L) */, th, null, 8, null);
         }
     }
 }

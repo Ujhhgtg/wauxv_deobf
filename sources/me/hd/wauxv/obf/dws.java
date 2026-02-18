@@ -55,7 +55,7 @@ public final class dws {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-167061342911274L));
+        sb.append("dc5Proto(switch_skin_info_list=" /* cnb.z(-167061342911274L) */);
         yg.v(sb, this.b, -166923903957802L);
         yg.u(sb, this.c, -166876659317546L);
         yg.u(sb, this.d, -166206644419370L);

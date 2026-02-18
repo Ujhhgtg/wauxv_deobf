@@ -12,10 +12,10 @@ public abstract class amn {
 
     public final String d() {
         String str = (String) this.c.getValue();
-        String strZ = cnb.z(-5841155521322L);
+        String strZ = "" /* cnb.z(-5841155521322L) */;
         io ioVar = emc.w;
         if (ioVar == null) {
-            throw new IllegalArgumentException(cnb.z(-6021544147754L).toString());
+            throw new IllegalArgumentException("DexDescConfig must be init" /* cnb.z(-6021544147754L) */.toString());
         }
         String string = ioVar.aj().getString(str, strZ);
         bzo.n(string);

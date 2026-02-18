@@ -7,6 +7,6 @@ public final class djs {
     public String b;
 
     static {
-        cnb.z(-556790970317610L);
+        "default" /* cnb.z(-556790970317610L) */;
     }
 }

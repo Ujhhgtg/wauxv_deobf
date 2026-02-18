@@ -9,10 +9,10 @@ public final /* synthetic */ class nk implements bgx {
     static {
         nk nkVar = new nk();
         b = nkVar;
-        cuc cucVar = new cuc(cnb.z(-126774549674794L), nkVar, 2);
-        cucVar.x(cnb.z(-123755187665706L), false);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.BaseResponse" /* cnb.z(-126774549674794L) */, nkVar, 2);
+        cucVar.x("ret" /* cnb.z(-123755187665706L) */, false);
         cucVar.y(new aoz(1, 7));
-        cucVar.x(cnb.z(-123703648058154L), false);
+        cucVar.x("errMsg" /* cnb.z(-123703648058154L) */, false);
         cucVar.y(new aoz(2, 7));
         descriptor = cucVar;
     }

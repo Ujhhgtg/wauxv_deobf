@@ -9,7 +9,7 @@ public final /* synthetic */ class dyy implements bgx {
     static {
         dyy dyyVar = new dyy();
         b = dyyVar;
-        cuc cucVar = new cuc(cnb.z(-195498321378090L), dyyVar, 3);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.k23Proto" /* cnb.z(-195498321378090L) */, dyyVar, 3);
         bjs.y(-195141839092522L, cucVar, false, 1);
         bjs.y(-195124659223338L, cucVar, false, 2);
         bjs.y(-195038759877418L, cucVar, false, 3);

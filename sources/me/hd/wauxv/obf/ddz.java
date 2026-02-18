@@ -23,7 +23,7 @@ public final class ddz {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-361447267760938L));
+        sb.append("SKBuiltinString_t(String=" /* cnb.z(-361447267760938L) */);
         return bjs.q(sb, this.a, ')');
     }
 }

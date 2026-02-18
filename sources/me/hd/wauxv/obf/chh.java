@@ -14,12 +14,12 @@ public final class chh extends doo implements bnc {
     public static final cgu j;
 
     static {
-        cnb.z(-455970908011306L);
-        cnb.z(-455945138207530L);
-        a = new chh(cnb.z(-450224241769258L));
-        b = cnb.z(-455919368403754L);
-        c = cnb.z(-455854943894314L);
-        h = cnb.z(-455824879123242L);
+        "#FF000000" /* cnb.z(-455970908011306L) */;
+        "#FFFFFFFF" /* cnb.z(-455945138207530L) */;
+        a = new chh("MsgTvColorHook" /* cnb.z(-450224241769258L) */);
+        b = "美化" /* cnb.z(-455919368403754L) */;
+        c = "消息文本颜色" /* cnb.z(-455854943894314L) */;
+        h = "当前仅支持配置微信部分消息文本颜色" /* cnb.z(-455824879123242L) */;
         j = new cgu(5);
     }
 
@@ -46,7 +46,7 @@ public final class chh extends doo implements bnc {
             if ((type == ewg.a.w || type == ewg.k.w || type == ewg.r.w || type == ewg.s.w) && (viewV = cnh.v(view, bhs.v())) != null) {
                 int i = bte.a;
                 cde cdeVarT = dqc.bi(viewV).t();
-                cdeVarT.ab = cnb.z(-450211356867370L);
+                cdeVarT.ab = "setTextColor" /* cnb.z(-450211356867370L) */;
                 cdk cdkVar = (cdk) dkz.m(cdeVarT);
                 if (cnh.aa(viewV.getContext())) {
                     color = Color.parseColor((!msgInfoBean.isSend() ? chd.a : chf.a).o());

@@ -61,10 +61,10 @@ public final /* synthetic */ class q implements bgf {
                     String string = compoundButton.getText().toString();
                     ael aelVar = aekVar.a;
                     if (aelVar == null) {
-                        bzo.ar(cnb.z(-395489178549034L));
+                        bzo.ar("info" /* cnb.z(-395489178549034L) */);
                         throw null;
                     }
-                    if (bzo.f(string, cnb.z(-395471998679850L))) {
+                    if (bzo.f(string, "全部" /* cnb.z(-395471998679850L) */)) {
                         arrayList = aelVar.c;
                         if (!aelVar.b || arrayList.isEmpty()) {
                             list2 = arrayList;
@@ -91,12 +91,12 @@ public final /* synthetic */ class q implements bgf {
                 Boolean bool = (Boolean) r7;
                 doo dooVar = (doo) obj;
                 if (bool.equals(Boolean.TRUE)) {
-                    zAb = dnj.ab(dooVar.g(), cnb.z(-22578643073834L), false);
+                    zAb = dnj.ab(dooVar.g(), "测试" /* cnb.z(-22578643073834L) */, false);
                 } else {
                     if (!bool.equals(Boolean.FALSE)) {
                         throw new abt();
                     }
-                    if (dnj.ab(dooVar.g(), cnb.z(-22600117910314L), false)) {
+                    if (dnj.ab(dooVar.g(), "测试" /* cnb.z(-22600117910314L) */, false)) {
                         zAb = false;
                     }
                 }
@@ -123,14 +123,14 @@ public final /* synthetic */ class q implements bgf {
                     bmu bmuVarBi = dqc.bi(obj2);
                     bxj bxjVar = bxj.a;
                     cde cdeVarT = bmuVarBi.t();
-                    cdeVarT.ab = cnb.z(-493470267472682L);
+                    cdeVarT.ab = "getLatitude" /* cnb.z(-493470267472682L) */;
                     cdk cdkVar = (cdk) aaz.e(cdeVarT.aj());
                     exg exgVar = exg.a;
                     aki akiVarAd = bxjVar.ad(cdkVar, exgVar);
                     bxjVar.y(akiVarAd, new bty(i));
                     akiVarAd.o();
                     cde cdeVarT2 = bmuVarBi.t();
-                    cdeVarT2.ab = cnb.z(-492834612312874L);
+                    cdeVarT2.ab = "getLongitude" /* cnb.z(-492834612312874L) */;
                     aki akiVarAd2 = bxjVar.ad((cdk) aaz.e(cdeVarT2.aj()), exgVar);
                     bxjVar.y(akiVarAd2, new bty(i2));
                     akiVarAd2.o();
@@ -161,7 +161,7 @@ public final /* synthetic */ class q implements bgf {
                 }
                 ek ekVar = new ek(bmmVar3, i, i2);
                 cgb.a.getClass();
-                ekVar.q(dnr.bo(dnr.bo(dnr.bo(cfz.a.o(), cnb.z(-469414155647786L), str), cnb.z(-469328256301866L), cnb.z(-469293896563498L)), cnb.z(-469302486498090L), cnh.ag(System.currentTimeMillis(), cga.a.o(), null, 2)));
+                ekVar.q(dnr.bo(dnr.bo(dnr.bo(cfz.a.o(), "${sendText}" /* cnb.z(-469414155647786L) */, str), "${line}" /* cnb.z(-469328256301866L) */, "\n" /* cnb.z(-469293896563498L) */), "${sendTime}" /* cnb.z(-469302486498090L) */, cnh.ag(System.currentTimeMillis(), cga.a.o(), null, 2)));
                 return ensVar;
             case 8:
                 int iIntValue = ((Integer) obj).intValue();

@@ -8,129 +8,109 @@ import re
 import sys
 from pathlib import Path
 
-# Constants
-PAYLOAD_SHORT_MAX = 65535
+# --- Precision Helpers ---
 
 
-def to_signed_long(n):
-    """Convert to Java signed long (64-bit)"""
-    n = n & 0xFFFFFFFFFFFFFFFF
-    if n >= 0x8000000000000000:
-        n -= 0x10000000000000000
-    return n
+def to_int64(n):
+    n &= 0xFFFFFFFFFFFFFFFF
+    return n - 0x10000000000000000 if n >= 0x8000000000000000 else n
 
 
-def to_signed_short(n):
-    """Convert to Java signed short (16-bit)"""
-    n = n & 0xFFFF
-    if n >= 0x8000:
-        n -= 0x10000
-    return n
+def to_int32(n):
+    n &= 0xFFFFFFFF
+    return n - 0x100000000 if n >= 0x80000000 else n
 
 
-def unsigned_right_shift(n, shift):
-    """Java unsigned right shift (>>>)"""
-    if n < 0:
-        n = (n + 0x10000000000000000) & 0xFFFFFFFFFFFFFFFF
-    return (n >> shift) & 0xFFFFFFFFFFFFFFFF
+def to_int16(n):
+    n &= 0xFFFF
+    return n - 0x10000 if n >= 0x8000 else n
+
+
+def l_ushr(n, shift):
+    """Java >>> for 64-bit longs"""
+    return (n & 0xFFFFFFFFFFFFFFFF) >> (shift & 63)
+
+
+def i_ushr(n, shift):
+    """Java >>> for 32-bit ints (used when shorts are promoted)"""
+    return (n & 0xFFFFFFFF) >> (shift & 31)
+
+
+def l_mul(a, b):
+    """Java long multiplication overflow"""
+    return to_int64(a * b)
+
+
+# --- Fixed Logic ---
 
 
 def ab(j):
-    """Port of cnh.ab() - bitwise mixing function"""
-    j = to_signed_long(j)
+    # Java extracts shorts (signed 16-bit)
+    s = to_int16(j & 0xFFFF)
+    s2 = to_int16(l_ushr(j, 16) & 0xFFFF)
 
-    # Extract 16-bit parts
-    s = to_signed_short(j & PAYLOAD_SHORT_MAX)
-    s2 = to_signed_short(unsigned_right_shift(j, 16) & PAYLOAD_SHORT_MAX)
+    s3 = to_int16(s + s2)
+    s4 = to_int16(s2 ^ s)
 
-    # Mix operations
-    s3 = to_signed_short(s + s2)
-    s4 = to_signed_short(s2 ^ s)
+    # Part A (Bits 16-31): (short) ((s4 >>> 22) | (s4 << 10))
+    part_a = to_int16(i_ushr(s4, 22) | (s4 << 10))
 
-    # Complex bit operations with rotations
-    part1 = to_signed_short((unsigned_right_shift(s4, 22) | ((s4 << 10) & 0xFFFF)))
+    # Part B (Bits 32-47): (short) (((short) ((s3 >>> 23) | (s3 << 9))) + s)
+    part_b = to_int16(to_int16(i_ushr(s3, 23) | (s3 << 9)) + s)
 
-    temp_s3_rot = to_signed_short((unsigned_right_shift(s3, 23) | ((s3 << 9) & 0xFFFF)))
-    part2 = to_signed_short(temp_s3_rot + s)
+    # Part C (Bits 0-15): (short) (((short) (((short) ((s << 13) | (s >>> 19))) ^ s4)) ^ (s4 << 5))
+    term_c = to_int16(i_ushr(s, 19) | (s << 13))
+    part_c = to_int16(to_int16(term_c ^ s4) ^ (s4 << 5))
 
-    temp_s_rot = to_signed_short(((s << 13) & 0xFFFF) | unsigned_right_shift(s, 19))
-    part3 = to_signed_short(temp_s_rot ^ s4)
-    part4 = to_signed_short(part3 ^ ((s4 << 5) & 0xFFFF))
+    # CRITICAL: Java Assembly with Sign Extension
+    # Java: ((((long) A) | (((long) B) << 16)) << 16) | ((long) C)
+    # We use to_int64() on the shorts to mimic Java's sign extension
+    val = to_int64(to_int64(part_a) | (to_int64(part_b) << 16))
+    res = to_int64((val << 16) | to_int64(part_c))
 
-    # Pack back into 64-bit long
-    result = (((part2 & 0xFFFF) | ((part1 & 0xFFFF) << 16)) << 16) | (part4 & 0xFFFF)
-
-    return to_signed_long(result)
+    return res
 
 
 def z(j2, string_array):
-    """
-    Port of cnb.z() - string deobfuscation function
-
-    Args:
-        j2: encrypted long value
-        string_array: array of encrypted strings
-
-    Returns:
-        Decrypted string
-    """
-    j2 = to_signed_long(j2)
-
-    # Initial mixing
+    j2 = to_int64(j2)
     j3 = j2 & 0xFFFFFFFF
-    j4 = to_signed_long((j3 ^ unsigned_right_shift(j3, 33)) * 7109453100751455733)
 
-    # More mixing with negative multiplier
-    temp = to_signed_long(
-        (j4 ^ unsigned_right_shift(j4, 28)) * to_signed_long(-3808689974395783757)
-    )
-    jAb = ab(unsigned_right_shift(temp, 32))
+    # j3 is unsigned 32-bit, so j3 >>> 33 is always 0 in Java
+    j4 = l_mul(j3, 7109453100751455733)
 
-    # Calculate index
-    j5 = unsigned_right_shift(jAb, 32) & PAYLOAD_SHORT_MAX
+    # Second mix
+    j_mix = l_mul((j4 ^ l_ushr(j4, 28)), -3808689974395783757)
+    jAb = ab(l_ushr(j_mix, 32))
+
+    j5 = l_ushr(jAb, 32) & 0xFFFF
     jAb2 = ab(jAb)
 
-    i2 = int(
-        (unsigned_right_shift(j2, 32) ^ j5)
-        ^ (unsigned_right_shift(jAb2, 16) & 0xFFFFFFFFFFFF0000)
-    )
-    i2 = i2 & 0xFFFFFFFF  # Keep as 32-bit int
+    # Calculate index i2
+    # The mask -65536 in Java (int) promoted to long is 0xFFFFFFFFFFFF0000
+    i2 = to_int32((l_ushr(j2, 32) ^ j5) ^ (l_ushr(jAb2, 16) & 0xFFFFFFFFFFFF0000))
 
-    # Get character from string array
     jAb3 = ab(jAb2)
 
+    # Java-style truncated division
+    def get_char(idx):
+        row = int(idx / 8191)
+        col = int(idx % 8191)
+        return ord(string_array[row][col])
+
     try:
-        char_val = ord(string_array[i2 // 8191][i2 % 8191])
-    except (IndexError, KeyError):
-        return f"[DECRYPT_ERROR: index {i2} out of bounds]"
+        jCharAt = jAb3 ^ (get_char(i2) << 32)
+        length = int(l_ushr(jCharAt, 32) & 0xFFFF)
 
-    jCharAt = to_signed_long(jAb3 ^ (char_val << 32))
-
-    # Extract length
-    i3 = int(unsigned_right_shift(jCharAt, 32) & PAYLOAD_SHORT_MAX)
-
-    if i3 > 10000:  # Sanity check
-        return f"[DECRYPT_ERROR: invalid length {i3}]"
-
-    # Decrypt characters
-    result = []
-    for i4 in range(i3):
-        i5 = i2 + i4 + 1
-
-        try:
-            char_val = ord(string_array[i5 // 8191][i5 % 8191])
-        except (IndexError, KeyError):
-            return f"[DECRYPT_ERROR: char index {i5} out of bounds]"
-
-        jCharAt = to_signed_long(ab(jCharAt) ^ (char_val << 32))
-        decrypted_char = int(unsigned_right_shift(jCharAt, 32) & PAYLOAD_SHORT_MAX)
-
-        if decrypted_char > 0xFFFF:
-            result.append("?")
-        else:
+        result = []
+        for i in range(length):
+            idx = i2 + i + 1
+            jCharAt = to_int64(ab(jCharAt) ^ (get_char(idx) << 32))
+            decrypted_char = int(l_ushr(jCharAt, 32) & 0xFFFF)
             result.append(chr(decrypted_char))
 
-    return "".join(result)
+        return "".join(result)
+    except Exception as e:
+        return f"[DECRYPT_ERROR: {e}]"
 
 
 def parse_string_array(cnb_path):
@@ -143,7 +123,7 @@ def parse_string_array(cnb_path):
     Returns:
         List of strings from the array
     """
-    with open(cnb_path, "r", encoding="utf-8") as f:
+    with open(cnb_path, "r", encoding="utf-8", errors="surrogateescape") as f:
         content = f.read()
 
     # Find the string array declaration: public static final String[] i = {...}
@@ -203,7 +183,7 @@ def deobfuscate_file(java_path, string_array):
     Returns:
         Number of replacements made
     """
-    with open(java_path, "r", encoding="utf-8") as f:
+    with open(java_path, "r", encoding="utf-8", errors="surrogateescape") as f:
         content = f.read()
 
     # original_content = content
@@ -245,7 +225,7 @@ def deobfuscate_file(java_path, string_array):
 
     # Write back if changes were made
     if replacements > 0:
-        with open(java_path, "w", encoding="utf-8") as f:
+        with open(java_path, "w", encoding="utf-8", errors="surrogateescape") as f:
             f.write(content)
 
     return replacements

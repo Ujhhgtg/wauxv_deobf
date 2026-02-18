@@ -23,7 +23,7 @@ public final class cup extends CountDownTimer {
         ((bew) eqjVar).b.setEnabled(true);
         eqj eqjVar2 = policyFragment.d;
         bzo.n(eqjVar2);
-        ((bew) eqjVar2).b.setText(cnb.z(-419498045733674L));
+        ((bew) eqjVar2).b.setText("已同意并重启" /* cnb.z(-419498045733674L) */);
         eqj eqjVar3 = policyFragment.d;
         bzo.n(eqjVar3);
         ((bew) eqjVar3).b.setOnClickListener(new cun(policyFragment, 1));
@@ -34,6 +34,6 @@ public final class cup extends CountDownTimer {
         cbm cbmVar = PolicyFragment.a;
         eqj eqjVar = this.a.d;
         bzo.n(eqjVar);
-        ((bew) eqjVar).b.setText(cnb.z(-419515225602858L) + (j / ((long) 1000)) + cnb.z(-419476570897194L));
+        ((bew) eqjVar).b.setText("已同意并重启 (" /* cnb.z(-419515225602858L) */ + (j / ((long) 1000)) + "s)" /* cnb.z(-419476570897194L) */);
     }
 }

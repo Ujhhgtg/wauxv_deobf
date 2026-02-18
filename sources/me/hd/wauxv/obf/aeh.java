@@ -53,7 +53,7 @@ public final /* synthetic */ class aeh implements View.OnClickListener {
                 aek aekVar2 = (aek) obj;
                 ael aelVar = aekVar2.a;
                 if (aelVar == null) {
-                    bzo.ar(cnb.z(-395527833254698L));
+                    bzo.ar("info" /* cnb.z(-395527833254698L) */);
                     throw null;
                 }
                 if (((Boolean) bgjVar.g(aelVar.n(), aekVar2)).booleanValue()) {
@@ -70,7 +70,7 @@ public final /* synthetic */ class aeh implements View.OnClickListener {
                 View viewInflate = LayoutInflater.from(contextDc).inflate(R.layout.module_dialog_plugin_readme, (ViewGroup) null, false);
                 MaterialTextView materialTextView = (MaterialTextView) cnd.aq(viewInflate, R.id.moduleDialogTvPluginReadme);
                 if (materialTextView == null) {
-                    throw new NullPointerException(cnb.z(-663452188146474L).concat(viewInflate.getResources().getResourceName(R.id.moduleDialogTvPluginReadme)));
+                    throw new NullPointerException("Missing required view with ID: " /* cnb.z(-663452188146474L) */.concat(viewInflate.getResources().getResourceName(R.id.moduleDialogTvPluginReadme)));
                 }
                 LinearLayout linearLayout = (LinearLayout) viewInflate;
                 ArrayList<aha> arrayList = new ArrayList(3);
@@ -307,7 +307,7 @@ public final /* synthetic */ class aeh implements View.OnClickListener {
                                 io ioVar2 = new io(context, 13);
                                 ioVar2.d = linearLayout2;
                                 io.g(ioVar2, null, 3);
-                                String strZ = cnb.z(-418080706525994L);
+                                String strZ = "编辑" /* cnb.z(-418080706525994L) */;
                                 ls lsVar = new ls(cuaVar2, 7, ctxVar2);
                                 bzy bzyVar = (bzy) ioVar2.c;
                                 if (bzyVar != null) {

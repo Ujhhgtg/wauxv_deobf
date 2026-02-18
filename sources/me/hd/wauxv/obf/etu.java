@@ -21,7 +21,7 @@ public final class etu extends bws implements bng {
             dgfVar.getClass();
             objInvoke = methodBb.invoke(dgf.b(declaringClass), null, str, true);
         }
-        bzo.o(objInvoke, cnb.z(-105643310578474L));
+        bzo.o(objInvoke, "null cannot be cast to non-null type kotlin.String" /* cnb.z(-105643310578474L) */);
         return (String) objInvoke;
     }
 

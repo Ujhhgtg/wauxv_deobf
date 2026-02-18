@@ -99,7 +99,7 @@ public final class eer {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-268456930835242L));
+        sb.append("sp1Proto(longitude=" /* cnb.z(-268456930835242L) */);
         bjs.v(sb, this.b, -268405391227690L);
         bjs.v(sb, this.c, -268319491881770L);
         yg.u(sb, this.d, -268285132143402L);

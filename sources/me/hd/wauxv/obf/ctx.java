@@ -41,9 +41,9 @@ public final class ctx {
 
     public ctx(File file) {
         this.a = file;
-        this.b = new File(file, cnb.z(-400376851331882L));
-        this.c = new File(file, cnb.z(-400351081528106L));
-        this.d = new File(file, cnb.z(-400325311724330L));
+        this.b = new File(file, "main.java" /* cnb.z(-400376851331882L) */);
+        this.c = new File(file, "info.prop" /* cnb.z(-400351081528106L) */);
+        this.d = new File(file, "readme.md" /* cnb.z(-400325311724330L) */);
         final int i = 0;
         this.e = new dov(new bfu(this) { // from class: me.hd.wauxv.obf.ctw
             public final /* synthetic */ ctx b;
@@ -63,13 +63,13 @@ public final class ctx {
                         }
                         return properties;
                     case 1:
-                        return ((Properties) this.b.e.getValue()).getProperty(cnb.z(-401639571716906L), cnb.z(-401652456618794L));
+                        return ((Properties) this.b.e.getValue()).getProperty("name" /* cnb.z(-401639571716906L) */, "未知" /* cnb.z(-401652456618794L) */);
                     case 2:
-                        return ((Properties) this.b.e.getValue()).getProperty(cnb.z(-401605211978538L), cnb.z(-401626686815018L));
+                        return ((Properties) this.b.e.getValue()).getProperty("author" /* cnb.z(-401605211978538L) */, "未知" /* cnb.z(-401626686815018L) */);
                     case 3:
-                        return ((Properties) this.b.e.getValue()).getProperty(cnb.z(-390034570083114L), cnb.z(-390000210344746L));
+                        return ((Properties) this.b.e.getValue()).getProperty("version" /* cnb.z(-390034570083114L) */, "未知" /* cnb.z(-390000210344746L) */);
                     case 4:
-                        return ((Properties) this.b.e.getValue()).getProperty(cnb.z(-390004505312042L), cnb.z(-389922900933418L));
+                        return ((Properties) this.b.e.getValue()).getProperty("updateTime" /* cnb.z(-390004505312042L) */, "未知" /* cnb.z(-389922900933418L) */);
                     default:
                         ctx ctxVar2 = this.b;
                         File file2 = ctxVar2.d;
@@ -77,13 +77,13 @@ public final class ctx {
                             return bad.c(file2);
                         }
                         StringBuilder sb = new StringBuilder();
-                        sb.append(cnb.z(-389927195900714L) + ((String) ctxVar2.g.getValue()));
+                        sb.append("# " /* cnb.z(-389927195900714L) */ + ((String) ctxVar2.g.getValue()));
                         sb.append("\n\n");
-                        sb.append(cnb.z(-389948670737194L) + ((String) ctxVar2.h.getValue()));
+                        sb.append("**作者**: " /* cnb.z(-389948670737194L) */ + ((String) ctxVar2.h.getValue()));
                         sb.append("\n\n");
-                        sb.append(cnb.z(-389910016031530L));
+                        sb.append("---" /* cnb.z(-389910016031530L) */);
                         sb.append("\n\n");
-                        sb.append(cnb.z(-389858476423978L));
+                        sb.append("暂无相关描述" /* cnb.z(-389858476423978L) */);
                         sb.append('\n');
                         return sb.toString();
                 }
@@ -110,13 +110,13 @@ public final class ctx {
                         }
                         return properties;
                     case 1:
-                        return ((Properties) this.b.e.getValue()).getProperty(cnb.z(-401639571716906L), cnb.z(-401652456618794L));
+                        return ((Properties) this.b.e.getValue()).getProperty("name" /* cnb.z(-401639571716906L) */, "未知" /* cnb.z(-401652456618794L) */);
                     case 2:
-                        return ((Properties) this.b.e.getValue()).getProperty(cnb.z(-401605211978538L), cnb.z(-401626686815018L));
+                        return ((Properties) this.b.e.getValue()).getProperty("author" /* cnb.z(-401605211978538L) */, "未知" /* cnb.z(-401626686815018L) */);
                     case 3:
-                        return ((Properties) this.b.e.getValue()).getProperty(cnb.z(-390034570083114L), cnb.z(-390000210344746L));
+                        return ((Properties) this.b.e.getValue()).getProperty("version" /* cnb.z(-390034570083114L) */, "未知" /* cnb.z(-390000210344746L) */);
                     case 4:
-                        return ((Properties) this.b.e.getValue()).getProperty(cnb.z(-390004505312042L), cnb.z(-389922900933418L));
+                        return ((Properties) this.b.e.getValue()).getProperty("updateTime" /* cnb.z(-390004505312042L) */, "未知" /* cnb.z(-389922900933418L) */);
                     default:
                         ctx ctxVar2 = this.b;
                         File file2 = ctxVar2.d;
@@ -124,13 +124,13 @@ public final class ctx {
                             return bad.c(file2);
                         }
                         StringBuilder sb = new StringBuilder();
-                        sb.append(cnb.z(-389927195900714L) + ((String) ctxVar2.g.getValue()));
+                        sb.append("# " /* cnb.z(-389927195900714L) */ + ((String) ctxVar2.g.getValue()));
                         sb.append("\n\n");
-                        sb.append(cnb.z(-389948670737194L) + ((String) ctxVar2.h.getValue()));
+                        sb.append("**作者**: " /* cnb.z(-389948670737194L) */ + ((String) ctxVar2.h.getValue()));
                         sb.append("\n\n");
-                        sb.append(cnb.z(-389910016031530L));
+                        sb.append("---" /* cnb.z(-389910016031530L) */);
                         sb.append("\n\n");
-                        sb.append(cnb.z(-389858476423978L));
+                        sb.append("暂无相关描述" /* cnb.z(-389858476423978L) */);
                         sb.append('\n');
                         return sb.toString();
                 }
@@ -155,13 +155,13 @@ public final class ctx {
                         }
                         return properties;
                     case 1:
-                        return ((Properties) this.b.e.getValue()).getProperty(cnb.z(-401639571716906L), cnb.z(-401652456618794L));
+                        return ((Properties) this.b.e.getValue()).getProperty("name" /* cnb.z(-401639571716906L) */, "未知" /* cnb.z(-401652456618794L) */);
                     case 2:
-                        return ((Properties) this.b.e.getValue()).getProperty(cnb.z(-401605211978538L), cnb.z(-401626686815018L));
+                        return ((Properties) this.b.e.getValue()).getProperty("author" /* cnb.z(-401605211978538L) */, "未知" /* cnb.z(-401626686815018L) */);
                     case 3:
-                        return ((Properties) this.b.e.getValue()).getProperty(cnb.z(-390034570083114L), cnb.z(-390000210344746L));
+                        return ((Properties) this.b.e.getValue()).getProperty("version" /* cnb.z(-390034570083114L) */, "未知" /* cnb.z(-390000210344746L) */);
                     case 4:
-                        return ((Properties) this.b.e.getValue()).getProperty(cnb.z(-390004505312042L), cnb.z(-389922900933418L));
+                        return ((Properties) this.b.e.getValue()).getProperty("updateTime" /* cnb.z(-390004505312042L) */, "未知" /* cnb.z(-389922900933418L) */);
                     default:
                         ctx ctxVar2 = this.b;
                         File file2 = ctxVar2.d;
@@ -169,13 +169,13 @@ public final class ctx {
                             return bad.c(file2);
                         }
                         StringBuilder sb = new StringBuilder();
-                        sb.append(cnb.z(-389927195900714L) + ((String) ctxVar2.g.getValue()));
+                        sb.append("# " /* cnb.z(-389927195900714L) */ + ((String) ctxVar2.g.getValue()));
                         sb.append("\n\n");
-                        sb.append(cnb.z(-389948670737194L) + ((String) ctxVar2.h.getValue()));
+                        sb.append("**作者**: " /* cnb.z(-389948670737194L) */ + ((String) ctxVar2.h.getValue()));
                         sb.append("\n\n");
-                        sb.append(cnb.z(-389910016031530L));
+                        sb.append("---" /* cnb.z(-389910016031530L) */);
                         sb.append("\n\n");
-                        sb.append(cnb.z(-389858476423978L));
+                        sb.append("暂无相关描述" /* cnb.z(-389858476423978L) */);
                         sb.append('\n');
                         return sb.toString();
                 }
@@ -200,13 +200,13 @@ public final class ctx {
                         }
                         return properties;
                     case 1:
-                        return ((Properties) this.b.e.getValue()).getProperty(cnb.z(-401639571716906L), cnb.z(-401652456618794L));
+                        return ((Properties) this.b.e.getValue()).getProperty("name" /* cnb.z(-401639571716906L) */, "未知" /* cnb.z(-401652456618794L) */);
                     case 2:
-                        return ((Properties) this.b.e.getValue()).getProperty(cnb.z(-401605211978538L), cnb.z(-401626686815018L));
+                        return ((Properties) this.b.e.getValue()).getProperty("author" /* cnb.z(-401605211978538L) */, "未知" /* cnb.z(-401626686815018L) */);
                     case 3:
-                        return ((Properties) this.b.e.getValue()).getProperty(cnb.z(-390034570083114L), cnb.z(-390000210344746L));
+                        return ((Properties) this.b.e.getValue()).getProperty("version" /* cnb.z(-390034570083114L) */, "未知" /* cnb.z(-390000210344746L) */);
                     case 4:
-                        return ((Properties) this.b.e.getValue()).getProperty(cnb.z(-390004505312042L), cnb.z(-389922900933418L));
+                        return ((Properties) this.b.e.getValue()).getProperty("updateTime" /* cnb.z(-390004505312042L) */, "未知" /* cnb.z(-389922900933418L) */);
                     default:
                         ctx ctxVar2 = this.b;
                         File file2 = ctxVar2.d;
@@ -214,13 +214,13 @@ public final class ctx {
                             return bad.c(file2);
                         }
                         StringBuilder sb = new StringBuilder();
-                        sb.append(cnb.z(-389927195900714L) + ((String) ctxVar2.g.getValue()));
+                        sb.append("# " /* cnb.z(-389927195900714L) */ + ((String) ctxVar2.g.getValue()));
                         sb.append("\n\n");
-                        sb.append(cnb.z(-389948670737194L) + ((String) ctxVar2.h.getValue()));
+                        sb.append("**作者**: " /* cnb.z(-389948670737194L) */ + ((String) ctxVar2.h.getValue()));
                         sb.append("\n\n");
-                        sb.append(cnb.z(-389910016031530L));
+                        sb.append("---" /* cnb.z(-389910016031530L) */);
                         sb.append("\n\n");
-                        sb.append(cnb.z(-389858476423978L));
+                        sb.append("暂无相关描述" /* cnb.z(-389858476423978L) */);
                         sb.append('\n');
                         return sb.toString();
                 }
@@ -245,13 +245,13 @@ public final class ctx {
                         }
                         return properties;
                     case 1:
-                        return ((Properties) this.b.e.getValue()).getProperty(cnb.z(-401639571716906L), cnb.z(-401652456618794L));
+                        return ((Properties) this.b.e.getValue()).getProperty("name" /* cnb.z(-401639571716906L) */, "未知" /* cnb.z(-401652456618794L) */);
                     case 2:
-                        return ((Properties) this.b.e.getValue()).getProperty(cnb.z(-401605211978538L), cnb.z(-401626686815018L));
+                        return ((Properties) this.b.e.getValue()).getProperty("author" /* cnb.z(-401605211978538L) */, "未知" /* cnb.z(-401626686815018L) */);
                     case 3:
-                        return ((Properties) this.b.e.getValue()).getProperty(cnb.z(-390034570083114L), cnb.z(-390000210344746L));
+                        return ((Properties) this.b.e.getValue()).getProperty("version" /* cnb.z(-390034570083114L) */, "未知" /* cnb.z(-390000210344746L) */);
                     case 4:
-                        return ((Properties) this.b.e.getValue()).getProperty(cnb.z(-390004505312042L), cnb.z(-389922900933418L));
+                        return ((Properties) this.b.e.getValue()).getProperty("updateTime" /* cnb.z(-390004505312042L) */, "未知" /* cnb.z(-389922900933418L) */);
                     default:
                         ctx ctxVar2 = this.b;
                         File file2 = ctxVar2.d;
@@ -259,13 +259,13 @@ public final class ctx {
                             return bad.c(file2);
                         }
                         StringBuilder sb = new StringBuilder();
-                        sb.append(cnb.z(-389927195900714L) + ((String) ctxVar2.g.getValue()));
+                        sb.append("# " /* cnb.z(-389927195900714L) */ + ((String) ctxVar2.g.getValue()));
                         sb.append("\n\n");
-                        sb.append(cnb.z(-389948670737194L) + ((String) ctxVar2.h.getValue()));
+                        sb.append("**作者**: " /* cnb.z(-389948670737194L) */ + ((String) ctxVar2.h.getValue()));
                         sb.append("\n\n");
-                        sb.append(cnb.z(-389910016031530L));
+                        sb.append("---" /* cnb.z(-389910016031530L) */);
                         sb.append("\n\n");
-                        sb.append(cnb.z(-389858476423978L));
+                        sb.append("暂无相关描述" /* cnb.z(-389858476423978L) */);
                         sb.append('\n');
                         return sb.toString();
                 }
@@ -290,13 +290,13 @@ public final class ctx {
                         }
                         return properties;
                     case 1:
-                        return ((Properties) this.b.e.getValue()).getProperty(cnb.z(-401639571716906L), cnb.z(-401652456618794L));
+                        return ((Properties) this.b.e.getValue()).getProperty("name" /* cnb.z(-401639571716906L) */, "未知" /* cnb.z(-401652456618794L) */);
                     case 2:
-                        return ((Properties) this.b.e.getValue()).getProperty(cnb.z(-401605211978538L), cnb.z(-401626686815018L));
+                        return ((Properties) this.b.e.getValue()).getProperty("author" /* cnb.z(-401605211978538L) */, "未知" /* cnb.z(-401626686815018L) */);
                     case 3:
-                        return ((Properties) this.b.e.getValue()).getProperty(cnb.z(-390034570083114L), cnb.z(-390000210344746L));
+                        return ((Properties) this.b.e.getValue()).getProperty("version" /* cnb.z(-390034570083114L) */, "未知" /* cnb.z(-390000210344746L) */);
                     case 4:
-                        return ((Properties) this.b.e.getValue()).getProperty(cnb.z(-390004505312042L), cnb.z(-389922900933418L));
+                        return ((Properties) this.b.e.getValue()).getProperty("updateTime" /* cnb.z(-390004505312042L) */, "未知" /* cnb.z(-389922900933418L) */);
                     default:
                         ctx ctxVar2 = this.b;
                         File file2 = ctxVar2.d;
@@ -304,13 +304,13 @@ public final class ctx {
                             return bad.c(file2);
                         }
                         StringBuilder sb = new StringBuilder();
-                        sb.append(cnb.z(-389927195900714L) + ((String) ctxVar2.g.getValue()));
+                        sb.append("# " /* cnb.z(-389927195900714L) */ + ((String) ctxVar2.g.getValue()));
                         sb.append("\n\n");
-                        sb.append(cnb.z(-389948670737194L) + ((String) ctxVar2.h.getValue()));
+                        sb.append("**作者**: " /* cnb.z(-389948670737194L) */ + ((String) ctxVar2.h.getValue()));
                         sb.append("\n\n");
-                        sb.append(cnb.z(-389910016031530L));
+                        sb.append("---" /* cnb.z(-389910016031530L) */);
                         sb.append("\n\n");
-                        sb.append(cnb.z(-389858476423978L));
+                        sb.append("暂无相关描述" /* cnb.z(-389858476423978L) */);
                         sb.append('\n');
                         return sb.toString();
                 }
@@ -356,11 +356,11 @@ public final class ctx {
                     thB = dcy.b(objX);
                     if (thB != null) {
                         ArrayList arrayList = ewq.a;
-                        ewq.e(cnb.z(-402288111778602L) + this.f + cnb.z(-402253752040234L) + str + cnb.z(-402193622498090L) + thB.getMessage(), null, 14);
+                        ewq.e("Plugin[" /* cnb.z(-402288111778602L) */ + this.f + "]: callBshMethod " /* cnb.z(-402253752040234L) */ + str + " Failed: " /* cnb.z(-402193622498090L) */ + thB.getMessage(), null, 14);
                         StringBuilder sb = new StringBuilder();
-                        sb.append(cnb.z(-402167852694314L));
+                        sb.append("callBshMethod " /* cnb.z(-402167852694314L) */);
                         sb.append(str);
-                        sb.append(cnb.z(-401553672370986L));
+                        sb.append(" Failed: " /* cnb.z(-401553672370986L) */);
                         sb.append(thB.getMessage());
                         this.m.p(sb.toString());
                     }
@@ -388,11 +388,11 @@ public final class ctx {
                 thB = dcy.b(objX);
                 if (thB != null) {
                     ArrayList arrayList2 = ewq.a;
-                    ewq.e(cnb.z(-402288111778602L) + this.f + cnb.z(-402253752040234L) + str + cnb.z(-402193622498090L) + thB.getMessage(), null, 14);
+                    ewq.e("Plugin[" /* cnb.z(-402288111778602L) */ + this.f + "]: callBshMethod " /* cnb.z(-402253752040234L) */ + str + " Failed: " /* cnb.z(-402193622498090L) */ + thB.getMessage(), null, 14);
                     StringBuilder sb2 = new StringBuilder();
-                    sb2.append(cnb.z(-402167852694314L));
+                    sb2.append("callBshMethod " /* cnb.z(-402167852694314L) */);
                     sb2.append(str);
-                    sb2.append(cnb.z(-401553672370986L));
+                    sb2.append(" Failed: " /* cnb.z(-401553672370986L) */);
                     sb2.append(thB.getMessage());
                     this.m.p(sb2.toString());
                 }
@@ -418,25 +418,25 @@ public final class ctx {
         }
         Interpreter interpreter = new Interpreter();
         interpreter.setClassLoader(cud.class.getClassLoader());
-        String strZ = cnb.z(-390245023480618L);
+        String strZ = "hostContext" /* cnb.z(-390245023480618L) */;
         bmo.a.getClass();
         interpreter.set(strZ, bmo.n());
-        String strZ2 = cnb.z(-390159124134698L);
+        String strZ2 = "hostVerName" /* cnb.z(-390159124134698L) */;
         bc bcVar = bmo.i;
         btc[] btcVarArr = bmo.b;
         interpreter.set(strZ2, (String) bcVar.h(btcVarArr[6]));
-        interpreter.set(cnb.z(-390141944265514L), bmo.q());
-        interpreter.set(cnb.z(-390056044919594L), (String) bmo.k.h(btcVarArr[8]));
-        interpreter.set(cnb.z(-389497699171114L), 1238);
-        String strZ3 = cnb.z(-389403209890602L);
+        interpreter.set("hostVerCode" /* cnb.z(-390141944265514L) */, bmo.q());
+        interpreter.set("hostVerClient" /* cnb.z(-390056044919594L) */, (String) bmo.k.h(btcVarArr[8]));
+        interpreter.set("moduleVer" /* cnb.z(-389497699171114L) */, 1238);
+        String strZ3 = "cacheDir" /* cnb.z(-389403209890602L) */;
         dov dovVar = ctf.a;
-        interpreter.set(strZ3, ctf.c(cnb.z(-47098611366698L)));
-        interpreter.set(cnb.z(-389381735054122L), this.a);
-        interpreter.set(cnb.z(-389355965250346L), str);
-        interpreter.set(cnb.z(-389317310544682L), (String) this.g.getValue());
-        interpreter.set(cnb.z(-389235706166058L), (String) this.h.getValue());
-        interpreter.set(cnb.z(-389763987143466L), (String) this.i.getValue());
-        interpreter.set(cnb.z(-389686677732138L), (String) this.j.getValue());
+        interpreter.set(strZ3, ctf.c("Cache" /* cnb.z(-47098611366698L) */));
+        interpreter.set("pluginDir" /* cnb.z(-389381735054122L) */, this.a);
+        interpreter.set("pluginId" /* cnb.z(-389355965250346L) */, str);
+        interpreter.set("pluginName" /* cnb.z(-389317310544682L) */, (String) this.g.getValue());
+        interpreter.set("pluginAuthor" /* cnb.z(-389235706166058L) */, (String) this.h.getValue());
+        interpreter.set("pluginVersion" /* cnb.z(-389763987143466L) */, (String) this.i.getValue());
+        interpreter.set("pluginUpdateTime" /* cnb.z(-389686677732138L) */, (String) this.j.getValue());
         cuk.f(interpreter, new PluginAudioMethod());
         cuk.f(interpreter, new PluginConfigMethod(str));
         cuk.f(interpreter, new PluginContactMethod());
@@ -457,28 +457,28 @@ public final class ctx {
         if (ioVar != null) {
             return ioVar.ah(this.l, false);
         }
-        throw new IllegalArgumentException(cnb.z(-29368986368810L).toString());
+        throw new IllegalArgumentException("PluginConfig must be init" /* cnb.z(-29368986368810L) */.toString());
     }
 
     public final void q(boolean z) {
         io ioVar = bhs.h;
         if (ioVar == null) {
-            throw new IllegalArgumentException(cnb.z(-29368986368810L).toString());
+            throw new IllegalArgumentException("PluginConfig must be init" /* cnb.z(-29368986368810L) */.toString());
         }
         ioVar.at(this.l, z);
     }
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-401527902567210L));
+        sb.append("Plugin(pluginDir=" /* cnb.z(-401527902567210L) */);
         sb.append(this.a);
-        sb.append(cnb.z(-401399053548330L));
+        sb.append(", id='" /* cnb.z(-401399053548330L) */);
         yg.u(sb, this.f, -401420528384810L);
         yg.u(sb, (String) this.g.getValue(), -401326039104298L);
         yg.u(sb, (String) this.h.getValue(), -401858615049002L);
         yg.u(sb, (String) this.i.getValue(), -401785600604970L);
         sb.append((String) this.j.getValue());
-        sb.append(cnb.z(-401716881128234L));
+        sb.append("', isEnabled=" /* cnb.z(-401716881128234L) */);
         sb.append(p());
         sb.append(')');
         return sb.toString();

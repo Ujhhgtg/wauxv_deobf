@@ -52,7 +52,7 @@ public final class cdr {
         if (!cdr.class.equals(obj != null ? obj.getClass() : null)) {
             return false;
         }
-        bzo.o(obj, cnb.z(-339323891219242L));
+        bzo.o(obj, "null cannot be cast to non-null type me.hd.wauxv.hook.micromsg.core.protobuf.proto.ModUserInfo" /* cnb.z(-339323891219242L) */);
         cdr cdrVar = (cdr) obj;
         return bzo.f(this.a, cdrVar.a) && bzo.f(this.d, cdrVar.d) && bzo.f(this.g, cdrVar.g) && bzo.f(this.h, cdrVar.h) && bzo.f(this.j, cdrVar.j) && bzo.f(this.n, cdrVar.n) && bzo.f(this.p, cdrVar.p) && bzo.f(this.q, cdrVar.q) && bzo.f(this.s, cdrVar.s) && bzo.f(this.t, cdrVar.t) && bzo.f(this.u, cdrVar.u) && bzo.f(this.v, cdrVar.v) && bzo.f(this.w, cdrVar.w) && bzo.f(this.y, cdrVar.y) && bzo.f(this.ac, cdrVar.ac) && bzo.f(this.ad, cdrVar.ad) && bzo.f(this.ae, cdrVar.ae) && bzo.f(this.ag, cdrVar.ag) && bzo.f(this.ah, cdrVar.ah) && bzo.f(this.aj, cdrVar.aj) && bzo.f(this.b, cdrVar.b) && bzo.f(this.c, cdrVar.c) && bzo.f(this.e, cdrVar.e) && bzo.f(this.f, cdrVar.f) && Arrays.equals(this.i, cdrVar.i) && bzo.f(this.k, cdrVar.k) && bzo.f(this.l, cdrVar.l) && bzo.f(this.m, cdrVar.m) && bzo.f(this.o, cdrVar.o) && bzo.f(this.r, cdrVar.r) && bzo.f(this.x, cdrVar.x) && bzo.f(this.z, cdrVar.z) && bzo.f(this.aa, cdrVar.aa) && bzo.f(this.ab, cdrVar.ab) && bzo.f(this.af, cdrVar.af) && bzo.f(this.ai, cdrVar.ai) && bzo.f(this.ak, cdrVar.ak) && bzo.f(this.al, cdrVar.al);
     }
@@ -138,28 +138,28 @@ public final class cdr {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-338915869326122L));
+        sb.append("ModUserInfo(BitFlag=" /* cnb.z(-338915869326122L) */);
         bjs.w(sb, this.a, -338791315274538L);
         sb.append(this.b);
-        sb.append(cnb.z(-338774135405354L));
+        sb.append(", NickName=" /* cnb.z(-338774135405354L) */);
         sb.append(this.c);
-        sb.append(cnb.z(-338688236059434L));
+        sb.append(", BindUin=" /* cnb.z(-338688236059434L) */);
         bjs.w(sb, this.d, -338675351157546L);
         sb.append(this.e);
-        sb.append(cnb.z(-339134912658218L));
+        sb.append(", BindMobile=" /* cnb.z(-339134912658218L) */);
         sb.append(this.f);
-        sb.append(cnb.z(-339126322723626L));
+        sb.append(", Status=" /* cnb.z(-339126322723626L) */);
         bjs.w(sb, this.g, -339031833443114L);
         bjs.w(sb, this.h, -339006063639338L);
         sb.append(Arrays.toString(this.i));
-        sb.append(cnb.z(-338980293835562L));
+        sb.append(", Sex=" /* cnb.z(-338980293835562L) */);
         bjs.w(sb, this.j, -338950229064490L);
         yg.u(sb, this.k, -340513597160234L);
         yg.u(sb, this.l, -340479237421866L);
         yg.u(sb, this.m, -340457762585386L);
         bjs.w(sb, this.n, -340389043108650L);
         sb.append(this.o);
-        sb.append(cnb.z(-340328913566506L));
+        sb.append(", PluginFlag=" /* cnb.z(-340328913566506L) */);
         bjs.w(sb, this.p, -340801359969066L);
         bjs.w(sb, this.q, -340724050557738L);
         yg.u(sb, this.r, -340646741146410L);
@@ -171,7 +171,7 @@ public final class cdr {
         yg.u(sb, this.x, -339787747687210L);
         bjs.w(sb, this.y, -340268784024362L);
         sb.append(this.z);
-        sb.append(cnb.z(-340264489057066L));
+        sb.append(", Alias=" /* cnb.z(-340264489057066L) */);
         yg.u(sb, this.aa, -340225834351402L);
         yg.u(sb, this.ab, -340101280299818L);
         bjs.w(sb, this.ac, -340079805463338L);

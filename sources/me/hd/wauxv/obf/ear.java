@@ -13,7 +13,7 @@ public final /* synthetic */ class ear implements bgx {
     static {
         ear earVar = new ear();
         b = earVar;
-        cuc cucVar = new cuc(cnb.z(-212751205006122L), earVar, 73);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.md1Proto" /* cnb.z(-212751205006122L) */, earVar, 73);
         bjs.y(-218459216542506L, cucVar, false, 1);
         bjs.y(-218411971902250L, cucVar, false, 2);
         bjs.y(-218386202098474L, cucVar, false, 3);

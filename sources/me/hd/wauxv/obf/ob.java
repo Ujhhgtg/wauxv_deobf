@@ -38,11 +38,11 @@ public final class ob extends oc {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-388149079440170L));
+        sb.append("Switch(title=" /* cnb.z(-388149079440170L) */);
         yg.u(sb, this.a, -388621525842730L);
         yg.u(sb, this.b, -388587166104362L);
         sb.append(this.c);
-        sb.append(cnb.z(-388552806365994L));
+        sb.append(", onClick=" /* cnb.z(-388552806365994L) */);
         sb.append(this.d);
         sb.append(')');
         return sb.toString();

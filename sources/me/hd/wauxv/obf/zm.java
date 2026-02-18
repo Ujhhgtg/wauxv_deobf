@@ -38,7 +38,7 @@ public final class zm extends cyw {
             case 0:
                 bqq bqqVar = ((zk) czxVar).a;
                 zn znVar = (zn) this.b.get(i);
-                ((MaterialCheckBox) bqqVar.c).setText(znVar.a.concat(cnb.z(-11935714114346L)));
+                ((MaterialCheckBox) bqqVar.c).setText(znVar.a.concat(" (计算中...)" /* cnb.z(-11935714114346L) */));
                 MaterialCheckBox materialCheckBox = (MaterialCheckBox) bqqVar.c;
                 materialCheckBox.setOnCheckedChangeListener(null);
                 materialCheckBox.setChecked(((Set) this.c).contains(znVar.a));
@@ -75,14 +75,14 @@ public final class zm extends cyw {
                 if (materialCheckBox != null) {
                     return new zk(new bqq((LinearLayout) viewInflate, materialCheckBox, 2));
                 }
-                throw new NullPointerException(cnb.z(-640109040892714L).concat(viewInflate.getResources().getResourceName(R.id.itemAutoCleanCheckBox)));
+                throw new NullPointerException("Missing required view with ID: " /* cnb.z(-640109040892714L) */.concat(viewInflate.getResources().getResourceName(R.id.itemAutoCleanCheckBox)));
             default:
                 View viewInflate2 = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_rv_system_browser, viewGroup, false);
                 MaterialTextView materialTextView = (MaterialTextView) cnd.aq(viewInflate2, R.id.itemSystemBrowserTvHost);
                 if (materialTextView != null) {
                     return new dpb(new bqq((LinearLayout) viewInflate2, materialTextView, 0));
                 }
-                throw new NullPointerException(cnb.z(-640246479846186L).concat(viewInflate2.getResources().getResourceName(R.id.itemSystemBrowserTvHost)));
+                throw new NullPointerException("Missing required view with ID: " /* cnb.z(-640246479846186L) */.concat(viewInflate2.getResources().getResourceName(R.id.itemSystemBrowserTvHost)));
         }
     }
 

@@ -64,7 +64,7 @@ public final class dut {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-328569293110058L));
+        sb.append("WeappInfoProto(appUserName=" /* cnb.z(-328569293110058L) */);
         yg.u(sb, this.a, -327864918473514L);
         yg.u(sb, this.b, -327847738604330L);
         bjs.w(sb, this.c, -327766134225706L);

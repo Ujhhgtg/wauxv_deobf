@@ -40,7 +40,7 @@ public final class ehs {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-305290570365738L));
+        sb.append("wa3Proto(start_offset=" /* cnb.z(-305290570365738L) */);
         bjs.w(sb, this.a, -305191786117930L);
         yg.u(sb, this.b, -305148836444970L);
         return bjs.q(sb, this.c, ')');

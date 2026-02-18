@@ -63,7 +63,7 @@ public final /* synthetic */ class aqi implements ValueAnimator.AnimatorUpdateLi
             case 4:
                 don donVar = (don) this.b;
                 Object animatedValue2 = valueAnimator.getAnimatedValue();
-                bzo.o(animatedValue2, cnb.z(-412982580345642L));
+                bzo.o(animatedValue2, "null cannot be cast to non-null type kotlin.Int" /* cnb.z(-412982580345642L) */);
                 donVar.scrollTo(((Integer) animatedValue2).intValue(), 0);
                 break;
             default:

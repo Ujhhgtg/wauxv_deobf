@@ -143,7 +143,7 @@ public final class dtb {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-179422258789162L));
+        sb.append("FinderFeedProto(objectId=" /* cnb.z(-179422258789162L) */);
         yg.u(sb, this.b, -179259050031914L);
         yg.u(sb, this.c, -179241870162730L);
         yg.u(sb, this.d, -179705726630698L);

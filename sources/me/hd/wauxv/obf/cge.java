@@ -13,7 +13,7 @@ public final class cge extends bws implements bng {
         Object objC = zf.c(emn.az(cgd.a), new Object[0]);
         int i = bte.a;
         cde cdeVarT = dqc.bi(objC).t();
-        cdeVarT.ab = cnb.z(-75604309310250L);
+        cdeVarT.ab = "convertFrom" /* cnb.z(-75604309310250L) */;
         cdeVarT.z(Arrays.copyOf(new Object[]{dal.b(Cursor.class)}, 1));
         cdeVarT.ah();
         ((cdk) aaz.e(cdeVarT.aj())).e(cursor);

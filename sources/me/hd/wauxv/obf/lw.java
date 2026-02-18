@@ -114,10 +114,10 @@ public final class lw extends doi implements bgj {
                     long jCurrentTimeMillis2 = System.currentTimeMillis() - jCurrentTimeMillis;
                     ArrayList arrayList = ewq.a;
                     StringBuilder sb = new StringBuilder();
-                    sb.append(cnb.z(-513583599319850L));
+                    sb.append("auto clean: name(" /* cnb.z(-513583599319850L) */);
                     yg.u(sb, znVar.a, -513523469777706L);
                     sb.append(jCurrentTimeMillis2);
-                    sb.append(cnb.z(-513506289908522L));
+                    sb.append("ms)" /* cnb.z(-513506289908522L) */);
                     ewq.d(14, sb.toString());
                 }
                 return ensVar;
@@ -139,18 +139,18 @@ public final class lw extends doi implements bgj {
             case 4:
                 bhu.bd(obj);
                 csq csqVar = csq.a;
-                String strZ = cnb.z(-474967548361514L);
+                String strZ = "emoji" /* cnb.z(-474967548361514L) */;
                 ArrayList arrayList2 = csq.r;
                 csqVar.getClass();
                 File[] fileArrListFiles2 = new File(csq.b, strZ).listFiles();
                 if (fileArrListFiles2 != null) {
                     for (File file2 : fileArrListFiles2) {
                         if (file2.isFile()) {
-                            List listAg = aba.ag(cnb.z(-474357663005482L), cnb.z(-474306123397930L), cnb.z(-474323303267114L));
+                            List listAg = aba.ag("png" /* cnb.z(-474357663005482L) */, "jpg" /* cnb.z(-474306123397930L) */, "gif" /* cnb.z(-474323303267114L) */);
                             String name = file2.getName();
                             bzo.p(name, "getName(...)");
                             String lowerCase = dnj.av(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, name, "").toLowerCase(Locale.ROOT);
-                            bzo.p(lowerCase, cnb.z(-474271763659562L));
+                            bzo.p(lowerCase, "toLowerCase(...)" /* cnb.z(-474271763659562L) */);
                             if (listAg.contains(lowerCase)) {
                                 auh auhVar = auh.a;
                                 String absolutePath = file2.getAbsolutePath();
@@ -160,7 +160,7 @@ public final class lw extends doi implements bgj {
                                 Object objB = aub.b(strB);
                                 atz.a.getClass();
                                 emn.bb(aty.a).invoke(objB, null, Boolean.TRUE);
-                                arrayList2.add(emn.ba(csn.a).newInstance(objB, 2, cnb.z(-474215929084714L), 0));
+                                arrayList2.add(emn.ba(csn.a).newInstance(objB, 2, "" /* cnb.z(-474215929084714L) */, 0));
                             }
                         }
                     }

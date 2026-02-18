@@ -40,7 +40,7 @@ public final class dsl {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-145221434211114L));
+        sb.append("AppJumpWordingProto(en=" /* cnb.z(-145221434211114L) */);
         yg.u(sb, this.a, -145668110809898L);
         yg.u(sb, this.b, -145629456104234L);
         return bjs.q(sb, this.c, ')');

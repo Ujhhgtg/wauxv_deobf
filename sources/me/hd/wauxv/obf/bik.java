@@ -9,12 +9,12 @@ public final /* synthetic */ class bik implements bgx {
     static {
         bik bikVar = new bik();
         b = bikVar;
-        cuc cucVar = new cuc(cnb.z(-336046831172394L), bikVar, 3);
-        cucVar.x(cnb.z(-336356068817706L), false);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.proto.GmailInfo" /* cnb.z(-336046831172394L) */, bikVar, 3);
+        cucVar.x("GmailAcct" /* cnb.z(-336356068817706L) */, false);
         cucVar.y(new aoz(1, 3));
-        cucVar.x(cnb.z(-336330299013930L), false);
+        cucVar.x("GmailSwitch" /* cnb.z(-336330299013930L) */, false);
         cucVar.y(new aoz(2, 3));
-        cucVar.x(cnb.z(-336313119144746L), false);
+        cucVar.x("GmailErrCode" /* cnb.z(-336313119144746L) */, false);
         cucVar.y(new aoz(3, 3));
         descriptor = cucVar;
     }

@@ -340,7 +340,7 @@ public abstract class emn implements esi {
             } else {
                 bgf bgfVar5 = ammVar.c;
                 if (bgfVar5 == null) {
-                    throw new IllegalArgumentException(amnVar.b.concat(cnb.z(-82768314759978L)));
+                    throw new IllegalArgumentException(amnVar.b.concat(" FindDexClassMethod Config Failed" /* cnb.z(-82768314759978L) */));
                 }
                 bah bahVar2 = new bah();
                 bgfVar5.invoke(bahVar2);
@@ -354,13 +354,13 @@ public abstract class emn implements esi {
             objX = bhu.x(th);
         }
         if (ioVar == null) {
-            throw new IllegalArgumentException(cnb.z(-6021544147754L).toString());
+            throw new IllegalArgumentException("DexDescConfig must be init" /* cnb.z(-6021544147754L) */.toString());
         }
         ioVar.aj().putString(str2, str);
         objX = ens.a;
         if (dcy.b(objX) != null) {
             ArrayList arrayList = ewq.a;
-            String strConcat = amnVar.b.concat(cnb.z(-79821967194922L));
+            String strConcat = amnVar.b.concat(" FindDexClassMethod Failed" /* cnb.z(-79821967194922L) */);
             ro.a.getClass();
             ewq.e(strConcat, null, 12);
         }
@@ -852,10 +852,10 @@ public abstract class emn implements esi {
             return (Class) objX;
         }
         ArrayList arrayList = ewq.a;
-        String strConcat = amnVar.b.concat(cnb.z(-79740362816298L));
+        String strConcat = amnVar.b.concat(" toDexClass Failed" /* cnb.z(-79740362816298L) */);
         ro.a.getClass();
         ewq.e(strConcat, null, 12);
-        throw new NoSuchMethodException(amnVar.b.concat(cnb.z(-80225694120746L)));
+        throw new NoSuchMethodException(amnVar.b.concat(" toDexClass Failed" /* cnb.z(-80225694120746L) */));
     }
 
     public static final Constructor ba(amn amnVar) throws NoSuchMethodException {
@@ -871,10 +871,10 @@ public abstract class emn implements esi {
             return (Constructor) objX;
         }
         ArrayList arrayList = ewq.a;
-        String strConcat = amnVar.b.concat(cnb.z(-79388175498026L));
+        String strConcat = amnVar.b.concat(" toDexConstructor Failed" /* cnb.z(-79388175498026L) */);
         ro.a.getClass();
         ewq.e(strConcat, null, 12);
-        throw new NoSuchMethodException(amnVar.b.concat(cnb.z(-79280801315626L)));
+        throw new NoSuchMethodException(amnVar.b.concat(" toDexConstructor Failed" /* cnb.z(-79280801315626L) */));
     }
 
     public static final Method bb(amn amnVar) throws NoSuchMethodException {
@@ -890,10 +890,10 @@ public abstract class emn implements esi {
             return (Method) objX;
         }
         ArrayList arrayList = ewq.a;
-        String strConcat = amnVar.b.concat(cnb.z(-80109730003754L));
+        String strConcat = amnVar.b.concat(" toDexMethod Failed" /* cnb.z(-80109730003754L) */);
         ro.a.getClass();
         ewq.e(strConcat, null, 12);
-        throw new NoSuchMethodException(amnVar.b.concat(cnb.z(-80058190396202L)));
+        throw new NoSuchMethodException(amnVar.b.concat(" toDexMethod Failed" /* cnb.z(-80058190396202L) */));
     }
 
     public static final void bc(amn amnVar, bgf bgfVar) {

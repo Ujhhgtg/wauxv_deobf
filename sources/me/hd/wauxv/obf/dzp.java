@@ -75,7 +75,7 @@ public final class dzp {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-199638669851434L));
+        sb.append("ko1Proto(tab_id=" /* cnb.z(-199638669851434L) */);
         bjs.w(sb, this.b, -199565655407402L);
         yg.u(sb, this.c, -200098231352106L);
         dts.g(sb, this.d, -199977972267818L);

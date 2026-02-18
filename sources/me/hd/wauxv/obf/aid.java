@@ -13,11 +13,11 @@ public final class aid {
     public final int f;
 
     static {
-        aid aidVar = new aid(cnb.z(-422560357415722L), 0, -1);
+        aid aidVar = new aid("SUB" /* cnb.z(-422560357415722L) */, 0, -1);
         a = aidVar;
-        aid aidVar2 = new aid(cnb.z(-422577537284906L), 1, 0);
+        aid aidVar2 = new aid("DEFAULT" /* cnb.z(-422577537284906L) */, 1, 0);
         b = aidVar2;
-        aid aidVar3 = new aid(cnb.z(-422543177546538L), 2, 1);
+        aid aidVar3 = new aid("ADD" /* cnb.z(-422543177546538L) */, 2, 1);
         c = aidVar3;
         aid[] aidVarArr = {aidVar, aidVar2, aidVar3};
         d = aidVarArr;

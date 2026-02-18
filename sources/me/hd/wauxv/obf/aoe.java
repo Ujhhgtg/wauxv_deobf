@@ -6,10 +6,10 @@ import org.luckypray.dexkit.DexKitBridge;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class aoe extends doo implements bng {
-    public static final aoe a = new aoe(cnb.z(-445057396112170L));
-    public static final String b = cnb.z(-444563474873130L);
-    public static final String c = cnb.z(-444567769840426L);
-    public static final String i = cnb.z(-444537705069354L);
+    public static final aoe a = new aoe("DisablePlayRingtoneHook" /* cnb.z(-445057396112170L) */);
+    public static final String b = "聊天" /* cnb.z(-444563474873130L) */;
+    public static final String c = "屏蔽通话铃声" /* cnb.z(-444567769840426L) */;
+    public static final String i = "屏蔽视频及语音通话时呼出呼入的铃声" /* cnb.z(-444537705069354L) */;
     public static final amb j = new amb(12);
 
     @Override // me.hd.wauxv.obf.bmf

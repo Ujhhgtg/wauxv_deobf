@@ -88,8 +88,8 @@ public final /* synthetic */ class bq implements View.OnClickListener {
                         originContent = msgInfoBean.getOriginContent();
                     }
                     builder.setMessage(originContent);
-                    builder.setPositiveButton(cnb.z(-467696168729386L), (DialogInterface.OnClickListener) null);
-                    builder.setNegativeButton(cnb.z(-467700463696682L), (DialogInterface.OnClickListener) null);
+                    builder.setPositiveButton("确定" /* cnb.z(-467696168729386L) */, (DialogInterface.OnClickListener) null);
+                    builder.setNegativeButton("取消" /* cnb.z(-467700463696682L) */, (DialogInterface.OnClickListener) null);
                     TextView textView = (TextView) builder.show().findViewById(android.R.id.message);
                     textView.setTextIsSelectable(true);
                     if (cgoVar.i()) {

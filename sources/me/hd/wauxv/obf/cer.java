@@ -12,7 +12,7 @@ import me.hd.wauxv.R;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class cer extends bgr implements bgk {
-    public static final cer a = new cer(3, bek.class, cnb.z(-395476293647146L), cnb.z(-395441933908778L), 0);
+    public static final cer a = new cer(3, bek.class, "inflate" /* cnb.z(-395476293647146L) */, "inflate(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Z)Lme/hd/wauxv/databinding/FragmentModuleNavBinding;" /* cnb.z(-395441933908778L) */, 0);
 
     @Override // me.hd.wauxv.obf.bgk
     public final Object b(Object obj, Object obj2, Object obj3) {
@@ -35,6 +35,6 @@ public final /* synthetic */ class cer extends bgr implements bgk {
                 }
             }
         }
-        throw new NullPointerException(cnb.z(-640521357753130L).concat(viewInflate.getResources().getResourceName(i)));
+        throw new NullPointerException("Missing required view with ID: " /* cnb.z(-640521357753130L) */.concat(viewInflate.getResources().getResourceName(i)));
     }
 }

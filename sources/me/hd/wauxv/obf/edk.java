@@ -36,7 +36,7 @@ public final class edk {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-252015796026154L));
+        sb.append("poProto(d=" /* cnb.z(-252015796026154L) */);
         yg.u(sb, this.a, -251934191647530L);
         return bjs.p(sb, this.b, ')');
     }

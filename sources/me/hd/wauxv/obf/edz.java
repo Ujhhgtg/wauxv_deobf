@@ -71,7 +71,7 @@ public final class edz {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-279924493515562L));
+        sb.append("rj3Proto(objectId=" /* cnb.z(-279924493515562L) */);
         yg.u(sb, this.b, -280358285212458L);
         yg.u(sb, this.c, -280341105343274L);
         yg.u(sb, this.d, -280255205997354L);

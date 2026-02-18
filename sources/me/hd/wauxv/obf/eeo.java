@@ -40,7 +40,7 @@ public final class eeo {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-272584394406698L));
+        sb.append("sm0Proto(biz_nickname=" /* cnb.z(-272584394406698L) */);
         yg.u(sb, this.a, -272537149766442L);
         yg.u(sb, this.b, -272468430289706L);
         return bjs.p(sb, this.c, ')');

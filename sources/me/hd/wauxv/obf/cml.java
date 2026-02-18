@@ -38,7 +38,7 @@ public final /* synthetic */ class cml implements bgf {
             case 1:
                 bag bagVar = (bag) obj;
                 zb zbVar = new zb();
-                zbVar.k(cnb.z(-139410343459626L), cnb.z(-138770393332522L));
+                zbVar.k("MicroMsg.NetSceneSendPat" /* cnb.z(-139410343459626L) */, "/cgi-bin/micromsg-bin/sendpat" /* cnb.z(-138770393332522L) */);
                 bagVar.getClass();
                 bagVar.b = zbVar;
                 return ensVar;
@@ -66,17 +66,17 @@ public final /* synthetic */ class cml implements bgf {
                 return ensVar;
             case 4:
                 bag bagVar2 = (bag) obj;
-                String[] strArr = {cnb.z(-138839112809258L)};
+                String[] strArr = {"com.tencent.mm.plugin.remittance.model" /* cnb.z(-138839112809258L) */};
                 bagVar2.getClass();
                 bagVar2.a = la.ab(strArr);
                 zb zbVar2 = new zb();
-                zbVar2.k(cnb.z(-140303696657194L), cnb.z(-140694538681130L));
+                zbVar2.k("Micromsg.NetSceneTenpayRemittanceConfirm" /* cnb.z(-140303696657194L) */, "/cgi-bin/mmpay-bin/transferoperation" /* cnb.z(-140694538681130L) */);
                 bagVar2.b = zbVar2;
                 return ensVar;
             case 5:
                 bah bahVar2 = (bah) obj;
                 cdj cdjVar2 = new cdj();
-                cdjVar2.t(cnb.z(-140501265152810L));
+                cdjVar2.t("account click info , key is %s, value is %s" /* cnb.z(-140501265152810L) */);
                 bahVar2.getClass();
                 bahVar2.d = cdjVar2;
                 return ensVar;
@@ -87,11 +87,11 @@ public final /* synthetic */ class cml implements bgf {
                 return ensVar;
             case 7:
                 bag bagVar3 = (bag) obj;
-                String[] strArr2 = {cnb.z(-140063178488618L)};
+                String[] strArr2 = {"com.tencent.mm.plugin.sport.model" /* cnb.z(-140063178488618L) */};
                 bagVar3.getClass();
                 bagVar3.a = la.ab(strArr2);
                 zb zbVar3 = new zb();
-                zbVar3.k(cnb.z(-139934329469738L), cnb.z(-137013751708458L));
+                zbVar3.k("MicroMsg.Sport.NetSceneUploadDeviceStep" /* cnb.z(-139934329469738L) */, "/cgi-bin/mmoc-bin/hardware/uploaddevicestep" /* cnb.z(-137013751708458L) */);
                 bagVar3.b = zbVar3;
                 return ensVar;
             case 8:
@@ -121,11 +121,11 @@ public final /* synthetic */ class cml implements bgf {
                 return ensVar;
             case 10:
                 bag bagVar4 = (bag) obj;
-                String[] strArr3 = {cnb.z(-137176960465706L)};
+                String[] strArr3 = {"com.tencent.mm.modelimage" /* cnb.z(-137176960465706L) */};
                 bagVar4.getClass();
                 bagVar4.a = la.ab(strArr3);
                 zb zbVar4 = new zb();
-                zbVar4.k(cnb.z(-136532715371306L), cnb.z(-136386686483242L));
+                zbVar4.k("MicroMsg.NetSceneUploadMsgImg" /* cnb.z(-136532715371306L) */, "/cgi-bin/micromsg-bin/uploadmsgimg" /* cnb.z(-136386686483242L) */);
                 bagVar4.b = zbVar4;
                 return ensVar;
             case 11:
@@ -162,7 +162,7 @@ public final /* synthetic */ class cml implements bgf {
             case 13:
                 bag bagVar5 = (bag) obj;
                 zb zbVar5 = new zb();
-                zbVar5.k(cnb.z(-136648679488298L), cnb.z(-138139033140010L));
+                zbVar5.k("MicroMsg.NetSceneUploadVoice" /* cnb.z(-136648679488298L) */, "/cgi-bin/micromsg-bin/uploadvoice" /* cnb.z(-138139033140010L) */);
                 bagVar5.getClass();
                 bagVar5.b = zbVar5;
                 return ensVar;
@@ -189,23 +189,23 @@ public final /* synthetic */ class cml implements bgf {
                 cdj cdjVar6 = new cdj();
                 cmy.a.getClass();
                 cdjVar6.o(emn.ba(cmw.a).getDeclaringClass());
-                cdjVar6.t(cnb.z(-125602023602986L));
+                cdjVar6.t("This NetSceneVerifyUser init NEVER use opcode == MM_VERIFYUSER_VERIFYOK" /* cnb.z(-125602023602986L) */);
                 bahVar6.getClass();
                 bahVar6.d = cdjVar6;
                 return ensVar;
             case 18:
                 bag bagVar6 = (bag) obj;
-                String[] strArr4 = {cnb.z(-137919989807914L)};
+                String[] strArr4 = {"com.tencent.mm.pluginsdk.model" /* cnb.z(-137919989807914L) */};
                 bagVar6.getClass();
                 bagVar6.a = la.ab(strArr4);
                 zb zbVar6 = new zb();
-                zbVar6.k(cnb.z(-137769665952554L), cnb.z(-126048700201770L));
+                zbVar6.k("MicroMsg.NetSceneVerifyUser.dkverify" /* cnb.z(-137769665952554L) */, "/cgi-bin/micromsg-bin/verifyuser" /* cnb.z(-126048700201770L) */);
                 bagVar6.b = zbVar6;
                 return ensVar;
             case 19:
                 bah bahVar7 = (bah) obj;
                 cdj cdjVar7 = new cdj();
-                cdjVar7.t(cnb.z(-125906966281002L));
+                cdjVar7.t("This NetSceneVerifyUser init MUST use opcode == MM_VERIFYUSER_VERIFYOK" /* cnb.z(-125906966281002L) */);
                 bahVar7.getClass();
                 bahVar7.d = cdjVar7;
                 return ensVar;
@@ -233,8 +233,8 @@ public final /* synthetic */ class cml implements bgf {
                     } catch (Exception e) {
                         ArrayList arrayList = ewq.a;
                         StringBuilder sb = new StringBuilder();
-                        sb.append(cnb.z(-66288525245226L));
-                        ewq.e(yg.n(sb, obj2 instanceof doo ? ((doo) obj2).f() : cnb.z(-66267050408746L), -67894843013930L), e, 12);
+                        sb.append("onHandleMsg " /* cnb.z(-66288525245226L) */);
+                        ewq.e(yg.n(sb, obj2 instanceof doo ? ((doo) obj2).f() : "LoadHook" /* cnb.z(-66267050408746L) */, -67894843013930L), e, 12);
                     }
                 }
                 return ensVar;
@@ -243,11 +243,11 @@ public final /* synthetic */ class cml implements bgf {
                 return ensVar;
             case 22:
                 bah bahVar8 = (bah) obj;
-                String[] strArr5 = {cnb.z(-67860483275562L)};
+                String[] strArr5 = {"com.tencent.mm.booter.notification" /* cnb.z(-67860483275562L) */};
                 bahVar8.getClass();
                 bahVar8.a = la.ab(strArr5);
                 cdj cdjVar8 = new cdj();
-                cdjVar8.t(cnb.z(-67658619812650L), cnb.z(-68105296411434L));
+                cdjVar8.t("MicroMsg.MMNotification" /* cnb.z(-67658619812650L) */, "notifyFirst talker:%s msgid:%d type:%d tipsFlag:%d content:%s" /* cnb.z(-68105296411434L) */);
                 bahVar8.d = cdjVar8;
                 return ensVar;
             case 23:
@@ -255,7 +255,7 @@ public final /* synthetic */ class cml implements bgf {
                 int i4 = bte.a;
                 azg azgVarAa = dkz.aa(bmmVar2);
                 uq.a.getClass();
-                azgVarAa.a = ajn.ag(cnb.z(-75127567940394L));
+                azgVarAa.a = ajn.ag("com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* cnb.z(-75127567940394L) */);
                 Object objE = ((azk) aaz.e(azgVarAa.c())).e();
                 bzo.n(objE);
                 azg azgVarR = dqc.bi((FrameLayout) objE).r();
@@ -264,23 +264,23 @@ public final /* synthetic */ class cml implements bgf {
                 boolean z = false;
                 for (Object obj4 : azgVarR.c()) {
                     Object objD = ((azk) obj4).d();
-                    if (bzo.f(objD != null ? objD.getClass().getSimpleName() : null, cnb.z(-399947354602282L))) {
+                    if (bzo.f(objD != null ? objD.getClass().getSimpleName() : null, "MMFlexEditText" /* cnb.z(-399947354602282L) */)) {
                         if (z) {
-                            throw new IllegalArgumentException(cnb.z(-399865750223658L));
+                            throw new IllegalArgumentException("Collection contains more than one matching element." /* cnb.z(-399865750223658L) */);
                         }
                         z = true;
                         obj3 = obj4;
                     }
                 }
                 if (!z) {
-                    throw new NoSuchElementException(cnb.z(-400157807999786L));
+                    throw new NoSuchElementException("Collection contains no element matching the predicate." /* cnb.z(-400157807999786L) */);
                 }
                 Object objE2 = ((azk) obj3).e();
                 bzo.n(objE2);
                 FrameLayout frameLayout = (FrameLayout) objE2;
                 int i5 = bte.a;
                 cde cdeVarT = dqc.bi(frameLayout).t();
-                cdeVarT.ab = cnb.z(-399371828984618L);
+                cdeVarT.ab = "getText" /* cnb.z(-399371828984618L) */;
                 Object objJ = ((cdk) aaz.e(cdeVarT.aj())).j(new Object[0]);
                 bzo.n(objJ);
                 String string = objJ.toString();
@@ -289,7 +289,7 @@ public final /* synthetic */ class cml implements bgf {
                     ArrayList arrayList3 = new ArrayList(abb.ak(arrayList2, 10));
                     for (ctx ctxVar : arrayList2) {
                         ctxVar.getClass();
-                        arrayList3.add(Boolean.valueOf(bzo.f(ctxVar.n(cnb.z(-401970284198698L), string), Boolean.TRUE)));
+                        arrayList3.add(Boolean.valueOf(bzo.f(ctxVar.n("onClickSendBtn" /* cnb.z(-401970284198698L) */, string), Boolean.TRUE)));
                     }
                     if (!arrayList3.isEmpty()) {
                         Iterator it = arrayList3.iterator();
@@ -297,8 +297,8 @@ public final /* synthetic */ class cml implements bgf {
                             if (((Boolean) it.next()).booleanValue()) {
                                 int i6 = bte.a;
                                 cde cdeVarT2 = dqc.bi(frameLayout).t();
-                                cdeVarT2.ab = cnb.z(-399337469246250L);
-                                ((cdk) aaz.e(cdeVarT2.aj())).e(cnb.z(-399303109507882L));
+                                cdeVarT2.ab = "setText" /* cnb.z(-399337469246250L) */;
+                                ((cdk) aaz.e(cdeVarT2.aj())).e("" /* cnb.z(-399303109507882L) */);
                                 bmmVar2.h(null);
                             }
                         }
@@ -312,11 +312,11 @@ public final /* synthetic */ class cml implements bgf {
                 return ensVar;
             case 26:
                 bah bahVar9 = (bah) obj;
-                String[] strArr6 = {cnb.z(-399298814540586L)};
+                String[] strArr6 = {"com.tencent.mm.pluginsdk.ui.chat" /* cnb.z(-399298814540586L) */};
                 bahVar9.getClass();
                 bahVar9.a = la.ab(strArr6);
                 cdj cdjVar9 = new cdj();
-                cdjVar9.t(cnb.z(-399174260489002L), cnb.z(-399672476695338L));
+                cdjVar9.t("MicroMsg.ChatFooter" /* cnb.z(-399174260489002L) */, "send msg onClick" /* cnb.z(-399672476695338L) */);
                 bahVar9.d = cdjVar9;
                 return ensVar;
             case 27:
@@ -328,7 +328,7 @@ public final /* synthetic */ class cml implements bgf {
                 bzo.n(objJ2);
                 int iIntValue = ((Number) objJ2).intValue();
                 Object objF = bmmVar3.f();
-                bzo.o(objF, cnb.z(-67186173410090L));
+                bzo.o(objF, "null cannot be cast to non-null type kotlin.ByteArray" /* cnb.z(-67186173410090L) */);
                 byte[] bArr = (byte[]) objF;
                 for (Object obj5 : crj.b) {
                     try {
@@ -336,8 +336,8 @@ public final /* synthetic */ class cml implements bgf {
                     } catch (Exception e2) {
                         ArrayList arrayList4 = ewq.a;
                         StringBuilder sb2 = new StringBuilder();
-                        sb2.append(cnb.z(-67486821120810L));
-                        ewq.e(yg.n(sb2, obj5 instanceof doo ? ((doo) obj5).f() : cnb.z(-67482526153514L), -67443871447850L), e2, 12);
+                        sb2.append("onGetBuffer " /* cnb.z(-67486821120810L) */);
+                        ewq.e(yg.n(sb2, obj5 instanceof doo ? ((doo) obj5).f() : "LoadHook" /* cnb.z(-67482526153514L) */, -67443871447850L), e2, 12);
                     }
                 }
                 return ensVar;
@@ -350,7 +350,7 @@ public final /* synthetic */ class cml implements bgf {
                 cls4 = byte[].class;
                 Class<byte[]> clsBf24 = cnf.bf(dal.b(cls4));
                 cdjVar10.r(clsBf24 != null ? clsBf24 : byte[].class);
-                cdjVar10.t(cnb.z(-67409511709482L), cnb.z(-55705725827882L));
+                cdjVar10.t("MicroMsg.OpLog.Operation" /* cnb.z(-67409511709482L) */, "summeroplog Operation toByteArray err: " /* cnb.z(-55705725827882L) */);
                 bahVar10.getClass();
                 bahVar10.d = cdjVar10;
                 return ensVar;

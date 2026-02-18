@@ -31,6 +31,6 @@ public final class efj {
     }
 
     public final String toString() {
-        return cnb.z(-281595235793706L) + this.a + ')';
+        return "tq0Proto(ontact=" /* cnb.z(-281595235793706L) */ + this.a + ')';
     }
 }

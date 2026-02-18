@@ -43,7 +43,7 @@ public final class eae {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-228509440015146L));
+        sb.append("ls3Proto(index=" /* cnb.z(-228509440015146L) */);
         bjs.w(sb, this.b, -228440720538410L);
         yg.v(sb, this.c, -227852310018858L);
         return bjs.q(sb, this.d, ')');

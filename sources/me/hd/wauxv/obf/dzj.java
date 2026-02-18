@@ -84,7 +84,7 @@ public final class dzj {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-201339476900650L));
+        sb.append("kbProto(d=" /* cnb.z(-201339476900650L) */);
         yg.u(sb, this.a, -201309412129578L);
         yg.u(sb, this.b, -201270757423914L);
         yg.u(sb, this.c, -201214922849066L);

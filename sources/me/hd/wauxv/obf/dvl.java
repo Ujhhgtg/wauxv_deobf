@@ -67,19 +67,19 @@ public final class dvl {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-169496589368106L));
+        sb.append("au1Proto(newlife_type=" /* cnb.z(-169496589368106L) */);
         bjs.w(sb, this.b, -169380625251114L);
         sb.append(this.c);
-        sb.append(cnb.z(-169814416948010L));
+        sb.append(", topic_info=" /* cnb.z(-169814416948010L) */);
         sb.append(this.d);
-        sb.append(cnb.z(-169805827013418L));
+        sb.append(", biz_picture_desc=" /* cnb.z(-169805827013418L) */);
         sb.append(this.e);
-        sb.append(cnb.z(-169685567929130L));
+        sb.append(", secretly_push_chatroom_wording=" /* cnb.z(-169685567929130L) */);
         yg.u(sb, this.f, -171205986351914L);
         yg.u(sb, this.g, -171064252431146L);
         yg.v(sb, this.h, -171502339095338L);
         sb.append(this.i);
-        sb.append(cnb.z(-171412144782122L));
+        sb.append(", is_need_display_comment_egg=" /* cnb.z(-171412144782122L) */);
         sb.append(this.j);
         sb.append(')');
         return sb.toString();

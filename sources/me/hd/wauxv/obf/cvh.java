@@ -8,7 +8,7 @@ public final class cvh extends bws implements bng {
     public static final cvh a = new cvh();
 
     public final Class b() {
-        return ajn.ag(cnb.z(-101992588376874L));
+        return ajn.ag("com.tencent.mm.ui.base.preference.Preference" /* cnb.z(-101992588376874L) */);
     }
 
     @Override // me.hd.wauxv.obf.bmf

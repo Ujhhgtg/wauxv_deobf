@@ -96,7 +96,7 @@ public final class ckx extends doi implements bgj {
                     }
                 } else {
                     if (i4 != 1) {
-                        throw new IllegalStateException(cnb.z(-116024246532906L));
+                        throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine" /* cnb.z(-116024246532906L) */);
                     }
                     bhu.bd(obj);
                 }
@@ -108,7 +108,7 @@ public final class ckx extends doi implements bgj {
                 int i5 = this.d;
                 if (i5 != 0) {
                     if (i5 != 1) {
-                        throw new IllegalStateException(cnb.z(-541230303804202L));
+                        throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine" /* cnb.z(-541230303804202L) */);
                     }
                     bhu.bd(obj);
                     return ensVar;

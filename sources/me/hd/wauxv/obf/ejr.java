@@ -44,7 +44,7 @@ public final class ejr {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-344520801647402L));
+        sb.append("zg4Proto(target_type=" /* cnb.z(-344520801647402L) */);
         bjs.w(sb, this.a, -350456446450474L);
         dkz.ad(sb, this.b, -350379137039146L);
         dkz.ad(sb, this.c, -350314712529706L);

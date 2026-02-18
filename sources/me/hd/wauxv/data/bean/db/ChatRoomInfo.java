@@ -350,7 +350,7 @@ public final class ChatRoomInfo {
         if (!ChatRoomInfo.class.equals(obj != null ? obj.getClass() : null)) {
             return false;
         }
-        bzo.o(obj, cnb.z(-8942121909034L));
+        bzo.o(obj, "null cannot be cast to non-null type me.hd.wauxv.data.bean.db.ChatRoomInfo" /* cnb.z(-8942121909034L) */);
         ChatRoomInfo chatRoomInfo = (ChatRoomInfo) obj;
         if (!bzo.f(this.addtime, chatRoomInfo.addtime) || !bzo.f(this.modifytime, chatRoomInfo.modifytime) || this.chatroomnoticePublishTime != chatRoomInfo.chatroomnoticePublishTime || this.chatroomfamilystatusmodifytime != chatRoomInfo.chatroomfamilystatusmodifytime || this.roomflag != chatRoomInfo.roomflag || this.isShowname != chatRoomInfo.isShowname || this.style != chatRoomInfo.style || this.chatroomdataflag != chatRoomInfo.chatroomdataflag || this.chatroomStatus != chatRoomInfo.chatroomStatus || this.openIMRoomMigrateStatus != chatRoomInfo.openIMRoomMigrateStatus || this.spamStatus != chatRoomInfo.spamStatus || this.chatroomVersion != chatRoomInfo.chatroomVersion || this.chatroomNoticeNew != chatRoomInfo.chatroomNoticeNew || this.chatroomLocalVersion != chatRoomInfo.chatroomLocalVersion || this.memberCount != chatRoomInfo.memberCount || this.oldChatroomVersion != chatRoomInfo.oldChatroomVersion || this.compactFlag != chatRoomInfo.compactFlag || !bzo.f(this.chatroomname, chatRoomInfo.chatroomname) || !bzo.f(this.memberlist, chatRoomInfo.memberlist) || !bzo.f(this.displayname, chatRoomInfo.displayname) || !bzo.f(this.chatroomnick, chatRoomInfo.chatroomnick) || !bzo.f(this.roomowner, chatRoomInfo.roomowner) || !bzo.f(this.selfDisplayName, chatRoomInfo.selfDisplayName) || !bzo.f(this.chatroomnotice, chatRoomInfo.chatroomnotice) || !bzo.f(this.xmlChatroomnotice, chatRoomInfo.xmlChatroomnotice) || !bzo.f(this.chatroomnoticeEditor, chatRoomInfo.chatroomnoticeEditor) || !bzo.f(this.associateOpenIMRoomName, chatRoomInfo.associateOpenIMRoomName) || !bzo.f(this.saveByteVersion, chatRoomInfo.saveByteVersion) || !bzo.f(this.handleByteVersion, chatRoomInfo.handleByteVersion)) {
             return false;
@@ -550,14 +550,14 @@ public final class ChatRoomInfo {
 
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-9186935044906L));
+        sb.append("ChatRoomInfo(chatroomname=" /* cnb.z(-9186935044906L) */);
         yg.u(sb, this.chatroomname, -9105330666282L);
         dkz.ad(sb, this.addtime, -10655813860138L);
         dkz.ad(sb, this.modifytime, -10647223925546L);
         sb.append(this.chatroomnoticePublishTime);
-        sb.append(cnb.z(-10505490004778L));
+        sb.append(", chatroomfamilystatusmodifytime=" /* cnb.z(-10505490004778L) */);
         sb.append(this.chatroomfamilystatusmodifytime);
-        sb.append(cnb.z(-10926396799786L));
+        sb.append(", memberlist=" /* cnb.z(-10926396799786L) */);
         yg.u(sb, this.memberlist, -10849087388458L);
         yg.u(sb, this.displayname, -10767483009834L);
         yg.u(sb, this.chatroomnick, -10149007719210L);
@@ -570,11 +570,11 @@ public final class ChatRoomInfo {
         yg.u(sb, this.saveByteVersion, -16123307227946L);
         yg.u(sb, this.handleByteVersion, -16067472653098L);
         sb.append(Arrays.toString(this.roomdata));
-        sb.append(cnb.z(-15981573307178L));
+        sb.append(", roomInfoDetailResByte=" /* cnb.z(-15981573307178L) */);
         sb.append(Arrays.toString(this.roomInfoDetailResByte));
-        sb.append(cnb.z(-16441134807850L));
+        sb.append(", localChatRoomWatchMembers=" /* cnb.z(-16441134807850L) */);
         sb.append(Arrays.toString(this.localChatRoomWatchMembers));
-        sb.append(cnb.z(-16350940494634L));
+        sb.append(", roomflag=" /* cnb.z(-16350940494634L) */);
         dkz.ac(sb, this.roomflag, -16265041148714L);
         dkz.ac(sb, this.isShowname, -15637975923498L);
         dkz.ac(sb, this.style, -15616501087018L);
@@ -585,7 +585,7 @@ public final class ChatRoomInfo {
         dkz.ac(sb, this.chatroomVersion, -15762529975082L);
         dkz.ac(sb, this.chatroomNoticeNew, -17287243365162L);
         sb.append(this.chatroomLocalVersion);
-        sb.append(cnb.z(-17184164150058L));
+        sb.append(", memberCount=" /* cnb.z(-17184164150058L) */);
         dkz.ac(sb, this.memberCount, -17119739640618L);
         dkz.ac(sb, this.oldChatroomVersion, -17076789967658L);
         sb.append(this.compactFlag);

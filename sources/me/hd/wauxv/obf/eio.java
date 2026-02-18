@@ -11,7 +11,7 @@ public final /* synthetic */ class eio implements bgx {
     static {
         eio eioVar = new eio();
         b = eioVar;
-        cuc cucVar = new cuc(cnb.z(-320018013223722L), eioVar, 21);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.xq3Proto" /* cnb.z(-320018013223722L) */, eioVar, 21);
         bjs.y(-317462507682602L, cucVar, false, 1);
         bjs.y(-317449622780714L, cucVar, false, 2);
         bjs.y(-317355133500202L, cucVar, false, 3);

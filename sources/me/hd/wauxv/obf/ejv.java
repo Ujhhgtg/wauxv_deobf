@@ -11,7 +11,7 @@ public final /* synthetic */ class ejv implements bgx {
     static {
         ejv ejvVar = new ejv();
         b = ejvVar;
-        cuc cucVar = new cuc(cnb.z(-351083511675690L), ejvVar, 7);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.zt1Proto" /* cnb.z(-351083511675690L) */, ejvVar, 7);
         bjs.y(-348545186003754L, cucVar, false, 1);
         bjs.y(-348463581625130L, cucVar, false, 2);
         bjs.y(-348394862148394L, cucVar, false, 4);

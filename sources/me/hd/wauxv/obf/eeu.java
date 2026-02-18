@@ -40,7 +40,7 @@ public final class eeu {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-295528109701930L));
+        sb.append("suProto(chatroom_username=" /* cnb.z(-295528109701930L) */);
         yg.u(sb, this.a, -294810850163498L);
         yg.u(sb, this.b, -294755015588650L);
         return bjs.q(sb, this.c, ')');

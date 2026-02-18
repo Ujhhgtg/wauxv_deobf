@@ -23,17 +23,17 @@ public final class cf extends doo {
     public static final boolean m;
 
     static {
-        cnb.z(-432709365136170L);
-        cnb.z(-432683595332394L);
-        a = new cf(cnb.z(-431137407105834L));
+        "#FFFFFFFF" /* cnb.z(-432709365136170L) */;
+        "#FF191919" /* cnb.z(-432683595332394L) */;
+        a = new cf("AccountInfoCenterHook" /* cnb.z(-431137407105834L) */);
         b = new dov(new h(2));
         c = new dov(new h(3));
         d = new dov(new h(4));
         dov dovVar = ctf.a;
-        h = ctf.c(cnb.z(-48064979008298L), cnb.z(-47974784695082L));
-        i = cnb.z(-433207581342506L);
-        j = cnb.z(-433143156833066L);
-        k = cnb.z(-433168926636842L);
+        h = ctf.c("Resource" /* cnb.z(-48064979008298L) */, "Font" /* cnb.z(-47974784695082L) */);
+        i = "美化" /* cnb.z(-433207581342506L) */;
+        j = "资料卡居中" /* cnb.z(-433143156833066L) */;
+        k = "居中我界面资料卡，与隐藏微信号冲突" /* cnb.z(-433168926636842L) */;
         l = new bn(1);
         m = true;
     }

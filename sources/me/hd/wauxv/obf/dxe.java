@@ -36,7 +36,7 @@ public final class dxe {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-191388037675818L));
+        sb.append("f52Proto(template_id=" /* cnb.z(-191388037675818L) */);
         yg.u(sb, this.a, -191345088002858L);
         return bjs.p(sb, this.b, ')');
     }

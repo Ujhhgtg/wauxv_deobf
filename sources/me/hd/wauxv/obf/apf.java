@@ -27,7 +27,7 @@ public final class apf {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-334315959352106L));
+        sb.append("DisturbTimeSpan(BeginTime=" /* cnb.z(-334315959352106L) */);
         bjs.w(sb, this.a, -334715391310634L);
         return bjs.p(sb, this.b, ')');
     }

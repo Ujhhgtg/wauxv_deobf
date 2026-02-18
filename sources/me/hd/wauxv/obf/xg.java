@@ -6,10 +6,10 @@ import java.util.regex.Pattern;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class xg extends doo implements bnr {
-    public static final xg a = new xg(cnb.z(-441239170186026L));
-    public static final String b = cnb.z(-446500505123626L);
-    public static final String c = cnb.z(-446453260483370L);
-    public static final String d = cnb.z(-446406015843114L);
+    public static final xg a = new xg("ChatUrlFormatShowHook" /* cnb.z(-441239170186026L) */);
+    public static final String b = "聊天" /* cnb.z(-446500505123626L) */;
+    public static final String c = "链接格式显示" /* cnb.z(-446453260483370L) */;
+    public static final String d = "将其他应用分享的口令进行格式化显示" /* cnb.z(-446406015843114L) */;
 
     @Override // me.hd.wauxv.obf.bmf
     public final void e() {
@@ -33,26 +33,26 @@ public final class xg extends doo implements bnr {
             int i = bte.a;
             bmu bmuVarBi = dqc.bi(obj);
             azg azgVarR = bmuVarBi.r();
-            azgVarR.ab = cnb.z(-446672303815466L);
+            azgVarR.ab = "field_isSend" /* cnb.z(-446672303815466L) */;
             Integer num = (Integer) ((azk) yg.e(azgVarR)).e();
             if (num != null && num.intValue() == 1) {
                 return;
             }
             azg azgVarR2 = bmuVarBi.r();
-            azgVarR2.ab = cnb.z(-446599289371434L);
+            azgVarR2.ab = "field_type" /* cnb.z(-446599289371434L) */;
             Object objE = ((azk) yg.e(azgVarR2)).e();
             bzo.n(objE);
             if (((Number) objE).intValue() == ewg.a.w) {
                 azg azgVarR3 = bmuVarBi.r();
-                azgVarR3.ab = cnb.z(-446569224600362L);
+                azgVarR3.ab = "field_content" /* cnb.z(-446569224600362L) */;
                 Object objE2 = ((azk) yg.e(azgVarR3)).e();
                 bzo.n(objE2);
                 String str = (String) objE2;
-                String strAx = dnj.ax(str, cnb.z(-446491915189034L));
+                String strAx = dnj.ax(str, ":" /* cnb.z(-446491915189034L) */);
                 a.getClass();
-                if (dnj.ab(str, cnb.z(-447101800545066L), false)) {
-                    String strZ3 = cnb.z(-446994426362666L);
-                    Pattern patternCompile = Pattern.compile(cnb.z(-447007311264554L));
+                if (dnj.ab(str, "点击链接直接打开 或者 淘宝搜索直接打开" /* cnb.z(-447101800545066L) */, false)) {
+                    String strZ3 = "【淘宝】" /* cnb.z(-446994426362666L) */;
+                    Pattern patternCompile = Pattern.compile("https?://[\\w./?=&%-]+" /* cnb.z(-447007311264554L) */);
                     bzo.p(patternCompile, "compile(...)");
                     Matcher matcher = patternCompile.matcher(str);
                     bzo.p(matcher, "matcher(...)");
@@ -61,26 +61,26 @@ public final class xg extends doo implements bnr {
                         strZ = bzxVarY.a.group();
                         bzo.p(strZ, "group(...)");
                     } else {
-                        strZ = cnb.z(-447445397928746L);
+                        strZ = "https://github.com/HdShare/WAuxiliary_Public" /* cnb.z(-447445397928746L) */;
                     }
-                    Pattern patternCompile2 = Pattern.compile(cnb.z(-447234944531242L));
+                    Pattern patternCompile2 = Pattern.compile("「([^」]+)」" /* cnb.z(-447234944531242L) */);
                     bzo.p(patternCompile2, "compile(...)");
                     Matcher matcher2 = patternCompile2.matcher(str);
                     bzo.p(matcher2, "matcher(...)");
                     bzx bzxVarY2 = ewz.y(matcher2, 0, str);
                     if (bzxVarY2 == null || (strZ2 = (String) ((bzv) bzxVarY2.e()).get(1)) == null) {
-                        strZ2 = cnb.z(-446659418913578L);
+                        strZ2 = "解析异常" /* cnb.z(-446659418913578L) */;
                     }
                     StringBuilder sb = new StringBuilder();
                     sb.append(strZ3);
                     sb.append('\n');
-                    sb.append(cnb.z(-116616952019754L) + strZ + cnb.z(-117072218553130L) + strZ2 + cnb.z(-117076513520426L));
+                    sb.append("<a href=\"" /* cnb.z(-116616952019754L) */ + strZ + "\">" /* cnb.z(-117072218553130L) */ + strZ2 + "</a>" /* cnb.z(-117076513520426L) */);
                     String string = sb.toString();
                     azg azgVarR4 = bmuVarBi.r();
-                    azgVarR4.ab = cnb.z(-447174814989098L);
+                    azgVarR4.ab = "field_content" /* cnb.z(-447174814989098L) */;
                     azk azkVar = (azk) yg.e(azgVarR4);
                     StringBuilder sbY = dkz.y(strAx);
-                    sbY.append(cnb.z(-447097505577770L));
+                    sbY.append(":\n" /* cnb.z(-447097505577770L) */);
                     sbY.append(string);
                     azkVar.f(sbY.toString());
                 }

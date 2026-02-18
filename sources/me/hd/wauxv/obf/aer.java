@@ -19,13 +19,13 @@ public final class aer {
     public final String[] d;
 
     static {
-        String strZ = cnb.z(-29661044144938L);
-        cnb.z(-29626684406570L);
-        aer aerVar = new aer(strZ, 0, new String[]{cnb.z(-29639569308458L), cnb.z(-29527900158762L), cnb.z(-29416231009066L), cnb.z(-28827820489514L), cnb.z(-28660316764970L)});
+        String strZ = "FRIENDS" /* cnb.z(-29661044144938L) */;
+        "所有好友" /* cnb.z(-29626684406570L) */;
+        aer aerVar = new aer(strZ, 0, new String[]{"contact.type & 1 != 0" /* cnb.z(-29639569308458L) */, "contact.type & 32 = 0" /* cnb.z(-29527900158762L) */, "contact.type & 8 = 0" /* cnb.z(-29416231009066L) */, "contact.verifyFlag & 8 = 0" /* cnb.z(-28827820489514L) */, "(contact.usernameFlag IN (0))" /* cnb.z(-28660316764970L) */});
         a = aerVar;
-        String strZ2 = cnb.z(-29132763167530L);
-        cnb.z(-29102698396458L);
-        aer aerVar2 = new aer(strZ2, 1, new String[]{cnb.z(-29046863821610L)});
+        String strZ2 = "GROUPS" /* cnb.z(-29132763167530L) */;
+        "所有群聊" /* cnb.z(-29102698396458L) */;
+        aer aerVar2 = new aer(strZ2, 1, new String[]{"contact.username LIKE '%@chatroom'" /* cnb.z(-29046863821610L) */});
         b = aerVar2;
         c = new aer[]{aerVar, aerVar2};
     }

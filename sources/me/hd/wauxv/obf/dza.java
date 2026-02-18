@@ -40,9 +40,9 @@ public final class dza {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-195025874975530L));
+        sb.append("k23Proto(mic_contact=" /* cnb.z(-195025874975530L) */);
         sb.append(this.a);
-        sb.append(cnb.z(-194914205825834L));
+        sb.append(", sdk_user_id=" /* cnb.z(-194914205825834L) */);
         yg.u(sb, this.b, -200879915399978L);
         return bjs.q(sb, this.c, ')');
     }

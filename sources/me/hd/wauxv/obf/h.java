@@ -36,7 +36,7 @@ public final /* synthetic */ class h implements bfu {
             case 0:
                 io ioVar = emc.w;
                 if (ioVar == null) {
-                    throw new IllegalArgumentException(cnb.z(-6021544147754L).toString());
+                    throw new IllegalArgumentException("DexDescConfig must be init" /* cnb.z(-6021544147754L) */.toString());
                 }
                 ioVar.aj().clear();
                 Thread.sleep(5000L);
@@ -45,7 +45,7 @@ public final /* synthetic */ class h implements bfu {
             case 1:
                 io ioVar2 = cnf.ah;
                 if (ioVar2 == null) {
-                    throw new IllegalArgumentException(cnb.z(-5763846109994L).toString());
+                    throw new IllegalArgumentException("DefaultConfig must be init" /* cnb.z(-5763846109994L) */.toString());
                 }
                 ioVar2.aj().clear();
                 Thread.sleep(5000L);
@@ -53,7 +53,7 @@ public final /* synthetic */ class h implements bfu {
                 return ensVar;
             case 2:
                 Object objB = acv.b(acv.a, eom.b.f);
-                bzo.o(objB, cnb.z(-121221156961066L));
+                bzo.o(objB, "null cannot be cast to non-null type kotlin.String" /* cnb.z(-121221156961066L) */);
                 return (String) objB;
             case 3:
                 Object objB2 = acv.b(acv.a, eom.c.f);
@@ -62,14 +62,14 @@ public final /* synthetic */ class h implements bfu {
                 }
                 if (r6 == 0) {
                     r6 = str;
-                    return cnb.z(-121259811666730L);
+                    return "未填写" /* cnb.z(-121259811666730L) */;
                 }
                 r6 = str;
                 return r6;
             case 4:
                 Object objB3 = acv.b(acv.a, eom.d.f);
                 String str2 = objB3 instanceof String ? (String) objB3 : null;
-                return str2 == null ? cnb.z(-122638496168746L) : str2;
+                return str2 == null ? "未填写" /* cnb.z(-122638496168746L) */ : str2;
             case 5:
                 bw.a.r(40);
                 bv.a.r(80);
@@ -85,8 +85,8 @@ public final /* synthetic */ class h implements bfu {
                 cd.a.p(true);
                 ce.a.r(4);
                 cc.a.u((String) cf.d.getValue());
-                by.a.u(cnb.z(-432829624220458L));
-                bx.a.u(cnb.z(-432735134939946L));
+                by.a.u("#FFFFFFFF" /* cnb.z(-432829624220458L) */);
+                bx.a.u("#FF191919" /* cnb.z(-432735134939946L) */);
                 return ensVar;
             case 6:
                 return new ep(0);
@@ -97,38 +97,38 @@ public final /* synthetic */ class h implements bfu {
                 bitmapCreateBitmap.eraseColor(0);
                 return bitmapCreateBitmap;
             case 9:
-                File file = new File(qo.b, cnb.z(-437713002036010L));
+                File file = new File(qo.b, "icon_chats.png" /* cnb.z(-437713002036010L) */);
                 if (file.exists()) {
                     return BitmapFactory.decodeFile(file.getAbsolutePath());
                 }
                 qo.a.getClass();
                 return (Bitmap) qo.c.getValue();
             case 10:
-                File file2 = new File(qo.b, cnb.z(-437648577526570L));
+                File file2 = new File(qo.b, "icon_contacts.png" /* cnb.z(-437648577526570L) */);
                 if (file2.exists()) {
                     return BitmapFactory.decodeFile(file2.getAbsolutePath());
                 }
                 qo.a.getClass();
                 return (Bitmap) qo.c.getValue();
             case 11:
-                File file3 = new File(qo.b, cnb.z(-438138203798314L));
+                File file3 = new File(qo.b, "icon_discover.png" /* cnb.z(-438138203798314L) */);
                 if (file3.exists()) {
                     return BitmapFactory.decodeFile(file3.getAbsolutePath());
                 }
                 qo.a.getClass();
                 return (Bitmap) qo.c.getValue();
             case 12:
-                File file4 = new File(qo.b, cnb.z(-438078074256170L));
+                File file4 = new File(qo.b, "icon_me.png" /* cnb.z(-438078074256170L) */);
                 if (file4.exists()) {
                     return BitmapFactory.decodeFile(file4.getAbsolutePath());
                 }
                 qo.a.getClass();
                 return (Bitmap) qo.c.getValue();
             case 13:
-                qg.a.u(cnb.z(-438017944714026L));
-                qh.a.u(cnb.z(-437953520204586L));
-                qi.a.u(cnb.z(-437974995041066L));
-                ql.a.u(cnb.z(-437979290008362L));
+                qg.a.u("微信" /* cnb.z(-438017944714026L) */);
+                qh.a.u("通讯" /* cnb.z(-437953520204586L) */);
+                qi.a.u("发现" /* cnb.z(-437974995041066L) */);
+                ql.a.u("我的" /* cnb.z(-437979290008362L) */);
                 qm.a.p(true);
                 qn.a.p(true);
                 qk.a.p(false);
@@ -139,66 +139,66 @@ public final /* synthetic */ class h implements bfu {
                 bitmapCreateBitmap2.eraseColor(0);
                 return bitmapCreateBitmap2;
             case 15:
-                File file5 = new File(qw.b, cnb.z(-437171836156714L));
+                File file5 = new File(qw.b, "icon_chats.png" /* cnb.z(-437171836156714L) */);
                 if (file5.exists()) {
                     return BitmapFactory.decodeFile(file5.getAbsolutePath());
                 }
                 qw.a.getClass();
                 return (Bitmap) qw.c.getValue();
             case 16:
-                File file6 = new File(qw.b, cnb.z(-437107411647274L));
+                File file6 = new File(qw.b, "icon_contacts.png" /* cnb.z(-437107411647274L) */);
                 if (file6.exists()) {
                     return BitmapFactory.decodeFile(file6.getAbsolutePath());
                 }
                 qw.a.getClass();
                 return (Bitmap) qw.c.getValue();
             case 17:
-                File file7 = new File(qw.b, cnb.z(-437597037919018L));
+                File file7 = new File(qw.b, "icon_discover.png" /* cnb.z(-437597037919018L) */);
                 if (file7.exists()) {
                     return BitmapFactory.decodeFile(file7.getAbsolutePath());
                 }
                 qw.a.getClass();
                 return (Bitmap) qw.c.getValue();
             case 18:
-                File file8 = new File(qw.b, cnb.z(-437536908376874L));
+                File file8 = new File(qw.b, "icon_me.png" /* cnb.z(-437536908376874L) */);
                 if (file8.exists()) {
                     return BitmapFactory.decodeFile(file8.getAbsolutePath());
                 }
                 qw.a.getClass();
                 return (Bitmap) qw.c.getValue();
             case 19:
-                qr.a.u(cnb.z(-437408059357994L));
-                qv.a.u(cnb.z(-437382289554218L));
-                qt.a.u(cnb.z(-437356519750442L));
-                qq.a.u(cnb.z(-436780994132778L));
-                qu.a.u(cnb.z(-436686504852266L));
-                qs.a.u(cnb.z(-436660735048490L));
+                qr.a.u("#FFF7F7F7" /* cnb.z(-437408059357994L) */);
+                qv.a.u("#FFCCE8E3" /* cnb.z(-437382289554218L) */);
+                qt.a.u("#FF1E1E1E" /* cnb.z(-437356519750442L) */);
+                qq.a.u("#FF1E1E1E" /* cnb.z(-436780994132778L) */);
+                qu.a.u("#FF324B48" /* cnb.z(-436686504852266L) */);
+                qs.a.u("#FFF7F7F7" /* cnb.z(-436660735048490L) */);
                 return ensVar;
             case 20:
                 vc.a.r(48);
                 vf.a.r(80);
-                vb.a.u(cnb.z(-576418970860330L));
-                uw.a.u(cnb.z(-576324481579818L));
-                uz.a.u(cnb.z(-576298711776042L));
-                ve.a.u(cnb.z(-576272941972266L));
-                va.a.u(cnb.z(-576247172168490L));
-                uv.a.u(cnb.z(-576152682887978L));
-                uy.a.u(cnb.z(-576676668898090L));
-                vd.a.u(cnb.z(-576650899094314L));
+                vb.a.u("#FFF7F7F7" /* cnb.z(-576418970860330L) */);
+                uw.a.u("#FFCCE8E3" /* cnb.z(-576324481579818L) */);
+                uz.a.u("#FF1E1E1E" /* cnb.z(-576298711776042L) */);
+                ve.a.u("#FF006A62" /* cnb.z(-576272941972266L) */);
+                va.a.u("#FF1E1E1E" /* cnb.z(-576247172168490L) */);
+                uv.a.u("#FF324B48" /* cnb.z(-576152682887978L) */);
+                uy.a.u("#FFF7F7F7" /* cnb.z(-576676668898090L) */);
+                vd.a.u("#FF81D5CB" /* cnb.z(-576650899094314L) */);
                 return ensVar;
             case 21:
-                vr.a.u(cnb.z(-568408856853290L));
-                vk.a.u(cnb.z(-568314367572778L));
-                vm.a.u(cnb.z(-568288597769002L));
-                vo.a.u(cnb.z(-568262827965226L));
-                vq.a.u(cnb.z(-568237058161450L));
-                vj.a.u(cnb.z(-567592813067050L));
-                vl.a.u(cnb.z(-567567043263274L));
-                vn.a.u(cnb.z(-567541273459498L));
+                vr.a.u("#FFEDEDED" /* cnb.z(-568408856853290L) */);
+                vk.a.u("#FF006A62" /* cnb.z(-568314367572778L) */);
+                vm.a.u("#FF161D1C" /* cnb.z(-568288597769002L) */);
+                vo.a.u("#FF006A62" /* cnb.z(-568262827965226L) */);
+                vq.a.u("#FF242424" /* cnb.z(-568237058161450L) */);
+                vj.a.u("#FF81D5CB" /* cnb.z(-567592813067050L) */);
+                vl.a.u("#FFDDE4E2" /* cnb.z(-567567043263274L) */);
+                vn.a.u("#FF81D5CB" /* cnb.z(-567541273459498L) */);
                 vp.a.p(false);
                 return ensVar;
             case 22:
-                vz.a.u(cnb.z(-422908249766698L));
+                vz.a.u("今日已发${totalMsg}条" /* cnb.z(-422908249766698L) */);
                 vy.a.p(true);
                 return ensVar;
             case 23:
@@ -222,7 +222,7 @@ public final /* synthetic */ class h implements bfu {
             case 27:
                 bmo.a.getClass();
                 View viewInflate = View.inflate(aqu.e(cnf.am(bmo.n())), R.layout.module_dialog_choose_contacts, null);
-                bzo.o(viewInflate, cnb.z(-394157738687274L));
+                bzo.o(viewInflate, "null cannot be cast to non-null type android.widget.LinearLayout" /* cnb.z(-394157738687274L) */);
                 return (LinearLayout) viewInflate;
             case 28:
                 bmo.a.getClass();
@@ -239,7 +239,7 @@ public final /* synthetic */ class h implements bfu {
                     return la.a(objArrCopyOf);
                 } catch (Exception e) {
                     ArrayList arrayList = ewq.a;
-                    ewq.e(cnb.z(-22694607190826L), e, 12);
+                    ewq.e("getAnnoHookList Failed" /* cnb.z(-22694607190826L) */, e, 12);
                     return avd.a;
                 }
         }

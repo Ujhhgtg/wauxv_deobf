@@ -48,7 +48,7 @@ public final class bqs implements eqj {
                 }
             }
         }
-        throw new NullPointerException(cnb.z(-642033186241322L).concat(viewInflate.getResources().getResourceName(i)));
+        throw new NullPointerException("Missing required view with ID: " /* cnb.z(-642033186241322L) */.concat(viewInflate.getResources().getResourceName(i)));
     }
 
     @Override // me.hd.wauxv.obf.eqj

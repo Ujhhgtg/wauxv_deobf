@@ -55,10 +55,10 @@ public final /* synthetic */ class ben implements bgf {
                 String str = (String) this.c;
                 String str2 = (String) this.d;
                 Intent intent = new Intent();
-                intent.setClassName(activity, cnb.z(-95236604820266L));
-                intent.putExtra(cnb.z(-95554432400170L), cnb.z(-95511482727210L));
-                intent.putExtra(cnb.z(-95464238086954L), str);
-                intent.putExtra(cnb.z(-95447058217770L), str2);
+                intent.setClassName(activity, "com.tencent.mm.chatroom.ui.SelectedMemberChattingRecordUI" /* cnb.z(-95236604820266L) */);
+                intent.putExtra("title" /* cnb.z(-95554432400170L) */, "历史发言记录" /* cnb.z(-95511482727210L) */);
+                intent.putExtra("RoomInfo_Id" /* cnb.z(-95464238086954L) */, str);
+                intent.putExtra("room_member" /* cnb.z(-95447058217770L) */, str2);
                 activity.startActivity(intent);
                 break;
             default:
@@ -66,9 +66,9 @@ public final /* synthetic */ class ben implements bgf {
                 ArrayList<String> arrayList2 = (ArrayList) this.c;
                 String str3 = (String) this.d;
                 Intent intent2 = new Intent();
-                intent2.setClassName(activity2, cnb.z(-96417720826666L));
-                intent2.putStringArrayListExtra(cnb.z(-96258807036714L), arrayList2);
-                intent2.putExtra(cnb.z(-96752728275754L), str3);
+                intent2.setClassName(activity2, "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /* cnb.z(-96417720826666L) */);
+                intent2.putStringArrayListExtra("sns_kemdia_path_list" /* cnb.z(-96258807036714L) */, arrayList2);
+                intent2.putExtra("Kdescription" /* cnb.z(-96752728275754L) */, str3);
                 activity2.startActivity(intent2);
                 break;
         }

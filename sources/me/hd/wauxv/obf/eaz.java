@@ -31,6 +31,6 @@ public final class eaz {
     }
 
     public final String toString() {
-        return cnb.z(-229849469811498L) + this.a + ')';
+        return "mh4Proto(d=" /* cnb.z(-229849469811498L) */ + this.a + ')';
     }
 }

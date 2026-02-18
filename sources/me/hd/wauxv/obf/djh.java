@@ -14,46 +14,46 @@ public final class djh extends doo implements bng {
     public static final dhg m;
 
     static {
-        cnb.z(-556919819336490L);
-        cnb.z(-557349316066090L);
-        a = new djh(cnb.z(-535788580240170L));
-        b = new String[]{cnb.z(-557310661360426L), cnb.z(-557241941883690L), cnb.z(-557207582145322L), cnb.z(-556623466593066L), cnb.z(-556533272279850L)};
-        c = cnb.z(-556516092410666L);
-        i = cnb.z(-556464552803114L);
-        j = cnb.z(-556430193064746L);
+        "${originalText} | ${time} | ${type}" /* cnb.z(-556919819336490L) */;
+        "HH:mm:ss" /* cnb.z(-557349316066090L) */;
+        a = new djh("SnsInfoHook" /* cnb.z(-535788580240170L) */);
+        b = new String[]{"${originalText}" /* cnb.z(-557310661360426L) */, "${time}" /* cnb.z(-557241941883690L) */, "${type}" /* cnb.z(-557207582145322L) */, "${snsId}" /* cnb.z(-556623466593066L) */, "${userName}" /* cnb.z(-556533272279850L) */};
+        c = "朋友圈" /* cnb.z(-556516092410666L) */;
+        i = "朋友圈底部详情" /* cnb.z(-556464552803114L) */;
+        j = "为朋友圈列表项的底部添加自定义文本" /* cnb.z(-556430193064746L) */;
         m = new dhg(16);
     }
 
     public static String n(Object obj) throws IllegalAccessException {
         int i2 = bte.a;
         azg azgVarR = dqc.bi(obj).r();
-        azgVarR.ab = cnb.z(-535771400370986L);
+        azgVarR.ab = "field_snsId" /* cnb.z(-535771400370986L) */;
         Object objE = ((azk) yg.e(azgVarR)).e();
         bzo.n(objE);
         long jLongValue = ((Number) objE).longValue();
         azg azgVarR2 = dqc.bi(obj).r();
-        azgVarR2.ab = cnb.z(-532936721955626L);
+        azgVarR2.ab = "field_userName" /* cnb.z(-532936721955626L) */;
         Object objE2 = ((azk) yg.e(azgVarR2)).e();
         bzo.n(objE2);
         azg azgVarR3 = dqc.bi(obj).r();
-        azgVarR3.ab = cnb.z(-532855117577002L);
+        azgVarR3.ab = "field_createTime" /* cnb.z(-532855117577002L) */;
         Object objE3 = ((azk) yg.e(azgVarR3)).e();
         bzo.n(objE3);
         int iIntValue = ((Number) objE3).intValue();
         azg azgVarR4 = dqc.bi(obj).r();
-        azgVarR4.ab = cnb.z(-532799283002154L);
+        azgVarR4.ab = "field_type" /* cnb.z(-532799283002154L) */;
         Object objE4 = ((azk) yg.e(azgVarR4)).e();
         bzo.n(objE4);
         int iIntValue2 = ((Number) objE4).intValue();
-        String strBo = dnr.bo(djf.a.o(), cnb.z(-532769218231082L), cnh.ag(((long) iIntValue) * 1000, djg.a.o(), null, 2));
-        String strZ = cnb.z(-532734858492714L);
-        String strZ2 = cnb.z(-533250254568234L);
+        String strBo = dnr.bo(djf.a.o(), "${time}" /* cnb.z(-532769218231082L) */, cnh.ag(((long) iIntValue) * 1000, djg.a.o(), null, 2));
+        String strZ = "${type}" /* cnb.z(-532734858492714L) */;
+        String strZ2 = "0x" /* cnb.z(-533250254568234L) */;
         cmz.o(16);
         String string = Integer.toString(iIntValue2, 16);
-        bzo.p(string, cnb.z(-533203009927978L));
+        bzo.p(string, "toString(...)" /* cnb.z(-533203009927978L) */);
         String upperCase = string.toUpperCase(Locale.ROOT);
-        bzo.p(upperCase, cnb.z(-533194419993386L));
-        return dnr.bo(dnr.bo(dnr.bo(strBo, strZ, strZ2.concat(upperCase)), cnb.z(-533121405549354L), String.valueOf(jLongValue)), cnb.z(-533031211236138L), (String) objE2);
+        bzo.p(upperCase, "toUpperCase(...)" /* cnb.z(-533194419993386L) */);
+        return dnr.bo(dnr.bo(dnr.bo(strBo, strZ, strZ2.concat(upperCase)), "${snsId}" /* cnb.z(-533121405549354L) */, String.valueOf(jLongValue)), "${userName}" /* cnb.z(-533031211236138L) */, (String) objE2);
     }
 
     @Override // me.hd.wauxv.obf.bmf

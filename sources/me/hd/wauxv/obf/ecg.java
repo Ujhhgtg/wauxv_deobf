@@ -52,7 +52,7 @@ public final class ecg {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-263315854981930L));
+        sb.append("o51Proto(badge_type=" /* cnb.z(-263315854981930L) */);
         bjs.w(sb, this.a, -263260020407082L);
         yg.u(sb, this.b, -263135466355498L);
         bjs.w(sb, this.c, -263122581453610L);

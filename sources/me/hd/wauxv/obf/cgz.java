@@ -13,15 +13,15 @@ import me.hd.wauxv.data.bean.MsgInfoBean;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class cgz extends doo implements bnb {
-    public static final cgz c = new cgz(cnb.z(-473030518111018L));
-    public static final String h = cnb.z(-473094942620458L);
-    public static final String i = cnb.z(-474696965421866L);
-    public static final String j = cnb.z(-474649720781610L);
+    public static final cgz c = new cgz("MsgLeftSwipeHook" /* cnb.z(-473030518111018L) */);
+    public static final String h = "聊天" /* cnb.z(-473094942620458L) */;
+    public static final String i = "消息左滑引用" /* cnb.z(-474696965421866L) */;
+    public static final String j = "可左滑选中以修复无法多选消息的问题" /* cnb.z(-474649720781610L) */;
 
     @Override // me.hd.wauxv.obf.bnb
     public final void a(ViewGroup viewGroup) {
         if (z()) {
-            View viewV = cnh.v(viewGroup, cnb.ac(ewh.r) ? cnb.z(-472957503666986L) : cnb.ac(ewh.q) ? cnb.z(-472905964059434L) : cnb.ac(ewh.o) ? cnb.z(-472923143928618L) : cnb.ac(ewh.n) ? cnb.z(-472871604321066L) : cnb.ac(ewh.m) ? cnb.z(-472888784190250L) : cnb.ac(ewh.l) ? cnb.z(-472837244582698L) : cnb.ac(ewh.k) ? cnb.z(-472854424451882L) : cnb.ac(ewh.j) ? cnb.z(-472802884844330L) : cnb.ac(ewh.i) ? cnb.z(-472820064713514L) : cnb.ac(ewh.h) ? cnb.z(-473318280919850L) : cnb.ac(ewh.g) ? cnb.z(-473335460789034L) : cnb.ac(ewh.f) ? cnb.z(-473283921181482L) : cnb.ac(ewh.e) ? cnb.z(-473301101050666L) : cnb.ac(ewh.d) ? cnb.z(-473249561443114L) : cnb.ac(ewh.c) ? cnb.z(-473266741312298L) : cnb.ac(ewh.b) ? cnb.z(-473215201704746L) : cnb.ac(ewh.a) ? cnb.z(-473232381573930L) : cnb.ab(ewk.c) ? cnb.z(-473180841966378L) : cnb.z(-473198021835562L));
+            View viewV = cnh.v(viewGroup, cnb.ac(ewh.r) ? "c0g" /* cnb.z(-472957503666986L) */ : cnb.ac(ewh.q) ? "bzy" /* cnb.z(-472905964059434L) */ : cnb.ac(ewh.o) ? "byw" /* cnb.z(-472923143928618L) */ : cnb.ac(ewh.n) ? "bxy" /* cnb.z(-472871604321066L) */ : cnb.ac(ewh.m) ? "bx_" /* cnb.z(-472888784190250L) */ : cnb.ac(ewh.l) ? "bw0" /* cnb.z(-472837244582698L) */ : cnb.ac(ewh.k) ? "bvg" /* cnb.z(-472854424451882L) */ : cnb.ac(ewh.j) ? "buz" /* cnb.z(-472802884844330L) */ : cnb.ac(ewh.i) ? "bu9" /* cnb.z(-472820064713514L) */ : cnb.ac(ewh.h) ? "btr" /* cnb.z(-473318280919850L) */ : cnb.ac(ewh.g) ? "bvm" /* cnb.z(-473335460789034L) */ : cnb.ac(ewh.f) ? "bv7" /* cnb.z(-473283921181482L) */ : cnb.ac(ewh.e) ? "br2" /* cnb.z(-473301101050666L) */ : cnb.ac(ewh.d) ? "bqh" /* cnb.z(-473249561443114L) */ : cnb.ac(ewh.c) ? "bm8" /* cnb.z(-473266741312298L) */ : cnb.ac(ewh.b) ? "bi0" /* cnb.z(-473215201704746L) */ : cnb.ac(ewh.a) ? "bdv" /* cnb.z(-473232381573930L) */ : cnb.ab(ewk.c) ? "bkj" /* cnb.z(-473180841966378L) */ : "b4_" /* cnb.z(-473198021835562L) */);
             bzo.n(viewV);
             ViewParent parent = viewV.getParent();
             ViewGroup viewGroup2 = parent instanceof ViewGroup ? (ViewGroup) parent : null;

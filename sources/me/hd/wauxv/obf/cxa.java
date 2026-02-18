@@ -40,7 +40,7 @@ public final /* synthetic */ class cxa implements bgj {
                     clu.a.getClass();
                     cme.b(cme.a, emn.ba(clt.a).newInstance(str3, listBf, 0, null));
                 }
-                dnc.g(null, 3, cnb.z(-527104156367658L) + list.size() + cnb.z(-527048321792810L));
+                dnc.g(null, 3, "已邀请至" /* cnb.z(-527104156367658L) */ + list.size() + "个群聊" /* cnb.z(-527048321792810L) */);
                 return Boolean.FALSE;
             case 1:
                 char[] cArr = (char[]) this.b;

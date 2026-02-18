@@ -137,19 +137,19 @@ public final /* synthetic */ class cun implements View.OnClickListener {
                 return;
             default:
                 PolicyFragment.a.getClass();
-                String strZ = cnb.z(-419583945079594L);
+                String strZ = "policyAcceptKey" /* cnb.z(-419583945079594L) */;
                 int iHashCode = ((String) PolicyFragment.b.getValue()).hashCode();
                 io ioVar = cnf.ah;
                 if (ioVar == null) {
-                    throw new IllegalArgumentException(cnb.z(-5763846109994L).toString());
+                    throw new IllegalArgumentException("DefaultConfig must be init" /* cnb.z(-5763846109994L) */.toString());
                 }
                 ioVar.aj().putInt(strZ, iHashCode);
                 bzy bzyVar = new bzy(policyFragment.dc());
                 eg egVar = (eg) bzyVar.d;
-                egVar.d = cnb.z(-420000556907306L);
-                egVar.f = cnb.z(-419953312267050L);
-                bzyVar.t(cnb.z(-419884592790314L), new amw(new cfh(19), 0));
-                bjs.x((2 & 3) != 0 ? new amd(1) : null, bzyVar, cnb.z(-47455093652266L));
+                egVar.d = "提示" /* cnb.z(-420000556907306L) */;
+                egVar.f = "核心模块就绪, 是否重启加载?" /* cnb.z(-419953312267050L) */;
+                bzyVar.t("确定" /* cnb.z(-419884592790314L) */, new amw(new cfh(19), 0));
+                bjs.x((2 & 3) != 0 ? new amd(1) : null, bzyVar, "取消" /* cnb.z(-47455093652266L) */);
                 egVar.m = false;
                 bzyVar.i().show();
                 return;

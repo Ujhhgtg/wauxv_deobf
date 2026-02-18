@@ -26,15 +26,15 @@ public final class PluginAudioMethod {
     @cty
     public final File mp3ToSilkFile(String str) throws IOException {
         File file = new File(str);
-        cnh.k(file, cnb.z(-398963807091498L));
-        File fileX = cnh.x(cnb.z(-398938037287722L));
+        cnh.k(file, "mp3ToSilk" /* cnb.z(-398963807091498L) */);
+        File fileX = cnh.x("pcm" /* cnb.z(-398938037287722L) */);
         String absolutePath = file.getAbsolutePath();
         String absolutePath2 = fileX.getAbsolutePath();
         AudioNative audioNative = AudioNative.a;
         audioNative.mp3ToPcmInit();
         int iMp3ToPcmConvert = audioNative.mp3ToPcmConvert(absolutePath, absolutePath2);
         audioNative.mp3ToPcmClose();
-        File fileX2 = cnh.x(cnb.z(-398886497680170L));
+        File fileX2 = cnh.x("silk" /* cnb.z(-398886497680170L) */);
         audioNative.pcmToSilkConvert(fileX.getAbsolutePath(), fileX2.getAbsolutePath(), true, false, iMp3ToPcmConvert, 24000, 20, 0, 0, 0, 2, 24000);
         fileX.delete();
         return fileX2;

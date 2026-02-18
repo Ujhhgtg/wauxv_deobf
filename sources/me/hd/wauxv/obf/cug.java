@@ -43,8 +43,8 @@ public final /* synthetic */ class cug implements bgf {
             default:
                 diz dizVar = (diz) this.c;
                 ael aelVar = (ael) obj;
-                aelVar.f = cnb.z(-534916701879082L);
-                String strZ = cnb.z(-534946766650154L);
+                aelVar.f = "搜索好友" /* cnb.z(-534916701879082L) */;
+                String strZ = "好友" /* cnb.z(-534946766650154L) */;
                 ArrayList arrayListS = bmy.s();
                 ArrayList arrayList = new ArrayList(abb.ak(arrayListS, 10));
                 Iterator it = arrayListS.iterator();
@@ -54,7 +54,7 @@ public final /* synthetic */ class cug implements bgf {
                     if (!zHasNext) {
                         aelVar.m(strZ, arrayList);
                         aelVar.g = R.drawable.ic_contact_confirm_24dp;
-                        String strZ2 = cnb.z(-535311838870314L);
+                        String strZ2 = "点赞" /* cnb.z(-535311838870314L) */;
                         bgj bgjVar = new bgj() { // from class: me.hd.wauxv.obf.dix
                             @Override // me.hd.wauxv.obf.bgj
                             public final Object g(Object obj2, Object obj3) {
@@ -86,10 +86,10 @@ public final /* synthetic */ class cug implements bgf {
                                 }
                                 LinkedHashSet linkedHashSet = new LinkedHashSet(arrayList3);
                                 if (!setAd.isEmpty()) {
-                                    linkedHashSet.add(j2 + '|' + aaz.k(setAd, cnb.z(-535264594230058L), null, null, null, 62));
+                                    linkedHashSet.add(j2 + '|' + aaz.k(setAd, ";" /* cnb.z(-535264594230058L) */, null, null, null, 62));
                                 }
                                 diyVar.t(linkedHashSet);
-                                dnc.g(null, 3, cnb.z(-535273184164650L));
+                                dnc.g(null, 3, "已点赞" /* cnb.z(-535273184164650L) */);
                                 return Boolean.FALSE;
                             }
                         };
@@ -100,15 +100,15 @@ public final /* synthetic */ class cug implements bgf {
                         String wxid = friendInfo.getWxid();
                         StringBuilder sb2 = new StringBuilder();
                         String nickname = friendInfo.getNickname();
-                        if ((dfv.d(dap.b(new dap(cnb.z(-535432097954602L)), nickname)) > 3 ? nickname : null) != null) {
-                            sb2.append(cnb.z(-535402033183530L));
+                        if ((dfv.d(dap.b(new dap("\r\n|\r|\n" /* cnb.z(-535432097954602L) */), nickname)) > 3 ? nickname : null) != null) {
+                            sb2.append("已过滤此昵称..." /* cnb.z(-535402033183530L) */);
                         } else {
                             String str3 = nickname.length() > 8 ? nickname : null;
                             if (str3 != null) {
                                 String strSubstring = str3.substring(0, 8);
-                                bzo.p(strSubstring, cnb.z(-535376263379754L));
+                                bzo.p(strSubstring, "substring(...)" /* cnb.z(-535376263379754L) */);
                                 sb2.append(strSubstring);
-                                sb2.append(cnb.z(-535294659001130L));
+                                sb2.append("..." /* cnb.z(-535294659001130L) */);
                                 sb = sb2;
                             } else {
                                 sb = null;

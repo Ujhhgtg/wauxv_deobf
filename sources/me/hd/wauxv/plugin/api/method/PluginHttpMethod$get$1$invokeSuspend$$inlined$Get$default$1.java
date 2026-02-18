@@ -69,13 +69,13 @@ public final class PluginHttpMethod$get$1$invokeSuspend$$inlined$Get$default$1 e
             if (objB != null) {
                 return (Response) objB;
             }
-            throw new NullPointerException(cnb.z(-403516472425258L));
+            throw new NullPointerException("null cannot be cast to non-null type okhttp3.Response" /* cnb.z(-403516472425258L) */);
         } catch (NetException e) {
             throw e;
         } catch (CancellationException e2) {
             throw e2;
         } catch (Throwable th) {
-            throw new ConvertException(responseExecute, cnb.z(-403267364322090L), th, null, 8, null);
+            throw new ConvertException(responseExecute, "An unexpected error occurred in the converter" /* cnb.z(-403267364322090L) */, th, null, 8, null);
         }
     }
 }

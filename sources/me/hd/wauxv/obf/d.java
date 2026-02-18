@@ -15,39 +15,39 @@ public final /* synthetic */ class d implements View.OnClickListener {
     public final void onClick(View view) {
         switch (this.a) {
             case 0:
-                dnc.c(cnb.z(-415821553728298L));
-                dnc.g(null, 3, cnb.z(-415658344971050L));
+                dnc.c("1.2.6.r1238.198c77c(1238)" /* cnb.z(-415821553728298L) */);
+                dnc.g(null, 3, "复制成功" /* cnb.z(-415658344971050L) */);
                 break;
             case 1:
                 dnc.c(exl.c);
-                dnc.g(null, 3, cnb.z(-415671229872938L));
+                dnc.g(null, 3, "复制成功" /* cnb.z(-415671229872938L) */);
                 break;
             case 2:
                 bmo.a.getClass();
                 dnc.c(bmo.s());
-                dnc.g(null, 3, cnb.z(-415632575167274L));
+                dnc.g(null, 3, "复制成功" /* cnb.z(-415632575167274L) */);
                 break;
             case 3:
                 dnc.c(csq.b);
-                dnc.g(null, 3, cnb.z(-474211634117418L));
+                dnc.g(null, 3, "复制成功" /* cnb.z(-474211634117418L) */);
                 break;
             case 4:
-                String strZ = cnb.z(-474172979411754L);
-                String strZ2 = cnb.z(-471411315440426L);
-                String[] strArr = {cnb.z(-471334006029098L)};
+                String strZ = "EmojiGroupInfo" /* cnb.z(-474172979411754L) */;
+                String strZ2 = "productID = ?" /* cnb.z(-471411315440426L) */;
+                String[] strArr = {"wa.panel.emoji.group" /* cnb.z(-471334006029098L) */};
                 int i = bte.a;
                 dlx.a.getClass();
                 cde cdeVarT = dqc.bi(dlx.b()).t();
-                cdeVarT.ab = cnb.z(-103225243990826L);
+                cdeVarT.ab = "delete" /* cnb.z(-103225243990826L) */;
                 Object objJ = ((cdk) dkz.n(new Object[]{dal.b(String.class), dal.b(String.class), dal.b(String[].class)}, 3, cdeVarT)).j(strZ, strZ2, strArr);
                 bzo.n(objJ);
                 ((Number) objJ).intValue();
-                dnc.g(null, 3, cnb.z(-471226631846698L));
+                dnc.g(null, 3, "清除成功" /* cnb.z(-471226631846698L) */);
                 break;
             default:
                 dov dovVar = ctf.a;
-                dnc.c(ctf.c(cnb.z(-47055661693738L)));
-                dnc.g(null, 3, cnb.z(-485060721507114L));
+                dnc.c(ctf.c("Plugin" /* cnb.z(-47055661693738L) */));
+                dnc.g(null, 3, "复制成功" /* cnb.z(-485060721507114L) */);
                 break;
         }
     }

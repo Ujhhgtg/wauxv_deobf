@@ -7,7 +7,7 @@ import org.luckypray.dexkit.DexKitBridge;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class csq extends doo implements bng {
-    public static final csq a = new csq(cnb.z(-474439267384106L));
+    public static final csq a = new csq("PanelEmojiHook" /* cnb.z(-474439267384106L) */);
     public static final String b;
     public static final String c;
     public static final String i;
@@ -18,10 +18,10 @@ public final class csq extends doo implements bng {
 
     static {
         dov dovVar = ctf.a;
-        b = ctf.c(cnb.z(-47987669596970L), cnb.z(-47966194760490L));
-        c = cnb.z(-471926711515946L);
-        i = cnb.z(-471879466875690L);
-        j = cnb.z(-471832222235434L);
+        b = ctf.c("Resource" /* cnb.z(-47987669596970L) */, "Panel" /* cnb.z(-47966194760490L) */);
+        c = "聊天" /* cnb.z(-471926711515946L) */;
+        i = "面板本地表情" /* cnb.z(-471879466875690L) */;
+        j = "为聊天面板的表情分组添加相关表情包" /* cnb.z(-471832222235434L) */;
         m = new crl(1);
         n = true;
         r = new ArrayList();

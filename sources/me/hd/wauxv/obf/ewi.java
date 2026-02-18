@@ -20,15 +20,15 @@ public final class ewi {
     public final String e;
 
     static {
-        String strZ = cnb.z(-18214956301098L);
+        String strZ = "MAIN_PROCESS" /* cnb.z(-18214956301098L) */;
         bmo.a.getClass();
         ewi ewiVar = new ewi(strZ, 0, bmo.p());
         a = ewiVar;
-        ewi ewiVar2 = new ewi(cnb.z(-18210661333802L), 1, bmo.p().concat(cnb.z(-18674517801770L)));
+        ewi ewiVar2 = new ewi("APP_BRAND_0" /* cnb.z(-18210661333802L) */, 1, bmo.p().concat(":appbrand0" /* cnb.z(-18674517801770L) */));
         b = ewiVar2;
-        ewi ewiVar3 = new ewi(cnb.z(-18644453030698L), 2, bmo.p().concat(cnb.z(-18558553684778L)));
+        ewi ewiVar3 = new ewi("APP_BRAND_1" /* cnb.z(-18644453030698L) */, 2, bmo.p().concat(":appbrand1" /* cnb.z(-18558553684778L) */));
         c = ewiVar3;
-        d = new ewi[]{ewiVar, ewiVar2, ewiVar3, new ewi(cnb.z(-18545668782890L), 3, bmo.p().concat(cnb.z(-18459769436970L))), new ewi(cnb.z(-18429704665898L), 4, bmo.p().concat(cnb.z(-17862768982826L))), new ewi(cnb.z(-17781164604202L), 5, bmo.p().concat(cnb.z(-17763984735018L)))};
+        d = new ewi[]{ewiVar, ewiVar2, ewiVar3, new ewi("APP_BRAND_2" /* cnb.z(-18545668782890L) */, 3, bmo.p().concat(":appbrand2" /* cnb.z(-18459769436970L) */)), new ewi("APP_BRAND_3" /* cnb.z(-18429704665898L) */, 4, bmo.p().concat(":appbrand3" /* cnb.z(-17862768982826L) */)), new ewi("APP_BRAND_4" /* cnb.z(-17781164604202L) */, 5, bmo.p().concat(":appbrand4" /* cnb.z(-17763984735018L) */))};
     }
 
     public ewi(String str, int i, String str2) {

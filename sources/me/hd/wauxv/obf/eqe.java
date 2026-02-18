@@ -80,13 +80,13 @@ public final class eqe extends eqc {
                                     return;
                                 }
                                 io ioVar = new io(eqeVar.ao.b.getContext(), 13);
-                                ioVar.ay(cnb.z(-388458317085482L));
+                                ioVar.ay("提示" /* cnb.z(-388458317085482L) */);
                                 StringBuilder sb = new StringBuilder();
-                                sb.append(cnb.z(-388411072445226L));
+                                sb.append("此功能 (" /* cnb.z(-388411072445226L) */);
                                 yg.u(sb, ((ob) ocVar).a, -388436842249002L);
                                 bmo.a.getClass();
                                 sb.append(bmo.s());
-                                sb.append(cnb.z(-394445501496106L));
+                                sb.append(" 上使用, 仍要开启?" /* cnb.z(-394445501496106L) */);
                                 String string = sb.toString();
                                 bzy bzyVar = (bzy) ioVar.c;
                                 if (bzyVar != null) {

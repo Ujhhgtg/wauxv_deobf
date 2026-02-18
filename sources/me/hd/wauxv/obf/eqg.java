@@ -27,10 +27,10 @@ public final /* synthetic */ class eqg implements bfu {
         if (dooVar.q()) {
             Context context = this.c.ao.b.getContext();
             StringBuilder sb = new StringBuilder();
-            sb.append(cnb.z(-394359602150186L));
+            sb.append("重启 " /* cnb.z(-394359602150186L) */);
             bmo.a.getClass();
             sb.append(bmo.o());
-            sb.append(cnb.z(-394376782019370L));
+            sb.append(" 生效" /* cnb.z(-394376782019370L) */);
             Toast.makeText(context, sb.toString(), 0).show();
         }
         return ens.a;

@@ -13,13 +13,13 @@ public final class deu extends doo {
     public static final dbj j;
 
     static {
-        cnb.z(-514820549901098L);
-        cnb.z(-514751830424362L);
-        a = new deu(cnb.z(-518411142560554L));
-        b = aba.ag(cnb.z(-514721765653290L), cnb.z(-514687405914922L));
-        c = cnb.z(-514653046176554L);
-        h = cnb.z(-514674521013034L);
-        i = cnb.z(-514627276372778L);
+        "${time} ${nick}" /* cnb.z(-514820549901098L) */;
+        "yyyy-MM-dd" /* cnb.z(-514751830424362L) */;
+        a = new deu("SayHiAutoRemarkNameHook" /* cnb.z(-518411142560554L) */);
+        b = aba.ag("${nick}" /* cnb.z(-514721765653290L) */, "${time}" /* cnb.z(-514687405914922L) */);
+        c = "杂项" /* cnb.z(-514653046176554L) */;
+        h = "添加自动备注" /* cnb.z(-514674521013034L) */;
+        i = "添加好友时将备注进行自定义格式处理" /* cnb.z(-514627276372778L) */;
         j = new dbj(18);
     }
 
@@ -27,7 +27,7 @@ public final class deu extends doo {
     public final void e() {
         int i2 = bte.a;
         cde cdeVarT = yg.s(-518239343868714L).t();
-        cdeVarT.ab = cnb.z(-515258636565290L);
+        cdeVarT.ab = "initView" /* cnb.z(-515258636565290L) */;
         cdk cdkVar = (cdk) bjs.h(cdeVarT);
         exg exgVar = exg.a;
         deu deuVar = a;

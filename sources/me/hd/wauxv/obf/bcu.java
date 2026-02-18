@@ -14,11 +14,11 @@ public final class bcu extends doo implements bnc {
     public static final ayz j;
 
     static {
-        cnb.z(-463680374307626L);
-        a = new bcu(cnb.z(-462147070982954L));
-        b = cnb.z(-463646014569258L);
-        c = cnb.z(-463598769929002L);
-        h = cnb.z(-463551525288746L);
+        "E HH:mm" /* cnb.z(-463680374307626L) */;
+        a = new bcu("FormatMsgTimeHook" /* cnb.z(-462147070982954L) */);
+        b = "净化" /* cnb.z(-463646014569258L) */;
+        c = "格式消息时间" /* cnb.z(-463598769929002L) */;
+        h = "自定义聊天项顶部时间是否显示与格式" /* cnb.z(-463551525288746L) */;
         j = new ayz(29);
     }
 
@@ -41,7 +41,7 @@ public final class bcu extends doo implements bnc {
         if (z()) {
             int i = bte.a;
             azg azgVarR = dqc.bi(obj).r();
-            azgVarR.ab = cnb.z(-462086941440810L);
+            azgVarR.ab = "timeTV" /* cnb.z(-462086941440810L) */;
             TextView textView = (TextView) ((azk) yg.e(azgVarR)).e();
             int iK = bcs.a.k();
             if (iK == bcr.a.e) {

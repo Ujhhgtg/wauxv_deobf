@@ -38,7 +38,7 @@ public final /* synthetic */ class amd implements bfu {
                 azq.a.u(azr.b);
                 return ensVar;
             case 5:
-                File file = new File(bbj.b, cnb.z(-550477368392490L));
+                File file = new File(bbj.b, "menuItems.json" /* cnb.z(-550477368392490L) */);
                 if (file.exists()) {
                     brn brnVar = brn.a;
                     String strC = bad.c(file);
@@ -59,19 +59,19 @@ public final /* synthetic */ class amd implements bfu {
                 }
                 return aaz.t(arrayList, new ex(5));
             case 6:
-                bbg.a.u(cnb.z(-550352814340906L));
-                bbi.a.u(cnb.z(-550327044537130L));
-                bbf.a.u(cnb.z(-550851030547242L));
-                bbh.a.u(cnb.z(-550756541266730L));
+                bbg.a.u("#FFF7F7F7" /* cnb.z(-550352814340906L) */);
+                bbi.a.u("#FF1E1E1E" /* cnb.z(-550327044537130L) */);
+                bbf.a.u("#FF1E1E1E" /* cnb.z(-550851030547242L) */);
+                bbh.a.u("#FFF7F7F7" /* cnb.z(-550756541266730L) */);
                 return ensVar;
             case 7:
-                bct.a.u(cnb.z(-463714734045994L));
+                bct.a.u("E HH:mm" /* cnb.z(-463714734045994L) */);
                 bcs.a.r(bcr.b.e);
                 return ensVar;
             case 8:
                 return new Handler(Looper.getMainLooper());
             case 9:
-                File file2 = new File(biw.c, cnb.z(-590072671894314L));
+                File file2 = new File(biw.c, "groupItems.json" /* cnb.z(-590072671894314L) */);
                 if (file2.exists()) {
                     brn brnVar3 = brn.a;
                     String strC2 = bad.c(file2);
@@ -104,36 +104,36 @@ public final /* synthetic */ class amd implements bfu {
             case 14:
                 return new bix(new int[]{Color.parseColor(bje.a.o()), Color.parseColor(bjf.a.o())}, Color.parseColor(bjg.a.o()), 12);
             case 15:
-                bjh.a.u(cnb.z(-505547715509034L));
-                bji.a.u(cnb.z(-505521945705258L));
-                bjj.a.u(cnb.z(-504946420087594L));
-                biy.a.u(cnb.z(-504851930807082L));
-                biz.a.u(cnb.z(-504826161003306L));
-                bja.a.u(cnb.z(-504800391199530L));
-                bjb.a.u(cnb.z(-504774621395754L));
-                bjc.a.u(cnb.z(-504680132115242L));
-                bjd.a.u(cnb.z(-505204118125354L));
-                bje.a.u(cnb.z(-505178348321578L));
-                bjf.a.u(cnb.z(-505152578517802L));
-                bjg.a.u(cnb.z(-505058089237290L));
+                bjh.a.u("#FFF9E8C8" /* cnb.z(-505547715509034L) */);
+                bji.a.u("#FFFEF3D6" /* cnb.z(-505521945705258L) */);
+                bjj.a.u("#FFE87A20" /* cnb.z(-504946420087594L) */);
+                biy.a.u("#FFA3F0E6" /* cnb.z(-504851930807082L) */);
+                biz.a.u("#FFE0F7F4" /* cnb.z(-504826161003306L) */);
+                bja.a.u("#FF3AAE9D" /* cnb.z(-504800391199530L) */);
+                bjb.a.u("#FFF2D5F8" /* cnb.z(-504774621395754L) */);
+                bjc.a.u("#FFF9EBFC" /* cnb.z(-504680132115242L) */);
+                bjd.a.u("#FFA64BDB" /* cnb.z(-505204118125354L) */);
+                bje.a.u("#FFD8D8D8" /* cnb.z(-505178348321578L) */);
+                bjf.a.u("#FFE0E0E0" /* cnb.z(-505152578517802L) */);
+                bjg.a.u("#FF666666" /* cnb.z(-505058089237290L) */);
                 return ensVar;
             case 16:
-                bjh.a.u(cnb.z(-505032319433514L));
-                bji.a.u(cnb.z(-505006549629738L));
-                bjj.a.u(cnb.z(-504980779825962L));
-                biy.a.u(cnb.z(-502137511476010L));
-                biz.a.u(cnb.z(-502111741672234L));
-                bja.a.u(cnb.z(-502085971868458L));
-                bjb.a.u(cnb.z(-502060202064682L));
-                bjc.a.u(cnb.z(-501965712784170L));
-                bjd.a.u(cnb.z(-501939942980394L));
-                bje.a.u(cnb.z(-502463928990506L));
-                bjf.a.u(cnb.z(-502438159186730L));
-                bjg.a.u(cnb.z(-502343669906218L));
+                bjh.a.u("#FFFFD56A" /* cnb.z(-505032319433514L) */);
+                bji.a.u("#FFFFE87A" /* cnb.z(-505006549629738L) */);
+                bjj.a.u("#FFFFFFFF" /* cnb.z(-504980779825962L) */);
+                biy.a.u("#FF4DD5CC" /* cnb.z(-502137511476010L) */);
+                biz.a.u("#FF68E8DF" /* cnb.z(-502111741672234L) */);
+                bja.a.u("#FFFFFFFF" /* cnb.z(-502085971868458L) */);
+                bjb.a.u("#FFD0A3FF" /* cnb.z(-502060202064682L) */);
+                bjc.a.u("#FFEFBFFF" /* cnb.z(-501965712784170L) */);
+                bjd.a.u("#FFFFFFFF" /* cnb.z(-501939942980394L) */);
+                bje.a.u("#FF95A0B8" /* cnb.z(-502463928990506L) */);
+                bjf.a.u("#FFA8B2C9" /* cnb.z(-502438159186730L) */);
+                bjg.a.u("#FFFFFFFF" /* cnb.z(-502343669906218L) */);
                 return ensVar;
             case 17:
-                bjv.a.u(cnb.z(-508352329153322L));
-                bjw.a.u(cnb.z(-508317969414954L));
+                bjv.a.u("#28C445" /* cnb.z(-508352329153322L) */);
+                bjw.a.u("退出了此群" /* cnb.z(-508317969414954L) */);
                 return ensVar;
             case 18:
                 int i2 = bte.a;
@@ -166,7 +166,7 @@ public final /* synthetic */ class amd implements bfu {
                 bxf bxfVar = bxf.a;
                 cem cemVar = bxj.c;
                 if (cemVar == null) {
-                    bzo.ar(cnb.z(-496249111313194L));
+                    bzo.ar("binding" /* cnb.z(-496249111313194L) */);
                     throw null;
                 }
                 bxfVar.q(Float.parseFloat(String.valueOf(cemVar.c.getText())));
@@ -176,7 +176,7 @@ public final /* synthetic */ class amd implements bfu {
                     bxgVar.q(Float.parseFloat(String.valueOf(cemVar2.d.getText())));
                     return ensVar;
                 }
-                bzo.ar(cnb.z(-496214751574826L));
+                bzo.ar("binding" /* cnb.z(-496214751574826L) */);
                 throw null;
             default:
                 bxf.a.q(31.135633f);

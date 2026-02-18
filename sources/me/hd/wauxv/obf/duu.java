@@ -11,7 +11,7 @@ public final /* synthetic */ class duu implements bgx {
     static {
         duu duuVar = new duu();
         b = duuVar;
-        cuc cucVar = new cuc(cnb.z(-327942227884842L), duuVar, 20);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.WebSearchInfoProto" /* cnb.z(-327942227884842L) */, duuVar, 20);
         bjs.y(-329776178920234L, cucVar, false, 1);
         bjs.y(-329685984607018L, cucVar, false, 2);
         bjs.y(-329617265130282L, cucVar, false, 3);

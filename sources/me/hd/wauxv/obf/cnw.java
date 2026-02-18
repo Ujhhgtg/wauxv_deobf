@@ -38,9 +38,9 @@ public final class cnw {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-128367982541610L));
+        sb.append("NewSendMsgProto(baseResponse=" /* cnb.z(-128367982541610L) */);
         sb.append(this.b);
-        sb.append(cnb.z(-128221953653546L));
+        sb.append(", count=" /* cnb.z(-128221953653546L) */);
         dkz.ac(sb, this.c, -128183298947882L);
         sb.append(this.d);
         sb.append(')');

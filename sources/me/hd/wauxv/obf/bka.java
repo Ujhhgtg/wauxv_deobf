@@ -45,16 +45,16 @@ public final /* synthetic */ class bka implements bgf {
                 bbe bbeVar = (bbe) ((List) ((io) obj2).c).get(iIntValue);
                 String str = bbeVar.d;
                 String str2 = bbeVar.e;
-                if (bzo.f(str, cnb.z(-550730771462954L))) {
+                if (bzo.f(str, "activity" /* cnb.z(-550730771462954L) */)) {
                     Intent intent = new Intent();
                     intent.setClassName(antVar.getContext(), str2);
                     antVar.getContext().startActivity(intent);
-                } else if (bzo.f(str, cnb.z(-550709296626474L))) {
+                } else if (bzo.f(str, "wauxv" /* cnb.z(-550709296626474L) */)) {
                     bbj.a.getClass();
-                    if (bzo.f(str2, cnb.z(-553591219682090L))) {
+                    if (bzo.f(str2, "clearUnreadCount" /* cnb.z(-553591219682090L) */)) {
                         alc alcVar = aou.a;
                         cnd.bf(akq.f, new lw(i2, afwVar, 3));
-                    } else if (bzo.f(str2, cnb.z(-553535385107242L))) {
+                    } else if (bzo.f(str2, "killProcess" /* cnb.z(-553535385107242L) */)) {
                         Process.killProcess(Process.myPid());
                     }
                 }
@@ -96,7 +96,7 @@ public final /* synthetic */ class bka implements bgf {
             case 4:
                 Activity activity = (Activity) obj2;
                 dnc.b(activity, (String) obj3);
-                dnc.g(activity, 2, cnb.z(-583308098403114L));
+                dnc.g(activity, 2, "复制成功" /* cnb.z(-583308098403114L) */);
                 return ensVar;
             default:
                 euh euhVar = (euh) obj2;
@@ -113,13 +113,13 @@ public final /* synthetic */ class bka implements bgf {
                 }
                 TextView textView = new TextView(context);
                 textView.setTextSize(16.0f);
-                textView.setText(cnb.z(-82948703386410L));
+                textView.setText("正在加载核心中..." /* cnb.z(-82948703386410L) */);
                 textView.setLayoutParams(new LinearLayout.LayoutParams(-2, -2));
                 ProgressBar progressBar = new ProgressBar(context, null, R.attr.progressBarStyleHorizontal);
                 LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(-1, -2);
                 layoutParams.setMargins(32, 32, 32, 32);
                 progressBar.setLayoutParams(layoutParams);
-                AlertDialog.Builder title = new AlertDialog.Builder(context).setTitle(cnb.z(-82935818484522L));
+                AlertDialog.Builder title = new AlertDialog.Builder(context).setTitle("WAuxiliary" /* cnb.z(-82935818484522L) */);
                 LinearLayout linearLayout = new LinearLayout(context);
                 linearLayout.setOrientation(1);
                 linearLayout.setGravity(17);

@@ -60,7 +60,7 @@ public final /* synthetic */ class atn implements bgf {
             case 1:
                 bag bagVar = (bag) obj;
                 zb zbVar = new zb();
-                zbVar.k(cnb.z(-90284507527978L), cnb.z(-90649579748138L));
+                zbVar.k("MicroMsg.emoji.EmojiFileEncryptMgr" /* cnb.z(-90284507527978L) */, "decode emoji file failed. path is no exist :%s " /* cnb.z(-90649579748138L) */);
                 bagVar.getClass();
                 bagVar.b = zbVar;
                 return ensVar;
@@ -128,8 +128,8 @@ public final /* synthetic */ class atn implements bgf {
                                                             eg egVar = (eg) bzyVar.d;
                                                             atx.a.getClass();
                                                             egVar.d = atx.c;
-                                                            bzyVar.t(cnb.z(-507875587783466L), new amw(new bp(cenVar, 19), 0));
-                                                            bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar, cnb.z(-47455093652266L));
+                                                            bzyVar.t("保存" /* cnb.z(-507875587783466L) */, new amw(new bp(cenVar, 19), 0));
+                                                            bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar, "取消" /* cnb.z(-47455093652266L) */);
                                                             if (linearLayout != null) {
                                                                 egVar.r = linearLayout;
                                                             }
@@ -146,10 +146,10 @@ public final /* synthetic */ class atn implements bgf {
                         }
                     }
                 }
-                throw new NullPointerException(cnb.z(-638988054428458L).concat(viewK.getResources().getResourceName(i6)));
+                throw new NullPointerException("Missing required view with ID: " /* cnb.z(-638988054428458L) */.concat(viewK.getResources().getResourceName(i6)));
             case 3:
                 bah bahVar = (bah) obj;
-                String[] strArr = {cnb.z(-506887745305386L)};
+                String[] strArr = {"com.tencent.mm.sdk.platformtools" /* cnb.z(-506887745305386L) */};
                 bahVar.getClass();
                 bahVar.a = la.ab(strArr);
                 cdj cdjVar = new cdj();
@@ -167,10 +167,10 @@ public final /* synthetic */ class atn implements bgf {
                 cdjVar.q(clsBf2, clsBf3 != null ? clsBf3 : Integer.class);
                 fj fjVar = new fj();
                 cdj cdjVar2 = new cdj();
-                cdjVar2.s(cnb.z(-507312947067690L));
+                cdjVar2.s("currentTimeMillis" /* cnb.z(-507312947067690L) */);
                 fjVar.f(cdjVar2);
                 cdj cdjVar3 = new cdj();
-                cdjVar3.s(cnb.z(-507252817525546L));
+                cdjVar3.s("nextInt" /* cnb.z(-507252817525546L) */);
                 fjVar.f(cdjVar3);
                 fjVar.d = bzu.Contains;
                 cdjVar.i = fjVar;
@@ -179,7 +179,7 @@ public final /* synthetic */ class atn implements bgf {
             case 4:
                 bah bahVar2 = (bah) obj;
                 cdj cdjVar4 = new cdj();
-                cdjVar4.t(cnb.z(-507218457787178L), cnb.z(-495531851774762L));
+                cdjVar4.t("MicroMsg.EmojiPanelClickListener" /* cnb.z(-507218457787178L) */, "penn send capture emoji click emoji: %s status: %d." /* cnb.z(-495531851774762L) */);
                 bahVar2.getClass();
                 bahVar2.d = cdjVar4;
                 return ensVar;
@@ -207,19 +207,19 @@ public final /* synthetic */ class atn implements bgf {
                 bzo.n(objE);
                 if (((Number) objE).intValue() == 0) {
                     azg azgVarR2 = dqc.bi(objX).r();
-                    azgVarR2.a = cnb.z(-507897062619946L);
+                    azgVarR2.a = "com.tencent.mm.api.IEmojiInfo" /* cnb.z(-507897062619946L) */;
                     Object objD = ((azk) aaz.e(azgVarR2.c())).d();
                     bzo.n(objD);
                     cde cdeVarT = dqc.bi(objD).t();
-                    cdeVarT.ab = cnb.z(-507751033731882L);
+                    cdeVarT.ab = "getMd5" /* cnb.z(-507751033731882L) */;
                     Object objJ = ((cdk) aaz.e(cdeVarT.aj())).j(new Object[0]);
                     bzo.n(objJ);
                     String str = (String) objJ;
-                    if (str.equals(cnb.z(-507703789091626L))) {
+                    if (str.equals("9bd1281af3a31710a45b84d736363691" /* cnb.z(-507703789091626L) */)) {
                         atxVar.getClass();
                         bmmVar.h(null);
                         AlertDialog.Builder builder = new AlertDialog.Builder(aye.v());
-                        builder.setTitle(cnb.z(-507480450792234L));
+                        builder.setTitle("选择猜拳" /* cnb.z(-507480450792234L) */);
                         RadioGroup radioGroup3 = new RadioGroup(builder.getContext());
                         radioGroup3.setGravity(17);
                         radioGroup3.setOrientation(0);
@@ -235,7 +235,7 @@ public final /* synthetic */ class atn implements bgf {
                                 radioGroup3.addView(radioButton);
                             } else {
                                 builder.setView(radioGroup3);
-                                builder.setPositiveButton(cnb.z(-507441796086570L), new DialogInterface.OnClickListener() { // from class: me.hd.wauxv.obf.atq
+                                builder.setPositiveButton("发送" /* cnb.z(-507441796086570L) */, new DialogInterface.OnClickListener() { // from class: me.hd.wauxv.obf.atq
                                     @Override // android.content.DialogInterface.OnClickListener
                                     public final void onClick(DialogInterface dialogInterface, int i8) {
                                         switch (iIntValue) {
@@ -256,7 +256,7 @@ public final /* synthetic */ class atn implements bgf {
                                         }
                                     }
                                 });
-                                CharSequence charSequenceZ = cnb.z(-507446091053866L);
+                                CharSequence charSequenceZ = "随机" /* cnb.z(-507446091053866L) */;
                                 final char c = 1 == true ? 1 : 0;
                                 builder.setNeutralButton(charSequenceZ, new DialogInterface.OnClickListener() { // from class: me.hd.wauxv.obf.atq
                                     @Override // android.content.DialogInterface.OnClickListener
@@ -279,15 +279,15 @@ public final /* synthetic */ class atn implements bgf {
                                         }
                                     }
                                 });
-                                builder.setNegativeButton(cnb.z(-507948602227498L), (DialogInterface.OnClickListener) null);
+                                builder.setNegativeButton("取消" /* cnb.z(-507948602227498L) */, (DialogInterface.OnClickListener) null);
                                 builder.show();
                             }
                         }
-                    } else if (str.equals(cnb.z(-507029479226154L))) {
+                    } else if (str.equals("08f223fa83f1ca34e143d1e580252c7c" /* cnb.z(-507029479226154L) */)) {
                         atxVar.getClass();
                         bmmVar.h(null);
                         AlertDialog.Builder builder2 = new AlertDialog.Builder(aye.v());
-                        builder2.setTitle(cnb.z(-507952897194794L));
+                        builder2.setTitle("选择骰子" /* cnb.z(-507952897194794L) */);
                         RadioGroup radioGroup4 = new RadioGroup(builder2.getContext());
                         radioGroup4.setGravity(17);
                         radioGroup4.setOrientation(0);
@@ -303,7 +303,7 @@ public final /* synthetic */ class atn implements bgf {
                                 radioGroup4.addView(radioButton2);
                             } else {
                                 builder2.setView(radioGroup4);
-                                builder2.setPositiveButton(cnb.z(-507914242489130L), new DialogInterface.OnClickListener() { // from class: me.hd.wauxv.obf.atq
+                                builder2.setPositiveButton("发送" /* cnb.z(-507914242489130L) */, new DialogInterface.OnClickListener() { // from class: me.hd.wauxv.obf.atq
                                     @Override // android.content.DialogInterface.OnClickListener
                                     public final void onClick(DialogInterface dialogInterface, int i8) {
                                         switch (i5) {
@@ -324,7 +324,7 @@ public final /* synthetic */ class atn implements bgf {
                                         }
                                     }
                                 });
-                                builder2.setNeutralButton(cnb.z(-507918537456426L), new DialogInterface.OnClickListener() { // from class: me.hd.wauxv.obf.atq
+                                builder2.setNeutralButton("随机" /* cnb.z(-507918537456426L) */, new DialogInterface.OnClickListener() { // from class: me.hd.wauxv.obf.atq
                                     @Override // android.content.DialogInterface.OnClickListener
                                     public final void onClick(DialogInterface dialogInterface, int i8) {
                                         switch (i3) {
@@ -345,7 +345,7 @@ public final /* synthetic */ class atn implements bgf {
                                         }
                                     }
                                 });
-                                builder2.setNegativeButton(cnb.z(-507940012292906L), (DialogInterface.OnClickListener) null);
+                                builder2.setNegativeButton("取消" /* cnb.z(-507940012292906L) */, (DialogInterface.OnClickListener) null);
                                 builder2.show();
                             }
                         }
@@ -389,8 +389,8 @@ public final /* synthetic */ class atn implements bgf {
             case 10:
                 bah bahVar3 = (bah) obj;
                 cdj cdjVar5 = new cdj();
-                cdj.l(cdjVar5, cnb.z(-75471165324074L));
-                cdjVar5.t(cnb.z(-75844827478826L));
+                cdj.l(cdjVar5, "com.tencent.mm.storage.emotion.EmojiInfo" /* cnb.z(-75471165324074L) */);
+                cdjVar5.t("save emoji thumb error" /* cnb.z(-75844827478826L) */);
                 bahVar3.getClass();
                 bahVar3.d = cdjVar5;
                 return ensVar;
@@ -400,7 +400,7 @@ public final /* synthetic */ class atn implements bgf {
             case 12:
                 bag bagVar2 = (bag) obj;
                 zb zbVar2 = new zb();
-                zbVar2.k(cnb.z(-91976724642602L), cnb.z(-91839285689130L));
+                zbVar2.k("MicroMsg.emoji.EmojiInfoStorage" /* cnb.z(-91976724642602L) */, "md5 is null or invalue. md5:%s" /* cnb.z(-91839285689130L) */);
                 bagVar2.getClass();
                 bagVar2.b = zbVar2;
                 return ensVar;
@@ -424,7 +424,7 @@ public final /* synthetic */ class atn implements bgf {
             case 15:
                 bag bagVar3 = (bag) obj;
                 zb zbVar3 = new zb();
-                zbVar3.k(cnb.z(-92105573661482L), cnb.z(-91401199024938L));
+                zbVar3.k("MicroMsg.emoji.EmojiMgrImpl" /* cnb.z(-92105573661482L) */, "sendEmoji: context is null" /* cnb.z(-91401199024938L) */);
                 bagVar3.getClass();
                 bagVar3.b = zbVar3;
                 return ensVar;
@@ -438,9 +438,9 @@ public final /* synthetic */ class atn implements bgf {
                 eg egVar2 = (eg) bzyVar2.d;
                 egVar2.d = str2;
                 LinearLayout linearLayout2 = ceeVarE.b;
-                bzyVar2.t(cnb.z(-519081157458730L), new amw(new aul(ceeVarE, 0), 0));
-                bzyVar2.s(cnb.z(-519085452426026L), new amw(new amd(2), 2));
-                bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar2, cnb.z(-47455093652266L));
+                bzyVar2.t("保存" /* cnb.z(-519081157458730L) */, new amw(new aul(ceeVarE, 0), 0));
+                bzyVar2.s("重置" /* cnb.z(-519085452426026L) */, new amw(new amd(2), 2));
+                bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar2, "取消" /* cnb.z(-47455093652266L) */);
                 if (linearLayout2 != null) {
                     egVar2.r = linearLayout2;
                 }
@@ -451,11 +451,11 @@ public final /* synthetic */ class atn implements bgf {
                 return ensVar;
             case 18:
                 bag bagVar4 = (bag) obj;
-                String[] strArr2 = {cnb.z(-91676076931882L)};
+                String[] strArr2 = {"com.tencent.mm.storage" /* cnb.z(-91676076931882L) */};
                 bagVar4.getClass();
                 bagVar4.a = la.ab(strArr2);
                 zb zbVar4 = new zb();
-                zbVar4.k(cnb.z(-91577292684074L), cnb.z(-88746909236010L));
+                zbVar4.k("MicroMsg.emoji.EmojiStorageMgr" /* cnb.z(-91577292684074L) */, "EmojiStorageMgr: %s" /* cnb.z(-88746909236010L) */);
                 bagVar4.b = zbVar4;
                 return ensVar;
             case 19:
@@ -484,14 +484,14 @@ public final /* synthetic */ class atn implements bgf {
                 }
                 for (bni bniVar : axu.b) {
                     try {
-                        if (((diw) bniVar).z() && str3.equals(cnb.z(-608734304795434L))) {
-                            bmmVar3.h(cnb.z(-609107966950186L));
+                        if (((diw) bniVar).z() && str3.equals("clicfg_sns_use_expandable_video_seek_bar" /* cnb.z(-608734304795434L) */)) {
+                            bmmVar3.h("1" /* cnb.z(-609107966950186L) */);
                         }
                     } catch (Exception e) {
                         ArrayList arrayList = ewq.a;
                         StringBuilder sb = new StringBuilder();
-                        sb.append(cnb.z(-36717675412266L));
-                        ewq.e(yg.n(sb, bniVar instanceof doo ? ((doo) bniVar).f() : cnb.z(-36661840837418L), -36623186131754L), e, 12);
+                        sb.append("onGetExptConfig " /* cnb.z(-36717675412266L) */);
+                        ewq.e(yg.n(sb, bniVar instanceof doo ? ((doo) bniVar).f() : "LoadHook" /* cnb.z(-36661840837418L) */, -36623186131754L), e, 12);
                     }
                 }
                 return ensVar;
@@ -515,7 +515,7 @@ public final /* synthetic */ class atn implements bgf {
                 cls3 = Boolean.class;
                 Class<Boolean> clsBf8 = cnf.bf(dal.b(cls3));
                 cdjVar6.q(clsBf6, cls, clsBf8 != null ? clsBf8 : Boolean.class);
-                cdjVar6.t(cnb.z(-36588826393386L), cnb.z(-42528766163754L));
+                cdjVar6.t("MicroMsg.ExptService" /* cnb.z(-36588826393386L) */, "Fail to query value, return default value '%s' instead." /* cnb.z(-42528766163754L) */);
                 bahVar4.getClass();
                 bahVar4.d = cdjVar6;
                 return ensVar;
@@ -558,8 +558,8 @@ public final /* synthetic */ class atn implements bgf {
                                     e = e2;
                                     ArrayList arrayList2 = ewq.a;
                                     StringBuilder sb2 = new StringBuilder();
-                                    sb2.append(cnb.z(-42013370088234L));
-                                    ewq.e(yg.n(sb2, bnjVar instanceof doo ? ((doo) bnjVar).f() : cnb.z(-41948945578794L), -41858751265578L), e, 12);
+                                    sb2.append("onCreateMenuItems " /* cnb.z(-42013370088234L) */);
+                                    ewq.e(yg.n(sb2, bnjVar instanceof doo ? ((doo) bnjVar).f() : "LoadHook" /* cnb.z(-41948945578794L) */, -41858751265578L), e, 12);
                                 }
                             }
                         } catch (Exception e3) {
@@ -576,8 +576,8 @@ public final /* synthetic */ class atn implements bgf {
                         } catch (Exception e4) {
                             ArrayList arrayList3 = ewq.a;
                             StringBuilder sb3 = new StringBuilder();
-                            sb3.append(cnb.z(-41824391527210L));
-                            ewq.e(yg.n(sb3, bnjVar2 instanceof doo ? ((doo) bnjVar2).f() : cnb.z(-42309722831658L), -42288247995178L), e4, 12);
+                            sb3.append("onCreateMenuItems " /* cnb.z(-41824391527210L) */);
+                            ewq.e(yg.n(sb3, bnjVar2 instanceof doo ? ((doo) bnjVar2).f() : "LoadHook" /* cnb.z(-42309722831658L) */, -42288247995178L), e4, 12);
                         }
                     }
                 }
@@ -603,7 +603,7 @@ public final /* synthetic */ class atn implements bgf {
                 bzo.n(objE3);
                 int iIntValue = ((Number) objE3).intValue();
                 azg azgVarAa2 = dkz.aa(bmmVar5);
-                azgVarAa2.a = cnb.z(-42253888256810L);
+                azgVarAa2.a = "com.tencent.mm.plugin.fav.ui.FavoriteIndexUI" /* cnb.z(-42253888256810L) */;
                 Object objE4 = ((azk) aaz.e(azgVarAa2.c())).e();
                 bzo.n(objE4);
                 azg azgVarR4 = dqc.bi((Activity) objE4).r();
@@ -623,8 +623,8 @@ public final /* synthetic */ class atn implements bgf {
                     } catch (Exception e5) {
                         ArrayList arrayList4 = ewq.a;
                         StringBuilder sb4 = new StringBuilder();
-                        sb4.append(cnb.z(-43675522431786L));
-                        ewq.e(yg.n(sb4, bnjVar3 instanceof doo ? ((doo) bnjVar3).f() : cnb.z(-43628277791530L), -43589623085866L), e5, 12);
+                        sb4.append("onCreateMenuItems " /* cnb.z(-43675522431786L) */);
+                        ewq.e(yg.n(sb4, bnjVar3 instanceof doo ? ((doo) bnjVar3).f() : "LoadHook" /* cnb.z(-43628277791530L) */, -43589623085866L), e5, 12);
                     }
                 }
                 return ensVar;
@@ -635,23 +635,23 @@ public final /* synthetic */ class atn implements bgf {
                 ((amm) obj).c = new atn(27);
                 return ensVar;
             case 26:
-                return Boolean.valueOf(dnr.bp(((Class) obj).getName(), cnb.z(-43555263347498L), false));
+                return Boolean.valueOf(dnr.bp(((Class) obj).getName(), "com.tencent.mm.plugin.fav.ui.adapter." /* cnb.z(-43555263347498L) */, false));
             case 27:
                 bah bahVar5 = (bah) obj;
-                String[] strArr3 = {cnb.z(-43383464655658L)};
+                String[] strArr3 = {"com.tencent.mm.plugin.fav.ui" /* cnb.z(-43383464655658L) */};
                 bahVar5.getClass();
                 bahVar5.a = la.ab(strArr3);
                 cdj cdjVar7 = new cdj();
-                cdjVar7.t(cnb.z(-43241730734890L), cnb.z(-40385577483050L));
+                cdjVar7.t("MicroMsg.FavoriteIndexUI" /* cnb.z(-43241730734890L) */, "onMMMenuItemSelected" /* cnb.z(-40385577483050L) */);
                 bahVar5.d = cdjVar7;
                 return ensVar;
             case 28:
                 bah bahVar6 = (bah) obj;
-                String[] strArr4 = {cnb.z(-43924630534954L)};
+                String[] strArr4 = {"com.tencent.mm.plugin.fav.ui" /* cnb.z(-43924630534954L) */};
                 bahVar6.getClass();
                 bahVar6.a = la.ab(strArr4);
                 cdj cdjVar8 = new cdj();
-                cdjVar8.t(cnb.z(-43782896614186L), (cnb.ab(ewk.b) || cnb.ac(ewh.c)) ? cnb.z(-43125766617898L) : cnb.z(-42992622631722L));
+                cdjVar8.t("MicroMsg.FavoriteIndexUI" /* cnb.z(-43782896614186L) */, (cnb.ab(ewk.b) || cnb.ac(ewh.c)) ? "[OnCreateContextMMMenu] pos = " /* cnb.z(-43125766617898L) */ : "onCreateContextMenu() pos:%s id:%s fav_id:%s" /* cnb.z(-42992622631722L) */);
                 bahVar6.d = cdjVar8;
                 return ensVar;
             default:
@@ -691,8 +691,8 @@ public final /* synthetic */ class atn implements bgf {
                                 e = e6;
                                 ArrayList arrayList5 = ewq.a;
                                 StringBuilder sb5 = new StringBuilder();
-                                sb5.append(cnb.z(-40535901338410L));
-                                ewq.e(yg.n(sb5, bnkVar instanceof doo ? ((doo) bnkVar).f() : cnb.z(-40471476828970L), -39831526701866L), e, 12);
+                                sb5.append("onCreateMenuItems " /* cnb.z(-40535901338410L) */);
+                                ewq.e(yg.n(sb5, bnkVar instanceof doo ? ((doo) bnkVar).f() : "LoadHook" /* cnb.z(-40471476828970L) */, -39831526701866L), e, 12);
                                 i2 = R.id.MenuItem_Group;
                             }
                         }

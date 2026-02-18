@@ -105,7 +105,7 @@ public final class GroupInfo {
 
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-2856153250602L));
+        sb.append("GroupInfo(roomId=" /* cnb.z(-2856153250602L) */);
         yg.u(sb, this.roomId, -2796023708458L);
         yg.u(sb, this.remark, -2770253904682L);
         yg.u(sb, this.name, -3285649980202L);

@@ -48,7 +48,7 @@ public final class duq {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-301571128687402L));
+        sb.append("VideoTemplateProto(type=" /* cnb.z(-301571128687402L) */);
         yg.u(sb, this.a, -303061482339114L);
         yg.u(sb, this.b, -303052892404522L);
         yg.u(sb, this.c, -302954108156714L);

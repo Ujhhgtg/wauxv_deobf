@@ -75,11 +75,11 @@ public final /* synthetic */ class cbk implements bgj {
                     }
                 }
                 if (!arrayList.isEmpty()) {
-                    String strK = aaz.k(arrayList, cnb.z(-512393893378858L), null, null, null, 62);
+                    String strK = aaz.k(arrayList, "\n" /* cnb.z(-512393893378858L) */, null, null, null, 62);
                     Intent intent = new Intent();
-                    intent.setClassName(context, cnb.z(-95086280964906L));
-                    intent.putExtra(cnb.z(-94927367174954L), 9);
-                    intent.putExtra(cnb.z(-94858647698218L), strK);
+                    intent.setClassName(context, "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /* cnb.z(-95086280964906L) */);
+                    intent.putExtra("Ksnsupload_type" /* cnb.z(-94927367174954L) */, 9);
+                    intent.putExtra("Kdescription" /* cnb.z(-94858647698218L) */, strK);
                     context.startActivity(intent);
                 }
                 return ensVar;
@@ -114,12 +114,12 @@ public final /* synthetic */ class cbk implements bgj {
                     }
                 }
                 if (!arrayList3.isEmpty()) {
-                    String strK2 = aaz.k(arrayList2, cnb.z(-512402483313450L), null, null, null, 62);
+                    String strK2 = aaz.k(arrayList2, "\n" /* cnb.z(-512402483313450L) */, null, null, null, 62);
                     ArrayList<String> arrayList4 = new ArrayList<>(arrayList3);
                     Intent intent2 = new Intent();
-                    intent2.setClassName(context2, cnb.z(-96417720826666L));
-                    intent2.putStringArrayListExtra(cnb.z(-96258807036714L), arrayList4);
-                    intent2.putExtra(cnb.z(-96752728275754L), strK2);
+                    intent2.setClassName(context2, "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /* cnb.z(-96417720826666L) */);
+                    intent2.putStringArrayListExtra("sns_kemdia_path_list" /* cnb.z(-96258807036714L) */, arrayList4);
+                    intent2.putExtra("Kdescription" /* cnb.z(-96752728275754L) */, strK2);
                     context2.startActivity(intent2);
                 }
                 return ensVar;
@@ -147,7 +147,7 @@ public final /* synthetic */ class cbk implements bgj {
                     }
                 }
                 if (!arrayList6.isEmpty()) {
-                    String strK3 = aaz.k(arrayList5, cnb.z(-512892109585194L), null, null, null, 62);
+                    String strK3 = aaz.k(arrayList5, "\n" /* cnb.z(-512892109585194L) */, null, null, null, 62);
                     eqb eqbVar = eqb.a;
                     String str2 = (String) aaz.l(arrayList6);
                     eqbVar.getClass();
@@ -156,13 +156,13 @@ public final /* synthetic */ class cbk implements bgj {
                     Method methodBb = emn.bb(epz.a);
                     epx.a.getClass();
                     Object objInvoke = methodBb.invoke(epx.b(), str3);
-                    bzo.o(objInvoke, cnb.z(-377514740415274L));
+                    bzo.o(objInvoke, "null cannot be cast to non-null type kotlin.String" /* cnb.z(-377514740415274L) */);
                     Intent intent3 = new Intent();
-                    intent3.setClassName(context3, cnb.z(-96675418864426L));
-                    intent3.putExtra(cnb.z(-96516505074474L), 14);
-                    intent3.putExtra(cnb.z(-95898029783850L), strB3);
-                    intent3.putExtra(cnb.z(-95799245536042L), (String) objInvoke);
-                    intent3.putExtra(cnb.z(-95730526059306L), strK3);
+                    intent3.setClassName(context3, "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /* cnb.z(-96675418864426L) */);
+                    intent3.putExtra("Ksnsupload_type" /* cnb.z(-96516505074474L) */, 14);
+                    intent3.putExtra("KSightPath" /* cnb.z(-95898029783850L) */, strB3);
+                    intent3.putExtra("KSightThumbPath" /* cnb.z(-95799245536042L) */, (String) objInvoke);
+                    intent3.putExtra("Kdescription" /* cnb.z(-95730526059306L) */, strK3);
                     context3.startActivity(intent3);
                 }
                 return ensVar;
@@ -180,10 +180,10 @@ public final /* synthetic */ class cbk implements bgj {
                 while (it.hasNext()) {
                     long msgId = ((MsgInfoBean) it.next()).getMsgId();
                     cmk cmkVar = cmk.a;
-                    String strZ = cnb.z(-133358734539562L);
+                    String strZ = "你撤回了一条消息" /* cnb.z(-133358734539562L) */;
                     cmkVar.getClass();
                     cgy.a.getClass();
-                    cme.b(cme.a, emn.ba(cmj.a).newInstance(cgy.b(msgId), strZ, cnb.z(-133414569114410L)));
+                    cme.b(cme.a, emn.ba(cmj.a).newInstance(cgy.b(msgId), strZ, "" /* cnb.z(-133414569114410L) */));
                 }
                 return ensVar;
             case 11:
@@ -228,9 +228,9 @@ public final /* synthetic */ class cbk implements bgj {
                 Activity activity = (Activity) objJ;
                 String content5 = ((MsgInfoBean) obj2).getContent();
                 Intent intent4 = new Intent();
-                intent4.setClassName(activity, cnb.z(-95086280964906L));
-                intent4.putExtra(cnb.z(-94927367174954L), 9);
-                intent4.putExtra(cnb.z(-94858647698218L), content5);
+                intent4.setClassName(activity, "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /* cnb.z(-95086280964906L) */);
+                intent4.putExtra("Ksnsupload_type" /* cnb.z(-94927367174954L) */, 9);
+                intent4.putExtra("Kdescription" /* cnb.z(-94858647698218L) */, content5);
                 activity.startActivity(intent4);
                 return ensVar;
             case 13:
@@ -244,11 +244,11 @@ public final /* synthetic */ class cbk implements bgj {
                 Object origin2 = ((MsgInfoBean) obj2).getOrigin();
                 bopVar2.getClass();
                 ArrayList<String> arrayList10 = new ArrayList<>(new kk(new String[]{bop.b(origin2)}, true));
-                String strZ2 = cnb.z(-96679713831722L);
+                String strZ2 = "" /* cnb.z(-96679713831722L) */;
                 Intent intent5 = new Intent();
-                intent5.setClassName(activity2, cnb.z(-96417720826666L));
-                intent5.putStringArrayListExtra(cnb.z(-96258807036714L), arrayList10);
-                intent5.putExtra(cnb.z(-96752728275754L), strZ2);
+                intent5.setClassName(activity2, "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /* cnb.z(-96417720826666L) */);
+                intent5.putStringArrayListExtra("sns_kemdia_path_list" /* cnb.z(-96258807036714L) */, arrayList10);
+                intent5.putExtra("Kdescription" /* cnb.z(-96752728275754L) */, strZ2);
                 activity2.startActivity(intent5);
                 return ensVar;
             case 14:
@@ -265,14 +265,14 @@ public final /* synthetic */ class cbk implements bgj {
                 Method methodBb2 = emn.bb(epz.a);
                 epx.a.getClass();
                 Object objInvoke2 = methodBb2.invoke(epx.b(), imgPath3);
-                bzo.o(objInvoke2, cnb.z(-377514740415274L));
-                String strZ3 = cnb.z(-95726231092010L);
+                bzo.o(objInvoke2, "null cannot be cast to non-null type kotlin.String" /* cnb.z(-377514740415274L) */);
+                String strZ3 = "" /* cnb.z(-95726231092010L) */;
                 Intent intent6 = new Intent();
-                intent6.setClassName(activity3, cnb.z(-96675418864426L));
-                intent6.putExtra(cnb.z(-96516505074474L), 14);
-                intent6.putExtra(cnb.z(-95898029783850L), strB4);
-                intent6.putExtra(cnb.z(-95799245536042L), (String) objInvoke2);
-                intent6.putExtra(cnb.z(-95730526059306L), strZ3);
+                intent6.setClassName(activity3, "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /* cnb.z(-96675418864426L) */);
+                intent6.putExtra("Ksnsupload_type" /* cnb.z(-96516505074474L) */, 14);
+                intent6.putExtra("KSightPath" /* cnb.z(-95898029783850L) */, strB4);
+                intent6.putExtra("KSightThumbPath" /* cnb.z(-95799245536042L) */, (String) objInvoke2);
+                intent6.putExtra("Kdescription" /* cnb.z(-95730526059306L) */, strZ3);
                 activity3.startActivity(intent6);
                 return ensVar;
             case 15:

@@ -278,7 +278,7 @@ public abstract class cnf {
         if (ioVar != null) {
             return ioVar;
         }
-        throw new IllegalArgumentException(cnb.z(-5763846109994L).toString());
+        throw new IllegalArgumentException("DefaultConfig must be init" /* cnb.z(-5763846109994L) */.toString());
     }
 
     public static final Class bd(bsv bsvVar) {

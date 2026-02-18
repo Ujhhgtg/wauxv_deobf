@@ -66,7 +66,7 @@ public final class PluginContactMethod {
     @cty
     public final String getFriendName(String str) {
         xj xjVar = xj.a;
-        String strZ = cnb.z(-99252399242026L);
+        String strZ = "" /* cnb.z(-99252399242026L) */;
         xjVar.getClass();
         return xj.b(str, strZ);
     }
@@ -82,7 +82,7 @@ public final class PluginContactMethod {
         Method methodBb = emn.bb(xo.a);
         xn.a.getClass();
         Object objInvoke = methodBb.invoke(xn.b(), str);
-        bzo.o(objInvoke, cnb.z(-380173325171498L));
+        bzo.o(objInvoke, "null cannot be cast to non-null type kotlin.Int" /* cnb.z(-380173325171498L) */);
         return ((Integer) objInvoke).intValue();
     }
 
@@ -101,8 +101,8 @@ public final class PluginContactMethod {
     public final String getLoginAlias() throws IllegalAccessException, InvocationTargetException {
         acx.a.getClass();
         Object objInvoke = emn.bb(acw.a).invoke(null, null);
-        bzo.o(objInvoke, cnb.z(-107949708016426L));
-        Object obj = ((Map) objInvoke).get(cnb.z(-109568910687018L));
+        bzo.o(objInvoke, "null cannot be cast to non-null type kotlin.collections.Map<*, *>" /* cnb.z(-107949708016426L) */);
+        Object obj = ((Map) objInvoke).get("last_login_alias" /* cnb.z(-109568910687018L) */);
         String str = obj instanceof String ? (String) obj : null;
         return str == null ? getLoginWxid() : str;
     }

@@ -11,7 +11,7 @@ public final class agp extends bws implements bng {
     public static final agp a = new agp();
 
     public static void b() throws IOException {
-        Cursor cursorAc = arj.ac(cnb.z(-372266290379562L));
+        Cursor cursorAc = arj.ac("SELECT username FROM rconversation WHERE unReadCount>0 OR unReadMuteCount>0" /* cnb.z(-372266290379562L) */);
         while (cursorAc.moveToNext()) {
             try {
                 String string = cursorAc.getString(0);

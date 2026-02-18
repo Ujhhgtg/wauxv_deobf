@@ -12,7 +12,7 @@ public final class eqb extends bws implements bng {
         Method methodBb = emn.bb(eqa.a);
         epx.a.getClass();
         Object objInvoke = methodBb.invoke(epx.b(), str);
-        bzo.o(objInvoke, cnb.z(-377235567541034L));
+        bzo.o(objInvoke, "null cannot be cast to non-null type kotlin.String" /* cnb.z(-377235567541034L) */);
         return (String) objInvoke;
     }
 

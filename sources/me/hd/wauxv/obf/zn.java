@@ -30,7 +30,7 @@ public final class zn {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-11909944310570L));
+        sb.append("CleanData(name=" /* cnb.z(-11909944310570L) */);
         yg.u(sb, this.a, -11841224833834L);
         sb.append(this.b);
         sb.append(')');

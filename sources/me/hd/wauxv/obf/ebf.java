@@ -44,7 +44,7 @@ public final class ebf {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-233100760054570L));
+        sb.append("mr5Proto(d=" /* cnb.z(-233100760054570L) */);
         bjs.w(sb, this.a, -233633335999274L);
         bjs.w(sb, this.b, -233594681293610L);
         bjs.w(sb, this.c, -233607566195498L);

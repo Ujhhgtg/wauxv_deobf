@@ -5,10 +5,10 @@ import org.luckypray.dexkit.DexKitBridge;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class ddh extends doo implements bng {
-    public static final ddh a = new ddh(cnb.z(-455721799908138L));
-    public static final String b = cnb.z(-457040354868010L);
-    public static final String c = cnb.z(-456993110227754L);
-    public static final String i = cnb.z(-457005995129642L);
+    public static final ddh a = new ddh("RoundAvatarHook" /* cnb.z(-455721799908138L) */);
+    public static final String b = "美化" /* cnb.z(-457040354868010L) */;
+    public static final String c = "圆形头像" /* cnb.z(-456993110227754L) */;
+    public static final String i = "可自定义微信全局头像渲染的圆形弧度" /* cnb.z(-457005995129642L) */;
     public static final dbj j = new dbj(3);
     public static final boolean m = true;
 

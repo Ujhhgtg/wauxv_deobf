@@ -28,7 +28,7 @@ public final class dhk {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-459531435899690L));
+        sb.append("HideConfig(title=" /* cnb.z(-459531435899690L) */);
         yg.u(sb, this.a, -459471306357546L);
         return bjs.q(sb, this.b, ')');
     }

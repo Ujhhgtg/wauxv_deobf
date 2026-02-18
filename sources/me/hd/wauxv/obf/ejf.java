@@ -36,7 +36,7 @@ public final class ejf {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-321340863150890L));
+        sb.append("yq5Proto(start_time_ms=" /* cnb.z(-321340863150890L) */);
         dkz.ad(sb, this.a, -322887051377450L);
         sb.append(this.b);
         sb.append(')');

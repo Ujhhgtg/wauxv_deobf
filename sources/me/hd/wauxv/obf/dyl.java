@@ -48,7 +48,7 @@ public final class dyl {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-207343841180458L));
+        sb.append("hs3Proto(feed_detail_url=" /* cnb.z(-207343841180458L) */);
         yg.u(sb, this.a, -207799107713834L);
         bjs.w(sb, this.b, -207769042942762L);
         bjs.w(sb, this.c, -207696028498730L);

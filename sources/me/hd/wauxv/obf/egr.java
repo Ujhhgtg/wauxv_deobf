@@ -40,7 +40,7 @@ public final class egr {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-313446713260842L));
+        sb.append("vd5Proto(finder_username=" /* cnb.z(-313446713260842L) */);
         yg.u(sb, this.a, -313901979794218L);
         yg.u(sb, this.b, -313820375415594L);
         return bjs.p(sb, this.c, ')');

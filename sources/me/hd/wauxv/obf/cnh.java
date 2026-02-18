@@ -67,7 +67,7 @@ public abstract class cnh {
 
     public static final void ac(Context context, String str) {
         Intent intent = new Intent();
-        intent.setAction(cnb.z(-47480863456042L));
+        intent.setAction("android.intent.action.VIEW" /* cnb.z(-47480863456042L) */);
         intent.setData(Uri.parse(str));
         intent.setFlags(268435456);
         context.startActivity(intent);
@@ -106,17 +106,17 @@ public abstract class cnh {
         cdeVarT.ak(cdy.c);
         Class cls = Integer.TYPE;
         cdeVarT.a = dal.b(cls);
-        ((cdk) dkz.n(new Object[]{cnb.z(-120332098730794L), dal.b(String.class), dal.b(String.class), dal.b(String.class), dal.b(cls), dal.b(String.class)}, 6, cdeVarT)).e(obj, str2, cnb.z(-120130235267882L), str, 2, null);
+        ((cdk) dkz.n(new Object[]{"com.tencent.mm.opensdk.modelmsg.WXMediaMessage" /* cnb.z(-120332098730794L) */, dal.b(String.class), dal.b(String.class), dal.b(String.class), dal.b(cls), dal.b(String.class)}, 6, cdeVarT)).e(obj, str2, "" /* cnb.z(-120130235267882L) */, str, 2, null);
     }
 
     public static File af(File file) throws IOException {
-        k(file, cnb.z(-398199302912810L));
-        File fileX = x(cnb.z(-398173533109034L));
+        k(file, "silkToMp3" /* cnb.z(-398199302912810L) */);
+        File fileX = x("pcm" /* cnb.z(-398173533109034L) */);
         String absolutePath = file.getAbsolutePath();
         String absolutePath2 = fileX.getAbsolutePath();
         AudioNative audioNative = AudioNative.a;
         audioNative.silkToPcmConvert(absolutePath, absolutePath2, false, 24000, 0);
-        File fileX2 = x(cnb.z(-398190712978218L));
+        File fileX2 = x("mp3" /* cnb.z(-398190712978218L) */);
         String absolutePath3 = fileX.getAbsolutePath();
         String absolutePath4 = fileX2.getAbsolutePath();
         audioNative.pcmToMp3Init(24000, 1.0f, 1, 24000, 48, 8, 5, 128, 0, 3, 0, 0);
@@ -128,7 +128,7 @@ public abstract class cnh {
 
     public static String ag(long j, String str, ZoneId zoneId, int i) {
         if ((i & 1) != 0) {
-            str = cnb.z(-47811575937834L);
+            str = "yyyy-MM-dd HH:mm:ss" /* cnb.z(-47811575937834L) */;
         }
         if ((i & 2) != 0) {
             zoneId = ZoneId.systemDefault();
@@ -174,7 +174,7 @@ public abstract class cnh {
 
     public static void k(File file, String str) throws IOException {
         if (!file.exists() || file.length() == 0) {
-            throw new IOException(str.concat(cnb.z(-398598734871338L)));
+            throw new IOException(str.concat(": 文件不存在或为空" /* cnb.z(-398598734871338L) */));
         }
     }
 
@@ -376,11 +376,11 @@ public abstract class cnh {
     }
 
     public static String t(Float f2) {
-        return new DecimalFormat(cnb.z(-47760036330282L)).format(f2);
+        return new DecimalFormat("0.00" /* cnb.z(-47760036330282L) */).format(f2);
     }
 
     public static final Integer u(Object obj, String str) {
-        String strZ = cnb.z(-71932112272170L);
+        String strZ = "id" /* cnb.z(-71932112272170L) */;
         if (obj instanceof View) {
             Resources resources = ((View) obj).getResources();
             bmo.a.getClass();
@@ -408,7 +408,7 @@ public abstract class cnh {
         } else {
             if (!(obj instanceof Dialog)) {
                 ArrayList arrayList = ewq.a;
-                ewq.e(cnb.z(-71936407239466L) + str + cnb.z(-71863392795434L), null, 14);
+                ewq.e("getHostView " /* cnb.z(-71936407239466L) */ + str + " Failed" /* cnb.z(-71863392795434L) */, null, 14);
                 return null;
             }
             Integer numU3 = u(obj, str);
@@ -421,8 +421,8 @@ public abstract class cnh {
 
     public static int w(String str) throws IOException {
         File file = new File(str);
-        k(file, cnb.z(-398139173370666L));
-        File fileX = x(cnb.z(-398070453893930L));
+        k(file, "getSilkDuration" /* cnb.z(-398139173370666L) */);
+        File fileX = x("pcm" /* cnb.z(-398070453893930L) */);
         AudioNative.a.silkToPcmConvert(file.getAbsolutePath(), fileX.getAbsolutePath(), false, 24000, 0);
         int length = (int) ((fileX.length() / ((long) 48000)) * ((long) 1000));
         fileX.delete();
@@ -433,12 +433,12 @@ public abstract class cnh {
     }
 
     public static File x(String str) {
-        String str2 = cnb.z(-398611619773226L) + str + '_' + System.currentTimeMillis() + TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH + str;
+        String str2 = "tmp_audio_" /* cnb.z(-398611619773226L) */ + str + '_' + System.currentTimeMillis() + TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH + str;
         String str3 = g;
         if (str3 != null) {
             return new File(str3, str2);
         }
-        throw new IllegalArgumentException(cnb.z(-375221227879210L).toString());
+        throw new IllegalArgumentException("AudioUtil must be init" /* cnb.z(-375221227879210L) */.toString());
     }
 
     public static void y(cdk cdkVar, nh nhVar) {

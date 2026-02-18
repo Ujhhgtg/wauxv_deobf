@@ -40,7 +40,7 @@ public final class eaw {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-230412110527274L));
+        sb.append("mg5Proto(name=" /* cnb.z(-230412110527274L) */);
         yg.u(sb, this.a, -230897441831722L);
         bjs.w(sb, this.b, -230828722354986L);
         sb.append(this.c);

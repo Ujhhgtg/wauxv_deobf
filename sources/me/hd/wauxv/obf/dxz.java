@@ -62,7 +62,7 @@ public final class dxz {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-204947249429290L));
+        sb.append("gj1Proto(charge_flag=" /* cnb.z(-204947249429290L) */);
         bjs.w(sb, this.a, -204835580279594L);
         dts.g(sb, this.b, -206416128244522L);
         bjs.w(sb, this.c, -206300164127530L);

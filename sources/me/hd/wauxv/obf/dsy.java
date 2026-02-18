@@ -32,7 +32,7 @@ public final class dsy {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-190756677483306L));
+        sb.append("FinderContactProto(username=" /* cnb.z(-190756677483306L) */);
         return bjs.q(sb, this.a, ')');
     }
 }

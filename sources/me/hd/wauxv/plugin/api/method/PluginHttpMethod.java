@@ -85,7 +85,7 @@ public final class PluginHttpMethod {
                 }
             } else {
                 if (i != 1) {
-                    throw new IllegalStateException(cnb.z(-403172875041578L));
+                    throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine" /* cnb.z(-403172875041578L) */);
                 }
                 bhu.bd(obj);
             }
@@ -147,7 +147,7 @@ public final class PluginHttpMethod {
                 }
             } else {
                 if (i != 1) {
-                    throw new IllegalStateException(cnb.z(-402846457527082L));
+                    throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine" /* cnb.z(-402846457527082L) */);
                 }
                 bhu.bd(obj);
             }
@@ -214,7 +214,7 @@ public final class PluginHttpMethod {
                 }
             } else {
                 if (i != 1) {
-                    throw new IllegalStateException(cnb.z(-403688271117098L));
+                    throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine" /* cnb.z(-403688271117098L) */);
                 }
                 bhu.bd(obj);
             }

@@ -52,14 +52,14 @@ public final class dxt {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-181058641328938L));
+        sb.append("fw3Proto(createTime=" /* cnb.z(-181058641328938L) */);
         bjs.w(sb, this.a, -181002806754090L);
         sb.append(this.b);
-        sb.append(cnb.z(-180938382244650L));
+        sb.append(", desc=" /* cnb.z(-180938382244650L) */);
         sb.append(this.c);
-        sb.append(cnb.z(-180904022506282L));
+        sb.append(", location=" /* cnb.z(-180904022506282L) */);
         sb.append(this.d);
-        sb.append(cnb.z(-181367878974250L));
+        sb.append(", commentEggCount=" /* cnb.z(-181367878974250L) */);
         bjs.w(sb, this.e, -181303454464810L);
         return bjs.p(sb, this.f, ')');
     }

@@ -52,7 +52,7 @@ public final class dtk {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-182158152956714L));
+        sb.append("GameShareCardObjectProto(sharedata=" /* cnb.z(-182158152956714L) */);
         yg.u(sb, this.a, -182037893872426L);
         yg.u(sb, this.b, -182506045307690L);
         bjs.w(sb, this.c, -182424440929066L);

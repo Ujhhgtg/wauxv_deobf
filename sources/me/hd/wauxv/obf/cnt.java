@@ -9,22 +9,22 @@ public final /* synthetic */ class cnt implements bgx {
     static {
         cnt cntVar = new cnt();
         b = cntVar;
-        cuc cucVar = new cuc(cnb.z(-131649337555754L), cntVar, 8);
-        cucVar.x(cnb.z(-131812546313002L), false);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.NewSendMsgProto.MicroMsgResponseNew" /* cnb.z(-131649337555754L) */, cntVar, 8);
+        cucVar.x("ret" /* cnb.z(-131812546313002L) */, false);
         cucVar.y(new aoz(1, 6));
-        cucVar.x(cnb.z(-131829726182186L), false);
+        cucVar.x("toUserName" /* cnb.z(-131829726182186L) */, false);
         cucVar.y(new aoz(2, 6));
-        cucVar.x(cnb.z(-131799661411114L), false);
+        cucVar.x("msgId" /* cnb.z(-131799661411114L) */, false);
         cucVar.y(new aoz(3, 6));
-        cucVar.x(cnb.z(-131756711738154L), false);
+        cucVar.x("clientMsgId" /* cnb.z(-131756711738154L) */, false);
         cucVar.y(new aoz(4, 6));
-        cucVar.x(cnb.z(-131670812392234L), false);
+        cucVar.x("createTime" /* cnb.z(-131670812392234L) */, false);
         cucVar.y(new aoz(5, 6));
-        cucVar.x(cnb.z(-131108171676458L), false);
+        cucVar.x("serverTime" /* cnb.z(-131108171676458L) */, false);
         cucVar.y(new aoz(6, 6));
-        cucVar.x(cnb.z(-131078106905386L), false);
+        cucVar.x("type" /* cnb.z(-131078106905386L) */, false);
         cucVar.y(new aoz(7, 6));
-        cucVar.x(cnb.z(-131039452199722L), false);
+        cucVar.x("svrId" /* cnb.z(-131039452199722L) */, false);
         cucVar.y(new aoz(8, 6));
         descriptor = cucVar;
     }

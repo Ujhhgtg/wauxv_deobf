@@ -40,9 +40,9 @@ public final class dvf {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-144748987808554L));
+        sb.append("ab3Proto(gift=" /* cnb.z(-144748987808554L) */);
         sb.append(this.a);
-        sb.append(cnb.z(-144667383429930L));
+        sb.append(", product_target_count=" /* cnb.z(-144667383429930L) */);
         dkz.ad(sb, this.b, -145114060028714L);
         sb.append(this.c);
         sb.append(')');

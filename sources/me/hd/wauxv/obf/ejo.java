@@ -47,10 +47,10 @@ public final class ejo {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-344933118507818L));
+        sb.append("ze1Proto(cdnTransInfo=" /* cnb.z(-344933118507818L) */);
         yg.v(sb, this.b, -344834334260010L);
         sb.append(this.c);
-        sb.append(cnb.z(-344718370143018L));
+        sb.append(", audience_cdn_quality_cfg=" /* cnb.z(-344718370143018L) */);
         bjs.w(sb, this.d, -345113507134250L);
         return bjs.q(sb, this.e, ')');
     }

@@ -52,7 +52,7 @@ public final class dzy {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-220576635419434L));
+        sb.append("lk0Proto(topicEventId=" /* cnb.z(-220576635419434L) */);
         yg.u(sb, this.a, -220477851171626L);
         yg.u(sb, this.b, -220967477443370L);
         yg.u(sb, this.c, -220842923391786L);

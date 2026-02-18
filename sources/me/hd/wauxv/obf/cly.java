@@ -12,10 +12,10 @@ public final class cly extends bws implements bng {
     public static Object b(String str, String str2, int i, boolean z, List list) {
         HashMap map;
         if (z) {
-            String strZ = cnb.z(-111759344007978L);
+            String strZ = "atuserlist" /* cnb.z(-111759344007978L) */;
             StringBuilder sb = new StringBuilder();
-            sb.append(cnb.z(-111677739629354L));
-            csm[] csmVarArr = {new csm(strZ, yg.n(sb, aaz.k(list, cnb.z(-111651969825578L), null, null, null, 62), -111660559760170L))};
+            sb.append("<![CDATA[" /* cnb.z(-111677739629354L) */);
+            csm[] csmVarArr = {new csm(strZ, yg.n(sb, aaz.k(list, "," /* cnb.z(-111651969825578L) */, null, null, null, 62), -111660559760170L))};
             map = new HashMap(bzo.ah(1));
             bzo.am(map, csmVarArr);
         } else {

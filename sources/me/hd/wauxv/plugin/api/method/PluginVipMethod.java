@@ -27,7 +27,7 @@ import me.hd.wauxv.obf.yg;
 public final class PluginVipMethod {
     public static void a(bfu bfuVar) throws IllegalAccessException, NoSuchMethodException, InvocationTargetException {
         aeo aeoVar = aeo.a;
-        String strZ = cnb.z(-401128470608682L);
+        String strZ = "gh_6f586343034c" /* cnb.z(-401128470608682L) */;
         aeoVar.getClass();
         Method methodBb = emn.bb(aen.a);
         dmu dmuVar = dmu.a;
@@ -42,11 +42,11 @@ public final class PluginVipMethod {
         Object objInvoke = methodBb.invoke(objE, strZ, Boolean.FALSE);
         bzo.n(objInvoke);
         azg azgVarR = dqc.bi(objInvoke).r();
-        azgVarR.ab = cnb.z(-382930694175530L);
+        azgVarR.ab = "field_type" /* cnb.z(-382930694175530L) */;
         Object objE2 = ((azk) yg.e(azgVarR)).e();
         bzo.n(objE2);
         if ((((Number) objE2).intValue() & 1) == 0) {
-            throw new RuntimeException(cnb.z(-401059751131946L));
+            throw new RuntimeException("no permission to invoke method" /* cnb.z(-401059751131946L) */);
         }
         bfuVar.invoke();
     }
@@ -56,7 +56,7 @@ public final class PluginVipMethod {
         a(new bfu() { // from class: me.hd.wauxv.obf.cul
             @Override // me.hd.wauxv.obf.bfu
             public final Object invoke() throws NoSuchMethodException {
-                cme.b(cme.a, cmp.b(cmp.a, str, str2, cnb.z(-115594749803306L), str3, i));
+                cme.b(cme.a, cmp.b(cmp.a, str, str2, "confirm" /* cnb.z(-115594749803306L) */, str3, i));
                 return ens.a;
             }
         });
@@ -67,7 +67,7 @@ public final class PluginVipMethod {
         a(new bfu() { // from class: me.hd.wauxv.obf.cum
             @Override // me.hd.wauxv.obf.bfu
             public final Object invoke() throws NoSuchMethodException {
-                cme.b(cme.a, cmp.b(cmp.a, str, str2, cnb.z(-115560390064938L), str3, 0));
+                cme.b(cme.a, cmp.b(cmp.a, str, str2, "refuse" /* cnb.z(-115560390064938L) */, str3, 0));
                 return ens.a;
             }
         });

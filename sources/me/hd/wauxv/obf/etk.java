@@ -38,7 +38,7 @@ public final /* synthetic */ class etk implements bgf {
                 break;
             default:
                 ael aelVar2 = (ael) obj;
-                aelVar2.f = cnb.z(-521065432349482L);
+                aelVar2.f = "搜索好友/群聊" /* cnb.z(-521065432349482L) */;
                 ArrayList arrayList = new ArrayList();
                 ArrayList arrayList2 = new ArrayList();
                 ArrayList arrayList3 = new ArrayList();
@@ -46,7 +46,7 @@ public final /* synthetic */ class etk implements bgf {
                 if (cursorAb != null) {
                     while (cursorAb.moveToNext()) {
                         try {
-                            if (dnr.bi(cursorAb.getString(cursorAb.getColumnIndex(cnb.z(-521031072611114L))), cnb.z(-520992417905450L))) {
+                            if (dnr.bi(cursorAb.getString(cursorAb.getColumnIndex("username" /* cnb.z(-521031072611114L) */)), "@chatroom" /* cnb.z(-520992417905450L) */)) {
                                 GroupInfo groupInfoT = cnb.t(cursorAb);
                                 String roomId = groupInfoT.getRoomId();
                                 StringBuilder sb2 = new StringBuilder();
@@ -69,15 +69,15 @@ public final /* synthetic */ class etk implements bgf {
                                 String wxid = friendInfoS.getWxid();
                                 StringBuilder sb4 = new StringBuilder();
                                 String nickname = friendInfoS.getNickname();
-                                if ((dfv.d(dap.b(new dap(cnb.z(-520897928624938L)), nickname)) > 3 ? nickname : null) != null) {
-                                    sb4.append(cnb.z(-520318108039978L));
+                                if ((dfv.d(dap.b(new dap("\r\n|\r|\n" /* cnb.z(-520897928624938L) */), nickname)) > 3 ? nickname : null) != null) {
+                                    sb4.append("已过滤此昵称..." /* cnb.z(-520318108039978L) */);
                                 } else {
                                     String str2 = nickname.length() > 8 ? nickname : null;
                                     if (str2 != null) {
                                         String strSubstring = str2.substring(0, 8);
-                                        bzo.p(strSubstring, cnb.z(-520292338236202L));
+                                        bzo.p(strSubstring, "substring(...)" /* cnb.z(-520292338236202L) */);
                                         sb4.append(strSubstring);
-                                        sb4.append(cnb.z(-520210733857578L));
+                                        sb4.append("..." /* cnb.z(-520210733857578L) */);
                                         sb = sb4;
                                     } else {
                                         sb = null;
@@ -109,10 +109,10 @@ public final /* synthetic */ class etk implements bgf {
                 }
                 aelVar2.b = true;
                 aelVar2.c.addAll(arrayList3);
-                aelVar2.m(cnb.z(-520227913726762L), arrayList);
-                aelVar2.m(cnb.z(-520180669086506L), arrayList2);
+                aelVar2.m("好友" /* cnb.z(-520227913726762L) */, arrayList);
+                aelVar2.m("群聊" /* cnb.z(-520180669086506L) */, arrayList2);
                 aelVar2.g = R.drawable.ic_contact_send_24dp;
-                String strZ = cnb.z(-520184964053802L);
+                String strZ = "转发" /* cnb.z(-520184964053802L) */;
                 final String str3 = this.b;
                 final int i = this.c;
                 bgj bgjVar = new bgj() { // from class: me.hd.wauxv.obf.etj
@@ -123,7 +123,7 @@ public final /* synthetic */ class etk implements bgf {
                         while (it.hasNext()) {
                             arj.ah(((adx) it.next()).a, str3, i);
                         }
-                        dnc.g(null, 3, cnb.z(-520206438890282L) + list.size() + cnb.z(-520150604315434L));
+                        dnc.g(null, 3, "已转发至" /* cnb.z(-520206438890282L) */ + list.size() + "个会话" /* cnb.z(-520150604315434L) */);
                         return Boolean.FALSE;
                     }
                 };

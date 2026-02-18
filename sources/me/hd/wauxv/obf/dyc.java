@@ -56,14 +56,14 @@ public final class dyc {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-202864190290730L));
+        sb.append("gl1Proto(enable_flag=" /* cnb.z(-202864190290730L) */);
         dts.g(sb, this.a, -203370996431658L);
         dkz.ad(sb, this.b, -203259327281962L);
         dkz.ad(sb, this.c, -203143363164970L);
         yg.u(sb, this.d, -202524887874346L);
         yg.u(sb, this.e, -202460463364906L);
         sb.append(this.f);
-        sb.append(cnb.z(-202387448920874L));
+        sb.append(", wish_list_id=" /* cnb.z(-202387448920874L) */);
         return bjs.q(sb, this.g, ')');
     }
 }

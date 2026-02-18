@@ -9,7 +9,7 @@ public final /* synthetic */ class efe implements bgx {
     static {
         efe efeVar = new efe();
         b = efeVar;
-        cuc cucVar = new cuc(cnb.z(-285147173747498L), efeVar, 1);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.t90Proto" /* cnb.z(-285147173747498L) */, efeVar, 1);
         bjs.y(-282059092261674L, cucVar, false, 1);
         descriptor = cucVar;
     }

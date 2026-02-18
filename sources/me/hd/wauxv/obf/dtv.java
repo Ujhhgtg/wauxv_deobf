@@ -205,7 +205,7 @@ public final class dtv {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-230983341177642L));
+        sb.append("MediaProto(id=" /* cnb.z(-230983341177642L) */);
         yg.u(sb, this.b, -230901736799018L);
         bjs.w(sb, this.c, -231417132874538L);
         yg.u(sb, this.d, -231352708365098L);
@@ -216,7 +216,7 @@ public final class dtv {
         bjs.w(sb, this.i, -232821587180330L);
         yg.u(sb, this.j, -232782932474666L);
         sb.append(this.k);
-        sb.append(cnb.z(-232748572736298L));
+        sb.append(", lowBandUrl=" /* cnb.z(-232748572736298L) */);
         yg.u(sb, this.l, -232671263324970L);
         bjs.w(sb, this.m, -232555299207978L);
         bjs.w(sb, this.n, -232568184109866L);

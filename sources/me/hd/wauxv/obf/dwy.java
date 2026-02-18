@@ -100,7 +100,7 @@ public final class dwy {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-188523294489386L));
+        sb.append("ec5Proto(reward_product_id=" /* cnb.z(-188523294489386L) */);
         yg.u(sb, this.a, -188368675666730L);
         dts.h(sb, this.b, -188295661222698L);
         dts.h(sb, this.c, -185503932480298L);

@@ -54,20 +54,20 @@ public final /* synthetic */ class dko implements bgf {
         switch (i) {
             case 0:
                 bah bahVar = (bah) obj;
-                String[] strArr = {cnb.z(-359729280842538L)};
+                String[] strArr = {"com.tencent.mm.plugin.sns.model" /* cnb.z(-359729280842538L) */};
                 bahVar.getClass();
                 bahVar.a = la.ab(strArr);
                 cdj cdjVar = new cdj();
-                cdjVar.t(cnb.z(-359591841889066L), cnb.z(-360072878226218L));
+                cdjVar.t("getSnsVideoPath" /* cnb.z(-359591841889066L) */, "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* cnb.z(-360072878226218L) */);
                 bahVar.d = cdjVar;
                 return ensVar;
             case 1:
                 bah bahVar2 = (bah) obj;
-                String[] strArr2 = {cnb.z(-356297601973034L)};
+                String[] strArr2 = {"com.tencent.mm.plugin.sns.model" /* cnb.z(-356297601973034L) */};
                 bahVar2.getClass();
                 bahVar2.a = la.ab(strArr2);
                 cdj cdjVar2 = new cdj();
-                cdjVar2.t(cnb.z(-356709918833450L), cnb.z(-356615429552938L));
+                cdjVar2.t("getSnsVideoThumbImagePath" /* cnb.z(-356709918833450L) */, "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* cnb.z(-356615429552938L) */);
                 bahVar2.d = cdjVar2;
                 return ensVar;
             case 2:
@@ -75,11 +75,11 @@ public final /* synthetic */ class dko implements bgf {
                 return ensVar;
             case 3:
                 bah bahVar3 = (bah) obj;
-                String[] strArr3 = {cnb.z(-358230337256234L)};
+                String[] strArr3 = {"com.tencent.mm.plugin.sns.model" /* cnb.z(-358230337256234L) */};
                 bahVar3.getClass();
                 bahVar3.a = la.ab(strArr3);
                 cdj cdjVar3 = new cdj();
-                cdjVar3.t(cnb.z(-357543142488874L), cnb.z(-357384228698922L));
+                cdjVar3.t("MicroMsg.SnsVideoService" /* cnb.z(-357543142488874L) */, "add video task, but url is weixin, do nothing" /* cnb.z(-357384228698922L) */);
                 bahVar3.d = cdjVar3;
                 return ensVar;
             case 4:
@@ -97,8 +97,8 @@ public final /* synthetic */ class dko implements bgf {
                         eg egVar = (eg) bzyVar.d;
                         dlv.a.getClass();
                         egVar.d = dlv.c;
-                        bzyVar.t(cnb.z(-501025114946346L), new amw(new cfx(ceeVar, 18), 0));
-                        bjs.x((3 & 2) != 0 ? new amd(z ? 1 : 0) : null, bzyVar, cnb.z(-47455093652266L));
+                        bzyVar.t("保存" /* cnb.z(-501025114946346L) */, new amw(new cfx(ceeVar, 18), 0));
+                        bjs.x((3 & 2) != 0 ? new amd(z ? 1 : 0) : null, bzyVar, "取消" /* cnb.z(-47455093652266L) */);
                         if (linearLayout != null) {
                             egVar.r = linearLayout;
                         }
@@ -106,7 +106,7 @@ public final /* synthetic */ class dko implements bgf {
                         return ensVar;
                     }
                 }
-                throw new NullPointerException(cnb.z(-659741336402730L).concat(viewK.getResources().getResourceName(i4)));
+                throw new NullPointerException("Missing required view with ID: " /* cnb.z(-659741336402730L) */.concat(viewK.getResources().getResourceName(i4)));
             case 5:
                 ((bmm) obj).h(Long.valueOf(Math.min(dlu.a.l(), 98800L)));
                 return ensVar;
@@ -115,11 +115,11 @@ public final /* synthetic */ class dko implements bgf {
                 return ensVar;
             case 7:
                 bah bahVar4 = (bah) obj;
-                String[] strArr4 = {cnb.z(-501029409913642L)};
+                String[] strArr4 = {"com.tencent.mm.plugin.sport.model" /* cnb.z(-501029409913642L) */};
                 bahVar4.getClass();
                 bahVar4.a = la.ab(strArr4);
                 cdj cdjVar4 = new cdj();
-                cdjVar4.t(cnb.z(-500831841418026L), cnb.z(-501257043180330L));
+                cdjVar4.t("MicroMsg.Sport.DeviceStepManager" /* cnb.z(-500831841418026L) */, "get today step from %s todayStep %d" /* cnb.z(-501257043180330L) */);
                 bahVar4.d = cdjVar4;
                 return ensVar;
             case 8:
@@ -128,7 +128,7 @@ public final /* synthetic */ class dko implements bgf {
             case 9:
                 bag bagVar = (bag) obj;
                 zb zbVar = new zb();
-                zbVar.k(cnb.z(-90838558309162L), cnb.z(-90769838832426L));
+                zbVar.k("MicroMsg.DBInit" /* cnb.z(-90838558309162L) */, "initSysDB checkini:%b exist:%b db:%s " /* cnb.z(-90769838832426L) */);
                 bagVar.getClass();
                 bagVar.b = zbVar;
                 return ensVar;
@@ -186,8 +186,8 @@ public final /* synthetic */ class dko implements bgf {
                     } catch (Exception e) {
                         ArrayList arrayList = ewq.a;
                         StringBuilder sb = new StringBuilder();
-                        sb.append(cnb.z(-54709293415210L));
-                        ewq.e(yg.n(sb, bobVar instanceof doo ? ((doo) bobVar).f() : cnb.z(-54056458386218L), -54017803680554L), e, 12);
+                        sb.append("onDatabaseInsertBefore " /* cnb.z(-54709293415210L) */);
+                        ewq.e(yg.n(sb, bobVar instanceof doo ? ((doo) bobVar).f() : "LoadHook" /* cnb.z(-54056458386218L) */, -54017803680554L), e, 12);
                     }
                 }
                 return ensVar;
@@ -261,8 +261,8 @@ public final /* synthetic */ class dko implements bgf {
                     } catch (Exception e2) {
                         ArrayList arrayList2 = ewq.a;
                         StringBuilder sb2 = new StringBuilder();
-                        sb2.append(cnb.z(-53983443942186L));
-                        ewq.e(yg.n(sb2, bobVar2 instanceof doo ? ((doo) bobVar2).f() : cnb.z(-53880364727082L), -54408645704490L), e2, 12);
+                        sb2.append("onDatabaseUpdateBefore " /* cnb.z(-53983443942186L) */);
+                        ewq.e(yg.n(sb2, bobVar2 instanceof doo ? ((doo) bobVar2).f() : "LoadHook" /* cnb.z(-53880364727082L) */, -54408645704490L), e2, 12);
                     }
                 }
                 return ensVar;
@@ -319,8 +319,8 @@ public final /* synthetic */ class dko implements bgf {
                     } catch (Exception e3) {
                         ArrayList arrayList3 = ewq.a;
                         StringBuilder sb3 = new StringBuilder();
-                        sb3.append(cnb.z(-54374285966122L));
-                        ewq.e(yg.n(sb3, bobVar3 instanceof doo ? ((doo) bobVar3).f() : cnb.z(-54258321849130L), -54236847012650L), e3, 12);
+                        sb3.append("onDatabaseQueryBefore " /* cnb.z(-54374285966122L) */);
+                        ewq.e(yg.n(sb3, bobVar3 instanceof doo ? ((doo) bobVar3).f() : "LoadHook" /* cnb.z(-54258321849130L) */, -54236847012650L), e3, 12);
                     }
                 }
                 return ensVar;
@@ -394,8 +394,8 @@ public final /* synthetic */ class dko implements bgf {
                     } catch (Exception e4) {
                         ArrayList arrayList4 = ewq.a;
                         StringBuilder sb4 = new StringBuilder();
-                        sb4.append(cnb.z(-54202487274282L));
-                        ewq.e(yg.n(sb4, bobVar4 instanceof doo ? ((doo) bobVar4).f() : cnb.z(-60138132077354L), -60099477371690L), e4, 12);
+                        sb4.append("onCompatUpdateBefore " /* cnb.z(-54202487274282L) */);
+                        ewq.e(yg.n(sb4, bobVar4 instanceof doo ? ((doo) bobVar4).f() : "LoadHook" /* cnb.z(-60138132077354L) */, -60099477371690L), e4, 12);
                     }
                 }
                 return ensVar;
@@ -435,14 +435,14 @@ public final /* synthetic */ class dko implements bgf {
                     } catch (Exception e5) {
                         ArrayList arrayList5 = ewq.a;
                         StringBuilder sb5 = new StringBuilder();
-                        sb5.append(cnb.z(-60065117633322L));
-                        ewq.e(yg.n(sb5, bobVar5 instanceof doo ? ((doo) bobVar5).f() : cnb.z(-60026462927658L), -59987808221994L), e5, 12);
+                        sb5.append("onCompatQueryBefore " /* cnb.z(-60065117633322L) */);
+                        ewq.e(yg.n(sb5, bobVar5 instanceof doo ? ((doo) bobVar5).f() : "LoadHook" /* cnb.z(-60026462927658L) */, -59987808221994L), e5, 12);
                     }
                 }
                 return ensVar;
             case 15:
                 String str13 = (String) obj;
-                if (!bzo.f(str13, cnb.z(-59953448483626L)) && !bzo.f(str13, cnb.z(-60425894886186L))) {
+                if (!bzo.f(str13, "startActivity" /* cnb.z(-59953448483626L) */) && !bzo.f(str13, "startActivityForResult" /* cnb.z(-60425894886186L) */)) {
                     z = false;
                 }
                 return Boolean.valueOf(z);
@@ -476,8 +476,8 @@ public final /* synthetic */ class dko implements bgf {
                     } catch (Exception e6) {
                         ArrayList arrayList6 = ewq.a;
                         StringBuilder sb6 = new StringBuilder();
-                        sb6.append(cnb.z(-60327110638378L));
-                        ewq.e(yg.n(sb6, bocVar instanceof doo ? ((doo) bocVar).f() : cnb.z(-60211146521386L), -59639915871018L), e6, 12);
+                        sb6.append("onStartActivityIntent " /* cnb.z(-60327110638378L) */);
+                        ewq.e(yg.n(sb6, bocVar instanceof doo ? ((doo) bocVar).f() : "LoadHook" /* cnb.z(-60211146521386L) */, -59639915871018L), e6, 12);
                     }
                 }
                 return ensVar;
@@ -495,34 +495,34 @@ public final /* synthetic */ class dko implements bgf {
                 return ensVar;
             case 21:
                 bag bagVar2 = (bag) obj;
-                String[] strArr7 = {cnb.z(-366897581259562L)};
+                String[] strArr7 = {"com.tencent.mm.storage" /* cnb.z(-366897581259562L) */};
                 bagVar2.getClass();
                 bagVar2.a = la.ab(strArr7);
                 zb zbVar2 = new zb();
-                zbVar2.k(cnb.z(-366798797011754L));
+                zbVar2.k("PRAGMA table_info( contact_ext )" /* cnb.z(-366798797011754L) */);
                 bagVar2.b = zbVar2;
                 return ensVar;
             case 22:
                 bag bagVar3 = (bag) obj;
-                String[] strArr8 = {cnb.z(-366373595249450L)};
+                String[] strArr8 = {"com.tencent.mm.storage" /* cnb.z(-366373595249450L) */};
                 bagVar3.getClass();
                 bagVar3.a = la.ab(strArr8);
                 zb zbVar3 = new zb();
-                zbVar3.k(cnb.z(-366274811001642L));
+                zbVar3.k("PRAGMA table_info( rconversation)" /* cnb.z(-366274811001642L) */);
                 bagVar3.b = zbVar3;
                 return ensVar;
             case 23:
                 bag bagVar4 = (bag) obj;
-                String[] strArr9 = {cnb.z(-367206818904874L)};
+                String[] strArr9 = {"com.tencent.mm.storage" /* cnb.z(-367206818904874L) */};
                 bagVar4.getClass();
                 bagVar4.a = la.ab(strArr9);
                 zb zbVar4 = new zb();
-                zbVar4.k(cnb.z(-367108034657066L), cnb.z(-367004955441962L));
+                zbVar4.k("MicroMsg.MsgInfoStorage" /* cnb.z(-367108034657066L) */, "deleted dirty msg ,count is %d" /* cnb.z(-367004955441962L) */);
                 bagVar4.b = zbVar4;
                 return ensVar;
             case 24:
                 bag bagVar5 = (bag) obj;
-                String[] strArr10 = {cnb.z(-366626998319914L)};
+                String[] strArr10 = {"com.tencent.mm.plugin.messenger.foundation" /* cnb.z(-366626998319914L) */};
                 bagVar5.getClass();
                 bagVar5.a = la.ab(strArr10);
                 zb zbVar5 = new zb();
@@ -565,8 +565,8 @@ public final /* synthetic */ class dko implements bgf {
                     } catch (Exception e7) {
                         ArrayList arrayList7 = ewq.a;
                         StringBuilder sb7 = new StringBuilder();
-                        sb7.append(cnb.z(-59502476917546L));
-                        ewq.e(yg.n(sb7, bodVar instanceof doo ? ((doo) bodVar).f() : cnb.z(-59429462473514L), -59407987637034L), e7, 12);
+                        sb7.append("onGetSyncConfig " /* cnb.z(-59502476917546L) */);
+                        ewq.e(yg.n(sb7, bodVar instanceof doo ? ((doo) bodVar).f() : "LoadHook" /* cnb.z(-59429462473514L) */, -59407987637034L), e7, 12);
                     }
                 }
                 return ensVar;

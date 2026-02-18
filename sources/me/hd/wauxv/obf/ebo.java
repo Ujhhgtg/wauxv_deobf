@@ -40,10 +40,10 @@ public final class ebo {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-259179801475882L));
+        sb.append("ne5Proto(d=" /* cnb.z(-259179801475882L) */);
         dts.g(sb, this.a, -259162621606698L);
         sb.append(this.b);
-        sb.append(cnb.z(-259123966901034L));
+        sb.append(", f=" /* cnb.z(-259123966901034L) */);
         return bjs.p(sb, this.c, ')');
     }
 }

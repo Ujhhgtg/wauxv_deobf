@@ -36,7 +36,7 @@ public final class ecy {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-250065880873770L));
+        sb.append("p11Proto(need_replace_nickname=" /* cnb.z(-250065880873770L) */);
         dts.g(sb, this.a, -249928441920298L);
         return bjs.q(sb, this.b, ')');
     }

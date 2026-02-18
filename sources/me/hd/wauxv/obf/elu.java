@@ -3,13 +3,13 @@ package me.hd.wauxv.obf;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes2.dex */
 public final class elu extends doo implements bny {
-    public static final elu a = new elu(cnb.z(-600346233666346L));
-    public static final String b = cnb.z(-600745665624874L);
-    public static final String c = cnb.z(-600625406540586L);
+    public static final elu a = new elu("TransmitImg" /* cnb.z(-600346233666346L) */);
+    public static final String b = "测试-配置修复-v53-msgSend" /* cnb.z(-600745665624874L) */;
+    public static final String c = "转发图片使用新架构" /* cnb.z(-600625406540586L) */;
 
     @Override // me.hd.wauxv.obf.bny
     public final void d(bmm bmmVar, String str) {
-        if (z() && str.equals(cnb.z(-600878809611050L))) {
+        if (z() && str.equals("RepairerConfig_TransmitImg_Int" /* cnb.z(-600878809611050L) */)) {
             bmmVar.h(1);
         }
     }

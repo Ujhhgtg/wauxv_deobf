@@ -11,7 +11,7 @@ public final class bym extends bws implements bng {
         Object objInvoke = emn.bb(byl.a).invoke(null, str);
         String string = objInvoke instanceof String ? (String) objInvoke : null;
         if (string != null) {
-            String strZ = cnb.z(-374168960891690L);
+            String strZ = "/" /* cnb.z(-374168960891690L) */;
             String strZ2 = cnb.z(z ? -374177550826282L : -374117421284138L);
             int iAl = dnj.al(6, string, strZ);
             if (iAl != -1) {
@@ -30,7 +30,7 @@ public final class bym extends bws implements bng {
                 return string;
             }
         }
-        return cnb.z(-374134601153322L);
+        return "" /* cnb.z(-374134601153322L) */;
     }
 
     @Override // me.hd.wauxv.obf.bmf

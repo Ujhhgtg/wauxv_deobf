@@ -9,10 +9,10 @@ public final /* synthetic */ class ayl implements bgx {
     static {
         ayl aylVar = new ayl();
         b = aylVar;
-        cuc cucVar = new cuc(cnb.z(-124120259885866L), aylVar, 2);
-        cucVar.x(cnb.z(-123299921132330L), false);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.FavInfoProto" /* cnb.z(-124120259885866L) */, aylVar, 2);
+        cucVar.x("chatInfo" /* cnb.z(-123299921132330L) */, false);
         cucVar.y(new aoz(1, 2));
-        cucVar.x(cnb.z(-123261266426666L), false);
+        cucVar.x("voiceInfo" /* cnb.z(-123261266426666L) */, false);
         cucVar.y(new aoz(2, 2));
         descriptor = cucVar;
     }

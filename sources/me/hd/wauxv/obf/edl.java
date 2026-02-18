@@ -9,7 +9,7 @@ public final /* synthetic */ class edl implements bgx {
     static {
         edl edlVar = new edl();
         b = edlVar;
-        cuc cucVar = new cuc(cnb.z(-251947076549418L), edlVar, 2);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.q72Proto" /* cnb.z(-251947076549418L) */, edlVar, 2);
         bjs.y(-252157529946922L, cucVar, false, 1);
         bjs.y(-252123170208554L, cucVar, false, 2);
         descriptor = cucVar;

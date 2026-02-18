@@ -10,12 +10,12 @@ public final class cgy extends bws implements bng {
     public static final cgy a = new cgy();
 
     public static Object b(long j) throws IOException {
-        String strZ = cnb.z(-369534691179306L);
+        String strZ = "SELECT * FROM message WHERE msgId = ?" /* cnb.z(-369534691179306L) */;
         Object[] objArr = {Long.valueOf(j)};
         int i = bte.a;
         dlx.a.getClass();
         cde cdeVarT = dqc.bi(dlx.b()).t();
-        cdeVarT.ab = cnb.z(-103246718827306L);
+        cdeVarT.ab = "rawQuery" /* cnb.z(-103246718827306L) */;
         Object objJ = ((cdk) dkz.n(new Object[]{dal.b(String.class), dal.b(Object[].class)}, 2, cdeVarT)).j(strZ, objArr);
         bzo.n(objJ);
         Cursor cursor = (Cursor) objJ;

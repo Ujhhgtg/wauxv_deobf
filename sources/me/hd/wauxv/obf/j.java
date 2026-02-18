@@ -41,7 +41,7 @@ public final class j extends bdo {
                             if (outputStreamOpenOutputStream != null) {
                                 try {
                                     cnf.ba(outputStreamOpenOutputStream);
-                                    dnc.g(null, 3, cnb.z(-415873093335850L));
+                                    dnc.g(null, 3, "导出成功" /* cnb.z(-415873093335850L) */);
                                     outputStreamOpenOutputStream.close();
                                     return;
                                 } catch (Throwable th) {
@@ -55,7 +55,7 @@ public final class j extends bdo {
                             }
                             return;
                         } catch (Exception unused) {
-                            dnc.g(null, 3, cnb.z(-415885978237738L));
+                            dnc.g(null, 3, "导出失败" /* cnb.z(-415885978237738L) */);
                             return;
                         }
                     default:
@@ -69,7 +69,7 @@ public final class j extends bdo {
                             if (inputStreamOpenInputStream != null) {
                                 try {
                                     cnf.bg(inputStreamOpenInputStream);
-                                    dnc.g(null, 3, cnb.z(-415847323532074L));
+                                    dnc.g(null, 3, "导入成功" /* cnb.z(-415847323532074L) */);
                                     inputStreamOpenInputStream.close();
                                     return;
                                 } catch (Throwable th3) {
@@ -83,12 +83,12 @@ public final class j extends bdo {
                             }
                             return;
                         } catch (Exception unused2) {
-                            dnc.g(null, 3, cnb.z(-415791488957226L));
+                            dnc.g(null, 3, "导入失败" /* cnb.z(-415791488957226L) */);
                             return;
                         }
                 }
             }
-        }, new dr(cnb.z(-392439751768874L)));
+        }, new dr("application/zip" /* cnb.z(-392439751768874L) */));
         final int i2 = 1;
         this.b = da(new dq(this) { // from class: me.hd.wauxv.obf.g
             public final /* synthetic */ j b;
@@ -111,7 +111,7 @@ public final class j extends bdo {
                             if (outputStreamOpenOutputStream != null) {
                                 try {
                                     cnf.ba(outputStreamOpenOutputStream);
-                                    dnc.g(null, 3, cnb.z(-415873093335850L));
+                                    dnc.g(null, 3, "导出成功" /* cnb.z(-415873093335850L) */);
                                     outputStreamOpenOutputStream.close();
                                     return;
                                 } catch (Throwable th) {
@@ -125,7 +125,7 @@ public final class j extends bdo {
                             }
                             return;
                         } catch (Exception unused) {
-                            dnc.g(null, 3, cnb.z(-415885978237738L));
+                            dnc.g(null, 3, "导出失败" /* cnb.z(-415885978237738L) */);
                             return;
                         }
                     default:
@@ -139,7 +139,7 @@ public final class j extends bdo {
                             if (inputStreamOpenInputStream != null) {
                                 try {
                                     cnf.bg(inputStreamOpenInputStream);
-                                    dnc.g(null, 3, cnb.z(-415847323532074L));
+                                    dnc.g(null, 3, "导入成功" /* cnb.z(-415847323532074L) */);
                                     inputStreamOpenInputStream.close();
                                     return;
                                 } catch (Throwable th3) {
@@ -153,7 +153,7 @@ public final class j extends bdo {
                             }
                             return;
                         } catch (Exception unused2) {
-                            dnc.g(null, 3, cnb.z(-415791488957226L));
+                            dnc.g(null, 3, "导入失败" /* cnb.z(-415791488957226L) */);
                             return;
                         }
                 }
@@ -173,24 +173,24 @@ public final class j extends bdo {
         final int i2 = 4;
         final int i3 = 2;
         final int i4 = 0;
-        List listAg = aba.ag(new nz(cnb.z(-392371032292138L)), new ny(cnb.z(-392340967521066L), cnb.z(-392263658109738L), null, i2));
-        nz nzVar = new nz(cnb.z(-392285132946218L));
-        String strZ = cnb.z(-391670952622890L);
+        List listAg = aba.ag(new nz("WAuxiliary" /* cnb.z(-392371032292138L) */), new ny("愿每个人都被这世界温柔以待" /* cnb.z(-392340967521066L) */, ":)" /* cnb.z(-392263658109738L) */, null, i2));
+        nz nzVar = new nz("我的" /* cnb.z(-392285132946218L) */);
+        String strZ = "使用天数" /* cnb.z(-391670952622890L) */;
         StringBuilder sb = new StringBuilder();
         eop.a.getClass();
         sb.append(eoo.a.k());
         sb.append((char) 22825);
         ArrayList arrayListO = aaz.o(listAg, aba.ag(nzVar, new ny(strZ, sb.toString(), 0 == true ? 1 : 0, i2)));
-        nz nzVar2 = new nz(cnb.z(-391701017393962L));
-        ny nyVar = new ny(cnb.z(-391636592884522L), cnb.z(-391666657655594L), new d(i4));
-        ny nyVar2 = new ny(cnb.z(-391503448898346L), exl.c, new d(i));
-        String strZ2 = cnb.z(-391516333800234L);
+        nz nzVar2 = new nz("版本" /* cnb.z(-391701017393962L) */);
+        ny nyVar = new ny("模块版本" /* cnb.z(-391636592884522L) */, "1.2.6.r1238.198c77c(1238)" /* cnb.z(-391666657655594L) */, new d(i4));
+        ny nyVar2 = new ny("编译时间" /* cnb.z(-391503448898346L) */, exl.c, new d(i));
+        String strZ2 = "宿主版本" /* cnb.z(-391516333800234L) */;
         bmo.a.getClass();
         final int i5 = 3;
         final int i6 = 10;
         final int i7 = 11;
         final int i8 = 12;
-        ArrayList arrayListO2 = aaz.o(aaz.o(aaz.o(arrayListO, aba.ag(nzVar2, nyVar, nyVar2, new ny(strZ2, bmo.s(), new d(i3)))), aba.ag(new nz(cnb.z(-391477679094570L)), new ny(cnb.z(-391434729421610L), 0 == true ? 1 : 0, new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
+        ArrayList arrayListO2 = aaz.o(aaz.o(aaz.o(arrayListO, aba.ag(nzVar2, nyVar, nyVar2, new ny(strZ2, bmo.s(), new d(i3)))), aba.ag(new nz("隐私与协议" /* cnb.z(-391477679094570L) */), new ny("用户协议" /* cnb.z(-391434729421610L) */, 0 == true ? 1 : 0, new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
             public final /* synthetic */ j b;
 
             {
@@ -201,145 +201,145 @@ public final class j extends bdo {
             public final void onClick(View view2) {
                 switch (i6) {
                     case 0:
-                        cnh.ac(this.b.dc(), cnb.z(-413446436813610L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/Hikage" /* cnb.z(-413446436813610L) */);
                         break;
                     case 1:
-                        cnh.ac(this.b.dc(), cnb.z(-413824393935658L));
+                        cnh.ac(this.b.dc(), "https://github.com/LuckyPray/DexKit" /* cnb.z(-413824393935658L) */);
                         break;
                     case 2:
-                        cnh.ac(this.b.dc(), cnb.z(-415284682816298L));
+                        cnh.ac(this.b.dc(), "https://github.com/cinit/QAuxiliary" /* cnb.z(-415284682816298L) */);
                         break;
                     case 3:
-                        cnh.ac(this.b.dc(), cnb.z(-415164423732010L));
+                        cnh.ac(this.b.dc(), "https://github.com/suzhelan/TimTool" /* cnb.z(-415164423732010L) */);
                         break;
                     case 4:
-                        cnh.ac(this.b.dc(), cnb.z(-415525200984874L));
+                        cnh.ac(this.b.dc(), "https://github.com/fankes/TSBattery" /* cnb.z(-415525200984874L) */);
                         break;
                     case 5:
-                        cnh.ac(this.b.dc(), cnb.z(-415404941900586L));
+                        cnh.ac(this.b.dc(), "https://github.com/KitsunePie/QQCleaner" /* cnb.z(-415404941900586L) */);
                         break;
                     case 6:
-                        cnh.ac(this.b.dc(), cnb.z(-414683387394858L));
+                        cnh.ac(this.b.dc(), "https://github.com/LSPosed/LSPosed" /* cnb.z(-414683387394858L) */);
                         break;
                     case 7:
-                        cnh.ac(this.b.dc(), cnb.z(-415048459615018L));
+                        cnh.ac(this.b.dc(), "https://github.com/Rosemoe/sora-editor" /* cnb.z(-415048459615018L) */);
                         break;
                     case 8:
-                        cnh.ac(this.b.dc(), cnb.z(-414863776021290L));
+                        cnh.ac(this.b.dc(), "https://github.com/Lagrio" /* cnb.z(-414863776021290L) */);
                         break;
                     case 9:
-                        cnh.ac(this.b.dc(), cnb.z(-417556720515882L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Public" /* cnb.z(-417556720515882L) */);
                         break;
                     case 10:
-                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm(cnb.z(-415645460069162L), Boolean.TRUE)));
+                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm("showOnly" /* cnb.z(-415645460069162L) */, Boolean.TRUE)));
                         break;
                     case 11:
-                        this.b.a.a(cnb.z(-417376331889450L));
+                        this.b.a.a("wauxv_config.zip" /* cnb.z(-417376331889450L) */);
                         break;
                     case 12:
-                        this.b.b.a(cnb.z(-417303317445418L));
+                        this.b.b.a("application/zip" /* cnb.z(-417303317445418L) */);
                         break;
                     case 13:
-                        cnh.ac(this.b.dc(), cnb.z(-417784353782570L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary_CI" /* cnb.z(-417784353782570L) */);
                         break;
                     case 14:
-                        cnh.ac(this.b.dc(), cnb.z(-417707044371242L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary" /* cnb.z(-417707044371242L) */);
                         break;
                     case 15:
-                        cnh.ac(this.b.dc(), cnb.z(-416848050912042L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Plugin" /* cnb.z(-416848050912042L) */);
                         break;
                     case 16:
                         api apiVar = api.a;
                         Context contextDc = this.b.dc();
-                        String strZ3 = cnb.z(-417187353328426L);
+                        String strZ3 = "m02krT/t'4E_$jgJt=2LKNe" /* cnb.z(-417187353328426L) */;
                         apiVar.getClass();
                         api.b(contextDc, strZ3);
                         break;
                     case 17:
-                        cnh.ac(this.b.dc(), cnb.z(-417084274113322L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/hdshare" /* cnb.z(-417084274113322L) */);
                         break;
                     case 18:
                         api apiVar2 = api.a;
                         Context contextDc2 = this.b.dc();
-                        String strZ4 = cnb.z(-414176581253930L);
+                        String strZ4 = "m0eZ$'Q@C9@1WK:'#+D~Bw" /* cnb.z(-414176581253930L) */;
                         apiVar2.getClass();
                         api.b(contextDc2, strZ4);
                         break;
                     case 19:
-                        cnh.ac(this.b.dc(), cnb.z(-414077797006122L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/suzhelan" /* cnb.z(-414077797006122L) */);
                         break;
                     case 20:
-                        cnh.ac(this.b.dc(), cnb.z(-414000487594794L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/YukiHookAPI" /* cnb.z(-414000487594794L) */);
                         break;
                     case 21:
-                        cnh.ac(this.b.dc(), cnb.z(-414314020207402L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/KavaRef" /* cnb.z(-414314020207402L) */);
                         break;
                     default:
-                        cnh.ac(this.b.dc(), cnb.z(-413596760668970L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/BetterAndroid" /* cnb.z(-413596760668970L) */);
                         break;
                 }
             }
-        }, i3))), aba.ag(new nz(cnb.z(-391447614323498L)), new ny(cnb.z(-391954420464426L), 0 == true ? 1 : 0, new View.OnClickListener() { // from class: me.hd.wauxv.obf.f
+        }, i3))), aba.ag(new nz("缓存与配置" /* cnb.z(-391447614323498L) */), new ny("清除缓存" /* cnb.z(-391954420464426L) */, 0 == true ? 1 : 0, new View.OnClickListener() { // from class: me.hd.wauxv.obf.f
             @Override // android.view.View.OnClickListener
             public final void onClick(View view2) {
                 switch (i4) {
                     case 0:
                         bzy bzyVar = new bzy(recyclerView.getContext());
-                        String strZ3 = cnb.z(-416105021569834L);
+                        String strZ3 = "提示" /* cnb.z(-416105021569834L) */;
                         eg egVar = (eg) bzyVar.d;
                         egVar.d = strZ3;
-                        String strZ4 = cnb.z(-416109316537130L);
+                        String strZ4 = "确定要清除模块缓存, 并重新开始适配数据?\n点击确定后请等待5秒并手动重启" /* cnb.z(-416109316537130L) */;
                         bmo.a.getClass();
                         egVar.f = strZ4.concat(bmo.o());
-                        bzyVar.t(cnb.z(-415928927910698L), new amw(new h(0), 0));
-                        bzyVar.r(cnb.z(-47455093652266L), new amw((3 & 2) != 0 ? new amd(1) : null, 1));
+                        bzyVar.t("确定" /* cnb.z(-415928927910698L) */, new amw(new h(0), 0));
+                        bzyVar.r("取消" /* cnb.z(-47455093652266L) */, new amw((3 & 2) != 0 ? new amd(1) : null, 1));
                         bzyVar.i().show();
                         break;
                     default:
                         bzy bzyVar2 = new bzy(recyclerView.getContext());
-                        String strZ5 = cnb.z(-415950402747178L);
+                        String strZ5 = "提示" /* cnb.z(-415950402747178L) */;
                         eg egVar2 = (eg) bzyVar2.d;
                         egVar2.d = strZ5;
-                        String strZ6 = cnb.z(-415954697714474L);
+                        String strZ6 = "确定要清空模块配置, 包括功能开启状态等?\n点击确定后请等待5秒并手动重启" /* cnb.z(-415954697714474L) */;
                         bmo.a.getClass();
                         egVar2.f = strZ6.concat(bmo.o());
-                        bzyVar2.t(cnb.z(-417423576529706L), new amw(new h(1), 0));
-                        bzyVar2.r(cnb.z(-47455093652266L), new amw((3 & 2) != 0 ? new amd(1) : null, 1));
+                        bzyVar2.t("确定" /* cnb.z(-417423576529706L) */, new amw(new h(1), 0));
+                        bzyVar2.r("取消" /* cnb.z(-47455093652266L) */, new amw((3 & 2) != 0 ? new amd(1) : null, 1));
                         bzyVar2.i().show();
                         break;
                 }
             }
-        }, i3), new ny(cnb.z(-391915765758762L), 0 == true ? 1 : 0, new View.OnClickListener() { // from class: me.hd.wauxv.obf.f
+        }, i3), new ny("清空配置" /* cnb.z(-391915765758762L) */, 0 == true ? 1 : 0, new View.OnClickListener() { // from class: me.hd.wauxv.obf.f
             @Override // android.view.View.OnClickListener
             public final void onClick(View view2) {
                 switch (i) {
                     case 0:
                         bzy bzyVar = new bzy(recyclerView.getContext());
-                        String strZ3 = cnb.z(-416105021569834L);
+                        String strZ3 = "提示" /* cnb.z(-416105021569834L) */;
                         eg egVar = (eg) bzyVar.d;
                         egVar.d = strZ3;
-                        String strZ4 = cnb.z(-416109316537130L);
+                        String strZ4 = "确定要清除模块缓存, 并重新开始适配数据?\n点击确定后请等待5秒并手动重启" /* cnb.z(-416109316537130L) */;
                         bmo.a.getClass();
                         egVar.f = strZ4.concat(bmo.o());
-                        bzyVar.t(cnb.z(-415928927910698L), new amw(new h(0), 0));
-                        bzyVar.r(cnb.z(-47455093652266L), new amw((3 & 2) != 0 ? new amd(1) : null, 1));
+                        bzyVar.t("确定" /* cnb.z(-415928927910698L) */, new amw(new h(0), 0));
+                        bzyVar.r("取消" /* cnb.z(-47455093652266L) */, new amw((3 & 2) != 0 ? new amd(1) : null, 1));
                         bzyVar.i().show();
                         break;
                     default:
                         bzy bzyVar2 = new bzy(recyclerView.getContext());
-                        String strZ5 = cnb.z(-415950402747178L);
+                        String strZ5 = "提示" /* cnb.z(-415950402747178L) */;
                         eg egVar2 = (eg) bzyVar2.d;
                         egVar2.d = strZ5;
-                        String strZ6 = cnb.z(-415954697714474L);
+                        String strZ6 = "确定要清空模块配置, 包括功能开启状态等?\n点击确定后请等待5秒并手动重启" /* cnb.z(-415954697714474L) */;
                         bmo.a.getClass();
                         egVar2.f = strZ6.concat(bmo.o());
-                        bzyVar2.t(cnb.z(-417423576529706L), new amw(new h(1), 0));
-                        bzyVar2.r(cnb.z(-47455093652266L), new amw((3 & 2) != 0 ? new amd(1) : null, 1));
+                        bzyVar2.t("确定" /* cnb.z(-417423576529706L) */, new amw(new h(1), 0));
+                        bzyVar2.r("取消" /* cnb.z(-47455093652266L) */, new amw((3 & 2) != 0 ? new amd(1) : null, 1));
                         bzyVar2.i().show();
                         break;
                 }
             }
-        }, i3), new ny(cnb.z(-391928650660650L), 0 == true ? 1 : 0, new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
+        }, i3), new ny("导出缓存配置" /* cnb.z(-391928650660650L) */, 0 == true ? 1 : 0, new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
             public final /* synthetic */ j b;
 
             {
@@ -350,85 +350,85 @@ public final class j extends bdo {
             public final void onClick(View view2) {
                 switch (i7) {
                     case 0:
-                        cnh.ac(this.b.dc(), cnb.z(-413446436813610L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/Hikage" /* cnb.z(-413446436813610L) */);
                         break;
                     case 1:
-                        cnh.ac(this.b.dc(), cnb.z(-413824393935658L));
+                        cnh.ac(this.b.dc(), "https://github.com/LuckyPray/DexKit" /* cnb.z(-413824393935658L) */);
                         break;
                     case 2:
-                        cnh.ac(this.b.dc(), cnb.z(-415284682816298L));
+                        cnh.ac(this.b.dc(), "https://github.com/cinit/QAuxiliary" /* cnb.z(-415284682816298L) */);
                         break;
                     case 3:
-                        cnh.ac(this.b.dc(), cnb.z(-415164423732010L));
+                        cnh.ac(this.b.dc(), "https://github.com/suzhelan/TimTool" /* cnb.z(-415164423732010L) */);
                         break;
                     case 4:
-                        cnh.ac(this.b.dc(), cnb.z(-415525200984874L));
+                        cnh.ac(this.b.dc(), "https://github.com/fankes/TSBattery" /* cnb.z(-415525200984874L) */);
                         break;
                     case 5:
-                        cnh.ac(this.b.dc(), cnb.z(-415404941900586L));
+                        cnh.ac(this.b.dc(), "https://github.com/KitsunePie/QQCleaner" /* cnb.z(-415404941900586L) */);
                         break;
                     case 6:
-                        cnh.ac(this.b.dc(), cnb.z(-414683387394858L));
+                        cnh.ac(this.b.dc(), "https://github.com/LSPosed/LSPosed" /* cnb.z(-414683387394858L) */);
                         break;
                     case 7:
-                        cnh.ac(this.b.dc(), cnb.z(-415048459615018L));
+                        cnh.ac(this.b.dc(), "https://github.com/Rosemoe/sora-editor" /* cnb.z(-415048459615018L) */);
                         break;
                     case 8:
-                        cnh.ac(this.b.dc(), cnb.z(-414863776021290L));
+                        cnh.ac(this.b.dc(), "https://github.com/Lagrio" /* cnb.z(-414863776021290L) */);
                         break;
                     case 9:
-                        cnh.ac(this.b.dc(), cnb.z(-417556720515882L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Public" /* cnb.z(-417556720515882L) */);
                         break;
                     case 10:
-                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm(cnb.z(-415645460069162L), Boolean.TRUE)));
+                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm("showOnly" /* cnb.z(-415645460069162L) */, Boolean.TRUE)));
                         break;
                     case 11:
-                        this.b.a.a(cnb.z(-417376331889450L));
+                        this.b.a.a("wauxv_config.zip" /* cnb.z(-417376331889450L) */);
                         break;
                     case 12:
-                        this.b.b.a(cnb.z(-417303317445418L));
+                        this.b.b.a("application/zip" /* cnb.z(-417303317445418L) */);
                         break;
                     case 13:
-                        cnh.ac(this.b.dc(), cnb.z(-417784353782570L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary_CI" /* cnb.z(-417784353782570L) */);
                         break;
                     case 14:
-                        cnh.ac(this.b.dc(), cnb.z(-417707044371242L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary" /* cnb.z(-417707044371242L) */);
                         break;
                     case 15:
-                        cnh.ac(this.b.dc(), cnb.z(-416848050912042L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Plugin" /* cnb.z(-416848050912042L) */);
                         break;
                     case 16:
                         api apiVar = api.a;
                         Context contextDc = this.b.dc();
-                        String strZ3 = cnb.z(-417187353328426L);
+                        String strZ3 = "m02krT/t'4E_$jgJt=2LKNe" /* cnb.z(-417187353328426L) */;
                         apiVar.getClass();
                         api.b(contextDc, strZ3);
                         break;
                     case 17:
-                        cnh.ac(this.b.dc(), cnb.z(-417084274113322L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/hdshare" /* cnb.z(-417084274113322L) */);
                         break;
                     case 18:
                         api apiVar2 = api.a;
                         Context contextDc2 = this.b.dc();
-                        String strZ4 = cnb.z(-414176581253930L);
+                        String strZ4 = "m0eZ$'Q@C9@1WK:'#+D~Bw" /* cnb.z(-414176581253930L) */;
                         apiVar2.getClass();
                         api.b(contextDc2, strZ4);
                         break;
                     case 19:
-                        cnh.ac(this.b.dc(), cnb.z(-414077797006122L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/suzhelan" /* cnb.z(-414077797006122L) */);
                         break;
                     case 20:
-                        cnh.ac(this.b.dc(), cnb.z(-414000487594794L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/YukiHookAPI" /* cnb.z(-414000487594794L) */);
                         break;
                     case 21:
-                        cnh.ac(this.b.dc(), cnb.z(-414314020207402L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/KavaRef" /* cnb.z(-414314020207402L) */);
                         break;
                     default:
-                        cnh.ac(this.b.dc(), cnb.z(-413596760668970L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/BetterAndroid" /* cnb.z(-413596760668970L) */);
                         break;
                 }
             }
-        }, i3), new ny(cnb.z(-391898585889578L), 0 == true ? 1 : 0, new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
+        }, i3), new ny("导入缓存配置" /* cnb.z(-391898585889578L) */, 0 == true ? 1 : 0, new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
             public final /* synthetic */ j b;
 
             {
@@ -439,88 +439,88 @@ public final class j extends bdo {
             public final void onClick(View view2) {
                 switch (i8) {
                     case 0:
-                        cnh.ac(this.b.dc(), cnb.z(-413446436813610L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/Hikage" /* cnb.z(-413446436813610L) */);
                         break;
                     case 1:
-                        cnh.ac(this.b.dc(), cnb.z(-413824393935658L));
+                        cnh.ac(this.b.dc(), "https://github.com/LuckyPray/DexKit" /* cnb.z(-413824393935658L) */);
                         break;
                     case 2:
-                        cnh.ac(this.b.dc(), cnb.z(-415284682816298L));
+                        cnh.ac(this.b.dc(), "https://github.com/cinit/QAuxiliary" /* cnb.z(-415284682816298L) */);
                         break;
                     case 3:
-                        cnh.ac(this.b.dc(), cnb.z(-415164423732010L));
+                        cnh.ac(this.b.dc(), "https://github.com/suzhelan/TimTool" /* cnb.z(-415164423732010L) */);
                         break;
                     case 4:
-                        cnh.ac(this.b.dc(), cnb.z(-415525200984874L));
+                        cnh.ac(this.b.dc(), "https://github.com/fankes/TSBattery" /* cnb.z(-415525200984874L) */);
                         break;
                     case 5:
-                        cnh.ac(this.b.dc(), cnb.z(-415404941900586L));
+                        cnh.ac(this.b.dc(), "https://github.com/KitsunePie/QQCleaner" /* cnb.z(-415404941900586L) */);
                         break;
                     case 6:
-                        cnh.ac(this.b.dc(), cnb.z(-414683387394858L));
+                        cnh.ac(this.b.dc(), "https://github.com/LSPosed/LSPosed" /* cnb.z(-414683387394858L) */);
                         break;
                     case 7:
-                        cnh.ac(this.b.dc(), cnb.z(-415048459615018L));
+                        cnh.ac(this.b.dc(), "https://github.com/Rosemoe/sora-editor" /* cnb.z(-415048459615018L) */);
                         break;
                     case 8:
-                        cnh.ac(this.b.dc(), cnb.z(-414863776021290L));
+                        cnh.ac(this.b.dc(), "https://github.com/Lagrio" /* cnb.z(-414863776021290L) */);
                         break;
                     case 9:
-                        cnh.ac(this.b.dc(), cnb.z(-417556720515882L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Public" /* cnb.z(-417556720515882L) */);
                         break;
                     case 10:
-                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm(cnb.z(-415645460069162L), Boolean.TRUE)));
+                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm("showOnly" /* cnb.z(-415645460069162L) */, Boolean.TRUE)));
                         break;
                     case 11:
-                        this.b.a.a(cnb.z(-417376331889450L));
+                        this.b.a.a("wauxv_config.zip" /* cnb.z(-417376331889450L) */);
                         break;
                     case 12:
-                        this.b.b.a(cnb.z(-417303317445418L));
+                        this.b.b.a("application/zip" /* cnb.z(-417303317445418L) */);
                         break;
                     case 13:
-                        cnh.ac(this.b.dc(), cnb.z(-417784353782570L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary_CI" /* cnb.z(-417784353782570L) */);
                         break;
                     case 14:
-                        cnh.ac(this.b.dc(), cnb.z(-417707044371242L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary" /* cnb.z(-417707044371242L) */);
                         break;
                     case 15:
-                        cnh.ac(this.b.dc(), cnb.z(-416848050912042L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Plugin" /* cnb.z(-416848050912042L) */);
                         break;
                     case 16:
                         api apiVar = api.a;
                         Context contextDc = this.b.dc();
-                        String strZ3 = cnb.z(-417187353328426L);
+                        String strZ3 = "m02krT/t'4E_$jgJt=2LKNe" /* cnb.z(-417187353328426L) */;
                         apiVar.getClass();
                         api.b(contextDc, strZ3);
                         break;
                     case 17:
-                        cnh.ac(this.b.dc(), cnb.z(-417084274113322L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/hdshare" /* cnb.z(-417084274113322L) */);
                         break;
                     case 18:
                         api apiVar2 = api.a;
                         Context contextDc2 = this.b.dc();
-                        String strZ4 = cnb.z(-414176581253930L);
+                        String strZ4 = "m0eZ$'Q@C9@1WK:'#+D~Bw" /* cnb.z(-414176581253930L) */;
                         apiVar2.getClass();
                         api.b(contextDc2, strZ4);
                         break;
                     case 19:
-                        cnh.ac(this.b.dc(), cnb.z(-414077797006122L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/suzhelan" /* cnb.z(-414077797006122L) */);
                         break;
                     case 20:
-                        cnh.ac(this.b.dc(), cnb.z(-414000487594794L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/YukiHookAPI" /* cnb.z(-414000487594794L) */);
                         break;
                     case 21:
-                        cnh.ac(this.b.dc(), cnb.z(-414314020207402L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/KavaRef" /* cnb.z(-414314020207402L) */);
                         break;
                     default:
-                        cnh.ac(this.b.dc(), cnb.z(-413596760668970L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/BetterAndroid" /* cnb.z(-413596760668970L) */);
                         break;
                 }
             }
         }, i3)));
         final int i9 = 13;
         final int i10 = 14;
-        ArrayList arrayListO3 = aaz.o(arrayListO2, aba.ag(new nz(cnb.z(-391851341249322L)), new ny(cnb.z(-391872816085802L), cnb.z(-391799801641770L), new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
+        ArrayList arrayListO3 = aaz.o(arrayListO2, aba.ag(new nz("群组" /* cnb.z(-391851341249322L) */), new ny("Telegram Channel" /* cnb.z(-391872816085802L) */, "Hd_WAuxiliary_CI" /* cnb.z(-391799801641770L) */, new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
             public final /* synthetic */ j b;
 
             {
@@ -531,85 +531,85 @@ public final class j extends bdo {
             public final void onClick(View view2) {
                 switch (i9) {
                     case 0:
-                        cnh.ac(this.b.dc(), cnb.z(-413446436813610L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/Hikage" /* cnb.z(-413446436813610L) */);
                         break;
                     case 1:
-                        cnh.ac(this.b.dc(), cnb.z(-413824393935658L));
+                        cnh.ac(this.b.dc(), "https://github.com/LuckyPray/DexKit" /* cnb.z(-413824393935658L) */);
                         break;
                     case 2:
-                        cnh.ac(this.b.dc(), cnb.z(-415284682816298L));
+                        cnh.ac(this.b.dc(), "https://github.com/cinit/QAuxiliary" /* cnb.z(-415284682816298L) */);
                         break;
                     case 3:
-                        cnh.ac(this.b.dc(), cnb.z(-415164423732010L));
+                        cnh.ac(this.b.dc(), "https://github.com/suzhelan/TimTool" /* cnb.z(-415164423732010L) */);
                         break;
                     case 4:
-                        cnh.ac(this.b.dc(), cnb.z(-415525200984874L));
+                        cnh.ac(this.b.dc(), "https://github.com/fankes/TSBattery" /* cnb.z(-415525200984874L) */);
                         break;
                     case 5:
-                        cnh.ac(this.b.dc(), cnb.z(-415404941900586L));
+                        cnh.ac(this.b.dc(), "https://github.com/KitsunePie/QQCleaner" /* cnb.z(-415404941900586L) */);
                         break;
                     case 6:
-                        cnh.ac(this.b.dc(), cnb.z(-414683387394858L));
+                        cnh.ac(this.b.dc(), "https://github.com/LSPosed/LSPosed" /* cnb.z(-414683387394858L) */);
                         break;
                     case 7:
-                        cnh.ac(this.b.dc(), cnb.z(-415048459615018L));
+                        cnh.ac(this.b.dc(), "https://github.com/Rosemoe/sora-editor" /* cnb.z(-415048459615018L) */);
                         break;
                     case 8:
-                        cnh.ac(this.b.dc(), cnb.z(-414863776021290L));
+                        cnh.ac(this.b.dc(), "https://github.com/Lagrio" /* cnb.z(-414863776021290L) */);
                         break;
                     case 9:
-                        cnh.ac(this.b.dc(), cnb.z(-417556720515882L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Public" /* cnb.z(-417556720515882L) */);
                         break;
                     case 10:
-                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm(cnb.z(-415645460069162L), Boolean.TRUE)));
+                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm("showOnly" /* cnb.z(-415645460069162L) */, Boolean.TRUE)));
                         break;
                     case 11:
-                        this.b.a.a(cnb.z(-417376331889450L));
+                        this.b.a.a("wauxv_config.zip" /* cnb.z(-417376331889450L) */);
                         break;
                     case 12:
-                        this.b.b.a(cnb.z(-417303317445418L));
+                        this.b.b.a("application/zip" /* cnb.z(-417303317445418L) */);
                         break;
                     case 13:
-                        cnh.ac(this.b.dc(), cnb.z(-417784353782570L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary_CI" /* cnb.z(-417784353782570L) */);
                         break;
                     case 14:
-                        cnh.ac(this.b.dc(), cnb.z(-417707044371242L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary" /* cnb.z(-417707044371242L) */);
                         break;
                     case 15:
-                        cnh.ac(this.b.dc(), cnb.z(-416848050912042L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Plugin" /* cnb.z(-416848050912042L) */);
                         break;
                     case 16:
                         api apiVar = api.a;
                         Context contextDc = this.b.dc();
-                        String strZ3 = cnb.z(-417187353328426L);
+                        String strZ3 = "m02krT/t'4E_$jgJt=2LKNe" /* cnb.z(-417187353328426L) */;
                         apiVar.getClass();
                         api.b(contextDc, strZ3);
                         break;
                     case 17:
-                        cnh.ac(this.b.dc(), cnb.z(-417084274113322L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/hdshare" /* cnb.z(-417084274113322L) */);
                         break;
                     case 18:
                         api apiVar2 = api.a;
                         Context contextDc2 = this.b.dc();
-                        String strZ4 = cnb.z(-414176581253930L);
+                        String strZ4 = "m0eZ$'Q@C9@1WK:'#+D~Bw" /* cnb.z(-414176581253930L) */;
                         apiVar2.getClass();
                         api.b(contextDc2, strZ4);
                         break;
                     case 19:
-                        cnh.ac(this.b.dc(), cnb.z(-414077797006122L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/suzhelan" /* cnb.z(-414077797006122L) */);
                         break;
                     case 20:
-                        cnh.ac(this.b.dc(), cnb.z(-414000487594794L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/YukiHookAPI" /* cnb.z(-414000487594794L) */);
                         break;
                     case 21:
-                        cnh.ac(this.b.dc(), cnb.z(-414314020207402L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/KavaRef" /* cnb.z(-414314020207402L) */);
                         break;
                     default:
-                        cnh.ac(this.b.dc(), cnb.z(-413596760668970L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/BetterAndroid" /* cnb.z(-413596760668970L) */);
                         break;
                 }
             }
-        }), new ny(cnb.z(-393324515031850L), cnb.z(-393311630129962L), new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
+        }), new ny("Telegram Group" /* cnb.z(-393324515031850L) */, "Hd_WAuxiliary" /* cnb.z(-393311630129962L) */, new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
             public final /* synthetic */ j b;
 
             {
@@ -620,88 +620,88 @@ public final class j extends bdo {
             public final void onClick(View view2) {
                 switch (i10) {
                     case 0:
-                        cnh.ac(this.b.dc(), cnb.z(-413446436813610L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/Hikage" /* cnb.z(-413446436813610L) */);
                         break;
                     case 1:
-                        cnh.ac(this.b.dc(), cnb.z(-413824393935658L));
+                        cnh.ac(this.b.dc(), "https://github.com/LuckyPray/DexKit" /* cnb.z(-413824393935658L) */);
                         break;
                     case 2:
-                        cnh.ac(this.b.dc(), cnb.z(-415284682816298L));
+                        cnh.ac(this.b.dc(), "https://github.com/cinit/QAuxiliary" /* cnb.z(-415284682816298L) */);
                         break;
                     case 3:
-                        cnh.ac(this.b.dc(), cnb.z(-415164423732010L));
+                        cnh.ac(this.b.dc(), "https://github.com/suzhelan/TimTool" /* cnb.z(-415164423732010L) */);
                         break;
                     case 4:
-                        cnh.ac(this.b.dc(), cnb.z(-415525200984874L));
+                        cnh.ac(this.b.dc(), "https://github.com/fankes/TSBattery" /* cnb.z(-415525200984874L) */);
                         break;
                     case 5:
-                        cnh.ac(this.b.dc(), cnb.z(-415404941900586L));
+                        cnh.ac(this.b.dc(), "https://github.com/KitsunePie/QQCleaner" /* cnb.z(-415404941900586L) */);
                         break;
                     case 6:
-                        cnh.ac(this.b.dc(), cnb.z(-414683387394858L));
+                        cnh.ac(this.b.dc(), "https://github.com/LSPosed/LSPosed" /* cnb.z(-414683387394858L) */);
                         break;
                     case 7:
-                        cnh.ac(this.b.dc(), cnb.z(-415048459615018L));
+                        cnh.ac(this.b.dc(), "https://github.com/Rosemoe/sora-editor" /* cnb.z(-415048459615018L) */);
                         break;
                     case 8:
-                        cnh.ac(this.b.dc(), cnb.z(-414863776021290L));
+                        cnh.ac(this.b.dc(), "https://github.com/Lagrio" /* cnb.z(-414863776021290L) */);
                         break;
                     case 9:
-                        cnh.ac(this.b.dc(), cnb.z(-417556720515882L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Public" /* cnb.z(-417556720515882L) */);
                         break;
                     case 10:
-                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm(cnb.z(-415645460069162L), Boolean.TRUE)));
+                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm("showOnly" /* cnb.z(-415645460069162L) */, Boolean.TRUE)));
                         break;
                     case 11:
-                        this.b.a.a(cnb.z(-417376331889450L));
+                        this.b.a.a("wauxv_config.zip" /* cnb.z(-417376331889450L) */);
                         break;
                     case 12:
-                        this.b.b.a(cnb.z(-417303317445418L));
+                        this.b.b.a("application/zip" /* cnb.z(-417303317445418L) */);
                         break;
                     case 13:
-                        cnh.ac(this.b.dc(), cnb.z(-417784353782570L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary_CI" /* cnb.z(-417784353782570L) */);
                         break;
                     case 14:
-                        cnh.ac(this.b.dc(), cnb.z(-417707044371242L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary" /* cnb.z(-417707044371242L) */);
                         break;
                     case 15:
-                        cnh.ac(this.b.dc(), cnb.z(-416848050912042L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Plugin" /* cnb.z(-416848050912042L) */);
                         break;
                     case 16:
                         api apiVar = api.a;
                         Context contextDc = this.b.dc();
-                        String strZ3 = cnb.z(-417187353328426L);
+                        String strZ3 = "m02krT/t'4E_$jgJt=2LKNe" /* cnb.z(-417187353328426L) */;
                         apiVar.getClass();
                         api.b(contextDc, strZ3);
                         break;
                     case 17:
-                        cnh.ac(this.b.dc(), cnb.z(-417084274113322L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/hdshare" /* cnb.z(-417084274113322L) */);
                         break;
                     case 18:
                         api apiVar2 = api.a;
                         Context contextDc2 = this.b.dc();
-                        String strZ4 = cnb.z(-414176581253930L);
+                        String strZ4 = "m0eZ$'Q@C9@1WK:'#+D~Bw" /* cnb.z(-414176581253930L) */;
                         apiVar2.getClass();
                         api.b(contextDc2, strZ4);
                         break;
                     case 19:
-                        cnh.ac(this.b.dc(), cnb.z(-414077797006122L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/suzhelan" /* cnb.z(-414077797006122L) */);
                         break;
                     case 20:
-                        cnh.ac(this.b.dc(), cnb.z(-414000487594794L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/YukiHookAPI" /* cnb.z(-414000487594794L) */);
                         break;
                     case 21:
-                        cnh.ac(this.b.dc(), cnb.z(-414314020207402L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/KavaRef" /* cnb.z(-414314020207402L) */);
                         break;
                     default:
-                        cnh.ac(this.b.dc(), cnb.z(-413596760668970L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/BetterAndroid" /* cnb.z(-413596760668970L) */);
                         break;
                 }
             }
         })));
-        nz nzVar3 = new nz(cnb.z(-393234320718634L));
+        nz nzVar3 = new nz("源码" /* cnb.z(-393234320718634L) */);
         final int i11 = 9;
-        ny nyVar3 = new ny(cnb.z(-393187076078378L), cnb.z(-393126946536234L), new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
+        ny nyVar3 = new ny("WAuxiliary_Public" /* cnb.z(-393187076078378L) */, "HdShare" /* cnb.z(-393126946536234L) */, new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
             public final /* synthetic */ j b;
 
             {
@@ -712,87 +712,87 @@ public final class j extends bdo {
             public final void onClick(View view2) {
                 switch (i11) {
                     case 0:
-                        cnh.ac(this.b.dc(), cnb.z(-413446436813610L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/Hikage" /* cnb.z(-413446436813610L) */);
                         break;
                     case 1:
-                        cnh.ac(this.b.dc(), cnb.z(-413824393935658L));
+                        cnh.ac(this.b.dc(), "https://github.com/LuckyPray/DexKit" /* cnb.z(-413824393935658L) */);
                         break;
                     case 2:
-                        cnh.ac(this.b.dc(), cnb.z(-415284682816298L));
+                        cnh.ac(this.b.dc(), "https://github.com/cinit/QAuxiliary" /* cnb.z(-415284682816298L) */);
                         break;
                     case 3:
-                        cnh.ac(this.b.dc(), cnb.z(-415164423732010L));
+                        cnh.ac(this.b.dc(), "https://github.com/suzhelan/TimTool" /* cnb.z(-415164423732010L) */);
                         break;
                     case 4:
-                        cnh.ac(this.b.dc(), cnb.z(-415525200984874L));
+                        cnh.ac(this.b.dc(), "https://github.com/fankes/TSBattery" /* cnb.z(-415525200984874L) */);
                         break;
                     case 5:
-                        cnh.ac(this.b.dc(), cnb.z(-415404941900586L));
+                        cnh.ac(this.b.dc(), "https://github.com/KitsunePie/QQCleaner" /* cnb.z(-415404941900586L) */);
                         break;
                     case 6:
-                        cnh.ac(this.b.dc(), cnb.z(-414683387394858L));
+                        cnh.ac(this.b.dc(), "https://github.com/LSPosed/LSPosed" /* cnb.z(-414683387394858L) */);
                         break;
                     case 7:
-                        cnh.ac(this.b.dc(), cnb.z(-415048459615018L));
+                        cnh.ac(this.b.dc(), "https://github.com/Rosemoe/sora-editor" /* cnb.z(-415048459615018L) */);
                         break;
                     case 8:
-                        cnh.ac(this.b.dc(), cnb.z(-414863776021290L));
+                        cnh.ac(this.b.dc(), "https://github.com/Lagrio" /* cnb.z(-414863776021290L) */);
                         break;
                     case 9:
-                        cnh.ac(this.b.dc(), cnb.z(-417556720515882L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Public" /* cnb.z(-417556720515882L) */);
                         break;
                     case 10:
-                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm(cnb.z(-415645460069162L), Boolean.TRUE)));
+                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm("showOnly" /* cnb.z(-415645460069162L) */, Boolean.TRUE)));
                         break;
                     case 11:
-                        this.b.a.a(cnb.z(-417376331889450L));
+                        this.b.a.a("wauxv_config.zip" /* cnb.z(-417376331889450L) */);
                         break;
                     case 12:
-                        this.b.b.a(cnb.z(-417303317445418L));
+                        this.b.b.a("application/zip" /* cnb.z(-417303317445418L) */);
                         break;
                     case 13:
-                        cnh.ac(this.b.dc(), cnb.z(-417784353782570L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary_CI" /* cnb.z(-417784353782570L) */);
                         break;
                     case 14:
-                        cnh.ac(this.b.dc(), cnb.z(-417707044371242L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary" /* cnb.z(-417707044371242L) */);
                         break;
                     case 15:
-                        cnh.ac(this.b.dc(), cnb.z(-416848050912042L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Plugin" /* cnb.z(-416848050912042L) */);
                         break;
                     case 16:
                         api apiVar = api.a;
                         Context contextDc = this.b.dc();
-                        String strZ3 = cnb.z(-417187353328426L);
+                        String strZ3 = "m02krT/t'4E_$jgJt=2LKNe" /* cnb.z(-417187353328426L) */;
                         apiVar.getClass();
                         api.b(contextDc, strZ3);
                         break;
                     case 17:
-                        cnh.ac(this.b.dc(), cnb.z(-417084274113322L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/hdshare" /* cnb.z(-417084274113322L) */);
                         break;
                     case 18:
                         api apiVar2 = api.a;
                         Context contextDc2 = this.b.dc();
-                        String strZ4 = cnb.z(-414176581253930L);
+                        String strZ4 = "m0eZ$'Q@C9@1WK:'#+D~Bw" /* cnb.z(-414176581253930L) */;
                         apiVar2.getClass();
                         api.b(contextDc2, strZ4);
                         break;
                     case 19:
-                        cnh.ac(this.b.dc(), cnb.z(-414077797006122L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/suzhelan" /* cnb.z(-414077797006122L) */);
                         break;
                     case 20:
-                        cnh.ac(this.b.dc(), cnb.z(-414000487594794L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/YukiHookAPI" /* cnb.z(-414000487594794L) */);
                         break;
                     case 21:
-                        cnh.ac(this.b.dc(), cnb.z(-414314020207402L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/KavaRef" /* cnb.z(-414314020207402L) */);
                         break;
                     default:
-                        cnh.ac(this.b.dc(), cnb.z(-413596760668970L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/BetterAndroid" /* cnb.z(-413596760668970L) */);
                         break;
                 }
             }
         });
         final int i12 = 15;
-        ArrayList arrayListO4 = aaz.o(arrayListO3, aba.ag(nzVar3, nyVar3, new ny(cnb.z(-393092586797866L), cnb.z(-393582213069610L), new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
+        ArrayList arrayListO4 = aaz.o(arrayListO3, aba.ag(nzVar3, nyVar3, new ny("WAuxiliary_Plugin" /* cnb.z(-393092586797866L) */, "HdShare" /* cnb.z(-393582213069610L) */, new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
             public final /* synthetic */ j b;
 
             {
@@ -803,81 +803,81 @@ public final class j extends bdo {
             public final void onClick(View view2) {
                 switch (i12) {
                     case 0:
-                        cnh.ac(this.b.dc(), cnb.z(-413446436813610L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/Hikage" /* cnb.z(-413446436813610L) */);
                         break;
                     case 1:
-                        cnh.ac(this.b.dc(), cnb.z(-413824393935658L));
+                        cnh.ac(this.b.dc(), "https://github.com/LuckyPray/DexKit" /* cnb.z(-413824393935658L) */);
                         break;
                     case 2:
-                        cnh.ac(this.b.dc(), cnb.z(-415284682816298L));
+                        cnh.ac(this.b.dc(), "https://github.com/cinit/QAuxiliary" /* cnb.z(-415284682816298L) */);
                         break;
                     case 3:
-                        cnh.ac(this.b.dc(), cnb.z(-415164423732010L));
+                        cnh.ac(this.b.dc(), "https://github.com/suzhelan/TimTool" /* cnb.z(-415164423732010L) */);
                         break;
                     case 4:
-                        cnh.ac(this.b.dc(), cnb.z(-415525200984874L));
+                        cnh.ac(this.b.dc(), "https://github.com/fankes/TSBattery" /* cnb.z(-415525200984874L) */);
                         break;
                     case 5:
-                        cnh.ac(this.b.dc(), cnb.z(-415404941900586L));
+                        cnh.ac(this.b.dc(), "https://github.com/KitsunePie/QQCleaner" /* cnb.z(-415404941900586L) */);
                         break;
                     case 6:
-                        cnh.ac(this.b.dc(), cnb.z(-414683387394858L));
+                        cnh.ac(this.b.dc(), "https://github.com/LSPosed/LSPosed" /* cnb.z(-414683387394858L) */);
                         break;
                     case 7:
-                        cnh.ac(this.b.dc(), cnb.z(-415048459615018L));
+                        cnh.ac(this.b.dc(), "https://github.com/Rosemoe/sora-editor" /* cnb.z(-415048459615018L) */);
                         break;
                     case 8:
-                        cnh.ac(this.b.dc(), cnb.z(-414863776021290L));
+                        cnh.ac(this.b.dc(), "https://github.com/Lagrio" /* cnb.z(-414863776021290L) */);
                         break;
                     case 9:
-                        cnh.ac(this.b.dc(), cnb.z(-417556720515882L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Public" /* cnb.z(-417556720515882L) */);
                         break;
                     case 10:
-                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm(cnb.z(-415645460069162L), Boolean.TRUE)));
+                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm("showOnly" /* cnb.z(-415645460069162L) */, Boolean.TRUE)));
                         break;
                     case 11:
-                        this.b.a.a(cnb.z(-417376331889450L));
+                        this.b.a.a("wauxv_config.zip" /* cnb.z(-417376331889450L) */);
                         break;
                     case 12:
-                        this.b.b.a(cnb.z(-417303317445418L));
+                        this.b.b.a("application/zip" /* cnb.z(-417303317445418L) */);
                         break;
                     case 13:
-                        cnh.ac(this.b.dc(), cnb.z(-417784353782570L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary_CI" /* cnb.z(-417784353782570L) */);
                         break;
                     case 14:
-                        cnh.ac(this.b.dc(), cnb.z(-417707044371242L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary" /* cnb.z(-417707044371242L) */);
                         break;
                     case 15:
-                        cnh.ac(this.b.dc(), cnb.z(-416848050912042L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Plugin" /* cnb.z(-416848050912042L) */);
                         break;
                     case 16:
                         api apiVar = api.a;
                         Context contextDc = this.b.dc();
-                        String strZ3 = cnb.z(-417187353328426L);
+                        String strZ3 = "m02krT/t'4E_$jgJt=2LKNe" /* cnb.z(-417187353328426L) */;
                         apiVar.getClass();
                         api.b(contextDc, strZ3);
                         break;
                     case 17:
-                        cnh.ac(this.b.dc(), cnb.z(-417084274113322L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/hdshare" /* cnb.z(-417084274113322L) */);
                         break;
                     case 18:
                         api apiVar2 = api.a;
                         Context contextDc2 = this.b.dc();
-                        String strZ4 = cnb.z(-414176581253930L);
+                        String strZ4 = "m0eZ$'Q@C9@1WK:'#+D~Bw" /* cnb.z(-414176581253930L) */;
                         apiVar2.getClass();
                         api.b(contextDc2, strZ4);
                         break;
                     case 19:
-                        cnh.ac(this.b.dc(), cnb.z(-414077797006122L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/suzhelan" /* cnb.z(-414077797006122L) */);
                         break;
                     case 20:
-                        cnh.ac(this.b.dc(), cnb.z(-414000487594794L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/YukiHookAPI" /* cnb.z(-414000487594794L) */);
                         break;
                     case 21:
-                        cnh.ac(this.b.dc(), cnb.z(-414314020207402L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/KavaRef" /* cnb.z(-414314020207402L) */);
                         break;
                     default:
-                        cnh.ac(this.b.dc(), cnb.z(-413596760668970L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/BetterAndroid" /* cnb.z(-413596760668970L) */);
                         break;
                 }
             }
@@ -886,7 +886,7 @@ public final class j extends bdo {
         final int i14 = 17;
         final int i15 = 18;
         final int i16 = 19;
-        ArrayList arrayListO5 = aaz.o(arrayListO4, aba.ag(new nz(cnb.z(-393547853331242L)), new ny(cnb.z(-393552148298538L), cnb.z(-393509198625578L), new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
+        ArrayList arrayListO5 = aaz.o(arrayListO4, aba.ag(new nz("打赏" /* cnb.z(-393547853331242L) */), new ny("微信-Hd" /* cnb.z(-393552148298538L) */, "Hd" /* cnb.z(-393509198625578L) */, new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
             public final /* synthetic */ j b;
 
             {
@@ -897,85 +897,85 @@ public final class j extends bdo {
             public final void onClick(View view2) {
                 switch (i13) {
                     case 0:
-                        cnh.ac(this.b.dc(), cnb.z(-413446436813610L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/Hikage" /* cnb.z(-413446436813610L) */);
                         break;
                     case 1:
-                        cnh.ac(this.b.dc(), cnb.z(-413824393935658L));
+                        cnh.ac(this.b.dc(), "https://github.com/LuckyPray/DexKit" /* cnb.z(-413824393935658L) */);
                         break;
                     case 2:
-                        cnh.ac(this.b.dc(), cnb.z(-415284682816298L));
+                        cnh.ac(this.b.dc(), "https://github.com/cinit/QAuxiliary" /* cnb.z(-415284682816298L) */);
                         break;
                     case 3:
-                        cnh.ac(this.b.dc(), cnb.z(-415164423732010L));
+                        cnh.ac(this.b.dc(), "https://github.com/suzhelan/TimTool" /* cnb.z(-415164423732010L) */);
                         break;
                     case 4:
-                        cnh.ac(this.b.dc(), cnb.z(-415525200984874L));
+                        cnh.ac(this.b.dc(), "https://github.com/fankes/TSBattery" /* cnb.z(-415525200984874L) */);
                         break;
                     case 5:
-                        cnh.ac(this.b.dc(), cnb.z(-415404941900586L));
+                        cnh.ac(this.b.dc(), "https://github.com/KitsunePie/QQCleaner" /* cnb.z(-415404941900586L) */);
                         break;
                     case 6:
-                        cnh.ac(this.b.dc(), cnb.z(-414683387394858L));
+                        cnh.ac(this.b.dc(), "https://github.com/LSPosed/LSPosed" /* cnb.z(-414683387394858L) */);
                         break;
                     case 7:
-                        cnh.ac(this.b.dc(), cnb.z(-415048459615018L));
+                        cnh.ac(this.b.dc(), "https://github.com/Rosemoe/sora-editor" /* cnb.z(-415048459615018L) */);
                         break;
                     case 8:
-                        cnh.ac(this.b.dc(), cnb.z(-414863776021290L));
+                        cnh.ac(this.b.dc(), "https://github.com/Lagrio" /* cnb.z(-414863776021290L) */);
                         break;
                     case 9:
-                        cnh.ac(this.b.dc(), cnb.z(-417556720515882L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Public" /* cnb.z(-417556720515882L) */);
                         break;
                     case 10:
-                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm(cnb.z(-415645460069162L), Boolean.TRUE)));
+                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm("showOnly" /* cnb.z(-415645460069162L) */, Boolean.TRUE)));
                         break;
                     case 11:
-                        this.b.a.a(cnb.z(-417376331889450L));
+                        this.b.a.a("wauxv_config.zip" /* cnb.z(-417376331889450L) */);
                         break;
                     case 12:
-                        this.b.b.a(cnb.z(-417303317445418L));
+                        this.b.b.a("application/zip" /* cnb.z(-417303317445418L) */);
                         break;
                     case 13:
-                        cnh.ac(this.b.dc(), cnb.z(-417784353782570L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary_CI" /* cnb.z(-417784353782570L) */);
                         break;
                     case 14:
-                        cnh.ac(this.b.dc(), cnb.z(-417707044371242L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary" /* cnb.z(-417707044371242L) */);
                         break;
                     case 15:
-                        cnh.ac(this.b.dc(), cnb.z(-416848050912042L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Plugin" /* cnb.z(-416848050912042L) */);
                         break;
                     case 16:
                         api apiVar = api.a;
                         Context contextDc = this.b.dc();
-                        String strZ3 = cnb.z(-417187353328426L);
+                        String strZ3 = "m02krT/t'4E_$jgJt=2LKNe" /* cnb.z(-417187353328426L) */;
                         apiVar.getClass();
                         api.b(contextDc, strZ3);
                         break;
                     case 17:
-                        cnh.ac(this.b.dc(), cnb.z(-417084274113322L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/hdshare" /* cnb.z(-417084274113322L) */);
                         break;
                     case 18:
                         api apiVar2 = api.a;
                         Context contextDc2 = this.b.dc();
-                        String strZ4 = cnb.z(-414176581253930L);
+                        String strZ4 = "m0eZ$'Q@C9@1WK:'#+D~Bw" /* cnb.z(-414176581253930L) */;
                         apiVar2.getClass();
                         api.b(contextDc2, strZ4);
                         break;
                     case 19:
-                        cnh.ac(this.b.dc(), cnb.z(-414077797006122L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/suzhelan" /* cnb.z(-414077797006122L) */);
                         break;
                     case 20:
-                        cnh.ac(this.b.dc(), cnb.z(-414000487594794L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/YukiHookAPI" /* cnb.z(-414000487594794L) */);
                         break;
                     case 21:
-                        cnh.ac(this.b.dc(), cnb.z(-414314020207402L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/KavaRef" /* cnb.z(-414314020207402L) */);
                         break;
                     default:
-                        cnh.ac(this.b.dc(), cnb.z(-413596760668970L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/BetterAndroid" /* cnb.z(-413596760668970L) */);
                         break;
                 }
             }
-        }), new ny(cnb.z(-393461953985322L), cnb.z(-393444774116138L), new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
+        }), new ny("爱发电-HdShare" /* cnb.z(-393461953985322L) */, "HdShare" /* cnb.z(-393444774116138L) */, new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
             public final /* synthetic */ j b;
 
             {
@@ -986,85 +986,85 @@ public final class j extends bdo {
             public final void onClick(View view2) {
                 switch (i14) {
                     case 0:
-                        cnh.ac(this.b.dc(), cnb.z(-413446436813610L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/Hikage" /* cnb.z(-413446436813610L) */);
                         break;
                     case 1:
-                        cnh.ac(this.b.dc(), cnb.z(-413824393935658L));
+                        cnh.ac(this.b.dc(), "https://github.com/LuckyPray/DexKit" /* cnb.z(-413824393935658L) */);
                         break;
                     case 2:
-                        cnh.ac(this.b.dc(), cnb.z(-415284682816298L));
+                        cnh.ac(this.b.dc(), "https://github.com/cinit/QAuxiliary" /* cnb.z(-415284682816298L) */);
                         break;
                     case 3:
-                        cnh.ac(this.b.dc(), cnb.z(-415164423732010L));
+                        cnh.ac(this.b.dc(), "https://github.com/suzhelan/TimTool" /* cnb.z(-415164423732010L) */);
                         break;
                     case 4:
-                        cnh.ac(this.b.dc(), cnb.z(-415525200984874L));
+                        cnh.ac(this.b.dc(), "https://github.com/fankes/TSBattery" /* cnb.z(-415525200984874L) */);
                         break;
                     case 5:
-                        cnh.ac(this.b.dc(), cnb.z(-415404941900586L));
+                        cnh.ac(this.b.dc(), "https://github.com/KitsunePie/QQCleaner" /* cnb.z(-415404941900586L) */);
                         break;
                     case 6:
-                        cnh.ac(this.b.dc(), cnb.z(-414683387394858L));
+                        cnh.ac(this.b.dc(), "https://github.com/LSPosed/LSPosed" /* cnb.z(-414683387394858L) */);
                         break;
                     case 7:
-                        cnh.ac(this.b.dc(), cnb.z(-415048459615018L));
+                        cnh.ac(this.b.dc(), "https://github.com/Rosemoe/sora-editor" /* cnb.z(-415048459615018L) */);
                         break;
                     case 8:
-                        cnh.ac(this.b.dc(), cnb.z(-414863776021290L));
+                        cnh.ac(this.b.dc(), "https://github.com/Lagrio" /* cnb.z(-414863776021290L) */);
                         break;
                     case 9:
-                        cnh.ac(this.b.dc(), cnb.z(-417556720515882L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Public" /* cnb.z(-417556720515882L) */);
                         break;
                     case 10:
-                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm(cnb.z(-415645460069162L), Boolean.TRUE)));
+                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm("showOnly" /* cnb.z(-415645460069162L) */, Boolean.TRUE)));
                         break;
                     case 11:
-                        this.b.a.a(cnb.z(-417376331889450L));
+                        this.b.a.a("wauxv_config.zip" /* cnb.z(-417376331889450L) */);
                         break;
                     case 12:
-                        this.b.b.a(cnb.z(-417303317445418L));
+                        this.b.b.a("application/zip" /* cnb.z(-417303317445418L) */);
                         break;
                     case 13:
-                        cnh.ac(this.b.dc(), cnb.z(-417784353782570L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary_CI" /* cnb.z(-417784353782570L) */);
                         break;
                     case 14:
-                        cnh.ac(this.b.dc(), cnb.z(-417707044371242L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary" /* cnb.z(-417707044371242L) */);
                         break;
                     case 15:
-                        cnh.ac(this.b.dc(), cnb.z(-416848050912042L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Plugin" /* cnb.z(-416848050912042L) */);
                         break;
                     case 16:
                         api apiVar = api.a;
                         Context contextDc = this.b.dc();
-                        String strZ3 = cnb.z(-417187353328426L);
+                        String strZ3 = "m02krT/t'4E_$jgJt=2LKNe" /* cnb.z(-417187353328426L) */;
                         apiVar.getClass();
                         api.b(contextDc, strZ3);
                         break;
                     case 17:
-                        cnh.ac(this.b.dc(), cnb.z(-417084274113322L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/hdshare" /* cnb.z(-417084274113322L) */);
                         break;
                     case 18:
                         api apiVar2 = api.a;
                         Context contextDc2 = this.b.dc();
-                        String strZ4 = cnb.z(-414176581253930L);
+                        String strZ4 = "m0eZ$'Q@C9@1WK:'#+D~Bw" /* cnb.z(-414176581253930L) */;
                         apiVar2.getClass();
                         api.b(contextDc2, strZ4);
                         break;
                     case 19:
-                        cnh.ac(this.b.dc(), cnb.z(-414077797006122L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/suzhelan" /* cnb.z(-414077797006122L) */);
                         break;
                     case 20:
-                        cnh.ac(this.b.dc(), cnb.z(-414000487594794L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/YukiHookAPI" /* cnb.z(-414000487594794L) */);
                         break;
                     case 21:
-                        cnh.ac(this.b.dc(), cnb.z(-414314020207402L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/KavaRef" /* cnb.z(-414314020207402L) */);
                         break;
                     default:
-                        cnh.ac(this.b.dc(), cnb.z(-413596760668970L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/BetterAndroid" /* cnb.z(-413596760668970L) */);
                         break;
                 }
             }
-        }), new ny(cnb.z(-393410414377770L), cnb.z(-393367464704810L), new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
+        }), new ny("微信-久雾" /* cnb.z(-393410414377770L) */, "lovejiuwu" /* cnb.z(-393367464704810L) */, new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
             public final /* synthetic */ j b;
 
             {
@@ -1075,85 +1075,85 @@ public final class j extends bdo {
             public final void onClick(View view2) {
                 switch (i15) {
                     case 0:
-                        cnh.ac(this.b.dc(), cnb.z(-413446436813610L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/Hikage" /* cnb.z(-413446436813610L) */);
                         break;
                     case 1:
-                        cnh.ac(this.b.dc(), cnb.z(-413824393935658L));
+                        cnh.ac(this.b.dc(), "https://github.com/LuckyPray/DexKit" /* cnb.z(-413824393935658L) */);
                         break;
                     case 2:
-                        cnh.ac(this.b.dc(), cnb.z(-415284682816298L));
+                        cnh.ac(this.b.dc(), "https://github.com/cinit/QAuxiliary" /* cnb.z(-415284682816298L) */);
                         break;
                     case 3:
-                        cnh.ac(this.b.dc(), cnb.z(-415164423732010L));
+                        cnh.ac(this.b.dc(), "https://github.com/suzhelan/TimTool" /* cnb.z(-415164423732010L) */);
                         break;
                     case 4:
-                        cnh.ac(this.b.dc(), cnb.z(-415525200984874L));
+                        cnh.ac(this.b.dc(), "https://github.com/fankes/TSBattery" /* cnb.z(-415525200984874L) */);
                         break;
                     case 5:
-                        cnh.ac(this.b.dc(), cnb.z(-415404941900586L));
+                        cnh.ac(this.b.dc(), "https://github.com/KitsunePie/QQCleaner" /* cnb.z(-415404941900586L) */);
                         break;
                     case 6:
-                        cnh.ac(this.b.dc(), cnb.z(-414683387394858L));
+                        cnh.ac(this.b.dc(), "https://github.com/LSPosed/LSPosed" /* cnb.z(-414683387394858L) */);
                         break;
                     case 7:
-                        cnh.ac(this.b.dc(), cnb.z(-415048459615018L));
+                        cnh.ac(this.b.dc(), "https://github.com/Rosemoe/sora-editor" /* cnb.z(-415048459615018L) */);
                         break;
                     case 8:
-                        cnh.ac(this.b.dc(), cnb.z(-414863776021290L));
+                        cnh.ac(this.b.dc(), "https://github.com/Lagrio" /* cnb.z(-414863776021290L) */);
                         break;
                     case 9:
-                        cnh.ac(this.b.dc(), cnb.z(-417556720515882L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Public" /* cnb.z(-417556720515882L) */);
                         break;
                     case 10:
-                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm(cnb.z(-415645460069162L), Boolean.TRUE)));
+                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm("showOnly" /* cnb.z(-415645460069162L) */, Boolean.TRUE)));
                         break;
                     case 11:
-                        this.b.a.a(cnb.z(-417376331889450L));
+                        this.b.a.a("wauxv_config.zip" /* cnb.z(-417376331889450L) */);
                         break;
                     case 12:
-                        this.b.b.a(cnb.z(-417303317445418L));
+                        this.b.b.a("application/zip" /* cnb.z(-417303317445418L) */);
                         break;
                     case 13:
-                        cnh.ac(this.b.dc(), cnb.z(-417784353782570L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary_CI" /* cnb.z(-417784353782570L) */);
                         break;
                     case 14:
-                        cnh.ac(this.b.dc(), cnb.z(-417707044371242L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary" /* cnb.z(-417707044371242L) */);
                         break;
                     case 15:
-                        cnh.ac(this.b.dc(), cnb.z(-416848050912042L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Plugin" /* cnb.z(-416848050912042L) */);
                         break;
                     case 16:
                         api apiVar = api.a;
                         Context contextDc = this.b.dc();
-                        String strZ3 = cnb.z(-417187353328426L);
+                        String strZ3 = "m02krT/t'4E_$jgJt=2LKNe" /* cnb.z(-417187353328426L) */;
                         apiVar.getClass();
                         api.b(contextDc, strZ3);
                         break;
                     case 17:
-                        cnh.ac(this.b.dc(), cnb.z(-417084274113322L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/hdshare" /* cnb.z(-417084274113322L) */);
                         break;
                     case 18:
                         api apiVar2 = api.a;
                         Context contextDc2 = this.b.dc();
-                        String strZ4 = cnb.z(-414176581253930L);
+                        String strZ4 = "m0eZ$'Q@C9@1WK:'#+D~Bw" /* cnb.z(-414176581253930L) */;
                         apiVar2.getClass();
                         api.b(contextDc2, strZ4);
                         break;
                     case 19:
-                        cnh.ac(this.b.dc(), cnb.z(-414077797006122L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/suzhelan" /* cnb.z(-414077797006122L) */);
                         break;
                     case 20:
-                        cnh.ac(this.b.dc(), cnb.z(-414000487594794L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/YukiHookAPI" /* cnb.z(-414000487594794L) */);
                         break;
                     case 21:
-                        cnh.ac(this.b.dc(), cnb.z(-414314020207402L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/KavaRef" /* cnb.z(-414314020207402L) */);
                         break;
                     default:
-                        cnh.ac(this.b.dc(), cnb.z(-413596760668970L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/BetterAndroid" /* cnb.z(-413596760668970L) */);
                         break;
                 }
             }
-        }), new ny(cnb.z(-392791939087146L), cnb.z(-392753284381482L), new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
+        }), new ny("爱发电-言子楪世" /* cnb.z(-392791939087146L) */, "suzhelan" /* cnb.z(-392753284381482L) */, new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
             public final /* synthetic */ j b;
 
             {
@@ -1164,81 +1164,81 @@ public final class j extends bdo {
             public final void onClick(View view2) {
                 switch (i16) {
                     case 0:
-                        cnh.ac(this.b.dc(), cnb.z(-413446436813610L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/Hikage" /* cnb.z(-413446436813610L) */);
                         break;
                     case 1:
-                        cnh.ac(this.b.dc(), cnb.z(-413824393935658L));
+                        cnh.ac(this.b.dc(), "https://github.com/LuckyPray/DexKit" /* cnb.z(-413824393935658L) */);
                         break;
                     case 2:
-                        cnh.ac(this.b.dc(), cnb.z(-415284682816298L));
+                        cnh.ac(this.b.dc(), "https://github.com/cinit/QAuxiliary" /* cnb.z(-415284682816298L) */);
                         break;
                     case 3:
-                        cnh.ac(this.b.dc(), cnb.z(-415164423732010L));
+                        cnh.ac(this.b.dc(), "https://github.com/suzhelan/TimTool" /* cnb.z(-415164423732010L) */);
                         break;
                     case 4:
-                        cnh.ac(this.b.dc(), cnb.z(-415525200984874L));
+                        cnh.ac(this.b.dc(), "https://github.com/fankes/TSBattery" /* cnb.z(-415525200984874L) */);
                         break;
                     case 5:
-                        cnh.ac(this.b.dc(), cnb.z(-415404941900586L));
+                        cnh.ac(this.b.dc(), "https://github.com/KitsunePie/QQCleaner" /* cnb.z(-415404941900586L) */);
                         break;
                     case 6:
-                        cnh.ac(this.b.dc(), cnb.z(-414683387394858L));
+                        cnh.ac(this.b.dc(), "https://github.com/LSPosed/LSPosed" /* cnb.z(-414683387394858L) */);
                         break;
                     case 7:
-                        cnh.ac(this.b.dc(), cnb.z(-415048459615018L));
+                        cnh.ac(this.b.dc(), "https://github.com/Rosemoe/sora-editor" /* cnb.z(-415048459615018L) */);
                         break;
                     case 8:
-                        cnh.ac(this.b.dc(), cnb.z(-414863776021290L));
+                        cnh.ac(this.b.dc(), "https://github.com/Lagrio" /* cnb.z(-414863776021290L) */);
                         break;
                     case 9:
-                        cnh.ac(this.b.dc(), cnb.z(-417556720515882L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Public" /* cnb.z(-417556720515882L) */);
                         break;
                     case 10:
-                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm(cnb.z(-415645460069162L), Boolean.TRUE)));
+                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm("showOnly" /* cnb.z(-415645460069162L) */, Boolean.TRUE)));
                         break;
                     case 11:
-                        this.b.a.a(cnb.z(-417376331889450L));
+                        this.b.a.a("wauxv_config.zip" /* cnb.z(-417376331889450L) */);
                         break;
                     case 12:
-                        this.b.b.a(cnb.z(-417303317445418L));
+                        this.b.b.a("application/zip" /* cnb.z(-417303317445418L) */);
                         break;
                     case 13:
-                        cnh.ac(this.b.dc(), cnb.z(-417784353782570L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary_CI" /* cnb.z(-417784353782570L) */);
                         break;
                     case 14:
-                        cnh.ac(this.b.dc(), cnb.z(-417707044371242L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary" /* cnb.z(-417707044371242L) */);
                         break;
                     case 15:
-                        cnh.ac(this.b.dc(), cnb.z(-416848050912042L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Plugin" /* cnb.z(-416848050912042L) */);
                         break;
                     case 16:
                         api apiVar = api.a;
                         Context contextDc = this.b.dc();
-                        String strZ3 = cnb.z(-417187353328426L);
+                        String strZ3 = "m02krT/t'4E_$jgJt=2LKNe" /* cnb.z(-417187353328426L) */;
                         apiVar.getClass();
                         api.b(contextDc, strZ3);
                         break;
                     case 17:
-                        cnh.ac(this.b.dc(), cnb.z(-417084274113322L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/hdshare" /* cnb.z(-417084274113322L) */);
                         break;
                     case 18:
                         api apiVar2 = api.a;
                         Context contextDc2 = this.b.dc();
-                        String strZ4 = cnb.z(-414176581253930L);
+                        String strZ4 = "m0eZ$'Q@C9@1WK:'#+D~Bw" /* cnb.z(-414176581253930L) */;
                         apiVar2.getClass();
                         api.b(contextDc2, strZ4);
                         break;
                     case 19:
-                        cnh.ac(this.b.dc(), cnb.z(-414077797006122L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/suzhelan" /* cnb.z(-414077797006122L) */);
                         break;
                     case 20:
-                        cnh.ac(this.b.dc(), cnb.z(-414000487594794L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/YukiHookAPI" /* cnb.z(-414000487594794L) */);
                         break;
                     case 21:
-                        cnh.ac(this.b.dc(), cnb.z(-414314020207402L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/KavaRef" /* cnb.z(-414314020207402L) */);
                         break;
                     default:
-                        cnh.ac(this.b.dc(), cnb.z(-413596760668970L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/BetterAndroid" /* cnb.z(-413596760668970L) */);
                         break;
                 }
             }
@@ -1250,7 +1250,7 @@ public final class j extends bdo {
         final int i21 = 6;
         final int i22 = 7;
         final int i23 = 8;
-        recyclerView.setAdapter(new eqi(aaz.o(arrayListO5, aba.ag(new nz(cnb.z(-392731809545002L)), new ny(cnb.z(-392667385035562L), cnb.z(-392650205166378L), new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
+        recyclerView.setAdapter(new eqi(aaz.o(arrayListO5, aba.ag(new nz("致谢" /* cnb.z(-392731809545002L) */), new ny("YukiHookAPI" /* cnb.z(-392667385035562L) */, "HighCapable" /* cnb.z(-392650205166378L) */, new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
             public final /* synthetic */ j b;
 
             {
@@ -1261,85 +1261,85 @@ public final class j extends bdo {
             public final void onClick(View view2) {
                 switch (i17) {
                     case 0:
-                        cnh.ac(this.b.dc(), cnb.z(-413446436813610L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/Hikage" /* cnb.z(-413446436813610L) */);
                         break;
                     case 1:
-                        cnh.ac(this.b.dc(), cnb.z(-413824393935658L));
+                        cnh.ac(this.b.dc(), "https://github.com/LuckyPray/DexKit" /* cnb.z(-413824393935658L) */);
                         break;
                     case 2:
-                        cnh.ac(this.b.dc(), cnb.z(-415284682816298L));
+                        cnh.ac(this.b.dc(), "https://github.com/cinit/QAuxiliary" /* cnb.z(-415284682816298L) */);
                         break;
                     case 3:
-                        cnh.ac(this.b.dc(), cnb.z(-415164423732010L));
+                        cnh.ac(this.b.dc(), "https://github.com/suzhelan/TimTool" /* cnb.z(-415164423732010L) */);
                         break;
                     case 4:
-                        cnh.ac(this.b.dc(), cnb.z(-415525200984874L));
+                        cnh.ac(this.b.dc(), "https://github.com/fankes/TSBattery" /* cnb.z(-415525200984874L) */);
                         break;
                     case 5:
-                        cnh.ac(this.b.dc(), cnb.z(-415404941900586L));
+                        cnh.ac(this.b.dc(), "https://github.com/KitsunePie/QQCleaner" /* cnb.z(-415404941900586L) */);
                         break;
                     case 6:
-                        cnh.ac(this.b.dc(), cnb.z(-414683387394858L));
+                        cnh.ac(this.b.dc(), "https://github.com/LSPosed/LSPosed" /* cnb.z(-414683387394858L) */);
                         break;
                     case 7:
-                        cnh.ac(this.b.dc(), cnb.z(-415048459615018L));
+                        cnh.ac(this.b.dc(), "https://github.com/Rosemoe/sora-editor" /* cnb.z(-415048459615018L) */);
                         break;
                     case 8:
-                        cnh.ac(this.b.dc(), cnb.z(-414863776021290L));
+                        cnh.ac(this.b.dc(), "https://github.com/Lagrio" /* cnb.z(-414863776021290L) */);
                         break;
                     case 9:
-                        cnh.ac(this.b.dc(), cnb.z(-417556720515882L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Public" /* cnb.z(-417556720515882L) */);
                         break;
                     case 10:
-                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm(cnb.z(-415645460069162L), Boolean.TRUE)));
+                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm("showOnly" /* cnb.z(-415645460069162L) */, Boolean.TRUE)));
                         break;
                     case 11:
-                        this.b.a.a(cnb.z(-417376331889450L));
+                        this.b.a.a("wauxv_config.zip" /* cnb.z(-417376331889450L) */);
                         break;
                     case 12:
-                        this.b.b.a(cnb.z(-417303317445418L));
+                        this.b.b.a("application/zip" /* cnb.z(-417303317445418L) */);
                         break;
                     case 13:
-                        cnh.ac(this.b.dc(), cnb.z(-417784353782570L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary_CI" /* cnb.z(-417784353782570L) */);
                         break;
                     case 14:
-                        cnh.ac(this.b.dc(), cnb.z(-417707044371242L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary" /* cnb.z(-417707044371242L) */);
                         break;
                     case 15:
-                        cnh.ac(this.b.dc(), cnb.z(-416848050912042L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Plugin" /* cnb.z(-416848050912042L) */);
                         break;
                     case 16:
                         api apiVar = api.a;
                         Context contextDc = this.b.dc();
-                        String strZ3 = cnb.z(-417187353328426L);
+                        String strZ3 = "m02krT/t'4E_$jgJt=2LKNe" /* cnb.z(-417187353328426L) */;
                         apiVar.getClass();
                         api.b(contextDc, strZ3);
                         break;
                     case 17:
-                        cnh.ac(this.b.dc(), cnb.z(-417084274113322L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/hdshare" /* cnb.z(-417084274113322L) */);
                         break;
                     case 18:
                         api apiVar2 = api.a;
                         Context contextDc2 = this.b.dc();
-                        String strZ4 = cnb.z(-414176581253930L);
+                        String strZ4 = "m0eZ$'Q@C9@1WK:'#+D~Bw" /* cnb.z(-414176581253930L) */;
                         apiVar2.getClass();
                         api.b(contextDc2, strZ4);
                         break;
                     case 19:
-                        cnh.ac(this.b.dc(), cnb.z(-414077797006122L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/suzhelan" /* cnb.z(-414077797006122L) */);
                         break;
                     case 20:
-                        cnh.ac(this.b.dc(), cnb.z(-414000487594794L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/YukiHookAPI" /* cnb.z(-414000487594794L) */);
                         break;
                     case 21:
-                        cnh.ac(this.b.dc(), cnb.z(-414314020207402L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/KavaRef" /* cnb.z(-414314020207402L) */);
                         break;
                     default:
-                        cnh.ac(this.b.dc(), cnb.z(-413596760668970L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/BetterAndroid" /* cnb.z(-413596760668970L) */);
                         break;
                 }
             }
-        }), new ny(cnb.z(-392564305820458L), cnb.z(-392529946082090L), new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
+        }), new ny("KavaRef" /* cnb.z(-392564305820458L) */, "HighCapable" /* cnb.z(-392529946082090L) */, new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
             public final /* synthetic */ j b;
 
             {
@@ -1350,85 +1350,85 @@ public final class j extends bdo {
             public final void onClick(View view2) {
                 switch (i18) {
                     case 0:
-                        cnh.ac(this.b.dc(), cnb.z(-413446436813610L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/Hikage" /* cnb.z(-413446436813610L) */);
                         break;
                     case 1:
-                        cnh.ac(this.b.dc(), cnb.z(-413824393935658L));
+                        cnh.ac(this.b.dc(), "https://github.com/LuckyPray/DexKit" /* cnb.z(-413824393935658L) */);
                         break;
                     case 2:
-                        cnh.ac(this.b.dc(), cnb.z(-415284682816298L));
+                        cnh.ac(this.b.dc(), "https://github.com/cinit/QAuxiliary" /* cnb.z(-415284682816298L) */);
                         break;
                     case 3:
-                        cnh.ac(this.b.dc(), cnb.z(-415164423732010L));
+                        cnh.ac(this.b.dc(), "https://github.com/suzhelan/TimTool" /* cnb.z(-415164423732010L) */);
                         break;
                     case 4:
-                        cnh.ac(this.b.dc(), cnb.z(-415525200984874L));
+                        cnh.ac(this.b.dc(), "https://github.com/fankes/TSBattery" /* cnb.z(-415525200984874L) */);
                         break;
                     case 5:
-                        cnh.ac(this.b.dc(), cnb.z(-415404941900586L));
+                        cnh.ac(this.b.dc(), "https://github.com/KitsunePie/QQCleaner" /* cnb.z(-415404941900586L) */);
                         break;
                     case 6:
-                        cnh.ac(this.b.dc(), cnb.z(-414683387394858L));
+                        cnh.ac(this.b.dc(), "https://github.com/LSPosed/LSPosed" /* cnb.z(-414683387394858L) */);
                         break;
                     case 7:
-                        cnh.ac(this.b.dc(), cnb.z(-415048459615018L));
+                        cnh.ac(this.b.dc(), "https://github.com/Rosemoe/sora-editor" /* cnb.z(-415048459615018L) */);
                         break;
                     case 8:
-                        cnh.ac(this.b.dc(), cnb.z(-414863776021290L));
+                        cnh.ac(this.b.dc(), "https://github.com/Lagrio" /* cnb.z(-414863776021290L) */);
                         break;
                     case 9:
-                        cnh.ac(this.b.dc(), cnb.z(-417556720515882L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Public" /* cnb.z(-417556720515882L) */);
                         break;
                     case 10:
-                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm(cnb.z(-415645460069162L), Boolean.TRUE)));
+                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm("showOnly" /* cnb.z(-415645460069162L) */, Boolean.TRUE)));
                         break;
                     case 11:
-                        this.b.a.a(cnb.z(-417376331889450L));
+                        this.b.a.a("wauxv_config.zip" /* cnb.z(-417376331889450L) */);
                         break;
                     case 12:
-                        this.b.b.a(cnb.z(-417303317445418L));
+                        this.b.b.a("application/zip" /* cnb.z(-417303317445418L) */);
                         break;
                     case 13:
-                        cnh.ac(this.b.dc(), cnb.z(-417784353782570L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary_CI" /* cnb.z(-417784353782570L) */);
                         break;
                     case 14:
-                        cnh.ac(this.b.dc(), cnb.z(-417707044371242L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary" /* cnb.z(-417707044371242L) */);
                         break;
                     case 15:
-                        cnh.ac(this.b.dc(), cnb.z(-416848050912042L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Plugin" /* cnb.z(-416848050912042L) */);
                         break;
                     case 16:
                         api apiVar = api.a;
                         Context contextDc = this.b.dc();
-                        String strZ3 = cnb.z(-417187353328426L);
+                        String strZ3 = "m02krT/t'4E_$jgJt=2LKNe" /* cnb.z(-417187353328426L) */;
                         apiVar.getClass();
                         api.b(contextDc, strZ3);
                         break;
                     case 17:
-                        cnh.ac(this.b.dc(), cnb.z(-417084274113322L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/hdshare" /* cnb.z(-417084274113322L) */);
                         break;
                     case 18:
                         api apiVar2 = api.a;
                         Context contextDc2 = this.b.dc();
-                        String strZ4 = cnb.z(-414176581253930L);
+                        String strZ4 = "m0eZ$'Q@C9@1WK:'#+D~Bw" /* cnb.z(-414176581253930L) */;
                         apiVar2.getClass();
                         api.b(contextDc2, strZ4);
                         break;
                     case 19:
-                        cnh.ac(this.b.dc(), cnb.z(-414077797006122L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/suzhelan" /* cnb.z(-414077797006122L) */);
                         break;
                     case 20:
-                        cnh.ac(this.b.dc(), cnb.z(-414000487594794L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/YukiHookAPI" /* cnb.z(-414000487594794L) */);
                         break;
                     case 21:
-                        cnh.ac(this.b.dc(), cnb.z(-414314020207402L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/KavaRef" /* cnb.z(-414314020207402L) */);
                         break;
                     default:
-                        cnh.ac(this.b.dc(), cnb.z(-413596760668970L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/BetterAndroid" /* cnb.z(-413596760668970L) */);
                         break;
                 }
             }
-        }), new ny(cnb.z(-393062522026794L), cnb.z(-392985212615466L), new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
+        }), new ny("BetterAndroid" /* cnb.z(-393062522026794L) */, "BetterAndroid" /* cnb.z(-392985212615466L) */, new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
             public final /* synthetic */ j b;
 
             {
@@ -1439,85 +1439,85 @@ public final class j extends bdo {
             public final void onClick(View view2) {
                 switch (i19) {
                     case 0:
-                        cnh.ac(this.b.dc(), cnb.z(-413446436813610L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/Hikage" /* cnb.z(-413446436813610L) */);
                         break;
                     case 1:
-                        cnh.ac(this.b.dc(), cnb.z(-413824393935658L));
+                        cnh.ac(this.b.dc(), "https://github.com/LuckyPray/DexKit" /* cnb.z(-413824393935658L) */);
                         break;
                     case 2:
-                        cnh.ac(this.b.dc(), cnb.z(-415284682816298L));
+                        cnh.ac(this.b.dc(), "https://github.com/cinit/QAuxiliary" /* cnb.z(-415284682816298L) */);
                         break;
                     case 3:
-                        cnh.ac(this.b.dc(), cnb.z(-415164423732010L));
+                        cnh.ac(this.b.dc(), "https://github.com/suzhelan/TimTool" /* cnb.z(-415164423732010L) */);
                         break;
                     case 4:
-                        cnh.ac(this.b.dc(), cnb.z(-415525200984874L));
+                        cnh.ac(this.b.dc(), "https://github.com/fankes/TSBattery" /* cnb.z(-415525200984874L) */);
                         break;
                     case 5:
-                        cnh.ac(this.b.dc(), cnb.z(-415404941900586L));
+                        cnh.ac(this.b.dc(), "https://github.com/KitsunePie/QQCleaner" /* cnb.z(-415404941900586L) */);
                         break;
                     case 6:
-                        cnh.ac(this.b.dc(), cnb.z(-414683387394858L));
+                        cnh.ac(this.b.dc(), "https://github.com/LSPosed/LSPosed" /* cnb.z(-414683387394858L) */);
                         break;
                     case 7:
-                        cnh.ac(this.b.dc(), cnb.z(-415048459615018L));
+                        cnh.ac(this.b.dc(), "https://github.com/Rosemoe/sora-editor" /* cnb.z(-415048459615018L) */);
                         break;
                     case 8:
-                        cnh.ac(this.b.dc(), cnb.z(-414863776021290L));
+                        cnh.ac(this.b.dc(), "https://github.com/Lagrio" /* cnb.z(-414863776021290L) */);
                         break;
                     case 9:
-                        cnh.ac(this.b.dc(), cnb.z(-417556720515882L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Public" /* cnb.z(-417556720515882L) */);
                         break;
                     case 10:
-                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm(cnb.z(-415645460069162L), Boolean.TRUE)));
+                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm("showOnly" /* cnb.z(-415645460069162L) */, Boolean.TRUE)));
                         break;
                     case 11:
-                        this.b.a.a(cnb.z(-417376331889450L));
+                        this.b.a.a("wauxv_config.zip" /* cnb.z(-417376331889450L) */);
                         break;
                     case 12:
-                        this.b.b.a(cnb.z(-417303317445418L));
+                        this.b.b.a("application/zip" /* cnb.z(-417303317445418L) */);
                         break;
                     case 13:
-                        cnh.ac(this.b.dc(), cnb.z(-417784353782570L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary_CI" /* cnb.z(-417784353782570L) */);
                         break;
                     case 14:
-                        cnh.ac(this.b.dc(), cnb.z(-417707044371242L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary" /* cnb.z(-417707044371242L) */);
                         break;
                     case 15:
-                        cnh.ac(this.b.dc(), cnb.z(-416848050912042L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Plugin" /* cnb.z(-416848050912042L) */);
                         break;
                     case 16:
                         api apiVar = api.a;
                         Context contextDc = this.b.dc();
-                        String strZ3 = cnb.z(-417187353328426L);
+                        String strZ3 = "m02krT/t'4E_$jgJt=2LKNe" /* cnb.z(-417187353328426L) */;
                         apiVar.getClass();
                         api.b(contextDc, strZ3);
                         break;
                     case 17:
-                        cnh.ac(this.b.dc(), cnb.z(-417084274113322L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/hdshare" /* cnb.z(-417084274113322L) */);
                         break;
                     case 18:
                         api apiVar2 = api.a;
                         Context contextDc2 = this.b.dc();
-                        String strZ4 = cnb.z(-414176581253930L);
+                        String strZ4 = "m0eZ$'Q@C9@1WK:'#+D~Bw" /* cnb.z(-414176581253930L) */;
                         apiVar2.getClass();
                         api.b(contextDc2, strZ4);
                         break;
                     case 19:
-                        cnh.ac(this.b.dc(), cnb.z(-414077797006122L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/suzhelan" /* cnb.z(-414077797006122L) */);
                         break;
                     case 20:
-                        cnh.ac(this.b.dc(), cnb.z(-414000487594794L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/YukiHookAPI" /* cnb.z(-414000487594794L) */);
                         break;
                     case 21:
-                        cnh.ac(this.b.dc(), cnb.z(-414314020207402L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/KavaRef" /* cnb.z(-414314020207402L) */);
                         break;
                     default:
-                        cnh.ac(this.b.dc(), cnb.z(-413596760668970L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/BetterAndroid" /* cnb.z(-413596760668970L) */);
                         break;
                 }
             }
-        }), new ny(cnb.z(-392907903204138L), cnb.z(-392877838433066L), new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
+        }), new ny("Hikage" /* cnb.z(-392907903204138L) */, "BetterAndroid" /* cnb.z(-392877838433066L) */, new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
             public final /* synthetic */ j b;
 
             {
@@ -1528,85 +1528,85 @@ public final class j extends bdo {
             public final void onClick(View view2) {
                 switch (i4) {
                     case 0:
-                        cnh.ac(this.b.dc(), cnb.z(-413446436813610L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/Hikage" /* cnb.z(-413446436813610L) */);
                         break;
                     case 1:
-                        cnh.ac(this.b.dc(), cnb.z(-413824393935658L));
+                        cnh.ac(this.b.dc(), "https://github.com/LuckyPray/DexKit" /* cnb.z(-413824393935658L) */);
                         break;
                     case 2:
-                        cnh.ac(this.b.dc(), cnb.z(-415284682816298L));
+                        cnh.ac(this.b.dc(), "https://github.com/cinit/QAuxiliary" /* cnb.z(-415284682816298L) */);
                         break;
                     case 3:
-                        cnh.ac(this.b.dc(), cnb.z(-415164423732010L));
+                        cnh.ac(this.b.dc(), "https://github.com/suzhelan/TimTool" /* cnb.z(-415164423732010L) */);
                         break;
                     case 4:
-                        cnh.ac(this.b.dc(), cnb.z(-415525200984874L));
+                        cnh.ac(this.b.dc(), "https://github.com/fankes/TSBattery" /* cnb.z(-415525200984874L) */);
                         break;
                     case 5:
-                        cnh.ac(this.b.dc(), cnb.z(-415404941900586L));
+                        cnh.ac(this.b.dc(), "https://github.com/KitsunePie/QQCleaner" /* cnb.z(-415404941900586L) */);
                         break;
                     case 6:
-                        cnh.ac(this.b.dc(), cnb.z(-414683387394858L));
+                        cnh.ac(this.b.dc(), "https://github.com/LSPosed/LSPosed" /* cnb.z(-414683387394858L) */);
                         break;
                     case 7:
-                        cnh.ac(this.b.dc(), cnb.z(-415048459615018L));
+                        cnh.ac(this.b.dc(), "https://github.com/Rosemoe/sora-editor" /* cnb.z(-415048459615018L) */);
                         break;
                     case 8:
-                        cnh.ac(this.b.dc(), cnb.z(-414863776021290L));
+                        cnh.ac(this.b.dc(), "https://github.com/Lagrio" /* cnb.z(-414863776021290L) */);
                         break;
                     case 9:
-                        cnh.ac(this.b.dc(), cnb.z(-417556720515882L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Public" /* cnb.z(-417556720515882L) */);
                         break;
                     case 10:
-                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm(cnb.z(-415645460069162L), Boolean.TRUE)));
+                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm("showOnly" /* cnb.z(-415645460069162L) */, Boolean.TRUE)));
                         break;
                     case 11:
-                        this.b.a.a(cnb.z(-417376331889450L));
+                        this.b.a.a("wauxv_config.zip" /* cnb.z(-417376331889450L) */);
                         break;
                     case 12:
-                        this.b.b.a(cnb.z(-417303317445418L));
+                        this.b.b.a("application/zip" /* cnb.z(-417303317445418L) */);
                         break;
                     case 13:
-                        cnh.ac(this.b.dc(), cnb.z(-417784353782570L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary_CI" /* cnb.z(-417784353782570L) */);
                         break;
                     case 14:
-                        cnh.ac(this.b.dc(), cnb.z(-417707044371242L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary" /* cnb.z(-417707044371242L) */);
                         break;
                     case 15:
-                        cnh.ac(this.b.dc(), cnb.z(-416848050912042L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Plugin" /* cnb.z(-416848050912042L) */);
                         break;
                     case 16:
                         api apiVar = api.a;
                         Context contextDc = this.b.dc();
-                        String strZ3 = cnb.z(-417187353328426L);
+                        String strZ3 = "m02krT/t'4E_$jgJt=2LKNe" /* cnb.z(-417187353328426L) */;
                         apiVar.getClass();
                         api.b(contextDc, strZ3);
                         break;
                     case 17:
-                        cnh.ac(this.b.dc(), cnb.z(-417084274113322L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/hdshare" /* cnb.z(-417084274113322L) */);
                         break;
                     case 18:
                         api apiVar2 = api.a;
                         Context contextDc2 = this.b.dc();
-                        String strZ4 = cnb.z(-414176581253930L);
+                        String strZ4 = "m0eZ$'Q@C9@1WK:'#+D~Bw" /* cnb.z(-414176581253930L) */;
                         apiVar2.getClass();
                         api.b(contextDc2, strZ4);
                         break;
                     case 19:
-                        cnh.ac(this.b.dc(), cnb.z(-414077797006122L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/suzhelan" /* cnb.z(-414077797006122L) */);
                         break;
                     case 20:
-                        cnh.ac(this.b.dc(), cnb.z(-414000487594794L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/YukiHookAPI" /* cnb.z(-414000487594794L) */);
                         break;
                     case 21:
-                        cnh.ac(this.b.dc(), cnb.z(-414314020207402L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/KavaRef" /* cnb.z(-414314020207402L) */);
                         break;
                     default:
-                        cnh.ac(this.b.dc(), cnb.z(-413596760668970L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/BetterAndroid" /* cnb.z(-413596760668970L) */);
                         break;
                 }
             }
-        }), new ny(cnb.z(-392869248498474L), cnb.z(-392822003858218L), new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
+        }), new ny("DexKit" /* cnb.z(-392869248498474L) */, "LuckyPray" /* cnb.z(-392822003858218L) */, new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
             public final /* synthetic */ j b;
 
             {
@@ -1617,85 +1617,85 @@ public final class j extends bdo {
             public final void onClick(View view2) {
                 switch (i) {
                     case 0:
-                        cnh.ac(this.b.dc(), cnb.z(-413446436813610L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/Hikage" /* cnb.z(-413446436813610L) */);
                         break;
                     case 1:
-                        cnh.ac(this.b.dc(), cnb.z(-413824393935658L));
+                        cnh.ac(this.b.dc(), "https://github.com/LuckyPray/DexKit" /* cnb.z(-413824393935658L) */);
                         break;
                     case 2:
-                        cnh.ac(this.b.dc(), cnb.z(-415284682816298L));
+                        cnh.ac(this.b.dc(), "https://github.com/cinit/QAuxiliary" /* cnb.z(-415284682816298L) */);
                         break;
                     case 3:
-                        cnh.ac(this.b.dc(), cnb.z(-415164423732010L));
+                        cnh.ac(this.b.dc(), "https://github.com/suzhelan/TimTool" /* cnb.z(-415164423732010L) */);
                         break;
                     case 4:
-                        cnh.ac(this.b.dc(), cnb.z(-415525200984874L));
+                        cnh.ac(this.b.dc(), "https://github.com/fankes/TSBattery" /* cnb.z(-415525200984874L) */);
                         break;
                     case 5:
-                        cnh.ac(this.b.dc(), cnb.z(-415404941900586L));
+                        cnh.ac(this.b.dc(), "https://github.com/KitsunePie/QQCleaner" /* cnb.z(-415404941900586L) */);
                         break;
                     case 6:
-                        cnh.ac(this.b.dc(), cnb.z(-414683387394858L));
+                        cnh.ac(this.b.dc(), "https://github.com/LSPosed/LSPosed" /* cnb.z(-414683387394858L) */);
                         break;
                     case 7:
-                        cnh.ac(this.b.dc(), cnb.z(-415048459615018L));
+                        cnh.ac(this.b.dc(), "https://github.com/Rosemoe/sora-editor" /* cnb.z(-415048459615018L) */);
                         break;
                     case 8:
-                        cnh.ac(this.b.dc(), cnb.z(-414863776021290L));
+                        cnh.ac(this.b.dc(), "https://github.com/Lagrio" /* cnb.z(-414863776021290L) */);
                         break;
                     case 9:
-                        cnh.ac(this.b.dc(), cnb.z(-417556720515882L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Public" /* cnb.z(-417556720515882L) */);
                         break;
                     case 10:
-                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm(cnb.z(-415645460069162L), Boolean.TRUE)));
+                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm("showOnly" /* cnb.z(-415645460069162L) */, Boolean.TRUE)));
                         break;
                     case 11:
-                        this.b.a.a(cnb.z(-417376331889450L));
+                        this.b.a.a("wauxv_config.zip" /* cnb.z(-417376331889450L) */);
                         break;
                     case 12:
-                        this.b.b.a(cnb.z(-417303317445418L));
+                        this.b.b.a("application/zip" /* cnb.z(-417303317445418L) */);
                         break;
                     case 13:
-                        cnh.ac(this.b.dc(), cnb.z(-417784353782570L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary_CI" /* cnb.z(-417784353782570L) */);
                         break;
                     case 14:
-                        cnh.ac(this.b.dc(), cnb.z(-417707044371242L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary" /* cnb.z(-417707044371242L) */);
                         break;
                     case 15:
-                        cnh.ac(this.b.dc(), cnb.z(-416848050912042L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Plugin" /* cnb.z(-416848050912042L) */);
                         break;
                     case 16:
                         api apiVar = api.a;
                         Context contextDc = this.b.dc();
-                        String strZ3 = cnb.z(-417187353328426L);
+                        String strZ3 = "m02krT/t'4E_$jgJt=2LKNe" /* cnb.z(-417187353328426L) */;
                         apiVar.getClass();
                         api.b(contextDc, strZ3);
                         break;
                     case 17:
-                        cnh.ac(this.b.dc(), cnb.z(-417084274113322L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/hdshare" /* cnb.z(-417084274113322L) */);
                         break;
                     case 18:
                         api apiVar2 = api.a;
                         Context contextDc2 = this.b.dc();
-                        String strZ4 = cnb.z(-414176581253930L);
+                        String strZ4 = "m0eZ$'Q@C9@1WK:'#+D~Bw" /* cnb.z(-414176581253930L) */;
                         apiVar2.getClass();
                         api.b(contextDc2, strZ4);
                         break;
                     case 19:
-                        cnh.ac(this.b.dc(), cnb.z(-414077797006122L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/suzhelan" /* cnb.z(-414077797006122L) */);
                         break;
                     case 20:
-                        cnh.ac(this.b.dc(), cnb.z(-414000487594794L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/YukiHookAPI" /* cnb.z(-414000487594794L) */);
                         break;
                     case 21:
-                        cnh.ac(this.b.dc(), cnb.z(-414314020207402L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/KavaRef" /* cnb.z(-414314020207402L) */);
                         break;
                     default:
-                        cnh.ac(this.b.dc(), cnb.z(-413596760668970L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/BetterAndroid" /* cnb.z(-413596760668970L) */);
                         break;
                 }
             }
-        }), new ny(cnb.z(-416435734051626L), cnb.z(-416354129673002L), new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
+        }), new ny("QAuxiliary" /* cnb.z(-416435734051626L) */, "cinit" /* cnb.z(-416354129673002L) */, new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
             public final /* synthetic */ j b;
 
             {
@@ -1706,85 +1706,85 @@ public final class j extends bdo {
             public final void onClick(View view2) {
                 switch (i3) {
                     case 0:
-                        cnh.ac(this.b.dc(), cnb.z(-413446436813610L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/Hikage" /* cnb.z(-413446436813610L) */);
                         break;
                     case 1:
-                        cnh.ac(this.b.dc(), cnb.z(-413824393935658L));
+                        cnh.ac(this.b.dc(), "https://github.com/LuckyPray/DexKit" /* cnb.z(-413824393935658L) */);
                         break;
                     case 2:
-                        cnh.ac(this.b.dc(), cnb.z(-415284682816298L));
+                        cnh.ac(this.b.dc(), "https://github.com/cinit/QAuxiliary" /* cnb.z(-415284682816298L) */);
                         break;
                     case 3:
-                        cnh.ac(this.b.dc(), cnb.z(-415164423732010L));
+                        cnh.ac(this.b.dc(), "https://github.com/suzhelan/TimTool" /* cnb.z(-415164423732010L) */);
                         break;
                     case 4:
-                        cnh.ac(this.b.dc(), cnb.z(-415525200984874L));
+                        cnh.ac(this.b.dc(), "https://github.com/fankes/TSBattery" /* cnb.z(-415525200984874L) */);
                         break;
                     case 5:
-                        cnh.ac(this.b.dc(), cnb.z(-415404941900586L));
+                        cnh.ac(this.b.dc(), "https://github.com/KitsunePie/QQCleaner" /* cnb.z(-415404941900586L) */);
                         break;
                     case 6:
-                        cnh.ac(this.b.dc(), cnb.z(-414683387394858L));
+                        cnh.ac(this.b.dc(), "https://github.com/LSPosed/LSPosed" /* cnb.z(-414683387394858L) */);
                         break;
                     case 7:
-                        cnh.ac(this.b.dc(), cnb.z(-415048459615018L));
+                        cnh.ac(this.b.dc(), "https://github.com/Rosemoe/sora-editor" /* cnb.z(-415048459615018L) */);
                         break;
                     case 8:
-                        cnh.ac(this.b.dc(), cnb.z(-414863776021290L));
+                        cnh.ac(this.b.dc(), "https://github.com/Lagrio" /* cnb.z(-414863776021290L) */);
                         break;
                     case 9:
-                        cnh.ac(this.b.dc(), cnb.z(-417556720515882L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Public" /* cnb.z(-417556720515882L) */);
                         break;
                     case 10:
-                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm(cnb.z(-415645460069162L), Boolean.TRUE)));
+                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm("showOnly" /* cnb.z(-415645460069162L) */, Boolean.TRUE)));
                         break;
                     case 11:
-                        this.b.a.a(cnb.z(-417376331889450L));
+                        this.b.a.a("wauxv_config.zip" /* cnb.z(-417376331889450L) */);
                         break;
                     case 12:
-                        this.b.b.a(cnb.z(-417303317445418L));
+                        this.b.b.a("application/zip" /* cnb.z(-417303317445418L) */);
                         break;
                     case 13:
-                        cnh.ac(this.b.dc(), cnb.z(-417784353782570L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary_CI" /* cnb.z(-417784353782570L) */);
                         break;
                     case 14:
-                        cnh.ac(this.b.dc(), cnb.z(-417707044371242L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary" /* cnb.z(-417707044371242L) */);
                         break;
                     case 15:
-                        cnh.ac(this.b.dc(), cnb.z(-416848050912042L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Plugin" /* cnb.z(-416848050912042L) */);
                         break;
                     case 16:
                         api apiVar = api.a;
                         Context contextDc = this.b.dc();
-                        String strZ3 = cnb.z(-417187353328426L);
+                        String strZ3 = "m02krT/t'4E_$jgJt=2LKNe" /* cnb.z(-417187353328426L) */;
                         apiVar.getClass();
                         api.b(contextDc, strZ3);
                         break;
                     case 17:
-                        cnh.ac(this.b.dc(), cnb.z(-417084274113322L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/hdshare" /* cnb.z(-417084274113322L) */);
                         break;
                     case 18:
                         api apiVar2 = api.a;
                         Context contextDc2 = this.b.dc();
-                        String strZ4 = cnb.z(-414176581253930L);
+                        String strZ4 = "m0eZ$'Q@C9@1WK:'#+D~Bw" /* cnb.z(-414176581253930L) */;
                         apiVar2.getClass();
                         api.b(contextDc2, strZ4);
                         break;
                     case 19:
-                        cnh.ac(this.b.dc(), cnb.z(-414077797006122L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/suzhelan" /* cnb.z(-414077797006122L) */);
                         break;
                     case 20:
-                        cnh.ac(this.b.dc(), cnb.z(-414000487594794L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/YukiHookAPI" /* cnb.z(-414000487594794L) */);
                         break;
                     case 21:
-                        cnh.ac(this.b.dc(), cnb.z(-414314020207402L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/KavaRef" /* cnb.z(-414314020207402L) */);
                         break;
                     default:
-                        cnh.ac(this.b.dc(), cnb.z(-413596760668970L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/BetterAndroid" /* cnb.z(-413596760668970L) */);
                         break;
                 }
             }
-        }), new ny(cnb.z(-416311180000042L), cnb.z(-416276820261674L), new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
+        }), new ny("TimTool" /* cnb.z(-416311180000042L) */, "suzhelan" /* cnb.z(-416276820261674L) */, new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
             public final /* synthetic */ j b;
 
             {
@@ -1795,85 +1795,85 @@ public final class j extends bdo {
             public final void onClick(View view2) {
                 switch (i5) {
                     case 0:
-                        cnh.ac(this.b.dc(), cnb.z(-413446436813610L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/Hikage" /* cnb.z(-413446436813610L) */);
                         break;
                     case 1:
-                        cnh.ac(this.b.dc(), cnb.z(-413824393935658L));
+                        cnh.ac(this.b.dc(), "https://github.com/LuckyPray/DexKit" /* cnb.z(-413824393935658L) */);
                         break;
                     case 2:
-                        cnh.ac(this.b.dc(), cnb.z(-415284682816298L));
+                        cnh.ac(this.b.dc(), "https://github.com/cinit/QAuxiliary" /* cnb.z(-415284682816298L) */);
                         break;
                     case 3:
-                        cnh.ac(this.b.dc(), cnb.z(-415164423732010L));
+                        cnh.ac(this.b.dc(), "https://github.com/suzhelan/TimTool" /* cnb.z(-415164423732010L) */);
                         break;
                     case 4:
-                        cnh.ac(this.b.dc(), cnb.z(-415525200984874L));
+                        cnh.ac(this.b.dc(), "https://github.com/fankes/TSBattery" /* cnb.z(-415525200984874L) */);
                         break;
                     case 5:
-                        cnh.ac(this.b.dc(), cnb.z(-415404941900586L));
+                        cnh.ac(this.b.dc(), "https://github.com/KitsunePie/QQCleaner" /* cnb.z(-415404941900586L) */);
                         break;
                     case 6:
-                        cnh.ac(this.b.dc(), cnb.z(-414683387394858L));
+                        cnh.ac(this.b.dc(), "https://github.com/LSPosed/LSPosed" /* cnb.z(-414683387394858L) */);
                         break;
                     case 7:
-                        cnh.ac(this.b.dc(), cnb.z(-415048459615018L));
+                        cnh.ac(this.b.dc(), "https://github.com/Rosemoe/sora-editor" /* cnb.z(-415048459615018L) */);
                         break;
                     case 8:
-                        cnh.ac(this.b.dc(), cnb.z(-414863776021290L));
+                        cnh.ac(this.b.dc(), "https://github.com/Lagrio" /* cnb.z(-414863776021290L) */);
                         break;
                     case 9:
-                        cnh.ac(this.b.dc(), cnb.z(-417556720515882L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Public" /* cnb.z(-417556720515882L) */);
                         break;
                     case 10:
-                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm(cnb.z(-415645460069162L), Boolean.TRUE)));
+                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm("showOnly" /* cnb.z(-415645460069162L) */, Boolean.TRUE)));
                         break;
                     case 11:
-                        this.b.a.a(cnb.z(-417376331889450L));
+                        this.b.a.a("wauxv_config.zip" /* cnb.z(-417376331889450L) */);
                         break;
                     case 12:
-                        this.b.b.a(cnb.z(-417303317445418L));
+                        this.b.b.a("application/zip" /* cnb.z(-417303317445418L) */);
                         break;
                     case 13:
-                        cnh.ac(this.b.dc(), cnb.z(-417784353782570L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary_CI" /* cnb.z(-417784353782570L) */);
                         break;
                     case 14:
-                        cnh.ac(this.b.dc(), cnb.z(-417707044371242L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary" /* cnb.z(-417707044371242L) */);
                         break;
                     case 15:
-                        cnh.ac(this.b.dc(), cnb.z(-416848050912042L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Plugin" /* cnb.z(-416848050912042L) */);
                         break;
                     case 16:
                         api apiVar = api.a;
                         Context contextDc = this.b.dc();
-                        String strZ3 = cnb.z(-417187353328426L);
+                        String strZ3 = "m02krT/t'4E_$jgJt=2LKNe" /* cnb.z(-417187353328426L) */;
                         apiVar.getClass();
                         api.b(contextDc, strZ3);
                         break;
                     case 17:
-                        cnh.ac(this.b.dc(), cnb.z(-417084274113322L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/hdshare" /* cnb.z(-417084274113322L) */);
                         break;
                     case 18:
                         api apiVar2 = api.a;
                         Context contextDc2 = this.b.dc();
-                        String strZ4 = cnb.z(-414176581253930L);
+                        String strZ4 = "m0eZ$'Q@C9@1WK:'#+D~Bw" /* cnb.z(-414176581253930L) */;
                         apiVar2.getClass();
                         api.b(contextDc2, strZ4);
                         break;
                     case 19:
-                        cnh.ac(this.b.dc(), cnb.z(-414077797006122L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/suzhelan" /* cnb.z(-414077797006122L) */);
                         break;
                     case 20:
-                        cnh.ac(this.b.dc(), cnb.z(-414000487594794L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/YukiHookAPI" /* cnb.z(-414000487594794L) */);
                         break;
                     case 21:
-                        cnh.ac(this.b.dc(), cnb.z(-414314020207402L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/KavaRef" /* cnb.z(-414314020207402L) */);
                         break;
                     default:
-                        cnh.ac(this.b.dc(), cnb.z(-413596760668970L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/BetterAndroid" /* cnb.z(-413596760668970L) */);
                         break;
                 }
             }
-        }), new ny(cnb.z(-416238165556010L), cnb.z(-416212395752234L), new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
+        }), new ny("TSBattery" /* cnb.z(-416238165556010L) */, "fankes" /* cnb.z(-416212395752234L) */, new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
             public final /* synthetic */ j b;
 
             {
@@ -1884,85 +1884,85 @@ public final class j extends bdo {
             public final void onClick(View view2) {
                 switch (i2) {
                     case 0:
-                        cnh.ac(this.b.dc(), cnb.z(-413446436813610L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/Hikage" /* cnb.z(-413446436813610L) */);
                         break;
                     case 1:
-                        cnh.ac(this.b.dc(), cnb.z(-413824393935658L));
+                        cnh.ac(this.b.dc(), "https://github.com/LuckyPray/DexKit" /* cnb.z(-413824393935658L) */);
                         break;
                     case 2:
-                        cnh.ac(this.b.dc(), cnb.z(-415284682816298L));
+                        cnh.ac(this.b.dc(), "https://github.com/cinit/QAuxiliary" /* cnb.z(-415284682816298L) */);
                         break;
                     case 3:
-                        cnh.ac(this.b.dc(), cnb.z(-415164423732010L));
+                        cnh.ac(this.b.dc(), "https://github.com/suzhelan/TimTool" /* cnb.z(-415164423732010L) */);
                         break;
                     case 4:
-                        cnh.ac(this.b.dc(), cnb.z(-415525200984874L));
+                        cnh.ac(this.b.dc(), "https://github.com/fankes/TSBattery" /* cnb.z(-415525200984874L) */);
                         break;
                     case 5:
-                        cnh.ac(this.b.dc(), cnb.z(-415404941900586L));
+                        cnh.ac(this.b.dc(), "https://github.com/KitsunePie/QQCleaner" /* cnb.z(-415404941900586L) */);
                         break;
                     case 6:
-                        cnh.ac(this.b.dc(), cnb.z(-414683387394858L));
+                        cnh.ac(this.b.dc(), "https://github.com/LSPosed/LSPosed" /* cnb.z(-414683387394858L) */);
                         break;
                     case 7:
-                        cnh.ac(this.b.dc(), cnb.z(-415048459615018L));
+                        cnh.ac(this.b.dc(), "https://github.com/Rosemoe/sora-editor" /* cnb.z(-415048459615018L) */);
                         break;
                     case 8:
-                        cnh.ac(this.b.dc(), cnb.z(-414863776021290L));
+                        cnh.ac(this.b.dc(), "https://github.com/Lagrio" /* cnb.z(-414863776021290L) */);
                         break;
                     case 9:
-                        cnh.ac(this.b.dc(), cnb.z(-417556720515882L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Public" /* cnb.z(-417556720515882L) */);
                         break;
                     case 10:
-                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm(cnb.z(-415645460069162L), Boolean.TRUE)));
+                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm("showOnly" /* cnb.z(-415645460069162L) */, Boolean.TRUE)));
                         break;
                     case 11:
-                        this.b.a.a(cnb.z(-417376331889450L));
+                        this.b.a.a("wauxv_config.zip" /* cnb.z(-417376331889450L) */);
                         break;
                     case 12:
-                        this.b.b.a(cnb.z(-417303317445418L));
+                        this.b.b.a("application/zip" /* cnb.z(-417303317445418L) */);
                         break;
                     case 13:
-                        cnh.ac(this.b.dc(), cnb.z(-417784353782570L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary_CI" /* cnb.z(-417784353782570L) */);
                         break;
                     case 14:
-                        cnh.ac(this.b.dc(), cnb.z(-417707044371242L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary" /* cnb.z(-417707044371242L) */);
                         break;
                     case 15:
-                        cnh.ac(this.b.dc(), cnb.z(-416848050912042L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Plugin" /* cnb.z(-416848050912042L) */);
                         break;
                     case 16:
                         api apiVar = api.a;
                         Context contextDc = this.b.dc();
-                        String strZ3 = cnb.z(-417187353328426L);
+                        String strZ3 = "m02krT/t'4E_$jgJt=2LKNe" /* cnb.z(-417187353328426L) */;
                         apiVar.getClass();
                         api.b(contextDc, strZ3);
                         break;
                     case 17:
-                        cnh.ac(this.b.dc(), cnb.z(-417084274113322L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/hdshare" /* cnb.z(-417084274113322L) */);
                         break;
                     case 18:
                         api apiVar2 = api.a;
                         Context contextDc2 = this.b.dc();
-                        String strZ4 = cnb.z(-414176581253930L);
+                        String strZ4 = "m0eZ$'Q@C9@1WK:'#+D~Bw" /* cnb.z(-414176581253930L) */;
                         apiVar2.getClass();
                         api.b(contextDc2, strZ4);
                         break;
                     case 19:
-                        cnh.ac(this.b.dc(), cnb.z(-414077797006122L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/suzhelan" /* cnb.z(-414077797006122L) */);
                         break;
                     case 20:
-                        cnh.ac(this.b.dc(), cnb.z(-414000487594794L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/YukiHookAPI" /* cnb.z(-414000487594794L) */);
                         break;
                     case 21:
-                        cnh.ac(this.b.dc(), cnb.z(-414314020207402L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/KavaRef" /* cnb.z(-414314020207402L) */);
                         break;
                     default:
-                        cnh.ac(this.b.dc(), cnb.z(-413596760668970L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/BetterAndroid" /* cnb.z(-413596760668970L) */);
                         break;
                 }
             }
-        }), new ny(cnb.z(-416182330981162L), cnb.z(-416706316991274L), new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
+        }), new ny("QQCleaner" /* cnb.z(-416182330981162L) */, "KitsunePie" /* cnb.z(-416706316991274L) */, new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
             public final /* synthetic */ j b;
 
             {
@@ -1973,85 +1973,85 @@ public final class j extends bdo {
             public final void onClick(View view2) {
                 switch (i20) {
                     case 0:
-                        cnh.ac(this.b.dc(), cnb.z(-413446436813610L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/Hikage" /* cnb.z(-413446436813610L) */);
                         break;
                     case 1:
-                        cnh.ac(this.b.dc(), cnb.z(-413824393935658L));
+                        cnh.ac(this.b.dc(), "https://github.com/LuckyPray/DexKit" /* cnb.z(-413824393935658L) */);
                         break;
                     case 2:
-                        cnh.ac(this.b.dc(), cnb.z(-415284682816298L));
+                        cnh.ac(this.b.dc(), "https://github.com/cinit/QAuxiliary" /* cnb.z(-415284682816298L) */);
                         break;
                     case 3:
-                        cnh.ac(this.b.dc(), cnb.z(-415164423732010L));
+                        cnh.ac(this.b.dc(), "https://github.com/suzhelan/TimTool" /* cnb.z(-415164423732010L) */);
                         break;
                     case 4:
-                        cnh.ac(this.b.dc(), cnb.z(-415525200984874L));
+                        cnh.ac(this.b.dc(), "https://github.com/fankes/TSBattery" /* cnb.z(-415525200984874L) */);
                         break;
                     case 5:
-                        cnh.ac(this.b.dc(), cnb.z(-415404941900586L));
+                        cnh.ac(this.b.dc(), "https://github.com/KitsunePie/QQCleaner" /* cnb.z(-415404941900586L) */);
                         break;
                     case 6:
-                        cnh.ac(this.b.dc(), cnb.z(-414683387394858L));
+                        cnh.ac(this.b.dc(), "https://github.com/LSPosed/LSPosed" /* cnb.z(-414683387394858L) */);
                         break;
                     case 7:
-                        cnh.ac(this.b.dc(), cnb.z(-415048459615018L));
+                        cnh.ac(this.b.dc(), "https://github.com/Rosemoe/sora-editor" /* cnb.z(-415048459615018L) */);
                         break;
                     case 8:
-                        cnh.ac(this.b.dc(), cnb.z(-414863776021290L));
+                        cnh.ac(this.b.dc(), "https://github.com/Lagrio" /* cnb.z(-414863776021290L) */);
                         break;
                     case 9:
-                        cnh.ac(this.b.dc(), cnb.z(-417556720515882L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Public" /* cnb.z(-417556720515882L) */);
                         break;
                     case 10:
-                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm(cnb.z(-415645460069162L), Boolean.TRUE)));
+                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm("showOnly" /* cnb.z(-415645460069162L) */, Boolean.TRUE)));
                         break;
                     case 11:
-                        this.b.a.a(cnb.z(-417376331889450L));
+                        this.b.a.a("wauxv_config.zip" /* cnb.z(-417376331889450L) */);
                         break;
                     case 12:
-                        this.b.b.a(cnb.z(-417303317445418L));
+                        this.b.b.a("application/zip" /* cnb.z(-417303317445418L) */);
                         break;
                     case 13:
-                        cnh.ac(this.b.dc(), cnb.z(-417784353782570L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary_CI" /* cnb.z(-417784353782570L) */);
                         break;
                     case 14:
-                        cnh.ac(this.b.dc(), cnb.z(-417707044371242L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary" /* cnb.z(-417707044371242L) */);
                         break;
                     case 15:
-                        cnh.ac(this.b.dc(), cnb.z(-416848050912042L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Plugin" /* cnb.z(-416848050912042L) */);
                         break;
                     case 16:
                         api apiVar = api.a;
                         Context contextDc = this.b.dc();
-                        String strZ3 = cnb.z(-417187353328426L);
+                        String strZ3 = "m02krT/t'4E_$jgJt=2LKNe" /* cnb.z(-417187353328426L) */;
                         apiVar.getClass();
                         api.b(contextDc, strZ3);
                         break;
                     case 17:
-                        cnh.ac(this.b.dc(), cnb.z(-417084274113322L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/hdshare" /* cnb.z(-417084274113322L) */);
                         break;
                     case 18:
                         api apiVar2 = api.a;
                         Context contextDc2 = this.b.dc();
-                        String strZ4 = cnb.z(-414176581253930L);
+                        String strZ4 = "m0eZ$'Q@C9@1WK:'#+D~Bw" /* cnb.z(-414176581253930L) */;
                         apiVar2.getClass();
                         api.b(contextDc2, strZ4);
                         break;
                     case 19:
-                        cnh.ac(this.b.dc(), cnb.z(-414077797006122L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/suzhelan" /* cnb.z(-414077797006122L) */);
                         break;
                     case 20:
-                        cnh.ac(this.b.dc(), cnb.z(-414000487594794L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/YukiHookAPI" /* cnb.z(-414000487594794L) */);
                         break;
                     case 21:
-                        cnh.ac(this.b.dc(), cnb.z(-414314020207402L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/KavaRef" /* cnb.z(-414314020207402L) */);
                         break;
                     default:
-                        cnh.ac(this.b.dc(), cnb.z(-413596760668970L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/BetterAndroid" /* cnb.z(-413596760668970L) */);
                         break;
                 }
             }
-        }), new ny(cnb.z(-416676252220202L), cnb.z(-416641892481834L), new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
+        }), new ny("LSPosed" /* cnb.z(-416676252220202L) */, "LSPosed" /* cnb.z(-416641892481834L) */, new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
             public final /* synthetic */ j b;
 
             {
@@ -2062,85 +2062,85 @@ public final class j extends bdo {
             public final void onClick(View view2) {
                 switch (i21) {
                     case 0:
-                        cnh.ac(this.b.dc(), cnb.z(-413446436813610L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/Hikage" /* cnb.z(-413446436813610L) */);
                         break;
                     case 1:
-                        cnh.ac(this.b.dc(), cnb.z(-413824393935658L));
+                        cnh.ac(this.b.dc(), "https://github.com/LuckyPray/DexKit" /* cnb.z(-413824393935658L) */);
                         break;
                     case 2:
-                        cnh.ac(this.b.dc(), cnb.z(-415284682816298L));
+                        cnh.ac(this.b.dc(), "https://github.com/cinit/QAuxiliary" /* cnb.z(-415284682816298L) */);
                         break;
                     case 3:
-                        cnh.ac(this.b.dc(), cnb.z(-415164423732010L));
+                        cnh.ac(this.b.dc(), "https://github.com/suzhelan/TimTool" /* cnb.z(-415164423732010L) */);
                         break;
                     case 4:
-                        cnh.ac(this.b.dc(), cnb.z(-415525200984874L));
+                        cnh.ac(this.b.dc(), "https://github.com/fankes/TSBattery" /* cnb.z(-415525200984874L) */);
                         break;
                     case 5:
-                        cnh.ac(this.b.dc(), cnb.z(-415404941900586L));
+                        cnh.ac(this.b.dc(), "https://github.com/KitsunePie/QQCleaner" /* cnb.z(-415404941900586L) */);
                         break;
                     case 6:
-                        cnh.ac(this.b.dc(), cnb.z(-414683387394858L));
+                        cnh.ac(this.b.dc(), "https://github.com/LSPosed/LSPosed" /* cnb.z(-414683387394858L) */);
                         break;
                     case 7:
-                        cnh.ac(this.b.dc(), cnb.z(-415048459615018L));
+                        cnh.ac(this.b.dc(), "https://github.com/Rosemoe/sora-editor" /* cnb.z(-415048459615018L) */);
                         break;
                     case 8:
-                        cnh.ac(this.b.dc(), cnb.z(-414863776021290L));
+                        cnh.ac(this.b.dc(), "https://github.com/Lagrio" /* cnb.z(-414863776021290L) */);
                         break;
                     case 9:
-                        cnh.ac(this.b.dc(), cnb.z(-417556720515882L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Public" /* cnb.z(-417556720515882L) */);
                         break;
                     case 10:
-                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm(cnb.z(-415645460069162L), Boolean.TRUE)));
+                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm("showOnly" /* cnb.z(-415645460069162L) */, Boolean.TRUE)));
                         break;
                     case 11:
-                        this.b.a.a(cnb.z(-417376331889450L));
+                        this.b.a.a("wauxv_config.zip" /* cnb.z(-417376331889450L) */);
                         break;
                     case 12:
-                        this.b.b.a(cnb.z(-417303317445418L));
+                        this.b.b.a("application/zip" /* cnb.z(-417303317445418L) */);
                         break;
                     case 13:
-                        cnh.ac(this.b.dc(), cnb.z(-417784353782570L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary_CI" /* cnb.z(-417784353782570L) */);
                         break;
                     case 14:
-                        cnh.ac(this.b.dc(), cnb.z(-417707044371242L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary" /* cnb.z(-417707044371242L) */);
                         break;
                     case 15:
-                        cnh.ac(this.b.dc(), cnb.z(-416848050912042L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Plugin" /* cnb.z(-416848050912042L) */);
                         break;
                     case 16:
                         api apiVar = api.a;
                         Context contextDc = this.b.dc();
-                        String strZ3 = cnb.z(-417187353328426L);
+                        String strZ3 = "m02krT/t'4E_$jgJt=2LKNe" /* cnb.z(-417187353328426L) */;
                         apiVar.getClass();
                         api.b(contextDc, strZ3);
                         break;
                     case 17:
-                        cnh.ac(this.b.dc(), cnb.z(-417084274113322L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/hdshare" /* cnb.z(-417084274113322L) */);
                         break;
                     case 18:
                         api apiVar2 = api.a;
                         Context contextDc2 = this.b.dc();
-                        String strZ4 = cnb.z(-414176581253930L);
+                        String strZ4 = "m0eZ$'Q@C9@1WK:'#+D~Bw" /* cnb.z(-414176581253930L) */;
                         apiVar2.getClass();
                         api.b(contextDc2, strZ4);
                         break;
                     case 19:
-                        cnh.ac(this.b.dc(), cnb.z(-414077797006122L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/suzhelan" /* cnb.z(-414077797006122L) */);
                         break;
                     case 20:
-                        cnh.ac(this.b.dc(), cnb.z(-414000487594794L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/YukiHookAPI" /* cnb.z(-414000487594794L) */);
                         break;
                     case 21:
-                        cnh.ac(this.b.dc(), cnb.z(-414314020207402L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/KavaRef" /* cnb.z(-414314020207402L) */);
                         break;
                     default:
-                        cnh.ac(this.b.dc(), cnb.z(-413596760668970L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/BetterAndroid" /* cnb.z(-413596760668970L) */);
                         break;
                 }
             }
-        }), new ny(cnb.z(-416607532743466L), cnb.z(-416521633397546L), new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
+        }), new ny("sora-editor" /* cnb.z(-416607532743466L) */, "Rosemoe" /* cnb.z(-416521633397546L) */, new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
             public final /* synthetic */ j b;
 
             {
@@ -2151,85 +2151,85 @@ public final class j extends bdo {
             public final void onClick(View view2) {
                 switch (i22) {
                     case 0:
-                        cnh.ac(this.b.dc(), cnb.z(-413446436813610L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/Hikage" /* cnb.z(-413446436813610L) */);
                         break;
                     case 1:
-                        cnh.ac(this.b.dc(), cnb.z(-413824393935658L));
+                        cnh.ac(this.b.dc(), "https://github.com/LuckyPray/DexKit" /* cnb.z(-413824393935658L) */);
                         break;
                     case 2:
-                        cnh.ac(this.b.dc(), cnb.z(-415284682816298L));
+                        cnh.ac(this.b.dc(), "https://github.com/cinit/QAuxiliary" /* cnb.z(-415284682816298L) */);
                         break;
                     case 3:
-                        cnh.ac(this.b.dc(), cnb.z(-415164423732010L));
+                        cnh.ac(this.b.dc(), "https://github.com/suzhelan/TimTool" /* cnb.z(-415164423732010L) */);
                         break;
                     case 4:
-                        cnh.ac(this.b.dc(), cnb.z(-415525200984874L));
+                        cnh.ac(this.b.dc(), "https://github.com/fankes/TSBattery" /* cnb.z(-415525200984874L) */);
                         break;
                     case 5:
-                        cnh.ac(this.b.dc(), cnb.z(-415404941900586L));
+                        cnh.ac(this.b.dc(), "https://github.com/KitsunePie/QQCleaner" /* cnb.z(-415404941900586L) */);
                         break;
                     case 6:
-                        cnh.ac(this.b.dc(), cnb.z(-414683387394858L));
+                        cnh.ac(this.b.dc(), "https://github.com/LSPosed/LSPosed" /* cnb.z(-414683387394858L) */);
                         break;
                     case 7:
-                        cnh.ac(this.b.dc(), cnb.z(-415048459615018L));
+                        cnh.ac(this.b.dc(), "https://github.com/Rosemoe/sora-editor" /* cnb.z(-415048459615018L) */);
                         break;
                     case 8:
-                        cnh.ac(this.b.dc(), cnb.z(-414863776021290L));
+                        cnh.ac(this.b.dc(), "https://github.com/Lagrio" /* cnb.z(-414863776021290L) */);
                         break;
                     case 9:
-                        cnh.ac(this.b.dc(), cnb.z(-417556720515882L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Public" /* cnb.z(-417556720515882L) */);
                         break;
                     case 10:
-                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm(cnb.z(-415645460069162L), Boolean.TRUE)));
+                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm("showOnly" /* cnb.z(-415645460069162L) */, Boolean.TRUE)));
                         break;
                     case 11:
-                        this.b.a.a(cnb.z(-417376331889450L));
+                        this.b.a.a("wauxv_config.zip" /* cnb.z(-417376331889450L) */);
                         break;
                     case 12:
-                        this.b.b.a(cnb.z(-417303317445418L));
+                        this.b.b.a("application/zip" /* cnb.z(-417303317445418L) */);
                         break;
                     case 13:
-                        cnh.ac(this.b.dc(), cnb.z(-417784353782570L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary_CI" /* cnb.z(-417784353782570L) */);
                         break;
                     case 14:
-                        cnh.ac(this.b.dc(), cnb.z(-417707044371242L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary" /* cnb.z(-417707044371242L) */);
                         break;
                     case 15:
-                        cnh.ac(this.b.dc(), cnb.z(-416848050912042L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Plugin" /* cnb.z(-416848050912042L) */);
                         break;
                     case 16:
                         api apiVar = api.a;
                         Context contextDc = this.b.dc();
-                        String strZ3 = cnb.z(-417187353328426L);
+                        String strZ3 = "m02krT/t'4E_$jgJt=2LKNe" /* cnb.z(-417187353328426L) */;
                         apiVar.getClass();
                         api.b(contextDc, strZ3);
                         break;
                     case 17:
-                        cnh.ac(this.b.dc(), cnb.z(-417084274113322L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/hdshare" /* cnb.z(-417084274113322L) */);
                         break;
                     case 18:
                         api apiVar2 = api.a;
                         Context contextDc2 = this.b.dc();
-                        String strZ4 = cnb.z(-414176581253930L);
+                        String strZ4 = "m0eZ$'Q@C9@1WK:'#+D~Bw" /* cnb.z(-414176581253930L) */;
                         apiVar2.getClass();
                         api.b(contextDc2, strZ4);
                         break;
                     case 19:
-                        cnh.ac(this.b.dc(), cnb.z(-414077797006122L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/suzhelan" /* cnb.z(-414077797006122L) */);
                         break;
                     case 20:
-                        cnh.ac(this.b.dc(), cnb.z(-414000487594794L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/YukiHookAPI" /* cnb.z(-414000487594794L) */);
                         break;
                     case 21:
-                        cnh.ac(this.b.dc(), cnb.z(-414314020207402L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/KavaRef" /* cnb.z(-414314020207402L) */);
                         break;
                     default:
-                        cnh.ac(this.b.dc(), cnb.z(-413596760668970L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/BetterAndroid" /* cnb.z(-413596760668970L) */);
                         break;
                 }
             }
-        }), new ny(cnb.z(-416487273659178L), cnb.z(-416448618953514L), new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
+        }), new ny("Icon" /* cnb.z(-416487273659178L) */, "MaiTungTM" /* cnb.z(-416448618953514L) */, new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
             public final /* synthetic */ j b;
 
             {
@@ -2240,81 +2240,81 @@ public final class j extends bdo {
             public final void onClick(View view2) {
                 switch (i23) {
                     case 0:
-                        cnh.ac(this.b.dc(), cnb.z(-413446436813610L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/Hikage" /* cnb.z(-413446436813610L) */);
                         break;
                     case 1:
-                        cnh.ac(this.b.dc(), cnb.z(-413824393935658L));
+                        cnh.ac(this.b.dc(), "https://github.com/LuckyPray/DexKit" /* cnb.z(-413824393935658L) */);
                         break;
                     case 2:
-                        cnh.ac(this.b.dc(), cnb.z(-415284682816298L));
+                        cnh.ac(this.b.dc(), "https://github.com/cinit/QAuxiliary" /* cnb.z(-415284682816298L) */);
                         break;
                     case 3:
-                        cnh.ac(this.b.dc(), cnb.z(-415164423732010L));
+                        cnh.ac(this.b.dc(), "https://github.com/suzhelan/TimTool" /* cnb.z(-415164423732010L) */);
                         break;
                     case 4:
-                        cnh.ac(this.b.dc(), cnb.z(-415525200984874L));
+                        cnh.ac(this.b.dc(), "https://github.com/fankes/TSBattery" /* cnb.z(-415525200984874L) */);
                         break;
                     case 5:
-                        cnh.ac(this.b.dc(), cnb.z(-415404941900586L));
+                        cnh.ac(this.b.dc(), "https://github.com/KitsunePie/QQCleaner" /* cnb.z(-415404941900586L) */);
                         break;
                     case 6:
-                        cnh.ac(this.b.dc(), cnb.z(-414683387394858L));
+                        cnh.ac(this.b.dc(), "https://github.com/LSPosed/LSPosed" /* cnb.z(-414683387394858L) */);
                         break;
                     case 7:
-                        cnh.ac(this.b.dc(), cnb.z(-415048459615018L));
+                        cnh.ac(this.b.dc(), "https://github.com/Rosemoe/sora-editor" /* cnb.z(-415048459615018L) */);
                         break;
                     case 8:
-                        cnh.ac(this.b.dc(), cnb.z(-414863776021290L));
+                        cnh.ac(this.b.dc(), "https://github.com/Lagrio" /* cnb.z(-414863776021290L) */);
                         break;
                     case 9:
-                        cnh.ac(this.b.dc(), cnb.z(-417556720515882L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Public" /* cnb.z(-417556720515882L) */);
                         break;
                     case 10:
-                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm(cnb.z(-415645460069162L), Boolean.TRUE)));
+                        cnd.ar(this.b).j(R.id.policyFragment, bht.r(new csm("showOnly" /* cnb.z(-415645460069162L) */, Boolean.TRUE)));
                         break;
                     case 11:
-                        this.b.a.a(cnb.z(-417376331889450L));
+                        this.b.a.a("wauxv_config.zip" /* cnb.z(-417376331889450L) */);
                         break;
                     case 12:
-                        this.b.b.a(cnb.z(-417303317445418L));
+                        this.b.b.a("application/zip" /* cnb.z(-417303317445418L) */);
                         break;
                     case 13:
-                        cnh.ac(this.b.dc(), cnb.z(-417784353782570L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary_CI" /* cnb.z(-417784353782570L) */);
                         break;
                     case 14:
-                        cnh.ac(this.b.dc(), cnb.z(-417707044371242L));
+                        cnh.ac(this.b.dc(), "https://t.me/Hd_WAuxiliary" /* cnb.z(-417707044371242L) */);
                         break;
                     case 15:
-                        cnh.ac(this.b.dc(), cnb.z(-416848050912042L));
+                        cnh.ac(this.b.dc(), "https://github.com/HdShare/WAuxiliary_Plugin" /* cnb.z(-416848050912042L) */);
                         break;
                     case 16:
                         api apiVar = api.a;
                         Context contextDc = this.b.dc();
-                        String strZ3 = cnb.z(-417187353328426L);
+                        String strZ3 = "m02krT/t'4E_$jgJt=2LKNe" /* cnb.z(-417187353328426L) */;
                         apiVar.getClass();
                         api.b(contextDc, strZ3);
                         break;
                     case 17:
-                        cnh.ac(this.b.dc(), cnb.z(-417084274113322L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/hdshare" /* cnb.z(-417084274113322L) */);
                         break;
                     case 18:
                         api apiVar2 = api.a;
                         Context contextDc2 = this.b.dc();
-                        String strZ4 = cnb.z(-414176581253930L);
+                        String strZ4 = "m0eZ$'Q@C9@1WK:'#+D~Bw" /* cnb.z(-414176581253930L) */;
                         apiVar2.getClass();
                         api.b(contextDc2, strZ4);
                         break;
                     case 19:
-                        cnh.ac(this.b.dc(), cnb.z(-414077797006122L));
+                        cnh.ac(this.b.dc(), "https://afdian.com/a/suzhelan" /* cnb.z(-414077797006122L) */);
                         break;
                     case 20:
-                        cnh.ac(this.b.dc(), cnb.z(-414000487594794L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/YukiHookAPI" /* cnb.z(-414000487594794L) */);
                         break;
                     case 21:
-                        cnh.ac(this.b.dc(), cnb.z(-414314020207402L));
+                        cnh.ac(this.b.dc(), "https://github.com/HighCapable/KavaRef" /* cnb.z(-414314020207402L) */);
                         break;
                     default:
-                        cnh.ac(this.b.dc(), cnb.z(-413596760668970L));
+                        cnh.ac(this.b.dc(), "https://github.com/BetterAndroid/BetterAndroid" /* cnb.z(-413596760668970L) */);
                         break;
                 }
             }

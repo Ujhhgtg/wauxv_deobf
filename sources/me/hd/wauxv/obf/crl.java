@@ -61,8 +61,8 @@ public final /* synthetic */ class crl implements bgf {
                         eg egVar = (eg) bzyVar.d;
                         crm.a.getClass();
                         egVar.d = crm.c;
-                        bzyVar.t(cnb.z(-513016663636778L), new amw(new ls(ceeVar, 6, view), 0));
-                        bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar, cnb.z(-47455093652266L));
+                        bzyVar.t("确定" /* cnb.z(-513016663636778L) */, new amw(new ls(ceeVar, 6, view), 0));
+                        bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar, "取消" /* cnb.z(-47455093652266L) */);
                         if (linearLayout != null) {
                             egVar.r = linearLayout;
                         }
@@ -70,7 +70,7 @@ public final /* synthetic */ class crl implements bgf {
                         return ensVar;
                     }
                 }
-                throw new NullPointerException(cnb.z(-664001943960362L).concat(viewK.getResources().getResourceName(i6)));
+                throw new NullPointerException("Missing required view with ID: " /* cnb.z(-664001943960362L) */.concat(viewK.getResources().getResourceName(i6)));
             case 1:
                 View view2 = (View) obj;
                 View viewK2 = dkz.k(view2, R.layout.module_dialog_panel_emoji, null, false);
@@ -92,7 +92,7 @@ public final /* synthetic */ class crl implements bgf {
                         return ensVar;
                     }
                 }
-                throw new NullPointerException(cnb.z(-663864505006890L).concat(viewK2.getResources().getResourceName(i7)));
+                throw new NullPointerException("Missing required view with ID: " /* cnb.z(-663864505006890L) */.concat(viewK2.getResources().getResourceName(i7)));
             case 2:
                 bah bahVar = (bah) obj;
                 cdj cdjVar = new cdj();
@@ -101,17 +101,17 @@ public final /* synthetic */ class crl implements bgf {
                 cdjVar.r(clsBf != null ? clsBf : ArrayList.class);
                 Class<Integer> clsBf2 = cnf.bf(dal.b(cls));
                 cdjVar.q(clsBf2 != null ? clsBf2 : Integer.class);
-                cdjVar.t(cnb.z(-472287488768810L), cnb.z(-472661150923562L));
+                cdjVar.t("MicroMsg.emoji.EmojiGroupInfoStorage" /* cnb.z(-472287488768810L) */, "get Panel EmojiGroupInfo." /* cnb.z(-472661150923562L) */);
                 bahVar.getClass();
                 bahVar.d = cdjVar;
                 return ensVar;
             case 3:
                 bah bahVar2 = (bah) obj;
                 cdj cdjVar2 = new cdj();
-                cdjVar2.t(cnb.z(-472566661643050L));
+                cdjVar2.t("data" /* cnb.z(-472566661643050L) */);
                 fj fjVar = new fj();
                 cdj cdjVar3 = new cdj();
-                cdjVar3.t(cnb.z(-472579546544938L));
+                cdjVar3.t("checkScrollToPosition: " /* cnb.z(-472579546544938L) */);
                 fjVar.f(cdjVar3);
                 fjVar.d = bzu.Contains;
                 cdjVar2.i = fjVar;
@@ -126,17 +126,17 @@ public final /* synthetic */ class crl implements bgf {
                 List list = (List) obj2;
                 bzo.n(list);
                 ContentValues contentValues = new ContentValues();
-                contentValues.put(cnb.z(-471239516748586L), cnb.z(-471170797271850L));
-                contentValues.put(cnb.z(-471458560080682L), cnb.z(-471441380211498L));
-                contentValues.put(cnb.z(-470681171000106L), cnb.z(-470659696163626L));
-                contentValues.put(cnb.z(-470603861588778L), (Integer) 1);
-                contentValues.put(cnb.z(-471140732500778L), cnb.z(-471046243220266L));
-                contentValues.put(cnb.z(-470986113678122L), (Integer) 7);
-                contentValues.put(cnb.z(-470938869037866L), (Integer) 2);
-                Object objC = zf.c(ajn.ag(cnb.z(-78585016613674L)), new Object[0]);
+                contentValues.put("packGrayIconUrl" /* cnb.z(-471239516748586L) */, "https://avatars.githubusercontent.com/u/49312623" /* cnb.z(-471170797271850L) */);
+                contentValues.put("packIconUrl" /* cnb.z(-471458560080682L) */, "https://avatars.githubusercontent.com/u/49312623" /* cnb.z(-471441380211498L) */);
+                contentValues.put("packName" /* cnb.z(-470681171000106L) */, "面板表情" /* cnb.z(-470659696163626L) */);
+                contentValues.put("packStatus" /* cnb.z(-470603861588778L) */, (Integer) 1);
+                contentValues.put("productID" /* cnb.z(-471140732500778L) */, "wauxv.panel.emoji" /* cnb.z(-471046243220266L) */);
+                contentValues.put("status" /* cnb.z(-470986113678122L) */, (Integer) 7);
+                contentValues.put("sync" /* cnb.z(-470938869037866L) */, (Integer) 2);
+                Object objC = zf.c(ajn.ag("com.tencent.mm.storage.emotion.EmojiGroupInfo" /* cnb.z(-78585016613674L) */), new Object[0]);
                 int i8 = bte.a;
                 cde cdeVarT = dqc.bi(objC).t();
-                cdeVarT.ab = cnb.z(-78438987725610L);
+                cdeVarT.ab = "convertFrom" /* cnb.z(-78438987725610L) */;
                 cdeVarT.z(Arrays.copyOf(new Object[]{dal.b(ContentValues.class), dal.b(Boolean.TYPE)}, 2));
                 cdeVarT.ah();
                 ((cdk) aaz.e(cdeVarT.aj())).e(contentValues, Boolean.TRUE);
@@ -163,18 +163,18 @@ public final /* synthetic */ class crl implements bgf {
                 Object objE = ((cdk) dkz.m(cdeVarT2)).e(new Object[0]);
                 bzo.n(objE);
                 azg azgVarR = dqc.bi(objE).r();
-                azgVarR.a = ajn.ag(cnb.z(-78585016613674L));
+                azgVarR.a = ajn.ag("com.tencent.mm.storage.emotion.EmojiGroupInfo" /* cnb.z(-78585016613674L) */);
                 Object objD = ((azk) aaz.e(azgVarR.c())).d();
                 bzo.n(objD);
                 azg azgVarR2 = dqc.bi(objD).r();
-                azgVarR2.ab = cnb.z(-470968933808938L);
+                azgVarR2.ab = "field_packName" /* cnb.z(-470968933808938L) */;
                 String str = (String) ((azk) yg.e(azgVarR2)).e();
                 cde cdeVarT3 = bmuVarBi.t();
                 cdeVarT3.a = dal.b(List.class);
                 Object objJ = ((cdk) dkz.m(cdeVarT3)).j(new Object[0]);
                 bzo.n(objJ);
                 List list2 = (List) objJ;
-                if (bzo.f(str, cnb.z(-470887329430314L))) {
+                if (bzo.f(str, "面板表情" /* cnb.z(-470887329430314L) */)) {
                     list2.addAll(csq.r);
                 }
                 return ensVar;
@@ -196,7 +196,7 @@ public final /* synthetic */ class crl implements bgf {
             case 10:
                 bah bahVar3 = (bah) obj;
                 cdj cdjVar4 = new cdj();
-                Class clsAg = ajn.ag(cnb.z(-472497942166314L));
+                Class clsAg = ajn.ag("com.tencent.mm.api.IEmojiInfo" /* cnb.z(-472497942166314L) */);
                 Class<Integer> clsBf4 = cnf.bf(dal.b(cls));
                 if (clsBf4 == null) {
                     clsBf4 = cls;
@@ -206,7 +206,7 @@ public final /* synthetic */ class crl implements bgf {
                 cls5 = clsBf5 != null ? clsBf5 : String.class;
                 Class<Integer> clsBf6 = cnf.bf(dal.b(cls));
                 cdjVar4.q(clsAg, clsBf4, cls5, clsBf6 != null ? clsBf6 : Integer.class);
-                cdjVar4.t(cnb.z(-472351913278250L), cnb.z(-472326143474474L));
+                cdjVar4.t("emojiInfo" /* cnb.z(-472351913278250L) */, "sosDocId" /* cnb.z(-472326143474474L) */);
                 bahVar3.getClass();
                 bahVar3.d = cdjVar4;
                 return ensVar;
@@ -216,7 +216,7 @@ public final /* synthetic */ class crl implements bgf {
             case 12:
                 bag bagVar = (bag) obj;
                 zb zbVar = new zb();
-                zbVar.k(cnb.z(-368452359420714L), cnb.z(-368362165107498L));
+                zbVar.k("MicroMsg.PatMsgExtension" /* cnb.z(-368452359420714L) */, "insert pat msg %d %s %s" /* cnb.z(-368362165107498L) */);
                 bagVar.getClass();
                 bagVar.b = zbVar;
                 return ensVar;
@@ -241,8 +241,8 @@ public final /* synthetic */ class crl implements bgf {
                             eg egVar2 = (eg) bzyVar2.d;
                             ctp.b.getClass();
                             egVar2.d = ctp.i;
-                            bzyVar2.t(cnb.z(-526013234674474L), new amw(new cfx(cefVar, i2), 0));
-                            bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar2, cnb.z(-47455093652266L));
+                            bzyVar2.t("保存" /* cnb.z(-526013234674474L) */, new amw(new cfx(cefVar, i2), 0));
+                            bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar2, "取消" /* cnb.z(-47455093652266L) */);
                             if (linearLayout2 != null) {
                                 egVar2.r = linearLayout2;
                             }
@@ -251,7 +251,7 @@ public final /* synthetic */ class crl implements bgf {
                         }
                     }
                 }
-                throw new NullPointerException(cnb.z(-663177310239530L).concat(viewK3.getResources().getResourceName(i10)));
+                throw new NullPointerException("Missing required view with ID: " /* cnb.z(-663177310239530L) */.concat(viewK3.getResources().getResourceName(i10)));
             case 14:
                 bmm bmmVar2 = (bmm) obj;
                 bmmVar2.getClass();
@@ -270,7 +270,7 @@ public final /* synthetic */ class crl implements bgf {
                 int iIntValue = num != null ? num.intValue() : 0;
                 int i11 = bte.a;
                 cde cdeVarT4 = dqc.bi(bmmVar2.e()).t();
-                cdeVarT4.ab = cnb.z(-525858615851818L);
+                cdeVarT4.ab = "getItem" /* cnb.z(-525858615851818L) */;
                 Object objE2 = ((cdk) dkz.m(cdeVarT4)).e(Integer.valueOf(iIntValue));
                 bzo.n(objE2);
                 ConversationBean conversationBean = new ConversationBean(objE2);
@@ -291,35 +291,35 @@ public final /* synthetic */ class crl implements bgf {
                 ConversationBean conversationBean2 = (ConversationBean) obj;
                 agc agcVar = agc.a;
                 ContentValues contentValues2 = new ContentValues();
-                contentValues2.put(cnb.z(-525948810165034L), Long.valueOf(arj.z(conversationBean2.getFlag(), agd.f)));
+                contentValues2.put("flag" /* cnb.z(-525948810165034L) */, Long.valueOf(arj.z(conversationBean2.getFlag(), agd.f)));
                 agp.c(agp.a, agcVar.b(contentValues2), conversationBean2.getUsername());
                 return ensVar;
             case 16:
                 ConversationBean conversationBean3 = (ConversationBean) obj;
                 agc agcVar2 = agc.a;
                 ContentValues contentValues3 = new ContentValues();
-                contentValues3.put(cnb.z(-525978874936106L), Long.valueOf(arj.z(conversationBean3.getFlag(), agd.d)));
+                contentValues3.put("flag" /* cnb.z(-525978874936106L) */, Long.valueOf(arj.z(conversationBean3.getFlag(), agd.d)));
                 agp.c(agp.a, agcVar2.b(contentValues3), conversationBean3.getUsername());
                 return ensVar;
             case 17:
                 ConversationBean conversationBean4 = (ConversationBean) obj;
                 agc agcVar3 = agc.a;
                 ContentValues contentValues4 = new ContentValues();
-                contentValues4.put(cnb.z(-525923040361258L), Long.valueOf(conversationBean4.getConversationTime()));
+                contentValues4.put("flag" /* cnb.z(-525923040361258L) */, Long.valueOf(conversationBean4.getConversationTime()));
                 agp.c(agp.a, agcVar3.b(contentValues4), conversationBean4.getUsername());
                 return ensVar;
             case 18:
                 ConversationBean conversationBean5 = (ConversationBean) obj;
                 agc agcVar4 = agc.a;
                 ContentValues contentValues5 = new ContentValues();
-                contentValues5.put(cnb.z(-525884385655594L), Long.valueOf(arj.z(conversationBean5.getFlag(), agd.e)));
+                contentValues5.put("flag" /* cnb.z(-525884385655594L) */, Long.valueOf(arj.z(conversationBean5.getFlag(), agd.e)));
                 agp.c(agp.a, agcVar4.b(contentValues5), conversationBean5.getUsername());
                 return ensVar;
             case 19:
                 ConversationBean conversationBean6 = (ConversationBean) obj;
                 agc agcVar5 = agc.a;
                 ContentValues contentValues6 = new ContentValues();
-                contentValues6.put(cnb.z(-525897270557482L), Long.valueOf(arj.z(conversationBean6.getFlag(), agd.c)));
+                contentValues6.put("flag" /* cnb.z(-525897270557482L) */, Long.valueOf(arj.z(conversationBean6.getFlag(), agd.c)));
                 agp.c(agp.a, agcVar5.b(contentValues6), conversationBean6.getUsername());
                 return ensVar;
             case 20:
@@ -327,11 +327,11 @@ public final /* synthetic */ class crl implements bgf {
                 return ensVar;
             case 21:
                 bah bahVar4 = (bah) obj;
-                String[] strArr = {cnb.z(-527301724863274L)};
+                String[] strArr = {"com.tencent.mm.ui.conversation" /* cnb.z(-527301724863274L) */};
                 bahVar4.getClass();
                 bahVar4.a = la.ab(strArr);
                 cdj cdjVar5 = new cdj();
-                cdjVar5.t(cnb.z(-527701156821802L), cnb.z(-527589487672106L));
+                cdjVar5.t("MicroMsg.ConversationWithCacheAdapter" /* cnb.z(-527701156821802L) */, "handle show tip count, but talker is null" /* cnb.z(-527589487672106L) */);
                 bahVar4.d = cdjVar5;
                 return ensVar;
             case 22:
@@ -355,7 +355,7 @@ public final /* synthetic */ class crl implements bgf {
                         return ensVar;
                     }
                 }
-                throw new NullPointerException(cnb.z(-663039871286058L).concat(viewK4.getResources().getResourceName(i12)));
+                throw new NullPointerException("Missing required view with ID: " /* cnb.z(-663039871286058L) */.concat(viewK4.getResources().getResourceName(i12)));
             case 23:
                 return Boolean.valueOf(((Method) obj).getAnnotation(cty.class) != null);
             case 24:

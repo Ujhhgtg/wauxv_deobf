@@ -77,22 +77,22 @@ public final class zl extends doi implements bgj {
                     j += length;
                 }
                 if (j < RealWebSocket.DEFAULT_MINIMUM_DEFLATE_SIZE) {
-                    String str = String.format(Locale.CHINA, cnb.z(-12206297053994L), Arrays.copyOf(new Object[]{Double.valueOf(j)}, 1));
-                    cnb.z(-12227771890474L);
+                    String str = String.format(Locale.CHINA, "%.2f B" /* cnb.z(-12206297053994L) */, Arrays.copyOf(new Object[]{Double.valueOf(j)}, 1));
+                    "format(...)" /* cnb.z(-12227771890474L) */;
                     return str;
                 }
                 if (j < 1048576) {
-                    String str2 = String.format(Locale.CHINA, cnb.z(-12141872544554L), Arrays.copyOf(new Object[]{Double.valueOf(j / 1024.0d)}, 1));
-                    cnb.z(-12107512806186L);
+                    String str2 = String.format(Locale.CHINA, "%.2f KB" /* cnb.z(-12141872544554L) */, Arrays.copyOf(new Object[]{Double.valueOf(j / 1024.0d)}, 1));
+                    "format(...)" /* cnb.z(-12107512806186L) */;
                     return str2;
                 }
                 if (j < 1073741824) {
-                    String str3 = String.format(Locale.CHINA, cnb.z(-12640088750890L), Arrays.copyOf(new Object[]{Double.valueOf((j / 1024.0d) / 1024.0d)}, 1));
-                    cnb.z(-12605729012522L);
+                    String str3 = String.format(Locale.CHINA, "%.2f MB" /* cnb.z(-12640088750890L) */, Arrays.copyOf(new Object[]{Double.valueOf((j / 1024.0d) / 1024.0d)}, 1));
+                    "format(...)" /* cnb.z(-12605729012522L) */;
                     return str3;
                 }
-                String str4 = String.format(Locale.CHINA, cnb.z(-12519829666602L), Arrays.copyOf(new Object[]{Double.valueOf(((j / 1024.0d) / 1024.0d) / 1024.0d)}, 1));
-                cnb.z(-12485469928234L);
+                String str4 = String.format(Locale.CHINA, "%.2f GB" /* cnb.z(-12519829666602L) */, Arrays.copyOf(new Object[]{Double.valueOf(((j / 1024.0d) / 1024.0d) / 1024.0d)}, 1));
+                "format(...)" /* cnb.z(-12485469928234L) */;
                 return str4;
             default:
                 bhu.bd(obj);

@@ -161,7 +161,7 @@ public final class FriendInfo {
 
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-14864881810218L));
+        sb.append("FriendInfo(wxid=" /* cnb.z(-14864881810218L) */);
         yg.u(sb, this.wxid, -15358803049258L);
         yg.u(sb, this.alias, -15320148343594L);
         yg.u(sb, this.remark, -15225659063082L);

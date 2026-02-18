@@ -40,7 +40,7 @@ public final class eiw {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-325365247507242L));
+        sb.append("y4Proto(d=" /* cnb.z(-325365247507242L) */);
         bjs.w(sb, this.a, -325352362605354L);
         bjs.w(sb, this.b, -325296528030506L);
         return bjs.q(sb, this.c, ')');

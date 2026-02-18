@@ -13,12 +13,12 @@ public final class atx extends doo implements bng {
     public static final atn j;
 
     static {
-        cnb.z(-495823909550890L);
-        cnb.z(-495699355499306L);
-        a = new atx(cnb.z(-507557760203562L));
-        b = cnb.z(-495007865764650L);
-        c = cnb.z(-494960621124394L);
-        i = cnb.z(-494973506026282L);
+        "9bd1281af3a31710a45b84d736363691" /* cnb.z(-495823909550890L) */;
+        "08f223fa83f1ca34e143d1e580252c7c" /* cnb.z(-495699355499306L) */;
+        a = new atx("EmojiGameHook" /* cnb.z(-507557760203562L) */);
+        b = "辅助" /* cnb.z(-495007865764650L) */;
+        c = "表情游戏" /* cnb.z(-494960621124394L) */;
+        i = "预先自定义设置猜拳和骰子的随机结果" /* cnb.z(-494973506026282L) */;
         j = new atn(2);
     }
 

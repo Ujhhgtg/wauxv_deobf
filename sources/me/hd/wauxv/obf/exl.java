@@ -31,6 +31,6 @@ public abstract class exl {
         Long l = (Long) objX;
         long jLongValue = l != null ? l.longValue() : 0L;
         b = jLongValue;
-        c = cnh.ag(jLongValue, null, ZoneId.of(cnb.z(-48137993452330L)), 1);
+        c = cnh.ag(jLongValue, null, ZoneId.of("Asia/Shanghai" /* cnb.z(-48137993452330L) */), 1);
     }
 }

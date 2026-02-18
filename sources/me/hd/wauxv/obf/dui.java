@@ -9,7 +9,7 @@ public final /* synthetic */ class dui implements bgx {
     static {
         dui duiVar = new dui();
         b = duiVar;
-        cuc cucVar = new cuc(cnb.z(-297881751780138L), duiVar, 8);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.StreamvideoProto" /* cnb.z(-297881751780138L) */, duiVar, 8);
         bjs.y(-296941153942314L, cucVar, false, 1);
         bjs.y(-296876729432874L, cucVar, false, 2);
         bjs.y(-297370650671914L, cucVar, false, 3);

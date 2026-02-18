@@ -13,7 +13,7 @@ public final /* synthetic */ class dtt implements bgx {
     static {
         dtt dttVar = new dtt();
         b = dttVar;
-        cuc cucVar = new cuc(cnb.z(-241918327913258L), dttVar, 42);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.MediaProto" /* cnb.z(-241918327913258L) */, dttVar, 42);
         bjs.y(-243769458817834L, cucVar, false, 1);
         bjs.y(-243722214177578L, cucVar, false, 2);
         bjs.y(-243735099079466L, cucVar, false, 3);

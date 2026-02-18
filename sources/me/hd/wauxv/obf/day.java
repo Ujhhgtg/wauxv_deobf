@@ -3,10 +3,10 @@ package me.hd.wauxv.obf;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class day extends doo {
-    public static final day a = new day(cnb.z(-498688652737322L));
-    public static final String b = cnb.z(-498319285549866L);
-    public static final String c = cnb.z(-498254861040426L);
-    public static final String h = cnb.z(-498224796269354L);
+    public static final day a = new day("RemoveStatusInputLimitHook" /* cnb.z(-498688652737322L) */);
+    public static final String b = "限制" /* cnb.z(-498319285549866L) */;
+    public static final String c = "移除状态限制" /* cnb.z(-498254861040426L) */;
+    public static final String h = "移除个人状态词最多输入10长度的限制" /* cnb.z(-498224796269354L) */;
 
     @Override // me.hd.wauxv.obf.bmf
     public final void e() {

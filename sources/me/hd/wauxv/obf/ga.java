@@ -11,10 +11,10 @@ import org.luckypray.dexkit.DexKitBridge;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class ga extends doo implements bob, bng {
-    public static final ga a = new ga(cnb.z(-454085417368362L));
-    public static final String b = cnb.z(-454776907103018L);
-    public static final String c = cnb.z(-454781202070314L);
-    public static final String d = cnb.z(-454746842331946L);
+    public static final ga a = new ga("AntiRevoke2Hook" /* cnb.z(-454085417368362L) */);
+    public static final String b = "聊天" /* cnb.z(-454776907103018L) */;
+    public static final String c = "阻止消息撤回2" /* cnb.z(-454781202070314L) */;
+    public static final String d = "消息有撤回提示，通用款，三款选一款" /* cnb.z(-454746842331946L) */;
     public static final bn i = new bn(14);
 
     @Override // me.hd.wauxv.obf.bmf
@@ -54,27 +54,27 @@ public final class ga extends doo implements bob, bng {
 
     @Override // me.hd.wauxv.obf.bob
     public final void j(bmm bmmVar, String str, ContentValues contentValues, String str2, String[] strArr, int i2) throws IOException {
-        if (z() && str.equals(cnb.z(-454016697891626L)) && bzo.f(contentValues.get(cnb.z(-453982338153258L)), Integer.valueOf(ewg.l.w))) {
-            String asString = contentValues.getAsString(cnb.z(-453943683447594L));
-            if (dnr.bp(asString, cnb.z(-453909323709226L), false) || dnr.bp(asString, cnb.z(-453917913643818L), false)) {
-                Long asLong = contentValues.getAsLong(cnb.z(-453926503578410L));
+        if (z() && str.equals("message" /* cnb.z(-454016697891626L) */) && bzo.f(contentValues.get("type" /* cnb.z(-453982338153258L) */), Integer.valueOf(ewg.l.w))) {
+            String asString = contentValues.getAsString("content" /* cnb.z(-453943683447594L) */);
+            if (dnr.bp(asString, "\"" /* cnb.z(-453909323709226L) */, false) || dnr.bp(asString, "「" /* cnb.z(-453917913643818L) */, false)) {
+                Long asLong = contentValues.getAsLong("msgId" /* cnb.z(-453926503578410L) */);
                 int i3 = bte.a;
                 dlx.a.getClass();
                 cde cdeVarT = dqc.bi(dlx.b()).t();
-                cdeVarT.ab = cnb.z(-103246718827306L);
-                Object objJ = ((cdk) dkz.n(new Object[]{dal.b(String.class), dal.b(Object[].class)}, 2, cdeVarT)).j(cnb.z(-453883553905450L), new Object[]{asLong});
+                cdeVarT.ab = "rawQuery" /* cnb.z(-103246718827306L) */;
+                Object objJ = ((cdk) dkz.n(new Object[]{dal.b(String.class), dal.b(Object[].class)}, 2, cdeVarT)).j("SELECT createTime, talker FROM message WHERE msgId = ?" /* cnb.z(-453883553905450L) */, new Object[]{asLong});
                 bzo.n(objJ);
                 Cursor cursor = (Cursor) objJ;
                 try {
                     if (cursor.moveToFirst()) {
-                        long j = cursor.getLong(cursor.getColumnIndex(cnb.z(-453080395021098L)));
-                        String string = cursor.getString(cursor.getColumnIndex(cnb.z(-453067510119210L)));
-                        Pattern patternCompile = Pattern.compile(cnb.z(-453020265478954L));
+                        long j = cursor.getLong(cursor.getColumnIndex("createTime" /* cnb.z(-453080395021098L) */));
+                        String string = cursor.getString(cursor.getColumnIndex("talker" /* cnb.z(-453067510119210L) */));
+                        Pattern patternCompile = Pattern.compile("([\"「])(.*?)([」\"])" /* cnb.z(-453020265478954L) */);
                         bzo.p(patternCompile, "compile(...)");
                         Matcher matcher = patternCompile.matcher(asString);
                         bzo.p(matcher, "matcher(...)");
                         bzx bzxVarY = ewz.y(matcher, 0, asString);
-                        aye.w(ewg.j.w, string, "\"" + (bzxVarY != null ? (String) ((bzv) bzxVarY.e()).get(2) : null) + cnb.z(-453509891750698L) + fz.a.o(), j + 1);
+                        aye.w(ewg.j.w, string, "\"" + (bzxVarY != null ? (String) ((bzv) bzxVarY.e()).get(2) : null) + "\" " /* cnb.z(-453509891750698L) */ + fz.a.o(), j + 1);
                         bmmVar.h(1);
                     }
                     cursor.close();

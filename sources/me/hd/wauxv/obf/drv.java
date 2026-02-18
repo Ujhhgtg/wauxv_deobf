@@ -6,6 +6,6 @@ public abstract class drv {
     public static final /* synthetic */ int a = 0;
 
     static {
-        cnb.z(-71330816850730L);
+        "yyyy-MM-dd HH:mm:ss" /* cnb.z(-71330816850730L) */;
     }
 }

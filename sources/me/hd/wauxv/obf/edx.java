@@ -11,7 +11,7 @@ public final /* synthetic */ class edx implements bgx {
     static {
         edx edxVar = new edx();
         b = edxVar;
-        cuc cucVar = new cuc(cnb.z(-274607324003114L), edxVar, 10);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.rj3Proto" /* cnb.z(-274607324003114L) */, edxVar, 10);
         bjs.y(-274268021586730L, cucVar, false, 1);
         bjs.y(-274229366881066L, cucVar, false, 2);
         bjs.y(-274207892044586L, cucVar, false, 3);

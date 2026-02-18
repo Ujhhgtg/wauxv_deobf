@@ -17,22 +17,22 @@ public final class cfw extends bws implements bnr {
         int i = bte.a;
         bmu bmuVarBi = dqc.bi(obj);
         azg azgVarR = bmuVarBi.r();
-        azgVarR.ab = cnb.z(-61177514162986L);
+        azgVarR.ab = "field_isSend" /* cnb.z(-61177514162986L) */;
         Integer num = (Integer) ((azk) yg.e(azgVarR)).e();
         if (num != null && num.intValue() == 1) {
             return;
         }
         azg azgVarR2 = bmuVarBi.r();
-        azgVarR2.ab = cnb.z(-61156039326506L);
+        azgVarR2.ab = "field_type" /* cnb.z(-61156039326506L) */;
         Object objE = ((azk) yg.e(azgVarR2)).e();
         bzo.n(objE);
         if (((Number) objE).intValue() == ewg.k.w) {
             azg azgVarR3 = bmuVarBi.r();
-            azgVarR3.ab = cnb.z(-61074434947882L);
+            azgVarR3.ab = "field_content" /* cnb.z(-61074434947882L) */;
             Object objE2 = ((azk) yg.e(azgVarR3)).e();
             bzo.n(objE2);
             String str = (String) objE2;
-            Pattern patternCompile = Pattern.compile(cnb.z(-61546881350442L));
+            Pattern patternCompile = Pattern.compile("\\Q<content>|WA|\\E(.*?)\\Q</content>\\E" /* cnb.z(-61546881350442L) */);
             bzo.p(patternCompile, "compile(...)");
             Matcher matcher = patternCompile.matcher(str);
             bzo.p(matcher, "matcher(...)");
@@ -40,10 +40,10 @@ public final class cfw extends bws implements bnr {
             String str2 = bzxVarY != null ? (String) aaz.h(1, bzxVarY.e()) : null;
             if (str2 != null) {
                 azg azgVarR4 = bmuVarBi.r();
-                azgVarR4.ab = cnb.z(-61422327298858L);
+                azgVarR4.ab = "field_type" /* cnb.z(-61422327298858L) */;
                 ((azk) yg.e(azgVarR4)).f(Integer.valueOf(ewg.a.w));
                 azg azgVarR5 = bmuVarBi.r();
-                azgVarR5.ab = cnb.z(-61340722920234L);
+                azgVarR5.ab = "field_content" /* cnb.z(-61340722920234L) */;
                 ((azk) yg.e(azgVarR5)).f(str2);
             }
         }

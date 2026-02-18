@@ -28,16 +28,16 @@ public final class cfm extends doo implements bnc {
     public static final bzk r;
 
     static {
-        cnb.z(-451744660192042L);
-        a = new cfm(cnb.z(-428014965881642L));
+        "#00000000" /* cnb.z(-451744660192042L) */;
+        a = new cfm("MsgBgBubbleHook" /* cnb.z(-428014965881642L) */);
         dov dovVar = ctf.a;
-        b = ctf.c(cnb.z(-46505905879850L), cnb.z(-46467251174186L));
+        b = ctf.c("Resource" /* cnb.z(-46505905879850L) */, "Bubble" /* cnb.z(-46467251174186L) */);
         c = new dov(new cfh(0));
         h = new dov(new cfh(1));
         j = new dov(new cfh(2));
-        l = cnb.z(-451718890388266L);
-        m = cnb.z(-451723185355562L);
-        n = cnb.z(-451693120584490L);
+        l = "美化" /* cnb.z(-451718890388266L) */;
+        m = "消息背景气泡" /* cnb.z(-451723185355562L) */;
+        n = "仅支持配置部分消息, 与背景颜色冲突" /* cnb.z(-451693120584490L) */;
         r = new bzk(14);
     }
 
@@ -133,7 +133,7 @@ public final class cfm extends doo implements bnc {
             }
             if (type != ewg.c.w) {
                 if (type == ewg.i.w) {
-                    View viewV2 = cnh.v(view, cnb.ab(ewk.c) ? cnb.z(-426915454253866L) : cnb.z(-428513182087978L));
+                    View viewV2 = cnh.v(view, cnb.ab(ewk.c) ? "bkg" /* cnb.z(-426915454253866L) */ : "" /* cnb.z(-428513182087978L) */);
                     if (viewV2 != null) {
                         s(viewV2, msgInfoBean.isSend());
                         return;

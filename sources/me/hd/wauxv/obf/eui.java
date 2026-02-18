@@ -12,17 +12,17 @@ public final class eui extends ewy {
     public static final dov b;
 
     static {
-        cnb.z(-82905753713450L);
+        "initDexObfKey" /* cnb.z(-82905753713450L) */;
         a = new eui();
         b = new dov(new efq(18));
     }
 
     public static boolean c() {
-        String strZ = cnb.z(-81814832020266L);
-        String strZ2 = cnb.z(-5841155521322L);
+        String strZ = "initDexObfKey" /* cnb.z(-81814832020266L) */;
+        String strZ2 = "" /* cnb.z(-5841155521322L) */;
         io ioVar = emc.w;
         if (ioVar == null) {
-            throw new IllegalArgumentException(cnb.z(-6021544147754L).toString());
+            throw new IllegalArgumentException("DexDescConfig must be init" /* cnb.z(-6021544147754L) */.toString());
         }
         String string = ioVar.aj().getString(strZ, strZ2);
         bzo.n(string);
@@ -132,7 +132,7 @@ public final class eui extends ewy {
                 String[] strArr_aa = bmfVar._aa();
                 String[] strArr = (String[]) Arrays.copyOf(strArr_aa, strArr_aa.length);
                 if (strArr.length == 0) {
-                    throw new IllegalStateException(cnb.z(-82716775152426L).toString());
+                    throw new IllegalStateException("withProcess method need a \"name\" param" /* cnb.z(-82716775152426L) */.toString());
                 }
                 for (String str : strArr) {
                     eui euiVar = a;
@@ -149,7 +149,7 @@ public final class eui extends ewy {
     public final void w() {
         int i = bte.a;
         cde cdeVarT = dqc.bg(dal.b(Instrumentation.class)).t();
-        cdeVarT.ab = cnb.z(-82549271427882L);
+        cdeVarT.ab = "callApplicationOnCreate" /* cnb.z(-82549271427882L) */;
         aki akiVarAd = a.ad((cdk) dkz.n(new Object[]{dal.b(Application.class)}, 1, cdeVarT), exg.a);
         akiVarAd.m(new epy(14));
         akiVarAd.o();

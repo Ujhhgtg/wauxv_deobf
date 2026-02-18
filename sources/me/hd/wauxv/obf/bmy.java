@@ -48,7 +48,7 @@ public abstract class bmy {
             return null;
         }
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-73525545138986L));
+        sb.append("SELECT contact.*\nFROM rcontact contact\nLEFT JOIN rconversation conversation ON contact.username = conversation.username\nWHERE " /* cnb.z(-73525545138986L) */);
         int length = aerVarArr.length;
         int i2 = 0;
         int i3 = 0;
@@ -62,21 +62,21 @@ public abstract class bmy {
                 int i7 = i6 + 1;
                 sb.append(strArr[i5]);
                 if (i6 != r5.d.length - 1) {
-                    sb.append(cnb.z(-72980084292394L));
+                    sb.append("\nAND " /* cnb.z(-72980084292394L) */);
                 }
                 i5++;
                 i6 = i7;
             }
             if (i3 != aerVarArr.length - 1) {
-                sb.append(cnb.z(-72937134619434L));
+                sb.append("\nOR " /* cnb.z(-72937134619434L) */);
             }
             if (i3 == aerVarArr.length - 1) {
-                sb.append(cnb.z(-72881300044586L));
+                sb.append("\n" /* cnb.z(-72881300044586L) */);
             }
             i2++;
             i3 = i4;
         }
-        sb.append(cnb.z(-72889889979178L));
+        sb.append("ORDER BY\nCASE WHEN conversation.username IS NOT NULL THEN 0 ELSE 1 END,\nCOALESCE(conversation.conversationTime, 0) DESC,\ncontact.username" /* cnb.z(-72889889979178L) */);
         return arj.ac(sb.toString());
     }
 
@@ -1092,7 +1092,7 @@ public abstract class bmy {
             try {
                 FriendInfo friendInfoS = cnb.s(cursorAb);
                 Object objB = acv.b(acv.a, eom.a.f);
-                bzo.o(objB, cnb.z(-121955596368682L));
+                bzo.o(objB, "null cannot be cast to non-null type kotlin.String" /* cnb.z(-121955596368682L) */);
                 if (!((String) objB).equals(friendInfoS.getWxid())) {
                     arrayList.add(friendInfoS);
                 }

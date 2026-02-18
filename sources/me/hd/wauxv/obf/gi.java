@@ -90,21 +90,21 @@ public final /* synthetic */ class gi implements bgf {
             case 5:
                 bag bagVar = (bag) obj;
                 zb zbVar = new zb();
-                zbVar.k(cnb.z(-636810506009386L), cnb.z(-636698836859690L));
+                zbVar.k("MicroMsg.OplogService" /* cnb.z(-636810506009386L) */, "openim op success, type:%d id %d" /* cnb.z(-636698836859690L) */);
                 bagVar.getClass();
                 bagVar.b = zbVar;
                 return ensVar;
             case 6:
                 bah bahVar = (bah) obj;
                 cdj cdjVar = new cdj();
-                cdjVar.t(cnb.z(-637124038621994L), cnb.z(-637098268818218L), cnb.z(-637055319145258L));
+                cdjVar.t("inserTime" /* cnb.z(-637124038621994L) */, "cmdId" /* cnb.z(-637098268818218L) */, "buffer" /* cnb.z(-637055319145258L) */);
                 bahVar.getClass();
                 bahVar.d = cdjVar;
                 return ensVar;
             case 7:
                 bah bahVar2 = (bah) obj;
                 cdj cdjVar2 = new cdj();
-                cdjVar2.t(cnb.z(-634108971580202L), cnb.z(-633950057790250L));
+                cdjVar2.t("MicroMsg.SecInfoReporterImpl" /* cnb.z(-634108971580202L) */, "data is null." /* cnb.z(-633950057790250L) */);
                 cdjVar2.u(8108);
                 bahVar2.getClass();
                 bahVar2.d = cdjVar2;
@@ -112,7 +112,7 @@ public final /* synthetic */ class gi implements bgf {
             case 8:
                 bah bahVar3 = (bah) obj;
                 cdj cdjVar3 = new cdj();
-                cdjVar3.t(cnb.z(-637008074505002L), cnb.z(-634117561514794L));
+                cdjVar3.t("MicroMsg.SecInfoReporterImpl" /* cnb.z(-637008074505002L) */, "data is null." /* cnb.z(-634117561514794L) */);
                 cdjVar3.u(771);
                 bahVar3.getClass();
                 bahVar3.d = cdjVar3;
@@ -122,11 +122,11 @@ public final /* synthetic */ class gi implements bgf {
                 return ensVar;
             case 10:
                 bah bahVar4 = (bah) obj;
-                String[] strArr = {cnb.z(-100351910869802L)};
+                String[] strArr = {"com.tencent.mm.ui.chatting.manager" /* cnb.z(-100351910869802L) */};
                 bahVar4.getClass();
                 bahVar4.a = la.ab(strArr);
                 cdj cdjVar4 = new cdj();
-                cdjVar4.t(cnb.z(-97418448206634L), cnb.z(-97439923043114L));
+                cdjVar4.t("[get] " /* cnb.z(-97418448206634L) */, " is not a interface!" /* cnb.z(-97439923043114L) */);
                 bahVar4.d = cdjVar4;
                 return ensVar;
             case 11:
@@ -153,10 +153,10 @@ public final /* synthetic */ class gi implements bgf {
                 }
                 String str = (String) (objX3 instanceof dcx ? null : objX3);
                 JSONObject jSONObject = new JSONObject(str != null ? str : "");
-                if (bzo.f(jSONObject.get(cnb.z(-412488659106602L)), cnb.z(-412450004400938L))) {
-                    JSONObject jSONObject2 = jSONObject.getJSONObject(cnb.z(-412325450349354L));
-                    jSONObject2.put(cnb.z(-412338335251242L), cnb.z(-412806486686506L));
-                    jSONObject.put(cnb.z(-412802191719210L), jSONObject2);
+                if (bzo.f(jSONObject.get("api_name" /* cnb.z(-412488659106602L) */), "webapi_getadvert" /* cnb.z(-412450004400938L) */)) {
+                    JSONObject jSONObject2 = jSONObject.getJSONObject("data" /* cnb.z(-412325450349354L) */);
+                    jSONObject2.put("ad_unit_id" /* cnb.z(-412338335251242L) */, "" /* cnb.z(-412806486686506L) */);
+                    jSONObject.put("data" /* cnb.z(-412802191719210L) */, jSONObject2);
                     new ek(bmmVar2, 1, 8).q(jSONObject.toString());
                 }
                 return ensVar;
@@ -166,7 +166,7 @@ public final /* synthetic */ class gi implements bgf {
             case 13:
                 bah bahVar5 = (bah) obj;
                 cdj cdjVar5 = new cdj();
-                cdjVar5.v(cnb.z(-412832256490282L), cnb.z(-412729177275178L));
+                cdjVar5.v("NetSceneJSOperateWxData" /* cnb.z(-412832256490282L) */, "<init> hash[%d] appId [%s], data [%s], grantScope [%s], versionType [%d], opt [%d], extScene [%d]  sessionId [%s]  avatarOpt [%d]" /* cnb.z(-412729177275178L) */);
                 bahVar5.getClass();
                 bahVar5.d = cdjVar5;
                 return ensVar;
@@ -178,11 +178,11 @@ public final /* synthetic */ class gi implements bgf {
                 return ensVar;
             case 16:
                 bah bahVar6 = (bah) obj;
-                String[] strArr2 = {cnb.z(-409525131672362L)};
+                String[] strArr2 = {"com.tencent.mm.plugin.appbrand.jsapi.auth" /* cnb.z(-409525131672362L) */};
                 bahVar6.getClass();
                 bahVar6.a = la.ab(strArr2);
                 cdj cdjVar6 = new cdj();
-                cdjVar6.t(cnb.z(-409361922915114L), cnb.z(-410766377220906L));
+                cdjVar6.t("MicroMsg.AppBrand.JsApiAdOperateWXData[AppBrandSplashAd]" /* cnb.z(-409361922915114L) */, "cgi callback, callbackId:%s, service not running or preloaded" /* cnb.z(-410766377220906L) */);
                 bahVar6.d = cdjVar6;
                 return ensVar;
             case 17:
@@ -211,11 +211,11 @@ public final /* synthetic */ class gi implements bgf {
                 }
                 String str4 = (String) (objX5 instanceof dcx ? null : objX5);
                 String str5 = str4 != null ? str4 : "";
-                if (str3.equals(cnb.z(-434173948984106L))) {
+                if (str3.equals("onVideoTimeUpdate" /* cnb.z(-434173948984106L) */)) {
                     ek ekVar = new ek(bmmVar3, 1, 8);
                     JSONObject jSONObject3 = new JSONObject(str5);
-                    jSONObject3.put(cnb.z(-434113819441962L), 60);
-                    jSONObject3.put(cnb.z(-434092344605482L), 1);
+                    jSONObject3.put("position" /* cnb.z(-434113819441962L) */, 60);
+                    jSONObject3.put("duration" /* cnb.z(-434092344605482L) */, 1);
                     ekVar.q(jSONObject3.toString());
                 }
                 return ensVar;
@@ -225,7 +225,7 @@ public final /* synthetic */ class gi implements bgf {
             case 19:
                 bag bagVar2 = (bag) obj;
                 zb zbVar2 = new zb();
-                zbVar2.k(cnb.z(-107103599459114L), cnb.z(-107052059851562L));
+                zbVar2.k("MicroMsg.AppMessage" /* cnb.z(-107103599459114L) */, "parse msg failed" /* cnb.z(-107052059851562L) */);
                 bagVar2.getClass();
                 bagVar2.b = zbVar2;
                 return ensVar;
@@ -234,11 +234,11 @@ public final /* synthetic */ class gi implements bgf {
                 return ensVar;
             case 21:
                 bah bahVar7 = (bah) obj;
-                String[] strArr3 = {cnb.z(-120147415137066L)};
+                String[] strArr3 = {"com.tencent.mm.pluginsdk.model.app" /* cnb.z(-120147415137066L) */};
                 bahVar7.getClass();
                 bahVar7.a = la.ab(strArr3);
                 cdj cdjVar7 = new cdj();
-                cdjVar7.t(cnb.z(-108469399059242L), cnb.z(-108362024876842L));
+                cdjVar7.t("MicroMsg.AppMsgLogic" /* cnb.z(-108469399059242L) */, "summerbig sendAppMsg attachFilePath[%s], content[%s]" /* cnb.z(-108362024876842L) */);
                 bahVar7.d = cdjVar7;
                 return ensVar;
             case 22:
@@ -263,8 +263,8 @@ public final /* synthetic */ class gi implements bgf {
                             eg egVar = (eg) bzyVar.d;
                             lx.a.getClass();
                             egVar.d = lx.c;
-                            bzyVar.t(cnb.z(-511139762928426L), new amw(new ls(ceeVar, 0, zmVar), 0));
-                            bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar, cnb.z(-47455093652266L));
+                            bzyVar.t("保存" /* cnb.z(-511139762928426L) */, new amw(new ls(ceeVar, 0, zmVar), 0));
+                            bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar, "取消" /* cnb.z(-47455093652266L) */);
                             if (linearLayout != null) {
                                 egVar.r = linearLayout;
                             }
@@ -273,7 +273,7 @@ public final /* synthetic */ class gi implements bgf {
                         }
                     }
                 }
-                throw new NullPointerException(cnb.z(-641461955590954L).concat(viewK.getResources().getResourceName(i4)));
+                throw new NullPointerException("Missing required view with ID: " /* cnb.z(-641461955590954L) */.concat(viewK.getResources().getResourceName(i4)));
             case 23:
                 return Boolean.valueOf(lt.a.n().contains(((zn) obj).a));
             case 24:
@@ -304,7 +304,7 @@ public final /* synthetic */ class gi implements bgf {
                     bzo.n(obj2);
                     int i5 = bte.a;
                     azg azgVarR = dqc.bi(obj2).r();
-                    azgVarR.ab = cnb.z(-443841920367402L);
+                    azgVarR.ab = "field_UserName" /* cnb.z(-443841920367402L) */;
                     Object objE = ((azk) yg.e(azgVarR)).e();
                     bzo.n(objE);
                     bcp.a.getClass();
@@ -319,7 +319,7 @@ public final /* synthetic */ class gi implements bgf {
             case 26:
                 bah bahVar8 = (bah) obj;
                 cdj cdjVar8 = new cdj();
-                cdjVar8.t(cnb.z(-443760315988778L), cnb.z(-443674416642858L));
+                cdjVar8.t("MicroMsg.ForceNotifyStorage" /* cnb.z(-443760315988778L) */, "[onNewXmlReceived] ret:%s isAdd:%s info:%s" /* cnb.z(-443674416642858L) */);
                 bahVar8.getClass();
                 bahVar8.d = cdjVar8;
                 return ensVar;
@@ -344,8 +344,8 @@ public final /* synthetic */ class gi implements bgf {
                             eg egVar2 = (eg) bzyVar2.d;
                             md.a.getClass();
                             egVar2.d = md.c;
-                            bzyVar2.t(cnb.z(-512346648738602L), new amw(new bp(cefVar, 4), 0));
-                            bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar2, cnb.z(-47455093652266L));
+                            bzyVar2.t("保存" /* cnb.z(-512346648738602L) */, new amw(new bp(cefVar, 4), 0));
+                            bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar2, "取消" /* cnb.z(-47455093652266L) */);
                             if (linearLayout2 != null) {
                                 egVar2.r = linearLayout2;
                             }
@@ -354,7 +354,7 @@ public final /* synthetic */ class gi implements bgf {
                         }
                     }
                 }
-                throw new NullPointerException(cnb.z(-641324516637482L).concat(viewK2.getResources().getResourceName(i6)));
+                throw new NullPointerException("Missing required view with ID: " /* cnb.z(-641324516637482L) */.concat(viewK2.getResources().getResourceName(i6)));
             case 28:
                 Object objE2 = ((bmm) obj).e();
                 Activity activity = (Activity) (objE2 instanceof Activity ? objE2 : null);
@@ -373,7 +373,7 @@ public final /* synthetic */ class gi implements bgf {
                 if (ma.a.i()) {
                     i7 = (r0 == true ? 1 : 0) | 4;
                 }
-                activity.getIntent().putExtra(cnb.z(-512350943705898L), i7);
+                activity.getIntent().putExtra("intent.key.function.control" /* cnb.z(-512350943705898L) */, i7);
                 return ensVar;
             default:
                 int i8 = bte.a;

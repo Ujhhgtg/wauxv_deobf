@@ -15,7 +15,7 @@ public final /* synthetic */ class ake implements bfu {
     public final Object invoke() {
         switch (this.a) {
             case 0:
-                return cnb.z(-5510443039530L) + this.b;
+                return "val." /* cnb.z(-5510443039530L) */ + this.b;
             default:
                 String str = this.b;
                 bzo.q(str, "uriPattern");

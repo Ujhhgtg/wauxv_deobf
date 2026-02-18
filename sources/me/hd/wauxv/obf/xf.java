@@ -20,10 +20,10 @@ import org.luckypray.dexkit.DexKitBridge;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class xf extends doo implements bmz, bng {
-    public static final xf a = new xf(cnb.z(-549064324152106L));
-    public static final String b = cnb.z(-552998514195242L);
-    public static final String c = cnb.z(-553019989031722L);
-    public static final String d = cnb.z(-552977039358762L);
+    public static final xf a = new xf("ChatToolbarHook" /* cnb.z(-549064324152106L) */);
+    public static final String b = "界面" /* cnb.z(-552998514195242L) */;
+    public static final String c = "聊天工具栏" /* cnb.z(-553019989031722L) */;
+    public static final String d = "聊天输入框顶部显示工具栏，可能串台" /* cnb.z(-552977039358762L) */;
     public static final ws i = new ws(1);
     public static final boolean j = true;
     public static final ArrayList l = new ArrayList();
@@ -58,8 +58,8 @@ public final class xf extends doo implements bmz, bng {
         Class cls;
         Class cls2;
         if (z()) {
-            LinearLayout linearLayout = (LinearLayout) cnh.v(frameLayout, cnb.ac(ewh.q) ? cnb.z(-548995604675370L) : cnb.ac(ewh.o) ? cnb.z(-548944065067818L) : cnb.ac(ewh.n) ? cnb.z(-548961244937002L) : cnb.ac(ewh.m) ? cnb.z(-546160926260010L) : cnb.ac(ewh.l) ? cnb.z(-546178106129194L) : cnb.ac(ewh.k) ? cnb.z(-546126566521642L) : cnb.ac(ewh.j) ? cnb.z(-546143746390826L) : cnb.ac(ewh.i) ? cnb.z(-546092206783274L) : cnb.ac(ewh.h) ? cnb.z(-546109386652458L) : cnb.ac(ewh.g) ? cnb.z(-546057847044906L) : cnb.ac(ewh.f) ? cnb.z(-546075026914090L) : cnb.ac(ewh.e) ? cnb.z(-546023487306538L) : cnb.ac(ewh.d) ? cnb.z(-546040667175722L) : cnb.ac(ewh.c) ? cnb.z(-545989127568170L) : cnb.ac(ewh.b) ? cnb.z(-546006307437354L) : cnb.ac(ewh.a) ? cnb.z(-545954767829802L) : cnb.ab(ewk.c) ? cnb.z(-545971947698986L) : cnb.z(-545920408091434L));
-            if (linearLayout == null || linearLayout.findViewWithTag(cnb.z(-545937587960618L)) != null) {
+            LinearLayout linearLayout = (LinearLayout) cnh.v(frameLayout, cnb.ac(ewh.q) ? "c0p" /* cnb.z(-548995604675370L) */ : cnb.ac(ewh.o) ? "bzn" /* cnb.z(-548944065067818L) */ : cnb.ac(ewh.n) ? "byp" /* cnb.z(-548961244937002L) */ : cnb.ac(ewh.m) ? "by1" /* cnb.z(-546160926260010L) */ : cnb.ac(ewh.l) ? "bwr" /* cnb.z(-546178106129194L) */ : cnb.ac(ewh.k) ? "bw_" /* cnb.z(-546126566521642L) */ : cnb.ac(ewh.j) ? "bvs" /* cnb.z(-546143746390826L) */ : cnb.ac(ewh.i) ? "bv0" /* cnb.z(-546092206783274L) */ : cnb.ac(ewh.h) ? "bui" /* cnb.z(-546109386652458L) */ : cnb.ac(ewh.g) ? "bwa" /* cnb.z(-546057847044906L) */ : cnb.ac(ewh.f) ? "bvv" /* cnb.z(-546075026914090L) */ : cnb.ac(ewh.e) ? "brq" /* cnb.z(-546023487306538L) */ : cnb.ac(ewh.d) ? "br6" /* cnb.z(-546040667175722L) */ : cnb.ac(ewh.c) ? "bmw" /* cnb.z(-545989127568170L) */ : cnb.ac(ewh.b) ? "bip" /* cnb.z(-546006307437354L) */ : cnb.ac(ewh.a) ? "bej" /* cnb.z(-545954767829802L) */ : cnb.ab(ewk.c) ? "bl8" /* cnb.z(-545971947698986L) */ : "b4t" /* cnb.z(-545920408091434L) */);
+            if (linearLayout == null || linearLayout.findViewWithTag("ChatToolbar" /* cnb.z(-545937587960618L) */) != null) {
                 return;
             }
             cnf.bh(linearLayout.getContext());
@@ -94,7 +94,7 @@ public final class xf extends doo implements bmz, bng {
             String name = clsBf3.getName();
             int size = linkedHashMap2.size();
             RecyclerView recyclerView = (RecyclerView) viewH;
-            recyclerView.setTag(cnb.z(-546401444428586L));
+            recyclerView.setTag("ChatToolbar" /* cnb.z(-546401444428586L) */);
             int iIntValue = blrVarI.k(8).intValue();
             recyclerView.setPadding(iIntValue, iIntValue, iIntValue, iIntValue);
             recyclerView.setFadingEdgeLength(blrVarI.k(10).intValue());

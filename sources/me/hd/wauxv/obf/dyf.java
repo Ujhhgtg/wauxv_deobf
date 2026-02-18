@@ -40,7 +40,7 @@ public final class dyf {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-203963701918506L));
+        sb.append("gm1Proto(anchor_shop_tag=" /* cnb.z(-203963701918506L) */);
         bjs.w(sb, this.a, -204418968451882L);
         yg.u(sb, this.b, -204320184204074L);
         sb.append(this.c);

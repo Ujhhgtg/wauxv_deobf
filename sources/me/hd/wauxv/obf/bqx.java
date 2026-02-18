@@ -427,7 +427,7 @@ public final class bqx extends czd implements czi {
                 Iterator it = list.iterator();
                 while (true) {
                     if (it.hasNext()) {
-                        if (((wz) it.next()).b.equals(cnb.z(-549485230947114L))) {
+                        if (((wz) it.next()).b.equals("群工具" /* cnb.z(-549485230947114L) */)) {
                             akfVar = xc.a;
                             break;
                         }
@@ -436,7 +436,7 @@ public final class bqx extends czd implements czi {
                         break;
                     }
                 }
-                akfVar.u(aaz.k((List) xeVar.d, cnb.z(-549502410816298L), null, null, new ws(7), 30));
+                akfVar.u(aaz.k((List) xeVar.d, "," /* cnb.z(-549502410816298L) */, null, null, new ws(7), 30));
                 RecyclerView recyclerView = this.s;
                 czg layoutManager2 = recyclerView.getLayoutManager();
                 if (!(layoutManager2 instanceof LinearLayoutManager)) {
@@ -643,12 +643,12 @@ public final class bqx extends czd implements czi {
         if (this.o != 0) {
             Context context = ((RecyclerView) xeVar.f).getContext();
             if (Build.VERSION.SDK_INT >= 31) {
-                Object systemService = context.getSystemService(cnb.z(-71210557766442L));
-                bzo.o(systemService, cnb.z(-70587787508522L));
+                Object systemService = context.getSystemService("vibrator_manager" /* cnb.z(-71210557766442L) */);
+                bzo.o(systemService, "null cannot be cast to non-null type android.os.VibratorManager" /* cnb.z(-70587787508522L) */);
                 defaultVibrator = qc.m(systemService).getDefaultVibrator();
             } else {
-                Object systemService2 = context.getSystemService(cnb.z(-70862665415466L));
-                bzo.o(systemService2, cnb.z(-70841190578986L));
+                Object systemService2 = context.getSystemService("vibrator" /* cnb.z(-70862665415466L) */);
+                bzo.o(systemService2, "null cannot be cast to non-null type android.os.Vibrator" /* cnb.z(-70841190578986L) */);
                 defaultVibrator = (Vibrator) systemService2;
             }
             defaultVibrator.vibrate(VibrationEffect.createOneShot(40L, -1));

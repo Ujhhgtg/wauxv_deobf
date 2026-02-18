@@ -108,7 +108,7 @@ public final class duw {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-326494823906090L));
+        sb.append("WebSearchInfoProto(relevant_vid=" /* cnb.z(-326494823906090L) */);
         yg.u(sb, this.a, -326353089985322L);
         yg.u(sb, this.b, -326305845345066L);
         yg.u(sb, this.c, -325648715348778L);

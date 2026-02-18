@@ -52,9 +52,9 @@ public final class ebu {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-255958576003882L));
+        sb.append("nk1Proto(cdn_trans_info=" /* cnb.z(-255958576003882L) */);
         sb.append(this.a);
-        sb.append(cnb.z(-255318625876778L));
+        sb.append(", recommend_video_quality_level=" /* cnb.z(-255318625876778L) */);
         bjs.w(sb, this.b, -255176891956010L);
         bjs.w(sb, this.c, -255610683652906L);
         dkz.ad(sb, this.d, -255533374241578L);

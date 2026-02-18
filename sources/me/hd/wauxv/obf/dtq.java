@@ -90,7 +90,7 @@ public final class dtq {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-227087805840170L));
+        sb.append("LocationProto(longitude=" /* cnb.z(-227087805840170L) */);
         bjs.v(sb, this.a, -227547367340842L);
         bjs.v(sb, this.b, -227530187471658L);
         yg.u(sb, this.c, -227495827733290L);

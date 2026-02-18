@@ -56,7 +56,7 @@ public final class dsf {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-149147034319658L));
+        sb.append("AppInfoProto(id=" /* cnb.z(-149147034319658L) */);
         yg.u(sb, this.a, -149074019875626L);
         yg.u(sb, this.b, -148992415497002L);
         yg.u(sb, this.c, -149512106539818L);

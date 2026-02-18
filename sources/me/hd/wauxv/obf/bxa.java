@@ -22,17 +22,17 @@ public final /* synthetic */ class bxa implements View.OnClickListener {
             case 0:
                 View view2 = this.b;
                 Context context = view2.getContext();
-                bzo.o(context, cnb.z(-496008593144618L));
+                bzo.o(context, "null cannot be cast to non-null type android.app.Activity" /* cnb.z(-496008593144618L) */);
                 Context context2 = view2.getContext();
                 bxj.a.getClass();
                 jx jxVar = bxj.i;
                 btc btcVar = bxj.b[0];
                 Intent intent = new Intent(context2, (Class<?>) jxVar.w());
-                intent.putExtra(cnb.z(-496326420724522L), 8);
+                intent.putExtra("map_view_type" /* cnb.z(-496326420724522L) */, 8);
                 ((Activity) context).startActivityForResult(intent, 6);
                 break;
             default:
-                cnh.ac(this.b.getContext(), cnb.z(-485090786278186L));
+                cnh.ac(this.b.getContext(), "https://hdshare.github.io/WAuxiliary_Plugin/" /* cnb.z(-485090786278186L) */);
                 break;
         }
     }

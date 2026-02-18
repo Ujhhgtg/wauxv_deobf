@@ -17,7 +17,7 @@ public final class dlx extends bws implements bng {
         Object objD = ((azk) aaz.e(azgVarR.c())).d();
         bzo.n(objD);
         cde cdeVarT = dqc.bi(objD).t();
-        cdeVarT.a = cnb.z(-102542344190762L);
+        cdeVarT.a = "com.tencent.wcdb.database.SQLiteDatabase" /* cnb.z(-102542344190762L) */;
         Object objE = ((cdk) bjs.h(cdeVarT)).e(new Object[0]);
         bzo.n(objE);
         return objE;

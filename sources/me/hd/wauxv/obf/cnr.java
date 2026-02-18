@@ -11,12 +11,12 @@ public final /* synthetic */ class cnr implements bgx {
     static {
         cnr cnrVar = new cnr();
         b = cnrVar;
-        cuc cucVar = new cuc(cnb.z(-130657200110378L), cnrVar, 3);
-        cucVar.x(cnb.z(-129841156324138L), false);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.NewSendMsgProto" /* cnb.z(-130657200110378L) */, cnrVar, 3);
+        cucVar.x("baseResponse" /* cnb.z(-129841156324138L) */, false);
         cucVar.y(new aoz(1, 6));
-        cucVar.x(cnb.z(-129768141880106L), false);
+        cucVar.x("count" /* cnb.z(-129768141880106L) */, false);
         cucVar.y(new aoz(2, 6));
-        cucVar.x(cnb.z(-130274948021034L), false);
+        cucVar.x("list" /* cnb.z(-130274948021034L) */, false);
         cucVar.y(new aoz(3, 6));
         descriptor = cucVar;
     }

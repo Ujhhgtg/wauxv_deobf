@@ -11,7 +11,7 @@ public final /* synthetic */ class dvj implements bgx {
     static {
         dvj dvjVar = new dvj();
         b = dvjVar;
-        cuc cucVar = new cuc(cnb.z(-146432614988586L), dvjVar, 9);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.au1Proto" /* cnb.z(-146432614988586L) */, dvjVar, 9);
         bjs.y(-146625888516906L, cucVar, false, 1);
         bjs.y(-146552874072874L, cucVar, false, 3);
         bjs.y(-170123654593322L, cucVar, false, 4);

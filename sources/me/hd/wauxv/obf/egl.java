@@ -32,7 +32,7 @@ public final class egl {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-313184720255786L));
+        sb.append("vc1Proto(number=" /* cnb.z(-313184720255786L) */);
         return bjs.p(sb, this.a, ')');
     }
 }

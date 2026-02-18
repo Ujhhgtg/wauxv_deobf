@@ -9,7 +9,7 @@ public final /* synthetic */ class eax implements bgx {
     static {
         eax eaxVar = new eax();
         b = eaxVar;
-        cuc cucVar = new cuc(cnb.z(-230729938107178L), eaxVar, 1);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.mh4Proto" /* cnb.z(-230729938107178L) */, eaxVar, 1);
         bjs.y(-229840879876906L, cucVar, false, 1);
         descriptor = cucVar;
     }

@@ -40,8 +40,8 @@ public final class biv {
             return bisVar.e;
         }
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-593036199328554L));
-        return yg.n(sb, la.u(this.f, null, cnb.z(-592928825146154L), cnb.z(-592937415080746L), new bep(2), 25), -592946005015338L);
+        sb.append(" where (username in " /* cnb.z(-593036199328554L) */);
+        return yg.n(sb, la.u(this.f, null, "(" /* cnb.z(-592928825146154L) */, ")" /* cnb.z(-592937415080746L) */, new bep(2), 25), -592946005015338L);
     }
 
     public biv(String str, int i, String str2, String[] strArr) {

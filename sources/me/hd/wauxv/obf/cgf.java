@@ -15,7 +15,7 @@ public final class cgf extends bws {
         int i = bte.a;
         cge.a.getClass();
         cde cdeVarT = dqc.bh(emn.az(cgd.a)).t();
-        cdeVarT.ab = cnb.z(-66662187399978L);
+        cdeVarT.ab = "convertFrom" /* cnb.z(-66662187399978L) */;
         cdeVarT.z(Arrays.copyOf(new Object[]{dal.b(Cursor.class)}, 1));
         cdeVarT.ah();
         aki akiVarAd = ad((cdk) aaz.e(cdeVarT.aj()), exg.a);

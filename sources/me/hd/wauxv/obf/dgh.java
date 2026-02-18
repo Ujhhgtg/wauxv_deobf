@@ -62,7 +62,7 @@ public final class dgh extends doi implements bgj {
                     }
                 } else {
                     if (i2 != 1) {
-                        throw new IllegalStateException(cnb.z(-60498909330218L));
+                        throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine" /* cnb.z(-60498909330218L) */);
                     }
                     bhu.bd(obj);
                 }
@@ -80,7 +80,7 @@ public final class dgh extends doi implements bgj {
                     linearLayout2.addView(r5);
                     TextView textView = new TextView(linearLayout2.getContext());
                     StringBuilder sb = new StringBuilder();
-                    sb.append(cnb.z(-60576218741546L));
+                    sb.append("版本: " /* cnb.z(-60576218741546L) */);
                     yg.u(sb, (String) ctxVar.i.getValue(), -60520384166698L);
                     sb.append((String) ctxVar.j.getValue());
                     textView.setText(sb.toString());
@@ -92,14 +92,14 @@ public final class dgh extends doi implements bgj {
                 int i3 = this.d;
                 if (i3 == 0) {
                     bhu.bd(obj);
-                    ((TextView) view).setText(cnb.z(-58488864635690L));
+                    ((TextView) view).setText("加载完成, 准备重启中..." /* cnb.z(-58488864635690L) */);
                     this.d = 1;
                     if (dqc.ba(1000L, this) == ahqVar) {
                         return ahqVar;
                     }
                 } else {
                     if (i3 != 1) {
-                        throw new IllegalStateException(cnb.z(-58475979733802L));
+                        throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine" /* cnb.z(-58475979733802L) */);
                     }
                     bhu.bd(obj);
                 }

@@ -32,7 +32,7 @@ public final class efg {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-282548718533418L));
+        sb.append("t90Proto(d=" /* cnb.z(-282548718533418L) */);
         return bjs.p(sb, this.a, ')');
     }
 }

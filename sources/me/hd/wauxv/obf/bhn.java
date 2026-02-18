@@ -96,14 +96,14 @@ public final class bhn extends doi implements bgj {
         switch (i) {
             case 0:
                 bhu.bd(obj);
-                String strZ = cnb.z(-47704201755434L);
+                String strZ = "检测到差异版本" /* cnb.z(-47704201755434L) */;
                 bhl bhlVar = (bhl) serializable;
                 StringBuilder sb = new StringBuilder();
-                sb.append(cnb.z(-47669842017066L) + bhlVar.a);
+                sb.append("版本名 " /* cnb.z(-47669842017066L) */ + bhlVar.a);
                 sb.append('\n');
-                sb.append(cnb.z(-47631187311402L) + bhlVar.d);
+                sb.append("发布于 " /* cnb.z(-47631187311402L) */ + bhlVar.d);
                 sb.append('\n');
-                sb.append(cnb.z(-47644072213290L));
+                sb.append("\n更新日志如下\n" /* cnb.z(-47644072213290L) */);
                 sb.append('\n');
                 ((byx) this.d).b(strZ, bjs.q(sb, bhlVar.c, '\n'), new ls((MainActivity) obj2, 2, bhlVar));
                 return ens.a;
@@ -125,13 +125,13 @@ public final class bhn extends doi implements bgj {
                     if (objB != null) {
                         return (File) objB;
                     }
-                    throw new NullPointerException(cnb.z(-544597558164266L));
+                    throw new NullPointerException("null cannot be cast to non-null type java.io.File" /* cnb.z(-544597558164266L) */);
                 } catch (NetException e) {
                     throw e;
                 } catch (CancellationException e2) {
                     throw e2;
                 } catch (Throwable th) {
-                    throw new ConvertException(responseExecute, cnb.z(-541582491122474L), th, null, 8, null);
+                    throw new ConvertException(responseExecute, "An unexpected error occurred in the converter" /* cnb.z(-541582491122474L) */, th, null, 8, null);
                 }
             case 2:
                 bhu.bd(obj);
@@ -151,13 +151,13 @@ public final class bhn extends doi implements bgj {
                     if (objB2 != null) {
                         return (File) objB2;
                     }
-                    throw new NullPointerException(cnb.z(-580636628745002L));
+                    throw new NullPointerException("null cannot be cast to non-null type java.io.File" /* cnb.z(-580636628745002L) */);
                 } catch (NetException e3) {
                     throw e3;
                 } catch (CancellationException e4) {
                     throw e4;
                 } catch (Throwable th2) {
-                    throw new ConvertException(responseExecute2, cnb.z(-580988816063274L), th2, null, 8, null);
+                    throw new ConvertException(responseExecute2, "An unexpected error occurred in the converter" /* cnb.z(-580988816063274L) */, th2, null, 8, null);
                 }
             case 3:
                 bhu.bd(obj);
@@ -177,13 +177,13 @@ public final class bhn extends doi implements bgj {
                     if (objB3 != null) {
                         return (File) objB3;
                     }
-                    throw new NullPointerException(cnb.z(-582470579780394L));
+                    throw new NullPointerException("null cannot be cast to non-null type java.io.File" /* cnb.z(-582470579780394L) */);
                 } catch (NetException e5) {
                     throw e5;
                 } catch (CancellationException e6) {
                     throw e6;
                 } catch (Throwable th3) {
-                    throw new ConvertException(responseExecute3, cnb.z(-581723255470890L), th3, null, 8, null);
+                    throw new ConvertException(responseExecute3, "An unexpected error occurred in the converter" /* cnb.z(-581723255470890L) */, th3, null, 8, null);
                 }
             case 4:
                 bhu.bd(obj);
@@ -203,13 +203,13 @@ public final class bhn extends doi implements bgj {
                     if (objB4 != null) {
                         return (File) objB4;
                     }
-                    throw new NullPointerException(cnb.z(-588157116480298L));
+                    throw new NullPointerException("null cannot be cast to non-null type java.io.File" /* cnb.z(-588157116480298L) */);
                 } catch (NetException e7) {
                     throw e7;
                 } catch (CancellationException e8) {
                     throw e8;
                 } catch (Throwable th4) {
-                    throw new ConvertException(responseExecute4, cnb.z(-587409792170794L), th4, null, 8, null);
+                    throw new ConvertException(responseExecute4, "An unexpected error occurred in the converter" /* cnb.z(-587409792170794L) */, th4, null, 8, null);
                 }
             case 5:
                 bhu.bd(obj);
@@ -229,13 +229,13 @@ public final class bhn extends doi implements bgj {
                     if (objB5 != null) {
                         return (File) objB5;
                     }
-                    throw new NullPointerException(cnb.z(-585399747476266L));
+                    throw new NullPointerException("null cannot be cast to non-null type java.io.File" /* cnb.z(-585399747476266L) */);
                 } catch (NetException e9) {
                     throw e9;
                 } catch (CancellationException e10) {
                     throw e10;
                 } catch (Throwable th5) {
-                    throw new ConvertException(responseExecute5, cnb.z(-586851446422314L), th5, null, 8, null);
+                    throw new ConvertException(responseExecute5, "An unexpected error occurred in the converter" /* cnb.z(-586851446422314L) */, th5, null, 8, null);
                 }
             case 6:
                 bhu.bd(obj);
@@ -255,13 +255,13 @@ public final class bhn extends doi implements bgj {
                     if (objB6 != null) {
                         return (File) objB6;
                     }
-                    throw new NullPointerException(cnb.z(-586151366753066L));
+                    throw new NullPointerException("null cannot be cast to non-null type java.io.File" /* cnb.z(-586151366753066L) */);
                 } catch (NetException e11) {
                     throw e11;
                 } catch (CancellationException e12) {
                     throw e12;
                 } catch (Throwable th6) {
-                    throw new ConvertException(responseExecute6, cnb.z(-586503554071338L), th6, null, 8, null);
+                    throw new ConvertException(responseExecute6, "An unexpected error occurred in the converter" /* cnb.z(-586503554071338L) */, th6, null, 8, null);
                 }
             default:
                 bhu.bd(obj);
@@ -281,13 +281,13 @@ public final class bhn extends doi implements bgj {
                     if (objB7 != null) {
                         return (File) objB7;
                     }
-                    throw new NullPointerException(cnb.z(-609979845311274L));
+                    throw new NullPointerException("null cannot be cast to non-null type java.io.File" /* cnb.z(-609979845311274L) */);
                 } catch (NetException e13) {
                     throw e13;
                 } catch (CancellationException e14) {
                     throw e14;
                 } catch (Throwable th7) {
-                    throw new ConvertException(responseExecute7, cnb.z(-609232521001770L), th7, null, 8, null);
+                    throw new ConvertException(responseExecute7, "An unexpected error occurred in the converter" /* cnb.z(-609232521001770L) */, th7, null, 8, null);
                 }
         }
     }

@@ -64,13 +64,13 @@ public final class ebl {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-258050225077034L));
+        sb.append("n84Proto(finder_username=" /* cnb.z(-258050225077034L) */);
         yg.u(sb, this.a, -257955735796522L);
         dkz.ad(sb, this.b, -257882721352490L);
         bjs.w(sb, this.c, -258329397951274L);
         dts.g(sb, this.d, -258264973441834L);
         sb.append(this.e);
-        sb.append(cnb.z(-258200548932394L));
+        sb.append(", extra_reward_wecoin=" /* cnb.z(-258200548932394L) */);
         dkz.ad(sb, this.f, -257552008870698L);
         dts.g(sb, this.g, -257483289393962L);
         dkz.ad(sb, this.h, -257444634688298L);

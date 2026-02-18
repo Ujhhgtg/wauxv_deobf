@@ -36,9 +36,9 @@ public final class edn {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-275702540663594L));
+        sb.append("q72Proto(contact=" /* cnb.z(-275702540663594L) */);
         sb.append(this.a);
-        sb.append(cnb.z(-275573691644714L));
+        sb.append(", friend_follow_num=" /* cnb.z(-275573691644714L) */);
         return bjs.p(sb, this.b, ')');
     }
 }

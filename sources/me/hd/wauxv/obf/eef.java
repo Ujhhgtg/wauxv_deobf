@@ -51,7 +51,7 @@ public final class eef {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-280766307105578L));
+        sb.append("s40Proto(component_name=" /* cnb.z(-280766307105578L) */);
         yg.u(sb, this.b, -280676112792362L);
         yg.v(sb, this.c, -277824254507818L);
         yg.u(sb, this.d, -277721175292714L);

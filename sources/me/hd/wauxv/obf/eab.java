@@ -36,7 +36,7 @@ public final class eab {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-220233038035754L));
+        sb.append("ll1Proto(module_type=" /* cnb.z(-220233038035754L) */);
         bjs.w(sb, this.a, -221770636327722L);
         return bjs.q(sb, this.b, ')');
     }

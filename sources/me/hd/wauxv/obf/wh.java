@@ -16,17 +16,17 @@ public final class wh extends doo implements bng, bns {
     public static final us j;
 
     static {
-        cnb.z(-423170242771754L);
-        a = new wh(cnb.z(-425665618770730L));
-        b = aba.ag(cnb.z(-423045688720170L), cnb.z(-422478753037098L), cnb.z(-422448688266026L), cnb.z(-422362788920106L), cnb.z(-422345609050922L), cnb.z(-422281184541482L), cnb.z(-422740746042154L));
-        c = cnb.z(-422727861140266L);
-        d = cnb.z(-422663436630826L);
-        i = cnb.z(-422689206434602L);
+        "今日已发${totalMsg}条" /* cnb.z(-423170242771754L) */;
+        a = new wh("ChatInputHintHook" /* cnb.z(-425665618770730L) */);
+        b = aba.ag("${totalMsg}" /* cnb.z(-423045688720170L) */, "${textMsg}" /* cnb.z(-422478753037098L) */, "${textWord}" /* cnb.z(-422448688266026L) */, "${emojiMsg}" /* cnb.z(-422362788920106L) */, "${transferMsg}" /* cnb.z(-422345609050922L) */, "${redBagMsg}" /* cnb.z(-422281184541482L) */, "${fileMsg}" /* cnb.z(-422740746042154L) */);
+        c = "美化" /* cnb.z(-422727861140266L) */;
+        d = "输入框提示" /* cnb.z(-422663436630826L) */;
+        i = "自定义聊天输入框默认提示的文本内容" /* cnb.z(-422689206434602L) */;
         j = new us(6);
     }
 
     public static String l(String str) {
-        return dnr.bo(dnr.bo(dnr.bo(dnr.bo(dnr.bo(dnr.bo(dnr.bo(str, cnb.z(-425605489228586L), String.valueOf(wd.a.k())), cnb.z(-425519589882666L), String.valueOf(wb.a.k())), cnb.z(-426039280925482L), String.valueOf(wc.a.k())), cnb.z(-426022101056298L), String.valueOf(vw.a.k())), cnb.z(-425936201710378L), String.valueOf(we.a.k())), cnb.z(-425871777200938L), String.valueOf(wa.a.k())), cnb.z(-425850302364458L), String.valueOf(vx.a.k()));
+        return dnr.bo(dnr.bo(dnr.bo(dnr.bo(dnr.bo(dnr.bo(dnr.bo(str, "${totalMsg}" /* cnb.z(-425605489228586L) */, String.valueOf(wd.a.k())), "${textMsg}" /* cnb.z(-425519589882666L) */, String.valueOf(wb.a.k())), "${textWord}" /* cnb.z(-426039280925482L) */, String.valueOf(wc.a.k())), "${emojiMsg}" /* cnb.z(-426022101056298L) */, String.valueOf(vw.a.k())), "${transferMsg}" /* cnb.z(-425936201710378L) */, String.valueOf(we.a.k())), "${redBagMsg}" /* cnb.z(-425871777200938L) */, String.valueOf(wa.a.k())), "${fileMsg}" /* cnb.z(-425850302364458L) */, String.valueOf(vx.a.k()));
     }
 
     @Override // me.hd.wauxv.obf.bmf

@@ -62,16 +62,16 @@ public final class dvo {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-167890271599402L));
+        sb.append("b22Proto(topic=" /* cnb.z(-167890271599402L) */);
         yg.u(sb, this.a, -167821552122666L);
         bjs.w(sb, this.b, -167800077286186L);
         yg.u(sb, this.c, -167718472907562L);
         yg.u(sb, this.d, -167684113169194L);
         sb.append(this.e);
-        sb.append(cnb.z(-168216689113898L));
+        sb.append(", patMusicId=" /* cnb.z(-168216689113898L) */);
         yg.u(sb, this.f, -168139379702570L);
         sb.append(this.g);
-        sb.append(cnb.z(-168100724996906L));
+        sb.append(", feedId=" /* cnb.z(-168100724996906L) */);
         return bjs.q(sb, this.h, ')');
     }
 }

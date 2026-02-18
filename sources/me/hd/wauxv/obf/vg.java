@@ -15,18 +15,18 @@ public final class vg extends doo implements bng, bob {
     public static final boolean m;
 
     static {
-        cnb.z(-577552842226474L);
-        cnb.z(-565913480854314L);
-        cnb.z(-565887711050538L);
-        cnb.z(-565861941246762L);
-        cnb.z(-565836171442986L);
-        cnb.z(-565741682162474L);
-        cnb.z(-565715912358698L);
-        cnb.z(-566239898368810L);
-        a = new vg(cnb.z(-572617924803370L));
-        b = cnb.z(-566214128565034L);
-        c = cnb.z(-566149704055594L);
-        d = cnb.z(-566119639284522L);
+        "#FFF7F7F7" /* cnb.z(-577552842226474L) */;
+        "#FFCCE8E3" /* cnb.z(-565913480854314L) */;
+        "#FF1E1E1E" /* cnb.z(-565887711050538L) */;
+        "#FF006A62" /* cnb.z(-565861941246762L) */;
+        "#FF1E1E1E" /* cnb.z(-565836171442986L) */;
+        "#FF324B48" /* cnb.z(-565741682162474L) */;
+        "#FFF7F7F7" /* cnb.z(-565715912358698L) */;
+        "#FF81D5CB" /* cnb.z(-566239898368810L) */;
+        a = new vg("ChatGroupNavHook" /* cnb.z(-572617924803370L) */);
+        b = "界面" /* cnb.z(-566214128565034L) */;
+        c = "聊天分组导航" /* cnb.z(-566149704055594L) */;
+        d = "添加分组侧边导航栏，最多设七个分组" /* cnb.z(-566119639284522L) */;
         i = new mj(28);
         m = true;
     }
@@ -60,7 +60,7 @@ public final class vg extends doo implements bng, bob {
         Object next;
         if (z()) {
             Object obj = null;
-            if (dnr.bp(str, cnb.z(-572012334414634L), false)) {
+            if (dnr.bp(str, "select unReadCount, status, isSend, conversationTime, username, content, msgType, flag, digest, digestUser, attrflag, editingMsg, atCount, unReadMuteCount, UnReadInvite, hasTodo, hbMarkRed, remitMarkRed, parentRef from rconversation where " /* cnb.z(-572012334414634L) */, false)) {
                 if (ux.a.o().equals(bis.a.d)) {
                     return;
                 }
@@ -76,10 +76,10 @@ public final class vg extends doo implements bng, bob {
                 biv bivVar = (biv) next;
                 if (bivVar != null) {
                     bmmVar.getClass();
-                    new ek(bmmVar, 1, 8).q(cnb.z(-573730321333034L) + bivVar.g(ux.a.o()));
+                    new ek(bmmVar, 1, 8).q("select unReadCount, status, isSend, conversationTime, username, content, msgType, flag, digest, digestUser, attrflag, editingMsg, atCount, unReadMuteCount, UnReadInvite, hasTodo, hbMarkRed, remitMarkRed, parentRef from rconversation " /* cnb.z(-573730321333034L) */ + bivVar.g(ux.a.o()));
                 }
             }
-            if (!dnr.bp(str, cnb.z(-579339548621610L), false) || ux.a.o().equals(bis.a.d)) {
+            if (!dnr.bp(str, "select unReadCount, status, isSend, conversationTime, username, content, msgType,flag, digest, digestUser, attrflag, editingMsg, atCount, unReadMuteCount, UnReadInvite, editingQuoteMsgId, hasTodo, hbMarkRed, remitMarkRed, hasSpecialFollow, parentRef from rconversation where " /* cnb.z(-579339548621610L) */, false) || ux.a.o().equals(bis.a.d)) {
                 return;
             }
             biw.a.getClass();
@@ -92,7 +92,7 @@ public final class vg extends doo implements bng, bob {
             biv bivVar2 = (biv) obj;
             if (bivVar2 != null) {
                 bmmVar.getClass();
-                new ek(bmmVar, 1, 8).q(cnb.z(-580318801165098L) + bivVar2.g(ux.a.o()));
+                new ek(bmmVar, 1, 8).q("select unReadCount, status, isSend, conversationTime, username, content, msgType,flag, digest, digestUser, attrflag, editingMsg, atCount, unReadMuteCount, UnReadInvite, editingQuoteMsgId, hasTodo, hbMarkRed, remitMarkRed, hasSpecialFollow, parentRef from rconversation " /* cnb.z(-580318801165098L) */ + bivVar2.g(ux.a.o()));
             }
         }
     }

@@ -22,7 +22,7 @@ public final class nz extends oc {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-388986598062890L));
+        sb.append("Header(title=" /* cnb.z(-388986598062890L) */);
         return bjs.q(sb, this.a, ')');
     }
 }

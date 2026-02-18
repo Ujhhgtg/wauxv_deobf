@@ -36,7 +36,7 @@ public final class dun {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-302357107702570L));
+        sb.append("VideoColdDLRuleProto(type=" /* cnb.z(-302357107702570L) */);
         yg.u(sb, this.a, -302258323454762L);
         return bjs.q(sb, this.b, ')');
     }

@@ -36,7 +36,7 @@ public final class dxw {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-181814555573034L));
+        sb.append("gf1Proto(seat_id=" /* cnb.z(-181814555573034L) */);
         bjs.w(sb, this.a, -181754426030890L);
         return bjs.q(sb, this.b, ')');
     }

@@ -36,7 +36,7 @@ public final class dzd {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-200360224357162L));
+        sb.append("k71Proto(effect_type=" /* cnb.z(-200360224357162L) */);
         bjs.w(sb, this.a, -200317274684202L);
         return bjs.q(sb, this.b, ')');
     }

@@ -14,7 +14,7 @@ public final class ur extends bws {
     @Override // me.hd.wauxv.obf.bmf
     public final void e() {
         int i = bte.a;
-        adt adtVarM = dqc.bh(ajn.ag(cnb.z(-50749333568298L))).m();
+        adt adtVarM = dqc.bh(ajn.ag("com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* cnb.z(-50749333568298L) */)).m();
         adtVarM.z(Arrays.copyOf(new Object[]{dal.b(Context.class), dal.b(AttributeSet.class), dal.b(Integer.TYPE)}, 3));
         aki akiVarAd = ad((adu) aaz.e(adtVarM.a()), exg.a);
         akiVarAd.m(new mj(27));

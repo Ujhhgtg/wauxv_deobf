@@ -72,7 +72,7 @@ public final class dxh {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-192586333551402L));
+        sb.append("f93Proto(app_id=" /* cnb.z(-192586333551402L) */);
         yg.u(sb, this.a, -192513319107370L);
         yg.u(sb, this.b, -192478959369002L);
         yg.u(sb, this.c, -192938520869674L);

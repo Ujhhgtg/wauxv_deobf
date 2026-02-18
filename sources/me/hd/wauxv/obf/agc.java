@@ -13,7 +13,7 @@ public final class agc extends bws implements bng {
         Object objC = zf.c(emn.bb(agb.a).getDeclaringClass(), new Object[0]);
         int i = bte.a;
         cde cdeVarT = dqc.bi(objC).t();
-        cdeVarT.ab = cnb.z(-79005923408682L);
+        cdeVarT.ab = "convertFrom" /* cnb.z(-79005923408682L) */;
         cdeVarT.z(Arrays.copyOf(new Object[]{dal.b(ContentValues.class), dal.b(Boolean.TYPE)}, 2));
         cdeVarT.ah();
         ((cdk) aaz.e(cdeVarT.aj())).e(contentValues, Boolean.TRUE);

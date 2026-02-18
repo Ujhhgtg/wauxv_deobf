@@ -12,7 +12,7 @@ public final /* synthetic */ class cdp implements bgx {
     static {
         cdp cdpVar = new cdp();
         b = cdpVar;
-        cuc cucVar = new cuc(cnb.z(-341677533297450L), cdpVar, 38);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.proto.ModUserInfo" /* cnb.z(-341677533297450L) */, cdpVar, 38);
         bjs.u(-340895849249578L, cucVar, false, 1);
         bjs.u(-340861489511210L, cucVar, false, 2);
         bjs.u(-341389770488618L, cucVar, false, 3);

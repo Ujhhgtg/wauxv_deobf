@@ -32,6 +32,6 @@ public final class ayt {
     }
 
     public final String toString() {
-        return cnb.z(-130777459194666L) + this.a + cnb.z(-130678674946858L) + this.b + ')';
+        return "FavInfoProto(chatInfo=" /* cnb.z(-130777459194666L) */ + this.a + ", voiceInfo=" /* cnb.z(-130678674946858L) */ + this.b + ')';
     }
 }

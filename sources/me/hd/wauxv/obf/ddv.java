@@ -31,7 +31,7 @@ public final class ddv {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(cnb.z(-151273043131178L));
+        sb.append("SKBuiltinString(string=" /* cnb.z(-151273043131178L) */);
         return bjs.q(sb, this.a, ')');
     }
 }
