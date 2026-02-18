@@ -120,7 +120,7 @@ public final /* synthetic */ class bty implements IHasInvokeMethod {
                 ((amm) obj).c = new bty(9);
                 return ensVar;
             case 4:
-                HookParamWrapper hookParam = (HookParamWrapper) obj;
+                HookParam hookParam = (HookParam) obj;
                 hookParam.getClass();
                 try {
                     objX = hookParam.getArgs()[0];
@@ -172,10 +172,10 @@ public final /* synthetic */ class bty implements IHasInvokeMethod {
                 bahVar3.d = cdjVar3;
                 return ensVar;
             case 7:
-                ((HookParamWrapper) obj).setResult(Double.valueOf(bxf.a.j()));
+                ((HookParam) obj).setResult(Double.valueOf(bxf.a.j()));
                 return ensVar;
             case 8:
-                ((HookParamWrapper) obj).setResult(Double.valueOf(bxg.a.j()));
+                ((HookParam) obj).setResult(Double.valueOf(bxg.a.j()));
                 return ensVar;
             case 9:
                 bah bahVar4 = (bah) obj;
@@ -198,7 +198,7 @@ public final /* synthetic */ class bty implements IHasInvokeMethod {
                 bahVar5.d = cdjVar5;
                 return ensVar;
             case 11:
-                HookParamWrapper hookParam2 = (HookParamWrapper) obj;
+                HookParam hookParam2 = (HookParam) obj;
                 hookParam2.getClass();
                 try {
                     objX2 = hookParam2.getArgs()[0];
@@ -390,7 +390,7 @@ public final /* synthetic */ class bty implements IHasInvokeMethod {
                 bahVar8.d = cdjVar8;
                 return ensVar;
             case 27:
-                HookParamWrapper hookParam3 = (HookParamWrapper) obj;
+                HookParam hookParam3 = (HookParam) obj;
                 int i9 = bte.a;
                 azg azgVarAa = dkz.aa(hookParam3);
                 azgVarAa.a = "com.tencent.mm.ui.MMFragmentActivity" /* cnb.z(-69200513071914L) */;
@@ -414,10 +414,10 @@ public final /* synthetic */ class bty implements IHasInvokeMethod {
                         StringBuilder sb = new StringBuilder();
                         sb.append("doOnCreate " /* cnb.z(-68354404514602L) */);
                         ewq.e(yg.n(sb,
-                                bnpVar instanceof BaseHook ? ((BaseHook) bnpVar).getResult() : "LoadHook" /*
-                                                                                                           * cnb.z(-
-                                                                                                           * 68337224645418L)
-                                                                                                           */,
+                                bnpVar instanceof SwitchHook ? ((SwitchHook) bnpVar).getResult() : "LoadHook" /*
+                                                                                                               * cnb.z(-
+                                                                                                               * 68337224645418L)
+                                                                                                               */,
                                 -68247030332202L), e, 12);
                     }
                 }

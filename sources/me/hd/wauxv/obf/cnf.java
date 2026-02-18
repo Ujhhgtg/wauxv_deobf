@@ -185,7 +185,7 @@ public abstract class cnf {
         if (!z) {
             return Math.abs(czg.el(view) - czg.el(view2)) + 1;
         }
-        return Math.min(atbVar.o(), atbVar.e(view2) - atbVar.locateDex(view));
+        return Math.min(atbVar.o(), atbVar.e(view2) - atbVar.dexFind(view));
     }
 
     public static int av(czt cztVar, atb atbVar, View view, View view2, czg czgVar, boolean z, boolean z2) {
@@ -196,9 +196,9 @@ public abstract class cnf {
                 : Math.max(0, Math.min(czg.el(view), czg.el(view2)));
         if (z) {
             return Math.round(
-                    (iMax * (Math.abs(atbVar.e(view2) - atbVar.locateDex(view))
+                    (iMax * (Math.abs(atbVar.e(view2) - atbVar.dexFind(view))
                             / (Math.abs(czg.el(view) - czg.el(view2)) + 1)))
-                            + (atbVar.n() - atbVar.locateDex(view)));
+                            + (atbVar.n() - atbVar.dexFind(view)));
         }
         return iMax;
     }
@@ -210,7 +210,7 @@ public abstract class cnf {
         if (!z) {
             return cztVar.p();
         }
-        return (int) (((atbVar.e(view2) - atbVar.locateDex(view)) / (Math.abs(czg.el(view) - czg.el(view2)) + 1))
+        return (int) (((atbVar.e(view2) - atbVar.dexFind(view)) / (Math.abs(czg.el(view) - czg.el(view2)) + 1))
                 * cztVar.p());
     }
 

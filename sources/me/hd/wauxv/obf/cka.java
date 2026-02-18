@@ -84,7 +84,7 @@ public abstract class cka extends ViewGroup implements cco {
 
     private cjy getNewItem() {
         cjy cjyVar = (cjy) this.m.acquire();
-        return cjyVar == null ? locateDex(getContext()) : cjyVar;
+        return cjyVar == null ? dexFind(getContext()) : cjyVar;
     }
 
     private void setBadgeIfNeeded(cjy cjyVar) {

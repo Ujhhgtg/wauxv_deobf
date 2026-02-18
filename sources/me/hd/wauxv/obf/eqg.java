@@ -22,9 +22,9 @@ public final /* synthetic */ class eqg implements bfu {
         boolean z = this.b;
         dooVar.aj(z);
         if (z && !dooVar.v) {
-            dooVar.w();
+            dooVar.getAllBaseBaseHookInstances();
         }
-        if (dooVar.q()) {
+        if (dooVar.getAllSwitchHookInstances()) {
             Context context = this.c.ao.b.getContext();
             StringBuilder sb = new StringBuilder();
             sb.append("重启 " /* cnb.z(-394359602150186L) */);

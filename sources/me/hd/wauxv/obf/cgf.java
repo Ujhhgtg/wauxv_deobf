@@ -10,13 +10,13 @@ public final class cgf extends bws {
     public static final cgf a = new cgf();
     public static final LinkedHashSet b = new LinkedHashSet();
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
         int i = bte.a;
         cge.a.getClass();
         cde cdeVarT = dqc.bh(emn.az(cgd.a)).t();
         cdeVarT.ab = "convertFrom" /* cnb.z(-66662187399978L) */;
-        cdeVarT.z(Arrays.copyOf(new Object[]{dal.b(Cursor.class)}, 1));
+        cdeVarT.z(Arrays.copyOf(new Object[] { dal.b(Cursor.class) }, 1));
         cdeVarT.ah();
         aki akiVarAd = ad((cdk) aaz.e(cdeVarT.aj()), exg.a);
         akiVarAd.m(new bzk(22));

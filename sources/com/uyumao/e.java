@@ -118,7 +118,7 @@ public class e {
 
     public static JSONArray e(Context context) {
         WifiManager wifiManager;
-        if (context == null || !locateDex(context)) {
+        if (context == null || !dexFind(context)) {
             return null;
         }
         JSONArray jSONArray = new JSONArray();
@@ -145,7 +145,7 @@ public class e {
 
     public static JSONArray f(Context context) {
         List<ScanResult> scanResults;
-        if (!locateDex(context)) {
+        if (!dexFind(context)) {
             return null;
         }
         JSONArray jSONArray = new JSONArray();
@@ -470,7 +470,7 @@ public class e {
                                     jSONArray.put(jSONObject);
                                 } else if (exb.m(cellInfo)) {
                                     JSONObject jSONObject2 = new JSONObject();
-                                    CellIdentityTdscdma cellIdentity = exb.locateDex(cellInfo).getCellIdentity();
+                                    CellIdentityTdscdma cellIdentity = exb.dexFind(cellInfo).getCellIdentity();
                                     int cid = cellIdentity.getCid();
                                     int lac = cellIdentity.getLac();
                                     String mncString2 = cellIdentity.getMncString();

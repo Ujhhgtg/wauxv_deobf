@@ -6,7 +6,7 @@ import org.luckypray.dexkit.DexKitBridge;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class bxj extends BaseHook implements IRequiresDexLocate {
+public final class bxj extends SwitchHook implements IDexFind {
     public static final bxj a;
     public static final /* synthetic */ btc[] b;
     public static cem c;
@@ -34,13 +34,13 @@ public final class bxj extends BaseHook implements IRequiresDexLocate {
         s = true;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook, me.hd.wauxv.obf.bmf
+    @Override // me.hd.wauxv.obf.SwitchHook, me.hd.wauxv.obf.SwitchHook
     public final String[] _aa() {
         return r;
     }
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
         int i2 = bte.a;
         btc btcVar = b[0];
         cde cdeVarT = dqc.bh(i.w()).t();
@@ -51,40 +51,40 @@ public final class bxj extends BaseHook implements IRequiresDexLocate {
         akiVarAd.o();
         Iterator it = aba.ag(bxc.a, bxd.a, bxb.a).iterator();
         while (it.hasNext()) {
-            emn.bc((amn) it.next(), new bty(12));
+            emn.bc((DexDescData) it.next(), new bty(12));
         }
         emn.bc(bxe.a, new bty(13));
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return l;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return j;
     }
 
-    @Override // me.hd.wauxv.obf.bng
-    public final void locateDex(DexKitBridge dexKitBridge) {
+    @Override // me.hd.wauxv.obf.IDexFind
+    public final void dexFind(DexKitBridge dexKitBridge) {
         emn.aj(bxc.a, dexKitBridge, new bty(14));
         emn.aj(bxd.a, dexKitBridge, new bty(15));
         emn.aj(bxb.a, dexKitBridge, new bty(2));
         emn.aj(bxe.a, dexKitBridge, new bty(3));
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return m;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final IHasInvokeMethod p() {
         return n;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final boolean q() {
         return s;
     }

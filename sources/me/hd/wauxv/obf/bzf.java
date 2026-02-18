@@ -59,7 +59,7 @@ public abstract class bzf {
             return;
         }
         if (Build.VERSION.SDK_INT >= this.c) {
-            tag = locateDex(view);
+            tag = dexFind(view);
         } else {
             tag = view.getTag(this.b);
             if (!((Class) this.e).isInstance(tag)) {

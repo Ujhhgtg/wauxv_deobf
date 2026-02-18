@@ -67,7 +67,7 @@ public final class dcb implements Handler.Callback {
                 ((HashMap) butVar.b).put(burVar, dcaVar2);
                 bumVar.al(new bus(butVar, burVar));
                 if (z) {
-                    dcaVar2.q();
+                    dcaVar2.getAllSwitchHookInstances();
                 }
                 return dcaVar2;
             }
@@ -82,7 +82,8 @@ public final class dcb implements Handler.Callback {
             synchronized (this) {
                 try {
                     if (this.b == null) {
-                        this.b = new dca(com.bumptech.glide.a.j(context.getApplicationContext()), new arj(), new nu(27), context.getApplicationContext());
+                        this.b = new dca(com.bumptech.glide.a.j(context.getApplicationContext()), new arj(), new nu(27),
+                                context.getApplicationContext());
                     }
                 } catch (Throwable th) {
                     throw th;

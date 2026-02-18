@@ -6,7 +6,7 @@ import org.luckypray.dexkit.DexKitBridge;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class cgb extends BaseHook implements IRequiresDexLocate {
+public final class cgb extends BaseHook implements IDexFind {
     public static final cgb a;
     public static final List b;
     public static final String c;
@@ -25,7 +25,7 @@ public final class cgb extends BaseHook implements IRequiresDexLocate {
         l = new bzk(16);
     }
 
-    @Override // me.hd.wauxv.obf.bmf
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final void e() throws NoSuchMethodException {
         Constructor constructorBa = emn.ba(cfy.a);
         List listBf = dqc.bf(constructorBa);
@@ -35,27 +35,27 @@ public final class cgb extends BaseHook implements IRequiresDexLocate {
         akiVarAb.o();
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return i;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.bng
-    public final void locateDex(DexKitBridge dexKitBridge) {
+    @Override // me.hd.wauxv.obf.IDexFind
+    public final void dexFind(DexKitBridge dexKitBridge) {
         emn.aj(cfy.a, dexKitBridge, new bzk(17));
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return j;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final bgf p() {
         return l;
     }

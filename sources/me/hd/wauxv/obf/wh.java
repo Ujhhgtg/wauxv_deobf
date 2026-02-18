@@ -7,7 +7,7 @@ import org.luckypray.dexkit.DexKitBridge;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class wh extends BaseHook implements IRequiresDexLocate, bns {
+public final class wh extends BaseHook implements IDexFind, bns {
     public static final wh a;
     public static final List b;
     public static final String c;
@@ -39,8 +39,8 @@ public final class wh extends BaseHook implements IRequiresDexLocate, bns {
                 "${fileMsg}" /* cnb.z(-425850302364458L) */, String.valueOf(vx.a.k()));
     }
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
         List listBf = dqc.bf(emn.bb(vu.a));
         wh whVar = a;
         aki akiVarAb = csb.ab(whVar, listBf);
@@ -48,24 +48,24 @@ public final class wh extends BaseHook implements IRequiresDexLocate, bns {
         akiVarAb.o();
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return d;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.bng
-    public final void locateDex(DexKitBridge dexKitBridge) {
+    @Override // me.hd.wauxv.obf.IDexFind
+    public final void dexFind(DexKitBridge dexKitBridge) {
         emn.aj(vu.a, dexKitBridge, new us(7));
     }
 
     @Override // me.hd.wauxv.obf.bns
     public final void m(MsgInfoBean msgInfoBean) {
-        if (z() && vy.a.i() && msgInfoBean.isSend()) {
+        if (getIsEnabled() && vy.a.i() && msgInfoBean.isSend()) {
             int i2 = drv.a;
             int dayOfMonth = LocalDate.now().getDayOfMonth();
             vv vvVar = vv.a;
@@ -106,12 +106,12 @@ public final class wh extends BaseHook implements IRequiresDexLocate, bns {
         }
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return i;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final bgf p() {
         return j;
     }

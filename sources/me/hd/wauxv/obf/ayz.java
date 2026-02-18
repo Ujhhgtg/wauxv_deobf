@@ -44,7 +44,7 @@ public final /* synthetic */ class ayz implements IHasInvokeMethod {
         ens ensVar = ens.a;
         switch (i) {
             case 0:
-                HookParamWrapper hookParam = (HookParamWrapper) obj;
+                HookParam hookParam = (HookParam) obj;
                 hookParam.getClass();
                 try {
                     objX = hookParam.getArgs()[0];
@@ -86,10 +86,10 @@ public final /* synthetic */ class ayz implements IHasInvokeMethod {
                         StringBuilder sb = new StringBuilder();
                         sb.append("onCreateMenuItems " /* cnb.z(-39805756898090L) */);
                         ewq.e(yg.n(sb,
-                                bnkVar instanceof BaseHook ? ((BaseHook) bnkVar).getResult() : "LoadHook" /*
-                                                                                                           * cnb.z(-
-                                                                                                           * 39741332388650L)
-                                                                                                           */,
+                                bnkVar instanceof SwitchHook ? ((SwitchHook) bnkVar).getResult() : "LoadHook" /*
+                                                                                                               * cnb.z(-
+                                                                                                               * 39741332388650L)
+                                                                                                               */,
                                 -39719857552170L), e, 12);
                     }
                 }
@@ -149,7 +149,7 @@ public final /* synthetic */ class ayz implements IHasInvokeMethod {
                 ammVar.c = new ayz(i3);
                 return ensVar;
             case 8:
-                HookParamWrapper hookParam2 = (HookParamWrapper) obj;
+                HookParam hookParam2 = (HookParam) obj;
                 hookParam2.getClass();
                 try {
                     objX2 = hookParam2.getArgs()[0];
@@ -193,7 +193,7 @@ public final /* synthetic */ class ayz implements IHasInvokeMethod {
                 bahVar3.d = cdjVar3;
                 return ensVar;
             case 11:
-                HookParamWrapper hookParam3 = (HookParamWrapper) obj;
+                HookParam hookParam3 = (HookParam) obj;
                 hookParam3.getClass();
                 try {
                     objX3 = hookParam3.getArgs()[0];
@@ -242,7 +242,7 @@ public final /* synthetic */ class ayz implements IHasInvokeMethod {
                 }
                 for (bnl bnlVar : bal.b) {
                     try {
-                        for (bai baiVar : ((etg) bnlVar).m()) {
+                        for (bai baiVar : ((VnPreviewShareMenuCopyOrDownHook) bnlVar).m()) {
                             if (menuItem2.getItemId() == baiVar.a) {
                                 baiVar.d.g(Integer.valueOf(iIntValue2), arrayList2);
                             }
@@ -252,16 +252,16 @@ public final /* synthetic */ class ayz implements IHasInvokeMethod {
                         StringBuilder sb2 = new StringBuilder();
                         sb2.append("onCreateMenuItems " /* cnb.z(-64759516887850L) */);
                         ewq.e(yg.n(sb2,
-                                bnlVar instanceof BaseHook ? ((BaseHook) bnlVar).getResult() : "LoadHook" /*
-                                                                                                           * cnb.z(-
-                                                                                                           * 64695092378410L)
-                                                                                                           */,
+                                bnlVar instanceof SwitchHook ? ((SwitchHook) bnlVar).getResult() : "LoadHook" /*
+                                                                                                               * cnb.z(-
+                                                                                                               * 64695092378410L)
+                                                                                                               */,
                                 -64604898065194L), e2, 12);
                     }
                 }
                 return ensVar;
             case 12:
-                HookParamWrapper hookParam4 = (HookParamWrapper) obj;
+                HookParam hookParam4 = (HookParam) obj;
                 hookParam4.getClass();
                 try {
                     objX5 = hookParam4.getArgs()[1];
@@ -286,9 +286,9 @@ public final /* synthetic */ class ayz implements IHasInvokeMethod {
                 dov dovVar = new dov(new ayu(contextMenu, 2));
                 for (bnl bnlVar2 : bal.b) {
                     try {
-                        for (bai baiVar2 : ((etg) bnlVar2).m()) {
+                        for (bai baiVar2 : ((VnPreviewShareMenuCopyOrDownHook) bnlVar2).m()) {
                             cdk cdkVarD = ((cdk) dovVar.getValue()).d();
-                            cdkVarD.locateDex(contextMenu);
+                            cdkVarD.dexFind(contextMenu);
                             cdkVarD.e(Integer.valueOf(baiVar2.a), baiVar2.b, Integer.valueOf(baiVar2.c));
                         }
                     } catch (Exception e3) {
@@ -296,10 +296,11 @@ public final /* synthetic */ class ayz implements IHasInvokeMethod {
                         StringBuilder sb3 = new StringBuilder();
                         sb3.append("onCreateMenuItems " /* cnb.z(-41089952119594L) */);
                         ewq.e(yg.n(sb3,
-                                bnlVar2 instanceof BaseHook ? ((BaseHook) bnlVar2).getResult() : "LoadHook" /*
-                                                                                                             * cnb.z(-
-                                                                                                             * 40973988002602L)
-                                                                                                             */,
+                                bnlVar2 instanceof SwitchHook ? ((SwitchHook) bnlVar2).getResult() : "LoadHook" /*
+                                                                                                                 * cnb.z
+                                                                                                                 * (-
+                                                                                                                 * 40973988002602L)
+                                                                                                                 */,
                                 -64574833294122L), e3, 12);
                     }
                 }
@@ -341,7 +342,7 @@ public final /* synthetic */ class ayz implements IHasInvokeMethod {
                 bahVar5.d = cdjVar5;
                 return ensVar;
             case 18:
-                HookParamWrapper hookParam5 = (HookParamWrapper) obj;
+                HookParam hookParam5 = (HookParam) obj;
                 hookParam5.getClass();
                 try {
                     objX6 = hookParam5.getArgs()[0];
@@ -366,9 +367,9 @@ public final /* synthetic */ class ayz implements IHasInvokeMethod {
                 dov dovVar2 = new dov(new ayu(contextMenu2, 3));
                 for (bnm bnmVar : bap.b) {
                     try {
-                        for (bam bamVar : ((ete) bnmVar).m()) {
+                        for (bam bamVar : ((VnHomeShareMenuCopyOrDownHook) bnmVar).m()) {
                             cdk cdkVarD2 = ((cdk) dovVar2.getValue()).d();
-                            cdkVarD2.locateDex(contextMenu2);
+                            cdkVarD2.dexFind(contextMenu2);
                             cdkVarD2.e(Integer.valueOf(bamVar.a), bamVar.b, Integer.valueOf(bamVar.c));
                         }
                     } catch (Exception e4) {
@@ -376,16 +377,16 @@ public final /* synthetic */ class ayz implements IHasInvokeMethod {
                         StringBuilder sb4 = new StringBuilder();
                         sb4.append("onCreateMenuItems " /* cnb.z(-64914135710506L) */);
                         ewq.e(yg.n(sb4,
-                                bnmVar instanceof BaseHook ? ((BaseHook) bnmVar).getResult() : "LoadHook" /*
-                                                                                                           * cnb.z(-
-                                                                                                           * 65399467014954L)
-                                                                                                           */,
+                                bnmVar instanceof SwitchHook ? ((SwitchHook) bnmVar).getResult() : "LoadHook" /*
+                                                                                                               * cnb.z(-
+                                                                                                               * 65399467014954L)
+                                                                                                               */,
                                 -65377992178474L), e4, 12);
                     }
                 }
                 return ensVar;
             case 19:
-                HookParamWrapper hookParam6 = (HookParamWrapper) obj;
+                HookParam hookParam6 = (HookParam) obj;
                 hookParam6.getClass();
                 try {
                     objX7 = hookParam6.getArgs()[0];
@@ -428,7 +429,7 @@ public final /* synthetic */ class ayz implements IHasInvokeMethod {
                 }
                 for (bnm bnmVar2 : bap.b) {
                     try {
-                        for (bam bamVar2 : ((ete) bnmVar2).m()) {
+                        for (bam bamVar2 : ((VnHomeShareMenuCopyOrDownHook) bnmVar2).m()) {
                             if (menuItem3.getItemId() == bamVar2.a) {
                                 bamVar2.d.g(Integer.valueOf(iIntValue3), arrayList6);
                             }
@@ -438,10 +439,11 @@ public final /* synthetic */ class ayz implements IHasInvokeMethod {
                         StringBuilder sb5 = new StringBuilder();
                         sb5.append("onCreateMenuItems " /* cnb.z(-62599148337962L) */);
                         ewq.e(yg.n(sb5,
-                                bnmVar2 instanceof BaseHook ? ((BaseHook) bnmVar2).getResult() : "LoadHook" /*
-                                                                                                             * cnb.z(-
-                                                                                                             * 62483184220970L)
-                                                                                                             */,
+                                bnmVar2 instanceof SwitchHook ? ((SwitchHook) bnmVar2).getResult() : "LoadHook" /*
+                                                                                                                 * cnb.z
+                                                                                                                 * (-
+                                                                                                                 * 62483184220970L)
+                                                                                                                 */,
                                 -62444529515306L), e5, 12);
                     }
                 }

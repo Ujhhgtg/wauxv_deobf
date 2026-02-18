@@ -4,15 +4,15 @@ import android.os.Bundle;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class md extends BaseHook {
+public final class md extends SwitchHook {
     public static final md a = new md("AutoLoginWinHook" /* cnb.z(-510529877572394L) */);
     public static final String b = "杂项" /* cnb.z(-512265044359978L) */;
     public static final String c = "自动点击登录" /* cnb.z(-512217799719722L) */;
     public static final String d = "微信请求登录时自动勾选项及点击按钮" /* cnb.z(-512170555079466L) */;
     public static final gi h = new gi(27);
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
         int i = bte.a;
         bmu bmuVarS = yg.s(-510474042997546L);
         cde cdeVarT = bmuVarS.t();
@@ -30,22 +30,22 @@ public final class md extends BaseHook {
         akiVarAd2.o();
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return b;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return d;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final IHasInvokeMethod p() {
         return h;
     }

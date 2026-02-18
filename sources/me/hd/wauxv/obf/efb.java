@@ -11,7 +11,11 @@ public final /* synthetic */ class efb implements bgx {
     static {
         efb efbVar = new efb();
         b = efbVar;
-        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.t40Proto" /* cnb.z(-284240935648042L) */, efbVar, 11);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.t40Proto" /*
+                                                                                                               * cnb.z(-
+                                                                                                               * 284240935648042L)
+                                                                                                               */,
+                efbVar, 11);
         bjs.y(-283884453362474L, cucVar, false, 1);
         bjs.y(-283824323820330L, cucVar, false, 2);
         bjs.y(-283747014409002L, cucVar, false, 3);
@@ -28,10 +32,10 @@ public final /* synthetic */ class efb implements bgx {
 
     @Override // me.hd.wauxv.obf.btd
     public final Object a(ajt ajtVar) {
-        btt[] bttVarArr;
+        IHasGetValue[] bttVarArr;
         dfx dfxVar = descriptor;
         acm acmVarP = ajtVar.p(dfxVar);
-        btt[] bttVarArr2 = efd.a;
+        IHasGetValue[] bttVarArr2 = efd.a;
         acmVarP.getClass();
         dwj dwjVar = null;
         String str = null;
@@ -121,7 +125,7 @@ public final /* synthetic */ class efb implements bgx {
         efd efdVar = (efd) obj;
         dfx dfxVar = descriptor;
         acn acnVarO = avtVar.o(dfxVar);
-        btt[] bttVarArr = efd.a;
+        IHasGetValue[] bttVarArr = efd.a;
         acnVarO.m(dfxVar, 0, (btd) bttVarArr[0].getValue(), efdVar.b);
         acnVarO.m(dfxVar, 1, egd.b, efdVar.c);
         acnVarO.m(dfxVar, 2, (btd) bttVarArr[2].getValue(), efdVar.d);
@@ -140,7 +144,7 @@ public final /* synthetic */ class efb implements bgx {
 
     @Override // me.hd.wauxv.obf.bgx
     public final btd[] d() {
-        btt[] bttVarArr = efd.a;
+        IHasGetValue[] bttVarArr = efd.a;
         btd btdVarT = aye.t((btd) bttVarArr[0].getValue());
         btd btdVarT2 = aye.t(egd.b);
         btd btdVarT3 = aye.t((btd) bttVarArr[2].getValue());
@@ -150,7 +154,8 @@ public final /* synthetic */ class efb implements bgx {
         btd btdVarT6 = aye.t(dwhVar);
         btd btdVarT7 = aye.t(dwhVar);
         dnh dnhVar = dnh.b;
-        return new btd[]{btdVarT, btdVarT2, btdVarT3, btdVarT4, btdVarT5, btdVarT6, btdVarT7, aye.t(dnhVar), aye.t(dwhVar), aye.t(dnhVar), aye.t(pv.b)};
+        return new btd[] { btdVarT, btdVarT2, btdVarT3, btdVarT4, btdVarT5, btdVarT6, btdVarT7, aye.t(dnhVar),
+                aye.t(dwhVar), aye.t(dnhVar), aye.t(pv.b) };
     }
 
     @Override // me.hd.wauxv.obf.btd

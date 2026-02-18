@@ -10,7 +10,7 @@ import me.hd.wauxv.R;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class diz extends BaseHook implements boa, IDatabaseOperationsListener {
+public final class diz extends SwitchHook implements boa, IDatabaseOperationsListener {
     public static final diz b = new diz("SnsFakeLikeHook" /* cnb.z(-529616712235818L) */);
     public static final String c = "朋友圈" /* cnb.z(-535290364033834L) */;
     public static final String h = "朋友圈伪点赞" /* cnb.z(-535238824426282L) */;
@@ -41,41 +41,41 @@ public final class diz extends BaseHook implements boa, IDatabaseOperationsListe
                 : dqc.bf(new djl(R.id.MenuItem_Sns_Like, "伪点赞[WA]" /* cnb.z(-529496453151530L) */, new wx(1)));
     }
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return h;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return c;
     }
 
     @Override // me.hd.wauxv.obf.IDatabaseOperationsListener
-    public final void j(HookParamWrapper hookParam, String str, ContentValues contentValues, String str2,
+    public final void j(HookParam hookParam, String str, ContentValues contentValues, String str2,
             String[] strArr, int i2)
             throws IllegalAccessException {
         r(str, contentValues);
     }
 
     @Override // me.hd.wauxv.obf.IDatabaseOperationsListener
-    public final void l(HookParamWrapper hookParam, String str, ContentValues contentValues, String str2,
+    public final void l(HookParam hookParam, String str, ContentValues contentValues, String str2,
             String[] strArr, int i2)
             throws IllegalAccessException {
         r(str, contentValues);
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return i;
     }
 
     public final void r(String str, ContentValues contentValues) throws IllegalAccessException {
-        if (z() && str.equals("SnsInfo" /* cnb.z(-529462093413162L) */)) {
+        if (getIsEnabled() && str.equals("SnsInfo" /* cnb.z(-529462093413162L) */)) {
             Object obj = contentValues.get("snsId" /* cnb.z(-529427733674794L) */);
             throwIfVar1IsNull(obj, "null cannot be cast to non-null type kotlin.Long" /* cnb.z(-529934539815722L) */);
             Set<String> setM = m(((Long) obj).longValue());

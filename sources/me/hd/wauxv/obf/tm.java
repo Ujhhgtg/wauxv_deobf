@@ -145,7 +145,7 @@ public final class tm extends cce implements View.OnKeyListener, PopupWindow.OnD
 
     @Override // me.hd.wauxv.obf.dho
     public final void ag() {
-        if (e()) {
+        if (initOnce()) {
             return;
         }
         ArrayList arrayList = this.g;
@@ -212,7 +212,7 @@ public final class tm extends cce implements View.OnKeyListener, PopupWindow.OnD
     @Override // me.hd.wauxv.obf.cce
     public final void am(cbw cbwVar) {
         cbwVar.aa(this, this.a);
-        if (e()) {
+        if (initOnce()) {
             au(cbwVar);
         } else {
             this.g.add(cbwVar);
@@ -306,9 +306,9 @@ public final class tm extends cce implements View.OnKeyListener, PopupWindow.OnD
         Context context = this.a;
         LayoutInflater layoutInflaterFrom = LayoutInflater.from(context);
         cbt cbtVar2 = new cbt(cbwVar, layoutInflaterFrom, this.d, R.layout.abc_cascading_menu_item_layout);
-        if (!e() && this.u) {
+        if (!initOnce() && this.u) {
             cbtVar2.c = true;
-        } else if (e()) {
+        } else if (initOnce()) {
             int size = cbwVar.g.size();
             int i5 = 0;
             while (true) {

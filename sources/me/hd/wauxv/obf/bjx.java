@@ -11,7 +11,7 @@ import org.luckypray.dexkit.DexKitBridge;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class bjx extends BaseHook implements IRequiresDexLocate, bob {
+public final class bjx extends BaseHook implements IDexFind, bob {
     public static final bjx a;
     public static final String b;
     public static final String c;
@@ -52,8 +52,8 @@ public final class bjx extends BaseHook implements IRequiresDexLocate, bob {
         return sbY.toString();
     }
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
         List listBf = dqc.bf(emn.bb(bju.a));
         bjx bjxVar = a;
         aki akiVarAb = csb.ab(bjxVar, listBf);
@@ -61,27 +61,27 @@ public final class bjx extends BaseHook implements IRequiresDexLocate, bob {
         akiVarAb.o();
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return b;
     }
 
-    @Override // me.hd.wauxv.obf.bng
-    public final void locateDex(DexKitBridge dexKitBridge) {
+    @Override // me.hd.wauxv.obf.IDexFind
+    public final void dexFind(DexKitBridge dexKitBridge) {
         emn.aj(bju.a, dexKitBridge, new bep(5));
     }
 
     @Override // me.hd.wauxv.obf.IDatabaseOperationsListener
-    public final void j(HookParamWrapper hookParam, String str, ContentValues contentValues, String str2,
+    public final void j(HookParam hookParam, String str, ContentValues contentValues, String str2,
             String[] strArr,
             int i2)
             throws IOException {
-        if (z() && str.equals("chatroom" /* cnb.z(-508962214509354L) */)) {
+        if (getIsEnabled() && str.equals("chatroom" /* cnb.z(-508962214509354L) */)) {
             String asString = contentValues.getAsString("chatroomname" /* cnb.z(-508923559803690L) */);
             Integer asInteger = contentValues.getAsInteger("memberCount" /* cnb.z(-508850545359658L) */);
             String asString2 = contentValues.getAsString("memberlist" /* cnb.z(-508833365490474L) */);
@@ -133,12 +133,12 @@ public final class bjx extends BaseHook implements IRequiresDexLocate, bob {
         }
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return i;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final bgf p() {
         return m;
     }

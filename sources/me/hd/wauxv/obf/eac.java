@@ -11,7 +11,11 @@ public final /* synthetic */ class eac implements bgx {
     static {
         eac eacVar = new eac();
         b = eacVar;
-        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.ls3Proto" /* cnb.z(-226782863162154L) */, eacVar, 3);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.ls3Proto" /*
+                                                                                                               * cnb.z(-
+                                                                                                               * 226782863162154L)
+                                                                                                               */,
+                eacVar, 3);
         bjs.y(-228694123608874L, cucVar, false, 1);
         bjs.y(-228651173935914L, cucVar, false, 2);
         bjs.y(-228608224262954L, cucVar, false, 3);
@@ -22,7 +26,7 @@ public final /* synthetic */ class eac implements bgx {
     public final Object a(ajt ajtVar) {
         dfx dfxVar = descriptor;
         acm acmVarP = ajtVar.p(dfxVar);
-        btt[] bttVarArr = eae.a;
+        IHasGetValue[] bttVarArr = eae.a;
         acmVarP.getClass();
         Integer num = null;
         boolean z = true;
@@ -56,7 +60,7 @@ public final /* synthetic */ class eac implements bgx {
         eae eaeVar = (eae) obj;
         dfx dfxVar = descriptor;
         acn acnVarO = avtVar.o(dfxVar);
-        btt[] bttVarArr = eae.a;
+        IHasGetValue[] bttVarArr = eae.a;
         acnVarO.m(dfxVar, 0, bqj.b, eaeVar.b);
         acnVarO.m(dfxVar, 1, (btd) bttVarArr[1].getValue(), eaeVar.c);
         acnVarO.m(dfxVar, 2, dnh.b, eaeVar.d);
@@ -65,7 +69,7 @@ public final /* synthetic */ class eac implements bgx {
 
     @Override // me.hd.wauxv.obf.bgx
     public final btd[] d() {
-        return new btd[]{aye.t(bqj.b), aye.t((btd) eae.a[1].getValue()), aye.t(dnh.b)};
+        return new btd[] { aye.t(bqj.b), aye.t((btd) eae.a[1].getValue()), aye.t(dnh.b) };
     }
 
     @Override // me.hd.wauxv.obf.btd

@@ -6,7 +6,7 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class dwm {
     public static final dwl Companion = new dwl();
-    public static final btt[] a = { ewz.am(btx.a, new dtr(4)), null, null };
+    public static final IHasGetValue[] a = { ewz.am(btx.a, new dtr(4)), null, null };
     public final List b;
     public final String c;
     public final String d;

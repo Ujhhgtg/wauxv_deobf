@@ -17,7 +17,7 @@ import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.avd;
 import me.hd.wauxv.obf.bfu;
 import me.hd.wauxv.obf.btp;
-import me.hd.wauxv.obf.btt;
+import me.hd.wauxv.obf.IHasGetValue;
 import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.dov;
 import okhttp3.internal.Util;
@@ -28,7 +28,7 @@ public final class Handshake {
     public static final Companion Companion = new Companion(null);
     private final CipherSuite cipherSuite;
     private final List<Certificate> localCertificates;
-    private final btt peerCertificates$delegate;
+    private final IHasGetValue peerCertificates$delegate;
     private final TlsVersion tlsVersion;
 
     /*

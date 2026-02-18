@@ -39,7 +39,7 @@ public final class cgr extends BaseHook implements bnb {
 
     @Override // me.hd.wauxv.obf.bnb
     public final void a(ViewGroup viewGroup) {
-        if (z()) {
+        if (getIsEnabled()) {
             RelativeLayout relativeLayout = new RelativeLayout(viewGroup.getContext());
             relativeLayout.setVisibility(8);
             relativeLayout.setId(R.id.MsgInfo_RelativeLayout);
@@ -53,7 +53,7 @@ public final class cgr extends BaseHook implements bnb {
     @Override // me.hd.wauxv.obf.bnb
     public final void b(Object obj, ViewGroup viewGroup, Object obj2, MsgInfoBean msgInfoBean) {
         String strZ;
-        if (z()) {
+        if (getIsEnabled()) {
             RelativeLayout relativeLayout = (RelativeLayout) viewGroup.findViewById(R.id.MsgInfo_RelativeLayout);
             if (msgInfoBean.getType() == ewg.t.w) {
                 return;
@@ -235,26 +235,26 @@ public final class cgr extends BaseHook implements bnb {
         }
     }
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return j;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return i;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return l;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final bgf p() {
         return m;
     }

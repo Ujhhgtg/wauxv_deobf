@@ -6,7 +6,7 @@ import me.hd.wauxv.R;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class zr extends BaseHook implements bnn {
+public final class zr extends SwitchHook implements bnn {
     public static final zr a = new zr("ClearAllUnReadHook" /* cnb.z(-523535038544682L) */);
     public static final String b = "菜单" /* cnb.z(-525411939253034L) */;
     public static final String c = "清空未读" /* cnb.z(-525416234220330L) */;
@@ -14,8 +14,8 @@ public final class zr extends BaseHook implements bnn {
     public static final ws h = new ws(24);
     public static final boolean i = true;
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
         int i2 = bte.a;
         aki akiVarAd = ad(
                 (cdk) dkz.n(new Object[] { dal.b(Integer.TYPE), dal.b(ViewGroup.class) }, 2,
@@ -25,12 +25,12 @@ public final class zr extends BaseHook implements bnn {
         akiVarAd.o();
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return b;
     }
@@ -41,17 +41,17 @@ public final class zr extends BaseHook implements bnn {
                 "清空未读" /* cnb.z(-523805621484330L) */, R.drawable.ic_menu_clear_24dp, new h(25))) : avd.a;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return d;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final IHasInvokeMethod p() {
         return h;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final boolean q() {
         return i;
     }

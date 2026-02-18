@@ -6,7 +6,8 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class dwg {
     public static final dwf Companion = new dwf();
-    public static final btt[] a = { null, null, null, null, null, null, null, null, null, ewz.am(btx.a, new dtr(3)) };
+    public static final IHasGetValue[] a = { null, null, null, null, null, null, null, null, null,
+            ewz.am(btx.a, new dtr(3)) };
     public final String b;
     public final Long c;
     public final Long d;

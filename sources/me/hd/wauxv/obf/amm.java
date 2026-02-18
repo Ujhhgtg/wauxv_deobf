@@ -10,7 +10,7 @@ public final class amm {
     public IHasInvokeMethod c;
     public IHasInvokeMethod d;
 
-    public amm(DexKitBridge dexKitBridge, amn amnVar) {
+    public amm(DexKitBridge dexKitBridge, DexDescData amnVar) {
         this.a = dexKitBridge;
     }
 }

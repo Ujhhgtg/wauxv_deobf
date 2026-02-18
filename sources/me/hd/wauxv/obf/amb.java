@@ -35,7 +35,7 @@ public final /* synthetic */ class amb implements IHasInvokeMethod {
         ens ensVar = ens.a;
         switch (i) {
             case 0:
-                HookParamWrapper hookParam = (HookParamWrapper) obj;
+                HookParam hookParam = (HookParam) obj;
                 hookParam.getClass();
                 try {
                     objX = hookParam.getArgs()[1];
@@ -126,7 +126,7 @@ public final /* synthetic */ class amb implements IHasInvokeMethod {
                 throwIfVar1IsNull(cls3);
                 return ams.g(cls3);
             case 4:
-                HookParamWrapper hookParam2 = (HookParamWrapper) obj;
+                HookParam hookParam2 = (HookParam) obj;
                 hookParam2.getClass();
                 try {
                     objX4 = hookParam2.getArgs()[0];
@@ -144,7 +144,7 @@ public final /* synthetic */ class amb implements IHasInvokeMethod {
                 }
                 return ensVar;
             case 5:
-                ((HookParamWrapper) obj).setResult(null);
+                ((HookParam) obj).setResult(null);
                 return ensVar;
             case 6:
                 amm ammVar = (amm) obj;
@@ -175,7 +175,7 @@ public final /* synthetic */ class amb implements IHasInvokeMethod {
                 bahVar.d = cdjVar;
                 return ensVar;
             case 9:
-                ((HookParamWrapper) obj).setResult(Boolean.FALSE);
+                ((HookParam) obj).setResult(Boolean.FALSE);
                 return ensVar;
             case 10:
                 ((amm) obj).c = new amb(11);
@@ -207,8 +207,8 @@ public final /* synthetic */ class amb implements IHasInvokeMethod {
                         materialCheckBox.setChecked(aoc.a.i());
                         bzy bzyVar = new bzy(view.getContext());
                         eg egVar = (eg) bzyVar.d;
-                        aoe.a.getClass();
-                        egVar.d = aoe.c;
+                        DisablePlayRingtoneHook.a.getClass();
+                        egVar.d = DisablePlayRingtoneHook.c;
                         bzyVar.t("保存" /* cnb.z(-444404561083178L) */, new amw(new bp(cekVar, i2), 0));
                         bjs.x((3 & 2) != 0 ? new amd(i) : null, bzyVar, "取消" /* cnb.z(-47455093652266L) */);
                         if (linearLayout != null) {
@@ -221,7 +221,7 @@ public final /* synthetic */ class amb implements IHasInvokeMethod {
                 throw new NullPointerException("Missing required view with ID: "
                         /* cnb.z(-639675249195818L) */.concat(viewK.getResources().getResourceName(i3)));
             case 13:
-                HookParamWrapper hookParam3 = (HookParamWrapper) obj;
+                HookParam hookParam3 = (HookParam) obj;
                 hookParam3.getClass();
                 try {
                     objX5 = hookParam3.getArgs()[1];
@@ -258,7 +258,7 @@ public final /* synthetic */ class amb implements IHasInvokeMethod {
                 bahVar3.d = cdjVar3;
                 return ensVar;
             case 16:
-                ((HookParamWrapper) obj).setResult(null);
+                ((HookParam) obj).setResult(null);
                 return ensVar;
             case 17:
                 ((amm) obj).c = new amb(i2);
@@ -285,7 +285,7 @@ public final /* synthetic */ class amb implements IHasInvokeMethod {
                 bagVar2.b = zbVar2;
                 return ensVar;
             case 21:
-                HookParamWrapper hookParam4 = (HookParamWrapper) obj;
+                HookParam hookParam4 = (HookParam) obj;
                 hookParam4.getClass();
                 try {
                     objX6 = hookParam4.getArgs()[0];

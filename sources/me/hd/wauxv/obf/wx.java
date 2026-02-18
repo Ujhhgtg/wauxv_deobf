@@ -35,15 +35,18 @@ public final /* synthetic */ class wx implements bgk {
     /* JADX WARN: Type inference failed for: r6v26, types: [boolean, int] */
     /* JADX WARN: Type inference failed for: r6v35 */
     @Override // me.hd.wauxv.obf.bgk
-    public final Object b(Object obj, Object obj2, Object obj3) throws IllegalAccessException, cth, NoSuchMethodException, InstantiationException, InvocationTargetException {
+    public final Object b(Object obj, Object obj2, Object obj3) throws IllegalAccessException, cth,
+            NoSuchMethodException, InstantiationException, InvocationTargetException {
         Class cls;
         Class cls2;
         Class cls3;
-        ?? r3;
+        // ?? r3;
+        Object r3;
         int i = this.a;
         Object obj4 = null;
         ens ensVar = ens.a;
-        ?? r6 = 1;
+        // ?? r6 = 1;
+        Object r6 = 1;
         switch (i) {
             case 0:
                 blu bluVar = (blu) obj;
@@ -57,7 +60,8 @@ public final /* synthetic */ class wx implements bgk {
                 if (linearLayout == null) {
                     cls3 = LinearLayout.class;
                     Class<LinearLayout> clsBf = cnf.bf(dal.b(cls3));
-                    throw new cth("View with id \"" + strZ + "\" is not a " + (clsBf != null ? clsBf : LinearLayout.class).getName() + ".");
+                    throw new cth("View with id \"" + strZ + "\" is not a "
+                            + (clsBf != null ? clsBf : LinearLayout.class).getName() + ".");
                 }
                 linearLayout.setOnClickListener(new bq(wzVar, 1));
                 String strZ2 = "icon" /* cnb.z(-546753631746858L) */;
@@ -69,7 +73,8 @@ public final /* synthetic */ class wx implements bgk {
                 cls = ImageView.class;
                 if (imageView == null) {
                     Class<ImageView> clsBf2 = cnf.bf(dal.b(cls));
-                    throw new cth("View with id \"" + strZ2 + "\" is not a " + (clsBf2 != null ? clsBf2 : ImageView.class).getName() + ".");
+                    throw new cth("View with id \"" + strZ2 + "\" is not a "
+                            + (clsBf2 != null ? clsBf2 : ImageView.class).getName() + ".");
                 }
                 imageView.setImageResource(wzVar.a);
                 String strZ3 = "icon" /* cnb.z(-552762290993962L) */;
@@ -80,7 +85,8 @@ public final /* synthetic */ class wx implements bgk {
                 ImageView imageView2 = (ImageView) viewJ3;
                 if (imageView2 == null) {
                     Class<ImageView> clsBf3 = cnf.bf(dal.b(cls));
-                    throw new cth("View with id \"" + strZ3 + "\" is not a " + (clsBf3 != null ? clsBf3 : ImageView.class).getName() + ".");
+                    throw new cth("View with id \"" + strZ3 + "\" is not a "
+                            + (clsBf3 != null ? clsBf3 : ImageView.class).getName() + ".");
                 }
                 xb xbVar = xb.a;
                 imageView2.setVisibility(xbVar.k() != wy.a.e ? 0 : 8);
@@ -93,7 +99,8 @@ public final /* synthetic */ class wx implements bgk {
                 cls2 = TextView.class;
                 if (textView == null) {
                     Class<TextView> clsBf4 = cnf.bf(dal.b(cls2));
-                    throw new cth("View with id \"" + strZ4 + "\" is not a " + (clsBf4 != null ? clsBf4 : TextView.class).getName() + ".");
+                    throw new cth("View with id \"" + strZ4 + "\" is not a "
+                            + (clsBf4 != null ? clsBf4 : TextView.class).getName() + ".");
                 }
                 textView.setText(wzVar.b);
                 String strZ5 = "title" /* cnb.z(-552732226222890L) */;
@@ -104,7 +111,8 @@ public final /* synthetic */ class wx implements bgk {
                     return ensVar;
                 }
                 Class<TextView> clsBf5 = cnf.bf(dal.b(cls2));
-                throw new cth("View with id \"" + strZ5 + "\" is not a " + (clsBf5 != null ? clsBf5 : TextView.class).getName() + ".");
+                throw new cth("View with id \"" + strZ5 + "\" is not a "
+                        + (clsBf5 != null ? clsBf5 : TextView.class).getName() + ".");
             case 1:
                 int i2 = bte.a;
                 azg azgVarR = dqc.bi(obj2).r();
@@ -147,7 +155,9 @@ public final /* synthetic */ class wx implements bgk {
                     String str2 = ejyVar.e;
                     throwIfVar1IsNull(str2);
                     Intent intent = new Intent();
-                    intent.setClassName(activity, "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /* cnb.z(-95086280964906L) */);
+                    intent.setClassName(activity, "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /*
+                                                                                              * cnb.z(-95086280964906L)
+                                                                                              */);
                     intent.putExtra("Ksnsupload_type" /* cnb.z(-94927367174954L) */, 9);
                     intent.putExtra("Kdescription" /* cnb.z(-94858647698218L) */, str2);
                     activity.startActivity(intent);
@@ -161,15 +171,18 @@ public final /* synthetic */ class wx implements bgk {
                         for (Object obj5 : linkedList) {
                             bub.a.getClass();
                             Object objInvoke = emn.bb(btz.a).invoke(obj4, obj5);
-                            throwIfVar1IsNull(objInvoke, "null cannot be cast to non-null type kotlin.String" /* cnb.z(-354047039109930L) */);
+                            throwIfVar1IsNull(objInvoke, "null cannot be cast to non-null type kotlin.String" /*
+                                                                                                               * cnb.z(-
+                                                                                                               * 354047039109930L)
+                                                                                                               */);
                             String str4 = (String) objInvoke;
                             diu diuVar = diu.a;
                             dkc.a.getClass();
                             int i5 = bte.a;
                             adt adtVarM = dqc.bh(emn.az(dkb.a)).m();
-                            adtVarM.z(Arrays.copyOf(new Object[]{dal.b(String.class)}, (int) r6));
+                            adtVarM.z(Arrays.copyOf(new Object[] { dal.b(String.class) }, (int) r6));
                             adu aduVar = (adu) aaz.e(adtVarM.a());
-                            Object[] objArr = {"timeline" /* cnb.z(-353901010221866L) */};
+                            Object[] objArr = { "timeline" /* cnb.z(-353901010221866L) */ };
                             Constructor constructor = aduVar.a;
                             if (constructor != null) {
                                 r3 = obj4;
@@ -189,7 +202,11 @@ public final /* synthetic */ class wx implements bgk {
                             Object objE3 = ((cdk) bjs.h(cdeVarT4)).e(new Object[0]);
                             throwIfVar1IsNull(objE3);
                             Object objInvoke2 = methodBb.invoke(objE3, obj5, 2, null, objNewInstance);
-                            throwIfVar1IsNull(objInvoke2, "null cannot be cast to non-null type kotlin.Boolean" /* cnb.z(-352582455261994L) */);
+                            throwIfVar1IsNull(objInvoke2, "null cannot be cast to non-null type kotlin.Boolean" /*
+                                                                                                                 * cnb.z
+                                                                                                                 * (-
+                                                                                                                 * 352582455261994L)
+                                                                                                                 */);
                             if (!((Boolean) objInvoke2).booleanValue()) {
                                 str4 = null;
                             }
@@ -201,7 +218,8 @@ public final /* synthetic */ class wx implements bgk {
                         }
                         ArrayList arrayList2 = new ArrayList();
                         aaz.x(arrayList, arrayList2);
-                        ((Handler) bij.a.getValue()).postDelayed(new bjt(new ben(activity, arrayList2, str3, 2), djaVar, 1), 500L);
+                        ((Handler) bij.a.getValue())
+                                .postDelayed(new bjt(new ben(activity, arrayList2, str3, 2), djaVar, 1), 500L);
                     } else if (iIntValue == ewj.c.h) {
                         String str5 = ejyVar.e;
                         throwIfVar1IsNull(str5);
@@ -216,7 +234,10 @@ public final /* synthetic */ class wx implements bgk {
                         String str8 = ((dtv) aaz.e(list)).g;
                         throwIfVar1IsNull(str8);
                         Intent intent2 = new Intent();
-                        intent2.setClassName(activity, "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /* cnb.z(-95721936124714L) */);
+                        intent2.setClassName(activity, "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /*
+                                                                                                   * cnb.z(-
+                                                                                                   * 95721936124714L)
+                                                                                                   */);
                         intent2.putExtra("Ksnsupload_type" /* cnb.z(-96044058671914L) */, 1);
                         intent2.putExtra("Ksnsupload_title" /* cnb.z(-95975339195178L) */, str6);
                         intent2.putExtra("Ksnsupload_link" /* cnb.z(-93153545681706L) */, str7);
@@ -231,7 +252,10 @@ public final /* synthetic */ class wx implements bgk {
                         Object objInvoke3 = emn.bb(dkr.a).invoke(null, objE4);
                         String str10 = objInvoke3 instanceof String ? (String) objInvoke3 : null;
                         Object objInvoke4 = emn.bb(dks.a).invoke(null, objE4);
-                        throwIfVar1IsNull(objInvoke4, "null cannot be cast to non-null type kotlin.String" /* cnb.z(-360532439726890L) */);
+                        throwIfVar1IsNull(objInvoke4, "null cannot be cast to non-null type kotlin.String" /*
+                                                                                                            * cnb.z(-
+                                                                                                            * 360532439726890L)
+                                                                                                            */);
                         String str11 = (String) objInvoke4;
                         int iCurrentTimeMillis = (int) (System.currentTimeMillis() / ((long) 1000));
                         dkv dkvVar = dkv.a;
@@ -245,10 +269,15 @@ public final /* synthetic */ class wx implements bgk {
                         cdeVarT5.a = emn.bb(dkuVar).getDeclaringClass();
                         Object objE5 = ((cdk) bjs.h(cdeVarT5)).e(new Object[0]);
                         throwIfVar1IsNull(objE5);
-                        Object objInvoke5 = methodBb2.invoke(objE5, objE4, Integer.valueOf(iCurrentTimeMillis), str, Boolean.FALSE, Boolean.TRUE, 30, strZ6);
-                        throwIfVar1IsNull(objInvoke5, "null cannot be cast to non-null type kotlin.Boolean" /* cnb.z(-358419315817258L) */);
+                        Object objInvoke5 = methodBb2.invoke(objE5, objE4, Integer.valueOf(iCurrentTimeMillis), str,
+                                Boolean.FALSE, Boolean.TRUE, 30, strZ6);
+                        throwIfVar1IsNull(objInvoke5, "null cannot be cast to non-null type kotlin.Boolean" /*
+                                                                                                             * cnb.z(-
+                                                                                                             * 358419315817258L)
+                                                                                                             */);
                         if (str10 != null) {
-                            ((Handler) bij.a.getValue()).postDelayed(new bjt(new cbj(activity, str10, str11, str9), djaVar, 1), 500L);
+                            ((Handler) bij.a.getValue())
+                                    .postDelayed(new bjt(new cbj(activity, str10, str11, str9), djaVar, 1), 500L);
                         } else {
                             dnc.g(null, 3, "视频暂未缓存或者获取路径失败" /* cnb.z(-534817917631274L) */);
                         }

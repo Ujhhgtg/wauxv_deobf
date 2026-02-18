@@ -8,8 +8,8 @@ public final class aeq extends bws {
     public static final aeq a = new aeq();
     public static final LinkedHashSet b = new LinkedHashSet();
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
         int i = bte.a;
         bmu bmuVarS = yg.s(-38001870633770L);
         cde cdeVarT = bmuVarS.t();
@@ -22,7 +22,7 @@ public final class aeq extends bws {
         akiVarAd.o();
         cde cdeVarT2 = bmuVarS.t();
         cdeVarT2.ab = "onPreferenceTreeClick" /* cnb.z(-38311108279082L) */;
-        aki akiVarAd2 = aeqVar.ad((cdk) dkz.n(new Object[]{eoz.a, cvh.a.b()}, 2, cdeVarT2), exgVar);
+        aki akiVarAd2 = aeqVar.ad((cdk) dkz.n(new Object[] { eoz.a, cvh.a.b() }, 2, cdeVarT2), exgVar);
         akiVarAd2.n(new act(22));
         akiVarAd2.o();
     }

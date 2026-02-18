@@ -124,7 +124,7 @@ public final /* synthetic */ class crl implements IHasInvokeMethod {
                 bahVar2.d = cdjVar2;
                 return ensVar;
             case 4:
-                Object objF = ((HookParamWrapper) obj).getResult();
+                Object objF = ((HookParam) obj).getResult();
                 if ((objF instanceof List) && (!(objF instanceof IEmpty) || (objF instanceof IEmpty3))) {
                     obj2 = objF;
                 }
@@ -155,7 +155,7 @@ public final /* synthetic */ class crl implements IHasInvokeMethod {
                 list.add(0, objC);
                 return ensVar;
             case 5:
-                HookParamWrapper hookParam = (HookParamWrapper) obj;
+                HookParam hookParam = (HookParam) obj;
                 hookParam.getClass();
                 try {
                     objX = hookParam.getArgs()[0];
@@ -273,7 +273,7 @@ public final /* synthetic */ class crl implements IHasInvokeMethod {
                 throw new NullPointerException("Missing required view with ID: "
                         /* cnb.z(-663177310239530L) */.concat(viewK3.getResources().getResourceName(i10)));
             case 14:
-                HookParamWrapper hookParam2 = (HookParamWrapper) obj;
+                HookParam hookParam2 = (HookParam) obj;
                 hookParam2.getClass();
                 try {
                     objX2 = hookParam2.getArgs()[0];

@@ -782,7 +782,7 @@ public final class but implements aja, app, cqk, evw {
 
     public but(WindowInsetsAnimation.Bounds bounds) {
         this.a = 21;
-        this.b = bps.locateDex(bounds.getLowerBound());
-        this.c = bps.locateDex(bounds.getUpperBound());
+        this.b = bps.dexFind(bounds.getLowerBound());
+        this.c = bps.dexFind(bounds.getUpperBound());
     }
 }

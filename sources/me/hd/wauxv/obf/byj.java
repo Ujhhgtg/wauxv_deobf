@@ -61,7 +61,7 @@ public class byj {
         View view = (View) ((ArrayList) this.f).get(0);
         dmb dmbVar = (dmb) view.getLayoutParams();
         StaggeredGridLayoutManager staggeredGridLayoutManager = (StaggeredGridLayoutManager) this.g;
-        this.b = staggeredGridLayoutManager.c.locateDex(view);
+        this.b = staggeredGridLayoutManager.c.dexFind(view);
         if (dmbVar.b && (dmcVarP = staggeredGridLayoutManager.al.p(dmbVar.c.z())) != null && dmcVarP.b == -1) {
             int i = this.b;
             int i2 = this.e;
@@ -92,7 +92,7 @@ public class byj {
         int i3 = i2 > i ? 1 : -1;
         while (i != i2) {
             View view = (View) ((ArrayList) this.f).get(i);
-            int iH = staggeredGridLayoutManager.c.locateDex(view);
+            int iH = staggeredGridLayoutManager.c.dexFind(view);
             int iE = staggeredGridLayoutManager.c.e(view);
             boolean z = iH <= iJ;
             boolean z2 = iE >= iN;

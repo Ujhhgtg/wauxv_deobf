@@ -39,7 +39,7 @@ public final class ccd extends hz implements MenuItem {
 
     @Override // android.view.MenuItem
     public final ActionProvider getActionProvider() {
-        cca ccaVarQ = this.a.q();
+        cca ccaVarQ = this.a.getAllSwitchHookInstances();
         if (ccaVarQ != null) {
             return ccaVarQ.b;
         }
@@ -254,7 +254,8 @@ public final class ccd extends hz implements MenuItem {
 
     @Override // android.view.MenuItem
     public final MenuItem setOnMenuItemClickListener(MenuItem.OnMenuItemClickListener onMenuItemClickListener) {
-        this.a.setOnMenuItemClickListener(onMenuItemClickListener != null ? new dod(this, onMenuItemClickListener) : null);
+        this.a.setOnMenuItemClickListener(
+                onMenuItemClickListener != null ? new dod(this, onMenuItemClickListener) : null);
         return this;
     }
 

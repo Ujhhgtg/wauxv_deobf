@@ -6,7 +6,7 @@ import me.hd.wauxv.data.bean.ConversationBean;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class cxb extends BaseHook implements bnf {
+public final class cxb extends SwitchHook implements bnf {
     public static final cxb b = new cxb("QuickPullGroupHook" /* cnb.z(-526713314343722L) */);
     public static final String c = "菜单" /* cnb.z(-527065501661994L) */;
     public static final String h = "快捷拉群" /* cnb.z(-527018257021738L) */;
@@ -23,21 +23,21 @@ public final class cxb extends BaseHook implements bnf {
                                                                                             */, new cvc(5)));
     }
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return h;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return i;
     }

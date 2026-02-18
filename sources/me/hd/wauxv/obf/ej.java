@@ -62,7 +62,8 @@ public final class ej {
         eh ehVar = new eh();
         ehVar.a = new WeakReference(elVar);
         this.ae = ehVar;
-        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(null, cyf.e, R.attr.alertDialogStyle, 0);
+        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(null, cyf.e,
+                R.attr.alertDialogStyle, 0);
         this.z = typedArrayObtainStyledAttributes.getResourceId(0, 0);
         typedArrayObtainStyledAttributes.getResourceId(2, 0);
         this.aa = typedArrayObtainStyledAttributes.getResourceId(4, 0);
@@ -72,7 +73,7 @@ public final class ej {
         this.ad = typedArrayObtainStyledAttributes.getBoolean(6, true);
         typedArrayObtainStyledAttributes.getDimensionPixelSize(1, 0);
         typedArrayObtainStyledAttributes.recycle();
-        elVar.e().o(1);
+        elVar.initOnce().o(1);
     }
 
     public static boolean ag(View view) {

@@ -157,7 +157,7 @@ public class LinearLayoutManager extends czg implements czs {
                             } else {
                                 bvhVar.g(viewAm, czg.el(viewAm));
                                 if (!cztVar.g && ak()) {
-                                    int iH3 = this.bf.locateDex(viewAm);
+                                    int iH3 = this.bf.dexFind(viewAm);
                                     int iE = this.bf.e(viewAm);
                                     iN = this.bf.n();
                                     iJ = this.bf.j();
@@ -183,7 +183,7 @@ public class LinearLayoutManager extends czg implements czs {
                         } else {
                             bvhVar.g(viewAm, czg.el(viewAm));
                             if (!cztVar.g) {
-                                int iH32 = this.bf.locateDex(viewAm);
+                                int iH32 = this.bf.dexFind(viewAm);
                                 int iE2 = this.bf.e(viewAm);
                                 iN = this.bf.n();
                                 iJ = this.bf.j();
@@ -226,7 +226,7 @@ public class LinearLayoutManager extends czg implements czs {
                             } else {
                                 bvhVar.g(viewAm, czg.el(viewAm));
                                 if (!cztVar.g) {
-                                    int iH322 = this.bf.locateDex(viewAm);
+                                    int iH322 = this.bf.dexFind(viewAm);
                                     int iE22 = this.bf.e(viewAm);
                                     iN = this.bf.n();
                                     iJ = this.bf.j();
@@ -256,7 +256,7 @@ public class LinearLayoutManager extends czg implements czs {
                             } else {
                                 bvhVar.g(viewAm, czg.el(viewAm));
                                 if (!cztVar.g) {
-                                    int iH3222 = this.bf.locateDex(viewAm);
+                                    int iH3222 = this.bf.dexFind(viewAm);
                                     int iE222 = this.bf.e(viewAm);
                                     iN = this.bf.n();
                                     iJ = this.bf.j();
@@ -287,7 +287,7 @@ public class LinearLayoutManager extends czg implements czs {
                         } else {
                             bvhVar.g(viewAm, czg.el(viewAm));
                             if (!cztVar.g) {
-                                int iH32222 = this.bf.locateDex(viewAm);
+                                int iH32222 = this.bf.dexFind(viewAm);
                                 int iE2222 = this.bf.e(viewAm);
                                 iN = this.bf.n();
                                 iJ = this.bf.j();
@@ -334,7 +334,7 @@ public class LinearLayoutManager extends czg implements czs {
                         bvhVar.f();
                     } else if (this.bf.f(viewCa2) > this.bf.o()) {
                         bvhVar.f();
-                    } else if (this.bf.locateDex(viewCa2) - this.bf.n() < 0) {
+                    } else if (this.bf.dexFind(viewCa2) - this.bf.n() < 0) {
                         bvhVar.c = this.bf.n();
                         bvhVar.d = false;
                     } else if (this.bf.j() - this.bf.e(viewCa2) < 0) {
@@ -346,7 +346,7 @@ public class LinearLayoutManager extends czg implements czs {
                             atb atbVar = this.bf;
                             iH = (Integer.MIN_VALUE == atbVar.a ? 0 : atbVar.o() - atbVar.a) + iE3;
                         } else {
-                            iH = this.bf.locateDex(viewCa2);
+                            iH = this.bf.dexFind(viewCa2);
                         }
                         bvhVar.c = iH;
                     }
@@ -362,7 +362,7 @@ public class LinearLayoutManager extends czg implements czs {
             }
             bvhVar.e = true;
         } else if (focusedChild != null
-                && (this.bf.locateDex(focusedChild) >= this.bf.j() || this.bf.e(focusedChild) <= this.bf.n())) {
+                && (this.bf.dexFind(focusedChild) >= this.bf.j() || this.bf.e(focusedChild) <= this.bf.n())) {
             bvhVar.h(focusedChild, czg.el(focusedChild));
         }
         bvj bvjVar = this.be;
@@ -378,7 +378,7 @@ public class LinearLayoutManager extends czg implements czs {
                 iJ2 = this.bf.j() - this.bf.e(viewCa);
                 iH2 = this.bm;
             } else {
-                iH2 = this.bf.locateDex(viewCa) - this.bf.n();
+                iH2 = this.bf.dexFind(viewCa) - this.bf.n();
                 iJ2 = this.bm;
             }
             int i10 = iJ2 - iH2;
@@ -609,7 +609,7 @@ public class LinearLayoutManager extends czg implements czs {
         while (iEs != i) {
             View viewEr = er(iEs);
             int iEl = czg.el(viewEr);
-            int iH = this.bf.locateDex(viewEr);
+            int iH = this.bf.dexFind(viewEr);
             int iE = this.bf.e(viewEr);
             if (iEl >= 0 && iEl < iP) {
                 if (!((czh) viewEr.getLayoutParams()).c.af()) {
@@ -879,7 +879,7 @@ public class LinearLayoutManager extends czg implements czs {
         }
         View viewDa = da();
         bvkVar3.a = czg.el(viewDa);
-        bvkVar3.b = this.bf.locateDex(viewDa) - this.bf.n();
+        bvkVar3.b = this.bf.dexFind(viewDa) - this.bf.n();
         return bvkVar3;
     }
 
@@ -1060,7 +1060,7 @@ public class LinearLayoutManager extends czg implements czs {
         if (i2 <= i && i2 >= i) {
             return er(i);
         }
-        if (this.bf.locateDex(er(i)) < this.bf.n()) {
+        if (this.bf.dexFind(er(i)) < this.bf.n()) {
             i3 = 16644;
             i4 = 16388;
         } else {
@@ -1133,7 +1133,7 @@ public class LinearLayoutManager extends czg implements czs {
             if (this.bi) {
                 for (int i4 = 0; i4 < iEs; i4++) {
                     View viewEr = er(i4);
-                    if (this.bf.locateDex(viewEr) < i3 || this.bf.q(viewEr) < i3) {
+                    if (this.bf.dexFind(viewEr) < i3 || this.bf.q(viewEr) < i3) {
                         dd(czoVar, 0, i4);
                         return;
                     }
@@ -1143,7 +1143,7 @@ public class LinearLayoutManager extends czg implements czs {
             int i5 = iEs - 1;
             for (int i6 = i5; i6 >= 0; i6--) {
                 View viewEr2 = er(i6);
-                if (this.bf.locateDex(viewEr2) < i3 || this.bf.q(viewEr2) < i3) {
+                if (this.bf.dexFind(viewEr2) < i3 || this.bf.q(viewEr2) < i3) {
                     dd(czoVar, i5, i6);
                     return;
                 }
@@ -1285,8 +1285,8 @@ public class LinearLayoutManager extends czg implements czs {
             int iEl2 = czg.el(viewDa);
             bvj bvjVar6 = this.be;
             bvjVar5.d = iEl2 + bvjVar6.e;
-            bvjVar6.b = this.bf.locateDex(viewDa);
-            iN = (-this.bf.locateDex(viewDa)) + this.bf.n();
+            bvjVar6.b = this.bf.dexFind(viewDa);
+            iN = (-this.bf.dexFind(viewDa)) + this.bf.n();
         }
         bvj bvjVar7 = this.be;
         bvjVar7.c = i2;

@@ -107,23 +107,23 @@ public final class cfm extends BaseHook implements bnc {
         view.setBackground(stateListDrawable);
     }
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return m;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return l;
     }
 
     @Override // me.hd.wauxv.obf.bnc
     public final void i(View view, Object obj, Object obj2, MsgInfoBean msgInfoBean) {
-        if (z()) {
+        if (getIsEnabled()) {
             int type = msgInfoBean.getType();
             if (type == ewg.a.w || type == ewg.k.w || type == ewg.r.w || type == ewg.s.w) {
                 View viewV = cnh.v(view, bhs.v());
@@ -162,12 +162,12 @@ public final class cfm extends BaseHook implements bnc {
         }
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return n;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final bgf p() {
         return r;
     }

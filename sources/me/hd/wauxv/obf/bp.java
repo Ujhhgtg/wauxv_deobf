@@ -55,7 +55,11 @@ public final /* synthetic */ class bp implements bfu {
             case 1:
                 Context context = ((RelativeLayout) this.b).getContext();
                 Intent intent = new Intent();
-                intent.setClassName(context, "com.tencent.mm.plugin.setting.ui.setting.SettingsPersonalInfoUI" /* cnb.z(-94811403057962L) */);
+                intent.setClassName(context, "com.tencent.mm.plugin.setting.ui.setting.SettingsPersonalInfoUI" /*
+                                                                                                                * cnb.z(
+                                                                                                                * -
+                                                                                                                * 94811403057962L)
+                                                                                                                */);
                 context.startActivity(intent);
                 return ens.a;
             case 2:
@@ -195,7 +199,7 @@ public final /* synthetic */ class bp implements bfu {
                 aitVar.r(numBf10 != null ? numBf10.intValue() : 99);
                 return ens.a;
             case 16:
-                amn amnVar = (amn) this.b;
+                DexDescData amnVar = (DexDescData) this.b;
                 StringBuilder sb = new StringBuilder();
                 bmo.a.getClass();
                 sb.append(bmo.s());
@@ -274,7 +278,10 @@ public final /* synthetic */ class bp implements bfu {
                 bjw.a.u(String.valueOf(cemVar2.d.getText()));
                 return ens.a;
             case 24:
-                bld.a.t(aaz.ad(dnj.as(String.valueOf(((cee) this.b).c.getText()), new String[]{"," /* cnb.z(-463053309082410L) */})));
+                bld.a.t(aaz.ad(dnj.as(String.valueOf(((cee) this.b).c.getText()), new String[] { "," /*
+                                                                                                      * cnb.z(-
+                                                                                                      * 463053309082410L)
+                                                                                                      */ })));
                 return ens.a;
             case 25:
                 cek cekVar3 = (cek) this.b;

@@ -12,7 +12,7 @@ import me.hd.wauxv.data.bean.MsgInfoBean;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class cgz extends BaseHook implements bnb {
+public final class cgz extends SwitchHook implements bnb {
     public static final cgz c = new cgz("MsgLeftSwipeHook" /* cnb.z(-473030518111018L) */);
     public static final String h = "聊天" /* cnb.z(-473094942620458L) */;
     public static final String i = "消息左滑引用" /* cnb.z(-474696965421866L) */;
@@ -20,7 +20,7 @@ public final class cgz extends BaseHook implements bnb {
 
     @Override // me.hd.wauxv.obf.bnb
     public final void a(ViewGroup viewGroup) {
-        if (z()) {
+        if (getIsEnabled()) {
             View viewV = cnh.v(viewGroup, cnb.ac(ewh.r) ? "c0g"
                     /* cnb.z(-472957503666986L) */ : cnb.ac(ewh.q) ? "bzy"
                             /* cnb.z(-472905964059434L) */ : cnb.ac(ewh.o) ? "byw"
@@ -153,26 +153,26 @@ public final class cgz extends BaseHook implements bnb {
     @Override // me.hd.wauxv.obf.bnb
     public final void b(Object obj, ViewGroup viewGroup, Object obj2, MsgInfoBean msgInfoBean) {
         don donVar;
-        if (z() && (donVar = (don) viewGroup.findViewById(R.id.MsgLeftSwipe_SwipeMenu)) != null) {
+        if (getIsEnabled() && (donVar = (don) viewGroup.findViewById(R.id.MsgLeftSwipe_SwipeMenu)) != null) {
             donVar.setSmoothListener(new chm(donVar, obj, msgInfoBean, obj2));
         }
     }
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return i;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return h;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return j;
     }

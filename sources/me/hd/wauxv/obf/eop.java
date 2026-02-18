@@ -8,8 +8,8 @@ import java.time.Instant;
 public final class eop extends bws {
     public static final eop a = new eop();
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
         int i = drv.a;
         long jCurrentTimeMillis = System.currentTimeMillis();
         eon eonVar = eon.a;

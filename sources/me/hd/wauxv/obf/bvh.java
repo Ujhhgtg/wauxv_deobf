@@ -25,7 +25,7 @@ public final class bvh {
             atb atbVar = this.a;
             this.c = (Integer.MIN_VALUE == atbVar.a ? 0 : atbVar.o() - atbVar.a) + iE;
         } else {
-            this.c = this.a.locateDex(view);
+            this.c = this.a.dexFind(view);
         }
         this.b = i;
     }
@@ -39,7 +39,7 @@ public final class bvh {
         }
         this.b = i;
         if (!this.d) {
-            int iH = this.a.locateDex(view);
+            int iH = this.a.dexFind(view);
             int iN = iH - this.a.n();
             this.c = iH;
             if (iN > 0) {
@@ -57,7 +57,7 @@ public final class bvh {
         if (iJ2 > 0) {
             int iF = this.c - this.a.f(view);
             int iN2 = this.a.n();
-            int iMin = iF - (Math.min(this.a.locateDex(view) - iN2, 0) + iN2);
+            int iMin = iF - (Math.min(this.a.dexFind(view) - iN2, 0) + iN2);
             if (iMin < 0) {
                 this.c = Math.min(iJ2, -iMin) + this.c;
             }

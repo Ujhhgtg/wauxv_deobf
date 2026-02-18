@@ -8,8 +8,8 @@ import java.util.regex.Pattern;
 public final class cfw extends bws implements bnr {
     public static final cfw a = new cfw();
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
     }
 
     @Override // me.hd.wauxv.obf.bnr

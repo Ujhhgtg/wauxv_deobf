@@ -44,7 +44,7 @@ public final /* synthetic */ class q implements bgf {
                 return obj == ((r) r7) ? "(this Collection)" : String.valueOf(obj);
             case 1:
                 qb qbVar = (qb) r7;
-                HookParamWrapper hookParam = (bmm) obj;
+                HookParam hookParam = (bmm) obj;
                 hookParam.getClass();
                 try {
                     objX = hookParam.d()[0];
@@ -110,7 +110,7 @@ public final /* synthetic */ class q implements bgf {
                 return new acb((beq) r7, z ? 1 : 0, cioVar);
             case 5:
                 aki akiVar = (aki) r7;
-                HookParamWrapper hookParam2 = (bmm) obj;
+                HookParam hookParam2 = (bmm) obj;
                 hookParam2.getClass();
                 try {
                     objX2 = hookParam2.d()[0];
@@ -143,7 +143,7 @@ public final /* synthetic */ class q implements bgf {
             case 6:
                 return ((bzw) r7).c(((Integer) obj).intValue());
             case 7:
-                HookParamWrapper hookParam3 = (bmm) obj;
+                HookParam hookParam3 = (bmm) obj;
                 int parameterCount = ((Constructor) r7).getParameterCount();
                 i = (parameterCount == 13 || parameterCount == 14) ? 8 : 7;
                 hookParam3.getClass();

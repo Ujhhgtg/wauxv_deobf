@@ -6,7 +6,7 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class cnw {
     public static final cns Companion = new cns();
-    public static final btt[] a = { null, null, ewz.am(btx.a, new cfh(12)) };
+    public static final IHasGetValue[] a = { null, null, ewz.am(btx.a, new cfh(12)) };
     public final nm b;
     public final int c;
     public final List d;

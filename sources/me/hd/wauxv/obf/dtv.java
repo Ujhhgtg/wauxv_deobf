@@ -6,7 +6,7 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class dtv {
     public static final dtu Companion = new dtu();
-    public static final btt[] a;
+    public static final IHasGetValue[] a;
     public final String aa;
     public final String ab;
     public final Integer ac;
@@ -53,7 +53,8 @@ public final class dtv {
     static {
         cfh cfhVar = new cfh(29);
         btx btxVar = btx.a;
-        a = new btt[] { null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null,
+        a = new IHasGetValue[] { null, null, null, null, null, null, null, null, null, null, null, null, null, null,
+                null, null,
                 null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null,
                 null, null, null, null, null, ewz.am(btxVar, cfhVar), null, ewz.am(btxVar, new dtr(0)), null };
     }

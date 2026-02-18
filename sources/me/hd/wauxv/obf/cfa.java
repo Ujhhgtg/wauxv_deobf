@@ -8,7 +8,7 @@ import me.hd.wauxv.data.bean.MsgInfoBean;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class cfa extends BaseHook implements bnq {
+public final class cfa extends SwitchHook implements bnq {
     public static final cfa b = new cfa("MoreMsgRevokeHook" /* cnb.z(-512814800173866L) */);
     public static final String c = "菜单" /* cnb.z(-512716015926058L) */;
     public static final String h = "多选消息撤回" /* cnb.z(-512651591416618L) */;
@@ -16,7 +16,7 @@ public final class cfa extends BaseHook implements bnq {
 
     @Override // me.hd.wauxv.obf.bnq
     public final List a(ArrayList arrayList) {
-        if (z() && !arrayList.isEmpty()) {
+        if (getIsEnabled() && !arrayList.isEmpty()) {
             Iterator it = arrayList.iterator();
             while (it.hasNext()) {
                 if (((MsgInfoBean) it.next()).isSend()) {
@@ -28,21 +28,21 @@ public final class cfa extends BaseHook implements bnq {
         return avd.a;
     }
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return h;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return i;
     }

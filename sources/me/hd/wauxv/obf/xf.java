@@ -19,7 +19,7 @@ import org.luckypray.dexkit.DexKitBridge;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class xf extends BaseHook implements bmz, bng {
+public final class xf extends SwitchHook implements bmz, bng {
     public static final xf a = new xf("ChatToolbarHook" /* cnb.z(-549064324152106L) */);
     public static final String b = "界面" /* cnb.z(-552998514195242L) */;
     public static final String c = "聊天工具栏" /* cnb.z(-553019989031722L) */;
@@ -29,7 +29,7 @@ public final class xf extends BaseHook implements bmz, bng {
     public static final ArrayList l = new ArrayList();
     public static cyt m;
 
-    @Override // me.hd.wauxv.obf.bmf
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final void getThisObject() {
         aki akiVarAb = csb.ab(this, dqc.bf(emn.bb(xa.a)));
         ws wsVar = new ws(3);
@@ -39,25 +39,25 @@ public final class xf extends BaseHook implements bmz, bng {
         akiVarAb.o();
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return b;
     }
 
-    @Override // me.hd.wauxv.obf.bng
-    public final void locateDex(DexKitBridge dexKitBridge) {
+    @Override // me.hd.wauxv.obf.IDexFind
+    public final void dexFind(DexKitBridge dexKitBridge) {
         emn.aj(xa.a, dexKitBridge, new ws(5));
     }
 
     public final void n(FrameLayout frameLayout) throws cth {
         Class cls;
         Class cls2;
-        if (z()) {
+        if (getIsEnabled()) {
             LinearLayout linearLayout = (LinearLayout) cnh.v(frameLayout, cnb.ac(ewh.q) ? "c0p"
                     /* cnb.z(-548995604675370L) */ : cnb.ac(ewh.o) ? "bzn"
                             /* cnb.z(-548944065067818L) */ : cnb.ac(ewh.n) ? "byp"
@@ -176,7 +176,7 @@ public final class xf extends BaseHook implements bmz, bng {
             if (clsBf2 == null) {
                 clsBf2 = cls2;
             }
-            View viewH = blu.locateDex(bluVar2, clsBf2, null, blrVarI.j());
+            View viewH = blu.dexFind(bluVar2, clsBf2, null, blrVarI.j());
             viewH.setLayoutParams(blqVarD.f());
             Class<RecyclerView> clsBf3 = cnf.bf(dal.b(cls2));
             if (clsBf3 == null) {
@@ -280,17 +280,17 @@ public final class xf extends BaseHook implements bmz, bng {
         }
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return d;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final IHasInvokeMethod p() {
         return i;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final boolean q() {
         return j;
     }

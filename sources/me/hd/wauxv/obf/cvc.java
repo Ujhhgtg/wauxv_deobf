@@ -89,7 +89,7 @@ public final /* synthetic */ class cvc implements IHasInvokeMethod {
                 bahVar.d = cdjVar;
                 return ensVar;
             case 1:
-                HookParamWrapper hookParam = (HookParamWrapper) obj;
+                HookParam hookParam = (HookParam) obj;
                 hookParam.getClass();
                 try {
                     objX = hookParam.getArgs()[2];
@@ -153,7 +153,7 @@ public final /* synthetic */ class cvc implements IHasInvokeMethod {
                 ewz.aq(cxb.b, new cwz((ConversationBean) obj, i5));
                 return ensVar;
             case 6:
-                HookParamWrapper hookParam2 = (HookParamWrapper) obj;
+                HookParam hookParam2 = (HookParam) obj;
                 if (cnb.ab(ewk.j) || cnb.ac(ewh.j)) {
                     hookParam2.getClass();
                     try {
@@ -446,7 +446,7 @@ public final /* synthetic */ class cvc implements IHasInvokeMethod {
                 throw new NullPointerException("Missing required view with ID: "
                         /* cnb.z(-663314749193002L) */.concat(viewK.getResources().getResourceName(i7)));
             case 12:
-                HookParamWrapper hookParam3 = (HookParamWrapper) obj;
+                HookParam hookParam3 = (HookParam) obj;
                 Pair pairVar = (cnb.ab(ewk.n) || cnb.ac(ewh.q)) ? new Pair(1, 5) : new Pair(0, 4);
                 int iIntValue = ((Number) pairVar.first).intValue();
                 int iIntValue2 = ((Number) pairVar.second).intValue();
@@ -500,7 +500,7 @@ public final /* synthetic */ class cvc implements IHasInvokeMethod {
                                 spannableStringBuilder.length(), 33);
                         spannableStringBuilder.append((CharSequence) " " /* cnb.z(-457834923817770L) */);
                         spannableStringBuilder.append((CharSequence) obj2);
-                        hookParam3.locateDex(spannableStringBuilder);
+                        hookParam3.dexFind(spannableStringBuilder);
                     }
                 }
                 return ensVar;
@@ -528,7 +528,7 @@ public final /* synthetic */ class cvc implements IHasInvokeMethod {
                 bahVar5.d = cdjVar5;
                 return ensVar;
             case 16:
-                HookParamWrapper hookParam4 = (HookParamWrapper) obj;
+                HookParam hookParam4 = (HookParam) obj;
                 hookParam4.getClass();
                 try {
                     objX23 = hookParam4.getArgs()[0];
@@ -639,7 +639,7 @@ public final /* synthetic */ class cvc implements IHasInvokeMethod {
                         null, 2));
                 return ensVar;
             case 17:
-                HookParamWrapper hookParam5 = (HookParamWrapper) obj;
+                HookParam hookParam5 = (HookParam) obj;
                 hookParam5.getClass();
                 try {
                     objX25 = hookParam5.getArgs()[2];
@@ -701,7 +701,7 @@ public final /* synthetic */ class cvc implements IHasInvokeMethod {
                 bahVar6.d = cdjVar6;
                 return ensVar;
             case 20:
-                ((HookParamWrapper) obj).setResult(Boolean.FALSE);
+                ((HookParam) obj).setResult(Boolean.FALSE);
                 return ensVar;
             case 21:
                 ((amm) obj).c = new cvc(22);
@@ -719,7 +719,7 @@ public final /* synthetic */ class cvc implements IHasInvokeMethod {
                 return ensVar;
             case 23:
                 int i16 = bte.a;
-                azg azgVarAa2 = dkz.aa((HookParamWrapper) obj);
+                azg azgVarAa2 = dkz.aa((HookParam) obj);
                 azgVarAa2.a = dal.b(cls4);
                 for (azk azkVar : azgVarAa2.c()) {
                     Integer num = (Integer) azkVar.e();
@@ -741,7 +741,7 @@ public final /* synthetic */ class cvc implements IHasInvokeMethod {
                 return ensVar;
             case 26:
                 int i17 = bte.a;
-                azg azgVarAa3 = dkz.aa((HookParamWrapper) obj);
+                azg azgVarAa3 = dkz.aa((HookParam) obj);
                 abf.ao(azgVarAa3.ad, (cdy[]) Arrays.copyOf(new cdy[] { cdy.b, cdy.d }, 2));
                 azgVarAa3.a = dal.b(cls4);
                 for (azk azkVar2 : azgVarAa3.c()) {
@@ -752,7 +752,7 @@ public final /* synthetic */ class cvc implements IHasInvokeMethod {
                 }
                 return ensVar;
             case 27:
-                ((HookParamWrapper) obj).setResult(Boolean.FALSE);
+                ((HookParam) obj).setResult(Boolean.FALSE);
                 return ensVar;
             case 28:
                 bah bahVar9 = (bah) obj;
@@ -762,7 +762,7 @@ public final /* synthetic */ class cvc implements IHasInvokeMethod {
                 bahVar9.d = cdjVar9;
                 return ensVar;
             default:
-                HookParamWrapper hookParam6 = (HookParamWrapper) obj;
+                HookParam hookParam6 = (HookParam) obj;
                 hookParam6.getClass();
                 try {
                     objX26 = hookParam6.getArgs()[0];
@@ -786,7 +786,7 @@ public final /* synthetic */ class cvc implements IHasInvokeMethod {
                     objX27 = bhu.x(th27);
                 }
                 throwIfVar1IsNull(objX27 instanceof dcx ? null : objX27);
-                for (bny bnyVar : dbl.b) {
+                for (IHandlesHookParam bnyVar : dbl.b) {
                     try {
                         bnyVar.d(hookParam6, str7);
                     } catch (Exception e) {
@@ -794,10 +794,10 @@ public final /* synthetic */ class cvc implements IHasInvokeMethod {
                         StringBuilder sb3 = new StringBuilder();
                         sb3.append("onGetRepairerConfig " /* cnb.z(-55997783604010L) */);
                         ewq.e(yg.n(sb3,
-                                bnyVar instanceof BaseHook ? ((BaseHook) bnyVar).getResult() : "LoadHook" /*
-                                                                                                           * cnb.z(-
-                                                                                                           * 55873229552426L)
-                                                                                                           */,
+                                bnyVar instanceof SwitchHook ? ((SwitchHook) bnyVar).getResult() : "LoadHook" /*
+                                                                                                               * cnb.z(-
+                                                                                                               * 55873229552426L)
+                                                                                                               */,
                                 -55851754715946L), e, 12);
                     }
                 }

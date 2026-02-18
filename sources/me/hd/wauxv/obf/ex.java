@@ -28,7 +28,8 @@ public final class ex implements Comparator {
                 }
                 return fG < fG2 ? 1 : 0;
             case 2:
-                return ajn.j(((bmf) obj).getClass().getSimpleName(), ((bmf) obj2).getClass().getSimpleName());
+                return ajn.j(((BaseBaseHook) obj).getClass().getSimpleName(),
+                        ((BaseBaseHook) obj2).getClass().getSimpleName());
             case 3:
                 return ajn.j(((yu) obj).f, ((yu) obj2).f);
             case 4:

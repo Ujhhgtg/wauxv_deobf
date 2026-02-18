@@ -133,7 +133,7 @@ public class ao {
                     anVar.e(UMUtils.getChannel(context));
                     anVar.f(Build.VERSION.SDK_INT + "");
                     anVar.g(Build.BRAND);
-                    anVar.locateDex(Build.MODEL);
+                    anVar.dexFind(Build.MODEL);
                     String[] localeInfo = DeviceConfig.getLocaleInfo(context);
                     anVar.i(localeInfo[1]);
                     anVar.j(localeInfo[0]);

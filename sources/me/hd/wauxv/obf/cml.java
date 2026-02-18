@@ -227,7 +227,7 @@ public final /* synthetic */ class cml implements IHasInvokeMethod {
                 bahVar7.d = cdjVar7;
                 return ensVar;
             case 20:
-                HookParamWrapper hookParam = (HookParamWrapper) obj;
+                HookParam hookParam = (HookParam) obj;
                 hookParam.getClass();
                 try {
                     objX = hookParam.getArgs()[0];
@@ -253,10 +253,10 @@ public final /* synthetic */ class cml implements IHasInvokeMethod {
                         StringBuilder sb = new StringBuilder();
                         sb.append("onHandleMsg " /* cnb.z(-66288525245226L) */);
                         ewq.e(yg.n(sb,
-                                obj2 instanceof BaseHook ? ((BaseHook) obj2).getResult() : "LoadHook" /*
-                                                                                                       * cnb.z(-
-                                                                                                       * 66267050408746L)
-                                                                                                       */,
+                                obj2 instanceof SwitchHook ? ((SwitchHook) obj2).getResult() : "LoadHook" /*
+                                                                                                           * cnb.z(-
+                                                                                                           * 66267050408746L)
+                                                                                                           */,
                                 -67894843013930L), e, 12);
                     }
                 }
@@ -275,7 +275,7 @@ public final /* synthetic */ class cml implements IHasInvokeMethod {
                 bahVar8.d = cdjVar8;
                 return ensVar;
             case 23:
-                HookParamWrapper hookParam2 = (HookParamWrapper) obj;
+                HookParam hookParam2 = (HookParam) obj;
                 int i4 = bte.a;
                 azg azgVarAa = dkz.aa(hookParam2);
                 uq.a.getClass();
@@ -356,7 +356,7 @@ public final /* synthetic */ class cml implements IHasInvokeMethod {
                 bahVar9.d = cdjVar9;
                 return ensVar;
             case 27:
-                HookParamWrapper hookParam3 = (HookParamWrapper) obj;
+                HookParam hookParam3 = (HookParam) obj;
                 int i7 = bte.a;
                 cde cdeVarT3 = dqc.bi(hookParam3.getThisObject()).t();
                 cdeVarT3.a = dal.b(Integer.TYPE);
@@ -377,10 +377,10 @@ public final /* synthetic */ class cml implements IHasInvokeMethod {
                         StringBuilder sb2 = new StringBuilder();
                         sb2.append("onGetBuffer " /* cnb.z(-67486821120810L) */);
                         ewq.e(yg.n(sb2,
-                                obj5 instanceof BaseHook ? ((BaseHook) obj5).getResult() : "LoadHook" /*
-                                                                                                       * cnb.z(-
-                                                                                                       * 67482526153514L)
-                                                                                                       */,
+                                obj5 instanceof SwitchHook ? ((SwitchHook) obj5).getResult() : "LoadHook" /*
+                                                                                                           * cnb.z(-
+                                                                                                           * 67482526153514L)
+                                                                                                           */,
                                 -67443871447850L), e2, 12);
                     }
                 }

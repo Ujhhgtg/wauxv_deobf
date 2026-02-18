@@ -47,7 +47,7 @@ public final /* synthetic */ class gi implements bgf {
                 ((bmm) obj).h(null);
                 return ensVar;
             case 1:
-                HookParamWrapper hookParam = (bmm) obj;
+                HookParam hookParam = (bmm) obj;
                 hookParam.getClass();
                 try {
                     objX = hookParam.d()[0];
@@ -130,7 +130,7 @@ public final /* synthetic */ class gi implements bgf {
                 bahVar4.d = cdjVar4;
                 return ensVar;
             case 11:
-                HookParamWrapper hookParam2 = (bmm) obj;
+                HookParam hookParam2 = (bmm) obj;
                 hookParam2.getClass();
                 try {
                     objX2 = hookParam2.d()[0];
@@ -186,7 +186,7 @@ public final /* synthetic */ class gi implements bgf {
                 bahVar6.d = cdjVar6;
                 return ensVar;
             case 17:
-                HookParamWrapper hookParam3 = (bmm) obj;
+                HookParam hookParam3 = (bmm) obj;
                 hookParam3.getClass();
                 try {
                     objX4 = hookParam3.d()[0];
@@ -277,7 +277,7 @@ public final /* synthetic */ class gi implements bgf {
             case 23:
                 return Boolean.valueOf(lt.a.n().contains(((zn) obj).a));
             case 24:
-                HookParamWrapper hookParam4 = (bmm) obj;
+                HookParam hookParam4 = (bmm) obj;
                 hookParam4.getClass();
                 try {
                     objX6 = hookParam4.d()[1];

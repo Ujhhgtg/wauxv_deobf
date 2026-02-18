@@ -16,8 +16,8 @@ public final class dhh extends BaseHook {
         h = "在对应的群聊界面中显示 群聊详情ID" /* cnb.z(-594075581414186L) */;
     }
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
         int i = bte.a;
         bmu bmuVarS = yg.s(-594475013372714L);
         cde cdeVarT = bmuVarS.t();
@@ -35,17 +35,17 @@ public final class dhh extends BaseHook {
         akiVarAd2.o();
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return b;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return h;
     }

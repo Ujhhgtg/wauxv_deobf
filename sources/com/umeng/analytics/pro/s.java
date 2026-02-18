@@ -37,7 +37,7 @@ public class s {
             }
             jSONObject2 = null;
             k.a(context).i();
-            k.a(context).locateDex();
+            k.a(context).dexFind();
             k.a(context).tryGetClassByName(true, false);
             k.a(context).a();
             UMRTLog.i(UMRTLog.RTLOG_TAG, "--->>> u-app packet overload !!! ");

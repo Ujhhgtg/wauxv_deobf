@@ -84,11 +84,11 @@ public final class asu implements Runnable {
             MotionEvent motionEvent2 = asvVar.z;
             int i4 = asvVar.e;
             if (i4 == 0) {
-                asvVar.c.locateDex(motionEvent2);
+                asvVar.c.dexFind(motionEvent2);
             } else if (i4 == 1) {
-                asvVar.u.locateDex(motionEvent2);
+                asvVar.u.dexFind(motionEvent2);
             } else if (i4 == 2) {
-                asvVar.v.locateDex(motionEvent2);
+                asvVar.v.dexFind(motionEvent2);
             }
         }
         this.h++;

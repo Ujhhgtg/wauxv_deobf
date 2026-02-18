@@ -403,7 +403,7 @@ public class ZIDManager {
     public synchronized void init(Context context, String str, IZIDCompletionCallback iZIDCompletionCallback) {
         SharedPreferences sharedPreferencesA;
         SharedPreferences.Editor editorEdit;
-        boolean zH = d.locateDex(context);
+        boolean zH = d.dexFind(context);
         this.c = zH;
         if (zH) {
             if (context == null) {

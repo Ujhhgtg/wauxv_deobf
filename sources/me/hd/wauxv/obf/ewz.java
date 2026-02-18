@@ -278,7 +278,7 @@ public abstract class ewz {
         return view.getLayoutDirection() == 1;
     }
 
-    public static btt am(btx btxVar, bfu bfuVar) {
+    public static IHasGetValue am(btx btxVar, bfu bfuVar) {
         arj arjVar = arj.n;
         int iOrdinal = btxVar.ordinal();
         if (iOrdinal == 0) {

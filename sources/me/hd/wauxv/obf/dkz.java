@@ -19,7 +19,7 @@ import net.bytebuddy.matcher.ElementMatcher;
 public abstract /* synthetic */ class dkz {
     public static final /* synthetic */ int[] a = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
-    public static azg aa(HookParamWrapper hookParam) {
+    public static azg aa(HookParam hookParam) {
         return dqc.bi(hookParam.getThisObject()).r();
     }
 

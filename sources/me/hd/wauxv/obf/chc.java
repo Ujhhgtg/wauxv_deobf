@@ -6,29 +6,29 @@ import me.hd.wauxv.data.bean.MsgInfoBean;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class chc extends BaseHook implements bna {
+public final class chc extends SwitchHook implements bna {
     public static final chc a = new chc("MsgRepeatHook" /* cnb.z(-520799144377130L) */);
     public static final String b = "菜单" /* cnb.z(-520661705423658L) */;
     public static final String c = "消息复读" /* cnb.z(-520666000390954L) */;
     public static final String h = "支持直接复读部分的简单消息到上下文" /* cnb.z(-520627345685290L) */;
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return b;
     }
 
     @Override // me.hd.wauxv.obf.bna
     public final List l(MsgInfoBean msgInfoBean) {
-        if (z()) {
+        if (getIsEnabled()) {
             if (msgInfoBean.isText()) {
                 return dqc.bf(new wj(R.id.MenuItem_Chat_MsgRepeat, "复读" /* cnb.z(-520790554442538L) */,
                         R.drawable.ic_menu_repeat_24dp, new cbk(15)));
@@ -57,7 +57,7 @@ public final class chc extends BaseHook implements bna {
         return avd.a;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return h;
     }

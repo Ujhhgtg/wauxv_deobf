@@ -15,7 +15,7 @@ import java.util.Set;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class dpf extends BaseHook implements boc {
+public final class dpf extends SwitchHook implements IStartActivity {
     public static final dpf a = new dpf("SystemBrowserHook" /* cnb.z(-516173464599338L) */);
     public static final Set b;
     public static final Set c;
@@ -43,8 +43,8 @@ public final class dpf extends BaseHook implements boc {
         n = new dos(2);
     }
 
-    @Override // me.hd.wauxv.obf.boc
-    public final void _cc(HookParamWrapper hookParam, Intent intent) {
+    @Override // me.hd.wauxv.obf.IStartActivity
+    public final void onStartActivityIntent(HookParam hookParam, Intent intent) {
         String stringExtra;
         String shortClassName;
         ActivityOptions activityOptionsMakeBasic;
@@ -130,26 +130,26 @@ public final class dpf extends BaseHook implements boc {
         }
     }
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return j;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return i;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return m;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final IHasInvokeMethod p() {
         return n;
     }

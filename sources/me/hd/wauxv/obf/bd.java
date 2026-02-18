@@ -232,7 +232,7 @@ public final class bd {
         StringBuilder sb = new StringBuilder();
         sb.append(super.toString());
         Rect rect = new Rect();
-        locateDex(rect);
+        dexFind(rect);
         sb.append("; boundsInParent: " + rect);
         AccessibilityNodeInfo accessibilityNodeInfo = this.a;
         accessibilityNodeInfo.getBoundsInScreen(rect);

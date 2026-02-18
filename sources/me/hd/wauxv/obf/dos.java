@@ -155,7 +155,7 @@ public final /* synthetic */ class dos implements IHasInvokeMethod {
                 throw new NullPointerException("Missing required view with ID: "
                         /* cnb.z(-660153653263146L) */.concat(viewK.getResources().getResourceName(i)));
             case 3:
-                HookParamWrapper hookParam = (HookParamWrapper) obj;
+                HookParam hookParam = (HookParam) obj;
                 hookParam.getClass();
                 try {
                     objX = hookParam.getArgs()[0];
@@ -190,7 +190,7 @@ public final /* synthetic */ class dos implements IHasInvokeMethod {
                 bagVar2.b = zbVar2;
                 return ens.a;
             case 7:
-                HookParamWrapper hookParam2 = (HookParamWrapper) obj;
+                HookParam hookParam2 = (HookParam) obj;
                 hookParam2.getClass();
                 try {
                     objX2 = hookParam2.getArgs()[2];

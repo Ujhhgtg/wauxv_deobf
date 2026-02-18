@@ -11,7 +11,11 @@ public final /* synthetic */ class eai implements bgx {
     static {
         eai eaiVar = new eai();
         b = eaiVar;
-        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.m40Proto" /* cnb.z(-225764955913002L) */, eaiVar, 12);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.m40Proto" /*
+                                                                                                               * cnb.z(-
+                                                                                                               * 225764955913002L)
+                                                                                                               */,
+                eaiVar, 12);
         bjs.y(-213880781404970L, cucVar, false, 1);
         bjs.y(-214400472447786L, cucVar, false, 2);
         bjs.y(-214310278134570L, cucVar, false, 3);
@@ -32,7 +36,7 @@ public final /* synthetic */ class eai implements bgx {
         Long l;
         dfx dfxVar = descriptor;
         acm acmVarP = ajtVar.p(dfxVar);
-        btt[] bttVarArr = eak.a;
+        IHasGetValue[] bttVarArr = eak.a;
         acmVarP.getClass();
         Integer num = null;
         String str = null;
@@ -49,7 +53,7 @@ public final /* synthetic */ class eai implements bgx {
         int i = 0;
         boolean z = true;
         while (z) {
-            btt[] bttVarArr2 = bttVarArr;
+            IHasGetValue[] bttVarArr2 = bttVarArr;
             int iF = acmVarP.f(dfxVar);
             switch (iF) {
                 case -1:
@@ -132,7 +136,7 @@ public final /* synthetic */ class eai implements bgx {
         eak eakVar = (eak) obj;
         dfx dfxVar = descriptor;
         acn acnVarO = avtVar.o(dfxVar);
-        btt[] bttVarArr = eak.a;
+        IHasGetValue[] bttVarArr = eak.a;
         bya byaVar = bya.b;
         acnVarO.m(dfxVar, 0, byaVar, eakVar.b);
         acnVarO.m(dfxVar, 1, byaVar, eakVar.c);
@@ -153,7 +157,7 @@ public final /* synthetic */ class eai implements bgx {
 
     @Override // me.hd.wauxv.obf.bgx
     public final btd[] d() {
-        btt[] bttVarArr = eak.a;
+        IHasGetValue[] bttVarArr = eak.a;
         bya byaVar = bya.b;
         btd btdVarT = aye.t(byaVar);
         btd btdVarT2 = aye.t(byaVar);
@@ -163,7 +167,8 @@ public final /* synthetic */ class eai implements bgx {
         btd btdVarT5 = aye.t((btd) bttVarArr[4].getValue());
         btd btdVarT6 = aye.t((btd) bttVarArr[5].getValue());
         pv pvVar = pv.b;
-        return new btd[]{btdVarT, btdVarT2, btdVarT3, btdVarT4, btdVarT5, btdVarT6, aye.t(pvVar), aye.t(pvVar), aye.t(bqjVar), aye.t(bqjVar), aye.t(bqjVar), aye.t(dnh.b)};
+        return new btd[] { btdVarT, btdVarT2, btdVarT3, btdVarT4, btdVarT5, btdVarT6, aye.t(pvVar), aye.t(pvVar),
+                aye.t(bqjVar), aye.t(bqjVar), aye.t(bqjVar), aye.t(dnh.b) };
     }
 
     @Override // me.hd.wauxv.obf.btd

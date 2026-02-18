@@ -5,8 +5,9 @@ import me.hd.wauxv.R;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class etg extends BaseHook implements bnl {
-    public static final etg a = new etg("VnPreviewShareMenuCopyOrDownHook" /* cnb.z(-610456586681130L) */);
+public final class VnPreviewShareMenuCopyOrDownHook extends SwitchHook implements bnl {
+    public static final VnPreviewShareMenuCopyOrDownHook a = new VnPreviewShareMenuCopyOrDownHook(
+            "VnPreviewShareMenuCopyOrDownHook" /* cnb.z(-610456586681130L) */);
     public static final String b;
     public static final String c;
     public static final String h;
@@ -22,16 +23,16 @@ public final class etg extends BaseHook implements bnl {
         j = new epy(3);
     }
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return h;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return c;
     }
@@ -45,12 +46,12 @@ public final class etg extends BaseHook implements bnl {
                                 R.drawable.ic_menu_save_24dp, new dfq(16)));
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return i;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final IHasInvokeMethod p() {
         return j;
     }

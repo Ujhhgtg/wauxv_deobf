@@ -6,7 +6,7 @@ import me.hd.wauxv.data.bean.MsgInfoBean;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class aun extends BaseHook implements bna {
+public final class aun extends SwitchHook implements bna {
     public static final aun a = new aun("EmojiSaveHook" /* cnb.z(-519205711510314L) */);
     public static final String b;
     public static final String c;
@@ -23,16 +23,16 @@ public final class aun extends BaseHook implements bna {
         j = new atn(16);
     }
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return h;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return c;
     }
@@ -43,12 +43,12 @@ public final class aun extends BaseHook implements bna {
                 "保存" /* cnb.z(-519128402098986L) */, R.drawable.ic_menu_save_24dp, new fq(7))) : avd.a;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return i;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final IHasInvokeMethod p() {
         return j;
     }

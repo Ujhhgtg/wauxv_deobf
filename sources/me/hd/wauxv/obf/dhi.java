@@ -22,7 +22,7 @@ public final class dhi extends BaseHook implements bnd {
 
     @Override // me.hd.wauxv.obf.bnd
     public final List a(Activity activity) throws IllegalAccessException, InvocationTargetException {
-        if (z()) {
+        if (getIsEnabled()) {
             String stringExtra = activity.getIntent()
                     .getStringExtra("Contact_ChatRoomId" /* cnb.z(-595492920621866L) */);
             String stringExtra2 = activity.getIntent().getStringExtra("Contact_User" /* cnb.z(-595445675981610L) */);
@@ -43,21 +43,21 @@ public final class dhi extends BaseHook implements bnd {
         return avd.a;
     }
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return h;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return i;
     }

@@ -5,22 +5,22 @@ import java.util.regex.Pattern;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class xg extends BaseHook implements bnr {
+public final class xg extends SwitchHook implements bnr {
     public static final xg a = new xg("ChatUrlFormatShowHook" /* cnb.z(-441239170186026L) */);
     public static final String b = "聊天" /* cnb.z(-446500505123626L) */;
     public static final String c = "链接格式显示" /* cnb.z(-446453260483370L) */;
     public static final String d = "将其他应用分享的口令进行格式化显示" /* cnb.z(-446406015843114L) */;
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return b;
     }
@@ -29,7 +29,7 @@ public final class xg extends BaseHook implements bnr {
     public final void h(Object obj) throws IllegalAccessException {
         String strZ;
         String strZ2;
-        if (z()) {
+        if (getIsEnabled()) {
             int i = bte.a;
             bmu bmuVarBi = dqc.bi(obj);
             azg azgVarR = bmuVarBi.r();
@@ -89,7 +89,7 @@ public final class xg extends BaseHook implements bnr {
         }
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return d;
     }

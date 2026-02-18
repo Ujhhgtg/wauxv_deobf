@@ -2,7 +2,7 @@ package me.hd.wauxv.obf;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class CustomContactCountHook extends BaseHook {
+public final class CustomContactCountHook extends SwitchHook {
     public static final CustomContactCountHook a = new CustomContactCountHook("CustomContactCountHook" /*
                                                                                                         * cnb.z(-
                                                                                                         * 429140247313194L)
@@ -12,8 +12,8 @@ public final class CustomContactCountHook extends BaseHook {
     public static final String d = "自定义好友和群聊列表底部的显示数量" /* cnb.z(-430411557632810L) */;
     public static final age h = new age(24);
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
         int i = bte.a;
         cde cdeVarT = yg.s(-430690730507050L).t();
         cdeVarT.ab = "onMeasure" /* cnb.z(-430523226782506L) */;
@@ -25,22 +25,22 @@ public final class CustomContactCountHook extends BaseHook {
         akiVarAd.o();
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return b;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return d;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final IHasInvokeMethod p() {
         return h;
     }

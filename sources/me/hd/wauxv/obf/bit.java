@@ -9,7 +9,8 @@ public final /* synthetic */ class bit implements bgx {
     static {
         bit bitVar = new bit();
         b = bitVar;
-        cuc cucVar = new cuc("wx.demo.hook.ui.group.factory.GroupConstFactory.GroupItem" /* cnb.z(-592868695604010L) */, bitVar, 5);
+        cuc cucVar = new cuc("wx.demo.hook.ui.group.factory.GroupConstFactory.GroupItem" /* cnb.z(-592868695604010L) */,
+                bitVar, 5);
         cucVar.x("title" /* cnb.z(-593186523183914L) */, false);
         cucVar.x("order" /* cnb.z(-593143573510954L) */, false);
         cucVar.x("icon" /* cnb.z(-593100623837994L) */, false);
@@ -22,7 +23,7 @@ public final /* synthetic */ class bit implements bgx {
     public final Object a(ajt ajtVar) {
         dfx dfxVar = descriptor;
         acm acmVarP = ajtVar.p(dfxVar);
-        btt[] bttVarArr = biv.a;
+        IHasGetValue[] bttVarArr = biv.a;
         acmVarP.getClass();
         int i = 0;
         int iG = 0;
@@ -64,7 +65,7 @@ public final /* synthetic */ class bit implements bgx {
         biv bivVar = (biv) obj;
         dfx dfxVar = descriptor;
         acn acnVarO = avtVar.o(dfxVar);
-        btt[] bttVarArr = biv.a;
+        IHasGetValue[] bttVarArr = biv.a;
         acnVarO.l(dfxVar, 0, bivVar.b);
         acnVarO.k(1, bivVar.c, dfxVar);
         acnVarO.l(dfxVar, 2, bivVar.d);
@@ -76,9 +77,9 @@ public final /* synthetic */ class bit implements bgx {
     /* JADX WARN: Multi-variable type inference failed */
     @Override // me.hd.wauxv.obf.bgx
     public final btd[] d() {
-        btt[] bttVarArr = biv.a;
+        IHasGetValue[] bttVarArr = biv.a;
         dnh dnhVar = dnh.b;
-        return new btd[]{dnhVar, bqj.b, dnhVar, pv.b, bttVarArr[4].getValue()};
+        return new btd[] { dnhVar, bqj.b, dnhVar, pv.b, bttVarArr[4].getValue() };
     }
 
     @Override // me.hd.wauxv.obf.btd

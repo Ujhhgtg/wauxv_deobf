@@ -11,7 +11,11 @@ public final /* synthetic */ class ejm implements bgx {
     static {
         ejm ejmVar = new ejm();
         b = ejmVar;
-        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.ze1Proto" /* cnb.z(-343928096160554L) */, ejmVar, 4);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.ze1Proto" /*
+                                                                                                               * cnb.z(-
+                                                                                                               * 343928096160554L)
+                                                                                                               */,
+                ejmVar, 4);
         bjs.y(-343588793744170L, cucVar, false, 1);
         bjs.y(-343498599430954L, cucVar, false, 2);
         bjs.y(-343447059823402L, cucVar, false, 3);
@@ -23,7 +27,7 @@ public final /* synthetic */ class ejm implements bgx {
     public final Object a(ajt ajtVar) {
         dfx dfxVar = descriptor;
         acm acmVarP = ajtVar.p(dfxVar);
-        btt[] bttVarArr = ejo.a;
+        IHasGetValue[] bttVarArr = ejo.a;
         acmVarP.getClass();
         int i = 0;
         List list = null;
@@ -70,7 +74,7 @@ public final /* synthetic */ class ejm implements bgx {
 
     @Override // me.hd.wauxv.obf.bgx
     public final btd[] d() {
-        return new btd[]{aye.t((btd) ejo.a[0].getValue()), aye.t(eao.b), aye.t(bqj.b), aye.t(dnh.b)};
+        return new btd[] { aye.t((btd) ejo.a[0].getValue()), aye.t(eao.b), aye.t(bqj.b), aye.t(dnh.b) };
     }
 
     @Override // me.hd.wauxv.obf.btd

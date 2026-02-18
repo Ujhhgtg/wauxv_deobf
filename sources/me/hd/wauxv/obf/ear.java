@@ -13,7 +13,11 @@ public final /* synthetic */ class ear implements bgx {
     static {
         ear earVar = new ear();
         b = earVar;
-        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.md1Proto" /* cnb.z(-212751205006122L) */, earVar, 73);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.md1Proto" /*
+                                                                                                               * cnb.z(-
+                                                                                                               * 212751205006122L)
+                                                                                                               */,
+                earVar, 73);
         bjs.y(-218459216542506L, cucVar, false, 1);
         bjs.y(-218411971902250L, cucVar, false, 2);
         bjs.y(-218386202098474L, cucVar, false, 3);
@@ -110,7 +114,7 @@ public final /* synthetic */ class ear implements bgx {
         Long l6;
         dfx dfxVar = descriptor;
         acm acmVarP = ajtVar.p(dfxVar);
-        btt[] bttVarArr = eat.a;
+        IHasGetValue[] bttVarArr = eat.a;
         acmVarP.getClass();
         Long l7 = null;
         ebx ebxVar5 = null;
@@ -1448,7 +1452,11 @@ public final /* synthetic */ class ear implements bgx {
         Long l28 = l14;
         Integer num25 = num2;
         acmVarP._bp(dfxVar);
-        return new eat(i88, i87, i5, l28, num25, num3, str2, num4, num5, num6, ejoVar, ecsVar, num7, l15, num8, num9, l16, dzpVar, num10, num11, str3, l17, l18, num12, str4, dzgVar, num13, egoVar, num14, eguVar, dxzVar, str5, dwvVar, num15, l19, list, num16, num17, num18, num19, num20, num21, eeoVar, list2, num22, dzdVar, ebcVar, eanVar, str6, efwVar, dycVar, str7, dzsVar, l20, list3, num23, dvrVar, num24, dyfVar, ecyVar, l21, dzmVar, eibVar, ebrVar4, l26, l7, l9, l10, l11, l12, l27, eikVar2, ebxVar6, dwpVar, str, edqVar);
+        return new eat(i88, i87, i5, l28, num25, num3, str2, num4, num5, num6, ejoVar, ecsVar, num7, l15, num8, num9,
+                l16, dzpVar, num10, num11, str3, l17, l18, num12, str4, dzgVar, num13, egoVar, num14, eguVar, dxzVar,
+                str5, dwvVar, num15, l19, list, num16, num17, num18, num19, num20, num21, eeoVar, list2, num22, dzdVar,
+                ebcVar, eanVar, str6, efwVar, dycVar, str7, dzsVar, l20, list3, num23, dvrVar, num24, dyfVar, ecyVar,
+                l21, dzmVar, eibVar, ebrVar4, l26, l7, l9, l10, l11, l12, l27, eikVar2, ebxVar6, dwpVar, str, edqVar);
     }
 
     @Override // me.hd.wauxv.obf.btd
@@ -1456,7 +1464,7 @@ public final /* synthetic */ class ear implements bgx {
         eat eatVar = (eat) obj;
         dfx dfxVar = descriptor;
         acn acnVarO = avtVar.o(dfxVar);
-        btt[] bttVarArr = eat.a;
+        IHasGetValue[] bttVarArr = eat.a;
         bya byaVar = bya.b;
         acnVarO.m(dfxVar, 0, byaVar, eatVar.b);
         bqj bqjVar = bqj.b;
@@ -1538,14 +1546,25 @@ public final /* synthetic */ class ear implements bgx {
 
     @Override // me.hd.wauxv.obf.bgx
     public final btd[] d() {
-        btt[] bttVarArr = eat.a;
+        IHasGetValue[] bttVarArr = eat.a;
         bya byaVar = bya.b;
         btd btdVarT = aye.t(byaVar);
         bqj bqjVar = bqj.b;
         btd btdVarT2 = aye.t(bqjVar);
         btd btdVarT3 = aye.t(bqjVar);
         dnh dnhVar = dnh.b;
-        return new btd[]{btdVarT, btdVarT2, btdVarT3, aye.t(dnhVar), aye.t(bqjVar), aye.t(bqjVar), aye.t(bqjVar), aye.t(ejm.b), aye.t(ecq.b), aye.t(bqjVar), aye.t(byaVar), aye.t(bqjVar), aye.t(bqjVar), aye.t(byaVar), aye.t(dzn.b), aye.t(bqjVar), aye.t(bqjVar), aye.t(dnhVar), aye.t(byaVar), aye.t(byaVar), aye.t(bqjVar), aye.t(dnhVar), aye.t(dze.b), aye.t(bqjVar), aye.t(egm.b), aye.t(bqjVar), aye.t(egs.b), aye.t(dxx.b), aye.t(dnhVar), aye.t(dwt.b), aye.t(bqjVar), aye.t(byaVar), aye.t((btd) bttVarArr[32].getValue()), aye.t(bqjVar), aye.t(bqjVar), aye.t(bqjVar), aye.t(bqjVar), aye.t(bqjVar), aye.t(bqjVar), aye.t(eem.b), aye.t((btd) bttVarArr[40].getValue()), aye.t(bqjVar), aye.t(dzb.b), aye.t(eba.b), aye.t(eal.b), aye.t(dnhVar), aye.t(efu.b), aye.t(dya.b), aye.t(dnhVar), aye.t(dzq.b), aye.t(byaVar), aye.t((btd) bttVarArr[51].getValue()), aye.t(bqjVar), aye.t(dvp.b), aye.t(bqjVar), aye.t(dyd.b), aye.t(ecw.b), aye.t(byaVar), aye.t(dzk.b), aye.t(ehz.b), aye.t(ebp.b), aye.t(byaVar), aye.t(byaVar), aye.t(byaVar), aye.t(byaVar), aye.t(byaVar), aye.t(byaVar), aye.t(byaVar), aye.t(eii.b), aye.t(ebv.b), aye.t(dwn.b), aye.t(dnhVar), aye.t(edo.b)};
+        return new btd[] { btdVarT, btdVarT2, btdVarT3, aye.t(dnhVar), aye.t(bqjVar), aye.t(bqjVar), aye.t(bqjVar),
+                aye.t(ejm.b), aye.t(ecq.b), aye.t(bqjVar), aye.t(byaVar), aye.t(bqjVar), aye.t(bqjVar), aye.t(byaVar),
+                aye.t(dzn.b), aye.t(bqjVar), aye.t(bqjVar), aye.t(dnhVar), aye.t(byaVar), aye.t(byaVar), aye.t(bqjVar),
+                aye.t(dnhVar), aye.t(dze.b), aye.t(bqjVar), aye.t(egm.b), aye.t(bqjVar), aye.t(egs.b), aye.t(dxx.b),
+                aye.t(dnhVar), aye.t(dwt.b), aye.t(bqjVar), aye.t(byaVar), aye.t((btd) bttVarArr[32].getValue()),
+                aye.t(bqjVar), aye.t(bqjVar), aye.t(bqjVar), aye.t(bqjVar), aye.t(bqjVar), aye.t(bqjVar), aye.t(eem.b),
+                aye.t((btd) bttVarArr[40].getValue()), aye.t(bqjVar), aye.t(dzb.b), aye.t(eba.b), aye.t(eal.b),
+                aye.t(dnhVar), aye.t(efu.b), aye.t(dya.b), aye.t(dnhVar), aye.t(dzq.b), aye.t(byaVar),
+                aye.t((btd) bttVarArr[51].getValue()), aye.t(bqjVar), aye.t(dvp.b), aye.t(bqjVar), aye.t(dyd.b),
+                aye.t(ecw.b), aye.t(byaVar), aye.t(dzk.b), aye.t(ehz.b), aye.t(ebp.b), aye.t(byaVar), aye.t(byaVar),
+                aye.t(byaVar), aye.t(byaVar), aye.t(byaVar), aye.t(byaVar), aye.t(byaVar), aye.t(eii.b), aye.t(ebv.b),
+                aye.t(dwn.b), aye.t(dnhVar), aye.t(edo.b) };
     }
 
     @Override // me.hd.wauxv.obf.btd

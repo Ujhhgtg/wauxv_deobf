@@ -5,7 +5,7 @@ import org.luckypray.dexkit.DexKitBridge;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class SnsUploadAppInfoHook extends BaseHook implements IRequiresDexLocate {
+public final class SnsUploadAppInfoHook extends BaseHook implements IDexFind {
     public static final SnsUploadAppInfoHook a;
     public static final Object b;
     public static final String c;
@@ -79,8 +79,8 @@ public final class SnsUploadAppInfoHook extends BaseHook implements IRequiresDex
         m = new djk(13);
     }
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
         List listBf = dqc.bf(emn.bb(dke.a));
         SnsUploadAppInfoHook dkhVar = a;
         aki akiVarAb = csb.ab(dkhVar, listBf);
@@ -88,27 +88,27 @@ public final class SnsUploadAppInfoHook extends BaseHook implements IRequiresDex
         akiVarAb.o();
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return i;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.bng
-    public final void locateDex(DexKitBridge dexKitBridge) {
+    @Override // me.hd.wauxv.obf.IDexFind
+    public final void dexFind(DexKitBridge dexKitBridge) {
         emn.aj(dke.a, dexKitBridge, new djk(15));
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return j;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final bgf p() {
         return m;
     }

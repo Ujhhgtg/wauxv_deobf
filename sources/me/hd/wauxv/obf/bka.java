@@ -101,7 +101,7 @@ public final /* synthetic */ class bka implements IHasInvokeMethod {
             default:
                 euh euhVar = (euh) obj2;
                 aki.l((aki) obj3);
-                Object objE = ((HookParamWrapper) obj).getThisObject();
+                Object objE = ((HookParam) obj).getThisObject();
                 if (!(objE instanceof Context)) {
                     objE = null;
                 }

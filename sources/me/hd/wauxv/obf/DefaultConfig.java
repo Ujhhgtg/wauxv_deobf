@@ -273,7 +273,7 @@ public class DefaultConfig implements dln, dcm, aui, ccv {
 
     public boolean al(int i, KeyEvent keyEvent) {
         btm btmVar = (btm) this.d;
-        if (btmVar.e() || btmVar.d() || keyEvent.isCtrlPressed()) {
+        if (btmVar.initOnce() || btmVar.d() || keyEvent.isCtrlPressed()) {
             return (i >= 29 && i <= 54) || i == 66 || i == 19 || i == 20 || i == 21 || i == 22 || i == 122 || i == 123;
         }
         return false;

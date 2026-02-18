@@ -607,7 +607,7 @@ public class q {
                         return;
                     }
                     k.a(a).i();
-                    k.a(a).locateDex();
+                    k.a(a).dexFind();
                     k.a(a).tryGetClassByName(true, false);
                     k.a(a).a();
                     return;
@@ -626,7 +626,7 @@ public class q {
                     k.a(a).tryGetClassByName(true, false);
                 }
                 if (jSONObjectOptJSONObject.has("ekv") || jSONObjectOptJSONObject.has(f.Z)) {
-                    k.a(a).locateDex();
+                    k.a(a).dexFind();
                 }
                 if (jSONObjectOptJSONObject.has(f.U)) {
                     k.a(a).i();

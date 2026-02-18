@@ -298,7 +298,7 @@ public class CarouselLayoutManager extends czg implements czs {
             TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, cxs.g);
             typedArrayObtainStyledAttributes.getInt(0, 0);
             ff();
-            locateDex(typedArrayObtainStyledAttributes.getInt(0, 0));
+            dexFind(typedArrayObtainStyledAttributes.getInt(0, 0));
             typedArrayObtainStyledAttributes.recycle();
         }
     }

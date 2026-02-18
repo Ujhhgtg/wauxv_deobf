@@ -6,7 +6,8 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class eer {
     public static final eeq Companion = new eeq();
-    public static final btt[] a = { null, null, null, null, null, null, null, null, null, null, null, null, null, null,
+    public static final IHasGetValue[] a = { null, null, null, null, null, null, null, null, null, null, null, null,
+            null, null,
             null, ewz.am(btx.a, new dtr(27)), null };
     public final Float b;
     public final Float c;

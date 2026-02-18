@@ -54,7 +54,7 @@ public final /* synthetic */ class bn implements IHasInvokeMethod {
     }
 
     private final Object c(Object obj) {
-        HookParamWrapper hookParam = (HookParamWrapper) obj;
+        HookParam hookParam = (HookParam) obj;
         hookParam.getClass();
         new ek(hookParam, 0, 8).q("" /* cnb.z(-544253960780586L) */);
         return ens.a;
@@ -62,7 +62,7 @@ public final /* synthetic */ class bn implements IHasInvokeMethod {
 
     private final Object d(Object obj) {
         Object objX;
-        HookParamWrapper hookParam = (HookParamWrapper) obj;
+        HookParam hookParam = (HookParam) obj;
         hookParam.getClass();
         try {
             objX = hookParam.getArgs()[2];
@@ -385,7 +385,7 @@ public final /* synthetic */ class bn implements IHasInvokeMethod {
                 throw new NullPointerException("Missing required view with ID: "
                         /* cnb.z(-641874272451370L) */.concat(viewK.getResources().getResourceName(i9)));
             case 2:
-                HookParamWrapper hookParam = (HookParamWrapper) obj;
+                HookParam hookParam = (HookParam) obj;
                 hookParam.getClass();
                 try {
                     objX = hookParam.getArgs()[0];
@@ -438,7 +438,7 @@ public final /* synthetic */ class bn implements IHasInvokeMethod {
                 if (clsBf2 == null) {
                     clsBf2 = cls2;
                 }
-                View viewH = blu.locateDex(bluVar2, clsBf2, null, blrVarI.j());
+                View viewH = blu.dexFind(bluVar2, clsBf2, null, blrVarI.j());
                 LinkedHashMap linkedHashMap2 = bluVar2.f;
                 ViewGroup viewGroup2 = (ViewGroup) viewH;
                 viewGroup2.setLayoutParams(blqVarD.f());
@@ -479,7 +479,7 @@ public final /* synthetic */ class bn implements IHasInvokeMethod {
                 if (clsBf6 == null) {
                     clsBf6 = cls4;
                 }
-                View viewH2 = blu.locateDex(bluVar3, clsBf6, null, blrVarI2.j());
+                View viewH2 = blu.dexFind(bluVar3, clsBf6, null, blrVarI2.j());
                 LinkedHashMap linkedHashMap3 = bluVar3.f;
                 ViewGroup viewGroup3 = (ViewGroup) viewH2;
                 viewGroup3.setLayoutParams(blqVarD2.f());
@@ -512,7 +512,7 @@ public final /* synthetic */ class bn implements IHasInvokeMethod {
                 if (clsBf10 == null) {
                     clsBf10 = cls6;
                 }
-                View viewH3 = blu.locateDex(bluVar4, clsBf10, null, blrVarI3.j());
+                View viewH3 = blu.dexFind(bluVar4, clsBf10, null, blrVarI3.j());
                 LinkedHashMap linkedHashMap4 = bluVar4.f;
                 viewH3.setLayoutParams(blqVarD3.f());
                 Class<ImageView> clsBf11 = cnf.bf(dal.b(cls6));
@@ -672,7 +672,7 @@ public final /* synthetic */ class bn implements IHasInvokeMethod {
                         .e(context4, str, strZ9, strZ10, strZ11, aqxVar, aqxVar2);
                 return ensVar;
             case 5:
-                HookParamWrapper hookParam2 = (HookParamWrapper) obj;
+                HookParam hookParam2 = (HookParam) obj;
                 hookParam2.getClass();
                 try {
                     objX2 = hookParam2.getArgs()[0];
@@ -775,7 +775,7 @@ public final /* synthetic */ class bn implements IHasInvokeMethod {
                 aelVar2.l = fqVar;
                 return ensVar;
             case 11:
-                ((HookParamWrapper) obj).setResult(null);
+                ((HookParam) obj).setResult(null);
                 return ensVar;
             case 12:
                 ((amm) obj).c = new bn(i5);
@@ -827,7 +827,7 @@ public final /* synthetic */ class bn implements IHasInvokeMethod {
                 ((amm) obj).b = new bn(i6);
                 return ensVar;
             case 18:
-                ((HookParamWrapper) obj).setResult(null);
+                ((HookParam) obj).setResult(null);
                 return ensVar;
             case 19:
                 bag bagVar = (bag) obj;
@@ -884,7 +884,7 @@ public final /* synthetic */ class bn implements IHasInvokeMethod {
                 ((amm) obj).c = new bn(25);
                 return ensVar;
             case 24:
-                HookParamWrapper hookParam3 = (HookParamWrapper) obj;
+                HookParam hookParam3 = (HookParam) obj;
                 hookParam3.getClass();
                 try {
                     objX3 = hookParam3.getArgs()[0];
@@ -990,7 +990,7 @@ public final /* synthetic */ class bn implements IHasInvokeMethod {
             case 28:
                 return e(obj);
             default:
-                ((HookParamWrapper) obj).setResult(null);
+                ((HookParam) obj).setResult(null);
                 return ensVar;
         }
     }

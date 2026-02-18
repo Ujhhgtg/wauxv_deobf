@@ -45,10 +45,10 @@ public final class el extends acj implements DialogInterface, he {
         this.b = new btl() { // from class: me.hd.wauxv.obf.id
             @Override // me.hd.wauxv.obf.btl
             public final boolean b(KeyEvent keyEvent) {
-                return this.a.locateDex(keyEvent);
+                return this.a.dexFind(keyEvent);
             }
         };
-        ho hoVarE = e();
+        ho hoVarE = initOnce();
         if (iD == 0) {
             TypedValue typedValue2 = new TypedValue();
             contextThemeWrapper.getTheme().resolveAttribute(R.attr.dialogTheme, typedValue2, true);
@@ -71,7 +71,7 @@ public final class el extends acj implements DialogInterface, he {
     @Override // me.hd.wauxv.obf.acj, android.app.Dialog
     public final void addContentView(View view, ViewGroup.LayoutParams layoutParams) {
         m();
-        ic icVar = (ic) e();
+        ic icVar = (ic) initOnce();
         icVar.cf();
         ((ViewGroup) icVar.an.findViewById(android.R.id.content)).addView(view, layoutParams);
         icVar.z.f(icVar.y.getCallback());
@@ -80,7 +80,7 @@ public final class el extends acj implements DialogInterface, he {
     @Override // android.app.Dialog, android.content.DialogInterface
     public final void dismiss() {
         super.dismiss();
-        e().n();
+        initOnce().n();
     }
 
     @Override // android.app.Dialog, android.view.Window.Callback
@@ -97,21 +97,21 @@ public final class el extends acj implements DialogInterface, he {
     }
 
     public final void f(Bundle bundle) {
-        e().l();
+        initOnce().l();
         super.onCreate(bundle);
-        e().m();
+        initOnce().m();
     }
 
     @Override // android.app.Dialog
     public final View findViewById(int i) {
-        ic icVar = (ic) e();
+        ic icVar = (ic) initOnce();
         icVar.cf();
         return icVar.y.findViewById(i);
     }
 
     public final void g(CharSequence charSequence) {
         super.setTitle(charSequence);
-        e().s(charSequence);
+        initOnce().s(charSequence);
     }
 
     public final boolean h(KeyEvent keyEvent) {
@@ -120,7 +120,7 @@ public final class el extends acj implements DialogInterface, he {
 
     @Override // android.app.Dialog
     public final void invalidateOptionsMenu() {
-        ic icVar = (ic) e();
+        ic icVar = (ic) initOnce();
         if (icVar.ab != null) {
             icVar.cj();
             icVar.ab.getClass();
@@ -354,7 +354,7 @@ public final class el extends acj implements DialogInterface, he {
     @Override // me.hd.wauxv.obf.acj, android.app.Dialog
     public final void onStop() {
         super.onStop();
-        ic icVar = (ic) e();
+        ic icVar = (ic) initOnce();
         icVar.cj();
         eut eutVar = icVar.ab;
         if (eutVar != null) {
@@ -369,19 +369,19 @@ public final class el extends acj implements DialogInterface, he {
     @Override // me.hd.wauxv.obf.acj, android.app.Dialog
     public final void setContentView(int i) {
         m();
-        e().p(i);
+        initOnce().p(i);
     }
 
     @Override // android.app.Dialog
     public final void setTitle(int i) {
         super.setTitle(i);
-        e().s(getContext().getString(i));
+        initOnce().s(getContext().getString(i));
     }
 
     @Override // me.hd.wauxv.obf.acj, android.app.Dialog
     public final void setContentView(View view) {
         m();
-        e().q(view);
+        initOnce().q(view);
     }
 
     @Override // android.app.Dialog
@@ -398,6 +398,6 @@ public final class el extends acj implements DialogInterface, he {
     @Override // me.hd.wauxv.obf.acj, android.app.Dialog
     public final void setContentView(View view, ViewGroup.LayoutParams layoutParams) {
         m();
-        e().r(view, layoutParams);
+        initOnce().r(view, layoutParams);
     }
 }

@@ -113,7 +113,7 @@ public final /* synthetic */ class dko implements IHasInvokeMethod {
                 throw new NullPointerException("Missing required view with ID: "
                         /* cnb.z(-659741336402730L) */.concat(viewK.getResources().getResourceName(i4)));
             case 5:
-                ((HookParamWrapper) obj).setResult(Long.valueOf(Math.min(dlu.a.l(), 98800L)));
+                ((HookParam) obj).setResult(Long.valueOf(Math.min(dlu.a.l(), 98800L)));
                 return ensVar;
             case 6:
                 ((amm) obj).c = new dko(i2);
@@ -143,7 +143,7 @@ public final /* synthetic */ class dko implements IHasInvokeMethod {
                 bagVar.b = zbVar;
                 return ensVar;
             case 10:
-                HookParamWrapper hookParam = (HookParamWrapper) obj;
+                HookParam hookParam = (HookParam) obj;
                 hookParam.getClass();
                 try {
                     objX = hookParam.getArgs()[0];
@@ -198,16 +198,16 @@ public final /* synthetic */ class dko implements IHasInvokeMethod {
                         StringBuilder sb = new StringBuilder();
                         sb.append("onDatabaseInsertBefore " /* cnb.z(-54709293415210L) */);
                         ewq.e(yg.n(sb,
-                                bobVar instanceof BaseHook ? ((BaseHook) bobVar).getResult() : "LoadHook" /*
-                                                                                                           * cnb.z(-
-                                                                                                           * 54056458386218L)
-                                                                                                           */,
+                                bobVar instanceof SwitchHook ? ((SwitchHook) bobVar).getResult() : "LoadHook" /*
+                                                                                                               * cnb.z(-
+                                                                                                               * 54056458386218L)
+                                                                                                               */,
                                 -54017803680554L), e, 12);
                     }
                 }
                 return ensVar;
             case 11:
-                HookParamWrapper hookParam2 = (HookParamWrapper) obj;
+                HookParam hookParam2 = (HookParam) obj;
                 hookParam2.getClass();
                 try {
                     objX5 = hookParam2.getArgs()[0];
@@ -278,16 +278,17 @@ public final /* synthetic */ class dko implements IHasInvokeMethod {
                         StringBuilder sb2 = new StringBuilder();
                         sb2.append("onDatabaseUpdateBefore " /* cnb.z(-53983443942186L) */);
                         ewq.e(yg.n(sb2,
-                                bobVar2 instanceof BaseHook ? ((BaseHook) bobVar2).getResult() : "LoadHook" /*
-                                                                                                             * cnb.z(-
-                                                                                                             * 53880364727082L)
-                                                                                                             */,
+                                bobVar2 instanceof SwitchHook ? ((SwitchHook) bobVar2).getResult() : "LoadHook" /*
+                                                                                                                 * cnb.z
+                                                                                                                 * (-
+                                                                                                                 * 53880364727082L)
+                                                                                                                 */,
                                 -54408645704490L), e2, 12);
                     }
                 }
                 return ensVar;
             case 12:
-                HookParamWrapper hookParam3 = (HookParamWrapper) obj;
+                HookParam hookParam3 = (HookParam) obj;
                 hookParam3.getClass();
                 try {
                     Object obj2 = hookParam3.getArgs()[0];
@@ -341,16 +342,17 @@ public final /* synthetic */ class dko implements IHasInvokeMethod {
                         StringBuilder sb3 = new StringBuilder();
                         sb3.append("onDatabaseQueryBefore " /* cnb.z(-54374285966122L) */);
                         ewq.e(yg.n(sb3,
-                                bobVar3 instanceof BaseHook ? ((BaseHook) bobVar3).getResult() : "LoadHook" /*
-                                                                                                             * cnb.z(-
-                                                                                                             * 54258321849130L)
-                                                                                                             */,
+                                bobVar3 instanceof SwitchHook ? ((SwitchHook) bobVar3).getResult() : "LoadHook" /*
+                                                                                                                 * cnb.z
+                                                                                                                 * (-
+                                                                                                                 * 54258321849130L)
+                                                                                                                 */,
                                 -54236847012650L), e3, 12);
                     }
                 }
                 return ensVar;
             case 13:
-                HookParamWrapper hookParam4 = (HookParamWrapper) obj;
+                HookParam hookParam4 = (HookParam) obj;
                 hookParam4.getClass();
                 try {
                     objX13 = hookParam4.getArgs()[0];
@@ -421,16 +423,17 @@ public final /* synthetic */ class dko implements IHasInvokeMethod {
                         StringBuilder sb4 = new StringBuilder();
                         sb4.append("onCompatUpdateBefore " /* cnb.z(-54202487274282L) */);
                         ewq.e(yg.n(sb4,
-                                bobVar4 instanceof BaseHook ? ((BaseHook) bobVar4).getResult() : "LoadHook" /*
-                                                                                                             * cnb.z(-
-                                                                                                             * 60138132077354L)
-                                                                                                             */,
+                                bobVar4 instanceof SwitchHook ? ((SwitchHook) bobVar4).getResult() : "LoadHook" /*
+                                                                                                                 * cnb.z
+                                                                                                                 * (-
+                                                                                                                 * 60138132077354L)
+                                                                                                                 */,
                                 -60099477371690L), e4, 12);
                     }
                 }
                 return ensVar;
             case 14:
-                HookParamWrapper hookParam5 = (HookParamWrapper) obj;
+                HookParam hookParam5 = (HookParam) obj;
                 hookParam5.getClass();
                 try {
                     objX18 = hookParam5.getArgs()[0];
@@ -467,10 +470,11 @@ public final /* synthetic */ class dko implements IHasInvokeMethod {
                         StringBuilder sb5 = new StringBuilder();
                         sb5.append("onCompatQueryBefore " /* cnb.z(-60065117633322L) */);
                         ewq.e(yg.n(sb5,
-                                bobVar5 instanceof BaseHook ? ((BaseHook) bobVar5).getResult() : "LoadHook" /*
-                                                                                                             * cnb.z(-
-                                                                                                             * 60026462927658L)
-                                                                                                             */,
+                                bobVar5 instanceof SwitchHook ? ((SwitchHook) bobVar5).getResult() : "LoadHook" /*
+                                                                                                                 * cnb.z
+                                                                                                                 * (-
+                                                                                                                 * 60026462927658L)
+                                                                                                                 */,
                                 -59987808221994L), e5, 12);
                     }
                 }
@@ -483,7 +487,7 @@ public final /* synthetic */ class dko implements IHasInvokeMethod {
                 }
                 return Boolean.valueOf(z);
             case 16:
-                HookParamWrapper hookParam6 = (HookParamWrapper) obj;
+                HookParam hookParam6 = (HookParam) obj;
                 if (hookParam6.getArgs()[0] instanceof Intent) {
                     try {
                         objX21 = hookParam6.getArgs()[0];
@@ -506,7 +510,7 @@ public final /* synthetic */ class dko implements IHasInvokeMethod {
                     intent = (Intent) (objX20 instanceof dcx ? null : objX20);
                 }
                 throwIfVar1IsNull(intent);
-                for (boc bocVar : dmi.b) {
+                for (IStartActivity bocVar : dmi.b) {
                     try {
                         bocVar._cc(hookParam6, intent);
                     } catch (Exception e6) {
@@ -514,10 +518,10 @@ public final /* synthetic */ class dko implements IHasInvokeMethod {
                         StringBuilder sb6 = new StringBuilder();
                         sb6.append("onStartActivityIntent " /* cnb.z(-60327110638378L) */);
                         ewq.e(yg.n(sb6,
-                                bocVar instanceof BaseHook ? ((BaseHook) bocVar).getResult() : "LoadHook" /*
-                                                                                                           * cnb.z(-
-                                                                                                           * 60211146521386L)
-                                                                                                           */,
+                                bocVar instanceof SwitchHook ? ((SwitchHook) bocVar).getResult() : "LoadHook" /*
+                                                                                                               * cnb.z(-
+                                                                                                               * 60211146521386L)
+                                                                                                               */,
                                 -59639915871018L), e6, 12);
                     }
                 }
@@ -582,7 +586,7 @@ public final /* synthetic */ class dko implements IHasInvokeMethod {
             case 27:
                 return Boolean.valueOf(((View) obj).getVisibility() == 0);
             case 28:
-                HookParamWrapper hookParam7 = (HookParamWrapper) obj;
+                HookParam hookParam7 = (HookParam) obj;
                 hookParam7.getClass();
                 try {
                     objX22 = hookParam7.getArgs()[0];
@@ -609,10 +613,10 @@ public final /* synthetic */ class dko implements IHasInvokeMethod {
                         StringBuilder sb7 = new StringBuilder();
                         sb7.append("onGetSyncConfig " /* cnb.z(-59502476917546L) */);
                         ewq.e(yg.n(sb7,
-                                bodVar instanceof BaseHook ? ((BaseHook) bodVar).getResult() : "LoadHook" /*
-                                                                                                           * cnb.z(-
-                                                                                                           * 59429462473514L)
-                                                                                                           */,
+                                bodVar instanceof SwitchHook ? ((SwitchHook) bodVar).getResult() : "LoadHook" /*
+                                                                                                               * cnb.z(-
+                                                                                                               * 59429462473514L)
+                                                                                                               */,
                                 -59407987637034L), e7, 12);
                     }
                 }

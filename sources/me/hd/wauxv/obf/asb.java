@@ -16,7 +16,7 @@ public class asb extends ua {
         super(codeEditor);
         this.l = keyEvent;
         this.m = i;
-        this.n = ((CodeEditor) this.c).getKeyMetaStates().e();
+        this.n = ((CodeEditor) this.c).getKeyMetaStates().initOnce();
         this.o = ((CodeEditor) this.c).getKeyMetaStates().d();
     }
 

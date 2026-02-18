@@ -5,7 +5,7 @@ import org.luckypray.dexkit.DexKitBridge;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class djh extends BaseHook implements IRequiresDexLocate {
+public final class djh extends BaseHook implements IDexFind {
     public static final djh a;
     public static final String[] b;
     public static final String c;
@@ -58,8 +58,8 @@ public final class djh extends BaseHook implements IRequiresDexLocate {
                 String.valueOf(jLongValue)), "${userName}" /* cnb.z(-533031211236138L) */, (String) objE2);
     }
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
         boolean zAb = cnb.ab(ewk.d);
         djh djhVar = a;
         if (zAb || cnb.ac(ewh.d)) {
@@ -73,18 +73,18 @@ public final class djh extends BaseHook implements IRequiresDexLocate {
         }
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return i;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.bng
-    public final void locateDex(DexKitBridge dexKitBridge) {
+    @Override // me.hd.wauxv.obf.IDexFind
+    public final void dexFind(DexKitBridge dexKitBridge) {
         if (!cnb.ab(ewk.d) && !cnb.ac(ewh.d)) {
             emn.aj(djd.a, dexKitBridge, new dhg(22));
         } else {
@@ -93,12 +93,12 @@ public final class djh extends BaseHook implements IRequiresDexLocate {
         }
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return j;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final bgf p() {
         return m;
     }

@@ -94,18 +94,18 @@ public final class bjm extends BaseHook implements bnc {
         }
     }
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
         alc alcVar = aou.a;
         cnd.bf(akq.f, new eq(2, (afw) null));
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return b;
     }
@@ -128,7 +128,7 @@ public final class bjm extends BaseHook implements bnc {
         TextView textView;
         String strValueOf;
         String strZ2;
-        if (z() && msgInfoBean.isGroupChat()) {
+        if (getIsEnabled() && msgInfoBean.isGroupChat()) {
             Pair pairVar2 = (Pair) s.get(msgInfoBean.getSendTalker());
             mg mgVar = xh.a;
             String talker = msgInfoBean.getTalker();
@@ -231,12 +231,12 @@ public final class bjm extends BaseHook implements bnc {
         }
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return h;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final bgf p() {
         return j;
     }

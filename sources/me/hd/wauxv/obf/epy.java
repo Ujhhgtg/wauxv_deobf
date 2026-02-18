@@ -90,8 +90,8 @@ public final /* synthetic */ class epy implements IHasInvokeMethod {
                 cee ceeVarE = cee.e(LayoutInflater.from(view.getContext()));
                 ceeVarE.c.setText(eta.a.o());
                 bzy bzyVar = new bzy(view.getContext());
-                ete.a.getClass();
-                String str = ete.h;
+                VnHomeShareMenuCopyOrDownHook.a.getClass();
+                String str = VnHomeShareMenuCopyOrDownHook.h;
                 eg egVar = (eg) bzyVar.d;
                 egVar.d = str;
                 LinearLayout linearLayout = ceeVarE.b;
@@ -108,8 +108,8 @@ public final /* synthetic */ class epy implements IHasInvokeMethod {
                 cee ceeVarE2 = cee.e(LayoutInflater.from(view2.getContext()));
                 ceeVarE2.c.setText(etf.a.o());
                 bzy bzyVar2 = new bzy(view2.getContext());
-                etg.a.getClass();
-                String str2 = etg.h;
+                VnPreviewShareMenuCopyOrDownHook.a.getClass();
+                String str2 = VnPreviewShareMenuCopyOrDownHook.h;
                 eg egVar2 = (eg) bzyVar2.d;
                 egVar2.d = str2;
                 LinearLayout linearLayout2 = ceeVarE2.b;
@@ -148,7 +148,7 @@ public final /* synthetic */ class epy implements IHasInvokeMethod {
                 ((amm) obj).c = new epy(i2);
                 return ensVar;
             case 6:
-                HookParamWrapper hookParam = (HookParamWrapper) obj;
+                HookParam hookParam = (HookParam) obj;
                 if (hookParam.getArgs().length == 1) {
                     objX = hookParam.getArgs()[c];
                     if (objX == null) {
@@ -252,7 +252,7 @@ public final /* synthetic */ class epy implements IHasInvokeMethod {
                 bzyVar4.i().show();
                 return ensVar;
             case 14:
-                HookParamWrapper hookParam2 = (HookParamWrapper) obj;
+                HookParam hookParam2 = (HookParam) obj;
                 hookParam2.getClass();
                 try {
                     objX2 = hookParam2.getArgs()[0];
@@ -389,7 +389,7 @@ public final /* synthetic */ class epy implements IHasInvokeMethod {
                 }
                 return ensVar;
             case 15:
-                HookParamWrapper hookParam3 = (HookParamWrapper) obj;
+                HookParam hookParam3 = (HookParam) obj;
                 Object obj6 = ((bmh) hookParam3.b.b).b.thisObject;
                 if (nullSafeIsEqual(obj6 != null ? obj6.getClass() : null, ajn.ag(
                         "com.tencent.mm.plugin.setting.ui.setting_new.MainSettingsUI" /* cnb.z(-58080842742570L) */))) {
@@ -419,7 +419,7 @@ public final /* synthetic */ class epy implements IHasInvokeMethod {
                 emn.ax((Context) obj);
                 return ensVar;
             case 17:
-                Object objE6 = ((HookParamWrapper) obj).getThisObject();
+                Object objE6 = ((HookParam) obj).getThisObject();
                 Context context = (Context) (objE6 instanceof Context ? objE6 : null);
                 if (context == null) {
                     Class<Context> clsBf5 = cnf.bf(dal.b(cls));
@@ -437,7 +437,7 @@ public final /* synthetic */ class epy implements IHasInvokeMethod {
                 }
                 return ensVar;
             default:
-                HookParamWrapper hookParam4 = (HookParamWrapper) obj;
+                HookParam hookParam4 = (HookParam) obj;
                 Object objE8 = hookParam4.getThisObject();
                 if (!(objE8 instanceof Context)) {
                     objE8 = null;

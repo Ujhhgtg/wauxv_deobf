@@ -22,23 +22,23 @@ public final class bcu extends BaseHook implements bnc {
         j = new ayz(29);
     }
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return b;
     }
 
     @Override // me.hd.wauxv.obf.bnc
     public final void i(View view, Object obj, Object obj2, MsgInfoBean msgInfoBean) {
-        if (z()) {
+        if (getIsEnabled()) {
             int i = bte.a;
             azg azgVarR = dqc.bi(obj).r();
             azgVarR.ab = "timeTV" /* cnb.z(-462086941440810L) */;
@@ -57,12 +57,12 @@ public final class bcu extends BaseHook implements bnc {
         }
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return h;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final bgf p() {
         return j;
     }

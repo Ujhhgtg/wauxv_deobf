@@ -11,7 +11,11 @@ public final /* synthetic */ class ech implements bgx {
     static {
         ech echVar = new ech();
         b = echVar;
-        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.o5Proto" /* cnb.z(-260107514411818L) */, echVar, 2);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.o5Proto" /*
+                                                                                                              * cnb.z(-
+                                                                                                              * 260107514411818L)
+                                                                                                              */,
+                echVar, 2);
         bjs.y(-260373802384170L, cucVar, false, 1);
         bjs.y(-260330852711210L, cucVar, false, 2);
         descriptor = cucVar;
@@ -21,7 +25,7 @@ public final /* synthetic */ class ech implements bgx {
     public final Object a(ajt ajtVar) {
         dfx dfxVar = descriptor;
         acm acmVarP = ajtVar.p(dfxVar);
-        btt[] bttVarArr = ecj.a;
+        IHasGetValue[] bttVarArr = ecj.a;
         acmVarP.getClass();
         dwa dwaVar = null;
         boolean z = true;
@@ -51,7 +55,7 @@ public final /* synthetic */ class ech implements bgx {
         ecj ecjVar = (ecj) obj;
         dfx dfxVar = descriptor;
         acn acnVarO = avtVar.o(dfxVar);
-        btt[] bttVarArr = ecj.a;
+        IHasGetValue[] bttVarArr = ecj.a;
         acnVarO.m(dfxVar, 0, dvy.b, ecjVar.b);
         acnVarO.m(dfxVar, 1, (btd) bttVarArr[1].getValue(), ecjVar.c);
         acnVarO.a(dfxVar);
@@ -59,7 +63,7 @@ public final /* synthetic */ class ech implements bgx {
 
     @Override // me.hd.wauxv.obf.bgx
     public final btd[] d() {
-        return new btd[]{aye.t(dvy.b), aye.t((btd) ecj.a[1].getValue())};
+        return new btd[] { aye.t(dvy.b), aye.t((btd) ecj.a[1].getValue()) };
     }
 
     @Override // me.hd.wauxv.obf.btd

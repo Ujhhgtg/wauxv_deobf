@@ -6,7 +6,7 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class efd {
     public static final efc Companion = new efc();
-    public static final btt[] a;
+    public static final IHasGetValue[] a;
     public final List b;
     public final egf c;
     public final List d;
@@ -22,7 +22,8 @@ public final class efd {
     static {
         dtr dtrVar = new dtr(28);
         btx btxVar = btx.a;
-        a = new btt[] { ewz.am(btxVar, dtrVar), null, ewz.am(btxVar, new dtr(29)), null, null, null, null, null, null,
+        a = new IHasGetValue[] { ewz.am(btxVar, dtrVar), null, ewz.am(btxVar, new dtr(29)), null, null, null, null,
+                null, null,
                 null, null };
     }
 

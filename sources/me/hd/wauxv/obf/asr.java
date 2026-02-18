@@ -28,8 +28,9 @@ public final class asr implements Runnable {
             default:
                 ass assVar2 = this.b;
                 CodeEditor codeEditor2 = assVar2.a;
-                if (!assVar2.h.ay() && !codeEditor2.getSnippetController().l() && System.currentTimeMillis() - assVar2.k > 200 && codeEditor2.getScroller().b.isFinished()) {
-                    assVar2.q();
+                if (!assVar2.h.ay() && !codeEditor2.getSnippetController().l()
+                        && System.currentTimeMillis() - assVar2.k > 200 && codeEditor2.getScroller().b.isFinished()) {
+                    assVar2.getAllSwitchHookInstances();
                 } else {
                     codeEditor2.eh(this, 200L);
                 }

@@ -6,7 +6,7 @@ import org.luckypray.dexkit.DexKitBridge;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class csq extends BaseHook implements IRequiresDexLocate {
+public final class csq extends SwitchHook implements IDexFind {
     public static final csq a = new csq("PanelEmojiHook" /* cnb.z(-474439267384106L) */);
     public static final String b;
     public static final String c;
@@ -27,8 +27,8 @@ public final class csq extends BaseHook implements IRequiresDexLocate {
         r = new ArrayList();
     }
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
         alc alcVar = aou.a;
         cnd.bf(akq.f, new lw(2, null, 4));
         List listBf = dqc.bf(emn.bb(csp.a));
@@ -41,34 +41,34 @@ public final class csq extends BaseHook implements IRequiresDexLocate {
         akiVarAb2.o();
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return i;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.bng
-    public final void locateDex(DexKitBridge dexKitBridge) {
+    @Override // me.hd.wauxv.obf.IDexFind
+    public final void dexFind(DexKitBridge dexKitBridge) {
         emn.aj(csn.a, dexKitBridge, new crl(6));
         emn.aj(csp.a, dexKitBridge, new crl(7));
         emn.aj(cso.a, dexKitBridge, new crl(8));
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return j;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final IHasInvokeMethod p() {
         return m;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final boolean q() {
         return n;
     }

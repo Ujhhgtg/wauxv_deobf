@@ -498,10 +498,10 @@ public class StaggeredGridLayoutManager extends czg implements czs {
                 if (btsVar.e == i2) {
                     if (dmbVar.b) {
                         for (i4 = this.a - i2; i4 >= 0; i4--) {
-                            this.b[i4].locateDex(view);
+                            this.b[i4].dexFind(view);
                         }
                     } else {
-                        dmbVar.a.locateDex(view);
+                        dmbVar.a.dexFind(view);
                     }
                 } else if (dmbVar.b) {
                     for (i3 = this.a - 1; i3 >= 0; i3--) {
@@ -545,10 +545,10 @@ public class StaggeredGridLayoutManager extends czg implements czs {
             if (btsVar.e == i2) {
                 if (dmbVar.b) {
                     while (i4 >= 0) {
-                        this.b[i4].locateDex(view);
+                        this.b[i4].dexFind(view);
                     }
                 } else {
-                    dmbVar.a.locateDex(view);
+                    dmbVar.a.dexFind(view);
                 }
             } else if (dmbVar.b) {
                 while (i3 >= 0) {
@@ -600,7 +600,7 @@ public class StaggeredGridLayoutManager extends czg implements czs {
         View view = null;
         for (int iEs = es() - 1; iEs >= 0; iEs--) {
             View viewEr = er(iEs);
-            int iH = this.c.locateDex(viewEr);
+            int iH = this.c.dexFind(viewEr);
             int iE = this.c.e(viewEr);
             if (iE > iN && iH < iJ) {
                 if (iE <= iJ || !z) {
@@ -621,7 +621,7 @@ public class StaggeredGridLayoutManager extends czg implements czs {
         View view = null;
         for (int i = 0; i < iEs; i++) {
             View viewEr = er(i);
-            int iH = this.c.locateDex(viewEr);
+            int iH = this.c.dexFind(viewEr);
             if (this.c.e(viewEr) > iN && iH < iJ) {
                 if (iH >= iN || !z) {
                     return viewEr;
@@ -840,8 +840,8 @@ public class StaggeredGridLayoutManager extends czg implements czs {
                                 }
                             }
                         } else {
-                            iH = this.c.locateDex(viewEr2);
-                            iH2 = this.c.locateDex(viewEr);
+                            iH = this.c.dexFind(viewEr2);
+                            iH2 = this.c.dexFind(viewEr);
                             if (iH <= iH2) {
                                 if (iH == iH2) {
                                 }
@@ -873,8 +873,8 @@ public class StaggeredGridLayoutManager extends czg implements czs {
                             }
                         }
                     } else {
-                        iH = this.c.locateDex(viewEr2);
-                        iH2 = this.c.locateDex(viewEr);
+                        iH = this.c.dexFind(viewEr2);
+                        iH2 = this.c.dexFind(viewEr);
                         if (iH <= iH2) {
                             if (iH == iH2) {
                             }
@@ -1080,12 +1080,12 @@ public class StaggeredGridLayoutManager extends czg implements czs {
                             if (dmaVar.c) {
                                 dmaVar.b = (this.c.j() - this.l) - this.c.e(viewCa);
                             } else {
-                                dmaVar.b = (this.c.n() + this.l) - this.c.locateDex(viewCa);
+                                dmaVar.b = (this.c.n() + this.l) - this.c.dexFind(viewCa);
                             }
                         } else if (this.c.f(viewCa) > this.c.o()) {
                             dmaVar.b = dmaVar.c ? this.c.j() : this.c.n();
                         } else {
-                            int iH = this.c.locateDex(viewCa) - this.c.n();
+                            int iH = this.c.dexFind(viewCa) - this.c.n();
                             if (iH < 0) {
                                 dmaVar.b = -iH;
                             } else {
@@ -1586,7 +1586,7 @@ public class StaggeredGridLayoutManager extends czg implements czs {
     public final void cn(czo czoVar, int i) {
         for (int iEs = es() - 1; iEs >= 0; iEs--) {
             View viewEr = er(iEs);
-            if (this.c.locateDex(viewEr) < i || this.c.q(viewEr) < i) {
+            if (this.c.dexFind(viewEr) < i || this.c.q(viewEr) < i) {
                 return;
             }
             dmb dmbVar = (dmb) viewEr.getLayoutParams();

@@ -249,7 +249,7 @@ public final class awa extends LinearLayout {
     }
 
     public final void ad(boolean z) {
-        if (z() != z) {
+        if (getIsEnabled() != z) {
             this.g.setVisibility(z ? 0 : 8);
             ag();
             ai();
@@ -300,7 +300,7 @@ public final class awa extends LinearLayout {
         if (textInputLayout.e == null) {
             return;
         }
-        if (z() || aa()) {
+        if (getIsEnabled() || aa()) {
             paddingEnd = 0;
         } else {
             EditText editText = textInputLayout.e;
@@ -367,7 +367,7 @@ public final class awa extends LinearLayout {
 
     public final int y() {
         int marginStart;
-        if (z() || aa()) {
+        if (getIsEnabled() || aa()) {
             CheckableImageButton checkableImageButton = this.g;
             marginStart = ((ViewGroup.MarginLayoutParams) checkableImageButton.getLayoutParams()).getMarginStart()
                     + checkableImageButton.getMeasuredWidth();

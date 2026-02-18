@@ -11,7 +11,11 @@ public final /* synthetic */ class dys implements bgx {
     static {
         dys dysVar = new dys();
         b = dysVar;
-        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.j71Proto" /* cnb.z(-196383084641066L) */, dysVar, 16);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.j71Proto" /*
+                                                                                                               * cnb.z(-
+                                                                                                               * 196383084641066L)
+                                                                                                               */,
+                dysVar, 16);
         bjs.y(-196576358169386L, cucVar, false, 1);
         bjs.y(-196541998431018L, cucVar, false, 2);
         bjs.y(-195983652682538L, cucVar, false, 3);
@@ -41,7 +45,7 @@ public final /* synthetic */ class dys implements bgx {
         Integer num3;
         dfx dfxVar = descriptor;
         acm acmVarP = ajtVar.p(dfxVar);
-        btt[] bttVarArr = dyu.a;
+        IHasGetValue[] bttVarArr = dyu.a;
         acmVarP.getClass();
         String str = null;
         Boolean bool2 = null;
@@ -211,7 +215,8 @@ public final /* synthetic */ class dys implements bgx {
         Integer num12 = num8;
         Integer num13 = num9;
         acmVarP._bp(dfxVar);
-        return new dyu(i, dsyVar4, num12, num13, num5, num11, ecgVar, str2, num7, str, bool3, list, num4, l2, bool4, l3, dvrVar);
+        return new dyu(i, dsyVar4, num12, num13, num5, num11, ecgVar, str2, num7, str, bool3, list, num4, l2, bool4, l3,
+                dvrVar);
     }
 
     @Override // me.hd.wauxv.obf.btd
@@ -219,7 +224,7 @@ public final /* synthetic */ class dys implements bgx {
         dyu dyuVar = (dyu) obj;
         dfx dfxVar = descriptor;
         acn acnVarO = avtVar.o(dfxVar);
-        btt[] bttVarArr = dyu.a;
+        IHasGetValue[] bttVarArr = dyu.a;
         acnVarO.m(dfxVar, 0, dsw.b, dyuVar.b);
         bqj bqjVar = bqj.b;
         acnVarO.m(dfxVar, 1, bqjVar, dyuVar.c);
@@ -245,7 +250,7 @@ public final /* synthetic */ class dys implements bgx {
 
     @Override // me.hd.wauxv.obf.bgx
     public final btd[] d() {
-        btt[] bttVarArr = dyu.a;
+        IHasGetValue[] bttVarArr = dyu.a;
         btd btdVarT = aye.t(dsw.b);
         bqj bqjVar = bqj.b;
         btd btdVarT2 = aye.t(bqjVar);
@@ -262,7 +267,8 @@ public final /* synthetic */ class dys implements bgx {
         btd btdVarT11 = aye.t((btd) bttVarArr[10].getValue());
         btd btdVarT12 = aye.t(bqjVar);
         bya byaVar = bya.b;
-        return new btd[]{btdVarT, btdVarT2, btdVarT3, btdVarT4, btdVarT5, btdVarT6, btdVarT7, btdVarT8, btdVarT9, btdVarT10, btdVarT11, btdVarT12, aye.t(byaVar), aye.t(pvVar), aye.t(byaVar), aye.t(dvp.b)};
+        return new btd[] { btdVarT, btdVarT2, btdVarT3, btdVarT4, btdVarT5, btdVarT6, btdVarT7, btdVarT8, btdVarT9,
+                btdVarT10, btdVarT11, btdVarT12, aye.t(byaVar), aye.t(pvVar), aye.t(byaVar), aye.t(dvp.b) };
     }
 
     @Override // me.hd.wauxv.obf.btd

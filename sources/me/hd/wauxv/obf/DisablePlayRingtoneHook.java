@@ -5,43 +5,46 @@ import org.luckypray.dexkit.DexKitBridge;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class aoe extends BaseHook implements IRequiresDexLocate {
-    public static final aoe a = new aoe("DisablePlayRingtoneHook" /* cnb.z(-445057396112170L) */);
+public final class DisablePlayRingtoneHook extends SwitchHook implements IDexFind {
+    public static final DisablePlayRingtoneHook a = new DisablePlayRingtoneHook("DisablePlayRingtoneHook" /*
+                                                                                                           * cnb.z(-
+                                                                                                           * 445057396112170L)
+                                                                                                           */);
     public static final String b = "聊天" /* cnb.z(-444563474873130L) */;
     public static final String c = "屏蔽通话铃声" /* cnb.z(-444567769840426L) */;
     public static final String i = "屏蔽视频及语音通话时呼出呼入的铃声" /* cnb.z(-444537705069354L) */;
     public static final amb j = new amb(12);
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
         List listBf = dqc.bf(emn.bb(aob.a));
-        aoe aoeVar = a;
+        DisablePlayRingtoneHook aoeVar = a;
         aki akiVarAb = csb.ab(aoeVar, listBf);
         aoeVar.y(akiVarAb, new amb(13));
         akiVarAb.o();
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return b;
     }
 
-    @Override // me.hd.wauxv.obf.bng
-    public final void locateDex(DexKitBridge dexKitBridge) {
+    @Override // me.hd.wauxv.obf.IDexFind
+    public final void dexFind(DexKitBridge dexKitBridge) {
         emn.aj(aob.a, dexKitBridge, new amb(14));
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return i;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final IHasInvokeMethod p() {
         return j;
     }

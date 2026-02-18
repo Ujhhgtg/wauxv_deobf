@@ -15,8 +15,8 @@ import me.hd.wauxv.R;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class qw extends BaseHook implements bnp {
-    public static final qw a;
+public final class BottomTabMaterialHook extends SwitchHook implements bnp {
+    public static final BottomTabMaterialHook a;
     public static final String b;
     public static final dov c;
     public static final dov d;
@@ -30,13 +30,13 @@ public final class qw extends BaseHook implements bnp {
     public static final boolean s;
 
     static {
-        "#FFF7F7F7" /* cnb.z(-436961382759210L) */;
-        "#FFCCE8E3" /* cnb.z(-436935612955434L) */;
-        "#FF1E1E1E" /* cnb.z(-436909843151658L) */;
-        "#FF1E1E1E" /* cnb.z(-436884073347882L) */;
-        "#FF324B48" /* cnb.z(-436789584067370L) */;
-        "#FFF7F7F7" /* cnb.z(-425218942171946L) */;
-        a = new qw("BottomTabMaterialHook" /* cnb.z(-435664302635818L) */);
+        // "#FFF7F7F7" /* cnb.z(-436961382759210L) */;
+        // "#FFCCE8E3" /* cnb.z(-436935612955434L) */;
+        // "#FF1E1E1E" /* cnb.z(-436909843151658L) */;
+        // "#FF1E1E1E" /* cnb.z(-436884073347882L) */;
+        // "#FF324B48" /* cnb.z(-436789584067370L) */;
+        // "#FFF7F7F7" /* cnb.z(-425218942171946L) */;
+        a = new BottomTabMaterialHook("BottomTabMaterialHook" /* cnb.z(-435664302635818L) */);
         dov dovVar = ctf.a;
         b = ctf.c("Resource" /* cnb.z(-46621869996842L) */, "BottomTab" /* cnb.z(-46531675683626L) */);
         c = new dov(new h(14));
@@ -51,38 +51,38 @@ public final class qw extends BaseHook implements bnp {
         s = true;
     }
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return m;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return l;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return n;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final bgf p() {
         return r;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final boolean q() {
         return s;
     }
 
     @Override // me.hd.wauxv.obf.bnp
     public final void t(Activity activity, ViewGroup viewGroup, Object obj) {
-        if (z()) {
+        if (getIsEnabled()) {
             qb qbVar = new qb(aqu.e(cnf.am(activity)), R.attr.bottomNavigationStyle,
                     R.style.Widget_Design_BottomNavigationView);
             jx jxVarAo = bhu.ao(qbVar.getContext(), null, cxs.d, R.attr.bottomNavigationStyle,
@@ -108,7 +108,7 @@ public final class qw extends BaseHook implements bnp {
             }
             Menu menu = qbVar.getMenu();
             MenuItem menuItemAdd = menu.add(0, 0, 0, "" /* cnb.z(-435552633486122L) */);
-            qw qwVar = a;
+            BottomTabMaterialHook qwVar = a;
             qwVar.getClass();
             menuItemAdd.setIcon(new BitmapDrawable(qbVar.getResources(), (Bitmap) d.getValue()));
             menu.add(0, 1, 1, "" /* cnb.z(-435548338518826L) */)

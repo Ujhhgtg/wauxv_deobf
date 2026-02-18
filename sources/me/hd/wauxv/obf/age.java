@@ -51,7 +51,7 @@ public final /* synthetic */ class age implements IHasInvokeMethod {
         ens ensVar = ens.a;
         switch (i) {
             case 0:
-                HookParamWrapper hookParam = (HookParamWrapper) obj;
+                HookParam hookParam = (HookParam) obj;
                 hookParam.getClass();
                 try {
                     objX = hookParam.getArgs()[0];
@@ -87,16 +87,16 @@ public final /* synthetic */ class age implements IHasInvokeMethod {
                         StringBuilder sb = new StringBuilder();
                         sb.append("onCreateMenuItems " /* cnb.z(-38555921414954L) */);
                         ewq.e(yg.n(sb,
-                                bnfVar instanceof BaseHook ? ((BaseHook) bnfVar).getResult() : "LoadHook" /*
-                                                                                                           * cnb.z(-
-                                                                                                           * 38508676774698L)
-                                                                                                           */,
+                                bnfVar instanceof SwitchHook ? ((SwitchHook) bnfVar).getResult() : "LoadHook" /*
+                                                                                                               * cnb.z(-
+                                                                                                               * 38508676774698L)
+                                                                                                               */,
                                 -39019777882922L), e, 12);
                     }
                 }
                 return ensVar;
             case 1:
-                HookParamWrapper hookParam2 = (HookParamWrapper) obj;
+                HookParam hookParam2 = (HookParam) obj;
                 hookParam2.getClass();
                 try {
                     objX2 = hookParam2.getArgs()[0];
@@ -139,10 +139,11 @@ public final /* synthetic */ class age implements IHasInvokeMethod {
                         StringBuilder sb2 = new StringBuilder();
                         sb2.append("onCreateMenuItems " /* cnb.z(-38744899975978L) */);
                         ewq.e(yg.n(sb2,
-                                bnfVar2 instanceof BaseHook ? ((BaseHook) bnfVar2).getResult() : "LoadHook" /*
-                                                                                                             * cnb.z(-
-                                                                                                             * 38628935858986L)
-                                                                                                             */,
+                                bnfVar2 instanceof SwitchHook ? ((SwitchHook) bnfVar2).getResult() : "LoadHook" /*
+                                                                                                                 * cnb.z
+                                                                                                                 * (-
+                                                                                                                 * 38628935858986L)
+                                                                                                                 */,
                                 -38590281153322L), e2, 12);
                     }
                 }
@@ -525,7 +526,7 @@ public final /* synthetic */ class age implements IHasInvokeMethod {
                 }
                 return Boolean.valueOf(z);
             case 23:
-                HookParamWrapper hookParam3 = (HookParamWrapper) obj;
+                HookParam hookParam3 = (HookParam) obj;
                 hookParam3.getClass();
                 try {
                     objX4 = hookParam3.getArgs()[0];
@@ -616,7 +617,7 @@ public final /* synthetic */ class age implements IHasInvokeMethod {
                 throw new NullPointerException("Missing required view with ID: "
                         /* cnb.z(-639400371288874L) */.concat(viewK2.getResources().getResourceName(i11)));
             case 25:
-                HookParamWrapper hookParam4 = (HookParamWrapper) obj;
+                HookParam hookParam4 = (HookParam) obj;
                 int i12 = bte.a;
                 azg azgVarAa3 = dkz.aa(hookParam4);
                 azgVarAa3.a = dal.b(Integer.TYPE);
@@ -681,11 +682,11 @@ public final /* synthetic */ class age implements IHasInvokeMethod {
                         /* cnb.z(-639812688149290L) */.concat(viewK3.getResources().getResourceName(i14)));
             case 27:
                 ro.a.getClass();
-                return Boolean.valueOf(((BaseHook) obj)._z());
+                return Boolean.valueOf(((SwitchHook) obj)._z());
             case 28:
-                return ((BaseHook) obj).setResultTrue();
+                return ((SwitchHook) obj).setResultTrue();
             default:
-                return ((BaseHook) obj).getResult();
+                return ((SwitchHook) obj).getResult();
         }
     }
 }

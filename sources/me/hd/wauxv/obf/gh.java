@@ -5,7 +5,7 @@ import java.nio.charset.Charset;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class gh extends BaseHook implements IDatabaseOperationsListener {
+public final class gh extends SwitchHook implements IDatabaseOperationsListener {
     public static final gh a = new gh("AntiSnsDeleteHook" /* cnb.z(-545009875024682L) */);
     public static final String b = "朋友圈" /* cnb.z(-544674867575594L) */;
     public static final String c = "拦截朋友圈删除" /* cnb.z(-544692047444778L) */;
@@ -27,34 +27,34 @@ public final class gh extends BaseHook implements IDatabaseOperationsListener {
         return i2 > 0 ? new byte[] { (byte) ((i & 127) | 128), (byte) i2 } : new byte[] { (byte) i };
     }
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return b;
     }
 
     @Override // me.hd.wauxv.obf.IDatabaseOperationsListener
-    public final void j(HookParamWrapper hookParam, String str, ContentValues contentValues, String str2,
+    public final void j(HookParam hookParam, String str, ContentValues contentValues, String str2,
             String[] strArr, int i) {
         m(str, contentValues);
     }
 
     @Override // me.hd.wauxv.obf.IDatabaseOperationsListener
-    public final void l(HookParamWrapper hookParam, String str, ContentValues contentValues, String str2,
+    public final void l(HookParam hookParam, String str, ContentValues contentValues, String str2,
             String[] strArr, int i) {
         m(str, contentValues);
     }
 
     public final void m(String str, ContentValues contentValues) {
-        if (z()) {
+        if (getIsEnabled()) {
             byte[] bArrV = null;
             if (str.equals("SnsInfo" /* cnb.z(-544881026005802L) */)) {
                 if (aaz.tryGetClassByName(
@@ -122,12 +122,12 @@ public final class gh extends BaseHook implements IDatabaseOperationsListener {
         }
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return d;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final IHasInvokeMethod p() {
         return h;
     }

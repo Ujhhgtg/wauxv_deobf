@@ -20,9 +20,9 @@ public final class bbq implements Comparator {
     public final int compare(Object obj, Object obj2) {
         this.d.getClass();
         Rect rect = this.a;
-        ((bd) obj).locateDex(rect);
+        ((bd) obj).dexFind(rect);
         Rect rect2 = this.b;
-        ((bd) obj2).locateDex(rect2);
+        ((bd) obj2).dexFind(rect2);
         int i = rect.top;
         int i2 = rect2.top;
         if (i < i2) {

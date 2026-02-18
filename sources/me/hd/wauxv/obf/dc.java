@@ -33,7 +33,7 @@ public final class dc implements Runnable {
     }
 
     /* JADX INFO: Infinite loop detected, blocks: 8, insns: 0 */
-    /* JADX WARN: Found duplicated region for block: B:56:0x012d  */
+    /* JADX WARN: Found duplicated region for block: B:56:0x012d */
     @Override // java.lang.Runnable
     public final void run() {
         int iL;
@@ -70,14 +70,16 @@ public final class dc implements Runnable {
                         meVar.f = jCurrentAnimationTimeMillis;
                         meVar.h = 0.5f;
                     }
-                    if ((meVar.g > 0 && AnimationUtils.currentAnimationTimeMillis() > meVar.g + ((long) meVar.i)) || !bwoVar.w()) {
+                    if ((meVar.g > 0 && AnimationUtils.currentAnimationTimeMillis() > meVar.g + ((long) meVar.i))
+                            || !bwoVar.getAllBaseBaseHookInstances()) {
                         bwoVar.p = false;
                         return;
                     }
                     if (bwoVar.o) {
                         bwoVar.o = false;
                         long jUptimeMillis = SystemClock.uptimeMillis();
-                        MotionEvent motionEventObtain = MotionEvent.obtain(jUptimeMillis, jUptimeMillis, 3, 0.0f, 0.0f, 0);
+                        MotionEvent motionEventObtain = MotionEvent.obtain(jUptimeMillis, jUptimeMillis, 3, 0.0f, 0.0f,
+                                0);
                         aqeVar.onTouchEvent(motionEventObtain);
                         motionEventObtain.recycle();
                     }
@@ -176,13 +178,17 @@ public final class dc implements Runnable {
                         int i3 = (int) (bqxVar.k + bqxVar.i);
                         int paddingLeft = (i3 - bqxVar.ab.left) - bqxVar.s.getPaddingLeft();
                         float f = bqxVar.i;
-                        iL = ((f >= 0.0f || paddingLeft >= 0) && (f <= 0.0f || (paddingLeft = ((bqxVar.d.d.getWidth() + i3) + bqxVar.ab.right) - (bqxVar.s.getWidth() - bqxVar.s.getPaddingRight())) <= 0)) ? 0 : paddingLeft;
+                        iL = ((f >= 0.0f || paddingLeft >= 0)
+                                && (f <= 0.0f || (paddingLeft = ((bqxVar.d.d.getWidth() + i3) + bqxVar.ab.right)
+                                        - (bqxVar.s.getWidth() - bqxVar.s.getPaddingRight())) <= 0)) ? 0 : paddingLeft;
                     }
                     if (layoutManager.bv()) {
                         int i4 = (int) (bqxVar.l + bqxVar.j);
                         int paddingTop = (i4 - bqxVar.ab.top) - bqxVar.s.getPaddingTop();
                         float f2 = bqxVar.j;
-                        if ((f2 < 0.0f && paddingTop < 0) || (f2 > 0.0f && (paddingTop = ((bqxVar.d.d.getHeight() + i4) + bqxVar.ab.bottom) - (bqxVar.s.getHeight() - bqxVar.s.getPaddingBottom())) > 0)) {
+                        if ((f2 < 0.0f && paddingTop < 0)
+                                || (f2 > 0.0f && (paddingTop = ((bqxVar.d.d.getHeight() + i4) + bqxVar.ab.bottom)
+                                        - (bqxVar.s.getHeight() - bqxVar.s.getPaddingBottom())) > 0)) {
                             iL2 = paddingTop;
                         }
                     }
@@ -249,7 +255,8 @@ public final class dc implements Runnable {
             case 15:
                 SearchView$SearchAutoComplete searchView$SearchAutoComplete = (SearchView$SearchAutoComplete) obj;
                 if (searchView$SearchAutoComplete.b) {
-                    ((InputMethodManager) searchView$SearchAutoComplete.getContext().getSystemService("input_method")).showSoftInput(searchView$SearchAutoComplete, 0);
+                    ((InputMethodManager) searchView$SearchAutoComplete.getContext().getSystemService("input_method"))
+                            .showSoftInput(searchView$SearchAutoComplete, 0);
                     searchView$SearchAutoComplete.b = false;
                     return;
                 }

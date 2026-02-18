@@ -6,7 +6,7 @@ import java.util.List;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class ShowContactInfoHook extends BaseHook implements bnd {
+public final class ShowContactInfoHook extends SwitchHook implements bnd {
     public static final ShowContactInfoHook b;
     public static final String c;
     public static final String h;
@@ -23,7 +23,7 @@ public final class ShowContactInfoHook extends BaseHook implements bnd {
 
     @Override // me.hd.wauxv.obf.bnd
     public final List a(Activity activity) throws IllegalAccessException, InvocationTargetException {
-        if (z()) {
+        if (getIsEnabled()) {
             String stringExtra = activity.getIntent().getStringExtra("Contact_User" /* cnb.z(-595243812518698L) */);
             if (stringExtra == null) {
                 stringExtra = "异常" /* cnb.z(-595170798074666L) */;
@@ -41,21 +41,21 @@ public final class ShowContactInfoHook extends BaseHook implements bnd {
         return avd.a;
     }
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return h;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return i;
     }

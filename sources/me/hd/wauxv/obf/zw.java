@@ -2,28 +2,28 @@ package me.hd.wauxv.obf;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class zw extends BaseHook implements bnx {
+public final class zw extends SwitchHook implements bnx {
     public static final zw a = new zw("ClearUserInfoHook" /* cnb.z(-512110425537322L) */);
     public static final String b = "杂项" /* cnb.z(-511453295541034L) */;
     public static final String c = "清空用户信息" /* cnb.z(-511457590508330L) */;
     public static final String d = "清空用户的性别及国家省份等相关信息" /* cnb.z(-511427525737258L) */;
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return b;
     }
 
-    public final void h(HookParamWrapper hookParam, int i, byte[] bArr) {
-        if (z() && i == 1) {
+    public final void h(HookParam hookParam, int i, byte[] bArr) {
+        if (getIsEnabled() && i == 1) {
             cwd cwdVar = cwd.a;
             cwdVar.getClass();
             cdq cdqVar = cdr.Companion;
@@ -43,7 +43,7 @@ public final class zw extends BaseHook implements bnx {
         }
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return d;
     }

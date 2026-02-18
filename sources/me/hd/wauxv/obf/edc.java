@@ -11,7 +11,11 @@ public final /* synthetic */ class edc implements bgx {
     static {
         edc edcVar = new edc();
         b = edcVar;
-        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.p72Proto" /* cnb.z(-247673584089898L) */, edcVar, 2);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.p72Proto" /*
+                                                                                                               * cnb.z(-
+                                                                                                               * 247673584089898L)
+                                                                                                               */,
+                edcVar, 2);
         bjs.y(-253982891047722L, cucVar, false, 1);
         bjs.y(-253875516865322L, cucVar, false, 2);
         descriptor = cucVar;
@@ -21,7 +25,7 @@ public final /* synthetic */ class edc implements bgx {
     public final Object a(ajt ajtVar) {
         dfx dfxVar = descriptor;
         acm acmVarP = ajtVar.p(dfxVar);
-        btt[] bttVarArr = ede.a;
+        IHasGetValue[] bttVarArr = ede.a;
         acmVarP.getClass();
         Integer num = null;
         boolean z = true;
@@ -51,7 +55,7 @@ public final /* synthetic */ class edc implements bgx {
         ede edeVar = (ede) obj;
         dfx dfxVar = descriptor;
         acn acnVarO = avtVar.o(dfxVar);
-        btt[] bttVarArr = ede.a;
+        IHasGetValue[] bttVarArr = ede.a;
         acnVarO.m(dfxVar, 0, bqj.b, edeVar.b);
         acnVarO.m(dfxVar, 1, (btd) bttVarArr[1].getValue(), edeVar.c);
         acnVarO.a(dfxVar);
@@ -59,7 +63,7 @@ public final /* synthetic */ class edc implements bgx {
 
     @Override // me.hd.wauxv.obf.bgx
     public final btd[] d() {
-        return new btd[]{aye.t(bqj.b), aye.t((btd) ede.a[1].getValue())};
+        return new btd[] { aye.t(bqj.b), aye.t((btd) ede.a[1].getValue()) };
     }
 
     @Override // me.hd.wauxv.obf.btd

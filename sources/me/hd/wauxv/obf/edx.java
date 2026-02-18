@@ -11,7 +11,11 @@ public final /* synthetic */ class edx implements bgx {
     static {
         edx edxVar = new edx();
         b = edxVar;
-        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.rj3Proto" /* cnb.z(-274607324003114L) */, edxVar, 10);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.rj3Proto" /*
+                                                                                                               * cnb.z(-
+                                                                                                               * 274607324003114L)
+                                                                                                               */,
+                edxVar, 10);
         bjs.y(-274268021586730L, cucVar, false, 1);
         bjs.y(-274229366881066L, cucVar, false, 2);
         bjs.y(-274207892044586L, cucVar, false, 3);
@@ -27,10 +31,10 @@ public final /* synthetic */ class edx implements bgx {
 
     @Override // me.hd.wauxv.obf.btd
     public final Object a(ajt ajtVar) {
-        btt[] bttVarArr;
+        IHasGetValue[] bttVarArr;
         dfx dfxVar = descriptor;
         acm acmVarP = ajtVar.p(dfxVar);
-        btt[] bttVarArr2 = edz.a;
+        IHasGetValue[] bttVarArr2 = edz.a;
         acmVarP.getClass();
         String str = null;
         String str2 = null;
@@ -114,7 +118,7 @@ public final /* synthetic */ class edx implements bgx {
         edz edzVar = (edz) obj;
         dfx dfxVar = descriptor;
         acn acnVarO = avtVar.o(dfxVar);
-        btt[] bttVarArr = edz.a;
+        IHasGetValue[] bttVarArr = edz.a;
         dnh dnhVar = dnh.b;
         acnVarO.m(dfxVar, 0, dnhVar, edzVar.b);
         acnVarO.m(dfxVar, 1, dnhVar, edzVar.c);
@@ -131,9 +135,10 @@ public final /* synthetic */ class edx implements bgx {
 
     @Override // me.hd.wauxv.obf.bgx
     public final btd[] d() {
-        btt[] bttVarArr = edz.a;
+        IHasGetValue[] bttVarArr = edz.a;
         dnh dnhVar = dnh.b;
-        return new btd[]{aye.t(dnhVar), aye.t(dnhVar), aye.t(dnhVar), aye.t(dnhVar), aye.t(dnhVar), aye.t(bqj.b), aye.t((btd) bttVarArr[6].getValue()), aye.t(dnhVar), aye.t(dnhVar), aye.t(dnhVar)};
+        return new btd[] { aye.t(dnhVar), aye.t(dnhVar), aye.t(dnhVar), aye.t(dnhVar), aye.t(dnhVar), aye.t(bqj.b),
+                aye.t((btd) bttVarArr[6].getValue()), aye.t(dnhVar), aye.t(dnhVar), aye.t(dnhVar) };
     }
 
     @Override // me.hd.wauxv.obf.btd

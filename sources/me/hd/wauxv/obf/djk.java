@@ -79,7 +79,7 @@ public final /* synthetic */ class djk implements IHasInvokeMethod {
                 bahVar2.d = cdjVar2;
                 return ensVar;
             case 3:
-                Object objE = ((HookParamWrapper) obj).getThisObject();
+                Object objE = ((HookParam) obj).getThisObject();
                 Activity activity = (Activity) (!(objE instanceof Activity) ? null : objE);
                 if (activity == null) {
                     cls2 = Activity.class;
@@ -242,7 +242,7 @@ public final /* synthetic */ class djk implements IHasInvokeMethod {
                 throw new NullPointerException("Missing required view with ID: "
                         /* cnb.z(-660565970123562L) */.concat(viewK.getResources().getResourceName(i5)));
             case 14:
-                HookParamWrapper hookParam = (HookParamWrapper) obj;
+                HookParam hookParam = (HookParam) obj;
                 eog eogVar = eog.a;
                 Object objE2 = hookParam.getThisObject();
                 String strO = dkf.a.o();
@@ -302,7 +302,7 @@ public final /* synthetic */ class djk implements IHasInvokeMethod {
                 throw new NullPointerException("Missing required view with ID: "
                         /* cnb.z(-659878775356202L) */.concat(viewK2.getResources().getResourceName(i6)));
             case 18:
-                HookParamWrapper hookParam2 = (HookParamWrapper) obj;
+                HookParam hookParam2 = (HookParam) obj;
                 if (dkk.a.k() == dkj.a.d) {
                     hookParam2.getClass();
                     try {
@@ -356,7 +356,7 @@ public final /* synthetic */ class djk implements IHasInvokeMethod {
                 }
                 return ensVar;
             case 19:
-                HookParamWrapper hookParam3 = (HookParamWrapper) obj;
+                HookParam hookParam3 = (HookParam) obj;
                 if (dkk.a.k() == dkj.b.d) {
                     hookParam3.getClass();
                     try {

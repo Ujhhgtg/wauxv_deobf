@@ -11,11 +11,12 @@ public final class ur extends bws {
     public static final ur a = new ur();
     public static final LinkedHashSet b = new LinkedHashSet();
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
         int i = bte.a;
         adt adtVarM = dqc.bh(ajn.ag("com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* cnb.z(-50749333568298L) */)).m();
-        adtVarM.z(Arrays.copyOf(new Object[]{dal.b(Context.class), dal.b(AttributeSet.class), dal.b(Integer.TYPE)}, 3));
+        adtVarM.z(Arrays.copyOf(new Object[] { dal.b(Context.class), dal.b(AttributeSet.class), dal.b(Integer.TYPE) },
+                3));
         aki akiVarAd = ad((adu) aaz.e(adtVarM.a()), exg.a);
         akiVarAd.m(new mj(27));
         akiVarAd.o();

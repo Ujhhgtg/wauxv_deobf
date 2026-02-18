@@ -2,7 +2,7 @@ package me.hd.wauxv.obf;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class div extends BaseHook implements IDatabaseOperationsListener {
+public final class div extends SwitchHook implements IDatabaseOperationsListener {
     public static final div a = new div("SnsEnhanceHook" /* cnb.z(-530952447064874L) */);
     public static final String b = "朋友圈" /* cnb.z(-528207962962730L) */;
     public static final String c = "朋友圈增强" /* cnb.z(-528156423355178L) */;
@@ -37,23 +37,23 @@ public final class div extends BaseHook implements IDatabaseOperationsListener {
                                                                                              */);
     }
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return b;
     }
 
     @Override // me.hd.wauxv.obf.IDatabaseOperationsListener
-    public final void n(HookParamWrapper hookParam, String str) {
-        if (z()) {
+    public final void n(HookParam hookParam, String str) {
+        if (getIsEnabled()) {
             String strI = i(str);
             if (strI.equals(str)) {
                 return;
@@ -63,14 +63,14 @@ public final class div extends BaseHook implements IDatabaseOperationsListener {
         }
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return h;
     }
 
     @Override // me.hd.wauxv.obf.IDatabaseOperationsListener
-    public final void t(HookParamWrapper hookParam, String str) {
-        if (z()) {
+    public final void t(HookParam hookParam, String str) {
+        if (getIsEnabled()) {
             String strI = i(str);
             if (strI.equals(str)) {
                 return;

@@ -23,9 +23,9 @@ public final class exj extends nh {
     @Override // me.hd.wauxv.obf.nh
     public final void c(blq blqVar) {
         Object objX;
-        int i = HookParamWrapper.a;
+        int i = HookParam.a;
         aki akiVar = this.a;
-        HookParamWrapper hookParam = new HookParamWrapper();
+        HookParam hookParam = new HookParam();
         hookParam.b = blqVar;
         Member member = this.b;
         try {
@@ -53,9 +53,9 @@ public final class exj extends nh {
     @Override // me.hd.wauxv.obf.nh
     public final void d(blq blqVar) {
         Object objX;
-        int i = HookParamWrapper.a;
+        int i = HookParam.a;
         aki akiVar = this.a;
-        HookParamWrapper hookParam = new HookParamWrapper();
+        HookParam hookParam = new HookParam();
         hookParam.b = blqVar;
         Member member = this.b;
         try {

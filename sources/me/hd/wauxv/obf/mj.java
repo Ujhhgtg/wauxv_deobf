@@ -61,7 +61,7 @@ public final /* synthetic */ class mj implements IHasInvokeMethod {
         switch (i) {
             case 0:
                 int i7 = bte.a;
-                azg azgVarAa = dkz.aa((HookParamWrapper) obj);
+                azg azgVarAa = dkz.aa((HookParam) obj);
                 azgVarAa.a = dal.b(Button.class);
                 Iterator it = azgVarAa.c().iterator();
                 while (it.hasNext()) {
@@ -267,7 +267,7 @@ public final /* synthetic */ class mj implements IHasInvokeMethod {
                         /* cnb.z(-638438298614570L) */.concat(viewK.getResources().getResourceName(i8)));
             case 12:
                 qo qoVar = qo.a;
-                Object objE = ((HookParamWrapper) obj).getThisObject();
+                Object objE = ((HookParam) obj).getThisObject();
                 RelativeLayout relativeLayout = (RelativeLayout) (!(objE instanceof RelativeLayout) ? null : objE);
                 if (relativeLayout == null) {
                     cls5 = RelativeLayout.class;
@@ -388,8 +388,8 @@ public final /* synthetic */ class mj implements IHasInvokeMethod {
                                                                 textInputEditText7.setText(qs.a.o());
                                                                 bzy bzyVar2 = new bzy(view2.getContext());
                                                                 eg egVar2 = (eg) bzyVar2.d;
-                                                                qw.a.getClass();
-                                                                egVar2.d = qw.m;
+                                                                BottomTabMaterialHook.a.getClass();
+                                                                egVar2.d = BottomTabMaterialHook.m;
                                                                 bzyVar2.t("保存" /* cnb.z(-437451009030954L) */,
                                                                         new amw(new bp(cehVar, i4), 0));
                                                                 bzyVar2.s("重置" /* cnb.z(-437455303998250L) */,
@@ -416,7 +416,7 @@ public final /* synthetic */ class mj implements IHasInvokeMethod {
                 throw new NullPointerException("Missing required view with ID: "
                         /* cnb.z(-638300859661098L) */.concat(viewK2.getResources().getResourceName(i10)));
             case 14:
-                Object objE2 = ((HookParamWrapper) obj).getThisObject();
+                Object objE2 = ((HookParam) obj).getThisObject();
                 Activity activity = (Activity) (!(objE2 instanceof Activity) ? null : objE2);
                 if (activity != null) {
                     activity.getIntent().putExtra("key_fav_item_id" /* cnb.z(-489892559715114L) */, "" /*
@@ -442,10 +442,10 @@ public final /* synthetic */ class mj implements IHasInvokeMethod {
                 akiVarAb2.o();
                 return ensVar;
             case 17:
-                ((HookParamWrapper) obj).setResult(Boolean.FALSE);
+                ((HookParam) obj).setResult(Boolean.FALSE);
                 return ensVar;
             case 18:
-                HookParamWrapper hookParam = (HookParamWrapper) obj;
+                HookParam hookParam = (HookParam) obj;
                 hookParam.getClass();
                 try {
                     objX = hookParam.getArgs()[1];
@@ -580,7 +580,7 @@ public final /* synthetic */ class mj implements IHasInvokeMethod {
                 bahVar5.d = cdjVar7;
                 return ensVar;
             case 23:
-                HookParamWrapper hookParam2 = (HookParamWrapper) obj;
+                HookParam hookParam2 = (HookParam) obj;
                 hookParam2.getClass();
                 try {
                     objX2 = hookParam2.getArgs()[1];
@@ -698,7 +698,7 @@ public final /* synthetic */ class mj implements IHasInvokeMethod {
                 cge.a.getClass();
                 return Boolean.valueOf(nullSafeIsEqual(obj4, emn.az(cgd.a)));
             case 27:
-                Object objE7 = ((HookParamWrapper) obj).getThisObject();
+                Object objE7 = ((HookParam) obj).getThisObject();
                 FrameLayout frameLayout = (FrameLayout) (!(objE7 instanceof FrameLayout) ? null : objE7);
                 if (frameLayout == null) {
                     cls7 = FrameLayout.class;
@@ -714,10 +714,10 @@ public final /* synthetic */ class mj implements IHasInvokeMethod {
                         StringBuilder sb = new StringBuilder();
                         sb.append("onInit " /* cnb.z(-51075751082794L) */);
                         ewq.e(yg.n(sb,
-                                obj5 instanceof BaseHook ? ((BaseHook) obj5).getResult() : "LoadHook" /*
-                                                                                                       * cnb.z(-
-                                                                                                       * 51041391344426L)
-                                                                                                       */,
+                                obj5 instanceof SwitchHook ? ((SwitchHook) obj5).getResult() : "LoadHook" /*
+                                                                                                           * cnb.z(-
+                                                                                                           * 51041391344426L)
+                                                                                                           */,
                                 -51002736638762L), e, 12);
                     }
                 }

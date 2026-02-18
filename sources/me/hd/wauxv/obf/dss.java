@@ -6,7 +6,8 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class dss {
     public static final dsr Companion = new dsr();
-    public static final btt[] a = { null, null, null, null, ewz.am(btx.a, new cfh(27)), null, null, null, null, null,
+    public static final IHasGetValue[] a = { null, null, null, null, ewz.am(btx.a, new cfh(27)), null, null, null, null,
+            null,
             null, null, null, null, null, null, null, null, null, null, null };
     public final String b;
     public final Integer c;

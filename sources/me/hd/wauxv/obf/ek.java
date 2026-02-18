@@ -523,7 +523,7 @@ public class ek implements dcq, bm, sg {
     }
 
     public void q(Object obj) {
-        HookParamWrapper hookParam = (HookParamWrapper) this.d;
+        HookParam hookParam = (HookParam) this.d;
         int i = this.c;
         if (i < 0) {
             throw new IllegalStateException("HookParam Method args index must be >= 0");

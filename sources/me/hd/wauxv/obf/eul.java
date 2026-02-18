@@ -7,15 +7,16 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class eul extends bws {
     public static final eul a = new eul();
-    public static final List b = dqc.bf(new euk("WAuxiliary_setting_pref" /* cnb.z(-58884001626922L) */, "WAuxiliary" /* cnb.z(-59330678225706L) */, new epy(16)));
+    public static final List b = dqc.bf(new euk("WAuxiliary_setting_pref" /* cnb.z(-58884001626922L) */,
+            "WAuxiliary" /* cnb.z(-59330678225706L) */, new epy(16)));
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
         int i = bte.a;
         bmu bmuVarS = yg.s(-57591216470826L);
         cde cdeVarT = bmuVarS.t();
         cdeVarT.ab = "onCreate" /* cnb.z(-59051505351466L) */;
-        cdk cdkVar = (cdk) dkz.n(new Object[]{dal.b(Bundle.class)}, 1, cdeVarT);
+        cdk cdkVar = (cdk) dkz.n(new Object[] { dal.b(Bundle.class) }, 1, cdeVarT);
         exg exgVar = exg.c;
         eul eulVar = a;
         aki akiVarAd = eulVar.ad(cdkVar, exgVar);
@@ -23,7 +24,7 @@ public final class eul extends bws {
         akiVarAd.o();
         cde cdeVarT2 = bmuVarS.t();
         cdeVarT2.ab = "onPreferenceTreeClick" /* cnb.z(-59030030514986L) */;
-        aki akiVarAd2 = eulVar.ad((cdk) dkz.n(new Object[]{eoz.a, cvh.a.b()}, 2, cdeVarT2), exg.a);
+        aki akiVarAd2 = eulVar.ad((cdk) dkz.n(new Object[] { eoz.a, cvh.a.b() }, 2, cdeVarT2), exg.a);
         akiVarAd2.n(new epy(18));
         akiVarAd2.o();
     }

@@ -186,7 +186,7 @@ public final /* synthetic */ class cgu implements IHasInvokeMethod {
                 throw new NullPointerException("Missing required view with ID: "
                         /* cnb.z(-663589627099946L) */.concat(viewK.getResources().getResourceName(i5)));
             case 6:
-                HookParamWrapper hookParam = (HookParamWrapper) obj;
+                HookParam hookParam = (HookParam) obj;
                 hookParam.getClass();
                 try {
                     objX = hookParam.getArgs()[2];

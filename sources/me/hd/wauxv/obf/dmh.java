@@ -85,7 +85,7 @@ public final class dmh extends cce implements PopupWindow.OnDismissListener, Vie
     @Override // me.hd.wauxv.obf.dho
     public final void ag() {
         View view;
-        if (e()) {
+        if (initOnce()) {
             return;
         }
         if (this.p || (view = this.l) == null) {
@@ -253,7 +253,7 @@ public final class dmh extends cce implements PopupWindow.OnDismissListener, Vie
 
     @Override // me.hd.wauxv.obf.dho
     public final void dismiss() {
-        if (e()) {
+        if (initOnce()) {
             this.h.dismiss();
         }
     }

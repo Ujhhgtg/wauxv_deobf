@@ -7,7 +7,7 @@ import org.luckypray.dexkit.DexKitBridge;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class djv extends BaseHook implements IRequiresDexLocate, IDatabaseOperationsListener {
+public final class djv extends SwitchHook implements IDexFind, IDatabaseOperationsListener {
     public static final djv a = new djv("SnsLabelFilterHook" /* cnb.z(-558045100768042L) */);
     public static final String b = "朋友圈" /* cnb.z(-556112365484842L) */;
     public static final String c = "朋友圈标签过滤" /* cnb.z(-555511070063402L) */;
@@ -52,8 +52,8 @@ public final class djv extends BaseHook implements IRequiresDexLocate, IDatabase
         return str;
     }
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
         int i2 = bte.a;
         cde cdeVarT = yg.s(-557521114757930L).t();
         cdeVarT.ab = "onCreate" /* cnb.z(-557770222861098L) */;
@@ -65,24 +65,24 @@ public final class djv extends BaseHook implements IRequiresDexLocate, IDatabase
         akiVarAd.o();
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return b;
     }
 
-    @Override // me.hd.wauxv.obf.bng
-    public final void locateDex(DexKitBridge dexKitBridge) {
+    @Override // me.hd.wauxv.obf.IDexFind
+    public final void dexFind(DexKitBridge dexKitBridge) {
         emn.aj(djt.a, dexKitBridge, new djk(5));
     }
 
     @Override // me.hd.wauxv.obf.IDatabaseOperationsListener
-    public final void n(HookParamWrapper hookParam, String str) {
-        if (z()) {
+    public final void n(HookParam hookParam, String str) {
+        if (getIsEnabled()) {
             String strM = m(str);
             if (nullSafeIsEqual(strM, str)) {
                 return;
@@ -92,14 +92,14 @@ public final class djv extends BaseHook implements IRequiresDexLocate, IDatabase
         }
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return i;
     }
 
     @Override // me.hd.wauxv.obf.IDatabaseOperationsListener
-    public final void t(HookParamWrapper hookParam, String str) {
-        if (z()) {
+    public final void t(HookParam hookParam, String str) {
+        if (getIsEnabled()) {
             String strM = m(str);
             if (nullSafeIsEqual(strM, str)) {
                 return;

@@ -90,7 +90,7 @@ public abstract class emf {
                                                     try {
                                                         dql.n();
                                                         dql.w();
-                                                        fontFamilyBuild = dql.locateDex(
+                                                        fontFamilyBuild = dql.dexFind(
                                                                 qc.i(fontG).setFontVariationSettings(str4).build())
                                                                 .build();
                                                     } catch (IOException unused) {
@@ -98,7 +98,7 @@ public abstract class emf {
                                                                 "Failed to clone Font instance. Fall back to provider font.");
                                                     }
                                                 } else {
-                                                    fontFamilyBuild = dql.locateDex(fontG).build();
+                                                    fontFamilyBuild = dql.dexFind(fontG).build();
                                                 }
                                                 if (customFallbackBuilderC == null) {
                                                     customFallbackBuilderC = dql.c(fontFamilyBuild);

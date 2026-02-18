@@ -42,33 +42,33 @@ public final class bbj extends BaseHook implements bnp {
         m = new ayz(24);
     }
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return j;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return i;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return l;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final bgf p() {
         return m;
     }
 
     @Override // me.hd.wauxv.obf.bnp
     public final void t(Activity activity, ViewGroup viewGroup, Object obj) {
-        if (z()) {
+        if (getIsEnabled()) {
             ViewParent parent = viewGroup.getParent();
             throwIfVar1IsNull(parent, "null cannot be cast to non-null type android.view.ViewGroup" /*
                                                                                                      * cnb.z(-

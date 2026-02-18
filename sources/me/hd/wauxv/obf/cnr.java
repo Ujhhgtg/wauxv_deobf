@@ -11,7 +11,10 @@ public final /* synthetic */ class cnr implements bgx {
     static {
         cnr cnrVar = new cnr();
         b = cnrVar;
-        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.NewSendMsgProto" /* cnb.z(-130657200110378L) */, cnrVar, 3);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.NewSendMsgProto" /*
+                                                                                                  * cnb.z(-
+                                                                                                  * 130657200110378L)
+                                                                                                  */, cnrVar, 3);
         cucVar.x("baseResponse" /* cnb.z(-129841156324138L) */, false);
         cucVar.y(new aoz(1, 6));
         cucVar.x("count" /* cnb.z(-129768141880106L) */, false);
@@ -25,7 +28,7 @@ public final /* synthetic */ class cnr implements bgx {
     public final Object a(ajt ajtVar) {
         dfx dfxVar = descriptor;
         acm acmVarP = ajtVar.p(dfxVar);
-        btt[] bttVarArr = cnw.a;
+        IHasGetValue[] bttVarArr = cnw.a;
         acmVarP.getClass();
         nm nmVar = null;
         boolean z = true;
@@ -59,7 +62,7 @@ public final /* synthetic */ class cnr implements bgx {
         cnw cnwVar = (cnw) obj;
         dfx dfxVar = descriptor;
         acn acnVarO = avtVar.o(dfxVar);
-        btt[] bttVarArr = cnw.a;
+        IHasGetValue[] bttVarArr = cnw.a;
         acnVarO._ca(dfxVar, 0, nk.b, cnwVar.b);
         acnVarO.k(1, cnwVar.c, dfxVar);
         acnVarO._ca(dfxVar, 2, (btd) bttVarArr[2].getValue(), cnwVar.d);
@@ -69,7 +72,7 @@ public final /* synthetic */ class cnr implements bgx {
     /* JADX WARN: Multi-variable type inference failed */
     @Override // me.hd.wauxv.obf.bgx
     public final btd[] d() {
-        return new btd[]{nk.b, bqj.b, cnw.a[2].getValue()};
+        return new btd[] { nk.b, bqj.b, cnw.a[2].getValue() };
     }
 
     @Override // me.hd.wauxv.obf.btd

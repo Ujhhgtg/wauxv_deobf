@@ -7,6 +7,6 @@ public final class aje implements IHasInvokeMethod {
 
     @Override // me.hd.wauxv.obf.bgf
     public final Object invoke(Object obj) {
-        return Boolean.valueOf(obj instanceof BaseHook);
+        return Boolean.valueOf(obj instanceof SwitchHook);
     }
 }

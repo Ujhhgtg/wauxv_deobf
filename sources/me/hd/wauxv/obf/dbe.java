@@ -6,17 +6,17 @@ import org.luckypray.dexkit.DexKitBridge;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class dbe extends BaseHook implements IRequiresDexLocate {
+public final class dbe extends SwitchHook implements IDexFind {
     public static final dbe a = new dbe("RemoveVoipLimitHook" /* cnb.z(-522134879206186L) */);
     public static final String b = "限制" /* cnb.z(-519935855950634L) */;
     public static final String c = "移除通话限制" /* cnb.z(-519957330787114L) */;
     public static final String i = "将通话中无法使用部分功能的限制移除" /* cnb.z(-519910086146858L) */;
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
         Iterator it = aba.ag(dbc.a, dbd.a, dbb.a, dba.a).iterator();
         while (it.hasNext()) {
-            List listBf = dqc.bf(emn.bb((amn) it.next()));
+            List listBf = dqc.bf(emn.bb((DexDescData) it.next()));
             dbe dbeVar = a;
             aki akiVarAb = csb.ab(dbeVar, listBf);
             dbeVar.y(akiVarAb, new cvc(27));
@@ -24,18 +24,18 @@ public final class dbe extends BaseHook implements IRequiresDexLocate {
         }
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return b;
     }
 
-    @Override // me.hd.wauxv.obf.bng
-    public final void locateDex(DexKitBridge dexKitBridge) {
+    @Override // me.hd.wauxv.obf.IDexFind
+    public final void dexFind(DexKitBridge dexKitBridge) {
         emn.aj(dbc.a, dexKitBridge, new daz(0, "com.tencent.mm.plugin.multitalk.model" /* cnb.z(-522083339598634L) */,
                 "Lcom/tencent/mm/autogen/events/MultiTalkActionEvent;" /* cnb.z(-521353195158314L) */));
         emn.aj(dbd.a, dexKitBridge, new daz(0, "com.tencent.mm.plugin.voip.model" /* cnb.z(-521658137836330L) */,
@@ -51,7 +51,7 @@ public final class dbe extends BaseHook implements IRequiresDexLocate {
                         "Lcom/tencent/mm/autogen/events/VoipCheckIsDeviceUsingEvent;" /* cnb.z(-522766239398698L) */));
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return i;
     }

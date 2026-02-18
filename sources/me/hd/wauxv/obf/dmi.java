@@ -13,8 +13,8 @@ public final class dmi extends bws {
     public static final dmi a = new dmi();
     public static final LinkedHashSet b = new LinkedHashSet();
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
         for (bsv bsvVar : aba.ag(dal.b(ContextWrapper.class), dal.b(Activity.class))) {
             int i = bte.a;
             cde cdeVarT = dqc.bg(bsvVar).t();
@@ -24,7 +24,9 @@ public final class dmi extends bws {
             dmiVar.getClass();
             for (cbq cbqVar : listAj) {
                 if (!(cbqVar instanceof adu) && !(cbqVar instanceof cdk)) {
-                    throw new IllegalStateException(("This type [" + cbqVar + "] not support to hook, supported are Constructors and Methods").toString());
+                    throw new IllegalStateException(
+                            ("This type [" + cbqVar + "] not support to hook, supported are Constructors and Methods")
+                                    .toString());
                 }
             }
             ArrayList arrayList = new ArrayList(abb.ak(listAj, 10));

@@ -5,7 +5,7 @@ import android.content.Intent;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class cnl extends BaseHook implements boc {
+public final class cnl extends SwitchHook implements IStartActivity {
     public static final cnl a = new cnl("NewBizListHook" /* cnb.z(-476453607045930L) */);
     public static final String b = "订阅号" /* cnb.z(-481598977866538L) */;
     public static final String c = "订阅消息列表" /* cnb.z(-481616157735722L) */;
@@ -26,14 +26,14 @@ public final class cnl extends BaseHook implements boc {
         j = z;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final boolean _ab() {
         return j;
     }
 
-    @Override // me.hd.wauxv.obf.boc
-    public final void _cc(HookParamWrapper hookParam, Intent intent) {
-        if (z() && j) {
+    @Override // me.hd.wauxv.obf.IStartActivity
+    public final void onStartActivityIntent(HookParam hookParam, Intent intent) {
+        if (getIsEnabled() && j) {
             ComponentName component = intent.getComponent();
             String className = component != null ? component.getClassName() : null;
             if (className != null) {
@@ -59,21 +59,21 @@ public final class cnl extends BaseHook implements boc {
         }
     }
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return b;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return i;
     }

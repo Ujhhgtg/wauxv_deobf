@@ -67,7 +67,7 @@ public final class HandlerDelegate_me_hd_wauxv implements Handler.Callback {
             azk azkVar2 = (azk) bkc.e.getValue();
             if (azkVar2 != null) {
                 azk azkVar3 = new azk(azkVar2.a);
-                azkVar3.locateDex(intent);
+                azkVar3.dexFind(intent);
                 try {
                     objX = azkVar3.e();
                 } catch (Throwable th) {
@@ -100,7 +100,7 @@ public final class HandlerDelegate_me_hd_wauxv implements Handler.Callback {
             cdeVarT.ab = "getCallbacks";
             cdk cdkVar = (cdk) aaz.g(cdeVarT.aj());
             if (cdkVar != null) {
-                cdkVar.locateDex(message.obj);
+                cdkVar.dexFind(message.obj);
                 list = (List) cdkVar.i(new Object[0]);
                 if (list == null || list.isEmpty()) {
                     list = null;
@@ -127,7 +127,7 @@ public final class HandlerDelegate_me_hd_wauxv implements Handler.Callback {
                     azk azkVar5 = (azk) bkc.e.getValue();
                     if (azkVar5 != null) {
                         azk azkVar6 = new azk(azkVar5.a);
-                        azkVar6.locateDex(intent2);
+                        azkVar6.dexFind(intent2);
                         try {
                             objX2 = azkVar6.e();
                         } catch (Throwable th2) {

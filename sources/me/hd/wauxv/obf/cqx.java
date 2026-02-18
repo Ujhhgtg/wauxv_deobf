@@ -8,8 +8,8 @@ import me.hd.wauxv.data.bean.MsgInfoBean;
 public final class cqx extends bws implements bns {
     public static final cqx a = new cqx();
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
     }
 
     @Override // me.hd.wauxv.obf.bns

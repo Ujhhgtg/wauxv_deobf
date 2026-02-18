@@ -221,7 +221,7 @@ public final /* synthetic */ class act implements IHasInvokeMethod {
                 bagVar4.b = zbVar4;
                 return ensVar;
             case 21:
-                Object objE = ((HookParamWrapper) obj).getThisObject();
+                Object objE = ((HookParam) obj).getThisObject();
                 Activity activity = (Activity) (objE instanceof Activity ? objE : null);
                 if (activity == null) {
                     Class<Activity> clsBf5 = cnf.bf(dal.b(cls));
@@ -244,16 +244,16 @@ public final /* synthetic */ class act implements IHasInvokeMethod {
                         StringBuilder sb = new StringBuilder();
                         sb.append("onAddItems " /* cnb.z(-37529424231210L) */);
                         ewq.e(yg.n(sb,
-                                bndVar instanceof BaseHook ? ((BaseHook) bndVar).getResult() : "LoadHook" /*
-                                                                                                           * cnb.z(-
-                                                                                                           * 37512244362026L)
-                                                                                                           */,
+                                bndVar instanceof SwitchHook ? ((SwitchHook) bndVar).getResult() : "LoadHook" /*
+                                                                                                               * cnb.z(-
+                                                                                                               * 37512244362026L)
+                                                                                                               */,
                                 -37473589656362L), e, 12);
                     }
                 }
                 return ensVar;
             case 22:
-                HookParamWrapper hookParam = (HookParamWrapper) obj;
+                HookParam hookParam = (HookParam) obj;
                 Object objE2 = hookParam.getThisObject();
                 if (!(objE2 instanceof Activity)) {
                     objE2 = null;
@@ -294,7 +294,7 @@ public final /* synthetic */ class act implements IHasInvokeMethod {
                                 ArrayList arrayList2 = ewq.a;
                                 StringBuilder sb2 = new StringBuilder();
                                 sb2.append("onAddItems " /* cnb.z(-37439229917994L) */);
-                                ewq.e(yg.n(sb2, bndVar2 instanceof BaseHook ? ((BaseHook) bndVar2).getResult()
+                                ewq.e(yg.n(sb2, bndVar2 instanceof SwitchHook ? ((SwitchHook) bndVar2).getResult()
                                         : "LoadHook" /* cnb.z(-37903086385962L) */, -37881611549482L), e2, 12);
                             }
                         }
@@ -302,7 +302,7 @@ public final /* synthetic */ class act implements IHasInvokeMethod {
                 }
                 return ensVar;
             case 23:
-                HookParamWrapper hookParam2 = (HookParamWrapper) obj;
+                HookParam hookParam2 = (HookParam) obj;
                 hookParam2.getClass();
                 try {
                     objX2 = hookParam2.getArgs()[0];
@@ -362,16 +362,16 @@ public final /* synthetic */ class act implements IHasInvokeMethod {
                 boolean zBooleanValue = bool != null ? bool.booleanValue() : false;
                 for (Object obj3 : afu.b) {
                     try {
-                        ((gx) obj3).i(hookParam2, charSequence, zBooleanValue);
+                        ((AppBrandForceShareHook) obj3).i(hookParam2, charSequence, zBooleanValue);
                     } catch (Exception e3) {
                         ArrayList arrayList3 = ewq.a;
                         StringBuilder sb3 = new StringBuilder();
                         sb3.append("onCreateBottomSheetDialogMenu " /* cnb.z(-39286065855274L) */);
                         ewq.e(yg.n(sb3,
-                                obj3 instanceof BaseHook ? ((BaseHook) obj3).getResult() : "LoadHook" /*
-                                                                                                       * cnb.z(-
-                                                                                                       * 39152921869098L)
-                                                                                                       */,
+                                obj3 instanceof SwitchHook ? ((SwitchHook) obj3).getResult() : "LoadHook" /*
+                                                                                                           * cnb.z(-
+                                                                                                           * 39152921869098L)
+                                                                                                           */,
                                 -39114267163434L), e3, 12);
                     }
                 }

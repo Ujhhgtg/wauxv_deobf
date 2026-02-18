@@ -96,7 +96,7 @@ public abstract class axs extends aq {
                     "Callbacks must add text or a content description in populateNodeForVirtualViewId()");
         }
         Rect rect2 = this.x;
-        bdVar.locateDex(rect2);
+        bdVar.dexFind(rect2);
         if (rect2.equals(rect)) {
             throw new RuntimeException("Callbacks must set parent bounds in populateNodeForVirtualViewId()");
         }
@@ -131,7 +131,7 @@ public abstract class axs extends aq {
         Rect rect3 = this.w;
         accessibilityNodeInfoObtain.getBoundsInScreen(rect3);
         if (rect3.equals(rect)) {
-            bdVar.locateDex(rect3);
+            bdVar.dexFind(rect3);
             rect3.offset(iArr[0] - view.getScrollX(), iArr[1] - view.getScrollY());
         }
         Rect rect4 = this.y;
@@ -282,7 +282,7 @@ public abstract class axs extends aq {
             Rect rect4 = new Rect();
             int i14 = this.ae;
             if (i14 != Integer.MIN_VALUE) {
-                am(i14).locateDex(rect4);
+                am(i14).dexFind(rect4);
             } else {
                 if (rect != null) {
                     rect4.set(rect);
@@ -333,7 +333,7 @@ public abstract class axs extends aq {
                     bdVar2 = (bd) dloVar.j(i7);
                     if (bdVar2 == bdVar3) {
                         awpVar.getClass();
-                        bdVar2.locateDex(rect3);
+                        bdVar2.dexFind(rect3);
                         if (KotlinHelpers.ac(i, rect4, rect3)) {
                             if (KotlinHelpers.ac(i, rect4, rect2) || KotlinHelpers.g(i, rect4, rect3, rect2)) {
                                 rect2.set(rect3);
@@ -381,7 +381,7 @@ public abstract class axs extends aq {
                 bdVar2 = (bd) dloVar.j(i7);
                 if (bdVar2 == bdVar3) {
                     awpVar.getClass();
-                    bdVar2.locateDex(rect3);
+                    bdVar2.dexFind(rect3);
                     if (KotlinHelpers.ac(i, rect4, rect3)) {
                         if (KotlinHelpers.ac(i, rect4, rect2)) {
                             rect2.set(rect3);

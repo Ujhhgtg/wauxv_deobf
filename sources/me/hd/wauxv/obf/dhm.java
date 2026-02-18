@@ -5,7 +5,7 @@ import org.luckypray.dexkit.DexKitBridge;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class dhm extends BaseHook implements IRequiresDexLocate {
+public final class dhm extends SwitchHook implements IDexFind {
     public static final dhm a = new dhm("ShowHideEmojiHook" /* cnb.z(-458715392113450L) */);
     public static final String b = "聊天" /* cnb.z(-464745526197034L) */;
     public static final String c = "显示隐藏表情" /* cnb.z(-464698281556778L) */;
@@ -43,8 +43,8 @@ public final class dhm extends BaseHook implements IRequiresDexLocate {
             new dhk("[左太极]" /* cnb.z(-465926642203434L) */, "/:<&" /* cnb.z(-465952412007210L) */),
             new dhk("[右太极]" /* cnb.z(-465346821618474L) */, "/:&>" /* cnb.z(-465303871945514L) */));
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
         List listBf = dqc.bf(emn.bb(dhl.a));
         dhm dhmVar = a;
         aki akiVarAb = csb.ab(dhmVar, listBf);
@@ -52,22 +52,22 @@ public final class dhm extends BaseHook implements IRequiresDexLocate {
         akiVarAb.o();
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return b;
     }
 
-    @Override // me.hd.wauxv.obf.bng
-    public final void locateDex(DexKitBridge dexKitBridge) {
+    @Override // me.hd.wauxv.obf.IDexFind
+    public final void dexFind(DexKitBridge dexKitBridge) {
         emn.aj(dhl.a, dexKitBridge, new dhg(3));
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return i;
     }

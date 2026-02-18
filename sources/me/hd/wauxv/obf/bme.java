@@ -5,9 +5,9 @@ package me.hd.wauxv.obf;
 public final /* synthetic */ class bme implements IHasInvokeMethod {
     public final /* synthetic */ int a;
     public final /* synthetic */ IHasInvokeMethod b;
-    public final /* synthetic */ bmf c;
+    public final /* synthetic */ BaseBaseHook c;
 
-    public /* synthetic */ bme(IHasInvokeMethod bgfVar, bmf bmfVar, int i) {
+    public /* synthetic */ bme(IHasInvokeMethod bgfVar, BaseBaseHook bmfVar, int i) {
         this.a = i;
         this.b = bgfVar;
         this.c = bmfVar;
@@ -15,7 +15,7 @@ public final /* synthetic */ class bme implements IHasInvokeMethod {
 
     @Override // me.hd.wauxv.obf.bgf
     public final Object invoke(Object obj) {
-        HookParamWrapper hookParam = (HookParamWrapper) obj;
+        HookParam hookParam = (HookParam) obj;
         switch (this.a) {
             case 0:
                 if (!this.c.z()) {

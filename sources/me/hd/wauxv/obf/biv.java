@@ -4,7 +4,7 @@ package me.hd.wauxv.obf;
 /* JADX INFO: loaded from: classes.dex */
 public final class biv {
     public static final biu Companion = new biu();
-    public static final btt[] a = {null, null, null, null, ewz.am(btx.a, new amd(10))};
+    public static final IHasGetValue[] a = { null, null, null, null, ewz.am(btx.a, new amd(10)) };
     public final String b;
     public final int c;
     public final String d;
@@ -41,7 +41,8 @@ public final class biv {
         }
         StringBuilder sb = new StringBuilder();
         sb.append(" where (username in " /* cnb.z(-593036199328554L) */);
-        return yg.n(sb, la.u(this.f, null, "(" /* cnb.z(-592928825146154L) */, ")" /* cnb.z(-592937415080746L) */, new bep(2), 25), -592946005015338L);
+        return yg.n(sb, la.u(this.f, null, "(" /* cnb.z(-592928825146154L) */, ")" /* cnb.z(-592937415080746L) */,
+                new bep(2), 25), -592946005015338L);
     }
 
     public biv(String str, int i, String str2, String[] strArr) {

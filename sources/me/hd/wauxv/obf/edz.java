@@ -6,7 +6,8 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class edz {
     public static final edy Companion = new edy();
-    public static final btt[] a = { null, null, null, null, null, null, ewz.am(btx.a, new dtr(24)), null, null, null };
+    public static final IHasGetValue[] a = { null, null, null, null, null, null, ewz.am(btx.a, new dtr(24)), null, null,
+            null };
     public final String b;
     public final String c;
     public final String d;

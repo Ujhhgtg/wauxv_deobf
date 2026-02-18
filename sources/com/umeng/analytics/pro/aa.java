@@ -57,7 +57,7 @@ public class aa {
             editorEdit.commit();
         } catch (Exception unused) {
         }
-        long jH = locateDex(context);
+        long jH = dexFind(context);
         long jI = i(context);
         String str = this.b;
         long jA = w.a(context);

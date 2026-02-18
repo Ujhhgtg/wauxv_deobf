@@ -8,7 +8,7 @@ import org.luckypray.dexkit.DexKitBridge;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class ctp extends BaseHook implements bnf, bng {
+public final class ctp extends SwitchHook implements bnf, bng {
     public static final ctp b = new ctp("PlacedSortProHook" /* cnb.z(-525665342323498L) */);
     public static final String c = "菜单" /* cnb.z(-526807803624234L) */;
     public static final String i = "列表排序" /* cnb.z(-526829278460714L) */;
@@ -66,7 +66,7 @@ public final class ctp extends BaseHook implements bnf, bng {
         return arrayList;
     }
 
-    @Override // me.hd.wauxv.obf.bmf
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final void getThisObject() {
         List listBf = dqc.bf(emn.bb(ctl.a));
         ctp ctpVar = b;
@@ -75,27 +75,27 @@ public final class ctp extends BaseHook implements bnf, bng {
         akiVarAb.o();
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return i;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.bng
-    public final void locateDex(DexKitBridge dexKitBridge) {
+    @Override // me.hd.wauxv.obf.IDexFind
+    public final void dexFind(DexKitBridge dexKitBridge) {
         emn.aj(ctl.a, dexKitBridge, new crl(20));
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return j;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final IHasInvokeMethod p() {
         return m;
     }

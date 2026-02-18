@@ -9,8 +9,8 @@ import java.io.IOException;
 public final class cra extends bws implements IDatabaseOperationsListener {
     public static final cra a = new cra();
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
     }
 
     @Override // me.hd.wauxv.obf.IDatabaseOperationsListener

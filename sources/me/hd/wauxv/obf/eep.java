@@ -11,7 +11,11 @@ public final /* synthetic */ class eep implements bgx {
     static {
         eep eepVar = new eep();
         b = eepVar;
-        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.sp1Proto" /* cnb.z(-271768350620458L) */, eepVar, 17);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.sp1Proto" /*
+                                                                                                               * cnb.z(-
+                                                                                                               * 271768350620458L)
+                                                                                                               */,
+                eepVar, 17);
         bjs.y(-271961624148778L, cucVar, false, 1);
         bjs.y(-271935854345002L, cucVar, false, 2);
         bjs.y(-271914379508522L, cucVar, false, 3);
@@ -44,7 +48,7 @@ public final /* synthetic */ class eep implements bgx {
         String str7;
         dfx dfxVar = descriptor;
         acm acmVarP = ajtVar.p(dfxVar);
-        btt[] bttVarArr = eer.a;
+        IHasGetValue[] bttVarArr = eer.a;
         acmVarP.getClass();
         String str8 = null;
         String str9 = null;
@@ -223,7 +227,8 @@ public final /* synthetic */ class eep implements bgx {
         String str19 = str9;
         String str20 = str14;
         acmVarP._bp(dfxVar);
-        return new eer(i2, f, f2, str16, str17, str13, str20, num3, str15, str8, str12, num, str11, str10, str19, l, list, num2);
+        return new eer(i2, f, f2, str16, str17, str13, str20, num3, str15, str8, str12, num, str11, str10, str19, l,
+                list, num2);
     }
 
     @Override // me.hd.wauxv.obf.btd
@@ -231,7 +236,7 @@ public final /* synthetic */ class eep implements bgx {
         eer eerVar = (eer) obj;
         dfx dfxVar = descriptor;
         acn acnVarO = avtVar.o(dfxVar);
-        btt[] bttVarArr = eer.a;
+        IHasGetValue[] bttVarArr = eer.a;
         bbm bbmVar = bbm.b;
         acnVarO.m(dfxVar, 0, bbmVar, eerVar.b);
         acnVarO.m(dfxVar, 1, bbmVar, eerVar.c);
@@ -257,7 +262,7 @@ public final /* synthetic */ class eep implements bgx {
 
     @Override // me.hd.wauxv.obf.bgx
     public final btd[] d() {
-        btt[] bttVarArr = eer.a;
+        IHasGetValue[] bttVarArr = eer.a;
         bbm bbmVar = bbm.b;
         btd btdVarT = aye.t(bbmVar);
         btd btdVarT2 = aye.t(bbmVar);
@@ -267,7 +272,9 @@ public final /* synthetic */ class eep implements bgx {
         btd btdVarT5 = aye.t(dnhVar);
         btd btdVarT6 = aye.t(dnhVar);
         bqj bqjVar = bqj.b;
-        return new btd[]{btdVarT, btdVarT2, btdVarT3, btdVarT4, btdVarT5, btdVarT6, aye.t(bqjVar), aye.t(dnhVar), aye.t(dnhVar), aye.t(dnhVar), aye.t(bqjVar), aye.t(dnhVar), aye.t(dnhVar), aye.t(dnhVar), aye.t(bya.b), aye.t((btd) bttVarArr[15].getValue()), aye.t(bqjVar)};
+        return new btd[] { btdVarT, btdVarT2, btdVarT3, btdVarT4, btdVarT5, btdVarT6, aye.t(bqjVar), aye.t(dnhVar),
+                aye.t(dnhVar), aye.t(dnhVar), aye.t(bqjVar), aye.t(dnhVar), aye.t(dnhVar), aye.t(dnhVar), aye.t(bya.b),
+                aye.t((btd) bttVarArr[15].getValue()), aye.t(bqjVar) };
     }
 
     @Override // me.hd.wauxv.obf.btd

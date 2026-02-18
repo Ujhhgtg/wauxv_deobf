@@ -8,7 +8,7 @@ import me.hd.wauxv.data.bean.MsgInfoBean;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class cez extends BaseHook implements bnq {
+public final class cez extends SwitchHook implements bnq {
     public static final cez b = new cez("MoreMsgForwardSnsHook" /* cnb.z(-512518447430442L) */);
     public static final String c = "菜单" /* cnb.z(-512900699519786L) */;
     public static final String h = "多选消息转圈" /* cnb.z(-512922174356266L) */;
@@ -53,21 +53,21 @@ public final class cez extends BaseHook implements bnq {
         return arrayList2;
     }
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return h;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return i;
     }

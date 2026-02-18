@@ -6,7 +6,8 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class efz {
     public static final efy Companion = new efy();
-    public static final btt[] a = { null, null, null, null, null, null, null, null, null, null, null, null, null, null,
+    public static final IHasGetValue[] a = { null, null, null, null, null, null, null, null, null, null, null, null,
+            null, null,
             null, null, null, null, null, null, null, null, ewz.am(btx.a, new efq(1)), null, null, null, null, null,
             null, null };
     public final egx aa;

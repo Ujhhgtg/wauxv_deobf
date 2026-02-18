@@ -137,7 +137,7 @@ public class BottomSheetBehavior<V extends View> extends agr {
             return null;
         }
         WeakHashMap weakHashMap = eqz.a;
-        if (eqq.locateDex(view)) {
+        if (eqq.dexFind(view)) {
             return view;
         }
         if (!(view instanceof ViewGroup)) {

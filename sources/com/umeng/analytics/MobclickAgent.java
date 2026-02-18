@@ -74,7 +74,7 @@ public class MobclickAgent {
     }
 
     public static JSONObject getPreProperties(Context context) {
-        return getAgent().locateDex(context);
+        return getAgent().dexFind(context);
     }
 
     private static void init(Context context) {

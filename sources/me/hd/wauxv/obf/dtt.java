@@ -13,7 +13,11 @@ public final /* synthetic */ class dtt implements bgx {
     static {
         dtt dttVar = new dtt();
         b = dttVar;
-        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.MediaProto" /* cnb.z(-241918327913258L) */, dttVar, 42);
+        cuc cucVar = new cuc(
+                "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.MediaProto" /*
+                                                                                                    * cnb.z(-
+                                                                                                    * 241918327913258L)
+                                                                                                    */, dttVar, 42);
         bjs.y(-243769458817834L, cucVar, false, 1);
         bjs.y(-243722214177578L, cucVar, false, 2);
         bjs.y(-243735099079466L, cucVar, false, 3);
@@ -97,7 +101,7 @@ public final /* synthetic */ class dtt implements bgx {
         Integer num12;
         dfx dfxVar = descriptor;
         acm acmVarP = ajtVar.p(dfxVar);
-        btt[] bttVarArr = dtv.a;
+        IHasGetValue[] bttVarArr = dtv.a;
         acmVarP.getClass();
         String str18 = null;
         dub dubVar2 = null;
@@ -3280,7 +3284,10 @@ public final /* synthetic */ class dtt implements bgx {
         String str68 = str30;
         Integer num41 = num24;
         String str69 = str22;
-        return new dtv(i33, i2, str63, num15, str25, str26, num16, str67, num39, num38, str28, dueVar2, str29, num19, num20, num21, str68, num40, str64, str32, str33, str34, num23, str35, str36, num41, l4, str65, str38, num25, str39, str62, num37, str21, str69, bool2, str66, str18, f, num13, list2, str19, list18, dubVar17);
+        return new dtv(i33, i2, str63, num15, str25, str26, num16, str67, num39, num38, str28, dueVar2, str29, num19,
+                num20, num21, str68, num40, str64, str32, str33, str34, num23, str35, str36, num41, l4, str65, str38,
+                num25, str39, str62, num37, str21, str69, bool2, str66, str18, f, num13, list2, str19, list18,
+                dubVar17);
     }
 
     @Override // me.hd.wauxv.obf.btd
@@ -3288,7 +3295,7 @@ public final /* synthetic */ class dtt implements bgx {
         dtv dtvVar = (dtv) obj;
         dfx dfxVar = descriptor;
         acn acnVarO = avtVar.o(dfxVar);
-        btt[] bttVarArr = dtv.a;
+        IHasGetValue[] bttVarArr = dtv.a;
         dnh dnhVar = dnh.b;
         acnVarO.m(dfxVar, 0, dnhVar, dtvVar.b);
         bqj bqjVar = bqj.b;
@@ -3338,11 +3345,17 @@ public final /* synthetic */ class dtt implements bgx {
 
     @Override // me.hd.wauxv.obf.bgx
     public final btd[] d() {
-        btt[] bttVarArr = dtv.a;
+        IHasGetValue[] bttVarArr = dtv.a;
         dnh dnhVar = dnh.b;
         btd btdVarT = aye.t(dnhVar);
         bqj bqjVar = bqj.b;
-        return new btd[]{btdVarT, aye.t(bqjVar), aye.t(dnhVar), aye.t(dnhVar), aye.t(bqjVar), aye.t(dnhVar), aye.t(bqjVar), aye.t(bqjVar), aye.t(dnhVar), aye.t(duc.b), aye.t(dnhVar), aye.t(bqjVar), aye.t(bqjVar), aye.t(bqjVar), aye.t(dnhVar), aye.t(bqjVar), aye.t(dnhVar), aye.t(dnhVar), aye.t(dnhVar), aye.t(dnhVar), aye.t(bqjVar), aye.t(dnhVar), aye.t(dnhVar), aye.t(bqjVar), aye.t(bya.b), aye.t(dnhVar), aye.t(dnhVar), aye.t(bqjVar), aye.t(dnhVar), aye.t(dnhVar), aye.t(bqjVar), aye.t(dnhVar), aye.t(dnhVar), aye.t(pv.b), aye.t(dnhVar), aye.t(dnhVar), aye.t(bbm.b), aye.t(bqjVar), aye.t((btd) bttVarArr[38].getValue()), aye.t(dnhVar), aye.t((btd) bttVarArr[40].getValue()), aye.t(dtz.b)};
+        return new btd[] { btdVarT, aye.t(bqjVar), aye.t(dnhVar), aye.t(dnhVar), aye.t(bqjVar), aye.t(dnhVar),
+                aye.t(bqjVar), aye.t(bqjVar), aye.t(dnhVar), aye.t(duc.b), aye.t(dnhVar), aye.t(bqjVar), aye.t(bqjVar),
+                aye.t(bqjVar), aye.t(dnhVar), aye.t(bqjVar), aye.t(dnhVar), aye.t(dnhVar), aye.t(dnhVar), aye.t(dnhVar),
+                aye.t(bqjVar), aye.t(dnhVar), aye.t(dnhVar), aye.t(bqjVar), aye.t(bya.b), aye.t(dnhVar), aye.t(dnhVar),
+                aye.t(bqjVar), aye.t(dnhVar), aye.t(dnhVar), aye.t(bqjVar), aye.t(dnhVar), aye.t(dnhVar), aye.t(pv.b),
+                aye.t(dnhVar), aye.t(dnhVar), aye.t(bbm.b), aye.t(bqjVar), aye.t((btd) bttVarArr[38].getValue()),
+                aye.t(dnhVar), aye.t((btd) bttVarArr[40].getValue()), aye.t(dtz.b) };
     }
 
     @Override // me.hd.wauxv.obf.btd

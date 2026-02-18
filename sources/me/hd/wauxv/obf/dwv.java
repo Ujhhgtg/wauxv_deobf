@@ -6,7 +6,7 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class dwv {
     public static final dwu Companion = new dwu();
-    public static final btt[] a;
+    public static final IHasGetValue[] a;
     public final String b;
     public final Integer c;
     public final dyu d;
@@ -28,7 +28,8 @@ public final class dwv {
     static {
         dtr dtrVar = new dtr(6);
         btx btxVar = btx.a;
-        a = new btt[] { null, null, null, null, null, null, ewz.am(btxVar, dtrVar), null, null, null, null, null, null,
+        a = new IHasGetValue[] { null, null, null, null, null, null, ewz.am(btxVar, dtrVar), null, null, null, null,
+                null, null,
                 ewz.am(btxVar, new dtr(7)), null, null, null };
     }
 

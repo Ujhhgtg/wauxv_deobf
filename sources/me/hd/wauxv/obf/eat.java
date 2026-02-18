@@ -6,7 +6,7 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class eat {
     public static final eas Companion = new eas();
-    public static final btt[] a;
+    public static final IHasGetValue[] a;
     public final Integer aa;
     public final egu ab;
     public final dxz ac;
@@ -84,7 +84,8 @@ public final class eat {
     static {
         dtr dtrVar = new dtr(18);
         btx btxVar = btx.a;
-        a = new btt[] { null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null,
+        a = new IHasGetValue[] { null, null, null, null, null, null, null, null, null, null, null, null, null, null,
+                null, null,
                 null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null,
                 ewz.am(btxVar, dtrVar), null, null, null, null, null, null, null, ewz.am(btxVar, new dtr(19)), null,
                 null, null, null, null, null, null, null, null, null, ewz.am(btxVar, new dtr(20)), null, null, null,

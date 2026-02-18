@@ -56,7 +56,7 @@ public class d {
     public static void b(Context context) {
         ULog.i("walle", "[internal] begin by stateful--->>>");
         if (context != null) {
-            locateDex(context);
+            dexFind(context);
         }
     }
 
@@ -65,7 +65,7 @@ public class d {
         if (context == null || !UMEnvelopeBuild.getTransmissionSendFlag()) {
             return;
         }
-        locateDex(context);
+        dexFind(context);
     }
 
     public static JSONObject d(Context context) {

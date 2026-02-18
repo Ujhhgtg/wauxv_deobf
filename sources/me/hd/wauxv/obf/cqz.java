@@ -10,12 +10,12 @@ import java.util.Set;
 public final class cqz extends bws implements IDatabaseOperationsListener {
     public static final cqz a = new cqz();
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
     }
 
     @Override // me.hd.wauxv.obf.IDatabaseOperationsListener
-    public final void j(HookParamWrapper hookParam, String str, ContentValues contentValues, String str2,
+    public final void j(HookParam hookParam, String str, ContentValues contentValues, String str2,
             String[] strArr, int i)
             throws IOException {
         if (str.equals("chatroom" /* cnb.z(-399599462251306L) */)) {

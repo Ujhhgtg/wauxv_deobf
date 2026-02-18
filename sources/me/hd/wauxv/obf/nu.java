@@ -48,10 +48,10 @@ public class nu implements oz, esn, cdw, avu, aoh, bfh, app, cvg, ccv, dcc {
                 typedArrayObtainStyledAttributes.getResourceId(6, 0), new o(0)).m();
         typedArrayObtainStyledAttributes.recycle();
         nu nuVar = new nu(13);
-        cna.locateDex(rect.left);
-        cna.locateDex(rect.top);
-        cna.locateDex(rect.right);
-        cna.locateDex(rect.bottom);
+        cna.dexFind(rect.left);
+        cna.dexFind(rect.top);
+        cna.dexFind(rect.right);
+        cna.dexFind(rect.bottom);
         return nuVar;
     }
 

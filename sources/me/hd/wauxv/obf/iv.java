@@ -43,7 +43,7 @@ public final class iv implements ViewTreeObserver.OnGlobalLayoutListener {
             case 2:
                 tm tmVar = (tm) this.b;
                 ArrayList arrayList = tmVar.h;
-                if (tmVar.e() && arrayList.size() > 0 && !((tl) arrayList.get(0)).a.au) {
+                if (tmVar.initOnce() && arrayList.size() > 0 && !((tl) arrayList.get(0)).a.au) {
                     View view = tmVar.o;
                     if (view != null && view.isShown()) {
                         Iterator it = arrayList.iterator();
@@ -59,7 +59,7 @@ public final class iv implements ViewTreeObserver.OnGlobalLayoutListener {
             default:
                 dmh dmhVar = (dmh) this.b;
                 cck cckVar = dmhVar.h;
-                if (dmhVar.e() && !cckVar.au) {
+                if (dmhVar.initOnce() && !cckVar.au) {
                     View view2 = dmhVar.m;
                     if (view2 != null && view2.isShown()) {
                         cckVar.ag();

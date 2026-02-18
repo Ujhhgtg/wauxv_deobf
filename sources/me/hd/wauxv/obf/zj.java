@@ -46,9 +46,9 @@ public final /* synthetic */ class zj implements CompoundButton.OnCheckedChangeL
                     doo dooVar = obVar.c;
                     dooVar.aj(z);
                     if (z && !dooVar.v) {
-                        dooVar.w();
+                        dooVar.getAllBaseBaseHookInstances();
                     }
-                    if (dooVar.q()) {
+                    if (dooVar.getAllSwitchHookInstances()) {
                         Context context = r1.getContext();
                         StringBuilder sb = new StringBuilder();
                         sb.append("重启 " /* cnb.z(-57990648429354L) */);

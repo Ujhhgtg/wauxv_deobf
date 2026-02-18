@@ -47,10 +47,10 @@ public final /* synthetic */ class efq implements bfu {
             case 14:
                 return new ko(eac.b);
             case 15:
-                eta.a.u(ete.b);
+                eta.a.u(VnHomeShareMenuCopyOrDownHook.b);
                 return ensVar;
             case 16:
-                etf.a.u(etg.b);
+                etf.a.u(VnPreviewShareMenuCopyOrDownHook.b);
                 return ensVar;
             case 17:
                 etv.a.u(etw.b);
@@ -72,7 +72,7 @@ public final /* synthetic */ class efq implements bfu {
                 bmuVarBh.v(false);
                 cde cdeVarT = bmuVarBh.t();
                 cdeVarT.ab = "newParser";
-                cdeVarT.z(Arrays.copyOf(new Object[]{dal.b(Integer.TYPE)}, 1));
+                cdeVarT.z(Arrays.copyOf(new Object[] { dal.b(Integer.TYPE) }, 1));
                 return (cdk) aaz.g(cdeVarT.aj());
         }
     }

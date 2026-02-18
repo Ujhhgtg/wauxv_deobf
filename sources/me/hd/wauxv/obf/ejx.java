@@ -6,7 +6,7 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class ejx {
     public static final ejw Companion = new ejw();
-    public static final btt[] a;
+    public static final IHasGetValue[] a;
     public final String b;
     public final String c;
     public final Double d;
@@ -18,7 +18,7 @@ public final class ejx {
     static {
         efq efqVar = new efq(13);
         btx btxVar = btx.a;
-        a = new btt[] { null, null, null, null, ewz.am(btxVar, efqVar), ewz.am(btxVar, new efq(14)), null };
+        a = new IHasGetValue[] { null, null, null, null, ewz.am(btxVar, efqVar), ewz.am(btxVar, new efq(14)), null };
     }
 
     public /* synthetic */ ejx(int i, String str, String str2, Double d, Integer num, List list, List list2,

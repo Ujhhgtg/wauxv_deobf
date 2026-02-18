@@ -23,16 +23,16 @@ public final class chh extends BaseHook implements bnc {
         j = new cgu(5);
     }
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return b;
     }
@@ -41,7 +41,7 @@ public final class chh extends BaseHook implements bnc {
     public final void i(View view, Object obj, Object obj2, MsgInfoBean msgInfoBean) {
         View viewV;
         int color;
-        if (z()) {
+        if (getIsEnabled()) {
             int type = msgInfoBean.getType();
             if ((type == ewg.a.w || type == ewg.k.w || type == ewg.r.w || type == ewg.s.w)
                     && (viewV = cnh.v(view, bhs.v())) != null) {
@@ -59,12 +59,12 @@ public final class chh extends BaseHook implements bnc {
         }
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return h;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final bgf p() {
         return j;
     }

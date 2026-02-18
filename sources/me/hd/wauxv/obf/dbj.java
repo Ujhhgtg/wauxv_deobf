@@ -132,12 +132,12 @@ public final /* synthetic */ class dbj implements IHasInvokeMethod {
                 akiVarAb.o();
                 return ens.a;
             case 9:
-                HookParamWrapper hookParam = (HookParamWrapper) obj;
+                HookParam hookParam = (HookParam) obj;
                 hookParam.getClass();
                 new ek(hookParam, 2, 8).q(Float.valueOf(ddg.a.j()));
                 return ens.a;
             case 10:
-                HookParamWrapper hookParam2 = (HookParamWrapper) obj;
+                HookParam hookParam2 = (HookParam) obj;
                 hookParam2.getClass();
                 new ek(hookParam2, 3, 8).q(Float.valueOf(ddg.a.j()));
                 return ens.a;
@@ -155,7 +155,7 @@ public final /* synthetic */ class dbj implements IHasInvokeMethod {
                 ammVar3.d = new dbj(4);
                 return ens.a;
             case 14:
-                HookParamWrapper hookParam3 = (HookParamWrapper) obj;
+                HookParam hookParam3 = (HookParam) obj;
                 hookParam3.getClass();
                 new ek(hookParam3, 2, 8).q(Float.valueOf(ddg.a.j()));
                 return ens.a;
@@ -246,7 +246,7 @@ public final /* synthetic */ class dbj implements IHasInvokeMethod {
                 throw new NullPointerException("Missing required view with ID: "
                         /* cnb.z(-660291092216618L) */.concat(viewK2.getResources().getResourceName(i)));
             case 19:
-                Object objE = ((HookParamWrapper) obj).getThisObject();
+                Object objE = ((HookParam) obj).getThisObject();
                 if (!(objE instanceof Activity)) {
                     objE = null;
                 }
@@ -310,7 +310,7 @@ public final /* synthetic */ class dbj implements IHasInvokeMethod {
                 bahVar7.d = cdjVar8;
                 return ens.a;
             case 27:
-                ((HookParamWrapper) obj).setResultTrue();
+                ((HookParam) obj).setResultTrue();
                 return ens.a;
             case 28:
                 ((amm) obj).c = new dbj(29);

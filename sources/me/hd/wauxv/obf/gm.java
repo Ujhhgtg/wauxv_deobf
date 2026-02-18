@@ -5,14 +5,14 @@ import org.luckypray.dexkit.DexKitBridge;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes2.dex */
-public final class gm extends BaseHook implements IRequiresDexLocate {
+public final class gm extends SwitchHook implements IDexFind {
     public static final gm a = new gm("AntiUploadCheckHook" /* cnb.z(-636862045616938L) */);
     public static final String b = "测试-杂项" /* cnb.z(-633872748378922L) */;
     public static final String c = "拦截检测包上报" /* cnb.z(-633898518182698L) */;
     public static final String d = "拦截客户端中可能上报的部分检测包体" /* cnb.z(-634413914258218L) */;
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
         List listBf = dqc.bf(emn.bb(gj.a));
         gm gmVar = a;
         aki akiVarAb = csb.ab(gmVar, listBf);
@@ -26,24 +26,24 @@ public final class gm extends BaseHook implements IRequiresDexLocate {
         akiVarAb3.o();
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return b;
     }
 
-    @Override // me.hd.wauxv.obf.bng
-    public final void locateDex(DexKitBridge dexKitBridge) {
+    @Override // me.hd.wauxv.obf.IDexFind
+    public final void dexFind(DexKitBridge dexKitBridge) {
         emn.aj(gj.a, dexKitBridge, new gi(2));
         emn.aj(gk.a, dexKitBridge, new gi(3));
         emn.aj(gl.a, dexKitBridge, new gi(4));
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return d;
     }

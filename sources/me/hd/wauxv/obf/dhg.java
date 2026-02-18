@@ -59,7 +59,7 @@ public final /* synthetic */ class dhg implements IHasInvokeMethod {
         ens ensVar = ens.a;
         switch (i) {
             case 0:
-                Object objE = ((HookParamWrapper) obj).getThisObject();
+                Object objE = ((HookParam) obj).getThisObject();
                 Activity activity = (Activity) (!(objE instanceof Activity) ? null : objE);
                 if (activity == null) {
                     Class<Activity> clsBf = cnf.bf(dal.b(cls2));
@@ -80,7 +80,7 @@ public final /* synthetic */ class dhg implements IHasInvokeMethod {
                         "ID: " /* cnb.z(-593890897820458L) */.concat(stringExtra)), 1);
                 return ensVar;
             case 1:
-                HookParamWrapper hookParam = (HookParamWrapper) obj;
+                HookParam hookParam = (HookParam) obj;
                 Object objE2 = hookParam.getThisObject();
                 if (!(objE2 instanceof Activity)) {
                     objE2 = null;
@@ -125,7 +125,7 @@ public final /* synthetic */ class dhg implements IHasInvokeMethod {
                 }
                 return ensVar;
             case 2:
-                Object objF = ((HookParamWrapper) obj).getResult();
+                Object objF = ((HookParam) obj).getResult();
                 if (!(objF instanceof List) || ((objF instanceof IEmpty) && !(objF instanceof IEmpty3))) {
                     objF = null;
                 }
@@ -163,7 +163,7 @@ public final /* synthetic */ class dhg implements IHasInvokeMethod {
                 bahVar.d = cdjVar;
                 return ensVar;
             case 5:
-                HookParamWrapper hookParam2 = (HookParamWrapper) obj;
+                HookParam hookParam2 = (HookParam) obj;
                 hookParam2.getClass();
                 try {
                     objX2 = hookParam2.getArgs()[1];
@@ -277,7 +277,7 @@ public final /* synthetic */ class dhg implements IHasInvokeMethod {
                 bzyVar.i().show();
                 return ensVar;
             case 11:
-                final HookParamWrapper hookParam3 = (HookParamWrapper) obj;
+                final HookParam hookParam3 = (HookParam) obj;
                 Object objE4 = hookParam3.getThisObject();
                 ViewGroup viewGroup = (ViewGroup) (!(objE4 instanceof ViewGroup) ? null : objE4);
                 if (viewGroup != null) {
@@ -286,7 +286,7 @@ public final /* synthetic */ class dhg implements IHasInvokeMethod {
                         public final boolean onLongClick(View view2) throws IllegalAccessException {
                             Object objX9;
                             diq diqVar = diq.a;
-                            HookParamWrapper hookParam4 = hookParam3;
+                            HookParam hookParam4 = hookParam3;
                             hookParam4.getClass();
                             try {
                                 objX9 = hookParam4.getArgs()[0];
@@ -473,7 +473,7 @@ public final /* synthetic */ class dhg implements IHasInvokeMethod {
                 return ensVar;
             case 18:
                 int i15 = bte.a;
-                bmu bmuVarBi = dqc.bi(((HookParamWrapper) obj).getThisObject());
+                bmu bmuVarBi = dqc.bi(((HookParam) obj).getThisObject());
                 azg azgVarR3 = bmuVarBi.r();
                 djb djbVar = djb.a;
                 azgVarR3.a = emn.bb(djbVar).getDeclaringClass();
@@ -497,7 +497,7 @@ public final /* synthetic */ class dhg implements IHasInvokeMethod {
                 }
                 return ensVar;
             case 19:
-                HookParamWrapper hookParam4 = (HookParamWrapper) obj;
+                HookParam hookParam4 = (HookParam) obj;
                 int i16 = bte.a;
                 bmu bmuVarBi2 = dqc.bi(hookParam4.getThisObject());
                 try {
@@ -568,7 +568,7 @@ public final /* synthetic */ class dhg implements IHasInvokeMethod {
                 bahVar8.d = cdjVar8;
                 return ensVar;
             case 27:
-                HookParamWrapper hookParam5 = (HookParamWrapper) obj;
+                HookParam hookParam5 = (HookParam) obj;
                 hookParam5.getClass();
                 try {
                     objX7 = hookParam5.getArgs()[0];
@@ -591,16 +591,16 @@ public final /* synthetic */ class dhg implements IHasInvokeMethod {
                         StringBuilder sb = new StringBuilder();
                         sb.append("onCreateMenuItems " /* cnb.z(-55310588836650L) */);
                         ewq.e(yg.n(sb,
-                                boaVar instanceof BaseHook ? ((BaseHook) boaVar).getResult() : "LoadHook" /*
-                                                                                                           * cnb.z(-
-                                                                                                           * 56895431768874L)
-                                                                                                           */,
+                                boaVar instanceof SwitchHook ? ((SwitchHook) boaVar).getResult() : "LoadHook" /*
+                                                                                                               * cnb.z(-
+                                                                                                               * 56895431768874L)
+                                                                                                               */,
                                 -56805237455658L), e, 12);
                     }
                 }
                 return ensVar;
             case 28:
-                HookParamWrapper hookParam6 = (HookParamWrapper) obj;
+                HookParam hookParam6 = (HookParam) obj;
                 hookParam6.getClass();
                 try {
                     objX8 = hookParam6.getArgs()[0];
@@ -642,10 +642,11 @@ public final /* synthetic */ class dhg implements IHasInvokeMethod {
                         StringBuilder sb2 = new StringBuilder();
                         sb2.append("onCreateMenuItems " /* cnb.z(-57114475100970L) */);
                         ewq.e(yg.n(sb2,
-                                boaVar2 instanceof BaseHook ? ((BaseHook) boaVar2).getResult() : "LoadHook" /*
-                                                                                                             * cnb.z(-
-                                                                                                             * 57050050591530L)
-                                                                                                             */,
+                                boaVar2 instanceof SwitchHook ? ((SwitchHook) boaVar2).getResult() : "LoadHook" /*
+                                                                                                                 * cnb.z
+                                                                                                                 * (-
+                                                                                                                 * 57050050591530L)
+                                                                                                                 */,
                                 -57028575755050L), e2, 12);
                     }
                 }

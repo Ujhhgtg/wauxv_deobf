@@ -35,7 +35,8 @@ public final class ass extends ase implements View.OnClickListener {
         this.h = codeEditor.getEventHandler();
         awy awyVar = new awy(codeEditor.i);
         this.j = awyVar;
-        View viewInflate = LayoutInflater.from(codeEditor.getContext()).inflate(R.layout.text_compose_panel, (ViewGroup) null);
+        View viewInflate = LayoutInflater.from(codeEditor.getContext()).inflate(R.layout.text_compose_panel,
+                (ViewGroup) null);
         this.g = viewInflate;
         ImageButton imageButton = (ImageButton) viewInflate.findViewById(R.id.panel_btn_select_all);
         this.b = imageButton;
@@ -90,7 +91,8 @@ public final class ass extends ase implements View.OnClickListener {
                                         }
                                         assVar.l = -1;
                                     } else {
-                                        if (i2 == 3 && udVar.a == assVar.l && !assVar.z.isShowing() && codeEditor2.getText().e <= 0 && codeEditor2.dw()) {
+                                        if (i2 == 3 && udVar.a == assVar.l && !assVar.z.isShowing()
+                                                && codeEditor2.getText().e <= 0 && codeEditor2.dw()) {
                                             codeEditor2.ei(new dh(assVar, 11));
                                             z = true;
                                         } else {
@@ -128,7 +130,7 @@ public final class ass extends ase implements View.OnClickListener {
                             assVar3.r();
                         }
                         if (!((CodeEditor) bjyVar.c).getCursor().h() && bjyVar.a == 0 && !bjyVar.l) {
-                            assVar3.q();
+                            assVar3.getAllSwitchHookInstances();
                             assVar3.a.eh(new asr(assVar3, 0), 100L);
                             break;
                         }
@@ -141,7 +143,7 @@ public final class ass extends ase implements View.OnClickListener {
                             int i3 = bxyVar.a.a;
                             if (i3 >= codeEditor3.getCursor().c.a && i3 <= codeEditor3.getCursor().d.a) {
                                 assVar4.m = 0;
-                                assVar4.q();
+                                assVar4.getAllSwitchHookInstances();
                             }
                             bxyVar.b = 2;
                             break;
@@ -164,7 +166,7 @@ public final class ass extends ase implements View.OnClickListener {
                         this.b.p();
                         break;
                     default:
-                        this.b.q();
+                        this.b.getAllSwitchHookInstances();
                         break;
                 }
             }
@@ -200,7 +202,8 @@ public final class ass extends ase implements View.OnClickListener {
                                         }
                                         assVar.l = -1;
                                     } else {
-                                        if (i22 == 3 && udVar.a == assVar.l && !assVar.z.isShowing() && codeEditor2.getText().e <= 0 && codeEditor2.dw()) {
+                                        if (i22 == 3 && udVar.a == assVar.l && !assVar.z.isShowing()
+                                                && codeEditor2.getText().e <= 0 && codeEditor2.dw()) {
                                             codeEditor2.ei(new dh(assVar, 11));
                                             z = true;
                                         } else {
@@ -238,7 +241,7 @@ public final class ass extends ase implements View.OnClickListener {
                             assVar3.r();
                         }
                         if (!((CodeEditor) bjyVar.c).getCursor().h() && bjyVar.a == 0 && !bjyVar.l) {
-                            assVar3.q();
+                            assVar3.getAllSwitchHookInstances();
                             assVar3.a.eh(new asr(assVar3, 0), 100L);
                             break;
                         }
@@ -251,7 +254,7 @@ public final class ass extends ase implements View.OnClickListener {
                             int i3 = bxyVar.a.a;
                             if (i3 >= codeEditor3.getCursor().c.a && i3 <= codeEditor3.getCursor().d.a) {
                                 assVar4.m = 0;
-                                assVar4.q();
+                                assVar4.getAllSwitchHookInstances();
                             }
                             bxyVar.b = 2;
                             break;
@@ -274,7 +277,7 @@ public final class ass extends ase implements View.OnClickListener {
                         this.b.p();
                         break;
                     default:
-                        this.b.q();
+                        this.b.getAllSwitchHookInstances();
                         break;
                 }
             }
@@ -310,7 +313,8 @@ public final class ass extends ase implements View.OnClickListener {
                                         }
                                         assVar.l = -1;
                                     } else {
-                                        if (i22 == 3 && udVar.a == assVar.l && !assVar.z.isShowing() && codeEditor2.getText().e <= 0 && codeEditor2.dw()) {
+                                        if (i22 == 3 && udVar.a == assVar.l && !assVar.z.isShowing()
+                                                && codeEditor2.getText().e <= 0 && codeEditor2.dw()) {
                                             codeEditor2.ei(new dh(assVar, 11));
                                             z = true;
                                         } else {
@@ -348,7 +352,7 @@ public final class ass extends ase implements View.OnClickListener {
                             assVar3.r();
                         }
                         if (!((CodeEditor) bjyVar.c).getCursor().h() && bjyVar.a == 0 && !bjyVar.l) {
-                            assVar3.q();
+                            assVar3.getAllSwitchHookInstances();
                             assVar3.a.eh(new asr(assVar3, 0), 100L);
                             break;
                         }
@@ -361,7 +365,7 @@ public final class ass extends ase implements View.OnClickListener {
                             int i32 = bxyVar.a.a;
                             if (i32 >= codeEditor3.getCursor().c.a && i32 <= codeEditor3.getCursor().d.a) {
                                 assVar4.m = 0;
-                                assVar4.q();
+                                assVar4.getAllSwitchHookInstances();
                             }
                             bxyVar.b = 2;
                             break;
@@ -384,7 +388,7 @@ public final class ass extends ase implements View.OnClickListener {
                         this.b.p();
                         break;
                     default:
-                        this.b.q();
+                        this.b.getAllSwitchHookInstances();
                         break;
                 }
             }
@@ -420,7 +424,8 @@ public final class ass extends ase implements View.OnClickListener {
                                         }
                                         assVar.l = -1;
                                     } else {
-                                        if (i22 == 3 && udVar.a == assVar.l && !assVar.z.isShowing() && codeEditor2.getText().e <= 0 && codeEditor2.dw()) {
+                                        if (i22 == 3 && udVar.a == assVar.l && !assVar.z.isShowing()
+                                                && codeEditor2.getText().e <= 0 && codeEditor2.dw()) {
                                             codeEditor2.ei(new dh(assVar, 11));
                                             z = true;
                                         } else {
@@ -458,7 +463,7 @@ public final class ass extends ase implements View.OnClickListener {
                             assVar3.r();
                         }
                         if (!((CodeEditor) bjyVar.c).getCursor().h() && bjyVar.a == 0 && !bjyVar.l) {
-                            assVar3.q();
+                            assVar3.getAllSwitchHookInstances();
                             assVar3.a.eh(new asr(assVar3, 0), 100L);
                             break;
                         }
@@ -471,7 +476,7 @@ public final class ass extends ase implements View.OnClickListener {
                             int i32 = bxyVar.a.a;
                             if (i32 >= codeEditor3.getCursor().c.a && i32 <= codeEditor3.getCursor().d.a) {
                                 assVar4.m = 0;
-                                assVar4.q();
+                                assVar4.getAllSwitchHookInstances();
                             }
                             bxyVar.b = 2;
                             break;
@@ -494,7 +499,7 @@ public final class ass extends ase implements View.OnClickListener {
                         this.b.p();
                         break;
                     default:
-                        this.b.q();
+                        this.b.getAllSwitchHookInstances();
                         break;
                 }
             }
@@ -530,7 +535,8 @@ public final class ass extends ase implements View.OnClickListener {
                                         }
                                         assVar.l = -1;
                                     } else {
-                                        if (i22 == 3 && udVar.a == assVar.l && !assVar.z.isShowing() && codeEditor2.getText().e <= 0 && codeEditor2.dw()) {
+                                        if (i22 == 3 && udVar.a == assVar.l && !assVar.z.isShowing()
+                                                && codeEditor2.getText().e <= 0 && codeEditor2.dw()) {
                                             codeEditor2.ei(new dh(assVar, 11));
                                             z = true;
                                         } else {
@@ -568,7 +574,7 @@ public final class ass extends ase implements View.OnClickListener {
                             assVar3.r();
                         }
                         if (!((CodeEditor) bjyVar.c).getCursor().h() && bjyVar.a == 0 && !bjyVar.l) {
-                            assVar3.q();
+                            assVar3.getAllSwitchHookInstances();
                             assVar3.a.eh(new asr(assVar3, 0), 100L);
                             break;
                         }
@@ -581,7 +587,7 @@ public final class ass extends ase implements View.OnClickListener {
                             int i32 = bxyVar.a.a;
                             if (i32 >= codeEditor3.getCursor().c.a && i32 <= codeEditor3.getCursor().d.a) {
                                 assVar4.m = 0;
-                                assVar4.q();
+                                assVar4.getAllSwitchHookInstances();
                             }
                             bxyVar.b = 2;
                             break;
@@ -604,7 +610,7 @@ public final class ass extends ase implements View.OnClickListener {
                         this.b.p();
                         break;
                     default:
-                        this.b.q();
+                        this.b.getAllSwitchHookInstances();
                         break;
                 }
             }
@@ -640,7 +646,8 @@ public final class ass extends ase implements View.OnClickListener {
                                         }
                                         assVar.l = -1;
                                     } else {
-                                        if (i22 == 3 && udVar.a == assVar.l && !assVar.z.isShowing() && codeEditor2.getText().e <= 0 && codeEditor2.dw()) {
+                                        if (i22 == 3 && udVar.a == assVar.l && !assVar.z.isShowing()
+                                                && codeEditor2.getText().e <= 0 && codeEditor2.dw()) {
                                             codeEditor2.ei(new dh(assVar, 11));
                                             z = true;
                                         } else {
@@ -678,7 +685,7 @@ public final class ass extends ase implements View.OnClickListener {
                             assVar3.r();
                         }
                         if (!((CodeEditor) bjyVar.c).getCursor().h() && bjyVar.a == 0 && !bjyVar.l) {
-                            assVar3.q();
+                            assVar3.getAllSwitchHookInstances();
                             assVar3.a.eh(new asr(assVar3, 0), 100L);
                             break;
                         }
@@ -691,7 +698,7 @@ public final class ass extends ase implements View.OnClickListener {
                             int i32 = bxyVar.a.a;
                             if (i32 >= codeEditor3.getCursor().c.a && i32 <= codeEditor3.getCursor().d.a) {
                                 assVar4.m = 0;
-                                assVar4.q();
+                                assVar4.getAllSwitchHookInstances();
                             }
                             bxyVar.b = 2;
                             break;
@@ -714,7 +721,7 @@ public final class ass extends ase implements View.OnClickListener {
                         this.b.p();
                         break;
                     default:
-                        this.b.q();
+                        this.b.getAllSwitchHookInstances();
                         break;
                 }
             }
@@ -750,7 +757,8 @@ public final class ass extends ase implements View.OnClickListener {
                                         }
                                         assVar.l = -1;
                                     } else {
-                                        if (i22 == 3 && udVar.a == assVar.l && !assVar.z.isShowing() && codeEditor2.getText().e <= 0 && codeEditor2.dw()) {
+                                        if (i22 == 3 && udVar.a == assVar.l && !assVar.z.isShowing()
+                                                && codeEditor2.getText().e <= 0 && codeEditor2.dw()) {
                                             codeEditor2.ei(new dh(assVar, 11));
                                             z = true;
                                         } else {
@@ -788,7 +796,7 @@ public final class ass extends ase implements View.OnClickListener {
                             assVar3.r();
                         }
                         if (!((CodeEditor) bjyVar.c).getCursor().h() && bjyVar.a == 0 && !bjyVar.l) {
-                            assVar3.q();
+                            assVar3.getAllSwitchHookInstances();
                             assVar3.a.eh(new asr(assVar3, 0), 100L);
                             break;
                         }
@@ -801,7 +809,7 @@ public final class ass extends ase implements View.OnClickListener {
                             int i32 = bxyVar.a.a;
                             if (i32 >= codeEditor3.getCursor().c.a && i32 <= codeEditor3.getCursor().d.a) {
                                 assVar4.m = 0;
-                                assVar4.q();
+                                assVar4.getAllSwitchHookInstances();
                             }
                             bxyVar.b = 2;
                             break;
@@ -824,7 +832,7 @@ public final class ass extends ase implements View.OnClickListener {
                         this.b.p();
                         break;
                     default:
-                        this.b.q();
+                        this.b.getAllSwitchHookInstances();
                         break;
                 }
             }
@@ -860,7 +868,8 @@ public final class ass extends ase implements View.OnClickListener {
                                         }
                                         assVar.l = -1;
                                     } else {
-                                        if (i22 == 3 && udVar.a == assVar.l && !assVar.z.isShowing() && codeEditor2.getText().e <= 0 && codeEditor2.dw()) {
+                                        if (i22 == 3 && udVar.a == assVar.l && !assVar.z.isShowing()
+                                                && codeEditor2.getText().e <= 0 && codeEditor2.dw()) {
                                             codeEditor2.ei(new dh(assVar, 11));
                                             z = true;
                                         } else {
@@ -898,7 +907,7 @@ public final class ass extends ase implements View.OnClickListener {
                             assVar3.r();
                         }
                         if (!((CodeEditor) bjyVar.c).getCursor().h() && bjyVar.a == 0 && !bjyVar.l) {
-                            assVar3.q();
+                            assVar3.getAllSwitchHookInstances();
                             assVar3.a.eh(new asr(assVar3, 0), 100L);
                             break;
                         }
@@ -911,7 +920,7 @@ public final class ass extends ase implements View.OnClickListener {
                             int i32 = bxyVar.a.a;
                             if (i32 >= codeEditor3.getCursor().c.a && i32 <= codeEditor3.getCursor().d.a) {
                                 assVar4.m = 0;
-                                assVar4.q();
+                                assVar4.getAllSwitchHookInstances();
                             }
                             bxyVar.b = 2;
                             break;
@@ -934,7 +943,7 @@ public final class ass extends ase implements View.OnClickListener {
                         this.b.p();
                         break;
                     default:
-                        this.b.q();
+                        this.b.getAllSwitchHookInstances();
                         break;
                 }
             }
@@ -1013,8 +1022,16 @@ public final class ass extends ase implements View.OnClickListener {
         this.al = iMin;
         this.am = i2;
         an(false);
-        int iMax = Math.max(0, Math.min(codeEditor.getCursor().h() ? Math.min(s(codeEditor.getLeftHandleDescriptor().a), s(codeEditor.getRightHandleDescriptor().a)) : s(codeEditor.getInsertHandleDescriptor().a), (codeEditor.getHeight() - this.am) - 5));
-        int iEb = (int) (((((codeEditor.eb() + codeEditor.j.r(codeEditor.getCursor().d.b, codeEditor.getCursor().d.c)[1]) - codeEditor.getOffsetX()) + ((codeEditor.eb() + codeEditor.j.r(codeEditor.getCursor().c.b, codeEditor.getCursor().c.c)[1]) - codeEditor.getOffsetX())) / 2.0f) - (view.getMeasuredWidth() / 2.0f));
+        int iMax = Math.max(0,
+                Math.min(codeEditor.getCursor().h()
+                        ? Math.min(s(codeEditor.getLeftHandleDescriptor().a),
+                                s(codeEditor.getRightHandleDescriptor().a))
+                        : s(codeEditor.getInsertHandleDescriptor().a), (codeEditor.getHeight() - this.am) - 5));
+        int iEb = (int) (((((codeEditor.eb()
+                + codeEditor.j.r(codeEditor.getCursor().d.b, codeEditor.getCursor().d.c)[1]) - codeEditor.getOffsetX())
+                + ((codeEditor.eb() + codeEditor.j.r(codeEditor.getCursor().c.b, codeEditor.getCursor().c.c)[1])
+                        - codeEditor.getOffsetX()))
+                / 2.0f) - (view.getMeasuredWidth() / 2.0f));
         CodeEditor codeEditor2 = this.aa;
         int offsetX = codeEditor2.getOffsetX() + iEb;
         int offsetY = codeEditor2.getOffsetY() + iMax;
@@ -1023,7 +1040,8 @@ public final class ass extends ase implements View.OnClickListener {
         this.ai = codeEditor2.getOffsetY();
         this.ah = codeEditor2.getOffsetX();
         an(false);
-        if (!this.n || codeEditor.getSnippetController().l() || !codeEditor.hasFocus() || codeEditor.dy() || this.z.isShowing()) {
+        if (!this.n || codeEditor.getSnippetController().l() || !codeEditor.hasFocus() || codeEditor.dy()
+                || this.z.isShowing()) {
             return;
         }
         an(true);

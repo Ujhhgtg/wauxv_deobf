@@ -62,7 +62,7 @@ public final class co extends bcy {
                 cwVar.ag();
                 return true;
             default:
-                return super.e();
+                return super.initOnce();
         }
     }
 

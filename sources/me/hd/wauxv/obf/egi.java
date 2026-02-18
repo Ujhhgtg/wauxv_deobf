@@ -6,7 +6,7 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class egi {
     public static final egh Companion = new egh();
-    public static final btt[] a;
+    public static final IHasGetValue[] a;
     public final String b;
     public final Long c;
     public final Integer d;
@@ -25,7 +25,7 @@ public final class egi {
     static {
         efq efqVar = new efq(2);
         btx btxVar = btx.a;
-        a = new btt[] { null, null, null, null, ewz.am(btxVar, efqVar), null, null, null, null,
+        a = new IHasGetValue[] { null, null, null, null, ewz.am(btxVar, efqVar), null, null, null, null,
                 ewz.am(btxVar, new efq(3)), null, null, null, null };
     }
 

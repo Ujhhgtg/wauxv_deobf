@@ -5,7 +5,7 @@ import org.luckypray.dexkit.DexKitBridge;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes2.dex */
-public final class CommandProcessorHook extends BaseHook implements IRequiresDexLocate {
+public final class CommandProcessorHook extends SwitchHook implements IDexFind {
     public static final CommandProcessorHook a = new CommandProcessorHook("CommandProcessorHook" /*
                                                                                                   * cnb.z(-
                                                                                                   * 633563510733610L)
@@ -14,8 +14,8 @@ public final class CommandProcessorHook extends BaseHook implements IRequiresDex
     public static final String c = "强开更多命令处理" /* cnb.z(-635238547979050L) */;
     public static final String d = "输入框点击发送时处理隐藏的其他命令" /* cnb.z(-635148353665834L) */;
 
-    @Override // me.hd.wauxv.obf.bmf
-    public final void e() {
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void initOnce() {
         List listBf = dqc.bf(emn.bb(abk.a));
         CommandProcessorHook ablVar = a;
         aki akiVarAb = csb.ab(ablVar, listBf);
@@ -23,22 +23,22 @@ public final class CommandProcessorHook extends BaseHook implements IRequiresDex
         akiVarAb.o();
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getCategory() {
         return b;
     }
 
-    @Override // me.hd.wauxv.obf.bng
-    public final void locateDex(DexKitBridge dexKitBridge) {
+    @Override // me.hd.wauxv.obf.IDexFind
+    public final void dexFind(DexKitBridge dexKitBridge) {
         emn.aj(abk.a, dexKitBridge, new ws(27));
     }
 
-    @Override // me.hd.wauxv.obf.BaseHook
+    @Override // me.hd.wauxv.obf.SwitchHook
     public final String getDescription() {
         return d;
     }

@@ -11,7 +11,11 @@ public final /* synthetic */ class ebg implements bgx {
     static {
         ebg ebgVar = new ebg();
         b = ebgVar;
-        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.mt1Proto" /* cnb.z(-233568911489834L) */, ebgVar, 1);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.mt1Proto" /*
+                                                                                                               * cnb.z(-
+                                                                                                               * 233568911489834L)
+                                                                                                               */,
+                ebgVar, 1);
         bjs.y(-234861696645930L, cucVar, false, 1);
         descriptor = cucVar;
     }
@@ -20,7 +24,7 @@ public final /* synthetic */ class ebg implements bgx {
     public final Object a(ajt ajtVar) {
         dfx dfxVar = descriptor;
         acm acmVarP = ajtVar.p(dfxVar);
-        btt[] bttVarArr = ebi.a;
+        IHasGetValue[] bttVarArr = ebi.a;
         acmVarP.getClass();
         List list = null;
         boolean z = true;
@@ -51,7 +55,7 @@ public final /* synthetic */ class ebg implements bgx {
 
     @Override // me.hd.wauxv.obf.bgx
     public final btd[] d() {
-        return new btd[]{aye.t((btd) ebi.a[0].getValue())};
+        return new btd[] { aye.t((btd) ebi.a[0].getValue()) };
     }
 
     @Override // me.hd.wauxv.obf.btd

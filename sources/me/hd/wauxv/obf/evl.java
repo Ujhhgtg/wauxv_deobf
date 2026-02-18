@@ -18,7 +18,7 @@ public class evl extends evk {
 
     @Override // me.hd.wauxv.obf.evh, me.hd.wauxv.obf.evo
     public bps n(int i) {
-        return bps.locateDex(this.f.getInsets(evp.a(i)));
+        return bps.dexFind(this.f.getInsets(evp.a(i)));
     }
 
     @Override // me.hd.wauxv.obf.evh, me.hd.wauxv.obf.evo

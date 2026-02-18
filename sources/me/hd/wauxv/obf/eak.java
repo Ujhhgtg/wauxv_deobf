@@ -6,7 +6,7 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class eak {
     public static final eaj Companion = new eaj();
-    public static final btt[] a;
+    public static final IHasGetValue[] a;
     public final Long b;
     public final Long c;
     public final Integer d;
@@ -23,7 +23,8 @@ public final class eak {
     static {
         dtr dtrVar = new dtr(16);
         btx btxVar = btx.a;
-        a = new btt[] { null, null, null, null, ewz.am(btxVar, dtrVar), ewz.am(btxVar, new dtr(17)), null, null, null,
+        a = new IHasGetValue[] { null, null, null, null, ewz.am(btxVar, dtrVar), ewz.am(btxVar, new dtr(17)), null,
+                null, null,
                 null, null, null };
     }
 
