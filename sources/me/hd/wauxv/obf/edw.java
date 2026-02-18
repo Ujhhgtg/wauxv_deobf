@@ -1,0 +1,63 @@
+package me.hd.wauxv.obf;
+
+/* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+/* JADX INFO: loaded from: classes.dex */
+public final class edw {
+    public static final edv Companion = new edv();
+    public final String a;
+    public final String b;
+    public final Float c;
+    public final Float d;
+    public final String e;
+    public final Integer f;
+
+    public /* synthetic */ edw(int i, String str, String str2, Float f, Float f2, String str3, Integer num) {
+        if (63 != (i & 63)) {
+            bht.ah(i, 63, edu.b.getDescriptor());
+            throw null;
+        }
+        this.a = str;
+        this.b = str2;
+        this.c = f;
+        this.d = f2;
+        this.e = str3;
+        this.f = num;
+    }
+
+    public final boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (!(obj instanceof edw)) {
+            return false;
+        }
+        edw edwVar = (edw) obj;
+        return bzo.f(this.a, edwVar.a) && bzo.f(this.b, edwVar.b) && bzo.f(this.c, edwVar.c) && bzo.f(this.d, edwVar.d) && bzo.f(this.e, edwVar.e) && bzo.f(this.f, edwVar.f);
+    }
+
+    public final int hashCode() {
+        String str = this.a;
+        int iHashCode = (str == null ? 0 : str.hashCode()) * 31;
+        String str2 = this.b;
+        int iHashCode2 = (iHashCode + (str2 == null ? 0 : str2.hashCode())) * 31;
+        Float f = this.c;
+        int iHashCode3 = (iHashCode2 + (f == null ? 0 : f.hashCode())) * 31;
+        Float f2 = this.d;
+        int iHashCode4 = (iHashCode3 + (f2 == null ? 0 : f2.hashCode())) * 31;
+        String str3 = this.e;
+        int iHashCode5 = (iHashCode4 + (str3 == null ? 0 : str3.hashCode())) * 31;
+        Integer num = this.f;
+        return iHashCode5 + (num != null ? num.hashCode() : 0);
+    }
+
+    public final String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(cnb.z(-276389735430954L));
+        yg.u(sb, this.a, -276312426019626L);
+        yg.u(sb, this.b, -273477747604266L);
+        bjs.v(sb, this.c, -273439092898602L);
+        bjs.v(sb, this.d, -273413323094826L);
+        yg.u(sb, this.e, -273396143225642L);
+        return bjs.p(sb, this.f, ')');
+    }
+}

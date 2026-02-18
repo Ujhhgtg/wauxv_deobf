@@ -1,0 +1,352 @@
+package me.hd.wauxv.obf;
+
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.RadioGroup;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.radiobutton.MaterialRadioButton;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
+import java.util.ArrayList;
+import me.hd.wauxv.R;
+
+/* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+/* JADX INFO: loaded from: classes.dex */
+public final /* synthetic */ class dos implements bgf {
+    public final /* synthetic */ int a;
+
+    public /* synthetic */ dos(int i) {
+        this.a = i;
+    }
+
+    @Override // me.hd.wauxv.obf.bgf
+    public final Object invoke(Object obj) {
+        Class cls;
+        Class cls2;
+        Object objX;
+        Object objX2;
+        Object objX3;
+        Class cls3;
+        Class cls4;
+        Class cls5;
+        Class cls6;
+        switch (this.a) {
+            case 0:
+                bag bagVar = (bag) obj;
+                zb zbVar = new zb();
+                zbVar.k(cnb.z(-59923383712554L), cnb.z(-59807419595562L));
+                bagVar.getClass();
+                bagVar.b = zbVar;
+                return ens.a;
+            case 1:
+                bah bahVar = (bah) obj;
+                cdj cdjVar = new cdj();
+                cls = Object.class;
+                Class<Object> clsBf = cnf.bf(dal.b(cls));
+                if (clsBf == null) {
+                    clsBf = cls;
+                }
+                cdjVar.r(clsBf);
+                cls2 = String.class;
+                Class<String> clsBf2 = cnf.bf(dal.b(cls2));
+                cls2 = clsBf2 != null ? clsBf2 : String.class;
+                Class<Object> clsBf3 = cnf.bf(dal.b(cls));
+                cdjVar.q(cls2, clsBf3 != null ? clsBf3 : Object.class);
+                bahVar.getClass();
+                bahVar.d = cdjVar;
+                return ens.a;
+            case 2:
+                View view = (View) obj;
+                View viewK = dkz.k(view, R.layout.module_dialog_system_browser, null, false);
+                int i = R.id.moduleDialogBtnSystemBrowserAdd;
+                MaterialButton materialButton = (MaterialButton) cnd.aq(viewK, R.id.moduleDialogBtnSystemBrowserAdd);
+                if (materialButton != null) {
+                    i = R.id.moduleDialogEdtSystemBrowserHost;
+                    TextInputEditText textInputEditText = (TextInputEditText) cnd.aq(viewK, R.id.moduleDialogEdtSystemBrowserHost);
+                    if (textInputEditText != null) {
+                        i = R.id.moduleDialogInputSystemBrowserHost;
+                        if (((TextInputLayout) cnd.aq(viewK, R.id.moduleDialogInputSystemBrowserHost)) != null) {
+                            i = R.id.moduleDialogRbSystemBrowserBlack;
+                            MaterialRadioButton materialRadioButton = (MaterialRadioButton) cnd.aq(viewK, R.id.moduleDialogRbSystemBrowserBlack);
+                            if (materialRadioButton != null) {
+                                i = R.id.moduleDialogRbSystemBrowserWhite;
+                                MaterialRadioButton materialRadioButton2 = (MaterialRadioButton) cnd.aq(viewK, R.id.moduleDialogRbSystemBrowserWhite);
+                                if (materialRadioButton2 != null) {
+                                    i = R.id.moduleDialogRgSystemBrowserMode;
+                                    RadioGroup radioGroup = (RadioGroup) cnd.aq(viewK, R.id.moduleDialogRgSystemBrowserMode);
+                                    if (radioGroup != null) {
+                                        i = R.id.moduleDialogRvSystemBrowserList;
+                                        RecyclerView recyclerView = (RecyclerView) cnd.aq(viewK, R.id.moduleDialogRvSystemBrowserList);
+                                        if (recyclerView != null) {
+                                            LinearLayout linearLayout = (LinearLayout) viewK;
+                                            final bqr bqrVar = new bqr(linearLayout, materialButton, textInputEditText, materialRadioButton, materialRadioButton2, radioGroup, recyclerView);
+                                            dpd dpdVar = dpd.a;
+                                            int iK = dpdVar.k();
+                                            doz dozVar = doz.a;
+                                            if (iK == dozVar.d) {
+                                                materialRadioButton2.setChecked(true);
+                                            } else if (iK == doz.b.d) {
+                                                materialRadioButton.setChecked(true);
+                                            }
+                                            int iK2 = dpdVar.k();
+                                            final ArrayList arrayListAb = iK2 == dozVar.d ? aaz.ab(dpe.a.n()) : iK2 == doz.b.d ? aaz.ab(dpc.a.n()) : new ArrayList();
+                                            final zm zmVar = new zm();
+                                            zmVar.b = arrayListAb;
+                                            zmVar.c = new but(arrayListAb, 15, zmVar);
+                                            view.getContext();
+                                            recyclerView.setLayoutManager(new LinearLayoutManager(1));
+                                            recyclerView.setAdapter(zmVar);
+                                            radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() { // from class: me.hd.wauxv.obf.doy
+                                                @Override // android.widget.RadioGroup.OnCheckedChangeListener
+                                                public final void onCheckedChanged(RadioGroup radioGroup2, int i2) {
+                                                    bqr bqrVar2 = bqrVar;
+                                                    int id = ((MaterialRadioButton) bqrVar2.e).getId();
+                                                    ArrayList arrayList = arrayListAb;
+                                                    if (i2 == id) {
+                                                        arrayList.clear();
+                                                        arrayList.addAll(aaz.ab(dpe.a.n()));
+                                                    } else if (i2 == ((MaterialRadioButton) bqrVar2.c).getId()) {
+                                                        arrayList.clear();
+                                                        arrayList.addAll(aaz.ab(dpc.a.n()));
+                                                    }
+                                                    zmVar.af();
+                                                }
+                                            });
+                                            materialButton.setOnClickListener(new cyr(bqrVar, arrayListAb, zmVar, 1));
+                                            bzy bzyVar = new bzy(view.getContext());
+                                            eg egVar = (eg) bzyVar.d;
+                                            dpf.a.getClass();
+                                            egVar.d = dpf.j;
+                                            bzyVar.t(cnb.z(-539520906820394L), new amw(new ls(bqrVar, 9, arrayListAb), 0));
+                                            bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar, cnb.z(-47455093652266L));
+                                            if (linearLayout != null) {
+                                                egVar.r = linearLayout;
+                                            }
+                                            bzyVar.i().show();
+                                            return ens.a;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                throw new NullPointerException(cnb.z(-660153653263146L).concat(viewK.getResources().getResourceName(i)));
+            case 3:
+                bmm bmmVar = (bmm) obj;
+                bmmVar.getClass();
+                try {
+                    objX = bmmVar.d()[0];
+                    if (objX == null) {
+                        objX = null;
+                    }
+                } catch (Throwable th) {
+                    objX = bhu.x(th);
+                }
+                String str = (String) (objX instanceof dcx ? null : objX);
+                if (str == null) {
+                    str = "";
+                }
+                dpv.b = str;
+                return ens.a;
+            case 4:
+                return Boolean.valueOf(dnr.bp(((Class) obj).getName(), cnb.z(-104170136795946L), false));
+            case 5:
+                ((amm) obj).b = new dos(6);
+                return ens.a;
+            case 6:
+                bag bagVar2 = (bag) obj;
+                String[] strArr = {cnb.z(-103976863267626L)};
+                bagVar2.getClass();
+                bagVar2.a = la.ab(strArr);
+                zb zbVar2 = new zb();
+                zbVar2.k(cnb.z(-104419244899114L), cnb.z(-104264626076458L));
+                bagVar2.b = zbVar2;
+                return ens.a;
+            case 7:
+                bmm bmmVar2 = (bmm) obj;
+                bmmVar2.getClass();
+                try {
+                    objX2 = bmmVar2.d()[2];
+                    if (objX2 == null) {
+                        objX2 = null;
+                    }
+                } catch (Throwable th2) {
+                    objX2 = bhu.x(th2);
+                }
+                if (objX2 instanceof dcx) {
+                    objX2 = null;
+                }
+                if (objX2 == Bitmap.CompressFormat.JPEG) {
+                    try {
+                        objX3 = bmmVar2.d()[3];
+                        if (objX3 == null) {
+                            objX3 = null;
+                        }
+                    } catch (Throwable th3) {
+                        objX3 = bhu.x(th3);
+                    }
+                    String str2 = (String) (objX3 instanceof dcx ? null : objX3);
+                    if (str2 == null) {
+                        str2 = "";
+                    }
+                    if (dnj.ab(str2, cnb.z(-491967028919082L), false) || dnj.ab(str2, cnb.z(-491936964148010L), false)) {
+                        new ek(bmmVar2, 2, 8).q(Bitmap.CompressFormat.PNG);
+                    }
+                }
+                return ens.a;
+            case 8:
+                ((amm) obj).c = new dos(9);
+                return ens.a;
+            case 9:
+                bah bahVar2 = (bah) obj;
+                String[] strArr2 = {cnb.z(-491898309442346L)};
+                bahVar2.getClass();
+                bahVar2.a = la.ab(strArr2);
+                cdj cdjVar2 = new cdj();
+                if (cnb.ab(ewk.e) || cnb.ac(ewh.d)) {
+                    cdjVar2.t(cnb.z(-491773755390762L), cnb.z(-488973436713770L));
+                } else {
+                    cdj.l(cdjVar2, cnb.z(-488814522923818L));
+                    cdjVar2.s(cnb.z(-489209659915050L));
+                }
+                bahVar2.d = cdjVar2;
+                return ens.a;
+            case 10:
+                if (obj != null) {
+                    throw new ClassCastException();
+                }
+                bzo.q(null, "it");
+                throw null;
+            case 11:
+                ((amm) obj).c = new dos(20);
+                return ens.a;
+            case 12:
+                bah bahVar3 = (bah) obj;
+                String[] strArr3 = {cnb.z(-382067405749034L)};
+                bahVar3.getClass();
+                bahVar3.a = la.ab(strArr3);
+                cdj cdjVar3 = new cdj();
+                cdjVar3.t(cnb.z(-381929966795562L), cnb.z(-381908491959082L));
+                bahVar3.d = cdjVar3;
+                return ens.a;
+            case 13:
+                bah bahVar4 = (bah) obj;
+                String[] strArr4 = {cnb.z(-382350873590570L)};
+                bahVar4.getClass();
+                bahVar4.a = la.ab(strArr4);
+                cdj cdjVar4 = new cdj();
+                cdjVar4.t(cnb.z(-382213434637098L), cnb.z(-382136125225770L));
+                bahVar4.d = cdjVar4;
+                return ens.a;
+            case 14:
+                ((amm) obj).c = new dos(13);
+                return ens.a;
+            case 15:
+                ((amm) obj).c = new dos(22);
+                return ens.a;
+            case 16:
+                ((amm) obj).c = new dos(12);
+                return ens.a;
+            case 17:
+                ((amm) obj).c = new dos(21);
+                return ens.a;
+            case 18:
+                ((amm) obj).c = new dos(19);
+                return ens.a;
+            case 19:
+                bah bahVar5 = (bah) obj;
+                String[] strArr5 = {cnb.z(-379090993412906L)};
+                bahVar5.getClass();
+                bahVar5.a = la.ab(strArr5);
+                cdj cdjVar5 = new cdj();
+                cdjVar5.t(cnb.z(-378403798645546L), cnb.z(-378240589888298L));
+                bahVar5.d = cdjVar5;
+                return ens.a;
+            case 20:
+                bah bahVar6 = (bah) obj;
+                String[] strArr6 = {cnb.z(-380512627587882L)};
+                bahVar6.getClass();
+                bahVar6.a = la.ab(strArr6);
+                cdj cdjVar6 = new cdj();
+                cls3 = Integer.class;
+                Class<Integer> clsBf4 = cnf.bf(dal.b(cls3));
+                cls3 = clsBf4 != null ? clsBf4 : Integer.class;
+                cls4 = Context.class;
+                Class<Context> clsBf5 = cnf.bf(dal.b(cls4));
+                cdjVar6.q(cls3, clsBf5 != null ? clsBf5 : Context.class);
+                cdjVar6.t(cnb.z(-380924944448298L), cnb.z(-380912059546410L));
+                bahVar6.d = cdjVar6;
+                return ens.a;
+            case 21:
+                bah bahVar7 = (bah) obj;
+                String[] strArr7 = {cnb.z(-378949259492138L)};
+                bahVar7.getClass();
+                bahVar7.a = la.ab(strArr7);
+                cdj cdjVar7 = new cdj();
+                cdjVar7.t(cnb.z(-378811820538666L), cnb.z(-379284266941226L));
+                bahVar7.d = cdjVar7;
+                return ens.a;
+            case 22:
+                bah bahVar8 = (bah) obj;
+                String[] strArr8 = {cnb.z(-382492607511338L)};
+                bahVar8.getClass();
+                bahVar8.a = la.ab(strArr8);
+                cdj cdjVar8 = new cdj();
+                cdjVar8.t(cnb.z(-381805412743978L), cnb.z(-381728103332650L));
+                bahVar8.d = cdjVar8;
+                return ens.a;
+            case 23:
+                amm ammVar = (amm) obj;
+                ammVar.b = new dos(24);
+                ammVar.c = new dos(25);
+                return ens.a;
+            case 24:
+                bag bagVar3 = (bag) obj;
+                String[] strArr9 = {cnb.z(-107511621352234L)};
+                bagVar3.getClass();
+                bagVar3.a = la.ab(strArr9);
+                zb zbVar3 = new zb();
+                zbVar3.k(cnb.z(-106828721552170L), cnb.z(-106781476911914L));
+                bagVar3.b = zbVar3;
+                return ens.a;
+            case 25:
+                bah bahVar9 = (bah) obj;
+                cdj cdjVar9 = new cdj();
+                cls5 = String.class;
+                Class<String> clsBf6 = cnf.bf(dal.b(cls5));
+                if (clsBf6 == null) {
+                    clsBf6 = cls5;
+                }
+                cdjVar9.r(clsBf6);
+                Class<String> clsBf7 = cnf.bf(dal.b(cls5));
+                cls5 = clsBf7 != null ? clsBf7 : String.class;
+                cls6 = Boolean.class;
+                Class<Boolean> clsBf8 = cnf.bf(dal.b(cls6));
+                cdjVar9.q(cls5, clsBf8 != null ? clsBf8 : Boolean.class);
+                bahVar9.getClass();
+                bahVar9.d = cdjVar9;
+                return ens.a;
+            case 26:
+                ((amm) obj).b = new dos(27);
+                return ens.a;
+            case 27:
+                bag bagVar4 = (bag) obj;
+                zb zbVar4 = new zb();
+                zbVar4.k(cnb.z(-354704169106218L), cnb.z(-354661219433258L), cnb.z(-355099306097450L));
+                bagVar4.getClass();
+                bagVar4.b = zbVar4;
+                return ens.a;
+            case 28:
+                ((amm) obj).c = new epy(0);
+                return ens.a;
+            default:
+                ((amm) obj).c = new epy(1);
+                return ens.a;
+        }
+    }
+}

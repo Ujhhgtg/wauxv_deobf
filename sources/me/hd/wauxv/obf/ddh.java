@@ -1,0 +1,63 @@
+package me.hd.wauxv.obf;
+
+import org.luckypray.dexkit.DexKitBridge;
+
+/* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+/* JADX INFO: loaded from: classes.dex */
+public final class ddh extends doo implements bng {
+    public static final ddh a = new ddh(cnb.z(-455721799908138L));
+    public static final String b = cnb.z(-457040354868010L);
+    public static final String c = cnb.z(-456993110227754L);
+    public static final String i = cnb.z(-457005995129642L);
+    public static final dbj j = new dbj(3);
+    public static final boolean m = true;
+
+    @Override // me.hd.wauxv.obf.bmf
+    public final void e() {
+        emn.bc(ddf.a, new dbj(8));
+        aki akiVarAb = csb.ab(this, dqc.bf(emn.ba(ddd.a)));
+        dbj dbjVar = new dbj(9);
+        ddh ddhVar = a;
+        ddhVar.y(akiVarAb, dbjVar);
+        akiVarAb.o();
+        if (cnb.ab(ewk.i) || cnb.ac(ewh.h)) {
+            aki akiVarAb2 = csb.ab(this, dqc.bf(emn.bb(dde.a)));
+            ddhVar.y(akiVarAb2, new dbj(10));
+            akiVarAb2.o();
+        }
+    }
+
+    @Override // me.hd.wauxv.obf.doo
+    public final String f() {
+        return c;
+    }
+
+    @Override // me.hd.wauxv.obf.doo
+    public final String g() {
+        return b;
+    }
+
+    @Override // me.hd.wauxv.obf.bng
+    public final void h(DexKitBridge dexKitBridge) {
+        emn.aj(ddf.a, dexKitBridge, new dbj(11));
+        emn.aj(ddd.a, dexKitBridge, new dbj(12));
+        if (cnb.ab(ewk.i) || cnb.ac(ewh.h)) {
+            emn.aj(dde.a, dexKitBridge, new dbj(13));
+        }
+    }
+
+    @Override // me.hd.wauxv.obf.doo
+    public final String o() {
+        return i;
+    }
+
+    @Override // me.hd.wauxv.obf.doo
+    public final bgf p() {
+        return j;
+    }
+
+    @Override // me.hd.wauxv.obf.doo
+    public final boolean q() {
+        return m;
+    }
+}

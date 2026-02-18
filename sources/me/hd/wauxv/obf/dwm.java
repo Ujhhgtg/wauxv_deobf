@@ -1,0 +1,51 @@
+package me.hd.wauxv.obf;
+
+import java.util.List;
+
+/* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+/* JADX INFO: loaded from: classes.dex */
+public final class dwm {
+    public static final dwl Companion = new dwl();
+    public static final btt[] a = {ewz.am(btx.a, new dtr(4)), null, null};
+    public final List b;
+    public final String c;
+    public final String d;
+
+    public /* synthetic */ dwm(int i, List list, String str, String str2) {
+        if (7 != (i & 7)) {
+            bht.ah(i, 7, dwk.b.getDescriptor());
+            throw null;
+        }
+        this.b = list;
+        this.c = str;
+        this.d = str2;
+    }
+
+    public final boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (!(obj instanceof dwm)) {
+            return false;
+        }
+        dwm dwmVar = (dwm) obj;
+        return bzo.f(this.b, dwmVar.b) && bzo.f(this.c, dwmVar.c) && bzo.f(this.d, dwmVar.d);
+    }
+
+    public final int hashCode() {
+        List list = this.b;
+        int iHashCode = (list == null ? 0 : list.hashCode()) * 31;
+        String str = this.c;
+        int iHashCode2 = (iHashCode + (str == null ? 0 : str.hashCode())) * 31;
+        String str2 = this.d;
+        return iHashCode2 + (str2 != null ? str2.hashCode() : 0);
+    }
+
+    public final String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(cnb.z(-160313949289258L));
+        yg.v(sb, this.b, -159626754521898L);
+        yg.u(sb, this.c, -159506495437610L);
+        return bjs.q(sb, this.d, ')');
+    }
+}

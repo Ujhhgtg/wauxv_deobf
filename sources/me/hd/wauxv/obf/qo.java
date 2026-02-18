@@ -1,0 +1,79 @@
+package me.hd.wauxv.obf;
+
+import android.content.Context;
+import java.util.Arrays;
+
+/* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+/* JADX INFO: loaded from: classes.dex */
+public final class qo extends doo {
+    public static final qo a;
+    public static final String b;
+    public static final dov c;
+    public static final dov d;
+    public static final dov h;
+    public static final dov i;
+    public static final dov j;
+    public static final String l;
+    public static final String m;
+    public static final String n;
+    public static final mj r;
+    public static final boolean s;
+
+    static {
+        cnb.z(-439323614772010L);
+        cnb.z(-439259190262570L);
+        cnb.z(-439280665099050L);
+        cnb.z(-439284960066346L);
+        a = new qo(cnb.z(-438546225691434L));
+        dov dovVar = ctf.a;
+        b = ctf.c(cnb.z(-46621869996842L), cnb.z(-46531675683626L));
+        c = new dov(new h(8));
+        d = new dov(new h(9));
+        h = new dov(new h(10));
+        i = new dov(new h(11));
+        j = new dov(new h(12));
+        l = cnb.z(-439787471239978L);
+        m = cnb.z(-439791766207274L);
+        n = cnb.z(-439748816534314L);
+        r = new mj(11);
+        s = true;
+    }
+
+    @Override // me.hd.wauxv.obf.bmf
+    public final void e() {
+        int i2 = bte.a;
+        adt adtVarM = yg.s(-438494686083882L).m();
+        adtVarM.z(Arrays.copyOf(new Object[]{dal.b(Context.class)}, 1));
+        adu aduVar = (adu) aaz.e(adtVarM.a());
+        exg exgVar = exg.a;
+        qo qoVar = a;
+        aki akiVarAd = qoVar.ad(aduVar, exgVar);
+        qoVar.x(akiVarAd, new mj(12));
+        akiVarAd.o();
+    }
+
+    @Override // me.hd.wauxv.obf.doo
+    public final String f() {
+        return m;
+    }
+
+    @Override // me.hd.wauxv.obf.doo
+    public final String g() {
+        return l;
+    }
+
+    @Override // me.hd.wauxv.obf.doo
+    public final String o() {
+        return n;
+    }
+
+    @Override // me.hd.wauxv.obf.doo
+    public final bgf p() {
+        return r;
+    }
+
+    @Override // me.hd.wauxv.obf.doo
+    public final boolean q() {
+        return s;
+    }
+}

@@ -1,0 +1,53 @@
+package me.hd.wauxv.obf;
+
+import org.json.JSONObject;
+import org.luckypray.dexkit.DexKitBridge;
+
+/* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+/* JADX INFO: loaded from: classes.dex */
+public final class dad extends doo implements bng {
+    public static final dad a = new dad(cnb.z(-538838007020330L));
+    public static final String b = cnb.z(-536793602587434L);
+    public static final String c = cnb.z(-536797897554730L);
+    public static final String i = cnb.z(-536767832783658L);
+
+    @Override // me.hd.wauxv.obf.bmf
+    public final void e() {
+        aki akiVarAb = csb.ab(this, dqc.bf(emn.bb(dac.a)));
+        cvc cvcVar = new cvc(16);
+        dad dadVar = a;
+        dadVar.x(akiVarAb, cvcVar);
+        akiVarAb.o();
+        cma.a.getClass();
+        Class declaringClass = emn.ba(clz.a).getDeclaringClass();
+        cls.a.getClass();
+        for (Class cls : aba.ag(declaringClass, emn.ba(clr.a).getDeclaringClass())) {
+            int i2 = bte.a;
+            cde cdeVarT = dqc.bi(cls).t();
+            cdeVarT.ab = cnb.z(-540848051714858L);
+            aki akiVarAd = dadVar.ad((cdk) dkz.n(new Object[]{dal.b(Integer.TYPE), dal.b(String.class), dal.b(JSONObject.class)}, 3, cdeVarT), exg.a);
+            dadVar.y(akiVarAd, new cvc(17));
+            akiVarAd.o();
+        }
+    }
+
+    @Override // me.hd.wauxv.obf.doo
+    public final String f() {
+        return c;
+    }
+
+    @Override // me.hd.wauxv.obf.doo
+    public final String g() {
+        return b;
+    }
+
+    @Override // me.hd.wauxv.obf.bng
+    public final void h(DexKitBridge dexKitBridge) {
+        emn.aj(dac.a, dexKitBridge, new cvc(18));
+    }
+
+    @Override // me.hd.wauxv.obf.doo
+    public final String o() {
+        return i;
+    }
+}

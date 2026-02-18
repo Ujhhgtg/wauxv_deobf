@@ -1,0 +1,13 @@
+package me.hd.wauxv.obf;
+
+import android.view.Window;
+
+/* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+/* JADX INFO: loaded from: classes.dex */
+public final class ari extends arh {
+    @Override // me.hd.wauxv.obf.arg, me.hd.wauxv.obf.arf
+    public void a(Window window) {
+        bzo.q(window, "window");
+        window.getAttributes().layoutInDisplayCutoutMode = 3;
+    }
+}

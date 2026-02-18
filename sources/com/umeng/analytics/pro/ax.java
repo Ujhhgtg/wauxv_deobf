@@ -1,0 +1,72 @@
+package com.umeng.analytics.pro;
+
+import com.android.dx.io.Opcodes;
+import com.umeng.commonsdk.debug.UMRTLog;
+import java.io.ByteArrayInputStream;
+import java.io.OutputStream;
+import java.util.zip.GZIPInputStream;
+import java.util.zip.GZIPOutputStream;
+
+/* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+/* JADX INFO: loaded from: classes.dex */
+public class ax {
+    public static byte[] a(byte[] bArr, byte[] bArr2) {
+        if (bArr != null && bArr.length != 0 && bArr2 != null && bArr2.length != 0) {
+            for (int i = 0; i < bArr.length; i++) {
+                bArr[i] = (byte) ((bArr[i] ^ bArr2[i % bArr2.length]) ^ (i & Opcodes.CONST_METHOD_TYPE));
+            }
+        }
+        return bArr;
+    }
+
+    public static void b(byte[] bArr, OutputStream outputStream) {
+        GZIPInputStream gZIPInputStream;
+        GZIPInputStream gZIPInputStream2 = null;
+        try {
+            gZIPInputStream = new GZIPInputStream(new ByteArrayInputStream(bArr));
+        } catch (Throwable th) {
+            th = th;
+        }
+        try {
+            byte[] bArr2 = new byte[1024];
+            while (true) {
+                int i = gZIPInputStream.read(bArr2);
+                if (i == -1) {
+                    as.a(gZIPInputStream);
+                    return;
+                }
+                outputStream.write(bArr2, 0, i);
+            }
+        } catch (Throwable th2) {
+            th = th2;
+            gZIPInputStream2 = gZIPInputStream;
+            try {
+                UMRTLog.e(UMRTLog.RTLOG_TAG, "unGzip error: " + th.getMessage());
+            } finally {
+                as.a(gZIPInputStream2);
+            }
+        }
+    }
+
+    public static void a(byte[] bArr, OutputStream outputStream) {
+        GZIPOutputStream gZIPOutputStream;
+        GZIPOutputStream gZIPOutputStream2 = null;
+        try {
+            gZIPOutputStream = new GZIPOutputStream(outputStream);
+        } catch (Throwable th) {
+            th = th;
+        }
+        try {
+            gZIPOutputStream.write(bArr);
+            as.a(gZIPOutputStream);
+        } catch (Throwable th2) {
+            th = th2;
+            gZIPOutputStream2 = gZIPOutputStream;
+            try {
+                UMRTLog.e(UMRTLog.RTLOG_TAG, "gzip error: " + th.getMessage());
+            } finally {
+                as.a(gZIPOutputStream2);
+            }
+        }
+    }
+}

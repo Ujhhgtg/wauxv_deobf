@@ -1,0 +1,49 @@
+package org.repackage.com.heytap.openid.sdk;
+
+import android.content.Context;
+import org.repackage.a.a.a.a.a;
+import org.repackage.a.a.a.a.c;
+
+/* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+/* JADX INFO: loaded from: classes.dex */
+public class OpenIDSDK {
+    public static void a(Context context) {
+        a.b = c.a.a.a(context.getApplicationContext());
+        a.a = true;
+    }
+
+    public static String b(Context context) {
+        if (a.a) {
+            return c.a.a.a(context.getApplicationContext(), "GUID");
+        }
+        throw new RuntimeException("SDK Need Init First!");
+    }
+
+    public static String c(Context context) {
+        if (a.a) {
+            return c.a.a.a(context.getApplicationContext(), "OUID");
+        }
+        throw new RuntimeException("SDK Need Init First!");
+    }
+
+    public static String d(Context context) {
+        if (a.a) {
+            return c.a.a.a(context.getApplicationContext(), "DUID");
+        }
+        throw new RuntimeException("SDK Need Init First!");
+    }
+
+    public static String e(Context context) {
+        if (a.a) {
+            return c.a.a.a(context.getApplicationContext(), "AUID");
+        }
+        throw new RuntimeException("SDK Need Init First!");
+    }
+
+    public static boolean a() {
+        if (a.a) {
+            return a.b;
+        }
+        throw new RuntimeException("SDK Need Init First!");
+    }
+}

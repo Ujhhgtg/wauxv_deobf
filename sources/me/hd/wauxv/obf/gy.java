@@ -1,0 +1,50 @@
+package me.hd.wauxv.obf;
+
+/* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+/* JADX INFO: loaded from: classes.dex */
+public final class gy extends doo {
+    public static final gy a = new gy(cnb.z(-410461434542890L));
+    public static final String b = cnb.z(-434053689899818L);
+    public static final String c = cnb.z(-433452394478378L);
+    public static final String d = cnb.z(-433422329707306L);
+    public static final String[] h = {ewi.b.e, ewi.c.e};
+    public static final boolean i = true;
+
+    @Override // me.hd.wauxv.obf.doo, me.hd.wauxv.obf.bmf
+    public final String[] _aa() {
+        return h;
+    }
+
+    @Override // me.hd.wauxv.obf.bmf
+    public final void e() {
+        int i2 = bte.a;
+        cde cdeVarT = yg.s(-433997855324970L).t();
+        cdeVarT.ab = cnb.z(-434246963428138L);
+        cdk cdkVar = (cdk) aaz.e(cdeVarT.aj());
+        exg exgVar = exg.a;
+        gy gyVar = a;
+        aki akiVarAd = gyVar.ad(cdkVar, exgVar);
+        gyVar.y(akiVarAd, new gi(17));
+        akiVarAd.o();
+    }
+
+    @Override // me.hd.wauxv.obf.doo
+    public final String f() {
+        return c;
+    }
+
+    @Override // me.hd.wauxv.obf.doo
+    public final String g() {
+        return b;
+    }
+
+    @Override // me.hd.wauxv.obf.doo
+    public final String o() {
+        return d;
+    }
+
+    @Override // me.hd.wauxv.obf.doo
+    public final boolean q() {
+        return i;
+    }
+}

@@ -1,0 +1,329 @@
+package me.hd.wauxv.obf;
+
+import java.util.LinkedList;
+import java.util.List;
+
+/* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+/* JADX INFO: loaded from: classes.dex */
+public final /* synthetic */ class clo implements bgf {
+    public final /* synthetic */ int a;
+
+    public /* synthetic */ clo(int i) {
+        this.a = i;
+    }
+
+    @Override // me.hd.wauxv.obf.bgf
+    public final Object invoke(Object obj) {
+        Class cls;
+        Class cls2;
+        Class cls3;
+        Class cls4;
+        Class cls5;
+        Class cls6;
+        Class cls7;
+        Class cls8;
+        Class cls9;
+        Class cls10;
+        Class cls11;
+        Class cls12;
+        Class cls13;
+        Class cls14;
+        switch (this.a) {
+            case 0:
+                bag bagVar = (bag) obj;
+                zb zbVar = new zb();
+                zbVar.k(cnb.z(-113838108179242L), cnb.z(-114310554581802L));
+                bagVar.getClass();
+                bagVar.b = zbVar;
+                return ens.a;
+            case 1:
+                bah bahVar = (bah) obj;
+                cdj cdjVar = new cdj();
+                cls = String.class;
+                Class<String> clsBf = cnf.bf(dal.b(cls));
+                cls = clsBf != null ? clsBf : String.class;
+                cls2 = List.class;
+                Class<List> clsBf2 = cnf.bf(dal.b(cls2));
+                cls2 = clsBf2 != null ? clsBf2 : List.class;
+                cls3 = Integer.class;
+                Class<Integer> clsBf3 = cnf.bf(dal.b(cls3));
+                cdjVar.q(cls, cls2, clsBf3 != null ? clsBf3 : Integer.class);
+                bahVar.getClass();
+                bahVar.d = cdjVar;
+                return ens.a;
+            case 2:
+                amm ammVar = (amm) obj;
+                ammVar.b = new clo(3);
+                ammVar.c = new clo(4);
+                return ens.a;
+            case 3:
+                bag bagVar2 = (bag) obj;
+                String[] strArr = {cnb.z(-113335597005610L)};
+                bagVar2.getClass();
+                bagVar2.a = la.ab(strArr);
+                zb zbVar2 = new zb();
+                zbVar2.k(cnb.z(-113700669225770L), cnb.z(-113571820206890L));
+                bagVar2.b = zbVar2;
+                return ens.a;
+            case 4:
+                bah bahVar2 = (bah) obj;
+                cdj cdjVar2 = new cdj();
+                cls4 = String.class;
+                Class<String> clsBf4 = cnf.bf(dal.b(cls4));
+                if (clsBf4 == null) {
+                    clsBf4 = cls4;
+                }
+                cls5 = Integer.class;
+                Class<Integer> clsBf5 = cnf.bf(dal.b(cls5));
+                if (clsBf5 == null) {
+                    clsBf5 = cls5;
+                }
+                Class<Integer> clsBf6 = cnf.bf(dal.b(cls5));
+                cls5 = clsBf6 != null ? clsBf6 : Integer.class;
+                Class<String> clsBf7 = cnf.bf(dal.b(cls4));
+                if (clsBf7 == null) {
+                    clsBf7 = cls4;
+                }
+                Class<String> clsBf8 = cnf.bf(dal.b(cls4));
+                cdjVar2.q(clsBf4, clsBf5, cls5, clsBf7, clsBf8 != null ? clsBf8 : String.class);
+                bahVar2.getClass();
+                bahVar2.d = cdjVar2;
+                return ens.a;
+            case 5:
+                return (String) ((bzv) ((bzx) obj).e()).get(1);
+            case 6:
+                amm ammVar2 = (amm) obj;
+                ammVar2.b = new clo(7);
+                ammVar2.c = new clo(8);
+                return ens.a;
+            case 7:
+                bag bagVar3 = (bag) obj;
+                zb zbVar3 = new zb();
+                zbVar3.k(cnb.z(-111037789502250L), cnb.z(-110857400875818L));
+                bagVar3.getClass();
+                bagVar3.b = zbVar3;
+                return ens.a;
+            case 8:
+                bah bahVar3 = (bah) obj;
+                cdj cdjVar3 = new cdj();
+                cls6 = String.class;
+                Class<String> clsBf9 = cnf.bf(dal.b(cls6));
+                cls6 = clsBf9 != null ? clsBf9 : String.class;
+                cls7 = List.class;
+                Class<List> clsBf10 = cnf.bf(dal.b(cls7));
+                cls7 = clsBf10 != null ? clsBf10 : List.class;
+                cls8 = Integer.class;
+                Class<Integer> clsBf11 = cnf.bf(dal.b(cls8));
+                cls8 = clsBf11 != null ? clsBf11 : Integer.class;
+                cls9 = Object.class;
+                Class<Object> clsBf12 = cnf.bf(dal.b(cls9));
+                cdjVar3.q(cls6, cls7, cls8, clsBf12 != null ? clsBf12 : Object.class);
+                bahVar3.getClass();
+                bahVar3.d = cdjVar3;
+                return ens.a;
+            case 9:
+                ((amm) obj).c = new clo(10);
+                return ens.a;
+            case 10:
+                bah bahVar4 = (bah) obj;
+                cdj cdjVar4 = new cdj();
+                cdjVar4.t(cnb.z(-110436494080810L));
+                cls10 = LinkedList.class;
+                Class<LinkedList> clsBf13 = cnf.bf(dal.b(cls10));
+                cdjVar4.q(clsBf13 != null ? clsBf13 : LinkedList.class);
+                bahVar4.getClass();
+                bahVar4.d = cdjVar4;
+                return ens.a;
+            case 11:
+                amm ammVar3 = (amm) obj;
+                ammVar3.b = new clo(12);
+                ammVar3.c = new clo(13);
+                return ens.a;
+            case 12:
+                bag bagVar4 = (bag) obj;
+                zb zbVar4 = new zb();
+                zbVar4.k(cnb.z(-111609020152618L), cnb.z(-112051401784106L), cnb.z(-111926847732522L));
+                bagVar4.getClass();
+                bagVar4.b = zbVar4;
+                return ens.a;
+            case 13:
+                bah bahVar5 = (bah) obj;
+                cdj cdjVar5 = new cdj();
+                cls11 = String.class;
+                Class<String> clsBf14 = cnf.bf(dal.b(cls11));
+                if (clsBf14 == null) {
+                    clsBf14 = cls11;
+                }
+                Class<String> clsBf15 = cnf.bf(dal.b(cls11));
+                cls11 = clsBf15 != null ? clsBf15 : String.class;
+                cls12 = Integer.class;
+                Class<Integer> clsBf16 = cnf.bf(dal.b(cls12));
+                if (clsBf16 == null) {
+                    clsBf16 = cls12;
+                }
+                Class<Integer> clsBf17 = cnf.bf(dal.b(cls12));
+                cls12 = clsBf17 != null ? clsBf17 : Integer.class;
+                cls13 = Object.class;
+                Class<Object> clsBf18 = cnf.bf(dal.b(cls13));
+                cdjVar5.q(clsBf14, cls11, clsBf16, cls12, clsBf18 != null ? clsBf18 : Object.class);
+                bahVar5.getClass();
+                bahVar5.d = cdjVar5;
+                return ens.a;
+            case 14:
+                amm ammVar4 = (amm) obj;
+                ammVar4.b = new clo(15);
+                ammVar4.c = new clo(16);
+                return ens.a;
+            case 15:
+                bag bagVar5 = (bag) obj;
+                String[] strArr2 = {cnb.z(-111583250348842L)};
+                bagVar5.getClass();
+                bagVar5.a = la.ab(strArr2);
+                zb zbVar5 = new zb();
+                zbVar5.k(cnb.z(-111398566755114L), cnb.z(-134900627798826L));
+                bagVar5.b = zbVar5;
+                return ens.a;
+            case 16:
+                bah bahVar6 = (bah) obj;
+                cdj cdjVar6 = new cdj();
+                Class clsBf19 = cnf.bf(dal.b(Integer.class));
+                Class cls15 = clsBf19 == null ? Integer.class : clsBf19;
+                Class clsBf20 = cnf.bf(dal.b(Integer.class));
+                Class cls16 = clsBf20 == null ? Integer.class : clsBf20;
+                Class clsBf21 = cnf.bf(dal.b(String.class));
+                Class cls17 = clsBf21 == null ? String.class : clsBf21;
+                Class clsBf22 = cnf.bf(dal.b(String.class));
+                Class cls18 = clsBf22 == null ? String.class : clsBf22;
+                Class clsBf23 = cnf.bf(dal.b(String.class));
+                Class cls19 = clsBf23 == null ? String.class : clsBf23;
+                Class clsBf24 = cnf.bf(dal.b(String.class));
+                Class cls20 = clsBf24 == null ? String.class : clsBf24;
+                Class clsBf25 = cnf.bf(dal.b(String.class));
+                Class cls21 = clsBf25 == null ? String.class : clsBf25;
+                Class clsBf26 = cnf.bf(dal.b(String.class));
+                Class cls22 = clsBf26 == null ? String.class : clsBf26;
+                Class clsBf27 = cnf.bf(dal.b(String.class));
+                cdjVar6.q(cls15, cls16, cls17, cls18, cls19, cls20, cls21, cls22, clsBf27 == null ? String.class : clsBf27);
+                bahVar6.getClass();
+                bahVar6.d = cdjVar6;
+                return ens.a;
+            case 17:
+                ((amm) obj).c = new clo(19);
+                return ens.a;
+            case 18:
+                ((amm) obj).c = new clo(20);
+                return ens.a;
+            case 19:
+                bah bahVar7 = (bah) obj;
+                cdj cdjVar7 = new cdj();
+                cdjVar7.t(cnb.z(-136305082104618L), cnb.z(-136189117987626L), cnb.z(-136098923674410L));
+                bahVar7.getClass();
+                bahVar7.d = cdjVar7;
+                return ens.a;
+            case 20:
+                bah bahVar8 = (bah) obj;
+                cdj cdjVar8 = new cdj();
+                cme.a.getClass();
+                cdjVar8.o(emn.bb(cmc.a).getDeclaringClass());
+                fj fjVar = new fj();
+                cdj cdjVar9 = new cdj();
+                cdjVar9.t(cnb.z(-135441793678122L), cnb.z(-135244225182506L));
+                fjVar.f(cdjVar9);
+                cdj cdjVar10 = new cdj();
+                cdjVar10.t(cnb.z(-135562052762410L), cnb.z(-132718784412458L));
+                fjVar.f(cdjVar10);
+                cdjVar8.j = fjVar;
+                bahVar8.getClass();
+                bahVar8.d = cdjVar8;
+                return ens.a;
+            case 21:
+                amm ammVar5 = (amm) obj;
+                ammVar5.b = new clo(22);
+                ammVar5.c = new clo(23);
+                return ens.a;
+            case 22:
+                bag bagVar6 = (bag) obj;
+                String[] strArr3 = {cnb.z(-132778913954602L)};
+                bagVar6.getClass();
+                bagVar6.a = la.ab(strArr3);
+                zb zbVar6 = new zb();
+                zbVar6.k(cnb.z(-132061654416170L), cnb.z(-132478266243882L));
+                bagVar6.b = zbVar6;
+                return ens.a;
+            case 23:
+                bah bahVar9 = (bah) obj;
+                cdj cdjVar11 = new cdj();
+                Class clsBf28 = cnf.bf(dal.b(Integer.class));
+                Class cls23 = clsBf28 == null ? Integer.class : clsBf28;
+                Class clsBf29 = cnf.bf(dal.b(Integer.class));
+                Class cls24 = clsBf29 == null ? Integer.class : clsBf29;
+                Class clsBf30 = cnf.bf(dal.b(String.class));
+                if (clsBf30 == null) {
+                    clsBf30 = String.class;
+                }
+                Class clsBf31 = cnf.bf(dal.b(String.class));
+                if (clsBf31 == null) {
+                    clsBf31 = String.class;
+                }
+                Class clsBf32 = cnf.bf(dal.b(Integer.class));
+                if (clsBf32 == null) {
+                    clsBf32 = Integer.class;
+                }
+                Class clsBf33 = cnf.bf(dal.b(String.class));
+                Class cls25 = clsBf33 == null ? String.class : clsBf33;
+                Class clsBf34 = cnf.bf(dal.b(String.class));
+                cdjVar11.q(cls23, cls24, clsBf30, clsBf31, clsBf32, cls25, clsBf34 == null ? String.class : clsBf34);
+                bahVar9.getClass();
+                bahVar9.d = cdjVar11;
+                return ens.a;
+            case 24:
+                amm ammVar6 = (amm) obj;
+                ammVar6.b = new clo(25);
+                ammVar6.c = new clo(26);
+                return ens.a;
+            case 25:
+                bag bagVar7 = (bag) obj;
+                String[] strArr4 = {cnb.z(-133659382250282L)};
+                bagVar7.getClass();
+                bagVar7.a = la.ab(strArr4);
+                zb zbVar7 = new zb();
+                zbVar7.k(cnb.z(-134024454470442L), cnb.z(-133298604997418L), cnb.z(-133156871076650L));
+                bagVar7.b = zbVar7;
+                return ens.a;
+            case 26:
+                bah bahVar10 = (bah) obj;
+                cdj cdjVar12 = new cdj();
+                cdjVar12.p(new bqi(29, 30, 1));
+                bahVar10.getClass();
+                bahVar10.d = cdjVar12;
+                return ens.a;
+            case 27:
+                amm ammVar7 = (amm) obj;
+                ammVar7.b = new clo(28);
+                ammVar7.c = new clo(29);
+                return ens.a;
+            case 28:
+                bag bagVar8 = (bag) obj;
+                String[] strArr5 = {cnb.z(-133320079833898L)};
+                bagVar8.getClass();
+                bagVar8.a = la.ab(strArr5);
+                zb zbVar8 = new zb();
+                zbVar8.k(cnb.z(-139285789408042L), cnb.z(-139187005160234L));
+                bagVar8.b = zbVar8;
+                return ens.a;
+            default:
+                bah bahVar11 = (bah) obj;
+                cdj cdjVar13 = new cdj();
+                cls14 = String.class;
+                Class<String> clsBf35 = cnf.bf(dal.b(cls14));
+                if (clsBf35 == null) {
+                    clsBf35 = cls14;
+                }
+                Class<String> clsBf36 = cnf.bf(dal.b(cls14));
+                cdjVar13.q(null, clsBf35, clsBf36 != null ? clsBf36 : String.class);
+                bahVar11.getClass();
+                bahVar11.d = cdjVar13;
+                return ens.a;
+        }
+    }
+}

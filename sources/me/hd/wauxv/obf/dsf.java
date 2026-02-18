@@ -1,0 +1,68 @@
+package me.hd.wauxv.obf;
+
+/* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+/* JADX INFO: loaded from: classes.dex */
+public final class dsf {
+    public static final dse Companion = new dse();
+    public final String a;
+    public final String b;
+    public final String c;
+    public final String d;
+    public final String e;
+    public final Integer f;
+    public final Integer g;
+
+    public /* synthetic */ dsf(int i, String str, String str2, String str3, String str4, String str5, Integer num, Integer num2) {
+        if (127 != (i & 127)) {
+            bht.ah(i, 127, dsd.b.getDescriptor());
+            throw null;
+        }
+        this.a = str;
+        this.b = str2;
+        this.c = str3;
+        this.d = str4;
+        this.e = str5;
+        this.f = num;
+        this.g = num2;
+    }
+
+    public final boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (!(obj instanceof dsf)) {
+            return false;
+        }
+        dsf dsfVar = (dsf) obj;
+        return bzo.f(this.a, dsfVar.a) && bzo.f(this.b, dsfVar.b) && bzo.f(this.c, dsfVar.c) && bzo.f(this.d, dsfVar.d) && bzo.f(this.e, dsfVar.e) && bzo.f(this.f, dsfVar.f) && bzo.f(this.g, dsfVar.g);
+    }
+
+    public final int hashCode() {
+        String str = this.a;
+        int iHashCode = (str == null ? 0 : str.hashCode()) * 31;
+        String str2 = this.b;
+        int iHashCode2 = (iHashCode + (str2 == null ? 0 : str2.hashCode())) * 31;
+        String str3 = this.c;
+        int iHashCode3 = (iHashCode2 + (str3 == null ? 0 : str3.hashCode())) * 31;
+        String str4 = this.d;
+        int iHashCode4 = (iHashCode3 + (str4 == null ? 0 : str4.hashCode())) * 31;
+        String str5 = this.e;
+        int iHashCode5 = (iHashCode4 + (str5 == null ? 0 : str5.hashCode())) * 31;
+        Integer num = this.f;
+        int iHashCode6 = (iHashCode5 + (num == null ? 0 : num.hashCode())) * 31;
+        Integer num2 = this.g;
+        return iHashCode6 + (num2 != null ? num2.hashCode() : 0);
+    }
+
+    public final String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(cnb.z(-149147034319658L));
+        yg.u(sb, this.a, -149074019875626L);
+        yg.u(sb, this.b, -148992415497002L);
+        yg.u(sb, this.c, -149512106539818L);
+        yg.u(sb, this.d, -149434797128490L);
+        yg.u(sb, this.e, -149421912226602L);
+        bjs.w(sb, this.f, -149331717913386L);
+        return bjs.p(sb, this.g, ')');
+    }
+}

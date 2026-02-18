@@ -1,0 +1,411 @@
+package me.hd.wauxv.obf;
+
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Parcelable;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import me.hd.wauxv.R;
+
+/* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+/* JADX INFO: loaded from: classes.dex */
+public final /* synthetic */ class bty implements bgf {
+    public final /* synthetic */ int a;
+
+    public /* synthetic */ bty(int i) {
+        this.a = i;
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    @Override // me.hd.wauxv.obf.bgf
+    public final Object invoke(Object obj) throws IllegalAccessException {
+        Object objX;
+        Object objX2;
+        Object objX3;
+        Object objX4;
+        Class cls;
+        Class cls2;
+        int i = this.a;
+        int i2 = 5;
+        int i3 = 6;
+        int i4 = 17;
+        int i5 = 29;
+        int i6 = 0;
+        ens ensVar = ens.a;
+        switch (i) {
+            case 0:
+                bah bahVar = (bah) obj;
+                String[] strArr = {cnb.z(-355859515308842L)};
+                bahVar.getClass();
+                bahVar.a = la.ab(strArr);
+                cdj cdjVar = new cdj();
+                cdjVar.t(cnb.z(-355722076355370L), cnb.z(-356147278117674L));
+                bahVar.d = cdjVar;
+                return ensVar;
+            case 1:
+                View view = (View) obj;
+                View viewK = dkz.k(view, R.layout.module_dialog_location, null, false);
+                int i7 = R.id.moduleDialogBtnLocationSelect;
+                MaterialButton materialButton = (MaterialButton) cnd.aq(viewK, R.id.moduleDialogBtnLocationSelect);
+                if (materialButton != null) {
+                    i7 = R.id.moduleDialogEdtLocationLatitude;
+                    TextInputEditText textInputEditText = (TextInputEditText) cnd.aq(viewK, R.id.moduleDialogEdtLocationLatitude);
+                    if (textInputEditText != null) {
+                        i7 = R.id.moduleDialogEdtLocationLongitude;
+                        TextInputEditText textInputEditText2 = (TextInputEditText) cnd.aq(viewK, R.id.moduleDialogEdtLocationLongitude);
+                        if (textInputEditText2 != null) {
+                            i7 = R.id.moduleDialogInputLocationLatitude;
+                            if (((TextInputLayout) cnd.aq(viewK, R.id.moduleDialogInputLocationLatitude)) != null) {
+                                i7 = R.id.moduleDialogInputLocationLongitude;
+                                if (((TextInputLayout) cnd.aq(viewK, R.id.moduleDialogInputLocationLongitude)) != null) {
+                                    bxj.c = new cem((LinearLayout) viewK, materialButton, textInputEditText, textInputEditText2);
+                                    materialButton.setOnClickListener(new bxa(view, i6));
+                                    cem cemVar = bxj.c;
+                                    if (cemVar == null) {
+                                        bzo.ar(cnb.z(-496154622032682L));
+                                        throw null;
+                                    }
+                                    cemVar.c.setText(String.valueOf(bxf.a.j()));
+                                    cem cemVar2 = bxj.c;
+                                    if (cemVar2 == null) {
+                                        bzo.ar(cnb.z(-496120262294314L));
+                                        throw null;
+                                    }
+                                    cemVar2.d.setText(String.valueOf(bxg.a.j()));
+                                    bzy bzyVar = new bzy(view.getContext());
+                                    eg egVar = (eg) bzyVar.d;
+                                    bxj.a.getClass();
+                                    egVar.d = bxj.l;
+                                    cem cemVar3 = bxj.c;
+                                    if (cemVar3 == null) {
+                                        bzo.ar(cnb.z(-496085902555946L));
+                                        throw null;
+                                    }
+                                    LinearLayout linearLayout = cemVar3.b;
+                                    bzyVar.t(cnb.z(-496051542817578L), new amw(new amd(28), 0));
+                                    bzyVar.s(cnb.z(-495987118308138L), new amw(new amd(29), 2));
+                                    bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar, cnb.z(-47455093652266L));
+                                    if (linearLayout != null) {
+                                        egVar.r = linearLayout;
+                                    }
+                                    bzyVar.i().show();
+                                    return ensVar;
+                                }
+                            }
+                        }
+                    }
+                }
+                throw new NullPointerException(cnb.z(-662764993379114L).concat(viewK.getResources().getResourceName(i7)));
+            case 2:
+                ((amm) obj).c = new bty(i2);
+                return ensVar;
+            case 3:
+                ((amm) obj).c = new bty(9);
+                return ensVar;
+            case 4:
+                bmm bmmVar = (bmm) obj;
+                bmmVar.getClass();
+                try {
+                    objX = bmmVar.d()[0];
+                    if (objX == null) {
+                        objX = null;
+                    }
+                } catch (Throwable th) {
+                    objX = bhu.x(th);
+                }
+                if (objX instanceof dcx) {
+                    objX = null;
+                }
+                bzo.n(objX);
+                AlertDialog.Builder builder = new AlertDialog.Builder(((View) objX).getContext());
+                builder.setTitle(cnb.z(-492761597868842L));
+                LinearLayout linearLayout2 = new LinearLayout(builder.getContext());
+                linearLayout2.setGravity(17);
+                linearLayout2.setOrientation(0);
+                EditText editText = new EditText(linearLayout2.getContext());
+                editText.setInputType(12290);
+                editText.setText(String.valueOf(bxf.a.j()));
+                editText.addTextChangedListener(new bxh(editText, 0));
+                linearLayout2.addView(editText);
+                EditText editText2 = new EditText(linearLayout2.getContext());
+                editText2.setInputType(12290);
+                editText2.setText(String.valueOf(bxg.a.j()));
+                editText2.addTextChangedListener(new bxh(editText2, 1));
+                linearLayout2.addView(editText2);
+                builder.setView(linearLayout2);
+                builder.setPositiveButton(cnb.z(-492787367672618L), (DialogInterface.OnClickListener) null);
+                builder.setNegativeButton(cnb.z(-492722943163178L), (DialogInterface.OnClickListener) null);
+                builder.show();
+                return ensVar;
+            case 5:
+                bah bahVar2 = (bah) obj;
+                cdj cdjVar2 = new cdj();
+                cdjVar2.s(cnb.z(-492868972051242L));
+                cdjVar2.t(cnb.z(-494458109950762L), cnb.z(-494290606226218L));
+                bahVar2.getClass();
+                bahVar2.d = cdjVar2;
+                return ensVar;
+            case 6:
+                bah bahVar3 = (bah) obj;
+                cdj cdjVar3 = new cdj();
+                cdjVar3.s(cnb.z(-492744417999658L));
+                cdjVar3.t(cnb.z(-492684288457514L));
+                bahVar3.getClass();
+                bahVar3.d = cdjVar3;
+                return ensVar;
+            case 7:
+                ((bmm) obj).h(Double.valueOf(bxf.a.j()));
+                return ensVar;
+            case 8:
+                ((bmm) obj).h(Double.valueOf(bxg.a.j()));
+                return ensVar;
+            case 9:
+                bah bahVar4 = (bah) obj;
+                String[] strArr2 = {cnb.z(-494655678446378L)};
+                bahVar4.getClass();
+                bahVar4.a = la.ab(strArr2);
+                cdj cdjVar4 = new cdj();
+                cdjVar4.t(cnb.z(-493938418907946L), cnb.z(-493886879300394L));
+                bahVar4.d = cdjVar4;
+                return ensVar;
+            case 10:
+                bah bahVar5 = (bah) obj;
+                cdj cdjVar5 = new cdj();
+                cdjVar5.s(cnb.z(-493066540546858L));
+                cdjVar5.t(cnb.z(-493006411004714L));
+                bahVar5.getClass();
+                bahVar5.d = cdjVar5;
+                return ensVar;
+            case 11:
+                bmm bmmVar2 = (bmm) obj;
+                bmmVar2.getClass();
+                try {
+                    objX2 = bmmVar2.d()[0];
+                    if (objX2 == null) {
+                        objX2 = null;
+                    }
+                } catch (Throwable th2) {
+                    objX2 = bhu.x(th2);
+                }
+                if (objX2 instanceof dcx) {
+                    objX2 = null;
+                }
+                bzo.n(objX2);
+                int iIntValue = ((Number) objX2).intValue();
+                try {
+                    objX3 = bmmVar2.d()[1];
+                    if (objX3 == null) {
+                        objX3 = null;
+                    }
+                } catch (Throwable th3) {
+                    objX3 = bhu.x(th3);
+                }
+                if (objX3 instanceof dcx) {
+                    objX3 = null;
+                }
+                bzo.n(objX3);
+                int iIntValue2 = ((Number) objX3).intValue();
+                if (iIntValue == 6 && iIntValue2 == -1) {
+                    try {
+                        objX4 = bmmVar2.d()[2];
+                        if (objX4 == null) {
+                            objX4 = null;
+                        }
+                    } catch (Throwable th4) {
+                        objX4 = bhu.x(th4);
+                    }
+                    if (objX4 instanceof dcx) {
+                        objX4 = null;
+                    }
+                    bzo.n(objX4);
+                    Parcelable parcelableExtra = ((Intent) objX4).getParcelableExtra(cnb.z(-496180391836458L));
+                    bzo.n(parcelableExtra);
+                    int i8 = bte.a;
+                    cde cdeVarT = dqc.bi(parcelableExtra).t();
+                    cdeVarT.a = dal.b(String.class);
+                    Object objJ = ((cdk) aaz.e(cdeVarT.aj())).j(new Object[0]);
+                    bzo.n(objJ);
+                    String str = (String) objJ;
+                    Pattern patternCompile = Pattern.compile(cnb.z(-493362893290282L));
+                    bzo.p(patternCompile, "compile(...)");
+                    Matcher matcher = patternCompile.matcher(str);
+                    bzo.p(matcher, "matcher(...)");
+                    bzx bzxVarY = ewz.y(matcher, 0, str);
+                    if (bzxVarY == null || ((r) bzxVarY.e()).a() != 3) {
+                        cem cemVar4 = bxj.c;
+                        if (cemVar4 == null) {
+                            bzo.ar(cnb.z(-493590526556970L));
+                            throw null;
+                        }
+                        cemVar4.c.setText(cnb.z(-493556166818602L));
+                        cem cemVar5 = bxj.c;
+                        if (cemVar5 == null) {
+                            bzo.ar(cnb.z(-493530397014826L));
+                            throw null;
+                        }
+                        cemVar5.d.setText(cnb.z(-493496037276458L));
+                    } else {
+                        cem cemVar6 = bxj.c;
+                        if (cemVar6 == null) {
+                            bzo.ar(cnb.z(-493659246033706L));
+                            throw null;
+                        }
+                        TextInputEditText textInputEditText3 = cemVar6.c;
+                        Float fBd = dnp.bd((String) ((bzv) bzxVarY.e()).get(1));
+                        textInputEditText3.setText(String.valueOf(fBd != null ? fBd.floatValue() : 31.135633f));
+                        cem cemVar7 = bxj.c;
+                        if (cemVar7 == null) {
+                            bzo.ar(cnb.z(-493624886295338L));
+                            throw null;
+                        }
+                        TextInputEditText textInputEditText4 = cemVar7.d;
+                        Float fBd2 = dnp.bd((String) ((bzv) bzxVarY.e()).get(2));
+                        textInputEditText4.setText(String.valueOf(fBd2 != null ? fBd2.floatValue() : 121.66625f));
+                    }
+                }
+                return ensVar;
+            case 12:
+                bxj bxjVar = bxj.a;
+                aki akiVarAb = csb.ab(bxjVar, dqc.bf((Method) obj));
+                bxjVar.y(akiVarAb, new q(akiVarAb, i2));
+                akiVarAb.o();
+                return ensVar;
+            case 13:
+                bxj bxjVar2 = bxj.a;
+                aki akiVarAb2 = csb.ab(bxjVar2, dqc.bf((Method) obj));
+                bxjVar2.y(akiVarAb2, new bty(4));
+                akiVarAb2.o();
+                return ensVar;
+            case 14:
+                ((amm) obj).c = new bty(i3);
+                return ensVar;
+            case 15:
+                ((amm) obj).c = new bty(10);
+                return ensVar;
+            case 16:
+                ((amm) obj).c = new bty(i4);
+                return ensVar;
+            case 17:
+                bah bahVar6 = (bah) obj;
+                String[] strArr3 = {cnb.z(-374130306186026L)};
+                bahVar6.getClass();
+                bahVar6.a = la.ab(strArr3);
+                cdj cdjVar6 = new cdj();
+                cdjVar6.t(cnb.z(-375612069903146L), cnb.z(-375508990688042L));
+                bahVar6.d = cdjVar6;
+                return ensVar;
+            case 18:
+                ((amm) obj).b = new bty(19);
+                return ensVar;
+            case 19:
+                bag bagVar = (bag) obj;
+                zb zbVar = new zb();
+                zbVar.k(cnb.z(-105072079928106L));
+                bagVar.getClass();
+                bagVar.b = zbVar;
+                return ensVar;
+            case 20:
+                ((amm) obj).b = new bty(22);
+                return ensVar;
+            case 21:
+                ((amm) obj).c = new bty(23);
+                return ensVar;
+            case 22:
+                bag bagVar2 = (bag) obj;
+                zb zbVar2 = new zb();
+                zbVar2.k(cnb.z(-105304008162090L), cnb.z(-104694122806058L));
+                bagVar2.getClass();
+                bagVar2.b = zbVar2;
+                return ensVar;
+            case 23:
+                bah bahVar7 = (bah) obj;
+                cdj cdjVar7 = new cdj();
+                byr.a.getClass();
+                cdjVar7.o(emn.az(byp.a));
+                cls = Class.class;
+                Class<Class> clsBf = cnf.bf(dal.b(cls));
+                cdjVar7.q(clsBf != null ? clsBf : Class.class);
+                bahVar7.getClass();
+                bahVar7.d = cdjVar7;
+                return ensVar;
+            case 24:
+                amm ammVar = (amm) obj;
+                ammVar.b = new bty(25);
+                ammVar.c = new bty(26);
+                return ensVar;
+            case 25:
+                bag bagVar3 = (bag) obj;
+                zb zbVar3 = new zb();
+                zbVar3.k(cnb.z(-104908871170858L), cnb.z(-104818676857642L));
+                bagVar3.getClass();
+                bagVar3.b = zbVar3;
+                return ensVar;
+            case 26:
+                bah bahVar8 = (bah) obj;
+                cdj cdjVar8 = new cdj();
+                Class clsB = cvh.a.b();
+                cls2 = Integer.class;
+                Class<Integer> clsBf2 = cnf.bf(dal.b(cls2));
+                cdjVar8.q(clsB, clsBf2 != null ? clsBf2 : Integer.class);
+                fj fjVar = new fj();
+                cdj cdjVar9 = new cdj();
+                cdjVar9.s(cnb.z(-101850854456106L));
+                fjVar.f(cdjVar9);
+                fjVar.d = bzu.Contains;
+                cdjVar8.i = fjVar;
+                bahVar8.getClass();
+                bahVar8.d = cdjVar8;
+                return ensVar;
+            case 27:
+                bmm bmmVar3 = (bmm) obj;
+                int i9 = bte.a;
+                azg azgVarAa = dkz.aa(bmmVar3);
+                azgVarAa.a = cnb.z(-69200513071914L);
+                Object objE = ((azk) aaz.e(azgVarAa.c())).e();
+                bzo.n(objE);
+                Activity activity = (Activity) objE;
+                azg azgVarAa2 = dkz.aa(bmmVar3);
+                azgVarAa2.ab = cnb.z(-69007239543594L);
+                Object objE2 = ((azk) aaz.e(azgVarAa2.c())).e();
+                bzo.n(objE2);
+                ViewGroup viewGroup = (ViewGroup) objE2;
+                azg azgVarAa3 = dkz.aa(bmmVar3);
+                azgVarAa3.ab = cnb.z(-68444598827818L);
+                Object objD = ((azk) aaz.e(azgVarAa3.c())).d();
+                bzo.n(objD);
+                for (bnp bnpVar : bzc.b) {
+                    try {
+                        bnpVar.t(activity, viewGroup, objD);
+                    } catch (Exception e) {
+                        ArrayList arrayList = ewq.a;
+                        StringBuilder sb = new StringBuilder();
+                        sb.append(cnb.z(-68354404514602L));
+                        ewq.e(yg.n(sb, bnpVar instanceof doo ? ((doo) bnpVar).f() : cnb.z(-68337224645418L), -68247030332202L), e, 12);
+                    }
+                }
+                return ensVar;
+            case 28:
+                ((amm) obj).c = new bty(i5);
+                return ensVar;
+            default:
+                bah bahVar9 = (bah) obj;
+                cdj cdjVar10 = new cdj();
+                cdj.l(cdjVar10, cnb.z(-68212670593834L));
+                cdjVar10.t(cnb.z(-68676527061802L), cnb.z(-68530498173738L));
+                bahVar9.getClass();
+                bahVar9.d = cdjVar10;
+                return ensVar;
+        }
+    }
+}

@@ -1,0 +1,325 @@
+package me.hd.wauxv.obf;
+
+import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
+import androidx.recyclerview.widget.RecyclerView;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import me.hd.wauxv.R;
+
+/* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+/* JADX INFO: loaded from: classes.dex */
+public final class aek {
+    public ael a;
+    public final dov e;
+    public final dov f;
+    public final dov g;
+    public final dov h;
+    public final dov i;
+    public final dov j;
+    public final dov k;
+    public final dov b = new dov(new h(26));
+    public final dov c = new dov(new h(27));
+    public final dov d = new dov(new h(28));
+    public adw l = new adw(this);
+
+    public aek() {
+        final int i = 0;
+        this.e = new dov(new bfu(this) { // from class: me.hd.wauxv.obf.aej
+            public final /* synthetic */ aek b;
+
+            {
+                this.b = this;
+            }
+
+            @Override // me.hd.wauxv.obf.bfu
+            public final Object invoke() {
+                switch (i) {
+                    case 0:
+                        return (RecyclerView) ((LinearLayout) this.b.d.getValue()).findViewById(R.id.itemContactRecyclerView);
+                    case 1:
+                        return (EditText) this.b.n().findViewById(R.id.etSearch);
+                    case 2:
+                        return (Button) this.b.n().findViewById(R.id.btnCancel);
+                    case 3:
+                        return (Button) this.b.n().findViewById(R.id.btnConfirm);
+                    case 4:
+                        return (RadioGroup) this.b.n().findViewById(R.id.rgTabs);
+                    case 5:
+                        return (CheckBox) this.b.n().findViewById(R.id.cbSelectAll);
+                    default:
+                        return (TextView) this.b.n().findViewById(R.id.tvCounter);
+                }
+            }
+        });
+        final int i2 = 1;
+        this.f = new dov(new bfu(this) { // from class: me.hd.wauxv.obf.aej
+            public final /* synthetic */ aek b;
+
+            {
+                this.b = this;
+            }
+
+            @Override // me.hd.wauxv.obf.bfu
+            public final Object invoke() {
+                switch (i2) {
+                    case 0:
+                        return (RecyclerView) ((LinearLayout) this.b.d.getValue()).findViewById(R.id.itemContactRecyclerView);
+                    case 1:
+                        return (EditText) this.b.n().findViewById(R.id.etSearch);
+                    case 2:
+                        return (Button) this.b.n().findViewById(R.id.btnCancel);
+                    case 3:
+                        return (Button) this.b.n().findViewById(R.id.btnConfirm);
+                    case 4:
+                        return (RadioGroup) this.b.n().findViewById(R.id.rgTabs);
+                    case 5:
+                        return (CheckBox) this.b.n().findViewById(R.id.cbSelectAll);
+                    default:
+                        return (TextView) this.b.n().findViewById(R.id.tvCounter);
+                }
+            }
+        });
+        final int i3 = 2;
+        this.g = new dov(new bfu(this) { // from class: me.hd.wauxv.obf.aej
+            public final /* synthetic */ aek b;
+
+            {
+                this.b = this;
+            }
+
+            @Override // me.hd.wauxv.obf.bfu
+            public final Object invoke() {
+                switch (i3) {
+                    case 0:
+                        return (RecyclerView) ((LinearLayout) this.b.d.getValue()).findViewById(R.id.itemContactRecyclerView);
+                    case 1:
+                        return (EditText) this.b.n().findViewById(R.id.etSearch);
+                    case 2:
+                        return (Button) this.b.n().findViewById(R.id.btnCancel);
+                    case 3:
+                        return (Button) this.b.n().findViewById(R.id.btnConfirm);
+                    case 4:
+                        return (RadioGroup) this.b.n().findViewById(R.id.rgTabs);
+                    case 5:
+                        return (CheckBox) this.b.n().findViewById(R.id.cbSelectAll);
+                    default:
+                        return (TextView) this.b.n().findViewById(R.id.tvCounter);
+                }
+            }
+        });
+        final int i4 = 3;
+        this.h = new dov(new bfu(this) { // from class: me.hd.wauxv.obf.aej
+            public final /* synthetic */ aek b;
+
+            {
+                this.b = this;
+            }
+
+            @Override // me.hd.wauxv.obf.bfu
+            public final Object invoke() {
+                switch (i4) {
+                    case 0:
+                        return (RecyclerView) ((LinearLayout) this.b.d.getValue()).findViewById(R.id.itemContactRecyclerView);
+                    case 1:
+                        return (EditText) this.b.n().findViewById(R.id.etSearch);
+                    case 2:
+                        return (Button) this.b.n().findViewById(R.id.btnCancel);
+                    case 3:
+                        return (Button) this.b.n().findViewById(R.id.btnConfirm);
+                    case 4:
+                        return (RadioGroup) this.b.n().findViewById(R.id.rgTabs);
+                    case 5:
+                        return (CheckBox) this.b.n().findViewById(R.id.cbSelectAll);
+                    default:
+                        return (TextView) this.b.n().findViewById(R.id.tvCounter);
+                }
+            }
+        });
+        final int i5 = 4;
+        this.i = new dov(new bfu(this) { // from class: me.hd.wauxv.obf.aej
+            public final /* synthetic */ aek b;
+
+            {
+                this.b = this;
+            }
+
+            @Override // me.hd.wauxv.obf.bfu
+            public final Object invoke() {
+                switch (i5) {
+                    case 0:
+                        return (RecyclerView) ((LinearLayout) this.b.d.getValue()).findViewById(R.id.itemContactRecyclerView);
+                    case 1:
+                        return (EditText) this.b.n().findViewById(R.id.etSearch);
+                    case 2:
+                        return (Button) this.b.n().findViewById(R.id.btnCancel);
+                    case 3:
+                        return (Button) this.b.n().findViewById(R.id.btnConfirm);
+                    case 4:
+                        return (RadioGroup) this.b.n().findViewById(R.id.rgTabs);
+                    case 5:
+                        return (CheckBox) this.b.n().findViewById(R.id.cbSelectAll);
+                    default:
+                        return (TextView) this.b.n().findViewById(R.id.tvCounter);
+                }
+            }
+        });
+        final int i6 = 5;
+        this.j = new dov(new bfu(this) { // from class: me.hd.wauxv.obf.aej
+            public final /* synthetic */ aek b;
+
+            {
+                this.b = this;
+            }
+
+            @Override // me.hd.wauxv.obf.bfu
+            public final Object invoke() {
+                switch (i6) {
+                    case 0:
+                        return (RecyclerView) ((LinearLayout) this.b.d.getValue()).findViewById(R.id.itemContactRecyclerView);
+                    case 1:
+                        return (EditText) this.b.n().findViewById(R.id.etSearch);
+                    case 2:
+                        return (Button) this.b.n().findViewById(R.id.btnCancel);
+                    case 3:
+                        return (Button) this.b.n().findViewById(R.id.btnConfirm);
+                    case 4:
+                        return (RadioGroup) this.b.n().findViewById(R.id.rgTabs);
+                    case 5:
+                        return (CheckBox) this.b.n().findViewById(R.id.cbSelectAll);
+                    default:
+                        return (TextView) this.b.n().findViewById(R.id.tvCounter);
+                }
+            }
+        });
+        final int i7 = 6;
+        this.k = new dov(new bfu(this) { // from class: me.hd.wauxv.obf.aej
+            public final /* synthetic */ aek b;
+
+            {
+                this.b = this;
+            }
+
+            @Override // me.hd.wauxv.obf.bfu
+            public final Object invoke() {
+                switch (i7) {
+                    case 0:
+                        return (RecyclerView) ((LinearLayout) this.b.d.getValue()).findViewById(R.id.itemContactRecyclerView);
+                    case 1:
+                        return (EditText) this.b.n().findViewById(R.id.etSearch);
+                    case 2:
+                        return (Button) this.b.n().findViewById(R.id.btnCancel);
+                    case 3:
+                        return (Button) this.b.n().findViewById(R.id.btnConfirm);
+                    case 4:
+                        return (RadioGroup) this.b.n().findViewById(R.id.rgTabs);
+                    case 5:
+                        return (CheckBox) this.b.n().findViewById(R.id.cbSelectAll);
+                    default:
+                        return (TextView) this.b.n().findViewById(R.id.tvCounter);
+                }
+            }
+        });
+    }
+
+    public final ccu m() {
+        return (ccu) this.b.getValue();
+    }
+
+    public final LinearLayout n() {
+        return (LinearLayout) this.c.getValue();
+    }
+
+    public final void o() {
+        List list = this.l.a;
+        boolean z = true;
+        if (list == null || !list.isEmpty()) {
+            Iterator it = list.iterator();
+            while (it.hasNext()) {
+                if (!((adx) it.next()).d) {
+                    z = false;
+                    break;
+                }
+            }
+        }
+        ((CheckBox) this.j.getValue()).setChecked(z);
+    }
+
+    public final void p(String str) {
+        List list;
+        Object obj;
+        ArrayList arrayList;
+        ael aelVar = this.a;
+        csm csmVar = null;
+        if (aelVar == null) {
+            bzo.ar(cnb.z(-393668112415530L));
+            throw null;
+        }
+        RadioGroup radioGroup = (RadioGroup) aelVar.a.i.getValue();
+        int childCount = radioGroup.getChildCount();
+        for (int i = 0; i < childCount; i++) {
+            View childAt = radioGroup.getChildAt(i);
+            if (childAt instanceof RadioButton) {
+                RadioButton radioButton = (RadioButton) childAt;
+                CharSequence text = radioButton.getText();
+                if (radioButton.isChecked()) {
+                    String string = text.toString();
+                    String string2 = text.toString();
+                    if (bzo.f(string2, cnb.z(-395471998679850L))) {
+                        arrayList = aelVar.c;
+                        if (!aelVar.b || arrayList.isEmpty()) {
+                            obj = arrayList;
+                            obj = aelVar.e;
+                        }
+                    } else {
+                        list = (List) aelVar.d.get(string2);
+                        if (list == null) {
+                            obj = list;
+                            obj = avd.a;
+                        }
+                    }
+                    obj = list;
+                    obj = arrayList;
+                    csmVar = new csm(string, obj);
+                    break;
+                }
+            }
+        }
+        bzo.n(csmVar);
+        List list2 = (List) csmVar.b;
+        ArrayList arrayList2 = new ArrayList();
+        for (Object obj2 : list2) {
+            adx adxVar = (adx) obj2;
+            String str2 = adxVar.b;
+            String str3 = adxVar.c;
+            if (dnj.ab(str2, str, true) || dnj.ab(str3, str, true)) {
+                arrayList2.add(obj2);
+            }
+        }
+        this.l = new adw(this);
+        ((RecyclerView) this.e.getValue()).setAdapter(this.l);
+        adw.h(this.l, arrayList2);
+        o();
+    }
+
+    public final void q() {
+        TextView textView = (TextView) this.k.getValue();
+        StringBuilder sb = new StringBuilder();
+        sb.append(cnb.z(-393680997317418L));
+        ael aelVar = this.a;
+        if (aelVar == null) {
+            bzo.ar(cnb.z(-393642342611754L));
+            throw null;
+        }
+        sb.append(aelVar.n().size());
+        sb.append(cnb.z(-393655227513642L));
+        textView.setText(sb.toString());
+    }
+}

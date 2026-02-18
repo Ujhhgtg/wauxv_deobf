@@ -1,0 +1,39 @@
+package me.hd.wauxv.obf;
+
+import java.util.ArrayList;
+
+/* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+/* JADX INFO: loaded from: classes.dex */
+public abstract class bmf extends ewy {
+    public boolean v;
+
+    public abstract String[] _aa();
+
+    public abstract void e();
+
+    @Override // me.hd.wauxv.obf.ewy
+    public final void w() {
+        if (this.v) {
+            return;
+        }
+        try {
+            e();
+        } catch (Exception e) {
+            ArrayList arrayList = ewq.a;
+            StringBuilder sb = new StringBuilder();
+            sb.append(cnb.z(-51419348466474L));
+            ewq.e(yg.n(sb, this instanceof doo ? ((doo) this).f() : cnb.z(-50843822848810L), -50805168143146L), e, 12);
+        }
+        this.v = true;
+    }
+
+    public final void x(aki akiVar, bgf bgfVar) {
+        akiVar.m(new bme(bgfVar, this, 0));
+    }
+
+    public final void y(aki akiVar, bgf bgfVar) {
+        akiVar.n(new bme(bgfVar, this, 1));
+    }
+
+    public abstract boolean z();
+}

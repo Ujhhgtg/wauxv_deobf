@@ -1,0 +1,47 @@
+package me.hd.wauxv.obf;
+
+import android.content.Context;
+import org.luckypray.dexkit.DexKitBridge;
+
+/* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+/* JADX INFO: loaded from: classes.dex */
+public final class auh extends bws implements bng {
+    public static final auh a = new auh();
+
+    public static String b(String str) {
+        int i = bte.a;
+        atm.a.getClass();
+        cde cdeVarT = dqc.bi(atm.b()).t();
+        cdeVarT.a = dal.b(String.class);
+        Object objJ = ((cdk) dkz.n(new Object[]{dal.b(Context.class), dal.b(String.class)}, 2, cdeVarT)).j(null, str);
+        bzo.n(objJ);
+        return (String) objJ;
+    }
+
+    public static void c(auh auhVar, String str, Object obj) {
+        auhVar.getClass();
+        int i = bte.a;
+        atm.a.getClass();
+        cde cdeVarT = dqc.bi(atm.b()).t();
+        cdeVarT.a = Void.TYPE;
+        cdeVarT.d = new atn(13);
+        cdk cdkVar = (cdk) aaz.e(cdeVarT.aj());
+        int parameterCount = cdkVar.a.getParameterCount();
+        if (parameterCount == 4) {
+            cdkVar.e(str, obj, null, null);
+        } else if (parameterCount != 5) {
+            cdkVar.e(str, obj, null);
+        } else {
+            cdkVar.e(str, obj, null, null, 0);
+        }
+    }
+
+    @Override // me.hd.wauxv.obf.bmf
+    public final void e() {
+    }
+
+    @Override // me.hd.wauxv.obf.bng
+    public final void h(DexKitBridge dexKitBridge) {
+        emn.aj(aug.a, dexKitBridge, new atn(14));
+    }
+}

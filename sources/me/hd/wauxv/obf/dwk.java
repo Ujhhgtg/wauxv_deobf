@@ -1,0 +1,77 @@
+package me.hd.wauxv.obf;
+
+import java.util.List;
+
+/* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+/* JADX INFO: loaded from: classes.dex */
+public final /* synthetic */ class dwk implements bgx {
+    public static final dwk b;
+    private static final dfx descriptor;
+
+    static {
+        dwk dwkVar = new dwk();
+        b = dwkVar;
+        cuc cucVar = new cuc(cnb.z(-158690451651370L), dwkVar, 3);
+        bjs.y(-159983236807466L, cucVar, false, 1);
+        bjs.y(-160490042948394L, cucVar, false, 2);
+        bjs.y(-160365488896810L, cucVar, false, 3);
+        descriptor = cucVar;
+    }
+
+    @Override // me.hd.wauxv.obf.btd
+    public final Object a(ajt ajtVar) {
+        dfx dfxVar = descriptor;
+        acm acmVarP = ajtVar.p(dfxVar);
+        btt[] bttVarArr = dwm.a;
+        acmVarP.getClass();
+        List list = null;
+        boolean z = true;
+        int i = 0;
+        String str = null;
+        String str2 = null;
+        while (z) {
+            int iF = acmVarP.f(dfxVar);
+            if (iF == -1) {
+                z = false;
+            } else if (iF == 0) {
+                list = (List) acmVarP.i(dfxVar, 0, (btd) bttVarArr[0].getValue(), list);
+                i |= 1;
+            } else if (iF == 1) {
+                str = (String) acmVarP.i(dfxVar, 1, dnh.b, str);
+                i |= 2;
+            } else {
+                if (iF != 2) {
+                    throw new bsd(iF);
+                }
+                str2 = (String) acmVarP.i(dfxVar, 2, dnh.b, str2);
+                i |= 4;
+            }
+        }
+        acmVarP._bp(dfxVar);
+        return new dwm(i, list, str, str2);
+    }
+
+    @Override // me.hd.wauxv.obf.btd
+    public final void c(avt avtVar, Object obj) {
+        dwm dwmVar = (dwm) obj;
+        dfx dfxVar = descriptor;
+        acn acnVarO = avtVar.o(dfxVar);
+        acnVarO.m(dfxVar, 0, (btd) dwm.a[0].getValue(), dwmVar.b);
+        dnh dnhVar = dnh.b;
+        acnVarO.m(dfxVar, 1, dnhVar, dwmVar.c);
+        acnVarO.m(dfxVar, 2, dnhVar, dwmVar.d);
+        acnVarO.a(dfxVar);
+    }
+
+    @Override // me.hd.wauxv.obf.bgx
+    public final btd[] d() {
+        btd btdVarT = aye.t((btd) dwm.a[0].getValue());
+        dnh dnhVar = dnh.b;
+        return new btd[]{btdVarT, aye.t(dnhVar), aye.t(dnhVar)};
+    }
+
+    @Override // me.hd.wauxv.obf.btd
+    public final dfx getDescriptor() {
+        return descriptor;
+    }
+}

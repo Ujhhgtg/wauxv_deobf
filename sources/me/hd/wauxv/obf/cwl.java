@@ -1,0 +1,475 @@
+package me.hd.wauxv.obf;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+/* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+/* JADX INFO: loaded from: classes.dex */
+public class cwl extends ua implements ajt, acm {
+    public final cwd ah;
+    public final cwo ai;
+    public final dfx aj;
+    public final int[] ak;
+    public HashMap al;
+    public HashMap am;
+    public boolean an;
+    public final asx ao;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public cwl(cwd cwdVar, cwo cwoVar, dfx dfxVar) {
+        super(2, false);
+        bzo.q(dfxVar, "descriptor");
+        this.ah = cwdVar;
+        this.ai = cwoVar;
+        this.aj = dfxVar;
+        this.ao = new asx(dfxVar, new brz(2, this, cwl.class, "readIfAbsent", "readIfAbsent(Lkotlinx/serialization/descriptors/SerialDescriptor;I)Z", 0, 0, 1));
+        int i = dfxVar.i();
+        if (i >= 32) {
+            ax(dfxVar, i);
+            return;
+        }
+        int i2 = i + 1;
+        int[] iArr = new int[i2];
+        for (int i3 = 0; i3 < i2; i3++) {
+            iArr[i3] = -1;
+        }
+        for (int i4 = 0; i4 < i; i4++) {
+            int iO = ajn.o(dfxVar, i4, false);
+            if (iO > i || iO == -2) {
+                ax(dfxVar, i);
+                return;
+            }
+            iArr[iO] = i4;
+        }
+        this.ak = iArr;
+    }
+
+    @Override // me.hd.wauxv.obf.acm
+    public final void _bp(dfx dfxVar) {
+        bzo.q(dfxVar, "descriptor");
+    }
+
+    @Override // me.hd.wauxv.obf.acm
+    public final double _bq(cvk cvkVar, int i) {
+        bzo.q(cvkVar, "descriptor");
+        return ar(ad(cvkVar, i));
+    }
+
+    @Override // me.hd.wauxv.obf.acm
+    public final cbm a() {
+        return this.ah.b;
+    }
+
+    @Override // me.hd.wauxv.obf.ajt
+    public final float aa() {
+        return as(_bx());
+    }
+
+    @Override // me.hd.wauxv.obf.ajt
+    public final double ab() {
+        return ar(_bx());
+    }
+
+    public long ad(dfx dfxVar, int i) {
+        bzo.q(dfxVar, "<this>");
+        return ajn.n(dfxVar, i);
+    }
+
+    public String ag(long j) {
+        cwo cwoVar = this.ai;
+        try {
+            if (j != 19500) {
+                return cwoVar.s();
+            }
+            int iG = cwoVar.g(cwf.DEFAULT);
+            cwo.f(iG);
+            return cwoVar.a.f(iG);
+        } catch (cwm e) {
+            throw new cwm("Error while decoding proto number " + ((int) (j & 2147483647L)) + " of " + this.aj.b(), e);
+        }
+    }
+
+    public final Object ap(btd btdVar, Object obj) {
+        String string;
+        dnt dntVar = dnt.c;
+        bzo.q(btdVar, "deserializer");
+        try {
+            return btdVar instanceof bvt ? aw(btdVar, obj) : bzo.f(btdVar.getDescriptor(), rx.j.o) ? av((byte[]) obj) : btdVar instanceof s ? ((s) btdVar).f(this, obj) : btdVar.a(this);
+        } catch (cwm e) {
+            long j_br = _br();
+            dfx descriptor = btdVar.getDescriptor();
+            dfx dfxVar = this.aj;
+            if (bzo.f(dfxVar, descriptor)) {
+                string = "Error while decoding " + dfxVar.b();
+            } else if (bzo.f(dfxVar.h(), dnt.b) && !bzo.f(btdVar.getDescriptor().h(), dntVar)) {
+                StringBuilder sb = new StringBuilder("Error while decoding index ");
+                sb.append(((int) (j_br & 2147483647L)) - 1);
+                sb.append(" in repeated field of ");
+                sb.append(btdVar.getDescriptor().b());
+                string = sb.toString();
+            } else if (bzo.f(dfxVar.h(), dntVar)) {
+                int i = ((int) (j_br & 2147483647L)) - 1;
+                int i2 = i / 2;
+                string = "Error while decoding " + (i % 2 == 0 ? "key" : "value") + " of index " + i2 + " in map field of " + btdVar.getDescriptor().b();
+            } else {
+                string = "Error while decoding " + btdVar.getDescriptor().b() + " at proto number " + ((int) (j_br & 2147483647L)) + " of " + dfxVar.b();
+            }
+            throw new cwm(string, e);
+        }
+    }
+
+    public final boolean aq(long j) {
+        int iAt = at(j);
+        if (iAt == 0) {
+            return false;
+        }
+        if (iAt == 1) {
+            return true;
+        }
+        throw new dgb(bjs.i(iAt, "Unexpected boolean value: "));
+    }
+
+    public final double ar(long j) {
+        cwo cwoVar = this.ai;
+        try {
+            return j == 19500 ? Double.longBitsToDouble(cwoVar.r()) : cwoVar.m();
+        } catch (cwm e) {
+            throw new cwm("Error while decoding proto number " + ((int) (j & 2147483647L)) + " of " + this.aj.b(), e);
+        }
+    }
+
+    public final float as(long j) {
+        cwo cwoVar = this.ai;
+        try {
+            return j == 19500 ? Float.intBitsToFloat(cwoVar.p()) : cwoVar.n();
+        } catch (cwm e) {
+            throw new cwm("Error while decoding proto number " + ((int) (j & 2147483647L)) + " of " + this.aj.b(), e);
+        }
+    }
+
+    public final int at(long j) {
+        cwo cwoVar = this.ai;
+        try {
+            return j == 19500 ? cwoVar.g(cwf.DEFAULT) : cwoVar.o(ajn.r(j));
+        } catch (cwm e) {
+            throw new cwm("Error while decoding proto number " + ((int) (j & 2147483647L)) + " of " + this.aj.b(), e);
+        }
+    }
+
+    public final long au(long j) {
+        cwo cwoVar = this.ai;
+        try {
+            return j == 19500 ? cwoVar.h(cwf.DEFAULT) : cwoVar.q(ajn.r(j));
+        } catch (cwm e) {
+            throw new cwm("Error while decoding proto number " + ((int) (j & 2147483647L)) + " of " + this.aj.b(), e);
+        }
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v0, types: [long] */
+    /* JADX WARN: Type inference failed for: r0v11 */
+    /* JADX WARN: Type inference failed for: r0v12 */
+    /* JADX WARN: Type inference failed for: r0v9, types: [byte[]] */
+    public final byte[] av(byte[] bArr) {
+        byte[] bArrK;
+        byte[] bArrL;
+        long j_br = _br();
+        cwo cwoVar = this.ai;
+        try {
+            if (j_br == 19500) {
+                bArrL = cwoVar.l();
+            } else {
+                bArrK = cwoVar.k();
+            }
+            if (bArr == null) {
+                j_br = bArrK;
+                j_br = bArrL;
+                return j_br;
+            }
+            j_br = bArrK;
+            j_br = bArrL;
+            return la.v(bArr, j_br);
+        } catch (cwm e) {
+            throw new cwm("Error while decoding proto number " + ((int) (j_br & 2147483647L)) + " of " + this.aj.b(), e);
+        }
+    }
+
+    public final LinkedHashMap aw(btd btdVar, Object obj) {
+        bzo.o(btdVar, "null cannot be cast to non-null type kotlinx.serialization.internal.MapLikeSerializer<kotlin.Any?, kotlin.Any?, T of kotlinx.serialization.protobuf.internal.ProtobufDecoder.deserializeMap, *>");
+        dnh dnhVar = dnh.b;
+        bsb bsbVar = bsb.b;
+        bzm bzmVar = new bzm(0);
+        Map map = obj instanceof Map ? (Map) obj : null;
+        Set<Map.Entry> set = (Set) new ko(bzmVar).f(this, map != null ? map.entrySet() : null);
+        int iAh = bzo.ah(abb.ak(set, 10));
+        if (iAh < 16) {
+            iAh = 16;
+        }
+        LinkedHashMap linkedHashMap = new LinkedHashMap(iAh);
+        for (Map.Entry entry : set) {
+            linkedHashMap.put(entry.getKey(), entry.getValue());
+        }
+        return linkedHashMap;
+    }
+
+    public final void ax(dfx dfxVar, int i) {
+        HashMap map = new HashMap(i, 1.0f);
+        int i2 = 0;
+        for (int i3 = 0; i3 < i; i3++) {
+            if (ajn.o(dfxVar, i3, false) == -2) {
+                List listP = ajn.p(dfxVar.l(i3), this.ah.b);
+                ArrayList arrayList = new ArrayList(abb.ak(listP, 10));
+                Iterator it = listP.iterator();
+                while (it.hasNext()) {
+                    arrayList.add(Integer.valueOf((int) (ajn.n((dfx) it.next(), 0) & 2147483647L)));
+                }
+                Iterator it2 = arrayList.iterator();
+                while (it2.hasNext()) {
+                    map.put(Integer.valueOf(((Number) it2.next()).intValue()), Integer.valueOf(i3));
+                }
+                i2++;
+            } else {
+                map.put(Integer.valueOf(ajn.o(dfxVar, i3, false)), Integer.valueOf(i3));
+            }
+        }
+        if (i2 > 0) {
+            this.am = new HashMap(i2, 1.0f);
+        }
+        this.al = map;
+    }
+
+    @Override // me.hd.wauxv.obf.acm
+    public final String d(dfx dfxVar, int i) {
+        bzo.q(dfxVar, "descriptor");
+        return ag(ad(dfxVar, i));
+    }
+
+    @Override // me.hd.wauxv.obf.acm
+    public final long e(cvk cvkVar, int i) {
+        bzo.q(cvkVar, "descriptor");
+        return au(ad(cvkVar, i));
+    }
+
+    public int f(dfx dfxVar) {
+        int iIntValue;
+        HashMap map;
+        cwo cwoVar = this.ai;
+        bzo.q(dfxVar, "descriptor");
+        while (true) {
+            try {
+                int iT = cwoVar.t();
+                asx asxVar = this.ao;
+                if (iT == -1) {
+                    return asxVar.g();
+                }
+                if (iT == 0) {
+                    throw new dgb("0 is not allowed as the protobuf field number in " + dfxVar.b() + ", the input bytes may have been corrupted");
+                }
+                int[] iArr = this.ak;
+                if (iArr != null) {
+                    iIntValue = (iT < 0 || iT >= iArr.length) ? -1 : iArr[iT];
+                } else {
+                    HashMap map2 = this.al;
+                    bzo.n(map2);
+                    Object obj = map2.get(Integer.valueOf(iT));
+                    if (obj == null) {
+                        obj = -1;
+                    }
+                    iIntValue = ((Number) obj).intValue();
+                }
+                if (iIntValue != -1) {
+                    if (ajn.w(ajn.n(dfxVar, iIntValue)) && (map = this.am) != null) {
+                    }
+                    asxVar.f(iIntValue);
+                    return iIntValue;
+                }
+                cwoVar.u();
+            } catch (cwm e) {
+                throw new cwm("Fail to get element index for " + dfxVar.b() + " in " + this.aj.b(), e);
+            }
+        }
+    }
+
+    @Override // me.hd.wauxv.obf.acm
+    public final int g(dfx dfxVar, int i) {
+        bzo.q(dfxVar, "descriptor");
+        return at(ad(dfxVar, i));
+    }
+
+    @Override // me.hd.wauxv.obf.acm
+    public final Object h(dfx dfxVar, int i, btd btdVar, Object obj) {
+        bzo.q(dfxVar, "descriptor");
+        bzo.q(btdVar, "deserializer");
+        _by(ad(dfxVar, i));
+        return ap(btdVar, obj);
+    }
+
+    @Override // me.hd.wauxv.obf.acm
+    public final Object i(dfx dfxVar, int i, btd btdVar, Object obj) {
+        bzo.q(dfxVar, "descriptor");
+        bzo.q(btdVar, "deserializer");
+        _by(ad(dfxVar, i));
+        if (this.an) {
+            return null;
+        }
+        return ap(btdVar, obj);
+    }
+
+    @Override // me.hd.wauxv.obf.acm
+    public final char j(cvk cvkVar, int i) {
+        bzo.q(cvkVar, "descriptor");
+        return (char) at(ad(cvkVar, i));
+    }
+
+    @Override // me.hd.wauxv.obf.acm
+    public final byte k(cvk cvkVar, int i) {
+        bzo.q(cvkVar, "descriptor");
+        return (byte) at(ad(cvkVar, i));
+    }
+
+    @Override // me.hd.wauxv.obf.acm
+    public final boolean l(dfx dfxVar, int i) {
+        bzo.q(dfxVar, "descriptor");
+        return aq(ad(dfxVar, i));
+    }
+
+    @Override // me.hd.wauxv.obf.acm
+    public final ajt m(cvk cvkVar, int i) {
+        bzo.q(cvkVar, "descriptor");
+        long jAd = ad(cvkVar, i);
+        bzo.q(cvkVar.l(i), "inlineDescriptor");
+        _by(jAd);
+        return this;
+    }
+
+    @Override // me.hd.wauxv.obf.acm
+    public final short n(cvk cvkVar, int i) {
+        bzo.q(cvkVar, "descriptor");
+        return (short) at(ad(cvkVar, i));
+    }
+
+    @Override // me.hd.wauxv.obf.acm
+    public final float o(cvk cvkVar, int i) {
+        bzo.q(cvkVar, "descriptor");
+        return as(ad(cvkVar, i));
+    }
+
+    /* JADX WARN: Not initialized variable reg: 11, insn: 0x0076: MOVE (r14 I:??[OBJECT, ARRAY]) = (r11 I:??[OBJECT, ARRAY]) (LINE:119), block:B:32:0x0076 */
+    public acm p(dfx dfxVar) {
+        dfx dfxVar2;
+        emc emcVarH;
+        dnt dntVar;
+        boolean zF;
+        cwd cwdVar;
+        cwo cwoVar;
+        Integer num;
+        dfx dfxVar3 = this.aj;
+        bzo.q(dfxVar, "descriptor");
+        try {
+            emcVarH = dfxVar.h();
+            dntVar = dnt.b;
+            zF = bzo.f(emcVarH, dntVar);
+            cwdVar = this.ah;
+            cwoVar = this.ai;
+        } catch (cwm e) {
+            e = e;
+            dfxVar2 = dfxVar;
+        }
+        try {
+            try {
+                if (zF) {
+                    long j_br = _br();
+                    if (!bzo.f(dfxVar3.h(), dntVar) || j_br == 19500 || dfxVar3.equals(dfxVar)) {
+                        return (cwoVar.c == cwk.f && ajn.x(dfxVar.l(0))) ? new cse(cwdVar, new cwo(cwoVar.i()), dfxVar) : new dbm(cwdVar, cwoVar, j_br, dfxVar);
+                    }
+                    cwo cwoVarAl = cnf.al(cwoVar, j_br);
+                    cwoVarAl.t();
+                    return new dbm(cwdVar, cwoVarAl, 1, dfxVar);
+                }
+                if (!bzo.f(emcVarH, dnt.a) && !bzo.f(emcVarH, dnt.n) && !(emcVarH instanceof cur)) {
+                    if (bzo.f(emcVarH, dnt.c)) {
+                        return new bzj(cwdVar, new cwo(_br() == 19500 ? cwoVar.j() : cwoVar.i()), _br(), dfxVar);
+                    }
+                    throw new dgb("Primitives are not supported at top-level");
+                }
+                long j_br2 = _br();
+                if (j_br2 == 19500 && bzo.f(dfxVar3, dfxVar)) {
+                    return this;
+                }
+                if (!ajn.w(j_br2)) {
+                    return new cwl(cwdVar, cnf.al(cwoVar, j_br2), dfxVar);
+                }
+                int i = ((int) (j_br2 & 2147483647L)) - 1;
+                HashMap map = this.am;
+                if (map != null && (num = (Integer) map.get(Integer.valueOf(i))) != null) {
+                    j_br2 = (j_br2 & 1152921500311879680L) | ((long) num.intValue());
+                }
+                return new crg(cwdVar, cwoVar, j_br2, dfxVar);
+            } catch (cwm e2) {
+                e = e2;
+                throw new cwm("Fail to begin structure for " + dfxVar2.b() + " in " + dfxVar3.b() + " at proto number " + ((int) (_br() & 2147483647L)), e);
+            }
+        } catch (cwm e3) {
+            e = e3;
+            throw new cwm("Fail to begin structure for " + dfxVar2.b() + " in " + dfxVar3.b() + " at proto number " + ((int) (_br() & 2147483647L)), e);
+        }
+    }
+
+    @Override // me.hd.wauxv.obf.ajt
+    public final boolean q() {
+        return aq(_bx());
+    }
+
+    @Override // me.hd.wauxv.obf.ajt
+    public final char r() {
+        return (char) at(_bx());
+    }
+
+    @Override // me.hd.wauxv.obf.ajt
+    public final int s() {
+        return at(_bx());
+    }
+
+    @Override // me.hd.wauxv.obf.ajt
+    public final Object t(btd btdVar) {
+        bzo.q(btdVar, "deserializer");
+        return ap(btdVar, null);
+    }
+
+    @Override // me.hd.wauxv.obf.ajt
+    public final ajt u(dfx dfxVar) {
+        bzo.q(dfxVar, "descriptor");
+        _by(_bw());
+        return this;
+    }
+
+    @Override // me.hd.wauxv.obf.ajt
+    public final String v() {
+        return ag(_bx());
+    }
+
+    @Override // me.hd.wauxv.obf.ajt
+    public final long w() {
+        return au(_bx());
+    }
+
+    @Override // me.hd.wauxv.obf.ajt
+    public final boolean x() {
+        return !this.an;
+    }
+
+    @Override // me.hd.wauxv.obf.ajt
+    public final byte y() {
+        return (byte) at(_bx());
+    }
+
+    @Override // me.hd.wauxv.obf.ajt
+    public final short z() {
+        return (short) at(_bx());
+    }
+}

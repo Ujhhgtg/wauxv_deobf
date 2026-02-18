@@ -1,0 +1,27 @@
+package me.hd.wauxv.obf;
+
+import de.robv.android.xposed.XC_MethodHook;
+
+/* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+/* JADX INFO: loaded from: classes.dex */
+public final /* synthetic */ class bmh implements bfu {
+    public final /* synthetic */ int a;
+    public final /* synthetic */ XC_MethodHook.MethodHookParam b;
+
+    public /* synthetic */ bmh(XC_MethodHook.MethodHookParam methodHookParam, int i) {
+        this.a = i;
+        this.b = methodHookParam;
+    }
+
+    @Override // me.hd.wauxv.obf.bfu
+    public final Object invoke() {
+        switch (this.a) {
+            case 0:
+                return this.b.method;
+            case 1:
+                return this.b.thisObject;
+            default:
+                return this.b.args;
+        }
+    }
+}

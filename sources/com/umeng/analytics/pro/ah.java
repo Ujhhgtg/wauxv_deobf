@@ -1,0 +1,46 @@
+package com.umeng.analytics.pro;
+
+import android.content.SharedPreferences;
+import com.umeng.commonsdk.debug.UMRTLog;
+import com.umeng.commonsdk.service.UMGlobalContext;
+
+/* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+/* JADX INFO: loaded from: classes.dex */
+public class ah implements ac {
+    private String a;
+    private long b;
+
+    public ah(String str, long j) {
+        this.a = str;
+        this.b = j;
+    }
+
+    @Override // com.umeng.analytics.pro.ac
+    public boolean a() {
+        try {
+            String str = au.b + this.a;
+            SharedPreferences sharedPreferencesA = au.a(UMGlobalContext.getAppContext());
+            if (sharedPreferencesA == null) {
+                return false;
+            }
+            long jCurrentTimeMillis = System.currentTimeMillis() - sharedPreferencesA.getLong(str, 0L);
+            if (jCurrentTimeMillis > this.b * 1000) {
+                return true;
+            }
+            UMRTLog.i(UMRTLog.RTLOG_TAG, "internal period skipped. elapse: " + jCurrentTimeMillis + "; config: " + (this.b * 1000));
+            return false;
+        } catch (Throwable unused) {
+            return false;
+        }
+    }
+
+    @Override // com.umeng.analytics.pro.ac
+    public boolean b() {
+        return !a();
+    }
+
+    @Override // com.umeng.analytics.pro.ac
+    public long c() {
+        return 0L;
+    }
+}

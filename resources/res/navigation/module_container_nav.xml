@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/moduleContainerView"
+    app:startDestination="@+id/policyFragment">
+    <fragment
+        android:label="policyFragment"
+        android:name="me.hd.wauxv.ui.fragment.policy.PolicyFragment"
+        android:id="@+id/policyFragment">
+        <argument
+            android:name="showOnly"
+            android:defaultValue="false"
+            app:argType="boolean"/>
+        <action
+            android:id="@+id/action_policyFragment_to_moduleNavFragment"
+            app:destination="@+id/moduleNavFragment"
+            app:popUpTo="@+id/policyFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:label="moduleNavFragment"
+        android:name="me.hd.wauxv.ui.fragment.module.ModuleNavFragment"
+        android:id="@+id/moduleNavFragment"/>
+    <fragment
+        android:label="codeFragment"
+        android:name="me.hd.wauxv.ui.fragment.module.page.CodeFragment"
+        android:id="@+id/codeFragment">
+        <argument
+            android:name="pluginId"
+            app:argType="string"/>
+        <argument
+            android:name="pluginPath"
+            app:argType="string"/>
+    </fragment>
+</navigation>
