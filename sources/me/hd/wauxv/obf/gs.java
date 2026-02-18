@@ -7,6 +7,6 @@ import android.widget.LinearLayout;
 /* JADX INFO: loaded from: classes.dex */
 public final class gs extends LinearLayout.LayoutParams {
     public int a;
-    public io b;
+    public DefaultConfig b;
     public Interpolator c;
 }

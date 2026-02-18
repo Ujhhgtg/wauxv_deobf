@@ -13,11 +13,11 @@ public abstract class dlq {
     public abstract void c(ViewGroup viewGroup);
 
     public void e(mt mtVar, ViewGroup viewGroup) {
-        bzo.q(mtVar, "backEvent");
-        bzo.q(viewGroup, "container");
+        throwIfVar1IsNull(mtVar, "backEvent");
+        throwIfVar1IsNull(viewGroup, "container");
     }
 
     public void f(ViewGroup viewGroup) {
-        bzo.q(viewGroup, "container");
+        throwIfVar1IsNull(viewGroup, "container");
     }
 }

@@ -12,7 +12,7 @@ import java.lang.ref.WeakReference;
 public final class dme extends da implements cbu {
     public Context q;
     public ActionBarContextView r;
-    public io s;
+    public DefaultConfig s;
     public WeakReference t;
     public boolean u;
     public cbw v;

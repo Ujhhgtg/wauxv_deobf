@@ -14,7 +14,8 @@ public final class ebl {
     public final Long h;
     public final Long i;
 
-    public /* synthetic */ ebl(int i, String str, Long l, Integer num, Boolean bool, eak eakVar, Long l2, Boolean bool2, Long l3, Long l4) {
+    public /* synthetic */ ebl(int i, String str, Long l, Integer num, Boolean bool, eak eakVar, Long l2, Boolean bool2,
+            Long l3, Long l4) {
         if (511 != (i & 511)) {
             bht.ah(i, 511, ebj.b.getDescriptor());
             throw null;
@@ -38,7 +39,11 @@ public final class ebl {
             return false;
         }
         ebl eblVar = (ebl) obj;
-        return bzo.f(this.a, eblVar.a) && bzo.f(this.b, eblVar.b) && bzo.f(this.c, eblVar.c) && bzo.f(this.d, eblVar.d) && bzo.f(this.e, eblVar.e) && bzo.f(this.f, eblVar.f) && bzo.f(this.g, eblVar.g) && bzo.f(this.h, eblVar.h) && bzo.f(this.i, eblVar.i);
+        return nullSafeIsEqual(this.a, eblVar.a) && nullSafeIsEqual(this.b, eblVar.b)
+                && nullSafeIsEqual(this.c, eblVar.c) && nullSafeIsEqual(this.d, eblVar.d)
+                && nullSafeIsEqual(this.e, eblVar.e) && nullSafeIsEqual(this.f, eblVar.f)
+                && nullSafeIsEqual(this.g, eblVar.g) && nullSafeIsEqual(this.h, eblVar.h)
+                && nullSafeIsEqual(this.i, eblVar.i);
     }
 
     public final int hashCode() {

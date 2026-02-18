@@ -11,7 +11,7 @@ public abstract class ahx {
 
     public final boolean equals(Object obj) {
         if (obj instanceof ahx) {
-            return bzo.f(this.c, ((ahx) obj).c);
+            return nullSafeIsEqual(this.c, ((ahx) obj).c);
         }
         return false;
     }

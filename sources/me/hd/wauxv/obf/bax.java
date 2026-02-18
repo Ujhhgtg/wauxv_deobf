@@ -59,7 +59,7 @@ public final class bax {
         }
         bps bpsVar = null;
         if (dialogXBaseRelativeLayout2.getRootWindowInsets() != null) {
-            evo evoVar = evr.d(null, dialogXBaseRelativeLayout2.getRootWindowInsets()).b;
+            evo evoVar = evr.d(null, dialogXBaseRelativeLayout2.getRootWindowInsets()).second;
             boolean zR = evoVar.r(2);
             if (!evoVar.r(8) && zR) {
                 bps bpsVarN = evoVar.n(519);
@@ -132,7 +132,9 @@ public final class bax {
             int i9 = DialogXBaseRelativeLayout.a;
             ng ngVar = this.d;
             Activity activityAe = ngVar == null ? ng.ae() : ngVar.as();
-            if (activityAe != null && activityAe.getResources().getConfiguration().orientation == 2 && (rotation = activityAe.getWindowManager().getDefaultDisplay().getRotation()) != 1 && rotation == 3) {
+            if (activityAe != null && activityAe.getResources().getConfiguration().orientation == 2
+                    && (rotation = activityAe.getWindowManager().getDefaultDisplay().getRotation()) != 1
+                    && rotation == 3) {
                 bawVar.c = n();
                 bawVar.a = m();
             } else {
@@ -188,12 +190,15 @@ public final class bax {
         if (!o() && l() != null) {
             int i = Build.VERSION.SDK_INT;
             WindowInsetsController windowInsetsController = i >= 30 ? l().getWindowInsetsController() : null;
-            if (i >= 30 && windowInsetsController != null && (windowInsetsController.getSystemBarsBehavior() & 16) == 0) {
+            if (i >= 30 && windowInsetsController != null
+                    && (windowInsetsController.getSystemBarsBehavior() & 16) == 0) {
                 int i2 = DialogXBaseRelativeLayout.a;
                 return 0;
             }
             DialogXBaseRelativeLayout dialogXBaseRelativeLayout = this.b;
-            Resources system = (dialogXBaseRelativeLayout == null || dialogXBaseRelativeLayout.getContext() == null) ? Resources.getSystem() : this.b.getContext().getResources();
+            Resources system = (dialogXBaseRelativeLayout == null || dialogXBaseRelativeLayout.getContext() == null)
+                    ? Resources.getSystem()
+                    : this.b.getContext().getResources();
             int identifier = system.getIdentifier("navigation_bar_height", "dimen", "android");
             if (identifier > 0) {
                 return system.getDimensionPixelSize(identifier);
@@ -212,7 +217,9 @@ public final class bax {
             return 0;
         }
         DialogXBaseRelativeLayout dialogXBaseRelativeLayout = this.b;
-        Resources system = (dialogXBaseRelativeLayout == null || dialogXBaseRelativeLayout.getContext() == null) ? Resources.getSystem() : this.b.getContext().getResources();
+        Resources system = (dialogXBaseRelativeLayout == null || dialogXBaseRelativeLayout.getContext() == null)
+                ? Resources.getSystem()
+                : this.b.getContext().getResources();
         int identifier = system.getIdentifier("status_bar_height", "dimen", "android");
         if (identifier > 0) {
             return system.getDimensionPixelSize(identifier);
@@ -226,6 +233,7 @@ public final class bax {
         if (activityAe == null) {
             return false;
         }
-        return ((activityAe.getWindow().getAttributes().flags & 1024) == 0 && (activityAe.getWindow().getDecorView().getSystemUiVisibility() & 4) == 0) ? false : true;
+        return ((activityAe.getWindow().getAttributes().flags & 1024) == 0
+                && (activityAe.getWindow().getDecorView().getSystemUiVisibility() & 4) == 0) ? false : true;
     }
 }

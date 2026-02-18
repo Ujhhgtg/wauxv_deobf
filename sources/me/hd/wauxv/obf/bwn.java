@@ -78,7 +78,10 @@ public class bwn implements dho {
         if (typedArrayObtainStyledAttributes2.hasValue(2)) {
             inVar.setOverlapAnchor(typedArrayObtainStyledAttributes2.getBoolean(2, false));
         }
-        inVar.setBackgroundDrawable((!typedArrayObtainStyledAttributes2.hasValue(0) || (resourceId = typedArrayObtainStyledAttributes2.getResourceId(0, 0)) == 0) ? typedArrayObtainStyledAttributes2.getDrawable(0) : cmz.y(context, resourceId));
+        inVar.setBackgroundDrawable((!typedArrayObtainStyledAttributes2.hasValue(0)
+                || (resourceId = typedArrayObtainStyledAttributes2.getResourceId(0, 0)) == 0)
+                        ? typedArrayObtainStyledAttributes2.getDrawable(0)
+                        : cmz.y(context, resourceId));
         typedArrayObtainStyledAttributes2.recycle();
         this.av = inVar;
         inVar.setInputMethodMode(1);
@@ -126,7 +129,15 @@ public class bwn implements dho {
             paddingBottom = iA + i;
         } else {
             int i4 = this.y;
-            int iM = this.w.m(i4 != -2 ? i4 != -1 ? View.MeasureSpec.makeMeasureSpec(i4, 1073741824) : View.MeasureSpec.makeMeasureSpec(context.getResources().getDisplayMetrics().widthPixels - (rect.left + rect.right), 1073741824) : View.MeasureSpec.makeMeasureSpec(context.getResources().getDisplayMetrics().widthPixels - (rect.left + rect.right), Integer.MIN_VALUE), iA);
+            int iM = this.w.m(i4 != -2
+                    ? i4 != -1 ? View.MeasureSpec.makeMeasureSpec(i4, 1073741824)
+                            : View.MeasureSpec.makeMeasureSpec(
+                                    context.getResources().getDisplayMetrics().widthPixels - (rect.left + rect.right),
+                                    1073741824)
+                    : View.MeasureSpec.makeMeasureSpec(
+                            context.getResources().getDisplayMetrics().widthPixels - (rect.left + rect.right),
+                            Integer.MIN_VALUE),
+                    iA);
             paddingBottom = iM + (iM > 0 ? this.w.getPaddingBottom() + this.w.getPaddingTop() + i : 0);
         }
         boolean z = inVar.getInputMethodMode() == 2;
@@ -188,7 +199,7 @@ public class bwn implements dho {
                 }
             }
         } else {
-            bwi.b(inVar, true);
+            bwi.tryGetClassByName(inVar, true);
         }
         inVar.setOutsideTouchable(true);
         inVar.setTouchInterceptor(this.ao);

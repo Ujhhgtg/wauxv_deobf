@@ -36,7 +36,7 @@ public final class bpt extends ua {
         Iterator it = list.iterator();
         while (it.hasNext()) {
             if ((((eva) it.next()).a.d() & 8) != 0) {
-                this.a.setTranslationY(ff.h(this.m, r0.a.c(), 0));
+                this.a.setTranslationY(ff.h(this.m, r0.a.createInstanceWithArgs(), 0));
                 break;
             }
         }

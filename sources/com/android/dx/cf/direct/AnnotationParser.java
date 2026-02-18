@@ -65,7 +65,7 @@ public final class AnnotationParser {
         CstType cstType = new CstType(Type.intern(((CstString) this.pool.get(unsignedShort)).getString()));
         if (this.observer != null) {
             parsed(2, "type: " + cstType.toHuman());
-            parsed(2, bjs.i(unsignedShort2, "num_elements: "));
+            parsed(2, concatVar2Var1(unsignedShort2, "num_elements: "));
         }
         Annotation annotation = new Annotation(cstType, annotationVisibility);
         for (int i = 0; i < unsignedShort2; i++) {
@@ -127,7 +127,8 @@ public final class AnnotationParser {
     private Constant parseConstant() {
         Constant constant = this.pool.get(this.input.readUnsignedShort());
         if (this.observer != null) {
-            parsed(2, yg.k("constant_value: ", constant instanceof CstString ? ((CstString) constant).toQuoted() : constant.toHuman()));
+            parsed(2, yg.k("constant_value: ",
+                    constant instanceof CstString ? ((CstString) constant).toQuoted() : constant.toHuman()));
         }
         return constant;
     }
@@ -162,7 +163,8 @@ public final class AnnotationParser {
             return CstShort.make(((CstInteger) parseConstant()).getValue());
         }
         if (unsignedByte == 99) {
-            Type typeInternReturnType = Type.internReturnType(((CstString) this.pool.get(this.input.readUnsignedShort())).getString());
+            Type typeInternReturnType = Type
+                    .internReturnType(((CstString) this.pool.get(this.input.readUnsignedShort())).getString());
             if (this.observer != null) {
                 parsed(2, "class_info: " + typeInternReturnType.toHuman());
             }
@@ -210,7 +212,7 @@ public final class AnnotationParser {
         int unsignedShort3 = this.input.readUnsignedShort();
         CstArray.List list = new CstArray.List(unsignedShort3);
         if (this.observer != null) {
-            parsed(2, bjs.i(unsignedShort3, "num_values: "));
+            parsed(2, concatVar2Var1(unsignedShort3, "num_values: "));
             changeIndent(1);
         }
         for (int i = 0; i < unsignedShort3; i++) {

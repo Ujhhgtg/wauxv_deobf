@@ -17,7 +17,7 @@ public final class bku extends bdo {
     @Override // me.hd.wauxv.obf.bdj
     public final void k(View view) {
         eqj eqjVar = this.d;
-        bzo.n(eqjVar);
+        throwIfVar1IsNull(eqjVar);
         RecyclerView recyclerView = ((bdr) eqjVar).b;
         dc();
         recyclerView.setLayoutManager(new LinearLayoutManager(1));

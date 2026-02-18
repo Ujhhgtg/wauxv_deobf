@@ -5,9 +5,9 @@ package me.hd.wauxv.obf;
 public final class agf {
     public final int a;
     public final String b;
-    public final bgf c;
+    public final IHasInvokeMethod c;
 
-    public agf(int i, String str, bgf bgfVar) {
+    public agf(int i, String str, IHasInvokeMethod bgfVar) {
         this.a = i;
         this.b = str;
         this.c = bgfVar;

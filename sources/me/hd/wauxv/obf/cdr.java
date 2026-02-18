@@ -52,9 +52,38 @@ public final class cdr {
         if (!cdr.class.equals(obj != null ? obj.getClass() : null)) {
             return false;
         }
-        bzo.o(obj, "null cannot be cast to non-null type me.hd.wauxv.hook.micromsg.core.protobuf.proto.ModUserInfo" /* cnb.z(-339323891219242L) */);
+        throwIfVar1IsNull(obj,
+                "null cannot be cast to non-null type me.hd.wauxv.hook.micromsg.core.protobuf.proto.ModUserInfo" /*
+                                                                                                                  * cnb.
+                                                                                                                  * z(-
+                                                                                                                  * 339323891219242L)
+                                                                                                                  */);
         cdr cdrVar = (cdr) obj;
-        return bzo.f(this.a, cdrVar.a) && bzo.f(this.d, cdrVar.d) && bzo.f(this.g, cdrVar.g) && bzo.f(this.h, cdrVar.h) && bzo.f(this.j, cdrVar.j) && bzo.f(this.n, cdrVar.n) && bzo.f(this.p, cdrVar.p) && bzo.f(this.q, cdrVar.q) && bzo.f(this.s, cdrVar.s) && bzo.f(this.t, cdrVar.t) && bzo.f(this.u, cdrVar.u) && bzo.f(this.v, cdrVar.v) && bzo.f(this.w, cdrVar.w) && bzo.f(this.y, cdrVar.y) && bzo.f(this.ac, cdrVar.ac) && bzo.f(this.ad, cdrVar.ad) && bzo.f(this.ae, cdrVar.ae) && bzo.f(this.ag, cdrVar.ag) && bzo.f(this.ah, cdrVar.ah) && bzo.f(this.aj, cdrVar.aj) && bzo.f(this.b, cdrVar.b) && bzo.f(this.c, cdrVar.c) && bzo.f(this.e, cdrVar.e) && bzo.f(this.f, cdrVar.f) && Arrays.equals(this.i, cdrVar.i) && bzo.f(this.k, cdrVar.k) && bzo.f(this.l, cdrVar.l) && bzo.f(this.m, cdrVar.m) && bzo.f(this.o, cdrVar.o) && bzo.f(this.r, cdrVar.r) && bzo.f(this.x, cdrVar.x) && bzo.f(this.z, cdrVar.z) && bzo.f(this.aa, cdrVar.aa) && bzo.f(this.ab, cdrVar.ab) && bzo.f(this.af, cdrVar.af) && bzo.f(this.ai, cdrVar.ai) && bzo.f(this.ak, cdrVar.ak) && bzo.f(this.al, cdrVar.al);
+        return nullSafeIsEqual(this.a, cdrVar.a) && nullSafeIsEqual(this.d, cdrVar.d)
+                && nullSafeIsEqual(this.g, cdrVar.g) && nullSafeIsEqual(this.h, cdrVar.h)
+                && nullSafeIsEqual(this.j, cdrVar.j) && nullSafeIsEqual(this.n, cdrVar.n)
+                && nullSafeIsEqual(this.p, cdrVar.p)
+                && nullSafeIsEqual(this.q, cdrVar.q) && nullSafeIsEqual(this.s, cdrVar.s)
+                && nullSafeIsEqual(this.t, cdrVar.t)
+                && nullSafeIsEqual(this.u, cdrVar.u) && nullSafeIsEqual(this.v, cdrVar.v)
+                && nullSafeIsEqual(this.w, cdrVar.w)
+                && nullSafeIsEqual(this.y, cdrVar.y) && nullSafeIsEqual(this.ac, cdrVar.ac)
+                && nullSafeIsEqual(this.ad, cdrVar.ad)
+                && nullSafeIsEqual(this.ae, cdrVar.ae) && nullSafeIsEqual(this.ag, cdrVar.ag)
+                && nullSafeIsEqual(this.ah, cdrVar.ah)
+                && nullSafeIsEqual(this.aj, cdrVar.aj) && nullSafeIsEqual(this.b, cdrVar.b)
+                && nullSafeIsEqual(this.c, cdrVar.c)
+                && nullSafeIsEqual(this.e, cdrVar.e) && nullSafeIsEqual(this.f, cdrVar.f)
+                && Arrays.equals(this.i, cdrVar.i)
+                && nullSafeIsEqual(this.k, cdrVar.k) && nullSafeIsEqual(this.l, cdrVar.l)
+                && nullSafeIsEqual(this.m, cdrVar.m)
+                && nullSafeIsEqual(this.o, cdrVar.o) && nullSafeIsEqual(this.r, cdrVar.r)
+                && nullSafeIsEqual(this.x, cdrVar.x)
+                && nullSafeIsEqual(this.z, cdrVar.z) && nullSafeIsEqual(this.aa, cdrVar.aa)
+                && nullSafeIsEqual(this.ab, cdrVar.ab)
+                && nullSafeIsEqual(this.af, cdrVar.af) && nullSafeIsEqual(this.ai, cdrVar.ai)
+                && nullSafeIsEqual(this.ak, cdrVar.ak)
+                && nullSafeIsEqual(this.al, cdrVar.al);
     }
 
     public final int hashCode() {
@@ -183,6 +212,6 @@ public final class cdr {
         yg.u(sb, this.ai, -363886809185066L);
         bjs.w(sb, this.aj, -363826679642922L);
         yg.u(sb, this.ak, -363796614871850L);
-        return bjs.q(sb, this.al, ')');
+        return concat(sb, this.al, ')');
     }
 }

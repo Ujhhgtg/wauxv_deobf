@@ -13,41 +13,47 @@ public abstract class ams {
     public static final LinkedHashMap b;
 
     static {
-        csm[] csmVarArr = {new csm("boolean", "Z"), new csm("byte", "B"), new csm("char", "C"), new csm("short", "S"), new csm("int", "I"), new csm("float", "F"), new csm("long", "J"), new csm("double", "D"), new csm("void", "V")};
-        int iAh = bzo.ah(9);
+        Pair[] pairVarArr = { new Pair("boolean", "Z"), new Pair("byte", "B"), new Pair("char", "C"),
+                new Pair("short", "S"),
+                new Pair("int", "I"), new Pair("float", "F"), new Pair("long", "J"), new Pair("double", "D"),
+                new Pair("void", "V") };
+        int iAh = KotlinHelpers.ah(9);
         LinkedHashMap linkedHashMap = new LinkedHashMap(iAh);
-        bzo.am(linkedHashMap, csmVarArr);
+        KotlinHelpers.am(linkedHashMap, pairVarArr);
         a = linkedHashMap;
-        csm[] csmVarArr2 = {new csm("Z", "boolean"), new csm("B", "byte"), new csm("C", "char"), new csm("S", "short"), new csm("I", "int"), new csm("F", "float"), new csm("J", "long"), new csm("D", "double"), new csm("V", "void")};
+        Pair[] pairVarArr2 = { new Pair("Z", "boolean"), new Pair("B", "byte"), new Pair("C", "char"),
+                new Pair("S", "short"),
+                new Pair("I", "int"), new Pair("F", "float"), new Pair("J", "long"), new Pair("D", "double"),
+                new Pair("V", "void") };
         LinkedHashMap linkedHashMap2 = new LinkedHashMap(iAh);
-        bzo.am(linkedHashMap2, csmVarArr2);
+        KotlinHelpers.am(linkedHashMap2, pairVarArr2);
         b = linkedHashMap2;
     }
 
     public static final String c(Constructor constructor) {
         StringBuilder sb = new StringBuilder("(");
         Class<?>[] parameterTypes = constructor.getParameterTypes();
-        bzo.p(parameterTypes, "getParameterTypes(...)");
+        throwIfVar1IsNull(parameterTypes, "getParameterTypes(...)");
         return yg.o(sb, la.u(parameterTypes, "", null, null, new amb(3), 30), ")V");
     }
 
     public static final String d(Method method) {
         StringBuilder sb = new StringBuilder("(");
         Class<?>[] parameterTypes = method.getParameterTypes();
-        bzo.p(parameterTypes, "getParameterTypes(...)");
+        throwIfVar1IsNull(parameterTypes, "getParameterTypes(...)");
         sb.append(la.u(parameterTypes, "", null, null, new amb(2), 30));
         sb.append(")");
         Class<?> returnType = method.getReturnType();
-        bzo.p(returnType, "getReturnType(...)");
+        throwIfVar1IsNull(returnType, "getReturnType(...)");
         sb.append(g(returnType));
         return sb.toString();
     }
 
     public static final String e(Class cls) {
-        bzo.q(cls, "clazz");
+        throwIfVar1IsNull(cls, "clazz");
         if (cls.isArray()) {
             Class<?> componentType = cls.getComponentType();
-            bzo.n(componentType);
+            throwIfVar1IsNull(componentType);
             return dkz.s(e(componentType), HttpUrl.PATH_SEGMENT_ENCODE_SET_URI);
         }
         if (!cls.isPrimitive()) {
@@ -80,14 +86,14 @@ public abstract class ams {
         if (cls.equals(Void.TYPE)) {
             return "void";
         }
-        throw new IllegalStateException(bjs.l(cls, "Unknown primitive type: "));
+        throw new IllegalStateException(concatVar2Var1(cls, "Unknown primitive type: "));
     }
 
     public static final String f(String str) {
-        bzo.q(str, "typeSign");
+        throwIfVar1IsNull(str, "typeSign");
         if (str.charAt(0) == '[') {
             String strSubstring = str.substring(1);
-            bzo.p(strSubstring, "substring(...)");
+            throwIfVar1IsNull(strSubstring, "substring(...)");
             return dkz.s(f(strSubstring), HttpUrl.PATH_SEGMENT_ENCODE_SET_URI);
         }
         if (str.length() == 1) {
@@ -101,18 +107,19 @@ public abstract class ams {
             throw new IllegalStateException("Unknown class sign: ".concat(str));
         }
         String strSubstring2 = str.substring(1, str.length() - 1);
-        bzo.p(strSubstring2, "substring(...)");
+        throwIfVar1IsNull(strSubstring2, "substring(...)");
         return dnr.bn(strSubstring2, '/', TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
     }
 
     public static final String g(Class cls) {
-        bzo.q(cls, com.umeng.analytics.pro.f.y);
+        throwIfVar1IsNull(cls, "type");
         if (!cls.isPrimitive()) {
             if (!cls.isArray()) {
-                return bjs.o("L", dnr.bn(cls.getName(), TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/'), ";");
+                return concat("L", dnr.bn(cls.getName(),
+                        TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/'), ";");
             }
             Class<?> componentType = cls.getComponentType();
-            bzo.n(componentType);
+            throwIfVar1IsNull(componentType);
             return yg.k("[", g(componentType));
         }
         if (cls.equals(Boolean.TYPE)) {
@@ -142,17 +149,19 @@ public abstract class ams {
         if (cls.equals(Void.TYPE)) {
             return "V";
         }
-        throw new IllegalStateException(bjs.l(cls, "Unknown primitive type: "));
+        throw new IllegalStateException(concatVar2Var1(cls, "Unknown primitive type: "));
     }
 
     public static final String h(String str) {
-        bzo.q(str, "typeName");
+        throwIfVar1IsNull(str, "typeName");
         if (!dnr.bi(str, HttpUrl.PATH_SEGMENT_ENCODE_SET_URI)) {
             String str2 = (String) a.get(str);
-            return str2 == null ? bjs.o("L", dnr.bn(str, TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/'), ";") : str2;
+            return str2 == null ? concat("L",
+                    dnr.bn(str, TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/'), ";")
+                    : str2;
         }
         String strSubstring = str.substring(0, str.length() - 2);
-        bzo.p(strSubstring, "substring(...)");
+        throwIfVar1IsNull(strSubstring, "substring(...)");
         return yg.k("[", h(strSubstring));
     }
 }

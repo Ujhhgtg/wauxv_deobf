@@ -40,7 +40,7 @@ public final class ThrowingCstInsn extends CstInsn {
         if (constant instanceof CstString) {
             human = ((CstString) constant).toQuoted();
         }
-        StringBuilder sbR = bjs.r(human, " ");
+        StringBuilder sbR = concat(human, " ");
         sbR.append(ThrowingInsn.toCatchString(this.catches));
         return sbR.toString();
     }

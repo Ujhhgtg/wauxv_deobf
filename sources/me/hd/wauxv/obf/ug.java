@@ -14,12 +14,12 @@ public final class ug extends ue {
             return false;
         }
         char c2 = this.a;
-        return (bzo.r(1, c2) > 0 && bzo.r(1, ((ug) obj).a) > 0) || c2 == ((ug) obj).a;
+        return (KotlinHelpers.r(1, c2) > 0 && KotlinHelpers.r(1, ((ug) obj).a) > 0) || c2 == ((ug) obj).a;
     }
 
     public final int hashCode() {
         char c2 = this.a;
-        if (bzo.r(1, c2) > 0) {
+        if (KotlinHelpers.r(1, c2) > 0) {
             return -1;
         }
         return 31 + c2;

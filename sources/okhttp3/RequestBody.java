@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.logging.Logger;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cnh;
 import me.hd.wauxv.obf.cqj;
 import me.hd.wauxv.obf.ekc;
@@ -21,13 +21,17 @@ import okhttp3.internal.Util;
 public abstract class RequestBody {
     public static final Companion Companion = new Companion(null);
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
         }
 
-        public static /* synthetic */ RequestBody create$default(Companion companion, String str, MediaType mediaType, int i, Object obj) {
+        public static /* synthetic */ RequestBody create$default(Companion companion, String str, MediaType mediaType,
+                int i, Object obj) {
             if ((i & 1) != 0) {
                 mediaType = null;
             }
@@ -35,14 +39,15 @@ public abstract class RequestBody {
         }
 
         public final RequestBody create(MediaType mediaType, byte[] bArr) {
-            bzo.q(bArr, "content");
+            throwIfVar1IsNull(bArr, "content");
             return create$default(this, mediaType, bArr, 0, 0, 12, (Object) null);
         }
 
         private Companion() {
         }
 
-        public static /* synthetic */ RequestBody create$default(Companion companion, sj sjVar, MediaType mediaType, int i, Object obj) {
+        public static /* synthetic */ RequestBody create$default(Companion companion, sj sjVar, MediaType mediaType,
+                int i, Object obj) {
             if ((i & 1) != 0) {
                 mediaType = null;
             }
@@ -50,11 +55,12 @@ public abstract class RequestBody {
         }
 
         public final RequestBody create(MediaType mediaType, byte[] bArr, int i) {
-            bzo.q(bArr, "content");
+            throwIfVar1IsNull(bArr, "content");
             return create$default(this, mediaType, bArr, i, 0, 8, (Object) null);
         }
 
-        public static /* synthetic */ RequestBody create$default(Companion companion, byte[] bArr, MediaType mediaType, int i, int i2, int i3, Object obj) {
+        public static /* synthetic */ RequestBody create$default(Companion companion, byte[] bArr, MediaType mediaType,
+                int i, int i2, int i3, Object obj) {
             if ((i3 & 1) != 0) {
                 mediaType = null;
             }
@@ -68,16 +74,17 @@ public abstract class RequestBody {
         }
 
         public final RequestBody create(byte[] bArr) {
-            bzo.q(bArr, "<this>");
+            throwIfVar1IsNull(bArr, "<this>");
             return create$default(this, bArr, (MediaType) null, 0, 0, 7, (Object) null);
         }
 
         public final RequestBody create(byte[] bArr, MediaType mediaType) {
-            bzo.q(bArr, "<this>");
+            throwIfVar1IsNull(bArr, "<this>");
             return create$default(this, bArr, mediaType, 0, 0, 6, (Object) null);
         }
 
-        public static /* synthetic */ RequestBody create$default(Companion companion, File file, MediaType mediaType, int i, Object obj) {
+        public static /* synthetic */ RequestBody create$default(Companion companion, File file, MediaType mediaType,
+                int i, Object obj) {
             if ((i & 1) != 0) {
                 mediaType = null;
             }
@@ -85,11 +92,12 @@ public abstract class RequestBody {
         }
 
         public final RequestBody create(byte[] bArr, MediaType mediaType, int i) {
-            bzo.q(bArr, "<this>");
+            throwIfVar1IsNull(bArr, "<this>");
             return create$default(this, bArr, mediaType, i, 0, 4, (Object) null);
         }
 
-        public static /* synthetic */ RequestBody create$default(Companion companion, MediaType mediaType, byte[] bArr, int i, int i2, int i3, Object obj) {
+        public static /* synthetic */ RequestBody create$default(Companion companion, MediaType mediaType, byte[] bArr,
+                int i, int i2, int i3, Object obj) {
             if ((i3 & 4) != 0) {
                 i = 0;
             }
@@ -100,7 +108,7 @@ public abstract class RequestBody {
         }
 
         public final RequestBody create(String str, MediaType mediaType) {
-            bzo.q(str, "<this>");
+            throwIfVar1IsNull(str, "<this>");
             Charset charset = uj.a;
             if (mediaType != null) {
                 Charset charsetCharset$default = MediaType.charset$default(mediaType, null, 1, null);
@@ -111,12 +119,12 @@ public abstract class RequestBody {
                 }
             }
             byte[] bytes = str.getBytes(charset);
-            bzo.p(bytes, "this as java.lang.String).getBytes(charset)");
+            throwIfVar1IsNull(bytes, "this as java.lang.String).getBytes(charset)");
             return create(bytes, mediaType, 0, bytes.length);
         }
 
         public final RequestBody create(final sj sjVar, final MediaType mediaType) {
-            bzo.q(sjVar, "<this>");
+            throwIfVar1IsNull(sjVar, "<this>");
             return new RequestBody() { // from class: okhttp3.RequestBody$Companion$toRequestBody$1
                 @Override // okhttp3.RequestBody
                 public long contentLength() {
@@ -130,14 +138,14 @@ public abstract class RequestBody {
 
                 @Override // okhttp3.RequestBody
                 public void writeTo(rl rlVar) {
-                    bzo.q(rlVar, "sink");
+                    throwIfVar1IsNull(rlVar, "sink");
                     rlVar.ae(sjVar);
                 }
             };
         }
 
         public final RequestBody create(final byte[] bArr, final MediaType mediaType, final int i, final int i2) {
-            bzo.q(bArr, "<this>");
+            throwIfVar1IsNull(bArr, "<this>");
             Util.checkOffsetAndCount(bArr.length, i, i2);
             return new RequestBody() { // from class: okhttp3.RequestBody$Companion$toRequestBody$2
                 @Override // okhttp3.RequestBody
@@ -152,14 +160,14 @@ public abstract class RequestBody {
 
                 @Override // okhttp3.RequestBody
                 public void writeTo(rl rlVar) {
-                    bzo.q(rlVar, "sink");
+                    throwIfVar1IsNull(rlVar, "sink");
                     rlVar.af(i, i2, bArr);
                 }
             };
         }
 
         public final RequestBody create(final File file, final MediaType mediaType) {
-            bzo.q(file, "<this>");
+            throwIfVar1IsNull(file, "<this>");
             return new RequestBody() { // from class: okhttp3.RequestBody$Companion$asRequestBody$1
                 @Override // okhttp3.RequestBody
                 public long contentLength() {
@@ -173,10 +181,10 @@ public abstract class RequestBody {
 
                 @Override // okhttp3.RequestBody
                 public void writeTo(rl rlVar) throws IOException {
-                    bzo.q(rlVar, "sink");
+                    throwIfVar1IsNull(rlVar, "sink");
                     File file2 = file;
                     Logger logger = cqj.a;
-                    bzo.q(file2, "<this>");
+                    throwIfVar1IsNull(file2, "<this>");
                     ln lnVar = new ln(new FileInputStream(file2), ekc.NONE);
                     try {
                         rlVar.r(lnVar);
@@ -194,22 +202,22 @@ public abstract class RequestBody {
         }
 
         public final RequestBody create(MediaType mediaType, String str) {
-            bzo.q(str, "content");
+            throwIfVar1IsNull(str, "content");
             return create(str, mediaType);
         }
 
         public final RequestBody create(MediaType mediaType, sj sjVar) {
-            bzo.q(sjVar, "content");
+            throwIfVar1IsNull(sjVar, "content");
             return create(sjVar, mediaType);
         }
 
         public final RequestBody create(MediaType mediaType, byte[] bArr, int i, int i2) {
-            bzo.q(bArr, "content");
+            throwIfVar1IsNull(bArr, "content");
             return create(bArr, mediaType, i, i2);
         }
 
         public final RequestBody create(MediaType mediaType, File file) {
-            bzo.q(file, "file");
+            throwIfVar1IsNull(file, "file");
             return create(file, mediaType);
         }
     }

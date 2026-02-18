@@ -21,7 +21,7 @@ public final class cal<S> extends cti {
     public st b;
     public cet c;
     public int d;
-    public io l;
+    public DefaultConfig l;
     public RecyclerView m;
     public RecyclerView n;
     public View o;
@@ -51,7 +51,7 @@ public final class cal<S> extends cti {
         int i;
         int i2;
         ContextThemeWrapper contextThemeWrapper = new ContextThemeWrapper(cq(), this.a);
-        this.l = new io((Context) contextThemeWrapper, 9);
+        this.l = new DefaultConfig((Context) contextThemeWrapper, 9);
         LayoutInflater layoutInflaterCloneInContext = layoutInflater.cloneInContext(contextThemeWrapper);
         cet cetVar = this.b.a;
         if (cas.ec(contextThemeWrapper, R.attr.windowFullscreen)) {
@@ -63,10 +63,17 @@ public final class cal<S> extends cti {
         }
         View viewInflate = layoutInflaterCloneInContext.inflate(i, viewGroup, false);
         Resources resources = dc().getResources();
-        int dimensionPixelOffset = resources.getDimensionPixelOffset(me.hd.wauxv.R.dimen.mtrl_calendar_navigation_bottom_padding) + resources.getDimensionPixelOffset(me.hd.wauxv.R.dimen.mtrl_calendar_navigation_top_padding) + resources.getDimensionPixelSize(me.hd.wauxv.R.dimen.mtrl_calendar_navigation_height);
+        int dimensionPixelOffset = resources
+                .getDimensionPixelOffset(me.hd.wauxv.R.dimen.mtrl_calendar_navigation_bottom_padding)
+                + resources.getDimensionPixelOffset(me.hd.wauxv.R.dimen.mtrl_calendar_navigation_top_padding)
+                + resources.getDimensionPixelSize(me.hd.wauxv.R.dimen.mtrl_calendar_navigation_height);
         int dimensionPixelSize = resources.getDimensionPixelSize(me.hd.wauxv.R.dimen.mtrl_calendar_days_of_week_height);
         int i3 = ceu.a;
-        viewInflate.setMinimumHeight(dimensionPixelOffset + dimensionPixelSize + (resources.getDimensionPixelOffset(me.hd.wauxv.R.dimen.mtrl_calendar_month_vertical_padding) * (i3 - 1)) + (resources.getDimensionPixelSize(me.hd.wauxv.R.dimen.mtrl_calendar_day_height) * i3) + resources.getDimensionPixelOffset(me.hd.wauxv.R.dimen.mtrl_calendar_bottom_padding));
+        viewInflate.setMinimumHeight(dimensionPixelOffset + dimensionPixelSize
+                + (resources.getDimensionPixelOffset(me.hd.wauxv.R.dimen.mtrl_calendar_month_vertical_padding)
+                        * (i3 - 1))
+                + (resources.getDimensionPixelSize(me.hd.wauxv.R.dimen.mtrl_calendar_day_height) * i3)
+                + resources.getDimensionPixelOffset(me.hd.wauxv.R.dimen.mtrl_calendar_bottom_padding));
         GridView gridView = (GridView) viewInflate.findViewById(me.hd.wauxv.R.id.mtrl_calendar_days_of_week);
         eqz.s(gridView, new cah(0));
         int i4 = this.b.e;
@@ -76,10 +83,13 @@ public final class cal<S> extends cti {
         this.n = (RecyclerView) viewInflate.findViewById(me.hd.wauxv.R.id.mtrl_calendar_months);
         this.n.setLayoutManager(new cai(this, i2, i2));
         this.n.setTag("MONTHS_VIEW_GROUP_TAG");
-        com.google.android.material.datepicker.c cVar = new com.google.android.material.datepicker.c(contextThemeWrapper, this.b, new bmu(this));
+        com.google.android.material.datepicker.c cVar = new com.google.android.material.datepicker.c(
+                contextThemeWrapper, this.b, new bmu(this));
         this.n.setAdapter(cVar);
-        int integer = contextThemeWrapper.getResources().getInteger(me.hd.wauxv.R.integer.mtrl_calendar_year_selector_span);
-        RecyclerView recyclerView = (RecyclerView) viewInflate.findViewById(me.hd.wauxv.R.id.mtrl_calendar_year_selector_frame);
+        int integer = contextThemeWrapper.getResources()
+                .getInteger(me.hd.wauxv.R.integer.mtrl_calendar_year_selector_span);
+        RecyclerView recyclerView = (RecyclerView) viewInflate
+                .findViewById(me.hd.wauxv.R.id.mtrl_calendar_year_selector_frame);
         this.m = recyclerView;
         if (recyclerView != null) {
             recyclerView.setHasFixedSize(true);
@@ -92,7 +102,8 @@ public final class cal<S> extends cti {
             recyclerView2.cu(cajVar);
         }
         if (viewInflate.findViewById(me.hd.wauxv.R.id.month_navigation_fragment_toggle) != null) {
-            MaterialButton materialButton = (MaterialButton) viewInflate.findViewById(me.hd.wauxv.R.id.month_navigation_fragment_toggle);
+            MaterialButton materialButton = (MaterialButton) viewInflate
+                    .findViewById(me.hd.wauxv.R.id.month_navigation_fragment_toggle);
             materialButton.setTag("SELECTOR_TOGGLE_TAG");
             eqz.s(materialButton, new yb(this, 2));
             View viewFindViewById = viewInflate.findViewById(me.hd.wauxv.R.id.month_navigation_previous);
@@ -113,7 +124,7 @@ public final class cal<S> extends cti {
         if (!cas.ec(contextThemeWrapper, R.attr.windowFullscreen)) {
             new csj().g(this.n);
         }
-        this.n.eq(cVar.a.a.k(this.c));
+        this.n.eq(cVar.cachedConstructors.cachedConstructors.k(this.c));
         eqz.s(this.n, new cah(1));
         return viewInflate;
     }
@@ -129,8 +140,8 @@ public final class cal<S> extends cti {
 
     public final void s(cet cetVar) {
         com.google.android.material.datepicker.c cVar = (com.google.android.material.datepicker.c) this.n.getAdapter();
-        int iK = cVar.a.a.k(cetVar);
-        int iK2 = iK - cVar.a.a.k(this.c);
+        int iK = cVar.cachedConstructors.cachedConstructors.k(cetVar);
+        int iK2 = iK - cVar.cachedConstructors.cachedConstructors.k(this.c);
         boolean z = Math.abs(iK2) > 3;
         boolean z2 = iK2 > 0;
         this.c = cetVar;

@@ -1,7 +1,7 @@
 package okhttp3;
 
 import java.util.concurrent.TimeUnit;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import net.bytebuddy.implementation.MethodDelegation;
 import okhttp3.internal.concurrent.TaskRunner;
 import okhttp3.internal.connection.RealConnectionPool;
@@ -12,7 +12,7 @@ public final class ConnectionPool {
     private final RealConnectionPool delegate;
 
     public ConnectionPool(RealConnectionPool realConnectionPool) {
-        bzo.q(realConnectionPool, MethodDelegation.ImplementationDelegate.FIELD_NAME_PREFIX);
+        throwIfVar1IsNull(realConnectionPool, MethodDelegation.ImplementationDelegate.FIELD_NAME_PREFIX);
         this.delegate = realConnectionPool;
     }
 
@@ -32,10 +32,13 @@ public final class ConnectionPool {
         return this.delegate.idleConnectionCount();
     }
 
-    /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'this' call moved to the top of the method (can break code
+     * semantics)
+     */
     public ConnectionPool(int i, long j, TimeUnit timeUnit) {
         this(new RealConnectionPool(TaskRunner.INSTANCE, i, j, timeUnit));
-        bzo.q(timeUnit, "timeUnit");
+        throwIfVar1IsNull(timeUnit, "timeUnit");
     }
 
     public ConnectionPool() {

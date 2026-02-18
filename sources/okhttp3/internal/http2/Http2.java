@@ -1,6 +1,6 @@
 package okhttp3.internal.http2;
 
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.dnr;
 import me.hd.wauxv.obf.nu;
 import me.hd.wauxv.obf.sj;
@@ -38,26 +38,27 @@ public final class Http2 {
     static {
         sj sjVar = sj.a;
         CONNECTION_PREFACE = nu.g("PRI * HTTP/2.0\r\n\r\nSM\r\n\r\n");
-        FRAME_NAMES = new String[]{"DATA", "HEADERS", "PRIORITY", "RST_STREAM", "SETTINGS", "PUSH_PROMISE", "PING", "GOAWAY", "WINDOW_UPDATE", "CONTINUATION"};
+        FRAME_NAMES = new String[] { "DATA", "HEADERS", "PRIORITY", "RST_STREAM", "SETTINGS", "PUSH_PROMISE", "PING",
+                "GOAWAY", "WINDOW_UPDATE", "CONTINUATION" };
         FLAGS = new String[64];
         String[] strArr = new String[256];
         for (int i = 0; i < 256; i++) {
             String binaryString = Integer.toBinaryString(i);
-            bzo.p(binaryString, "toBinaryString(it)");
+            throwIfVar1IsNull(binaryString, "toBinaryString(it)");
             strArr[i] = dnr.bn(Util.format("%8s", binaryString), ' ', '0');
         }
         BINARY = strArr;
         String[] strArr2 = FLAGS;
         strArr2[0] = "";
         strArr2[1] = "END_STREAM";
-        int[] iArr = {1};
+        int[] iArr = { 1 };
         strArr2[8] = "PADDED";
         int i2 = iArr[0];
         strArr2[i2 | 8] = yg.o(new StringBuilder(), strArr2[i2], "|PADDED");
         strArr2[4] = "END_HEADERS";
         strArr2[32] = "PRIORITY";
         strArr2[36] = "END_HEADERS|PRIORITY";
-        int[] iArr2 = {4, 32, 36};
+        int[] iArr2 = { 4, 32, 36 };
         for (int i3 = 0; i3 < 3; i3++) {
             int i4 = iArr2[i3];
             int i5 = iArr[0];
@@ -94,11 +95,13 @@ public final class Http2 {
                 String[] strArr = FLAGS;
                 if (i2 < strArr.length) {
                     str = strArr[i2];
-                    bzo.n(str);
+                    throwIfVar1IsNull(str);
                 } else {
                     str = BINARY[i2];
                 }
-                return (i != 5 || (i2 & 4) == 0) ? (i != 0 || (i2 & 32) == 0) ? str : dnr.bo(str, "PRIORITY", "COMPRESSED") : dnr.bo(str, "HEADERS", "PUSH_PROMISE");
+                return (i != 5 || (i2 & 4) == 0)
+                        ? (i != 0 || (i2 & 32) == 0) ? str : dnr.bo(str, "PRIORITY", "COMPRESSED")
+                        : dnr.bo(str, "HEADERS", "PUSH_PROMISE");
             }
         }
         return BINARY[i2];
@@ -110,6 +113,7 @@ public final class Http2 {
     }
 
     public final String frameLog(boolean z, int i, int i2, int i3, int i4) {
-        return Util.format("%s 0x%08x %5d %-13s %s", z ? "<<" : ">>", Integer.valueOf(i), Integer.valueOf(i2), formattedType$okhttp(i3), formatFlags(i3, i4));
+        return Util.format("%s 0x%08x %5d %-13s %s", z ? "<<" : ">>", Integer.valueOf(i), Integer.valueOf(i2),
+                formattedType$okhttp(i3), formatFlags(i3, i4));
     }
 }

@@ -23,7 +23,9 @@ public final class dwy {
     public final dwj q;
     public final dwj r;
 
-    public /* synthetic */ dwy(int i, String str, dwj dwjVar, dwj dwjVar2, dwj dwjVar3, dwj dwjVar4, Float f, String str2, Boolean bool, Boolean bool2, String str3, String str4, String str5, Integer num, dwj dwjVar5, dwj dwjVar6, dwj dwjVar7, dwj dwjVar8, dwj dwjVar9) {
+    public /* synthetic */ dwy(int i, String str, dwj dwjVar, dwj dwjVar2, dwj dwjVar3, dwj dwjVar4, Float f,
+            String str2, Boolean bool, Boolean bool2, String str3, String str4, String str5, Integer num, dwj dwjVar5,
+            dwj dwjVar6, dwj dwjVar7, dwj dwjVar8, dwj dwjVar9) {
         if (262143 != (i & 262143)) {
             bht.ah(i, 262143, dww.b.getDescriptor());
             throw null;
@@ -56,7 +58,15 @@ public final class dwy {
             return false;
         }
         dwy dwyVar = (dwy) obj;
-        return bzo.f(this.a, dwyVar.a) && bzo.f(this.b, dwyVar.b) && bzo.f(this.c, dwyVar.c) && bzo.f(this.d, dwyVar.d) && bzo.f(this.e, dwyVar.e) && bzo.f(this.f, dwyVar.f) && bzo.f(this.g, dwyVar.g) && bzo.f(this.h, dwyVar.h) && bzo.f(this.i, dwyVar.i) && bzo.f(this.j, dwyVar.j) && bzo.f(this.k, dwyVar.k) && bzo.f(this.l, dwyVar.l) && bzo.f(this.m, dwyVar.m) && bzo.f(this.n, dwyVar.n) && bzo.f(this.o, dwyVar.o) && bzo.f(this.p, dwyVar.p) && bzo.f(this.q, dwyVar.q) && bzo.f(this.r, dwyVar.r);
+        return nullSafeIsEqual(this.a, dwyVar.a) && nullSafeIsEqual(this.b, dwyVar.b)
+                && nullSafeIsEqual(this.c, dwyVar.c) && nullSafeIsEqual(this.d, dwyVar.d)
+                && nullSafeIsEqual(this.e, dwyVar.e) && nullSafeIsEqual(this.f, dwyVar.f)
+                && nullSafeIsEqual(this.g, dwyVar.g) && nullSafeIsEqual(this.h, dwyVar.h)
+                && nullSafeIsEqual(this.i, dwyVar.i) && nullSafeIsEqual(this.j, dwyVar.j)
+                && nullSafeIsEqual(this.k, dwyVar.k) && nullSafeIsEqual(this.l, dwyVar.l)
+                && nullSafeIsEqual(this.m, dwyVar.m) && nullSafeIsEqual(this.n, dwyVar.n)
+                && nullSafeIsEqual(this.o, dwyVar.o) && nullSafeIsEqual(this.p, dwyVar.p)
+                && nullSafeIsEqual(this.q, dwyVar.q) && nullSafeIsEqual(this.r, dwyVar.r);
     }
 
     public final int hashCode() {

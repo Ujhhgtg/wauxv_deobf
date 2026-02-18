@@ -66,12 +66,14 @@ public class c {
         if (!TextUtils.isEmpty(strImprintProperty4)) {
             UMServerURL.OVERSEA_SECONDARY_URL = DataHelper.assembleURL(strImprintProperty4);
         }
-        AnalyticsConstants.APPLOG_URL_LIST = new String[]{UMServerURL.OVERSEA_DEFAULT_URL, UMServerURL.OVERSEA_SECONDARY_URL};
+        AnalyticsConstants.APPLOG_URL_LIST = new String[] { UMServerURL.OVERSEA_DEFAULT_URL,
+                UMServerURL.OVERSEA_SECONDARY_URL };
         if (TextUtils.isEmpty(com.umeng.commonsdk.statistics.b.b)) {
             return;
         }
-        if (com.umeng.commonsdk.statistics.b.b.startsWith("460") || com.umeng.commonsdk.statistics.b.b.startsWith("461")) {
-            AnalyticsConstants.APPLOG_URL_LIST = new String[]{UMServerURL.DEFAULT_URL, UMServerURL.SECONDARY_URL};
+        if (com.umeng.commonsdk.statistics.b.b.startsWith("460")
+                || com.umeng.commonsdk.statistics.b.b.startsWith("461")) {
+            AnalyticsConstants.APPLOG_URL_LIST = new String[] { UMServerURL.DEFAULT_URL, UMServerURL.SECONDARY_URL };
         }
     }
 
@@ -79,16 +81,19 @@ public class c {
         if (g) {
             return;
         }
-        ImprintHandler.getImprintService(this.c).registImprintCallback(AnalyticsConstants.CFG_FIELD_KEY, new UMImprintChangeCallback() { // from class: com.umeng.commonsdk.statistics.internal.c.1
-            @Override // com.umeng.commonsdk.statistics.internal.UMImprintChangeCallback
-            public void onImprintValueChanged(String str, String str2) {
-                if (FieldManager.b()) {
-                    FieldManager.a().a(c.this.c, str2);
-                    UMRTLog.e(UMRTLog.RTLOG_TAG, "--->>> apply imprint change and exit: key=" + str + "; value= " + str2);
-                    UMWorkDispatch.sendEvent(c.this.c, com.umeng.commonsdk.internal.a.w, com.umeng.commonsdk.internal.b.a(c.this.c).a(), null);
-                }
-            }
-        });
+        ImprintHandler.getImprintService(this.c).registImprintCallback(AnalyticsConstants.CFG_FIELD_KEY,
+                new UMImprintChangeCallback() { // from class: com.umeng.commonsdk.statistics.internal.c.1
+                    @Override // com.umeng.commonsdk.statistics.internal.UMImprintChangeCallback
+                    public void onImprintValueChanged(String str, String str2) {
+                        if (FieldManager.b()) {
+                            FieldManager.a().a(c.this.c, str2);
+                            UMRTLog.e(UMRTLog.RTLOG_TAG,
+                                    "--->>> apply imprint change and exit: key=" + str + "; value= " + str2);
+                            UMWorkDispatch.sendEvent(c.this.c, com.umeng.commonsdk.internal.a.w,
+                                    com.umeng.commonsdk.internal.b.a(c.this.c).a(), null);
+                        }
+                    }
+                });
         g = true;
     }
 
@@ -97,35 +102,42 @@ public class c {
             return;
         }
         UMRTLog.e(UMRTLog.RTLOG_TAG, "--->>> 注册零号报文 imprint 应答处理回调。");
-        ImprintHandler.getImprintService(this.c).registPreProcessCallback(AnalyticsConstants.ZERO_RESPONSE_FLAG, new UMImprintPreProcessCallback() { // from class: com.umeng.commonsdk.statistics.internal.c.2
-            @Override // com.umeng.commonsdk.statistics.internal.UMImprintPreProcessCallback
-            public boolean onPreProcessImprintKey(String str, String str2) {
-                UMRTLog.e(UMRTLog.RTLOG_TAG, "--->>> onImprintValueChanged: key=" + str + "; value= " + str2);
-                FieldManager.a().a(c.this.c);
-                UMWorkDispatch.sendEvent(c.this.c, com.umeng.commonsdk.internal.a.s, com.umeng.commonsdk.internal.b.a(c.this.c).a(), null);
-                ImprintHandler.getImprintService(c.this.c).a(AnalyticsConstants.ZERO_RESPONSE_FLAG);
-                return true;
-            }
-        });
-        ImprintHandler.getImprintService(this.c).registImprintCallback(AnalyticsConstants.CFG_FIELD_KEY, new UMImprintChangeCallback() { // from class: com.umeng.commonsdk.statistics.internal.c.3
-            @Override // com.umeng.commonsdk.statistics.internal.UMImprintChangeCallback
-            public void onImprintValueChanged(String str, String str2) {
-                UMRTLog.e(UMRTLog.RTLOG_TAG, "--->>> first onImprintValueChanged: key=" + str + "; value= " + str2);
-                FieldManager.a().a(c.this.c, str2);
-                UMWorkDispatch.sendEvent(c.this.c, com.umeng.commonsdk.internal.a.s, com.umeng.commonsdk.internal.b.a(c.this.c).a(), null);
-                if (FieldManager.allow(com.umeng.commonsdk.utils.d.E)) {
-                    UMRTLog.i(UMRTLog.RTLOG_TAG, "--->>> recv zcfg response: foregound count timer enabled.");
-                    if (!UMWorkDispatch.eventHasExist()) {
-                        UMWorkDispatch.sendEventEx(c.this.c, q.a.E, CoreProtocol.getInstance(c.this.c), null, 0L);
+        ImprintHandler.getImprintService(this.c).registPreProcessCallback(AnalyticsConstants.ZERO_RESPONSE_FLAG,
+                new UMImprintPreProcessCallback() { // from class: com.umeng.commonsdk.statistics.internal.c.2
+                    @Override // com.umeng.commonsdk.statistics.internal.UMImprintPreProcessCallback
+                    public boolean onPreProcessImprintKey(String str, String str2) {
+                        UMRTLog.e(UMRTLog.RTLOG_TAG, "--->>> onImprintValueChanged: key=" + str + "; value= " + str2);
+                        FieldManager.a().a(c.this.c);
+                        UMWorkDispatch.sendEvent(c.this.c, com.umeng.commonsdk.internal.a.s,
+                                com.umeng.commonsdk.internal.b.a(c.this.c).a(), null);
+                        ImprintHandler.getImprintService(c.this.c).a(AnalyticsConstants.ZERO_RESPONSE_FLAG);
+                        return true;
                     }
-                }
-                if (FieldManager.allow(com.umeng.commonsdk.utils.d.F)) {
-                    UMRTLog.i(UMRTLog.RTLOG_TAG, "--->>> recv zcfg response: FirstResumeTrigger enabled.");
-                    n.a(c.this.c).b(c.this.c);
-                }
-                ImprintHandler.getImprintService(c.this.c).unregistImprintCallback(AnalyticsConstants.CFG_FIELD_KEY, this);
-            }
-        });
+                });
+        ImprintHandler.getImprintService(this.c).registImprintCallback(AnalyticsConstants.CFG_FIELD_KEY,
+                new UMImprintChangeCallback() { // from class: com.umeng.commonsdk.statistics.internal.c.3
+                    @Override // com.umeng.commonsdk.statistics.internal.UMImprintChangeCallback
+                    public void onImprintValueChanged(String str, String str2) {
+                        UMRTLog.e(UMRTLog.RTLOG_TAG,
+                                "--->>> first onImprintValueChanged: key=" + str + "; value= " + str2);
+                        FieldManager.a().a(c.this.c, str2);
+                        UMWorkDispatch.sendEvent(c.this.c, com.umeng.commonsdk.internal.a.s,
+                                com.umeng.commonsdk.internal.b.a(c.this.c).a(), null);
+                        if (FieldManager.allow(com.umeng.commonsdk.utils.d.E)) {
+                            UMRTLog.i(UMRTLog.RTLOG_TAG, "--->>> recv zcfg response: foregound count timer enabled.");
+                            if (!UMWorkDispatch.eventHasExist()) {
+                                UMWorkDispatch.sendEventEx(c.this.c, q.a.E, CoreProtocol.getInstance(c.this.c), null,
+                                        0L);
+                            }
+                        }
+                        if (FieldManager.allow(com.umeng.commonsdk.utils.d.F)) {
+                            UMRTLog.i(UMRTLog.RTLOG_TAG, "--->>> recv zcfg response: FirstResumeTrigger enabled.");
+                            n.a(c.this.c).tryGetClassByName(c.this.c);
+                        }
+                        ImprintHandler.getImprintService(c.this.c)
+                                .unregistImprintCallback(AnalyticsConstants.CFG_FIELD_KEY, this);
+                    }
+                });
         f = true;
     }
 
@@ -142,7 +154,7 @@ public class c {
         if (!TextUtils.isEmpty(strImprintProperty2)) {
             UMServerURL.SECONDARY_URL = DataHelper.assembleURL(strImprintProperty2);
         }
-        AnalyticsConstants.APPLOG_URL_LIST = new String[]{UMServerURL.DEFAULT_URL, UMServerURL.SECONDARY_URL};
+        AnalyticsConstants.APPLOG_URL_LIST = new String[] { UMServerURL.DEFAULT_URL, UMServerURL.SECONDARY_URL };
     }
 
     private byte[] c(byte[] bArr, String str) {
@@ -219,9 +231,14 @@ public class c {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Not initialized variable reg: 6, insn: 0x0186: IF  (r6 I:??[int, boolean, OBJECT, ARRAY, byte, short, char]) == (0 ??[int, boolean, OBJECT, ARRAY, byte, short, char])  -> B:215:0x0192, block:B:210:0x0186 */
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException
+    /*
+     * JADX WARN: Not initialized variable reg: 6, insn: 0x0186: IF (r6 I:??[int,
+     * boolean, OBJECT, ARRAY, byte, short, char]) == (0 ??[int, boolean, OBJECT,
+     * ARRAY, byte, short, char]) -> B:215:0x0192, block:B:210:0x0186
+     */
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException
      */
     public byte[] a(byte[] bArr, String str) {
         HttpsURLConnection httpsURLConnection;
@@ -245,7 +262,7 @@ public class c {
                         e = true;
                     }
                     httpsURLConnection.setRequestProperty("X-Umeng-UTC", String.valueOf(System.currentTimeMillis()));
-                    httpsURLConnection.setRequestProperty("X-Umeng-Sdk", a.a(this.c).b());
+                    httpsURLConnection.setRequestProperty("X-Umeng-Sdk", a.a(this.c).tryGetClassByName());
                     httpsURLConnection.setRequestProperty("Content-Type", a.a(this.c).a());
                     httpsURLConnection.setRequestProperty("Msg-Type", "envelope/json");
                     httpsURLConnection.setRequestProperty("X-Umeng-Pro-Ver", "1.0.0");

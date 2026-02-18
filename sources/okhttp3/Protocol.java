@@ -2,7 +2,7 @@ package okhttp3;
 
 import java.io.IOException;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -17,14 +17,17 @@ public enum Protocol {
     public static final Companion Companion = new Companion(null);
     private final String protocol;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
         }
 
         public final Protocol get(String str) throws IOException {
-            bzo.q(str, "protocol");
+            throwIfVar1IsNull(str, "protocol");
             Protocol protocol = Protocol.HTTP_1_0;
             if (str.equals(protocol.protocol)) {
                 return protocol;

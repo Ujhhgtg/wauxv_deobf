@@ -16,11 +16,12 @@ public final /* synthetic */ class ars implements MenuItem.OnMenuItemClickListen
     }
 
     @Override // android.view.MenuItem.OnMenuItemClickListener
-    public final boolean onMenuItemClick(MenuItem menuItem) throws IllegalAccessException, NoSuchMethodException, InvocationTargetException {
+    public final boolean onMenuItemClick(MenuItem menuItem)
+            throws IllegalAccessException, NoSuchMethodException, InvocationTargetException {
         switch (this.a) {
             case 0:
                 bfu bfuVar = (bfu) this.b;
-                bzo.q(menuItem, "it");
+                throwIfVar1IsNull(menuItem, "it");
                 bfuVar.invoke();
                 return true;
             case 1:

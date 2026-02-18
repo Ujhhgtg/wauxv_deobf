@@ -13,7 +13,7 @@ public final class coq implements btd {
 
     @Override // me.hd.wauxv.obf.btd
     public final void c(avt avtVar, Object obj) {
-        bzo.q((Void) obj, "value");
+        throwIfVar1IsNull((Void) obj, "value");
         throw new dgb("'kotlin.Nothing' cannot be serialized");
     }
 

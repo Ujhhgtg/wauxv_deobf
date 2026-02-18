@@ -62,7 +62,7 @@ public final class acg {
         Intent intentB = bhsVar.b(hbVar, str);
         if (intentB.getExtras() != null) {
             Bundle extras = intentB.getExtras();
-            bzo.n(extras);
+            throwIfVar1IsNull(extras);
             if (extras.getClassLoader() == null) {
                 intentB.setExtrasClassLoader(hbVar.getClassLoader());
             }
@@ -75,16 +75,19 @@ public final class acg {
         }
         Bundle bundle = bundleExtra;
         if ("androidx.activity.result.contract.action.REQUEST_PERMISSIONS".equals(intentB.getAction())) {
-            String[] stringArrayExtra = intentB.getStringArrayExtra("androidx.activity.result.contract.extra.PERMISSIONS");
+            String[] stringArrayExtra = intentB
+                    .getStringArrayExtra("androidx.activity.result.contract.extra.PERMISSIONS");
             if (stringArrayExtra == null) {
                 stringArrayExtra = new String[0];
             }
             HashSet hashSet = new HashSet();
             for (int i3 = 0; i3 < stringArrayExtra.length; i3++) {
                 if (TextUtils.isEmpty(stringArrayExtra[i3])) {
-                    throw new IllegalArgumentException(yg.o(new StringBuilder("Permission request for permissions "), Arrays.toString(stringArrayExtra), " must not contain null or empty values"));
+                    throw new IllegalArgumentException(yg.o(new StringBuilder("Permission request for permissions "),
+                            Arrays.toString(stringArrayExtra), " must not contain null or empty values"));
                 }
-                if (Build.VERSION.SDK_INT < 33 && TextUtils.equals(stringArrayExtra[i3], "android.permission.POST_NOTIFICATIONS")) {
+                if (Build.VERSION.SDK_INT < 33
+                        && TextUtils.equals(stringArrayExtra[i3], "android.permission.POST_NOTIFICATIONS")) {
                     hashSet.add(Integer.valueOf(i3));
                 }
             }
@@ -111,7 +114,7 @@ public final class acg {
         }
         bql bqlVar = (bql) intentB.getParcelableExtra("androidx.activity.result.contract.extra.INTENT_SENDER_REQUEST");
         try {
-            bzo.n(bqlVar);
+            throwIfVar1IsNull(bqlVar);
             i2 = i;
             try {
                 hbVar.startIntentSenderForResult(bqlVar.a, i2, bqlVar.b, bqlVar.c, bqlVar.d, 0, bundle);
@@ -126,7 +129,7 @@ public final class acg {
     }
 
     public final dy k(String str, bhs bhsVar, dq dqVar) {
-        bzo.q(str, "key");
+        throwIfVar1IsNull(str, "key");
         l(str);
         this.e.put(str, new dv(dqVar, bhsVar));
         LinkedHashMap linkedHashMap = this.f;
@@ -164,7 +167,7 @@ public final class acg {
 
     public final void m(String str) {
         Integer num;
-        bzo.q(str, "key");
+        throwIfVar1IsNull(str, "key");
         if (!this.d.contains(str) && (num = (Integer) this.b.remove(str)) != null) {
             this.a.remove(num);
         }
@@ -178,7 +181,8 @@ public final class acg {
         }
         Bundle bundle = this.g;
         if (bundle.containsKey(str)) {
-            Log.w("ActivityResultRegistry", "Dropping pending result for request " + str + ": " + ((dp) bhs.t(str, bundle)));
+            Log.w("ActivityResultRegistry",
+                    "Dropping pending result for request " + str + ": " + ((dp) bhs.t(str, bundle)));
             bundle.remove(str);
         }
         LinkedHashMap linkedHashMap2 = this.c;

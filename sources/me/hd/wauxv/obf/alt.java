@@ -5,7 +5,7 @@ import java.util.NoSuchElementException;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class alt implements Iterator, bsw {
+public final class alt implements Iterator, IEmpty {
     public int a = -1;
     public int b;
     public int c;
@@ -16,7 +16,8 @@ public final class alt implements Iterator, bsw {
         this.e = aluVar;
         int length = ((CharSequence) aluVar.b).length();
         if (length < 0) {
-            throw new IllegalArgumentException(yg.f(length, "Cannot coerce value to an empty range: maximum ", " is less than minimum 0."));
+            throw new IllegalArgumentException(
+                    yg.f(length, "Cannot coerce value to an empty range: maximum ", " is less than minimum 0."));
         }
         length = length >= 0 ? 0 : length;
         this.b = length;
@@ -24,7 +25,7 @@ public final class alt implements Iterator, bsw {
     }
 
     public final void f() {
-        csm csmVar;
+        Pair pairVar;
         alu aluVar = this.e;
         CharSequence charSequence = (CharSequence) aluVar.b;
         int i = this.c;
@@ -33,9 +34,10 @@ public final class alt implements Iterator, bsw {
             this.d = null;
             return;
         }
-        if (i <= charSequence.length() && (csmVar = (csm) ((bgj) aluVar.c).g(charSequence, Integer.valueOf(this.c))) != null) {
-            int iIntValue = ((Number) csmVar.a).intValue();
-            int iIntValue2 = ((Number) csmVar.b).intValue();
+        if (i <= charSequence.length()
+                && (pairVar = (Pair) ((bgj) aluVar.c).g(charSequence, Integer.valueOf(this.c))) != null) {
+            int iIntValue = ((Number) pairVar.first).intValue();
+            int iIntValue2 = ((Number) pairVar.second).intValue();
             this.d = dqc.bm(this.b, iIntValue);
             int i2 = iIntValue + iIntValue2;
             this.b = i2;
@@ -64,7 +66,7 @@ public final class alt implements Iterator, bsw {
             throw new NoSuchElementException();
         }
         bqi bqiVar = this.d;
-        bzo.o(bqiVar, "null cannot be cast to non-null type kotlin.ranges.IntRange");
+        throwIfVar1IsNull(bqiVar, "null cannot be cast to non-null type kotlin.ranges.IntRange");
         this.d = null;
         this.a = -1;
         return bqiVar;

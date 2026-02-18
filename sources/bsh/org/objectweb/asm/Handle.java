@@ -25,7 +25,8 @@ public final class Handle {
             return false;
         }
         Handle handle = (Handle) obj;
-        return this.tag == handle.tag && this.isInterface == handle.isInterface && this.owner.equals(handle.owner) && this.name.equals(handle.name) && this.descriptor.equals(handle.descriptor);
+        return this.tag == handle.tag && this.isInterface == handle.isInterface && this.owner.equals(handle.owner)
+                && this.name.equals(handle.name) && this.descriptor.equals(handle.descriptor);
     }
 
     public String getDesc() {
@@ -45,7 +46,8 @@ public final class Handle {
     }
 
     public int hashCode() {
-        return (this.descriptor.hashCode() * this.name.hashCode() * this.owner.hashCode()) + this.tag + (this.isInterface ? 64 : 0);
+        return (this.descriptor.hashCode() * this.name.hashCode() * this.owner.hashCode()) + this.tag
+                + (this.isInterface ? 64 : 0);
     }
 
     public boolean isInterface() {
@@ -60,7 +62,7 @@ public final class Handle {
         sb.append(this.descriptor);
         sb.append(" (");
         sb.append(this.tag);
-        return bjs.q(sb, this.isInterface ? " itf" : "", ')');
+        return concat(sb, this.isInterface ? " itf" : "", ')');
     }
 
     public Handle(int i, String str, String str2, String str3, boolean z) {

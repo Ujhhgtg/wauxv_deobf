@@ -40,7 +40,7 @@ public final class dnw extends cbw implements SubMenu {
         if (i == 0) {
             return null;
         }
-        return bjs.i(i, "android:menu:actionviewstates:");
+        return concatVar2Var1(i, "android:menu:actionviewstates:");
     }
 
     @Override // me.hd.wauxv.obf.cbw

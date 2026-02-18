@@ -19,7 +19,7 @@ public final class dte {
         if (this == obj) {
             return true;
         }
-        return (obj instanceof dte) && bzo.f(this.a, ((dte) obj).a);
+        return (obj instanceof dte) && nullSafeIsEqual(this.a, ((dte) obj).a);
     }
 
     public final int hashCode() {
@@ -33,6 +33,6 @@ public final class dte {
     public final String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("FinderJumpInfoProto(jumpinfo_type=" /* cnb.z(-177541063113514L) */);
-        return bjs.p(sb, this.a, ')');
+        return concat(sb, this.a, ')');
     }
 }

@@ -33,7 +33,10 @@ public class b {
     private static Object e = new Object();
     private static LinkedList<String> l = new LinkedList<>();
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class a extends FileObserver {
         public a(String str) {
             super(str);
@@ -79,7 +82,7 @@ public class b {
                                         int i2 = message.what;
                                         if (i2 != 512) {
                                             switch (i2) {
-                                                case b.a /* 273 */:
+                                                case b.cachedConstructors /* 273 */:
                                                     b.l();
                                                     return;
                                                 case b.f /* 274 */:
@@ -92,7 +95,7 @@ public class b {
                                                     return;
                                             }
                                         }
-                                        b.q();
+                                        b.ensureParameterNotNull();
                                     }
                                 };
                             }
@@ -140,7 +143,7 @@ public class b {
     }
 
     private static void i() {
-        File[] fileArrC = d.c(b);
+        File[] fileArrC = d.createInstanceWithArgs(b);
         if (fileArrC != null) {
             if (l.size() > 0) {
                 l.clear();
@@ -188,14 +191,17 @@ public class b {
                     }
                     String name = file.getName();
                     String strSubstring = !TextUtils.isEmpty(name) ? name.substring(0, 1) : bt.aF;
-                    String strC = d.c(d.d(name));
+                    String strC = d.createInstanceWithArgs(d.d(name));
                     if (SdkVersion.SDK_TYPE == 0) {
                         cVar.a();
                     } else {
                         com.umeng.commonsdk.stateless.a.g = com.umeng.commonsdk.stateless.a.j;
                         cVar.b();
                     }
-                    if (cVar.a(bArrA, strC, com.umeng.commonsdk.vchannel.a.c.equalsIgnoreCase(strC) ? com.umeng.commonsdk.vchannel.a.a : com.umeng.commonsdk.stateless.a.h, strSubstring) && !file.delete()) {
+                    if (cVar.a(bArrA, strC,
+                            com.umeng.commonsdk.vchannel.a.c.equalsIgnoreCase(strC) ? com.umeng.commonsdk.vchannel.a.a
+                                    : com.umeng.commonsdk.stateless.a.h,
+                            strSubstring) && !file.delete()) {
                         file.delete();
                     }
                 } else {
@@ -222,7 +228,9 @@ public class b {
             if (fileA != null && fileA.getParentFile() != null && !TextUtils.isEmpty(fileA.getParentFile().getName())) {
                 c cVar = new c(b);
                 String str = new String(Base64.decode(fileA.getParentFile().getName(), 0));
-                if (!com.umeng.commonsdk.internal.a.a.equalsIgnoreCase(str) && !com.umeng.commonsdk.internal.a.b.equalsIgnoreCase(str) && !com.umeng.commonsdk.internal.a.H.equalsIgnoreCase(str)) {
+                if (!com.umeng.commonsdk.internal.a.a.equalsIgnoreCase(str)
+                        && !com.umeng.commonsdk.internal.a.b.equalsIgnoreCase(str)
+                        && !com.umeng.commonsdk.internal.a.H.equalsIgnoreCase(str)) {
                     ULog.i("walle", "[stateless] handleProcessNext, pathUrl is " + str);
                     try {
                         bArrA = d.a(fileA.getAbsolutePath());
@@ -233,7 +241,9 @@ public class b {
                     if (UMServerURL.PATH_SHARE.equalsIgnoreCase(str)) {
                         str2 = bt.az;
                     }
-                    if (UMServerURL.PATH_PUSH_LAUNCH.equalsIgnoreCase(str) || UMServerURL.PATH_PUSH_REGIST.equalsIgnoreCase(str) || UMServerURL.PATH_PUSH_LOG.equalsIgnoreCase(str)) {
+                    if (UMServerURL.PATH_PUSH_LAUNCH.equalsIgnoreCase(str)
+                            || UMServerURL.PATH_PUSH_REGIST.equalsIgnoreCase(str)
+                            || UMServerURL.PATH_PUSH_LOG.equalsIgnoreCase(str)) {
                         str2 = bt.av;
                     }
                     if (SdkVersion.SDK_TYPE == 0) {
@@ -242,14 +252,18 @@ public class b {
                         com.umeng.commonsdk.stateless.a.g = com.umeng.commonsdk.stateless.a.j;
                         cVar.b();
                     }
-                    if (!cVar.a(bArrA, str, com.umeng.commonsdk.vchannel.a.c.equalsIgnoreCase(str) ? com.umeng.commonsdk.vchannel.a.a : com.umeng.commonsdk.stateless.a.h, str2)) {
+                    if (!cVar.a(bArrA, str,
+                            com.umeng.commonsdk.vchannel.a.c.equalsIgnoreCase(str) ? com.umeng.commonsdk.vchannel.a.a
+                                    : com.umeng.commonsdk.stateless.a.h,
+                            str2)) {
                         ULog.i("walle", "[stateless] Send envelope file failed, abandon and wait next trigger!");
                         return;
                     }
                     ULog.i("walle", "[stateless] Send envelope file success, delete it.");
                     File file = new File(fileA.getAbsolutePath());
                     if (!file.delete()) {
-                        ULog.i("walle", "[stateless] Failed to delete already processed file. We try again after delete failed.");
+                        ULog.i("walle",
+                                "[stateless] Failed to delete already processed file. We try again after delete failed.");
                         file.delete();
                     }
                     m();

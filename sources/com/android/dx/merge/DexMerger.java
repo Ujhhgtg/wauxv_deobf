@@ -81,11 +81,17 @@ public final class DexMerger {
     private final amj typeListOut;
     private final WriterSizes writerSizes;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public abstract class IdMerger<T extends Comparable<T>> {
         private final amj out;
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public class UnsortedValue implements Comparable<IdMerger<T>.UnsortedValue> {
             final int index;
             final IndexMap indexMap;
@@ -112,7 +118,8 @@ public final class DexMerger {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        private int readIntoMap(amj amjVar, dpr dprVar, IndexMap indexMap, int i, TreeMap<T, List<Integer>> treeMap, int i2) {
+        private int readIntoMap(amj amjVar, dpr dprVar, IndexMap indexMap, int i, TreeMap<T, List<Integer>> treeMap,
+                int i2) {
             int iPosition = amjVar != null ? amjVar.b.position() : -1;
             if (i < dprVar.b) {
                 Comparable comparable = read(amjVar, indexMap, i);
@@ -170,7 +177,8 @@ public final class DexMerger {
                     int i4 = iArr2[iIntValue];
                     iArr2[iIntValue] = i4 + 1;
                     updateIndex(i3, indexMap, i4, i);
-                    iArr[num.intValue()] = readIntoMap(amjVarArr[num.intValue()], dprVarArr[num.intValue()], DexMerger.this.indexMaps[num.intValue()], iArr2[num.intValue()], treeMap, num.intValue());
+                    iArr[num.intValue()] = readIntoMap(amjVarArr[num.intValue()], dprVarArr[num.intValue()],
+                            DexMerger.this.indexMaps[num.intValue()], iArr2[num.intValue()], treeMap, num.intValue());
                 }
                 write(entryPollFirstEntry.getKey());
                 i++;
@@ -216,7 +224,10 @@ public final class DexMerger {
         public abstract void write(T t);
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class WriterSizes {
         private int annotation;
         private int annotationsDirectory;
@@ -252,7 +263,8 @@ public final class DexMerger {
             dpr dprVar4 = dpsVar.s;
             dpr dprVar5 = dpsVar.n;
             dpr dprVar6 = dpsVar.o;
-            this.idsDefs = bjs.c(dpsVar.g.b, 32, (dpsVar.f.b * 8) + (dpsVar.e.b * 8) + (dpsVar.d.b * 12) + (dpsVar.c.b * 4) + (dprVar.b * 4), i);
+            this.idsDefs = bjs.c(dpsVar.g.b, 32,
+                    (dpsVar.f.b * 8) + (dpsVar.e.b * 8) + (dpsVar.d.b * 12) + (dpsVar.c.b * 4) + (dprVar.b * 4), i);
             this.mapList = (dpsVar.u.length * 12) + 4;
             this.typeList += fourByteAlign(dpsVar.k.d);
             this.stringData += dpsVar.p.d;
@@ -275,7 +287,9 @@ public final class DexMerger {
         }
 
         public int size() {
-            return this.header + this.idsDefs + this.mapList + this.typeList + this.classData + this.code + this.stringData + this.debugInfo + this.encodedArray + this.annotationsDirectory + this.annotationsSet + this.annotationsSetRefList + this.annotation;
+            return this.header + this.idsDefs + this.mapList + this.typeList + this.classData + this.code
+                    + this.stringData + this.debugInfo + this.encodedArray + this.annotationsDirectory
+                    + this.annotationsSet + this.annotationsSetRefList + this.annotation;
         }
 
         private void fourByteAlign() {
@@ -575,7 +589,7 @@ public final class DexMerger {
             @Override // com.android.dx.merge.DexMerger.IdMerger
             public void updateIndex(int i, IndexMap indexMap, int i2, int i3) {
                 if (i3 < 0 || i3 > 65535) {
-                    throw new amp(bjs.i(i3, "field ID not in [0, 0xffff]: "), null);
+                    throw new amp(concatVar2Var1(i3, "field ID not in [0, 0xffff]: "), null);
                 }
                 indexMap.fieldIds[i2] = (short) i3;
             }
@@ -639,7 +653,7 @@ public final class DexMerger {
             @Override // com.android.dx.merge.DexMerger.IdMerger
             public void updateIndex(int i, IndexMap indexMap, int i2, int i3) {
                 if (i3 < 0 || i3 > 65535) {
-                    throw new amp(bjs.i(i3, "method ID not in [0, 0xffff]: "), null);
+                    throw new amp(concatVar2Var1(i3, "method ID not in [0, 0xffff]: "), null);
                 }
                 indexMap.methodIds[i2] = (short) i3;
             }
@@ -664,13 +678,14 @@ public final class DexMerger {
             @Override // com.android.dx.merge.DexMerger.IdMerger
             public cwe read(amj amjVar, IndexMap indexMap, int i) {
                 ByteBuffer byteBuffer = amjVar.b;
-                return indexMap.adjust(new cwe(amjVar.d, byteBuffer.getInt(), byteBuffer.getInt(), byteBuffer.getInt()));
+                return indexMap
+                        .adjust(new cwe(amjVar.d, byteBuffer.getInt(), byteBuffer.getInt(), byteBuffer.getInt()));
             }
 
             @Override // com.android.dx.merge.DexMerger.IdMerger
             public void updateIndex(int i, IndexMap indexMap, int i2, int i3) {
                 if (i3 < 0 || i3 > 65535) {
-                    throw new amp(bjs.i(i3, "proto ID not in [0, 0xffff]: "), null);
+                    throw new amp(concatVar2Var1(i3, "proto ID not in [0, 0xffff]: "), null);
                 }
                 indexMap.protoIds[i2] = (short) i3;
             }
@@ -734,7 +749,7 @@ public final class DexMerger {
             @Override // com.android.dx.merge.DexMerger.IdMerger
             public void updateIndex(int i, IndexMap indexMap, int i2, int i3) {
                 if (i3 < 0 || i3 > 65535) {
-                    throw new amp(bjs.i(i3, "type ID not in [0, 0xffff]: "), null);
+                    throw new amp(concatVar2Var1(i3, "type ID not in [0, 0xffff]: "), null);
                 }
                 indexMap.typeIds[i2] = (short) i3;
             }
@@ -1134,16 +1149,21 @@ public final class DexMerger {
         WriterSizes writerSizes = new WriterSizes(this);
         int size = this.writerSizes.size() - writerSizes.size();
         if (size > this.compactWasteThreshold) {
-            amkVarMergeDexes = new DexMerger(new amk[]{this.dexOut, new amk(0)}, CollisionPolicy.FAIL, this.context, writerSizes).mergeDexes();
-            this.context.out.printf("Result compacted from %.1fKiB to %.1fKiB to save %.1fKiB%n", Float.valueOf(this.dexOut.b.capacity() / 1024.0f), Float.valueOf(amkVarMergeDexes.b.capacity() / 1024.0f), Float.valueOf(size / 1024.0f));
+            amkVarMergeDexes = new DexMerger(new amk[] { this.dexOut, new amk(0) }, CollisionPolicy.FAIL, this.context,
+                    writerSizes).mergeDexes();
+            this.context.out.printf("Result compacted from %.1fKiB to %.1fKiB to save %.1fKiB%n",
+                    Float.valueOf(this.dexOut.b.capacity() / 1024.0f),
+                    Float.valueOf(amkVarMergeDexes.b.capacity() / 1024.0f), Float.valueOf(size / 1024.0f));
         }
         long jNanoTime2 = System.nanoTime() - jNanoTime;
         while (i < this.dexes.length) {
             int i2 = i + 1;
-            this.context.out.printf("Merged dex #%d (%d defs/%.1fKiB)%n", Integer.valueOf(i2), Integer.valueOf(this.dexes[i].c.g.b), Float.valueOf(this.dexes[i].b.capacity() / 1024.0f));
+            this.context.out.printf("Merged dex #%d (%d defs/%.1fKiB)%n", Integer.valueOf(i2),
+                    Integer.valueOf(this.dexes[i].c.g.b), Float.valueOf(this.dexes[i].b.capacity() / 1024.0f));
             i = i2;
         }
-        this.context.out.printf("Result is %d defs/%.1fKiB. Took %.1fs%n", Integer.valueOf(amkVarMergeDexes.c.g.b), Float.valueOf(amkVarMergeDexes.b.capacity() / 1024.0f), Float.valueOf(jNanoTime2 / 1.0E9f));
+        this.context.out.printf("Result is %d defs/%.1fKiB. Took %.1fs%n", Integer.valueOf(amkVarMergeDexes.c.g.b),
+                Float.valueOf(amkVarMergeDexes.b.capacity() / 1024.0f), Float.valueOf(jNanoTime2 / 1.0E9f));
         return amkVarMergeDexes;
     }
 

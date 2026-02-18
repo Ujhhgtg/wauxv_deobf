@@ -23,10 +23,12 @@ public final class eak {
     static {
         dtr dtrVar = new dtr(16);
         btx btxVar = btx.a;
-        a = new btt[]{null, null, null, null, ewz.am(btxVar, dtrVar), ewz.am(btxVar, new dtr(17)), null, null, null, null, null, null};
+        a = new btt[] { null, null, null, null, ewz.am(btxVar, dtrVar), ewz.am(btxVar, new dtr(17)), null, null, null,
+                null, null, null };
     }
 
-    public /* synthetic */ eak(int i, Long l, Long l2, Integer num, Integer num2, List list, List list2, Boolean bool, Boolean bool2, Integer num3, Integer num4, Integer num5, String str) {
+    public /* synthetic */ eak(int i, Long l, Long l2, Integer num, Integer num2, List list, List list2, Boolean bool,
+            Boolean bool2, Integer num3, Integer num4, Integer num5, String str) {
         if (4095 != (i & 4095)) {
             bht.ah(i, 4095, eai.b.getDescriptor());
             throw null;
@@ -53,7 +55,13 @@ public final class eak {
             return false;
         }
         eak eakVar = (eak) obj;
-        return bzo.f(this.b, eakVar.b) && bzo.f(this.c, eakVar.c) && bzo.f(this.d, eakVar.d) && bzo.f(this.e, eakVar.e) && bzo.f(this.f, eakVar.f) && bzo.f(this.g, eakVar.g) && bzo.f(this.h, eakVar.h) && bzo.f(this.i, eakVar.i) && bzo.f(this.j, eakVar.j) && bzo.f(this.k, eakVar.k) && bzo.f(this.l, eakVar.l) && bzo.f(this.m, eakVar.m);
+        return nullSafeIsEqual(this.b, eakVar.b) && nullSafeIsEqual(this.c, eakVar.c)
+                && nullSafeIsEqual(this.d, eakVar.d) && nullSafeIsEqual(this.e, eakVar.e)
+                && nullSafeIsEqual(this.f, eakVar.f) && nullSafeIsEqual(this.g, eakVar.g)
+                && nullSafeIsEqual(this.h, eakVar.h)
+                && nullSafeIsEqual(this.i, eakVar.i) && nullSafeIsEqual(this.j, eakVar.j)
+                && nullSafeIsEqual(this.k, eakVar.k)
+                && nullSafeIsEqual(this.l, eakVar.l) && nullSafeIsEqual(this.m, eakVar.m);
     }
 
     public final int hashCode() {
@@ -97,6 +105,6 @@ public final class eak {
         bjs.w(sb, this.j, -214477781859114L);
         bjs.w(sb, this.k, -214430537218858L);
         bjs.w(sb, this.l, -214885803752234L);
-        return bjs.q(sb, this.m, ')');
+        return concat(sb, this.m, ')');
     }
 }

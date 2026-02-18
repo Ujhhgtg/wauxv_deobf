@@ -8,7 +8,7 @@ import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Trace;
-import me.hd.wauxv.obf.abt;
+import me.hd.wauxv.obf.QueryDidNotReturnUniqueResultRuntimeException;
 import me.hd.wauxv.obf.cnf;
 import me.hd.wauxv.obf.jx;
 
@@ -34,7 +34,7 @@ public class InitializationProvider extends ContentProvider {
     public final boolean onCreate() {
         Context context = getContext();
         if (context == null) {
-            throw new abt("Context cannot be null");
+            throw new QueryDidNotReturnUniqueResultRuntimeException("Context cannot be null");
         }
         if (context.getApplicationContext() == null) {
             return true;
@@ -44,11 +44,13 @@ public class InitializationProvider extends ContentProvider {
         try {
             try {
                 cnf.an("Startup");
-                jxVarJ.p(context2.getPackageManager().getProviderInfo(new ComponentName(context2.getPackageName(), InitializationProvider.class.getName()), 128).metaData);
+                jxVarJ.p(context2.getPackageManager().getProviderInfo(
+                        new ComponentName(context2.getPackageName(), InitializationProvider.class.getName()),
+                        128).metaData);
                 Trace.endSection();
                 return true;
             } catch (PackageManager.NameNotFoundException e) {
-                throw new abt(e);
+                throw new QueryDidNotReturnUniqueResultRuntimeException(e);
             }
         } catch (Throwable th) {
             Trace.endSection();

@@ -14,7 +14,7 @@ public final class dmx extends cnd implements ajt, acm {
     public final bsa bv;
 
     public dmx(brn brnVar, ewf ewfVar, yi yiVar, dfx dfxVar) {
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         this.ac = brnVar;
         this.ad = ewfVar;
         this.br = yiVar;
@@ -27,7 +27,7 @@ public final class dmx extends cnd implements ajt, acm {
 
     @Override // me.hd.wauxv.obf.cnd, me.hd.wauxv.obf.acm
     public final void _bp(dfx dfxVar) {
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         int i = dfxVar.i();
         brn brnVar = this.ac;
         if (i == 0 && bmy.w(brnVar, dfxVar)) {
@@ -106,7 +106,7 @@ public final class dmx extends cnd implements ajt, acm {
         yi yiVar = this.br;
         ik ikVar = (ik) yiVar.c;
         String str = (String) yiVar.f;
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         ewf ewfVar = this.ad;
         int iOrdinal = ewfVar.ordinal();
         char c = ':';
@@ -152,7 +152,10 @@ public final class dmx extends cnd implements ajt, acm {
                         ikVar.b = i2 - 1;
                     }
                     int iAl = dnj.al(6, str.subSequence(0, yiVar.b).toString(), strM);
-                    throw new brv("Encountered an unknown key '" + strM + "' at offset " + iAl + " at path: " + ikVar.p() + "\nUse 'ignoreUnknownKeys = true' in 'Json {}' builder or '@JsonIgnoreUnknownKeys' annotation to ignore unknown keys.\nJSON input: " + ((Object) cnd.ba(iAl, str)), 0);
+                    throw new brv("Encountered an unknown key '" + strM + "' at offset " + iAl + " at path: "
+                            + ikVar.p()
+                            + "\nUse 'ignoreUnknownKeys = true' in 'Json {}' builder or '@JsonIgnoreUnknownKeys' annotation to ignore unknown keys.\nJSON input: "
+                            + ((Object) cnd.ba(iAl, str)), 0);
                 }
                 ArrayList arrayList = new ArrayList();
                 byte bAe = yiVar.ae();
@@ -175,7 +178,9 @@ public final class dmx extends cnd implements ajt, acm {
                                 }
                                 abf.ar(arrayList);
                             } else if (bAe2 == 10) {
-                                yi.g(yiVar, "Unexpected end of input due to malformed JSON during ignoring unknown keys", 0, null, 6);
+                                yi.g(yiVar,
+                                        "Unexpected end of input due to malformed JSON during ignoring unknown keys", 0,
+                                        null, 6);
                                 throw null;
                             }
                             yiVar.n();
@@ -246,8 +251,8 @@ public final class dmx extends cnd implements ajt, acm {
     @Override // me.hd.wauxv.obf.cnd, me.hd.wauxv.obf.acm
     public final Object h(dfx dfxVar, int i, btd btdVar, Object obj) {
         ik ikVar = (ik) this.br.c;
-        bzo.q(dfxVar, "descriptor");
-        bzo.q(btdVar, "deserializer");
+        throwIfVar1IsNull(dfxVar, "descriptor");
+        throwIfVar1IsNull(btdVar, "deserializer");
         boolean z = this.ad == ewf.c && (i & 1) == 0;
         if (z) {
             int[] iArr = (int[]) ikVar.d;
@@ -277,9 +282,9 @@ public final class dmx extends cnd implements ajt, acm {
 
     @Override // me.hd.wauxv.obf.cnd, me.hd.wauxv.obf.ajt
     public final acm p(dfx dfxVar) {
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         brn brnVar = this.ac;
-        ewf ewfVarAp = bzo.ap(brnVar, dfxVar);
+        ewf ewfVarAp = KotlinHelpers.ap(brnVar, dfxVar);
         yi yiVar = this.br;
         ik ikVar = (ik) yiVar.c;
         int i = ikVar.b + 1;
@@ -291,7 +296,8 @@ public final class dmx extends cnd implements ajt, acm {
         yiVar.p(ewfVarAp.g);
         if (yiVar.ae() != 4) {
             int iOrdinal = ewfVarAp.ordinal();
-            return (iOrdinal == 1 || iOrdinal == 2 || iOrdinal == 3) ? new dmx(brnVar, ewfVarAp, yiVar, dfxVar) : (this.ad == ewfVarAp && brnVar.b.a) ? this : new dmx(brnVar, ewfVarAp, yiVar, dfxVar);
+            return (iOrdinal == 1 || iOrdinal == 2 || iOrdinal == 3) ? new dmx(brnVar, ewfVarAp, yiVar, dfxVar)
+                    : (this.ad == ewfVarAp && brnVar.b.a) ? this : new dmx(brnVar, ewfVarAp, yiVar, dfxVar);
         }
         yi.g(yiVar, "Unexpected leading comma", 0, null, 6);
         throw null;
@@ -370,8 +376,8 @@ public final class dmx extends cnd implements ajt, acm {
         throw null;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:39:0x0117  */
-    /* JADX WARN: Found duplicated region for block: B:40:0x0118  */
+    /* JADX WARN: Found duplicated region for block: B:39:0x0117 */
+    /* JADX WARN: Found duplicated region for block: B:40:0x0118 */
     @Override // me.hd.wauxv.obf.cnd, me.hd.wauxv.obf.ajt
     public final Object t(btd btdVar) {
         String message;
@@ -379,11 +385,11 @@ public final class dmx extends cnd implements ajt, acm {
         brn brnVar = this.ac;
         yi yiVar = this.br;
         ik ikVar = (ik) yiVar.c;
-        bzo.q(btdVar, "deserializer");
+        throwIfVar1IsNull(btdVar, "deserializer");
         try {
         } catch (cdl e) {
             message = e.getMessage();
-            bzo.n(message);
+            throwIfVar1IsNull(message);
             if (dnj.ab(message, "at path", false)) {
                 throw e;
             }
@@ -402,10 +408,10 @@ public final class dmx extends cnd implements ajt, acm {
                 throw null;
             } catch (dgb e2) {
                 String message2 = e2.getMessage();
-                bzo.n(message2);
+                throwIfVar1IsNull(message2);
                 String strAp = dnj.ap(dnj.aw(message2, '\n'), ".");
                 String message3 = e2.getMessage();
-                bzo.n(message3);
+                throwIfVar1IsNull(message3);
                 yi.g(yiVar, strAp, 0, dnj.at('\n', message3, ""), 2);
                 throw null;
             }
@@ -418,7 +424,8 @@ public final class dmx extends cnd implements ajt, acm {
         brx brxVarBw = bw();
         String strB = ((cus) btdVar).getDescriptor().b();
         if (!(brxVarBw instanceof bsl)) {
-            throw cnd.ak(-1, "Expected " + dal.b(bsl.class).d() + ", but had " + dal.b(brxVarBw.getClass()).d() + " as the serialized body of " + strB + " at element: " + ikVar.p(), brxVarBw.toString());
+            throw cnd.ak(-1, "Expected " + dal.b(bsl.class).d() + ", but had " + dal.b(brxVarBw.getClass()).d()
+                    + " as the serialized body of " + strB + " at element: " + ikVar.p(), brxVarBw.toString());
         }
         bsl bslVar = (bsl) brxVarBw;
         brx brxVar = (brx) bslVar.get(strU2);
@@ -431,11 +438,11 @@ public final class dmx extends cnd implements ajt, acm {
             throw null;
         } catch (dgb e3) {
             String message4 = e3.getMessage();
-            bzo.n(message4);
+            throwIfVar1IsNull(message4);
             throw cnd.ak(-1, message4, bslVar.toString());
         }
         message = e.getMessage();
-        bzo.n(message);
+        throwIfVar1IsNull(message);
         if (dnj.ab(message, "at path", false)) {
             throw e;
         }
@@ -444,7 +451,7 @@ public final class dmx extends cnd implements ajt, acm {
 
     @Override // me.hd.wauxv.obf.cnd, me.hd.wauxv.obf.ajt
     public final ajt u(dfx dfxVar) {
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         return dmz.b(dfxVar) ? new bru(this.br, this.ac) : this;
     }
 

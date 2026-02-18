@@ -24,8 +24,11 @@ import net.bytebuddy.asm.Advice;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public abstract class ajn {
-    public static final char[] a = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', Advice.OffsetMapping.ForOrigin.Renderer.ForDescriptor.SYMBOL, 'e', 'f'};
-    public static final String[] b = {"NUL", "SOH", "STX", "ETX", "EOT", "ENQ", "ACK", "BEL", "BS", "HT", "LF", "VT", "FF", "CR", "SO", "SI", "DLE", "DC1", "DC2", "DC3", "DC4", "NAK", "SYN", "ETB", "CAN", "EM", "SUB", "ESC", "FS", "GS", "RS", "US", "SP"};
+    public static final char[] a = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c',
+            Advice.OffsetMapping.ForOrigin.Renderer.ForDescriptor.SYMBOL, 'e', 'f' };
+    public static final String[] b = { "NUL", "SOH", "STX", "ETX", "EOT", "ENQ", "ACK", "BEL", "BS", "HT", "LF", "VT",
+            "FF", "CR", "SO", "SI", "DLE", "DC1", "DC2", "DC3", "DC4", "NAK", "SYN", "ETB", "CAN", "EM", "SUB", "ESC",
+            "FS", "GS", "RS", "US", "SP" };
     public static final Object c = new Object();
     public static Method d;
     public static boolean e;
@@ -85,7 +88,8 @@ public abstract class ajn {
             return timeInterpolator;
         }
         if (typedValue.type != 3) {
-            throw new IllegalArgumentException("Motion easing theme attribute must be an @interpolator resource for ?attr/motionEasing*Interpolator attributes or a string for ?attr/motionEasing* attributes.");
+            throw new IllegalArgumentException(
+                    "Motion easing theme attribute must be an @interpolator resource for ?attr/motionEasing*Interpolator attributes or a string for ?attr/motionEasing* attributes.");
         }
         String strValueOf = String.valueOf(typedValue.string);
         if (!v(strValueOf, "cubic-bezier") && !v(strValueOf, "path")) {
@@ -96,7 +100,9 @@ public abstract class ajn {
             if (strArrSplit.length == 4) {
                 return new PathInterpolator(s(strArrSplit, 0), s(strArrSplit, 1), s(strArrSplit, 2), s(strArrSplit, 3));
             }
-            throw new IllegalArgumentException("Motion easing theme attribute must have 4 control points if using bezier curve format; instead got: " + strArrSplit.length);
+            throw new IllegalArgumentException(
+                    "Motion easing theme attribute must have 4 control points if using bezier curve format; instead got: "
+                            + strArrSplit.length);
         }
         if (!v(strValueOf, "path")) {
             throw new IllegalArgumentException("Invalid motion easing type: ".concat(strValueOf));
@@ -111,12 +117,12 @@ public abstract class ajn {
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:12:0x003f  */
-    /* JADX WARN: Found duplicated region for block: B:32:0x008b  */
-    /* JADX WARN: Found duplicated region for block: B:43:0x00bb  */
+    /* JADX WARN: Found duplicated region for block: B:12:0x003f */
+    /* JADX WARN: Found duplicated region for block: B:32:0x008b */
+    /* JADX WARN: Found duplicated region for block: B:43:0x00bb */
     public static final long af(CodeEditor codeEditor, MotionEvent motionEvent, int i) {
         int i2;
-        bzo.q(motionEvent, "event");
+        throwIfVar1IsNull(motionEvent, "event");
         float x = (i == -1 ? motionEvent.getX() : motionEvent.getX(i)) + codeEditor.getOffsetX();
         float y = (i == -1 ? motionEvent.getY() : motionEvent.getY(i)) + codeEditor.getOffsetY();
         float fEa = codeEditor.ea();
@@ -131,9 +137,11 @@ public abstract class ajn {
             float f = fEa + 0;
             if (x > codeEditor.getDividerMarginLeft() + f || f > x) {
                 float dividerWidth = codeEditor.getDividerWidth() + codeEditor.getDividerMarginLeft() + f;
-                if (x > codeEditor.getDividerWidth() + codeEditor.getDividerMarginRight() + codeEditor.getDividerMarginLeft() + f || dividerWidth > x) {
+                if (x > codeEditor.getDividerWidth() + codeEditor.getDividerMarginRight()
+                        + codeEditor.getDividerMarginLeft() + f || dividerWidth > x) {
                     float dividerMarginLeft = codeEditor.getDividerMarginLeft() + f;
-                    if (x <= codeEditor.getDividerWidth() + codeEditor.getDividerMarginLeft() + f && dividerMarginLeft <= x) {
+                    if (x <= codeEditor.getDividerWidth() + codeEditor.getDividerMarginLeft() + f
+                            && dividerMarginLeft <= x) {
                         i2 = 4;
                     } else if (fEb <= x) {
                         if (x > codeEditor.getWidth() + codeEditor.getScrollMaxX()) {
@@ -161,12 +169,12 @@ public abstract class ajn {
                 i3 = 0;
             }
         }
-        return bzo.al(i2, i3);
+        return KotlinHelpers.al(i2, i3);
     }
 
     public static final Class ag(String str) {
         bmo.a.getClass();
-        return zf.b(bmo.m(), str);
+        return ReflectionWrapper.tryGetClassByName(bmo.m(), str);
     }
 
     public static final String ah(afw afwVar) {
@@ -199,22 +207,30 @@ public abstract class ajn {
         int i5 = 0;
         if ((i4 & 1) != 0) {
             ViewGroup.LayoutParams layoutParams = viewGroup.getLayoutParams();
-            ViewGroup.MarginLayoutParams marginLayoutParams = layoutParams instanceof ViewGroup.MarginLayoutParams ? (ViewGroup.MarginLayoutParams) layoutParams : null;
+            ViewGroup.MarginLayoutParams marginLayoutParams = layoutParams instanceof ViewGroup.MarginLayoutParams
+                    ? (ViewGroup.MarginLayoutParams) layoutParams
+                    : null;
             i = marginLayoutParams != null ? marginLayoutParams.leftMargin : 0;
         }
         if ((i4 & 2) != 0) {
             ViewGroup.LayoutParams layoutParams2 = viewGroup.getLayoutParams();
-            ViewGroup.MarginLayoutParams marginLayoutParams2 = layoutParams2 instanceof ViewGroup.MarginLayoutParams ? (ViewGroup.MarginLayoutParams) layoutParams2 : null;
+            ViewGroup.MarginLayoutParams marginLayoutParams2 = layoutParams2 instanceof ViewGroup.MarginLayoutParams
+                    ? (ViewGroup.MarginLayoutParams) layoutParams2
+                    : null;
             i2 = marginLayoutParams2 != null ? marginLayoutParams2.topMargin : 0;
         }
         if ((i4 & 4) != 0) {
             ViewGroup.LayoutParams layoutParams3 = viewGroup.getLayoutParams();
-            ViewGroup.MarginLayoutParams marginLayoutParams3 = layoutParams3 instanceof ViewGroup.MarginLayoutParams ? (ViewGroup.MarginLayoutParams) layoutParams3 : null;
+            ViewGroup.MarginLayoutParams marginLayoutParams3 = layoutParams3 instanceof ViewGroup.MarginLayoutParams
+                    ? (ViewGroup.MarginLayoutParams) layoutParams3
+                    : null;
             i3 = marginLayoutParams3 != null ? marginLayoutParams3.rightMargin : 0;
         }
         if ((i4 & 8) != 0) {
             ViewGroup.LayoutParams layoutParams4 = viewGroup.getLayoutParams();
-            ViewGroup.MarginLayoutParams marginLayoutParams4 = layoutParams4 instanceof ViewGroup.MarginLayoutParams ? (ViewGroup.MarginLayoutParams) layoutParams4 : null;
+            ViewGroup.MarginLayoutParams marginLayoutParams4 = layoutParams4 instanceof ViewGroup.MarginLayoutParams
+                    ? (ViewGroup.MarginLayoutParams) layoutParams4
+                    : null;
             if (marginLayoutParams4 != null) {
                 i5 = marginLayoutParams4.bottomMargin;
             }
@@ -222,7 +238,8 @@ public abstract class ajn {
         if (viewGroup.getLayoutParams() instanceof ViewGroup.MarginLayoutParams) {
             ViewGroup.LayoutParams layoutParams5 = viewGroup.getLayoutParams();
             if (layoutParams5 == null) {
-                throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams");
+                throw new NullPointerException(
+                        "null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams");
             }
             ViewGroup.MarginLayoutParams marginLayoutParams5 = (ViewGroup.MarginLayoutParams) layoutParams5;
             marginLayoutParams5.setMargins(i, i2, i3, i5);
@@ -233,15 +250,16 @@ public abstract class ajn {
     /* JADX WARN: Multi-variable type inference failed */
     public static final Object ak(ahh ahhVar, bgj bgjVar, doi doiVar) throws Throwable {
         ahh ahhVar2 = doiVar.m;
-        bzo.n(ahhVar2);
-        ahh ahhVar_v = !((Boolean) ahhVar._u(Boolean.FALSE, new fq(6))).booleanValue() ? ahhVar2._v(ahhVar) : bzo.t(ahhVar2, ahhVar, false);
+        throwIfVar1IsNull(ahhVar2);
+        ahh ahhVar_v = !((Boolean) ahhVar._u(Boolean.FALSE, new fq(6))).booleanValue() ? ahhVar2._v(ahhVar)
+                : KotlinHelpers.t(ahhVar2, ahhVar, false);
         cna.q(ahhVar_v);
         if (ahhVar_v == ahhVar2) {
             dex dexVar = new dex(ahhVar_v, doiVar);
             return bht.ad(dexVar, dexVar, bgjVar);
         }
         arj arjVar = arj.a;
-        if (bzo.f(ahhVar_v._w(arjVar), ahhVar2._w(arjVar))) {
+        if (nullSafeIsEqual(ahhVar_v._w(arjVar), ahhVar2._w(arjVar))) {
             enk enkVar = new enk(ahhVar_v, doiVar);
             ahh ahhVar3 = enkVar.a;
             Object objAl = bhv.al(ahhVar3, null);
@@ -319,7 +337,7 @@ public abstract class ajn {
     }
 
     public static alq g(ahp ahpVar, ahh ahhVar, bgj bgjVar) {
-        ahh ahhVarT = bzo.t(ahpVar.e(), ahhVar, true);
+        ahh ahhVarT = KotlinHelpers.t(ahpVar.e(), ahhVar, true);
         alc alcVar = aou.a;
         if (ahhVarT != alcVar && ahhVarT._w(arj.a) == null) {
             ahhVarT = ahhVarT._v(alcVar);
@@ -348,7 +366,8 @@ public abstract class ajn {
         if (i > 0) {
             return;
         }
-        throw new dgb(i + " is not allowed in ProtoNumber for property '" + dfxVar.j(i2) + "' of '" + dfxVar.b() + "', because protobuf supports field numbers in range 1..2147483647");
+        throw new dgb(i + " is not allowed in ProtoNumber for property '" + dfxVar.j(i2) + "' of '" + dfxVar.b()
+                + "', because protobuf supports field numbers in range 1..2147483647");
     }
 
     public static int j(Comparable comparable, Comparable comparable2) {
@@ -378,13 +397,23 @@ public abstract class ajn {
         return fArr2;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:11:0x002c  */
-    /* JADX WARN: Found duplicated region for block: B:17:0x0042  */
-    /* JADX WARN: Found duplicated region for block: B:41:0x0091  */
-    /* JADX WARN: Found duplicated region for block: B:46:0x009c A[Catch: NumberFormatException -> 0x00aa, TryCatch #0 {NumberFormatException -> 0x00aa, blocks: (B:22:0x0054, B:25:0x0068, B:27:0x006e, B:31:0x007a, B:44:0x0096, B:46:0x009c, B:52:0x00b1, B:53:0x00b4), top: B:68:0x0054 }] */
-    /* JADX WARN: Found duplicated region for block: B:50:0x00ae  */
-    /* JADX WARN: Found duplicated region for block: B:52:0x00b1 A[Catch: NumberFormatException -> 0x00aa, TryCatch #0 {NumberFormatException -> 0x00aa, blocks: (B:22:0x0054, B:25:0x0068, B:27:0x006e, B:31:0x007a, B:44:0x0096, B:46:0x009c, B:52:0x00b1, B:53:0x00b4), top: B:68:0x0054 }] */
-    /* JADX WARN: Found duplicated region for block: B:57:0x00c9  */
+    /* JADX WARN: Found duplicated region for block: B:11:0x002c */
+    /* JADX WARN: Found duplicated region for block: B:17:0x0042 */
+    /* JADX WARN: Found duplicated region for block: B:41:0x0091 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:46:0x009c A[Catch:
+     * NumberFormatException -> 0x00aa, TryCatch #0 {NumberFormatException ->
+     * 0x00aa, blocks: (B:22:0x0054, B:25:0x0068, B:27:0x006e, B:31:0x007a,
+     * B:44:0x0096, B:46:0x009c, B:52:0x00b1, B:53:0x00b4), top: B:68:0x0054 }]
+     */
+    /* JADX WARN: Found duplicated region for block: B:50:0x00ae */
+    /*
+     * JADX WARN: Found duplicated region for block: B:52:0x00b1 A[Catch:
+     * NumberFormatException -> 0x00aa, TryCatch #0 {NumberFormatException ->
+     * 0x00aa, blocks: (B:22:0x0054, B:25:0x0068, B:27:0x006e, B:31:0x007a,
+     * B:44:0x0096, B:46:0x009c, B:52:0x00b1, B:53:0x00b4), top: B:68:0x0054 }]
+     */
+    /* JADX WARN: Found duplicated region for block: B:57:0x00c9 */
     /* JADX WARN: Found duplicated region for block: B:72:0x00d7 A[SYNTHETIC] */
     public static cte[] l(String str) {
         int i;
@@ -471,7 +500,7 @@ public abstract class ajn {
                                     fArrK = k(fArr, i5);
                                     i2 = 0;
                                 } catch (NumberFormatException e2) {
-                                    throw new RuntimeException(bjs.o("error in parsing \"", strTrim, "\""), e2);
+                                    throw new RuntimeException(concat("error in parsing \"", strTrim, "\""), e2);
                                 }
                             }
                             arrayList.add(new cte(strTrim.charAt(i2), fArrK));
@@ -512,7 +541,7 @@ public abstract class ajn {
     }
 
     public static final long n(dfx dfxVar, int i) {
-        bzo.q(dfxVar, "<this>");
+        throwIfVar1IsNull(dfxVar, "<this>");
         List listK = dfxVar.k(i);
         int i2 = i + 1;
         int size = listK.size();
@@ -540,7 +569,7 @@ public abstract class ajn {
     }
 
     public static final int o(dfx dfxVar, int i, boolean z) {
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         List listK = dfxVar.k(i);
         if (!z) {
             i++;
@@ -563,21 +592,22 @@ public abstract class ajn {
 
     public static final List p(dfx dfxVar, cbm cbmVar) {
         List<dfx> listZ;
-        bzo.q(dfxVar, "<this>");
-        bzo.q(cbmVar, "serializersModule");
+        throwIfVar1IsNull(dfxVar, "<this>");
+        throwIfVar1IsNull(cbmVar, "serializersModule");
         emc emcVarH = dfxVar.h();
-        if (bzo.f(emcVarH, cuq.a)) {
+        if (nullSafeIsEqual(emcVarH, cuq.a)) {
             bsv bsvVarQ = bhs.q(dfxVar);
             listZ = avd.a;
             if (bsvVarQ != null) {
                 listZ = new ArrayList(abb.ak(listZ, 10));
             }
         } else {
-            if (!bzo.f(emcVarH, cuq.b)) {
-                throw new IllegalArgumentException("Class " + dfxVar.b() + " should be abstract or sealed or interface to be used as @ProtoOneOf property.");
+            if (!nullSafeIsEqual(emcVarH, cuq.b)) {
+                throw new IllegalArgumentException("Class " + dfxVar.b()
+                        + " should be abstract or sealed or interface to be used as @ProtoOneOf property.");
             }
             dfx dfxVarL = dfxVar.l(1);
-            bzo.q(dfxVarL, "<this>");
+            throwIfVar1IsNull(dfxVarL, "<this>");
             listZ = aaz.z(new boz(dfxVarL, 2));
         }
         for (dfx dfxVar2 : listZ) {
@@ -589,7 +619,8 @@ public abstract class ajn {
                     }
                 } while (!(((Annotation) it.next()) instanceof cwg));
             }
-            throw new IllegalArgumentException(dfxVar2.b() + " implementing oneOf type " + dfxVar.b() + " should have @ProtoNumber annotation in its single property.");
+            throw new IllegalArgumentException(dfxVar2.b() + " implementing oneOf type " + dfxVar.b()
+                    + " should have @ProtoNumber annotation in its single property.");
         }
         return listZ;
     }
@@ -608,7 +639,8 @@ public abstract class ajn {
         if (f >= 0.0f && f <= 1.0f) {
             return f;
         }
-        throw new IllegalArgumentException("Motion easing control point value must be between 0 and 1; instead got: " + f);
+        throw new IllegalArgumentException(
+                "Motion easing control point value must be between 0 and 1; instead got: " + f);
     }
 
     public static String t(char c2) {
@@ -631,13 +663,13 @@ public abstract class ajn {
     }
 
     public static final boolean x(dfx dfxVar) {
-        bzo.q(dfxVar, "<this>");
+        throwIfVar1IsNull(dfxVar, "<this>");
         emc emcVarH = dfxVar.h();
-        return !bzo.f(emcVarH, cvm.s) && (emcVarH instanceof cvn);
+        return !nullSafeIsEqual(emcVarH, cvm.s) && (emcVarH instanceof cvn);
     }
 
     public static dmf y(ahp ahpVar, ahh ahhVar, bgj bgjVar) {
-        ahh ahhVarT = bzo.t(ahpVar.e(), ahhVar, true);
+        ahh ahhVarT = KotlinHelpers.t(ahpVar.e(), ahhVar, true);
         alc alcVar = aou.a;
         if (ahhVarT != alcVar && ahhVarT._w(arj.a) == null) {
             ahhVarT = ahhVarT._v(alcVar);
@@ -648,9 +680,11 @@ public abstract class ajn {
     }
 
     public static Typeface z(Configuration configuration, Typeface typeface) {
-        if (Build.VERSION.SDK_INT < 31 || configuration.fontWeightAdjustment == Integer.MAX_VALUE || configuration.fontWeightAdjustment == 0 || typeface == null) {
+        if (Build.VERSION.SDK_INT < 31 || configuration.fontWeightAdjustment == Integer.MAX_VALUE
+                || configuration.fontWeightAdjustment == 0 || typeface == null) {
             return null;
         }
-        return Typeface.create(typeface, cnf.as(configuration.fontWeightAdjustment + typeface.getWeight(), 1, 1000), typeface.isItalic());
+        return Typeface.create(typeface, cnf.as(configuration.fontWeightAdjustment + typeface.getWeight(), 1, 1000),
+                typeface.isItalic());
     }
 }

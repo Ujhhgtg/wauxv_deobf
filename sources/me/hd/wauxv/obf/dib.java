@@ -18,7 +18,7 @@ public final class dib {
     public static final Bitmap.Config[] d;
     public static final Bitmap.Config[] e;
     public final byf f = new byf(1);
-    public final io g = new io(24);
+    public final DefaultConfig g = new DefaultConfig(24);
     public final HashMap h = new HashMap();
 
     static {

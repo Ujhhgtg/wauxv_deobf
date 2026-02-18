@@ -13,7 +13,7 @@ public final class avm extends avk {
 
     @Override // me.hd.wauxv.obf.dqc
     public final int c(bbb bbbVar) {
-        bzo.q(bbbVar, "fbb");
+        throwIfVar1IsNull(bbbVar, "fbb");
         bbbVar.ab(1);
         double d = this.a;
         if (d != 0.0d) {

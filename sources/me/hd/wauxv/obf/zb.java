@@ -34,7 +34,7 @@ public final class zb extends dqc {
     @Override // me.hd.wauxv.obf.dqc
     public final int c(bbb bbbVar) {
         int iT;
-        bzo.q(bbbVar, "fbb");
+        throwIfVar1IsNull(bbbVar, "fbb");
         dnf dnfVar = this.a;
         int iC = dnfVar != null ? dnfVar.c(bbbVar) : 0;
         fj fjVar = this.b;
@@ -72,7 +72,7 @@ public final class zb extends dqc {
     }
 
     public final void j(String str, dne dneVar) {
-        bzo.q(str, "className");
+        throwIfVar1IsNull(str, "className");
         this.a = new dnf(str, dneVar, false);
     }
 

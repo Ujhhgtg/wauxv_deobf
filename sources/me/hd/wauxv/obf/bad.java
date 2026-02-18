@@ -20,7 +20,7 @@ import net.bytebuddy.pool.TypePool;
 /* JADX INFO: loaded from: classes.dex */
 public abstract class bad extends bmy {
     public static void a(File file, File file2) {
-        bzo.q(file, "<this>");
+        throwIfVar1IsNull(file, "<this>");
         if (!file.exists()) {
             throw new azm(file, null, "The source file doesn't exist.");
         }
@@ -62,17 +62,20 @@ public abstract class bad extends bmy {
         }
     }
 
-    /* JADX WARN: Type inference failed for: r6v1, types: [java.lang.Object, java.util.List] */
+    /*
+     * JADX WARN: Type inference failed for: r6v1, types: [java.lang.Object,
+     * java.util.List]
+     */
     public static final azt b(azt aztVar) {
         File file = aztVar.a;
         ?? r6 = aztVar.b;
         ArrayList arrayList = new ArrayList(r6.size());
         for (File file2 : r6) {
             String name = file2.getName();
-            if (!bzo.f(name, ".")) {
-                if (!bzo.f(name, "..")) {
+            if (!nullSafeIsEqual(name, ".")) {
+                if (!nullSafeIsEqual(name, "..")) {
                     arrayList.add(file2);
-                } else if (arrayList.isEmpty() || bzo.f(((File) aaz.l(arrayList)).getName(), "..")) {
+                } else if (arrayList.isEmpty() || nullSafeIsEqual(((File) aaz.l(arrayList)).getName(), "..")) {
                     arrayList.add(file2);
                 }
             }
@@ -82,11 +85,11 @@ public abstract class bad extends bmy {
 
     public static String c(File file) {
         Charset charset = uj.a;
-        bzo.q(file, "<this>");
-        bzo.q(charset, "charset");
+        throwIfVar1IsNull(file, "<this>");
+        throwIfVar1IsNull(charset, "charset");
         InputStreamReader inputStreamReader = new InputStreamReader(new FileInputStream(file), charset);
         try {
-            String strAn = bzo.an(inputStreamReader);
+            String strAn = KotlinHelpers.an(inputStreamReader);
             inputStreamReader.close();
             return strAn;
         } catch (Throwable th) {
@@ -100,21 +103,33 @@ public abstract class bad extends bmy {
     }
 
     /* JADX WARN: Found duplicated region for block: B:21:0x0076 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:22:0x0078  */
+    /* JADX WARN: Found duplicated region for block: B:22:0x0078 */
     /* JADX WARN: Found duplicated region for block: B:24:0x007f A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:25:0x0081  */
+    /* JADX WARN: Found duplicated region for block: B:25:0x0081 */
     /* JADX WARN: Found duplicated region for block: B:26:0x0086 A[MOVE_INLINED] */
-    /* JADX WARN: Found duplicated region for block: B:28:0x0090  */
-    /* JADX WARN: Found duplicated region for block: B:29:0x0093  */
-    /* JADX WARN: Found duplicated region for block: B:31:0x0096  */
-    /* JADX WARN: Found duplicated region for block: B:32:0x00a1  */
-    /* JADX WARN: Found duplicated region for block: B:34:0x00aa  */
-    /* JADX WARN: Found duplicated region for block: B:36:0x00b2 A[LOOP:2: B:35:0x00b0->B:36:0x00b2, LOOP_END] */
-    /* JADX WARN: Found duplicated region for block: B:37:0x00bc  */
-    /* JADX WARN: Found duplicated region for block: B:40:0x00c8 A[LOOP:3: B:38:0x00c2->B:40:0x00c8, LOOP_END] */
-    /* JADX WARN: Found duplicated region for block: B:43:0x00dc  */
-    /* JADX WARN: Type inference failed for: r2v0, types: [java.lang.Iterable, java.lang.Object, java.util.List] */
-    /* JADX WARN: Type inference failed for: r4v0, types: [java.lang.Object, java.util.List] */
+    /* JADX WARN: Found duplicated region for block: B:28:0x0090 */
+    /* JADX WARN: Found duplicated region for block: B:29:0x0093 */
+    /* JADX WARN: Found duplicated region for block: B:31:0x0096 */
+    /* JADX WARN: Found duplicated region for block: B:32:0x00a1 */
+    /* JADX WARN: Found duplicated region for block: B:34:0x00aa */
+    /*
+     * JADX WARN: Found duplicated region for block: B:36:0x00b2 A[LOOP:2:
+     * B:35:0x00b0->B:36:0x00b2, LOOP_END]
+     */
+    /* JADX WARN: Found duplicated region for block: B:37:0x00bc */
+    /*
+     * JADX WARN: Found duplicated region for block: B:40:0x00c8 A[LOOP:3:
+     * B:38:0x00c2->B:40:0x00c8, LOOP_END]
+     */
+    /* JADX WARN: Found duplicated region for block: B:43:0x00dc */
+    /*
+     * JADX WARN: Type inference failed for: r2v0, types: [java.lang.Iterable,
+     * java.lang.Object, java.util.List]
+     */
+    /*
+     * JADX WARN: Type inference failed for: r4v0, types: [java.lang.Object,
+     * java.util.List]
+     */
     public static File d(File file, File file2) {
         int size;
         ArrayList arrayList;
@@ -122,7 +137,7 @@ public abstract class bad extends bmy {
         List listBf;
         List list;
         int size2;
-        bzo.q(file, "<this>");
+        throwIfVar1IsNull(file, "<this>");
         azt aztVarB = b(bmy.aj(file));
         ?? r2 = aztVarB.b;
         azt aztVarB2 = b(bmy.aj(file2));
@@ -134,14 +149,14 @@ public abstract class bad extends bmy {
             int size4 = r2.size();
             int iMin = Math.min(size4, size3);
             int i = 0;
-            while (i < iMin && bzo.f(r2.get(i), r4.get(i))) {
+            while (i < iMin && nullSafeIsEqual(r2.get(i), r4.get(i))) {
                 i++;
             }
             StringBuilder sb = new StringBuilder();
             int i2 = size3 - 1;
             if (i <= i2) {
                 while (true) {
-                    if (!bzo.f(((File) r4.get(i2)).getName(), "..")) {
+                    if (!nullSafeIsEqual(((File) r4.get(i2)).getName(), "..")) {
                         sb.append("..");
                         if (i2 != i) {
                             sb.append(File.separatorChar);
@@ -183,7 +198,7 @@ public abstract class bad extends bmy {
                                     }
                                 }
                                 String str = File.separator;
-                                bzo.p(str, "separator");
+                                throwIfVar1IsNull(str, "separator");
                                 aaz.i(listBf, sb, str, "", "", "...", null);
                             }
                             string = sb.toString();
@@ -225,7 +240,7 @@ public abstract class bad extends bmy {
                         }
                     }
                     String str2 = File.separator;
-                    bzo.p(str2, "separator");
+                    throwIfVar1IsNull(str2, "separator");
                     aaz.i(listBf, sb, str2, "", "", "...", null);
                 }
                 string = sb.toString();
@@ -239,8 +254,8 @@ public abstract class bad extends bmy {
 
     public static void e(File file, String str) {
         Charset charset = uj.a;
-        bzo.q(str, "text");
-        bzo.q(charset, "charset");
+        throwIfVar1IsNull(str, "text");
+        throwIfVar1IsNull(charset, "charset");
         FileOutputStream fileOutputStream = new FileOutputStream(file);
         try {
             f(fileOutputStream, str, charset);
@@ -256,32 +271,35 @@ public abstract class bad extends bmy {
     }
 
     public static final void f(FileOutputStream fileOutputStream, String str, Charset charset) throws IOException {
-        bzo.q(str, "text");
-        bzo.q(charset, "charset");
+        throwIfVar1IsNull(str, "text");
+        throwIfVar1IsNull(charset, "charset");
         if (str.length() < 16384) {
             byte[] bytes = str.getBytes(charset);
-            bzo.p(bytes, "getBytes(...)");
+            throwIfVar1IsNull(bytes, "getBytes(...)");
             fileOutputStream.write(bytes);
             return;
         }
         CharsetEncoder charsetEncoderNewEncoder = charset.newEncoder();
         CodingErrorAction codingErrorAction = CodingErrorAction.REPLACE;
-        CharsetEncoder charsetEncoderOnUnmappableCharacter = charsetEncoderNewEncoder.onMalformedInput(codingErrorAction).onUnmappableCharacter(codingErrorAction);
+        CharsetEncoder charsetEncoderOnUnmappableCharacter = charsetEncoderNewEncoder
+                .onMalformedInput(codingErrorAction).onUnmappableCharacter(codingErrorAction);
         CharBuffer charBufferAllocate = CharBuffer.allocate(8192);
-        bzo.n(charsetEncoderOnUnmappableCharacter);
-        ByteBuffer byteBufferAllocate = ByteBuffer.allocate(8192 * ((int) Math.ceil(charsetEncoderOnUnmappableCharacter.maxBytesPerChar())));
-        bzo.p(byteBufferAllocate, "allocate(...)");
+        throwIfVar1IsNull(charsetEncoderOnUnmappableCharacter);
+        ByteBuffer byteBufferAllocate = ByteBuffer
+                .allocate(8192 * ((int) Math.ceil(charsetEncoderOnUnmappableCharacter.maxBytesPerChar())));
+        throwIfVar1IsNull(byteBufferAllocate, "allocate(...)");
         int i = 0;
         int i2 = 0;
         while (i < str.length()) {
             int iMin = Math.min(8192 - i2, str.length() - i);
             int i3 = i + iMin;
             char[] cArrArray = charBufferAllocate.array();
-            bzo.p(cArrArray, "array(...)");
+            throwIfVar1IsNull(cArrArray, "array(...)");
             str.getChars(i, i3, cArrArray, i2);
             charBufferAllocate.limit(iMin + i2);
             i2 = 1;
-            if (!charsetEncoderOnUnmappableCharacter.encode(charBufferAllocate, byteBufferAllocate, i3 == str.length()).isUnderflow()) {
+            if (!charsetEncoderOnUnmappableCharacter.encode(charBufferAllocate, byteBufferAllocate, i3 == str.length())
+                    .isUnderflow()) {
                 throw new IllegalStateException("Check failed.");
             }
             fileOutputStream.write(byteBufferAllocate.array(), 0, byteBufferAllocate.position());

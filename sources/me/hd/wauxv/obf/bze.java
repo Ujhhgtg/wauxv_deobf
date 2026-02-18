@@ -6,13 +6,13 @@ import net.bytebuddy.jar.asm.signature.SignatureVisitor;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class bze implements Map.Entry, bsw {
+public final class bze implements Map.Entry, IEmpty {
     public final bzg a;
     public final int b;
     public final int c;
 
     public bze(bzg bzgVar, int i) {
-        bzo.q(bzgVar, "map");
+        throwIfVar1IsNull(bzgVar, "map");
         this.a = bzgVar;
         this.b = i;
         this.c = bzgVar.i;
@@ -20,7 +20,8 @@ public final class bze implements Map.Entry, bsw {
 
     public final void d() {
         if (this.a.i != this.c) {
-            throw new ConcurrentModificationException("The backing map has been modified after this entry was obtained.");
+            throw new ConcurrentModificationException(
+                    "The backing map has been modified after this entry was obtained.");
         }
     }
 
@@ -30,7 +31,7 @@ public final class bze implements Map.Entry, bsw {
             return false;
         }
         Map.Entry entry = (Map.Entry) obj;
-        return bzo.f(entry.getKey(), getKey()) && bzo.f(entry.getValue(), getValue());
+        return nullSafeIsEqual(entry.getKey(), getKey()) && nullSafeIsEqual(entry.getValue(), getValue());
     }
 
     @Override // java.util.Map.Entry
@@ -43,7 +44,7 @@ public final class bze implements Map.Entry, bsw {
     public final Object getValue() {
         d();
         Object[] objArr = this.a.c;
-        bzo.n(objArr);
+        throwIfVar1IsNull(objArr);
         return objArr[this.b];
     }
 

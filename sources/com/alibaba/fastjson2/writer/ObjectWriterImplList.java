@@ -22,7 +22,8 @@ import net.bytebuddy.pool.TypePool;
 final class ObjectWriterImplList extends ObjectWriterPrimitiveImpl {
     static final Class CLASS_SUBLIST;
     static final ObjectWriterImplList INSTANCE = new ObjectWriterImplList(null, null, null, null, 0);
-    static final ObjectWriterImplList INSTANCE_JSON_ARRAY = new ObjectWriterImplList(JSONArray.class, null, null, null, 0);
+    static final ObjectWriterImplList INSTANCE_JSON_ARRAY = new ObjectWriterImplList(JSONArray.class, null, null, null,
+            0);
     static final ObjectWriterImplList INSTANCE_JSON_ARRAY_1x;
     static final String TYPE_NAME_ARRAY_LIST;
     static final long TYPE_NAME_HASH_ARRAY_LIST;
@@ -63,10 +64,11 @@ final class ObjectWriterImplList extends ObjectWriterPrimitiveImpl {
             return (List) obj;
         }
         if (!(obj instanceof Iterable)) {
-            throw new JSONException(bjs.n(obj, new StringBuilder("Can not cast '"), "' to List"));
+            throw new JSONException(concatVar1GetClassAndVar3(obj, new StringBuilder("Can not cast '"), "' to List"));
         }
         Iterable iterable = (Iterable) obj;
-        ArrayList arrayList = iterable instanceof Collection ? new ArrayList(((Collection) iterable).size()) : new ArrayList();
+        ArrayList arrayList = iterable instanceof Collection ? new ArrayList(((Collection) iterable).size())
+                : new ArrayList();
         Iterator it = iterable.iterator();
         while (it.hasNext()) {
             arrayList.add(it.next());
@@ -134,13 +136,15 @@ final class ObjectWriterImplList extends ObjectWriterPrimitiveImpl {
                             if ((objectWriterProvider.userDefineMask & 4) == 0) {
                                 jSONWriter.writeInt64((Long) obj4);
                             } else {
-                                objectWriterProvider.getObjectWriter((Type) cls5, (Class) cls5, false).write(jSONWriter, obj4, Integer.valueOf(i2), Long.class, j);
+                                objectWriterProvider.getObjectWriter((Type) cls5, (Class) cls5, false).write(jSONWriter,
+                                        obj4, Integer.valueOf(i2), Long.class, j);
                             }
                         } else if (cls5 == Boolean.class) {
                             if ((objectWriterProvider.userDefineMask & 2) == 0) {
                                 jSONWriter.writeBool(((Boolean) obj4).booleanValue());
                             } else {
-                                objectWriterProvider.getObjectWriter((Type) cls5, (Class) cls5, false).write(jSONWriter, obj4, Integer.valueOf(i2), Boolean.class, j);
+                                objectWriterProvider.getObjectWriter((Type) cls5, (Class) cls5, false).write(jSONWriter,
+                                        obj4, Integer.valueOf(i2), Boolean.class, j);
                             }
                         } else if (cls5 != BigDecimal.class) {
                             if (cls5 != this.itemClass || this.itemClassWriter == null) {
@@ -189,13 +193,15 @@ final class ObjectWriterImplList extends ObjectWriterPrimitiveImpl {
                         } else if ((objectWriterProvider.userDefineMask & 8) == 0) {
                             jSONWriter.writeDecimal((BigDecimal) obj4, j, null);
                         } else {
-                            objectWriterProvider.getObjectWriter((Type) cls5, (Class) cls5, false).write(jSONWriter, obj4, Integer.valueOf(i2), BigDecimal.class, j);
+                            objectWriterProvider.getObjectWriter((Type) cls5, (Class) cls5, false).write(jSONWriter,
+                                    obj4, Integer.valueOf(i2), BigDecimal.class, j);
                         }
                     } else if ((objectWriterProvider.userDefineMask & 2) == 0) {
                         jSONWriter.writeInt32((Integer) obj4);
                     } else {
                         cls = cls4;
-                        objectWriterProvider.getObjectWriter((Type) cls5, (Class) cls5, false).write(jSONWriter, obj4, Integer.valueOf(i2), Integer.class, j);
+                        objectWriterProvider.getObjectWriter((Type) cls5, (Class) cls5, false).write(jSONWriter, obj4,
+                                Integer.valueOf(i2), Integer.class, j);
                     }
                     cls4 = cls;
                 }
@@ -206,7 +212,8 @@ final class ObjectWriterImplList extends ObjectWriterPrimitiveImpl {
         jSONWriter.endArray();
     }
 
-    @Override // com.alibaba.fastjson2.writer.ObjectWriterPrimitiveImpl, com.alibaba.fastjson2.writer.ObjectWriter
+    @Override // com.alibaba.fastjson2.writer.ObjectWriterPrimitiveImpl,
+              // com.alibaba.fastjson2.writer.ObjectWriter
     public void writeArrayMappingJSONB(JSONWriter jSONWriter, Object obj, Object obj2, Type type, long j) {
         JSONWriter jSONWriter2;
         if (obj == null) {
@@ -231,7 +238,8 @@ final class ObjectWriterImplList extends ObjectWriterPrimitiveImpl {
                 }
                 ObjectWriter objectWriter2 = objectWriter;
                 jSONWriter2 = jSONWriter;
-                objectWriter2.writeArrayMappingJSONB(jSONWriter2, obj3, Integer.valueOf(i), this.itemType, this.features | j);
+                objectWriter2.writeArrayMappingJSONB(jSONWriter2, obj3, Integer.valueOf(i), this.itemType,
+                        this.features | j);
                 objectWriter = objectWriter2;
             }
             i++;
@@ -239,41 +247,41 @@ final class ObjectWriterImplList extends ObjectWriterPrimitiveImpl {
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:101:0x0139  */
-    /* JADX WARN: Found duplicated region for block: B:103:0x0146  */
-    /* JADX WARN: Found duplicated region for block: B:20:0x0036  */
-    /* JADX WARN: Found duplicated region for block: B:28:0x0052  */
-    /* JADX WARN: Found duplicated region for block: B:34:0x0063  */
-    /* JADX WARN: Found duplicated region for block: B:37:0x0074  */
-    /* JADX WARN: Found duplicated region for block: B:39:0x007a  */
-    /* JADX WARN: Found duplicated region for block: B:41:0x0080  */
-    /* JADX WARN: Found duplicated region for block: B:43:0x0086  */
-    /* JADX WARN: Found duplicated region for block: B:45:0x008c  */
-    /* JADX WARN: Found duplicated region for block: B:46:0x0092  */
-    /* JADX WARN: Found duplicated region for block: B:48:0x0098  */
-    /* JADX WARN: Found duplicated region for block: B:50:0x009b  */
-    /* JADX WARN: Found duplicated region for block: B:55:0x00b4  */
-    /* JADX WARN: Found duplicated region for block: B:57:0x00bd  */
-    /* JADX WARN: Found duplicated region for block: B:59:0x00c3  */
-    /* JADX WARN: Found duplicated region for block: B:60:0x00c8  */
-    /* JADX WARN: Found duplicated region for block: B:62:0x00d0  */
-    /* JADX WARN: Found duplicated region for block: B:63:0x00d7  */
-    /* JADX WARN: Found duplicated region for block: B:65:0x00db  */
-    /* JADX WARN: Found duplicated region for block: B:70:0x00e7  */
-    /* JADX WARN: Found duplicated region for block: B:71:0x00e9  */
+    /* JADX WARN: Found duplicated region for block: B:101:0x0139 */
+    /* JADX WARN: Found duplicated region for block: B:103:0x0146 */
+    /* JADX WARN: Found duplicated region for block: B:20:0x0036 */
+    /* JADX WARN: Found duplicated region for block: B:28:0x0052 */
+    /* JADX WARN: Found duplicated region for block: B:34:0x0063 */
+    /* JADX WARN: Found duplicated region for block: B:37:0x0074 */
+    /* JADX WARN: Found duplicated region for block: B:39:0x007a */
+    /* JADX WARN: Found duplicated region for block: B:41:0x0080 */
+    /* JADX WARN: Found duplicated region for block: B:43:0x0086 */
+    /* JADX WARN: Found duplicated region for block: B:45:0x008c */
+    /* JADX WARN: Found duplicated region for block: B:46:0x0092 */
+    /* JADX WARN: Found duplicated region for block: B:48:0x0098 */
+    /* JADX WARN: Found duplicated region for block: B:50:0x009b */
+    /* JADX WARN: Found duplicated region for block: B:55:0x00b4 */
+    /* JADX WARN: Found duplicated region for block: B:57:0x00bd */
+    /* JADX WARN: Found duplicated region for block: B:59:0x00c3 */
+    /* JADX WARN: Found duplicated region for block: B:60:0x00c8 */
+    /* JADX WARN: Found duplicated region for block: B:62:0x00d0 */
+    /* JADX WARN: Found duplicated region for block: B:63:0x00d7 */
+    /* JADX WARN: Found duplicated region for block: B:65:0x00db */
+    /* JADX WARN: Found duplicated region for block: B:70:0x00e7 */
+    /* JADX WARN: Found duplicated region for block: B:71:0x00e9 */
     /* JADX WARN: Found duplicated region for block: B:78:0x00fd A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:79:0x00ff  */
-    /* JADX WARN: Found duplicated region for block: B:80:0x0101  */
-    /* JADX WARN: Found duplicated region for block: B:82:0x0105  */
-    /* JADX WARN: Found duplicated region for block: B:83:0x0108  */
-    /* JADX WARN: Found duplicated region for block: B:85:0x010c  */
-    /* JADX WARN: Found duplicated region for block: B:86:0x010f  */
-    /* JADX WARN: Found duplicated region for block: B:88:0x0113  */
-    /* JADX WARN: Found duplicated region for block: B:89:0x0116  */
-    /* JADX WARN: Found duplicated region for block: B:91:0x011a  */
-    /* JADX WARN: Found duplicated region for block: B:92:0x011d  */
-    /* JADX WARN: Found duplicated region for block: B:95:0x0125  */
-    /* JADX WARN: Found duplicated region for block: B:98:0x012c  */
+    /* JADX WARN: Found duplicated region for block: B:79:0x00ff */
+    /* JADX WARN: Found duplicated region for block: B:80:0x0101 */
+    /* JADX WARN: Found duplicated region for block: B:82:0x0105 */
+    /* JADX WARN: Found duplicated region for block: B:83:0x0108 */
+    /* JADX WARN: Found duplicated region for block: B:85:0x010c */
+    /* JADX WARN: Found duplicated region for block: B:86:0x010f */
+    /* JADX WARN: Found duplicated region for block: B:88:0x0113 */
+    /* JADX WARN: Found duplicated region for block: B:89:0x0116 */
+    /* JADX WARN: Found duplicated region for block: B:91:0x011a */
+    /* JADX WARN: Found duplicated region for block: B:92:0x011d */
+    /* JADX WARN: Found duplicated region for block: B:95:0x0125 */
+    /* JADX WARN: Found duplicated region for block: B:98:0x012c */
     @Override // com.alibaba.fastjson2.writer.ObjectWriter
     public void writeJSONB(JSONWriter jSONWriter, Object obj, Object obj2, Type type, long j) {
         Class cls;
@@ -373,12 +381,17 @@ final class ObjectWriterImplList extends ObjectWriterPrimitiveImpl {
                     if (cls4 == String.class) {
                         jSONWriter.writeString((String) obj3);
                     } else {
-                        zIsRefDetect = cls4 == this.itemClass ? !this.itemClassRefDetect && jSONWriter.isRefDetect() : jSONWriter.isRefDetect(obj3);
+                        zIsRefDetect = cls4 == this.itemClass ? !this.itemClassRefDetect && jSONWriter.isRefDetect()
+                                : jSONWriter.isRefDetect(obj3);
                         if (cls4 == this.itemClass || this.itemClassWriter == null) {
                             if (cls4 == cls9) {
                                 objectWriter2 = objectWriter;
                             } else {
-                                objectWriter = cls4 == JSONObject.class ? ObjectWriterImplMap.INSTANCE : cls4 == TypeUtils.CLASS_JSON_OBJECT_1x ? ObjectWriterImplMap.INSTANCE_1x : cls4 == JSONArray.class ? INSTANCE_JSON_ARRAY : cls4 == TypeUtils.CLASS_JSON_ARRAY_1x ? INSTANCE_JSON_ARRAY_1x : context.getObjectWriter(cls4);
+                                objectWriter = cls4 == JSONObject.class ? ObjectWriterImplMap.INSTANCE
+                                        : cls4 == TypeUtils.CLASS_JSON_OBJECT_1x ? ObjectWriterImplMap.INSTANCE_1x
+                                                : cls4 == JSONArray.class ? INSTANCE_JSON_ARRAY
+                                                        : cls4 == TypeUtils.CLASS_JSON_ARRAY_1x ? INSTANCE_JSON_ARRAY_1x
+                                                                : context.getObjectWriter(cls4);
                                 if (cls4 == this.itemClass) {
                                     this.itemClassWriter = objectWriter;
                                 }
@@ -386,7 +399,8 @@ final class ObjectWriterImplList extends ObjectWriterPrimitiveImpl {
                                 cls5 = cls4;
                             }
                             if (zIsRefDetect || (path0 = jSONWriter.setPath0(i, obj3)) == null) {
-                                objectWriter.writeJSONB(jSONWriter, obj3, Integer.valueOf(i), this.itemType, this.features);
+                                objectWriter.writeJSONB(jSONWriter, obj3, Integer.valueOf(i), this.itemType,
+                                        this.features);
                                 if (zIsRefDetect) {
                                     jSONWriter.popPath0(obj3);
                                 }

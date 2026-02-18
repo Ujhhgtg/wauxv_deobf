@@ -13,14 +13,14 @@ public final class dek implements den {
     public final dov e;
 
     public dek(but butVar, err errVar) {
-        bzo.q(butVar, "savedStateRegistry");
+        throwIfVar1IsNull(butVar, "savedStateRegistry");
         this.a = butVar;
         this.e = new dov(new cfx(errVar, 11));
     }
 
     @Override // me.hd.wauxv.obf.den
     public final Bundle c() {
-        Bundle bundleR = bht.r((csm[]) Arrays.copyOf(new csm[0], 0));
+        Bundle bundleR = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
         Bundle bundle = this.d;
         if (bundle != null) {
             bundleR.putAll(bundle);
@@ -41,7 +41,7 @@ public final class dek implements den {
             return;
         }
         Bundle bundleG = this.a.g("androidx.lifecycle.internal.SavedStateHandlesProvider");
-        Bundle bundleR = bht.r((csm[]) Arrays.copyOf(new csm[0], 0));
+        Bundle bundleR = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
         Bundle bundle = this.d;
         if (bundle != null) {
             bundleR.putAll(bundle);

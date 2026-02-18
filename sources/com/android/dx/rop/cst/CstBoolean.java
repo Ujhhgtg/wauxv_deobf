@@ -47,6 +47,6 @@ public final class CstBoolean extends CstLiteral32 {
         if (i == 1) {
             return VALUE_TRUE;
         }
-        throw new IllegalArgumentException(bjs.i(i, "bogus value: "));
+        throw new IllegalArgumentException(concatVar2Var1(i, "bogus value: "));
     }
 }

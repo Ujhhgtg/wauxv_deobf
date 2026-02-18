@@ -20,6 +20,6 @@ public final class aux implements bou {
     }
 
     public final String toString() {
-        return bjs.q(new StringBuilder("Empty{"), this.a ? "Active" : "New", '}');
+        return concat(new StringBuilder("Empty{"), this.a ? "Active" : "New", '}');
     }
 }

@@ -34,14 +34,14 @@ public final class don extends ViewGroup {
         setClickable(true);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:34:0x00cd  */
-    /* JADX WARN: Found duplicated region for block: B:36:0x00dc  */
-    /* JADX WARN: Found duplicated region for block: B:38:0x00fa  */
-    /* JADX WARN: Found duplicated region for block: B:40:0x0128  */
-    /* JADX WARN: Found duplicated region for block: B:41:0x014e  */
-    /* JADX WARN: Found duplicated region for block: B:43:0x0198  */
-    /* JADX WARN: Found duplicated region for block: B:44:0x01a1  */
-    /* JADX WARN: Found duplicated region for block: B:45:0x01a9  */
+    /* JADX WARN: Found duplicated region for block: B:34:0x00cd */
+    /* JADX WARN: Found duplicated region for block: B:36:0x00dc */
+    /* JADX WARN: Found duplicated region for block: B:38:0x00fa */
+    /* JADX WARN: Found duplicated region for block: B:40:0x0128 */
+    /* JADX WARN: Found duplicated region for block: B:41:0x014e */
+    /* JADX WARN: Found duplicated region for block: B:43:0x0198 */
+    /* JADX WARN: Found duplicated region for block: B:44:0x01a1 */
+    /* JADX WARN: Found duplicated region for block: B:45:0x01a9 */
     @Override // android.view.ViewGroup, android.view.View
     public final boolean dispatchTouchEvent(MotionEvent motionEvent) throws IllegalAccessException {
         dom domVar;
@@ -69,12 +69,12 @@ public final class don extends ViewGroup {
                         azg azgVarR = dqc.bi(obj).r();
                         azgVarR.ab = "checkBox" /* cnb.z(-473640403467050L) */;
                         objE = ((azk) yg.e(azgVarR)).e();
-                        bzo.n(objE);
+                        throwIfVar1IsNull(objE);
                         if (((View) objE).getVisibility() == 0) {
                             azg azgVarR2 = dqc.bi(obj).r();
                             azgVarR2.ab = "maskView" /* cnb.z(-473051992947498L) */;
                             Object objE2 = ((azk) yg.e(azgVarR2)).e();
-                            bzo.n(objE2);
+                            throwIfVar1IsNull(objE2);
                             ((View) objE2).performClick();
                         } else {
                             dov dovVar = new dov(new wi(chmVar.f, i));
@@ -121,12 +121,25 @@ public final class don extends ViewGroup {
                         if (domVar2 != null) {
                             Context context = ((don) ((chm) domVar2).c).getContext();
                             if (Build.VERSION.SDK_INT >= 31) {
-                                Object systemService = context.getSystemService("vibrator_manager" /* cnb.z(-71210557766442L) */);
-                                bzo.o(systemService, "null cannot be cast to non-null type android.os.VibratorManager" /* cnb.z(-70587787508522L) */);
+                                Object systemService = context.getSystemService("vibrator_manager" /*
+                                                                                                    * cnb.z(-
+                                                                                                    * 71210557766442L)
+                                                                                                    */);
+                                throwIfVar1IsNull(systemService,
+                                        "null cannot be cast to non-null type android.os.VibratorManager" /*
+                                                                                                           * cnb.z(-
+                                                                                                           * 70587787508522L)
+                                                                                                           */);
                                 defaultVibrator = qc.m(systemService).getDefaultVibrator();
                             } else {
-                                Object systemService2 = context.getSystemService("vibrator" /* cnb.z(-70862665415466L) */);
-                                bzo.o(systemService2, "null cannot be cast to non-null type android.os.Vibrator" /* cnb.z(-70841190578986L) */);
+                                Object systemService2 = context.getSystemService("vibrator" /*
+                                                                                             * cnb.z(-70862665415466L)
+                                                                                             */);
+                                throwIfVar1IsNull(systemService2,
+                                        "null cannot be cast to non-null type android.os.Vibrator" /*
+                                                                                                    * cnb.z(-
+                                                                                                    * 70841190578986L)
+                                                                                                    */);
                                 defaultVibrator = (Vibrator) systemService2;
                             }
                             defaultVibrator.vibrate(VibrationEffect.createOneShot(40L, -1));
@@ -149,12 +162,12 @@ public final class don extends ViewGroup {
                         azg azgVarR3 = dqc.bi(obj).r();
                         azgVarR3.ab = "checkBox" /* cnb.z(-473640403467050L) */;
                         objE = ((azk) yg.e(azgVarR3)).e();
-                        bzo.n(objE);
+                        throwIfVar1IsNull(objE);
                         if (((View) objE).getVisibility() == 0) {
                             azg azgVarR22 = dqc.bi(obj).r();
                             azgVarR22.ab = "maskView" /* cnb.z(-473051992947498L) */;
                             Object objE22 = ((azk) yg.e(azgVarR22)).e();
-                            bzo.n(objE22);
+                            throwIfVar1IsNull(objE22);
                             ((View) objE22).performClick();
                         } else {
                             dov dovVar2 = new dov(new wi(chmVar.f, i));
@@ -216,7 +229,8 @@ public final class don extends ViewGroup {
         baa baaVar = new baa(new bae(new lb(this, 3), true, new dko(25)));
         while (baaVar.hasNext()) {
             View view = (View) baaVar.next();
-            view.layout(paddingLeft, getPaddingTop(), view.getMeasuredWidth() + paddingLeft, view.getMeasuredHeight() + getPaddingTop());
+            view.layout(paddingLeft, getPaddingTop(), view.getMeasuredWidth() + paddingLeft,
+                    view.getMeasuredHeight() + getPaddingTop());
             paddingLeft += view.getMeasuredWidth();
         }
     }
@@ -242,7 +256,11 @@ public final class don extends ViewGroup {
             donVar.setClickable(true);
             donVar.measureChild(view, i, i2);
             ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
-            bzo.o(layoutParams, "null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams" /* cnb.z(-411479341792042L) */);
+            throwIfVar1IsNull(layoutParams,
+                    "null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams" /*
+                                                                                                      * cnb.z(-
+                                                                                                      * 411479341792042L)
+                                                                                                      */);
             ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) layoutParams;
             iMax = Math.max(iMax, view.getMeasuredHeight());
             if (View.MeasureSpec.getMode(i2) != 1073741824 && marginLayoutParams.height == -1) {
@@ -256,7 +274,8 @@ public final class don extends ViewGroup {
             i3 = i4;
         }
         int i5 = i;
-        donVar.setMeasuredDimension(donVar.getPaddingRight() + donVar.getPaddingLeft() + measuredWidth, donVar.getPaddingBottom() + donVar.getPaddingTop() + iMax);
+        donVar.setMeasuredDimension(donVar.getPaddingRight() + donVar.getPaddingLeft() + measuredWidth,
+                donVar.getPaddingBottom() + donVar.getPaddingTop() + iMax);
         donVar.c = (donVar.b * 4) / 10;
         if (z) {
             int iMakeMeasureSpec = View.MeasureSpec.makeMeasureSpec(donVar.getMeasuredHeight(), 1073741824);
@@ -264,7 +283,11 @@ public final class don extends ViewGroup {
             while (baaVar2.hasNext()) {
                 View view2 = (View) baaVar2.next();
                 ViewGroup.LayoutParams layoutParams2 = view2.getLayoutParams();
-                bzo.o(layoutParams2, "null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams" /* cnb.z(-411689795189546L) */);
+                throwIfVar1IsNull(layoutParams2,
+                        "null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams" /*
+                                                                                                          * cnb.z(-
+                                                                                                          * 411689795189546L)
+                                                                                                          */);
                 ViewGroup.MarginLayoutParams marginLayoutParams2 = (ViewGroup.MarginLayoutParams) layoutParams2;
                 if (marginLayoutParams2.height == -1) {
                     int i6 = marginLayoutParams2.width;

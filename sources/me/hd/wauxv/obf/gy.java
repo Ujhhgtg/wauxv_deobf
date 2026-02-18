@@ -2,15 +2,15 @@ package me.hd.wauxv.obf;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class gy extends doo {
+public final class gy extends BaseHook {
     public static final gy a = new gy("AppBrandVideoRewardHook" /* cnb.z(-410461434542890L) */);
     public static final String b = "小程序" /* cnb.z(-434053689899818L) */;
     public static final String c = "程序视频奖励" /* cnb.z(-433452394478378L) */;
     public static final String d = "跳过小程序视频广告等待时长领取奖励" /* cnb.z(-433422329707306L) */;
-    public static final String[] h = {ewi.b.e, ewi.c.e};
+    public static final String[] h = { ewi.b.e, ewi.c.e };
     public static final boolean i = true;
 
-    @Override // me.hd.wauxv.obf.doo, me.hd.wauxv.obf.bmf
+    @Override // me.hd.wauxv.obf.BaseHook, me.hd.wauxv.obf.bmf
     public final String[] _aa() {
         return h;
     }
@@ -28,22 +28,22 @@ public final class gy extends doo {
         akiVarAd.o();
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String f() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getName() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String g() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getCategory() {
         return b;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String o() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getDescription() {
         return d;
     }
 
-    @Override // me.hd.wauxv.obf.doo
+    @Override // me.hd.wauxv.obf.BaseHook
     public final boolean q() {
         return i;
     }

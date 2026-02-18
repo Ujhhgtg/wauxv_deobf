@@ -18,17 +18,25 @@ public final class ceb extends ClassLoader {
         linkedHashSet.add("androidx.lifecycle.ReportFragment");
     }
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'super' call moved to the top of the method (can break code
+     * semantics)
+     */
     public ceb() {
         super(ki.g());
         ki.a.getClass();
     }
 
-    /* JADX WARN: Found duplicated region for block: B:28:0x005e  */
-    /* JADX WARN: Found duplicated region for block: B:30:0x0061  */
-    /* JADX WARN: Found duplicated region for block: B:33:0x006b  */
-    /* JADX WARN: Found duplicated region for block: B:63:0x008a A[EXC_TOP_SPLITTER, PHI: r0
-      0x008a: PHI (r0v7 java.lang.ClassLoader) = (r0v6 java.lang.ClassLoader), (r0v12 java.lang.ClassLoader) binds: [B:29:0x005f, B:32:0x0069] A[DONT_GENERATE, DONT_INLINE], SYNTHETIC] */
+    /* JADX WARN: Found duplicated region for block: B:28:0x005e */
+    /* JADX WARN: Found duplicated region for block: B:30:0x0061 */
+    /* JADX WARN: Found duplicated region for block: B:33:0x006b */
+    /*
+     * JADX WARN: Found duplicated region for block: B:63:0x008a A[EXC_TOP_SPLITTER,
+     * PHI: r0
+     * 0x008a: PHI (r0v7 java.lang.ClassLoader) = (r0v6 java.lang.ClassLoader),
+     * (r0v12 java.lang.ClassLoader) binds: [B:29:0x005f, B:32:0x0069]
+     * A[DONT_GENERATE, DONT_INLINE], SYNTHETIC]
+     */
     /* JADX WARN: Found duplicated region for block: B:73:0x0077 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:76:0x0065 A[SYNTHETIC] */
     @Override // java.lang.ClassLoader
@@ -55,7 +63,7 @@ public final class ceb extends ClassLoader {
                 while (true) {
                     if (it2.hasNext()) {
                         try {
-                            if (bzo.f(str, (String) it2.next())) {
+                            if (nullSafeIsEqual(str, (String) it2.next())) {
                                 clsLoadClass = classLoader.loadClass(str);
                             } else {
                                 continue;
@@ -73,7 +81,7 @@ public final class ceb extends ClassLoader {
                             while (true) {
                                 if (!it.hasNext()) {
                                     try {
-                                        if (bzo.f(str, (String) it.next())) {
+                                        if (nullSafeIsEqual(str, (String) it.next())) {
                                             ki.a.getClass();
                                             clsLoadClass = ki.g().loadClass(str);
                                         } else {
@@ -116,7 +124,7 @@ public final class ceb extends ClassLoader {
                         if (!it.hasNext()) {
                             ki.a.getClass();
                             clsLoadClass = ki.g().loadClass(str);
-                        } else if (bzo.f(str, (String) it.next())) {
+                        } else if (nullSafeIsEqual(str, (String) it.next())) {
                             ki.a.getClass();
                             clsLoadClass = ki.g().loadClass(str);
                         } else {

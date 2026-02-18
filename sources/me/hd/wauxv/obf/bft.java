@@ -11,7 +11,7 @@ public final class bft {
     public final ArrayList c;
 
     public bft(Executor executor, ach achVar) {
-        bzo.q(executor, "executor");
+        throwIfVar1IsNull(executor, "executor");
         this.a = new Object();
         this.c = new ArrayList();
     }

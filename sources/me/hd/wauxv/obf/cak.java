@@ -26,9 +26,10 @@ public final class cak extends czl {
 
     @Override // me.hd.wauxv.obf.czl
     public final void b(RecyclerView recyclerView, int i, int i2) {
-        st stVar = this.a.a;
+        st stVar = this.a.cachedConstructors;
         cal calVar = this.d;
-        int iCt = i < 0 ? ((LinearLayoutManager) calVar.n.getLayoutManager()).ct() : ((LinearLayoutManager) calVar.n.getLayoutManager()).cu();
+        int iCt = i < 0 ? ((LinearLayoutManager) calVar.n.getLayoutManager()).ct()
+                : ((LinearLayoutManager) calVar.n.getLayoutManager()).cu();
         Calendar calendarB = eoq.b(stVar.a.a);
         calendarB.add(2, iCt);
         calVar.c = new cet(calendarB);

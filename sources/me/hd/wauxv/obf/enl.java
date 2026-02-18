@@ -22,8 +22,8 @@ public final class enl implements ahf, ahg {
 
     @Override // me.hd.wauxv.obf.ahh
     public final ahf _w(ahg ahgVar) {
-        bzo.q(ahgVar, "key");
-        if (bzo.f(this, ahgVar)) {
+        throwIfVar1IsNull(ahgVar, "key");
+        if (nullSafeIsEqual(this, ahgVar)) {
             return this;
         }
         return null;

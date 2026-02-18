@@ -8,7 +8,7 @@ import android.os.Bundle;
 public final class buj extends auy {
     @Override // me.hd.wauxv.obf.auy, android.app.Application.ActivityLifecycleCallbacks
     public void onActivityCreated(Activity activity, Bundle bundle) {
-        bzo.q(activity, "activity");
+        throwIfVar1IsNull(activity, "activity");
         int i = dbq.a;
         dbo.b(activity);
     }

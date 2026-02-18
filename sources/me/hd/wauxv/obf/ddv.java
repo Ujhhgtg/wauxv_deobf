@@ -18,7 +18,7 @@ public final class ddv {
         if (this == obj) {
             return true;
         }
-        return (obj instanceof ddv) && bzo.f(this.a, ((ddv) obj).a);
+        return (obj instanceof ddv) && nullSafeIsEqual(this.a, ((ddv) obj).a);
     }
 
     public final int hashCode() {
@@ -32,6 +32,6 @@ public final class ddv {
     public final String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("SKBuiltinString(string=" /* cnb.z(-151273043131178L) */);
-        return bjs.q(sb, this.a, ')');
+        return concat(sb, this.a, ')');
     }
 }

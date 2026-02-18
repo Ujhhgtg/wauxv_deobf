@@ -19,7 +19,7 @@ import org.json.JSONObject;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class ayz implements bgf {
+public final /* synthetic */ class ayz implements IHasInvokeMethod {
     public final /* synthetic */ int a;
 
     public /* synthetic */ ayz(int i) {
@@ -44,10 +44,10 @@ public final /* synthetic */ class ayz implements bgf {
         ens ensVar = ens.a;
         switch (i) {
             case 0:
-                bmm bmmVar = (bmm) obj;
-                bmmVar.getClass();
+                HookParamWrapper hookParam = (HookParamWrapper) obj;
+                hookParam.getClass();
                 try {
-                    objX = bmmVar.d()[0];
+                    objX = hookParam.getArgs()[0];
                     if (objX == null) {
                         objX = null;
                     }
@@ -55,22 +55,22 @@ public final /* synthetic */ class ayz implements bgf {
                     objX = bhu.x(th);
                 }
                 Object obj2 = objX instanceof dcx ? null : objX;
-                bzo.n(obj2);
+                throwIfVar1IsNull(obj2);
                 MenuItem menuItem = (MenuItem) obj2;
                 int i5 = bte.a;
-                azg azgVarAa = dkz.aa(bmmVar);
+                azg azgVarAa = dkz.aa(hookParam);
                 azgVarAa.a = dal.b(Integer.TYPE);
                 Object objE = ((azk) aaz.e(azgVarAa.c())).e();
-                bzo.n(objE);
+                throwIfVar1IsNull(objE);
                 int iIntValue = ((Number) objE).intValue();
-                azg azgVarAa2 = dkz.aa(bmmVar);
+                azg azgVarAa2 = dkz.aa(hookParam);
                 azgVarAa2.ab = "d" /* cnb.z(-39797166963498L) */;
                 Object objD = ((azk) aaz.e(azgVarAa2.c())).d();
-                bzo.n(objD);
+                throwIfVar1IsNull(objD);
                 azg azgVarR = dqc.bi(objD).r();
                 azgVarR.b = new ayz(i4);
                 Object objE2 = ((azk) aaz.e(azgVarR.c())).e();
-                bzo.n(objE2);
+                throwIfVar1IsNull(objE2);
                 Object item = ((BaseAdapter) objE2).getItem(iIntValue);
                 for (bnk bnkVar : azd.b) {
                     try {
@@ -85,12 +85,18 @@ public final /* synthetic */ class ayz implements bgf {
                         ArrayList arrayList = ewq.a;
                         StringBuilder sb = new StringBuilder();
                         sb.append("onCreateMenuItems " /* cnb.z(-39805756898090L) */);
-                        ewq.e(yg.n(sb, bnkVar instanceof doo ? ((doo) bnkVar).f() : "LoadHook" /* cnb.z(-39741332388650L) */, -39719857552170L), e, 12);
+                        ewq.e(yg.n(sb,
+                                bnkVar instanceof BaseHook ? ((BaseHook) bnkVar).getResult() : "LoadHook" /*
+                                                                                                           * cnb.z(-
+                                                                                                           * 39741332388650L)
+                                                                                                           */,
+                                -39719857552170L), e, 12);
                     }
                 }
                 return ensVar;
             case 1:
-                return Boolean.valueOf(dnr.bp(((Class) obj).getName(), "com.tencent.mm.plugin.fav.ui.adapter." /* cnb.z(-39685497813802L) */, false));
+                return Boolean.valueOf(dnr.bp(((Class) obj).getName(),
+                        "com.tencent.mm.plugin.fav.ui.adapter." /* cnb.z(-39685497813802L) */, false));
             case 2:
                 ((amm) obj).c = new ayz(5);
                 return ensVar;
@@ -99,20 +105,24 @@ public final /* synthetic */ class ayz implements bgf {
                 return ensVar;
             case 4:
                 bah bahVar = (bah) obj;
-                String[] strArr = {"com.tencent.mm.plugin.fav.ui" /* cnb.z(-41261750811434L) */};
+                String[] strArr = { "com.tencent.mm.plugin.fav.ui" /* cnb.z(-41261750811434L) */ };
                 bahVar.getClass();
                 bahVar.a = la.ab(strArr);
                 cdj cdjVar = new cdj();
-                cdjVar.t("MicroMsg.FavSearchManager" /* cnb.z(-41669772704554L) */, "onMMMenuItemSelected" /* cnb.z(-41575283424042L) */);
+                cdjVar.t("MicroMsg.FavSearchManager" /* cnb.z(-41669772704554L) */, "onMMMenuItemSelected" /*
+                                                                                                            * cnb.z(-
+                                                                                                            * 41575283424042L)
+                                                                                                            */);
                 bahVar.d = cdjVar;
                 return ensVar;
             case 5:
                 bah bahVar2 = (bah) obj;
-                String[] strArr2 = {"com.tencent.mm.plugin.fav.ui" /* cnb.z(-40054865001258L) */};
+                String[] strArr2 = { "com.tencent.mm.plugin.fav.ui" /* cnb.z(-40054865001258L) */ };
                 bahVar2.getClass();
                 bahVar2.a = la.ab(strArr2);
                 cdj cdjVar2 = new cdj();
-                cdjVar2.t("MicroMsg.FavSearchManager" /* cnb.z(-39895951211306L) */, "itemInfo exist detail but no note or record, error!" /* cnb.z(-41450729372458L) */);
+                cdjVar2.t("MicroMsg.FavSearchManager" /* cnb.z(-39895951211306L) */,
+                        "itemInfo exist detail but no note or record, error!" /* cnb.z(-41450729372458L) */);
                 bahVar2.d = cdjVar2;
                 return ensVar;
             case 6:
@@ -139,10 +149,10 @@ public final /* synthetic */ class ayz implements bgf {
                 ammVar.c = new ayz(i3);
                 return ensVar;
             case 8:
-                bmm bmmVar2 = (bmm) obj;
-                bmmVar2.getClass();
+                HookParamWrapper hookParam2 = (HookParamWrapper) obj;
+                hookParam2.getClass();
                 try {
-                    objX2 = bmmVar2.d()[0];
+                    objX2 = hookParam2.getArgs()[0];
                     if (objX2 == null) {
                         objX2 = null;
                     }
@@ -154,13 +164,16 @@ public final /* synthetic */ class ayz implements bgf {
                     str2 = "";
                 }
                 if (str2.equals("attachment" /* cnb.z(-492078698068778L) */)) {
-                    bmmVar2.h(azq.a.o());
+                    hookParam2.setResult(azq.a.o());
                 }
                 return ensVar;
             case 9:
                 bag bagVar = (bag) obj;
                 zb zbVar = new zb();
-                zbVar.k("VFS.VFSStrategy" /* cnb.z(-492065813166890L) */, "Found wrong moving file: " /* cnb.z(-492546849504042L) */);
+                zbVar.k("VFS.VFSStrategy" /* cnb.z(-492065813166890L) */, "Found wrong moving file: " /*
+                                                                                                       * cnb.z(-
+                                                                                                       * 492546849504042L)
+                                                                                                       */);
                 bagVar.getClass();
                 bagVar.b = zbVar;
                 return ensVar;
@@ -180,10 +193,10 @@ public final /* synthetic */ class ayz implements bgf {
                 bahVar3.d = cdjVar3;
                 return ensVar;
             case 11:
-                bmm bmmVar3 = (bmm) obj;
-                bmmVar3.getClass();
+                HookParamWrapper hookParam3 = (HookParamWrapper) obj;
+                hookParam3.getClass();
                 try {
-                    objX3 = bmmVar3.d()[0];
+                    objX3 = hookParam3.getArgs()[0];
                     if (objX3 == null) {
                         objX3 = null;
                     }
@@ -191,9 +204,9 @@ public final /* synthetic */ class ayz implements bgf {
                     objX3 = bhu.x(th3);
                 }
                 Object obj3 = objX3 instanceof dcx ? null : objX3;
-                bzo.n(obj3);
+                throwIfVar1IsNull(obj3);
                 try {
-                    objX4 = bmmVar3.d()[1];
+                    objX4 = hookParam3.getArgs()[1];
                     if (objX4 == null) {
                         objX4 = null;
                     }
@@ -201,22 +214,22 @@ public final /* synthetic */ class ayz implements bgf {
                     objX4 = bhu.x(th4);
                 }
                 Object obj4 = objX4 instanceof dcx ? null : objX4;
-                bzo.n(obj4);
+                throwIfVar1IsNull(obj4);
                 MenuItem menuItem2 = (MenuItem) obj4;
                 int i6 = bte.a;
                 azg azgVarR2 = dqc.bi(obj3).r();
                 azgVarR2.a = "com.tencent.mm.plugin.finder.storage.FinderItem" /* cnb.z(-64540473555754L) */;
                 Object objD2 = ((azk) yg.e(azgVarR2)).d();
-                bzo.n(objD2);
+                throwIfVar1IsNull(objD2);
                 cde cdeVarT = dqc.bi(objD2).t();
                 cdeVarT.ab = "getMediaType" /* cnb.z(-64334315125546L) */;
                 Object objJ = ((cdk) aaz.e(cdeVarT.aj())).j(new Object[0]);
-                bzo.n(objJ);
+                throwIfVar1IsNull(objJ);
                 int iIntValue2 = ((Number) objJ).intValue();
                 cde cdeVarT2 = dqc.bi(objD2).t();
                 cdeVarT2.ab = "getMediaList" /* cnb.z(-64811056495402L) */;
                 Object objJ2 = ((cdk) aaz.e(cdeVarT2.aj())).j(new Object[0]);
-                bzo.n(objJ2);
+                throwIfVar1IsNull(objJ2);
                 List list = (List) objJ2;
                 ArrayList arrayList2 = new ArrayList(abb.ak(list, 10));
                 for (Object obj5 : list) {
@@ -224,7 +237,7 @@ public final /* synthetic */ class ayz implements bgf {
                     cde cdeVarT3 = dqc.bi(obj5).t();
                     cdeVarT3.ab = "toJSON" /* cnb.z(-64789581658922L) */;
                     Object objJ3 = ((cdk) dkz.m(cdeVarT3)).j(new Object[0]);
-                    bzo.n(objJ3);
+                    throwIfVar1IsNull(objJ3);
                     arrayList2.add((JSONObject) objJ3);
                 }
                 for (bnl bnlVar : bal.b) {
@@ -238,15 +251,20 @@ public final /* synthetic */ class ayz implements bgf {
                         ArrayList arrayList3 = ewq.a;
                         StringBuilder sb2 = new StringBuilder();
                         sb2.append("onCreateMenuItems " /* cnb.z(-64759516887850L) */);
-                        ewq.e(yg.n(sb2, bnlVar instanceof doo ? ((doo) bnlVar).f() : "LoadHook" /* cnb.z(-64695092378410L) */, -64604898065194L), e2, 12);
+                        ewq.e(yg.n(sb2,
+                                bnlVar instanceof BaseHook ? ((BaseHook) bnlVar).getResult() : "LoadHook" /*
+                                                                                                           * cnb.z(-
+                                                                                                           * 64695092378410L)
+                                                                                                           */,
+                                -64604898065194L), e2, 12);
                     }
                 }
                 return ensVar;
             case 12:
-                bmm bmmVar4 = (bmm) obj;
-                bmmVar4.getClass();
+                HookParamWrapper hookParam4 = (HookParamWrapper) obj;
+                hookParam4.getClass();
                 try {
-                    objX5 = bmmVar4.d()[1];
+                    objX5 = hookParam4.getArgs()[1];
                     if (objX5 == null) {
                         objX5 = null;
                     }
@@ -254,13 +272,13 @@ public final /* synthetic */ class ayz implements bgf {
                     objX5 = bhu.x(th5);
                 }
                 Object obj6 = objX5 instanceof dcx ? null : objX5;
-                bzo.n(obj6);
+                throwIfVar1IsNull(obj6);
                 ContextMenu contextMenu = (ContextMenu) obj6;
                 int i8 = bte.a;
                 azg azgVarR3 = dqc.bi(contextMenu).r();
                 azgVarR3.a = dal.b(Context.class);
                 Object objE3 = ((azk) aaz.e(azgVarR3.c())).e();
-                bzo.n(objE3);
+                throwIfVar1IsNull(objE3);
                 Resources resources = ((Context) objE3).getResources();
                 if (resources != null) {
                     cnf.bi(resources);
@@ -270,14 +288,19 @@ public final /* synthetic */ class ayz implements bgf {
                     try {
                         for (bai baiVar2 : ((etg) bnlVar2).m()) {
                             cdk cdkVarD = ((cdk) dovVar.getValue()).d();
-                            cdkVarD.h(contextMenu);
+                            cdkVarD.locateDex(contextMenu);
                             cdkVarD.e(Integer.valueOf(baiVar2.a), baiVar2.b, Integer.valueOf(baiVar2.c));
                         }
                     } catch (Exception e3) {
                         ArrayList arrayList4 = ewq.a;
                         StringBuilder sb3 = new StringBuilder();
                         sb3.append("onCreateMenuItems " /* cnb.z(-41089952119594L) */);
-                        ewq.e(yg.n(sb3, bnlVar2 instanceof doo ? ((doo) bnlVar2).f() : "LoadHook" /* cnb.z(-40973988002602L) */, -64574833294122L), e3, 12);
+                        ewq.e(yg.n(sb3,
+                                bnlVar2 instanceof BaseHook ? ((BaseHook) bnlVar2).getResult() : "LoadHook" /*
+                                                                                                             * cnb.z(-
+                                                                                                             * 40973988002602L)
+                                                                                                             */,
+                                -64574833294122L), e3, 12);
                     }
                 }
                 return ensVar;
@@ -291,20 +314,23 @@ public final /* synthetic */ class ayz implements bgf {
                 return ensVar;
             case 15:
                 bah bahVar4 = (bah) obj;
-                String[] strArr3 = {"com.tencent.mm.plugin.finder.feed" /* cnb.z(-64020782512938L) */};
+                String[] strArr3 = { "com.tencent.mm.plugin.finder.feed" /* cnb.z(-64020782512938L) */ };
                 bahVar4.getClass();
                 bahVar4.a = la.ab(strArr3);
                 cdj cdjVar4 = new cdj();
-                cdjVar4.t("feed" /* cnb.z(-63891933494058L) */, "menu" /* cnb.z(-63904818395946L) */, "sheet" /* cnb.z(-63866163690282L) */, "holder" /* cnb.z(-63823214017322L) */, "KEY_FINDER_SELF_FLAG" /* cnb.z(-63775969377066L) */);
+                cdjVar4.t("feed" /* cnb.z(-63891933494058L) */, "menu" /* cnb.z(-63904818395946L) */,
+                        "sheet" /* cnb.z(-63866163690282L) */, "holder" /* cnb.z(-63823214017322L) */,
+                        "KEY_FINDER_SELF_FLAG" /* cnb.z(-63775969377066L) */);
                 bahVar4.d = cdjVar4;
                 return ensVar;
             case 16:
                 bag bagVar2 = (bag) obj;
-                String[] strArr4 = {"com.tencent.mm.plugin.finder.feed" /* cnb.z(-64287070485290L) */};
+                String[] strArr4 = { "com.tencent.mm.plugin.finder.feed" /* cnb.z(-64287070485290L) */ };
                 bagVar2.getClass();
                 bagVar2.a = la.ab(strArr4);
                 zb zbVar2 = new zb();
-                zbVar2.k("Finder.FinderLoaderFeedUIContract.Presenter" /* cnb.z(-64089501989674L) */, "getMoreMenuItemSelectedListener feed " /* cnb.z(-65584150608682L) */);
+                zbVar2.k("Finder.FinderLoaderFeedUIContract.Presenter" /* cnb.z(-64089501989674L) */,
+                        "getMoreMenuItemSelectedListener feed " /* cnb.z(-65584150608682L) */);
                 bagVar2.b = zbVar2;
                 return ensVar;
             case 17:
@@ -315,10 +341,10 @@ public final /* synthetic */ class ayz implements bgf {
                 bahVar5.d = cdjVar5;
                 return ensVar;
             case 18:
-                bmm bmmVar5 = (bmm) obj;
-                bmmVar5.getClass();
+                HookParamWrapper hookParam5 = (HookParamWrapper) obj;
+                hookParam5.getClass();
                 try {
-                    objX6 = bmmVar5.d()[0];
+                    objX6 = hookParam5.getArgs()[0];
                     if (objX6 == null) {
                         objX6 = null;
                     }
@@ -326,13 +352,13 @@ public final /* synthetic */ class ayz implements bgf {
                     objX6 = bhu.x(th6);
                 }
                 Object obj7 = objX6 instanceof dcx ? null : objX6;
-                bzo.n(obj7);
+                throwIfVar1IsNull(obj7);
                 ContextMenu contextMenu2 = (ContextMenu) obj7;
                 int i9 = bte.a;
                 azg azgVarR4 = dqc.bi(contextMenu2).r();
                 azgVarR4.a = dal.b(Context.class);
                 Object objE4 = ((azk) aaz.e(azgVarR4.c())).e();
-                bzo.n(objE4);
+                throwIfVar1IsNull(objE4);
                 Resources resources2 = ((Context) objE4).getResources();
                 if (resources2 != null) {
                     cnf.bi(resources2);
@@ -342,22 +368,27 @@ public final /* synthetic */ class ayz implements bgf {
                     try {
                         for (bam bamVar : ((ete) bnmVar).m()) {
                             cdk cdkVarD2 = ((cdk) dovVar2.getValue()).d();
-                            cdkVarD2.h(contextMenu2);
+                            cdkVarD2.locateDex(contextMenu2);
                             cdkVarD2.e(Integer.valueOf(bamVar.a), bamVar.b, Integer.valueOf(bamVar.c));
                         }
                     } catch (Exception e4) {
                         ArrayList arrayList5 = ewq.a;
                         StringBuilder sb4 = new StringBuilder();
                         sb4.append("onCreateMenuItems " /* cnb.z(-64914135710506L) */);
-                        ewq.e(yg.n(sb4, bnmVar instanceof doo ? ((doo) bnmVar).f() : "LoadHook" /* cnb.z(-65399467014954L) */, -65377992178474L), e4, 12);
+                        ewq.e(yg.n(sb4,
+                                bnmVar instanceof BaseHook ? ((BaseHook) bnmVar).getResult() : "LoadHook" /*
+                                                                                                           * cnb.z(-
+                                                                                                           * 65399467014954L)
+                                                                                                           */,
+                                -65377992178474L), e4, 12);
                     }
                 }
                 return ensVar;
             case 19:
-                bmm bmmVar6 = (bmm) obj;
-                bmmVar6.getClass();
+                HookParamWrapper hookParam6 = (HookParamWrapper) obj;
+                hookParam6.getClass();
                 try {
-                    objX7 = bmmVar6.d()[0];
+                    objX7 = hookParam6.getArgs()[0];
                     if (objX7 == null) {
                         objX7 = null;
                     }
@@ -365,26 +396,26 @@ public final /* synthetic */ class ayz implements bgf {
                     objX7 = bhu.x(th7);
                 }
                 Object obj8 = objX7 instanceof dcx ? null : objX7;
-                bzo.n(obj8);
+                throwIfVar1IsNull(obj8);
                 MenuItem menuItem3 = (MenuItem) obj8;
                 int i10 = bte.a;
-                azg azgVarAa3 = dkz.aa(bmmVar6);
+                azg azgVarAa3 = dkz.aa(hookParam6);
                 azgVarAa3.a = "com.tencent.mm.plugin.finder.model.BaseFinderFeed" /* cnb.z(-65343632440106L) */;
                 Object objD3 = ((azk) aaz.e(azgVarAa3.c())).d();
-                bzo.n(objD3);
+                throwIfVar1IsNull(objD3);
                 azg azgVarR5 = dqc.bi(objD3).r();
                 azgVarR5.a = "com.tencent.mm.plugin.finder.storage.FinderItem" /* cnb.z(-62397284875050L) */;
                 Object objD4 = ((azk) yg.e(azgVarR5)).d();
-                bzo.n(objD4);
+                throwIfVar1IsNull(objD4);
                 cde cdeVarT4 = dqc.bi(objD4).t();
                 cdeVarT4.ab = "getMediaType" /* cnb.z(-62191126444842L) */;
                 Object objJ4 = ((cdk) aaz.e(cdeVarT4.aj())).j(new Object[0]);
-                bzo.n(objJ4);
+                throwIfVar1IsNull(objJ4);
                 int iIntValue3 = ((Number) objJ4).intValue();
                 cde cdeVarT5 = dqc.bi(objD4).t();
                 cdeVarT5.ab = "getMediaList" /* cnb.z(-62650687945514L) */;
                 Object objJ5 = ((cdk) aaz.e(cdeVarT5.aj())).j(new Object[0]);
-                bzo.n(objJ5);
+                throwIfVar1IsNull(objJ5);
                 List list2 = (List) objJ5;
                 ArrayList arrayList6 = new ArrayList(abb.ak(list2, 10));
                 for (Object obj9 : list2) {
@@ -392,7 +423,7 @@ public final /* synthetic */ class ayz implements bgf {
                     cde cdeVarT6 = dqc.bi(obj9).t();
                     cdeVarT6.ab = "toJSON" /* cnb.z(-62577673501482L) */;
                     Object objJ6 = ((cdk) dkz.m(cdeVarT6)).j(new Object[0]);
-                    bzo.n(objJ6);
+                    throwIfVar1IsNull(objJ6);
                     arrayList6.add((JSONObject) objJ6);
                 }
                 for (bnm bnmVar2 : bap.b) {
@@ -406,7 +437,12 @@ public final /* synthetic */ class ayz implements bgf {
                         ArrayList arrayList7 = ewq.a;
                         StringBuilder sb5 = new StringBuilder();
                         sb5.append("onCreateMenuItems " /* cnb.z(-62599148337962L) */);
-                        ewq.e(yg.n(sb5, bnmVar2 instanceof doo ? ((doo) bnmVar2).f() : "LoadHook" /* cnb.z(-62483184220970L) */, -62444529515306L), e5, 12);
+                        ewq.e(yg.n(sb5,
+                                bnmVar2 instanceof BaseHook ? ((BaseHook) bnmVar2).getResult() : "LoadHook" /*
+                                                                                                             * cnb.z(-
+                                                                                                             * 62483184220970L)
+                                                                                                             */,
+                                -62444529515306L), e5, 12);
                     }
                 }
                 return ensVar;
@@ -418,7 +454,7 @@ public final /* synthetic */ class ayz implements bgf {
                 return ensVar;
             case 22:
                 bah bahVar6 = (bah) obj;
-                String[] strArr5 = {"com.tencent.mm.plugin.finder.feed" /* cnb.z(-61589831023402L) */};
+                String[] strArr5 = { "com.tencent.mm.plugin.finder.feed" /* cnb.z(-61589831023402L) */ };
                 bahVar6.getClass();
                 bahVar6.a = la.ab(strArr5);
                 cdj cdjVar6 = new cdj();
@@ -428,7 +464,7 @@ public final /* synthetic */ class ayz implements bgf {
                 return ensVar;
             case 23:
                 bah bahVar7 = (bah) obj;
-                String[] strArr6 = {"com.tencent.mm.plugin.finder.feed" /* cnb.z(-62410169776938L) */};
+                String[] strArr6 = { "com.tencent.mm.plugin.finder.feed" /* cnb.z(-62410169776938L) */ };
                 bahVar7.getClass();
                 bahVar7.a = la.ab(strArr6);
                 cdj cdjVar7 = new cdj();
@@ -440,27 +476,36 @@ public final /* synthetic */ class ayz implements bgf {
                 View view2 = (View) obj;
                 View viewK = dkz.k(view2, R.layout.module_dialog_float_action_button, null, false);
                 int i12 = R.id.moduleDialogEdtFloatActionButtonFabDarkColor;
-                TextInputEditText textInputEditText = (TextInputEditText) cnd.aq(viewK, R.id.moduleDialogEdtFloatActionButtonFabDarkColor);
+                TextInputEditText textInputEditText = (TextInputEditText) cnd.aq(viewK,
+                        R.id.moduleDialogEdtFloatActionButtonFabDarkColor);
                 if (textInputEditText != null) {
                     i12 = R.id.moduleDialogEdtFloatActionButtonFabLightColor;
-                    TextInputEditText textInputEditText2 = (TextInputEditText) cnd.aq(viewK, R.id.moduleDialogEdtFloatActionButtonFabLightColor);
+                    TextInputEditText textInputEditText2 = (TextInputEditText) cnd.aq(viewK,
+                            R.id.moduleDialogEdtFloatActionButtonFabLightColor);
                     if (textInputEditText2 != null) {
                         i12 = R.id.moduleDialogEdtFloatActionButtonIconDarkColor;
-                        TextInputEditText textInputEditText3 = (TextInputEditText) cnd.aq(viewK, R.id.moduleDialogEdtFloatActionButtonIconDarkColor);
+                        TextInputEditText textInputEditText3 = (TextInputEditText) cnd.aq(viewK,
+                                R.id.moduleDialogEdtFloatActionButtonIconDarkColor);
                         if (textInputEditText3 != null) {
                             i12 = R.id.moduleDialogEdtFloatActionButtonIconLightColor;
-                            TextInputEditText textInputEditText4 = (TextInputEditText) cnd.aq(viewK, R.id.moduleDialogEdtFloatActionButtonIconLightColor);
+                            TextInputEditText textInputEditText4 = (TextInputEditText) cnd.aq(viewK,
+                                    R.id.moduleDialogEdtFloatActionButtonIconLightColor);
                             if (textInputEditText4 != null) {
                                 i12 = R.id.moduleDialogInputFloatActionButtonFabDarkColor;
-                                if (((TextInputLayout) cnd.aq(viewK, R.id.moduleDialogInputFloatActionButtonFabDarkColor)) != null) {
+                                if (((TextInputLayout) cnd.aq(viewK,
+                                        R.id.moduleDialogInputFloatActionButtonFabDarkColor)) != null) {
                                     i12 = R.id.moduleDialogInputFloatActionButtonFabLightColor;
-                                    if (((TextInputLayout) cnd.aq(viewK, R.id.moduleDialogInputFloatActionButtonFabLightColor)) != null) {
+                                    if (((TextInputLayout) cnd.aq(viewK,
+                                            R.id.moduleDialogInputFloatActionButtonFabLightColor)) != null) {
                                         i12 = R.id.moduleDialogInputFloatActionButtonIconDarkColor;
-                                        if (((TextInputLayout) cnd.aq(viewK, R.id.moduleDialogInputFloatActionButtonIconDarkColor)) != null) {
+                                        if (((TextInputLayout) cnd.aq(viewK,
+                                                R.id.moduleDialogInputFloatActionButtonIconDarkColor)) != null) {
                                             i12 = R.id.moduleDialogInputFloatActionButtonIconLightColor;
-                                            if (((TextInputLayout) cnd.aq(viewK, R.id.moduleDialogInputFloatActionButtonIconLightColor)) != null) {
+                                            if (((TextInputLayout) cnd.aq(viewK,
+                                                    R.id.moduleDialogInputFloatActionButtonIconLightColor)) != null) {
                                                 LinearLayout linearLayout2 = (LinearLayout) viewK;
-                                                ceo ceoVar = new ceo(linearLayout2, textInputEditText, textInputEditText2, textInputEditText3, textInputEditText4, 0);
+                                                ceo ceoVar = new ceo(linearLayout2, textInputEditText,
+                                                        textInputEditText2, textInputEditText3, textInputEditText4, 0);
                                                 textInputEditText2.setText(bbg.a.o());
                                                 textInputEditText4.setText(bbi.a.o());
                                                 textInputEditText.setText(bbf.a.o());
@@ -469,9 +514,13 @@ public final /* synthetic */ class ayz implements bgf {
                                                 eg egVar2 = (eg) bzyVar2.d;
                                                 bbj.a.getClass();
                                                 egVar2.d = bbj.j;
-                                                bzyVar2.t("保存" /* cnb.z(-550395764013866L) */, new amw(new bp(ceoVar, 20), 0));
+                                                bzyVar2.t("保存" /* cnb.z(-550395764013866L) */,
+                                                        new amw(new bp(ceoVar, 20), 0));
                                                 bzyVar2.s("重置" /* cnb.z(-550348519373610L) */, new amw(new amd(6), 2));
-                                                bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar2, "取消" /* cnb.z(-47455093652266L) */);
+                                                bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar2, "取消" /*
+                                                                                                       * cnb.z(-
+                                                                                                       * 47455093652266L)
+                                                                                                       */);
                                                 if (linearLayout2 != null) {
                                                     egVar2.r = linearLayout2;
                                                 }
@@ -485,7 +534,8 @@ public final /* synthetic */ class ayz implements bgf {
                         }
                     }
                 }
-                throw new NullPointerException("Missing required view with ID: " /* cnb.z(-638850615474986L) */.concat(viewK.getResources().getResourceName(i12)));
+                throw new NullPointerException("Missing required view with ID: "
+                        /* cnb.z(-638850615474986L) */.concat(viewK.getResources().getResourceName(i12)));
             case 25:
                 ((amm) obj).c = new ayz(27);
                 return ensVar;
@@ -495,7 +545,8 @@ public final /* synthetic */ class ayz implements bgf {
             case 27:
                 bah bahVar8 = (bah) obj;
                 cdj cdjVar8 = new cdj();
-                cdjVar8.t("MicroMsg.ForceNotifyStorage" /* cnb.z(-367876833803050L) */, "[isNeedNotify] forcePushId:%s %s" /* cnb.z(-368271970794282L) */);
+                cdjVar8.t("MicroMsg.ForceNotifyStorage" /* cnb.z(-367876833803050L) */,
+                        "[isNeedNotify] forcePushId:%s %s" /* cnb.z(-368271970794282L) */);
                 bahVar8.getClass();
                 bahVar8.d = cdjVar8;
                 return ensVar;
@@ -504,7 +555,10 @@ public final /* synthetic */ class ayz implements bgf {
                 cdj cdjVar9 = new cdj();
                 bcp.a.getClass();
                 cdjVar9.o(emn.bb(bcn.a).getDeclaringClass());
-                cdjVar9.t("MicroMsg.ForceNotifyStorage" /* cnb.z(-368147416742698L) */, "[setting] " /* cnb.z(-367511761582890L) */);
+                cdjVar9.t("MicroMsg.ForceNotifyStorage" /* cnb.z(-368147416742698L) */, "[setting] " /*
+                                                                                                      * cnb.z(-
+                                                                                                      * 367511761582890L)
+                                                                                                      */);
                 bahVar9.getClass();
                 bahVar9.d = cdjVar9;
                 return ensVar;
@@ -512,23 +566,28 @@ public final /* synthetic */ class ayz implements bgf {
                 View view3 = (View) obj;
                 View viewK2 = dkz.k(view3, R.layout.module_dialog_format_msg_time, null, false);
                 int i13 = R.id.moduleDialogEdtFormatMsgTimeTimeFormat;
-                TextInputEditText textInputEditText5 = (TextInputEditText) cnd.aq(viewK2, R.id.moduleDialogEdtFormatMsgTimeTimeFormat);
+                TextInputEditText textInputEditText5 = (TextInputEditText) cnd.aq(viewK2,
+                        R.id.moduleDialogEdtFormatMsgTimeTimeFormat);
                 if (textInputEditText5 != null) {
                     i13 = R.id.moduleDialogInputFormatMsgTimeTimeFormat;
                     if (((TextInputLayout) cnd.aq(viewK2, R.id.moduleDialogInputFormatMsgTimeTimeFormat)) != null) {
                         i13 = R.id.moduleDialogRbFormatMsgTimeModeDefault;
-                        MaterialRadioButton materialRadioButton = (MaterialRadioButton) cnd.aq(viewK2, R.id.moduleDialogRbFormatMsgTimeModeDefault);
+                        MaterialRadioButton materialRadioButton = (MaterialRadioButton) cnd.aq(viewK2,
+                                R.id.moduleDialogRbFormatMsgTimeModeDefault);
                         if (materialRadioButton != null) {
                             i13 = R.id.moduleDialogRbFormatMsgTimeModeGone;
-                            MaterialRadioButton materialRadioButton2 = (MaterialRadioButton) cnd.aq(viewK2, R.id.moduleDialogRbFormatMsgTimeModeGone);
+                            MaterialRadioButton materialRadioButton2 = (MaterialRadioButton) cnd.aq(viewK2,
+                                    R.id.moduleDialogRbFormatMsgTimeModeGone);
                             if (materialRadioButton2 != null) {
                                 i13 = R.id.moduleDialogRbFormatMsgTimeModeVisible;
-                                MaterialRadioButton materialRadioButton3 = (MaterialRadioButton) cnd.aq(viewK2, R.id.moduleDialogRbFormatMsgTimeModeVisible);
+                                MaterialRadioButton materialRadioButton3 = (MaterialRadioButton) cnd.aq(viewK2,
+                                        R.id.moduleDialogRbFormatMsgTimeModeVisible);
                                 if (materialRadioButton3 != null) {
                                     i13 = R.id.moduleDialogRgFormatMsgTimeMode;
                                     if (((RadioGroup) cnd.aq(viewK2, R.id.moduleDialogRgFormatMsgTimeMode)) != null) {
                                         LinearLayout linearLayout3 = (LinearLayout) viewK2;
-                                        bqs bqsVar = new bqs(linearLayout3, textInputEditText5, materialRadioButton, materialRadioButton2, materialRadioButton3, 2);
+                                        bqs bqsVar = new bqs(linearLayout3, textInputEditText5, materialRadioButton,
+                                                materialRadioButton2, materialRadioButton3, 2);
                                         int iK = bcs.a.k();
                                         if (iK == bcr.a.e) {
                                             materialRadioButton2.setChecked(true);
@@ -544,7 +603,9 @@ public final /* synthetic */ class ayz implements bgf {
                                         egVar3.d = bcu.c;
                                         bzyVar3.t("保存" /* cnb.z(-463688964242218L) */, new amw(new bp(bqsVar, 21), 0));
                                         bzyVar3.s("重置" /* cnb.z(-463710439078698L) */, new amw(new amd(7), 2));
-                                        bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar3, "取消" /* cnb.z(-47455093652266L) */);
+                                        bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar3, "取消" /*
+                                                                                               * cnb.z(-47455093652266L)
+                                                                                               */);
                                         if (linearLayout3 != null) {
                                             egVar3.r = linearLayout3;
                                         }
@@ -556,7 +617,8 @@ public final /* synthetic */ class ayz implements bgf {
                         }
                     }
                 }
-                throw new NullPointerException("Missing required view with ID: " /* cnb.z(-639262932335402L) */.concat(viewK2.getResources().getResourceName(i13)));
+                throw new NullPointerException("Missing required view with ID: "
+                        /* cnb.z(-639262932335402L) */.concat(viewK2.getResources().getResourceName(i13)));
         }
     }
 }

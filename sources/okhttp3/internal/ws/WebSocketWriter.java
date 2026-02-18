@@ -4,7 +4,7 @@ import java.io.Closeable;
 import java.io.EOFException;
 import java.io.IOException;
 import java.util.Random;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.rf;
 import me.hd.wauxv.obf.rh;
 import me.hd.wauxv.obf.rl;
@@ -27,8 +27,8 @@ public final class WebSocketWriter implements Closeable {
     private boolean writerClosed;
 
     public WebSocketWriter(boolean z, rl rlVar, Random random, boolean z2, boolean z3, long j) {
-        bzo.q(rlVar, "sink");
-        bzo.q(random, "random");
+        throwIfVar1IsNull(rlVar, "sink");
+        throwIfVar1IsNull(random, "random");
         this.isClient = z;
         this.sink = rlVar;
         this.random = random;
@@ -54,7 +54,7 @@ public final class WebSocketWriter implements Closeable {
             this.sinkBuffer.am(iG | 128);
             Random random = this.random;
             byte[] bArr = this.maskKey;
-            bzo.n(bArr);
+            throwIfVar1IsNull(bArr);
             random.nextBytes(bArr);
             this.sinkBuffer.m12write(this.maskKey);
             if (iG > 0) {
@@ -63,7 +63,7 @@ public final class WebSocketWriter implements Closeable {
                 rhVar.al(sjVar);
                 rh rhVar2 = this.sinkBuffer;
                 rf rfVar = this.maskCursor;
-                bzo.n(rfVar);
+                throwIfVar1IsNull(rfVar);
                 rhVar2.v(rfVar);
                 this.maskCursor.i(j);
                 WebSocketProtocol.INSTANCE.toggleMask(this.maskCursor, this.maskKey);
@@ -113,7 +113,7 @@ public final class WebSocketWriter implements Closeable {
     }
 
     public final void writeMessageFrame(int i, sj sjVar) throws IOException {
-        bzo.q(sjVar, "data");
+        throwIfVar1IsNull(sjVar, "data");
         if (this.writerClosed) {
             throw new IOException("closed");
         }
@@ -143,13 +143,13 @@ public final class WebSocketWriter implements Closeable {
         if (this.isClient) {
             Random random = this.random;
             byte[] bArr = this.maskKey;
-            bzo.n(bArr);
+            throwIfVar1IsNull(bArr);
             random.nextBytes(bArr);
             this.sinkBuffer.m12write(this.maskKey);
             if (j > 0) {
                 rh rhVar = this.messageBuffer;
                 rf rfVar = this.maskCursor;
-                bzo.n(rfVar);
+                throwIfVar1IsNull(rfVar);
                 rhVar.v(rfVar);
                 this.maskCursor.i(0L);
                 WebSocketProtocol.INSTANCE.toggleMask(this.maskCursor, this.maskKey);
@@ -161,12 +161,12 @@ public final class WebSocketWriter implements Closeable {
     }
 
     public final void writePing(sj sjVar) {
-        bzo.q(sjVar, "payload");
+        throwIfVar1IsNull(sjVar, "payload");
         writeControlFrame(9, sjVar);
     }
 
     public final void writePong(sj sjVar) throws IOException {
-        bzo.q(sjVar, "payload");
+        throwIfVar1IsNull(sjVar, "payload");
         writeControlFrame(10, sjVar);
     }
 }

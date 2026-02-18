@@ -93,7 +93,7 @@ public class StringUtil {
 
     /* JADX INFO: Access modifiers changed from: private */
     public static /* synthetic */ String lambda$getTypeNames$1(Iterator it, String str) {
-        StringBuilder sbR = bjs.r(str, " ");
+        StringBuilder sbR = concat(str, " ");
         sbR.append((String) it.next());
         return sbR.toString();
     }
@@ -286,7 +286,7 @@ public class StringUtil {
 
     public static String methodString(Method method) {
         String string = Modifier.toString(method.getModifiers());
-        StringBuilder sbR = bjs.r(string, " ");
+        StringBuilder sbR = concat(string, " ");
         sbR.append(getTypeName(method.getReturnType()));
         sbR.append(" ");
         sbR.append(methodString(method.getName(), method.getParameterTypes()));
@@ -296,7 +296,7 @@ public class StringUtil {
 
     public static String methodString(BshMethod bshMethod) {
         String strSubstring = bshMethod.getModifiers().toString().substring(11);
-        StringBuilder sbR = bjs.r(strSubstring, " ");
+        StringBuilder sbR = concat(strSubstring, " ");
         sbR.append(getTypeName(bshMethod.getReturnType()));
         sbR.append(" ");
         sbR.append(methodString(bshMethod.getName(), bshMethod.getParameterTypes(), bshMethod.getParameterNames()));

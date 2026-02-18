@@ -44,7 +44,7 @@ public final /* synthetic */ class djp implements bgf {
                 Method methodBb = emn.bb(aed.a);
                 aec.a.getClass();
                 Object objInvoke = methodBb.invoke(aec.b(), null);
-                bzo.o(objInvoke, "null cannot be cast to non-null type kotlin.collections.List<kotlin.Any>" /* cnb.z(-386645840886570L) */);
+                throwIfVar1IsNull(objInvoke, "null cannot be cast to non-null type kotlin.collections.List<kotlin.Any>" /* cnb.z(-386645840886570L) */);
                 List list = (List) objInvoke;
                 ArrayList arrayList = new ArrayList(abb.ak(list, 10));
                 for (Object obj2 : list) {
@@ -58,7 +58,7 @@ public final /* synthetic */ class djp implements bgf {
                     azg azgVarR2 = dqc.bi(obj2).r();
                     azgVarR2.ab = "field_labelName" /* cnb.z(-556859689794346L) */;
                     Object objE = ((azk) yg.e(azgVarR2)).e();
-                    bzo.n(objE);
+                    throwIfVar1IsNull(objE);
                     djsVar2.b = (String) objE;
                     arrayList.add(djsVar2);
                 }
@@ -150,7 +150,7 @@ public final /* synthetic */ class djp implements bgf {
             default:
                 djv.a.getClass();
                 View viewV = cnh.v(activity, cnb.ac(ewh.q) ? "j90" /* cnb.z(-558380108217130L) */ : cnb.ac(ewh.o) ? "j44" /* cnb.z(-558328568609578L) */ : cnb.ac(ewh.n) ? "j17" /* cnb.z(-558345748478762L) */ : cnb.ac(ewh.m) ? "j0_" /* cnb.z(-558294208871210L) */ : cnb.ac(ewh.l) ? "iw_" /* cnb.z(-558311388740394L) */ : cnb.ac(ewh.k) ? "ite" /* cnb.z(-557710093318954L) */ : cnb.ac(ewh.j) ? "irm" /* cnb.z(-557727273188138L) */ : cnb.ac(ewh.i) ? "iok" /* cnb.z(-557675733580586L) */ : cnb.ac(ewh.h) ? "im3" /* cnb.z(-557692913449770L) */ : cnb.ac(ewh.g) ? "iir" /* cnb.z(-557641373842218L) */ : cnb.ac(ewh.f) ? "ifd" /* cnb.z(-557658553711402L) */ : cnb.ac(ewh.e) ? "i0z" /* cnb.z(-557607014103850L) */ : cnb.ac(ewh.d) ? "hzd" /* cnb.z(-557624193973034L) */ : cnb.ac(ewh.c) ? "hk5" /* cnb.z(-557572654365482L) */ : cnb.ac(ewh.b) ? "h1_" /* cnb.z(-557589834234666L) */ : cnb.ac(ewh.a) ? "gmh" /* cnb.z(-557538294627114L) */ : cnb.ab(ewk.c) ? "hbs" /* cnb.z(-557555474496298L) */ : "oez" /* cnb.z(-557503934888746L) */);
-                bzo.n(viewV);
+                throwIfVar1IsNull(viewV);
                 ViewGroup viewGroup = (ViewGroup) viewV;
                 int i4 = bte.a;
                 cde cdeVarT = dqc.bi(viewGroup).t();
@@ -159,11 +159,11 @@ public final /* synthetic */ class djp implements bgf {
                 cde cdeVarT2 = dqc.bi(viewGroup).t();
                 cdeVarT2.ab = "getAdapter" /* cnb.z(-555992106400554L) */;
                 Object objE2 = ((cdk) dkz.m(cdeVarT2)).e(new Object[0]);
-                bzo.n(objE2);
+                throwIfVar1IsNull(objE2);
                 azg azgVarR3 = dqc.bi(objE2).r();
                 azgVarR3.a = "com.tencent.mm.plugin.mvvmlist.MvvmList" /* cnb.z(-555962041629482L) */;
                 Object objD = ((azk) yg.e(azgVarR3)).d();
-                bzo.n(objD);
+                throwIfVar1IsNull(objD);
                 Method methodBb2 = emn.bb(djt.a);
                 if (methodBb2.getParameterCount() == 4) {
                     methodBb2.invoke(null, objD, null, 1, null);

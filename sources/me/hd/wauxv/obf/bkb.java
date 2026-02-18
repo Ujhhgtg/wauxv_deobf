@@ -52,11 +52,12 @@ public final class bkb extends ahj implements als {
 
     @Override // me.hd.wauxv.obf.ahj
     public final boolean j(ahh ahhVar) {
-        return (this.g && bzo.f(Looper.myLooper(), this.f.getLooper())) ? false : true;
+        return (this.g && nullSafeIsEqual(Looper.myLooper(), this.f.getLooper())) ? false : true;
     }
 
     public final void m(ahh ahhVar, Runnable runnable) {
-        CancellationException cancellationException = new CancellationException("The task was rejected, the handler underlying the dispatcher '" + this + "' was closed");
+        CancellationException cancellationException = new CancellationException(
+                "The task was rejected, the handler underlying the dispatcher '" + this + "' was closed");
         brf brfVar = (brf) ahhVar._w(arj.i);
         if (brfVar != null) {
             brfVar.q(cancellationException);

@@ -4,6 +4,6 @@ package me.hd.wauxv.obf;
 /* JADX INFO: loaded from: classes.dex */
 public class bsd extends dgb {
     public bsd(int i) {
-        super(bjs.i(i, "An unknown field for index "));
+        super(concatVar2Var1(i, "An unknown field for index "));
     }
 }

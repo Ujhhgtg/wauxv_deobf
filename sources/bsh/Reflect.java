@@ -49,7 +49,8 @@ public final class Reflect {
         if (property == null) {
             property = "null";
         }
-        PACKAGE_ACCESS = Pattern.compile((String) Stream.of((Object[]) property.split(",")).filter(new ra(8)).collect(Collectors.joining("|", "(?:", ").*")));
+        PACKAGE_ACCESS = Pattern.compile((String) Stream.of((Object[]) property.split(",")).filter(new ra(8))
+                .collect(Collectors.joining("|", "(?:", ").*")));
         instanceCache = new WeakHashMap();
     }
 
@@ -67,16 +68,19 @@ public final class Reflect {
 
     private static ReflectError cantFindConstructor(Class<?> cls, Class<?>[] clsArr) {
         if (clsArr.length == 0) {
-            return new ReflectError(bjs.l(cls, "Can't find default constructor for: "));
+            return new ReflectError(concatVar2Var1(cls, "Can't find default constructor for: "));
         }
-        return new ReflectError("Can't find constructor: " + StringUtil.methodString(cls.getName(), clsArr) + " in class: " + cls.getName());
+        return new ReflectError("Can't find constructor: " + StringUtil.methodString(cls.getName(), clsArr)
+                + " in class: " + cls.getName());
     }
 
     private static void checkFoundStaticMethod(Invocable invocable, boolean z, Class<?> cls) throws UtilEvalError {
         if (invocable == null || !z || invocable.isStatic()) {
             return;
         }
-        throw new UtilEvalError("Cannot reach instance method: " + StringUtil.methodString(invocable.getName(), invocable.getParameterTypes()) + " from static context: " + cls.getName());
+        throw new UtilEvalError("Cannot reach instance method: "
+                + StringUtil.methodString(invocable.getName(), invocable.getParameterTypes()) + " from static context: "
+                + cls.getName());
     }
 
     public static Object constructObject(Class<?> cls, Object[] objArr) {
@@ -112,7 +116,8 @@ public final class Reflect {
             }
             i2++;
         }
-        int iFindMostSpecificSignature = findMostSpecificSignature(clsArr, (Class[][]) arrayList.toArray(new Class[arrayList.size()][]));
+        int iFindMostSpecificSignature = findMostSpecificSignature(clsArr,
+                (Class[][]) arrayList.toArray(new Class[arrayList.size()][]));
         if (iFindMostSpecificSignature >= 0) {
             int iIntValue = ((Integer) arrayList2.get(iFindMostSpecificSignature)).intValue();
             Interpreter.debug(" remap: " + arrayList2);
@@ -127,13 +132,15 @@ public final class Reflect {
             if (bshMethod.isVarArgs() && clsArr.length >= parameterTypes2.length - 1) {
                 Class[] clsArr2 = new Class[clsArr.length];
                 System.arraycopy(parameterTypes2, 0, clsArr2, 0, parameterTypes2.length - 1);
-                Arrays.fill(clsArr2, parameterTypes2.length - 1, clsArr.length, parameterTypes2[parameterTypes2.length - 1].getComponentType());
+                Arrays.fill(clsArr2, parameterTypes2.length - 1, clsArr.length,
+                        parameterTypes2[parameterTypes2.length - 1].getComponentType());
                 arrayList2.add(Integer.valueOf(i3));
                 arrayList.add(clsArr2);
             }
             i3++;
         }
-        int iFindMostSpecificSignature2 = findMostSpecificSignature(clsArr, (Class[][]) arrayList.toArray(new Class[arrayList.size()][]));
+        int iFindMostSpecificSignature2 = findMostSpecificSignature(clsArr,
+                (Class[][]) arrayList.toArray(new Class[arrayList.size()][]));
         if (iFindMostSpecificSignature2 < 0) {
             return iFindMostSpecificSignature2;
         }
@@ -170,7 +177,8 @@ public final class Reflect {
             }
             i2++;
         }
-        int iFindMostSpecificSignature = findMostSpecificSignature(clsArr, (Class[][]) arrayList.toArray(new Class[arrayList.size()][]));
+        int iFindMostSpecificSignature = findMostSpecificSignature(clsArr,
+                (Class[][]) arrayList.toArray(new Class[arrayList.size()][]));
         if (iFindMostSpecificSignature >= 0) {
             int iIntValue = ((Integer) arrayList2.get(iFindMostSpecificSignature)).intValue();
             Interpreter.debug(" remap=" + Arrays.toString(arrayList2.toArray(new Integer[0])));
@@ -191,7 +199,8 @@ public final class Reflect {
             }
             i3++;
         }
-        int iFindMostSpecificSignature2 = findMostSpecificSignature(clsArr, (Class[][]) arrayList.toArray(new Class[arrayList.size()][]));
+        int iFindMostSpecificSignature2 = findMostSpecificSignature(clsArr,
+                (Class[][]) arrayList.toArray(new Class[arrayList.size()][]));
         if (iFindMostSpecificSignature2 >= 0) {
             iFindMostSpecificSignature2 = ((Integer) arrayList2.get(iFindMostSpecificSignature2)).intValue();
         }
@@ -210,7 +219,11 @@ public final class Reflect {
             Class<?>[] clsArr3 = null;
             for (int i3 = 0; i3 < clsArr2.length; i3++) {
                 Class<?>[] clsArr4 = clsArr2[i3];
-                if ((clsArr3 == null || !Types.areSignaturesEqual(clsArr4, clsArr3)) && Types.isSignatureAssignable(clsArr, clsArr4, i) && (clsArr3 == null || Types.areSignaturesEqual(clsArr, clsArr4) || (Types.isSignatureAssignable(clsArr4, clsArr3, 1) && !Types.areSignaturesEqual(clsArr, clsArr3)))) {
+                if ((clsArr3 == null || !Types.areSignaturesEqual(clsArr4, clsArr3))
+                        && Types.isSignatureAssignable(clsArr, clsArr4, i)
+                        && (clsArr3 == null || Types.areSignaturesEqual(clsArr, clsArr4)
+                                || (Types.isSignatureAssignable(clsArr4, clsArr3, 1)
+                                        && !Types.areSignaturesEqual(clsArr, clsArr3)))) {
                     i2 = i3;
                     clsArr3 = clsArr4;
                 }
@@ -255,7 +268,8 @@ public final class Reflect {
     }
 
     public static BshMethod[] getDeclaredMethods(Class<?> cls) {
-        return !isGeneratedClass(cls) ? new BshMethod[0] : cls.isInterface() ? getMethods(cls) : getMethods(getNewInstance(cls));
+        return !isGeneratedClass(cls) ? new BshMethod[0]
+                : cls.isInterface() ? getMethods(cls) : getMethods(getNewInstance(cls));
     }
 
     public static Variable getDeclaredVariable(Class<?> cls, String str) {
@@ -267,7 +281,8 @@ public final class Reflect {
     }
 
     public static Variable[] getDeclaredVariables(Class<?> cls) {
-        return !isGeneratedClass(cls) ? new Variable[0] : cls.isInterface() ? getVariables(cls) : getVariables(getNewInstance(cls));
+        return !isGeneratedClass(cls) ? new Variable[0]
+                : cls.isInterface() ? getVariables(cls) : getVariables(getNewInstance(cls));
     }
 
     public static Map.Entry getEntryForKey(Object obj, Map.Entry[] entryArr) {
@@ -280,7 +295,8 @@ public final class Reflect {
     }
 
     public static <T> T[] getEnumConstants(Class<T> cls) {
-        return (T[]) Stream.of((Object[]) cls.getFields()).filter(new yz(cls, 1)).map(new cpv(25)).filter(new ra(6)).toArray(new kx(cls, 3));
+        return (T[]) Stream.of((Object[]) cls.getFields()).filter(new yz(cls, 1)).map(new cpv(25)).filter(new ra(6))
+                .toArray(new kx(cls, 3));
     }
 
     private static Object getFieldValue(Class<?> cls, Object obj, String str, boolean z) throws UtilTargetError {
@@ -292,7 +308,9 @@ public final class Reflect {
                 if (z) {
                     Variable variableImpl = thisNS.getVariableImpl(str, true);
                     Primitive primitive = Primitive.VOID;
-                    Object objUnwrapVariable = (variableImpl == null || (variableImpl.hasModifier("private") && !Capabilities.haveAccessibility())) ? primitive : thisNS.unwrapVariable(variableImpl);
+                    Object objUnwrapVariable = (variableImpl == null
+                            || (variableImpl.hasModifier("private") && !Capabilities.haveAccessibility())) ? primitive
+                                    : thisNS.unwrapVariable(variableImpl);
                     if (primitive != objUnwrapVariable) {
                         return objUnwrapVariable;
                     }
@@ -301,7 +319,10 @@ public final class Reflect {
                     if (thisNS2 != null) {
                         Variable variableImpl2 = thisNS2.getVariableImpl(str, true);
                         Primitive primitive2 = Primitive.VOID;
-                        Object objUnwrapVariable2 = (variableImpl2 == null || (variableImpl2.hasModifier("private") && !Capabilities.haveAccessibility())) ? primitive2 : thisNS2.unwrapVariable(variableImpl2);
+                        Object objUnwrapVariable2 = (variableImpl2 == null
+                                || (variableImpl2.hasModifier("private") && !Capabilities.haveAccessibility()))
+                                        ? primitive2
+                                        : thisNS2.unwrapVariable(variableImpl2);
                         if (primitive2 != objUnwrapVariable2) {
                             return objUnwrapVariable2;
                         }
@@ -329,7 +350,9 @@ public final class Reflect {
             return new LHS(obj, resolveExpectedJavaField(obj.getClass(), str, false));
         } catch (ReflectError e) {
             NameSpace thisNS = getThisNS(obj);
-            if (isGeneratedClass(obj.getClass()) && thisNS != null && thisNS.isClass && (variableImpl = thisNS.getVariableImpl(str, true)) != null && (!variableImpl.hasModifier("private") || Capabilities.haveAccessibility())) {
+            if (isGeneratedClass(obj.getClass()) && thisNS != null && thisNS.isClass
+                    && (variableImpl = thisNS.getVariableImpl(str, true)) != null
+                    && (!variableImpl.hasModifier("private") || Capabilities.haveAccessibility())) {
                 return new LHS(thisNS, str);
             }
             if (hasObjectPropertySetter(obj.getClass(), str)) {
@@ -345,7 +368,9 @@ public final class Reflect {
             return new LHS(resolveExpectedJavaField(cls, str, true));
         } catch (ReflectError e) {
             NameSpace thisNS = getThisNS(cls);
-            if (isGeneratedClass(cls) && thisNS != null && thisNS.isClass && (variableImpl = thisNS.getVariableImpl(str, true)) != null && (!variableImpl.hasModifier("private") || Capabilities.haveAccessibility())) {
+            if (isGeneratedClass(cls) && thisNS != null && thisNS.isClass
+                    && (variableImpl = thisNS.getVariableImpl(str, true)) != null
+                    && (!variableImpl.hasModifier("private") || Capabilities.haveAccessibility())) {
                 return new LHS(thisNS, str);
             }
             if (hasObjectPropertySetter(cls, str)) {
@@ -385,7 +410,8 @@ public final class Reflect {
             return ((This) obj).namespace.getVariable(str);
         }
         if (obj == Primitive.NULL) {
-            throw new UtilTargetError(new NullPointerException(bjs.o("Attempt to access field '", str, "' on null value")));
+            throw new UtilTargetError(
+                    new NullPointerException(concat("Attempt to access field '", str, "' on null value")));
         }
         try {
             return getFieldValue(obj.getClass(), obj, str, false);
@@ -438,7 +464,8 @@ public final class Reflect {
     }
 
     public static String[] getVariableNames(NameSpace nameSpace) {
-        return nameSpace == null ? new String[0] : (String[]) Stream.of((Object[]) nameSpace.getVariableNames()).filter(new ra(7)).toArray(new rb(14));
+        return nameSpace == null ? new String[0]
+                : (String[]) Stream.of((Object[]) nameSpace.getVariableNames()).filter(new ra(7)).toArray(new rb(14));
     }
 
     public static Variable[] getVariables(Class<?> cls) {
@@ -465,7 +492,8 @@ public final class Reflect {
         return referenceCache.get(cls).hasMember(str) && referenceCache.get(cls).findSetter(str) != null;
     }
 
-    public static Object invokeCompiledCommand(Class<?> cls, Object[] objArr, Interpreter interpreter, CallStack callStack, Node node) throws UtilEvalError {
+    public static Object invokeCompiledCommand(Class<?> cls, Object[] objArr, Interpreter interpreter,
+            CallStack callStack, Node node) throws UtilEvalError {
         Object[] objArr2 = new Object[objArr.length + 2];
         objArr2[0] = interpreter;
         objArr2[1] = callStack;
@@ -479,14 +507,19 @@ public final class Reflect {
         }
     }
 
-    private static Object invokeMathMethod(Class<?> cls, Object obj, Class<?> cls2, String str, Object[] objArr, Interpreter interpreter, CallStack callStack, Node node) throws EvalError {
-        Object objInvokeObjectMethod = invokeObjectMethod(Primitive.castWrapper(cls, obj), str, objArr, interpreter, callStack, node);
-        return ((objInvokeObjectMethod instanceof Primitive) && ((Primitive) objInvokeObjectMethod).getType() == cls) ? Primitive.wrap(Primitive.castWrapper(cls2, objInvokeObjectMethod), cls2) : objInvokeObjectMethod;
+    private static Object invokeMathMethod(Class<?> cls, Object obj, Class<?> cls2, String str, Object[] objArr,
+            Interpreter interpreter, CallStack callStack, Node node) throws EvalError {
+        Object objInvokeObjectMethod = invokeObjectMethod(Primitive.castWrapper(cls, obj), str, objArr, interpreter,
+                callStack, node);
+        return ((objInvokeObjectMethod instanceof Primitive) && ((Primitive) objInvokeObjectMethod).getType() == cls)
+                ? Primitive.wrap(Primitive.castWrapper(cls2, objInvokeObjectMethod), cls2)
+                : objInvokeObjectMethod;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Type inference failed for: r7v2 */
-    public static Object invokeObjectMethod(Object obj, String str, Object[] objArr, Interpreter interpreter, CallStack callStack, Node node) throws EvalError {
+    public static Object invokeObjectMethod(Object obj, String str, Object[] objArr, Interpreter interpreter,
+            CallStack callStack, Node node) throws EvalError {
         Object[] objArr2;
         Node node2;
         UtilEvalError utilEvalError;
@@ -528,7 +561,8 @@ public final class Reflect {
             Object obj3 = obj;
             Class<?> cls = type;
             try {
-                Invocable invocableResolveExpectedJavaMethod = resolveExpectedJavaMethod(classManager, cls, obj3, str, objArr2, false);
+                Invocable invocableResolveExpectedJavaMethod = resolveExpectedJavaMethod(classManager, cls, obj3, str,
+                        objArr2, false);
                 str3 = "Attempt to invoke method: ";
                 obj2 = obj3;
                 str2 = str;
@@ -555,12 +589,14 @@ public final class Reflect {
                                     callStack3 = callStack;
                                     node3 = node;
                                     try {
-                                        return numericMathMethod(obj2, type, str2, objArr3, interpreter, callStack3, node3);
+                                        return numericMathMethod(obj2, type, str2, objArr3, interpreter, callStack3,
+                                                node3);
                                     } catch (TargetError e3) {
                                         e = e3;
                                         throw e;
                                     } catch (EvalError unused) {
-                                        throw new EvalError("Error in method invocation: " + reflectError.getMessage(), node3, callStack3, reflectError);
+                                        throw new EvalError("Error in method invocation: " + reflectError.getMessage(),
+                                                node3, callStack3, reflectError);
                                     }
                                 }
                                 try {
@@ -571,7 +607,8 @@ public final class Reflect {
                                 } catch (EvalError unused2) {
                                     node3 = node;
                                     callStack3 = callStack;
-                                    throw new EvalError("Error in method invocation: " + reflectError.getMessage(), node3, callStack3, reflectError);
+                                    throw new EvalError("Error in method invocation: " + reflectError.getMessage(),
+                                            node3, callStack3, reflectError);
                                 } catch (UtilEvalError e5) {
                                     e = e5;
                                     node2 = node;
@@ -585,10 +622,12 @@ public final class Reflect {
                             } catch (EvalError unused3) {
                                 callStack3 = callStack;
                                 node3 = node;
-                                throw new EvalError("Error in method invocation: " + reflectError.getMessage(), node3, callStack3, reflectError);
+                                throw new EvalError("Error in method invocation: " + reflectError.getMessage(), node3,
+                                        callStack3, reflectError);
                             }
                         }
-                        throw new EvalError("Error in method invocation: " + reflectError.getMessage(), node3, callStack3, reflectError);
+                        throw new EvalError("Error in method invocation: " + reflectError.getMessage(), node3,
+                                callStack3, reflectError);
                     } catch (UtilEvalError e7) {
                         e = e7;
                     }
@@ -617,7 +656,8 @@ public final class Reflect {
         }
     }
 
-    public static Object invokeStaticMethod(BshClassManager bshClassManager, Class<?> cls, String str, Object[] objArr, Node node) {
+    public static Object invokeStaticMethod(BshClassManager bshClassManager, Class<?> cls, String str, Object[] objArr,
+            Node node) {
         Interpreter.debug("invoke static Method");
         NameSpace thisNS = getThisNS(cls);
         if (thisNS != null) {
@@ -627,7 +667,8 @@ public final class Reflect {
     }
 
     public static boolean isGeneratedClass(Class<?> cls) {
-        return (cls == null || cls == GeneratedClass.class || !GeneratedClass.class.isAssignableFrom(cls)) ? false : true;
+        return (cls == null || cls == GeneratedClass.class || !GeneratedClass.class.isAssignableFrom(cls)) ? false
+                : true;
     }
 
     public static boolean isPackageAccessible(Class<?> cls) {
@@ -700,14 +741,16 @@ public final class Reflect {
         }
     }
 
-    private static Object numericMathMethod(Object obj, Class<?> cls, String str, Object[] objArr, Interpreter interpreter, CallStack callStack, Node node) throws EvalError {
+    private static Object numericMathMethod(Object obj, Class<?> cls, String str, Object[] objArr,
+            Interpreter interpreter, CallStack callStack, Node node) throws EvalError {
         Class cls2 = Types.isFloatingpoint(obj) ? BigDecimal.class : BigInteger.class;
         try {
             return invokeMathMethod(cls2, obj, cls, str, objArr, interpreter, callStack, node);
         } catch (TargetError e) {
             throw e.reThrow("Method found on " + cls2.getSimpleName() + " but with error");
         } catch (EvalError unused) {
-            return invokeMathMethod(Types.isFloatingpoint(obj) ? BigInteger.class : BigDecimal.class, obj, cls, str, objArr, interpreter, callStack, node);
+            return invokeMathMethod(Types.isFloatingpoint(obj) ? BigInteger.class : BigDecimal.class, obj, cls, str,
+                    objArr, interpreter, callStack, node);
         }
     }
 
@@ -726,13 +769,18 @@ public final class Reflect {
         throw new UtilEvalError(sbZ2.toString());
     }
 
-    public static Invocable resolveExpectedJavaMethod(BshClassManager bshClassManager, Class<?> cls, Object obj, String str, Object[] objArr, boolean z) throws UtilEvalError {
+    public static Invocable resolveExpectedJavaMethod(BshClassManager bshClassManager, Class<?> cls, Object obj,
+            String str, Object[] objArr, boolean z) throws UtilEvalError {
         if (obj == Primitive.NULL) {
-            throw new UtilTargetError(new NullPointerException(bjs.o("Attempt to invoke method ", str, " on null value")));
+            throw new UtilTargetError(
+                    new NullPointerException(concat("Attempt to invoke method ", str, " on null value")));
         }
         Class<?>[] types = Types.getTypes(objArr);
         Invocable invocableResolveJavaMethod = resolveJavaMethod(cls, str, types, z);
-        if (bshClassManager != null && bshClassManager.getStrictJava() && invocableResolveJavaMethod != null && invocableResolveJavaMethod.getDeclaringClass().isInterface() && invocableResolveJavaMethod.getDeclaringClass() != cls && Modifier.isStatic(invocableResolveJavaMethod.getModifiers())) {
+        if (bshClassManager != null && bshClassManager.getStrictJava() && invocableResolveJavaMethod != null
+                && invocableResolveJavaMethod.getDeclaringClass().isInterface()
+                && invocableResolveJavaMethod.getDeclaringClass() != cls
+                && Modifier.isStatic(invocableResolveJavaMethod.getModifiers())) {
             invocableResolveJavaMethod = null;
         }
         if (invocableResolveJavaMethod != null) {
@@ -755,7 +803,8 @@ public final class Reflect {
         }
     }
 
-    public static Invocable resolveJavaMethod(Class<?> cls, String str, Class<?>[] clsArr, boolean z) throws UtilEvalError {
+    public static Invocable resolveJavaMethod(Class<?> cls, String str, Class<?>[] clsArr, boolean z)
+            throws UtilEvalError {
         if (cls == null) {
             throw new InterpreterError("null class");
         }
@@ -783,11 +832,13 @@ public final class Reflect {
         return null;
     }
 
-    public static TargetError targetErrorFromTargetException(InvocationTargetException invocationTargetException, String str, CallStack callStack, Node node) {
+    public static TargetError targetErrorFromTargetException(InvocationTargetException invocationTargetException,
+            String str, CallStack callStack, Node node) {
         String strK = yg.k("Method Invocation ", str);
         Throwable cause = invocationTargetException.getCause();
         boolean z = true;
-        if ((cause instanceof EvalError) && (!(cause instanceof TargetError) || !((TargetError) cause).inNativeCode())) {
+        if ((cause instanceof EvalError)
+                && (!(cause instanceof TargetError) || !((TargetError) cause).inNativeCode())) {
             z = false;
         }
         return new TargetError(strK, cause, node, callStack, z);
@@ -798,7 +849,7 @@ public final class Reflect {
             return Primitive.NULL;
         }
         if (cls.isInterface()) {
-            throw new ReflectError(bjs.l(cls, "Can't create instance of an interface: "));
+            throw new ReflectError(concatVar2Var1(cls, "Can't create instance of an interface: "));
         }
         Class<?>[] types = Types.getTypes(objArr);
         if (cls.isMemberClass() && !isStatic(cls) && obj != null) {
@@ -806,7 +857,8 @@ public final class Reflect {
         }
         Interpreter.debug("Looking for most specific constructor: ", cls);
         Invocable invocableFindMethod = BshClassManager.memberCache.get(cls).findMethod(cls.getName(), types);
-        if (invocableFindMethod == null || !(objArr.length == invocableFindMethod.getParameterCount() || invocableFindMethod.isVarArgs() || invocableFindMethod.isInnerClass())) {
+        if (invocableFindMethod == null || !(objArr.length == invocableFindMethod.getParameterCount()
+                || invocableFindMethod.isVarArgs() || invocableFindMethod.isInnerClass())) {
             throw cantFindConstructor(cls, types);
         }
         try {
@@ -815,7 +867,9 @@ public final class Reflect {
             if (!(e.getCause().getCause() instanceof IllegalAccessException)) {
                 throw e;
             }
-            throw new ReflectError("We don't have permission to create an instance. " + e.getCause().getCause().getMessage() + " Use setAccessibility(true) to enable access.", e.getCause().getCause());
+            throw new ReflectError("We don't have permission to create an instance. "
+                    + e.getCause().getCause().getMessage() + " Use setAccessibility(true) to enable access.",
+                    e.getCause().getCause());
         }
     }
 
@@ -878,7 +932,8 @@ public final class Reflect {
             Interpreter.debug(str, invocable, " with args:");
             for (int i = 0; i < objArr.length; i++) {
                 Object obj = objArr[i];
-                Interpreter.debug("args[", Integer.valueOf(i), "] = ", obj, " type = ", obj == null ? "<unknown>" : obj.getClass());
+                Interpreter.debug("args[", Integer.valueOf(i), "] = ", obj, " type = ",
+                        obj == null ? "<unknown>" : obj.getClass());
             }
         }
     }
@@ -896,7 +951,8 @@ public final class Reflect {
 
     public static Variable[] getVariables(NameSpace nameSpace, String[] strArr) {
         if (nameSpace != null && strArr != null) {
-            return (Variable[]) Stream.of((Object[]) strArr).map(new cpt(nameSpace, 4)).filter(new ra(5)).toArray(new rb(13));
+            return (Variable[]) Stream.of((Object[]) strArr).map(new cpt(nameSpace, 4)).filter(new ra(5))
+                    .toArray(new rb(13));
         }
         return new Variable[0];
     }

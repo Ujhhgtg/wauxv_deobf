@@ -109,7 +109,7 @@ public final class amj implements sg, sh {
     public final void n(int i) {
         short s = (short) i;
         if (i != (65535 & s)) {
-            throw new IllegalArgumentException(bjs.i(i, "Expected an unsigned short: "));
+            throw new IllegalArgumentException(concatVar2Var1(i, "Expected an unsigned short: "));
         }
         k(s);
     }

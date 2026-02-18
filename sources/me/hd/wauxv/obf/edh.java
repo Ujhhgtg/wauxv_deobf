@@ -14,7 +14,8 @@ public final class edh {
     public final String h;
     public final String i;
 
-    public /* synthetic */ edh(int i, String str, String str2, String str3, String str4, String str5, String str6, String str7, String str8, String str9) {
+    public /* synthetic */ edh(int i, String str, String str2, String str3, String str4, String str5, String str6,
+            String str7, String str8, String str9) {
         if (511 != (i & 511)) {
             bht.ah(i, 511, edf.b.getDescriptor());
             throw null;
@@ -38,7 +39,11 @@ public final class edh {
             return false;
         }
         edh edhVar = (edh) obj;
-        return bzo.f(this.a, edhVar.a) && bzo.f(this.b, edhVar.b) && bzo.f(this.c, edhVar.c) && bzo.f(this.d, edhVar.d) && bzo.f(this.e, edhVar.e) && bzo.f(this.f, edhVar.f) && bzo.f(this.g, edhVar.g) && bzo.f(this.h, edhVar.h) && bzo.f(this.i, edhVar.i);
+        return nullSafeIsEqual(this.a, edhVar.a) && nullSafeIsEqual(this.b, edhVar.b)
+                && nullSafeIsEqual(this.c, edhVar.c) && nullSafeIsEqual(this.d, edhVar.d)
+                && nullSafeIsEqual(this.e, edhVar.e) && nullSafeIsEqual(this.f, edhVar.f)
+                && nullSafeIsEqual(this.g, edhVar.g)
+                && nullSafeIsEqual(this.h, edhVar.h) && nullSafeIsEqual(this.i, edhVar.i);
     }
 
     public final int hashCode() {
@@ -73,6 +78,6 @@ public final class edh {
         yg.u(sb, this.f, -250701536033578L);
         yg.u(sb, this.g, -251036543482666L);
         yg.u(sb, this.h, -252514012232490L);
-        return bjs.q(sb, this.i, ')');
+        return concat(sb, this.i, ')');
     }
 }

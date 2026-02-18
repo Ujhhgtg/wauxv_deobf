@@ -41,7 +41,7 @@ public final /* synthetic */ class aeh implements View.OnClickListener {
         switch (i) {
             case 0:
                 aek aekVar = (aek) obj;
-                if (((Boolean) ((bgf) obj2).invoke(aekVar)).booleanValue()) {
+                if (((Boolean) ((IHasInvokeMethod) obj2).invoke(aekVar)).booleanValue()) {
                     return;
                 }
                 ccu ccuVarM = aekVar.m();
@@ -53,7 +53,7 @@ public final /* synthetic */ class aeh implements View.OnClickListener {
                 aek aekVar2 = (aek) obj;
                 ael aelVar = aekVar2.a;
                 if (aelVar == null) {
-                    bzo.ar("info" /* cnb.z(-395527833254698L) */);
+                    throwLateinitPropNotInitYet("info" /* cnb.z(-395527833254698L) */);
                     throw null;
                 }
                 if (((Boolean) bgjVar.g(aelVar.n(), aekVar2)).booleanValue()) {
@@ -67,10 +67,14 @@ public final /* synthetic */ class aeh implements View.OnClickListener {
                 cua cuaVar = (cua) obj2;
                 ctx ctxVar = (ctx) obj;
                 Context contextDc = cuaVar.dc();
-                View viewInflate = LayoutInflater.from(contextDc).inflate(R.layout.module_dialog_plugin_readme, (ViewGroup) null, false);
-                MaterialTextView materialTextView = (MaterialTextView) cnd.aq(viewInflate, R.id.moduleDialogTvPluginReadme);
+                View viewInflate = LayoutInflater.from(contextDc).inflate(R.layout.module_dialog_plugin_readme,
+                        (ViewGroup) null, false);
+                MaterialTextView materialTextView = (MaterialTextView) cnd.aq(viewInflate,
+                        R.id.moduleDialogTvPluginReadme);
                 if (materialTextView == null) {
-                    throw new NullPointerException("Missing required view with ID: " /* cnb.z(-663452188146474L) */.concat(viewInflate.getResources().getResourceName(R.id.moduleDialogTvPluginReadme)));
+                    throw new NullPointerException(
+                            "Missing required view with ID: " /* cnb.z(-663452188146474L) */.concat(
+                                    viewInflate.getResources().getResourceName(R.id.moduleDialogTvPluginReadme)));
                 }
                 LinearLayout linearLayout = (LinearLayout) viewInflate;
                 ArrayList<aha> arrayList = new ArrayList(3);
@@ -78,7 +82,8 @@ public final /* synthetic */ class aeh implements View.OnClickListener {
                 arrayList.add(new aha());
                 arrayList.add(new aha());
                 if (arrayList.isEmpty()) {
-                    throw new IllegalStateException("No plugins were added to this builder. Use #usePlugin method to add them");
+                    throw new IllegalStateException(
+                            "No plugins were added to this builder. Use #usePlugin method to add them");
                 }
                 ArrayList arrayList2 = new ArrayList(arrayList.size());
                 HashSet hashSet = new HashSet(3);
@@ -211,7 +216,7 @@ public final /* synthetic */ class aeh implements View.OnClickListener {
                         }
                         cbm cbmVar = new cbm(9);
                         int i4 = 28;
-                        new bpm(new io(arrayList9, i4, Collections.EMPTY_MAP));
+                        new bpm(new DefaultConfig(arrayList9, i4, Collections.EMPTY_MAP));
                         List listUnmodifiableList = Collections.unmodifiableList(arrayList6);
                         String str = (String) ctxVar2.k.getValue();
                         Iterator it3 = listUnmodifiableList.iterator();
@@ -241,7 +246,7 @@ public final /* synthetic */ class aeh implements View.OnClickListener {
                                     aphVar.z(str.substring(i5));
                                 }
                                 aphVar.w(aphVar.p);
-                                io ioVar = new io(aphVar.m, i4, aphVar.o);
+                                DefaultConfig ioVar = new DefaultConfig(aphVar.m, i4, aphVar.o);
                                 aphVar.l.getClass();
                                 bpm bpmVar = new bpm(ioVar);
                                 Iterator it4 = aphVar.q.iterator();
@@ -304,16 +309,16 @@ public final /* synthetic */ class aeh implements View.OnClickListener {
                                         textView.setMovementMethod(LinkMovementMethod.getInstance());
                                     }
                                 }
-                                io ioVar2 = new io(context, 13);
+                                DefaultConfig ioVar2 = new DefaultConfig(context, 13);
                                 ioVar2.d = linearLayout2;
-                                io.g(ioVar2, null, 3);
+                                DefaultConfig.g(ioVar2, null, 3);
                                 String strZ = "编辑" /* cnb.z(-418080706525994L) */;
                                 ls lsVar = new ls(cuaVar2, 7, ctxVar2);
                                 bzy bzyVar = (bzy) ioVar2.c;
                                 if (bzyVar != null) {
                                     bzyVar.s(strZ, new amw(lsVar, 2));
                                 }
-                                io.f(ioVar2, null, 3);
+                                DefaultConfig.f(ioVar2, null, 3);
                                 ioVar2.az();
                                 return;
                             }

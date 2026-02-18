@@ -13,7 +13,7 @@ public final class exh {
         if (this == obj) {
             return true;
         }
-        return (obj instanceof exh) && bzo.f(this.a, ((exh) obj).a);
+        return (obj instanceof exh) && nullSafeIsEqual(this.a, ((exh) obj).a);
     }
 
     public final int hashCode() {

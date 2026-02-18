@@ -6,7 +6,10 @@ public final class iu extends bcy {
     public final /* synthetic */ jb a;
     public final /* synthetic */ je b;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'super' call moved to the top of the method (can break code
+     * semantics)
+     */
     public iu(je jeVar, je jeVar2, jb jbVar) {
         super(jeVar2);
         this.b = jeVar;
@@ -14,12 +17,12 @@ public final class iu extends bcy {
     }
 
     @Override // me.hd.wauxv.obf.bcy
-    public final dho c() {
+    public final dho callOriginalMethod() {
         return this.a;
     }
 
     @Override // me.hd.wauxv.obf.bcy
-    public final boolean d() {
+    public final boolean getArgs() {
         je jeVar = this.b;
         if (jeVar.getInternalPopup().e()) {
             return true;

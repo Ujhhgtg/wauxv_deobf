@@ -17,7 +17,7 @@ public abstract class buu {
 
     public static void c(Constructor constructor, buo buoVar) {
         try {
-            bzo.n(constructor.newInstance(buoVar));
+            throwIfVar1IsNull(constructor.newInstance(buoVar));
             throw new ClassCastException();
         } catch (IllegalAccessException e) {
             throw new RuntimeException(e);
@@ -28,11 +28,11 @@ public abstract class buu {
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:61:0x010f  */
-    /* JADX WARN: Found duplicated region for block: B:66:0x011f  */
+    /* JADX WARN: Found duplicated region for block: B:61:0x010f */
+    /* JADX WARN: Found duplicated region for block: B:66:0x011f */
     /* JADX WARN: Found duplicated region for block: B:72:0x012d A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:73:0x012f  */
-    /* JADX WARN: Found duplicated region for block: B:76:0x0143  */
+    /* JADX WARN: Found duplicated region for block: B:73:0x012f */
+    /* JADX WARN: Found duplicated region for block: B:76:0x0143 */
     /* JADX WARN: Found duplicated region for block: B:86:0x0123 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:88:0x0148 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:90:0x0109 A[SYNTHETIC] */
@@ -53,16 +53,18 @@ public abstract class buu {
                 Package r3 = cls.getPackage();
                 String canonicalName = cls.getCanonicalName();
                 String name = r3 != null ? r3.getName() : "";
-                bzo.n(name);
+                throwIfVar1IsNull(name);
                 if (name.length() != 0) {
-                    bzo.n(canonicalName);
+                    throwIfVar1IsNull(canonicalName);
                     canonicalName = canonicalName.substring(name.length() + 1);
-                    bzo.p(canonicalName, "substring(...)");
+                    throwIfVar1IsNull(canonicalName, "substring(...)");
                 }
-                bzo.n(canonicalName);
-                String strConcat = dnr.bo(canonicalName, ".", JavaConstant.Dynamic.DEFAULT_NAME).concat("_LifecycleAdapter");
+                throwIfVar1IsNull(canonicalName);
+                String strConcat = dnr.bo(canonicalName, ".", JavaConstant.Dynamic.DEFAULT_NAME)
+                        .concat("_LifecycleAdapter");
                 if (name.length() != 0) {
-                    strConcat = name + TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH + strConcat;
+                    strConcat = name + TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH
+                            + strConcat;
                 }
                 declaredConstructor = Class.forName(strConcat).getDeclaredConstructor(cls);
                 if (!declaredConstructor.isAccessible()) {
@@ -101,28 +103,30 @@ public abstract class buu {
                             i2++;
                         }
                     } catch (NoClassDefFoundError e2) {
-                        throw new IllegalArgumentException("The observer class has some methods that use newer APIs which are not available in the current OS version. Lifecycles cannot access even other methods so you should make sure that your observer classes only access framework classes that are available in your min API level OR use lifecycle:compiler annotation processor.", e2);
+                        throw new IllegalArgumentException(
+                                "The observer class has some methods that use newer APIs which are not available in the current OS version. Lifecycles cannot access even other methods so you should make sure that your observer classes only access framework classes that are available in your min API level OR use lifecycle:compiler annotation processor.",
+                                e2);
                     }
                 }
                 if (!zBooleanValue) {
                     Class superclass = cls.getSuperclass();
                     if (superclass != null && buo.class.isAssignableFrom(superclass)) {
-                        bzo.n(superclass);
+                        throwIfVar1IsNull(superclass);
                         if (d(superclass) != 1) {
                             Object obj = map2.get(superclass);
-                            bzo.n(obj);
+                            throwIfVar1IsNull(obj);
                             arrayList = new ArrayList((Collection) obj);
                             zVarAe = cnb.ae(cls.getInterfaces());
                             while (zVarAe.hasNext()) {
                                 cls2 = (Class) zVarAe.next();
                                 if (!(cls2 == null && buo.class.isAssignableFrom(cls2))) {
-                                    bzo.n(cls2);
+                                    throwIfVar1IsNull(cls2);
                                     if (d(cls2) == 1) {
                                         if (arrayList == null) {
                                             arrayList = new ArrayList();
                                         }
                                         Object obj2 = map2.get(cls2);
-                                        bzo.n(obj2);
+                                        throwIfVar1IsNull(obj2);
                                         arrayList.addAll((Collection) obj2);
                                     }
                                 }
@@ -136,13 +140,13 @@ public abstract class buu {
                         while (zVarAe.hasNext()) {
                             cls2 = (Class) zVarAe.next();
                             if (!(cls2 == null && buo.class.isAssignableFrom(cls2))) {
-                                bzo.n(cls2);
+                                throwIfVar1IsNull(cls2);
                                 if (d(cls2) == 1) {
                                     if (arrayList == null) {
                                         arrayList = new ArrayList();
                                     }
                                     Object obj22 = map2.get(cls2);
-                                    bzo.n(obj22);
+                                    throwIfVar1IsNull(obj22);
                                     arrayList.addAll((Collection) obj22);
                                 }
                             }

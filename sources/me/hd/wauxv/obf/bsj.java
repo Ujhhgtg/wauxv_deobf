@@ -17,7 +17,7 @@ public final class bsj implements btd {
 
     @Override // me.hd.wauxv.obf.btd
     public final void c(avt avtVar, Object obj) {
-        bzo.q((bsi) obj, "value");
+        throwIfVar1IsNull((bsi) obj, "value");
         cnb.l(avtVar);
         avtVar.q();
     }

@@ -38,31 +38,37 @@ public final /* synthetic */ class cun implements View.OnClickListener {
                         return;
                     }
                     cjg cjgVarAf = cixVar2.af();
-                    bzo.n(cjgVarAf);
+                    throwIfVar1IsNull(cjgVarAf);
                     if (cixVar2.al(cjgVarAf.g.a, true, false)) {
                         cixVar2.ac();
                         return;
                     }
                     return;
                 }
-                Bundle extras = (activity == null || (intent = activity.getIntent()) == null) ? null : intent.getExtras();
-                if ((extras != null ? extras.getIntArray("android-support-nav:controller:deepLinkIds") : null) == null) {
+                Bundle extras = (activity == null || (intent = activity.getIntent()) == null) ? null
+                        : intent.getExtras();
+                if ((extras != null ? extras.getIntArray("android-support-nav:controller:deepLinkIds")
+                        : null) == null) {
                     cjg cjgVarAf2 = cixVar.af();
-                    bzo.n(cjgVarAf2);
+                    throwIfVar1IsNull(cjgVarAf2);
                     int i3 = cjgVarAf2.g.a;
                     for (cji cjiVar = cjgVarAf2.h; cjiVar != null; cjiVar = cjiVar.h) {
                         ea eaVar = cjiVar.g;
                         if (cjiVar.b.c != i3) {
-                            Bundle bundleR = bht.r((csm[]) Arrays.copyOf(new csm[0], 0));
-                            if (activity != null && activity.getIntent() != null && activity.getIntent().getData() != null) {
+                            Bundle bundleR = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
+                            if (activity != null && activity.getIntent() != null
+                                    && activity.getIntent().getData() != null) {
                                 Intent intent2 = activity.getIntent();
-                                bzo.p(intent2, "getIntent(...)");
+                                throwIfVar1IsNull(intent2, "getIntent(...)");
                                 bundleR.putParcelable("android-support-nav:controller:deepLinkIntent", intent2);
                                 cji cjiVarAi = cixVar.ai();
                                 Intent intent3 = activity.getIntent();
-                                bzo.p(intent3, "getIntent(...)");
-                                cjf cjfVarQ = cjiVarAi.q(new jx(intent3.getData(), intent3.getAction(), intent3.getType(), 17), cjiVarAi);
-                                if ((cjfVarQ != null ? cjfVarQ.b : null) != null && (bundleK = cjfVarQ.a.k(cjfVarQ.b)) != null) {
+                                throwIfVar1IsNull(intent3, "getIntent(...)");
+                                cjf cjfVarQ = cjiVarAi.q(
+                                        new jx(intent3.getData(), intent3.getAction(), intent3.getType(), 17),
+                                        cjiVarAi);
+                                if ((cjfVarQ != null ? cjfVarQ.b : null) != null
+                                        && (bundleK = cjfVarQ.a.k(cjfVarQ.b)) != null) {
                                     bundleR.putAll(bundleK);
                                 }
                             }
@@ -87,14 +93,15 @@ public final /* synthetic */ class cun implements View.OnClickListener {
                     return;
                 }
                 if (cjlVarAr.e) {
-                    bzo.n(activity);
+                    throwIfVar1IsNull(activity);
                     Intent intent4 = activity.getIntent();
                     Bundle extras2 = intent4.getExtras();
-                    bzo.n(extras2);
+                    throwIfVar1IsNull(extras2);
                     int[] intArray = extras2.getIntArray("android-support-nav:controller:deepLinkIds");
-                    bzo.n(intArray);
+                    throwIfVar1IsNull(intArray);
                     ArrayList arrayListAd = la.ad(intArray);
-                    ArrayList parcelableArrayList = extras2.getParcelableArrayList("android-support-nav:controller:deepLinkArgs");
+                    ArrayList parcelableArrayList = extras2
+                            .getParcelableArrayList("android-support-nav:controller:deepLinkArgs");
                     if (arrayListAd.size() < 2) {
                         return;
                     }
@@ -111,7 +118,7 @@ public final /* synthetic */ class cun implements View.OnClickListener {
                         return;
                     }
                     blq blqVar2 = new blq(cjlVarAr);
-                    Bundle bundleR2 = bht.r((csm[]) Arrays.copyOf(new csm[0], 0));
+                    Bundle bundleR2 = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                     bundleR2.putParcelable("android-support-nav:controller:deepLinkIntent", intent4);
                     Bundle bundle = extras2.getBundle("android-support-nav:controller:deepLinkExtras");
                     if (bundle != null) {
@@ -124,7 +131,8 @@ public final /* synthetic */ class cun implements View.OnClickListener {
                             aba.aj();
                             throw null;
                         }
-                        ((ArrayList) blqVar2.e).add(new cje(((Number) obj).intValue(), parcelableArrayList != null ? (Bundle) parcelableArrayList.get(i2) : null));
+                        ((ArrayList) blqVar2.e).add(new cje(((Number) obj).intValue(),
+                                parcelableArrayList != null ? (Bundle) parcelableArrayList.get(i2) : null));
                         if (((cji) blqVar2.d) != null) {
                             blqVar2.l();
                         }
@@ -139,9 +147,10 @@ public final /* synthetic */ class cun implements View.OnClickListener {
                 PolicyFragment.a.getClass();
                 String strZ = "policyAcceptKey" /* cnb.z(-419583945079594L) */;
                 int iHashCode = ((String) PolicyFragment.b.getValue()).hashCode();
-                io ioVar = cnf.ah;
+                DefaultConfig ioVar = cnf.ah;
                 if (ioVar == null) {
-                    throw new IllegalArgumentException("DefaultConfig must be init" /* cnb.z(-5763846109994L) */.toString());
+                    throw new IllegalArgumentException(
+                            "DefaultConfig must be init" /* cnb.z(-5763846109994L) */.toString());
                 }
                 ioVar.aj().putInt(strZ, iHashCode);
                 bzy bzyVar = new bzy(policyFragment.dc());

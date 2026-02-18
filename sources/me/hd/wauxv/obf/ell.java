@@ -16,7 +16,7 @@ import java.util.WeakHashMap;
 /* JADX INFO: loaded from: classes.dex */
 public abstract class ell implements Cloneable {
     public static final Animator[] ac = new Animator[0];
-    public static final int[] ad = {2, 1, 3, 4};
+    public static final int[] ad = { 2, 1, 3, 4 };
     public static final dop ae = new dop(8);
     public static final ThreadLocal af = new ThreadLocal();
     public ArrayList aq;
@@ -278,7 +278,8 @@ public abstract class ell implements Cloneable {
         ArrayList arrayList = this.ak;
         int size = arrayList.size();
         ArrayList arrayList2 = this.al;
-        return (size == 0 && arrayList2.size() == 0) || arrayList.contains(Integer.valueOf(id)) || arrayList2.contains(view);
+        return (size == 0 && arrayList2.size() == 0) || arrayList.contains(Integer.valueOf(id))
+                || arrayList2.contains(view);
     }
 
     public final void bq(ell ellVar, df dfVar, boolean z) {
@@ -350,8 +351,11 @@ public abstract class ell implements Cloneable {
 
     public abstract void h(elt eltVar);
 
-    @Override // 
-    /* JADX INFO: renamed from: i, reason: merged with bridge method [inline-methods] */
+    @Override //
+    /*
+     * JADX INFO: renamed from: i, reason: merged with bridge method
+     * [inline-methods]
+     */
     public ell clone() {
         try {
             ell ellVar = (ell) super.clone();
@@ -420,7 +424,8 @@ public abstract class ell implements Cloneable {
                                     break;
                                 }
                                 elh elhVar = (elh) kuVarBf.get((Animator) kuVarBf.r(i7));
-                                if (elhVar.c != null && elhVar.a == view && elhVar.b.equals(str) && elhVar.c.equals(eltVar2)) {
+                                if (elhVar.c != null && elhVar.a == view && elhVar.b.equals(str)
+                                        && elhVar.c.equals(eltVar2)) {
                                     animator = null;
                                     break;
                                 }
@@ -464,7 +469,8 @@ public abstract class ell implements Cloneable {
         if (sparseIntArray.size() != 0) {
             for (int i8 = 0; i8 < sparseIntArray.size(); i8++) {
                 elh elhVar3 = (elh) kuVarBf.get((Animator) this.ba.get(sparseIntArray.keyAt(i8)));
-                elhVar3.f.setStartDelay(elhVar3.f.getStartDelay() + (((long) sparseIntArray.valueAt(i8)) - Long.MAX_VALUE));
+                elhVar3.f.setStartDelay(
+                        elhVar3.f.getStartDelay() + (((long) sparseIntArray.valueAt(i8)) - Long.MAX_VALUE));
             }
         }
     }
@@ -595,7 +601,7 @@ public abstract class ell implements Cloneable {
         while (i < size) {
             Animator animator = animatorArr[i];
             animatorArr[i] = null;
-            eli.b(animator, Math.min(Math.max(0L, j), eli.a(animator)));
+            eli.tryGetClassByName(animator, Math.min(Math.max(0L, j), eli.a(animator)));
             i++;
             j3 = j3;
         }

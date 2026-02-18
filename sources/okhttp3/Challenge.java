@@ -7,7 +7,7 @@ import java.util.LinkedHashMap;
 import java.util.Locale;
 import java.util.Map;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -17,8 +17,8 @@ public final class Challenge {
 
     public Challenge(String str, Map<String, String> map) {
         String lowerCase;
-        bzo.q(str, "scheme");
-        bzo.q(map, "authParams");
+        throwIfVar1IsNull(str, "scheme");
+        throwIfVar1IsNull(map, "authParams");
         this.scheme = str;
         LinkedHashMap linkedHashMap = new LinkedHashMap();
         for (Map.Entry<String, String> entry : map.entrySet()) {
@@ -26,16 +26,16 @@ public final class Challenge {
             String value = entry.getValue();
             if (key != null) {
                 Locale locale = Locale.US;
-                bzo.p(locale, "US");
+                throwIfVar1IsNull(locale, "US");
                 lowerCase = key.toLowerCase(locale);
-                bzo.p(lowerCase, "this as java.lang.String).toLowerCase(locale)");
+                throwIfVar1IsNull(lowerCase, "this as java.lang.String).toLowerCase(locale)");
             } else {
                 lowerCase = null;
             }
             linkedHashMap.put(lowerCase, value);
         }
         Map<String, String> mapUnmodifiableMap = Collections.unmodifiableMap(linkedHashMap);
-        bzo.p(mapUnmodifiableMap, "unmodifiableMap<String?, String>(newAuthParams)");
+        throwIfVar1IsNull(mapUnmodifiableMap, "unmodifiableMap<String?, String>(newAuthParams)");
         this.authParams = mapUnmodifiableMap;
     }
 
@@ -60,13 +60,13 @@ public final class Challenge {
         if (str != null) {
             try {
                 Charset charsetForName = Charset.forName(str);
-                bzo.p(charsetForName, "forName(charset)");
+                throwIfVar1IsNull(charsetForName, "forName(charset)");
                 return charsetForName;
             } catch (Exception unused) {
             }
         }
         Charset charset = StandardCharsets.ISO_8859_1;
-        bzo.p(charset, "ISO_8859_1");
+        throwIfVar1IsNull(charset, "ISO_8859_1");
         return charset;
     }
 
@@ -79,7 +79,7 @@ public final class Challenge {
             return false;
         }
         Challenge challenge = (Challenge) obj;
-        return bzo.f(challenge.scheme, this.scheme) && bzo.f(challenge.authParams, this.authParams);
+        return nullSafeIsEqual(challenge.scheme, this.scheme) && nullSafeIsEqual(challenge.authParams, this.authParams);
     }
 
     public int hashCode() {
@@ -99,22 +99,22 @@ public final class Challenge {
     }
 
     public final Challenge withCharset(Charset charset) {
-        bzo.q(charset, "charset");
+        throwIfVar1IsNull(charset, "charset");
         Map<String, String> map = this.authParams;
-        bzo.q(map, "<this>");
+        throwIfVar1IsNull(map, "<this>");
         LinkedHashMap linkedHashMap = new LinkedHashMap(map);
         String strName = charset.name();
-        bzo.p(strName, "charset.name()");
+        throwIfVar1IsNull(strName, "charset.name()");
         linkedHashMap.put("charset", strName);
         return new Challenge(this.scheme, linkedHashMap);
     }
 
     /* JADX WARN: Illegal instructions before constructor call */
     public Challenge(String str, String str2) {
-        bzo.q(str, "scheme");
-        bzo.q(str2, "realm");
+        throwIfVar1IsNull(str, "scheme");
+        throwIfVar1IsNull(str2, "realm");
         Map mapSingletonMap = Collections.singletonMap("realm", str2);
-        bzo.p(mapSingletonMap, "singletonMap(\"realm\", realm)");
+        throwIfVar1IsNull(mapSingletonMap, "singletonMap(\"realm\", realm)");
         this(str, (Map<String, String>) mapSingletonMap);
     }
 }

@@ -98,7 +98,7 @@ import me.hd.wauxv.obf.yg;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public class TextInputLayout extends LinearLayout implements ViewTreeObserver.OnGlobalLayoutListener {
-    public static final int[][] a = {new int[]{R.attr.state_pressed}, new int[0]};
+    public static final int[][] a = { new int[] { R.attr.state_pressed }, new int[0] };
     public ColorStateList aa;
     public ColorStateList ab;
     public ColorStateList ac;
@@ -178,7 +178,8 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
     public ColorStateList z;
 
     public TextInputLayout(Context context, AttributeSet attributeSet) {
-        super(cmz.aq(context, attributeSet, me.hd.wauxv.R.attr.textInputStyle, me.hd.wauxv.R.style.Widget_Design_TextInputLayout), attributeSet, me.hd.wauxv.R.attr.textInputStyle);
+        super(cmz.aq(context, attributeSet, me.hd.wauxv.R.attr.textInputStyle,
+                me.hd.wauxv.R.style.Widget_Design_TextInputLayout), attributeSet, me.hd.wauxv.R.attr.textInputStyle);
         this.g = -1;
         this.h = -1;
         this.i = -1;
@@ -205,7 +206,8 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
         aatVar.av = linearInterpolator;
         aatVar.bz(false);
         aatVar.cc(8388659);
-        jx jxVarAo = bhu.ao(context2, attributeSet, cxs.aq, me.hd.wauxv.R.attr.textInputStyle, me.hd.wauxv.R.style.Widget_Design_TextInputLayout, 22, 20, 40, 45, 49);
+        jx jxVarAo = bhu.ao(context2, attributeSet, cxs.aq, me.hd.wauxv.R.attr.textInputStyle,
+                me.hd.wauxv.R.style.Widget_Design_TextInputLayout, 22, 20, 40, 45, 49);
         dmj dmjVar = new dmj(this, jxVarAo);
         this.c = dmjVar;
         TypedArray typedArray = (TypedArray) jxVarAo.e;
@@ -223,11 +225,15 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
         } else if (typedArray.hasValue(2)) {
             setMaxWidth(typedArray.getDimensionPixelSize(2, -1));
         }
-        this.am = dgm.n(context2, attributeSet, me.hd.wauxv.R.attr.textInputStyle, me.hd.wauxv.R.style.Widget_Design_TextInputLayout).m();
-        this.ao = context2.getResources().getDimensionPixelOffset(me.hd.wauxv.R.dimen.mtrl_textinput_box_label_cutout_padding);
+        this.am = dgm.n(context2, attributeSet, me.hd.wauxv.R.attr.textInputStyle,
+                me.hd.wauxv.R.style.Widget_Design_TextInputLayout).m();
+        this.ao = context2.getResources()
+                .getDimensionPixelOffset(me.hd.wauxv.R.dimen.mtrl_textinput_box_label_cutout_padding);
         this.aq = typedArray.getDimensionPixelOffset(9, 0);
-        this.as = typedArray.getDimensionPixelSize(16, context2.getResources().getDimensionPixelSize(me.hd.wauxv.R.dimen.mtrl_textinput_box_stroke_width_default));
-        this.at = typedArray.getDimensionPixelSize(17, context2.getResources().getDimensionPixelSize(me.hd.wauxv.R.dimen.mtrl_textinput_box_stroke_width_focused));
+        this.as = typedArray.getDimensionPixelSize(16, context2.getResources()
+                .getDimensionPixelSize(me.hd.wauxv.R.dimen.mtrl_textinput_box_stroke_width_default));
+        this.at = typedArray.getDimensionPixelSize(17, context2.getResources()
+                .getDimensionPixelSize(me.hd.wauxv.R.dimen.mtrl_textinput_box_stroke_width_focused));
         this.ar = this.as;
         float dimension = typedArray.getDimension(13, -1.0f);
         float dimension2 = typedArray.getDimension(12, -1.0f);
@@ -253,14 +259,16 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
             this.bm = defaultColor;
             this.av = defaultColor;
             if (colorStateListW.isStateful()) {
-                this.bn = colorStateListW.getColorForState(new int[]{-16842910}, -1);
-                this.bo = colorStateListW.getColorForState(new int[]{R.attr.state_focused, R.attr.state_enabled}, -1);
-                this.bp = colorStateListW.getColorForState(new int[]{R.attr.state_hovered, R.attr.state_enabled}, -1);
+                this.bn = colorStateListW.getColorForState(new int[] { -16842910 }, -1);
+                this.bo = colorStateListW.getColorForState(new int[] { R.attr.state_focused, R.attr.state_enabled },
+                        -1);
+                this.bp = colorStateListW.getColorForState(new int[] { R.attr.state_hovered, R.attr.state_enabled },
+                        -1);
             } else {
                 this.bo = this.bm;
                 ColorStateList colorStateListV = bht.v(context2, me.hd.wauxv.R.color.mtrl_filled_background_color);
-                this.bn = colorStateListV.getColorForState(new int[]{-16842910}, -1);
-                this.bp = colorStateListV.getColorForState(new int[]{R.attr.state_hovered}, -1);
+                this.bn = colorStateListV.getColorForState(new int[] { -16842910 }, -1);
+                this.bp = colorStateListV.getColorForState(new int[] { R.attr.state_hovered }, -1);
             }
         } else {
             this.av = 0;
@@ -335,7 +343,7 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
         boolean z4 = typedArray.getBoolean(0, true);
         jxVarAo.ae();
         setImportantForAccessibility(2);
-        eqt.b(this, 1);
+        eqt.tryGetClassByName(this, 1);
         frameLayout.addView(dmjVar);
         frameLayout.addView(awaVar);
         addView(frameLayout);
@@ -371,26 +379,27 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
             }
             cau cauVar = this.ag;
             int i2 = this.av;
-            return new RippleDrawable(new ColorStateList(iArr, new int[]{cna.ad(iV, 0.1f, i2), i2}), cauVar, cauVar);
+            return new RippleDrawable(new ColorStateList(iArr, new int[] { cna.ad(iV, 0.1f, i2), i2 }), cauVar, cauVar);
         }
         Context context = getContext();
         cau cauVar2 = this.ag;
         int iU = cna.u(context, me.hd.wauxv.R.attr.colorSurface, "TextInputLayout");
         cau cauVar3 = new cau(cauVar2.ct.b);
         int iAd = cna.ad(iV, 0.1f, iU);
-        cauVar3.dz(new ColorStateList(iArr, new int[]{iAd, 0}));
+        cauVar3.dz(new ColorStateList(iArr, new int[] { iAd, 0 }));
         cauVar3.setTint(iU);
-        ColorStateList colorStateList = new ColorStateList(iArr, new int[]{iAd, iU});
+        ColorStateList colorStateList = new ColorStateList(iArr, new int[] { iAd, iU });
         cau cauVar4 = new cau(cauVar2.ct.b);
         cauVar4.setTint(-1);
-        return new LayerDrawable(new Drawable[]{new RippleDrawable(colorStateList, cauVar3, cauVar4), cauVar2});
+        return new LayerDrawable(new Drawable[] { new RippleDrawable(colorStateList, cauVar3, cauVar4), cauVar2 });
     }
 
     private Drawable getOrCreateFilledDropDownMenuBackground() {
         if (this.ai == null) {
             StateListDrawable stateListDrawable = new StateListDrawable();
             this.ai = stateListDrawable;
-            stateListDrawable.addState(new int[]{R.attr.state_above_anchor}, getOrCreateOutlinedDropDownMenuBackground());
+            stateListDrawable.addState(new int[] { R.attr.state_above_anchor },
+                    getOrCreateOutlinedDropDownMenuBackground());
             this.ai.addState(new int[0], cg(false));
         }
         return this.ai;
@@ -408,7 +417,8 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
             throw new IllegalArgumentException("We already have an EditText, can only have one");
         }
         if (getEndIconMode() != 3 && !(editText instanceof TextInputEditText)) {
-            Log.i("TextInputLayout", "EditText added is not a TextInputEditText. Please switch to using that class instead.");
+            Log.i("TextInputLayout",
+                    "EditText added is not a TextInputEditText. Please switch to using that class instead.");
         }
         this.e = editText;
         int i = this.g;
@@ -552,7 +562,8 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
         if (this.bw == null) {
             ValueAnimator valueAnimator = new ValueAnimator();
             this.bw = valueAnimator;
-            valueAnimator.setInterpolator(ajn.ae(getContext(), me.hd.wauxv.R.attr.motionEasingEmphasizedInterpolator, ff.b));
+            valueAnimator
+                    .setInterpolator(ajn.ae(getContext(), me.hd.wauxv.R.attr.motionEasingEmphasizedInterpolator, ff.b));
             this.bw.setDuration(ajn.ad(getContext(), me.hd.wauxv.R.attr.motionDurationMedium4, 167));
             this.bw.addUpdateListener(new no(this, 10));
         }
@@ -634,11 +645,15 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
     }
 
     public final cau cg(boolean z) {
-        float dimensionPixelOffset = getResources().getDimensionPixelOffset(me.hd.wauxv.R.dimen.mtrl_shape_corner_size_small_component);
+        float dimensionPixelOffset = getResources()
+                .getDimensionPixelOffset(me.hd.wauxv.R.dimen.mtrl_shape_corner_size_small_component);
         float f = z ? dimensionPixelOffset : 0.0f;
         EditText editText = this.e;
-        float popupElevation = editText instanceof caa ? ((caa) editText).getPopupElevation() : getResources().getDimensionPixelOffset(me.hd.wauxv.R.dimen.m3_comp_outlined_autocomplete_menu_container_elevation);
-        int dimensionPixelOffset2 = getResources().getDimensionPixelOffset(me.hd.wauxv.R.dimen.mtrl_exposed_dropdown_menu_popup_vertical_padding);
+        float popupElevation = editText instanceof caa ? ((caa) editText).getPopupElevation()
+                : getResources().getDimensionPixelOffset(
+                        me.hd.wauxv.R.dimen.m3_comp_outlined_autocomplete_menu_container_elevation);
+        int dimensionPixelOffset2 = getResources()
+                .getDimensionPixelOffset(me.hd.wauxv.R.dimen.mtrl_exposed_dropdown_menu_popup_vertical_padding);
         ddk ddkVar = new ddk();
         ddk ddkVar2 = new ddk();
         ddk ddkVar3 = new ddk();
@@ -665,11 +680,14 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
         dgmVar.k = arjVar3;
         dgmVar.l = arjVar4;
         EditText editText2 = this.e;
-        ColorStateList dropDownBackgroundTintList = editText2 instanceof caa ? ((caa) editText2).getDropDownBackgroundTintList() : null;
+        ColorStateList dropDownBackgroundTintList = editText2 instanceof caa
+                ? ((caa) editText2).getDropDownBackgroundTintList()
+                : null;
         Context context = getContext();
         if (dropDownBackgroundTintList == null) {
             Paint paint = cau.cs;
-            dropDownBackgroundTintList = ColorStateList.valueOf(cna.u(context, me.hd.wauxv.R.attr.colorSurface, cau.class.getSimpleName()));
+            dropDownBackgroundTintList = ColorStateList
+                    .valueOf(cna.u(context, me.hd.wauxv.R.attr.colorSurface, cau.class.getSimpleName()));
         }
         cau cauVar = new cau();
         cauVar.dx(context);
@@ -686,11 +704,15 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
     }
 
     public final int ch(int i, boolean z) {
-        return ((z || getPrefixText() == null) ? (!z || getSuffixText() == null) ? this.e.getCompoundPaddingLeft() : this.d.y() : this.c.k()) + i;
+        return ((z || getPrefixText() == null)
+                ? (!z || getSuffixText() == null) ? this.e.getCompoundPaddingLeft() : this.d.y()
+                : this.c.k()) + i;
     }
 
     public final int ci(int i, boolean z) {
-        return i - ((z || getSuffixText() == null) ? (!z || getPrefixText() == null) ? this.e.getCompoundPaddingRight() : this.c.k() : this.d.y());
+        return i - ((z || getSuffixText() == null)
+                ? (!z || getPrefixText() == null) ? this.e.getCompoundPaddingRight() : this.c.k()
+                : this.d.y());
     }
 
     public final void cj() {
@@ -705,7 +727,8 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
             this.al = new cau();
         } else {
             if (i != 2) {
-                throw new IllegalArgumentException(yg.m(new StringBuilder(), " is illegal; only @BoxBackgroundMode constants are supported.", this.ap));
+                throw new IllegalArgumentException(yg.m(new StringBuilder(),
+                        " is illegal; only @BoxBackgroundMode constants are supported.", this.ap));
             }
             if (!this.ad || (this.ag instanceof aix)) {
                 this.ag = new cau(this.am);
@@ -727,20 +750,30 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
         cx();
         if (this.ap == 1) {
             if (getContext().getResources().getConfiguration().fontScale >= 2.0f) {
-                this.aq = getResources().getDimensionPixelSize(me.hd.wauxv.R.dimen.material_font_2_0_box_collapsed_padding_top);
+                this.aq = getResources()
+                        .getDimensionPixelSize(me.hd.wauxv.R.dimen.material_font_2_0_box_collapsed_padding_top);
             } else if (cnb.ad(getContext())) {
-                this.aq = getResources().getDimensionPixelSize(me.hd.wauxv.R.dimen.material_font_1_3_box_collapsed_padding_top);
+                this.aq = getResources()
+                        .getDimensionPixelSize(me.hd.wauxv.R.dimen.material_font_1_3_box_collapsed_padding_top);
             }
         }
         if (this.e != null && this.ap == 1) {
             if (getContext().getResources().getConfiguration().fontScale >= 2.0f) {
                 EditText editText = this.e;
                 WeakHashMap weakHashMap = eqz.a;
-                editText.setPaddingRelative(editText.getPaddingStart(), getResources().getDimensionPixelSize(me.hd.wauxv.R.dimen.material_filled_edittext_font_2_0_padding_top), this.e.getPaddingEnd(), getResources().getDimensionPixelSize(me.hd.wauxv.R.dimen.material_filled_edittext_font_2_0_padding_bottom));
+                editText.setPaddingRelative(editText.getPaddingStart(),
+                        getResources().getDimensionPixelSize(
+                                me.hd.wauxv.R.dimen.material_filled_edittext_font_2_0_padding_top),
+                        this.e.getPaddingEnd(), getResources().getDimensionPixelSize(
+                                me.hd.wauxv.R.dimen.material_filled_edittext_font_2_0_padding_bottom));
             } else if (cnb.ad(getContext())) {
                 EditText editText2 = this.e;
                 WeakHashMap weakHashMap2 = eqz.a;
-                editText2.setPaddingRelative(editText2.getPaddingStart(), getResources().getDimensionPixelSize(me.hd.wauxv.R.dimen.material_filled_edittext_font_1_3_padding_top), this.e.getPaddingEnd(), getResources().getDimensionPixelSize(me.hd.wauxv.R.dimen.material_filled_edittext_font_1_3_padding_bottom));
+                editText2.setPaddingRelative(editText2.getPaddingStart(),
+                        getResources().getDimensionPixelSize(
+                                me.hd.wauxv.R.dimen.material_filled_edittext_font_1_3_padding_top),
+                        this.e.getPaddingEnd(), getResources().getDimensionPixelSize(
+                                me.hd.wauxv.R.dimen.material_filled_edittext_font_1_3_padding_bottom));
             }
         }
         if (this.ap != 0) {
@@ -760,7 +793,7 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:44:0x008d  */
+    /* JADX WARN: Found duplicated region for block: B:44:0x008d */
     public final void ck() {
         float f;
         float f2;
@@ -872,14 +905,18 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
         } else {
             this.n = length > i;
             Context context = getContext();
-            this.p.setContentDescription(context.getString(this.n ? me.hd.wauxv.R.string.character_counter_overflowed_content_description : me.hd.wauxv.R.string.character_counter_content_description, Integer.valueOf(length), Integer.valueOf(this.m)));
+            this.p.setContentDescription(context.getString(
+                    this.n ? me.hd.wauxv.R.string.character_counter_overflowed_content_description
+                            : me.hd.wauxv.R.string.character_counter_content_description,
+                    Integer.valueOf(length), Integer.valueOf(this.m)));
             if (z != this.n) {
                 co();
             }
             String str = ot.a;
             ot otVar = TextUtils.getLayoutDirectionFromLocale(Locale.getDefault()) == 1 ? ot.d : ot.c;
             jp jpVar = this.p;
-            String string = getContext().getString(me.hd.wauxv.R.string.character_counter_pattern, Integer.valueOf(length), Integer.valueOf(this.m));
+            String string = getContext().getString(me.hd.wauxv.R.string.character_counter_pattern,
+                    Integer.valueOf(length), Integer.valueOf(this.m));
             otVar.getClass();
             cxc cxcVar = dqi.a;
             jpVar.setText(string != null ? otVar.h(string).toString() : null);
@@ -908,7 +945,7 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:14:0x0025  */
+    /* JADX WARN: Found duplicated region for block: B:14:0x0025 */
     public final void cp() {
         ColorStateList colorStateList;
         ColorStateList colorStateListValueOf = this.ab;
@@ -936,9 +973,9 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
         drawableMutate.setTintList(colorStateListValueOf);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:21:0x005f  */
-    /* JADX WARN: Found duplicated region for block: B:23:0x0063  */
-    /* JADX WARN: Found duplicated region for block: B:25:0x0078  */
+    /* JADX WARN: Found duplicated region for block: B:21:0x005f */
+    /* JADX WARN: Found duplicated region for block: B:23:0x0063 */
+    /* JADX WARN: Found duplicated region for block: B:25:0x0078 */
     public final boolean cq() {
         boolean z;
         if (this.e == null) {
@@ -960,14 +997,16 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
                 Drawable drawable = compoundDrawablesRelative[0];
                 ColorDrawable colorDrawable2 = this.ba;
                 if (drawable != colorDrawable2) {
-                    this.e.setCompoundDrawablesRelative(colorDrawable2, compoundDrawablesRelative[1], compoundDrawablesRelative[2], compoundDrawablesRelative[3]);
+                    this.e.setCompoundDrawablesRelative(colorDrawable2, compoundDrawablesRelative[1],
+                            compoundDrawablesRelative[2], compoundDrawablesRelative[3]);
                     z = true;
                 } else {
                     z = false;
                 }
             } else if (this.ba != null) {
                 Drawable[] compoundDrawablesRelative2 = this.e.getCompoundDrawablesRelative();
-                this.e.setCompoundDrawablesRelative(null, compoundDrawablesRelative2[1], compoundDrawablesRelative2[2], compoundDrawablesRelative2[3]);
+                this.e.setCompoundDrawablesRelative(null, compoundDrawablesRelative2[1], compoundDrawablesRelative2[2],
+                        compoundDrawablesRelative2[3]);
                 this.ba = null;
                 z = true;
             } else {
@@ -975,7 +1014,8 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
             }
         } else if (this.ba != null) {
             Drawable[] compoundDrawablesRelative22 = this.e.getCompoundDrawablesRelative();
-            this.e.setCompoundDrawablesRelative(null, compoundDrawablesRelative22[1], compoundDrawablesRelative22[2], compoundDrawablesRelative22[3]);
+            this.e.setCompoundDrawablesRelative(null, compoundDrawablesRelative22[1], compoundDrawablesRelative22[2],
+                    compoundDrawablesRelative22[3]);
             this.ba = null;
             z = true;
         } else {
@@ -990,14 +1030,16 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
                 checkableImageButton = awaVar.g;
             }
             if (checkableImageButton != null) {
-                measuredWidth2 = ((ViewGroup.MarginLayoutParams) checkableImageButton.getLayoutParams()).getMarginStart() + checkableImageButton.getMeasuredWidth() + measuredWidth2;
+                measuredWidth2 = ((ViewGroup.MarginLayoutParams) checkableImageButton.getLayoutParams())
+                        .getMarginStart() + checkableImageButton.getMeasuredWidth() + measuredWidth2;
             }
             Drawable[] compoundDrawablesRelative3 = this.e.getCompoundDrawablesRelative();
             ColorDrawable colorDrawable3 = this.bd;
             if (colorDrawable3 != null && this.be != measuredWidth2) {
                 this.be = measuredWidth2;
                 colorDrawable3.setBounds(0, 0, measuredWidth2, 1);
-                this.e.setCompoundDrawablesRelative(compoundDrawablesRelative3[0], compoundDrawablesRelative3[1], this.bd, compoundDrawablesRelative3[3]);
+                this.e.setCompoundDrawablesRelative(compoundDrawablesRelative3[0], compoundDrawablesRelative3[1],
+                        this.bd, compoundDrawablesRelative3[3]);
                 return true;
             }
             if (colorDrawable3 == null) {
@@ -1010,13 +1052,15 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
             ColorDrawable colorDrawable5 = this.bd;
             if (drawable2 != colorDrawable5) {
                 this.bf = drawable2;
-                this.e.setCompoundDrawablesRelative(compoundDrawablesRelative3[0], compoundDrawablesRelative3[1], colorDrawable5, compoundDrawablesRelative3[3]);
+                this.e.setCompoundDrawablesRelative(compoundDrawablesRelative3[0], compoundDrawablesRelative3[1],
+                        colorDrawable5, compoundDrawablesRelative3[3]);
                 return true;
             }
         } else if (this.bd != null) {
             Drawable[] compoundDrawablesRelative4 = this.e.getCompoundDrawablesRelative();
             if (compoundDrawablesRelative4[2] == this.bd) {
-                this.e.setCompoundDrawablesRelative(compoundDrawablesRelative4[0], compoundDrawablesRelative4[1], this.bf, compoundDrawablesRelative4[3]);
+                this.e.setCompoundDrawablesRelative(compoundDrawablesRelative4[0], compoundDrawablesRelative4[1],
+                        this.bf, compoundDrawablesRelative4[3]);
             } else {
                 z2 = z;
             }
@@ -1086,7 +1130,9 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
         }
         if (!zIsEnabled) {
             ColorStateList colorStateList3 = this.bg;
-            aatVar.ca(ColorStateList.valueOf(colorStateList3 != null ? colorStateList3.getColorForState(new int[]{-16842910}, this.bq) : this.bq));
+            aatVar.ca(ColorStateList.valueOf(
+                    colorStateList3 != null ? colorStateList3.getColorForState(new int[] { -16842910 }, this.bq)
+                            : this.bq));
         } else if (cm()) {
             jp jpVar2 = this.k.r;
             aatVar.ca(jpVar2 != null ? jpVar2.getTextColors() : null);
@@ -1176,8 +1222,10 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
 
     public final void cw(boolean z, boolean z2) {
         int defaultColor = this.bl.getDefaultColor();
-        int colorForState = this.bl.getColorForState(new int[]{R.attr.state_hovered, R.attr.state_enabled}, defaultColor);
-        int colorForState2 = this.bl.getColorForState(new int[]{R.attr.state_activated, R.attr.state_enabled}, defaultColor);
+        int colorForState = this.bl.getColorForState(new int[] { R.attr.state_hovered, R.attr.state_enabled },
+                defaultColor);
+        int colorForState2 = this.bl.getColorForState(new int[] { R.attr.state_activated, R.attr.state_enabled },
+                defaultColor);
         if (z) {
             this.au = colorForState2;
         } else if (z2) {
@@ -1335,7 +1383,7 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:16:0x002f  */
+    /* JADX WARN: Found duplicated region for block: B:16:0x002f */
     @Override // android.view.ViewGroup, android.view.View
     public final void drawableStateChanged() {
         boolean z;
@@ -1350,7 +1398,8 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
         if (aatVar != null) {
             aatVar.ar = drawableState;
             ColorStateList colorStateList2 = aatVar.o;
-            if ((colorStateList2 == null || !colorStateList2.isStateful()) && ((colorStateList = aatVar.n) == null || !colorStateList.isStateful())) {
+            if ((colorStateList2 == null || !colorStateList2.isStateful())
+                    && ((colorStateList = aatVar.n) == null || !colorStateList.isStateful())) {
                 z = false;
             } else {
                 aatVar.bz(false);
@@ -1670,7 +1719,8 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
         awaVar.getViewTreeObserver().removeOnGlobalLayoutListener(this);
         boolean z = false;
         this.bz = false;
-        if (this.e != null && this.e.getMeasuredHeight() < (iMax = Math.max(awaVar.getMeasuredHeight(), this.c.getMeasuredHeight()))) {
+        if (this.e != null && this.e
+                .getMeasuredHeight() < (iMax = Math.max(awaVar.getMeasuredHeight(), this.c.getMeasuredHeight()))) {
             this.e.setMinimumHeight(iMax);
             z = true;
         }
@@ -1753,15 +1803,19 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
                 textPaint.setLetterSpacing(aatVar.bg);
                 float f = -textPaint.ascent();
                 rect2.left = this.e.getCompoundPaddingLeft() + rect.left;
-                rect2.top = (this.ap != 1 || this.e.getMinLines() > 1) ? rect.top + this.e.getCompoundPaddingTop() : (int) (rect.centerY() - (f / 2.0f));
+                rect2.top = (this.ap != 1 || this.e.getMinLines() > 1) ? rect.top + this.e.getCompoundPaddingTop()
+                        : (int) (rect.centerY() - (f / 2.0f));
                 rect2.right = rect.right - this.e.getCompoundPaddingRight();
-                int compoundPaddingBottom = (this.ap != 1 || this.e.getMinLines() > 1) ? rect.bottom - this.e.getCompoundPaddingBottom() : (int) (rect2.top + f);
+                int compoundPaddingBottom = (this.ap != 1 || this.e.getMinLines() > 1)
+                        ? rect.bottom - this.e.getCompoundPaddingBottom()
+                        : (int) (rect2.top + f);
                 rect2.bottom = compoundPaddingBottom;
                 int i13 = rect2.left;
                 int i14 = rect2.top;
                 int i15 = rect2.right;
                 Rect rect4 = aatVar.g;
-                if (rect4.left != i13 || rect4.top != i14 || rect4.right != i15 || rect4.bottom != compoundPaddingBottom) {
+                if (rect4.left != i13 || rect4.top != i14 || rect4.right != i15
+                        || rect4.bottom != compoundPaddingBottom) {
                     rect4.set(i13, i14, i15, compoundPaddingBottom);
                     aatVar.as = true;
                 }
@@ -1786,7 +1840,8 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
         }
         if (this.u != null && (editText = this.e) != null) {
             this.u.setGravity(editText.getGravity());
-            this.u.setPadding(this.e.getCompoundPaddingLeft(), this.e.getCompoundPaddingTop(), this.e.getCompoundPaddingRight(), this.e.getCompoundPaddingBottom());
+            this.u.setPadding(this.e.getCompoundPaddingLeft(), this.e.getCompoundPaddingTop(),
+                    this.e.getCompoundPaddingRight(), this.e.getCompoundPaddingBottom());
         }
         awaVar.ai();
     }
@@ -1877,9 +1932,9 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
         int defaultColor = colorStateList.getDefaultColor();
         this.bm = defaultColor;
         this.av = defaultColor;
-        this.bn = colorStateList.getColorForState(new int[]{-16842910}, -1);
-        this.bo = colorStateList.getColorForState(new int[]{R.attr.state_focused, R.attr.state_enabled}, -1);
-        this.bp = colorStateList.getColorForState(new int[]{R.attr.state_hovered, R.attr.state_enabled}, -1);
+        this.bn = colorStateList.getColorForState(new int[] { -16842910 }, -1);
+        this.bo = colorStateList.getColorForState(new int[] { R.attr.state_focused, R.attr.state_enabled }, -1);
+        this.bp = colorStateList.getColorForState(new int[] { R.attr.state_hovered, R.attr.state_enabled }, -1);
         cc();
     }
 
@@ -1925,9 +1980,9 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
     public void setBoxStrokeColorStateList(ColorStateList colorStateList) {
         if (colorStateList.isStateful()) {
             this.bi = colorStateList.getDefaultColor();
-            this.bq = colorStateList.getColorForState(new int[]{-16842910}, -1);
-            this.bj = colorStateList.getColorForState(new int[]{R.attr.state_hovered, R.attr.state_enabled}, -1);
-            this.bk = colorStateList.getColorForState(new int[]{R.attr.state_focused, R.attr.state_enabled}, -1);
+            this.bq = colorStateList.getColorForState(new int[] { -16842910 }, -1);
+            this.bj = colorStateList.getColorForState(new int[] { R.attr.state_hovered, R.attr.state_enabled }, -1);
+            this.bk = colorStateList.getColorForState(new int[] { R.attr.state_focused, R.attr.state_enabled }, -1);
         } else if (this.bk != colorStateList.getDefaultColor()) {
             this.bk = colorStateList.getDefaultColor();
         }
@@ -1972,7 +2027,8 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
                 }
                 this.p.setMaxLines(1);
                 bpcVar.ac(this.p, 2);
-                ((ViewGroup.MarginLayoutParams) this.p.getLayoutParams()).setMarginStart(getResources().getDimensionPixelOffset(me.hd.wauxv.R.dimen.mtrl_textinput_counter_margin_start));
+                ((ViewGroup.MarginLayoutParams) this.p.getLayoutParams()).setMarginStart(getResources()
+                        .getDimensionPixelOffset(me.hd.wauxv.R.dimen.mtrl_textinput_counter_margin_start));
                 co();
                 if (this.p != null) {
                     EditText editText = this.e;

@@ -39,9 +39,10 @@ class ObjectReaderImplInt8Array extends ObjectReaderPrimitive {
             } else if (obj instanceof Number) {
                 bValueOf = Byte.valueOf(((Number) obj).byteValue());
             } else {
-                Function typeConvert = JSONFactory.getDefaultObjectReaderProvider().getTypeConvert(obj.getClass(), Byte.class);
+                Function typeConvert = JSONFactory.getDefaultObjectReaderProvider().getTypeConvert(obj.getClass(),
+                        Byte.class);
                 if (typeConvert == null) {
-                    throw new JSONException(bjs.m(obj, new StringBuilder("can not cast to Byte ")));
+                    throw new JSONException(concatVar1GetClass(obj, new StringBuilder("can not cast to Byte ")));
                 }
                 bValueOf = (Byte) typeConvert.apply(obj);
             }
@@ -51,7 +52,8 @@ class ObjectReaderImplInt8Array extends ObjectReaderPrimitive {
         return bArr;
     }
 
-    @Override // com.alibaba.fastjson2.reader.ObjectReaderPrimitive, com.alibaba.fastjson2.reader.ObjectReader
+    @Override // com.alibaba.fastjson2.reader.ObjectReaderPrimitive,
+              // com.alibaba.fastjson2.reader.ObjectReader
     public Object readJSONBObject(JSONReader jSONReader, Type type, Object obj, long j) {
         if (jSONReader.nextIfMatch(JSONB.Constants.BC_TYPED_ANY) && jSONReader.readTypeHashCode() != HASH_TYPE) {
             throw new JSONException("not support autoType : " + jSONReader.getString());
@@ -72,9 +74,17 @@ class ObjectReaderImplInt8Array extends ObjectReaderPrimitive {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r3v0, types: [com.alibaba.fastjson2.JSONReader] */
-    /* JADX WARN: Type inference failed for: r3v2, types: [com.alibaba.fastjson2.JSONReader] */
-    /* JADX WARN: Type inference failed for: r3v4, types: [byte[], java.lang.Object] */
+    /*
+     * JADX WARN: Type inference failed for: r3v0, types:
+     * [com.alibaba.fastjson2.JSONReader]
+     */
+    /*
+     * JADX WARN: Type inference failed for: r3v2, types:
+     * [com.alibaba.fastjson2.JSONReader]
+     */
+    /*
+     * JADX WARN: Type inference failed for: r3v4, types: [byte[], java.lang.Object]
+     */
     @Override // com.alibaba.fastjson2.reader.ObjectReader
     public Object readObject(JSONReader jSONReader, Type type, Object obj, long j) {
         if (jSONReader.readIfNull()) {
@@ -119,7 +129,8 @@ class ObjectReaderImplInt8Array extends ObjectReaderPrimitive {
             }
             if ("gzip,base64".equals(this.format) || "gzip".equals(this.format)) {
                 try {
-                    GZIPInputStream gZIPInputStream = new GZIPInputStream(new ByteArrayInputStream(Base64.getDecoder().decode(string)));
+                    GZIPInputStream gZIPInputStream = new GZIPInputStream(
+                            new ByteArrayInputStream(Base64.getDecoder().decode(string)));
                     ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
                     while (true) {
                         byte[] bArr2 = new byte[1024];

@@ -28,7 +28,7 @@ public final class alu implements dft {
         }
     }
 
-    public alu(bfu bfuVar, bgf bgfVar) {
+    public alu(bfu bfuVar, IHasInvokeMethod bgfVar) {
         this.a = 2;
         this.b = bfuVar;
         this.c = bgfVar;
@@ -36,7 +36,7 @@ public final class alu implements dft {
 
     public alu(CharSequence charSequence, bgj bgjVar) {
         this.a = 0;
-        bzo.q(charSequence, "input");
+        throwIfVar1IsNull(charSequence, "input");
         this.b = charSequence;
         this.c = bgjVar;
     }

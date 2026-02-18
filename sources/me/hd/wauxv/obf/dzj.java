@@ -19,7 +19,9 @@ public final class dzj {
     public final String m;
     public final String n;
 
-    public /* synthetic */ dzj(int i, String str, String str2, String str3, String str4, String str5, Integer num, Integer num2, Integer num3, String str6, String str7, String str8, String str9, String str10, String str11) {
+    public /* synthetic */ dzj(int i, String str, String str2, String str3, String str4, String str5, Integer num,
+            Integer num2, Integer num3, String str6, String str7, String str8, String str9, String str10,
+            String str11) {
         if (16383 != (i & 16383)) {
             bht.ah(i, 16383, dzh.b.getDescriptor());
             throw null;
@@ -48,7 +50,15 @@ public final class dzj {
             return false;
         }
         dzj dzjVar = (dzj) obj;
-        return bzo.f(this.a, dzjVar.a) && bzo.f(this.b, dzjVar.b) && bzo.f(this.c, dzjVar.c) && bzo.f(this.d, dzjVar.d) && bzo.f(this.e, dzjVar.e) && bzo.f(this.f, dzjVar.f) && bzo.f(this.g, dzjVar.g) && bzo.f(this.h, dzjVar.h) && bzo.f(this.i, dzjVar.i) && bzo.f(this.j, dzjVar.j) && bzo.f(this.k, dzjVar.k) && bzo.f(this.l, dzjVar.l) && bzo.f(this.m, dzjVar.m) && bzo.f(this.n, dzjVar.n);
+        return nullSafeIsEqual(this.a, dzjVar.a) && nullSafeIsEqual(this.b, dzjVar.b)
+                && nullSafeIsEqual(this.c, dzjVar.c) && nullSafeIsEqual(this.d, dzjVar.d)
+                && nullSafeIsEqual(this.e, dzjVar.e) && nullSafeIsEqual(this.f, dzjVar.f)
+                && nullSafeIsEqual(this.g, dzjVar.g)
+                && nullSafeIsEqual(this.h, dzjVar.h) && nullSafeIsEqual(this.i, dzjVar.i)
+                && nullSafeIsEqual(this.j, dzjVar.j)
+                && nullSafeIsEqual(this.k, dzjVar.k) && nullSafeIsEqual(this.l, dzjVar.l)
+                && nullSafeIsEqual(this.m, dzjVar.m)
+                && nullSafeIsEqual(this.n, dzjVar.n);
     }
 
     public final int hashCode() {
@@ -98,6 +108,6 @@ public final class dzj {
         yg.u(sb, this.k, -201592879971114L);
         yg.u(sb, this.l, -201622944742186L);
         yg.u(sb, this.m, -201567110167338L);
-        return bjs.q(sb, this.n, ')');
+        return concat(sb, this.n, ')');
     }
 }

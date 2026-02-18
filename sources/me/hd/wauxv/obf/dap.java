@@ -10,14 +10,14 @@ public final class dap implements Serializable {
     public final Pattern a;
 
     public dap(String str) {
-        bzo.q(str, "pattern");
+        throwIfVar1IsNull(str, "pattern");
         Pattern patternCompile = Pattern.compile(str);
-        bzo.p(patternCompile, "compile(...)");
+        throwIfVar1IsNull(patternCompile, "compile(...)");
         this.a = patternCompile;
     }
 
     public static alu b(dap dapVar, String str) {
-        bzo.q(str, "input");
+        throwIfVar1IsNull(str, "input");
         if (str.length() >= 0) {
             return new alu(new ls(dapVar, 8, str), dao.a);
         }
@@ -27,21 +27,21 @@ public final class dap implements Serializable {
     }
 
     public final boolean c(CharSequence charSequence) {
-        bzo.q(charSequence, "input");
+        throwIfVar1IsNull(charSequence, "input");
         return this.a.matcher(charSequence).find();
     }
 
     public final bzx d(CharSequence charSequence) {
-        bzo.q(charSequence, "input");
+        throwIfVar1IsNull(charSequence, "input");
         Matcher matcher = this.a.matcher(charSequence);
-        bzo.p(matcher, "matcher(...)");
+        throwIfVar1IsNull(matcher, "matcher(...)");
         return ewz.y(matcher, 0, charSequence);
     }
 
     public final bzx e(String str) {
-        bzo.q(str, "input");
+        throwIfVar1IsNull(str, "input");
         Matcher matcher = this.a.matcher(str);
-        bzo.p(matcher, "matcher(...)");
+        throwIfVar1IsNull(matcher, "matcher(...)");
         if (matcher.matches()) {
             return new bzx(matcher, str);
         }
@@ -49,20 +49,20 @@ public final class dap implements Serializable {
     }
 
     public final boolean f(CharSequence charSequence) {
-        bzo.q(charSequence, "input");
+        throwIfVar1IsNull(charSequence, "input");
         return this.a.matcher(charSequence).matches();
     }
 
     public final String toString() {
         String string = this.a.toString();
-        bzo.p(string, "toString(...)");
+        throwIfVar1IsNull(string, "toString(...)");
         return string;
     }
 
     public dap(String str, int i) {
-        bzo.q(str, "pattern");
+        throwIfVar1IsNull(str, "pattern");
         Pattern patternCompile = Pattern.compile(str, 66);
-        bzo.p(patternCompile, "compile(...)");
+        throwIfVar1IsNull(patternCompile, "compile(...)");
         this.a = patternCompile;
     }
 }

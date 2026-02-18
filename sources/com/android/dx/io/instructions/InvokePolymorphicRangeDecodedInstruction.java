@@ -10,10 +10,11 @@ public class InvokePolymorphicRangeDecodedInstruction extends DecodedInstruction
     private final int protoIndex;
     private final int registerCount;
 
-    public InvokePolymorphicRangeDecodedInstruction(InstructionCodec instructionCodec, int i, int i2, IndexType indexType, int i3, int i4, int i5) {
+    public InvokePolymorphicRangeDecodedInstruction(InstructionCodec instructionCodec, int i, int i2,
+            IndexType indexType, int i3, int i4, int i5) {
         super(instructionCodec, i, i2, indexType, 0, 0L);
         if (i5 != ((short) i5)) {
-            throw new IllegalArgumentException(bjs.i(i5, "protoIndex doesn't fit in a short: "));
+            throw new IllegalArgumentException(concatVar2Var1(i5, "protoIndex doesn't fit in a short: "));
         }
         this.c = i3;
         this.registerCount = i4;
@@ -37,11 +38,13 @@ public class InvokePolymorphicRangeDecodedInstruction extends DecodedInstruction
 
     @Override // com.android.dx.io.instructions.DecodedInstruction
     public DecodedInstruction withIndex(int i) {
-        throw new UnsupportedOperationException("use withProtoIndex to update both the method and proto indices for invoke-polymorphic/range");
+        throw new UnsupportedOperationException(
+                "use withProtoIndex to update both the method and proto indices for invoke-polymorphic/range");
     }
 
     @Override // com.android.dx.io.instructions.DecodedInstruction
     public DecodedInstruction withProtoIndex(int i, int i2) {
-        return new InvokePolymorphicRangeDecodedInstruction(getFormat(), getOpcode(), i, getIndexType(), this.c, this.registerCount, i2);
+        return new InvokePolymorphicRangeDecodedInstruction(getFormat(), getOpcode(), i, getIndexType(), this.c,
+                this.registerCount, i2);
     }
 }

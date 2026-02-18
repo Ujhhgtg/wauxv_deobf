@@ -289,10 +289,20 @@ public final class cht {
         this.c = new Object[iMax];
     }
 
-    /* JADX WARN: Found duplicated region for block: B:23:0x006a A[DONT_INVERT, PHI: r8
-      0x006a: PHI (r8v2 int) = (r8v1 int), (r8v3 int) binds: [B:10:0x002c, B:22:0x0068] A[DONT_GENERATE, DONT_INLINE]] */
-    /* JADX WARN: Found duplicated region for block: B:24:0x006c A[LOOP:0: B:9:0x001e->B:24:0x006c, LOOP_END] */
-    /* JADX WARN: Found duplicated region for block: B:28:0x006f A[EDGE_INSN: B:28:0x006f->B:25:0x006f BREAK  A[LOOP:0: B:9:0x001e->B:24:0x006c], SYNTHETIC] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:23:0x006a A[DONT_INVERT, PHI:
+     * r8
+     * 0x006a: PHI (r8v2 int) = (r8v1 int), (r8v3 int) binds: [B:10:0x002c,
+     * B:22:0x0068] A[DONT_GENERATE, DONT_INLINE]]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:24:0x006c A[LOOP:0:
+     * B:9:0x001e->B:24:0x006c, LOOP_END]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:28:0x006f A[EDGE_INSN:
+     * B:28:0x006f->B:25:0x006f BREAK A[LOOP:0: B:9:0x001e->B:24:0x006c], SYNTHETIC]
+     */
     public final String toString() {
         if (this.e == 0) {
             return "{}";
@@ -345,7 +355,7 @@ public final class cht {
         }
         sb.append('}');
         String string = sb.toString();
-        bzo.p(string, "toString(...)");
+        throwIfVar1IsNull(string, "toString(...)");
         return string;
     }
 }

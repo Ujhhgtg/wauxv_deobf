@@ -7,7 +7,7 @@ public final class cse extends cwl {
 
     @Override // me.hd.wauxv.obf.cwl
     public final long ad(dfx dfxVar, int i) {
-        bzo.q(dfxVar, "<this>");
+        throwIfVar1IsNull(dfxVar, "<this>");
         return 19500L;
     }
 
@@ -18,7 +18,7 @@ public final class cse extends cwl {
 
     @Override // me.hd.wauxv.obf.cwl, me.hd.wauxv.obf.acm
     public final int f(dfx dfxVar) {
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         cwo cwoVar = this.ai;
         if (!cwoVar.d) {
             ru ruVar = cwoVar.a;
@@ -33,7 +33,7 @@ public final class cse extends cwl {
 
     @Override // me.hd.wauxv.obf.cwl, me.hd.wauxv.obf.ajt
     public final acm p(dfx dfxVar) {
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         throw new dgb("Packing only supports primitive number types. The input type however was a struct: " + dfxVar);
     }
 }

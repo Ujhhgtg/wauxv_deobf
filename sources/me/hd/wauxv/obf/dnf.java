@@ -10,8 +10,8 @@ public final class dnf extends dqc {
     public final boolean d;
 
     public dnf(String str, dne dneVar, boolean z) {
-        bzo.q(str, "value");
-        bzo.q(dneVar, "matchType");
+        throwIfVar1IsNull(str, "value");
+        throwIfVar1IsNull(dneVar, "matchType");
         this.a = str;
         this.b = dneVar;
         this.d = z;
@@ -19,7 +19,7 @@ public final class dnf extends dqc {
 
     @Override // me.hd.wauxv.obf.dqc
     public final int c(bbb bbbVar) {
-        bzo.q(bbbVar, "fbb");
+        throwIfVar1IsNull(bbbVar, "fbb");
         String str = this.a;
         if (str == null) {
             throw new IllegalArgumentException("value must not be null");

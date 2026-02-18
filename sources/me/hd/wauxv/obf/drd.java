@@ -28,49 +28,67 @@ public final class drd {
     public int n = -1;
     public int o = -1;
 
-    /* JADX WARN: Found duplicated region for block: B:106:0x01a2  */
-    /* JADX WARN: Found duplicated region for block: B:109:0x01b5  */
-    /* JADX WARN: Found duplicated region for block: B:116:0x01d6  */
-    /* JADX WARN: Found duplicated region for block: B:118:0x01db  */
-    /* JADX WARN: Found duplicated region for block: B:119:0x01dd  */
-    /* JADX WARN: Found duplicated region for block: B:124:0x01ea  */
-    /* JADX WARN: Found duplicated region for block: B:125:0x01ec  */
-    /* JADX WARN: Found duplicated region for block: B:135:0x01f3 A[EDGE_INSN: B:135:0x01f3->B:127:0x01f3 BREAK  A[LOOP:1: B:23:0x0056->B:126:0x01ee], SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:138:0x00a6 A[ADDED_TO_REGION, EDGE_INSN: B:138:0x00a6->B:49:0x00a6 BREAK  A[LOOP:2: B:44:0x008e->B:48:0x00a2], REMOVE, SYNTHETIC] */
+    /* JADX WARN: Found duplicated region for block: B:106:0x01a2 */
+    /* JADX WARN: Found duplicated region for block: B:109:0x01b5 */
+    /* JADX WARN: Found duplicated region for block: B:116:0x01d6 */
+    /* JADX WARN: Found duplicated region for block: B:118:0x01db */
+    /* JADX WARN: Found duplicated region for block: B:119:0x01dd */
+    /* JADX WARN: Found duplicated region for block: B:124:0x01ea */
+    /* JADX WARN: Found duplicated region for block: B:125:0x01ec */
+    /*
+     * JADX WARN: Found duplicated region for block: B:135:0x01f3 A[EDGE_INSN:
+     * B:135:0x01f3->B:127:0x01f3 BREAK A[LOOP:1: B:23:0x0056->B:126:0x01ee],
+     * SYNTHETIC]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:138:0x00a6 A[ADDED_TO_REGION,
+     * EDGE_INSN: B:138:0x00a6->B:49:0x00a6 BREAK A[LOOP:2:
+     * B:44:0x008e->B:48:0x00a2], REMOVE, SYNTHETIC]
+     */
     /* JADX WARN: Found duplicated region for block: B:140:0x00f8 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:141:0x00eb A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:142:0x00eb A[SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:143:0x0163 A[EDGE_INSN: B:143:0x0163->B:79:0x0163 BREAK  A[LOOP:4: B:66:0x0106->B:78:0x015c], SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:28:0x0062  */
+    /*
+     * JADX WARN: Found duplicated region for block: B:143:0x0163 A[EDGE_INSN:
+     * B:143:0x0163->B:79:0x0163 BREAK A[LOOP:4: B:66:0x0106->B:78:0x015c],
+     * SYNTHETIC]
+     */
+    /* JADX WARN: Found duplicated region for block: B:28:0x0062 */
     /* JADX WARN: Found duplicated region for block: B:33:0x0072 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:34:0x0074  */
-    /* JADX WARN: Found duplicated region for block: B:35:0x0077  */
-    /* JADX WARN: Found duplicated region for block: B:38:0x007b  */
-    /* JADX WARN: Found duplicated region for block: B:41:0x0084  */
-    /* JADX WARN: Found duplicated region for block: B:42:0x0087  */
-    /* JADX WARN: Found duplicated region for block: B:46:0x0094  */
-    /* JADX WARN: Found duplicated region for block: B:50:0x00a8  */
-    /* JADX WARN: Found duplicated region for block: B:52:0x00ad  */
-    /* JADX WARN: Found duplicated region for block: B:54:0x00b7  */
-    /* JADX WARN: Found duplicated region for block: B:55:0x00bb  */
-    /* JADX WARN: Found duplicated region for block: B:58:0x00de  */
-    /* JADX WARN: Found duplicated region for block: B:59:0x00e1  */
-    /* JADX WARN: Found duplicated region for block: B:63:0x00ef A[LOOP:3: B:51:0x00ab->B:63:0x00ef, LOOP_END, MOVE_INLINED] */
-    /* JADX WARN: Found duplicated region for block: B:65:0x00fe  */
-    /* JADX WARN: Found duplicated region for block: B:67:0x0108  */
-    /* JADX WARN: Found duplicated region for block: B:69:0x010c  */
-    /* JADX WARN: Found duplicated region for block: B:70:0x0111  */
-    /* JADX WARN: Found duplicated region for block: B:73:0x014e  */
-    /* JADX WARN: Found duplicated region for block: B:74:0x0151  */
-    /* JADX WARN: Found duplicated region for block: B:78:0x015c A[LOOP:4: B:66:0x0106->B:78:0x015c, LOOP_END] */
-    /* JADX WARN: Found duplicated region for block: B:81:0x0167  */
-    /* JADX WARN: Found duplicated region for block: B:83:0x016b  */
+    /* JADX WARN: Found duplicated region for block: B:34:0x0074 */
+    /* JADX WARN: Found duplicated region for block: B:35:0x0077 */
+    /* JADX WARN: Found duplicated region for block: B:38:0x007b */
+    /* JADX WARN: Found duplicated region for block: B:41:0x0084 */
+    /* JADX WARN: Found duplicated region for block: B:42:0x0087 */
+    /* JADX WARN: Found duplicated region for block: B:46:0x0094 */
+    /* JADX WARN: Found duplicated region for block: B:50:0x00a8 */
+    /* JADX WARN: Found duplicated region for block: B:52:0x00ad */
+    /* JADX WARN: Found duplicated region for block: B:54:0x00b7 */
+    /* JADX WARN: Found duplicated region for block: B:55:0x00bb */
+    /* JADX WARN: Found duplicated region for block: B:58:0x00de */
+    /* JADX WARN: Found duplicated region for block: B:59:0x00e1 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:63:0x00ef A[LOOP:3:
+     * B:51:0x00ab->B:63:0x00ef, LOOP_END, MOVE_INLINED]
+     */
+    /* JADX WARN: Found duplicated region for block: B:65:0x00fe */
+    /* JADX WARN: Found duplicated region for block: B:67:0x0108 */
+    /* JADX WARN: Found duplicated region for block: B:69:0x010c */
+    /* JADX WARN: Found duplicated region for block: B:70:0x0111 */
+    /* JADX WARN: Found duplicated region for block: B:73:0x014e */
+    /* JADX WARN: Found duplicated region for block: B:74:0x0151 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:78:0x015c A[LOOP:4:
+     * B:66:0x0106->B:78:0x015c, LOOP_END]
+     */
+    /* JADX WARN: Found duplicated region for block: B:81:0x0167 */
+    /* JADX WARN: Found duplicated region for block: B:83:0x016b */
     /* JADX WARN: Found duplicated region for block: B:89:0x0176 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:90:0x0178  */
-    /* JADX WARN: Found duplicated region for block: B:91:0x017a  */
-    /* JADX WARN: Found duplicated region for block: B:93:0x017e  */
-    /* JADX WARN: Found duplicated region for block: B:95:0x0185  */
-    /* JADX WARN: Found duplicated region for block: B:99:0x018f  */
+    /* JADX WARN: Found duplicated region for block: B:90:0x0178 */
+    /* JADX WARN: Found duplicated region for block: B:91:0x017a */
+    /* JADX WARN: Found duplicated region for block: B:93:0x017e */
+    /* JADX WARN: Found duplicated region for block: B:95:0x0185 */
+    /* JADX WARN: Found duplicated region for block: B:99:0x018f */
     public static float p(drd drdVar, ArrayList arrayList, boolean z, cjn cjnVar, Canvas canvas, float f, dqz dqzVar) {
         dqz dqzVar2;
         int i;
@@ -642,7 +660,8 @@ public final class drd {
         return cjnVar;
     }
 
-    public final void ac(afo afoVar, int i, int i2, List list, List list2, anu anuVar, csk cskVar, ek ekVar, dre dreVar) {
+    public final void ac(afo afoVar, int i, int i2, List list, List list2, anu anuVar, csk cskVar, ek ekVar,
+            dre dreVar) {
         this.e = afoVar;
         this.g = i;
         this.h = i2;
@@ -652,7 +671,7 @@ public final class drd {
         this.l = cskVar;
         this.k = dreVar;
         this.m = ekVar;
-        bzo.q(dreVar.b, "textMetrics");
+        throwIfVar1IsNull(dreVar.b, "textMetrics");
     }
 
     public final void q(int i, int i2, int i3, int i4, boolean z, Canvas canvas, float f, float f2, dqz dqzVar) {
@@ -812,7 +831,7 @@ public final class drd {
         dqv dqvVar = new dqv(this, canvas, dqzVar, f2);
         aa(dqvVar, true);
         boolean z = dqvVar.b;
-        return bzo.al(z ? 1 : 0, Float.floatToRawIntBits(dqvVar.a));
+        return KotlinHelpers.al(z ? 1 : 0, Float.floatToRawIntBits(dqvVar.a));
     }
 
     public final int t(int i, int i2, int i3, int i4, boolean z, float f) {
@@ -866,7 +885,8 @@ public final class drd {
                     return offsetForAdvance;
                 }
                 cArr = cArr2;
-                float fMeasureText = cskVar.measureText(ajn.t(c)) + f2 + cskVar.c(cArr, i9, i5 - i9, i3, i4 - i3, z, null, 0);
+                float fMeasureText = cskVar.measureText(ajn.t(c)) + f2
+                        + cskVar.c(cArr, i9, i5 - i9, i3, i4 - i3, z, null, 0);
                 if (fMeasureText >= f) {
                     return i5;
                 }
@@ -909,7 +929,7 @@ public final class drd {
         return ekVar != null ? ekVar.l(i2, i) : this.l.getRunAdvance(this.e.a, i2, i3, i4, i5, z, i);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:19:0x005b  */
+    /* JADX WARN: Found duplicated region for block: B:19:0x005b */
     public final float x(int i, int i2, boolean z, dle dleVar, Canvas canvas, float f, dqz dqzVar) {
         float f2;
         float f3;
@@ -1032,7 +1052,8 @@ public final class drd {
         } else {
             i4 = i3;
         }
-        if (!(dqzVar.j == null && dqzVar.l == null) && (iMax = Math.max(i4, dqzVar.h)) < (iMin = Math.min(i19, dqzVar.i))) {
+        if (!(dqzVar.j == null && dqzVar.l == null)
+                && (iMax = Math.max(i4, dqzVar.h)) < (iMin = Math.min(i19, dqzVar.i))) {
             if (iMax == i4 && iMin == i19) {
                 i5 = i4;
                 f13 = f;
@@ -1074,7 +1095,7 @@ public final class drd {
                 }
                 arq arqVar = drdVar.k.k;
                 String str3 = "colorScheme";
-                bzo.q(arqVar, "colorScheme");
+                throwIfVar1IsNull(arqVar, "colorScheme");
                 if (dleVar.e(0) != null) {
                     throw new ClassCastException();
                 }
@@ -1093,7 +1114,7 @@ public final class drd {
                     canvas.drawRoundRect(rectF3, f18, f18, cskVar2);
                 }
                 arq arqVar2 = drdVar.k.k;
-                bzo.q(arqVar2, "colorScheme");
+                throwIfVar1IsNull(arqVar2, "colorScheme");
                 if (dleVar.e(0) != null) {
                     throw new ClassCastException();
                 }
@@ -1223,7 +1244,7 @@ public final class drd {
                     return f6;
                 }
                 arq arqVar3 = drdVar2.k.k;
-                bzo.q(arqVar3, str);
+                throwIfVar1IsNull(arqVar3, str);
                 int i31 = arqVar3.b.get(arpVarG.a);
                 if (i31 == 0) {
                     return f6;

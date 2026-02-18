@@ -59,24 +59,28 @@ public final class RealCall implements Call {
     private final AnonymousClass1 timeout;
     private boolean timeoutEarlyExit;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public final class AsyncCall implements Runnable {
         private volatile AtomicInteger callsPerHost;
         private final Callback responseCallback;
         final /* synthetic */ RealCall this$0;
 
         public AsyncCall(RealCall realCall, Callback callback) {
-            bzo.q(callback, "responseCallback");
+            throwIfVar1IsNull(callback, "responseCallback");
             this.this$0 = realCall;
             this.responseCallback = callback;
             this.callsPerHost = new AtomicInteger(0);
         }
 
         public final void executeOn(ExecutorService executorService) {
-            bzo.q(executorService, "executorService");
+            throwIfVar1IsNull(executorService, "executorService");
             Dispatcher dispatcher = this.this$0.getClient().dispatcher();
             if (Util.assertionsEnabled && Thread.holdsLock(dispatcher)) {
-                throw new AssertionError("Thread " + Thread.currentThread().getName() + " MUST NOT hold lock on " + dispatcher);
+                throw new AssertionError(
+                        "Thread " + Thread.currentThread().getName() + " MUST NOT hold lock on " + dispatcher);
             }
             try {
                 try {
@@ -111,12 +115,13 @@ public final class RealCall implements Call {
         }
 
         public final void reuseCallsPerHostFrom(AsyncCall asyncCall) {
-            bzo.q(asyncCall, "other");
+            throwIfVar1IsNull(asyncCall, "other");
             this.callsPerHost = asyncCall.callsPerHost;
         }
 
-        /* JADX WARN: Undo finally extract visitor
-        java.lang.NullPointerException
+        /*
+         * JADX WARN: Undo finally extract visitor
+         * java.lang.NullPointerException
          */
         @Override // java.lang.Runnable
         public void run() {
@@ -132,13 +137,15 @@ public final class RealCall implements Call {
                 try {
                     try {
                         try {
-                            this.responseCallback.onResponse(realCall, realCall.getResponseWithInterceptorChain$okhttp());
+                            this.responseCallback.onResponse(realCall,
+                                    realCall.getResponseWithInterceptorChain$okhttp());
                             client = realCall.getClient();
                         } catch (IOException e) {
                             e = e;
                             z = true;
                             if (z) {
-                                Platform.Companion.get().log("Callback failure for " + realCall.toLoggableString(), 4, e);
+                                Platform.Companion.get().log("Callback failure for " + realCall.toLoggableString(), 4,
+                                        e);
                             } else {
                                 this.responseCallback.onFailure(realCall, e);
                             }
@@ -172,14 +179,20 @@ public final class RealCall implements Call {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class CallReference extends WeakReference<RealCall> {
         private final Object callStackTrace;
 
-        /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+        /*
+         * JADX WARN: 'super' call moved to the top of the method (can break code
+         * semantics)
+         */
         public CallReference(RealCall realCall, Object obj) {
             super(realCall);
-            bzo.q(realCall, "referent");
+            throwIfVar1IsNull(realCall, "referent");
             this.callStackTrace = obj;
         }
 
@@ -188,10 +201,13 @@ public final class RealCall implements Call {
         }
     }
 
-    /* JADX WARN: Type inference failed for: r4v5, types: [me.hd.wauxv.obf.ekc, okhttp3.internal.connection.RealCall$timeout$1] */
+    /*
+     * JADX WARN: Type inference failed for: r4v5, types: [me.hd.wauxv.obf.ekc,
+     * okhttp3.internal.connection.RealCall$timeout$1]
+     */
     public RealCall(OkHttpClient okHttpClient, Request request, boolean z) {
-        bzo.q(okHttpClient, "client");
-        bzo.q(request, "originalRequest");
+        throwIfVar1IsNull(okHttpClient, "client");
+        throwIfVar1IsNull(request, "originalRequest");
         this.client = okHttpClient;
         this.originalRequest = request;
         this.forWebSocket = z;
@@ -218,7 +234,8 @@ public final class RealCall implements Call {
         RealConnection realConnection = this.connection;
         if (realConnection != null) {
             if (z && Thread.holdsLock(realConnection)) {
-                throw new AssertionError("Thread " + Thread.currentThread().getName() + " MUST NOT hold lock on " + realConnection);
+                throw new AssertionError(
+                        "Thread " + Thread.currentThread().getName() + " MUST NOT hold lock on " + realConnection);
             }
             synchronized (realConnection) {
                 socketReleaseConnectionNoEvents$okhttp = releaseConnectionNoEvents$okhttp();
@@ -238,7 +255,7 @@ public final class RealCall implements Call {
             return e2;
         }
         EventListener eventListener = this.eventListener;
-        bzo.n(e2);
+        throwIfVar1IsNull(e2);
         eventListener.callFailed(this, e2);
         return e2;
     }
@@ -261,7 +278,10 @@ public final class RealCall implements Call {
             hostnameVerifier = null;
             certificatePinner = null;
         }
-        return new Address(httpUrl.host(), httpUrl.port(), this.client.dns(), this.client.socketFactory(), sslSocketFactory, hostnameVerifier, certificatePinner, this.client.proxyAuthenticator(), this.client.proxy(), this.client.protocols(), this.client.connectionSpecs(), this.client.proxySelector());
+        return new Address(httpUrl.host(), httpUrl.port(), this.client.dns(), this.client.socketFactory(),
+                sslSocketFactory, hostnameVerifier, certificatePinner, this.client.proxyAuthenticator(),
+                this.client.proxy(), this.client.protocols(), this.client.connectionSpecs(),
+                this.client.proxySelector());
     }
 
     private final <E extends IOException> E timeoutExit(E e) {
@@ -286,7 +306,7 @@ public final class RealCall implements Call {
     }
 
     public final void acquireConnectionNoEvents(RealConnection realConnection) {
-        bzo.q(realConnection, "connection");
+        throwIfVar1IsNull(realConnection, "connection");
         if (!Util.assertionsEnabled || Thread.holdsLock(realConnection)) {
             if (this.connection != null) {
                 throw new IllegalStateException("Check failed.");
@@ -317,7 +337,7 @@ public final class RealCall implements Call {
 
     @Override // okhttp3.Call
     public void enqueue(Callback callback) {
-        bzo.q(callback, "responseCallback");
+        throwIfVar1IsNull(callback, "responseCallback");
         if (!this.executed.compareAndSet(false, true)) {
             throw new IllegalStateException("Already Executed");
         }
@@ -326,14 +346,15 @@ public final class RealCall implements Call {
     }
 
     public final void enterNetworkInterceptorExchange(Request request, boolean z) {
-        bzo.q(request, "request");
+        throwIfVar1IsNull(request, "request");
         if (this.interceptorScopedExchange != null) {
             throw new IllegalStateException("Check failed.");
         }
         synchronized (this) {
             try {
                 if (this.responseBodyOpen) {
-                    throw new IllegalStateException("cannot make a new request because the previous response is still open: please call response.close()");
+                    throw new IllegalStateException(
+                            "cannot make a new request because the previous response is still open: please call response.close()");
                 }
                 if (this.requestBodyOpen) {
                     throw new IllegalStateException("Check failed.");
@@ -343,7 +364,8 @@ public final class RealCall implements Call {
             }
         }
         if (z) {
-            this.exchangeFinder = new ExchangeFinder(this.connectionPool, createAddress(request.url()), this, this.eventListener);
+            this.exchangeFinder = new ExchangeFinder(this.connectionPool, createAddress(request.url()), this,
+                    this.eventListener);
         }
     }
 
@@ -416,7 +438,9 @@ public final class RealCall implements Call {
         arrayList.add(new CallServerInterceptor(this.forWebSocket));
         try {
             try {
-                Response responseProceed = new RealInterceptorChain(this, arrayList, 0, null, this.originalRequest, this.client.connectTimeoutMillis(), this.client.readTimeoutMillis(), this.client.writeTimeoutMillis()).proceed(this.originalRequest);
+                Response responseProceed = new RealInterceptorChain(this, arrayList, 0, null, this.originalRequest,
+                        this.client.connectTimeoutMillis(), this.client.readTimeoutMillis(),
+                        this.client.writeTimeoutMillis()).proceed(this.originalRequest);
                 if (isCanceled()) {
                     Util.closeQuietly(responseProceed);
                     throw new IOException("Canceled");
@@ -425,7 +449,8 @@ public final class RealCall implements Call {
                 return responseProceed;
             } catch (IOException e) {
                 IOException iOExceptionNoMoreExchanges$okhttp = noMoreExchanges$okhttp(e);
-                bzo.o(iOExceptionNoMoreExchanges$okhttp, "null cannot be cast to non-null type kotlin.Throwable");
+                throwIfVar1IsNull(iOExceptionNoMoreExchanges$okhttp,
+                        "null cannot be cast to non-null type kotlin.Throwable");
                 throw iOExceptionNoMoreExchanges$okhttp;
             }
         } catch (Throwable th) {
@@ -437,7 +462,7 @@ public final class RealCall implements Call {
     }
 
     public final Exchange initExchange$okhttp(RealInterceptorChain realInterceptorChain) throws IOException {
-        bzo.q(realInterceptorChain, "chain");
+        throwIfVar1IsNull(realInterceptorChain, "chain");
         synchronized (this) {
             try {
                 if (!this.expectMoreExchanges) {
@@ -454,8 +479,9 @@ public final class RealCall implements Call {
             }
         }
         ExchangeFinder exchangeFinder = this.exchangeFinder;
-        bzo.n(exchangeFinder);
-        Exchange exchange = new Exchange(this, this.eventListener, exchangeFinder, exchangeFinder.find(this.client, realInterceptorChain));
+        throwIfVar1IsNull(exchangeFinder);
+        Exchange exchange = new Exchange(this, this.eventListener, exchangeFinder,
+                exchangeFinder.find(this.client, realInterceptorChain));
         this.interceptorScopedExchange = exchange;
         this.exchange = exchange;
         synchronized (this) {
@@ -479,14 +505,24 @@ public final class RealCall implements Call {
     }
 
     /* JADX WARN: Found duplicated region for block: B:16:0x001f A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:17:0x0021 A[Catch: all -> 0x0017, TryCatch #0 {all -> 0x0017, blocks: (B:8:0x0012, B:17:0x0021, B:19:0x0025, B:20:0x0027, B:22:0x002c, B:27:0x0035, B:29:0x0039, B:14:0x001b), top: B:45:0x0012 }] */
-    /* JADX WARN: Found duplicated region for block: B:19:0x0025 A[Catch: all -> 0x0017, TryCatch #0 {all -> 0x0017, blocks: (B:8:0x0012, B:17:0x0021, B:19:0x0025, B:20:0x0027, B:22:0x002c, B:27:0x0035, B:29:0x0039, B:14:0x001b), top: B:45:0x0012 }] */
-    /* JADX WARN: Found duplicated region for block: B:25:0x0032  */
+    /*
+     * JADX WARN: Found duplicated region for block: B:17:0x0021 A[Catch: all ->
+     * 0x0017, TryCatch #0 {all -> 0x0017, blocks: (B:8:0x0012, B:17:0x0021,
+     * B:19:0x0025, B:20:0x0027, B:22:0x002c, B:27:0x0035, B:29:0x0039,
+     * B:14:0x001b), top: B:45:0x0012 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:19:0x0025 A[Catch: all ->
+     * 0x0017, TryCatch #0 {all -> 0x0017, blocks: (B:8:0x0012, B:17:0x0021,
+     * B:19:0x0025, B:20:0x0027, B:22:0x002c, B:27:0x0035, B:29:0x0039,
+     * B:14:0x001b), top: B:45:0x0012 }]
+     */
+    /* JADX WARN: Found duplicated region for block: B:25:0x0032 */
     public final <E extends IOException> E messageDone$okhttp(Exchange exchange, boolean z, boolean z2, E e) {
         boolean z3;
         boolean z4;
         boolean z5;
-        bzo.q(exchange, "exchange");
+        throwIfVar1IsNull(exchange, "exchange");
         if (exchange.equals(this.exchange)) {
             synchronized (this) {
                 z3 = false;
@@ -567,9 +603,10 @@ public final class RealCall implements Call {
 
     public final Socket releaseConnectionNoEvents$okhttp() {
         RealConnection realConnection = this.connection;
-        bzo.n(realConnection);
+        throwIfVar1IsNull(realConnection);
         if (Util.assertionsEnabled && !Thread.holdsLock(realConnection)) {
-            throw new AssertionError("Thread " + Thread.currentThread().getName() + " MUST hold lock on " + realConnection);
+            throw new AssertionError(
+                    "Thread " + Thread.currentThread().getName() + " MUST hold lock on " + realConnection);
         }
         List<Reference<RealCall>> calls = realConnection.getCalls();
         Iterator<Reference<RealCall>> it = calls.iterator();
@@ -579,7 +616,7 @@ public final class RealCall implements Call {
                 i = -1;
                 break;
             }
-            if (bzo.f(it.next().get(), this)) {
+            if (nullSafeIsEqual(it.next().get(), this)) {
                 break;
             }
             i++;
@@ -605,7 +642,7 @@ public final class RealCall implements Call {
 
     public final boolean retryAfterFailure() {
         ExchangeFinder exchangeFinder = this.exchangeFinder;
-        bzo.n(exchangeFinder);
+        throwIfVar1IsNull(exchangeFinder);
         return exchangeFinder.retryAfterFailure();
     }
 

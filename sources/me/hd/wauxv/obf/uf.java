@@ -5,7 +5,7 @@ import java.util.NoSuchElementException;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class uf implements Iterator, bsw {
+public final class uf implements Iterator, IEmpty {
     public final int a;
     public final int b;
     public boolean c;
@@ -15,7 +15,7 @@ public final class uf implements Iterator, bsw {
         this.a = i;
         this.b = c;
         boolean z = false;
-        if (i <= 0 ? bzo.r(1, c) >= 0 : bzo.r(1, c) <= 0) {
+        if (i <= 0 ? KotlinHelpers.r(1, c) >= 0 : KotlinHelpers.r(1, c) <= 0) {
             z = true;
         }
         this.c = z;

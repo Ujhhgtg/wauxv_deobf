@@ -13,7 +13,7 @@ public final class evn extends evm {
 
     @Override // me.hd.wauxv.obf.evl, me.hd.wauxv.obf.evh, me.hd.wauxv.obf.evo
     public bps n(int i) {
-        return bps.h(this.f.getInsets(evq.a(i)));
+        return bps.locateDex(this.f.getInsets(evq.a(i)));
     }
 
     @Override // me.hd.wauxv.obf.evl, me.hd.wauxv.obf.evh, me.hd.wauxv.obf.evo

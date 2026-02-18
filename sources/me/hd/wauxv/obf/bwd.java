@@ -24,7 +24,7 @@ public abstract class bwd implements dfx {
             return false;
         }
         bwd bwdVar = (bwd) obj;
-        return bzo.f(this.c, bwdVar.c) && bzo.f(b(), bwdVar.b());
+        return nullSafeIsEqual(this.c, bwdVar.c) && nullSafeIsEqual(b(), bwdVar.b());
     }
 
     @Override // me.hd.wauxv.obf.dfx
@@ -34,7 +34,7 @@ public abstract class bwd implements dfx {
 
     @Override // me.hd.wauxv.obf.dfx
     public final int g(String str) {
-        bzo.q(str, "name");
+        throwIfVar1IsNull(str, "name");
         Integer numBf = dnq.bf(str);
         if (numBf != null) {
             return numBf.intValue();

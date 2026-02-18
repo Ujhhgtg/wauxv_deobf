@@ -7,8 +7,8 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 import java.nio.charset.Charset;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.bgf;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.IHasInvokeMethod;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cnh;
 import me.hd.wauxv.obf.dts;
 import me.hd.wauxv.obf.ens;
@@ -24,7 +24,10 @@ public abstract class ResponseBody implements Closeable {
     public static final Companion Companion = new Companion(null);
     private Reader reader;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class BomAwareReader extends Reader {
         private final Charset charset;
         private boolean closed;
@@ -32,8 +35,8 @@ public abstract class ResponseBody implements Closeable {
         private final rm source;
 
         public BomAwareReader(rm rmVar, Charset charset) {
-            bzo.q(rmVar, "source");
-            bzo.q(charset, "charset");
+            throwIfVar1IsNull(rmVar, "source");
+            throwIfVar1IsNull(charset, "charset");
             this.source = rmVar;
             this.charset = charset;
         }
@@ -56,26 +59,31 @@ public abstract class ResponseBody implements Closeable {
 
         @Override // java.io.Reader
         public int read(char[] cArr, int i, int i2) throws IOException {
-            bzo.q(cArr, "cbuf");
+            throwIfVar1IsNull(cArr, "cbuf");
             if (this.closed) {
                 throw new IOException("Stream closed");
             }
             Reader inputStreamReader = this.delegate;
             if (inputStreamReader == null) {
-                inputStreamReader = new InputStreamReader(this.source.ak(), Util.readBomAsCharset(this.source, this.charset));
+                inputStreamReader = new InputStreamReader(this.source.ak(),
+                        Util.readBomAsCharset(this.source, this.charset));
                 this.delegate = inputStreamReader;
             }
             return inputStreamReader.read(cArr, i, i2);
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
         }
 
-        public static /* synthetic */ ResponseBody create$default(Companion companion, String str, MediaType mediaType, int i, Object obj) {
+        public static /* synthetic */ ResponseBody create$default(Companion companion, String str, MediaType mediaType,
+                int i, Object obj) {
             if ((i & 1) != 0) {
                 mediaType = null;
             }
@@ -83,7 +91,7 @@ public abstract class ResponseBody implements Closeable {
         }
 
         public final ResponseBody create(String str, MediaType mediaType) {
-            bzo.q(str, "<this>");
+            throwIfVar1IsNull(str, "<this>");
             Charset charset = uj.a;
             if (mediaType != null) {
                 Charset charsetCharset$default = MediaType.charset$default(mediaType, null, 1, null);
@@ -94,7 +102,7 @@ public abstract class ResponseBody implements Closeable {
                 }
             }
             rh rhVar = new rh();
-            bzo.q(charset, "charset");
+            throwIfVar1IsNull(charset, "charset");
             rhVar.as(str, 0, str.length(), charset);
             return create(rhVar, mediaType, rhVar.b);
         }
@@ -102,21 +110,24 @@ public abstract class ResponseBody implements Closeable {
         private Companion() {
         }
 
-        public static /* synthetic */ ResponseBody create$default(Companion companion, byte[] bArr, MediaType mediaType, int i, Object obj) {
+        public static /* synthetic */ ResponseBody create$default(Companion companion, byte[] bArr, MediaType mediaType,
+                int i, Object obj) {
             if ((i & 1) != 0) {
                 mediaType = null;
             }
             return companion.create(bArr, mediaType);
         }
 
-        public static /* synthetic */ ResponseBody create$default(Companion companion, sj sjVar, MediaType mediaType, int i, Object obj) {
+        public static /* synthetic */ ResponseBody create$default(Companion companion, sj sjVar, MediaType mediaType,
+                int i, Object obj) {
             if ((i & 1) != 0) {
                 mediaType = null;
             }
             return companion.create(sjVar, mediaType);
         }
 
-        public static /* synthetic */ ResponseBody create$default(Companion companion, rm rmVar, MediaType mediaType, long j, int i, Object obj) {
+        public static /* synthetic */ ResponseBody create$default(Companion companion, rm rmVar, MediaType mediaType,
+                long j, int i, Object obj) {
             if ((i & 1) != 0) {
                 mediaType = null;
             }
@@ -127,21 +138,21 @@ public abstract class ResponseBody implements Closeable {
         }
 
         public final ResponseBody create(byte[] bArr, MediaType mediaType) {
-            bzo.q(bArr, "<this>");
+            throwIfVar1IsNull(bArr, "<this>");
             rh rhVar = new rh();
             rhVar.m12write(bArr);
             return create(rhVar, mediaType, bArr.length);
         }
 
         public final ResponseBody create(sj sjVar, MediaType mediaType) {
-            bzo.q(sjVar, "<this>");
+            throwIfVar1IsNull(sjVar, "<this>");
             rh rhVar = new rh();
             rhVar.al(sjVar);
             return create(rhVar, mediaType, sjVar.g());
         }
 
         public final ResponseBody create(final rm rmVar, final MediaType mediaType, final long j) {
-            bzo.q(rmVar, "<this>");
+            throwIfVar1IsNull(rmVar, "<this>");
             return new ResponseBody() { // from class: okhttp3.ResponseBody$Companion$asResponseBody$1
                 @Override // okhttp3.ResponseBody
                 public long contentLength() {
@@ -161,22 +172,22 @@ public abstract class ResponseBody implements Closeable {
         }
 
         public final ResponseBody create(MediaType mediaType, String str) {
-            bzo.q(str, "content");
+            throwIfVar1IsNull(str, "content");
             return create(str, mediaType);
         }
 
         public final ResponseBody create(MediaType mediaType, byte[] bArr) {
-            bzo.q(bArr, "content");
+            throwIfVar1IsNull(bArr, "content");
             return create(bArr, mediaType);
         }
 
         public final ResponseBody create(MediaType mediaType, sj sjVar) {
-            bzo.q(sjVar, "content");
+            throwIfVar1IsNull(sjVar, "content");
             return create(sjVar, mediaType);
         }
 
         public final ResponseBody create(MediaType mediaType, long j, rm rmVar) {
-            bzo.q(rmVar, "content");
+            throwIfVar1IsNull(rmVar, "content");
             return create(rmVar, mediaType, j);
         }
     }
@@ -184,10 +195,11 @@ public abstract class ResponseBody implements Closeable {
     private final Charset charset() {
         Charset charset;
         MediaType mediaTypeContentType = contentType();
-        return (mediaTypeContentType == null || (charset = mediaTypeContentType.charset(uj.a)) == null) ? uj.a : charset;
+        return (mediaTypeContentType == null || (charset = mediaTypeContentType.charset(uj.a)) == null) ? uj.a
+                : charset;
     }
 
-    private final <T> T consumeSource(bgf bgfVar, bgf bgfVar2) throws IOException {
+    private final <T> T consumeSource(IHasInvokeMethod bgfVar, IHasInvokeMethod bgfVar2) throws IOException {
         long jContentLength = contentLength();
         if (jContentLength > 2147483647L) {
             throw new IOException(dts.b(jContentLength, "Cannot buffer entire body for content length: "));
@@ -200,7 +212,8 @@ public abstract class ResponseBody implements Closeable {
             if (jContentLength == -1 || jContentLength == iIntValue) {
                 return t;
             }
-            throw new IOException("Content-Length (" + jContentLength + ") and stream length (" + iIntValue + ") disagree");
+            throw new IOException(
+                    "Content-Length (" + jContentLength + ") and stream length (" + iIntValue + ") disagree");
         } catch (Throwable th) {
             try {
                 throw th;
@@ -256,7 +269,8 @@ public abstract class ResponseBody implements Closeable {
             if (jContentLength == -1 || jContentLength == length) {
                 return bArrH;
             }
-            throw new IOException("Content-Length (" + jContentLength + ") and stream length (" + length + ") disagree");
+            throw new IOException(
+                    "Content-Length (" + jContentLength + ") and stream length (" + length + ") disagree");
         } catch (Throwable th) {
             try {
                 throw th;

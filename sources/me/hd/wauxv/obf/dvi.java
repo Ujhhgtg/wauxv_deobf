@@ -28,7 +28,8 @@ public final class dvi {
             return false;
         }
         dvi dviVar = (dvi) obj;
-        return bzo.f(this.a, dviVar.a) && bzo.f(this.b, dviVar.b) && bzo.f(this.c, dviVar.c) && bzo.f(this.d, dviVar.d);
+        return nullSafeIsEqual(this.a, dviVar.a) && nullSafeIsEqual(this.b, dviVar.b)
+                && nullSafeIsEqual(this.c, dviVar.c) && nullSafeIsEqual(this.d, dviVar.d);
     }
 
     public final int hashCode() {

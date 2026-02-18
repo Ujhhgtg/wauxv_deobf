@@ -9,37 +9,37 @@ import android.os.Bundle;
 public abstract class auy implements Application.ActivityLifecycleCallbacks {
     @Override // android.app.Application.ActivityLifecycleCallbacks
     public void onActivityCreated(Activity activity, Bundle bundle) {
-        bzo.q(activity, "activity");
+        throwIfVar1IsNull(activity, "activity");
     }
 
     @Override // android.app.Application.ActivityLifecycleCallbacks
     public void onActivityDestroyed(Activity activity) {
-        bzo.q(activity, "activity");
+        throwIfVar1IsNull(activity, "activity");
     }
 
     @Override // android.app.Application.ActivityLifecycleCallbacks
     public void onActivityPaused(Activity activity) {
-        bzo.q(activity, "activity");
+        throwIfVar1IsNull(activity, "activity");
     }
 
     @Override // android.app.Application.ActivityLifecycleCallbacks
     public void onActivityResumed(Activity activity) {
-        bzo.q(activity, "activity");
+        throwIfVar1IsNull(activity, "activity");
     }
 
     @Override // android.app.Application.ActivityLifecycleCallbacks
     public void onActivitySaveInstanceState(Activity activity, Bundle bundle) {
-        bzo.q(activity, "activity");
-        bzo.q(bundle, "outState");
+        throwIfVar1IsNull(activity, "activity");
+        throwIfVar1IsNull(bundle, "outState");
     }
 
     @Override // android.app.Application.ActivityLifecycleCallbacks
     public void onActivityStarted(Activity activity) {
-        bzo.q(activity, "activity");
+        throwIfVar1IsNull(activity, "activity");
     }
 
     @Override // android.app.Application.ActivityLifecycleCallbacks
     public void onActivityStopped(Activity activity) {
-        bzo.q(activity, "activity");
+        throwIfVar1IsNull(activity, "activity");
     }
 }

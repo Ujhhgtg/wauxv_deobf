@@ -11,7 +11,7 @@ import me.hd.wauxv.R;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class dko implements bgf {
+public final /* synthetic */ class dko implements IHasInvokeMethod {
     public final /* synthetic */ int a;
 
     public /* synthetic */ dko(int i) {
@@ -54,20 +54,22 @@ public final /* synthetic */ class dko implements bgf {
         switch (i) {
             case 0:
                 bah bahVar = (bah) obj;
-                String[] strArr = {"com.tencent.mm.plugin.sns.model" /* cnb.z(-359729280842538L) */};
+                String[] strArr = { "com.tencent.mm.plugin.sns.model" /* cnb.z(-359729280842538L) */ };
                 bahVar.getClass();
                 bahVar.a = la.ab(strArr);
                 cdj cdjVar = new cdj();
-                cdjVar.t("getSnsVideoPath" /* cnb.z(-359591841889066L) */, "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* cnb.z(-360072878226218L) */);
+                cdjVar.t("getSnsVideoPath" /* cnb.z(-359591841889066L) */,
+                        "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* cnb.z(-360072878226218L) */);
                 bahVar.d = cdjVar;
                 return ensVar;
             case 1:
                 bah bahVar2 = (bah) obj;
-                String[] strArr2 = {"com.tencent.mm.plugin.sns.model" /* cnb.z(-356297601973034L) */};
+                String[] strArr2 = { "com.tencent.mm.plugin.sns.model" /* cnb.z(-356297601973034L) */ };
                 bahVar2.getClass();
                 bahVar2.a = la.ab(strArr2);
                 cdj cdjVar2 = new cdj();
-                cdjVar2.t("getSnsVideoThumbImagePath" /* cnb.z(-356709918833450L) */, "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* cnb.z(-356615429552938L) */);
+                cdjVar2.t("getSnsVideoThumbImagePath" /* cnb.z(-356709918833450L) */,
+                        "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* cnb.z(-356615429552938L) */);
                 bahVar2.d = cdjVar2;
                 return ensVar;
             case 2:
@@ -75,18 +77,20 @@ public final /* synthetic */ class dko implements bgf {
                 return ensVar;
             case 3:
                 bah bahVar3 = (bah) obj;
-                String[] strArr3 = {"com.tencent.mm.plugin.sns.model" /* cnb.z(-358230337256234L) */};
+                String[] strArr3 = { "com.tencent.mm.plugin.sns.model" /* cnb.z(-358230337256234L) */ };
                 bahVar3.getClass();
                 bahVar3.a = la.ab(strArr3);
                 cdj cdjVar3 = new cdj();
-                cdjVar3.t("MicroMsg.SnsVideoService" /* cnb.z(-357543142488874L) */, "add video task, but url is weixin, do nothing" /* cnb.z(-357384228698922L) */);
+                cdjVar3.t("MicroMsg.SnsVideoService" /* cnb.z(-357543142488874L) */,
+                        "add video task, but url is weixin, do nothing" /* cnb.z(-357384228698922L) */);
                 bahVar3.d = cdjVar3;
                 return ensVar;
             case 4:
                 View view = (View) obj;
                 View viewK = dkz.k(view, R.layout.module_dialog_sport_step, null, false);
                 int i4 = R.id.moduleDialogEdtSportModifyStep;
-                TextInputEditText textInputEditText = (TextInputEditText) cnd.aq(viewK, R.id.moduleDialogEdtSportModifyStep);
+                TextInputEditText textInputEditText = (TextInputEditText) cnd.aq(viewK,
+                        R.id.moduleDialogEdtSportModifyStep);
                 if (textInputEditText != null) {
                     i4 = R.id.moduleDialogInputSportModifyStep;
                     if (((TextInputLayout) cnd.aq(viewK, R.id.moduleDialogInputSportModifyStep)) != null) {
@@ -106,20 +110,22 @@ public final /* synthetic */ class dko implements bgf {
                         return ensVar;
                     }
                 }
-                throw new NullPointerException("Missing required view with ID: " /* cnb.z(-659741336402730L) */.concat(viewK.getResources().getResourceName(i4)));
+                throw new NullPointerException("Missing required view with ID: "
+                        /* cnb.z(-659741336402730L) */.concat(viewK.getResources().getResourceName(i4)));
             case 5:
-                ((bmm) obj).h(Long.valueOf(Math.min(dlu.a.l(), 98800L)));
+                ((HookParamWrapper) obj).setResult(Long.valueOf(Math.min(dlu.a.l(), 98800L)));
                 return ensVar;
             case 6:
                 ((amm) obj).c = new dko(i2);
                 return ensVar;
             case 7:
                 bah bahVar4 = (bah) obj;
-                String[] strArr4 = {"com.tencent.mm.plugin.sport.model" /* cnb.z(-501029409913642L) */};
+                String[] strArr4 = { "com.tencent.mm.plugin.sport.model" /* cnb.z(-501029409913642L) */ };
                 bahVar4.getClass();
                 bahVar4.a = la.ab(strArr4);
                 cdj cdjVar4 = new cdj();
-                cdjVar4.t("MicroMsg.Sport.DeviceStepManager" /* cnb.z(-500831841418026L) */, "get today step from %s todayStep %d" /* cnb.z(-501257043180330L) */);
+                cdjVar4.t("MicroMsg.Sport.DeviceStepManager" /* cnb.z(-500831841418026L) */,
+                        "get today step from %s todayStep %d" /* cnb.z(-501257043180330L) */);
                 bahVar4.d = cdjVar4;
                 return ensVar;
             case 8:
@@ -128,15 +134,19 @@ public final /* synthetic */ class dko implements bgf {
             case 9:
                 bag bagVar = (bag) obj;
                 zb zbVar = new zb();
-                zbVar.k("MicroMsg.DBInit" /* cnb.z(-90838558309162L) */, "initSysDB checkini:%b exist:%b db:%s " /* cnb.z(-90769838832426L) */);
+                zbVar.k("MicroMsg.DBInit" /* cnb.z(-90838558309162L) */, "initSysDB checkini:%b exist:%b db:%s " /*
+                                                                                                                  * cnb.
+                                                                                                                  * z(-
+                                                                                                                  * 90769838832426L)
+                                                                                                                  */);
                 bagVar.getClass();
                 bagVar.b = zbVar;
                 return ensVar;
             case 10:
-                bmm bmmVar = (bmm) obj;
-                bmmVar.getClass();
+                HookParamWrapper hookParam = (HookParamWrapper) obj;
+                hookParam.getClass();
                 try {
-                    objX = bmmVar.d()[0];
+                    objX = hookParam.getArgs()[0];
                     if (objX == null) {
                         objX = null;
                     }
@@ -149,7 +159,7 @@ public final /* synthetic */ class dko implements bgf {
                 String str2 = (String) objX;
                 str = str2 != null ? str2 : "";
                 try {
-                    objX2 = bmmVar.d()[1];
+                    objX2 = hookParam.getArgs()[1];
                     if (objX2 == null) {
                         objX2 = null;
                     }
@@ -160,7 +170,7 @@ public final /* synthetic */ class dko implements bgf {
                     objX2 = null;
                 }
                 try {
-                    objX3 = bmmVar.d()[2];
+                    objX3 = hookParam.getArgs()[2];
                     if (objX3 == null) {
                         objX3 = null;
                     }
@@ -170,32 +180,37 @@ public final /* synthetic */ class dko implements bgf {
                 if (objX3 instanceof dcx) {
                     objX3 = null;
                 }
-                bzo.n(objX3);
+                throwIfVar1IsNull(objX3);
                 ContentValues contentValues = (ContentValues) objX3;
                 try {
-                    objX4 = bmmVar.d()[3];
+                    objX4 = hookParam.getArgs()[3];
                     if (objX4 == null) {
                         objX4 = null;
                     }
                 } catch (Throwable th4) {
                     objX4 = bhu.x(th4);
                 }
-                for (bob bobVar : dly.b) {
+                for (IDatabaseOperationsListener bobVar : dly.b) {
                     try {
                         bobVar.s(str, contentValues);
                     } catch (Exception e) {
                         ArrayList arrayList = ewq.a;
                         StringBuilder sb = new StringBuilder();
                         sb.append("onDatabaseInsertBefore " /* cnb.z(-54709293415210L) */);
-                        ewq.e(yg.n(sb, bobVar instanceof doo ? ((doo) bobVar).f() : "LoadHook" /* cnb.z(-54056458386218L) */, -54017803680554L), e, 12);
+                        ewq.e(yg.n(sb,
+                                bobVar instanceof BaseHook ? ((BaseHook) bobVar).getResult() : "LoadHook" /*
+                                                                                                           * cnb.z(-
+                                                                                                           * 54056458386218L)
+                                                                                                           */,
+                                -54017803680554L), e, 12);
                     }
                 }
                 return ensVar;
             case 11:
-                bmm bmmVar2 = (bmm) obj;
-                bmmVar2.getClass();
+                HookParamWrapper hookParam2 = (HookParamWrapper) obj;
+                hookParam2.getClass();
                 try {
-                    objX5 = bmmVar2.d()[0];
+                    objX5 = hookParam2.getArgs()[0];
                     if (objX5 == null) {
                         objX5 = null;
                     }
@@ -208,7 +223,7 @@ public final /* synthetic */ class dko implements bgf {
                 String str3 = (String) objX5;
                 String str4 = str3 == null ? "" : str3;
                 try {
-                    objX6 = bmmVar2.d()[1];
+                    objX6 = hookParam2.getArgs()[1];
                     if (objX6 == null) {
                         objX6 = null;
                     }
@@ -218,10 +233,10 @@ public final /* synthetic */ class dko implements bgf {
                 if (objX6 instanceof dcx) {
                     objX6 = null;
                 }
-                bzo.n(objX6);
+                throwIfVar1IsNull(objX6);
                 ContentValues contentValues2 = (ContentValues) objX6;
                 try {
-                    objX7 = bmmVar2.d()[2];
+                    objX7 = hookParam2.getArgs()[2];
                     if (objX7 == null) {
                         objX7 = null;
                     }
@@ -234,7 +249,7 @@ public final /* synthetic */ class dko implements bgf {
                 String str5 = (String) objX7;
                 String str6 = str5 == null ? "" : str5;
                 try {
-                    objX8 = bmmVar2.d()[3];
+                    objX8 = hookParam2.getArgs()[3];
                     if (objX8 == null) {
                         objX8 = null;
                     }
@@ -246,7 +261,7 @@ public final /* synthetic */ class dko implements bgf {
                 }
                 String[] strArr5 = (String[]) objX8;
                 try {
-                    objX9 = bmmVar2.d()[4];
+                    objX9 = hookParam2.getArgs()[4];
                     if (objX9 == null) {
                         objX9 = null;
                     }
@@ -255,28 +270,33 @@ public final /* synthetic */ class dko implements bgf {
                 }
                 Integer num = (Integer) (objX9 instanceof dcx ? null : objX9);
                 int iIntValue = num != null ? num.intValue() : 0;
-                for (bob bobVar2 : dly.b) {
+                for (IDatabaseOperationsListener bobVar2 : dly.b) {
                     try {
-                        bobVar2.j(bmmVar2, str4, contentValues2, str6, strArr5, iIntValue);
+                        bobVar2.j(hookParam2, str4, contentValues2, str6, strArr5, iIntValue);
                     } catch (Exception e2) {
                         ArrayList arrayList2 = ewq.a;
                         StringBuilder sb2 = new StringBuilder();
                         sb2.append("onDatabaseUpdateBefore " /* cnb.z(-53983443942186L) */);
-                        ewq.e(yg.n(sb2, bobVar2 instanceof doo ? ((doo) bobVar2).f() : "LoadHook" /* cnb.z(-53880364727082L) */, -54408645704490L), e2, 12);
+                        ewq.e(yg.n(sb2,
+                                bobVar2 instanceof BaseHook ? ((BaseHook) bobVar2).getResult() : "LoadHook" /*
+                                                                                                             * cnb.z(-
+                                                                                                             * 53880364727082L)
+                                                                                                             */,
+                                -54408645704490L), e2, 12);
                     }
                 }
                 return ensVar;
             case 12:
-                bmm bmmVar3 = (bmm) obj;
-                bmmVar3.getClass();
+                HookParamWrapper hookParam3 = (HookParamWrapper) obj;
+                hookParam3.getClass();
                 try {
-                    Object obj2 = bmmVar3.d()[0];
+                    Object obj2 = hookParam3.getArgs()[0];
                     break;
                 } catch (Throwable th10) {
                     bhu.x(th10);
                 }
                 try {
-                    objX10 = bmmVar3.d()[1];
+                    objX10 = hookParam3.getArgs()[1];
                     if (objX10 == null) {
                         objX10 = null;
                     }
@@ -289,7 +309,7 @@ public final /* synthetic */ class dko implements bgf {
                 String str7 = (String) objX10;
                 str = str7 != null ? str7 : "";
                 try {
-                    objX11 = bmmVar3.d()[2];
+                    objX11 = hookParam3.getArgs()[2];
                     if (objX11 == null) {
                         objX11 = null;
                     }
@@ -300,7 +320,7 @@ public final /* synthetic */ class dko implements bgf {
                     objX11 = null;
                 }
                 try {
-                    objX12 = bmmVar3.d()[3];
+                    objX12 = hookParam3.getArgs()[3];
                     if (objX12 == null) {
                         objX12 = null;
                     }
@@ -308,27 +328,32 @@ public final /* synthetic */ class dko implements bgf {
                     objX12 = bhu.x(th13);
                 }
                 try {
-                    Object obj3 = bmmVar3.d()[4];
+                    Object obj3 = hookParam3.getArgs()[4];
                     break;
                 } catch (Throwable th14) {
                     bhu.x(th14);
                 }
-                for (bob bobVar3 : dly.b) {
+                for (IDatabaseOperationsListener bobVar3 : dly.b) {
                     try {
-                        bobVar3.n(bmmVar3, str);
+                        bobVar3.n(hookParam3, str);
                     } catch (Exception e3) {
                         ArrayList arrayList3 = ewq.a;
                         StringBuilder sb3 = new StringBuilder();
                         sb3.append("onDatabaseQueryBefore " /* cnb.z(-54374285966122L) */);
-                        ewq.e(yg.n(sb3, bobVar3 instanceof doo ? ((doo) bobVar3).f() : "LoadHook" /* cnb.z(-54258321849130L) */, -54236847012650L), e3, 12);
+                        ewq.e(yg.n(sb3,
+                                bobVar3 instanceof BaseHook ? ((BaseHook) bobVar3).getResult() : "LoadHook" /*
+                                                                                                             * cnb.z(-
+                                                                                                             * 54258321849130L)
+                                                                                                             */,
+                                -54236847012650L), e3, 12);
                     }
                 }
                 return ensVar;
             case 13:
-                bmm bmmVar4 = (bmm) obj;
-                bmmVar4.getClass();
+                HookParamWrapper hookParam4 = (HookParamWrapper) obj;
+                hookParam4.getClass();
                 try {
-                    objX13 = bmmVar4.d()[0];
+                    objX13 = hookParam4.getArgs()[0];
                     if (objX13 == null) {
                         objX13 = null;
                     }
@@ -341,7 +366,7 @@ public final /* synthetic */ class dko implements bgf {
                 String str8 = (String) objX13;
                 String str9 = str8 == null ? "" : str8;
                 try {
-                    objX14 = bmmVar4.d()[1];
+                    objX14 = hookParam4.getArgs()[1];
                     if (objX14 == null) {
                         objX14 = null;
                     }
@@ -351,10 +376,10 @@ public final /* synthetic */ class dko implements bgf {
                 if (objX14 instanceof dcx) {
                     objX14 = null;
                 }
-                bzo.n(objX14);
+                throwIfVar1IsNull(objX14);
                 ContentValues contentValues3 = (ContentValues) objX14;
                 try {
-                    objX15 = bmmVar4.d()[2];
+                    objX15 = hookParam4.getArgs()[2];
                     if (objX15 == null) {
                         objX15 = null;
                     }
@@ -367,7 +392,7 @@ public final /* synthetic */ class dko implements bgf {
                 String str10 = (String) objX15;
                 String str11 = str10 == null ? "" : str10;
                 try {
-                    objX16 = bmmVar4.d()[3];
+                    objX16 = hookParam4.getArgs()[3];
                     if (objX16 == null) {
                         objX16 = null;
                     }
@@ -379,7 +404,7 @@ public final /* synthetic */ class dko implements bgf {
                 }
                 String[] strArr6 = (String[]) objX16;
                 try {
-                    objX17 = bmmVar4.d()[4];
+                    objX17 = hookParam4.getArgs()[4];
                     if (objX17 == null) {
                         objX17 = null;
                     }
@@ -388,22 +413,27 @@ public final /* synthetic */ class dko implements bgf {
                 }
                 Integer num2 = (Integer) (objX17 instanceof dcx ? null : objX17);
                 int iIntValue2 = num2 != null ? num2.intValue() : 0;
-                for (bob bobVar4 : dly.b) {
+                for (IDatabaseOperationsListener bobVar4 : dly.b) {
                     try {
-                        bobVar4.l(bmmVar4, str9, contentValues3, str11, strArr6, iIntValue2);
+                        bobVar4.l(hookParam4, str9, contentValues3, str11, strArr6, iIntValue2);
                     } catch (Exception e4) {
                         ArrayList arrayList4 = ewq.a;
                         StringBuilder sb4 = new StringBuilder();
                         sb4.append("onCompatUpdateBefore " /* cnb.z(-54202487274282L) */);
-                        ewq.e(yg.n(sb4, bobVar4 instanceof doo ? ((doo) bobVar4).f() : "LoadHook" /* cnb.z(-60138132077354L) */, -60099477371690L), e4, 12);
+                        ewq.e(yg.n(sb4,
+                                bobVar4 instanceof BaseHook ? ((BaseHook) bobVar4).getResult() : "LoadHook" /*
+                                                                                                             * cnb.z(-
+                                                                                                             * 60138132077354L)
+                                                                                                             */,
+                                -60099477371690L), e4, 12);
                     }
                 }
                 return ensVar;
             case 14:
-                bmm bmmVar5 = (bmm) obj;
-                bmmVar5.getClass();
+                HookParamWrapper hookParam5 = (HookParamWrapper) obj;
+                hookParam5.getClass();
                 try {
-                    objX18 = bmmVar5.d()[0];
+                    objX18 = hookParam5.getArgs()[0];
                     if (objX18 == null) {
                         objX18 = null;
                     }
@@ -416,7 +446,7 @@ public final /* synthetic */ class dko implements bgf {
                 String str12 = (String) objX18;
                 str = str12 != null ? str12 : "";
                 try {
-                    objX19 = bmmVar5.d()[1];
+                    objX19 = hookParam5.getArgs()[1];
                     if (objX19 == null) {
                         objX19 = null;
                     }
@@ -424,33 +454,39 @@ public final /* synthetic */ class dko implements bgf {
                     objX19 = bhu.x(th21);
                 }
                 try {
-                    Object obj4 = bmmVar5.d()[2];
+                    Object obj4 = hookParam5.getArgs()[2];
                     break;
                 } catch (Throwable th22) {
                     bhu.x(th22);
                 }
-                for (bob bobVar5 : dly.b) {
+                for (IDatabaseOperationsListener bobVar5 : dly.b) {
                     try {
-                        bobVar5.t(bmmVar5, str);
+                        bobVar5.t(hookParam5, str);
                     } catch (Exception e5) {
                         ArrayList arrayList5 = ewq.a;
                         StringBuilder sb5 = new StringBuilder();
                         sb5.append("onCompatQueryBefore " /* cnb.z(-60065117633322L) */);
-                        ewq.e(yg.n(sb5, bobVar5 instanceof doo ? ((doo) bobVar5).f() : "LoadHook" /* cnb.z(-60026462927658L) */, -59987808221994L), e5, 12);
+                        ewq.e(yg.n(sb5,
+                                bobVar5 instanceof BaseHook ? ((BaseHook) bobVar5).getResult() : "LoadHook" /*
+                                                                                                             * cnb.z(-
+                                                                                                             * 60026462927658L)
+                                                                                                             */,
+                                -59987808221994L), e5, 12);
                     }
                 }
                 return ensVar;
             case 15:
                 String str13 = (String) obj;
-                if (!bzo.f(str13, "startActivity" /* cnb.z(-59953448483626L) */) && !bzo.f(str13, "startActivityForResult" /* cnb.z(-60425894886186L) */)) {
+                if (!nullSafeIsEqual(str13, "startActivity" /* cnb.z(-59953448483626L) */)
+                        && !nullSafeIsEqual(str13, "startActivityForResult" /* cnb.z(-60425894886186L) */)) {
                     z = false;
                 }
                 return Boolean.valueOf(z);
             case 16:
-                bmm bmmVar6 = (bmm) obj;
-                if (bmmVar6.d()[0] instanceof Intent) {
+                HookParamWrapper hookParam6 = (HookParamWrapper) obj;
+                if (hookParam6.getArgs()[0] instanceof Intent) {
                     try {
-                        objX21 = bmmVar6.d()[0];
+                        objX21 = hookParam6.getArgs()[0];
                         if (objX21 == null) {
                             objX21 = null;
                         }
@@ -460,7 +496,7 @@ public final /* synthetic */ class dko implements bgf {
                     intent = (Intent) (objX21 instanceof dcx ? null : objX21);
                 } else {
                     try {
-                        objX20 = bmmVar6.d()[1];
+                        objX20 = hookParam6.getArgs()[1];
                         if (objX20 == null) {
                             objX20 = null;
                         }
@@ -469,15 +505,20 @@ public final /* synthetic */ class dko implements bgf {
                     }
                     intent = (Intent) (objX20 instanceof dcx ? null : objX20);
                 }
-                bzo.n(intent);
+                throwIfVar1IsNull(intent);
                 for (boc bocVar : dmi.b) {
                     try {
-                        bocVar._cc(bmmVar6, intent);
+                        bocVar._cc(hookParam6, intent);
                     } catch (Exception e6) {
                         ArrayList arrayList6 = ewq.a;
                         StringBuilder sb6 = new StringBuilder();
                         sb6.append("onStartActivityIntent " /* cnb.z(-60327110638378L) */);
-                        ewq.e(yg.n(sb6, bocVar instanceof doo ? ((doo) bocVar).f() : "LoadHook" /* cnb.z(-60211146521386L) */, -59639915871018L), e6, 12);
+                        ewq.e(yg.n(sb6,
+                                bocVar instanceof BaseHook ? ((BaseHook) bocVar).getResult() : "LoadHook" /*
+                                                                                                           * cnb.z(-
+                                                                                                           * 60211146521386L)
+                                                                                                           */,
+                                -59639915871018L), e6, 12);
                     }
                 }
                 return ensVar;
@@ -495,7 +536,7 @@ public final /* synthetic */ class dko implements bgf {
                 return ensVar;
             case 21:
                 bag bagVar2 = (bag) obj;
-                String[] strArr7 = {"com.tencent.mm.storage" /* cnb.z(-366897581259562L) */};
+                String[] strArr7 = { "com.tencent.mm.storage" /* cnb.z(-366897581259562L) */ };
                 bagVar2.getClass();
                 bagVar2.a = la.ab(strArr7);
                 zb zbVar2 = new zb();
@@ -504,7 +545,7 @@ public final /* synthetic */ class dko implements bgf {
                 return ensVar;
             case 22:
                 bag bagVar3 = (bag) obj;
-                String[] strArr8 = {"com.tencent.mm.storage" /* cnb.z(-366373595249450L) */};
+                String[] strArr8 = { "com.tencent.mm.storage" /* cnb.z(-366373595249450L) */ };
                 bagVar3.getClass();
                 bagVar3.a = la.ab(strArr8);
                 zb zbVar3 = new zb();
@@ -513,16 +554,17 @@ public final /* synthetic */ class dko implements bgf {
                 return ensVar;
             case 23:
                 bag bagVar4 = (bag) obj;
-                String[] strArr9 = {"com.tencent.mm.storage" /* cnb.z(-367206818904874L) */};
+                String[] strArr9 = { "com.tencent.mm.storage" /* cnb.z(-367206818904874L) */ };
                 bagVar4.getClass();
                 bagVar4.a = la.ab(strArr9);
                 zb zbVar4 = new zb();
-                zbVar4.k("MicroMsg.MsgInfoStorage" /* cnb.z(-367108034657066L) */, "deleted dirty msg ,count is %d" /* cnb.z(-367004955441962L) */);
+                zbVar4.k("MicroMsg.MsgInfoStorage" /* cnb.z(-367108034657066L) */,
+                        "deleted dirty msg ,count is %d" /* cnb.z(-367004955441962L) */);
                 bagVar4.b = zbVar4;
                 return ensVar;
             case 24:
                 bag bagVar5 = (bag) obj;
-                String[] strArr10 = {"com.tencent.mm.plugin.messenger.foundation" /* cnb.z(-366626998319914L) */};
+                String[] strArr10 = { "com.tencent.mm.plugin.messenger.foundation" /* cnb.z(-366626998319914L) */ };
                 bagVar5.getClass();
                 bagVar5.a = la.ab(strArr10);
                 zb zbVar5 = new zb();
@@ -540,10 +582,10 @@ public final /* synthetic */ class dko implements bgf {
             case 27:
                 return Boolean.valueOf(((View) obj).getVisibility() == 0);
             case 28:
-                bmm bmmVar7 = (bmm) obj;
-                bmmVar7.getClass();
+                HookParamWrapper hookParam7 = (HookParamWrapper) obj;
+                hookParam7.getClass();
                 try {
-                    objX22 = bmmVar7.d()[0];
+                    objX22 = hookParam7.getArgs()[0];
                     if (objX22 == null) {
                         objX22 = null;
                     }
@@ -551,22 +593,27 @@ public final /* synthetic */ class dko implements bgf {
                     objX22 = bhu.x(th25);
                 }
                 Object obj5 = objX22 instanceof dcx ? null : objX22;
-                bzo.n(obj5);
+                throwIfVar1IsNull(obj5);
                 String str14 = (String) obj5;
                 try {
-                    Object obj6 = bmmVar7.d()[1];
+                    Object obj6 = hookParam7.getArgs()[1];
                     break;
                 } catch (Throwable th26) {
                     bhu.x(th26);
                 }
                 for (bod bodVar : dou.b) {
                     try {
-                        bodVar.d(bmmVar7, str14);
+                        bodVar.d(hookParam7, str14);
                     } catch (Exception e7) {
                         ArrayList arrayList7 = ewq.a;
                         StringBuilder sb7 = new StringBuilder();
                         sb7.append("onGetSyncConfig " /* cnb.z(-59502476917546L) */);
-                        ewq.e(yg.n(sb7, bodVar instanceof doo ? ((doo) bodVar).f() : "LoadHook" /* cnb.z(-59429462473514L) */, -59407987637034L), e7, 12);
+                        ewq.e(yg.n(sb7,
+                                bodVar instanceof BaseHook ? ((BaseHook) bodVar).getResult() : "LoadHook" /*
+                                                                                                           * cnb.z(-
+                                                                                                           * 59429462473514L)
+                                                                                                           */,
+                                -59407987637034L), e7, 12);
                     }
                 }
                 return ensVar;

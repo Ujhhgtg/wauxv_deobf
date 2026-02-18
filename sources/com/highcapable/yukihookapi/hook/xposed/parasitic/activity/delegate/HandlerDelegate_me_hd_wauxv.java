@@ -39,8 +39,8 @@ public final class HandlerDelegate_me_hd_wauxv implements Handler.Callback {
         this.baseInstance = callback;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:14:0x0063  */
-    /* JADX WARN: Found duplicated region for block: B:64:0x01bf  */
+    /* JADX WARN: Found duplicated region for block: B:14:0x0063 */
+    /* JADX WARN: Found duplicated region for block: B:64:0x01bf */
     @Override // android.os.Handler.Callback
     public boolean handleMessage(Message message) throws IllegalAccessException {
         Bundle bundle;
@@ -67,7 +67,7 @@ public final class HandlerDelegate_me_hd_wauxv implements Handler.Callback {
             azk azkVar2 = (azk) bkc.e.getValue();
             if (azkVar2 != null) {
                 azk azkVar3 = new azk(azkVar2.a);
-                azkVar3.h(intent);
+                azkVar3.locateDex(intent);
                 try {
                     objX = azkVar3.e();
                 } catch (Throwable th) {
@@ -100,7 +100,7 @@ public final class HandlerDelegate_me_hd_wauxv implements Handler.Callback {
             cdeVarT.ab = "getCallbacks";
             cdk cdkVar = (cdk) aaz.g(cdeVarT.aj());
             if (cdkVar != null) {
-                cdkVar.h(message.obj);
+                cdkVar.locateDex(message.obj);
                 list = (List) cdkVar.i(new Object[0]);
                 if (list == null || list.isEmpty()) {
                     list = null;
@@ -127,7 +127,7 @@ public final class HandlerDelegate_me_hd_wauxv implements Handler.Callback {
                     azk azkVar5 = (azk) bkc.e.getValue();
                     if (azkVar5 != null) {
                         azk azkVar6 = new azk(azkVar5.a);
-                        azkVar6.h(intent2);
+                        azkVar6.locateDex(intent2);
                         try {
                             objX2 = azkVar6.e();
                         } catch (Throwable th2) {
@@ -171,7 +171,7 @@ public final class HandlerDelegate_me_hd_wauxv implements Handler.Callback {
                                 bmuVarBi4.v(true);
                                 cde cdeVarT4 = bmuVarBi4.t();
                                 cdeVarT4.ab = "getLaunchingActivity";
-                                cdeVarT4.z(Arrays.copyOf(new Object[]{dal.b(IBinder.class)}, 1));
+                                cdeVarT4.z(Arrays.copyOf(new Object[] { dal.b(IBinder.class) }, 1));
                                 cdk cdkVar4 = (cdk) aaz.g(cdeVarT4.aj());
                                 objF = cdkVar4 != null ? cdkVar4.f(objF2) : null;
                             }

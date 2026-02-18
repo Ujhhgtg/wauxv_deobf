@@ -23,8 +23,12 @@ import net.bytebuddy.description.modifier.Visibility;
 public interface ModifierReviewable {
     public static final int EMPTY_MASK = 0;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
-    public static abstract class AbstractBase implements ForTypeDefinition, ForFieldDescription, ForMethodDescription, ForParameterDescription, ForModuleDescription, ForModuleRequirement {
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
+    public static abstract class AbstractBase implements ForTypeDefinition, ForFieldDescription, ForMethodDescription,
+            ForParameterDescription, ForModuleDescription, ForModuleRequirement {
         private boolean matchesMask(int i) {
             return (getModifiers() & i) == i;
         }
@@ -47,7 +51,7 @@ public interface ModifierReviewable {
             if (i == 64) {
                 return FieldManifestation.VOLATILE;
             }
-            throw new IllegalStateException(bjs.i(modifiers, "Unexpected modifiers: "));
+            throw new IllegalStateException(concatVar2Var1(modifiers, "Unexpected modifiers: "));
         }
 
         @Override // net.bytebuddy.description.ModifierReviewable.ForFieldDescription
@@ -60,7 +64,7 @@ public interface ModifierReviewable {
             if (i == 128) {
                 return FieldPersistence.TRANSIENT;
             }
-            throw new IllegalStateException(bjs.i(modifiers, "Unexpected modifiers: "));
+            throw new IllegalStateException(concatVar2Var1(modifiers, "Unexpected modifiers: "));
         }
 
         @Override // net.bytebuddy.description.ModifierReviewable.OfMandatable
@@ -93,7 +97,7 @@ public interface ModifierReviewable {
             if (i == 1024) {
                 return MethodManifestation.ABSTRACT;
             }
-            throw new IllegalStateException(bjs.i(modifiers, "Unexpected modifiers: "));
+            throw new IllegalStateException(concatVar2Var1(modifiers, "Unexpected modifiers: "));
         }
 
         @Override // net.bytebuddy.description.ModifierReviewable.ForMethodDescription
@@ -160,7 +164,7 @@ public interface ModifierReviewable {
             if (i == 9728) {
                 return TypeManifestation.ANNOTATION;
             }
-            throw new IllegalStateException(bjs.i(modifiers, "Unexpected modifiers: "));
+            throw new IllegalStateException(concatVar2Var1(modifiers, "Unexpected modifiers: "));
         }
 
         @Override // net.bytebuddy.description.ModifierReviewable.OfByteCodeElement
@@ -179,7 +183,7 @@ public interface ModifierReviewable {
             if (i == 4) {
                 return Visibility.PROTECTED;
             }
-            throw new IllegalStateException(bjs.i(modifiers, "Unexpected modifiers: "));
+            throw new IllegalStateException(concatVar2Var1(modifiers, "Unexpected modifiers: "));
         }
 
         @Override // net.bytebuddy.description.ModifierReviewable.OfAbstraction
@@ -298,7 +302,10 @@ public interface ModifierReviewable {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface ForFieldDescription extends OfEnumeration {
         FieldManifestation getFieldManifestation();
 
@@ -309,7 +316,10 @@ public interface ModifierReviewable {
         boolean isVolatile();
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface ForMethodDescription extends OfAbstraction {
         MethodManifestation getMethodManifestation();
 
@@ -328,14 +338,20 @@ public interface ModifierReviewable {
         boolean isVarArgs();
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface ForModuleDescription extends ModifierReviewable {
         Openness getOpenness();
 
         boolean isOpen();
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface ForModuleRequirement extends OfMandatable {
         RequiredPhase getRequiredPhase();
 
@@ -346,14 +362,20 @@ public interface ModifierReviewable {
         boolean isTransitive();
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface ForParameterDescription extends OfMandatable {
         ParameterManifestation getParameterManifestation();
 
         ProvisioningState getProvisioningState();
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface ForTypeDefinition extends OfAbstraction, OfEnumeration {
         TypeManifestation getTypeManifestation();
 
@@ -362,12 +384,18 @@ public interface ModifierReviewable {
         boolean isInterface();
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface OfAbstraction extends OfByteCodeElement {
         boolean isAbstract();
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface OfByteCodeElement extends ModifierReviewable {
         Ownership getOwnership();
 
@@ -386,14 +414,20 @@ public interface ModifierReviewable {
         boolean isStatic();
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface OfEnumeration extends OfByteCodeElement {
         EnumerationState getEnumerationState();
 
         boolean isEnum();
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface OfMandatable extends ModifierReviewable {
         Mandate getMandate();
 

@@ -7,7 +7,7 @@ public final class cpe implements btd {
     public final dfy d;
 
     public cpe(btd btdVar) {
-        bzo.q(btdVar, "serializer");
+        throwIfVar1IsNull(btdVar, "serializer");
         this.b = btdVar;
         this.d = new dfy(btdVar.getDescriptor());
     }
@@ -33,7 +33,7 @@ public final class cpe implements btd {
         if (this == obj) {
             return true;
         }
-        return obj != null && cpe.class == obj.getClass() && bzo.f(this.b, ((cpe) obj).b);
+        return obj != null && cpe.class == obj.getClass() && nullSafeIsEqual(this.b, ((cpe) obj).b);
     }
 
     @Override // me.hd.wauxv.obf.btd

@@ -45,14 +45,14 @@ public final class km extends ad {
         if (i < ((i3 + 1) >> 1)) {
             if (iM == 0) {
                 Object[] objArr = this.e;
-                bzo.q(objArr, "<this>");
+                throwIfVar1IsNull(objArr, "<this>");
                 iM = objArr.length;
             }
             int i4 = iM - 1;
             int i5 = this.d;
             if (i5 == 0) {
                 Object[] objArr2 = this.e;
-                bzo.q(objArr2, "<this>");
+                throwIfVar1IsNull(objArr2, "<this>");
                 length = objArr2.length - 1;
             } else {
                 length = i5 - 1;
@@ -90,7 +90,7 @@ public final class km extends ad {
 
     @Override // java.util.AbstractList, java.util.List
     public final boolean addAll(int i, Collection collection) {
-        bzo.q(collection, "elements");
+        throwIfVar1IsNull(collection, "elements");
         int i2 = this.f;
         if (i < 0 || i > i2) {
             throw new IndexOutOfBoundsException(dkz.p(i, "index: ", ", size: ", i2));
@@ -177,7 +177,7 @@ public final class km extends ad {
         int length = this.d;
         if (length == 0) {
             Object[] objArr = this.e;
-            bzo.q(objArr, "<this>");
+            throwIfVar1IsNull(objArr, "<this>");
             length = objArr.length;
         }
         int i = length - 1;
@@ -242,7 +242,8 @@ public final class km extends ad {
         return obj;
     }
 
-    @Override // java.util.AbstractList, java.util.AbstractCollection, java.util.Collection, java.util.List
+    @Override // java.util.AbstractList, java.util.AbstractCollection, java.util.Collection,
+              // java.util.List
     public final void clear() {
         if (!isEmpty()) {
             n();
@@ -321,7 +322,7 @@ public final class km extends ad {
     }
 
     public final int i(int i) {
-        bzo.q(this.e, "<this>");
+        throwIfVar1IsNull(this.e, "<this>");
         if (i == r0.length - 1) {
             return 0;
         }
@@ -335,7 +336,7 @@ public final class km extends ad {
         int length = this.d;
         if (length < iM) {
             while (length < iM) {
-                if (bzo.f(obj, this.e[length])) {
+                if (nullSafeIsEqual(obj, this.e[length])) {
                     i = this.d;
                 } else {
                     length++;
@@ -348,14 +349,14 @@ public final class km extends ad {
         }
         int length2 = this.e.length;
         while (length < length2) {
-            if (bzo.f(obj, this.e[length])) {
+            if (nullSafeIsEqual(obj, this.e[length])) {
                 i = this.d;
             } else {
                 length++;
             }
         }
         for (int i2 = 0; i2 < iM; i2++) {
-            if (bzo.f(obj, this.e[i2])) {
+            if (nullSafeIsEqual(obj, this.e[i2])) {
                 length = i2 + this.e.length;
                 i = this.d;
             }
@@ -406,7 +407,7 @@ public final class km extends ad {
         if (i2 < iM) {
             length = iM - 1;
             if (i2 <= length) {
-                while (!bzo.f(obj, this.e[length])) {
+                while (!nullSafeIsEqual(obj, this.e[length])) {
                     if (length != i2) {
                         length--;
                     }
@@ -418,18 +419,18 @@ public final class km extends ad {
         }
         if (i2 > iM) {
             for (int i3 = iM - 1; -1 < i3; i3--) {
-                if (bzo.f(obj, this.e[i3])) {
+                if (nullSafeIsEqual(obj, this.e[i3])) {
                     length = i3 + this.e.length;
                     i = this.d;
                     return length - i;
                 }
             }
             Object[] objArr = this.e;
-            bzo.q(objArr, "<this>");
+            throwIfVar1IsNull(objArr, "<this>");
             length = objArr.length - 1;
             int i4 = this.d;
             if (i4 <= length) {
-                while (!bzo.f(obj, this.e[length])) {
+                while (!nullSafeIsEqual(obj, this.e[length])) {
                     if (length != i4) {
                         length--;
                     }
@@ -463,7 +464,7 @@ public final class km extends ad {
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
     public final boolean removeAll(Collection collection) {
         int iM;
-        bzo.q(collection, "elements");
+        throwIfVar1IsNull(collection, "elements");
         boolean z = false;
         z = false;
         z = false;
@@ -607,7 +608,7 @@ public final class km extends ad {
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
     public final boolean retainAll(Collection collection) {
         int iM;
-        bzo.q(collection, "elements");
+        throwIfVar1IsNull(collection, "elements");
         boolean z = false;
         z = false;
         z = false;
@@ -690,19 +691,20 @@ public final class km extends ad {
         } else if (i > 0) {
             objArr = new Object[i];
         } else {
-            throw new IllegalArgumentException(bjs.i(i, "Illegal Capacity: "));
+            throw new IllegalArgumentException(concatVar2Var1(i, "Illegal Capacity: "));
         }
         this.e = objArr;
     }
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
     public final Object[] toArray(Object[] objArr) {
-        bzo.q(objArr, "array");
+        throwIfVar1IsNull(objArr, "array");
         int length = objArr.length;
         int i = this.f;
         if (length < i) {
             Object objNewInstance = Array.newInstance(objArr.getClass().getComponentType(), i);
-            bzo.o(objNewInstance, "null cannot be cast to non-null type kotlin.Array<T of kotlin.collections.ArraysKt__ArraysJVMKt.arrayOfNulls>");
+            throwIfVar1IsNull(objNewInstance,
+                    "null cannot be cast to non-null type kotlin.Array<T of kotlin.collections.ArraysKt__ArraysJVMKt.arrayOfNulls>");
             objArr = (Object[]) objNewInstance;
         }
         int iM = m(this.f + this.d);
@@ -722,7 +724,8 @@ public final class km extends ad {
         return objArr;
     }
 
-    @Override // java.util.AbstractList, java.util.AbstractCollection, java.util.Collection, java.util.List
+    @Override // java.util.AbstractList, java.util.AbstractCollection, java.util.Collection,
+              // java.util.List
     public final boolean add(Object obj) {
         addLast(obj);
         return true;
@@ -730,7 +733,7 @@ public final class km extends ad {
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
     public final boolean addAll(Collection collection) {
-        bzo.q(collection, "elements");
+        throwIfVar1IsNull(collection, "elements");
         if (collection.isEmpty()) {
             return false;
         }

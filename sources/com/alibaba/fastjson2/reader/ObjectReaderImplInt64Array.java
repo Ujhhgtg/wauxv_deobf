@@ -21,21 +21,26 @@ public final class ObjectReaderImplInt64Array extends ObjectReaderPrimitive {
         super(Long[].class);
     }
 
-    @Override // com.alibaba.fastjson2.reader.ObjectReaderPrimitive, com.alibaba.fastjson2.reader.ObjectReader
+    @Override // com.alibaba.fastjson2.reader.ObjectReaderPrimitive,
+              // com.alibaba.fastjson2.reader.ObjectReader
     public /* bridge */ /* synthetic */ Object createInstance(long j) {
         return super.createInstance(j);
     }
 
-    @Override // com.alibaba.fastjson2.reader.ObjectReaderPrimitive, com.alibaba.fastjson2.reader.ObjectReader
+    @Override // com.alibaba.fastjson2.reader.ObjectReaderPrimitive,
+              // com.alibaba.fastjson2.reader.ObjectReader
     public /* bridge */ /* synthetic */ Class getObjectClass() {
         return super.getObjectClass();
     }
 
-    @Override // com.alibaba.fastjson2.reader.ObjectReaderPrimitive, com.alibaba.fastjson2.reader.ObjectReader
+    @Override // com.alibaba.fastjson2.reader.ObjectReaderPrimitive,
+              // com.alibaba.fastjson2.reader.ObjectReader
     public Object readJSONBObject(JSONReader jSONReader, Type type, Object obj, long j) {
         if (jSONReader.nextIfMatch(JSONB.Constants.BC_TYPED_ANY)) {
             long typeHashCode = jSONReader.readTypeHashCode();
-            if (typeHashCode != HASH_TYPE && typeHashCode != ObjectReaderImplInt64ValueArray.HASH_TYPE && typeHashCode != ObjectReaderImplInt32Array.HASH_TYPE && typeHashCode != ObjectReaderImplInt32ValueArray.HASH_TYPE) {
+            if (typeHashCode != HASH_TYPE && typeHashCode != ObjectReaderImplInt64ValueArray.HASH_TYPE
+                    && typeHashCode != ObjectReaderImplInt32Array.HASH_TYPE
+                    && typeHashCode != ObjectReaderImplInt32ValueArray.HASH_TYPE) {
                 throw new JSONException(jSONReader.info("not support type " + jSONReader.getString()));
             }
         }
@@ -58,7 +63,7 @@ public final class ObjectReaderImplInt64Array extends ObjectReaderPrimitive {
         if (!jSONReader.nextIfArrayStart()) {
             if (!jSONReader.isString()) {
                 if (jSONReader.isNumber()) {
-                    return new Long[]{jSONReader.readInt64()};
+                    return new Long[] { jSONReader.readInt64() };
                 }
                 throw new JSONException(jSONReader.info("TODO"));
             }
@@ -101,9 +106,10 @@ public final class ObjectReaderImplInt64Array extends ObjectReaderPrimitive {
             } else if (obj instanceof Number) {
                 lValueOf = Long.valueOf(((Number) obj).longValue());
             } else {
-                Function typeConvert = JSONFactory.getDefaultObjectReaderProvider().getTypeConvert(obj.getClass(), Long.class);
+                Function typeConvert = JSONFactory.getDefaultObjectReaderProvider().getTypeConvert(obj.getClass(),
+                        Long.class);
                 if (typeConvert == null) {
-                    throw new JSONException(bjs.m(obj, new StringBuilder("can not cast to Integer ")));
+                    throw new JSONException(concatVar1GetClass(obj, new StringBuilder("can not cast to Integer ")));
                 }
                 lValueOf = (Long) typeConvert.apply(obj);
             }

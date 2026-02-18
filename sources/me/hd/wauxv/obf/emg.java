@@ -54,7 +54,8 @@ public class emg extends emn {
             methodY = y(cls2);
             cls = cls2;
         } catch (ClassNotFoundException | NoSuchMethodException e) {
-            Log.e("TypefaceCompatApi26Impl", "Unable to collect necessary methods for class ".concat(e.getClass().getName()), e);
+            Log.e("TypefaceCompatApi26Impl",
+                    "Unable to collect necessary methods for class ".concat(e.getClass().getName()), e);
             methodY = null;
             constructor = null;
             methodR = null;
@@ -110,15 +111,18 @@ public class emg extends emn {
     public static Method r(Class cls) {
         Class cls2 = Boolean.TYPE;
         Class cls3 = Integer.TYPE;
-        return cls.getMethod("addFontFromAssetManager", AssetManager.class, String.class, cls3, cls2, cls3, cls3, cls3, FontVariationAxis[].class);
+        return cls.getMethod("addFontFromAssetManager", AssetManager.class, String.class, cls3, cls2, cls3, cls3, cls3,
+                FontVariationAxis[].class);
     }
 
     @Override // me.hd.wauxv.obf.emn
-    public final Typeface s(Context context, bcb bcbVar, Resources resources, int i) throws IllegalAccessException, NoSuchMethodException, InstantiationException, InvocationTargetException {
+    public final Typeface s(Context context, bcb bcbVar, Resources resources, int i)
+            throws IllegalAccessException, NoSuchMethodException, InstantiationException, InvocationTargetException {
         Object objNewInstance;
         Method method = this.k;
         if (method == null) {
-            Log.w("TypefaceCompatApi26Impl", "Unable to collect necessary private methods. Fallback to legacy implementation.");
+            Log.w("TypefaceCompatApi26Impl",
+                    "Unable to collect necessary private methods. Fallback to legacy implementation.");
         }
         if (method != null) {
             try {
@@ -133,7 +137,8 @@ public class emg extends emn {
                 while (i2 < length) {
                     bcc bccVar = bccVarArr[i2];
                     Context context2 = context;
-                    if (v(context2, objNewInstance, bccVar.a, bccVar.e, bccVar.b, bccVar.c ? 1 : 0, FontVariationAxis.fromFontVariationSettings(bccVar.d))) {
+                    if (v(context2, objNewInstance, bccVar.a, bccVar.e, bccVar.b, bccVar.c ? 1 : 0,
+                            FontVariationAxis.fromFontVariationSettings(bccVar.d))) {
                         i2++;
                         context = context2;
                     } else {
@@ -162,7 +167,8 @@ public class emg extends emn {
                 } finally {
                     fileAi.delete();
                 }
-                if (!ewz.ad(fileAi, resources, bccVar2.f) || !p(objNewInstance2, fileAi.getPath(), bccVar2.b, bccVar2.c)) {
+                if (!ewz.ad(fileAi, resources, bccVar2.f)
+                        || !p(objNewInstance2, fileAi.getPath(), bccVar2.b, bccVar2.c)) {
                     return null;
                 }
                 fileAi.delete();
@@ -188,7 +194,8 @@ public class emg extends emn {
         if (bceVarArr.length >= 1) {
             Method method = this.k;
             if (method == null) {
-                Log.w("TypefaceCompatApi26Impl", "Unable to collect necessary private methods. Fallback to legacy implementation.");
+                Log.w("TypefaceCompatApi26Impl",
+                        "Unable to collect necessary private methods. Fallback to legacy implementation.");
             }
             try {
                 if (method != null) {
@@ -197,7 +204,7 @@ public class emg extends emn {
                         if (bceVar.f == 0) {
                             Uri uri = bceVar.a;
                             if (!map.containsKey(uri)) {
-                                map.put(uri, ewz.ao(context, uri));
+                                map.put(uri, ewz.trimStackTraceToClass(context, uri));
                             }
                         }
                     }
@@ -228,7 +235,9 @@ public class emg extends emn {
                             ByteBuffer byteBuffer = (ByteBuffer) mapUnmodifiableMap.get(bceVar2.a);
                             if (byteBuffer != null) {
                                 try {
-                                    zBooleanValue = ((Boolean) this.l.invoke(objNewInstance, byteBuffer, Integer.valueOf(bceVar2.b), null, Integer.valueOf(bceVar2.c), Integer.valueOf(bceVar2.d ? 1 : 0))).booleanValue();
+                                    zBooleanValue = ((Boolean) this.l.invoke(objNewInstance, byteBuffer,
+                                            Integer.valueOf(bceVar2.b), null, Integer.valueOf(bceVar2.c),
+                                            Integer.valueOf(bceVar2.d ? 1 : 0))).booleanValue();
                                 } catch (IllegalAccessException | InvocationTargetException unused2) {
                                     zBooleanValue = false;
                                 }
@@ -244,10 +253,13 @@ public class emg extends emn {
                     }
                 } else {
                     bce bceVar_cf = _cf(bceVarArr, i);
-                    ParcelFileDescriptor parcelFileDescriptorOpenFileDescriptor = context.getContentResolver().openFileDescriptor(bceVar_cf.a, "r", null);
+                    ParcelFileDescriptor parcelFileDescriptorOpenFileDescriptor = context.getContentResolver()
+                            .openFileDescriptor(bceVar_cf.a, "r", null);
                     if (parcelFileDescriptorOpenFileDescriptor != null) {
                         try {
-                            Typeface typefaceBuild = new Typeface.Builder(parcelFileDescriptorOpenFileDescriptor.getFileDescriptor()).setWeight(bceVar_cf.c).setItalic(bceVar_cf.d).build();
+                            Typeface typefaceBuild = new Typeface.Builder(
+                                    parcelFileDescriptorOpenFileDescriptor.getFileDescriptor()).setWeight(bceVar_cf.c)
+                                    .setItalic(bceVar_cf.d).build();
                             parcelFileDescriptorOpenFileDescriptor.close();
                             return typefaceBuild;
                         } catch (Throwable th) {
@@ -271,11 +283,13 @@ public class emg extends emn {
     }
 
     @Override // me.hd.wauxv.obf.emn
-    public final Typeface u(Context context, Resources resources, int i, String str, int i2) throws IllegalAccessException, InstantiationException, InvocationTargetException {
+    public final Typeface u(Context context, Resources resources, int i, String str, int i2)
+            throws IllegalAccessException, InstantiationException, InvocationTargetException {
         Object objNewInstance;
         Method method = this.k;
         if (method == null) {
-            Log.w("TypefaceCompatApi26Impl", "Unable to collect necessary private methods. Fallback to legacy implementation.");
+            Log.w("TypefaceCompatApi26Impl",
+                    "Unable to collect necessary private methods. Fallback to legacy implementation.");
         }
         if (method == null) {
             return super.u(context, resources, i, str, i2);
@@ -298,9 +312,11 @@ public class emg extends emn {
         return null;
     }
 
-    public final boolean v(Context context, Object obj, String str, int i, int i2, int i3, FontVariationAxis[] fontVariationAxisArr) {
+    public final boolean v(Context context, Object obj, String str, int i, int i2, int i3,
+            FontVariationAxis[] fontVariationAxisArr) {
         try {
-            return ((Boolean) this.k.invoke(obj, context.getAssets(), str, 0, Boolean.FALSE, Integer.valueOf(i), Integer.valueOf(i2), Integer.valueOf(i3), fontVariationAxisArr)).booleanValue();
+            return ((Boolean) this.k.invoke(obj, context.getAssets(), str, 0, Boolean.FALSE, Integer.valueOf(i),
+                    Integer.valueOf(i2), Integer.valueOf(i3), fontVariationAxisArr)).booleanValue();
         } catch (IllegalAccessException | InvocationTargetException unused) {
             return false;
         }

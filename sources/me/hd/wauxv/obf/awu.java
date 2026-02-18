@@ -7,9 +7,12 @@ import java.util.concurrent.locks.LockSupport;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public abstract class awu extends awv implements als {
-    public static final /* synthetic */ AtomicReferenceFieldUpdater p = AtomicReferenceFieldUpdater.newUpdater(awu.class, Object.class, "_queue$volatile");
-    public static final /* synthetic */ AtomicReferenceFieldUpdater q = AtomicReferenceFieldUpdater.newUpdater(awu.class, Object.class, "_delayed$volatile");
-    public static final /* synthetic */ AtomicIntegerFieldUpdater r = AtomicIntegerFieldUpdater.newUpdater(awu.class, "_isCompleted$volatile");
+    public static final /* synthetic */ AtomicReferenceFieldUpdater p = AtomicReferenceFieldUpdater
+            .newUpdater(awu.class, Object.class, "_queue$volatile");
+    public static final /* synthetic */ AtomicReferenceFieldUpdater q = AtomicReferenceFieldUpdater
+            .newUpdater(awu.class, Object.class, "_delayed$volatile");
+    public static final /* synthetic */ AtomicIntegerFieldUpdater r = AtomicIntegerFieldUpdater.newUpdater(awu.class,
+            "_isCompleted$volatile");
     private volatile /* synthetic */ Object _delayed$volatile;
     private volatile /* synthetic */ int _isCompleted$volatile;
     private volatile /* synthetic */ Object _queue$volatile;
@@ -55,7 +58,9 @@ public abstract class awu extends awv implements als {
                     aws[] awsVarArr = awtVar.c;
                     aws awsVar = awsVarArr != null ? awsVarArr[0] : null;
                     if (awsVar != null) {
-                        awsVarE = ((jNanoTime - awsVar.c) > 0L ? 1 : ((jNanoTime - awsVar.c) == 0L ? 0 : -1)) >= 0 ? t(awsVar) : false ? awtVar.e(0) : null;
+                        awsVarE = ((jNanoTime - awsVar.c) > 0L ? 1 : ((jNanoTime - awsVar.c) == 0L ? 0 : -1)) >= 0
+                                ? t(awsVar)
+                                : false ? awtVar.e(0) : null;
                     }
                 } catch (Throwable th) {
                     throw th;
@@ -148,7 +153,8 @@ public abstract class awu extends awv implements als {
             }
             if (iH == 1) {
                 bxo bxoVarJ = bxoVar2.j();
-                while (!atomicReferenceFieldUpdater.compareAndSet(this, obj, bxoVarJ) && atomicReferenceFieldUpdater.get(this) == obj) {
+                while (!atomicReferenceFieldUpdater.compareAndSet(this, obj, bxoVarJ)
+                        && atomicReferenceFieldUpdater.get(this) == obj) {
                 }
             } else if (iH == 2) {
                 return false;
@@ -156,12 +162,12 @@ public abstract class awu extends awv implements als {
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:17:0x0027  */
-    /* JADX WARN: Found duplicated region for block: B:20:0x0030  */
-    /* JADX WARN: Found duplicated region for block: B:22:0x0034  */
+    /* JADX WARN: Found duplicated region for block: B:17:0x0027 */
+    /* JADX WARN: Found duplicated region for block: B:20:0x0030 */
+    /* JADX WARN: Found duplicated region for block: B:22:0x0034 */
     /* JADX WARN: Found duplicated region for block: B:24:0x004d A[RETURN] */
     /* JADX WARN: Found duplicated region for block: B:25:0x004e A[RETURN] */
-    /* JADX WARN: Found duplicated region for block: B:26:0x004f  */
+    /* JADX WARN: Found duplicated region for block: B:26:0x004f */
     public final boolean u() {
         Object obj;
         km kmVar = this.z;
@@ -214,7 +220,8 @@ public abstract class awu extends awv implements als {
                             break;
                         }
                         bxo bxoVarJ = bxoVar.j();
-                        while (!atomicReferenceFieldUpdater.compareAndSet(this, obj, bxoVarJ) && atomicReferenceFieldUpdater.get(this) == obj) {
+                        while (!atomicReferenceFieldUpdater.compareAndSet(this, obj, bxoVarJ)
+                                && atomicReferenceFieldUpdater.get(this) == obj) {
                         }
                     } else if (obj != aujVar) {
                         do {
@@ -275,10 +282,11 @@ public abstract class awu extends awv implements als {
             if (awtVar == null) {
                 awt awtVar2 = new awt();
                 awtVar2.a = j;
-                while (!atomicReferenceFieldUpdater.compareAndSet(this, null, awtVar2) && atomicReferenceFieldUpdater.get(this) == null) {
+                while (!atomicReferenceFieldUpdater.compareAndSet(this, null, awtVar2)
+                        && atomicReferenceFieldUpdater.get(this) == null) {
                 }
                 Object obj = atomicReferenceFieldUpdater.get(this);
-                bzo.n(obj);
+                throwIfVar1IsNull(obj);
                 awtVar = (awt) obj;
             }
             iF = awsVar.f(j, awtVar, this);

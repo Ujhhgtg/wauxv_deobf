@@ -108,7 +108,10 @@ public final class aat {
 
     public static int br(int i, float f, int i2) {
         float f2 = 1.0f - f;
-        return Color.argb(Math.round((Color.alpha(i2) * f) + (Color.alpha(i) * f2)), Math.round((Color.red(i2) * f) + (Color.red(i) * f2)), Math.round((Color.green(i2) * f) + (Color.green(i) * f2)), Math.round((Color.blue(i2) * f) + (Color.blue(i) * f2)));
+        return Color.argb(Math.round((Color.alpha(i2) * f) + (Color.alpha(i) * f2)),
+                Math.round((Color.red(i2) * f) + (Color.red(i) * f2)),
+                Math.round((Color.green(i2) * f) + (Color.green(i) * f2)),
+                Math.round((Color.blue(i2) * f) + (Color.blue(i) * f2)));
     }
 
     public static float bs(float f, float f2, float f3, TimeInterpolator timeInterpolator) {
@@ -164,7 +167,8 @@ public final class aat {
             boolean z4 = this.bh != f3;
             boolean z5 = this.ac != typeface;
             StaticLayout staticLayout = this.bi;
-            boolean z6 = z3 || z4 || (staticLayout != null && (fWidth > ((float) staticLayout.getWidth()) ? 1 : (fWidth == ((float) staticLayout.getWidth()) ? 0 : -1)) != 0) || z5 || this.as;
+            boolean z6 = z3 || z4 || (staticLayout != null && (fWidth > ((float) staticLayout.getWidth()) ? 1
+                    : (fWidth == ((float) staticLayout.getWidth()) ? 0 : -1)) != 0) || z5 || this.as;
             this.am = f2;
             this.bh = f3;
             this.ac = typeface;
@@ -188,7 +192,11 @@ public final class aat {
                 alignment = Layout.Alignment.ALIGN_NORMAL;
             } else {
                 int absoluteGravity = Gravity.getAbsoluteGravity(this.j, zBt ? 1 : 0) & 7;
-                alignment = absoluteGravity != 1 ? absoluteGravity != 5 ? this.ai ? Layout.Alignment.ALIGN_OPPOSITE : Layout.Alignment.ALIGN_NORMAL : this.ai ? Layout.Alignment.ALIGN_NORMAL : Layout.Alignment.ALIGN_OPPOSITE : Layout.Alignment.ALIGN_CENTER;
+                alignment = absoluteGravity != 1
+                        ? absoluteGravity != 5
+                                ? this.ai ? Layout.Alignment.ALIGN_OPPOSITE : Layout.Alignment.ALIGN_NORMAL
+                                : this.ai ? Layout.Alignment.ALIGN_NORMAL : Layout.Alignment.ALIGN_OPPOSITE
+                        : Layout.Alignment.ALIGN_CENTER;
             }
             dmp dmpVar = new dmp(this.ag, textPaint, (int) fWidth);
             dmpVar.l = this.af;
@@ -238,7 +246,8 @@ public final class aat {
                         float f6 = this.ao;
                         float f7 = this.ap;
                         int i = this.aq;
-                        textPaint.setShadowLayer(f5, f6, f7, abi.f(i, (Color.alpha(i) * textPaint.getAlpha()) / Opcodes.CONST_METHOD_TYPE));
+                        textPaint.setShadowLayer(f5, f6, f7,
+                                abi.f(i, (Color.alpha(i) * textPaint.getAlpha()) / Opcodes.CONST_METHOD_TYPE));
                     }
                     this.bi.draw(canvas);
                 }
@@ -251,7 +260,8 @@ public final class aat {
                     float f9 = this.ao;
                     float f10 = this.ap;
                     int i3 = this.aq;
-                    textPaint.setShadowLayer(f8, f9, f10, abi.f(i3, (Color.alpha(i3) * textPaint.getAlpha()) / Opcodes.CONST_METHOD_TYPE));
+                    textPaint.setShadowLayer(f8, f9, f10,
+                            abi.f(i3, (Color.alpha(i3) * textPaint.getAlpha()) / Opcodes.CONST_METHOD_TYPE));
                 }
                 int lineBaseline = this.bi.getLineBaseline(0);
                 CharSequence charSequence = this.bm;
@@ -267,7 +277,8 @@ public final class aat {
                     }
                     String str = strTrim;
                     textPaint.setAlpha(alpha);
-                    canvas.drawText(str, 0, Math.min(this.bi.getLineEnd(0), str.length()), 0.0f, f11, (Paint) textPaint);
+                    canvas.drawText(str, 0, Math.min(this.bi.getLineEnd(0), str.length()), 0.0f, f11,
+                            (Paint) textPaint);
                 }
                 canvas = canvas;
             }
@@ -359,7 +370,8 @@ public final class aat {
         StaticLayout staticLayout2 = this.bi;
         if (staticLayout2 == null || this.bn <= 1) {
             CharSequence charSequence3 = this.ah;
-            fMeasureText = charSequence3 != null ? textPaint.measureText(charSequence3, 0, charSequence3.length()) : 0.0f;
+            fMeasureText = charSequence3 != null ? textPaint.measureText(charSequence3, 0, charSequence3.length())
+                    : 0.0f;
         } else {
             fMeasureText = staticLayout2.getWidth();
         }
@@ -449,13 +461,15 @@ public final class aat {
         if (this.c) {
             int alpha = textPaint.getAlpha();
             float f5 = this.e;
-            textPaint.setAlpha((int) ((f2 <= f5 ? ff.g(1.0f, 0.0f, this.d, f5, f2) : ff.g(0.0f, 1.0f, f5, 1.0f, f2)) * alpha));
+            textPaint.setAlpha(
+                    (int) ((f2 <= f5 ? ff.g(1.0f, 0.0f, this.d, f5, f2) : ff.g(0.0f, 1.0f, f5, 1.0f, f2)) * alpha));
             if (i5 >= 31) {
                 float f6 = this.an;
                 float f7 = this.ao;
                 float f8 = this.ap;
                 int i6 = this.aq;
-                textPaint.setShadowLayer(f6, f7, f8, abi.f(i6, (Color.alpha(i6) * textPaint.getAlpha()) / Opcodes.CONST_METHOD_TYPE));
+                textPaint.setShadowLayer(f6, f7, f8,
+                        abi.f(i6, (Color.alpha(i6) * textPaint.getAlpha()) / Opcodes.CONST_METHOD_TYPE));
             }
         }
         viewGroup.postInvalidateOnAnimation();
@@ -496,7 +510,7 @@ public final class aat {
         aas aasVar = new aas(this, 0);
         dqhVar.o();
         this.ae = new ta(aasVar, dqhVar.n);
-        dqhVar.q(viewGroup.getContext(), this.ae);
+        dqhVar.ensureParameterNotNull(viewGroup.getContext(), this.ae);
         bz(false);
     }
 
@@ -551,7 +565,7 @@ public final class aat {
         aas aasVar = new aas(this, 1);
         dqhVar.o();
         this.ad = new ta(aasVar, dqhVar.n);
-        dqhVar.q(viewGroup.getContext(), this.ad);
+        dqhVar.ensureParameterNotNull(viewGroup.getContext(), this.ad);
         bz(false);
     }
 
@@ -641,13 +655,16 @@ public final class aat {
             if (this.c) {
                 int alpha = textPaint.getAlpha();
                 float f5 = this.e;
-                textPaint.setAlpha((int) ((fAr <= f5 ? ff.g(1.0f, 0.0f, this.d, f5, fAr) : ff.g(0.0f, 1.0f, f5, 1.0f, fAr)) * alpha));
+                textPaint.setAlpha(
+                        (int) ((fAr <= f5 ? ff.g(1.0f, 0.0f, this.d, f5, fAr) : ff.g(0.0f, 1.0f, f5, 1.0f, fAr))
+                                * alpha));
                 if (i >= 31) {
                     float f6 = this.an;
                     float f7 = this.ao;
                     float f8 = this.ap;
                     int i2 = this.aq;
-                    textPaint.setShadowLayer(f6, f7, f8, abi.f(i2, (Color.alpha(i2) * textPaint.getAlpha()) / Opcodes.CONST_METHOD_TYPE));
+                    textPaint.setShadowLayer(f6, f7, f8,
+                            abi.f(i2, (Color.alpha(i2) * textPaint.getAlpha()) / Opcodes.CONST_METHOD_TYPE));
                 }
             }
             viewGroup.postInvalidateOnAnimation();

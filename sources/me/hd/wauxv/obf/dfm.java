@@ -48,7 +48,7 @@ public final class dfm extends sj {
             i2 = i4;
         }
         byte[] bArrDigest = messageDigest.digest();
-        bzo.n(bArrDigest);
+        throwIfVar1IsNull(bArrDigest);
         return new sj(bArrDigest);
     }
 
@@ -107,7 +107,7 @@ public final class dfm extends sj {
 
     @Override // me.hd.wauxv.obf.sj
     public final boolean k(sj sjVar, int i) {
-        bzo.q(sjVar, "other");
+        throwIfVar1IsNull(sjVar, "other");
         if (g() - i >= 0) {
             int iAl = cnb.al(this, 0);
             int i2 = 0;
@@ -132,7 +132,7 @@ public final class dfm extends sj {
 
     @Override // me.hd.wauxv.obf.sj
     public final boolean l(byte[] bArr, int i, int i2, int i3) {
-        bzo.q(bArr, "other");
+        throwIfVar1IsNull(bArr, "other");
         if (i < 0 || i > g() - i3 || i2 < 0 || i2 > bArr.length - i3) {
             return false;
         }
@@ -180,7 +180,7 @@ public final class dfm extends sj {
                 rhVar.a = dfjVar;
             } else {
                 dfj dfjVar3 = dfjVar2.g;
-                bzo.n(dfjVar3);
+                throwIfVar1IsNull(dfjVar3);
                 dfjVar3.i(dfjVar);
             }
             i2 += iMin;

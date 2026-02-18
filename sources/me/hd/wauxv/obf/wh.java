@@ -7,7 +7,7 @@ import org.luckypray.dexkit.DexKitBridge;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class wh extends doo implements bng, bns {
+public final class wh extends BaseHook implements IRequiresDexLocate, bns {
     public static final wh a;
     public static final List b;
     public static final String c;
@@ -26,7 +26,17 @@ public final class wh extends doo implements bng, bns {
     }
 
     public static String l(String str) {
-        return dnr.bo(dnr.bo(dnr.bo(dnr.bo(dnr.bo(dnr.bo(dnr.bo(str, "${totalMsg}" /* cnb.z(-425605489228586L) */, String.valueOf(wd.a.k())), "${textMsg}" /* cnb.z(-425519589882666L) */, String.valueOf(wb.a.k())), "${textWord}" /* cnb.z(-426039280925482L) */, String.valueOf(wc.a.k())), "${emojiMsg}" /* cnb.z(-426022101056298L) */, String.valueOf(vw.a.k())), "${transferMsg}" /* cnb.z(-425936201710378L) */, String.valueOf(we.a.k())), "${redBagMsg}" /* cnb.z(-425871777200938L) */, String.valueOf(wa.a.k())), "${fileMsg}" /* cnb.z(-425850302364458L) */, String.valueOf(vx.a.k()));
+        return dnr.bo(
+                dnr.bo(dnr.bo(
+                        dnr.bo(dnr.bo(
+                                dnr.bo(dnr.bo(str, "${totalMsg}" /* cnb.z(-425605489228586L) */,
+                                        String.valueOf(wd.a.k())), "${textMsg}" /* cnb.z(-425519589882666L) */,
+                                        String.valueOf(wb.a.k())),
+                                "${textWord}" /* cnb.z(-426039280925482L) */, String.valueOf(wc.a.k())),
+                                "${emojiMsg}" /* cnb.z(-426022101056298L) */, String.valueOf(vw.a.k())),
+                        "${transferMsg}" /* cnb.z(-425936201710378L) */, String.valueOf(we.a.k())),
+                        "${redBagMsg}" /* cnb.z(-425871777200938L) */, String.valueOf(wa.a.k())),
+                "${fileMsg}" /* cnb.z(-425850302364458L) */, String.valueOf(vx.a.k()));
     }
 
     @Override // me.hd.wauxv.obf.bmf
@@ -38,18 +48,18 @@ public final class wh extends doo implements bng, bns {
         akiVarAb.o();
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String f() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getName() {
         return d;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String g() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getCategory() {
         return c;
     }
 
     @Override // me.hd.wauxv.obf.bng
-    public final void h(DexKitBridge dexKitBridge) {
+    public final void locateDex(DexKitBridge dexKitBridge) {
         emn.aj(vu.a, dexKitBridge, new us(7));
     }
 
@@ -96,12 +106,12 @@ public final class wh extends doo implements bng, bns {
         }
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String o() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getDescription() {
         return i;
     }
 
-    @Override // me.hd.wauxv.obf.doo
+    @Override // me.hd.wauxv.obf.BaseHook
     public final bgf p() {
         return j;
     }

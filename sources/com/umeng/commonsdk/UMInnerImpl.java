@@ -27,12 +27,13 @@ public class UMInnerImpl {
                             try {
                                 String currentProcessName = UMFrUtils.getCurrentProcessName(context);
                                 String packageName = context.getPackageName();
-                                if (TextUtils.isEmpty(currentProcessName) || TextUtils.isEmpty(packageName) || !currentProcessName.equals(packageName)) {
+                                if (TextUtils.isEmpty(currentProcessName) || TextUtils.isEmpty(packageName)
+                                        || !currentProcessName.equals(packageName)) {
                                     return;
                                 }
                                 try {
                                     if (FieldManager.allow(d.aq) && !c.a(context).a()) {
-                                        c.a(context).b();
+                                        c.a(context).tryGetClassByName();
                                     }
                                 } catch (Throwable th) {
                                     ULog.e(UMModuleRegister.INNER, "e is " + th);
@@ -66,7 +67,8 @@ public class UMInnerImpl {
                         try {
                             String currentProcessName = UMFrUtils.getCurrentProcessName(context);
                             String packageName = context.getPackageName();
-                            if (TextUtils.isEmpty(currentProcessName) || TextUtils.isEmpty(packageName) || !currentProcessName.equals(packageName)) {
+                            if (TextUtils.isEmpty(currentProcessName) || TextUtils.isEmpty(packageName)
+                                    || !currentProcessName.equals(packageName)) {
                                 return;
                             }
                             try {

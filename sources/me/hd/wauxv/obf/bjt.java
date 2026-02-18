@@ -4,10 +4,10 @@ package me.hd.wauxv.obf;
 /* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class bjt implements Runnable {
     public final /* synthetic */ int a;
-    public final /* synthetic */ bgf b;
+    public final /* synthetic */ IHasInvokeMethod b;
     public final /* synthetic */ Object c;
 
-    public /* synthetic */ bjt(bgf bgfVar, Object obj, int i) {
+    public /* synthetic */ bjt(IHasInvokeMethod bgfVar, Object obj, int i) {
         this.a = i;
         this.b = bgfVar;
         this.c = obj;

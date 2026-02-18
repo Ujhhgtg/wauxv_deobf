@@ -10,7 +10,7 @@ public final class eow implements btd {
     public final Object a(ajt ajtVar) {
         String strConcat;
         String strV = ajtVar.v();
-        bzo.q(strV, "uuidString");
+        throwIfVar1IsNull(strV, "uuidString");
         int length = strV.length();
         if (length == 32) {
             long jD = bkx.d(strV, 0, 16);
@@ -20,12 +20,13 @@ public final class eow implements btd {
             }
         } else {
             if (length != 36) {
-                StringBuilder sb = new StringBuilder("Expected either a 36-char string in the standard hex-and-dash UUID format or a 32-char hexadecimal string, but was \"");
+                StringBuilder sb = new StringBuilder(
+                        "Expected either a 36-char string in the standard hex-and-dash UUID format or a 32-char hexadecimal string, but was \"");
                 if (strV.length() <= 64) {
                     strConcat = strV;
                 } else {
                     String strSubstring = strV.substring(0, 64);
-                    bzo.p(strSubstring, "substring(...)");
+                    throwIfVar1IsNull(strSubstring, "substring(...)");
                     strConcat = strSubstring.concat("...");
                 }
                 sb.append(strConcat);
@@ -53,7 +54,7 @@ public final class eow implements btd {
     @Override // me.hd.wauxv.obf.btd
     public final void c(avt avtVar, Object obj) {
         eov eovVar = (eov) obj;
-        bzo.q(eovVar, "value");
+        throwIfVar1IsNull(eovVar, "value");
         avtVar.ad(eovVar.toString());
     }
 

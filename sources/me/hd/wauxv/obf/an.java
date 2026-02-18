@@ -10,7 +10,7 @@ public final class an extends dqc {
 
     @Override // me.hd.wauxv.obf.dqc
     public final int c(bbb bbbVar) {
-        bzo.q(bbbVar, "fbb");
+        throwIfVar1IsNull(bbbVar, "fbb");
         int i = this.a;
         if (i == 0) {
             throw new IllegalArgumentException("modifiers must not be 0");

@@ -89,36 +89,49 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
     @Deprecated
     public static final TypeDescription VOID = LazyProxy.of(Void.TYPE);
-    public static final TypeList.Generic ARRAY_INTERFACES = new TypeList.Generic.ForLoadedTypes(Cloneable.class, Serializable.class);
+    public static final TypeList.Generic ARRAY_INTERFACES = new TypeList.Generic.ForLoadedTypes(Cloneable.class,
+            Serializable.class);
 
     @AlwaysNull
     public static final TypeDescription UNDEFINED = null;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static abstract class AbstractBase extends TypeVariableSource.AbstractBase implements TypeDescription {
         private static final boolean ACCESS_CONTROLLER;
         public static final boolean RAW_TYPES;
         private transient /* synthetic */ int hashCode;
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static abstract class OfSimpleType extends AbstractBase {
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static abstract class WithDelegation extends OfSimpleType {
                 public abstract TypeDescription delegate();
 
-                @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase, net.bytebuddy.description.type.TypeDescription
+                @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase,
+                          // net.bytebuddy.description.type.TypeDescription
                 public int getActualModifiers(boolean z) {
                     return delegate().getActualModifiers(z);
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase, net.bytebuddy.description.type.TypeDescription
+                @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase,
+                          // net.bytebuddy.description.type.TypeDescription
                 @MaybeNull
                 public ClassFileVersion getClassFileVersion() {
                     return delegate().getClassFileVersion();
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase.OfSimpleType, net.bytebuddy.description.type.TypeDefinition
+                @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase.OfSimpleType,
+                          // net.bytebuddy.description.type.TypeDefinition
                 @MaybeNull
                 public /* bridge */ /* synthetic */ TypeDefinition getComponentType() {
                     return super.getComponentType();
@@ -129,12 +142,14 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     return delegate().getDeclaredAnnotations();
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription, net.bytebuddy.description.type.TypeDefinition
+                @Override // net.bytebuddy.description.type.TypeDescription,
+                          // net.bytebuddy.description.type.TypeDefinition
                 public FieldList<FieldDescription.InDefinedShape> getDeclaredFields() {
                     return delegate().getDeclaredFields();
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription, net.bytebuddy.description.type.TypeDefinition
+                @Override // net.bytebuddy.description.type.TypeDescription,
+                          // net.bytebuddy.description.type.TypeDefinition
                 public MethodList<MethodDescription.InDefinedShape> getDeclaredMethods() {
                     return delegate().getDeclaredMethods();
                 }
@@ -156,7 +171,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     return delegate().getEnclosingType();
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase, net.bytebuddy.description.NamedElement.WithDescriptor
+                @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase,
+                          // net.bytebuddy.description.NamedElement.WithDescriptor
                 @MaybeNull
                 public String getGenericSignature() {
                     return delegate().getGenericSignature();
@@ -193,7 +209,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     return delegate().getPermittedSubtypes();
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription, net.bytebuddy.description.type.TypeDefinition
+                @Override // net.bytebuddy.description.type.TypeDescription,
+                          // net.bytebuddy.description.type.TypeDefinition
                 public RecordComponentList<RecordComponentDescription.InDefinedShape> getRecordComponents() {
                     return delegate().getRecordComponents();
                 }
@@ -209,12 +226,14 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     return delegate().getTypeVariables();
                 }
 
-                @Override // net.bytebuddy.description.ModifierReviewable.AbstractBase, net.bytebuddy.description.ModifierReviewable.OfAbstraction
+                @Override // net.bytebuddy.description.ModifierReviewable.AbstractBase,
+                          // net.bytebuddy.description.ModifierReviewable.OfAbstraction
                 public boolean isAbstract() {
                     return delegate().isAbstract();
                 }
 
-                @Override // net.bytebuddy.description.ModifierReviewable.AbstractBase, net.bytebuddy.description.ModifierReviewable.ForTypeDefinition
+                @Override // net.bytebuddy.description.ModifierReviewable.AbstractBase,
+                          // net.bytebuddy.description.ModifierReviewable.ForTypeDefinition
                 public boolean isAnnotation() {
                     return delegate().isAnnotation();
                 }
@@ -224,12 +243,14 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     return delegate().isAnonymousType();
                 }
 
-                @Override // net.bytebuddy.description.ModifierReviewable.AbstractBase, net.bytebuddy.description.ModifierReviewable.OfEnumeration
+                @Override // net.bytebuddy.description.ModifierReviewable.AbstractBase,
+                          // net.bytebuddy.description.ModifierReviewable.OfEnumeration
                 public boolean isEnum() {
                     return delegate().isEnum();
                 }
 
-                @Override // net.bytebuddy.description.ModifierReviewable.AbstractBase, net.bytebuddy.description.ModifierReviewable.ForTypeDefinition
+                @Override // net.bytebuddy.description.ModifierReviewable.AbstractBase,
+                          // net.bytebuddy.description.ModifierReviewable.ForTypeDefinition
                 public boolean isInterface() {
                     return delegate().isInterface();
                 }
@@ -244,7 +265,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     return delegate().isRecord();
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase, net.bytebuddy.description.type.TypeDescription
+                @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase,
+                          // net.bytebuddy.description.type.TypeDescription
                 public boolean isSealed() {
                     return delegate().isSealed();
                 }
@@ -272,7 +294,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 TypeDescription enclosingType = getEnclosingType();
                 if (enclosingType != null) {
                     if (internalName.startsWith(enclosingType.getInternalName() + "$")) {
-                        return enclosingType.getCanonicalName() + "." + internalName.substring(enclosingType.getInternalName().length() + 1);
+                        return enclosingType.getCanonicalName() + "."
+                                + internalName.substring(enclosingType.getInternalName().length() + 1);
                     }
                 }
                 return getName();
@@ -283,8 +306,11 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 return "L" + getInternalName() + ";";
             }
 
-            /* JADX WARN: Found duplicated region for block: B:13:0x0040  */
-            /* JADX WARN: Unsupported multi-entry loop pattern (BACK_EDGE: B:14:0x0048 -> B:7:0x002d). Please report as a decompilation issue!!! */
+            /* JADX WARN: Found duplicated region for block: B:13:0x0040 */
+            /*
+             * JADX WARN: Unsupported multi-entry loop pattern (BACK_EDGE: B:14:0x0048 ->
+             * B:7:0x002d). Please report as a decompilation issue!!!
+             */
             @Override // net.bytebuddy.description.type.TypeDescription
             public String getSimpleName() {
                 int iLastIndexOf;
@@ -295,7 +321,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                         iLastIndexOf = enclosingType.getInternalName().length();
                     }
                     iLastIndexOf++;
-                    if (iLastIndexOf < internalName.length() || Character.isJavaIdentifierStart(internalName.charAt(iLastIndexOf))) {
+                    if (iLastIndexOf < internalName.length()
+                            || Character.isJavaIdentifierStart(internalName.charAt(iLastIndexOf))) {
                         return internalName.substring(iLastIndexOf);
                     }
                     iLastIndexOf++;
@@ -345,7 +372,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 ACCESS_CONTROLLER = true;
             }
             try {
-                z = Boolean.parseBoolean((String) doPrivileged(new GetSystemPropertyAction(TypeDefinition.RAW_TYPES_PROPERTY)));
+                z = Boolean.parseBoolean(
+                        (String) doPrivileged(new GetSystemPropertyAction(TypeDefinition.RAW_TYPES_PROPERTY)));
             } catch (Exception unused3) {
             }
             RAW_TYPES = z;
@@ -361,7 +389,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 return true;
             }
             if (typeDescription2.isArray()) {
-                return typeDescription.isArray() ? isAssignable(typeDescription.getComponentType(), typeDescription2.getComponentType()) : typeDescription.represents(Object.class) || TypeDescription.ARRAY_INTERFACES.contains(typeDescription.asGenericType());
+                return typeDescription.isArray()
+                        ? isAssignable(typeDescription.getComponentType(), typeDescription2.getComponentType())
+                        : typeDescription.represents(Object.class)
+                                || TypeDescription.ARRAY_INTERFACES.contains(typeDescription.asGenericType());
             }
             if (typeDescription.represents(Object.class)) {
                 return !typeDescription2.isPrimitive();
@@ -388,7 +419,16 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
         @Override // net.bytebuddy.description.type.TypeDescription
         public TypeDescription asBoxed() {
-            return represents(Boolean.TYPE) ? ForLoadedType.of(Boolean.class) : represents(Byte.TYPE) ? ForLoadedType.of(Byte.class) : represents(Short.TYPE) ? ForLoadedType.of(Short.class) : represents(Character.TYPE) ? ForLoadedType.of(Character.class) : represents(Integer.TYPE) ? ForLoadedType.of(Integer.class) : represents(Long.TYPE) ? ForLoadedType.of(Long.class) : represents(Float.TYPE) ? ForLoadedType.of(Float.class) : represents(Double.TYPE) ? ForLoadedType.of(Double.class) : this;
+            return represents(Boolean.TYPE) ? ForLoadedType.of(Boolean.class)
+                    : represents(Byte.TYPE) ? ForLoadedType.of(Byte.class)
+                            : represents(Short.TYPE) ? ForLoadedType.of(Short.class)
+                                    : represents(Character.TYPE) ? ForLoadedType.of(Character.class)
+                                            : represents(Integer.TYPE) ? ForLoadedType.of(Integer.class)
+                                                    : represents(Long.TYPE) ? ForLoadedType.of(Long.class)
+                                                            : represents(Float.TYPE) ? ForLoadedType.of(Float.class)
+                                                                    : represents(Double.TYPE)
+                                                                            ? ForLoadedType.of(Double.class)
+                                                                            : this;
         }
 
         @Override // net.bytebuddy.description.type.TypeDefinition
@@ -403,7 +443,16 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
         @Override // net.bytebuddy.description.type.TypeDescription
         public TypeDescription asUnboxed() {
-            return represents(Boolean.class) ? ForLoadedType.of(Boolean.TYPE) : represents(Byte.class) ? ForLoadedType.of(Byte.TYPE) : represents(Short.class) ? ForLoadedType.of(Short.TYPE) : represents(Character.class) ? ForLoadedType.of(Character.TYPE) : represents(Integer.class) ? ForLoadedType.of(Integer.TYPE) : represents(Long.class) ? ForLoadedType.of(Long.TYPE) : represents(Float.class) ? ForLoadedType.of(Float.TYPE) : represents(Double.class) ? ForLoadedType.of(Double.TYPE) : this;
+            return represents(Boolean.class) ? ForLoadedType.of(Boolean.TYPE)
+                    : represents(Byte.class) ? ForLoadedType.of(Byte.TYPE)
+                            : represents(Short.class) ? ForLoadedType.of(Short.TYPE)
+                                    : represents(Character.class) ? ForLoadedType.of(Character.TYPE)
+                                            : represents(Integer.class) ? ForLoadedType.of(Integer.TYPE)
+                                                    : represents(Long.class) ? ForLoadedType.of(Long.TYPE)
+                                                            : represents(Float.class) ? ForLoadedType.of(Float.TYPE)
+                                                                    : represents(Double.class)
+                                                                            ? ForLoadedType.of(Double.TYPE)
+                                                                            : this;
         }
 
         public boolean equals(@MaybeNull Object obj) {
@@ -422,7 +471,9 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             if (isModuleType()) {
                 return 32768;
             }
-            int modifiers = getModifiers() | (getDeclaredAnnotations().isAnnotationPresent(Deprecated.class) ? 131072 : 0) | (isRecord() ? 65536 : 0) | (z ? 32 : 0);
+            int modifiers = getModifiers()
+                    | (getDeclaredAnnotations().isAnnotationPresent(Deprecated.class) ? 131072 : 0)
+                    | (isRecord() ? 65536 : 0) | (z ? 32 : 0);
             return isPrivate() ? modifiers & (-11) : isProtected() ? (modifiers & (-13)) | 1 : modifiers & (-9);
         }
 
@@ -485,7 +536,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
         @MaybeNull
         public TypeVariableSource getEnclosingSource() {
             MethodDescription.InDefinedShape enclosingMethod = getEnclosingMethod();
-            return enclosingMethod == null ? isStatic() ? TypeVariableSource.UNDEFINED : getEnclosingType() : enclosingMethod;
+            return enclosingMethod == null ? isStatic() ? TypeVariableSource.UNDEFINED : getEnclosingType()
+                    : enclosingMethod;
         }
 
         @Override // net.bytebuddy.description.NamedElement.WithDescriptor
@@ -497,7 +549,9 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 for (Generic generic : getTypeVariables()) {
                     signatureWriter.visitFormalTypeParameter(generic.getSymbol());
                     for (Generic generic2 : generic.getUpperBounds()) {
-                        generic2.accept(new Generic.Visitor.ForSignatureVisitor(generic2.asErasure().isInterface() ? signatureWriter.visitInterfaceBound() : signatureWriter.visitClassBound()));
+                        generic2.accept(new Generic.Visitor.ForSignatureVisitor(
+                                generic2.asErasure().isInterface() ? signatureWriter.visitInterfaceBound()
+                                        : signatureWriter.visitClassBound()));
                     }
                     z = true;
                 }
@@ -529,7 +583,9 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             while (it.hasNext()) {
                 hashSet.add(it.next().getAnnotationType());
             }
-            return new AnnotationList.Explicit((List<? extends AnnotationDescription>) CompoundList.of((List) declaredAnnotations, (List) superClass.asErasure().getInheritedAnnotations().inherited(hashSet)));
+            return new AnnotationList.Explicit(
+                    (List<? extends AnnotationDescription>) CompoundList.of((List) declaredAnnotations,
+                            (List) superClass.asErasure().getInheritedAnnotations().inherited(hashSet)));
         }
 
         @Override // net.bytebuddy.description.type.TypeDescription
@@ -580,7 +636,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             if (isPrimitive()) {
                 return true;
             }
-            return isArray() ? getComponentType().isVisibleTo(typeDescription) : isPublic() || isSamePackage(typeDescription);
+            return isArray() ? getComponentType().isVisibleTo(typeDescription)
+                    : isPublic() || isSamePackage(typeDescription);
         }
 
         @Override // net.bytebuddy.description.type.TypeDescription
@@ -599,7 +656,52 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
         @Override // net.bytebuddy.description.type.TypeDescription
         public boolean isAnnotationValue(Object obj) {
-            if ((represents(Class.class) && (obj instanceof TypeDescription)) || (((obj instanceof AnnotationDescription) && ((AnnotationDescription) obj).getAnnotationType().equals(this)) || (((obj instanceof EnumerationDescription) && ((EnumerationDescription) obj).getEnumerationType().equals(this)) || ((represents(String.class) && (obj instanceof String)) || ((represents(Boolean.TYPE) && (obj instanceof Boolean)) || ((represents(Byte.TYPE) && (obj instanceof Byte)) || ((represents(Short.TYPE) && (obj instanceof Short)) || ((represents(Character.TYPE) && (obj instanceof Character)) || ((represents(Integer.TYPE) && (obj instanceof Integer)) || ((represents(Long.TYPE) && (obj instanceof Long)) || ((represents(Float.TYPE) && (obj instanceof Float)) || ((represents(Double.TYPE) && (obj instanceof Double)) || ((represents(String[].class) && (obj instanceof String[])) || ((represents(boolean[].class) && (obj instanceof boolean[])) || ((represents(byte[].class) && (obj instanceof byte[])) || ((represents(short[].class) && (obj instanceof short[])) || ((represents(char[].class) && (obj instanceof char[])) || ((represents(int[].class) && (obj instanceof int[])) || ((represents(long[].class) && (obj instanceof long[])) || ((represents(float[].class) && (obj instanceof float[])) || ((represents(double[].class) && (obj instanceof double[])) || (represents(Class[].class) && (obj instanceof TypeDescription[]))))))))))))))))))))))) {
+            if ((represents(Class.class) && (obj instanceof TypeDescription))
+                    || (((obj instanceof AnnotationDescription) && ((AnnotationDescription) obj).getAnnotationType()
+                            .equals(this))
+                            || (((obj instanceof EnumerationDescription) && ((EnumerationDescription) obj)
+                                    .getEnumerationType().equals(this))
+                                    || ((represents(String.class) && (obj instanceof String)) || ((represents(
+                                            Boolean.TYPE) && (obj instanceof Boolean))
+                                            || ((represents(Byte.TYPE) && (obj instanceof Byte)) || ((represents(
+                                                    Short.TYPE) && (obj instanceof Short))
+                                                    || ((represents(Character.TYPE) && (obj instanceof Character))
+                                                            || ((represents(Integer.TYPE) && (obj instanceof Integer))
+                                                                    || ((represents(Long.TYPE) && (obj instanceof Long))
+                                                                            || ((represents(Float.TYPE)
+                                                                                    && (obj instanceof Float))
+                                                                                    || ((represents(Double.TYPE)
+                                                                                            && (obj instanceof Double))
+                                                                                            || ((represents(
+                                                                                                    String[].class)
+                                                                                                    && (obj instanceof String[]))
+                                                                                                    || ((represents(
+                                                                                                            boolean[].class)
+                                                                                                            && (obj instanceof boolean[]))
+                                                                                                            || ((represents(
+                                                                                                                    byte[].class)
+                                                                                                                    && (obj instanceof byte[]))
+                                                                                                                    || ((represents(
+                                                                                                                            short[].class)
+                                                                                                                            && (obj instanceof short[]))
+                                                                                                                            || ((represents(
+                                                                                                                                    char[].class)
+                                                                                                                                    && (obj instanceof char[]))
+                                                                                                                                    || ((represents(
+                                                                                                                                            int[].class)
+                                                                                                                                            && (obj instanceof int[]))
+                                                                                                                                            || ((represents(
+                                                                                                                                                    long[].class)
+                                                                                                                                                    && (obj instanceof long[]))
+                                                                                                                                                    || ((represents(
+                                                                                                                                                            float[].class)
+                                                                                                                                                            && (obj instanceof float[]))
+                                                                                                                                                            || ((represents(
+                                                                                                                                                                    double[].class)
+                                                                                                                                                                    && (obj instanceof double[]))
+                                                                                                                                                                    || (represents(
+                                                                                                                                                                            Class[].class)
+                                                                                                                                                                            && (obj instanceof TypeDescription[]))))))))))))))))))))))) {
                 return true;
             }
             if (isAssignableTo(Annotation[].class) && (obj instanceof AnnotationDescription[])) {
@@ -633,7 +735,9 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
         @Override // net.bytebuddy.description.type.TypeDescription
         public boolean isCompileTimeConstant() {
-            return represents(Integer.TYPE) || represents(Long.TYPE) || represents(Float.TYPE) || represents(Double.TYPE) || represents(String.class) || represents(Class.class) || equals(JavaType.METHOD_TYPE.getTypeStub()) || equals(JavaType.METHOD_HANDLE.getTypeStub());
+            return represents(Integer.TYPE) || represents(Long.TYPE) || represents(Float.TYPE)
+                    || represents(Double.TYPE) || represents(String.class) || represents(Class.class)
+                    || equals(JavaType.METHOD_TYPE.getTypeStub()) || equals(JavaType.METHOD_HANDLE.getTypeStub());
         }
 
         @Override // net.bytebuddy.description.TypeVariableSource
@@ -705,14 +809,18 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
         @Override // net.bytebuddy.description.type.TypeDescription
         public boolean isPrimitiveWrapper() {
-            return represents(Boolean.class) || represents(Byte.class) || represents(Short.class) || represents(Character.class) || represents(Integer.class) || represents(Long.class) || represents(Float.class) || represents(Double.class);
+            return represents(Boolean.class) || represents(Byte.class) || represents(Short.class)
+                    || represents(Character.class) || represents(Integer.class) || represents(Long.class)
+                    || represents(Float.class) || represents(Double.class);
         }
 
         @Override // net.bytebuddy.description.type.TypeDescription
         public boolean isSamePackage(TypeDescription typeDescription) {
             PackageDescription packageDescription = getPackage();
             PackageDescription packageDescription2 = typeDescription.getPackage();
-            return (packageDescription == null || packageDescription2 == null) ? packageDescription == packageDescription2 : packageDescription.equals(packageDescription2);
+            return (packageDescription == null || packageDescription2 == null)
+                    ? packageDescription == packageDescription2
+                    : packageDescription.equals(packageDescription2);
         }
 
         @Override // net.bytebuddy.description.type.TypeDescription
@@ -725,7 +833,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             if (isPrimitive()) {
                 return true;
             }
-            return isArray() ? getComponentType().isVisibleTo(typeDescription) : isPublic() || isProtected() || isSamePackage(typeDescription);
+            return isArray() ? getComponentType().isVisibleTo(typeDescription)
+                    : isPublic() || isProtected() || isSamePackage(typeDescription);
         }
 
         @Override // java.lang.Iterable
@@ -778,14 +887,18 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
         @Override // net.bytebuddy.description.type.TypeDescription
         public boolean isAnnotationValue() {
-            if (isPrimitive() || represents(String.class) || isAssignableTo(TypeDescription.class) || isAssignableTo(AnnotationDescription.class) || isAssignableTo(EnumerationDescription.class)) {
+            if (isPrimitive() || represents(String.class) || isAssignableTo(TypeDescription.class)
+                    || isAssignableTo(AnnotationDescription.class) || isAssignableTo(EnumerationDescription.class)) {
                 return true;
             }
             return isArray() && !getComponentType().isArray() && getComponentType().isAnnotationValue();
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class ArrayProjection extends AbstractBase {
         private static final int ARRAY_EXCLUDED = 8712;
         private static final int ARRAY_IMPLIED = 1040;
@@ -820,12 +933,14 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             return new AnnotationList.Empty();
         }
 
-        @Override // net.bytebuddy.description.type.TypeDescription, net.bytebuddy.description.type.TypeDefinition
+        @Override // net.bytebuddy.description.type.TypeDescription,
+                  // net.bytebuddy.description.type.TypeDefinition
         public FieldList<FieldDescription.InDefinedShape> getDeclaredFields() {
             return new FieldList.Empty();
         }
 
-        @Override // net.bytebuddy.description.type.TypeDescription, net.bytebuddy.description.type.TypeDefinition
+        @Override // net.bytebuddy.description.type.TypeDescription,
+                  // net.bytebuddy.description.type.TypeDefinition
         public MethodList<MethodDescription.InDefinedShape> getDeclaredMethods() {
             return new MethodList.Empty();
         }
@@ -857,7 +972,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             return TypeDescription.UNDEFINED;
         }
 
-        @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase, net.bytebuddy.description.type.TypeDescription
+        @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase,
+                  // net.bytebuddy.description.type.TypeDescription
         public AnnotationList getInheritedAnnotations() {
             return new AnnotationList.Empty();
         }
@@ -910,7 +1026,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             return new TypeList.Empty();
         }
 
-        @Override // net.bytebuddy.description.type.TypeDescription, net.bytebuddy.description.type.TypeDefinition
+        @Override // net.bytebuddy.description.type.TypeDescription,
+                  // net.bytebuddy.description.type.TypeDefinition
         public RecordComponentList<RecordComponentDescription.InDefinedShape> getRecordComponents() {
             return new RecordComponentList.Empty();
         }
@@ -955,7 +1072,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             return false;
         }
 
-        @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase, net.bytebuddy.description.type.TypeDescription
+        @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase,
+                  // net.bytebuddy.description.type.TypeDescription
         public boolean isMemberType() {
             return false;
         }
@@ -1001,7 +1119,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class ForLoadedType extends AbstractBase implements Serializable {
         private static final boolean ACCESS_CONTROLLER;
         private static final Dispatcher DISPATCHER;
@@ -1013,7 +1134,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
         private transient /* synthetic */ MethodList declaredMethods;
         private final Class<?> type;
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @JavaDispatcher.Defaults
         @JavaDispatcher.Proxied("java.lang.Class")
         public interface Dispatcher {
@@ -1117,7 +1241,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             return typeDescription == null ? new ForLoadedType(cls) : typeDescription;
         }
 
-        @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase, net.bytebuddy.description.type.TypeDefinition
+        @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase,
+                  // net.bytebuddy.description.type.TypeDefinition
         public Generic asGenericType() {
             return Generic.OfNonGenericType.ForLoadedType.of(this.type);
         }
@@ -1134,13 +1259,15 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 return canonicalName;
             }
             StringBuilder sb = new StringBuilder(canonicalName.substring(0, iIndexOf));
-            for (Class<?> componentType = this.type; componentType.isArray(); componentType = componentType.getComponentType()) {
+            for (Class<?> componentType = this.type; componentType
+                    .isArray(); componentType = componentType.getComponentType()) {
                 sb.append(HttpUrl.PATH_SEGMENT_ENCODE_SET_URI);
             }
             return sb.toString();
         }
 
-        @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase, net.bytebuddy.description.type.TypeDescription
+        @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase,
+                  // net.bytebuddy.description.type.TypeDescription
         @CachedReturnPlugin.Enhance("classFileVersion")
         @MaybeNull
         public ClassFileVersion getClassFileVersion() {
@@ -1161,7 +1288,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
         @Override // net.bytebuddy.description.annotation.AnnotationSource
         @CachedReturnPlugin.Enhance("declaredAnnotations")
         public AnnotationList getDeclaredAnnotations() {
-            AnnotationList.ForLoadedAnnotations forLoadedAnnotations = this.declaredAnnotations != null ? null : new AnnotationList.ForLoadedAnnotations(this.type.getDeclaredAnnotations());
+            AnnotationList.ForLoadedAnnotations forLoadedAnnotations = this.declaredAnnotations != null ? null
+                    : new AnnotationList.ForLoadedAnnotations(this.type.getDeclaredAnnotations());
             if (forLoadedAnnotations == null) {
                 return this.declaredAnnotations;
             }
@@ -1169,10 +1297,13 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             return forLoadedAnnotations;
         }
 
-        @Override // net.bytebuddy.description.type.TypeDescription, net.bytebuddy.description.type.TypeDefinition
+        @Override // net.bytebuddy.description.type.TypeDescription,
+                  // net.bytebuddy.description.type.TypeDefinition
         @CachedReturnPlugin.Enhance("declaredFields")
         public FieldList<FieldDescription.InDefinedShape> getDeclaredFields() {
-            FieldList.ForLoadedFields forLoadedFields = this.declaredFields != null ? null : new FieldList.ForLoadedFields((Field[]) GraalImageCode.getCurrent().sorted(this.type.getDeclaredFields(), FieldComparator.INSTANCE));
+            FieldList.ForLoadedFields forLoadedFields = this.declaredFields != null ? null
+                    : new FieldList.ForLoadedFields((Field[]) GraalImageCode.getCurrent()
+                            .sorted(this.type.getDeclaredFields(), FieldComparator.INSTANCE));
             if (forLoadedFields == null) {
                 return this.declaredFields;
             }
@@ -1180,10 +1311,12 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             return forLoadedFields;
         }
 
-        @Override // net.bytebuddy.description.type.TypeDescription, net.bytebuddy.description.type.TypeDefinition
+        @Override // net.bytebuddy.description.type.TypeDescription,
+                  // net.bytebuddy.description.type.TypeDefinition
         @CachedReturnPlugin.Enhance("declaredMethods")
         public MethodList<MethodDescription.InDefinedShape> getDeclaredMethods() {
-            MethodList.ForLoadedMethods forLoadedMethods = this.declaredMethods != null ? null : new MethodList.ForLoadedMethods(this.type);
+            MethodList.ForLoadedMethods forLoadedMethods = this.declaredMethods != null ? null
+                    : new MethodList.ForLoadedMethods(this.type);
             if (forLoadedMethods == null) {
                 return this.declaredMethods;
             }
@@ -1203,7 +1336,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             if (iIndexOf == -1) {
                 return net.bytebuddy.jar.asm.Type.getDescriptor(this.type);
             }
-            return "L" + name.substring(0, iIndexOf).replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/') + ";";
+            return "L" + name.substring(0, iIndexOf)
+                    .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/') + ";";
         }
 
         @Override // net.bytebuddy.description.type.TypeDescription
@@ -1211,7 +1345,9 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
         public MethodDescription.InDefinedShape getEnclosingMethod() {
             Method enclosingMethod = this.type.getEnclosingMethod();
             Constructor<?> enclosingConstructor = this.type.getEnclosingConstructor();
-            return enclosingMethod != null ? new MethodDescription.ForLoadedMethod(enclosingMethod) : enclosingConstructor != null ? new MethodDescription.ForLoadedConstructor(enclosingConstructor) : MethodDescription.UNDEFINED;
+            return enclosingMethod != null ? new MethodDescription.ForLoadedMethod(enclosingMethod)
+                    : enclosingConstructor != null ? new MethodDescription.ForLoadedConstructor(enclosingConstructor)
+                            : MethodDescription.UNDEFINED;
         }
 
         @Override // net.bytebuddy.description.type.TypeDescription
@@ -1222,7 +1358,11 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
         @Override // net.bytebuddy.description.type.TypeDefinition
         public TypeList.Generic getInterfaces() {
-            return AbstractBase.RAW_TYPES ? isArray() ? TypeDescription.ARRAY_INTERFACES : new TypeList.Generic.ForLoadedTypes(this.type.getInterfaces()) : isArray() ? TypeDescription.ARRAY_INTERFACES : new TypeList.Generic.OfLoadedInterfaceTypes(this.type);
+            return AbstractBase.RAW_TYPES
+                    ? isArray() ? TypeDescription.ARRAY_INTERFACES
+                            : new TypeList.Generic.ForLoadedTypes(this.type.getInterfaces())
+                    : isArray() ? TypeDescription.ARRAY_INTERFACES
+                            : new TypeList.Generic.OfLoadedInterfaceTypes(this.type);
         }
 
         @Override // net.bytebuddy.description.ModifierReviewable
@@ -1240,7 +1380,7 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
         public TypeList getNestMembers() {
             Class<?>[] nestMembers = DISPATCHER.getNestMembers(this.type);
             if (nestMembers.length == 0) {
-                nestMembers = new Class[]{this.type};
+                nestMembers = new Class[] { this.type };
             }
             return new TypeList.ForLoadedTypes(nestMembers);
         }
@@ -1257,19 +1397,23 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             }
             String name = this.type.getName();
             int iLastIndexOf = name.lastIndexOf(46);
-            return iLastIndexOf == -1 ? PackageDescription.DEFAULT : new PackageDescription.Simple(name.substring(0, iLastIndexOf));
+            return iLastIndexOf == -1 ? PackageDescription.DEFAULT
+                    : new PackageDescription.Simple(name.substring(0, iLastIndexOf));
         }
 
         @Override // net.bytebuddy.description.type.TypeDescription
         public TypeList getPermittedSubtypes() {
             Class<?>[] permittedSubclasses = DISPATCHER.getPermittedSubclasses(this.type);
-            return permittedSubclasses == null ? new TypeList.Empty() : new TypeList.ForLoadedTypes(permittedSubclasses);
+            return permittedSubclasses == null ? new TypeList.Empty()
+                    : new TypeList.ForLoadedTypes(permittedSubclasses);
         }
 
-        @Override // net.bytebuddy.description.type.TypeDescription, net.bytebuddy.description.type.TypeDefinition
+        @Override // net.bytebuddy.description.type.TypeDescription,
+                  // net.bytebuddy.description.type.TypeDefinition
         public RecordComponentList<RecordComponentDescription.InDefinedShape> getRecordComponents() {
             Object[] recordComponents = DISPATCHER.getRecordComponents(this.type);
-            return recordComponents == null ? new RecordComponentList.Empty() : new RecordComponentList.ForLoadedRecordComponents(recordComponents);
+            return recordComponents == null ? new RecordComponentList.Empty()
+                    : new RecordComponentList.ForLoadedRecordComponents(recordComponents);
         }
 
         @Override // net.bytebuddy.description.type.TypeDescription
@@ -1280,7 +1424,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 return simpleName;
             }
             StringBuilder sb = new StringBuilder(simpleName.substring(0, iIndexOf));
-            for (Class<?> componentType = this.type; componentType.isArray(); componentType = componentType.getComponentType()) {
+            for (Class<?> componentType = this.type; componentType
+                    .isArray(); componentType = componentType.getComponentType()) {
                 sb.append(HttpUrl.PATH_SEGMENT_ENCODE_SET_URI);
             }
             return sb.toString();
@@ -1294,15 +1439,20 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
         @Override // net.bytebuddy.description.type.TypeDefinition
         @MaybeNull
         public Generic getSuperClass() {
-            return AbstractBase.RAW_TYPES ? this.type.getSuperclass() == null ? Generic.UNDEFINED : Generic.OfNonGenericType.ForLoadedType.of(this.type.getSuperclass()) : Generic.LazyProjection.ForLoadedSuperClass.of(this.type);
+            return AbstractBase.RAW_TYPES
+                    ? this.type.getSuperclass() == null ? Generic.UNDEFINED
+                            : Generic.OfNonGenericType.ForLoadedType.of(this.type.getSuperclass())
+                    : Generic.LazyProjection.ForLoadedSuperClass.of(this.type);
         }
 
         @Override // net.bytebuddy.description.TypeVariableSource
         public TypeList.Generic getTypeVariables() {
-            return AbstractBase.RAW_TYPES ? new TypeList.Generic.Empty() : TypeList.Generic.ForLoadedTypes.OfTypeVariables.of((GenericDeclaration) this.type);
+            return AbstractBase.RAW_TYPES ? new TypeList.Generic.Empty()
+                    : TypeList.Generic.ForLoadedTypes.OfTypeVariables.of((GenericDeclaration) this.type);
         }
 
-        @Override // net.bytebuddy.description.ModifierReviewable.AbstractBase, net.bytebuddy.description.ModifierReviewable.ForTypeDefinition
+        @Override // net.bytebuddy.description.ModifierReviewable.AbstractBase,
+                  // net.bytebuddy.description.ModifierReviewable.ForTypeDefinition
         public boolean isAnnotation() {
             return this.type.isAnnotation();
         }
@@ -1317,17 +1467,20 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             return this.type.isArray();
         }
 
-        @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase, net.bytebuddy.description.type.TypeDescription
+        @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase,
+                  // net.bytebuddy.description.type.TypeDescription
         public boolean isAssignableFrom(Class<?> cls) {
             return this.type.isAssignableFrom(cls) || super.isAssignableFrom(cls);
         }
 
-        @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase, net.bytebuddy.description.type.TypeDescription
+        @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase,
+                  // net.bytebuddy.description.type.TypeDescription
         public boolean isAssignableTo(Class<?> cls) {
             return cls.isAssignableFrom(this.type) || super.isAssignableTo(cls);
         }
 
-        @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase, net.bytebuddy.description.type.TypeDescription
+        @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase,
+                  // net.bytebuddy.description.type.TypeDescription
         public boolean isInHierarchyWith(Class<?> cls) {
             return cls.isAssignableFrom(this.type) || this.type.isAssignableFrom(cls) || super.isInHierarchyWith(cls);
         }
@@ -1337,18 +1490,21 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             return this.type.isLocalClass();
         }
 
-        @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase, net.bytebuddy.description.type.TypeDescription
+        @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase,
+                  // net.bytebuddy.description.type.TypeDescription
         public boolean isMemberType() {
             return this.type.isMemberClass();
         }
 
-        @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase, net.bytebuddy.description.type.TypeDescription
+        @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase,
+                  // net.bytebuddy.description.type.TypeDescription
         public boolean isNestHost() {
             Class<?> nestHost = DISPATCHER.getNestHost(this.type);
             return nestHost == null || nestHost == this.type;
         }
 
-        @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase, net.bytebuddy.description.type.TypeDescription
+        @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase,
+                  // net.bytebuddy.description.type.TypeDescription
         public boolean isNestMateOf(Class<?> cls) {
             return DISPATCHER.isNestmateOf(this.type, cls) || super.isNestMateOf(of(cls));
         }
@@ -1363,12 +1519,14 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             return DISPATCHER.isRecord(this.type);
         }
 
-        @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase, net.bytebuddy.description.type.TypeDescription
+        @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase,
+                  // net.bytebuddy.description.type.TypeDescription
         public boolean isSealed() {
             return DISPATCHER.isSealed(this.type);
         }
 
-        @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase, net.bytebuddy.description.type.TypeDefinition
+        @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase,
+                  // net.bytebuddy.description.type.TypeDefinition
         public boolean represents(Type type) {
             return type == this.type || super.represents(type);
         }
@@ -1393,17 +1551,24 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             return declaringClass == null ? TypeDescription.UNDEFINED : of(declaringClass);
         }
 
-        @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase, net.bytebuddy.description.type.TypeDescription
+        @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase,
+                  // net.bytebuddy.description.type.TypeDescription
         public boolean isAssignableFrom(TypeDescription typeDescription) {
-            return ((typeDescription instanceof ForLoadedType) && this.type.isAssignableFrom(((ForLoadedType) typeDescription).type)) || super.isAssignableFrom(typeDescription);
+            return ((typeDescription instanceof ForLoadedType)
+                    && this.type.isAssignableFrom(((ForLoadedType) typeDescription).type))
+                    || super.isAssignableFrom(typeDescription);
         }
 
-        @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase, net.bytebuddy.description.type.TypeDescription
+        @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase,
+                  // net.bytebuddy.description.type.TypeDescription
         public boolean isAssignableTo(TypeDescription typeDescription) {
-            return ((typeDescription instanceof ForLoadedType) && ((ForLoadedType) typeDescription).type.isAssignableFrom(this.type)) || super.isAssignableTo(typeDescription);
+            return ((typeDescription instanceof ForLoadedType)
+                    && ((ForLoadedType) typeDescription).type.isAssignableFrom(this.type))
+                    || super.isAssignableTo(typeDescription);
         }
 
-        @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase, net.bytebuddy.description.type.TypeDescription
+        @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase,
+                  // net.bytebuddy.description.type.TypeDescription
         public boolean isInHierarchyWith(TypeDescription typeDescription) {
             if (typeDescription instanceof ForLoadedType) {
                 ForLoadedType forLoadedType = (ForLoadedType) typeDescription;
@@ -1414,9 +1579,12 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             return super.isInHierarchyWith(typeDescription);
         }
 
-        @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase, net.bytebuddy.description.type.TypeDescription
+        @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase,
+                  // net.bytebuddy.description.type.TypeDescription
         public boolean isNestMateOf(TypeDescription typeDescription) {
-            return ((typeDescription instanceof ForLoadedType) && DISPATCHER.isNestmateOf(this.type, ((ForLoadedType) typeDescription).type)) || super.isNestMateOf(typeDescription);
+            return ((typeDescription instanceof ForLoadedType)
+                    && DISPATCHER.isNestmateOf(this.type, ((ForLoadedType) typeDescription).type))
+                    || super.isNestMateOf(typeDescription);
         }
 
         @Override // net.bytebuddy.description.NamedElement.WithRuntimeName
@@ -1425,7 +1593,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class ForPackageDescription extends AbstractBase.OfSimpleType {
         private final PackageDescription packageDescription;
 
@@ -1438,12 +1609,14 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             return this.packageDescription.getDeclaredAnnotations();
         }
 
-        @Override // net.bytebuddy.description.type.TypeDescription, net.bytebuddy.description.type.TypeDefinition
+        @Override // net.bytebuddy.description.type.TypeDescription,
+                  // net.bytebuddy.description.type.TypeDefinition
         public FieldList<FieldDescription.InDefinedShape> getDeclaredFields() {
             return new FieldList.Empty();
         }
 
-        @Override // net.bytebuddy.description.type.TypeDescription, net.bytebuddy.description.type.TypeDefinition
+        @Override // net.bytebuddy.description.type.TypeDescription,
+                  // net.bytebuddy.description.type.TypeDefinition
         public MethodList<MethodDescription.InDefinedShape> getDeclaredMethods() {
             return new MethodList.Empty();
         }
@@ -1500,7 +1673,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             return new TypeList.Empty();
         }
 
-        @Override // net.bytebuddy.description.type.TypeDescription, net.bytebuddy.description.type.TypeDefinition
+        @Override // net.bytebuddy.description.type.TypeDescription,
+                  // net.bytebuddy.description.type.TypeDefinition
         public RecordComponentList<RecordComponentDescription.InDefinedShape> getRecordComponents() {
             return new RecordComponentList.Empty();
         }
@@ -1544,7 +1718,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface Generic extends TypeDefinition, AnnotationSource {
 
         @Deprecated
@@ -1562,7 +1739,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
         @AlwaysNull
         public static final Generic UNDEFINED = null;
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static abstract class AbstractBase extends ModifierReviewable.AbstractBase implements Generic {
             @Override // net.bytebuddy.description.type.TypeDefinition
             public Generic asGenericType() {
@@ -1585,14 +1765,23 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public interface AnnotationReader {
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static abstract class Delegator implements AnnotationReader {
                 private static final boolean ACCESS_CONTROLLER;
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static abstract class Chained extends Delegator {
                     protected final AnnotationReader annotationReader;
@@ -1605,7 +1794,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                         if (this == obj) {
                             return true;
                         }
-                        return obj != null && getClass() == obj.getClass() && this.annotationReader.equals(((Chained) obj).annotationReader);
+                        return obj != null && getClass() == obj.getClass()
+                                && this.annotationReader.equals(((Chained) obj).annotationReader);
                     }
 
                     public int hashCode() {
@@ -1620,14 +1810,21 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     public abstract AnnotatedElement resolve(AnnotatedElement annotatedElement);
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance(includeSyntheticFields = true)
                 public static class ForLoadedExecutableExceptionType extends Delegator {
-                    protected static final Dispatcher DISPATCHER = (Dispatcher) Delegator.doPrivileged(JavaDispatcher.of(Dispatcher.class));
+                    protected static final Dispatcher DISPATCHER = (Dispatcher) Delegator
+                            .doPrivileged(JavaDispatcher.of(Dispatcher.class));
                     private final AccessibleObject executable;
                     private final int index;
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     @JavaDispatcher.Proxied("java.lang.reflect.Executable")
                     public interface Dispatcher {
                         @JavaDispatcher.Defaults
@@ -1648,7 +1845,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                             return false;
                         }
                         ForLoadedExecutableExceptionType forLoadedExecutableExceptionType = (ForLoadedExecutableExceptionType) obj;
-                        return this.index == forLoadedExecutableExceptionType.index && this.executable.equals(forLoadedExecutableExceptionType.executable);
+                        return this.index == forLoadedExecutableExceptionType.index
+                                && this.executable.equals(forLoadedExecutableExceptionType.executable);
                     }
 
                     public int hashCode() {
@@ -1657,19 +1855,28 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
                     @Override // net.bytebuddy.description.type.TypeDescription.Generic.AnnotationReader
                     public AnnotatedElement resolve() {
-                        AnnotatedElement[] annotatedExceptionTypes = DISPATCHER.getAnnotatedExceptionTypes(this.executable);
-                        return annotatedExceptionTypes.length == 0 ? NoOp.INSTANCE : annotatedExceptionTypes[this.index];
+                        AnnotatedElement[] annotatedExceptionTypes = DISPATCHER
+                                .getAnnotatedExceptionTypes(this.executable);
+                        return annotatedExceptionTypes.length == 0 ? NoOp.INSTANCE
+                                : annotatedExceptionTypes[this.index];
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance(includeSyntheticFields = true)
                 public static class ForLoadedExecutableParameterType extends Delegator {
-                    protected static final Dispatcher DISPATCHER = (Dispatcher) Delegator.doPrivileged(JavaDispatcher.of(Dispatcher.class));
+                    protected static final Dispatcher DISPATCHER = (Dispatcher) Delegator
+                            .doPrivileged(JavaDispatcher.of(Dispatcher.class));
                     private final AccessibleObject executable;
                     private final int index;
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     @JavaDispatcher.Proxied("java.lang.reflect.Executable")
                     public interface Dispatcher {
                         @JavaDispatcher.Defaults
@@ -1690,7 +1897,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                             return false;
                         }
                         ForLoadedExecutableParameterType forLoadedExecutableParameterType = (ForLoadedExecutableParameterType) obj;
-                        return this.index == forLoadedExecutableParameterType.index && this.executable.equals(forLoadedExecutableParameterType.executable);
+                        return this.index == forLoadedExecutableParameterType.index
+                                && this.executable.equals(forLoadedExecutableParameterType.executable);
                     }
 
                     public int hashCode() {
@@ -1699,18 +1907,27 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
                     @Override // net.bytebuddy.description.type.TypeDescription.Generic.AnnotationReader
                     public AnnotatedElement resolve() {
-                        AnnotatedElement[] annotatedParameterTypes = DISPATCHER.getAnnotatedParameterTypes(this.executable);
-                        return annotatedParameterTypes.length == 0 ? NoOp.INSTANCE : annotatedParameterTypes[this.index];
+                        AnnotatedElement[] annotatedParameterTypes = DISPATCHER
+                                .getAnnotatedParameterTypes(this.executable);
+                        return annotatedParameterTypes.length == 0 ? NoOp.INSTANCE
+                                : annotatedParameterTypes[this.index];
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance(includeSyntheticFields = true)
                 public static class ForLoadedField extends Delegator {
-                    protected static final Dispatcher DISPATCHER = (Dispatcher) Delegator.doPrivileged(JavaDispatcher.of(Dispatcher.class));
+                    protected static final Dispatcher DISPATCHER = (Dispatcher) Delegator
+                            .doPrivileged(JavaDispatcher.of(Dispatcher.class));
                     private final Field field;
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     @JavaDispatcher.Proxied("java.lang.reflect.Field")
                     public interface Dispatcher {
                         @JavaDispatcher.Defaults
@@ -1727,7 +1944,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                         if (this == obj) {
                             return true;
                         }
-                        return obj != null && getClass() == obj.getClass() && this.field.equals(((ForLoadedField) obj).field);
+                        return obj != null && getClass() == obj.getClass()
+                                && this.field.equals(((ForLoadedField) obj).field);
                     }
 
                     public int hashCode() {
@@ -1741,7 +1959,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance(includeSyntheticFields = true)
                 public static class ForLoadedInterface extends Delegator {
                     private final int index;
@@ -1769,18 +1990,26 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
                     @Override // net.bytebuddy.description.type.TypeDescription.Generic.AnnotationReader
                     public AnnotatedElement resolve() {
-                        AnnotatedElement[] annotatedInterfaces = ForLoadedType.DISPATCHER.getAnnotatedInterfaces(this.type);
+                        AnnotatedElement[] annotatedInterfaces = ForLoadedType.DISPATCHER
+                                .getAnnotatedInterfaces(this.type);
                         return annotatedInterfaces.length == 0 ? NoOp.INSTANCE : annotatedInterfaces[this.index];
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance(includeSyntheticFields = true)
                 public static class ForLoadedMethodReturnType extends Delegator {
-                    protected static final Dispatcher DISPATCHER = (Dispatcher) Delegator.doPrivileged(JavaDispatcher.of(Dispatcher.class));
+                    protected static final Dispatcher DISPATCHER = (Dispatcher) Delegator
+                            .doPrivileged(JavaDispatcher.of(Dispatcher.class));
                     private final Method method;
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     @JavaDispatcher.Proxied("java.lang.reflect.Method")
                     public interface Dispatcher {
                         @JavaDispatcher.Defaults
@@ -1797,7 +2026,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                         if (this == obj) {
                             return true;
                         }
-                        return obj != null && getClass() == obj.getClass() && this.method.equals(((ForLoadedMethodReturnType) obj).method);
+                        return obj != null && getClass() == obj.getClass()
+                                && this.method.equals(((ForLoadedMethodReturnType) obj).method);
                     }
 
                     public int hashCode() {
@@ -1811,7 +2041,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public static class ForLoadedRecordComponent extends Delegator {
                     private final Object recordComponent;
 
@@ -1821,11 +2054,15 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
                     @Override // net.bytebuddy.description.type.TypeDescription.Generic.AnnotationReader
                     public AnnotatedElement resolve() {
-                        return RecordComponentDescription.ForLoadedRecordComponent.RECORD_COMPONENT.getAnnotatedType(this.recordComponent);
+                        return RecordComponentDescription.ForLoadedRecordComponent.RECORD_COMPONENT
+                                .getAnnotatedType(this.recordComponent);
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance(includeSyntheticFields = true)
                 public static class ForLoadedSuperClass extends Delegator {
                     private final Class<?> type;
@@ -1838,7 +2075,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                         if (this == obj) {
                             return true;
                         }
-                        return obj != null && getClass() == obj.getClass() && this.type.equals(((ForLoadedSuperClass) obj).type);
+                        return obj != null && getClass() == obj.getClass()
+                                && this.type.equals(((ForLoadedSuperClass) obj).type);
                     }
 
                     public int hashCode() {
@@ -1847,12 +2085,16 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
                     @Override // net.bytebuddy.description.type.TypeDescription.Generic.AnnotationReader
                     public AnnotatedElement resolve() {
-                        AnnotatedElement annotatedSuperclass = ForLoadedType.DISPATCHER.getAnnotatedSuperclass(this.type);
+                        AnnotatedElement annotatedSuperclass = ForLoadedType.DISPATCHER
+                                .getAnnotatedSuperclass(this.type);
                         return annotatedSuperclass == null ? NoOp.INSTANCE : annotatedSuperclass;
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class ForLoadedTypeVariable extends Delegator {
                     private final TypeVariable<?> typeVariable;
@@ -1865,19 +2107,24 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                         if (this == obj) {
                             return true;
                         }
-                        return obj != null && getClass() == obj.getClass() && this.typeVariable.equals(((ForLoadedTypeVariable) obj).typeVariable);
+                        return obj != null && getClass() == obj.getClass()
+                                && this.typeVariable.equals(((ForLoadedTypeVariable) obj).typeVariable);
                     }
 
                     public int hashCode() {
                         return this.typeVariable.hashCode() + (getClass().hashCode() * 31);
                     }
 
-                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.AnnotationReader.Delegator, net.bytebuddy.description.type.TypeDescription.Generic.AnnotationReader
+                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.AnnotationReader.Delegator,
+                              // net.bytebuddy.description.type.TypeDescription.Generic.AnnotationReader
                     public AnnotationReader ofTypeVariableBoundType(int i) {
                         return new ForTypeVariableBoundType.OfFormalTypeVariable(this.typeVariable, i);
                     }
 
-                    /* JADX WARN: Type inference failed for: r0v0, types: [java.lang.reflect.AnnotatedElement, java.lang.reflect.TypeVariable<?>] */
+                    /*
+                     * JADX WARN: Type inference failed for: r0v0, types:
+                     * [java.lang.reflect.AnnotatedElement, java.lang.reflect.TypeVariable<?>]
+                     */
                     @Override // net.bytebuddy.description.type.TypeDescription.Generic.AnnotationReader
                     public AnnotatedElement resolve() {
                         ?? r0 = this.typeVariable;
@@ -1885,7 +2132,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class Simple extends Delegator {
                     private final AnnotatedElement annotatedElement;
@@ -1898,7 +2148,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                         if (this == obj) {
                             return true;
                         }
-                        return obj != null && getClass() == obj.getClass() && this.annotatedElement.equals(((Simple) obj).annotatedElement);
+                        return obj != null && getClass() == obj.getClass()
+                                && this.annotatedElement.equals(((Simple) obj).annotatedElement);
                     }
 
                     public int hashCode() {
@@ -1915,7 +2166,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     boolean z = false;
                     try {
                         Class.forName("java.security.AccessController", false, null);
-                        ACCESS_CONTROLLER = Boolean.parseBoolean(System.getProperty("net.bytebuddy.securitymanager", "true"));
+                        ACCESS_CONTROLLER = Boolean
+                                .parseBoolean(System.getProperty("net.bytebuddy.securitymanager", "true"));
                     } catch (ClassNotFoundException unused) {
                         ACCESS_CONTROLLER = z;
                     } catch (SecurityException unused2) {
@@ -1926,7 +2178,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
                 @AccessControllerPlugin.Enhance
                 public static <T> T doPrivileged(PrivilegedAction<T> privilegedAction) {
-                    return ACCESS_CONTROLLER ? (T) AccessController.doPrivileged(privilegedAction) : privilegedAction.run();
+                    return ACCESS_CONTROLLER ? (T) AccessController.doPrivileged(privilegedAction)
+                            : privilegedAction.run();
                 }
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.AnnotationReader
@@ -1970,11 +2223,18 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class ForComponentType extends Delegator.Chained {
-                private static final AnnotatedParameterizedType ANNOTATED_PARAMETERIZED_TYPE = (AnnotatedParameterizedType) Delegator.doPrivileged(JavaDispatcher.of(AnnotatedParameterizedType.class));
+                private static final AnnotatedParameterizedType ANNOTATED_PARAMETERIZED_TYPE = (AnnotatedParameterizedType) Delegator
+                        .doPrivileged(JavaDispatcher.of(AnnotatedParameterizedType.class));
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @JavaDispatcher.Proxied("java.lang.reflect.AnnotatedArrayType")
                 public interface AnnotatedParameterizedType {
                     @JavaDispatcher.Proxied("getAnnotatedGenericComponentType")
@@ -1989,7 +2249,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     super(annotationReader);
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.Generic.AnnotationReader.Delegator.Chained, net.bytebuddy.description.type.TypeDescription.Generic.AnnotationReader
+                @Override // net.bytebuddy.description.type.TypeDescription.Generic.AnnotationReader.Delegator.Chained,
+                          // net.bytebuddy.description.type.TypeDescription.Generic.AnnotationReader
                 public /* bridge */ /* synthetic */ AnnotatedElement resolve() {
                     return super.resolve();
                 }
@@ -2008,11 +2269,18 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class ForOwnerType extends Delegator.Chained {
-                private static final AnnotatedType ANNOTATED_TYPE = (AnnotatedType) Delegator.doPrivileged(JavaDispatcher.of(AnnotatedType.class));
+                private static final AnnotatedType ANNOTATED_TYPE = (AnnotatedType) Delegator
+                        .doPrivileged(JavaDispatcher.of(AnnotatedType.class));
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @JavaDispatcher.Proxied("java.lang.reflect.AnnotatedType")
                 public interface AnnotatedType {
                     @JavaDispatcher.Defaults
@@ -2025,7 +2293,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     super(annotationReader);
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.Generic.AnnotationReader.Delegator.Chained, net.bytebuddy.description.type.TypeDescription.Generic.AnnotationReader
+                @Override // net.bytebuddy.description.type.TypeDescription.Generic.AnnotationReader.Delegator.Chained,
+                          // net.bytebuddy.description.type.TypeDescription.Generic.AnnotationReader
                 public /* bridge */ /* synthetic */ AnnotatedElement resolve() {
                     return super.resolve();
                 }
@@ -2041,13 +2310,20 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForTypeArgument extends Delegator.Chained {
-                private static final AnnotatedParameterizedType ANNOTATED_PARAMETERIZED_TYPE = (AnnotatedParameterizedType) Delegator.doPrivileged(JavaDispatcher.of(AnnotatedParameterizedType.class));
+                private static final AnnotatedParameterizedType ANNOTATED_PARAMETERIZED_TYPE = (AnnotatedParameterizedType) Delegator
+                        .doPrivileged(JavaDispatcher.of(AnnotatedParameterizedType.class));
                 private final int index;
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @JavaDispatcher.Proxied("java.lang.reflect.AnnotatedParameterizedType")
                 public interface AnnotatedParameterizedType {
                     @JavaDispatcher.Proxied("getAnnotatedActualTypeArguments")
@@ -2079,7 +2355,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     return (super.hashCode() * 31) + this.index;
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.Generic.AnnotationReader.Delegator.Chained, net.bytebuddy.description.type.TypeDescription.Generic.AnnotationReader
+                @Override // net.bytebuddy.description.type.TypeDescription.Generic.AnnotationReader.Delegator.Chained,
+                          // net.bytebuddy.description.type.TypeDescription.Generic.AnnotationReader
                 public /* bridge */ /* synthetic */ AnnotatedElement resolve() {
                     return super.resolve();
                 }
@@ -2098,13 +2375,20 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForTypeVariableBoundType extends Delegator.Chained {
-                private static final AnnotatedTypeVariable ANNOTATED_TYPE_VARIABLE = (AnnotatedTypeVariable) Delegator.doPrivileged(JavaDispatcher.of(AnnotatedTypeVariable.class));
+                private static final AnnotatedTypeVariable ANNOTATED_TYPE_VARIABLE = (AnnotatedTypeVariable) Delegator
+                        .doPrivileged(JavaDispatcher.of(AnnotatedTypeVariable.class));
                 private final int index;
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @JavaDispatcher.Proxied("java.lang.reflect.AnnotatedTypeVariable")
                 public interface AnnotatedTypeVariable {
                     @JavaDispatcher.Proxied("getAnnotatedBounds")
@@ -2115,14 +2399,21 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     boolean isInstance(AnnotatedElement annotatedElement);
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class OfFormalTypeVariable extends Delegator {
-                    private static final FormalTypeVariable TYPE_VARIABLE = (FormalTypeVariable) Delegator.doPrivileged(JavaDispatcher.of(FormalTypeVariable.class));
+                    private static final FormalTypeVariable TYPE_VARIABLE = (FormalTypeVariable) Delegator
+                            .doPrivileged(JavaDispatcher.of(FormalTypeVariable.class));
                     private final int index;
                     private final TypeVariable<?> typeVariable;
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     @JavaDispatcher.Proxied("java.lang.reflect.TypeVariable")
                     public interface FormalTypeVariable {
                         @JavaDispatcher.Defaults
@@ -2143,7 +2434,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                             return false;
                         }
                         OfFormalTypeVariable ofFormalTypeVariable = (OfFormalTypeVariable) obj;
-                        return this.index == ofFormalTypeVariable.index && this.typeVariable.equals(ofFormalTypeVariable.typeVariable);
+                        return this.index == ofFormalTypeVariable.index
+                                && this.typeVariable.equals(ofFormalTypeVariable.typeVariable);
                     }
 
                     public int hashCode() {
@@ -2174,7 +2466,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.index == ((ForTypeVariableBoundType) obj).index;
+                    return obj != null && getClass() == obj.getClass()
+                            && this.index == ((ForTypeVariableBoundType) obj).index;
                 }
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.AnnotationReader.Delegator.Chained
@@ -2182,7 +2475,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     return (super.hashCode() * 31) + this.index;
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.Generic.AnnotationReader.Delegator.Chained, net.bytebuddy.description.type.TypeDescription.Generic.AnnotationReader
+                @Override // net.bytebuddy.description.type.TypeDescription.Generic.AnnotationReader.Delegator.Chained,
+                          // net.bytebuddy.description.type.TypeDescription.Generic.AnnotationReader
                 public /* bridge */ /* synthetic */ AnnotatedElement resolve() {
                     return super.resolve();
                 }
@@ -2201,13 +2495,20 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForWildcardLowerBoundType extends Delegator.Chained {
-                private static final AnnotatedWildcardType ANNOTATED_WILDCARD_TYPE = (AnnotatedWildcardType) Delegator.doPrivileged(JavaDispatcher.of(AnnotatedWildcardType.class));
+                private static final AnnotatedWildcardType ANNOTATED_WILDCARD_TYPE = (AnnotatedWildcardType) Delegator
+                        .doPrivileged(JavaDispatcher.of(AnnotatedWildcardType.class));
                 private final int index;
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @JavaDispatcher.Proxied("java.lang.reflect.AnnotatedWildcardType")
                 public interface AnnotatedWildcardType {
                     @JavaDispatcher.Proxied("getAnnotatedLowerBounds")
@@ -2231,7 +2532,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.index == ((ForWildcardLowerBoundType) obj).index;
+                    return obj != null && getClass() == obj.getClass()
+                            && this.index == ((ForWildcardLowerBoundType) obj).index;
                 }
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.AnnotationReader.Delegator.Chained
@@ -2239,7 +2541,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     return (super.hashCode() * 31) + this.index;
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.Generic.AnnotationReader.Delegator.Chained, net.bytebuddy.description.type.TypeDescription.Generic.AnnotationReader
+                @Override // net.bytebuddy.description.type.TypeDescription.Generic.AnnotationReader.Delegator.Chained,
+                          // net.bytebuddy.description.type.TypeDescription.Generic.AnnotationReader
                 public /* bridge */ /* synthetic */ AnnotatedElement resolve() {
                     return super.resolve();
                 }
@@ -2258,13 +2561,20 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForWildcardUpperBoundType extends Delegator.Chained {
-                private static final AnnotatedWildcardType ANNOTATED_WILDCARD_TYPE = (AnnotatedWildcardType) Delegator.doPrivileged(JavaDispatcher.of(AnnotatedWildcardType.class));
+                private static final AnnotatedWildcardType ANNOTATED_WILDCARD_TYPE = (AnnotatedWildcardType) Delegator
+                        .doPrivileged(JavaDispatcher.of(AnnotatedWildcardType.class));
                 private final int index;
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @JavaDispatcher.Proxied("java.lang.reflect.AnnotatedWildcardType")
                 public interface AnnotatedWildcardType {
                     @JavaDispatcher.Proxied("getAnnotatedUpperBounds")
@@ -2288,7 +2598,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.index == ((ForWildcardUpperBoundType) obj).index;
+                    return obj != null && getClass() == obj.getClass()
+                            && this.index == ((ForWildcardUpperBoundType) obj).index;
                 }
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.AnnotationReader.Delegator.Chained
@@ -2296,7 +2607,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     return (super.hashCode() * 31) + this.index;
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.Generic.AnnotationReader.Delegator.Chained, net.bytebuddy.description.type.TypeDescription.Generic.AnnotationReader
+                @Override // net.bytebuddy.description.type.TypeDescription.Generic.AnnotationReader.Delegator.Chained,
+                          // net.bytebuddy.description.type.TypeDescription.Generic.AnnotationReader
                 public /* bridge */ /* synthetic */ AnnotatedElement resolve() {
                     return super.resolve();
                 }
@@ -2308,7 +2620,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                         return NoOp.INSTANCE;
                     }
                     try {
-                        AnnotatedElement[] annotatedUpperBounds = annotatedWildcardType.getAnnotatedUpperBounds(annotatedElement);
+                        AnnotatedElement[] annotatedUpperBounds = annotatedWildcardType
+                                .getAnnotatedUpperBounds(annotatedElement);
                         return annotatedUpperBounds.length == 0 ? NoOp.INSTANCE : annotatedUpperBounds[this.index];
                     } catch (ClassCastException unused) {
                         return NoOp.INSTANCE;
@@ -2316,7 +2629,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum NoOp implements AnnotationReader, AnnotatedElement {
                 INSTANCE;
 
@@ -2405,7 +2721,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             AnnotatedElement resolve();
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static abstract class Builder {
 
@@ -2413,7 +2732,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             private static final Type UNDEFINED = null;
             protected final List<? extends AnnotationDescription> annotations;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class OfGenericArrayType extends Builder {
                 private final Generic componentType;
@@ -2424,12 +2746,14 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.Builder
                 public Builder doAnnotate(List<? extends AnnotationDescription> list) {
-                    return new OfGenericArrayType(this.componentType, CompoundList.of((List) this.annotations, (List) list));
+                    return new OfGenericArrayType(this.componentType,
+                            CompoundList.of((List) this.annotations, (List) list));
                 }
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.Builder
                 public Generic doBuild() {
-                    return new OfGenericArray.Latent(this.componentType, new AnnotationSource.Explicit(this.annotations));
+                    return new OfGenericArray.Latent(this.componentType,
+                            new AnnotationSource.Explicit(this.annotations));
                 }
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.Builder
@@ -2440,7 +2764,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.componentType.equals(((OfGenericArrayType) obj).componentType);
+                    return obj != null && getClass() == obj.getClass()
+                            && this.componentType.equals(((OfGenericArrayType) obj).componentType);
                 }
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.Builder
@@ -2454,7 +2779,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class OfNonGenericType extends Builder {
 
@@ -2469,13 +2797,15 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.Builder
                 public Builder doAnnotate(List<? extends AnnotationDescription> list) {
-                    return new OfNonGenericType(this.typeDescription, this.ownerType, CompoundList.of((List) this.annotations, (List) list));
+                    return new OfNonGenericType(this.typeDescription, this.ownerType,
+                            CompoundList.of((List) this.annotations, (List) list));
                 }
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.Builder
                 public Generic doBuild() {
                     if (!this.typeDescription.represents(Void.TYPE) || this.annotations.isEmpty()) {
-                        return new OfNonGenericType.Latent(this.typeDescription, this.ownerType, new AnnotationSource.Explicit(this.annotations));
+                        return new OfNonGenericType.Latent(this.typeDescription, this.ownerType,
+                                new AnnotationSource.Explicit(this.annotations));
                     }
                     throw new IllegalArgumentException("The void non-type cannot be annotated");
                 }
@@ -2514,21 +2844,26 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 }
 
                 public OfNonGenericType(TypeDescription typeDescription, @MaybeNull TypeDescription typeDescription2) {
-                    this(typeDescription, typeDescription2 == null ? Generic.UNDEFINED : typeDescription2.asGenericType());
+                    this(typeDescription,
+                            typeDescription2 == null ? Generic.UNDEFINED : typeDescription2.asGenericType());
                 }
 
                 public OfNonGenericType(TypeDescription typeDescription, @MaybeNull Generic generic) {
                     this(typeDescription, generic, Collections.EMPTY_LIST);
                 }
 
-                public OfNonGenericType(TypeDescription typeDescription, @MaybeNull Generic generic, List<? extends AnnotationDescription> list) {
+                public OfNonGenericType(TypeDescription typeDescription, @MaybeNull Generic generic,
+                        List<? extends AnnotationDescription> list) {
                     super(list);
                     this.ownerType = generic;
                     this.typeDescription = typeDescription;
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class OfParameterizedType extends Builder {
 
@@ -2538,77 +2873,89 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 private final List<? extends Generic> parameterTypes;
                 private final TypeDescription rawType;
 
-                public OfParameterizedType(TypeDescription typeDescription, @MaybeNull Generic generic, List<? extends Generic> list) {
+                public OfParameterizedType(TypeDescription typeDescription, @MaybeNull Generic generic,
+                        List<? extends Generic> list) {
                     this(typeDescription, generic, list, Collections.EMPTY_LIST);
                 }
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.Builder
                 public Builder doAnnotate(List<? extends AnnotationDescription> list) {
-                    return new OfParameterizedType(this.rawType, this.ownerType, this.parameterTypes, CompoundList.of((List) this.annotations, (List) list));
+                    return new OfParameterizedType(this.rawType, this.ownerType, this.parameterTypes,
+                            CompoundList.of((List) this.annotations, (List) list));
                 }
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.Builder
                 public Generic doBuild() {
-                    return new OfParameterizedType.Latent(this.rawType, this.ownerType, this.parameterTypes, new AnnotationSource.Explicit(this.annotations));
+                    return new OfParameterizedType.Latent(this.rawType, this.ownerType, this.parameterTypes,
+                            new AnnotationSource.Explicit(this.annotations));
                 }
 
-                /* JADX WARN: Code restructure failed: missing block: B:22:0x0036, code lost:
-                
-                    if (r2 != null) goto L23;
+                /*
+                 * JADX WARN: Code restructure failed: missing block: B:22:0x0036, code lost:
+                 * 
+                 * if (r2 != null) goto L23;
                  */
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.Builder
                 /*
-                    Code decompiled incorrectly, please refer to instructions dump.
-                    To view partially-correct add '--show-bad-code' argument
-                */
+                 * Code decompiled incorrectly, please refer to instructions dump.
+                 * To view partially-correct add '--show-bad-code' argument
+                 */
                 public boolean equals(@net.bytebuddy.utility.nullability.MaybeNull java.lang.Object r5) {
                     /*
-                        r4 = this;
-                        boolean r0 = super.equals(r5)
-                        r1 = 0
-                        if (r0 != 0) goto L8
-                        return r1
-                    L8:
-                        r0 = 1
-                        if (r4 != r5) goto Lc
-                        return r0
-                    Lc:
-                        if (r5 != 0) goto Lf
-                        return r1
-                    Lf:
-                        java.lang.Class r2 = r4.getClass()
-                        java.lang.Class r3 = r5.getClass()
-                        if (r2 == r3) goto L1a
-                        return r1
-                    L1a:
-                        net.bytebuddy.description.type.TypeDescription r2 = r4.rawType
-                        net.bytebuddy.description.type.TypeDescription$Generic$Builder$OfParameterizedType r5 = (net.bytebuddy.description.type.TypeDescription.Generic.Builder.OfParameterizedType) r5
-                        net.bytebuddy.description.type.TypeDescription r3 = r5.rawType
-                        boolean r2 = r2.equals(r3)
-                        if (r2 != 0) goto L27
-                        return r1
-                    L27:
-                        net.bytebuddy.description.type.TypeDescription$Generic r2 = r4.ownerType
-                        net.bytebuddy.description.type.TypeDescription$Generic r3 = r5.ownerType
-                        if (r3 == 0) goto L36
-                        if (r2 == 0) goto L38
-                        boolean r2 = r2.equals(r3)
-                        if (r2 != 0) goto L39
-                        return r1
-                    L36:
-                        if (r2 == 0) goto L39
-                    L38:
-                        return r1
-                    L39:
-                        java.util.List<? extends net.bytebuddy.description.type.TypeDescription$Generic> r2 = r4.parameterTypes
-                        java.util.List<? extends net.bytebuddy.description.type.TypeDescription$Generic> r5 = r5.parameterTypes
-                        boolean r5 = r2.equals(r5)
-                        if (r5 != 0) goto L44
-                        return r1
-                    L44:
-                        return r0
-                    */
-                    throw new UnsupportedOperationException("Method not decompiled: net.bytebuddy.description.type.TypeDescription.Generic.Builder.OfParameterizedType.equals(java.lang.Object):boolean");
+                     * r4 = this;
+                     * boolean r0 = super.equals(r5)
+                     * r1 = 0
+                     * if (r0 != 0) goto L8
+                     * return r1
+                     * L8:
+                     * r0 = 1
+                     * if (r4 != r5) goto Lc
+                     * return r0
+                     * Lc:
+                     * if (r5 != 0) goto Lf
+                     * return r1
+                     * Lf:
+                     * java.lang.Class r2 = r4.getClass()
+                     * java.lang.Class r3 = r5.getClass()
+                     * if (r2 == r3) goto L1a
+                     * return r1
+                     * L1a:
+                     * net.bytebuddy.description.type.TypeDescription r2 = r4.rawType
+                     * net.bytebuddy.description.type.
+                     * TypeDescription$Generic$Builder$OfParameterizedType r5 =
+                     * (net.bytebuddy.description.type.TypeDescription.Generic.Builder.
+                     * OfParameterizedType) r5
+                     * net.bytebuddy.description.type.TypeDescription r3 = r5.rawType
+                     * boolean r2 = r2.equals(r3)
+                     * if (r2 != 0) goto L27
+                     * return r1
+                     * L27:
+                     * net.bytebuddy.description.type.TypeDescription$Generic r2 = r4.ownerType
+                     * net.bytebuddy.description.type.TypeDescription$Generic r3 = r5.ownerType
+                     * if (r3 == 0) goto L36
+                     * if (r2 == 0) goto L38
+                     * boolean r2 = r2.equals(r3)
+                     * if (r2 != 0) goto L39
+                     * return r1
+                     * L36:
+                     * if (r2 == 0) goto L39
+                     * L38:
+                     * return r1
+                     * L39:
+                     * java.util.List<? extends
+                     * net.bytebuddy.description.type.TypeDescription$Generic> r2 =
+                     * r4.parameterTypes
+                     * java.util.List<? extends
+                     * net.bytebuddy.description.type.TypeDescription$Generic> r5 =
+                     * r5.parameterTypes
+                     * boolean r5 = r2.equals(r5)
+                     * if (r5 != 0) goto L44
+                     * return r1
+                     * L44:
+                     * return r0
+                     */
+                    throw new UnsupportedOperationException(
+                            "Method not decompiled: net.bytebuddy.description.type.TypeDescription.Generic.Builder.OfParameterizedType.equals(java.lang.Object):boolean");
                 }
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.Builder
@@ -2621,7 +2968,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     return this.parameterTypes.hashCode() + (iF * 31);
                 }
 
-                public OfParameterizedType(TypeDescription typeDescription, @MaybeNull Generic generic, List<? extends Generic> list, List<? extends AnnotationDescription> list2) {
+                public OfParameterizedType(TypeDescription typeDescription, @MaybeNull Generic generic,
+                        List<? extends Generic> list, List<? extends AnnotationDescription> list2) {
                     super(list2);
                     this.rawType = typeDescription;
                     this.ownerType = generic;
@@ -2629,7 +2977,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class OfTypeVariable extends Builder {
                 private final String symbol;
@@ -2656,7 +3007,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.symbol.equals(((OfTypeVariable) obj).symbol);
+                    return obj != null && getClass() == obj.getClass()
+                            && this.symbol.equals(((OfTypeVariable) obj).symbol);
                 }
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.Builder
@@ -2670,7 +3022,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum Visitor implements Visitor<Builder> {
                 INSTANCE;
 
@@ -2681,12 +3036,17 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                 public Builder onNonGenericType(Generic generic) {
-                    return generic.isArray() ? ((Builder) generic.getComponentType().accept(this)).asArray().annotate((Collection<? extends AnnotationDescription>) generic.getDeclaredAnnotations()) : new OfNonGenericType(generic.asErasure(), generic.getOwnerType(), generic.getDeclaredAnnotations());
+                    return generic.isArray()
+                            ? ((Builder) generic.getComponentType().accept(this)).asArray().annotate(
+                                    (Collection<? extends AnnotationDescription>) generic.getDeclaredAnnotations())
+                            : new OfNonGenericType(generic.asErasure(), generic.getOwnerType(),
+                                    generic.getDeclaredAnnotations());
                 }
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                 public Builder onParameterizedType(Generic generic) {
-                    return new OfParameterizedType(generic.asErasure(), generic.getOwnerType(), generic.getTypeArguments(), generic.getDeclaredAnnotations());
+                    return new OfParameterizedType(generic.asErasure(), generic.getOwnerType(),
+                            generic.getTypeArguments(), generic.getDeclaredAnnotations());
                 }
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
@@ -2752,7 +3112,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 if (this == obj) {
                     return true;
                 }
-                return obj != null && getClass() == obj.getClass() && this.annotations.equals(((Builder) obj).annotations);
+                return obj != null && getClass() == obj.getClass()
+                        && this.annotations.equals(((Builder) obj).annotations);
             }
 
             public int hashCode() {
@@ -2776,12 +3137,14 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             }
 
             public Builder annotate(List<? extends Annotation> list) {
-                return annotate((Collection<? extends AnnotationDescription>) new AnnotationList.ForLoadedAnnotations(list));
+                return annotate(
+                        (Collection<? extends AnnotationDescription>) new AnnotationList.ForLoadedAnnotations(list));
             }
 
             public Builder asArray(int i) {
                 if (i < 1) {
-                    throw new IllegalArgumentException(bjs.i(i, "Cannot define an array of a non-positive arity: "));
+                    throw new IllegalArgumentException(
+                            concatVar2Var1(i, "Cannot define an array of a non-positive arity: "));
                 }
                 Generic genericBuild = build();
                 while (true) {
@@ -2806,7 +3169,9 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             }
 
             public static Builder parameterizedType(Class<?> cls, @MaybeNull Type type, List<? extends Type> list) {
-                return parameterizedType(ForLoadedType.of(cls), type == null ? null : TypeDefinition.Sort.describe(type), new TypeList.Generic.ForLoadedTypes(list));
+                return parameterizedType(ForLoadedType.of(cls),
+                        type == null ? null : TypeDefinition.Sort.describe(type),
+                        new TypeList.Generic.ForLoadedTypes(list));
             }
 
             public static Builder rawType(Class<?> cls, @MaybeNull Generic generic) {
@@ -2814,7 +3179,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             }
 
             public static Generic unboundWildcard(List<? extends Annotation> list) {
-                return unboundWildcard((Collection<? extends AnnotationDescription>) new AnnotationList.ForLoadedAnnotations(list));
+                return unboundWildcard(
+                        (Collection<? extends AnnotationDescription>) new AnnotationList.ForLoadedAnnotations(list));
             }
 
             public Builder annotate(AnnotationDescription... annotationDescriptionArr) {
@@ -2822,15 +3188,18 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             }
 
             public Generic asWildcardLowerBound(List<? extends Annotation> list) {
-                return asWildcardLowerBound((Collection<? extends AnnotationDescription>) new AnnotationList.ForLoadedAnnotations(list));
+                return asWildcardLowerBound(
+                        (Collection<? extends AnnotationDescription>) new AnnotationList.ForLoadedAnnotations(list));
             }
 
             public Generic asWildcardUpperBound(List<? extends Annotation> list) {
-                return asWildcardUpperBound((Collection<? extends AnnotationDescription>) new AnnotationList.ForLoadedAnnotations(list));
+                return asWildcardUpperBound(
+                        (Collection<? extends AnnotationDescription>) new AnnotationList.ForLoadedAnnotations(list));
             }
 
             public Generic build(List<? extends Annotation> list) {
-                return build((Collection<? extends AnnotationDescription>) new AnnotationList.ForLoadedAnnotations(list));
+                return build(
+                        (Collection<? extends AnnotationDescription>) new AnnotationList.ForLoadedAnnotations(list));
             }
 
             public static Builder rawType(TypeDescription typeDescription, @MaybeNull Generic generic) {
@@ -2845,7 +3214,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             }
 
             public static Generic unboundWildcard(AnnotationDescription... annotationDescriptionArr) {
-                return unboundWildcard((Collection<? extends AnnotationDescription>) Arrays.asList(annotationDescriptionArr));
+                return unboundWildcard(
+                        (Collection<? extends AnnotationDescription>) Arrays.asList(annotationDescriptionArr));
             }
 
             public Builder annotate(Collection<? extends AnnotationDescription> collection) {
@@ -2853,11 +3223,13 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             }
 
             public Generic asWildcardLowerBound(AnnotationDescription... annotationDescriptionArr) {
-                return asWildcardLowerBound((Collection<? extends AnnotationDescription>) Arrays.asList(annotationDescriptionArr));
+                return asWildcardLowerBound(
+                        (Collection<? extends AnnotationDescription>) Arrays.asList(annotationDescriptionArr));
             }
 
             public Generic asWildcardUpperBound(AnnotationDescription... annotationDescriptionArr) {
-                return asWildcardUpperBound((Collection<? extends AnnotationDescription>) Arrays.asList(annotationDescriptionArr));
+                return asWildcardUpperBound(
+                        (Collection<? extends AnnotationDescription>) Arrays.asList(annotationDescriptionArr));
             }
 
             public Generic build(AnnotationDescription... annotationDescriptionArr) {
@@ -2869,26 +3241,31 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             }
 
             public Generic asWildcardLowerBound(Collection<? extends AnnotationDescription> collection) {
-                return OfWildcardType.Latent.boundedBelow(build(), new AnnotationSource.Explicit(new ArrayList(collection)));
+                return OfWildcardType.Latent.boundedBelow(build(),
+                        new AnnotationSource.Explicit(new ArrayList(collection)));
             }
 
             public Generic asWildcardUpperBound(Collection<? extends AnnotationDescription> collection) {
-                return OfWildcardType.Latent.boundedAbove(build(), new AnnotationSource.Explicit(new ArrayList(collection)));
+                return OfWildcardType.Latent.boundedAbove(build(),
+                        new AnnotationSource.Explicit(new ArrayList(collection)));
             }
 
             public Generic build(Collection<? extends AnnotationDescription> collection) {
                 return doAnnotate(new ArrayList(collection)).doBuild();
             }
 
-            public static Builder parameterizedType(TypeDescription typeDescription, TypeDefinition... typeDefinitionArr) {
+            public static Builder parameterizedType(TypeDescription typeDescription,
+                    TypeDefinition... typeDefinitionArr) {
                 return parameterizedType(typeDescription, Arrays.asList(typeDefinitionArr));
             }
 
-            public static Builder parameterizedType(TypeDescription typeDescription, Collection<? extends TypeDefinition> collection) {
+            public static Builder parameterizedType(TypeDescription typeDescription,
+                    Collection<? extends TypeDefinition> collection) {
                 return parameterizedType(typeDescription, Generic.UNDEFINED, collection);
             }
 
-            public static Builder parameterizedType(TypeDescription typeDescription, @MaybeNull Generic generic, Collection<? extends TypeDefinition> collection) {
+            public static Builder parameterizedType(TypeDescription typeDescription, @MaybeNull Generic generic,
+                    Collection<? extends TypeDefinition> collection) {
                 TypeDescription declaringType = typeDescription.getDeclaringType();
                 if (generic == null && declaringType != null && typeDescription.isStatic()) {
                     generic = declaringType.asGenericType();
@@ -2899,27 +3276,37 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                             throw new IllegalArgumentException(dkz.x(typeDescription, " requires an owner type"));
                         }
                         if (generic != null && !generic.asErasure().equals(declaringType)) {
-                            throw new IllegalArgumentException(generic + " does not represent required owner for " + typeDescription);
+                            throw new IllegalArgumentException(
+                                    generic + " does not represent required owner for " + typeDescription);
                         }
                         if (generic != null && (typeDescription.isStatic() ^ generic.getSort().isNonGeneric())) {
-                            throw new IllegalArgumentException(generic + " does not define the correct parameters for owning " + typeDescription);
+                            throw new IllegalArgumentException(
+                                    generic + " does not define the correct parameters for owning " + typeDescription);
                         }
                         if (typeDescription.getTypeVariables().size() != collection.size()) {
-                            throw new IllegalArgumentException(collection + " does not contain number of required parameters for " + typeDescription);
+                            throw new IllegalArgumentException(collection
+                                    + " does not contain number of required parameters for " + typeDescription);
                         }
                     } else {
                         throw new IllegalArgumentException(dkz.x(typeDescription, " is not a parameterized type"));
                     }
                 }
-                return new OfParameterizedType(typeDescription, generic, new TypeList.Generic.Explicit(new ArrayList(collection)));
+                return new OfParameterizedType(typeDescription, generic,
+                        new TypeList.Generic.Explicit(new ArrayList(collection)));
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static abstract class LazyProjection extends AbstractBase {
             private transient /* synthetic */ int hashCode;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class ForLoadedFieldType extends WithEagerNavigation.OfAnnotatedElement {
                 private final Field field;
                 private transient /* synthetic */ Generic resolved;
@@ -2938,7 +3325,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     return new AnnotationReader.Delegator.ForLoadedField(this.field);
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection.WithEagerNavigation.OfAnnotatedElement, net.bytebuddy.description.annotation.AnnotationSource
+                @Override // net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection.WithEagerNavigation.OfAnnotatedElement,
+                          // net.bytebuddy.description.annotation.AnnotationSource
                 public /* bridge */ /* synthetic */ AnnotationList getDeclaredAnnotations() {
                     return super.getDeclaredAnnotations();
                 }
@@ -2946,7 +3334,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection
                 @CachedReturnPlugin.Enhance("resolved")
                 public Generic resolve() {
-                    Generic genericDescribeOrNull = this.resolved != null ? null : TypeDefinition.Sort.describeOrNull(this.field.getGenericType(), getAnnotationReader());
+                    Generic genericDescribeOrNull = this.resolved != null ? null
+                            : TypeDefinition.Sort.describeOrNull(this.field.getGenericType(), getAnnotationReader());
                     if (genericDescribeOrNull == null) {
                         return this.resolved;
                     }
@@ -2955,7 +3344,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class ForLoadedReturnType extends WithEagerNavigation.OfAnnotatedElement {
                 private final Method method;
                 private transient /* synthetic */ Generic resolved;
@@ -2974,7 +3366,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     return new AnnotationReader.Delegator.ForLoadedMethodReturnType(this.method);
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection.WithEagerNavigation.OfAnnotatedElement, net.bytebuddy.description.annotation.AnnotationSource
+                @Override // net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection.WithEagerNavigation.OfAnnotatedElement,
+                          // net.bytebuddy.description.annotation.AnnotationSource
                 public /* bridge */ /* synthetic */ AnnotationList getDeclaredAnnotations() {
                     return super.getDeclaredAnnotations();
                 }
@@ -2982,7 +3375,9 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection
                 @CachedReturnPlugin.Enhance("resolved")
                 public Generic resolve() {
-                    Generic genericDescribeOrNull = this.resolved != null ? null : TypeDefinition.Sort.describeOrNull(this.method.getGenericReturnType(), getAnnotationReader());
+                    Generic genericDescribeOrNull = this.resolved != null ? null
+                            : TypeDefinition.Sort.describeOrNull(this.method.getGenericReturnType(),
+                                    getAnnotationReader());
                     if (genericDescribeOrNull == null) {
                         return this.resolved;
                     }
@@ -2991,7 +3386,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class ForLoadedSuperClass extends WithLazyNavigation.OfAnnotatedElement {
                 private transient /* synthetic */ Generic resolved;
                 private final Class<?> type;
@@ -3015,7 +3413,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     return new AnnotationReader.Delegator.ForLoadedSuperClass(this.type);
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection.WithLazyNavigation.OfAnnotatedElement, net.bytebuddy.description.annotation.AnnotationSource
+                @Override // net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection.WithLazyNavigation.OfAnnotatedElement,
+                          // net.bytebuddy.description.annotation.AnnotationSource
                 public /* bridge */ /* synthetic */ AnnotationList getDeclaredAnnotations() {
                     return super.getDeclaredAnnotations();
                 }
@@ -3023,7 +3422,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection
                 @CachedReturnPlugin.Enhance("resolved")
                 public Generic resolve() {
-                    Generic genericDescribe = this.resolved != null ? null : TypeDefinition.Sort.describe(this.type.getGenericSuperclass(), getAnnotationReader());
+                    Generic genericDescribe = this.resolved != null ? null
+                            : TypeDefinition.Sort.describe(this.type.getGenericSuperclass(), getAnnotationReader());
                     if (genericDescribe == null) {
                         return this.resolved;
                     }
@@ -3032,7 +3432,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class OfConstructorParameter extends WithEagerNavigation.OfAnnotatedElement {
                 private final Constructor<?> constructor;
                 private transient /* synthetic */ Generic delegate;
@@ -3052,10 +3455,12 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection.WithEagerNavigation.OfAnnotatedElement
                 public AnnotationReader getAnnotationReader() {
-                    return new AnnotationReader.Delegator.ForLoadedExecutableParameterType(this.constructor, this.index);
+                    return new AnnotationReader.Delegator.ForLoadedExecutableParameterType(this.constructor,
+                            this.index);
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection.WithEagerNavigation.OfAnnotatedElement, net.bytebuddy.description.annotation.AnnotationSource
+                @Override // net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection.WithEagerNavigation.OfAnnotatedElement,
+                          // net.bytebuddy.description.annotation.AnnotationSource
                 public /* bridge */ /* synthetic */ AnnotationList getDeclaredAnnotations() {
                     return super.getDeclaredAnnotations();
                 }
@@ -3069,7 +3474,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     } else {
                         Type[] genericParameterTypes = this.constructor.getGenericParameterTypes();
                         Class<?>[] clsArr = this.erasure;
-                        genericDescribeOrNull = clsArr.length == genericParameterTypes.length ? TypeDefinition.Sort.describeOrNull(genericParameterTypes[this.index], getAnnotationReader()) : OfNonGenericType.ForLoadedType.of(clsArr[this.index]);
+                        genericDescribeOrNull = clsArr.length == genericParameterTypes.length
+                                ? TypeDefinition.Sort.describeOrNull(genericParameterTypes[this.index],
+                                        getAnnotationReader())
+                                : OfNonGenericType.ForLoadedType.of(clsArr[this.index]);
                     }
                     if (genericDescribeOrNull == null) {
                         return this.delegate;
@@ -3079,7 +3487,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class OfMethodParameter extends WithEagerNavigation.OfAnnotatedElement {
                 private final Class<?>[] erasure;
                 private final int index;
@@ -3102,7 +3513,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     return new AnnotationReader.Delegator.ForLoadedExecutableParameterType(this.method, this.index);
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection.WithEagerNavigation.OfAnnotatedElement, net.bytebuddy.description.annotation.AnnotationSource
+                @Override // net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection.WithEagerNavigation.OfAnnotatedElement,
+                          // net.bytebuddy.description.annotation.AnnotationSource
                 public /* bridge */ /* synthetic */ AnnotationList getDeclaredAnnotations() {
                     return super.getDeclaredAnnotations();
                 }
@@ -3116,7 +3528,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     } else {
                         Type[] genericParameterTypes = this.method.getGenericParameterTypes();
                         Class<?>[] clsArr = this.erasure;
-                        genericDescribeOrNull = clsArr.length == genericParameterTypes.length ? TypeDefinition.Sort.describeOrNull(genericParameterTypes[this.index], getAnnotationReader()) : OfNonGenericType.ForLoadedType.of(clsArr[this.index]);
+                        genericDescribeOrNull = clsArr.length == genericParameterTypes.length
+                                ? TypeDefinition.Sort.describeOrNull(genericParameterTypes[this.index],
+                                        getAnnotationReader())
+                                : OfNonGenericType.ForLoadedType.of(clsArr[this.index]);
                     }
                     if (genericDescribeOrNull == null) {
                         return this.resolved;
@@ -3126,7 +3541,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class OfRecordComponent extends WithEagerNavigation.OfAnnotatedElement {
                 private final Object recordComponent;
                 private transient /* synthetic */ Generic resolved;
@@ -3137,7 +3555,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
                 @Override // net.bytebuddy.description.type.TypeDefinition
                 public TypeDescription asErasure() {
-                    return ForLoadedType.of(RecordComponentDescription.ForLoadedRecordComponent.RECORD_COMPONENT.getType(this.recordComponent));
+                    return ForLoadedType.of(RecordComponentDescription.ForLoadedRecordComponent.RECORD_COMPONENT
+                            .getType(this.recordComponent));
                 }
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection.WithEagerNavigation.OfAnnotatedElement
@@ -3145,7 +3564,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     return new AnnotationReader.Delegator.ForLoadedRecordComponent(this.recordComponent);
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection.WithEagerNavigation.OfAnnotatedElement, net.bytebuddy.description.annotation.AnnotationSource
+                @Override // net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection.WithEagerNavigation.OfAnnotatedElement,
+                          // net.bytebuddy.description.annotation.AnnotationSource
                 public /* bridge */ /* synthetic */ AnnotationList getDeclaredAnnotations() {
                     return super.getDeclaredAnnotations();
                 }
@@ -3153,7 +3573,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection
                 @CachedReturnPlugin.Enhance("resolved")
                 public Generic resolve() {
-                    Generic genericDescribeOrNull = this.resolved != null ? null : TypeDefinition.Sort.describeOrNull(RecordComponentDescription.ForLoadedRecordComponent.RECORD_COMPONENT.getGenericType(this.recordComponent), getAnnotationReader());
+                    Generic genericDescribeOrNull = this.resolved != null ? null
+                            : TypeDefinition.Sort
+                                    .describeOrNull(RecordComponentDescription.ForLoadedRecordComponent.RECORD_COMPONENT
+                                            .getGenericType(this.recordComponent), getAnnotationReader());
                     if (genericDescribeOrNull == null) {
                         return this.resolved;
                     }
@@ -3162,14 +3585,22 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static abstract class WithEagerNavigation extends LazyProjection {
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public static abstract class OfAnnotatedElement extends WithEagerNavigation {
                     public abstract AnnotationReader getAnnotationReader();
 
-                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection.WithEagerNavigation, net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection, net.bytebuddy.description.type.TypeDefinition
+                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection.WithEagerNavigation,
+                              // net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection,
+                              // net.bytebuddy.description.type.TypeDefinition
                     @MaybeNull
                     public /* bridge */ /* synthetic */ TypeDefinition getComponentType() {
                         return super.getComponentType();
@@ -3180,7 +3611,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     }
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection, net.bytebuddy.description.type.TypeDefinition
+                @Override // net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection,
+                          // net.bytebuddy.description.type.TypeDefinition
                 @MaybeNull
                 public /* bridge */ /* synthetic */ TypeDefinition getComponentType() {
                     return super.getComponentType();
@@ -3203,10 +3635,16 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static abstract class WithLazyNavigation extends LazyProjection {
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public static class LazyInterfaceList extends TypeList.Generic.AbstractBase {
                     private final LazyProjection delegate;
                     private final TypeList.Generic rawInterfaces;
@@ -3231,7 +3669,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public static class LazyInterfaceType extends WithLazyNavigation {
                     private final LazyProjection delegate;
                     private final int index;
@@ -3249,7 +3690,9 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                         return this.rawInterface.asErasure();
                     }
 
-                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection.WithLazyNavigation, net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection, net.bytebuddy.description.type.TypeDefinition
+                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection.WithLazyNavigation,
+                              // net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection,
+                              // net.bytebuddy.description.type.TypeDefinition
                     @MaybeNull
                     public /* bridge */ /* synthetic */ TypeDefinition getComponentType() {
                         return super.getComponentType();
@@ -3263,7 +3706,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     @Override // net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection
                     @CachedReturnPlugin.Enhance("resolved")
                     public Generic resolve() {
-                        Generic generic = this.resolved != null ? null : this.delegate.resolve().getInterfaces().get(this.index);
+                        Generic generic = this.resolved != null ? null
+                                : this.delegate.resolve().getInterfaces().get(this.index);
                         if (generic == null) {
                             return this.resolved;
                         }
@@ -3272,7 +3716,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public static class LazySuperClass extends WithLazyNavigation {
                     private final LazyProjection delegate;
                     private transient /* synthetic */ Generic resolved;
@@ -3283,7 +3730,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
                     @MaybeNull
                     public static Generic of(LazyProjection lazyProjection) {
-                        return lazyProjection.asErasure().getSuperClass() == null ? Generic.UNDEFINED : new LazySuperClass(lazyProjection);
+                        return lazyProjection.asErasure().getSuperClass() == null ? Generic.UNDEFINED
+                                : new LazySuperClass(lazyProjection);
                     }
 
                     @Override // net.bytebuddy.description.type.TypeDefinition
@@ -3291,7 +3739,9 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                         return this.delegate.asErasure().getSuperClass().asErasure();
                     }
 
-                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection.WithLazyNavigation, net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection, net.bytebuddy.description.type.TypeDefinition
+                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection.WithLazyNavigation,
+                              // net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection,
+                              // net.bytebuddy.description.type.TypeDefinition
                     @MaybeNull
                     public /* bridge */ /* synthetic */ TypeDefinition getComponentType() {
                         return super.getComponentType();
@@ -3314,11 +3764,16 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public static abstract class OfAnnotatedElement extends WithLazyNavigation {
                     public abstract AnnotationReader getAnnotationReader();
 
-                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection.WithLazyNavigation, net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection, net.bytebuddy.description.type.TypeDefinition
+                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection.WithLazyNavigation,
+                              // net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection,
+                              // net.bytebuddy.description.type.TypeDefinition
                     @MaybeNull
                     public /* bridge */ /* synthetic */ TypeDefinition getComponentType() {
                         return super.getComponentType();
@@ -3329,7 +3784,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     }
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection, net.bytebuddy.description.type.TypeDefinition
+                @Override // net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection,
+                          // net.bytebuddy.description.type.TypeDefinition
                 @MaybeNull
                 public /* bridge */ /* synthetic */ TypeDefinition getComponentType() {
                     return super.getComponentType();
@@ -3352,7 +3808,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class WithResolvedErasure extends WithEagerNavigation {
                 private final AnnotationSource annotationSource;
                 private final Generic delegate;
@@ -3384,7 +3843,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     return generic;
                 }
 
-                public WithResolvedErasure(Generic generic, Visitor<? extends Generic> visitor, AnnotationSource annotationSource) {
+                public WithResolvedErasure(Generic generic, Visitor<? extends Generic> visitor,
+                        AnnotationSource annotationSource) {
                     this.delegate = generic;
                     this.visitor = visitor;
                     this.annotationSource = annotationSource;
@@ -3414,12 +3874,14 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 return resolve().getActualName();
             }
 
-            @Override // net.bytebuddy.description.type.TypeDescription.Generic, net.bytebuddy.description.type.TypeDefinition
+            @Override // net.bytebuddy.description.type.TypeDescription.Generic,
+                      // net.bytebuddy.description.type.TypeDefinition
             public FieldList<FieldDescription.InGenericShape> getDeclaredFields() {
                 return resolve().getDeclaredFields();
             }
 
-            @Override // net.bytebuddy.description.type.TypeDescription.Generic, net.bytebuddy.description.type.TypeDefinition
+            @Override // net.bytebuddy.description.type.TypeDescription.Generic,
+                      // net.bytebuddy.description.type.TypeDefinition
             public MethodList<MethodDescription.InGenericShape> getDeclaredMethods() {
                 return resolve().getDeclaredMethods();
             }
@@ -3435,7 +3897,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 return resolve().getOwnerType();
             }
 
-            @Override // net.bytebuddy.description.type.TypeDescription.Generic, net.bytebuddy.description.type.TypeDefinition
+            @Override // net.bytebuddy.description.type.TypeDescription.Generic,
+                      // net.bytebuddy.description.type.TypeDefinition
             public RecordComponentList<RecordComponentDescription.InGenericShape> getRecordComponents() {
                 return resolve().getRecordComponents();
             }
@@ -3500,7 +3963,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 return asErasure().isRecord();
             }
 
-            @Override // net.bytebuddy.description.type.TypeDescription.Generic.AbstractBase, net.bytebuddy.description.type.TypeDefinition
+            @Override // net.bytebuddy.description.type.TypeDescription.Generic.AbstractBase,
+                      // net.bytebuddy.description.type.TypeDefinition
             public boolean represents(Type type) {
                 return resolve().represents(type);
             }
@@ -3518,7 +3982,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class LazyProxy implements InvocationHandler {
             private final Class<?> type;
@@ -3528,7 +3995,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             }
 
             public static Generic of(Class<?> cls) {
-                return (Generic) Proxy.newProxyInstance(Generic.class.getClassLoader(), new Class[]{Generic.class}, new LazyProxy(cls));
+                return (Generic) Proxy.newProxyInstance(Generic.class.getClassLoader(), new Class[] { Generic.class },
+                        new LazyProxy(cls));
             }
 
             public boolean equals(@MaybeNull Object obj) {
@@ -3552,11 +4020,17 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static abstract class OfGenericArray extends AbstractBase {
             private transient /* synthetic */ int hashCode;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class ForLoadedType extends OfGenericArray {
                 private final AnnotationReader annotationReader;
                 private final GenericArrayType genericArrayType;
@@ -3570,7 +4044,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     return this.annotationReader.asList();
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.Generic.AbstractBase, net.bytebuddy.description.type.TypeDefinition
+                @Override // net.bytebuddy.description.type.TypeDescription.Generic.AbstractBase,
+                          // net.bytebuddy.description.type.TypeDefinition
                 public boolean represents(Type type) {
                     return this.genericArrayType == type || super.represents(type);
                 }
@@ -3583,11 +4058,15 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 @Override // net.bytebuddy.description.type.TypeDefinition
                 @MaybeNull
                 public Generic getComponentType() {
-                    return TypeDefinition.Sort.describeOrNull(this.genericArrayType.getGenericComponentType(), this.annotationReader.ofComponentType());
+                    return TypeDefinition.Sort.describeOrNull(this.genericArrayType.getGenericComponentType(),
+                            this.annotationReader.ofComponentType());
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class Latent extends OfGenericArray {
                 private final AnnotationSource annotationSource;
                 private final Generic componentType;
@@ -3642,12 +4121,14 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 return getSort().isNonGeneric() ? asErasure().getActualName() : toString();
             }
 
-            @Override // net.bytebuddy.description.type.TypeDescription.Generic, net.bytebuddy.description.type.TypeDefinition
+            @Override // net.bytebuddy.description.type.TypeDescription.Generic,
+                      // net.bytebuddy.description.type.TypeDefinition
             public FieldList<FieldDescription.InGenericShape> getDeclaredFields() {
                 return new FieldList.Empty();
             }
 
-            @Override // net.bytebuddy.description.type.TypeDescription.Generic, net.bytebuddy.description.type.TypeDefinition
+            @Override // net.bytebuddy.description.type.TypeDescription.Generic,
+                      // net.bytebuddy.description.type.TypeDefinition
             public MethodList<MethodDescription.InGenericShape> getDeclaredMethods() {
                 return new MethodList.Empty();
             }
@@ -3668,14 +4149,16 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 return Generic.UNDEFINED;
             }
 
-            @Override // net.bytebuddy.description.type.TypeDescription.Generic, net.bytebuddy.description.type.TypeDefinition
+            @Override // net.bytebuddy.description.type.TypeDescription.Generic,
+                      // net.bytebuddy.description.type.TypeDefinition
             public RecordComponentList<RecordComponentDescription.InGenericShape> getRecordComponents() {
                 return new RecordComponentList.Empty();
             }
 
             @Override // net.bytebuddy.description.type.TypeDefinition
             public TypeDefinition.Sort getSort() {
-                return getComponentType().getSort().isNonGeneric() ? TypeDefinition.Sort.NON_GENERIC : TypeDefinition.Sort.GENERIC_ARRAY;
+                return getComponentType().getSort().isNonGeneric() ? TypeDefinition.Sort.NON_GENERIC
+                        : TypeDefinition.Sort.GENERIC_ARRAY;
             }
 
             @Override // net.bytebuddy.description.type.TypeDefinition
@@ -3716,7 +4199,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
             @CachedReturnPlugin.Enhance("hashCode")
             public int hashCode() {
-                int iHashCode = this.hashCode != 0 ? 0 : getSort().isNonGeneric() ? asErasure().hashCode() : getComponentType().hashCode();
+                int iHashCode = this.hashCode != 0 ? 0
+                        : getSort().isNonGeneric() ? asErasure().hashCode() : getComponentType().hashCode();
                 if (iHashCode == 0) {
                     return this.hashCode;
                 }
@@ -3752,11 +4236,17 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static abstract class OfNonGenericType extends AbstractBase {
             private transient /* synthetic */ int hashCode;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class ForErasure extends OfNonGenericType {
                 private final TypeDescription typeDescription;
 
@@ -3789,7 +4279,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class ForLoadedType extends OfNonGenericType {
                 private static final Map<Class<?>, Generic> TYPE_CACHE;
                 private final AnnotationReader annotationReader;
@@ -3855,10 +4348,13 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 @MaybeNull
                 public Generic getOwnerType() {
                     Class<?> declaringClass = this.type.getDeclaringClass();
-                    return declaringClass == null ? Generic.UNDEFINED : new ForLoadedType(declaringClass, this.annotationReader.ofOuterClass());
+                    return declaringClass == null ? Generic.UNDEFINED
+                            : new ForLoadedType(declaringClass, this.annotationReader.ofOuterClass());
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfNonGenericType, net.bytebuddy.description.type.TypeDescription.Generic.AbstractBase, net.bytebuddy.description.type.TypeDefinition
+                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfNonGenericType,
+                          // net.bytebuddy.description.type.TypeDescription.Generic.AbstractBase,
+                          // net.bytebuddy.description.type.TypeDefinition
                 public boolean represents(Type type) {
                     return this.type == type || super.represents(type);
                 }
@@ -3872,11 +4368,15 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 @MaybeNull
                 public Generic getComponentType() {
                     Class<?> componentType = this.type.getComponentType();
-                    return componentType == null ? Generic.UNDEFINED : new ForLoadedType(componentType, this.annotationReader.ofComponentType());
+                    return componentType == null ? Generic.UNDEFINED
+                            : new ForLoadedType(componentType, this.annotationReader.ofComponentType());
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class ForReifiedErasure extends OfNonGenericType {
                 private final TypeDescription typeDescription;
 
@@ -3885,7 +4385,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 }
 
                 public static Generic of(TypeDescription typeDescription) {
-                    return typeDescription.isGenerified() ? new ForReifiedErasure(typeDescription) : new ForErasure(typeDescription);
+                    return typeDescription.isGenerified() ? new ForReifiedErasure(typeDescription)
+                            : new ForErasure(typeDescription);
                 }
 
                 @Override // net.bytebuddy.description.type.TypeDefinition
@@ -3898,19 +4399,27 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     return new AnnotationList.Empty();
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfNonGenericType, net.bytebuddy.description.type.TypeDescription.Generic, net.bytebuddy.description.type.TypeDefinition
+                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfNonGenericType,
+                          // net.bytebuddy.description.type.TypeDescription.Generic,
+                          // net.bytebuddy.description.type.TypeDefinition
                 public FieldList<FieldDescription.InGenericShape> getDeclaredFields() {
-                    return new FieldList.TypeSubstituting(this, this.typeDescription.getDeclaredFields(), Visitor.TypeErasing.INSTANCE);
+                    return new FieldList.TypeSubstituting(this, this.typeDescription.getDeclaredFields(),
+                            Visitor.TypeErasing.INSTANCE);
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfNonGenericType, net.bytebuddy.description.type.TypeDescription.Generic, net.bytebuddy.description.type.TypeDefinition
+                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfNonGenericType,
+                          // net.bytebuddy.description.type.TypeDescription.Generic,
+                          // net.bytebuddy.description.type.TypeDefinition
                 public MethodList<MethodDescription.InGenericShape> getDeclaredMethods() {
-                    return new MethodList.TypeSubstituting(this, this.typeDescription.getDeclaredMethods(), Visitor.TypeErasing.INSTANCE);
+                    return new MethodList.TypeSubstituting(this, this.typeDescription.getDeclaredMethods(),
+                            Visitor.TypeErasing.INSTANCE);
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfNonGenericType, net.bytebuddy.description.type.TypeDefinition
+                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfNonGenericType,
+                          // net.bytebuddy.description.type.TypeDefinition
                 public TypeList.Generic getInterfaces() {
-                    return new TypeList.Generic.ForDetachedTypes.WithResolvedErasure(this.typeDescription.getInterfaces(), Visitor.Reifying.INHERITING);
+                    return new TypeList.Generic.ForDetachedTypes.WithResolvedErasure(
+                            this.typeDescription.getInterfaces(), Visitor.Reifying.INHERITING);
                 }
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic
@@ -3920,11 +4429,13 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     return declaringType == null ? Generic.UNDEFINED : of(declaringType);
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfNonGenericType, net.bytebuddy.description.type.TypeDefinition
+                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfNonGenericType,
+                          // net.bytebuddy.description.type.TypeDefinition
                 @MaybeNull
                 public Generic getSuperClass() {
                     Generic superClass = this.typeDescription.getSuperClass();
-                    return superClass == null ? Generic.UNDEFINED : new LazyProjection.WithResolvedErasure(superClass, Visitor.Reifying.INHERITING);
+                    return superClass == null ? Generic.UNDEFINED
+                            : new LazyProjection.WithResolvedErasure(superClass, Visitor.Reifying.INHERITING);
                 }
 
                 @Override // net.bytebuddy.description.type.TypeDefinition
@@ -3935,7 +4446,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class Latent extends OfNonGenericType {
                 private final AnnotationSource annotationSource;
 
@@ -3963,8 +4477,11 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     return this.declaringType;
                 }
 
-                private Latent(TypeDescription typeDescription, @MaybeNull TypeDescription typeDescription2, AnnotationSource annotationSource) {
-                    this(typeDescription, typeDescription2 == null ? Generic.UNDEFINED : typeDescription2.asGenericType(), annotationSource);
+                private Latent(TypeDescription typeDescription, @MaybeNull TypeDescription typeDescription2,
+                        AnnotationSource annotationSource) {
+                    this(typeDescription,
+                            typeDescription2 == null ? Generic.UNDEFINED : typeDescription2.asGenericType(),
+                            annotationSource);
                 }
 
                 @Override // net.bytebuddy.description.type.TypeDefinition
@@ -3974,7 +4491,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     return componentType == null ? Generic.UNDEFINED : componentType.asGenericType();
                 }
 
-                public Latent(TypeDescription typeDescription, @MaybeNull Generic generic, AnnotationSource annotationSource) {
+                public Latent(TypeDescription typeDescription, @MaybeNull Generic generic,
+                        AnnotationSource annotationSource) {
                     this.typeDescription = typeDescription;
                     this.declaringType = generic;
                     this.annotationSource = annotationSource;
@@ -4000,22 +4518,31 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 return asErasure().getActualName();
             }
 
-            @Override // net.bytebuddy.description.type.TypeDescription.Generic, net.bytebuddy.description.type.TypeDefinition
+            @Override // net.bytebuddy.description.type.TypeDescription.Generic,
+                      // net.bytebuddy.description.type.TypeDefinition
             public FieldList<FieldDescription.InGenericShape> getDeclaredFields() {
                 TypeDescription typeDescriptionAsErasure = asErasure();
-                return new FieldList.TypeSubstituting(this, typeDescriptionAsErasure.getDeclaredFields(), AbstractBase.RAW_TYPES ? Visitor.NoOp.INSTANCE : new Visitor.ForRawType(typeDescriptionAsErasure));
+                return new FieldList.TypeSubstituting(this, typeDescriptionAsErasure.getDeclaredFields(),
+                        AbstractBase.RAW_TYPES ? Visitor.NoOp.INSTANCE
+                                : new Visitor.ForRawType(typeDescriptionAsErasure));
             }
 
-            @Override // net.bytebuddy.description.type.TypeDescription.Generic, net.bytebuddy.description.type.TypeDefinition
+            @Override // net.bytebuddy.description.type.TypeDescription.Generic,
+                      // net.bytebuddy.description.type.TypeDefinition
             public MethodList<MethodDescription.InGenericShape> getDeclaredMethods() {
                 TypeDescription typeDescriptionAsErasure = asErasure();
-                return new MethodList.TypeSubstituting(this, typeDescriptionAsErasure.getDeclaredMethods(), AbstractBase.RAW_TYPES ? Visitor.NoOp.INSTANCE : new Visitor.ForRawType(typeDescriptionAsErasure));
+                return new MethodList.TypeSubstituting(this, typeDescriptionAsErasure.getDeclaredMethods(),
+                        AbstractBase.RAW_TYPES ? Visitor.NoOp.INSTANCE
+                                : new Visitor.ForRawType(typeDescriptionAsErasure));
             }
 
             @Override // net.bytebuddy.description.type.TypeDefinition
             public TypeList.Generic getInterfaces() {
                 TypeDescription typeDescriptionAsErasure = asErasure();
-                return AbstractBase.RAW_TYPES ? typeDescriptionAsErasure.getInterfaces() : new TypeList.Generic.ForDetachedTypes.WithResolvedErasure(typeDescriptionAsErasure.getInterfaces(), new Visitor.ForRawType(typeDescriptionAsErasure));
+                return AbstractBase.RAW_TYPES ? typeDescriptionAsErasure.getInterfaces()
+                        : new TypeList.Generic.ForDetachedTypes.WithResolvedErasure(
+                                typeDescriptionAsErasure.getInterfaces(),
+                                new Visitor.ForRawType(typeDescriptionAsErasure));
             }
 
             @Override // net.bytebuddy.description.type.TypeDescription.Generic
@@ -4023,10 +4550,13 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 throw new IllegalStateException("A non-generic type does not imply lower type bounds: " + this);
             }
 
-            @Override // net.bytebuddy.description.type.TypeDescription.Generic, net.bytebuddy.description.type.TypeDefinition
+            @Override // net.bytebuddy.description.type.TypeDescription.Generic,
+                      // net.bytebuddy.description.type.TypeDefinition
             public RecordComponentList<RecordComponentDescription.InGenericShape> getRecordComponents() {
                 TypeDescription typeDescriptionAsErasure = asErasure();
-                return new RecordComponentList.TypeSubstituting(this, typeDescriptionAsErasure.getRecordComponents(), AbstractBase.RAW_TYPES ? Visitor.NoOp.INSTANCE : new Visitor.ForRawType(typeDescriptionAsErasure));
+                return new RecordComponentList.TypeSubstituting(this, typeDescriptionAsErasure.getRecordComponents(),
+                        AbstractBase.RAW_TYPES ? Visitor.NoOp.INSTANCE
+                                : new Visitor.ForRawType(typeDescriptionAsErasure));
             }
 
             @Override // net.bytebuddy.description.type.TypeDefinition
@@ -4044,7 +4574,11 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             public Generic getSuperClass() {
                 TypeDescription typeDescriptionAsErasure = asErasure();
                 Generic superClass = typeDescriptionAsErasure.getSuperClass();
-                return AbstractBase.RAW_TYPES ? superClass : superClass == null ? Generic.UNDEFINED : new LazyProjection.WithResolvedErasure(superClass, new Visitor.ForRawType(typeDescriptionAsErasure), AnnotationSource.Empty.INSTANCE);
+                return AbstractBase.RAW_TYPES ? superClass
+                        : superClass == null ? Generic.UNDEFINED
+                                : new LazyProjection.WithResolvedErasure(superClass,
+                                        new Visitor.ForRawType(typeDescriptionAsErasure),
+                                        AnnotationSource.Empty.INSTANCE);
             }
 
             @Override // net.bytebuddy.description.type.TypeDescription.Generic
@@ -4102,7 +4636,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 return new TypeDefinition.SuperClassIterator(this);
             }
 
-            @Override // net.bytebuddy.description.type.TypeDescription.Generic.AbstractBase, net.bytebuddy.description.type.TypeDefinition
+            @Override // net.bytebuddy.description.type.TypeDescription.Generic.AbstractBase,
+                      // net.bytebuddy.description.type.TypeDefinition
             public boolean represents(Type type) {
                 return asErasure().represents(type);
             }
@@ -4112,11 +4647,17 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static abstract class OfParameterizedType extends AbstractBase {
             private transient /* synthetic */ int hashCode;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class ForGenerifiedErasure extends OfParameterizedType {
                 private final TypeDescription typeDescription;
 
@@ -4125,7 +4666,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 }
 
                 public static Generic of(TypeDescription typeDescription) {
-                    return typeDescription.isGenerified() ? new ForGenerifiedErasure(typeDescription) : new OfNonGenericType.ForErasure(typeDescription);
+                    return typeDescription.isGenerified() ? new ForGenerifiedErasure(typeDescription)
+                            : new OfNonGenericType.ForErasure(typeDescription);
                 }
 
                 @Override // net.bytebuddy.description.type.TypeDefinition
@@ -4133,7 +4675,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     return this.typeDescription;
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfParameterizedType, net.bytebuddy.description.type.TypeDefinition
+                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfParameterizedType,
+                          // net.bytebuddy.description.type.TypeDefinition
                 public /* bridge */ /* synthetic */ TypeDefinition getComponentType() {
                     return super.getComponentType();
                 }
@@ -4152,16 +4695,23 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic
                 public TypeList.Generic getTypeArguments() {
-                    return new TypeList.Generic.ForDetachedTypes(this.typeDescription.getTypeVariables(), Visitor.AnnotationStripper.INSTANCE);
+                    return new TypeList.Generic.ForDetachedTypes(this.typeDescription.getTypeVariables(),
+                            Visitor.AnnotationStripper.INSTANCE);
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class ForLoadedType extends OfParameterizedType {
                 private final AnnotationReader annotationReader;
                 private final ParameterizedType parameterizedType;
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public static class ParameterArgumentTypeList extends TypeList.Generic.AbstractBase {
                     private final AnnotationReader annotationReader;
                     private final Type[] argumentType;
@@ -4178,7 +4728,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
                     @Override // java.util.AbstractList, java.util.List
                     public Generic get(int i) {
-                        return TypeDefinition.Sort.describeOrNull(this.argumentType[i], this.annotationReader.ofTypeArgument(i));
+                        return TypeDefinition.Sort.describeOrNull(this.argumentType[i],
+                                this.annotationReader.ofTypeArgument(i));
                     }
                 }
 
@@ -4191,7 +4742,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     return ForLoadedType.of((Class) this.parameterizedType.getRawType());
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfParameterizedType, net.bytebuddy.description.type.TypeDefinition
+                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfParameterizedType,
+                          // net.bytebuddy.description.type.TypeDefinition
                 public /* bridge */ /* synthetic */ TypeDefinition getComponentType() {
                     return super.getComponentType();
                 }
@@ -4205,15 +4757,19 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 @MaybeNull
                 public Generic getOwnerType() {
                     Type ownerType = this.parameterizedType.getOwnerType();
-                    return ownerType == null ? Generic.UNDEFINED : TypeDefinition.Sort.describe(ownerType, this.annotationReader.ofOwnerType());
+                    return ownerType == null ? Generic.UNDEFINED
+                            : TypeDefinition.Sort.describe(ownerType, this.annotationReader.ofOwnerType());
                 }
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic
                 public TypeList.Generic getTypeArguments() {
-                    return new ParameterArgumentTypeList(this.parameterizedType.getActualTypeArguments(), this.annotationReader);
+                    return new ParameterArgumentTypeList(this.parameterizedType.getActualTypeArguments(),
+                            this.annotationReader);
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfParameterizedType, net.bytebuddy.description.type.TypeDescription.Generic.AbstractBase, net.bytebuddy.description.type.TypeDefinition
+                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfParameterizedType,
+                          // net.bytebuddy.description.type.TypeDescription.Generic.AbstractBase,
+                          // net.bytebuddy.description.type.TypeDefinition
                 public boolean represents(Type type) {
                     return this.parameterizedType == type || super.represents(type);
                 }
@@ -4224,7 +4780,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class ForReifiedType extends OfParameterizedType {
                 private final Generic parameterizedType;
 
@@ -4237,7 +4796,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     return this.parameterizedType.asErasure();
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfParameterizedType, net.bytebuddy.description.type.TypeDefinition
+                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfParameterizedType,
+                          // net.bytebuddy.description.type.TypeDefinition
                 public /* bridge */ /* synthetic */ TypeDefinition getComponentType() {
                     return super.getComponentType();
                 }
@@ -4247,42 +4807,57 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     return new AnnotationList.Empty();
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfParameterizedType, net.bytebuddy.description.type.TypeDescription.Generic, net.bytebuddy.description.type.TypeDefinition
+                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfParameterizedType,
+                          // net.bytebuddy.description.type.TypeDescription.Generic,
+                          // net.bytebuddy.description.type.TypeDefinition
                 public FieldList<FieldDescription.InGenericShape> getDeclaredFields() {
-                    return new FieldList.TypeSubstituting(this, super.getDeclaredFields(), Visitor.TypeErasing.INSTANCE);
+                    return new FieldList.TypeSubstituting(this, super.getDeclaredFields(),
+                            Visitor.TypeErasing.INSTANCE);
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfParameterizedType, net.bytebuddy.description.type.TypeDescription.Generic, net.bytebuddy.description.type.TypeDefinition
+                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfParameterizedType,
+                          // net.bytebuddy.description.type.TypeDescription.Generic,
+                          // net.bytebuddy.description.type.TypeDefinition
                 public MethodList<MethodDescription.InGenericShape> getDeclaredMethods() {
-                    return new MethodList.TypeSubstituting(this, super.getDeclaredMethods(), Visitor.TypeErasing.INSTANCE);
+                    return new MethodList.TypeSubstituting(this, super.getDeclaredMethods(),
+                            Visitor.TypeErasing.INSTANCE);
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfParameterizedType, net.bytebuddy.description.type.TypeDefinition
+                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfParameterizedType,
+                          // net.bytebuddy.description.type.TypeDefinition
                 public TypeList.Generic getInterfaces() {
-                    return new TypeList.Generic.ForDetachedTypes.WithResolvedErasure(super.getInterfaces(), Visitor.Reifying.INHERITING);
+                    return new TypeList.Generic.ForDetachedTypes.WithResolvedErasure(super.getInterfaces(),
+                            Visitor.Reifying.INHERITING);
                 }
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic
                 @MaybeNull
                 public Generic getOwnerType() {
                     Generic ownerType = this.parameterizedType.getOwnerType();
-                    return ownerType == null ? Generic.UNDEFINED : (Generic) ownerType.accept(Visitor.Reifying.INHERITING);
+                    return ownerType == null ? Generic.UNDEFINED
+                            : (Generic) ownerType.accept(Visitor.Reifying.INHERITING);
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfParameterizedType, net.bytebuddy.description.type.TypeDefinition
+                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfParameterizedType,
+                          // net.bytebuddy.description.type.TypeDefinition
                 @MaybeNull
                 public Generic getSuperClass() {
                     Generic superClass = super.getSuperClass();
-                    return superClass == null ? Generic.UNDEFINED : new LazyProjection.WithResolvedErasure(superClass, Visitor.Reifying.INHERITING);
+                    return superClass == null ? Generic.UNDEFINED
+                            : new LazyProjection.WithResolvedErasure(superClass, Visitor.Reifying.INHERITING);
                 }
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic
                 public TypeList.Generic getTypeArguments() {
-                    return new TypeList.Generic.ForDetachedTypes(this.parameterizedType.getTypeArguments(), Visitor.TypeErasing.INSTANCE);
+                    return new TypeList.Generic.ForDetachedTypes(this.parameterizedType.getTypeArguments(),
+                            Visitor.TypeErasing.INSTANCE);
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class Latent extends OfParameterizedType {
                 private final AnnotationSource annotationSource;
 
@@ -4291,7 +4866,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 private final List<? extends Generic> parameters;
                 private final TypeDescription rawType;
 
-                public Latent(TypeDescription typeDescription, @MaybeNull Generic generic, List<? extends Generic> list, AnnotationSource annotationSource) {
+                public Latent(TypeDescription typeDescription, @MaybeNull Generic generic, List<? extends Generic> list,
+                        AnnotationSource annotationSource) {
                     this.rawType = typeDescription;
                     this.ownerType = generic;
                     this.parameters = list;
@@ -4303,7 +4879,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     return this.rawType;
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfParameterizedType, net.bytebuddy.description.type.TypeDefinition
+                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfParameterizedType,
+                          // net.bytebuddy.description.type.TypeDefinition
                 public /* bridge */ /* synthetic */ TypeDefinition getComponentType() {
                     return super.getComponentType();
                 }
@@ -4325,9 +4902,13 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum RenderingDelegate {
-                FOR_LEGACY_VM { // from class: net.bytebuddy.description.type.TypeDescription.Generic.OfParameterizedType.RenderingDelegate.1
+                FOR_LEGACY_VM { // from class:
+                                // net.bytebuddy.description.type.TypeDescription.Generic.OfParameterizedType.RenderingDelegate.1
                     @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfParameterizedType.RenderingDelegate
                     public void apply(StringBuilder sb, TypeDescription typeDescription, @MaybeNull Generic generic) {
                         if (generic == null) {
@@ -4336,10 +4917,12 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                         }
                         sb.append(generic.getTypeName());
                         sb.append(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
-                        sb.append(generic.getSort().isParameterized() ? typeDescription.getSimpleName() : typeDescription.getName());
+                        sb.append(generic.getSort().isParameterized() ? typeDescription.getSimpleName()
+                                : typeDescription.getName());
                     }
                 },
-                FOR_JAVA_8_CAPABLE_VM { // from class: net.bytebuddy.description.type.TypeDescription.Generic.OfParameterizedType.RenderingDelegate.2
+                FOR_JAVA_8_CAPABLE_VM { // from class:
+                                        // net.bytebuddy.description.type.TypeDescription.Generic.OfParameterizedType.RenderingDelegate.2
                     @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfParameterizedType.RenderingDelegate
                     public void apply(StringBuilder sb, TypeDescription typeDescription, @MaybeNull Generic generic) {
                         if (generic == null) {
@@ -4360,10 +4943,13 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
                 static {
                     RenderingDelegate renderingDelegate = FOR_LEGACY_VM;
-                    CURRENT = ClassFileVersion.ofThisVm(ClassFileVersion.JAVA_V5).isAtLeast(ClassFileVersion.JAVA_V8) ? FOR_JAVA_8_CAPABLE_VM : renderingDelegate;
+                    CURRENT = ClassFileVersion.ofThisVm(ClassFileVersion.JAVA_V5).isAtLeast(ClassFileVersion.JAVA_V8)
+                            ? FOR_JAVA_8_CAPABLE_VM
+                            : renderingDelegate;
                 }
 
-                public abstract void apply(StringBuilder sb, TypeDescription typeDescription, @MaybeNull Generic generic);
+                public abstract void apply(StringBuilder sb, TypeDescription typeDescription,
+                        @MaybeNull Generic generic);
             }
 
             @Override // net.bytebuddy.description.type.TypeDescription.Generic
@@ -4384,7 +4970,9 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 }
                 Generic ownerType = getOwnerType();
                 Generic ownerType2 = generic.getOwnerType();
-                return asErasure().equals(generic.asErasure()) && (ownerType != null || ownerType2 == null) && ((ownerType == null || ownerType.equals(ownerType2)) && getTypeArguments().equals(generic.getTypeArguments()));
+                return asErasure().equals(generic.asErasure()) && (ownerType != null || ownerType2 == null)
+                        && ((ownerType == null || ownerType.equals(ownerType2))
+                                && getTypeArguments().equals(generic.getTypeArguments()));
             }
 
             @Override // net.bytebuddy.description.type.TypeDescription.Generic
@@ -4412,19 +5000,24 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 return toString();
             }
 
-            @Override // net.bytebuddy.description.type.TypeDescription.Generic, net.bytebuddy.description.type.TypeDefinition
+            @Override // net.bytebuddy.description.type.TypeDescription.Generic,
+                      // net.bytebuddy.description.type.TypeDefinition
             public FieldList<FieldDescription.InGenericShape> getDeclaredFields() {
-                return new FieldList.TypeSubstituting(this, asErasure().getDeclaredFields(), new Visitor.Substitutor.ForTypeVariableBinding(this));
+                return new FieldList.TypeSubstituting(this, asErasure().getDeclaredFields(),
+                        new Visitor.Substitutor.ForTypeVariableBinding(this));
             }
 
-            @Override // net.bytebuddy.description.type.TypeDescription.Generic, net.bytebuddy.description.type.TypeDefinition
+            @Override // net.bytebuddy.description.type.TypeDescription.Generic,
+                      // net.bytebuddy.description.type.TypeDefinition
             public MethodList<MethodDescription.InGenericShape> getDeclaredMethods() {
-                return new MethodList.TypeSubstituting(this, asErasure().getDeclaredMethods(), new Visitor.Substitutor.ForTypeVariableBinding(this));
+                return new MethodList.TypeSubstituting(this, asErasure().getDeclaredMethods(),
+                        new Visitor.Substitutor.ForTypeVariableBinding(this));
             }
 
             @Override // net.bytebuddy.description.type.TypeDefinition
             public TypeList.Generic getInterfaces() {
-                return new TypeList.Generic.ForDetachedTypes.WithResolvedErasure(asErasure().getInterfaces(), new Visitor.Substitutor.ForTypeVariableBinding(this));
+                return new TypeList.Generic.ForDetachedTypes.WithResolvedErasure(asErasure().getInterfaces(),
+                        new Visitor.Substitutor.ForTypeVariableBinding(this));
             }
 
             @Override // net.bytebuddy.description.type.TypeDescription.Generic
@@ -4432,9 +5025,11 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 throw new IllegalStateException("A parameterized type does not imply lower bounds: " + this);
             }
 
-            @Override // net.bytebuddy.description.type.TypeDescription.Generic, net.bytebuddy.description.type.TypeDefinition
+            @Override // net.bytebuddy.description.type.TypeDescription.Generic,
+                      // net.bytebuddy.description.type.TypeDefinition
             public RecordComponentList<RecordComponentDescription.InGenericShape> getRecordComponents() {
-                return new RecordComponentList.TypeSubstituting(this, asErasure().getRecordComponents(), new Visitor.Substitutor.ForTypeVariableBinding(this));
+                return new RecordComponentList.TypeSubstituting(this, asErasure().getRecordComponents(),
+                        new Visitor.Substitutor.ForTypeVariableBinding(this));
             }
 
             @Override // net.bytebuddy.description.type.TypeDefinition
@@ -4451,7 +5046,9 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             @MaybeNull
             public Generic getSuperClass() {
                 Generic superClass = asErasure().getSuperClass();
-                return superClass == null ? Generic.UNDEFINED : new LazyProjection.WithResolvedErasure(superClass, new Visitor.Substitutor.ForTypeVariableBinding(this));
+                return superClass == null ? Generic.UNDEFINED
+                        : new LazyProjection.WithResolvedErasure(superClass,
+                                new Visitor.Substitutor.ForTypeVariableBinding(this));
             }
 
             @Override // net.bytebuddy.description.type.TypeDescription.Generic
@@ -4515,7 +5112,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 return new TypeDefinition.SuperClassIterator(this);
             }
 
-            @Override // net.bytebuddy.description.type.TypeDescription.Generic.AbstractBase, net.bytebuddy.description.type.TypeDefinition
+            @Override // net.bytebuddy.description.type.TypeDescription.Generic.AbstractBase,
+                      // net.bytebuddy.description.type.TypeDefinition
             public boolean represents(Type type) {
                 return equals(TypeDefinition.Sort.describe(type));
             }
@@ -4545,16 +5143,25 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static abstract class OfTypeVariable extends AbstractBase {
             private transient /* synthetic */ int hashCode;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class ForLoadedType extends OfTypeVariable {
                 private final AnnotationReader annotationReader;
                 private final TypeVariable<?> typeVariable;
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public static class TypeVariableBoundList extends TypeList.Generic.AbstractBase {
                     private final AnnotationReader annotationReader;
                     private final Type[] bound;
@@ -4571,7 +5178,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
                     @Override // java.util.AbstractList, java.util.List
                     public Generic get(int i) {
-                        return TypeDefinition.Sort.describeOrNull(this.bound[i], this.annotationReader.ofTypeVariableBoundType(i));
+                        return TypeDefinition.Sort.describeOrNull(this.bound[i],
+                                this.annotationReader.ofTypeVariableBoundType(i));
                     }
                 }
 
@@ -4579,7 +5187,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     this(typeVariable, AnnotationReader.NoOp.INSTANCE);
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfTypeVariable, net.bytebuddy.description.type.TypeDefinition
+                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfTypeVariable,
+                          // net.bytebuddy.description.type.TypeDefinition
                 public /* bridge */ /* synthetic */ TypeDefinition getComponentType() {
                     return super.getComponentType();
                 }
@@ -4614,7 +5223,9 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     return new TypeVariableBoundList(this.typeVariable.getBounds(), this.annotationReader);
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfTypeVariable, net.bytebuddy.description.type.TypeDescription.Generic.AbstractBase, net.bytebuddy.description.type.TypeDefinition
+                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfTypeVariable,
+                          // net.bytebuddy.description.type.TypeDescription.Generic.AbstractBase,
+                          // net.bytebuddy.description.type.TypeDefinition
                 public boolean represents(Type type) {
                     return this.typeVariable == type || super.represents(type);
                 }
@@ -4625,7 +5236,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class Symbolic extends AbstractBase {
                 private final AnnotationSource annotationSource;
                 private final String symbol;
@@ -4671,19 +5285,24 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     return this.annotationSource.getDeclaredAnnotations();
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.Generic, net.bytebuddy.description.type.TypeDefinition
+                @Override // net.bytebuddy.description.type.TypeDescription.Generic,
+                          // net.bytebuddy.description.type.TypeDefinition
                 public FieldList<FieldDescription.InGenericShape> getDeclaredFields() {
-                    throw new IllegalStateException("A symbolic type variable does not imply field definitions: " + this);
+                    throw new IllegalStateException(
+                            "A symbolic type variable does not imply field definitions: " + this);
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.Generic, net.bytebuddy.description.type.TypeDefinition
+                @Override // net.bytebuddy.description.type.TypeDescription.Generic,
+                          // net.bytebuddy.description.type.TypeDefinition
                 public MethodList<MethodDescription.InGenericShape> getDeclaredMethods() {
-                    throw new IllegalStateException("A symbolic type variable does not imply method definitions: " + this);
+                    throw new IllegalStateException(
+                            "A symbolic type variable does not imply method definitions: " + this);
                 }
 
                 @Override // net.bytebuddy.description.type.TypeDefinition
                 public TypeList.Generic getInterfaces() {
-                    throw new IllegalStateException("A symbolic type variable does not imply an interface type definition: " + this);
+                    throw new IllegalStateException(
+                            "A symbolic type variable does not imply an interface type definition: " + this);
                 }
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic
@@ -4696,9 +5315,11 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     throw new IllegalStateException("A symbolic type variable does not imply an owner type: " + this);
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.Generic, net.bytebuddy.description.type.TypeDefinition
+                @Override // net.bytebuddy.description.type.TypeDescription.Generic,
+                          // net.bytebuddy.description.type.TypeDefinition
                 public RecordComponentList<RecordComponentDescription.InGenericShape> getRecordComponents() {
-                    throw new IllegalStateException("A symbolic type variable does not imply record component definitions: " + this);
+                    throw new IllegalStateException(
+                            "A symbolic type variable does not imply record component definitions: " + this);
                 }
 
                 @Override // net.bytebuddy.description.type.TypeDefinition
@@ -4714,7 +5335,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 @Override // net.bytebuddy.description.type.TypeDefinition
                 @MaybeNull
                 public Generic getSuperClass() {
-                    throw new IllegalStateException("A symbolic type variable does not imply a super type definition: " + this);
+                    throw new IllegalStateException(
+                            "A symbolic type variable does not imply a super type definition: " + this);
                 }
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic
@@ -4734,12 +5356,14 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic
                 public TypeVariableSource getTypeVariableSource() {
-                    throw new IllegalStateException("A symbolic type variable does not imply a variable source: " + this);
+                    throw new IllegalStateException(
+                            "A symbolic type variable does not imply a variable source: " + this);
                 }
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic
                 public TypeList.Generic getUpperBounds() {
-                    throw new IllegalStateException("A symbolic type variable does not imply an upper type bound: " + this);
+                    throw new IllegalStateException(
+                            "A symbolic type variable does not imply an upper type bound: " + this);
                 }
 
                 public int hashCode() {
@@ -4763,10 +5387,12 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
                 @Override // java.lang.Iterable
                 public Iterator<TypeDefinition> iterator() {
-                    throw new IllegalStateException("A symbolic type variable does not imply a super type definition: " + this);
+                    throw new IllegalStateException(
+                            "A symbolic type variable does not imply a super type definition: " + this);
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.Generic.AbstractBase, net.bytebuddy.description.type.TypeDefinition
+                @Override // net.bytebuddy.description.type.TypeDescription.Generic.AbstractBase,
+                          // net.bytebuddy.description.type.TypeDefinition
                 public boolean represents(Type type) {
                     type.getClass();
                     return false;
@@ -4778,11 +5404,15 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
                 @Override // net.bytebuddy.description.type.TypeDefinition
                 public Generic getComponentType() {
-                    throw new IllegalStateException("A symbolic type variable does not imply a component type: " + this);
+                    throw new IllegalStateException(
+                            "A symbolic type variable does not imply a component type: " + this);
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class WithAnnotationOverlay extends OfTypeVariable {
                 private final AnnotationSource annotationSource;
                 private final Generic typeVariable;
@@ -4792,7 +5422,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     this.annotationSource = annotationSource;
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfTypeVariable, net.bytebuddy.description.type.TypeDefinition
+                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfTypeVariable,
+                          // net.bytebuddy.description.type.TypeDefinition
                 public /* bridge */ /* synthetic */ TypeDefinition getComponentType() {
                     return super.getComponentType();
                 }
@@ -4837,7 +5468,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     return false;
                 }
                 Generic generic = (Generic) obj;
-                return generic.getSort().isTypeVariable() && getSymbol().equals(generic.getSymbol()) && getTypeVariableSource().equals(generic.getTypeVariableSource());
+                return generic.getSort().isTypeVariable() && getSymbol().equals(generic.getSymbol())
+                        && getTypeVariableSource().equals(generic.getTypeVariableSource());
             }
 
             @Override // net.bytebuddy.description.type.TypeDescription.Generic
@@ -4850,12 +5482,14 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 return getSymbol();
             }
 
-            @Override // net.bytebuddy.description.type.TypeDescription.Generic, net.bytebuddy.description.type.TypeDefinition
+            @Override // net.bytebuddy.description.type.TypeDescription.Generic,
+                      // net.bytebuddy.description.type.TypeDefinition
             public FieldList<FieldDescription.InGenericShape> getDeclaredFields() {
                 throw new IllegalStateException("A type variable does not imply field definitions: " + this);
             }
 
-            @Override // net.bytebuddy.description.type.TypeDescription.Generic, net.bytebuddy.description.type.TypeDefinition
+            @Override // net.bytebuddy.description.type.TypeDescription.Generic,
+                      // net.bytebuddy.description.type.TypeDefinition
             public MethodList<MethodDescription.InGenericShape> getDeclaredMethods() {
                 throw new IllegalStateException("A type variable does not imply method definitions: " + this);
             }
@@ -4875,7 +5509,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 throw new IllegalStateException("A type variable does not imply an owner type: " + this);
             }
 
-            @Override // net.bytebuddy.description.type.TypeDescription.Generic, net.bytebuddy.description.type.TypeDefinition
+            @Override // net.bytebuddy.description.type.TypeDescription.Generic,
+                      // net.bytebuddy.description.type.TypeDefinition
             public RecordComponentList<RecordComponentDescription.InGenericShape> getRecordComponents() {
                 throw new IllegalStateException("A type variable does not imply record component definitions: " + this);
             }
@@ -4936,7 +5571,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 throw new IllegalStateException("A type variable does not imply a super type definition: " + this);
             }
 
-            @Override // net.bytebuddy.description.type.TypeDescription.Generic.AbstractBase, net.bytebuddy.description.type.TypeDefinition
+            @Override // net.bytebuddy.description.type.TypeDescription.Generic.AbstractBase,
+                      // net.bytebuddy.description.type.TypeDefinition
             public boolean represents(Type type) {
                 return equals(TypeDefinition.Sort.describe(type));
             }
@@ -4951,17 +5587,26 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static abstract class OfWildcardType extends AbstractBase {
             public static final String SYMBOL = "?";
             private transient /* synthetic */ int hashCode;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class ForLoadedType extends OfWildcardType {
                 private final AnnotationReader annotationReader;
                 private final WildcardType wildcardType;
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public static class WildcardLowerBoundTypeList extends TypeList.Generic.AbstractBase {
                     private final AnnotationReader annotationReader;
                     private final Type[] lowerBound;
@@ -4978,11 +5623,15 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
                     @Override // java.util.AbstractList, java.util.List
                     public Generic get(int i) {
-                        return TypeDefinition.Sort.describeOrNull(this.lowerBound[i], this.annotationReader.ofWildcardLowerBoundType(i));
+                        return TypeDefinition.Sort.describeOrNull(this.lowerBound[i],
+                                this.annotationReader.ofWildcardLowerBoundType(i));
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public static class WildcardUpperBoundTypeList extends TypeList.Generic.AbstractBase {
                     private final AnnotationReader annotationReader;
                     private final Type[] upperBound;
@@ -4999,7 +5648,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
                     @Override // java.util.AbstractList, java.util.List
                     public Generic get(int i) {
-                        return TypeDefinition.Sort.describeOrNull(this.upperBound[i], this.annotationReader.ofWildcardUpperBoundType(i));
+                        return TypeDefinition.Sort.describeOrNull(this.upperBound[i],
+                                this.annotationReader.ofWildcardUpperBoundType(i));
                     }
                 }
 
@@ -5007,7 +5657,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     this(wildcardType, AnnotationReader.NoOp.INSTANCE);
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfWildcardType, net.bytebuddy.description.type.TypeDefinition
+                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfWildcardType,
+                          // net.bytebuddy.description.type.TypeDefinition
                 public /* bridge */ /* synthetic */ TypeDefinition getComponentType() {
                     return super.getComponentType();
                 }
@@ -5027,7 +5678,9 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     return new WildcardUpperBoundTypeList(this.wildcardType.getUpperBounds(), this.annotationReader);
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfWildcardType, net.bytebuddy.description.type.TypeDescription.Generic.AbstractBase, net.bytebuddy.description.type.TypeDefinition
+                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfWildcardType,
+                          // net.bytebuddy.description.type.TypeDescription.Generic.AbstractBase,
+                          // net.bytebuddy.description.type.TypeDefinition
                 public boolean represents(Type type) {
                     return this.wildcardType == type || super.represents(type);
                 }
@@ -5038,13 +5691,17 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class Latent extends OfWildcardType {
                 private final AnnotationSource annotationSource;
                 private final List<? extends Generic> lowerBounds;
                 private final List<? extends Generic> upperBounds;
 
-                public Latent(List<? extends Generic> list, List<? extends Generic> list2, AnnotationSource annotationSource) {
+                public Latent(List<? extends Generic> list, List<? extends Generic> list2,
+                        AnnotationSource annotationSource) {
                     this.upperBounds = list;
                     this.lowerBounds = list2;
                     this.annotationSource = annotationSource;
@@ -5055,14 +5712,17 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 }
 
                 public static Generic boundedBelow(Generic generic, AnnotationSource annotationSource) {
-                    return new Latent(Collections.singletonList(OfNonGenericType.ForLoadedType.of(Object.class)), Collections.singletonList(generic), annotationSource);
+                    return new Latent(Collections.singletonList(OfNonGenericType.ForLoadedType.of(Object.class)),
+                            Collections.singletonList(generic), annotationSource);
                 }
 
                 public static Generic unbounded(AnnotationSource annotationSource) {
-                    return new Latent(Collections.singletonList(OfNonGenericType.ForLoadedType.of(Object.class)), Collections.EMPTY_LIST, annotationSource);
+                    return new Latent(Collections.singletonList(OfNonGenericType.ForLoadedType.of(Object.class)),
+                            Collections.EMPTY_LIST, annotationSource);
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfWildcardType, net.bytebuddy.description.type.TypeDefinition
+                @Override // net.bytebuddy.description.type.TypeDescription.Generic.OfWildcardType,
+                          // net.bytebuddy.description.type.TypeDefinition
                 public /* bridge */ /* synthetic */ TypeDefinition getComponentType() {
                     return super.getComponentType();
                 }
@@ -5101,7 +5761,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     return false;
                 }
                 Generic generic = (Generic) obj;
-                return generic.getSort().isWildcard() && getUpperBounds().equals(generic.getUpperBounds()) && getLowerBounds().equals(generic.getLowerBounds());
+                return generic.getSort().isWildcard() && getUpperBounds().equals(generic.getUpperBounds())
+                        && getLowerBounds().equals(generic.getLowerBounds());
             }
 
             @Override // net.bytebuddy.description.type.TypeDescription.Generic
@@ -5114,12 +5775,14 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 return toString();
             }
 
-            @Override // net.bytebuddy.description.type.TypeDescription.Generic, net.bytebuddy.description.type.TypeDefinition
+            @Override // net.bytebuddy.description.type.TypeDescription.Generic,
+                      // net.bytebuddy.description.type.TypeDefinition
             public FieldList<FieldDescription.InGenericShape> getDeclaredFields() {
                 throw new IllegalStateException("A wildcard does not imply field definitions: " + this);
             }
 
-            @Override // net.bytebuddy.description.type.TypeDescription.Generic, net.bytebuddy.description.type.TypeDefinition
+            @Override // net.bytebuddy.description.type.TypeDescription.Generic,
+                      // net.bytebuddy.description.type.TypeDefinition
             public MethodList<MethodDescription.InGenericShape> getDeclaredMethods() {
                 throw new IllegalStateException("A wildcard does not imply method definitions: " + this);
             }
@@ -5134,7 +5797,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 throw new IllegalStateException("A wildcard does not imply an owner type: " + this);
             }
 
-            @Override // net.bytebuddy.description.type.TypeDescription.Generic, net.bytebuddy.description.type.TypeDefinition
+            @Override // net.bytebuddy.description.type.TypeDescription.Generic,
+                      // net.bytebuddy.description.type.TypeDefinition
             public RecordComponentList<RecordComponentDescription.InGenericShape> getRecordComponents() {
                 throw new IllegalStateException("A wildcard does not imply record component definitions: " + this);
             }
@@ -5220,7 +5884,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 throw new IllegalStateException("A wildcard does not imply a super type definition: " + this);
             }
 
-            @Override // net.bytebuddy.description.type.TypeDescription.Generic.AbstractBase, net.bytebuddy.description.type.TypeDefinition
+            @Override // net.bytebuddy.description.type.TypeDescription.Generic.AbstractBase,
+                      // net.bytebuddy.description.type.TypeDefinition
             public boolean represents(Type type) {
                 return equals(TypeDefinition.Sort.describe(type));
             }
@@ -5247,14 +5912,23 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public interface Visitor<T> {
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum AnnotationStripper implements Visitor<Generic> {
                 INSTANCE;
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public static class NonAnnotatedTypeVariable extends OfTypeVariable {
                     private final Generic typeVariable;
 
@@ -5285,18 +5959,24 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                 public Generic onGenericArray(Generic generic) {
-                    return new OfGenericArray.Latent((Generic) generic.getComponentType().accept(this), AnnotationSource.Empty.INSTANCE);
+                    return new OfGenericArray.Latent((Generic) generic.getComponentType().accept(this),
+                            AnnotationSource.Empty.INSTANCE);
                 }
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                 public Generic onNonGenericType(Generic generic) {
-                    return generic.isArray() ? new OfGenericArray.Latent(onNonGenericType(generic.getComponentType()), AnnotationSource.Empty.INSTANCE) : new OfNonGenericType.Latent(generic.asErasure(), AnnotationSource.Empty.INSTANCE);
+                    return generic.isArray()
+                            ? new OfGenericArray.Latent(onNonGenericType(generic.getComponentType()),
+                                    AnnotationSource.Empty.INSTANCE)
+                            : new OfNonGenericType.Latent(generic.asErasure(), AnnotationSource.Empty.INSTANCE);
                 }
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                 public Generic onParameterizedType(Generic generic) {
                     Generic ownerType = generic.getOwnerType();
-                    return new OfParameterizedType.Latent(generic.asErasure(), ownerType == null ? Generic.UNDEFINED : (Generic) ownerType.accept(this), generic.getTypeArguments().accept(this), AnnotationSource.Empty.INSTANCE);
+                    return new OfParameterizedType.Latent(generic.asErasure(),
+                            ownerType == null ? Generic.UNDEFINED : (Generic) ownerType.accept(this),
+                            generic.getTypeArguments().accept(this), AnnotationSource.Empty.INSTANCE);
                 }
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
@@ -5306,18 +5986,28 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                 public Generic onWildcard(Generic generic) {
-                    return new OfWildcardType.Latent(generic.getUpperBounds().accept(this), generic.getLowerBounds().accept(this), AnnotationSource.Empty.INSTANCE);
+                    return new OfWildcardType.Latent(generic.getUpperBounds().accept(this),
+                            generic.getLowerBounds().accept(this), AnnotationSource.Empty.INSTANCE);
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum Assigner implements Visitor<Dispatcher> {
                 INSTANCE;
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public interface Dispatcher {
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     public static abstract class AbstractBase implements Dispatcher, Visitor<Boolean> {
                         @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Assigner.Dispatcher
                         public boolean isAssignableFrom(Generic generic) {
@@ -5325,7 +6015,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                         }
                     }
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     @HashCodeAndEqualsPlugin.Enhance
                     public static class ForGenericArray extends AbstractBase {
                         private final Generic genericArray;
@@ -5338,7 +6031,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                             if (this == obj) {
                                 return true;
                             }
-                            return obj != null && getClass() == obj.getClass() && this.genericArray.equals(((ForGenericArray) obj).genericArray);
+                            return obj != null && getClass() == obj.getClass()
+                                    && this.genericArray.equals(((ForGenericArray) obj).genericArray);
                         }
 
                         public int hashCode() {
@@ -5348,13 +6042,17 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                         /* JADX WARN: Can't rename method to resolve collision */
                         @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                         public Boolean onGenericArray(Generic generic) {
-                            return Boolean.valueOf(((Dispatcher) this.genericArray.getComponentType().accept(Assigner.INSTANCE)).isAssignableFrom(generic.getComponentType()));
+                            return Boolean.valueOf(
+                                    ((Dispatcher) this.genericArray.getComponentType().accept(Assigner.INSTANCE))
+                                            .isAssignableFrom(generic.getComponentType()));
                         }
 
                         /* JADX WARN: Can't rename method to resolve collision */
                         @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                         public Boolean onNonGenericType(Generic generic) {
-                            return Boolean.valueOf(generic.isArray() && ((Dispatcher) this.genericArray.getComponentType().accept(Assigner.INSTANCE)).isAssignableFrom(generic.getComponentType()));
+                            return Boolean.valueOf(generic.isArray()
+                                    && ((Dispatcher) this.genericArray.getComponentType().accept(Assigner.INSTANCE))
+                                            .isAssignableFrom(generic.getComponentType()));
                         }
 
                         /* JADX WARN: Can't rename method to resolve collision */
@@ -5376,7 +6074,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                         }
                     }
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     @HashCodeAndEqualsPlugin.Enhance
                     public static class ForNonGenericType extends AbstractBase {
                         private final TypeDescription typeDescription;
@@ -5389,7 +6090,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                             if (this == obj) {
                                 return true;
                             }
-                            return obj != null && getClass() == obj.getClass() && this.typeDescription.equals(((ForNonGenericType) obj).typeDescription);
+                            return obj != null && getClass() == obj.getClass()
+                                    && this.typeDescription.equals(((ForNonGenericType) obj).typeDescription);
                         }
 
                         public int hashCode() {
@@ -5399,7 +6101,16 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                         /* JADX WARN: Can't rename method to resolve collision */
                         @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                         public Boolean onGenericArray(Generic generic) {
-                            return Boolean.valueOf(this.typeDescription.isArray() ? ((Boolean) generic.getComponentType().accept(new ForNonGenericType(this.typeDescription.getComponentType()))).booleanValue() : this.typeDescription.represents(Object.class) || TypeDescription.ARRAY_INTERFACES.contains(this.typeDescription.asGenericType()));
+                            return Boolean
+                                    .valueOf(
+                                            this.typeDescription.isArray()
+                                                    ? ((Boolean) generic.getComponentType()
+                                                            .accept(new ForNonGenericType(
+                                                                    this.typeDescription.getComponentType())))
+                                                            .booleanValue()
+                                                    : this.typeDescription.represents(Object.class)
+                                                            || TypeDescription.ARRAY_INTERFACES
+                                                                    .contains(this.typeDescription.asGenericType()));
                         }
 
                         /* JADX WARN: Can't rename method to resolve collision */
@@ -5446,16 +6157,25 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                         }
                     }
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     @HashCodeAndEqualsPlugin.Enhance
                     public static class ForParameterizedType extends AbstractBase {
                         private final Generic parameterizedType;
 
-                        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                        /*
+                         * JADX INFO: compiled from:
+                         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                         */
                         public enum ParameterAssigner implements Visitor<Dispatcher> {
                             INSTANCE;
 
-                            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                            /*
+                             * JADX INFO: compiled from:
+                             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                             */
                             @HashCodeAndEqualsPlugin.Enhance
                             public static class ContravariantBinding implements Dispatcher {
                                 private final Generic lowerBound;
@@ -5468,7 +6188,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                                     if (this == obj) {
                                         return true;
                                     }
-                                    return obj != null && getClass() == obj.getClass() && this.lowerBound.equals(((ContravariantBinding) obj).lowerBound);
+                                    return obj != null && getClass() == obj.getClass()
+                                            && this.lowerBound.equals(((ContravariantBinding) obj).lowerBound);
                                 }
 
                                 public int hashCode() {
@@ -5478,14 +6199,21 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Assigner.Dispatcher
                                 public boolean isAssignableFrom(Generic generic) {
                                     if (!generic.getSort().isWildcard()) {
-                                        return generic.getSort().isWildcard() || ((Dispatcher) generic.accept(Assigner.INSTANCE)).isAssignableFrom(this.lowerBound);
+                                        return generic.getSort().isWildcard()
+                                                || ((Dispatcher) generic.accept(Assigner.INSTANCE))
+                                                        .isAssignableFrom(this.lowerBound);
                                     }
                                     TypeList.Generic lowerBounds = generic.getLowerBounds();
-                                    return !lowerBounds.isEmpty() && ((Dispatcher) lowerBounds.getOnly().accept(Assigner.INSTANCE)).isAssignableFrom(this.lowerBound);
+                                    return !lowerBounds.isEmpty()
+                                            && ((Dispatcher) lowerBounds.getOnly().accept(Assigner.INSTANCE))
+                                                    .isAssignableFrom(this.lowerBound);
                                 }
                             }
 
-                            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                            /*
+                             * JADX INFO: compiled from:
+                             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                             */
                             @HashCodeAndEqualsPlugin.Enhance
                             public static class CovariantBinding implements Dispatcher {
                                 private final Generic upperBound;
@@ -5498,7 +6226,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                                     if (this == obj) {
                                         return true;
                                     }
-                                    return obj != null && getClass() == obj.getClass() && this.upperBound.equals(((CovariantBinding) obj).upperBound);
+                                    return obj != null && getClass() == obj.getClass()
+                                            && this.upperBound.equals(((CovariantBinding) obj).upperBound);
                                 }
 
                                 public int hashCode() {
@@ -5507,11 +6236,19 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
                                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Assigner.Dispatcher
                                 public boolean isAssignableFrom(Generic generic) {
-                                    return generic.getSort().isWildcard() ? generic.getLowerBounds().isEmpty() && ((Dispatcher) this.upperBound.accept(Assigner.INSTANCE)).isAssignableFrom(generic.getUpperBounds().getOnly()) : ((Dispatcher) this.upperBound.accept(Assigner.INSTANCE)).isAssignableFrom(generic);
+                                    return generic.getSort().isWildcard()
+                                            ? generic.getLowerBounds().isEmpty()
+                                                    && ((Dispatcher) this.upperBound.accept(Assigner.INSTANCE))
+                                                            .isAssignableFrom(generic.getUpperBounds().getOnly())
+                                            : ((Dispatcher) this.upperBound.accept(Assigner.INSTANCE))
+                                                    .isAssignableFrom(generic);
                                 }
                             }
 
-                            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                            /*
+                             * JADX INFO: compiled from:
+                             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                             */
                             @HashCodeAndEqualsPlugin.Enhance
                             public static class InvariantBinding implements Dispatcher {
                                 private final Generic typeDescription;
@@ -5524,7 +6261,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                                     if (this == obj) {
                                         return true;
                                     }
-                                    return obj != null && getClass() == obj.getClass() && this.typeDescription.equals(((InvariantBinding) obj).typeDescription);
+                                    return obj != null && getClass() == obj.getClass()
+                                            && this.typeDescription.equals(((InvariantBinding) obj).typeDescription);
                                 }
 
                                 public int hashCode() {
@@ -5560,7 +6298,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                             @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                             public Dispatcher onWildcard(Generic generic) {
                                 TypeList.Generic lowerBounds = generic.getLowerBounds();
-                                return lowerBounds.isEmpty() ? new CovariantBinding(generic.getUpperBounds().getOnly()) : new ContravariantBinding(lowerBounds.getOnly());
+                                return lowerBounds.isEmpty() ? new CovariantBinding(generic.getUpperBounds().getOnly())
+                                        : new ContravariantBinding(lowerBounds.getOnly());
                             }
                         }
 
@@ -5572,7 +6311,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                             if (this == obj) {
                                 return true;
                             }
-                            return obj != null && getClass() == obj.getClass() && this.parameterizedType.equals(((ForParameterizedType) obj).parameterizedType);
+                            return obj != null && getClass() == obj.getClass()
+                                    && this.parameterizedType.equals(((ForParameterizedType) obj).parameterizedType);
                         }
 
                         public int hashCode() {
@@ -5622,16 +6362,20 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                             }
                             Generic ownerType = this.parameterizedType.getOwnerType();
                             Generic ownerType2 = generic.getOwnerType();
-                            if (ownerType != null && ownerType2 != null && !((Dispatcher) ownerType.accept(Assigner.INSTANCE)).isAssignableFrom(ownerType2)) {
+                            if (ownerType != null && ownerType2 != null
+                                    && !((Dispatcher) ownerType.accept(Assigner.INSTANCE))
+                                            .isAssignableFrom(ownerType2)) {
                                 return Boolean.FALSE;
                             }
                             TypeList.Generic typeArguments = this.parameterizedType.getTypeArguments();
                             TypeList.Generic typeArguments2 = generic.getTypeArguments();
                             if (typeArguments.size() != typeArguments2.size()) {
-                                throw new IllegalArgumentException("Incompatible generic types: " + generic + " and " + this.parameterizedType);
+                                throw new IllegalArgumentException(
+                                        "Incompatible generic types: " + generic + " and " + this.parameterizedType);
                             }
                             for (int i = 0; i < typeArguments.size(); i++) {
-                                if (!((Dispatcher) typeArguments.get(i).accept(ParameterAssigner.INSTANCE)).isAssignableFrom(typeArguments2.get(i))) {
+                                if (!((Dispatcher) typeArguments.get(i).accept(ParameterAssigner.INSTANCE))
+                                        .isAssignableFrom(typeArguments2.get(i))) {
                                     return Boolean.FALSE;
                                 }
                             }
@@ -5657,7 +6401,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                         }
                     }
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     @HashCodeAndEqualsPlugin.Enhance
                     public static class ForTypeVariable extends AbstractBase {
                         private final Generic typeVariable;
@@ -5670,7 +6417,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                             if (this == obj) {
                                 return true;
                             }
-                            return obj != null && getClass() == obj.getClass() && this.typeVariable.equals(((ForTypeVariable) obj).typeVariable);
+                            return obj != null && getClass() == obj.getClass()
+                                    && this.typeVariable.equals(((ForTypeVariable) obj).typeVariable);
                         }
 
                         public int hashCode() {
@@ -5746,7 +6494,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class ForRawType implements Visitor<Generic> {
                 private final TypeDescription declaringType;
 
@@ -5761,17 +6512,20 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                 public Generic onGenericArray(Generic generic) {
-                    return this.declaringType.isGenerified() ? new OfNonGenericType.Latent(generic.asErasure(), generic) : generic;
+                    return this.declaringType.isGenerified() ? new OfNonGenericType.Latent(generic.asErasure(), generic)
+                            : generic;
                 }
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                 public Generic onParameterizedType(Generic generic) {
-                    return this.declaringType.isGenerified() ? new OfNonGenericType.Latent(generic.asErasure(), generic) : generic;
+                    return this.declaringType.isGenerified() ? new OfNonGenericType.Latent(generic.asErasure(), generic)
+                            : generic;
                 }
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                 public Generic onTypeVariable(Generic generic) {
-                    return this.declaringType.isGenerified() ? new OfNonGenericType.Latent(generic.asErasure(), generic) : generic;
+                    return this.declaringType.isGenerified() ? new OfNonGenericType.Latent(generic.asErasure(), generic)
+                            : generic;
                 }
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
@@ -5780,52 +6534,69 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForSignatureVisitor implements Visitor<SignatureVisitor> {
                 private static final int ONLY_CHARACTER = 0;
                 protected final SignatureVisitor signatureVisitor;
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public static class OfTypeArgument extends ForSignatureVisitor {
                     public OfTypeArgument(SignatureVisitor signatureVisitor) {
                         super(signatureVisitor);
                     }
 
-                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.ForSignatureVisitor, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.ForSignatureVisitor,
+                              // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                     public SignatureVisitor onGenericArray(Generic generic) {
-                        generic.accept(new ForSignatureVisitor(this.signatureVisitor.visitTypeArgument(SignatureVisitor.INSTANCEOF)));
+                        generic.accept(new ForSignatureVisitor(
+                                this.signatureVisitor.visitTypeArgument(SignatureVisitor.INSTANCEOF)));
                         return this.signatureVisitor;
                     }
 
-                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.ForSignatureVisitor, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.ForSignatureVisitor,
+                              // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                     public SignatureVisitor onNonGenericType(Generic generic) {
-                        generic.accept(new ForSignatureVisitor(this.signatureVisitor.visitTypeArgument(SignatureVisitor.INSTANCEOF)));
+                        generic.accept(new ForSignatureVisitor(
+                                this.signatureVisitor.visitTypeArgument(SignatureVisitor.INSTANCEOF)));
                         return this.signatureVisitor;
                     }
 
-                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.ForSignatureVisitor, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.ForSignatureVisitor,
+                              // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                     public SignatureVisitor onParameterizedType(Generic generic) {
-                        generic.accept(new ForSignatureVisitor(this.signatureVisitor.visitTypeArgument(SignatureVisitor.INSTANCEOF)));
+                        generic.accept(new ForSignatureVisitor(
+                                this.signatureVisitor.visitTypeArgument(SignatureVisitor.INSTANCEOF)));
                         return this.signatureVisitor;
                     }
 
-                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.ForSignatureVisitor, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.ForSignatureVisitor,
+                              // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                     public SignatureVisitor onTypeVariable(Generic generic) {
-                        generic.accept(new ForSignatureVisitor(this.signatureVisitor.visitTypeArgument(SignatureVisitor.INSTANCEOF)));
+                        generic.accept(new ForSignatureVisitor(
+                                this.signatureVisitor.visitTypeArgument(SignatureVisitor.INSTANCEOF)));
                         return this.signatureVisitor;
                     }
 
-                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.ForSignatureVisitor, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.ForSignatureVisitor,
+                              // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                     public SignatureVisitor onWildcard(Generic generic) {
                         TypeList.Generic upperBounds = generic.getUpperBounds();
                         TypeList.Generic lowerBounds = generic.getLowerBounds();
                         if (lowerBounds.isEmpty() && upperBounds.getOnly().represents(Object.class)) {
                             this.signatureVisitor.visitTypeArgument();
                         } else if (lowerBounds.isEmpty()) {
-                            upperBounds.getOnly().accept(new ForSignatureVisitor(this.signatureVisitor.visitTypeArgument(SignatureVisitor.EXTENDS)));
+                            upperBounds.getOnly().accept(new ForSignatureVisitor(
+                                    this.signatureVisitor.visitTypeArgument(SignatureVisitor.EXTENDS)));
                         } else {
-                            lowerBounds.getOnly().accept(new ForSignatureVisitor(this.signatureVisitor.visitTypeArgument(SignatureVisitor.SUPER)));
+                            lowerBounds.getOnly().accept(new ForSignatureVisitor(
+                                    this.signatureVisitor.visitTypeArgument(SignatureVisitor.SUPER)));
                         }
                         return this.signatureVisitor;
                     }
@@ -5853,7 +6624,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.signatureVisitor.equals(((ForSignatureVisitor) obj).signatureVisitor);
+                    return obj != null && getClass() == obj.getClass()
+                            && this.signatureVisitor.equals(((ForSignatureVisitor) obj).signatureVisitor);
                 }
 
                 public int hashCode() {
@@ -5869,7 +6641,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                 public SignatureVisitor onNonGenericType(Generic generic) {
                     if (generic.isArray()) {
-                        generic.getComponentType().accept(new ForSignatureVisitor(this.signatureVisitor.visitArrayType()));
+                        generic.getComponentType()
+                                .accept(new ForSignatureVisitor(this.signatureVisitor.visitArrayType()));
                     } else if (generic.isPrimitive()) {
                         this.signatureVisitor.visitBaseType(generic.asErasure().getDescriptor().charAt(0));
                     } else {
@@ -5898,7 +6671,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum Generalizing implements Visitor<Generic> {
                 INSTANCE;
 
@@ -5920,7 +6696,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                         i++;
                         componentType = componentType.getComponentType();
                     }
-                    return componentType.isPrimitive() ? generic : ArrayProjection.of(ForLoadedType.of(Object.class), i).asGenericType();
+                    return componentType.isPrimitive() ? generic
+                            : ArrayProjection.of(ForLoadedType.of(Object.class), i).asGenericType();
                 }
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
@@ -5939,7 +6716,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum NoOp implements Visitor<Generic> {
                 INSTANCE;
 
@@ -5969,7 +6749,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class Reducing implements Visitor<TypeDescription> {
                 private final TypeDescription declaringType;
@@ -5987,11 +6770,13 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                         return false;
                     }
                     Reducing reducing = (Reducing) obj;
-                    return this.declaringType.equals(reducing.declaringType) && this.typeVariableTokens.equals(reducing.typeVariableTokens);
+                    return this.declaringType.equals(reducing.declaringType)
+                            && this.typeVariableTokens.equals(reducing.typeVariableTokens);
                 }
 
                 public int hashCode() {
-                    return this.typeVariableTokens.hashCode() + dkz.f(this.declaringType, getClass().hashCode() * 31, 31);
+                    return this.typeVariableTokens.hashCode()
+                            + dkz.f(this.declaringType, getClass().hashCode() * 31, 31);
                 }
 
                 public Reducing(TypeDescription typeDescription, List<? extends TypeVariableToken> list) {
@@ -6012,10 +6797,14 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     }
                     for (TypeVariableToken typeVariableToken : this.typeVariableTokens) {
                         if (componentType.getSymbol().equals(typeVariableToken.getSymbol())) {
-                            return ArrayProjection.of((TypeDescription) typeVariableToken.getBounds().get(0).accept(this), i);
+                            return ArrayProjection
+                                    .of((TypeDescription) typeVariableToken.getBounds().get(0).accept(this), i);
                         }
                     }
-                    return TargetType.resolve(ArrayProjection.of(this.declaringType.findExpectedVariable(componentType.getSymbol()).asErasure(), i), this.declaringType);
+                    return TargetType.resolve(
+                            ArrayProjection.of(
+                                    this.declaringType.findExpectedVariable(componentType.getSymbol()).asErasure(), i),
+                            this.declaringType);
                 }
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
@@ -6035,7 +6824,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                             return (TypeDescription) typeVariableToken.getBounds().get(0).accept(this);
                         }
                     }
-                    return TargetType.resolve(this.declaringType.findExpectedVariable(generic.getSymbol()).asErasure(), this.declaringType);
+                    return TargetType.resolve(this.declaringType.findExpectedVariable(generic.getSymbol()).asErasure(),
+                            this.declaringType);
                 }
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
@@ -6044,15 +6834,21 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum Reifying implements Visitor<Generic> {
-                INITIATING { // from class: net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Reifying.1
-                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Reifying, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                INITIATING { // from class:
+                             // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Reifying.1
+                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Reifying,
+                              // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                     public /* bridge */ /* synthetic */ Generic onGenericArray(Generic generic) {
                         return super.onGenericArray(generic);
                     }
 
-                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Reifying, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Reifying,
+                              // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                     public /* bridge */ /* synthetic */ Generic onNonGenericType(Generic generic) {
                         return super.onNonGenericType(generic);
                     }
@@ -6062,33 +6858,40 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                         return generic;
                     }
 
-                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Reifying, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Reifying,
+                              // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                     public /* bridge */ /* synthetic */ Generic onTypeVariable(Generic generic) {
                         return super.onTypeVariable(generic);
                     }
 
-                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Reifying, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Reifying,
+                              // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                     public /* bridge */ /* synthetic */ Generic onWildcard(Generic generic) {
                         return super.onWildcard(generic);
                     }
                 },
-                INHERITING { // from class: net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Reifying.2
-                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Reifying, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                INHERITING { // from class:
+                             // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Reifying.2
+                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Reifying,
+                              // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                     public /* bridge */ /* synthetic */ Generic onGenericArray(Generic generic) {
                         return super.onGenericArray(generic);
                     }
 
-                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Reifying, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Reifying,
+                              // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                     public /* bridge */ /* synthetic */ Generic onNonGenericType(Generic generic) {
                         return super.onNonGenericType(generic);
                     }
 
-                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Reifying, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Reifying,
+                              // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                     public /* bridge */ /* synthetic */ Generic onTypeVariable(Generic generic) {
                         return super.onTypeVariable(generic);
                     }
 
-                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Reifying, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Reifying,
+                              // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                     public /* bridge */ /* synthetic */ Generic onWildcard(Generic generic) {
                         return super.onWildcard(generic);
                     }
@@ -6107,7 +6910,9 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                 public Generic onNonGenericType(Generic generic) {
                     TypeDescription typeDescriptionAsErasure = generic.asErasure();
-                    return typeDescriptionAsErasure.isGenerified() ? new OfNonGenericType.ForReifiedErasure(typeDescriptionAsErasure) : generic;
+                    return typeDescriptionAsErasure.isGenerified()
+                            ? new OfNonGenericType.ForReifiedErasure(typeDescriptionAsErasure)
+                            : generic;
                 }
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
@@ -6121,10 +6926,16 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static abstract class Substitutor implements Visitor<Generic> {
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class ForAttachment extends Substitutor {
                     private final TypeDescription declaringType;
@@ -6146,34 +6957,42 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                             return false;
                         }
                         ForAttachment forAttachment = (ForAttachment) obj;
-                        return this.declaringType.equals(forAttachment.declaringType) && this.typeVariableSource.equals(forAttachment.typeVariableSource);
+                        return this.declaringType.equals(forAttachment.declaringType)
+                                && this.typeVariableSource.equals(forAttachment.typeVariableSource);
                     }
 
                     public int hashCode() {
-                        return this.typeVariableSource.hashCode() + dkz.f(this.declaringType, getClass().hashCode() * 31, 31);
+                        return this.typeVariableSource.hashCode()
+                                + dkz.f(this.declaringType, getClass().hashCode() * 31, 31);
                     }
 
-                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor,
+                              // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                     public /* bridge */ /* synthetic */ Generic onGenericArray(Generic generic) {
                         return super.onGenericArray(generic);
                     }
 
-                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor,
+                              // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                     public /* bridge */ /* synthetic */ Generic onNonGenericType(Generic generic) {
                         return super.onNonGenericType(generic);
                     }
 
-                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor,
+                              // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                     public /* bridge */ /* synthetic */ Generic onParameterizedType(Generic generic) {
                         return super.onParameterizedType(generic);
                     }
 
                     @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor
                     public Generic onSimpleType(Generic generic) {
-                        return generic.represents(TargetType.class) ? new OfNonGenericType.Latent(this.declaringType, generic) : generic;
+                        return generic.represents(TargetType.class)
+                                ? new OfNonGenericType.Latent(this.declaringType, generic)
+                                : generic;
                     }
 
-                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor,
+                              // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                     public /* bridge */ /* synthetic */ Generic onWildcard(Generic generic) {
                         return super.onWildcard(generic);
                     }
@@ -6184,12 +7003,14 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     }
 
                     public static ForAttachment of(FieldDescription fieldDescription) {
-                        return new ForAttachment(fieldDescription.getDeclaringType(), fieldDescription.getDeclaringType().asErasure());
+                        return new ForAttachment(fieldDescription.getDeclaringType(),
+                                fieldDescription.getDeclaringType().asErasure());
                     }
 
                     @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                     public Generic onTypeVariable(Generic generic) {
-                        return new OfTypeVariable.WithAnnotationOverlay(this.typeVariableSource.findExpectedVariable(generic.getSymbol()), generic);
+                        return new OfTypeVariable.WithAnnotationOverlay(
+                                this.typeVariableSource.findExpectedVariable(generic.getSymbol()), generic);
                     }
 
                     public static ForAttachment of(MethodDescription methodDescription) {
@@ -6197,15 +7018,20 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     }
 
                     public static ForAttachment of(ParameterDescription parameterDescription) {
-                        return new ForAttachment(parameterDescription.getDeclaringMethod().getDeclaringType(), parameterDescription.getDeclaringMethod());
+                        return new ForAttachment(parameterDescription.getDeclaringMethod().getDeclaringType(),
+                                parameterDescription.getDeclaringMethod());
                     }
 
                     public static ForAttachment of(RecordComponentDescription recordComponentDescription) {
-                        return new ForAttachment(recordComponentDescription.getDeclaringType(), recordComponentDescription.getDeclaringType().asErasure());
+                        return new ForAttachment(recordComponentDescription.getDeclaringType(),
+                                recordComponentDescription.getDeclaringType().asErasure());
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class ForDetachment extends Substitutor {
                     private final ElementMatcher<? super TypeDescription> typeMatcher;
@@ -6222,34 +7048,41 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                         if (this == obj) {
                             return true;
                         }
-                        return obj != null && getClass() == obj.getClass() && this.typeMatcher.equals(((ForDetachment) obj).typeMatcher);
+                        return obj != null && getClass() == obj.getClass()
+                                && this.typeMatcher.equals(((ForDetachment) obj).typeMatcher);
                     }
 
                     public int hashCode() {
                         return this.typeMatcher.hashCode() + (getClass().hashCode() * 31);
                     }
 
-                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor,
+                              // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                     public /* bridge */ /* synthetic */ Generic onGenericArray(Generic generic) {
                         return super.onGenericArray(generic);
                     }
 
-                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor,
+                              // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                     public /* bridge */ /* synthetic */ Generic onNonGenericType(Generic generic) {
                         return super.onNonGenericType(generic);
                     }
 
-                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor,
+                              // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                     public /* bridge */ /* synthetic */ Generic onParameterizedType(Generic generic) {
                         return super.onParameterizedType(generic);
                     }
 
                     @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor
                     public Generic onSimpleType(Generic generic) {
-                        return this.typeMatcher.matches(generic.asErasure()) ? new OfNonGenericType.Latent(TargetType.DESCRIPTION, generic.getOwnerType(), generic) : generic;
+                        return this.typeMatcher.matches(generic.asErasure())
+                                ? new OfNonGenericType.Latent(TargetType.DESCRIPTION, generic.getOwnerType(), generic)
+                                : generic;
                     }
 
-                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor,
+                              // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                     public /* bridge */ /* synthetic */ Generic onWildcard(Generic generic) {
                         return super.onWildcard(generic);
                     }
@@ -6260,7 +7093,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class ForReplacement extends Substitutor {
                     private final TypeDescription typeDescription;
@@ -6273,31 +7109,37 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                         if (this == obj) {
                             return true;
                         }
-                        return obj != null && getClass() == obj.getClass() && this.typeDescription.equals(((ForReplacement) obj).typeDescription);
+                        return obj != null && getClass() == obj.getClass()
+                                && this.typeDescription.equals(((ForReplacement) obj).typeDescription);
                     }
 
                     public int hashCode() {
                         return this.typeDescription.hashCode() + (getClass().hashCode() * 31);
                     }
 
-                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor,
+                              // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                     public /* bridge */ /* synthetic */ Generic onGenericArray(Generic generic) {
                         return super.onGenericArray(generic);
                     }
 
-                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor,
+                              // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                     public /* bridge */ /* synthetic */ Generic onNonGenericType(Generic generic) {
                         return super.onNonGenericType(generic);
                     }
 
-                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor,
+                              // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                     public /* bridge */ /* synthetic */ Generic onParameterizedType(Generic generic) {
                         return super.onParameterizedType(generic);
                     }
 
                     @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor
                     public Generic onSimpleType(Generic generic) {
-                        return generic.asErasure().equals(this.typeDescription) ? new OfNonGenericType.Latent(this.typeDescription, generic) : generic;
+                        return generic.asErasure().equals(this.typeDescription)
+                                ? new OfNonGenericType.Latent(this.typeDescription, generic)
+                                : generic;
                     }
 
                     @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
@@ -6305,13 +7147,17 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                         return generic;
                     }
 
-                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor,
+                              // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                     public /* bridge */ /* synthetic */ Generic onWildcard(Generic generic) {
                         return super.onWildcard(generic);
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class ForTokenNormalization extends Substitutor {
                     private final TypeDescription typeDescription;
@@ -6324,34 +7170,41 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                         if (this == obj) {
                             return true;
                         }
-                        return obj != null && getClass() == obj.getClass() && this.typeDescription.equals(((ForTokenNormalization) obj).typeDescription);
+                        return obj != null && getClass() == obj.getClass()
+                                && this.typeDescription.equals(((ForTokenNormalization) obj).typeDescription);
                     }
 
                     public int hashCode() {
                         return this.typeDescription.hashCode() + (getClass().hashCode() * 31);
                     }
 
-                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor,
+                              // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                     public /* bridge */ /* synthetic */ Generic onGenericArray(Generic generic) {
                         return super.onGenericArray(generic);
                     }
 
-                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor,
+                              // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                     public /* bridge */ /* synthetic */ Generic onNonGenericType(Generic generic) {
                         return super.onNonGenericType(generic);
                     }
 
-                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor,
+                              // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                     public /* bridge */ /* synthetic */ Generic onParameterizedType(Generic generic) {
                         return super.onParameterizedType(generic);
                     }
 
                     @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor
                     public Generic onSimpleType(Generic generic) {
-                        return generic.represents(TargetType.class) ? new OfNonGenericType.Latent(this.typeDescription, generic) : generic;
+                        return generic.represents(TargetType.class)
+                                ? new OfNonGenericType.Latent(this.typeDescription, generic)
+                                : generic;
                     }
 
-                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor,
+                              // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                     public /* bridge */ /* synthetic */ Generic onWildcard(Generic generic) {
                         return super.onWildcard(generic);
                     }
@@ -6362,12 +7215,18 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class ForTypeVariableBinding extends WithoutTypeSubstitution {
                     private final Generic parameterizedType;
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     public class RetainedMethodTypeVariable extends OfTypeVariable {
                         private final Generic typeVariable;
 
@@ -6396,7 +7255,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                         }
                     }
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     @HashCodeAndEqualsPlugin.Enhance(includeSyntheticFields = true)
                     public class TypeVariableSubstitutor implements TypeVariableSource.Visitor<Generic> {
                         private final Generic typeVariable;
@@ -6413,11 +7275,13 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                                 return false;
                             }
                             TypeVariableSubstitutor typeVariableSubstitutor = (TypeVariableSubstitutor) obj;
-                            return this.typeVariable.equals(typeVariableSubstitutor.typeVariable) && ForTypeVariableBinding.this.equals(ForTypeVariableBinding.this);
+                            return this.typeVariable.equals(typeVariableSubstitutor.typeVariable)
+                                    && ForTypeVariableBinding.this.equals(ForTypeVariableBinding.this);
                         }
 
                         public int hashCode() {
-                            return ForTypeVariableBinding.this.hashCode() + dkz.e(this.typeVariable, getClass().hashCode() * 31, 31);
+                            return ForTypeVariableBinding.this.hashCode()
+                                    + dkz.e(this.typeVariable, getClass().hashCode() * 31, 31);
                         }
 
                         @Override // net.bytebuddy.description.TypeVariableSource.Visitor
@@ -6427,7 +7291,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
                         @Override // net.bytebuddy.description.TypeVariableSource.Visitor
                         public Generic onType(TypeDescription typeDescription) {
-                            Generic genericFindBindingOf = ForTypeVariableBinding.this.parameterizedType.findBindingOf(this.typeVariable);
+                            Generic genericFindBindingOf = ForTypeVariableBinding.this.parameterizedType
+                                    .findBindingOf(this.typeVariable);
                             return genericFindBindingOf == null ? this.typeVariable.asRawType() : genericFindBindingOf;
                         }
                     }
@@ -6440,7 +7305,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                         if (this == obj) {
                             return true;
                         }
-                        return obj != null && getClass() == obj.getClass() && this.parameterizedType.equals(((ForTypeVariableBinding) obj).parameterizedType);
+                        return obj != null && getClass() == obj.getClass()
+                                && this.parameterizedType.equals(((ForTypeVariableBinding) obj).parameterizedType);
                     }
 
                     public int hashCode() {
@@ -6453,19 +7319,25 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public static abstract class WithoutTypeSubstitution extends Substitutor {
-                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor,
+                              // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                     public /* bridge */ /* synthetic */ Generic onGenericArray(Generic generic) {
                         return super.onGenericArray(generic);
                     }
 
-                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor,
+                              // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                     public Generic onNonGenericType(Generic generic) {
                         return generic;
                     }
 
-                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor,
+                              // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                     public /* bridge */ /* synthetic */ Generic onParameterizedType(Generic generic) {
                         return super.onParameterizedType(generic);
                     }
@@ -6475,7 +7347,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                         return generic;
                     }
 
-                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                    @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor,
+                              // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                     public /* bridge */ /* synthetic */ Generic onWildcard(Generic generic) {
                         return super.onWildcard(generic);
                     }
@@ -6490,7 +7363,9 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                 public Generic onNonGenericType(Generic generic) {
-                    return generic.isArray() ? new OfGenericArray.Latent((Generic) generic.getComponentType().accept(this), generic) : onSimpleType(generic);
+                    return generic.isArray()
+                            ? new OfGenericArray.Latent((Generic) generic.getComponentType().accept(this), generic)
+                            : onSimpleType(generic);
                 }
 
                 /* JADX WARN: Multi-variable type inference failed */
@@ -6515,11 +7390,15 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                 public Generic onWildcard(Generic generic) {
-                    return new OfWildcardType.Latent(generic.getUpperBounds().accept(this), generic.getLowerBounds().accept(this), generic);
+                    return new OfWildcardType.Latent(generic.getUpperBounds().accept(this),
+                            generic.getLowerBounds().accept(this), generic);
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum TypeErasing implements Visitor<Generic> {
                 INSTANCE;
 
@@ -6549,17 +7428,31 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 }
             }
 
-            /* JADX WARN: Enum visitor error
-            jadx.core.utils.exceptions.JadxRuntimeException: Init of enum field 'SUPER_CLASS' uses external variables
-            	at jadx.core.dex.visitors.EnumVisitor.createEnumFieldByConstructor(EnumVisitor.java:451)
-            	at jadx.core.dex.visitors.EnumVisitor.processEnumFieldByRegister(EnumVisitor.java:395)
-            	at jadx.core.dex.visitors.EnumVisitor.extractEnumFieldsFromFilledArray(EnumVisitor.java:324)
-            	at jadx.core.dex.visitors.EnumVisitor.extractEnumFieldsFromInsn(EnumVisitor.java:262)
-            	at jadx.core.dex.visitors.EnumVisitor.convertToEnum(EnumVisitor.java:151)
-            	at jadx.core.dex.visitors.EnumVisitor.visit(EnumVisitor.java:100)
+            /*
+             * JADX WARN: Enum visitor error
+             * jadx.core.utils.exceptions.JadxRuntimeException: Init of enum field
+             * 'SUPER_CLASS' uses external variables
+             * at
+             * jadx.core.dex.visitors.EnumVisitor.createEnumFieldByConstructor(EnumVisitor.
+             * java:451)
+             * at jadx.core.dex.visitors.EnumVisitor.processEnumFieldByRegister(EnumVisitor.
+             * java:395)
+             * at jadx.core.dex.visitors.EnumVisitor.extractEnumFieldsFromFilledArray(
+             * EnumVisitor.java:324)
+             * at
+             * jadx.core.dex.visitors.EnumVisitor.extractEnumFieldsFromInsn(EnumVisitor.java
+             * :262)
+             * at jadx.core.dex.visitors.EnumVisitor.convertToEnum(EnumVisitor.java:151)
+             * at jadx.core.dex.visitors.EnumVisitor.visit(EnumVisitor.java:100)
              */
-            /* JADX WARN: Failed to restore enum class, 'enum' modifier and super class removed */
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX WARN: Failed to restore enum class, 'enum' modifier and super class
+             * removed
+             */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class Validator implements Visitor<Boolean> {
                 private static final /* synthetic */ Validator[] $VALUES;
                 public static final Validator EXCEPTION;
@@ -6575,7 +7468,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 private final boolean acceptsVariable;
                 private final boolean acceptsVoid;
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public enum ForTypeAnnotations implements Visitor<Boolean> {
                     INSTANCE;
 
@@ -6585,7 +7481,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     private boolean isValid(Generic generic) {
                         HashSet hashSet = new HashSet();
                         for (AnnotationDescription annotationDescription : generic.getDeclaredAnnotations()) {
-                            if (!annotationDescription.isSupportedOn(TYPE_USE) || !hashSet.add(annotationDescription.getAnnotationType())) {
+                            if (!annotationDescription.isSupportedOn(TYPE_USE)
+                                    || !hashSet.add(annotationDescription.getAnnotationType())) {
                                 return false;
                             }
                         }
@@ -6595,7 +7492,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     public static boolean ofFormalTypeVariable(Generic generic) {
                         HashSet hashSet = new HashSet();
                         for (AnnotationDescription annotationDescription : generic.getDeclaredAnnotations()) {
-                            if (!annotationDescription.isSupportedOn(TYPE_PARAMETER) || !hashSet.add(annotationDescription.getAnnotationType())) {
+                            if (!annotationDescription.isSupportedOn(TYPE_PARAMETER)
+                                    || !hashSet.add(annotationDescription.getAnnotationType())) {
                                 return false;
                             }
                         }
@@ -6605,13 +7503,15 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     /* JADX WARN: Can't rename method to resolve collision */
                     @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                     public Boolean onGenericArray(Generic generic) {
-                        return Boolean.valueOf(isValid(generic) && ((Boolean) generic.getComponentType().accept(this)).booleanValue());
+                        return Boolean.valueOf(
+                                isValid(generic) && ((Boolean) generic.getComponentType().accept(this)).booleanValue());
                     }
 
                     /* JADX WARN: Can't rename method to resolve collision */
                     @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                     public Boolean onNonGenericType(Generic generic) {
-                        return Boolean.valueOf(isValid(generic) && (!generic.isArray() || ((Boolean) generic.getComponentType().accept(this)).booleanValue()));
+                        return Boolean.valueOf(isValid(generic) && (!generic.isArray()
+                                || ((Boolean) generic.getComponentType().accept(this)).booleanValue()));
                     }
 
                     /* JADX WARN: Can't rename method to resolve collision */
@@ -6657,59 +7557,73 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     boolean z = false;
                     boolean z2 = false;
                     boolean z3 = false;
-                    Validator validator = new Validator("SUPER_CLASS", 0, false, z3, z, z2) { // from class: net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Validator.1
-                        @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Validator, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                    Validator validator = new Validator("SUPER_CLASS", 0, false, z3, z, z2) { // from class:
+                                                                                              // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Validator.1
+                        @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Validator,
+                                  // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                         public /* bridge */ /* synthetic */ Boolean onGenericArray(Generic generic) {
                             return super.onGenericArray(generic);
                         }
 
-                        @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Validator, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                        @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Validator,
+                                  // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                         public /* bridge */ /* synthetic */ Boolean onTypeVariable(Generic generic) {
                             return super.onTypeVariable(generic);
                         }
 
-                        @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Validator, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                        @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Validator,
+                                  // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                         public /* bridge */ /* synthetic */ Boolean onWildcard(Generic generic) {
                             return super.onWildcard(generic);
                         }
 
                         /* JADX WARN: Can't rename method to resolve collision */
-                        @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Validator, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                        @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Validator,
+                                  // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                         public Boolean onNonGenericType(Generic generic) {
-                            return Boolean.valueOf(super.onNonGenericType(generic).booleanValue() && !generic.isInterface());
+                            return Boolean
+                                    .valueOf(super.onNonGenericType(generic).booleanValue() && !generic.isInterface());
                         }
 
                         /* JADX WARN: Can't rename method to resolve collision */
-                        @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Validator, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                        @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Validator,
+                                  // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                         public Boolean onParameterizedType(Generic generic) {
                             return Boolean.valueOf(!generic.isInterface());
                         }
                     };
                     SUPER_CLASS = validator;
-                    Validator validator2 = new Validator("INTERFACE", 1, z3, z, z2, false) { // from class: net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Validator.2
-                        @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Validator, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                    Validator validator2 = new Validator("INTERFACE", 1, z3, z, z2, false) { // from class:
+                                                                                             // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Validator.2
+                        @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Validator,
+                                  // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                         public /* bridge */ /* synthetic */ Boolean onGenericArray(Generic generic) {
                             return super.onGenericArray(generic);
                         }
 
-                        @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Validator, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                        @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Validator,
+                                  // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                         public /* bridge */ /* synthetic */ Boolean onTypeVariable(Generic generic) {
                             return super.onTypeVariable(generic);
                         }
 
-                        @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Validator, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                        @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Validator,
+                                  // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                         public /* bridge */ /* synthetic */ Boolean onWildcard(Generic generic) {
                             return super.onWildcard(generic);
                         }
 
                         /* JADX WARN: Can't rename method to resolve collision */
-                        @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Validator, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                        @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Validator,
+                                  // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                         public Boolean onNonGenericType(Generic generic) {
-                            return Boolean.valueOf(super.onNonGenericType(generic).booleanValue() && generic.isInterface());
+                            return Boolean
+                                    .valueOf(super.onNonGenericType(generic).booleanValue() && generic.isInterface());
                         }
 
                         /* JADX WARN: Can't rename method to resolve collision */
-                        @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Validator, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                        @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Validator,
+                                  // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                         public Boolean onParameterizedType(Generic generic) {
                             return Boolean.valueOf(generic.isInterface());
                         }
@@ -6723,31 +7637,37 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     METHOD_RETURN = validator5;
                     Validator validator6 = new Validator("METHOD_PARAMETER", 5, true, true, true, false);
                     METHOD_PARAMETER = validator6;
-                    Validator validator7 = new Validator("EXCEPTION", 6, false, false, true, false) { // from class: net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Validator.3
-                        @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Validator, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                    Validator validator7 = new Validator("EXCEPTION", 6, false, false, true, false) { // from class:
+                                                                                                      // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Validator.3
+                        @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Validator,
+                                  // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                         public /* bridge */ /* synthetic */ Boolean onGenericArray(Generic generic) {
                             return super.onGenericArray(generic);
                         }
 
-                        @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Validator, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                        @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Validator,
+                                  // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                         public /* bridge */ /* synthetic */ Boolean onWildcard(Generic generic) {
                             return super.onWildcard(generic);
                         }
 
                         /* JADX WARN: Can't rename method to resolve collision */
-                        @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Validator, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                        @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Validator,
+                                  // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                         public Boolean onNonGenericType(Generic generic) {
                             return Boolean.valueOf(generic.asErasure().isAssignableTo(Throwable.class));
                         }
 
                         /* JADX WARN: Can't rename method to resolve collision */
-                        @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Validator, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                        @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Validator,
+                                  // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                         public Boolean onParameterizedType(Generic generic) {
                             return Boolean.FALSE;
                         }
 
                         /* JADX WARN: Can't rename method to resolve collision */
-                        @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Validator, net.bytebuddy.description.type.TypeDescription.Generic.Visitor
+                        @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Validator,
+                                  // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                         public Boolean onTypeVariable(Generic generic) {
                             Iterator<Generic> it = generic.getUpperBounds().iterator();
                             while (it.hasNext()) {
@@ -6761,7 +7681,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     EXCEPTION = validator7;
                     Validator validator8 = new Validator("RECEIVER", 7, false, false, false, false);
                     RECEIVER = validator8;
-                    $VALUES = new Validator[]{validator, validator2, validator3, validator4, validator5, validator6, validator7, validator8};
+                    $VALUES = new Validator[] { validator, validator2, validator3, validator4, validator5, validator6,
+                            validator7, validator8 };
                 }
 
                 public static Validator valueOf(String str) {
@@ -6788,7 +7709,9 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 /* JADX WARN: Can't rename method to resolve collision */
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
                 public Boolean onNonGenericType(Generic generic) {
-                    return Boolean.valueOf((this.acceptsArray || !generic.isArray()) && (this.acceptsPrimitive || !generic.isPrimitive()) && (this.acceptsVoid || !generic.represents(Void.TYPE)));
+                    return Boolean.valueOf((this.acceptsArray || !generic.isArray())
+                            && (this.acceptsPrimitive || !generic.isPrimitive())
+                            && (this.acceptsVoid || !generic.represents(Void.TYPE)));
                 }
 
                 /* JADX WARN: Can't rename method to resolve collision */
@@ -6855,7 +7778,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
         TypeList.Generic getUpperBounds();
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class Latent extends AbstractBase.OfSimpleType {
         private final List<? extends Generic> interfaces;
         private final int modifiers;
@@ -6870,15 +7796,18 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
         @Override // net.bytebuddy.description.annotation.AnnotationSource
         public AnnotationList getDeclaredAnnotations() {
-            throw new IllegalStateException("Cannot resolve declared annotations of a latent type description: " + this);
+            throw new IllegalStateException(
+                    "Cannot resolve declared annotations of a latent type description: " + this);
         }
 
-        @Override // net.bytebuddy.description.type.TypeDescription, net.bytebuddy.description.type.TypeDefinition
+        @Override // net.bytebuddy.description.type.TypeDescription,
+                  // net.bytebuddy.description.type.TypeDefinition
         public FieldList<FieldDescription.InDefinedShape> getDeclaredFields() {
             throw new IllegalStateException("Cannot resolve declared fields of a latent type description: " + this);
         }
 
-        @Override // net.bytebuddy.description.type.TypeDescription, net.bytebuddy.description.type.TypeDefinition
+        @Override // net.bytebuddy.description.type.TypeDescription,
+                  // net.bytebuddy.description.type.TypeDefinition
         public MethodList<MethodDescription.InDefinedShape> getDeclaredMethods() {
             throw new IllegalStateException("Cannot resolve declared methods of a latent type description: " + this);
         }
@@ -6928,15 +7857,18 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
         public PackageDescription getPackage() {
             String name = getName();
             int iLastIndexOf = name.lastIndexOf(46);
-            return iLastIndexOf == -1 ? PackageDescription.DEFAULT : new PackageDescription.Simple(name.substring(0, iLastIndexOf));
+            return iLastIndexOf == -1 ? PackageDescription.DEFAULT
+                    : new PackageDescription.Simple(name.substring(0, iLastIndexOf));
         }
 
         @Override // net.bytebuddy.description.type.TypeDescription
         public TypeList getPermittedSubtypes() {
-            throw new IllegalStateException("Cannot resolve permitted subclasses of a latent type description: " + this);
+            throw new IllegalStateException(
+                    "Cannot resolve permitted subclasses of a latent type description: " + this);
         }
 
-        @Override // net.bytebuddy.description.type.TypeDescription, net.bytebuddy.description.type.TypeDefinition
+        @Override // net.bytebuddy.description.type.TypeDescription,
+                  // net.bytebuddy.description.type.TypeDefinition
         public RecordComponentList<RecordComponentDescription.InDefinedShape> getRecordComponents() {
             throw new IllegalStateException("Cannot resolve record components of a latent type description: " + this);
         }
@@ -6954,12 +7886,14 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
         @Override // net.bytebuddy.description.type.TypeDescription
         public boolean isAnonymousType() {
-            throw new IllegalStateException("Cannot resolve anonymous type property of a latent type description: " + this);
+            throw new IllegalStateException(
+                    "Cannot resolve anonymous type property of a latent type description: " + this);
         }
 
         @Override // net.bytebuddy.description.type.TypeDescription
         public boolean isLocalType() {
-            throw new IllegalStateException("Cannot resolve local class property of a latent type description: " + this);
+            throw new IllegalStateException(
+                    "Cannot resolve local class property of a latent type description: " + this);
         }
 
         @Override // net.bytebuddy.description.type.TypeDefinition
@@ -6986,7 +7920,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @HashCodeAndEqualsPlugin.Enhance
     public static class LazyProxy implements InvocationHandler {
         private final Class<?> type;
@@ -6996,7 +7933,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
         }
 
         public static TypeDescription of(Class<?> cls) {
-            return (TypeDescription) Proxy.newProxyInstance(TypeDescription.class.getClassLoader(), new Class[]{TypeDescription.class}, new LazyProxy(cls));
+            return (TypeDescription) Proxy.newProxyInstance(TypeDescription.class.getClassLoader(),
+                    new Class[] { TypeDescription.class }, new LazyProxy(cls));
         }
 
         public boolean equals(@MaybeNull Object obj) {
@@ -7020,7 +7958,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class SuperTypeLoading extends AbstractBase {
 
         @MaybeNull
@@ -7028,10 +7969,16 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
         private final ClassLoadingDelegate classLoadingDelegate;
         private final TypeDescription delegate;
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public interface ClassLoadingDelegate {
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum Simple implements ClassLoadingDelegate {
                 INSTANCE;
 
@@ -7044,7 +7991,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             Class<?> load(String str, @MaybeNull ClassLoader classLoader);
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static class ClassLoadingTypeList extends TypeList.Generic.AbstractBase {
 
             @MaybeNull
@@ -7052,7 +8002,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             private final ClassLoadingDelegate classLoadingDelegate;
             private final TypeList.Generic delegate;
 
-            public ClassLoadingTypeList(TypeList.Generic generic, @MaybeNull ClassLoader classLoader, ClassLoadingDelegate classLoadingDelegate) {
+            public ClassLoadingTypeList(TypeList.Generic generic, @MaybeNull ClassLoader classLoader,
+                    ClassLoadingDelegate classLoadingDelegate) {
                 this.delegate = generic;
                 this.classLoader = classLoader;
                 this.classLoadingDelegate = classLoadingDelegate;
@@ -7065,11 +8016,15 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
             @Override // java.util.AbstractList, java.util.List
             public Generic get(int i) {
-                return new ClassLoadingTypeProjection(this.delegate.get(i), this.classLoader, this.classLoadingDelegate);
+                return new ClassLoadingTypeProjection(this.delegate.get(i), this.classLoader,
+                        this.classLoadingDelegate);
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static class ClassLoadingTypeProjection extends Generic.LazyProjection {
 
             @MaybeNull
@@ -7080,7 +8035,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             private transient /* synthetic */ TypeList.Generic interfaces;
             private transient /* synthetic */ Generic superClass;
 
-            public ClassLoadingTypeProjection(Generic generic, @MaybeNull ClassLoader classLoader, ClassLoadingDelegate classLoadingDelegate) {
+            public ClassLoadingTypeProjection(Generic generic, @MaybeNull ClassLoader classLoader,
+                    ClassLoadingDelegate classLoadingDelegate) {
                 this.delegate = generic;
                 this.classLoader = classLoader;
                 this.classLoadingDelegate = classLoadingDelegate;
@@ -7094,7 +8050,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                     typeDescriptionAsErasure = null;
                 } else {
                     try {
-                        typeDescriptionAsErasure = ForLoadedType.of(this.classLoadingDelegate.load(this.delegate.asErasure().getName(), this.classLoader));
+                        typeDescriptionAsErasure = ForLoadedType.of(
+                                this.classLoadingDelegate.load(this.delegate.asErasure().getName(), this.classLoader));
                     } catch (ClassNotFoundException unused) {
                         typeDescriptionAsErasure = this.delegate.asErasure();
                     }
@@ -7120,7 +8077,10 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 } else {
                     interfaces = this.delegate.getInterfaces();
                     try {
-                        interfaces = new ClassLoadingTypeList(interfaces, this.classLoadingDelegate.load(this.delegate.asErasure().getName(), this.classLoader).getClassLoader(), this.classLoadingDelegate);
+                        interfaces = new ClassLoadingTypeList(
+                                interfaces, this.classLoadingDelegate
+                                        .load(this.delegate.asErasure().getName(), this.classLoader).getClassLoader(),
+                                this.classLoadingDelegate);
                     } catch (ClassNotFoundException unused) {
                     }
                 }
@@ -7144,7 +8104,9 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                         superClass = Generic.UNDEFINED;
                     } else {
                         try {
-                            superClass = new ClassLoadingTypeProjection(superClass, this.classLoadingDelegate.load(this.delegate.asErasure().getName(), this.classLoader).getClassLoader(), this.classLoadingDelegate);
+                            superClass = new ClassLoadingTypeProjection(superClass, this.classLoadingDelegate
+                                    .load(this.delegate.asErasure().getName(), this.classLoader).getClassLoader(),
+                                    this.classLoadingDelegate);
                         } catch (ClassNotFoundException unused) {
                         }
                     }
@@ -7177,7 +8139,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             return this.delegate.getCanonicalName();
         }
 
-        @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase, net.bytebuddy.description.type.TypeDescription
+        @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase,
+                  // net.bytebuddy.description.type.TypeDescription
         @MaybeNull
         public ClassFileVersion getClassFileVersion() {
             return this.delegate.getClassFileVersion();
@@ -7188,12 +8151,14 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             return this.delegate.getDeclaredAnnotations();
         }
 
-        @Override // net.bytebuddy.description.type.TypeDescription, net.bytebuddy.description.type.TypeDefinition
+        @Override // net.bytebuddy.description.type.TypeDescription,
+                  // net.bytebuddy.description.type.TypeDefinition
         public FieldList<FieldDescription.InDefinedShape> getDeclaredFields() {
             return this.delegate.getDeclaredFields();
         }
 
-        @Override // net.bytebuddy.description.type.TypeDescription, net.bytebuddy.description.type.TypeDefinition
+        @Override // net.bytebuddy.description.type.TypeDescription,
+                  // net.bytebuddy.description.type.TypeDefinition
         public MethodList<MethodDescription.InDefinedShape> getDeclaredMethods() {
             return this.delegate.getDeclaredMethods();
         }
@@ -7256,7 +8221,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             return this.delegate.getPermittedSubtypes();
         }
 
-        @Override // net.bytebuddy.description.type.TypeDescription, net.bytebuddy.description.type.TypeDefinition
+        @Override // net.bytebuddy.description.type.TypeDescription,
+                  // net.bytebuddy.description.type.TypeDefinition
         public RecordComponentList<RecordComponentDescription.InDefinedShape> getRecordComponents() {
             return this.delegate.getRecordComponents();
         }
@@ -7275,7 +8241,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
         @MaybeNull
         public Generic getSuperClass() {
             Generic superClass = this.delegate.getSuperClass();
-            return superClass == null ? Generic.UNDEFINED : new ClassLoadingTypeProjection(superClass, this.classLoader, this.classLoadingDelegate);
+            return superClass == null ? Generic.UNDEFINED
+                    : new ClassLoadingTypeProjection(superClass, this.classLoader, this.classLoadingDelegate);
         }
 
         @Override // net.bytebuddy.description.TypeVariableSource
@@ -7308,7 +8275,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             return this.delegate.isRecord();
         }
 
-        @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase, net.bytebuddy.description.type.TypeDescription
+        @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase,
+                  // net.bytebuddy.description.type.TypeDescription
         public boolean isSealed() {
             return this.delegate.isSealed();
         }
@@ -7319,7 +8287,8 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
             return this.delegate.toModuleDescription();
         }
 
-        public SuperTypeLoading(TypeDescription typeDescription, @MaybeNull ClassLoader classLoader, ClassLoadingDelegate classLoadingDelegate) {
+        public SuperTypeLoading(TypeDescription typeDescription, @MaybeNull ClassLoader classLoader,
+                ClassLoadingDelegate classLoadingDelegate) {
             this.delegate = typeDescription;
             this.classLoader = classLoader;
             this.classLoadingDelegate = classLoadingDelegate;

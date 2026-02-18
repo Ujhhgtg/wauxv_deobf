@@ -34,7 +34,10 @@ public final class dyc {
             return false;
         }
         dyc dycVar = (dyc) obj;
-        return bzo.f(this.a, dycVar.a) && bzo.f(this.b, dycVar.b) && bzo.f(this.c, dycVar.c) && bzo.f(this.d, dycVar.d) && bzo.f(this.e, dycVar.e) && bzo.f(this.f, dycVar.f) && bzo.f(this.g, dycVar.g);
+        return nullSafeIsEqual(this.a, dycVar.a) && nullSafeIsEqual(this.b, dycVar.b)
+                && nullSafeIsEqual(this.c, dycVar.c) && nullSafeIsEqual(this.d, dycVar.d)
+                && nullSafeIsEqual(this.e, dycVar.e) && nullSafeIsEqual(this.f, dycVar.f)
+                && nullSafeIsEqual(this.g, dycVar.g);
     }
 
     public final int hashCode() {
@@ -64,6 +67,6 @@ public final class dyc {
         yg.u(sb, this.e, -202460463364906L);
         sb.append(this.f);
         sb.append(", wish_list_id=" /* cnb.z(-202387448920874L) */);
-        return bjs.q(sb, this.g, ')');
+        return concat(sb, this.g, ')');
     }
 }

@@ -45,10 +45,10 @@ public final /* synthetic */ class arm implements Runnable {
                 ArrayList<dhr> arrayList = aroVar2.f.a;
                 if (aroVar2.q) {
                     arq colorScheme = codeEditor.getColorScheme();
-                    bzo.q(arrayList, "<this>");
+                    throwIfVar1IsNull(arrayList, "<this>");
                     if (colorScheme == null) {
                         colorScheme = arq.a;
-                        bzo.p(colorScheme, "getDefault(...)");
+                        throwIfVar1IsNull(colorScheme, "getDefault(...)");
                     }
                     int i2 = colorScheme.b.get(67);
                     for (dhr dhrVar : arrayList) {
@@ -100,7 +100,8 @@ public final /* synthetic */ class arm implements Runnable {
                         aroVar2.u();
                     }
                 }
-                float count = ajyVar.getCount() * ((int) TypedValue.applyDimension(1, 45.0f, ajyVar.a.a.getContext().getResources().getDisplayMetrics()));
+                float count = ajyVar.getCount() * ((int) TypedValue.applyDimension(1, 45.0f,
+                        ajyVar.a.a.getContext().getResources().getDisplayMetrics()));
                 if (count == 0.0f) {
                     aroVar2.t();
                 }

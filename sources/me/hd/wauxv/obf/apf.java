@@ -15,7 +15,7 @@ public final class apf {
             return false;
         }
         apf apfVar = (apf) obj;
-        return bzo.f(this.a, apfVar.a) && bzo.f(this.b, apfVar.b);
+        return nullSafeIsEqual(this.a, apfVar.a) && nullSafeIsEqual(this.b, apfVar.b);
     }
 
     public final int hashCode() {
@@ -29,6 +29,6 @@ public final class apf {
         StringBuilder sb = new StringBuilder();
         sb.append("DisturbTimeSpan(BeginTime=" /* cnb.z(-334315959352106L) */);
         bjs.w(sb, this.a, -334715391310634L);
-        return bjs.p(sb, this.b, ')');
+        return concat(sb, this.b, ')');
     }
 }

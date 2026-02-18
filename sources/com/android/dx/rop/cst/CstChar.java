@@ -46,6 +46,6 @@ public final class CstChar extends CstLiteral32 {
         if (c == i) {
             return make(c);
         }
-        throw new IllegalArgumentException(bjs.i(i, "bogus char value: "));
+        throw new IllegalArgumentException(concatVar2Var1(i, "bogus char value: "));
     }
 }

@@ -32,7 +32,9 @@ public final class dtk {
             return false;
         }
         dtk dtkVar = (dtk) obj;
-        return bzo.f(this.a, dtkVar.a) && bzo.f(this.b, dtkVar.b) && bzo.f(this.c, dtkVar.c) && bzo.f(this.d, dtkVar.d) && bzo.f(this.e, dtkVar.e) && bzo.f(this.f, dtkVar.f);
+        return nullSafeIsEqual(this.a, dtkVar.a) && nullSafeIsEqual(this.b, dtkVar.b)
+                && nullSafeIsEqual(this.c, dtkVar.c) && nullSafeIsEqual(this.d, dtkVar.d)
+                && nullSafeIsEqual(this.e, dtkVar.e) && nullSafeIsEqual(this.f, dtkVar.f);
     }
 
     public final int hashCode() {
@@ -58,6 +60,6 @@ public final class dtk {
         bjs.w(sb, this.c, -182424440929066L);
         bjs.w(sb, this.d, -182407261059882L);
         yg.u(sb, this.e, -182347131517738L);
-        return bjs.p(sb, this.f, ')');
+        return concat(sb, this.f, ')');
     }
 }

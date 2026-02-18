@@ -13,7 +13,7 @@ import me.hd.wauxv.R;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes2.dex */
-public final /* synthetic */ class amb implements bgf {
+public final /* synthetic */ class amb implements IHasInvokeMethod {
     public final /* synthetic */ int a;
 
     public /* synthetic */ amb(int i) {
@@ -35,10 +35,10 @@ public final /* synthetic */ class amb implements bgf {
         ens ensVar = ens.a;
         switch (i) {
             case 0:
-                bmm bmmVar = (bmm) obj;
-                bmmVar.getClass();
+                HookParamWrapper hookParam = (HookParamWrapper) obj;
+                hookParam.getClass();
                 try {
-                    objX = bmmVar.d()[1];
+                    objX = hookParam.getArgs()[1];
                     if (objX == null) {
                         objX = null;
                     }
@@ -51,7 +51,7 @@ public final /* synthetic */ class amb implements bgf {
                 Integer num = (Integer) objX;
                 int iIntValue = num != null ? num.intValue() : 0;
                 try {
-                    objX2 = bmmVar.d()[2];
+                    objX2 = hookParam.getArgs()[2];
                     if (objX2 == null) {
                         objX2 = null;
                     }
@@ -66,7 +66,7 @@ public final /* synthetic */ class amb implements bgf {
                     str = "";
                 }
                 try {
-                    objX3 = bmmVar.d()[9];
+                    objX3 = hookParam.getArgs()[9];
                     if (objX3 == null) {
                         objX3 = null;
                     }
@@ -115,21 +115,21 @@ public final /* synthetic */ class amb implements bgf {
                 return ensVar;
             case 1:
                 String str4 = (String) obj;
-                bzo.q(str4, "it");
+                throwIfVar1IsNull(str4, "it");
                 return ams.h(str4);
             case 2:
                 Class cls2 = (Class) obj;
-                bzo.n(cls2);
+                throwIfVar1IsNull(cls2);
                 return ams.g(cls2);
             case 3:
                 Class cls3 = (Class) obj;
-                bzo.n(cls3);
+                throwIfVar1IsNull(cls3);
                 return ams.g(cls3);
             case 4:
-                bmm bmmVar2 = (bmm) obj;
-                bmmVar2.getClass();
+                HookParamWrapper hookParam2 = (HookParamWrapper) obj;
+                hookParam2.getClass();
                 try {
-                    objX4 = bmmVar2.d()[0];
+                    objX4 = hookParam2.getArgs()[0];
                     if (objX4 == null) {
                         objX4 = null;
                     }
@@ -137,14 +137,14 @@ public final /* synthetic */ class amb implements bgf {
                     objX4 = bhu.x(th4);
                 }
                 Object obj2 = objX4 instanceof dcx ? null : objX4;
-                bzo.n(obj2);
+                throwIfVar1IsNull(obj2);
                 WindowManager.LayoutParams layoutParams = (WindowManager.LayoutParams) obj2;
                 if (layoutParams.screenBrightness >= 0.5f) {
                     layoutParams.screenBrightness = -1.0f;
                 }
                 return ensVar;
             case 5:
-                ((bmm) obj).h(null);
+                ((HookParamWrapper) obj).setResult(null);
                 return ensVar;
             case 6:
                 amm ammVar = (amm) obj;
@@ -153,7 +153,7 @@ public final /* synthetic */ class amb implements bgf {
                 return ensVar;
             case 7:
                 bag bagVar = (bag) obj;
-                String[] strArr = {"com.tencent.mm.ui.chatting.viewitems" /* cnb.z(-446706663553834L) */};
+                String[] strArr = { "com.tencent.mm.ui.chatting.viewitems" /* cnb.z(-446706663553834L) */ };
                 bagVar.getClass();
                 bagVar.a = la.ab(strArr);
                 zb zbVar = new zb();
@@ -175,7 +175,7 @@ public final /* synthetic */ class amb implements bgf {
                 bahVar.d = cdjVar;
                 return ensVar;
             case 9:
-                ((bmm) obj).h(Boolean.FALSE);
+                ((HookParamWrapper) obj).setResult(Boolean.FALSE);
                 return ensVar;
             case 10:
                 ((amm) obj).c = new amb(11);
@@ -183,7 +183,10 @@ public final /* synthetic */ class amb implements bgf {
             case 11:
                 bah bahVar2 = (bah) obj;
                 cdj cdjVar2 = new cdj();
-                cdjVar2.t("MicroMsg.PluginPatMsg" /* cnb.z(-447995153742634L) */, "DisableSendPat" /* cnb.z(-447883484592938L) */);
+                cdjVar2.t("MicroMsg.PluginPatMsg" /* cnb.z(-447995153742634L) */, "DisableSendPat" /*
+                                                                                                    * cnb.z(-
+                                                                                                    * 447883484592938L)
+                                                                                                    */);
                 bahVar2.getClass();
                 bahVar2.d = cdjVar2;
                 return ensVar;
@@ -191,10 +194,12 @@ public final /* synthetic */ class amb implements bgf {
                 View view = (View) obj;
                 View viewK = dkz.k(view, R.layout.module_dialog_disable_ringtone_play, null, false);
                 int i3 = R.id.moduleDialogCbDisableRingtoneInCall;
-                MaterialCheckBox materialCheckBox = (MaterialCheckBox) cnd.aq(viewK, R.id.moduleDialogCbDisableRingtoneInCall);
+                MaterialCheckBox materialCheckBox = (MaterialCheckBox) cnd.aq(viewK,
+                        R.id.moduleDialogCbDisableRingtoneInCall);
                 if (materialCheckBox != null) {
                     i3 = R.id.moduleDialogCbDisableRingtoneOutCall;
-                    MaterialCheckBox materialCheckBox2 = (MaterialCheckBox) cnd.aq(viewK, R.id.moduleDialogCbDisableRingtoneOutCall);
+                    MaterialCheckBox materialCheckBox2 = (MaterialCheckBox) cnd.aq(viewK,
+                            R.id.moduleDialogCbDisableRingtoneOutCall);
                     if (materialCheckBox2 != null) {
                         LinearLayout linearLayout = (LinearLayout) viewK;
                         cek cekVar = new cek(linearLayout, materialCheckBox, materialCheckBox2, 1);
@@ -213,12 +218,13 @@ public final /* synthetic */ class amb implements bgf {
                         return ensVar;
                     }
                 }
-                throw new NullPointerException("Missing required view with ID: " /* cnb.z(-639675249195818L) */.concat(viewK.getResources().getResourceName(i3)));
+                throw new NullPointerException("Missing required view with ID: "
+                        /* cnb.z(-639675249195818L) */.concat(viewK.getResources().getResourceName(i3)));
             case 13:
-                bmm bmmVar3 = (bmm) obj;
-                bmmVar3.getClass();
+                HookParamWrapper hookParam3 = (HookParamWrapper) obj;
+                hookParam3.getClass();
                 try {
-                    objX5 = bmmVar3.d()[1];
+                    objX5 = hookParam3.getArgs()[1];
                     if (objX5 == null) {
                         objX5 = null;
                     }
@@ -226,14 +232,17 @@ public final /* synthetic */ class amb implements bgf {
                     objX5 = bhu.x(th5);
                 }
                 Object obj3 = objX5 instanceof dcx ? null : objX5;
-                bzo.n(obj3);
+                throwIfVar1IsNull(obj3);
                 Bundle bundle = (Bundle) obj3;
-                if (bzo.f(bundle.getString("scene" /* cnb.z(-444357316442922L) */), "start" /* cnb.z(-444314366769962L) */)) {
+                if (nullSafeIsEqual(bundle.getString("scene" /* cnb.z(-444357316442922L) */), "start" /*
+                                                                                                       * cnb.z(-
+                                                                                                       * 444314366769962L)
+                                                                                                       */)) {
                     boolean z = bundle.getBoolean("isOutCall" /* cnb.z(-444340136573738L) */);
                     Object[] objArr = z && aod.a.i();
                     i = (z || !aoc.a.i()) ? 0 : 1;
                     if (objArr != false || i != 0) {
-                        bmmVar3.h(Boolean.FALSE);
+                        hookParam3.setResult(Boolean.FALSE);
                     }
                 }
                 return ensVar;
@@ -243,23 +252,25 @@ public final /* synthetic */ class amb implements bgf {
             case 15:
                 bah bahVar3 = (bah) obj;
                 cdj cdjVar3 = new cdj();
-                cdjVar3.t("MicroMsg.BaseSceneSetting" /* cnb.z(-444245647293226L) */, "playSound Failed Throwable t = " /* cnb.z(-444700913826602L) */);
+                cdjVar3.t("MicroMsg.BaseSceneSetting" /* cnb.z(-444245647293226L) */,
+                        "playSound Failed Throwable t = " /* cnb.z(-444700913826602L) */);
                 bahVar3.getClass();
                 bahVar3.d = cdjVar3;
                 return ensVar;
             case 16:
-                ((bmm) obj).h(null);
+                ((HookParamWrapper) obj).setResult(null);
                 return ensVar;
             case 17:
                 ((amm) obj).c = new amb(i2);
                 return ensVar;
             case 18:
                 bah bahVar4 = (bah) obj;
-                String[] strArr2 = {"com.tencent.mm.ui.chatting.component" /* cnb.z(-446388835973930L) */};
+                String[] strArr2 = { "com.tencent.mm.ui.chatting.component" /* cnb.z(-446388835973930L) */ };
                 bahVar4.getClass();
                 bahVar4.a = la.ab(strArr2);
                 cdj cdjVar4 = new cdj();
-                cdjVar4.t("MicroMsg.SignallingComponent" /* cnb.z(-446212742314794L) */, "[doDirectSend] mChattingContext is null!" /* cnb.z(-445572792187690L) */);
+                cdjVar4.t("MicroMsg.SignallingComponent" /* cnb.z(-446212742314794L) */,
+                        "[doDirectSend] mChattingContext is null!" /* cnb.z(-445572792187690L) */);
                 bahVar4.d = cdjVar4;
                 return ensVar;
             case 19:
@@ -268,15 +279,16 @@ public final /* synthetic */ class amb implements bgf {
             case 20:
                 bag bagVar2 = (bag) obj;
                 zb zbVar2 = new zb();
-                zbVar2.k("ModelImage.DownloadImgService" /* cnb.z(-119138097822506L) */, "cancelNetScene reset curTaskInfo (%s %s %s)" /* cnb.z(-120641336376106L) */);
+                zbVar2.k("ModelImage.DownloadImgService" /* cnb.z(-119138097822506L) */,
+                        "cancelNetScene reset curTaskInfo (%s %s %s)" /* cnb.z(-120641336376106L) */);
                 bagVar2.getClass();
                 bagVar2.b = zbVar2;
                 return ensVar;
             case 21:
-                bmm bmmVar4 = (bmm) obj;
-                bmmVar4.getClass();
+                HookParamWrapper hookParam4 = (HookParamWrapper) obj;
+                hookParam4.getClass();
                 try {
-                    objX6 = bmmVar4.d()[0];
+                    objX6 = hookParam4.getArgs()[0];
                     if (objX6 == null) {
                         objX6 = null;
                     }
@@ -286,7 +298,7 @@ public final /* synthetic */ class amb implements bgf {
                 if (objX6 instanceof dcx) {
                     objX6 = null;
                 }
-                bzo.n(objX6);
+                throwIfVar1IsNull(objX6);
                 Iterator it = aqw.b.iterator();
                 while (it.hasNext()) {
                     if (it.next() != null) {
@@ -296,7 +308,9 @@ public final /* synthetic */ class amb implements bgf {
                         throw null;
                     } catch (Exception e) {
                         ArrayList arrayList2 = ewq.a;
-                        ewq.e("onGetDynamicConfig " /* cnb.z(-36880884169514L) */ + "LoadHook" /* cnb.z(-37379100375850L) */ + " Failed" /* cnb.z(-37288906062634L) */, e, 12);
+                        ewq.e("onGetDynamicConfig "
+                                /* cnb.z(-36880884169514L) */ + "LoadHook" /* cnb.z(-37379100375850L) */
+                                + " Failed" /* cnb.z(-37288906062634L) */, e, 12);
                     }
                 }
                 return ensVar;
@@ -308,7 +322,8 @@ public final /* synthetic */ class amb implements bgf {
             case 23:
                 bag bagVar3 = (bag) obj;
                 zb zbVar3 = new zb();
-                zbVar3.k("MicroMsg.DynamicConfig" /* cnb.z(-37254546324266L) */, "update dynacfg. increment:%b, md5:%s" /* cnb.z(-37207301684010L) */);
+                zbVar3.k("MicroMsg.DynamicConfig" /* cnb.z(-37254546324266L) */,
+                        "update dynacfg. increment:%b, md5:%s" /* cnb.z(-37207301684010L) */);
                 bagVar3.getClass();
                 bagVar3.b = zbVar3;
                 return ensVar;
@@ -323,7 +338,10 @@ public final /* synthetic */ class amb implements bgf {
                 cdjVar5.r(clsBf);
                 Class<String> clsBf2 = cnf.bf(dal.b(cls));
                 cdjVar5.q(clsBf2 != null ? clsBf2 : String.class);
-                cdjVar5.t("MicroMsg.DynamicConfig" /* cnb.z(-36481452210986L) */, "DynamicConfig hadnot load" /* cnb.z(-36365488093994L) */);
+                cdjVar5.t("MicroMsg.DynamicConfig" /* cnb.z(-36481452210986L) */, "DynamicConfig hadnot load" /*
+                                                                                                               * cnb.z(-
+                                                                                                               * 36365488093994L)
+                                                                                                               */);
                 bahVar5.getClass();
                 bahVar5.d = cdjVar5;
                 return ensVar;
@@ -339,11 +357,15 @@ public final /* synthetic */ class amb implements bgf {
                 return ensVar;
             default:
                 bag bagVar4 = (bag) obj;
-                String[] strArr3 = {"com.tencent.mm.feature.emoji" /* cnb.z(-361997023574826L) */};
+                String[] strArr3 = { "com.tencent.mm.feature.emoji" /* cnb.z(-361997023574826L) */ };
                 bagVar4.getClass();
                 bagVar4.a = la.ab(strArr3);
                 zb zbVar4 = new zb();
-                zbVar4.k("MicroMsg.EmojiFeatureService" /* cnb.z(-361906829261610L) */, "[onAccountInitialized]" /* cnb.z(-361765095340842L) */, "onAccountRelease: " /* cnb.z(-362198887037738L) */);
+                zbVar4.k("MicroMsg.EmojiFeatureService" /* cnb.z(-361906829261610L) */,
+                        "[onAccountInitialized]" /* cnb.z(-361765095340842L) */, "onAccountRelease: " /*
+                                                                                                       * cnb.z(-
+                                                                                                       * 362198887037738L)
+                                                                                                       */);
                 bagVar4.b = zbVar4;
                 return ensVar;
         }

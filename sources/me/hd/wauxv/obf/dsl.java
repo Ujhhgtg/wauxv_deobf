@@ -26,7 +26,8 @@ public final class dsl {
             return false;
         }
         dsl dslVar = (dsl) obj;
-        return bzo.f(this.a, dslVar.a) && bzo.f(this.b, dslVar.b) && bzo.f(this.c, dslVar.c);
+        return nullSafeIsEqual(this.a, dslVar.a) && nullSafeIsEqual(this.b, dslVar.b)
+                && nullSafeIsEqual(this.c, dslVar.c);
     }
 
     public final int hashCode() {
@@ -43,6 +44,6 @@ public final class dsl {
         sb.append("AppJumpWordingProto(en=" /* cnb.z(-145221434211114L) */);
         yg.u(sb, this.a, -145668110809898L);
         yg.u(sb, this.b, -145629456104234L);
-        return bjs.q(sb, this.c, ')');
+        return concat(sb, this.c, ')');
     }
 }

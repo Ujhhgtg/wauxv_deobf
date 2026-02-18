@@ -59,13 +59,13 @@ import org.xmlpull.v1.XmlPullParserException;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public class io implements dln, dcm, aui, ccv {
-    public static final int[] a = {R.attr.indeterminateDrawable, R.attr.progressDrawable};
+public class DefaultConfig implements dln, dcm, aui, ccv {
+    public static final int[] a = { R.attr.indeterminateDrawable, R.attr.progressDrawable };
     public final /* synthetic */ int b;
     public Object c;
     public Object d;
 
-    public /* synthetic */ io(int i, boolean z) {
+    public /* synthetic */ DefaultConfig(int i, boolean z) {
         this.b = i;
     }
 
@@ -74,10 +74,11 @@ public class io implements dln, dcm, aui, ccv {
         if (as.w(drawableDecodeDrawable)) {
             return new ez(as.g(drawableDecodeDrawable), 0);
         }
-        throw new IOException("Received unexpected drawable type for animated image, failing: " + drawableDecodeDrawable);
+        throw new IOException(
+                "Received unexpected drawable type for animated image, failing: " + drawableDecodeDrawable);
     }
 
-    public static void f(io ioVar, eqh eqhVar, int i) {
+    public static void f(DefaultConfig ioVar, eqh eqhVar, int i) {
         String strZ = "取消" /* cnb.z(-47455093652266L) */;
         bfu amdVar = eqhVar;
         if ((i & 2) != 0) {
@@ -89,7 +90,7 @@ public class io implements dln, dcm, aui, ccv {
         }
     }
 
-    public static void g(io ioVar, cfx cfxVar, int i) {
+    public static void g(DefaultConfig ioVar, cfx cfxVar, int i) {
         String strZ = "确定" /* cnb.z(-47519518161706L) */;
         bfu amdVar = cfxVar;
         if ((i & 2) != 0) {
@@ -110,7 +111,7 @@ public class io implements dln, dcm, aui, ccv {
     }
 
     public void aa(bdj bdjVar, boolean z) {
-        bzo.q(bdjVar, "f");
+        throwIfVar1IsNull(bdjVar, "f");
         bdj bdjVar2 = ((beg) this.c).y;
         if (bdjVar2 != null) {
             bdjVar2.cs().o.aa(bdjVar, true);
@@ -119,13 +120,13 @@ public class io implements dln, dcm, aui, ccv {
             if (z) {
                 bdtVar.getClass();
             } else {
-                io ioVar = bdtVar.a;
+                DefaultConfig ioVar = bdtVar.a;
             }
         }
     }
 
     public void ab(bdj bdjVar, Bundle bundle, boolean z) {
-        bzo.q(bdjVar, "f");
+        throwIfVar1IsNull(bdjVar, "f");
         bdj bdjVar2 = ((beg) this.c).y;
         if (bdjVar2 != null) {
             bdjVar2.cs().o.ab(bdjVar, bundle, true);
@@ -134,13 +135,13 @@ public class io implements dln, dcm, aui, ccv {
             if (z) {
                 bdtVar.getClass();
             } else {
-                io ioVar = bdtVar.a;
+                DefaultConfig ioVar = bdtVar.a;
             }
         }
     }
 
     public void ac(bdj bdjVar, boolean z) {
-        bzo.q(bdjVar, "f");
+        throwIfVar1IsNull(bdjVar, "f");
         bdj bdjVar2 = ((beg) this.c).y;
         if (bdjVar2 != null) {
             bdjVar2.cs().o.ac(bdjVar, true);
@@ -149,13 +150,13 @@ public class io implements dln, dcm, aui, ccv {
             if (z) {
                 bdtVar.getClass();
             } else {
-                io ioVar = bdtVar.a;
+                DefaultConfig ioVar = bdtVar.a;
             }
         }
     }
 
     public void ad(bdj bdjVar, boolean z) {
-        bzo.q(bdjVar, "f");
+        throwIfVar1IsNull(bdjVar, "f");
         bdj bdjVar2 = ((beg) this.c).y;
         if (bdjVar2 != null) {
             bdjVar2.cs().o.ad(bdjVar, true);
@@ -164,14 +165,14 @@ public class io implements dln, dcm, aui, ccv {
             if (z) {
                 bdtVar.getClass();
             } else {
-                io ioVar = bdtVar.a;
+                DefaultConfig ioVar = bdtVar.a;
             }
         }
     }
 
     public void ae(bdj bdjVar, View view, boolean z) {
-        bzo.q(bdjVar, "f");
-        bzo.q(view, "v");
+        throwIfVar1IsNull(bdjVar, "f");
+        throwIfVar1IsNull(view, "v");
         bdj bdjVar2 = ((beg) this.c).y;
         if (bdjVar2 != null) {
             bdjVar2.cs().o.ae(bdjVar, view, true);
@@ -180,10 +181,10 @@ public class io implements dln, dcm, aui, ccv {
             if (z) {
                 bdtVar.getClass();
             } else {
-                io ioVar = bdtVar.a;
+                DefaultConfig ioVar = bdtVar.a;
                 beg begVar = (beg) this.c;
                 if (bdjVar == ((bdj) ioVar.c)) {
-                    io ioVar2 = begVar.o;
+                    DefaultConfig ioVar2 = begVar.o;
                     ioVar2.getClass();
                     synchronized (((CopyOnWriteArrayList) ioVar2.d)) {
                         int size = ((CopyOnWriteArrayList) ioVar2.d).size();
@@ -203,7 +204,7 @@ public class io implements dln, dcm, aui, ccv {
     }
 
     public void af(bdj bdjVar, boolean z) {
-        bzo.q(bdjVar, "f");
+        throwIfVar1IsNull(bdjVar, "f");
         bdj bdjVar2 = ((beg) this.c).y;
         if (bdjVar2 != null) {
             bdjVar2.cs().o.af(bdjVar, true);
@@ -212,7 +213,7 @@ public class io implements dln, dcm, aui, ccv {
             if (z) {
                 bdtVar.getClass();
             } else {
-                io ioVar = bdtVar.a;
+                DefaultConfig ioVar = bdtVar.a;
             }
         }
     }
@@ -251,7 +252,7 @@ public class io implements dln, dcm, aui, ccv {
         if (keyListener instanceof NumberKeyListener) {
             return keyListener;
         }
-        ((io) ((erp) this.d).v).getClass();
+        ((DefaultConfig) ((erp) this.d).v).getClass();
         if (keyListener instanceof auf) {
             return keyListener;
         }
@@ -307,7 +308,8 @@ public class io implements dln, dcm, aui, ccv {
                 jxVarK.ae();
                 return;
             default:
-                TypedArray typedArrayObtainStyledAttributes = ((EditText) this.c).getContext().obtainStyledAttributes(attributeSet, cyf.i, i, 0);
+                TypedArray typedArrayObtainStyledAttributes = ((EditText) this.c).getContext()
+                        .obtainStyledAttributes(attributeSet, cyf.i, i, 0);
                 try {
                     boolean z = true;
                     if (typedArrayObtainStyledAttributes.hasValue(14)) {
@@ -330,7 +332,7 @@ public class io implements dln, dcm, aui, ccv {
             erpVar.getClass();
             inputConnection = null;
         } else {
-            io ioVar = (io) erpVar.v;
+            DefaultConfig ioVar = (DefaultConfig) erpVar.v;
             ioVar.getClass();
             if (!(inputConnection instanceof auc)) {
                 inputConnection = new auc((EditText) ioVar.c, inputConnection, editorInfo);
@@ -390,9 +392,24 @@ public class io implements dln, dcm, aui, ccv {
         }
     }
 
-    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
+    /*
+     * JADX WARN: Failed to restore switch over string. Please report as a
+     * decompilation issue
+     */
     /* JADX WARN: Found duplicated region for block: B:113:0x0110 A[SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:63:0x0109 A[Catch: IOException -> 0x0091, XmlPullParserException -> 0x0094, TryCatch #2 {IOException -> 0x0091, XmlPullParserException -> 0x0094, blocks: (B:20:0x0062, B:97:0x0209, B:28:0x0074, B:29:0x0082, B:31:0x0087, B:38:0x0097, B:46:0x00b1, B:41:0x00a0, B:44:0x00a9, B:47:0x00bf, B:51:0x00ce, B:53:0x00d6, B:54:0x00e0, B:63:0x0109, B:64:0x0110, B:65:0x0128, B:57:0x00e9, B:59:0x00f1, B:60:0x00ff, B:66:0x0129, B:68:0x0131, B:69:0x013f, B:72:0x0149, B:73:0x0154, B:74:0x016c, B:75:0x016d, B:78:0x0177, B:79:0x0182, B:80:0x019a, B:81:0x019b, B:83:0x01a3, B:84:0x01ac, B:87:0x01b6, B:88:0x01c0, B:89:0x01d8, B:90:0x01d9, B:93:0x01e3, B:94:0x01ed, B:95:0x0205, B:96:0x0206), top: B:105:0x0062 }] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:63:0x0109 A[Catch:
+     * IOException -> 0x0091, XmlPullParserException -> 0x0094, TryCatch #2
+     * {IOException -> 0x0091, XmlPullParserException -> 0x0094, blocks:
+     * (B:20:0x0062, B:97:0x0209, B:28:0x0074, B:29:0x0082, B:31:0x0087,
+     * B:38:0x0097, B:46:0x00b1, B:41:0x00a0, B:44:0x00a9, B:47:0x00bf, B:51:0x00ce,
+     * B:53:0x00d6, B:54:0x00e0, B:63:0x0109, B:64:0x0110, B:65:0x0128, B:57:0x00e9,
+     * B:59:0x00f1, B:60:0x00ff, B:66:0x0129, B:68:0x0131, B:69:0x013f, B:72:0x0149,
+     * B:73:0x0154, B:74:0x016c, B:75:0x016d, B:78:0x0177, B:79:0x0182, B:80:0x019a,
+     * B:81:0x019b, B:83:0x01a3, B:84:0x01ac, B:87:0x01b6, B:88:0x01c0, B:89:0x01d8,
+     * B:90:0x01d9, B:93:0x01e3, B:94:0x01ed, B:95:0x0205, B:96:0x0206), top:
+     * B:105:0x0062 }]
+     */
     public void ar(Context context, XmlResourceParser xmlResourceParser) {
         int eventType;
         adk adkVarH;
@@ -402,7 +419,10 @@ public class io implements dln, dcm, aui, ccv {
             String attributeName = xmlResourceParser.getAttributeName(i);
             String attributeValue = xmlResourceParser.getAttributeValue(i);
             if (attributeName != null && attributeValue != null && "id".equals(attributeName)) {
-                int identifier = attributeValue.contains("/") ? context.getResources().getIdentifier(attributeValue.substring(attributeValue.indexOf(47) + 1), "id", context.getPackageName()) : -1;
+                int identifier = attributeValue.contains("/")
+                        ? context.getResources().getIdentifier(attributeValue.substring(attributeValue.indexOf(47) + 1),
+                                "id", context.getPackageName())
+                        : -1;
                 if (identifier == -1) {
                     if (attributeValue.length() > 1) {
                         identifier = Integer.parseInt(attributeValue.substring(1));
@@ -427,7 +447,8 @@ public class io implements dln, dcm, aui, ccv {
                             case -2025855158:
                                 if (name.equals("Layout")) {
                                     if (adkVarH == null) {
-                                        throw new RuntimeException("XML parser error must be within a Constraint " + xmlResourceParser.getLineNumber());
+                                        throw new RuntimeException("XML parser error must be within a Constraint "
+                                                + xmlResourceParser.getLineNumber());
                                     }
                                     adkVarH.d.bq(context, Xml.asAttributeSet(xmlResourceParser));
                                 } else {
@@ -437,7 +458,8 @@ public class io implements dln, dcm, aui, ccv {
                             case -1984451626:
                                 if (name.equals("Motion")) {
                                     if (adkVarH == null) {
-                                        throw new RuntimeException("XML parser error must be within a Constraint " + xmlResourceParser.getLineNumber());
+                                        throw new RuntimeException("XML parser error must be within a Constraint "
+                                                + xmlResourceParser.getLineNumber());
                                     }
                                     adkVarH.c.k(context, Xml.asAttributeSet(xmlResourceParser));
                                 } else {
@@ -452,7 +474,8 @@ public class io implements dln, dcm, aui, ccv {
                             case -1269513683:
                                 if (name.equals("PropertySet")) {
                                     if (adkVarH == null) {
-                                        throw new RuntimeException("XML parser error must be within a Constraint " + xmlResourceParser.getLineNumber());
+                                        throw new RuntimeException("XML parser error must be within a Constraint "
+                                                + xmlResourceParser.getLineNumber());
                                     }
                                     adkVarH.b.e(context, Xml.asAttributeSet(xmlResourceParser));
                                 } else {
@@ -462,7 +485,8 @@ public class io implements dln, dcm, aui, ccv {
                             case -1238332596:
                                 if (name.equals("Transform")) {
                                     if (adkVarH == null) {
-                                        throw new RuntimeException("XML parser error must be within a Constraint " + xmlResourceParser.getLineNumber());
+                                        throw new RuntimeException("XML parser error must be within a Constraint "
+                                                + xmlResourceParser.getLineNumber());
                                     }
                                     adkVarH.e.o(context, Xml.asAttributeSet(xmlResourceParser));
                                 } else {
@@ -478,7 +502,8 @@ public class io implements dln, dcm, aui, ccv {
                             case 366511058:
                                 if (name.equals("CustomMethod")) {
                                     if (adkVarH != null) {
-                                        throw new RuntimeException("XML parser error must be within a Constraint " + xmlResourceParser.getLineNumber());
+                                        throw new RuntimeException("XML parser error must be within a Constraint "
+                                                + xmlResourceParser.getLineNumber());
                                     }
                                     adc.h(context, xmlResourceParser, adkVarH.f);
                                 } else {
@@ -494,7 +519,8 @@ public class io implements dln, dcm, aui, ccv {
                             case 1791837707:
                                 if (name.equals("CustomAttribute")) {
                                     if (adkVarH != null) {
-                                        throw new RuntimeException("XML parser error must be within a Constraint " + xmlResourceParser.getLineNumber());
+                                        throw new RuntimeException("XML parser error must be within a Constraint "
+                                                + xmlResourceParser.getLineNumber());
                                     }
                                     adc.h(context, xmlResourceParser, adkVarH.f);
                                 } else {
@@ -580,14 +606,16 @@ public class io implements dln, dcm, aui, ccv {
                 cmz.n(aojVar, "Argument must not be null");
                 int i = aojVar.b;
                 if (i < 1) {
-                    throw new IllegalStateException("Cannot release a lock that is not held, safeKey: " + str + ", interestedThreads: " + aojVar.b);
+                    throw new IllegalStateException("Cannot release a lock that is not held, safeKey: " + str
+                            + ", interestedThreads: " + aojVar.b);
                 }
                 int i2 = i - 1;
                 aojVar.b = i2;
                 if (i2 == 0) {
                     aoj aojVar2 = (aoj) ((HashMap) this.c).remove(str);
                     if (!aojVar2.equals(aojVar)) {
-                        throw new IllegalStateException("Removed the wrong lock, expected to remove: " + aojVar + ", but actually removed: " + aojVar2 + ", safeKey: " + str);
+                        throw new IllegalStateException("Removed the wrong lock, expected to remove: " + aojVar
+                                + ", but actually removed: " + aojVar2 + ", safeKey: " + str);
                     }
                     sb sbVar = (sb) this.d;
                     synchronized (sbVar.a) {
@@ -632,7 +660,7 @@ public class io implements dln, dcm, aui, ccv {
     }
 
     public void aw(boolean z) {
-        aut autVar = (aut) ((io) ((erp) this.d).v).d;
+        aut autVar = (aut) ((DefaultConfig) ((erp) this.d).v).d;
         if (autVar.c != z) {
             if (autVar.b != null) {
                 atf atfVarL = atf.l();
@@ -660,7 +688,7 @@ public class io implements dln, dcm, aui, ccv {
         te teVar = (te) this.d;
         teVar.n.set(i, i2, i3, i4);
         Rect rect = teVar.m;
-        super/*android.view.View*/.setPadding(i + rect.left, i2 + rect.top, i3 + rect.right, i4 + rect.bottom);
+        super/* android.view.View */.setPadding(i + rect.left, i2 + rect.top, i3 + rect.right, i4 + rect.bottom);
     }
 
     public void ay(String str) {
@@ -715,8 +743,10 @@ public class io implements dln, dcm, aui, ccv {
                 if (((Bitmap) this.d) == null) {
                     this.d = bitmap;
                 }
-                ShapeDrawable shapeDrawable = new ShapeDrawable(new RoundRectShape(new float[]{5.0f, 5.0f, 5.0f, 5.0f, 5.0f, 5.0f, 5.0f, 5.0f}, null, null));
-                shapeDrawable.getPaint().setShader(new BitmapShader(bitmap, Shader.TileMode.REPEAT, Shader.TileMode.CLAMP));
+                ShapeDrawable shapeDrawable = new ShapeDrawable(
+                        new RoundRectShape(new float[] { 5.0f, 5.0f, 5.0f, 5.0f, 5.0f, 5.0f, 5.0f, 5.0f }, null, null));
+                shapeDrawable.getPaint()
+                        .setShader(new BitmapShader(bitmap, Shader.TileMode.REPEAT, Shader.TileMode.CLAMP));
                 shapeDrawable.getPaint().setColorFilter(bitmapDrawable.getPaint().getColorFilter());
                 return z ? new ClipDrawable(shapeDrawable, 3, 1) : shapeDrawable;
             }
@@ -732,7 +762,7 @@ public class io implements dln, dcm, aui, ccv {
     @Override // me.hd.wauxv.obf.dln
     public void i(int i) {
         boolean zTryLock;
-        io ioVar = (io) this.d;
+        DefaultConfig ioVar = (DefaultConfig) this.d;
         ArrayList arrayList = (ArrayList) ioVar.d;
         ReentrantLock reentrantLock = (ReentrantLock) ioVar.c;
         if (i < 0 || i >= arrayList.size()) {
@@ -775,10 +805,11 @@ public class io implements dln, dcm, aui, ccv {
         ViewGroup viewGroup = (ViewGroup) this.d;
         File file = new File(bbj.b, ((bbe) ((List) this.c).get(i)).c);
         if (file.exists()) {
-            return new BitmapDrawable(viewGroup.getContext().getResources(), BitmapFactory.decodeFile(file.getAbsolutePath()));
+            return new BitmapDrawable(viewGroup.getContext().getResources(),
+                    BitmapFactory.decodeFile(file.getAbsolutePath()));
         }
         Drawable drawable = viewGroup.getContext().getDrawable(me.hd.wauxv.R.drawable.ic_float_button_menu_24dp);
-        bzo.n(drawable);
+        throwIfVar1IsNull(drawable);
         return drawable;
     }
 
@@ -790,7 +821,7 @@ public class io implements dln, dcm, aui, ccv {
     @Override // me.hd.wauxv.obf.dln
     public List l(int i) {
         boolean zTryLock;
-        io ioVar = (io) this.d;
+        DefaultConfig ioVar = (DefaultConfig) this.d;
         ArrayList arrayList = (ArrayList) ioVar.d;
         ReentrantLock reentrantLock = (ReentrantLock) ioVar.c;
         ArrayList arrayList2 = new ArrayList();
@@ -850,7 +881,8 @@ public class io implements dln, dcm, aui, ccv {
             return true;
         }
         if (((eny) this.c) == null) {
-            this.c = new eny(charSequence instanceof Spannable ? (Spannable) charSequence : new SpannableString(charSequence));
+            this.c = new eny(
+                    charSequence instanceof Spannable ? (Spannable) charSequence : new SpannableString(charSequence));
         }
         ((nu) this.d).getClass();
         ((eny) this.c).setSpan(new eml(emkVar), i, i2, 33);
@@ -858,22 +890,22 @@ public class io implements dln, dcm, aui, ccv {
     }
 
     public void q(bdj bdjVar, boolean z) {
-        bzo.q(bdjVar, "f");
+        throwIfVar1IsNull(bdjVar, "f");
         bdj bdjVar2 = ((beg) this.c).y;
         if (bdjVar2 != null) {
-            bdjVar2.cs().o.q(bdjVar, true);
+            bdjVar2.cs().o.ensureParameterNotNull(bdjVar, true);
         }
         for (bdt bdtVar : (CopyOnWriteArrayList) this.d) {
             if (z) {
                 bdtVar.getClass();
             } else {
-                io ioVar = bdtVar.a;
+                DefaultConfig ioVar = bdtVar.a;
             }
         }
     }
 
     public void r(bdj bdjVar, boolean z) {
-        bzo.q(bdjVar, "f");
+        throwIfVar1IsNull(bdjVar, "f");
         beg begVar = (beg) this.c;
         hb hbVar = begVar.w.e;
         bdj bdjVar2 = begVar.y;
@@ -884,7 +916,7 @@ public class io implements dln, dcm, aui, ccv {
             if (z) {
                 bdtVar.getClass();
             } else {
-                io ioVar = bdtVar.a;
+                DefaultConfig ioVar = bdtVar.a;
             }
         }
     }
@@ -895,7 +927,7 @@ public class io implements dln, dcm, aui, ccv {
     }
 
     public void t(bdj bdjVar, boolean z) {
-        bzo.q(bdjVar, "f");
+        throwIfVar1IsNull(bdjVar, "f");
         bdj bdjVar2 = ((beg) this.c).y;
         if (bdjVar2 != null) {
             bdjVar2.cs().o.t(bdjVar, true);
@@ -904,7 +936,7 @@ public class io implements dln, dcm, aui, ccv {
             if (z) {
                 bdtVar.getClass();
             } else {
-                io ioVar = bdtVar.a;
+                DefaultConfig ioVar = bdtVar.a;
             }
         }
     }
@@ -937,7 +969,7 @@ public class io implements dln, dcm, aui, ccv {
     }
 
     public void u(bdj bdjVar, boolean z) {
-        bzo.q(bdjVar, "f");
+        throwIfVar1IsNull(bdjVar, "f");
         bdj bdjVar2 = ((beg) this.c).y;
         if (bdjVar2 != null) {
             bdjVar2.cs().o.u(bdjVar, true);
@@ -946,13 +978,13 @@ public class io implements dln, dcm, aui, ccv {
             if (z) {
                 bdtVar.getClass();
             } else {
-                io ioVar = bdtVar.a;
+                DefaultConfig ioVar = bdtVar.a;
             }
         }
     }
 
     public void v(bdj bdjVar, boolean z) {
-        bzo.q(bdjVar, "f");
+        throwIfVar1IsNull(bdjVar, "f");
         bdj bdjVar2 = ((beg) this.c).y;
         if (bdjVar2 != null) {
             bdjVar2.cs().o.v(bdjVar, true);
@@ -961,13 +993,13 @@ public class io implements dln, dcm, aui, ccv {
             if (z) {
                 bdtVar.getClass();
             } else {
-                io ioVar = bdtVar.a;
+                DefaultConfig ioVar = bdtVar.a;
             }
         }
     }
 
     public void w(bdj bdjVar, boolean z) {
-        bzo.q(bdjVar, "f");
+        throwIfVar1IsNull(bdjVar, "f");
         bdj bdjVar2 = ((beg) this.c).y;
         if (bdjVar2 != null) {
             bdjVar2.cs().o.w(bdjVar, true);
@@ -976,7 +1008,7 @@ public class io implements dln, dcm, aui, ccv {
             if (z) {
                 bdtVar.getClass();
             } else {
-                io ioVar = bdtVar.a;
+                DefaultConfig ioVar = bdtVar.a;
             }
         }
     }
@@ -987,7 +1019,7 @@ public class io implements dln, dcm, aui, ccv {
     }
 
     public void y(bdj bdjVar, boolean z) {
-        bzo.q(bdjVar, "f");
+        throwIfVar1IsNull(bdjVar, "f");
         beg begVar = (beg) this.c;
         hb hbVar = begVar.w.e;
         bdj bdjVar2 = begVar.y;
@@ -998,13 +1030,13 @@ public class io implements dln, dcm, aui, ccv {
             if (z) {
                 bdtVar.getClass();
             } else {
-                io ioVar = bdtVar.a;
+                DefaultConfig ioVar = bdtVar.a;
             }
         }
     }
 
     public void z(bdj bdjVar, boolean z) {
-        bzo.q(bdjVar, "f");
+        throwIfVar1IsNull(bdjVar, "f");
         bdj bdjVar2 = ((beg) this.c).y;
         if (bdjVar2 != null) {
             bdjVar2.cs().o.z(bdjVar, true);
@@ -1013,46 +1045,46 @@ public class io implements dln, dcm, aui, ccv {
             if (z) {
                 bdtVar.getClass();
             } else {
-                io ioVar = bdtVar.a;
+                DefaultConfig ioVar = bdtVar.a;
             }
         }
     }
 
-    public /* synthetic */ io(Object obj, int i) {
+    public /* synthetic */ DefaultConfig(Object obj, int i) {
         this.b = i;
         this.d = obj;
     }
 
-    public /* synthetic */ io(Object obj, int i, Object obj2) {
+    public /* synthetic */ DefaultConfig(Object obj, int i, Object obj2) {
         this.b = i;
         this.c = obj;
         this.d = obj2;
     }
 
-    public /* synthetic */ io(Object obj, Object obj2, int i, boolean z) {
+    public /* synthetic */ DefaultConfig(Object obj, Object obj2, int i, boolean z) {
         this.b = i;
         this.d = obj;
         this.c = obj2;
     }
 
-    public io(Context context, String str) {
+    public DefaultConfig(Context context, String str) {
         this.b = 29;
         this.c = new dov(new bp(context, 26));
         this.d = new dov(new ls(this, 4, str));
     }
 
-    public io(beg begVar) {
+    public DefaultConfig(beg begVar) {
         this.b = 20;
         this.c = begVar;
         this.d = new CopyOnWriteArrayList();
     }
 
-    public io(AbsSeekBar absSeekBar) {
+    public DefaultConfig(AbsSeekBar absSeekBar) {
         this.b = 0;
         this.c = absSeekBar;
     }
 
-    public io(EditText editText, int i) {
+    public DefaultConfig(EditText editText, int i) {
         this.b = i;
         switch (i) {
             case 16:
@@ -1066,7 +1098,8 @@ public class io implements dln, dcm, aui, ccv {
                             if (atj.b == null) {
                                 atj atjVar = new atj();
                                 try {
-                                    atj.c = Class.forName("android.text.DynamicLayout$ChangeWatcher", false, atj.class.getClassLoader());
+                                    atj.c = Class.forName("android.text.DynamicLayout$ChangeWatcher", false,
+                                            atj.class.getClassLoader());
                                     break;
                                 } catch (Throwable unused) {
                                 }
@@ -1087,41 +1120,43 @@ public class io implements dln, dcm, aui, ccv {
         }
     }
 
-    public io(CodeEditor codeEditor) {
+    public DefaultConfig(CodeEditor codeEditor) {
         this.b = 15;
         this.c = codeEditor;
         this.d = new btm(codeEditor);
     }
 
-    public io(Context context, int i) {
+    public DefaultConfig(Context context, int i) {
         this.b = i;
         switch (i) {
             case 13:
                 this.c = new bzy(context);
                 break;
             default:
-                TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(cmz.an(context, me.hd.wauxv.R.attr.materialCalendarStyle, cal.class.getCanonicalName()).data, cxs.t);
-                nu.c(context, typedArrayObtainStyledAttributes.getResourceId(4, 0));
-                nu.c(context, typedArrayObtainStyledAttributes.getResourceId(2, 0));
-                nu.c(context, typedArrayObtainStyledAttributes.getResourceId(3, 0));
-                nu.c(context, typedArrayObtainStyledAttributes.getResourceId(5, 0));
+                TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(
+                        cmz.an(context, me.hd.wauxv.R.attr.materialCalendarStyle, cal.class.getCanonicalName()).data,
+                        cxs.t);
+                nu.createInstanceWithArgs(context, typedArrayObtainStyledAttributes.getResourceId(4, 0));
+                nu.createInstanceWithArgs(context, typedArrayObtainStyledAttributes.getResourceId(2, 0));
+                nu.createInstanceWithArgs(context, typedArrayObtainStyledAttributes.getResourceId(3, 0));
+                nu.createInstanceWithArgs(context, typedArrayObtainStyledAttributes.getResourceId(5, 0));
                 ColorStateList colorStateListV = cnb.v(context, typedArrayObtainStyledAttributes, 7);
-                this.c = nu.c(context, typedArrayObtainStyledAttributes.getResourceId(9, 0));
-                nu.c(context, typedArrayObtainStyledAttributes.getResourceId(8, 0));
-                this.d = nu.c(context, typedArrayObtainStyledAttributes.getResourceId(10, 0));
+                this.c = nu.createInstanceWithArgs(context, typedArrayObtainStyledAttributes.getResourceId(9, 0));
+                nu.createInstanceWithArgs(context, typedArrayObtainStyledAttributes.getResourceId(8, 0));
+                this.d = nu.createInstanceWithArgs(context, typedArrayObtainStyledAttributes.getResourceId(10, 0));
                 new Paint().setColor(colorStateListV.getDefaultColor());
                 typedArrayObtainStyledAttributes.recycle();
                 break;
         }
     }
 
-    public io(Animation animation) {
+    public DefaultConfig(Animation animation) {
         this.b = 19;
         this.c = animation;
         this.d = null;
     }
 
-    public io(Animator animator) {
+    public DefaultConfig(Animator animator) {
         this.b = 19;
         this.c = null;
         AnimatorSet animatorSet = new AnimatorSet();
@@ -1129,7 +1164,7 @@ public class io implements dln, dcm, aui, ccv {
         animatorSet.play(animator);
     }
 
-    public io(ArrayList arrayList, ArrayList arrayList2) {
+    public DefaultConfig(ArrayList arrayList, ArrayList arrayList2) {
         this.b = 23;
         int size = arrayList.size();
         this.c = new int[size];
@@ -1140,31 +1175,31 @@ public class io implements dln, dcm, aui, ccv {
         }
     }
 
-    public io(int i, int i2) {
+    public DefaultConfig(int i, int i2) {
         this.b = 23;
-        this.c = new int[]{i, i2};
-        this.d = new float[]{0.0f, 1.0f};
+        this.c = new int[] { i, i2 };
+        this.d = new float[] { 0.0f, 1.0f };
     }
 
-    public io(int i, int i2, int i3) {
+    public DefaultConfig(int i, int i2, int i3) {
         this.b = 23;
-        this.c = new int[]{i, i2, i3};
-        this.d = new float[]{0.0f, 0.5f, 1.0f};
+        this.c = new int[] { i, i2, i3 };
+        this.d = new float[] { 0.0f, 0.5f, 1.0f };
     }
 
-    public io(byu byuVar, bdj bdjVar, FrameLayout frameLayout) {
+    public DefaultConfig(byu byuVar, bdj bdjVar, FrameLayout frameLayout) {
         this.b = 21;
         this.c = bdjVar;
         this.d = frameLayout;
     }
 
-    public io(Class cls, bep bepVar, ws wsVar) {
+    public DefaultConfig(Class cls, bep bepVar, ws wsVar) {
         this.b = 25;
         this.c = cls;
         this.d = wsVar;
     }
 
-    public io(int i) {
+    public DefaultConfig(int i) {
         this.b = i;
         switch (i) {
             case 7:

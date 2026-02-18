@@ -21,7 +21,7 @@ public final class tw implements Serializable {
             return false;
         }
         tw twVar = (tw) obj;
-        return bzo.f(this.a, twVar.a) && bzo.f(this.b, twVar.b);
+        return nullSafeIsEqual(this.a, twVar.a) && nullSafeIsEqual(this.b, twVar.b);
     }
 
     public final int hashCode() {

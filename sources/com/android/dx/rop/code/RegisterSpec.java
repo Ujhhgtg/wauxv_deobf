@@ -16,7 +16,8 @@ public final class RegisterSpec implements TypeBearer, ToHuman, Comparable<Regis
     private final int reg;
     private final TypeBearer type;
     private static final ConcurrentHashMap<Object, RegisterSpec> theInterns = new ConcurrentHashMap<>(10000, 0.75f);
-    private static final ThreadLocal<ForComparison> theInterningItem = new ThreadLocal<ForComparison>() { // from class: com.android.dx.rop.code.RegisterSpec.1
+    private static final ThreadLocal<ForComparison> theInterningItem = new ThreadLocal<ForComparison>() { // from class:
+                                                                                                          // com.android.dx.rop.code.RegisterSpec.1
         /* JADX WARN: Can't rename method to resolve collision */
         @Override // java.lang.ThreadLocal
         public ForComparison initialValue() {
@@ -24,7 +25,10 @@ public final class RegisterSpec implements TypeBearer, ToHuman, Comparable<Regis
         }
     };
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class ForComparison {
         private LocalItem local;
         private int reg;
@@ -70,7 +74,9 @@ public final class RegisterSpec implements TypeBearer, ToHuman, Comparable<Regis
         forComparison.set(i, typeBearer, localItem);
         ConcurrentHashMap<Object, RegisterSpec> concurrentHashMap = theInterns;
         RegisterSpec registerSpec = concurrentHashMap.get(forComparison);
-        return (registerSpec != null || (registerSpecPutIfAbsent = concurrentHashMap.putIfAbsent((registerSpec = forComparison.toRegisterSpec()), registerSpec)) == null) ? registerSpec : registerSpecPutIfAbsent;
+        return (registerSpec != null || (registerSpecPutIfAbsent = concurrentHashMap
+                .putIfAbsent((registerSpec = forComparison.toRegisterSpec()), registerSpec)) == null) ? registerSpec
+                        : registerSpecPutIfAbsent;
     }
 
     public static RegisterSpec make(int i, TypeBearer typeBearer) {
@@ -82,13 +88,13 @@ public final class RegisterSpec implements TypeBearer, ToHuman, Comparable<Regis
     }
 
     public static String regString(int i) {
-        return bjs.i(i, "v");
+        return concatVar2Var1(i, "v");
     }
 
     /* JADX WARN: Found duplicated region for block: B:12:0x0042 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:13:0x0044  */
-    /* JADX WARN: Found duplicated region for block: B:15:0x004a  */
-    /* JADX WARN: Found duplicated region for block: B:16:0x0052  */
+    /* JADX WARN: Found duplicated region for block: B:13:0x0044 */
+    /* JADX WARN: Found duplicated region for block: B:15:0x004a */
+    /* JADX WARN: Found duplicated region for block: B:16:0x0052 */
     private String toString0(boolean z) {
         TypeBearer typeBearer;
         StringBuilder sb = new StringBuilder(40);
@@ -200,7 +206,8 @@ public final class RegisterSpec implements TypeBearer, ToHuman, Comparable<Regis
                 return null;
             }
             LocalItem localItem = this.local;
-            LocalItem localItem2 = (localItem == null || !localItem.equals(registerSpec.getLocalItem())) ? null : this.local;
+            LocalItem localItem2 = (localItem == null || !localItem.equals(registerSpec.getLocalItem())) ? null
+                    : this.local;
             boolean z2 = localItem2 == this.local;
             if ((z && !z2) || (type = getType()) != registerSpec.getType()) {
                 return null;
@@ -258,7 +265,8 @@ public final class RegisterSpec implements TypeBearer, ToHuman, Comparable<Regis
 
     public RegisterSpec withLocalItem(LocalItem localItem) {
         LocalItem localItem2 = this.local;
-        return (localItem2 == localItem || (localItem2 != null && localItem2.equals(localItem))) ? this : makeLocalOptional(this.reg, this.type, localItem);
+        return (localItem2 == localItem || (localItem2 != null && localItem2.equals(localItem))) ? this
+                : makeLocalOptional(this.reg, this.type, localItem);
     }
 
     public RegisterSpec withOffset(int i) {

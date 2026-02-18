@@ -12,7 +12,7 @@ public final class ack extends cxc {
 
     @Override // me.hd.wauxv.obf.cxc
     public final void b(String str) {
-        bzo.q(str, "value");
+        throwIfVar1IsNull(str, "value");
         if (this.a) {
             super.b(str);
         } else {

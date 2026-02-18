@@ -38,7 +38,7 @@ public final class ciq {
         if (bundle == null) {
             return null;
         }
-        Bundle bundleR = bht.r((csm[]) Arrays.copyOf(new csm[0], 0));
+        Bundle bundleR = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
         bundleR.putAll(bundle);
         return bundleR;
     }
@@ -70,7 +70,7 @@ public final class ciq {
         sb.append(" destination=");
         sb.append(this.b);
         String string = sb.toString();
-        bzo.p(string, "toString(...)");
+        throwIfVar1IsNull(string, "toString(...)");
         return string;
     }
 }

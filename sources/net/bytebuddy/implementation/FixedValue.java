@@ -31,12 +31,18 @@ public abstract class FixedValue implements Implementation {
     protected final Assigner assigner;
     protected final Assigner.Typing typing;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface AssignerConfigurable extends Implementation {
         Implementation withAssigner(Assigner assigner, Assigner.Typing typing);
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @HashCodeAndEqualsPlugin.Enhance
     public static class ForArgument extends FixedValue implements AssignerConfigurable, ByteCodeAppender {
         private final int index;
@@ -51,16 +57,24 @@ public abstract class FixedValue implements Implementation {
         }
 
         @Override // net.bytebuddy.implementation.bytecode.ByteCodeAppender
-        public ByteCodeAppender.Size apply(MethodVisitor methodVisitor, Implementation.Context context, MethodDescription methodDescription) {
+        public ByteCodeAppender.Size apply(MethodVisitor methodVisitor, Implementation.Context context,
+                MethodDescription methodDescription) {
             if (methodDescription.getParameters().size() <= this.index) {
-                throw new IllegalStateException(methodDescription + " does not define a parameter with index " + this.index);
+                throw new IllegalStateException(
+                        methodDescription + " does not define a parameter with index " + this.index);
             }
-            ParameterDescription parameterDescription = (ParameterDescription) methodDescription.getParameters().get(this.index);
-            StackManipulation.Compound compound = new StackManipulation.Compound(MethodVariableAccess.load(parameterDescription), this.assigner.assign(parameterDescription.getType(), methodDescription.getReturnType(), this.typing), MethodReturn.of(methodDescription.getReturnType()));
+            ParameterDescription parameterDescription = (ParameterDescription) methodDescription.getParameters()
+                    .get(this.index);
+            StackManipulation.Compound compound = new StackManipulation.Compound(
+                    MethodVariableAccess.load(parameterDescription), this.assigner
+                            .assign(parameterDescription.getType(), methodDescription.getReturnType(), this.typing),
+                    MethodReturn.of(methodDescription.getReturnType()));
             if (compound.isValid()) {
-                return new ByteCodeAppender.Size(compound.apply(methodVisitor, context).getMaximalSize(), methodDescription.getStackSize());
+                return new ByteCodeAppender.Size(compound.apply(methodVisitor, context).getMaximalSize(),
+                        methodDescription.getStackSize());
             }
-            throw new IllegalStateException("Cannot assign " + methodDescription.getReturnType() + " to " + parameterDescription);
+            throw new IllegalStateException(
+                    "Cannot assign " + methodDescription.getReturnType() + " to " + parameterDescription);
         }
 
         @Override // net.bytebuddy.implementation.FixedValue
@@ -95,7 +109,10 @@ public abstract class FixedValue implements Implementation {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @HashCodeAndEqualsPlugin.Enhance
     public static class ForConstantValue extends FixedValue implements AssignerConfigurable, ByteCodeAppender {
         private final TypeDescription loadedType;
@@ -111,8 +128,10 @@ public abstract class FixedValue implements Implementation {
         }
 
         @Override // net.bytebuddy.implementation.bytecode.ByteCodeAppender
-        public ByteCodeAppender.Size apply(MethodVisitor methodVisitor, Implementation.Context context, MethodDescription methodDescription) {
-            return apply(methodVisitor, context, methodDescription, this.loadedType.asGenericType(), this.valueLoadInstruction);
+        public ByteCodeAppender.Size apply(MethodVisitor methodVisitor, Implementation.Context context,
+                MethodDescription methodDescription) {
+            return apply(methodVisitor, context, methodDescription, this.loadedType.asGenericType(),
+                    this.valueLoadInstruction);
         }
 
         @Override // net.bytebuddy.implementation.FixedValue
@@ -127,7 +146,8 @@ public abstract class FixedValue implements Implementation {
                 return false;
             }
             ForConstantValue forConstantValue = (ForConstantValue) obj;
-            return this.valueLoadInstruction.equals(forConstantValue.valueLoadInstruction) && this.loadedType.equals(forConstantValue.loadedType);
+            return this.valueLoadInstruction.equals(forConstantValue.valueLoadInstruction)
+                    && this.loadedType.equals(forConstantValue.loadedType);
         }
 
         @Override // net.bytebuddy.implementation.FixedValue
@@ -149,14 +169,18 @@ public abstract class FixedValue implements Implementation {
             this(Assigner.DEFAULT, Assigner.Typing.STATIC, stackManipulation, typeDescription);
         }
 
-        private ForConstantValue(Assigner assigner, Assigner.Typing typing, StackManipulation stackManipulation, TypeDescription typeDescription) {
+        private ForConstantValue(Assigner assigner, Assigner.Typing typing, StackManipulation stackManipulation,
+                TypeDescription typeDescription) {
             super(assigner, typing);
             this.valueLoadInstruction = stackManipulation;
             this.loadedType = typeDescription;
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public enum ForNullValue implements Implementation, ByteCodeAppender {
         INSTANCE;
 
@@ -166,11 +190,13 @@ public abstract class FixedValue implements Implementation {
         }
 
         @Override // net.bytebuddy.implementation.bytecode.ByteCodeAppender
-        public ByteCodeAppender.Size apply(MethodVisitor methodVisitor, Implementation.Context context, MethodDescription methodDescription) {
+        public ByteCodeAppender.Size apply(MethodVisitor methodVisitor, Implementation.Context context,
+                MethodDescription methodDescription) {
             if (methodDescription.getReturnType().isPrimitive()) {
                 throw new IllegalStateException(dkz.t("Cannot return null from ", methodDescription));
             }
-            return new ByteCodeAppender.Simple(NullConstant.INSTANCE, MethodReturn.REFERENCE).apply(methodVisitor, context, methodDescription);
+            return new ByteCodeAppender.Simple(NullConstant.INSTANCE, MethodReturn.REFERENCE).apply(methodVisitor,
+                    context, methodDescription);
         }
 
         @Override // net.bytebuddy.dynamic.scaffold.InstrumentedType.Prepareable
@@ -179,10 +205,16 @@ public abstract class FixedValue implements Implementation {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class ForOriginType extends FixedValue implements AssignerConfigurable {
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance(includeSyntheticFields = true)
         public class Appender implements ByteCodeAppender {
             private final TypeDescription originType;
@@ -192,8 +224,11 @@ public abstract class FixedValue implements Implementation {
             }
 
             @Override // net.bytebuddy.implementation.bytecode.ByteCodeAppender
-            public ByteCodeAppender.Size apply(MethodVisitor methodVisitor, Implementation.Context context, MethodDescription methodDescription) {
-                return ForOriginType.this.apply(methodVisitor, context, methodDescription, TypeDescription.ForLoadedType.of(Class.class).asGenericType(), ClassConstant.of(this.originType));
+            public ByteCodeAppender.Size apply(MethodVisitor methodVisitor, Implementation.Context context,
+                    MethodDescription methodDescription) {
+                return ForOriginType.this.apply(methodVisitor, context, methodDescription,
+                        TypeDescription.ForLoadedType.of(Class.class).asGenericType(),
+                        ClassConstant.of(this.originType));
             }
 
             public boolean equals(@MaybeNull Object obj) {
@@ -236,10 +271,16 @@ public abstract class FixedValue implements Implementation {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class ForThisValue extends FixedValue implements AssignerConfigurable {
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class Appender implements ByteCodeAppender {
             private final TypeDescription instrumentedType;
@@ -249,18 +290,22 @@ public abstract class FixedValue implements Implementation {
             }
 
             @Override // net.bytebuddy.implementation.bytecode.ByteCodeAppender
-            public ByteCodeAppender.Size apply(MethodVisitor methodVisitor, Implementation.Context context, MethodDescription methodDescription) {
-                if (methodDescription.isStatic() || !this.instrumentedType.isAssignableTo(methodDescription.getReturnType().asErasure())) {
+            public ByteCodeAppender.Size apply(MethodVisitor methodVisitor, Implementation.Context context,
+                    MethodDescription methodDescription) {
+                if (methodDescription.isStatic()
+                        || !this.instrumentedType.isAssignableTo(methodDescription.getReturnType().asErasure())) {
                     throw new IllegalStateException(dkz.t("Cannot return 'this' from ", methodDescription));
                 }
-                return new ByteCodeAppender.Simple(MethodVariableAccess.loadThis(), MethodReturn.REFERENCE).apply(methodVisitor, context, methodDescription);
+                return new ByteCodeAppender.Simple(MethodVariableAccess.loadThis(), MethodReturn.REFERENCE)
+                        .apply(methodVisitor, context, methodDescription);
             }
 
             public boolean equals(@MaybeNull Object obj) {
                 if (this == obj) {
                     return true;
                 }
-                return obj != null && getClass() == obj.getClass() && this.instrumentedType.equals(((Appender) obj).instrumentedType);
+                return obj != null && getClass() == obj.getClass()
+                        && this.instrumentedType.equals(((Appender) obj).instrumentedType);
             }
 
             public int hashCode() {
@@ -292,29 +337,39 @@ public abstract class FixedValue implements Implementation {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @HashCodeAndEqualsPlugin.Enhance
     public static class ForValue extends FixedValue implements AssignerConfigurable {
         private static final String PREFIX = "value";
         private final String name;
         private final Object value;
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public class StaticFieldByteCodeAppender implements ByteCodeAppender {
             private final StackManipulation fieldGetAccess;
 
             @Override // net.bytebuddy.implementation.bytecode.ByteCodeAppender
-            public ByteCodeAppender.Size apply(MethodVisitor methodVisitor, Implementation.Context context, MethodDescription methodDescription) {
+            public ByteCodeAppender.Size apply(MethodVisitor methodVisitor, Implementation.Context context,
+                    MethodDescription methodDescription) {
                 ForValue forValue = ForValue.this;
-                return forValue.apply(methodVisitor, context, methodDescription, TypeDescription.Generic.OfNonGenericType.ForLoadedType.of(forValue.value.getClass()), this.fieldGetAccess);
+                return forValue.apply(methodVisitor, context, methodDescription,
+                        TypeDescription.Generic.OfNonGenericType.ForLoadedType.of(forValue.value.getClass()),
+                        this.fieldGetAccess);
             }
 
             public boolean equals(@MaybeNull Object obj) {
                 if (this == obj) {
                     return true;
                 }
-                return obj != null && getClass() == obj.getClass() && this.fieldGetAccess.equals(((StaticFieldByteCodeAppender) obj).fieldGetAccess);
+                return obj != null && getClass() == obj.getClass()
+                        && this.fieldGetAccess.equals(((StaticFieldByteCodeAppender) obj).fieldGetAccess);
             }
 
             public int hashCode() {
@@ -322,7 +377,8 @@ public abstract class FixedValue implements Implementation {
             }
 
             private StaticFieldByteCodeAppender(TypeDescription typeDescription) {
-                this.fieldGetAccess = FieldAccess.forField((FieldDescription.InDefinedShape) typeDescription.getDeclaredFields().filter(ElementMatchers.named(ForValue.this.name)).getOnly()).read();
+                this.fieldGetAccess = FieldAccess.forField((FieldDescription.InDefinedShape) typeDescription
+                        .getDeclaredFields().filter(ElementMatchers.named(ForValue.this.name)).getOnly()).read();
             }
         }
 
@@ -357,7 +413,10 @@ public abstract class FixedValue implements Implementation {
 
         @Override // net.bytebuddy.dynamic.scaffold.InstrumentedType.Prepareable
         public InstrumentedType prepare(InstrumentedType instrumentedType) {
-            return instrumentedType.withAuxiliaryField(new FieldDescription.Token(this.name, 4169, TypeDescription.Generic.OfNonGenericType.ForLoadedType.of(this.value.getClass())), this.value);
+            return instrumentedType.withAuxiliaryField(
+                    new FieldDescription.Token(this.name, 4169,
+                            TypeDescription.Generic.OfNonGenericType.ForLoadedType.of(this.value.getClass())),
+                    this.value);
         }
 
         @Override // net.bytebuddy.implementation.FixedValue.AssignerConfigurable
@@ -381,7 +440,7 @@ public abstract class FixedValue implements Implementation {
         if (i >= 0) {
             return new ForArgument(i);
         }
-        throw new IllegalArgumentException(bjs.i(i, "Argument index cannot be negative: "));
+        throw new IllegalArgumentException(concatVar2Var1(i, "Argument index cannot be negative: "));
     }
 
     public static Implementation nullValue() {
@@ -402,13 +461,19 @@ public abstract class FixedValue implements Implementation {
 
     public static AssignerConfigurable value(Object obj) {
         ConstantValue constantValueWrapOrNull = ConstantValue.Simple.wrapOrNull(obj);
-        return constantValueWrapOrNull == null ? reference(obj) : new ForConstantValue(constantValueWrapOrNull.toStackManipulation(), constantValueWrapOrNull.getTypeDescription());
+        return constantValueWrapOrNull == null ? reference(obj)
+                : new ForConstantValue(constantValueWrapOrNull.toStackManipulation(),
+                        constantValueWrapOrNull.getTypeDescription());
     }
 
-    public ByteCodeAppender.Size apply(MethodVisitor methodVisitor, Implementation.Context context, MethodDescription methodDescription, TypeDescription.Generic generic, StackManipulation stackManipulation) {
-        StackManipulation stackManipulationAssign = this.assigner.assign(generic, methodDescription.getReturnType(), this.typing);
+    public ByteCodeAppender.Size apply(MethodVisitor methodVisitor, Implementation.Context context,
+            MethodDescription methodDescription, TypeDescription.Generic generic, StackManipulation stackManipulation) {
+        StackManipulation stackManipulationAssign = this.assigner.assign(generic, methodDescription.getReturnType(),
+                this.typing);
         if (stackManipulationAssign.isValid()) {
-            return new ByteCodeAppender.Size(new StackManipulation.Compound(stackManipulation, stackManipulationAssign, MethodReturn.of(methodDescription.getReturnType())).apply(methodVisitor, context).getMaximalSize(), methodDescription.getStackSize());
+            return new ByteCodeAppender.Size(new StackManipulation.Compound(stackManipulation, stackManipulationAssign,
+                    MethodReturn.of(methodDescription.getReturnType())).apply(methodVisitor, context).getMaximalSize(),
+                    methodDescription.getStackSize());
         }
         throw new IllegalArgumentException("Cannot return value of type " + generic + " for " + methodDescription);
     }

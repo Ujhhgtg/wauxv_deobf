@@ -21,7 +21,7 @@ public final class wz {
             return false;
         }
         wz wzVar = (wz) obj;
-        return this.a == wzVar.a && bzo.f(this.b, wzVar.b) && bzo.f(this.c, wzVar.c);
+        return this.a == wzVar.a && nullSafeIsEqual(this.b, wzVar.b) && nullSafeIsEqual(this.c, wzVar.c);
     }
 
     public final int hashCode() {

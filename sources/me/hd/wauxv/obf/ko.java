@@ -13,12 +13,15 @@ public final class ko extends aax {
     public final /* synthetic */ int j = 0;
     public final bwd k;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'super' call moved to the top of the method (can break code
+     * semantics)
+     */
     public ko(btd btdVar) {
         super(btdVar);
-        bzo.q(btdVar, "element");
+        throwIfVar1IsNull(btdVar, "element");
         dfx descriptor = btdVar.getDescriptor();
-        bzo.q(descriptor, "elementDesc");
+        throwIfVar1IsNull(descriptor, "elementDesc");
         this.k = new kl(descriptor, 1);
     }
 
@@ -27,11 +30,11 @@ public final class ko extends aax {
         switch (this.j) {
             case 0:
                 ArrayList arrayList = (ArrayList) obj;
-                bzo.q(arrayList, "<this>");
+                throwIfVar1IsNull(arrayList, "<this>");
                 return arrayList.size();
             default:
                 LinkedHashSet linkedHashSet = (LinkedHashSet) obj;
-                bzo.q(linkedHashSet, "<this>");
+                throwIfVar1IsNull(linkedHashSet, "<this>");
                 return linkedHashSet.size();
         }
     }
@@ -49,14 +52,14 @@ public final class ko extends aax {
     @Override // me.hd.wauxv.obf.s
     public final Iterator d(Object obj) {
         Collection collection = (Collection) obj;
-        bzo.q(collection, "<this>");
+        throwIfVar1IsNull(collection, "<this>");
         return collection.iterator();
     }
 
     @Override // me.hd.wauxv.obf.s
     public final int e(Object obj) {
         Collection collection = (Collection) obj;
-        bzo.q(collection, "<this>");
+        throwIfVar1IsNull(collection, "<this>");
         return collection.size();
     }
 
@@ -74,12 +77,12 @@ public final class ko extends aax {
         switch (this.j) {
             case 0:
                 List list = (List) obj;
-                bzo.q(list, "<this>");
+                throwIfVar1IsNull(list, "<this>");
                 ArrayList arrayList = list instanceof ArrayList ? (ArrayList) list : null;
                 return arrayList == null ? new ArrayList(list) : arrayList;
             default:
                 Set set = (Set) obj;
-                bzo.q(set, "<this>");
+                throwIfVar1IsNull(set, "<this>");
                 LinkedHashSet linkedHashSet = set instanceof LinkedHashSet ? (LinkedHashSet) set : null;
                 return linkedHashSet == null ? new LinkedHashSet(set) : linkedHashSet;
         }
@@ -90,11 +93,11 @@ public final class ko extends aax {
         switch (this.j) {
             case 0:
                 ArrayList arrayList = (ArrayList) obj;
-                bzo.q(arrayList, "<this>");
+                throwIfVar1IsNull(arrayList, "<this>");
                 return arrayList;
             default:
                 LinkedHashSet linkedHashSet = (LinkedHashSet) obj;
-                bzo.q(linkedHashSet, "<this>");
+                throwIfVar1IsNull(linkedHashSet, "<this>");
                 return linkedHashSet;
         }
     }
@@ -104,12 +107,12 @@ public final class ko extends aax {
         switch (this.j) {
             case 0:
                 ArrayList arrayList = (ArrayList) obj;
-                bzo.q(arrayList, "<this>");
+                throwIfVar1IsNull(arrayList, "<this>");
                 arrayList.add(i, obj2);
                 break;
             default:
                 LinkedHashSet linkedHashSet = (LinkedHashSet) obj;
-                bzo.q(linkedHashSet, "<this>");
+                throwIfVar1IsNull(linkedHashSet, "<this>");
                 linkedHashSet.add(obj2);
                 break;
         }
@@ -118,7 +121,7 @@ public final class ko extends aax {
     public ko(bzm bzmVar) {
         super(bzmVar);
         dfz dfzVar = (dfz) bzmVar.d;
-        bzo.q(dfzVar, "elementDesc");
+        throwIfVar1IsNull(dfzVar, "elementDesc");
         this.k = new kl(dfzVar, 2);
     }
 }

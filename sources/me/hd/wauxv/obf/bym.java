@@ -4,7 +4,7 @@ import org.luckypray.dexkit.DexKitBridge;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class bym extends bws implements bng {
+public final class bym extends bws implements IRequiresDexLocate {
     public static final bym a = new bym();
 
     public static String b(String str, boolean z) {
@@ -18,7 +18,8 @@ public final class bym extends bws implements bng {
                 int length = strZ.length() + iAl;
                 int length2 = string.length();
                 if (length2 < length) {
-                    throw new IndexOutOfBoundsException("End index (" + length2 + ") is less than start index (" + length + ").");
+                    throw new IndexOutOfBoundsException(
+                            "End index (" + length2 + ") is less than start index (" + length + ").");
                 }
                 StringBuilder sb = new StringBuilder();
                 sb.append((CharSequence) string, 0, length);
@@ -38,7 +39,7 @@ public final class bym extends bws implements bng {
     }
 
     @Override // me.hd.wauxv.obf.bng
-    public final void h(DexKitBridge dexKitBridge) {
+    public final void locateDex(DexKitBridge dexKitBridge) {
         emn.aj(byl.a, dexKitBridge, new bty(16));
     }
 }

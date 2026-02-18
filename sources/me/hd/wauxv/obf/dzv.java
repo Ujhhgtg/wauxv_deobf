@@ -6,7 +6,7 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class dzv {
     public static final dzu Companion = new dzu();
-    public static final btt[] a = {ewz.am(btx.a, new dtr(13)), null, null, null};
+    public static final btt[] a = { ewz.am(btx.a, new dtr(13)), null, null, null };
     public final List b;
     public final Long c;
     public final Integer d;
@@ -31,7 +31,8 @@ public final class dzv {
             return false;
         }
         dzv dzvVar = (dzv) obj;
-        return bzo.f(this.b, dzvVar.b) && bzo.f(this.c, dzvVar.c) && bzo.f(this.d, dzvVar.d) && bzo.f(this.e, dzvVar.e);
+        return nullSafeIsEqual(this.b, dzvVar.b) && nullSafeIsEqual(this.c, dzvVar.c)
+                && nullSafeIsEqual(this.d, dzvVar.d) && nullSafeIsEqual(this.e, dzvVar.e);
     }
 
     public final int hashCode() {

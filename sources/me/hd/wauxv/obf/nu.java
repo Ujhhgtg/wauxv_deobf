@@ -36,18 +36,22 @@ public class nu implements oz, esn, cdw, avu, aoh, bfh, app, cvg, ccv, dcc {
     public static nu c(Context context, int i) {
         cna.g("Cannot create a CalendarItemStyle with a styleResId of 0", i != 0);
         TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(i, cxs.u);
-        Rect rect = new Rect(typedArrayObtainStyledAttributes.getDimensionPixelOffset(0, 0), typedArrayObtainStyledAttributes.getDimensionPixelOffset(2, 0), typedArrayObtainStyledAttributes.getDimensionPixelOffset(1, 0), typedArrayObtainStyledAttributes.getDimensionPixelOffset(3, 0));
+        Rect rect = new Rect(typedArrayObtainStyledAttributes.getDimensionPixelOffset(0, 0),
+                typedArrayObtainStyledAttributes.getDimensionPixelOffset(2, 0),
+                typedArrayObtainStyledAttributes.getDimensionPixelOffset(1, 0),
+                typedArrayObtainStyledAttributes.getDimensionPixelOffset(3, 0));
         cnb.v(context, typedArrayObtainStyledAttributes, 4);
         cnb.v(context, typedArrayObtainStyledAttributes, 9);
         cnb.v(context, typedArrayObtainStyledAttributes, 7);
         typedArrayObtainStyledAttributes.getDimensionPixelSize(8, 0);
-        dgm.m(context, typedArrayObtainStyledAttributes.getResourceId(5, 0), typedArrayObtainStyledAttributes.getResourceId(6, 0), new o(0)).m();
+        dgm.m(context, typedArrayObtainStyledAttributes.getResourceId(5, 0),
+                typedArrayObtainStyledAttributes.getResourceId(6, 0), new o(0)).m();
         typedArrayObtainStyledAttributes.recycle();
         nu nuVar = new nu(13);
-        cna.h(rect.left);
-        cna.h(rect.top);
-        cna.h(rect.right);
-        cna.h(rect.bottom);
+        cna.locateDex(rect.left);
+        cna.locateDex(rect.top);
+        cna.locateDex(rect.right);
+        cna.locateDex(rect.bottom);
         return nuVar;
     }
 
@@ -65,15 +69,16 @@ public class nu implements oz, esn, cdw, avu, aoh, bfh, app, cvg, ccv, dcc {
         throw new IllegalArgumentException("Not a base64 image data URL.");
     }
 
-    /* JADX WARN: Found duplicated region for block: B:66:0x00d7  */
+    /* JADX WARN: Found duplicated region for block: B:66:0x00d7 */
     /* JADX WARN: Found duplicated region for block: B:68:0x00dd A[RETURN] */
     public static sj e(String str) {
         int i;
         char cCharAt;
-        bzo.q(str, "<this>");
+        throwIfVar1IsNull(str, "<this>");
         byte[] bArr = a.a;
         int length = str.length();
-        while (length > 0 && ((cCharAt = str.charAt(length - 1)) == '=' || cCharAt == '\n' || cCharAt == '\r' || cCharAt == ' ' || cCharAt == '\t')) {
+        while (length > 0 && ((cCharAt = str.charAt(length - 1)) == '=' || cCharAt == '\n' || cCharAt == '\r'
+                || cCharAt == ' ' || cCharAt == '\t')) {
             length--;
         }
         int i2 = (int) ((((long) length) * 6) / 8);
@@ -98,7 +103,7 @@ public class nu implements oz, esn, cdw, avu, aoh, bfh, app, cvg, ccv, dcc {
                     }
                     if (i6 != i2) {
                         bArrCopyOf = Arrays.copyOf(bArrCopyOf, i6);
-                        bzo.p(bArrCopyOf, "copyOf(this, newSize)");
+                        throwIfVar1IsNull(bArrCopyOf, "copyOf(this, newSize)");
                     }
                 }
                 if (bArrCopyOf != null) {
@@ -157,9 +162,9 @@ public class nu implements oz, esn, cdw, avu, aoh, bfh, app, cvg, ccv, dcc {
     }
 
     public static sj g(String str) {
-        bzo.q(str, "<this>");
+        throwIfVar1IsNull(str, "<this>");
         byte[] bytes = str.getBytes(uj.a);
-        bzo.p(bytes, "this as java.lang.String).getBytes(charset)");
+        throwIfVar1IsNull(bytes, "this as java.lang.String).getBytes(charset)");
         sj sjVar = new sj(bytes);
         sjVar.d = str;
         return sjVar;
@@ -283,7 +288,7 @@ public class nu implements oz, esn, cdw, avu, aoh, bfh, app, cvg, ccv, dcc {
         return packageManager.getPackageInfo(str, 64).signatures;
     }
 
-    public void ac(io ioVar, float f) {
+    public void ac(DefaultConfig ioVar, float f) {
         ddi ddiVar = (ddi) ((Drawable) ioVar.c);
         te teVar = (te) ioVar.d;
         boolean useCompatPadding = teVar.getUseCompatPadding();

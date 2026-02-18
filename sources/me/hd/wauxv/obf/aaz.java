@@ -15,12 +15,12 @@ import java.util.Set;
 /* JADX INFO: loaded from: classes.dex */
 public abstract class aaz extends abf {
     public static lb a(Iterable iterable) {
-        bzo.q(iterable, "<this>");
+        throwIfVar1IsNull(iterable, "<this>");
         return new lb(iterable, 1);
     }
 
     public static long[] aa(List list) {
-        bzo.q(list, "<this>");
+        throwIfVar1IsNull(list, "<this>");
         long[] jArr = new long[list.size()];
         Iterator it = list.iterator();
         int i = 0;
@@ -32,12 +32,12 @@ public abstract class aaz extends abf {
     }
 
     public static ArrayList ab(Collection collection) {
-        bzo.q(collection, "<this>");
+        throwIfVar1IsNull(collection, "<this>");
         return new ArrayList(collection);
     }
 
     public static final List ac(Iterable iterable) {
-        bzo.q(iterable, "<this>");
+        throwIfVar1IsNull(iterable, "<this>");
         if (iterable instanceof Collection) {
             return ab((Collection) iterable);
         }
@@ -47,18 +47,19 @@ public abstract class aaz extends abf {
     }
 
     public static Set ad(Iterable iterable) {
-        bzo.q(iterable, "<this>");
+        throwIfVar1IsNull(iterable, "<this>");
         if (iterable instanceof Collection) {
             Collection collection = (Collection) iterable;
             int size = collection.size();
             if (size != 0) {
                 if (size != 1) {
-                    LinkedHashSet linkedHashSet = new LinkedHashSet(bzo.ah(collection.size()));
+                    LinkedHashSet linkedHashSet = new LinkedHashSet(KotlinHelpers.ah(collection.size()));
                     x(iterable, linkedHashSet);
                     return linkedHashSet;
                 }
-                Set setSingleton = Collections.singleton(iterable instanceof List ? ((List) iterable).get(0) : collection.iterator().next());
-                bzo.p(setSingleton, "singleton(...)");
+                Set setSingleton = Collections
+                        .singleton(iterable instanceof List ? ((List) iterable).get(0) : collection.iterator().next());
+                throwIfVar1IsNull(setSingleton, "singleton(...)");
                 return setSingleton;
             }
         } else {
@@ -70,7 +71,7 @@ public abstract class aaz extends abf {
                     return linkedHashSet2;
                 }
                 Set setSingleton2 = Collections.singleton(linkedHashSet2.iterator().next());
-                bzo.p(setSingleton2, "singleton(...)");
+                throwIfVar1IsNull(setSingleton2, "singleton(...)");
                 return setSingleton2;
             }
         }
@@ -82,14 +83,14 @@ public abstract class aaz extends abf {
         Iterator it2 = list2.iterator();
         ArrayList arrayList = new ArrayList(Math.min(abb.ak(list, 10), abb.ak(list2, 10)));
         while (it.hasNext() && it2.hasNext()) {
-            arrayList.add(new csm(it.next(), it2.next()));
+            arrayList.add(new Pair(it.next(), it2.next()));
         }
         return arrayList;
     }
 
     public static boolean b(Iterable iterable, Object obj) {
         int iIndexOf;
-        bzo.q(iterable, "<this>");
+        throwIfVar1IsNull(iterable, "<this>");
         if (iterable instanceof Collection) {
             return ((Collection) iterable).contains(obj);
         }
@@ -102,7 +103,7 @@ public abstract class aaz extends abf {
                     aba.aj();
                     throw null;
                 }
-                if (bzo.f(obj, obj2)) {
+                if (nullSafeIsEqual(obj, obj2)) {
                     iIndexOf = i;
                 } else {
                     i++;
@@ -114,7 +115,7 @@ public abstract class aaz extends abf {
     }
 
     public static Object d(Iterable iterable) {
-        bzo.q(iterable, "<this>");
+        throwIfVar1IsNull(iterable, "<this>");
         if (iterable instanceof List) {
             return e((List) iterable);
         }
@@ -126,7 +127,7 @@ public abstract class aaz extends abf {
     }
 
     public static Object e(List list) {
-        bzo.q(list, "<this>");
+        throwIfVar1IsNull(list, "<this>");
         if (list.isEmpty()) {
             throw new NoSuchElementException("List is empty.");
         }
@@ -134,7 +135,7 @@ public abstract class aaz extends abf {
     }
 
     public static Object f(Collection collection) {
-        bzo.q(collection, "<this>");
+        throwIfVar1IsNull(collection, "<this>");
         if (collection instanceof List) {
             List list = (List) collection;
             if (list.isEmpty()) {
@@ -150,7 +151,7 @@ public abstract class aaz extends abf {
     }
 
     public static Object g(List list) {
-        bzo.q(list, "<this>");
+        throwIfVar1IsNull(list, "<this>");
         if (list.isEmpty()) {
             return null;
         }
@@ -158,15 +159,16 @@ public abstract class aaz extends abf {
     }
 
     public static Object h(int i, List list) {
-        bzo.q(list, "<this>");
+        throwIfVar1IsNull(list, "<this>");
         if (i < 0 || i >= list.size()) {
             return null;
         }
         return list.get(i);
     }
 
-    public static final void i(Iterable iterable, StringBuilder sb, CharSequence charSequence, CharSequence charSequence2, CharSequence charSequence3, CharSequence charSequence4, bgf bgfVar) {
-        bzo.q(iterable, "<this>");
+    public static final void i(Iterable iterable, StringBuilder sb, CharSequence charSequence,
+            CharSequence charSequence2, CharSequence charSequence3, CharSequence charSequence4, IHasInvokeMethod bgfVar) {
+        throwIfVar1IsNull(iterable, "<this>");
         sb.append(charSequence2);
         int i = 0;
         for (Object obj : iterable) {
@@ -179,7 +181,7 @@ public abstract class aaz extends abf {
         sb.append(charSequence3);
     }
 
-    public static String k(Iterable iterable, String str, String str2, String str3, bgf bgfVar, int i) {
+    public static String k(Iterable iterable, String str, String str2, String str3, IHasInvokeMethod bgfVar, int i) {
         if ((i & 1) != 0) {
             str = ", ";
         }
@@ -189,15 +191,15 @@ public abstract class aaz extends abf {
         if ((i & 32) != 0) {
             bgfVar = null;
         }
-        bzo.q(iterable, "<this>");
-        bzo.q(str5, "prefix");
+        throwIfVar1IsNull(iterable, "<this>");
+        throwIfVar1IsNull(str5, "prefix");
         StringBuilder sb = new StringBuilder();
         i(iterable, sb, str4, str5, str6, "...", bgfVar);
         return sb.toString();
     }
 
     public static Object l(List list) {
-        bzo.q(list, "<this>");
+        throwIfVar1IsNull(list, "<this>");
         if (list.isEmpty()) {
             throw new NoSuchElementException("List is empty.");
         }
@@ -205,7 +207,7 @@ public abstract class aaz extends abf {
     }
 
     public static Object m(List list) {
-        bzo.q(list, "<this>");
+        throwIfVar1IsNull(list, "<this>");
         if (list.isEmpty()) {
             return null;
         }
@@ -228,8 +230,8 @@ public abstract class aaz extends abf {
     }
 
     public static ArrayList o(Collection collection, Iterable iterable) {
-        bzo.q(collection, "<this>");
-        bzo.q(iterable, "elements");
+        throwIfVar1IsNull(collection, "<this>");
+        throwIfVar1IsNull(iterable, "elements");
         if (!(iterable instanceof Collection)) {
             ArrayList arrayList = new ArrayList(collection);
             abf.an(arrayList, iterable);
@@ -243,7 +245,7 @@ public abstract class aaz extends abf {
     }
 
     public static ArrayList p(Collection collection, Object obj) {
-        bzo.q(collection, "<this>");
+        throwIfVar1IsNull(collection, "<this>");
         ArrayList arrayList = new ArrayList(collection.size() + 1);
         arrayList.addAll(collection);
         arrayList.add(obj);
@@ -259,7 +261,7 @@ public abstract class aaz extends abf {
     }
 
     public static List r(Iterable iterable) {
-        bzo.q(iterable, "<this>");
+        throwIfVar1IsNull(iterable, "<this>");
         if ((iterable instanceof Collection) && ((Collection) iterable).size() <= 1) {
             return z(iterable);
         }
@@ -269,7 +271,7 @@ public abstract class aaz extends abf {
     }
 
     public static Object s(List list) {
-        bzo.q(list, "<this>");
+        throwIfVar1IsNull(list, "<this>");
         if (list.size() == 1) {
             return list.get(0);
         }
@@ -282,7 +284,7 @@ public abstract class aaz extends abf {
             return z(iterable);
         }
         Object[] array = collection.toArray(new Object[0]);
-        bzo.q(array, "<this>");
+        throwIfVar1IsNull(array, "<this>");
         if (array.length > 1) {
             Arrays.sort(array, comparator);
         }
@@ -290,7 +292,7 @@ public abstract class aaz extends abf {
     }
 
     public static List u(int i, List list) {
-        bzo.q(list, "<this>");
+        throwIfVar1IsNull(list, "<this>");
         if (i < 0) {
             throw new IllegalArgumentException(yg.f(i, "Requested element count ", " is less than zero.").toString());
         }
@@ -317,7 +319,7 @@ public abstract class aaz extends abf {
     }
 
     public static boolean[] v(List list) {
-        bzo.q(list, "<this>");
+        throwIfVar1IsNull(list, "<this>");
         boolean[] zArr = new boolean[list.size()];
         Iterator it = list.iterator();
         int i = 0;
@@ -340,7 +342,7 @@ public abstract class aaz extends abf {
     }
 
     public static void x(Iterable iterable, AbstractCollection abstractCollection) {
-        bzo.q(iterable, "<this>");
+        throwIfVar1IsNull(iterable, "<this>");
         Iterator it = iterable.iterator();
         while (it.hasNext()) {
             abstractCollection.add(it.next());
@@ -348,7 +350,7 @@ public abstract class aaz extends abf {
     }
 
     public static int[] y(List list) {
-        bzo.q(list, "<this>");
+        throwIfVar1IsNull(list, "<this>");
         int[] iArr = new int[list.size()];
         Iterator it = list.iterator();
         int i = 0;
@@ -360,7 +362,7 @@ public abstract class aaz extends abf {
     }
 
     public static List z(Iterable iterable) {
-        bzo.q(iterable, "<this>");
+        throwIfVar1IsNull(iterable, "<this>");
         if (!(iterable instanceof Collection)) {
             return aba.ai(ac(iterable));
         }

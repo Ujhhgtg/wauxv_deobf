@@ -39,7 +39,10 @@ public class c {
     public static final int y = 401;
     public static final int z = 402;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface a {
         void a(Object obj, int i);
     }
@@ -110,7 +113,7 @@ public class c {
                             if (message.what != 256) {
                                 return;
                             }
-                            c.b(message);
+                            c.tryGetClassByName(message);
                         }
                     };
                 }

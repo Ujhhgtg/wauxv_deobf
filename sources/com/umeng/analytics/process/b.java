@@ -17,7 +17,7 @@ class b extends SQLiteOpenHelper {
     }
 
     public static b a(Context context, String str) {
-        String strB = b(context, str);
+        String strB = tryGetClassByName(context, str);
         a.h.equals(str);
         return new b(context, strB, null, 1);
     }
@@ -50,7 +50,8 @@ class b extends SQLiteOpenHelper {
 
     private void a(SQLiteDatabase sQLiteDatabase) {
         try {
-            sQLiteDatabase.execSQL("create table if not exists __et_p(id INTEGER primary key autoincrement, __i TEXT, __e TEXT, __s TEXT, __t INTEGER, __pn TEXT, __av TEXT, __vc TEXT)");
+            sQLiteDatabase.execSQL(
+                    "create table if not exists __et_p(id INTEGER primary key autoincrement, __i TEXT, __e TEXT, __s TEXT, __t INTEGER, __pn TEXT, __av TEXT, __vc TEXT)");
         } catch (SQLException unused) {
         }
     }

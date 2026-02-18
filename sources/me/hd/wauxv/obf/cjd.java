@@ -55,9 +55,18 @@ public final class cjd {
                 this.b = this;
             }
 
-            /* JADX WARN: Type inference failed for: r1v20, types: [java.lang.Object, me.hd.wauxv.obf.btt] */
-            /* JADX WARN: Type inference failed for: r1v27, types: [java.lang.Object, me.hd.wauxv.obf.btt] */
-            /* JADX WARN: Type inference failed for: r1v34, types: [java.lang.Object, me.hd.wauxv.obf.btt] */
+            /*
+             * JADX WARN: Type inference failed for: r1v20, types: [java.lang.Object,
+             * me.hd.wauxv.obf.btt]
+             */
+            /*
+             * JADX WARN: Type inference failed for: r1v27, types: [java.lang.Object,
+             * me.hd.wauxv.obf.btt]
+             */
+            /*
+             * JADX WARN: Type inference failed for: r1v34, types: [java.lang.Object,
+             * me.hd.wauxv.obf.btt]
+             */
             @Override // me.hd.wauxv.obf.bfu
             public final Object invoke() {
                 List list;
@@ -76,15 +85,18 @@ public final class cjd {
                         String str6 = cjdVar.g;
                         LinkedHashMap linkedHashMap = new LinkedHashMap();
                         if (((Boolean) cjdVar.m.getValue()).booleanValue()) {
-                            bzo.n(str6);
+                            throwIfVar1IsNull(str6);
                             Uri uri = Uri.parse(str6);
-                            bzo.p(uri, "parse(...)");
+                            throwIfVar1IsNull(uri, "parse(...)");
                             for (String str7 : uri.getQueryParameterNames()) {
                                 StringBuilder sb = new StringBuilder();
                                 List<String> queryParameters = uri.getQueryParameters(str7);
                                 int i2 = 1;
                                 if (queryParameters.size() > 1) {
-                                    throw new IllegalArgumentException(("Query parameter " + str7 + " must only be present once in " + str6 + ". To support repeated query parameters, use an array type for your argument and the pattern provided in your URI will be used to parse each query parameter instance.").toString());
+                                    throw new IllegalArgumentException(("Query parameter " + str7
+                                            + " must only be present once in " + str6
+                                            + ". To support repeated query parameters, use an array type for your argument and the pattern provided in your URI will be used to parse each query parameter instance.")
+                                            .toString());
                                 }
                                 String str8 = (String) aaz.g(queryParameters);
                                 if (str8 == null) {
@@ -96,14 +108,14 @@ public final class cjd {
                                 int i3 = 0;
                                 while (bzxVarD != null) {
                                     bzt bztVarC = bzxVarD.c.c(i2);
-                                    bzo.n(bztVarC);
+                                    throwIfVar1IsNull(bztVarC);
                                     int i4 = i2;
                                     cjcVar.b.add(bztVarC.a);
                                     if (bzxVarD.f().a > i3) {
                                         String strSubstring = str8.substring(i3, bzxVarD.f().a);
-                                        bzo.p(strSubstring, "substring(...)");
+                                        throwIfVar1IsNull(strSubstring, "substring(...)");
                                         String strQuote = Pattern.quote(strSubstring);
-                                        bzo.p(strQuote, "quote(...)");
+                                        throwIfVar1IsNull(strQuote, "quote(...)");
                                         sb.append(strQuote);
                                     }
                                     sb.append("([\\s\\S]+?)?");
@@ -113,14 +125,14 @@ public final class cjd {
                                 }
                                 if (i3 < str8.length()) {
                                     String strSubstring2 = str8.substring(i3);
-                                    bzo.p(strSubstring2, "substring(...)");
+                                    throwIfVar1IsNull(strSubstring2, "substring(...)");
                                     String strQuote2 = Pattern.quote(strSubstring2);
-                                    bzo.p(strQuote2, "quote(...)");
+                                    throwIfVar1IsNull(strQuote2, "quote(...)");
                                     sb.append(strQuote2);
                                 }
                                 sb.append("$");
                                 String string = sb.toString();
-                                bzo.p(string, "toString(...)");
+                                throwIfVar1IsNull(string, "toString(...)");
                                 cjcVar.a = cjd.y(string);
                                 linkedHashMap.put(str7, cjcVar);
                             }
@@ -130,26 +142,26 @@ public final class cjd {
                         String str9 = this.b.g;
                         if (str9 != null) {
                             Uri uri2 = Uri.parse(str9);
-                            bzo.p(uri2, "parse(...)");
+                            throwIfVar1IsNull(uri2, "parse(...)");
                             if (uri2.getFragment() != null) {
                                 ArrayList arrayList2 = new ArrayList();
                                 Uri uri3 = Uri.parse(str9);
-                                bzo.p(uri3, "parse(...)");
+                                throwIfVar1IsNull(uri3, "parse(...)");
                                 String fragment = uri3.getFragment();
                                 StringBuilder sb2 = new StringBuilder();
-                                bzo.n(fragment);
+                                throwIfVar1IsNull(fragment);
                                 cjd.w(fragment, arrayList2, sb2);
-                                return new csm(arrayList2, sb2.toString());
+                                return new Pair(arrayList2, sb2.toString());
                             }
                         }
                         return null;
                     case 4:
-                        csm csmVar = (csm) this.b.p.getValue();
-                        return (csmVar == null || (list = (List) csmVar.a) == null) ? new ArrayList() : list;
+                        Pair pairVar = (Pair) this.b.p.getValue();
+                        return (pairVar == null || (list = (List) pairVar.a) == null) ? new ArrayList() : list;
                     case 5:
-                        csm csmVar2 = (csm) this.b.p.getValue();
-                        if (csmVar2 != null) {
-                            return (String) csmVar2.b;
+                        Pair pairVar2 = (Pair) this.b.p.getValue();
+                        if (pairVar2 != null) {
+                            return (String) pairVar2.b;
                         }
                         return null;
                     case 6:
@@ -175,9 +187,18 @@ public final class cjd {
                 this.b = this;
             }
 
-            /* JADX WARN: Type inference failed for: r1v20, types: [java.lang.Object, me.hd.wauxv.obf.btt] */
-            /* JADX WARN: Type inference failed for: r1v27, types: [java.lang.Object, me.hd.wauxv.obf.btt] */
-            /* JADX WARN: Type inference failed for: r1v34, types: [java.lang.Object, me.hd.wauxv.obf.btt] */
+            /*
+             * JADX WARN: Type inference failed for: r1v20, types: [java.lang.Object,
+             * me.hd.wauxv.obf.btt]
+             */
+            /*
+             * JADX WARN: Type inference failed for: r1v27, types: [java.lang.Object,
+             * me.hd.wauxv.obf.btt]
+             */
+            /*
+             * JADX WARN: Type inference failed for: r1v34, types: [java.lang.Object,
+             * me.hd.wauxv.obf.btt]
+             */
             @Override // me.hd.wauxv.obf.bfu
             public final Object invoke() {
                 List list;
@@ -196,15 +217,18 @@ public final class cjd {
                         String str6 = cjdVar.g;
                         LinkedHashMap linkedHashMap = new LinkedHashMap();
                         if (((Boolean) cjdVar.m.getValue()).booleanValue()) {
-                            bzo.n(str6);
+                            throwIfVar1IsNull(str6);
                             Uri uri = Uri.parse(str6);
-                            bzo.p(uri, "parse(...)");
+                            throwIfVar1IsNull(uri, "parse(...)");
                             for (String str7 : uri.getQueryParameterNames()) {
                                 StringBuilder sb = new StringBuilder();
                                 List<String> queryParameters = uri.getQueryParameters(str7);
                                 int i22 = 1;
                                 if (queryParameters.size() > 1) {
-                                    throw new IllegalArgumentException(("Query parameter " + str7 + " must only be present once in " + str6 + ". To support repeated query parameters, use an array type for your argument and the pattern provided in your URI will be used to parse each query parameter instance.").toString());
+                                    throw new IllegalArgumentException(("Query parameter " + str7
+                                            + " must only be present once in " + str6
+                                            + ". To support repeated query parameters, use an array type for your argument and the pattern provided in your URI will be used to parse each query parameter instance.")
+                                            .toString());
                                 }
                                 String str8 = (String) aaz.g(queryParameters);
                                 if (str8 == null) {
@@ -216,14 +240,14 @@ public final class cjd {
                                 int i3 = 0;
                                 while (bzxVarD != null) {
                                     bzt bztVarC = bzxVarD.c.c(i22);
-                                    bzo.n(bztVarC);
+                                    throwIfVar1IsNull(bztVarC);
                                     int i4 = i22;
                                     cjcVar.b.add(bztVarC.a);
                                     if (bzxVarD.f().a > i3) {
                                         String strSubstring = str8.substring(i3, bzxVarD.f().a);
-                                        bzo.p(strSubstring, "substring(...)");
+                                        throwIfVar1IsNull(strSubstring, "substring(...)");
                                         String strQuote = Pattern.quote(strSubstring);
-                                        bzo.p(strQuote, "quote(...)");
+                                        throwIfVar1IsNull(strQuote, "quote(...)");
                                         sb.append(strQuote);
                                     }
                                     sb.append("([\\s\\S]+?)?");
@@ -233,14 +257,14 @@ public final class cjd {
                                 }
                                 if (i3 < str8.length()) {
                                     String strSubstring2 = str8.substring(i3);
-                                    bzo.p(strSubstring2, "substring(...)");
+                                    throwIfVar1IsNull(strSubstring2, "substring(...)");
                                     String strQuote2 = Pattern.quote(strSubstring2);
-                                    bzo.p(strQuote2, "quote(...)");
+                                    throwIfVar1IsNull(strQuote2, "quote(...)");
                                     sb.append(strQuote2);
                                 }
                                 sb.append("$");
                                 String string = sb.toString();
-                                bzo.p(string, "toString(...)");
+                                throwIfVar1IsNull(string, "toString(...)");
                                 cjcVar.a = cjd.y(string);
                                 linkedHashMap.put(str7, cjcVar);
                             }
@@ -250,26 +274,26 @@ public final class cjd {
                         String str9 = this.b.g;
                         if (str9 != null) {
                             Uri uri2 = Uri.parse(str9);
-                            bzo.p(uri2, "parse(...)");
+                            throwIfVar1IsNull(uri2, "parse(...)");
                             if (uri2.getFragment() != null) {
                                 ArrayList arrayList2 = new ArrayList();
                                 Uri uri3 = Uri.parse(str9);
-                                bzo.p(uri3, "parse(...)");
+                                throwIfVar1IsNull(uri3, "parse(...)");
                                 String fragment = uri3.getFragment();
                                 StringBuilder sb2 = new StringBuilder();
-                                bzo.n(fragment);
+                                throwIfVar1IsNull(fragment);
                                 cjd.w(fragment, arrayList2, sb2);
-                                return new csm(arrayList2, sb2.toString());
+                                return new Pair(arrayList2, sb2.toString());
                             }
                         }
                         return null;
                     case 4:
-                        csm csmVar = (csm) this.b.p.getValue();
-                        return (csmVar == null || (list = (List) csmVar.a) == null) ? new ArrayList() : list;
+                        Pair pairVar = (Pair) this.b.p.getValue();
+                        return (pairVar == null || (list = (List) pairVar.a) == null) ? new ArrayList() : list;
                     case 5:
-                        csm csmVar2 = (csm) this.b.p.getValue();
-                        if (csmVar2 != null) {
-                            return (String) csmVar2.b;
+                        Pair pairVar2 = (Pair) this.b.p.getValue();
+                        if (pairVar2 != null) {
+                            return (String) pairVar2.b;
                         }
                         return null;
                     case 6:
@@ -295,9 +319,18 @@ public final class cjd {
                 this.b = this;
             }
 
-            /* JADX WARN: Type inference failed for: r1v20, types: [java.lang.Object, me.hd.wauxv.obf.btt] */
-            /* JADX WARN: Type inference failed for: r1v27, types: [java.lang.Object, me.hd.wauxv.obf.btt] */
-            /* JADX WARN: Type inference failed for: r1v34, types: [java.lang.Object, me.hd.wauxv.obf.btt] */
+            /*
+             * JADX WARN: Type inference failed for: r1v20, types: [java.lang.Object,
+             * me.hd.wauxv.obf.btt]
+             */
+            /*
+             * JADX WARN: Type inference failed for: r1v27, types: [java.lang.Object,
+             * me.hd.wauxv.obf.btt]
+             */
+            /*
+             * JADX WARN: Type inference failed for: r1v34, types: [java.lang.Object,
+             * me.hd.wauxv.obf.btt]
+             */
             @Override // me.hd.wauxv.obf.bfu
             public final Object invoke() {
                 List list;
@@ -316,15 +349,18 @@ public final class cjd {
                         String str6 = cjdVar.g;
                         LinkedHashMap linkedHashMap = new LinkedHashMap();
                         if (((Boolean) cjdVar.m.getValue()).booleanValue()) {
-                            bzo.n(str6);
+                            throwIfVar1IsNull(str6);
                             Uri uri = Uri.parse(str6);
-                            bzo.p(uri, "parse(...)");
+                            throwIfVar1IsNull(uri, "parse(...)");
                             for (String str7 : uri.getQueryParameterNames()) {
                                 StringBuilder sb = new StringBuilder();
                                 List<String> queryParameters = uri.getQueryParameters(str7);
                                 int i22 = 1;
                                 if (queryParameters.size() > 1) {
-                                    throw new IllegalArgumentException(("Query parameter " + str7 + " must only be present once in " + str6 + ". To support repeated query parameters, use an array type for your argument and the pattern provided in your URI will be used to parse each query parameter instance.").toString());
+                                    throw new IllegalArgumentException(("Query parameter " + str7
+                                            + " must only be present once in " + str6
+                                            + ". To support repeated query parameters, use an array type for your argument and the pattern provided in your URI will be used to parse each query parameter instance.")
+                                            .toString());
                                 }
                                 String str8 = (String) aaz.g(queryParameters);
                                 if (str8 == null) {
@@ -336,14 +372,14 @@ public final class cjd {
                                 int i32 = 0;
                                 while (bzxVarD != null) {
                                     bzt bztVarC = bzxVarD.c.c(i22);
-                                    bzo.n(bztVarC);
+                                    throwIfVar1IsNull(bztVarC);
                                     int i4 = i22;
                                     cjcVar.b.add(bztVarC.a);
                                     if (bzxVarD.f().a > i32) {
                                         String strSubstring = str8.substring(i32, bzxVarD.f().a);
-                                        bzo.p(strSubstring, "substring(...)");
+                                        throwIfVar1IsNull(strSubstring, "substring(...)");
                                         String strQuote = Pattern.quote(strSubstring);
-                                        bzo.p(strQuote, "quote(...)");
+                                        throwIfVar1IsNull(strQuote, "quote(...)");
                                         sb.append(strQuote);
                                     }
                                     sb.append("([\\s\\S]+?)?");
@@ -353,14 +389,14 @@ public final class cjd {
                                 }
                                 if (i32 < str8.length()) {
                                     String strSubstring2 = str8.substring(i32);
-                                    bzo.p(strSubstring2, "substring(...)");
+                                    throwIfVar1IsNull(strSubstring2, "substring(...)");
                                     String strQuote2 = Pattern.quote(strSubstring2);
-                                    bzo.p(strQuote2, "quote(...)");
+                                    throwIfVar1IsNull(strQuote2, "quote(...)");
                                     sb.append(strQuote2);
                                 }
                                 sb.append("$");
                                 String string = sb.toString();
-                                bzo.p(string, "toString(...)");
+                                throwIfVar1IsNull(string, "toString(...)");
                                 cjcVar.a = cjd.y(string);
                                 linkedHashMap.put(str7, cjcVar);
                             }
@@ -370,26 +406,26 @@ public final class cjd {
                         String str9 = this.b.g;
                         if (str9 != null) {
                             Uri uri2 = Uri.parse(str9);
-                            bzo.p(uri2, "parse(...)");
+                            throwIfVar1IsNull(uri2, "parse(...)");
                             if (uri2.getFragment() != null) {
                                 ArrayList arrayList2 = new ArrayList();
                                 Uri uri3 = Uri.parse(str9);
-                                bzo.p(uri3, "parse(...)");
+                                throwIfVar1IsNull(uri3, "parse(...)");
                                 String fragment = uri3.getFragment();
                                 StringBuilder sb2 = new StringBuilder();
-                                bzo.n(fragment);
+                                throwIfVar1IsNull(fragment);
                                 cjd.w(fragment, arrayList2, sb2);
-                                return new csm(arrayList2, sb2.toString());
+                                return new Pair(arrayList2, sb2.toString());
                             }
                         }
                         return null;
                     case 4:
-                        csm csmVar = (csm) this.b.p.getValue();
-                        return (csmVar == null || (list = (List) csmVar.a) == null) ? new ArrayList() : list;
+                        Pair pairVar = (Pair) this.b.p.getValue();
+                        return (pairVar == null || (list = (List) pairVar.a) == null) ? new ArrayList() : list;
                     case 5:
-                        csm csmVar2 = (csm) this.b.p.getValue();
-                        if (csmVar2 != null) {
-                            return (String) csmVar2.b;
+                        Pair pairVar2 = (Pair) this.b.p.getValue();
+                        if (pairVar2 != null) {
+                            return (String) pairVar2.b;
                         }
                         return null;
                     case 6:
@@ -417,9 +453,18 @@ public final class cjd {
                 this.b = this;
             }
 
-            /* JADX WARN: Type inference failed for: r1v20, types: [java.lang.Object, me.hd.wauxv.obf.btt] */
-            /* JADX WARN: Type inference failed for: r1v27, types: [java.lang.Object, me.hd.wauxv.obf.btt] */
-            /* JADX WARN: Type inference failed for: r1v34, types: [java.lang.Object, me.hd.wauxv.obf.btt] */
+            /*
+             * JADX WARN: Type inference failed for: r1v20, types: [java.lang.Object,
+             * me.hd.wauxv.obf.btt]
+             */
+            /*
+             * JADX WARN: Type inference failed for: r1v27, types: [java.lang.Object,
+             * me.hd.wauxv.obf.btt]
+             */
+            /*
+             * JADX WARN: Type inference failed for: r1v34, types: [java.lang.Object,
+             * me.hd.wauxv.obf.btt]
+             */
             @Override // me.hd.wauxv.obf.bfu
             public final Object invoke() {
                 List list;
@@ -438,15 +483,18 @@ public final class cjd {
                         String str6 = cjdVar.g;
                         LinkedHashMap linkedHashMap = new LinkedHashMap();
                         if (((Boolean) cjdVar.m.getValue()).booleanValue()) {
-                            bzo.n(str6);
+                            throwIfVar1IsNull(str6);
                             Uri uri = Uri.parse(str6);
-                            bzo.p(uri, "parse(...)");
+                            throwIfVar1IsNull(uri, "parse(...)");
                             for (String str7 : uri.getQueryParameterNames()) {
                                 StringBuilder sb = new StringBuilder();
                                 List<String> queryParameters = uri.getQueryParameters(str7);
                                 int i22 = 1;
                                 if (queryParameters.size() > 1) {
-                                    throw new IllegalArgumentException(("Query parameter " + str7 + " must only be present once in " + str6 + ". To support repeated query parameters, use an array type for your argument and the pattern provided in your URI will be used to parse each query parameter instance.").toString());
+                                    throw new IllegalArgumentException(("Query parameter " + str7
+                                            + " must only be present once in " + str6
+                                            + ". To support repeated query parameters, use an array type for your argument and the pattern provided in your URI will be used to parse each query parameter instance.")
+                                            .toString());
                                 }
                                 String str8 = (String) aaz.g(queryParameters);
                                 if (str8 == null) {
@@ -458,14 +506,14 @@ public final class cjd {
                                 int i32 = 0;
                                 while (bzxVarD != null) {
                                     bzt bztVarC = bzxVarD.c.c(i22);
-                                    bzo.n(bztVarC);
+                                    throwIfVar1IsNull(bztVarC);
                                     int i42 = i22;
                                     cjcVar.b.add(bztVarC.a);
                                     if (bzxVarD.f().a > i32) {
                                         String strSubstring = str8.substring(i32, bzxVarD.f().a);
-                                        bzo.p(strSubstring, "substring(...)");
+                                        throwIfVar1IsNull(strSubstring, "substring(...)");
                                         String strQuote = Pattern.quote(strSubstring);
-                                        bzo.p(strQuote, "quote(...)");
+                                        throwIfVar1IsNull(strQuote, "quote(...)");
                                         sb.append(strQuote);
                                     }
                                     sb.append("([\\s\\S]+?)?");
@@ -475,14 +523,14 @@ public final class cjd {
                                 }
                                 if (i32 < str8.length()) {
                                     String strSubstring2 = str8.substring(i32);
-                                    bzo.p(strSubstring2, "substring(...)");
+                                    throwIfVar1IsNull(strSubstring2, "substring(...)");
                                     String strQuote2 = Pattern.quote(strSubstring2);
-                                    bzo.p(strQuote2, "quote(...)");
+                                    throwIfVar1IsNull(strQuote2, "quote(...)");
                                     sb.append(strQuote2);
                                 }
                                 sb.append("$");
                                 String string = sb.toString();
-                                bzo.p(string, "toString(...)");
+                                throwIfVar1IsNull(string, "toString(...)");
                                 cjcVar.a = cjd.y(string);
                                 linkedHashMap.put(str7, cjcVar);
                             }
@@ -492,26 +540,26 @@ public final class cjd {
                         String str9 = this.b.g;
                         if (str9 != null) {
                             Uri uri2 = Uri.parse(str9);
-                            bzo.p(uri2, "parse(...)");
+                            throwIfVar1IsNull(uri2, "parse(...)");
                             if (uri2.getFragment() != null) {
                                 ArrayList arrayList2 = new ArrayList();
                                 Uri uri3 = Uri.parse(str9);
-                                bzo.p(uri3, "parse(...)");
+                                throwIfVar1IsNull(uri3, "parse(...)");
                                 String fragment = uri3.getFragment();
                                 StringBuilder sb2 = new StringBuilder();
-                                bzo.n(fragment);
+                                throwIfVar1IsNull(fragment);
                                 cjd.w(fragment, arrayList2, sb2);
-                                return new csm(arrayList2, sb2.toString());
+                                return new Pair(arrayList2, sb2.toString());
                             }
                         }
                         return null;
                     case 4:
-                        csm csmVar = (csm) this.b.p.getValue();
-                        return (csmVar == null || (list = (List) csmVar.a) == null) ? new ArrayList() : list;
+                        Pair pairVar = (Pair) this.b.p.getValue();
+                        return (pairVar == null || (list = (List) pairVar.a) == null) ? new ArrayList() : list;
                     case 5:
-                        csm csmVar2 = (csm) this.b.p.getValue();
-                        if (csmVar2 != null) {
-                            return (String) csmVar2.b;
+                        Pair pairVar2 = (Pair) this.b.p.getValue();
+                        if (pairVar2 != null) {
+                            return (String) pairVar2.b;
                         }
                         return null;
                     case 6:
@@ -537,9 +585,18 @@ public final class cjd {
                 this.b = this;
             }
 
-            /* JADX WARN: Type inference failed for: r1v20, types: [java.lang.Object, me.hd.wauxv.obf.btt] */
-            /* JADX WARN: Type inference failed for: r1v27, types: [java.lang.Object, me.hd.wauxv.obf.btt] */
-            /* JADX WARN: Type inference failed for: r1v34, types: [java.lang.Object, me.hd.wauxv.obf.btt] */
+            /*
+             * JADX WARN: Type inference failed for: r1v20, types: [java.lang.Object,
+             * me.hd.wauxv.obf.btt]
+             */
+            /*
+             * JADX WARN: Type inference failed for: r1v27, types: [java.lang.Object,
+             * me.hd.wauxv.obf.btt]
+             */
+            /*
+             * JADX WARN: Type inference failed for: r1v34, types: [java.lang.Object,
+             * me.hd.wauxv.obf.btt]
+             */
             @Override // me.hd.wauxv.obf.bfu
             public final Object invoke() {
                 List list;
@@ -558,15 +615,18 @@ public final class cjd {
                         String str6 = cjdVar.g;
                         LinkedHashMap linkedHashMap = new LinkedHashMap();
                         if (((Boolean) cjdVar.m.getValue()).booleanValue()) {
-                            bzo.n(str6);
+                            throwIfVar1IsNull(str6);
                             Uri uri = Uri.parse(str6);
-                            bzo.p(uri, "parse(...)");
+                            throwIfVar1IsNull(uri, "parse(...)");
                             for (String str7 : uri.getQueryParameterNames()) {
                                 StringBuilder sb = new StringBuilder();
                                 List<String> queryParameters = uri.getQueryParameters(str7);
                                 int i22 = 1;
                                 if (queryParameters.size() > 1) {
-                                    throw new IllegalArgumentException(("Query parameter " + str7 + " must only be present once in " + str6 + ". To support repeated query parameters, use an array type for your argument and the pattern provided in your URI will be used to parse each query parameter instance.").toString());
+                                    throw new IllegalArgumentException(("Query parameter " + str7
+                                            + " must only be present once in " + str6
+                                            + ". To support repeated query parameters, use an array type for your argument and the pattern provided in your URI will be used to parse each query parameter instance.")
+                                            .toString());
                                 }
                                 String str8 = (String) aaz.g(queryParameters);
                                 if (str8 == null) {
@@ -578,14 +638,14 @@ public final class cjd {
                                 int i32 = 0;
                                 while (bzxVarD != null) {
                                     bzt bztVarC = bzxVarD.c.c(i22);
-                                    bzo.n(bztVarC);
+                                    throwIfVar1IsNull(bztVarC);
                                     int i42 = i22;
                                     cjcVar.b.add(bztVarC.a);
                                     if (bzxVarD.f().a > i32) {
                                         String strSubstring = str8.substring(i32, bzxVarD.f().a);
-                                        bzo.p(strSubstring, "substring(...)");
+                                        throwIfVar1IsNull(strSubstring, "substring(...)");
                                         String strQuote = Pattern.quote(strSubstring);
-                                        bzo.p(strQuote, "quote(...)");
+                                        throwIfVar1IsNull(strQuote, "quote(...)");
                                         sb.append(strQuote);
                                     }
                                     sb.append("([\\s\\S]+?)?");
@@ -595,14 +655,14 @@ public final class cjd {
                                 }
                                 if (i32 < str8.length()) {
                                     String strSubstring2 = str8.substring(i32);
-                                    bzo.p(strSubstring2, "substring(...)");
+                                    throwIfVar1IsNull(strSubstring2, "substring(...)");
                                     String strQuote2 = Pattern.quote(strSubstring2);
-                                    bzo.p(strQuote2, "quote(...)");
+                                    throwIfVar1IsNull(strQuote2, "quote(...)");
                                     sb.append(strQuote2);
                                 }
                                 sb.append("$");
                                 String string = sb.toString();
-                                bzo.p(string, "toString(...)");
+                                throwIfVar1IsNull(string, "toString(...)");
                                 cjcVar.a = cjd.y(string);
                                 linkedHashMap.put(str7, cjcVar);
                             }
@@ -612,26 +672,26 @@ public final class cjd {
                         String str9 = this.b.g;
                         if (str9 != null) {
                             Uri uri2 = Uri.parse(str9);
-                            bzo.p(uri2, "parse(...)");
+                            throwIfVar1IsNull(uri2, "parse(...)");
                             if (uri2.getFragment() != null) {
                                 ArrayList arrayList2 = new ArrayList();
                                 Uri uri3 = Uri.parse(str9);
-                                bzo.p(uri3, "parse(...)");
+                                throwIfVar1IsNull(uri3, "parse(...)");
                                 String fragment = uri3.getFragment();
                                 StringBuilder sb2 = new StringBuilder();
-                                bzo.n(fragment);
+                                throwIfVar1IsNull(fragment);
                                 cjd.w(fragment, arrayList2, sb2);
-                                return new csm(arrayList2, sb2.toString());
+                                return new Pair(arrayList2, sb2.toString());
                             }
                         }
                         return null;
                     case 4:
-                        csm csmVar = (csm) this.b.p.getValue();
-                        return (csmVar == null || (list = (List) csmVar.a) == null) ? new ArrayList() : list;
+                        Pair pairVar = (Pair) this.b.p.getValue();
+                        return (pairVar == null || (list = (List) pairVar.a) == null) ? new ArrayList() : list;
                     case 5:
-                        csm csmVar2 = (csm) this.b.p.getValue();
-                        if (csmVar2 != null) {
-                            return (String) csmVar2.b;
+                        Pair pairVar2 = (Pair) this.b.p.getValue();
+                        if (pairVar2 != null) {
+                            return (String) pairVar2.b;
                         }
                         return null;
                     case 6:
@@ -657,9 +717,18 @@ public final class cjd {
                 this.b = this;
             }
 
-            /* JADX WARN: Type inference failed for: r1v20, types: [java.lang.Object, me.hd.wauxv.obf.btt] */
-            /* JADX WARN: Type inference failed for: r1v27, types: [java.lang.Object, me.hd.wauxv.obf.btt] */
-            /* JADX WARN: Type inference failed for: r1v34, types: [java.lang.Object, me.hd.wauxv.obf.btt] */
+            /*
+             * JADX WARN: Type inference failed for: r1v20, types: [java.lang.Object,
+             * me.hd.wauxv.obf.btt]
+             */
+            /*
+             * JADX WARN: Type inference failed for: r1v27, types: [java.lang.Object,
+             * me.hd.wauxv.obf.btt]
+             */
+            /*
+             * JADX WARN: Type inference failed for: r1v34, types: [java.lang.Object,
+             * me.hd.wauxv.obf.btt]
+             */
             @Override // me.hd.wauxv.obf.bfu
             public final Object invoke() {
                 List list;
@@ -678,15 +747,18 @@ public final class cjd {
                         String str6 = cjdVar.g;
                         LinkedHashMap linkedHashMap = new LinkedHashMap();
                         if (((Boolean) cjdVar.m.getValue()).booleanValue()) {
-                            bzo.n(str6);
+                            throwIfVar1IsNull(str6);
                             Uri uri = Uri.parse(str6);
-                            bzo.p(uri, "parse(...)");
+                            throwIfVar1IsNull(uri, "parse(...)");
                             for (String str7 : uri.getQueryParameterNames()) {
                                 StringBuilder sb = new StringBuilder();
                                 List<String> queryParameters = uri.getQueryParameters(str7);
                                 int i22 = 1;
                                 if (queryParameters.size() > 1) {
-                                    throw new IllegalArgumentException(("Query parameter " + str7 + " must only be present once in " + str6 + ". To support repeated query parameters, use an array type for your argument and the pattern provided in your URI will be used to parse each query parameter instance.").toString());
+                                    throw new IllegalArgumentException(("Query parameter " + str7
+                                            + " must only be present once in " + str6
+                                            + ". To support repeated query parameters, use an array type for your argument and the pattern provided in your URI will be used to parse each query parameter instance.")
+                                            .toString());
                                 }
                                 String str8 = (String) aaz.g(queryParameters);
                                 if (str8 == null) {
@@ -698,14 +770,14 @@ public final class cjd {
                                 int i32 = 0;
                                 while (bzxVarD != null) {
                                     bzt bztVarC = bzxVarD.c.c(i22);
-                                    bzo.n(bztVarC);
+                                    throwIfVar1IsNull(bztVarC);
                                     int i42 = i22;
                                     cjcVar.b.add(bztVarC.a);
                                     if (bzxVarD.f().a > i32) {
                                         String strSubstring = str8.substring(i32, bzxVarD.f().a);
-                                        bzo.p(strSubstring, "substring(...)");
+                                        throwIfVar1IsNull(strSubstring, "substring(...)");
                                         String strQuote = Pattern.quote(strSubstring);
-                                        bzo.p(strQuote, "quote(...)");
+                                        throwIfVar1IsNull(strQuote, "quote(...)");
                                         sb.append(strQuote);
                                     }
                                     sb.append("([\\s\\S]+?)?");
@@ -715,14 +787,14 @@ public final class cjd {
                                 }
                                 if (i32 < str8.length()) {
                                     String strSubstring2 = str8.substring(i32);
-                                    bzo.p(strSubstring2, "substring(...)");
+                                    throwIfVar1IsNull(strSubstring2, "substring(...)");
                                     String strQuote2 = Pattern.quote(strSubstring2);
-                                    bzo.p(strQuote2, "quote(...)");
+                                    throwIfVar1IsNull(strQuote2, "quote(...)");
                                     sb.append(strQuote2);
                                 }
                                 sb.append("$");
                                 String string = sb.toString();
-                                bzo.p(string, "toString(...)");
+                                throwIfVar1IsNull(string, "toString(...)");
                                 cjcVar.a = cjd.y(string);
                                 linkedHashMap.put(str7, cjcVar);
                             }
@@ -732,26 +804,26 @@ public final class cjd {
                         String str9 = this.b.g;
                         if (str9 != null) {
                             Uri uri2 = Uri.parse(str9);
-                            bzo.p(uri2, "parse(...)");
+                            throwIfVar1IsNull(uri2, "parse(...)");
                             if (uri2.getFragment() != null) {
                                 ArrayList arrayList2 = new ArrayList();
                                 Uri uri3 = Uri.parse(str9);
-                                bzo.p(uri3, "parse(...)");
+                                throwIfVar1IsNull(uri3, "parse(...)");
                                 String fragment = uri3.getFragment();
                                 StringBuilder sb2 = new StringBuilder();
-                                bzo.n(fragment);
+                                throwIfVar1IsNull(fragment);
                                 cjd.w(fragment, arrayList2, sb2);
-                                return new csm(arrayList2, sb2.toString());
+                                return new Pair(arrayList2, sb2.toString());
                             }
                         }
                         return null;
                     case 4:
-                        csm csmVar = (csm) this.b.p.getValue();
-                        return (csmVar == null || (list = (List) csmVar.a) == null) ? new ArrayList() : list;
+                        Pair pairVar = (Pair) this.b.p.getValue();
+                        return (pairVar == null || (list = (List) pairVar.a) == null) ? new ArrayList() : list;
                     case 5:
-                        csm csmVar2 = (csm) this.b.p.getValue();
-                        if (csmVar2 != null) {
-                            return (String) csmVar2.b;
+                        Pair pairVar2 = (Pair) this.b.p.getValue();
+                        if (pairVar2 != null) {
+                            return (String) pairVar2.b;
                         }
                         return null;
                     case 6:
@@ -777,9 +849,18 @@ public final class cjd {
                 this.b = this;
             }
 
-            /* JADX WARN: Type inference failed for: r1v20, types: [java.lang.Object, me.hd.wauxv.obf.btt] */
-            /* JADX WARN: Type inference failed for: r1v27, types: [java.lang.Object, me.hd.wauxv.obf.btt] */
-            /* JADX WARN: Type inference failed for: r1v34, types: [java.lang.Object, me.hd.wauxv.obf.btt] */
+            /*
+             * JADX WARN: Type inference failed for: r1v20, types: [java.lang.Object,
+             * me.hd.wauxv.obf.btt]
+             */
+            /*
+             * JADX WARN: Type inference failed for: r1v27, types: [java.lang.Object,
+             * me.hd.wauxv.obf.btt]
+             */
+            /*
+             * JADX WARN: Type inference failed for: r1v34, types: [java.lang.Object,
+             * me.hd.wauxv.obf.btt]
+             */
             @Override // me.hd.wauxv.obf.bfu
             public final Object invoke() {
                 List list;
@@ -798,15 +879,18 @@ public final class cjd {
                         String str6 = cjdVar.g;
                         LinkedHashMap linkedHashMap = new LinkedHashMap();
                         if (((Boolean) cjdVar.m.getValue()).booleanValue()) {
-                            bzo.n(str6);
+                            throwIfVar1IsNull(str6);
                             Uri uri = Uri.parse(str6);
-                            bzo.p(uri, "parse(...)");
+                            throwIfVar1IsNull(uri, "parse(...)");
                             for (String str7 : uri.getQueryParameterNames()) {
                                 StringBuilder sb = new StringBuilder();
                                 List<String> queryParameters = uri.getQueryParameters(str7);
                                 int i22 = 1;
                                 if (queryParameters.size() > 1) {
-                                    throw new IllegalArgumentException(("Query parameter " + str7 + " must only be present once in " + str6 + ". To support repeated query parameters, use an array type for your argument and the pattern provided in your URI will be used to parse each query parameter instance.").toString());
+                                    throw new IllegalArgumentException(("Query parameter " + str7
+                                            + " must only be present once in " + str6
+                                            + ". To support repeated query parameters, use an array type for your argument and the pattern provided in your URI will be used to parse each query parameter instance.")
+                                            .toString());
                                 }
                                 String str8 = (String) aaz.g(queryParameters);
                                 if (str8 == null) {
@@ -818,14 +902,14 @@ public final class cjd {
                                 int i32 = 0;
                                 while (bzxVarD != null) {
                                     bzt bztVarC = bzxVarD.c.c(i22);
-                                    bzo.n(bztVarC);
+                                    throwIfVar1IsNull(bztVarC);
                                     int i42 = i22;
                                     cjcVar.b.add(bztVarC.a);
                                     if (bzxVarD.f().a > i32) {
                                         String strSubstring = str8.substring(i32, bzxVarD.f().a);
-                                        bzo.p(strSubstring, "substring(...)");
+                                        throwIfVar1IsNull(strSubstring, "substring(...)");
                                         String strQuote = Pattern.quote(strSubstring);
-                                        bzo.p(strQuote, "quote(...)");
+                                        throwIfVar1IsNull(strQuote, "quote(...)");
                                         sb.append(strQuote);
                                     }
                                     sb.append("([\\s\\S]+?)?");
@@ -835,14 +919,14 @@ public final class cjd {
                                 }
                                 if (i32 < str8.length()) {
                                     String strSubstring2 = str8.substring(i32);
-                                    bzo.p(strSubstring2, "substring(...)");
+                                    throwIfVar1IsNull(strSubstring2, "substring(...)");
                                     String strQuote2 = Pattern.quote(strSubstring2);
-                                    bzo.p(strQuote2, "quote(...)");
+                                    throwIfVar1IsNull(strQuote2, "quote(...)");
                                     sb.append(strQuote2);
                                 }
                                 sb.append("$");
                                 String string = sb.toString();
-                                bzo.p(string, "toString(...)");
+                                throwIfVar1IsNull(string, "toString(...)");
                                 cjcVar.a = cjd.y(string);
                                 linkedHashMap.put(str7, cjcVar);
                             }
@@ -852,26 +936,26 @@ public final class cjd {
                         String str9 = this.b.g;
                         if (str9 != null) {
                             Uri uri2 = Uri.parse(str9);
-                            bzo.p(uri2, "parse(...)");
+                            throwIfVar1IsNull(uri2, "parse(...)");
                             if (uri2.getFragment() != null) {
                                 ArrayList arrayList2 = new ArrayList();
                                 Uri uri3 = Uri.parse(str9);
-                                bzo.p(uri3, "parse(...)");
+                                throwIfVar1IsNull(uri3, "parse(...)");
                                 String fragment = uri3.getFragment();
                                 StringBuilder sb2 = new StringBuilder();
-                                bzo.n(fragment);
+                                throwIfVar1IsNull(fragment);
                                 cjd.w(fragment, arrayList2, sb2);
-                                return new csm(arrayList2, sb2.toString());
+                                return new Pair(arrayList2, sb2.toString());
                             }
                         }
                         return null;
                     case 4:
-                        csm csmVar = (csm) this.b.p.getValue();
-                        return (csmVar == null || (list = (List) csmVar.a) == null) ? new ArrayList() : list;
+                        Pair pairVar = (Pair) this.b.p.getValue();
+                        return (pairVar == null || (list = (List) pairVar.a) == null) ? new ArrayList() : list;
                     case 5:
-                        csm csmVar2 = (csm) this.b.p.getValue();
-                        if (csmVar2 != null) {
-                            return (String) csmVar2.b;
+                        Pair pairVar2 = (Pair) this.b.p.getValue();
+                        if (pairVar2 != null) {
+                            return (String) pairVar2.b;
                         }
                         return null;
                     case 6:
@@ -897,9 +981,18 @@ public final class cjd {
                 this.b = this;
             }
 
-            /* JADX WARN: Type inference failed for: r1v20, types: [java.lang.Object, me.hd.wauxv.obf.btt] */
-            /* JADX WARN: Type inference failed for: r1v27, types: [java.lang.Object, me.hd.wauxv.obf.btt] */
-            /* JADX WARN: Type inference failed for: r1v34, types: [java.lang.Object, me.hd.wauxv.obf.btt] */
+            /*
+             * JADX WARN: Type inference failed for: r1v20, types: [java.lang.Object,
+             * me.hd.wauxv.obf.btt]
+             */
+            /*
+             * JADX WARN: Type inference failed for: r1v27, types: [java.lang.Object,
+             * me.hd.wauxv.obf.btt]
+             */
+            /*
+             * JADX WARN: Type inference failed for: r1v34, types: [java.lang.Object,
+             * me.hd.wauxv.obf.btt]
+             */
             @Override // me.hd.wauxv.obf.bfu
             public final Object invoke() {
                 List list;
@@ -918,15 +1011,18 @@ public final class cjd {
                         String str6 = cjdVar.g;
                         LinkedHashMap linkedHashMap = new LinkedHashMap();
                         if (((Boolean) cjdVar.m.getValue()).booleanValue()) {
-                            bzo.n(str6);
+                            throwIfVar1IsNull(str6);
                             Uri uri = Uri.parse(str6);
-                            bzo.p(uri, "parse(...)");
+                            throwIfVar1IsNull(uri, "parse(...)");
                             for (String str7 : uri.getQueryParameterNames()) {
                                 StringBuilder sb = new StringBuilder();
                                 List<String> queryParameters = uri.getQueryParameters(str7);
                                 int i22 = 1;
                                 if (queryParameters.size() > 1) {
-                                    throw new IllegalArgumentException(("Query parameter " + str7 + " must only be present once in " + str6 + ". To support repeated query parameters, use an array type for your argument and the pattern provided in your URI will be used to parse each query parameter instance.").toString());
+                                    throw new IllegalArgumentException(("Query parameter " + str7
+                                            + " must only be present once in " + str6
+                                            + ". To support repeated query parameters, use an array type for your argument and the pattern provided in your URI will be used to parse each query parameter instance.")
+                                            .toString());
                                 }
                                 String str8 = (String) aaz.g(queryParameters);
                                 if (str8 == null) {
@@ -938,14 +1034,14 @@ public final class cjd {
                                 int i32 = 0;
                                 while (bzxVarD != null) {
                                     bzt bztVarC = bzxVarD.c.c(i22);
-                                    bzo.n(bztVarC);
+                                    throwIfVar1IsNull(bztVarC);
                                     int i42 = i22;
                                     cjcVar.b.add(bztVarC.a);
                                     if (bzxVarD.f().a > i32) {
                                         String strSubstring = str8.substring(i32, bzxVarD.f().a);
-                                        bzo.p(strSubstring, "substring(...)");
+                                        throwIfVar1IsNull(strSubstring, "substring(...)");
                                         String strQuote = Pattern.quote(strSubstring);
-                                        bzo.p(strQuote, "quote(...)");
+                                        throwIfVar1IsNull(strQuote, "quote(...)");
                                         sb.append(strQuote);
                                     }
                                     sb.append("([\\s\\S]+?)?");
@@ -955,14 +1051,14 @@ public final class cjd {
                                 }
                                 if (i32 < str8.length()) {
                                     String strSubstring2 = str8.substring(i32);
-                                    bzo.p(strSubstring2, "substring(...)");
+                                    throwIfVar1IsNull(strSubstring2, "substring(...)");
                                     String strQuote2 = Pattern.quote(strSubstring2);
-                                    bzo.p(strQuote2, "quote(...)");
+                                    throwIfVar1IsNull(strQuote2, "quote(...)");
                                     sb.append(strQuote2);
                                 }
                                 sb.append("$");
                                 String string = sb.toString();
-                                bzo.p(string, "toString(...)");
+                                throwIfVar1IsNull(string, "toString(...)");
                                 cjcVar.a = cjd.y(string);
                                 linkedHashMap.put(str7, cjcVar);
                             }
@@ -972,26 +1068,26 @@ public final class cjd {
                         String str9 = this.b.g;
                         if (str9 != null) {
                             Uri uri2 = Uri.parse(str9);
-                            bzo.p(uri2, "parse(...)");
+                            throwIfVar1IsNull(uri2, "parse(...)");
                             if (uri2.getFragment() != null) {
                                 ArrayList arrayList2 = new ArrayList();
                                 Uri uri3 = Uri.parse(str9);
-                                bzo.p(uri3, "parse(...)");
+                                throwIfVar1IsNull(uri3, "parse(...)");
                                 String fragment = uri3.getFragment();
                                 StringBuilder sb2 = new StringBuilder();
-                                bzo.n(fragment);
+                                throwIfVar1IsNull(fragment);
                                 cjd.w(fragment, arrayList2, sb2);
-                                return new csm(arrayList2, sb2.toString());
+                                return new Pair(arrayList2, sb2.toString());
                             }
                         }
                         return null;
                     case 4:
-                        csm csmVar = (csm) this.b.p.getValue();
-                        return (csmVar == null || (list = (List) csmVar.a) == null) ? new ArrayList() : list;
+                        Pair pairVar = (Pair) this.b.p.getValue();
+                        return (pairVar == null || (list = (List) pairVar.a) == null) ? new ArrayList() : list;
                     case 5:
-                        csm csmVar2 = (csm) this.b.p.getValue();
-                        if (csmVar2 != null) {
-                            return (String) csmVar2.b;
+                        Pair pairVar2 = (Pair) this.b.p.getValue();
+                        if (pairVar2 != null) {
+                            return (String) pairVar2.b;
                         }
                         return null;
                     case 6:
@@ -1013,35 +1109,37 @@ public final class cjd {
             StringBuilder sb = new StringBuilder("^");
             if (!a.c(str)) {
                 String strPattern = c.a.pattern();
-                bzo.p(strPattern, "pattern(...)");
+                throwIfVar1IsNull(strPattern, "pattern(...)");
                 sb.append(strPattern);
             }
             Pattern patternCompile = Pattern.compile("(\\?|#|$)");
-            bzo.p(patternCompile, "compile(...)");
+            throwIfVar1IsNull(patternCompile, "compile(...)");
             Matcher matcher = patternCompile.matcher(str);
-            bzo.p(matcher, "matcher(...)");
+            throwIfVar1IsNull(matcher, "matcher(...)");
             bzx bzxVarY = ewz.y(matcher, 0, str);
             if (bzxVarY != null) {
                 String strSubstring = str.substring(0, bzxVarY.f().a);
-                bzo.p(strSubstring, "substring(...)");
+                throwIfVar1IsNull(strSubstring, "substring(...)");
                 w(strSubstring, arrayList, sb);
                 this.v = (d.c(sb) || e.c(sb)) ? false : true;
                 sb.append("($|(\\?(.)*)|(#(.)*))");
             }
             String string = sb.toString();
-            bzo.p(string, "toString(...)");
+            throwIfVar1IsNull(string, "toString(...)");
             this.k = y(string);
         }
         if (str3 == null) {
             return;
         }
         Pattern patternCompile2 = Pattern.compile("^[\\s\\S]+/[\\s\\S]+$");
-        bzo.p(patternCompile2, "compile(...)");
+        throwIfVar1IsNull(patternCompile2, "compile(...)");
         if (!patternCompile2.matcher(str3).matches()) {
-            throw new IllegalArgumentException(bjs.o("The given mimeType ", str3, " does not match to required \"type/subtype\" format").toString());
+            throw new IllegalArgumentException(
+                    concat("The given mimeType ", str3, " does not match to required \"type/subtype\" format")
+                            .toString());
         }
         Pattern patternCompile3 = Pattern.compile("/");
-        bzo.p(patternCompile3, "compile(...)");
+        throwIfVar1IsNull(patternCompile3, "compile(...)");
         Matcher matcher2 = patternCompile3.matcher(str3);
         if (matcher2.find()) {
             ArrayList arrayList2 = new ArrayList(10);
@@ -1066,32 +1164,33 @@ public final class cjd {
             }
             listU = avd.a;
         }
-        this.t = dnr.bo("^(" + ((String) listU.get(0)) + "|[*]+)/(" + ((String) listU.get(1)) + "|[*]+)$", "*|[*]", "[\\s\\S]");
+        this.t = dnr.bo("^(" + ((String) listU.get(0)) + "|[*]+)/(" + ((String) listU.get(1)) + "|[*]+)$", "*|[*]",
+                "[\\s\\S]");
     }
 
     public static void w(String str, ArrayList arrayList, StringBuilder sb) {
         int i = 0;
         for (bzx bzxVarD = b.d(str); bzxVarD != null; bzxVarD = bzxVarD.g()) {
             bzt bztVarC = bzxVarD.c.c(1);
-            bzo.n(bztVarC);
+            throwIfVar1IsNull(bztVarC);
             arrayList.add(bztVarC.a);
             if (bzxVarD.f().a > i) {
                 String strSubstring = str.substring(i, bzxVarD.f().a);
-                bzo.p(strSubstring, "substring(...)");
+                throwIfVar1IsNull(strSubstring, "substring(...)");
                 String strQuote = Pattern.quote(strSubstring);
-                bzo.p(strQuote, "quote(...)");
+                throwIfVar1IsNull(strQuote, "quote(...)");
                 sb.append(strQuote);
             }
             String strPattern = e.a.pattern();
-            bzo.p(strPattern, "pattern(...)");
+            throwIfVar1IsNull(strPattern, "pattern(...)");
             sb.append(strPattern);
             i = bzxVarD.f().b + 1;
         }
         if (i < str.length()) {
             String strSubstring2 = str.substring(i);
-            bzo.p(strSubstring2, "substring(...)");
+            throwIfVar1IsNull(strSubstring2, "substring(...)");
             String strQuote2 = Pattern.quote(strSubstring2);
-            bzo.p(strQuote2, "quote(...)");
+            throwIfVar1IsNull(strQuote2, "quote(...)");
             sb.append(strQuote2);
         }
     }
@@ -1102,12 +1201,13 @@ public final class cjd {
             return;
         }
         cjv cjvVar = cinVar.a;
-        bzo.q(str, "key");
+        throwIfVar1IsNull(str, "key");
         cjvVar.j(bundle, str, cjvVar.i(str2));
     }
 
     public static String y(String str) {
-        return (dnj.ab(str, "\\Q", false) && dnj.ab(str, "\\E", false)) ? dnr.bo(str, ".*", "\\E.*\\Q") : dnj.ab(str, "\\.\\*", false) ? dnr.bo(str, "\\.\\*", ".*") : str;
+        return (dnj.ab(str, "\\Q", false) && dnj.ab(str, "\\E", false)) ? dnr.bo(str, ".*", "\\E.*\\Q")
+                : dnj.ab(str, "\\.\\*", false) ? dnr.bo(str, "\\.\\*", ".*") : str;
     }
 
     public final boolean aa(bzx bzxVar, Bundle bundle, Map map) {
@@ -1125,7 +1225,7 @@ public final class cjd {
             bzt bztVarC = bzxVar.c.c(i2);
             if (bztVarC != null) {
                 strDecode = Uri.decode(bztVarC.a);
-                bzo.p(strDecode, "decode(...)");
+                throwIfVar1IsNull(strDecode, "decode(...)");
             }
             if (strDecode == null) {
                 strDecode = "";
@@ -1141,13 +1241,16 @@ public final class cjd {
         return true;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:41:0x00d8  */
+    /* JADX WARN: Found duplicated region for block: B:41:0x00d8 */
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Type inference failed for: r14v2 */
     /* JADX WARN: Type inference failed for: r14v3, types: [int] */
     /* JADX WARN: Type inference failed for: r14v9 */
     /* JADX WARN: Type inference failed for: r22v0, types: [java.util.Map] */
-    /* JADX WARN: Type inference failed for: r2v0, types: [java.lang.Object, me.hd.wauxv.obf.btt] */
+    /*
+     * JADX WARN: Type inference failed for: r2v0, types: [java.lang.Object,
+     * me.hd.wauxv.obf.btt]
+     */
     public final boolean ab(Uri uri, Bundle bundle, Map map) {
         bzx bzxVar;
         Object objValueOf;
@@ -1163,7 +1266,7 @@ public final class cjd {
             }
             ens ensVar = ens.a;
             boolean z2 = false;
-            Bundle bundleR = bht.r((csm[]) Arrays.copyOf(new csm[0], 0));
+            Bundle bundleR = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
             for (String str2 : cjcVar.b) {
                 cin cinVar = (cin) map.get(str2);
                 cjv cjvVar = cinVar != null ? cinVar.a : null;
@@ -1200,10 +1303,10 @@ public final class cjd {
                 String str4 = cjcVar.a;
                 if (str4 != null) {
                     Pattern patternCompile = Pattern.compile(str4);
-                    bzo.p(patternCompile, "compile(...)");
-                    bzo.q(str3, "input");
+                    throwIfVar1IsNull(patternCompile, "compile(...)");
+                    throwIfVar1IsNull(str3, "input");
                     Matcher matcher = patternCompile.matcher(str3);
-                    bzo.p(matcher, "matcher(...)");
+                    throwIfVar1IsNull(matcher, "matcher(...)");
                     bzxVar = !matcher.matches() ? null : new bzx(matcher, str3);
                 }
                 if (bzxVar == null) {
@@ -1226,7 +1329,7 @@ public final class cjd {
                     }
                     cin cinVar2 = (cin) map.get(str5);
                     try {
-                        bzo.q(str5, "key");
+                        throwIfVar1IsNull(str5, "key");
                     } catch (IllegalArgumentException unused) {
                     }
                     if (bundleR.containsKey(str5)) {
@@ -1262,7 +1365,8 @@ public final class cjd {
     public final boolean equals(Object obj) {
         if (obj != null && (obj instanceof cjd)) {
             cjd cjdVar = (cjd) obj;
-            if (bzo.f(this.g, cjdVar.g) && bzo.f(this.h, cjdVar.h) && bzo.f(this.i, cjdVar.i)) {
+            if (nullSafeIsEqual(this.g, cjdVar.g) && nullSafeIsEqual(this.h, cjdVar.h)
+                    && nullSafeIsEqual(this.i, cjdVar.i)) {
                 return true;
             }
         }
@@ -1278,8 +1382,14 @@ public final class cjd {
         return iHashCode2 + (str3 != null ? str3.hashCode() : 0);
     }
 
-    /* JADX WARN: Type inference failed for: r0v0, types: [java.lang.Object, me.hd.wauxv.obf.btt] */
-    /* JADX WARN: Type inference failed for: r1v1, types: [java.lang.Object, me.hd.wauxv.obf.btt] */
+    /*
+     * JADX WARN: Type inference failed for: r0v0, types: [java.lang.Object,
+     * me.hd.wauxv.obf.btt]
+     */
+    /*
+     * JADX WARN: Type inference failed for: r1v1, types: [java.lang.Object,
+     * me.hd.wauxv.obf.btt]
+     */
     public final ArrayList z() {
         Collection collectionValues = ((Map) this.n.getValue()).values();
         ArrayList arrayList = new ArrayList();

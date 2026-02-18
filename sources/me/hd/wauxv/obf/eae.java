@@ -6,7 +6,7 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class eae {
     public static final ead Companion = new ead();
-    public static final btt[] a = {null, ewz.am(btx.a, new dtr(14)), null};
+    public static final btt[] a = { null, ewz.am(btx.a, new dtr(14)), null };
     public final Integer b;
     public final List c;
     public final String d;
@@ -29,7 +29,8 @@ public final class eae {
             return false;
         }
         eae eaeVar = (eae) obj;
-        return bzo.f(this.b, eaeVar.b) && bzo.f(this.c, eaeVar.c) && bzo.f(this.d, eaeVar.d);
+        return nullSafeIsEqual(this.b, eaeVar.b) && nullSafeIsEqual(this.c, eaeVar.c)
+                && nullSafeIsEqual(this.d, eaeVar.d);
     }
 
     public final int hashCode() {
@@ -46,6 +47,6 @@ public final class eae {
         sb.append("ls3Proto(index=" /* cnb.z(-228509440015146L) */);
         bjs.w(sb, this.b, -228440720538410L);
         yg.v(sb, this.c, -227852310018858L);
-        return bjs.q(sb, this.d, ')');
+        return concat(sb, this.d, ')');
     }
 }

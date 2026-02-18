@@ -5,12 +5,12 @@ import java.util.NoSuchElementException;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class bzd extends bzf implements Iterator, bsw {
+public final class bzd extends bzf implements Iterator, IEmpty {
     public final /* synthetic */ int a;
 
     public bzd(bzg bzgVar, int i) {
         this.a = i;
-        bzo.q(bzgVar, "map");
+        throwIfVar1IsNull(bzgVar, "map");
         this.e = bzgVar;
         this.c = -1;
         this.d = bzgVar.i;
@@ -54,7 +54,7 @@ public final class bzd extends bzf implements Iterator, bsw {
                 this.b = i3 + 1;
                 this.c = i3;
                 Object[] objArr = bzgVar3.c;
-                bzo.n(objArr);
+                throwIfVar1IsNull(objArr);
                 Object obj2 = objArr[this.c];
                 j();
                 return obj2;

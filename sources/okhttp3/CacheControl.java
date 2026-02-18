@@ -3,7 +3,7 @@ package okhttp3;
 import java.util.concurrent.TimeUnit;
 import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.dnj;
 import me.hd.wauxv.obf.dnr;
 import okhttp3.internal.Util;
@@ -26,9 +26,13 @@ public final class CacheControl {
     private final int sMaxAgeSeconds;
     public static final Companion Companion = new Companion(null);
     public static final CacheControl FORCE_NETWORK = new Builder().noCache().build();
-    public static final CacheControl FORCE_CACHE = new Builder().onlyIfCached().maxStale(Integer.MAX_VALUE, TimeUnit.SECONDS).build();
+    public static final CacheControl FORCE_CACHE = new Builder().onlyIfCached()
+            .maxStale(Integer.MAX_VALUE, TimeUnit.SECONDS).build();
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Builder {
         private boolean immutable;
         private int maxAgeSeconds = -1;
@@ -47,7 +51,9 @@ public final class CacheControl {
         }
 
         public final CacheControl build() {
-            return new CacheControl(this.noCache, this.noStore, this.maxAgeSeconds, -1, false, false, false, this.maxStaleSeconds, this.minFreshSeconds, this.onlyIfCached, this.noTransform, this.immutable, null, null);
+            return new CacheControl(this.noCache, this.noStore, this.maxAgeSeconds, -1, false, false, false,
+                    this.maxStaleSeconds, this.minFreshSeconds, this.onlyIfCached, this.noTransform, this.immutable,
+                    null, null);
         }
 
         public final Builder immutable() {
@@ -56,27 +62,27 @@ public final class CacheControl {
         }
 
         public final Builder maxAge(int i, TimeUnit timeUnit) {
-            bzo.q(timeUnit, "timeUnit");
+            throwIfVar1IsNull(timeUnit, "timeUnit");
             if (i < 0) {
-                throw new IllegalArgumentException(bjs.i(i, "maxAge < 0: ").toString());
+                throw new IllegalArgumentException(concatVar2Var1(i, "maxAge < 0: ").toString());
             }
             this.maxAgeSeconds = clampToInt(timeUnit.toSeconds(i));
             return this;
         }
 
         public final Builder maxStale(int i, TimeUnit timeUnit) {
-            bzo.q(timeUnit, "timeUnit");
+            throwIfVar1IsNull(timeUnit, "timeUnit");
             if (i < 0) {
-                throw new IllegalArgumentException(bjs.i(i, "maxStale < 0: ").toString());
+                throw new IllegalArgumentException(concatVar2Var1(i, "maxStale < 0: ").toString());
             }
             this.maxStaleSeconds = clampToInt(timeUnit.toSeconds(i));
             return this;
         }
 
         public final Builder minFresh(int i, TimeUnit timeUnit) {
-            bzo.q(timeUnit, "timeUnit");
+            throwIfVar1IsNull(timeUnit, "timeUnit");
             if (i < 0) {
-                throw new IllegalArgumentException(bjs.i(i, "minFresh < 0: ").toString());
+                throw new IllegalArgumentException(concatVar2Var1(i, "minFresh < 0: ").toString());
             }
             this.minFreshSeconds = clampToInt(timeUnit.toSeconds(i));
             return this;
@@ -103,7 +109,10 @@ public final class CacheControl {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
@@ -120,38 +129,39 @@ public final class CacheControl {
             return str.length();
         }
 
-        public static /* synthetic */ int indexOfElement$default(Companion companion, String str, String str2, int i, int i2, Object obj) {
+        public static /* synthetic */ int indexOfElement$default(Companion companion, String str, String str2, int i,
+                int i2, Object obj) {
             if ((i2 & 2) != 0) {
                 i = 0;
             }
             return companion.indexOfElement(str, str2, i);
         }
 
-        /* JADX WARN: Found duplicated region for block: B:15:0x004b  */
-        /* JADX WARN: Found duplicated region for block: B:17:0x006a  */
-        /* JADX WARN: Found duplicated region for block: B:28:0x00b8  */
+        /* JADX WARN: Found duplicated region for block: B:15:0x004b */
+        /* JADX WARN: Found duplicated region for block: B:17:0x006a */
+        /* JADX WARN: Found duplicated region for block: B:28:0x00b8 */
         /* JADX WARN: Found duplicated region for block: B:32:0x00c6 A[MOVE_INLINED] */
-        /* JADX WARN: Found duplicated region for block: B:34:0x00d0  */
+        /* JADX WARN: Found duplicated region for block: B:34:0x00d0 */
         /* JADX WARN: Found duplicated region for block: B:36:0x00d8 A[MOVE_INLINED] */
-        /* JADX WARN: Found duplicated region for block: B:37:0x00df  */
-        /* JADX WARN: Found duplicated region for block: B:39:0x00e7  */
-        /* JADX WARN: Found duplicated region for block: B:41:0x00f2  */
-        /* JADX WARN: Found duplicated region for block: B:43:0x00fb  */
-        /* JADX WARN: Found duplicated region for block: B:44:0x0100  */
+        /* JADX WARN: Found duplicated region for block: B:37:0x00df */
+        /* JADX WARN: Found duplicated region for block: B:39:0x00e7 */
+        /* JADX WARN: Found duplicated region for block: B:41:0x00f2 */
+        /* JADX WARN: Found duplicated region for block: B:43:0x00fb */
+        /* JADX WARN: Found duplicated region for block: B:44:0x0100 */
         /* JADX WARN: Found duplicated region for block: B:46:0x0108 A[MOVE_INLINED] */
-        /* JADX WARN: Found duplicated region for block: B:47:0x010f  */
+        /* JADX WARN: Found duplicated region for block: B:47:0x010f */
         /* JADX WARN: Found duplicated region for block: B:49:0x0117 A[MOVE_INLINED] */
-        /* JADX WARN: Found duplicated region for block: B:50:0x011e  */
+        /* JADX WARN: Found duplicated region for block: B:50:0x011e */
         /* JADX WARN: Found duplicated region for block: B:52:0x0126 A[MOVE_INLINED] */
-        /* JADX WARN: Found duplicated region for block: B:53:0x012e  */
-        /* JADX WARN: Found duplicated region for block: B:55:0x0136  */
-        /* JADX WARN: Found duplicated region for block: B:56:0x013e  */
-        /* JADX WARN: Found duplicated region for block: B:58:0x0146  */
-        /* JADX WARN: Found duplicated region for block: B:59:0x014c  */
+        /* JADX WARN: Found duplicated region for block: B:53:0x012e */
+        /* JADX WARN: Found duplicated region for block: B:55:0x0136 */
+        /* JADX WARN: Found duplicated region for block: B:56:0x013e */
+        /* JADX WARN: Found duplicated region for block: B:58:0x0146 */
+        /* JADX WARN: Found duplicated region for block: B:59:0x014c */
         /* JADX WARN: Found duplicated region for block: B:61:0x0155 A[MOVE_INLINED] */
-        /* JADX WARN: Found duplicated region for block: B:62:0x015e  */
+        /* JADX WARN: Found duplicated region for block: B:62:0x015e */
         /* JADX WARN: Found duplicated region for block: B:64:0x0166 A[MOVE_INLINED] */
-        /* JADX WARN: Found duplicated region for block: B:65:0x016f  */
+        /* JADX WARN: Found duplicated region for block: B:65:0x016f */
         /* JADX WARN: Found duplicated region for block: B:67:0x0177 A[MOVE_INLINED] */
         public final CacheControl parse(Headers headers) {
             int i;
@@ -162,7 +172,7 @@ public final class CacheControl {
             int iIndexOfElement2;
             String string2;
             Headers headers2 = headers;
-            bzo.q(headers2, "headers");
+            throwIfVar1IsNull(headers2, "headers");
             int size = headers2.size();
             boolean z2 = true;
             boolean z3 = true;
@@ -192,22 +202,24 @@ public final class CacheControl {
                         iIndexOfElement = indexOfElement(strValue, "=,;", i);
                         String strSubstring = strValue.substring(i, iIndexOfElement);
                         z = z2;
-                        bzo.p(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
+                        throwIfVar1IsNull(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
                         string = dnj.ba(strSubstring).toString();
                         if (iIndexOfElement != strValue.length()) {
                             i2 = size;
                             if (strValue.charAt(iIndexOfElement) == ',' && strValue.charAt(iIndexOfElement) != ';') {
                                 int iIndexOfNonWhitespace = Util.indexOfNonWhitespace(strValue, iIndexOfElement + 1);
-                                if (iIndexOfNonWhitespace >= strValue.length() || strValue.charAt(iIndexOfNonWhitespace) != '\"') {
+                                if (iIndexOfNonWhitespace >= strValue.length()
+                                        || strValue.charAt(iIndexOfNonWhitespace) != '\"') {
                                     iIndexOfElement2 = indexOfElement(strValue, ",;", iIndexOfNonWhitespace);
                                     String strSubstring2 = strValue.substring(iIndexOfNonWhitespace, iIndexOfElement2);
-                                    bzo.p(strSubstring2, "this as java.lang.String…ing(startIndex, endIndex)");
+                                    throwIfVar1IsNull(strSubstring2,
+                                            "this as java.lang.String…ing(startIndex, endIndex)");
                                     string2 = dnj.ba(strSubstring2).toString();
                                 } else {
                                     int i4 = iIndexOfNonWhitespace + 1;
                                     int iAh = dnj.ah('\"', i4, 4, strValue);
                                     string2 = strValue.substring(i4, iAh);
-                                    bzo.p(string2, "this as java.lang.String…ing(startIndex, endIndex)");
+                                    throwIfVar1IsNull(string2, "this as java.lang.String…ing(startIndex, endIndex)");
                                     iIndexOfElement2 = iAh + 1;
                                 }
                             }
@@ -327,7 +339,7 @@ public final class CacheControl {
                     iIndexOfElement = indexOfElement(strValue, "=,;", i);
                     String strSubstring3 = strValue.substring(i, iIndexOfElement);
                     z = z2;
-                    bzo.p(strSubstring3, "this as java.lang.String…ing(startIndex, endIndex)");
+                    throwIfVar1IsNull(strSubstring3, "this as java.lang.String…ing(startIndex, endIndex)");
                     string = dnj.ba(strSubstring3).toString();
                     if (iIndexOfElement != strValue.length()) {
                         i2 = size;
@@ -436,14 +448,16 @@ public final class CacheControl {
                 z2 = z2;
                 size = size;
             }
-            return new CacheControl(z4, z5, nonNegativeInt, nonNegativeInt2, z6, z7, z8, nonNegativeInt3, nonNegativeInt4, z9, z10, z11, !z3 ? null : str, null);
+            return new CacheControl(z4, z5, nonNegativeInt, nonNegativeInt2, z6, z7, z8, nonNegativeInt3,
+                    nonNegativeInt4, z9, z10, z11, !z3 ? null : str, null);
         }
 
         private Companion() {
         }
     }
 
-    public /* synthetic */ CacheControl(boolean z, boolean z2, int i, int i2, boolean z3, boolean z4, boolean z5, int i3, int i4, boolean z6, boolean z7, boolean z8, String str, akd akdVar) {
+    public /* synthetic */ CacheControl(boolean z, boolean z2, int i, int i2, boolean z3, boolean z4, boolean z5,
+            int i3, int i4, boolean z6, boolean z7, boolean z8, String str, akd akdVar) {
         this(z, z2, i, i2, z3, z4, z5, i3, i4, z6, z7, z8, str);
     }
 
@@ -594,12 +608,13 @@ public final class CacheControl {
         }
         sb.delete(sb.length() - 2, sb.length());
         String string = sb.toString();
-        bzo.p(string, "StringBuilder().apply(builderAction).toString()");
+        throwIfVar1IsNull(string, "StringBuilder().apply(builderAction).toString()");
         this.headerValue = string;
         return string;
     }
 
-    private CacheControl(boolean z, boolean z2, int i, int i2, boolean z3, boolean z4, boolean z5, int i3, int i4, boolean z6, boolean z7, boolean z8, String str) {
+    private CacheControl(boolean z, boolean z2, int i, int i2, boolean z3, boolean z4, boolean z5, int i3, int i4,
+            boolean z6, boolean z7, boolean z8, String str) {
         this.noCache = z;
         this.noStore = z2;
         this.maxAgeSeconds = i;

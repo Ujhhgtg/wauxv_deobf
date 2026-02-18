@@ -15,7 +15,7 @@ import me.hd.wauxv.R;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class qw extends doo implements bnp {
+public final class qw extends BaseHook implements bnp {
     public static final qw a;
     public static final String b;
     public static final dov c;
@@ -55,27 +55,27 @@ public final class qw extends doo implements bnp {
     public final void e() {
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String f() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getName() {
         return m;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String g() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getCategory() {
         return l;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String o() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getDescription() {
         return n;
     }
 
-    @Override // me.hd.wauxv.obf.doo
+    @Override // me.hd.wauxv.obf.BaseHook
     public final bgf p() {
         return r;
     }
 
-    @Override // me.hd.wauxv.obf.doo
+    @Override // me.hd.wauxv.obf.BaseHook
     public final boolean q() {
         return s;
     }
@@ -83,8 +83,10 @@ public final class qw extends doo implements bnp {
     @Override // me.hd.wauxv.obf.bnp
     public final void t(Activity activity, ViewGroup viewGroup, Object obj) {
         if (z()) {
-            qb qbVar = new qb(aqu.e(cnf.am(activity)), R.attr.bottomNavigationStyle, R.style.Widget_Design_BottomNavigationView);
-            jx jxVarAo = bhu.ao(qbVar.getContext(), null, cxs.d, R.attr.bottomNavigationStyle, R.style.Widget_Design_BottomNavigationView, new int[0]);
+            qb qbVar = new qb(aqu.e(cnf.am(activity)), R.attr.bottomNavigationStyle,
+                    R.style.Widget_Design_BottomNavigationView);
+            jx jxVarAo = bhu.ao(qbVar.getContext(), null, cxs.d, R.attr.bottomNavigationStyle,
+                    R.style.Widget_Design_BottomNavigationView, new int[0]);
             TypedArray typedArray = (TypedArray) jxVarAo.e;
             qbVar.setItemHorizontalTranslationEnabled(typedArray.getBoolean(2, true));
             if (typedArray.hasValue(0)) {
@@ -109,14 +111,23 @@ public final class qw extends doo implements bnp {
             qw qwVar = a;
             qwVar.getClass();
             menuItemAdd.setIcon(new BitmapDrawable(qbVar.getResources(), (Bitmap) d.getValue()));
-            menu.add(0, 1, 1, "" /* cnb.z(-435548338518826L) */).setIcon(new BitmapDrawable(qbVar.getResources(), (Bitmap) h.getValue()));
-            menu.add(0, 2, 2, "" /* cnb.z(-435561223420714L) */).setIcon(new BitmapDrawable(qbVar.getResources(), (Bitmap) i.getValue()));
-            menu.add(0, 3, 3, "" /* cnb.z(-435556928453418L) */).setIcon(new BitmapDrawable(qbVar.getResources(), (Bitmap) j.getValue()));
+            menu.add(0, 1, 1, "" /* cnb.z(-435548338518826L) */)
+                    .setIcon(new BitmapDrawable(qbVar.getResources(), (Bitmap) h.getValue()));
+            menu.add(0, 2, 2, "" /* cnb.z(-435561223420714L) */)
+                    .setIcon(new BitmapDrawable(qbVar.getResources(), (Bitmap) i.getValue()));
+            menu.add(0, 3, 3, "" /* cnb.z(-435556928453418L) */)
+                    .setIcon(new BitmapDrawable(qbVar.getResources(), (Bitmap) j.getValue()));
             qbVar.setOnItemSelectedListener(new qp(obj, 0));
             ViewParent parent = viewGroup.getParent();
-            bzo.o(parent, "null cannot be cast to non-null type android.view.ViewGroup" /* cnb.z(-435569813355306L) */);
+            throwIfVar1IsNull(parent, "null cannot be cast to non-null type android.view.ViewGroup" /*
+                                                                                                     * cnb.z(-
+                                                                                                     * 435569813355306L)
+                                                                                                     */);
             View childAt = ((ViewGroup) parent).getChildAt(1);
-            bzo.o(childAt, "null cannot be cast to non-null type android.view.ViewGroup" /* cnb.z(-435827511393066L) */);
+            throwIfVar1IsNull(childAt, "null cannot be cast to non-null type android.view.ViewGroup" /*
+                                                                                                      * cnb.z(-
+                                                                                                      * 435827511393066L)
+                                                                                                      */);
             ((ViewGroup) childAt).addView(qbVar);
             int i2 = bte.a;
             cde cdeVarT = dqc.bi(obj).t();

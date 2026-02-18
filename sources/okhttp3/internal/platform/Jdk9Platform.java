@@ -6,7 +6,7 @@ import javax.net.ssl.SSLSocket;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.X509TrustManager;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.dnq;
 import okhttp3.Protocol;
 
@@ -16,7 +16,10 @@ public class Jdk9Platform extends Platform {
     public static final Companion Companion = new Companion(null);
     private static final boolean isAvailable;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
@@ -55,16 +58,17 @@ public class Jdk9Platform extends Platform {
 
     @Override // okhttp3.internal.platform.Platform
     public void configureTlsExtensions(SSLSocket sSLSocket, String str, List<Protocol> list) {
-        bzo.q(sSLSocket, "sslSocket");
-        bzo.q(list, "protocols");
+        throwIfVar1IsNull(sSLSocket, "sslSocket");
+        throwIfVar1IsNull(list, "protocols");
         SSLParameters sSLParameters = sSLSocket.getSSLParameters();
-        sSLParameters.setApplicationProtocols((String[]) Platform.Companion.alpnProtocolNames(list).toArray(new String[0]));
+        sSLParameters
+                .setApplicationProtocols((String[]) Platform.Companion.alpnProtocolNames(list).toArray(new String[0]));
         sSLSocket.setSSLParameters(sSLParameters);
     }
 
     @Override // okhttp3.internal.platform.Platform
     public String getSelectedProtocol(SSLSocket sSLSocket) {
-        bzo.q(sSLSocket, "sslSocket");
+        throwIfVar1IsNull(sSLSocket, "sslSocket");
         try {
             String applicationProtocol = sSLSocket.getApplicationProtocol();
             if (applicationProtocol == null ? true : applicationProtocol.equals("")) {
@@ -78,7 +82,8 @@ public class Jdk9Platform extends Platform {
 
     @Override // okhttp3.internal.platform.Platform
     public X509TrustManager trustManager(SSLSocketFactory sSLSocketFactory) {
-        bzo.q(sSLSocketFactory, "sslSocketFactory");
-        throw new UnsupportedOperationException("clientBuilder.sslSocketFactory(SSLSocketFactory) not supported on JDK 9+");
+        throwIfVar1IsNull(sSLSocketFactory, "sslSocketFactory");
+        throw new UnsupportedOperationException(
+                "clientBuilder.sslSocketFactory(SSLSocketFactory) not supported on JDK 9+");
     }
 }

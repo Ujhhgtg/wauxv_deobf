@@ -35,7 +35,8 @@ public final class akz implements bul {
                         break;
                     case 3:
                         EmojiCompatInitializer emojiCompatInitializer = atgVar.b;
-                        (Build.VERSION.SDK_INT >= 28 ? acr.a(Looper.getMainLooper()) : new Handler(Looper.getMainLooper())).postDelayed(new ati(), 500L);
+                        (Build.VERSION.SDK_INT >= 28 ? acr.a(Looper.getMainLooper())
+                                : new Handler(Looper.getMainLooper())).postDelayed(new ati(), 500L);
                         atgVar.a.o(atgVar);
                         break;
                     case 4:
@@ -50,7 +51,7 @@ public final class akz implements bul {
                     case 7:
                         throw new IllegalArgumentException("ON_ANY must not been send by anybody");
                     default:
-                        throw new abt();
+                        throw new QueryDidNotReturnUniqueResultRuntimeException();
                 }
                 bul bulVar = (bul) this.c;
                 if (bulVar != null) {
@@ -96,7 +97,7 @@ public final class akz implements bul {
 
     public akz(atg atgVar, bul bulVar) {
         this.a = 0;
-        bzo.q(atgVar, "defaultLifecycleObserver");
+        throwIfVar1IsNull(atgVar, "defaultLifecycleObserver");
         this.b = atgVar;
         this.c = bulVar;
     }

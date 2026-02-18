@@ -137,7 +137,7 @@ public class BottomSheetBehavior<V extends View> extends agr {
             return null;
         }
         WeakHashMap weakHashMap = eqz.a;
-        if (eqq.h(view)) {
+        if (eqq.locateDex(view)) {
             return view;
         }
         if (!(view instanceof ViewGroup)) {
@@ -197,13 +197,14 @@ public class BottomSheetBehavior<V extends View> extends agr {
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:21:0x0044  */
+    /* JADX WARN: Found duplicated region for block: B:21:0x0044 */
     public final float by() {
         WeakReference weakReference;
         WindowInsets rootWindowInsets;
         float f;
         float f2 = 0.0f;
-        if (this.w != null && (weakReference = this.bi) != null && weakReference.get() != null && Build.VERSION.SDK_INT >= 31) {
+        if (this.w != null && (weakReference = this.bi) != null && weakReference.get() != null
+                && Build.VERSION.SDK_INT >= 31) {
             View view = (View) this.bi.get();
             if (cd() && (rootWindowInsets = view.getRootWindowInsets()) != null) {
                 float fDv = this.w.dv();
@@ -229,7 +230,8 @@ public class BottomSheetBehavior<V extends View> extends agr {
 
     public final int bz() {
         int i;
-        return this.r ? Math.min(Math.max(this.s, this.bh - ((this.bg * 9) / 16)), this.bf) + this.aj : (this.ab || this.ac || (i = this.aa) <= 0) ? this.q + this.aj : Math.max(this.q, i + this.v);
+        return this.r ? Math.min(Math.max(this.s, this.bh - ((this.bg * 9) / 16)), this.bf) + this.aj
+                : (this.ab || this.ac || (i = this.aa) <= 0) ? this.q + this.aj : Math.max(this.q, i + this.v);
     }
 
     public final void ca(int i) {
@@ -270,7 +272,7 @@ public class BottomSheetBehavior<V extends View> extends agr {
         if (i == 6) {
             return this.as;
         }
-        throw new IllegalArgumentException(bjs.i(i, "Invalid state to get top offset: "));
+        throw new IllegalArgumentException(concatVar2Var1(i, "Invalid state to get top offset: "));
     }
 
     public final boolean cd() {
@@ -304,7 +306,8 @@ public class BottomSheetBehavior<V extends View> extends agr {
 
     public final void cf(int i) {
         if (i == 1 || i == 2) {
-            throw new IllegalArgumentException(yg.o(new StringBuilder("STATE_"), i == 1 ? "DRAGGING" : "SETTLING", " should not be set externally."));
+            throw new IllegalArgumentException(yg.o(new StringBuilder("STATE_"), i == 1 ? "DRAGGING" : "SETTLING",
+                    " should not be set externally."));
         }
         if (!this.aw && i == 5) {
             Log.w("BottomSheetBehavior", "Cannot set state: " + i);
@@ -366,68 +369,73 @@ public class BottomSheetBehavior<V extends View> extends agr {
         return Math.abs(((f * this.be) + ((float) view.getTop())) - ((float) this.au)) / ((float) bz()) > 0.5f;
     }
 
-    /* JADX WARN: Code restructure failed: missing block: B:15:0x0030, code lost:
-    
-        if (r3 != false) goto L16;
-     */
-    /* JADX WARN: Code restructure failed: missing block: B:16:0x0032, code lost:
-    
-        cg(2);
-        ck(r4, true);
-        r2.ao.f(r4);
-     */
-    /* JADX WARN: Code restructure failed: missing block: B:17:0x003f, code lost:
-    
-        return;
-     */
-    /* JADX WARN: Code restructure failed: missing block: B:6:0x0012, code lost:
-    
-        if (r1.ak(r3.getLeft(), r0) != false) goto L16;
+    /*
+     * JADX WARN: Code restructure failed: missing block: B:15:0x0030, code lost:
+     * 
+     * if (r3 != false) goto L16;
      */
     /*
-        Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
-    */
+     * JADX WARN: Code restructure failed: missing block: B:16:0x0032, code lost:
+     * 
+     * cg(2);
+     * ck(r4, true);
+     * r2.ao.f(r4);
+     */
+    /*
+     * JADX WARN: Code restructure failed: missing block: B:17:0x003f, code lost:
+     * 
+     * return;
+     */
+    /*
+     * JADX WARN: Code restructure failed: missing block: B:6:0x0012, code lost:
+     * 
+     * if (r1.ak(r3.getLeft(), r0) != false) goto L16;
+     */
+    /*
+     * Code decompiled incorrectly, please refer to instructions dump.
+     * To view partially-correct add '--show-bad-code' argument
+     */
     public final void ci(android.view.View r3, int r4, boolean r5) {
         /*
-            r2 = this;
-            int r0 = r2.cc(r4)
-            me.hd.wauxv.obf.era r1 = r2.ba
-            if (r1 == 0) goto L40
-            if (r5 == 0) goto L15
-            int r3 = r3.getLeft()
-            boolean r3 = r1.ak(r3, r0)
-            if (r3 == 0) goto L40
-            goto L32
-        L15:
-            int r5 = r3.getLeft()
-            r1.s = r3
-            r3 = -1
-            r1.d = r3
-            r3 = 0
-            boolean r3 = r1.ad(r5, r0, r3, r3)
-            if (r3 != 0) goto L30
-            int r5 = r1.b
-            if (r5 != 0) goto L30
-            android.view.View r5 = r1.s
-            if (r5 == 0) goto L30
-            r5 = 0
-            r1.s = r5
-        L30:
-            if (r3 == 0) goto L40
-        L32:
-            r3 = 2
-            r2.cg(r3)
-            r3 = 1
-            r2.ck(r4, r3)
-            me.hd.wauxv.obf.qf r3 = r2.ao
-            r3.f(r4)
-            return
-        L40:
-            r2.cg(r4)
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.google.android.material.bottomsheet.BottomSheetBehavior.ci(android.view.View, int, boolean):void");
+         * r2 = this;
+         * int r0 = r2.cc(r4)
+         * me.hd.wauxv.obf.era r1 = r2.ba
+         * if (r1 == 0) goto L40
+         * if (r5 == 0) goto L15
+         * int r3 = r3.getLeft()
+         * boolean r3 = r1.ak(r3, r0)
+         * if (r3 == 0) goto L40
+         * goto L32
+         * L15:
+         * int r5 = r3.getLeft()
+         * r1.s = r3
+         * r3 = -1
+         * r1.d = r3
+         * r3 = 0
+         * boolean r3 = r1.ad(r5, r0, r3, r3)
+         * if (r3 != 0) goto L30
+         * int r5 = r1.b
+         * if (r5 != 0) goto L30
+         * android.view.View r5 = r1.s
+         * if (r5 == 0) goto L30
+         * r5 = 0
+         * r1.s = r5
+         * L30:
+         * if (r3 == 0) goto L40
+         * L32:
+         * r3 = 2
+         * r2.cg(r3)
+         * r3 = 1
+         * r2.ck(r4, r3)
+         * me.hd.wauxv.obf.qf r3 = r2.ao
+         * r3.f(r4)
+         * return
+         * L40:
+         * r2.cg(r4)
+         * return
+         */
+        throw new UnsupportedOperationException(
+                "Method not decompiled: com.google.android.material.bottomsheet.BottomSheetBehavior.ci(android.view.View, int, boolean):void");
     }
 
     public final void cj() {
@@ -477,7 +485,8 @@ public class BottomSheetBehavior<V extends View> extends agr {
                     iP = i4;
                     break;
                 }
-                if (TextUtils.equals(string, ((AccessibilityNodeInfo.AccessibilityAction) ((ax) arrayListL.get(i2)).l).getLabel())) {
+                if (TextUtils.equals(string,
+                        ((AccessibilityNodeInfo.AccessibilityAction) ((ax) arrayListL.get(i2)).l).getLabel())) {
                     iP = ((ax) arrayListL.get(i2)).p();
                     break;
                 }
@@ -486,7 +495,9 @@ public class BottomSheetBehavior<V extends View> extends agr {
             if (iP != -1) {
                 ax axVar = new ax(null, iP, string, ekVar, null);
                 View.AccessibilityDelegate accessibilityDelegateJ = eqz.j(view);
-                aq aqVar = accessibilityDelegateJ == null ? null : accessibilityDelegateJ instanceof ap ? ((ap) accessibilityDelegateJ).a : new aq(accessibilityDelegateJ);
+                aq aqVar = accessibilityDelegateJ == null ? null
+                        : accessibilityDelegateJ instanceof ap ? ((ap) accessibilityDelegateJ).a
+                                : new aq(accessibilityDelegateJ);
                 if (aqVar == null) {
                     aqVar = new aq();
                 }
@@ -594,7 +605,8 @@ public class BottomSheetBehavior<V extends View> extends agr {
             view.setFitsSystemWindows(true);
         }
         if (this.bi == null) {
-            this.s = coordinatorLayout.getResources().getDimensionPixelSize(R.dimen.design_bottom_sheet_peek_height_min);
+            this.s = coordinatorLayout.getResources()
+                    .getDimensionPixelSize(R.dimen.design_bottom_sheet_peek_height_min);
             boolean z = (Build.VERSION.SDK_INT < 29 || this.ab || this.r) ? false : true;
             if (this.ac || this.ad || this.ae || this.ag || this.ah || this.ai || z) {
                 ewz.af(view, new cxc(this, z));
@@ -602,7 +614,8 @@ public class BottomSheetBehavior<V extends View> extends agr {
             eqz.u(view, new bpt(view));
             this.bi = new WeakReference(view);
             Context context = view.getContext();
-            ajn.ae(context, R.attr.motionEasingStandardDecelerateInterpolator, new PathInterpolator(0.0f, 0.0f, 0.0f, 1.0f));
+            ajn.ae(context, R.attr.motionEasingStandardDecelerateInterpolator,
+                    new PathInterpolator(0.0f, 0.0f, 0.0f, 1.0f));
             ajn.ad(context, R.attr.motionDurationMedium2, 300);
             ajn.ad(context, R.attr.motionDurationShort3, 150);
             ajn.ad(context, R.attr.motionDurationShort2, 100);
@@ -684,7 +697,13 @@ public class BottomSheetBehavior<V extends View> extends agr {
     @Override // me.hd.wauxv.obf.agr
     public final boolean j(CoordinatorLayout coordinatorLayout, View view, int i, int i2, int i3) {
         ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) view.getLayoutParams();
-        view.measure(bt(i, coordinatorLayout.getPaddingRight() + coordinatorLayout.getPaddingLeft() + marginLayoutParams.leftMargin + marginLayoutParams.rightMargin + i2, this.y, marginLayoutParams.width), bt(i3, coordinatorLayout.getPaddingBottom() + coordinatorLayout.getPaddingTop() + marginLayoutParams.topMargin + marginLayoutParams.bottomMargin, this.z, marginLayoutParams.height));
+        view.measure(bt(i,
+                coordinatorLayout.getPaddingRight() + coordinatorLayout.getPaddingLeft() + marginLayoutParams.leftMargin
+                        + marginLayoutParams.rightMargin + i2,
+                this.y, marginLayoutParams.width),
+                bt(i3, coordinatorLayout.getPaddingBottom() + coordinatorLayout.getPaddingTop()
+                        + marginLayoutParams.topMargin + marginLayoutParams.bottomMargin, this.z,
+                        marginLayoutParams.height));
         return true;
     }
 
@@ -784,16 +803,16 @@ public class BottomSheetBehavior<V extends View> extends agr {
         return (i & 2) != 0;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:30:0x0055  */
-    /* JADX WARN: Found duplicated region for block: B:32:0x005a  */
-    /* JADX WARN: Found duplicated region for block: B:34:0x0062  */
-    /* JADX WARN: Found duplicated region for block: B:37:0x0074  */
-    /* JADX WARN: Found duplicated region for block: B:39:0x0078  */
-    /* JADX WARN: Found duplicated region for block: B:42:0x0083  */
-    /* JADX WARN: Found duplicated region for block: B:45:0x0093  */
-    /* JADX WARN: Found duplicated region for block: B:47:0x0097  */
-    /* JADX WARN: Found duplicated region for block: B:48:0x0099  */
-    /* JADX WARN: Found duplicated region for block: B:50:0x00ae  */
+    /* JADX WARN: Found duplicated region for block: B:30:0x0055 */
+    /* JADX WARN: Found duplicated region for block: B:32:0x005a */
+    /* JADX WARN: Found duplicated region for block: B:34:0x0062 */
+    /* JADX WARN: Found duplicated region for block: B:37:0x0074 */
+    /* JADX WARN: Found duplicated region for block: B:39:0x0078 */
+    /* JADX WARN: Found duplicated region for block: B:42:0x0083 */
+    /* JADX WARN: Found duplicated region for block: B:45:0x0093 */
+    /* JADX WARN: Found duplicated region for block: B:47:0x0097 */
+    /* JADX WARN: Found duplicated region for block: B:48:0x0099 */
+    /* JADX WARN: Found duplicated region for block: B:50:0x00ae */
     @Override // me.hd.wauxv.obf.agr
     public final void p(CoordinatorLayout coordinatorLayout, View view, View view2, int i) {
         int top;
@@ -917,7 +936,9 @@ public class BottomSheetBehavior<V extends View> extends agr {
         if (this.bb || (eraVar = this.ba) == null || !eraVar.al(motionEvent)) {
             WeakReference weakReference2 = this.bj;
             View view3 = weakReference2 != null ? (View) weakReference2.get() : null;
-            if (actionMasked != 2 || view3 == null || this.bb || this.az == 1 || coordinatorLayout.ao(view3, (int) motionEvent.getX(), (int) motionEvent.getY()) || this.ba == null || (i = this.bn) == -1 || Math.abs(i - motionEvent.getY()) <= this.ba.c) {
+            if (actionMasked != 2 || view3 == null || this.bb || this.az == 1
+                    || coordinatorLayout.ao(view3, (int) motionEvent.getX(), (int) motionEvent.getY())
+                    || this.ba == null || (i = this.bn) == -1 || Math.abs(i - motionEvent.getY()) <= this.ba.c) {
                 return false;
             }
         }
@@ -983,7 +1004,8 @@ public class BottomSheetBehavior<V extends View> extends agr {
             this.x = cnb.v(context, typedArrayObtainStyledAttributes, 3);
         }
         if (typedArrayObtainStyledAttributes.hasValue(21)) {
-            this.am = dgm.n(context, attributeSet, R.attr.bottomSheetStyle, R.style.Widget_Design_BottomSheet_Modal).m();
+            this.am = dgm.n(context, attributeSet, R.attr.bottomSheetStyle, R.style.Widget_Design_BottomSheet_Modal)
+                    .m();
         }
         dgm dgmVar = this.am;
         if (dgmVar != null) {

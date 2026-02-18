@@ -18,7 +18,7 @@ import me.hd.wauxv.obf.avd;
 import me.hd.wauxv.obf.bfu;
 import me.hd.wauxv.obf.btp;
 import me.hd.wauxv.obf.btt;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.dov;
 import okhttp3.internal.Util;
 
@@ -31,24 +31,28 @@ public final class Handshake {
     private final btt peerCertificates$delegate;
     private final TlsVersion tlsVersion;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
         }
 
         private final List<Certificate> toImmutableList(Certificate[] certificateArr) {
-            return certificateArr != null ? Util.immutableListOf(Arrays.copyOf(certificateArr, certificateArr.length)) : avd.a;
+            return certificateArr != null ? Util.immutableListOf(Arrays.copyOf(certificateArr, certificateArr.length))
+                    : avd.a;
         }
 
         public final Handshake a(SSLSession sSLSession) {
-            bzo.q(sSLSession, "sslSession");
+            throwIfVar1IsNull(sSLSession, "sslSession");
             return get(sSLSession);
         }
 
         public final Handshake get(SSLSession sSLSession) throws IOException {
             List<Certificate> immutableList;
-            bzo.q(sSLSession, "<this>");
+            throwIfVar1IsNull(sSLSession, "<this>");
             String cipherSuite = sSLSession.getCipherSuite();
             if (cipherSuite == null) {
                 throw new IllegalStateException("cipherSuite == null");
@@ -70,27 +74,40 @@ public final class Handshake {
             } catch (SSLPeerUnverifiedException unused) {
                 immutableList = avd.a;
             }
-            return new Handshake(tlsVersionForJavaName, cipherSuiteForJavaName, toImmutableList(sSLSession.getLocalCertificates()), new Handshake$Companion$handshake$1(immutableList));
+            return new Handshake(tlsVersionForJavaName, cipherSuiteForJavaName,
+                    toImmutableList(sSLSession.getLocalCertificates()),
+                    new Handshake$Companion$handshake$1(immutableList));
         }
 
         private Companion() {
         }
 
-        public final Handshake get(TlsVersion tlsVersion, CipherSuite cipherSuite, List<? extends Certificate> list, List<? extends Certificate> list2) {
-            bzo.q(tlsVersion, "tlsVersion");
-            bzo.q(cipherSuite, "cipherSuite");
-            bzo.q(list, "peerCertificates");
-            bzo.q(list2, "localCertificates");
-            return new Handshake(tlsVersion, cipherSuite, Util.toImmutableList(list2), new Handshake$Companion$get$1(Util.toImmutableList(list)));
+        public final Handshake get(TlsVersion tlsVersion, CipherSuite cipherSuite, List<? extends Certificate> list,
+                List<? extends Certificate> list2) {
+            throwIfVar1IsNull(tlsVersion, "tlsVersion");
+            throwIfVar1IsNull(cipherSuite, "cipherSuite");
+            throwIfVar1IsNull(list, "peerCertificates");
+            throwIfVar1IsNull(list2, "localCertificates");
+            return new Handshake(tlsVersion, cipherSuite, Util.toImmutableList(list2),
+                    new Handshake$Companion$get$1(Util.toImmutableList(list)));
         }
     }
 
-    /* JADX INFO: renamed from: okhttp3.Handshake$peerCertificates$2, reason: invalid class name */
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: renamed from: okhttp3.Handshake$peerCertificates$2, reason:
+     * invalid class name
+     */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class AnonymousClass2 extends btp implements bfu {
         final /* synthetic */ bfu $peerCertificatesFn;
 
-        /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+        /*
+         * JADX WARN: 'super' call moved to the top of the method (can break code
+         * semantics)
+         */
         public AnonymousClass2(bfu bfuVar) {
             super(0);
             this.$peerCertificatesFn = bfuVar;
@@ -108,10 +125,10 @@ public final class Handshake {
 
     /* JADX WARN: Multi-variable type inference failed */
     public Handshake(TlsVersion tlsVersion, CipherSuite cipherSuite, List<? extends Certificate> list, bfu bfuVar) {
-        bzo.q(tlsVersion, "tlsVersion");
-        bzo.q(cipherSuite, "cipherSuite");
-        bzo.q(list, "localCertificates");
-        bzo.q(bfuVar, "peerCertificatesFn");
+        throwIfVar1IsNull(tlsVersion, "tlsVersion");
+        throwIfVar1IsNull(cipherSuite, "cipherSuite");
+        throwIfVar1IsNull(list, "localCertificates");
+        throwIfVar1IsNull(bfuVar, "peerCertificatesFn");
         this.tlsVersion = tlsVersion;
         this.cipherSuite = cipherSuite;
         this.localCertificates = list;
@@ -127,7 +144,7 @@ public final class Handshake {
             return ((X509Certificate) certificate).getSubjectDN().toString();
         }
         String type = certificate.getType();
-        bzo.p(type, f.y);
+        throwIfVar1IsNull(type, f.y);
         return type;
     }
 
@@ -160,7 +177,9 @@ public final class Handshake {
             return false;
         }
         Handshake handshake = (Handshake) obj;
-        return handshake.tlsVersion == this.tlsVersion && bzo.f(handshake.cipherSuite, this.cipherSuite) && bzo.f(handshake.peerCertificates(), peerCertificates()) && bzo.f(handshake.localCertificates, this.localCertificates);
+        return handshake.tlsVersion == this.tlsVersion && nullSafeIsEqual(handshake.cipherSuite, this.cipherSuite)
+                && nullSafeIsEqual(handshake.peerCertificates(), peerCertificates())
+                && nullSafeIsEqual(handshake.localCertificates, this.localCertificates);
     }
 
     public final TlsVersion f() {
@@ -168,7 +187,8 @@ public final class Handshake {
     }
 
     public int hashCode() {
-        return this.localCertificates.hashCode() + ((peerCertificates().hashCode() + ((this.cipherSuite.hashCode() + ((this.tlsVersion.hashCode() + 527) * 31)) * 31)) * 31);
+        return this.localCertificates.hashCode() + ((peerCertificates().hashCode()
+                + ((this.cipherSuite.hashCode() + ((this.tlsVersion.hashCode() + 527) * 31)) * 31)) * 31);
     }
 
     public final List<Certificate> localCertificates() {
@@ -227,7 +247,8 @@ public final class Handshake {
         return sb.toString();
     }
 
-    public static final Handshake get(TlsVersion tlsVersion, CipherSuite cipherSuite, List<? extends Certificate> list, List<? extends Certificate> list2) {
+    public static final Handshake get(TlsVersion tlsVersion, CipherSuite cipherSuite, List<? extends Certificate> list,
+            List<? extends Certificate> list2) {
         return Companion.get(tlsVersion, cipherSuite, list, list2);
     }
 }

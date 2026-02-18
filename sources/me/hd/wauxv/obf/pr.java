@@ -10,38 +10,41 @@ import java.util.List;
 public final class pr extends cjv {
     public final /* synthetic */ int a;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'super' call moved to the top of the method (can break code
+     * semantics)
+     */
     public /* synthetic */ pr(int i, boolean z) {
         super(z);
         this.a = i;
     }
 
     public static float[] _aw(String str) {
-        bzo.q(str, "value");
-        return new float[]{((Number) cjv.r.i(str)).floatValue()};
+        throwIfVar1IsNull(str, "value");
+        return new float[] { ((Number) cjv.r.i(str)).floatValue() };
     }
 
     public static int[] c(String str) {
-        bzo.q(str, "value");
-        return new int[]{((Number) cjv.k.i(str)).intValue()};
+        throwIfVar1IsNull(str, "value");
+        return new int[] { ((Number) cjv.k.i(str)).intValue() };
     }
 
     public static long[] d(String str) {
-        bzo.q(str, "value");
-        return new long[]{((Number) cjv.o.i(str)).longValue()};
+        throwIfVar1IsNull(str, "value");
+        return new long[] { ((Number) cjv.o.i(str)).longValue() };
     }
 
     public static boolean[] e(String str) {
-        bzo.q(str, "value");
-        return new boolean[]{((Boolean) cjv.u.i(str)).booleanValue()};
+        throwIfVar1IsNull(str, "value");
+        return new boolean[] { ((Boolean) cjv.u.i(str)).booleanValue() };
     }
 
     @Override // me.hd.wauxv.obf.cjv
     public final Object f(String str, Bundle bundle) {
         switch (this.a) {
             case 0:
-                bzo.q(bundle, "bundle");
-                if (!bundle.containsKey(str) || bzo.ae(str, bundle)) {
+                throwIfVar1IsNull(bundle, "bundle");
+                if (!bundle.containsKey(str) || ifVar2BundleContainsVar1AsKeyAndValueIsNull(str, bundle)) {
                     return null;
                 }
                 boolean[] booleanArray = bundle.getBooleanArray(str);
@@ -51,8 +54,8 @@ public final class pr extends cjv {
                 cmz.ad(str);
                 throw null;
             case 1:
-                bzo.q(bundle, "bundle");
-                if (!bundle.containsKey(str) || bzo.ae(str, bundle)) {
+                throwIfVar1IsNull(bundle, "bundle");
+                if (!bundle.containsKey(str) || ifVar2BundleContainsVar1AsKeyAndValueIsNull(str, bundle)) {
                     return null;
                 }
                 boolean[] booleanArray2 = bundle.getBooleanArray(str);
@@ -62,8 +65,8 @@ public final class pr extends cjv {
                 cmz.ad(str);
                 throw null;
             case 2:
-                bzo.q(bundle, "bundle");
-                if (!bundle.containsKey(str) || bzo.ae(str, bundle)) {
+                throwIfVar1IsNull(bundle, "bundle");
+                if (!bundle.containsKey(str) || ifVar2BundleContainsVar1AsKeyAndValueIsNull(str, bundle)) {
                     return null;
                 }
                 float[] floatArray = bundle.getFloatArray(str);
@@ -73,8 +76,8 @@ public final class pr extends cjv {
                 cmz.ad(str);
                 throw null;
             case 3:
-                bzo.q(bundle, "bundle");
-                if (!bundle.containsKey(str) || bzo.ae(str, bundle)) {
+                throwIfVar1IsNull(bundle, "bundle");
+                if (!bundle.containsKey(str) || ifVar2BundleContainsVar1AsKeyAndValueIsNull(str, bundle)) {
                     return null;
                 }
                 float[] floatArray2 = bundle.getFloatArray(str);
@@ -84,8 +87,8 @@ public final class pr extends cjv {
                 cmz.ad(str);
                 throw null;
             case 4:
-                bzo.q(bundle, "bundle");
-                if (!bundle.containsKey(str) || bzo.ae(str, bundle)) {
+                throwIfVar1IsNull(bundle, "bundle");
+                if (!bundle.containsKey(str) || ifVar2BundleContainsVar1AsKeyAndValueIsNull(str, bundle)) {
                     return null;
                 }
                 int[] intArray = bundle.getIntArray(str);
@@ -95,8 +98,8 @@ public final class pr extends cjv {
                 cmz.ad(str);
                 throw null;
             case 5:
-                bzo.q(bundle, "bundle");
-                if (!bundle.containsKey(str) || bzo.ae(str, bundle)) {
+                throwIfVar1IsNull(bundle, "bundle");
+                if (!bundle.containsKey(str) || ifVar2BundleContainsVar1AsKeyAndValueIsNull(str, bundle)) {
                     return null;
                 }
                 int[] intArray2 = bundle.getIntArray(str);
@@ -106,8 +109,8 @@ public final class pr extends cjv {
                 cmz.ad(str);
                 throw null;
             case 6:
-                bzo.q(bundle, "bundle");
-                if (!bundle.containsKey(str) || bzo.ae(str, bundle)) {
+                throwIfVar1IsNull(bundle, "bundle");
+                if (!bundle.containsKey(str) || ifVar2BundleContainsVar1AsKeyAndValueIsNull(str, bundle)) {
                     return null;
                 }
                 long[] longArray = bundle.getLongArray(str);
@@ -117,8 +120,8 @@ public final class pr extends cjv {
                 cmz.ad(str);
                 throw null;
             case 7:
-                bzo.q(bundle, "bundle");
-                if (!bundle.containsKey(str) || bzo.ae(str, bundle)) {
+                throwIfVar1IsNull(bundle, "bundle");
+                if (!bundle.containsKey(str) || ifVar2BundleContainsVar1AsKeyAndValueIsNull(str, bundle)) {
                     return null;
                 }
                 long[] longArray2 = bundle.getLongArray(str);
@@ -128,8 +131,8 @@ public final class pr extends cjv {
                 cmz.ad(str);
                 throw null;
             case 8:
-                bzo.q(bundle, "bundle");
-                if (!bundle.containsKey(str) || bzo.ae(str, bundle)) {
+                throwIfVar1IsNull(bundle, "bundle");
+                if (!bundle.containsKey(str) || ifVar2BundleContainsVar1AsKeyAndValueIsNull(str, bundle)) {
                     return null;
                 }
                 String[] stringArray = bundle.getStringArray(str);
@@ -139,8 +142,8 @@ public final class pr extends cjv {
                 cmz.ad(str);
                 throw null;
             default:
-                bzo.q(bundle, "bundle");
-                if (!bundle.containsKey(str) || bzo.ae(str, bundle)) {
+                throwIfVar1IsNull(bundle, "bundle");
+                if (!bundle.containsKey(str) || ifVar2BundleContainsVar1AsKeyAndValueIsNull(str, bundle)) {
                     return null;
                 }
                 String[] stringArray2 = bundle.getStringArray(str);
@@ -190,7 +193,7 @@ public final class pr extends cjv {
                 int length = zArr.length;
                 boolean[] zArrCopyOf = Arrays.copyOf(zArr, length + 1);
                 System.arraycopy(zArrE, 0, zArrCopyOf, length, 1);
-                bzo.n(zArrCopyOf);
+                throwIfVar1IsNull(zArrCopyOf);
                 return zArrCopyOf;
             case 1:
                 List list = (List) obj;
@@ -205,7 +208,7 @@ public final class pr extends cjv {
                 int length2 = fArr.length;
                 float[] fArrCopyOf = Arrays.copyOf(fArr, length2 + 1);
                 System.arraycopy(fArr_aw, 0, fArrCopyOf, length2, 1);
-                bzo.n(fArrCopyOf);
+                throwIfVar1IsNull(fArrCopyOf);
                 return fArrCopyOf;
             case 3:
                 List list2 = (List) obj;
@@ -220,7 +223,7 @@ public final class pr extends cjv {
                 int length3 = iArr.length;
                 int[] iArrCopyOf = Arrays.copyOf(iArr, length3 + 1);
                 System.arraycopy(iArrC, 0, iArrCopyOf, length3, 1);
-                bzo.n(iArrCopyOf);
+                throwIfVar1IsNull(iArrCopyOf);
                 return iArrCopyOf;
             case 5:
                 List list3 = (List) obj;
@@ -235,7 +238,7 @@ public final class pr extends cjv {
                 int length4 = jArr.length;
                 long[] jArrCopyOf = Arrays.copyOf(jArr, length4 + 1);
                 System.arraycopy(jArrD, 0, jArrCopyOf, length4, 1);
-                bzo.n(jArrCopyOf);
+                throwIfVar1IsNull(jArrCopyOf);
                 return jArrCopyOf;
             case 7:
                 List list4 = (List) obj;
@@ -244,12 +247,12 @@ public final class pr extends cjv {
             case 8:
                 String[] strArr = (String[]) obj;
                 if (strArr == null) {
-                    return new String[]{str};
+                    return new String[] { str };
                 }
                 int length5 = strArr.length;
                 Object[] objArrCopyOf = Arrays.copyOf(strArr, length5 + 1);
-                System.arraycopy(new String[]{str}, 0, objArrCopyOf, length5, 1);
-                bzo.n(objArrCopyOf);
+                System.arraycopy(new String[] { str }, 0, objArrCopyOf, length5, 1);
+                throwIfVar1IsNull(objArrCopyOf);
                 return (String[]) objArrCopyOf;
             default:
                 List list5 = (List) obj;
@@ -263,28 +266,28 @@ public final class pr extends cjv {
             case 0:
                 return e(str);
             case 1:
-                bzo.q(str, "value");
+                throwIfVar1IsNull(str, "value");
                 return dqc.bf(cjv.u.i(str));
             case 2:
                 return _aw(str);
             case 3:
-                bzo.q(str, "value");
+                throwIfVar1IsNull(str, "value");
                 return dqc.bf(cjv.r.i(str));
             case 4:
                 return c(str);
             case 5:
-                bzo.q(str, "value");
+                throwIfVar1IsNull(str, "value");
                 return dqc.bf(cjv.k.i(str));
             case 6:
                 return d(str);
             case 7:
-                bzo.q(str, "value");
+                throwIfVar1IsNull(str, "value");
                 return dqc.bf(cjv.o.i(str));
             case 8:
-                bzo.q(str, "value");
-                return new String[]{str};
+                throwIfVar1IsNull(str, "value");
+                return new String[] { str };
             default:
-                bzo.q(str, "value");
+                throwIfVar1IsNull(str, "value");
                 return dqc.bf(str);
         }
     }
@@ -294,7 +297,7 @@ public final class pr extends cjv {
         switch (this.a) {
             case 0:
                 boolean[] zArr = (boolean[]) obj;
-                bzo.q(str, "key");
+                throwIfVar1IsNull(str, "key");
                 if (zArr == null) {
                     cnb.af(str, bundle);
                 } else {
@@ -303,7 +306,7 @@ public final class pr extends cjv {
                 break;
             case 1:
                 List list = (List) obj;
-                bzo.q(str, "key");
+                throwIfVar1IsNull(str, "key");
                 if (list == null) {
                     cnb.af(str, bundle);
                 } else {
@@ -312,7 +315,7 @@ public final class pr extends cjv {
                 break;
             case 2:
                 float[] fArr = (float[]) obj;
-                bzo.q(str, "key");
+                throwIfVar1IsNull(str, "key");
                 if (fArr == null) {
                     cnb.af(str, bundle);
                 } else {
@@ -321,7 +324,7 @@ public final class pr extends cjv {
                 break;
             case 3:
                 List list2 = (List) obj;
-                bzo.q(str, "key");
+                throwIfVar1IsNull(str, "key");
                 if (list2 == null) {
                     cnb.af(str, bundle);
                 } else {
@@ -337,7 +340,7 @@ public final class pr extends cjv {
                 break;
             case 4:
                 int[] iArr = (int[]) obj;
-                bzo.q(str, "key");
+                throwIfVar1IsNull(str, "key");
                 if (iArr == null) {
                     cnb.af(str, bundle);
                 } else {
@@ -346,14 +349,14 @@ public final class pr extends cjv {
                 break;
             case 5:
                 List list3 = (List) obj;
-                bzo.q(str, "key");
+                throwIfVar1IsNull(str, "key");
                 if (list3 != null) {
                     bundle.putIntArray(str, aaz.y(list3));
                 }
                 break;
             case 6:
                 long[] jArr = (long[]) obj;
-                bzo.q(str, "key");
+                throwIfVar1IsNull(str, "key");
                 if (jArr == null) {
                     cnb.af(str, bundle);
                 } else {
@@ -362,7 +365,7 @@ public final class pr extends cjv {
                 break;
             case 7:
                 List list4 = (List) obj;
-                bzo.q(str, "key");
+                throwIfVar1IsNull(str, "key");
                 if (list4 == null) {
                     cnb.af(str, bundle);
                 } else {
@@ -371,7 +374,7 @@ public final class pr extends cjv {
                 break;
             case 8:
                 String[] strArr = (String[]) obj;
-                bzo.q(str, "key");
+                throwIfVar1IsNull(str, "key");
                 if (strArr == null) {
                     cnb.af(str, bundle);
                 } else {
@@ -380,12 +383,12 @@ public final class pr extends cjv {
                 break;
             default:
                 List list5 = (List) obj;
-                bzo.q(str, "key");
+                throwIfVar1IsNull(str, "key");
                 if (list5 == null) {
                     cnb.af(str, bundle);
                 } else {
                     String[] strArr2 = (String[]) list5.toArray(new String[0]);
-                    bzo.q(strArr2, "value");
+                    throwIfVar1IsNull(strArr2, "value");
                     bundle.putStringArray(str, strArr2);
                 }
                 break;

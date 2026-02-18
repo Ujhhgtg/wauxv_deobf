@@ -5,7 +5,7 @@ import java.net.IDN;
 import java.net.InetAddress;
 import java.util.Arrays;
 import java.util.Locale;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.dkz;
 import me.hd.wauxv.obf.dnj;
 import me.hd.wauxv.obf.dnr;
@@ -18,7 +18,7 @@ public final class HostnamesKt {
         int length = str.length();
         for (int i = 0; i < length; i++) {
             char cCharAt = str.charAt(i);
-            if (bzo.r(cCharAt, 31) <= 0 || bzo.r(cCharAt, 127) >= 0 || dnj.ah(cCharAt, 0, 6, " #%/:?@[\\]") != -1) {
+            if (KotlinHelpers.r(cCharAt, 31) <= 0 || KotlinHelpers.r(cCharAt, 127) >= 0 || dnj.ah(cCharAt, 0, 6, " #%/:?@[\\]") != -1) {
                 return true;
             }
         }
@@ -41,7 +41,7 @@ public final class HostnamesKt {
             int i6 = 0;
             while (i5 < i2) {
                 char cCharAt = str.charAt(i5);
-                if (bzo.r(cCharAt, 48) < 0 || bzo.r(cCharAt, 57) > 0) {
+                if (KotlinHelpers.r(cCharAt, 48) < 0 || KotlinHelpers.r(cCharAt, 57) > 0) {
                     break;
                 }
                 if ((i6 == 0 && i != i5) || (i6 = ((i6 * 10) + cCharAt) - 48) > 255) {
@@ -59,9 +59,16 @@ public final class HostnamesKt {
         return i4 == i3 + 4;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:29:0x004d  */
-    /* JADX WARN: Found duplicated region for block: B:31:0x0057 A[LOOP:1: B:28:0x004b->B:31:0x0057, LOOP_END] */
-    /* JADX WARN: Found duplicated region for block: B:53:0x005d A[EDGE_INSN: B:53:0x005d->B:32:0x005d BREAK  A[LOOP:1: B:28:0x004b->B:31:0x0057], SYNTHETIC] */
+    /* JADX WARN: Found duplicated region for block: B:29:0x004d */
+    /*
+     * JADX WARN: Found duplicated region for block: B:31:0x0057 A[LOOP:1:
+     * B:28:0x004b->B:31:0x0057, LOOP_END]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:53:0x005d A[EDGE_INSN:
+     * B:53:0x005d->B:32:0x005d BREAK A[LOOP:1: B:28:0x004b->B:31:0x0057],
+     * SYNTHETIC]
+     */
     private static final InetAddress decodeIpv6(String str, int i, int i2) {
         int i3;
         int i4;
@@ -168,7 +175,8 @@ public final class HostnamesKt {
                 if (i2 > 0) {
                     rhVar.am(58);
                 }
-                rhVar.ao((Util.and(bArr[i2], Opcodes.CONST_METHOD_TYPE) << 8) | Util.and(bArr[i2 + 1], Opcodes.CONST_METHOD_TYPE));
+                rhVar.ao((Util.and(bArr[i2], Opcodes.CONST_METHOD_TYPE) << 8)
+                        | Util.and(bArr[i2 + 1], Opcodes.CONST_METHOD_TYPE));
                 i2 += 2;
             }
         }
@@ -176,9 +184,11 @@ public final class HostnamesKt {
     }
 
     public static final String toCanonicalHost(String str) {
-        bzo.q(str, "<this>");
+        throwIfVar1IsNull(str, "<this>");
         if (dnj.ab(str, ":", false)) {
-            InetAddress inetAddressDecodeIpv6 = (dnr.bp(str, "[", false) && dnr.bi(str, "]")) ? decodeIpv6(str, 1, str.length() - 1) : decodeIpv6(str, 0, str.length());
+            InetAddress inetAddressDecodeIpv6 = (dnr.bp(str, "[", false) && dnr.bi(str, "]"))
+                    ? decodeIpv6(str, 1, str.length() - 1)
+                    : decodeIpv6(str, 0, str.length());
             if (inetAddressDecodeIpv6 == null) {
                 return null;
             }
@@ -193,11 +203,11 @@ public final class HostnamesKt {
         }
         try {
             String ascii = IDN.toASCII(str);
-            bzo.p(ascii, "toASCII(host)");
+            throwIfVar1IsNull(ascii, "toASCII(host)");
             Locale locale = Locale.US;
-            bzo.p(locale, "US");
+            throwIfVar1IsNull(locale, "US");
             String lowerCase = ascii.toLowerCase(locale);
-            bzo.p(lowerCase, "this as java.lang.String).toLowerCase(locale)");
+            throwIfVar1IsNull(lowerCase, "this as java.lang.String).toLowerCase(locale)");
             if (lowerCase.length() == 0 || containsInvalidHostnameAsciiCodes(lowerCase)) {
                 return null;
             }

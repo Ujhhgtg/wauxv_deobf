@@ -2,7 +2,7 @@ package okhttp3;
 
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.sj;
 import me.hd.wauxv.obf.yg;
 
@@ -15,28 +15,28 @@ public final class Credentials {
     }
 
     public static final String basic(String str, String str2) {
-        bzo.q(str, "username");
-        bzo.q(str2, "password");
+        throwIfVar1IsNull(str, "username");
+        throwIfVar1IsNull(str2, "password");
         return basic$default(str, str2, null, 4, null);
     }
 
     public static /* synthetic */ String basic$default(String str, String str2, Charset charset, int i, Object obj) {
         if ((i & 4) != 0) {
             charset = StandardCharsets.ISO_8859_1;
-            bzo.p(charset, "ISO_8859_1");
+            throwIfVar1IsNull(charset, "ISO_8859_1");
         }
         return basic(str, str2, charset);
     }
 
     public static final String basic(String str, String str2, Charset charset) {
-        bzo.q(str, "username");
-        bzo.q(str2, "password");
-        bzo.q(charset, "charset");
+        throwIfVar1IsNull(str, "username");
+        throwIfVar1IsNull(str2, "password");
+        throwIfVar1IsNull(charset, "charset");
         String str3 = str + ':' + str2;
         sj sjVar = sj.a;
-        bzo.q(str3, "<this>");
+        throwIfVar1IsNull(str3, "<this>");
         byte[] bytes = str3.getBytes(charset);
-        bzo.p(bytes, "this as java.lang.String).getBytes(charset)");
+        throwIfVar1IsNull(bytes, "this as java.lang.String).getBytes(charset)");
         return yg.k("Basic ", new sj(bytes).e());
     }
 }

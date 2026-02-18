@@ -11,7 +11,7 @@ import androidx.fragment.app.FragmentContainerView;
 import com.umeng.analytics.pro.f;
 import me.hd.wauxv.R;
 import me.hd.wauxv.obf.bdj;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cfx;
 import me.hd.wauxv.obf.cjl;
 import me.hd.wauxv.obf.cnb;
@@ -30,7 +30,7 @@ public class NavHostFragment extends bdj {
 
     @Override // me.hd.wauxv.obf.bdj
     public final void e(Context context) {
-        bzo.q(context, f.X);
+        throwIfVar1IsNull(context, "context"ntext");
         super.e(context);
         if (this.d) {
             mu muVar = new mu(cs());
@@ -53,9 +53,9 @@ public class NavHostFragment extends bdj {
 
     @Override // me.hd.wauxv.obf.bdj
     public final View g(LayoutInflater layoutInflater, ViewGroup viewGroup) {
-        bzo.q(layoutInflater, "inflater");
+        throwIfVar1IsNull(layoutInflater, "inflater");
         Context context = layoutInflater.getContext();
-        bzo.p(context, "getContext(...)");
+        throwIfVar1IsNull(context, "getContext(...)");
         FragmentContainerView fragmentContainerView = new FragmentContainerView(context);
         int i = this.bq;
         if (i == 0 || i == -1) {
@@ -77,18 +77,18 @@ public class NavHostFragment extends bdj {
 
     @Override // me.hd.wauxv.obf.bdj
     public final void i(Context context, AttributeSet attributeSet, Bundle bundle) {
-        bzo.q(context, f.X);
-        bzo.q(attributeSet, "attrs");
+        throwIfVar1IsNull(context, "context");
+        throwIfVar1IsNull(attributeSet, "attrs");
         super.i(context, attributeSet, bundle);
         TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, cyb.b);
-        bzo.p(typedArrayObtainStyledAttributes, "obtainStyledAttributes(...)");
+        throwIfVar1IsNull(typedArrayObtainStyledAttributes, "obtainStyledAttributes(...)");
         int resourceId = typedArrayObtainStyledAttributes.getResourceId(0, 0);
         if (resourceId != 0) {
             this.c = resourceId;
         }
         typedArrayObtainStyledAttributes.recycle();
         TypedArray typedArrayObtainStyledAttributes2 = context.obtainStyledAttributes(attributeSet, cyd.c);
-        bzo.p(typedArrayObtainStyledAttributes2, "obtainStyledAttributes(...)");
+        throwIfVar1IsNull(typedArrayObtainStyledAttributes2, "obtainStyledAttributes(...)");
         if (typedArrayObtainStyledAttributes2.getBoolean(0, false)) {
             this.d = true;
         }
@@ -104,7 +104,7 @@ public class NavHostFragment extends bdj {
 
     @Override // me.hd.wauxv.obf.bdj
     public final void k(View view) {
-        bzo.q(view, "view");
+        throwIfVar1IsNull(view, "view");
         if (!(view instanceof ViewGroup)) {
             throw new IllegalStateException(("created host view " + view + " is not a ViewGroup").toString());
         }
@@ -112,12 +112,12 @@ public class NavHostFragment extends bdj {
         ViewGroup viewGroup = (ViewGroup) view;
         if (viewGroup.getParent() != null) {
             Object parent = viewGroup.getParent();
-            bzo.o(parent, "null cannot be cast to non-null type android.view.View");
+            throwIfVar1IsNull(parent, "null cannot be cast to non-null type android.view.View");
             View view2 = (View) parent;
             this.b = view2;
             if (view2.getId() == this.bq) {
                 View view3 = this.b;
-                bzo.n(view3);
+                throwIfVar1IsNull(view3);
                 view3.setTag(R.id.nav_controller_view_tag, l());
             }
         }

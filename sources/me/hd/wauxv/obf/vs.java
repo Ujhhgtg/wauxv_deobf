@@ -28,12 +28,12 @@ public final class vs implements dpi {
                 break;
             }
             next = it.next();
-        } while (!bzo.f(((biv) next).b, String.valueOf(dplVar.b)));
+        } while (!nullSafeIsEqual(((biv) next).b, String.valueOf(dplVar.b)));
         if (((biv) next) != null) {
             vi.a.u(String.valueOf(dplVar.b));
             aic.a.getClass();
             Method methodBb = emn.bb(aib.a);
-            Object[] objArr = {Boolean.TRUE};
+            Object[] objArr = { Boolean.TRUE };
             BaseAdapter baseAdapter = this.a;
             methodBb.invoke(baseAdapter, objArr);
             agk.a.getClass();

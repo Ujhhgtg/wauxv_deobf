@@ -72,7 +72,7 @@ public final class Grep {
             return str;
         }
         cdi cdiVar = (cdi) this.dex.j.get(ytVar.a);
-        StringBuilder sbR = bjs.r(str, ".");
+        StringBuilder sbR = concat(str, ".");
         sbR.append((String) this.dex.e.get(cdiVar.d));
         return sbR.toString();
     }

@@ -1,7 +1,7 @@
 package okhttp3.internal.http2;
 
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.nu;
 import me.hd.wauxv.obf.sj;
 
@@ -24,7 +24,10 @@ public final class Header {
     public final sj name;
     public final sj value;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
@@ -45,8 +48,8 @@ public final class Header {
     }
 
     public Header(sj sjVar, sj sjVar2) {
-        bzo.q(sjVar, "name");
-        bzo.q(sjVar2, "value");
+        throwIfVar1IsNull(sjVar, "name");
+        throwIfVar1IsNull(sjVar2, "value");
         this.name = sjVar;
         this.value = sjVar2;
         this.hpackSize = sjVar2.g() + sjVar.g() + 32;
@@ -71,8 +74,8 @@ public final class Header {
     }
 
     public final Header copy(sj sjVar, sj sjVar2) {
-        bzo.q(sjVar, "name");
-        bzo.q(sjVar2, "value");
+        throwIfVar1IsNull(sjVar, "name");
+        throwIfVar1IsNull(sjVar2, "value");
         return new Header(sjVar, sjVar2);
     }
 
@@ -84,7 +87,7 @@ public final class Header {
             return false;
         }
         Header header = (Header) obj;
-        return bzo.f(this.name, header.name) && bzo.f(this.value, header.value);
+        return nullSafeIsEqual(this.name, header.name) && nullSafeIsEqual(this.value, header.value);
     }
 
     public int hashCode() {
@@ -95,19 +98,25 @@ public final class Header {
         return this.name.n() + ": " + this.value.n();
     }
 
-    /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'this' call moved to the top of the method (can break code
+     * semantics)
+     */
     public Header(String str, String str2) {
         this(nu.g(str), nu.g(str2));
-        bzo.q(str, "name");
-        bzo.q(str2, "value");
+        throwIfVar1IsNull(str, "name");
+        throwIfVar1IsNull(str2, "value");
         sj sjVar = sj.a;
     }
 
-    /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'this' call moved to the top of the method (can break code
+     * semantics)
+     */
     public Header(sj sjVar, String str) {
         this(sjVar, nu.g(str));
-        bzo.q(sjVar, "name");
-        bzo.q(str, "value");
+        throwIfVar1IsNull(sjVar, "name");
+        throwIfVar1IsNull(str, "value");
         sj sjVar2 = sj.a;
     }
 }

@@ -124,7 +124,7 @@ public final class ConstantPoolParser {
             case 9:
                 return 8;
             default:
-                throw new IllegalArgumentException(bjs.i(i, "invalid kind: "));
+                throw new IllegalArgumentException(concatVar2Var1(i, "invalid kind: "));
         }
     }
 
@@ -132,7 +132,8 @@ public final class ConstantPoolParser {
         determineOffsets();
         ParseObserver parseObserver = this.observer;
         if (parseObserver != null) {
-            parseObserver.parsed(this.bytes, 8, 2, dkz.q(this.offsets.length, new StringBuilder("constant_pool_count: ")));
+            parseObserver.parsed(this.bytes, 8, 2,
+                    dkz.q(this.offsets.length, new StringBuilder("constant_pool_count: ")));
             this.observer.parsed(this.bytes, 10, 0, "\nconstant_pool:");
             this.observer.changeIndent(1);
         }
@@ -167,7 +168,9 @@ public final class ConstantPoolParser {
                         }
                         i5++;
                     }
-                    this.observer.parsed(this.bytes, i3, i4 - i3, bitSet.get(i2) ? Hex.u2(i2) + ": utf8{\"" + orNull.toHuman() + "\"}" : Hex.u2(i2) + ": " + orNull.toString());
+                    this.observer.parsed(this.bytes, i3, i4 - i3,
+                            bitSet.get(i2) ? Hex.u2(i2) + ": utf8{\"" + orNull.toHuman() + "\"}"
+                                    : Hex.u2(i2) + ": " + orNull.toString());
                 }
             }
             this.observer.changeIndent(-1);
@@ -217,7 +220,8 @@ public final class ConstantPoolParser {
                     this.pool.set(i, constantMake);
                     return constantMake;
                 case 7:
-                    utf8 = new CstType(Type.internClassName(((CstString) parse0(this.bytes.getUnsignedShort(i2 + 1), bitSet)).getString()));
+                    utf8 = new CstType(Type.internClassName(
+                            ((CstString) parse0(this.bytes.getUnsignedShort(i2 + 1), bitSet)).getString()));
                     constantMake = utf8;
                     this.pool.set(i, constantMake);
                     return constantMake;
@@ -226,22 +230,27 @@ public final class ConstantPoolParser {
                     this.pool.set(i, constantMake);
                     return constantMake;
                 case 9:
-                    cstFieldRef = new CstFieldRef((CstType) parse0(this.bytes.getUnsignedShort(i2 + 1), bitSet), (CstNat) parse0(this.bytes.getUnsignedShort(i2 + 3), bitSet));
+                    cstFieldRef = new CstFieldRef((CstType) parse0(this.bytes.getUnsignedShort(i2 + 1), bitSet),
+                            (CstNat) parse0(this.bytes.getUnsignedShort(i2 + 3), bitSet));
                     constantMake = cstFieldRef;
                     this.pool.set(i, constantMake);
                     return constantMake;
                 case 10:
-                    cstFieldRef = new CstMethodRef((CstType) parse0(this.bytes.getUnsignedShort(i2 + 1), bitSet), (CstNat) parse0(this.bytes.getUnsignedShort(i2 + 3), bitSet));
+                    cstFieldRef = new CstMethodRef((CstType) parse0(this.bytes.getUnsignedShort(i2 + 1), bitSet),
+                            (CstNat) parse0(this.bytes.getUnsignedShort(i2 + 3), bitSet));
                     constantMake = cstFieldRef;
                     this.pool.set(i, constantMake);
                     return constantMake;
                 case 11:
-                    cstFieldRef = new CstInterfaceMethodRef((CstType) parse0(this.bytes.getUnsignedShort(i2 + 1), bitSet), (CstNat) parse0(this.bytes.getUnsignedShort(i2 + 3), bitSet));
+                    cstFieldRef = new CstInterfaceMethodRef(
+                            (CstType) parse0(this.bytes.getUnsignedShort(i2 + 1), bitSet),
+                            (CstNat) parse0(this.bytes.getUnsignedShort(i2 + 3), bitSet));
                     constantMake = cstFieldRef;
                     this.pool.set(i, constantMake);
                     return constantMake;
                 case 12:
-                    cstFieldRef = new CstNat((CstString) parse0(this.bytes.getUnsignedShort(i2 + 1), bitSet), (CstString) parse0(this.bytes.getUnsignedShort(i2 + 3), bitSet));
+                    cstFieldRef = new CstNat((CstString) parse0(this.bytes.getUnsignedShort(i2 + 1), bitSet),
+                            (CstString) parse0(this.bytes.getUnsignedShort(i2 + 3), bitSet));
                     constantMake = cstFieldRef;
                     this.pool.set(i, constantMake);
                     return constantMake;
@@ -263,7 +272,8 @@ public final class ConstantPoolParser {
                         case 7:
                             constant = parse0(unsignedShort, bitSet);
                             if (!(constant instanceof CstMethodRef) && !(constant instanceof CstInterfaceMethodRef)) {
-                                throw new ParseException("Unsupported ref constant type for MethodHandle " + constant.getClass());
+                                throw new ParseException(
+                                        "Unsupported ref constant type for MethodHandle " + constant.getClass());
                             }
                             break;
                         case 9:
@@ -280,7 +290,8 @@ public final class ConstantPoolParser {
                     this.pool.set(i, constantMake);
                     return constantMake;
                 case 18:
-                    constantMake = CstInvokeDynamic.make(this.bytes.getUnsignedShort(i2 + 1), (CstNat) parse0(this.bytes.getUnsignedShort(i2 + 3), bitSet));
+                    constantMake = CstInvokeDynamic.make(this.bytes.getUnsignedShort(i2 + 1),
+                            (CstNat) parse0(this.bytes.getUnsignedShort(i2 + 3), bitSet));
                     this.pool.set(i, constantMake);
                     return constantMake;
             }

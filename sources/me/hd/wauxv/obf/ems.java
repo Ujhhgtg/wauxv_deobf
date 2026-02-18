@@ -8,14 +8,14 @@ public final class ems extends cvl {
     @Override // me.hd.wauxv.obf.s
     public final int e(Object obj) {
         byte[] bArr = ((emq) obj).a;
-        bzo.q(bArr, "$this$collectionSize");
+        throwIfVar1IsNull(bArr, "$this$collectionSize");
         return bArr.length;
     }
 
     @Override // me.hd.wauxv.obf.aax, me.hd.wauxv.obf.s
     public final void g(acm acmVar, int i, Object obj) {
         emr emrVar = (emr) obj;
-        bzo.q(emrVar, "builder");
+        throwIfVar1IsNull(emrVar, "builder");
         byte bY = acmVar.m(this.o, i).y();
         emrVar.d(emrVar.e() + 1);
         byte[] bArr = emrVar.a;
@@ -27,7 +27,7 @@ public final class ems extends cvl {
     @Override // me.hd.wauxv.obf.s
     public final Object h(Object obj) {
         byte[] bArr = ((emq) obj).a;
-        bzo.q(bArr, "$this$toBuilder");
+        throwIfVar1IsNull(bArr, "$this$toBuilder");
         emr emrVar = new emr();
         emrVar.a = bArr;
         emrVar.b = bArr.length;
@@ -43,7 +43,7 @@ public final class ems extends cvl {
     @Override // me.hd.wauxv.obf.cvl
     public final void m(acn acnVar, Object obj, int i) {
         byte[] bArr = ((emq) obj).a;
-        bzo.q(acnVar, "encoder");
+        throwIfVar1IsNull(acnVar, "encoder");
         for (int i2 = 0; i2 < i; i2++) {
             acnVar.h(this.o, i2).u(bArr[i2]);
         }

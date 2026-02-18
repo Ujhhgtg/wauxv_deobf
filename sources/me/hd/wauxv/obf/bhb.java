@@ -54,7 +54,7 @@ public final class bhb implements dcg, bpe {
                     bhhVar.m = null;
                 }
                 dmg dmgVar = bhhVar.a;
-                io ioVar = dmgVar.c;
+                DefaultConfig ioVar = dmgVar.c;
                 dmgVar.l = null;
                 byte[] bArr = dmgVar.i;
                 if (bArr != null && (bvaVar3 = (bva) ioVar.d) != null) {

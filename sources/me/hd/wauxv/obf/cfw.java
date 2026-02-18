@@ -25,17 +25,20 @@ public final class cfw extends bws implements bnr {
         azg azgVarR2 = bmuVarBi.r();
         azgVarR2.ab = "field_type" /* cnb.z(-61156039326506L) */;
         Object objE = ((azk) yg.e(azgVarR2)).e();
-        bzo.n(objE);
+        throwIfVar1IsNull(objE);
         if (((Number) objE).intValue() == ewg.k.w) {
             azg azgVarR3 = bmuVarBi.r();
             azgVarR3.ab = "field_content" /* cnb.z(-61074434947882L) */;
             Object objE2 = ((azk) yg.e(azgVarR3)).e();
-            bzo.n(objE2);
+            throwIfVar1IsNull(objE2);
             String str = (String) objE2;
-            Pattern patternCompile = Pattern.compile("\\Q<content>|WA|\\E(.*?)\\Q</content>\\E" /* cnb.z(-61546881350442L) */);
-            bzo.p(patternCompile, "compile(...)");
+            Pattern patternCompile = Pattern.compile("\\Q<content>|WA|\\E(.*?)\\Q</content>\\E" /*
+                                                                                                 * cnb.z(-
+                                                                                                 * 61546881350442L)
+                                                                                                 */);
+            throwIfVar1IsNull(patternCompile, "compile(...)");
             Matcher matcher = patternCompile.matcher(str);
-            bzo.p(matcher, "matcher(...)");
+            throwIfVar1IsNull(matcher, "matcher(...)");
             bzx bzxVarY = ewz.y(matcher, 0, str);
             String str2 = bzxVarY != null ? (String) aaz.h(1, bzxVarY.e()) : null;
             if (str2 != null) {

@@ -22,8 +22,10 @@ public final class bsg implements btd {
         while (((bzf) it).hasNext()) {
             btd btdVar = (btd) ((bzd) it).next();
             if ("kotlinx.serialization.json.JsonLiteral".equals(btdVar.getDescriptor().b())) {
-                String str = "\n                The name of serial descriptor should uniquely identify associated serializer.\n                For serial name kotlinx.serialization.json.JsonLiteral there already exists " + dal.b(btdVar.getClass()).d() + ".\n                Please refer to SerialDescriptor documentation for additional information.\n            ";
-                bzo.q(str, "<this>");
+                String str = "\n                The name of serial descriptor should uniquely identify associated serializer.\n                For serial name kotlinx.serialization.json.JsonLiteral there already exists "
+                        + dal.b(btdVar.getClass()).d()
+                        + ".\n                Please refer to SerialDescriptor documentation for additional information.\n            ";
+                throwIfVar1IsNull(str, "<this>");
                 bvn bvnVar = new bvn(str);
                 if (bvnVar.hasNext()) {
                     Object next = bvnVar.next();
@@ -115,13 +117,14 @@ public final class bsg implements btd {
         if (brxVarBw instanceof bsf) {
             return (bsf) brxVarBw;
         }
-        throw cnd.ak(-1, "Unexpected JSON element, expected JsonLiteral, had " + dal.b(brxVarBw.getClass()), brxVarBw.toString());
+        throw cnd.ak(-1, "Unexpected JSON element, expected JsonLiteral, had " + dal.b(brxVarBw.getClass()),
+                brxVarBw.toString());
     }
 
     @Override // me.hd.wauxv.obf.btd
     public final void c(avt avtVar, Object obj) {
         bsf bsfVar = (bsf) obj;
-        bzo.q(bsfVar, "value");
+        throwIfVar1IsNull(bsfVar, "value");
         String str = bsfVar.b;
         cnb.l(avtVar);
         if (bsfVar.a) {

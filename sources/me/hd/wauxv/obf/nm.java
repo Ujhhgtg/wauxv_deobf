@@ -24,7 +24,7 @@ public final class nm {
             return false;
         }
         nm nmVar = (nm) obj;
-        return this.a == nmVar.a && bzo.f(this.b, nmVar.b);
+        return this.a == nmVar.a && nullSafeIsEqual(this.b, nmVar.b);
     }
 
     public final int hashCode() {

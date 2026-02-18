@@ -18,10 +18,11 @@ public final class ejx {
     static {
         efq efqVar = new efq(13);
         btx btxVar = btx.a;
-        a = new btt[]{null, null, null, null, ewz.am(btxVar, efqVar), ewz.am(btxVar, new efq(14)), null};
+        a = new btt[] { null, null, null, null, ewz.am(btxVar, efqVar), ewz.am(btxVar, new efq(14)), null };
     }
 
-    public /* synthetic */ ejx(int i, String str, String str2, Double d, Integer num, List list, List list2, Double d2) {
+    public /* synthetic */ ejx(int i, String str, String str2, Double d, Integer num, List list, List list2,
+            Double d2) {
         if (127 != (i & 127)) {
             bht.ah(i, 127, ejv.b.getDescriptor());
             throw null;
@@ -43,7 +44,10 @@ public final class ejx {
             return false;
         }
         ejx ejxVar = (ejx) obj;
-        return bzo.f(this.b, ejxVar.b) && bzo.f(this.c, ejxVar.c) && bzo.f(this.d, ejxVar.d) && bzo.f(this.e, ejxVar.e) && bzo.f(this.f, ejxVar.f) && bzo.f(this.g, ejxVar.g) && bzo.f(this.h, ejxVar.h);
+        return nullSafeIsEqual(this.b, ejxVar.b) && nullSafeIsEqual(this.c, ejxVar.c)
+                && nullSafeIsEqual(this.d, ejxVar.d) && nullSafeIsEqual(this.e, ejxVar.e)
+                && nullSafeIsEqual(this.f, ejxVar.f) && nullSafeIsEqual(this.g, ejxVar.g)
+                && nullSafeIsEqual(this.h, ejxVar.h);
     }
 
     public final int hashCode() {

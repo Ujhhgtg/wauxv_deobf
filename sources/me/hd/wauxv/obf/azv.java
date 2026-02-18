@@ -7,14 +7,14 @@ import java.io.IOException;
 /* JADX INFO: loaded from: classes.dex */
 public class azv extends IOException {
     public azv(File file, File file2, String str) {
-        bzo.q(file, "file");
+        throwIfVar1IsNull(file, "file");
         StringBuilder sb = new StringBuilder(file.toString());
         if (file2 != null) {
             sb.append(" -> " + file2);
         }
         sb.append(": ".concat(str));
         String string = sb.toString();
-        bzo.p(string, "toString(...)");
+        throwIfVar1IsNull(string, "toString(...)");
         super(string);
     }
 

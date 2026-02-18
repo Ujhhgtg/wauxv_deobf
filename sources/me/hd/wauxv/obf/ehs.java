@@ -26,7 +26,8 @@ public final class ehs {
             return false;
         }
         ehs ehsVar = (ehs) obj;
-        return bzo.f(this.a, ehsVar.a) && bzo.f(this.b, ehsVar.b) && bzo.f(this.c, ehsVar.c);
+        return nullSafeIsEqual(this.a, ehsVar.a) && nullSafeIsEqual(this.b, ehsVar.b)
+                && nullSafeIsEqual(this.c, ehsVar.c);
     }
 
     public final int hashCode() {
@@ -43,6 +44,6 @@ public final class ehs {
         sb.append("wa3Proto(start_offset=" /* cnb.z(-305290570365738L) */);
         bjs.w(sb, this.a, -305191786117930L);
         yg.u(sb, this.b, -305148836444970L);
-        return bjs.q(sb, this.c, ')');
+        return concat(sb, this.c, ')');
     }
 }

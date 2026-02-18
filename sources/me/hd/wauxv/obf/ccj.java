@@ -43,12 +43,14 @@ public final class ccj extends aqe {
                 cbtVar = (cbt) adapter;
                 headersCount = 0;
             }
-            cbz cbzVarH = (motionEvent.getAction() == 10 || (iPointToPosition = pointToPosition((int) motionEvent.getX(), (int) motionEvent.getY())) == -1 || (i = iPointToPosition - headersCount) < 0 || i >= cbtVar.getCount()) ? null : cbtVar.getItem(i);
+            cbz cbzVarH = (motionEvent.getAction() == 10
+                    || (iPointToPosition = pointToPosition((int) motionEvent.getX(), (int) motionEvent.getY())) == -1
+                    || (i = iPointToPosition - headersCount) < 0 || i >= cbtVar.getCount()) ? null : cbtVar.getItem(i);
             cbz cbzVar = this.r;
             if (cbzVar != cbzVarH) {
                 cbw cbwVar = cbtVar.a;
                 if (cbzVar != null) {
-                    this.q.q(cbwVar, cbzVar);
+                    this.q.ensureParameterNotNull(cbwVar, cbzVar);
                 }
                 this.r = cbzVarH;
                 if (cbzVarH != null) {
@@ -59,7 +61,8 @@ public final class ccj extends aqe {
         return super.onHoverEvent(motionEvent);
     }
 
-    @Override // android.widget.ListView, android.widget.AbsListView, android.view.View, android.view.KeyEvent.Callback
+    @Override // android.widget.ListView, android.widget.AbsListView, android.view.View,
+              // android.view.KeyEvent.Callback
     public final boolean onKeyDown(int i, KeyEvent keyEvent) {
         ListMenuItemView listMenuItemView = (ListMenuItemView) getSelectedView();
         if (listMenuItemView != null && i == this.o) {
@@ -73,7 +76,8 @@ public final class ccj extends aqe {
         }
         setSelection(-1);
         ListAdapter adapter = getAdapter();
-        (adapter instanceof HeaderViewListAdapter ? (cbt) ((HeaderViewListAdapter) adapter).getWrappedAdapter() : (cbt) adapter).a.ab(false);
+        (adapter instanceof HeaderViewListAdapter ? (cbt) ((HeaderViewListAdapter) adapter).getWrappedAdapter()
+                : (cbt) adapter).cachedConstructors.ab(false);
         return true;
     }
 

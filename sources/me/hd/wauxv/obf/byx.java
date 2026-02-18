@@ -32,19 +32,19 @@ public final /* synthetic */ class byx implements bgk {
                 MainActivity mainActivity = (MainActivity) obj4;
                 int i2 = MainActivity.as;
                 eqj eqjVar = mainActivity._ac;
-                bzo.n(eqjVar);
+                throwIfVar1IsNull(eqjVar);
                 ((dj) eqjVar).b.setVisibility(8);
                 eqj eqjVar2 = mainActivity._ac;
-                bzo.n(eqjVar2);
+                throwIfVar1IsNull(eqjVar2);
                 ((dj) eqjVar2).g.setVisibility(0);
                 eqj eqjVar3 = mainActivity._ac;
-                bzo.n(eqjVar3);
+                throwIfVar1IsNull(eqjVar3);
                 ((dj) eqjVar3).k.setText((String) obj);
                 eqj eqjVar4 = mainActivity._ac;
-                bzo.n(eqjVar4);
+                throwIfVar1IsNull(eqjVar4);
                 ((dj) eqjVar4).j.setText((String) obj2);
                 eqj eqjVar5 = mainActivity._ac;
-                bzo.n(eqjVar5);
+                throwIfVar1IsNull(eqjVar5);
                 ((dj) eqjVar5).c.setOnClickListener(new bq((bfu) obj3, 8));
                 return ensVar;
             case 1:
@@ -59,7 +59,8 @@ public final /* synthetic */ class byx implements bgk {
                 byx byxVar = (byx) obj4;
                 eb ebVar2 = (eb) obj3;
                 try {
-                    bzo.o(obj, "null cannot be cast to non-null type VD of com.highcapable.betterandroid.ui.component.adapter.RecyclerAdapterBuilder.onBindNullableItemView");
+                    throwIfVar1IsNull(obj,
+                            "null cannot be cast to non-null type VD of com.highcapable.betterandroid.ui.component.adapter.RecyclerAdapterBuilder.onBindNullableItemView");
                     byxVar.b(obj, obj2, ebVar2);
                     objX = ensVar;
                 } catch (Throwable th) {
@@ -70,7 +71,8 @@ public final /* synthetic */ class byx implements bgk {
                     return ensVar;
                 }
                 if (thB instanceof ClassCastException) {
-                    throw new IllegalStateException("The correct entity type is not provided with onBindData. Please remove the generic declaration or use onBindData to pass in the corresponding entity type collection.");
+                    throw new IllegalStateException(
+                            "The correct entity type is not provided with onBindData. Please remove the generic declaration or use onBindData to pass in the corresponding entity type collection.");
                 }
                 throw thB;
             default:
@@ -88,13 +90,13 @@ public final /* synthetic */ class byx implements bgk {
                             ArrayList arrayList = new ArrayList();
                             for (Map.Entry entry : concurrentHashMap.entrySet()) {
                                 String str = (String) entry.getKey();
-                                csm csmVar = (csm) entry.getValue();
-                                Object obj5 = csmVar.a;
+                                Pair pairVar = (Pair) entry.getValue();
+                                Object obj5 = pairVar.first;
                                 Activity activity = obj5 instanceof Activity ? (Activity) obj5 : null;
                                 if (activity != null && activity.isDestroyed()) {
                                     arrayList.add(str);
-                                } else if (exfVar.l((Context) csmVar.a)) {
-                                    ((bgj) csmVar.b).g(action, intent);
+                                } else if (exfVar.l((Context) pairVar.first)) {
+                                    ((bgj) pairVar.second).g(action, intent);
                                 }
                             }
                             ArrayList arrayList2 = arrayList.isEmpty() ? null : arrayList;

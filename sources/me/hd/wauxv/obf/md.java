@@ -4,7 +4,7 @@ import android.os.Bundle;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class md extends doo {
+public final class md extends BaseHook {
     public static final md a = new md("AutoLoginWinHook" /* cnb.z(-510529877572394L) */);
     public static final String b = "杂项" /* cnb.z(-512265044359978L) */;
     public static final String c = "自动点击登录" /* cnb.z(-512217799719722L) */;
@@ -17,7 +17,7 @@ public final class md extends doo {
         bmu bmuVarS = yg.s(-510474042997546L);
         cde cdeVarT = bmuVarS.t();
         cdeVarT.ab = "onCreate" /* cnb.z(-511925741943594L) */;
-        cdk cdkVar = (cdk) dkz.n(new Object[]{dal.b(Bundle.class)}, 1, cdeVarT);
+        cdk cdkVar = (cdk) dkz.n(new Object[] { dal.b(Bundle.class) }, 1, cdeVarT);
         md mdVar = a;
         exg exgVar = exg.a;
         aki akiVarAd = mdVar.ad(cdkVar, exgVar);
@@ -30,23 +30,23 @@ public final class md extends doo {
         akiVarAd2.o();
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String f() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getName() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String g() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getCategory() {
         return b;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String o() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getDescription() {
         return d;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final bgf p() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final IHasInvokeMethod p() {
         return h;
     }
 }

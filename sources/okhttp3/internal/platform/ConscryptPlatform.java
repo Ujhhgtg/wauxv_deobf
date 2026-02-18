@@ -16,7 +16,7 @@ import javax.net.ssl.TrustManager;
 import javax.net.ssl.TrustManagerFactory;
 import javax.net.ssl.X509TrustManager;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import okhttp3.Protocol;
 import org.conscrypt.Conscrypt;
 import org.conscrypt.ConscryptHostnameVerifier;
@@ -28,13 +28,17 @@ public final class ConscryptPlatform extends Platform {
     private static final boolean isSupported;
     private final Provider provider;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
         }
 
-        public static /* synthetic */ boolean atLeastVersion$default(Companion companion, int i, int i2, int i3, int i4, Object obj) {
+        public static /* synthetic */ boolean atLeastVersion$default(Companion companion, int i, int i2, int i3, int i4,
+                Object obj) {
             if ((i4 & 2) != 0) {
                 i2 = 0;
             }
@@ -46,7 +50,8 @@ public final class ConscryptPlatform extends Platform {
 
         public final boolean atLeastVersion(int i, int i2, int i3) {
             Conscrypt.Version version = Conscrypt.version();
-            return version.major() != i ? version.major() > i : version.minor() != i2 ? version.minor() > i2 : version.patch() >= i3;
+            return version.major() != i ? version.major() > i
+                    : version.minor() != i2 ? version.minor() > i2 : version.patch() >= i3;
         }
 
         public final ConscryptPlatform buildIfSupported() {
@@ -65,7 +70,10 @@ public final class ConscryptPlatform extends Platform {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class DisabledHostnameVerifier implements ConscryptHostnameVerifier {
         public static final DisabledHostnameVerifier INSTANCE = new DisabledHostnameVerifier();
 
@@ -101,68 +109,72 @@ public final class ConscryptPlatform extends Platform {
 
     @Override // okhttp3.internal.platform.Platform
     public void configureTlsExtensions(SSLSocket sSLSocket, String str, List<Protocol> list) {
-        bzo.q(sSLSocket, "sslSocket");
-        bzo.q(list, "protocols");
+        throwIfVar1IsNull(sSLSocket, "sslSocket");
+        throwIfVar1IsNull(list, "protocols");
         if (!Conscrypt.isConscrypt(sSLSocket)) {
             super.configureTlsExtensions(sSLSocket, str, list);
         } else {
             Conscrypt.setUseSessionTickets(sSLSocket, true);
-            Conscrypt.setApplicationProtocols(sSLSocket, (String[]) Platform.Companion.alpnProtocolNames(list).toArray(new String[0]));
+            Conscrypt.setApplicationProtocols(sSLSocket,
+                    (String[]) Platform.Companion.alpnProtocolNames(list).toArray(new String[0]));
         }
     }
 
     @Override // okhttp3.internal.platform.Platform
     public String getSelectedProtocol(SSLSocket sSLSocket) {
-        bzo.q(sSLSocket, "sslSocket");
-        return Conscrypt.isConscrypt(sSLSocket) ? Conscrypt.getApplicationProtocol(sSLSocket) : super.getSelectedProtocol(sSLSocket);
+        throwIfVar1IsNull(sSLSocket, "sslSocket");
+        return Conscrypt.isConscrypt(sSLSocket) ? Conscrypt.getApplicationProtocol(sSLSocket)
+                : super.getSelectedProtocol(sSLSocket);
     }
 
     @Override // okhttp3.internal.platform.Platform
     public SSLContext newSSLContext() throws NoSuchAlgorithmException {
         SSLContext sSLContext = SSLContext.getInstance("TLS", this.provider);
-        bzo.p(sSLContext, "getInstance(\"TLS\", provider)");
+        throwIfVar1IsNull(sSLContext, "getInstance(\"TLS\", provider)");
         return sSLContext;
     }
 
     @Override // okhttp3.internal.platform.Platform
-    public SSLSocketFactory newSslSocketFactory(X509TrustManager x509TrustManager) throws NoSuchAlgorithmException, KeyManagementException {
-        bzo.q(x509TrustManager, "trustManager");
+    public SSLSocketFactory newSslSocketFactory(X509TrustManager x509TrustManager)
+            throws NoSuchAlgorithmException, KeyManagementException {
+        throwIfVar1IsNull(x509TrustManager, "trustManager");
         SSLContext sSLContextNewSSLContext = newSSLContext();
-        sSLContextNewSSLContext.init(null, new TrustManager[]{x509TrustManager}, null);
+        sSLContextNewSSLContext.init(null, new TrustManager[] { x509TrustManager }, null);
         SSLSocketFactory socketFactory = sSLContextNewSSLContext.getSocketFactory();
-        bzo.p(socketFactory, "newSSLContext().apply {\n…null)\n    }.socketFactory");
+        throwIfVar1IsNull(socketFactory, "newSSLContext().apply {\n…null)\n    }.socketFactory");
         return socketFactory;
     }
 
     @Override // okhttp3.internal.platform.Platform
     public X509TrustManager platformTrustManager() throws NoSuchAlgorithmException, KeyStoreException {
-        TrustManagerFactory trustManagerFactory = TrustManagerFactory.getInstance(TrustManagerFactory.getDefaultAlgorithm());
+        TrustManagerFactory trustManagerFactory = TrustManagerFactory
+                .getInstance(TrustManagerFactory.getDefaultAlgorithm());
         trustManagerFactory.init((KeyStore) null);
         TrustManager[] trustManagers = trustManagerFactory.getTrustManagers();
-        bzo.n(trustManagers);
+        throwIfVar1IsNull(trustManagers);
         if (trustManagers.length == 1) {
             TrustManager trustManager = trustManagers[0];
             if (trustManager instanceof X509TrustManager) {
-                bzo.o(trustManager, "null cannot be cast to non-null type javax.net.ssl.X509TrustManager");
+                throwIfVar1IsNull(trustManager, "null cannot be cast to non-null type javax.net.ssl.X509TrustManager");
                 X509TrustManager x509TrustManager = (X509TrustManager) trustManager;
                 Conscrypt.setHostnameVerifier(x509TrustManager, DisabledHostnameVerifier.INSTANCE);
                 return x509TrustManager;
             }
         }
         String string = Arrays.toString(trustManagers);
-        bzo.p(string, "toString(this)");
+        throwIfVar1IsNull(string, "toString(this)");
         throw new IllegalStateException("Unexpected default trust managers: ".concat(string).toString());
     }
 
     @Override // okhttp3.internal.platform.Platform
     public X509TrustManager trustManager(SSLSocketFactory sSLSocketFactory) {
-        bzo.q(sSLSocketFactory, "sslSocketFactory");
+        throwIfVar1IsNull(sSLSocketFactory, "sslSocketFactory");
         return null;
     }
 
     private ConscryptPlatform() {
         Provider providerNewProvider = Conscrypt.newProvider();
-        bzo.p(providerNewProvider, "newProvider()");
+        throwIfVar1IsNull(providerNewProvider, "newProvider()");
         this.provider = providerNewProvider;
     }
 }

@@ -31,7 +31,7 @@ public class ToDouble implements Function {
             return str.isEmpty() ? this.defaultValue : Double.valueOf(Double.parseDouble(str));
         }
         if (!(obj instanceof List)) {
-            throw new JSONException(bjs.m(obj, new StringBuilder("can not cast to Double ")));
+            throw new JSONException(concatVar1GetClass(obj, new StringBuilder("can not cast to Double ")));
         }
         List list = (List) obj;
         JSONArray jSONArray = new JSONArray(list.size());

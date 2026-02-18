@@ -13,7 +13,7 @@ import me.hd.wauxv.R;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public abstract class aqu {
-    public static final int[] a = {R.attr.dynamicColorThemeOverlay};
+    public static final int[] a = { R.attr.dynamicColorThemeOverlay };
     public static final Map b;
     public static final Map c;
 
@@ -63,21 +63,21 @@ public abstract class aqu {
             }
             if (i >= 32) {
                 String str = Build.VERSION.CODENAME;
-                bzo.p(str, "CODENAME");
+                throwIfVar1IsNull(str, "CODENAME");
                 if (!"REL".equals(str)) {
                     Locale locale = Locale.ROOT;
                     String upperCase = str.toUpperCase(locale);
-                    bzo.p(upperCase, "toUpperCase(...)");
+                    throwIfVar1IsNull(upperCase, "toUpperCase(...)");
                     Integer num = upperCase.equals("BAKLAVA") ? num : null;
                     String upperCase2 = "Tiramisu".toUpperCase(locale);
-                    bzo.p(upperCase2, "toUpperCase(...)");
+                    throwIfVar1IsNull(upperCase2, "toUpperCase(...)");
                     num = upperCase2.equals("BAKLAVA") ? 0 : null;
                     if (num == null || num == null) {
                         if (num == null && num == null) {
                             String upperCase3 = str.toUpperCase(locale);
-                            bzo.p(upperCase3, "toUpperCase(...)");
+                            throwIfVar1IsNull(upperCase3, "toUpperCase(...)");
                             String upperCase4 = "Tiramisu".toUpperCase(locale);
-                            bzo.p(upperCase4, "toUpperCase(...)");
+                            throwIfVar1IsNull(upperCase4, "toUpperCase(...)");
                             if (upperCase3.compareTo(upperCase4) >= 0) {
                                 return true;
                             }

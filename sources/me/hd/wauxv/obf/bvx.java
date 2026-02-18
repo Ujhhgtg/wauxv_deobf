@@ -7,7 +7,7 @@ import java.util.NoSuchElementException;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class bvx implements ListIterator, bsw {
+public final class bvx implements ListIterator, IEmpty {
     public int b;
     public int d;
     public final ad e;
@@ -160,7 +160,8 @@ public final class bvx implements ListIterator, bsw {
                 f();
                 int i = this.c;
                 if (i == -1) {
-                    throw new IllegalStateException("Call next() or previous() before removing element from the iterator.");
+                    throw new IllegalStateException(
+                            "Call next() or previous() before removing element from the iterator.");
                 }
                 bvyVar.b(i);
                 this.b = this.c;
@@ -172,7 +173,8 @@ public final class bvx implements ListIterator, bsw {
                 g();
                 int i2 = this.c;
                 if (i2 == -1) {
-                    throw new IllegalStateException("Call next() or previous() before removing element from the iterator.");
+                    throw new IllegalStateException(
+                            "Call next() or previous() before removing element from the iterator.");
                 }
                 bvzVar.b(i2);
                 this.b = this.c;
@@ -189,7 +191,8 @@ public final class bvx implements ListIterator, bsw {
                 f();
                 int i = this.c;
                 if (i == -1) {
-                    throw new IllegalStateException("Call next() or previous() before replacing element from the iterator.");
+                    throw new IllegalStateException(
+                            "Call next() or previous() before replacing element from the iterator.");
                 }
                 ((bvy) this.e).set(i, obj);
                 return;
@@ -197,7 +200,8 @@ public final class bvx implements ListIterator, bsw {
                 g();
                 int i2 = this.c;
                 if (i2 == -1) {
-                    throw new IllegalStateException("Call next() or previous() before replacing element from the iterator.");
+                    throw new IllegalStateException(
+                            "Call next() or previous() before replacing element from the iterator.");
                 }
                 ((bvz) this.e).set(i2, obj);
                 return;

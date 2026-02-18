@@ -29,7 +29,7 @@ public final class azx extends azw {
             this.a = true;
             return file;
         }
-        bzo.n(fileArr);
+        throwIfVar1IsNull(fileArr);
         int i = this.c;
         this.c = i + 1;
         return fileArr[i];

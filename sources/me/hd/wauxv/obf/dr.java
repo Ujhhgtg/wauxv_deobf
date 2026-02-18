@@ -13,8 +13,9 @@ public final class dr extends bhs {
 
     @Override // me.hd.wauxv.obf.bhs
     public final Intent b(hb hbVar, String str) {
-        Intent intentPutExtra = new Intent("android.intent.action.CREATE_DOCUMENT").setType(this.a).putExtra("android.intent.extra.TITLE", str);
-        bzo.p(intentPutExtra, "Intent(Intent.ACTION_CRE…ntent.EXTRA_TITLE, input)");
+        Intent intentPutExtra = new Intent("android.intent.action.CREATE_DOCUMENT").setType(this.a)
+                .putExtra("android.intent.extra.TITLE", str);
+        throwIfVar1IsNull(intentPutExtra, "Intent(Intent.ACTION_CRE…ntent.EXTRA_TITLE, input)");
         return intentPutExtra;
     }
 

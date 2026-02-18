@@ -21,10 +21,10 @@ public class emi extends emn {
     public static Font a(FontFamily fontFamily, int i) {
         FontStyle fontStyle = new FontStyle((i & 1) != 0 ? 700 : 400, (i & 2) != 0 ? 1 : 0);
         Font font = fontFamily.getFont(0);
-        int iB = b(fontStyle, font.getStyle());
+        int iB = tryGetClassByName(fontStyle, font.getStyle());
         for (int i2 = 1; i2 < fontFamily.getSize(); i2++) {
             Font font2 = fontFamily.getFont(i2);
-            int iB2 = b(fontStyle, font2.getStyle());
+            int iB2 = tryGetClassByName(fontStyle, font2.getStyle());
             if (iB2 < iB) {
                 font = font2;
                 iB = iB2;
@@ -34,7 +34,8 @@ public class emi extends emn {
     }
 
     public static int b(FontStyle fontStyle, FontStyle fontStyle2) {
-        return (Math.abs(fontStyle.getWeight() - fontStyle2.getWeight()) / 100) + (fontStyle.getSlant() == fontStyle2.getSlant() ? 0 : 2);
+        return (Math.abs(fontStyle.getWeight() - fontStyle2.getWeight()) / 100)
+                + (fontStyle.getSlant() == fontStyle2.getSlant() ? 0 : 2);
     }
 
     @Override // me.hd.wauxv.obf.emn
@@ -88,7 +89,8 @@ public class emi extends emn {
                     fontBuild = null;
                 } else {
                     try {
-                        Font.Builder ttcIndex = new Font.Builder(parcelFileDescriptorOpenFileDescriptor).setWeight(bceVar.c).setSlant(bceVar.d ? 1 : 0).setTtcIndex(bceVar.b);
+                        Font.Builder ttcIndex = new Font.Builder(parcelFileDescriptorOpenFileDescriptor)
+                                .setWeight(bceVar.c).setSlant(bceVar.d ? 1 : 0).setTtcIndex(bceVar.b);
                         if (!TextUtils.isEmpty(str)) {
                             ttcIndex.setFontVariationSettings(str);
                         }
@@ -128,7 +130,9 @@ public class emi extends emn {
             FontFamily.Builder builder = null;
             for (bcc bccVar : bcbVar.a) {
                 try {
-                    Font fontBuild = new Font.Builder(resources, bccVar.f).setWeight(bccVar.b).setSlant(bccVar.c ? 1 : 0).setTtcIndex(bccVar.e).setFontVariationSettings(bccVar.d).build();
+                    Font fontBuild = new Font.Builder(resources, bccVar.f).setWeight(bccVar.b)
+                            .setSlant(bccVar.c ? 1 : 0).setTtcIndex(bccVar.e).setFontVariationSettings(bccVar.d)
+                            .build();
                     if (builder == null) {
                         builder = new FontFamily.Builder(fontBuild);
                     } else {
@@ -141,7 +145,8 @@ public class emi extends emn {
                 return null;
             }
             FontFamily fontFamilyBuild = builder.build();
-            return new Typeface.CustomFallbackBuilder(fontFamilyBuild).setStyle(a(fontFamilyBuild, i).getStyle()).build();
+            return new Typeface.CustomFallbackBuilder(fontFamilyBuild).setStyle(a(fontFamilyBuild, i).getStyle())
+                    .build();
         } catch (Exception e) {
             Log.w("TypefaceCompatApi29Impl", "Font load failed", e);
             return null;
@@ -166,7 +171,8 @@ public class emi extends emn {
     public final Typeface u(Context context, Resources resources, int i, String str, int i2) {
         try {
             Font fontBuild = new Font.Builder(resources, i).build();
-            return new Typeface.CustomFallbackBuilder(new FontFamily.Builder(fontBuild).build()).setStyle(fontBuild.getStyle()).build();
+            return new Typeface.CustomFallbackBuilder(new FontFamily.Builder(fontBuild).build())
+                    .setStyle(fontBuild.getStyle()).build();
         } catch (Exception e) {
             Log.w("TypefaceCompatApi29Impl", "Font load failed", e);
             return null;

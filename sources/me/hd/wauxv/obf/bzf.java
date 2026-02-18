@@ -59,7 +59,7 @@ public abstract class bzf {
             return;
         }
         if (Build.VERSION.SDK_INT >= this.c) {
-            tag = h(view);
+            tag = locateDex(view);
         } else {
             tag = view.getTag(this.b);
             if (!((Class) this.e).isInstance(tag)) {
@@ -68,7 +68,9 @@ public abstract class bzf {
         }
         if (l(tag, obj)) {
             View.AccessibilityDelegate accessibilityDelegateJ = eqz.j(view);
-            aq aqVar = accessibilityDelegateJ == null ? null : accessibilityDelegateJ instanceof ap ? ((ap) accessibilityDelegateJ).a : new aq(accessibilityDelegateJ);
+            aq aqVar = accessibilityDelegateJ == null ? null
+                    : accessibilityDelegateJ instanceof ap ? ((ap) accessibilityDelegateJ).a
+                            : new aq(accessibilityDelegateJ);
             if (aqVar == null) {
                 aqVar = new aq();
             }

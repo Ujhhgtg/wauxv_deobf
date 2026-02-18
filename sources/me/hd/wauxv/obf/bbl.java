@@ -8,14 +8,14 @@ public final class bbl extends cvl {
     @Override // me.hd.wauxv.obf.s
     public final int e(Object obj) {
         float[] fArr = (float[]) obj;
-        bzo.q(fArr, "<this>");
+        throwIfVar1IsNull(fArr, "<this>");
         return fArr.length;
     }
 
     @Override // me.hd.wauxv.obf.aax, me.hd.wauxv.obf.s
     public final void g(acm acmVar, int i, Object obj) {
         bbk bbkVar = (bbk) obj;
-        bzo.q(bbkVar, "builder");
+        throwIfVar1IsNull(bbkVar, "builder");
         float fO = acmVar.o(this.o, i);
         bbkVar.d(bbkVar.e() + 1);
         float[] fArr = bbkVar.a;
@@ -27,7 +27,7 @@ public final class bbl extends cvl {
     @Override // me.hd.wauxv.obf.s
     public final Object h(Object obj) {
         float[] fArr = (float[]) obj;
-        bzo.q(fArr, "<this>");
+        throwIfVar1IsNull(fArr, "<this>");
         bbk bbkVar = new bbk();
         bbkVar.a = fArr;
         bbkVar.b = fArr.length;
@@ -43,8 +43,8 @@ public final class bbl extends cvl {
     @Override // me.hd.wauxv.obf.cvl
     public final void m(acn acnVar, Object obj, int i) {
         float[] fArr = (float[]) obj;
-        bzo.q(acnVar, "encoder");
-        bzo.q(fArr, "content");
+        throwIfVar1IsNull(acnVar, "encoder");
+        throwIfVar1IsNull(fArr, "content");
         for (int i2 = 0; i2 < i; i2++) {
             acnVar.e(this.o, i2, fArr[i2]);
         }

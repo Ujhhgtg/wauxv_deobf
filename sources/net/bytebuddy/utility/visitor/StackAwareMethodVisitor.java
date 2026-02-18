@@ -34,8 +34,15 @@ public class StackAwareMethodVisitor extends MethodVisitor {
     private int freeIndex;
     private final Map<Label, List<StackSize>> sizes;
 
-    /* JADX INFO: renamed from: net.bytebuddy.utility.visitor.StackAwareMethodVisitor$1, reason: invalid class name */
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: renamed from:
+     * net.bytebuddy.utility.visitor.StackAwareMethodVisitor$1, reason: invalid
+     * class name
+     */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static /* synthetic */ class AnonymousClass1 {
         static final /* synthetic */ int[] $SwitchMap$net$bytebuddy$implementation$bytecode$StackSize;
 
@@ -76,7 +83,8 @@ public class StackAwareMethodVisitor extends MethodVisitor {
             if (i >= iArr.length) {
                 return;
             }
-            iArr[i] = "EFFFFFFFFGGFFFGGFFFEEFGFGFEEEEEEEEEEEEEEEEEEEEDEDEDDDDDCDCDEEEEEEEEEEEEEEEEEEEEBABABBBBDCFFFGGGEDCDCDCDCDCDCDCDCDCDCEEEEDDDDDDDCDCDCEFEFDDEEFFDEDEEEBDDBBDDDDDDCCCCCCCCEEEDDDCDCDEEEEEEEEEEFEEEEEEDDEEDDEE".charAt(i) - 'E';
+            iArr[i] = "EFFFFFFFFGGFFFGGFFFEEFGFGFEEEEEEEEEEEEEEEEEEEEDEDEDDDDDCDCDEEEEEEEEEEEEEEEEEEEEBABABBBBDCFFFGGGEDCDCDCDCDCDCDCDCDCDCEEEEDDDDDDDCDCDCEFEFDDEEFFDEDEEEBDDBBDDDDDDCCCCCCCCEEEDDDCDCDEEEEEEEEEEFEEEEEEDDEEDDEE"
+                    .charAt(i) - 'E';
             i++;
         }
     }
@@ -96,7 +104,8 @@ public class StackAwareMethodVisitor extends MethodVisitor {
         ListIterator<StackSize> listIterator = list.listIterator(list.size());
         while (listIterator.hasPrevious()) {
             StackSize stackSizePrevious = listIterator.previous();
-            int i = AnonymousClass1.$SwitchMap$net$bytebuddy$implementation$bytecode$StackSize[stackSizePrevious.ordinal()];
+            int i = AnonymousClass1.$SwitchMap$net$bytebuddy$implementation$bytecode$StackSize[stackSizePrevious
+                    .ordinal()];
             if (i == 1) {
                 super.visitInsn(87);
             } else {
@@ -143,7 +152,7 @@ public class StackAwareMethodVisitor extends MethodVisitor {
                 adjustStack((-size) - 1);
                 break;
             default:
-                throw new IllegalStateException(bjs.i(i, "Unexpected opcode: "));
+                throw new IllegalStateException(concatVar2Var1(i, "Unexpected opcode: "));
         }
         super.visitFieldInsn(i, str, str2, str3);
     }
@@ -164,7 +173,7 @@ public class StackAwareMethodVisitor extends MethodVisitor {
             this.current.clear();
         } else {
             if (i != 4) {
-                throw new IllegalStateException(bjs.i(i, "Unknown frame type: "));
+                throw new IllegalStateException(concatVar2Var1(i, "Unknown frame type: "));
             }
             this.current.clear();
             Object obj2 = objArr2[0];
@@ -177,11 +186,11 @@ public class StackAwareMethodVisitor extends MethodVisitor {
         super.visitFrame(i, i2, objArr, i3, objArr2);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:24:0x0037  */
-    /* JADX WARN: Found duplicated region for block: B:25:0x0041  */
-    /* JADX WARN: Found duplicated region for block: B:26:0x004b  */
-    /* JADX WARN: Found duplicated region for block: B:27:0x0051  */
-    /* JADX WARN: Found duplicated region for block: B:28:0x0059  */
+    /* JADX WARN: Found duplicated region for block: B:24:0x0037 */
+    /* JADX WARN: Found duplicated region for block: B:25:0x0041 */
+    /* JADX WARN: Found duplicated region for block: B:26:0x004b */
+    /* JADX WARN: Found duplicated region for block: B:27:0x0051 */
+    /* JADX WARN: Found duplicated region for block: B:28:0x0059 */
     @Override // net.bytebuddy.jar.asm.MethodVisitor
     public void visitInsn(int i) {
         if (i == 47 || i == 49) {
@@ -361,7 +370,7 @@ public class StackAwareMethodVisitor extends MethodVisitor {
 
     private void adjustStack(int i, int i2) {
         if (i > 2) {
-            throw new IllegalStateException(bjs.i(i, "Cannot push multiple values onto the operand stack: "));
+            throw new IllegalStateException(concatVar2Var1(i, "Cannot push multiple values onto the operand stack: "));
         }
         if (i > 0) {
             int size = this.current.size();
@@ -370,13 +379,14 @@ public class StackAwareMethodVisitor extends MethodVisitor {
                 i2 -= this.current.get(size).getSize();
             }
             if (i2 < 0) {
-                throw new IllegalStateException(bjs.i(i2, "Unexpected offset underflow: "));
+                throw new IllegalStateException(concatVar2Var1(i2, "Unexpected offset underflow: "));
             }
             this.current.add(size, StackSize.of(i));
             return;
         }
         if (i2 != 0) {
-            throw new IllegalStateException(dkz.p(i2, "Cannot specify non-zero offset ", " for non-incrementing value: ", i));
+            throw new IllegalStateException(
+                    dkz.p(i2, "Cannot specify non-zero offset ", " for non-incrementing value: ", i));
         }
         while (i < 0) {
             if (this.current.isEmpty()) {
@@ -388,7 +398,7 @@ public class StackAwareMethodVisitor extends MethodVisitor {
         if (i == 1) {
             this.current.add(StackSize.SINGLE);
         } else if (i != 0) {
-            throw new IllegalStateException(bjs.i(i, "Unexpected remainder on the operand stack: "));
+            throw new IllegalStateException(concatVar2Var1(i, "Unexpected remainder on the operand stack: "));
         }
     }
 
@@ -405,7 +415,7 @@ public class StackAwareMethodVisitor extends MethodVisitor {
         if (size == 1) {
             super.visitInsn(87);
         } else if (size != 0) {
-            throw new IllegalStateException(bjs.i(size, "Unexpected remainder on the operand stack: "));
+            throw new IllegalStateException(concatVar2Var1(size, "Unexpected remainder on the operand stack: "));
         }
         List<StackSize> list2 = this.current;
         doDrain(list2.subList(0, list2.size() - 1));

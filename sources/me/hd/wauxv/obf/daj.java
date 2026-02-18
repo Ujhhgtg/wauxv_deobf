@@ -14,14 +14,14 @@ public final class daj extends aax {
         super(dnh.b);
         this.j = zcVar;
         cvo cvoVar = dnh.d;
-        bzo.q(cvoVar, "elementDesc");
+        throwIfVar1IsNull(cvoVar, "elementDesc");
         this.k = new kl(cvoVar, 0);
     }
 
     @Override // me.hd.wauxv.obf.s
     public final int _s(Object obj) {
         ArrayList arrayList = (ArrayList) obj;
-        bzo.q(arrayList, "<this>");
+        throwIfVar1IsNull(arrayList, "<this>");
         return arrayList.size();
     }
 
@@ -33,14 +33,14 @@ public final class daj extends aax {
     @Override // me.hd.wauxv.obf.s
     public final Iterator d(Object obj) {
         Object[] objArr = (Object[]) obj;
-        bzo.q(objArr, "<this>");
+        throwIfVar1IsNull(objArr, "<this>");
         return cnb.ae(objArr);
     }
 
     @Override // me.hd.wauxv.obf.s
     public final int e(Object obj) {
         Object[] objArr = (Object[]) obj;
-        bzo.q(objArr, "<this>");
+        throwIfVar1IsNull(objArr, "<this>");
         return objArr.length;
     }
 
@@ -52,25 +52,26 @@ public final class daj extends aax {
     @Override // me.hd.wauxv.obf.s
     public final Object h(Object obj) {
         Object[] objArr = (Object[]) obj;
-        bzo.q(objArr, "<this>");
+        throwIfVar1IsNull(objArr, "<this>");
         return new ArrayList(la.a(objArr));
     }
 
     @Override // me.hd.wauxv.obf.s
     public final Object i(Object obj) {
         ArrayList arrayList = (ArrayList) obj;
-        bzo.q(arrayList, "<this>");
+        throwIfVar1IsNull(arrayList, "<this>");
         Object objNewInstance = Array.newInstance((Class<?>) cnf.bd(this.j), arrayList.size());
-        bzo.o(objNewInstance, "null cannot be cast to non-null type kotlin.Array<E of kotlinx.serialization.internal.PlatformKt.toNativeArrayImpl>");
+        throwIfVar1IsNull(objNewInstance,
+                "null cannot be cast to non-null type kotlin.Array<E of kotlinx.serialization.internal.PlatformKt.toNativeArrayImpl>");
         Object[] array = arrayList.toArray((Object[]) objNewInstance);
-        bzo.p(array, "toArray(...)");
+        throwIfVar1IsNull(array, "toArray(...)");
         return array;
     }
 
     @Override // me.hd.wauxv.obf.aax
     public final void l(Object obj, int i, Object obj2) {
         ArrayList arrayList = (ArrayList) obj;
-        bzo.q(arrayList, "<this>");
+        throwIfVar1IsNull(arrayList, "<this>");
         arrayList.add(i, obj2);
     }
 }

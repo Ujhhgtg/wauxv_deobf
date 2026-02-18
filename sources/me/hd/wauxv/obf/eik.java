@@ -24,10 +24,12 @@ public final class eik {
     static {
         efq efqVar = new efq(6);
         btx btxVar = btx.a;
-        a = new btt[]{null, null, ewz.am(btxVar, efqVar), null, null, null, null, ewz.am(btxVar, new efq(7)), null, ewz.am(btxVar, new efq(8)), null, ewz.am(btxVar, new efq(9)), ewz.am(btxVar, new efq(10))};
+        a = new btt[] { null, null, ewz.am(btxVar, efqVar), null, null, null, null, ewz.am(btxVar, new efq(7)), null,
+                ewz.am(btxVar, new efq(8)), null, ewz.am(btxVar, new efq(9)), ewz.am(btxVar, new efq(10)) };
     }
 
-    public /* synthetic */ eik(int i, Integer num, Integer num2, List list, String str, Integer num3, String str2, String str3, List list2, Boolean bool, List list3, String str4, List list4, List list5) {
+    public /* synthetic */ eik(int i, Integer num, Integer num2, List list, String str, Integer num3, String str2,
+            String str3, List list2, Boolean bool, List list3, String str4, List list4, List list5) {
         if (8191 != (i & 8191)) {
             bht.ah(i, 8191, eii.b.getDescriptor());
             throw null;
@@ -55,7 +57,13 @@ public final class eik {
             return false;
         }
         eik eikVar = (eik) obj;
-        return bzo.f(this.b, eikVar.b) && bzo.f(this.c, eikVar.c) && bzo.f(this.d, eikVar.d) && bzo.f(this.e, eikVar.e) && bzo.f(this.f, eikVar.f) && bzo.f(this.g, eikVar.g) && bzo.f(this.h, eikVar.h) && bzo.f(this.i, eikVar.i) && bzo.f(this.j, eikVar.j) && bzo.f(this.k, eikVar.k) && bzo.f(this.l, eikVar.l) && bzo.f(this.m, eikVar.m) && bzo.f(this.n, eikVar.n);
+        return nullSafeIsEqual(this.b, eikVar.b) && nullSafeIsEqual(this.c, eikVar.c)
+                && nullSafeIsEqual(this.d, eikVar.d) && nullSafeIsEqual(this.e, eikVar.e)
+                && nullSafeIsEqual(this.f, eikVar.f) && nullSafeIsEqual(this.g, eikVar.g)
+                && nullSafeIsEqual(this.h, eikVar.h) && nullSafeIsEqual(this.i, eikVar.i)
+                && nullSafeIsEqual(this.j, eikVar.j) && nullSafeIsEqual(this.k, eikVar.k)
+                && nullSafeIsEqual(this.l, eikVar.l) && nullSafeIsEqual(this.m, eikVar.m)
+                && nullSafeIsEqual(this.n, eikVar.n);
     }
 
     public final int hashCode() {

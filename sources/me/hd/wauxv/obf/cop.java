@@ -28,7 +28,7 @@ public final class cop implements dfx {
 
     @Override // me.hd.wauxv.obf.dfx
     public final int g(String str) {
-        bzo.q(str, "name");
+        throwIfVar1IsNull(str, "name");
         throw new IllegalStateException("Descriptor for type `kotlin.Nothing` does not have elements");
     }
 

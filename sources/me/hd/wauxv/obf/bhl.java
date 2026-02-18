@@ -18,7 +18,8 @@ public final class bhl implements Serializable {
             return false;
         }
         bhl bhlVar = (bhl) obj;
-        return bzo.f(this.a, bhlVar.a) && bzo.f(this.b, bhlVar.b) && bzo.f(this.c, bhlVar.c) && bzo.f(this.d, bhlVar.d);
+        return nullSafeIsEqual(this.a, bhlVar.a) && nullSafeIsEqual(this.b, bhlVar.b)
+                && nullSafeIsEqual(this.c, bhlVar.c) && nullSafeIsEqual(this.d, bhlVar.d);
     }
 
     public final int hashCode() {
@@ -31,6 +32,6 @@ public final class bhl implements Serializable {
         yg.u(sb, this.a, -46042049411882L);
         yg.u(sb, this.b, -45943265164074L);
         yg.u(sb, this.c, -45930380262186L);
-        return bjs.q(sb, this.d, ')');
+        return concat(sb, this.d, ')');
     }
 }

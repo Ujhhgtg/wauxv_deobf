@@ -26,7 +26,8 @@ public final class dyf {
             return false;
         }
         dyf dyfVar = (dyf) obj;
-        return bzo.f(this.a, dyfVar.a) && bzo.f(this.b, dyfVar.b) && bzo.f(this.c, dyfVar.c);
+        return nullSafeIsEqual(this.a, dyfVar.a) && nullSafeIsEqual(this.b, dyfVar.b)
+                && nullSafeIsEqual(this.c, dyfVar.c);
     }
 
     public final int hashCode() {

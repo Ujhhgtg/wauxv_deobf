@@ -8,7 +8,7 @@ import java.util.Set;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class bzh extends AbstractSet implements Set, bsx {
+public final class bzh extends AbstractSet implements Set, IEmpty2 {
     public final /* synthetic */ int a;
     public final bzg b;
 
@@ -21,7 +21,7 @@ public final class bzh extends AbstractSet implements Set, bsx {
     public final boolean add(Object obj) {
         switch (this.a) {
             case 0:
-                bzo.q((Map.Entry) obj, "element");
+                throwIfVar1IsNull((Map.Entry) obj, "element");
                 throw new UnsupportedOperationException();
             default:
                 throw new UnsupportedOperationException();
@@ -32,10 +32,10 @@ public final class bzh extends AbstractSet implements Set, bsx {
     public final boolean addAll(Collection collection) {
         switch (this.a) {
             case 0:
-                bzo.q(collection, "elements");
+                throwIfVar1IsNull(collection, "elements");
                 throw new UnsupportedOperationException();
             default:
-                bzo.q(collection, "elements");
+                throwIfVar1IsNull(collection, "elements");
                 throw new UnsupportedOperationException();
         }
     }
@@ -69,7 +69,7 @@ public final class bzh extends AbstractSet implements Set, bsx {
     public boolean containsAll(Collection collection) {
         switch (this.a) {
             case 0:
-                bzo.q(collection, "elements");
+                throwIfVar1IsNull(collection, "elements");
                 return this.b.r(collection);
             default:
                 return super.containsAll(collection);
@@ -85,7 +85,8 @@ public final class bzh extends AbstractSet implements Set, bsx {
         return this.b.isEmpty();
     }
 
-    @Override // java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
+    @Override // java.util.AbstractCollection, java.util.Collection, java.lang.Iterable,
+              // java.util.Set
     public final Iterator iterator() {
         switch (this.a) {
             case 0:
@@ -115,8 +116,8 @@ public final class bzh extends AbstractSet implements Set, bsx {
                     return false;
                 }
                 Object[] objArr = bzgVar.c;
-                bzo.n(objArr);
-                if (!bzo.f(objArr[iU], entry.getValue())) {
+                throwIfVar1IsNull(objArr);
+                if (!nullSafeIsEqual(objArr[iU], entry.getValue())) {
                     return false;
                 }
                 bzgVar.y(iU);
@@ -133,15 +134,16 @@ public final class bzh extends AbstractSet implements Set, bsx {
         }
     }
 
-    @Override // java.util.AbstractSet, java.util.AbstractCollection, java.util.Collection, java.util.Set
+    @Override // java.util.AbstractSet, java.util.AbstractCollection, java.util.Collection,
+              // java.util.Set
     public final boolean removeAll(Collection collection) {
         switch (this.a) {
             case 0:
-                bzo.q(collection, "elements");
+                throwIfVar1IsNull(collection, "elements");
                 this.b.p();
                 break;
             default:
-                bzo.q(collection, "elements");
+                throwIfVar1IsNull(collection, "elements");
                 this.b.p();
                 break;
         }
@@ -152,11 +154,11 @@ public final class bzh extends AbstractSet implements Set, bsx {
     public final boolean retainAll(Collection collection) {
         switch (this.a) {
             case 0:
-                bzo.q(collection, "elements");
+                throwIfVar1IsNull(collection, "elements");
                 this.b.p();
                 break;
             default:
-                bzo.q(collection, "elements");
+                throwIfVar1IsNull(collection, "elements");
                 this.b.p();
                 break;
         }

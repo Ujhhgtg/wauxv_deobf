@@ -65,18 +65,18 @@ public final class PolicyFragment extends bdo {
         cbm cbmVar = a;
         if (bundle != null && bundle.getBoolean("showOnly" /* cnb.z(-419072843971370L) */, false)) {
             eqj eqjVar = this.d;
-            bzo.n(eqjVar);
+            throwIfVar1IsNull(eqjVar);
             MaterialTextView materialTextView = ((bew) eqjVar).c;
             cbmVar.getClass();
             materialTextView.setText(Html.fromHtml((String) dovVar.getValue(), 63));
             eqj eqjVar2 = this.d;
-            bzo.n(eqjVar2);
+            throwIfVar1IsNull(eqjVar2);
             ((bew) eqjVar2).b.setText("你已阅读并同意以上协议" /* cnb.z(-419051369134890L) */);
             eqj eqjVar3 = this.d;
-            bzo.n(eqjVar3);
+            throwIfVar1IsNull(eqjVar3);
             ((bew) eqjVar3).b.setEnabled(true);
             eqj eqjVar4 = this.d;
-            bzo.n(eqjVar4);
+            throwIfVar1IsNull(eqjVar4);
             ((bew) eqjVar4).b.setOnClickListener(new cun(this, 0));
             return;
         }
@@ -88,7 +88,7 @@ public final class PolicyFragment extends bdo {
         }
         if (ioVar.aj().getInt(strZ, 0) != ((String) dovVar.getValue()).hashCode()) {
             eqj eqjVar5 = this.d;
-            bzo.n(eqjVar5);
+            throwIfVar1IsNull(eqjVar5);
             MaterialTextView materialTextView2 = ((bew) eqjVar5).c;
             cbmVar.getClass();
             materialTextView2.setText(Html.fromHtml((String) dovVar.getValue(), 63));

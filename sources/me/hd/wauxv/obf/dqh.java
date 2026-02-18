@@ -140,9 +140,14 @@ public final class dqh {
     public final void s(Context context, TextPaint textPaint, bhv bhvVar) {
         t(context, textPaint, bhvVar);
         ColorStateList colorStateList = this.j;
-        textPaint.setColor(colorStateList != null ? colorStateList.getColorForState(textPaint.drawableState, colorStateList.getDefaultColor()) : -16777216);
+        textPaint.setColor(colorStateList != null
+                ? colorStateList.getColorForState(textPaint.drawableState, colorStateList.getDefaultColor())
+                : -16777216);
         ColorStateList colorStateList2 = this.a;
-        textPaint.setShadowLayer(this.g, this.e, this.f, colorStateList2 != null ? colorStateList2.getColorForState(textPaint.drawableState, colorStateList2.getDefaultColor()) : 0);
+        textPaint.setShadowLayer(this.g, this.e, this.f,
+                colorStateList2 != null
+                        ? colorStateList2.getColorForState(textPaint.drawableState, colorStateList2.getDefaultColor())
+                        : 0);
     }
 
     public final void t(Context context, TextPaint textPaint, bhv bhvVar) {
@@ -152,7 +157,7 @@ public final class dqh {
         }
         o();
         u(context, textPaint, this.n);
-        q(context, new dqg(this, context, textPaint, bhvVar));
+        ensureParameterNotNull(context, new dqg(this, context, textPaint, bhvVar));
     }
 
     public final void u(Context context, TextPaint textPaint, Typeface typeface) {

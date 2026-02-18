@@ -15,7 +15,7 @@ public final class yp extends Drawable {
     public final boolean d;
 
     public yp(abu abuVar) {
-        bzo.q(abuVar, "kind");
+        throwIfVar1IsNull(abuVar, "kind");
         this.c = abuVar;
         this.d = true;
         Paint paint = new Paint();
@@ -33,7 +33,7 @@ public final class yp extends Drawable {
     @Override // android.graphics.drawable.Drawable
     public final void draw(Canvas canvas) {
         Canvas canvas2;
-        bzo.q(canvas, "canvas");
+        throwIfVar1IsNull(canvas, "canvas");
         float f = getBounds().right;
         float f2 = getBounds().bottom;
         boolean z = this.d;

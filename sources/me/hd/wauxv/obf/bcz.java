@@ -8,7 +8,7 @@ public abstract class bcz implements dhy {
     private final dhy delegate;
 
     public bcz(dhy dhyVar) {
-        bzo.q(dhyVar, MethodDelegation.ImplementationDelegate.FIELD_NAME_PREFIX);
+        throwIfVar1IsNull(dhyVar, MethodDelegation.ImplementationDelegate.FIELD_NAME_PREFIX);
         this.delegate = dhyVar;
     }
 
@@ -41,7 +41,7 @@ public abstract class bcz implements dhy {
 
     @Override // me.hd.wauxv.obf.dhy
     public void write(rh rhVar, long j) {
-        bzo.q(rhVar, "source");
+        throwIfVar1IsNull(rhVar, "source");
         this.delegate.write(rhVar, j);
     }
 }

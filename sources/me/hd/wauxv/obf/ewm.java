@@ -26,7 +26,7 @@ public final class ewm {
         dal.a.getClass();
         b = new btc[]{cwbVar, new cwb(ewm.class, "XmlBlockClass", "getXmlBlockClass()Ljava/lang/Class;")};
         a = new ewm();
-        c = zf.h("android.content.res.ApkAssets", null, 6);
+        c = ReflectionWrapper.h("android.content.res.ApkAssets", null, 6);
         d = new jx("android.content.res.XmlBlock", (bfu) null);
         h = new ewl(0);
         i = new dov(new efq(19));

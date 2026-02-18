@@ -25,16 +25,28 @@ class b {
     private b() {
     }
 
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.java:210)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:196)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:180)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:201)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.java:347)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(TryCatchBlockAttr.java:356)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:202)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.
+     * java:210)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:196)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:180)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:
+     * 201)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.
+     * java:347)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(
+     * TryCatchBlockAttr.java:356)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+     * MarkFinallyVisitor.java:202)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:119)
      */
     private String b(Context context, OpenId openId) throws Throwable {
         Exception exc;
@@ -51,7 +63,8 @@ class b {
         cursor = null;
         try {
             try {
-                cursorQuery = context.getContentResolver().query(Uri.parse("content://com.meizu.flyme.openidsdk/"), null, null, new String[]{openId.c}, null);
+                cursorQuery = context.getContentResolver().query(Uri.parse("content://com.meizu.flyme.openidsdk/"),
+                        null, null, new String[] { openId.c }, null);
             } catch (Throwable th2) {
                 th = th2;
             }
@@ -113,7 +126,7 @@ class b {
                 return openId.b;
             }
             if (a(context, true)) {
-                return b(context, openId);
+                return tryGetClassByName(context, openId);
             }
             str = "getId, isSupported = false.";
         }
@@ -123,7 +136,9 @@ class b {
 
     private static String a(PackageManager packageManager, String str) {
         ProviderInfo providerInfoResolveContentProvider;
-        if (packageManager == null || (providerInfoResolveContentProvider = packageManager.resolveContentProvider(str, 0)) == null || (providerInfoResolveContentProvider.applicationInfo.flags & 1) == 0) {
+        if (packageManager == null
+                || (providerInfoResolveContentProvider = packageManager.resolveContentProvider(str, 0)) == null
+                || (providerInfoResolveContentProvider.applicationInfo.flags & 1) == 0) {
             return null;
         }
         return providerInfoResolveContentProvider.packageName;
@@ -216,7 +231,8 @@ class b {
         Cursor cursorQuery = null;
         try {
             try {
-                cursorQuery = context.getContentResolver().query(Uri.parse("content://com.meizu.flyme.openidsdk/"), null, null, new String[]{"supported"}, null);
+                cursorQuery = context.getContentResolver().query(Uri.parse("content://com.meizu.flyme.openidsdk/"),
+                        null, null, new String[] { "supported" }, null);
             } catch (Exception e2) {
                 a("querySupport, Exception : " + e2.getMessage());
                 if (cursorQuery != null) {
@@ -253,7 +269,7 @@ class b {
         if (TextUtils.isEmpty(strA)) {
             return false;
         }
-        String strB = b(packageManager, strA);
+        String strB = tryGetClassByName(packageManager, strA);
         if (this.g.a() && this.g.a(strB)) {
             a("use same version cache, safeVersion : ".concat(String.valueOf(strB)));
             return this.g.b();

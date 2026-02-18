@@ -8,7 +8,7 @@ import me.hd.wauxv.data.bean.MsgInfoBean;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class cez extends doo implements bnq {
+public final class cez extends BaseHook implements bnq {
     public static final cez b = new cez("MoreMsgForwardSnsHook" /* cnb.z(-512518447430442L) */);
     public static final String c = "菜单" /* cnb.z(-512900699519786L) */;
     public static final String h = "多选消息转圈" /* cnb.z(-512922174356266L) */;
@@ -24,7 +24,8 @@ public final class cez extends doo implements bnq {
             Iterator it = arrayList.iterator();
             while (it.hasNext()) {
                 if (((MsgInfoBean) it.next()).isText()) {
-                    arrayList2.add(new cev(R.id.MenuItem_MoreBtnBar_TextForward, "文本转圈" /* cnb.z(-512475497757482L) */, new cbk(7)));
+                    arrayList2.add(new cev(R.id.MenuItem_MoreBtnBar_TextForward, "文本转圈" /* cnb.z(-512475497757482L) */,
+                            new cbk(7)));
                     break;
                 }
             }
@@ -33,7 +34,8 @@ public final class cez extends doo implements bnq {
             Iterator it2 = arrayList.iterator();
             while (it2.hasNext()) {
                 if (((MsgInfoBean) it2.next()).isImage()) {
-                    arrayList2.add(new cev(R.id.MenuItem_MoreBtnBar_ImageForward, "图片转圈" /* cnb.z(-512419663182634L) */, new cbk(8)));
+                    arrayList2.add(new cev(R.id.MenuItem_MoreBtnBar_ImageForward, "图片转圈" /* cnb.z(-512419663182634L) */,
+                            new cbk(8)));
                     break;
                 }
             }
@@ -42,7 +44,8 @@ public final class cez extends doo implements bnq {
             Iterator it3 = arrayList.iterator();
             while (it3.hasNext()) {
                 if (((MsgInfoBean) it3.next()).isVideo()) {
-                    arrayList2.add(new cev(R.id.MenuItem_MoreBtnBar_VideoForward, "视频转圈" /* cnb.z(-512381008476970L) */, new cbk(9)));
+                    arrayList2.add(new cev(R.id.MenuItem_MoreBtnBar_VideoForward, "视频转圈" /* cnb.z(-512381008476970L) */,
+                            new cbk(9)));
                     break;
                 }
             }
@@ -54,18 +57,18 @@ public final class cez extends doo implements bnq {
     public final void e() {
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String f() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getName() {
         return h;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String g() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getCategory() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String o() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getDescription() {
         return i;
     }
 }

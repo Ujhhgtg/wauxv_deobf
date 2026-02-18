@@ -5,7 +5,7 @@ import java.util.Iterator;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public abstract class r implements Collection, bsw {
+public abstract class r implements Collection, IEmpty {
     public abstract int a();
 
     @Override // java.util.Collection
@@ -30,7 +30,7 @@ public abstract class r implements Collection, bsw {
         }
         Iterator<E> it = iterator();
         while (it.hasNext()) {
-            if (bzo.f(it.next(), obj)) {
+            if (nullSafeIsEqual(it.next(), obj)) {
                 return true;
             }
         }
@@ -39,7 +39,7 @@ public abstract class r implements Collection, bsw {
 
     @Override // java.util.Collection
     public final boolean containsAll(Collection collection) {
-        bzo.q(collection, "elements");
+        throwIfVar1IsNull(collection, "elements");
         if (collection.isEmpty()) {
             return true;
         }
@@ -88,7 +88,7 @@ public abstract class r implements Collection, bsw {
 
     @Override // java.util.Collection
     public final Object[] toArray(Object[] objArr) {
-        bzo.q(objArr, "array");
+        throwIfVar1IsNull(objArr, "array");
         return bmy.ai(this, objArr);
     }
 }

@@ -29,7 +29,7 @@ public final class ks implements Iterator, Map.Entry {
         Object key = entry.getKey();
         int i = this.b;
         ku kuVar = this.d;
-        return bzo.f(key, kuVar.r(i)) && bzo.f(entry.getValue(), kuVar.s(this.b));
+        return nullSafeIsEqual(key, kuVar.r(i)) && nullSafeIsEqual(entry.getValue(), kuVar.s(this.b));
     }
 
     @Override // java.util.Map.Entry

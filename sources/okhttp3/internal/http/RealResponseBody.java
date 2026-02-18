@@ -1,6 +1,6 @@
 package okhttp3.internal.http;
 
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.rm;
 import okhttp3.MediaType;
 import okhttp3.ResponseBody;
@@ -13,7 +13,7 @@ public final class RealResponseBody extends ResponseBody {
     private final rm source;
 
     public RealResponseBody(String str, long j, rm rmVar) {
-        bzo.q(rmVar, "source");
+        throwIfVar1IsNull(rmVar, "source");
         this.contentTypeString = str;
         this.contentLength = j;
         this.source = rmVar;

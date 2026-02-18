@@ -6,7 +6,7 @@ import org.luckypray.dexkit.DexKitBridge;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class azd extends bws implements bng {
+public final class azd extends bws implements IRequiresDexLocate {
     public static final azd a = new azd();
     public static final LinkedHashSet b = new LinkedHashSet();
 
@@ -23,7 +23,7 @@ public final class azd extends bws implements bng {
     }
 
     @Override // me.hd.wauxv.obf.bng
-    public final void h(DexKitBridge dexKitBridge) {
+    public final void locateDex(DexKitBridge dexKitBridge) {
         emn.aj(azb.a, dexKitBridge, new ayz(2));
         emn.aj(azc.a, dexKitBridge, new ayz(3));
     }

@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 import me.hd.wauxv.obf.aaz;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.dlc;
 import me.hd.wauxv.obf.emc;
 import me.hd.wauxv.obf.la;
@@ -33,7 +33,10 @@ public final class Hpack {
     private static final int SETTINGS_HEADER_TABLE_SIZE_LIMIT = 16384;
     private static final Header[] STATIC_HEADER_TABLE;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Reader {
         public Header[] dynamicTable;
         public int dynamicTableByteCount;
@@ -44,10 +47,13 @@ public final class Hpack {
         private int nextHeaderIndex;
         private final rm source;
 
-        /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
+        /*
+         * JADX WARN: 'this' call moved to the top of the method (can break code
+         * semantics)
+         */
         public Reader(dlc dlcVar, int i) {
             this(dlcVar, i, 0, 4, null);
-            bzo.q(dlcVar, "source");
+            throwIfVar1IsNull(dlcVar, "source");
         }
 
         private final void adjustDynamicTableByteCount() {
@@ -86,7 +92,7 @@ public final class Hpack {
                         break;
                     }
                     Header header = this.dynamicTable[length];
-                    bzo.n(header);
+                    throwIfVar1IsNull(header);
                     int i4 = header.hpackSize;
                     i -= i4;
                     this.dynamicTableByteCount -= i4;
@@ -109,7 +115,7 @@ public final class Hpack {
                 Header[] headerArr = this.dynamicTable;
                 if (iDynamicTableIndex < headerArr.length) {
                     Header header = headerArr[iDynamicTableIndex];
-                    bzo.n(header);
+                    throwIfVar1IsNull(header);
                     return header.name;
                 }
             }
@@ -121,7 +127,7 @@ public final class Hpack {
             int i2 = header.hpackSize;
             if (i != -1) {
                 Header header2 = this.dynamicTable[dynamicTableIndex(i)];
-                bzo.n(header2);
+                throwIfVar1IsNull(header2);
                 i2 -= header2.hpackSize;
             }
             int i3 = this.maxDynamicTableByteCount;
@@ -168,7 +174,7 @@ public final class Hpack {
                 if (iDynamicTableIndex < headerArr.length) {
                     List<Header> list = this.headerList;
                     Header header = headerArr[iDynamicTableIndex];
-                    bzo.n(header);
+                    throwIfVar1IsNull(header);
                     list.add(header);
                     return;
                 }
@@ -258,7 +264,7 @@ public final class Hpack {
         }
 
         public Reader(dlc dlcVar, int i, int i2) {
-            bzo.q(dlcVar, "source");
+            throwIfVar1IsNull(dlcVar, "source");
             this.headerTableSizeSetting = i;
             this.maxDynamicTableByteCount = i2;
             this.headerList = new ArrayList();
@@ -272,7 +278,10 @@ public final class Hpack {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Writer {
         public Header[] dynamicTable;
         public int dynamicTableByteCount;
@@ -285,10 +294,13 @@ public final class Hpack {
         private int smallestHeaderTableSizeSetting;
         private final boolean useCompression;
 
-        /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
+        /*
+         * JADX WARN: 'this' call moved to the top of the method (can break code
+         * semantics)
+         */
         public Writer(int i, rh rhVar) {
             this(i, false, rhVar, 2, null);
-            bzo.q(rhVar, "out");
+            throwIfVar1IsNull(rhVar, "out");
         }
 
         private final void adjustDynamicTableByteCount() {
@@ -323,11 +335,11 @@ public final class Hpack {
                         break;
                     }
                     Header header = this.dynamicTable[length];
-                    bzo.n(header);
+                    throwIfVar1IsNull(header);
                     i -= header.hpackSize;
                     int i4 = this.dynamicTableByteCount;
                     Header header2 = this.dynamicTable[length];
-                    bzo.n(header2);
+                    throwIfVar1IsNull(header2);
                     this.dynamicTableByteCount = i4 - header2.hpackSize;
                     this.headerCount--;
                     i3++;
@@ -381,7 +393,7 @@ public final class Hpack {
         }
 
         public final void writeByteString(sj sjVar) throws EOFException {
-            bzo.q(sjVar, "data");
+            throwIfVar1IsNull(sjVar, "data");
             if (this.useCompression) {
                 Huffman huffman = Huffman.INSTANCE;
                 if (huffman.encodedLength(sjVar) < sjVar.g()) {
@@ -397,11 +409,11 @@ public final class Hpack {
             this.out.al(sjVar);
         }
 
-        /* JADX WARN: Found duplicated region for block: B:22:0x0077  */
+        /* JADX WARN: Found duplicated region for block: B:22:0x0077 */
         public final void writeHeaders(List<Header> list) throws EOFException {
             int length;
             int length2;
-            bzo.q(list, "headerBlock");
+            throwIfVar1IsNull(list, "headerBlock");
             if (this.emitDynamicTableSizeUpdate) {
                 int i = this.smallestHeaderTableSizeSetting;
                 if (i < this.maxDynamicTableByteCount) {
@@ -424,9 +436,9 @@ public final class Hpack {
                     if (2 > length2 || length2 >= 8) {
                         length = length2;
                         length2 = -1;
-                    } else if (bzo.f(hpack.getSTATIC_HEADER_TABLE()[iIntValue].value, sjVar)) {
+                    } else if (nullSafeIsEqual(hpack.getSTATIC_HEADER_TABLE()[iIntValue].value, sjVar)) {
                         length = length2;
-                    } else if (bzo.f(hpack.getSTATIC_HEADER_TABLE()[length2].value, sjVar)) {
+                    } else if (nullSafeIsEqual(hpack.getSTATIC_HEADER_TABLE()[length2].value, sjVar)) {
                         length = length2;
                         length2 = iIntValue + 2;
                     } else {
@@ -441,11 +453,11 @@ public final class Hpack {
                     int length3 = this.dynamicTable.length;
                     for (int i3 = this.nextHeaderIndex + 1; i3 < length3; i3++) {
                         Header header2 = this.dynamicTable[i3];
-                        bzo.n(header2);
-                        if (bzo.f(header2.name, sjVarM)) {
+                        throwIfVar1IsNull(header2);
+                        if (nullSafeIsEqual(header2.name, sjVarM)) {
                             Header header3 = this.dynamicTable[i3];
-                            bzo.n(header3);
-                            if (bzo.f(header3.value, sjVar)) {
+                            throwIfVar1IsNull(header3);
+                            if (nullSafeIsEqual(header3.value, sjVar)) {
                                 length2 = Hpack.INSTANCE.getSTATIC_HEADER_TABLE().length + (i3 - this.nextHeaderIndex);
                                 break;
                             } else if (length == -1) {
@@ -464,8 +476,8 @@ public final class Hpack {
                 } else {
                     sj sjVar2 = Header.PSEUDO_PREFIX;
                     sjVarM.getClass();
-                    bzo.q(sjVar2, "prefix");
-                    if (!sjVarM.k(sjVar2, sjVar2.g()) || bzo.f(Header.TARGET_AUTHORITY, sjVarM)) {
+                    throwIfVar1IsNull(sjVar2, "prefix");
+                    if (!sjVarM.k(sjVar2, sjVar2.g()) || nullSafeIsEqual(Header.TARGET_AUTHORITY, sjVarM)) {
                         writeInt(length, 63, 64);
                         writeByteString(sjVar);
                         insertIntoDynamicTable(header);
@@ -491,14 +503,17 @@ public final class Hpack {
             this.out.am(i4);
         }
 
-        /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
+        /*
+         * JADX WARN: 'this' call moved to the top of the method (can break code
+         * semantics)
+         */
         public Writer(rh rhVar) {
             this(0, false, rhVar, 3, null);
-            bzo.q(rhVar, "out");
+            throwIfVar1IsNull(rhVar, "out");
         }
 
         public Writer(int i, boolean z, rh rhVar) {
-            bzo.q(rhVar, "out");
+            throwIfVar1IsNull(rhVar, "out");
             this.headerTableSizeSetting = i;
             this.useCompression = z;
             this.out = rhVar;
@@ -527,7 +542,27 @@ public final class Hpack {
         Header header6 = new Header(sjVar3, "http");
         Header header7 = new Header(sjVar3, "https");
         sj sjVar4 = Header.RESPONSE_STATUS;
-        STATIC_HEADER_TABLE = new Header[]{header, header2, header3, header4, header5, header6, header7, new Header(sjVar4, "200"), new Header(sjVar4, "204"), new Header(sjVar4, "206"), new Header(sjVar4, "304"), new Header(sjVar4, "400"), new Header(sjVar4, "404"), new Header(sjVar4, "500"), new Header("accept-charset", ""), new Header("accept-encoding", "gzip, deflate"), new Header("accept-language", ""), new Header("accept-ranges", ""), new Header("accept", ""), new Header("access-control-allow-origin", ""), new Header("age", ""), new Header("allow", ""), new Header("authorization", ""), new Header("cache-control", ""), new Header("content-disposition", ""), new Header("content-encoding", ""), new Header("content-language", ""), new Header("content-length", ""), new Header("content-location", ""), new Header("content-range", ""), new Header("content-type", ""), new Header("cookie", ""), new Header("date", ""), new Header("etag", ""), new Header("expect", ""), new Header("expires", ""), new Header("from", ""), new Header("host", ""), new Header("if-match", ""), new Header("if-modified-since", ""), new Header("if-none-match", ""), new Header("if-range", ""), new Header("if-unmodified-since", ""), new Header("last-modified", ""), new Header("link", ""), new Header("location", ""), new Header("max-forwards", ""), new Header("proxy-authenticate", ""), new Header("proxy-authorization", ""), new Header("range", ""), new Header("referer", ""), new Header("refresh", ""), new Header("retry-after", ""), new Header("server", ""), new Header("set-cookie", ""), new Header("strict-transport-security", ""), new Header("transfer-encoding", ""), new Header("user-agent", ""), new Header("vary", ""), new Header("via", ""), new Header("www-authenticate", "")};
+        STATIC_HEADER_TABLE = new Header[] { header, header2, header3, header4, header5, header6, header7,
+                new Header(sjVar4, "200"), new Header(sjVar4, "204"), new Header(sjVar4, "206"),
+                new Header(sjVar4, "304"), new Header(sjVar4, "400"), new Header(sjVar4, "404"),
+                new Header(sjVar4, "500"), new Header("accept-charset", ""),
+                new Header("accept-encoding", "gzip, deflate"), new Header("accept-language", ""),
+                new Header("accept-ranges", ""), new Header("accept", ""),
+                new Header("access-control-allow-origin", ""), new Header("age", ""), new Header("allow", ""),
+                new Header("authorization", ""), new Header("cache-control", ""), new Header("content-disposition", ""),
+                new Header("content-encoding", ""), new Header("content-language", ""),
+                new Header("content-length", ""), new Header("content-location", ""), new Header("content-range", ""),
+                new Header("content-type", ""), new Header("cookie", ""), new Header("date", ""),
+                new Header("etag", ""), new Header("expect", ""), new Header("expires", ""), new Header("from", ""),
+                new Header("host", ""), new Header("if-match", ""), new Header("if-modified-since", ""),
+                new Header("if-none-match", ""), new Header("if-range", ""), new Header("if-unmodified-since", ""),
+                new Header("last-modified", ""), new Header("link", ""), new Header("location", ""),
+                new Header("max-forwards", ""), new Header("proxy-authenticate", ""),
+                new Header("proxy-authorization", ""), new Header("range", ""), new Header("referer", ""),
+                new Header("refresh", ""), new Header("retry-after", ""), new Header("server", ""),
+                new Header("set-cookie", ""), new Header("strict-transport-security", ""),
+                new Header("transfer-encoding", ""), new Header("user-agent", ""), new Header("vary", ""),
+                new Header("via", ""), new Header("www-authenticate", "") };
         NAME_TO_FIRST_INDEX = hpack.nameToFirstIndex();
     }
 
@@ -545,12 +580,12 @@ public final class Hpack {
             }
         }
         Map<sj, Integer> mapUnmodifiableMap = Collections.unmodifiableMap(linkedHashMap);
-        bzo.p(mapUnmodifiableMap, "unmodifiableMap(result)");
+        throwIfVar1IsNull(mapUnmodifiableMap, "unmodifiableMap(result)");
         return mapUnmodifiableMap;
     }
 
     public final sj checkLowercase(sj sjVar) throws IOException {
-        bzo.q(sjVar, "name");
+        throwIfVar1IsNull(sjVar, "name");
         int iG = sjVar.g();
         for (int i = 0; i < iG; i++) {
             byte bJ = sjVar.j(i);

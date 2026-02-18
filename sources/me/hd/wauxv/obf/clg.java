@@ -32,10 +32,11 @@ public final class clg extends RequestBody {
     @Override // okhttp3.RequestBody
     public final void writeTo(rl rlVar) {
         ConcurrentLinkedQueue concurrentLinkedQueue;
-        bzo.q(rlVar, "sink");
+        throwIfVar1IsNull(rlVar, "sink");
         boolean z = rlVar instanceof rh;
         RequestBody requestBody = this.a;
-        if (z || dnj.ab(rlVar.toString(), "com.android.tools.profiler.support.network.HttpTracker$OutputStreamTracker", false)) {
+        if (z || dnj.ab(rlVar.toString(), "com.android.tools.profiler.support.network.HttpTracker$OutputStreamTracker",
+                false)) {
             requestBody.writeTo(rlVar);
             return;
         }

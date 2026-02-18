@@ -28,7 +28,7 @@ public final /* synthetic */ class aam implements MenuItem.OnMenuItemClickListen
             case 0:
                 File file = new File((String) obj2);
                 eqj eqjVar = ((CodeFragment) obj).d;
-                bzo.n(eqjVar);
+                throwIfVar1IsNull(eqjVar);
                 bad.e(file, ((bdp) eqjVar).b.getText().toString());
                 dnc.g(null, 3, "保存成功" /* cnb.z(-420137995860778L) */);
                 break;
@@ -36,7 +36,9 @@ public final /* synthetic */ class aam implements MenuItem.OnMenuItemClickListen
                 MainActivity mainActivity = (MainActivity) obj2;
                 MenuItem menuItem2 = (MenuItem) obj;
                 int i2 = MainActivity.as;
-                mainActivity.getPackageManager().setComponentEnabledSetting(new ComponentName(mainActivity.getPackageName(), mainActivity.at), !mainActivity.au(mainActivity) ? 2 : 1, 1);
+                mainActivity.getPackageManager().setComponentEnabledSetting(
+                        new ComponentName(mainActivity.getPackageName(), mainActivity.at),
+                        !mainActivity.au(mainActivity) ? 2 : 1, 1);
                 menuItem2.setChecked(mainActivity.au(mainActivity));
                 break;
         }

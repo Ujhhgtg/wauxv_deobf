@@ -10,9 +10,9 @@ public class ckn extends cwn {
 
     public ckn(long j, bmu bmuVar, cwd cwdVar, dfx dfxVar) {
         rw rwVar = new rw();
-        bzo.q(cwdVar, "proto");
-        bzo.q(bmuVar, "parentWriter");
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(cwdVar, "proto");
+        throwIfVar1IsNull(bmuVar, "parentWriter");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         super(cwdVar, new bmu(rwVar), dfxVar);
         this.ag = j;
         this.ah = bmuVar;
@@ -23,7 +23,7 @@ public class ckn extends cwn {
     public long ae(dfx dfxVar, int i) {
         switch (this.af) {
             case 0:
-                bzo.q(dfxVar, "<this>");
+                throwIfVar1IsNull(dfxVar, "<this>");
                 return 1;
             default:
                 return super.ae(dfxVar, i);
@@ -34,17 +34,17 @@ public class ckn extends cwn {
     public void aj(dfx dfxVar) {
         switch (this.af) {
             case 0:
-                bzo.q(dfxVar, "descriptor");
+                throwIfVar1IsNull(dfxVar, "descriptor");
                 int i = (int) (this.ag & 2147483647L);
                 bmu bmuVar = this.ah;
                 bmuVar.getClass();
                 rw rwVar = this.ai;
-                bzo.q(rwVar, "output");
+                throwIfVar1IsNull(rwVar, "output");
                 bmuVar.n((rw) bmuVar.h, cwk.f.k(i), cwf.DEFAULT);
                 bmuVar.x(rwVar);
                 break;
             default:
-                bzo.q(dfxVar, "descriptor");
+                throwIfVar1IsNull(dfxVar, "descriptor");
                 long j = this.ag;
                 rw rwVar2 = this.ai;
                 bmu bmuVar2 = this.ah;
@@ -52,7 +52,7 @@ public class ckn extends cwn {
                     bmuVar2.x(rwVar2);
                 } else {
                     bmuVar2.getClass();
-                    bzo.q(rwVar2, "output");
+                    throwIfVar1IsNull(rwVar2, "output");
                     bmuVar2.n((rw) bmuVar2.h, cwk.f.k((int) (j & 2147483647L)), cwf.DEFAULT);
                     bmuVar2.x(rwVar2);
                 }
@@ -60,12 +60,15 @@ public class ckn extends cwn {
         }
     }
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'super' call moved to the top of the method (can break code
+     * semantics)
+     */
     public ckn(cwd cwdVar, bmu bmuVar, long j, dfx dfxVar, rw rwVar) {
         super(cwdVar, new bmu(rwVar), dfxVar);
-        bzo.q(cwdVar, "proto");
-        bzo.q(bmuVar, "writer");
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(cwdVar, "proto");
+        throwIfVar1IsNull(bmuVar, "writer");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         this.ah = bmuVar;
         this.ag = j;
         this.ai = rwVar;

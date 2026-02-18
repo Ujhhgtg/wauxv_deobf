@@ -5,9 +5,12 @@ import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public class bxl {
-    public static final /* synthetic */ AtomicReferenceFieldUpdater k = AtomicReferenceFieldUpdater.newUpdater(bxl.class, Object.class, "_next$volatile");
-    public static final /* synthetic */ AtomicReferenceFieldUpdater l = AtomicReferenceFieldUpdater.newUpdater(bxl.class, Object.class, "_prev$volatile");
-    public static final /* synthetic */ AtomicReferenceFieldUpdater m = AtomicReferenceFieldUpdater.newUpdater(bxl.class, Object.class, "_removedRef$volatile");
+    public static final /* synthetic */ AtomicReferenceFieldUpdater k = AtomicReferenceFieldUpdater
+            .newUpdater(bxl.class, Object.class, "_next$volatile");
+    public static final /* synthetic */ AtomicReferenceFieldUpdater l = AtomicReferenceFieldUpdater
+            .newUpdater(bxl.class, Object.class, "_prev$volatile");
+    public static final /* synthetic */ AtomicReferenceFieldUpdater m = AtomicReferenceFieldUpdater
+            .newUpdater(bxl.class, Object.class, "_removedRef$volatile");
     private volatile /* synthetic */ Object _next$volatile = this;
     private volatile /* synthetic */ Object _prev$volatile = this;
     private volatile /* synthetic */ Object _removedRef$volatile;
@@ -68,7 +71,8 @@ public class bxl {
                         return null;
                     }
                     if (!(obj instanceof dbf)) {
-                        bzo.o(obj, "null cannot be cast to non-null type kotlinx.coroutines.internal.LockFreeLinkedListNode");
+                        throwIfVar1IsNull(obj,
+                                "null cannot be cast to non-null type kotlinx.coroutines.internal.LockFreeLinkedListNode");
                         bxlVar3 = bxlVar2;
                         bxlVar2 = (bxl) obj;
                     } else {
@@ -115,7 +119,8 @@ public class bxl {
         if (dbfVar != null && (bxlVar = dbfVar.a) != null) {
             return bxlVar;
         }
-        bzo.o(obj, "null cannot be cast to non-null type kotlinx.coroutines.internal.LockFreeLinkedListNode");
+        throwIfVar1IsNull(obj,
+                "null cannot be cast to non-null type kotlinx.coroutines.internal.LockFreeLinkedListNode");
         return (bxl) obj;
     }
 
@@ -124,6 +129,7 @@ public class bxl {
     }
 
     public String toString() {
-        return new bxk(this, ajn.class, "classSimpleName", "getClassSimpleName(Ljava/lang/Object;)Ljava/lang/String;", 1) + '@' + ajn.q(this);
+        return new bxk(this, ajn.class, "classSimpleName", "getClassSimpleName(Ljava/lang/Object;)Ljava/lang/String;",
+                1) + '@' + ajn.q(this);
     }
 }

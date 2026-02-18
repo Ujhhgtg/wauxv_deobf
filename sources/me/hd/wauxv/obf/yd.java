@@ -25,7 +25,10 @@ public final class yd extends bri {
         }
     }
 
-    /* JADX WARN: Type inference failed for: r0v5, types: [java.lang.Object, me.hd.wauxv.obf.bgf] */
+    /*
+     * JADX WARN: Type inference failed for: r0v5, types: [java.lang.Object,
+     * me.hd.wauxv.obf.bgf]
+     */
     @Override // me.hd.wauxv.obf.bri
     public final void d(Throwable th) throws aoq {
         switch (this.a) {
@@ -38,7 +41,7 @@ public final class yd extends bri {
                     while (true) {
                         Object obj = atomicReferenceFieldUpdater.get(aorVar);
                         auj aujVar = cnf.af;
-                        if (bzo.f(obj, aujVar)) {
+                        if (nullSafeIsEqual(obj, aujVar)) {
                             while (!atomicReferenceFieldUpdater.compareAndSet(aorVar, aujVar, thS)) {
                                 if (atomicReferenceFieldUpdater.get(aorVar) != aujVar) {
                                 }

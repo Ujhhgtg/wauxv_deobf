@@ -10,8 +10,8 @@ import java.util.NoSuchElementException;
 /* JADX INFO: loaded from: classes.dex */
 public abstract class abf extends abe {
     public static void an(Collection collection, Iterable iterable) {
-        bzo.q(collection, "<this>");
-        bzo.q(iterable, "elements");
+        throwIfVar1IsNull(collection, "<this>");
+        throwIfVar1IsNull(iterable, "elements");
         if (iterable instanceof Collection) {
             collection.addAll((Collection) iterable);
             return;
@@ -23,14 +23,14 @@ public abstract class abf extends abe {
     }
 
     public static void ao(Collection collection, Object[] objArr) {
-        bzo.q(collection, "<this>");
-        bzo.q(objArr, "elements");
+        throwIfVar1IsNull(collection, "<this>");
+        throwIfVar1IsNull(objArr, "elements");
         collection.addAll(la.a(objArr));
     }
 
-    public static void ap(ArrayList arrayList, bgf bgfVar) {
+    public static void ap(ArrayList arrayList, IHasInvokeMethod bgfVar) {
         int iAf;
-        bzo.q(arrayList, "<this>");
+        throwIfVar1IsNull(arrayList, "<this>");
         int iAf2 = aba.af(arrayList);
         int i = 0;
         if (iAf2 >= 0) {
@@ -72,7 +72,7 @@ public abstract class abf extends abe {
     }
 
     public static Object ar(List list) {
-        bzo.q(list, "<this>");
+        throwIfVar1IsNull(list, "<this>");
         if (list.isEmpty()) {
             throw new NoSuchElementException("List is empty.");
         }

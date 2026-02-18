@@ -11,7 +11,7 @@ public final class bbk extends cvj {
     @Override // me.hd.wauxv.obf.cvj
     public final Object c() {
         float[] fArrCopyOf = Arrays.copyOf(this.a, this.b);
-        bzo.p(fArrCopyOf, "copyOf(...)");
+        throwIfVar1IsNull(fArrCopyOf, "copyOf(...)");
         return fArrCopyOf;
     }
 
@@ -24,7 +24,7 @@ public final class bbk extends cvj {
                 i = length;
             }
             float[] fArrCopyOf = Arrays.copyOf(fArr, i);
-            bzo.p(fArrCopyOf, "copyOf(...)");
+            throwIfVar1IsNull(fArrCopyOf, "copyOf(...)");
             this.a = fArrCopyOf;
         }
     }

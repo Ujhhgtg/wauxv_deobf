@@ -34,9 +34,10 @@ class ObjectReaderImplDoubleValueArray extends ObjectReaderPrimitive {
             } else if (obj instanceof Number) {
                 dDoubleValue = ((Number) obj).doubleValue();
             } else {
-                Function typeConvert = JSONFactory.getDefaultObjectReaderProvider().getTypeConvert(obj.getClass(), Double.TYPE);
+                Function typeConvert = JSONFactory.getDefaultObjectReaderProvider().getTypeConvert(obj.getClass(),
+                        Double.TYPE);
                 if (typeConvert == null) {
-                    throw new JSONException(bjs.m(obj, new StringBuilder("can not cast to double ")));
+                    throw new JSONException(concatVar1GetClass(obj, new StringBuilder("can not cast to double ")));
                 }
                 dDoubleValue = ((Double) typeConvert.apply(obj)).doubleValue();
             }
@@ -47,7 +48,8 @@ class ObjectReaderImplDoubleValueArray extends ObjectReaderPrimitive {
         return function != null ? function.apply(dArr) : dArr;
     }
 
-    @Override // com.alibaba.fastjson2.reader.ObjectReaderPrimitive, com.alibaba.fastjson2.reader.ObjectReader
+    @Override // com.alibaba.fastjson2.reader.ObjectReaderPrimitive,
+              // com.alibaba.fastjson2.reader.ObjectReader
     public Object readJSONBObject(JSONReader jSONReader, Type type, Object obj, long j) {
         if (jSONReader.nextIfMatch(JSONB.Constants.BC_TYPED_ANY) && jSONReader.readTypeHashCode() != TYPE_HASH) {
             throw new JSONException("not support autoType : " + jSONReader.getString());

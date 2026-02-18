@@ -53,7 +53,7 @@ public final /* synthetic */ class h implements bfu {
                 return ensVar;
             case 2:
                 Object objB = acv.b(acv.a, eom.b.f);
-                bzo.o(objB, "null cannot be cast to non-null type kotlin.String" /* cnb.z(-121221156961066L) */);
+                throwIfVar1IsNull(objB, "null cannot be cast to non-null type kotlin.String" /* cnb.z(-121221156961066L) */);
                 return (String) objB;
             case 3:
                 Object objB2 = acv.b(acv.a, eom.c.f);
@@ -222,7 +222,7 @@ public final /* synthetic */ class h implements bfu {
             case 27:
                 bmo.a.getClass();
                 View viewInflate = View.inflate(aqu.e(cnf.am(bmo.n())), R.layout.module_dialog_choose_contacts, null);
-                bzo.o(viewInflate, "null cannot be cast to non-null type android.widget.LinearLayout" /* cnb.z(-394157738687274L) */);
+                throwIfVar1IsNull(viewInflate, "null cannot be cast to non-null type android.widget.LinearLayout" /* cnb.z(-394157738687274L) */);
                 return (LinearLayout) viewInflate;
             case 28:
                 bmo.a.getClass();
@@ -232,7 +232,7 @@ public final /* synthetic */ class h implements bfu {
                     bmf[] bmfVarArrW = bhv.w();
                     ex exVar = new ex(i2);
                     Object[] objArrCopyOf = Arrays.copyOf(bmfVarArrW, 330);
-                    bzo.p(objArrCopyOf, "copyOf(...)");
+                    throwIfVar1IsNull(objArrCopyOf, "copyOf(...)");
                     if (objArrCopyOf.length > 1) {
                         Arrays.sort(objArrCopyOf, exVar);
                     }

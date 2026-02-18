@@ -38,8 +38,8 @@ import org.luckypray.dexkit.DexKitBridge;
 public abstract class emn implements esi {
     public static final hn z = new hn(1);
     public static final hn aa = new hn(2);
-    public static final byte[] ab = {112, 114, 111, 0};
-    public static final byte[] ac = {112, 114, JSONB.Constants.BC_STR_ASCII_FIX_36, 0};
+    public static final byte[] ab = { 112, 114, 111, 0 };
+    public static final byte[] ac = { 112, 114, JSONB.Constants.BC_STR_ASCII_FIX_36, 0 };
 
     public emn() {
         new ConcurrentHashMap();
@@ -176,7 +176,8 @@ public abstract class emn implements esi {
         int i = 0;
         int length = 0;
         for (amr amrVar : amrVarArr) {
-            length += ((((amrVar.g * 2) + 7) & (-8)) / 8) + (amrVar.e * 2) + al(amrVar.a, amrVar.b, bArr).getBytes(StandardCharsets.UTF_8).length + 16 + amrVar.f;
+            length += ((((amrVar.g * 2) + 7) & (-8)) / 8) + (amrVar.e * 2)
+                    + al(amrVar.a, amrVar.b, bArr).getBytes(StandardCharsets.UTF_8).length + 16 + amrVar.f;
         }
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream(length);
         if (Arrays.equals(bArr, ewz.t)) {
@@ -200,7 +201,8 @@ public abstract class emn implements esi {
         if (byteArrayOutputStream.size() == length) {
             return byteArrayOutputStream.toByteArray();
         }
-        throw new IllegalStateException("The bytes saved do not match expectation. actual=" + byteArrayOutputStream.size() + " expected=" + length);
+        throw new IllegalStateException("The bytes saved do not match expectation. actual="
+                + byteArrayOutputStream.size() + " expected=" + length);
     }
 
     public static final csv ah(Class cls, List list) {
@@ -311,41 +313,44 @@ public abstract class emn implements esi {
         return eumVar;
     }
 
-    public static final void aj(amn amnVar, DexKitBridge dexKitBridge, bgf bgfVar) {
+    public static final void aj(amn amnVar, DexKitBridge dexKitBridge, IHasInvokeMethod bgfVar) {
         Object objX;
         String str;
         String str2;
-        io ioVar;
+        DefaultConfig ioVar;
         amm ammVar = new amm(dexKitBridge, amnVar);
         bgfVar.invoke(ammVar);
         try {
-            bgf bgfVar2 = ammVar.b;
+            IHasInvokeMethod bgfVar2 = ammVar.b;
             if (bgfVar2 != null && ammVar.c != null) {
                 bag bagVar = new bag();
                 bgfVar2.invoke(bagVar);
                 yu yuVar = (yu) dexKitBridge.e(bagVar).a();
-                bgf bgfVar3 = ammVar.c;
-                bzo.n(bgfVar3);
+                IHasInvokeMethod bgfVar3 = ammVar.c;
+                throwIfVar1IsNull(bgfVar3);
                 bah bahVar = new bah();
                 bgfVar3.invoke(bahVar);
                 yuVar.getClass();
                 bahVar.b = dqc.bf(yuVar);
                 cdg cdgVarF = yuVar.a.f(bahVar);
-                bgf bgfVar4 = ammVar.d;
+                IHasInvokeMethod bgfVar4 = ammVar.d;
                 str = ((cdf) (bgfVar4 != null ? cdgVarF.b(bgfVar4) : cdgVarF.a())).f;
             } else if (bgfVar2 != null) {
                 bag bagVar2 = new bag();
                 bgfVar2.invoke(bagVar2);
                 str = ((yu) dexKitBridge.e(bagVar2).a()).f;
             } else {
-                bgf bgfVar5 = ammVar.c;
+                IHasInvokeMethod bgfVar5 = ammVar.c;
                 if (bgfVar5 == null) {
-                    throw new IllegalArgumentException(amnVar.b.concat(" FindDexClassMethod Config Failed" /* cnb.z(-82768314759978L) */));
+                    throw new IllegalArgumentException(amnVar.b.concat(" FindDexClassMethod Config Failed" /*
+                                                                                                            * cnb.z(-
+                                                                                                            * 82768314759978L)
+                                                                                                            */));
                 }
                 bah bahVar2 = new bah();
                 bgfVar5.invoke(bahVar2);
                 cdg cdgVarF2 = dexKitBridge.f(bahVar2);
-                bgf bgfVar6 = ammVar.d;
+                IHasInvokeMethod bgfVar6 = ammVar.d;
                 str = ((cdf) (bgfVar6 != null ? cdgVarF2.b(bgfVar6) : cdgVarF2.a())).f;
             }
             str2 = (String) amnVar.c.getValue();
@@ -367,7 +372,7 @@ public abstract class emn implements esi {
     }
 
     public static cdf ak(DexKitBridge dexKitBridge, c cVar) {
-        bzo.q(dexKitBridge, "bridge");
+        throwIfVar1IsNull(dexKitBridge, "bridge");
         int iG = cVar.g(10);
         int i = iG != 0 ? cVar.b.getInt(iG + cVar.a) : 0;
         if ((i & 131072) > 0) {
@@ -445,7 +450,8 @@ public abstract class emn implements esi {
     }
 
     public static final LayoutInflater an(Context context) {
-        LayoutInflater layoutInflater = context instanceof Activity ? ((Activity) context).getLayoutInflater() : LayoutInflater.from(context);
+        LayoutInflater layoutInflater = context instanceof Activity ? ((Activity) context).getLayoutInflater()
+                : LayoutInflater.from(context);
         if (layoutInflater != null) {
             return layoutInflater;
         }
@@ -456,7 +462,7 @@ public abstract class emn implements esi {
         int i;
         int i2 = 0;
         if (sjVarArr.length == 0) {
-            return new crv(new sj[0], new int[]{0, -1});
+            return new crv(new sj[0], new int[] { 0, -1 });
         }
         ArrayList arrayList = new ArrayList(new kk(sjVarArr, false));
         if (arrayList.size() > 1) {
@@ -515,7 +521,7 @@ public abstract class emn implements esi {
             while (i10 < arrayList.size()) {
                 sj sjVar4 = (sj) arrayList.get(i10);
                 sjVar4.getClass();
-                bzo.q(sjVar3, "prefix");
+                throwIfVar1IsNull(sjVar3, "prefix");
                 if (!sjVar4.k(sjVar3, sjVar3.g())) {
                     break;
                 }
@@ -539,7 +545,7 @@ public abstract class emn implements esi {
             i2++;
         }
         Object[] objArrCopyOf = Arrays.copyOf(sjVarArr, sjVarArr.length);
-        bzo.p(objArrCopyOf, "copyOf(this, size)");
+        throwIfVar1IsNull(objArrCopyOf, "copyOf(this, size)");
         return new crv((sj[]) objArrCopyOf, iArr);
     }
 
@@ -553,7 +559,8 @@ public abstract class emn implements esi {
         return iArr;
     }
 
-    public static amr[] aq(FileInputStream fileInputStream, byte[] bArr, byte[] bArr2, amr[] amrVarArr) throws IOException {
+    public static amr[] aq(FileInputStream fileInputStream, byte[] bArr, byte[] bArr2, amr[] amrVarArr)
+            throws IOException {
         byte[] bArr3 = ewz.w;
         if (!Arrays.equals(bArr, bArr3)) {
             if (!Arrays.equals(bArr, ewz.x)) {
@@ -579,7 +586,8 @@ public abstract class emn implements esi {
             }
         }
         if (Arrays.equals(ewz.r, bArr2)) {
-            throw new IllegalStateException("Requires new Baseline Profile Metadata. Please rebuild the APK with Android Gradle Plugin 7.2 Canary 7 or higher");
+            throw new IllegalStateException(
+                    "Requires new Baseline Profile Metadata. Please rebuild the APK with Android Gradle Plugin 7.2 Canary 7 or higher");
         }
         if (!Arrays.equals(bArr, bArr3)) {
             throw new IllegalStateException("Unsupported meta version");
@@ -630,7 +638,8 @@ public abstract class emn implements esi {
         return amrVarArr;
     }
 
-    public static amr[] as(ByteArrayInputStream byteArrayInputStream, byte[] bArr, int i, amr[] amrVarArr) throws IOException {
+    public static amr[] as(ByteArrayInputStream byteArrayInputStream, byte[] bArr, int i, amr[] amrVarArr)
+            throws IOException {
         if (byteArrayInputStream.available() == 0) {
             return new amr[0];
         }
@@ -639,7 +648,8 @@ public abstract class emn implements esi {
         }
         for (int i2 = 0; i2 < i; i2++) {
             ewz.at(byteArrayInputStream, 2);
-            String str = new String(ewz.ar(byteArrayInputStream, (int) ewz.at(byteArrayInputStream, 2)), StandardCharsets.UTF_8);
+            String str = new String(ewz.ar(byteArrayInputStream, (int) ewz.at(byteArrayInputStream, 2)),
+                    StandardCharsets.UTF_8);
             long jAt = ewz.at(byteArrayInputStream, 4);
             int iAt = (int) ewz.at(byteArrayInputStream, 2);
             amr amrVar = null;
@@ -710,7 +720,9 @@ public abstract class emn implements esi {
         for (int i3 = 0; i3 < i; i3++) {
             int iAt = (int) ewz.at(byteArrayInputStream, 2);
             int iAt2 = (int) ewz.at(byteArrayInputStream, 2);
-            amrVarArr[i3] = new amr(str, new String(ewz.ar(byteArrayInputStream, iAt), StandardCharsets.UTF_8), ewz.at(byteArrayInputStream, 4), iAt2, (int) ewz.at(byteArrayInputStream, 4), (int) ewz.at(byteArrayInputStream, 4), new int[iAt2], new TreeMap());
+            amrVarArr[i3] = new amr(str, new String(ewz.ar(byteArrayInputStream, iAt), StandardCharsets.UTF_8),
+                    ewz.at(byteArrayInputStream, 4), iAt2, (int) ewz.at(byteArrayInputStream, 4),
+                    (int) ewz.at(byteArrayInputStream, 4), new int[iAt2], new TreeMap());
         }
         int i4 = 0;
         while (i4 < i) {
@@ -803,7 +815,8 @@ public abstract class emn implements esi {
             ng.ak(bfpVar.ar());
             return;
         }
-        View viewAn = bfpVar.an(bfpVar.aq(bfpVar.ax()) != 0 ? bfpVar.aq(bfpVar.ax()) : bfpVar.ax() ? R.layout.layout_dialogx_fullscreen : R.layout.layout_dialogx_fullscreen_dark);
+        View viewAn = bfpVar.an(bfpVar.aq(bfpVar.ax()) != 0 ? bfpVar.aq(bfpVar.ax())
+                : bfpVar.ax() ? R.layout.layout_dialogx_fullscreen : R.layout.layout_dialogx_fullscreen_dark);
         bfpVar.bg = new bfo(bfpVar, viewAn);
         if (viewAn != null) {
             viewAn.setTag(bfpVar);
@@ -832,11 +845,13 @@ public abstract class emn implements esi {
         }
         ki.a.getClass();
         ClassLoader classLoaderG = ki.g();
-        String[] strArr = {bjs.o("name:[", str, "]")};
+        String[] strArr = { concat("name:[", str, "]") };
         for (int i = 0; i != 30; i++) {
         }
         String str3 = strArr[0];
-        throw new NoClassDefFoundError("Can't find this Class in [" + classLoaderG + "]:\n" + ((Object) (dnj.ak(str3) ? "name:[" : "name:[  -> " + str3 + "\n")) + "Generated by YukiHookAPI#ReflectionTool");
+        throw new NoClassDefFoundError("Can't find this Class in [" + classLoaderG + "]:\n"
+                + ((Object) (dnj.ak(str3) ? "name:[" : "name:[  -> " + str3 + "\n"))
+                + "Generated by YukiHookAPI#ReflectionTool");
     }
 
     public static final Class az(amn amnVar) throws NoSuchMethodException {
@@ -896,47 +911,51 @@ public abstract class emn implements esi {
         throw new NoSuchMethodException(amnVar.b.concat(" toDexMethod Failed" /* cnb.z(-80058190396202L) */));
     }
 
-    public static final void bc(amn amnVar, bgf bgfVar) {
+    public static final void bc(amn amnVar, IHasInvokeMethod bgfVar) {
         bgfVar.invoke(bb(amnVar));
     }
 
     public static final Class bd(Class cls) {
-        boolean zF = bzo.f(cls, ens.class);
+        boolean zF = nullSafeIsEqual(cls, ens.class);
         Class cls2 = Void.TYPE;
-        if (!zF && !bzo.f(cls, Void.class)) {
-            if (!bzo.f(cls, cls2 == null ? ay("void") : cls2)) {
-                boolean zF2 = bzo.f(cls, Boolean.class);
+        if (!zF && !nullSafeIsEqual(cls, Void.class)) {
+            if (!nullSafeIsEqual(cls, cls2 == null ? ay("void") : cls2)) {
+                boolean zF2 = nullSafeIsEqual(cls, Boolean.class);
                 Class cls3 = Boolean.TYPE;
                 if (!zF2) {
-                    if (!bzo.f(cls, cls3 == null ? ay("boolean") : cls3)) {
-                        boolean zF3 = bzo.f(cls, Integer.class);
+                    if (!nullSafeIsEqual(cls, cls3 == null ? ay("boolean") : cls3)) {
+                        boolean zF3 = nullSafeIsEqual(cls, Integer.class);
                         Class cls4 = Integer.TYPE;
                         if (!zF3) {
-                            if (!bzo.f(cls, cls4 == null ? ay("int") : cls4)) {
-                                boolean zF4 = bzo.f(cls, Float.class);
+                            if (!nullSafeIsEqual(cls, cls4 == null ? ay("int") : cls4)) {
+                                boolean zF4 = nullSafeIsEqual(cls, Float.class);
                                 Class cls5 = Float.TYPE;
                                 if (!zF4) {
-                                    if (!bzo.f(cls, cls5 == null ? ay("float") : cls5)) {
-                                        boolean zF5 = bzo.f(cls, Double.class);
+                                    if (!nullSafeIsEqual(cls, cls5 == null ? ay("float") : cls5)) {
+                                        boolean zF5 = nullSafeIsEqual(cls, Double.class);
                                         Class cls6 = Double.TYPE;
                                         if (!zF5) {
-                                            if (!bzo.f(cls, cls6 == null ? ay("double") : cls6)) {
-                                                boolean zF6 = bzo.f(cls, Long.class);
+                                            if (!nullSafeIsEqual(cls, cls6 == null ? ay("double") : cls6)) {
+                                                boolean zF6 = nullSafeIsEqual(cls, Long.class);
                                                 Class cls7 = Long.TYPE;
                                                 if (!zF6) {
-                                                    if (!bzo.f(cls, cls7 == null ? ay("long") : cls7)) {
-                                                        boolean zF7 = bzo.f(cls, Short.class);
+                                                    if (!nullSafeIsEqual(cls, cls7 == null ? ay("long") : cls7)) {
+                                                        boolean zF7 = nullSafeIsEqual(cls, Short.class);
                                                         Class cls8 = Short.TYPE;
                                                         if (!zF7) {
-                                                            if (!bzo.f(cls, cls8 == null ? ay("short") : cls8)) {
-                                                                boolean zF8 = bzo.f(cls, Character.class);
+                                                            if (!nullSafeIsEqual(cls,
+                                                                    cls8 == null ? ay("short") : cls8)) {
+                                                                boolean zF8 = nullSafeIsEqual(cls, Character.class);
                                                                 Class cls9 = Character.TYPE;
                                                                 if (!zF8) {
-                                                                    if (!bzo.f(cls, cls9 == null ? ay("char") : cls9)) {
-                                                                        boolean zF9 = bzo.f(cls, Byte.class);
+                                                                    if (!nullSafeIsEqual(cls,
+                                                                            cls9 == null ? ay("char") : cls9)) {
+                                                                        boolean zF9 = nullSafeIsEqual(cls, Byte.class);
                                                                         Class cls10 = Byte.TYPE;
                                                                         if (!zF9) {
-                                                                            if (!bzo.f(cls, cls10 == null ? ay("byte") : cls10)) {
+                                                                            if (!nullSafeIsEqual(cls,
+                                                                                    cls10 == null ? ay("byte")
+                                                                                            : cls10)) {
                                                                                 return cls;
                                                                             }
                                                                         }
@@ -967,14 +986,22 @@ public abstract class emn implements esi {
         return cls2 == null ? ay("void") : cls2;
     }
 
-    /* JADX WARN: Undo finally extract visitor
-    jadx.core.utils.exceptions.JadxRuntimeException: Expected to find fallthrough terminus for handler TryEdge: [PREMATURE_EXIT B:158:0x010f -> B:42:0x0138] - Handler: None
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.findCommonInsns(MarkFinallyVisitor.java:419)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.extractFinally(MarkFinallyVisitor.java:302)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.processTryBlock(MarkFinallyVisitor.java:222)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:150)
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * jadx.core.utils.exceptions.JadxRuntimeException: Expected to find fallthrough
+     * terminus for handler TryEdge: [PREMATURE_EXIT B:158:0x010f -> B:42:0x0138] -
+     * Handler: None
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.findCommonInsns(
+     * MarkFinallyVisitor.java:419)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.extractFinally(
+     * MarkFinallyVisitor.java:302)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.processTryBlock(
+     * MarkFinallyVisitor.java:222)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:150)
      */
-    public static boolean be(ByteArrayOutputStream byteArrayOutputStream, byte[] bArr, amr[] amrVarArr) throws IOException {
+    public static boolean be(ByteArrayOutputStream byteArrayOutputStream, byte[] bArr, amr[] amrVarArr)
+            throws IOException {
         long j;
         int length;
         byte[] bArr2 = ewz.v;
@@ -1002,7 +1029,8 @@ public abstract class emn implements esi {
                 }
                 byte[] byteArray = byteArrayOutputStream2.toByteArray();
                 if (i3 != byteArray.length) {
-                    throw new IllegalStateException("Expected size " + i3 + ", does not match actual size " + byteArray.length);
+                    throw new IllegalStateException(
+                            "Expected size " + i3 + ", does not match actual size " + byteArray.length);
                 }
                 ewe eweVar = new ewe(byteArray, 1, false);
                 byteArrayOutputStream2.close();
@@ -1042,7 +1070,8 @@ public abstract class emn implements esi {
                 }
                 byte[] byteArray2 = byteArrayOutputStream3.toByteArray();
                 if (i5 != byteArray2.length) {
-                    throw new IllegalStateException("Expected size " + i5 + ", does not match actual size " + byteArray2.length);
+                    throw new IllegalStateException(
+                            "Expected size " + i5 + ", does not match actual size " + byteArray2.length);
                 }
                 ewe eweVar2 = new ewe(byteArray2, 3, true);
                 byteArrayOutputStream3.close();
@@ -1108,7 +1137,8 @@ public abstract class emn implements esi {
                 }
                 byte[] byteArray5 = byteArrayOutputStream4.toByteArray();
                 if (i11 != byteArray5.length) {
-                    throw new IllegalStateException("Expected size " + i11 + ", does not match actual size " + byteArray5.length);
+                    throw new IllegalStateException(
+                            "Expected size " + i11 + ", does not match actual size " + byteArray5.length);
                 }
                 ewe eweVar3 = new ewe(byteArray5, 4, true);
                 byteArrayOutputStream4.close();

@@ -46,6 +46,6 @@ public final class CstShort extends CstLiteral32 {
         if (s == i) {
             return make(s);
         }
-        throw new IllegalArgumentException(bjs.i(i, "bogus short value: "));
+        throw new IllegalArgumentException(concatVar2Var1(i, "bogus short value: "));
     }
 }

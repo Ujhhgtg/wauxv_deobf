@@ -24,7 +24,7 @@ public final class edq {
             return false;
         }
         edq edqVar = (edq) obj;
-        return bzo.f(this.a, edqVar.a) && bzo.f(this.b, edqVar.b);
+        return nullSafeIsEqual(this.a, edqVar.a) && nullSafeIsEqual(this.b, edqVar.b);
     }
 
     public final int hashCode() {
@@ -38,6 +38,6 @@ public final class edq {
         StringBuilder sb = new StringBuilder();
         sb.append("qg1Proto(live_mode=" /* cnb.z(-275075475438378L) */);
         bjs.w(sb, this.a, -274955216354090L);
-        return bjs.p(sb, this.b, ')');
+        return concat(sb, this.b, ')');
     }
 }

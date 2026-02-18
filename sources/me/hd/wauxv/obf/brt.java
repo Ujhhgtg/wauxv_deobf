@@ -5,11 +5,16 @@ package me.hd.wauxv.obf;
 public final class brt {
     public final boolean a = true;
     public final String b = "    ";
-    public final String c = com.umeng.analytics.pro.f.y;
+    public final String c = "type";
     public final boolean d = true;
     public final yy e = yy.b;
 
     public final String toString() {
-        return "JsonConfiguration(encodeDefaults=false, ignoreUnknownKeys=false, isLenient=false, allowStructuredMapKeys=false, prettyPrint=false, explicitNulls=" + this.a + ", prettyPrintIndent='" + this.b + "', coerceInputValues=false, useArrayPolymorphism=false, classDiscriminator='" + this.c + "', allowSpecialFloatingPointValues=false, useAlternativeNames=" + this.d + ", namingStrategy=null, decodeEnumsCaseInsensitive=false, allowTrailingComma=false, allowComments=false, classDiscriminatorMode=" + this.e + ')';
+        return "JsonConfiguration(encodeDefaults=false, ignoreUnknownKeys=false, isLenient=false, allowStructuredMapKeys=false, prettyPrint=false, explicitNulls="
+                + this.a + ", prettyPrintIndent='" + this.b
+                + "', coerceInputValues=false, useArrayPolymorphism=false, classDiscriminator='" + this.c
+                + "', allowSpecialFloatingPointValues=false, useAlternativeNames=" + this.d
+                + ", namingStrategy=null, decodeEnumsCaseInsensitive=false, allowTrailingComma=false, allowComments=false, classDiscriminatorMode="
+                + this.e + ')';
     }
 }

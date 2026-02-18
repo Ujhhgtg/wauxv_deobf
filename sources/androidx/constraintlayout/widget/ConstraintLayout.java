@@ -40,7 +40,7 @@ import me.hd.wauxv.obf.cxx;
 import me.hd.wauxv.obf.dhc;
 import me.hd.wauxv.obf.eps;
 import me.hd.wauxv.obf.eun;
-import me.hd.wauxv.obf.io;
+import me.hd.wauxv.obf.DefaultConfig;
 import me.hd.wauxv.obf.jx;
 import me.hd.wauxv.obf.nb;
 import me.hd.wauxv.obf.tq;
@@ -61,7 +61,7 @@ public class ConstraintLayout extends ViewGroup {
     public boolean i;
     public int j;
     public adp k;
-    public io l;
+    public DefaultConfig l;
     public int m;
     public HashMap n;
     public final SparseArray o;
@@ -462,14 +462,16 @@ public class ConstraintLayout extends ViewGroup {
                     int i3 = typedArrayObtainStyledAttributes.getInt(index, 0);
                     adfVar.al = i3;
                     if (i3 == 1) {
-                        Log.e("ConstraintLayout", "layout_constraintWidth_default=\"wrap\" is deprecated.\nUse layout_width=\"WRAP_CONTENT\" and layout_constrainedWidth=\"true\" instead.");
+                        Log.e("ConstraintLayout",
+                                "layout_constraintWidth_default=\"wrap\" is deprecated.\nUse layout_width=\"WRAP_CONTENT\" and layout_constrainedWidth=\"true\" instead.");
                     }
                     break;
                 case 32:
                     int i4 = typedArrayObtainStyledAttributes.getInt(index, 0);
                     adfVar.am = i4;
                     if (i4 == 1) {
-                        Log.e("ConstraintLayout", "layout_constraintHeight_default=\"wrap\" is deprecated.\nUse layout_height=\"WRAP_CONTENT\" and layout_constrainedHeight=\"true\" instead.");
+                        Log.e("ConstraintLayout",
+                                "layout_constraintHeight_default=\"wrap\" is deprecated.\nUse layout_height=\"WRAP_CONTENT\" and layout_constrainedHeight=\"true\" instead.");
                     }
                     break;
                 case 33:
@@ -662,28 +664,28 @@ public class ConstraintLayout extends ViewGroup {
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:111:0x01cf  */
-    /* JADX WARN: Found duplicated region for block: B:125:0x0229  */
+    /* JADX WARN: Found duplicated region for block: B:111:0x01cf */
+    /* JADX WARN: Found duplicated region for block: B:125:0x0229 */
     /* JADX WARN: Found duplicated region for block: B:164:0x0334 A[MOVE_INLINED] */
     /* JADX WARN: Found duplicated region for block: B:166:0x033e A[MOVE_INLINED] */
     /* JADX WARN: Found duplicated region for block: B:169:0x034c A[MOVE_INLINED] */
     /* JADX WARN: Found duplicated region for block: B:176:0x036a A[MOVE_INLINED] */
     /* JADX WARN: Found duplicated region for block: B:178:0x0374 A[MOVE_INLINED] */
-    /* JADX WARN: Found duplicated region for block: B:179:0x0384  */
+    /* JADX WARN: Found duplicated region for block: B:179:0x0384 */
     /* JADX WARN: Found duplicated region for block: B:181:0x038c A[MOVE_INLINED] */
-    /* JADX WARN: Found duplicated region for block: B:186:0x03af  */
+    /* JADX WARN: Found duplicated region for block: B:186:0x03af */
     /* JADX WARN: Found duplicated region for block: B:189:0x03b7 A[MOVE_INLINED] */
     /* JADX WARN: Found duplicated region for block: B:191:0x03c1 A[MOVE_INLINED] */
-    /* JADX WARN: Found duplicated region for block: B:192:0x03d1  */
-    /* JADX WARN: Found duplicated region for block: B:194:0x03d4  */
-    /* JADX WARN: Found duplicated region for block: B:201:0x03f6  */
-    /* JADX WARN: Found duplicated region for block: B:203:0x0401  */
-    /* JADX WARN: Found duplicated region for block: B:205:0x0405  */
-    /* JADX WARN: Found duplicated region for block: B:206:0x040e  */
-    /* JADX WARN: Found duplicated region for block: B:208:0x0418  */
-    /* JADX WARN: Found duplicated region for block: B:211:0x041f  */
-    /* JADX WARN: Found duplicated region for block: B:214:0x0427  */
-    /* JADX WARN: Found duplicated region for block: B:287:0x054c  */
+    /* JADX WARN: Found duplicated region for block: B:192:0x03d1 */
+    /* JADX WARN: Found duplicated region for block: B:194:0x03d4 */
+    /* JADX WARN: Found duplicated region for block: B:201:0x03f6 */
+    /* JADX WARN: Found duplicated region for block: B:203:0x0401 */
+    /* JADX WARN: Found duplicated region for block: B:205:0x0405 */
+    /* JADX WARN: Found duplicated region for block: B:206:0x040e */
+    /* JADX WARN: Found duplicated region for block: B:208:0x0418 */
+    /* JADX WARN: Found duplicated region for block: B:211:0x041f */
+    /* JADX WARN: Found duplicated region for block: B:214:0x0427 */
+    /* JADX WARN: Found duplicated region for block: B:287:0x054c */
     @Override // android.view.View
     public void onMeasure(int i, int i2) {
         boolean z;
@@ -749,7 +751,8 @@ public class ConstraintLayout extends ViewGroup {
                 }
             }
         }
-        boolean z4 = (constraintLayout.getContext().getApplicationInfo().flags & 4194304) != 0 && 1 == constraintLayout.getLayoutDirection();
+        boolean z4 = (constraintLayout.getContext().getApplicationInfo().flags & 4194304) != 0
+                && 1 == constraintLayout.getLayoutDirection();
         adr adrVar = constraintLayout.d;
         adrVar.j = z4;
         if (constraintLayout.i) {
@@ -792,7 +795,9 @@ public class ConstraintLayout extends ViewGroup {
                                         constraintLayout.n = new HashMap();
                                     }
                                     int iIndexOf = resourceName.indexOf("/");
-                                    constraintLayout.n.put(iIndexOf != -1 ? resourceName.substring(iIndexOf + 1) : resourceName, numValueOf);
+                                    constraintLayout.n.put(
+                                            iIndexOf != -1 ? resourceName.substring(iIndexOf + 1) : resourceName,
+                                            numValueOf);
                                 } catch (Resources.NotFoundException unused) {
                                 }
                             } else {
@@ -805,10 +810,15 @@ public class ConstraintLayout extends ViewGroup {
                             int id = childAt.getId();
                             if (id != 0) {
                                 View viewFindViewById = (View) sparseArray3.get(id);
-                                if (viewFindViewById == null && (viewFindViewById = constraintLayout.findViewById(id)) != null && viewFindViewById != constraintLayout && viewFindViewById.getParent() == constraintLayout) {
+                                if (viewFindViewById == null
+                                        && (viewFindViewById = constraintLayout.findViewById(id)) != null
+                                        && viewFindViewById != constraintLayout
+                                        && viewFindViewById.getParent() == constraintLayout) {
                                     constraintLayout.onViewAdded(viewFindViewById);
                                 }
-                                adqVar10 = viewFindViewById == constraintLayout ? adrVar : viewFindViewById == null ? null : ((adf) viewFindViewById.getLayoutParams()).bp;
+                                adqVar10 = viewFindViewById == constraintLayout ? adrVar
+                                        : viewFindViewById == null ? null
+                                                : ((adf) viewFindViewById.getLayoutParams()).bp;
                             }
                             adqVar10.br = resourceName;
                         } catch (Resources.NotFoundException unused2) {
@@ -850,7 +860,8 @@ public class ConstraintLayout extends ViewGroup {
                             while (i37 < addVar.f) {
                                 int i38 = addVar.e[i37];
                                 View view = (View) sparseArray3.get(i38);
-                                if (view != null || (iQ = addVar.q(constraintLayout, (str = (String) map.get(Integer.valueOf(i38))))) == 0) {
+                                if (view != null || (iQ = addVar.q(constraintLayout,
+                                        (str = (String) map.get(Integer.valueOf(i38))))) == 0) {
                                     arrayList2 = arrayList3;
                                 } else {
                                     arrayList2 = arrayList3;
@@ -995,7 +1006,8 @@ public class ConstraintLayout extends ViewGroup {
                                     if (adqVar13 != null) {
                                         adqVar = adqVarR3;
                                         i4 = 2;
-                                        adqVar.cv(2, 2, ((ViewGroup.MarginLayoutParams) adfVar2).leftMargin, i51, adqVar13);
+                                        adqVar.cv(2, 2, ((ViewGroup.MarginLayoutParams) adfVar2).leftMargin, i51,
+                                                adqVar13);
                                     } else {
                                         adqVar = adqVarR3;
                                         i4 = 2;
@@ -1004,20 +1016,23 @@ public class ConstraintLayout extends ViewGroup {
                                     adqVar = adqVarR3;
                                     i4 = 2;
                                     if (i48 != -1 && (adqVar2 = (adq) sparseArray4.get(i48)) != null) {
-                                        adqVar.cv(2, 4, ((ViewGroup.MarginLayoutParams) adfVar2).leftMargin, i51, adqVar2);
+                                        adqVar.cv(2, 4, ((ViewGroup.MarginLayoutParams) adfVar2).leftMargin, i51,
+                                                adqVar2);
                                         i5 = 2;
                                         i6 = 4;
                                     }
                                     if (i49 != -1) {
                                         adqVar9 = (adq) sparseArray4.get(i49);
                                         if (adqVar9 != null) {
-                                            adqVar.cv(i6, i5, ((ViewGroup.MarginLayoutParams) adfVar2).rightMargin, i52, adqVar9);
+                                            adqVar.cv(i6, i5, ((ViewGroup.MarginLayoutParams) adfVar2).rightMargin, i52,
+                                                    adqVar9);
                                         }
                                         i7 = i5;
                                     } else {
                                         i7 = i5;
                                         if (i50 != -1 && (adqVar3 = (adq) sparseArray4.get(i50)) != null) {
-                                            adqVar.cv(i6, i6, ((ViewGroup.MarginLayoutParams) adfVar2).rightMargin, i52, adqVar3);
+                                            adqVar.cv(i6, i6, ((ViewGroup.MarginLayoutParams) adfVar2).rightMargin, i52,
+                                                    adqVar3);
                                         }
                                     }
                                     i8 = i6;
@@ -1026,7 +1041,8 @@ public class ConstraintLayout extends ViewGroup {
                                         adqVar8 = (adq) sparseArray4.get(i9);
                                         if (adqVar8 != null) {
                                             i21 = 3;
-                                            adqVar.cv(3, 3, ((ViewGroup.MarginLayoutParams) adfVar2).topMargin, adfVar2.x, adqVar8);
+                                            adqVar.cv(3, 3, ((ViewGroup.MarginLayoutParams) adfVar2).topMargin,
+                                                    adfVar2.x, adqVar8);
                                         } else {
                                             i21 = 3;
                                         }
@@ -1040,7 +1056,8 @@ public class ConstraintLayout extends ViewGroup {
                                             i12 = 3;
                                             i13 = 5;
                                         } else {
-                                            adqVar.cv(3, 5, ((ViewGroup.MarginLayoutParams) adfVar2).topMargin, adfVar2.x, adqVar4);
+                                            adqVar.cv(3, 5, ((ViewGroup.MarginLayoutParams) adfVar2).topMargin,
+                                                    adfVar2.x, adqVar4);
                                             i12 = 3;
                                             i13 = 5;
                                         }
@@ -1050,7 +1067,8 @@ public class ConstraintLayout extends ViewGroup {
                                         adqVar7 = (adq) sparseArray4.get(i14);
                                         if (adqVar7 != null) {
                                             int i54 = i12;
-                                            adqVar.cv(i13, i54, ((ViewGroup.MarginLayoutParams) adfVar2).bottomMargin, adfVar2.z, adqVar7);
+                                            adqVar.cv(i13, i54, ((ViewGroup.MarginLayoutParams) adfVar2).bottomMargin,
+                                                    adfVar2.z, adqVar7);
                                             i15 = i54;
                                         } else {
                                             i15 = i12;
@@ -1059,7 +1077,8 @@ public class ConstraintLayout extends ViewGroup {
                                         i15 = i12;
                                         i16 = adfVar2.l;
                                         if (i16 != i11 && (adqVar5 = (adq) sparseArray4.get(i16)) != null) {
-                                            adqVar.cv(i13, i13, ((ViewGroup.MarginLayoutParams) adfVar2).bottomMargin, adfVar2.z, adqVar5);
+                                            adqVar.cv(i13, i13, ((ViewGroup.MarginLayoutParams) adfVar2).bottomMargin,
+                                                    adfVar2.z, adqVar5);
                                         }
                                     }
                                     adfVar = adfVar2;
@@ -1104,13 +1123,15 @@ public class ConstraintLayout extends ViewGroup {
                                 if (i49 != -1) {
                                     adqVar9 = (adq) sparseArray4.get(i49);
                                     if (adqVar9 != null) {
-                                        adqVar.cv(i6, i5, ((ViewGroup.MarginLayoutParams) adfVar2).rightMargin, i52, adqVar9);
+                                        adqVar.cv(i6, i5, ((ViewGroup.MarginLayoutParams) adfVar2).rightMargin, i52,
+                                                adqVar9);
                                     }
                                     i7 = i5;
                                 } else {
                                     i7 = i5;
                                     if (i50 != -1) {
-                                        adqVar.cv(i6, i6, ((ViewGroup.MarginLayoutParams) adfVar2).rightMargin, i52, adqVar3);
+                                        adqVar.cv(i6, i6, ((ViewGroup.MarginLayoutParams) adfVar2).rightMargin, i52,
+                                                adqVar3);
                                     }
                                 }
                                 i8 = i6;
@@ -1119,7 +1140,8 @@ public class ConstraintLayout extends ViewGroup {
                                     adqVar8 = (adq) sparseArray4.get(i9);
                                     if (adqVar8 != null) {
                                         i21 = 3;
-                                        adqVar.cv(3, 3, ((ViewGroup.MarginLayoutParams) adfVar2).topMargin, adfVar2.x, adqVar8);
+                                        adqVar.cv(3, 3, ((ViewGroup.MarginLayoutParams) adfVar2).topMargin, adfVar2.x,
+                                                adqVar8);
                                     } else {
                                         i21 = 3;
                                     }
@@ -1142,7 +1164,8 @@ public class ConstraintLayout extends ViewGroup {
                                     adqVar7 = (adq) sparseArray4.get(i14);
                                     if (adqVar7 != null) {
                                         int i542 = i12;
-                                        adqVar.cv(i13, i542, ((ViewGroup.MarginLayoutParams) adfVar2).bottomMargin, adfVar2.z, adqVar7);
+                                        adqVar.cv(i13, i542, ((ViewGroup.MarginLayoutParams) adfVar2).bottomMargin,
+                                                adfVar2.z, adqVar7);
                                         i15 = i542;
                                     } else {
                                         i15 = i12;
@@ -1151,7 +1174,8 @@ public class ConstraintLayout extends ViewGroup {
                                     i15 = i12;
                                     i16 = adfVar2.l;
                                     if (i16 != i11) {
-                                        adqVar.cv(i13, i13, ((ViewGroup.MarginLayoutParams) adfVar2).bottomMargin, adfVar2.z, adqVar5);
+                                        adqVar.cv(i13, i13, ((ViewGroup.MarginLayoutParams) adfVar2).bottomMargin,
+                                                adfVar2.z, adqVar5);
                                     }
                                 }
                                 adfVar = adfVar2;
@@ -1247,7 +1271,8 @@ public class ConstraintLayout extends ViewGroup {
                                     i25 = 0;
                                 } else {
                                     String strSubstring = str2.substring(0, iIndexOf3);
-                                    i24 = strSubstring.equalsIgnoreCase("W") ? 0 : strSubstring.equalsIgnoreCase("H") ? 1 : i22;
+                                    i24 = strSubstring.equalsIgnoreCase("W") ? 0
+                                            : strSubstring.equalsIgnoreCase("H") ? 1 : i22;
                                     i25 = iIndexOf3 + 1;
                                 }
                                 int iIndexOf4 = str2.indexOf(58);
@@ -1414,7 +1439,8 @@ public class ConstraintLayout extends ViewGroup {
         this.b.put(getId(), this);
         this.k = null;
         if (attributeSet != null) {
-            TypedArray typedArrayObtainStyledAttributes = getContext().obtainStyledAttributes(attributeSet, cxx.b, i, 0);
+            TypedArray typedArrayObtainStyledAttributes = getContext().obtainStyledAttributes(attributeSet, cxx.b, i,
+                    0);
             int indexCount = typedArrayObtainStyledAttributes.getIndexCount();
             for (int i2 = 0; i2 < indexCount; i2++) {
                 int index = typedArrayObtainStyledAttributes.getIndex(i2);
@@ -1501,7 +1527,7 @@ public class ConstraintLayout extends ViewGroup {
     }
 
     public void setOnConstraintsChanged(ads adsVar) {
-        io ioVar = this.l;
+        DefaultConfig ioVar = this.l;
         if (ioVar != null) {
             ioVar.getClass();
         }
@@ -1522,7 +1548,7 @@ public class ConstraintLayout extends ViewGroup {
     public final void t(int i) {
         String str;
         Context context = getContext();
-        io ioVar = new io(12, false);
+        DefaultConfig ioVar = new DefaultConfig(12, false);
         ioVar.c = new SparseArray();
         ioVar.d = new SparseArray();
         XmlResourceParser xml = context.getResources().getXml(i);
@@ -1571,11 +1597,11 @@ public class ConstraintLayout extends ViewGroup {
         this.l = ioVar;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:162:0x0308  */
-    /* JADX WARN: Found duplicated region for block: B:164:0x0326  */
-    /* JADX WARN: Found duplicated region for block: B:166:0x0329  */
-    /* JADX WARN: Found duplicated region for block: B:171:0x034b  */
-    /* JADX WARN: Found duplicated region for block: B:180:0x0368  */
+    /* JADX WARN: Found duplicated region for block: B:162:0x0308 */
+    /* JADX WARN: Found duplicated region for block: B:164:0x0326 */
+    /* JADX WARN: Found duplicated region for block: B:166:0x0329 */
+    /* JADX WARN: Found duplicated region for block: B:171:0x034b */
+    /* JADX WARN: Found duplicated region for block: B:180:0x0368 */
     /* JADX WARN: Found duplicated region for block: B:406:0x0397 A[SYNTHETIC] */
     public final void u(adr adrVar, int i, int i2, int i3) {
         int iMin;
@@ -1735,7 +1761,8 @@ public class ConstraintLayout extends ViewGroup {
                     int[] iArr2 = adqVar.bz;
                     i5 = size3;
                     boolean z8 = (iArr2[0] == 3) && (iArr2[1] == 3) && adqVar.bg > 0.0f;
-                    if ((adqVar.cx() && z8) || ((adqVar.cy() && z8) || (adqVar instanceof bbp) || adqVar.cx() || adqVar.cy())) {
+                    if ((adqVar.cx() && z8)
+                            || ((adqVar.cy() && z8) || (adqVar instanceof bbp) || adqVar.cx() || adqVar.cy())) {
                         i6 = 1073741824;
                         z = false;
                     } else {
@@ -1861,7 +1888,8 @@ public class ConstraintLayout extends ViewGroup {
                         }
                         eunVar = (eun) it.next();
                         if (!z4 || eunVar.l != adrVar3) {
-                            if (eunVar.r.k || ((!eunVar.s.k && !(eunVar instanceof bjq)) || (!eunVar.o.k && !(eunVar instanceof tq) && !(eunVar instanceof bjq)))) {
+                            if (eunVar.r.k || ((!eunVar.s.k && !(eunVar instanceof bjq))
+                                    || (!eunVar.o.k && !(eunVar instanceof tq) && !(eunVar instanceof bjq)))) {
                                 z5 = false;
                                 break;
                             }
@@ -1915,7 +1943,7 @@ public class ConstraintLayout extends ViewGroup {
                 while (r6.hasNext()) {
                     if (eunVar2.l == adrVar3) {
                     }
-                    eunVar2.e();
+                    eunVar2.getThisObject();
                 }
                 it = arrayList2.iterator();
                 while (true) {
@@ -2006,7 +2034,8 @@ public class ConstraintLayout extends ViewGroup {
             int i33 = 0;
             while (i33 < size4) {
                 adq adqVar4 = (adq) adrVar.a.get(i33);
-                if ((adqVar4 instanceof bjp) || (adqVar4 instanceof nb) || adqVar4.ap || (zEi && (bmnVar = adqVar4.n) != null && (epsVar = adqVar4.o) != null && bmnVar.o.k && epsVar.o.k)) {
+                if ((adqVar4 instanceof bjp) || (adqVar4 instanceof nb) || adqVar4.ap || (zEi
+                        && (bmnVar = adqVar4.n) != null && (epsVar = adqVar4.o) != null && bmnVar.o.k && epsVar.o.k)) {
                     i12 = size4;
                 } else {
                     int iCl3 = adqVar4.cl(0);
@@ -2106,7 +2135,8 @@ public class ConstraintLayout extends ViewGroup {
                     adq adqVar6 = (adq) arrayList.get(i38);
                     if ((!(adqVar6 instanceof bkw) || (adqVar6 instanceof bbp)) && !(adqVar6 instanceof bjp)) {
                         i8 = size6;
-                        if (adqVar6.bq != 8 && ((!z2 || !adqVar6.n.o.k || !adqVar6.o.o.k) && !(adqVar6 instanceof bbp))) {
+                        if (adqVar6.bq != 8
+                                && ((!z2 || !adqVar6.n.o.k || !adqVar6.o.o.k) && !(adqVar6 instanceof bbp))) {
                             int iCq6 = adqVar6.cq();
                             int iCm5 = adqVar6.cm();
                             i9 = i38;

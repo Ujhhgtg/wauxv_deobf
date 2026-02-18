@@ -24,6 +24,6 @@ public class ToShort implements Function {
         if (obj instanceof Number) {
             return Short.valueOf(((Number) obj).shortValue());
         }
-        throw new JSONException(bjs.m(obj, new StringBuilder("can not cast to Short ")));
+        throw new JSONException(concatVar1GetClass(obj, new StringBuilder("can not cast to Short ")));
     }
 }

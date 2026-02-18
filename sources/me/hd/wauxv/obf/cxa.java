@@ -16,16 +16,19 @@ public final /* synthetic */ class cxa implements bgj {
         this.b = obj;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:11:0x003a  */
+    /* JADX WARN: Found duplicated region for block: B:11:0x003a */
     /* JADX WARN: Found duplicated region for block: B:37:0x00a5 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:38:0x00a7 A[LOOP:0: B:27:0x0076->B:38:0x00a7, LOOP_END] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:38:0x00a7 A[LOOP:0:
+     * B:27:0x0076->B:38:0x00a7, LOOP_END]
+     */
     /* JADX WARN: Found duplicated region for block: B:71:0x009b A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:72:0x003a A[SYNTHETIC] */
     @Override // me.hd.wauxv.obf.bgj
     public final Object g(Object obj, Object obj2) {
         int i;
         Object next;
-        csm csmVar;
+        Pair pairVar;
         Object next2;
         String str;
         String str2;
@@ -40,23 +43,25 @@ public final /* synthetic */ class cxa implements bgj {
                     clu.a.getClass();
                     cme.b(cme.a, emn.ba(clt.a).newInstance(str3, listBf, 0, null));
                 }
-                dnc.g(null, 3, "已邀请至" /* cnb.z(-527104156367658L) */ + list.size() + "个群聊" /* cnb.z(-527048321792810L) */);
+                dnc.g(null, 3, "已邀请至" /* cnb.z(-527104156367658L) */ + list.size() + "个群聊" /*
+                                                                                            * cnb.z(-527048321792810L)
+                                                                                            */);
                 return Boolean.FALSE;
             case 1:
                 char[] cArr = (char[]) this.b;
                 CharSequence charSequence = (CharSequence) obj;
                 int iIntValue = ((Integer) obj2).intValue();
-                bzo.q(charSequence, "$this$DelimitedRangesSequence");
+                throwIfVar1IsNull(charSequence, "$this$DelimitedRangesSequence");
                 int iAj = dnj.aj(charSequence, cArr, iIntValue, false);
                 if (iAj < 0) {
                     return null;
                 }
-                return new csm(Integer.valueOf(iAj), 1);
+                return new Pair(Integer.valueOf(iAj), 1);
             default:
                 List list2 = (List) this.b;
                 CharSequence charSequence2 = (CharSequence) obj;
                 int iIntValue2 = ((Integer) obj2).intValue();
-                bzo.q(charSequence2, "$this$DelimitedRangesSequence");
+                throwIfVar1IsNull(charSequence2, "$this$DelimitedRangesSequence");
                 if (list2.size() == 1) {
                     int size = list2.size();
                     if (size == 0) {
@@ -67,7 +72,7 @@ public final /* synthetic */ class cxa implements bgj {
                     }
                     String str4 = (String) list2.get(0);
                     int iAi = dnj.ai(charSequence2, str4, iIntValue2, false, 4);
-                    csmVar = iAi < 0 ? null : new csm(Integer.valueOf(iAi), str4);
+                    pairVar = iAi < 0 ? null : new Pair(Integer.valueOf(iAi), str4);
                 } else {
                     if (iIntValue2 < 0) {
                         iIntValue2 = 0;
@@ -90,14 +95,14 @@ public final /* synthetic */ class cxa implements bgj {
                                     }
                                     str = (String) next2;
                                     if (str != null) {
-                                        csmVar = new csm(Integer.valueOf(i4), str);
+                                        pairVar = new Pair(Integer.valueOf(i4), str);
                                     } else if (i4 != i3) {
                                         i4 += i2;
                                     }
                                 } while (!dnr.bl(0, i4, str2.length(), str2, (String) charSequence2, false));
                                 str = (String) next2;
                                 if (str != null) {
-                                    csmVar = new csm(Integer.valueOf(i4), str);
+                                    pairVar = new Pair(Integer.valueOf(i4), str);
                                 } else if (i4 != i3) {
                                     i4 += i2;
                                 }
@@ -122,7 +127,7 @@ public final /* synthetic */ class cxa implements bgj {
                             }
                             String str6 = (String) next;
                             if (str6 != null) {
-                                csmVar = new csm(Integer.valueOf(i5), str6);
+                                pairVar = new Pair(Integer.valueOf(i5), str6);
                             } else if (i5 != i) {
                                 i5 += i2;
                                 i3 = i;
@@ -130,8 +135,8 @@ public final /* synthetic */ class cxa implements bgj {
                         }
                     }
                 }
-                if (csmVar != null) {
-                    return new csm(csmVar.a, Integer.valueOf(((String) csmVar.b).length()));
+                if (pairVar != null) {
+                    return new Pair(pairVar.first, Integer.valueOf(((String) pairVar.second).length()));
                 }
                 return null;
         }

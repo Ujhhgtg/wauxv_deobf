@@ -22,7 +22,7 @@ public final class cux extends cuw {
     @Override // me.hd.wauxv.obf.cuw, me.hd.wauxv.obf.cuv
     public final boolean l(Object obj) {
         boolean zL;
-        bzo.q(obj, "instance");
+        throwIfVar1IsNull(obj, "instance");
         synchronized (this.d) {
             zL = super.l(obj);
         }

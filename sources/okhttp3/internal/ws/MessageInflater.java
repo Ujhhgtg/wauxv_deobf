@@ -4,7 +4,7 @@ import java.io.Closeable;
 import java.io.IOException;
 import java.util.zip.Inflater;
 import me.hd.wauxv.obf.bpd;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.emc;
 import me.hd.wauxv.obf.rh;
 
@@ -31,7 +31,7 @@ public final class MessageInflater implements Closeable {
     }
 
     public final void inflate(rh rhVar) throws IOException {
-        bzo.q(rhVar, "buffer");
+        throwIfVar1IsNull(rhVar, "buffer");
         if (this.deflatedBytes.b != 0) {
             throw new IllegalArgumentException("Failed requirement.");
         }

@@ -23,7 +23,7 @@ public class evk extends evj {
     @Override // me.hd.wauxv.obf.evo
     public bps aj() {
         if (this.ah == null) {
-            this.ah = bps.h(this.f.getMandatorySystemGestureInsets());
+            this.ah = bps.locateDex(this.f.getMandatorySystemGestureInsets());
         }
         return this.ah;
     }
@@ -31,7 +31,7 @@ public class evk extends evj {
     @Override // me.hd.wauxv.obf.evo
     public bps ak() {
         if (this.ag == null) {
-            this.ag = bps.h(this.f.getSystemGestureInsets());
+            this.ag = bps.locateDex(this.f.getSystemGestureInsets());
         }
         return this.ag;
     }
@@ -39,7 +39,7 @@ public class evk extends evj {
     @Override // me.hd.wauxv.obf.evo
     public bps al() {
         if (this.ai == null) {
-            this.ai = bps.h(this.f.getTappableElementInsets());
+            this.ai = bps.locateDex(this.f.getTappableElementInsets());
         }
         return this.ai;
     }

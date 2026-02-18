@@ -6,7 +6,7 @@ import org.luckypray.dexkit.DexKitBridge;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class cly extends bws implements bng {
+public final class cly extends bws implements IRequiresDexLocate {
     public static final cly a = new cly();
 
     public static Object b(String str, String str2, int i, boolean z, List list) {
@@ -15,9 +15,10 @@ public final class cly extends bws implements bng {
             String strZ = "atuserlist" /* cnb.z(-111759344007978L) */;
             StringBuilder sb = new StringBuilder();
             sb.append("<![CDATA[" /* cnb.z(-111677739629354L) */);
-            csm[] csmVarArr = {new csm(strZ, yg.n(sb, aaz.k(list, "," /* cnb.z(-111651969825578L) */, null, null, null, 62), -111660559760170L))};
-            map = new HashMap(bzo.ah(1));
-            bzo.am(map, csmVarArr);
+            Pair[] pairVarArr = { new Pair(strZ, yg.n(sb,
+                    aaz.k(list, "," /* cnb.z(-111651969825578L) */, null, null, null, 62), -111660559760170L)) };
+            map = new HashMap(KotlinHelpers.ah(1));
+            KotlinHelpers.am(map, pairVarArr);
         } else {
             map = null;
         }
@@ -34,7 +35,7 @@ public final class cly extends bws implements bng {
     }
 
     @Override // me.hd.wauxv.obf.bng
-    public final void h(DexKitBridge dexKitBridge) {
+    public final void locateDex(DexKitBridge dexKitBridge) {
         emn.aj(clx.a, dexKitBridge, new clo(11));
     }
 }

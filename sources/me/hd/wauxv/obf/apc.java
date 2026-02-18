@@ -17,7 +17,8 @@ public final class apc {
             return false;
         }
         apc apcVar = (apc) obj;
-        return bzo.f(this.a, apcVar.a) && bzo.f(this.b, apcVar.b) && bzo.f(this.c, apcVar.c) && bzo.f(this.d, apcVar.d);
+        return nullSafeIsEqual(this.a, apcVar.a) && nullSafeIsEqual(this.b, apcVar.b)
+                && nullSafeIsEqual(this.c, apcVar.c) && nullSafeIsEqual(this.d, apcVar.d);
     }
 
     public final int hashCode() {

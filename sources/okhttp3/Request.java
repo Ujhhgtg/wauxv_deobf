@@ -7,8 +7,8 @@ import java.util.List;
 import java.util.Map;
 import me.hd.wauxv.obf.aba;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.bzo;
-import me.hd.wauxv.obf.csm;
+import me.hd.wauxv.obf.KotlinHelpers;
+import me.hd.wauxv.obf.Pair;
 import me.hd.wauxv.obf.dnr;
 import okhttp3.Headers;
 import okhttp3.HttpUrl;
@@ -25,7 +25,10 @@ public final class Request {
     private final Map<Class<?>, Object> tags;
     private final HttpUrl url;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class Builder {
         private RequestBody body;
         private Headers.Builder headers;
@@ -39,9 +42,11 @@ public final class Request {
             this.headers = new Headers.Builder();
         }
 
-        public static /* synthetic */ Builder delete$default(Builder builder, RequestBody requestBody, int i, Object obj) {
+        public static /* synthetic */ Builder delete$default(Builder builder, RequestBody requestBody, int i,
+                Object obj) {
             if (obj != null) {
-                throw new UnsupportedOperationException("Super calls with default arguments not supported in this target, function: delete");
+                throw new UnsupportedOperationException(
+                        "Super calls with default arguments not supported in this target, function: delete");
             }
             if ((i & 1) != 0) {
                 requestBody = Util.EMPTY_REQUEST;
@@ -50,8 +55,8 @@ public final class Request {
         }
 
         public Builder addHeader(String str, String str2) {
-            bzo.q(str, "name");
-            bzo.q(str2, "value");
+            throwIfVar1IsNull(str, "name");
+            throwIfVar1IsNull(str2, "value");
             this.headers.add(str, str2);
             return this;
         }
@@ -59,13 +64,14 @@ public final class Request {
         public Request build() {
             HttpUrl httpUrl = this.url;
             if (httpUrl != null) {
-                return new Request(httpUrl, this.method, this.headers.build(), this.body, Util.toImmutableMap(this.tags));
+                return new Request(httpUrl, this.method, this.headers.build(), this.body,
+                        Util.toImmutableMap(this.tags));
             }
             throw new IllegalStateException("url == null");
         }
 
         public Builder cacheControl(CacheControl cacheControl) {
-            bzo.q(cacheControl, "cacheControl");
+            throwIfVar1IsNull(cacheControl, "cacheControl");
             String string = cacheControl.toString();
             return string.length() == 0 ? removeHeader("Cache-Control") : header("Cache-Control", string);
         }
@@ -103,29 +109,29 @@ public final class Request {
         }
 
         public Builder header(String str, String str2) {
-            bzo.q(str, "name");
-            bzo.q(str2, "value");
+            throwIfVar1IsNull(str, "name");
+            throwIfVar1IsNull(str2, "value");
             this.headers.set(str, str2);
             return this;
         }
 
         public Builder headers(Headers headers) {
-            bzo.q(headers, "headers");
+            throwIfVar1IsNull(headers, "headers");
             this.headers = headers.newBuilder();
             return this;
         }
 
         public Builder method(String str, RequestBody requestBody) {
-            bzo.q(str, "method");
+            throwIfVar1IsNull(str, "method");
             if (str.length() <= 0) {
                 throw new IllegalArgumentException("method.isEmpty() == true");
             }
             if (requestBody == null) {
                 if (HttpMethod.requiresRequestBody(str)) {
-                    throw new IllegalArgumentException(bjs.o("method ", str, " must have a request body.").toString());
+                    throw new IllegalArgumentException(concat("method ", str, " must have a request body.").toString());
                 }
             } else if (!HttpMethod.permitsRequestBody(str)) {
-                throw new IllegalArgumentException(bjs.o("method ", str, " must not have a request body.").toString());
+                throw new IllegalArgumentException(concat("method ", str, " must not have a request body.").toString());
             }
             this.method = str;
             this.body = requestBody;
@@ -133,22 +139,22 @@ public final class Request {
         }
 
         public Builder patch(RequestBody requestBody) {
-            bzo.q(requestBody, "body");
+            throwIfVar1IsNull(requestBody, "body");
             return method("PATCH", requestBody);
         }
 
         public Builder post(RequestBody requestBody) {
-            bzo.q(requestBody, "body");
+            throwIfVar1IsNull(requestBody, "body");
             return method("POST", requestBody);
         }
 
         public Builder put(RequestBody requestBody) {
-            bzo.q(requestBody, "body");
+            throwIfVar1IsNull(requestBody, "body");
             return method("PUT", requestBody);
         }
 
         public Builder removeHeader(String str) {
-            bzo.q(str, "name");
+            throwIfVar1IsNull(str, "name");
             this.headers.removeAll(str);
             return this;
         }
@@ -158,17 +164,17 @@ public final class Request {
         }
 
         public final void setHeaders$okhttp(Headers.Builder builder) {
-            bzo.q(builder, "<set-?>");
+            throwIfVar1IsNull(builder, "<set-?>");
             this.headers = builder;
         }
 
         public final void setMethod$okhttp(String str) {
-            bzo.q(str, "<set-?>");
+            throwIfVar1IsNull(str, "<set-?>");
             this.method = str;
         }
 
         public final void setTags$okhttp(Map<Class<?>, Object> map) {
-            bzo.q(map, "<set-?>");
+            throwIfVar1IsNull(map, "<set-?>");
             this.tags = map;
         }
 
@@ -181,7 +187,7 @@ public final class Request {
         }
 
         public Builder url(HttpUrl httpUrl) {
-            bzo.q(httpUrl, "url");
+            throwIfVar1IsNull(httpUrl, "url");
             this.url = httpUrl;
             return this;
         }
@@ -191,7 +197,7 @@ public final class Request {
         }
 
         public <T> Builder tag(Class<? super T> cls, T t) {
-            bzo.q(cls, f.y);
+            throwIfVar1IsNull(cls, f.y);
             if (t == null) {
                 this.tags.remove(cls);
                 return this;
@@ -201,20 +207,20 @@ public final class Request {
             }
             Map<Class<?>, Object> map = this.tags;
             T tCast = cls.cast(t);
-            bzo.n(tCast);
+            throwIfVar1IsNull(tCast);
             map.put(cls, tCast);
             return this;
         }
 
         public Builder url(String str) {
-            bzo.q(str, "url");
+            throwIfVar1IsNull(str, "url");
             if (dnr.bp(str, "ws:", true)) {
                 String strSubstring = str.substring(3);
-                bzo.p(strSubstring, "this as java.lang.String).substring(startIndex)");
+                throwIfVar1IsNull(strSubstring, "this as java.lang.String).substring(startIndex)");
                 str = "http:".concat(strSubstring);
             } else if (dnr.bp(str, "wss:", true)) {
                 String strSubstring2 = str.substring(4);
-                bzo.p(strSubstring2, "this as java.lang.String).substring(startIndex)");
+                throwIfVar1IsNull(strSubstring2, "this as java.lang.String).substring(startIndex)");
                 str = "https:".concat(strSubstring2);
             }
             return url(HttpUrl.Companion.get(str));
@@ -222,7 +228,7 @@ public final class Request {
 
         public Builder(Request request) {
             LinkedHashMap linkedHashMap;
-            bzo.q(request, "request");
+            throwIfVar1IsNull(request, "request");
             this.tags = new LinkedHashMap();
             this.url = request.url();
             this.method = request.method();
@@ -231,7 +237,7 @@ public final class Request {
                 linkedHashMap = new LinkedHashMap();
             } else {
                 Map<Class<?>, Object> tags$okhttp = request.getTags$okhttp();
-                bzo.q(tags$okhttp, "<this>");
+                throwIfVar1IsNull(tags$okhttp, "<this>");
                 linkedHashMap = new LinkedHashMap(tags$okhttp);
             }
             this.tags = linkedHashMap;
@@ -239,19 +245,20 @@ public final class Request {
         }
 
         public Builder url(URL url) {
-            bzo.q(url, "url");
+            throwIfVar1IsNull(url, "url");
             HttpUrl.Companion companion = HttpUrl.Companion;
             String string = url.toString();
-            bzo.p(string, "url.toString()");
+            throwIfVar1IsNull(string, "url.toString()");
             return url(companion.get(string));
         }
     }
 
-    public Request(HttpUrl httpUrl, String str, Headers headers, RequestBody requestBody, Map<Class<?>, ? extends Object> map) {
-        bzo.q(httpUrl, "url");
-        bzo.q(str, "method");
-        bzo.q(headers, "headers");
-        bzo.q(map, "tags");
+    public Request(HttpUrl httpUrl, String str, Headers headers, RequestBody requestBody,
+            Map<Class<?>, ? extends Object> map) {
+        throwIfVar1IsNull(httpUrl, "url");
+        throwIfVar1IsNull(str, "method");
+        throwIfVar1IsNull(headers, "headers");
+        throwIfVar1IsNull(map, "tags");
         this.url = httpUrl;
         this.method = str;
         this.headers = headers;
@@ -298,7 +305,7 @@ public final class Request {
     }
 
     public final String header(String str) {
-        bzo.q(str, "name");
+        throwIfVar1IsNull(str, "name");
         return this.headers.get(str);
     }
 
@@ -330,15 +337,15 @@ public final class Request {
         if (this.headers.size() != 0) {
             sb.append(", headers=[");
             int i = 0;
-            for (csm csmVar : this.headers) {
+            for (Pair pairVar : this.headers) {
                 int i2 = i + 1;
                 if (i < 0) {
                     aba.aj();
                     throw null;
                 }
-                csm csmVar2 = csmVar;
-                String str = (String) csmVar2.a;
-                String str2 = (String) csmVar2.b;
+                Pair pairVar2 = pairVar;
+                String str = (String) pairVar2.first;
+                String str2 = (String) pairVar2.second;
                 if (i > 0) {
                     sb.append(", ");
                 }
@@ -355,7 +362,7 @@ public final class Request {
         }
         sb.append('}');
         String string = sb.toString();
-        bzo.p(string, "StringBuilder().apply(builderAction).toString()");
+        throwIfVar1IsNull(string, "StringBuilder().apply(builderAction).toString()");
         return string;
     }
 
@@ -364,12 +371,12 @@ public final class Request {
     }
 
     public final List<String> headers(String str) {
-        bzo.q(str, "name");
+        throwIfVar1IsNull(str, "name");
         return this.headers.values(str);
     }
 
     public final <T> T tag(Class<? extends T> cls) {
-        bzo.q(cls, f.y);
+        throwIfVar1IsNull(cls, f.y);
         return cls.cast(this.tags.get(cls));
     }
 }

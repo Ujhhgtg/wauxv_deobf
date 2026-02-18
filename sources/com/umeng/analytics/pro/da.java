@@ -10,7 +10,7 @@ import me.hd.wauxv.obf.bjs;
 public class da extends dg {
     private static final dl d = new dl("");
     private static final db e = new db("", (byte) 0, 0);
-    private static final byte[] f = {0, 0, 1, 3, 7, 0, 4, 0, 5, 0, 6, 8, 12, 11, 10, 9};
+    private static final byte[] f = { 0, 0, 1, 3, 7, 0, 4, 0, 5, 0, 6, 8, 12, 11, 10, 9 };
     private static final byte h = -126;
     private static final byte i = 1;
     private static final byte j = 31;
@@ -26,7 +26,10 @@ public class da extends dg {
     private final long q;
     private byte[] r;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class b {
         public static final byte a = 1;
         public static final byte b = 2;
@@ -174,7 +177,7 @@ public class da extends dg {
         byte bU2 = u();
         byte b2 = (byte) (bU2 & j);
         if (b2 != 1) {
-            throw new dh(bjs.i(b2, "Expected version 1 but got "));
+            throw new dh(concatVar2Var1(b2, "Expected version 1 but got "));
         }
         return new de(z(), (byte) ((bU2 >> 5) & 3), E());
     }
@@ -313,7 +316,10 @@ public class da extends dg {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class a implements di {
         private final long a;
 
@@ -358,11 +364,11 @@ public class da extends dg {
 
     private void f(int i2) throws dh {
         if (i2 < 0) {
-            throw new dh(bjs.i(i2, "Negative length: "));
+            throw new dh(concatVar2Var1(i2, "Negative length: "));
         }
         long j2 = this.q;
         if (j2 != -1 && i2 > j2) {
-            throw new dh(bjs.i(i2, "Length exceeded max allowed: "));
+            throw new dh(concatVar2Var1(i2, "Length exceeded max allowed: "));
         }
     }
 
@@ -425,7 +431,7 @@ public class da extends dg {
             case 12:
                 return (byte) 12;
             default:
-                throw new dh(bjs.i(b3, "don't know what type: "));
+                throw new dh(concatVar2Var1(b3, "don't know what type: "));
         }
     }
 
@@ -539,7 +545,7 @@ public class da extends dg {
 
     @Override // com.umeng.analytics.pro.dg
     public void a(double d2) {
-        byte[] bArr = {0, 0, 0, 0, 0, 0, 0, 0};
+        byte[] bArr = { 0, 0, 0, 0, 0, 0, 0, 0 };
         a(Double.doubleToLongBits(d2), bArr, 0);
         this.g.b(bArr);
     }
@@ -586,6 +592,8 @@ public class da extends dg {
     }
 
     private long a(byte[] bArr) {
-        return ((((long) bArr[7]) & 255) << 56) | ((((long) bArr[6]) & 255) << 48) | ((((long) bArr[5]) & 255) << 40) | ((((long) bArr[4]) & 255) << 32) | ((((long) bArr[3]) & 255) << 24) | ((((long) bArr[2]) & 255) << 16) | ((((long) bArr[1]) & 255) << 8) | (255 & ((long) bArr[0]));
+        return ((((long) bArr[7]) & 255) << 56) | ((((long) bArr[6]) & 255) << 48) | ((((long) bArr[5]) & 255) << 40)
+                | ((((long) bArr[4]) & 255) << 32) | ((((long) bArr[3]) & 255) << 24) | ((((long) bArr[2]) & 255) << 16)
+                | ((((long) bArr[1]) & 255) << 8) | (255 & ((long) bArr[0]));
     }
 }

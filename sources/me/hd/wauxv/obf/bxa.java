@@ -22,7 +22,10 @@ public final /* synthetic */ class bxa implements View.OnClickListener {
             case 0:
                 View view2 = this.b;
                 Context context = view2.getContext();
-                bzo.o(context, "null cannot be cast to non-null type android.app.Activity" /* cnb.z(-496008593144618L) */);
+                throwIfVar1IsNull(context, "null cannot be cast to non-null type android.app.Activity" /*
+                                                                                                        * cnb.z(-
+                                                                                                        * 496008593144618L)
+                                                                                                        */);
                 Context context2 = view2.getContext();
                 bxj.a.getClass();
                 jx jxVar = bxj.i;
@@ -32,7 +35,9 @@ public final /* synthetic */ class bxa implements View.OnClickListener {
                 ((Activity) context).startActivityForResult(intent, 6);
                 break;
             default:
-                cnh.ac(this.b.getContext(), "https://hdshare.github.io/WAuxiliary_Plugin/" /* cnb.z(-485090786278186L) */);
+                cnh.ac(this.b.getContext(), "https://hdshare.github.io/WAuxiliary_Plugin/" /*
+                                                                                            * cnb.z(-485090786278186L)
+                                                                                            */);
                 break;
         }
     }

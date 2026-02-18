@@ -15,7 +15,8 @@ public final class dxz {
     public final String g;
     public final Integer h;
 
-    public /* synthetic */ dxz(int i, Integer num, Boolean bool, Integer num2, Long l, Integer num3, Integer num4, String str, Integer num5) {
+    public /* synthetic */ dxz(int i, Integer num, Boolean bool, Integer num2, Long l, Integer num3, Integer num4,
+            String str, Integer num5) {
         if (255 != (i & Opcodes.CONST_METHOD_TYPE)) {
             bht.ah(i, Opcodes.CONST_METHOD_TYPE, dxx.b.getDescriptor());
             throw null;
@@ -38,7 +39,11 @@ public final class dxz {
             return false;
         }
         dxz dxzVar = (dxz) obj;
-        return bzo.f(this.a, dxzVar.a) && bzo.f(this.b, dxzVar.b) && bzo.f(this.c, dxzVar.c) && bzo.f(this.d, dxzVar.d) && bzo.f(this.e, dxzVar.e) && bzo.f(this.f, dxzVar.f) && bzo.f(this.g, dxzVar.g) && bzo.f(this.h, dxzVar.h);
+        return nullSafeIsEqual(this.a, dxzVar.a) && nullSafeIsEqual(this.b, dxzVar.b)
+                && nullSafeIsEqual(this.c, dxzVar.c) && nullSafeIsEqual(this.d, dxzVar.d)
+                && nullSafeIsEqual(this.e, dxzVar.e) && nullSafeIsEqual(this.f, dxzVar.f)
+                && nullSafeIsEqual(this.g, dxzVar.g)
+                && nullSafeIsEqual(this.h, dxzVar.h);
     }
 
     public final int hashCode() {
@@ -70,6 +75,6 @@ public final class dxz {
         bjs.w(sb, this.e, -206691006151466L);
         bjs.w(sb, this.f, -206596516870954L);
         yg.u(sb, this.g, -206536387328810L);
-        return bjs.p(sb, this.h, ')');
+        return concat(sb, this.h, ')');
     }
 }

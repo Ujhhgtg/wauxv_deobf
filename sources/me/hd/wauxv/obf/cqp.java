@@ -7,11 +7,11 @@ import android.window.OnBackInvokedCallback;
 public final class cqp {
     public static final cqp a = new cqp();
 
-    public final OnBackInvokedCallback b(bgf bgfVar, bgf bgfVar2, bfu bfuVar, bfu bfuVar2) {
-        bzo.q(bgfVar, "onBackStarted");
-        bzo.q(bgfVar2, "onBackProgressed");
-        bzo.q(bfuVar, "onBackInvoked");
-        bzo.q(bfuVar2, "onBackCancelled");
+    public final OnBackInvokedCallback b(IHasInvokeMethod bgfVar, IHasInvokeMethod bgfVar2, bfu bfuVar, bfu bfuVar2) {
+        throwIfVar1IsNull(bgfVar, "onBackStarted");
+        throwIfVar1IsNull(bgfVar2, "onBackProgressed");
+        throwIfVar1IsNull(bfuVar, "onBackInvoked");
+        throwIfVar1IsNull(bfuVar2, "onBackCancelled");
         return new cqo(bgfVar, bgfVar2, bfuVar, bfuVar2);
     }
 }

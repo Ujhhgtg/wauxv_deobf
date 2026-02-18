@@ -24,7 +24,7 @@ public final class ejc {
             return false;
         }
         ejc ejcVar = (ejc) obj;
-        return bzo.f(this.a, ejcVar.a) && bzo.f(this.b, ejcVar.b);
+        return nullSafeIsEqual(this.a, ejcVar.a) && nullSafeIsEqual(this.b, ejcVar.b);
     }
 
     public final int hashCode() {
@@ -38,6 +38,6 @@ public final class ejc {
         StringBuilder sb = new StringBuilder();
         sb.append("yq3Proto(name=" /* cnb.z(-321985108245290L) */);
         yg.u(sb, this.a, -321903503866666L);
-        return bjs.p(sb, this.b, ')');
+        return concat(sb, this.b, ')');
     }
 }

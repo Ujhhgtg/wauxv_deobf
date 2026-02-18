@@ -8,10 +8,13 @@ import android.view.View;
 public final class cxd extends czx {
     public final SparseArray a;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'super' call moved to the top of the method (can break code
+     * semantics)
+     */
     public cxd(View view) {
         super(view);
-        bzo.q(view, "view");
+        throwIfVar1IsNull(view, "view");
         this.a = new SparseArray();
     }
 
@@ -29,6 +32,6 @@ public final class cxd extends czx {
         if (viewFindViewById != null) {
             return viewFindViewById;
         }
-        throw new IllegalStateException(bjs.i(i, "No view found with id ").toString());
+        throw new IllegalStateException(concatVar2Var1(i, "No view found with id ").toString());
     }
 }

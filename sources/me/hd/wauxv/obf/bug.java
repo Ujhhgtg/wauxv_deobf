@@ -31,7 +31,7 @@ public final class bug {
         ON_DESTROY = bugVar6;
         bug bugVar7 = new bug("ON_ANY", 6);
         ON_ANY = bugVar7;
-        bug[] bugVarArr = {bugVar, bugVar2, bugVar3, bugVar4, bugVar5, bugVar6, bugVar7};
+        bug[] bugVarArr = { bugVar, bugVar2, bugVar3, bugVar4, bugVar5, bugVar6, bugVar7 };
         $VALUES = bugVarArr;
         $ENTRIES = new awn(bugVarArr);
         Companion = new bue();
@@ -60,7 +60,7 @@ public final class bug {
             case 7:
                 throw new IllegalArgumentException(this + " has no target state");
             default:
-                throw new abt();
+                throw new QueryDidNotReturnUniqueResultRuntimeException();
         }
     }
 }

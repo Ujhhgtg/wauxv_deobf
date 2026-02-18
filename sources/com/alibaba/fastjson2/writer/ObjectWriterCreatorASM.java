@@ -109,9 +109,12 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
     protected final DynamicClassLoader classLoader;
     public static final ObjectWriterCreatorASM INSTANCE = new ObjectWriterCreatorASM(DynamicClassLoader.getInstance());
     protected static final AtomicLong seed = new AtomicLong();
-    static final String[] INTERFACES = {ASMUtils.TYPE_OBJECT_WRITER};
+    static final String[] INTERFACES = { ASMUtils.TYPE_OBJECT_WRITER };
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class FieldWriterGroup {
         final boolean direct;
         boolean end;
@@ -124,7 +127,10 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class FieldWriterRecord {
         final FieldWriter fieldWriter;
         final int ordinal;
@@ -149,37 +155,38 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         StringBuilder sb = new StringBuilder("(");
         String str = ASMUtils.DESC_JSON_WRITER;
         METHOD_DESC_WRITE_VALUE = yg.o(sb, str, "Ljava/lang/Object;)V");
-        METHOD_DESC_WRITE = bjs.o("(", str, "Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/reflect/Type;J)V");
-        METHOD_DESC_WRITE_FIELD_NAME = bjs.o("(", str, ")V");
-        METHOD_DESC_WRITE_OBJECT = bjs.o("(", str, "Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/reflect/Type;J)V");
-        METHOD_DESC_WRITE_J = bjs.o("(", str, "J)V");
-        METHOD_DESC_WRITE_D = bjs.o("(", str, "D)V");
-        METHOD_DESC_WRITE_F = bjs.o("(", str, "F)V");
-        METHOD_DESC_WRITE_DATE_WITH_FIELD_NAME = bjs.o("(", str, "ZLjava/util/Date;)V");
-        METHOD_DESC_WRITE_Z = bjs.o("(", str, "Z)V");
-        METHOD_DESC_WRITE_ZARRAY = bjs.o("(", str, "[Z)V");
-        METHOD_DESC_WRITE_FARRAY = bjs.o("(", str, "[F)V");
-        METHOD_DESC_WRITE_DARRAY = bjs.o("(", str, "[D)V");
-        METHOD_DESC_WRITE_I = bjs.o("(", str, "I)V");
-        METHOD_DESC_WRITE_SArray = bjs.o("(", str, "[S)V");
-        METHOD_DESC_WRITE_BArray = bjs.o("(", str, "[B)V");
-        METHOD_DESC_WRITE_CArray = bjs.o("(", str, "[C)V");
-        METHOD_DESC_WRITE_ENUM = bjs.o("(", str, "Ljava/lang/Enum;)V");
-        METHOD_DESC_WRITE_LIST = bjs.o("(", str, "Ljava/util/List;)V");
-        METHOD_DESC_FIELD_WRITE_OBJECT = bjs.o("(", str, "Ljava/lang/Object;)Z");
+        METHOD_DESC_WRITE = concat("(", str, "Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/reflect/Type;J)V");
+        METHOD_DESC_WRITE_FIELD_NAME = concat("(", str, ")V");
+        METHOD_DESC_WRITE_OBJECT = concat("(", str, "Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/reflect/Type;J)V");
+        METHOD_DESC_WRITE_J = concat("(", str, "J)V");
+        METHOD_DESC_WRITE_D = concat("(", str, "D)V");
+        METHOD_DESC_WRITE_F = concat("(", str, "F)V");
+        METHOD_DESC_WRITE_DATE_WITH_FIELD_NAME = concat("(", str, "ZLjava/util/Date;)V");
+        METHOD_DESC_WRITE_Z = concat("(", str, "Z)V");
+        METHOD_DESC_WRITE_ZARRAY = concat("(", str, "[Z)V");
+        METHOD_DESC_WRITE_FARRAY = concat("(", str, "[F)V");
+        METHOD_DESC_WRITE_DARRAY = concat("(", str, "[D)V");
+        METHOD_DESC_WRITE_I = concat("(", str, "I)V");
+        METHOD_DESC_WRITE_SArray = concat("(", str, "[S)V");
+        METHOD_DESC_WRITE_BArray = concat("(", str, "[B)V");
+        METHOD_DESC_WRITE_CArray = concat("(", str, "[C)V");
+        METHOD_DESC_WRITE_ENUM = concat("(", str, "Ljava/lang/Enum;)V");
+        METHOD_DESC_WRITE_LIST = concat("(", str, "Ljava/util/List;)V");
+        METHOD_DESC_FIELD_WRITE_OBJECT = concat("(", str, "Ljava/lang/Object;)Z");
         StringBuilder sbZ = dkz.z("(", str, "Ljava/lang/Class;)");
         String str2 = ASMUtils.DESC_OBJECT_WRITER;
         sbZ.append(str2);
         METHOD_DESC_GET_OBJECT_WRITER = sbZ.toString();
         METHOD_DESC_GET_ITEM_WRITER = "(" + str + "Ljava/lang/reflect/Type;)" + str2;
-        METHOD_DESC_WRITE_TYPE_INFO = bjs.o("(", str, ")Z");
-        METHOD_DESC_HAS_FILTER = bjs.o("(", str, ")Z");
-        METHOD_DESC_SET_PATH2 = yg.o(new StringBuilder("("), ASMUtils.DESC_FIELD_WRITER, "Ljava/lang/Object;)Ljava/lang/String;");
-        METHOD_DESC_IO_WRITE_REFERENCE = bjs.o("([BILjava/lang/String;", str, ")I");
-        METHOD_DESC_WRITE_CLASS_INFO = bjs.o("(", str, ")V");
-        METHOD_DESC_WRITE_FIELD_NAME_JSONB = bjs.o("([BI", str, ")I");
-        METHOD_DESC_WRITE_NAME_SYMBOL = bjs.o("(", strDesc, ")I");
-        METHOD_DESC_WRITE_LIST_VALUE_JSONB = bjs.o("(", str, "Ljava/util/List;)V");
+        METHOD_DESC_WRITE_TYPE_INFO = concat("(", str, ")Z");
+        METHOD_DESC_HAS_FILTER = concat("(", str, ")Z");
+        METHOD_DESC_SET_PATH2 = yg.o(new StringBuilder("("), ASMUtils.DESC_FIELD_WRITER,
+                "Ljava/lang/Object;)Ljava/lang/String;");
+        METHOD_DESC_IO_WRITE_REFERENCE = concat("([BILjava/lang/String;", str, ")I");
+        METHOD_DESC_WRITE_CLASS_INFO = concat("(", str, ")V");
+        METHOD_DESC_WRITE_FIELD_NAME_JSONB = concat("([BI", str, ")I");
+        METHOD_DESC_WRITE_NAME_SYMBOL = concat("(", strDesc, ")I");
+        METHOD_DESC_WRITE_LIST_VALUE_JSONB = concat("(", str, "Ljava/util/List;)V");
     }
 
     public ObjectWriterCreatorASM() {
@@ -212,9 +219,13 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         return arrayList;
     }
 
-    private FieldWriter createFieldWriterList(ObjectWriterProvider objectWriterProvider, String str, int i, long j, String str2, String str3, Field field, Class<?> cls, Type type, Type type2, Class<?> cls2) {
-        FieldWriter fieldWriterJitFieldWriterList = jitFieldWriterList(objectWriterProvider, str, i, j, str2, str3, field, cls, type, type2, cls2);
-        return fieldWriterJitFieldWriterList == null ? new FieldWriterListField(str, type, i, j, str2, str3, type2, cls2, field, cls) : fieldWriterJitFieldWriterList;
+    private FieldWriter createFieldWriterList(ObjectWriterProvider objectWriterProvider, String str, int i, long j,
+            String str2, String str3, Field field, Class<?> cls, Type type, Type type2, Class<?> cls2) {
+        FieldWriter fieldWriterJitFieldWriterList = jitFieldWriterList(objectWriterProvider, str, i, j, str2, str3,
+                field, cls, type, type2, cls2);
+        return fieldWriterJitFieldWriterList == null
+                ? new FieldWriterListField(str, type, i, j, str2, str3, type2, cls2, field, cls)
+                : fieldWriterJitFieldWriterList;
     }
 
     private int fieldCapacity(Class<?> cls) {
@@ -227,10 +238,12 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         if (cls == Short.TYPE || cls == Short.class) {
             return 3;
         }
-        if (cls == Integer.TYPE || cls == Integer.class || cls == Float.TYPE || cls == Float.class || cls == LocalDate.class) {
+        if (cls == Integer.TYPE || cls == Integer.class || cls == Float.TYPE || cls == Float.class
+                || cls == LocalDate.class) {
             return 5;
         }
-        if (cls == Long.TYPE || cls == Long.class || cls == Double.TYPE || cls == Double.class || cls == LocalTime.class) {
+        if (cls == Long.TYPE || cls == Long.class || cls == Double.TYPE || cls == Double.class
+                || cls == LocalTime.class) {
             return 9;
         }
         if (cls == LocalDateTime.class) {
@@ -248,7 +261,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         throw new JSONException("assert error ".concat(cls.getName()));
     }
 
-    private static void fieldValueCapacity(long j, List<FieldWriterRecord> list, MethodWriterContext methodWriterContext, MethodWriter methodWriter, int i) {
+    private static void fieldValueCapacity(long j, List<FieldWriterRecord> list,
+            MethodWriterContext methodWriterContext, MethodWriter methodWriter, int i) {
         for (FieldWriterRecord fieldWriterRecord : list) {
             FieldWriter fieldWriter = fieldWriterRecord.fieldWriter;
             Class cls = fieldWriter.fieldClass;
@@ -274,13 +288,15 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                 methodWriter.aload(methodWriterContext.var("field_" + fieldWriterRecord.ordinal));
                 Class itemClass = fieldWriter.getItemClass();
                 if (itemClass == String.class) {
-                    methodWriter.invokestatic(ASMUtils.TYPE_JSONB_IO, "stringCapacity", "(Ljava/util/Collection;)I", true);
+                    methodWriter.invokestatic(ASMUtils.TYPE_JSONB_IO, "stringCapacity", "(Ljava/util/Collection;)I",
+                            true);
                     methodWriter.iadd();
                 } else {
                     if (itemClass != Long.class) {
                         throw new JSONException("assert error itemClass ".concat(itemClass.getName()));
                     }
-                    methodWriter.invokestatic(ASMUtils.TYPE_JSONB_IO, "int64Capacity", "(Ljava/util/Collection;)I", true);
+                    methodWriter.invokestatic(ASMUtils.TYPE_JSONB_IO, "int64Capacity", "(Ljava/util/Collection;)I",
+                            true);
                     methodWriter.iadd();
                 }
             } else {
@@ -342,19 +358,22 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
     }
 
     private void genMethodInit(List<FieldWriter> list, ClassWriter classWriter, String str, String str2) {
-        MethodWriter methodWriterVisitMethod = classWriter.visitMethod(1, MethodDescription.CONSTRUCTOR_INTERNAL_NAME, "(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;JLjava/util/List;)V", 64);
+        MethodWriter methodWriterVisitMethod = classWriter.visitMethod(1, MethodDescription.CONSTRUCTOR_INTERNAL_NAME,
+                "(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;JLjava/util/List;)V", 64);
         methodWriterVisitMethod.aload(0);
         methodWriterVisitMethod.aload(1);
         methodWriterVisitMethod.aload(2);
         methodWriterVisitMethod.aload(3);
         methodWriterVisitMethod.lload(4);
         methodWriterVisitMethod.aload(6);
-        methodWriterVisitMethod.invokespecial(str2, MethodDescription.CONSTRUCTOR_INTERNAL_NAME, "(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;JLjava/util/List;)V");
+        methodWriterVisitMethod.invokespecial(str2, MethodDescription.CONSTRUCTOR_INTERNAL_NAME,
+                "(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;JLjava/util/List;)V");
         if (str2 == ASMUtils.TYPE_OBJECT_WRITER_ADAPTER) {
             for (int i = 0; i < list.size(); i++) {
                 methodWriterVisitMethod.aload(0);
                 methodWriterVisitMethod.dup();
-                methodWriterVisitMethod.getfield(ASMUtils.TYPE_OBJECT_WRITER_ADAPTER, "fieldWriterArray", ASMUtils.DESC_FIELD_WRITER_ARRAY);
+                methodWriterVisitMethod.getfield(ASMUtils.TYPE_OBJECT_WRITER_ADAPTER, "fieldWriterArray",
+                        ASMUtils.DESC_FIELD_WRITER_ARRAY);
                 methodWriterVisitMethod.iconst_n(i);
                 methodWriterVisitMethod.aaload();
                 methodWriterVisitMethod.checkcast(ASMUtils.TYPE_FIELD_WRITER);
@@ -365,16 +384,20 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         methodWriterVisitMethod.visitMaxs(7, 7);
     }
 
-    private void genMethodWrite(ObjectWriterProvider objectWriterProvider, Class cls, List<FieldWriter> list, ClassWriter classWriter, String str, long j) {
+    private void genMethodWrite(ObjectWriterProvider objectWriterProvider, Class cls, List<FieldWriter> list,
+            ClassWriter classWriter, String str, long j) {
         String str2;
         boolean z = (j & FieldInfo.DISABLE_JSONB) != 0;
         boolean z2 = (j & FieldInfo.DISABLE_ARRAY_MAPPING) != 0;
         boolean z3 = (j & FieldInfo.DISABLE_AUTO_TYPE) != 0;
-        MethodWriter methodWriterVisitMethod = classWriter.visitMethod(1, "write", METHOD_DESC_WRITE, list.size() < 6 ? 512 : 1024);
+        MethodWriter methodWriterVisitMethod = classWriter.visitMethod(1, "write", METHOD_DESC_WRITE,
+                list.size() < 6 ? 512 : 1024);
         Label label = new Label();
-        MethodWriterContext methodWriterContext = new MethodWriterContext(objectWriterProvider, cls, j, str, methodWriterVisitMethod, 8, false);
+        MethodWriterContext methodWriterContext = new MethodWriterContext(objectWriterProvider, cls, j, str,
+                methodWriterVisitMethod, 8, false);
         methodWriterContext.genVariantsMethodBefore(false);
-        methodWriterContext.genIsEnabled(JSONWriter.Feature.IgnoreErrorGetter.mask | JSONWriter.Feature.UnquoteFieldName.mask, label);
+        methodWriterContext.genIsEnabled(
+                JSONWriter.Feature.IgnoreErrorGetter.mask | JSONWriter.Feature.UnquoteFieldName.mask, label);
         methodWriterVisitMethod.aload(0);
         methodWriterVisitMethod.aload(1);
         methodWriterVisitMethod.aload(2);
@@ -467,7 +490,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
             isWriteTypeInfo(j, methodWriterVisitMethod, 2, 4, 5, label9);
             methodWriterVisitMethod.aload(0);
             methodWriterVisitMethod.aload(1);
-            methodWriterVisitMethod.invokeinterface(ASMUtils.TYPE_OBJECT_WRITER, "writeTypeInfo", METHOD_DESC_WRITE_TYPE_INFO);
+            methodWriterVisitMethod.invokeinterface(ASMUtils.TYPE_OBJECT_WRITER, "writeTypeInfo",
+                    METHOD_DESC_WRITE_TYPE_INFO);
             methodWriterVisitMethod.iconst_1();
             methodWriterVisitMethod.ixor();
             methodWriterVisitMethod.istore(7);
@@ -484,7 +508,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         methodWriterVisitMethod.visitMaxs(i2 + 1, i2 + 1);
     }
 
-    private void genMethodWriteArrayMapping(ObjectWriterProvider objectWriterProvider, String str, Class cls, long j, List<FieldWriter> list, ClassWriter classWriter, String str2) {
+    private void genMethodWriteArrayMapping(ObjectWriterProvider objectWriterProvider, String str, Class cls, long j,
+            List<FieldWriter> list, ClassWriter classWriter, String str2) {
         String str3 = METHOD_DESC_WRITE;
         MethodWriter methodWriterVisitMethod = classWriter.visitMethod(1, str, str3, 512);
         Label label = new Label();
@@ -514,7 +539,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         methodWriterVisitMethod.visitLabel(label2);
         methodWriterVisitMethod.aload(1);
         methodWriterVisitMethod.invokevirtual(str4, "startArray", "()V");
-        MethodWriterContext methodWriterContext = new MethodWriterContext(objectWriterProvider, cls, j, str2, methodWriterVisitMethod, 7, false);
+        MethodWriterContext methodWriterContext = new MethodWriterContext(objectWriterProvider, cls, j, str2,
+                methodWriterVisitMethod, 7, false);
         for (int i = 0; i < list.size(); i++) {
             if (i != 0) {
                 methodWriterVisitMethod.aload(1);
@@ -529,15 +555,18 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         methodWriterVisitMethod.visitMaxs(i2 + 1, i2 + 1);
     }
 
-    private void genMethodWriteArrayMappingJSONB(ObjectWriterProvider objectWriterProvider, Class cls, long j, List<FieldWriterGroup> list, List<FieldWriter> list2, ClassWriter classWriter, String str, long j2) {
+    private void genMethodWriteArrayMappingJSONB(ObjectWriterProvider objectWriterProvider, Class cls, long j,
+            List<FieldWriterGroup> list, List<FieldWriter> list2, ClassWriter classWriter, String str, long j2) {
         int i;
         int i2;
         int i3;
         int i4;
         int iFieldCapacity;
         int i5 = 1;
-        MethodWriter methodWriterVisitMethod = classWriter.visitMethod(1, "writeArrayMappingJSONB", METHOD_DESC_WRITE, 512);
-        MethodWriterContext methodWriterContext = new MethodWriterContext(objectWriterProvider, cls, j, str, methodWriterVisitMethod, 7, true);
+        MethodWriter methodWriterVisitMethod = classWriter.visitMethod(1, "writeArrayMappingJSONB", METHOD_DESC_WRITE,
+                512);
+        MethodWriterContext methodWriterContext = new MethodWriterContext(objectWriterProvider, cls, j, str,
+                methodWriterVisitMethod, 7, true);
         MethodWriter methodWriter = methodWriterVisitMethod;
         int iVar = methodWriterContext.var("offset");
         int iVar2 = methodWriterContext.var("bytes");
@@ -563,7 +592,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                     Class<?> cls2 = fieldWriter.fieldClass;
                     if (isFieldVarIndex(methodWriterContext, fieldWriter)) {
                         iFieldCapacity = i6;
-                        sotreFieldValueToLocalVar(methodWriterContext, fieldWriterRecord.ordinal, fieldWriter, 2, methodWriter);
+                        sotreFieldValueToLocalVar(methodWriterContext, fieldWriterRecord.ordinal, fieldWriter, 2,
+                                methodWriter);
                     } else {
                         iFieldCapacity = fieldCapacity(cls2) + i6;
                     }
@@ -604,7 +634,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                     int i10 = iVar2;
                     int i11 = i7;
                     MethodWriterContext methodWriterContext2 = methodWriterContext;
-                    writeFieldValueDirectJSONB(j, str, methodWriterContext2, fieldWriter2, i8, methodWriter3, i10, i9, 2, i11, iVar3, false);
+                    writeFieldValueDirectJSONB(j, str, methodWriterContext2, fieldWriter2, i8, methodWriter3, i10, i9,
+                            2, i11, iVar3, false);
                     iVar2 = i10;
                     i7 = i11;
                     methodWriterContext = methodWriterContext2;
@@ -646,15 +677,18 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         methodWriter.visitMaxs(i14 + 1, i14 + 1);
     }
 
-    private void genMethodWriteJSONB(ObjectWriterProvider objectWriterProvider, Class cls, List<FieldWriterGroup> list, List<FieldWriter> list2, ClassWriter classWriter, String str, long j) {
+    private void genMethodWriteJSONB(ObjectWriterProvider objectWriterProvider, Class cls, List<FieldWriterGroup> list,
+            List<FieldWriter> list2, ClassWriter classWriter, String str, long j) {
         MethodWriterContext methodWriterContext;
         Label label;
         String str2;
         Integer num;
         MethodWriterContext methodWriterContext2;
         int i = 1;
-        MethodWriter methodWriterVisitMethod = classWriter.visitMethod(1, "writeJSONB", METHOD_DESC_WRITE, list2.size() < 6 ? 512 : 1024);
-        MethodWriterContext methodWriterContext3 = new MethodWriterContext(objectWriterProvider, cls, j, str, methodWriterVisitMethod, 7, true);
+        MethodWriter methodWriterVisitMethod = classWriter.visitMethod(1, "writeJSONB", METHOD_DESC_WRITE,
+                list2.size() < 6 ? 512 : 1024);
+        MethodWriterContext methodWriterContext3 = new MethodWriterContext(objectWriterProvider, cls, j, str,
+                methodWriterVisitMethod, 7, true);
         MethodWriter methodWriter = methodWriterVisitMethod;
         methodWriterContext3.genVariantsMethodBefore(true);
         Label label2 = new Label();
@@ -710,7 +744,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                     Class<?> cls2 = fieldWriter.fieldClass;
                     if (isFieldVarIndex(methodWriterContext3, fieldWriter)) {
                         MethodWriterContext methodWriterContext4 = methodWriterContext3;
-                        sotreFieldValueToLocalVar(methodWriterContext4, fieldWriterRecord.ordinal, fieldWriter, 2, methodWriter);
+                        sotreFieldValueToLocalVar(methodWriterContext4, fieldWriterRecord.ordinal, fieldWriter, 2,
+                                methodWriter);
                         methodWriterContext2 = methodWriterContext4;
                     } else {
                         methodWriterContext2 = methodWriterContext3;
@@ -741,7 +776,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                     int i3 = iVar;
                     int i4 = iVar22;
                     int i5 = iVar2;
-                    writeFieldValueDirectJSONB(j, str, methodWriterContext, fieldWriterRecord2.fieldWriter, fieldWriterRecord2.ordinal, methodWriter3, i5, i3, 2, i4, num.intValue(), true);
+                    writeFieldValueDirectJSONB(j, str, methodWriterContext, fieldWriterRecord2.fieldWriter,
+                            fieldWriterRecord2.ordinal, methodWriter3, i5, i3, 2, i4, num.intValue(), true);
                     methodWriter = methodWriter3;
                     iVar2 = i5;
                     iVar = i3;
@@ -775,7 +811,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                     methodWriter.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "startObject", str2);
                 }
                 for (FieldWriterRecord fieldWriterRecord3 : next.fieldWriters) {
-                    gwFieldValueJSONB(methodWriterContext, fieldWriterRecord3.fieldWriter, 2, fieldWriterRecord3.ordinal);
+                    gwFieldValueJSONB(methodWriterContext, fieldWriterRecord3.fieldWriter, 2,
+                            fieldWriterRecord3.ordinal);
                 }
                 if (next.end) {
                     methodWriter.aload(1);
@@ -870,15 +907,17 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         methodWriter.visitLabel(label);
     }
 
-    /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
-    /* JADX WARN: Found duplicated region for block: B:44:0x0270  */
-    /* JADX WARN: Found duplicated region for block: B:46:0x0274  */
-    /* JADX WARN: Found duplicated region for block: B:50:0x0298  */
-    /* JADX WARN: Found duplicated region for block: B:52:0x029e  */
-    /* JADX WARN: Found duplicated region for block: B:83:0x032a  */
-    /* JADX WARN: Found duplicated region for block: B:86:0x0344  */
-    /* JADX WARN: Found duplicated region for block: B:87:0x0347  */
-    /* JADX WARN: Found duplicated region for block: B:90:0x0350  */
+    /*
+     * JADX WARN: Can't fix incorrect switch cases order, some code will duplicate
+     */
+    /* JADX WARN: Found duplicated region for block: B:44:0x0270 */
+    /* JADX WARN: Found duplicated region for block: B:46:0x0274 */
+    /* JADX WARN: Found duplicated region for block: B:50:0x0298 */
+    /* JADX WARN: Found duplicated region for block: B:52:0x029e */
+    /* JADX WARN: Found duplicated region for block: B:83:0x032a */
+    /* JADX WARN: Found duplicated region for block: B:86:0x0344 */
+    /* JADX WARN: Found duplicated region for block: B:87:0x0347 */
+    /* JADX WARN: Found duplicated region for block: B:90:0x0350 */
     /* JADX WARN: Found duplicated region for block: B:96:0x0276 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:97:? A[RETURN, SYNTHETIC] */
     private void gwFieldName(MethodWriterContext methodWriterContext, FieldWriter fieldWriter, int i) {
@@ -981,7 +1020,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
             methodWriter.aload(0);
             methodWriter.getfield(str2, fieldWriter(i), ASMUtils.DESC_FIELD_WRITER);
             methodWriter.aload(1);
-            methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER, methodWriterContext.jsonb ? "writeFieldNameJSONB" : "writeFieldName", METHOD_DESC_WRITE_FIELD_NAME);
+            methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER,
+                    methodWriterContext.jsonb ? "writeFieldNameJSONB" : "writeFieldName", METHOD_DESC_WRITE_FIELD_NAME);
             if (z) {
                 methodWriter.visitLabel(label2);
             }
@@ -1170,7 +1210,7 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                 case 9:
                     bArr[0] = 34;
                     System.arraycopy(bytes2, 0, bArr, 1, 7);
-                    byte[] bArr2 = {bytes2[7], bytes2[8], 34, 58};
+                    byte[] bArr2 = { bytes2[7], bytes2[8], 34, 58 };
                     Unsafe unsafe2 = JDKUtils.UNSAFE;
                     long j5 = JDKUtils.ARRAY_BYTE_BASE_OFFSET;
                     Integer numValueOf = Integer.valueOf(unsafe2.getInt(bArr2, j5));
@@ -1199,7 +1239,7 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                 case 10:
                     bArr[0] = 34;
                     System.arraycopy(bytes2, 0, bArr, 1, 7);
-                    byte[] bArr3 = {bytes2[7], bytes2[8], bytes2[9], 34, 58, 0, 0, 0};
+                    byte[] bArr3 = { bytes2[7], bytes2[8], bytes2[9], 34, 58, 0, 0, 0 };
                     Unsafe unsafe3 = JDKUtils.UNSAFE;
                     long j6 = JDKUtils.ARRAY_BYTE_BASE_OFFSET;
                     lValueOf = Long.valueOf(unsafe3.getLong(bArr3, j6));
@@ -1230,7 +1270,7 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                 case 11:
                     bArr[0] = 34;
                     System.arraycopy(bytes2, 0, bArr, 1, 7);
-                    byte[] bArr4 = {bytes2[7], bytes2[8], bytes2[9], bytes2[10], 34, 58, 0, 0};
+                    byte[] bArr4 = { bytes2[7], bytes2[8], bytes2[9], bytes2[10], 34, 58, 0, 0 };
                     Unsafe unsafe4 = JDKUtils.UNSAFE;
                     long j7 = JDKUtils.ARRAY_BYTE_BASE_OFFSET;
                     numberValueOf2 = Long.valueOf(unsafe4.getLong(bArr4, j7));
@@ -1259,7 +1299,7 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                 case 12:
                     bArr[0] = 34;
                     System.arraycopy(bytes2, 0, bArr, 1, 7);
-                    byte[] bArr5 = {bytes2[7], bytes2[8], bytes2[9], bytes2[10], bytes2[11], 34, 58, 0};
+                    byte[] bArr5 = { bytes2[7], bytes2[8], bytes2[9], bytes2[10], bytes2[11], 34, 58, 0 };
                     Unsafe unsafe5 = JDKUtils.UNSAFE;
                     long j8 = JDKUtils.ARRAY_BYTE_BASE_OFFSET;
                     numberValueOf2 = Long.valueOf(unsafe5.getLong(bArr5, j8));
@@ -1288,7 +1328,7 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                 case 13:
                     bArr[0] = 34;
                     System.arraycopy(bytes2, 0, bArr, 1, 7);
-                    byte[] bArr6 = {bytes2[7], bytes2[8], bytes2[9], bytes2[10], bytes2[11], bytes2[12], 34, 58};
+                    byte[] bArr6 = { bytes2[7], bytes2[8], bytes2[9], bytes2[10], bytes2[11], bytes2[12], 34, 58 };
                     Unsafe unsafe6 = JDKUtils.UNSAFE;
                     long j9 = JDKUtils.ARRAY_BYTE_BASE_OFFSET;
                     lValueOf = Long.valueOf(unsafe6.getLong(bArr6, j9));
@@ -1319,7 +1359,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                 case 14:
                     bArr[0] = 34;
                     System.arraycopy(bytes2, 0, bArr, 1, 7);
-                    byte[] bArr7 = {bytes2[7], bytes2[8], bytes2[9], bytes2[10], bytes2[11], bytes2[12], bytes2[13], 34};
+                    byte[] bArr7 = { bytes2[7], bytes2[8], bytes2[9], bytes2[10], bytes2[11], bytes2[12], bytes2[13],
+                            34 };
                     Unsafe unsafe7 = JDKUtils.UNSAFE;
                     long j10 = JDKUtils.ARRAY_BYTE_BASE_OFFSET;
                     numberValueOf2 = Long.valueOf(unsafe7.getLong(bArr7, j10));
@@ -1337,7 +1378,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                     }
                     long j4222222222222 = JDKUtils.UNSAFE.getLong(bytes2, JDKUtils.ARRAY_BYTE_BASE_OFFSET);
                     methodWriter.aload(1);
-                    methodWriterContext.ldcIFEQ(NAME_DIRECT, Long.valueOf(j3222222222222), Long.valueOf(j4222222222222));
+                    methodWriterContext.ldcIFEQ(NAME_DIRECT, Long.valueOf(j3222222222222),
+                            Long.valueOf(j4222222222222));
                     if ("(JI)V".equals(str4)) {
                         methodWriterContext.ldcIFEQ(NAME_DIRECT, numberValueOf2, numberValueOf);
                     } else {
@@ -1361,7 +1403,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                     }
                     long j42222222222222 = JDKUtils.UNSAFE.getLong(bytes2, JDKUtils.ARRAY_BYTE_BASE_OFFSET);
                     methodWriter.aload(1);
-                    methodWriterContext.ldcIFEQ(NAME_DIRECT, Long.valueOf(j32222222222222), Long.valueOf(j42222222222222));
+                    methodWriterContext.ldcIFEQ(NAME_DIRECT, Long.valueOf(j32222222222222),
+                            Long.valueOf(j42222222222222));
                     if ("(JI)V".equals(str4)) {
                         methodWriterContext.ldcIFEQ(NAME_DIRECT, numberValueOf2, numberValueOf);
                     } else {
@@ -1383,7 +1426,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                     }
                     long j422222222222222 = JDKUtils.UNSAFE.getLong(bytes2, JDKUtils.ARRAY_BYTE_BASE_OFFSET);
                     methodWriter.aload(1);
-                    methodWriterContext.ldcIFEQ(NAME_DIRECT, Long.valueOf(j322222222222222), Long.valueOf(j422222222222222));
+                    methodWriterContext.ldcIFEQ(NAME_DIRECT, Long.valueOf(j322222222222222),
+                            Long.valueOf(j422222222222222));
                     if ("(JI)V".equals(str4)) {
                         methodWriterContext.ldcIFEQ(NAME_DIRECT, numberValueOf2, numberValueOf);
                     } else {
@@ -1392,7 +1436,7 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                     methodWriter.invokevirtual(ASMUtils.TYPE_JSON_WRITER, str3, str4);
                     return;
                 default:
-                    throw new IllegalStateException(bjs.i(length2, "length : "));
+                    throw new IllegalStateException(concatVar2Var1(length2, "length : "));
             }
         }
         z = false;
@@ -1402,13 +1446,15 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         methodWriter.aload(0);
         methodWriter.getfield(str2, fieldWriter(i), ASMUtils.DESC_FIELD_WRITER);
         methodWriter.aload(1);
-        methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER, methodWriterContext.jsonb ? "writeFieldNameJSONB" : "writeFieldName", METHOD_DESC_WRITE_FIELD_NAME);
+        methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER,
+                methodWriterContext.jsonb ? "writeFieldNameJSONB" : "writeFieldName", METHOD_DESC_WRITE_FIELD_NAME);
         if (z) {
             methodWriter.visitLabel(label2);
         }
     }
 
-    private static void gwFieldNameDirectJSONB(String str, FieldWriter fieldWriter, int i, MethodWriterContext methodWriterContext, int i2, int i3) {
+    private static void gwFieldNameDirectJSONB(String str, FieldWriter fieldWriter, int i,
+            MethodWriterContext methodWriterContext, int i2, int i3) {
         Label label = new Label();
         Label label2 = new Label();
         MethodWriter methodWriter = methodWriterContext.mw;
@@ -1465,7 +1511,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         methodWriter.aload(i2);
         methodWriter.iload(i3);
         methodWriter.aload(1);
-        methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER, "writeFieldNameJSONB", METHOD_DESC_WRITE_FIELD_NAME_JSONB);
+        methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER, "writeFieldNameJSONB",
+                METHOD_DESC_WRITE_FIELD_NAME_JSONB);
         methodWriter.istore(i3);
         methodWriter.visitLabel(label2);
     }
@@ -1476,11 +1523,13 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
             gwFieldValueBooleanV(methodWriterContext, fieldWriter, i, i2, false);
             return;
         }
-        if (cls == boolean[].class || cls == byte[].class || cls == char[].class || cls == short[].class || cls == float[].class || cls == double[].class) {
+        if (cls == boolean[].class || cls == byte[].class || cls == char[].class || cls == short[].class
+                || cls == float[].class || cls == double[].class) {
             gwFieldValueArray(methodWriterContext, fieldWriter, i, i2);
             return;
         }
-        if (cls == Character.TYPE || cls == Byte.TYPE || cls == Integer.TYPE || cls == Short.TYPE || cls == Float.TYPE) {
+        if (cls == Character.TYPE || cls == Byte.TYPE || cls == Integer.TYPE || cls == Short.TYPE
+                || cls == Float.TYPE) {
             gwFieldValueInt32V(methodWriterContext, fieldWriter, i, i2, false);
             return;
         }
@@ -1492,7 +1541,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
             gwFieldValueInt64V(methodWriterContext, fieldWriter, i, i2, true);
             return;
         }
-        if (cls == long[].class && methodWriterContext.provider.getObjectWriter(Long.class) == ObjectWriterImplInt64.INSTANCE) {
+        if (cls == long[].class
+                && methodWriterContext.provider.getObjectWriter(Long.class) == ObjectWriterImplInt64.INSTANCE) {
             gwFieldValueInt64VA(methodWriterContext, fieldWriter, i, i2, false);
             return;
         }
@@ -1516,7 +1566,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
             gwFieldValueString(methodWriterContext, fieldWriter, i, i2);
             return;
         }
-        if (cls.isEnum() && BeanUtils.getEnumValueField(cls, methodWriterContext.provider) == null && !(fieldWriter instanceof FieldWriterObject)) {
+        if (cls.isEnum() && BeanUtils.getEnumValueField(cls, methodWriterContext.provider) == null
+                && !(fieldWriter instanceof FieldWriterObject)) {
             gwFieldValueEnum(methodWriterContext, fieldWriter, i, i2);
             return;
         }
@@ -1566,16 +1617,24 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER, str2, str);
     }
 
-    private void gwFieldValueArrayMapping(FieldWriter fieldWriter, MethodWriterContext methodWriterContext, int i, int i2) {
+    private void gwFieldValueArrayMapping(FieldWriter fieldWriter, MethodWriterContext methodWriterContext, int i,
+            int i2) {
         Class cls = methodWriterContext.objectClass;
         Class cls2 = fieldWriter.fieldClass;
         String strType = cls == null ? "java/lang/Object" : ASMUtils.type(cls);
         boolean z = false;
         Class cls3 = Long.TYPE;
-        if ((cls2 == cls3 || cls2 == Long.class || cls2 == long[].class) && (methodWriterContext.provider.userDefineMask & 4) != 0 && methodWriterContext.provider.getObjectWriter(Long.class) != ObjectWriterImplInt64.INSTANCE) {
+        if ((cls2 == cls3 || cls2 == Long.class || cls2 == long[].class)
+                && (methodWriterContext.provider.userDefineMask & 4) != 0
+                && methodWriterContext.provider.getObjectWriter(Long.class) != ObjectWriterImplInt64.INSTANCE) {
             z = true;
         }
-        if (cls2 == Boolean.TYPE || cls2 == boolean[].class || cls2 == Character.TYPE || cls2 == char[].class || cls2 == Byte.TYPE || cls2 == byte[].class || cls2 == Short.TYPE || cls2 == short[].class || cls2 == Integer.TYPE || cls2 == int[].class || cls2 == cls3 || ((cls2 == long[].class && !z) || cls2 == Float.TYPE || cls2 == float[].class || cls2 == Double.TYPE || cls2 == double[].class || cls2 == String.class || cls2 == Integer.class || cls2 == Long.class || cls2 == BigDecimal.class || cls2.isEnum())) {
+        if (cls2 == Boolean.TYPE || cls2 == boolean[].class || cls2 == Character.TYPE || cls2 == char[].class
+                || cls2 == Byte.TYPE || cls2 == byte[].class || cls2 == Short.TYPE || cls2 == short[].class
+                || cls2 == Integer.TYPE || cls2 == int[].class || cls2 == cls3
+                || ((cls2 == long[].class && !z) || cls2 == Float.TYPE || cls2 == float[].class || cls2 == Double.TYPE
+                        || cls2 == double[].class || cls2 == String.class || cls2 == Integer.class || cls2 == Long.class
+                        || cls2 == BigDecimal.class || cls2.isEnum())) {
             gwValue(methodWriterContext, fieldWriter, i, i2, null);
             return;
         }
@@ -1588,7 +1647,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         }
     }
 
-    private void gwFieldValueBooleanV(MethodWriterContext methodWriterContext, FieldWriter fieldWriter, int i, int i2, boolean z) {
+    private void gwFieldValueBooleanV(MethodWriterContext methodWriterContext, FieldWriter fieldWriter, int i, int i2,
+            boolean z) {
         MethodWriter methodWriter = methodWriterContext.mw;
         String str = methodWriterContext.classNameType;
         int iVar = methodWriterContext.var(Boolean.TYPE);
@@ -1669,7 +1729,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         methodWriter.visitLabel(label2);
     }
 
-    private void gwFieldValueInt32V(MethodWriterContext methodWriterContext, FieldWriter fieldWriter, int i, int i2, boolean z) {
+    private void gwFieldValueInt32V(MethodWriterContext methodWriterContext, FieldWriter fieldWriter, int i, int i2,
+            boolean z) {
         MethodWriter methodWriter = methodWriterContext.mw;
         String str = fieldWriter.format;
         Class<?> cls = fieldWriter.fieldClass;
@@ -1693,7 +1754,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         methodWriter.visitLabel(label2);
     }
 
-    private void gwFieldValueInt64V(MethodWriterContext methodWriterContext, FieldWriter fieldWriter, int i, int i2, boolean z) {
+    private void gwFieldValueInt64V(MethodWriterContext methodWriterContext, FieldWriter fieldWriter, int i, int i2,
+            boolean z) {
         String str;
         MethodWriter methodWriter = methodWriterContext.mw;
         String str2 = fieldWriter.format;
@@ -1719,7 +1781,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
             if (z2) {
                 str = "writeInt64";
             } else {
-                if (((JSONWriter.Feature.WriteLongAsString.mask | JSONWriter.Feature.WriteNonStringValueAsString.mask | JSONWriter.Feature.BrowserCompatible.mask) & fieldWriter.features) != 0) {
+                if (((JSONWriter.Feature.WriteLongAsString.mask | JSONWriter.Feature.WriteNonStringValueAsString.mask
+                        | JSONWriter.Feature.BrowserCompatible.mask) & fieldWriter.features) != 0) {
                     str = "writeInt64";
                 } else {
                     gwFieldName(methodWriterContext, fieldWriter, i2);
@@ -1743,7 +1806,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         methodWriter.visitLabel(label2);
     }
 
-    private void gwFieldValueInt64VA(MethodWriterContext methodWriterContext, FieldWriter fieldWriter, int i, int i2, boolean z) {
+    private void gwFieldValueInt64VA(MethodWriterContext methodWriterContext, FieldWriter fieldWriter, int i, int i2,
+            boolean z) {
         MethodWriter methodWriter = methodWriterContext.mw;
         int iVar = methodWriterContext.var(fieldWriter.fieldClass);
         Label label = new Label();
@@ -1778,11 +1842,13 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
             gwFieldValueBooleanV(methodWriterContext, fieldWriter, i, i2, true);
             return;
         }
-        if (cls == boolean[].class || cls == byte[].class || cls == char[].class || cls == short[].class || cls == float[].class || cls == double[].class) {
+        if (cls == boolean[].class || cls == byte[].class || cls == char[].class || cls == short[].class
+                || cls == float[].class || cls == double[].class) {
             gwFieldValueArray(methodWriterContext, fieldWriter, i, i2);
             return;
         }
-        if (cls == Character.TYPE || cls == Byte.TYPE || cls == Short.TYPE || cls == Integer.TYPE || cls == Float.TYPE) {
+        if (cls == Character.TYPE || cls == Byte.TYPE || cls == Short.TYPE || cls == Integer.TYPE
+                || cls == Float.TYPE) {
             gwFieldValueInt32V(methodWriterContext, fieldWriter, i, i2, true);
             return;
         }
@@ -1794,7 +1860,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
             gwFieldValueInt64V(methodWriterContext, fieldWriter, i, i2, true);
             return;
         }
-        if (cls == long[].class && methodWriterContext.provider.getObjectWriter(Long.class) == ObjectWriterImplInt64.INSTANCE) {
+        if (cls == long[].class
+                && methodWriterContext.provider.getObjectWriter(Long.class) == ObjectWriterImplInt64.INSTANCE) {
             gwFieldValueInt64VA(methodWriterContext, fieldWriter, i, i2, true);
             return;
         }
@@ -1819,7 +1886,7 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:21:0x0057  */
+    /* JADX WARN: Found duplicated region for block: B:21:0x0057 */
     private void gwFieldValueList(MethodWriterContext methodWriterContext, FieldWriter fieldWriter, int i, int i2) {
         long j;
         boolean z;
@@ -1838,7 +1905,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         MethodWriter methodWriter2 = methodWriterContext.mw;
         int iVar = methodWriterContext.var(cls3);
         int iVar2 = !zDisableReferenceDetect ? methodWriterContext.var("REF_PATH") : -1;
-        if ((fieldWriter2.features & JSONWriter.Feature.WriteNonStringValueAsString.mask) == 0 && (type instanceof ParameterizedType)) {
+        if ((fieldWriter2.features & JSONWriter.Feature.WriteNonStringValueAsString.mask) == 0
+                && (type instanceof ParameterizedType)) {
             Type[] actualTypeArguments = ((ParameterizedType) type).getActualTypeArguments();
             if (actualTypeArguments.length == 1) {
                 Type type2 = actualTypeArguments[0];
@@ -1953,7 +2021,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
             methodWriter.getfield(methodWriterContext.classNameType, fieldWriter(i3), ASMUtils.DESC_FIELD_WRITER);
             methodWriter.aload(1);
             methodWriter.aload(iVar3);
-            methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER, methodWriterContext.jsonb ? "writeListValueJSONB" : "writeListValue", METHOD_DESC_WRITE_LIST);
+            methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER,
+                    methodWriterContext.jsonb ? "writeListValueJSONB" : "writeListValue", METHOD_DESC_WRITE_LIST);
         }
         if (!zDisableReferenceDetect) {
             methodWriter.aload(1);
@@ -1962,7 +2031,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         }
         methodWriter.goto_(label4);
         methodWriter.visitLabel(label5);
-        methodWriterContext.genIsEnabled(fieldWriter2.features, JSONWriter.Feature.WriteNulls.mask | JSONWriter.Feature.NullAsDefaultValue.mask | JSONWriter.Feature.WriteNullListAsEmpty.mask, label4);
+        methodWriterContext.genIsEnabled(fieldWriter2.features, JSONWriter.Feature.WriteNulls.mask
+                | JSONWriter.Feature.NullAsDefaultValue.mask | JSONWriter.Feature.WriteNullListAsEmpty.mask, label4);
         gwFieldName(methodWriterContext, fieldWriter2, i3);
         methodWriter.aload(1);
         methodWriter.lload(methodWriterContext.var2(CONTEXT_FEATURES));
@@ -1972,56 +2042,59 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         methodWriter.visitLabel(label4);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:100:0x034c  */
-    /* JADX WARN: Found duplicated region for block: B:105:0x036b  */
-    /* JADX WARN: Found duplicated region for block: B:107:0x036f  */
-    /* JADX WARN: Found duplicated region for block: B:108:0x0380  */
-    /* JADX WARN: Found duplicated region for block: B:110:0x0384 A[ADDED_TO_REGION] */
-    /* JADX WARN: Found duplicated region for block: B:120:0x03ea  */
-    /* JADX WARN: Found duplicated region for block: B:122:0x03f6  */
-    /* JADX WARN: Found duplicated region for block: B:123:0x03f9  */
-    /* JADX WARN: Found duplicated region for block: B:124:0x03fc  */
-    /* JADX WARN: Found duplicated region for block: B:126:0x0408  */
-    /* JADX WARN: Found duplicated region for block: B:127:0x040b  */
-    /* JADX WARN: Found duplicated region for block: B:131:0x0417  */
-    /* JADX WARN: Found duplicated region for block: B:134:0x0445  */
-    /* JADX WARN: Found duplicated region for block: B:136:0x0449  */
-    /* JADX WARN: Found duplicated region for block: B:155:0x049b  */
-    /* JADX WARN: Found duplicated region for block: B:159:0x04b9  */
-    /* JADX WARN: Found duplicated region for block: B:162:0x04d1  */
-    /* JADX WARN: Found duplicated region for block: B:196:0x0558  */
-    /* JADX WARN: Found duplicated region for block: B:22:0x0091  */
+    /* JADX WARN: Found duplicated region for block: B:100:0x034c */
+    /* JADX WARN: Found duplicated region for block: B:105:0x036b */
+    /* JADX WARN: Found duplicated region for block: B:107:0x036f */
+    /* JADX WARN: Found duplicated region for block: B:108:0x0380 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:110:0x0384 A[ADDED_TO_REGION]
+     */
+    /* JADX WARN: Found duplicated region for block: B:120:0x03ea */
+    /* JADX WARN: Found duplicated region for block: B:122:0x03f6 */
+    /* JADX WARN: Found duplicated region for block: B:123:0x03f9 */
+    /* JADX WARN: Found duplicated region for block: B:124:0x03fc */
+    /* JADX WARN: Found duplicated region for block: B:126:0x0408 */
+    /* JADX WARN: Found duplicated region for block: B:127:0x040b */
+    /* JADX WARN: Found duplicated region for block: B:131:0x0417 */
+    /* JADX WARN: Found duplicated region for block: B:134:0x0445 */
+    /* JADX WARN: Found duplicated region for block: B:136:0x0449 */
+    /* JADX WARN: Found duplicated region for block: B:155:0x049b */
+    /* JADX WARN: Found duplicated region for block: B:159:0x04b9 */
+    /* JADX WARN: Found duplicated region for block: B:162:0x04d1 */
+    /* JADX WARN: Found duplicated region for block: B:196:0x0558 */
+    /* JADX WARN: Found duplicated region for block: B:22:0x0091 */
     /* JADX WARN: Found duplicated region for block: B:25:0x00bb A[MOVE_INLINED] */
-    /* JADX WARN: Found duplicated region for block: B:27:0x00cd  */
-    /* JADX WARN: Found duplicated region for block: B:28:0x00d8  */
-    /* JADX WARN: Found duplicated region for block: B:31:0x00e6  */
-    /* JADX WARN: Found duplicated region for block: B:32:0x00ea  */
-    /* JADX WARN: Found duplicated region for block: B:38:0x0106  */
-    /* JADX WARN: Found duplicated region for block: B:39:0x010c  */
-    /* JADX WARN: Found duplicated region for block: B:43:0x011f  */
-    /* JADX WARN: Found duplicated region for block: B:45:0x0137  */
-    /* JADX WARN: Found duplicated region for block: B:46:0x0149  */
+    /* JADX WARN: Found duplicated region for block: B:27:0x00cd */
+    /* JADX WARN: Found duplicated region for block: B:28:0x00d8 */
+    /* JADX WARN: Found duplicated region for block: B:31:0x00e6 */
+    /* JADX WARN: Found duplicated region for block: B:32:0x00ea */
+    /* JADX WARN: Found duplicated region for block: B:38:0x0106 */
+    /* JADX WARN: Found duplicated region for block: B:39:0x010c */
+    /* JADX WARN: Found duplicated region for block: B:43:0x011f */
+    /* JADX WARN: Found duplicated region for block: B:45:0x0137 */
+    /* JADX WARN: Found duplicated region for block: B:46:0x0149 */
     /* JADX WARN: Found duplicated region for block: B:49:0x0169 A[MOVE_INLINED] */
-    /* JADX WARN: Found duplicated region for block: B:51:0x0195  */
-    /* JADX WARN: Found duplicated region for block: B:58:0x0205  */
-    /* JADX WARN: Found duplicated region for block: B:59:0x020c  */
-    /* JADX WARN: Found duplicated region for block: B:62:0x022c  */
-    /* JADX WARN: Found duplicated region for block: B:64:0x0251  */
-    /* JADX WARN: Found duplicated region for block: B:66:0x0259  */
-    /* JADX WARN: Found duplicated region for block: B:68:0x0268  */
-    /* JADX WARN: Found duplicated region for block: B:72:0x0292  */
-    /* JADX WARN: Found duplicated region for block: B:74:0x02a2  */
-    /* JADX WARN: Found duplicated region for block: B:75:0x02bd  */
-    /* JADX WARN: Found duplicated region for block: B:80:0x02db  */
-    /* JADX WARN: Found duplicated region for block: B:82:0x02e3  */
-    /* JADX WARN: Found duplicated region for block: B:84:0x02f0  */
-    /* JADX WARN: Found duplicated region for block: B:86:0x02fd  */
-    /* JADX WARN: Found duplicated region for block: B:87:0x0308  */
-    /* JADX WARN: Found duplicated region for block: B:89:0x030c  */
-    /* JADX WARN: Found duplicated region for block: B:90:0x031d  */
-    /* JADX WARN: Found duplicated region for block: B:92:0x0323  */
-    /* JADX WARN: Found duplicated region for block: B:98:0x0348  */
-    private void gwFieldValueObject(MethodWriterContext methodWriterContext, FieldWriter fieldWriter, int i, int i2, boolean z) {
+    /* JADX WARN: Found duplicated region for block: B:51:0x0195 */
+    /* JADX WARN: Found duplicated region for block: B:58:0x0205 */
+    /* JADX WARN: Found duplicated region for block: B:59:0x020c */
+    /* JADX WARN: Found duplicated region for block: B:62:0x022c */
+    /* JADX WARN: Found duplicated region for block: B:64:0x0251 */
+    /* JADX WARN: Found duplicated region for block: B:66:0x0259 */
+    /* JADX WARN: Found duplicated region for block: B:68:0x0268 */
+    /* JADX WARN: Found duplicated region for block: B:72:0x0292 */
+    /* JADX WARN: Found duplicated region for block: B:74:0x02a2 */
+    /* JADX WARN: Found duplicated region for block: B:75:0x02bd */
+    /* JADX WARN: Found duplicated region for block: B:80:0x02db */
+    /* JADX WARN: Found duplicated region for block: B:82:0x02e3 */
+    /* JADX WARN: Found duplicated region for block: B:84:0x02f0 */
+    /* JADX WARN: Found duplicated region for block: B:86:0x02fd */
+    /* JADX WARN: Found duplicated region for block: B:87:0x0308 */
+    /* JADX WARN: Found duplicated region for block: B:89:0x030c */
+    /* JADX WARN: Found duplicated region for block: B:90:0x031d */
+    /* JADX WARN: Found duplicated region for block: B:92:0x0323 */
+    /* JADX WARN: Found duplicated region for block: B:98:0x0348 */
+    private void gwFieldValueObject(MethodWriterContext methodWriterContext, FieldWriter fieldWriter, int i, int i2,
+            boolean z) {
         boolean z2;
         long j;
         int i3;
@@ -2078,7 +2151,9 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         Class<?> cls12 = fieldWriter.fieldClass;
         Type type2 = fieldWriter.fieldType;
         String str11 = fieldWriter.fieldName;
-        boolean z3 = (methodWriterContext.disableReferenceDetect() || ObjectWriterProvider.isNotReferenceDetect(cls12)) ? false : true;
+        boolean z3 = (methodWriterContext.disableReferenceDetect() || ObjectWriterProvider.isNotReferenceDetect(cls12))
+                ? false
+                : true;
         int iVar2 = methodWriterContext.var(cls12);
         Integer numValueOf = z3 ? Integer.valueOf(methodWriterContext.var("REF_PATH")) : null;
         long j12 = methodWriterContext.objectFeatures | fieldWriter.features;
@@ -2126,7 +2201,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                 methodWriter3.aload(1);
                 if (fieldWriter.isFieldClassSerializable()) {
                     methodWriter3.aload(iVar2);
-                    methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "isIgnoreNoneSerializable", "(Ljava/lang/Object;)Z");
+                    methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "isIgnoreNoneSerializable",
+                            "(Ljava/lang/Object;)Z");
                 } else {
                     methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "isIgnoreNoneSerializable", "()Z");
                 }
@@ -2164,7 +2240,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                     cls2 = cls12;
                     methodWriter3.aload(1);
                     methodWriter3.visitLdcInsn("..");
-                    methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeReference", METHOD_DESC_WRITE_REFERENCE);
+                    methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeReference",
+                            METHOD_DESC_WRITE_REFERENCE);
                     methodWriter3.goto_(label8);
                     methodWriter3.visitLabel(label5);
                 } else {
@@ -2237,13 +2314,16 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                     if (fieldWriter2.decimalFormat != null) {
                         methodWriter3.aload(0);
                         j4 = j10;
-                        methodWriter3.getfield(methodWriterContext.classNameType, fieldWriter(i4), ASMUtils.DESC_FIELD_WRITER);
-                        methodWriter3.getfield(ASMUtils.TYPE_FIELD_WRITER, "decimalFormat", "Ljava/text/DecimalFormat;");
+                        methodWriter3.getfield(methodWriterContext.classNameType, fieldWriter(i4),
+                                ASMUtils.DESC_FIELD_WRITER);
+                        methodWriter3.getfield(ASMUtils.TYPE_FIELD_WRITER, "decimalFormat",
+                                "Ljava/text/DecimalFormat;");
                     } else {
                         j4 = j10;
                         methodWriter3.aconst_null();
                     }
-                    methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeDecimal", "(Ljava/math/BigDecimal;JLjava/text/DecimalFormat;)V");
+                    methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeDecimal",
+                            "(Ljava/math/BigDecimal;JLjava/text/DecimalFormat;)V");
                     cls6 = cls3;
                     i5 = i4;
                     cls4 = Collection.class;
@@ -2257,19 +2337,26 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                             methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeUUID", "(Ljava/util/UUID;)V");
                         } else {
                             cls5 = BigDecimal.class;
-                            if (cls3 != LocalDate.class && fieldWriter2.format == null && methodWriterContext.provider.getObjectWriter(LocalDate.class) == ObjectWriterImplLocalDate.INSTANCE) {
+                            if (cls3 != LocalDate.class && fieldWriter2.format == null && methodWriterContext.provider
+                                    .getObjectWriter(LocalDate.class) == ObjectWriterImplLocalDate.INSTANCE) {
                                 methodWriter3.aload(1);
                                 methodWriter3.aload(iVar2);
-                                methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeLocalDate", "(Ljava/time/LocalDate;)V");
-                            } else if (cls3 != OffsetDateTime.class && fieldWriter2.format == null && methodWriterContext.provider.getObjectWriter(OffsetDateTime.class) == ObjectWriterImplOffsetDateTime.INSTANCE) {
+                                methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeLocalDate",
+                                        "(Ljava/time/LocalDate;)V");
+                            } else if (cls3 != OffsetDateTime.class && fieldWriter2.format == null
+                                    && methodWriterContext.provider.getObjectWriter(
+                                            OffsetDateTime.class) == ObjectWriterImplOffsetDateTime.INSTANCE) {
                                 methodWriter3.aload(1);
                                 methodWriter3.aload(iVar2);
-                                methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeOffsetDateTime", "(Ljava/time/OffsetDateTime;)V");
+                                methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeOffsetDateTime",
+                                        "(Ljava/time/OffsetDateTime;)V");
                             } else if (cls3 == String[].class) {
                                 methodWriter3.aload(1);
                                 methodWriter3.aload(iVar2);
-                                methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeString", "([Ljava/lang/String;)V");
-                            } else if (cls3 == cls || !(itemClass == String.class || itemClass == Integer.class || itemClass == Long.class)) {
+                                methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeString",
+                                        "([Ljava/lang/String;)V");
+                            } else if (cls3 == cls || !(itemClass == String.class || itemClass == Integer.class
+                                    || itemClass == Long.class)) {
                                 i5 = i2;
                                 cls6 = cls3;
                                 i6 = iVar2;
@@ -2278,11 +2365,13 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                                 obj2 = obj;
                                 methodWriter.aload(0);
                                 cls7 = String.class;
-                                methodWriter.getfield(methodWriterContext.classNameType, fieldWriter(i5), ASMUtils.DESC_FIELD_WRITER);
+                                methodWriter.getfield(methodWriterContext.classNameType, fieldWriter(i5),
+                                        ASMUtils.DESC_FIELD_WRITER);
                                 methodWriter.aload(1);
                                 methodWriter.aload(i6);
                                 methodWriter.invokevirtual("java/lang/Object", "getClass", "()Ljava/lang/Class;");
-                                methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER, "getObjectWriter", METHOD_DESC_GET_OBJECT_WRITER);
+                                methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER, "getObjectWriter",
+                                        METHOD_DESC_GET_OBJECT_WRITER);
                                 methodWriter.aload(1);
                                 methodWriter.aload(i6);
                                 methodWriter.visitLdcInsn(str5);
@@ -2290,12 +2379,14 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                                 methodWriter.visitLdcInsn(j3);
                                 if (z) {
                                     j4 = j3;
-                                    str8 = (j4 & JSONWriter.Feature.BeanToArray.mask) != 0 ? "writeArrayMappingJSONB" : "writeJSONB";
+                                    str8 = (j4 & JSONWriter.Feature.BeanToArray.mask) != 0 ? "writeArrayMappingJSONB"
+                                            : "writeJSONB";
                                 } else {
                                     j4 = j3;
                                     str8 = (j4 & JSONWriter.Feature.BeanToArray.mask) != 0 ? "writeArrayMapping" : str3;
                                 }
-                                methodWriter.invokeinterface(ASMUtils.TYPE_OBJECT_WRITER, str8, METHOD_DESC_WRITE_OBJECT);
+                                methodWriter.invokeinterface(ASMUtils.TYPE_OBJECT_WRITER, str8,
+                                        METHOD_DESC_WRITE_OBJECT);
                             } else {
                                 str7 = str6;
                                 obj2 = obj;
@@ -2395,7 +2486,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                         gwFieldName(methodWriterContext, fieldWriter3, i7);
                         methodWriter2.aload(1);
                         String str14 = "()V";
-                        if (cls9 == AtomicLongArray.class && cls9 != AtomicIntegerArray.class && !cls8.isAssignableFrom(cls9) && !cls9.isArray()) {
+                        if (cls9 == AtomicLongArray.class && cls9 != AtomicIntegerArray.class
+                                && !cls8.isAssignableFrom(cls9) && !cls9.isArray()) {
                             if (cls9 == Float.class || cls9 == Double.class || cls9 == cls5) {
                                 methodWriter2.lload(methodWriterContext.var2(CONTEXT_FEATURES));
                                 methodWriter2.visitLdcInsn(fieldWriter3.features);
@@ -2416,7 +2508,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                                 } else {
                                     str9 = "writeBooleanNull";
                                 }
-                            } else if (cls9 == cls10 || cls9 == Appendable.class || cls9 == StringBuffer.class || cls9 == StringBuilder.class) {
+                            } else if (cls9 == cls10 || cls9 == Appendable.class || cls9 == StringBuffer.class
+                                    || cls9 == StringBuilder.class) {
                                 str9 = "writeStringNull";
                             } else {
                                 methodWriterContext.loadFieldClass(i7, cls9);
@@ -2430,10 +2523,12 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                     methodWriter3.aload(1);
                     methodWriter3.aload(iVar2);
                     if (j3 == 0) {
-                        methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeBigInt", "(Ljava/math/BigInteger;)V");
+                        methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeBigInt",
+                                "(Ljava/math/BigInteger;)V");
                     } else {
                         methodWriter3.visitLdcInsn(j3);
-                        methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeBigInt", "(Ljava/math/BigInteger;J)V");
+                        methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeBigInt",
+                                "(Ljava/math/BigInteger;J)V");
                     }
                     i5 = i2;
                     cls6 = cls3;
@@ -2518,13 +2613,15 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                 if (fieldWriter2.decimalFormat != null) {
                     methodWriter3.aload(0);
                     j4 = j10;
-                    methodWriter3.getfield(methodWriterContext.classNameType, fieldWriter(i4), ASMUtils.DESC_FIELD_WRITER);
+                    methodWriter3.getfield(methodWriterContext.classNameType, fieldWriter(i4),
+                            ASMUtils.DESC_FIELD_WRITER);
                     methodWriter3.getfield(ASMUtils.TYPE_FIELD_WRITER, "decimalFormat", "Ljava/text/DecimalFormat;");
                 } else {
                     j4 = j10;
                     methodWriter3.aconst_null();
                 }
-                methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeDecimal", "(Ljava/math/BigDecimal;JLjava/text/DecimalFormat;)V");
+                methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeDecimal",
+                        "(Ljava/math/BigDecimal;JLjava/text/DecimalFormat;)V");
                 cls6 = cls3;
                 i5 = i4;
                 cls4 = Collection.class;
@@ -2543,7 +2640,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                                 if (cls3 == String[].class) {
                                     methodWriter3.aload(1);
                                     methodWriter3.aload(iVar2);
-                                    methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeString", "([Ljava/lang/String;)V");
+                                    methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeString",
+                                            "([Ljava/lang/String;)V");
                                     i5 = i2;
                                     cls6 = cls3;
                                     j4 = j3;
@@ -2563,11 +2661,13 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                                     obj2 = obj;
                                     methodWriter.aload(0);
                                     cls7 = String.class;
-                                    methodWriter.getfield(methodWriterContext.classNameType, fieldWriter(i5), ASMUtils.DESC_FIELD_WRITER);
+                                    methodWriter.getfield(methodWriterContext.classNameType, fieldWriter(i5),
+                                            ASMUtils.DESC_FIELD_WRITER);
                                     methodWriter.aload(1);
                                     methodWriter.aload(i6);
                                     methodWriter.invokevirtual("java/lang/Object", "getClass", "()Ljava/lang/Class;");
-                                    methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER, "getObjectWriter", METHOD_DESC_GET_OBJECT_WRITER);
+                                    methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER, "getObjectWriter",
+                                            METHOD_DESC_GET_OBJECT_WRITER);
                                     methodWriter.aload(1);
                                     methodWriter.aload(i6);
                                     methodWriter.visitLdcInsn(str5);
@@ -2579,14 +2679,17 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                                         }
                                     } else {
                                         j4 = j3;
-                                        str8 = (j4 & JSONWriter.Feature.BeanToArray.mask) != 0 ? "writeArrayMapping" : str3;
+                                        str8 = (j4 & JSONWriter.Feature.BeanToArray.mask) != 0 ? "writeArrayMapping"
+                                                : str3;
                                     }
-                                    methodWriter.invokeinterface(ASMUtils.TYPE_OBJECT_WRITER, str8, METHOD_DESC_WRITE_OBJECT);
+                                    methodWriter.invokeinterface(ASMUtils.TYPE_OBJECT_WRITER, str8,
+                                            METHOD_DESC_WRITE_OBJECT);
                                 }
                             } else if (cls3 == String[].class) {
                                 methodWriter3.aload(1);
                                 methodWriter3.aload(iVar2);
-                                methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeString", "([Ljava/lang/String;)V");
+                                methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeString",
+                                        "([Ljava/lang/String;)V");
                                 i5 = i2;
                                 cls6 = cls3;
                                 j4 = j3;
@@ -2606,11 +2709,13 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                                 obj2 = obj;
                                 methodWriter.aload(0);
                                 cls7 = String.class;
-                                methodWriter.getfield(methodWriterContext.classNameType, fieldWriter(i5), ASMUtils.DESC_FIELD_WRITER);
+                                methodWriter.getfield(methodWriterContext.classNameType, fieldWriter(i5),
+                                        ASMUtils.DESC_FIELD_WRITER);
                                 methodWriter.aload(1);
                                 methodWriter.aload(i6);
                                 methodWriter.invokevirtual("java/lang/Object", "getClass", "()Ljava/lang/Class;");
-                                methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER, "getObjectWriter", METHOD_DESC_GET_OBJECT_WRITER);
+                                methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER, "getObjectWriter",
+                                        METHOD_DESC_GET_OBJECT_WRITER);
                                 methodWriter.aload(1);
                                 methodWriter.aload(i6);
                                 methodWriter.visitLdcInsn(str5);
@@ -2624,13 +2729,15 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                                     j4 = j3;
                                     str8 = (j4 & JSONWriter.Feature.BeanToArray.mask) != 0 ? "writeArrayMapping" : str3;
                                 }
-                                methodWriter.invokeinterface(ASMUtils.TYPE_OBJECT_WRITER, str8, METHOD_DESC_WRITE_OBJECT);
+                                methodWriter.invokeinterface(ASMUtils.TYPE_OBJECT_WRITER, str8,
+                                        METHOD_DESC_WRITE_OBJECT);
                             }
                         } else if (cls3 != OffsetDateTime.class) {
                             if (cls3 == String[].class) {
                                 methodWriter3.aload(1);
                                 methodWriter3.aload(iVar2);
-                                methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeString", "([Ljava/lang/String;)V");
+                                methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeString",
+                                        "([Ljava/lang/String;)V");
                                 i5 = i2;
                                 cls6 = cls3;
                                 j4 = j3;
@@ -2650,11 +2757,13 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                                 obj2 = obj;
                                 methodWriter.aload(0);
                                 cls7 = String.class;
-                                methodWriter.getfield(methodWriterContext.classNameType, fieldWriter(i5), ASMUtils.DESC_FIELD_WRITER);
+                                methodWriter.getfield(methodWriterContext.classNameType, fieldWriter(i5),
+                                        ASMUtils.DESC_FIELD_WRITER);
                                 methodWriter.aload(1);
                                 methodWriter.aload(i6);
                                 methodWriter.invokevirtual("java/lang/Object", "getClass", "()Ljava/lang/Class;");
-                                methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER, "getObjectWriter", METHOD_DESC_GET_OBJECT_WRITER);
+                                methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER, "getObjectWriter",
+                                        METHOD_DESC_GET_OBJECT_WRITER);
                                 methodWriter.aload(1);
                                 methodWriter.aload(i6);
                                 methodWriter.visitLdcInsn(str5);
@@ -2668,12 +2777,14 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                                     j4 = j3;
                                     str8 = (j4 & JSONWriter.Feature.BeanToArray.mask) != 0 ? "writeArrayMapping" : str3;
                                 }
-                                methodWriter.invokeinterface(ASMUtils.TYPE_OBJECT_WRITER, str8, METHOD_DESC_WRITE_OBJECT);
+                                methodWriter.invokeinterface(ASMUtils.TYPE_OBJECT_WRITER, str8,
+                                        METHOD_DESC_WRITE_OBJECT);
                             }
                         } else if (cls3 == String[].class) {
                             methodWriter3.aload(1);
                             methodWriter3.aload(iVar2);
-                            methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeString", "([Ljava/lang/String;)V");
+                            methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeString",
+                                    "([Ljava/lang/String;)V");
                             i5 = i2;
                             cls6 = cls3;
                             j4 = j3;
@@ -2693,11 +2804,13 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                             obj2 = obj;
                             methodWriter.aload(0);
                             cls7 = String.class;
-                            methodWriter.getfield(methodWriterContext.classNameType, fieldWriter(i5), ASMUtils.DESC_FIELD_WRITER);
+                            methodWriter.getfield(methodWriterContext.classNameType, fieldWriter(i5),
+                                    ASMUtils.DESC_FIELD_WRITER);
                             methodWriter.aload(1);
                             methodWriter.aload(i6);
                             methodWriter.invokevirtual("java/lang/Object", "getClass", "()Ljava/lang/Class;");
-                            methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER, "getObjectWriter", METHOD_DESC_GET_OBJECT_WRITER);
+                            methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER, "getObjectWriter",
+                                    METHOD_DESC_GET_OBJECT_WRITER);
                             methodWriter.aload(1);
                             methodWriter.aload(i6);
                             methodWriter.visitLdcInsn(str5);
@@ -2887,7 +3000,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                 methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "isIgnoreNoneSerializable", "()Z");
             } else {
                 methodWriter3.aload(iVar2);
-                methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "isIgnoreNoneSerializable", "(Ljava/lang/Object;)Z");
+                methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "isIgnoreNoneSerializable",
+                        "(Ljava/lang/Object;)Z");
             }
             methodWriter3.ifne(label8);
         }
@@ -2999,13 +3113,15 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                 if (fieldWriter2.decimalFormat != null) {
                     methodWriter3.aload(0);
                     j4 = j10;
-                    methodWriter3.getfield(methodWriterContext.classNameType, fieldWriter(i4), ASMUtils.DESC_FIELD_WRITER);
+                    methodWriter3.getfield(methodWriterContext.classNameType, fieldWriter(i4),
+                            ASMUtils.DESC_FIELD_WRITER);
                     methodWriter3.getfield(ASMUtils.TYPE_FIELD_WRITER, "decimalFormat", "Ljava/text/DecimalFormat;");
                 } else {
                     j4 = j10;
                     methodWriter3.aconst_null();
                 }
-                methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeDecimal", "(Ljava/math/BigDecimal;JLjava/text/DecimalFormat;)V");
+                methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeDecimal",
+                        "(Ljava/math/BigDecimal;JLjava/text/DecimalFormat;)V");
                 cls6 = cls3;
                 i5 = i4;
                 cls4 = Collection.class;
@@ -3024,7 +3140,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                                 if (cls3 == String[].class) {
                                     methodWriter3.aload(1);
                                     methodWriter3.aload(iVar2);
-                                    methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeString", "([Ljava/lang/String;)V");
+                                    methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeString",
+                                            "([Ljava/lang/String;)V");
                                     i5 = i2;
                                     cls6 = cls3;
                                     j4 = j3;
@@ -3044,11 +3161,13 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                                     obj2 = obj;
                                     methodWriter.aload(0);
                                     cls7 = String.class;
-                                    methodWriter.getfield(methodWriterContext.classNameType, fieldWriter(i5), ASMUtils.DESC_FIELD_WRITER);
+                                    methodWriter.getfield(methodWriterContext.classNameType, fieldWriter(i5),
+                                            ASMUtils.DESC_FIELD_WRITER);
                                     methodWriter.aload(1);
                                     methodWriter.aload(i6);
                                     methodWriter.invokevirtual("java/lang/Object", "getClass", "()Ljava/lang/Class;");
-                                    methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER, "getObjectWriter", METHOD_DESC_GET_OBJECT_WRITER);
+                                    methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER, "getObjectWriter",
+                                            METHOD_DESC_GET_OBJECT_WRITER);
                                     methodWriter.aload(1);
                                     methodWriter.aload(i6);
                                     methodWriter.visitLdcInsn(str5);
@@ -3060,14 +3179,17 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                                         }
                                     } else {
                                         j4 = j3;
-                                        str8 = (j4 & JSONWriter.Feature.BeanToArray.mask) != 0 ? "writeArrayMapping" : str3;
+                                        str8 = (j4 & JSONWriter.Feature.BeanToArray.mask) != 0 ? "writeArrayMapping"
+                                                : str3;
                                     }
-                                    methodWriter.invokeinterface(ASMUtils.TYPE_OBJECT_WRITER, str8, METHOD_DESC_WRITE_OBJECT);
+                                    methodWriter.invokeinterface(ASMUtils.TYPE_OBJECT_WRITER, str8,
+                                            METHOD_DESC_WRITE_OBJECT);
                                 }
                             } else if (cls3 == String[].class) {
                                 methodWriter3.aload(1);
                                 methodWriter3.aload(iVar2);
-                                methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeString", "([Ljava/lang/String;)V");
+                                methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeString",
+                                        "([Ljava/lang/String;)V");
                                 i5 = i2;
                                 cls6 = cls3;
                                 j4 = j3;
@@ -3087,11 +3209,13 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                                 obj2 = obj;
                                 methodWriter.aload(0);
                                 cls7 = String.class;
-                                methodWriter.getfield(methodWriterContext.classNameType, fieldWriter(i5), ASMUtils.DESC_FIELD_WRITER);
+                                methodWriter.getfield(methodWriterContext.classNameType, fieldWriter(i5),
+                                        ASMUtils.DESC_FIELD_WRITER);
                                 methodWriter.aload(1);
                                 methodWriter.aload(i6);
                                 methodWriter.invokevirtual("java/lang/Object", "getClass", "()Ljava/lang/Class;");
-                                methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER, "getObjectWriter", METHOD_DESC_GET_OBJECT_WRITER);
+                                methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER, "getObjectWriter",
+                                        METHOD_DESC_GET_OBJECT_WRITER);
                                 methodWriter.aload(1);
                                 methodWriter.aload(i6);
                                 methodWriter.visitLdcInsn(str5);
@@ -3105,13 +3229,15 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                                     j4 = j3;
                                     str8 = (j4 & JSONWriter.Feature.BeanToArray.mask) != 0 ? "writeArrayMapping" : str3;
                                 }
-                                methodWriter.invokeinterface(ASMUtils.TYPE_OBJECT_WRITER, str8, METHOD_DESC_WRITE_OBJECT);
+                                methodWriter.invokeinterface(ASMUtils.TYPE_OBJECT_WRITER, str8,
+                                        METHOD_DESC_WRITE_OBJECT);
                             }
                         } else if (cls3 != OffsetDateTime.class) {
                             if (cls3 == String[].class) {
                                 methodWriter3.aload(1);
                                 methodWriter3.aload(iVar2);
-                                methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeString", "([Ljava/lang/String;)V");
+                                methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeString",
+                                        "([Ljava/lang/String;)V");
                                 i5 = i2;
                                 cls6 = cls3;
                                 j4 = j3;
@@ -3131,11 +3257,13 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                                 obj2 = obj;
                                 methodWriter.aload(0);
                                 cls7 = String.class;
-                                methodWriter.getfield(methodWriterContext.classNameType, fieldWriter(i5), ASMUtils.DESC_FIELD_WRITER);
+                                methodWriter.getfield(methodWriterContext.classNameType, fieldWriter(i5),
+                                        ASMUtils.DESC_FIELD_WRITER);
                                 methodWriter.aload(1);
                                 methodWriter.aload(i6);
                                 methodWriter.invokevirtual("java/lang/Object", "getClass", "()Ljava/lang/Class;");
-                                methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER, "getObjectWriter", METHOD_DESC_GET_OBJECT_WRITER);
+                                methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER, "getObjectWriter",
+                                        METHOD_DESC_GET_OBJECT_WRITER);
                                 methodWriter.aload(1);
                                 methodWriter.aload(i6);
                                 methodWriter.visitLdcInsn(str5);
@@ -3149,12 +3277,14 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                                     j4 = j3;
                                     str8 = (j4 & JSONWriter.Feature.BeanToArray.mask) != 0 ? "writeArrayMapping" : str3;
                                 }
-                                methodWriter.invokeinterface(ASMUtils.TYPE_OBJECT_WRITER, str8, METHOD_DESC_WRITE_OBJECT);
+                                methodWriter.invokeinterface(ASMUtils.TYPE_OBJECT_WRITER, str8,
+                                        METHOD_DESC_WRITE_OBJECT);
                             }
                         } else if (cls3 == String[].class) {
                             methodWriter3.aload(1);
                             methodWriter3.aload(iVar2);
-                            methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeString", "([Ljava/lang/String;)V");
+                            methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeString",
+                                    "([Ljava/lang/String;)V");
                             i5 = i2;
                             cls6 = cls3;
                             j4 = j3;
@@ -3174,11 +3304,13 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                             obj2 = obj;
                             methodWriter.aload(0);
                             cls7 = String.class;
-                            methodWriter.getfield(methodWriterContext.classNameType, fieldWriter(i5), ASMUtils.DESC_FIELD_WRITER);
+                            methodWriter.getfield(methodWriterContext.classNameType, fieldWriter(i5),
+                                    ASMUtils.DESC_FIELD_WRITER);
                             methodWriter.aload(1);
                             methodWriter.aload(i6);
                             methodWriter.invokevirtual("java/lang/Object", "getClass", "()Ljava/lang/Class;");
-                            methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER, "getObjectWriter", METHOD_DESC_GET_OBJECT_WRITER);
+                            methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER, "getObjectWriter",
+                                    METHOD_DESC_GET_OBJECT_WRITER);
                             methodWriter.aload(1);
                             methodWriter.aload(i6);
                             methodWriter.visitLdcInsn(str5);
@@ -3347,7 +3479,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                 j4 = j10;
                 methodWriter3.aconst_null();
             }
-            methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeDecimal", "(Ljava/math/BigDecimal;JLjava/text/DecimalFormat;)V");
+            methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeDecimal",
+                    "(Ljava/math/BigDecimal;JLjava/text/DecimalFormat;)V");
             cls6 = cls3;
             i5 = i4;
             cls4 = Collection.class;
@@ -3366,7 +3499,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                             if (cls3 == String[].class) {
                                 methodWriter3.aload(1);
                                 methodWriter3.aload(iVar2);
-                                methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeString", "([Ljava/lang/String;)V");
+                                methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeString",
+                                        "([Ljava/lang/String;)V");
                                 i5 = i2;
                                 cls6 = cls3;
                                 j4 = j3;
@@ -3386,11 +3520,13 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                                 obj2 = obj;
                                 methodWriter.aload(0);
                                 cls7 = String.class;
-                                methodWriter.getfield(methodWriterContext.classNameType, fieldWriter(i5), ASMUtils.DESC_FIELD_WRITER);
+                                methodWriter.getfield(methodWriterContext.classNameType, fieldWriter(i5),
+                                        ASMUtils.DESC_FIELD_WRITER);
                                 methodWriter.aload(1);
                                 methodWriter.aload(i6);
                                 methodWriter.invokevirtual("java/lang/Object", "getClass", "()Ljava/lang/Class;");
-                                methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER, "getObjectWriter", METHOD_DESC_GET_OBJECT_WRITER);
+                                methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER, "getObjectWriter",
+                                        METHOD_DESC_GET_OBJECT_WRITER);
                                 methodWriter.aload(1);
                                 methodWriter.aload(i6);
                                 methodWriter.visitLdcInsn(str5);
@@ -3404,12 +3540,14 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                                     j4 = j3;
                                     str8 = (j4 & JSONWriter.Feature.BeanToArray.mask) != 0 ? "writeArrayMapping" : str3;
                                 }
-                                methodWriter.invokeinterface(ASMUtils.TYPE_OBJECT_WRITER, str8, METHOD_DESC_WRITE_OBJECT);
+                                methodWriter.invokeinterface(ASMUtils.TYPE_OBJECT_WRITER, str8,
+                                        METHOD_DESC_WRITE_OBJECT);
                             }
                         } else if (cls3 == String[].class) {
                             methodWriter3.aload(1);
                             methodWriter3.aload(iVar2);
-                            methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeString", "([Ljava/lang/String;)V");
+                            methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeString",
+                                    "([Ljava/lang/String;)V");
                             i5 = i2;
                             cls6 = cls3;
                             j4 = j3;
@@ -3429,11 +3567,13 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                             obj2 = obj;
                             methodWriter.aload(0);
                             cls7 = String.class;
-                            methodWriter.getfield(methodWriterContext.classNameType, fieldWriter(i5), ASMUtils.DESC_FIELD_WRITER);
+                            methodWriter.getfield(methodWriterContext.classNameType, fieldWriter(i5),
+                                    ASMUtils.DESC_FIELD_WRITER);
                             methodWriter.aload(1);
                             methodWriter.aload(i6);
                             methodWriter.invokevirtual("java/lang/Object", "getClass", "()Ljava/lang/Class;");
-                            methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER, "getObjectWriter", METHOD_DESC_GET_OBJECT_WRITER);
+                            methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER, "getObjectWriter",
+                                    METHOD_DESC_GET_OBJECT_WRITER);
                             methodWriter.aload(1);
                             methodWriter.aload(i6);
                             methodWriter.visitLdcInsn(str5);
@@ -3453,7 +3593,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                         if (cls3 == String[].class) {
                             methodWriter3.aload(1);
                             methodWriter3.aload(iVar2);
-                            methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeString", "([Ljava/lang/String;)V");
+                            methodWriter3.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeString",
+                                    "([Ljava/lang/String;)V");
                             i5 = i2;
                             cls6 = cls3;
                             j4 = j3;
@@ -3473,11 +3614,13 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                             obj2 = obj;
                             methodWriter.aload(0);
                             cls7 = String.class;
-                            methodWriter.getfield(methodWriterContext.classNameType, fieldWriter(i5), ASMUtils.DESC_FIELD_WRITER);
+                            methodWriter.getfield(methodWriterContext.classNameType, fieldWriter(i5),
+                                    ASMUtils.DESC_FIELD_WRITER);
                             methodWriter.aload(1);
                             methodWriter.aload(i6);
                             methodWriter.invokevirtual("java/lang/Object", "getClass", "()Ljava/lang/Class;");
-                            methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER, "getObjectWriter", METHOD_DESC_GET_OBJECT_WRITER);
+                            methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER, "getObjectWriter",
+                                    METHOD_DESC_GET_OBJECT_WRITER);
                             methodWriter.aload(1);
                             methodWriter.aload(i6);
                             methodWriter.visitLdcInsn(str5);
@@ -3516,11 +3659,13 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                         obj2 = obj;
                         methodWriter.aload(0);
                         cls7 = String.class;
-                        methodWriter.getfield(methodWriterContext.classNameType, fieldWriter(i5), ASMUtils.DESC_FIELD_WRITER);
+                        methodWriter.getfield(methodWriterContext.classNameType, fieldWriter(i5),
+                                ASMUtils.DESC_FIELD_WRITER);
                         methodWriter.aload(1);
                         methodWriter.aload(i6);
                         methodWriter.invokevirtual("java/lang/Object", "getClass", "()Ljava/lang/Class;");
-                        methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER, "getObjectWriter", METHOD_DESC_GET_OBJECT_WRITER);
+                        methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER, "getObjectWriter",
+                                METHOD_DESC_GET_OBJECT_WRITER);
                         methodWriter.aload(1);
                         methodWriter.aload(i6);
                         methodWriter.visitLdcInsn(str5);
@@ -3920,7 +4065,9 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         }
         methodWriter.goto_(label);
         methodWriter.visitLabel(label2);
-        if ((fieldWriter.features & (JSONWriter.Feature.WriteLongAsString.mask | JSONWriter.Feature.WriteNonStringValueAsString.mask | JSONWriter.Feature.BrowserCompatible.mask)) == 0) {
+        if ((fieldWriter.features
+                & (JSONWriter.Feature.WriteLongAsString.mask | JSONWriter.Feature.WriteNonStringValueAsString.mask
+                        | JSONWriter.Feature.BrowserCompatible.mask)) == 0) {
             gwFieldName(methodWriterContext, fieldWriter, i2);
             methodWriter.aload(1);
             methodWriter.aload(i3);
@@ -3937,7 +4084,7 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         methodWriter.visitLabel(label);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:13:0x0039  */
+    /* JADX WARN: Found duplicated region for block: B:13:0x0039 */
     private void gwList(MethodWriterContext methodWriterContext, int i, int i2, FieldWriter fieldWriter) {
         Class<?> mapping;
         boolean z;
@@ -4058,7 +4205,7 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         methodWriter.visitLabel(label);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:13:0x003f  */
+    /* JADX WARN: Found duplicated region for block: B:13:0x003f */
     private void gwListJSONB(MethodWriterContext methodWriterContext, FieldWriter fieldWriter, int i, int i2) {
         Class<?> cls;
         boolean z;
@@ -4184,12 +4331,14 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         methodWriter.visitLabel(label);
     }
 
-    private static void gwListSimpleType(MethodWriterContext methodWriterContext, int i, MethodWriter methodWriter, Class<?> cls, Class cls2, int i2) {
+    private static void gwListSimpleType(MethodWriterContext methodWriterContext, int i, MethodWriter methodWriter,
+            Class<?> cls, Class cls2, int i2) {
         if (methodWriterContext.jsonb) {
             methodWriter.aload(1);
             methodWriter.aload(i2);
             methodWriterContext.loadFieldClass(i, cls);
-            methodWriter.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "checkAndWriteTypeName", "(Ljava/lang/Object;Ljava/lang/Class;)V");
+            methodWriter.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "checkAndWriteTypeName",
+                    "(Ljava/lang/Object;Ljava/lang/Class;)V");
         }
         if (cls2 == Integer.class) {
             methodWriter.aload(1);
@@ -4235,21 +4384,25 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                 if (cls == Double.class) {
                     methodWriter.invokevirtual("java/lang/Double", "doubleValue", "()D");
                     methodWriter.aload(0);
-                    methodWriter.getfield(methodWriterContext.classNameType, fieldWriter(i2), ASMUtils.DESC_FIELD_WRITER);
+                    methodWriter.getfield(methodWriterContext.classNameType, fieldWriter(i2),
+                            ASMUtils.DESC_FIELD_WRITER);
                     methodWriter.getfield(ASMUtils.TYPE_FIELD_WRITER, "decimalFormat", "Ljava/text/DecimalFormat;");
                     methodWriter.invokevirtual(str2, "writeDouble", "(DLjava/text/DecimalFormat;)V");
                 } else if (cls == Float.class) {
                     methodWriter.invokevirtual("java/lang/Float", "floatValue", "()F");
                     methodWriter.aload(0);
-                    methodWriter.getfield(methodWriterContext.classNameType, fieldWriter(i2), ASMUtils.DESC_FIELD_WRITER);
+                    methodWriter.getfield(methodWriterContext.classNameType, fieldWriter(i2),
+                            ASMUtils.DESC_FIELD_WRITER);
                     methodWriter.getfield(ASMUtils.TYPE_FIELD_WRITER, "decimalFormat", "Ljava/text/DecimalFormat;");
                     methodWriter.invokevirtual(str2, "writeFloat", "(FLjava/text/DecimalFormat;)V");
                 } else {
                     methodWriter.visitLdcInsn(fieldWriter.features);
                     methodWriter.aload(0);
-                    methodWriter.getfield(methodWriterContext.classNameType, fieldWriter(i2), ASMUtils.DESC_FIELD_WRITER);
+                    methodWriter.getfield(methodWriterContext.classNameType, fieldWriter(i2),
+                            ASMUtils.DESC_FIELD_WRITER);
                     methodWriter.getfield(ASMUtils.TYPE_FIELD_WRITER, "decimalFormat", "Ljava/text/DecimalFormat;");
-                    methodWriter.invokevirtual(str2, "writeDecimal", "(Ljava/math/BigDecimal;JLjava/text/DecimalFormat;)V");
+                    methodWriter.invokevirtual(str2, "writeDecimal",
+                            "(Ljava/math/BigDecimal;JLjava/text/DecimalFormat;)V");
                 }
             } else {
                 methodWriter.aload(iVar);
@@ -4262,7 +4415,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                 } else {
                     methodWriter.visitLdcInsn(fieldWriter.features);
                     methodWriter.aconst_null();
-                    methodWriter.invokevirtual(str2, "writeDecimal", "(Ljava/math/BigDecimal;JLjava/text/DecimalFormat;)V");
+                    methodWriter.invokevirtual(str2, "writeDecimal",
+                            "(Ljava/math/BigDecimal;JLjava/text/DecimalFormat;)V");
                 }
             }
             label = label2;
@@ -4316,7 +4470,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                 methodWriter.aload(i3);
                 methodWriter.aload(iVar);
                 methodWriter.invokevirtual("java/lang/Object", "getClass", "()Ljava/lang/Class;");
-                methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER, "getObjectWriter", METHOD_DESC_GET_OBJECT_WRITER);
+                methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER, "getObjectWriter",
+                        METHOD_DESC_GET_OBJECT_WRITER);
                 methodWriter.aload(i3);
                 methodWriter.aload(iVar);
                 methodWriter.visitLdcInsn(fieldWriter.fieldName);
@@ -4349,7 +4504,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         }
     }
 
-    private void gwObjectJSONB(FieldWriter fieldWriter, int i, MethodWriterContext methodWriterContext, int i2, boolean z) {
+    private void gwObjectJSONB(FieldWriter fieldWriter, int i, MethodWriterContext methodWriterContext, int i2,
+            boolean z) {
         boolean z2;
         int i3;
         String str;
@@ -4371,7 +4527,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         methodWriter.invokevirtual(str5, "writeNull", "()V");
         methodWriter.goto_(label);
         methodWriter.visitLabel(label2);
-        boolean z3 = (methodWriterContext.disableSupportArrayMapping() || ObjectWriterProvider.isNotReferenceDetect(cls)) ? false : true;
+        boolean z3 = (methodWriterContext.disableSupportArrayMapping()
+                || ObjectWriterProvider.isNotReferenceDetect(cls)) ? false : true;
         if (z3) {
             int iVar2 = methodWriterContext.var("REF_PATH");
             z2 = z3;
@@ -4427,7 +4584,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         methodWriter.visitLdcInsn(str3);
         methodWriterContext.loadFieldType(i2, fieldWriter.fieldType);
         methodWriter.visitLdcInsn(fieldWriter.features);
-        methodWriter.invokeinterface(ASMUtils.TYPE_OBJECT_WRITER, z ? "writeJSONB" : "writeArrayMappingJSONB", METHOD_DESC_WRITE_OBJECT);
+        methodWriter.invokeinterface(ASMUtils.TYPE_OBJECT_WRITER, z ? "writeJSONB" : "writeArrayMappingJSONB",
+                METHOD_DESC_WRITE_OBJECT);
         if (z2) {
             methodWriter.aload(1);
             methodWriter.aload(iVar);
@@ -4436,8 +4594,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         methodWriter.visitLabel(label);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:22:0x00cb  */
-    /* JADX WARN: Found duplicated region for block: B:24:0x00d5  */
+    /* JADX WARN: Found duplicated region for block: B:22:0x00cb */
+    /* JADX WARN: Found duplicated region for block: B:24:0x00d5 */
     public static void gwString(MethodWriterContext methodWriterContext, boolean z, boolean z2, int i) {
         MethodWriter methodWriter = methodWriterContext.mw;
         Label label = new Label();
@@ -4462,7 +4620,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         } else if (i2 <= 8 || JDKUtils.OPENJ9) {
             methodWriter.aload(1);
             methodWriter.aload(i);
-            methodWriter.invokevirtual(ASMUtils.TYPE_JSON_WRITER, z ? "writeSymbol" : "writeString", METHOD_DESC_WRITE_REFERENCE);
+            methodWriter.invokevirtual(ASMUtils.TYPE_JSON_WRITER, z ? "writeSymbol" : "writeString",
+                    METHOD_DESC_WRITE_REFERENCE);
         } else {
             long j = JDKUtils.FIELD_STRING_CODER_OFFSET;
             if (j != -1) {
@@ -4470,7 +4629,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                 if (j2 == -1 || z) {
                     methodWriter.aload(1);
                     methodWriter.aload(i);
-                    methodWriter.invokevirtual(ASMUtils.TYPE_JSON_WRITER, z ? "writeSymbol" : "writeString", METHOD_DESC_WRITE_REFERENCE);
+                    methodWriter.invokevirtual(ASMUtils.TYPE_JSON_WRITER, z ? "writeSymbol" : "writeString",
+                            METHOD_DESC_WRITE_REFERENCE);
                 } else {
                     Label label3 = new Label();
                     Label label4 = new Label();
@@ -4479,7 +4639,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                     methodWriter.getstatic(str, "UNSAFE", "Lsun/misc/Unsafe;");
                     methodWriter.aload(i);
                     methodWriter.visitLdcInsn(j2);
-                    methodWriter.invokevirtual("sun/misc/Unsafe", "getObject", "(Ljava/lang/Object;J)Ljava/lang/Object;");
+                    methodWriter.invokevirtual("sun/misc/Unsafe", "getObject",
+                            "(Ljava/lang/Object;J)Ljava/lang/Object;");
                     methodWriter.checkcast("[B");
                     methodWriter.getstatic(str, "UNSAFE", "Lsun/misc/Unsafe;");
                     methodWriter.aload(i);
@@ -4496,7 +4657,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
             } else {
                 methodWriter.aload(1);
                 methodWriter.aload(i);
-                methodWriter.invokevirtual(ASMUtils.TYPE_JSON_WRITER, z ? "writeSymbol" : "writeString", METHOD_DESC_WRITE_REFERENCE);
+                methodWriter.invokevirtual(ASMUtils.TYPE_JSON_WRITER, z ? "writeSymbol" : "writeString",
+                        METHOD_DESC_WRITE_REFERENCE);
             }
         }
         if (z2) {
@@ -4548,7 +4710,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
             methodWriter.aload(0);
             methodWriter.getfield(methodWriterContext.classNameType, fieldWriter(i2), ASMUtils.DESC_FIELD_WRITER);
             methodWriter.getfield(ASMUtils.TYPE_FIELD_WRITER, "decimalFormat", "Ljava/text/DecimalFormat;");
-            methodWriter.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeDecimal", "(Ljava/math/BigDecimal;JLjava/text/DecimalFormat;)V");
+            methodWriter.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "writeDecimal",
+                    "(Ljava/math/BigDecimal;JLjava/text/DecimalFormat;)V");
             return;
         }
         boolean z = (fieldWriter.features & JSONWriter.Feature.WriteNonStringValueAsString.mask) != 0;
@@ -4609,7 +4772,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                         str = "writeInt16";
                     } else if (cls == int[].class) {
                         str2 = "([I)V";
-                    } else if (cls == long[].class && methodWriterContext.provider.getObjectWriter(Long.class) == ObjectWriterImplInt64.INSTANCE) {
+                    } else if (cls == long[].class && methodWriterContext.provider
+                            .getObjectWriter(Long.class) == ObjectWriterImplInt64.INSTANCE) {
                         str2 = "([J)V";
                     } else if (cls == float[].class) {
                         str2 = "([F)V";
@@ -4645,10 +4809,16 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         boolean z = false;
         boolean z2 = (j & JSONWriter.Feature.BeanToArray.mask) != 0;
         Class cls2 = Long.TYPE;
-        if ((cls == cls2 || cls == Long.class || cls == long[].class) && (methodWriterContext.provider.userDefineMask & 4) != 0) {
+        if ((cls == cls2 || cls == Long.class || cls == long[].class)
+                && (methodWriterContext.provider.userDefineMask & 4) != 0) {
             z = methodWriterContext.provider.getObjectWriter(Long.class) != ObjectWriterImplInt64.INSTANCE;
         }
-        if (cls == Boolean.TYPE || cls == boolean[].class || cls == Character.TYPE || cls == char[].class || cls == Byte.TYPE || cls == byte[].class || cls == Short.TYPE || cls == short[].class || cls == Integer.TYPE || cls == int[].class || cls == cls2 || ((cls == long[].class && !z) || cls == Float.TYPE || cls == float[].class || cls == Double.TYPE || cls == double[].class || cls == String.class || cls == Integer.class || cls == Long.class || cls == BigDecimal.class || cls.isEnum())) {
+        if (cls == Boolean.TYPE || cls == boolean[].class || cls == Character.TYPE || cls == char[].class
+                || cls == Byte.TYPE || cls == byte[].class || cls == Short.TYPE || cls == short[].class
+                || cls == Integer.TYPE || cls == int[].class || cls == cls2
+                || ((cls == long[].class && !z) || cls == Float.TYPE || cls == float[].class || cls == Double.TYPE
+                        || cls == double[].class || cls == String.class || cls == Integer.class || cls == Long.class
+                        || cls == BigDecimal.class || cls.isEnum())) {
             gwValue(methodWriterContext, fieldWriter, i, i2, null);
             return;
         }
@@ -4724,20 +4894,23 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         }
         methodWriter.aload(0);
         methodWriter.aload(1);
-        methodWriter.invokevirtual(ASMUtils.TYPE_OBJECT_WRITER_ADAPTER, z ? "hasFilter" : "hasFilter0", METHOD_DESC_HAS_FILTER);
+        methodWriter.invokevirtual(ASMUtils.TYPE_OBJECT_WRITER_ADAPTER, z ? "hasFilter" : "hasFilter0",
+                METHOD_DESC_HAS_FILTER);
         methodWriter.ifeq(label);
     }
 
     private static boolean isFieldVarIndex(MethodWriterContext methodWriterContext, FieldWriter fieldWriter) {
         Class cls = fieldWriter.fieldClass;
-        if (cls == String.class || Collection.class.isAssignableFrom(cls) || cls == String[].class || (fieldWriter instanceof FieldWriterEnum)) {
+        if (cls == String.class || Collection.class.isAssignableFrom(cls) || cls == String[].class
+                || (fieldWriter instanceof FieldWriterEnum)) {
             return true;
         }
         return Collection.class.isAssignableFrom(cls) && !methodWriterContext.disableReferenceDetect();
     }
 
     private static void isWriteTypeInfo(long j, MethodWriter methodWriter, int i, int i2, int i3, Label label) {
-        if ((JSONWriter.Feature.WriteClassName.mask & j) == 0 || (j & JSONWriter.Feature.NotWriteRootClassName.mask) != 0) {
+        if ((JSONWriter.Feature.WriteClassName.mask & j) == 0
+                || (j & JSONWriter.Feature.NotWriteRootClassName.mask) != 0) {
             methodWriter.aload(i);
             methodWriter.ifnull(label);
             methodWriter.aload(i);
@@ -4748,25 +4921,33 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
             methodWriter.aload(i);
             methodWriter.aload(i2);
             methodWriter.lload(i3);
-            methodWriter.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "isWriteTypeInfo", "(Ljava/lang/Object;Ljava/lang/reflect/Type;J)Z");
+            methodWriter.invokevirtual(ASMUtils.TYPE_JSON_WRITER, "isWriteTypeInfo",
+                    "(Ljava/lang/Object;Ljava/lang/reflect/Type;J)Z");
             methodWriter.ifeq(label);
         }
     }
 
     /* JADX WARN: Found duplicated region for block: B:106:0x0404 A[RETURN] */
     /* JADX WARN: Found duplicated region for block: B:157:0x0150 A[SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:73:0x00c9  */
-    /* JADX WARN: Found duplicated region for block: B:76:0x00d4 A[LOOP:1: B:74:0x00ce->B:76:0x00d4, LOOP_END] */
-    /* JADX WARN: Found duplicated region for block: B:79:0x0118  */
-    /* JADX WARN: Found duplicated region for block: B:81:0x0148  */
-    /* JADX WARN: Found duplicated region for block: B:83:0x014e  */
-    /* JADX WARN: Found duplicated region for block: B:86:0x015e  */
-    /* JADX WARN: Found duplicated region for block: B:89:0x01c3  */
-    /* JADX WARN: Found duplicated region for block: B:90:0x01c6  */
-    /* JADX WARN: Found duplicated region for block: B:93:0x0222  */
-    /* JADX WARN: Found duplicated region for block: B:95:0x023c  */
-    /* JADX WARN: Found duplicated region for block: B:99:0x0330 A[LOOP:3: B:97:0x032a->B:99:0x0330, LOOP_END, MOVE_INLINED] */
-    private FieldWriter jitFieldWriterList(ObjectWriterProvider objectWriterProvider, String str, int i, long j, String str2, String str3, Field field, Class<?> cls, Type type, Type type2, Class<?> cls2) {
+    /* JADX WARN: Found duplicated region for block: B:73:0x00c9 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:76:0x00d4 A[LOOP:1:
+     * B:74:0x00ce->B:76:0x00d4, LOOP_END]
+     */
+    /* JADX WARN: Found duplicated region for block: B:79:0x0118 */
+    /* JADX WARN: Found duplicated region for block: B:81:0x0148 */
+    /* JADX WARN: Found duplicated region for block: B:83:0x014e */
+    /* JADX WARN: Found duplicated region for block: B:86:0x015e */
+    /* JADX WARN: Found duplicated region for block: B:89:0x01c3 */
+    /* JADX WARN: Found duplicated region for block: B:90:0x01c6 */
+    /* JADX WARN: Found duplicated region for block: B:93:0x0222 */
+    /* JADX WARN: Found duplicated region for block: B:95:0x023c */
+    /*
+     * JADX WARN: Found duplicated region for block: B:99:0x0330 A[LOOP:3:
+     * B:97:0x032a->B:99:0x0330, LOOP_END, MOVE_INLINED]
+     */
+    private FieldWriter jitFieldWriterList(ObjectWriterProvider objectWriterProvider, String str, int i, long j,
+            String str2, String str3, Field field, Class<?> cls, Type type, Type type2, Class<?> cls2) {
         List<FieldWriter> list;
         boolean z;
         Iterator<FieldWriter> it;
@@ -4796,7 +4977,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         Class cls3;
         Class<?> cls4 = TypeUtils.getClass(type);
         if (cls4 != null && field != null && field.getDeclaringClass() != cls4) {
-            ObjectWriter objectWriterFromCache = objectWriterProvider.getObjectWriterFromCache(type, cls4, JSONWriter.Feature.FieldBased.isEnabled(j));
+            ObjectWriter objectWriterFromCache = objectWriterProvider.getObjectWriterFromCache(type, cls4,
+                    JSONWriter.Feature.FieldBased.isEnabled(j));
             if (objectWriterFromCache == null) {
                 objectWriterFromCache = super.createObjectWriter(cls4, j, objectWriterProvider);
             }
@@ -4807,7 +4989,15 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
             while (true) {
                 if (it2.hasNext()) {
                     FieldWriter next = it2.next();
-                    if ((next.method == null && next.field == null && next.getFunction() == null) || ((cls3 = next.fieldClass) != Boolean.TYPE && cls3 != Boolean.class && cls3 != Byte.TYPE && cls3 != Byte.class && cls3 != Short.TYPE && cls3 != Short.class && cls3 != Integer.TYPE && cls3 != Integer.class && cls3 != Long.TYPE && cls3 != Long.class && cls3 != Float.TYPE && cls3 != Float.class && cls3 != Double.TYPE && cls3 != Double.class && cls3 != LocalDate.class && cls3 != LocalTime.class && cls3 != LocalDateTime.class && cls3 != OffsetDateTime.class && cls3 != OffsetTime.class && cls3 != Instant.class && cls3 != UUID.class)) {
+                    if ((next.method == null && next.field == null && next.getFunction() == null)
+                            || ((cls3 = next.fieldClass) != Boolean.TYPE && cls3 != Boolean.class && cls3 != Byte.TYPE
+                                    && cls3 != Byte.class && cls3 != Short.TYPE && cls3 != Short.class
+                                    && cls3 != Integer.TYPE && cls3 != Integer.class && cls3 != Long.TYPE
+                                    && cls3 != Long.class && cls3 != Float.TYPE && cls3 != Float.class
+                                    && cls3 != Double.TYPE && cls3 != Double.class && cls3 != LocalDate.class
+                                    && cls3 != LocalTime.class && cls3 != LocalDateTime.class
+                                    && cls3 != OffsetDateTime.class && cls3 != OffsetTime.class && cls3 != Instant.class
+                                    && cls3 != UUID.class)) {
                         list = fieldWriters;
                     }
                 } else {
@@ -4822,7 +5012,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                     iFieldCapacity = fieldCapacity(it.next().fieldClass);
                 }
                 ClassWriter classWriter = new ClassWriter(null);
-                str4 = "OWF_" + seed.incrementAndGet() + JavaConstant.Dynamic.DEFAULT_NAME + list.size() + JavaConstant.Dynamic.DEFAULT_NAME + cls4.getSimpleName();
+                str4 = "OWF_" + seed.incrementAndGet() + JavaConstant.Dynamic.DEFAULT_NAME + list.size()
+                        + JavaConstant.Dynamic.DEFAULT_NAME + cls4.getSimpleName();
                 r9 = ObjectWriterCreatorASM.class.getPackage();
                 if (r9 != null) {
                     String name = r9.getName();
@@ -4852,7 +5043,10 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                 }
                 String strType = ASMUtils.type(FieldWriterListField.class);
                 classWriter.visit(52, 49, str6, strType, INTERFACES);
-                MethodWriter methodWriterVisitMethod2 = classWriter.visitMethod(1, MethodDescription.CONSTRUCTOR_INTERNAL_NAME, "(Ljava/lang/String;Ljava/lang/reflect/Type;IJLjava/lang/String;Ljava/lang/String;Ljava/lang/reflect/Type;Ljava/lang/Class;Ljava/lang/reflect/Field;Ljava/lang/Class;)V", 64);
+                MethodWriter methodWriterVisitMethod2 = classWriter.visitMethod(1,
+                        MethodDescription.CONSTRUCTOR_INTERNAL_NAME,
+                        "(Ljava/lang/String;Ljava/lang/reflect/Type;IJLjava/lang/String;Ljava/lang/String;Ljava/lang/reflect/Type;Ljava/lang/Class;Ljava/lang/reflect/Field;Ljava/lang/Class;)V",
+                        64);
                 methodWriterVisitMethod2.aload(0);
                 methodWriterVisitMethod2.aload(1);
                 methodWriterVisitMethod2.aload(2);
@@ -4864,11 +5058,14 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                 methodWriterVisitMethod2.aload(9);
                 methodWriterVisitMethod2.aload(10);
                 methodWriterVisitMethod2.aload(11);
-                methodWriterVisitMethod2.invokespecial(strType, MethodDescription.CONSTRUCTOR_INTERNAL_NAME, "(Ljava/lang/String;Ljava/lang/reflect/Type;IJLjava/lang/String;Ljava/lang/String;Ljava/lang/reflect/Type;Ljava/lang/Class;Ljava/lang/reflect/Field;Ljava/lang/Class;)V");
+                methodWriterVisitMethod2.invokespecial(strType, MethodDescription.CONSTRUCTOR_INTERNAL_NAME,
+                        "(Ljava/lang/String;Ljava/lang/reflect/Type;IJLjava/lang/String;Ljava/lang/String;Ljava/lang/reflect/Type;Ljava/lang/Class;Ljava/lang/reflect/Field;Ljava/lang/Class;)V");
                 methodWriterVisitMethod2.return_();
                 methodWriterVisitMethod2.visitMaxs(12, 12);
-                methodWriterVisitMethod = classWriter.visitMethod(1, "writeListValueJSONB", METHOD_DESC_WRITE_LIST_VALUE_JSONB, list.size() < 6 ? 512 : 1024);
-                methodWriterContext = new MethodWriterContext(objectWriterProvider, cls4, j, str6, methodWriterVisitMethod, 8, false);
+                methodWriterVisitMethod = classWriter.visitMethod(1, "writeListValueJSONB",
+                        METHOD_DESC_WRITE_LIST_VALUE_JSONB, list.size() < 6 ? 512 : 1024);
+                methodWriterContext = new MethodWriterContext(objectWriterProvider, cls4, j, str6,
+                        methodWriterVisitMethod, 8, false);
                 iVar = methodWriterContext.var("offset");
                 iVar2 = methodWriterContext.var("bytes");
                 iVar22 = methodWriterContext.var2(CONTEXT_FEATURES);
@@ -4955,7 +5152,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                 i2 = 0;
                 while (i2 < list2.size()) {
                     int i5 = iVar3;
-                    writeFieldValueDirectJSONB(j, str6, methodWriterContext, list2.get(i2), i2, methodWriterVisitMethod, iVar2, iVar, iVar5, iVar22, i5, false);
+                    writeFieldValueDirectJSONB(j, str6, methodWriterContext, list2.get(i2), i2, methodWriterVisitMethod,
+                            iVar2, iVar, iVar5, iVar22, i5, false);
                     i2++;
                     iVar4 = iVar4;
                     iVar3 = i5;
@@ -4974,15 +5172,21 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                 methodWriterVisitMethod.aload(0);
                 methodWriterVisitMethod.aload(1);
                 methodWriterVisitMethod.aload(2);
-                methodWriterVisitMethod.invokespecial(ASMUtils.type(FieldWriterList.class), "writeListValueJSONB", METHOD_DESC_WRITE_LIST_VALUE_JSONB);
+                methodWriterVisitMethod.invokespecial(ASMUtils.type(FieldWriterList.class), "writeListValueJSONB",
+                        METHOD_DESC_WRITE_LIST_VALUE_JSONB);
                 methodWriterVisitMethod.return_();
                 int i6 = methodWriterContext.maxVariant;
                 methodWriterVisitMethod.visitMaxs(i6 + 1, i6 + 1);
                 byte[] byteArray = classWriter.toByteArray();
                 try {
-                    return (FieldWriterListField) this.classLoader.defineClassPublic(str10, byteArray, 0, byteArray.length).getConstructor(String.class, Type.class, Integer.TYPE, Long.TYPE, String.class, String.class, Type.class, Class.class, Field.class, Class.class).newInstance(str, type, Integer.valueOf(i), Long.valueOf(j), str2, str3, type2, cls2, field, cls);
+                    return (FieldWriterListField) this.classLoader
+                            .defineClassPublic(str10, byteArray, 0, byteArray.length)
+                            .getConstructor(String.class, Type.class, Integer.TYPE, Long.TYPE, String.class,
+                                    String.class, Type.class, Class.class, Field.class, Class.class)
+                            .newInstance(str, type, Integer.valueOf(i), Long.valueOf(j), str2, str3, type2, cls2, field,
+                                    cls);
                 } catch (Throwable th) {
-                    throw new JSONException(bjs.l(cls4, "create objectWriter error, objectType "), th);
+                    throw new JSONException(concatVar2Var1(cls4, "create objectWriter error, objectType "), th);
                 }
             }
         }
@@ -4997,7 +5201,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
             iFieldCapacity = fieldCapacity(it.next().fieldClass);
         }
         ClassWriter classWriter2 = new ClassWriter(null);
-        str4 = "OWF_" + seed.incrementAndGet() + JavaConstant.Dynamic.DEFAULT_NAME + list.size() + JavaConstant.Dynamic.DEFAULT_NAME + cls4.getSimpleName();
+        str4 = "OWF_" + seed.incrementAndGet() + JavaConstant.Dynamic.DEFAULT_NAME + list.size()
+                + JavaConstant.Dynamic.DEFAULT_NAME + cls4.getSimpleName();
         r9 = ObjectWriterCreatorASM.class.getPackage();
         if (r9 != null) {
             String name2 = r9.getName();
@@ -5027,7 +5232,10 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         }
         String strType2 = ASMUtils.type(FieldWriterListField.class);
         classWriter2.visit(52, 49, str6, strType2, INTERFACES);
-        MethodWriter methodWriterVisitMethod22 = classWriter2.visitMethod(1, MethodDescription.CONSTRUCTOR_INTERNAL_NAME, "(Ljava/lang/String;Ljava/lang/reflect/Type;IJLjava/lang/String;Ljava/lang/String;Ljava/lang/reflect/Type;Ljava/lang/Class;Ljava/lang/reflect/Field;Ljava/lang/Class;)V", 64);
+        MethodWriter methodWriterVisitMethod22 = classWriter2.visitMethod(1,
+                MethodDescription.CONSTRUCTOR_INTERNAL_NAME,
+                "(Ljava/lang/String;Ljava/lang/reflect/Type;IJLjava/lang/String;Ljava/lang/String;Ljava/lang/reflect/Type;Ljava/lang/Class;Ljava/lang/reflect/Field;Ljava/lang/Class;)V",
+                64);
         methodWriterVisitMethod22.aload(0);
         methodWriterVisitMethod22.aload(1);
         methodWriterVisitMethod22.aload(2);
@@ -5039,11 +5247,14 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         methodWriterVisitMethod22.aload(9);
         methodWriterVisitMethod22.aload(10);
         methodWriterVisitMethod22.aload(11);
-        methodWriterVisitMethod22.invokespecial(strType2, MethodDescription.CONSTRUCTOR_INTERNAL_NAME, "(Ljava/lang/String;Ljava/lang/reflect/Type;IJLjava/lang/String;Ljava/lang/String;Ljava/lang/reflect/Type;Ljava/lang/Class;Ljava/lang/reflect/Field;Ljava/lang/Class;)V");
+        methodWriterVisitMethod22.invokespecial(strType2, MethodDescription.CONSTRUCTOR_INTERNAL_NAME,
+                "(Ljava/lang/String;Ljava/lang/reflect/Type;IJLjava/lang/String;Ljava/lang/String;Ljava/lang/reflect/Type;Ljava/lang/Class;Ljava/lang/reflect/Field;Ljava/lang/Class;)V");
         methodWriterVisitMethod22.return_();
         methodWriterVisitMethod22.visitMaxs(12, 12);
-        methodWriterVisitMethod = classWriter2.visitMethod(1, "writeListValueJSONB", METHOD_DESC_WRITE_LIST_VALUE_JSONB, list.size() < 6 ? 512 : 1024);
-        methodWriterContext = new MethodWriterContext(objectWriterProvider, cls4, j, str6, methodWriterVisitMethod, 8, false);
+        methodWriterVisitMethod = classWriter2.visitMethod(1, "writeListValueJSONB", METHOD_DESC_WRITE_LIST_VALUE_JSONB,
+                list.size() < 6 ? 512 : 1024);
+        methodWriterContext = new MethodWriterContext(objectWriterProvider, cls4, j, str6, methodWriterVisitMethod, 8,
+                false);
         iVar = methodWriterContext.var("offset");
         iVar2 = methodWriterContext.var("bytes");
         iVar22 = methodWriterContext.var2(CONTEXT_FEATURES);
@@ -5130,7 +5341,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         i2 = 0;
         while (i2 < list2.size()) {
             int i52 = iVar3;
-            writeFieldValueDirectJSONB(j, str6, methodWriterContext, list2.get(i2), i2, methodWriterVisitMethod, iVar2, iVar, iVar5, iVar22, i52, false);
+            writeFieldValueDirectJSONB(j, str6, methodWriterContext, list2.get(i2), i2, methodWriterVisitMethod, iVar2,
+                    iVar, iVar5, iVar22, i52, false);
             i2++;
             iVar4 = iVar4;
             iVar3 = i52;
@@ -5149,15 +5361,20 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         methodWriterVisitMethod.aload(0);
         methodWriterVisitMethod.aload(1);
         methodWriterVisitMethod.aload(2);
-        methodWriterVisitMethod.invokespecial(ASMUtils.type(FieldWriterList.class), "writeListValueJSONB", METHOD_DESC_WRITE_LIST_VALUE_JSONB);
+        methodWriterVisitMethod.invokespecial(ASMUtils.type(FieldWriterList.class), "writeListValueJSONB",
+                METHOD_DESC_WRITE_LIST_VALUE_JSONB);
         methodWriterVisitMethod.return_();
         int i62 = methodWriterContext.maxVariant;
         methodWriterVisitMethod.visitMaxs(i62 + 1, i62 + 1);
         byte[] byteArray2 = classWriter2.toByteArray();
-        return (FieldWriterListField) this.classLoader.defineClassPublic(str102, byteArray2, 0, byteArray2.length).getConstructor(String.class, Type.class, Integer.TYPE, Long.TYPE, String.class, String.class, Type.class, Class.class, Field.class, Class.class).newInstance(str, type, Integer.valueOf(i), Long.valueOf(j), str2, str3, type2, cls2, field, cls);
+        return (FieldWriterListField) this.classLoader.defineClassPublic(str102, byteArray2, 0, byteArray2.length)
+                .getConstructor(String.class, Type.class, Integer.TYPE, Long.TYPE, String.class, String.class,
+                        Type.class, Class.class, Field.class, Class.class)
+                .newInstance(str, type, Integer.valueOf(i), Long.valueOf(j), str2, str3, type2, cls2, field, cls);
     }
 
-    private ObjectWriterAdapter jitWriter(Class cls, ObjectWriterProvider objectWriterProvider, BeanInfo beanInfo, List<FieldWriter> list, long j) {
+    private ObjectWriterAdapter jitWriter(Class cls, ObjectWriterProvider objectWriterProvider, BeanInfo beanInfo,
+            List<FieldWriter> list, long j) {
         String str;
         String str2;
         String str3;
@@ -5273,34 +5490,41 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         } else {
             objectWriterCreatorASM = this;
             list2 = list;
-            objectWriterCreatorASM.genMethodWriteArrayMapping(objectWriterProvider, "writeArrayMapping", cls, j, list2, classWriter, str);
+            objectWriterCreatorASM.genMethodWriteArrayMapping(objectWriterProvider, "writeArrayMapping", cls, j, list2,
+                    classWriter, str);
             cls2 = cls;
         }
         byte[] byteArray = classWriter.toByteArray();
         try {
-            ObjectWriterAdapter objectWriterAdapter = (ObjectWriterAdapter) objectWriterCreatorASM.classLoader.defineClassPublic(str4, byteArray, i, byteArray.length).getConstructor(Class.class, String.class, String.class, Long.TYPE, List.class).newInstance(cls2, beanInfo.typeKey, beanInfo.typeName, Long.valueOf(j), list2);
+            ObjectWriterAdapter objectWriterAdapter = (ObjectWriterAdapter) objectWriterCreatorASM.classLoader
+                    .defineClassPublic(str4, byteArray, i, byteArray.length)
+                    .getConstructor(Class.class, String.class, String.class, Long.TYPE, List.class)
+                    .newInstance(cls2, beanInfo.typeKey, beanInfo.typeName, Long.valueOf(j), list2);
             if (beanInfo.serializeFilters == null) {
                 return objectWriterAdapter;
             }
             ObjectWriterCreator.configSerializeFilters(beanInfo, objectWriterAdapter);
             return objectWriterAdapter;
         } catch (Throwable th) {
-            throw new JSONException(bjs.l(cls2, "create objectWriter error, objectType "), th);
+            throw new JSONException(concatVar2Var1(cls2, "create objectWriter error, objectType "), th);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public /* synthetic */ void lambda$createObjectWriter$0(FieldInfo fieldInfo, Class cls, long j, ObjectWriterProvider objectWriterProvider, BeanInfo beanInfo, Map map, Field field) {
+    public /* synthetic */ void lambda$createObjectWriter$0(FieldInfo fieldInfo, Class cls, long j,
+            ObjectWriterProvider objectWriterProvider, BeanInfo beanInfo, Map map, Field field) {
         fieldInfo.init();
         boolean z = (field.getModifiers() & 1) == 0;
         fieldInfo.isPrivate = z;
         fieldInfo.ignore = z;
-        FieldWriter fieldWriterCreateFieldWriter = createFieldWriter(cls, j, objectWriterProvider, beanInfo, fieldInfo, field);
+        FieldWriter fieldWriterCreateFieldWriter = createFieldWriter(cls, j, objectWriterProvider, beanInfo, fieldInfo,
+                field);
         if (fieldWriterCreateFieldWriter != null) {
             if (fieldInfo.writeUsing != null && (fieldWriterCreateFieldWriter instanceof FieldWriterObject)) {
                 ((FieldWriterObject) fieldWriterCreateFieldWriter).writeUsing = true;
             }
-            FieldWriter fieldWriter = (FieldWriter) map.putIfAbsent(fieldWriterCreateFieldWriter.fieldName, fieldWriterCreateFieldWriter);
+            FieldWriter fieldWriter = (FieldWriter) map.putIfAbsent(fieldWriterCreateFieldWriter.fieldName,
+                    fieldWriterCreateFieldWriter);
             if (fieldWriter == null || fieldWriter.compareTo(fieldWriterCreateFieldWriter) <= 0) {
                 return;
             }
@@ -5311,11 +5535,11 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
     /* JADX INFO: Access modifiers changed from: private */
     /* JADX WARN: Found duplicated region for block: B:109:? A[RETURN, SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:64:0x010c A[MOVE_INLINED] */
-    /* JADX WARN: Found duplicated region for block: B:65:0x0126  */
-    /* JADX WARN: Found duplicated region for block: B:77:0x014a  */
-    /* JADX WARN: Found duplicated region for block: B:82:0x016e  */
-    /* JADX WARN: Found duplicated region for block: B:84:0x0172  */
-    /* JADX WARN: Found duplicated region for block: B:87:0x018d  */
+    /* JADX WARN: Found duplicated region for block: B:65:0x0126 */
+    /* JADX WARN: Found duplicated region for block: B:77:0x014a */
+    /* JADX WARN: Found duplicated region for block: B:82:0x016e */
+    /* JADX WARN: Found duplicated region for block: B:84:0x0172 */
+    /* JADX WARN: Found duplicated region for block: B:87:0x018d */
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Type inference failed for: r0v5, types: [java.lang.String[]] */
     /* JADX WARN: Type inference failed for: r14v3, types: [boolean, int] */
@@ -5325,12 +5549,24 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
     /* JADX WARN: Type inference failed for: r1v11 */
     /* JADX WARN: Type inference failed for: r1v12 */
     /* JADX WARN: Type inference failed for: r1v3 */
-    /* JADX WARN: Type inference failed for: r1v4, types: [com.alibaba.fastjson2.writer.ObjectWriterCreator] */
-    /* JADX WARN: Type inference failed for: r1v5, types: [com.alibaba.fastjson2.writer.ObjectWriterCreator] */
-    /* JADX WARN: Type inference failed for: r1v6, types: [com.alibaba.fastjson2.writer.ObjectWriterCreator] */
+    /*
+     * JADX WARN: Type inference failed for: r1v4, types:
+     * [com.alibaba.fastjson2.writer.ObjectWriterCreator]
+     */
+    /*
+     * JADX WARN: Type inference failed for: r1v5, types:
+     * [com.alibaba.fastjson2.writer.ObjectWriterCreator]
+     */
+    /*
+     * JADX WARN: Type inference failed for: r1v6, types:
+     * [com.alibaba.fastjson2.writer.ObjectWriterCreator]
+     */
     /* JADX WARN: Type inference failed for: r1v8 */
     /* JADX WARN: Type inference failed for: r1v9 */
-    /* JADX WARN: Type inference failed for: r4v1, types: [java.lang.Object, java.lang.String] */
+    /*
+     * JADX WARN: Type inference failed for: r4v1, types: [java.lang.Object,
+     * java.lang.String]
+     */
     /* JADX WARN: Type inference failed for: r7v2, types: [java.lang.String] */
     public /* synthetic */ void lambda$createObjectWriter$1(FieldInfo fieldInfo, long j, BeanInfo beanInfo, ObjectWriterProvider objectWriterProvider, Class cls, boolean z, Map map, Method method) throws IllegalAccessException, NoSuchMethodException {
         ObjectWriter objectWriter;
@@ -5492,9 +5728,11 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public /* synthetic */ void lambda$createObjectWriter$2(FieldInfo fieldInfo, Class cls, long j, ObjectWriterProvider objectWriterProvider, BeanInfo beanInfo, Map map, Field field) {
+    public /* synthetic */ void lambda$createObjectWriter$2(FieldInfo fieldInfo, Class cls, long j,
+            ObjectWriterProvider objectWriterProvider, BeanInfo beanInfo, Map map, Field field) {
         fieldInfo.init();
-        FieldWriter fieldWriterCreateFieldWriter = createFieldWriter(cls, j, objectWriterProvider, beanInfo, fieldInfo, field);
+        FieldWriter fieldWriterCreateFieldWriter = createFieldWriter(cls, j, objectWriterProvider, beanInfo, fieldInfo,
+                field);
         if (fieldWriterCreateFieldWriter != null) {
             if (fieldInfo.writeUsing != null && (fieldWriterCreateFieldWriter instanceof FieldWriterObject)) {
                 ((FieldWriterObject) fieldWriterCreateFieldWriter).writeUsing = true;
@@ -5503,8 +5741,9 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         }
     }
 
-    private void sotreFieldValueToLocalVar(MethodWriterContext methodWriterContext, int i, FieldWriter fieldWriter, int i2, MethodWriter methodWriter) {
-        int iVar = methodWriterContext.var(bjs.i(i, "field_"));
+    private void sotreFieldValueToLocalVar(MethodWriterContext methodWriterContext, int i, FieldWriter fieldWriter,
+            int i2, MethodWriter methodWriter) {
+        int iVar = methodWriterContext.var(concatVar2Var1(i, "field_"));
         genGetObject(methodWriterContext, fieldWriter, i, i2);
         methodWriter.astore(iVar);
     }
@@ -5516,18 +5755,26 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         }
         Class cls = fieldWriter.fieldClass;
         if (!Collection.class.isAssignableFrom(cls)) {
-            return cls == Byte.TYPE || cls == Byte.class || cls == Short.TYPE || cls == Short.class || cls == Integer.TYPE || cls == Integer.class || cls == Long.TYPE || cls == Long.class || cls == Float.TYPE || cls == Float.class || cls == Double.TYPE || cls == Double.class || cls == Boolean.TYPE || cls == Boolean.class || cls == String.class || cls == String[].class || cls == UUID.class || cls == LocalDate.class || cls == LocalDateTime.class || cls == LocalTime.class || cls == OffsetDateTime.class || cls == OffsetTime.class || cls == Instant.class || (fieldWriter instanceof FieldWriterEnum);
+            return cls == Byte.TYPE || cls == Byte.class || cls == Short.TYPE || cls == Short.class
+                    || cls == Integer.TYPE || cls == Integer.class || cls == Long.TYPE || cls == Long.class
+                    || cls == Float.TYPE || cls == Float.class || cls == Double.TYPE || cls == Double.class
+                    || cls == Boolean.TYPE || cls == Boolean.class || cls == String.class || cls == String[].class
+                    || cls == UUID.class || cls == LocalDate.class || cls == LocalDateTime.class
+                    || cls == LocalTime.class || cls == OffsetDateTime.class || cls == OffsetTime.class
+                    || cls == Instant.class || (fieldWriter instanceof FieldWriterEnum);
         }
         Class itemClass = fieldWriter.getItemClass();
         return itemClass == String.class || itemClass == Long.class;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:158:0x0393  */
-    /* JADX WARN: Found duplicated region for block: B:160:0x03a0  */
+    /* JADX WARN: Found duplicated region for block: B:158:0x0393 */
+    /* JADX WARN: Found duplicated region for block: B:160:0x03a0 */
     /* JADX WARN: Found duplicated region for block: B:163:0x03b1 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:164:0x03b3  */
+    /* JADX WARN: Found duplicated region for block: B:164:0x03b3 */
     /* JADX WARN: Found duplicated region for block: B:171:? A[RETURN, SYNTHETIC] */
-    private void writeFieldValueDirectJSONB(long j, String str, MethodWriterContext methodWriterContext, FieldWriter fieldWriter, int i, MethodWriter methodWriter, int i2, int i3, int i4, int i5, int i6, boolean z) {
+    private void writeFieldValueDirectJSONB(long j, String str, MethodWriterContext methodWriterContext,
+            FieldWriter fieldWriter, int i, MethodWriter methodWriter, int i2, int i3, int i4, int i5, int i6,
+            boolean z) {
         Integer numValueOf;
         Label label;
         String str2;
@@ -5558,7 +5805,7 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         if (!cls9.isPrimitive() || z) {
             Label label3 = new Label();
             if (zIsFieldVarIndex) {
-                numValueOf = Integer.valueOf(methodWriterContext.var(bjs.i(i, "field_")));
+                numValueOf = Integer.valueOf(methodWriterContext.var(concatVar2Var1(i, "field_")));
             } else {
                 int iVar = methodWriterContext.var(cls9);
                 numValueOf = Integer.valueOf(iVar);
@@ -5571,7 +5818,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
             numValueOf = null;
         }
         Integer num = numValueOf;
-        if ((Collection.class.isAssignableFrom(cls9) || cls9.isArray()) && !methodWriterContext.disableReferenceDetect()) {
+        if ((Collection.class.isAssignableFrom(cls9) || cls9.isArray())
+                && !methodWriterContext.disableReferenceDetect()) {
             int iVar2 = methodWriterContext.var("REF_PATH");
             if (label == null) {
                 label = new Label();
@@ -5706,7 +5954,9 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
             methodWriter.getfield(ASMUtils.TYPE_FIELD_WRITER, "fieldClass", "Ljava/lang/Class;");
             methodWriter.aload(1);
             cls4 = cls;
-            methodWriter.invokestatic(ASMUtils.TYPE_JSONB_IO, "checkAndWriteTypeName", yg.o(new StringBuilder("([BILjava/lang/Object;Ljava/lang/Class;"), ASMUtils.DESC_JSON_WRITER, ")I"), true);
+            methodWriter.invokestatic(ASMUtils.TYPE_JSONB_IO, "checkAndWriteTypeName",
+                    yg.o(new StringBuilder("([BILjava/lang/Object;Ljava/lang/Class;"), ASMUtils.DESC_JSON_WRITER, ")I"),
+                    true);
             methodWriter.istore(i8);
         } else {
             cls4 = cls;
@@ -5728,7 +5978,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
             methodWriter.aload(i6);
             i10 = i5;
             methodWriter.lload(i10);
-            methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER, "writeEnumValueJSONB", yg.o(new StringBuilder("([BILjava/lang/Enum;"), DESC_SYMBOL, "J)I"));
+            methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER, "writeEnumValueJSONB",
+                    yg.o(new StringBuilder("([BILjava/lang/Enum;"), DESC_SYMBOL, "J)I"));
             methodWriter.istore(i8);
             methodWriter.goto_(label2);
             methodWriter.visitLabel(label7);
@@ -5843,7 +6094,9 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                 str8 = "writeInt16";
                 cls7 = cls6;
             }
-            if (cls9 != Float.class || cls9 == Double.class || cls9 == Byte.class || cls9 == Short.class || cls9 == Integer.class || cls9 == Long.class || cls9 == String[].class || cls7.isAssignableFrom(cls9) || z3) {
+            if (cls9 != Float.class || cls9 == Double.class || cls9 == Byte.class || cls9 == Short.class
+                    || cls9 == Integer.class || cls9 == Long.class || cls9 == String[].class
+                    || cls7.isAssignableFrom(cls9) || z3) {
                 methodWriter.lload(i10);
                 j2 = j | fieldWriter2.features;
                 if (j2 != 0) {
@@ -5892,1042 +6145,2888 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:24:0x0067  */
-    /* JADX WARN: Type update failed for variable: r14v0 ??, new type: com.alibaba.fastjson2.writer.ObjectWriterProvider
-    jadx.core.utils.exceptions.JadxOverflowException: Type inference error: updates count limit reached with updateSeq = 7451. Try increasing type updates limit count.
-    	at jadx.core.dex.visitors.typeinference.TypeUpdateInfo.requestUpdate(TypeUpdateInfo.java:37)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:224)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.java:119)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:640)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:241)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java:225)
-    	at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(TypeUpdate.java:202)
+    /* JADX WARN: Found duplicated region for block: B:24:0x0067 */
+    /*
+     * JADX WARN: Type update failed for variable: r14v0 ??, new type:
+     * com.alibaba.fastjson2.writer.ObjectWriterProvider
+     * jadx.core.utils.exceptions.JadxOverflowException: Type inference error:
+     * updates count limit reached with updateSeq = 7451. Try increasing type
+     * updates limit count.
+     * at jadx.core.dex.visitors.typeinference.TypeUpdateInfo.requestUpdate(
+     * TypeUpdateInfo.java:37)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :224)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeChecked(TypeUpdate.
+     * java:119)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.ifListener(TypeUpdate.java:
+     * 640)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.runListeners(TypeUpdate.java:
+     * 241)
+     * at
+     * jadx.core.dex.visitors.typeinference.TypeUpdate.requestUpdate(TypeUpdate.java
+     * :225)
+     * at jadx.core.dex.visitors.typeinference.TypeUpdate.updateTypeForSsaVar(
+     * TypeUpdate.java:202)
      */
     @Override // com.alibaba.fastjson2.writer.ObjectWriterCreator
-    public <T> FieldWriter<T> createFieldWriter(ObjectWriterProvider objectWriterProvider, String str, int i, long j, String str2, Locale locale, String str3, Field field, ObjectWriter objectWriter, Class<?> cls) {
+    public <T> FieldWriter<T> createFieldWriter(ObjectWriterProvider objectWriterProvider, String str, int i, long j,
+            String str2, Locale locale, String str3, Field field, ObjectWriter objectWriter, Class<?> cls) {
         ObjectWriter objectWriter2;
         String str4;
         Type type;
         FieldWriterObject fieldWriterObject;
         Class<?> declaringClass = field.getDeclaringClass();
         if (Throwable.class.isAssignableFrom(declaringClass) || declaringClass.getName().startsWith("java.lang")) {
-            return super.createFieldWriter(objectWriterProvider, str, i, j, str2, locale, str3, field, objectWriter, cls);
+            return super.createFieldWriter(objectWriterProvider, str, i, j, str2, locale, str3, field, objectWriter,
+                    cls);
         }
         Class<?> type2 = field.getType();
         Type genericType = field.getGenericType();
@@ -6949,7 +9048,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                         } else {
                             type = genericType;
                         }
-                        fieldWriterObject = new FieldWriterObject(str, i, j, str2, locale, str3, type, type2, field, null);
+                        fieldWriterObject = new FieldWriterObject(str, i, j, str2, locale, str3, type, type2, field,
+                                null);
                         fieldWriterObject.initValueClass = type2;
                         if (objectWriter != ObjectWriterBaseModule.VoidObjectWriter.INSTANCE) {
                             fieldWriterObject.initObjectWriter = objectWriter;
@@ -6988,7 +9088,9 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
             return new FieldWriterInt32Val(str, i, j, str2, str3, field);
         }
         if (type2 == Long.TYPE) {
-            return (str2 == null || str2.isEmpty() || "string".equals(str2)) ? new FieldWriterInt64ValField(str, i, j, str2, str3, field) : new FieldWriterMillisField(str, i, j, str2, str3, field);
+            return (str2 == null || str2.isEmpty() || "string".equals(str2))
+                    ? new FieldWriterInt64ValField(str, i, j, str2, str3, field)
+                    : new FieldWriterMillisField(str, i, j, str2, str3, field);
         }
         if (type2 == cls4) {
             return new FieldWriterFloatValField(str, i, j, str2, str3, field);
@@ -7027,36 +9129,47 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
             BeanInfo beanInfoCreateBeanInfo = objectWriterProvider.createBeanInfo();
             objectWriterProvider.getBeanInfo(beanInfoCreateBeanInfo, type2);
             boolean z = beanInfoCreateBeanInfo.writeEnumAsJavaBean;
-            if (!z && (objectWriter2 = objectWriterProvider.cache.get(type2)) != null && !(objectWriter2 instanceof ObjectWriterImplEnum)) {
+            if (!z && (objectWriter2 = objectWriterProvider.cache.get(type2)) != null
+                    && !(objectWriter2 instanceof ObjectWriterImplEnum)) {
                 z = true;
             }
-            if (BeanUtils.getEnumValueField(type2, objectWriterProvider) == null && !z && BeanUtils.getEnumAnnotationNames(type2) == null) {
+            if (BeanUtils.getEnumValueField(type2, objectWriterProvider) == null && !z
+                    && BeanUtils.getEnumAnnotationNames(type2) == null) {
                 return new FieldWriterEnum(str, i, j, str2, str3, genericType, type2, field, null);
             }
         }
         if (type2 == List.class || type2 == ArrayList.class) {
-            return createFieldWriterList(objectWriterProvider, str, i, j, str2, str3, field, cls, genericType instanceof ParameterizedType ? ((ParameterizedType) genericType).getActualTypeArguments()[0] : null, genericType, type2);
+            return createFieldWriterList(objectWriterProvider, str, i, j, str2, str3, field, cls,
+                    genericType instanceof ParameterizedType
+                            ? ((ParameterizedType) genericType).getActualTypeArguments()[0]
+                            : null,
+                    genericType, type2);
         }
         if (Map.class.isAssignableFrom(type2)) {
-            return new FieldWriterMapField(str, i, j, str2, locale, str3, field.getGenericType(), type2, field, null, cls);
+            return new FieldWriterMapField(str, i, j, str2, locale, str3, field.getGenericType(), type2, field, null,
+                    cls);
         }
         if (type2.isArray()) {
             Class<?> componentType = type2.getComponentType();
             if (declaringClass == Throwable.class && "stackTrace".equals(str)) {
                 try {
-                    return new FieldWriterObjectArrayMethod(str, componentType, i, j, str2, str3, genericType, type2, field, Throwable.class.getMethod("getStackTrace", null));
+                    return new FieldWriterObjectArrayMethod(str, componentType, i, j, str2, str3, genericType, type2,
+                            field, Throwable.class.getMethod("getStackTrace", null));
                 } catch (NoSuchMethodException unused) {
                 }
             }
         }
         if (type2 == BigDecimal[].class) {
-            return new FieldWriterObjectArrayField(str, BigDecimal.class, i, j, str2, str3, BigDecimal[].class, BigDecimal[].class, field);
+            return new FieldWriterObjectArrayField(str, BigDecimal.class, i, j, str2, str3, BigDecimal[].class,
+                    BigDecimal[].class, field);
         }
         if (type2 == Float[].class) {
-            return new FieldWriterObjectArrayField(str, Float.class, i, j, str2, str3, Float[].class, Float[].class, field);
+            return new FieldWriterObjectArrayField(str, Float.class, i, j, str2, str3, Float[].class, Float[].class,
+                    field);
         }
         if (type2 == Double[].class) {
-            return new FieldWriterObjectArrayField(str, Float.class, i, j, str2, str3, Double[].class, Double[].class, field);
+            return new FieldWriterObjectArrayField(str, Float.class, i, j, str2, str3, Double[].class, Double[].class,
+                    field);
         }
         if (TypeUtils.isFunction(type2)) {
             return null;
@@ -7092,7 +9205,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
             methodWriter.getfield(methodWriterContext.classNameType, fieldWriter(i), ASMUtils.DESC_FIELD_WRITER);
             methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER, "getFunction", "()Ljava/util/function/Function;");
             methodWriter.aload(i2);
-            methodWriter.invokeinterface(ASMUtils.type(Function.class), "apply", "(Ljava/lang/Object;)Ljava/lang/Object;");
+            methodWriter.invokeinterface(ASMUtils.type(Function.class), "apply",
+                    "(Ljava/lang/Object;)Ljava/lang/Object;");
             methodWriter.checkcast(ASMUtils.type(cls2));
             return;
         }
@@ -7106,7 +9220,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
             methodWriter.invokevirtual(strType, ((Method) member).getName(), "()" + ASMUtils.desc(cls2));
             return;
         }
-        if (Modifier.isPublic(cls.getModifiers()) && Modifier.isPublic(member.getModifiers()) && !this.classLoader.isExternalClass(cls)) {
+        if (Modifier.isPublic(cls.getModifiers()) && Modifier.isPublic(member.getModifiers())
+                && !this.classLoader.isExternalClass(cls)) {
             methodWriter.aload(i2);
             methodWriter.checkcast(strType);
             methodWriter.getfield(strType, member.getName(), ASMUtils.desc(cls2));
@@ -7164,7 +9279,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         }
     }
 
-    public void gwFieldValueIntVA(MethodWriterContext methodWriterContext, FieldWriter fieldWriter, int i, int i2, boolean z) {
+    public void gwFieldValueIntVA(MethodWriterContext methodWriterContext, FieldWriter fieldWriter, int i, int i2,
+            boolean z) {
         MethodWriter methodWriter = methodWriterContext.mw;
         int iVar = methodWriterContext.var(fieldWriter.fieldClass);
         Label label = new Label();
@@ -7213,7 +9329,10 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         methodWriter.bastore();
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class MethodWriterContext {
         final String classNameType;
         final boolean jsonb;
@@ -7224,7 +9343,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         final ObjectWriterProvider provider;
         final Map<Object, Integer> variants = new LinkedHashMap();
 
-        public MethodWriterContext(ObjectWriterProvider objectWriterProvider, Class cls, long j, String str, MethodWriter methodWriter, int i, boolean z) {
+        public MethodWriterContext(ObjectWriterProvider objectWriterProvider, Class cls, long j, String str,
+                MethodWriter methodWriter, int i, boolean z) {
             this.provider = objectWriterProvider;
             this.objectClass = cls;
             this.objectFeatures = j;
@@ -7358,7 +9478,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                 this.mw.getfield(str, "useSingleQuote", "Z");
                 this.mw.ifne(label5);
                 this.mw.lload(var2(ObjectWriterCreatorASM.CONTEXT_FEATURES));
-                this.mw.visitLdcInsn(JSONWriter.Feature.UnquoteFieldName.mask | JSONWriter.Feature.UseSingleQuotes.mask);
+                this.mw.visitLdcInsn(
+                        JSONWriter.Feature.UnquoteFieldName.mask | JSONWriter.Feature.UseSingleQuotes.mask);
                 this.mw.land();
                 this.mw.lconst_0();
                 this.mw.lcmp();
@@ -7370,14 +9491,16 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                 this.mw.visitLabel(label6);
                 this.mw.istore(var2(ObjectWriterCreatorASM.NAME_DIRECT));
             }
-            genIsEnabledAndAssign(JSONWriter.Feature.NotWriteDefaultValue.mask, var(ObjectWriterCreatorASM.NOT_WRITE_DEFAULT_VALUE));
+            genIsEnabledAndAssign(JSONWriter.Feature.NotWriteDefaultValue.mask,
+                    var(ObjectWriterCreatorASM.NOT_WRITE_DEFAULT_VALUE));
             this.mw.iload(var(ObjectWriterCreatorASM.NOT_WRITE_DEFAULT_VALUE));
             this.mw.ifeq(label);
             this.mw.iconst_0();
             this.mw.istore(var(ObjectWriterCreatorASM.WRITE_NULLS));
             this.mw.goto_(label2);
             this.mw.visitLabel(label);
-            genIsEnabledAndAssign(JSONWriter.Feature.WriteNulls.mask | JSONWriter.Feature.NullAsDefaultValue.mask, var(ObjectWriterCreatorASM.WRITE_NULLS));
+            genIsEnabledAndAssign(JSONWriter.Feature.WriteNulls.mask | JSONWriter.Feature.NullAsDefaultValue.mask,
+                    var(ObjectWriterCreatorASM.WRITE_NULLS));
             this.mw.visitLabel(label2);
         }
 
@@ -7429,19 +9552,25 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:102:0x01f1  */
-    /* JADX WARN: Found duplicated region for block: B:110:0x0211  */
-    /* JADX WARN: Found duplicated region for block: B:113:0x0219  */
+    /* JADX WARN: Found duplicated region for block: B:102:0x01f1 */
+    /* JADX WARN: Found duplicated region for block: B:110:0x0211 */
+    /* JADX WARN: Found duplicated region for block: B:113:0x0219 */
     /* JADX WARN: Found duplicated region for block: B:115:0x021e A[MOVE_INLINED] */
-    /* JADX WARN: Found duplicated region for block: B:119:0x013b A[EXC_TOP_SPLITTER, SYNTHETIC] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:119:0x013b
+     * A[EXC_TOP_SPLITTER, SYNTHETIC]
+     */
     /* JADX WARN: Found duplicated region for block: B:126:0x01e7 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:129:0x01bf A[SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:130:? A[LOOP:1: B:85:0x01af->B:130:?, LOOP_END, SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:81:0x01a5  */
-    /* JADX WARN: Found duplicated region for block: B:84:0x01ab  */
-    /* JADX WARN: Found duplicated region for block: B:87:0x01b5  */
-    /* JADX WARN: Found duplicated region for block: B:93:0x01cb  */
-    /* JADX WARN: Found duplicated region for block: B:95:0x01d7  */
+    /*
+     * JADX WARN: Found duplicated region for block: B:130:? A[LOOP:1:
+     * B:85:0x01af->B:130:?, LOOP_END, SYNTHETIC]
+     */
+    /* JADX WARN: Found duplicated region for block: B:81:0x01a5 */
+    /* JADX WARN: Found duplicated region for block: B:84:0x01ab */
+    /* JADX WARN: Found duplicated region for block: B:87:0x01b5 */
+    /* JADX WARN: Found duplicated region for block: B:93:0x01cb */
+    /* JADX WARN: Found duplicated region for block: B:95:0x01d7 */
     /* JADX WARN: Multi-variable type inference failed */
     @Override // com.alibaba.fastjson2.writer.ObjectWriterCreator
     public ObjectWriter createObjectWriter(Class cls, long j, final ObjectWriterProvider objectWriterProvider) {
@@ -7469,7 +9598,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                 Constructor declaredConstructor = beanInfoCreateBeanInfo.serializer.getDeclaredConstructor(null);
                 declaredConstructor.setAccessible(true);
                 return (ObjectWriter) declaredConstructor.newInstance(null);
-            } catch (IllegalAccessException | InstantiationException | NoSuchMethodException | InvocationTargetException e) {
+            } catch (IllegalAccessException | InstantiationException | NoSuchMethodException
+                    | InvocationTargetException e) {
                 throw new JSONException("create serializer error", e);
             }
         }
@@ -7479,8 +9609,10 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         }
         boolean zIsRecord = BeanUtils.isRecord(cls3);
         final long j6 = j | j5 | (zIsRecord ? FieldInfo.RECORD : 0L);
-        boolean z3 = (((JSONWriter.Feature.FieldBased.mask & j6) == 0 || cls3.isInterface()) && beanInfoCreateBeanInfo.alphabetic) ? false : true;
-        if (!Throwable.class.isAssignableFrom(cls3) && !BeanUtils.isExtendedMap(cls3) && beanInfoCreateBeanInfo.rootName == null) {
+        boolean z3 = (((JSONWriter.Feature.FieldBased.mask & j6) == 0 || cls3.isInterface())
+                && beanInfoCreateBeanInfo.alphabetic) ? false : true;
+        if (!Throwable.class.isAssignableFrom(cls3) && !BeanUtils.isExtendedMap(cls3)
+                && beanInfoCreateBeanInfo.rootName == null) {
             final LinkedHashMap linkedHashMap = new LinkedHashMap();
             if (z3 && !zIsRecord) {
                 final FieldInfo fieldInfo = new FieldInfo();
@@ -7496,10 +9628,12 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                     public final void accept(Object obj3) {
                         switch (i) {
                             case 0:
-                                this.b.lambda$createObjectWriter$0(fieldInfo, cls3, j6, objectWriterProvider, beanInfoCreateBeanInfo, linkedHashMap, (Field) obj3);
+                                this.b.lambda$createObjectWriter$0(fieldInfo, cls3, j6, objectWriterProvider,
+                                        beanInfoCreateBeanInfo, linkedHashMap, (Field) obj3);
                                 break;
                             default:
-                                this.b.lambda$createObjectWriter$2(fieldInfo, cls3, j6, objectWriterProvider, beanInfoCreateBeanInfo, linkedHashMap, (Field) obj3);
+                                this.b.lambda$createObjectWriter$2(fieldInfo, cls3, j6, objectWriterProvider,
+                                        beanInfoCreateBeanInfo, linkedHashMap, (Field) obj3);
                                 break;
                         }
                     }
@@ -7524,7 +9658,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                         if (!zIsRecord) {
                             obj = Throwable.class;
                             final int i2 = 0;
-                            BeanUtils.declaredFields(cls3, new Consumer(objectWriterCreatorASM) { // from class: me.hd.wauxv.obf.cqc
+                            BeanUtils.declaredFields(cls3, new Consumer(objectWriterCreatorASM) { // from class:
+                                                                                                  // me.hd.wauxv.obf.cqc
                                 public final /* synthetic */ ObjectWriterCreatorASM b;
 
                                 {
@@ -7535,10 +9670,14 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                                 public final void accept(Object obj3) {
                                     switch (i2) {
                                         case 0:
-                                            this.b.lambda$createObjectWriter$0(fieldInfo2, cls3, j6, objectWriterProvider, beanInfoCreateBeanInfo, linkedHashMap, (Field) obj3);
+                                            this.b.lambda$createObjectWriter$0(fieldInfo2, cls3, j6,
+                                                    objectWriterProvider, beanInfoCreateBeanInfo, linkedHashMap,
+                                                    (Field) obj3);
                                             break;
                                         default:
-                                            this.b.lambda$createObjectWriter$2(fieldInfo2, cls3, j6, objectWriterProvider, beanInfoCreateBeanInfo, linkedHashMap, (Field) obj3);
+                                            this.b.lambda$createObjectWriter$2(fieldInfo2, cls3, j6,
+                                                    objectWriterProvider, beanInfoCreateBeanInfo, linkedHashMap,
+                                                    (Field) obj3);
                                             break;
                                     }
                                 }
@@ -7550,7 +9689,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                         boolean z4 = beanInfoCreateBeanInfo.kotlin;
                         j2 = 0;
                         objectWriterCreatorASM = this;
-                        cqb cqbVar = new cqb(objectWriterCreatorASM, fieldInfo2, j6, beanInfoCreateBeanInfo, objectWriterProvider, cls3, zIsRecord, linkedHashMap, 1);
+                        cqb cqbVar = new cqb(objectWriterCreatorASM, fieldInfo2, j6, beanInfoCreateBeanInfo,
+                                objectWriterProvider, cls3, zIsRecord, linkedHashMap, 1);
                         cls3 = cls3;
                         linkedHashMap = linkedHashMap;
                         beanInfoCreateBeanInfo = beanInfoCreateBeanInfo;
@@ -7570,7 +9710,10 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                         sb.append(", fields ");
                         JSONArray jSONArray = new JSONArray();
                         for (FieldWriter fieldWriter2 : arrayList) {
-                            jSONArray.add(JSONObject.of("name", (Object) fieldWriter2.fieldName, f.y, (Object) fieldWriter2.fieldClass, "ordinal", (Object) Integer.valueOf(fieldWriter2.ordinal), "field", (Object) fieldWriter2.field, "method", (Object) fieldWriter2.method));
+                            jSONArray.add(JSONObject.of("name", (Object) fieldWriter2.fieldName, f.y,
+                                    (Object) fieldWriter2.fieldClass, "ordinal",
+                                    (Object) Integer.valueOf(fieldWriter2.ordinal), "field",
+                                    (Object) fieldWriter2.field, "method", (Object) fieldWriter2.method));
                         }
                         sb.append(jSONArray);
                         throw new JSONException(sb.toString(), e2);
@@ -7606,7 +9749,8 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
                     return super.createObjectWriter(cls, j, objectWriterProvider);
                 }
                 objectWriterCreatorASM.setDefaultValue(arrayList, cls3);
-                return objectWriterCreatorASM.jitWriter(cls3, objectWriterProvider, beanInfoCreateBeanInfo, arrayList, j3);
+                return objectWriterCreatorASM.jitWriter(cls3, objectWriterProvider, beanInfoCreateBeanInfo, arrayList,
+                        j3);
             }
             j2 = 0;
             cls2 = obj2;

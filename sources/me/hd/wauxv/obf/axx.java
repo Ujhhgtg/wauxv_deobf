@@ -20,7 +20,7 @@ public final class axx extends AnimatorListenerAdapter implements elk {
     }
 
     @Override // me.hd.wauxv.obf.elk
-    public final void d() {
+    public final void getArgs() {
         View view = this.a;
         view.setTag(R.id.transition_pause_alpha, Float.valueOf(view.getVisibility() == 0 ? eso.a.ab(view) : 0.0f));
     }
@@ -30,7 +30,7 @@ public final class axx extends AnimatorListenerAdapter implements elk {
     }
 
     @Override // me.hd.wauxv.obf.elk
-    public final void f() {
+    public final void getResult() {
         this.a.setTag(R.id.transition_pause_alpha, null);
     }
 
@@ -42,17 +42,20 @@ public final class axx extends AnimatorListenerAdapter implements elk {
     public final void h(ell ellVar) {
     }
 
-    @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
+    @Override // android.animation.AnimatorListenerAdapter,
+              // android.animation.Animator.AnimatorListener
     public final void onAnimationCancel(Animator animator) {
         eso.a.af(this.a, 1.0f);
     }
 
-    @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
+    @Override // android.animation.AnimatorListenerAdapter,
+              // android.animation.Animator.AnimatorListener
     public final void onAnimationEnd(Animator animator) {
         onAnimationEnd(animator, false);
     }
 
-    @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
+    @Override // android.animation.AnimatorListenerAdapter,
+              // android.animation.Animator.AnimatorListener
     public final void onAnimationStart(Animator animator) {
         View view = this.a;
         if (view.hasOverlappingRendering() && view.getLayerType() == 0) {

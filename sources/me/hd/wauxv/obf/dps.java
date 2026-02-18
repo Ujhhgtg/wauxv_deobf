@@ -58,9 +58,9 @@ public final class dps {
         this.i = dprVar9;
         dpr dprVar10 = new dpr(4096);
         this.j = dprVar10;
-        dpr dprVar11 = new dpr(q.a.a);
+        dpr dprVar11 = new dpr(q.a.cachedConstructors);
         this.k = dprVar11;
-        dpr dprVar12 = new dpr(q.a.b);
+        dpr dprVar12 = new dpr(q.a.second);
         this.l = dprVar12;
         dpr dprVar13 = new dpr(q.a.c);
         this.m = dprVar13;
@@ -78,7 +78,8 @@ public final class dps {
         this.s = dprVar19;
         dpr dprVar20 = new dpr(8198);
         this.t = dprVar20;
-        this.u = new dpr[]{dprVar, dprVar2, dprVar3, dprVar4, dprVar5, dprVar6, dprVar7, dprVar10, dprVar8, dprVar9, dprVar11, dprVar12, dprVar13, dprVar14, dprVar15, dprVar16, dprVar17, dprVar18, dprVar19, dprVar20};
+        this.u = new dpr[] { dprVar, dprVar2, dprVar3, dprVar4, dprVar5, dprVar6, dprVar7, dprVar10, dprVar8, dprVar9,
+                dprVar11, dprVar12, dprVar13, dprVar14, dprVar15, dprVar16, dprVar17, dprVar18, dprVar19, dprVar20 };
         this.x = new byte[20];
     }
 
@@ -105,7 +106,11 @@ public final class dps {
         ByteBuffer byteBuffer = amkVar.n(0).b;
         byteBuffer.get(bArr);
         if (ewz.an(bArr) <= 0) {
-            throw new amo(String.format("Unexpected magic: [0x%02x, 0x%02x, 0x%02x, 0x%02x, 0x%02x, 0x%02x, 0x%02x, 0x%02x]", Byte.valueOf(bArr[0]), Byte.valueOf(bArr[1]), Byte.valueOf(bArr[2]), Byte.valueOf(bArr[3]), Byte.valueOf(bArr[4]), Byte.valueOf(bArr[5]), Byte.valueOf(bArr[6]), Byte.valueOf(bArr[7])), null);
+            throw new amo(
+                    String.format("Unexpected magic: [0x%02x, 0x%02x, 0x%02x, 0x%02x, 0x%02x, 0x%02x, 0x%02x, 0x%02x]",
+                            Byte.valueOf(bArr[0]), Byte.valueOf(bArr[1]), Byte.valueOf(bArr[2]), Byte.valueOf(bArr[3]),
+                            Byte.valueOf(bArr[4]), Byte.valueOf(bArr[5]), Byte.valueOf(bArr[6]), Byte.valueOf(bArr[7])),
+                    null);
         }
         this.v = ewz.an(bArr);
         this.w = byteBuffer.getInt();
@@ -172,7 +177,7 @@ public final class dps {
             int i13 = 0;
             while (true) {
                 if (i13 >= length) {
-                    throw new IllegalArgumentException(bjs.i(s, "No such map item: "));
+                    throw new IllegalArgumentException(concatVar2Var1(s, "No such map item: "));
                 }
                 dprVar = dprVarArr[i13];
                 if (dprVar.a == s) {

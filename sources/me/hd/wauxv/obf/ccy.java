@@ -18,12 +18,14 @@ public final /* synthetic */ class ccy implements Choreographer.FrameCallback {
         switch (this.a) {
             case 0:
                 if (((ccz) this.b).a) {
-                    bzo.ar("textureViewRenderer");
+                    throwLateinitPropNotInitYet("textureViewRenderer");
                     throw null;
                 }
                 return;
             default:
-                (Build.VERSION.SDK_INT >= 28 ? Handler.createAsync(Looper.getMainLooper()) : new Handler(Looper.getMainLooper())).postDelayed(new hi((Context) this.b, 1), new Random().nextInt(Math.max(1000, 1)) + 5000);
+                (Build.VERSION.SDK_INT >= 28 ? Handler.createAsync(Looper.getMainLooper())
+                        : new Handler(Looper.getMainLooper()))
+                        .postDelayed(new hi((Context) this.b, 1), new Random().nextInt(Math.max(1000, 1)) + 5000);
                 return;
         }
     }

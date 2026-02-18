@@ -9,7 +9,7 @@ public final class bru extends cnd {
     public final cbm ad;
 
     public bru(yi yiVar, brn brnVar) {
-        bzo.q(brnVar, "json");
+        throwIfVar1IsNull(brnVar, "json");
         this.ac = yiVar;
         this.ad = brnVar.c;
     }
@@ -21,7 +21,7 @@ public final class bru extends cnd {
 
     @Override // me.hd.wauxv.obf.acm
     public final int f(dfx dfxVar) {
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         throw new IllegalStateException("unsupported");
     }
 
@@ -30,7 +30,7 @@ public final class bru extends cnd {
         yi yiVar = this.ac;
         String strS = yiVar.s();
         try {
-            bzo.q(strS, "<this>");
+            throwIfVar1IsNull(strS, "<this>");
             emu emuVarZ = bhs.z(strS);
             if (emuVarZ != null) {
                 return emuVarZ.a;
@@ -48,7 +48,7 @@ public final class bru extends cnd {
         yi yiVar = this.ac;
         String strS = yiVar.s();
         try {
-            bzo.q(strS, "<this>");
+            throwIfVar1IsNull(strS, "<this>");
             emz emzVarAa = bhs.aa(strS);
             if (emzVarAa != null) {
                 return emzVarAa.a;
@@ -67,7 +67,7 @@ public final class bru extends cnd {
         yi yiVar = this.ac;
         String strS = yiVar.s();
         try {
-            bzo.q(strS, "<this>");
+            throwIfVar1IsNull(strS, "<this>");
             emu emuVarZ = bhs.z(strS);
             if (emuVarZ != null) {
                 int i = emuVarZ.a;
@@ -90,7 +90,7 @@ public final class bru extends cnd {
         yi yiVar = this.ac;
         String strS = yiVar.s();
         try {
-            bzo.q(strS, "<this>");
+            throwIfVar1IsNull(strS, "<this>");
             emu emuVarZ = bhs.z(strS);
             if (emuVarZ != null) {
                 int i = emuVarZ.a;

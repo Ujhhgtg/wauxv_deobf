@@ -62,7 +62,10 @@ public class MethodCall implements Implementation.Composable {
     protected final TerminationHandler.Factory terminationHandler;
     protected final Assigner.Typing typing;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @HashCodeAndEqualsPlugin.Enhance(includeSyntheticFields = true)
     public class Appender implements ByteCodeAppender {
         private final List<ArgumentLoader.ArgumentProvider> argumentProviders;
@@ -86,9 +89,15 @@ public class MethodCall implements Implementation.Composable {
         }
 
         @Override // net.bytebuddy.implementation.bytecode.ByteCodeAppender
-        public ByteCodeAppender.Size apply(MethodVisitor methodVisitor, Implementation.Context context, MethodDescription methodDescription) {
+        public ByteCodeAppender.Size apply(MethodVisitor methodVisitor, Implementation.Context context,
+                MethodDescription methodDescription) {
             TargetHandler.Resolved resolvedResolve = this.targetHandler.resolve(methodDescription);
-            return new ByteCodeAppender.Size(new StackManipulation.Compound(this.terminationHandler.prepare(), toStackManipulation(methodDescription, toInvokedMethod(methodDescription, resolvedResolve), resolvedResolve)).apply(methodVisitor, context).getMaximalSize(), methodDescription.getStackSize());
+            return new ByteCodeAppender.Size(
+                    new StackManipulation.Compound(this.terminationHandler.prepare(),
+                            toStackManipulation(methodDescription, toInvokedMethod(methodDescription, resolvedResolve),
+                                    resolvedResolve))
+                            .apply(methodVisitor, context).getMaximalSize(),
+                    methodDescription.getStackSize());
         }
 
         public boolean equals(@MaybeNull Object obj) {
@@ -99,18 +108,31 @@ public class MethodCall implements Implementation.Composable {
                 return false;
             }
             Appender appender = (Appender) obj;
-            return this.implementationTarget.equals(appender.implementationTarget) && this.methodLocator.equals(appender.methodLocator) && this.argumentProviders.equals(appender.argumentProviders) && this.methodInvoker.equals(appender.methodInvoker) && this.targetHandler.equals(appender.targetHandler) && this.terminationHandler.equals(appender.terminationHandler) && MethodCall.this.equals(MethodCall.this);
+            return this.implementationTarget.equals(appender.implementationTarget)
+                    && this.methodLocator.equals(appender.methodLocator)
+                    && this.argumentProviders.equals(appender.argumentProviders)
+                    && this.methodInvoker.equals(appender.methodInvoker)
+                    && this.targetHandler.equals(appender.targetHandler)
+                    && this.terminationHandler.equals(appender.terminationHandler)
+                    && MethodCall.this.equals(MethodCall.this);
         }
 
         public int hashCode() {
-            return MethodCall.this.hashCode() + ((this.terminationHandler.hashCode() + ((this.targetHandler.hashCode() + ((this.methodInvoker.hashCode() + bjs.g(this.argumentProviders, (this.methodLocator.hashCode() + ((this.implementationTarget.hashCode() + (getClass().hashCode() * 31)) * 31)) * 31, 31)) * 31)) * 31)) * 31);
+            return MethodCall.this.hashCode() + ((this.terminationHandler.hashCode()
+                    + ((this.targetHandler.hashCode() + ((this.methodInvoker.hashCode() + bjs.g(this.argumentProviders,
+                            (this.methodLocator.hashCode()
+                                    + ((this.implementationTarget.hashCode() + (getClass().hashCode() * 31)) * 31))
+                                    * 31,
+                            31)) * 31)) * 31))
+                    * 31);
         }
 
         public MethodDescription toInvokedMethod(MethodDescription methodDescription, TargetHandler.Resolved resolved) {
             return this.methodLocator.resolve(resolved.getTypeDescription(), methodDescription);
         }
 
-        public StackManipulation toStackManipulation(MethodDescription methodDescription, MethodDescription methodDescription2, TargetHandler.Resolved resolved) {
+        public StackManipulation toStackManipulation(MethodDescription methodDescription,
+                MethodDescription methodDescription2, TargetHandler.Resolved resolved) {
             ArrayList<ArgumentLoader> arrayList = new ArrayList();
             Iterator<ArgumentLoader.ArgumentProvider> it = this.argumentProviders.iterator();
             while (it.hasNext()) {
@@ -118,45 +140,66 @@ public class MethodCall implements Implementation.Composable {
             }
             ParameterList<?> parameters = methodDescription2.getParameters();
             if (parameters.size() != arrayList.size()) {
-                throw new IllegalStateException(methodDescription2 + " does not accept " + arrayList.size() + " arguments");
+                throw new IllegalStateException(
+                        methodDescription2 + " does not accept " + arrayList.size() + " arguments");
             }
             Iterator<?> it2 = parameters.iterator();
             ArrayList arrayList2 = new ArrayList(arrayList.size());
             for (ArgumentLoader argumentLoader : arrayList) {
                 ParameterDescription parameterDescription = (ParameterDescription) it2.next();
                 MethodCall methodCall = MethodCall.this;
-                arrayList2.add(argumentLoader.toStackManipulation(parameterDescription, methodCall.assigner, methodCall.typing));
+                arrayList2.add(argumentLoader.toStackManipulation(parameterDescription, methodCall.assigner,
+                        methodCall.typing));
             }
             MethodCall methodCall2 = MethodCall.this;
-            StackManipulation stackManipulation = resolved.toStackManipulation(methodDescription2, methodCall2.assigner, methodCall2.typing);
+            StackManipulation stackManipulation = resolved.toStackManipulation(methodDescription2, methodCall2.assigner,
+                    methodCall2.typing);
             StackManipulation.Compound compound = new StackManipulation.Compound(arrayList2);
-            StackManipulation stackManipulation2 = this.methodInvoker.toStackManipulation(methodDescription2, this.implementationTarget);
+            StackManipulation stackManipulation2 = this.methodInvoker.toStackManipulation(methodDescription2,
+                    this.implementationTarget);
             TerminationHandler terminationHandler = this.terminationHandler;
             MethodCall methodCall3 = MethodCall.this;
-            return new StackManipulation.Compound(stackManipulation, compound, stackManipulation2, terminationHandler.toStackManipulation(methodDescription2, methodDescription, methodCall3.assigner, methodCall3.typing));
+            return new StackManipulation.Compound(stackManipulation, compound, stackManipulation2,
+                    terminationHandler.toStackManipulation(methodDescription2, methodDescription, methodCall3.assigner,
+                            methodCall3.typing));
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface ArgumentLoader {
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public interface ArgumentProvider {
             List<ArgumentLoader> resolve(MethodDescription methodDescription, MethodDescription methodDescription2);
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public interface Factory extends InstrumentedType.Prepareable {
             ArgumentProvider make(Implementation.Target target);
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class ForField implements ArgumentLoader {
             private final FieldDescription fieldDescription;
             private final MethodDescription instrumentedMethod;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ArgumentProvider implements ArgumentProvider {
                 private final FieldDescription fieldDescription;
@@ -169,7 +212,8 @@ public class MethodCall implements Implementation.Composable {
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.fieldDescription.equals(((ArgumentProvider) obj).fieldDescription);
+                    return obj != null && getClass() == obj.getClass()
+                            && this.fieldDescription.equals(((ArgumentProvider) obj).fieldDescription);
                 }
 
                 public int hashCode() {
@@ -177,12 +221,16 @@ public class MethodCall implements Implementation.Composable {
                 }
 
                 @Override // net.bytebuddy.implementation.MethodCall.ArgumentLoader.ArgumentProvider
-                public List<ArgumentLoader> resolve(MethodDescription methodDescription, MethodDescription methodDescription2) {
+                public List<ArgumentLoader> resolve(MethodDescription methodDescription,
+                        MethodDescription methodDescription2) {
                     return Collections.singletonList(new ForField(this.fieldDescription, methodDescription));
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class Factory implements Factory {
                 private final FieldLocator.Factory fieldLocatorFactory;
@@ -201,7 +249,8 @@ public class MethodCall implements Implementation.Composable {
                         return false;
                     }
                     Factory factory = (Factory) obj;
-                    return this.name.equals(factory.name) && this.fieldLocatorFactory.equals(factory.fieldLocatorFactory);
+                    return this.name.equals(factory.name)
+                            && this.fieldLocatorFactory.equals(factory.fieldLocatorFactory);
                 }
 
                 public int hashCode() {
@@ -210,11 +259,13 @@ public class MethodCall implements Implementation.Composable {
 
                 @Override // net.bytebuddy.implementation.MethodCall.ArgumentLoader.Factory
                 public ArgumentProvider make(Implementation.Target target) {
-                    FieldLocator.Resolution resolutionLocate = this.fieldLocatorFactory.make(target.getInstrumentedType()).locate(this.name);
+                    FieldLocator.Resolution resolutionLocate = this.fieldLocatorFactory
+                            .make(target.getInstrumentedType()).locate(this.name);
                     if (resolutionLocate.isResolved()) {
                         return new ArgumentProvider(resolutionLocate.getField());
                     }
-                    throw new IllegalStateException("Could not locate field '" + this.name + "' on " + target.getInstrumentedType());
+                    throw new IllegalStateException(
+                            "Could not locate field '" + this.name + "' on " + target.getInstrumentedType());
                 }
 
                 @Override // net.bytebuddy.dynamic.scaffold.InstrumentedType.Prepareable
@@ -236,32 +287,47 @@ public class MethodCall implements Implementation.Composable {
                     return false;
                 }
                 ForField forField = (ForField) obj;
-                return this.fieldDescription.equals(forField.fieldDescription) && this.instrumentedMethod.equals(forField.instrumentedMethod);
+                return this.fieldDescription.equals(forField.fieldDescription)
+                        && this.instrumentedMethod.equals(forField.instrumentedMethod);
             }
 
             public int hashCode() {
-                return this.instrumentedMethod.hashCode() + ((this.fieldDescription.hashCode() + (getClass().hashCode() * 31)) * 31);
+                return this.instrumentedMethod.hashCode()
+                        + ((this.fieldDescription.hashCode() + (getClass().hashCode() * 31)) * 31);
             }
 
             @Override // net.bytebuddy.implementation.MethodCall.ArgumentLoader
-            public StackManipulation toStackManipulation(ParameterDescription parameterDescription, Assigner assigner, Assigner.Typing typing) {
+            public StackManipulation toStackManipulation(ParameterDescription parameterDescription, Assigner assigner,
+                    Assigner.Typing typing) {
                 if (!this.fieldDescription.isStatic() && this.instrumentedMethod.isStatic()) {
-                    throw new IllegalStateException("Cannot access non-static " + this.fieldDescription + " from " + this.instrumentedMethod);
+                    throw new IllegalStateException(
+                            "Cannot access non-static " + this.fieldDescription + " from " + this.instrumentedMethod);
                 }
-                StackManipulation.Compound compound = new StackManipulation.Compound(this.fieldDescription.isStatic() ? StackManipulation.Trivial.INSTANCE : MethodVariableAccess.loadThis(), FieldAccess.forField(this.fieldDescription).read(), assigner.assign(this.fieldDescription.getType(), parameterDescription.getType(), typing));
+                StackManipulation.Compound compound = new StackManipulation.Compound(
+                        this.fieldDescription.isStatic() ? StackManipulation.Trivial.INSTANCE
+                                : MethodVariableAccess.loadThis(),
+                        FieldAccess.forField(this.fieldDescription).read(),
+                        assigner.assign(this.fieldDescription.getType(), parameterDescription.getType(), typing));
                 if (compound.isValid()) {
                     return compound;
                 }
-                throw new IllegalStateException("Cannot assign " + this.fieldDescription + " to " + parameterDescription);
+                throw new IllegalStateException(
+                        "Cannot assign " + this.fieldDescription + " to " + parameterDescription);
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class ForInstance implements ArgumentLoader, ArgumentProvider {
             private final FieldDescription fieldDescription;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class Factory implements Factory {
                 private static final String FIELD_PREFIX = "methodCall";
@@ -288,12 +354,16 @@ public class MethodCall implements Implementation.Composable {
 
                 @Override // net.bytebuddy.implementation.MethodCall.ArgumentLoader.Factory
                 public ArgumentProvider make(Implementation.Target target) {
-                    return new ForInstance((FieldDescription) target.getInstrumentedType().getDeclaredFields().filter(ElementMatchers.named(this.name)).getOnly());
+                    return new ForInstance((FieldDescription) target.getInstrumentedType().getDeclaredFields()
+                            .filter(ElementMatchers.named(this.name)).getOnly());
                 }
 
                 @Override // net.bytebuddy.dynamic.scaffold.InstrumentedType.Prepareable
                 public InstrumentedType prepare(InstrumentedType instrumentedType) {
-                    return instrumentedType.withAuxiliaryField(new FieldDescription.Token(this.name, q.a.i, TypeDescription.Generic.OfNonGenericType.ForLoadedType.of(this.value.getClass())), this.value);
+                    return instrumentedType.withAuxiliaryField(
+                            new FieldDescription.Token(this.name, q.a.i,
+                                    TypeDescription.Generic.OfNonGenericType.ForLoadedType.of(this.value.getClass())),
+                            this.value);
                 }
             }
 
@@ -305,7 +375,8 @@ public class MethodCall implements Implementation.Composable {
                 if (this == obj) {
                     return true;
                 }
-                return obj != null && getClass() == obj.getClass() && this.fieldDescription.equals(((ForInstance) obj).fieldDescription);
+                return obj != null && getClass() == obj.getClass()
+                        && this.fieldDescription.equals(((ForInstance) obj).fieldDescription);
             }
 
             public int hashCode() {
@@ -313,26 +384,37 @@ public class MethodCall implements Implementation.Composable {
             }
 
             @Override // net.bytebuddy.implementation.MethodCall.ArgumentLoader.ArgumentProvider
-            public List<ArgumentLoader> resolve(MethodDescription methodDescription, MethodDescription methodDescription2) {
+            public List<ArgumentLoader> resolve(MethodDescription methodDescription,
+                    MethodDescription methodDescription2) {
                 return Collections.singletonList(this);
             }
 
             @Override // net.bytebuddy.implementation.MethodCall.ArgumentLoader
-            public StackManipulation toStackManipulation(ParameterDescription parameterDescription, Assigner assigner, Assigner.Typing typing) {
-                StackManipulation.Compound compound = new StackManipulation.Compound(FieldAccess.forField(this.fieldDescription).read(), assigner.assign(this.fieldDescription.getType(), parameterDescription.getType(), typing));
+            public StackManipulation toStackManipulation(ParameterDescription parameterDescription, Assigner assigner,
+                    Assigner.Typing typing) {
+                StackManipulation.Compound compound = new StackManipulation.Compound(
+                        FieldAccess.forField(this.fieldDescription).read(),
+                        assigner.assign(this.fieldDescription.getType(), parameterDescription.getType(), typing));
                 if (compound.isValid()) {
                     return compound;
                 }
-                throw new IllegalStateException("Cannot assign " + this.fieldDescription.getType() + " to " + parameterDescription);
+                throw new IllegalStateException(
+                        "Cannot assign " + this.fieldDescription.getType() + " to " + parameterDescription);
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class ForInstrumentedType implements ArgumentLoader, ArgumentProvider {
             private final TypeDescription instrumentedType;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum Factory implements Factory {
                 INSTANCE;
 
@@ -355,7 +437,8 @@ public class MethodCall implements Implementation.Composable {
                 if (this == obj) {
                     return true;
                 }
-                return obj != null && getClass() == obj.getClass() && this.instrumentedType.equals(((ForInstrumentedType) obj).instrumentedType);
+                return obj != null && getClass() == obj.getClass()
+                        && this.instrumentedType.equals(((ForInstrumentedType) obj).instrumentedType);
             }
 
             public int hashCode() {
@@ -363,13 +446,18 @@ public class MethodCall implements Implementation.Composable {
             }
 
             @Override // net.bytebuddy.implementation.MethodCall.ArgumentLoader.ArgumentProvider
-            public List<ArgumentLoader> resolve(MethodDescription methodDescription, MethodDescription methodDescription2) {
+            public List<ArgumentLoader> resolve(MethodDescription methodDescription,
+                    MethodDescription methodDescription2) {
                 return Collections.singletonList(this);
             }
 
             @Override // net.bytebuddy.implementation.MethodCall.ArgumentLoader
-            public StackManipulation toStackManipulation(ParameterDescription parameterDescription, Assigner assigner, Assigner.Typing typing) {
-                StackManipulation.Compound compound = new StackManipulation.Compound(ClassConstant.of(this.instrumentedType), assigner.assign(TypeDescription.Generic.OfNonGenericType.ForLoadedType.of(Class.class), parameterDescription.getType(), typing));
+            public StackManipulation toStackManipulation(ParameterDescription parameterDescription, Assigner assigner,
+                    Assigner.Typing typing) {
+                StackManipulation.Compound compound = new StackManipulation.Compound(
+                        ClassConstant.of(this.instrumentedType),
+                        assigner.assign(TypeDescription.Generic.OfNonGenericType.ForLoadedType.of(Class.class),
+                                parameterDescription.getType(), typing));
                 if (compound.isValid()) {
                     return compound;
                 }
@@ -377,7 +465,10 @@ public class MethodCall implements Implementation.Composable {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class ForMethodCall implements ArgumentLoader {
             private final Appender appender;
@@ -385,7 +476,10 @@ public class MethodCall implements Implementation.Composable {
             private final MethodDescription methodDescription;
             private final TargetHandler.Resolved targetHandler;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ArgumentProvider implements ArgumentProvider {
                 private final Appender appender;
@@ -398,7 +492,8 @@ public class MethodCall implements Implementation.Composable {
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.appender.equals(((ArgumentProvider) obj).appender);
+                    return obj != null && getClass() == obj.getClass()
+                            && this.appender.equals(((ArgumentProvider) obj).appender);
                 }
 
                 public int hashCode() {
@@ -406,14 +501,20 @@ public class MethodCall implements Implementation.Composable {
                 }
 
                 @Override // net.bytebuddy.implementation.MethodCall.ArgumentLoader.ArgumentProvider
-                public List<ArgumentLoader> resolve(MethodDescription methodDescription, MethodDescription methodDescription2) {
+                public List<ArgumentLoader> resolve(MethodDescription methodDescription,
+                        MethodDescription methodDescription2) {
                     TargetHandler.Resolved resolvedResolve = this.appender.targetHandler.resolve(methodDescription);
                     Appender appender = this.appender;
-                    return Collections.singletonList(new ForMethodCall(appender, appender.toInvokedMethod(methodDescription, resolvedResolve), methodDescription, resolvedResolve));
+                    return Collections.singletonList(
+                            new ForMethodCall(appender, appender.toInvokedMethod(methodDescription, resolvedResolve),
+                                    methodDescription, resolvedResolve));
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class Factory implements Factory {
                 private final MethodCall methodCall;
@@ -426,7 +527,8 @@ public class MethodCall implements Implementation.Composable {
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.methodCall.equals(((Factory) obj).methodCall);
+                    return obj != null && getClass() == obj.getClass()
+                            && this.methodCall.equals(((Factory) obj).methodCall);
                 }
 
                 public int hashCode() {
@@ -446,7 +548,8 @@ public class MethodCall implements Implementation.Composable {
                 }
             }
 
-            public ForMethodCall(Appender appender, MethodDescription methodDescription, MethodDescription methodDescription2, TargetHandler.Resolved resolved) {
+            public ForMethodCall(Appender appender, MethodDescription methodDescription,
+                    MethodDescription methodDescription2, TargetHandler.Resolved resolved) {
                 this.appender = appender;
                 this.methodDescription = methodDescription;
                 this.instrumentedMethod = methodDescription2;
@@ -461,30 +564,49 @@ public class MethodCall implements Implementation.Composable {
                     return false;
                 }
                 ForMethodCall forMethodCall = (ForMethodCall) obj;
-                return this.appender.equals(forMethodCall.appender) && this.methodDescription.equals(forMethodCall.methodDescription) && this.instrumentedMethod.equals(forMethodCall.instrumentedMethod) && this.targetHandler.equals(forMethodCall.targetHandler);
+                return this.appender.equals(forMethodCall.appender)
+                        && this.methodDescription.equals(forMethodCall.methodDescription)
+                        && this.instrumentedMethod.equals(forMethodCall.instrumentedMethod)
+                        && this.targetHandler.equals(forMethodCall.targetHandler);
             }
 
             public int hashCode() {
-                return this.targetHandler.hashCode() + dkz.c(this.instrumentedMethod, dkz.c(this.methodDescription, (this.appender.hashCode() + (getClass().hashCode() * 31)) * 31, 31), 31);
+                return this.targetHandler.hashCode() + dkz.c(this.instrumentedMethod, dkz.c(this.methodDescription,
+                        (this.appender.hashCode() + (getClass().hashCode() * 31)) * 31, 31), 31);
             }
 
             @Override // net.bytebuddy.implementation.MethodCall.ArgumentLoader
-            public StackManipulation toStackManipulation(ParameterDescription parameterDescription, Assigner assigner, Assigner.Typing typing) {
-                StackManipulation.Compound compound = new StackManipulation.Compound(this.appender.toStackManipulation(this.instrumentedMethod, this.methodDescription, this.targetHandler), assigner.assign(this.methodDescription.isConstructor() ? this.methodDescription.getDeclaringType().asGenericType() : this.methodDescription.getReturnType(), parameterDescription.getType(), typing));
+            public StackManipulation toStackManipulation(ParameterDescription parameterDescription, Assigner assigner,
+                    Assigner.Typing typing) {
+                StackManipulation.Compound compound = new StackManipulation.Compound(
+                        this.appender.toStackManipulation(this.instrumentedMethod, this.methodDescription,
+                                this.targetHandler),
+                        assigner.assign(
+                                this.methodDescription.isConstructor()
+                                        ? this.methodDescription.getDeclaringType().asGenericType()
+                                        : this.methodDescription.getReturnType(),
+                                parameterDescription.getType(), typing));
                 if (compound.isValid()) {
                     return compound;
                 }
-                throw new IllegalStateException("Cannot assign return type of " + this.methodDescription + " to " + parameterDescription);
+                throw new IllegalStateException(
+                        "Cannot assign return type of " + this.methodDescription + " to " + parameterDescription);
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class ForMethodParameter implements ArgumentLoader {
             private final int index;
             private final MethodDescription instrumentedMethod;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class Factory implements Factory, ArgumentProvider {
                 private final int index;
@@ -515,15 +637,20 @@ public class MethodCall implements Implementation.Composable {
                 }
 
                 @Override // net.bytebuddy.implementation.MethodCall.ArgumentLoader.ArgumentProvider
-                public List<ArgumentLoader> resolve(MethodDescription methodDescription, MethodDescription methodDescription2) {
+                public List<ArgumentLoader> resolve(MethodDescription methodDescription,
+                        MethodDescription methodDescription2) {
                     if (this.index < methodDescription.getParameters().size()) {
                         return Collections.singletonList(new ForMethodParameter(this.index, methodDescription));
                     }
-                    throw new IllegalStateException(methodDescription + " does not have a parameter with index " + this.index + ", " + methodDescription.getParameters().size() + " defined");
+                    throw new IllegalStateException(methodDescription + " does not have a parameter with index "
+                            + this.index + ", " + methodDescription.getParameters().size() + " defined");
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum OfInstrumentedMethod implements Factory, ArgumentProvider {
                 INSTANCE;
 
@@ -538,11 +665,13 @@ public class MethodCall implements Implementation.Composable {
                 }
 
                 @Override // net.bytebuddy.implementation.MethodCall.ArgumentLoader.ArgumentProvider
-                public List<ArgumentLoader> resolve(MethodDescription methodDescription, MethodDescription methodDescription2) {
+                public List<ArgumentLoader> resolve(MethodDescription methodDescription,
+                        MethodDescription methodDescription2) {
                     ArrayList arrayList = new ArrayList(methodDescription.getParameters().size());
                     Iterator<?> it = methodDescription.getParameters().iterator();
                     while (it.hasNext()) {
-                        arrayList.add(new ForMethodParameter(((ParameterDescription) it.next()).getIndex(), methodDescription));
+                        arrayList.add(new ForMethodParameter(((ParameterDescription) it.next()).getIndex(),
+                                methodDescription));
                     }
                     return arrayList;
                 }
@@ -561,7 +690,8 @@ public class MethodCall implements Implementation.Composable {
                     return false;
                 }
                 ForMethodParameter forMethodParameter = (ForMethodParameter) obj;
-                return this.index == forMethodParameter.index && this.instrumentedMethod.equals(forMethodParameter.instrumentedMethod);
+                return this.index == forMethodParameter.index
+                        && this.instrumentedMethod.equals(forMethodParameter.instrumentedMethod);
             }
 
             public int hashCode() {
@@ -569,22 +699,33 @@ public class MethodCall implements Implementation.Composable {
             }
 
             @Override // net.bytebuddy.implementation.MethodCall.ArgumentLoader
-            public StackManipulation toStackManipulation(ParameterDescription parameterDescription, Assigner assigner, Assigner.Typing typing) {
-                ParameterDescription parameterDescription2 = (ParameterDescription) this.instrumentedMethod.getParameters().get(this.index);
-                StackManipulation.Compound compound = new StackManipulation.Compound(MethodVariableAccess.load(parameterDescription2), assigner.assign(parameterDescription2.getType(), parameterDescription.getType(), typing));
+            public StackManipulation toStackManipulation(ParameterDescription parameterDescription, Assigner assigner,
+                    Assigner.Typing typing) {
+                ParameterDescription parameterDescription2 = (ParameterDescription) this.instrumentedMethod
+                        .getParameters().get(this.index);
+                StackManipulation.Compound compound = new StackManipulation.Compound(
+                        MethodVariableAccess.load(parameterDescription2),
+                        assigner.assign(parameterDescription2.getType(), parameterDescription.getType(), typing));
                 if (compound.isValid()) {
                     return compound;
                 }
-                throw new IllegalStateException("Cannot assign " + parameterDescription2 + " to " + parameterDescription + " for " + this.instrumentedMethod);
+                throw new IllegalStateException("Cannot assign " + parameterDescription2 + " to " + parameterDescription
+                        + " for " + this.instrumentedMethod);
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class ForMethodParameterArray implements ArgumentLoader {
             private final ParameterList<?> parameters;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum ForInstrumentedMethod implements Factory, ArgumentProvider {
                 INSTANCE;
 
@@ -599,7 +740,8 @@ public class MethodCall implements Implementation.Composable {
                 }
 
                 @Override // net.bytebuddy.implementation.MethodCall.ArgumentLoader.ArgumentProvider
-                public List<ArgumentLoader> resolve(MethodDescription methodDescription, MethodDescription methodDescription2) {
+                public List<ArgumentLoader> resolve(MethodDescription methodDescription,
+                        MethodDescription methodDescription2) {
                     return Collections.singletonList(new ForMethodParameterArray(methodDescription.getParameters()));
                 }
             }
@@ -612,7 +754,8 @@ public class MethodCall implements Implementation.Composable {
                 if (this == obj) {
                     return true;
                 }
-                return obj != null && getClass() == obj.getClass() && this.parameters.equals(((ForMethodParameterArray) obj).parameters);
+                return obj != null && getClass() == obj.getClass()
+                        && this.parameters.equals(((ForMethodParameterArray) obj).parameters);
             }
 
             public int hashCode() {
@@ -620,13 +763,15 @@ public class MethodCall implements Implementation.Composable {
             }
 
             @Override // net.bytebuddy.implementation.MethodCall.ArgumentLoader
-            public StackManipulation toStackManipulation(ParameterDescription parameterDescription, Assigner assigner, Assigner.Typing typing) {
+            public StackManipulation toStackManipulation(ParameterDescription parameterDescription, Assigner assigner,
+                    Assigner.Typing typing) {
                 TypeDescription.Generic componentType;
                 if (parameterDescription.getType().represents(Object.class)) {
                     componentType = TypeDescription.Generic.OfNonGenericType.ForLoadedType.of(Object.class);
                 } else {
                     if (!parameterDescription.getType().isArray()) {
-                        throw new IllegalStateException("Cannot set method parameter array for non-array type: " + parameterDescription);
+                        throw new IllegalStateException(
+                                "Cannot set method parameter array for non-array type: " + parameterDescription);
                     }
                     componentType = parameterDescription.getType().getComponentType();
                 }
@@ -634,9 +779,12 @@ public class MethodCall implements Implementation.Composable {
                 Iterator<?> it = this.parameters.iterator();
                 while (it.hasNext()) {
                     ParameterDescription parameterDescription2 = (ParameterDescription) it.next();
-                    StackManipulation.Compound compound = new StackManipulation.Compound(MethodVariableAccess.load(parameterDescription2), assigner.assign(parameterDescription2.getType(), componentType, typing));
+                    StackManipulation.Compound compound = new StackManipulation.Compound(
+                            MethodVariableAccess.load(parameterDescription2),
+                            assigner.assign(parameterDescription2.getType(), componentType, typing));
                     if (!compound.isValid()) {
-                        throw new IllegalStateException("Cannot assign " + parameterDescription2 + " to " + componentType);
+                        throw new IllegalStateException(
+                                "Cannot assign " + parameterDescription2 + " to " + componentType);
                     }
                     arrayList.add(compound);
                 }
@@ -644,13 +792,19 @@ public class MethodCall implements Implementation.Composable {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class ForMethodParameterArrayElement implements ArgumentLoader {
             private final int index;
             private final ParameterDescription parameterDescription;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class OfInvokedMethod implements Factory, ArgumentProvider {
                 private final int index;
@@ -681,22 +835,30 @@ public class MethodCall implements Implementation.Composable {
                 }
 
                 @Override // net.bytebuddy.implementation.MethodCall.ArgumentLoader.ArgumentProvider
-                public List<ArgumentLoader> resolve(MethodDescription methodDescription, MethodDescription methodDescription2) {
+                public List<ArgumentLoader> resolve(MethodDescription methodDescription,
+                        MethodDescription methodDescription2) {
                     if (methodDescription.getParameters().size() <= this.index) {
-                        throw new IllegalStateException(methodDescription + " does not declare a parameter with index " + this.index + ", " + methodDescription.getParameters().size() + " defined");
+                        throw new IllegalStateException(methodDescription + " does not declare a parameter with index "
+                                + this.index + ", " + methodDescription.getParameters().size() + " defined");
                     }
-                    if (!((ParameterDescription) methodDescription.getParameters().get(this.index)).getType().isArray()) {
-                        throw new IllegalStateException("Cannot access an item from non-array parameter " + methodDescription.getParameters().get(this.index) + " at index " + this.index);
+                    if (!((ParameterDescription) methodDescription.getParameters().get(this.index)).getType()
+                            .isArray()) {
+                        throw new IllegalStateException("Cannot access an item from non-array parameter "
+                                + methodDescription.getParameters().get(this.index) + " at index " + this.index);
                     }
                     ArrayList arrayList = new ArrayList(methodDescription2.getParameters().size());
                     for (int i = 0; i < methodDescription2.getParameters().size(); i++) {
-                        arrayList.add(new ForMethodParameterArrayElement((ParameterDescription) methodDescription.getParameters().get(this.index), i));
+                        arrayList.add(new ForMethodParameterArrayElement(
+                                (ParameterDescription) methodDescription.getParameters().get(this.index), i));
                     }
                     return arrayList;
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class OfParameter implements Factory, ArgumentProvider {
                 private final int arrayIndex;
@@ -733,14 +895,20 @@ public class MethodCall implements Implementation.Composable {
                 }
 
                 @Override // net.bytebuddy.implementation.MethodCall.ArgumentLoader.ArgumentProvider
-                public List<ArgumentLoader> resolve(MethodDescription methodDescription, MethodDescription methodDescription2) {
+                public List<ArgumentLoader> resolve(MethodDescription methodDescription,
+                        MethodDescription methodDescription2) {
                     if (methodDescription.getParameters().size() > this.index) {
-                        if (((ParameterDescription) methodDescription.getParameters().get(this.index)).getType().isArray()) {
-                            return Collections.singletonList(new ForMethodParameterArrayElement((ParameterDescription) methodDescription.getParameters().get(this.index), this.arrayIndex));
+                        if (((ParameterDescription) methodDescription.getParameters().get(this.index)).getType()
+                                .isArray()) {
+                            return Collections.singletonList(new ForMethodParameterArrayElement(
+                                    (ParameterDescription) methodDescription.getParameters().get(this.index),
+                                    this.arrayIndex));
                         }
-                        throw new IllegalStateException("Cannot access an item from non-array parameter " + methodDescription.getParameters().get(this.index) + " at index " + this.index);
+                        throw new IllegalStateException("Cannot access an item from non-array parameter "
+                                + methodDescription.getParameters().get(this.index) + " at index " + this.index);
                     }
-                    throw new IllegalStateException(methodDescription + " does not declare a parameter with index " + this.index + ", " + methodDescription.getParameters().size() + " defined");
+                    throw new IllegalStateException(methodDescription + " does not declare a parameter with index "
+                            + this.index + ", " + methodDescription.getParameters().size() + " defined");
                 }
             }
 
@@ -757,7 +925,8 @@ public class MethodCall implements Implementation.Composable {
                     return false;
                 }
                 ForMethodParameterArrayElement forMethodParameterArrayElement = (ForMethodParameterArrayElement) obj;
-                return this.index == forMethodParameterArrayElement.index && this.parameterDescription.equals(forMethodParameterArrayElement.parameterDescription);
+                return this.index == forMethodParameterArrayElement.index
+                        && this.parameterDescription.equals(forMethodParameterArrayElement.parameterDescription);
             }
 
             public int hashCode() {
@@ -765,16 +934,25 @@ public class MethodCall implements Implementation.Composable {
             }
 
             @Override // net.bytebuddy.implementation.MethodCall.ArgumentLoader
-            public StackManipulation toStackManipulation(ParameterDescription parameterDescription, Assigner assigner, Assigner.Typing typing) {
-                StackManipulation.Compound compound = new StackManipulation.Compound(MethodVariableAccess.load(this.parameterDescription), IntegerConstant.forValue(this.index), ArrayAccess.of(this.parameterDescription.getType().getComponentType()).load(), assigner.assign(this.parameterDescription.getType().getComponentType(), parameterDescription.getType(), typing));
+            public StackManipulation toStackManipulation(ParameterDescription parameterDescription, Assigner assigner,
+                    Assigner.Typing typing) {
+                StackManipulation.Compound compound = new StackManipulation.Compound(
+                        MethodVariableAccess.load(this.parameterDescription), IntegerConstant.forValue(this.index),
+                        ArrayAccess.of(this.parameterDescription.getType().getComponentType()).load(),
+                        assigner.assign(this.parameterDescription.getType().getComponentType(),
+                                parameterDescription.getType(), typing));
                 if (compound.isValid()) {
                     return compound;
                 }
-                throw new IllegalStateException("Cannot assign " + this.parameterDescription.getType().getComponentType() + " to " + parameterDescription);
+                throw new IllegalStateException("Cannot assign "
+                        + this.parameterDescription.getType().getComponentType() + " to " + parameterDescription);
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public enum ForNullConstant implements ArgumentLoader, ArgumentProvider, Factory {
             INSTANCE;
 
@@ -789,12 +967,14 @@ public class MethodCall implements Implementation.Composable {
             }
 
             @Override // net.bytebuddy.implementation.MethodCall.ArgumentLoader.ArgumentProvider
-            public List<ArgumentLoader> resolve(MethodDescription methodDescription, MethodDescription methodDescription2) {
+            public List<ArgumentLoader> resolve(MethodDescription methodDescription,
+                    MethodDescription methodDescription2) {
                 return Collections.singletonList(this);
             }
 
             @Override // net.bytebuddy.implementation.MethodCall.ArgumentLoader
-            public StackManipulation toStackManipulation(ParameterDescription parameterDescription, Assigner assigner, Assigner.Typing typing) {
+            public StackManipulation toStackManipulation(ParameterDescription parameterDescription, Assigner assigner,
+                    Assigner.Typing typing) {
                 if (!parameterDescription.getType().isPrimitive()) {
                     return NullConstant.INSTANCE;
                 }
@@ -802,7 +982,10 @@ public class MethodCall implements Implementation.Composable {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class ForStackManipulation implements ArgumentLoader, ArgumentProvider, Factory {
             private final StackManipulation stackManipulation;
@@ -817,7 +1000,9 @@ public class MethodCall implements Implementation.Composable {
                     return ForNullConstant.INSTANCE;
                 }
                 ConstantValue constantValueWrapOrNull = ConstantValue.Simple.wrapOrNull(obj);
-                return constantValueWrapOrNull == null ? new ForInstance.Factory(obj) : new ForStackManipulation(constantValueWrapOrNull.toStackManipulation(), constantValueWrapOrNull.getTypeDescription());
+                return constantValueWrapOrNull == null ? new ForInstance.Factory(obj)
+                        : new ForStackManipulation(constantValueWrapOrNull.toStackManipulation(),
+                                constantValueWrapOrNull.getTypeDescription());
             }
 
             public boolean equals(@MaybeNull Object obj) {
@@ -828,7 +1013,8 @@ public class MethodCall implements Implementation.Composable {
                     return false;
                 }
                 ForStackManipulation forStackManipulation = (ForStackManipulation) obj;
-                return this.stackManipulation.equals(forStackManipulation.stackManipulation) && this.typeDefinition.equals(forStackManipulation.typeDefinition);
+                return this.stackManipulation.equals(forStackManipulation.stackManipulation)
+                        && this.typeDefinition.equals(forStackManipulation.typeDefinition);
             }
 
             public int hashCode() {
@@ -846,13 +1032,16 @@ public class MethodCall implements Implementation.Composable {
             }
 
             @Override // net.bytebuddy.implementation.MethodCall.ArgumentLoader.ArgumentProvider
-            public List<ArgumentLoader> resolve(MethodDescription methodDescription, MethodDescription methodDescription2) {
+            public List<ArgumentLoader> resolve(MethodDescription methodDescription,
+                    MethodDescription methodDescription2) {
                 return Collections.singletonList(this);
             }
 
             @Override // net.bytebuddy.implementation.MethodCall.ArgumentLoader
-            public StackManipulation toStackManipulation(ParameterDescription parameterDescription, Assigner assigner, Assigner.Typing typing) {
-                StackManipulation stackManipulationAssign = assigner.assign(this.typeDefinition.asGenericType(), parameterDescription.getType(), typing);
+            public StackManipulation toStackManipulation(ParameterDescription parameterDescription, Assigner assigner,
+                    Assigner.Typing typing) {
+                StackManipulation stackManipulationAssign = assigner.assign(this.typeDefinition.asGenericType(),
+                        parameterDescription.getType(), typing);
                 if (stackManipulationAssign.isValid()) {
                     return new StackManipulation.Compound(this.stackManipulation, stackManipulationAssign);
                 }
@@ -865,12 +1054,18 @@ public class MethodCall implements Implementation.Composable {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class ForThisReference implements ArgumentLoader, ArgumentProvider {
             private final TypeDescription instrumentedType;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum Factory implements Factory {
                 INSTANCE;
 
@@ -893,7 +1088,8 @@ public class MethodCall implements Implementation.Composable {
                 if (this == obj) {
                     return true;
                 }
-                return obj != null && getClass() == obj.getClass() && this.instrumentedType.equals(((ForThisReference) obj).instrumentedType);
+                return obj != null && getClass() == obj.getClass()
+                        && this.instrumentedType.equals(((ForThisReference) obj).instrumentedType);
             }
 
             public int hashCode() {
@@ -901,7 +1097,8 @@ public class MethodCall implements Implementation.Composable {
             }
 
             @Override // net.bytebuddy.implementation.MethodCall.ArgumentLoader.ArgumentProvider
-            public List<ArgumentLoader> resolve(MethodDescription methodDescription, MethodDescription methodDescription2) {
+            public List<ArgumentLoader> resolve(MethodDescription methodDescription,
+                    MethodDescription methodDescription2) {
                 if (!methodDescription.isStatic()) {
                     return Collections.singletonList(this);
                 }
@@ -909,33 +1106,46 @@ public class MethodCall implements Implementation.Composable {
             }
 
             @Override // net.bytebuddy.implementation.MethodCall.ArgumentLoader
-            public StackManipulation toStackManipulation(ParameterDescription parameterDescription, Assigner assigner, Assigner.Typing typing) {
-                StackManipulation.Compound compound = new StackManipulation.Compound(MethodVariableAccess.loadThis(), assigner.assign(this.instrumentedType.asGenericType(), parameterDescription.getType(), typing));
+            public StackManipulation toStackManipulation(ParameterDescription parameterDescription, Assigner assigner,
+                    Assigner.Typing typing) {
+                StackManipulation.Compound compound = new StackManipulation.Compound(MethodVariableAccess.loadThis(),
+                        assigner.assign(this.instrumentedType.asGenericType(), parameterDescription.getType(), typing));
                 if (compound.isValid()) {
                     return compound;
                 }
-                throw new IllegalStateException("Cannot assign " + this.instrumentedType + " to " + parameterDescription);
+                throw new IllegalStateException(
+                        "Cannot assign " + this.instrumentedType + " to " + parameterDescription);
             }
         }
 
-        StackManipulation toStackManipulation(ParameterDescription parameterDescription, Assigner assigner, Assigner.Typing typing);
+        StackManipulation toStackManipulation(ParameterDescription parameterDescription, Assigner assigner,
+                Assigner.Typing typing);
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @HashCodeAndEqualsPlugin.Enhance
     public static class FieldSetting implements Implementation.Composable {
         private final MethodCall methodCall;
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public enum Appender implements ByteCodeAppender {
             INSTANCE;
 
             @Override // net.bytebuddy.implementation.bytecode.ByteCodeAppender
-            public ByteCodeAppender.Size apply(MethodVisitor methodVisitor, Implementation.Context context, MethodDescription methodDescription) {
+            public ByteCodeAppender.Size apply(MethodVisitor methodVisitor, Implementation.Context context,
+                    MethodDescription methodDescription) {
                 if (methodDescription.getReturnType().represents(Void.TYPE)) {
-                    return new ByteCodeAppender.Size(MethodReturn.VOID.apply(methodVisitor, context).getMaximalSize(), methodDescription.getStackSize());
+                    return new ByteCodeAppender.Size(MethodReturn.VOID.apply(methodVisitor, context).getMaximalSize(),
+                            methodDescription.getStackSize());
                 }
-                throw new IllegalStateException("Instrumented method " + methodDescription + " does not return void for field setting method call");
+                throw new IllegalStateException("Instrumented method " + methodDescription
+                        + " does not return void for field setting method call");
             }
         }
 
@@ -957,7 +1167,8 @@ public class MethodCall implements Implementation.Composable {
             if (this == obj) {
                 return true;
             }
-            return obj != null && getClass() == obj.getClass() && this.methodCall.equals(((FieldSetting) obj).methodCall);
+            return obj != null && getClass() == obj.getClass()
+                    && this.methodCall.equals(((FieldSetting) obj).methodCall);
         }
 
         public int hashCode() {
@@ -979,20 +1190,32 @@ public class MethodCall implements Implementation.Composable {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface MethodInvoker {
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public interface Factory {
             MethodInvoker make(TypeDescription typeDescription);
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class ForContextualInvocation implements MethodInvoker {
             private final TypeDescription instrumentedType;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum Factory implements Factory {
                 INSTANCE;
 
@@ -1010,7 +1233,8 @@ public class MethodCall implements Implementation.Composable {
                 if (this == obj) {
                     return true;
                 }
-                return obj != null && getClass() == obj.getClass() && this.instrumentedType.equals(((ForContextualInvocation) obj).instrumentedType);
+                return obj != null && getClass() == obj.getClass()
+                        && this.instrumentedType.equals(((ForContextualInvocation) obj).instrumentedType);
             }
 
             public int hashCode() {
@@ -1018,20 +1242,29 @@ public class MethodCall implements Implementation.Composable {
             }
 
             @Override // net.bytebuddy.implementation.MethodCall.MethodInvoker
-            public StackManipulation toStackManipulation(MethodDescription methodDescription, Implementation.Target target) {
+            public StackManipulation toStackManipulation(MethodDescription methodDescription,
+                    Implementation.Target target) {
                 if (!methodDescription.isVirtual() || methodDescription.isInvokableOn(this.instrumentedType)) {
-                    return methodDescription.isVirtual() ? MethodInvocation.invoke(methodDescription).virtual(this.instrumentedType) : MethodInvocation.invoke(methodDescription);
+                    return methodDescription.isVirtual()
+                            ? MethodInvocation.invoke(methodDescription).virtual(this.instrumentedType)
+                            : MethodInvocation.invoke(methodDescription);
                 }
                 throw new IllegalStateException("Cannot invoke " + methodDescription + " on " + this.instrumentedType);
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class ForDefaultMethodInvocation implements MethodInvoker {
             private final TypeDescription instrumentedType;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum Factory implements Factory {
                 INSTANCE;
 
@@ -1049,7 +1282,8 @@ public class MethodCall implements Implementation.Composable {
                 if (this == obj) {
                     return true;
                 }
-                return obj != null && getClass() == obj.getClass() && this.instrumentedType.equals(((ForDefaultMethodInvocation) obj).instrumentedType);
+                return obj != null && getClass() == obj.getClass()
+                        && this.instrumentedType.equals(((ForDefaultMethodInvocation) obj).instrumentedType);
             }
 
             public int hashCode() {
@@ -1057,11 +1291,16 @@ public class MethodCall implements Implementation.Composable {
             }
 
             @Override // net.bytebuddy.implementation.MethodCall.MethodInvoker
-            public StackManipulation toStackManipulation(MethodDescription methodDescription, Implementation.Target target) {
+            public StackManipulation toStackManipulation(MethodDescription methodDescription,
+                    Implementation.Target target) {
                 if (!methodDescription.isInvokableOn(this.instrumentedType)) {
-                    throw new IllegalStateException("Cannot invoke " + methodDescription + " as default method of " + this.instrumentedType);
+                    throw new IllegalStateException(
+                            "Cannot invoke " + methodDescription + " as default method of " + this.instrumentedType);
                 }
-                Implementation.SpecialMethodInvocation specialMethodInvocationWithCheckedCompatibilityTo = target.invokeDefault(methodDescription.asSignatureToken(), methodDescription.getDeclaringType().asErasure()).withCheckedCompatibilityTo(methodDescription.asTypeToken());
+                Implementation.SpecialMethodInvocation specialMethodInvocationWithCheckedCompatibilityTo = target
+                        .invokeDefault(methodDescription.asSignatureToken(),
+                                methodDescription.getDeclaringType().asErasure())
+                        .withCheckedCompatibilityTo(methodDescription.asTypeToken());
                 if (specialMethodInvocationWithCheckedCompatibilityTo.isValid()) {
                     return specialMethodInvocationWithCheckedCompatibilityTo;
                 }
@@ -1069,12 +1308,18 @@ public class MethodCall implements Implementation.Composable {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class ForSuperMethodInvocation implements MethodInvoker {
             private final TypeDescription instrumentedType;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum Factory implements Factory {
                 INSTANCE;
 
@@ -1095,7 +1340,8 @@ public class MethodCall implements Implementation.Composable {
                 if (this == obj) {
                     return true;
                 }
-                return obj != null && getClass() == obj.getClass() && this.instrumentedType.equals(((ForSuperMethodInvocation) obj).instrumentedType);
+                return obj != null && getClass() == obj.getClass()
+                        && this.instrumentedType.equals(((ForSuperMethodInvocation) obj).instrumentedType);
             }
 
             public int hashCode() {
@@ -1103,11 +1349,15 @@ public class MethodCall implements Implementation.Composable {
             }
 
             @Override // net.bytebuddy.implementation.MethodCall.MethodInvoker
-            public StackManipulation toStackManipulation(MethodDescription methodDescription, Implementation.Target target) {
+            public StackManipulation toStackManipulation(MethodDescription methodDescription,
+                    Implementation.Target target) {
                 if (!methodDescription.isInvokableOn(target.getOriginType().asErasure())) {
-                    throw new IllegalStateException("Cannot invoke " + methodDescription + " as super method of " + this.instrumentedType);
+                    throw new IllegalStateException(
+                            "Cannot invoke " + methodDescription + " as super method of " + this.instrumentedType);
                 }
-                Implementation.SpecialMethodInvocation specialMethodInvocationWithCheckedCompatibilityTo = target.invokeDominant(methodDescription.asSignatureToken()).withCheckedCompatibilityTo(methodDescription.asTypeToken());
+                Implementation.SpecialMethodInvocation specialMethodInvocationWithCheckedCompatibilityTo = target
+                        .invokeDominant(methodDescription.asSignatureToken())
+                        .withCheckedCompatibilityTo(methodDescription.asTypeToken());
                 if (specialMethodInvocationWithCheckedCompatibilityTo.isValid()) {
                     return specialMethodInvocationWithCheckedCompatibilityTo;
                 }
@@ -1115,12 +1365,18 @@ public class MethodCall implements Implementation.Composable {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class ForVirtualInvocation implements MethodInvoker {
             private final TypeDescription typeDescription;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class Factory implements Factory {
                 private final TypeDescription typeDescription;
@@ -1133,7 +1389,8 @@ public class MethodCall implements Implementation.Composable {
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.typeDescription.equals(((Factory) obj).typeDescription);
+                    return obj != null && getClass() == obj.getClass()
+                            && this.typeDescription.equals(((Factory) obj).typeDescription);
                 }
 
                 public int hashCode() {
@@ -1149,7 +1406,10 @@ public class MethodCall implements Implementation.Composable {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum WithImplicitType implements MethodInvoker, Factory {
                 INSTANCE;
 
@@ -1159,8 +1419,10 @@ public class MethodCall implements Implementation.Composable {
                 }
 
                 @Override // net.bytebuddy.implementation.MethodCall.MethodInvoker
-                public StackManipulation toStackManipulation(MethodDescription methodDescription, Implementation.Target target) {
-                    if (methodDescription.isAccessibleTo(target.getInstrumentedType()) && methodDescription.isVirtual()) {
+                public StackManipulation toStackManipulation(MethodDescription methodDescription,
+                        Implementation.Target target) {
+                    if (methodDescription.isAccessibleTo(target.getInstrumentedType())
+                            && methodDescription.isVirtual()) {
                         return MethodInvocation.invoke(methodDescription);
                     }
                     throw new IllegalStateException("Cannot invoke " + methodDescription + " virtually");
@@ -1175,7 +1437,8 @@ public class MethodCall implements Implementation.Composable {
                 if (this == obj) {
                     return true;
                 }
-                return obj != null && getClass() == obj.getClass() && this.typeDescription.equals(((ForVirtualInvocation) obj).typeDescription);
+                return obj != null && getClass() == obj.getClass()
+                        && this.typeDescription.equals(((ForVirtualInvocation) obj).typeDescription);
             }
 
             public int hashCode() {
@@ -1183,7 +1446,8 @@ public class MethodCall implements Implementation.Composable {
             }
 
             @Override // net.bytebuddy.implementation.MethodCall.MethodInvoker
-            public StackManipulation toStackManipulation(MethodDescription methodDescription, Implementation.Target target) {
+            public StackManipulation toStackManipulation(MethodDescription methodDescription,
+                    Implementation.Target target) {
                 if (methodDescription.isInvokableOn(this.typeDescription)) {
                     return MethodInvocation.invoke(methodDescription).virtual(this.typeDescription);
                 }
@@ -1194,28 +1458,41 @@ public class MethodCall implements Implementation.Composable {
         StackManipulation toStackManipulation(MethodDescription methodDescription, Implementation.Target target);
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface MethodLocator {
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public interface Factory {
             MethodLocator make(TypeDescription typeDescription);
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class ForElementMatcher implements MethodLocator {
             private final TypeDescription instrumentedType;
             private final ElementMatcher<? super MethodDescription> matcher;
             private final MethodGraph.Compiler methodGraphCompiler;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class Factory implements Factory {
                 private final ElementMatcher<? super MethodDescription> matcher;
                 private final MethodGraph.Compiler methodGraphCompiler;
 
-                public Factory(ElementMatcher<? super MethodDescription> elementMatcher, MethodGraph.Compiler compiler) {
+                public Factory(ElementMatcher<? super MethodDescription> elementMatcher,
+                        MethodGraph.Compiler compiler) {
                     this.matcher = elementMatcher;
                     this.methodGraphCompiler = compiler;
                 }
@@ -1228,7 +1505,8 @@ public class MethodCall implements Implementation.Composable {
                         return false;
                     }
                     Factory factory = (Factory) obj;
-                    return this.matcher.equals(factory.matcher) && this.methodGraphCompiler.equals(factory.methodGraphCompiler);
+                    return this.matcher.equals(factory.matcher)
+                            && this.methodGraphCompiler.equals(factory.methodGraphCompiler);
                 }
 
                 public int hashCode() {
@@ -1241,7 +1519,8 @@ public class MethodCall implements Implementation.Composable {
                 }
             }
 
-            public ForElementMatcher(TypeDescription typeDescription, ElementMatcher<? super MethodDescription> elementMatcher, MethodGraph.Compiler compiler) {
+            public ForElementMatcher(TypeDescription typeDescription,
+                    ElementMatcher<? super MethodDescription> elementMatcher, MethodGraph.Compiler compiler) {
                 this.instrumentedType = typeDescription;
                 this.matcher = elementMatcher;
                 this.methodGraphCompiler = compiler;
@@ -1255,25 +1534,40 @@ public class MethodCall implements Implementation.Composable {
                     return false;
                 }
                 ForElementMatcher forElementMatcher = (ForElementMatcher) obj;
-                return this.instrumentedType.equals(forElementMatcher.instrumentedType) && this.matcher.equals(forElementMatcher.matcher) && this.methodGraphCompiler.equals(forElementMatcher.methodGraphCompiler);
+                return this.instrumentedType.equals(forElementMatcher.instrumentedType)
+                        && this.matcher.equals(forElementMatcher.matcher)
+                        && this.methodGraphCompiler.equals(forElementMatcher.methodGraphCompiler);
             }
 
             public int hashCode() {
-                return this.methodGraphCompiler.hashCode() + dkz.i(this.matcher, dkz.f(this.instrumentedType, getClass().hashCode() * 31, 31), 31);
+                return this.methodGraphCompiler.hashCode()
+                        + dkz.i(this.matcher, dkz.f(this.instrumentedType, getClass().hashCode() * 31, 31), 31);
             }
 
             @Override // net.bytebuddy.implementation.MethodCall.MethodLocator
             public MethodDescription resolve(TypeDescription typeDescription, MethodDescription methodDescription) {
                 TypeDescription.Generic superClass = this.instrumentedType.getSuperClass();
-                List listOf = CompoundList.of(superClass == null ? Collections.EMPTY_LIST : superClass.getDeclaredMethods().filter(ElementMatchers.isConstructor().and(this.matcher)), this.instrumentedType.getDeclaredMethods().filter(ElementMatchers.not(ElementMatchers.isVirtual()).and(this.matcher)), this.methodGraphCompiler.compile((TypeDefinition) typeDescription, this.instrumentedType).listNodes().asMethodList().filter(this.matcher));
+                List listOf = CompoundList.of(
+                        superClass == null ? Collections.EMPTY_LIST
+                                : superClass.getDeclaredMethods()
+                                        .filter(ElementMatchers.isConstructor().and(this.matcher)),
+                        this.instrumentedType.getDeclaredMethods()
+                                .filter(ElementMatchers.not(ElementMatchers.isVirtual()).and(this.matcher)),
+                        this.methodGraphCompiler.compile((TypeDefinition) typeDescription, this.instrumentedType)
+                                .listNodes().asMethodList().filter(this.matcher));
                 if (listOf.size() == 1) {
                     return (MethodDescription) listOf.get(0);
                 }
-                throw new IllegalStateException(this.instrumentedType + " does not define exactly one virtual method or constructor for " + this.matcher + " but contained " + listOf.size() + " candidates: " + listOf);
+                throw new IllegalStateException(
+                        this.instrumentedType + " does not define exactly one virtual method or constructor for "
+                                + this.matcher + " but contained " + listOf.size() + " candidates: " + listOf);
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class ForExplicitMethod implements MethodLocator, Factory {
             private final MethodDescription methodDescription;
@@ -1286,7 +1580,8 @@ public class MethodCall implements Implementation.Composable {
                 if (this == obj) {
                     return true;
                 }
-                return obj != null && getClass() == obj.getClass() && this.methodDescription.equals(((ForExplicitMethod) obj).methodDescription);
+                return obj != null && getClass() == obj.getClass()
+                        && this.methodDescription.equals(((ForExplicitMethod) obj).methodDescription);
             }
 
             public int hashCode() {
@@ -1304,7 +1599,10 @@ public class MethodCall implements Implementation.Composable {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public enum ForInstrumentedMethod implements MethodLocator, Factory {
             INSTANCE;
 
@@ -1322,20 +1620,32 @@ public class MethodCall implements Implementation.Composable {
         MethodDescription resolve(TypeDescription typeDescription, MethodDescription methodDescription);
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface TargetHandler {
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public interface Factory extends InstrumentedType.Prepareable {
             TargetHandler make(Implementation.Target target);
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class ForConstructingInvocation implements TargetHandler, Resolved {
             private final TypeDescription instrumentedType;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum Factory implements Factory {
                 INSTANCE;
 
@@ -1358,7 +1668,8 @@ public class MethodCall implements Implementation.Composable {
                 if (this == obj) {
                     return true;
                 }
-                return obj != null && getClass() == obj.getClass() && this.instrumentedType.equals(((ForConstructingInvocation) obj).instrumentedType);
+                return obj != null && getClass() == obj.getClass()
+                        && this.instrumentedType.equals(((ForConstructingInvocation) obj).instrumentedType);
             }
 
             @Override // net.bytebuddy.implementation.MethodCall.TargetHandler.Resolved
@@ -1376,17 +1687,25 @@ public class MethodCall implements Implementation.Composable {
             }
 
             @Override // net.bytebuddy.implementation.MethodCall.TargetHandler.Resolved
-            public StackManipulation toStackManipulation(MethodDescription methodDescription, Assigner assigner, Assigner.Typing typing) {
-                return new StackManipulation.Compound(TypeCreation.of(methodDescription.getDeclaringType().asErasure()), Duplication.SINGLE);
+            public StackManipulation toStackManipulation(MethodDescription methodDescription, Assigner assigner,
+                    Assigner.Typing typing) {
+                return new StackManipulation.Compound(TypeCreation.of(methodDescription.getDeclaringType().asErasure()),
+                        Duplication.SINGLE);
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class ForField implements TargetHandler, Resolved {
             private final FieldDescription fieldDescription;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class Factory implements Factory {
                 private final Location location;
@@ -1399,7 +1718,8 @@ public class MethodCall implements Implementation.Composable {
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.location.equals(((Factory) obj).location);
+                    return obj != null && getClass() == obj.getClass()
+                            && this.location.equals(((Factory) obj).location);
                 }
 
                 public int hashCode() {
@@ -1409,10 +1729,12 @@ public class MethodCall implements Implementation.Composable {
                 @Override // net.bytebuddy.implementation.MethodCall.TargetHandler.Factory
                 public TargetHandler make(Implementation.Target target) {
                     FieldDescription fieldDescriptionResolve = this.location.resolve(target.getInstrumentedType());
-                    if (fieldDescriptionResolve.isStatic() || target.getInstrumentedType().isAssignableTo(fieldDescriptionResolve.getDeclaringType().asErasure())) {
+                    if (fieldDescriptionResolve.isStatic() || target.getInstrumentedType()
+                            .isAssignableTo(fieldDescriptionResolve.getDeclaringType().asErasure())) {
                         return new ForField(fieldDescriptionResolve);
                     }
-                    throw new IllegalStateException("Cannot access " + fieldDescriptionResolve + " from " + target.getInstrumentedType());
+                    throw new IllegalStateException(
+                            "Cannot access " + fieldDescriptionResolve + " from " + target.getInstrumentedType());
                 }
 
                 @Override // net.bytebuddy.dynamic.scaffold.InstrumentedType.Prepareable
@@ -1421,10 +1743,16 @@ public class MethodCall implements Implementation.Composable {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public interface Location {
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class ForExplicitField implements Location {
                     private final FieldDescription fieldDescription;
@@ -1437,7 +1765,8 @@ public class MethodCall implements Implementation.Composable {
                         if (this == obj) {
                             return true;
                         }
-                        return obj != null && getClass() == obj.getClass() && this.fieldDescription.equals(((ForExplicitField) obj).fieldDescription);
+                        return obj != null && getClass() == obj.getClass()
+                                && this.fieldDescription.equals(((ForExplicitField) obj).fieldDescription);
                     }
 
                     public int hashCode() {
@@ -1450,7 +1779,10 @@ public class MethodCall implements Implementation.Composable {
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class ForImplicitField implements Location {
                     private final FieldLocator.Factory fieldLocatorFactory;
@@ -1469,7 +1801,8 @@ public class MethodCall implements Implementation.Composable {
                             return false;
                         }
                         ForImplicitField forImplicitField = (ForImplicitField) obj;
-                        return this.name.equals(forImplicitField.name) && this.fieldLocatorFactory.equals(forImplicitField.fieldLocatorFactory);
+                        return this.name.equals(forImplicitField.name)
+                                && this.fieldLocatorFactory.equals(forImplicitField.fieldLocatorFactory);
                     }
 
                     public int hashCode() {
@@ -1478,11 +1811,13 @@ public class MethodCall implements Implementation.Composable {
 
                     @Override // net.bytebuddy.implementation.MethodCall.TargetHandler.ForField.Location
                     public FieldDescription resolve(TypeDescription typeDescription) {
-                        FieldLocator.Resolution resolutionLocate = this.fieldLocatorFactory.make(typeDescription).locate(this.name);
+                        FieldLocator.Resolution resolutionLocate = this.fieldLocatorFactory.make(typeDescription)
+                                .locate(this.name);
                         if (resolutionLocate.isResolved()) {
                             return resolutionLocate.getField();
                         }
-                        throw new IllegalStateException("Could not locate field name " + this.name + " on " + typeDescription);
+                        throw new IllegalStateException(
+                                "Could not locate field name " + this.name + " on " + typeDescription);
                     }
                 }
 
@@ -1497,7 +1832,8 @@ public class MethodCall implements Implementation.Composable {
                 if (this == obj) {
                     return true;
                 }
-                return obj != null && getClass() == obj.getClass() && this.fieldDescription.equals(((ForField) obj).fieldDescription);
+                return obj != null && getClass() == obj.getClass()
+                        && this.fieldDescription.equals(((ForField) obj).fieldDescription);
             }
 
             @Override // net.bytebuddy.implementation.MethodCall.TargetHandler.Resolved
@@ -1515,24 +1851,38 @@ public class MethodCall implements Implementation.Composable {
             }
 
             @Override // net.bytebuddy.implementation.MethodCall.TargetHandler.Resolved
-            public StackManipulation toStackManipulation(MethodDescription methodDescription, Assigner assigner, Assigner.Typing typing) {
-                if (!methodDescription.isMethod() || !methodDescription.isVirtual() || !methodDescription.isVisibleTo(this.fieldDescription.getType().asErasure())) {
-                    throw new IllegalStateException("Cannot invoke " + methodDescription + " on " + this.fieldDescription);
+            public StackManipulation toStackManipulation(MethodDescription methodDescription, Assigner assigner,
+                    Assigner.Typing typing) {
+                if (!methodDescription.isMethod() || !methodDescription.isVirtual()
+                        || !methodDescription.isVisibleTo(this.fieldDescription.getType().asErasure())) {
+                    throw new IllegalStateException(
+                            "Cannot invoke " + methodDescription + " on " + this.fieldDescription);
                 }
-                StackManipulation stackManipulationAssign = assigner.assign(this.fieldDescription.getType(), methodDescription.getDeclaringType().asGenericType(), typing);
+                StackManipulation stackManipulationAssign = assigner.assign(this.fieldDescription.getType(),
+                        methodDescription.getDeclaringType().asGenericType(), typing);
                 if (stackManipulationAssign.isValid()) {
-                    return new StackManipulation.Compound((methodDescription.isStatic() || this.fieldDescription.isStatic()) ? StackManipulation.Trivial.INSTANCE : MethodVariableAccess.loadThis(), FieldAccess.forField(this.fieldDescription).read(), stackManipulationAssign);
+                    return new StackManipulation.Compound(
+                            (methodDescription.isStatic() || this.fieldDescription.isStatic())
+                                    ? StackManipulation.Trivial.INSTANCE
+                                    : MethodVariableAccess.loadThis(),
+                            FieldAccess.forField(this.fieldDescription).read(), stackManipulationAssign);
                 }
                 throw new IllegalStateException("Cannot invoke " + methodDescription + " on " + this.fieldDescription);
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class ForMethodCall implements TargetHandler {
             private final Appender appender;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class Factory implements Factory {
                 private final MethodCall methodCall;
@@ -1545,7 +1895,8 @@ public class MethodCall implements Implementation.Composable {
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.methodCall.equals(((Factory) obj).methodCall);
+                    return obj != null && getClass() == obj.getClass()
+                            && this.methodCall.equals(((Factory) obj).methodCall);
                 }
 
                 public int hashCode() {
@@ -1565,7 +1916,10 @@ public class MethodCall implements Implementation.Composable {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class Resolved implements Resolved {
                 private final Appender appender;
@@ -1573,7 +1927,8 @@ public class MethodCall implements Implementation.Composable {
                 private final MethodDescription methodDescription;
                 private final Resolved targetHandler;
 
-                public Resolved(Appender appender, MethodDescription methodDescription, MethodDescription methodDescription2, Resolved resolved) {
+                public Resolved(Appender appender, MethodDescription methodDescription,
+                        MethodDescription methodDescription2, Resolved resolved) {
                     this.appender = appender;
                     this.methodDescription = methodDescription;
                     this.instrumentedMethod = methodDescription2;
@@ -1588,28 +1943,41 @@ public class MethodCall implements Implementation.Composable {
                         return false;
                     }
                     Resolved resolved = (Resolved) obj;
-                    return this.appender.equals(resolved.appender) && this.methodDescription.equals(resolved.methodDescription) && this.instrumentedMethod.equals(resolved.instrumentedMethod) && this.targetHandler.equals(resolved.targetHandler);
+                    return this.appender.equals(resolved.appender)
+                            && this.methodDescription.equals(resolved.methodDescription)
+                            && this.instrumentedMethod.equals(resolved.instrumentedMethod)
+                            && this.targetHandler.equals(resolved.targetHandler);
                 }
 
                 @Override // net.bytebuddy.implementation.MethodCall.TargetHandler.Resolved
                 public TypeDescription getTypeDescription() {
-                    return this.methodDescription.isConstructor() ? this.methodDescription.getDeclaringType().asErasure() : this.methodDescription.getReturnType().asErasure();
+                    return this.methodDescription.isConstructor()
+                            ? this.methodDescription.getDeclaringType().asErasure()
+                            : this.methodDescription.getReturnType().asErasure();
                 }
 
                 public int hashCode() {
-                    return this.targetHandler.hashCode() + dkz.c(this.instrumentedMethod, dkz.c(this.methodDescription, (this.appender.hashCode() + (getClass().hashCode() * 31)) * 31, 31), 31);
+                    return this.targetHandler.hashCode() + dkz.c(this.instrumentedMethod, dkz.c(this.methodDescription,
+                            (this.appender.hashCode() + (getClass().hashCode() * 31)) * 31, 31), 31);
                 }
 
                 @Override // net.bytebuddy.implementation.MethodCall.TargetHandler.Resolved
-                public StackManipulation toStackManipulation(MethodDescription methodDescription, Assigner assigner, Assigner.Typing typing) {
-                    StackManipulation stackManipulationAssign = assigner.assign(this.methodDescription.isConstructor() ? this.methodDescription.getDeclaringType().asGenericType() : this.methodDescription.getReturnType(), methodDescription.getDeclaringType().asGenericType(), typing);
+                public StackManipulation toStackManipulation(MethodDescription methodDescription, Assigner assigner,
+                        Assigner.Typing typing) {
+                    StackManipulation stackManipulationAssign = assigner.assign(
+                            this.methodDescription.isConstructor()
+                                    ? this.methodDescription.getDeclaringType().asGenericType()
+                                    : this.methodDescription.getReturnType(),
+                            methodDescription.getDeclaringType().asGenericType(), typing);
                     if (stackManipulationAssign.isValid()) {
-                        return new StackManipulation.Compound(this.appender.toStackManipulation(this.instrumentedMethod, this.methodDescription, this.targetHandler), stackManipulationAssign);
+                        return new StackManipulation.Compound(this.appender.toStackManipulation(this.instrumentedMethod,
+                                this.methodDescription, this.targetHandler), stackManipulationAssign);
                     }
                     StringBuilder sb = new StringBuilder("Cannot invoke ");
                     sb.append(methodDescription);
                     sb.append(" on ");
-                    sb.append(this.methodDescription.isConstructor() ? this.methodDescription.getDeclaringType() : this.methodDescription.getReturnType());
+                    sb.append(this.methodDescription.isConstructor() ? this.methodDescription.getDeclaringType()
+                            : this.methodDescription.getReturnType());
                     throw new IllegalStateException(sb.toString());
                 }
             }
@@ -1622,7 +1990,8 @@ public class MethodCall implements Implementation.Composable {
                 if (this == obj) {
                     return true;
                 }
-                return obj != null && getClass() == obj.getClass() && this.appender.equals(((ForMethodCall) obj).appender);
+                return obj != null && getClass() == obj.getClass()
+                        && this.appender.equals(((ForMethodCall) obj).appender);
             }
 
             public int hashCode() {
@@ -1633,16 +2002,23 @@ public class MethodCall implements Implementation.Composable {
             public Resolved resolve(MethodDescription methodDescription) {
                 Resolved resolvedResolve = this.appender.targetHandler.resolve(methodDescription);
                 Appender appender = this.appender;
-                return new Resolved(appender, appender.toInvokedMethod(methodDescription, resolvedResolve), methodDescription, resolvedResolve);
+                return new Resolved(appender, appender.toInvokedMethod(methodDescription, resolvedResolve),
+                        methodDescription, resolvedResolve);
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class ForMethodParameter implements TargetHandler, Factory {
             private final int index;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class Resolved implements Resolved {
                 private final ParameterDescription parameterDescription;
@@ -1655,7 +2031,8 @@ public class MethodCall implements Implementation.Composable {
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.parameterDescription.equals(((Resolved) obj).parameterDescription);
+                    return obj != null && getClass() == obj.getClass()
+                            && this.parameterDescription.equals(((Resolved) obj).parameterDescription);
                 }
 
                 @Override // net.bytebuddy.implementation.MethodCall.TargetHandler.Resolved
@@ -1668,12 +2045,16 @@ public class MethodCall implements Implementation.Composable {
                 }
 
                 @Override // net.bytebuddy.implementation.MethodCall.TargetHandler.Resolved
-                public StackManipulation toStackManipulation(MethodDescription methodDescription, Assigner assigner, Assigner.Typing typing) {
-                    StackManipulation stackManipulationAssign = assigner.assign(this.parameterDescription.getType(), methodDescription.getDeclaringType().asGenericType(), typing);
+                public StackManipulation toStackManipulation(MethodDescription methodDescription, Assigner assigner,
+                        Assigner.Typing typing) {
+                    StackManipulation stackManipulationAssign = assigner.assign(this.parameterDescription.getType(),
+                            methodDescription.getDeclaringType().asGenericType(), typing);
                     if (stackManipulationAssign.isValid()) {
-                        return new StackManipulation.Compound(MethodVariableAccess.load(this.parameterDescription), stackManipulationAssign);
+                        return new StackManipulation.Compound(MethodVariableAccess.load(this.parameterDescription),
+                                stackManipulationAssign);
                     }
-                    throw new IllegalStateException("Cannot invoke " + methodDescription + " on " + this.parameterDescription.getType());
+                    throw new IllegalStateException(
+                            "Cannot invoke " + methodDescription + " on " + this.parameterDescription.getType());
                 }
             }
 
@@ -1707,16 +2088,23 @@ public class MethodCall implements Implementation.Composable {
                 if (this.index < methodDescription.getParameters().size()) {
                     return new Resolved((ParameterDescription) methodDescription.getParameters().get(this.index));
                 }
-                throw new IllegalArgumentException(methodDescription + " does not have a parameter with index " + this.index);
+                throw new IllegalArgumentException(
+                        methodDescription + " does not have a parameter with index " + this.index);
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class ForSelfOrStaticInvocation implements TargetHandler {
             private final TypeDescription instrumentedType;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum Factory implements Factory {
                 INSTANCE;
 
@@ -1731,7 +2119,10 @@ public class MethodCall implements Implementation.Composable {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class Resolved implements Resolved {
                 private final MethodDescription instrumentedMethod;
@@ -1750,7 +2141,8 @@ public class MethodCall implements Implementation.Composable {
                         return false;
                     }
                     Resolved resolved = (Resolved) obj;
-                    return this.instrumentedType.equals(resolved.instrumentedType) && this.instrumentedMethod.equals(resolved.instrumentedMethod);
+                    return this.instrumentedType.equals(resolved.instrumentedType)
+                            && this.instrumentedMethod.equals(resolved.instrumentedMethod);
                 }
 
                 @Override // net.bytebuddy.implementation.MethodCall.TargetHandler.Resolved
@@ -1759,21 +2151,32 @@ public class MethodCall implements Implementation.Composable {
                 }
 
                 public int hashCode() {
-                    return this.instrumentedMethod.hashCode() + dkz.f(this.instrumentedType, getClass().hashCode() * 31, 31);
+                    return this.instrumentedMethod.hashCode()
+                            + dkz.f(this.instrumentedType, getClass().hashCode() * 31, 31);
                 }
 
                 @Override // net.bytebuddy.implementation.MethodCall.TargetHandler.Resolved
-                public StackManipulation toStackManipulation(MethodDescription methodDescription, Assigner assigner, Assigner.Typing typing) {
-                    if (this.instrumentedMethod.isStatic() && !methodDescription.isStatic() && !methodDescription.isConstructor()) {
-                        throw new IllegalStateException("Cannot invoke " + methodDescription + " from " + this.instrumentedMethod);
+                public StackManipulation toStackManipulation(MethodDescription methodDescription, Assigner assigner,
+                        Assigner.Typing typing) {
+                    if (this.instrumentedMethod.isStatic() && !methodDescription.isStatic()
+                            && !methodDescription.isConstructor()) {
+                        throw new IllegalStateException(
+                                "Cannot invoke " + methodDescription + " from " + this.instrumentedMethod);
                     }
-                    if (!methodDescription.isConstructor() || (this.instrumentedMethod.isConstructor() && (this.instrumentedType.equals(methodDescription.getDeclaringType().asErasure()) || (this.instrumentedType.getSuperClass() != null && this.instrumentedType.getSuperClass().asErasure().equals(methodDescription.getDeclaringType().asErasure()))))) {
+                    if (!methodDescription.isConstructor() || (this.instrumentedMethod.isConstructor()
+                            && (this.instrumentedType.equals(methodDescription.getDeclaringType().asErasure())
+                                    || (this.instrumentedType.getSuperClass() != null
+                                            && this.instrumentedType.getSuperClass().asErasure()
+                                                    .equals(methodDescription.getDeclaringType().asErasure()))))) {
                         StackManipulation[] stackManipulationArr = new StackManipulation[2];
-                        stackManipulationArr[0] = methodDescription.isStatic() ? StackManipulation.Trivial.INSTANCE : MethodVariableAccess.loadThis();
-                        stackManipulationArr[1] = methodDescription.isConstructor() ? Duplication.SINGLE : StackManipulation.Trivial.INSTANCE;
+                        stackManipulationArr[0] = methodDescription.isStatic() ? StackManipulation.Trivial.INSTANCE
+                                : MethodVariableAccess.loadThis();
+                        stackManipulationArr[1] = methodDescription.isConstructor() ? Duplication.SINGLE
+                                : StackManipulation.Trivial.INSTANCE;
                         return new StackManipulation.Compound(stackManipulationArr);
                     }
-                    throw new IllegalStateException("Cannot invoke " + methodDescription + " from " + this.instrumentedMethod + " in " + this.instrumentedType);
+                    throw new IllegalStateException("Cannot invoke " + methodDescription + " from "
+                            + this.instrumentedMethod + " in " + this.instrumentedType);
                 }
             }
 
@@ -1785,7 +2188,8 @@ public class MethodCall implements Implementation.Composable {
                 if (this == obj) {
                     return true;
                 }
-                return obj != null && getClass() == obj.getClass() && this.instrumentedType.equals(((ForSelfOrStaticInvocation) obj).instrumentedType);
+                return obj != null && getClass() == obj.getClass()
+                        && this.instrumentedType.equals(((ForSelfOrStaticInvocation) obj).instrumentedType);
             }
 
             public int hashCode() {
@@ -1798,12 +2202,18 @@ public class MethodCall implements Implementation.Composable {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class ForValue implements TargetHandler, Resolved {
             private final FieldDescription.InDefinedShape fieldDescription;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class Factory implements Factory {
                 private static final String FIELD_PREFIX = "invocationTarget";
@@ -1836,12 +2246,14 @@ public class MethodCall implements Implementation.Composable {
 
                 @Override // net.bytebuddy.implementation.MethodCall.TargetHandler.Factory
                 public TargetHandler make(Implementation.Target target) {
-                    return new ForValue((FieldDescription.InDefinedShape) target.getInstrumentedType().getDeclaredFields().filter(ElementMatchers.named(this.name)).getOnly());
+                    return new ForValue((FieldDescription.InDefinedShape) target.getInstrumentedType()
+                            .getDeclaredFields().filter(ElementMatchers.named(this.name)).getOnly());
                 }
 
                 @Override // net.bytebuddy.dynamic.scaffold.InstrumentedType.Prepareable
                 public InstrumentedType prepare(InstrumentedType instrumentedType) {
-                    return instrumentedType.withAuxiliaryField(new FieldDescription.Token(this.name, 4169, this.fieldType), this.target);
+                    return instrumentedType.withAuxiliaryField(
+                            new FieldDescription.Token(this.name, 4169, this.fieldType), this.target);
                 }
             }
 
@@ -1853,7 +2265,8 @@ public class MethodCall implements Implementation.Composable {
                 if (this == obj) {
                     return true;
                 }
-                return obj != null && getClass() == obj.getClass() && this.fieldDescription.equals(((ForValue) obj).fieldDescription);
+                return obj != null && getClass() == obj.getClass()
+                        && this.fieldDescription.equals(((ForValue) obj).fieldDescription);
             }
 
             @Override // net.bytebuddy.implementation.MethodCall.TargetHandler.Resolved
@@ -1871,23 +2284,33 @@ public class MethodCall implements Implementation.Composable {
             }
 
             @Override // net.bytebuddy.implementation.MethodCall.TargetHandler.Resolved
-            public StackManipulation toStackManipulation(MethodDescription methodDescription, Assigner assigner, Assigner.Typing typing) {
-                StackManipulation stackManipulationAssign = assigner.assign(this.fieldDescription.getType(), methodDescription.getDeclaringType().asGenericType(), typing);
+            public StackManipulation toStackManipulation(MethodDescription methodDescription, Assigner assigner,
+                    Assigner.Typing typing) {
+                StackManipulation stackManipulationAssign = assigner.assign(this.fieldDescription.getType(),
+                        methodDescription.getDeclaringType().asGenericType(), typing);
                 if (stackManipulationAssign.isValid()) {
-                    return new StackManipulation.Compound(FieldAccess.forField(this.fieldDescription).read(), stackManipulationAssign);
+                    return new StackManipulation.Compound(FieldAccess.forField(this.fieldDescription).read(),
+                            stackManipulationAssign);
                 }
                 throw new IllegalStateException("Cannot invoke " + methodDescription + " on " + this.fieldDescription);
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public interface Resolved {
             TypeDescription getTypeDescription();
 
-            StackManipulation toStackManipulation(MethodDescription methodDescription, Assigner assigner, Assigner.Typing typing);
+            StackManipulation toStackManipulation(MethodDescription methodDescription, Assigner assigner,
+                    Assigner.Typing typing);
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class Simple implements TargetHandler, Factory, Resolved {
             private final StackManipulation stackManipulation;
@@ -1906,7 +2329,8 @@ public class MethodCall implements Implementation.Composable {
                     return false;
                 }
                 Simple simple = (Simple) obj;
-                return this.typeDescription.equals(simple.typeDescription) && this.stackManipulation.equals(simple.stackManipulation);
+                return this.typeDescription.equals(simple.typeDescription)
+                        && this.stackManipulation.equals(simple.stackManipulation);
             }
 
             @Override // net.bytebuddy.implementation.MethodCall.TargetHandler.Resolved
@@ -1934,7 +2358,8 @@ public class MethodCall implements Implementation.Composable {
             }
 
             @Override // net.bytebuddy.implementation.MethodCall.TargetHandler.Resolved
-            public StackManipulation toStackManipulation(MethodDescription methodDescription, Assigner assigner, Assigner.Typing typing) {
+            public StackManipulation toStackManipulation(MethodDescription methodDescription, Assigner assigner,
+                    Assigner.Typing typing) {
                 return this.stackManipulation;
             }
         }
@@ -1942,20 +2367,32 @@ public class MethodCall implements Implementation.Composable {
         Resolved resolve(MethodDescription methodDescription);
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface TerminationHandler {
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public interface Factory {
             TerminationHandler make(TypeDescription typeDescription);
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class FieldSetting implements TerminationHandler {
             private final FieldDescription fieldDescription;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class Explicit implements Factory {
                 private final FieldDescription fieldDescription;
@@ -1968,7 +2405,8 @@ public class MethodCall implements Implementation.Composable {
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.fieldDescription.equals(((Explicit) obj).fieldDescription);
+                    return obj != null && getClass() == obj.getClass()
+                            && this.fieldDescription.equals(((Explicit) obj).fieldDescription);
                 }
 
                 public int hashCode() {
@@ -1977,17 +2415,23 @@ public class MethodCall implements Implementation.Composable {
 
                 @Override // net.bytebuddy.implementation.MethodCall.TerminationHandler.Factory
                 public TerminationHandler make(TypeDescription typeDescription) {
-                    if (!this.fieldDescription.isStatic() && !typeDescription.isAssignableTo(this.fieldDescription.getDeclaringType().asErasure())) {
-                        throw new IllegalStateException("Cannot set " + this.fieldDescription + " from " + typeDescription);
+                    if (!this.fieldDescription.isStatic()
+                            && !typeDescription.isAssignableTo(this.fieldDescription.getDeclaringType().asErasure())) {
+                        throw new IllegalStateException(
+                                "Cannot set " + this.fieldDescription + " from " + typeDescription);
                     }
                     if (this.fieldDescription.isVisibleTo(typeDescription)) {
                         return new FieldSetting(this.fieldDescription);
                     }
-                    throw new IllegalStateException("Cannot access " + this.fieldDescription + " from " + typeDescription);
+                    throw new IllegalStateException(
+                            "Cannot access " + this.fieldDescription + " from " + typeDescription);
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class Implicit implements Factory {
                 private final ElementMatcher<? super FieldDescription> matcher;
@@ -2011,16 +2455,19 @@ public class MethodCall implements Implementation.Composable {
                 public TerminationHandler make(TypeDescription typeDescription) {
                     TypeDefinition superClass = typeDescription;
                     do {
-                        FieldList fieldListFilter = superClass.getDeclaredFields().filter(ElementMatchers.isVisibleTo(typeDescription).and(this.matcher));
+                        FieldList fieldListFilter = superClass.getDeclaredFields()
+                                .filter(ElementMatchers.isVisibleTo(typeDescription).and(this.matcher));
                         if (fieldListFilter.size() == 1) {
                             return new FieldSetting((FieldDescription) fieldListFilter.getOnly());
                         }
                         if (fieldListFilter.size() == 2) {
-                            throw new IllegalStateException(this.matcher + " is ambiguous and resolved: " + fieldListFilter);
+                            throw new IllegalStateException(
+                                    this.matcher + " is ambiguous and resolved: " + fieldListFilter);
                         }
                         superClass = superClass.getSuperClass();
                     } while (superClass != null);
-                    throw new IllegalStateException(this.matcher + " does not locate any accessible fields for " + typeDescription);
+                    throw new IllegalStateException(
+                            this.matcher + " does not locate any accessible fields for " + typeDescription);
                 }
             }
 
@@ -2032,7 +2479,8 @@ public class MethodCall implements Implementation.Composable {
                 if (this == obj) {
                     return true;
                 }
-                return obj != null && getClass() == obj.getClass() && this.fieldDescription.equals(((FieldSetting) obj).fieldDescription);
+                return obj != null && getClass() == obj.getClass()
+                        && this.fieldDescription.equals(((FieldSetting) obj).fieldDescription);
             }
 
             public int hashCode() {
@@ -2041,40 +2489,61 @@ public class MethodCall implements Implementation.Composable {
 
             @Override // net.bytebuddy.implementation.MethodCall.TerminationHandler
             public StackManipulation prepare() {
-                return this.fieldDescription.isStatic() ? StackManipulation.Trivial.INSTANCE : MethodVariableAccess.loadThis();
+                return this.fieldDescription.isStatic() ? StackManipulation.Trivial.INSTANCE
+                        : MethodVariableAccess.loadThis();
             }
 
             @Override // net.bytebuddy.implementation.MethodCall.TerminationHandler
-            public StackManipulation toStackManipulation(MethodDescription methodDescription, MethodDescription methodDescription2, Assigner assigner, Assigner.Typing typing) {
-                StackManipulation stackManipulationAssign = assigner.assign(methodDescription.isConstructor() ? methodDescription.getDeclaringType().asGenericType() : methodDescription.getReturnType(), this.fieldDescription.getType(), typing);
+            public StackManipulation toStackManipulation(MethodDescription methodDescription,
+                    MethodDescription methodDescription2, Assigner assigner, Assigner.Typing typing) {
+                StackManipulation stackManipulationAssign = assigner
+                        .assign(methodDescription.isConstructor() ? methodDescription.getDeclaringType().asGenericType()
+                                : methodDescription.getReturnType(), this.fieldDescription.getType(), typing);
                 if (stackManipulationAssign.isValid()) {
-                    return new StackManipulation.Compound(stackManipulationAssign, FieldAccess.forField(this.fieldDescription).write());
+                    return new StackManipulation.Compound(stackManipulationAssign,
+                            FieldAccess.forField(this.fieldDescription).write());
                 }
-                throw new IllegalStateException("Cannot assign result of " + methodDescription + " to " + this.fieldDescription);
+                throw new IllegalStateException(
+                        "Cannot assign result of " + methodDescription + " to " + this.fieldDescription);
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public enum Simple implements TerminationHandler, Factory {
-            RETURNING { // from class: net.bytebuddy.implementation.MethodCall.TerminationHandler.Simple.1
+            RETURNING { // from class:
+                        // net.bytebuddy.implementation.MethodCall.TerminationHandler.Simple.1
                 @Override // net.bytebuddy.implementation.MethodCall.TerminationHandler
-                public StackManipulation toStackManipulation(MethodDescription methodDescription, MethodDescription methodDescription2, Assigner assigner, Assigner.Typing typing) {
-                    StackManipulation stackManipulationAssign = assigner.assign(methodDescription.isConstructor() ? methodDescription.getDeclaringType().asGenericType() : methodDescription.getReturnType(), methodDescription2.getReturnType(), typing);
+                public StackManipulation toStackManipulation(MethodDescription methodDescription,
+                        MethodDescription methodDescription2, Assigner assigner, Assigner.Typing typing) {
+                    StackManipulation stackManipulationAssign = assigner.assign(
+                            methodDescription.isConstructor() ? methodDescription.getDeclaringType().asGenericType()
+                                    : methodDescription.getReturnType(),
+                            methodDescription2.getReturnType(), typing);
                     if (stackManipulationAssign.isValid()) {
-                        return new StackManipulation.Compound(stackManipulationAssign, MethodReturn.of(methodDescription2.getReturnType()));
+                        return new StackManipulation.Compound(stackManipulationAssign,
+                                MethodReturn.of(methodDescription2.getReturnType()));
                     }
-                    throw new IllegalStateException("Cannot return " + methodDescription.getReturnType() + " from " + methodDescription2);
+                    throw new IllegalStateException(
+                            "Cannot return " + methodDescription.getReturnType() + " from " + methodDescription2);
                 }
             },
-            DROPPING { // from class: net.bytebuddy.implementation.MethodCall.TerminationHandler.Simple.2
+            DROPPING { // from class:
+                       // net.bytebuddy.implementation.MethodCall.TerminationHandler.Simple.2
                 @Override // net.bytebuddy.implementation.MethodCall.TerminationHandler
-                public StackManipulation toStackManipulation(MethodDescription methodDescription, MethodDescription methodDescription2, Assigner assigner, Assigner.Typing typing) {
-                    return Removal.of(methodDescription.isConstructor() ? methodDescription.getDeclaringType() : methodDescription.getReturnType());
+                public StackManipulation toStackManipulation(MethodDescription methodDescription,
+                        MethodDescription methodDescription2, Assigner assigner, Assigner.Typing typing) {
+                    return Removal.of(methodDescription.isConstructor() ? methodDescription.getDeclaringType()
+                            : methodDescription.getReturnType());
                 }
             },
-            IGNORING { // from class: net.bytebuddy.implementation.MethodCall.TerminationHandler.Simple.3
+            IGNORING { // from class:
+                       // net.bytebuddy.implementation.MethodCall.TerminationHandler.Simple.3
                 @Override // net.bytebuddy.implementation.MethodCall.TerminationHandler
-                public StackManipulation toStackManipulation(MethodDescription methodDescription, MethodDescription methodDescription2, Assigner assigner, Assigner.Typing typing) {
+                public StackManipulation toStackManipulation(MethodDescription methodDescription,
+                        MethodDescription methodDescription2, Assigner assigner, Assigner.Typing typing) {
                     return StackManipulation.Trivial.INSTANCE;
                 }
             };
@@ -2092,13 +2561,19 @@ public class MethodCall implements Implementation.Composable {
 
         StackManipulation prepare();
 
-        StackManipulation toStackManipulation(MethodDescription methodDescription, MethodDescription methodDescription2, Assigner assigner, Assigner.Typing typing);
+        StackManipulation toStackManipulation(MethodDescription methodDescription, MethodDescription methodDescription2,
+                Assigner assigner, Assigner.Typing typing);
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class WithoutSpecifiedTarget extends MethodCall {
         public WithoutSpecifiedTarget(MethodLocator.Factory factory) {
-            super(factory, TargetHandler.ForSelfOrStaticInvocation.Factory.INSTANCE, Collections.EMPTY_LIST, MethodInvoker.ForContextualInvocation.Factory.INSTANCE, TerminationHandler.Simple.RETURNING, Assigner.DEFAULT, Assigner.Typing.STATIC);
+            super(factory, TargetHandler.ForSelfOrStaticInvocation.Factory.INSTANCE, Collections.EMPTY_LIST,
+                    MethodInvoker.ForContextualInvocation.Factory.INSTANCE, TerminationHandler.Simple.RETURNING,
+                    Assigner.DEFAULT, Assigner.Typing.STATIC);
         }
 
         public MethodCall on(Object obj) {
@@ -2107,13 +2582,17 @@ public class MethodCall implements Implementation.Composable {
 
         public MethodCall onArgument(int i) {
             if (i >= 0) {
-                return new MethodCall(this.methodLocator, new TargetHandler.ForMethodParameter(i), this.argumentLoaders, MethodInvoker.ForVirtualInvocation.WithImplicitType.INSTANCE, this.terminationHandler, this.assigner, this.typing);
+                return new MethodCall(this.methodLocator, new TargetHandler.ForMethodParameter(i), this.argumentLoaders,
+                        MethodInvoker.ForVirtualInvocation.WithImplicitType.INSTANCE, this.terminationHandler,
+                        this.assigner, this.typing);
             }
-            throw new IllegalArgumentException(bjs.i(i, "An argument index cannot be negative: "));
+            throw new IllegalArgumentException(concatVar2Var1(i, "An argument index cannot be negative: "));
         }
 
         public MethodCall onDefault() {
-            return new MethodCall(this.methodLocator, TargetHandler.ForSelfOrStaticInvocation.Factory.INSTANCE, this.argumentLoaders, MethodInvoker.ForDefaultMethodInvocation.Factory.INSTANCE, this.terminationHandler, this.assigner, this.typing);
+            return new MethodCall(this.methodLocator, TargetHandler.ForSelfOrStaticInvocation.Factory.INSTANCE,
+                    this.argumentLoaders, MethodInvoker.ForDefaultMethodInvocation.Factory.INSTANCE,
+                    this.terminationHandler, this.assigner, this.typing);
         }
 
         public MethodCall onField(String str) {
@@ -2121,19 +2600,32 @@ public class MethodCall implements Implementation.Composable {
         }
 
         public MethodCall onMethodCall(MethodCall methodCall) {
-            return new MethodCall(this.methodLocator, new TargetHandler.ForMethodCall.Factory(methodCall), this.argumentLoaders, MethodInvoker.ForVirtualInvocation.WithImplicitType.INSTANCE, this.terminationHandler, this.assigner, this.typing);
+            return new MethodCall(this.methodLocator, new TargetHandler.ForMethodCall.Factory(methodCall),
+                    this.argumentLoaders, MethodInvoker.ForVirtualInvocation.WithImplicitType.INSTANCE,
+                    this.terminationHandler, this.assigner, this.typing);
         }
 
         public MethodCall onSuper() {
-            return new MethodCall(this.methodLocator, TargetHandler.ForSelfOrStaticInvocation.Factory.INSTANCE, this.argumentLoaders, MethodInvoker.ForSuperMethodInvocation.Factory.INSTANCE, this.terminationHandler, this.assigner, this.typing);
+            return new MethodCall(this.methodLocator, TargetHandler.ForSelfOrStaticInvocation.Factory.INSTANCE,
+                    this.argumentLoaders, MethodInvoker.ForSuperMethodInvocation.Factory.INSTANCE,
+                    this.terminationHandler, this.assigner, this.typing);
         }
 
         public <T> MethodCall on(T t, Class<? super T> cls) {
-            return new MethodCall(this.methodLocator, new TargetHandler.ForValue.Factory(t, TypeDescription.Generic.OfNonGenericType.ForLoadedType.of(cls)), this.argumentLoaders, new MethodInvoker.ForVirtualInvocation.Factory(TypeDescription.ForLoadedType.of(cls)), this.terminationHandler, this.assigner, this.typing);
+            return new MethodCall(this.methodLocator,
+                    new TargetHandler.ForValue.Factory(t,
+                            TypeDescription.Generic.OfNonGenericType.ForLoadedType.of(cls)),
+                    this.argumentLoaders,
+                    new MethodInvoker.ForVirtualInvocation.Factory(TypeDescription.ForLoadedType.of(cls)),
+                    this.terminationHandler, this.assigner, this.typing);
         }
 
         public MethodCall onField(String str, FieldLocator.Factory factory) {
-            return new MethodCall(this.methodLocator, new TargetHandler.ForField.Factory(new TargetHandler.ForField.Location.ForImplicitField(str, factory)), this.argumentLoaders, MethodInvoker.ForVirtualInvocation.WithImplicitType.INSTANCE, this.terminationHandler, this.assigner, this.typing);
+            return new MethodCall(this.methodLocator,
+                    new TargetHandler.ForField.Factory(
+                            new TargetHandler.ForField.Location.ForImplicitField(str, factory)),
+                    this.argumentLoaders, MethodInvoker.ForVirtualInvocation.WithImplicitType.INSTANCE,
+                    this.terminationHandler, this.assigner, this.typing);
         }
 
         public MethodCall onField(Field field) {
@@ -2141,7 +2633,11 @@ public class MethodCall implements Implementation.Composable {
         }
 
         public MethodCall onField(FieldDescription fieldDescription) {
-            return new MethodCall(this.methodLocator, new TargetHandler.ForField.Factory(new TargetHandler.ForField.Location.ForExplicitField(fieldDescription)), this.argumentLoaders, MethodInvoker.ForVirtualInvocation.WithImplicitType.INSTANCE, this.terminationHandler, this.assigner, this.typing);
+            return new MethodCall(this.methodLocator,
+                    new TargetHandler.ForField.Factory(
+                            new TargetHandler.ForField.Location.ForExplicitField(fieldDescription)),
+                    this.argumentLoaders, MethodInvoker.ForVirtualInvocation.WithImplicitType.INSTANCE,
+                    this.terminationHandler, this.assigner, this.typing);
         }
 
         public MethodCall on(StackManipulation stackManipulation, Class<?> cls) {
@@ -2149,11 +2645,15 @@ public class MethodCall implements Implementation.Composable {
         }
 
         public MethodCall on(StackManipulation stackManipulation, TypeDescription typeDescription) {
-            return new MethodCall(this.methodLocator, new TargetHandler.Simple(typeDescription, stackManipulation), this.argumentLoaders, new MethodInvoker.ForVirtualInvocation.Factory(typeDescription), this.terminationHandler, this.assigner, this.typing);
+            return new MethodCall(this.methodLocator, new TargetHandler.Simple(typeDescription, stackManipulation),
+                    this.argumentLoaders, new MethodInvoker.ForVirtualInvocation.Factory(typeDescription),
+                    this.terminationHandler, this.assigner, this.typing);
         }
     }
 
-    public MethodCall(MethodLocator.Factory factory, TargetHandler.Factory factory2, List<ArgumentLoader.Factory> list, MethodInvoker.Factory factory3, TerminationHandler.Factory factory4, Assigner assigner, Assigner.Typing typing) {
+    public MethodCall(MethodLocator.Factory factory, TargetHandler.Factory factory2, List<ArgumentLoader.Factory> list,
+            MethodInvoker.Factory factory3, TerminationHandler.Factory factory4, Assigner assigner,
+            Assigner.Typing typing) {
         this.methodLocator = factory;
         this.targetHandler = factory2;
         this.argumentLoaders = list;
@@ -2165,7 +2665,9 @@ public class MethodCall implements Implementation.Composable {
 
     public static Implementation.Composable call(Callable<?> callable) {
         try {
-            return invoke(Callable.class.getMethod("call", null)).on(callable, (Class<? super Callable<?>>) Callable.class).withAssigner(Assigner.DEFAULT, Assigner.Typing.DYNAMIC);
+            return invoke(Callable.class.getMethod("call", null))
+                    .on(callable, (Class<? super Callable<?>>) Callable.class)
+                    .withAssigner(Assigner.DEFAULT, Assigner.Typing.DYNAMIC);
         } catch (NoSuchMethodException e) {
             throw new IllegalStateException("Could not locate Callable::call method", e);
         }
@@ -2189,7 +2691,8 @@ public class MethodCall implements Implementation.Composable {
 
     public static Implementation.Composable run(Runnable runnable) {
         try {
-            return invoke(Runnable.class.getMethod("run", null)).on(runnable, (Class<? super Runnable>) Runnable.class).withAssigner(Assigner.DEFAULT, Assigner.Typing.DYNAMIC);
+            return invoke(Runnable.class.getMethod("run", null)).on(runnable, (Class<? super Runnable>) Runnable.class)
+                    .withAssigner(Assigner.DEFAULT, Assigner.Typing.DYNAMIC);
         } catch (NoSuchMethodException e) {
             throw new IllegalStateException("Could not locate Runnable::run method", e);
         }
@@ -2197,7 +2700,8 @@ public class MethodCall implements Implementation.Composable {
 
     @Override // net.bytebuddy.implementation.Implementation.Composable
     public Implementation andThen(Implementation implementation) {
-        return new Implementation.Compound(new MethodCall(this.methodLocator, this.targetHandler, this.argumentLoaders, this.methodInvoker, TerminationHandler.Simple.DROPPING, this.assigner, this.typing), implementation);
+        return new Implementation.Compound(new MethodCall(this.methodLocator, this.targetHandler, this.argumentLoaders,
+                this.methodInvoker, TerminationHandler.Simple.DROPPING, this.assigner, this.typing), implementation);
     }
 
     @Override // net.bytebuddy.implementation.Implementation
@@ -2213,11 +2717,21 @@ public class MethodCall implements Implementation.Composable {
             return false;
         }
         MethodCall methodCall = (MethodCall) obj;
-        return this.typing.equals(methodCall.typing) && this.methodLocator.equals(methodCall.methodLocator) && this.targetHandler.equals(methodCall.targetHandler) && this.argumentLoaders.equals(methodCall.argumentLoaders) && this.methodInvoker.equals(methodCall.methodInvoker) && this.terminationHandler.equals(methodCall.terminationHandler) && this.assigner.equals(methodCall.assigner);
+        return this.typing.equals(methodCall.typing) && this.methodLocator.equals(methodCall.methodLocator)
+                && this.targetHandler.equals(methodCall.targetHandler)
+                && this.argumentLoaders.equals(methodCall.argumentLoaders)
+                && this.methodInvoker.equals(methodCall.methodInvoker)
+                && this.terminationHandler.equals(methodCall.terminationHandler)
+                && this.assigner.equals(methodCall.assigner);
     }
 
     public int hashCode() {
-        return this.typing.hashCode() + dkz.h(this.assigner, (this.terminationHandler.hashCode() + ((this.methodInvoker.hashCode() + bjs.g(this.argumentLoaders, (this.targetHandler.hashCode() + ((this.methodLocator.hashCode() + (getClass().hashCode() * 31)) * 31)) * 31, 31)) * 31)) * 31, 31);
+        return this.typing.hashCode() + dkz.h(this.assigner,
+                (this.terminationHandler.hashCode() + ((this.methodInvoker.hashCode() + bjs.g(this.argumentLoaders,
+                        (this.targetHandler.hashCode()
+                                + ((this.methodLocator.hashCode() + (getClass().hashCode() * 31)) * 31)) * 31,
+                        31)) * 31)) * 31,
+                31);
     }
 
     @Override // net.bytebuddy.dynamic.scaffold.InstrumentedType.Prepareable
@@ -2249,7 +2763,7 @@ public class MethodCall implements Implementation.Composable {
         ArrayList arrayList = new ArrayList(iArr.length);
         for (int i : iArr) {
             if (i < 0) {
-                throw new IllegalArgumentException(bjs.i(i, "Negative index: "));
+                throw new IllegalArgumentException(concatVar2Var1(i, "Negative index: "));
             }
             arrayList.add(new ArgumentLoader.ForMethodParameter.Factory(i));
         }
@@ -2264,11 +2778,12 @@ public class MethodCall implements Implementation.Composable {
         if (i >= 0) {
             return with(new ArgumentLoader.ForMethodParameterArrayElement.OfInvokedMethod(i));
         }
-        throw new IllegalArgumentException(bjs.i(i, "A parameter index cannot be negative: "));
+        throw new IllegalArgumentException(concatVar2Var1(i, "A parameter index cannot be negative: "));
     }
 
     public Implementation.Composable withAssigner(Assigner assigner, Assigner.Typing typing) {
-        return new MethodCall(this.methodLocator, this.targetHandler, this.argumentLoaders, this.methodInvoker, this.terminationHandler, assigner, typing);
+        return new MethodCall(this.methodLocator, this.targetHandler, this.argumentLoaders, this.methodInvoker,
+                this.terminationHandler, assigner, typing);
     }
 
     public MethodCall withField(String... strArr) {
@@ -2288,7 +2803,8 @@ public class MethodCall implements Implementation.Composable {
         int length = objArr.length;
         for (int i = 0; i < length; i++) {
             Object obj = objArr[i];
-            arrayList.add(obj == null ? ArgumentLoader.ForNullConstant.INSTANCE : new ArgumentLoader.ForInstance.Factory(obj));
+            arrayList.add(obj == null ? ArgumentLoader.ForNullConstant.INSTANCE
+                    : new ArgumentLoader.ForInstance.Factory(obj));
         }
         return with(arrayList);
     }
@@ -2299,7 +2815,10 @@ public class MethodCall implements Implementation.Composable {
 
     public static MethodCall construct(MethodDescription methodDescription) {
         if (methodDescription.isConstructor()) {
-            return new MethodCall(new MethodLocator.ForExplicitMethod(methodDescription), TargetHandler.ForConstructingInvocation.Factory.INSTANCE, Collections.EMPTY_LIST, MethodInvoker.ForContextualInvocation.Factory.INSTANCE, TerminationHandler.Simple.RETURNING, Assigner.DEFAULT, Assigner.Typing.STATIC);
+            return new MethodCall(new MethodLocator.ForExplicitMethod(methodDescription),
+                    TargetHandler.ForConstructingInvocation.Factory.INSTANCE, Collections.EMPTY_LIST,
+                    MethodInvoker.ForContextualInvocation.Factory.INSTANCE, TerminationHandler.Simple.RETURNING,
+                    Assigner.DEFAULT, Assigner.Typing.STATIC);
         }
         throw new IllegalArgumentException(dkz.t("Not a constructor: ", methodDescription));
     }
@@ -2310,11 +2829,16 @@ public class MethodCall implements Implementation.Composable {
 
     @Override // net.bytebuddy.implementation.Implementation.Composable
     public Implementation.Composable andThen(Implementation.Composable composable) {
-        return new Implementation.Compound.Composable(new MethodCall(this.methodLocator, this.targetHandler, this.argumentLoaders, this.methodInvoker, TerminationHandler.Simple.DROPPING, this.assigner, this.typing), composable);
+        return new Implementation.Compound.Composable(
+                new MethodCall(this.methodLocator, this.targetHandler, this.argumentLoaders, this.methodInvoker,
+                        TerminationHandler.Simple.DROPPING, this.assigner, this.typing),
+                composable);
     }
 
     public FieldSetting setsField(FieldDescription fieldDescription) {
-        return new FieldSetting(new MethodCall(this.methodLocator, this.targetHandler, this.argumentLoaders, this.methodInvoker, new TerminationHandler.FieldSetting.Explicit(fieldDescription), this.assigner, this.typing));
+        return new FieldSetting(
+                new MethodCall(this.methodLocator, this.targetHandler, this.argumentLoaders, this.methodInvoker,
+                        new TerminationHandler.FieldSetting.Explicit(fieldDescription), this.assigner, this.typing));
     }
 
     public MethodCall withField(FieldLocator.Factory factory, String... strArr) {
@@ -2330,14 +2854,17 @@ public class MethodCall implements Implementation.Composable {
     }
 
     public FieldSetting setsField(ElementMatcher<? super FieldDescription> elementMatcher) {
-        return new FieldSetting(new MethodCall(this.methodLocator, this.targetHandler, this.argumentLoaders, this.methodInvoker, new TerminationHandler.FieldSetting.Implicit(elementMatcher), this.assigner, this.typing));
+        return new FieldSetting(
+                new MethodCall(this.methodLocator, this.targetHandler, this.argumentLoaders, this.methodInvoker,
+                        new TerminationHandler.FieldSetting.Implicit(elementMatcher), this.assigner, this.typing));
     }
 
     public static WithoutSpecifiedTarget invoke(ElementMatcher<? super MethodDescription> elementMatcher) {
         return invoke(elementMatcher, MethodGraph.Compiler.DEFAULT);
     }
 
-    public static WithoutSpecifiedTarget invoke(ElementMatcher<? super MethodDescription> elementMatcher, MethodGraph.Compiler compiler) {
+    public static WithoutSpecifiedTarget invoke(ElementMatcher<? super MethodDescription> elementMatcher,
+            MethodGraph.Compiler compiler) {
         return invoke(new MethodLocator.ForElementMatcher.Factory(elementMatcher, compiler));
     }
 
@@ -2356,7 +2883,8 @@ public class MethodCall implements Implementation.Composable {
     public MethodCall with(EnumerationDescription... enumerationDescriptionArr) {
         ArrayList arrayList = new ArrayList(enumerationDescriptionArr.length);
         for (EnumerationDescription enumerationDescription : enumerationDescriptionArr) {
-            arrayList.add(new ArgumentLoader.ForStackManipulation(FieldAccess.forEnumeration(enumerationDescription), enumerationDescription.getEnumerationType()));
+            arrayList.add(new ArgumentLoader.ForStackManipulation(FieldAccess.forEnumeration(enumerationDescription),
+                    enumerationDescription.getEnumerationType()));
         }
         return with(arrayList);
     }
@@ -2367,10 +2895,10 @@ public class MethodCall implements Implementation.Composable {
 
     public MethodCall withArgumentArrayElements(int i, int i2, int i3) {
         if (i < 0) {
-            throw new IllegalArgumentException(bjs.i(i, "A parameter index cannot be negative: "));
+            throw new IllegalArgumentException(concatVar2Var1(i, "A parameter index cannot be negative: "));
         }
         if (i2 < 0) {
-            throw new IllegalArgumentException(bjs.i(i2, "An array index cannot be negative: "));
+            throw new IllegalArgumentException(concatVar2Var1(i2, "An array index cannot be negative: "));
         }
         if (i3 == 0) {
             return this;
@@ -2382,13 +2910,14 @@ public class MethodCall implements Implementation.Composable {
             }
             return with(arrayList);
         }
-        throw new IllegalArgumentException(bjs.i(i3, "Size cannot be negative: "));
+        throw new IllegalArgumentException(concatVar2Var1(i3, "Size cannot be negative: "));
     }
 
     public MethodCall with(ConstantValue... constantValueArr) {
         ArrayList arrayList = new ArrayList(constantValueArr.length);
         for (ConstantValue constantValue : constantValueArr) {
-            arrayList.add(new ArgumentLoader.ForStackManipulation(constantValue.toStackManipulation(), constantValue.getTypeDescription()));
+            arrayList.add(new ArgumentLoader.ForStackManipulation(constantValue.toStackManipulation(),
+                    constantValue.getTypeDescription()));
         }
         return with(arrayList);
     }
@@ -2410,6 +2939,8 @@ public class MethodCall implements Implementation.Composable {
     }
 
     public MethodCall with(List<? extends ArgumentLoader.Factory> list) {
-        return new MethodCall(this.methodLocator, this.targetHandler, CompoundList.of((List) this.argumentLoaders, (List) list), this.methodInvoker, this.terminationHandler, this.assigner, this.typing);
+        return new MethodCall(this.methodLocator, this.targetHandler,
+                CompoundList.of((List) this.argumentLoaders, (List) list), this.methodInvoker, this.terminationHandler,
+                this.assigner, this.typing);
     }
 }

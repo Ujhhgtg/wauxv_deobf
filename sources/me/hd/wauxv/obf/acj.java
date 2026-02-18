@@ -29,7 +29,7 @@ public class acj extends Dialog implements bup, dep {
 
     @Override // android.app.Dialog
     public void addContentView(View view, ViewGroup.LayoutParams layoutParams) {
-        bzo.q(view, "view");
+        throwIfVar1IsNull(view, "view");
         m();
         super.addContentView(view, layoutParams);
     }
@@ -52,19 +52,19 @@ public class acj extends Dialog implements bup, dep {
 
     public final void m() {
         Window window = getWindow();
-        bzo.n(window);
+        throwIfVar1IsNull(window);
         View decorView = window.getDecorView();
-        bzo.p(decorView, "window!!.decorView");
+        throwIfVar1IsNull(decorView, "window!!.decorView");
         decorView.setTag(R.id.view_tree_lifecycle_owner, this);
         Window window2 = getWindow();
-        bzo.n(window2);
+        throwIfVar1IsNull(window2);
         View decorView2 = window2.getDecorView();
-        bzo.p(decorView2, "window!!.decorView");
+        throwIfVar1IsNull(decorView2, "window!!.decorView");
         decorView2.setTag(R.id.view_tree_on_back_pressed_dispatcher_owner, this);
         Window window3 = getWindow();
-        bzo.n(window3);
+        throwIfVar1IsNull(window3);
         View decorView3 = window3.getDecorView();
-        bzo.p(decorView3, "window!!.decorView");
+        throwIfVar1IsNull(decorView3, "window!!.decorView");
         decorView3.setTag(R.id.view_tree_saved_state_registry_owner, this);
     }
 
@@ -78,7 +78,7 @@ public class acj extends Dialog implements bup, dep {
         super.onCreate(bundle);
         if (Build.VERSION.SDK_INT >= 33) {
             OnBackInvokedDispatcher onBackInvokedDispatcher = getOnBackInvokedDispatcher();
-            bzo.p(onBackInvokedDispatcher, "onBackInvokedDispatcher");
+            throwIfVar1IsNull(onBackInvokedDispatcher, "onBackInvokedDispatcher");
             cqt cqtVar = this.k;
             cqtVar.getClass();
             cqtVar.e = onBackInvokedDispatcher;
@@ -96,7 +96,7 @@ public class acj extends Dialog implements bup, dep {
     @Override // android.app.Dialog
     public final Bundle onSaveInstanceState() {
         Bundle bundleOnSaveInstanceState = super.onSaveInstanceState();
-        bzo.p(bundleOnSaveInstanceState, "super.onSaveInstanceState()");
+        throwIfVar1IsNull(bundleOnSaveInstanceState, "super.onSaveInstanceState()");
         this.j.ab(bundleOnSaveInstanceState);
         return bundleOnSaveInstanceState;
     }
@@ -132,14 +132,14 @@ public class acj extends Dialog implements bup, dep {
 
     @Override // android.app.Dialog
     public void setContentView(View view) {
-        bzo.q(view, "view");
+        throwIfVar1IsNull(view, "view");
         m();
         super.setContentView(view);
     }
 
     @Override // android.app.Dialog
     public void setContentView(View view, ViewGroup.LayoutParams layoutParams) {
-        bzo.q(view, "view");
+        throwIfVar1IsNull(view, "view");
         m();
         super.setContentView(view, layoutParams);
     }

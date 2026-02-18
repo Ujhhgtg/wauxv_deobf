@@ -6,7 +6,7 @@ import org.luckypray.dexkit.DexKitBridge;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class dbe extends doo implements bng {
+public final class dbe extends BaseHook implements IRequiresDexLocate {
     public static final dbe a = new dbe("RemoveVoipLimitHook" /* cnb.z(-522134879206186L) */);
     public static final String b = "限制" /* cnb.z(-519935855950634L) */;
     public static final String c = "移除通话限制" /* cnb.z(-519957330787114L) */;
@@ -24,26 +24,35 @@ public final class dbe extends doo implements bng {
         }
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String f() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getName() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String g() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getCategory() {
         return b;
     }
 
     @Override // me.hd.wauxv.obf.bng
-    public final void h(DexKitBridge dexKitBridge) {
-        emn.aj(dbc.a, dexKitBridge, new daz(0, "com.tencent.mm.plugin.multitalk.model" /* cnb.z(-522083339598634L) */, "Lcom/tencent/mm/autogen/events/MultiTalkActionEvent;" /* cnb.z(-521353195158314L) */));
-        emn.aj(dbd.a, dexKitBridge, new daz(0, "com.tencent.mm.plugin.voip.model" /* cnb.z(-521658137836330L) */, "Lcom/tencent/mm/autogen/events/VoipCheckIsDeviceUsingEvent;" /* cnb.z(-521516403915562L) */));
-        emn.aj(dbb.a, dexKitBridge, new daz(0, "com.tencent.mm.plugin.ipcall" /* cnb.z(-522942333057834L) */, "Lcom/tencent/mm/autogen/events/VoipCheckIsDeviceUsingEvent;" /* cnb.z(-523350354950954L) */));
-        emn.aj(dba.a, dexKitBridge, new daz(0, (cnb.ab(ewk.f) || cnb.ac(ewh.f)) ? "com.tencent.mm.voipmp.helper" /* cnb.z(-523127016651562L) */ : "com.tencent.mm.plugin_flutter_ilinkvoip.helper" /* cnb.z(-522418347047722L) */, "Lcom/tencent/mm/autogen/events/VoipCheckIsDeviceUsingEvent;" /* cnb.z(-522766239398698L) */));
+    public final void locateDex(DexKitBridge dexKitBridge) {
+        emn.aj(dbc.a, dexKitBridge, new daz(0, "com.tencent.mm.plugin.multitalk.model" /* cnb.z(-522083339598634L) */,
+                "Lcom/tencent/mm/autogen/events/MultiTalkActionEvent;" /* cnb.z(-521353195158314L) */));
+        emn.aj(dbd.a, dexKitBridge, new daz(0, "com.tencent.mm.plugin.voip.model" /* cnb.z(-521658137836330L) */,
+                "Lcom/tencent/mm/autogen/events/VoipCheckIsDeviceUsingEvent;" /* cnb.z(-521516403915562L) */));
+        emn.aj(dbb.a, dexKitBridge, new daz(0, "com.tencent.mm.plugin.ipcall" /* cnb.z(-522942333057834L) */,
+                "Lcom/tencent/mm/autogen/events/VoipCheckIsDeviceUsingEvent;" /* cnb.z(-523350354950954L) */));
+        emn.aj(dba.a, dexKitBridge,
+                new daz(0, (cnb.ab(ewk.f) || cnb.ac(ewh.f)) ? "com.tencent.mm.voipmp.helper"
+                        /* cnb.z(-523127016651562L) */ : "com.tencent.mm.plugin_flutter_ilinkvoip.helper" /*
+                                                                                                           * cnb.z(-
+                                                                                                           * 522418347047722L)
+                                                                                                           */,
+                        "Lcom/tencent/mm/autogen/events/VoipCheckIsDeviceUsingEvent;" /* cnb.z(-522766239398698L) */));
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String o() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getDescription() {
         return i;
     }
 }

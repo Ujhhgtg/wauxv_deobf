@@ -21,12 +21,12 @@ public final class cim {
             return false;
         }
         cim cimVar = (cim) obj;
-        if (this.a != cimVar.a || !bzo.f(this.b, cimVar.b)) {
+        if (this.a != cimVar.a || !nullSafeIsEqual(this.b, cimVar.b)) {
             return false;
         }
         Bundle bundle = this.c;
         Bundle bundle2 = cimVar.c;
-        if (bzo.f(bundle, bundle2)) {
+        if (nullSafeIsEqual(bundle, bundle2)) {
             return true;
         }
         return (bundle == null || bundle2 == null || !cna.k(bundle, bundle2)) ? false : true;
@@ -54,7 +54,7 @@ public final class cim {
             sb.append(this.b);
         }
         String string = sb.toString();
-        bzo.p(string, "toString(...)");
+        throwIfVar1IsNull(string, "toString(...)");
         return string;
     }
 }

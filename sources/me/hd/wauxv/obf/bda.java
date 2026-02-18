@@ -8,7 +8,7 @@ public abstract class bda implements dlc {
     private final dlc delegate;
 
     public bda(dlc dlcVar) {
-        bzo.q(dlcVar, MethodDelegation.ImplementationDelegate.FIELD_NAME_PREFIX);
+        throwIfVar1IsNull(dlcVar, MethodDelegation.ImplementationDelegate.FIELD_NAME_PREFIX);
         this.delegate = dlcVar;
     }
 
@@ -27,7 +27,7 @@ public abstract class bda implements dlc {
 
     @Override // me.hd.wauxv.obf.dlc
     public long read(rh rhVar, long j) {
-        bzo.q(rhVar, "sink");
+        throwIfVar1IsNull(rhVar, "sink");
         return this.delegate.read(rhVar, j);
     }
 

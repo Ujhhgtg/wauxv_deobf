@@ -11,7 +11,7 @@ public final class avl extends avk {
 
     @Override // me.hd.wauxv.obf.dqc
     public final int c(bbb bbbVar) {
-        bzo.q(bbbVar, "fbb");
+        throwIfVar1IsNull(bbbVar, "fbb");
         bbbVar.ab(1);
         bbbVar.o(this.a, 0);
         int iU = bbbVar.u();

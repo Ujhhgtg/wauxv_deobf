@@ -7,7 +7,7 @@ import java.util.List;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class cbo implements bgf {
+public final class cbo implements IHasInvokeMethod {
     public final /* synthetic */ int a;
     public final /* synthetic */ cbh b;
     public final /* synthetic */ cbg c;
@@ -38,7 +38,14 @@ public final class cbo implements bgf {
                 if (cbmVar2 != null) {
                     cbmVar = cbmVar2;
                 }
-                bae baeVarO = cbp.o(cbp.o(cbp.o(cbp.o(cbp.o(cbp.o(cbp.f(cbp.b(aaz.a(cbmVar.c(cls)), cdeVar, cbgVar), cdeVar, cbgVar), cbgVar, "returnType", cdeVar.a, new cbi(cbgVar, i2)), cbgVar, "returnTypeCondition", cdeVar.ai, new fq(15)), cbgVar, "isBridge", null, new fq(17)), cbgVar, "isBridgeNot", null, new fq(25)), cbgVar, "isDefault", null, new cbk(2)), cbgVar, "isDefaultNot", null, new cbk(3));
+                bae baeVarO = cbp
+                        .o(cbp.o(
+                                cbp.o(cbp.o(
+                                        cbp.o(cbp.o(cbp.f(cbp.b(aaz.a(cbmVar.c(cls)), cdeVar, cbgVar), cdeVar, cbgVar),
+                                                cbgVar, "returnType", cdeVar.a, new cbi(cbgVar, i2)), cbgVar,
+                                                "returnTypeCondition", cdeVar.ai, new fq(15)),
+                                        cbgVar, "isBridge", null, new fq(17)), cbgVar, "isBridgeNot", null, new fq(25)),
+                                cbgVar, "isDefault", null, new cbk(2)), cbgVar, "isDefaultNot", null, new cbk(3));
                 zc zcVarB = dal.b(Method.class);
                 if (zcVarB.equals(dal.b(Method.class))) {
                     dpuVar = new dpu(baeVarO, new cbn(cbgVar, 6), 1);
@@ -96,7 +103,13 @@ public final class cbo implements bgf {
                 if (iterable == null) {
                     iterable = avd.a;
                 }
-                bae baeVarO2 = cbp.o(cbp.o(cbp.o(cbp.o(cbp.o(cbp.o(cbp.b(aaz.a(iterable), azgVar, cbgVar), cbgVar, "isEnumConstant", null, new cbk(4)), cbgVar, "isEnumConstantNot", null, new cbk(5)), cbgVar, com.umeng.analytics.pro.f.y, azgVar.a, new cbi(cbgVar, i3)), cbgVar, "typeCondition", azgVar.b, new cbk(6)), cbgVar, "genericType", null, new fq(8)), cbgVar, "genericTypeCondition", null, new fq(9));
+                bae baeVarO2 = cbp.o(
+                        cbp.o(cbp.o(
+                                cbp.o(cbp.o(cbp.o(cbp.b(aaz.a(iterable), azgVar, cbgVar), cbgVar, "isEnumConstant",
+                                        null, new cbk(4)), cbgVar, "isEnumConstantNot", null, new cbk(5)), cbgVar,
+                                        "type", azgVar.a, new cbi(cbgVar, i3)),
+                                cbgVar, "typeCondition", azgVar.b, new cbk(6)), cbgVar, "genericType", null, new fq(8)),
+                        cbgVar, "genericTypeCondition", null, new fq(9));
                 zc zcVarB3 = dal.b(Field.class);
                 if (zcVarB3.equals(dal.b(Method.class))) {
                     dpuVar3 = new dpu(baeVarO2, new cbn(cbgVar, 3), 1);

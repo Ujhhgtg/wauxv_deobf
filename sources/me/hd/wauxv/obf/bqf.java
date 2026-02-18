@@ -4,7 +4,7 @@ import java.util.Iterator;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public class bqf implements Iterable, bsw {
+public class bqf implements Iterable, IEmpty {
     public final int a;
     public final int b;
     public final int c;
@@ -14,7 +14,8 @@ public class bqf implements Iterable, bsw {
             throw new IllegalArgumentException("Step must be non-zero.");
         }
         if (i3 == Integer.MIN_VALUE) {
-            throw new IllegalArgumentException("Step must be greater than Int.MIN_VALUE to avoid overflow on negation.");
+            throw new IllegalArgumentException(
+                    "Step must be greater than Int.MIN_VALUE to avoid overflow on negation.");
         }
         this.a = i;
         this.b = cnd.av(i, i2, i3);

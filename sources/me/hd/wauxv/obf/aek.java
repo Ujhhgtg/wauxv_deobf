@@ -43,7 +43,8 @@ public final class aek {
             public final Object invoke() {
                 switch (i) {
                     case 0:
-                        return (RecyclerView) ((LinearLayout) this.b.d.getValue()).findViewById(R.id.itemContactRecyclerView);
+                        return (RecyclerView) ((LinearLayout) this.b.d.getValue())
+                                .findViewById(R.id.itemContactRecyclerView);
                     case 1:
                         return (EditText) this.b.n().findViewById(R.id.etSearch);
                     case 2:
@@ -71,7 +72,8 @@ public final class aek {
             public final Object invoke() {
                 switch (i2) {
                     case 0:
-                        return (RecyclerView) ((LinearLayout) this.b.d.getValue()).findViewById(R.id.itemContactRecyclerView);
+                        return (RecyclerView) ((LinearLayout) this.b.d.getValue())
+                                .findViewById(R.id.itemContactRecyclerView);
                     case 1:
                         return (EditText) this.b.n().findViewById(R.id.etSearch);
                     case 2:
@@ -99,7 +101,8 @@ public final class aek {
             public final Object invoke() {
                 switch (i3) {
                     case 0:
-                        return (RecyclerView) ((LinearLayout) this.b.d.getValue()).findViewById(R.id.itemContactRecyclerView);
+                        return (RecyclerView) ((LinearLayout) this.b.d.getValue())
+                                .findViewById(R.id.itemContactRecyclerView);
                     case 1:
                         return (EditText) this.b.n().findViewById(R.id.etSearch);
                     case 2:
@@ -127,7 +130,8 @@ public final class aek {
             public final Object invoke() {
                 switch (i4) {
                     case 0:
-                        return (RecyclerView) ((LinearLayout) this.b.d.getValue()).findViewById(R.id.itemContactRecyclerView);
+                        return (RecyclerView) ((LinearLayout) this.b.d.getValue())
+                                .findViewById(R.id.itemContactRecyclerView);
                     case 1:
                         return (EditText) this.b.n().findViewById(R.id.etSearch);
                     case 2:
@@ -155,7 +159,8 @@ public final class aek {
             public final Object invoke() {
                 switch (i5) {
                     case 0:
-                        return (RecyclerView) ((LinearLayout) this.b.d.getValue()).findViewById(R.id.itemContactRecyclerView);
+                        return (RecyclerView) ((LinearLayout) this.b.d.getValue())
+                                .findViewById(R.id.itemContactRecyclerView);
                     case 1:
                         return (EditText) this.b.n().findViewById(R.id.etSearch);
                     case 2:
@@ -183,7 +188,8 @@ public final class aek {
             public final Object invoke() {
                 switch (i6) {
                     case 0:
-                        return (RecyclerView) ((LinearLayout) this.b.d.getValue()).findViewById(R.id.itemContactRecyclerView);
+                        return (RecyclerView) ((LinearLayout) this.b.d.getValue())
+                                .findViewById(R.id.itemContactRecyclerView);
                     case 1:
                         return (EditText) this.b.n().findViewById(R.id.etSearch);
                     case 2:
@@ -211,7 +217,8 @@ public final class aek {
             public final Object invoke() {
                 switch (i7) {
                     case 0:
-                        return (RecyclerView) ((LinearLayout) this.b.d.getValue()).findViewById(R.id.itemContactRecyclerView);
+                        return (RecyclerView) ((LinearLayout) this.b.d.getValue())
+                                .findViewById(R.id.itemContactRecyclerView);
                     case 1:
                         return (EditText) this.b.n().findViewById(R.id.etSearch);
                     case 2:
@@ -257,9 +264,9 @@ public final class aek {
         Object obj;
         ArrayList arrayList;
         ael aelVar = this.a;
-        csm csmVar = null;
+        Pair pairVar = null;
         if (aelVar == null) {
-            bzo.ar("info" /* cnb.z(-393668112415530L) */);
+            throwLateinitPropNotInitYet("info" /* cnb.z(-393668112415530L) */);
             throw null;
         }
         RadioGroup radioGroup = (RadioGroup) aelVar.a.i.getValue();
@@ -272,7 +279,7 @@ public final class aek {
                 if (radioButton.isChecked()) {
                     String string = text.toString();
                     String string2 = text.toString();
-                    if (bzo.f(string2, "全部" /* cnb.z(-395471998679850L) */)) {
+                    if (nullSafeIsEqual(string2, "全部" /* cnb.z(-395471998679850L) */)) {
                         arrayList = aelVar.c;
                         if (!aelVar.b || arrayList.isEmpty()) {
                             obj = arrayList;
@@ -287,13 +294,13 @@ public final class aek {
                     }
                     obj = list;
                     obj = arrayList;
-                    csmVar = new csm(string, obj);
+                    pairVar = new Pair(string, obj);
                     break;
                 }
             }
         }
-        bzo.n(csmVar);
-        List list2 = (List) csmVar.b;
+        throwIfVar1IsNull(pairVar);
+        List list2 = (List) pairVar.second;
         ArrayList arrayList2 = new ArrayList();
         for (Object obj2 : list2) {
             adx adxVar = (adx) obj2;
@@ -315,7 +322,7 @@ public final class aek {
         sb.append("已选择 " /* cnb.z(-393680997317418L) */);
         ael aelVar = this.a;
         if (aelVar == null) {
-            bzo.ar("info" /* cnb.z(-393642342611754L) */);
+            throwLateinitPropNotInitYet("info" /* cnb.z(-393642342611754L) */);
             throw null;
         }
         sb.append(aelVar.n().size());

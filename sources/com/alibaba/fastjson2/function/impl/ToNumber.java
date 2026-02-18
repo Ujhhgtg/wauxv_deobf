@@ -24,6 +24,6 @@ public final class ToNumber implements Function {
         if (obj instanceof Number) {
             return obj;
         }
-        throw new JSONException(bjs.m(obj, new StringBuilder("can not cast to Number ")));
+        throw new JSONException(concatVar1GetClass(obj, new StringBuilder("can not cast to Number ")));
     }
 }

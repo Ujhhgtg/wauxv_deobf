@@ -69,7 +69,7 @@ public final class aff implements CharSequence {
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:74:0x0157  */
+    /* JADX WARN: Found duplicated region for block: B:74:0x0157 */
     public final void ac(int i, int i2, CharSequence charSequence) {
         Object obj;
         int i3;
@@ -115,7 +115,7 @@ public final class aff implements CharSequence {
         bpqVar.c = 0;
         bpqVar.d = charSequence.length();
         LinkedList linkedList = new LinkedList();
-        bvd bvdVarG = afoVarAf.g();
+        bvd bvdVarG = afoVarAf.setResultTrue();
         int i7 = i4;
         int i8 = i5;
         boolean z = false;
@@ -332,7 +332,7 @@ public final class aff implements CharSequence {
         ArrayList arrayList2 = affVar.a;
         if (i == i3) {
             afo afoVar = (afo) arrayList.get(i);
-            if (i4 != afoVar.b + 1 || afoVar.g() != bvd.CRLF) {
+            if (i4 != afoVar.b + 1 || afoVar.setResultTrue() != bvd.CRLF) {
                 affVar.ab(0, 0, afoVar.subSequence(i2, i4));
             } else if (i2 < i4) {
                 affVar.ab(0, 0, afoVar.subSequence(i2, afoVar.b));
@@ -345,12 +345,12 @@ public final class aff implements CharSequence {
                 throw new StringIndexOutOfBoundsException("start > end");
             }
             afo afoVar2 = (afo) arrayList.get(i);
-            if (afoVar2.g() == bvd.CRLF) {
+            if (afoVar2.setResultTrue() == bvd.CRLF) {
                 int i5 = afoVar2.b;
                 if (i2 <= i5) {
                     affVar.ab(0, 0, afoVar2.subSequence(i2, i5));
-                    ((afo) arrayList2.get(0)).d = afoVar2.g();
-                    affVar.d += afoVar2.g().g;
+                    ((afo) arrayList2.get(0)).d = afoVar2.setResultTrue();
+                    affVar.d += afoVar2.setResultTrue().g;
                 } else {
                     if (i2 != i5 + 1) {
                         throw new IndexOutOfBoundsException();
@@ -362,16 +362,16 @@ public final class aff implements CharSequence {
                 }
             } else {
                 affVar.ab(0, 0, afoVar2.subSequence(i2, afoVar2.b));
-                ((afo) arrayList2.get(0)).d = afoVar2.g();
-                affVar.d += afoVar2.g().g;
+                ((afo) arrayList2.get(0)).d = afoVar2.setResultTrue();
+                affVar.d += afoVar2.setResultTrue().g;
             }
             for (int i6 = i + 1; i6 < i3; i6++) {
                 afo afoVar4 = (afo) arrayList.get(i6);
                 arrayList2.add(new afo(afoVar4));
-                affVar.d = afoVar4.b + afoVar4.g().g + affVar.d;
+                affVar.d = afoVar4.b + afoVar4.setResultTrue().g + affVar.d;
             }
             afo afoVar5 = (afo) arrayList.get(i3);
-            if (i4 == afoVar5.b + 1 && afoVar5.g() == bvd.CRLF) {
+            if (i4 == afoVar5.b + 1 && afoVar5.setResultTrue() == bvd.CRLF) {
                 afo afoVar6 = new afo((Object) null);
                 afoVar6.h(0, 0, i4 - 1, afoVar5);
                 arrayList2.add(afoVar6);
@@ -393,7 +393,7 @@ public final class aff implements CharSequence {
         ArrayList arrayList = this.a;
         if (i == i3) {
             afo afoVar = (afo) arrayList.get(i);
-            if (i4 != afoVar.b + 1 || afoVar.g() != bvd.CRLF) {
+            if (i4 != afoVar.b + 1 || afoVar.setResultTrue() != bvd.CRLF) {
                 sb.append((CharSequence) arrayList.get(i), i2, i4);
                 return sb;
             }
@@ -407,11 +407,11 @@ public final class aff implements CharSequence {
             throw new StringIndexOutOfBoundsException("start > end");
         }
         afo afoVar2 = (afo) arrayList.get(i);
-        if (afoVar2.g() == bvd.CRLF) {
+        if (afoVar2.setResultTrue() == bvd.CRLF) {
             int i6 = afoVar2.b;
             if (i2 <= i6) {
                 sb.append((CharSequence) afoVar2, i2, i6);
-                sb.append(afoVar2.g().f);
+                sb.append(afoVar2.setResultTrue().f);
             } else {
                 if (i2 != i6 + 1) {
                     throw new IndexOutOfBoundsException();
@@ -420,7 +420,7 @@ public final class aff implements CharSequence {
             }
         } else {
             sb.append((CharSequence) afoVar2, i2, afoVar2.b);
-            sb.append(afoVar2.g().f);
+            sb.append(afoVar2.setResultTrue().f);
         }
         while (true) {
             i++;
@@ -429,10 +429,10 @@ public final class aff implements CharSequence {
             }
             afo afoVar3 = (afo) arrayList.get(i);
             sb.append((CharSequence) afoVar3);
-            sb.append(afoVar3.g().f);
+            sb.append(afoVar3.setResultTrue().f);
         }
         afo afoVar4 = (afo) arrayList.get(i3);
-        if (i4 != afoVar4.b + 1 || afoVar4.g() != bvd.CRLF) {
+        if (i4 != afoVar4.b + 1 || afoVar4.setResultTrue() != bvd.CRLF) {
             sb.append((CharSequence) afoVar4, 0, i4);
             return sb;
         }
@@ -476,7 +476,7 @@ public final class aff implements CharSequence {
             for (int i = 0; i < size; i++) {
                 afo afoVar = (afo) arrayList.get(i);
                 sb.append(afoVar.a, 0, afoVar.b);
-                sb.append(afoVar.g().f);
+                sb.append(afoVar.setResultTrue().f);
             }
             ap(false);
             return sb;
@@ -589,9 +589,10 @@ public final class aff implements CharSequence {
     public final void p(int i, int i2) {
         o(i);
         afo afoVar = (afo) this.a.get(i);
-        int i3 = afoVar.b + afoVar.g().g;
+        int i3 = afoVar.b + afoVar.setResultTrue().g;
         if (i2 > i3 || i2 < 0) {
-            StringBuilder sbQ = yg.q(i2, i, "Column ", " out of bounds. line: ", " , column count (line separator included):");
+            StringBuilder sbQ = yg.q(i2, i, "Column ", " out of bounds. line: ",
+                    " , column count (line separator included):");
             sbQ.append(i3);
             throw new StringIndexOutOfBoundsException(sbQ.toString());
         }
@@ -671,7 +672,7 @@ public final class aff implements CharSequence {
             int i8 = i + 1;
             for (int i9 = i8; i9 <= i3 - 1; i9++) {
                 afo afoVar = (afo) arrayList.get(i9);
-                bvd bvdVarG = ((afo) arrayList.get(i9)).g();
+                bvd bvdVarG = ((afo) arrayList.get(i9)).setResultTrue();
                 int i10 = this.d;
                 int i11 = afoVar.b;
                 this.d = i10 - (bvdVarG.g + i11);
@@ -686,15 +687,15 @@ public final class aff implements CharSequence {
             int i12 = this.d;
             int i13 = afoVarAf2.b;
             this.d = i12 - (i13 - i2);
-            sb.insert(0, afoVarAf2, i2, i13).insert(afoVarAf2.b - i2, afoVarAf2.g().f);
+            sb.insert(0, afoVarAf2, i2, i13).insert(afoVarAf2.b - i2, afoVarAf2.setResultTrue().f);
             afoVarAf2.f(i2, afoVarAf2.b);
             this.d -= i4;
             sb.append((CharSequence) afoVar2, 0, i4);
-            this.d -= afoVarAf2.g().g;
+            this.d -= afoVarAf2.setResultTrue().g;
             arrayList.remove(i8);
             dqt dqtVar = new dqt(i4, afoVar2.b, afoVar2);
             afoVarAf2.h(afoVarAf2.b, 0, dqtVar.length(), dqtVar);
-            afoVarAf2.d = afoVar2.g();
+            afoVarAf2.d = afoVar2.setResultTrue();
         }
         this.i.db(this, i, i2, i3, i4, sb);
         ahy ahyVar3 = this.j;

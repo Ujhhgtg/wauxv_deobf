@@ -23,9 +23,10 @@ public final class ali extends AnimatorListenerAdapter {
         this.e = aljVar;
     }
 
-    @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
+    @Override // android.animation.AnimatorListenerAdapter,
+              // android.animation.Animator.AnimatorListener
     public final void onAnimationEnd(Animator animator) {
-        bzo.q(animator, "anim");
+        throwIfVar1IsNull(animator, "anim");
         ViewGroup viewGroup = this.a;
         View view = this.b;
         viewGroup.endViewTransition(view);
@@ -33,7 +34,7 @@ public final class ali extends AnimatorListenerAdapter {
         dlr dlrVar = this.d;
         if (z) {
             int i = dlrVar.a;
-            bzo.p(view, "viewToAnimate");
+            throwIfVar1IsNull(view, "viewToAnimate");
             bjs.a(i, view, viewGroup);
         }
         alj aljVar = this.e;

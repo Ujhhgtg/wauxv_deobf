@@ -24,7 +24,7 @@ public final class gz implements den {
                 ((dg) this.b).j().getClass();
                 return bundle;
             default:
-                Bundle bundleR = bht.r((csm[]) Arrays.copyOf(new csm[0], 0));
+                Bundle bundleR = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                 cnb.ai(bundleR, "classes_to_restore", aaz.z((LinkedHashSet) this.b));
                 return bundleR;
         }

@@ -36,9 +36,9 @@ public class cbm implements bno, crt, cvv, axv, ahw, dff, cdw {
 
     public static cio h(anr anrVar, cjg cjgVar, Bundle bundle, buh buhVar, ciy ciyVar) {
         String string = UUID.randomUUID().toString();
-        bzo.p(string, "toString(...)");
-        bzo.q(cjgVar, "destination");
-        bzo.q(buhVar, "hostLifecycleState");
+        throwIfVar1IsNull(string, "toString(...)");
+        throwIfVar1IsNull(cjgVar, "destination");
+        throwIfVar1IsNull(buhVar, "hostLifecycleState");
         return new cio(anrVar, cjgVar, bundle, buhVar, ciyVar, string, null);
     }
 

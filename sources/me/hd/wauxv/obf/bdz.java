@@ -32,9 +32,12 @@ public final class bdz {
         try {
             return c(classLoader, str);
         } catch (ClassCastException e) {
-            throw new abt(bjs.o("Unable to instantiate fragment ", str, ": make sure class is a valid subclass of Fragment"), e);
+            throw new QueryDidNotReturnUniqueResultRuntimeException(
+                    concat("Unable to instantiate fragment ", str, ": make sure class is a valid subclass of Fragment"),
+                    e);
         } catch (ClassNotFoundException e2) {
-            throw new abt(bjs.o("Unable to instantiate fragment ", str, ": make sure class name exists"), e2);
+            throw new QueryDidNotReturnUniqueResultRuntimeException(
+                    concat("Unable to instantiate fragment ", str, ": make sure class name exists"), e2);
         }
     }
 
@@ -42,13 +45,21 @@ public final class bdz {
         try {
             return (bdj) d(this.b.w.e.getClassLoader(), str).getConstructor(null).newInstance(null);
         } catch (IllegalAccessException e) {
-            throw new abt(bjs.o("Unable to instantiate fragment ", str, ": make sure class name exists, is public, and has an empty constructor that is public"), e);
+            throw new QueryDidNotReturnUniqueResultRuntimeException(
+                    concat("Unable to instantiate fragment ", str,
+                            ": make sure class name exists, is public, and has an empty constructor that is public"),
+                    e);
         } catch (InstantiationException e2) {
-            throw new abt(bjs.o("Unable to instantiate fragment ", str, ": make sure class name exists, is public, and has an empty constructor that is public"), e2);
+            throw new QueryDidNotReturnUniqueResultRuntimeException(
+                    concat("Unable to instantiate fragment ", str,
+                            ": make sure class name exists, is public, and has an empty constructor that is public"),
+                    e2);
         } catch (NoSuchMethodException e3) {
-            throw new abt(bjs.o("Unable to instantiate fragment ", str, ": could not find Fragment constructor"), e3);
+            throw new QueryDidNotReturnUniqueResultRuntimeException(
+                    concat("Unable to instantiate fragment ", str, ": could not find Fragment constructor"), e3);
         } catch (InvocationTargetException e4) {
-            throw new abt(bjs.o("Unable to instantiate fragment ", str, ": calling Fragment constructor caused an exception"), e4);
+            throw new QueryDidNotReturnUniqueResultRuntimeException(concat("Unable to instantiate fragment ", str,
+                    ": calling Fragment constructor caused an exception"), e4);
         }
     }
 }

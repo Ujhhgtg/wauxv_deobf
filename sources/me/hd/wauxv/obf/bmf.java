@@ -22,16 +22,20 @@ public abstract class bmf extends ewy {
             ArrayList arrayList = ewq.a;
             StringBuilder sb = new StringBuilder();
             sb.append("initOnce " /* cnb.z(-51419348466474L) */);
-            ewq.e(yg.n(sb, this instanceof doo ? ((doo) this).f() : "LoadHook" /* cnb.z(-50843822848810L) */, -50805168143146L), e, 12);
+            ewq.e(yg.n(sb, this instanceof BaseHook ? ((BaseHook) this).getResult() : "LoadHook" /*
+                                                                                                  * cnb.z(-
+                                                                                                  * 50843822848810L)
+                                                                                                  */,
+                    -50805168143146L), e, 12);
         }
         this.v = true;
     }
 
-    public final void x(aki akiVar, bgf bgfVar) {
+    public final void x(aki akiVar, IHasInvokeMethod bgfVar) {
         akiVar.m(new bme(bgfVar, this, 0));
     }
 
-    public final void y(aki akiVar, bgf bgfVar) {
+    public final void y(aki akiVar, IHasInvokeMethod bgfVar) {
         akiVar.n(new bme(bgfVar, this, 1));
     }
 

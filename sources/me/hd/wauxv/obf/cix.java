@@ -69,13 +69,13 @@ public final class cix {
     }
 
     public static cjg z(int i, cjg cjgVar, cjg cjgVar2, boolean z) {
-        if (cjgVar.g.a == i && (cjgVar2 == null || (cjgVar.equals(cjgVar2) && bzo.f(cjgVar.h, cjgVar2.h)))) {
+        if (cjgVar.g.a == i && (cjgVar2 == null || (cjgVar.equals(cjgVar2) && nullSafeIsEqual(cjgVar.h, cjgVar2.h)))) {
             return cjgVar;
         }
         cji cjiVar = cjgVar instanceof cji ? (cji) cjgVar : null;
         if (cjiVar == null) {
             cjiVar = cjgVar.h;
-            bzo.n(cjiVar);
+            throwIfVar1IsNull(cjiVar);
         }
         return cjiVar.b.k(i, cjiVar, cjgVar2, z);
     }
@@ -88,7 +88,8 @@ public final class cix {
         boolean z = cjgVar2 instanceof bbn;
         km kmVar = this.f;
         if (!z) {
-            while (!kmVar.isEmpty() && (((cio) kmVar.last()).b instanceof bbn) && al(((cio) kmVar.last()).b.g.a, true, false)) {
+            while (!kmVar.isEmpty() && (((cio) kmVar.last()).b instanceof bbn)
+                    && al(((cio) kmVar.last()).b.g.a, true, false)) {
             }
         }
         km<cio> kmVar2 = new km();
@@ -96,7 +97,7 @@ public final class cix {
         if (cjgVar instanceof cji) {
             cjg cjgVar3 = cjgVar2;
             do {
-                bzo.n(cjgVar3);
+                throwIfVar1IsNull(cjgVar3);
                 cjgVar3 = cjgVar3.h;
                 if (cjgVar3 != null) {
                     ListIterator listIterator = list.listIterator(list.size());
@@ -106,7 +107,7 @@ public final class cix {
                             break;
                         }
                         objPrevious2 = listIterator.previous();
-                    } while (!bzo.f(((cio) objPrevious2).b, cjgVar3));
+                    } while (!nullSafeIsEqual(((cio) objPrevious2).b, cjgVar3));
                     cio cioVarH = (cio) objPrevious2;
                     if (cioVarH == null) {
                         cioVarH = cbm.h(anrVar, cjgVar3, bundle, ah(), this.n);
@@ -133,7 +134,7 @@ public final class cix {
                         break;
                     }
                     objPrevious = listIterator2.previous();
-                } while (!bzo.f(((cio) objPrevious).b, cjgVar4));
+                } while (!nullSafeIsEqual(((cio) objPrevious).b, cjgVar4));
                 cio cioVarH2 = (cio) objPrevious;
                 if (cioVarH2 == null) {
                     cioVarH2 = cbm.h(anrVar, cjgVar4, cjgVar4.k(bundle2), ah(), this.n);
@@ -146,7 +147,7 @@ public final class cix {
         }
         while (!kmVar.isEmpty() && (((cio) kmVar.last()).b instanceof cji)) {
             cjg cjgVar5 = ((cio) kmVar.last()).b;
-            bzo.o(cjgVar5, "null cannot be cast to non-null type androidx.navigation.NavGraph");
+            throwIfVar1IsNull(cjgVar5, "null cannot be cast to non-null type androidx.navigation.NavGraph");
             if (((dlo) ((cji) cjgVar5).b.e).f(cjgVar2.g.a) != null) {
                 break;
             } else {
@@ -157,14 +158,14 @@ public final class cix {
         if (cioVar2 == null) {
             cioVar2 = (cio) (kmVar2.isEmpty() ? null : kmVar2.e[kmVar2.d]);
         }
-        if (!bzo.f(cioVar2 != null ? cioVar2.b : null, this.c)) {
+        if (!nullSafeIsEqual(cioVar2 != null ? cioVar2.b : null, this.c)) {
             ListIterator listIterator3 = list.listIterator(list.size());
             while (listIterator3.hasPrevious()) {
                 Object objPrevious3 = listIterator3.previous();
                 cjg cjgVar6 = ((cio) objPrevious3).b;
                 cji cjiVar = this.c;
-                bzo.n(cjiVar);
-                if (bzo.f(cjgVar6, cjiVar)) {
+                throwIfVar1IsNull(cjiVar);
+                if (nullSafeIsEqual(cjgVar6, cjiVar)) {
                     obj = objPrevious3;
                     break;
                 }
@@ -172,9 +173,9 @@ public final class cix {
             cio cioVarH3 = (cio) obj;
             if (cioVarH3 == null) {
                 cji cjiVar2 = this.c;
-                bzo.n(cjiVar2);
+                throwIfVar1IsNull(cjiVar2);
                 cji cjiVar3 = this.c;
-                bzo.n(cjiVar3);
+                throwIfVar1IsNull(cjiVar3);
                 cioVarH3 = cbm.h(anrVar, cjiVar2, cjiVar3.k(bundle), ah(), this.n);
             }
             kmVar2.addFirst(cioVarH3);
@@ -182,7 +183,9 @@ public final class cix {
         for (cio cioVar3 : kmVar2) {
             Object obj2 = this.s.get(this.r.d(cioVar3.b.f));
             if (obj2 == null) {
-                throw new IllegalStateException(yg.o(new StringBuilder("NavigatorBackStack for "), cjgVar.f, " should already be created").toString());
+                throw new IllegalStateException(
+                        yg.o(new StringBuilder("NavigatorBackStack for "), cjgVar.f, " should already be created")
+                                .toString());
             }
             ((cit) obj2).i(cioVar3);
         }
@@ -239,7 +242,7 @@ public final class cix {
                     dhbVar.g = i3;
                     if (i3 > 1) {
                         Object[] objArr = dhbVar.a;
-                        bzo.n(objArr);
+                        throwIfVar1IsNull(objArr);
                         objArr[((int) dhbVar.h()) & (objArr.length - 1)] = null;
                         dhbVar.g--;
                         long jH = dhbVar.h() + 1;
@@ -275,14 +278,14 @@ public final class cix {
             if (cjgVar == null) {
                 return cjiVar;
             }
-            if (bzo.f(cjiVar, cjgVar) && cjgVar.h == null) {
+            if (nullSafeIsEqual(cjiVar, cjgVar) && cjgVar.h == null) {
                 return this.c;
             }
         }
         cio cioVar = (cio) this.f.j();
         if (cioVar == null || (cjgVar2 = cioVar.b) == null) {
             cjgVar2 = this.c;
-            bzo.n(cjgVar2);
+            throwIfVar1IsNull(cjgVar2);
         }
         return z(i, cjgVar2, cjgVar, false);
     }
@@ -302,7 +305,8 @@ public final class cix {
         if (cioVar != null) {
             return cioVar;
         }
-        StringBuilder sbR = yg.r(i, "No destination with ID ", " is on the NavController's back stack. The current destination is ");
+        StringBuilder sbR = yg.r(i, "No destination with ID ",
+                " is on the NavController's back stack. The current destination is ");
         sbR.append(af());
         throw new IllegalArgumentException(sbR.toString().toString());
     }
@@ -320,7 +324,7 @@ public final class cix {
         if (cjiVar == null) {
             throw new IllegalStateException("You must call setGraph() before calling getGraph()");
         }
-        bzo.o(cjiVar, "null cannot be cast to non-null type androidx.navigation.NavGraph");
+        throwIfVar1IsNull(cjiVar, "null cannot be cast to non-null type androidx.navigation.NavGraph");
         return cjiVar;
     }
 
@@ -333,14 +337,14 @@ public final class cix {
         cio cioVar = (cio) this.f.j();
         if (cioVar == null || (cjgVar = cioVar.b) == null) {
             cjgVar = this.c;
-            bzo.n(cjgVar);
+            throwIfVar1IsNull(cjgVar);
         }
         cji cjiVar = cjgVar instanceof cji ? (cji) cjgVar : null;
         if (cjiVar != null) {
             return cjiVar;
         }
         cji cjiVar2 = cjgVar.h;
-        bzo.n(cjiVar2);
+        throwIfVar1IsNull(cjiVar2);
         return cjiVar2;
     }
 
@@ -351,20 +355,26 @@ public final class cix {
             linkedHashMap.put(cioVar2, new lp());
         }
         Object obj = linkedHashMap.get(cioVar2);
-        bzo.n(obj);
+        throwIfVar1IsNull(obj);
         ((lp) obj).a.incrementAndGet();
     }
 
-    /* JADX WARN: Found duplicated region for block: B:11:0x003c  */
-    /* JADX WARN: Found duplicated region for block: B:19:0x0061  */
-    /* JADX WARN: Found duplicated region for block: B:49:0x0107  */
-    /* JADX WARN: Found duplicated region for block: B:52:0x0112 A[LOOP:4: B:50:0x010c->B:52:0x0112, LOOP_END, MOVE_INLINED] */
-    /* JADX WARN: Found duplicated region for block: B:56:0x0171  */
-    /* JADX WARN: Found duplicated region for block: B:58:0x017d  */
-    /* JADX WARN: Found duplicated region for block: B:63:0x0196 A[LOOP:6: B:61:0x0190->B:63:0x0196, LOOP_END] */
-    /* JADX WARN: Found duplicated region for block: B:65:0x01ab  */
+    /* JADX WARN: Found duplicated region for block: B:11:0x003c */
+    /* JADX WARN: Found duplicated region for block: B:19:0x0061 */
+    /* JADX WARN: Found duplicated region for block: B:49:0x0107 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:52:0x0112 A[LOOP:4:
+     * B:50:0x010c->B:52:0x0112, LOOP_END, MOVE_INLINED]
+     */
+    /* JADX WARN: Found duplicated region for block: B:56:0x0171 */
+    /* JADX WARN: Found duplicated region for block: B:58:0x017d */
+    /*
+     * JADX WARN: Found duplicated region for block: B:63:0x0196 A[LOOP:6:
+     * B:61:0x0190->B:63:0x0196, LOOP_END]
+     */
+    /* JADX WARN: Found duplicated region for block: B:65:0x01ab */
     /* JADX WARN: Found duplicated region for block: B:67:0x01b1 A[MOVE_INLINED] */
-    /* JADX WARN: Found duplicated region for block: B:68:0x01db  */
+    /* JADX WARN: Found duplicated region for block: B:68:0x01db */
     /* JADX WARN: Found duplicated region for block: B:91:0x0188 A[SYNTHETIC] */
     public final void ak(cjg cjgVar, Bundle bundle, cjo cjoVar) {
         boolean zAl;
@@ -375,7 +385,7 @@ public final class cix {
         cjg cjgVar2;
         km<cio> kmVar;
         cji cjiVar;
-        bzo.q(cjgVar, "node");
+        throwIfVar1IsNull(cjgVar, "node");
         ea eaVar = cjgVar.g;
         LinkedHashMap linkedHashMap = this.s;
         Iterator it = linkedHashMap.values().iterator();
@@ -426,14 +436,15 @@ public final class cix {
                                 cio cioVar2 = (cio) abf.ar(kmVar2);
                                 aq(cioVar2);
                                 dag dagVar3 = dagVar2;
-                                cio cioVar3 = new cio(cioVar2.a, cioVar2.b, cioVar2.b.k(bundle), cioVar2.d, cioVar2.e, cioVar2.f, cioVar2.g);
+                                cio cioVar3 = new cio(cioVar2.a, cioVar2.b, cioVar2.b.k(bundle), cioVar2.d, cioVar2.e,
+                                        cioVar2.f, cioVar2.g);
                                 buh buhVar = cioVar2.d;
                                 ciq ciqVar = cioVar3.h;
                                 ciqVar.getClass();
-                                bzo.q(buhVar, "<set-?>");
+                                throwIfVar1IsNull(buhVar, "<set-?>");
                                 ciqVar.d = buhVar;
                                 buh buhVar2 = cioVar2.h.k;
-                                bzo.q(buhVar2, "maxState");
+                                throwIfVar1IsNull(buhVar2, "maxState");
                                 ciqVar.k = buhVar2;
                                 ciqVar.m();
                                 kmVar.addFirst(cioVar3);
@@ -464,14 +475,15 @@ public final class cix {
                         cio cioVar22 = (cio) abf.ar(kmVar2);
                         aq(cioVar22);
                         dag dagVar32 = dagVar2;
-                        cio cioVar32 = new cio(cioVar22.a, cioVar22.b, cioVar22.b.k(bundle), cioVar22.d, cioVar22.e, cioVar22.f, cioVar22.g);
+                        cio cioVar32 = new cio(cioVar22.a, cioVar22.b, cioVar22.b.k(bundle), cioVar22.d, cioVar22.e,
+                                cioVar22.f, cioVar22.g);
                         buh buhVar3 = cioVar22.d;
                         ciq ciqVar2 = cioVar32.h;
                         ciqVar2.getClass();
-                        bzo.q(buhVar3, "<set-?>");
+                        throwIfVar1IsNull(buhVar3, "<set-?>");
                         ciqVar2.d = buhVar3;
                         buh buhVar22 = cioVar22.h.k;
-                        bzo.q(buhVar22, "maxState");
+                        throwIfVar1IsNull(buhVar22, "maxState");
                         ciqVar2.k = buhVar22;
                         ciqVar2.m();
                         kmVar.addFirst(cioVar32);
@@ -568,8 +580,9 @@ public final class cix {
         } while (eaVar.a != i);
         if (cjgVar == null) {
             int i3 = cjg.e;
-            String str2 = "Ignoring popBackStack to destination " + bmy.r(this.a.c, i) + " as it was not found on the current back stack";
-            bzo.q(str2, "message");
+            String str2 = "Ignoring popBackStack to destination " + bmy.r(this.a.c, i)
+                    + " as it was not found on the current back stack";
+            throwIfVar1IsNull(str2, "message");
             Log.i("NavController", str2);
             return false;
         }
@@ -588,8 +601,8 @@ public final class cix {
             cixVar = this;
             z3 = z2;
             ciu ciuVar = new ciu(dagVar2, dagVar, cixVar, z3, kmVar2);
-            bzo.q(cklVar, "navigator");
-            bzo.q(cioVar, "popUpTo");
+            throwIfVar1IsNull(cklVar, "navigator");
+            throwIfVar1IsNull(cioVar, "popUpTo");
             cixVar.u = ciuVar;
             cklVar.l(cioVar, z3);
             cixVar.u = null;
@@ -601,7 +614,8 @@ public final class cix {
         if (z3) {
             LinkedHashMap linkedHashMap = cixVar.k;
             if (!z) {
-                baa baaVar = new baa(new dpu(dfv.ai(cjgVar, new cgu(13)), new bgf(this) { // from class: me.hd.wauxv.obf.civ
+                baa baaVar = new baa(new dpu(dfv.ai(cjgVar, new cgu(13)), new bgf(this) { // from class:
+                                                                                          // me.hd.wauxv.obf.civ
                     public final /* synthetic */ cix b;
 
                     {
@@ -614,11 +628,11 @@ public final class cix {
                         cjg cjgVar2 = (cjg) obj;
                         switch (i2) {
                             case 0:
-                                bzo.q(cjgVar2, "destination");
+                                throwIfVar1IsNull(cjgVar2, "destination");
                                 zContainsKey = this.b.k.containsKey(Integer.valueOf(cjgVar2.g.a));
                                 break;
                             default:
-                                bzo.q(cjgVar2, "destination");
+                                throwIfVar1IsNull(cjgVar2, "destination");
                                 zContainsKey = this.b.k.containsKey(Integer.valueOf(cjgVar2.g.a));
                                 break;
                         }
@@ -634,7 +648,8 @@ public final class cix {
             if (!kmVar2.isEmpty()) {
                 xe xeVar = ((cir) kmVar2.first()).a;
                 final int i4 = 1;
-                baa baaVar2 = new baa(new dpu(dfv.ai(ad(xeVar.c, null), new cgu(14)), new bgf(this) { // from class: me.hd.wauxv.obf.civ
+                baa baaVar2 = new baa(new dpu(dfv.ai(ad(xeVar.c, null), new cgu(14)), new bgf(this) { // from class:
+                                                                                                      // me.hd.wauxv.obf.civ
                     public final /* synthetic */ cix b;
 
                     {
@@ -647,11 +662,11 @@ public final class cix {
                         cjg cjgVar2 = (cjg) obj;
                         switch (i4) {
                             case 0:
-                                bzo.q(cjgVar2, "destination");
+                                throwIfVar1IsNull(cjgVar2, "destination");
                                 zContainsKey = this.b.k.containsKey(Integer.valueOf(cjgVar2.g.a));
                                 break;
                             default:
-                                bzo.q(cjgVar2, "destination");
+                                throwIfVar1IsNull(cjgVar2, "destination");
                                 zContainsKey = this.b.k.containsKey(Integer.valueOf(cjgVar2.g.a));
                                 break;
                         }
@@ -674,16 +689,19 @@ public final class cix {
         ciy ciyVar;
         bmu bmuVar;
         Set set;
-        bzo.q(cioVar, "popUpTo");
+        throwIfVar1IsNull(cioVar, "popUpTo");
         km kmVar2 = this.f;
         cio cioVar2 = (cio) kmVar2.last();
-        if (!bzo.f(cioVar2, cioVar)) {
-            throw new IllegalStateException(("Attempted to pop " + cioVar.b + ", which is not the top of the back stack (" + cioVar2.b + ')').toString());
+        if (!nullSafeIsEqual(cioVar2, cioVar)) {
+            throw new IllegalStateException(
+                    ("Attempted to pop " + cioVar.b + ", which is not the top of the back stack (" + cioVar2.b + ')')
+                            .toString());
         }
         abf.ar(kmVar2);
         cit citVar = (cit) this.s.get(this.r.d(cioVar2.b.f));
         boolean z2 = true;
-        if ((citVar == null || (bmuVar = citVar.f) == null || (set = (Set) ((dml) bmuVar.h).c()) == null || !set.contains(cioVar2)) && !this.j.containsKey(cioVar2)) {
+        if ((citVar == null || (bmuVar = citVar.f) == null || (set = (Set) ((dml) bmuVar.h).c()) == null
+                || !set.contains(cioVar2)) && !this.j.containsKey(cioVar2)) {
             z2 = false;
         }
         buh buhVar = cioVar2.h.j.c;
@@ -704,7 +722,7 @@ public final class cix {
             return;
         }
         String str = cioVar2.f;
-        bzo.q(str, "backStackEntryId");
+        throwIfVar1IsNull(str, "backStackEntryId");
         erq erqVar = (erq) ciyVar.a.remove(str);
         if (erqVar != null) {
             erqVar.b();
@@ -760,10 +778,10 @@ public final class cix {
         }
         String str = (String) linkedHashMap.get(Integer.valueOf(i));
         Collection collectionValues = linkedHashMap.values();
-        bzo.q(collectionValues, "<this>");
+        throwIfVar1IsNull(collectionValues, "<this>");
         Iterator it = collectionValues.iterator();
         while (it.hasNext()) {
-            if (bzo.f((String) it.next(), str)) {
+            if (nullSafeIsEqual((String) it.next(), str)) {
                 it.remove();
             }
         }
@@ -783,12 +801,13 @@ public final class cix {
                 cjg cjgVarZ = z(xeVar.c, cjgVarAg, null, true);
                 if (cjgVarZ == null) {
                     int i2 = cjg.e;
-                    throw new IllegalStateException(("Restore State failed: destination " + bmy.r(anrVar, xeVar2.c) + " cannot be found from the current destination " + cjgVarAg).toString());
+                    throw new IllegalStateException(("Restore State failed: destination " + bmy.r(anrVar, xeVar2.c)
+                            + " cannot be found from the current destination " + cjgVarAg).toString());
                 }
                 buh buhVarAh = ah();
                 ciy ciyVar = this.n;
-                bzo.q(anrVar, com.umeng.analytics.pro.f.X);
-                bzo.q(buhVarAh, "hostLifecycleState");
+                throwIfVar1IsNull(anrVar, "context");
+                throwIfVar1IsNull(buhVarAh, "hostLifecycleState");
                 Bundle bundle3 = (Bundle) xeVar2.e;
                 if (bundle3 != null) {
                     bundle3.setClassLoader(anrVar.b.getClassLoader());
@@ -798,7 +817,7 @@ public final class cix {
                 }
                 String str2 = (String) xeVar2.d;
                 Bundle bundle4 = (Bundle) xeVar2.f;
-                bzo.q(str2, "id");
+                throwIfVar1IsNull(str2, "id");
                 arrayList.add(new cio(anrVar, cjgVarZ, bundle2, buhVarAh, ciyVar, str2, bundle4));
                 cjgVarAg = cjgVarZ;
             }
@@ -812,7 +831,10 @@ public final class cix {
         }
         for (cio cioVar3 : arrayList3) {
             List list = (List) aaz.m(arrayList2);
-            if (bzo.f((list == null || (cioVar = (cio) aaz.l(list)) == null || (cjgVar = cioVar.b) == null) ? null : cjgVar.f, cioVar3.b.f)) {
+            if (nullSafeIsEqual(
+                    (list == null || (cioVar = (cio) aaz.l(list)) == null || (cjgVar = cioVar.b) == null) ? null
+                            : cjgVar.f,
+                    cioVar3.b.f)) {
                 list.add(cioVar3);
             } else {
                 arrayList2.add(aba.ah(cioVar3));
@@ -827,7 +849,7 @@ public final class cix {
                 public final Object invoke(Object obj2) {
                     List listSubList;
                     cio cioVar4 = (cio) obj2;
-                    bzo.q(cioVar4, "entry");
+                    throwIfVar1IsNull(cioVar4, "entry");
                     dagVar.a = true;
                     ArrayList arrayList4 = arrayList;
                     int iIndexOf = arrayList4.indexOf(cioVar4);
@@ -849,44 +871,62 @@ public final class cix {
         return dagVar.a;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:132:0x02f9  */
-    /* JADX WARN: Found duplicated region for block: B:134:0x02fd  */
-    /* JADX WARN: Found duplicated region for block: B:136:0x0308  */
-    /* JADX WARN: Found duplicated region for block: B:137:0x030b  */
-    /* JADX WARN: Found duplicated region for block: B:138:0x030d  */
-    /* JADX WARN: Found duplicated region for block: B:141:0x0321  */
-    /* JADX WARN: Found duplicated region for block: B:153:0x034c  */
-    /* JADX WARN: Found duplicated region for block: B:154:0x036c  */
-    /* JADX WARN: Found duplicated region for block: B:156:0x0377  */
-    /* JADX WARN: Found duplicated region for block: B:173:0x03da  */
-    /* JADX WARN: Found duplicated region for block: B:174:0x03dd  */
-    /* JADX WARN: Found duplicated region for block: B:177:0x03e2  */
-    /* JADX WARN: Found duplicated region for block: B:179:0x03ea  */
-    /* JADX WARN: Found duplicated region for block: B:180:0x03fa  */
-    /* JADX WARN: Found duplicated region for block: B:183:0x03fe  */
-    /* JADX WARN: Found duplicated region for block: B:185:0x040b A[LOOP:10: B:181:0x03fb->B:185:0x040b, LOOP_END] */
-    /* JADX WARN: Found duplicated region for block: B:189:0x043a  */
-    /* JADX WARN: Found duplicated region for block: B:191:0x0440  */
-    /* JADX WARN: Found duplicated region for block: B:193:0x0446  */
-    /* JADX WARN: Found duplicated region for block: B:194:0x0449  */
-    /* JADX WARN: Found duplicated region for block: B:196:0x0452  */
-    /* JADX WARN: Found duplicated region for block: B:198:0x0459  */
-    /* JADX WARN: Found duplicated region for block: B:201:0x045f A[LOOP:12: B:201:0x045f->B:203:0x046e, LOOP_START, PHI: r11
-      0x045f: PHI (r11v6 me.hd.wauxv.obf.cjg) = (r11v5 me.hd.wauxv.obf.cjg), (r11v8 me.hd.wauxv.obf.cjg) binds: [B:199:0x045b, B:203:0x046e] A[DONT_GENERATE, DONT_INLINE]] */
-    /* JADX WARN: Found duplicated region for block: B:203:0x046e A[LOOP:12: B:201:0x045f->B:203:0x046e, LOOP_END] */
+    /* JADX WARN: Found duplicated region for block: B:132:0x02f9 */
+    /* JADX WARN: Found duplicated region for block: B:134:0x02fd */
+    /* JADX WARN: Found duplicated region for block: B:136:0x0308 */
+    /* JADX WARN: Found duplicated region for block: B:137:0x030b */
+    /* JADX WARN: Found duplicated region for block: B:138:0x030d */
+    /* JADX WARN: Found duplicated region for block: B:141:0x0321 */
+    /* JADX WARN: Found duplicated region for block: B:153:0x034c */
+    /* JADX WARN: Found duplicated region for block: B:154:0x036c */
+    /* JADX WARN: Found duplicated region for block: B:156:0x0377 */
+    /* JADX WARN: Found duplicated region for block: B:173:0x03da */
+    /* JADX WARN: Found duplicated region for block: B:174:0x03dd */
+    /* JADX WARN: Found duplicated region for block: B:177:0x03e2 */
+    /* JADX WARN: Found duplicated region for block: B:179:0x03ea */
+    /* JADX WARN: Found duplicated region for block: B:180:0x03fa */
+    /* JADX WARN: Found duplicated region for block: B:183:0x03fe */
+    /*
+     * JADX WARN: Found duplicated region for block: B:185:0x040b A[LOOP:10:
+     * B:181:0x03fb->B:185:0x040b, LOOP_END]
+     */
+    /* JADX WARN: Found duplicated region for block: B:189:0x043a */
+    /* JADX WARN: Found duplicated region for block: B:191:0x0440 */
+    /* JADX WARN: Found duplicated region for block: B:193:0x0446 */
+    /* JADX WARN: Found duplicated region for block: B:194:0x0449 */
+    /* JADX WARN: Found duplicated region for block: B:196:0x0452 */
+    /* JADX WARN: Found duplicated region for block: B:198:0x0459 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:201:0x045f A[LOOP:12:
+     * B:201:0x045f->B:203:0x046e, LOOP_START, PHI: r11
+     * 0x045f: PHI (r11v6 me.hd.wauxv.obf.cjg) = (r11v5 me.hd.wauxv.obf.cjg), (r11v8
+     * me.hd.wauxv.obf.cjg) binds: [B:199:0x045b, B:203:0x046e] A[DONT_GENERATE,
+     * DONT_INLINE]]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:203:0x046e A[LOOP:12:
+     * B:201:0x045f->B:203:0x046e, LOOP_END]
+     */
     /* JADX WARN: Found duplicated region for block: B:205:0x047a A[MOVE_INLINED] */
     /* JADX WARN: Found duplicated region for block: B:268:0x0349 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:269:0x0316 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:279:0x041a A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:281:0x04a2 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:284:0x049f A[SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:286:0x0478 A[EDGE_INSN: B:286:0x0478->B:204:0x0478 BREAK  A[LOOP:12: B:201:0x045f->B:203:0x046e], SYNTHETIC] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:286:0x0478 A[EDGE_INSN:
+     * B:286:0x0478->B:204:0x0478 BREAK A[LOOP:12: B:201:0x045f->B:203:0x046e],
+     * SYNTHETIC]
+     */
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Type inference failed for: r20v1, types: [android.os.Bundle[]] */
     /* JADX WARN: Type inference failed for: r20v2, types: [java.lang.Throwable] */
     /* JADX WARN: Type inference failed for: r20v3, types: [java.lang.Throwable] */
     /* JADX WARN: Type inference failed for: r20v4, types: [java.lang.Throwable] */
-    /* JADX WARN: Type inference failed for: r5v16, types: [me.hd.wauxv.obf.cjg, me.hd.wauxv.obf.cji] */
+    /*
+     * JADX WARN: Type inference failed for: r5v16, types: [me.hd.wauxv.obf.cjg,
+     * me.hd.wauxv.obf.cji]
+     */
     public final void ap(cji cjiVar, Bundle bundle) {
         boolean z;
         ckm ckmVar;
@@ -926,20 +966,20 @@ public final class cix {
             throw new IllegalStateException("You cannot set a new graph on a NavController with entries on the back stack after the NavController has been destroyed. Please ensure that your NavHost has the same lifetime as your NavController.");
         }
         boolean z2 = true;
-        if (bzo.f(this.c, cjiVar)) {
+        if (nullSafeIsEqual(this.c, cjiVar)) {
             int i10 = ((dlo) xeVar2.e).i();
             for (int i11 = 0; i11 < i10; i11++) {
                 cjg cjgVar = (cjg) ((dlo) xeVar2.e).j(i11);
                 cji cjiVar6 = this.c;
-                bzo.n(cjiVar6);
+                throwIfVar1IsNull(cjiVar6);
                 int iG = ((dlo) cjiVar6.b.e).g(i11);
                 cji cjiVar7 = this.c;
-                bzo.n(cjiVar7);
+                throwIfVar1IsNull(cjiVar7);
                 dlo dloVar = (dlo) cjiVar7.b.e;
                 if (dloVar.a) {
                     bht.q(dloVar);
                 }
-                int i12 = bzo.i(dloVar.b, dloVar.d, iG);
+                int i12 = KotlinHelpers.i(dloVar.b, dloVar.d, iG);
                 if (i12 >= 0) {
                     Object[] objArr = dloVar.c;
                     Object obj = objArr[i12];
@@ -949,24 +989,24 @@ public final class cix {
             for (cio cioVar : kmVar) {
                 int i13 = cjg.e;
                 cjg cjgVar2 = cioVar.b;
-                bzo.q(cjgVar2, "<this>");
+                throwIfVar1IsNull(cjgVar2, "<this>");
                 bzv bzvVar = new bzv(dfv.ak(dfv.ai(cjgVar2, new cgu(19))), 1);
                 cjg cjgVarP3 = this.c;
-                bzo.n(cjgVarP3);
+                throwIfVar1IsNull(cjgVarP3);
                 Iterator it = bzvVar.iterator();
                 while (true) {
                     ListIterator listIterator = ((dcz) it).a;
                     if (listIterator.hasPrevious()) {
                         cjg cjgVar3 = (cjg) listIterator.previous();
-                        if (!bzo.f(cjgVar3, this.c) || !bzo.f(cjgVarP3, cjiVar)) {
+                        if (!nullSafeIsEqual(cjgVar3, this.c) || !nullSafeIsEqual(cjgVarP3, cjiVar)) {
                             if (cjgVarP3 instanceof cji) {
                                 cjgVarP3 = ((cji) cjgVarP3).p(cjgVar3.g.a);
-                                bzo.n(cjgVarP3);
+                                throwIfVar1IsNull(cjgVarP3);
                             }
                         }
                     }
                 }
-                bzo.q(cjgVarP3, "<set-?>");
+                throwIfVar1IsNull(cjgVarP3, "<set-?>");
                 cioVar.b = cjgVarP3;
             }
             return;
@@ -976,7 +1016,7 @@ public final class cix {
         cjg cjgVar4 = null;
         if (cjiVar8 != null) {
             for (Integer num : new ArrayList(this.k.keySet())) {
-                bzo.n(num);
+                throwIfVar1IsNull(num);
                 int iIntValue = num.intValue();
                 Iterator it2 = linkedHashMap.values().iterator();
                 while (it2.hasNext()) {
@@ -1031,7 +1071,7 @@ public final class cix {
             int i15 = 0;
             while (i15 < length4) {
                 Bundle bundle7 = bundleArr2[i15];
-                bzo.q(bundle7, "state");
+                throwIfVar1IsNull(bundle7, "state");
                 bundle7.setClassLoader(cir.class.getClassLoader());
                 boolean z6 = z2;
                 String string = bundle7.getString("nav-entry-state:id");
@@ -1040,7 +1080,7 @@ public final class cix {
                     cmz.ad("nav-entry-state:id");
                     throw r20;
                 }
-                int iV = bzo.v("nav-entry-state:destination-id", bundle7);
+                int iV = KotlinHelpers.v("nav-entry-state:destination-id", bundle7);
                 int i16 = length4;
                 Bundle bundle8 = bundle7.getBundle("nav-entry-state:args");
                 if (bundle8 == null) {
@@ -1066,8 +1106,8 @@ public final class cix {
                 buh buhVarAh = ah();
                 ciy ciyVar = this.n;
                 cjg cjgVar5 = cjgVar4;
-                bzo.q(anrVar, com.umeng.analytics.pro.f.X);
-                bzo.q(buhVarAh, "hostLifecycleState");
+                throwIfVar1IsNull(anrVar, "context");
+                throwIfVar1IsNull(buhVarAh, "hostLifecycleState");
                 bundle8.setClassLoader(anrVar.b.getClassLoader());
                 ckm ckmVar3 = ckmVar2;
                 Bundle[] bundleArr3 = bundleArr2;
@@ -1103,7 +1143,7 @@ public final class cix {
             ckmVar = ckmVar2;
             str = " cannot be found from the current destination ";
         }
-        Collection collectionValues = bzo.at(ckmVar.b).values();
+        Collection collectionValues = KotlinHelpers.at(ckmVar.b).values();
         ArrayList<ckl> arrayList = new ArrayList();
         for (Object obj2 : collectionValues) {
             if (!((ckl) obj2).v) {
@@ -1113,7 +1153,7 @@ public final class cix {
         for (ckl cklVar : arrayList) {
             Object citVar2 = linkedHashMap.get(cklVar);
             if (citVar2 == null) {
-                bzo.q(cklVar, "navigator");
+                throwIfVar1IsNull(cklVar, "navigator");
                 citVar2 = new cit(cjlVar, cklVar);
                 linkedHashMap.put(cklVar, citVar2);
             }
@@ -1137,7 +1177,7 @@ public final class cix {
                 intArray = null;
             }
             ArrayList parcelableArrayList = extras != null ? extras.getParcelableArrayList("android-support-nav:controller:deepLinkArgs") : null;
-            Bundle bundleR = bht.r((csm[]) Arrays.copyOf(new csm[0], 0));
+            Bundle bundleR = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
             Bundle bundle10 = extras != null ? extras.getBundle("android-support-nav:controller:deepLinkExtras") : null;
             if (bundle10 != null) {
                 bundleR.putAll(bundle10);
@@ -1169,10 +1209,10 @@ public final class cix {
                         i9 = iArr2[i];
                         if (i == 0) {
                             cji cjiVar10 = cixVar.c;
-                            bzo.n(cjiVar10);
+                            throwIfVar1IsNull(cjiVar10);
                             cjgVarP2 = cjiVar10.g.a == i9 ? cixVar.c : null;
                         } else {
-                            bzo.n(cjiVar2);
+                            throwIfVar1IsNull(cjiVar2);
                             cjgVarP2 = cjiVar2.p(i9);
                         }
                         if (cjgVarP2 == null) {
@@ -1183,7 +1223,7 @@ public final class cix {
                         if (i == iArr2.length - 1 && (cjgVarP2 instanceof cji)) {
                             while (true) {
                                 cjiVar5 = (cji) cjgVarP2;
-                                bzo.n(cjiVar5);
+                                throwIfVar1IsNull(cjiVar5);
                                 xe xeVar3 = cjiVar5.b;
                                 if (!(cjiVar5.p(xeVar3.c) instanceof cji)) {
                                     break;
@@ -1200,7 +1240,7 @@ public final class cix {
                         length2 = iArr2.length;
                         bundleArr = new Bundle[length2];
                         for (i2 = 0; i2 < length2; i2++) {
-                            Bundle bundleR2 = bht.r((csm[]) Arrays.copyOf(new csm[0], 0));
+                            Bundle bundleR2 = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                             bundleR2.putAll(bundleR);
                             if (parcelableArrayList == null && (bundle4 = (Bundle) parcelableArrayList.get(i2)) != null) {
                                 bundleR2.putAll(bundle4);
@@ -1230,7 +1270,7 @@ public final class cix {
                                 i6 = 0;
                             } else {
                                 cji cjiVar11 = cixVar.c;
-                                bzo.n(cjiVar11);
+                                throwIfVar1IsNull(cjiVar11);
                                 i6 = 0;
                                 cixVar.al(cjiVar11.g.a, z, false);
                             }
@@ -1259,7 +1299,7 @@ public final class cix {
                             if (i4 == 0) {
                                 cjgVarP = cixVar.c;
                             } else {
-                                bzo.n(cjiVar3);
+                                throwIfVar1IsNull(cjiVar3);
                                 cjgVarP = cjiVar3.p(i5);
                             }
                             if (cjgVarP != null) {
@@ -1268,12 +1308,12 @@ public final class cix {
                             }
                             if (i4 != iArr2.length - 1) {
                                 cji cjiVar12 = cixVar.c;
-                                bzo.n(cjiVar12);
+                                throwIfVar1IsNull(cjiVar12);
                                 cixVar.ak(cjgVarP, bundle2, new cjo(false, false, cjiVar12.g.a, true, false, 0, 0, -1, -1));
                             } else if (cjgVarP instanceof cji) {
                                 while (true) {
                                     cjiVar4 = (cji) cjgVarP;
-                                    bzo.n(cjiVar4);
+                                    throwIfVar1IsNull(cjiVar4);
                                     xeVar = cjiVar4.b;
                                     if (cjiVar4.p(xeVar.c) instanceof cji) {
                                         break;
@@ -1288,7 +1328,7 @@ public final class cix {
                         return;
                     }
                     String str5 = "Could not find destination " + strR + " in the navigation graph, ignoring the deep link from " + intent;
-                    bzo.q(str5, "message");
+                    throwIfVar1IsNull(str5, "message");
                     Log.i("NavController", str5);
                 }
             } else {
@@ -1308,11 +1348,11 @@ public final class cix {
                     i9 = iArr2[i];
                     if (i == 0) {
                         cji cjiVar102 = cixVar.c;
-                        bzo.n(cjiVar102);
+                        throwIfVar1IsNull(cjiVar102);
                         if (cjiVar102.g.a == i9) {
                         }
                     } else {
-                        bzo.n(cjiVar2);
+                        throwIfVar1IsNull(cjiVar2);
                         cjgVarP2 = cjiVar2.p(i9);
                     }
                     if (cjgVarP2 == null) {
@@ -1330,7 +1370,7 @@ public final class cix {
                     length2 = iArr2.length;
                     bundleArr = new Bundle[length2];
                     while (i2 < length2) {
-                        Bundle bundleR22 = bht.r((csm[]) Arrays.copyOf(new csm[0], 0));
+                        Bundle bundleR22 = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                         bundleR22.putAll(bundleR);
                         if (parcelableArrayList == null) {
                         }
@@ -1343,7 +1383,7 @@ public final class cix {
                     if (i3 != 0 ? z : false) {
                         if (cixVar.f.isEmpty()) {
                             cji cjiVar112 = cixVar.c;
-                            bzo.n(cjiVar112);
+                            throwIfVar1IsNull(cjiVar112);
                             i6 = 0;
                             cixVar.al(cjiVar112.g.a, z, false);
                         } else {
@@ -1374,7 +1414,7 @@ public final class cix {
                         if (i4 == 0) {
                             cjgVarP = cixVar.c;
                         } else {
-                            bzo.n(cjiVar3);
+                            throwIfVar1IsNull(cjiVar3);
                             cjgVarP = cjiVar3.p(i5);
                         }
                         if (cjgVarP != null) {
@@ -1383,12 +1423,12 @@ public final class cix {
                         }
                         if (i4 != iArr2.length - 1) {
                             cji cjiVar122 = cixVar.c;
-                            bzo.n(cjiVar122);
+                            throwIfVar1IsNull(cjiVar122);
                             cixVar.ak(cjgVarP, bundle2, new cjo(false, false, cjiVar122.g.a, true, false, 0, 0, -1, -1));
                         } else if (cjgVarP instanceof cji) {
                             while (true) {
                                 cjiVar4 = (cji) cjgVarP;
-                                bzo.n(cjiVar4);
+                                throwIfVar1IsNull(cjiVar4);
                                 xeVar = cjiVar4.b;
                                 if (cjiVar4.p(xeVar.c) instanceof cji) {
                                     break;
@@ -1403,17 +1443,17 @@ public final class cix {
                     return;
                 }
                 String str52 = "Could not find destination " + strR + " in the navigation graph, ignoring the deep link from " + intent;
-                bzo.q(str52, "message");
+                throwIfVar1IsNull(str52, "message");
                 Log.i("NavController", str52);
             }
         }
         cji cjiVar13 = this.c;
-        bzo.n(cjiVar13);
+        throwIfVar1IsNull(cjiVar13);
         ak(cjiVar13, bundle, null);
     }
 
     public final void aq(cio cioVar) {
-        bzo.q(cioVar, "child");
+        throwIfVar1IsNull(cioVar, "child");
         cio cioVar2 = (cio) this.i.remove(cioVar);
         if (cioVar2 == null) {
             return;
@@ -1460,7 +1500,10 @@ public final class cix {
             if (cjgVar3 != null && cjgVar3.g.a == cjgVar2.g.a) {
                 if (buhVar != buhVar2) {
                     cit citVar = (cit) this.s.get(this.r.d(cioVar.b.f));
-                    if (bzo.f((citVar == null || (bmuVar = citVar.f) == null || (set = (Set) ((dml) bmuVar.h).c()) == null) ? null : Boolean.valueOf(set.contains(cioVar)), Boolean.TRUE) || ((lpVar = (lp) this.j.get(cioVar)) != null && lpVar.a.get() == 0)) {
+                    if (nullSafeIsEqual((citVar == null || (bmuVar = citVar.f) == null
+                            || (set = (Set) ((dml) bmuVar.h).c()) == null) ? null
+                                    : Boolean.valueOf(set.contains(cioVar)),
+                            Boolean.TRUE) || ((lpVar = (lp) this.j.get(cioVar)) != null && lpVar.a.get() == 0)) {
                         map.put(cioVar, buhVar3);
                     } else {
                         map.put(cioVar, buhVar2);

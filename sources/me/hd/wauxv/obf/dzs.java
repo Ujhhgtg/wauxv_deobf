@@ -6,7 +6,7 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class dzs {
     public static final dzr Companion = new dzr();
-    public static final btt[] a = {ewz.am(btx.a, new dtr(12))};
+    public static final btt[] a = { ewz.am(btx.a, new dtr(12)) };
     public final List b;
 
     public /* synthetic */ dzs(int i, List list) {
@@ -22,7 +22,7 @@ public final class dzs {
         if (this == obj) {
             return true;
         }
-        return (obj instanceof dzs) && bzo.f(this.b, ((dzs) obj).b);
+        return (obj instanceof dzs) && nullSafeIsEqual(this.b, ((dzs) obj).b);
     }
 
     public final int hashCode() {

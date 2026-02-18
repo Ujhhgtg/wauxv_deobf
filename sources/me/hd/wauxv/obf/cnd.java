@@ -29,23 +29,37 @@ import me.hd.wauxv.MainApp;
 /* JADX INFO: loaded from: classes.dex */
 public abstract class cnd implements ajt, acm {
     public static final of ae = new of();
-    public static final char[] af = {'0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '3', '3', '3', '3', '3', '3', '3', '3', '3', '3', '4', '4', '4', '4', '4', '4', '4', '4', '4', '4', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '8', '8', '8', '8', '8', '8', '8', '8', '8', '8', '9', '9', '9', '9', '9', '9', '9', '9', '9', '9'};
-    public static final char[] ag = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
+    public static final char[] af = { '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '1',
+            '1', '1', '1', '1', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '3', '3', '3', '3', '3', '3', '3',
+            '3', '3', '3', '4', '4', '4', '4', '4', '4', '4', '4', '4', '4', '5', '5', '5', '5', '5', '5', '5', '5',
+            '5', '5', '6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '7', '7', '7', '7', '7', '7', '7', '7', '7',
+            '7', '8', '8', '8', '8', '8', '8', '8', '8', '8', '8', '9', '9', '9', '9', '9', '9', '9', '9', '9', '9' };
+    public static final char[] ag = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '1', '2', '3', '4', '5',
+            '6', '7', '8', '9', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '1', '2', '3', '4', '5', '6',
+            '7', '8', '9', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '1', '2', '3', '4', '5', '6', '7',
+            '8', '9', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '1', '2', '3', '4', '5', '6', '7', '8',
+            '9', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
     public static Toast ah;
 
     public static final brv ai(Number number, String str) {
-        return new brv("Unexpected special floating-point value " + number + ". By default, non-finite floating point values are prohibited because they do not conform JSON specification. It is possible to deserialize them using 'JsonBuilder.allowSpecialFloatingPointValues = true'\nCurrent output: " + ((Object) ba(-1, str)), 1);
+        return new brv("Unexpected special floating-point value " + number
+                + ". By default, non-finite floating point values are prohibited because they do not conform JSON specification. It is possible to deserialize them using 'JsonBuilder.allowSpecialFloatingPointValues = true'\nCurrent output: "
+                + ((Object) ba(-1, str)), 1);
     }
 
     public static final brv aj(dfx dfxVar) {
-        return new brv("Value of type '" + dfxVar.b() + "' can't be used in JSON as a key in the map. It should have either primitive or enum kind, but its kind is '" + dfxVar.h() + "'.\nUse 'allowStructuredMapKeys = true' in 'Json {}' builder to convert such maps to [key1, value1, key2, value2,...] arrays.", 1);
+        return new brv("Value of type '" + dfxVar.b()
+                + "' can't be used in JSON as a key in the map. It should have either primitive or enum kind, but its kind is '"
+                + dfxVar.h()
+                + "'.\nUse 'allowStructuredMapKeys = true' in 'Json {}' builder to convert such maps to [key1, value1, key2, value2,...] arrays.",
+                1);
     }
 
     public static final brv ak(int i, String str, CharSequence charSequence) {
-        bzo.q(str, "message");
-        bzo.q(charSequence, "input");
+        throwIfVar1IsNull(str, "message");
+        throwIfVar1IsNull(charSequence, "input");
         String str2 = str + "\nJSON input: " + ((Object) ba(i, charSequence));
-        bzo.q(str2, "message");
+        throwIfVar1IsNull(str2, "message");
         if (i >= 0) {
             str2 = "Unexpected JSON token at offset " + i + ": " + str2;
         }
@@ -69,8 +83,11 @@ public abstract class cnd implements ajt, acm {
         if (adrVar != null) {
             int i4 = adrVar.bz[1];
         }
-        boolean z = i == 1 || adqVar.g() || i == 2 || (i == 3 && adqVar.ab == 0 && adqVar.bg == 0.0f && adqVar.ct(0)) || (i == 3 && adqVar.ab == 1 && adqVar.cu(0, adqVar.cq()));
-        boolean z2 = i2 == 1 || adqVar.h() || i2 == 2 || (i2 == 3 && adqVar.ac == 0 && adqVar.bg == 0.0f && adqVar.ct(1)) || (i2 == 3 && adqVar.ac == 1 && adqVar.cu(1, adqVar.cm()));
+        boolean z = i == 1 || adqVar.g() || i == 2 || (i == 3 && adqVar.ab == 0 && adqVar.bg == 0.0f && adqVar.ct(0))
+                || (i == 3 && adqVar.ab == 1 && adqVar.cu(0, adqVar.cq()));
+        boolean z2 = i2 == 1 || adqVar.h() || i2 == 2
+                || (i2 == 3 && adqVar.ac == 0 && adqVar.bg == 0.0f && adqVar.ct(1))
+                || (i2 == 3 && adqVar.ac == 1 && adqVar.cu(1, adqVar.cm()));
         return (adqVar.bg > 0.0f && (z || z2)) || (z && z2);
     }
 
@@ -82,7 +99,10 @@ public abstract class cnd implements ajt, acm {
         return i != 0 ? i != 1 ? new ddk() : new aiv() : new ddk();
     }
 
-    /* JADX WARN: Found duplicated region for block: B:19:0x002f A[ORIG_RETURN, RETURN] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:19:0x002f A[ORIG_RETURN,
+     * RETURN]
+     */
     public static boolean ap(File file) {
         if (!file.exists()) {
             return true;
@@ -123,7 +143,7 @@ public abstract class cnd implements ajt, acm {
     public static final cjl ar(bdj bdjVar) {
         Dialog dialog;
         Window window;
-        bzo.q(bdjVar, "<this>");
+        throwIfVar1IsNull(bdjVar, "<this>");
         for (bdj bdjVar2 = bdjVar; bdjVar2 != null; bdjVar2 = bdjVar2.bp) {
             if (bdjVar2 instanceof NavHostFragment) {
                 return ((NavHostFragment) bdjVar2).l();
@@ -178,11 +198,12 @@ public abstract class cnd implements ajt, acm {
             ckk ckkVar = (ckk) cls.getAnnotation(ckk.class);
             strValue = ckkVar != null ? ckkVar.value() : null;
             if (strValue == null || strValue.length() <= 0) {
-                throw new IllegalArgumentException("No @Navigator.Name annotation found for ".concat(cls.getSimpleName()).toString());
+                throw new IllegalArgumentException(
+                        "No @Navigator.Name annotation found for ".concat(cls.getSimpleName()).toString());
             }
             linkedHashMap.put(cls, strValue);
         }
-        bzo.n(strValue);
+        throwIfVar1IsNull(strValue);
         return strValue;
     }
 
@@ -257,7 +278,8 @@ public abstract class cnd implements ajt, acm {
                 } else {
                     z2 = true;
                 }
-                boolean z3 = ((adbVar5 == adbVar6 && (adbVar4 = adbVar7.f) != null && adbVar4.c) || (adbVar5 == adbVar7 && (adbVar3 = adbVar6.f) != null && adbVar3.c)) ? z2 : false;
+                boolean z3 = ((adbVar5 == adbVar6 && (adbVar4 = adbVar7.f) != null && adbVar4.c)
+                        || (adbVar5 == adbVar7 && (adbVar3 = adbVar6.f) != null && adbVar3.c)) ? z2 : false;
                 int i3 = adqVar2.bz[0];
                 if (i3 != 3 || zAm) {
                     if (!adqVar2.cz()) {
@@ -273,7 +295,8 @@ public abstract class cnd implements ajt, acm {
                             bk(i2, adgVar, adqVar2, z);
                         }
                     }
-                } else if (i3 == 3 && adqVar2.af >= 0 && adqVar2.ae >= 0 && (adqVar2.bq == 8 || (adqVar2.ab == 0 && adqVar2.bg == 0.0f))) {
+                } else if (i3 == 3 && adqVar2.af >= 0 && adqVar2.ae >= 0
+                        && (adqVar2.bq == 8 || (adqVar2.ab == 0 && adqVar2.bg == 0.0f))) {
                     if (!adqVar2.cx() && !adqVar2.ap && z3 && !adqVar2.cx()) {
                         bl(i2, adqVar, adgVar, adqVar2, z);
                     }
@@ -294,7 +317,8 @@ public abstract class cnd implements ajt, acm {
                 if (adqVar3.cz() && zAm2) {
                     adr.ed(adqVar3, adgVar, new of());
                 }
-                boolean z4 = (adbVar8 == adbVar9 && (adbVar2 = adbVar10.f) != null && adbVar2.c) || (adbVar8 == adbVar10 && (adbVar = adbVar9.f) != null && adbVar.c);
+                boolean z4 = (adbVar8 == adbVar9 && (adbVar2 = adbVar10.f) != null && adbVar2.c)
+                        || (adbVar8 == adbVar10 && (adbVar = adbVar9.f) != null && adbVar.c);
                 int i5 = adqVar3.bz[0];
                 if (i5 != 3 || zAm2) {
                     if (!adqVar3.cz()) {
@@ -328,19 +352,19 @@ public abstract class cnd implements ajt, acm {
             return -1;
         }
         try {
-            int i3 = bzo.i(kzVar.a, i2, i);
-            if (i3 < 0 || bzo.f(obj, kzVar.b[i3])) {
+            int i3 = KotlinHelpers.i(kzVar.a, i2, i);
+            if (i3 < 0 || nullSafeIsEqual(obj, kzVar.b[i3])) {
                 return i3;
             }
             int i4 = i3 + 1;
             while (i4 < i2 && kzVar.a[i4] == i) {
-                if (bzo.f(obj, kzVar.b[i4])) {
+                if (nullSafeIsEqual(obj, kzVar.b[i4])) {
                     return i4;
                 }
                 i4++;
             }
             for (int i5 = i3 - 1; i5 >= 0 && kzVar.a[i5] == i; i5--) {
-                if (bzo.f(obj, kzVar.b[i5])) {
+                if (nullSafeIsEqual(obj, kzVar.b[i5])) {
                     return i5;
                 }
             }
@@ -351,11 +375,12 @@ public abstract class cnd implements ajt, acm {
     }
 
     public static final void ay(yi yiVar, String str) {
-        yiVar.v(yiVar.b - 1, "Trailing comma before the end of JSON ".concat(str), "Trailing commas are non-complaint JSON and not allowed by default. Use 'allowTrailingComma = true' in 'Json {}' builder to support them.");
+        yiVar.v(yiVar.b - 1, "Trailing comma before the end of JSON ".concat(str),
+                "Trailing commas are non-complaint JSON and not allowed by default. Use 'allowTrailingComma = true' in 'Json {}' builder to support them.");
         throw null;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:38:0x007e  */
+    /* JADX WARN: Found duplicated region for block: B:38:0x007e */
     public static boolean az() {
         boolean zBooleanValue;
         Object objX;
@@ -370,7 +395,10 @@ public abstract class cnd implements ajt, acm {
         if (mainApp != null) {
             try {
                 ContentResolver contentResolver = mainApp.getContentResolver();
-                objX = (contentResolver == null || (bundleCall2 = contentResolver.call(Uri.parse("content://me.weishu.exposed.CP/"), "active", (String) null, (Bundle) null)) == null) ? null : Boolean.valueOf(bundleCall2.getBoolean("active", false));
+                objX = (contentResolver == null
+                        || (bundleCall2 = contentResolver.call(Uri.parse("content://me.weishu.exposed.CP/"), "active",
+                                (String) null, (Bundle) null)) == null) ? null
+                                        : Boolean.valueOf(bundleCall2.getBoolean("active", false));
             } catch (Throwable th) {
                 objX = bhu.x(th);
             }
@@ -386,7 +414,10 @@ public abstract class cnd implements ajt, acm {
                     intent.addFlags(268435456);
                     mainApp.startActivity(intent);
                     ContentResolver contentResolver2 = mainApp.getContentResolver();
-                    objX2 = (contentResolver2 == null || (bundleCall = contentResolver2.call(Uri.parse("content://me.weishu.exposed.CP/"), "active", (String) null, (Bundle) null)) == null) ? null : Boolean.valueOf(bundleCall.getBoolean("active", false));
+                    objX2 = (contentResolver2 == null
+                            || (bundleCall = contentResolver2.call(Uri.parse("content://me.weishu.exposed.CP/"),
+                                    "active", (String) null, (Bundle) null)) == null) ? null
+                                            : Boolean.valueOf(bundleCall.getBoolean("active", false));
                 } catch (Throwable th2) {
                     objX2 = bhu.x(th2);
                 }
@@ -398,7 +429,7 @@ public abstract class cnd implements ajt, acm {
     }
 
     public static final CharSequence ba(int i, CharSequence charSequence) {
-        bzo.q(charSequence, "<this>");
+        throwIfVar1IsNull(charSequence, "<this>");
         if (charSequence.length() >= 200) {
             if (i != -1) {
                 int i2 = i - 30;
@@ -475,7 +506,8 @@ public abstract class cnd implements ajt, acm {
         map.put(str, new aey(i, jO2));
     }
 
-    public static void bd(ayd aydVar, ik ikVar, ewo ewoVar, byte b, String str, int i, int i2, byte b2) throws Exception {
+    public static void bd(ayd aydVar, ik ikVar, ewo ewoVar, byte b, String str, int i, int i2, byte b2)
+            throws Exception {
         Object objB;
         int length;
         ik ikVar2;
@@ -635,7 +667,7 @@ public abstract class cnd implements ajt, acm {
     }
 
     public static final et bf(ahj ahjVar, bgj bgjVar) {
-        bzo.q(ahjVar, "dispatcher");
+        throwIfVar1IsNull(ahjVar, "dispatcher");
         et etVar = new et(bug.ON_DESTROY, ahjVar);
         ajn.y(etVar, auz.a, new eq(bgjVar, (afw) null)).af(new er(etVar, 0));
         return etVar;
@@ -644,9 +676,9 @@ public abstract class cnd implements ajt, acm {
     public static void bg(bgj bgjVar) {
         alc alcVar = aou.a;
         bkb bkbVar = bza.a;
-        bzo.q(bkbVar, "dispatcher");
+        throwIfVar1IsNull(bkbVar, "dispatcher");
         bug bugVar = bug.ON_DESTROY;
-        bzo.q(bugVar, "lifeEvent");
+        throwIfVar1IsNull(bugVar, "lifeEvent");
         cky ckyVar = new cky(bugVar, bkbVar);
         ajn.y(ckyVar, auz.a, new ckx(ckyVar, bgjVar, (afw) null)).af(new er(ckyVar, 1));
     }
@@ -795,7 +827,9 @@ public abstract class cnd implements ajt, acm {
     }
 
     public static final void bo(yi yiVar, Number number) {
-        yi.g(yiVar, "Unexpected special floating-point value " + number + ". By default, non-finite floating point values are prohibited because they do not conform JSON specification", 0, "It is possible to deserialize them using 'JsonBuilder.allowSpecialFloatingPointValues = true'", 2);
+        yi.g(yiVar, "Unexpected special floating-point value " + number
+                + ". By default, non-finite floating point values are prohibited because they do not conform JSON specification",
+                0, "It is possible to deserialize them using 'JsonBuilder.allowSpecialFloatingPointValues = true'", 2);
         throw null;
     }
 
@@ -826,7 +860,8 @@ public abstract class cnd implements ajt, acm {
                 if (adqVar2.cz() && zAm) {
                     adr.ed(adqVar2, adgVar, new of());
                 }
-                boolean z2 = (adbVar5 == adbVar6 && (adbVar4 = adbVar7.f) != null && adbVar4.c) || (adbVar5 == adbVar7 && (adbVar3 = adbVar6.f) != null && adbVar3.c);
+                boolean z2 = (adbVar5 == adbVar6 && (adbVar4 = adbVar7.f) != null && adbVar4.c)
+                        || (adbVar5 == adbVar7 && (adbVar3 = adbVar6.f) != null && adbVar3.c);
                 int i3 = adqVar2.bz[1];
                 if (i3 != 3 || zAm) {
                     if (!adqVar2.cz()) {
@@ -842,7 +877,8 @@ public abstract class cnd implements ajt, acm {
                             bm(i2, adgVar, adqVar2);
                         }
                     }
-                } else if (i3 == 3 && adqVar2.ai >= 0 && adqVar2.ah >= 0 && (adqVar2.bq == 8 || (adqVar2.ac == 0 && adqVar2.bg == 0.0f))) {
+                } else if (i3 == 3 && adqVar2.ai >= 0 && adqVar2.ah >= 0
+                        && (adqVar2.bq == 8 || (adqVar2.ac == 0 && adqVar2.bg == 0.0f))) {
                     if (!adqVar2.cy() && !adqVar2.ap && z2 && !adqVar2.cy()) {
                         bn(i2, adqVar, adgVar, adqVar2);
                     }
@@ -866,7 +902,8 @@ public abstract class cnd implements ajt, acm {
                 if (adqVar3.cz() && zAm2) {
                     adr.ed(adqVar3, adgVar, new of());
                 }
-                boolean z4 = (adbVar8 == adbVar9 && (adbVar2 = adbVar10.f) != null && adbVar2.c) || (adbVar8 == adbVar10 && (adbVar = adbVar9.f) != null && adbVar.c);
+                boolean z4 = (adbVar8 == adbVar9 && (adbVar2 = adbVar10.f) != null && adbVar2.c)
+                        || (adbVar8 == adbVar10 && (adbVar = adbVar9.f) != null && adbVar.c);
                 int i5 = adqVar3.bz[1];
                 if (i5 != 3 || zAm2) {
                     if (!adqVar3.cz()) {
@@ -882,7 +919,8 @@ public abstract class cnd implements ajt, acm {
                             bm(i4, adgVar, adqVar3);
                         }
                     }
-                } else if (i5 == 3 && adqVar3.ai >= 0 && adqVar3.ah >= 0 && (adqVar3.bq == 8 || (adqVar3.ac == 0 && adqVar3.bg == 0.0f))) {
+                } else if (i5 == 3 && adqVar3.ai >= 0 && adqVar3.ah >= 0
+                        && (adqVar3.bq == 8 || (adqVar3.ac == 0 && adqVar3.bg == 0.0f))) {
                     if (!adqVar3.cy() && !adqVar3.ap && z4 && !adqVar3.cy()) {
                         bn(i4, adqVar, adgVar, adqVar3);
                     }
@@ -930,12 +968,12 @@ public abstract class cnd implements ajt, acm {
 
     @Override // me.hd.wauxv.obf.acm
     public void _bp(dfx dfxVar) {
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
     }
 
     @Override // me.hd.wauxv.obf.acm
     public double _bq(cvk cvkVar, int i) {
-        bzo.q(cvkVar, "descriptor");
+        throwIfVar1IsNull(cvkVar, "descriptor");
         return ab();
     }
 
@@ -957,33 +995,33 @@ public abstract class cnd implements ajt, acm {
 
     @Override // me.hd.wauxv.obf.acm
     public String d(dfx dfxVar, int i) {
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         return v();
     }
 
     @Override // me.hd.wauxv.obf.acm
     public long e(cvk cvkVar, int i) {
-        bzo.q(cvkVar, "descriptor");
+        throwIfVar1IsNull(cvkVar, "descriptor");
         return w();
     }
 
     @Override // me.hd.wauxv.obf.acm
     public int g(dfx dfxVar, int i) {
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         return s();
     }
 
     @Override // me.hd.wauxv.obf.acm
     public Object h(dfx dfxVar, int i, btd btdVar, Object obj) {
-        bzo.q(dfxVar, "descriptor");
-        bzo.q(btdVar, "deserializer");
+        throwIfVar1IsNull(dfxVar, "descriptor");
+        throwIfVar1IsNull(btdVar, "deserializer");
         return t(btdVar);
     }
 
     @Override // me.hd.wauxv.obf.acm
     public Object i(dfx dfxVar, int i, btd btdVar, Object obj) {
-        bzo.q(dfxVar, "descriptor");
-        bzo.q(btdVar, "deserializer");
+        throwIfVar1IsNull(dfxVar, "descriptor");
+        throwIfVar1IsNull(btdVar, "deserializer");
         if (btdVar.getDescriptor().f() || x()) {
             return t(btdVar);
         }
@@ -992,43 +1030,43 @@ public abstract class cnd implements ajt, acm {
 
     @Override // me.hd.wauxv.obf.acm
     public char j(cvk cvkVar, int i) {
-        bzo.q(cvkVar, "descriptor");
+        throwIfVar1IsNull(cvkVar, "descriptor");
         return r();
     }
 
     @Override // me.hd.wauxv.obf.acm
     public byte k(cvk cvkVar, int i) {
-        bzo.q(cvkVar, "descriptor");
+        throwIfVar1IsNull(cvkVar, "descriptor");
         return y();
     }
 
     @Override // me.hd.wauxv.obf.acm
     public boolean l(dfx dfxVar, int i) {
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         return q();
     }
 
     @Override // me.hd.wauxv.obf.acm
     public ajt m(cvk cvkVar, int i) {
-        bzo.q(cvkVar, "descriptor");
+        throwIfVar1IsNull(cvkVar, "descriptor");
         return u(cvkVar.l(i));
     }
 
     @Override // me.hd.wauxv.obf.acm
     public short n(cvk cvkVar, int i) {
-        bzo.q(cvkVar, "descriptor");
+        throwIfVar1IsNull(cvkVar, "descriptor");
         return z();
     }
 
     @Override // me.hd.wauxv.obf.acm
     public float o(cvk cvkVar, int i) {
-        bzo.q(cvkVar, "descriptor");
+        throwIfVar1IsNull(cvkVar, "descriptor");
         return aa();
     }
 
     @Override // me.hd.wauxv.obf.ajt
     public acm p(dfx dfxVar) {
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         return this;
     }
 
@@ -1049,13 +1087,13 @@ public abstract class cnd implements ajt, acm {
 
     @Override // me.hd.wauxv.obf.ajt
     public Object t(btd btdVar) {
-        bzo.q(btdVar, "deserializer");
+        throwIfVar1IsNull(btdVar, "deserializer");
         return btdVar.a(this);
     }
 
     @Override // me.hd.wauxv.obf.ajt
     public ajt u(dfx dfxVar) {
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         return this;
     }
 

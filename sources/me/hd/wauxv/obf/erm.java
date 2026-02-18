@@ -4,9 +4,9 @@ package me.hd.wauxv.obf;
 /* JADX INFO: loaded from: classes.dex */
 public final class erm {
     public final zc a;
-    public final bgf b;
+    public final IHasInvokeMethod b;
 
-    public erm(zc zcVar, bgf bgfVar) {
+    public erm(zc zcVar, IHasInvokeMethod bgfVar) {
         this.a = zcVar;
         this.b = bgfVar;
     }

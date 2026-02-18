@@ -34,7 +34,7 @@ public final class cck extends bwn implements cby {
     public final void q(cbw cbwVar, MenuItem menuItem) {
         erp erpVar = this.b;
         if (erpVar != null) {
-            erpVar.q(cbwVar, menuItem);
+            erpVar.ensureParameterNotNull(cbwVar, menuItem);
         }
     }
 

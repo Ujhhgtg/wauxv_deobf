@@ -24,7 +24,7 @@ public abstract class bfd {
     }
 
     public static final void d(bdj bdjVar, String str) {
-        bzo.q(str, "previousFragmentId");
+        throwIfVar1IsNull(str, "previousFragmentId");
         c(new bex(bdjVar, "Attempting to reuse fragment " + bdjVar + " with previous ID " + str));
         b(bdjVar).getClass();
     }

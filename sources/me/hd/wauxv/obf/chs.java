@@ -12,7 +12,7 @@ public final class chs {
         int[] iArr = this.a;
         if (iArr.length < i) {
             int[] iArrCopyOf = Arrays.copyOf(iArr, Math.max(i, (iArr.length * 3) / 2));
-            bzo.p(iArrCopyOf, "copyOf(...)");
+            throwIfVar1IsNull(iArrCopyOf, "copyOf(...)");
             this.a = iArrCopyOf;
         }
     }
@@ -88,7 +88,7 @@ public final class chs {
             if (i2 == -1) {
                 sb.append((CharSequence) "...");
                 String string = sb.toString();
-                bzo.p(string, "toString(...)");
+                throwIfVar1IsNull(string, "toString(...)");
                 return string;
             }
             if (i2 != 0) {
@@ -98,7 +98,7 @@ public final class chs {
         }
         sb.append((CharSequence) "]");
         String string2 = sb.toString();
-        bzo.p(string2, "toString(...)");
+        throwIfVar1IsNull(string2, "toString(...)");
         return string2;
     }
 }

@@ -6,7 +6,7 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class edz {
     public static final edy Companion = new edy();
-    public static final btt[] a = {null, null, null, null, null, null, ewz.am(btx.a, new dtr(24)), null, null, null};
+    public static final btt[] a = { null, null, null, null, null, null, ewz.am(btx.a, new dtr(24)), null, null, null };
     public final String b;
     public final String c;
     public final String d;
@@ -18,7 +18,8 @@ public final class edz {
     public final String j;
     public final String k;
 
-    public /* synthetic */ edz(int i, String str, String str2, String str3, String str4, String str5, Integer num, List list, String str6, String str7, String str8) {
+    public /* synthetic */ edz(int i, String str, String str2, String str3, String str4, String str5, Integer num,
+            List list, String str6, String str7, String str8) {
         if (1023 != (i & 1023)) {
             bht.ah(i, 1023, edx.b.getDescriptor());
             throw null;
@@ -43,7 +44,12 @@ public final class edz {
             return false;
         }
         edz edzVar = (edz) obj;
-        return bzo.f(this.b, edzVar.b) && bzo.f(this.c, edzVar.c) && bzo.f(this.d, edzVar.d) && bzo.f(this.e, edzVar.e) && bzo.f(this.f, edzVar.f) && bzo.f(this.g, edzVar.g) && bzo.f(this.h, edzVar.h) && bzo.f(this.i, edzVar.i) && bzo.f(this.j, edzVar.j) && bzo.f(this.k, edzVar.k);
+        return nullSafeIsEqual(this.b, edzVar.b) && nullSafeIsEqual(this.c, edzVar.c)
+                && nullSafeIsEqual(this.d, edzVar.d) && nullSafeIsEqual(this.e, edzVar.e)
+                && nullSafeIsEqual(this.f, edzVar.f) && nullSafeIsEqual(this.g, edzVar.g)
+                && nullSafeIsEqual(this.h, edzVar.h)
+                && nullSafeIsEqual(this.i, edzVar.i) && nullSafeIsEqual(this.j, edzVar.j)
+                && nullSafeIsEqual(this.k, edzVar.k);
     }
 
     public final int hashCode() {
@@ -81,6 +87,6 @@ public final class edz {
         yg.v(sb, this.h, -279546536393514L);
         yg.u(sb, this.i, -279421982341930L);
         yg.u(sb, this.j, -279404802472746L);
-        return bjs.q(sb, this.k, ')');
+        return concat(sb, this.k, ')');
     }
 }

@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 import me.hd.wauxv.obf.aaz;
 import me.hd.wauxv.obf.abb;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import okhttp3.internal.Util;
 import okhttp3.internal.connection.RealCall;
 
@@ -38,12 +38,12 @@ public final class Dispatcher {
 
     private final RealCall.AsyncCall findExistingCallWithHost(String str) {
         for (RealCall.AsyncCall asyncCall : this.runningAsyncCalls) {
-            if (bzo.f(asyncCall.getHost(), str)) {
+            if (nullSafeIsEqual(asyncCall.getHost(), str)) {
                 return asyncCall;
             }
         }
         for (RealCall.AsyncCall asyncCall2 : this.readyAsyncCalls) {
-            if (bzo.f(asyncCall2.getHost(), str)) {
+            if (nullSafeIsEqual(asyncCall2.getHost(), str)) {
                 return asyncCall2;
             }
         }
@@ -74,7 +74,7 @@ public final class Dispatcher {
         synchronized (this) {
             try {
                 Iterator<RealCall.AsyncCall> it = this.readyAsyncCalls.iterator();
-                bzo.p(it, "readyAsyncCalls.iterator()");
+                throwIfVar1IsNull(it, "readyAsyncCalls.iterator()");
                 while (it.hasNext()) {
                     RealCall.AsyncCall next = it.next();
                     if (this.runningAsyncCalls.size() >= this.maxRequests) {
@@ -124,10 +124,11 @@ public final class Dispatcher {
 
     public final void enqueue$okhttp(RealCall.AsyncCall asyncCall) {
         RealCall.AsyncCall asyncCallFindExistingCallWithHost;
-        bzo.q(asyncCall, "call");
+        throwIfVar1IsNull(asyncCall, "call");
         synchronized (this) {
             this.readyAsyncCalls.add(asyncCall);
-            if (!asyncCall.getCall().getForWebSocket() && (asyncCallFindExistingCallWithHost = findExistingCallWithHost(asyncCall.getHost())) != null) {
+            if (!asyncCall.getCall().getForWebSocket()
+                    && (asyncCallFindExistingCallWithHost = findExistingCallWithHost(asyncCall.getHost())) != null) {
                 asyncCall.reuseCallsPerHostFrom(asyncCallFindExistingCallWithHost);
             }
         }
@@ -135,7 +136,7 @@ public final class Dispatcher {
     }
 
     public final synchronized void executed$okhttp(RealCall realCall) {
-        bzo.q(realCall, "call");
+        throwIfVar1IsNull(realCall, "call");
         this.runningSyncCalls.add(realCall);
     }
 
@@ -143,10 +144,11 @@ public final class Dispatcher {
         ExecutorService executorService;
         try {
             if (this.executorServiceOrNull == null) {
-                this.executorServiceOrNull = new ThreadPoolExecutor(0, Integer.MAX_VALUE, 60L, TimeUnit.SECONDS, new SynchronousQueue(), Util.threadFactory(Util.okHttpName + " Dispatcher", false));
+                this.executorServiceOrNull = new ThreadPoolExecutor(0, Integer.MAX_VALUE, 60L, TimeUnit.SECONDS,
+                        new SynchronousQueue(), Util.threadFactory(Util.okHttpName + " Dispatcher", false));
             }
             executorService = this.executorServiceOrNull;
-            bzo.n(executorService);
+            throwIfVar1IsNull(executorService);
         } catch (Throwable th) {
             throw th;
         }
@@ -154,7 +156,7 @@ public final class Dispatcher {
     }
 
     public final void finished$okhttp(RealCall.AsyncCall asyncCall) {
-        bzo.q(asyncCall, "call");
+        throwIfVar1IsNull(asyncCall, "call");
         asyncCall.getCallsPerHost().decrementAndGet();
         finished(this.runningAsyncCalls, asyncCall);
     }
@@ -181,7 +183,7 @@ public final class Dispatcher {
                 arrayList.add(((RealCall.AsyncCall) it.next()).getCall());
             }
             listUnmodifiableList = Collections.unmodifiableList(arrayList);
-            bzo.p(listUnmodifiableList, "unmodifiableList(readyAsyncCalls.map { it.call })");
+            throwIfVar1IsNull(listUnmodifiableList, "unmodifiableList(readyAsyncCalls.map { it.call })");
         } catch (Throwable th) {
             throw th;
         }
@@ -203,7 +205,7 @@ public final class Dispatcher {
                 arrayList.add(((RealCall.AsyncCall) it.next()).getCall());
             }
             listUnmodifiableList = Collections.unmodifiableList(aaz.o(arrayDeque, arrayList));
-            bzo.p(listUnmodifiableList, "unmodifiableList(running…yncCalls.map { it.call })");
+            throwIfVar1IsNull(listUnmodifiableList, "unmodifiableList(running…yncCalls.map { it.call })");
         } catch (Throwable th) {
             throw th;
         }
@@ -220,7 +222,7 @@ public final class Dispatcher {
 
     public final void setMaxRequests(int i) {
         if (i < 1) {
-            throw new IllegalArgumentException(bjs.i(i, "max < 1: ").toString());
+            throw new IllegalArgumentException(concatVar2Var1(i, "max < 1: ").toString());
         }
         synchronized (this) {
             this.maxRequests = i;
@@ -230,7 +232,7 @@ public final class Dispatcher {
 
     public final void setMaxRequestsPerHost(int i) {
         if (i < 1) {
-            throw new IllegalArgumentException(bjs.i(i, "max < 1: ").toString());
+            throw new IllegalArgumentException(concatVar2Var1(i, "max < 1: ").toString());
         }
         synchronized (this) {
             this.maxRequestsPerHost = i;
@@ -239,14 +241,17 @@ public final class Dispatcher {
     }
 
     public final void finished$okhttp(RealCall realCall) {
-        bzo.q(realCall, "call");
+        throwIfVar1IsNull(realCall, "call");
         finished(this.runningSyncCalls, realCall);
     }
 
-    /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'this' call moved to the top of the method (can break code
+     * semantics)
+     */
     public Dispatcher(ExecutorService executorService) {
         this();
-        bzo.q(executorService, "executorService");
+        throwIfVar1IsNull(executorService, "executorService");
         this.executorServiceOrNull = executorService;
     }
 }

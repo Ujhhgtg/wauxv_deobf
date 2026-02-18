@@ -15,14 +15,14 @@ public final class brd implements btq {
     public static final aao a = chm.i("for(int ${1:i} = 0;$1 < ${2:count};$1++) {\n    $0\n}");
     public static final aao h = chm.i("private final static ${1:type} ${2/(.*)/${1:/upcase}/} = ${3:value};");
     public static final aao i = chm.i("${1:${CLIPBOARD}}");
-    public io j;
+    public DefaultConfig j;
     public final brc k;
     public final awp l = new awp(20);
-    public final awp[] m = {new awp(this)};
+    public final awp[] m = { new awp(this) };
 
     public brd() {
         String[] strArr = bre.b;
-        io ioVar = new io(27, false);
+        DefaultConfig ioVar = new DefaultConfig(27, false);
         ioVar.c = strArr;
         HashMap map = new HashMap();
         for (String str : strArr) {
@@ -90,9 +90,9 @@ public final class brd implements btq {
             }
         }
         String strSubstring = strAa.substring(i2, udVar.c);
-        io ioVar = this.k.ac;
+        DefaultConfig ioVar = this.k.ac;
         if (ioVar != null) {
-            io ioVar2 = this.j;
+            DefaultConfig ioVar2 = this.j;
             ioVar2.getClass();
             int length = strSubstring.length();
             int i4 = 0;
@@ -105,7 +105,8 @@ public final class brd implements btq {
                 String lowerCase = strSubstring.toLowerCase(Locale.ROOT);
                 for (String str : strArr) {
                     Locale locale = Locale.ROOT;
-                    bgs bgsVarC = baf.c(strSubstring, strSubstring.toLowerCase(locale), str, 0, str.toLowerCase(locale));
+                    bgs bgsVarC = baf.c(strSubstring, strSubstring.toLowerCase(locale), str, 0,
+                            str.toLowerCase(locale));
                     int i5 = bgsVarC == null ? -100 : bgsVarC.b;
                     if (str.startsWith(lowerCase) || i5 >= -20) {
                         dhr dhrVar = new dhr(length, str, "Keyword", str);
@@ -124,7 +125,8 @@ public final class brd implements btq {
                     try {
                         for (String str2 : ((HashMap) ioVar.d).keySet()) {
                             Locale locale2 = Locale.ROOT;
-                            bgs bgsVarC2 = baf.c(strSubstring, strSubstring.toLowerCase(locale2), str2, 0, str2.toLowerCase(locale2));
+                            bgs bgsVarC2 = baf.c(strSubstring, strSubstring.toLowerCase(locale2), str2, 0,
+                                    str2.toLowerCase(locale2));
                             int i6 = bgsVarC2 == null ? -100 : bgsVarC2.b;
                             if (cna.ag(str2, strSubstring, true) || i6 >= -20) {
                                 if (strSubstring.length() != str2.length() || !cna.ag(strSubstring, str2, false)) {
@@ -147,7 +149,7 @@ public final class brd implements btq {
                 }
                 list = arrayList;
             }
-            bzo.q(list, "completionItemList");
+            throwIfVar1IsNull(list, "completionItemList");
             ArrayList arrayList3 = new ArrayList();
             afqVar2.f();
             afo afoVarY = ((aff) afqVar2.b).y(udVar.b);
@@ -160,12 +162,12 @@ public final class brd implements btq {
                     if (i7 == 0) {
                         string = "";
                     } else {
-                        bzo.n(afoVarY);
+                        throwIfVar1IsNull(afoVarY);
                         int i8 = udVar.c;
                         string = afoVarY.subSequence(i8 - i7, i8).toString();
                     }
                     lowerCase2 = string.toLowerCase(Locale.ROOT);
-                    bzo.p(lowerCase2, "toLowerCase(...)");
+                    throwIfVar1IsNull(lowerCase2, "toLowerCase(...)");
                 }
                 String str4 = string;
                 bgs bgsVar = bgs.a;
@@ -184,15 +186,16 @@ public final class brd implements btq {
                     }
                     if (i9 >= i7) {
                         bgs bgsVar2 = bgs.a;
-                        bzo.q(bgsVar2, "<set-?>");
+                        throwIfVar1IsNull(bgsVar2, "<set-?>");
                         dlbVar.b = bgsVar2;
                     } else {
                         String strAa2 = ewz.aa(dhrVar3.b);
                         String lowerCase3 = ewz.aa(dhrVar3.b).toLowerCase(Locale.ROOT);
-                        bzo.p(lowerCase3, "toLowerCase(...)");
-                        bzo.q(lowerCase2, "lowPattern");
-                        bzo.q(strAa2, "wordText");
-                        bgs bgsVarB = afoVarY.b > 2000 ? baf.b(str4, lowerCase2, i9, strAa2, lowerCase3, bgt.a) : baf.c(str4, lowerCase2, strAa2, i9, lowerCase3);
+                        throwIfVar1IsNull(lowerCase3, "toLowerCase(...)");
+                        throwIfVar1IsNull(lowerCase2, "lowPattern");
+                        throwIfVar1IsNull(strAa2, "wordText");
+                        bgs bgsVarB = afoVarY.b > 2000 ? baf.b(str4, lowerCase2, i9, strAa2, lowerCase3, bgt.a)
+                                : baf.c(str4, lowerCase2, strAa2, i9, lowerCase3);
                         if (bgsVarB != null) {
                             dlbVar.b = bgsVarB;
                         }
@@ -208,7 +211,8 @@ public final class brd implements btq {
                 i4 = 0;
             }
             if (!arrayList3.isEmpty() && ((dhr) aaz.d(arrayList3)).f != null && ((dhr) aaz.d(arrayList3)).f == null) {
-                throw new IllegalArgumentException("The completionItemList must run through the filterCompletionItems() method first");
+                throw new IllegalArgumentException(
+                        "The completionItemList must run through the filterCompletionItems() method first");
             }
             za zaVar = new za(3);
             ArrayList arrayList4 = abwVar.b;

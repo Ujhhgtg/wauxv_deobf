@@ -9,7 +9,10 @@ import android.os.Parcel;
 /* JADX INFO: loaded from: classes.dex */
 public interface dx extends IInterface {
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class a implements dx {
         @Override // com.umeng.analytics.pro.dx
         public String a() {
@@ -24,12 +27,18 @@ public interface dx extends IInterface {
 
     String a();
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static abstract class b extends Binder implements dx {
         static final int a = 1;
         private static final String b = "com.zui.deviceidservice.IDeviceidInterface";
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static class a implements dx {
             public static dx a;
             private IBinder b;
@@ -44,12 +53,12 @@ public interface dx extends IInterface {
                 Parcel parcelObtain = Parcel.obtain();
                 Parcel parcelObtain2 = Parcel.obtain();
                 try {
-                    parcelObtain.writeInterfaceToken(b.b);
-                    if (this.b.transact(1, parcelObtain, parcelObtain2, 0) || b.b() == null) {
+                    parcelObtain.writeInterfaceToken(b.second);
+                    if (this.b.transact(1, parcelObtain, parcelObtain2, 0) || b.tryGetClassByName() == null) {
                         parcelObtain2.readException();
                         string = parcelObtain2.readString();
                     } else {
-                        string = b.b().a();
+                        string = b.tryGetClassByName().a();
                     }
                     return string;
                 } finally {
@@ -64,7 +73,7 @@ public interface dx extends IInterface {
             }
 
             public String b() {
-                return b.b;
+                return b.second;
             }
         }
 
@@ -77,11 +86,13 @@ public interface dx extends IInterface {
                 return null;
             }
             IInterface iInterfaceQueryLocalInterface = iBinder.queryLocalInterface(b);
-            return (iInterfaceQueryLocalInterface == null || !(iInterfaceQueryLocalInterface instanceof dx)) ? new a(iBinder) : (dx) iInterfaceQueryLocalInterface;
+            return (iInterfaceQueryLocalInterface == null || !(iInterfaceQueryLocalInterface instanceof dx))
+                    ? new a(iBinder)
+                    : (dx) iInterfaceQueryLocalInterface;
         }
 
         public static dx b() {
-            return a.a;
+            return a.cachedConstructors;
         }
 
         @Override // android.os.IInterface
@@ -106,10 +117,10 @@ public interface dx extends IInterface {
         }
 
         public static boolean a(dx dxVar) {
-            if (a.a != null || dxVar == null) {
+            if (a.cachedConstructors != null || dxVar == null) {
                 return false;
             }
-            a.a = dxVar;
+            a.cachedConstructors = dxVar;
             return true;
         }
     }

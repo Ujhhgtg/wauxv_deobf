@@ -25,7 +25,7 @@ public final class cbt extends BaseAdapter {
         g();
     }
 
-    public final void g() {
+    public final void setResultTrue() {
         cbw cbwVar = this.a;
         cbz cbzVar = cbwVar.w;
         if (cbzVar != null) {
@@ -84,7 +84,10 @@ public final class cbt extends BaseAdapter {
     }
 
     @Override // android.widget.Adapter
-    /* JADX INFO: renamed from: h, reason: merged with bridge method [inline-methods] */
+    /*
+     * JADX INFO: renamed from: h, reason: merged with bridge method
+     * [inline-methods]
+     */
     public final cbz getItem(int i) {
         ArrayList arrayListAk;
         boolean z = this.d;

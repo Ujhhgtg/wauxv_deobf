@@ -36,7 +36,7 @@ import me.hd.wauxv.data.bean.MsgInfoBean;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class us implements bgf {
+public final /* synthetic */ class us implements IHasInvokeMethod {
     public final /* synthetic */ int a;
 
     public /* synthetic */ us(int i) {
@@ -45,7 +45,7 @@ public final /* synthetic */ class us implements bgf {
 
     private final Object b(Object obj) {
         bag bagVar = (bag) obj;
-        String[] strArr = {"com.tencent.mm.ui.chatting.viewitems" /* cnb.z(-48872432859946L) */};
+        String[] strArr = { "com.tencent.mm.ui.chatting.viewitems" /* cnb.z(-48872432859946L) */ };
         bagVar.getClass();
         bagVar.a = la.ab(strArr);
         zb zbVar = new zb();
@@ -83,12 +83,12 @@ public final /* synthetic */ class us implements bgf {
         int iIntValue;
         Object objX3;
         Object objX4;
-        bmm bmmVar = (bmm) obj;
+        HookParamWrapper hookParam = (HookParamWrapper) obj;
         LinkedHashSet<bnc> linkedHashSet = wr.b;
         if (cnb.ab(ewk.d) || cnb.ac(ewh.d)) {
-            bmmVar.getClass();
+            hookParam.getClass();
             try {
-                objX = bmmVar.d()[0];
+                objX = hookParam.getArgs()[0];
                 if (objX == null) {
                     objX = null;
                 }
@@ -98,9 +98,9 @@ public final /* synthetic */ class us implements bgf {
             if (objX instanceof dcx) {
                 objX = null;
             }
-            bzo.n(objX);
+            throwIfVar1IsNull(objX);
             try {
-                objX2 = bmmVar.d()[2];
+                objX2 = hookParam.getArgs()[2];
                 if (objX2 == null) {
                     objX2 = null;
                 }
@@ -113,23 +113,23 @@ public final /* synthetic */ class us implements bgf {
             azg azgVarR = dqc.bi(objX).r();
             azgVarR.a = dal.b(View.class);
             Object objE = ((azk) yg.e(azgVarR)).e();
-            bzo.n(objE);
+            throwIfVar1IsNull(objE);
             View view = (View) objE;
             Object tag = view.getTag();
-            azg azgVarAa = dkz.aa(bmmVar);
+            azg azgVarAa = dkz.aa(hookParam);
             xr.a.getClass();
             azgVarAa.a = emn.az(xq.a);
             Object objD = ((azk) aaz.e(azgVarAa.c())).d();
-            bzo.n(objD);
-            azg azgVarR2 = dqc.bi(bmmVar.e()).r();
+            throwIfVar1IsNull(objD);
+            azg azgVarR2 = dqc.bi(hookParam.getThisObject()).r();
             xv.a.getClass();
             azgVarR2.a = emn.az(xu.a);
             Object objD2 = ((azk) aaz.e(azgVarR2.c())).d();
-            bzo.n(objD2);
+            throwIfVar1IsNull(objD2);
             cde cdeVarT = dqc.bi(objD2).t();
             cdeVarT.ab = "getItem" /* cnb.z(-49624052136746L) */;
             Object objE2 = ((cdk) aaz.e(cdeVarT.aj())).e(Integer.valueOf(iIntValue));
-            bzo.n(objE2);
+            throwIfVar1IsNull(objE2);
             MsgInfoBean msgInfoBean = new MsgInfoBean(objE2);
             for (bnc bncVar : linkedHashSet) {
                 try {
@@ -138,13 +138,18 @@ public final /* synthetic */ class us implements bgf {
                     ArrayList arrayList = ewq.a;
                     StringBuilder sb = new StringBuilder();
                     sb.append("onBindView " /* cnb.z(-49589692398378L) */);
-                    ewq.e(yg.n(sb, bncVar instanceof doo ? ((doo) bncVar).f() : "LoadHook" /* cnb.z(-49572512529194L) */, -49533857823530L), e, 12);
+                    ewq.e(yg.n(sb,
+                            bncVar instanceof BaseHook ? ((BaseHook) bncVar).getResult() : "LoadHook" /*
+                                                                                                       * cnb.z(-
+                                                                                                       * 49572512529194L)
+                                                                                                       */,
+                            -49533857823530L), e, 12);
                 }
             }
         } else {
-            bmmVar.getClass();
+            hookParam.getClass();
             try {
-                objX3 = bmmVar.d()[0];
+                objX3 = hookParam.getArgs()[0];
                 if (objX3 == null) {
                     objX3 = null;
                 }
@@ -154,9 +159,9 @@ public final /* synthetic */ class us implements bgf {
             if (objX3 instanceof dcx) {
                 objX3 = null;
             }
-            bzo.n(objX3);
+            throwIfVar1IsNull(objX3);
             try {
-                objX4 = bmmVar.d()[1];
+                objX4 = hookParam.getArgs()[1];
                 if (objX4 == null) {
                     objX4 = null;
                 }
@@ -169,18 +174,18 @@ public final /* synthetic */ class us implements bgf {
             azg azgVarR3 = dqc.bi(objX3).r();
             azgVarR3.a = dal.b(View.class);
             Object objE3 = ((azk) yg.e(azgVarR3)).e();
-            bzo.n(objE3);
+            throwIfVar1IsNull(objE3);
             View view2 = (View) objE3;
             Object tag2 = view2.getTag();
-            azg azgVarAa2 = dkz.aa(bmmVar);
+            azg azgVarAa2 = dkz.aa(hookParam);
             xr.a.getClass();
             azgVarAa2.a = emn.az(xq.a);
             Object objD3 = ((azk) aaz.e(azgVarAa2.c())).d();
-            bzo.n(objD3);
-            cde cdeVarT2 = dqc.bi(bmmVar.e()).t();
+            throwIfVar1IsNull(objD3);
+            cde cdeVarT2 = dqc.bi(hookParam.getThisObject()).t();
             cdeVarT2.ab = "getItem" /* cnb.z(-49499498085162L) */;
             Object objE4 = ((cdk) aaz.e(cdeVarT2.aj())).e(Integer.valueOf(iIntValue));
-            bzo.n(objE4);
+            throwIfVar1IsNull(objE4);
             MsgInfoBean msgInfoBean2 = new MsgInfoBean(objE4);
             for (bnc bncVar2 : linkedHashSet) {
                 try {
@@ -189,7 +194,10 @@ public final /* synthetic */ class us implements bgf {
                     ArrayList arrayList2 = ewq.a;
                     StringBuilder sb2 = new StringBuilder();
                     sb2.append("onBindView " /* cnb.z(-50014894160682L) */);
-                    ewq.e(yg.n(sb2, bncVar2 instanceof doo ? ((doo) bncVar2).f() : "LoadHook" /* cnb.z(-49928994814762L) */, -49907519978282L), e2, 12);
+                    ewq.e(yg.n(sb2,
+                            bncVar2 instanceof BaseHook ? ((BaseHook) bncVar2).getResult()
+                                    : "LoadHook" /* cnb.z(-49928994814762L) */,
+                            -49907519978282L), e2, 12);
                 }
             }
         }
@@ -204,7 +212,10 @@ public final /* synthetic */ class us implements bgf {
     private final Object f(Object obj) {
         bah bahVar = (bah) obj;
         cdj cdjVar = new cdj();
-        cdjVar.t((cnb.ab(ewk.d) || cnb.ac(ewh.d)) ? "MicroMsg.MvvmChattingItem" /* cnb.z(-49873160239914L) */ : "MicroMsg.ChattingDataAdapterV2" /* cnb.z(-49778670959402L) */, "dealItemView" /* cnb.z(-38083475012394L) */);
+        cdjVar.t(
+                (cnb.ab(ewk.d) || cnb.ac(ewh.d)) ? "MicroMsg.MvvmChattingItem"
+                        /* cnb.z(-49873160239914L) */ : "MicroMsg.ChattingDataAdapterV2" /* cnb.z(-49778670959402L) */,
+                "dealItemView" /* cnb.z(-38083475012394L) */);
         cdj.k(cdjVar, "[onBindView] " /* cnb.z(-38010460568362L) */);
         bahVar.getClass();
         bahVar.d = cdjVar;
@@ -249,15 +260,15 @@ public final /* synthetic */ class us implements bgf {
         ens ensVar = ens.a;
         switch (i) {
             case 0:
-                bmm bmmVar = (bmm) obj;
+                HookParamWrapper hookParam = (HookParamWrapper) obj;
                 int i6 = bte.a;
-                azg azgVarAa = dkz.aa(bmmVar);
+                azg azgVarAa = dkz.aa(hookParam);
                 azgVarAa.a = "com.tencent.mm.ui.conversation.ConversationListView" /* cnb.z(-576625129290538L) */;
                 Object objE2 = ((azk) aaz.e(azgVarAa.c())).e();
-                bzo.n(objE2);
+                throwIfVar1IsNull(objE2);
                 View view = (ListView) objE2;
-                azg azgVarAa2 = dkz.aa(bmmVar);
-                abf.ao(azgVarAa2.ae, (cdy[]) Arrays.copyOf(new cdy[]{cdyVar}, 1));
+                azg azgVarAa2 = dkz.aa(hookParam);
+                abf.ao(azgVarAa2.ae, (cdy[]) Arrays.copyOf(new cdy[] { cdyVar }, 1));
                 boolean z = false;
                 Object obj4 = null;
                 for (Object obj5 : azgVarAa2.c()) {
@@ -267,33 +278,43 @@ public final /* synthetic */ class us implements bgf {
                     } else {
                         zc zcVarB = dal.b(objD.getClass());
                         zc zcVarB2 = dal.b(BaseAdapter.class);
-                        ConcurrentHashMap concurrentHashMap = zf.a;
+                        ConcurrentHashMap concurrentHashMap = ReflectionWrapper.cachedConstructors;
                         zIsAssignableFrom = cnf.bd(zcVarB2).isAssignableFrom(cnf.bd(zcVarB));
                     }
                     if (zIsAssignableFrom) {
                         if (z) {
-                            throw new IllegalArgumentException("Collection contains more than one matching element." /* cnb.z(-578016698694442L) */);
+                            throw new IllegalArgumentException(
+                                    "Collection contains more than one matching element." /* cnb.z(-578016698694442L) */);
                         }
                         obj4 = obj5;
                         z = true;
                     }
                 }
                 if (!z) {
-                    throw new NoSuchElementException("Collection contains no element matching the predicate." /* cnb.z(-577827720133418L) */);
+                    throw new NoSuchElementException("Collection contains no element matching the predicate." /*
+                                                                                                               * cnb.z(-
+                                                                                                               * 577827720133418L)
+                                                                                                               */);
                 }
                 Object objE3 = ((azk) obj4).e();
-                bzo.n(objE3);
+                throwIfVar1IsNull(objE3);
                 BaseAdapter baseAdapter = (BaseAdapter) objE3;
                 ViewParent parent = view.getParent();
-                bzo.o(parent, "null cannot be cast to non-null type android.widget.RelativeLayout" /* cnb.z(-578124072876842L) */);
+                throwIfVar1IsNull(parent, "null cannot be cast to non-null type android.widget.RelativeLayout" /*
+                                                                                                                * cnb.z(
+                                                                                                                * -
+                                                                                                                * 578124072876842L)
+                                                                                                                */);
                 RelativeLayout relativeLayout = (RelativeLayout) parent;
                 relativeLayout.removeView(view);
                 LinearLayout linearLayout = new LinearLayout(relativeLayout.getContext());
                 linearLayout.setLayoutParams(view.getLayoutParams());
                 linearLayout.setOrientation(0);
                 ScrollView scrollView = new ScrollView(linearLayout.getContext());
-                ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams((int) cnh.r(Integer.valueOf(vc.a.k()), scrollView.getContext()), -1);
-                scrollView.setPadding(0, (int) cnh.r(Integer.valueOf(vf.a.k()), scrollView.getContext()), 0, (int) cnh.r(56, scrollView.getContext()));
+                ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(
+                        (int) cnh.r(Integer.valueOf(vc.a.k()), scrollView.getContext()), -1);
+                scrollView.setPadding(0, (int) cnh.r(Integer.valueOf(vf.a.k()), scrollView.getContext()), 0,
+                        (int) cnh.r(56, scrollView.getContext()));
                 if (cnh.aa(scrollView.getContext())) {
                     scrollView.setBackgroundColor(Color.parseColor(va.a.o()));
                 } else {
@@ -321,10 +342,11 @@ public final /* synthetic */ class us implements bgf {
                     biw.a.getClass();
                     File file = new File(biw.c, bivVar.d);
                     if (file.exists()) {
-                        drawable = new BitmapDrawable(ckjVar.getContext().getResources(), BitmapFactory.decodeFile(file.getAbsolutePath()));
+                        drawable = new BitmapDrawable(ckjVar.getContext().getResources(),
+                                BitmapFactory.decodeFile(file.getAbsolutePath()));
                     } else {
                         drawable = ckjVar.getContext().getDrawable(R.drawable.ic_chat_group_24dp);
-                        bzo.n(drawable);
+                        throwIfVar1IsNull(drawable);
                     }
                     Menu menu = ckjVar.getMenu();
                     int i7 = bivVar.c;
@@ -335,7 +357,7 @@ public final /* synthetic */ class us implements bgf {
                 while (true) {
                     if (it.hasNext()) {
                         Object next = it.next();
-                        if (bzo.f(((biv) next).b, ux.a.o())) {
+                        if (nullSafeIsEqual(((biv) next).b, ux.a.o())) {
                             obj2 = next;
                         }
                     } else {
@@ -353,7 +375,9 @@ public final /* synthetic */ class us implements bgf {
                 bah bahVar = (bah) obj;
                 cdj cdjVar = new cdj();
                 cdj.l(cdjVar, "com.tencent.mm.ui.conversation.MainUI" /* cnb.z(-577252194515754L) */);
-                cdjVar.t("MicroMsg.MainUI" /* cnb.z(-577690281179946L) */, "onTabCreate, %d" /* cnb.z(-577621561703210L) */);
+                cdjVar.t("MicroMsg.MainUI" /* cnb.z(-577690281179946L) */, "onTabCreate, %d" /*
+                                                                                              * cnb.z(-577621561703210L)
+                                                                                              */);
                 bahVar.getClass();
                 bahVar.d = cdjVar;
                 return ensVar;
@@ -361,66 +385,114 @@ public final /* synthetic */ class us implements bgf {
                 View view2 = (View) obj;
                 View viewK = dkz.k(view2, R.layout.module_dialog_chat_group_tab, null, false);
                 int i8 = R.id.moduleDialogCbChatGroupTabShowIcon;
-                MaterialCheckBox materialCheckBox = (MaterialCheckBox) cnd.aq(viewK, R.id.moduleDialogCbChatGroupTabShowIcon);
+                MaterialCheckBox materialCheckBox = (MaterialCheckBox) cnd.aq(viewK,
+                        R.id.moduleDialogCbChatGroupTabShowIcon);
                 if (materialCheckBox != null) {
                     i8 = R.id.moduleDialogEdtChatGroupTabIndicatorDarkColor;
-                    TextInputEditText textInputEditText = (TextInputEditText) cnd.aq(viewK, R.id.moduleDialogEdtChatGroupTabIndicatorDarkColor);
+                    TextInputEditText textInputEditText = (TextInputEditText) cnd.aq(viewK,
+                            R.id.moduleDialogEdtChatGroupTabIndicatorDarkColor);
                     if (textInputEditText != null) {
                         i8 = R.id.moduleDialogEdtChatGroupTabIndicatorLightColor;
-                        TextInputEditText textInputEditText2 = (TextInputEditText) cnd.aq(viewK, R.id.moduleDialogEdtChatGroupTabIndicatorLightColor);
+                        TextInputEditText textInputEditText2 = (TextInputEditText) cnd.aq(viewK,
+                                R.id.moduleDialogEdtChatGroupTabIndicatorLightColor);
                         if (textInputEditText2 != null) {
                             i8 = R.id.moduleDialogEdtChatGroupTabNormalDarkColor;
-                            TextInputEditText textInputEditText3 = (TextInputEditText) cnd.aq(viewK, R.id.moduleDialogEdtChatGroupTabNormalDarkColor);
+                            TextInputEditText textInputEditText3 = (TextInputEditText) cnd.aq(viewK,
+                                    R.id.moduleDialogEdtChatGroupTabNormalDarkColor);
                             if (textInputEditText3 != null) {
                                 i8 = R.id.moduleDialogEdtChatGroupTabNormalLightColor;
-                                TextInputEditText textInputEditText4 = (TextInputEditText) cnd.aq(viewK, R.id.moduleDialogEdtChatGroupTabNormalLightColor);
+                                TextInputEditText textInputEditText4 = (TextInputEditText) cnd.aq(viewK,
+                                        R.id.moduleDialogEdtChatGroupTabNormalLightColor);
                                 if (textInputEditText4 != null) {
                                     i8 = R.id.moduleDialogEdtChatGroupTabSelectedDarkColor;
-                                    TextInputEditText textInputEditText5 = (TextInputEditText) cnd.aq(viewK, R.id.moduleDialogEdtChatGroupTabSelectedDarkColor);
+                                    TextInputEditText textInputEditText5 = (TextInputEditText) cnd.aq(viewK,
+                                            R.id.moduleDialogEdtChatGroupTabSelectedDarkColor);
                                     if (textInputEditText5 != null) {
                                         i8 = R.id.moduleDialogEdtChatGroupTabSelectedLightColor;
-                                        TextInputEditText textInputEditText6 = (TextInputEditText) cnd.aq(viewK, R.id.moduleDialogEdtChatGroupTabSelectedLightColor);
+                                        TextInputEditText textInputEditText6 = (TextInputEditText) cnd.aq(viewK,
+                                                R.id.moduleDialogEdtChatGroupTabSelectedLightColor);
                                         if (textInputEditText6 != null) {
                                             i8 = R.id.moduleDialogEdtChatGroupTabTabDarkColor;
-                                            TextInputEditText textInputEditText7 = (TextInputEditText) cnd.aq(viewK, R.id.moduleDialogEdtChatGroupTabTabDarkColor);
+                                            TextInputEditText textInputEditText7 = (TextInputEditText) cnd.aq(viewK,
+                                                    R.id.moduleDialogEdtChatGroupTabTabDarkColor);
                                             if (textInputEditText7 != null) {
                                                 i8 = R.id.moduleDialogEdtChatGroupTabTabLightColor;
-                                                TextInputEditText textInputEditText8 = (TextInputEditText) cnd.aq(viewK, R.id.moduleDialogEdtChatGroupTabTabLightColor);
+                                                TextInputEditText textInputEditText8 = (TextInputEditText) cnd.aq(viewK,
+                                                        R.id.moduleDialogEdtChatGroupTabTabLightColor);
                                                 if (textInputEditText8 != null) {
                                                     i8 = R.id.moduleDialogInputChatGroupTabIndicatorDarkColor;
-                                                    if (((TextInputLayout) cnd.aq(viewK, R.id.moduleDialogInputChatGroupTabIndicatorDarkColor)) != null) {
+                                                    if (((TextInputLayout) cnd.aq(viewK,
+                                                            R.id.moduleDialogInputChatGroupTabIndicatorDarkColor)) != null) {
                                                         i8 = R.id.moduleDialogInputChatGroupTabIndicatorLightColor;
-                                                        if (((TextInputLayout) cnd.aq(viewK, R.id.moduleDialogInputChatGroupTabIndicatorLightColor)) != null) {
+                                                        if (((TextInputLayout) cnd.aq(viewK,
+                                                                R.id.moduleDialogInputChatGroupTabIndicatorLightColor)) != null) {
                                                             i8 = R.id.moduleDialogInputChatGroupTabNormalDarkColor;
-                                                            if (((TextInputLayout) cnd.aq(viewK, R.id.moduleDialogInputChatGroupTabNormalDarkColor)) != null) {
+                                                            if (((TextInputLayout) cnd.aq(viewK,
+                                                                    R.id.moduleDialogInputChatGroupTabNormalDarkColor)) != null) {
                                                                 i8 = R.id.moduleDialogInputChatGroupTabNormalLightColor;
-                                                                if (((TextInputLayout) cnd.aq(viewK, R.id.moduleDialogInputChatGroupTabNormalLightColor)) != null) {
+                                                                if (((TextInputLayout) cnd.aq(viewK,
+                                                                        R.id.moduleDialogInputChatGroupTabNormalLightColor)) != null) {
                                                                     i8 = R.id.moduleDialogInputChatGroupTabSelectedDarkColor;
-                                                                    if (((TextInputLayout) cnd.aq(viewK, R.id.moduleDialogInputChatGroupTabSelectedDarkColor)) != null) {
+                                                                    if (((TextInputLayout) cnd.aq(viewK,
+                                                                            R.id.moduleDialogInputChatGroupTabSelectedDarkColor)) != null) {
                                                                         i8 = R.id.moduleDialogInputChatGroupTabSelectedLightColor;
-                                                                        if (((TextInputLayout) cnd.aq(viewK, R.id.moduleDialogInputChatGroupTabSelectedLightColor)) != null) {
+                                                                        if (((TextInputLayout) cnd.aq(viewK,
+                                                                                R.id.moduleDialogInputChatGroupTabSelectedLightColor)) != null) {
                                                                             i8 = R.id.moduleDialogInputChatGroupTabTabDarkColor;
-                                                                            if (((TextInputLayout) cnd.aq(viewK, R.id.moduleDialogInputChatGroupTabTabDarkColor)) != null) {
+                                                                            if (((TextInputLayout) cnd.aq(viewK,
+                                                                                    R.id.moduleDialogInputChatGroupTabTabDarkColor)) != null) {
                                                                                 i8 = R.id.moduleDialogInputChatGroupTabTabLightColor;
-                                                                                if (((TextInputLayout) cnd.aq(viewK, R.id.moduleDialogInputChatGroupTabTabLightColor)) != null) {
+                                                                                if (((TextInputLayout) cnd.aq(viewK,
+                                                                                        R.id.moduleDialogInputChatGroupTabTabLightColor)) != null) {
                                                                                     LinearLayout linearLayout2 = (LinearLayout) viewK;
-                                                                                    cej cejVar = new cej(linearLayout2, materialCheckBox, textInputEditText, textInputEditText2, textInputEditText3, textInputEditText4, textInputEditText5, textInputEditText6, textInputEditText7, textInputEditText8);
-                                                                                    textInputEditText8.setText(vr.a.o());
-                                                                                    textInputEditText2.setText(vk.a.o());
-                                                                                    textInputEditText4.setText(vm.a.o());
-                                                                                    textInputEditText6.setText(vo.a.o());
-                                                                                    textInputEditText7.setText(vq.a.o());
+                                                                                    cej cejVar = new cej(linearLayout2,
+                                                                                            materialCheckBox,
+                                                                                            textInputEditText,
+                                                                                            textInputEditText2,
+                                                                                            textInputEditText3,
+                                                                                            textInputEditText4,
+                                                                                            textInputEditText5,
+                                                                                            textInputEditText6,
+                                                                                            textInputEditText7,
+                                                                                            textInputEditText8);
+                                                                                    textInputEditText8
+                                                                                            .setText(vr.a.o());
+                                                                                    textInputEditText2
+                                                                                            .setText(vk.a.o());
+                                                                                    textInputEditText4
+                                                                                            .setText(vm.a.o());
+                                                                                    textInputEditText6
+                                                                                            .setText(vo.a.o());
+                                                                                    textInputEditText7
+                                                                                            .setText(vq.a.o());
                                                                                     textInputEditText.setText(vj.a.o());
-                                                                                    textInputEditText3.setText(vl.a.o());
-                                                                                    textInputEditText5.setText(vn.a.o());
-                                                                                    materialCheckBox.setChecked(vp.a.i());
-                                                                                    bzy bzyVar = new bzy(view2.getContext());
+                                                                                    textInputEditText3
+                                                                                            .setText(vl.a.o());
+                                                                                    textInputEditText5
+                                                                                            .setText(vn.a.o());
+                                                                                    materialCheckBox
+                                                                                            .setChecked(vp.a.i());
+                                                                                    bzy bzyVar = new bzy(
+                                                                                            view2.getContext());
                                                                                     eg egVar = (eg) bzyVar.d;
                                                                                     vt.a.getClass();
                                                                                     egVar.d = vt.c;
-                                                                                    bzyVar.t("保存" /* cnb.z(-568383087049514L) */, new amw(new bp(cejVar, 8), 0));
-                                                                                    bzyVar.s("重置" /* cnb.z(-568404561885994L) */, new amw(new h(i4), 2));
-                                                                                    bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar, "取消" /* cnb.z(-47455093652266L) */);
+                                                                                    bzyVar.t("保存" /*
+                                                                                                   * cnb.z(-
+                                                                                                   * 568383087049514L)
+                                                                                                   */, new amw(
+                                                                                            new bp(cejVar, 8), 0));
+                                                                                    bzyVar.s("重置" /*
+                                                                                                   * cnb.z(-
+                                                                                                   * 568404561885994L)
+                                                                                                   */,
+                                                                                            new amw(new h(i4), 2));
+                                                                                    bjs.x((3 & 2) != 0 ? new amd(
+                                                                                            1) : null, bzyVar,
+                                                                                            "取消" /*
+                                                                                                  * cnb.z(-
+                                                                                                  * 47455093652266L)
+                                                                                                  */);
                                                                                     if (linearLayout2 != null) {
                                                                                         egVar.r = linearLayout2;
                                                                                     }
@@ -443,17 +515,18 @@ public final /* synthetic */ class us implements bgf {
                         }
                     }
                 }
-                throw new NullPointerException("Missing required view with ID: " /* cnb.z(-638575737568042L) */.concat(viewK.getResources().getResourceName(i8)));
+                throw new NullPointerException("Missing required view with ID: "
+                        /* cnb.z(-638575737568042L) */.concat(viewK.getResources().getResourceName(i8)));
             case 3:
-                bmm bmmVar2 = (bmm) obj;
+                HookParamWrapper hookParam2 = (HookParamWrapper) obj;
                 int i9 = bte.a;
-                azg azgVarAa3 = dkz.aa(bmmVar2);
+                azg azgVarAa3 = dkz.aa(hookParam2);
                 azgVarAa3.a = "com.tencent.mm.ui.conversation.ConversationListView" /* cnb.z(-567515503655722L) */;
                 Object objE4 = ((azk) aaz.e(azgVarAa3.c())).e();
-                bzo.n(objE4);
+                throwIfVar1IsNull(objE4);
                 ListView listView = (ListView) objE4;
-                azg azgVarAa4 = dkz.aa(bmmVar2);
-                abf.ao(azgVarAa4.ae, (cdy[]) Arrays.copyOf(new cdy[]{cdyVar}, 1));
+                azg azgVarAa4 = dkz.aa(hookParam2);
+                abf.ao(azgVarAa4.ae, (cdy[]) Arrays.copyOf(new cdy[] { cdyVar }, 1));
                 Object[] objArr = false;
                 Object obj6 = null;
                 for (Object obj7 : azgVarAa4.c()) {
@@ -463,22 +536,26 @@ public final /* synthetic */ class us implements bgf {
                     } else {
                         zc zcVarB3 = dal.b(objD2.getClass());
                         zc zcVarB4 = dal.b(BaseAdapter.class);
-                        ConcurrentHashMap concurrentHashMap2 = zf.a;
+                        ConcurrentHashMap concurrentHashMap2 = ReflectionWrapper.cachedConstructors;
                         zIsAssignableFrom2 = cnf.bd(zcVarB4).isAssignableFrom(cnf.bd(zcVarB3));
                     }
                     if (zIsAssignableFrom2) {
                         if (objArr == true) {
-                            throw new IllegalArgumentException("Collection contains more than one matching element." /* cnb.z(-567807561431850L) */);
+                            throw new IllegalArgumentException(
+                                    "Collection contains more than one matching element." /* cnb.z(-567807561431850L) */);
                         }
                         obj6 = obj7;
                         objArr = true;
                     }
                 }
                 if (objArr != true) {
-                    throw new NoSuchElementException("Collection contains no element matching the predicate." /* cnb.z(-569267850312490L) */);
+                    throw new NoSuchElementException("Collection contains no element matching the predicate." /*
+                                                                                                               * cnb.z(-
+                                                                                                               * 569267850312490L)
+                                                                                                               */);
                 }
                 Object objE5 = ((azk) obj6).e();
-                bzo.n(objE5);
+                throwIfVar1IsNull(objE5);
                 BaseAdapter baseAdapter2 = (BaseAdapter) objE5;
                 TabLayout tabLayout = new TabLayout(aqu.e(cnf.am(listView.getContext())), null);
                 tabLayout.setLayoutParams(new ViewGroup.LayoutParams(-1, -2));
@@ -510,10 +587,11 @@ public final /* synthetic */ class us implements bgf {
                         biw.a.getClass();
                         File file2 = new File(biw.c, bivVar3.d);
                         if (file2.exists()) {
-                            drawable2 = new BitmapDrawable(tabLayout.getContext().getResources(), BitmapFactory.decodeFile(file2.getAbsolutePath()));
+                            drawable2 = new BitmapDrawable(tabLayout.getContext().getResources(),
+                                    BitmapFactory.decodeFile(file2.getAbsolutePath()));
                         } else {
                             drawable2 = tabLayout.getContext().getDrawable(R.drawable.ic_chat_group_24dp);
-                            bzo.n(drawable2);
+                            throwIfVar1IsNull(drawable2);
                         }
                     } else {
                         drawable2 = null;
@@ -548,7 +626,10 @@ public final /* synthetic */ class us implements bgf {
                 bah bahVar2 = (bah) obj;
                 cdj cdjVar2 = new cdj();
                 cdj.l(cdjVar2, "com.tencent.mm.ui.conversation.MainUI" /* cnb.z(-569031627111210L) */);
-                cdjVar2.t("MicroMsg.MainUI" /* cnb.z(-569400994298666L) */, "onTabCreate, %d" /* cnb.z(-569332274821930L) */);
+                cdjVar2.t("MicroMsg.MainUI" /* cnb.z(-569400994298666L) */, "onTabCreate, %d" /*
+                                                                                               * cnb.z(-
+                                                                                               * 569332274821930L)
+                                                                                               */);
                 bahVar2.getClass();
                 bahVar2.d = cdjVar2;
                 return ensVar;
@@ -557,20 +638,25 @@ public final /* synthetic */ class us implements bgf {
                 wh whVar = wh.a;
                 View viewK2 = dkz.k(view3, R.layout.module_dialog_chat_input_hint, null, false);
                 int i10 = R.id.moduleDialogCbChatInputHintHandleSendCount;
-                MaterialCheckBox materialCheckBox2 = (MaterialCheckBox) cnd.aq(viewK2, R.id.moduleDialogCbChatInputHintHandleSendCount);
+                MaterialCheckBox materialCheckBox2 = (MaterialCheckBox) cnd.aq(viewK2,
+                        R.id.moduleDialogCbChatInputHintHandleSendCount);
                 if (materialCheckBox2 != null) {
                     i10 = R.id.moduleDialogEdtChatInputHintTip;
-                    TextInputEditText textInputEditText9 = (TextInputEditText) cnd.aq(viewK2, R.id.moduleDialogEdtChatInputHintTip);
+                    TextInputEditText textInputEditText9 = (TextInputEditText) cnd.aq(viewK2,
+                            R.id.moduleDialogEdtChatInputHintTip);
                     if (textInputEditText9 != null) {
                         i10 = R.id.moduleDialogInputChatInputHintTip;
                         if (((TextInputLayout) cnd.aq(viewK2, R.id.moduleDialogInputChatInputHintTip)) != null) {
                             i10 = R.id.moduleDialogTvChatInputHintPreview;
-                            MaterialTextView materialTextView = (MaterialTextView) cnd.aq(viewK2, R.id.moduleDialogTvChatInputHintPreview);
+                            MaterialTextView materialTextView = (MaterialTextView) cnd.aq(viewK2,
+                                    R.id.moduleDialogTvChatInputHintPreview);
                             if (materialTextView != null) {
                                 i10 = R.id.moduleDialogTvChatInputHintTextPlaceholders;
-                                MaterialTextView materialTextView2 = (MaterialTextView) cnd.aq(viewK2, R.id.moduleDialogTvChatInputHintTextPlaceholders);
+                                MaterialTextView materialTextView2 = (MaterialTextView) cnd.aq(viewK2,
+                                        R.id.moduleDialogTvChatInputHintTextPlaceholders);
                                 if (materialTextView2 != null) {
-                                    bqr bqrVar = new bqr((LinearLayout) viewK2, materialCheckBox2, textInputEditText9, materialTextView, materialTextView2);
+                                    bqr bqrVar = new bqr((LinearLayout) viewK2, materialCheckBox2, textInputEditText9,
+                                            materialTextView, materialTextView2);
                                     vz vzVar = vz.a;
                                     String strO = vzVar.o();
                                     whVar.getClass();
@@ -579,11 +665,13 @@ public final /* synthetic */ class us implements bgf {
                                     textInputEditText9.addTextChangedListener(new wg(bqrVar, i));
                                     materialCheckBox2.setChecked(vy.a.i());
                                     materialTextView2.setMovementMethod(LinkMovementMethod.getInstance());
-                                    SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder("点击占位符自动添加以下字段:\n" /* cnb.z(-423019918916394L) */);
+                                    SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(
+                                            "点击占位符自动添加以下字段:\n" /* cnb.z(-423019918916394L) */);
                                     for (String str2 : wh.b) {
                                         int length = spannableStringBuilder.length();
                                         spannableStringBuilder.append((CharSequence) (str2 + ' '));
-                                        spannableStringBuilder.setSpan(new wf(bqrVar, str2, 0), length, spannableStringBuilder.length() - 1, 33);
+                                        spannableStringBuilder.setSpan(new wf(bqrVar, str2, 0), length,
+                                                spannableStringBuilder.length() - 1, 33);
                                         c = c;
                                     }
                                     materialTextView2.setText(spannableStringBuilder);
@@ -592,7 +680,8 @@ public final /* synthetic */ class us implements bgf {
                                     egVar2.d = wh.d;
                                     bzyVar2.t("保存" /* cnb.z(-422951199439658L) */, new amw(new bp(bqrVar, i2), 0));
                                     bzyVar2.s("重置" /* cnb.z(-422955494406954L) */, new amw(new h(i3), 2));
-                                    bjs.x((c & 2) != 0 ? new amd(i5) : null, bzyVar2, "取消" /* cnb.z(-47455093652266L) */);
+                                    bjs.x((c & 2) != 0 ? new amd(i5) : null, bzyVar2,
+                                            "取消" /* cnb.z(-47455093652266L) */);
                                     LinearLayout linearLayout3 = bqrVar.b;
                                     if (linearLayout3 != null) {
                                         egVar2.r = linearLayout3;
@@ -604,15 +693,16 @@ public final /* synthetic */ class us implements bgf {
                         }
                     }
                 }
-                throw new NullPointerException("Missing required view with ID: " /* cnb.z(-637888542800682L) */.concat(viewK2.getResources().getResourceName(i10)));
+                throw new NullPointerException("Missing required view with ID: "
+                        /* cnb.z(-637888542800682L) */.concat(viewK2.getResources().getResourceName(i10)));
             case 7:
                 ((amm) obj).c = new us(i2);
                 return ensVar;
             case 8:
-                bmm bmmVar3 = (bmm) obj;
-                bmmVar3.getClass();
+                HookParamWrapper hookParam3 = (HookParamWrapper) obj;
+                hookParam3.getClass();
                 try {
-                    objX = bmmVar3.d()[0];
+                    objX = hookParam3.getArgs()[0];
                     if (objX == null) {
                         objX = null;
                     }
@@ -622,7 +712,7 @@ public final /* synthetic */ class us implements bgf {
                 Boolean bool = (Boolean) (objX instanceof dcx ? null : objX);
                 if (!(bool != null ? bool.booleanValue() : false)) {
                     int i11 = bte.a;
-                    cde cdeVarT = dqc.bi(bmmVar3.e()).t();
+                    cde cdeVarT = dqc.bi(hookParam3.getThisObject()).t();
                     cdeVarT.ab = "setHint" /* cnb.z(-422835235322666L) */;
                     cdk cdkVar = (cdk) aaz.e(cdeVarT.aj());
                     wh whVar2 = wh.a;
@@ -636,24 +726,28 @@ public final /* synthetic */ class us implements bgf {
                 cdj cdjVar3 = new cdj();
                 uq.a.getClass();
                 cdjVar3.o(ajn.ag("com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* cnb.z(-75127567940394L) */));
-                cdjVar3.t("MicroMsg.ChatFooter" /* cnb.z(-422800875584298L) */, "canSend true ! sendBtn is visible" /* cnb.z(-423299091790634L) */);
+                cdjVar3.t("MicroMsg.ChatFooter" /* cnb.z(-422800875584298L) */,
+                        "canSend true ! sendBtn is visible" /* cnb.z(-423299091790634L) */);
                 bahVar3.getClass();
                 bahVar3.d = cdjVar3;
                 return ensVar;
             case 10:
                 bah bahVar4 = (bah) obj;
-                String[] strArr = {"com.tencent.mm.ui.chatting.viewitems" /* cnb.z(-52514565126954L) */};
+                String[] strArr = { "com.tencent.mm.ui.chatting.viewitems" /* cnb.z(-52514565126954L) */ };
                 bahVar4.getClass();
                 bahVar4.a = la.ab(strArr);
                 cdj cdjVar4 = new cdj();
-                cdjVar4.t("MicroMsg.ChattingItem" /* cnb.z(-51788715653930L) */, "msg is null!" /* cnb.z(-51745765980970L) */);
+                cdjVar4.t("MicroMsg.ChattingItem" /* cnb.z(-51788715653930L) */, "msg is null!" /*
+                                                                                                 * cnb.z(-
+                                                                                                 * 51745765980970L)
+                                                                                                 */);
                 bahVar4.d = cdjVar4;
                 return ensVar;
             case 11:
-                bmm bmmVar4 = (bmm) obj;
-                bmmVar4.getClass();
+                HookParamWrapper hookParam4 = (HookParamWrapper) obj;
+                hookParam4.getClass();
                 try {
-                    objX2 = bmmVar4.d()[0];
+                    objX2 = hookParam4.getArgs()[0];
                     if (objX2 == null) {
                         objX2 = null;
                     }
@@ -661,19 +755,19 @@ public final /* synthetic */ class us implements bgf {
                     objX2 = bhu.x(th2);
                 }
                 Object obj8 = objX2 instanceof dcx ? null : objX2;
-                bzo.n(obj8);
+                throwIfVar1IsNull(obj8);
                 int i12 = bte.a;
                 azg azgVarR = dqc.bi(obj8).r();
                 azgVarR.a = dal.b(Context.class);
                 Object objE6 = ((azk) aaz.e(azgVarR.c())).e();
-                bzo.n(objE6);
+                throwIfVar1IsNull(objE6);
                 Resources resources = ((Context) objE6).getResources();
                 if (resources != null) {
                     cnf.bi(resources);
                 }
                 dov dovVar = new dov(new wi(obj8, i));
                 try {
-                    objX3 = bmmVar4.d()[1];
+                    objX3 = hookParam4.getArgs()[1];
                     if (objX3 == null) {
                         objX3 = null;
                     }
@@ -681,7 +775,7 @@ public final /* synthetic */ class us implements bgf {
                     objX3 = bhu.x(th3);
                 }
                 obj3 = objX3 instanceof dcx ? null : objX3;
-                bzo.n(obj3);
+                throwIfVar1IsNull(obj3);
                 Object tag = ((View) obj3).getTag();
                 cde cdeVarT2 = dqc.bi(tag).t();
                 cdeVarT2.a = dal.b(Integer.TYPE);
@@ -694,13 +788,13 @@ public final /* synthetic */ class us implements bgf {
                     cdeVarT3.a = emn.az(cgd.a);
                     cdeVarT3.g = 0;
                     objE = ((cdk) dkz.m(cdeVarT3)).e(new Object[0]);
-                    bzo.n(objE);
+                    throwIfVar1IsNull(objE);
                 } else {
                     azg azgVarR2 = dqc.bi(tag).r();
                     cge.a.getClass();
                     azgVarR2.a = emn.az(cgd.a);
                     objE = ((azk) yg.e(azgVarR2)).d();
-                    bzo.n(objE);
+                    throwIfVar1IsNull(objE);
                 }
                 MsgInfoBean msgInfoBean = new MsgInfoBean(objE);
                 for (bna bnaVar : wm.b) {
@@ -714,42 +808,47 @@ public final /* synthetic */ class us implements bgf {
                         ArrayList arrayList2 = ewq.a;
                         StringBuilder sb = new StringBuilder();
                         sb.append("onCreateMenuItems " /* cnb.z(-52308406696746L) */);
-                        ewq.e(yg.n(sb, bnaVar instanceof doo ? ((doo) bnaVar).f() : "LoadHook" /* cnb.z(-52261162056490L) */, -52772263164714L), e, 12);
+                        ewq.e(yg.n(sb,
+                                bnaVar instanceof BaseHook ? ((BaseHook) bnaVar).getResult() : "LoadHook" /*
+                                                                                                           * cnb.z(-
+                                                                                                           * 52261162056490L)
+                                                                                                           */,
+                                -52772263164714L), e, 12);
                     }
                 }
                 return ensVar;
             case 12:
-                bmm bmmVar5 = (bmm) obj;
+                HookParamWrapper hookParam5 = (HookParamWrapper) obj;
                 int i13 = bte.a;
-                azg azgVarAa5 = dkz.aa(bmmVar5);
+                azg azgVarAa5 = dkz.aa(hookParam5);
                 azgVarAa5.b = new us(13);
                 Object objE7 = ((azk) aaz.e(azgVarAa5.c())).e();
-                bzo.n(objE7);
+                throwIfVar1IsNull(objE7);
                 azg azgVarR3 = dqc.bi((View.OnLongClickListener) objE7).r();
                 xr.a.getClass();
                 xq xqVar = xq.a;
                 azgVarR3.a = emn.az(xqVar);
                 Object objD3 = ((azk) yg.e(azgVarR3)).d();
-                bzo.n(objD3);
+                throwIfVar1IsNull(objD3);
                 azg azgVarR4 = dqc.bi(objD3).r();
                 gp.a.getClass();
                 go goVar = go.a;
                 azgVarR4.a = emn.bb(goVar).getDeclaringClass();
                 Object objD4 = ((azk) aaz.e(azgVarR4.c())).d();
-                bzo.n(objD4);
+                throwIfVar1IsNull(objD4);
                 xz.a.getClass();
                 azg azgVarR5 = dqc.bi(gp.b((Class) la.p(emn.az(xy.a).getInterfaces()), objD4)).r();
                 azgVarR5.a = emn.az(xqVar);
                 Object objD5 = ((azk) yg.e(azgVarR5)).d();
-                bzo.n(objD5);
+                throwIfVar1IsNull(objD5);
                 azg azgVarR6 = dqc.bi(objD5).r();
                 azgVarR6.a = emn.bb(goVar).getDeclaringClass();
                 Object objD6 = ((azk) aaz.e(azgVarR6.c())).d();
-                bzo.n(objD6);
+                throwIfVar1IsNull(objD6);
                 xv.a.getClass();
                 Object objB = gp.b((Class) la.p(emn.az(xu.a).getInterfaces()), objD6);
                 try {
-                    objX4 = bmmVar5.d()[0];
+                    objX4 = hookParam5.getArgs()[0];
                     if (objX4 == null) {
                         objX4 = null;
                     }
@@ -757,12 +856,12 @@ public final /* synthetic */ class us implements bgf {
                     objX4 = bhu.x(th4);
                 }
                 obj3 = objX4 instanceof dcx ? null : objX4;
-                bzo.n(obj3);
+                throwIfVar1IsNull(obj3);
                 MenuItem menuItem = (MenuItem) obj3;
                 cde cdeVarT4 = dqc.bi(objB).t();
                 cdeVarT4.ab = "getItem" /* cnb.z(-52737903426346L) */;
                 Object objE8 = ((cdk) aaz.e(cdeVarT4.aj())).e(Integer.valueOf(menuItem.getGroupId()));
-                bzo.n(objE8);
+                throwIfVar1IsNull(objE8);
                 MsgInfoBean msgInfoBean2 = new MsgInfoBean(objE8);
                 for (bna bnaVar2 : wm.b) {
                     try {
@@ -775,13 +874,18 @@ public final /* synthetic */ class us implements bgf {
                         ArrayList arrayList3 = ewq.a;
                         StringBuilder sb2 = new StringBuilder();
                         sb2.append("onCreateMenuItems " /* cnb.z(-52703543687978L) */);
-                        ewq.e(yg.n(sb2, bnaVar2 instanceof doo ? ((doo) bnaVar2).f() : "LoadHook" /* cnb.z(-52587579570986L) */, -52548924865322L), e2, 12);
+                        ewq.e(yg.n(sb2,
+                                bnaVar2 instanceof BaseHook ? ((BaseHook) bnaVar2).getResult() : "LoadHook" /*
+                                                                                                             * cnb.z(-
+                                                                                                             * 52587579570986L)
+                                                                                                             */,
+                                -52548924865322L), e2, 12);
                     }
                 }
                 return ensVar;
             case 13:
                 zc zcVarB5 = dal.b(View.OnLongClickListener.class);
-                ConcurrentHashMap concurrentHashMap3 = zf.a;
+                ConcurrentHashMap concurrentHashMap3 = ReflectionWrapper.cachedConstructors;
                 return Boolean.valueOf(cnf.bd(zcVarB5).isAssignableFrom((Class) obj));
             case 14:
                 ((amm) obj).c = new us(10);
@@ -791,18 +895,19 @@ public final /* synthetic */ class us implements bgf {
                 return ensVar;
             case 16:
                 bah bahVar5 = (bah) obj;
-                String[] strArr2 = {"com.tencent.mm.ui.chatting.viewitems" /* cnb.z(-52205327481642L) */};
+                String[] strArr2 = { "com.tencent.mm.ui.chatting.viewitems" /* cnb.z(-52205327481642L) */ };
                 bahVar5.getClass();
                 bahVar5.a = la.ab(strArr2);
                 cdj cdjVar5 = new cdj();
-                cdjVar5.t("MicroMsg.ChattingItem" /* cnb.z(-52029233822506L) */, "context item select failed, null dataTag" /* cnb.z(-51986284149546L) */);
+                cdjVar5.t("MicroMsg.ChattingItem" /* cnb.z(-52029233822506L) */,
+                        "context item select failed, null dataTag" /* cnb.z(-51986284149546L) */);
                 bahVar5.d = cdjVar5;
                 return ensVar;
             case 17:
-                bmm bmmVar6 = (bmm) obj;
-                bmmVar6.getClass();
+                HookParamWrapper hookParam6 = (HookParamWrapper) obj;
+                hookParam6.getClass();
                 try {
-                    objX5 = bmmVar6.d()[0];
+                    objX5 = hookParam6.getArgs()[0];
                     if (objX5 == null) {
                         objX5 = null;
                     }
@@ -810,7 +915,7 @@ public final /* synthetic */ class us implements bgf {
                     objX5 = bhu.x(th5);
                 }
                 obj3 = objX5 instanceof dcx ? null : objX5;
-                bzo.n(obj3);
+                throwIfVar1IsNull(obj3);
                 ViewGroup viewGroup = (ViewGroup) obj3;
                 for (bnb bnbVar : wp.b) {
                     try {
@@ -819,15 +924,20 @@ public final /* synthetic */ class us implements bgf {
                         ArrayList arrayList4 = ewq.a;
                         StringBuilder sb3 = new StringBuilder();
                         sb3.append("onCreateViewHolder " /* cnb.z(-49267569851178L) */);
-                        ewq.e(yg.n(sb3, bnbVar instanceof doo ? ((doo) bnbVar).f() : "LoadHook" /* cnb.z(-48597554953002L) */, -48576080116522L), e3, 12);
+                        ewq.e(yg.n(sb3,
+                                bnbVar instanceof BaseHook ? ((BaseHook) bnbVar).getResult() : "LoadHook" /*
+                                                                                                           * cnb.z(-
+                                                                                                           * 48597554953002L)
+                                                                                                           */,
+                                -48576080116522L), e3, 12);
                     }
                 }
                 return ensVar;
             case 18:
-                bmm bmmVar7 = (bmm) obj;
-                bmmVar7.getClass();
+                HookParamWrapper hookParam7 = (HookParamWrapper) obj;
+                hookParam7.getClass();
                 try {
-                    objX6 = bmmVar7.d()[0];
+                    objX6 = hookParam7.getArgs()[0];
                     if (objX6 == null) {
                         objX6 = null;
                     }
@@ -835,15 +945,15 @@ public final /* synthetic */ class us implements bgf {
                     objX6 = bhu.x(th6);
                 }
                 Object obj9 = objX6 instanceof dcx ? null : objX6;
-                bzo.n(obj9);
+                throwIfVar1IsNull(obj9);
                 int i14 = bte.a;
                 azg azgVarR7 = dqc.bi(obj9).r();
                 azgVarR7.ab = "convertView" /* cnb.z(-48541720378154L) */;
                 Object objE9 = ((azk) yg.e(azgVarR7)).e();
-                bzo.n(objE9);
+                throwIfVar1IsNull(objE9);
                 ViewGroup viewGroup2 = (ViewGroup) objE9;
                 try {
-                    objX7 = bmmVar7.d()[1];
+                    objX7 = hookParam7.getArgs()[1];
                     if (objX7 == null) {
                         objX7 = null;
                     }
@@ -851,9 +961,9 @@ public final /* synthetic */ class us implements bgf {
                     objX7 = bhu.x(th7);
                 }
                 Object obj10 = objX7 instanceof dcx ? null : objX7;
-                bzo.n(obj10);
+                throwIfVar1IsNull(obj10);
                 try {
-                    objX8 = bmmVar7.d()[3];
+                    objX8 = hookParam7.getArgs()[3];
                     if (objX8 == null) {
                         objX8 = null;
                     }
@@ -861,7 +971,7 @@ public final /* synthetic */ class us implements bgf {
                     objX8 = bhu.x(th8);
                 }
                 obj3 = objX8 instanceof dcx ? null : objX8;
-                bzo.n(obj3);
+                throwIfVar1IsNull(obj3);
                 MsgInfoBean msgInfoBean3 = new MsgInfoBean(obj3);
                 for (bnb bnbVar2 : wp.b) {
                     try {
@@ -870,7 +980,12 @@ public final /* synthetic */ class us implements bgf {
                         ArrayList arrayList5 = ewq.a;
                         StringBuilder sb4 = new StringBuilder();
                         sb4.append("onBindViewHolder " /* cnb.z(-48455821032234L) */);
-                        ewq.e(yg.n(sb4, bnbVar2 instanceof doo ? ((doo) bnbVar2).f() : "LoadHook" /* cnb.z(-48395691490090L) */, -48906792598314L), e4, 12);
+                        ewq.e(yg.n(sb4,
+                                bnbVar2 instanceof BaseHook ? ((BaseHook) bnbVar2).getResult() : "LoadHook" /*
+                                                                                                             * cnb.z(-
+                                                                                                             * 48395691490090L)
+                                                                                                             */,
+                                -48906792598314L), e4, 12);
                     }
                 }
                 return ensVar;
@@ -884,11 +999,12 @@ public final /* synthetic */ class us implements bgf {
                 return ensVar;
             case 21:
                 bah bahVar6 = (bah) obj;
-                String[] strArr3 = {"com.tencent.mm.ui.chatting.viewitems" /* cnb.z(-50259707296554L) */};
+                String[] strArr3 = { "com.tencent.mm.ui.chatting.viewitems" /* cnb.z(-50259707296554L) */ };
                 bahVar6.getClass();
                 bahVar6.a = la.ab(strArr3);
                 cdj cdjVar6 = new cdj();
-                cdjVar6.t("MicroMsg.ChattingItem" /* cnb.z(-50066433768234L) */, "attachAvatarClickListener: getBizKfWorker:%s" /* cnb.z(-50573239909162L) */);
+                cdjVar6.t("MicroMsg.ChattingItem" /* cnb.z(-50066433768234L) */,
+                        "attachAvatarClickListener: getBizKfWorker:%s" /* cnb.z(-50573239909162L) */);
                 bahVar6.d = cdjVar6;
                 return ensVar;
             case 22:
@@ -907,11 +1023,14 @@ public final /* synthetic */ class us implements bgf {
                 return h(obj);
             default:
                 bag bagVar = (bag) obj;
-                String[] strArr4 = {"com.tencent.mm.storage" /* cnb.z(-99626061396778L) */};
+                String[] strArr4 = { "com.tencent.mm.storage" /* cnb.z(-99626061396778L) */ };
                 bagVar.getClass();
                 bagVar.a = la.ab(strArr4);
                 zb zbVar = new zb();
-                zbVar.k("MicroMsg.ChatRoomMember" /* cnb.z(-99510097279786L) */, "service is null" /* cnb.z(-99956773878570L) */);
+                zbVar.k("MicroMsg.ChatRoomMember" /* cnb.z(-99510097279786L) */, "service is null" /*
+                                                                                                    * cnb.z(-
+                                                                                                    * 99956773878570L)
+                                                                                                    */);
                 bagVar.b = zbVar;
                 return ensVar;
         }

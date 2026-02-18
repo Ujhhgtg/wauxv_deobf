@@ -5,7 +5,7 @@ import org.luckypray.dexkit.DexKitBridge;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class auh extends bws implements bng {
+public final class auh extends bws implements IRequiresDexLocate {
     public static final auh a = new auh();
 
     public static String b(String str) {
@@ -13,8 +13,9 @@ public final class auh extends bws implements bng {
         atm.a.getClass();
         cde cdeVarT = dqc.bi(atm.b()).t();
         cdeVarT.a = dal.b(String.class);
-        Object objJ = ((cdk) dkz.n(new Object[]{dal.b(Context.class), dal.b(String.class)}, 2, cdeVarT)).j(null, str);
-        bzo.n(objJ);
+        Object objJ = ((cdk) dkz.n(new Object[] { dal.b(Context.class), dal.b(String.class) }, 2, cdeVarT)).j(null,
+                str);
+        throwIfVar1IsNull(objJ);
         return (String) objJ;
     }
 
@@ -41,7 +42,7 @@ public final class auh extends bws implements bng {
     }
 
     @Override // me.hd.wauxv.obf.bng
-    public final void h(DexKitBridge dexKitBridge) {
+    public final void locateDex(DexKitBridge dexKitBridge) {
         emn.aj(aug.a, dexKitBridge, new atn(14));
     }
 }

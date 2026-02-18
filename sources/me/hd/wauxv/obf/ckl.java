@@ -54,13 +54,15 @@ public abstract class ckl {
     public void l(cio cioVar, boolean z) {
         List list = (List) ((dml) w().e.h).c();
         if (!list.contains(cioVar)) {
-            throw new IllegalStateException(("popBackStack was called with " + cioVar + " which does not exist in back stack " + list).toString());
+            throw new IllegalStateException(
+                    ("popBackStack was called with " + cioVar + " which does not exist in back stack " + list)
+                            .toString());
         }
         ListIterator listIterator = list.listIterator(list.size());
         cio cioVar2 = null;
         while (e()) {
             cioVar2 = (cio) listIterator.previous();
-            if (bzo.f(cioVar2, cioVar)) {
+            if (nullSafeIsEqual(cioVar2, cioVar)) {
                 break;
             }
         }

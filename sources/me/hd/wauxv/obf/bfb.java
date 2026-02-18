@@ -20,13 +20,13 @@ import me.hd.wauxv.R;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class bfb {
-    public final io a;
+    public final DefaultConfig a;
     public final chm b;
     public final bdj c;
     public boolean d = false;
     public int e = -1;
 
-    public bfb(io ioVar, chm chmVar, bdj bdjVar) {
+    public bfb(DefaultConfig ioVar, chm chmVar, bdj bdjVar) {
         this.a = ioVar;
         this.b = chmVar;
         this.c = bdjVar;
@@ -149,7 +149,8 @@ public final class bfb {
         if (bdjVar2 != null) {
             bfb bfbVar2 = (bfb) ((HashMap) chmVar.d).get(bdjVar2.aw);
             if (bfbVar2 == null) {
-                throw new IllegalStateException("Fragment " + bdjVar + " declared target fragment " + bdjVar.ay + " that does not belong to this FragmentManager!");
+                throw new IllegalStateException("Fragment " + bdjVar + " declared target fragment " + bdjVar.ay
+                        + " that does not belong to this FragmentManager!");
             }
             bdjVar.az = bdjVar.ay.aw;
             bdjVar.ay = null;
@@ -169,7 +170,7 @@ public final class bfb {
         beg begVar = bdjVar.bm;
         bdjVar.bn = begVar.w;
         bdjVar.bp = begVar.y;
-        io ioVar = this.a;
+        DefaultConfig ioVar = this.a;
         ioVar.y(bdjVar, false);
         ArrayList arrayList = bdjVar.cm;
         Iterator it = arrayList.iterator();
@@ -284,7 +285,7 @@ public final class bfb {
             begVar.bq(1);
             return;
         }
-        io ioVar = this.a;
+        DefaultConfig ioVar = this.a;
         ioVar.z(bdjVar, false);
         bdjVar.bo.ck();
         bdjVar.as = 1;
@@ -319,7 +320,8 @@ public final class bfb {
             int i = bdjVar.br;
             if (i != 0) {
                 if (i == -1) {
-                    throw new IllegalArgumentException(yg.l("Cannot create fragment ", bdjVar, " for a container view with no id"));
+                    throw new IllegalArgumentException(
+                            yg.l("Cannot create fragment ", bdjVar, " for a container view with no id"));
                 }
                 viewGroup = (ViewGroup) bdjVar.bm.x.c(i);
                 if (viewGroup == null) {
@@ -329,11 +331,13 @@ public final class bfb {
                         } catch (Resources.NotFoundException unused) {
                             resourceName = "unknown";
                         }
-                        throw new IllegalArgumentException("No view found for id 0x" + Integer.toHexString(bdjVar.br) + " (" + resourceName + ") for fragment " + bdjVar);
+                        throw new IllegalArgumentException("No view found for id 0x" + Integer.toHexString(bdjVar.br)
+                                + " (" + resourceName + ") for fragment " + bdjVar);
                     }
                 } else if (!(viewGroup instanceof FragmentContainerView)) {
                     bfc bfcVar = bfd.a;
-                    bfd.c(new bex(bdjVar, "Attempting to add fragment " + bdjVar + " to container " + viewGroup + " which is not a FragmentContainerView"));
+                    bfd.c(new bex(bdjVar, "Attempting to add fragment " + bdjVar + " to container " + viewGroup
+                            + " which is not a FragmentContainerView"));
                     bfd.b(bdjVar).getClass();
                 }
             }
@@ -375,7 +379,8 @@ public final class bfb {
                 if (viewFindFocus != null) {
                     bdjVar.co().k = viewFindFocus;
                     if (beg.ar(2)) {
-                        Log.v("FragmentManager", "requestFocus: Saved focused view " + viewFindFocus + " for Fragment " + bdjVar);
+                        Log.v("FragmentManager",
+                                "requestFocus: Saved focused view " + viewFindFocus + " for Fragment " + bdjVar);
                     }
                 }
                 bdjVar.bz.setAlpha(0.0f);
@@ -465,9 +470,9 @@ public final class bfb {
         }
         erq erqVarAj = bdjVar.aj();
         bei beiVar = bwv.a;
-        bzo.q(erqVarAj, "store");
+        throwIfVar1IsNull(erqVarAj, "store");
         ahv ahvVar = ahv.a;
-        bzo.q(ahvVar, "defaultCreationExtras");
+        throwIfVar1IsNull(ahvVar, "defaultCreationExtras");
         chm chmVar = new chm(erqVarAj, beiVar, ahvVar);
         zc zcVarB = dal.b(bwv.class);
         String strAo = emc.ao(zcVarB);
@@ -593,12 +598,16 @@ public final class bfb {
                             aln alnVarG = aln.g(viewGroup, bdjVar.cs());
                             if (bdjVar.bt) {
                                 if (beg.ar(2)) {
-                                    Log.v("FragmentManager", "SpecialEffectsController: Enqueuing hide operation for fragment " + bdjVar);
+                                    Log.v("FragmentManager",
+                                            "SpecialEffectsController: Enqueuing hide operation for fragment "
+                                                    + bdjVar);
                                 }
                                 alnVarG.l(3, 1, this);
                             } else {
                                 if (beg.ar(2)) {
-                                    Log.v("FragmentManager", "SpecialEffectsController: Enqueuing show operation for fragment " + bdjVar);
+                                    Log.v("FragmentManager",
+                                            "SpecialEffectsController: Enqueuing show operation for fragment "
+                                                    + bdjVar);
                                 }
                                 alnVarG.l(2, 1, this);
                             }
@@ -646,7 +655,9 @@ public final class bfb {
                             if (bdjVar.bz != null && (viewGroup2 = bdjVar.by) != null) {
                                 aln alnVarG2 = aln.g(viewGroup2, bdjVar.cs());
                                 if (beg.ar(2)) {
-                                    Log.v("FragmentManager", "SpecialEffectsController: Enqueuing remove operation for fragment " + bdjVar);
+                                    Log.v("FragmentManager",
+                                            "SpecialEffectsController: Enqueuing remove operation for fragment "
+                                                    + bdjVar);
                                 }
                                 alnVarG2.l(1, 3, this);
                             }
@@ -690,7 +701,8 @@ public final class bfb {
                                 }
                                 bjs.t(i3, "finalState");
                                 if (beg.ar(2)) {
-                                    Log.v("FragmentManager", "SpecialEffectsController: Enqueuing add operation for fragment " + bdjVar);
+                                    Log.v("FragmentManager",
+                                            "SpecialEffectsController: Enqueuing add operation for fragment " + bdjVar);
                                 }
                                 alnVarG3.l(i3, 2, this);
                             }
@@ -759,9 +771,9 @@ public final class bfb {
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:19:0x0041  */
-    /* JADX WARN: Found duplicated region for block: B:21:0x0052  */
-    /* JADX WARN: Found duplicated region for block: B:22:0x0055  */
+    /* JADX WARN: Found duplicated region for block: B:19:0x0041 */
+    /* JADX WARN: Found duplicated region for block: B:21:0x0052 */
+    /* JADX WARN: Found duplicated region for block: B:22:0x0055 */
     public final void s() {
         boolean zRequestFocus;
         boolean zAr = beg.ar(3);
@@ -951,7 +963,7 @@ public final class bfb {
         this.a.ad(bdjVar, false);
     }
 
-    public bfb(io ioVar, chm chmVar, ClassLoader classLoader, bdz bdzVar, Bundle bundle) {
+    public bfb(DefaultConfig ioVar, chm chmVar, ClassLoader classLoader, bdz bdzVar, Bundle bundle) {
         this.a = ioVar;
         this.b = chmVar;
         bdj bdjVarP = ((bey) bundle.getParcelable("state")).p(bdzVar);
@@ -967,7 +979,7 @@ public final class bfb {
         }
     }
 
-    public bfb(io ioVar, chm chmVar, bdj bdjVar, Bundle bundle) {
+    public bfb(DefaultConfig ioVar, chm chmVar, bdj bdjVar, Bundle bundle) {
         this.a = ioVar;
         this.b = chmVar;
         this.c = bdjVar;

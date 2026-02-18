@@ -8,7 +8,10 @@ import java.util.Map;
 public final class mg extends LinkedHashMap {
     public final /* synthetic */ int a;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'super' call moved to the top of the method (can break code
+     * semantics)
+     */
     public /* synthetic */ mg(int i, float f, boolean z, int i2) {
         super(i, f, z);
         this.a = i2;
@@ -23,19 +26,20 @@ public final class mg extends LinkedHashMap {
                 }
                 return false;
             case 1:
-                if (obj instanceof csm) {
-                    return super.containsKey((csm) obj);
+                if (obj instanceof Pair) {
+                    return super.containsKey((Pair) obj);
                 }
                 return false;
             default:
-                if (obj instanceof csm) {
-                    return super.containsKey((csm) obj);
+                if (obj instanceof Pair) {
+                    return super.containsKey((Pair) obj);
                 }
                 return false;
         }
     }
 
-    @Override // java.util.LinkedHashMap, java.util.HashMap, java.util.AbstractMap, java.util.Map
+    @Override // java.util.LinkedHashMap, java.util.HashMap, java.util.AbstractMap,
+              // java.util.Map
     public final /* bridge */ boolean containsValue(Object obj) {
         switch (this.a) {
             case 0:
@@ -56,7 +60,8 @@ public final class mg extends LinkedHashMap {
         }
     }
 
-    @Override // java.util.LinkedHashMap, java.util.HashMap, java.util.AbstractMap, java.util.Map
+    @Override // java.util.LinkedHashMap, java.util.HashMap, java.util.AbstractMap,
+              // java.util.Map
     public final /* bridge */ Object get(Object obj) {
         switch (this.a) {
             case 0:
@@ -65,13 +70,13 @@ public final class mg extends LinkedHashMap {
                 }
                 return null;
             case 1:
-                if (obj instanceof csm) {
-                    return (Boolean) super.get((csm) obj);
+                if (obj instanceof Pair) {
+                    return (Boolean) super.get((Pair) obj);
                 }
                 return null;
             default:
-                if (obj instanceof csm) {
-                    return (Boolean) super.get((csm) obj);
+                if (obj instanceof Pair) {
+                    return (Boolean) super.get((Pair) obj);
                 }
                 return null;
         }
@@ -83,9 +88,9 @@ public final class mg extends LinkedHashMap {
             case 0:
                 return !(obj instanceof Long) ? obj2 : (Boolean) super.getOrDefault((Long) obj, (Boolean) obj2);
             case 1:
-                return !(obj instanceof csm) ? obj2 : (Boolean) super.getOrDefault((csm) obj, (Boolean) obj2);
+                return !(obj instanceof Pair) ? obj2 : (Boolean) super.getOrDefault((Pair) obj, (Boolean) obj2);
             default:
-                return !(obj instanceof csm) ? obj2 : (Boolean) super.getOrDefault((csm) obj, (Boolean) obj2);
+                return !(obj instanceof Pair) ? obj2 : (Boolean) super.getOrDefault((Pair) obj, (Boolean) obj2);
         }
     }
 
@@ -98,13 +103,13 @@ public final class mg extends LinkedHashMap {
                 }
                 return null;
             case 1:
-                if (obj instanceof csm) {
-                    return (Boolean) super.remove((csm) obj);
+                if (obj instanceof Pair) {
+                    return (Boolean) super.remove((Pair) obj);
                 }
                 return null;
             default:
-                if (obj instanceof csm) {
-                    return (Boolean) super.remove((csm) obj);
+                if (obj instanceof Pair) {
+                    return (Boolean) super.remove((Pair) obj);
                 }
                 return null;
         }
@@ -131,13 +136,13 @@ public final class mg extends LinkedHashMap {
                 }
                 return false;
             case 1:
-                if ((obj instanceof csm) && (obj2 instanceof Boolean)) {
-                    return super.remove((csm) obj, (Boolean) obj2);
+                if ((obj instanceof Pair) && (obj2 instanceof Boolean)) {
+                    return super.remove((Pair) obj, (Boolean) obj2);
                 }
                 return false;
             default:
-                if ((obj instanceof csm) && (obj2 instanceof Boolean)) {
-                    return super.remove((csm) obj, (Boolean) obj2);
+                if ((obj instanceof Pair) && (obj2 instanceof Boolean)) {
+                    return super.remove((Pair) obj, (Boolean) obj2);
                 }
                 return false;
         }

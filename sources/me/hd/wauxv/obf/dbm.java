@@ -6,15 +6,19 @@ public final class dbm extends cwl {
     public int ac;
     public final long ae;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'super' call moved to the top of the method (can break code
+     * semantics)
+     */
     public dbm(cwd cwdVar, cwo cwoVar, long j, dfx dfxVar) {
         super(cwdVar, cwoVar, dfxVar);
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         this.ac = -1;
         if (j == 19500) {
             int iG = cwoVar.g(cwf.DEFAULT);
             if (iG < 0) {
-                throw new IllegalArgumentException(("Expected positive length for " + dfxVar + ", but got " + iG).toString());
+                throw new IllegalArgumentException(
+                        ("Expected positive length for " + dfxVar + ", but got " + iG).toString());
             }
             j = -iG;
         }
@@ -23,7 +27,7 @@ public final class dbm extends cwl {
 
     @Override // me.hd.wauxv.obf.cwl
     public final long ad(dfx dfxVar, int i) {
-        bzo.q(dfxVar, "<this>");
+        throwIfVar1IsNull(dfxVar, "<this>");
         long j = this.ae;
         if (j > 0) {
             return j;
@@ -33,7 +37,7 @@ public final class dbm extends cwl {
 
     @Override // me.hd.wauxv.obf.cwl, me.hd.wauxv.obf.acm
     public final int f(dfx dfxVar) {
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         long j = this.ae;
         cwo cwoVar = this.ai;
         if (j > 0) {

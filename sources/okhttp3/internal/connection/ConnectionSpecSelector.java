@@ -11,7 +11,7 @@ import javax.net.ssl.SSLException;
 import javax.net.ssl.SSLHandshakeException;
 import javax.net.ssl.SSLPeerUnverifiedException;
 import javax.net.ssl.SSLSocket;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import okhttp3.ConnectionSpec;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -23,7 +23,7 @@ public final class ConnectionSpecSelector {
     private int nextModeIndex;
 
     public ConnectionSpecSelector(List<ConnectionSpec> list) {
-        bzo.q(list, "connectionSpecs");
+        throwIfVar1IsNull(list, "connectionSpecs");
         this.connectionSpecs = list;
     }
 
@@ -39,7 +39,7 @@ public final class ConnectionSpecSelector {
 
     public final ConnectionSpec configureSecureSocket(SSLSocket sSLSocket) throws UnknownServiceException {
         ConnectionSpec connectionSpec;
-        bzo.q(sSLSocket, "sslSocket");
+        throwIfVar1IsNull(sSLSocket, "sslSocket");
         int i = this.nextModeIndex;
         int size = this.connectionSpecs.size();
         while (true) {
@@ -65,19 +65,24 @@ public final class ConnectionSpecSelector {
         sb.append(this.connectionSpecs);
         sb.append(", supported protocols=");
         String[] enabledProtocols = sSLSocket.getEnabledProtocols();
-        bzo.n(enabledProtocols);
+        throwIfVar1IsNull(enabledProtocols);
         String string = Arrays.toString(enabledProtocols);
-        bzo.p(string, "toString(this)");
+        throwIfVar1IsNull(string, "toString(this)");
         sb.append(string);
         throw new UnknownServiceException(sb.toString());
     }
 
     public final boolean connectionFailed(IOException iOException) {
-        bzo.q(iOException, "e");
+        throwIfVar1IsNull(iOException, "e");
         this.isFallback = true;
-        if (!this.isFallbackPossible || (iOException instanceof ProtocolException) || (iOException instanceof InterruptedIOException)) {
+        if (!this.isFallbackPossible || (iOException instanceof ProtocolException)
+                || (iOException instanceof InterruptedIOException)) {
             return false;
         }
-        return (((iOException instanceof SSLHandshakeException) && (iOException.getCause() instanceof CertificateException)) || (iOException instanceof SSLPeerUnverifiedException) || !(iOException instanceof SSLException)) ? false : true;
+        return (((iOException instanceof SSLHandshakeException)
+                && (iOException.getCause() instanceof CertificateException))
+                || (iOException instanceof SSLPeerUnverifiedException) || !(iOException instanceof SSLException))
+                        ? false
+                        : true;
     }
 }

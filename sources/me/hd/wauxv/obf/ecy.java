@@ -24,7 +24,7 @@ public final class ecy {
             return false;
         }
         ecy ecyVar = (ecy) obj;
-        return bzo.f(this.a, ecyVar.a) && bzo.f(this.b, ecyVar.b);
+        return nullSafeIsEqual(this.a, ecyVar.a) && nullSafeIsEqual(this.b, ecyVar.b);
     }
 
     public final int hashCode() {
@@ -38,6 +38,6 @@ public final class ecy {
         StringBuilder sb = new StringBuilder();
         sb.append("p11Proto(need_replace_nickname=" /* cnb.z(-250065880873770L) */);
         dts.g(sb, this.a, -249928441920298L);
-        return bjs.q(sb, this.b, ')');
+        return concat(sb, this.b, ')');
     }
 }

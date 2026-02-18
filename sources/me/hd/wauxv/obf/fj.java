@@ -37,14 +37,14 @@ public final class fj extends dqc {
         int iT4;
         switch (this.a) {
             case 0:
-                bzo.q(bbbVar, "fbb");
+                throwIfVar1IsNull(bbbVar, "fbb");
                 List list = this.b;
                 if (list != null) {
                     ArrayList arrayList = new ArrayList(abb.ak(list, 10));
                     Iterator it = list.iterator();
                     while (it.hasNext()) {
                         fl flVar = ((fk) it.next()).b;
-                        bzo.n(flVar);
+                        throwIfVar1IsNull(flVar);
                         arrayList.add(new emp(flVar.d));
                     }
                     byte[] bArrY = aye.y(arrayList);
@@ -62,7 +62,8 @@ public final class fj extends dqc {
                     Iterator it2 = list2.iterator();
                     while (it2.hasNext()) {
                         dqc dqcVar = ((fk) it2.next()).a;
-                        bzo.o(dqcVar, "null cannot be cast to non-null type org.luckypray.dexkit.query.base.BaseQuery");
+                        throwIfVar1IsNull(dqcVar,
+                                "null cannot be cast to non-null type org.luckypray.dexkit.query.base.BaseQuery");
                         arrayList2.add(Integer.valueOf(dqcVar.c(bbbVar)));
                     }
                     int[] iArrY = aaz.y(arrayList2);
@@ -84,7 +85,7 @@ public final class fj extends dqc {
                 bbbVar.w(iU);
                 return iU;
             case 1:
-                bzo.q(bbbVar, "fbb");
+                throwIfVar1IsNull(bbbVar, "fbb");
                 List list3 = this.b;
                 if (list3 != null) {
                     ArrayList arrayList3 = new ArrayList(abb.ak(list3, 10));
@@ -105,7 +106,7 @@ public final class fj extends dqc {
                 bbbVar.w(iU2);
                 return iU2;
             case 2:
-                bzo.q(bbbVar, "fbb");
+                throwIfVar1IsNull(bbbVar, "fbb");
                 List list4 = this.b;
                 if (list4 != null) {
                     ArrayList arrayList4 = new ArrayList(abb.ak(list4, 10));
@@ -126,7 +127,7 @@ public final class fj extends dqc {
                 bbbVar.w(iU3);
                 return iU3;
             case 3:
-                bzo.q(bbbVar, "fbb");
+                throwIfVar1IsNull(bbbVar, "fbb");
                 List list5 = this.b;
                 if (list5 != null) {
                     ArrayList arrayList5 = new ArrayList(abb.ak(list5, 10));
@@ -147,7 +148,7 @@ public final class fj extends dqc {
                 bbbVar.w(iU4);
                 return iU4;
             default:
-                bzo.q(bbbVar, "fbb");
+                throwIfVar1IsNull(bbbVar, "fbb");
                 List<cst> list6 = this.b;
                 if (list6 != null) {
                     ArrayList arrayList6 = new ArrayList(abb.ak(list6, 10));

@@ -29,7 +29,7 @@ public final class cvt implements bup {
                 this.d = false;
             } else {
                 Handler handler = this.f;
-                bzo.n(handler);
+                throwIfVar1IsNull(handler);
                 handler.removeCallbacks(this.h);
             }
         }

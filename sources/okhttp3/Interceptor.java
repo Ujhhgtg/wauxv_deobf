@@ -1,8 +1,8 @@
 package okhttp3;
 
 import java.util.concurrent.TimeUnit;
-import me.hd.wauxv.obf.bgf;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.IHasInvokeMethod;
+import me.hd.wauxv.obf.KotlinHelpers;
 import okhttp3.Interceptor;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -10,7 +10,10 @@ import okhttp3.Interceptor;
 public interface Interceptor {
     public static final Companion Companion = Companion.$$INSTANCE;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface Chain {
         Call call();
 
@@ -33,19 +36,22 @@ public interface Interceptor {
         int writeTimeoutMillis();
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         static final /* synthetic */ Companion $$INSTANCE = new Companion();
 
         private Companion() {
         }
 
-        public final Interceptor invoke(final bgf bgfVar) {
-            bzo.q(bgfVar, "block");
+        public final Interceptor invoke(final IHasInvokeMethod bgfVar) {
+            throwIfVar1IsNull(bgfVar, "block");
             return new Interceptor() { // from class: okhttp3.Interceptor$Companion$invoke$1
                 @Override // okhttp3.Interceptor
                 public final Response intercept(Interceptor.Chain chain) {
-                    bzo.q(chain, "it");
+                    throwIfVar1IsNull(chain, "it");
                     return (Response) bgfVar.invoke(chain);
                 }
             };

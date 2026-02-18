@@ -79,7 +79,7 @@ public final class eqe extends eqc {
                                     eqgVar.invoke();
                                     return;
                                 }
-                                io ioVar = new io(eqeVar.ao.b.getContext(), 13);
+                                DefaultConfig ioVar = new DefaultConfig(eqeVar.ao.b.getContext(), 13);
                                 ioVar.ay("提示" /* cnb.z(-388458317085482L) */);
                                 StringBuilder sb = new StringBuilder();
                                 sb.append("此功能 (" /* cnb.z(-388411072445226L) */);
@@ -92,8 +92,8 @@ public final class eqe extends eqc {
                                 if (bzyVar != null) {
                                     ((eg) bzyVar.d).f = string;
                                 }
-                                io.g(ioVar, new cfx(eqgVar, 19), 1);
-                                io.f(ioVar, new eqh(compoundButton, 0), 1);
+                                DefaultConfig.g(ioVar, new cfx(eqgVar, 19), 1);
+                                DefaultConfig.f(ioVar, new eqh(compoundButton, 0), 1);
                                 final eqh eqhVar = new eqh(compoundButton, 1);
                                 bzy bzyVar2 = (bzy) ioVar.c;
                                 if (bzyVar2 != null) {

@@ -20,7 +20,7 @@ public final class a implements Runnable {
             if (j.a == null && context != null) {
                 j.a = context.getApplicationContext();
             }
-            c.a(this.a, c.a(this.a, j.a.a.a(), (JSONArray) null), false);
+            c.a(this.a, c.a(this.a, j.a.cachedConstructors.a(), (JSONArray) null), false);
         } catch (Throwable unused) {
         }
     }

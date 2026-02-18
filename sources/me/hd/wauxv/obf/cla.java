@@ -13,7 +13,7 @@ public final class cla implements alp {
         this.f = alqVar;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:7:0x0013  */
+    /* JADX WARN: Found duplicated region for block: B:7:0x0013 */
     @Override // me.hd.wauxv.obf.alp
     public final Object _be(afw afwVar) throws Exception {
         ckz ckzVar;
@@ -36,7 +36,7 @@ public final class cla implements alp {
         if (i2 == 0) {
             bhu.bd(obj);
             StackTraceElement[] stackTrace = new Throwable().getStackTrace();
-            bzo.p(stackTrace, "Throwable().stackTrace");
+            throwIfVar1IsNull(stackTrace, "Throwable().stackTrace");
             StackTraceElement stackTraceElement = (StackTraceElement) la.q(stackTrace, 1);
             if (stackTraceElement != null) {
                 str = " ...(" + stackTraceElement.getFileName() + ':' + stackTraceElement.getLineNumber() + ')';
@@ -76,7 +76,7 @@ public final class cla implements alp {
 
     @Override // me.hd.wauxv.obf.ahh
     public final ahh _t(ahg ahgVar) {
-        bzo.q(ahgVar, "key");
+        throwIfVar1IsNull(ahgVar, "key");
         return bmy.x(this.f, ahgVar);
     }
 
@@ -87,13 +87,13 @@ public final class cla implements alp {
 
     @Override // me.hd.wauxv.obf.ahh
     public final ahh _v(ahh ahhVar) {
-        bzo.q(ahhVar, com.umeng.analytics.pro.f.X);
+        throwIfVar1IsNull(ahhVar, "context");
         return bmy.aa(this.f, ahhVar);
     }
 
     @Override // me.hd.wauxv.obf.ahh
     public final ahf _w(ahg ahgVar) {
-        bzo.q(ahgVar, "key");
+        throwIfVar1IsNull(ahgVar, "key");
         return this.f._w(ahgVar);
     }
 

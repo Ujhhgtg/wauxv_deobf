@@ -24,7 +24,7 @@ public final class ejl {
             return false;
         }
         ejl ejlVar = (ejl) obj;
-        return bzo.f(this.a, ejlVar.a) && bzo.f(this.b, ejlVar.b);
+        return nullSafeIsEqual(this.a, ejlVar.a) && nullSafeIsEqual(this.b, ejlVar.b);
     }
 
     public final int hashCode() {
@@ -38,6 +38,6 @@ public final class ejl {
         StringBuilder sb = new StringBuilder();
         sb.append("zd0Proto(d=" /* cnb.z(-344001110604586L) */);
         yg.u(sb, this.a, -343915211258666L);
-        return bjs.q(sb, this.b, ')');
+        return concat(sb, this.b, ')');
     }
 }

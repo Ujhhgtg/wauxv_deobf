@@ -16,7 +16,7 @@ public final class bjr implements dlc {
     public final CRC32 e;
 
     public bjr(dlc dlcVar) {
-        bzo.q(dlcVar, "source");
+        throwIfVar1IsNull(dlcVar, "source");
         cyl cylVar = new cyl(dlcVar);
         this.b = cylVar;
         Inflater inflater = new Inflater(true);
@@ -27,7 +27,8 @@ public final class bjr implements dlc {
 
     public static void f(String str, int i, int i2) throws IOException {
         if (i2 != i) {
-            throw new IOException(String.format("%s: actual 0x%08x != expected 0x%08x", Arrays.copyOf(new Object[]{str, Integer.valueOf(i2), Integer.valueOf(i)}, 3)));
+            throw new IOException(String.format("%s: actual 0x%08x != expected 0x%08x",
+                    Arrays.copyOf(new Object[] { str, Integer.valueOf(i2), Integer.valueOf(i) }, 3)));
         }
     }
 
@@ -38,7 +39,7 @@ public final class bjr implements dlc {
 
     public final void g(long j, rh rhVar, long j2) {
         dfj dfjVar = rhVar.a;
-        bzo.n(dfjVar);
+        throwIfVar1IsNull(dfjVar);
         while (true) {
             int i = dfjVar.c;
             int i2 = dfjVar.b;
@@ -47,7 +48,7 @@ public final class bjr implements dlc {
             }
             j -= (long) (i - i2);
             dfjVar = dfjVar.f;
-            bzo.n(dfjVar);
+            throwIfVar1IsNull(dfjVar);
         }
         while (j2 > 0) {
             int i3 = (int) (((long) dfjVar.b) + j);
@@ -55,7 +56,7 @@ public final class bjr implements dlc {
             this.e.update(dfjVar.a, i3, iMin);
             j2 -= (long) iMin;
             dfjVar = dfjVar.f;
-            bzo.n(dfjVar);
+            throwIfVar1IsNull(dfjVar);
             j = 0;
         }
     }
@@ -64,7 +65,7 @@ public final class bjr implements dlc {
     public final long read(rh rhVar, long j) throws IOException {
         long j2;
         bjr bjrVar = this;
-        bzo.q(rhVar, "sink");
+        throwIfVar1IsNull(rhVar, "sink");
         if (j < 0) {
             throw new IllegalArgumentException(dts.b(j, "byteCount < 0: ").toString());
         }

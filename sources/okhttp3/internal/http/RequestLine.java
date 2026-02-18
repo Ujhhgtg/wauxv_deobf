@@ -1,7 +1,7 @@
 package okhttp3.internal.http;
 
 import java.net.Proxy;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import okhttp3.HttpUrl;
 import okhttp3.Request;
 
@@ -18,8 +18,8 @@ public final class RequestLine {
     }
 
     public final String get(Request request, Proxy.Type type) {
-        bzo.q(request, "request");
-        bzo.q(type, "proxyType");
+        throwIfVar1IsNull(request, "request");
+        throwIfVar1IsNull(type, "proxyType");
         StringBuilder sb = new StringBuilder();
         sb.append(request.method());
         sb.append(' ');
@@ -31,12 +31,12 @@ public final class RequestLine {
         }
         sb.append(" HTTP/1.1");
         String string = sb.toString();
-        bzo.p(string, "StringBuilder().apply(builderAction).toString()");
+        throwIfVar1IsNull(string, "StringBuilder().apply(builderAction).toString()");
         return string;
     }
 
     public final String requestPath(HttpUrl httpUrl) {
-        bzo.q(httpUrl, "url");
+        throwIfVar1IsNull(httpUrl, "url");
         String strEncodedPath = httpUrl.encodedPath();
         String strEncodedQuery = httpUrl.encodedQuery();
         if (strEncodedQuery == null) {

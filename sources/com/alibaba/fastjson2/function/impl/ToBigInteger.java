@@ -19,12 +19,14 @@ public class ToBigInteger implements Function {
         if (obj instanceof Boolean) {
             return ((Boolean) obj).booleanValue() ? BigInteger.ONE : BigInteger.ZERO;
         }
-        if ((obj instanceof Byte) || (obj instanceof Short) || (obj instanceof Integer) || (obj instanceof Long) || (obj instanceof AtomicInteger) || (obj instanceof AtomicLong) || (obj instanceof Float) || (obj instanceof Double)) {
+        if ((obj instanceof Byte) || (obj instanceof Short) || (obj instanceof Integer) || (obj instanceof Long)
+                || (obj instanceof AtomicInteger) || (obj instanceof AtomicLong) || (obj instanceof Float)
+                || (obj instanceof Double)) {
             return BigInteger.valueOf(((Number) obj).longValue());
         }
         if (obj instanceof BigDecimal) {
             return ((BigDecimal) obj).toBigInteger();
         }
-        throw new JSONException(bjs.m(obj, new StringBuilder("can not cast to BigInteger ")));
+        throw new JSONException(concatVar1GetClass(obj, new StringBuilder("can not cast to BigInteger ")));
     }
 }

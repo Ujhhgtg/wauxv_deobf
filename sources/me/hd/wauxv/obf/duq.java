@@ -30,7 +30,9 @@ public final class duq {
             return false;
         }
         duq duqVar = (duq) obj;
-        return bzo.f(this.a, duqVar.a) && bzo.f(this.b, duqVar.b) && bzo.f(this.c, duqVar.c) && bzo.f(this.d, duqVar.d) && bzo.f(this.e, duqVar.e);
+        return nullSafeIsEqual(this.a, duqVar.a) && nullSafeIsEqual(this.b, duqVar.b)
+                && nullSafeIsEqual(this.c, duqVar.c) && nullSafeIsEqual(this.d, duqVar.d)
+                && nullSafeIsEqual(this.e, duqVar.e);
     }
 
     public final int hashCode() {

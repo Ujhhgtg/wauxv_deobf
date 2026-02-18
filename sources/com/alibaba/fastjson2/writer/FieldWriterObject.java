@@ -25,26 +25,32 @@ import me.hd.wauxv.obf.bjs;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public class FieldWriterObject<T> extends FieldWriter<T> {
-    static final AtomicReferenceFieldUpdater<FieldWriterObject, Class> initValueClassUpdater = AtomicReferenceFieldUpdater.newUpdater(FieldWriterObject.class, Class.class, "initValueClass");
+    static final AtomicReferenceFieldUpdater<FieldWriterObject, Class> initValueClassUpdater = AtomicReferenceFieldUpdater
+            .newUpdater(FieldWriterObject.class, Class.class, "initValueClass");
     final boolean array;
     volatile Class initValueClass;
     final boolean number;
     final boolean unwrapped;
     protected boolean writeUsing;
 
-    public FieldWriterObject(String str, int i, long j, String str2, Locale locale, String str3, Type type, Class cls, Field field, Method method) {
+    public FieldWriterObject(String str, int i, long j, String str2, Locale locale, String str3, Type type, Class cls,
+            Field field, Method method) {
         super(str, i, j, str2, locale, str3, type, cls, field, method);
         this.unwrapped = (j & FieldInfo.UNWRAPPED_MASK) != 0;
         if (cls == Currency.class) {
             this.initValueClass = cls;
             this.initObjectWriter = ObjectWriterImplCurrency.INSTANCE_FOR_FIELD;
         }
-        this.array = cls.isArray() || Collection.class.isAssignableFrom(cls) || cls == AtomicLongArray.class || cls == AtomicIntegerArray.class;
+        this.array = cls.isArray() || Collection.class.isAssignableFrom(cls) || cls == AtomicLongArray.class
+                || cls == AtomicIntegerArray.class;
         this.number = Number.class.isAssignableFrom(cls);
     }
 
     private ObjectWriter getObjectWriterTypeMatch(JSONWriter jSONWriter, Class cls) {
-        ObjectWriter objectWriterOf = Map.class.isAssignableFrom(cls) ? this.fieldClass.isAssignableFrom(cls) ? ObjectWriterImplMap.of(this.fieldType, cls) : ObjectWriterImplMap.of(cls) : jSONWriter.getObjectWriter(cls);
+        ObjectWriter objectWriterOf = Map.class.isAssignableFrom(cls)
+                ? this.fieldClass.isAssignableFrom(cls) ? ObjectWriterImplMap.of(this.fieldType, cls)
+                        : ObjectWriterImplMap.of(cls)
+                : jSONWriter.getObjectWriter(cls);
         AtomicReferenceFieldUpdater<FieldWriter, ObjectWriter> atomicReferenceFieldUpdater = FieldWriter.initObjectWriterUpdater;
         while (!atomicReferenceFieldUpdater.compareAndSet(this, null, objectWriterOf)) {
             if (atomicReferenceFieldUpdater.get(this) != null) {
@@ -56,10 +62,13 @@ public class FieldWriterObject<T> extends FieldWriter<T> {
 
     private ObjectWriter getObjectWriterTypeNotMatch(JSONWriter jSONWriter, Class cls) {
         if (Map.class.isAssignableFrom(cls)) {
-            return this.fieldClass.isAssignableFrom(cls) ? ObjectWriterImplMap.of(this.fieldType, cls) : ObjectWriterImplMap.of(cls);
+            return this.fieldClass.isAssignableFrom(cls) ? ObjectWriterImplMap.of(this.fieldType, cls)
+                    : ObjectWriterImplMap.of(cls);
         }
         String str = this.format;
-        ObjectWriter objectWriter = str != null ? FieldWriter.getObjectWriter(this.fieldType, this.fieldClass, str, null, cls) : null;
+        ObjectWriter objectWriter = str != null
+                ? FieldWriter.getObjectWriter(this.fieldType, this.fieldClass, str, null, cls)
+                : null;
         return objectWriter == null ? jSONWriter.getObjectWriter(cls) : objectWriter;
     }
 
@@ -103,7 +112,9 @@ public class FieldWriterObject<T> extends FieldWriter<T> {
         try {
             Object fieldValue = getFieldValue(t);
             if (fieldValue == null) {
-                if (!((JSONWriter.Feature.WriteNulls.mask & features) == 0 && ((JSONWriter.Feature.NullAsDefaultValue.mask & features) == 0 || this.number)) && (JSONWriter.Feature.NotWriteDefaultValue.mask & features) == 0) {
+                if (!((JSONWriter.Feature.WriteNulls.mask & features) == 0
+                        && ((JSONWriter.Feature.NullAsDefaultValue.mask & features) == 0 || this.number))
+                        && (JSONWriter.Feature.NotWriteDefaultValue.mask & features) == 0) {
                     writeFieldName(jSONWriter);
                     if (this.array) {
                         jSONWriter.writeArrayNull();
@@ -128,17 +139,20 @@ public class FieldWriterObject<T> extends FieldWriter<T> {
                     jSONWriter.writeInt32(0);
                     return true;
                 }
-                if ((features & (JSONWriter.Feature.WriteNullBooleanAsFalse.mask | j2)) == 0 || !((cls = this.fieldClass) == Boolean.class || cls == AtomicBoolean.class)) {
+                if ((features & (JSONWriter.Feature.WriteNullBooleanAsFalse.mask | j2)) == 0
+                        || !((cls = this.fieldClass) == Boolean.class || cls == AtomicBoolean.class)) {
                     return false;
                 }
                 writeFieldName(jSONWriter);
                 jSONWriter.writeBool(false);
                 return true;
             }
-            if (fieldValue == t && this.fieldClass == Throwable.class && (field = this.field) != null && field.getDeclaringClass() == Throwable.class) {
+            if (fieldValue == t && this.fieldClass == Throwable.class && (field = this.field) != null
+                    && field.getDeclaringClass() == Throwable.class) {
                 return false;
             }
-            if ((JSONWriter.Feature.IgnoreNoneSerializable.mask & features) != 0 && !(fieldValue instanceof Serializable)) {
+            if ((JSONWriter.Feature.IgnoreNoneSerializable.mask & features) != 0
+                    && !(fieldValue instanceof Serializable)) {
                 return false;
             }
             if ((JSONWriter.Feature.IgnoreEmpty.mask & features) != 0) {
@@ -171,7 +185,7 @@ public class FieldWriterObject<T> extends FieldWriter<T> {
             }
             ObjectWriter objectWriter2 = getObjectWriter(jSONWriter, cls3);
             if (objectWriter2 == null) {
-                throw new JSONException(bjs.l(cls3, "get objectWriter error : "));
+                throw new JSONException(concatVar2Var1(cls3, "get objectWriter error : "));
             }
             if (this.unwrapped) {
                 z = zIsRefDetect;
@@ -222,18 +236,23 @@ public class FieldWriterObject<T> extends FieldWriter<T> {
         if (cls2 == null || this.initObjectWriter == ObjectWriterBaseModule.VoidObjectWriter.INSTANCE) {
             return getObjectWriterVoid(jSONWriter, cls);
         }
-        boolean zTypeMatch = cls2 == cls || (this.writeUsing && cls2.isAssignableFrom(cls)) || ((cls2 == Map.class && cls2.isAssignableFrom(cls)) || (cls2 == List.class && cls2.isAssignableFrom(cls)));
+        boolean zTypeMatch = cls2 == cls || (this.writeUsing && cls2.isAssignableFrom(cls))
+                || ((cls2 == Map.class && cls2.isAssignableFrom(cls))
+                        || (cls2 == List.class && cls2.isAssignableFrom(cls)));
         if (!zTypeMatch && cls2.isPrimitive()) {
             zTypeMatch = typeMatch(cls2, cls);
         }
-        return zTypeMatch ? this.initObjectWriter == null ? getObjectWriterTypeMatch(jSONWriter, cls) : this.initObjectWriter : getObjectWriterTypeNotMatch(jSONWriter, cls);
+        return zTypeMatch
+                ? this.initObjectWriter == null ? getObjectWriterTypeMatch(jSONWriter, cls) : this.initObjectWriter
+                : getObjectWriterTypeNotMatch(jSONWriter, cls);
     }
 
     public final ObjectWriter getObjectWriterVoid(JSONWriter jSONWriter, Class cls) {
         ObjectWriter objectWriterImplDoubleValueArray;
         if (BeanUtils.isExtendedMap(cls) && BeanUtils.SUPER.equals(this.fieldName)) {
             JSONWriter.Context context = jSONWriter.context;
-            ObjectWriter objectWriter = context.provider.getObjectWriter(this.fieldType, this.fieldClass, ((this.features | context.getFeatures()) & JSONWriter.Feature.FieldBased.mask) != 0);
+            ObjectWriter objectWriter = context.provider.getObjectWriter(this.fieldType, this.fieldClass,
+                    ((this.features | context.getFeatures()) & JSONWriter.Feature.FieldBased.mask) != 0);
             if (this.initObjectWriter == null) {
                 AtomicReferenceFieldUpdater<FieldWriterObject, Class> atomicReferenceFieldUpdater = initValueClassUpdater;
                 while (!atomicReferenceFieldUpdater.compareAndSet(this, null, cls)) {
@@ -252,22 +271,32 @@ public class FieldWriterObject<T> extends FieldWriter<T> {
         }
         if (this.format == null) {
             JSONWriter.Context context2 = jSONWriter.context;
-            objectWriterImplDoubleValueArray = context2.provider.getObjectWriterFromCache(cls, cls, ((this.features | context2.getFeatures()) & JSONWriter.Feature.FieldBased.mask) != 0);
+            objectWriterImplDoubleValueArray = context2.provider.getObjectWriterFromCache(cls, cls,
+                    ((this.features | context2.getFeatures()) & JSONWriter.Feature.FieldBased.mask) != 0);
         } else {
             objectWriterImplDoubleValueArray = null;
         }
         DecimalFormat decimalFormat = this.decimalFormat;
         if (cls == Float[].class) {
-            objectWriterImplDoubleValueArray = decimalFormat != null ? new ObjectWriterArrayFinal(Float.class, decimalFormat) : ObjectWriterArrayFinal.FLOAT_ARRAY;
+            objectWriterImplDoubleValueArray = decimalFormat != null
+                    ? new ObjectWriterArrayFinal(Float.class, decimalFormat)
+                    : ObjectWriterArrayFinal.FLOAT_ARRAY;
         } else if (cls == Double[].class) {
-            objectWriterImplDoubleValueArray = decimalFormat != null ? new ObjectWriterArrayFinal(Double.class, decimalFormat) : ObjectWriterArrayFinal.DOUBLE_ARRAY;
+            objectWriterImplDoubleValueArray = decimalFormat != null
+                    ? new ObjectWriterArrayFinal(Double.class, decimalFormat)
+                    : ObjectWriterArrayFinal.DOUBLE_ARRAY;
         } else if (cls == float[].class) {
-            objectWriterImplDoubleValueArray = decimalFormat != null ? new ObjectWriterImplFloatValueArray(decimalFormat) : ObjectWriterImplFloatValueArray.INSTANCE;
+            objectWriterImplDoubleValueArray = decimalFormat != null
+                    ? new ObjectWriterImplFloatValueArray(decimalFormat)
+                    : ObjectWriterImplFloatValueArray.INSTANCE;
         } else if (cls == double[].class) {
-            objectWriterImplDoubleValueArray = decimalFormat != null ? new ObjectWriterImplDoubleValueArray(decimalFormat) : ObjectWriterImplDoubleValueArray.INSTANCE;
+            objectWriterImplDoubleValueArray = decimalFormat != null
+                    ? new ObjectWriterImplDoubleValueArray(decimalFormat)
+                    : ObjectWriterImplDoubleValueArray.INSTANCE;
         }
         if (objectWriterImplDoubleValueArray == null) {
-            objectWriterImplDoubleValueArray = FieldWriter.getObjectWriter(this.fieldType, this.fieldClass, this.format, this.locale, cls);
+            objectWriterImplDoubleValueArray = FieldWriter.getObjectWriter(this.fieldType, this.fieldClass, this.format,
+                    this.locale, cls);
         }
         if (objectWriterImplDoubleValueArray != null) {
             if (this.initObjectWriter == null) {
@@ -332,14 +361,15 @@ public class FieldWriterObject<T> extends FieldWriter<T> {
             this.initValueClass = cls;
             objectWriter = jSONWriter.getObjectWriter(cls);
             AtomicReferenceFieldUpdater<FieldWriter, ObjectWriter> atomicReferenceFieldUpdater = FieldWriter.initObjectWriterUpdater;
-            while (!atomicReferenceFieldUpdater.compareAndSet(this, null, objectWriter) && atomicReferenceFieldUpdater.get(this) == null) {
+            while (!atomicReferenceFieldUpdater.compareAndSet(this, null, objectWriter)
+                    && atomicReferenceFieldUpdater.get(this) == null) {
             }
         } else {
             objectWriter = this.initValueClass == cls ? this.initObjectWriter : jSONWriter.getObjectWriter(cls);
         }
         ObjectWriter objectWriter2 = objectWriter;
         if (objectWriter2 == null) {
-            throw new JSONException(bjs.l(cls, "get value writer error, valueType : "));
+            throw new JSONException(concatVar2Var1(cls, "get value writer error, valueType : "));
         }
         objectWriter2.writeJSONB(jSONWriter, r11, this.fieldName, this.fieldType, this.features);
     }
@@ -358,13 +388,14 @@ public class FieldWriterObject<T> extends FieldWriter<T> {
             this.initValueClass = cls;
             objectWriter = jSONWriter.getObjectWriter(cls);
             AtomicReferenceFieldUpdater<FieldWriter, ObjectWriter> atomicReferenceFieldUpdater = FieldWriter.initObjectWriterUpdater;
-            while (!atomicReferenceFieldUpdater.compareAndSet(this, null, objectWriter) && atomicReferenceFieldUpdater.get(this) == null) {
+            while (!atomicReferenceFieldUpdater.compareAndSet(this, null, objectWriter)
+                    && atomicReferenceFieldUpdater.get(this) == null) {
             }
         } else {
             objectWriter = this.initValueClass == cls ? this.initObjectWriter : jSONWriter.getObjectWriter(cls);
         }
         if (objectWriter == null) {
-            throw new JSONException(bjs.l(cls, "get value writer error, valueType : "));
+            throw new JSONException(concatVar2Var1(cls, "get value writer error, valueType : "));
         }
         boolean z = jSONWriter.isRefDetect() && !ObjectWriterProvider.isNotReferenceDetect(cls);
         if (z) {
@@ -386,7 +417,8 @@ public class FieldWriterObject<T> extends FieldWriter<T> {
         } else if (jSONWriter.isBeanToArray()) {
             ObjectWriter objectWriter3 = objectWriter;
             jSONWriter2 = jSONWriter;
-            objectWriter3.writeArrayMappingJSONB(jSONWriter2, fieldValue, this.fieldName, this.fieldClass, this.features);
+            objectWriter3.writeArrayMappingJSONB(jSONWriter2, fieldValue, this.fieldName, this.fieldClass,
+                    this.features);
         } else {
             ObjectWriter objectWriter4 = objectWriter;
             jSONWriter2 = jSONWriter;
@@ -397,7 +429,8 @@ public class FieldWriterObject<T> extends FieldWriter<T> {
         }
     }
 
-    public final boolean writeWithUnwrapped(JSONWriter jSONWriter, Object obj, long j, boolean z, ObjectWriter objectWriter) {
+    public final boolean writeWithUnwrapped(JSONWriter jSONWriter, Object obj, long j, boolean z,
+            ObjectWriter objectWriter) {
         if (!(obj instanceof Map)) {
             if (!(objectWriter instanceof ObjectWriterAdapter)) {
                 return false;

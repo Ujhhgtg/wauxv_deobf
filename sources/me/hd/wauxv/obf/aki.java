@@ -36,11 +36,12 @@ public final class aki {
         }
         Class clsBd = emn.bd(cls);
         Class<?> clsBd2 = emn.bd(cls2);
-        ConcurrentHashMap concurrentHashMap = zf.a;
+        ConcurrentHashMap concurrentHashMap = ReflectionWrapper.cachedConstructors;
         if (clsBd2.isAssignableFrom(clsBd) || clsBd.isAssignableFrom(clsBd2)) {
             return;
         }
-        throw new IllegalStateException(("Hooked method return type match failed, required [" + cls + "] but got [" + cls2 + "]").toString());
+        throw new IllegalStateException(
+                ("Hooked method return type match failed, required [" + cls + "] but got [" + cls2 + "]").toString());
     }
 
     public static void l(aki akiVar) {
@@ -71,13 +72,13 @@ public final class aki {
         }
     }
 
-    public dop m(bgf bgfVar) {
+    public dop m(IHasInvokeMethod bgfVar) {
         this.g = bgfVar;
         q(false);
         return new dop(25);
     }
 
-    public dop n(bgf bgfVar) {
+    public dop n(IHasInvokeMethod bgfVar) {
         this.f = bgfVar;
         q(false);
         return new dop(25);
@@ -88,7 +89,7 @@ public final class aki {
         q(true);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:6:0x0019  */
+    /* JADX WARN: Found duplicated region for block: B:6:0x0019 */
     public void p(Throwable th, Member member) {
         String str;
         ArrayList arrayList = ewq.a;

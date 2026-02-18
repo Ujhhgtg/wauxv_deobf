@@ -19,7 +19,7 @@ public final class ebx {
         if (this == obj) {
             return true;
         }
-        return (obj instanceof ebx) && bzo.f(this.a, ((ebx) obj).a);
+        return (obj instanceof ebx) && nullSafeIsEqual(this.a, ((ebx) obj).a);
     }
 
     public final int hashCode() {
@@ -33,6 +33,6 @@ public final class ebx {
     public final String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("nl1Proto(screen_orientation=" /* cnb.z(-257079562468138L) */);
-        return bjs.p(sb, this.a, ')');
+        return concat(sb, this.a, ')');
     }
 }

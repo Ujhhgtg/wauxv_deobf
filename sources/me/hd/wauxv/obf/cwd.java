@@ -7,7 +7,7 @@ public final class cwd {
     public final cbm b = bhs.g;
 
     public final Object c(btd btdVar, byte[] bArr) {
-        bzo.q(btdVar, "deserializer");
+        throwIfVar1IsNull(btdVar, "deserializer");
         return new cwl(this, new cwo(new ru(bArr, bArr.length)), btdVar.getDescriptor()).ap(btdVar, null);
     }
 }

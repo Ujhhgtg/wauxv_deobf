@@ -21,7 +21,7 @@ public final class zn {
             return false;
         }
         zn znVar = (zn) obj;
-        return bzo.f(this.a, znVar.a) && bzo.f(this.b, znVar.b);
+        return nullSafeIsEqual(this.a, znVar.a) && nullSafeIsEqual(this.b, znVar.b);
     }
 
     public final int hashCode() {

@@ -26,7 +26,8 @@ public final class dvf {
             return false;
         }
         dvf dvfVar = (dvf) obj;
-        return bzo.f(this.a, dvfVar.a) && bzo.f(this.b, dvfVar.b) && bzo.f(this.c, dvfVar.c);
+        return nullSafeIsEqual(this.a, dvfVar.a) && nullSafeIsEqual(this.b, dvfVar.b)
+                && nullSafeIsEqual(this.c, dvfVar.c);
     }
 
     public final int hashCode() {

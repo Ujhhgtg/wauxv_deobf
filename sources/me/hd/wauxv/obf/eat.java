@@ -84,12 +84,26 @@ public final class eat {
     static {
         dtr dtrVar = new dtr(18);
         btx btxVar = btx.a;
-        a = new btt[]{null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, ewz.am(btxVar, dtrVar), null, null, null, null, null, null, null, ewz.am(btxVar, new dtr(19)), null, null, null, null, null, null, null, null, null, null, ewz.am(btxVar, new dtr(20)), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null};
+        a = new btt[] { null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null,
+                null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null,
+                ewz.am(btxVar, dtrVar), null, null, null, null, null, null, null, ewz.am(btxVar, new dtr(19)), null,
+                null, null, null, null, null, null, null, null, null, ewz.am(btxVar, new dtr(20)), null, null, null,
+                null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null,
+                null };
     }
 
-    public /* synthetic */ eat(int i, int i2, int i3, Long l, Integer num, Integer num2, String str, Integer num3, Integer num4, Integer num5, ejo ejoVar, ecs ecsVar, Integer num6, Long l2, Integer num7, Integer num8, Long l3, dzp dzpVar, Integer num9, Integer num10, String str2, Long l4, Long l5, Integer num11, String str3, dzg dzgVar, Integer num12, ego egoVar, Integer num13, egu eguVar, dxz dxzVar, String str4, dwv dwvVar, Integer num14, Long l6, List list, Integer num15, Integer num16, Integer num17, Integer num18, Integer num19, Integer num20, eeo eeoVar, List list2, Integer num21, dzd dzdVar, ebc ebcVar, ean eanVar, String str5, efw efwVar, dyc dycVar, String str6, dzs dzsVar, Long l7, List list3, Integer num22, dvr dvrVar, Integer num23, dyf dyfVar, ecy ecyVar, Long l8, dzm dzmVar, eib eibVar, ebr ebrVar, Long l9, Long l10, Long l11, Long l12, Long l13, Long l14, Long l15, eik eikVar, ebx ebxVar, dwp dwpVar, String str7, edq edqVar) {
+    public /* synthetic */ eat(int i, int i2, int i3, Long l, Integer num, Integer num2, String str, Integer num3,
+            Integer num4, Integer num5, ejo ejoVar, ecs ecsVar, Integer num6, Long l2, Integer num7, Integer num8,
+            Long l3, dzp dzpVar, Integer num9, Integer num10, String str2, Long l4, Long l5, Integer num11, String str3,
+            dzg dzgVar, Integer num12, ego egoVar, Integer num13, egu eguVar, dxz dxzVar, String str4, dwv dwvVar,
+            Integer num14, Long l6, List list, Integer num15, Integer num16, Integer num17, Integer num18,
+            Integer num19, Integer num20, eeo eeoVar, List list2, Integer num21, dzd dzdVar, ebc ebcVar, ean eanVar,
+            String str5, efw efwVar, dyc dycVar, String str6, dzs dzsVar, Long l7, List list3, Integer num22,
+            dvr dvrVar, Integer num23, dyf dyfVar, ecy ecyVar, Long l8, dzm dzmVar, eib eibVar, ebr ebrVar, Long l9,
+            Long l10, Long l11, Long l12, Long l13, Long l14, Long l15, eik eikVar, ebx ebxVar, dwp dwpVar, String str7,
+            edq edqVar) {
         if ((511 != (i3 & 511)) || ((-1 != i) | (-1 != i2))) {
-            bht.ag(new int[]{i, i2, i3}, new int[]{-1, -1, 511}, ear.b.getDescriptor());
+            bht.ag(new int[] { i, i2, i3 }, new int[] { -1, -1, 511 }, ear.b.getDescriptor());
             throw null;
         }
         this.b = l;
@@ -175,7 +189,43 @@ public final class eat {
             return false;
         }
         eat eatVar = (eat) obj;
-        return bzo.f(this.b, eatVar.b) && bzo.f(this.c, eatVar.c) && bzo.f(this.d, eatVar.d) && bzo.f(this.e, eatVar.e) && bzo.f(this.f, eatVar.f) && bzo.f(this.g, eatVar.g) && bzo.f(this.h, eatVar.h) && bzo.f(this.i, eatVar.i) && bzo.f(this.j, eatVar.j) && bzo.f(this.k, eatVar.k) && bzo.f(this.l, eatVar.l) && bzo.f(this.m, eatVar.m) && bzo.f(this.n, eatVar.n) && bzo.f(this.o, eatVar.o) && bzo.f(this.p, eatVar.p) && bzo.f(this.q, eatVar.q) && bzo.f(this.r, eatVar.r) && bzo.f(this.s, eatVar.s) && bzo.f(this.t, eatVar.t) && bzo.f(this.u, eatVar.u) && bzo.f(this.v, eatVar.v) && bzo.f(this.w, eatVar.w) && bzo.f(this.x, eatVar.x) && bzo.f(this.y, eatVar.y) && bzo.f(this.z, eatVar.z) && bzo.f(this.aa, eatVar.aa) && bzo.f(this.ab, eatVar.ab) && bzo.f(this.ac, eatVar.ac) && bzo.f(this.ad, eatVar.ad) && bzo.f(this.ae, eatVar.ae) && bzo.f(this.af, eatVar.af) && bzo.f(this.ag, eatVar.ag) && bzo.f(this.ah, eatVar.ah) && bzo.f(this.ai, eatVar.ai) && bzo.f(this.aj, eatVar.aj) && bzo.f(this.ak, eatVar.ak) && bzo.f(this.al, eatVar.al) && bzo.f(this.am, eatVar.am) && bzo.f(this.an, eatVar.an) && bzo.f(this.ao, eatVar.ao) && bzo.f(this.ap, eatVar.ap) && bzo.f(this.aq, eatVar.aq) && bzo.f(this.ar, eatVar.ar) && bzo.f(this.as, eatVar.as) && bzo.f(this.at, eatVar.at) && bzo.f(this.au, eatVar.au) && bzo.f(this.av, eatVar.av) && bzo.f(this.aw, eatVar.aw) && bzo.f(this.ax, eatVar.ax) && bzo.f(this.ay, eatVar.ay) && bzo.f(this.az, eatVar.az) && bzo.f(this.ba, eatVar.ba) && bzo.f(this.bb, eatVar.bb) && bzo.f(this.bc, eatVar.bc) && bzo.f(this.bd, eatVar.bd) && bzo.f(this.be, eatVar.be) && bzo.f(this.bf, eatVar.bf) && bzo.f(this.bg, eatVar.bg) && bzo.f(this.bh, eatVar.bh) && bzo.f(this.bi, eatVar.bi) && bzo.f(this.bj, eatVar.bj) && bzo.f(this.bk, eatVar.bk) && bzo.f(this.bl, eatVar.bl) && bzo.f(this.bm, eatVar.bm) && bzo.f(this.bn, eatVar.bn) && bzo.f(this.bo, eatVar.bo) && bzo.f(this.bp, eatVar.bp) && bzo.f(this.bq, eatVar.bq) && bzo.f(this.br, eatVar.br) && bzo.f(this.bs, eatVar.bs) && bzo.f(this.bt, eatVar.bt) && bzo.f(this.bu, eatVar.bu) && bzo.f(this.bv, eatVar.bv);
+        return nullSafeIsEqual(this.b, eatVar.b) && nullSafeIsEqual(this.c, eatVar.c)
+                && nullSafeIsEqual(this.d, eatVar.d) && nullSafeIsEqual(this.e, eatVar.e)
+                && nullSafeIsEqual(this.f, eatVar.f) && nullSafeIsEqual(this.g, eatVar.g)
+                && nullSafeIsEqual(this.h, eatVar.h) && nullSafeIsEqual(this.i, eatVar.i)
+                && nullSafeIsEqual(this.j, eatVar.j) && nullSafeIsEqual(this.k, eatVar.k)
+                && nullSafeIsEqual(this.l, eatVar.l) && nullSafeIsEqual(this.m, eatVar.m)
+                && nullSafeIsEqual(this.n, eatVar.n) && nullSafeIsEqual(this.o, eatVar.o)
+                && nullSafeIsEqual(this.p, eatVar.p) && nullSafeIsEqual(this.q, eatVar.q)
+                && nullSafeIsEqual(this.r, eatVar.r) && nullSafeIsEqual(this.s, eatVar.s)
+                && nullSafeIsEqual(this.t, eatVar.t) && nullSafeIsEqual(this.u, eatVar.u)
+                && nullSafeIsEqual(this.v, eatVar.v) && nullSafeIsEqual(this.w, eatVar.w)
+                && nullSafeIsEqual(this.x, eatVar.x) && nullSafeIsEqual(this.y, eatVar.y)
+                && nullSafeIsEqual(this.z, eatVar.z) && nullSafeIsEqual(this.aa, eatVar.aa)
+                && nullSafeIsEqual(this.ab, eatVar.ab) && nullSafeIsEqual(this.ac, eatVar.ac)
+                && nullSafeIsEqual(this.ad, eatVar.ad) && nullSafeIsEqual(this.ae, eatVar.ae)
+                && nullSafeIsEqual(this.af, eatVar.af) && nullSafeIsEqual(this.ag, eatVar.ag)
+                && nullSafeIsEqual(this.ah, eatVar.ah) && nullSafeIsEqual(this.ai, eatVar.ai)
+                && nullSafeIsEqual(this.aj, eatVar.aj) && nullSafeIsEqual(this.ak, eatVar.ak)
+                && nullSafeIsEqual(this.al, eatVar.al) && nullSafeIsEqual(this.am, eatVar.am)
+                && nullSafeIsEqual(this.an, eatVar.an) && nullSafeIsEqual(this.ao, eatVar.ao)
+                && nullSafeIsEqual(this.ap, eatVar.ap) && nullSafeIsEqual(this.aq, eatVar.aq)
+                && nullSafeIsEqual(this.ar, eatVar.ar) && nullSafeIsEqual(this.as, eatVar.as)
+                && nullSafeIsEqual(this.at, eatVar.at) && nullSafeIsEqual(this.au, eatVar.au)
+                && nullSafeIsEqual(this.av, eatVar.av) && nullSafeIsEqual(this.aw, eatVar.aw)
+                && nullSafeIsEqual(this.ax, eatVar.ax) && nullSafeIsEqual(this.ay, eatVar.ay)
+                && nullSafeIsEqual(this.az, eatVar.az) && nullSafeIsEqual(this.ba, eatVar.ba)
+                && nullSafeIsEqual(this.bb, eatVar.bb) && nullSafeIsEqual(this.bc, eatVar.bc)
+                && nullSafeIsEqual(this.bd, eatVar.bd) && nullSafeIsEqual(this.be, eatVar.be)
+                && nullSafeIsEqual(this.bf, eatVar.bf) && nullSafeIsEqual(this.bg, eatVar.bg)
+                && nullSafeIsEqual(this.bh, eatVar.bh) && nullSafeIsEqual(this.bi, eatVar.bi)
+                && nullSafeIsEqual(this.bj, eatVar.bj) && nullSafeIsEqual(this.bk, eatVar.bk)
+                && nullSafeIsEqual(this.bl, eatVar.bl) && nullSafeIsEqual(this.bm, eatVar.bm)
+                && nullSafeIsEqual(this.bn, eatVar.bn) && nullSafeIsEqual(this.bo, eatVar.bo)
+                && nullSafeIsEqual(this.bp, eatVar.bp) && nullSafeIsEqual(this.bq, eatVar.bq)
+                && nullSafeIsEqual(this.br, eatVar.br) && nullSafeIsEqual(this.bs, eatVar.bs)
+                && nullSafeIsEqual(this.bt, eatVar.bt) && nullSafeIsEqual(this.bu, eatVar.bu)
+                && nullSafeIsEqual(this.bv, eatVar.bv);
     }
 
     public final int hashCode() {

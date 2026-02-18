@@ -12,11 +12,11 @@ import java.lang.ref.WeakReference;
 public final class eus extends da implements cbu {
     public final Context q;
     public final cbw r;
-    public io s;
+    public DefaultConfig s;
     public WeakReference t;
     public final /* synthetic */ eut u;
 
-    public eus(eut eutVar, Context context, io ioVar) {
+    public eus(eut eutVar, Context context, DefaultConfig ioVar) {
         this.u = eutVar;
         this.q = context;
         this.s = ioVar;
@@ -40,7 +40,7 @@ public final class eus extends da implements cbu {
 
     @Override // me.hd.wauxv.obf.cbu
     public final boolean bx(cbw cbwVar, MenuItem menuItem) {
-        io ioVar = this.s;
+        DefaultConfig ioVar = this.s;
         if (ioVar != null) {
             return ((chm) ioVar.c).am(this, menuItem);
         }

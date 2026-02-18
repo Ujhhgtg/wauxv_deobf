@@ -46,7 +46,7 @@ public class c {
         strArr[0] = null;
         strArr[1] = null;
         if (context != null) {
-            com.umeng.common.b.a(context).b();
+            com.umeng.common.b.a(context).tryGetClassByName();
         }
     }
 
@@ -191,7 +191,11 @@ public class c {
                     }
                 }
                 SharedPreferences sharedPreferences = context.getSharedPreferences(b, 0);
-                sharedPreferences.edit().putString(e, Base64.encodeToString(ax.a(jSONStringer.toString().getBytes(), UMConfigure.sAppkey.getBytes()), 0)).apply();
+                sharedPreferences.edit()
+                        .putString(e,
+                                Base64.encodeToString(
+                                        ax.a(jSONStringer.toString().getBytes(), UMConfigure.sAppkey.getBytes()), 0))
+                        .apply();
             } catch (Throwable unused) {
             }
         }

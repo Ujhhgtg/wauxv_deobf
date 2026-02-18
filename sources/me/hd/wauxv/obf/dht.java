@@ -88,7 +88,7 @@ public final class dht implements dbs, dic {
     }
 
     public final void ak(String str) {
-        StringBuilder sbR = bjs.r(str, " this: ");
+        StringBuilder sbR = concat(str, " this: ");
         sbR.append(this.b);
         Log.v("GlideRequest", sbR.toString());
     }

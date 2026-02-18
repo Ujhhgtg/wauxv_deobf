@@ -1643,14 +1643,14 @@ public abstract class JSONReader implements Closeable {
                     }
                     plainString = bigDecimalValueOf.toPlainString();
                     if ((this.context.features & (Feature.UseBigDecimalForDoubles.mask | Feature.UseBigDecimalForFloats.mask)) == 0) {
-                        StringBuilder sbR = bjs.r(plainString, "E");
+                        StringBuilder sbR = concat(plainString, "E");
                         sbR.append((int) this.exponent);
                         return Double.valueOf(Double.parseDouble(sbR.toString()));
                     }
                     if (bigDecimalValueOf.signum() == 0) {
                         return BigDecimal.ZERO;
                     }
-                    StringBuilder sbR2 = bjs.r(plainString, "E");
+                    StringBuilder sbR2 = concat(plainString, "E");
                     sbR2.append((int) this.exponent);
                     return new BigDecimal(sbR2.toString());
                 }
@@ -1693,14 +1693,14 @@ public abstract class JSONReader implements Closeable {
                 }
                 plainString = bigDecimalValueOf.toPlainString();
                 if ((this.context.features & (Feature.UseBigDecimalForDoubles.mask | Feature.UseBigDecimalForFloats.mask)) == 0) {
-                    StringBuilder sbR3 = bjs.r(plainString, "E");
+                    StringBuilder sbR3 = concat(plainString, "E");
                     sbR3.append((int) this.exponent);
                     return Double.valueOf(Double.parseDouble(sbR3.toString()));
                 }
                 if (bigDecimalValueOf.signum() == 0) {
                     return BigDecimal.ZERO;
                 }
-                StringBuilder sbR22 = bjs.r(plainString, "E");
+                StringBuilder sbR22 = concat(plainString, "E");
                 sbR22.append((int) this.exponent);
                 return new BigDecimal(sbR22.toString());
             case 3:
@@ -4209,7 +4209,7 @@ public abstract class JSONReader implements Closeable {
         if (str == null || str.isEmpty()) {
             return "offset " + this.offset;
         }
-        StringBuilder sbR = bjs.r(str, ", offset ");
+        StringBuilder sbR = concat(str, ", offset ");
         sbR.append(this.offset);
         return sbR.toString();
     }

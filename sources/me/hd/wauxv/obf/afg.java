@@ -25,7 +25,7 @@ public final class afg implements afp {
         anu anuVar;
         char[] cArr;
         char c = 0;
-        long jAl = bzo.al(0, 0);
+        long jAl = KotlinHelpers.al(0, 0);
         if (!this.b) {
             return new anu(new long[]{jAl}, afoVar.b);
         }
@@ -54,7 +54,7 @@ public final class afg implements afp {
                             int runCount = bidi.getRunCount();
                             long[] jArr = new long[runCount];
                             for (int i4 = 0; i4 < runCount; i4++) {
-                                jArr[i4] = bzo.al(bidi.getRunStart(i4), bidi.getRunLevel(i4));
+                                jArr[i4] = KotlinHelpers.al(bidi.getRunStart(i4), bidi.getRunLevel(i4));
                             }
                             if (cArr2.length <= 1000) {
                                 synchronized (dqc.class) {

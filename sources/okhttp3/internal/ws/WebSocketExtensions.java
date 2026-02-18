@@ -21,19 +21,29 @@ public final class WebSocketExtensions {
     public final boolean serverNoContextTakeover;
     public final boolean unknownValues;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
         }
 
-        /* JADX WARN: Found duplicated region for block: B:36:0x00b8 A[PHI: r7 r9 r11
-          0x00b8: PHI (r7v4 java.lang.Integer) = (r7v3 java.lang.Integer), (r7v8 java.lang.Integer) binds: [B:51:0x00df, B:33:0x00b1] A[DONT_GENERATE, DONT_INLINE]
-          0x00b8: PHI (r9v7 java.lang.Integer) = (r9v5 java.lang.Integer), (r9v3 java.lang.Integer) binds: [B:51:0x00df, B:33:0x00b1] A[DONT_GENERATE, DONT_INLINE]
-          0x00b8: PHI (r11v15 boolean) = (r11v9 boolean), (r11v18 boolean) binds: [B:51:0x00df, B:33:0x00b1] A[DONT_GENERATE, DONT_INLINE]] */
+        /*
+         * JADX WARN: Found duplicated region for block: B:36:0x00b8 A[PHI: r7 r9 r11
+         * 0x00b8: PHI (r7v4 java.lang.Integer) = (r7v3 java.lang.Integer), (r7v8
+         * java.lang.Integer) binds: [B:51:0x00df, B:33:0x00b1] A[DONT_GENERATE,
+         * DONT_INLINE]
+         * 0x00b8: PHI (r9v7 java.lang.Integer) = (r9v5 java.lang.Integer), (r9v3
+         * java.lang.Integer) binds: [B:51:0x00df, B:33:0x00b1] A[DONT_GENERATE,
+         * DONT_INLINE]
+         * 0x00b8: PHI (r11v15 boolean) = (r11v9 boolean), (r11v18 boolean) binds:
+         * [B:51:0x00df, B:33:0x00b1] A[DONT_GENERATE, DONT_INLINE]]
+         */
         public final WebSocketExtensions parse(Headers headers) {
             String strTrimSubstring;
-            bzo.q(headers, "responseHeaders");
+            throwIfVar1IsNull(headers, "responseHeaders");
             int size = headers.size();
             boolean z = false;
             Integer numBf = null;
@@ -47,9 +57,12 @@ public final class WebSocketExtensions {
                     int i2 = 0;
                     while (i2 < strValue.length()) {
                         int i3 = i2;
-                        int iDelimiterOffset$default = Util.delimiterOffset$default(strValue, ',', i3, 0, 4, (Object) null);
+                        int iDelimiterOffset$default = Util.delimiterOffset$default(strValue, ',', i3, 0, 4,
+                                (Object) null);
                         char c = TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER;
-                        int iDelimiterOffset = Util.delimiterOffset(strValue, TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER, i3, iDelimiterOffset$default);
+                        int iDelimiterOffset = Util.delimiterOffset(strValue,
+                                TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER, i3,
+                                iDelimiterOffset$default);
                         String strTrimSubstring2 = Util.trimSubstring(strValue, i3, iDelimiterOffset);
                         int i4 = iDelimiterOffset + 1;
                         if (dnr.bj(strTrimSubstring2, "permessage-deflate", true)) {
@@ -58,14 +71,17 @@ public final class WebSocketExtensions {
                             }
                             while (i4 < iDelimiterOffset$default) {
                                 int iDelimiterOffset2 = Util.delimiterOffset(strValue, c, i4, iDelimiterOffset$default);
-                                int iDelimiterOffset3 = Util.delimiterOffset(strValue, SignatureVisitor.INSTANCEOF, i4, iDelimiterOffset2);
+                                int iDelimiterOffset3 = Util.delimiterOffset(strValue, SignatureVisitor.INSTANCEOF, i4,
+                                        iDelimiterOffset2);
                                 String strTrimSubstring3 = Util.trimSubstring(strValue, i4, iDelimiterOffset3);
                                 if (iDelimiterOffset3 < iDelimiterOffset2) {
-                                    strTrimSubstring = Util.trimSubstring(strValue, iDelimiterOffset3 + 1, iDelimiterOffset2);
-                                    bzo.q(strTrimSubstring, "<this>");
-                                    if (strTrimSubstring.length() >= 2 && dnr.bp(strTrimSubstring, "\"", false) && dnr.bi(strTrimSubstring, "\"")) {
+                                    strTrimSubstring = Util.trimSubstring(strValue, iDelimiterOffset3 + 1,
+                                            iDelimiterOffset2);
+                                    throwIfVar1IsNull(strTrimSubstring, "<this>");
+                                    if (strTrimSubstring.length() >= 2 && dnr.bp(strTrimSubstring, "\"", false)
+                                            && dnr.bi(strTrimSubstring, "\"")) {
                                         strTrimSubstring = strTrimSubstring.substring(1, strTrimSubstring.length() - 1);
-                                        bzo.p(strTrimSubstring, "substring(...)");
+                                        throwIfVar1IsNull(strTrimSubstring, "substring(...)");
                                     }
                                 } else {
                                     strTrimSubstring = null;
@@ -135,7 +151,8 @@ public final class WebSocketExtensions {
         this(false, null, false, null, false, false, 63, null);
     }
 
-    public static /* synthetic */ WebSocketExtensions copy$default(WebSocketExtensions webSocketExtensions, boolean z, Integer num, boolean z2, Integer num2, boolean z3, boolean z4, int i, Object obj) {
+    public static /* synthetic */ WebSocketExtensions copy$default(WebSocketExtensions webSocketExtensions, boolean z,
+            Integer num, boolean z2, Integer num2, boolean z3, boolean z4, int i, Object obj) {
         if ((i & 1) != 0) {
             z = webSocketExtensions.perMessageDeflate;
         }
@@ -195,7 +212,12 @@ public final class WebSocketExtensions {
             return false;
         }
         WebSocketExtensions webSocketExtensions = (WebSocketExtensions) obj;
-        return this.perMessageDeflate == webSocketExtensions.perMessageDeflate && bzo.f(this.clientMaxWindowBits, webSocketExtensions.clientMaxWindowBits) && this.clientNoContextTakeover == webSocketExtensions.clientNoContextTakeover && bzo.f(this.serverMaxWindowBits, webSocketExtensions.serverMaxWindowBits) && this.serverNoContextTakeover == webSocketExtensions.serverNoContextTakeover && this.unknownValues == webSocketExtensions.unknownValues;
+        return this.perMessageDeflate == webSocketExtensions.perMessageDeflate
+                && nullSafeIsEqual(this.clientMaxWindowBits, webSocketExtensions.clientMaxWindowBits)
+                && this.clientNoContextTakeover == webSocketExtensions.clientNoContextTakeover
+                && nullSafeIsEqual(this.serverMaxWindowBits, webSocketExtensions.serverMaxWindowBits)
+                && this.serverNoContextTakeover == webSocketExtensions.serverNoContextTakeover
+                && this.unknownValues == webSocketExtensions.unknownValues;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -243,7 +265,10 @@ public final class WebSocketExtensions {
     }
 
     public String toString() {
-        return "WebSocketExtensions(perMessageDeflate=" + this.perMessageDeflate + ", clientMaxWindowBits=" + this.clientMaxWindowBits + ", clientNoContextTakeover=" + this.clientNoContextTakeover + ", serverMaxWindowBits=" + this.serverMaxWindowBits + ", serverNoContextTakeover=" + this.serverNoContextTakeover + ", unknownValues=" + this.unknownValues + ')';
+        return "WebSocketExtensions(perMessageDeflate=" + this.perMessageDeflate + ", clientMaxWindowBits="
+                + this.clientMaxWindowBits + ", clientNoContextTakeover=" + this.clientNoContextTakeover
+                + ", serverMaxWindowBits=" + this.serverMaxWindowBits + ", serverNoContextTakeover="
+                + this.serverNoContextTakeover + ", unknownValues=" + this.unknownValues + ')';
     }
 
     public WebSocketExtensions(boolean z, Integer num, boolean z2, Integer num2, boolean z3, boolean z4) {
@@ -255,7 +280,9 @@ public final class WebSocketExtensions {
         this.unknownValues = z4;
     }
 
-    public /* synthetic */ WebSocketExtensions(boolean z, Integer num, boolean z2, Integer num2, boolean z3, boolean z4, int i, akd akdVar) {
-        this((i & 1) != 0 ? false : z, (i & 2) != 0 ? null : num, (i & 4) != 0 ? false : z2, (i & 8) != 0 ? null : num2, (i & 16) != 0 ? false : z3, (i & 32) != 0 ? false : z4);
+    public /* synthetic */ WebSocketExtensions(boolean z, Integer num, boolean z2, Integer num2, boolean z3, boolean z4,
+            int i, akd akdVar) {
+        this((i & 1) != 0 ? false : z, (i & 2) != 0 ? null : num, (i & 4) != 0 ? false : z2, (i & 8) != 0 ? null : num2,
+                (i & 16) != 0 ? false : z3, (i & 32) != 0 ? false : z4);
     }
 }

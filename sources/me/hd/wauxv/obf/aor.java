@@ -5,7 +5,8 @@ import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class aor extends aot implements ahr, afw {
-    public static final /* synthetic */ AtomicReferenceFieldUpdater a = AtomicReferenceFieldUpdater.newUpdater(aor.class, Object.class, "_reusableCancellableContinuation$volatile");
+    public static final /* synthetic */ AtomicReferenceFieldUpdater a = AtomicReferenceFieldUpdater
+            .newUpdater(aor.class, Object.class, "_reusableCancellableContinuation$volatile");
     private volatile /* synthetic */ Object _reusableCancellableContinuation$volatile;
     public final ahj d;
     public final afx e;
@@ -18,9 +19,9 @@ public final class aor extends aot implements ahr, afw {
         this.e = afxVar;
         this.f = cnf.ae;
         ahh ahhVar = afxVar.m;
-        bzo.n(ahhVar);
+        throwIfVar1IsNull(ahhVar);
         Object obj_u = ahhVar._u(0, bhv.r);
-        bzo.n(obj_u);
+        throwIfVar1IsNull(obj_u);
         this.g = obj_u;
     }
 
@@ -32,12 +33,12 @@ public final class aor extends aot implements ahr, afw {
         ahj ahjVar = this.d;
         afx afxVar = this.e;
         ahh ahhVar = afxVar.m;
-        bzo.n(ahhVar);
+        throwIfVar1IsNull(ahhVar);
         try {
             if (ahjVar.j(ahhVar)) {
                 this.f = abrVar;
                 this.z = 0;
-                bzo.n(ahhVar);
+                throwIfVar1IsNull(ahhVar);
                 cnf.bl(ahjVar, ahhVar, this);
                 return;
             }
@@ -55,7 +56,7 @@ public final class aor extends aot implements ahr, afw {
             }
             awvVarB.ab(true);
             try {
-                bzo.n(ahhVar);
+                throwIfVar1IsNull(ahhVar);
                 objAl = bhv.al(ahhVar, this.g);
             } catch (Throwable th) {
                 try {
@@ -81,7 +82,7 @@ public final class aor extends aot implements ahr, afw {
     @Override // me.hd.wauxv.obf.afw
     public final ahh c() {
         ahh ahhVar = this.e.m;
-        bzo.n(ahhVar);
+        throwIfVar1IsNull(ahhVar);
         return ahhVar;
     }
 

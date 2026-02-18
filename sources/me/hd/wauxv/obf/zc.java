@@ -13,7 +13,9 @@ public final class zc implements bsv, yq {
     public final Class c;
 
     static {
-        List listAg = aba.ag(bfu.class, bgf.class, bgj.class, bgk.class, blv.class, bgl.class, bgm.class, aak.class, bgn.class, bgo.class, bfv.class, bfw.class, bfx.class, bfy.class, bfz.class, bga.class, bgb.class, bgc.class, bgd.class, bge.class, bgg.class, bgh.class, bgi.class);
+        List listAg = aba.ag(bfu.class, IHasInvokeMethod.class, bgj.class, bgk.class, blv.class, bgl.class, bgm.class, aak.class,
+                bgn.class, bgo.class, bfv.class, bfw.class, bfx.class, bfy.class, bfz.class, bga.class, bgb.class,
+                bgc.class, bgd.class, bge.class, bgg.class, bgh.class, bgi.class);
         ArrayList arrayList = new ArrayList(abb.ak(listAg, 10));
         int i = 0;
         for (Object obj : listAg) {
@@ -22,14 +24,14 @@ public final class zc implements bsv, yq {
                 aba.aj();
                 throw null;
             }
-            arrayList.add(new csm((Class) obj, Integer.valueOf(i)));
+            arrayList.add(new Pair((Class) obj, Integer.valueOf(i)));
             i = i2;
         }
-        b = bzo.as(arrayList);
+        b = KotlinHelpers.as(arrayList);
     }
 
     public zc(Class cls) {
-        bzo.q(cls, "jClass");
+        throwIfVar1IsNull(cls, "jClass");
         this.c = cls;
     }
 
@@ -41,7 +43,7 @@ public final class zc implements bsv, yq {
     public final String d() {
         String strAq;
         Class cls = this.c;
-        bzo.q(cls, "jClass");
+        throwIfVar1IsNull(cls, "jClass");
         String strConcat = null;
         if (cls.isAnonymousClass()) {
             return null;

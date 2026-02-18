@@ -8,7 +8,9 @@ import java.io.InputStream;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class axp extends FilterInputStream {
-    public static final byte[] a = {-1, -31, 0, 28, 69, JSONB.Constants.BC_STR_ASCII_FIX_MAX, JSONB.Constants.BC_STR_ASCII_FIX_32, 102, 0, 0, JSONB.Constants.BC_STR_ASCII_FIX_4, JSONB.Constants.BC_STR_ASCII_FIX_4, 0, 0, 0, 0, 0, 8, 0, 1, 1, 18, 0, 2, 0, 0, 0, 1, 0};
+    public static final byte[] a = { -1, -31, 0, 28, 69, JSONB.Constants.BC_STR_ASCII_FIX_MAX,
+            JSONB.Constants.BC_STR_ASCII_FIX_32, 102, 0, 0, JSONB.Constants.BC_STR_ASCII_FIX_4,
+            JSONB.Constants.BC_STR_ASCII_FIX_4, 0, 0, 0, 0, 0, 8, 0, 1, 1, 18, 0, 2, 0, 0, 0, 1, 0 };
     public static final int b = 31;
     public final byte c;
     public int d;
@@ -16,7 +18,7 @@ public final class axp extends FilterInputStream {
     public axp(InputStream inputStream, int i) {
         super(inputStream);
         if (i < -1 || i > 8) {
-            throw new IllegalArgumentException(bjs.i(i, "Cannot add invalid orientation: "));
+            throw new IllegalArgumentException(concatVar2Var1(i, "Cannot add invalid orientation: "));
         }
         this.c = (byte) i;
     }

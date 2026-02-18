@@ -286,7 +286,8 @@ public class CodeEditor extends View implements afp, bph {
         this.bv = amu.a;
         this.bw = 0L;
         this.cw = new HashMap();
-        Log.v("CodeEditor", "sora-editor\nCopyright (C) Rosemoe roses2020@qq.com\nThis project is distributed under the LGPL v2.1 license");
+        Log.v("CodeEditor",
+                "sora-editor\nCopyright (C) Rosemoe roses2020@qq.com\nThis project is distributed under the LGPL v2.1 license");
         this.i = new awy(null);
         this.bg = true;
         this.cn = new dbg(this);
@@ -375,7 +376,8 @@ public class CodeEditor extends View implements afp, bph {
         }
         this.cb.setQuickScaleEnabled(false);
         this.cv = new dik(this);
-        TypedArray typedArrayObtainStyledAttributes = getContext().obtainStyledAttributes(attributeSet, cxu.a, R.attr.codeEditorStyle, 0);
+        TypedArray typedArrayObtainStyledAttributes = getContext().obtainStyledAttributes(attributeSet, cxu.a,
+                R.attr.codeEditorStyle, 0);
         setHorizontalScrollbarThumbDrawable(typedArrayObtainStyledAttributes.getDrawable(15));
         setHorizontalScrollbarTrackDrawable(typedArrayObtainStyledAttributes.getDrawable(17));
         setVerticalScrollbarThumbDrawable(typedArrayObtainStyledAttributes.getDrawable(16));
@@ -383,7 +385,8 @@ public class CodeEditor extends View implements afp, bph {
         setLnPanelPositionMode(typedArrayObtainStyledAttributes.getInt(11, 1));
         setLnPanelPosition(typedArrayObtainStyledAttributes.getInt(10, 15));
         setDividerWidth(typedArrayObtainStyledAttributes.getDimension(3, getDividerWidth()));
-        eo(typedArrayObtainStyledAttributes.getDimension(2, this.r), typedArrayObtainStyledAttributes.getDimension(2, this.s));
+        eo(typedArrayObtainStyledAttributes.getDimension(2, this.r),
+                typedArrayObtainStyledAttributes.getDimension(2, this.s));
         setPinLineNumber(typedArrayObtainStyledAttributes.getBoolean(12, false));
         setHighlightCurrentBlock(typedArrayObtainStyledAttributes.getBoolean(5, true));
         setHighlightCurrentLine(typedArrayObtainStyledAttributes.getBoolean(6, true));
@@ -486,15 +489,19 @@ public class CodeEditor extends View implements afp, bph {
             asoVar.c();
         }
         if (zComputeScrollOffset) {
-            if (!overScroller2.isFinished() && (overScroller2.getStartX() != overScroller2.getFinalX() || overScroller2.getStartY() != overScroller2.getFinalY())) {
+            if (!overScroller2.isFinished() && (overScroller2.getStartX() != overScroller2.getFinalX()
+                    || overScroller2.getStartY() != overScroller2.getFinalY())) {
                 this.cq = overScroller2.getFinalX();
                 this.cr = overScroller2.getFinalY();
-                this.ct = ((float) Math.abs(overScroller2.getStartX() - overScroller2.getFinalX())) > getDpUnit() * 5.0f;
-                this.cs = ((float) Math.abs(overScroller2.getStartY() - overScroller2.getFinalY())) > getDpUnit() * 5.0f;
+                this.ct = ((float) Math.abs(overScroller2.getStartX() - overScroller2.getFinalX())) > getDpUnit()
+                        * 5.0f;
+                this.cs = ((float) Math.abs(overScroller2.getStartY() - overScroller2.getFinalY())) > getDpUnit()
+                        * 5.0f;
             }
             if (overScroller2.getCurrX() > 0 || this.cq > 0.0f || !this.ce.isFinished() || !this.ct) {
                 int scrollMaxX = getScrollMaxX();
-                if (overScroller2.getCurrX() >= scrollMaxX && this.cq >= scrollMaxX && this.ce.isFinished() && this.ct) {
+                if (overScroller2.getCurrX() >= scrollMaxX && this.cq >= scrollMaxX && this.ce.isFinished()
+                        && this.ct) {
                     this.ce.onAbsorb((int) overScroller2.getCurrVelocity());
                     this.by.j = true;
                 }
@@ -504,7 +511,8 @@ public class CodeEditor extends View implements afp, bph {
             }
             if (overScroller2.getCurrY() > 0 || this.cr > 0.0f || !this.cd.isFinished() || !this.cs) {
                 int scrollMaxY = getScrollMaxY();
-                if (overScroller2.getCurrY() >= scrollMaxY && this.cr >= scrollMaxY && this.cd.isFinished() && this.cs) {
+                if (overScroller2.getCurrY() >= scrollMaxY && this.cr >= scrollMaxY && this.cd.isFinished()
+                        && this.cs) {
                     this.cd.onAbsorb((int) overScroller2.getCurrVelocity());
                     this.by.i = true;
                 }
@@ -542,21 +550,29 @@ public class CodeEditor extends View implements afp, bph {
             accessibilityNodeInfoCreateAccessibilityNodeInfo.setMultiLine(true);
             accessibilityNodeInfoCreateAccessibilityNodeInfo.setText(getText().ao());
             accessibilityNodeInfoCreateAccessibilityNodeInfo.setLongClickable(true);
-            accessibilityNodeInfoCreateAccessibilityNodeInfo.addAction(AccessibilityNodeInfo.AccessibilityAction.ACTION_COPY);
-            accessibilityNodeInfoCreateAccessibilityNodeInfo.addAction(AccessibilityNodeInfo.AccessibilityAction.ACTION_CUT);
-            accessibilityNodeInfoCreateAccessibilityNodeInfo.addAction(AccessibilityNodeInfo.AccessibilityAction.ACTION_PASTE);
-            accessibilityNodeInfoCreateAccessibilityNodeInfo.addAction(AccessibilityNodeInfo.AccessibilityAction.ACTION_SET_TEXT);
+            accessibilityNodeInfoCreateAccessibilityNodeInfo
+                    .addAction(AccessibilityNodeInfo.AccessibilityAction.ACTION_COPY);
+            accessibilityNodeInfoCreateAccessibilityNodeInfo
+                    .addAction(AccessibilityNodeInfo.AccessibilityAction.ACTION_CUT);
+            accessibilityNodeInfoCreateAccessibilityNodeInfo
+                    .addAction(AccessibilityNodeInfo.AccessibilityAction.ACTION_PASTE);
+            accessibilityNodeInfoCreateAccessibilityNodeInfo
+                    .addAction(AccessibilityNodeInfo.AccessibilityAction.ACTION_SET_TEXT);
             int scrollMaxY = getScrollMaxY();
             if (scrollMaxY > 0) {
                 accessibilityNodeInfoCreateAccessibilityNodeInfo.setScrollable(true);
                 int offsetY = getOffsetY();
                 if (offsetY > 0) {
-                    accessibilityNodeInfoCreateAccessibilityNodeInfo.addAction(AccessibilityNodeInfo.AccessibilityAction.ACTION_SCROLL_BACKWARD);
-                    accessibilityNodeInfoCreateAccessibilityNodeInfo.addAction(AccessibilityNodeInfo.AccessibilityAction.ACTION_SCROLL_UP);
+                    accessibilityNodeInfoCreateAccessibilityNodeInfo
+                            .addAction(AccessibilityNodeInfo.AccessibilityAction.ACTION_SCROLL_BACKWARD);
+                    accessibilityNodeInfoCreateAccessibilityNodeInfo
+                            .addAction(AccessibilityNodeInfo.AccessibilityAction.ACTION_SCROLL_UP);
                 }
                 if (offsetY < scrollMaxY) {
-                    accessibilityNodeInfoCreateAccessibilityNodeInfo.addAction(AccessibilityNodeInfo.AccessibilityAction.ACTION_SCROLL_FORWARD);
-                    accessibilityNodeInfoCreateAccessibilityNodeInfo.addAction(AccessibilityNodeInfo.AccessibilityAction.ACTION_SCROLL_DOWN);
+                    accessibilityNodeInfoCreateAccessibilityNodeInfo
+                            .addAction(AccessibilityNodeInfo.AccessibilityAction.ACTION_SCROLL_FORWARD);
+                    accessibilityNodeInfoCreateAccessibilityNodeInfo
+                            .addAction(AccessibilityNodeInfo.AccessibilityAction.ACTION_SCROLL_DOWN);
                 }
             }
         }
@@ -768,7 +784,7 @@ public class CodeEditor extends View implements afp, bph {
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:6:0x000b  */
+    /* JADX WARN: Found duplicated region for block: B:6:0x000b */
     public final boolean dd() {
         boolean z;
         if (this.bi) {
@@ -932,7 +948,8 @@ public class CodeEditor extends View implements afp, bph {
                     dnv styles = getStyles();
                     ud udVar6 = cursorRange.a;
                     ud udVar7 = cursorRange.b;
-                    if (bhs.m(styles, udVar6) || bhs.m(styles, udVar7) || !"\"".equals(string) || (i3 = udVar6.b) != udVar7.b) {
+                    if (bhs.m(styles, udVar6) || bhs.m(styles, udVar7) || !"\"".equals(string)
+                            || (i3 = udVar6.b) != udVar7.b) {
                         cxcVar = cxc.g;
                     } else {
                         affVar2.ab(i3, udVar6.c, "\"");
@@ -962,7 +979,8 @@ public class CodeEditor extends View implements afp, bph {
             affVar.ah(i15, i16, charSequence, udVar11.b, udVar11.c);
             return;
         }
-        if (this.ck.f && charSequence.length() != 0 && z && ((cCharAt = charSequence.charAt(0)) == '\n' || cCharAt == '\r')) {
+        if (this.ck.f && charSequence.length() != 0 && z
+                && ((cCharAt = charSequence.charAt(0)) == '\n' || cCharAt == '\r')) {
             String strAa = this.bp.aa(ahyVar.c.b);
             int i17 = 0;
             int i18 = 0;
@@ -1063,7 +1081,8 @@ public class CodeEditor extends View implements afp, bph {
             return;
         }
         try {
-            String strAn = charSequence instanceof aff ? ((aff) charSequence).an(i, i2) : charSequence.subSequence(i, i2).toString();
+            String strAn = charSequence instanceof aff ? ((aff) charSequence).an(i, i2)
+                    : charSequence.subSequence(i, i2).toString();
             this.bm.setPrimaryClip(ClipData.newPlainText(strAn, strAn));
         } catch (RuntimeException e) {
             if (!(e.getCause() instanceof TransactionTooLargeException)) {
@@ -1177,39 +1196,56 @@ public class CodeEditor extends View implements afp, bph {
             }
         } else if (action == 2) {
             int i = x - this.m;
-            if (this.as && !this.by.ay() && ((i > 0 && getScroller().b.getCurrX() == 0) || (i < 0 && getScroller().b.getCurrX() == getScrollMaxX()))) {
+            if (this.as && !this.by.ay() && ((i > 0 && getScroller().b.getCurrX() == 0)
+                    || (i < 0 && getScroller().b.getCurrX() == getScrollMaxX()))) {
                 getParent().requestDisallowInterceptTouchEvent(false);
             }
         }
         return super.dispatchTouchEvent(motionEvent);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:160:0x023f A[PHI: r7
-      0x023f: PHI (r7v6 int) = (r7v3 int), (r7v8 int) binds: [B:159:0x023d, B:79:0x015a] A[DONT_GENERATE, DONT_INLINE]] */
-    /* JADX WARN: Found duplicated region for block: B:171:0x025a A[ADDED_TO_REGION] */
-    /* JADX WARN: Found duplicated region for block: B:188:0x0264 A[ADDED_TO_REGION, REMOVE, SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:65:0x011a A[PHI: r7
-      0x011a: PHI (r7v12 int) = 
-      (r7v3 int)
-      (r7v2 int)
-      (r7v4 int)
-      (r7v2 int)
-      (r7v2 int)
-      (r7v2 int)
-      (r7v2 int)
-      (r7v2 int)
-      (r7v2 int)
-      (r7v2 int)
-      (r7v2 int)
-      (r7v2 int)
-      (r7v2 int)
-      (r7v2 int)
-      (r7v2 int)
-      (r7v2 int)
-      (r7v13 int)
-     binds: [B:168:0x0254, B:144:0x0215, B:145:0x0217, B:142:0x020d, B:127:0x01e6, B:115:0x01cc, B:103:0x01a5, B:93:0x0187, B:95:0x018d, B:85:0x016e, B:82:0x0162, B:74:0x013a, B:70:0x012c, B:71:0x012e, B:67:0x0122, B:68:0x0124, B:64:0x0119] A[DONT_GENERATE, DONT_INLINE]] */
-    /* JADX WARN: Found duplicated region for block: B:91:0x017f A[PHI: r7
-      0x017f: PHI (r7v7 int) = (r7v3 int), (r7v5 int), (r7v8 int) binds: [B:165:0x024d, B:90:0x017e, B:79:0x015a] A[DONT_GENERATE, DONT_INLINE]] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:160:0x023f A[PHI: r7
+     * 0x023f: PHI (r7v6 int) = (r7v3 int), (r7v8 int) binds: [B:159:0x023d,
+     * B:79:0x015a] A[DONT_GENERATE, DONT_INLINE]]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:171:0x025a A[ADDED_TO_REGION]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:188:0x0264 A[ADDED_TO_REGION,
+     * REMOVE, SYNTHETIC]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:65:0x011a A[PHI: r7
+     * 0x011a: PHI (r7v12 int) =
+     * (r7v3 int)
+     * (r7v2 int)
+     * (r7v4 int)
+     * (r7v2 int)
+     * (r7v2 int)
+     * (r7v2 int)
+     * (r7v2 int)
+     * (r7v2 int)
+     * (r7v2 int)
+     * (r7v2 int)
+     * (r7v2 int)
+     * (r7v2 int)
+     * (r7v2 int)
+     * (r7v2 int)
+     * (r7v2 int)
+     * (r7v2 int)
+     * (r7v13 int)
+     * binds: [B:168:0x0254, B:144:0x0215, B:145:0x0217, B:142:0x020d, B:127:0x01e6,
+     * B:115:0x01cc, B:103:0x01a5, B:93:0x0187, B:95:0x018d, B:85:0x016e,
+     * B:82:0x0162, B:74:0x013a, B:70:0x012c, B:71:0x012e, B:67:0x0122, B:68:0x0124,
+     * B:64:0x0119] A[DONT_GENERATE, DONT_INLINE]]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:91:0x017f A[PHI: r7
+     * 0x017f: PHI (r7v7 int) = (r7v3 int), (r7v5 int), (r7v8 int) binds:
+     * [B:165:0x024d, B:90:0x017e, B:79:0x015a] A[DONT_GENERATE, DONT_INLINE]]
+     */
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Type inference failed for: r5v36 */
     /* JADX WARN: Type inference failed for: r5v37 */
@@ -1607,7 +1643,8 @@ public class CodeEditor extends View implements afp, bph {
         if (z) {
             overScroller2.forceFinished(true);
             scroller.c();
-            scroller.d(getOffsetX(), getOffsetY(), (int) (fMax - getOffsetX()), (int) (fMax2 - getOffsetY()), scroller.a.getProps().i);
+            scroller.d(getOffsetX(), getOffsetY(), (int) (fMax - getOffsetX()), (int) (fMax2 - getOffsetY()),
+                    scroller.a.getProps().i);
             this.ck.getClass();
         } else {
             scroller.d(getOffsetX(), getOffsetY(), (int) (fMax - getOffsetX()), (int) (fMax2 - getOffsetY()), 0);
@@ -1662,7 +1699,7 @@ public class CodeEditor extends View implements afp, bph {
         dm();
         ud selectingTarget = getSelectingTarget();
         dfsVar.getClass();
-        bzo.q(selectingTarget, "pos");
+        throwIfVar1IsNull(selectingTarget, "pos");
         ud udVar = (ud) dfsVar.r.g(this, selectingTarget);
         ud udVar2 = this.g;
         es(udVar2.b, false, udVar2.c, udVar.b, udVar.c, 7);
@@ -1747,7 +1784,8 @@ public class CodeEditor extends View implements afp, bph {
     public final int ds(int i) {
         int lineSpacingPixels = getLineSpacingPixels();
         Paint.FontMetricsInt fontMetricsInt = this.co.t;
-        return (((i + 1) * Math.max(1, (fontMetricsInt.descent - fontMetricsInt.ascent) + lineSpacingPixels)) - fontMetricsInt.descent) - (lineSpacingPixels / 2);
+        return (((i + 1) * Math.max(1, (fontMetricsInt.descent - fontMetricsInt.ascent) + lineSpacingPixels))
+                - fontMetricsInt.descent) - (lineSpacingPixels / 2);
     }
 
     public final int dt(int i) {
@@ -1876,7 +1914,7 @@ public class CodeEditor extends View implements afp, bph {
         } else {
             udVarD = this.bo.d.d();
         }
-        bzo.q(udVarD, "pos");
+        throwIfVar1IsNull(udVarD, "pos");
         ud udVar3 = (ud) dfsVar.r.g(this, udVarD);
         if (dfsVar == dfs.g) {
             this.by.bb(0.0f, -getHeight(), true);
@@ -1909,7 +1947,8 @@ public class CodeEditor extends View implements afp, bph {
         String strAt;
         asa asaVar;
         try {
-            if (!this.bm.hasPrimaryClip() || (primaryClip = this.bm.getPrimaryClip()) == null || (strAt = cnf.at(primaryClip)) == null || (asaVar = this.h) == null) {
+            if (!this.bm.hasPrimaryClip() || (primaryClip = this.bm.getPrimaryClip()) == null
+                    || (strAt = cnf.at(primaryClip)) == null || (asaVar = this.h) == null) {
                 return;
             }
             asaVar.commitText(strAt, 1);
@@ -1971,7 +2010,7 @@ public class CodeEditor extends View implements afp, bph {
     }
 
     public final void en(int i, int i2) {
-        dqs dqsVarY = bzo.y(getText(), i, i2, this.ck.o);
+        dqs dqsVarY = KotlinHelpers.y(getText(), i, i2, this.ck.o);
         ud udVar = dqsVarY.a;
         ud udVar2 = dqsVarY.b;
         es(udVar.b, true, udVar.c, udVar2.b, udVar2.c, 5);
@@ -2023,8 +2062,8 @@ public class CodeEditor extends View implements afp, bph {
         es(i, true, i2, i3, i4, 0);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:15:0x0083  */
-    /* JADX WARN: Found duplicated region for block: B:21:0x00a0  */
+    /* JADX WARN: Found duplicated region for block: B:15:0x0083 */
+    /* JADX WARN: Found duplicated region for block: B:21:0x00a0 */
     public final void es(int i, boolean z, int i2, int i3, int i4, int i5) {
         int i6;
         int i7;
@@ -2037,7 +2076,8 @@ public class CodeEditor extends View implements afp, bph {
         }
         if (iV > iV2) {
             es(i3, z, i4, i, i2, i5);
-            StringBuilder sbQ = yg.q(iV, iV2, "setSelectionRegion() error: start > end:start = ", " end = ", " lineLeft = ");
+            StringBuilder sbQ = yg.q(iV, iV2, "setSelectionRegion() error: start > end:start = ", " end = ",
+                    " lineLeft = ");
             sbQ.append(i);
             sbQ.append(" columnLeft = ");
             sbQ.append(i2);
@@ -2158,7 +2198,8 @@ public class CodeEditor extends View implements afp, bph {
             builder.setMatrix(this.bq);
             ahy ahyVar = this.bo;
             builder.setSelectionRange(ahyVar.c.a, ahyVar.d.a);
-            builder.setInsertionMarkerLocation(f, (getRowHeight() * r1) - getOffsetY(), ds(r1) - getOffsetY(), dt(r1) - getOffsetY(), z ? 1 : 2);
+            builder.setInsertionMarkerLocation(f, (getRowHeight() * r1) - getOffsetY(), ds(r1) - getOffsetY(),
+                    dt(r1) - getOffsetY(), z ? 1 : 2);
             this.bn.updateCursorAnchorInfo(this, builder.build());
         }
         return f;
@@ -2772,9 +2813,9 @@ public class CodeEditor extends View implements afp, bph {
         accessibilityEvent.setMaxScrollY(scrollMaxY);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:102:0x01a9  */
+    /* JADX WARN: Found duplicated region for block: B:102:0x01a9 */
     /* JADX WARN: Found duplicated region for block: B:132:0x0222 A[MOVE_INLINED] */
-    /* JADX WARN: Found duplicated region for block: B:22:0x007a  */
+    /* JADX WARN: Found duplicated region for block: B:22:0x007a */
     @Override // android.view.View, android.view.KeyEvent.Callback
     public final boolean onKeyDown(int i, KeyEvent keyEvent) {
         Boolean boolValueOf;
@@ -2841,7 +2882,7 @@ public class CodeEditor extends View implements afp, bph {
                             if (snippetController2.d != -1) {
                                 int i3 = snippetController2.f;
                                 ArrayList arrayList = snippetController2.e;
-                                bzo.n(arrayList);
+                                throwIfVar1IsNull(arrayList);
                                 if (i3 < arrayList.size() - 1) {
                                     snippetController2.n(snippetController2.f + 1);
                                 }
@@ -2953,7 +2994,8 @@ public class CodeEditor extends View implements afp, bph {
                                                 while (i12 < afoVarY.b && Character.isWhitespace(afoVarY.charAt(i12))) {
                                                     i12++;
                                                 }
-                                                if (afoVarY.subSequence(i12, Math.min(i12 + 1, afoVarY.b)).toString().equals("}")) {
+                                                if (afoVarY.subSequence(i12, Math.min(i12 + 1, afoVarY.b)).toString()
+                                                        .equals("}")) {
                                                     try {
                                                         ud udVarD3 = cursor4.c.d();
                                                         codeEditor2.getStyles();
@@ -2966,7 +3008,9 @@ public class CodeEditor extends View implements afp, bph {
                                                         }
                                                         z = true;
                                                     } catch (Exception e) {
-                                                        Log.w("EditorKeyEventHandler", "Error occurred while calling Language's NewlineHandler", e);
+                                                        Log.w("EditorKeyEventHandler",
+                                                                "Error occurred while calling Language's NewlineHandler",
+                                                                e);
                                                         z = true;
                                                         codeEditor2.de(str, z);
                                                     }
@@ -3255,7 +3299,8 @@ public class CodeEditor extends View implements afp, bph {
                         } else {
                             aff text5 = codeEditor2.getText();
                             ahy cursor7 = codeEditor2.getCursor();
-                            int unicodeChar = keyEvent.getUnicodeChar(MetaKeyKeyListener.getMetaState(editable, keyEvent));
+                            int unicodeChar = keyEvent
+                                    .getUnicodeChar(MetaKeyKeyListener.getMetaState(editable, keyEvent));
                             if (unicodeChar == 0 || !codeEditor2.dw() || unicodeChar == 61184 || unicodeChar == 61185) {
                                 zOnKeyDown = super.onKeyDown(i, keyEvent);
                             } else {
@@ -3266,7 +3311,9 @@ public class CodeEditor extends View implements afp, bph {
                                     z2 = false;
                                 }
                                 int i23 = cursor7.c.a;
-                                if (i23 + 1 == cursor7.d.a && (deadChar = KeyCharacterMap.getDeadChar((cCharAt = text5.charAt(i23)), unicodeChar)) != cCharAt && keyEvent.getRepeatCount() == 0) {
+                                if (i23 + 1 == cursor7.d.a && (deadChar = KeyCharacterMap
+                                        .getDeadChar((cCharAt = text5.charAt(i23)), unicodeChar)) != cCharAt
+                                        && keyEvent.getRepeatCount() == 0) {
                                     z3 = false;
                                 } else {
                                     deadChar = unicodeChar;
@@ -3280,7 +3327,8 @@ public class CodeEditor extends View implements afp, bph {
                                             ud udVar3 = cursor7.d;
                                             codeEditor2.eq(udVar3.b, udVar3.c, 9, true);
                                             codeEditor2.de(String.valueOf(Character.toChars(deadChar)), true);
-                                            int iCharCount = Character.charCount(Character.codePointBefore(codeEditor2.getText().y(cursor8.d.b), cursor8.d.c));
+                                            int iCharCount = Character.charCount(Character.codePointBefore(
+                                                    codeEditor2.getText().y(cursor8.d.b), cursor8.d.c));
                                             CodeEditor codeEditor3 = (CodeEditor) ioVar.c;
                                             ud udVar4 = cursor8.d;
                                             int i25 = udVar4.b;
@@ -3291,7 +3339,8 @@ public class CodeEditor extends View implements afp, bph {
                                         ud udVar32 = cursor7.d;
                                         codeEditor2.eq(udVar32.b, udVar32.c, 9, true);
                                         codeEditor2.de(String.valueOf(Character.toChars(deadChar)), true);
-                                        int iCharCount2 = Character.charCount(Character.codePointBefore(codeEditor2.getText().y(cursor8.d.b), cursor8.d.c));
+                                        int iCharCount2 = Character.charCount(Character
+                                                .codePointBefore(codeEditor2.getText().y(cursor8.d.b), cursor8.d.c));
                                         CodeEditor codeEditor32 = (CodeEditor) ioVar.c;
                                         ud udVar42 = cursor8.d;
                                         int i252 = udVar42.b;
@@ -3404,11 +3453,15 @@ public class CodeEditor extends View implements afp, bph {
                             }
                         }
                     });
-                    iMakeMeasureSpec = View.MeasureSpec.makeMeasureSpec((int) Math.min(chrVar.a + fEb, size), 1073741824);
+                    iMakeMeasureSpec = View.MeasureSpec.makeMeasureSpec((int) Math.min(chrVar.a + fEb, size),
+                            1073741824);
                 } else {
                     iMakeMeasureSpec = i;
                 }
-                iMakeMeasureSpec2 = mode2 != 1073741824 ? View.MeasureSpec.makeMeasureSpec(Math.min(size2, (int) (rowHeight * affVar.a.size())), 1073741824) : i2;
+                iMakeMeasureSpec2 = mode2 != 1073741824
+                        ? View.MeasureSpec.makeMeasureSpec(Math.min(size2, (int) (rowHeight * affVar.a.size())),
+                                1073741824)
+                        : i2;
             } else if (mode != 1073741824) {
                 final int[] iArr = mode2 != 1073741824 ? new int[affVar.a.size()] : null;
                 final chr chrVar2 = new chr(0);
@@ -3435,14 +3488,16 @@ public class CodeEditor extends View implements afp, bph {
                     } else {
                         int iMax = 0;
                         while (i6 < iArr.length) {
-                            iMax = (int) (Math.max(1.0d, Math.ceil((((double) iArr[i6]) * 1.0d) / ((double) i8))) + ((double) iMax));
+                            iMax = (int) (Math.max(1.0d, Math.ceil((((double) iArr[i6]) * 1.0d) / ((double) i8)))
+                                    + ((double) iMax));
                             i6++;
                             z3 = z3;
                         }
                         i5 = iMax;
                     }
                     z = z3;
-                    iMakeMeasureSpec3 = View.MeasureSpec.makeMeasureSpec(Math.min((int) (rowHeight * i5), size2), 1073741824);
+                    iMakeMeasureSpec3 = View.MeasureSpec.makeMeasureSpec(Math.min((int) (rowHeight * i5), size2),
+                            1073741824);
                 } else {
                     z = true;
                     iMakeMeasureSpec3 = i2;
@@ -3462,17 +3517,19 @@ public class CodeEditor extends View implements afp, bph {
                             public final void a(int i10, afo afoVar, anu anuVar) {
                                 int iCeil = (int) Math.ceil(dhsVar.h(afoVar.a, afoVar.b, cskVar));
                                 chr chrVar4 = chrVar3;
-                                chrVar4.a = (int) (Math.max(1.0d, Math.ceil((((double) iCeil) * 1.0d) / ((double) i9))) + ((double) chrVar4.a));
+                                chrVar4.a = (int) (Math.max(1.0d, Math.ceil((((double) iCeil) * 1.0d) / ((double) i9)))
+                                        + ((double) chrVar4.a));
                             }
                         });
                     }
-                    iMakeMeasureSpec2 = View.MeasureSpec.makeMeasureSpec(Math.min((int) (rowHeight * chrVar3.a), size2), 1073741824);
+                    iMakeMeasureSpec2 = View.MeasureSpec.makeMeasureSpec(Math.min((int) (rowHeight * chrVar3.a), size2),
+                            1073741824);
                     iMakeMeasureSpec = i;
                 } else {
                     iMakeMeasureSpec = i;
                 }
             }
-            long jAl = bzo.al(iMakeMeasureSpec, iMakeMeasureSpec2);
+            long jAl = KotlinHelpers.al(iMakeMeasureSpec, iMakeMeasureSpec2);
             i3 = (int) (jAl >> 32);
             i4 = (int) (jAl & 4294967295L);
             this.bf = z;
@@ -3493,14 +3550,17 @@ public class CodeEditor extends View implements afp, bph {
         if (this.by.ay()) {
             return PointerIcon.getSystemIcon(getContext(), 1021);
         }
-        if (getLeftHandleDescriptor().a.contains(motionEvent.getX(), motionEvent.getY()) || getRightHandleDescriptor().a.contains(motionEvent.getX(), motionEvent.getY()) || getInsertHandleDescriptor().a.contains(motionEvent.getX(), motionEvent.getY())) {
+        if (getLeftHandleDescriptor().a.contains(motionEvent.getX(), motionEvent.getY())
+                || getRightHandleDescriptor().a.contains(motionEvent.getX(), motionEvent.getY())
+                || getInsertHandleDescriptor().a.contains(motionEvent.getX(), motionEvent.getY())) {
             return PointerIcon.getSystemIcon(getContext(), 1020);
         }
         long jAf = ajn.af(this, motionEvent, i);
         int i3 = (int) (jAf >> 32);
         boolean z = ((int) (jAf & 4294967295L)) == 0;
         if (i3 != 5 || !z) {
-            return (i3 == 1 && ((i2 = this.ck.u) == 1 || i2 == 2)) ? PointerIcon.getSystemIcon(getContext(), 1002) : super.onResolvePointerIcon(motionEvent, i);
+            return (i3 == 1 && ((i2 = this.ck.u) == 1 || i2 == 2)) ? PointerIcon.getSystemIcon(getContext(), 1002)
+                    : super.onResolvePointerIcon(motionEvent, i);
         }
         asv asvVar = this.by;
         if (asvVar.ah && !asvVar.ag) {
@@ -3523,7 +3583,8 @@ public class CodeEditor extends View implements afp, bph {
         if (this.j == null || (this.af && i != i3)) {
             dh(true);
         } else {
-            this.by.bb(getOffsetX() > getScrollMaxX() ? getScrollMaxX() - getOffsetX() : 0.0f, getOffsetY() > getScrollMaxY() ? getScrollMaxY() - getOffsetY() : 0.0f, false);
+            this.by.bb(getOffsetX() > getScrollMaxX() ? getScrollMaxX() - getOffsetX() : 0.0f,
+                    getOffsetY() > getScrollMaxY() ? getScrollMaxY() - getOffsetY() : 0.0f, false);
         }
         this.cs = false;
         this.ct = false;
@@ -3533,7 +3594,7 @@ public class CodeEditor extends View implements afp, bph {
         dn();
     }
 
-    /* JADX WARN: Found duplicated region for block: B:110:0x0261  */
+    /* JADX WARN: Found duplicated region for block: B:110:0x0261 */
     @Override // android.view.View
     public final boolean onTouchEvent(MotionEvent motionEvent) {
         int i;
@@ -3590,7 +3651,8 @@ public class CodeEditor extends View implements afp, bph {
                     }
                 } else {
                     if (actionMasked == 1) {
-                        if (motionEvent.getEventTime() - motionEvent.getDownTime() > ViewConfiguration.getTapTimeout() * 2.0f) {
+                        if (motionEvent.getEventTime() - motionEvent.getDownTime() > ViewConfiguration.getTapTimeout()
+                                * 2.0f) {
                             asvVar.ag = false;
                         }
                         if (!asvVar.ae) {
@@ -3602,7 +3664,8 @@ public class CodeEditor extends View implements afp, bph {
                                 ud udVar = cursorRange2.b;
                                 int i6 = udVarO2.a;
                                 ud udVar2 = cursorRange2.a;
-                                if (!(i6 >= udVar2.a && i6 < udVar.a) && (codeEditor.getKeyMetaStates().c || !udVar.equals(udVarO2))) {
+                                if (!(i6 >= udVar2.a && i6 < udVar.a)
+                                        && (codeEditor.getKeyMetaStates().c || !udVar.equals(udVarO2))) {
                                     int i7 = udVar.a - udVar2.a;
                                     if (codeEditor.getKeyMetaStates().c) {
                                         i = udVarO2.a;
@@ -3655,7 +3718,8 @@ public class CodeEditor extends View implements afp, bph {
                         }
                     } else if (!asvVar.ae) {
                         float f = i2;
-                        if (Math.abs(motionEvent.getX() - asvVar.aa) > f || Math.abs(motionEvent.getY() - asvVar.ab) > f) {
+                        if (Math.abs(motionEvent.getX() - asvVar.aa) > f
+                                || Math.abs(motionEvent.getY() - asvVar.ab) > f) {
                             asvVar.ag = false;
                         }
                         if ((asvVar.ac & 1) != 0) {
@@ -3880,7 +3944,8 @@ public class CodeEditor extends View implements afp, bph {
         jx jxVarG = this.bu.g();
         this.b = jxVarG;
         if (jxVarG == null) {
-            Log.w("CodeEditor", "Language(" + this.bu.toString() + ") returned null for symbol pairs. It is a mistake.");
+            Log.w("CodeEditor",
+                    "Language(" + this.bu.toString() + ") returned null for symbol pairs. It is a mistake.");
             this.b = new jx(19);
         }
         this.b.h = this.ck.a;
@@ -3981,10 +4046,20 @@ public class CodeEditor extends View implements afp, bph {
         this.co.v = drawable;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:14:0x0056 A[DONT_INVERT, PHI: r7
-      0x0056: PHI (r7v2 int) = (r7v1 int), (r7v3 int) binds: [B:6:0x002b, B:13:0x0054] A[DONT_GENERATE, DONT_INLINE]] */
-    /* JADX WARN: Found duplicated region for block: B:15:0x0058 A[LOOP:0: B:5:0x001d->B:15:0x0058, LOOP_END] */
-    /* JADX WARN: Found duplicated region for block: B:23:0x005b A[EDGE_INSN: B:23:0x005b->B:16:0x005b BREAK  A[LOOP:0: B:5:0x001d->B:15:0x0058], SYNTHETIC] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:14:0x0056 A[DONT_INVERT, PHI:
+     * r7
+     * 0x0056: PHI (r7v2 int) = (r7v1 int), (r7v3 int) binds: [B:6:0x002b,
+     * B:13:0x0054] A[DONT_GENERATE, DONT_INLINE]]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:15:0x0058 A[LOOP:0:
+     * B:5:0x001d->B:15:0x0058, LOOP_END]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:23:0x005b A[EDGE_INSN:
+     * B:23:0x005b->B:16:0x005b BREAK A[LOOP:0: B:5:0x001d->B:15:0x0058], SYNTHETIC]
+     */
     public void setInlayHints(bpi bpiVar) {
         chu chuVar = new chu();
         bmu bmuVar = new bmu();
@@ -4044,7 +4119,7 @@ public class CodeEditor extends View implements afp, bph {
         parent.requestDisallowInterceptTouchEvent(false);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:10:0x0062  */
+    /* JADX WARN: Found duplicated region for block: B:10:0x0062 */
     public void setLayoutBusy(boolean z) {
         CodeEditor codeEditor;
         if (!this.ak || z) {
@@ -4297,7 +4372,8 @@ public class CodeEditor extends View implements afp, bph {
             btqVar.e().s(new afq(this.bp), this.cl);
             this.bu.getClass();
         }
-        this.i.g(new afh(this, 1, new ud(), this.bp.x().o(getLineCount() - 1, this.bp.y(getLineCount() - 1).b), this.bp, false));
+        this.i.g(new afh(this, 1, new ud(), this.bp.x().o(getLineCount() - 1, this.bp.y(getLineCount() - 1).b), this.bp,
+                false));
         dh(true);
         InputMethodManager inputMethodManager = this.bn;
         if (inputMethodManager != null) {
@@ -4325,7 +4401,8 @@ public class CodeEditor extends View implements afp, bph {
 
     public void setTextSize(float f) {
         Context context = getContext();
-        setTextSizePx(TypedValue.applyDimension(2, f, (context == null ? Resources.getSystem() : context.getResources()).getDisplayMetrics()));
+        setTextSizePx(TypedValue.applyDimension(2, f,
+                (context == null ? Resources.getSystem() : context.getResources()).getDisplayMetrics()));
     }
 
     public void setTextSizePx(float f) {

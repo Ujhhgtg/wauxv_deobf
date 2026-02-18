@@ -29,7 +29,10 @@ public final /* synthetic */ class cfx implements bfu {
 
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Type inference failed for: r10v23 */
-    /* JADX WARN: Type inference failed for: r10v24, types: [android.net.Uri, java.lang.CharSequence[], long[]] */
+    /*
+     * JADX WARN: Type inference failed for: r10v24, types: [android.net.Uri,
+     * java.lang.CharSequence[], long[]]
+     */
     /* JADX WARN: Type inference failed for: r10v26 */
     @Override // me.hd.wauxv.obf.bfu
     public final Object invoke() {
@@ -95,7 +98,7 @@ public final /* synthetic */ class cfx implements bfu {
                     navHostFragment.ch.j(belVar);
                 }
                 erq erqVarAj = navHostFragment.aj();
-                if (!bzo.f(cixVar.n, bhv.x(erqVarAj))) {
+                if (!nullSafeIsEqual(cixVar.n, bhv.x(erqVarAj))) {
                     if (!cixVar.f.isEmpty()) {
                         throw new IllegalStateException("ViewModelStore should be set before setGraph call");
                     }
@@ -103,11 +106,11 @@ public final /* synthetic */ class cfx implements bfu {
                 }
                 Context contextDc = navHostFragment.dc();
                 beg begVarCp = navHostFragment.cp();
-                bzo.p(begVarCp, "getChildFragmentManager(...)");
+                throwIfVar1IsNull(begVarCp, "getChildFragmentManager(...)");
                 ckmVar.c(new ani(contextDc, begVarCp));
                 Context contextDc2 = navHostFragment.dc();
                 beg begVarCp2 = navHostFragment.cp();
-                bzo.p(begVarCp2, "getChildFragmentManager(...)");
+                throwIfVar1IsNull(begVarCp2, "getChildFragmentManager(...)");
                 int i5 = navHostFragment.bq;
                 if (i5 == 0 || i5 == -1) {
                     i5 = R.id.nav_host_fragment_container;
@@ -127,7 +130,7 @@ public final /* synthetic */ class cfx implements bfu {
                         bundle = null;
                     }
                     cixVar.d = bundle;
-                    cixVar.e = bundleG.containsKey("android-support-nav:controller:backStack") ? (Bundle[]) bzo.w("android-support-nav:controller:backStack", bundleG).toArray(new Bundle[0]) : null;
+                    cixVar.e = bundleG.containsKey("android-support-nav:controller:backStack") ? (Bundle[]) KotlinHelpers.w("android-support-nav:controller:backStack", bundleG).toArray(new Bundle[0]) : null;
                     linkedHashMap.clear();
                     if (bundleG.containsKey("android-support-nav:controller:backStackDestIds") && bundleG.containsKey("android-support-nav:controller:backStackIds")) {
                         int[] intArray = bundleG.getIntArray("android-support-nav:controller:backStackDestIds");
@@ -145,7 +148,7 @@ public final /* synthetic */ class cfx implements bfu {
                         int i7 = 0;
                         while (i6 < length) {
                             int i8 = i7 + 1;
-                            cixVar.k.put(Integer.valueOf(intArray[i6]), !bzo.f(stringArrayList.get(i7), "") ? stringArrayList.get(i7) : null);
+                            cixVar.k.put(Integer.valueOf(intArray[i6]), !nullSafeIsEqual(stringArrayList.get(i7), "") ? stringArrayList.get(i7) : null);
                             i6++;
                             i7 = i8;
                         }
@@ -158,9 +161,9 @@ public final /* synthetic */ class cfx implements bfu {
                         }
                         for (String str : stringArrayList2) {
                             String str2 = "android-support-nav:controller:backStackStates:" + str;
-                            bzo.q(str2, "key");
+                            throwIfVar1IsNull(str2, "key");
                             if (bundleG.containsKey(str2)) {
-                                ArrayList arrayListW = bzo.w("android-support-nav:controller:backStackStates:" + str, bundleG);
+                                ArrayList arrayListW = KotlinHelpers.w("android-support-nav:controller:backStackStates:" + str, bundleG);
                                 km kmVar = new km(arrayListW.size());
                                 Iterator it = arrayListW.iterator();
                                 while (it.hasNext()) {

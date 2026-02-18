@@ -20,14 +20,18 @@ public class cwl extends ua implements ajt, acm {
     public boolean an;
     public final asx ao;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'super' call moved to the top of the method (can break code
+     * semantics)
+     */
     public cwl(cwd cwdVar, cwo cwoVar, dfx dfxVar) {
         super(2, false);
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         this.ah = cwdVar;
         this.ai = cwoVar;
         this.aj = dfxVar;
-        this.ao = new asx(dfxVar, new brz(2, this, cwl.class, "readIfAbsent", "readIfAbsent(Lkotlinx/serialization/descriptors/SerialDescriptor;I)Z", 0, 0, 1));
+        this.ao = new asx(dfxVar, new brz(2, this, cwl.class, "readIfAbsent",
+                "readIfAbsent(Lkotlinx/serialization/descriptors/SerialDescriptor;I)Z", 0, 0, 1));
         int i = dfxVar.i();
         if (i >= 32) {
             ax(dfxVar, i);
@@ -51,12 +55,12 @@ public class cwl extends ua implements ajt, acm {
 
     @Override // me.hd.wauxv.obf.acm
     public final void _bp(dfx dfxVar) {
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
     }
 
     @Override // me.hd.wauxv.obf.acm
     public final double _bq(cvk cvkVar, int i) {
-        bzo.q(cvkVar, "descriptor");
+        throwIfVar1IsNull(cvkVar, "descriptor");
         return ar(ad(cvkVar, i));
     }
 
@@ -76,7 +80,7 @@ public class cwl extends ua implements ajt, acm {
     }
 
     public long ad(dfx dfxVar, int i) {
-        bzo.q(dfxVar, "<this>");
+        throwIfVar1IsNull(dfxVar, "<this>");
         return ajn.n(dfxVar, i);
     }
 
@@ -97,27 +101,31 @@ public class cwl extends ua implements ajt, acm {
     public final Object ap(btd btdVar, Object obj) {
         String string;
         dnt dntVar = dnt.c;
-        bzo.q(btdVar, "deserializer");
+        throwIfVar1IsNull(btdVar, "deserializer");
         try {
-            return btdVar instanceof bvt ? aw(btdVar, obj) : bzo.f(btdVar.getDescriptor(), rx.j.o) ? av((byte[]) obj) : btdVar instanceof s ? ((s) btdVar).f(this, obj) : btdVar.a(this);
+            return btdVar instanceof bvt ? aw(btdVar, obj)
+                    : nullSafeIsEqual(btdVar.getDescriptor(), rx.j.o) ? av((byte[]) obj)
+                            : btdVar instanceof s ? ((s) btdVar).f(this, obj) : btdVar.a(this);
         } catch (cwm e) {
             long j_br = _br();
             dfx descriptor = btdVar.getDescriptor();
             dfx dfxVar = this.aj;
-            if (bzo.f(dfxVar, descriptor)) {
+            if (nullSafeIsEqual(dfxVar, descriptor)) {
                 string = "Error while decoding " + dfxVar.b();
-            } else if (bzo.f(dfxVar.h(), dnt.b) && !bzo.f(btdVar.getDescriptor().h(), dntVar)) {
+            } else if (nullSafeIsEqual(dfxVar.h(), dnt.b) && !nullSafeIsEqual(btdVar.getDescriptor().h(), dntVar)) {
                 StringBuilder sb = new StringBuilder("Error while decoding index ");
                 sb.append(((int) (j_br & 2147483647L)) - 1);
                 sb.append(" in repeated field of ");
                 sb.append(btdVar.getDescriptor().b());
                 string = sb.toString();
-            } else if (bzo.f(dfxVar.h(), dntVar)) {
+            } else if (nullSafeIsEqual(dfxVar.h(), dntVar)) {
                 int i = ((int) (j_br & 2147483647L)) - 1;
                 int i2 = i / 2;
-                string = "Error while decoding " + (i % 2 == 0 ? "key" : "value") + " of index " + i2 + " in map field of " + btdVar.getDescriptor().b();
+                string = "Error while decoding " + (i % 2 == 0 ? "key" : "value") + " of index " + i2
+                        + " in map field of " + btdVar.getDescriptor().b();
             } else {
-                string = "Error while decoding " + btdVar.getDescriptor().b() + " at proto number " + ((int) (j_br & 2147483647L)) + " of " + dfxVar.b();
+                string = "Error while decoding " + btdVar.getDescriptor().b() + " at proto number "
+                        + ((int) (j_br & 2147483647L)) + " of " + dfxVar.b();
             }
             throw new cwm(string, e);
         }
@@ -131,7 +139,7 @@ public class cwl extends ua implements ajt, acm {
         if (iAt == 1) {
             return true;
         }
-        throw new dgb(bjs.i(iAt, "Unexpected boolean value: "));
+        throw new dgb(concatVar2Var1(iAt, "Unexpected boolean value: "));
     }
 
     public final double ar(long j) {
@@ -195,18 +203,20 @@ public class cwl extends ua implements ajt, acm {
             j_br = bArrL;
             return la.v(bArr, j_br);
         } catch (cwm e) {
-            throw new cwm("Error while decoding proto number " + ((int) (j_br & 2147483647L)) + " of " + this.aj.b(), e);
+            throw new cwm("Error while decoding proto number " + ((int) (j_br & 2147483647L)) + " of " + this.aj.b(),
+                    e);
         }
     }
 
     public final LinkedHashMap aw(btd btdVar, Object obj) {
-        bzo.o(btdVar, "null cannot be cast to non-null type kotlinx.serialization.internal.MapLikeSerializer<kotlin.Any?, kotlin.Any?, T of kotlinx.serialization.protobuf.internal.ProtobufDecoder.deserializeMap, *>");
+        throwIfVar1IsNull(btdVar,
+                "null cannot be cast to non-null type kotlinx.serialization.internal.MapLikeSerializer<kotlin.Any?, kotlin.Any?, T of kotlinx.serialization.protobuf.internal.ProtobufDecoder.deserializeMap, *>");
         dnh dnhVar = dnh.b;
         bsb bsbVar = bsb.b;
         bzm bzmVar = new bzm(0);
         Map map = obj instanceof Map ? (Map) obj : null;
         Set<Map.Entry> set = (Set) new ko(bzmVar).f(this, map != null ? map.entrySet() : null);
-        int iAh = bzo.ah(abb.ak(set, 10));
+        int iAh = KotlinHelpers.ah(abb.ak(set, 10));
         if (iAh < 16) {
             iAh = 16;
         }
@@ -245,13 +255,13 @@ public class cwl extends ua implements ajt, acm {
 
     @Override // me.hd.wauxv.obf.acm
     public final String d(dfx dfxVar, int i) {
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         return ag(ad(dfxVar, i));
     }
 
     @Override // me.hd.wauxv.obf.acm
     public final long e(cvk cvkVar, int i) {
-        bzo.q(cvkVar, "descriptor");
+        throwIfVar1IsNull(cvkVar, "descriptor");
         return au(ad(cvkVar, i));
     }
 
@@ -259,7 +269,7 @@ public class cwl extends ua implements ajt, acm {
         int iIntValue;
         HashMap map;
         cwo cwoVar = this.ai;
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         while (true) {
             try {
                 int iT = cwoVar.t();
@@ -268,14 +278,15 @@ public class cwl extends ua implements ajt, acm {
                     return asxVar.g();
                 }
                 if (iT == 0) {
-                    throw new dgb("0 is not allowed as the protobuf field number in " + dfxVar.b() + ", the input bytes may have been corrupted");
+                    throw new dgb("0 is not allowed as the protobuf field number in " + dfxVar.b()
+                            + ", the input bytes may have been corrupted");
                 }
                 int[] iArr = this.ak;
                 if (iArr != null) {
                     iIntValue = (iT < 0 || iT >= iArr.length) ? -1 : iArr[iT];
                 } else {
                     HashMap map2 = this.al;
-                    bzo.n(map2);
+                    throwIfVar1IsNull(map2);
                     Object obj = map2.get(Integer.valueOf(iT));
                     if (obj == null) {
                         obj = -1;
@@ -297,22 +308,22 @@ public class cwl extends ua implements ajt, acm {
 
     @Override // me.hd.wauxv.obf.acm
     public final int g(dfx dfxVar, int i) {
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         return at(ad(dfxVar, i));
     }
 
     @Override // me.hd.wauxv.obf.acm
     public final Object h(dfx dfxVar, int i, btd btdVar, Object obj) {
-        bzo.q(dfxVar, "descriptor");
-        bzo.q(btdVar, "deserializer");
+        throwIfVar1IsNull(dfxVar, "descriptor");
+        throwIfVar1IsNull(btdVar, "deserializer");
         _by(ad(dfxVar, i));
         return ap(btdVar, obj);
     }
 
     @Override // me.hd.wauxv.obf.acm
     public final Object i(dfx dfxVar, int i, btd btdVar, Object obj) {
-        bzo.q(dfxVar, "descriptor");
-        bzo.q(btdVar, "deserializer");
+        throwIfVar1IsNull(dfxVar, "descriptor");
+        throwIfVar1IsNull(btdVar, "deserializer");
         _by(ad(dfxVar, i));
         if (this.an) {
             return null;
@@ -322,44 +333,48 @@ public class cwl extends ua implements ajt, acm {
 
     @Override // me.hd.wauxv.obf.acm
     public final char j(cvk cvkVar, int i) {
-        bzo.q(cvkVar, "descriptor");
+        throwIfVar1IsNull(cvkVar, "descriptor");
         return (char) at(ad(cvkVar, i));
     }
 
     @Override // me.hd.wauxv.obf.acm
     public final byte k(cvk cvkVar, int i) {
-        bzo.q(cvkVar, "descriptor");
+        throwIfVar1IsNull(cvkVar, "descriptor");
         return (byte) at(ad(cvkVar, i));
     }
 
     @Override // me.hd.wauxv.obf.acm
     public final boolean l(dfx dfxVar, int i) {
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         return aq(ad(dfxVar, i));
     }
 
     @Override // me.hd.wauxv.obf.acm
     public final ajt m(cvk cvkVar, int i) {
-        bzo.q(cvkVar, "descriptor");
+        throwIfVar1IsNull(cvkVar, "descriptor");
         long jAd = ad(cvkVar, i);
-        bzo.q(cvkVar.l(i), "inlineDescriptor");
+        throwIfVar1IsNull(cvkVar.l(i), "inlineDescriptor");
         _by(jAd);
         return this;
     }
 
     @Override // me.hd.wauxv.obf.acm
     public final short n(cvk cvkVar, int i) {
-        bzo.q(cvkVar, "descriptor");
+        throwIfVar1IsNull(cvkVar, "descriptor");
         return (short) at(ad(cvkVar, i));
     }
 
     @Override // me.hd.wauxv.obf.acm
     public final float o(cvk cvkVar, int i) {
-        bzo.q(cvkVar, "descriptor");
+        throwIfVar1IsNull(cvkVar, "descriptor");
         return as(ad(cvkVar, i));
     }
 
-    /* JADX WARN: Not initialized variable reg: 11, insn: 0x0076: MOVE (r14 I:??[OBJECT, ARRAY]) = (r11 I:??[OBJECT, ARRAY]) (LINE:119), block:B:32:0x0076 */
+    /*
+     * JADX WARN: Not initialized variable reg: 11, insn: 0x0076: MOVE (r14
+     * I:??[OBJECT, ARRAY]) = (r11 I:??[OBJECT, ARRAY]) (LINE:119),
+     * block:B:32:0x0076
+     */
     public acm p(dfx dfxVar) {
         dfx dfxVar2;
         emc emcVarH;
@@ -369,11 +384,11 @@ public class cwl extends ua implements ajt, acm {
         cwo cwoVar;
         Integer num;
         dfx dfxVar3 = this.aj;
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         try {
             emcVarH = dfxVar.h();
             dntVar = dnt.b;
-            zF = bzo.f(emcVarH, dntVar);
+            zF = nullSafeIsEqual(emcVarH, dntVar);
             cwdVar = this.ah;
             cwoVar = this.ai;
         } catch (cwm e) {
@@ -384,21 +399,22 @@ public class cwl extends ua implements ajt, acm {
             try {
                 if (zF) {
                     long j_br = _br();
-                    if (!bzo.f(dfxVar3.h(), dntVar) || j_br == 19500 || dfxVar3.equals(dfxVar)) {
-                        return (cwoVar.c == cwk.f && ajn.x(dfxVar.l(0))) ? new cse(cwdVar, new cwo(cwoVar.i()), dfxVar) : new dbm(cwdVar, cwoVar, j_br, dfxVar);
+                    if (!nullSafeIsEqual(dfxVar3.h(), dntVar) || j_br == 19500 || dfxVar3.equals(dfxVar)) {
+                        return (cwoVar.c == cwk.f && ajn.x(dfxVar.l(0))) ? new cse(cwdVar, new cwo(cwoVar.i()), dfxVar)
+                                : new dbm(cwdVar, cwoVar, j_br, dfxVar);
                     }
                     cwo cwoVarAl = cnf.al(cwoVar, j_br);
                     cwoVarAl.t();
                     return new dbm(cwdVar, cwoVarAl, 1, dfxVar);
                 }
-                if (!bzo.f(emcVarH, dnt.a) && !bzo.f(emcVarH, dnt.n) && !(emcVarH instanceof cur)) {
-                    if (bzo.f(emcVarH, dnt.c)) {
+                if (!nullSafeIsEqual(emcVarH, dnt.a) && !nullSafeIsEqual(emcVarH, dnt.n) && !(emcVarH instanceof cur)) {
+                    if (nullSafeIsEqual(emcVarH, dnt.c)) {
                         return new bzj(cwdVar, new cwo(_br() == 19500 ? cwoVar.j() : cwoVar.i()), _br(), dfxVar);
                     }
                     throw new dgb("Primitives are not supported at top-level");
                 }
                 long j_br2 = _br();
-                if (j_br2 == 19500 && bzo.f(dfxVar3, dfxVar)) {
+                if (j_br2 == 19500 && nullSafeIsEqual(dfxVar3, dfxVar)) {
                     return this;
                 }
                 if (!ajn.w(j_br2)) {
@@ -412,11 +428,13 @@ public class cwl extends ua implements ajt, acm {
                 return new crg(cwdVar, cwoVar, j_br2, dfxVar);
             } catch (cwm e2) {
                 e = e2;
-                throw new cwm("Fail to begin structure for " + dfxVar2.b() + " in " + dfxVar3.b() + " at proto number " + ((int) (_br() & 2147483647L)), e);
+                throw new cwm("Fail to begin structure for " + dfxVar2.b() + " in " + dfxVar3.b() + " at proto number "
+                        + ((int) (_br() & 2147483647L)), e);
             }
         } catch (cwm e3) {
             e = e3;
-            throw new cwm("Fail to begin structure for " + dfxVar2.b() + " in " + dfxVar3.b() + " at proto number " + ((int) (_br() & 2147483647L)), e);
+            throw new cwm("Fail to begin structure for " + dfxVar2.b() + " in " + dfxVar3.b() + " at proto number "
+                    + ((int) (_br() & 2147483647L)), e);
         }
     }
 
@@ -437,13 +455,13 @@ public class cwl extends ua implements ajt, acm {
 
     @Override // me.hd.wauxv.obf.ajt
     public final Object t(btd btdVar) {
-        bzo.q(btdVar, "deserializer");
+        throwIfVar1IsNull(btdVar, "deserializer");
         return ap(btdVar, null);
     }
 
     @Override // me.hd.wauxv.obf.ajt
     public final ajt u(dfx dfxVar) {
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         _by(_bw());
         return this;
     }

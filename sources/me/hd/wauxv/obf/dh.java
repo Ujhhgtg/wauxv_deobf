@@ -31,9 +31,12 @@ public final /* synthetic */ class dh implements Runnable {
         this.b = obj;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:364:0x01cf  */
+    /* JADX WARN: Found duplicated region for block: B:364:0x01cf */
     /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r0v66, types: [me.hd.wauxv.obf.bfu, me.hd.wauxv.obf.btp] */
+    /*
+     * JADX WARN: Type inference failed for: r0v66, types: [me.hd.wauxv.obf.bfu,
+     * me.hd.wauxv.obf.btp]
+     */
     /* JADX WARN: Type inference failed for: r4v0 */
     /* JADX WARN: Type inference failed for: r4v1 */
     /* JADX WARN: Type inference failed for: r4v2 */
@@ -52,8 +55,9 @@ public final /* synthetic */ class dh implements Runnable {
     /* JADX WARN: Type inference failed for: r7v4 */
     /* JADX WARN: Type inference failed for: r7v5, types: [java.lang.Object] */
     /* JADX WARN: Type inference failed for: r7v6 */
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException
      */
     @Override // java.lang.Runnable
     public final void run() {
@@ -126,7 +130,7 @@ public final /* synthetic */ class dh implements Runnable {
                 return;
             case 4:
                 ace aceVar = (ace) this.b;
-                bzo.q(aceVar, "this$0");
+                throwIfVar1IsNull(aceVar, "this$0");
                 Runnable runnable = aceVar.b;
                 if (runnable != null) {
                     runnable.run();

@@ -10,7 +10,7 @@ import me.hd.wauxv.obf.azk;
 import me.hd.wauxv.obf.bfu;
 import me.hd.wauxv.obf.bjs;
 import me.hd.wauxv.obf.bte;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cde;
 import me.hd.wauxv.obf.cdk;
 import me.hd.wauxv.obf.cnb;
@@ -38,13 +38,13 @@ public final class PluginVipMethod {
         cde cdeVarT = dqc.bi(dgf.b(emn.az(dmt.a))).t();
         cdeVarT.a = emn.az(aem.a);
         Object objE = ((cdk) bjs.h(cdeVarT)).e(new Object[0]);
-        bzo.n(objE);
+        throwIfVar1IsNull(objE);
         Object objInvoke = methodBb.invoke(objE, strZ, Boolean.FALSE);
-        bzo.n(objInvoke);
+        throwIfVar1IsNull(objInvoke);
         azg azgVarR = dqc.bi(objInvoke).r();
         azgVarR.ab = "field_type" /* cnb.z(-382930694175530L) */;
         Object objE2 = ((azk) yg.e(azgVarR)).e();
-        bzo.n(objE2);
+        throwIfVar1IsNull(objE2);
         if ((((Number) objE2).intValue() & 1) == 0) {
             throw new RuntimeException("no permission to invoke method" /* cnb.z(-401059751131946L) */);
         }
@@ -52,22 +52,30 @@ public final class PluginVipMethod {
     }
 
     @cty
-    public final void confirmTransfer(final String str, final String str2, final String str3, final int i) throws IllegalAccessException, NoSuchMethodException, InvocationTargetException {
+    public final void confirmTransfer(final String str, final String str2, final String str3, final int i)
+            throws IllegalAccessException, NoSuchMethodException, InvocationTargetException {
         a(new bfu() { // from class: me.hd.wauxv.obf.cul
             @Override // me.hd.wauxv.obf.bfu
             public final Object invoke() throws NoSuchMethodException {
-                cme.b(cme.a, cmp.b(cmp.a, str, str2, "confirm" /* cnb.z(-115594749803306L) */, str3, i));
+                cme.tryGetClassByName(cme.a, cmp.tryGetClassByName(cmp.a, str, str2, "confirm" /*
+                                                                                                * cnb.z(-
+                                                                                                * 115594749803306L)
+                                                                                                */, str3, i));
                 return ens.a;
             }
         });
     }
 
     @cty
-    public final void refuseTransfer(final String str, final String str2, final String str3) throws IllegalAccessException, NoSuchMethodException, InvocationTargetException {
+    public final void refuseTransfer(final String str, final String str2, final String str3)
+            throws IllegalAccessException, NoSuchMethodException, InvocationTargetException {
         a(new bfu() { // from class: me.hd.wauxv.obf.cum
             @Override // me.hd.wauxv.obf.bfu
             public final Object invoke() throws NoSuchMethodException {
-                cme.b(cme.a, cmp.b(cmp.a, str, str2, "refuse" /* cnb.z(-115560390064938L) */, str3, 0));
+                cme.tryGetClassByName(cme.a, cmp.tryGetClassByName(cmp.a, str, str2, "refuse" /*
+                                                                                               * cnb.z(-
+                                                                                               * 115560390064938L)
+                                                                                               */, str3, 0));
                 return ens.a;
             }
         });

@@ -3,7 +3,7 @@ package okhttp3.internal.connection;
 import java.io.IOException;
 import java.net.Socket;
 import java.util.List;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import okhttp3.Address;
 import okhttp3.EventListener;
 import okhttp3.HttpUrl;
@@ -31,20 +31,24 @@ public final class ExchangeFinder {
     private RouteSelector.Selection routeSelection;
     private RouteSelector routeSelector;
 
-    public ExchangeFinder(RealConnectionPool realConnectionPool, Address address, RealCall realCall, EventListener eventListener) {
-        bzo.q(realConnectionPool, "connectionPool");
-        bzo.q(address, "address");
-        bzo.q(realCall, "call");
-        bzo.q(eventListener, "eventListener");
+    public ExchangeFinder(RealConnectionPool realConnectionPool, Address address, RealCall realCall,
+            EventListener eventListener) {
+        throwIfVar1IsNull(realConnectionPool, "connectionPool");
+        throwIfVar1IsNull(address, "address");
+        throwIfVar1IsNull(realCall, "call");
+        throwIfVar1IsNull(eventListener, "eventListener");
         this.connectionPool = realConnectionPool;
         this.address = address;
         this.call = realCall;
         this.eventListener = eventListener;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:55:0x012a  */
-    /* JADX WARN: Found duplicated region for block: B:57:0x0144  */
-    /* JADX WARN: Found duplicated region for block: B:73:0x0145 A[EXC_TOP_SPLITTER, SYNTHETIC] */
+    /* JADX WARN: Found duplicated region for block: B:55:0x012a */
+    /* JADX WARN: Found duplicated region for block: B:57:0x0144 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:73:0x0145 A[EXC_TOP_SPLITTER,
+     * SYNTHETIC]
+     */
     private final RealConnection findConnection(int i, int i2, int i3, int i4, boolean z) throws IOException {
         List<Route> routes;
         RealConnection realConnection;
@@ -56,7 +60,10 @@ public final class ExchangeFinder {
         if (connection != null) {
             synchronized (connection) {
                 try {
-                    socketReleaseConnectionNoEvents$okhttp = (connection.getNoNewExchanges() || !sameHostAndPort(connection.route().address().url())) ? this.call.releaseConnectionNoEvents$okhttp() : null;
+                    socketReleaseConnectionNoEvents$okhttp = (connection.getNoNewExchanges()
+                            || !sameHostAndPort(connection.route().address().url()))
+                                    ? this.call.releaseConnectionNoEvents$okhttp()
+                                    : null;
                 } catch (Throwable th) {
                     throw th;
                 }
@@ -77,7 +84,7 @@ public final class ExchangeFinder {
         this.otherFailureCount = 0;
         if (this.connectionPool.callAcquirePooledConnection(this.address, this.call, null, false)) {
             RealConnection connection2 = this.call.getConnection();
-            bzo.n(connection2);
+            throwIfVar1IsNull(connection2);
             this.eventListener.connectionAcquired(this.call, connection2);
             return connection2;
         }
@@ -86,10 +93,10 @@ public final class ExchangeFinder {
             if (next == null) {
                 RouteSelector.Selection selection = this.routeSelection;
                 if (selection != null) {
-                    bzo.n(selection);
+                    throwIfVar1IsNull(selection);
                     if (selection.hasNext()) {
                         RouteSelector.Selection selection2 = this.routeSelection;
-                        bzo.n(selection2);
+                        throwIfVar1IsNull(selection2);
                         next = selection2.next();
                     }
                     realConnection = new RealConnection(this.connectionPool, next);
@@ -106,7 +113,7 @@ public final class ExchangeFinder {
                         return realConnection;
                     }
                     RealConnection connection3 = this.call.getConnection();
-                    bzo.n(connection3);
+                    throwIfVar1IsNull(connection3);
                     this.nextRouteToTry = next;
                     Util.closeQuietly(realConnection.socket());
                     this.eventListener.connectionAcquired(this.call, connection3);
@@ -114,7 +121,8 @@ public final class ExchangeFinder {
                 }
                 RouteSelector routeSelector = this.routeSelector;
                 if (routeSelector == null) {
-                    routeSelector = new RouteSelector(this.address, this.call.getClient().getRouteDatabase(), this.call, this.eventListener);
+                    routeSelector = new RouteSelector(this.address, this.call.getClient().getRouteDatabase(), this.call,
+                            this.eventListener);
                     this.routeSelector = routeSelector;
                 }
                 RouteSelector.Selection next2 = routeSelector.next();
@@ -125,7 +133,7 @@ public final class ExchangeFinder {
                 }
                 if (this.connectionPool.callAcquirePooledConnection(this.address, this.call, routes, false)) {
                     RealConnection connection4 = this.call.getConnection();
-                    bzo.n(connection4);
+                    throwIfVar1IsNull(connection4);
                     this.eventListener.connectionAcquired(this.call, connection4);
                     return connection4;
                 }
@@ -144,13 +152,13 @@ public final class ExchangeFinder {
                     }
                 }
                 RealConnection connection32 = this.call.getConnection();
-                bzo.n(connection32);
+                throwIfVar1IsNull(connection32);
                 this.nextRouteToTry = next;
                 Util.closeQuietly(realConnection.socket());
                 this.eventListener.connectionAcquired(this.call, connection32);
                 return connection32;
             }
-            bzo.n(next);
+            throwIfVar1IsNull(next);
             this.nextRouteToTry = null;
             realConnection.connect(i, i2, i3, i4, z, this.call, this.eventListener);
             this.call.setConnectionToCancel(null);
@@ -164,7 +172,7 @@ public final class ExchangeFinder {
                 }
             }
             RealConnection connection322 = this.call.getConnection();
-            bzo.n(connection322);
+            throwIfVar1IsNull(connection322);
             this.nextRouteToTry = next;
             Util.closeQuietly(realConnection.socket());
             this.eventListener.connectionAcquired(this.call, connection322);
@@ -178,7 +186,8 @@ public final class ExchangeFinder {
         this.call.setConnectionToCancel(realConnection);
     }
 
-    private final RealConnection findHealthyConnection(int i, int i2, int i3, int i4, boolean z, boolean z2) throws IOException {
+    private final RealConnection findHealthyConnection(int i, int i2, int i3, int i4, boolean z, boolean z2)
+            throws IOException {
         while (true) {
             RealConnection realConnectionFindConnection = findConnection(i, i2, i3, i4, z);
             boolean z3 = z;
@@ -211,7 +220,8 @@ public final class ExchangeFinder {
 
     private final Route retryRoute() {
         RealConnection connection;
-        if (this.refusedStreamCount > 1 || this.connectionShutdownCount > 1 || this.otherFailureCount > 0 || (connection = this.call.getConnection()) == null) {
+        if (this.refusedStreamCount > 1 || this.connectionShutdownCount > 1 || this.otherFailureCount > 0
+                || (connection = this.call.getConnection()) == null) {
             return null;
         }
         synchronized (connection) {
@@ -226,8 +236,8 @@ public final class ExchangeFinder {
     }
 
     public final ExchangeCodec find(OkHttpClient okHttpClient, RealInterceptorChain realInterceptorChain) {
-        bzo.q(okHttpClient, "client");
-        bzo.q(realInterceptorChain, "chain");
+        throwIfVar1IsNull(okHttpClient, "client");
+        throwIfVar1IsNull(realInterceptorChain, "chain");
         try {
         } catch (IOException e) {
             e = e;
@@ -235,7 +245,12 @@ public final class ExchangeFinder {
             e = e2;
         }
         try {
-            return findHealthyConnection(realInterceptorChain.getConnectTimeoutMillis$okhttp(), realInterceptorChain.getReadTimeoutMillis$okhttp(), realInterceptorChain.getWriteTimeoutMillis$okhttp(), okHttpClient.pingIntervalMillis(), okHttpClient.retryOnConnectionFailure(), !bzo.f(realInterceptorChain.getRequest$okhttp().method(), "GET")).newCodec$okhttp(okHttpClient, realInterceptorChain);
+            return findHealthyConnection(realInterceptorChain.getConnectTimeoutMillis$okhttp(),
+                    realInterceptorChain.getReadTimeoutMillis$okhttp(),
+                    realInterceptorChain.getWriteTimeoutMillis$okhttp(), okHttpClient.pingIntervalMillis(),
+                    okHttpClient.retryOnConnectionFailure(),
+                    !nullSafeIsEqual(realInterceptorChain.getRequest$okhttp().method(), "GET"))
+                    .newCodec$okhttp(okHttpClient, realInterceptorChain);
         } catch (IOException e3) {
             e = e3;
             IOException iOException = e;
@@ -274,15 +289,16 @@ public final class ExchangeFinder {
     }
 
     public final boolean sameHostAndPort(HttpUrl httpUrl) {
-        bzo.q(httpUrl, "url");
+        throwIfVar1IsNull(httpUrl, "url");
         HttpUrl httpUrlUrl = this.address.url();
-        return httpUrl.port() == httpUrlUrl.port() && bzo.f(httpUrl.host(), httpUrlUrl.host());
+        return httpUrl.port() == httpUrlUrl.port() && nullSafeIsEqual(httpUrl.host(), httpUrlUrl.host());
     }
 
     public final void trackFailure(IOException iOException) {
-        bzo.q(iOException, "e");
+        throwIfVar1IsNull(iOException, "e");
         this.nextRouteToTry = null;
-        if ((iOException instanceof StreamResetException) && ((StreamResetException) iOException).errorCode == ErrorCode.REFUSED_STREAM) {
+        if ((iOException instanceof StreamResetException)
+                && ((StreamResetException) iOException).errorCode == ErrorCode.REFUSED_STREAM) {
             this.refusedStreamCount++;
         } else if (iOException instanceof ConnectionShutdownException) {
             this.connectionShutdownCount++;

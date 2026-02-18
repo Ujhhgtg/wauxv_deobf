@@ -72,22 +72,28 @@ public class LinearLayoutManager extends czg implements czs {
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:102:0x01ab  */
-    /* JADX WARN: Found duplicated region for block: B:104:0x01ae  */
-    /* JADX WARN: Found duplicated region for block: B:111:0x01d9  */
-    /* JADX WARN: Found duplicated region for block: B:114:0x01e0  */
-    /* JADX WARN: Found duplicated region for block: B:118:0x01f3  */
-    /* JADX WARN: Found duplicated region for block: B:122:0x0213 A[ADDED_TO_REGION] */
-    /* JADX WARN: Found duplicated region for block: B:124:0x0217  */
-    /* JADX WARN: Found duplicated region for block: B:126:0x021a A[ADDED_TO_REGION] */
-    /* JADX WARN: Found duplicated region for block: B:128:0x021e  */
-    /* JADX WARN: Found duplicated region for block: B:130:0x0221 A[ADDED_TO_REGION] */
-    /* JADX WARN: Found duplicated region for block: B:131:0x0223  */
-    /* JADX WARN: Found duplicated region for block: B:133:0x0227  */
-    /* JADX WARN: Found duplicated region for block: B:135:0x022b  */
-    /* JADX WARN: Found duplicated region for block: B:137:0x0232  */
-    /* JADX WARN: Found duplicated region for block: B:138:0x0238  */
-    /* JADX WARN: Found duplicated region for block: B:95:0x0194  */
+    /* JADX WARN: Found duplicated region for block: B:102:0x01ab */
+    /* JADX WARN: Found duplicated region for block: B:104:0x01ae */
+    /* JADX WARN: Found duplicated region for block: B:111:0x01d9 */
+    /* JADX WARN: Found duplicated region for block: B:114:0x01e0 */
+    /* JADX WARN: Found duplicated region for block: B:118:0x01f3 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:122:0x0213 A[ADDED_TO_REGION]
+     */
+    /* JADX WARN: Found duplicated region for block: B:124:0x0217 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:126:0x021a A[ADDED_TO_REGION]
+     */
+    /* JADX WARN: Found duplicated region for block: B:128:0x021e */
+    /*
+     * JADX WARN: Found duplicated region for block: B:130:0x0221 A[ADDED_TO_REGION]
+     */
+    /* JADX WARN: Found duplicated region for block: B:131:0x0223 */
+    /* JADX WARN: Found duplicated region for block: B:133:0x0227 */
+    /* JADX WARN: Found duplicated region for block: B:135:0x022b */
+    /* JADX WARN: Found duplicated region for block: B:137:0x0232 */
+    /* JADX WARN: Found duplicated region for block: B:138:0x0238 */
+    /* JADX WARN: Found duplicated region for block: B:95:0x0194 */
     @Override // me.hd.wauxv.obf.czg
     public void ae(czo czoVar, czt cztVar) {
         View focusedChild;
@@ -126,7 +132,8 @@ public class LinearLayoutManager extends czg implements czs {
         this.be.a = false;
         de();
         RecyclerView recyclerView2 = this.dp;
-        if (recyclerView2 == null || (focusedChild = recyclerView2.getFocusedChild()) == null || ((ArrayList) this.f4do.e).contains(focusedChild)) {
+        if (recyclerView2 == null || (focusedChild = recyclerView2.getFocusedChild()) == null
+                || ((ArrayList) this.f4do.e).contains(focusedChild)) {
             focusedChild = null;
         }
         bvh bvhVar = this.bo;
@@ -136,7 +143,8 @@ public class LinearLayoutManager extends czg implements czs {
             if (cztVar.g || (i = this.bl) == -1) {
                 if (es() != 0) {
                     recyclerView = this.dp;
-                    if (recyclerView != null || (focusedChild2 = recyclerView.getFocusedChild()) == null || ((ArrayList) this.f4do.e).contains(focusedChild2)) {
+                    if (recyclerView != null || (focusedChild2 = recyclerView.getFocusedChild()) == null
+                            || ((ArrayList) this.f4do.e).contains(focusedChild2)) {
                     }
                     if (focusedChild2 != null) {
                         czhVar = (czh) focusedChild2.getLayoutParams();
@@ -149,7 +157,7 @@ public class LinearLayoutManager extends czg implements czs {
                             } else {
                                 bvhVar.g(viewAm, czg.el(viewAm));
                                 if (!cztVar.g && ak()) {
-                                    int iH3 = this.bf.h(viewAm);
+                                    int iH3 = this.bf.locateDex(viewAm);
                                     int iE = this.bf.e(viewAm);
                                     iN = this.bf.n();
                                     iJ = this.bf.j();
@@ -175,7 +183,7 @@ public class LinearLayoutManager extends czg implements czs {
                         } else {
                             bvhVar.g(viewAm, czg.el(viewAm));
                             if (!cztVar.g) {
-                                int iH32 = this.bf.h(viewAm);
+                                int iH32 = this.bf.locateDex(viewAm);
                                 int iE2 = this.bf.e(viewAm);
                                 iN = this.bf.n();
                                 iJ = this.bf.j();
@@ -218,7 +226,7 @@ public class LinearLayoutManager extends czg implements czs {
                             } else {
                                 bvhVar.g(viewAm, czg.el(viewAm));
                                 if (!cztVar.g) {
-                                    int iH322 = this.bf.h(viewAm);
+                                    int iH322 = this.bf.locateDex(viewAm);
                                     int iE22 = this.bf.e(viewAm);
                                     iN = this.bf.n();
                                     iJ = this.bf.j();
@@ -248,7 +256,7 @@ public class LinearLayoutManager extends czg implements czs {
                             } else {
                                 bvhVar.g(viewAm, czg.el(viewAm));
                                 if (!cztVar.g) {
-                                    int iH3222 = this.bf.h(viewAm);
+                                    int iH3222 = this.bf.locateDex(viewAm);
                                     int iE222 = this.bf.e(viewAm);
                                     iN = this.bf.n();
                                     iJ = this.bf.j();
@@ -279,7 +287,7 @@ public class LinearLayoutManager extends czg implements czs {
                         } else {
                             bvhVar.g(viewAm, czg.el(viewAm));
                             if (!cztVar.g) {
-                                int iH32222 = this.bf.h(viewAm);
+                                int iH32222 = this.bf.locateDex(viewAm);
                                 int iE2222 = this.bf.e(viewAm);
                                 iN = this.bf.n();
                                 iJ = this.bf.j();
@@ -326,7 +334,7 @@ public class LinearLayoutManager extends czg implements czs {
                         bvhVar.f();
                     } else if (this.bf.f(viewCa2) > this.bf.o()) {
                         bvhVar.f();
-                    } else if (this.bf.h(viewCa2) - this.bf.n() < 0) {
+                    } else if (this.bf.locateDex(viewCa2) - this.bf.n() < 0) {
                         bvhVar.c = this.bf.n();
                         bvhVar.d = false;
                     } else if (this.bf.j() - this.bf.e(viewCa2) < 0) {
@@ -338,7 +346,7 @@ public class LinearLayoutManager extends czg implements czs {
                             atb atbVar = this.bf;
                             iH = (Integer.MIN_VALUE == atbVar.a ? 0 : atbVar.o() - atbVar.a) + iE3;
                         } else {
-                            iH = this.bf.h(viewCa2);
+                            iH = this.bf.locateDex(viewCa2);
                         }
                         bvhVar.c = iH;
                     }
@@ -353,7 +361,8 @@ public class LinearLayoutManager extends czg implements czs {
                 }
             }
             bvhVar.e = true;
-        } else if (focusedChild != null && (this.bf.h(focusedChild) >= this.bf.j() || this.bf.e(focusedChild) <= this.bf.n())) {
+        } else if (focusedChild != null
+                && (this.bf.locateDex(focusedChild) >= this.bf.j() || this.bf.e(focusedChild) <= this.bf.n())) {
             bvhVar.h(focusedChild, czg.el(focusedChild));
         }
         bvj bvjVar = this.be;
@@ -369,7 +378,7 @@ public class LinearLayoutManager extends czg implements czs {
                 iJ2 = this.bf.j() - this.bf.e(viewCa);
                 iH2 = this.bm;
             } else {
-                iH2 = this.bf.h(viewCa) - this.bf.n();
+                iH2 = this.bf.locateDex(viewCa) - this.bf.n();
                 iJ2 = this.bm;
             }
             int i10 = iJ2 - iH2;
@@ -574,8 +583,8 @@ public class LinearLayoutManager extends czg implements czs {
         bpqVar.f(i, Math.max(0, bvjVar.g));
     }
 
-    /* JADX WARN: Found duplicated region for block: B:33:0x0075  */
-    /* JADX WARN: Found duplicated region for block: B:35:0x0079  */
+    /* JADX WARN: Found duplicated region for block: B:33:0x0075 */
+    /* JADX WARN: Found duplicated region for block: B:35:0x0079 */
     public View am(czo czoVar, czt cztVar, boolean z, boolean z2) {
         int i;
         int iEs;
@@ -600,7 +609,7 @@ public class LinearLayoutManager extends czg implements czs {
         while (iEs != i) {
             View viewEr = er(iEs);
             int iEl = czg.el(viewEr);
-            int iH = this.bf.h(viewEr);
+            int iH = this.bf.locateDex(viewEr);
             int iE = this.bf.e(viewEr);
             if (iEl >= 0 && iEl < iP) {
                 if (!((czh) viewEr.getLayoutParams()).c.af()) {
@@ -657,8 +666,14 @@ public class LinearLayoutManager extends czg implements czs {
         Rect rectDw = this.dp.dw(viewN);
         int i3 = rectDw.left + rectDw.right;
         int i4 = rectDw.top + rectDw.bottom;
-        int iEe = czg.ee(this.eb, this.dz, ew() + ev() + ((ViewGroup.MarginLayoutParams) czhVar2).leftMargin + ((ViewGroup.MarginLayoutParams) czhVar2).rightMargin + i3, ((ViewGroup.MarginLayoutParams) czhVar2).width, bu());
-        int iEe2 = czg.ee(this.ec, this.ea, eu() + ex() + ((ViewGroup.MarginLayoutParams) czhVar2).topMargin + ((ViewGroup.MarginLayoutParams) czhVar2).bottomMargin + i4, ((ViewGroup.MarginLayoutParams) czhVar2).height, bv());
+        int iEe = czg.ee(this.eb, this.dz,
+                ew() + ev() + ((ViewGroup.MarginLayoutParams) czhVar2).leftMargin
+                        + ((ViewGroup.MarginLayoutParams) czhVar2).rightMargin + i3,
+                ((ViewGroup.MarginLayoutParams) czhVar2).width, bu());
+        int iEe2 = czg.ee(this.ec, this.ea,
+                eu() + ex() + ((ViewGroup.MarginLayoutParams) czhVar2).topMargin
+                        + ((ViewGroup.MarginLayoutParams) czhVar2).bottomMargin + i4,
+                ((ViewGroup.MarginLayoutParams) czhVar2).height, bv());
         if (fk(viewN, iEe, iEe2, czhVar2)) {
             viewN.measure(iEe, iEe2);
         }
@@ -864,7 +879,7 @@ public class LinearLayoutManager extends czg implements czs {
         }
         View viewDa = da();
         bvkVar3.a = czg.el(viewDa);
-        bvkVar3.b = this.bf.h(viewDa) - this.bf.n();
+        bvkVar3.b = this.bf.locateDex(viewDa) - this.bf.n();
         return bvkVar3;
     }
 
@@ -944,7 +959,14 @@ public class LinearLayoutManager extends czg implements czs {
     }
 
     public final int co(int i) {
-        return i != 1 ? i != 2 ? i != 17 ? i != 33 ? i != 66 ? (i == 130 && this.bd == 1) ? 1 : Integer.MIN_VALUE : this.bd == 0 ? 1 : Integer.MIN_VALUE : this.bd == 1 ? -1 : Integer.MIN_VALUE : this.bd == 0 ? -1 : Integer.MIN_VALUE : (this.bd != 1 && db()) ? -1 : 1 : (this.bd != 1 && db()) ? 1 : -1;
+        return i != 1
+                ? i != 2 ? i != 17
+                        ? i != 33
+                                ? i != 66 ? (i == 130 && this.bd == 1) ? 1 : Integer.MIN_VALUE
+                                        : this.bd == 0 ? 1 : Integer.MIN_VALUE
+                                : this.bd == 1 ? -1 : Integer.MIN_VALUE
+                        : this.bd == 0 ? -1 : Integer.MIN_VALUE : (this.bd != 1 && db()) ? -1 : 1
+                : (this.bd != 1 && db()) ? 1 : -1;
     }
 
     public final void cp() {
@@ -1038,7 +1060,7 @@ public class LinearLayoutManager extends czg implements czs {
         if (i2 <= i && i2 >= i) {
             return er(i);
         }
-        if (this.bf.h(er(i)) < this.bf.n()) {
+        if (this.bf.locateDex(er(i)) < this.bf.n()) {
             i3 = 16644;
             i4 = 16388;
         } else {
@@ -1111,7 +1133,7 @@ public class LinearLayoutManager extends czg implements czs {
             if (this.bi) {
                 for (int i4 = 0; i4 < iEs; i4++) {
                     View viewEr = er(i4);
-                    if (this.bf.h(viewEr) < i3 || this.bf.q(viewEr) < i3) {
+                    if (this.bf.locateDex(viewEr) < i3 || this.bf.q(viewEr) < i3) {
                         dd(czoVar, 0, i4);
                         return;
                     }
@@ -1121,7 +1143,7 @@ public class LinearLayoutManager extends czg implements czs {
             int i5 = iEs - 1;
             for (int i6 = i5; i6 >= 0; i6--) {
                 View viewEr2 = er(i6);
-                if (this.bf.h(viewEr2) < i3 || this.bf.q(viewEr2) < i3) {
+                if (this.bf.locateDex(viewEr2) < i3 || this.bf.q(viewEr2) < i3) {
                     dd(czoVar, i5, i6);
                     return;
                 }
@@ -1214,7 +1236,7 @@ public class LinearLayoutManager extends czg implements czs {
 
     public final void dh(int i) {
         if (i != 0 && i != 1) {
-            throw new IllegalArgumentException(bjs.i(i, "invalid orientation:"));
+            throw new IllegalArgumentException(concatVar2Var1(i, "invalid orientation:"));
         }
         bt(null);
         if (i != this.bd || this.bf == null) {
@@ -1263,8 +1285,8 @@ public class LinearLayoutManager extends czg implements czs {
             int iEl2 = czg.el(viewDa);
             bvj bvjVar6 = this.be;
             bvjVar5.d = iEl2 + bvjVar6.e;
-            bvjVar6.b = this.bf.h(viewDa);
-            iN = (-this.bf.h(viewDa)) + this.bf.n();
+            bvjVar6.b = this.bf.locateDex(viewDa);
+            iN = (-this.bf.locateDex(viewDa)) + this.bf.n();
         }
         bvj bvjVar7 = this.be;
         bvjVar7.c = i2;
@@ -1330,7 +1352,8 @@ public class LinearLayoutManager extends czg implements czs {
             bvjVar.g = Integer.MIN_VALUE;
             bvjVar.a = false;
             cq(czoVar, bvjVar, cztVar, true);
-            View viewCv = iCo == -1 ? this.bi ? cv(es() - 1, -1) : cv(0, es()) : this.bi ? cv(0, es()) : cv(es() - 1, -1);
+            View viewCv = iCo == -1 ? this.bi ? cv(es() - 1, -1) : cv(0, es())
+                    : this.bi ? cv(0, es()) : cv(es() - 1, -1);
             View viewDa = iCo == -1 ? da() : cz();
             if (!viewDa.hasFocusable()) {
                 return viewCv;

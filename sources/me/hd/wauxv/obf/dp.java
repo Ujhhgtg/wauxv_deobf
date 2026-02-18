@@ -33,7 +33,7 @@ public final class dp implements Parcelable {
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        bzo.q(parcel, "dest");
+        throwIfVar1IsNull(parcel, "dest");
         parcel.writeInt(this.a);
         Intent intent = this.b;
         parcel.writeInt(intent == null ? 0 : 1);

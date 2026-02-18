@@ -54,7 +54,7 @@ public final class hr extends emn {
                 icVar2.al = null;
                 break;
             default:
-                ic icVar3 = (ic) ((io) obj).d;
+                ic icVar3 = (ic) ((DefaultConfig) obj).d;
                 icVar3.ai.setVisibility(8);
                 PopupWindow popupWindow = icVar3.aj;
                 if (popupWindow != null) {

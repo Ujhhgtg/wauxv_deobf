@@ -5,7 +5,7 @@ import java.io.Closeable;
 import java.io.EOFException;
 import java.util.List;
 import me.hd.wauxv.obf.avd;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cyl;
 import me.hd.wauxv.obf.dkz;
 import me.hd.wauxv.obf.rh;
@@ -31,11 +31,13 @@ public final class Response implements Closeable {
     private final Request request;
     private final long sentRequestAtMillis;
 
-    public Response(Request request, Protocol protocol, String str, int i, Handshake handshake, Headers headers, ResponseBody responseBody, Response response, Response response2, Response response3, long j, long j2, Exchange exchange) {
-        bzo.q(request, "request");
-        bzo.q(protocol, "protocol");
-        bzo.q(str, "message");
-        bzo.q(headers, "headers");
+    public Response(Request request, Protocol protocol, String str, int i, Handshake handshake, Headers headers,
+            ResponseBody responseBody, Response response, Response response2, Response response3, long j, long j2,
+            Exchange exchange) {
+        throwIfVar1IsNull(request, "request");
+        throwIfVar1IsNull(protocol, "protocol");
+        throwIfVar1IsNull(str, "message");
+        throwIfVar1IsNull(headers, "headers");
         this.request = request;
         this.protocol = protocol;
         this.message = str;
@@ -145,7 +147,7 @@ public final class Response implements Closeable {
     }
 
     public final String header(String str) {
-        bzo.q(str, "name");
+        throwIfVar1IsNull(str, "name");
         return header$default(this, str, null, 2, null);
     }
 
@@ -208,7 +210,7 @@ public final class Response implements Closeable {
 
     public final ResponseBody peekBody(long j) throws EOFException {
         ResponseBody responseBody = this.body;
-        bzo.n(responseBody);
+        throwIfVar1IsNull(responseBody);
         cyl cylVarPeek = responseBody.source().peek();
         rh rhVar = new rh();
         cylVarPeek.x(j);
@@ -244,7 +246,8 @@ public final class Response implements Closeable {
     }
 
     public String toString() {
-        return "Response{protocol=" + this.protocol + ", code=" + this.code + ", message=" + this.message + ", url=" + this.request.url() + '}';
+        return "Response{protocol=" + this.protocol + ", code=" + this.code + ", message=" + this.message + ", url="
+                + this.request.url() + '}';
     }
 
     public final Headers trailers() {
@@ -256,17 +259,20 @@ public final class Response implements Closeable {
     }
 
     public final String header(String str, String str2) {
-        bzo.q(str, "name");
+        throwIfVar1IsNull(str, "name");
         String str3 = this.headers.get(str);
         return str3 == null ? str2 : str3;
     }
 
     public final List<String> headers(String str) {
-        bzo.q(str, "name");
+        throwIfVar1IsNull(str, "name");
         return this.headers.values(str);
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class Builder {
         private ResponseBody body;
         private Response cacheResponse;
@@ -311,8 +317,8 @@ public final class Response implements Closeable {
         }
 
         public Builder addHeader(String str, String str2) {
-            bzo.q(str, "name");
-            bzo.q(str2, "value");
+            throwIfVar1IsNull(str, "name");
+            throwIfVar1IsNull(str2, "value");
             this.headers.add(str, str2);
             return this;
         }
@@ -337,7 +343,9 @@ public final class Response implements Closeable {
             }
             String str = this.message;
             if (str != null) {
-                return new Response(request, protocol, str, i, this.handshake, this.headers.build(), this.body, this.networkResponse, this.cacheResponse, this.priorResponse, this.sentRequestAtMillis, this.receivedResponseAtMillis, this.exchange);
+                return new Response(request, protocol, str, i, this.handshake, this.headers.build(), this.body,
+                        this.networkResponse, this.cacheResponse, this.priorResponse, this.sentRequestAtMillis,
+                        this.receivedResponseAtMillis, this.exchange);
             }
             throw new IllegalStateException("message == null");
         }
@@ -411,25 +419,25 @@ public final class Response implements Closeable {
         }
 
         public Builder header(String str, String str2) {
-            bzo.q(str, "name");
-            bzo.q(str2, "value");
+            throwIfVar1IsNull(str, "name");
+            throwIfVar1IsNull(str2, "value");
             this.headers.set(str, str2);
             return this;
         }
 
         public Builder headers(Headers headers) {
-            bzo.q(headers, "headers");
+            throwIfVar1IsNull(headers, "headers");
             this.headers = headers.newBuilder();
             return this;
         }
 
         public final void initExchange$okhttp(Exchange exchange) {
-            bzo.q(exchange, "deferredTrailers");
+            throwIfVar1IsNull(exchange, "deferredTrailers");
             this.exchange = exchange;
         }
 
         public Builder message(String str) {
-            bzo.q(str, "message");
+            throwIfVar1IsNull(str, "message");
             this.message = str;
             return this;
         }
@@ -447,7 +455,7 @@ public final class Response implements Closeable {
         }
 
         public Builder protocol(Protocol protocol) {
-            bzo.q(protocol, "protocol");
+            throwIfVar1IsNull(protocol, "protocol");
             this.protocol = protocol;
             return this;
         }
@@ -458,13 +466,13 @@ public final class Response implements Closeable {
         }
 
         public Builder removeHeader(String str) {
-            bzo.q(str, "name");
+            throwIfVar1IsNull(str, "name");
             this.headers.removeAll(str);
             return this;
         }
 
         public Builder request(Request request) {
-            bzo.q(request, "request");
+            throwIfVar1IsNull(request, "request");
             this.request = request;
             return this;
         }
@@ -495,7 +503,7 @@ public final class Response implements Closeable {
         }
 
         public final void setHeaders$okhttp(Headers.Builder builder) {
-            bzo.q(builder, "<set-?>");
+            throwIfVar1IsNull(builder, "<set-?>");
             this.headers = builder;
         }
 
@@ -528,7 +536,7 @@ public final class Response implements Closeable {
         }
 
         public Builder(Response response) {
-            bzo.q(response, "response");
+            throwIfVar1IsNull(response, "response");
             this.code = -1;
             this.request = response.request();
             this.protocol = response.protocol();

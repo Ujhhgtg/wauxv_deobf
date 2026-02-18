@@ -13,7 +13,10 @@ public interface NamingStrategy {
     public static final String BYTE_BUDDY_RENAME_PACKAGE = "net.bytebuddy.renamed";
     public static final String NO_PREFIX = "";
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static abstract class AbstractBase implements NamingStrategy {
         public abstract String name(TypeDescription typeDescription);
 
@@ -33,7 +36,10 @@ public interface NamingStrategy {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @HashCodeAndEqualsPlugin.Enhance
     public static class PrefixingRandom extends AbstractBase {
         private final String prefix;
@@ -62,7 +68,10 @@ public interface NamingStrategy {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @HashCodeAndEqualsPlugin.Enhance
     public static class Suffixing extends AbstractBase {
         private static final String JAVA_PACKAGE = "java.";
@@ -70,10 +79,16 @@ public interface NamingStrategy {
         private final String javaLangPackagePrefix;
         private final String suffix;
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public interface BaseNameResolver {
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForFixedValue implements BaseNameResolver {
                 private final String name;
@@ -99,7 +114,10 @@ public interface NamingStrategy {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForGivenType implements BaseNameResolver {
                 private final TypeDescription typeDescription;
@@ -112,7 +130,8 @@ public interface NamingStrategy {
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.typeDescription.equals(((ForGivenType) obj).typeDescription);
+                    return obj != null && getClass() == obj.getClass()
+                            && this.typeDescription.equals(((ForGivenType) obj).typeDescription);
                 }
 
                 public int hashCode() {
@@ -125,7 +144,10 @@ public interface NamingStrategy {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum ForUnnamedType implements BaseNameResolver {
                 INSTANCE;
 
@@ -135,7 +157,10 @@ public interface NamingStrategy {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class WithCallerSuffix implements BaseNameResolver {
                 private final BaseNameResolver delegate;
@@ -148,7 +173,8 @@ public interface NamingStrategy {
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.delegate.equals(((WithCallerSuffix) obj).delegate);
+                    return obj != null && getClass() == obj.getClass()
+                            && this.delegate.equals(((WithCallerSuffix) obj).delegate);
                 }
 
                 public int hashCode() {
@@ -177,9 +203,11 @@ public interface NamingStrategy {
                         i++;
                     }
                     if (str == null) {
-                        throw new IllegalStateException(bjs.l(ByteBuddy.class, "Base name resolver not invoked via "));
+                        throw new IllegalStateException(
+                                concatVar2Var1(ByteBuddy.class, "Base name resolver not invoked via "));
                     }
-                    return this.delegate.resolve(typeDescription) + "$" + str.replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '$');
+                    return this.delegate.resolve(typeDescription) + "$"
+                            + str.replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '$');
                 }
             }
 
@@ -198,11 +226,14 @@ public interface NamingStrategy {
                 return false;
             }
             Suffixing suffixing = (Suffixing) obj;
-            return this.suffix.equals(suffixing.suffix) && this.javaLangPackagePrefix.equals(suffixing.javaLangPackagePrefix) && this.baseNameResolver.equals(suffixing.baseNameResolver);
+            return this.suffix.equals(suffixing.suffix)
+                    && this.javaLangPackagePrefix.equals(suffixing.javaLangPackagePrefix)
+                    && this.baseNameResolver.equals(suffixing.baseNameResolver);
         }
 
         public int hashCode() {
-            return this.baseNameResolver.hashCode() + bjs.e(this.javaLangPackagePrefix, bjs.e(this.suffix, getClass().hashCode() * 31, 31), 31);
+            return this.baseNameResolver.hashCode()
+                    + bjs.e(this.javaLangPackagePrefix, bjs.e(this.suffix, getClass().hashCode() * 31, 31), 31);
         }
 
         @Override // net.bytebuddy.NamingStrategy.AbstractBase
@@ -211,7 +242,7 @@ public interface NamingStrategy {
             if (strResolve.startsWith(JAVA_PACKAGE) && !this.javaLangPackagePrefix.equals("")) {
                 strResolve = this.javaLangPackagePrefix + "." + strResolve;
             }
-            StringBuilder sbR = bjs.r(strResolve, "$");
+            StringBuilder sbR = concat(strResolve, "$");
             sbR.append(this.suffix);
             return sbR.toString();
         }
@@ -231,21 +262,31 @@ public interface NamingStrategy {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @HashCodeAndEqualsPlugin.Enhance
     public static class SuffixingRandom extends Suffixing {
 
         @HashCodeAndEqualsPlugin.ValueHandling(HashCodeAndEqualsPlugin.ValueHandling.Sort.IGNORE)
         private final RandomString randomString;
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @Deprecated
         public interface BaseNameResolver extends Suffixing.BaseNameResolver {
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             @Deprecated
-            public static class ForFixedValue extends Suffixing.BaseNameResolver.ForFixedValue implements BaseNameResolver {
+            public static class ForFixedValue extends Suffixing.BaseNameResolver.ForFixedValue
+                    implements BaseNameResolver {
                 public ForFixedValue(String str) {
                     super(str);
                 }
@@ -267,10 +308,14 @@ public interface NamingStrategy {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             @Deprecated
-            public static class ForGivenType extends Suffixing.BaseNameResolver.ForGivenType implements BaseNameResolver {
+            public static class ForGivenType extends Suffixing.BaseNameResolver.ForGivenType
+                    implements BaseNameResolver {
                 public ForGivenType(TypeDescription typeDescription) {
                     super(typeDescription);
                 }
@@ -292,7 +337,10 @@ public interface NamingStrategy {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @Deprecated
             public enum ForUnnamedType implements BaseNameResolver {
                 INSTANCE;
@@ -324,7 +372,8 @@ public interface NamingStrategy {
             return super.hashCode();
         }
 
-        @Override // net.bytebuddy.NamingStrategy.Suffixing, net.bytebuddy.NamingStrategy.AbstractBase
+        @Override // net.bytebuddy.NamingStrategy.Suffixing,
+                  // net.bytebuddy.NamingStrategy.AbstractBase
         public String name(TypeDescription typeDescription) {
             return super.name(typeDescription) + "$" + this.randomString.nextString();
         }
@@ -356,7 +405,8 @@ public interface NamingStrategy {
             this(str, (Suffixing.BaseNameResolver) baseNameResolver, str2, randomString);
         }
 
-        public SuffixingRandom(String str, Suffixing.BaseNameResolver baseNameResolver, String str2, RandomString randomString) {
+        public SuffixingRandom(String str, Suffixing.BaseNameResolver baseNameResolver, String str2,
+                RandomString randomString) {
             super(str, baseNameResolver, str2);
             this.randomString = randomString;
         }

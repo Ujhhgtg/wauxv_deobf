@@ -24,7 +24,10 @@ class Name implements Serializable {
     public NameSpace namespace;
     String value;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class Parts {
         private static final Map<String, Parts> PARTSCACHE = new WeakHashMap();
         public final int count;
@@ -109,7 +112,8 @@ class Name implements Serializable {
         return obj;
     }
 
-    private Object consumeNextObjectField(CallStack callStack, Interpreter interpreter, boolean z, boolean z2) throws UtilEvalError {
+    private Object consumeNextObjectField(CallStack callStack, Interpreter interpreter, boolean z, boolean z2)
+            throws UtilEvalError {
         Name name;
         CallStack callStack2;
         Interpreter interpreter2;
@@ -122,7 +126,8 @@ class Name implements Serializable {
             name = this;
             callStack2 = callStack;
             interpreter2 = interpreter;
-            Object objResolveThisFieldReference2 = name.resolveThisFieldReference(callStack2, this.namespace, interpreter2, this.evalName, false);
+            Object objResolveThisFieldReference2 = name.resolveThisFieldReference(callStack2, this.namespace,
+                    interpreter2, this.evalName, false);
             if (objResolveThisFieldReference2 != Primitive.VOID) {
                 return completeRound(name.evalName, FINISHED, objResolveThisFieldReference2);
             }
@@ -131,11 +136,13 @@ class Name implements Serializable {
         Object obj = name.evalBaseObject;
         if ((obj == null || (obj instanceof This)) && !z) {
             if (obj == null) {
-                objResolveThisFieldReference = name.resolveThisFieldReference(callStack2, name.namespace, interpreter2, strPrefix, false);
+                objResolveThisFieldReference = name.resolveThisFieldReference(callStack2, name.namespace, interpreter2,
+                        strPrefix, false);
                 name = this;
             } else {
                 name = this;
-                objResolveThisFieldReference = name.resolveThisFieldReference(callStack2, ((This) obj).namespace, interpreter2, strPrefix, true);
+                objResolveThisFieldReference = name.resolveThisFieldReference(callStack2, ((This) obj).namespace,
+                        interpreter2, strPrefix, true);
             }
             if (objResolveThisFieldReference != Primitive.VOID) {
                 return completeRound(strPrefix, suffix(name.evalName), objResolveThisFieldReference);
@@ -147,7 +154,8 @@ class Name implements Serializable {
             int i = 1;
             Class<?> cls = null;
             String strPrefix2 = null;
-            while (i <= countParts(name.evalName) && (cls = name.namespace.getClass((strPrefix2 = prefix(name.evalName, i)))) == null) {
+            while (i <= countParts(name.evalName)
+                    && (cls = name.namespace.getClass((strPrefix2 = prefix(name.evalName, i)))) == null) {
                 i++;
             }
             if (cls != null) {
@@ -185,12 +193,15 @@ class Name implements Serializable {
             String strPrefix3 = prefix(name.evalName, 1);
             Interpreter.mainSecurityGuard.canGetField(name.evalBaseObject, strPrefix3);
             if (strPrefix3.equals("length") && name.evalBaseObject.getClass().isArray()) {
-                return completeRound(strPrefix3, suffix(name.evalName), new Primitive(Array.getLength(name.evalBaseObject)));
+                return completeRound(strPrefix3, suffix(name.evalName),
+                        new Primitive(Array.getLength(name.evalBaseObject)));
             }
             try {
-                return completeRound(strPrefix3, suffix(name.evalName), Reflect.getObjectFieldValue(name.evalBaseObject, strPrefix3));
+                return completeRound(strPrefix3, suffix(name.evalName),
+                        Reflect.getObjectFieldValue(name.evalBaseObject, strPrefix3));
             } catch (ReflectError unused) {
-                return completeRound(strPrefix3, suffix(name.evalName), Reflect.getObjectProperty(name.evalBaseObject, strPrefix3));
+                return completeRound(strPrefix3, suffix(name.evalName),
+                        Reflect.getObjectProperty(name.evalBaseObject, strPrefix3));
             }
         }
         Class<?> targetClass = ((ClassIdentifier) obj2).getTargetClass();
@@ -202,7 +213,7 @@ class Name implements Serializable {
                     return completeRound(strPrefix4, suffix(name.evalName), parent.classInstance);
                 }
             }
-            throw new UtilEvalError(bjs.l(targetClass, "Can't find enclosing 'this' instance of class: "));
+            throw new UtilEvalError(concatVar2Var1(targetClass, "Can't find enclosing 'this' instance of class: "));
         }
         Interpreter.mainSecurityGuard.canGetStaticField(targetClass, strPrefix4);
         try {
@@ -213,8 +224,10 @@ class Name implements Serializable {
         }
         if (objectProperty == null) {
             Class<?> cls2 = name.namespace.getClass(targetClass.getName() + "$" + strPrefix4);
-            if (name.namespace.classInstance == null && Reflect.isGeneratedClass(cls2) && !Reflect.getClassModifiers(cls2).hasModifier("static")) {
-                throw new UtilEvalError("an enclosing instance that contains " + targetClass.getName() + "." + strPrefix4 + " is required");
+            if (name.namespace.classInstance == null && Reflect.isGeneratedClass(cls2)
+                    && !Reflect.getClassModifiers(cls2).hasModifier("static")) {
+                throw new UtilEvalError("an enclosing instance that contains " + targetClass.getName() + "."
+                        + strPrefix4 + " is required");
             }
             if (cls2 != null) {
                 objectProperty = new ClassIdentifier(cls2);
@@ -246,7 +259,8 @@ class Name implements Serializable {
         return null;
     }
 
-    private Object invokeLocalMethod(Interpreter interpreter, Object[] objArr, CallStack callStack, Node node) throws EvalError {
+    private Object invokeLocalMethod(Interpreter interpreter, Object[] objArr, CallStack callStack, Node node)
+            throws EvalError {
         Interpreter.debug("invokeLocalMethod: ", this.value);
         if (interpreter == null) {
             throw new InterpreterError("invokeLocalMethod: interpreter = null");
@@ -261,7 +275,10 @@ class Name implements Serializable {
                     return this.namespace.invokeCommand(str, objArr, interpreter, callStack, node);
                 }
                 NameSpace nameSpace = this.namespace;
-                return method.invoke(objArr, interpreter, callStack, node, (nameSpace.isMethod || method.isScriptedObject || !nameSpace.isChildOf(method.declaringNameSpace) || this.namespace.getParent().isClass || noOverride.matcher(method.getName()).matches()) ? false : true);
+                return method.invoke(objArr, interpreter, callStack, node,
+                        (nameSpace.isMethod || method.isScriptedObject
+                                || !nameSpace.isChildOf(method.declaringNameSpace) || this.namespace.getParent().isClass
+                                || noOverride.matcher(method.getName()).matches()) ? false : true);
             } catch (UtilEvalError e) {
                 throw e.toEvalError("Local method invocation", node, callStack);
             }
@@ -288,7 +305,8 @@ class Name implements Serializable {
         return suffix(str, countParts(str) - 1);
     }
 
-    public Object invokeMethod(Interpreter interpreter, Object[] objArr, CallStack callStack, Node node) throws UtilEvalError {
+    public Object invokeMethod(Interpreter interpreter, Object[] objArr, CallStack callStack, Node node)
+            throws UtilEvalError {
         NameSpace thisNS;
         BshMethod method;
         String strSuffix = suffix(this.value, 1);
@@ -311,13 +329,15 @@ class Name implements Serializable {
                 Object classInstance = classNameSpace.getClassInstance();
                 Class<?> cls2 = classNameSpace.classStatic;
                 Interpreter.mainSecurityGuard.canInvokeMethod(classInstance, strSuffix, objArr);
-                return ClassGenerator.getClassGenerator().invokeSuperclassMethod(classManager, classInstance, cls2, strSuffix, objArr);
+                return ClassGenerator.getClassGenerator().invokeSuperclassMethod(classManager, classInstance, cls2,
+                        strSuffix, objArr);
             }
         }
         Name nameResolver = pVar.getNameResolver(strPrefix);
         Object object = nameResolver.toObject(callStack, interpreter);
         if (object == Primitive.VOID) {
-            throw new UtilEvalError("Attempt to resolve method: " + strSuffix + "() on undefined variable or class name: " + nameResolver);
+            throw new UtilEvalError("Attempt to resolve method: " + strSuffix
+                    + "() on undefined variable or class name: " + nameResolver);
         }
         if (object instanceof ClassIdentifier) {
             Interpreter.debug("invokeMethod: trying static - ", nameResolver);
@@ -330,16 +350,19 @@ class Name implements Serializable {
             throw new UtilEvalError("invokeMethod: unknown target: " + nameResolver);
         }
         if ((object instanceof Primitive) && object == Primitive.NULL) {
-            throw new UtilTargetError(new NullPointerException("Null Pointer in Method Invocation of " + strSuffix + "() on variable: " + nameResolver));
+            throw new UtilTargetError(new NullPointerException(
+                    "Null Pointer in Method Invocation of " + strSuffix + "() on variable: " + nameResolver));
         }
-        if (object.getClass().isEnum() && (thisNS = Reflect.getThisNS(object)) != null && (method = thisNS.getMethod(strSuffix, Types.getTypes(objArr), true)) != null) {
+        if (object.getClass().isEnum() && (thisNS = Reflect.getThisNS(object)) != null
+                && (method = thisNS.getMethod(strSuffix, Types.getTypes(objArr), true)) != null) {
             return method.invoke(objArr, interpreter, callStack, node);
         }
         Interpreter.mainSecurityGuard.canInvokeMethod(object, strSuffix, objArr);
         return Reflect.invokeObjectMethod(object, strSuffix, objArr, interpreter, callStack, node);
     }
 
-    public Object resolveThisFieldReference(CallStack callStack, NameSpace nameSpace, Interpreter interpreter, String str, boolean z) throws UtilEvalError {
+    public Object resolveThisFieldReference(CallStack callStack, NameSpace nameSpace, Interpreter interpreter,
+            String str, boolean z) throws UtilEvalError {
         Object variable;
         if (str.equals("this")) {
             if (z) {
@@ -347,12 +370,16 @@ class Name implements Serializable {
             }
             This r7 = nameSpace.getThis(interpreter);
             NameSpace classNameSpace = getClassNameSpace(r7.getNameSpace());
-            return classNameSpace != null ? isCompound(this.evalName) ? classNameSpace.getThis(interpreter) : classNameSpace.getClassInstance() : r7;
+            return classNameSpace != null
+                    ? isCompound(this.evalName) ? classNameSpace.getThis(interpreter)
+                            : classNameSpace.getClassInstance()
+                    : r7;
         }
         if (str.equals("super")) {
             This r72 = nameSpace.getSuper(interpreter);
             NameSpace nameSpace2 = r72.getNameSpace();
-            return (nameSpace2.getParent() == null || !nameSpace2.getParent().isClass) ? r72 : nameSpace2.getSuper(interpreter);
+            return (nameSpace2.getParent() == null || !nameSpace2.getParent().isClass) ? r72
+                    : nameSpace2.getSuper(interpreter);
         }
         Object global = str.equals("global") ? nameSpace.getGlobal(interpreter) : null;
         if (global == null && z) {
@@ -460,16 +487,19 @@ class Name implements Serializable {
                 }
                 try {
                     if (objConsumeNextObjectField instanceof ClassIdentifier) {
-                        return Reflect.getLHSStaticField(((ClassIdentifier) objConsumeNextObjectField).getTargetClass(), this.evalName);
+                        return Reflect.getLHSStaticField(((ClassIdentifier) objConsumeNextObjectField).getTargetClass(),
+                                this.evalName);
                     }
                     return Reflect.getLHSObjectField(objConsumeNextObjectField, str2);
                 } catch (ReflectError unused) {
                     return new LHS(objConsumeNextObjectField, this.evalName);
                 }
             }
-            if (!str2.equals("namespace") && !this.evalName.equals("variables") && !this.evalName.equals("methods") && !this.evalName.equals("caller")) {
+            if (!str2.equals("namespace") && !this.evalName.equals("variables") && !this.evalName.equals("methods")
+                    && !this.evalName.equals("caller")) {
                 Interpreter.debug("found This reference evaluating LHS");
-                return new LHS(((This) objConsumeNextObjectField).namespace, this.evalName, !this.lastEvalName.equals("super"));
+                return new LHS(((This) objConsumeNextObjectField).namespace, this.evalName,
+                        !this.lastEvalName.equals("super"));
             }
             throw new UtilEvalError("Can't assign to special variable: " + this.evalName);
         } catch (Throwable th) {

@@ -40,13 +40,17 @@ public final class dey {
         if (!dey.class.equals(obj != null ? obj.getClass() : null)) {
             return false;
         }
-        bzo.o(obj, "null cannot be cast to non-null type io.github.rosemoe.sora.lang.completion.Scratch");
+        throwIfVar1IsNull(obj, "null cannot be cast to non-null type io.github.rosemoe.sora.lang.completion.Scratch");
         dey deyVar = (dey) obj;
-        return Arrays.equals(this.a, deyVar.a) && Arrays.equals(this.b, deyVar.b) && la._ai(this.c, deyVar.c) && la._ai(this.d, deyVar.d) && la._ai(this.e, deyVar.e);
+        return Arrays.equals(this.a, deyVar.a) && Arrays.equals(this.b, deyVar.b) && la._ai(this.c, deyVar.c)
+                && la._ai(this.d, deyVar.d) && la._ai(this.e, deyVar.e);
     }
 
     public final int hashCode() {
-        return Arrays.deepHashCode(this.e) + ((Arrays.deepHashCode(this.d) + ((Arrays.deepHashCode(this.c) + ((Arrays.hashCode(this.b) + (Arrays.hashCode(this.a) * 31)) * 31)) * 31)) * 31);
+        return Arrays.deepHashCode(this.e) + ((Arrays.deepHashCode(this.d)
+                + ((Arrays.deepHashCode(this.c) + ((Arrays.hashCode(this.b) + (Arrays.hashCode(this.a) * 31)) * 31))
+                        * 31))
+                * 31);
     }
 
     public final String toString() {

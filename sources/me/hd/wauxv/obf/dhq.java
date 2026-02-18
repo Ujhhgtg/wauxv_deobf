@@ -13,14 +13,14 @@ public class dhq {
     public int l;
 
     public dhq(int i) {
-        this.j = i == 0 ? bzo.a : new int[i];
-        this.k = i == 0 ? bzo.b : new Object[i << 1];
+        this.j = i == 0 ? KotlinHelpers.a : new int[i];
+        this.k = i == 0 ? KotlinHelpers.b : new Object[i << 1];
     }
 
     public void clear() {
         if (this.l > 0) {
-            this.j = bzo.a;
-            this.k = bzo.b;
+            this.j = KotlinHelpers.a;
+            this.k = KotlinHelpers.b;
             this.l = 0;
         }
         if (this.l > 0) {
@@ -139,10 +139,10 @@ public class dhq {
         } else {
             int i7 = i2 > 8 ? i2 + (i2 >> 1) : 8;
             int[] iArrCopyOf = Arrays.copyOf(iArr, i7);
-            bzo.p(iArrCopyOf, "copyOf(...)");
+            throwIfVar1IsNull(iArrCopyOf, "copyOf(...)");
             this.j = iArrCopyOf;
             Object[] objArrCopyOf = Arrays.copyOf(this.k, i7 << 1);
-            bzo.p(objArrCopyOf, "copyOf(...)");
+            throwIfVar1IsNull(objArrCopyOf, "copyOf(...)");
             this.k = objArrCopyOf;
             if (i2 != this.l) {
                 throw new ConcurrentModificationException();
@@ -224,10 +224,10 @@ public class dhq {
         int[] iArr = this.j;
         if (iArr.length < i) {
             int[] iArrCopyOf = Arrays.copyOf(iArr, i);
-            bzo.p(iArrCopyOf, "copyOf(...)");
+            throwIfVar1IsNull(iArrCopyOf, "copyOf(...)");
             this.j = iArrCopyOf;
             Object[] objArrCopyOf = Arrays.copyOf(this.k, i * 2);
-            bzo.p(objArrCopyOf, "copyOf(...)");
+            throwIfVar1IsNull(objArrCopyOf, "copyOf(...)");
             this.k = objArrCopyOf;
         }
         if (this.l != i2) {
@@ -240,19 +240,19 @@ public class dhq {
         if (i2 == 0) {
             return -1;
         }
-        int i3 = bzo.i(this.j, i2, i);
-        if (i3 < 0 || bzo.f(obj, this.k[i3 << 1])) {
+        int i3 = KotlinHelpers.i(this.j, i2, i);
+        if (i3 < 0 || nullSafeIsEqual(obj, this.k[i3 << 1])) {
             return i3;
         }
         int i4 = i3 + 1;
         while (i4 < i2 && this.j[i4] == i) {
-            if (bzo.f(obj, this.k[i4 << 1])) {
+            if (nullSafeIsEqual(obj, this.k[i4 << 1])) {
                 return i4;
             }
             i4++;
         }
         for (int i5 = i3 - 1; i5 >= 0 && this.j[i5] == i; i5--) {
-            if (bzo.f(obj, this.k[i5 << 1])) {
+            if (nullSafeIsEqual(obj, this.k[i5 << 1])) {
                 return i5;
             }
         }
@@ -284,10 +284,10 @@ public class dhq {
                 i4 = 4;
             }
             int[] iArrCopyOf = Arrays.copyOf(iArr, i4);
-            bzo.p(iArrCopyOf, "copyOf(...)");
+            throwIfVar1IsNull(iArrCopyOf, "copyOf(...)");
             this.j = iArrCopyOf;
             Object[] objArrCopyOf = Arrays.copyOf(this.k, i4 << 1);
-            bzo.p(objArrCopyOf, "copyOf(...)");
+            throwIfVar1IsNull(objArrCopyOf, "copyOf(...)");
             this.k = objArrCopyOf;
             if (i != this.l) {
                 throw new ConcurrentModificationException();
@@ -326,7 +326,7 @@ public class dhq {
         if (i == 0) {
             return -1;
         }
-        int i2 = bzo.i(this.j, i, 0);
+        int i2 = KotlinHelpers.i(this.j, i, 0);
         if (i2 < 0 || this.k[i2 << 1] == null) {
             return i2;
         }
@@ -416,13 +416,13 @@ public class dhq {
         }
         sb.append('}');
         String string = sb.toString();
-        bzo.p(string, "toString(...)");
+        throwIfVar1IsNull(string, "toString(...)");
         return string;
     }
 
     public final boolean remove(Object obj, Object obj2) {
         int iP = p(obj);
-        if (iP < 0 || !bzo.f(obj2, s(iP))) {
+        if (iP < 0 || !nullSafeIsEqual(obj2, s(iP))) {
             return false;
         }
         h(iP);
@@ -431,7 +431,7 @@ public class dhq {
 
     public final boolean replace(Object obj, Object obj2, Object obj3) {
         int iP = p(obj);
-        if (iP < 0 || !bzo.f(obj2, s(iP))) {
+        if (iP < 0 || !nullSafeIsEqual(obj2, s(iP))) {
             return false;
         }
         i(iP, obj3);

@@ -7,7 +7,7 @@ public final class cst extends dqc {
 
     @Override // me.hd.wauxv.obf.dqc
     public final int c(bbb bbbVar) {
-        bzo.q(bbbVar, "fbb");
+        throwIfVar1IsNull(bbbVar, "fbb");
         zb zbVar = this.a;
         int iC = zbVar != null ? zbVar.c(bbbVar) : 0;
         bbbVar.ab(2);

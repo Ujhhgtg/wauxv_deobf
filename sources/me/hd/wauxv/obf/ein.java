@@ -26,7 +26,8 @@ public final class ein {
             return false;
         }
         ein einVar = (ein) obj;
-        return bzo.f(this.a, einVar.a) && bzo.f(this.b, einVar.b) && bzo.f(this.c, einVar.c);
+        return nullSafeIsEqual(this.a, einVar.a) && nullSafeIsEqual(this.b, einVar.b)
+                && nullSafeIsEqual(this.c, einVar.c);
     }
 
     public final int hashCode() {

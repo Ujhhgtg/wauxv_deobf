@@ -19,7 +19,7 @@ public final class ecs {
         if (this == obj) {
             return true;
         }
-        return (obj instanceof ecs) && bzo.f(this.a, ((ecs) obj).a);
+        return (obj instanceof ecs) && nullSafeIsEqual(this.a, ((ecs) obj).a);
     }
 
     public final int hashCode() {
@@ -33,6 +33,6 @@ public final class ecs {
     public final String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("ol1Proto(audienceMode=" /* cnb.z(-249086628330282L) */);
-        return bjs.p(sb, this.a, ')');
+        return concat(sb, this.a, ')');
     }
 }

@@ -25,10 +25,12 @@ public final class egi {
     static {
         efq efqVar = new efq(2);
         btx btxVar = btx.a;
-        a = new btt[]{null, null, null, null, ewz.am(btxVar, efqVar), null, null, null, null, ewz.am(btxVar, new efq(3)), null, null, null, null};
+        a = new btt[] { null, null, null, null, ewz.am(btxVar, efqVar), null, null, null, null,
+                ewz.am(btxVar, new efq(3)), null, null, null, null };
     }
 
-    public /* synthetic */ egi(int i, String str, Long l, Integer num, Integer num2, List list, Integer num3, Long l2, Integer num4, Integer num5, List list2, Integer num6, eft eftVar, Integer num7, Boolean bool) {
+    public /* synthetic */ egi(int i, String str, Long l, Integer num, Integer num2, List list, Integer num3, Long l2,
+            Integer num4, Integer num5, List list2, Integer num6, eft eftVar, Integer num7, Boolean bool) {
         if (16383 != (i & 16383)) {
             bht.ah(i, 16383, egg.b.getDescriptor());
             throw null;
@@ -57,7 +59,13 @@ public final class egi {
             return false;
         }
         egi egiVar = (egi) obj;
-        return bzo.f(this.b, egiVar.b) && bzo.f(this.c, egiVar.c) && bzo.f(this.d, egiVar.d) && bzo.f(this.e, egiVar.e) && bzo.f(this.f, egiVar.f) && bzo.f(this.g, egiVar.g) && bzo.f(this.h, egiVar.h) && bzo.f(this.i, egiVar.i) && bzo.f(this.j, egiVar.j) && bzo.f(this.k, egiVar.k) && bzo.f(this.l, egiVar.l) && bzo.f(this.m, egiVar.m) && bzo.f(this.n, egiVar.n) && bzo.f(this.o, egiVar.o);
+        return nullSafeIsEqual(this.b, egiVar.b) && nullSafeIsEqual(this.c, egiVar.c)
+                && nullSafeIsEqual(this.d, egiVar.d) && nullSafeIsEqual(this.e, egiVar.e)
+                && nullSafeIsEqual(this.f, egiVar.f) && nullSafeIsEqual(this.g, egiVar.g)
+                && nullSafeIsEqual(this.h, egiVar.h) && nullSafeIsEqual(this.i, egiVar.i)
+                && nullSafeIsEqual(this.j, egiVar.j) && nullSafeIsEqual(this.k, egiVar.k)
+                && nullSafeIsEqual(this.l, egiVar.l) && nullSafeIsEqual(this.m, egiVar.m)
+                && nullSafeIsEqual(this.n, egiVar.n) && nullSafeIsEqual(this.o, egiVar.o);
     }
 
     public final int hashCode() {

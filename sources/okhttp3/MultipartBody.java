@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.nu;
 import me.hd.wauxv.obf.rh;
 import me.hd.wauxv.obf.rl;
@@ -35,7 +35,10 @@ public final class MultipartBody extends RequestBody {
     private final List<Part> parts;
     private final MediaType type;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Builder {
         private final sj boundary;
         private final List<Part> parts;
@@ -47,14 +50,14 @@ public final class MultipartBody extends RequestBody {
         }
 
         public final Builder addFormDataPart(String str, String str2) {
-            bzo.q(str, "name");
-            bzo.q(str2, "value");
+            throwIfVar1IsNull(str, "name");
+            throwIfVar1IsNull(str2, "value");
             addPart(Part.Companion.createFormData(str, str2));
             return this;
         }
 
         public final Builder addPart(RequestBody requestBody) {
-            bzo.q(requestBody, "body");
+            throwIfVar1IsNull(requestBody, "body");
             addPart(Part.Companion.create(requestBody));
             return this;
         }
@@ -67,8 +70,8 @@ public final class MultipartBody extends RequestBody {
         }
 
         public final Builder setType(MediaType mediaType) {
-            bzo.q(mediaType, f.y);
-            if (bzo.f(mediaType.type(), "multipart")) {
+            throwIfVar1IsNull(mediaType, f.y);
+            if (nullSafeIsEqual(mediaType.type(), "multipart")) {
                 this.type = mediaType;
                 return this;
             }
@@ -76,7 +79,7 @@ public final class MultipartBody extends RequestBody {
         }
 
         public Builder(String str) {
-            bzo.q(str, "boundary");
+            throwIfVar1IsNull(str, "boundary");
             sj sjVar = sj.a;
             this.boundary = nu.g(str);
             this.type = MultipartBody.MIXED;
@@ -84,20 +87,20 @@ public final class MultipartBody extends RequestBody {
         }
 
         public final Builder addFormDataPart(String str, String str2, RequestBody requestBody) {
-            bzo.q(str, "name");
-            bzo.q(requestBody, "body");
+            throwIfVar1IsNull(str, "name");
+            throwIfVar1IsNull(requestBody, "body");
             addPart(Part.Companion.createFormData(str, str2, requestBody));
             return this;
         }
 
         public final Builder addPart(Headers headers, RequestBody requestBody) {
-            bzo.q(requestBody, "body");
+            throwIfVar1IsNull(requestBody, "body");
             addPart(Part.Companion.create(headers, requestBody));
             return this;
         }
 
         public final Builder addPart(Part part) {
-            bzo.q(part, "part");
+            throwIfVar1IsNull(part, "part");
             this.parts.add(part);
             return this;
         }
@@ -106,21 +109,24 @@ public final class MultipartBody extends RequestBody {
         public /* synthetic */ Builder(String str, int i, akd akdVar) {
             if ((i & 1) != 0) {
                 str = UUID.randomUUID().toString();
-                bzo.p(str, "randomUUID().toString()");
+                throwIfVar1IsNull(str, "randomUUID().toString()");
             }
             this(str);
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
         }
 
         public final void appendQuotedString$okhttp(StringBuilder sb, String str) {
-            bzo.q(sb, "<this>");
-            bzo.q(str, "key");
+            throwIfVar1IsNull(sb, "<this>");
+            throwIfVar1IsNull(str, "key");
             sb.append('\"');
             int length = str.length();
             for (int i = 0; i < length; i++) {
@@ -142,34 +148,41 @@ public final class MultipartBody extends RequestBody {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Part {
         public static final Companion Companion = new Companion(null);
         private final RequestBody body;
         private final Headers headers;
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static final class Companion {
             public /* synthetic */ Companion(akd akdVar) {
                 this();
             }
 
             public final Part create(RequestBody requestBody) {
-                bzo.q(requestBody, "body");
+                throwIfVar1IsNull(requestBody, "body");
                 return create(null, requestBody);
             }
 
             public final Part createFormData(String str, String str2) {
-                bzo.q(str, "name");
-                bzo.q(str2, "value");
-                return createFormData(str, null, RequestBody.Companion.create$default(RequestBody.Companion, str2, (MediaType) null, 1, (Object) null));
+                throwIfVar1IsNull(str, "name");
+                throwIfVar1IsNull(str2, "value");
+                return createFormData(str, null, RequestBody.Companion.create$default(RequestBody.Companion, str2,
+                        (MediaType) null, 1, (Object) null));
             }
 
             private Companion() {
             }
 
             public final Part create(Headers headers, RequestBody requestBody) {
-                bzo.q(requestBody, "body");
+                throwIfVar1IsNull(requestBody, "body");
                 akd akdVar = null;
                 if ((headers != null ? headers.get("Content-Type") : null) != null) {
                     throw new IllegalArgumentException("Unexpected header: Content-Type");
@@ -181,8 +194,8 @@ public final class MultipartBody extends RequestBody {
             }
 
             public final Part createFormData(String str, String str2, RequestBody requestBody) {
-                bzo.q(str, "name");
-                bzo.q(requestBody, "body");
+                throwIfVar1IsNull(str, "name");
+                throwIfVar1IsNull(requestBody, "body");
                 StringBuilder sb = new StringBuilder();
                 sb.append("form-data; name=");
                 Companion companion = MultipartBody.Companion;
@@ -192,8 +205,9 @@ public final class MultipartBody extends RequestBody {
                     companion.appendQuotedString$okhttp(sb, str2);
                 }
                 String string = sb.toString();
-                bzo.p(string, "StringBuilder().apply(builderAction).toString()");
-                return create(new Headers.Builder().addUnsafeNonAscii("Content-Disposition", string).build(), requestBody);
+                throwIfVar1IsNull(string, "StringBuilder().apply(builderAction).toString()");
+                return create(new Headers.Builder().addUnsafeNonAscii("Content-Disposition", string).build(),
+                        requestBody);
             }
         }
 
@@ -246,15 +260,15 @@ public final class MultipartBody extends RequestBody {
         DIGEST = companion.get("multipart/digest");
         PARALLEL = companion.get("multipart/parallel");
         FORM = companion.get("multipart/form-data");
-        COLONSPACE = new byte[]{58, 32};
-        CRLF = new byte[]{dn.k, 10};
-        DASHDASH = new byte[]{45, 45};
+        COLONSPACE = new byte[] { 58, 32 };
+        CRLF = new byte[] { dn.k, 10 };
+        DASHDASH = new byte[] { 45, 45 };
     }
 
     public MultipartBody(sj sjVar, MediaType mediaType, List<Part> list) {
-        bzo.q(sjVar, "boundaryByteString");
-        bzo.q(mediaType, f.y);
-        bzo.q(list, "parts");
+        throwIfVar1IsNull(sjVar, "boundaryByteString");
+        throwIfVar1IsNull(mediaType, f.y);
+        throwIfVar1IsNull(list, "parts");
         this.boundaryByteString = sjVar;
         this.type = mediaType;
         this.parts = list;
@@ -277,7 +291,7 @@ public final class MultipartBody extends RequestBody {
             Part part = this.parts.get(i);
             Headers headers = part.headers();
             RequestBody requestBodyBody = part.body();
-            bzo.n(rlVar);
+            throwIfVar1IsNull(rlVar);
             rlVar.write(DASHDASH);
             rlVar.ae(this.boundaryByteString);
             rlVar.write(CRLF);
@@ -295,7 +309,7 @@ public final class MultipartBody extends RequestBody {
             if (jContentLength != -1) {
                 rlVar.q("Content-Length: ").ai(jContentLength).write(CRLF);
             } else if (z) {
-                bzo.n(rhVar);
+                throwIfVar1IsNull(rhVar);
                 rhVar.d();
                 return -1L;
             }
@@ -308,7 +322,7 @@ public final class MultipartBody extends RequestBody {
             }
             rlVar.write(bArr);
         }
-        bzo.n(rlVar);
+        throwIfVar1IsNull(rlVar);
         byte[] bArr2 = DASHDASH;
         rlVar.write(bArr2);
         rlVar.ae(this.boundaryByteString);
@@ -317,7 +331,7 @@ public final class MultipartBody extends RequestBody {
         if (!z) {
             return j;
         }
-        bzo.n(rhVar);
+        throwIfVar1IsNull(rhVar);
         long j2 = j + rhVar.b;
         rhVar.d();
         return j2;
@@ -377,7 +391,7 @@ public final class MultipartBody extends RequestBody {
 
     @Override // okhttp3.RequestBody
     public void writeTo(rl rlVar) throws EOFException {
-        bzo.q(rlVar, "sink");
+        throwIfVar1IsNull(rlVar, "sink");
         writeOrCountBytes(rlVar, false);
     }
 }

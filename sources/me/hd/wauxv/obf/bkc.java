@@ -14,8 +14,8 @@ public final class bkc {
         dal.a.getClass();
         b = new btc[]{cwbVar, new cwb(bkc.class, "ClientTransactionClass", "getClientTransactionClass()Ljava/lang/Class;")};
         a = new bkc();
-        c = zf.h("android.app.ActivityThread", null, 6);
-        d = zf.h("android.app.servertransaction.ClientTransaction", null, 6);
+        c = ReflectionWrapper.h("android.app.ActivityThread", null, 6);
+        d = ReflectionWrapper.h("android.app.servertransaction.ClientTransaction", null, 6);
         e = new dov(new amd(18));
     }
 }

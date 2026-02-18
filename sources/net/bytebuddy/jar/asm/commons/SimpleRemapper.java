@@ -20,11 +20,11 @@ public class SimpleRemapper extends Remapper {
     }
 
     private static /* synthetic */ String stringConcat$1(String str, String str2) {
-        return bjs.o(".", str, str2);
+        return concat(".", str, str2);
     }
 
     private static /* synthetic */ String stringConcat$2(String str, String str2) {
-        return bjs.o(".", str, str2);
+        return concat(".", str, str2);
     }
 
     private static /* synthetic */ String stringConcat$3(String str, String str2) {

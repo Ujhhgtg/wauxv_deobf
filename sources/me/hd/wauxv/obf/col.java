@@ -68,7 +68,8 @@ public final class col extends dbi {
             matrix.reset();
             float f3 = this.g;
             matrix.setScale(f3, f3);
-            matrix.postTranslate(cay.b((-this.s.getWidth()) * 10.0f, this.s.getWidth() * 10.0f), cay.b((-this.s.getHeight()) * 10.0f, this.s.getHeight() * 10.0f));
+            matrix.postTranslate(cay.tryGetClassByName((-this.s.getWidth()) * 10.0f, this.s.getWidth() * 10.0f),
+                    cay.tryGetClassByName((-this.s.getHeight()) * 10.0f, this.s.getHeight() * 10.0f));
             this.b.setLocalMatrix(matrix);
             this.h = System.currentTimeMillis();
         }

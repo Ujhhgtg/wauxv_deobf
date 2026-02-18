@@ -46,7 +46,8 @@ public final class ElementMatchers {
         throw new UnsupportedOperationException("This class is a utility class and not supposed to be instantiated");
     }
 
-    public static <T extends AnnotationDescription> ElementMatcher.Junction<T> annotationType(Class<? extends Annotation> cls) {
+    public static <T extends AnnotationDescription> ElementMatcher.Junction<T> annotationType(
+            Class<? extends Annotation> cls) {
         return annotationType(TypeDescription.ForLoadedType.of(cls));
     }
 
@@ -58,7 +59,8 @@ public final class ElementMatchers {
         return anyOf(Arrays.asList(objArr));
     }
 
-    public static <T> ElementMatcher.Junction<T> cached(ElementMatcher<? super T> elementMatcher, ConcurrentMap<? super T, Boolean> concurrentMap) {
+    public static <T> ElementMatcher.Junction<T> cached(ElementMatcher<? super T> elementMatcher,
+            ConcurrentMap<? super T, Boolean> concurrentMap) {
         return new CachingMatcher(elementMatcher, concurrentMap);
     }
 
@@ -66,15 +68,18 @@ public final class ElementMatchers {
         return canThrow(TypeDescription.ForLoadedType.of(cls));
     }
 
-    public static <T extends AnnotationSource> ElementMatcher.Junction<T> declaresAnnotation(ElementMatcher<? super AnnotationDescription> elementMatcher) {
+    public static <T extends AnnotationSource> ElementMatcher.Junction<T> declaresAnnotation(
+            ElementMatcher<? super AnnotationDescription> elementMatcher) {
         return new DeclaringAnnotationMatcher(new CollectionItemMatcher(elementMatcher));
     }
 
-    public static <T extends MethodDescription> ElementMatcher.Junction<T> declaresException(Class<? extends Throwable> cls) {
+    public static <T extends MethodDescription> ElementMatcher.Junction<T> declaresException(
+            Class<? extends Throwable> cls) {
         return declaresException(TypeDescription.ForLoadedType.of(cls));
     }
 
-    public static <T extends TypeDefinition> ElementMatcher.Junction<T> declaresField(ElementMatcher<? super FieldDescription> elementMatcher) {
+    public static <T extends TypeDefinition> ElementMatcher.Junction<T> declaresField(
+            ElementMatcher<? super FieldDescription> elementMatcher) {
         return new DeclaringFieldMatcher(new CollectionItemMatcher(elementMatcher));
     }
 
@@ -82,19 +87,23 @@ public final class ElementMatchers {
         return declaresGenericException(TypeDefinition.Sort.describe(type));
     }
 
-    public static <T extends TypeDefinition> ElementMatcher.Junction<T> declaresMethod(ElementMatcher<? super MethodDescription> elementMatcher) {
+    public static <T extends TypeDefinition> ElementMatcher.Junction<T> declaresMethod(
+            ElementMatcher<? super MethodDescription> elementMatcher) {
         return new DeclaringMethodMatcher(new CollectionItemMatcher(elementMatcher));
     }
 
-    public static <T extends FieldDescription> ElementMatcher.Junction<T> definedField(ElementMatcher<? super FieldDescription.InDefinedShape> elementMatcher) {
+    public static <T extends FieldDescription> ElementMatcher.Junction<T> definedField(
+            ElementMatcher<? super FieldDescription.InDefinedShape> elementMatcher) {
         return new DefinedShapeMatcher(elementMatcher);
     }
 
-    public static <T extends MethodDescription> ElementMatcher.Junction<T> definedMethod(ElementMatcher<? super MethodDescription.InDefinedShape> elementMatcher) {
+    public static <T extends MethodDescription> ElementMatcher.Junction<T> definedMethod(
+            ElementMatcher<? super MethodDescription.InDefinedShape> elementMatcher) {
         return new DefinedShapeMatcher(elementMatcher);
     }
 
-    public static <T extends ParameterDescription> ElementMatcher.Junction<T> definedParameter(ElementMatcher<? super ParameterDescription.InDefinedShape> elementMatcher) {
+    public static <T extends ParameterDescription> ElementMatcher.Junction<T> definedParameter(
+            ElementMatcher<? super ParameterDescription.InDefinedShape> elementMatcher) {
         return new DefinedShapeMatcher(elementMatcher);
     }
 
@@ -102,7 +111,8 @@ public final class ElementMatchers {
         return erasure(is((Type) cls));
     }
 
-    public static <T extends Iterable<? extends TypeDescription.Generic>> ElementMatcher.Junction<T> erasures(Class<?>... clsArr) {
+    public static <T extends Iterable<? extends TypeDescription.Generic>> ElementMatcher.Junction<T> erasures(
+            Class<?>... clsArr) {
         return erasures(new TypeList.ForLoadedTypes(clsArr));
     }
 
@@ -118,19 +128,23 @@ public final class ElementMatchers {
         return genericFieldType(TypeDefinition.Sort.describe(type));
     }
 
-    public static <T extends TypeDescription> ElementMatcher.Junction<T> hasAnnotation(ElementMatcher<? super AnnotationDescription> elementMatcher) {
+    public static <T extends TypeDescription> ElementMatcher.Junction<T> hasAnnotation(
+            ElementMatcher<? super AnnotationDescription> elementMatcher) {
         return new InheritedAnnotationMatcher(new CollectionItemMatcher(elementMatcher));
     }
 
-    public static <T extends ClassLoader> ElementMatcher.Junction<T> hasChild(ElementMatcher<? super ClassLoader> elementMatcher) {
+    public static <T extends ClassLoader> ElementMatcher.Junction<T> hasChild(
+            ElementMatcher<? super ClassLoader> elementMatcher) {
         return new ClassLoaderHierarchyMatcher(elementMatcher);
     }
 
-    public static <T extends TypeDescription> ElementMatcher.Junction<T> hasClassFileVersionAtLeast(ClassFileVersion classFileVersion) {
+    public static <T extends TypeDescription> ElementMatcher.Junction<T> hasClassFileVersionAtLeast(
+            ClassFileVersion classFileVersion) {
         return new ClassFileVersionMatcher(classFileVersion, false);
     }
 
-    public static <T extends TypeDescription> ElementMatcher.Junction<T> hasClassFileVersionAtMost(ClassFileVersion classFileVersion) {
+    public static <T extends TypeDescription> ElementMatcher.Junction<T> hasClassFileVersionAtMost(
+            ClassFileVersion classFileVersion) {
         return new ClassFileVersionMatcher(classFileVersion, true);
     }
 
@@ -138,39 +152,48 @@ public final class ElementMatchers {
         return new DescriptorMatcher(new StringMatcher(str, StringMatcher.Mode.EQUALS_FULLY));
     }
 
-    public static <T extends TypeDescription> ElementMatcher.Junction<T> hasGenericSuperClass(ElementMatcher<? super TypeDescription.Generic> elementMatcher) {
+    public static <T extends TypeDescription> ElementMatcher.Junction<T> hasGenericSuperClass(
+            ElementMatcher<? super TypeDescription.Generic> elementMatcher) {
         return new HasSuperClassMatcher(elementMatcher);
     }
 
-    public static <T extends TypeDescription> ElementMatcher.Junction<T> hasGenericSuperType(ElementMatcher<? super TypeDescription.Generic> elementMatcher) {
+    public static <T extends TypeDescription> ElementMatcher.Junction<T> hasGenericSuperType(
+            ElementMatcher<? super TypeDescription.Generic> elementMatcher) {
         return new HasSuperTypeMatcher(elementMatcher);
     }
 
-    public static <T extends ParameterDescription> ElementMatcher.Junction<T> hasGenericType(ElementMatcher<? super TypeDescription.Generic> elementMatcher) {
+    public static <T extends ParameterDescription> ElementMatcher.Junction<T> hasGenericType(
+            ElementMatcher<? super TypeDescription.Generic> elementMatcher) {
         return new MethodParameterTypeMatcher(elementMatcher);
     }
 
     public static <T extends MethodDescription> ElementMatcher.Junction<T> hasMethodName(String str) {
-        return MethodDescription.CONSTRUCTOR_INTERNAL_NAME.equals(str) ? isConstructor() : MethodDescription.TYPE_INITIALIZER_INTERNAL_NAME.equals(str) ? isTypeInitializer() : named(str);
+        return MethodDescription.CONSTRUCTOR_INTERNAL_NAME.equals(str) ? isConstructor()
+                : MethodDescription.TYPE_INITIALIZER_INTERNAL_NAME.equals(str) ? isTypeInitializer() : named(str);
     }
 
-    public static <T extends MethodDescription> ElementMatcher.Junction<T> hasParameters(ElementMatcher<? super Iterable<? extends ParameterDescription>> elementMatcher) {
+    public static <T extends MethodDescription> ElementMatcher.Junction<T> hasParameters(
+            ElementMatcher<? super Iterable<? extends ParameterDescription>> elementMatcher) {
         return new MethodParametersMatcher(elementMatcher);
     }
 
-    public static <T extends MethodDescription> ElementMatcher.Junction<T> hasSignature(MethodDescription.SignatureToken signatureToken) {
+    public static <T extends MethodDescription> ElementMatcher.Junction<T> hasSignature(
+            MethodDescription.SignatureToken signatureToken) {
         return new SignatureTokenMatcher(is(signatureToken));
     }
 
-    public static <T extends TypeDescription> ElementMatcher.Junction<T> hasSuperClass(ElementMatcher<? super TypeDescription> elementMatcher) {
+    public static <T extends TypeDescription> ElementMatcher.Junction<T> hasSuperClass(
+            ElementMatcher<? super TypeDescription> elementMatcher) {
         return hasGenericSuperClass(erasure(elementMatcher));
     }
 
-    public static <T extends TypeDescription> ElementMatcher.Junction<T> hasSuperType(ElementMatcher<? super TypeDescription> elementMatcher) {
+    public static <T extends TypeDescription> ElementMatcher.Junction<T> hasSuperType(
+            ElementMatcher<? super TypeDescription> elementMatcher) {
         return hasGenericSuperType(erasure(elementMatcher));
     }
 
-    public static <T extends ParameterDescription> ElementMatcher.Junction<T> hasType(ElementMatcher<? super TypeDescription> elementMatcher) {
+    public static <T extends ParameterDescription> ElementMatcher.Junction<T> hasType(
+            ElementMatcher<? super TypeDescription> elementMatcher) {
         return hasGenericType(erasure(elementMatcher));
     }
 
@@ -190,7 +213,8 @@ public final class ElementMatchers {
         return isAccessibleTo(TypeDescription.ForLoadedType.of(cls));
     }
 
-    public static <T extends AnnotationSource> ElementMatcher.Junction<T> isAnnotatedWith(Class<? extends Annotation> cls) {
+    public static <T extends AnnotationSource> ElementMatcher.Junction<T> isAnnotatedWith(
+            Class<? extends Annotation> cls) {
         return isAnnotatedWith(TypeDescription.ForLoadedType.of(cls));
     }
 
@@ -211,7 +235,8 @@ public final class ElementMatchers {
     }
 
     public static <T extends ClassLoader> ElementMatcher.Junction<T> isChildOf(@MaybeNull ClassLoader classLoader) {
-        return classLoader == ClassLoadingStrategy.BOOTSTRAP_LOADER ? BooleanMatcher.of(true) : hasChild(is(classLoader));
+        return classLoader == ClassLoadingStrategy.BOOTSTRAP_LOADER ? BooleanMatcher.of(true)
+                : hasChild(is(classLoader));
     }
 
     public static <T extends MethodDescription> ElementMatcher.Junction<T> isClone() {
@@ -247,7 +272,8 @@ public final class ElementMatchers {
     }
 
     public static <T extends MethodDescription> ElementMatcher.Junction<T> isEquals() {
-        return named("equals").and(takesArguments(TypeDescription.ForLoadedType.of(Object.class))).and(returns((Class<?>) Boolean.TYPE));
+        return named("equals").and(takesArguments(TypeDescription.ForLoadedType.of(Object.class)))
+                .and(returns((Class<?>) Boolean.TYPE));
     }
 
     public static <T extends ClassLoader> ElementMatcher.Junction<T> isExtensionClassLoader() {
@@ -272,7 +298,8 @@ public final class ElementMatchers {
     }
 
     public static <T extends MethodDescription> ElementMatcher.Junction<T> isGetter() {
-        return takesNoArguments().and(not(returns(TypeDescription.ForLoadedType.of(Void.TYPE)))).and(nameStartsWith("get").or(nameStartsWith("is").and(returnsGeneric(anyOf(Boolean.TYPE, Boolean.class)))));
+        return takesNoArguments().and(not(returns(TypeDescription.ForLoadedType.of(Void.TYPE)))).and(
+                nameStartsWith("get").or(nameStartsWith("is").and(returnsGeneric(anyOf(Boolean.TYPE, Boolean.class)))));
     }
 
     public static <T extends MethodDescription> ElementMatcher.Junction<T> isHashCode() {
@@ -316,7 +343,8 @@ public final class ElementMatchers {
     }
 
     public static <T extends ClassLoader> ElementMatcher.Junction<T> isParentOf(@MaybeNull ClassLoader classLoader) {
-        return classLoader == ClassLoadingStrategy.BOOTSTRAP_LOADER ? isBootstrapClassLoader() : new ClassLoaderParentMatcher(classLoader);
+        return classLoader == ClassLoadingStrategy.BOOTSTRAP_LOADER ? isBootstrapClassLoader()
+                : new ClassLoaderParentMatcher(classLoader);
     }
 
     public static <T extends TypeDefinition> ElementMatcher.Junction<T> isPrimitive() {
@@ -459,7 +487,8 @@ public final class ElementMatchers {
         return ofSort(is(sort));
     }
 
-    public static <T extends ClassLoader> ElementMatcher.Junction<T> ofType(ElementMatcher<? super TypeDescription> elementMatcher) {
+    public static <T extends ClassLoader> ElementMatcher.Junction<T> ofType(
+            ElementMatcher<? super TypeDescription> elementMatcher) {
         return new InstanceTypeMatcher(elementMatcher);
     }
 
@@ -499,15 +528,18 @@ public final class ElementMatchers {
         return new AnnotationTargetMatcher(elementType);
     }
 
-    public static <T> ElementMatcher.Junction<Iterable<? extends T>> whereAny(ElementMatcher<? super T> elementMatcher) {
+    public static <T> ElementMatcher.Junction<Iterable<? extends T>> whereAny(
+            ElementMatcher<? super T> elementMatcher) {
         return new CollectionItemMatcher(elementMatcher);
     }
 
-    public static <T> ElementMatcher.Junction<Iterable<? extends T>> whereNone(ElementMatcher<? super T> elementMatcher) {
+    public static <T> ElementMatcher.Junction<Iterable<? extends T>> whereNone(
+            ElementMatcher<? super T> elementMatcher) {
         return not(whereAny(elementMatcher));
     }
 
-    public static <T extends AnnotationDescription> ElementMatcher.Junction<T> annotationType(TypeDescription typeDescription) {
+    public static <T extends AnnotationDescription> ElementMatcher.Junction<T> annotationType(
+            TypeDescription typeDescription) {
         return annotationType(is(typeDescription));
     }
 
@@ -523,26 +555,36 @@ public final class ElementMatchers {
         if (i >= 1) {
             return new CachingMatcher.WithInlineEviction(elementMatcher, new ConcurrentHashMap(), i);
         }
-        throw new IllegalArgumentException(bjs.i(i, "Eviction size must be a positive number: "));
+        throw new IllegalArgumentException(concatVar2Var1(i, "Eviction size must be a positive number: "));
     }
 
     public static <T extends MethodDescription> ElementMatcher.Junction<T> canThrow(TypeDescription typeDescription) {
-        return (typeDescription.isAssignableTo(RuntimeException.class) || typeDescription.isAssignableTo(Error.class)) ? BooleanMatcher.of(true) : declaresGenericException(new CollectionItemMatcher(erasure(isSuperTypeOf(typeDescription))));
+        return (typeDescription.isAssignableTo(RuntimeException.class) || typeDescription.isAssignableTo(Error.class))
+                ? BooleanMatcher.of(true)
+                : declaresGenericException(new CollectionItemMatcher(erasure(isSuperTypeOf(typeDescription))));
     }
 
-    public static <T extends MethodDescription> ElementMatcher.Junction<T> declaresException(TypeDescription typeDescription) {
-        return typeDescription.isAssignableTo(Throwable.class) ? declaresGenericException(new CollectionItemMatcher(erasure(typeDescription))) : BooleanMatcher.of(false);
+    public static <T extends MethodDescription> ElementMatcher.Junction<T> declaresException(
+            TypeDescription typeDescription) {
+        return typeDescription.isAssignableTo(Throwable.class)
+                ? declaresGenericException(new CollectionItemMatcher(erasure(typeDescription)))
+                : BooleanMatcher.of(false);
     }
 
-    public static <T extends MethodDescription> ElementMatcher.Junction<T> declaresGenericException(TypeDescription.Generic generic) {
-        return (generic.getSort().isWildcard() || !generic.asErasure().isAssignableTo(Throwable.class)) ? BooleanMatcher.of(false) : declaresGenericException(new CollectionItemMatcher(is(generic)));
+    public static <T extends MethodDescription> ElementMatcher.Junction<T> declaresGenericException(
+            TypeDescription.Generic generic) {
+        return (generic.getSort().isWildcard() || !generic.asErasure().isAssignableTo(Throwable.class))
+                ? BooleanMatcher.of(false)
+                : declaresGenericException(new CollectionItemMatcher(is(generic)));
     }
 
-    public static <T extends TypeDescription.Generic> ElementMatcher.Junction<T> erasure(TypeDescription typeDescription) {
+    public static <T extends TypeDescription.Generic> ElementMatcher.Junction<T> erasure(
+            TypeDescription typeDescription) {
         return erasure(is(typeDescription));
     }
 
-    public static <T extends Iterable<? extends TypeDescription.Generic>> ElementMatcher.Junction<T> erasures(TypeDescription... typeDescriptionArr) {
+    public static <T extends Iterable<? extends TypeDescription.Generic>> ElementMatcher.Junction<T> erasures(
+            TypeDescription... typeDescriptionArr) {
         return erasures(Arrays.asList(typeDescriptionArr));
     }
 
@@ -550,11 +592,13 @@ public final class ElementMatchers {
         return fieldType(is(typeDescription));
     }
 
-    public static <T extends FieldDescription> ElementMatcher.Junction<T> genericFieldType(TypeDescription.Generic generic) {
+    public static <T extends FieldDescription> ElementMatcher.Junction<T> genericFieldType(
+            TypeDescription.Generic generic) {
         return genericFieldType(is(generic));
     }
 
-    public static <T extends TypeDescription> ElementMatcher.Junction<T> inheritsAnnotation(TypeDescription typeDescription) {
+    public static <T extends TypeDescription> ElementMatcher.Junction<T> inheritsAnnotation(
+            TypeDescription typeDescription) {
         return inheritsAnnotation(is(typeDescription));
     }
 
@@ -562,11 +606,13 @@ public final class ElementMatchers {
         return is((FieldDescription.InDefinedShape) new FieldDescription.ForLoadedField(field));
     }
 
-    public static <T extends ByteCodeElement> ElementMatcher.Junction<T> isAccessibleTo(TypeDescription typeDescription) {
+    public static <T extends ByteCodeElement> ElementMatcher.Junction<T> isAccessibleTo(
+            TypeDescription typeDescription) {
         return new AccessibilityMatcher(typeDescription);
     }
 
-    public static <T extends AnnotationSource> ElementMatcher.Junction<T> isAnnotatedWith(TypeDescription typeDescription) {
+    public static <T extends AnnotationSource> ElementMatcher.Junction<T> isAnnotatedWith(
+            TypeDescription typeDescription) {
         return isAnnotatedWith(is(typeDescription));
     }
 
@@ -574,15 +620,18 @@ public final class ElementMatchers {
         return isDeclaredBy(is(typeDescription));
     }
 
-    public static <T extends ByteCodeElement> ElementMatcher.Junction<T> isDeclaredByGeneric(TypeDescription.Generic generic) {
+    public static <T extends ByteCodeElement> ElementMatcher.Junction<T> isDeclaredByGeneric(
+            TypeDescription.Generic generic) {
         return isDeclaredByGeneric(is(generic));
     }
 
-    public static <T extends MethodDescription> ElementMatcher.Junction<T> isGenericGetter(TypeDescription.Generic generic) {
+    public static <T extends MethodDescription> ElementMatcher.Junction<T> isGenericGetter(
+            TypeDescription.Generic generic) {
         return isGenericGetter(is(generic));
     }
 
-    public static <T extends MethodDescription> ElementMatcher.Junction<T> isGenericSetter(TypeDescription.Generic generic) {
+    public static <T extends MethodDescription> ElementMatcher.Junction<T> isGenericSetter(
+            TypeDescription.Generic generic) {
         return isGenericSetter(is(generic));
     }
 
@@ -592,21 +641,27 @@ public final class ElementMatchers {
         if (str.length() == 0) {
             junctionOr = named("get").or(named("is"));
         } else {
-            junctionOr = named("get" + Character.toUpperCase(str.charAt(0)) + str.substring(1)).or(named("is" + Character.toUpperCase(str.charAt(0)) + str.substring(1)));
+            junctionOr = named("get" + Character.toUpperCase(str.charAt(0)) + str.substring(1))
+                    .or(named("is" + Character.toUpperCase(str.charAt(0)) + str.substring(1)));
         }
         return junctionIsGetter.and(junctionOr);
     }
 
     public static <T extends MethodDescription> ElementMatcher.Junction<T> isMain(boolean z) {
         Class cls = Void.TYPE;
-        return z ? named("main").and(takesArguments((Class<?>[]) new Class[]{String[].class}).or(takesArguments(0))).and(returns(TypeDescription.ForLoadedType.of(cls))).and(not(isPrivate())) : named("main").and(takesArguments((Class<?>[]) new Class[]{String[].class})).and(returns(TypeDescription.ForLoadedType.of(cls))).and(isStatic()).and(isPublic());
+        return z ? named("main").and(takesArguments((Class<?>[]) new Class[] { String[].class }).or(takesArguments(0)))
+                .and(returns(TypeDescription.ForLoadedType.of(cls))).and(not(isPrivate()))
+                : named("main").and(takesArguments((Class<?>[]) new Class[] { String[].class }))
+                        .and(returns(TypeDescription.ForLoadedType.of(cls))).and(isStatic()).and(isPublic());
     }
 
-    public static <T extends MethodDescription> ElementMatcher.Junction<T> isOverriddenFrom(TypeDescription typeDescription) {
+    public static <T extends MethodDescription> ElementMatcher.Junction<T> isOverriddenFrom(
+            TypeDescription typeDescription) {
         return isOverriddenFrom(is(typeDescription));
     }
 
-    public static <T extends MethodDescription> ElementMatcher.Junction<T> isOverriddenFromGeneric(TypeDescription.Generic generic) {
+    public static <T extends MethodDescription> ElementMatcher.Junction<T> isOverriddenFromGeneric(
+            TypeDescription.Generic generic) {
         return isOverriddenFromGeneric(is(generic));
     }
 
@@ -625,12 +680,15 @@ public final class ElementMatchers {
         return new SubTypeMatcher(typeDescription);
     }
 
-    public static <T extends TypeDescription> ElementMatcher.Junction<T> isSuperTypeOf(TypeDescription typeDescription) {
+    public static <T extends TypeDescription> ElementMatcher.Junction<T> isSuperTypeOf(
+            TypeDescription typeDescription) {
         return new SuperTypeMatcher(typeDescription);
     }
 
-    public static <T extends TypeDefinition> ElementMatcher.Junction<T> isVariable(ElementMatcher<? super NamedElement> elementMatcher) {
-        return (ElementMatcher.Junction<T>) new TypeSortMatcher(anyOf(TypeDefinition.Sort.VARIABLE, TypeDefinition.Sort.VARIABLE_SYMBOLIC)).and(elementMatcher);
+    public static <T extends TypeDefinition> ElementMatcher.Junction<T> isVariable(
+            ElementMatcher<? super NamedElement> elementMatcher) {
+        return (ElementMatcher.Junction<T>) new TypeSortMatcher(
+                anyOf(TypeDefinition.Sort.VARIABLE, TypeDefinition.Sort.VARIABLE_SYMBOLIC)).and(elementMatcher);
     }
 
     public static <T extends ByteCodeElement> ElementMatcher.Junction<T> isVisibleTo(TypeDescription typeDescription) {
@@ -645,7 +703,8 @@ public final class ElementMatchers {
         return junctionNot == null ? any() : junctionNot;
     }
 
-    public static <T extends TypeDefinition> ElementMatcher.Junction<T> ofSort(ElementMatcher<? super TypeDefinition.Sort> elementMatcher) {
+    public static <T extends TypeDefinition> ElementMatcher.Junction<T> ofSort(
+            ElementMatcher<? super TypeDefinition.Sort> elementMatcher) {
         return new TypeSortMatcher(elementMatcher);
     }
 
@@ -653,35 +712,43 @@ public final class ElementMatchers {
         return returns(is(typeDescription));
     }
 
-    public static <T extends MethodDescription> ElementMatcher.Junction<T> returnsGeneric(TypeDescription.Generic generic) {
+    public static <T extends MethodDescription> ElementMatcher.Junction<T> returnsGeneric(
+            TypeDescription.Generic generic) {
         return returnsGeneric(is(generic));
     }
 
-    public static <T extends MethodDescription> ElementMatcher.Junction<T> takesArgument(int i, TypeDescription typeDescription) {
+    public static <T extends MethodDescription> ElementMatcher.Junction<T> takesArgument(int i,
+            TypeDescription typeDescription) {
         return takesArgument(i, is(typeDescription));
     }
 
-    public static <T extends MethodDescription> ElementMatcher.Junction<T> takesArguments(TypeDescription... typeDescriptionArr) {
+    public static <T extends MethodDescription> ElementMatcher.Junction<T> takesArguments(
+            TypeDescription... typeDescriptionArr) {
         return takesGenericArguments(erasures(typeDescriptionArr));
     }
 
-    public static <T extends MethodDescription> ElementMatcher.Junction<T> takesGenericArgument(int i, TypeDescription.Generic generic) {
+    public static <T extends MethodDescription> ElementMatcher.Junction<T> takesGenericArgument(int i,
+            TypeDescription.Generic generic) {
         return takesGenericArgument(i, is(generic));
     }
 
-    public static <T extends MethodDescription> ElementMatcher.Junction<T> takesGenericArguments(TypeDefinition... typeDefinitionArr) {
+    public static <T extends MethodDescription> ElementMatcher.Junction<T> takesGenericArguments(
+            TypeDefinition... typeDefinitionArr) {
         return takesGenericArguments((List<? extends TypeDefinition>) Arrays.asList(typeDefinitionArr));
     }
 
-    public static <T extends AnnotationDescription> ElementMatcher.Junction<T> annotationType(ElementMatcher<? super TypeDescription> elementMatcher) {
+    public static <T extends AnnotationDescription> ElementMatcher.Junction<T> annotationType(
+            ElementMatcher<? super TypeDescription> elementMatcher) {
         return new AnnotationTypeMatcher(elementMatcher);
     }
 
-    public static <T extends TypeDescription.Generic> ElementMatcher.Junction<T> erasure(ElementMatcher<? super TypeDescription> elementMatcher) {
+    public static <T extends TypeDescription.Generic> ElementMatcher.Junction<T> erasure(
+            ElementMatcher<? super TypeDescription> elementMatcher) {
         return new ErasureMatcher(elementMatcher);
     }
 
-    public static <T extends Iterable<? extends TypeDescription.Generic>> ElementMatcher.Junction<T> erasures(Iterable<? extends TypeDescription> iterable) {
+    public static <T extends Iterable<? extends TypeDescription.Generic>> ElementMatcher.Junction<T> erasures(
+            Iterable<? extends TypeDescription> iterable) {
         ArrayList arrayList = new ArrayList();
         Iterator<? extends TypeDescription> it = iterable.iterator();
         while (it.hasNext()) {
@@ -690,63 +757,79 @@ public final class ElementMatchers {
         return erasures(new CollectionOneToOneMatcher(arrayList));
     }
 
-    public static <T extends FieldDescription> ElementMatcher.Junction<T> fieldType(ElementMatcher<? super TypeDescription> elementMatcher) {
+    public static <T extends FieldDescription> ElementMatcher.Junction<T> fieldType(
+            ElementMatcher<? super TypeDescription> elementMatcher) {
         return genericFieldType(erasure(elementMatcher));
     }
 
-    public static <T extends FieldDescription> ElementMatcher.Junction<T> genericFieldType(ElementMatcher<? super TypeDescription.Generic> elementMatcher) {
+    public static <T extends FieldDescription> ElementMatcher.Junction<T> genericFieldType(
+            ElementMatcher<? super TypeDescription.Generic> elementMatcher) {
         return new FieldTypeMatcher(elementMatcher);
     }
 
-    public static <T extends TypeDescription> ElementMatcher.Junction<T> inheritsAnnotation(ElementMatcher<? super TypeDescription> elementMatcher) {
+    public static <T extends TypeDescription> ElementMatcher.Junction<T> inheritsAnnotation(
+            ElementMatcher<? super TypeDescription> elementMatcher) {
         return hasAnnotation(annotationType(elementMatcher));
     }
 
-    public static <T extends FieldDescription> ElementMatcher.Junction<T> is(FieldDescription.InDefinedShape inDefinedShape) {
+    public static <T extends FieldDescription> ElementMatcher.Junction<T> is(
+            FieldDescription.InDefinedShape inDefinedShape) {
         return definedField(new EqualityMatcher(inDefinedShape));
     }
 
-    public static <T extends AnnotationSource> ElementMatcher.Junction<T> isAnnotatedWith(ElementMatcher<? super TypeDescription> elementMatcher) {
+    public static <T extends AnnotationSource> ElementMatcher.Junction<T> isAnnotatedWith(
+            ElementMatcher<? super TypeDescription> elementMatcher) {
         return declaresAnnotation(annotationType(elementMatcher));
     }
 
-    public static <T extends ByteCodeElement> ElementMatcher.Junction<T> isDeclaredBy(ElementMatcher<? super TypeDescription> elementMatcher) {
+    public static <T extends ByteCodeElement> ElementMatcher.Junction<T> isDeclaredBy(
+            ElementMatcher<? super TypeDescription> elementMatcher) {
         return isDeclaredByGeneric(erasure(elementMatcher));
     }
 
-    public static <T extends ByteCodeElement> ElementMatcher.Junction<T> isDeclaredByGeneric(ElementMatcher<? super TypeDescription.Generic> elementMatcher) {
+    public static <T extends ByteCodeElement> ElementMatcher.Junction<T> isDeclaredByGeneric(
+            ElementMatcher<? super TypeDescription.Generic> elementMatcher) {
         return new DeclaringTypeMatcher(elementMatcher);
     }
 
-    public static <T extends MethodDescription> ElementMatcher.Junction<T> isGenericGetter(ElementMatcher<? super TypeDescription.Generic> elementMatcher) {
+    public static <T extends MethodDescription> ElementMatcher.Junction<T> isGenericGetter(
+            ElementMatcher<? super TypeDescription.Generic> elementMatcher) {
         return isGetter().and(returnsGeneric(elementMatcher));
     }
 
-    public static <T extends MethodDescription> ElementMatcher.Junction<T> isGenericSetter(ElementMatcher<? super TypeDescription.Generic> elementMatcher) {
-        return isSetter().and(takesGenericArguments(new CollectionOneToOneMatcher(Collections.singletonList(elementMatcher))));
+    public static <T extends MethodDescription> ElementMatcher.Junction<T> isGenericSetter(
+            ElementMatcher<? super TypeDescription.Generic> elementMatcher) {
+        return isSetter()
+                .and(takesGenericArguments(new CollectionOneToOneMatcher(Collections.singletonList(elementMatcher))));
     }
 
-    public static <T extends MethodDescription> ElementMatcher.Junction<T> isOverriddenFrom(ElementMatcher<? super TypeDescription> elementMatcher) {
+    public static <T extends MethodDescription> ElementMatcher.Junction<T> isOverriddenFrom(
+            ElementMatcher<? super TypeDescription> elementMatcher) {
         return isOverriddenFromGeneric(erasure(elementMatcher));
     }
 
-    public static <T extends MethodDescription> ElementMatcher.Junction<T> isOverriddenFromGeneric(ElementMatcher<? super TypeDescription.Generic> elementMatcher) {
+    public static <T extends MethodDescription> ElementMatcher.Junction<T> isOverriddenFromGeneric(
+            ElementMatcher<? super TypeDescription.Generic> elementMatcher) {
         return new MethodOverrideMatcher(elementMatcher);
     }
 
-    public static <T extends MethodDescription> ElementMatcher.Junction<T> returns(ElementMatcher<? super TypeDescription> elementMatcher) {
+    public static <T extends MethodDescription> ElementMatcher.Junction<T> returns(
+            ElementMatcher<? super TypeDescription> elementMatcher) {
         return returnsGeneric(erasure(elementMatcher));
     }
 
-    public static <T extends MethodDescription> ElementMatcher.Junction<T> returnsGeneric(ElementMatcher<? super TypeDescription.Generic> elementMatcher) {
+    public static <T extends MethodDescription> ElementMatcher.Junction<T> returnsGeneric(
+            ElementMatcher<? super TypeDescription.Generic> elementMatcher) {
         return new MethodReturnTypeMatcher(elementMatcher);
     }
 
-    public static <T extends MethodDescription> ElementMatcher.Junction<T> takesArgument(int i, ElementMatcher<? super TypeDescription> elementMatcher) {
+    public static <T extends MethodDescription> ElementMatcher.Junction<T> takesArgument(int i,
+            ElementMatcher<? super TypeDescription> elementMatcher) {
         return takesGenericArgument(i, erasure(elementMatcher));
     }
 
-    public static <T extends MethodDescription> ElementMatcher.Junction<T> takesArguments(Iterable<? extends TypeDescription> iterable) {
+    public static <T extends MethodDescription> ElementMatcher.Junction<T> takesArguments(
+            Iterable<? extends TypeDescription> iterable) {
         ArrayList arrayList = new ArrayList();
         Iterator<? extends TypeDescription> it = iterable.iterator();
         while (it.hasNext()) {
@@ -755,11 +838,13 @@ public final class ElementMatchers {
         return takesGenericArguments(new CollectionOneToOneMatcher(arrayList));
     }
 
-    public static <T extends MethodDescription> ElementMatcher.Junction<T> takesGenericArgument(int i, ElementMatcher<? super TypeDescription.Generic> elementMatcher) {
+    public static <T extends MethodDescription> ElementMatcher.Junction<T> takesGenericArgument(int i,
+            ElementMatcher<? super TypeDescription.Generic> elementMatcher) {
         return takesGenericArguments(new CollectionElementMatcher(i, elementMatcher));
     }
 
-    public static <T extends MethodDescription> ElementMatcher.Junction<T> takesGenericArguments(List<? extends TypeDefinition> list) {
+    public static <T extends MethodDescription> ElementMatcher.Junction<T> takesGenericArguments(
+            List<? extends TypeDefinition> list) {
         ArrayList arrayList = new ArrayList();
         Iterator<? extends TypeDefinition> it = list.iterator();
         while (it.hasNext()) {
@@ -772,7 +857,8 @@ public final class ElementMatchers {
         return is((MethodDescription.InDefinedShape) new MethodDescription.ForLoadedMethod(method));
     }
 
-    public static <T extends MethodDescription> ElementMatcher.Junction<T> declaresGenericException(ElementMatcher<? super Iterable<? extends TypeDescription.Generic>> elementMatcher) {
+    public static <T extends MethodDescription> ElementMatcher.Junction<T> declaresGenericException(
+            ElementMatcher<? super Iterable<? extends TypeDescription.Generic>> elementMatcher) {
         return new MethodExceptionTypeMatcher(elementMatcher);
     }
 
@@ -784,7 +870,8 @@ public final class ElementMatchers {
         return anyOf(new TypeList.Generic.ForLoadedTypes(typeArr));
     }
 
-    public static <T extends MethodDescription> ElementMatcher.Junction<T> is(MethodDescription.InDefinedShape inDefinedShape) {
+    public static <T extends MethodDescription> ElementMatcher.Junction<T> is(
+            MethodDescription.InDefinedShape inDefinedShape) {
         return definedMethod(new EqualityMatcher(inDefinedShape));
     }
 
@@ -804,11 +891,13 @@ public final class ElementMatchers {
         return definedMethod(anyOf(new MethodList.ForLoadedMethods(constructorArr, new Method[0])));
     }
 
-    public static <T extends Iterable<? extends TypeDescription.Generic>> ElementMatcher.Junction<T> erasures(ElementMatcher<? super Iterable<? extends TypeDescription>> elementMatcher) {
+    public static <T extends Iterable<? extends TypeDescription.Generic>> ElementMatcher.Junction<T> erasures(
+            ElementMatcher<? super Iterable<? extends TypeDescription>> elementMatcher) {
         return new CollectionErasureMatcher(elementMatcher);
     }
 
-    public static <T extends ParameterDescription> ElementMatcher.Junction<T> is(ParameterDescription.InDefinedShape inDefinedShape) {
+    public static <T extends ParameterDescription> ElementMatcher.Junction<T> is(
+            ParameterDescription.InDefinedShape inDefinedShape) {
         return definedParameter(new EqualityMatcher(inDefinedShape));
     }
 
@@ -824,11 +913,13 @@ public final class ElementMatchers {
         return definedMethod(noneOf(new MethodList.ForLoadedMethods(constructorArr, new Method[0])));
     }
 
-    public static <T extends MethodDescription> ElementMatcher.Junction<T> takesArguments(ElementMatcher<? super Iterable<? extends TypeDescription>> elementMatcher) {
+    public static <T extends MethodDescription> ElementMatcher.Junction<T> takesArguments(
+            ElementMatcher<? super Iterable<? extends TypeDescription>> elementMatcher) {
         return new MethodParametersMatcher(new MethodParameterTypesMatcher(erasures(elementMatcher)));
     }
 
-    public static <T extends MethodDescription> ElementMatcher.Junction<T> takesGenericArguments(ElementMatcher<? super Iterable<? extends TypeDescription.Generic>> elementMatcher) {
+    public static <T extends MethodDescription> ElementMatcher.Junction<T> takesGenericArguments(
+            ElementMatcher<? super Iterable<? extends TypeDescription.Generic>> elementMatcher) {
         return new MethodParametersMatcher(new MethodParameterTypesMatcher(elementMatcher));
     }
 
@@ -840,11 +931,13 @@ public final class ElementMatchers {
         return is(TypeDefinition.Sort.describe(type));
     }
 
-    public static <T extends MethodDescription> ElementMatcher.Junction<T> isGetter(ElementMatcher<? super TypeDescription> elementMatcher) {
+    public static <T extends MethodDescription> ElementMatcher.Junction<T> isGetter(
+            ElementMatcher<? super TypeDescription> elementMatcher) {
         return isGenericGetter(erasure(elementMatcher));
     }
 
-    public static <T extends MethodDescription> ElementMatcher.Junction<T> isSetter(ElementMatcher<? super TypeDescription> elementMatcher) {
+    public static <T extends MethodDescription> ElementMatcher.Junction<T> isSetter(
+            ElementMatcher<? super TypeDescription> elementMatcher) {
         return isGenericSetter(erasure(elementMatcher));
     }
 

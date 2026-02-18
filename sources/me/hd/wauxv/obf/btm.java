@@ -15,11 +15,11 @@ public final class btm extends MetaKeyKeyListener {
         this.a = codeEditor;
     }
 
-    public final boolean d() {
+    public final boolean getArgs() {
         return MetaKeyKeyListener.getMetaState(this.b, 2) == 1;
     }
 
-    public final boolean e() {
+    public final boolean getThisObject() {
         return MetaKeyKeyListener.getMetaState(this.b, 1) == 1;
     }
 }

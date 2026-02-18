@@ -5,7 +5,7 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.rh;
 import me.hd.wauxv.obf.rl;
 import okhttp3.HttpUrl;
@@ -19,7 +19,10 @@ public final class FormBody extends RequestBody {
     public static final Companion Companion = new Companion(null);
     private static final MediaType CONTENT_TYPE = MediaType.Companion.get("application/x-www-form-urlencoded");
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Builder {
         private final Charset charset;
         private final List<String> names;
@@ -31,22 +34,26 @@ public final class FormBody extends RequestBody {
         }
 
         public final Builder add(String str, String str2) {
-            bzo.q(str, "name");
-            bzo.q(str2, "value");
+            throwIfVar1IsNull(str, "name");
+            throwIfVar1IsNull(str2, "value");
             List<String> list = this.names;
             HttpUrl.Companion companion = HttpUrl.Companion;
-            list.add(HttpUrl.Companion.canonicalize$okhttp$default(companion, str, 0, 0, HttpUrl.FORM_ENCODE_SET, false, false, true, false, this.charset, 91, null));
-            this.values.add(HttpUrl.Companion.canonicalize$okhttp$default(companion, str2, 0, 0, HttpUrl.FORM_ENCODE_SET, false, false, true, false, this.charset, 91, null));
+            list.add(HttpUrl.Companion.canonicalize$okhttp$default(companion, str, 0, 0, HttpUrl.FORM_ENCODE_SET, false,
+                    false, true, false, this.charset, 91, null));
+            this.values.add(HttpUrl.Companion.canonicalize$okhttp$default(companion, str2, 0, 0,
+                    HttpUrl.FORM_ENCODE_SET, false, false, true, false, this.charset, 91, null));
             return this;
         }
 
         public final Builder addEncoded(String str, String str2) {
-            bzo.q(str, "name");
-            bzo.q(str2, "value");
+            throwIfVar1IsNull(str, "name");
+            throwIfVar1IsNull(str2, "value");
             List<String> list = this.names;
             HttpUrl.Companion companion = HttpUrl.Companion;
-            list.add(HttpUrl.Companion.canonicalize$okhttp$default(companion, str, 0, 0, HttpUrl.FORM_ENCODE_SET, true, false, true, false, this.charset, 83, null));
-            this.values.add(HttpUrl.Companion.canonicalize$okhttp$default(companion, str2, 0, 0, HttpUrl.FORM_ENCODE_SET, true, false, true, false, this.charset, 83, null));
+            list.add(HttpUrl.Companion.canonicalize$okhttp$default(companion, str, 0, 0, HttpUrl.FORM_ENCODE_SET, true,
+                    false, true, false, this.charset, 83, null));
+            this.values.add(HttpUrl.Companion.canonicalize$okhttp$default(companion, str2, 0, 0,
+                    HttpUrl.FORM_ENCODE_SET, true, false, true, false, this.charset, 83, null));
             return this;
         }
 
@@ -65,7 +72,10 @@ public final class FormBody extends RequestBody {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
@@ -76,8 +86,8 @@ public final class FormBody extends RequestBody {
     }
 
     public FormBody(List<String> list, List<String> list2) {
-        bzo.q(list, "encodedNames");
-        bzo.q(list2, "encodedValues");
+        throwIfVar1IsNull(list, "encodedNames");
+        throwIfVar1IsNull(list2, "encodedValues");
         this.encodedNames = Util.toImmutableList(list);
         this.encodedValues = Util.toImmutableList(list2);
     }
@@ -87,7 +97,7 @@ public final class FormBody extends RequestBody {
         if (z) {
             rhVarC = new rh();
         } else {
-            bzo.n(rlVar);
+            throwIfVar1IsNull(rlVar);
             rhVarC = rlVar.c();
         }
         int size = this.encodedNames.size();
@@ -143,7 +153,7 @@ public final class FormBody extends RequestBody {
 
     @Override // okhttp3.RequestBody
     public void writeTo(rl rlVar) throws EOFException {
-        bzo.q(rlVar, "sink");
+        throwIfVar1IsNull(rlVar, "sink");
         writeOrCountBytes(rlVar, false);
     }
 }

@@ -151,7 +151,7 @@ public final class Type {
     }
 
     private static /* synthetic */ String stringConcat$1(String str) {
-        return bjs.o("L", str, ";");
+        return concat("L", str, ";");
     }
 
     public boolean equals(Object obj) {
@@ -226,7 +226,8 @@ public final class Type {
                 return sb.toString();
             case 10:
             case 12:
-                return this.valueBuffer.substring(this.valueBegin, this.valueEnd).replace('/', TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
+                return this.valueBuffer.substring(this.valueBegin, this.valueEnd).replace('/',
+                        TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
             case 11:
             default:
                 throw new AssertionError();
@@ -235,7 +236,9 @@ public final class Type {
 
     public String getDescriptor() {
         int i = this.sort;
-        return i == 10 ? this.valueBuffer.substring(this.valueBegin - 1, this.valueEnd + 1) : i == 12 ? stringConcat$1(this.valueBuffer.substring(this.valueBegin, this.valueEnd)) : this.valueBuffer.substring(this.valueBegin, this.valueEnd);
+        return i == 10 ? this.valueBuffer.substring(this.valueBegin - 1, this.valueEnd + 1)
+                : i == 12 ? stringConcat$1(this.valueBuffer.substring(this.valueBegin, this.valueEnd))
+                        : this.valueBuffer.substring(this.valueBegin, this.valueEnd);
     }
 
     public int getDimensions() {

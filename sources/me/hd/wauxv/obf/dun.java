@@ -24,7 +24,7 @@ public final class dun {
             return false;
         }
         dun dunVar = (dun) obj;
-        return bzo.f(this.a, dunVar.a) && bzo.f(this.b, dunVar.b);
+        return nullSafeIsEqual(this.a, dunVar.a) && nullSafeIsEqual(this.b, dunVar.b);
     }
 
     public final int hashCode() {
@@ -38,6 +38,6 @@ public final class dun {
         StringBuilder sb = new StringBuilder();
         sb.append("VideoColdDLRuleProto(type=" /* cnb.z(-302357107702570L) */);
         yg.u(sb, this.a, -302258323454762L);
-        return bjs.q(sb, this.b, ')');
+        return concat(sb, this.b, ')');
     }
 }

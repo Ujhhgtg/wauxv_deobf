@@ -20,7 +20,10 @@ public final class bhp extends doi implements bgj {
     public Object o;
     public final /* synthetic */ View.OnCreateContextMenuListener p;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'super' call moved to the top of the method (can break code
+     * semantics)
+     */
     public bhp(String str, byx byxVar, MainActivity mainActivity, afw afwVar) {
         super(2, afwVar);
         this.f = str;
@@ -74,7 +77,10 @@ public final class bhp extends doi implements bgj {
                 int i3 = this.d;
                 if (i3 == 0) {
                     bhu.bd(obj);
-                    String strZ = "https://api.github.com/repos/HdShare/WAuxiliary_Public/releases/latest" /* cnb.z(-44044889619242L) */;
+                    String strZ = "https://api.github.com/repos/HdShare/WAuxiliary_Public/releases/latest" /*
+                                                                                                            * cnb.z(-
+                                                                                                            * 44044889619242L)
+                                                                                                            */;
                     alc alcVar = aou.a;
                     akq akqVar = akq.f;
                     dob dobVar = new dob();
@@ -89,7 +95,10 @@ public final class bhp extends doi implements bgj {
                 }
                 if (i3 != 1) {
                     if (i3 != 2) {
-                        throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine" /* cnb.z(-45801531243306L) */);
+                        throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine" /*
+                                                                                                           * cnb.z(-
+                                                                                                           * 45801531243306L)
+                                                                                                           */);
                     }
                     bhu.bd(obj);
                     return ensVar;
@@ -146,7 +155,10 @@ public final class bhp extends doi implements bgj {
                     bvzVar2 = bvzVar;
                 } else {
                     if (i4 != 1) {
-                        throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine" /* cnb.z(-418836620770090L) */);
+                        throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine" /*
+                                                                                                           * cnb.z(-
+                                                                                                           * 418836620770090L)
+                                                                                                           */);
                     }
                     bvz bvzVar3 = (bvz) this.o;
                     bvzVar2 = (bvz) this.f;
@@ -167,7 +179,7 @@ public final class bhp extends doi implements bgj {
                     StringBuilder sb2 = new StringBuilder();
                     sb2.append((String) ctxVar.g.getValue());
                     sb2.append('(');
-                    String strQ = bjs.q(sb2, ctxVar.f, c);
+                    String strQ = concat(sb2, ctxVar.f, c);
                     StringBuilder sb3 = new StringBuilder();
                     sb3.append("版本: " /* cnb.z(-418913930181418L) */);
                     yg.u(sb3, (String) ctxVar.i.getValue(), -418858095606570L);
@@ -175,13 +187,13 @@ public final class bhp extends doi implements bgj {
                     bvzVar.add(new oa(strQ, sb3.toString(), ctxVar, new aeh(cuaVar, i2, ctxVar)));
                     c = ')';
                 }
-                bzo.q(bvzVar2, "builder");
+                throwIfVar1IsNull(bvzVar2, "builder");
                 bvzVar2.j();
                 bvzVar2.f = true;
                 if (bvzVar2.e <= 0) {
                     bvzVar2 = bvz.c;
                 }
-                if (bzo.f(arrayList, bvzVar2)) {
+                if (nullSafeIsEqual(arrayList, bvzVar2)) {
                     return ensVar;
                 }
                 arrayList.clear();
@@ -202,7 +214,10 @@ public final class bhp extends doi implements bgj {
                 }
                 if (i5 != 1) {
                     if (i5 != 2) {
-                        throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine" /* cnb.z(-81471234636586L) */);
+                        throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine" /*
+                                                                                                           * cnb.z(-
+                                                                                                           * 81471234636586L)
+                                                                                                           */);
                     }
                     bhu.bd(obj);
                     return ensVar;
@@ -219,13 +234,19 @@ public final class bhp extends doi implements bgj {
         }
     }
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'super' call moved to the top of the method (can break code
+     * semantics)
+     */
     public bhp(cua cuaVar, afw afwVar) {
         super(2, afwVar);
         this.p = cuaVar;
     }
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'super' call moved to the top of the method (can break code
+     * semantics)
+     */
     public bhp(euh euhVar, TextView textView, ProgressBar progressBar, AlertDialog alertDialog, afw afwVar) {
         super(2, afwVar);
         this.e = euhVar;

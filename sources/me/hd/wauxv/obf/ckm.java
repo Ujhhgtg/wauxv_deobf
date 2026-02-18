@@ -15,20 +15,22 @@ public final class ckm {
         }
         LinkedHashMap linkedHashMap = this.b;
         ckl cklVar2 = (ckl) linkedHashMap.get(strAu);
-        if (bzo.f(cklVar2, cklVar)) {
+        if (nullSafeIsEqual(cklVar2, cklVar)) {
             return;
         }
         if (cklVar2 != null && cklVar2.v) {
-            throw new IllegalStateException(("Navigator " + cklVar + " is replacing an already attached " + cklVar2).toString());
+            throw new IllegalStateException(
+                    ("Navigator " + cklVar + " is replacing an already attached " + cklVar2).toString());
         }
         if (!cklVar.v) {
             return;
         }
-        throw new IllegalStateException(("Navigator " + cklVar + " is already attached to another NavController").toString());
+        throw new IllegalStateException(
+                ("Navigator " + cklVar + " is already attached to another NavController").toString());
     }
 
     public final ckl d(String str) {
-        bzo.q(str, "name");
+        throwIfVar1IsNull(str, "name");
         if (str.length() <= 0) {
             throw new IllegalArgumentException("navigator name cannot be an empty string");
         }
@@ -36,6 +38,7 @@ public final class ckm {
         if (cklVar != null) {
             return cklVar;
         }
-        throw new IllegalStateException(bjs.o("Could not find Navigator with name \"", str, "\". You must call NavController.addNavigator() for each navigation type."));
+        throw new IllegalStateException(concat("Could not find Navigator with name \"", str,
+                "\". You must call NavController.addNavigator() for each navigation type."));
     }
 }

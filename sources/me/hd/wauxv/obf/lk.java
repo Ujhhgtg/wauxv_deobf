@@ -7,13 +7,13 @@ import java.util.concurrent.TimeUnit;
 public final class lk {
     public static lo a() throws InterruptedException {
         lo loVar = lo.head;
-        bzo.n(loVar);
+        throwIfVar1IsNull(loVar);
         lo loVar2 = loVar.next;
         if (loVar2 == null) {
             long jNanoTime = System.nanoTime();
             lo.condition.await(lo.IDLE_TIMEOUT_MILLIS, TimeUnit.MILLISECONDS);
             lo loVar3 = lo.head;
-            bzo.n(loVar3);
+            throwIfVar1IsNull(loVar3);
             if (loVar3.next != null || System.nanoTime() - jNanoTime < lo.IDLE_TIMEOUT_NANOS) {
                 return null;
             }
@@ -25,7 +25,7 @@ public final class lk {
             return null;
         }
         lo loVar4 = lo.head;
-        bzo.n(loVar4);
+        throwIfVar1IsNull(loVar4);
         loVar4.next = loVar2.next;
         loVar2.next = null;
         return loVar2;

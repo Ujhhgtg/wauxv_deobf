@@ -18,13 +18,14 @@ public final class dlm extends SpannableStringBuilder {
         this.a = cls;
     }
 
-    @Override // android.text.SpannableStringBuilder, android.text.Editable, java.lang.Appendable
+    @Override // android.text.SpannableStringBuilder, android.text.Editable,
+              // java.lang.Appendable
     public final Editable append(CharSequence charSequence) {
         super.append(charSequence);
         return this;
     }
 
-    public final void c() {
+    public final void callOriginalMethod() {
         int i = 0;
         while (true) {
             ArrayList arrayList = this.b;
@@ -36,7 +37,7 @@ public final class dlm extends SpannableStringBuilder {
         }
     }
 
-    public final void d() {
+    public final void getArgs() {
         g();
         int i = 0;
         while (true) {
@@ -77,7 +78,7 @@ public final class dlm extends SpannableStringBuilder {
         return false;
     }
 
-    public final void g() {
+    public final void setResultTrue() {
         int i = 0;
         while (true) {
             ArrayList arrayList = this.b;
@@ -181,7 +182,8 @@ public final class dlm extends SpannableStringBuilder {
         return new dlm(this.a, this, i, i2);
     }
 
-    @Override // android.text.SpannableStringBuilder, android.text.Editable, java.lang.Appendable
+    @Override // android.text.SpannableStringBuilder, android.text.Editable,
+              // java.lang.Appendable
     public final SpannableStringBuilder append(CharSequence charSequence) {
         super.append(charSequence);
         return this;
@@ -200,12 +202,14 @@ public final class dlm extends SpannableStringBuilder {
     }
 
     @Override // android.text.SpannableStringBuilder, android.text.Editable
-    public final /* bridge */ /* synthetic */ Editable replace(int i, int i2, CharSequence charSequence, int i3, int i4) {
+    public final /* bridge */ /* synthetic */ Editable replace(int i, int i2, CharSequence charSequence, int i3,
+            int i4) {
         replace(i, i2, charSequence, i3, i4);
         return this;
     }
 
-    @Override // android.text.SpannableStringBuilder, android.text.Editable, java.lang.Appendable
+    @Override // android.text.SpannableStringBuilder, android.text.Editable,
+              // java.lang.Appendable
     public final Appendable append(CharSequence charSequence) {
         super.append(charSequence);
         return this;
@@ -225,7 +229,8 @@ public final class dlm extends SpannableStringBuilder {
         return this;
     }
 
-    @Override // android.text.SpannableStringBuilder, android.text.Editable, java.lang.Appendable
+    @Override // android.text.SpannableStringBuilder, android.text.Editable,
+              // java.lang.Appendable
     public final Editable append(char c) {
         super.append(c);
         return this;
@@ -244,13 +249,15 @@ public final class dlm extends SpannableStringBuilder {
         this.a = cls;
     }
 
-    @Override // android.text.SpannableStringBuilder, android.text.Editable, java.lang.Appendable
+    @Override // android.text.SpannableStringBuilder, android.text.Editable,
+              // java.lang.Appendable
     public final SpannableStringBuilder append(char c) {
         super.append(c);
         return this;
     }
 
-    @Override // android.text.SpannableStringBuilder, android.text.Editable, java.lang.Appendable
+    @Override // android.text.SpannableStringBuilder, android.text.Editable,
+              // java.lang.Appendable
     public final Appendable append(char c) {
         super.append(c);
         return this;
@@ -264,19 +271,22 @@ public final class dlm extends SpannableStringBuilder {
         return this;
     }
 
-    @Override // android.text.SpannableStringBuilder, android.text.Editable, java.lang.Appendable
+    @Override // android.text.SpannableStringBuilder, android.text.Editable,
+              // java.lang.Appendable
     public final Editable append(CharSequence charSequence, int i, int i2) {
         super.append(charSequence, i, i2);
         return this;
     }
 
-    @Override // android.text.SpannableStringBuilder, android.text.Editable, java.lang.Appendable
+    @Override // android.text.SpannableStringBuilder, android.text.Editable,
+              // java.lang.Appendable
     public final SpannableStringBuilder append(CharSequence charSequence, int i, int i2) {
         super.append(charSequence, i, i2);
         return this;
     }
 
-    @Override // android.text.SpannableStringBuilder, android.text.Editable, java.lang.Appendable
+    @Override // android.text.SpannableStringBuilder, android.text.Editable,
+              // java.lang.Appendable
     public final Appendable append(CharSequence charSequence, int i, int i2) {
         super.append(charSequence, i, i2);
         return this;

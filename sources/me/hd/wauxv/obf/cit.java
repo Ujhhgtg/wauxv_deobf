@@ -24,7 +24,7 @@ public final class cit {
     public final /* synthetic */ cjl h;
 
     public cit(cjl cjlVar, ckl cklVar) {
-        bzo.q(cklVar, "navigator");
+        throwIfVar1IsNull(cklVar, "navigator");
         this.h = cjlVar;
         this.a = new dop(2);
         dml dmlVar = new dml(avd.a);
@@ -37,7 +37,7 @@ public final class cit {
     }
 
     public final void i(cio cioVar) {
-        bzo.q(cioVar, "backStackEntry");
+        throwIfVar1IsNull(cioVar, "backStackEntry");
         synchronized (this.a) {
             dml dmlVar = this.b;
             dmlVar.g(aaz.p((Collection) dmlVar.c(), cioVar));
@@ -50,24 +50,24 @@ public final class cit {
         return cbm.h(cixVar.a.c, cjgVar, bundle, cixVar.ah(), cixVar.n);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:31:0x00ad  */
+    /* JADX WARN: Found duplicated region for block: B:31:0x00ad */
     public final void k(cio cioVar) {
         ciy ciyVar;
         erq erqVar;
-        bzo.q(cioVar, "entry");
+        throwIfVar1IsNull(cioVar, "entry");
         cix cixVar = this.h.b;
         dml dmlVar = cixVar.h;
         String str = cioVar.f;
         LinkedHashMap linkedHashMap = cixVar.v;
-        boolean zF = bzo.f(linkedHashMap.get(cioVar), Boolean.TRUE);
+        boolean zF = nullSafeIsEqual(linkedHashMap.get(cioVar), Boolean.TRUE);
         dml dmlVar2 = this.c;
         Set set = (Set) dmlVar2.c();
-        bzo.q(set, "<this>");
-        LinkedHashSet linkedHashSet = new LinkedHashSet(bzo.ah(set.size()));
+        throwIfVar1IsNull(set, "<this>");
+        LinkedHashSet linkedHashSet = new LinkedHashSet(KotlinHelpers.ah(set.size()));
         boolean z = false;
         for (Object obj : set) {
             boolean z2 = true;
-            if (!z && bzo.f(obj, cioVar)) {
+            if (!z && nullSafeIsEqual(obj, cioVar)) {
                 z = true;
                 z2 = false;
             }
@@ -94,18 +94,18 @@ public final class cit {
         if (!kmVar.isEmpty()) {
             Iterator it = kmVar.iterator();
             while (it.hasNext()) {
-                if (bzo.f(((cio) it.next()).f, str)) {
+                if (nullSafeIsEqual(((cio) it.next()).f, str)) {
                 }
             }
             if (!zF) {
-                bzo.q(str, "backStackEntryId");
+                throwIfVar1IsNull(str, "backStackEntryId");
                 erqVar = (erq) ciyVar.a.remove(str);
                 if (erqVar != null) {
                     erqVar.b();
                 }
             }
         } else if (!zF && (ciyVar = cixVar.n) != null) {
-            bzo.q(str, "backStackEntryId");
+            throwIfVar1IsNull(str, "backStackEntryId");
             erqVar = (erq) ciyVar.a.remove(str);
             if (erqVar != null) {
                 erqVar.b();
@@ -125,7 +125,7 @@ public final class cit {
                     if (!listIterator.hasPrevious()) {
                         iNextIndex = -1;
                         break;
-                    } else if (bzo.f(((cio) listIterator.previous()).f, cioVar.f)) {
+                    } else if (nullSafeIsEqual(((cio) listIterator.previous()).f, cioVar.f)) {
                         iNextIndex = listIterator.nextIndex();
                         break;
                     }
@@ -146,7 +146,7 @@ public final class cit {
         cixVar.v.put(cioVar, Boolean.valueOf(z));
         if (!cklVarD.equals(this.g)) {
             Object obj = cixVar.s.get(cklVarD);
-            bzo.n(obj);
+            throwIfVar1IsNull(obj);
             ((cit) obj).m(cioVar, z);
             return;
         }
@@ -160,7 +160,7 @@ public final class cit {
         int iIndexOf = kmVar.indexOf(cioVar);
         if (iIndexOf < 0) {
             String str = "Ignoring pop of " + cioVar + " as it was not found on the current back stack";
-            bzo.q(str, "message");
+            throwIfVar1IsNull(str, "message");
             Log.i("NavController", str);
             return;
         }
@@ -210,7 +210,8 @@ public final class cit {
             }
             objPrevious = listIterator.previous();
             cio cioVar2 = (cio) objPrevious;
-            if (!bzo.f(cioVar2, cioVar) && ((List) dmlVar3.c()).lastIndexOf(cioVar2) < ((List) dmlVar3.c()).lastIndexOf(cioVar)) {
+            if (!nullSafeIsEqual(cioVar2, cioVar)
+                    && ((List) dmlVar3.c()).lastIndexOf(cioVar2) < ((List) dmlVar3.c()).lastIndexOf(cioVar)) {
                 break;
             }
         }
@@ -222,26 +223,28 @@ public final class cit {
     }
 
     public final void o(cio cioVar) {
-        bzo.q(cioVar, "backStackEntry");
+        throwIfVar1IsNull(cioVar, "backStackEntry");
         cix cixVar = this.h.b;
         cixVar.getClass();
         ckl cklVarD = cixVar.r.d(cioVar.b.f);
         if (!cklVarD.equals(this.g)) {
             Object obj = cixVar.s.get(cklVarD);
             if (obj == null) {
-                throw new IllegalStateException(yg.o(new StringBuilder("NavigatorBackStack for "), cioVar.b.f, " should already be created").toString());
+                throw new IllegalStateException(
+                        yg.o(new StringBuilder("NavigatorBackStack for "), cioVar.b.f, " should already be created")
+                                .toString());
             }
             ((cit) obj).o(cioVar);
             return;
         }
-        bgf bgfVar = cixVar.t;
+        IHasInvokeMethod bgfVar = cixVar.t;
         if (bgfVar != null) {
             bgfVar.invoke(cioVar);
             i(cioVar);
             return;
         }
         String str = "Ignoring add of destination " + cioVar.b + " outside of the call to navigate(). ";
-        bzo.q(str, "message");
+        throwIfVar1IsNull(str, "message");
         Log.i("NavController", str);
     }
 

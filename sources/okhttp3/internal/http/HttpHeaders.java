@@ -7,7 +7,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import me.hd.wauxv.obf.ave;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.dkz;
 import me.hd.wauxv.obf.dnr;
 import me.hd.wauxv.obf.nu;
@@ -36,13 +36,13 @@ public final class HttpHeaders {
     }
 
     public static final boolean hasBody(Response response) {
-        bzo.q(response, "response");
+        throwIfVar1IsNull(response, "response");
         return promisesBody(response);
     }
 
     public static final List<Challenge> parseChallenges(Headers headers, String str) {
-        bzo.q(headers, "<this>");
-        bzo.q(str, "headerName");
+        throwIfVar1IsNull(headers, "<this>");
+        throwIfVar1IsNull(str, "headerName");
         ArrayList arrayList = new ArrayList();
         int size = headers.size();
         for (int i = 0; i < size; i++) {
@@ -60,18 +60,26 @@ public final class HttpHeaders {
     }
 
     public static final boolean promisesBody(Response response) {
-        bzo.q(response, "<this>");
-        if (bzo.f(response.request().method(), "HEAD")) {
+        throwIfVar1IsNull(response, "<this>");
+        if (nullSafeIsEqual(response.request().method(), "HEAD")) {
             return false;
         }
         int iCode = response.code();
-        return (((iCode >= 100 && iCode < 200) || iCode == 204 || iCode == 304) && Util.headersContentLength(response) == -1 && !"chunked".equalsIgnoreCase(Response.header$default(response, "Transfer-Encoding", null, 2, null))) ? false : true;
+        return (((iCode >= 100 && iCode < 200) || iCode == 204 || iCode == 304)
+                && Util.headersContentLength(response) == -1
+                && !"chunked".equalsIgnoreCase(Response.header$default(response, "Transfer-Encoding", null, 2, null)))
+                        ? false
+                        : true;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:27:0x0080  */
-    /* JADX WARN: Found duplicated region for block: B:35:0x0093  */
-    /* JADX WARN: Found duplicated region for block: B:36:0x0098  */
-    /* JADX WARN: Found duplicated region for block: B:59:0x00b7 A[EDGE_INSN: B:59:0x00b7->B:48:0x00b7 BREAK  A[LOOP:2: B:22:0x006d->B:47:0x00b5], SYNTHETIC] */
+    /* JADX WARN: Found duplicated region for block: B:27:0x0080 */
+    /* JADX WARN: Found duplicated region for block: B:35:0x0093 */
+    /* JADX WARN: Found duplicated region for block: B:36:0x0098 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:59:0x00b7 A[EDGE_INSN:
+     * B:59:0x00b7->B:48:0x00b7 BREAK A[LOOP:2: B:22:0x006d->B:47:0x00b5],
+     * SYNTHETIC]
+     */
     private static final void readChallengeHeader(rh rhVar, List<Challenge> list) throws EOFException {
         String quotedString;
         while (true) {
@@ -126,8 +134,10 @@ public final class HttpHeaders {
                                 if (iSkipAll2 <= 1 || skipCommasAndWhitespace(rhVar)) {
                                     return;
                                 }
-                                quotedString = startsWith(rhVar, (byte) 34) ? readQuotedString(rhVar) : readToken(rhVar);
-                                if (quotedString != null || ((String) linkedHashMap.put(token2, quotedString)) != null) {
+                                quotedString = startsWith(rhVar, (byte) 34) ? readQuotedString(rhVar)
+                                        : readToken(rhVar);
+                                if (quotedString != null
+                                        || ((String) linkedHashMap.put(token2, quotedString)) != null) {
                                     return;
                                 }
                                 if (skipCommasAndWhitespace(rhVar) && !rhVar.i()) {
@@ -146,7 +156,7 @@ public final class HttpHeaders {
                     StringBuilder sbY = dkz.y(token2);
                     sbY.append(dnr.bm(iSkipAll, "="));
                     Map mapSingletonMap = Collections.singletonMap(null, sbY.toString());
-                    bzo.p(mapSingletonMap, "singletonMap<String, Str…ek + \"=\".repeat(eqCount))");
+                    throwIfVar1IsNull(mapSingletonMap, "singletonMap<String, Str…ek + \"=\".repeat(eqCount))");
                     list.add(new Challenge(token, (Map<String, String>) mapSingletonMap));
                 }
             }
@@ -189,9 +199,9 @@ public final class HttpHeaders {
     }
 
     public static final void receiveHeaders(CookieJar cookieJar, HttpUrl httpUrl, Headers headers) {
-        bzo.q(cookieJar, "<this>");
-        bzo.q(httpUrl, "url");
-        bzo.q(headers, "headers");
+        throwIfVar1IsNull(cookieJar, "<this>");
+        throwIfVar1IsNull(httpUrl, "url");
+        throwIfVar1IsNull(headers, "headers");
         if (cookieJar == CookieJar.NO_COOKIES) {
             return;
         }

@@ -103,7 +103,7 @@ public final class sq implements afp {
                 i(this.b, i, udVar2);
                 return;
             } else {
-                iMax = ((afo) this.a.a.get(i3)).b + Math.max(r5.g().g - 1, 0);
+                iMax = ((afo) this.a.a.get(i3)).b + Math.max(r5.setResultTrue().g - 1, 0);
             }
         }
         int i4 = i - i2;
@@ -126,11 +126,11 @@ public final class sq implements afp {
         aff affVar = this.a;
         ArrayList arrayList = affVar.a;
         ArrayList arrayList2 = affVar.a;
-        int iMax = ((afo) arrayList2.get(i3)).b + Math.max(((afo) arrayList.get(i3)).g().g - 1, 0);
+        int iMax = ((afo) arrayList2.get(i3)).b + Math.max(((afo) arrayList.get(i3)).setResultTrue().g - 1, 0);
         int i5 = (iMax - i4) + i2;
         while (i5 < i) {
             i3++;
-            iMax = ((afo) arrayList2.get(i3)).b + Math.max(r0.g().g - 1, 0);
+            iMax = ((afo) arrayList2.get(i3)).b + Math.max(r0.setResultTrue().g - 1, 0);
             i5 += iMax + 1;
         }
         if (i5 > i) {
@@ -149,7 +149,7 @@ public final class sq implements afp {
         int i4 = udVar.a - udVar.c;
         while (i3 > i) {
             afo afoVar = (afo) this.a.a.get(i3 - 1);
-            i4 -= afoVar.b + afoVar.g().g;
+            i4 -= afoVar.b + afoVar.setResultTrue().g;
             i3--;
         }
         udVar2.c = 0;
@@ -166,7 +166,7 @@ public final class sq implements afp {
         int i4 = udVar.a - udVar.c;
         while (i3 < i) {
             afo afoVar = (afo) this.a.a.get(i3);
-            i4 += afoVar.b + afoVar.g().g;
+            i4 += afoVar.b + afoVar.setResultTrue().g;
             i3++;
         }
         udVar2.c = 0;

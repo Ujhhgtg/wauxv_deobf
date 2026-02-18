@@ -10,7 +10,7 @@ import java.util.Random;
 import java.util.concurrent.TimeUnit;
 import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.bqi;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.dkz;
 import me.hd.wauxv.obf.dqc;
 import me.hd.wauxv.obf.nu;
@@ -69,7 +69,10 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.FrameCall
     public static final Companion Companion = new Companion(null);
     private static final List<Protocol> ONLY_HTTP1 = dqc.bf(Protocol.HTTP_1_1);
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Close {
         private final long cancelAfterCloseMillis;
         private final int code;
@@ -94,7 +97,10 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.FrameCall
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
@@ -104,13 +110,16 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.FrameCall
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Message {
         private final sj data;
         private final int formatOpcode;
 
         public Message(int i, sj sjVar) {
-            bzo.q(sjVar, "data");
+            throwIfVar1IsNull(sjVar, "data");
             this.formatOpcode = i;
             this.data = sjVar;
         }
@@ -124,15 +133,18 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.FrameCall
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static abstract class Streams implements Closeable {
         private final boolean client;
         private final rl sink;
         private final rm source;
 
         public Streams(boolean z, rm rmVar, rl rlVar) {
-            bzo.q(rmVar, "source");
-            bzo.q(rlVar, "sink");
+            throwIfVar1IsNull(rmVar, "source");
+            throwIfVar1IsNull(rlVar, "sink");
             this.client = z;
             this.source = rmVar;
             this.sink = rlVar;
@@ -151,7 +163,10 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.FrameCall
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public final class WriterTask extends Task {
         public WriterTask() {
             super(RealWebSocket.this.name + " writer", false, 2, null);
@@ -168,11 +183,12 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.FrameCall
         }
     }
 
-    public RealWebSocket(TaskRunner taskRunner, Request request, WebSocketListener webSocketListener, Random random, long j, WebSocketExtensions webSocketExtensions, long j2) {
-        bzo.q(taskRunner, "taskRunner");
-        bzo.q(request, "originalRequest");
-        bzo.q(webSocketListener, "listener");
-        bzo.q(random, "random");
+    public RealWebSocket(TaskRunner taskRunner, Request request, WebSocketListener webSocketListener, Random random,
+            long j, WebSocketExtensions webSocketExtensions, long j2) {
+        throwIfVar1IsNull(taskRunner, "taskRunner");
+        throwIfVar1IsNull(request, "originalRequest");
+        throwIfVar1IsNull(webSocketListener, "listener");
+        throwIfVar1IsNull(random, "random");
         this.originalRequest = request;
         this.listener = webSocketListener;
         this.random = random;
@@ -220,40 +236,44 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.FrameCall
     }
 
     public final void awaitTermination(long j, TimeUnit timeUnit) throws InterruptedException {
-        bzo.q(timeUnit, "timeUnit");
+        throwIfVar1IsNull(timeUnit, "timeUnit");
         this.taskQueue.idleLatch().await(j, timeUnit);
     }
 
     @Override // okhttp3.WebSocket
     public void cancel() {
         Call call = this.call;
-        bzo.n(call);
+        throwIfVar1IsNull(call);
         call.cancel();
     }
 
     public final void checkUpgradeSuccess$okhttp(Response response, Exchange exchange) throws ProtocolException {
-        bzo.q(response, "response");
+        throwIfVar1IsNull(response, "response");
         if (response.code() != 101) {
-            throw new ProtocolException("Expected HTTP 101 response but was '" + response.code() + ' ' + response.message() + '\'');
+            throw new ProtocolException(
+                    "Expected HTTP 101 response but was '" + response.code() + ' ' + response.message() + '\'');
         }
         String strHeader$default = Response.header$default(response, "Connection", null, 2, null);
         if (!"Upgrade".equalsIgnoreCase(strHeader$default)) {
-            throw new ProtocolException(dkz.o('\'', "Expected 'Connection' header value 'Upgrade' but was '", strHeader$default));
+            throw new ProtocolException(
+                    dkz.o('\'', "Expected 'Connection' header value 'Upgrade' but was '", strHeader$default));
         }
         String strHeader$default2 = Response.header$default(response, "Upgrade", null, 2, null);
         if (!"websocket".equalsIgnoreCase(strHeader$default2)) {
-            throw new ProtocolException(dkz.o('\'', "Expected 'Upgrade' header value 'websocket' but was '", strHeader$default2));
+            throw new ProtocolException(
+                    dkz.o('\'', "Expected 'Upgrade' header value 'websocket' but was '", strHeader$default2));
         }
         String strHeader$default3 = Response.header$default(response, "Sec-WebSocket-Accept", null, 2, null);
         sj sjVar = sj.a;
         String strE = nu.g(this.key + WebSocketProtocol.ACCEPT_MAGIC).f("SHA-1").e();
-        if (bzo.f(strE, strHeader$default3)) {
+        if (nullSafeIsEqual(strE, strHeader$default3)) {
             if (exchange == null) {
                 throw new ProtocolException("Web Socket exchange missing: bad interceptor?");
             }
             return;
         }
-        throw new ProtocolException("Expected 'Sec-WebSocket-Accept' header value '" + strE + "' but was '" + strHeader$default3 + '\'');
+        throw new ProtocolException(
+                "Expected 'Sec-WebSocket-Accept' header value '" + strE + "' but was '" + strHeader$default3 + '\'');
     }
 
     @Override // okhttp3.WebSocket
@@ -262,31 +282,34 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.FrameCall
     }
 
     public final void connect(OkHttpClient okHttpClient) {
-        bzo.q(okHttpClient, "client");
+        throwIfVar1IsNull(okHttpClient, "client");
         if (this.originalRequest.header("Sec-WebSocket-Extensions") != null) {
             failWebSocket(new ProtocolException("Request header not permitted: 'Sec-WebSocket-Extensions'"), null);
             return;
         }
-        OkHttpClient okHttpClientBuild = okHttpClient.newBuilder().eventListener(EventListener.NONE).protocols(ONLY_HTTP1).build();
-        final Request requestBuild = this.originalRequest.newBuilder().header("Upgrade", "websocket").header("Connection", "Upgrade").header("Sec-WebSocket-Key", this.key).header("Sec-WebSocket-Version", "13").header("Sec-WebSocket-Extensions", "permessage-deflate").build();
+        OkHttpClient okHttpClientBuild = okHttpClient.newBuilder().eventListener(EventListener.NONE)
+                .protocols(ONLY_HTTP1).build();
+        final Request requestBuild = this.originalRequest.newBuilder().header("Upgrade", "websocket")
+                .header("Connection", "Upgrade").header("Sec-WebSocket-Key", this.key)
+                .header("Sec-WebSocket-Version", "13").header("Sec-WebSocket-Extensions", "permessage-deflate").build();
         RealCall realCall = new RealCall(okHttpClientBuild, requestBuild, true);
         this.call = realCall;
         realCall.enqueue(new Callback() { // from class: okhttp3.internal.ws.RealWebSocket.connect.1
             @Override // okhttp3.Callback
             public void onFailure(Call call, IOException iOException) {
-                bzo.q(call, "call");
-                bzo.q(iOException, "e");
+                throwIfVar1IsNull(call, "call");
+                throwIfVar1IsNull(iOException, "e");
                 RealWebSocket.this.failWebSocket(iOException, null);
             }
 
             @Override // okhttp3.Callback
             public void onResponse(Call call, Response response) throws Throwable {
-                bzo.q(call, "call");
-                bzo.q(response, "response");
+                throwIfVar1IsNull(call, "call");
+                throwIfVar1IsNull(response, "response");
                 Exchange exchange = response.exchange();
                 try {
                     RealWebSocket.this.checkUpgradeSuccess$okhttp(response, exchange);
-                    bzo.n(exchange);
+                    throwIfVar1IsNull(exchange);
                     Streams streamsNewWebSocketStreams = exchange.newWebSocketStreams();
                     WebSocketExtensions webSocketExtensions = WebSocketExtensions.Companion.parse(response.headers());
                     RealWebSocket.this.extensions = webSocketExtensions;
@@ -298,7 +321,9 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.FrameCall
                         }
                     }
                     try {
-                        RealWebSocket.this.initReaderAndWriter(Util.okHttpName + " WebSocket " + requestBuild.url().redact(), streamsNewWebSocketStreams);
+                        RealWebSocket.this.initReaderAndWriter(
+                                Util.okHttpName + " WebSocket " + requestBuild.url().redact(),
+                                streamsNewWebSocketStreams);
                         RealWebSocket.this.getListener$okhttp().onOpen(RealWebSocket.this, response);
                         RealWebSocket.this.loopReader();
                     } catch (Exception e) {
@@ -316,7 +341,7 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.FrameCall
     }
 
     public final void failWebSocket(Exception exc, Response response) {
-        bzo.q(exc, "e");
+        throwIfVar1IsNull(exc, "e");
         synchronized (this) {
             if (this.failed) {
                 return;
@@ -351,15 +376,17 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.FrameCall
 
     public final void initReaderAndWriter(String str, Streams streams) throws Throwable {
         Throwable th;
-        bzo.q(str, "name");
-        bzo.q(streams, "streams");
+        throwIfVar1IsNull(str, "name");
+        throwIfVar1IsNull(streams, "streams");
         WebSocketExtensions webSocketExtensions = this.extensions;
-        bzo.n(webSocketExtensions);
+        throwIfVar1IsNull(webSocketExtensions);
         synchronized (this) {
             try {
                 this.name = str;
                 this.streams = streams;
-                this.writer = new WebSocketWriter(streams.getClient(), streams.getSink(), this.random, webSocketExtensions.perMessageDeflate, webSocketExtensions.noContextTakeover(streams.getClient()), this.minimumDeflateSize);
+                this.writer = new WebSocketWriter(streams.getClient(), streams.getSink(), this.random,
+                        webSocketExtensions.perMessageDeflate,
+                        webSocketExtensions.noContextTakeover(streams.getClient()), this.minimumDeflateSize);
                 this.writerTask = new WriterTask();
                 long j = this.pingIntervalMillis;
                 if (j != 0) {
@@ -367,7 +394,8 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.FrameCall
                         final long nanos = TimeUnit.MILLISECONDS.toNanos(j);
                         TaskQueue taskQueue = this.taskQueue;
                         final String strConcat = str.concat(" ping");
-                        taskQueue.schedule(new Task(strConcat) { // from class: okhttp3.internal.ws.RealWebSocket$initReaderAndWriter$lambda$3$$inlined$schedule$1
+                        taskQueue.schedule(new Task(strConcat) { // from class:
+                                                                 // okhttp3.internal.ws.RealWebSocket$initReaderAndWriter$lambda$3$$inlined$schedule$1
                             @Override // okhttp3.internal.concurrent.Task
                             public long runOnce() {
                                 this.writePingFrame$okhttp();
@@ -382,7 +410,9 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.FrameCall
                 if (!this.messageAndCloseQueue.isEmpty()) {
                     runWriter();
                 }
-                this.reader = new WebSocketReader(streams.getClient(), streams.getSource(), this, webSocketExtensions.perMessageDeflate, webSocketExtensions.noContextTakeover(!streams.getClient()));
+                this.reader = new WebSocketReader(streams.getClient(), streams.getSource(), this,
+                        webSocketExtensions.perMessageDeflate,
+                        webSocketExtensions.noContextTakeover(!streams.getClient()));
             } catch (Throwable th3) {
                 th = th3;
             }
@@ -392,7 +422,7 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.FrameCall
     public final void loopReader() {
         while (this.receivedCloseCode == -1) {
             WebSocketReader webSocketReader = this.reader;
-            bzo.n(webSocketReader);
+            throwIfVar1IsNull(webSocketReader);
             webSocketReader.processNextFrame();
         }
     }
@@ -402,7 +432,7 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.FrameCall
         Streams streams;
         WebSocketReader webSocketReader;
         WebSocketWriter webSocketWriter;
-        bzo.q(str, "reason");
+        throwIfVar1IsNull(str, "reason");
         if (i == -1) {
             throw new IllegalArgumentException("Failed requirement.");
         }
@@ -447,14 +477,14 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.FrameCall
 
     @Override // okhttp3.internal.ws.WebSocketReader.FrameCallback
     public void onReadMessage(String str) {
-        bzo.q(str, "text");
+        throwIfVar1IsNull(str, "text");
         this.listener.onMessage(this, str);
     }
 
     @Override // okhttp3.internal.ws.WebSocketReader.FrameCallback
     public synchronized void onReadPing(sj sjVar) {
         try {
-            bzo.q(sjVar, "payload");
+            throwIfVar1IsNull(sjVar, "payload");
             if (!this.failed && (!this.enqueuedClose || !this.messageAndCloseQueue.isEmpty())) {
                 this.pongQueue.add(sjVar);
                 runWriter();
@@ -467,14 +497,14 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.FrameCall
 
     @Override // okhttp3.internal.ws.WebSocketReader.FrameCallback
     public synchronized void onReadPong(sj sjVar) {
-        bzo.q(sjVar, "payload");
+        throwIfVar1IsNull(sjVar, "payload");
         this.receivedPongCount++;
         this.awaitingPong = false;
     }
 
     public final synchronized boolean pong(sj sjVar) {
         try {
-            bzo.q(sjVar, "payload");
+            throwIfVar1IsNull(sjVar, "payload");
             if (!this.failed && (!this.enqueuedClose || !this.messageAndCloseQueue.isEmpty())) {
                 this.pongQueue.add(sjVar);
                 runWriter();
@@ -489,7 +519,7 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.FrameCall
     public final boolean processNextFrame() {
         try {
             WebSocketReader webSocketReader = this.reader;
-            bzo.n(webSocketReader);
+            throwIfVar1IsNull(webSocketReader);
             webSocketReader.processNextFrame();
             return this.receivedCloseCode == -1;
         } catch (Exception e) {
@@ -518,7 +548,7 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.FrameCall
 
     @Override // okhttp3.WebSocket
     public boolean send(String str) {
-        bzo.q(str, "text");
+        throwIfVar1IsNull(str, "text");
         sj sjVar = sj.a;
         return send(nu.g(str), 1);
     }
@@ -532,16 +562,28 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.FrameCall
         this.taskQueue.idleLatch().await(10L, TimeUnit.SECONDS);
     }
 
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.java:210)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:196)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:180)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:201)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.java:347)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(TryCatchBlockAttr.java:356)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:202)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.
+     * java:210)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:196)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:180)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:
+     * 201)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.
+     * java:347)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(
+     * TryCatchBlockAttr.java:356)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+     * MarkFinallyVisitor.java:202)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:119)
      */
     public final boolean writeOneFrame$okhttp() {
         String str;
@@ -575,7 +617,8 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.FrameCall
                             long cancelAfterCloseMillis = ((Close) objPoll).getCancelAfterCloseMillis();
                             TaskQueue taskQueue = this.taskQueue;
                             final String str2 = this.name + " cancel";
-                            taskQueue.schedule(new Task(str2, z) { // from class: okhttp3.internal.ws.RealWebSocket$writeOneFrame$lambda$8$$inlined$execute$default$1
+                            taskQueue.schedule(new Task(str2, z) { // from class:
+                                                                   // okhttp3.internal.ws.RealWebSocket$writeOneFrame$lambda$8$$inlined$execute$default$1
                                 @Override // okhttp3.internal.concurrent.Task
                                 public long runOnce() {
                                     this.cancel();
@@ -606,11 +649,11 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.FrameCall
                 }
                 try {
                     if (sjVarPoll != null) {
-                        bzo.n(webSocketWriter2);
+                        throwIfVar1IsNull(webSocketWriter2);
                         webSocketWriter2.writePong(sjVarPoll);
                     } else if (obj instanceof Message) {
                         Message message = (Message) obj;
-                        bzo.n(webSocketWriter2);
+                        throwIfVar1IsNull(webSocketWriter2);
                         webSocketWriter2.writeMessageFrame(message.getFormatOpcode(), message.getData());
                         synchronized (this) {
                             try {
@@ -624,11 +667,11 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.FrameCall
                             throw new AssertionError();
                         }
                         Close close = (Close) obj;
-                        bzo.n(webSocketWriter2);
+                        throwIfVar1IsNull(webSocketWriter2);
                         webSocketWriter2.writeClose(close.getCode(), close.getReason());
                         if (streams != null) {
                             WebSocketListener webSocketListener = this.listener;
-                            bzo.n(str);
+                            throwIfVar1IsNull(str);
                             webSocketListener.onClosed(this, i, str);
                         }
                     }
@@ -718,13 +761,13 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.FrameCall
 
     @Override // okhttp3.internal.ws.WebSocketReader.FrameCallback
     public void onReadMessage(sj sjVar) {
-        bzo.q(sjVar, "bytes");
+        throwIfVar1IsNull(sjVar, "bytes");
         this.listener.onMessage(this, sjVar);
     }
 
     @Override // okhttp3.WebSocket
     public boolean send(sj sjVar) {
-        bzo.q(sjVar, "bytes");
+        throwIfVar1IsNull(sjVar, "bytes");
         return send(sjVar, 2);
     }
 

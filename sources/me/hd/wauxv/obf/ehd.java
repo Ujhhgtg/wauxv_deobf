@@ -32,7 +32,9 @@ public final class ehd {
             return false;
         }
         ehd ehdVar = (ehd) obj;
-        return bzo.f(this.a, ehdVar.a) && bzo.f(this.b, ehdVar.b) && bzo.f(this.c, ehdVar.c) && bzo.f(this.d, ehdVar.d) && bzo.f(this.e, ehdVar.e) && bzo.f(this.f, ehdVar.f);
+        return nullSafeIsEqual(this.a, ehdVar.a) && nullSafeIsEqual(this.b, ehdVar.b)
+                && nullSafeIsEqual(this.c, ehdVar.c) && nullSafeIsEqual(this.d, ehdVar.d)
+                && nullSafeIsEqual(this.e, ehdVar.e) && nullSafeIsEqual(this.f, ehdVar.f);
     }
 
     public final int hashCode() {

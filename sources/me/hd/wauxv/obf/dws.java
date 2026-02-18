@@ -6,7 +6,7 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class dws {
     public static final dwr Companion = new dwr();
-    public static final btt[] a = {ewz.am(btx.a, new dtr(5)), null, null, null, null, null};
+    public static final btt[] a = { ewz.am(btx.a, new dtr(5)), null, null, null, null, null };
     public final List b;
     public final String c;
     public final String d;
@@ -35,7 +35,9 @@ public final class dws {
             return false;
         }
         dws dwsVar = (dws) obj;
-        return bzo.f(this.b, dwsVar.b) && bzo.f(this.c, dwsVar.c) && bzo.f(this.d, dwsVar.d) && bzo.f(this.e, dwsVar.e) && bzo.f(this.f, dwsVar.f) && bzo.f(this.g, dwsVar.g);
+        return nullSafeIsEqual(this.b, dwsVar.b) && nullSafeIsEqual(this.c, dwsVar.c)
+                && nullSafeIsEqual(this.d, dwsVar.d) && nullSafeIsEqual(this.e, dwsVar.e)
+                && nullSafeIsEqual(this.f, dwsVar.f) && nullSafeIsEqual(this.g, dwsVar.g);
     }
 
     public final int hashCode() {
@@ -61,6 +63,6 @@ public final class dws {
         yg.u(sb, this.d, -166206644419370L);
         yg.u(sb, this.e, -166193759517482L);
         dts.g(sb, this.f, -166090680302378L);
-        return bjs.q(sb, this.g, ')');
+        return concat(sb, this.g, ')');
     }
 }

@@ -16,7 +16,8 @@ public abstract class cwc extends sw implements btc {
         }
         if (obj instanceof cwc) {
             cwc cwcVar = (cwc) obj;
-            return l().equals(cwcVar.l()) && this.f.equals(cwcVar.f) && this.h.equals(cwcVar.h) && bzo.f(this.d, cwcVar.d);
+            return l().equals(cwcVar.l()) && this.f.equals(cwcVar.f) && this.h.equals(cwcVar.h)
+                    && nullSafeIsEqual(this.d, cwcVar.d);
         }
         if (obj instanceof btc) {
             return obj.equals(j());
@@ -26,7 +27,8 @@ public abstract class cwc extends sw implements btc {
 
     public final btc g() {
         if (this.b) {
-            throw new UnsupportedOperationException("Kotlin reflection is not yet supported for synthetic Java properties. Please follow/upvote https://youtrack.jetbrains.com/issue/KT-55980");
+            throw new UnsupportedOperationException(
+                    "Kotlin reflection is not yet supported for synthetic Java properties. Please follow/upvote https://youtrack.jetbrains.com/issue/KT-55980");
         }
         bsu bsuVarJ = j();
         if (bsuVarJ != this) {
@@ -46,6 +48,7 @@ public abstract class cwc extends sw implements btc {
 
     public final String toString() {
         bsu bsuVarJ = j();
-        return bsuVarJ != this ? bsuVarJ.toString() : yg.o(new StringBuilder("property "), this.f, " (Kotlin reflection is not available)");
+        return bsuVarJ != this ? bsuVarJ.toString()
+                : yg.o(new StringBuilder("property "), this.f, " (Kotlin reflection is not available)");
     }
 }

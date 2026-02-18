@@ -28,7 +28,8 @@ public final class ehm {
             return false;
         }
         ehm ehmVar = (ehm) obj;
-        return bzo.f(this.a, ehmVar.a) && bzo.f(this.b, ehmVar.b) && bzo.f(this.c, ehmVar.c) && bzo.f(this.d, ehmVar.d);
+        return nullSafeIsEqual(this.a, ehmVar.a) && nullSafeIsEqual(this.b, ehmVar.b)
+                && nullSafeIsEqual(this.c, ehmVar.c) && nullSafeIsEqual(this.d, ehmVar.d);
     }
 
     public final int hashCode() {
@@ -50,6 +51,6 @@ public final class ehm {
         sb.append(this.b);
         sb.append(", audioTrackUrl=" /* cnb.z(-307287730158378L) */);
         yg.u(sb, this.c, -307214715714346L);
-        return bjs.q(sb, this.d, ')');
+        return concat(sb, this.d, ')');
     }
 }

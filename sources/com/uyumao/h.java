@@ -16,7 +16,10 @@ import org.json.JSONObject;
 public class h extends BroadcastReceiver {
     public long a = 0;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public class a implements Runnable {
         public final /* synthetic */ Context a;
         public final /* synthetic */ JSONObject b;
@@ -44,8 +47,10 @@ public class h extends BroadcastReceiver {
         String str3;
         String str4;
         try {
-            if ("android.net.conn.CONNECTIVITY_CHANGE".equals(intent.getAction()) && e.a(context, "android.permission.ACCESS_NETWORK_STATE")) {
-                ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService("connectivity");
+            if ("android.net.conn.CONNECTIVITY_CHANGE".equals(intent.getAction())
+                    && e.a(context, "android.permission.ACCESS_NETWORK_STATE")) {
+                ConnectivityManager connectivityManager = (ConnectivityManager) context
+                        .getSystemService("connectivity");
                 int i = 1;
                 NetworkInfo networkInfo = connectivityManager.getNetworkInfo(1);
                 NetworkInfo networkInfo2 = connectivityManager.getNetworkInfo(0);
@@ -105,7 +110,7 @@ public class h extends BroadcastReceiver {
                     th = th;
                 }
                 try {
-                    jSONObject.put(com.umeng.analytics.pro.f.y, i);
+                    jSONObject.put("type", i);
                     if (!TextUtils.isEmpty(str2) && !TextUtils.isEmpty(str)) {
                         jSONObject.put("wifi_ssid", str2);
                         jSONObject.put("wifi_bssid", str);

@@ -83,7 +83,7 @@ public final class RegOps {
             case 12:
                 return 9;
             default:
-                throw new RuntimeException(bjs.i(i, "Unrecognized IF regop: "));
+                throw new RuntimeException(concatVar2Var1(i, "Unrecognized IF regop: "));
         }
     }
 

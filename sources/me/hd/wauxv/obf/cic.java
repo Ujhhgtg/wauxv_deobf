@@ -20,7 +20,8 @@ public final /* synthetic */ class cic implements bgj {
     }
 
     @Override // me.hd.wauxv.obf.bgj
-    public final Object g(Object obj, Object obj2) throws IllegalAccessException, InstantiationException, InvocationTargetException {
+    public final Object g(Object obj, Object obj2)
+            throws IllegalAccessException, InstantiationException, InvocationTargetException {
         switch (this.a) {
             case 0:
                 String str = (String) this.b;
@@ -30,7 +31,9 @@ public final /* synthetic */ class cic implements bgj {
                 while (it.hasNext()) {
                     arj.ah(((adx) it.next()).a, str, aysVar.a);
                 }
-                dnc.g(null, 3, "已转发至" /* cnb.z(-475620383390506L) */ + list.size() + "个会话" /* cnb.z(-475581728684842L) */);
+                dnc.g(null, 3, "已转发至" /* cnb.z(-475620383390506L) */ + list.size() + "个会话" /*
+                                                                                            * cnb.z(-475581728684842L)
+                                                                                            */);
                 break;
             case 1:
                 String str2 = (String) this.b;
@@ -40,18 +43,21 @@ public final /* synthetic */ class cic implements bgj {
                 while (it2.hasNext()) {
                     arj.ah(((adx) it2.next()).a, str2, aysVar2.a);
                 }
-                dnc.g(null, 3, "已转发至" /* cnb.z(-476895988677418L) */ + list2.size() + "个会话" /* cnb.z(-476908873579306L) */);
+                dnc.g(null, 3, "已转发至" /* cnb.z(-476895988677418L) */ + list2.size() + "个会话" /*
+                                                                                             * cnb.z(-476908873579306L)
+                                                                                             */);
                 break;
             default:
                 ArrayList arrayList = (ArrayList) this.b;
                 ArrayList arrayList2 = (ArrayList) this.c;
                 List<adx> list3 = (List) obj;
                 for (adx adxVar : list3) {
-                    for (csm csmVar : aaz.ae(arrayList, arrayList2)) {
-                        arj.ah(adxVar.a, (String) csmVar.a, ((Number) csmVar.b).intValue());
+                    for (Pair pairVar : aaz.ae(arrayList, arrayList2)) {
+                        arj.ah(adxVar.a, (String) pairVar.first, ((Number) pairVar.second).intValue());
                     }
                 }
-                dnc.g(null, 3, "已转发" /* cnb.z(-514360988400426L) */ + arrayList.size() + "条语音至" /* cnb.z(-514309448792874L) */ + list3.size() + "个会话" /* cnb.z(-513721038273322L) */);
+                dnc.g(null, 3, "已转发" /* cnb.z(-514360988400426L) */ + arrayList.size()
+                        + "条语音至" /* cnb.z(-514309448792874L) */ + list3.size() + "个会话" /* cnb.z(-513721038273322L) */);
                 break;
         }
         return Boolean.FALSE;

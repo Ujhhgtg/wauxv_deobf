@@ -120,7 +120,10 @@ public class StaggeredGridLayoutManager extends czg implements czs {
 
     public static int ax(int i, int i2, int i3) {
         int mode;
-        return (!(i2 == 0 && i3 == 0) && ((mode = View.MeasureSpec.getMode(i)) == Integer.MIN_VALUE || mode == 1073741824)) ? View.MeasureSpec.makeMeasureSpec(Math.max(0, (View.MeasureSpec.getSize(i) - i2) - i3), mode) : i;
+        return (!(i2 == 0 && i3 == 0)
+                && ((mode = View.MeasureSpec.getMode(i)) == Integer.MIN_VALUE || mode == 1073741824))
+                        ? View.MeasureSpec.makeMeasureSpec(Math.max(0, (View.MeasureSpec.getSize(i) - i2) - i3), mode)
+                        : i;
     }
 
     @Override // me.hd.wauxv.obf.czg
@@ -292,21 +295,27 @@ public class StaggeredGridLayoutManager extends czg implements czs {
         return cnf.av(cztVar, this.c, bg(z), bf(z), this, this.au, this.i);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:138:0x02a0  */
-    /* JADX WARN: Found duplicated region for block: B:140:0x02a4  */
-    /* JADX WARN: Found duplicated region for block: B:142:0x02a9 A[LOOP:2: B:141:0x02a7->B:142:0x02a9, LOOP_END] */
-    /* JADX WARN: Found duplicated region for block: B:143:0x02b3  */
-    /* JADX WARN: Found duplicated region for block: B:144:0x02b9  */
-    /* JADX WARN: Found duplicated region for block: B:146:0x02bd  */
-    /* JADX WARN: Found duplicated region for block: B:148:0x02c5 A[LOOP:3: B:147:0x02c3->B:148:0x02c5, LOOP_END] */
-    /* JADX WARN: Found duplicated region for block: B:149:0x02cf  */
-    /* JADX WARN: Found duplicated region for block: B:159:0x0303  */
-    /* JADX WARN: Found duplicated region for block: B:161:0x0307  */
-    /* JADX WARN: Found duplicated region for block: B:162:0x030f  */
-    /* JADX WARN: Found duplicated region for block: B:166:0x0327  */
-    /* JADX WARN: Found duplicated region for block: B:167:0x032b  */
-    /* JADX WARN: Found duplicated region for block: B:170:0x0332  */
-    /* JADX WARN: Found duplicated region for block: B:172:0x033a  */
+    /* JADX WARN: Found duplicated region for block: B:138:0x02a0 */
+    /* JADX WARN: Found duplicated region for block: B:140:0x02a4 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:142:0x02a9 A[LOOP:2:
+     * B:141:0x02a7->B:142:0x02a9, LOOP_END]
+     */
+    /* JADX WARN: Found duplicated region for block: B:143:0x02b3 */
+    /* JADX WARN: Found duplicated region for block: B:144:0x02b9 */
+    /* JADX WARN: Found duplicated region for block: B:146:0x02bd */
+    /*
+     * JADX WARN: Found duplicated region for block: B:148:0x02c5 A[LOOP:3:
+     * B:147:0x02c3->B:148:0x02c5, LOOP_END]
+     */
+    /* JADX WARN: Found duplicated region for block: B:149:0x02cf */
+    /* JADX WARN: Found duplicated region for block: B:159:0x0303 */
+    /* JADX WARN: Found duplicated region for block: B:161:0x0307 */
+    /* JADX WARN: Found duplicated region for block: B:162:0x030f */
+    /* JADX WARN: Found duplicated region for block: B:166:0x0327 */
+    /* JADX WARN: Found duplicated region for block: B:167:0x032b */
+    /* JADX WARN: Found duplicated region for block: B:170:0x0332 */
+    /* JADX WARN: Found duplicated region for block: B:172:0x033a */
     public final int be(czo czoVar, bts btsVar, czt cztVar) {
         byj byjVar;
         int i;
@@ -326,7 +335,8 @@ public class StaggeredGridLayoutManager extends czg implements czs {
         int i9 = 1;
         this.j.set(0, this.a, true);
         bts btsVar2 = this.g;
-        int i10 = btsVar2.i ? btsVar.e == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE : btsVar.e == 1 ? btsVar.g + btsVar.b : btsVar.f - btsVar.b;
+        int i10 = btsVar2.i ? btsVar.e == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE
+                : btsVar.e == 1 ? btsVar.g + btsVar.b : btsVar.f - btsVar.b;
         cs(btsVar.e, i10);
         int iJ = this.i ? this.c.j() : this.c.n();
         boolean z2 = false;
@@ -400,16 +410,20 @@ public class StaggeredGridLayoutManager extends czg implements czs {
             if (!dmbVar.b) {
                 i = i13;
                 if (this.e == 1) {
-                    bq(view, czg.ee(this.f, this.dz, 0, ((ViewGroup.MarginLayoutParams) dmbVar).width, false), czg.ee(this.ec, this.ea, eu() + ex(), ((ViewGroup.MarginLayoutParams) dmbVar).height, true));
+                    bq(view, czg.ee(this.f, this.dz, 0, ((ViewGroup.MarginLayoutParams) dmbVar).width, false), czg
+                            .ee(this.ec, this.ea, eu() + ex(), ((ViewGroup.MarginLayoutParams) dmbVar).height, true));
                 } else {
-                    bq(view, czg.ee(this.eb, this.dz, ew() + ev(), ((ViewGroup.MarginLayoutParams) dmbVar).width, true), czg.ee(this.f, this.ea, 0, ((ViewGroup.MarginLayoutParams) dmbVar).height, false));
+                    bq(view, czg.ee(this.eb, this.dz, ew() + ev(), ((ViewGroup.MarginLayoutParams) dmbVar).width, true),
+                            czg.ee(this.f, this.ea, 0, ((ViewGroup.MarginLayoutParams) dmbVar).height, false));
                 }
             } else if (this.e == 1) {
                 i = i13;
-                bq(view, this.aq, czg.ee(this.ec, this.ea, eu() + ex(), ((ViewGroup.MarginLayoutParams) dmbVar).height, true));
+                bq(view, this.aq,
+                        czg.ee(this.ec, this.ea, eu() + ex(), ((ViewGroup.MarginLayoutParams) dmbVar).height, true));
             } else {
                 i = i13;
-                bq(view, czg.ee(this.eb, this.dz, ew() + ev(), ((ViewGroup.MarginLayoutParams) dmbVar).width, true), this.aq);
+                bq(view, czg.ee(this.eb, this.dz, ew() + ev(), ((ViewGroup.MarginLayoutParams) dmbVar).width, true),
+                        this.aq);
             }
             if (btsVar.e == 1) {
                 iF = dmbVar.b ? bl(iJ) : byjVar.p(iJ);
@@ -484,10 +498,10 @@ public class StaggeredGridLayoutManager extends czg implements czs {
                 if (btsVar.e == i2) {
                     if (dmbVar.b) {
                         for (i4 = this.a - i2; i4 >= 0; i4--) {
-                            this.b[i4].h(view);
+                            this.b[i4].locateDex(view);
                         }
                     } else {
-                        dmbVar.a.h(view);
+                        dmbVar.a.locateDex(view);
                     }
                 } else if (dmbVar.b) {
                     for (i3 = this.a - 1; i3 >= 0; i3--) {
@@ -531,10 +545,10 @@ public class StaggeredGridLayoutManager extends czg implements czs {
             if (btsVar.e == i2) {
                 if (dmbVar.b) {
                     while (i4 >= 0) {
-                        this.b[i4].h(view);
+                        this.b[i4].locateDex(view);
                     }
                 } else {
-                    dmbVar.a.h(view);
+                    dmbVar.a.locateDex(view);
                 }
             } else if (dmbVar.b) {
                 while (i3 >= 0) {
@@ -586,7 +600,7 @@ public class StaggeredGridLayoutManager extends czg implements czs {
         View view = null;
         for (int iEs = es() - 1; iEs >= 0; iEs--) {
             View viewEr = er(iEs);
-            int iH = this.c.h(viewEr);
+            int iH = this.c.locateDex(viewEr);
             int iE = this.c.e(viewEr);
             if (iE > iN && iH < iJ) {
                 if (iE <= iJ || !z) {
@@ -607,7 +621,7 @@ public class StaggeredGridLayoutManager extends czg implements czs {
         View view = null;
         for (int i = 0; i < iEs; i++) {
             View viewEr = er(i);
-            int iH = this.c.h(viewEr);
+            int iH = this.c.locateDex(viewEr);
             if (this.c.e(viewEr) > iN && iH < iJ) {
                 if (iH >= iN || !z) {
                     return viewEr;
@@ -681,15 +695,15 @@ public class StaggeredGridLayoutManager extends czg implements czs {
         return iR;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:15:0x0026  */
+    /* JADX WARN: Found duplicated region for block: B:15:0x0026 */
     /* JADX WARN: Found duplicated region for block: B:17:0x0029 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:19:0x002c  */
-    /* JADX WARN: Found duplicated region for block: B:20:0x0033  */
-    /* JADX WARN: Found duplicated region for block: B:21:0x0037  */
-    /* JADX WARN: Found duplicated region for block: B:24:0x003d  */
-    /* JADX WARN: Found duplicated region for block: B:26:0x0041  */
-    /* JADX WARN: Found duplicated region for block: B:27:0x0046  */
-    /* JADX WARN: Found duplicated region for block: B:29:0x004c  */
+    /* JADX WARN: Found duplicated region for block: B:19:0x002c */
+    /* JADX WARN: Found duplicated region for block: B:20:0x0033 */
+    /* JADX WARN: Found duplicated region for block: B:21:0x0037 */
+    /* JADX WARN: Found duplicated region for block: B:24:0x003d */
+    /* JADX WARN: Found duplicated region for block: B:26:0x0041 */
+    /* JADX WARN: Found duplicated region for block: B:27:0x0046 */
+    /* JADX WARN: Found duplicated region for block: B:29:0x004c */
     /* JADX WARN: Found duplicated region for block: B:31:? A[RETURN, SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:32:? A[RETURN, SYNTHETIC] */
     public final void bn(int i, int i2, int i3) {
@@ -741,18 +755,18 @@ public class StaggeredGridLayoutManager extends czg implements czs {
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:34:0x0095  */
-    /* JADX WARN: Found duplicated region for block: B:45:0x00b2  */
+    /* JADX WARN: Found duplicated region for block: B:34:0x0095 */
+    /* JADX WARN: Found duplicated region for block: B:45:0x00b2 */
     /* JADX WARN: Found duplicated region for block: B:48:0x00c1 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:50:0x00c4  */
+    /* JADX WARN: Found duplicated region for block: B:50:0x00c4 */
     /* JADX WARN: Found duplicated region for block: B:53:0x00d3 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:54:0x00d5  */
-    /* JADX WARN: Found duplicated region for block: B:55:0x00d7  */
-    /* JADX WARN: Found duplicated region for block: B:57:0x00da  */
-    /* JADX WARN: Found duplicated region for block: B:59:0x00eb  */
-    /* JADX WARN: Found duplicated region for block: B:60:0x00ed  */
-    /* JADX WARN: Found duplicated region for block: B:62:0x00f0  */
-    /* JADX WARN: Found duplicated region for block: B:63:0x00f2  */
+    /* JADX WARN: Found duplicated region for block: B:54:0x00d5 */
+    /* JADX WARN: Found duplicated region for block: B:55:0x00d7 */
+    /* JADX WARN: Found duplicated region for block: B:57:0x00da */
+    /* JADX WARN: Found duplicated region for block: B:59:0x00eb */
+    /* JADX WARN: Found duplicated region for block: B:60:0x00ed */
+    /* JADX WARN: Found duplicated region for block: B:62:0x00f0 */
+    /* JADX WARN: Found duplicated region for block: B:63:0x00f2 */
     /* JADX WARN: Found duplicated region for block: B:69:0x00f5 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:72:0x00f5 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:73:0x00f5 A[SYNTHETIC] */
@@ -826,8 +840,8 @@ public class StaggeredGridLayoutManager extends czg implements czs {
                                 }
                             }
                         } else {
-                            iH = this.c.h(viewEr2);
-                            iH2 = this.c.h(viewEr);
+                            iH = this.c.locateDex(viewEr2);
+                            iH2 = this.c.locateDex(viewEr);
                             if (iH <= iH2) {
                                 if (iH == iH2) {
                                 }
@@ -859,8 +873,8 @@ public class StaggeredGridLayoutManager extends czg implements czs {
                             }
                         }
                     } else {
-                        iH = this.c.h(viewEr2);
-                        iH2 = this.c.h(viewEr);
+                        iH = this.c.locateDex(viewEr2);
+                        iH2 = this.c.locateDex(viewEr);
                         if (iH <= iH2) {
                             if (iH == iH2) {
                             }
@@ -893,20 +907,22 @@ public class StaggeredGridLayoutManager extends czg implements czs {
             rect.set(recyclerView.dw(view));
         }
         dmb dmbVar = (dmb) view.getLayoutParams();
-        int iAx = ax(i, ((ViewGroup.MarginLayoutParams) dmbVar).leftMargin + rect.left, ((ViewGroup.MarginLayoutParams) dmbVar).rightMargin + rect.right);
-        int iAx2 = ax(i2, ((ViewGroup.MarginLayoutParams) dmbVar).topMargin + rect.top, ((ViewGroup.MarginLayoutParams) dmbVar).bottomMargin + rect.bottom);
+        int iAx = ax(i, ((ViewGroup.MarginLayoutParams) dmbVar).leftMargin + rect.left,
+                ((ViewGroup.MarginLayoutParams) dmbVar).rightMargin + rect.right);
+        int iAx2 = ax(i2, ((ViewGroup.MarginLayoutParams) dmbVar).topMargin + rect.top,
+                ((ViewGroup.MarginLayoutParams) dmbVar).bottomMargin + rect.bottom);
         if (fk(view, iAx, iAx2, dmbVar)) {
             view.measure(iAx, iAx2);
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:108:0x01a8  */
-    /* JADX WARN: Found duplicated region for block: B:109:0x01aa  */
-    /* JADX WARN: Found duplicated region for block: B:123:0x01e1  */
-    /* JADX WARN: Found duplicated region for block: B:125:0x01ec  */
-    /* JADX WARN: Found duplicated region for block: B:131:0x01fe  */
-    /* JADX WARN: Found duplicated region for block: B:133:0x0209  */
-    /* JADX WARN: Found duplicated region for block: B:262:0x042f  */
+    /* JADX WARN: Found duplicated region for block: B:108:0x01a8 */
+    /* JADX WARN: Found duplicated region for block: B:109:0x01aa */
+    /* JADX WARN: Found duplicated region for block: B:123:0x01e1 */
+    /* JADX WARN: Found duplicated region for block: B:125:0x01ec */
+    /* JADX WARN: Found duplicated region for block: B:131:0x01fe */
+    /* JADX WARN: Found duplicated region for block: B:133:0x0209 */
+    /* JADX WARN: Found duplicated region for block: B:262:0x042f */
     /* JADX WARN: Found duplicated region for block: B:273:0x01fc A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:277:0x01fc A[SYNTHETIC] */
     public final void br(czo czoVar, czt cztVar, boolean z) {
@@ -1064,12 +1080,12 @@ public class StaggeredGridLayoutManager extends czg implements czs {
                             if (dmaVar.c) {
                                 dmaVar.b = (this.c.j() - this.l) - this.c.e(viewCa);
                             } else {
-                                dmaVar.b = (this.c.n() + this.l) - this.c.h(viewCa);
+                                dmaVar.b = (this.c.n() + this.l) - this.c.locateDex(viewCa);
                             }
                         } else if (this.c.f(viewCa) > this.c.o()) {
                             dmaVar.b = dmaVar.c ? this.c.j() : this.c.n();
                         } else {
-                            int iH = this.c.h(viewCa) - this.c.n();
+                            int iH = this.c.locateDex(viewCa) - this.c.n();
                             if (iH < 0) {
                                 dmaVar.b = -iH;
                             } else {
@@ -1129,7 +1145,8 @@ public class StaggeredGridLayoutManager extends czg implements czs {
                     StaggeredGridLayoutManager staggeredGridLayoutManager2 = (StaggeredGridLayoutManager) byjVar3.g;
                     int iP4 = z7 ? byjVar3.p(Integer.MIN_VALUE) : byjVar3.r(Integer.MIN_VALUE);
                     byjVar3.k();
-                    if (iP4 != Integer.MIN_VALUE && ((!z7 || iP4 >= staggeredGridLayoutManager2.c.j()) && (z7 || iP4 <= staggeredGridLayoutManager2.c.n()))) {
+                    if (iP4 != Integer.MIN_VALUE && ((!z7 || iP4 >= staggeredGridLayoutManager2.c.j())
+                            && (z7 || iP4 <= staggeredGridLayoutManager2.c.n()))) {
                         if (i11 != Integer.MIN_VALUE) {
                             iP4 += i11;
                         }
@@ -1246,7 +1263,7 @@ public class StaggeredGridLayoutManager extends czg implements czs {
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:6:0x000c  */
+    /* JADX WARN: Found duplicated region for block: B:6:0x000c */
     @Override // me.hd.wauxv.obf.czs
     public final PointF bs(int i) {
         int i2 = -1;
@@ -1569,7 +1586,7 @@ public class StaggeredGridLayoutManager extends czg implements czs {
     public final void cn(czo czoVar, int i) {
         for (int iEs = es() - 1; iEs >= 0; iEs--) {
             View viewEr = er(iEs);
-            if (this.c.h(viewEr) < i || this.c.q(viewEr) < i) {
+            if (this.c.locateDex(viewEr) < i || this.c.q(viewEr) < i) {
                 return;
             }
             dmb dmbVar = (dmb) viewEr.getLayoutParams();
@@ -1762,7 +1779,9 @@ public class StaggeredGridLayoutManager extends czg implements czs {
 
     @Override // me.hd.wauxv.obf.czg
     public final czh t(ViewGroup.LayoutParams layoutParams) {
-        return layoutParams instanceof ViewGroup.MarginLayoutParams ? new dmb((ViewGroup.MarginLayoutParams) layoutParams) : new dmb(layoutParams);
+        return layoutParams instanceof ViewGroup.MarginLayoutParams
+                ? new dmb((ViewGroup.MarginLayoutParams) layoutParams)
+                : new dmb(layoutParams);
     }
 
     @Override // me.hd.wauxv.obf.czg
@@ -1781,8 +1800,8 @@ public class StaggeredGridLayoutManager extends czg implements czs {
         return -1;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:31:0x0048  */
-    /* JADX WARN: Found duplicated region for block: B:37:0x0053  */
+    /* JADX WARN: Found duplicated region for block: B:31:0x0048 */
+    /* JADX WARN: Found duplicated region for block: B:37:0x0053 */
     @Override // me.hd.wauxv.obf.czg
     public final View w(View view, int i, czo czoVar, czt cztVar) {
         View viewM0do;
@@ -1790,7 +1809,8 @@ public class StaggeredGridLayoutManager extends czg implements czs {
         View viewQ;
         if (es() != 0) {
             RecyclerView recyclerView = this.dp;
-            if (recyclerView == null || (viewM0do = recyclerView.m0do(view)) == null || ((ArrayList) this.f4do.e).contains(viewM0do)) {
+            if (recyclerView == null || (viewM0do = recyclerView.m0do(view)) == null
+                    || ((ArrayList) this.f4do.e).contains(viewM0do)) {
                 viewM0do = null;
             }
             if (viewM0do != null) {

@@ -113,41 +113,56 @@ public abstract class hb extends aci implements he {
         icVar.z.f(icVar.y.getCallback());
     }
 
-    /* JADX WARN: Found duplicated region for block: B:102:0x0193  */
-    /* JADX WARN: Found duplicated region for block: B:105:0x01a2  */
-    /* JADX WARN: Found duplicated region for block: B:108:0x01ad  */
-    /* JADX WARN: Found duplicated region for block: B:111:0x01b5  */
-    /* JADX WARN: Found duplicated region for block: B:114:0x01bd  */
-    /* JADX WARN: Found duplicated region for block: B:117:0x01c5  */
-    /* JADX WARN: Found duplicated region for block: B:118:0x01c8  */
-    /* JADX WARN: Found duplicated region for block: B:122:0x01de  */
-    /* JADX WARN: Found duplicated region for block: B:124:0x01e8  */
-    /* JADX WARN: Found duplicated region for block: B:125:0x01ec  */
-    /* JADX WARN: Found duplicated region for block: B:136:0x020d A[Catch: all -> 0x0201, TRY_LEAVE, TryCatch #0 {, blocks: (B:127:0x01ef, B:129:0x01f3, B:135:0x020b, B:136:0x020d, B:138:0x0211, B:144:0x0221, B:143:0x0218, B:134:0x0204), top: B:154:0x01ef, inners: #5 }] */
-    /* JADX WARN: Found duplicated region for block: B:154:0x01ef A[EXC_TOP_SPLITTER, SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:162:0x01f3 A[EXC_TOP_SPLITTER, SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:165:0x0211 A[EXC_TOP_SPLITTER, SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:44:0x0098  */
-    /* JADX WARN: Found duplicated region for block: B:47:0x00a4  */
-    /* JADX WARN: Found duplicated region for block: B:50:0x00aa  */
-    /* JADX WARN: Found duplicated region for block: B:52:0x00d3  */
-    /* JADX WARN: Found duplicated region for block: B:55:0x00e2  */
-    /* JADX WARN: Found duplicated region for block: B:57:0x00ea  */
-    /* JADX WARN: Found duplicated region for block: B:60:0x00f2  */
-    /* JADX WARN: Found duplicated region for block: B:63:0x00fa  */
-    /* JADX WARN: Found duplicated region for block: B:66:0x0105  */
-    /* JADX WARN: Found duplicated region for block: B:69:0x010d  */
-    /* JADX WARN: Found duplicated region for block: B:72:0x0115  */
-    /* JADX WARN: Found duplicated region for block: B:75:0x011d  */
-    /* JADX WARN: Found duplicated region for block: B:78:0x0125  */
-    /* JADX WARN: Found duplicated region for block: B:81:0x012d  */
-    /* JADX WARN: Found duplicated region for block: B:84:0x0139  */
-    /* JADX WARN: Found duplicated region for block: B:87:0x0148  */
-    /* JADX WARN: Found duplicated region for block: B:90:0x0157  */
-    /* JADX WARN: Found duplicated region for block: B:93:0x0166  */
-    /* JADX WARN: Found duplicated region for block: B:96:0x0175  */
-    /* JADX WARN: Found duplicated region for block: B:99:0x0184  */
-    @Override // android.app.Activity, android.view.ContextThemeWrapper, android.content.ContextWrapper
+    /* JADX WARN: Found duplicated region for block: B:102:0x0193 */
+    /* JADX WARN: Found duplicated region for block: B:105:0x01a2 */
+    /* JADX WARN: Found duplicated region for block: B:108:0x01ad */
+    /* JADX WARN: Found duplicated region for block: B:111:0x01b5 */
+    /* JADX WARN: Found duplicated region for block: B:114:0x01bd */
+    /* JADX WARN: Found duplicated region for block: B:117:0x01c5 */
+    /* JADX WARN: Found duplicated region for block: B:118:0x01c8 */
+    /* JADX WARN: Found duplicated region for block: B:122:0x01de */
+    /* JADX WARN: Found duplicated region for block: B:124:0x01e8 */
+    /* JADX WARN: Found duplicated region for block: B:125:0x01ec */
+    /*
+     * JADX WARN: Found duplicated region for block: B:136:0x020d A[Catch: all ->
+     * 0x0201, TRY_LEAVE, TryCatch #0 {, blocks: (B:127:0x01ef, B:129:0x01f3,
+     * B:135:0x020b, B:136:0x020d, B:138:0x0211, B:144:0x0221, B:143:0x0218,
+     * B:134:0x0204), top: B:154:0x01ef, inners: #5 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:154:0x01ef
+     * A[EXC_TOP_SPLITTER, SYNTHETIC]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:162:0x01f3
+     * A[EXC_TOP_SPLITTER, SYNTHETIC]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:165:0x0211
+     * A[EXC_TOP_SPLITTER, SYNTHETIC]
+     */
+    /* JADX WARN: Found duplicated region for block: B:44:0x0098 */
+    /* JADX WARN: Found duplicated region for block: B:47:0x00a4 */
+    /* JADX WARN: Found duplicated region for block: B:50:0x00aa */
+    /* JADX WARN: Found duplicated region for block: B:52:0x00d3 */
+    /* JADX WARN: Found duplicated region for block: B:55:0x00e2 */
+    /* JADX WARN: Found duplicated region for block: B:57:0x00ea */
+    /* JADX WARN: Found duplicated region for block: B:60:0x00f2 */
+    /* JADX WARN: Found duplicated region for block: B:63:0x00fa */
+    /* JADX WARN: Found duplicated region for block: B:66:0x0105 */
+    /* JADX WARN: Found duplicated region for block: B:69:0x010d */
+    /* JADX WARN: Found duplicated region for block: B:72:0x0115 */
+    /* JADX WARN: Found duplicated region for block: B:75:0x011d */
+    /* JADX WARN: Found duplicated region for block: B:78:0x0125 */
+    /* JADX WARN: Found duplicated region for block: B:81:0x012d */
+    /* JADX WARN: Found duplicated region for block: B:84:0x0139 */
+    /* JADX WARN: Found duplicated region for block: B:87:0x0148 */
+    /* JADX WARN: Found duplicated region for block: B:90:0x0157 */
+    /* JADX WARN: Found duplicated region for block: B:93:0x0166 */
+    /* JADX WARN: Found duplicated region for block: B:96:0x0175 */
+    /* JADX WARN: Found duplicated region for block: B:99:0x0184 */
+    @Override // android.app.Activity, android.view.ContextThemeWrapper,
+              // android.content.ContextWrapper
     public final void attachBaseContext(Context context) {
         Configuration configuration;
         Configuration configuration2;
@@ -243,7 +258,8 @@ public abstract class hb extends aci implements he {
                             Configuration configuration4 = new Configuration();
                             configuration4.uiMode = -1;
                             configuration4.fontScale = 0.0f;
-                            configuration = context.createConfigurationContext(configuration4).getResources().getConfiguration();
+                            configuration = context.createConfigurationContext(configuration4).getResources()
+                                    .getConfiguration();
                             configuration2 = context.getResources().getConfiguration();
                             configuration.uiMode = configuration2.uiMode;
                             if (configuration.equals(configuration2)) {
@@ -377,7 +393,8 @@ public abstract class hb extends aci implements he {
                                                 }
                                             } else {
                                                 try {
-                                                    Method declaredMethod = Resources.Theme.class.getDeclaredMethod("rebase", null);
+                                                    Method declaredMethod = Resources.Theme.class
+                                                            .getDeclaredMethod("rebase", null);
                                                     ajn.d = declaredMethod;
                                                     declaredMethod.setAccessible(true);
                                                 } catch (NoSuchMethodException e) {
@@ -389,7 +406,8 @@ public abstract class hb extends aci implements he {
                                                     try {
                                                         method.invoke(theme, null);
                                                     } catch (IllegalAccessException | InvocationTargetException e2) {
-                                                        Log.i("ResourcesCompat", "Failed to invoke rebase() method via reflection", e2);
+                                                        Log.i("ResourcesCompat",
+                                                                "Failed to invoke rebase() method via reflection", e2);
                                                         ajn.d = null;
                                                     }
                                                 }
@@ -406,7 +424,8 @@ public abstract class hb extends aci implements he {
                     Configuration configuration42 = new Configuration();
                     configuration42.uiMode = -1;
                     configuration42.fontScale = 0.0f;
-                    configuration = context.createConfigurationContext(configuration42).getResources().getConfiguration();
+                    configuration = context.createConfigurationContext(configuration42).getResources()
+                            .getConfiguration();
                     configuration2 = context.getResources().getConfiguration();
                     configuration.uiMode = configuration2.uiMode;
                     if (configuration.equals(configuration2)) {
@@ -723,9 +742,14 @@ public abstract class hb extends aci implements he {
         return super.dispatchKeyEvent(keyEvent);
     }
 
-    /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
-    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
-    /* JADX WARN: Found duplicated region for block: B:25:0x003f  */
+    /*
+     * JADX WARN: Can't fix incorrect switch cases order, some code will duplicate
+     */
+    /*
+     * JADX WARN: Failed to restore switch over string. Please report as a
+     * decompilation issue
+     */
+    /* JADX WARN: Found duplicated region for block: B:25:0x003f */
     /* JADX WARN: Found duplicated region for block: B:55:? A[RETURN, SYNTHETIC] */
     @Override // android.app.Activity
     public final void dump(String str, FileDescriptor fileDescriptor, PrintWriter printWriter, String[] strArr) {
@@ -778,9 +802,9 @@ public abstract class hb extends aci implements he {
         printWriter.print(this.g);
         if (getApplication() != null) {
             erq erqVarAj = aj();
-            bzo.q(erqVarAj, "store");
+            throwIfVar1IsNull(erqVarAj, "store");
             ahv ahvVar = ahv.a;
-            bzo.q(ahvVar, "defaultCreationExtras");
+            throwIfVar1IsNull(ahvVar, "defaultCreationExtras");
             chm chmVar = new chm(erqVarAj, bwv.a, ahvVar);
             zc zcVarB = dal.b(bwv.class);
             String strAo = emc.ao(zcVarB);
@@ -824,7 +848,8 @@ public abstract class hb extends aci implements he {
         return icVar.ac;
     }
 
-    @Override // android.view.ContextThemeWrapper, android.content.ContextWrapper, android.content.Context
+    @Override // android.view.ContextThemeWrapper, android.content.ContextWrapper,
+              // android.content.Context
     public final Resources getResources() {
         int i = epm.a;
         return super.getResources();
@@ -977,7 +1002,8 @@ public abstract class hb extends aci implements he {
             ic icVar = (ic) j();
             icVar.cj();
             eut eutVar = icVar.ab;
-            if (menuItem.getItemId() != 16908332 || eutVar == null || (((ekt) eutVar.at).b & 4) == 0 || (intentX = cna.x(this)) == null) {
+            if (menuItem.getItemId() != 16908332 || eutVar == null || (((ekt) eutVar.at).b & 4) == 0
+                    || (intentX = cna.x(this)) == null) {
                 return false;
             }
             if (!shouldUpRecreateTask(intentX)) {
@@ -1093,7 +1119,8 @@ public abstract class hb extends aci implements he {
         j().p(i);
     }
 
-    @Override // android.app.Activity, android.view.ContextThemeWrapper, android.content.ContextWrapper, android.content.Context
+    @Override // android.app.Activity, android.view.ContextThemeWrapper,
+              // android.content.ContextWrapper, android.content.Context
     public final void setTheme(int i) {
         super.setTheme(i);
         ((ic) j()).bg = i;

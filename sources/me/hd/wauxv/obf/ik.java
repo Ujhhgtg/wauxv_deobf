@@ -30,7 +30,10 @@ public final class ik {
     public Object c;
     public Object d;
 
-    /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'this' call moved to the top of the method (can break code
+     * semantics)
+     */
     public ik(int i) {
         this(new byte[i], 0);
         this.a = 5;
@@ -70,16 +73,33 @@ public final class ik {
             throw new XmlPullParserException(xml.getPositionDescription() + ": invalid gradient color tag " + name2);
         }
         TypedArray typedArrayAv = emc.av(resources, theme, attributeSetAsAttributeSet, cxz.e);
-        float f5 = xml.getAttributeValue("http://schemas.android.com/apk/res/android", "startX") != null ? typedArrayAv.getFloat(8, 0.0f) : 0.0f;
-        float f6 = xml.getAttributeValue("http://schemas.android.com/apk/res/android", "startY") != null ? typedArrayAv.getFloat(9, 0.0f) : 0.0f;
-        float f7 = xml.getAttributeValue("http://schemas.android.com/apk/res/android", "endX") != null ? typedArrayAv.getFloat(10, 0.0f) : 0.0f;
-        float f8 = xml.getAttributeValue("http://schemas.android.com/apk/res/android", "endY") != null ? typedArrayAv.getFloat(11, 0.0f) : 0.0f;
-        float f9 = xml.getAttributeValue("http://schemas.android.com/apk/res/android", "centerX") != null ? typedArrayAv.getFloat(3, 0.0f) : 0.0f;
-        float f10 = xml.getAttributeValue("http://schemas.android.com/apk/res/android", "centerY") != null ? typedArrayAv.getFloat(4, 0.0f) : 0.0f;
-        int i3 = xml.getAttributeValue("http://schemas.android.com/apk/res/android", com.umeng.analytics.pro.f.y) != null ? typedArrayAv.getInt(2, 0) : 0;
-        int color2 = xml.getAttributeValue("http://schemas.android.com/apk/res/android", "startColor") != null ? typedArrayAv.getColor(0, 0) : 0;
+        float f5 = xml.getAttributeValue("http://schemas.android.com/apk/res/android", "startX") != null
+                ? typedArrayAv.getFloat(8, 0.0f)
+                : 0.0f;
+        float f6 = xml.getAttributeValue("http://schemas.android.com/apk/res/android", "startY") != null
+                ? typedArrayAv.getFloat(9, 0.0f)
+                : 0.0f;
+        float f7 = xml.getAttributeValue("http://schemas.android.com/apk/res/android", "endX") != null
+                ? typedArrayAv.getFloat(10, 0.0f)
+                : 0.0f;
+        float f8 = xml.getAttributeValue("http://schemas.android.com/apk/res/android", "endY") != null
+                ? typedArrayAv.getFloat(11, 0.0f)
+                : 0.0f;
+        float f9 = xml.getAttributeValue("http://schemas.android.com/apk/res/android", "centerX") != null
+                ? typedArrayAv.getFloat(3, 0.0f)
+                : 0.0f;
+        float f10 = xml.getAttributeValue("http://schemas.android.com/apk/res/android", "centerY") != null
+                ? typedArrayAv.getFloat(4, 0.0f)
+                : 0.0f;
+        int i3 = xml.getAttributeValue("http://schemas.android.com/apk/res/android",
+                "type") != null ? typedArrayAv.getInt(2, 0) : 0;
+        int color2 = xml.getAttributeValue("http://schemas.android.com/apk/res/android", "startColor") != null
+                ? typedArrayAv.getColor(0, 0)
+                : 0;
         boolean z = xml.getAttributeValue("http://schemas.android.com/apk/res/android", "centerColor") != null;
-        int color3 = xml.getAttributeValue("http://schemas.android.com/apk/res/android", "centerColor") != null ? typedArrayAv.getColor(7, 0) : 0;
+        int color3 = xml.getAttributeValue("http://schemas.android.com/apk/res/android", "centerColor") != null
+                ? typedArrayAv.getColor(7, 0)
+                : 0;
         if (xml.getAttributeValue("http://schemas.android.com/apk/res/android", "endColor") != null) {
             f = f5;
             color = typedArrayAv.getColor(1, 0);
@@ -94,7 +114,9 @@ public final class ik {
             f2 = f6;
             i2 = 0;
         }
-        float f11 = xml.getAttributeValue("http://schemas.android.com/apk/res/android", "gradientRadius") != null ? typedArrayAv.getFloat(5, 0.0f) : 0.0f;
+        float f11 = xml.getAttributeValue("http://schemas.android.com/apk/res/android", "gradientRadius") != null
+                ? typedArrayAv.getFloat(5, 0.0f)
+                : 0.0f;
         typedArrayAv.recycle();
         int depth = xml.getDepth() + 1;
         ArrayList arrayList = new ArrayList(20);
@@ -117,7 +139,8 @@ public final class ik {
                 boolean zHasValue = typedArrayAv2.hasValue(0);
                 boolean zHasValue2 = typedArrayAv2.hasValue(1);
                 if (!zHasValue || !zHasValue2) {
-                    throw new XmlPullParserException(xml.getPositionDescription() + ": <item> tag requires a 'color' attribute and a 'offset' attribute!");
+                    throw new XmlPullParserException(xml.getPositionDescription()
+                            + ": <item> tag requires a 'color' attribute and a 'offset' attribute!");
                 }
                 int color4 = typedArrayAv2.getColor(0, 0);
                 float f13 = typedArrayAv2.getFloat(1, 0.0f);
@@ -128,13 +151,14 @@ public final class ik {
             f7 = f3;
             f8 = f4;
         }
-        io ioVar = arrayList2.size() > 0 ? new io(arrayList2, arrayList) : null;
+        DefaultConfig ioVar = arrayList2.size() > 0 ? new DefaultConfig(arrayList2, arrayList) : null;
         if (ioVar == null) {
-            ioVar = z ? new io(color2, color3, color) : new io(color2, color);
+            ioVar = z ? new DefaultConfig(color2, color3, color) : new DefaultConfig(color2, color);
         }
         if (i3 != 1) {
             if (i3 != 2) {
-                radialGradient = new LinearGradient(f, f2, f3, f4, (int[]) ioVar.c, (float[]) ioVar.d, i2 != 1 ? i2 != 2 ? Shader.TileMode.CLAMP : Shader.TileMode.MIRROR : Shader.TileMode.REPEAT);
+                radialGradient = new LinearGradient(f, f2, f3, f4, (int[]) ioVar.c, (float[]) ioVar.d,
+                        i2 != 1 ? i2 != 2 ? Shader.TileMode.CLAMP : Shader.TileMode.MIRROR : Shader.TileMode.REPEAT);
             } else {
                 radialGradient = new SweepGradient(f9, f10, (int[]) ioVar.c, (float[]) ioVar.d);
             }
@@ -142,7 +166,8 @@ public final class ik {
             if (f12 <= 0.0f) {
                 throw new XmlPullParserException("<gradient> tag requires 'gradientRadius' attribute with radial type");
             }
-            radialGradient = new RadialGradient(f9, f10, f12, (int[]) ioVar.c, (float[]) ioVar.d, i2 != 1 ? i2 != 2 ? Shader.TileMode.CLAMP : Shader.TileMode.MIRROR : Shader.TileMode.REPEAT);
+            radialGradient = new RadialGradient(f9, f10, f12, (int[]) ioVar.c, (float[]) ioVar.d,
+                    i2 != 1 ? i2 != 2 ? Shader.TileMode.CLAMP : Shader.TileMode.MIRROR : Shader.TileMode.REPEAT);
         }
         return new ik(radialGradient, null, 0);
     }
@@ -243,7 +268,7 @@ public final class ik {
     public void ad() {
         int i = this.b * 2;
         Object[] objArrCopyOf = Arrays.copyOf((Object[]) this.c, i);
-        bzo.p(objArrCopyOf, "copyOf(...)");
+        throwIfVar1IsNull(objArrCopyOf, "copyOf(...)");
         this.c = objArrCopyOf;
         int[] iArr = new int[i];
         for (int i2 = 0; i2 < i; i2++) {
@@ -350,7 +375,9 @@ public final class ik {
                             byte b5 = bArr[i7];
                             if (b3 <= -65) {
                                 if ((((b3 + 112) + (b << 28)) >> 30) == 0 && b4 <= -65 && b5 <= -65) {
-                                    int i8 = ((b3 & JSONB.Constants.BC_INT32_BYTE_MAX) << 12) | ((b & 7) << 18) | ((b4 & JSONB.Constants.BC_INT32_BYTE_MAX) << 6) | (b5 & JSONB.Constants.BC_INT32_BYTE_MAX);
+                                    int i8 = ((b3 & JSONB.Constants.BC_INT32_BYTE_MAX) << 12) | ((b & 7) << 18)
+                                            | ((b4 & JSONB.Constants.BC_INT32_BYTE_MAX) << 6)
+                                            | (b5 & JSONB.Constants.BC_INT32_BYTE_MAX);
                                     int i9 = i3 + 1;
                                     cArr[i3] = (char) ((i8 >>> 10) + 55232);
                                     i3 += 2;
@@ -367,7 +394,9 @@ public final class ik {
                             throw new IllegalArgumentException("Invalid String");
                         }
                         i4 = i3 + 1;
-                        cArr[i3] = (char) (((b6 & JSONB.Constants.BC_INT32_BYTE_MAX) << 6) | ((b & com.umeng.analytics.pro.dn.m) << 12) | (b7 & JSONB.Constants.BC_INT32_BYTE_MAX));
+                        cArr[i3] = (char) (((b6 & JSONB.Constants.BC_INT32_BYTE_MAX) << 6)
+                                | ((b & com.umeng.analytics.pro.dn.m) << 12)
+                                | (b7 & JSONB.Constants.BC_INT32_BYTE_MAX));
                     }
                     i3 = i4;
                 }
@@ -429,7 +458,10 @@ public final class ik {
     public long o(int i) {
         byte[] bArr = (byte[]) this.d;
         int i2 = i + 6;
-        return (((long) bArr[i]) & 255) | ((((long) bArr[i + 1]) & 255) << 8) | ((((long) bArr[i + 2]) & 255) << 16) | ((((long) bArr[i + 3]) & 255) << 24) | ((((long) bArr[i + 4]) & 255) << 32) | ((((long) bArr[i + 5]) & 255) << 40) | ((((long) bArr[i2]) & 255) << 48) | (((long) bArr[i + 7]) << 56);
+        return (((long) bArr[i]) & 255) | ((((long) bArr[i + 1]) & 255) << 8) | ((((long) bArr[i + 2]) & 255) << 16)
+                | ((((long) bArr[i + 3]) & 255) << 24) | ((((long) bArr[i + 4]) & 255) << 32)
+                | ((((long) bArr[i + 5]) & 255) << 40) | ((((long) bArr[i2]) & 255) << 48)
+                | (((long) bArr[i + 7]) << 56);
     }
 
     public String p() {
@@ -439,7 +471,7 @@ public final class ik {
             Object obj = ((Object[]) this.c)[i2];
             if (obj instanceof dfx) {
                 dfx dfxVar = (dfx) obj;
-                if (!bzo.f(dfxVar.h(), dnt.b)) {
+                if (!nullSafeIsEqual(dfxVar.h(), dnt.b)) {
                     int i3 = ((int[]) this.d)[i2];
                     if (i3 >= 0) {
                         sb.append(".");
@@ -513,7 +545,8 @@ public final class ik {
 
     public boolean u() {
         ColorStateList colorStateList;
-        return ((Shader) this.c) == null && (colorStateList = (ColorStateList) this.d) != null && colorStateList.isStateful();
+        return ((Shader) this.c) == null && (colorStateList = (ColorStateList) this.d) != null
+                && colorStateList.isStateful();
     }
 
     public void v(AttributeSet attributeSet, int i) {
@@ -526,7 +559,8 @@ public final class ik {
         eqz.r(imageView, imageView.getContext(), iArr, attributeSet, (TypedArray) jxVarK.e, i, 0);
         try {
             Drawable drawable = imageView.getDrawable();
-            if (drawable == null && (resourceId = typedArray.getResourceId(1, -1)) != -1 && (drawable = cmz.y(imageView.getContext(), resourceId)) != null) {
+            if (drawable == null && (resourceId = typedArray.getResourceId(1, -1)) != -1
+                    && (drawable = cmz.y(imageView.getContext(), resourceId)) != null) {
                 imageView.setImageDrawable(drawable);
             }
             if (drawable != null) {

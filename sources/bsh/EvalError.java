@@ -41,7 +41,7 @@ public class EvalError extends Exception {
             string = ": <at unknown location>";
         }
         if (this.callstack != null) {
-            StringBuilder sbR = bjs.r(string, "\n");
+            StringBuilder sbR = concat(string, "\n");
             sbR.append(getScriptStackTrace());
             string = sbR.toString();
         }
@@ -67,11 +67,11 @@ public class EvalError extends Exception {
             NameSpace nameSpacePop = callStackCopy.pop();
             Node node = nameSpacePop.getNode();
             if (nameSpacePop.isMethod) {
-                StringBuilder sbR = bjs.r(string, "\nCalled from method: ");
+                StringBuilder sbR = concat(string, "\nCalled from method: ");
                 sbR.append(nameSpacePop.getName());
                 string = sbR.toString();
                 if (node != null) {
-                    StringBuilder sbR2 = bjs.r(string, " : at Line: ");
+                    StringBuilder sbR2 = concat(string, " : at Line: ");
                     sbR2.append(node.getLineNumber());
                     sbR2.append(" : in file: ");
                     sbR2.append(node.getSourceFile());
@@ -92,7 +92,7 @@ public class EvalError extends Exception {
             this.message = str;
             return;
         }
-        StringBuilder sbR = bjs.r(str, " : ");
+        StringBuilder sbR = concat(str, " : ");
         sbR.append(this.message);
         this.message = sbR.toString();
     }

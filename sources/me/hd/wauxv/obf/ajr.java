@@ -313,7 +313,7 @@ public final class ajr implements ajc, Runnable, Comparable, axw {
     }
 
     public final void aq(String str, long j, String str2) {
-        StringBuilder sbR = bjs.r(str, " in ");
+        StringBuilder sbR = concat(str, " in ");
         sbR.append(bxq.c(j));
         sbR.append(", load key: ");
         sbR.append(this.n);

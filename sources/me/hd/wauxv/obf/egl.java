@@ -19,7 +19,7 @@ public final class egl {
         if (this == obj) {
             return true;
         }
-        return (obj instanceof egl) && bzo.f(this.a, ((egl) obj).a);
+        return (obj instanceof egl) && nullSafeIsEqual(this.a, ((egl) obj).a);
     }
 
     public final int hashCode() {
@@ -33,6 +33,6 @@ public final class egl {
     public final String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("vc1Proto(number=" /* cnb.z(-313184720255786L) */);
-        return bjs.p(sb, this.a, ')');
+        return concat(sb, this.a, ')');
     }
 }

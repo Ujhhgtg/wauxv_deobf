@@ -127,14 +127,14 @@ public final class ewa extends y {
     public final long f(float f, float f2) {
         if (this.x.isEmpty()) {
             int iMin = Math.min(this.c.a.size() - 1, Math.max((int) (f2 / this.b.getRowHeight()), 0));
-            return bzo.al(iMin, this.b.getRenderer().ao(iMin).v(f));
+            return KotlinHelpers.al(iMin, this.b.getRenderer().ao(iMin).v(f));
         }
         int iMax = Math.max(0, Math.min((int) (f2 / this.b.getRowHeight()), this.x.size() - 1));
         evx evxVar = (evx) this.x.get(iMax);
         if (evxVar.a != 0) {
             f -= this.v;
         }
-        return bzo.al(evxVar.d, this.b.getRenderer().ao(iMax).v(f - evxVar.g(this.u)));
+        return KotlinHelpers.al(evxVar.d, this.b.getRenderer().ao(iMax).v(f - evxVar.g(this.u)));
     }
 
     @Override // me.hd.wauxv.obf.btr
@@ -202,24 +202,24 @@ public final class ewa extends y {
         if (this.x.isEmpty()) {
             int i3 = i + 1;
             if (i3 >= this.c.a.size()) {
-                return bzo.al(i, this.c.y(i).b);
+                return KotlinHelpers.al(i, this.c.y(i).b);
             }
             int i4 = this.c.y(i3).b;
             if (i2 > i4) {
                 i2 = i4;
             }
-            return bzo.al(i3, i2);
+            return KotlinHelpers.al(i3, i2);
         }
         int iAb = ab(i, i2);
         int i5 = iAb + 1;
         if (i5 >= this.x.size()) {
-            return bzo.al(i, this.c.y(i).b);
+            return KotlinHelpers.al(i, this.c.y(i).b);
         }
         int i6 = i2 - ((evx) this.x.get(iAb)).a;
         evx evxVar = (evx) this.x.get(i5);
         int i7 = evxVar.b;
         int i8 = evxVar.a;
-        return bzo.al(evxVar.d, i8 + Math.min(i6, i7 - i8));
+        return KotlinHelpers.al(evxVar.d, i8 + Math.min(i6, i7 - i8));
     }
 
     @Override // me.hd.wauxv.obf.btr
@@ -271,7 +271,7 @@ public final class ewa extends y {
 
     @Override // me.hd.wauxv.obf.btr
     public final long n(int i, int i2) {
-        long jAl = bzo.al(0, 0);
+        long jAl = KotlinHelpers.al(0, 0);
         if (this.x.isEmpty()) {
             int i3 = i - 1;
             if (i3 < 0) {
@@ -281,7 +281,7 @@ public final class ewa extends y {
             if (i2 > i4) {
                 i2 = i4;
             }
-            return bzo.al(i3, i2);
+            return KotlinHelpers.al(i3, i2);
         }
         int iAb = ab(i, i2);
         if (iAb <= 0) {
@@ -291,7 +291,7 @@ public final class ewa extends y {
         evx evxVar = (evx) this.x.get(iAb - 1);
         int i6 = evxVar.b;
         int i7 = evxVar.a;
-        return bzo.al(evxVar.d, i7 + Math.min(i5, i6 - i7));
+        return KotlinHelpers.al(evxVar.d, i7 + Math.min(i5, i6 - i7));
     }
 
     @Override // me.hd.wauxv.obf.btr

@@ -117,7 +117,11 @@ public class JSONArray extends ArrayList<Object> {
             return null;
         }
         if (obj instanceof Number) {
-            return obj instanceof BigDecimal ? (BigDecimal) obj : obj instanceof BigInteger ? new BigDecimal((BigInteger) obj) : obj instanceof Float ? TypeUtils.toBigDecimal(((Float) obj).floatValue()) : obj instanceof Double ? TypeUtils.toBigDecimal(((Double) obj).doubleValue()) : BigDecimal.valueOf(((Number) obj).longValue());
+            return obj instanceof BigDecimal ? (BigDecimal) obj
+                    : obj instanceof BigInteger ? new BigDecimal((BigInteger) obj)
+                            : obj instanceof Float ? TypeUtils.toBigDecimal(((Float) obj).floatValue())
+                                    : obj instanceof Double ? TypeUtils.toBigDecimal(((Double) obj).doubleValue())
+                                            : BigDecimal.valueOf(((Number) obj).longValue());
         }
         if (obj instanceof String) {
             return TypeUtils.toBigDecimal(((String) obj).trim());
@@ -125,7 +129,7 @@ public class JSONArray extends ArrayList<Object> {
         if (obj instanceof Boolean) {
             return ((Boolean) obj).booleanValue() ? BigDecimal.ONE : BigDecimal.ZERO;
         }
-        throw new JSONException(bjs.n(obj, new StringBuilder("Can not cast '"), "' to BigDecimal"));
+        throw new JSONException(concatVar1GetClassAndVar3(obj, new StringBuilder("Can not cast '"), "' to BigDecimal"));
     }
 
     public BigInteger getBigInteger(int i) {
@@ -134,13 +138,16 @@ public class JSONArray extends ArrayList<Object> {
             return null;
         }
         if (obj instanceof Number) {
-            return obj instanceof BigInteger ? (BigInteger) obj : obj instanceof BigDecimal ? ((BigDecimal) obj).toBigInteger() : BigInteger.valueOf(((Number) obj).longValue());
+            return obj instanceof BigInteger ? (BigInteger) obj
+                    : obj instanceof BigDecimal ? ((BigDecimal) obj).toBigInteger()
+                            : BigInteger.valueOf(((Number) obj).longValue());
         }
         if (!(obj instanceof String)) {
             if (obj instanceof Boolean) {
                 return ((Boolean) obj).booleanValue() ? BigInteger.ONE : BigInteger.ZERO;
             }
-            throw new JSONException(bjs.n(obj, new StringBuilder("Can not cast '"), "' to BigInteger"));
+            throw new JSONException(
+                    concatVar1GetClassAndVar3(obj, new StringBuilder("Can not cast '"), "' to BigInteger"));
         }
         String strTrim = ((String) obj).trim();
         if (strTrim.isEmpty() || "null".equalsIgnoreCase(strTrim)) {
@@ -161,7 +168,8 @@ public class JSONArray extends ArrayList<Object> {
             return Boolean.valueOf(((Number) obj).intValue() == 1);
         }
         if (!(obj instanceof String)) {
-            throw new JSONException(bjs.n(obj, new StringBuilder("Can not cast '"), "' to boolean"));
+            throw new JSONException(
+                    concatVar1GetClassAndVar3(obj, new StringBuilder("Can not cast '"), "' to boolean"));
         }
         String str = (String) obj;
         if (str.isEmpty() || "null".equalsIgnoreCase(str)) {
@@ -184,7 +192,7 @@ public class JSONArray extends ArrayList<Object> {
             return Byte.valueOf(((Number) obj).byteValue());
         }
         if (!(obj instanceof String)) {
-            throw new JSONException(bjs.n(obj, new StringBuilder("Can not cast '"), "' to byte"));
+            throw new JSONException(concatVar1GetClassAndVar3(obj, new StringBuilder("Can not cast '"), "' to byte"));
         }
         String strTrim = ((String) obj).trim();
         if (strTrim.isEmpty() || "null".equalsIgnoreCase(strTrim)) {
@@ -234,7 +242,7 @@ public class JSONArray extends ArrayList<Object> {
             return Double.valueOf(((Number) obj).doubleValue());
         }
         if (!(obj instanceof String)) {
-            throw new JSONException(bjs.n(obj, new StringBuilder("Can not cast '"), "' to double"));
+            throw new JSONException(concatVar1GetClassAndVar3(obj, new StringBuilder("Can not cast '"), "' to double"));
         }
         String strTrim = ((String) obj).trim();
         if (strTrim.isEmpty() || "null".equalsIgnoreCase(strTrim)) {
@@ -263,7 +271,7 @@ public class JSONArray extends ArrayList<Object> {
             return Float.valueOf(((Number) obj).floatValue());
         }
         if (!(obj instanceof String)) {
-            throw new JSONException(bjs.n(obj, new StringBuilder("Can not cast '"), "' to float"));
+            throw new JSONException(concatVar1GetClassAndVar3(obj, new StringBuilder("Can not cast '"), "' to float"));
         }
         String strTrim = ((String) obj).trim();
         if (strTrim.isEmpty() || "null".equalsIgnoreCase(strTrim)) {
@@ -307,7 +315,8 @@ public class JSONArray extends ArrayList<Object> {
             return ((Number) obj).intValue();
         }
         if (!(obj instanceof String)) {
-            throw new JSONException(bjs.n(obj, new StringBuilder("Can not cast '"), "' to int value"));
+            throw new JSONException(
+                    concatVar1GetClassAndVar3(obj, new StringBuilder("Can not cast '"), "' to int value"));
         }
         String strTrim = ((String) obj).trim();
         if (strTrim.isEmpty() || "null".equalsIgnoreCase(strTrim)) {
@@ -331,13 +340,15 @@ public class JSONArray extends ArrayList<Object> {
             if (obj instanceof Boolean) {
                 return ((Boolean) obj).booleanValue() ? 1 : 0;
             }
-            throw new JSONException(bjs.n(obj, new StringBuilder("Can not cast '"), "' to Integer"));
+            throw new JSONException(
+                    concatVar1GetClassAndVar3(obj, new StringBuilder("Can not cast '"), "' to Integer"));
         }
         String strTrim = ((String) obj).trim();
         if (strTrim.isEmpty() || "null".equalsIgnoreCase(strTrim)) {
             return null;
         }
-        return strTrim.indexOf(46) != -1 ? Integer.valueOf((int) Double.parseDouble(strTrim)) : Integer.valueOf(Integer.parseInt(strTrim));
+        return strTrim.indexOf(46) != -1 ? Integer.valueOf((int) Double.parseDouble(strTrim))
+                : Integer.valueOf(Integer.parseInt(strTrim));
     }
 
     public JSONArray getJSONArray(int i) {
@@ -400,8 +411,11 @@ public class JSONArray extends ArrayList<Object> {
             set(i, jSONObject);
             return jSONObject;
         }
-        ObjectWriter objectWriter = JSONFactory.getDefaultObjectWriterProvider().getObjectWriter((Class) obj.getClass());
-        JSONObject jSONObject2 = objectWriter instanceof ObjectWriterAdapter ? ((ObjectWriterAdapter) objectWriter).toJSONObject(obj) : (JSONObject) JSON.toJSON(obj);
+        ObjectWriter objectWriter = JSONFactory.getDefaultObjectWriterProvider()
+                .getObjectWriter((Class) obj.getClass());
+        JSONObject jSONObject2 = objectWriter instanceof ObjectWriterAdapter
+                ? ((ObjectWriterAdapter) objectWriter).toJSONObject(obj)
+                : (JSONObject) JSON.toJSON(obj);
         set(i, jSONObject2);
         return jSONObject2;
     }
@@ -434,10 +448,11 @@ public class JSONArray extends ArrayList<Object> {
             if (strTrim.isEmpty() || "null".equalsIgnoreCase(strTrim)) {
                 return null;
             }
-            return strTrim.indexOf(46) != -1 ? Long.valueOf((long) Double.parseDouble(strTrim)) : Long.valueOf(Long.parseLong(strTrim));
+            return strTrim.indexOf(46) != -1 ? Long.valueOf((long) Double.parseDouble(strTrim))
+                    : Long.valueOf(Long.parseLong(strTrim));
         }
         if (!(obj instanceof Boolean)) {
-            throw new JSONException(bjs.n(obj, new StringBuilder("Can not cast '"), "' to Long"));
+            throw new JSONException(concatVar1GetClassAndVar3(obj, new StringBuilder("Can not cast '"), "' to Long"));
         }
         if (((Boolean) obj).booleanValue()) {
             return Long.valueOf(serialVersionUID);
@@ -454,7 +469,8 @@ public class JSONArray extends ArrayList<Object> {
             return ((Number) obj).longValue();
         }
         if (!(obj instanceof String)) {
-            throw new JSONException(bjs.n(obj, new StringBuilder("Can not cast '"), "' to long value"));
+            throw new JSONException(
+                    concatVar1GetClassAndVar3(obj, new StringBuilder("Can not cast '"), "' to long value"));
         }
         String strTrim = ((String) obj).trim();
         if (strTrim.isEmpty() || "null".equalsIgnoreCase(strTrim)) {
@@ -517,7 +533,7 @@ public class JSONArray extends ArrayList<Object> {
             return Short.valueOf(((Number) obj).shortValue());
         }
         if (!(obj instanceof String)) {
-            throw new JSONException(bjs.n(obj, new StringBuilder("Can not cast '"), "' to short"));
+            throw new JSONException(concatVar1GetClassAndVar3(obj, new StringBuilder("Can not cast '"), "' to short"));
         }
         String strTrim = ((String) obj).trim();
         if (strTrim.isEmpty() || "null".equalsIgnoreCase(strTrim)) {
@@ -539,7 +555,12 @@ public class JSONArray extends ArrayList<Object> {
         if (obj == null) {
             return null;
         }
-        return obj instanceof String ? (String) obj : obj instanceof Date ? DateUtils.toString(((Date) obj).getTime(), false, DateUtils.DEFAULT_ZONE_ID) : ((obj instanceof Boolean) || (obj instanceof Character) || (obj instanceof Number) || (obj instanceof UUID) || (obj instanceof Enum) || (obj instanceof TemporalAccessor)) ? obj.toString() : JSON.toJSONString(obj);
+        return obj instanceof String ? (String) obj
+                : obj instanceof Date ? DateUtils.toString(((Date) obj).getTime(), false, DateUtils.DEFAULT_ZONE_ID)
+                        : ((obj instanceof Boolean) || (obj instanceof Character) || (obj instanceof Number)
+                                || (obj instanceof UUID) || (obj instanceof Enum) || (obj instanceof TemporalAccessor))
+                                        ? obj.toString()
+                                        : JSON.toJSONString(obj);
     }
 
     public ZonedDateTime getZonedDateTime(int i) {
@@ -729,36 +750,46 @@ public class JSONArray extends ArrayList<Object> {
 
     public LocalDate getLocalDate(int i, LocalDate localDate) {
         Object obj = super.get(i);
-        return obj == null ? localDate : obj instanceof LocalDate ? (LocalDate) obj : (LocalDate) TypeUtils.cast(obj, LocalDate.class);
+        return obj == null ? localDate
+                : obj instanceof LocalDate ? (LocalDate) obj : (LocalDate) TypeUtils.cast(obj, LocalDate.class);
     }
 
     public LocalDateTime getLocalDateTime(int i, LocalDateTime localDateTime) {
         Object obj = super.get(i);
-        return obj == null ? localDateTime : obj instanceof LocalDateTime ? (LocalDateTime) obj : (LocalDateTime) TypeUtils.cast(obj, LocalDateTime.class);
+        return obj == null ? localDateTime
+                : obj instanceof LocalDateTime ? (LocalDateTime) obj
+                        : (LocalDateTime) TypeUtils.cast(obj, LocalDateTime.class);
     }
 
     public LocalTime getLocalTime(int i, LocalTime localTime) {
         Object obj = super.get(i);
-        return obj == null ? localTime : obj instanceof LocalTime ? (LocalTime) obj : (LocalTime) TypeUtils.cast(obj, LocalTime.class);
+        return obj == null ? localTime
+                : obj instanceof LocalTime ? (LocalTime) obj : (LocalTime) TypeUtils.cast(obj, LocalTime.class);
     }
 
     public OffsetDateTime getOffsetDateTime(int i, OffsetDateTime offsetDateTime) {
         Object obj = super.get(i);
-        return obj == null ? offsetDateTime : obj instanceof OffsetDateTime ? (OffsetDateTime) obj : (OffsetDateTime) TypeUtils.cast(obj, OffsetDateTime.class);
+        return obj == null ? offsetDateTime
+                : obj instanceof OffsetDateTime ? (OffsetDateTime) obj
+                        : (OffsetDateTime) TypeUtils.cast(obj, OffsetDateTime.class);
     }
 
     public OffsetTime getOffsetTime(int i, OffsetTime offsetTime) {
         Object obj = super.get(i);
-        return obj == null ? offsetTime : obj instanceof OffsetTime ? (OffsetTime) obj : (OffsetTime) TypeUtils.cast(obj, OffsetTime.class);
+        return obj == null ? offsetTime
+                : obj instanceof OffsetTime ? (OffsetTime) obj : (OffsetTime) TypeUtils.cast(obj, OffsetTime.class);
     }
 
     public ZonedDateTime getZonedDateTime(int i, ZonedDateTime zonedDateTime) {
         Object obj = super.get(i);
-        return obj == null ? zonedDateTime : obj instanceof ZonedDateTime ? (ZonedDateTime) obj : (ZonedDateTime) TypeUtils.cast(obj, ZonedDateTime.class);
+        return obj == null ? zonedDateTime
+                : obj instanceof ZonedDateTime ? (ZonedDateTime) obj
+                        : (ZonedDateTime) TypeUtils.cast(obj, ZonedDateTime.class);
     }
 
     public <T> T to(Type type, long j) {
-        return type == String.class ? (T) toString() : (T) JSONFactory.getDefaultObjectReaderProvider().getObjectReader(type).createInstance(this, j);
+        return type == String.class ? (T) toString()
+                : (T) JSONFactory.getDefaultObjectReaderProvider().getObjectReader(type).createInstance(this, j);
     }
 
     public JSONArray(Collection<?> collection) {
@@ -794,7 +825,8 @@ public class JSONArray extends ArrayList<Object> {
         if (cls == String.class) {
             return (T) toString();
         }
-        return cls == JSON.class ? this : (T) JSONFactory.getDefaultObjectReaderProvider().getObjectReader(cls).createInstance(this);
+        return cls == JSON.class ? this
+                : (T) JSONFactory.getDefaultObjectReaderProvider().getObjectReader(cls).createInstance(this);
     }
 
     public String toString(JSONWriter.Feature... featureArr) {

@@ -22,14 +22,15 @@ public final /* synthetic */ class bel implements bul {
                     bdj bdjVar = (bdj) bupVar;
                     Object obj = null;
                     for (Object obj2 : (Iterable) ((dml) beqVar.w().f.h).c()) {
-                        if (bzo.f(((cio) obj2).f, bdjVar.bs)) {
+                        if (nullSafeIsEqual(((cio) obj2).f, bdjVar.bs)) {
                             obj = obj2;
                         }
                     }
                     cio cioVar = (cio) obj;
                     if (cioVar != null) {
                         if (beq.p()) {
-                            Log.v("FragmentNavigator", "Marking transition complete for entry " + cioVar + " due to fragment " + bupVar + " lifecycle reaching DESTROYED");
+                            Log.v("FragmentNavigator", "Marking transition complete for entry " + cioVar
+                                    + " due to fragment " + bupVar + " lifecycle reaching DESTROYED");
                         }
                         beqVar.w().k(cioVar);
                     }

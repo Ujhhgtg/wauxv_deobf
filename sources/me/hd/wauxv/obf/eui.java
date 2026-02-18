@@ -25,7 +25,7 @@ public final class eui extends ewy {
             throw new IllegalArgumentException("DexDescConfig must be init" /* cnb.z(-6021544147754L) */.toString());
         }
         String string = ioVar.aj().getString(strZ, strZ2);
-        bzo.n(string);
+        throwIfVar1IsNull(string);
         return string.equals((String) b.getValue());
     }
 
@@ -132,11 +132,14 @@ public final class eui extends ewy {
                 String[] strArr_aa = bmfVar._aa();
                 String[] strArr = (String[]) Arrays.copyOf(strArr_aa, strArr_aa.length);
                 if (strArr.length == 0) {
-                    throw new IllegalStateException("withProcess method need a \"name\" param" /* cnb.z(-82716775152426L) */.toString());
+                    throw new IllegalStateException("withProcess method need a \"name\" param" /*
+                                                                                                * cnb.z(-
+                                                                                                * 82716775152426L)
+                                                                                                */.toString());
                 }
                 for (String str : strArr) {
                     eui euiVar = a;
-                    if (bzo.f(str, euiVar.ac())) {
+                    if (nullSafeIsEqual(str, euiVar.ac())) {
                         euiVar.ae(bmfVar);
                         break;
                     }
@@ -150,7 +153,7 @@ public final class eui extends ewy {
         int i = bte.a;
         cde cdeVarT = dqc.bg(dal.b(Instrumentation.class)).t();
         cdeVarT.ab = "callApplicationOnCreate" /* cnb.z(-82549271427882L) */;
-        aki akiVarAd = a.ad((cdk) dkz.n(new Object[]{dal.b(Application.class)}, 1, cdeVarT), exg.a);
+        aki akiVarAd = a.ad((cdk) dkz.n(new Object[] { dal.b(Application.class) }, 1, cdeVarT), exg.a);
         akiVarAd.m(new epy(14));
         akiVarAd.o();
     }

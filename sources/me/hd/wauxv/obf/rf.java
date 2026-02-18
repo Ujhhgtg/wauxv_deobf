@@ -43,9 +43,9 @@ public final class rf implements Closeable {
             long j3 = j2 - j;
             while (j3 > 0) {
                 dfj dfjVar = rhVar.a;
-                bzo.n(dfjVar);
+                throwIfVar1IsNull(dfjVar);
                 dfj dfjVar2 = dfjVar.g;
-                bzo.n(dfjVar2);
+                throwIfVar1IsNull(dfjVar2);
                 int i = dfjVar2.c;
                 long j4 = i - dfjVar2.b;
                 if (j4 > j3) {
@@ -119,7 +119,7 @@ public final class rf implements Closeable {
                 }
                 if (j2 - j > j - j3) {
                     while (true) {
-                        bzo.n(dfjVar2);
+                        throwIfVar1IsNull(dfjVar2);
                         long j5 = ((long) (dfjVar2.c - dfjVar2.b)) + j3;
                         if (j < j5) {
                             break;
@@ -129,34 +129,34 @@ public final class rf implements Closeable {
                     }
                 } else {
                     while (j2 > j) {
-                        bzo.n(dfjVar);
+                        throwIfVar1IsNull(dfjVar);
                         dfjVar = dfjVar.g;
-                        bzo.n(dfjVar);
+                        throwIfVar1IsNull(dfjVar);
                         j2 -= (long) (dfjVar.c - dfjVar.b);
                     }
                     dfjVar2 = dfjVar;
                     j3 = j2;
                 }
                 if (this.b) {
-                    bzo.n(dfjVar2);
+                    throwIfVar1IsNull(dfjVar2);
                     if (dfjVar2.d) {
                         byte[] bArr = dfjVar2.a;
                         byte[] bArrCopyOf = Arrays.copyOf(bArr, bArr.length);
-                        bzo.p(bArrCopyOf, "copyOf(this, size)");
+                        throwIfVar1IsNull(bArrCopyOf, "copyOf(this, size)");
                         dfj dfjVar3 = new dfj(bArrCopyOf, dfjVar2.b, dfjVar2.c, false, true);
                         if (rhVar.a == dfjVar2) {
                             rhVar.a = dfjVar3;
                         }
                         dfjVar2.i(dfjVar3);
                         dfj dfjVar4 = dfjVar3.g;
-                        bzo.n(dfjVar4);
+                        throwIfVar1IsNull(dfjVar4);
                         dfjVar4.h();
                         dfjVar2 = dfjVar3;
                     }
                 }
                 this.c = dfjVar2;
                 this.d = j;
-                bzo.n(dfjVar2);
+                throwIfVar1IsNull(dfjVar2);
                 this.e = dfjVar2.a;
                 int i = dfjVar2.b + ((int) (j - j3));
                 this.f = i;

@@ -14,7 +14,8 @@ public final class dzg {
     public final Long h;
     public final String i;
 
-    public /* synthetic */ dzg(int i, Integer num, String str, Integer num2, Integer num3, String str2, Long l, Long l2, Long l3, String str3) {
+    public /* synthetic */ dzg(int i, Integer num, String str, Integer num2, Integer num3, String str2, Long l, Long l2,
+            Long l3, String str3) {
         if (511 != (i & 511)) {
             bht.ah(i, 511, dze.b.getDescriptor());
             throw null;
@@ -38,7 +39,11 @@ public final class dzg {
             return false;
         }
         dzg dzgVar = (dzg) obj;
-        return bzo.f(this.a, dzgVar.a) && bzo.f(this.b, dzgVar.b) && bzo.f(this.c, dzgVar.c) && bzo.f(this.d, dzgVar.d) && bzo.f(this.e, dzgVar.e) && bzo.f(this.f, dzgVar.f) && bzo.f(this.g, dzgVar.g) && bzo.f(this.h, dzgVar.h) && bzo.f(this.i, dzgVar.i);
+        return nullSafeIsEqual(this.a, dzgVar.a) && nullSafeIsEqual(this.b, dzgVar.b)
+                && nullSafeIsEqual(this.c, dzgVar.c) && nullSafeIsEqual(this.d, dzgVar.d)
+                && nullSafeIsEqual(this.e, dzgVar.e) && nullSafeIsEqual(this.f, dzgVar.f)
+                && nullSafeIsEqual(this.g, dzgVar.g)
+                && nullSafeIsEqual(this.h, dzgVar.h) && nullSafeIsEqual(this.i, dzgVar.i);
     }
 
     public final int hashCode() {
@@ -73,6 +78,6 @@ public final class dzg {
         dkz.ad(sb, this.f, -201841988074282L);
         dkz.ad(sb, this.g, -201803333368618L);
         dkz.ad(sb, this.h, -201816218270506L);
-        return bjs.q(sb, this.i, ')');
+        return concat(sb, this.i, ')');
     }
 }

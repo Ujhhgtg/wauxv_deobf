@@ -41,7 +41,8 @@ public class aqe extends ListView {
         setCacheColorHint(0);
     }
 
-    @Override // android.widget.ListView, android.widget.AbsListView, android.view.ViewGroup, android.view.View
+    @Override // android.widget.ListView, android.widget.AbsListView, android.view.ViewGroup,
+              // android.view.View
     public final void dispatchDraw(Canvas canvas) {
         Drawable selector;
         Rect rect = this.a;
@@ -117,7 +118,8 @@ public class aqe extends ListView {
                 view.setLayoutParams(layoutParams);
             }
             int i5 = layoutParams.height;
-            view.measure(i, i5 > 0 ? View.MeasureSpec.makeMeasureSpec(i5, 1073741824) : View.MeasureSpec.makeMeasureSpec(0, 0));
+            view.measure(i,
+                    i5 > 0 ? View.MeasureSpec.makeMeasureSpec(i5, 1073741824) : View.MeasureSpec.makeMeasureSpec(0, 0));
             view.forceLayout();
             if (i4 > 0) {
                 measuredHeight += dividerHeight;
@@ -130,14 +132,14 @@ public class aqe extends ListView {
         return measuredHeight;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:82:0x014c  */
-    /* JADX WARN: Found duplicated region for block: B:84:0x0162  */
-    /* JADX WARN: Found duplicated region for block: B:86:0x0167  */
-    /* JADX WARN: Found duplicated region for block: B:88:0x016b  */
-    /* JADX WARN: Found duplicated region for block: B:90:0x017d  */
-    /* JADX WARN: Found duplicated region for block: B:92:0x0181  */
-    /* JADX WARN: Found duplicated region for block: B:94:0x0185  */
-    /* JADX WARN: Found duplicated region for block: B:9:0x0015  */
+    /* JADX WARN: Found duplicated region for block: B:82:0x014c */
+    /* JADX WARN: Found duplicated region for block: B:84:0x0162 */
+    /* JADX WARN: Found duplicated region for block: B:86:0x0167 */
+    /* JADX WARN: Found duplicated region for block: B:88:0x016b */
+    /* JADX WARN: Found duplicated region for block: B:90:0x017d */
+    /* JADX WARN: Found duplicated region for block: B:92:0x0181 */
+    /* JADX WARN: Found duplicated region for block: B:94:0x0185 */
+    /* JADX WARN: Found duplicated region for block: B:9:0x0015 */
     public final boolean n(MotionEvent motionEvent, int i) {
         boolean z;
         boolean zA;
@@ -200,7 +202,8 @@ public class aqe extends ListView {
                 }
                 layoutChildren();
                 int i3 = this.f;
-                if (i3 != -1 && (childAt = getChildAt(i3 - getFirstVisiblePosition())) != null && childAt != childAt3 && childAt.isPressed()) {
+                if (i3 != -1 && (childAt = getChildAt(i3 - getFirstVisiblePosition())) != null && childAt != childAt3
+                        && childAt.isPressed()) {
                     childAt.setPressed(false);
                 }
                 this.f = iPointToPosition;
@@ -241,7 +244,7 @@ public class aqe extends ListView {
                 if (childAt3.isEnabled() != zA) {
                     boolean z5 = !zA;
                     if (Build.VERSION.SDK_INT >= 33) {
-                        aqb.b(this, z5);
+                        aqb.tryGetClassByName(this, z5);
                     } else {
                         Field field2 = aqd.a;
                         if (field2 != null) {
@@ -315,7 +318,8 @@ public class aqe extends ListView {
         return z;
     }
 
-    @Override // android.widget.ListView, android.widget.AbsListView, android.widget.AdapterView, android.view.ViewGroup, android.view.View
+    @Override // android.widget.ListView, android.widget.AbsListView,
+              // android.widget.AdapterView, android.view.ViewGroup, android.view.View
     public final void onDetachedFromWindow() {
         this.l = null;
         super.onDetachedFromWindow();

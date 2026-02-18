@@ -33,7 +33,10 @@ public final class NumberUtils {
     static final short[] TWO_DIGITS_16_BITS;
     static final int[] TWO_DIGITS_32_BITS;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @FunctionalInterface
     public interface LongBiFunction {
         long multiplyHigh(long j, long j2);
@@ -51,7 +54,10 @@ public final class NumberUtils {
                 MethodHandles.Lookup lookupTrustedLookup = JDKUtils.trustedLookup(NumberUtils.class);
                 Class cls = Long.TYPE;
                 MethodType methodType = MethodType.methodType(cls, cls, cls);
-                aVar = (LongBiFunction) LambdaMetafactory.metafactory(lookupTrustedLookup, "multiplyHigh", MethodType.methodType(LongBiFunction.class), methodType, lookupTrustedLookup.findStatic(Math.class, "multiplyHigh", methodType), methodType).getTarget().invokeExact();
+                aVar = (LongBiFunction) LambdaMetafactory.metafactory(lookupTrustedLookup, "multiplyHigh",
+                        MethodType.methodType(LongBiFunction.class), methodType,
+                        lookupTrustedLookup.findStatic(Math.class, "multiplyHigh", methodType), methodType).getTarget()
+                        .invokeExact();
             } catch (Throwable unused) {
                 aVar = null;
             }
@@ -67,7 +73,10 @@ public final class NumberUtils {
         double[] dArr = new double[325];
         POSITIVE_DECIMAL_POWER = dArr;
         NEGATIVE_DECIMAL_POWER = new double[325];
-        POW10_LONG_VALUES = new long[]{10, 100, 1000, 10000, 100000, 1000000, 10000000, 100000000, 1000000000, RealConnection.IDLE_CONNECTION_HEALTHY_NS, 100000000000L, 1000000000000L, 10000000000000L, 100000000000000L, 1000000000000000L, 10000000000000000L, 100000000000000000L, 1000000000000000000L, Long.MAX_VALUE};
+        POW10_LONG_VALUES = new long[] { 10, 100, 1000, 10000, 100000, 1000000, 10000000, 100000000, 1000000000,
+                RealConnection.IDLE_CONNECTION_HEALTHY_NS, 100000000000L, 1000000000000L, 10000000000000L,
+                100000000000000L, 1000000000000000L, 10000000000000000L, 100000000000000000L, 1000000000000000000L,
+                Long.MAX_VALUE };
         POW5_LONG_VALUES = new long[27];
         POW5_BI_VALUES = new BigInteger[343];
         int length = dArr.length;
@@ -104,8 +113,8 @@ public final class NumberUtils {
         NEGATIVE_DECIMAL_POWER_CHARS = new char[325][];
         int length2 = cArr.length;
         for (int i6 = 0; i6 < length2; i6++) {
-            String strI = bjs.i(i6, "1.0E");
-            String strI2 = bjs.i(i6, "1.0E-");
+            String strI = concatVar2Var1(i6, "1.0E");
+            String strI2 = concatVar2Var1(i6, "1.0E-");
             POSITIVE_DECIMAL_POWER_CHARS[i6] = strI.toCharArray();
             NEGATIVE_DECIMAL_POWER_CHARS[i6] = strI2.toCharArray();
         }
@@ -135,7 +144,7 @@ public final class NumberUtils {
     private NumberUtils() {
     }
 
-    /* JADX WARN: Found duplicated region for block: B:96:0x019f  */
+    /* JADX WARN: Found duplicated region for block: B:96:0x019f */
     public static Scientific doubleToScientific(double d) {
         int i;
         long j;
@@ -235,7 +244,8 @@ public final class NumberUtils {
                 if (i11 < jArr.length) {
                     jMultiplyHighAndShift = multiplyHighAndShift(j, jArr[i11], -i12);
                 } else if (i11 < jArr.length + 4) {
-                    jMultiplyHighAndShift = multiplyHighAndShift(j * jArr[(i11 - jArr.length) + 1], jArr[jArr.length - 1], -i12);
+                    jMultiplyHighAndShift = multiplyHighAndShift(j * jArr[(i11 - jArr.length) + 1],
+                            jArr[jArr.length - 1], -i12);
                 } else {
                     ED5 ed52 = ED5.ED5_A[i11];
                     jMultiplyHighAndShift = multiplyHighAndShift(j << 10, ed52.y, ed52.f, (-(ed52.dfb + i12)) + 10);
@@ -276,8 +286,8 @@ public final class NumberUtils {
         return new Scientific(j4, i3 + 1, i2);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:79:0x019f  */
-    /* JADX WARN: Found duplicated region for block: B:84:0x01b3  */
+    /* JADX WARN: Found duplicated region for block: B:79:0x019f */
+    /* JADX WARN: Found duplicated region for block: B:84:0x01b3 */
     public static Scientific floatToScientific(float f) {
         int i;
         int i2;
@@ -353,10 +363,12 @@ public final class NumberUtils {
                 if (i14 < jArr.length) {
                     jMultiplyHighAndShift = multiplyHighAndShift(i2, jArr[i14], -i15);
                 } else if (i14 < jArr.length + 4) {
-                    jMultiplyHighAndShift = multiplyHighAndShift(((long) i2) * jArr[(i14 - jArr.length) + 1], jArr[jArr.length - 1], -i15);
+                    jMultiplyHighAndShift = multiplyHighAndShift(((long) i2) * jArr[(i14 - jArr.length) + 1],
+                            jArr[jArr.length - 1], -i15);
                 } else {
                     ED5 ed52 = ED5.ED5_A[i14];
-                    jMultiplyHighAndShift = multiplyHighAndShift(((long) i2) << 39, ed52.y, ed52.f, (-(ed52.dfb + i15)) + 39);
+                    jMultiplyHighAndShift = multiplyHighAndShift(((long) i2) << 39, ed52.y, ed52.f,
+                            (-(ed52.dfb + i15)) + 39);
                 }
             }
         }
@@ -378,10 +390,12 @@ public final class NumberUtils {
                 }
             } else {
                 if (z) {
-                    jMultiplyHigh = (longBiFunction.multiplyHigh(jMultiplyHighAndShift, 6189700196426901375L) >> 25) + ((long) (j3 % 100000000 >= 50000000 ? i3 : 0));
+                    jMultiplyHigh = (longBiFunction.multiplyHigh(jMultiplyHighAndShift, 6189700196426901375L) >> 25)
+                            + ((long) (j3 % 100000000 >= 50000000 ? i3 : 0));
                     i7 = i5;
                 } else {
-                    jMultiplyHigh = (longBiFunction.multiplyHigh(jMultiplyHighAndShift, 7737125245533626719L) >> 22) + ((long) (j3 % 10000000 >= 5000000 ? i3 : 0));
+                    jMultiplyHigh = (longBiFunction.multiplyHigh(jMultiplyHighAndShift, 7737125245533626719L) >> 22)
+                            + ((long) (j3 % 10000000 >= 5000000 ? i3 : 0));
                     i7 = i5 + 1;
                 }
                 j2 = jMultiplyHigh;
@@ -610,7 +624,8 @@ public final class NumberUtils {
             i2 = i;
         }
         Scientific scientificFloatToScientific = floatToScientific(f);
-        return writeDecimal(scientificFloatToScientific.output, scientificFloatToScientific.count, scientificFloatToScientific.e10, bArr, i2);
+        return writeDecimal(scientificFloatToScientific.output, scientificFloatToScientific.count,
+                scientificFloatToScientific.e10, bArr, i2);
     }
 
     private static int writeSpecial(byte[] bArr, int i, float f, boolean z) {
@@ -690,7 +705,8 @@ public final class NumberUtils {
             i2 = i;
         }
         Scientific scientificFloatToScientific = floatToScientific(f);
-        return writeDecimal(scientificFloatToScientific.output, scientificFloatToScientific.count, scientificFloatToScientific.e10, cArr, i2);
+        return writeDecimal(scientificFloatToScientific.output, scientificFloatToScientific.count,
+                scientificFloatToScientific.e10, cArr, i2);
     }
 
     public static int writeDouble(char[] cArr, int i, double d, boolean z) {

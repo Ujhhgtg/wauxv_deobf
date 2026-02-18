@@ -35,7 +35,9 @@ public final class abp {
             return false;
         }
         abp abpVar = (abp) obj;
-        return bzo.f(this.a, abpVar.a) && bzo.f(this.b, abpVar.b) && bzo.f(this.c, abpVar.c) && bzo.f(this.d, abpVar.d) && bzo.f(this.e, abpVar.e);
+        return nullSafeIsEqual(this.a, abpVar.a) && nullSafeIsEqual(this.b, abpVar.b)
+                && nullSafeIsEqual(this.c, abpVar.c) && nullSafeIsEqual(this.d, abpVar.d)
+                && nullSafeIsEqual(this.e, abpVar.e);
     }
 
     public final int hashCode() {
@@ -52,7 +54,8 @@ public final class abp {
     }
 
     public final String toString() {
-        return "CompletedContinuation(result=" + this.a + ", cancelHandler=" + this.b + ", onCancellation=" + this.c + ", idempotentResume=" + this.d + ", cancelCause=" + this.e + ')';
+        return "CompletedContinuation(result=" + this.a + ", cancelHandler=" + this.b + ", onCancellation=" + this.c
+                + ", idempotentResume=" + this.d + ", cancelCause=" + this.e + ')';
     }
 
     public abp(Object obj, sz szVar, bgk bgkVar, Object obj2, Throwable th) {

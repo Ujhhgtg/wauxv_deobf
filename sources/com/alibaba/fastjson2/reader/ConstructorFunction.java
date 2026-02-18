@@ -37,7 +37,8 @@ final class ConstructorFunction<T> implements Function<Map<Long, Object>, T> {
     final String[] paramNames;
     final Parameter[] parameters;
 
-    public ConstructorFunction(List<Constructor> list, Constructor constructor, Function function, BiFunction biFunction, Constructor constructor2, String... strArr) {
+    public ConstructorFunction(List<Constructor> list, Constructor constructor, Function function,
+            BiFunction biFunction, Constructor constructor2, String... strArr) {
         this.function = function;
         this.biFunction = biFunction;
         boolean z = constructor2 != null;
@@ -55,7 +56,7 @@ final class ConstructorFunction<T> implements Function<Map<Long, Object>, T> {
             }
             String name = i < strArr.length ? strArr[i] : parameterArr[i].getName();
             if (name == null) {
-                name = bjs.i(i, ParameterDescription.NAME_PREFIX);
+                name = concatVar2Var1(i, ParameterDescription.NAME_PREFIX);
             }
             this.hashCodes[i] = Fnv.hashCode64(name);
             i++;
@@ -76,7 +77,8 @@ final class ConstructorFunction<T> implements Function<Map<Long, Object>, T> {
                 ObjectReaderProvider defaultObjectReaderProvider = JSONFactory.getDefaultObjectReaderProvider();
                 for (int i3 = 0; i3 < parameters2.length && i3 < strArrLookupParameterNames.length; i3++) {
                     fieldInfo.init();
-                    defaultObjectReaderProvider.getFieldInfo(fieldInfo, constructor3.getDeclaringClass(), constructor3, i3, parameters2[i3]);
+                    defaultObjectReaderProvider.getFieldInfo(fieldInfo, constructor3.getDeclaringClass(), constructor3,
+                            i3, parameters2[i3]);
                     String str = fieldInfo.fieldName;
                     if (str != null) {
                         strArrLookupParameterNames[i3] = str;
@@ -106,7 +108,8 @@ final class ConstructorFunction<T> implements Function<Map<Long, Object>, T> {
         int i = 0;
         for (long j : this.hashCodes) {
             if (!map.containsKey(Long.valueOf(j))) {
-                if (this.alternateConstructorMap == null || (constructor = this.alternateConstructorMap.get((setKeySet = map.keySet()))) == null) {
+                if (this.alternateConstructorMap == null
+                        || (constructor = this.alternateConstructorMap.get((setKeySet = map.keySet()))) == null) {
                     break;
                     break;
                 }
@@ -124,7 +127,8 @@ final class ConstructorFunction<T> implements Function<Map<Long, Object>, T> {
                 }
                 try {
                     return (T) constructor.newInstance(objArr);
-                } catch (IllegalAccessException | IllegalArgumentException | InstantiationException | InvocationTargetException e) {
+                } catch (IllegalAccessException | IllegalArgumentException | InstantiationException
+                        | InvocationTargetException e) {
                     throw new JSONException("invoke constructor error, " + constructor, e);
                 }
             }
@@ -209,7 +213,8 @@ final class ConstructorFunction<T> implements Function<Map<Long, Object>, T> {
         }
         try {
             return (T) this.constructor.newInstance(objArr2);
-        } catch (IllegalAccessException | IllegalArgumentException | InstantiationException | InvocationTargetException e2) {
+        } catch (IllegalAccessException | IllegalArgumentException | InstantiationException
+                | InvocationTargetException e2) {
             throw new JSONException("invoke constructor error, " + this.constructor, e2);
         }
     }

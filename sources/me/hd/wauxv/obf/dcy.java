@@ -16,7 +16,7 @@ public final class dcy implements Serializable {
 
     public final boolean equals(Object obj) {
         if (obj instanceof dcy) {
-            return bzo.f(this.a, ((dcy) obj).a);
+            return nullSafeIsEqual(this.a, ((dcy) obj).a);
         }
         return false;
     }

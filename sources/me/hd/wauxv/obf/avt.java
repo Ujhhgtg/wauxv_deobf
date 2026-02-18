@@ -8,7 +8,7 @@ public interface avt {
     void ab(long j);
 
     default void ac(btd btdVar, Object obj) {
-        bzo.q(btdVar, "serializer");
+        throwIfVar1IsNull(btdVar, "serializer");
         if (btdVar.getDescriptor().f()) {
             x(btdVar, obj);
         } else if (obj == null) {

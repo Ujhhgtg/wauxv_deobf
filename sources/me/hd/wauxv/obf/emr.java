@@ -11,7 +11,7 @@ public final class emr extends cvj {
     @Override // me.hd.wauxv.obf.cvj
     public final Object c() {
         byte[] bArrCopyOf = Arrays.copyOf(this.a, this.b);
-        bzo.p(bArrCopyOf, "copyOf(...)");
+        throwIfVar1IsNull(bArrCopyOf, "copyOf(...)");
         return new emq(bArrCopyOf);
     }
 
@@ -24,7 +24,7 @@ public final class emr extends cvj {
                 i = length;
             }
             byte[] bArrCopyOf = Arrays.copyOf(bArr, i);
-            bzo.p(bArrCopyOf, "copyOf(...)");
+            throwIfVar1IsNull(bArrCopyOf, "copyOf(...)");
             this.a = bArrCopyOf;
         }
     }

@@ -32,20 +32,23 @@ public final class asa extends BaseInputConnection {
         codeEditor.i.l(afh.class, new qp(this, 4));
     }
 
-    @Override // android.view.inputmethod.BaseInputConnection, android.view.inputmethod.InputConnection
+    @Override // android.view.inputmethod.BaseInputConnection,
+              // android.view.inputmethod.InputConnection
     public final synchronized boolean beginBatchEdit() {
         this.b.getProps().getClass();
         return this.b.getText().l();
     }
 
-    @Override // android.view.inputmethod.BaseInputConnection, android.view.inputmethod.InputConnection
+    @Override // android.view.inputmethod.BaseInputConnection,
+              // android.view.inputmethod.InputConnection
     public final boolean clearMetaKeyStates(int i) {
         btm keyMetaStates = this.b.getKeyMetaStates();
         keyMetaStates.clearMetaKeyState(keyMetaStates.a, keyMetaStates.b, i);
         return true;
     }
 
-    @Override // android.view.inputmethod.BaseInputConnection, android.view.inputmethod.InputConnection
+    @Override // android.view.inputmethod.BaseInputConnection,
+              // android.view.inputmethod.InputConnection
     public final synchronized void closeConnection() {
         super.closeConnection();
         aff text = this.b.getText();
@@ -60,7 +63,8 @@ public final class asa extends BaseInputConnection {
         codeEditor.invalidate();
     }
 
-    @Override // android.view.inputmethod.BaseInputConnection, android.view.inputmethod.InputConnection
+    @Override // android.view.inputmethod.BaseInputConnection,
+              // android.view.inputmethod.InputConnection
     public final boolean commitText(CharSequence charSequence, int i) {
         if (!this.b.dw() || charSequence == null) {
             return false;
@@ -75,7 +79,8 @@ public final class asa extends BaseInputConnection {
         return true;
     }
 
-    @Override // android.view.inputmethod.BaseInputConnection, android.view.inputmethod.InputConnection
+    @Override // android.view.inputmethod.BaseInputConnection,
+              // android.view.inputmethod.InputConnection
     public final boolean deleteSurroundingText(int i, int i2) {
         CodeEditor codeEditor = this.b;
         if (!codeEditor.dw() || i < 0 || i2 < 0) {
@@ -122,7 +127,8 @@ public final class asa extends BaseInputConnection {
         return true;
     }
 
-    @Override // android.view.inputmethod.BaseInputConnection, android.view.inputmethod.InputConnection
+    @Override // android.view.inputmethod.BaseInputConnection,
+              // android.view.inputmethod.InputConnection
     public final boolean deleteSurroundingTextInCodePoints(int i, int i2) {
         return false;
     }
@@ -135,7 +141,8 @@ public final class asa extends BaseInputConnection {
             if (pfVar.e()) {
                 String string = ((aff) codeEditor.getText().subSequence(pfVar.a, pfVar.b)).toString();
                 String string2 = charSequence.toString();
-                if (pfVar.b != codeEditor.getCursor().c.a || codeEditor.getCursor().h() || !string2.startsWith(string) || string2.length() <= string.length()) {
+                if (pfVar.b != codeEditor.getCursor().c.a || codeEditor.getCursor().h() || !string2.startsWith(string)
+                        || string2.length() <= string.length()) {
                     f();
                 } else {
                     charSequence = string2.substring(string.length());
@@ -152,7 +159,8 @@ public final class asa extends BaseInputConnection {
         }
     }
 
-    @Override // android.view.inputmethod.BaseInputConnection, android.view.inputmethod.InputConnection
+    @Override // android.view.inputmethod.BaseInputConnection,
+              // android.view.inputmethod.InputConnection
     public final synchronized boolean endBatchEdit() {
         boolean zU;
         zU = this.b.getText().u();
@@ -162,7 +170,7 @@ public final class asa extends BaseInputConnection {
         return zU;
     }
 
-    public final void f() {
+    public final void getResult() {
         pf pfVar = this.c;
         if (pfVar.e()) {
             try {
@@ -175,7 +183,8 @@ public final class asa extends BaseInputConnection {
         }
     }
 
-    @Override // android.view.inputmethod.BaseInputConnection, android.view.inputmethod.InputConnection
+    @Override // android.view.inputmethod.BaseInputConnection,
+              // android.view.inputmethod.InputConnection
     public final boolean finishComposingText() {
         CodeEditor codeEditor = this.b;
         if (!codeEditor.dw()) {
@@ -200,13 +209,15 @@ public final class asa extends BaseInputConnection {
         }
     }
 
-    @Override // android.view.inputmethod.BaseInputConnection, android.view.inputmethod.InputConnection
+    @Override // android.view.inputmethod.BaseInputConnection,
+              // android.view.inputmethod.InputConnection
     public final int getCursorCapsMode(int i) {
         CodeEditor codeEditor = this.b;
         return TextUtils.getCapsMode(codeEditor.getText(), codeEditor.getCursor().c.a, i);
     }
 
-    @Override // android.view.inputmethod.BaseInputConnection, android.view.inputmethod.InputConnection
+    @Override // android.view.inputmethod.BaseInputConnection,
+              // android.view.inputmethod.InputConnection
     public final ExtractedText getExtractedText(ExtractedTextRequest extractedTextRequest, int i) {
         CodeEditor codeEditor = this.b;
         codeEditor.getProps().getClass();
@@ -219,12 +230,14 @@ public final class asa extends BaseInputConnection {
         return codeEditor.dp(extractedTextRequest);
     }
 
-    @Override // android.view.inputmethod.BaseInputConnection, android.view.inputmethod.InputConnection
+    @Override // android.view.inputmethod.BaseInputConnection,
+              // android.view.inputmethod.InputConnection
     public final Handler getHandler() {
         return this.b.getHandler();
     }
 
-    @Override // android.view.inputmethod.BaseInputConnection, android.view.inputmethod.InputConnection
+    @Override // android.view.inputmethod.BaseInputConnection,
+              // android.view.inputmethod.InputConnection
     public final CharSequence getSelectedText(int i) {
         CodeEditor codeEditor = this.b;
         codeEditor.getProps().getClass();
@@ -236,7 +249,8 @@ public final class asa extends BaseInputConnection {
         return g(i2, i3, i);
     }
 
-    @Override // android.view.inputmethod.BaseInputConnection, android.view.inputmethod.InputConnection
+    @Override // android.view.inputmethod.BaseInputConnection,
+              // android.view.inputmethod.InputConnection
     public final SurroundingText getSurroundingText(int i, int i2, int i3) {
         CharSequence charSequenceH;
         CodeEditor codeEditor = this.b;
@@ -255,7 +269,8 @@ public final class asa extends BaseInputConnection {
         return qc.r(codeEditor.getCursor().c.a - iMin, codeEditor.getCursor().d.a - iMin, iMin, charSequenceH);
     }
 
-    @Override // android.view.inputmethod.BaseInputConnection, android.view.inputmethod.InputConnection
+    @Override // android.view.inputmethod.BaseInputConnection,
+              // android.view.inputmethod.InputConnection
     public final CharSequence getTextAfterCursor(int i, int i2) {
         CodeEditor codeEditor = this.b;
         codeEditor.getProps().getClass();
@@ -263,7 +278,8 @@ public final class asa extends BaseInputConnection {
         return g(i3, i + i3, i2);
     }
 
-    @Override // android.view.inputmethod.BaseInputConnection, android.view.inputmethod.InputConnection
+    @Override // android.view.inputmethod.BaseInputConnection,
+              // android.view.inputmethod.InputConnection
     public final CharSequence getTextBeforeCursor(int i, int i2) {
         CodeEditor codeEditor = this.b;
         codeEditor.getProps().getClass();
@@ -322,7 +338,8 @@ public final class asa extends BaseInputConnection {
         return spannableStringBuilder;
     }
 
-    @Override // android.view.inputmethod.BaseInputConnection, android.view.inputmethod.InputConnection
+    @Override // android.view.inputmethod.BaseInputConnection,
+              // android.view.inputmethod.InputConnection
     public final boolean performContextMenuAction(int i) {
         CodeEditor codeEditor = this.b;
         switch (i) {
@@ -359,16 +376,18 @@ public final class asa extends BaseInputConnection {
         return true;
     }
 
-    @Override // android.view.inputmethod.BaseInputConnection, android.view.inputmethod.InputConnection
+    @Override // android.view.inputmethod.BaseInputConnection,
+              // android.view.inputmethod.InputConnection
     public final boolean performPrivateCommand(String str, Bundle bundle) {
         CodeEditor codeEditor = this.b;
-        bzo.q(codeEditor, "editor");
-        bzo.q(str, com.umeng.ccg.a.z);
+        throwIfVar1IsNull(codeEditor, "editor");
+        throwIfVar1IsNull(str, com.umeng.ccg.a.z);
         codeEditor.i.g(new rp(codeEditor));
         return true;
     }
 
-    @Override // android.view.inputmethod.BaseInputConnection, android.view.inputmethod.InputConnection
+    @Override // android.view.inputmethod.BaseInputConnection,
+              // android.view.inputmethod.InputConnection
     public final boolean replaceText(int i, int i2, CharSequence charSequence, int i3, TextAttribute textAttribute) {
         int i4 = this.b.getText().d;
         if (i < 0 || i2 < 0 || i > i2 || i > i4 || i2 > i4) {
@@ -382,18 +401,21 @@ public final class asa extends BaseInputConnection {
         return true;
     }
 
-    @Override // android.view.inputmethod.BaseInputConnection, android.view.inputmethod.InputConnection
+    @Override // android.view.inputmethod.BaseInputConnection,
+              // android.view.inputmethod.InputConnection
     public final boolean reportFullscreenMode(boolean z) {
         return false;
     }
 
-    @Override // android.view.inputmethod.BaseInputConnection, android.view.inputmethod.InputConnection
+    @Override // android.view.inputmethod.BaseInputConnection,
+              // android.view.inputmethod.InputConnection
     public final boolean requestCursorUpdates(int i) {
         this.b.ew();
         return true;
     }
 
-    @Override // android.view.inputmethod.BaseInputConnection, android.view.inputmethod.InputConnection
+    @Override // android.view.inputmethod.BaseInputConnection,
+              // android.view.inputmethod.InputConnection
     public final boolean setComposingRegion(int i, int i2) {
         CodeEditor codeEditor = this.b;
         if (codeEditor.dw() && codeEditor.ao == 0) {
@@ -429,7 +451,8 @@ public final class asa extends BaseInputConnection {
         return false;
     }
 
-    @Override // android.view.inputmethod.BaseInputConnection, android.view.inputmethod.InputConnection
+    @Override // android.view.inputmethod.BaseInputConnection,
+              // android.view.inputmethod.InputConnection
     public final boolean setComposingText(CharSequence charSequence, int i) {
         CodeEditor codeEditor = this.b;
         if (codeEditor.dw() && codeEditor.ao == 0) {
@@ -483,7 +506,8 @@ public final class asa extends BaseInputConnection {
         return true;
     }
 
-    @Override // android.view.inputmethod.BaseInputConnection, android.view.inputmethod.InputConnection
+    @Override // android.view.inputmethod.BaseInputConnection,
+              // android.view.inputmethod.InputConnection
     public final boolean setSelection(int i, int i2) {
         CodeEditor codeEditor = this.b;
         boolean z = false;
@@ -516,7 +540,8 @@ public final class asa extends BaseInputConnection {
         return z;
     }
 
-    @Override // android.view.inputmethod.BaseInputConnection, android.view.inputmethod.InputConnection
+    @Override // android.view.inputmethod.BaseInputConnection,
+              // android.view.inputmethod.InputConnection
     public final TextSnapshot takeSnapshot() {
         int i;
         int i2;

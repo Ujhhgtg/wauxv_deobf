@@ -15,7 +15,8 @@ public final class dvo {
     public final dzy g;
     public final String h;
 
-    public /* synthetic */ dvo(int i, String str, Integer num, String str2, String str3, ehg ehgVar, String str4, dzy dzyVar, String str5) {
+    public /* synthetic */ dvo(int i, String str, Integer num, String str2, String str3, ehg ehgVar, String str4,
+            dzy dzyVar, String str5) {
         if (255 != (i & Opcodes.CONST_METHOD_TYPE)) {
             bht.ah(i, Opcodes.CONST_METHOD_TYPE, dvm.b.getDescriptor());
             throw null;
@@ -38,7 +39,11 @@ public final class dvo {
             return false;
         }
         dvo dvoVar = (dvo) obj;
-        return bzo.f(this.a, dvoVar.a) && bzo.f(this.b, dvoVar.b) && bzo.f(this.c, dvoVar.c) && bzo.f(this.d, dvoVar.d) && bzo.f(this.e, dvoVar.e) && bzo.f(this.f, dvoVar.f) && bzo.f(this.g, dvoVar.g) && bzo.f(this.h, dvoVar.h);
+        return nullSafeIsEqual(this.a, dvoVar.a) && nullSafeIsEqual(this.b, dvoVar.b)
+                && nullSafeIsEqual(this.c, dvoVar.c) && nullSafeIsEqual(this.d, dvoVar.d)
+                && nullSafeIsEqual(this.e, dvoVar.e) && nullSafeIsEqual(this.f, dvoVar.f)
+                && nullSafeIsEqual(this.g, dvoVar.g)
+                && nullSafeIsEqual(this.h, dvoVar.h);
     }
 
     public final int hashCode() {
@@ -72,6 +77,6 @@ public final class dvo {
         yg.u(sb, this.f, -168139379702570L);
         sb.append(this.g);
         sb.append(", feedId=" /* cnb.z(-168100724996906L) */);
-        return bjs.q(sb, this.h, ')');
+        return concat(sb, this.h, ')');
     }
 }

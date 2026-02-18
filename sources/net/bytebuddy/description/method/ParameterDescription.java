@@ -33,10 +33,15 @@ import net.bytebuddy.utility.nullability.MaybeNull;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public interface ParameterDescription extends AnnotationSource, NamedElement.WithRuntimeName, NamedElement.WithOptionalName, ModifierReviewable.ForParameterDescription, ByteCodeElement.TypeDependant<InDefinedShape, Token> {
+public interface ParameterDescription
+        extends AnnotationSource, NamedElement.WithRuntimeName, NamedElement.WithOptionalName,
+        ModifierReviewable.ForParameterDescription, ByteCodeElement.TypeDependant<InDefinedShape, Token> {
     public static final String NAME_PREFIX = "arg";
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static abstract class AbstractBase extends ModifierReviewable.AbstractBase implements ParameterDescription {
         private transient /* synthetic */ int hashCode;
         private transient /* synthetic */ int offset;
@@ -54,7 +59,8 @@ public interface ParameterDescription extends AnnotationSource, NamedElement.Wit
                 return false;
             }
             ParameterDescription parameterDescription = (ParameterDescription) obj;
-            return getDeclaringMethod().equals(parameterDescription.getDeclaringMethod()) && getIndex() == parameterDescription.getIndex();
+            return getDeclaringMethod().equals(parameterDescription.getDeclaringMethod())
+                    && getIndex() == parameterDescription.getIndex();
         }
 
         @Override // net.bytebuddy.description.NamedElement
@@ -112,7 +118,8 @@ public interface ParameterDescription extends AnnotationSource, NamedElement.Wit
             if (getModifiers() != 0) {
                 sb.append(' ');
             }
-            sb.append(isVarArgs() ? getType().asErasure().getName().replaceFirst("\\[]$", "...") : getType().asErasure().getName());
+            sb.append(isVarArgs() ? getType().asErasure().getName().replaceFirst("\\[]$", "...")
+                    : getType().asErasure().getName());
             sb.append(' ');
             sb.append(getName());
             return sb.toString();
@@ -120,11 +127,18 @@ public interface ParameterDescription extends AnnotationSource, NamedElement.Wit
 
         @Override // net.bytebuddy.description.ByteCodeElement.TypeDependant
         public Token asToken(ElementMatcher<? super TypeDescription> elementMatcher) {
-            return new Token((TypeDescription.Generic) getType().accept(new TypeDescription.Generic.Visitor.Substitutor.ForDetachment(elementMatcher)), getDeclaredAnnotations(), isNamed() ? getName() : Token.NO_NAME, hasModifiers() ? Integer.valueOf(getModifiers()) : Token.NO_MODIFIERS);
+            return new Token(
+                    (TypeDescription.Generic) getType()
+                            .accept(new TypeDescription.Generic.Visitor.Substitutor.ForDetachment(elementMatcher)),
+                    getDeclaredAnnotations(), isNamed() ? getName() : Token.NO_NAME,
+                    hasModifiers() ? Integer.valueOf(getModifiers()) : Token.NO_MODIFIERS);
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static abstract class ForLoadedParameter<T extends AccessibleObject> extends InDefinedShape.AbstractBase {
         private static final boolean ACCESS_CONTROLLER;
         private static final Parameter PARAMETER;
@@ -132,9 +146,13 @@ public interface ParameterDescription extends AnnotationSource, NamedElement.Wit
         protected final int index;
         protected final ParameterAnnotationSource parameterAnnotationSource;
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static class OfConstructor extends ForLoadedParameter<Constructor<?>> {
-            public OfConstructor(Constructor<?> constructor, int i, ParameterAnnotationSource parameterAnnotationSource) {
+            public OfConstructor(Constructor<?> constructor, int i,
+                    ParameterAnnotationSource parameterAnnotationSource) {
                 super(constructor, i, parameterAnnotationSource);
             }
 
@@ -142,32 +160,43 @@ public interface ParameterDescription extends AnnotationSource, NamedElement.Wit
             public AnnotationList getDeclaredAnnotations() {
                 Annotation[][] parameterAnnotations = this.parameterAnnotationSource.getParameterAnnotations();
                 MethodDescription.InDefinedShape declaringMethod = getDeclaringMethod();
-                return (parameterAnnotations.length == declaringMethod.getParameters().size() || !declaringMethod.getDeclaringType().isInnerClass()) ? new AnnotationList.ForLoadedAnnotations(parameterAnnotations[this.index]) : this.index == 0 ? new AnnotationList.Empty() : new AnnotationList.ForLoadedAnnotations(parameterAnnotations[this.index - 1]);
+                return (parameterAnnotations.length == declaringMethod.getParameters().size()
+                        || !declaringMethod.getDeclaringType().isInnerClass())
+                                ? new AnnotationList.ForLoadedAnnotations(parameterAnnotations[this.index])
+                                : this.index == 0 ? new AnnotationList.Empty()
+                                        : new AnnotationList.ForLoadedAnnotations(parameterAnnotations[this.index - 1]);
             }
 
             @Override // net.bytebuddy.description.method.ParameterDescription
             public TypeDescription.Generic getType() {
                 if (TypeDescription.AbstractBase.RAW_TYPES) {
-                    return TypeDescription.Generic.OfNonGenericType.ForLoadedType.of(((Constructor) this.executable).getParameterTypes()[this.index]);
+                    return TypeDescription.Generic.OfNonGenericType.ForLoadedType
+                            .of(((Constructor) this.executable).getParameterTypes()[this.index]);
                 }
                 T t = this.executable;
-                return new TypeDescription.Generic.LazyProjection.OfConstructorParameter((Constructor) t, this.index, ((Constructor) t).getParameterTypes());
+                return new TypeDescription.Generic.LazyProjection.OfConstructorParameter((Constructor) t, this.index,
+                        ((Constructor) t).getParameterTypes());
             }
 
-            @Override // net.bytebuddy.description.method.ParameterDescription, net.bytebuddy.description.method.ParameterDescription.InDefinedShape
+            @Override // net.bytebuddy.description.method.ParameterDescription,
+                      // net.bytebuddy.description.method.ParameterDescription.InDefinedShape
             public MethodDescription.InDefinedShape getDeclaringMethod() {
                 return new MethodDescription.ForLoadedConstructor((Constructor) this.executable);
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static class OfLegacyVmConstructor extends InDefinedShape.AbstractBase {
             private final Constructor<?> constructor;
             private final int index;
             private final ParameterAnnotationSource parameterAnnotationSource;
             private final Class<?>[] parameterType;
 
-            public OfLegacyVmConstructor(Constructor<?> constructor, int i, Class<?>[] clsArr, ParameterAnnotationSource parameterAnnotationSource) {
+            public OfLegacyVmConstructor(Constructor<?> constructor, int i, Class<?>[] clsArr,
+                    ParameterAnnotationSource parameterAnnotationSource) {
                 this.constructor = constructor;
                 this.index = i;
                 this.parameterType = clsArr;
@@ -178,7 +207,11 @@ public interface ParameterDescription extends AnnotationSource, NamedElement.Wit
             public AnnotationList getDeclaredAnnotations() {
                 MethodDescription.InDefinedShape declaringMethod = getDeclaringMethod();
                 Annotation[][] parameterAnnotations = this.parameterAnnotationSource.getParameterAnnotations();
-                return (parameterAnnotations.length == declaringMethod.getParameters().size() || !declaringMethod.getDeclaringType().isInnerClass()) ? new AnnotationList.ForLoadedAnnotations(parameterAnnotations[this.index]) : this.index == 0 ? new AnnotationList.Empty() : new AnnotationList.ForLoadedAnnotations(parameterAnnotations[this.index - 1]);
+                return (parameterAnnotations.length == declaringMethod.getParameters().size()
+                        || !declaringMethod.getDeclaringType().isInnerClass())
+                                ? new AnnotationList.ForLoadedAnnotations(parameterAnnotations[this.index])
+                                : this.index == 0 ? new AnnotationList.Empty()
+                                        : new AnnotationList.ForLoadedAnnotations(parameterAnnotations[this.index - 1]);
             }
 
             @Override // net.bytebuddy.description.method.ParameterDescription
@@ -188,7 +221,10 @@ public interface ParameterDescription extends AnnotationSource, NamedElement.Wit
 
             @Override // net.bytebuddy.description.method.ParameterDescription
             public TypeDescription.Generic getType() {
-                return TypeDescription.AbstractBase.RAW_TYPES ? TypeDescription.Generic.OfNonGenericType.ForLoadedType.of(this.parameterType[this.index]) : new TypeDescription.Generic.LazyProjection.OfConstructorParameter(this.constructor, this.index, this.parameterType);
+                return TypeDescription.AbstractBase.RAW_TYPES
+                        ? TypeDescription.Generic.OfNonGenericType.ForLoadedType.of(this.parameterType[this.index])
+                        : new TypeDescription.Generic.LazyProjection.OfConstructorParameter(this.constructor,
+                                this.index, this.parameterType);
             }
 
             @Override // net.bytebuddy.description.method.ParameterDescription
@@ -201,20 +237,25 @@ public interface ParameterDescription extends AnnotationSource, NamedElement.Wit
                 return false;
             }
 
-            @Override // net.bytebuddy.description.method.ParameterDescription, net.bytebuddy.description.method.ParameterDescription.InDefinedShape
+            @Override // net.bytebuddy.description.method.ParameterDescription,
+                      // net.bytebuddy.description.method.ParameterDescription.InDefinedShape
             public MethodDescription.InDefinedShape getDeclaringMethod() {
                 return new MethodDescription.ForLoadedConstructor(this.constructor);
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static class OfLegacyVmMethod extends InDefinedShape.AbstractBase {
             private final int index;
             private final Method method;
             private final ParameterAnnotationSource parameterAnnotationSource;
             private final Class<?>[] parameterType;
 
-            public OfLegacyVmMethod(Method method, int i, Class<?>[] clsArr, ParameterAnnotationSource parameterAnnotationSource) {
+            public OfLegacyVmMethod(Method method, int i, Class<?>[] clsArr,
+                    ParameterAnnotationSource parameterAnnotationSource) {
                 this.method = method;
                 this.index = i;
                 this.parameterType = clsArr;
@@ -223,7 +264,8 @@ public interface ParameterDescription extends AnnotationSource, NamedElement.Wit
 
             @Override // net.bytebuddy.description.annotation.AnnotationSource
             public AnnotationList getDeclaredAnnotations() {
-                return new AnnotationList.ForLoadedAnnotations(this.parameterAnnotationSource.getParameterAnnotations()[this.index]);
+                return new AnnotationList.ForLoadedAnnotations(
+                        this.parameterAnnotationSource.getParameterAnnotations()[this.index]);
             }
 
             @Override // net.bytebuddy.description.method.ParameterDescription
@@ -233,7 +275,10 @@ public interface ParameterDescription extends AnnotationSource, NamedElement.Wit
 
             @Override // net.bytebuddy.description.method.ParameterDescription
             public TypeDescription.Generic getType() {
-                return TypeDescription.AbstractBase.RAW_TYPES ? TypeDescription.Generic.OfNonGenericType.ForLoadedType.of(this.parameterType[this.index]) : new TypeDescription.Generic.LazyProjection.OfMethodParameter(this.method, this.index, this.parameterType);
+                return TypeDescription.AbstractBase.RAW_TYPES
+                        ? TypeDescription.Generic.OfNonGenericType.ForLoadedType.of(this.parameterType[this.index])
+                        : new TypeDescription.Generic.LazyProjection.OfMethodParameter(this.method, this.index,
+                                this.parameterType);
             }
 
             @Override // net.bytebuddy.description.method.ParameterDescription
@@ -246,13 +291,17 @@ public interface ParameterDescription extends AnnotationSource, NamedElement.Wit
                 return false;
             }
 
-            @Override // net.bytebuddy.description.method.ParameterDescription, net.bytebuddy.description.method.ParameterDescription.InDefinedShape
+            @Override // net.bytebuddy.description.method.ParameterDescription,
+                      // net.bytebuddy.description.method.ParameterDescription.InDefinedShape
             public MethodDescription.InDefinedShape getDeclaringMethod() {
                 return new MethodDescription.ForLoadedMethod(this.method);
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static class OfMethod extends ForLoadedParameter<Method> {
             public OfMethod(Method method, int i, ParameterAnnotationSource parameterAnnotationSource) {
                 super(method, i, parameterAnnotationSource);
@@ -260,25 +309,32 @@ public interface ParameterDescription extends AnnotationSource, NamedElement.Wit
 
             @Override // net.bytebuddy.description.annotation.AnnotationSource
             public AnnotationList getDeclaredAnnotations() {
-                return new AnnotationList.ForLoadedAnnotations(this.parameterAnnotationSource.getParameterAnnotations()[this.index]);
+                return new AnnotationList.ForLoadedAnnotations(
+                        this.parameterAnnotationSource.getParameterAnnotations()[this.index]);
             }
 
             @Override // net.bytebuddy.description.method.ParameterDescription
             public TypeDescription.Generic getType() {
                 if (TypeDescription.AbstractBase.RAW_TYPES) {
-                    return TypeDescription.Generic.OfNonGenericType.ForLoadedType.of(((Method) this.executable).getParameterTypes()[this.index]);
+                    return TypeDescription.Generic.OfNonGenericType.ForLoadedType
+                            .of(((Method) this.executable).getParameterTypes()[this.index]);
                 }
                 T t = this.executable;
-                return new TypeDescription.Generic.LazyProjection.OfMethodParameter((Method) t, this.index, ((Method) t).getParameterTypes());
+                return new TypeDescription.Generic.LazyProjection.OfMethodParameter((Method) t, this.index,
+                        ((Method) t).getParameterTypes());
             }
 
-            @Override // net.bytebuddy.description.method.ParameterDescription, net.bytebuddy.description.method.ParameterDescription.InDefinedShape
+            @Override // net.bytebuddy.description.method.ParameterDescription,
+                      // net.bytebuddy.description.method.ParameterDescription.InDefinedShape
             public MethodDescription.InDefinedShape getDeclaringMethod() {
                 return new MethodDescription.ForLoadedMethod((Method) this.executable);
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @JavaDispatcher.Proxied("java.lang.reflect.Parameter")
         public interface Parameter {
             @JavaDispatcher.Proxied("getModifiers")
@@ -291,10 +347,16 @@ public interface ParameterDescription extends AnnotationSource, NamedElement.Wit
             boolean isNamePresent(Object obj);
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public interface ParameterAnnotationSource {
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForLoadedConstructor implements ParameterAnnotationSource {
                 private final Constructor<?> constructor;
@@ -307,7 +369,8 @@ public interface ParameterDescription extends AnnotationSource, NamedElement.Wit
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.constructor.equals(((ForLoadedConstructor) obj).constructor);
+                    return obj != null && getClass() == obj.getClass()
+                            && this.constructor.equals(((ForLoadedConstructor) obj).constructor);
                 }
 
                 @Override // net.bytebuddy.description.method.ParameterDescription.ForLoadedParameter.ParameterAnnotationSource
@@ -320,7 +383,10 @@ public interface ParameterDescription extends AnnotationSource, NamedElement.Wit
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForLoadedMethod implements ParameterAnnotationSource {
                 private final Method method;
@@ -333,7 +399,8 @@ public interface ParameterDescription extends AnnotationSource, NamedElement.Wit
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.method.equals(((ForLoadedMethod) obj).method);
+                    return obj != null && getClass() == obj.getClass()
+                            && this.method.equals(((ForLoadedMethod) obj).method);
                 }
 
                 @Override // net.bytebuddy.description.method.ParameterDescription.ForLoadedParameter.ParameterAnnotationSource
@@ -379,14 +446,18 @@ public interface ParameterDescription extends AnnotationSource, NamedElement.Wit
             return this.index;
         }
 
-        @Override // net.bytebuddy.description.method.ParameterDescription.AbstractBase, net.bytebuddy.description.ModifierReviewable
+        @Override // net.bytebuddy.description.method.ParameterDescription.AbstractBase,
+                  // net.bytebuddy.description.ModifierReviewable
         public int getModifiers() {
-            return PARAMETER.getModifiers(ParameterList.ForLoadedExecutable.EXECUTABLE.getParameters(this.executable)[this.index]);
+            return PARAMETER.getModifiers(
+                    ParameterList.ForLoadedExecutable.EXECUTABLE.getParameters(this.executable)[this.index]);
         }
 
-        @Override // net.bytebuddy.description.method.ParameterDescription.AbstractBase, net.bytebuddy.description.NamedElement.WithRuntimeName
+        @Override // net.bytebuddy.description.method.ParameterDescription.AbstractBase,
+                  // net.bytebuddy.description.NamedElement.WithRuntimeName
         public String getName() {
-            return PARAMETER.getName(ParameterList.ForLoadedExecutable.EXECUTABLE.getParameters(this.executable)[this.index]);
+            return PARAMETER
+                    .getName(ParameterList.ForLoadedExecutable.EXECUTABLE.getParameters(this.executable)[this.index]);
         }
 
         @Override // net.bytebuddy.description.method.ParameterDescription
@@ -396,14 +467,21 @@ public interface ParameterDescription extends AnnotationSource, NamedElement.Wit
 
         @Override // net.bytebuddy.description.NamedElement.WithOptionalName
         public boolean isNamed() {
-            return PARAMETER.isNamePresent(ParameterList.ForLoadedExecutable.EXECUTABLE.getParameters(this.executable)[this.index]);
+            return PARAMETER.isNamePresent(
+                    ParameterList.ForLoadedExecutable.EXECUTABLE.getParameters(this.executable)[this.index]);
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface InDefinedShape extends ParameterDescription {
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static abstract class AbstractBase extends AbstractBase implements InDefinedShape {
             @Override // net.bytebuddy.description.ByteCodeElement.TypeDependant
             public InDefinedShape asDefined() {
@@ -414,13 +492,20 @@ public interface ParameterDescription extends AnnotationSource, NamedElement.Wit
         MethodDescription.InDefinedShape getDeclaringMethod();
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface InGenericShape extends ParameterDescription {
-        @Override // net.bytebuddy.description.method.ParameterDescription, net.bytebuddy.description.method.ParameterDescription.InDefinedShape
+        @Override // net.bytebuddy.description.method.ParameterDescription,
+                  // net.bytebuddy.description.method.ParameterDescription.InDefinedShape
         MethodDescription.InGenericShape getDeclaringMethod();
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class Latent extends InDefinedShape.AbstractBase {
         private final List<? extends AnnotationDescription> declaredAnnotations;
         private final MethodDescription.InDefinedShape declaringMethod;
@@ -448,26 +533,30 @@ public interface ParameterDescription extends AnnotationSource, NamedElement.Wit
             return this.index;
         }
 
-        @Override // net.bytebuddy.description.method.ParameterDescription.AbstractBase, net.bytebuddy.description.ModifierReviewable
+        @Override // net.bytebuddy.description.method.ParameterDescription.AbstractBase,
+                  // net.bytebuddy.description.ModifierReviewable
         public int getModifiers() {
             Integer num = this.modifiers;
             return num == null ? super.getModifiers() : num.intValue();
         }
 
-        @Override // net.bytebuddy.description.method.ParameterDescription.AbstractBase, net.bytebuddy.description.NamedElement.WithRuntimeName
+        @Override // net.bytebuddy.description.method.ParameterDescription.AbstractBase,
+                  // net.bytebuddy.description.NamedElement.WithRuntimeName
         public String getName() {
             String str = this.name;
             return str == null ? super.getName() : str;
         }
 
-        @Override // net.bytebuddy.description.method.ParameterDescription.AbstractBase, net.bytebuddy.description.method.ParameterDescription
+        @Override // net.bytebuddy.description.method.ParameterDescription.AbstractBase,
+                  // net.bytebuddy.description.method.ParameterDescription
         public int getOffset() {
             return this.offset;
         }
 
         @Override // net.bytebuddy.description.method.ParameterDescription
         public TypeDescription.Generic getType() {
-            return (TypeDescription.Generic) this.parameterType.accept(TypeDescription.Generic.Visitor.Substitutor.ForAttachment.of(this));
+            return (TypeDescription.Generic) this.parameterType
+                    .accept(TypeDescription.Generic.Visitor.Substitutor.ForAttachment.of(this));
         }
 
         @Override // net.bytebuddy.description.method.ParameterDescription
@@ -480,7 +569,8 @@ public interface ParameterDescription extends AnnotationSource, NamedElement.Wit
             return this.name != null;
         }
 
-        @Override // net.bytebuddy.description.method.ParameterDescription, net.bytebuddy.description.method.ParameterDescription.InDefinedShape
+        @Override // net.bytebuddy.description.method.ParameterDescription,
+                  // net.bytebuddy.description.method.ParameterDescription.InDefinedShape
         public MethodDescription.InDefinedShape getDeclaringMethod() {
             return this.declaringMethod;
         }
@@ -489,7 +579,9 @@ public interface ParameterDescription extends AnnotationSource, NamedElement.Wit
             this(inDefinedShape, generic, Collections.EMPTY_LIST, Token.NO_NAME, Token.NO_MODIFIERS, i, i2);
         }
 
-        public Latent(MethodDescription.InDefinedShape inDefinedShape, TypeDescription.Generic generic, List<? extends AnnotationDescription> list, @MaybeNull String str, @MaybeNull Integer num, int i, int i2) {
+        public Latent(MethodDescription.InDefinedShape inDefinedShape, TypeDescription.Generic generic,
+                List<? extends AnnotationDescription> list, @MaybeNull String str, @MaybeNull Integer num, int i,
+                int i2) {
             this.declaringMethod = inDefinedShape;
             this.parameterType = generic;
             this.declaredAnnotations = list;
@@ -500,7 +592,10 @@ public interface ParameterDescription extends AnnotationSource, NamedElement.Wit
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class Token implements ByteCodeElement.Token<Token> {
 
         @AlwaysNull
@@ -518,7 +613,10 @@ public interface ParameterDescription extends AnnotationSource, NamedElement.Wit
         private final String name;
         private final TypeDescription.Generic type;
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static class TypeList extends AbstractList<Token> {
             private final List<? extends TypeDefinition> typeDescriptions;
 
@@ -556,7 +654,9 @@ public interface ParameterDescription extends AnnotationSource, NamedElement.Wit
                 return false;
             }
             Token token = (Token) obj;
-            return this.type.equals(token.type) && this.annotations.equals(token.annotations) && ((str = this.name) == null ? token.name == null : str.equals(token.name)) && ((num = this.modifiers) == null ? token.modifiers == null : num.equals(token.modifiers));
+            return this.type.equals(token.type) && this.annotations.equals(token.annotations)
+                    && ((str = this.name) == null ? token.name == null : str.equals(token.name))
+                    && ((num = this.modifiers) == null ? token.modifiers == null : num.equals(token.modifiers));
         }
 
         public AnnotationList getAnnotations() {
@@ -601,7 +701,7 @@ public interface ParameterDescription extends AnnotationSource, NamedElement.Wit
             sb.append(", name='");
             sb.append(this.name);
             sb.append("', modifiers=");
-            return bjs.p(sb, this.modifiers, '}');
+            return concat(sb, this.modifiers, '}');
         }
 
         public Token(TypeDescription.Generic generic, List<? extends AnnotationDescription> list) {
@@ -610,14 +710,16 @@ public interface ParameterDescription extends AnnotationSource, NamedElement.Wit
 
         @Override // net.bytebuddy.description.ByteCodeElement.Token
         public Token accept(TypeDescription.Generic.Visitor<? extends TypeDescription.Generic> visitor) {
-            return new Token((TypeDescription.Generic) this.type.accept(visitor), this.annotations, this.name, this.modifiers);
+            return new Token((TypeDescription.Generic) this.type.accept(visitor), this.annotations, this.name,
+                    this.modifiers);
         }
 
         public Token(TypeDescription.Generic generic, @MaybeNull String str, @MaybeNull Integer num) {
             this(generic, Collections.EMPTY_LIST, str, num);
         }
 
-        public Token(TypeDescription.Generic generic, List<? extends AnnotationDescription> list, @MaybeNull String str, @MaybeNull Integer num) {
+        public Token(TypeDescription.Generic generic, List<? extends AnnotationDescription> list, @MaybeNull String str,
+                @MaybeNull Integer num) {
             this.type = generic;
             this.annotations = list;
             this.name = str;
@@ -625,13 +727,18 @@ public interface ParameterDescription extends AnnotationSource, NamedElement.Wit
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class TypeSubstituting extends AbstractBase implements InGenericShape {
         private final MethodDescription.InGenericShape declaringMethod;
         private final ParameterDescription parameterDescription;
         private final TypeDescription.Generic.Visitor<? extends TypeDescription.Generic> visitor;
 
-        public TypeSubstituting(MethodDescription.InGenericShape inGenericShape, ParameterDescription parameterDescription, TypeDescription.Generic.Visitor<? extends TypeDescription.Generic> visitor) {
+        public TypeSubstituting(MethodDescription.InGenericShape inGenericShape,
+                ParameterDescription parameterDescription,
+                TypeDescription.Generic.Visitor<? extends TypeDescription.Generic> visitor) {
             this.declaringMethod = inGenericShape;
             this.parameterDescription = parameterDescription;
             this.visitor = visitor;
@@ -647,17 +754,20 @@ public interface ParameterDescription extends AnnotationSource, NamedElement.Wit
             return this.parameterDescription.getIndex();
         }
 
-        @Override // net.bytebuddy.description.method.ParameterDescription.AbstractBase, net.bytebuddy.description.ModifierReviewable
+        @Override // net.bytebuddy.description.method.ParameterDescription.AbstractBase,
+                  // net.bytebuddy.description.ModifierReviewable
         public int getModifiers() {
             return this.parameterDescription.getModifiers();
         }
 
-        @Override // net.bytebuddy.description.method.ParameterDescription.AbstractBase, net.bytebuddy.description.NamedElement.WithRuntimeName
+        @Override // net.bytebuddy.description.method.ParameterDescription.AbstractBase,
+                  // net.bytebuddy.description.NamedElement.WithRuntimeName
         public String getName() {
             return this.parameterDescription.getName();
         }
 
-        @Override // net.bytebuddy.description.method.ParameterDescription.AbstractBase, net.bytebuddy.description.method.ParameterDescription
+        @Override // net.bytebuddy.description.method.ParameterDescription.AbstractBase,
+                  // net.bytebuddy.description.method.ParameterDescription
         public int getOffset() {
             return this.parameterDescription.getOffset();
         }
@@ -682,7 +792,8 @@ public interface ParameterDescription extends AnnotationSource, NamedElement.Wit
             return this.parameterDescription.asDefined();
         }
 
-        @Override // net.bytebuddy.description.method.ParameterDescription, net.bytebuddy.description.method.ParameterDescription.InDefinedShape
+        @Override // net.bytebuddy.description.method.ParameterDescription,
+                  // net.bytebuddy.description.method.ParameterDescription.InDefinedShape
         public MethodDescription.InGenericShape getDeclaringMethod() {
             return this.declaringMethod;
         }

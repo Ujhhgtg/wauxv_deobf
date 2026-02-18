@@ -73,11 +73,17 @@ import net.bytebuddy.utility.nullability.MaybeNull;
 /* JADX INFO: loaded from: classes.dex */
 public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface Engine {
         public static final String PLUGIN_FILE = "META-INF/net.bytebuddy/build.plugins";
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static abstract class AbstractBase implements Engine {
             @Override // net.bytebuddy.build.Plugin.Engine
             public Summary apply(File file, File file2, Factory... factoryArr) {
@@ -94,12 +100,13 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                 if (i >= 1) {
                     return with(new Dispatcher.ForParallelTransformation.WithThrowawayExecutorService.Factory(i));
                 }
-                throw new IllegalArgumentException(bjs.i(i, "Number of threads must be positive: "));
+                throw new IllegalArgumentException(concatVar2Var1(i, "Number of threads must be positive: "));
             }
 
             @Override // net.bytebuddy.build.Plugin.Engine
             public Summary apply(File file, File file2, List<? extends Factory> list) {
-                return apply(file.isDirectory() ? new Source.ForFolder(file) : new Source.ForJarFile(file), file2.isDirectory() ? new Target.ForFolder(file2) : new Target.ForJarFile(file2), list);
+                return apply(file.isDirectory() ? new Source.ForFolder(file) : new Source.ForJarFile(file),
+                        file2.isDirectory() ? new Target.ForFolder(file2) : new Target.ForJarFile(file2), list);
             }
 
             @Override // net.bytebuddy.build.Plugin.Engine
@@ -108,7 +115,10 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class Default extends AbstractBase {
             private final ByteBuddy byteBuddy;
@@ -124,7 +134,10 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
             private final PoolStrategy poolStrategy;
             private final TypeStrategy typeStrategy;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public class Preprocessor implements Callable<Callable<? extends Dispatcher.Materializable>> {
                 private final ClassFileLocator classFileLocator;
 
@@ -138,7 +151,10 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                 private final String typeName;
                 private final TypePool typePool;
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public class Ignored implements Callable<Dispatcher.Materializable> {
                     private final TypeDescription typeDescription;
 
@@ -157,7 +173,10 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public class Resolved implements Callable<Dispatcher.Materializable> {
 
                     @MaybeNull
@@ -176,11 +195,13 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                         ArrayList arrayList2 = new ArrayList();
                         ArrayList arrayList3 = new ArrayList();
                         try {
-                            DynamicType.Builder<?> builder = Default.this.typeStrategy.builder(Default.this.byteBuddy, this.typeDescription, Preprocessor.this.classFileLocator);
+                            DynamicType.Builder<?> builder = Default.this.typeStrategy.builder(Default.this.byteBuddy,
+                                    this.typeDescription, Preprocessor.this.classFileLocator);
                             for (Plugin plugin : Preprocessor.this.plugins) {
                                 try {
                                     if (plugin.matches(this.typeDescription)) {
-                                        builder = plugin.apply(builder, this.typeDescription, Preprocessor.this.classFileLocator);
+                                        builder = plugin.apply(builder, this.typeDescription,
+                                                Preprocessor.this.classFileLocator);
                                         Preprocessor.this.listener.onTransformation(this.typeDescription, plugin);
                                         arrayList.add(plugin);
                                     } else {
@@ -194,24 +215,31 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                             }
                             if (!arrayList3.isEmpty()) {
                                 Preprocessor.this.listener.onError(this.typeDescription, arrayList3);
-                                forFailedElement = new Dispatcher.Materializable.ForFailedElement(Preprocessor.this.element, this.typeDescription, arrayList3);
+                                forFailedElement = new Dispatcher.Materializable.ForFailedElement(
+                                        Preprocessor.this.element, this.typeDescription, arrayList3);
                             } else if (arrayList.isEmpty()) {
                                 Preprocessor.this.listener.onIgnored(this.typeDescription, arrayList2);
-                                forFailedElement = new Dispatcher.Materializable.ForRetainedElement(Preprocessor.this.element);
+                                forFailedElement = new Dispatcher.Materializable.ForRetainedElement(
+                                        Preprocessor.this.element);
                             } else {
                                 try {
-                                    DynamicType.Unloaded<?> unloadedMake = builder.make(TypeResolutionStrategy.Disabled.INSTANCE, Preprocessor.this.typePool);
+                                    DynamicType.Unloaded<?> unloadedMake = builder
+                                            .make(TypeResolutionStrategy.Disabled.INSTANCE, Preprocessor.this.typePool);
                                     Preprocessor.this.listener.onTransformation(this.typeDescription, arrayList);
-                                    for (Map.Entry<TypeDescription, LoadedTypeInitializer> entry : unloadedMake.getLoadedTypeInitializers().entrySet()) {
+                                    for (Map.Entry<TypeDescription, LoadedTypeInitializer> entry : unloadedMake
+                                            .getLoadedTypeInitializers().entrySet()) {
                                         if (entry.getValue().isAlive()) {
-                                            Preprocessor.this.listener.onLiveInitializer(this.typeDescription, entry.getKey());
+                                            Preprocessor.this.listener.onLiveInitializer(this.typeDescription,
+                                                    entry.getKey());
                                         }
                                     }
-                                    forFailedElement = new Dispatcher.Materializable.ForTransformedElement(this.classFileVersion, unloadedMake);
+                                    forFailedElement = new Dispatcher.Materializable.ForTransformedElement(
+                                            this.classFileVersion, unloadedMake);
                                 } catch (Throwable th2) {
                                     arrayList3.add(th2);
                                     Preprocessor.this.listener.onError(this.typeDescription, arrayList3);
-                                    forFailedElement = new Dispatcher.Materializable.ForFailedElement(Preprocessor.this.element, this.typeDescription, arrayList3);
+                                    forFailedElement = new Dispatcher.Materializable.ForFailedElement(
+                                            Preprocessor.this.element, this.typeDescription, arrayList3);
                                 }
                             }
                             Preprocessor.this.listener.onComplete(this.typeDescription);
@@ -223,7 +251,10 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public class Unresolved implements Callable<Dispatcher.Materializable> {
                     private Unresolved() {
                     }
@@ -231,11 +262,14 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                     @Override // java.util.concurrent.Callable
                     public Dispatcher.Materializable call() {
                         Preprocessor.this.listener.onUnresolved(Preprocessor.this.typeName);
-                        return new Dispatcher.Materializable.ForUnresolvedElement(Preprocessor.this.element, Preprocessor.this.typeName);
+                        return new Dispatcher.Materializable.ForUnresolvedElement(Preprocessor.this.element,
+                                Preprocessor.this.typeName);
                     }
                 }
 
-                private Preprocessor(Source.Element element, String str, ClassFileLocator classFileLocator, @MaybeNull ClassFileVersion classFileVersion, TypePool typePool, Listener listener, List<Plugin> list, List<WithPreprocessor> list2) {
+                private Preprocessor(Source.Element element, String str, ClassFileLocator classFileLocator,
+                        @MaybeNull ClassFileVersion classFileVersion, TypePool typePool, Listener listener,
+                        List<Plugin> list, List<WithPreprocessor> list2) {
                     this.element = element;
                     this.typeName = str;
                     this.classFileLocator = classFileLocator;
@@ -276,14 +310,18 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class SourceEntryPrependingClassFileLocator implements ClassFileLocator {
                 private final ClassFileLocator delegate;
                 private final Source.Element element;
                 private final String name;
 
-                public SourceEntryPrependingClassFileLocator(String str, Source.Element element, ClassFileLocator classFileLocator) {
+                public SourceEntryPrependingClassFileLocator(String str, Source.Element element,
+                        ClassFileLocator classFileLocator) {
                     this.name = str;
                     this.element = element;
                     this.delegate = classFileLocator;
@@ -302,11 +340,14 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                         return false;
                     }
                     SourceEntryPrependingClassFileLocator sourceEntryPrependingClassFileLocator = (SourceEntryPrependingClassFileLocator) obj;
-                    return this.name.equals(sourceEntryPrependingClassFileLocator.name) && this.element.equals(sourceEntryPrependingClassFileLocator.element) && this.delegate.equals(sourceEntryPrependingClassFileLocator.delegate);
+                    return this.name.equals(sourceEntryPrependingClassFileLocator.name)
+                            && this.element.equals(sourceEntryPrependingClassFileLocator.element)
+                            && this.delegate.equals(sourceEntryPrependingClassFileLocator.delegate);
                 }
 
                 public int hashCode() {
-                    return this.delegate.hashCode() + ((this.element.hashCode() + bjs.e(this.name, getClass().hashCode() * 31, 31)) * 31);
+                    return this.delegate.hashCode()
+                            + ((this.element.hashCode() + bjs.e(this.name, getClass().hashCode() * 31, 31)) * 31);
                 }
 
                 @Override // net.bytebuddy.dynamic.ClassFileLocator
@@ -339,15 +380,18 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                 new Default().apply(new File(strArr[0]), new File(strArr[1]), arrayList);
             }
 
-            public static Engine of(EntryPoint entryPoint, ClassFileVersion classFileVersion, MethodNameTransformer methodNameTransformer) {
-                return new Default(entryPoint.byteBuddy(classFileVersion), new TypeStrategy.ForEntryPoint(entryPoint, methodNameTransformer));
+            public static Engine of(EntryPoint entryPoint, ClassFileVersion classFileVersion,
+                    MethodNameTransformer methodNameTransformer) {
+                return new Default(entryPoint.byteBuddy(classFileVersion),
+                        new TypeStrategy.ForEntryPoint(entryPoint, methodNameTransformer));
             }
 
             public static Set<String> scan(ClassLoader classLoader) throws IOException {
                 HashSet hashSet = new HashSet();
                 Enumeration<URL> resources = classLoader.getResources(Engine.PLUGIN_FILE);
                 while (resources.hasMoreElements()) {
-                    BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(resources.nextElement().openStream(), "UTF-8"));
+                    BufferedReader bufferedReader = new BufferedReader(
+                            new InputStreamReader(resources.nextElement().openStream(), "UTF-8"));
                     while (true) {
                         try {
                             String line = bufferedReader.readLine();
@@ -365,11 +409,15 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
-            /* JADX WARN: Type inference failed for: r22v0, types: [net.bytebuddy.build.Plugin$Engine$Source] */
+            /*
+             * JADX WARN: Type inference failed for: r22v0, types:
+             * [net.bytebuddy.build.Plugin$Engine$Source]
+             */
             /* JADX WARN: Type inference failed for: r22v1 */
             /* JADX WARN: Type inference failed for: r22v2, types: [java.io.Closeable] */
-            /* JADX WARN: Undo finally extract visitor
-            java.lang.NullPointerException
+            /*
+             * JADX WARN: Undo finally extract visitor
+             * java.lang.NullPointerException
              */
             @Override // net.bytebuddy.build.Plugin.Engine
             public Summary apply(Source source, Target target, List<? extends Factory> list) throws IOException {
@@ -388,7 +436,8 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                 Default r1 = this;
                 Target.Sink sink2 = null;
                 int i2 = 1;
-                Listener.Compound compound2 = new Listener.Compound(r1.listener, new Listener.ForErrorHandler(r1.errorHandler));
+                Listener.Compound compound2 = new Listener.Compound(r1.listener,
+                        new Listener.ForErrorHandler(r1.errorHandler));
                 ArrayList arrayList2 = new ArrayList();
                 LinkedHashMap linkedHashMap = new LinkedHashMap();
                 ArrayList arrayList3 = new ArrayList();
@@ -411,7 +460,8 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                     Source.Origin origin2 = source.read();
                     try {
                         try {
-                            ClassFileLocator.Compound compound3 = new ClassFileLocator.Compound(origin2.toClassFileLocator(r1.classFileVersion), r1.classFileLocator);
+                            ClassFileLocator.Compound compound3 = new ClassFileLocator.Compound(
+                                    origin2.toClassFileLocator(r1.classFileVersion), r1.classFileLocator);
                             TypePool typePool = r1.poolStrategy.typePool(compound3);
                             Manifest manifest = origin2.getManifest();
                             compound2.onManifest(manifest);
@@ -422,12 +472,14 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                                     sinkWrite.store(((WithInitialization) it2.next()).initialize(compound3));
                                 }
                                 try {
-                                    Dispatcher dispatcherMake = r1.dispatcherFactory.make(sinkWrite, arrayList2, linkedHashMap, arrayList3);
+                                    Dispatcher dispatcherMake = r1.dispatcherFactory.make(sinkWrite, arrayList2,
+                                            linkedHashMap, arrayList3);
                                     try {
                                         for (Source.Element element3 : origin2) {
                                             if (Thread.interrupted()) {
                                                 Thread.currentThread().interrupt();
-                                                throw new IllegalStateException("Thread interrupted during plugin engine application");
+                                                throw new IllegalStateException(
+                                                        "Thread interrupted during plugin engine application");
                                             }
                                             String name = element3.getName();
                                             while (name.startsWith("/")) {
@@ -436,13 +488,17 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                                             try {
                                                 if (name.endsWith(ClassFileLocator.CLASS_FILE_EXTENSION)) {
                                                     i = i2;
-                                                    if (!name.startsWith("META-INF") || name.startsWith(ClassFileLocator.META_INF_VERSIONS)) {
+                                                    if (!name.startsWith("META-INF")
+                                                            || name.startsWith(ClassFileLocator.META_INF_VERSIONS)) {
                                                         try {
                                                             origin = origin2;
                                                             Dispatcher dispatcher2 = dispatcherMake;
                                                             if (name.startsWith(ClassFileLocator.META_INF_VERSIONS)) {
                                                                 try {
-                                                                    classFileVersionOfJavaVersion = ClassFileVersion.ofJavaVersion(Integer.parseInt(name.substring(18, name.indexOf(47, 18))));
+                                                                    classFileVersionOfJavaVersion = ClassFileVersion
+                                                                            .ofJavaVersion(
+                                                                                    Integer.parseInt(name.substring(18,
+                                                                                            name.indexOf(47, 18))));
                                                                 } catch (NumberFormatException unused) {
                                                                     dispatcher = dispatcher2;
                                                                     element2 = element3;
@@ -468,9 +524,24 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                                                             } else {
                                                                 classFileVersionOfJavaVersion = null;
                                                             }
-                                                            if (classFileVersionOfJavaVersion == null || (classFileVersionOfJavaVersion.isAtLeast(ClassFileVersion.JAVA_V8) && (classFileVersion = r1.classFileVersion) != null && classFileVersion.isAtLeast(ClassFileVersion.JAVA_V9) && classFileVersionOfJavaVersion.isAtMost(r1.classFileVersion))) {
-                                                                String strReplace = name.substring(name.startsWith(ClassFileLocator.META_INF_VERSIONS) ? name.indexOf(47, 18) + 1 : 0, name.length() - 6).replace('/', TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
-                                                                SourceEntryPrependingClassFileLocator sourceEntryPrependingClassFileLocator = new SourceEntryPrependingClassFileLocator(strReplace, element3, compound3);
+                                                            if (classFileVersionOfJavaVersion == null
+                                                                    || (classFileVersionOfJavaVersion
+                                                                            .isAtLeast(ClassFileVersion.JAVA_V8)
+                                                                            && (classFileVersion = r1.classFileVersion) != null
+                                                                            && classFileVersion
+                                                                                    .isAtLeast(ClassFileVersion.JAVA_V9)
+                                                                            && classFileVersionOfJavaVersion
+                                                                                    .isAtMost(r1.classFileVersion))) {
+                                                                String strReplace = name
+                                                                        .substring(name.startsWith(
+                                                                                ClassFileLocator.META_INF_VERSIONS)
+                                                                                        ? name.indexOf(47, 18) + 1
+                                                                                        : 0,
+                                                                                name.length() - 6)
+                                                                        .replace('/',
+                                                                                TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
+                                                                SourceEntryPrependingClassFileLocator sourceEntryPrependingClassFileLocator = new SourceEntryPrependingClassFileLocator(
+                                                                        strReplace, element3, compound3);
                                                                 dispatcher = dispatcher2;
                                                                 compound = compound3;
                                                                 element2 = element3;
@@ -479,7 +550,12 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                                                                 arrayList = arrayList2;
                                                                 str2 = name;
                                                                 try {
-                                                                    dispatcher.accept(new Preprocessor(element2, strReplace, sourceEntryPrependingClassFileLocator, classFileVersion2, typePool, compound2, arrayList4, arrayList6), arrayList6.isEmpty());
+                                                                    dispatcher.accept(new Preprocessor(element2,
+                                                                            strReplace,
+                                                                            sourceEntryPrependingClassFileLocator,
+                                                                            classFileVersion2, typePool, compound2,
+                                                                            arrayList4, arrayList6),
+                                                                            arrayList6.isEmpty());
                                                                 } catch (NumberFormatException unused2) {
                                                                     compound2.onResource(str2);
                                                                     sink.retain(element2);
@@ -619,123 +695,143 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                 }
             }
 
-            /* JADX WARN: Code restructure failed: missing block: B:29:0x0050, code lost:
-            
-                if (r2 != null) goto L30;
+            /*
+             * JADX WARN: Code restructure failed: missing block: B:29:0x0050, code lost:
+             * 
+             * if (r2 != null) goto L30;
              */
             /*
-                Code decompiled incorrectly, please refer to instructions dump.
-                To view partially-correct add '--show-bad-code' argument
-            */
+             * Code decompiled incorrectly, please refer to instructions dump.
+             * To view partially-correct add '--show-bad-code' argument
+             */
             public boolean equals(@net.bytebuddy.utility.nullability.MaybeNull java.lang.Object r5) {
                 /*
-                    r4 = this;
-                    r0 = 1
-                    if (r4 != r5) goto L4
-                    return r0
-                L4:
-                    r1 = 0
-                    if (r5 != 0) goto L8
-                    return r1
-                L8:
-                    java.lang.Class r2 = r4.getClass()
-                    java.lang.Class r3 = r5.getClass()
-                    if (r2 == r3) goto L13
-                    return r1
-                L13:
-                    net.bytebuddy.ByteBuddy r2 = r4.byteBuddy
-                    net.bytebuddy.build.Plugin$Engine$Default r5 = (net.bytebuddy.build.Plugin.Engine.Default) r5
-                    net.bytebuddy.ByteBuddy r3 = r5.byteBuddy
-                    boolean r2 = r2.equals(r3)
-                    if (r2 != 0) goto L20
-                    return r1
-                L20:
-                    net.bytebuddy.build.Plugin$Engine$TypeStrategy r2 = r4.typeStrategy
-                    net.bytebuddy.build.Plugin$Engine$TypeStrategy r3 = r5.typeStrategy
-                    boolean r2 = r2.equals(r3)
-                    if (r2 != 0) goto L2b
-                    return r1
-                L2b:
-                    net.bytebuddy.build.Plugin$Engine$PoolStrategy r2 = r4.poolStrategy
-                    net.bytebuddy.build.Plugin$Engine$PoolStrategy r3 = r5.poolStrategy
-                    boolean r2 = r2.equals(r3)
-                    if (r2 != 0) goto L36
-                    return r1
-                L36:
-                    net.bytebuddy.dynamic.ClassFileLocator r2 = r4.classFileLocator
-                    net.bytebuddy.dynamic.ClassFileLocator r3 = r5.classFileLocator
-                    boolean r2 = r2.equals(r3)
-                    if (r2 != 0) goto L41
-                    return r1
-                L41:
-                    net.bytebuddy.ClassFileVersion r2 = r4.classFileVersion
-                    net.bytebuddy.ClassFileVersion r3 = r5.classFileVersion
-                    if (r3 == 0) goto L50
-                    if (r2 == 0) goto L52
-                    boolean r2 = r2.equals(r3)
-                    if (r2 != 0) goto L53
-                    return r1
-                L50:
-                    if (r2 == 0) goto L53
-                L52:
-                    return r1
-                L53:
-                    net.bytebuddy.build.Plugin$Engine$Listener r2 = r4.listener
-                    net.bytebuddy.build.Plugin$Engine$Listener r3 = r5.listener
-                    boolean r2 = r2.equals(r3)
-                    if (r2 != 0) goto L5e
-                    return r1
-                L5e:
-                    net.bytebuddy.build.Plugin$Engine$ErrorHandler r2 = r4.errorHandler
-                    net.bytebuddy.build.Plugin$Engine$ErrorHandler r3 = r5.errorHandler
-                    boolean r2 = r2.equals(r3)
-                    if (r2 != 0) goto L69
-                    return r1
-                L69:
-                    net.bytebuddy.build.Plugin$Engine$Dispatcher$Factory r2 = r4.dispatcherFactory
-                    net.bytebuddy.build.Plugin$Engine$Dispatcher$Factory r3 = r5.dispatcherFactory
-                    boolean r2 = r2.equals(r3)
-                    if (r2 != 0) goto L74
-                    return r1
-                L74:
-                    net.bytebuddy.matcher.ElementMatcher$Junction<? super net.bytebuddy.description.type.TypeDescription> r2 = r4.ignoredTypeMatcher
-                    net.bytebuddy.matcher.ElementMatcher$Junction<? super net.bytebuddy.description.type.TypeDescription> r5 = r5.ignoredTypeMatcher
-                    boolean r5 = r2.equals(r5)
-                    if (r5 != 0) goto L7f
-                    return r1
-                L7f:
-                    return r0
-                */
-                throw new UnsupportedOperationException("Method not decompiled: net.bytebuddy.build.Plugin.Engine.Default.equals(java.lang.Object):boolean");
+                 * r4 = this;
+                 * r0 = 1
+                 * if (r4 != r5) goto L4
+                 * return r0
+                 * L4:
+                 * r1 = 0
+                 * if (r5 != 0) goto L8
+                 * return r1
+                 * L8:
+                 * java.lang.Class r2 = r4.getClass()
+                 * java.lang.Class r3 = r5.getClass()
+                 * if (r2 == r3) goto L13
+                 * return r1
+                 * L13:
+                 * net.bytebuddy.ByteBuddy r2 = r4.byteBuddy
+                 * net.bytebuddy.build.Plugin$Engine$Default r5 =
+                 * (net.bytebuddy.build.Plugin.Engine.Default) r5
+                 * net.bytebuddy.ByteBuddy r3 = r5.byteBuddy
+                 * boolean r2 = r2.equals(r3)
+                 * if (r2 != 0) goto L20
+                 * return r1
+                 * L20:
+                 * net.bytebuddy.build.Plugin$Engine$TypeStrategy r2 = r4.typeStrategy
+                 * net.bytebuddy.build.Plugin$Engine$TypeStrategy r3 = r5.typeStrategy
+                 * boolean r2 = r2.equals(r3)
+                 * if (r2 != 0) goto L2b
+                 * return r1
+                 * L2b:
+                 * net.bytebuddy.build.Plugin$Engine$PoolStrategy r2 = r4.poolStrategy
+                 * net.bytebuddy.build.Plugin$Engine$PoolStrategy r3 = r5.poolStrategy
+                 * boolean r2 = r2.equals(r3)
+                 * if (r2 != 0) goto L36
+                 * return r1
+                 * L36:
+                 * net.bytebuddy.dynamic.ClassFileLocator r2 = r4.classFileLocator
+                 * net.bytebuddy.dynamic.ClassFileLocator r3 = r5.classFileLocator
+                 * boolean r2 = r2.equals(r3)
+                 * if (r2 != 0) goto L41
+                 * return r1
+                 * L41:
+                 * net.bytebuddy.ClassFileVersion r2 = r4.classFileVersion
+                 * net.bytebuddy.ClassFileVersion r3 = r5.classFileVersion
+                 * if (r3 == 0) goto L50
+                 * if (r2 == 0) goto L52
+                 * boolean r2 = r2.equals(r3)
+                 * if (r2 != 0) goto L53
+                 * return r1
+                 * L50:
+                 * if (r2 == 0) goto L53
+                 * L52:
+                 * return r1
+                 * L53:
+                 * net.bytebuddy.build.Plugin$Engine$Listener r2 = r4.listener
+                 * net.bytebuddy.build.Plugin$Engine$Listener r3 = r5.listener
+                 * boolean r2 = r2.equals(r3)
+                 * if (r2 != 0) goto L5e
+                 * return r1
+                 * L5e:
+                 * net.bytebuddy.build.Plugin$Engine$ErrorHandler r2 = r4.errorHandler
+                 * net.bytebuddy.build.Plugin$Engine$ErrorHandler r3 = r5.errorHandler
+                 * boolean r2 = r2.equals(r3)
+                 * if (r2 != 0) goto L69
+                 * return r1
+                 * L69:
+                 * net.bytebuddy.build.Plugin$Engine$Dispatcher$Factory r2 =
+                 * r4.dispatcherFactory
+                 * net.bytebuddy.build.Plugin$Engine$Dispatcher$Factory r3 =
+                 * r5.dispatcherFactory
+                 * boolean r2 = r2.equals(r3)
+                 * if (r2 != 0) goto L74
+                 * return r1
+                 * L74:
+                 * net.bytebuddy.matcher.ElementMatcher$Junction<? super
+                 * net.bytebuddy.description.type.TypeDescription> r2 = r4.ignoredTypeMatcher
+                 * net.bytebuddy.matcher.ElementMatcher$Junction<? super
+                 * net.bytebuddy.description.type.TypeDescription> r5 = r5.ignoredTypeMatcher
+                 * boolean r5 = r2.equals(r5)
+                 * if (r5 != 0) goto L7f
+                 * return r1
+                 * L7f:
+                 * return r0
+                 */
+                throw new UnsupportedOperationException(
+                        "Method not decompiled: net.bytebuddy.build.Plugin.Engine.Default.equals(java.lang.Object):boolean");
             }
 
             public int hashCode() {
-                int iHashCode = (this.classFileLocator.hashCode() + ((this.poolStrategy.hashCode() + ((this.typeStrategy.hashCode() + ((this.byteBuddy.hashCode() + (getClass().hashCode() * 31)) * 31)) * 31)) * 31)) * 31;
+                int iHashCode = (this.classFileLocator.hashCode()
+                        + ((this.poolStrategy.hashCode() + ((this.typeStrategy.hashCode()
+                                + ((this.byteBuddy.hashCode() + (getClass().hashCode() * 31)) * 31)) * 31)) * 31))
+                        * 31;
                 ClassFileVersion classFileVersion = this.classFileVersion;
                 if (classFileVersion != null) {
                     iHashCode += classFileVersion.hashCode();
                 }
-                return this.ignoredTypeMatcher.hashCode() + ((this.dispatcherFactory.hashCode() + ((this.errorHandler.hashCode() + ((this.listener.hashCode() + (iHashCode * 31)) * 31)) * 31)) * 31);
+                return this.ignoredTypeMatcher.hashCode() + ((this.dispatcherFactory.hashCode()
+                        + ((this.errorHandler.hashCode() + ((this.listener.hashCode() + (iHashCode * 31)) * 31)) * 31))
+                        * 31);
             }
 
             @Override // net.bytebuddy.build.Plugin.Engine
             public Engine ignore(ElementMatcher<? super TypeDescription> elementMatcher) {
-                return new Default(this.byteBuddy, this.typeStrategy, this.poolStrategy, this.classFileLocator, this.classFileVersion, this.listener, this.errorHandler, this.dispatcherFactory, this.ignoredTypeMatcher.or(elementMatcher));
+                return new Default(this.byteBuddy, this.typeStrategy, this.poolStrategy, this.classFileLocator,
+                        this.classFileVersion, this.listener, this.errorHandler, this.dispatcherFactory,
+                        this.ignoredTypeMatcher.or(elementMatcher));
             }
 
             @Override // net.bytebuddy.build.Plugin.Engine
             public Engine with(ByteBuddy byteBuddy) {
-                return new Default(byteBuddy, this.typeStrategy, this.poolStrategy, this.classFileLocator, this.classFileVersion, this.listener, this.errorHandler, this.dispatcherFactory, this.ignoredTypeMatcher);
+                return new Default(byteBuddy, this.typeStrategy, this.poolStrategy, this.classFileLocator,
+                        this.classFileVersion, this.listener, this.errorHandler, this.dispatcherFactory,
+                        this.ignoredTypeMatcher);
             }
 
             @Override // net.bytebuddy.build.Plugin.Engine
             public Engine withErrorHandlers(List<? extends ErrorHandler> list) {
-                return new Default(this.byteBuddy, this.typeStrategy, this.poolStrategy, this.classFileLocator, this.classFileVersion, this.listener, new ErrorHandler.Compound(list), this.dispatcherFactory, this.ignoredTypeMatcher);
+                return new Default(this.byteBuddy, this.typeStrategy, this.poolStrategy, this.classFileLocator,
+                        this.classFileVersion, this.listener, new ErrorHandler.Compound(list), this.dispatcherFactory,
+                        this.ignoredTypeMatcher);
             }
 
             @Override // net.bytebuddy.build.Plugin.Engine
             public Engine withoutErrorHandlers() {
-                return new Default(this.byteBuddy, this.typeStrategy, this.poolStrategy, this.classFileLocator, this.classFileVersion, this.listener, Listener.NoOp.INSTANCE, this.dispatcherFactory, this.ignoredTypeMatcher);
+                return new Default(this.byteBuddy, this.typeStrategy, this.poolStrategy, this.classFileLocator,
+                        this.classFileVersion, this.listener, Listener.NoOp.INSTANCE, this.dispatcherFactory,
+                        this.ignoredTypeMatcher);
             }
 
             public Default(ByteBuddy byteBuddy) {
@@ -744,29 +840,44 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
 
             @Override // net.bytebuddy.build.Plugin.Engine
             public Engine with(TypeStrategy typeStrategy) {
-                return new Default(this.byteBuddy, typeStrategy, this.poolStrategy, this.classFileLocator, this.classFileVersion, this.listener, this.errorHandler, this.dispatcherFactory, this.ignoredTypeMatcher);
+                return new Default(this.byteBuddy, typeStrategy, this.poolStrategy, this.classFileLocator,
+                        this.classFileVersion, this.listener, this.errorHandler, this.dispatcherFactory,
+                        this.ignoredTypeMatcher);
             }
 
             public Default(ByteBuddy byteBuddy, TypeStrategy typeStrategy) {
-                this(byteBuddy, typeStrategy, PoolStrategy.Default.FAST, ClassFileLocator.NoOp.INSTANCE, null, Listener.NoOp.INSTANCE, new ErrorHandler.Compound(ErrorHandler.Failing.FAIL_FAST, ErrorHandler.Enforcing.ALL_TYPES_RESOLVED, ErrorHandler.Enforcing.NO_LIVE_INITIALIZERS), Dispatcher.ForSerialTransformation.Factory.INSTANCE, ElementMatchers.none());
+                this(byteBuddy, typeStrategy, PoolStrategy.Default.FAST, ClassFileLocator.NoOp.INSTANCE, null,
+                        Listener.NoOp.INSTANCE,
+                        new ErrorHandler.Compound(ErrorHandler.Failing.FAIL_FAST,
+                                ErrorHandler.Enforcing.ALL_TYPES_RESOLVED, ErrorHandler.Enforcing.NO_LIVE_INITIALIZERS),
+                        Dispatcher.ForSerialTransformation.Factory.INSTANCE, ElementMatchers.none());
             }
 
             @Override // net.bytebuddy.build.Plugin.Engine
             public Engine with(PoolStrategy poolStrategy) {
-                return new Default(this.byteBuddy, this.typeStrategy, poolStrategy, this.classFileLocator, this.classFileVersion, this.listener, this.errorHandler, this.dispatcherFactory, this.ignoredTypeMatcher);
+                return new Default(this.byteBuddy, this.typeStrategy, poolStrategy, this.classFileLocator,
+                        this.classFileVersion, this.listener, this.errorHandler, this.dispatcherFactory,
+                        this.ignoredTypeMatcher);
             }
 
             @Override // net.bytebuddy.build.Plugin.Engine
             public Engine with(ClassFileLocator classFileLocator) {
-                return new Default(this.byteBuddy, this.typeStrategy, this.poolStrategy, new ClassFileLocator.Compound(this.classFileLocator, classFileLocator), this.classFileVersion, this.listener, this.errorHandler, this.dispatcherFactory, this.ignoredTypeMatcher);
+                return new Default(this.byteBuddy, this.typeStrategy, this.poolStrategy,
+                        new ClassFileLocator.Compound(this.classFileLocator, classFileLocator), this.classFileVersion,
+                        this.listener, this.errorHandler, this.dispatcherFactory, this.ignoredTypeMatcher);
             }
 
             @Override // net.bytebuddy.build.Plugin.Engine
             public Engine with(@MaybeNull ClassFileVersion classFileVersion) {
-                return new Default(this.byteBuddy, this.typeStrategy, this.poolStrategy, this.classFileLocator, classFileVersion, this.listener, this.errorHandler, this.dispatcherFactory, this.ignoredTypeMatcher);
+                return new Default(this.byteBuddy, this.typeStrategy, this.poolStrategy, this.classFileLocator,
+                        classFileVersion, this.listener, this.errorHandler, this.dispatcherFactory,
+                        this.ignoredTypeMatcher);
             }
 
-            public Default(ByteBuddy byteBuddy, TypeStrategy typeStrategy, PoolStrategy poolStrategy, ClassFileLocator classFileLocator, @MaybeNull ClassFileVersion classFileVersion, Listener listener, ErrorHandler errorHandler, Dispatcher.Factory factory, ElementMatcher.Junction<? super TypeDescription> junction) {
+            public Default(ByteBuddy byteBuddy, TypeStrategy typeStrategy, PoolStrategy poolStrategy,
+                    ClassFileLocator classFileLocator, @MaybeNull ClassFileVersion classFileVersion, Listener listener,
+                    ErrorHandler errorHandler, Dispatcher.Factory factory,
+                    ElementMatcher.Junction<? super TypeDescription> junction) {
                 this.byteBuddy = byteBuddy;
                 this.typeStrategy = typeStrategy;
                 this.poolStrategy = poolStrategy;
@@ -780,24 +891,37 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
 
             @Override // net.bytebuddy.build.Plugin.Engine
             public Engine with(Listener listener) {
-                return new Default(this.byteBuddy, this.typeStrategy, this.poolStrategy, this.classFileLocator, this.classFileVersion, new Listener.Compound(this.listener, listener), this.errorHandler, this.dispatcherFactory, this.ignoredTypeMatcher);
+                return new Default(this.byteBuddy, this.typeStrategy, this.poolStrategy, this.classFileLocator,
+                        this.classFileVersion, new Listener.Compound(this.listener, listener), this.errorHandler,
+                        this.dispatcherFactory, this.ignoredTypeMatcher);
             }
 
             @Override // net.bytebuddy.build.Plugin.Engine
             public Engine with(Dispatcher.Factory factory) {
-                return new Default(this.byteBuddy, this.typeStrategy, this.poolStrategy, this.classFileLocator, this.classFileVersion, this.listener, this.errorHandler, factory, this.ignoredTypeMatcher);
+                return new Default(this.byteBuddy, this.typeStrategy, this.poolStrategy, this.classFileLocator,
+                        this.classFileVersion, this.listener, this.errorHandler, factory, this.ignoredTypeMatcher);
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public interface Dispatcher extends Closeable {
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public interface Factory {
-                Dispatcher make(Target.Sink sink, List<TypeDescription> list, Map<TypeDescription, List<Throwable>> map, List<String> list2);
+                Dispatcher make(Target.Sink sink, List<TypeDescription> list, Map<TypeDescription, List<Throwable>> map,
+                        List<String> list2);
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class ForParallelTransformation implements Dispatcher {
                 private int deferred;
                 private final Map<TypeDescription, List<Throwable>> failed;
@@ -808,7 +932,10 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                 private final List<TypeDescription> transformed;
                 private final List<String> unresolved;
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class EagerWork implements Callable<Materializable> {
                     private final Callable<? extends Callable<? extends Materializable>> work;
@@ -834,7 +961,10 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class Factory implements Factory {
                     private final Executor executor;
@@ -847,7 +977,8 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                         if (this == obj) {
                             return true;
                         }
-                        return obj != null && getClass() == obj.getClass() && this.executor.equals(((Factory) obj).executor);
+                        return obj != null && getClass() == obj.getClass()
+                                && this.executor.equals(((Factory) obj).executor);
                     }
 
                     public int hashCode() {
@@ -855,17 +986,24 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                     }
 
                     @Override // net.bytebuddy.build.Plugin.Engine.Dispatcher.Factory
-                    public Dispatcher make(Target.Sink sink, List<TypeDescription> list, Map<TypeDescription, List<Throwable>> map, List<String> list2) {
+                    public Dispatcher make(Target.Sink sink, List<TypeDescription> list,
+                            Map<TypeDescription, List<Throwable>> map, List<String> list2) {
                         return new ForParallelTransformation(this.executor, sink, list, map, list2);
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class WithThrowawayExecutorService extends ForParallelTransformation {
                     private final ExecutorService executorService;
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     @HashCodeAndEqualsPlugin.Enhance
                     public static class Factory implements Factory {
                         private final int threads;
@@ -878,7 +1016,8 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                             if (this == obj) {
                                 return true;
                             }
-                            return obj != null && getClass() == obj.getClass() && this.threads == ((Factory) obj).threads;
+                            return obj != null && getClass() == obj.getClass()
+                                    && this.threads == ((Factory) obj).threads;
                         }
 
                         public int hashCode() {
@@ -886,17 +1025,21 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                         }
 
                         @Override // net.bytebuddy.build.Plugin.Engine.Dispatcher.Factory
-                        public Dispatcher make(Target.Sink sink, List<TypeDescription> list, Map<TypeDescription, List<Throwable>> map, List<String> list2) {
-                            return new WithThrowawayExecutorService(Executors.newFixedThreadPool(this.threads), sink, list, map, list2);
+                        public Dispatcher make(Target.Sink sink, List<TypeDescription> list,
+                                Map<TypeDescription, List<Throwable>> map, List<String> list2) {
+                            return new WithThrowawayExecutorService(Executors.newFixedThreadPool(this.threads), sink,
+                                    list, map, list2);
                         }
                     }
 
-                    public WithThrowawayExecutorService(ExecutorService executorService, Target.Sink sink, List<TypeDescription> list, Map<TypeDescription, List<Throwable>> map, List<String> list2) {
+                    public WithThrowawayExecutorService(ExecutorService executorService, Target.Sink sink,
+                            List<TypeDescription> list, Map<TypeDescription, List<Throwable>> map, List<String> list2) {
                         super(executorService, sink, list, map, list2);
                         this.executorService = executorService;
                     }
 
-                    @Override // net.bytebuddy.build.Plugin.Engine.Dispatcher.ForParallelTransformation, java.io.Closeable, java.lang.AutoCloseable
+                    @Override // net.bytebuddy.build.Plugin.Engine.Dispatcher.ForParallelTransformation,
+                              // java.io.Closeable, java.lang.AutoCloseable
                     public void close() {
                         try {
                             super.close();
@@ -909,7 +1052,8 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                         if (this == obj) {
                             return true;
                         }
-                        return obj != null && getClass() == obj.getClass() && this.executorService.equals(((WithThrowawayExecutorService) obj).executorService);
+                        return obj != null && getClass() == obj.getClass()
+                                && this.executorService.equals(((WithThrowawayExecutorService) obj).executorService);
                     }
 
                     public int hashCode() {
@@ -917,7 +1061,8 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                     }
                 }
 
-                public ForParallelTransformation(Executor executor, Target.Sink sink, List<TypeDescription> list, Map<TypeDescription, List<Throwable>> map, List<String> list2) {
+                public ForParallelTransformation(Executor executor, Target.Sink sink, List<TypeDescription> list,
+                        Map<TypeDescription, List<Throwable>> map, List<String> list2) {
                     this.sink = sink;
                     this.transformed = list;
                     this.failed = map;
@@ -986,7 +1131,10 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class ForSerialTransformation implements Dispatcher {
                 private final Map<TypeDescription, List<Throwable>> failed;
                 private final List<Callable<? extends Materializable>> preprocessings = new ArrayList();
@@ -994,17 +1142,22 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                 private final List<TypeDescription> transformed;
                 private final List<String> unresolved;
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public enum Factory implements Factory {
                     INSTANCE;
 
                     @Override // net.bytebuddy.build.Plugin.Engine.Dispatcher.Factory
-                    public Dispatcher make(Target.Sink sink, List<TypeDescription> list, Map<TypeDescription, List<Throwable>> map, List<String> list2) {
+                    public Dispatcher make(Target.Sink sink, List<TypeDescription> list,
+                            Map<TypeDescription, List<Throwable>> map, List<String> list2) {
                         return new ForSerialTransformation(sink, list, map, list2);
                     }
                 }
 
-                public ForSerialTransformation(Target.Sink sink, List<TypeDescription> list, Map<TypeDescription, List<Throwable>> map, List<String> list2) {
+                public ForSerialTransformation(Target.Sink sink, List<TypeDescription> list,
+                        Map<TypeDescription, List<Throwable>> map, List<String> list2) {
                     this.sink = sink;
                     this.transformed = list;
                     this.failed = map;
@@ -1012,7 +1165,8 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                 }
 
                 @Override // net.bytebuddy.build.Plugin.Engine.Dispatcher
-                public void accept(Callable<? extends Callable<? extends Materializable>> callable, boolean z) throws IOException {
+                public void accept(Callable<? extends Callable<? extends Materializable>> callable, boolean z)
+                        throws IOException {
                     try {
                         Callable<? extends Materializable> callableCall = callable.call();
                         if (z) {
@@ -1057,29 +1211,40 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public interface Materializable {
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public static class ForFailedElement implements Materializable {
                     private final Source.Element element;
                     private final List<Throwable> errored;
                     private final TypeDescription typeDescription;
 
-                    public ForFailedElement(Source.Element element, TypeDescription typeDescription, List<Throwable> list) {
+                    public ForFailedElement(Source.Element element, TypeDescription typeDescription,
+                            List<Throwable> list) {
                         this.element = element;
                         this.typeDescription = typeDescription;
                         this.errored = list;
                     }
 
                     @Override // net.bytebuddy.build.Plugin.Engine.Dispatcher.Materializable
-                    public void materialize(Target.Sink sink, List<TypeDescription> list, Map<TypeDescription, List<Throwable>> map, List<String> list2) {
+                    public void materialize(Target.Sink sink, List<TypeDescription> list,
+                            Map<TypeDescription, List<Throwable>> map, List<String> list2) {
                         sink.retain(this.element);
                         map.put(this.typeDescription, this.errored);
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public static class ForRetainedElement implements Materializable {
                     private final Source.Element element;
 
@@ -1088,25 +1253,31 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                     }
 
                     @Override // net.bytebuddy.build.Plugin.Engine.Dispatcher.Materializable
-                    public void materialize(Target.Sink sink, List<TypeDescription> list, Map<TypeDescription, List<Throwable>> map, List<String> list2) {
+                    public void materialize(Target.Sink sink, List<TypeDescription> list,
+                            Map<TypeDescription, List<Throwable>> map, List<String> list2) {
                         sink.retain(this.element);
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public static class ForTransformedElement implements Materializable {
 
                     @MaybeNull
                     private final ClassFileVersion classFileVersion;
                     private final DynamicType dynamicType;
 
-                    public ForTransformedElement(@MaybeNull ClassFileVersion classFileVersion, DynamicType dynamicType) {
+                    public ForTransformedElement(@MaybeNull ClassFileVersion classFileVersion,
+                            DynamicType dynamicType) {
                         this.classFileVersion = classFileVersion;
                         this.dynamicType = dynamicType;
                     }
 
                     @Override // net.bytebuddy.build.Plugin.Engine.Dispatcher.Materializable
-                    public void materialize(Target.Sink sink, List<TypeDescription> list, Map<TypeDescription, List<Throwable>> map, List<String> list2) {
+                    public void materialize(Target.Sink sink, List<TypeDescription> list,
+                            Map<TypeDescription, List<Throwable>> map, List<String> list2) {
                         ClassFileVersion classFileVersion = this.classFileVersion;
                         if (classFileVersion == null) {
                             sink.store(this.dynamicType.getAllTypes());
@@ -1117,7 +1288,10 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public static class ForUnresolvedElement implements Materializable {
                     private final Source.Element element;
                     private final String typeName;
@@ -1128,13 +1302,15 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                     }
 
                     @Override // net.bytebuddy.build.Plugin.Engine.Dispatcher.Materializable
-                    public void materialize(Target.Sink sink, List<TypeDescription> list, Map<TypeDescription, List<Throwable>> map, List<String> list2) {
+                    public void materialize(Target.Sink sink, List<TypeDescription> list,
+                            Map<TypeDescription, List<Throwable>> map, List<String> list2) {
                         sink.retain(this.element);
                         list2.add(this.typeName);
                     }
                 }
 
-                void materialize(Target.Sink sink, List<TypeDescription> list, Map<TypeDescription, List<Throwable>> map, List<String> list2);
+                void materialize(Target.Sink sink, List<TypeDescription> list,
+                        Map<TypeDescription, List<Throwable>> map, List<String> list2);
             }
 
             void accept(Callable<? extends Callable<? extends Materializable>> callable, boolean z);
@@ -1142,10 +1318,16 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
             void complete();
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public interface ErrorHandler {
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class Compound implements ErrorHandler {
                 private final List<ErrorHandler> errorHandlers;
 
@@ -1229,28 +1411,37 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum Enforcing implements ErrorHandler {
                 ALL_TYPES_RESOLVED { // from class: net.bytebuddy.build.Plugin.Engine.ErrorHandler.Enforcing.1
-                    @Override // net.bytebuddy.build.Plugin.Engine.ErrorHandler.Enforcing, net.bytebuddy.build.Plugin.Engine.ErrorHandler
+                    @Override // net.bytebuddy.build.Plugin.Engine.ErrorHandler.Enforcing,
+                              // net.bytebuddy.build.Plugin.Engine.ErrorHandler
                     public void onUnresolved(String str) {
                         throw new IllegalStateException(yg.k("Failed to resolve type description for ", str));
                     }
                 },
                 NO_LIVE_INITIALIZERS { // from class: net.bytebuddy.build.Plugin.Engine.ErrorHandler.Enforcing.2
-                    @Override // net.bytebuddy.build.Plugin.Engine.ErrorHandler.Enforcing, net.bytebuddy.build.Plugin.Engine.ErrorHandler
+                    @Override // net.bytebuddy.build.Plugin.Engine.ErrorHandler.Enforcing,
+                              // net.bytebuddy.build.Plugin.Engine.ErrorHandler
                     public void onLiveInitializer(TypeDescription typeDescription, TypeDescription typeDescription2) {
-                        throw new IllegalStateException("Failed to instrument " + typeDescription + " due to live initializer for " + typeDescription2);
+                        throw new IllegalStateException("Failed to instrument " + typeDescription
+                                + " due to live initializer for " + typeDescription2);
                     }
                 },
                 CLASS_FILES_ONLY { // from class: net.bytebuddy.build.Plugin.Engine.ErrorHandler.Enforcing.3
-                    @Override // net.bytebuddy.build.Plugin.Engine.ErrorHandler.Enforcing, net.bytebuddy.build.Plugin.Engine.ErrorHandler
+                    @Override // net.bytebuddy.build.Plugin.Engine.ErrorHandler.Enforcing,
+                              // net.bytebuddy.build.Plugin.Engine.ErrorHandler
                     public void onResource(String str) {
-                        throw new IllegalStateException(yg.k("Discovered a resource when only class files were allowed: ", str));
+                        throw new IllegalStateException(
+                                yg.k("Discovered a resource when only class files were allowed: ", str));
                     }
                 },
                 MANIFEST_REQUIRED { // from class: net.bytebuddy.build.Plugin.Engine.ErrorHandler.Enforcing.4
-                    @Override // net.bytebuddy.build.Plugin.Engine.ErrorHandler.Enforcing, net.bytebuddy.build.Plugin.Engine.ErrorHandler
+                    @Override // net.bytebuddy.build.Plugin.Engine.ErrorHandler.Enforcing,
+                              // net.bytebuddy.build.Plugin.Engine.ErrorHandler
                     public void onManifest(@MaybeNull Manifest manifest) {
                         if (manifest == null) {
                             throw new IllegalStateException("Required a manifest but no manifest was found");
@@ -1291,12 +1482,16 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum Failing implements ErrorHandler {
                 FAIL_FAST { // from class: net.bytebuddy.build.Plugin.Engine.ErrorHandler.Failing.1
                     @Override // net.bytebuddy.build.Plugin.Engine.ErrorHandler
                     public void onError(TypeDescription typeDescription, Plugin plugin, Throwable th) {
-                        throw new IllegalStateException("Failed to transform " + typeDescription + " using " + plugin, th);
+                        throw new IllegalStateException("Failed to transform " + typeDescription + " using " + plugin,
+                                th);
                     }
 
                     @Override // net.bytebuddy.build.Plugin.Engine.ErrorHandler
@@ -1378,10 +1573,16 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
             void onUnresolved(String str);
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public interface PoolStrategy {
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum Default implements PoolStrategy {
                 FAST(TypePool.Default.ReaderMode.FAST),
                 EXTENDED(TypePool.Default.ReaderMode.EXTENDED);
@@ -1394,11 +1595,15 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
 
                 @Override // net.bytebuddy.build.Plugin.Engine.PoolStrategy
                 public TypePool typePool(ClassFileLocator classFileLocator) {
-                    return new TypePool.Default.WithLazyResolution(new TypePool.CacheProvider.Simple(), classFileLocator, this.readerMode, TypePool.ClassLoading.ofPlatformLoader());
+                    return new TypePool.Default.WithLazyResolution(new TypePool.CacheProvider.Simple(),
+                            classFileLocator, this.readerMode, TypePool.ClassLoading.ofPlatformLoader());
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum Eager implements PoolStrategy {
                 FAST(TypePool.Default.ReaderMode.FAST),
                 EXTENDED(TypePool.Default.ReaderMode.EXTENDED);
@@ -1411,27 +1616,40 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
 
                 @Override // net.bytebuddy.build.Plugin.Engine.PoolStrategy
                 public TypePool typePool(ClassFileLocator classFileLocator) {
-                    return new TypePool.Default(new TypePool.CacheProvider.Simple(), classFileLocator, this.readerMode, TypePool.ClassLoading.ofPlatformLoader());
+                    return new TypePool.Default(new TypePool.CacheProvider.Simple(), classFileLocator, this.readerMode,
+                            TypePool.ClassLoading.ofPlatformLoader());
                 }
             }
 
             TypePool typePool(ClassFileLocator classFileLocator);
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public interface Source {
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class Compound implements Source {
                 private final Collection<? extends Source> sources;
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class Origin implements Origin {
                     private final List<Origin> origins;
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     public static class CompoundIterator implements Iterator<Element> {
                         private final Queue<? extends Iterable<? extends Element>> backlog;
 
@@ -1498,7 +1716,8 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                         if (this == obj) {
                             return true;
                         }
-                        return obj != null && getClass() == obj.getClass() && this.origins.equals(((Origin) obj).origins);
+                        return obj != null && getClass() == obj.getClass()
+                                && this.origins.equals(((Origin) obj).origins);
                     }
 
                     @Override // net.bytebuddy.build.Plugin.Engine.Source.Origin
@@ -1573,10 +1792,16 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public interface Element {
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class ForByteArray implements Element {
                     private final byte[] binaryRepresentation;
@@ -1595,7 +1820,8 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                             return false;
                         }
                         ForByteArray forByteArray = (ForByteArray) obj;
-                        return this.name.equals(forByteArray.name) && Arrays.equals(this.binaryRepresentation, forByteArray.binaryRepresentation);
+                        return this.name.equals(forByteArray.name)
+                                && Arrays.equals(this.binaryRepresentation, forByteArray.binaryRepresentation);
                     }
 
                     @Override // net.bytebuddy.build.Plugin.Engine.Source.Element
@@ -1609,7 +1835,8 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                     }
 
                     public int hashCode() {
-                        return Arrays.hashCode(this.binaryRepresentation) + bjs.e(this.name, getClass().hashCode() * 31, 31);
+                        return Arrays.hashCode(this.binaryRepresentation)
+                                + bjs.e(this.name, getClass().hashCode() * 31, 31);
                     }
 
                     @Override // net.bytebuddy.build.Plugin.Engine.Source.Element
@@ -1619,7 +1846,10 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class ForFile implements Element {
                     private final File file;
@@ -1648,7 +1878,8 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
 
                     @Override // net.bytebuddy.build.Plugin.Engine.Source.Element
                     public String getName() {
-                        return this.root.getAbsoluteFile().toURI().relativize(this.file.getAbsoluteFile().toURI()).getPath();
+                        return this.root.getAbsoluteFile().toURI().relativize(this.file.getAbsoluteFile().toURI())
+                                .getPath();
                     }
 
                     public int hashCode() {
@@ -1665,7 +1896,10 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class ForJarEntry implements Element {
                     private final JarEntry entry;
@@ -1719,7 +1953,10 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                 <T> T resolveAs(Class<T> cls);
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum Empty implements Source, Origin {
                 INSTANCE;
 
@@ -1749,14 +1986,20 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class Filtering implements Source {
                 private final Source delegate;
                 private final boolean manifest;
                 private final ElementMatcher<Element> matcher;
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class MultiReleaseVersionMatcher implements ElementMatcher<Element> {
                     private final ClassFileVersion classFileVersion;
@@ -1769,7 +2012,8 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                         if (this == obj) {
                             return true;
                         }
-                        return obj != null && getClass() == obj.getClass() && this.classFileVersion.equals(((MultiReleaseVersionMatcher) obj).classFileVersion);
+                        return obj != null && getClass() == obj.getClass()
+                                && this.classFileVersion.equals(((MultiReleaseVersionMatcher) obj).classFileVersion);
                     }
 
                     public int hashCode() {
@@ -1787,7 +2031,8 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                         }
                         if (name.startsWith(ClassFileLocator.META_INF_VERSIONS)) {
                             try {
-                                return Integer.parseInt(name.substring(18, name.indexOf(47, 18))) <= this.classFileVersion.getJavaVersion();
+                                return Integer.parseInt(name.substring(18,
+                                        name.indexOf(47, 18))) <= this.classFileVersion.getJavaVersion();
                             } catch (NumberFormatException unused) {
                             }
                         }
@@ -1795,7 +2040,10 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public enum NoFolderMatcher implements ElementMatcher<Element> {
                     INSTANCE;
@@ -1826,11 +2074,13 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                         return false;
                     }
                     Filtering filtering = (Filtering) obj;
-                    return this.manifest == filtering.manifest && this.delegate.equals(filtering.delegate) && this.matcher.equals(filtering.matcher);
+                    return this.manifest == filtering.manifest && this.delegate.equals(filtering.delegate)
+                            && this.matcher.equals(filtering.matcher);
                 }
 
                 public int hashCode() {
-                    return dkz.i(this.matcher, (this.delegate.hashCode() + (getClass().hashCode() * 31)) * 31, 31) + (this.manifest ? 1 : 0);
+                    return dkz.i(this.matcher, (this.delegate.hashCode() + (getClass().hashCode() * 31)) * 31, 31)
+                            + (this.manifest ? 1 : 0);
                 }
 
                 @Override // net.bytebuddy.build.Plugin.Engine.Source
@@ -1845,12 +2095,18 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForFolder implements Source, Origin {
                 private final File folder;
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public class FolderIterator implements Iterator<Element> {
                     private final Queue<File> files = QueueFactory.make();
 
@@ -1936,11 +2192,15 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
 
                 @Override // net.bytebuddy.build.Plugin.Engine.Source.Origin
                 public ClassFileLocator toClassFileLocator(@MaybeNull ClassFileVersion classFileVersion) {
-                    return classFileVersion == null ? new ClassFileLocator.ForFolder(this.folder) : ClassFileLocator.ForFolder.of(this.folder, classFileVersion);
+                    return classFileVersion == null ? new ClassFileLocator.ForFolder(this.folder)
+                            : ClassFileLocator.ForFolder.of(this.folder, classFileVersion);
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForJarFile implements Source {
                 private final File file;
@@ -1966,12 +2226,18 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class InMemory implements Source, Origin {
                 private final Map<String, byte[]> storage;
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public static class MapEntryIterator implements Iterator<Element> {
                     private final Iterator<Map.Entry<String, byte[]>> iterator;
 
@@ -2042,10 +2308,12 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                 }
 
                 public static Source ofTypes(Collection<? extends Class<?>> collection) {
-                    return ofTypes(collection, (Map<ClassFileVersion, Collection<? extends Class<?>>>) Collections.EMPTY_MAP);
+                    return ofTypes(collection,
+                            (Map<ClassFileVersion, Collection<? extends Class<?>>>) Collections.EMPTY_MAP);
                 }
 
-                public static Source ofTypes(Collection<? extends Class<?>> collection, Map<ClassFileVersion, Collection<? extends Class<?>>> map) {
+                public static Source ofTypes(Collection<? extends Class<?>> collection,
+                        Map<ClassFileVersion, Collection<? extends Class<?>>> map) {
                     HashMap map2 = new HashMap();
                     for (Map.Entry<ClassFileVersion, Collection<? extends Class<?>>> entry : map.entrySet()) {
                         HashMap map3 = new HashMap();
@@ -2065,34 +2333,48 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                     return ofTypes(map, (Map<ClassFileVersion, Map<TypeDescription, byte[]>>) Collections.EMPTY_MAP);
                 }
 
-                public static Source ofTypes(Map<TypeDescription, byte[]> map, Map<ClassFileVersion, Map<TypeDescription, byte[]>> map2) {
+                public static Source ofTypes(Map<TypeDescription, byte[]> map,
+                        Map<ClassFileVersion, Map<TypeDescription, byte[]>> map2) {
                     HashMap map3 = new HashMap();
                     for (Map.Entry<TypeDescription, byte[]> entry : map.entrySet()) {
-                        map3.put(entry.getKey().getInternalName() + ClassFileLocator.CLASS_FILE_EXTENSION, entry.getValue());
+                        map3.put(entry.getKey().getInternalName() + ClassFileLocator.CLASS_FILE_EXTENSION,
+                                entry.getValue());
                     }
                     for (Map.Entry<ClassFileVersion, Map<TypeDescription, byte[]>> entry2 : map2.entrySet()) {
                         for (Map.Entry<TypeDescription, byte[]> entry3 : entry2.getValue().entrySet()) {
-                            map3.put(ClassFileLocator.META_INF_VERSIONS + entry2.getKey().getJavaVersion() + "/" + entry3.getKey().getInternalName() + ClassFileLocator.CLASS_FILE_EXTENSION, entry3.getValue());
+                            map3.put(
+                                    ClassFileLocator.META_INF_VERSIONS + entry2.getKey().getJavaVersion() + "/"
+                                            + entry3.getKey().getInternalName() + ClassFileLocator.CLASS_FILE_EXTENSION,
+                                    entry3.getValue());
                         }
                     }
                     return new InMemory(map3);
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public interface Origin extends Iterable<Element>, Closeable {
 
                 @AlwaysNull
                 public static final Manifest NO_MANIFEST = null;
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class Filtering implements Origin {
                     private final Origin delegate;
                     private final boolean manifest;
                     private final ElementMatcher<Element> matcher;
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     public static class FilteringIterator implements Iterator<Element> {
 
                         @MaybeNull
@@ -2157,7 +2439,8 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                             return false;
                         }
                         Filtering filtering = (Filtering) obj;
-                        return this.manifest == filtering.manifest && this.delegate.equals(filtering.delegate) && this.matcher.equals(filtering.matcher);
+                        return this.manifest == filtering.manifest && this.delegate.equals(filtering.delegate)
+                                && this.matcher.equals(filtering.matcher);
                     }
 
                     @Override // net.bytebuddy.build.Plugin.Engine.Source.Origin
@@ -2167,7 +2450,8 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                     }
 
                     public int hashCode() {
-                        return dkz.i(this.matcher, (this.delegate.hashCode() + (getClass().hashCode() * 31)) * 31, 31) + (this.manifest ? 1 : 0);
+                        return dkz.i(this.matcher, (this.delegate.hashCode() + (getClass().hashCode() * 31)) * 31, 31)
+                                + (this.manifest ? 1 : 0);
                     }
 
                     @Override // java.lang.Iterable
@@ -2187,11 +2471,17 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public static class ForJarFile implements Origin {
                     private final JarFile file;
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     public class JarFileIterator implements Iterator<Element> {
                         private final Enumeration<JarEntry> enumeration;
 
@@ -2237,7 +2527,8 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
 
                     @Override // net.bytebuddy.build.Plugin.Engine.Source.Origin
                     public ClassFileLocator toClassFileLocator(@MaybeNull ClassFileVersion classFileVersion) {
-                        return classFileVersion == null ? new ClassFileLocator.ForJarFile(this.file) : ClassFileLocator.ForJarFile.of(this.file, classFileVersion);
+                        return classFileVersion == null ? new ClassFileLocator.ForJarFile(this.file)
+                                : ClassFileLocator.ForJarFile.of(this.file, classFileVersion);
                     }
                 }
 
@@ -2250,7 +2541,10 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
             Origin read();
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static class Summary {
             private final Map<TypeDescription, List<Throwable>> failed;
             private final List<TypeDescription> transformed;
@@ -2268,7 +2562,8 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                 }
                 if (obj != null && getClass() == obj.getClass()) {
                     Summary summary = (Summary) obj;
-                    if (this.transformed.equals(summary.transformed) && this.failed.equals(summary.failed) && this.unresolved.equals(summary.unresolved)) {
+                    if (this.transformed.equals(summary.transformed) && this.failed.equals(summary.failed)
+                            && this.unresolved.equals(summary.unresolved)) {
                         return true;
                     }
                 }
@@ -2288,36 +2583,49 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
             }
 
             public int hashCode() {
-                return this.unresolved.hashCode() + ((this.failed.hashCode() + (this.transformed.hashCode() * 31)) * 31);
+                return this.unresolved.hashCode()
+                        + ((this.failed.hashCode() + (this.transformed.hashCode() * 31)) * 31);
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public interface TypeStrategy {
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum Default implements TypeStrategy {
                 REDEFINE { // from class: net.bytebuddy.build.Plugin.Engine.TypeStrategy.Default.1
                     @Override // net.bytebuddy.build.Plugin.Engine.TypeStrategy
-                    public DynamicType.Builder<?> builder(ByteBuddy byteBuddy, TypeDescription typeDescription, ClassFileLocator classFileLocator) {
+                    public DynamicType.Builder<?> builder(ByteBuddy byteBuddy, TypeDescription typeDescription,
+                            ClassFileLocator classFileLocator) {
                         return byteBuddy.redefine(typeDescription, classFileLocator);
                     }
                 },
                 REBASE { // from class: net.bytebuddy.build.Plugin.Engine.TypeStrategy.Default.2
                     @Override // net.bytebuddy.build.Plugin.Engine.TypeStrategy
-                    public DynamicType.Builder<?> builder(ByteBuddy byteBuddy, TypeDescription typeDescription, ClassFileLocator classFileLocator) {
+                    public DynamicType.Builder<?> builder(ByteBuddy byteBuddy, TypeDescription typeDescription,
+                            ClassFileLocator classFileLocator) {
                         return byteBuddy.rebase(typeDescription, classFileLocator);
                     }
                 },
                 DECORATE { // from class: net.bytebuddy.build.Plugin.Engine.TypeStrategy.Default.3
                     @Override // net.bytebuddy.build.Plugin.Engine.TypeStrategy
-                    public DynamicType.Builder<?> builder(ByteBuddy byteBuddy, TypeDescription typeDescription, ClassFileLocator classFileLocator) {
+                    public DynamicType.Builder<?> builder(ByteBuddy byteBuddy, TypeDescription typeDescription,
+                            ClassFileLocator classFileLocator) {
                         return byteBuddy.decorate(typeDescription, classFileLocator);
                     }
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForEntryPoint implements TypeStrategy {
                 private final EntryPoint entryPoint;
@@ -2329,8 +2637,10 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                 }
 
                 @Override // net.bytebuddy.build.Plugin.Engine.TypeStrategy
-                public DynamicType.Builder<?> builder(ByteBuddy byteBuddy, TypeDescription typeDescription, ClassFileLocator classFileLocator) {
-                    return this.entryPoint.transform(typeDescription, byteBuddy, classFileLocator, this.methodNameTransformer);
+                public DynamicType.Builder<?> builder(ByteBuddy byteBuddy, TypeDescription typeDescription,
+                        ClassFileLocator classFileLocator) {
+                    return this.entryPoint.transform(typeDescription, byteBuddy, classFileLocator,
+                            this.methodNameTransformer);
                 }
 
                 public boolean equals(@MaybeNull Object obj) {
@@ -2341,15 +2651,18 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                         return false;
                     }
                     ForEntryPoint forEntryPoint = (ForEntryPoint) obj;
-                    return this.entryPoint.equals(forEntryPoint.entryPoint) && this.methodNameTransformer.equals(forEntryPoint.methodNameTransformer);
+                    return this.entryPoint.equals(forEntryPoint.entryPoint)
+                            && this.methodNameTransformer.equals(forEntryPoint.methodNameTransformer);
                 }
 
                 public int hashCode() {
-                    return this.methodNameTransformer.hashCode() + ((this.entryPoint.hashCode() + (getClass().hashCode() * 31)) * 31);
+                    return this.methodNameTransformer.hashCode()
+                            + ((this.entryPoint.hashCode() + (getClass().hashCode() * 31)) * 31);
                 }
             }
 
-            DynamicType.Builder<?> builder(ByteBuddy byteBuddy, TypeDescription typeDescription, ClassFileLocator classFileLocator);
+            DynamicType.Builder<?> builder(ByteBuddy byteBuddy, TypeDescription typeDescription,
+                    ClassFileLocator classFileLocator);
         }
 
         Summary apply(File file, File file2, List<? extends Factory> list);
@@ -2384,10 +2697,16 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
 
         Engine withoutErrorHandlers();
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public interface Target {
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum Discarding implements Target, Sink {
                 INSTANCE;
 
@@ -2413,7 +2732,10 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForFolder implements Target, Sink {
                 private final File folder;
@@ -2425,7 +2747,8 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
 
                 private static void doStore(File file, Map<TypeDescription, byte[]> map) throws IOException {
                     for (Map.Entry<TypeDescription, byte[]> entry : map.entrySet()) {
-                        File file2 = new File(file, entry.getKey().getInternalName() + ClassFileLocator.CLASS_FILE_EXTENSION);
+                        File file2 = new File(file,
+                                entry.getKey().getInternalName() + ClassFileLocator.CLASS_FILE_EXTENSION);
                         if (!file2.getParentFile().isDirectory() && !file2.getParentFile().mkdirs()) {
                             throw new IOException("Could not create directory: " + file2.getParent());
                         }
@@ -2459,13 +2782,22 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                     return ((this.folder.hashCode() + (getClass().hashCode() * 31)) * 31) + (this.link ? 1 : 0);
                 }
 
-                /* JADX WARN: Undo finally extract visitor
-                java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getInstructions()" because "finallyBlockTerminus" is null
-                	at jadx.core.dex.visitors.finaly.traverser.state.TraverserActivePathState.<init>(TraverserActivePathState.java:253)
-                	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.findCommonInsns(MarkFinallyVisitor.java:422)
-                	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.extractFinally(MarkFinallyVisitor.java:302)
-                	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.processTryBlock(MarkFinallyVisitor.java:222)
-                	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:150)
+                /*
+                 * JADX WARN: Undo finally extract visitor
+                 * java.lang.NullPointerException: Cannot invoke
+                 * "jadx.core.dex.nodes.BlockNode.getInstructions()" because
+                 * "finallyBlockTerminus" is null
+                 * at
+                 * jadx.core.dex.visitors.finaly.traverser.state.TraverserActivePathState.<init>
+                 * (TraverserActivePathState.java:253)
+                 * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.findCommonInsns(
+                 * MarkFinallyVisitor.java:422)
+                 * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.extractFinally(
+                 * MarkFinallyVisitor.java:302)
+                 * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.processTryBlock(
+                 * MarkFinallyVisitor.java:222)
+                 * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+                 * java:150)
                  */
                 @Override // net.bytebuddy.build.Plugin.Engine.Target.Sink
                 public void retain(Source.Element element) throws IOException {
@@ -2549,12 +2881,17 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                 }
 
                 @Override // net.bytebuddy.build.Plugin.Engine.Target.Sink
-                public void store(ClassFileVersion classFileVersion, Map<TypeDescription, byte[]> map) throws IOException {
-                    doStore(new File(this.folder, ClassFileLocator.META_INF_VERSIONS + classFileVersion.getJavaVersion()), map);
+                public void store(ClassFileVersion classFileVersion, Map<TypeDescription, byte[]> map)
+                        throws IOException {
+                    doStore(new File(this.folder,
+                            ClassFileLocator.META_INF_VERSIONS + classFileVersion.getJavaVersion()), map);
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForJarFile implements Target {
                 private final File file;
@@ -2578,7 +2915,8 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                 public Sink write(@MaybeNull Manifest manifest) throws IOException {
                     FileOutputStream fileOutputStream = new FileOutputStream(this.file);
                     try {
-                        return manifest == null ? new Sink.ForJarOutputStream(new JarOutputStream(fileOutputStream)) : new Sink.ForJarOutputStream(new JarOutputStream(fileOutputStream, manifest));
+                        return manifest == null ? new Sink.ForJarOutputStream(new JarOutputStream(fileOutputStream))
+                                : new Sink.ForJarOutputStream(new JarOutputStream(fileOutputStream, manifest));
                     } catch (IOException e) {
                         fileOutputStream.close();
                         throw e;
@@ -2592,7 +2930,10 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class InMemory implements Target, Sink {
 
@@ -2622,13 +2963,22 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                     return System.identityHashCode(this.storage) + (getClass().hashCode() * 31);
                 }
 
-                /* JADX WARN: Undo finally extract visitor
-                java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getInstructions()" because "finallyBlockTerminus" is null
-                	at jadx.core.dex.visitors.finaly.traverser.state.TraverserActivePathState.<init>(TraverserActivePathState.java:253)
-                	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.findCommonInsns(MarkFinallyVisitor.java:422)
-                	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.extractFinally(MarkFinallyVisitor.java:302)
-                	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.processTryBlock(MarkFinallyVisitor.java:222)
-                	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:150)
+                /*
+                 * JADX WARN: Undo finally extract visitor
+                 * java.lang.NullPointerException: Cannot invoke
+                 * "jadx.core.dex.nodes.BlockNode.getInstructions()" because
+                 * "finallyBlockTerminus" is null
+                 * at
+                 * jadx.core.dex.visitors.finaly.traverser.state.TraverserActivePathState.<init>
+                 * (TraverserActivePathState.java:253)
+                 * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.findCommonInsns(
+                 * MarkFinallyVisitor.java:422)
+                 * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.extractFinally(
+                 * MarkFinallyVisitor.java:302)
+                 * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.processTryBlock(
+                 * MarkFinallyVisitor.java:222)
+                 * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+                 * java:150)
                  */
                 @Override // net.bytebuddy.build.Plugin.Engine.Target.Sink
                 public void retain(Source.Element element) throws IOException {
@@ -2663,15 +3013,19 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                 @Override // net.bytebuddy.build.Plugin.Engine.Target.Sink
                 public void store(Map<TypeDescription, byte[]> map) {
                     for (Map.Entry<TypeDescription, byte[]> entry : map.entrySet()) {
-                        this.storage.put(entry.getKey().getInternalName() + ClassFileLocator.CLASS_FILE_EXTENSION, entry.getValue());
+                        this.storage.put(entry.getKey().getInternalName() + ClassFileLocator.CLASS_FILE_EXTENSION,
+                                entry.getValue());
                     }
                 }
 
                 public Map<String, byte[]> toTypeMap() {
                     HashMap map = new HashMap();
                     for (Map.Entry<String, byte[]> entry : this.storage.entrySet()) {
-                        if (entry.getKey().endsWith(ClassFileLocator.CLASS_FILE_EXTENSION) && !entry.getKey().startsWith(ClassFileLocator.META_INF_VERSIONS)) {
-                            map.put(entry.getKey().substring(0, entry.getKey().length() - 6).replace('/', TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH), entry.getValue());
+                        if (entry.getKey().endsWith(ClassFileLocator.CLASS_FILE_EXTENSION)
+                                && !entry.getKey().startsWith(ClassFileLocator.META_INF_VERSIONS)) {
+                            map.put(entry.getKey().substring(0, entry.getKey().length() - 6).replace('/',
+                                    TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH),
+                                    entry.getValue());
                         }
                     }
                     return map;
@@ -2701,7 +3055,10 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                 @Override // net.bytebuddy.build.Plugin.Engine.Target.Sink
                 public void store(ClassFileVersion classFileVersion, Map<TypeDescription, byte[]> map) {
                     for (Map.Entry<TypeDescription, byte[]> entry : map.entrySet()) {
-                        this.storage.put(ClassFileLocator.META_INF_VERSIONS + classFileVersion.getJavaVersion() + "/" + entry.getKey().getInternalName() + ClassFileLocator.CLASS_FILE_EXTENSION, entry.getValue());
+                        this.storage.put(
+                                ClassFileLocator.META_INF_VERSIONS + classFileVersion.getJavaVersion() + "/"
+                                        + entry.getKey().getInternalName() + ClassFileLocator.CLASS_FILE_EXTENSION,
+                                entry.getValue());
                     }
                 }
 
@@ -2727,7 +3084,9 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                             Integer num = (Integer) map2.get(key);
                             if (num == null || num.intValue() < i) {
                                 map2.put(key, Integer.valueOf(i));
-                                map.put(key.substring(0, key.length() - 6).replace('/', TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH), entry.getValue());
+                                map.put(key.substring(0, key.length() - 6).replace('/',
+                                        TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH),
+                                        entry.getValue());
                             }
                         }
                     }
@@ -2737,7 +3096,10 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
 
             Sink write(@MaybeNull Manifest manifest);
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public interface Sink extends Closeable {
                 void retain(Source.Element element);
 
@@ -2745,7 +3107,10 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
 
                 void store(ClassFileVersion classFileVersion, Map<TypeDescription, byte[]> map);
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public static class ForJarOutputStream implements Sink {
                     private final JarOutputStream outputStream;
 
@@ -2787,16 +3152,20 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                     @Override // net.bytebuddy.build.Plugin.Engine.Target.Sink
                     public void store(Map<TypeDescription, byte[]> map) throws IOException {
                         for (Map.Entry<TypeDescription, byte[]> entry : map.entrySet()) {
-                            this.outputStream.putNextEntry(new JarEntry(entry.getKey().getInternalName() + ClassFileLocator.CLASS_FILE_EXTENSION));
+                            this.outputStream.putNextEntry(new JarEntry(
+                                    entry.getKey().getInternalName() + ClassFileLocator.CLASS_FILE_EXTENSION));
                             this.outputStream.write(entry.getValue());
                             this.outputStream.closeEntry();
                         }
                     }
 
                     @Override // net.bytebuddy.build.Plugin.Engine.Target.Sink
-                    public void store(ClassFileVersion classFileVersion, Map<TypeDescription, byte[]> map) throws IOException {
+                    public void store(ClassFileVersion classFileVersion, Map<TypeDescription, byte[]> map)
+                            throws IOException {
                         for (Map.Entry<TypeDescription, byte[]> entry : map.entrySet()) {
-                            this.outputStream.putNextEntry(new JarEntry(ClassFileLocator.META_INF_VERSIONS + classFileVersion.getJavaVersion() + "/" + entry.getKey().getInternalName() + ClassFileLocator.CLASS_FILE_EXTENSION));
+                            this.outputStream.putNextEntry(new JarEntry(ClassFileLocator.META_INF_VERSIONS
+                                    + classFileVersion.getJavaVersion() + "/" + entry.getKey().getInternalName()
+                                    + ClassFileLocator.CLASS_FILE_EXTENSION));
                             this.outputStream.write(entry.getValue());
                             this.outputStream.closeEntry();
                         }
@@ -2805,10 +3174,16 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public interface Listener extends ErrorHandler {
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static abstract class Adapter implements Listener {
                 @Override // net.bytebuddy.build.Plugin.Engine.Listener
                 public void onComplete(TypeDescription typeDescription) {
@@ -2867,7 +3242,10 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class Compound implements Listener {
                 private final List<Listener> listeners;
@@ -2880,7 +3258,8 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.listeners.equals(((Compound) obj).listeners);
+                    return obj != null && getClass() == obj.getClass()
+                            && this.listeners.equals(((Compound) obj).listeners);
                 }
 
                 public int hashCode() {
@@ -3011,7 +3390,10 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForErrorHandler extends Adapter {
                 private final ErrorHandler errorHandler;
@@ -3024,55 +3406,67 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.errorHandler.equals(((ForErrorHandler) obj).errorHandler);
+                    return obj != null && getClass() == obj.getClass()
+                            && this.errorHandler.equals(((ForErrorHandler) obj).errorHandler);
                 }
 
                 public int hashCode() {
                     return this.errorHandler.hashCode() + (getClass().hashCode() * 31);
                 }
 
-                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter, net.bytebuddy.build.Plugin.Engine.ErrorHandler
+                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter,
+                          // net.bytebuddy.build.Plugin.Engine.ErrorHandler
                 public void onError(TypeDescription typeDescription, Plugin plugin, Throwable th) {
                     this.errorHandler.onError(typeDescription, plugin, th);
                 }
 
-                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter, net.bytebuddy.build.Plugin.Engine.ErrorHandler
+                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter,
+                          // net.bytebuddy.build.Plugin.Engine.ErrorHandler
                 public void onLiveInitializer(TypeDescription typeDescription, TypeDescription typeDescription2) {
                     this.errorHandler.onLiveInitializer(typeDescription, typeDescription2);
                 }
 
-                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter, net.bytebuddy.build.Plugin.Engine.ErrorHandler
+                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter,
+                          // net.bytebuddy.build.Plugin.Engine.ErrorHandler
                 public void onManifest(@MaybeNull Manifest manifest) {
                     this.errorHandler.onManifest(manifest);
                 }
 
-                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter, net.bytebuddy.build.Plugin.Engine.ErrorHandler
+                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter,
+                          // net.bytebuddy.build.Plugin.Engine.ErrorHandler
                 public void onResource(String str) {
                     this.errorHandler.onResource(str);
                 }
 
-                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter, net.bytebuddy.build.Plugin.Engine.ErrorHandler
+                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter,
+                          // net.bytebuddy.build.Plugin.Engine.ErrorHandler
                 public void onUnresolved(String str) {
                     this.errorHandler.onUnresolved(str);
                 }
 
-                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter, net.bytebuddy.build.Plugin.Engine.ErrorHandler
+                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter,
+                          // net.bytebuddy.build.Plugin.Engine.ErrorHandler
                 public void onError(TypeDescription typeDescription, List<Throwable> list) {
                     this.errorHandler.onError(typeDescription, list);
                 }
 
-                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter, net.bytebuddy.build.Plugin.Engine.ErrorHandler
+                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter,
+                          // net.bytebuddy.build.Plugin.Engine.ErrorHandler
                 public void onError(Map<TypeDescription, List<Throwable>> map) {
                     this.errorHandler.onError(map);
                 }
 
-                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter, net.bytebuddy.build.Plugin.Engine.ErrorHandler
+                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter,
+                          // net.bytebuddy.build.Plugin.Engine.ErrorHandler
                 public void onError(Plugin plugin, Throwable th) {
                     this.errorHandler.onError(plugin, th);
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum NoOp implements Listener {
                 INSTANCE;
 
@@ -3133,7 +3527,10 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class WithErrorsOnly extends Adapter {
                 private final Listener delegate;
@@ -3146,35 +3543,43 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.delegate.equals(((WithErrorsOnly) obj).delegate);
+                    return obj != null && getClass() == obj.getClass()
+                            && this.delegate.equals(((WithErrorsOnly) obj).delegate);
                 }
 
                 public int hashCode() {
                     return this.delegate.hashCode() + (getClass().hashCode() * 31);
                 }
 
-                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter, net.bytebuddy.build.Plugin.Engine.ErrorHandler
+                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter,
+                          // net.bytebuddy.build.Plugin.Engine.ErrorHandler
                 public void onError(TypeDescription typeDescription, Plugin plugin, Throwable th) {
                     this.delegate.onError(typeDescription, plugin, th);
                 }
 
-                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter, net.bytebuddy.build.Plugin.Engine.ErrorHandler
+                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter,
+                          // net.bytebuddy.build.Plugin.Engine.ErrorHandler
                 public void onError(TypeDescription typeDescription, List<Throwable> list) {
                     this.delegate.onError(typeDescription, list);
                 }
 
-                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter, net.bytebuddy.build.Plugin.Engine.ErrorHandler
+                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter,
+                          // net.bytebuddy.build.Plugin.Engine.ErrorHandler
                 public void onError(Map<TypeDescription, List<Throwable>> map) {
                     this.delegate.onError(map);
                 }
 
-                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter, net.bytebuddy.build.Plugin.Engine.ErrorHandler
+                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter,
+                          // net.bytebuddy.build.Plugin.Engine.ErrorHandler
                 public void onError(Plugin plugin, Throwable th) {
                     this.delegate.onError(plugin, th);
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class WithTransformationsOnly extends Adapter {
                 private final Listener delegate;
@@ -3187,39 +3592,46 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.delegate.equals(((WithTransformationsOnly) obj).delegate);
+                    return obj != null && getClass() == obj.getClass()
+                            && this.delegate.equals(((WithTransformationsOnly) obj).delegate);
                 }
 
                 public int hashCode() {
                     return this.delegate.hashCode() + (getClass().hashCode() * 31);
                 }
 
-                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter, net.bytebuddy.build.Plugin.Engine.ErrorHandler
+                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter,
+                          // net.bytebuddy.build.Plugin.Engine.ErrorHandler
                 public void onError(TypeDescription typeDescription, Plugin plugin, Throwable th) {
                     this.delegate.onError(typeDescription, plugin, th);
                 }
 
-                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter, net.bytebuddy.build.Plugin.Engine.Listener
+                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter,
+                          // net.bytebuddy.build.Plugin.Engine.Listener
                 public void onTransformation(TypeDescription typeDescription, Plugin plugin) {
                     this.delegate.onTransformation(typeDescription, plugin);
                 }
 
-                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter, net.bytebuddy.build.Plugin.Engine.ErrorHandler
+                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter,
+                          // net.bytebuddy.build.Plugin.Engine.ErrorHandler
                 public void onError(TypeDescription typeDescription, List<Throwable> list) {
                     this.delegate.onError(typeDescription, list);
                 }
 
-                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter, net.bytebuddy.build.Plugin.Engine.Listener
+                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter,
+                          // net.bytebuddy.build.Plugin.Engine.Listener
                 public void onTransformation(TypeDescription typeDescription, List<Plugin> list) {
                     this.delegate.onTransformation(typeDescription, list);
                 }
 
-                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter, net.bytebuddy.build.Plugin.Engine.ErrorHandler
+                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter,
+                          // net.bytebuddy.build.Plugin.Engine.ErrorHandler
                 public void onError(Map<TypeDescription, List<Throwable>> map) {
                     this.delegate.onError(map);
                 }
 
-                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter, net.bytebuddy.build.Plugin.Engine.ErrorHandler
+                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter,
+                          // net.bytebuddy.build.Plugin.Engine.ErrorHandler
                 public void onError(Plugin plugin, Throwable th) {
                     this.delegate.onError(plugin, th);
                 }
@@ -3237,7 +3649,10 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
 
             void onTransformation(TypeDescription typeDescription, Plugin plugin);
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class StreamWriting extends Adapter {
                 protected static final String PREFIX = "[Byte Buddy]";
@@ -3259,24 +3674,28 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.printStream.equals(((StreamWriting) obj).printStream);
+                    return obj != null && getClass() == obj.getClass()
+                            && this.printStream.equals(((StreamWriting) obj).printStream);
                 }
 
                 public int hashCode() {
                     return this.printStream.hashCode() + (getClass().hashCode() * 31);
                 }
 
-                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter, net.bytebuddy.build.Plugin.Engine.Listener
+                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter,
+                          // net.bytebuddy.build.Plugin.Engine.Listener
                 public void onComplete(TypeDescription typeDescription) {
                     this.printStream.printf("[Byte Buddy] COMPLETE %s", typeDescription);
                 }
 
-                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter, net.bytebuddy.build.Plugin.Engine.Listener
+                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter,
+                          // net.bytebuddy.build.Plugin.Engine.Listener
                 public void onDiscovery(String str) {
                     this.printStream.printf("[Byte Buddy] DISCOVERY %s", str);
                 }
 
-                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter, net.bytebuddy.build.Plugin.Engine.ErrorHandler
+                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter,
+                          // net.bytebuddy.build.Plugin.Engine.ErrorHandler
                 public void onError(TypeDescription typeDescription, Plugin plugin, Throwable th) {
                     synchronized (this.printStream) {
                         this.printStream.printf("[Byte Buddy] ERROR %s for %s", typeDescription, plugin);
@@ -3284,32 +3703,38 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                     }
                 }
 
-                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter, net.bytebuddy.build.Plugin.Engine.Listener
+                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter,
+                          // net.bytebuddy.build.Plugin.Engine.Listener
                 public void onIgnored(TypeDescription typeDescription, Plugin plugin) {
                     this.printStream.printf("[Byte Buddy] IGNORE %s for %s", typeDescription, plugin);
                 }
 
-                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter, net.bytebuddy.build.Plugin.Engine.ErrorHandler
+                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter,
+                          // net.bytebuddy.build.Plugin.Engine.ErrorHandler
                 public void onLiveInitializer(TypeDescription typeDescription, TypeDescription typeDescription2) {
                     this.printStream.printf("[Byte Buddy] LIVE %s on %s", typeDescription, typeDescription2);
                 }
 
-                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter, net.bytebuddy.build.Plugin.Engine.ErrorHandler
+                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter,
+                          // net.bytebuddy.build.Plugin.Engine.ErrorHandler
                 public void onManifest(@MaybeNull Manifest manifest) {
                     this.printStream.printf("[Byte Buddy] MANIFEST %b", Boolean.valueOf(manifest != null));
                 }
 
-                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter, net.bytebuddy.build.Plugin.Engine.ErrorHandler
+                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter,
+                          // net.bytebuddy.build.Plugin.Engine.ErrorHandler
                 public void onResource(String str) {
                     this.printStream.printf("[Byte Buddy] RESOURCE %s", str);
                 }
 
-                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter, net.bytebuddy.build.Plugin.Engine.Listener
+                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter,
+                          // net.bytebuddy.build.Plugin.Engine.Listener
                 public void onTransformation(TypeDescription typeDescription, Plugin plugin) {
                     this.printStream.printf("[Byte Buddy] TRANSFORM %s for %s", typeDescription, plugin);
                 }
 
-                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter, net.bytebuddy.build.Plugin.Engine.ErrorHandler
+                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter,
+                          // net.bytebuddy.build.Plugin.Engine.ErrorHandler
                 public void onUnresolved(String str) {
                     this.printStream.printf("[Byte Buddy] UNRESOLVED %s", str);
                 }
@@ -3322,7 +3747,8 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                     return new WithTransformationsOnly(this);
                 }
 
-                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter, net.bytebuddy.build.Plugin.Engine.ErrorHandler
+                @Override // net.bytebuddy.build.Plugin.Engine.Listener.Adapter,
+                          // net.bytebuddy.build.Plugin.Engine.ErrorHandler
                 public void onError(Plugin plugin, Throwable th) {
                     synchronized (this.printStream) {
                         this.printStream.printf("[Byte Buddy] ERROR %s", plugin);
@@ -3333,10 +3759,16 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface Factory {
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class Simple implements Factory {
             private final Plugin plugin;
@@ -3362,16 +3794,25 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class UsingReflection implements Factory {
             private final List<ArgumentResolver> argumentResolvers;
             private final Class<? extends Plugin> type;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public interface ArgumentResolver {
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class ForIndex implements ArgumentResolver {
                     private static final Map<Class<?>, Class<?>> WRAPPER_TYPES;
@@ -3381,7 +3822,10 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                     @HashCodeAndEqualsPlugin.ValueHandling(HashCodeAndEqualsPlugin.ValueHandling.Sort.REVERSE_NULLABILITY)
                     private final Object value;
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     @HashCodeAndEqualsPlugin.Enhance
                     public static class WithDynamicType implements ArgumentResolver {
                         private final int index;
@@ -3430,7 +3874,8 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                             }
                             if (cls == Character.TYPE || cls == Character.class) {
                                 String str = this.value;
-                                return (str == null || str.length() != 1) ? Resolution.Unresolved.INSTANCE : new Resolution.Resolved(Character.valueOf(this.value.charAt(0)));
+                                return (str == null || str.length() != 1) ? Resolution.Unresolved.INSTANCE
+                                        : new Resolution.Resolved(Character.valueOf(this.value.charAt(0)));
                             }
                             if (cls == String.class) {
                                 return new Resolution.Resolved(this.value);
@@ -3440,7 +3885,10 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                             }
                             try {
                                 Method method = cls.getMethod("valueOf", String.class);
-                                return (Modifier.isStatic(method.getModifiers()) && cls.isAssignableFrom(method.getReturnType())) ? new Resolution.Resolved(method.invoke(null, this.value)) : Resolution.Unresolved.INSTANCE;
+                                return (Modifier.isStatic(method.getModifiers())
+                                        && cls.isAssignableFrom(method.getReturnType()))
+                                                ? new Resolution.Resolved(method.invoke(null, this.value))
+                                                : Resolution.Unresolved.INSTANCE;
                             } catch (IllegalAccessException e) {
                                 throw new IllegalStateException(e);
                             } catch (NoSuchMethodException unused) {
@@ -3503,14 +3951,19 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                             return Resolution.Unresolved.INSTANCE;
                         }
                         if (cls.isPrimitive()) {
-                            return WRAPPER_TYPES.get(cls).isInstance(this.value) ? new Resolution.Resolved(this.value) : Resolution.Unresolved.INSTANCE;
+                            return WRAPPER_TYPES.get(cls).isInstance(this.value) ? new Resolution.Resolved(this.value)
+                                    : Resolution.Unresolved.INSTANCE;
                         }
                         Object obj = this.value;
-                        return (obj == null || cls.isInstance(obj)) ? new Resolution.Resolved(this.value) : Resolution.Unresolved.INSTANCE;
+                        return (obj == null || cls.isInstance(obj)) ? new Resolution.Resolved(this.value)
+                                : Resolution.Unresolved.INSTANCE;
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class ForType<T> implements ArgumentResolver {
                     private final Class<? extends T> type;
@@ -3546,7 +3999,10 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public enum NoOp implements ArgumentResolver {
                     INSTANCE;
 
@@ -3556,10 +4012,16 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public interface Resolution {
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     @HashCodeAndEqualsPlugin.Enhance
                     public static class Resolved implements Resolution {
 
@@ -3607,7 +4069,10 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                         }
                     }
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     public enum Unresolved implements Resolution {
                         INSTANCE;
 
@@ -3631,10 +4096,16 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                 Resolution resolve(int i, Class<?> cls);
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public interface Instantiator {
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class Ambiguous implements Instantiator {
                     private final Constructor<?> left;
@@ -3657,11 +4128,13 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                             return false;
                         }
                         Ambiguous ambiguous = (Ambiguous) obj;
-                        return this.priority == ambiguous.priority && this.parameters == ambiguous.parameters && this.left.equals(ambiguous.left) && this.right.equals(ambiguous.right);
+                        return this.priority == ambiguous.priority && this.parameters == ambiguous.parameters
+                                && this.left.equals(ambiguous.left) && this.right.equals(ambiguous.right);
                     }
 
                     public int hashCode() {
-                        return ((((this.right.hashCode() + ((this.left.hashCode() + (getClass().hashCode() * 31)) * 31)) * 31) + this.priority) * 31) + this.parameters;
+                        return ((((this.right.hashCode() + ((this.left.hashCode() + (getClass().hashCode() * 31)) * 31))
+                                * 31) + this.priority) * 31) + this.parameters;
                     }
 
                     @Override // net.bytebuddy.build.Plugin.Factory.UsingReflection.Instantiator
@@ -3673,7 +4146,8 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                     public Instantiator replaceBy(Resolved resolved) {
                         Priority priority = (Priority) resolved.getConstructor().getAnnotation(Priority.class);
                         if ((priority == null ? 0 : priority.value()) <= this.priority) {
-                            if ((priority != null ? priority.value() : 0) < this.priority || resolved.getConstructor().getParameterTypes().length <= this.parameters) {
+                            if ((priority != null ? priority.value() : 0) < this.priority
+                                    || resolved.getConstructor().getParameterTypes().length <= this.parameters) {
                                 return this;
                             }
                         }
@@ -3681,7 +4155,10 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class Resolved implements Instantiator {
                     private final List<?> arguments;
@@ -3700,7 +4177,8 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                             return false;
                         }
                         Resolved resolved = (Resolved) obj;
-                        return this.constructor.equals(resolved.constructor) && this.arguments.equals(resolved.arguments);
+                        return this.constructor.equals(resolved.constructor)
+                                && this.arguments.equals(resolved.arguments);
                     }
 
                     public Constructor<? extends Plugin> getConstructor() {
@@ -3708,7 +4186,8 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                     }
 
                     public int hashCode() {
-                        return this.arguments.hashCode() + ((this.constructor.hashCode() + (getClass().hashCode() * 31)) * 31);
+                        return this.arguments.hashCode()
+                                + ((this.constructor.hashCode() + (getClass().hashCode() * 31)) * 31);
                     }
 
                     @Override // net.bytebuddy.build.Plugin.Factory.UsingReflection.Instantiator
@@ -3720,7 +4199,8 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                         } catch (InstantiationException e2) {
                             throw new IllegalStateException("Failed to instantiate plugin via " + this.constructor, e2);
                         } catch (InvocationTargetException e3) {
-                            throw new IllegalStateException("Error during construction of" + this.constructor, e3.getTargetException());
+                            throw new IllegalStateException("Error during construction of" + this.constructor,
+                                    e3.getTargetException());
                         }
                     }
 
@@ -3732,9 +4212,12 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                         int iValue2 = priority2 != null ? priority2.value() : 0;
                         if (iValue <= iValue2) {
                             if (iValue >= iValue2) {
-                                if (this.constructor.getParameterTypes().length <= resolved.getConstructor().getParameterTypes().length) {
-                                    if (this.constructor.getParameterTypes().length >= resolved.getConstructor().getParameterTypes().length) {
-                                        return new Ambiguous(this.constructor, resolved.getConstructor(), iValue, this.constructor.getParameterTypes().length);
+                                if (this.constructor.getParameterTypes().length <= resolved.getConstructor()
+                                        .getParameterTypes().length) {
+                                    if (this.constructor.getParameterTypes().length >= resolved.getConstructor()
+                                            .getParameterTypes().length) {
+                                        return new Ambiguous(this.constructor, resolved.getConstructor(), iValue,
+                                                this.constructor.getParameterTypes().length);
                                     }
                                 }
                             }
@@ -3744,7 +4227,10 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class Unresolved implements Instantiator {
                     private final Class<? extends Plugin> type;
@@ -3780,8 +4266,11 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                 Instantiator replaceBy(Resolved resolved);
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
-            @Target({ElementType.CONSTRUCTOR})
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
+            @Target({ ElementType.CONSTRUCTOR })
             @Documented
             @Retention(RetentionPolicy.RUNTIME)
             public @interface Priority {
@@ -3802,7 +4291,8 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                     return false;
                 }
                 UsingReflection usingReflection = (UsingReflection) obj;
-                return this.type.equals(usingReflection.type) && this.argumentResolvers.equals(usingReflection.argumentResolvers);
+                return this.type.equals(usingReflection.type)
+                        && this.argumentResolvers.equals(usingReflection.argumentResolvers);
             }
 
             public int hashCode() {
@@ -3859,7 +4349,10 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
         Plugin make();
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @HashCodeAndEqualsPlugin.Enhance
     public static abstract class ForElementMatcher implements Plugin {
         private final ElementMatcher<? super TypeDescription> matcher;
@@ -3872,7 +4365,8 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
             if (this == obj) {
                 return true;
             }
-            return obj != null && getClass() == obj.getClass() && this.matcher.equals(((ForElementMatcher) obj).matcher);
+            return obj != null && getClass() == obj.getClass()
+                    && this.matcher.equals(((ForElementMatcher) obj).matcher);
         }
 
         public int hashCode() {
@@ -3885,11 +4379,15 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @HashCodeAndEqualsPlugin.Enhance
     public static class NoOp implements Plugin, Factory {
         @Override // net.bytebuddy.build.Plugin
-        public DynamicType.Builder<?> apply(DynamicType.Builder<?> builder, TypeDescription typeDescription, ClassFileLocator classFileLocator) {
+        public DynamicType.Builder<?> apply(DynamicType.Builder<?> builder, TypeDescription typeDescription,
+                ClassFileLocator classFileLocator) {
             throw new IllegalStateException("Cannot apply non-operational plugin");
         }
 
@@ -3919,15 +4417,22 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface WithInitialization extends Plugin {
         Map<TypeDescription, byte[]> initialize(ClassFileLocator classFileLocator);
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface WithPreprocessor extends Plugin {
         void onPreprocess(TypeDescription typeDescription, ClassFileLocator classFileLocator);
     }
 
-    DynamicType.Builder<?> apply(DynamicType.Builder<?> builder, TypeDescription typeDescription, ClassFileLocator classFileLocator);
+    DynamicType.Builder<?> apply(DynamicType.Builder<?> builder, TypeDescription typeDescription,
+            ClassFileLocator classFileLocator);
 }

@@ -16,7 +16,7 @@ public final class csd implements yq {
 
     public final boolean equals(Object obj) {
         if (obj instanceof csd) {
-            return bzo.f(this.b, ((csd) obj).b);
+            return nullSafeIsEqual(this.b, ((csd) obj).b);
         }
         return false;
     }

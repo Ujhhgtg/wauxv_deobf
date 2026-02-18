@@ -19,8 +19,8 @@ import me.hd.wauxv.obf.avd;
 import me.hd.wauxv.obf.avh;
 import me.hd.wauxv.obf.bcz;
 import me.hd.wauxv.obf.bda;
-import me.hd.wauxv.obf.bsw;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.IEmpty;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cnh;
 import me.hd.wauxv.obf.cyk;
 import me.hd.wauxv.obf.cyl;
@@ -63,7 +63,10 @@ public final class Cache implements Closeable, Flushable {
     private int writeAbortCount;
     private int writeSuccessCount;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class CacheResponseBody extends ResponseBody {
         private final rm bodySource;
         private final String contentLength;
@@ -71,7 +74,7 @@ public final class Cache implements Closeable, Flushable {
         private final DiskLruCache.Snapshot snapshot;
 
         public CacheResponseBody(DiskLruCache.Snapshot snapshot, String str, String str2) {
-            bzo.q(snapshot, "snapshot");
+            throwIfVar1IsNull(snapshot, "snapshot");
             this.snapshot = snapshot;
             this.contentType = str;
             this.contentLength = str2;
@@ -112,7 +115,10 @@ public final class Cache implements Closeable, Flushable {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
@@ -128,7 +134,7 @@ public final class Cache implements Closeable, Flushable {
                         dnr.bk();
                         treeSet = new TreeSet(String.CASE_INSENSITIVE_ORDER);
                     }
-                    Iterator it = dnj.ar(strValue, new char[]{','}).iterator();
+                    Iterator it = dnj.ar(strValue, new char[] { ',' }).iterator();
                     while (it.hasNext()) {
                         treeSet.add(dnj.ba((String) it.next()).toString());
                     }
@@ -138,18 +144,18 @@ public final class Cache implements Closeable, Flushable {
         }
 
         public final boolean hasVaryAll(Response response) {
-            bzo.q(response, "<this>");
+            throwIfVar1IsNull(response, "<this>");
             return varyFields(response.headers()).contains("*");
         }
 
         public final String key(HttpUrl httpUrl) {
-            bzo.q(httpUrl, "url");
+            throwIfVar1IsNull(httpUrl, "url");
             sj sjVar = sj.a;
             return nu.g(httpUrl.toString()).f("MD5").h();
         }
 
         public final int readInt$okhttp(rm rmVar) throws IOException {
-            bzo.q(rmVar, "source");
+            throwIfVar1IsNull(rmVar, "source");
             try {
                 long jK = rmVar.k();
                 String strAa = rmVar.aa();
@@ -163,22 +169,22 @@ public final class Cache implements Closeable, Flushable {
         }
 
         public final Headers varyHeaders(Response response) {
-            bzo.q(response, "<this>");
+            throwIfVar1IsNull(response, "<this>");
             Response responseNetworkResponse = response.networkResponse();
-            bzo.n(responseNetworkResponse);
+            throwIfVar1IsNull(responseNetworkResponse);
             return varyHeaders(responseNetworkResponse.request().headers(), response.headers());
         }
 
         public final boolean varyMatches(Response response, Headers headers, Request request) {
-            bzo.q(response, "cachedResponse");
-            bzo.q(headers, "cachedRequest");
-            bzo.q(request, "newRequest");
+            throwIfVar1IsNull(response, "cachedResponse");
+            throwIfVar1IsNull(headers, "cachedRequest");
+            throwIfVar1IsNull(request, "newRequest");
             Set<String> setVaryFields = varyFields(response.headers());
             if (setVaryFields != null && setVaryFields.isEmpty()) {
                 return true;
             }
             for (String str : setVaryFields) {
-                if (!bzo.f(headers.values(str), request.headers(str))) {
+                if (!nullSafeIsEqual(headers.values(str), request.headers(str))) {
                     return false;
                 }
             }
@@ -205,7 +211,10 @@ public final class Cache implements Closeable, Flushable {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public final class RealCacheRequest implements CacheRequest {
         private final dhy body;
         private final dhy cacheOut;
@@ -214,13 +223,14 @@ public final class Cache implements Closeable, Flushable {
         final /* synthetic */ Cache this$0;
 
         public RealCacheRequest(final Cache cache, DiskLruCache.Editor editor) {
-            bzo.q(editor, "editor");
+            throwIfVar1IsNull(editor, "editor");
             this.this$0 = cache;
             this.editor = editor;
             dhy dhyVarNewSink = editor.newSink(1);
             this.cacheOut = dhyVarNewSink;
             this.body = new bcz(dhyVarNewSink) { // from class: okhttp3.Cache.RealCacheRequest.1
-                @Override // me.hd.wauxv.obf.bcz, me.hd.wauxv.obf.dhy, java.io.Closeable, java.lang.AutoCloseable
+                @Override // me.hd.wauxv.obf.bcz, me.hd.wauxv.obf.dhy, java.io.Closeable,
+                          // java.lang.AutoCloseable
                 public void close() {
                     Cache cache2 = cache;
                     RealCacheRequest realCacheRequest = this;
@@ -269,8 +279,11 @@ public final class Cache implements Closeable, Flushable {
     }
 
     /* JADX INFO: renamed from: okhttp3.Cache$urls$1, reason: invalid class name */
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
-    public static final class AnonymousClass1 implements Iterator<String>, bsw {
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
+    public static final class AnonymousClass1 implements Iterator<String>, IEmpty {
         private boolean canRemove;
         private final Iterator<DiskLruCache.Snapshot> delegate;
         private String nextUrl;
@@ -322,7 +335,7 @@ public final class Cache implements Closeable, Flushable {
                 throw new NoSuchElementException();
             }
             String str = this.nextUrl;
-            bzo.n(str);
+            throwIfVar1IsNull(str);
             this.nextUrl = null;
             this.canRemove = true;
             return str;
@@ -330,8 +343,8 @@ public final class Cache implements Closeable, Flushable {
     }
 
     public Cache(File file, long j, FileSystem fileSystem) {
-        bzo.q(file, "directory");
-        bzo.q(fileSystem, "fileSystem");
+        throwIfVar1IsNull(file, "directory");
+        throwIfVar1IsNull(fileSystem, "fileSystem");
         this.cache = new DiskLruCache(fileSystem, file, VERSION, 2, j, TaskRunner.INSTANCE);
     }
 
@@ -375,7 +388,7 @@ public final class Cache implements Closeable, Flushable {
     }
 
     public final Response get$okhttp(Request request) {
-        bzo.q(request, "request");
+        throwIfVar1IsNull(request, "request");
         try {
             DiskLruCache.Snapshot snapshot = this.cache.get(Companion.key(request.url()));
             if (snapshot == null) {
@@ -434,7 +447,7 @@ public final class Cache implements Closeable, Flushable {
 
     public final CacheRequest put$okhttp(Response response) {
         DiskLruCache.Editor editorEdit$default;
-        bzo.q(response, "response");
+        throwIfVar1IsNull(response, "response");
         String strMethod = response.request().method();
         if (HttpMethod.INSTANCE.invalidatesCache(response.request().method())) {
             try {
@@ -443,7 +456,7 @@ public final class Cache implements Closeable, Flushable {
             }
             return null;
         }
-        if (!bzo.f(strMethod, "GET")) {
+        if (!nullSafeIsEqual(strMethod, "GET")) {
             return null;
         }
         Companion companion = Companion;
@@ -452,7 +465,8 @@ public final class Cache implements Closeable, Flushable {
         }
         Entry entry = new Entry(response);
         try {
-            editorEdit$default = DiskLruCache.edit$default(this.cache, companion.key(response.request().url()), 0L, 2, null);
+            editorEdit$default = DiskLruCache.edit$default(this.cache, companion.key(response.request().url()), 0L, 2,
+                    null);
             if (editorEdit$default == null) {
                 return null;
             }
@@ -469,7 +483,7 @@ public final class Cache implements Closeable, Flushable {
     }
 
     public final void remove$okhttp(Request request) {
-        bzo.q(request, "request");
+        throwIfVar1IsNull(request, "request");
         this.cache.remove(Companion.key(request.url()));
     }
 
@@ -495,7 +509,7 @@ public final class Cache implements Closeable, Flushable {
 
     public final synchronized void trackResponse$okhttp(CacheStrategy cacheStrategy) {
         try {
-            bzo.q(cacheStrategy, "cacheStrategy");
+            throwIfVar1IsNull(cacheStrategy, "cacheStrategy");
             this.requestCount++;
             if (cacheStrategy.getNetworkRequest() != null) {
                 this.networkCount++;
@@ -509,11 +523,11 @@ public final class Cache implements Closeable, Flushable {
 
     public final void update$okhttp(Response response, Response response2) {
         DiskLruCache.Editor editorEdit;
-        bzo.q(response, "cached");
-        bzo.q(response2, "network");
+        throwIfVar1IsNull(response, "cached");
+        throwIfVar1IsNull(response2, "network");
         Entry entry = new Entry(response2);
         ResponseBody responseBodyBody = response.body();
-        bzo.o(responseBodyBody, "null cannot be cast to non-null type okhttp3.Cache.CacheResponseBody");
+        throwIfVar1IsNull(responseBodyBody, "null cannot be cast to non-null type okhttp3.Cache.CacheResponseBody");
         try {
             editorEdit = ((CacheResponseBody) responseBodyBody).getSnapshot().edit();
             if (editorEdit == null) {
@@ -542,13 +556,19 @@ public final class Cache implements Closeable, Flushable {
         return this.writeSuccessCount;
     }
 
-    /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'this' call moved to the top of the method (can break code
+     * semantics)
+     */
     public Cache(File file, long j) {
         this(file, j, FileSystem.SYSTEM);
-        bzo.q(file, "directory");
+        throwIfVar1IsNull(file, "directory");
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Entry {
         public static final Companion Companion = new Companion(null);
         private static final String RECEIVED_MILLIS;
@@ -564,7 +584,10 @@ public final class Cache implements Closeable, Flushable {
         private final HttpUrl url;
         private final Headers varyHeaders;
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static final class Companion {
             public /* synthetic */ Companion(akd akdVar) {
                 this();
@@ -584,7 +607,7 @@ public final class Cache implements Closeable, Flushable {
         }
 
         public Entry(dlc dlcVar) throws IOException {
-            bzo.q(dlcVar, "rawSource");
+            throwIfVar1IsNull(dlcVar, "rawSource");
             try {
                 cyl cylVarAh = emc.ah(dlcVar);
                 String strM = cylVarAh.m(Long.MAX_VALUE);
@@ -625,7 +648,11 @@ public final class Cache implements Closeable, Flushable {
                     if (strM2.length() > 0) {
                         throw new IOException("expected \"\" but was \"" + strM2 + '\"');
                     }
-                    this.handshake = Handshake.Companion.get(!cylVarAh.i() ? TlsVersion.Companion.forJavaName(cylVarAh.m(Long.MAX_VALUE)) : TlsVersion.SSL_3_0, CipherSuite.Companion.forJavaName(cylVarAh.m(Long.MAX_VALUE)), readCertificateList(cylVarAh), readCertificateList(cylVarAh));
+                    this.handshake = Handshake.Companion.get(
+                            !cylVarAh.i() ? TlsVersion.Companion.forJavaName(cylVarAh.m(Long.MAX_VALUE))
+                                    : TlsVersion.SSL_3_0,
+                            CipherSuite.Companion.forJavaName(cylVarAh.m(Long.MAX_VALUE)),
+                            readCertificateList(cylVarAh), readCertificateList(cylVarAh));
                 } else {
                     this.handshake = null;
                 }
@@ -641,7 +668,7 @@ public final class Cache implements Closeable, Flushable {
         }
 
         private final boolean isHttps() {
-            return bzo.f(this.url.scheme(), "https");
+            return nullSafeIsEqual(this.url.scheme(), "https");
         }
 
         private final List<Certificate> readCertificateList(rm rmVar) throws IOException {
@@ -677,7 +704,7 @@ public final class Cache implements Closeable, Flushable {
                 while (it.hasNext()) {
                     byte[] encoded = it.next().getEncoded();
                     sj sjVar = sj.a;
-                    bzo.p(encoded, "bytes");
+                    throwIfVar1IsNull(encoded, "bytes");
                     rlVar.q(nu.i(encoded).e()).writeByte(10);
                 }
             } catch (CertificateEncodingException e) {
@@ -686,20 +713,27 @@ public final class Cache implements Closeable, Flushable {
         }
 
         public final boolean matches(Request request, Response response) {
-            bzo.q(request, "request");
-            bzo.q(response, "response");
-            return bzo.f(this.url, request.url()) && bzo.f(this.requestMethod, request.method()) && Cache.Companion.varyMatches(response, this.varyHeaders, request);
+            throwIfVar1IsNull(request, "request");
+            throwIfVar1IsNull(response, "response");
+            return nullSafeIsEqual(this.url, request.url()) && nullSafeIsEqual(this.requestMethod, request.method())
+                    && Cache.Companion.varyMatches(response, this.varyHeaders, request);
         }
 
         public final Response response(DiskLruCache.Snapshot snapshot) {
-            bzo.q(snapshot, "snapshot");
+            throwIfVar1IsNull(snapshot, "snapshot");
             String str = this.responseHeaders.get("Content-Type");
             String str2 = this.responseHeaders.get("Content-Length");
-            return new Response.Builder().request(new Request.Builder().url(this.url).method(this.requestMethod, null).headers(this.varyHeaders).build()).protocol(this.protocol).code(this.code).message(this.message).headers(this.responseHeaders).body(new CacheResponseBody(snapshot, str, str2)).handshake(this.handshake).sentRequestAtMillis(this.sentRequestMillis).receivedResponseAtMillis(this.receivedResponseMillis).build();
+            return new Response.Builder()
+                    .request(new Request.Builder().url(this.url).method(this.requestMethod, null)
+                            .headers(this.varyHeaders).build())
+                    .protocol(this.protocol).code(this.code).message(this.message).headers(this.responseHeaders)
+                    .body(new CacheResponseBody(snapshot, str, str2)).handshake(this.handshake)
+                    .sentRequestAtMillis(this.sentRequestMillis).receivedResponseAtMillis(this.receivedResponseMillis)
+                    .build();
         }
 
         public final void writeTo(DiskLruCache.Editor editor) {
-            bzo.q(editor, "editor");
+            throwIfVar1IsNull(editor, "editor");
             cyk cykVarAg = emc.ag(editor.newSink(0));
             try {
                 cykVarAg.q(this.url.toString());
@@ -737,7 +771,7 @@ public final class Cache implements Closeable, Flushable {
                 if (isHttps()) {
                     cykVarAg.writeByte(10);
                     Handshake handshake = this.handshake;
-                    bzo.n(handshake);
+                    throwIfVar1IsNull(handshake);
                     cykVarAg.q(handshake.cipherSuite().javaName());
                     cykVarAg.writeByte(10);
                     writeCertList(cykVarAg, this.handshake.peerCertificates());
@@ -757,7 +791,7 @@ public final class Cache implements Closeable, Flushable {
         }
 
         public Entry(Response response) {
-            bzo.q(response, "response");
+            throwIfVar1IsNull(response, "response");
             this.url = response.request().url();
             this.varyHeaders = Cache.Companion.varyHeaders(response);
             this.requestMethod = response.request().method();

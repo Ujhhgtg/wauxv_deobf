@@ -24,6 +24,6 @@ public final class dpz extends dpy {
         sb.append(", ");
         sb.append(this.ac);
         sb.append(", ");
-        return bjs.q(sb, this.ad ? "Blocking" : "Non-blocking", ']');
+        return concat(sb, this.ad ? "Blocking" : "Non-blocking", ']');
     }
 }

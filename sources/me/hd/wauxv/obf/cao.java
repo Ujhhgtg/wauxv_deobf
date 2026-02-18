@@ -254,7 +254,7 @@ public final class cao {
         int i = (int) (fAb - cardViewRadius);
         Rect rect = this.d;
         materialCardView.m.set(rect.left + i, rect.top + i, rect.right + i, rect.bottom + i);
-        io ioVar = materialCardView.o;
+        DefaultConfig ioVar = materialCardView.o;
         if (!((te) ioVar.d).getUseCompatPadding()) {
             ioVar.ax(0, 0, 0, 0);
             return;

@@ -17,8 +17,8 @@ import javax.net.ssl.X509TrustManager;
 import me.hd.wauxv.obf.aaz;
 import me.hd.wauxv.obf.abf;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.bgf;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.IHasInvokeMethod;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.dts;
 import okhttp3.Call;
 import okhttp3.EventListener;
@@ -69,9 +69,13 @@ public class OkHttpClient implements Cloneable, Call.Factory, WebSocket.Factory 
     private final X509TrustManager x509TrustManager;
     public static final Companion Companion = new Companion(null);
     private static final List<Protocol> DEFAULT_PROTOCOLS = Util.immutableListOf(Protocol.HTTP_2, Protocol.HTTP_1_1);
-    private static final List<ConnectionSpec> DEFAULT_CONNECTION_SPECS = Util.immutableListOf(ConnectionSpec.MODERN_TLS, ConnectionSpec.CLEARTEXT);
+    private static final List<ConnectionSpec> DEFAULT_CONNECTION_SPECS = Util.immutableListOf(ConnectionSpec.MODERN_TLS,
+            ConnectionSpec.CLEARTEXT);
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Builder {
         private Authenticator authenticator;
         private Cache cache;
@@ -119,7 +123,7 @@ public class OkHttpClient implements Cloneable, Call.Factory, WebSocket.Factory 
             this.dns = Dns.SYSTEM;
             this.proxyAuthenticator = authenticator;
             SocketFactory socketFactory = SocketFactory.getDefault();
-            bzo.p(socketFactory, "getDefault()");
+            throwIfVar1IsNull(socketFactory, "getDefault()");
             this.socketFactory = socketFactory;
             Companion companion = OkHttpClient.Companion;
             this.connectionSpecs = companion.getDEFAULT_CONNECTION_SPECS$okhttp();
@@ -132,41 +136,42 @@ public class OkHttpClient implements Cloneable, Call.Factory, WebSocket.Factory 
             this.minWebSocketMessageToCompress = RealWebSocket.DEFAULT_MINIMUM_DEFLATE_SIZE;
         }
 
-        public final Builder a(final bgf bgfVar) {
-            bzo.q(bgfVar, "block");
+        public final Builder a(final IHasInvokeMethod bgfVar) {
+            throwIfVar1IsNull(bgfVar, "block");
             return addInterceptor(new Interceptor() { // from class: okhttp3.OkHttpClient$Builder$addInterceptor$2
                 @Override // okhttp3.Interceptor
                 public final Response intercept(Interceptor.Chain chain) {
-                    bzo.q(chain, "chain");
+                    throwIfVar1IsNull(chain, "chain");
                     return (Response) bgfVar.invoke(chain);
                 }
             });
         }
 
         public final Builder addInterceptor(Interceptor interceptor) {
-            bzo.q(interceptor, "interceptor");
+            throwIfVar1IsNull(interceptor, "interceptor");
             this.interceptors.add(interceptor);
             return this;
         }
 
         public final Builder addNetworkInterceptor(Interceptor interceptor) {
-            bzo.q(interceptor, "interceptor");
+            throwIfVar1IsNull(interceptor, "interceptor");
             this.networkInterceptors.add(interceptor);
             return this;
         }
 
         public final Builder authenticator(Authenticator authenticator) {
-            bzo.q(authenticator, "authenticator");
+            throwIfVar1IsNull(authenticator, "authenticator");
             this.authenticator = authenticator;
             return this;
         }
 
-        public final Builder b(final bgf bgfVar) {
-            bzo.q(bgfVar, "block");
-            return addNetworkInterceptor(new Interceptor() { // from class: okhttp3.OkHttpClient$Builder$addNetworkInterceptor$2
+        public final Builder b(final IHasInvokeMethod bgfVar) {
+            throwIfVar1IsNull(bgfVar, "block");
+            return addNetworkInterceptor(new Interceptor() { // from class:
+                                                             // okhttp3.OkHttpClient$Builder$addNetworkInterceptor$2
                 @Override // okhttp3.Interceptor
                 public final Response intercept(Interceptor.Chain chain) {
-                    bzo.q(chain, "chain");
+                    throwIfVar1IsNull(chain, "chain");
                     return (Response) bgfVar.invoke(chain);
                 }
             });
@@ -182,13 +187,13 @@ public class OkHttpClient implements Cloneable, Call.Factory, WebSocket.Factory 
         }
 
         public final Builder callTimeout(long j, TimeUnit timeUnit) {
-            bzo.q(timeUnit, "unit");
+            throwIfVar1IsNull(timeUnit, "unit");
             this.callTimeout = Util.checkDuration("timeout", j, timeUnit);
             return this;
         }
 
         public final Builder certificatePinner(CertificatePinner certificatePinner) {
-            bzo.q(certificatePinner, "certificatePinner");
+            throwIfVar1IsNull(certificatePinner, "certificatePinner");
             if (!certificatePinner.equals(this.certificatePinner)) {
                 this.routeDatabase = null;
             }
@@ -197,19 +202,19 @@ public class OkHttpClient implements Cloneable, Call.Factory, WebSocket.Factory 
         }
 
         public final Builder connectTimeout(long j, TimeUnit timeUnit) {
-            bzo.q(timeUnit, "unit");
+            throwIfVar1IsNull(timeUnit, "unit");
             this.connectTimeout = Util.checkDuration("timeout", j, timeUnit);
             return this;
         }
 
         public final Builder connectionPool(ConnectionPool connectionPool) {
-            bzo.q(connectionPool, "connectionPool");
+            throwIfVar1IsNull(connectionPool, "connectionPool");
             this.connectionPool = connectionPool;
             return this;
         }
 
         public final Builder connectionSpecs(List<ConnectionSpec> list) {
-            bzo.q(list, "connectionSpecs");
+            throwIfVar1IsNull(list, "connectionSpecs");
             if (!list.equals(this.connectionSpecs)) {
                 this.routeDatabase = null;
             }
@@ -218,19 +223,19 @@ public class OkHttpClient implements Cloneable, Call.Factory, WebSocket.Factory 
         }
 
         public final Builder cookieJar(CookieJar cookieJar) {
-            bzo.q(cookieJar, "cookieJar");
+            throwIfVar1IsNull(cookieJar, "cookieJar");
             this.cookieJar = cookieJar;
             return this;
         }
 
         public final Builder dispatcher(Dispatcher dispatcher) {
-            bzo.q(dispatcher, "dispatcher");
+            throwIfVar1IsNull(dispatcher, "dispatcher");
             this.dispatcher = dispatcher;
             return this;
         }
 
         public final Builder dns(Dns dns) {
-            bzo.q(dns, "dns");
+            throwIfVar1IsNull(dns, "dns");
             if (!dns.equals(this.dns)) {
                 this.routeDatabase = null;
             }
@@ -239,13 +244,13 @@ public class OkHttpClient implements Cloneable, Call.Factory, WebSocket.Factory 
         }
 
         public final Builder eventListener(EventListener eventListener) {
-            bzo.q(eventListener, "eventListener");
+            throwIfVar1IsNull(eventListener, "eventListener");
             this.eventListenerFactory = Util.asFactory(eventListener);
             return this;
         }
 
         public final Builder eventListenerFactory(EventListener.Factory factory) {
-            bzo.q(factory, "eventListenerFactory");
+            throwIfVar1IsNull(factory, "eventListenerFactory");
             this.eventListenerFactory = factory;
             return this;
         }
@@ -381,7 +386,7 @@ public class OkHttpClient implements Cloneable, Call.Factory, WebSocket.Factory 
         }
 
         public final Builder hostnameVerifier(HostnameVerifier hostnameVerifier) {
-            bzo.q(hostnameVerifier, "hostnameVerifier");
+            throwIfVar1IsNull(hostnameVerifier, "hostnameVerifier");
             if (!hostnameVerifier.equals(this.hostnameVerifier)) {
                 this.routeDatabase = null;
             }
@@ -395,7 +400,8 @@ public class OkHttpClient implements Cloneable, Call.Factory, WebSocket.Factory 
 
         public final Builder minWebSocketMessageToCompress(long j) {
             if (j < 0) {
-                throw new IllegalArgumentException(dts.b(j, "minWebSocketMessageToCompress must be positive: ").toString());
+                throw new IllegalArgumentException(
+                        dts.b(j, "minWebSocketMessageToCompress must be positive: ").toString());
             }
             this.minWebSocketMessageToCompress = j;
             return this;
@@ -406,20 +412,23 @@ public class OkHttpClient implements Cloneable, Call.Factory, WebSocket.Factory 
         }
 
         public final Builder pingInterval(long j, TimeUnit timeUnit) {
-            bzo.q(timeUnit, "unit");
+            throwIfVar1IsNull(timeUnit, "unit");
             this.pingInterval = Util.checkDuration(bt.aS, j, timeUnit);
             return this;
         }
 
         public final Builder protocols(List<? extends Protocol> list) {
-            bzo.q(list, "protocols");
+            throwIfVar1IsNull(list, "protocols");
             ArrayList arrayListAb = aaz.ab(list);
             Protocol protocol = Protocol.H2_PRIOR_KNOWLEDGE;
             if (!arrayListAb.contains(protocol) && !arrayListAb.contains(Protocol.HTTP_1_1)) {
-                throw new IllegalArgumentException(("protocols must contain h2_prior_knowledge or http/1.1: " + arrayListAb).toString());
+                throw new IllegalArgumentException(
+                        ("protocols must contain h2_prior_knowledge or http/1.1: " + arrayListAb).toString());
             }
             if (arrayListAb.contains(protocol) && arrayListAb.size() > 1) {
-                throw new IllegalArgumentException(("protocols containing h2_prior_knowledge cannot use other protocols: " + arrayListAb).toString());
+                throw new IllegalArgumentException(
+                        ("protocols containing h2_prior_knowledge cannot use other protocols: " + arrayListAb)
+                                .toString());
             }
             if (arrayListAb.contains(Protocol.HTTP_1_0)) {
                 throw new IllegalArgumentException(("protocols must not contain http/1.0: " + arrayListAb).toString());
@@ -432,13 +441,13 @@ public class OkHttpClient implements Cloneable, Call.Factory, WebSocket.Factory 
                 this.routeDatabase = null;
             }
             List<? extends Protocol> listUnmodifiableList = Collections.unmodifiableList(arrayListAb);
-            bzo.p(listUnmodifiableList, "unmodifiableList(protocolsCopy)");
+            throwIfVar1IsNull(listUnmodifiableList, "unmodifiableList(protocolsCopy)");
             this.protocols = listUnmodifiableList;
             return this;
         }
 
         public final Builder proxy(Proxy proxy) {
-            if (!bzo.f(proxy, this.proxy)) {
+            if (!nullSafeIsEqual(proxy, this.proxy)) {
                 this.routeDatabase = null;
             }
             this.proxy = proxy;
@@ -446,7 +455,7 @@ public class OkHttpClient implements Cloneable, Call.Factory, WebSocket.Factory 
         }
 
         public final Builder proxyAuthenticator(Authenticator authenticator) {
-            bzo.q(authenticator, "proxyAuthenticator");
+            throwIfVar1IsNull(authenticator, "proxyAuthenticator");
             if (!authenticator.equals(this.proxyAuthenticator)) {
                 this.routeDatabase = null;
             }
@@ -455,7 +464,7 @@ public class OkHttpClient implements Cloneable, Call.Factory, WebSocket.Factory 
         }
 
         public final Builder proxySelector(ProxySelector proxySelector) {
-            bzo.q(proxySelector, "proxySelector");
+            throwIfVar1IsNull(proxySelector, "proxySelector");
             if (!proxySelector.equals(this.proxySelector)) {
                 this.routeDatabase = null;
             }
@@ -464,7 +473,7 @@ public class OkHttpClient implements Cloneable, Call.Factory, WebSocket.Factory 
         }
 
         public final Builder readTimeout(long j, TimeUnit timeUnit) {
-            bzo.q(timeUnit, "unit");
+            throwIfVar1IsNull(timeUnit, "unit");
             this.readTimeout = Util.checkDuration("timeout", j, timeUnit);
             return this;
         }
@@ -475,7 +484,7 @@ public class OkHttpClient implements Cloneable, Call.Factory, WebSocket.Factory 
         }
 
         public final void setAuthenticator$okhttp(Authenticator authenticator) {
-            bzo.q(authenticator, "<set-?>");
+            throwIfVar1IsNull(authenticator, "<set-?>");
             this.authenticator = authenticator;
         }
 
@@ -492,7 +501,7 @@ public class OkHttpClient implements Cloneable, Call.Factory, WebSocket.Factory 
         }
 
         public final void setCertificatePinner$okhttp(CertificatePinner certificatePinner) {
-            bzo.q(certificatePinner, "<set-?>");
+            throwIfVar1IsNull(certificatePinner, "<set-?>");
             this.certificatePinner = certificatePinner;
         }
 
@@ -501,32 +510,32 @@ public class OkHttpClient implements Cloneable, Call.Factory, WebSocket.Factory 
         }
 
         public final void setConnectionPool$okhttp(ConnectionPool connectionPool) {
-            bzo.q(connectionPool, "<set-?>");
+            throwIfVar1IsNull(connectionPool, "<set-?>");
             this.connectionPool = connectionPool;
         }
 
         public final void setConnectionSpecs$okhttp(List<ConnectionSpec> list) {
-            bzo.q(list, "<set-?>");
+            throwIfVar1IsNull(list, "<set-?>");
             this.connectionSpecs = list;
         }
 
         public final void setCookieJar$okhttp(CookieJar cookieJar) {
-            bzo.q(cookieJar, "<set-?>");
+            throwIfVar1IsNull(cookieJar, "<set-?>");
             this.cookieJar = cookieJar;
         }
 
         public final void setDispatcher$okhttp(Dispatcher dispatcher) {
-            bzo.q(dispatcher, "<set-?>");
+            throwIfVar1IsNull(dispatcher, "<set-?>");
             this.dispatcher = dispatcher;
         }
 
         public final void setDns$okhttp(Dns dns) {
-            bzo.q(dns, "<set-?>");
+            throwIfVar1IsNull(dns, "<set-?>");
             this.dns = dns;
         }
 
         public final void setEventListenerFactory$okhttp(EventListener.Factory factory) {
-            bzo.q(factory, "<set-?>");
+            throwIfVar1IsNull(factory, "<set-?>");
             this.eventListenerFactory = factory;
         }
 
@@ -539,7 +548,7 @@ public class OkHttpClient implements Cloneable, Call.Factory, WebSocket.Factory 
         }
 
         public final void setHostnameVerifier$okhttp(HostnameVerifier hostnameVerifier) {
-            bzo.q(hostnameVerifier, "<set-?>");
+            throwIfVar1IsNull(hostnameVerifier, "<set-?>");
             this.hostnameVerifier = hostnameVerifier;
         }
 
@@ -552,7 +561,7 @@ public class OkHttpClient implements Cloneable, Call.Factory, WebSocket.Factory 
         }
 
         public final void setProtocols$okhttp(List<? extends Protocol> list) {
-            bzo.q(list, "<set-?>");
+            throwIfVar1IsNull(list, "<set-?>");
             this.protocols = list;
         }
 
@@ -561,7 +570,7 @@ public class OkHttpClient implements Cloneable, Call.Factory, WebSocket.Factory 
         }
 
         public final void setProxyAuthenticator$okhttp(Authenticator authenticator) {
-            bzo.q(authenticator, "<set-?>");
+            throwIfVar1IsNull(authenticator, "<set-?>");
             this.proxyAuthenticator = authenticator;
         }
 
@@ -582,7 +591,7 @@ public class OkHttpClient implements Cloneable, Call.Factory, WebSocket.Factory 
         }
 
         public final void setSocketFactory$okhttp(SocketFactory socketFactory) {
-            bzo.q(socketFactory, "<set-?>");
+            throwIfVar1IsNull(socketFactory, "<set-?>");
             this.socketFactory = socketFactory;
         }
 
@@ -599,7 +608,7 @@ public class OkHttpClient implements Cloneable, Call.Factory, WebSocket.Factory 
         }
 
         public final Builder socketFactory(SocketFactory socketFactory) {
-            bzo.q(socketFactory, "socketFactory");
+            throwIfVar1IsNull(socketFactory, "socketFactory");
             if (socketFactory instanceof SSLSocketFactory) {
                 throw new IllegalArgumentException("socketFactory instanceof SSLSocketFactory");
             }
@@ -611,7 +620,7 @@ public class OkHttpClient implements Cloneable, Call.Factory, WebSocket.Factory 
         }
 
         public final Builder sslSocketFactory(SSLSocketFactory sSLSocketFactory) {
-            bzo.q(sSLSocketFactory, "sslSocketFactory");
+            throwIfVar1IsNull(sSLSocketFactory, "sslSocketFactory");
             if (!sSLSocketFactory.equals(this.sslSocketFactoryOrNull)) {
                 this.routeDatabase = null;
             }
@@ -619,56 +628,58 @@ public class OkHttpClient implements Cloneable, Call.Factory, WebSocket.Factory 
             Platform.Companion companion = Platform.Companion;
             X509TrustManager x509TrustManagerTrustManager = companion.get().trustManager(sSLSocketFactory);
             if (x509TrustManagerTrustManager == null) {
-                throw new IllegalStateException("Unable to extract the trust manager on " + companion.get() + ", sslSocketFactory is " + sSLSocketFactory.getClass());
+                throw new IllegalStateException("Unable to extract the trust manager on " + companion.get()
+                        + ", sslSocketFactory is " + sSLSocketFactory.getClass());
             }
             this.x509TrustManagerOrNull = x509TrustManagerTrustManager;
             Platform platform = companion.get();
             X509TrustManager x509TrustManager = this.x509TrustManagerOrNull;
-            bzo.n(x509TrustManager);
+            throwIfVar1IsNull(x509TrustManager);
             this.certificateChainCleaner = platform.buildCertificateChainCleaner(x509TrustManager);
             return this;
         }
 
         public final Builder writeTimeout(long j, TimeUnit timeUnit) {
-            bzo.q(timeUnit, "unit");
+            throwIfVar1IsNull(timeUnit, "unit");
             this.writeTimeout = Util.checkDuration("timeout", j, timeUnit);
             return this;
         }
 
         public final Builder callTimeout(Duration duration) {
-            bzo.q(duration, "duration");
+            throwIfVar1IsNull(duration, "duration");
             callTimeout(duration.toMillis(), TimeUnit.MILLISECONDS);
             return this;
         }
 
         public final Builder connectTimeout(Duration duration) {
-            bzo.q(duration, "duration");
+            throwIfVar1IsNull(duration, "duration");
             connectTimeout(duration.toMillis(), TimeUnit.MILLISECONDS);
             return this;
         }
 
         public final Builder pingInterval(Duration duration) {
-            bzo.q(duration, "duration");
+            throwIfVar1IsNull(duration, "duration");
             pingInterval(duration.toMillis(), TimeUnit.MILLISECONDS);
             return this;
         }
 
         public final Builder readTimeout(Duration duration) {
-            bzo.q(duration, "duration");
+            throwIfVar1IsNull(duration, "duration");
             readTimeout(duration.toMillis(), TimeUnit.MILLISECONDS);
             return this;
         }
 
         public final Builder writeTimeout(Duration duration) {
-            bzo.q(duration, "duration");
+            throwIfVar1IsNull(duration, "duration");
             writeTimeout(duration.toMillis(), TimeUnit.MILLISECONDS);
             return this;
         }
 
         public final Builder sslSocketFactory(SSLSocketFactory sSLSocketFactory, X509TrustManager x509TrustManager) {
-            bzo.q(sSLSocketFactory, "sslSocketFactory");
-            bzo.q(x509TrustManager, "trustManager");
-            if (!sSLSocketFactory.equals(this.sslSocketFactoryOrNull) || !x509TrustManager.equals(this.x509TrustManagerOrNull)) {
+            throwIfVar1IsNull(sSLSocketFactory, "sslSocketFactory");
+            throwIfVar1IsNull(x509TrustManager, "trustManager");
+            if (!sSLSocketFactory.equals(this.sslSocketFactoryOrNull)
+                    || !x509TrustManager.equals(this.x509TrustManagerOrNull)) {
                 this.routeDatabase = null;
             }
             this.sslSocketFactoryOrNull = sSLSocketFactory;
@@ -677,10 +688,13 @@ public class OkHttpClient implements Cloneable, Call.Factory, WebSocket.Factory 
             return this;
         }
 
-        /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
+        /*
+         * JADX WARN: 'this' call moved to the top of the method (can break code
+         * semantics)
+         */
         public Builder(OkHttpClient okHttpClient) {
             this();
-            bzo.q(okHttpClient, "okHttpClient");
+            throwIfVar1IsNull(okHttpClient, "okHttpClient");
             this.dispatcher = okHttpClient.dispatcher();
             this.connectionPool = okHttpClient.connectionPool();
             abf.an(this.interceptors, okHttpClient.interceptors());
@@ -714,7 +728,10 @@ public class OkHttpClient implements Cloneable, Call.Factory, WebSocket.Factory 
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
@@ -734,7 +751,7 @@ public class OkHttpClient implements Cloneable, Call.Factory, WebSocket.Factory 
 
     public OkHttpClient(Builder builder) {
         ProxySelector proxySelector$okhttp;
-        bzo.q(builder, "builder");
+        throwIfVar1IsNull(builder, "builder");
         this.dispatcher = builder.getDispatcher$okhttp();
         this.connectionPool = builder.getConnectionPool$okhttp();
         this.interceptors = Util.toImmutableList(builder.getInterceptors$okhttp());
@@ -778,27 +795,32 @@ public class OkHttpClient implements Cloneable, Call.Factory, WebSocket.Factory 
                 if (((ConnectionSpec) it.next()).isTls()) {
                     if (builder.getSslSocketFactoryOrNull$okhttp() != null) {
                         this.sslSocketFactoryOrNull = builder.getSslSocketFactoryOrNull$okhttp();
-                        CertificateChainCleaner certificateChainCleaner$okhttp = builder.getCertificateChainCleaner$okhttp();
-                        bzo.n(certificateChainCleaner$okhttp);
+                        CertificateChainCleaner certificateChainCleaner$okhttp = builder
+                                .getCertificateChainCleaner$okhttp();
+                        throwIfVar1IsNull(certificateChainCleaner$okhttp);
                         this.certificateChainCleaner = certificateChainCleaner$okhttp;
                         X509TrustManager x509TrustManagerOrNull$okhttp = builder.getX509TrustManagerOrNull$okhttp();
-                        bzo.n(x509TrustManagerOrNull$okhttp);
+                        throwIfVar1IsNull(x509TrustManagerOrNull$okhttp);
                         this.x509TrustManager = x509TrustManagerOrNull$okhttp;
-                        this.certificatePinner = builder.getCertificatePinner$okhttp().withCertificateChainCleaner$okhttp(certificateChainCleaner$okhttp);
+                        this.certificatePinner = builder.getCertificatePinner$okhttp()
+                                .withCertificateChainCleaner$okhttp(certificateChainCleaner$okhttp);
                     } else {
                         Platform.Companion companion = Platform.Companion;
                         X509TrustManager x509TrustManagerPlatformTrustManager = companion.get().platformTrustManager();
                         this.x509TrustManager = x509TrustManagerPlatformTrustManager;
                         Platform platform = companion.get();
-                        bzo.n(x509TrustManagerPlatformTrustManager);
-                        this.sslSocketFactoryOrNull = platform.newSslSocketFactory(x509TrustManagerPlatformTrustManager);
+                        throwIfVar1IsNull(x509TrustManagerPlatformTrustManager);
+                        this.sslSocketFactoryOrNull = platform
+                                .newSslSocketFactory(x509TrustManagerPlatformTrustManager);
                         CertificateChainCleaner.Companion companion2 = CertificateChainCleaner.Companion;
-                        bzo.n(x509TrustManagerPlatformTrustManager);
-                        CertificateChainCleaner certificateChainCleaner = companion2.get(x509TrustManagerPlatformTrustManager);
+                        throwIfVar1IsNull(x509TrustManagerPlatformTrustManager);
+                        CertificateChainCleaner certificateChainCleaner = companion2
+                                .get(x509TrustManagerPlatformTrustManager);
                         this.certificateChainCleaner = certificateChainCleaner;
                         CertificatePinner certificatePinner$okhttp = builder.getCertificatePinner$okhttp();
-                        bzo.n(certificateChainCleaner);
-                        this.certificatePinner = certificatePinner$okhttp.withCertificateChainCleaner$okhttp(certificateChainCleaner);
+                        throwIfVar1IsNull(certificateChainCleaner);
+                        this.certificatePinner = certificatePinner$okhttp
+                                .withCertificateChainCleaner$okhttp(certificateChainCleaner);
                     }
                 }
             }
@@ -817,12 +839,12 @@ public class OkHttpClient implements Cloneable, Call.Factory, WebSocket.Factory 
 
     private final void verifyClientState() {
         List<Interceptor> list = this.interceptors;
-        bzo.o(list, "null cannot be cast to non-null type kotlin.collections.List<okhttp3.Interceptor?>");
+        throwIfVar1IsNull(list, "null cannot be cast to non-null type kotlin.collections.List<okhttp3.Interceptor?>");
         if (list.contains(null)) {
             throw new IllegalStateException(("Null interceptor: " + this.interceptors).toString());
         }
         List<Interceptor> list2 = this.networkInterceptors;
-        bzo.o(list2, "null cannot be cast to non-null type kotlin.collections.List<okhttp3.Interceptor?>");
+        throwIfVar1IsNull(list2, "null cannot be cast to non-null type kotlin.collections.List<okhttp3.Interceptor?>");
         if (list2.contains(null)) {
             throw new IllegalStateException(("Null network interceptor: " + this.networkInterceptors).toString());
         }
@@ -853,7 +875,7 @@ public class OkHttpClient implements Cloneable, Call.Factory, WebSocket.Factory 
         if (this.x509TrustManager != null) {
             throw new IllegalStateException("Check failed.");
         }
-        if (!bzo.f(this.certificatePinner, CertificatePinner.DEFAULT)) {
+        if (!nullSafeIsEqual(this.certificatePinner, CertificatePinner.DEFAULT)) {
             throw new IllegalStateException("Check failed.");
         }
     }
@@ -1000,15 +1022,16 @@ public class OkHttpClient implements Cloneable, Call.Factory, WebSocket.Factory 
 
     @Override // okhttp3.Call.Factory
     public Call newCall(Request request) {
-        bzo.q(request, "request");
+        throwIfVar1IsNull(request, "request");
         return new RealCall(this, request, false);
     }
 
     @Override // okhttp3.WebSocket.Factory
     public WebSocket newWebSocket(Request request, WebSocketListener webSocketListener) {
-        bzo.q(request, "request");
-        bzo.q(webSocketListener, "listener");
-        RealWebSocket realWebSocket = new RealWebSocket(TaskRunner.INSTANCE, request, webSocketListener, new Random(), this.pingIntervalMillis, null, this.minWebSocketMessageToCompress);
+        throwIfVar1IsNull(request, "request");
+        throwIfVar1IsNull(webSocketListener, "listener");
+        RealWebSocket realWebSocket = new RealWebSocket(TaskRunner.INSTANCE, request, webSocketListener, new Random(),
+                this.pingIntervalMillis, null, this.minWebSocketMessageToCompress);
         realWebSocket.connect(this);
         return realWebSocket;
     }

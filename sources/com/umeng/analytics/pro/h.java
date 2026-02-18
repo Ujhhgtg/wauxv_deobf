@@ -14,7 +14,10 @@ class h extends SQLiteOpenHelper {
     private static Context b;
     private String a;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class a {
         private static final h a = new h(h.b, j.b(h.b), g.b, null, 2);
 
@@ -32,7 +35,8 @@ class h extends SQLiteOpenHelper {
     private void c(SQLiteDatabase sQLiteDatabase) {
         try {
             this.a = "create table if not exists __sd(id INTEGER primary key autoincrement, __ii TEXT unique, __a TEXT, __b TEXT, __c TEXT, __d TEXT, __e TEXT, __f TEXT, __g TEXT, __sp TEXT, __pp TEXT, __av TEXT, __vc TEXT)";
-            sQLiteDatabase.execSQL("create table if not exists __sd(id INTEGER primary key autoincrement, __ii TEXT unique, __a TEXT, __b TEXT, __c TEXT, __d TEXT, __e TEXT, __f TEXT, __g TEXT, __sp TEXT, __pp TEXT, __av TEXT, __vc TEXT)");
+            sQLiteDatabase.execSQL(
+                    "create table if not exists __sd(id INTEGER primary key autoincrement, __ii TEXT unique, __a TEXT, __b TEXT, __c TEXT, __d TEXT, __e TEXT, __f TEXT, __g TEXT, __sp TEXT, __pp TEXT, __av TEXT, __vc TEXT)");
         } catch (SQLException unused) {
         }
     }
@@ -40,7 +44,8 @@ class h extends SQLiteOpenHelper {
     private void d(SQLiteDatabase sQLiteDatabase) {
         try {
             this.a = "create table if not exists __is(id INTEGER primary key autoincrement, __ii TEXT unique, __e TEXT, __sp TEXT, __pp TEXT, __av TEXT, __vc TEXT)";
-            sQLiteDatabase.execSQL("create table if not exists __is(id INTEGER primary key autoincrement, __ii TEXT unique, __e TEXT, __sp TEXT, __pp TEXT, __av TEXT, __vc TEXT)");
+            sQLiteDatabase.execSQL(
+                    "create table if not exists __is(id INTEGER primary key autoincrement, __ii TEXT unique, __e TEXT, __sp TEXT, __pp TEXT, __av TEXT, __vc TEXT)");
         } catch (SQLException unused) {
         }
     }
@@ -70,16 +75,28 @@ class h extends SQLiteOpenHelper {
         a();
     }
 
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.java:210)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:196)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:180)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:201)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.java:347)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(TryCatchBlockAttr.java:356)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:202)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.
+     * java:210)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:196)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:180)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:
+     * 201)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.
+     * java:347)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(
+     * TryCatchBlockAttr.java:356)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+     * MarkFinallyVisitor.java:202)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:119)
      */
     @Override // android.database.sqlite.SQLiteOpenHelper
     public void onCreate(SQLiteDatabase sQLiteDatabase) {
@@ -141,7 +158,8 @@ class h extends SQLiteOpenHelper {
     private void b(SQLiteDatabase sQLiteDatabase) {
         try {
             this.a = "create table if not exists __et(id INTEGER primary key autoincrement, __i TEXT, __e TEXT, __s TEXT, __t INTEGER, __av TEXT, __vc TEXT)";
-            sQLiteDatabase.execSQL("create table if not exists __et(id INTEGER primary key autoincrement, __i TEXT, __e TEXT, __s TEXT, __t INTEGER, __av TEXT, __vc TEXT)");
+            sQLiteDatabase.execSQL(
+                    "create table if not exists __et(id INTEGER primary key autoincrement, __i TEXT, __e TEXT, __s TEXT, __t INTEGER, __av TEXT, __vc TEXT)");
         } catch (SQLException unused) {
         }
     }
@@ -158,7 +176,7 @@ class h extends SQLiteOpenHelper {
             if (!j.a(g.d.a, writableDatabase)) {
                 c(writableDatabase);
             }
-            if (!j.a(g.c.a, writableDatabase)) {
+            if (!j.a(g.c.cachedConstructors, writableDatabase)) {
                 d(writableDatabase);
             }
             if (!j.a(g.b.a, writableDatabase)) {
@@ -175,7 +193,8 @@ class h extends SQLiteOpenHelper {
     private void a(SQLiteDatabase sQLiteDatabase) {
         try {
             this.a = "create table if not exists __er(id INTEGER primary key autoincrement, __i TEXT, __a TEXT, __t INTEGER, __av TEXT, __vc TEXT)";
-            sQLiteDatabase.execSQL("create table if not exists __er(id INTEGER primary key autoincrement, __i TEXT, __a TEXT, __t INTEGER, __av TEXT, __vc TEXT)");
+            sQLiteDatabase.execSQL(
+                    "create table if not exists __er(id INTEGER primary key autoincrement, __i TEXT, __a TEXT, __t INTEGER, __av TEXT, __vc TEXT)");
         } catch (SQLException unused) {
         }
     }

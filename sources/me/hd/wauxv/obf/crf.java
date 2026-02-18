@@ -9,22 +9,27 @@ import net.bytebuddy.pool.TypePool;
 public final class crf extends cwn {
     public final bmu af;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'super' call moved to the top of the method (can break code
+     * semantics)
+     */
     public crf(cwd cwdVar, bmu bmuVar, dfx dfxVar) {
         super(cwdVar, bmuVar, dfxVar);
-        bzo.q(cwdVar, "proto");
-        bzo.q(bmuVar, "parentWriter");
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(cwdVar, "proto");
+        throwIfVar1IsNull(bmuVar, "parentWriter");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         this.af = bmuVar;
         if (dfxVar.h() instanceof cur) {
             return;
         }
-        throw new IllegalArgumentException(("The serializer of one of type " + dfxVar.b() + " should be using generic polymorphic serializer, but got " + dfxVar.h() + TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH).toString());
+        throw new IllegalArgumentException(("The serializer of one of type " + dfxVar.b()
+                + " should be using generic polymorphic serializer, but got " + dfxVar.h()
+                + TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH).toString());
     }
 
     @Override // me.hd.wauxv.obf.cwn
     public final void _cb(long j, String str) {
-        bzo.q(str, "value");
+        throwIfVar1IsNull(str, "value");
         if (j != 19501) {
             super._cb(j, str);
         }
@@ -32,7 +37,7 @@ public final class crf extends cwn {
 
     @Override // me.hd.wauxv.obf.cwn
     public final long ae(dfx dfxVar, int i) {
-        bzo.q(dfxVar, "<this>");
+        throwIfVar1IsNull(dfxVar, "<this>");
         if (i == 0) {
             return 19501L;
         }
@@ -47,17 +52,18 @@ public final class crf extends cwn {
 
     @Override // me.hd.wauxv.obf.cwn, me.hd.wauxv.obf.avt
     public final acn o(dfx dfxVar) {
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         if (dfxVar.equals(this.an)) {
             return this;
         }
         cwd cwdVar = this.al;
-        bzo.q(cwdVar, "proto");
+        throwIfVar1IsNull(cwdVar, "proto");
         bmu bmuVar = this.af;
-        bzo.q(bmuVar, "parentWriter");
+        throwIfVar1IsNull(bmuVar, "parentWriter");
         crd crdVar = new crd(cwdVar, bmuVar, dfxVar);
         if (dfxVar.i() != 1) {
-            throw new IllegalArgumentException(("Implementation of oneOf type " + dfxVar.b() + " should contain only 1 element, but get " + dfxVar.i()).toString());
+            throw new IllegalArgumentException(("Implementation of oneOf type " + dfxVar.b()
+                    + " should contain only 1 element, but get " + dfxVar.i()).toString());
         }
         List listK = dfxVar.k(0);
         ArrayList arrayList = new ArrayList();
@@ -69,12 +75,13 @@ public final class crf extends cwn {
         if (((cwg) aaz.s(arrayList)) != null) {
             return crdVar;
         }
-        throw new IllegalArgumentException(("Implementation of oneOf type " + dfxVar.b() + " should have @ProtoNumber annotation").toString());
+        throw new IllegalArgumentException(
+                ("Implementation of oneOf type " + dfxVar.b() + " should have @ProtoNumber annotation").toString());
     }
 
     @Override // me.hd.wauxv.obf.cwn, me.hd.wauxv.obf.avt
     public final avt r(dfx dfxVar) {
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         _by((_bw() & 1152921500311879680L) | ((long) ((int) (ajn.n(dfxVar, 0) & 2147483647L))));
         return this;
     }

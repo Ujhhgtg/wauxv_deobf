@@ -19,7 +19,7 @@ public final class boy {
             return false;
         }
         boy boyVar = (boy) obj;
-        return this.a == boyVar.a && bzo.f(this.b, boyVar.b);
+        return this.a == boyVar.a && nullSafeIsEqual(this.b, boyVar.b);
     }
 
     public final int hashCode() {

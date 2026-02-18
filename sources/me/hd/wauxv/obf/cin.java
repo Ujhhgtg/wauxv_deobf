@@ -13,7 +13,8 @@ public final class cin {
             throw new IllegalArgumentException(cjvVar.g().concat(" does not allow nullable values").toString());
         }
         if (!z && z2 && obj == null) {
-            throw new IllegalArgumentException(("Argument with type " + cjvVar.g() + " has null value but is not nullable.").toString());
+            throw new IllegalArgumentException(
+                    ("Argument with type " + cjvVar.g() + " has null value but is not nullable.").toString());
         }
         this.a = cjvVar;
         this.b = z;
@@ -28,12 +29,12 @@ public final class cin {
         if (obj != null && cin.class == obj.getClass()) {
             cin cinVar = (cin) obj;
             Object obj2 = cinVar.d;
-            if (this.b != cinVar.b || this.c != cinVar.c || !bzo.f(this.a, cinVar.a)) {
+            if (this.b != cinVar.b || this.c != cinVar.c || !nullSafeIsEqual(this.a, cinVar.a)) {
                 return false;
             }
             Object obj3 = this.d;
             if (obj3 != null) {
-                return bzo.f(obj3, obj2);
+                return nullSafeIsEqual(obj3, obj2);
             }
             if (obj2 == null) {
                 return true;
@@ -57,7 +58,7 @@ public final class cin {
             sb.append(" DefaultValue: " + this.d);
         }
         String string = sb.toString();
-        bzo.p(string, "toString(...)");
+        throwIfVar1IsNull(string, "toString(...)");
         return string;
     }
 }

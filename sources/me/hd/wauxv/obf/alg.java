@@ -17,7 +17,7 @@ public final class alg extends dlq {
 
     @Override // me.hd.wauxv.obf.dlq
     public final void b(ViewGroup viewGroup) {
-        bzo.q(viewGroup, "container");
+        throwIfVar1IsNull(viewGroup, "container");
         alh alhVar = this.a;
         dlr dlrVar = (dlr) alhVar.g;
         View view = dlrVar.c.bz;
@@ -31,7 +31,7 @@ public final class alg extends dlq {
 
     @Override // me.hd.wauxv.obf.dlq
     public final void c(ViewGroup viewGroup) {
-        bzo.q(viewGroup, "container");
+        throwIfVar1IsNull(viewGroup, "container");
         alh alhVar = this.a;
         dlr dlrVar = (dlr) alhVar.g;
         if (alhVar.h()) {
@@ -40,8 +40,8 @@ public final class alg extends dlq {
         }
         Context context = viewGroup.getContext();
         View view = dlrVar.c.bz;
-        bzo.p(context, com.umeng.analytics.pro.f.X);
-        io ioVarJ = alhVar.j(context);
+        throwIfVar1IsNull(context, "context");
+        DefaultConfig ioVarJ = alhVar.j(context);
         if (ioVarJ == null) {
             throw new IllegalStateException("Required value was null.");
         }

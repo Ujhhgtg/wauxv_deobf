@@ -26,7 +26,8 @@ public final class dza {
             return false;
         }
         dza dzaVar = (dza) obj;
-        return bzo.f(this.a, dzaVar.a) && bzo.f(this.b, dzaVar.b) && bzo.f(this.c, dzaVar.c);
+        return nullSafeIsEqual(this.a, dzaVar.a) && nullSafeIsEqual(this.b, dzaVar.b)
+                && nullSafeIsEqual(this.c, dzaVar.c);
     }
 
     public final int hashCode() {
@@ -44,6 +45,6 @@ public final class dza {
         sb.append(this.a);
         sb.append(", sdk_user_id=" /* cnb.z(-194914205825834L) */);
         yg.u(sb, this.b, -200879915399978L);
-        return bjs.q(sb, this.c, ')');
+        return concat(sb, this.c, ')');
     }
 }

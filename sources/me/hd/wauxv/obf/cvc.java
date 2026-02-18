@@ -28,7 +28,7 @@ import org.json.JSONObject;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class cvc implements bgf {
+public final /* synthetic */ class cvc implements IHasInvokeMethod {
     public final /* synthetic */ int a;
 
     public /* synthetic */ cvc(int i) {
@@ -89,10 +89,10 @@ public final /* synthetic */ class cvc implements bgf {
                 bahVar.d = cdjVar;
                 return ensVar;
             case 1:
-                bmm bmmVar = (bmm) obj;
-                bmmVar.getClass();
+                HookParamWrapper hookParam = (HookParamWrapper) obj;
+                hookParam.getClass();
                 try {
-                    objX = bmmVar.d()[2];
+                    objX = hookParam.getArgs()[2];
                     if (objX == null) {
                         objX = null;
                     }
@@ -100,28 +100,28 @@ public final /* synthetic */ class cvc implements bgf {
                     objX = bhu.x(th);
                 }
                 obj2 = objX instanceof dcx ? null : objX;
-                bzo.n(obj2);
+                throwIfVar1IsNull(obj2);
                 KeyEvent keyEvent = (KeyEvent) obj2;
                 if (keyEvent.getKeyCode() == 67 && keyEvent.getAction() == 0) {
                     int i6 = bte.a;
-                    azg azgVarAa = dkz.aa(bmmVar);
+                    azg azgVarAa = dkz.aa(hookParam);
                     azgVarAa.b = new cvc(i2);
                     Object objD = ((azk) aaz.e(azgVarAa.c())).d();
-                    bzo.n(objD);
+                    throwIfVar1IsNull(objD);
                     azg azgVarR = dqc.bi(objD).r();
                     uq.a.getClass();
                     azgVarR.a = ajn.ag("com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* cnb.z(-75127567940394L) */);
                     Object objE = ((azk) aaz.e(azgVarR.c())).e();
-                    bzo.n(objE);
+                    throwIfVar1IsNull(objE);
                     FrameLayout frameLayout = (FrameLayout) objE;
                     cde cdeVarT = dqc.bi(frameLayout).t();
                     cdeVarT.ab = "getLastText" /* cnb.z(-76622216559402L) */;
                     Object objJ = ((cdk) aaz.e(cdeVarT.aj())).j(new Object[0]);
-                    bzo.n(objJ);
+                    throwIfVar1IsNull(objJ);
                     cde cdeVarT2 = dqc.bi(frameLayout).t();
                     cdeVarT2.ab = "getLastQuoteMsgId" /* cnb.z(-76536317213482L) */;
                     Object objJ2 = ((cdk) aaz.e(cdeVarT2.aj())).j(new Object[0]);
-                    bzo.n(objJ2);
+                    throwIfVar1IsNull(objJ2);
                     long jLongValue = ((Number) objJ2).longValue();
                     if (((String) objJ).length() == 0 && jLongValue != 0) {
                         emn.bb(up.a).invoke(frameLayout, Boolean.FALSE, Boolean.TRUE);
@@ -132,26 +132,32 @@ public final /* synthetic */ class cvc implements bgf {
                 ((amm) obj).c = new cvc(i4);
                 return ensVar;
             case 3:
-                return Boolean.valueOf(dnr.bp(((Class) obj).getName(), "com.tencent.mm.pluginsdk.ui.chat." /* cnb.z(-472016905829162L) */, false));
+                return Boolean.valueOf(dnr.bp(((Class) obj).getName(), "com.tencent.mm.pluginsdk.ui.chat." /*
+                                                                                                            * cnb.z(-
+                                                                                                            * 472016905829162L)
+                                                                                                            */, false));
             case 4:
                 bah bahVar2 = (bah) obj;
-                String[] strArr = {"com.tencent.mm.pluginsdk.ui.chat" /* cnb.z(-460343184718634L) */};
+                String[] strArr = { "com.tencent.mm.pluginsdk.ui.chat" /* cnb.z(-460343184718634L) */ };
                 bahVar2.getClass();
                 bahVar2.a = la.ab(strArr);
                 cdj cdjVar2 = new cdj();
                 cdjVar2.s("onKey" /* cnb.z(-460201450797866L) */);
-                cdjVar2.t("ChatFooterKtHelper" /* cnb.z(-460158501124906L) */, "supportAutoComplete err" /* cnb.z(-460661012298538L) */);
+                cdjVar2.t("ChatFooterKtHelper" /* cnb.z(-460158501124906L) */, "supportAutoComplete err" /*
+                                                                                                          * cnb.z(-
+                                                                                                          * 460661012298538L)
+                                                                                                          */);
                 bahVar2.d = cdjVar2;
                 return ensVar;
             case 5:
                 ewz.aq(cxb.b, new cwz((ConversationBean) obj, i5));
                 return ensVar;
             case 6:
-                bmm bmmVar2 = (bmm) obj;
+                HookParamWrapper hookParam2 = (HookParamWrapper) obj;
                 if (cnb.ab(ewk.j) || cnb.ac(ewh.j)) {
-                    bmmVar2.getClass();
+                    hookParam2.getClass();
                     try {
-                        objX2 = bmmVar2.d()[0];
+                        objX2 = hookParam2.getArgs()[0];
                         if (objX2 == null) {
                             objX2 = null;
                         }
@@ -160,7 +166,7 @@ public final /* synthetic */ class cvc implements bgf {
                     }
                     Object obj3 = objX2 instanceof dcx ? null : objX2;
                     try {
-                        objX3 = bmmVar2.d()[2];
+                        objX3 = hookParam2.getArgs()[2];
                         if (objX3 == null) {
                             objX3 = null;
                         }
@@ -169,7 +175,7 @@ public final /* synthetic */ class cvc implements bgf {
                     }
                     Object obj4 = objX3 instanceof dcx ? null : objX3;
                     try {
-                        objX4 = bmmVar2.d()[3];
+                        objX4 = hookParam2.getArgs()[3];
                         if (objX4 == null) {
                             objX4 = null;
                         }
@@ -179,10 +185,10 @@ public final /* synthetic */ class cvc implements bgf {
                     if (objX4 instanceof dcx) {
                         objX4 = null;
                     }
-                    bzo.n(objX4);
+                    throwIfVar1IsNull(objX4);
                     View view = (View) objX4;
                     try {
-                        objX5 = bmmVar2.d()[4];
+                        objX5 = hookParam2.getArgs()[4];
                         if (objX5 == null) {
                             objX5 = null;
                         }
@@ -192,10 +198,10 @@ public final /* synthetic */ class cvc implements bgf {
                     if (objX5 instanceof dcx) {
                         objX5 = null;
                     }
-                    bzo.n(objX5);
+                    throwIfVar1IsNull(objX5);
                     long jLongValue2 = ((Number) objX5).longValue();
                     try {
-                        objX6 = bmmVar2.d()[5];
+                        objX6 = hookParam2.getArgs()[5];
                         if (objX6 == null) {
                             objX6 = null;
                         }
@@ -205,10 +211,10 @@ public final /* synthetic */ class cvc implements bgf {
                     if (objX6 instanceof dcx) {
                         objX6 = null;
                     }
-                    bzo.n(objX6);
+                    throwIfVar1IsNull(objX6);
                     String str = (String) objX6;
                     try {
-                        objX7 = bmmVar2.d()[6];
+                        objX7 = hookParam2.getArgs()[6];
                         if (objX7 == null) {
                             objX7 = null;
                         }
@@ -217,12 +223,13 @@ public final /* synthetic */ class cvc implements bgf {
                     }
                     Object obj5 = objX7 instanceof dcx ? null : objX7;
                     cgy.a.getClass();
-                    emn.bb(cxf.a).invoke(null, obj3, obj4, cgy.b(jLongValue2), view, Long.valueOf(jLongValue2), str, obj5);
-                    bmmVar2.h(null);
+                    emn.bb(cxf.a).invoke(null, obj3, obj4, cgy.b(jLongValue2), view, Long.valueOf(jLongValue2), str,
+                            obj5);
+                    hookParam2.setResult(null);
                 } else if (cnb.ab(ewk.g) || cnb.ac(ewh.f)) {
-                    bmmVar2.getClass();
+                    hookParam2.getClass();
                     try {
-                        objX8 = bmmVar2.d()[0];
+                        objX8 = hookParam2.getArgs()[0];
                         if (objX8 == null) {
                             objX8 = null;
                         }
@@ -231,7 +238,7 @@ public final /* synthetic */ class cvc implements bgf {
                     }
                     Object obj6 = objX8 instanceof dcx ? null : objX8;
                     try {
-                        objX9 = bmmVar2.d()[2];
+                        objX9 = hookParam2.getArgs()[2];
                         if (objX9 == null) {
                             objX9 = null;
                         }
@@ -240,7 +247,7 @@ public final /* synthetic */ class cvc implements bgf {
                     }
                     Object obj7 = objX9 instanceof dcx ? null : objX9;
                     try {
-                        objX10 = bmmVar2.d()[3];
+                        objX10 = hookParam2.getArgs()[3];
                         if (objX10 == null) {
                             objX10 = null;
                         }
@@ -250,10 +257,10 @@ public final /* synthetic */ class cvc implements bgf {
                     if (objX10 instanceof dcx) {
                         objX10 = null;
                     }
-                    bzo.n(objX10);
+                    throwIfVar1IsNull(objX10);
                     View view2 = (View) objX10;
                     try {
-                        objX11 = bmmVar2.d()[4];
+                        objX11 = hookParam2.getArgs()[4];
                         if (objX11 == null) {
                             objX11 = null;
                         }
@@ -263,10 +270,10 @@ public final /* synthetic */ class cvc implements bgf {
                     if (objX11 instanceof dcx) {
                         objX11 = null;
                     }
-                    bzo.n(objX11);
+                    throwIfVar1IsNull(objX11);
                     long jLongValue3 = ((Number) objX11).longValue();
                     try {
-                        objX12 = bmmVar2.d()[5];
+                        objX12 = hookParam2.getArgs()[5];
                         if (objX12 == null) {
                             objX12 = null;
                         }
@@ -276,10 +283,10 @@ public final /* synthetic */ class cvc implements bgf {
                     if (objX12 instanceof dcx) {
                         objX12 = null;
                     }
-                    bzo.n(objX12);
+                    throwIfVar1IsNull(objX12);
                     String str2 = (String) objX12;
                     try {
-                        objX13 = bmmVar2.d()[6];
+                        objX13 = hookParam2.getArgs()[6];
                         if (objX13 == null) {
                             objX13 = null;
                         }
@@ -288,7 +295,7 @@ public final /* synthetic */ class cvc implements bgf {
                     }
                     Object obj8 = objX13 instanceof dcx ? null : objX13;
                     try {
-                        objX14 = bmmVar2.d()[7];
+                        objX14 = hookParam2.getArgs()[7];
                         if (objX14 == null) {
                             objX14 = null;
                         }
@@ -298,14 +305,15 @@ public final /* synthetic */ class cvc implements bgf {
                     if (objX14 instanceof dcx) {
                         objX14 = null;
                     }
-                    bzo.n(objX14);
+                    throwIfVar1IsNull(objX14);
                     cgy.a.getClass();
-                    emn.bb(cxf.a).invoke(null, obj6, obj7, cgy.b(jLongValue3), view2, Long.valueOf(jLongValue3), str2, obj8, (Boolean) objX14);
-                    bmmVar2.h(null);
+                    emn.bb(cxf.a).invoke(null, obj6, obj7, cgy.b(jLongValue3), view2, Long.valueOf(jLongValue3), str2,
+                            obj8, (Boolean) objX14);
+                    hookParam2.setResult(null);
                 } else {
-                    bmmVar2.getClass();
+                    hookParam2.getClass();
                     try {
-                        objX15 = bmmVar2.d()[0];
+                        objX15 = hookParam2.getArgs()[0];
                         if (objX15 == null) {
                             objX15 = null;
                         }
@@ -314,7 +322,7 @@ public final /* synthetic */ class cvc implements bgf {
                     }
                     Object obj9 = objX15 instanceof dcx ? null : objX15;
                     try {
-                        objX16 = bmmVar2.d()[2];
+                        objX16 = hookParam2.getArgs()[2];
                         if (objX16 == null) {
                             objX16 = null;
                         }
@@ -323,7 +331,7 @@ public final /* synthetic */ class cvc implements bgf {
                     }
                     Object obj10 = objX16 instanceof dcx ? null : objX16;
                     try {
-                        objX17 = bmmVar2.d()[3];
+                        objX17 = hookParam2.getArgs()[3];
                         if (objX17 == null) {
                             objX17 = null;
                         }
@@ -333,10 +341,10 @@ public final /* synthetic */ class cvc implements bgf {
                     if (objX17 instanceof dcx) {
                         objX17 = null;
                     }
-                    bzo.n(objX17);
+                    throwIfVar1IsNull(objX17);
                     View view3 = (View) objX17;
                     try {
-                        objX18 = bmmVar2.d()[4];
+                        objX18 = hookParam2.getArgs()[4];
                         if (objX18 == null) {
                             objX18 = null;
                         }
@@ -346,10 +354,10 @@ public final /* synthetic */ class cvc implements bgf {
                     if (objX18 instanceof dcx) {
                         objX18 = null;
                     }
-                    bzo.n(objX18);
+                    throwIfVar1IsNull(objX18);
                     long jLongValue4 = ((Number) objX18).longValue();
                     try {
-                        objX19 = bmmVar2.d()[5];
+                        objX19 = hookParam2.getArgs()[5];
                         if (objX19 == null) {
                             objX19 = null;
                         }
@@ -358,7 +366,7 @@ public final /* synthetic */ class cvc implements bgf {
                     }
                     Object obj11 = objX19 instanceof dcx ? null : objX19;
                     try {
-                        objX20 = bmmVar2.d()[6];
+                        objX20 = hookParam2.getArgs()[6];
                         if (objX20 == null) {
                             objX20 = null;
                         }
@@ -368,10 +376,11 @@ public final /* synthetic */ class cvc implements bgf {
                     if (objX20 instanceof dcx) {
                         objX20 = null;
                     }
-                    bzo.n(objX20);
+                    throwIfVar1IsNull(objX20);
                     cgy.a.getClass();
-                    emn.bb(cxf.a).invoke(null, obj9, obj10, cgy.b(jLongValue4), view3, Long.valueOf(jLongValue4), obj11, (Boolean) objX20);
-                    bmmVar2.h(null);
+                    emn.bb(cxf.a).invoke(null, obj9, obj10, cgy.b(jLongValue4), view3, Long.valueOf(jLongValue4), obj11,
+                            (Boolean) objX20);
+                    hookParam2.setResult(null);
                 }
                 return ensVar;
             case 7:
@@ -382,30 +391,34 @@ public final /* synthetic */ class cvc implements bgf {
                 return ensVar;
             case 9:
                 bah bahVar3 = (bah) obj;
-                String[] strArr2 = {"com.tencent.mm.ui.chatting.viewitems" /* cnb.z(-461640264842026L) */};
+                String[] strArr2 = { "com.tencent.mm.ui.chatting.viewitems" /* cnb.z(-461640264842026L) */ };
                 bahVar3.getClass();
                 bahVar3.a = la.ab(strArr2);
                 cdj cdjVar3 = new cdj();
-                cdjVar3.t("MicroMsg.msgquote.QuoteMsgSourceClickLogic" /* cnb.z(-460965954976554L) */, "handleItemClickToPositionEvent,quotedMsg is null!" /* cnb.z(-460746911644458L) */);
+                cdjVar3.t("MicroMsg.msgquote.QuoteMsgSourceClickLogic" /* cnb.z(-460965954976554L) */,
+                        "handleItemClickToPositionEvent,quotedMsg is null!" /* cnb.z(-460746911644458L) */);
                 bahVar3.d = cdjVar3;
                 return ensVar;
             case 10:
                 bah bahVar4 = (bah) obj;
-                String[] strArr3 = {"com.tencent.mm.ui.chatting.viewitems" /* cnb.z(-459956637661994L) */};
+                String[] strArr3 = { "com.tencent.mm.ui.chatting.viewitems" /* cnb.z(-459956637661994L) */ };
                 bahVar4.getClass();
                 bahVar4.a = la.ab(strArr3);
                 cdj cdjVar4 = new cdj();
-                cdjVar4.t("MicroMsg.msgquote.QuoteMsgSourceClickLogic" /* cnb.z(-461481351052074L) */, "handleItemClickEvent,quotedMsg is null!" /* cnb.z(-461262307719978L) */);
+                cdjVar4.t("MicroMsg.msgquote.QuoteMsgSourceClickLogic" /* cnb.z(-461481351052074L) */,
+                        "handleItemClickEvent,quotedMsg is null!" /* cnb.z(-461262307719978L) */);
                 bahVar4.d = cdjVar4;
                 return ensVar;
             case 11:
                 View view4 = (View) obj;
                 View viewK = dkz.k(view4, R.layout.module_dialog_quote_remind_msg, null, false);
                 int i7 = R.id.moduleDialogEdtQuoteRemindMsgColor;
-                TextInputEditText textInputEditText = (TextInputEditText) cnd.aq(viewK, R.id.moduleDialogEdtQuoteRemindMsgColor);
+                TextInputEditText textInputEditText = (TextInputEditText) cnd.aq(viewK,
+                        R.id.moduleDialogEdtQuoteRemindMsgColor);
                 if (textInputEditText != null) {
                     i7 = R.id.moduleDialogEdtQuoteRemindMsgText;
-                    TextInputEditText textInputEditText2 = (TextInputEditText) cnd.aq(viewK, R.id.moduleDialogEdtQuoteRemindMsgText);
+                    TextInputEditText textInputEditText2 = (TextInputEditText) cnd.aq(viewK,
+                            R.id.moduleDialogEdtQuoteRemindMsgText);
                     if (textInputEditText2 != null) {
                         i7 = R.id.moduleDialogInputQuoteRemindMsgColor;
                         if (((TextInputLayout) cnd.aq(viewK, R.id.moduleDialogInputQuoteRemindMsgColor)) != null) {
@@ -430,15 +443,16 @@ public final /* synthetic */ class cvc implements bgf {
                         }
                     }
                 }
-                throw new NullPointerException("Missing required view with ID: " /* cnb.z(-663314749193002L) */.concat(viewK.getResources().getResourceName(i7)));
+                throw new NullPointerException("Missing required view with ID: "
+                        /* cnb.z(-663314749193002L) */.concat(viewK.getResources().getResourceName(i7)));
             case 12:
-                bmm bmmVar3 = (bmm) obj;
-                csm csmVar = (cnb.ab(ewk.n) || cnb.ac(ewh.q)) ? new csm(1, 5) : new csm(0, 4);
-                int iIntValue = ((Number) csmVar.a).intValue();
-                int iIntValue2 = ((Number) csmVar.b).intValue();
-                bmmVar3.getClass();
+                HookParamWrapper hookParam3 = (HookParamWrapper) obj;
+                Pair pairVar = (cnb.ab(ewk.n) || cnb.ac(ewh.q)) ? new Pair(1, 5) : new Pair(0, 4);
+                int iIntValue = ((Number) pairVar.first).intValue();
+                int iIntValue2 = ((Number) pairVar.second).intValue();
+                hookParam3.getClass();
                 try {
-                    objX21 = bmmVar3.d()[iIntValue];
+                    objX21 = hookParam3.getArgs()[iIntValue];
                     if (objX21 == null) {
                         objX21 = null;
                     }
@@ -448,17 +462,17 @@ public final /* synthetic */ class cvc implements bgf {
                 if (objX21 instanceof dcx) {
                     objX21 = null;
                 }
-                bzo.n(objX21);
+                throwIfVar1IsNull(objX21);
                 int i8 = bte.a;
                 azg azgVarR2 = dqc.bi(objX21).r();
                 azgVarR2.ab = "field_unReadCount" /* cnb.z(-457542866041642L) */;
                 Object objE2 = ((azk) yg.e(azgVarR2)).e();
-                bzo.n(objE2);
+                throwIfVar1IsNull(objE2);
                 int iIntValue3 = ((Number) objE2).intValue();
                 azg azgVarR3 = dqc.bi(objX21).r();
                 azgVarR3.ab = "field_unReadMuteCount" /* cnb.z(-457482736499498L) */;
                 Object objE3 = ((azk) yg.e(azgVarR3)).e();
-                bzo.n(objE3);
+                throwIfVar1IsNull(objE3);
                 int iIntValue4 = ((Number) objE3).intValue();
                 azg azgVarR4 = dqc.bi(objX21).r();
                 azgVarR4.ab = "field_msgType" /* cnb.z(-457920823163690L) */;
@@ -466,14 +480,14 @@ public final /* synthetic */ class cvc implements bgf {
                 azg azgVarR5 = dqc.bi(objX21).r();
                 azgVarR5.ab = "field_content" /* cnb.z(-457912233229098L) */;
                 Object objE4 = ((azk) yg.e(azgVarR5)).e();
-                bzo.n(objE4);
+                throwIfVar1IsNull(objE4);
                 String str4 = (String) objE4;
-                if ((iIntValue3 > 0 || iIntValue4 > 0) && bzo.f(str3, String.valueOf(ewg.s.w))) {
+                if ((iIntValue3 > 0 || iIntValue4 > 0) && nullSafeIsEqual(str3, String.valueOf(ewg.s.w))) {
                     String sendTalker = new MsgInfoBean.QuoteMsg(str4).getSendTalker();
                     acx.a.getClass();
-                    if (bzo.f(sendTalker, acx.b())) {
+                    if (nullSafeIsEqual(sendTalker, acx.b())) {
                         try {
-                            objX22 = bmmVar3.d()[iIntValue2];
+                            objX22 = hookParam3.getArgs()[iIntValue2];
                             if (objX22 == null) {
                                 objX22 = null;
                             }
@@ -482,10 +496,11 @@ public final /* synthetic */ class cvc implements bgf {
                         }
                         obj2 = objX22 instanceof dcx ? null : objX22;
                         SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(cxk.a.o());
-                        spannableStringBuilder.setSpan(new ForegroundColorSpan(Color.parseColor(cxj.a.o())), 0, spannableStringBuilder.length(), 33);
+                        spannableStringBuilder.setSpan(new ForegroundColorSpan(Color.parseColor(cxj.a.o())), 0,
+                                spannableStringBuilder.length(), 33);
                         spannableStringBuilder.append((CharSequence) " " /* cnb.z(-457834923817770L) */);
                         spannableStringBuilder.append((CharSequence) obj2);
-                        bmmVar3.h(spannableStringBuilder);
+                        hookParam3.locateDex(spannableStringBuilder);
                     }
                 }
                 return ensVar;
@@ -497,7 +512,8 @@ public final /* synthetic */ class cvc implements bgf {
             case 14:
                 bag bagVar = (bag) obj;
                 zb zbVar = new zb();
-                zbVar.k("MicroMsg.ConversationWithCacheAdapter" /* cnb.z(-457843513752362L) */, "is transfer remind msg " /* cnb.z(-459312392567594L) */);
+                zbVar.k("MicroMsg.ConversationWithCacheAdapter" /* cnb.z(-457843513752362L) */,
+                        "is transfer remind msg " /* cnb.z(-459312392567594L) */);
                 bagVar.getClass();
                 bagVar.b = zbVar;
                 return ensVar;
@@ -512,10 +528,10 @@ public final /* synthetic */ class cvc implements bgf {
                 bahVar5.d = cdjVar5;
                 return ensVar;
             case 16:
-                bmm bmmVar4 = (bmm) obj;
-                bmmVar4.getClass();
+                HookParamWrapper hookParam4 = (HookParamWrapper) obj;
+                hookParam4.getClass();
                 try {
-                    objX23 = bmmVar4.d()[0];
+                    objX23 = hookParam4.getArgs()[0];
                     if (objX23 == null) {
                         objX23 = null;
                     }
@@ -523,9 +539,9 @@ public final /* synthetic */ class cvc implements bgf {
                     objX23 = bhu.x(th23);
                 }
                 Object obj12 = objX23 instanceof dcx ? null : objX23;
-                bzo.n(obj12);
+                throwIfVar1IsNull(obj12);
                 try {
-                    objX24 = bmmVar4.d()[1];
+                    objX24 = hookParam4.getArgs()[1];
                     if (objX24 == null) {
                         objX24 = null;
                     }
@@ -535,14 +551,14 @@ public final /* synthetic */ class cvc implements bgf {
                 if (objX24 instanceof dcx) {
                     objX24 = null;
                 }
-                bzo.n(objX24);
+                throwIfVar1IsNull(objX24);
                 int i9 = bte.a;
                 azg azgVarR6 = dqc.bi(obj12).r();
                 azgVarR6.a = dal.b(View.class);
                 Object objE5 = ((azk) yg.e(azgVarR6)).e();
-                bzo.n(objE5);
+                throwIfVar1IsNull(objE5);
                 View viewB = erb.b((ViewGroup) objE5, "" /* cnb.z(-86539296045866L) */, 0, 1, 1, 1, 1);
-                bzo.n(viewB);
+                throwIfVar1IsNull(viewB);
                 TextView textView = (TextView) viewB;
                 Field[] declaredFields = objX24.getClass().getDeclaredFields();
                 int length = declaredFields.length;
@@ -553,16 +569,22 @@ public final /* synthetic */ class cvc implements bgf {
                     field = declaredFields[i10];
                     field.setAccessible(true);
                     if (z) {
-                        throw new IllegalArgumentException("Array contains more than one matching element." /* cnb.z(-540817986943786L) */);
+                        throw new IllegalArgumentException("Array contains more than one matching element." /*
+                                                                                                             * cnb.z(-
+                                                                                                             * 540817986943786L)
+                                                                                                             */);
                     }
                     i10++;
                     z = true;
                 }
                 if (!z) {
-                    throw new NoSuchElementException("Array contains no element matching the predicate." /* cnb.z(-540066367666986L) */);
+                    throw new NoSuchElementException("Array contains no element matching the predicate." /*
+                                                                                                          * cnb.z(-
+                                                                                                          * 540066367666986L)
+                                                                                                          */);
                 }
                 Object obj13 = field.get(objX24);
-                bzo.n(obj13);
+                throwIfVar1IsNull(obj13);
                 int i11 = bte.a;
                 azg azgVarR7 = dqc.bi(obj13).r();
                 azgVarR7.a = dal.b(cls);
@@ -579,7 +601,11 @@ public final /* synthetic */ class cvc implements bgf {
                                     z2 = true;
                                     break;
                                 }
-                                throw new IllegalArgumentException("Collection contains more than one matching element." /* cnb.z(-540349835508522L) */);
+                                throw new IllegalArgumentException(
+                                        "Collection contains more than one matching element." /*
+                                                                                               * cnb.z(-
+                                                                                               * 540349835508522L)
+                                                                                               */);
                             }
                             if (!Character.isDigit(str5.charAt(i12))) {
                             }
@@ -589,20 +615,34 @@ public final /* synthetic */ class cvc implements bgf {
                     }
                 }
                 if (!z2) {
-                    throw new NoSuchElementException("Collection contains no element matching the predicate." /* cnb.z(-540160856947498L) */);
+                    throw new NoSuchElementException("Collection contains no element matching the predicate." /*
+                                                                                                               * cnb.z(-
+                                                                                                               * 540160856947498L)
+                                                                                                               */);
                 }
                 Object objE6 = ((azk) obj14).e();
-                bzo.n(objE6);
+                throwIfVar1IsNull(objE6);
                 long j = Long.parseLong((String) objE6) * ((long) 1000);
                 dad.a.getClass();
                 int i13 = drv.a;
-                textView.setText(cnh.ag(j, bzo.f(Instant.ofEpochMilli(j).atZone(ZoneId.systemDefault()).toLocalDate(), LocalDate.now()) ? "HH:mm:ss" /* cnb.z(-538786467412778L) */ : Instant.ofEpochMilli(j).atZone(ZoneId.systemDefault()).toLocalDate().getYear() == LocalDate.now().getYear() ? "M月d日 HH:mm:ss" /* cnb.z(-539297568521002L) */ : "yyyy年M月d日 HH:mm:ss" /* cnb.z(-539220259109674L) */, null, 2));
+                textView.setText(cnh.ag(j,
+                        nullSafeIsEqual(Instant.ofEpochMilli(j).atZone(ZoneId.systemDefault()).toLocalDate(),
+                                LocalDate.now())
+                                        ? "HH:mm:ss"
+                                        /* cnb.z(-538786467412778L) */ : Instant.ofEpochMilli(j)
+                                                .atZone(ZoneId.systemDefault())
+                                                .toLocalDate().getYear() == LocalDate.now().getYear() ? "M月d日 HH:mm:ss"
+                                                        /* cnb.z(-539297568521002L) */ : "yyyy年M月d日 HH:mm:ss" /*
+                                                                                                               * cnb.z(-
+                                                                                                               * 539220259109674L)
+                                                                                                               */,
+                        null, 2));
                 return ensVar;
             case 17:
-                bmm bmmVar5 = (bmm) obj;
-                bmmVar5.getClass();
+                HookParamWrapper hookParam5 = (HookParamWrapper) obj;
+                hookParam5.getClass();
                 try {
-                    objX25 = bmmVar5.d()[2];
+                    objX25 = hookParam5.getArgs()[2];
                     if (objX25 == null) {
                         objX25 = null;
                     }
@@ -613,10 +653,12 @@ public final /* synthetic */ class cvc implements bgf {
                 if (jSONObject != null) {
                     dad.a.getClass();
                     if (Math.random() > 0.65d) {
-                        List listAg = aba.ag("Hd" /* cnb.z(-539173014469418L) */, "久雾" /* cnb.z(-539108589959978L) */, "豆子" /* cnb.z(-539130064796458L) */, "拖鞋" /* cnb.z(-539134359763754L) */);
+                        List listAg = aba.ag("Hd" /* cnb.z(-539173014469418L) */, "久雾" /* cnb.z(-539108589959978L) */,
+                                "豆子" /* cnb.z(-539130064796458L) */, "拖鞋" /* cnb.z(-539134359763754L) */);
                         ae aeVar = cyj.f;
                         String str6 = (String) aaz.q(listAg);
-                        jSONObject.put("changeWording" /* cnb.z(-539087115123498L) */, "已存入" /* cnb.z(-540659073153834L) */ + str6 + "的余额(WA)" /* cnb.z(-540676253023018L) */);
+                        jSONObject.put("changeWording" /* cnb.z(-539087115123498L) */,
+                                "已存入" /* cnb.z(-540659073153834L) */ + str6 + "的余额(WA)" /* cnb.z(-540676253023018L) */);
                     }
                     double d = jSONObject.getInt("totalAmount" /* cnb.z(-540641893284650L) */);
                     int i14 = jSONObject.getInt("totalNum" /* cnb.z(-540555993938730L) */);
@@ -646,15 +688,20 @@ public final /* synthetic */ class cvc implements bgf {
                 return ensVar;
             case 19:
                 bah bahVar6 = (bah) obj;
-                String[] strArr4 = {"com.tencent.mm.plugin.luckymoney.ui" /* cnb.z(-537158674807594L) */};
+                String[] strArr4 = { "com.tencent.mm.plugin.luckymoney.ui" /* cnb.z(-537158674807594L) */ };
                 bahVar6.getClass();
                 bahVar6.a = la.ab(strArr4);
                 cdj cdjVar6 = new cdj();
-                cdjVar6.t("MicroMsg.LuckyMoneyDetailUI" /* cnb.z(-537588171537194L) */, "try get user contact: %s" /* cnb.z(-537433552714538L) */);
+                cdjVar6.t("MicroMsg.LuckyMoneyDetailUI" /* cnb.z(-537588171537194L) */, "try get user contact: %s" /*
+                                                                                                                    * cnb
+                                                                                                                    * .z
+                                                                                                                    * (-
+                                                                                                                    * 537433552714538L)
+                                                                                                                    */);
                 bahVar6.d = cdjVar6;
                 return ensVar;
             case 20:
-                ((bmm) obj).h(Boolean.FALSE);
+                ((HookParamWrapper) obj).setResult(Boolean.FALSE);
                 return ensVar;
             case 21:
                 ((amm) obj).c = new cvc(22);
@@ -672,7 +719,7 @@ public final /* synthetic */ class cvc implements bgf {
                 return ensVar;
             case 23:
                 int i16 = bte.a;
-                azg azgVarAa2 = dkz.aa((bmm) obj);
+                azg azgVarAa2 = dkz.aa((HookParamWrapper) obj);
                 azgVarAa2.a = dal.b(cls4);
                 for (azk azkVar : azgVarAa2.c()) {
                     Integer num = (Integer) azkVar.e();
@@ -687,14 +734,15 @@ public final /* synthetic */ class cvc implements bgf {
             case 25:
                 bah bahVar8 = (bah) obj;
                 cdj cdjVar8 = new cdj();
-                cdjVar8.t("MicroMsg.InputTextBoundaryCheck" /* cnb.z(-497365802810154L) */, "edit text view is null" /* cnb.z(-498877631298346L) */);
+                cdjVar8.t("MicroMsg.InputTextBoundaryCheck" /* cnb.z(-497365802810154L) */,
+                        "edit text view is null" /* cnb.z(-498877631298346L) */);
                 bahVar8.getClass();
                 bahVar8.d = cdjVar8;
                 return ensVar;
             case 26:
                 int i17 = bte.a;
-                azg azgVarAa3 = dkz.aa((bmm) obj);
-                abf.ao(azgVarAa3.ad, (cdy[]) Arrays.copyOf(new cdy[]{cdy.b, cdy.d}, 2));
+                azg azgVarAa3 = dkz.aa((HookParamWrapper) obj);
+                abf.ao(azgVarAa3.ad, (cdy[]) Arrays.copyOf(new cdy[] { cdy.b, cdy.d }, 2));
                 azgVarAa3.a = dal.b(cls4);
                 for (azk azkVar2 : azgVarAa3.c()) {
                     Integer num2 = (Integer) azkVar2.e();
@@ -704,7 +752,7 @@ public final /* synthetic */ class cvc implements bgf {
                 }
                 return ensVar;
             case 27:
-                ((bmm) obj).h(Boolean.FALSE);
+                ((HookParamWrapper) obj).setResult(Boolean.FALSE);
                 return ensVar;
             case 28:
                 bah bahVar9 = (bah) obj;
@@ -714,10 +762,10 @@ public final /* synthetic */ class cvc implements bgf {
                 bahVar9.d = cdjVar9;
                 return ensVar;
             default:
-                bmm bmmVar6 = (bmm) obj;
-                bmmVar6.getClass();
+                HookParamWrapper hookParam6 = (HookParamWrapper) obj;
+                hookParam6.getClass();
                 try {
-                    objX26 = bmmVar6.d()[0];
+                    objX26 = hookParam6.getArgs()[0];
                     if (objX26 == null) {
                         objX26 = null;
                     }
@@ -727,25 +775,30 @@ public final /* synthetic */ class cvc implements bgf {
                 if (objX26 instanceof dcx) {
                     objX26 = null;
                 }
-                bzo.n(objX26);
+                throwIfVar1IsNull(objX26);
                 String str7 = (String) objX26;
                 try {
-                    objX27 = bmmVar6.d()[1];
+                    objX27 = hookParam6.getArgs()[1];
                     if (objX27 == null) {
                         objX27 = null;
                     }
                 } catch (Throwable th27) {
                     objX27 = bhu.x(th27);
                 }
-                bzo.n(objX27 instanceof dcx ? null : objX27);
+                throwIfVar1IsNull(objX27 instanceof dcx ? null : objX27);
                 for (bny bnyVar : dbl.b) {
                     try {
-                        bnyVar.d(bmmVar6, str7);
+                        bnyVar.d(hookParam6, str7);
                     } catch (Exception e) {
                         ArrayList arrayList = ewq.a;
                         StringBuilder sb3 = new StringBuilder();
                         sb3.append("onGetRepairerConfig " /* cnb.z(-55997783604010L) */);
-                        ewq.e(yg.n(sb3, bnyVar instanceof doo ? ((doo) bnyVar).f() : "LoadHook" /* cnb.z(-55873229552426L) */, -55851754715946L), e, 12);
+                        ewq.e(yg.n(sb3,
+                                bnyVar instanceof BaseHook ? ((BaseHook) bnyVar).getResult() : "LoadHook" /*
+                                                                                                           * cnb.z(-
+                                                                                                           * 55873229552426L)
+                                                                                                           */,
+                                -55851754715946L), e, 12);
                     }
                 }
                 return ensVar;

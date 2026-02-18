@@ -9,7 +9,10 @@ import android.os.Parcel;
 /* JADX INFO: loaded from: classes.dex */
 public interface d extends IInterface {
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class a implements d {
         @Override // com.umeng.analytics.pro.d
         public String a() {
@@ -38,14 +41,20 @@ public interface d extends IInterface {
 
     String b(String str);
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static abstract class b extends Binder implements d {
         static final int a = 1;
         static final int b = 2;
         static final int c = 3;
         private static final String d = "com.samsung.android.deviceidservice.IDeviceIdService";
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static class a implements d {
             public static d a;
             private IBinder b;
@@ -61,11 +70,11 @@ public interface d extends IInterface {
                 Parcel parcelObtain2 = Parcel.obtain();
                 try {
                     parcelObtain.writeInterfaceToken(b.d);
-                    if (this.b.transact(1, parcelObtain, parcelObtain2, 0) || b.b() == null) {
+                    if (this.b.transact(1, parcelObtain, parcelObtain2, 0) || b.tryGetClassByName() == null) {
                         parcelObtain2.readException();
                         string = parcelObtain2.readString();
                     } else {
-                        string = b.b().a();
+                        string = b.tryGetClassByName().a();
                     }
                     return string;
                 } finally {
@@ -91,11 +100,11 @@ public interface d extends IInterface {
                 try {
                     parcelObtain.writeInterfaceToken(b.d);
                     parcelObtain.writeString(str);
-                    if (this.b.transact(3, parcelObtain, parcelObtain2, 0) || b.b() == null) {
+                    if (this.b.transact(3, parcelObtain, parcelObtain2, 0) || b.tryGetClassByName() == null) {
                         parcelObtain2.readException();
                         string = parcelObtain2.readString();
                     } else {
-                        string = b.b().b(str);
+                        string = b.tryGetClassByName().tryGetClassByName(str);
                     }
                     return string;
                 } finally {
@@ -112,8 +121,8 @@ public interface d extends IInterface {
                 try {
                     parcelObtain.writeInterfaceToken(b.d);
                     parcelObtain.writeString(str);
-                    if (!this.b.transact(2, parcelObtain, parcelObtain2, 0) && b.b() != null) {
-                        string = b.b().a(str);
+                    if (!this.b.transact(2, parcelObtain, parcelObtain2, 0) && b.tryGetClassByName() != null) {
+                        string = b.tryGetClassByName().a(str);
                     } else {
                         parcelObtain2.readException();
                         string = parcelObtain2.readString();
@@ -135,11 +144,13 @@ public interface d extends IInterface {
                 return null;
             }
             IInterface iInterfaceQueryLocalInterface = iBinder.queryLocalInterface(d);
-            return (iInterfaceQueryLocalInterface == null || !(iInterfaceQueryLocalInterface instanceof d)) ? new a(iBinder) : (d) iInterfaceQueryLocalInterface;
+            return (iInterfaceQueryLocalInterface == null || !(iInterfaceQueryLocalInterface instanceof d))
+                    ? new a(iBinder)
+                    : (d) iInterfaceQueryLocalInterface;
         }
 
         public static d b() {
-            return a.a;
+            return a.cachedConstructors;
         }
 
         @Override // android.os.IInterface
@@ -178,10 +189,10 @@ public interface d extends IInterface {
         }
 
         public static boolean a(d dVar) {
-            if (a.a != null || dVar == null) {
+            if (a.cachedConstructors != null || dVar == null) {
                 return false;
             }
-            a.a = dVar;
+            a.cachedConstructors = dVar;
             return true;
         }
     }

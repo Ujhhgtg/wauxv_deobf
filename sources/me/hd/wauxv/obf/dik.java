@@ -44,7 +44,7 @@ public final class dik {
                 switch (i) {
                     case 0:
                         dfn dfnVar = (dfn) uaVar;
-                        bzo.q(dfnVar, "event");
+                        throwIfVar1IsNull(dfnVar, "event");
                         dik dikVar = this.b;
                         if (dikVar.l()) {
                             if (dikVar.i(dfnVar.a.a) && dikVar.i(dfnVar.l.a)) {
@@ -56,7 +56,7 @@ public final class dik {
                         return;
                     default:
                         afh afhVar = (afh) uaVar;
-                        bzo.q(afhVar, "event");
+                        throwIfVar1IsNull(afhVar, "event");
                         ud udVar = afhVar.l;
                         CharSequence charSequence = afhVar.n;
                         dik dikVar2 = this.b;
@@ -84,34 +84,34 @@ public final class dik {
                                 enrVar.e = null;
                                 int length2 = charSequence.length();
                                 ctr ctrVarJ = dikVar2.j();
-                                bzo.n(ctrVarJ);
+                                throwIfVar1IsNull(ctrVarJ);
                                 int i3 = ctrVarJ.c;
                                 int i4 = ctrVarJ.d - length2;
                                 ctrVarJ.c = i3;
                                 ctrVarJ.d = i4;
                                 aao aaoVar = dikVar2.c;
-                                bzo.n(aaoVar);
+                                throwIfVar1IsNull(aaoVar);
                                 List<din> list = aaoVar.a;
-                                bzo.p(list, "getItems(...)");
+                                throwIfVar1IsNull(list, "getItems(...)");
                                 boolean z2 = false;
                                 for (din dinVar : list) {
                                     if (z2) {
                                         int i5 = -length2;
                                         dinVar.c += i5;
                                         dinVar.d += i5;
-                                    } else if (bzo.f(dinVar, ctrVarJ)) {
+                                    } else if (nullSafeIsEqual(dinVar, ctrVarJ)) {
                                         z2 = true;
                                     }
                                 }
                                 dikVar2.g = true;
                                 aff text = codeEditor2.getText();
-                                bzo.p(text, "getText(...)");
+                                throwIfVar1IsNull(text, "getText(...)");
                                 String strAn = text.an(ctrVarJ.c, ctrVarJ.d);
                                 text.l();
                                 aao aaoVar2 = dikVar2.c;
-                                bzo.n(aaoVar2);
+                                throwIfVar1IsNull(aaoVar2);
                                 List list2 = aaoVar2.a;
-                                bzo.p(list2, "getItems(...)");
+                                throwIfVar1IsNull(list2, "getItems(...)");
                                 int i6 = 0;
                                 for (Object obj : list2) {
                                     int i7 = i6 + 1;
@@ -120,7 +120,7 @@ public final class dik {
                                         throw null;
                                     }
                                     din dinVar2 = (din) obj;
-                                    bzo.n(dinVar2);
+                                    throwIfVar1IsNull(dinVar2);
                                     if (dikVar2.k(dinVar2)) {
                                         int length3 = strAn.length();
                                         int i8 = dinVar2.d;
@@ -145,7 +145,7 @@ public final class dik {
                             dikVar2.o();
                             return;
                         }
-                        bzo.p(charSequence, "getChangedText(...)");
+                        throwIfVar1IsNull(charSequence, "getChangedText(...)");
                         if (dik.a.c(charSequence)) {
                             int length4 = charSequence.length();
                             length = 0;
@@ -165,34 +165,34 @@ public final class dik {
                             z = false;
                         }
                         ctr ctrVarJ2 = dikVar2.j();
-                        bzo.n(ctrVarJ2);
+                        throwIfVar1IsNull(ctrVarJ2);
                         int i13 = ctrVarJ2.c;
                         int i14 = ctrVarJ2.d + length;
                         ctrVarJ2.c = i13;
                         ctrVarJ2.d = i14;
                         aao aaoVar3 = dikVar2.c;
-                        bzo.n(aaoVar3);
+                        throwIfVar1IsNull(aaoVar3);
                         List<din> list3 = aaoVar3.a;
-                        bzo.p(list3, "getItems(...)");
+                        throwIfVar1IsNull(list3, "getItems(...)");
                         boolean z3 = false;
                         for (din dinVar3 : list3) {
                             if (z3) {
                                 int length5 = charSequence.length();
                                 dinVar3.c += length5;
                                 dinVar3.d += length5;
-                            } else if (bzo.f(dinVar3, ctrVarJ2)) {
+                            } else if (nullSafeIsEqual(dinVar3, ctrVarJ2)) {
                                 z3 = true;
                             }
                         }
                         dikVar2.g = true;
                         aff text2 = codeEditor2.getText();
-                        bzo.p(text2, "getText(...)");
+                        throwIfVar1IsNull(text2, "getText(...)");
                         String strAn2 = text2.an(ctrVarJ2.c, ctrVarJ2.d);
                         text2.l();
                         aao aaoVar4 = dikVar2.c;
-                        bzo.n(aaoVar4);
+                        throwIfVar1IsNull(aaoVar4);
                         List list4 = aaoVar4.a;
-                        bzo.p(list4, "getItems(...)");
+                        throwIfVar1IsNull(list4, "getItems(...)");
                         int i15 = 0;
                         boolean z4 = false;
                         for (Object obj2 : list4) {
@@ -202,7 +202,7 @@ public final class dik {
                                 throw null;
                             }
                             din dinVar4 = (din) obj2;
-                            bzo.n(dinVar4);
+                            throwIfVar1IsNull(dinVar4);
                             if (dikVar2.k(dinVar4)) {
                                 int length6 = strAn2.length();
                                 int i17 = dinVar4.d;
@@ -226,7 +226,7 @@ public final class dik {
                         } else {
                             if (z4) {
                                 aro aroVar = codeEditor2.bx;
-                                bzo.p(aroVar, "getComponent(...)");
+                                throwIfVar1IsNull(aroVar, "getComponent(...)");
                                 aroVar.v();
                                 return;
                             }
@@ -251,7 +251,7 @@ public final class dik {
                 switch (i2) {
                     case 0:
                         dfn dfnVar = (dfn) uaVar;
-                        bzo.q(dfnVar, "event");
+                        throwIfVar1IsNull(dfnVar, "event");
                         dik dikVar = this.b;
                         if (dikVar.l()) {
                             if (dikVar.i(dfnVar.a.a) && dikVar.i(dfnVar.l.a)) {
@@ -263,7 +263,7 @@ public final class dik {
                         return;
                     default:
                         afh afhVar = (afh) uaVar;
-                        bzo.q(afhVar, "event");
+                        throwIfVar1IsNull(afhVar, "event");
                         ud udVar = afhVar.l;
                         CharSequence charSequence = afhVar.n;
                         dik dikVar2 = this.b;
@@ -291,34 +291,34 @@ public final class dik {
                                 enrVar.e = null;
                                 int length2 = charSequence.length();
                                 ctr ctrVarJ = dikVar2.j();
-                                bzo.n(ctrVarJ);
+                                throwIfVar1IsNull(ctrVarJ);
                                 int i3 = ctrVarJ.c;
                                 int i4 = ctrVarJ.d - length2;
                                 ctrVarJ.c = i3;
                                 ctrVarJ.d = i4;
                                 aao aaoVar = dikVar2.c;
-                                bzo.n(aaoVar);
+                                throwIfVar1IsNull(aaoVar);
                                 List<din> list = aaoVar.a;
-                                bzo.p(list, "getItems(...)");
+                                throwIfVar1IsNull(list, "getItems(...)");
                                 boolean z2 = false;
                                 for (din dinVar : list) {
                                     if (z2) {
                                         int i5 = -length2;
                                         dinVar.c += i5;
                                         dinVar.d += i5;
-                                    } else if (bzo.f(dinVar, ctrVarJ)) {
+                                    } else if (nullSafeIsEqual(dinVar, ctrVarJ)) {
                                         z2 = true;
                                     }
                                 }
                                 dikVar2.g = true;
                                 aff text = codeEditor2.getText();
-                                bzo.p(text, "getText(...)");
+                                throwIfVar1IsNull(text, "getText(...)");
                                 String strAn = text.an(ctrVarJ.c, ctrVarJ.d);
                                 text.l();
                                 aao aaoVar2 = dikVar2.c;
-                                bzo.n(aaoVar2);
+                                throwIfVar1IsNull(aaoVar2);
                                 List list2 = aaoVar2.a;
-                                bzo.p(list2, "getItems(...)");
+                                throwIfVar1IsNull(list2, "getItems(...)");
                                 int i6 = 0;
                                 for (Object obj : list2) {
                                     int i7 = i6 + 1;
@@ -327,7 +327,7 @@ public final class dik {
                                         throw null;
                                     }
                                     din dinVar2 = (din) obj;
-                                    bzo.n(dinVar2);
+                                    throwIfVar1IsNull(dinVar2);
                                     if (dikVar2.k(dinVar2)) {
                                         int length3 = strAn.length();
                                         int i8 = dinVar2.d;
@@ -352,7 +352,7 @@ public final class dik {
                             dikVar2.o();
                             return;
                         }
-                        bzo.p(charSequence, "getChangedText(...)");
+                        throwIfVar1IsNull(charSequence, "getChangedText(...)");
                         if (dik.a.c(charSequence)) {
                             int length4 = charSequence.length();
                             length = 0;
@@ -372,34 +372,34 @@ public final class dik {
                             z = false;
                         }
                         ctr ctrVarJ2 = dikVar2.j();
-                        bzo.n(ctrVarJ2);
+                        throwIfVar1IsNull(ctrVarJ2);
                         int i13 = ctrVarJ2.c;
                         int i14 = ctrVarJ2.d + length;
                         ctrVarJ2.c = i13;
                         ctrVarJ2.d = i14;
                         aao aaoVar3 = dikVar2.c;
-                        bzo.n(aaoVar3);
+                        throwIfVar1IsNull(aaoVar3);
                         List<din> list3 = aaoVar3.a;
-                        bzo.p(list3, "getItems(...)");
+                        throwIfVar1IsNull(list3, "getItems(...)");
                         boolean z3 = false;
                         for (din dinVar3 : list3) {
                             if (z3) {
                                 int length5 = charSequence.length();
                                 dinVar3.c += length5;
                                 dinVar3.d += length5;
-                            } else if (bzo.f(dinVar3, ctrVarJ2)) {
+                            } else if (nullSafeIsEqual(dinVar3, ctrVarJ2)) {
                                 z3 = true;
                             }
                         }
                         dikVar2.g = true;
                         aff text2 = codeEditor2.getText();
-                        bzo.p(text2, "getText(...)");
+                        throwIfVar1IsNull(text2, "getText(...)");
                         String strAn2 = text2.an(ctrVarJ2.c, ctrVarJ2.d);
                         text2.l();
                         aao aaoVar4 = dikVar2.c;
-                        bzo.n(aaoVar4);
+                        throwIfVar1IsNull(aaoVar4);
                         List list4 = aaoVar4.a;
-                        bzo.p(list4, "getItems(...)");
+                        throwIfVar1IsNull(list4, "getItems(...)");
                         int i15 = 0;
                         boolean z4 = false;
                         for (Object obj2 : list4) {
@@ -409,7 +409,7 @@ public final class dik {
                                 throw null;
                             }
                             din dinVar4 = (din) obj2;
-                            bzo.n(dinVar4);
+                            throwIfVar1IsNull(dinVar4);
                             if (dikVar2.k(dinVar4)) {
                                 int length6 = strAn2.length();
                                 int i17 = dinVar4.d;
@@ -433,7 +433,7 @@ public final class dik {
                         } else {
                             if (z4) {
                                 aro aroVar = codeEditor2.bx;
-                                bzo.p(aroVar, "getComponent(...)");
+                                throwIfVar1IsNull(aroVar, "getComponent(...)");
                                 aroVar.v();
                                 return;
                             }
@@ -446,7 +446,7 @@ public final class dik {
 
     public final boolean i(int i) {
         ctr ctrVarJ = j();
-        bzo.n(ctrVarJ);
+        throwIfVar1IsNull(ctrVarJ);
         return i >= ctrVarJ.c && i <= ctrVarJ.d;
     }
 
@@ -455,13 +455,14 @@ public final class dik {
             return null;
         }
         ArrayList arrayList = this.e;
-        bzo.n(arrayList);
+        throwIfVar1IsNull(arrayList);
         return (ctr) arrayList.get(this.f);
     }
 
     public final boolean k(din dinVar) {
         ctr ctrVarJ = j();
-        return ctrVarJ != null && (dinVar instanceof ctr) && bzo.f(((ctr) dinVar).a, ctrVarJ.a) && !dinVar.equals(ctrVarJ);
+        return ctrVarJ != null && (dinVar instanceof ctr) && nullSafeIsEqual(((ctr) dinVar).a, ctrVarJ.a)
+                && !dinVar.equals(ctrVarJ);
     }
 
     public final boolean l() {
@@ -473,9 +474,9 @@ public final class dik {
             return;
         }
         aao aaoVar = this.c;
-        bzo.n(aaoVar);
+        throwIfVar1IsNull(aaoVar);
         List list = aaoVar.a;
-        bzo.n(list);
+        throwIfVar1IsNull(list);
         int size = list.size();
         while (i < size) {
             din dinVar = (din) list.get(i);
@@ -493,14 +494,15 @@ public final class dik {
         CodeEditor codeEditor = this.b;
         if (i != i2 && i2 != -1) {
             ArrayList arrayList = this.e;
-            bzo.n(arrayList);
+            throwIfVar1IsNull(arrayList);
             ctr ctrVar = (ctr) arrayList.get(this.f);
             if (ctrVar.a.d != null) {
-                codeEditor.getText().ag(ctrVar.c, ctrVar.d, cnh.s(codeEditor.getText().an(ctrVar.c, ctrVar.d), ctrVar.a.d));
+                codeEditor.getText().ag(ctrVar.c, ctrVar.d,
+                        cnh.s(codeEditor.getText().an(ctrVar.c, ctrVar.d), ctrVar.a.d));
             }
         }
         ArrayList arrayList2 = this.e;
-        bzo.n(arrayList2);
+        throwIfVar1IsNull(arrayList2);
         ctr ctrVar2 = (ctr) arrayList2.get(i);
         sq sqVarX = codeEditor.getText().x();
         ud udVarN = sqVarX.n(ctrVar2.c);
@@ -508,10 +510,10 @@ public final class dik {
         this.f = i;
         codeEditor.er(udVarN.b, udVarN.c, udVarN2.b, udVarN2.c);
         ArrayList arrayList3 = this.e;
-        bzo.n(arrayList3);
+        throwIfVar1IsNull(arrayList3);
         arrayList3.size();
         codeEditor.i.g(new dim(codeEditor, 2));
-        bzo.n(this.e);
+        throwIfVar1IsNull(this.e);
         if (i == r0.size() - 1) {
             o();
         }

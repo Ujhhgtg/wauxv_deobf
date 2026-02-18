@@ -11,7 +11,7 @@ public final class dfy implements dfx, sr {
     public final Set n;
 
     public dfy(dfx dfxVar) {
-        bzo.q(dfxVar, "original");
+        throwIfVar1IsNull(dfxVar, "original");
         this.c = dfxVar;
         this.e = dfxVar.b() + '?';
         this.n = cnh.i(dfxVar);
@@ -37,7 +37,7 @@ public final class dfy implements dfx, sr {
             return true;
         }
         if (obj instanceof dfy) {
-            return bzo.f(this.c, ((dfy) obj).c);
+            return nullSafeIsEqual(this.c, ((dfy) obj).c);
         }
         return false;
     }
@@ -49,7 +49,7 @@ public final class dfy implements dfx, sr {
 
     @Override // me.hd.wauxv.obf.dfx
     public final int g(String str) {
-        bzo.q(str, "name");
+        throwIfVar1IsNull(str, "name");
         return this.c.g(str);
     }
 

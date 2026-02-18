@@ -16,7 +16,10 @@ public abstract class erb {
     /* JADX WARN: Type inference failed for: r4v0, types: [me.hd.wauxv.obf.dcx] */
     /* JADX WARN: Type inference failed for: r4v1 */
     /* JADX WARN: Type inference failed for: r4v2 */
-    /* JADX WARN: Type inference failed for: r4v3, types: [android.view.View, java.lang.Object] */
+    /*
+     * JADX WARN: Type inference failed for: r4v3, types: [android.view.View,
+     * java.lang.Object]
+     */
     /* JADX WARN: Type inference failed for: r4v4 */
     /* JADX WARN: Type inference failed for: r4v7 */
     /* JADX WARN: Type inference failed for: r6v1 */
@@ -40,7 +43,7 @@ public abstract class erb {
                 i++;
                 X = ((ViewGroup) X).getChildAt(i2);
             }
-            if (!dnj.ak(str) && !bzo.f(X, view)) {
+            if (!dnj.ak(str) && !nullSafeIsEqual(X, view)) {
                 linkedHashMap.put(str, Integer.valueOf(X.getId()));
             }
             if (X == 0) {

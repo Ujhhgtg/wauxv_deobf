@@ -90,7 +90,7 @@ public final class bvb extends y {
     @Override // me.hd.wauxv.obf.btr
     public final long f(float f, float f2) {
         int iMin = Math.min(this.c.a.size() - 1, Math.max((int) (f2 / this.b.getRowHeight()), 0));
-        return bzo.al(iMin, this.b.getRenderer().ao(iMin).v(f));
+        return KotlinHelpers.al(iMin, this.b.getRenderer().ao(iMin).v(f));
     }
 
     @Override // me.hd.wauxv.obf.btr
@@ -117,13 +117,13 @@ public final class bvb extends y {
     public final long j(int i, int i2) {
         int i3 = i + 1;
         if (i3 >= this.c.a.size()) {
-            return bzo.al(i, this.c.y(i).b);
+            return KotlinHelpers.al(i, this.c.y(i).b);
         }
         int i4 = this.c.y(i3).b;
         if (i2 > i4) {
             i2 = i4;
         }
-        return bzo.al(i3, i2);
+        return KotlinHelpers.al(i3, i2);
     }
 
     @Override // me.hd.wauxv.obf.btr
@@ -148,13 +148,13 @@ public final class bvb extends y {
     public final long n(int i, int i2) {
         int i3 = i - 1;
         if (i3 < 0) {
-            return bzo.al(0, 0);
+            return KotlinHelpers.al(0, 0);
         }
         int i4 = this.c.y(i3).b;
         if (i2 > i4) {
             i2 = i4;
         }
-        return bzo.al(i3, i2);
+        return KotlinHelpers.al(i3, i2);
     }
 
     @Override // me.hd.wauxv.obf.btr

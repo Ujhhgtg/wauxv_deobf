@@ -35,17 +35,18 @@ public final class bc implements ajh {
 
     /* JADX WARN: Multi-variable type inference failed */
     public Object h(btc btcVar) {
-        bzo.q(btcVar, "property");
+        throwIfVar1IsNull(btcVar, "property");
         Object obj = this.e;
         if (obj != null) {
             return obj;
         }
-        throw new IllegalStateException(yg.o(new StringBuilder("Property "), ((sw) btcVar).f, " should be initialized before get."));
+        throw new IllegalStateException(
+                yg.o(new StringBuilder("Property "), ((sw) btcVar).f, " should be initialized before get."));
     }
 
     public void i(btc btcVar, Object obj) {
-        bzo.q(btcVar, "property");
-        bzo.q(obj, "value");
+        throwIfVar1IsNull(btcVar, "property");
+        throwIfVar1IsNull(obj, "value");
         this.e = obj;
     }
 
@@ -59,7 +60,7 @@ public final class bc implements ajh {
                 } else {
                     str = "value not initialized yet";
                 }
-                return bjs.q(sb, str, ')');
+                return concat(sb, str, ')');
             default:
                 return super.toString();
         }

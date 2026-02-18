@@ -17,8 +17,14 @@ public final class bpj extends cuc {
         return this.c;
     }
 
-    /* JADX WARN: Type inference failed for: r2v3, types: [java.lang.Object, me.hd.wauxv.obf.btt] */
-    /* JADX WARN: Type inference failed for: r6v3, types: [java.lang.Object, me.hd.wauxv.obf.btt] */
+    /*
+     * JADX WARN: Type inference failed for: r2v3, types: [java.lang.Object,
+     * me.hd.wauxv.obf.btt]
+     */
+    /*
+     * JADX WARN: Type inference failed for: r6v3, types: [java.lang.Object,
+     * me.hd.wauxv.obf.btt]
+     */
     @Override // me.hd.wauxv.obf.cuc
     public final boolean equals(Object obj) {
         if (this == obj) {
@@ -33,7 +39,8 @@ public final class bpj extends cuc {
                     int i2 = this.o;
                     if (i2 == i) {
                         for (int i3 = 0; i3 < i2; i3++) {
-                            if (bzo.f(l(i3).b(), dfxVar.l(i3).b()) && bzo.f(l(i3).h(), dfxVar.l(i3).h())) {
+                            if (nullSafeIsEqual(l(i3).b(), dfxVar.l(i3).b())
+                                    && nullSafeIsEqual(l(i3).h(), dfxVar.l(i3).h())) {
                             }
                         }
                         return true;

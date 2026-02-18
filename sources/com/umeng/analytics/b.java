@@ -77,7 +77,10 @@ public class b implements p, v {
     private static final String s = f.ar;
     private static final String v = f.as;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class a {
         private static final b a = new b();
 
@@ -93,19 +96,31 @@ public class b implements p, v {
     }
 
     public static b a() {
-        return a.a;
+        return a.cachedConstructors;
     }
 
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.java:210)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:196)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:180)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:201)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.java:347)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(TryCatchBlockAttr.java:356)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:202)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.
+     * java:210)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:196)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:180)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:
+     * 201)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.
+     * java:347)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(
+     * TryCatchBlockAttr.java:356)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+     * MarkFinallyVisitor.java:202)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:119)
      */
     private void i(Context context) {
         try {
@@ -179,9 +194,11 @@ public class b implements p, v {
                 }
                 long jCurrentTimeMillis = System.currentTimeMillis();
                 Context context2 = a;
-                UMWorkDispatch.sendEvent(context2, q.a.k, CoreProtocol.getInstance(context2), Long.valueOf(jCurrentTimeMillis));
+                UMWorkDispatch.sendEvent(context2, q.a.k, CoreProtocol.getInstance(context2),
+                        Long.valueOf(jCurrentTimeMillis));
                 Context context3 = a;
-                UMWorkDispatch.sendEvent(context3, q.a.g, CoreProtocol.getInstance(context3), Long.valueOf(jCurrentTimeMillis));
+                UMWorkDispatch.sendEvent(context3, q.a.g, CoreProtocol.getInstance(context3),
+                        Long.valueOf(jCurrentTimeMillis));
             }
             ISysListener iSysListener = this.b;
             if (iSysListener != null) {
@@ -445,12 +462,12 @@ public class b implements p, v {
             if (context2 != null) {
                 w wVar = this.f;
                 if (wVar != null) {
-                    wVar.c(context2, Long.valueOf(System.currentTimeMillis()));
+                    wVar.createInstanceWithArgs(context2, Long.valueOf(System.currentTimeMillis()));
                 }
-                q.a(a).d();
+                q.a(a).getArgs();
                 x.a(a);
                 if (UMConfigure.AUTO_ACTIVITY_PAGE_COLLECTION == MobclickAgent.PageMode.AUTO) {
-                    n.c(a);
+                    n.createInstanceWithArgs(a);
                 }
                 PreferenceWrapper.getDefault(a).edit().commit();
             }
@@ -458,16 +475,28 @@ public class b implements p, v {
         }
     }
 
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.java:210)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:196)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:180)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:201)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.java:347)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(TryCatchBlockAttr.java:356)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:202)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.
+     * java:210)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:196)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:180)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:
+     * 201)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.
+     * java:347)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(
+     * TryCatchBlockAttr.java:356)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+     * MarkFinallyVisitor.java:202)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:119)
      */
     public synchronized void f(Context context) {
         try {
@@ -493,16 +522,28 @@ public class b implements p, v {
         }
     }
 
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.java:210)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:196)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:180)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:201)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.java:347)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(TryCatchBlockAttr.java:356)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:202)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.
+     * java:210)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:196)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:180)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:
+     * 201)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.
+     * java:347)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(
+     * TryCatchBlockAttr.java:356)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+     * MarkFinallyVisitor.java:202)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:119)
      */
     public synchronized void g(Context context) {
         try {
@@ -564,16 +605,28 @@ public class b implements p, v {
         }
     }
 
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.java:210)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:196)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:180)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:201)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.java:347)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(TryCatchBlockAttr.java:356)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:202)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.
+     * java:210)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:196)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:180)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:
+     * 201)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.
+     * java:347)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(
+     * TryCatchBlockAttr.java:356)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+     * MarkFinallyVisitor.java:202)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:119)
      */
     public synchronized Object e(Context context, String str) {
         if (context == null) {
@@ -605,16 +658,28 @@ public class b implements p, v {
         return null;
     }
 
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.java:210)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:196)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:180)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:201)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.java:347)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(TryCatchBlockAttr.java:356)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:202)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.
+     * java:210)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:196)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:180)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:
+     * 201)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.
+     * java:347)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(
+     * TryCatchBlockAttr.java:356)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+     * MarkFinallyVisitor.java:202)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:119)
      */
     public synchronized JSONObject h(Context context) {
         try {
@@ -657,7 +722,8 @@ public class b implements p, v {
                     return;
                 }
                 Context context2 = a;
-                UMWorkDispatch.sendEvent(context2, q.a.h, CoreProtocol.getInstance(context2), Long.valueOf(System.currentTimeMillis()));
+                UMWorkDispatch.sendEvent(context2, q.a.h, CoreProtocol.getInstance(context2),
+                        Long.valueOf(System.currentTimeMillis()));
                 Context context3 = a;
                 UMWorkDispatch.sendEvent(context3, q.a.d, CoreProtocol.getInstance(context3), null);
                 Context context4 = a;
@@ -673,16 +739,28 @@ public class b implements p, v {
         }
     }
 
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.java:210)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:196)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:180)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:201)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.java:347)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(TryCatchBlockAttr.java:356)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:202)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.
+     * java:210)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:196)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:180)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:
+     * 201)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.
+     * java:347)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(
+     * TryCatchBlockAttr.java:356)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+     * MarkFinallyVisitor.java:202)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:119)
      */
     public synchronized void f(Context context, String str) {
         try {
@@ -733,16 +811,28 @@ public class b implements p, v {
         return false;
     }
 
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.java:210)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:196)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:180)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:201)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.java:347)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(TryCatchBlockAttr.java:356)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:202)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.
+     * java:210)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:196)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:180)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:
+     * 201)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.
+     * java:347)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(
+     * TryCatchBlockAttr.java:356)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+     * MarkFinallyVisitor.java:202)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:119)
      */
     public synchronized void d(Context context, String str) {
         try {
@@ -803,16 +893,28 @@ public class b implements p, v {
         AnalyticsConfig.a(a, str);
     }
 
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.java:210)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:196)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:180)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:201)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.java:347)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(TryCatchBlockAttr.java:356)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:202)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.
+     * java:210)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:196)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:180)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:
+     * 201)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.
+     * java:347)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(
+     * TryCatchBlockAttr.java:356)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+     * MarkFinallyVisitor.java:202)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:119)
      */
     public void b(Context context, String str) {
         try {
@@ -857,16 +959,28 @@ public class b implements p, v {
         }
     }
 
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.java:210)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:196)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:180)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:201)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.java:347)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(TryCatchBlockAttr.java:356)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:202)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.
+     * java:210)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:196)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:180)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:
+     * 201)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.
+     * java:347)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(
+     * TryCatchBlockAttr.java:356)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+     * MarkFinallyVisitor.java:202)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:119)
      */
     public synchronized String e(Context context) {
         if (context == null) {
@@ -1022,7 +1136,8 @@ public class b implements p, v {
                 JSONArray jSONArray7 = new JSONArray();
                 while (i2 < list.size()) {
                     Object obj2 = list.get(i2);
-                    if ((obj2 instanceof String) || (obj2 instanceof Long) || (obj2 instanceof Integer) || (obj2 instanceof Float) || (obj2 instanceof Double) || (obj2 instanceof Short)) {
+                    if ((obj2 instanceof String) || (obj2 instanceof Long) || (obj2 instanceof Integer)
+                            || (obj2 instanceof Float) || (obj2 instanceof Double) || (obj2 instanceof Short)) {
                         jSONArray7.put(list.get(i2));
                     }
                     i2++;
@@ -1030,7 +1145,8 @@ public class b implements p, v {
                 this.k.put(str, jSONArray7);
                 return;
             }
-            if ((obj instanceof String) || (obj instanceof Long) || (obj instanceof Integer) || (obj instanceof Float) || (obj instanceof Double) || (obj instanceof Short)) {
+            if ((obj instanceof String) || (obj instanceof Long) || (obj instanceof Integer) || (obj instanceof Float)
+                    || (obj instanceof Double) || (obj instanceof Short)) {
                 this.k.put(str, obj);
             }
         } catch (Throwable unused) {
@@ -1118,7 +1234,7 @@ public class b implements p, v {
             JSONObject jSONObject = new JSONObject();
             jSONObject.put("ts", System.currentTimeMillis());
             jSONObject.put(f.W, 2);
-            jSONObject.put(f.X, str);
+            jSONObject.put("context", str);
             jSONObject.put("__ii", this.f.c());
             Context context2 = a;
             UMWorkDispatch.sendEvent(context2, q.a.j, CoreProtocol.getInstance(context2), jSONObject);
@@ -1217,7 +1333,7 @@ public class b implements p, v {
         }
         if (!TextUtils.isEmpty(str)) {
             if (Arrays.asList(f.aL).contains(str)) {
-                UMLog.aq(l.b, 0, "\\|");
+                UMLog.aq(l.second, 0, "\\|");
                 return;
             }
             if (map.isEmpty()) {
@@ -1241,16 +1357,28 @@ public class b implements p, v {
         a(context, str, map, -1L, true);
     }
 
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.java:210)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:196)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:180)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:201)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.java:347)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(TryCatchBlockAttr.java:356)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:202)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.
+     * java:210)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:196)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:180)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:
+     * 201)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.
+     * java:347)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(
+     * TryCatchBlockAttr.java:356)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+     * MarkFinallyVisitor.java:202)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:119)
      */
     private void a(Context context, String str, Map<String, Object> map, long j, boolean z2) {
         try {
@@ -1309,19 +1437,19 @@ public class b implements p, v {
                 }
                 w wVar = this.f;
                 if (wVar != null) {
-                    wVar.c(a, Long.valueOf(System.currentTimeMillis()));
+                    wVar.createInstanceWithArgs(a, Long.valueOf(System.currentTimeMillis()));
                 }
                 if (th != null) {
                     JSONObject jSONObject = new JSONObject();
                     jSONObject.put("ts", System.currentTimeMillis());
                     jSONObject.put(f.W, 1);
-                    jSONObject.put(f.X, DataHelper.convertExceptionToString(th));
+                    jSONObject.put("context", DataHelper.convertExceptionToString(th));
                     k.a(a).a(this.f.c(), jSONObject.toString(), 1);
                 }
-                q.a(a).d();
+                q.a(a).getArgs();
                 x.a(a);
                 if (UMConfigure.AUTO_ACTIVITY_PAGE_COLLECTION == MobclickAgent.PageMode.AUTO) {
-                    n.c(a);
+                    n.createInstanceWithArgs(a);
                 }
                 PreferenceWrapper.getDefault(a).edit().commit();
             }
@@ -1432,16 +1560,28 @@ public class b implements p, v {
         }
     }
 
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.java:210)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:196)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:180)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:201)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.java:347)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(TryCatchBlockAttr.java:356)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:202)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.
+     * java:210)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:196)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:180)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:
+     * 201)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.
+     * java:347)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(
+     * TryCatchBlockAttr.java:356)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+     * MarkFinallyVisitor.java:202)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:119)
      */
     public synchronized void a(Context context, String str, Object obj) {
         int i2 = 0;
@@ -1555,7 +1695,8 @@ public class b implements p, v {
                         return;
                     }
                 } else {
-                    if (!(obj instanceof String) && !(obj instanceof Long) && !(obj instanceof Integer) && !(obj instanceof Float) && !(obj instanceof Double) && !(obj instanceof Short)) {
+                    if (!(obj instanceof String) && !(obj instanceof Long) && !(obj instanceof Integer)
+                            && !(obj instanceof Float) && !(obj instanceof Double) && !(obj instanceof Short)) {
                         MLog.e("please check value, illegal type!");
                         return;
                     }
@@ -1592,16 +1733,28 @@ public class b implements p, v {
         }
     }
 
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.java:210)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:196)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:180)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:201)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.java:347)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(TryCatchBlockAttr.java:356)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:202)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.
+     * java:210)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:196)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:180)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:
+     * 201)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.
+     * java:347)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(
+     * TryCatchBlockAttr.java:356)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+     * MarkFinallyVisitor.java:202)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:119)
      */
     public synchronized void a(Context context, List<String> list) {
         try {
@@ -1629,16 +1782,28 @@ public class b implements p, v {
         u.a(a).a(list);
     }
 
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.java:210)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:196)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:180)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:201)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.java:347)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(TryCatchBlockAttr.java:356)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:202)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.
+     * java:210)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:196)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:180)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:
+     * 201)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.
+     * java:347)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(
+     * TryCatchBlockAttr.java:356)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+     * MarkFinallyVisitor.java:202)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:119)
      */
     public synchronized void a(Context context, JSONObject jSONObject) {
         JSONObject jSONObject2;
@@ -1704,7 +1869,8 @@ public class b implements p, v {
 
     public void a(String str, Object obj) {
         if (f(str)) {
-            if (!(obj instanceof String) && !(obj instanceof Integer) && !(obj instanceof Long) && !(obj instanceof Short) && !(obj instanceof Float) && !(obj instanceof Double)) {
+            if (!(obj instanceof String) && !(obj instanceof Integer) && !(obj instanceof Long)
+                    && !(obj instanceof Short) && !(obj instanceof Float) && !(obj instanceof Double)) {
                 MLog.e("userProfile: Invalid value type, please check!");
                 return;
             }

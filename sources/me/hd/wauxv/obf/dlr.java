@@ -26,10 +26,10 @@ public final class dlr {
         bjs.t(i, "finalState");
         bjs.t(i2, "lifecycleImpact");
         bdj bdjVar = bfbVar.c;
-        bzo.p(bdjVar, "fragmentStateManager.fragment");
+        throwIfVar1IsNull(bdjVar, "fragmentStateManager.fragment");
         bjs.t(i, "finalState");
         bjs.t(i2, "lifecycleImpact");
-        bzo.q(bdjVar, "fragment");
+        throwIfVar1IsNull(bdjVar, "fragment");
         this.a = i;
         this.b = i2;
         this.c = bdjVar;
@@ -42,7 +42,7 @@ public final class dlr {
     }
 
     public final void m(ViewGroup viewGroup) {
-        bzo.q(viewGroup, "container");
+        throwIfVar1IsNull(viewGroup, "container");
         this.h = false;
         if (this.e) {
             return;
@@ -78,7 +78,7 @@ public final class dlr {
     }
 
     public final void o(dlq dlqVar) {
-        bzo.q(dlqVar, "effect");
+        throwIfVar1IsNull(dlqVar, "effect");
         ArrayList arrayList = this.j;
         if (arrayList.remove(dlqVar) && arrayList.isEmpty()) {
             n();
@@ -93,7 +93,10 @@ public final class dlr {
         if (iAe == 0) {
             if (this.a != 1) {
                 if (beg.ar(2)) {
-                    Log.v("FragmentManager", "SpecialEffectsController: For fragment " + bdjVar + " mFinalState = " + bjs.ac(this.a) + " -> " + bjs.ac(i) + TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
+                    Log.v("FragmentManager",
+                            "SpecialEffectsController: For fragment " + bdjVar + " mFinalState = " + bjs.ac(this.a)
+                                    + " -> " + bjs.ac(i)
+                                    + TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
                 }
                 this.a = i;
                 return;
@@ -103,7 +106,10 @@ public final class dlr {
         if (iAe == 1) {
             if (this.a == 1) {
                 if (beg.ar(2)) {
-                    Log.v("FragmentManager", "SpecialEffectsController: For fragment " + bdjVar + " mFinalState = REMOVED -> VISIBLE. mLifecycleImpact = " + bjs.ab(this.b) + " to ADDING.");
+                    Log.v("FragmentManager",
+                            "SpecialEffectsController: For fragment " + bdjVar
+                                    + " mFinalState = REMOVED -> VISIBLE. mLifecycleImpact = " + bjs.ab(this.b)
+                                    + " to ADDING.");
                 }
                 this.a = 2;
                 this.b = 2;
@@ -116,7 +122,8 @@ public final class dlr {
             return;
         }
         if (beg.ar(2)) {
-            Log.v("FragmentManager", "SpecialEffectsController: For fragment " + bdjVar + " mFinalState = " + bjs.ac(this.a) + " -> REMOVED. mLifecycleImpact  = " + bjs.ab(this.b) + " to REMOVING.");
+            Log.v("FragmentManager", "SpecialEffectsController: For fragment " + bdjVar + " mFinalState = "
+                    + bjs.ac(this.a) + " -> REMOVED. mLifecycleImpact  = " + bjs.ab(this.b) + " to REMOVING.");
         }
         this.a = 1;
         this.b = 3;
@@ -124,7 +131,8 @@ public final class dlr {
     }
 
     public final String toString() {
-        StringBuilder sbZ = dkz.z("Operation {", Integer.toHexString(System.identityHashCode(this)), "} {finalState = ");
+        StringBuilder sbZ = dkz.z("Operation {", Integer.toHexString(System.identityHashCode(this)),
+                "} {finalState = ");
         sbZ.append(bjs.ac(this.a));
         sbZ.append(" lifecycleImpact = ");
         sbZ.append(bjs.ab(this.b));

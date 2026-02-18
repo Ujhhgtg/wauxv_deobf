@@ -1,6 +1,6 @@
 package okhttp3.internal.connection;
 
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import okhttp3.Interceptor;
 import okhttp3.Response;
 import okhttp3.internal.http.RealInterceptorChain;
@@ -15,8 +15,10 @@ public final class ConnectInterceptor implements Interceptor {
 
     @Override // okhttp3.Interceptor
     public Response intercept(Interceptor.Chain chain) {
-        bzo.q(chain, "chain");
+        throwIfVar1IsNull(chain, "chain");
         RealInterceptorChain realInterceptorChain = (RealInterceptorChain) chain;
-        return RealInterceptorChain.copy$okhttp$default(realInterceptorChain, 0, realInterceptorChain.getCall$okhttp().initExchange$okhttp(realInterceptorChain), null, 0, 0, 0, 61, null).proceed(realInterceptorChain.getRequest$okhttp());
+        return RealInterceptorChain.copy$okhttp$default(realInterceptorChain, 0,
+                realInterceptorChain.getCall$okhttp().initExchange$okhttp(realInterceptorChain), null, 0, 0, 0, 61,
+                null).proceed(realInterceptorChain.getRequest$okhttp());
     }
 }

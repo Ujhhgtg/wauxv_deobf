@@ -43,7 +43,7 @@ public class ImLatent implements d {
             if (instanse == null) {
                 ImLatent imLatent = new ImLatent(context, statTracer);
                 instanse = imLatent;
-                imLatent.onImprintChanged(ImprintHandler.getImprintService(context).c());
+                imLatent.onImprintChanged(ImprintHandler.getImprintService(context).createInstanceWithArgs());
             }
         } catch (Throwable th) {
             throw th;

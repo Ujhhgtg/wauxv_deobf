@@ -29,7 +29,10 @@ public final class eji {
     public final ede w;
     public final dyx x;
 
-    public /* synthetic */ eji(int i, String str, Long l, Integer num, String str2, Integer num2, Integer num3, String str3, Integer num4, Integer num5, Integer num6, dyi dyiVar, Integer num7, ehm ehmVar, Integer num8, dxe dxeVar, Integer num9, efz efzVar, Integer num10, String str4, eah eahVar, eiz eizVar, dyo dyoVar, ede edeVar, dyx dyxVar) {
+    public /* synthetic */ eji(int i, String str, Long l, Integer num, String str2, Integer num2, Integer num3,
+            String str3, Integer num4, Integer num5, Integer num6, dyi dyiVar, Integer num7, ehm ehmVar, Integer num8,
+            dxe dxeVar, Integer num9, efz efzVar, Integer num10, String str4, eah eahVar, eiz eizVar, dyo dyoVar,
+            ede edeVar, dyx dyxVar) {
         if (16777215 != (i & 16777215)) {
             bht.ah(i, 16777215, ejg.b.getDescriptor());
             throw null;
@@ -68,7 +71,18 @@ public final class eji {
             return false;
         }
         eji ejiVar = (eji) obj;
-        return bzo.f(this.a, ejiVar.a) && bzo.f(this.b, ejiVar.b) && bzo.f(this.c, ejiVar.c) && bzo.f(this.d, ejiVar.d) && bzo.f(this.e, ejiVar.e) && bzo.f(this.f, ejiVar.f) && bzo.f(this.g, ejiVar.g) && bzo.f(this.h, ejiVar.h) && bzo.f(this.i, ejiVar.i) && bzo.f(this.j, ejiVar.j) && bzo.f(this.k, ejiVar.k) && bzo.f(this.l, ejiVar.l) && bzo.f(this.m, ejiVar.m) && bzo.f(this.n, ejiVar.n) && bzo.f(this.o, ejiVar.o) && bzo.f(this.p, ejiVar.p) && bzo.f(this.q, ejiVar.q) && bzo.f(this.r, ejiVar.r) && bzo.f(this.s, ejiVar.s) && bzo.f(this.t, ejiVar.t) && bzo.f(this.u, ejiVar.u) && bzo.f(this.v, ejiVar.v) && bzo.f(this.w, ejiVar.w) && bzo.f(this.x, ejiVar.x);
+        return nullSafeIsEqual(this.a, ejiVar.a) && nullSafeIsEqual(this.b, ejiVar.b)
+                && nullSafeIsEqual(this.c, ejiVar.c) && nullSafeIsEqual(this.d, ejiVar.d)
+                && nullSafeIsEqual(this.e, ejiVar.e) && nullSafeIsEqual(this.f, ejiVar.f)
+                && nullSafeIsEqual(this.g, ejiVar.g) && nullSafeIsEqual(this.h, ejiVar.h)
+                && nullSafeIsEqual(this.i, ejiVar.i) && nullSafeIsEqual(this.j, ejiVar.j)
+                && nullSafeIsEqual(this.k, ejiVar.k) && nullSafeIsEqual(this.l, ejiVar.l)
+                && nullSafeIsEqual(this.m, ejiVar.m) && nullSafeIsEqual(this.n, ejiVar.n)
+                && nullSafeIsEqual(this.o, ejiVar.o) && nullSafeIsEqual(this.p, ejiVar.p)
+                && nullSafeIsEqual(this.q, ejiVar.q) && nullSafeIsEqual(this.r, ejiVar.r)
+                && nullSafeIsEqual(this.s, ejiVar.s) && nullSafeIsEqual(this.t, ejiVar.t)
+                && nullSafeIsEqual(this.u, ejiVar.u) && nullSafeIsEqual(this.v, ejiVar.v)
+                && nullSafeIsEqual(this.w, ejiVar.w) && nullSafeIsEqual(this.x, ejiVar.x);
     }
 
     public final int hashCode() {

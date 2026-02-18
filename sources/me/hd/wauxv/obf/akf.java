@@ -32,7 +32,7 @@ public abstract class akf {
 
     public final boolean i() {
         String strM = m();
-        io ioVar = cnf.ah;
+        DefaultConfig ioVar = cnf.ah;
         if (ioVar != null) {
             return ioVar.ah(strM, this.d);
         }
@@ -41,7 +41,7 @@ public abstract class akf {
 
     public final float j() {
         String strM = m();
-        io ioVar = cnf.ah;
+        DefaultConfig ioVar = cnf.ah;
         if (ioVar != null) {
             return ioVar.aj().getFloat(strM, this.f);
         }
@@ -50,7 +50,7 @@ public abstract class akf {
 
     public final int k() {
         String strM = m();
-        io ioVar = cnf.ah;
+        DefaultConfig ioVar = cnf.ah;
         if (ioVar != null) {
             return ioVar.aj().getInt(strM, this.e);
         }
@@ -59,7 +59,7 @@ public abstract class akf {
 
     public final long l() {
         String strM = m();
-        io ioVar = cnf.ah;
+        DefaultConfig ioVar = cnf.ah;
         if (ioVar != null) {
             return ioVar.aj().getLong(strM, this.g);
         }
@@ -72,29 +72,29 @@ public abstract class akf {
 
     public final Set n() {
         String strM = m();
-        io ioVar = cnf.ah;
+        DefaultConfig ioVar = cnf.ah;
         if (ioVar == null) {
             throw new IllegalArgumentException("DefaultConfig must be init" /* cnb.z(-5763846109994L) */.toString());
         }
         Set stringSet = ioVar.aj().getStringSet(strM, this.c);
-        bzo.n(stringSet);
+        throwIfVar1IsNull(stringSet);
         return stringSet;
     }
 
     public final String o() {
         String strM = m();
-        io ioVar = cnf.ah;
+        DefaultConfig ioVar = cnf.ah;
         if (ioVar == null) {
             throw new IllegalArgumentException("DefaultConfig must be init" /* cnb.z(-5763846109994L) */.toString());
         }
         String string = ioVar.aj().getString(strM, this.b);
-        bzo.n(string);
+        throwIfVar1IsNull(string);
         return string;
     }
 
     public final void p(boolean z) {
         String strM = m();
-        io ioVar = cnf.ah;
+        DefaultConfig ioVar = cnf.ah;
         if (ioVar == null) {
             throw new IllegalArgumentException("DefaultConfig must be init" /* cnb.z(-5763846109994L) */.toString());
         }
@@ -103,7 +103,7 @@ public abstract class akf {
 
     public final void q(float f) {
         String strM = m();
-        io ioVar = cnf.ah;
+        DefaultConfig ioVar = cnf.ah;
         if (ioVar == null) {
             throw new IllegalArgumentException("DefaultConfig must be init" /* cnb.z(-5763846109994L) */.toString());
         }
@@ -112,7 +112,7 @@ public abstract class akf {
 
     public final void r(int i) {
         String strM = m();
-        io ioVar = cnf.ah;
+        DefaultConfig ioVar = cnf.ah;
         if (ioVar == null) {
             throw new IllegalArgumentException("DefaultConfig must be init" /* cnb.z(-5763846109994L) */.toString());
         }
@@ -121,7 +121,7 @@ public abstract class akf {
 
     public final void s(long j) {
         String strM = m();
-        io ioVar = cnf.ah;
+        DefaultConfig ioVar = cnf.ah;
         if (ioVar == null) {
             throw new IllegalArgumentException("DefaultConfig must be init" /* cnb.z(-5763846109994L) */.toString());
         }
@@ -130,7 +130,7 @@ public abstract class akf {
 
     public final void t(Set set) {
         String strM = m();
-        io ioVar = cnf.ah;
+        DefaultConfig ioVar = cnf.ah;
         if (ioVar == null) {
             throw new IllegalArgumentException("DefaultConfig must be init" /* cnb.z(-5763846109994L) */.toString());
         }
@@ -139,7 +139,7 @@ public abstract class akf {
 
     public final void u(String str) {
         String strM = m();
-        io ioVar = cnf.ah;
+        DefaultConfig ioVar = cnf.ah;
         if (ioVar == null) {
             throw new IllegalArgumentException("DefaultConfig must be init" /* cnb.z(-5763846109994L) */.toString());
         }

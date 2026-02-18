@@ -22,7 +22,7 @@ public final class cdf extends nd {
         if (this == obj) {
             return true;
         }
-        return (obj instanceof cdf) && bzo.f(((cdf) obj).f, this.f);
+        return (obj instanceof cdf) && nullSafeIsEqual(((cdf) obj).f, this.f);
     }
 
     public final amq h() {

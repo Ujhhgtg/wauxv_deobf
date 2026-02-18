@@ -47,10 +47,10 @@ public final /* synthetic */ class gi implements bgf {
                 ((bmm) obj).h(null);
                 return ensVar;
             case 1:
-                bmm bmmVar = (bmm) obj;
-                bmmVar.getClass();
+                HookParamWrapper hookParam = (bmm) obj;
+                hookParam.getClass();
                 try {
-                    objX = bmmVar.d()[0];
+                    objX = hookParam.d()[0];
                     if (objX == null) {
                         objX = null;
                     }
@@ -65,12 +65,12 @@ public final /* synthetic */ class gi implements bgf {
                     cde cdeVarT = dqc.bi(objX).t();
                     cdeVarT.a = dal.b(Integer.TYPE);
                     Object objJ = ((cdk) dkz.m(cdeVarT)).j(new Object[0]);
-                    bzo.n(objJ);
+                    throwIfVar1IsNull(objJ);
                     switch (((Number) objJ).intValue()) {
                         case 61:
                         case 62:
                         case 63:
-                            new ek(bmmVar, 0, 8).q(null);
+                            new ek(hookParam, 0, 8).q(null);
                         default:
                             return ensVar;
                     }
@@ -130,10 +130,10 @@ public final /* synthetic */ class gi implements bgf {
                 bahVar4.d = cdjVar4;
                 return ensVar;
             case 11:
-                bmm bmmVar2 = (bmm) obj;
-                bmmVar2.getClass();
+                HookParamWrapper hookParam2 = (bmm) obj;
+                hookParam2.getClass();
                 try {
-                    objX2 = bmmVar2.d()[0];
+                    objX2 = hookParam2.d()[0];
                     if (objX2 == null) {
                         objX2 = null;
                     }
@@ -144,7 +144,7 @@ public final /* synthetic */ class gi implements bgf {
                     objX2 = null;
                 }
                 try {
-                    objX3 = bmmVar2.d()[1];
+                    objX3 = hookParam2.d()[1];
                     if (objX3 == null) {
                         objX3 = null;
                     }
@@ -153,11 +153,11 @@ public final /* synthetic */ class gi implements bgf {
                 }
                 String str = (String) (objX3 instanceof dcx ? null : objX3);
                 JSONObject jSONObject = new JSONObject(str != null ? str : "");
-                if (bzo.f(jSONObject.get("api_name" /* cnb.z(-412488659106602L) */), "webapi_getadvert" /* cnb.z(-412450004400938L) */)) {
+                if (nullSafeIsEqual(jSONObject.get("api_name" /* cnb.z(-412488659106602L) */), "webapi_getadvert" /* cnb.z(-412450004400938L) */)) {
                     JSONObject jSONObject2 = jSONObject.getJSONObject("data" /* cnb.z(-412325450349354L) */);
                     jSONObject2.put("ad_unit_id" /* cnb.z(-412338335251242L) */, "" /* cnb.z(-412806486686506L) */);
                     jSONObject.put("data" /* cnb.z(-412802191719210L) */, jSONObject2);
-                    new ek(bmmVar2, 1, 8).q(jSONObject.toString());
+                    new ek(hookParam2, 1, 8).q(jSONObject.toString());
                 }
                 return ensVar;
             case 12:
@@ -186,10 +186,10 @@ public final /* synthetic */ class gi implements bgf {
                 bahVar6.d = cdjVar6;
                 return ensVar;
             case 17:
-                bmm bmmVar3 = (bmm) obj;
-                bmmVar3.getClass();
+                HookParamWrapper hookParam3 = (bmm) obj;
+                hookParam3.getClass();
                 try {
-                    objX4 = bmmVar3.d()[0];
+                    objX4 = hookParam3.d()[0];
                     if (objX4 == null) {
                         objX4 = null;
                     }
@@ -202,7 +202,7 @@ public final /* synthetic */ class gi implements bgf {
                 String str2 = (String) objX4;
                 String str3 = str2 == null ? "" : str2;
                 try {
-                    objX5 = bmmVar3.d()[1];
+                    objX5 = hookParam3.d()[1];
                     if (objX5 == null) {
                         objX5 = null;
                     }
@@ -212,7 +212,7 @@ public final /* synthetic */ class gi implements bgf {
                 String str4 = (String) (objX5 instanceof dcx ? null : objX5);
                 String str5 = str4 != null ? str4 : "";
                 if (str3.equals("onVideoTimeUpdate" /* cnb.z(-434173948984106L) */)) {
-                    ek ekVar = new ek(bmmVar3, 1, 8);
+                    ek ekVar = new ek(hookParam3, 1, 8);
                     JSONObject jSONObject3 = new JSONObject(str5);
                     jSONObject3.put("position" /* cnb.z(-434113819441962L) */, 60);
                     jSONObject3.put("duration" /* cnb.z(-434092344605482L) */, 1);
@@ -277,10 +277,10 @@ public final /* synthetic */ class gi implements bgf {
             case 23:
                 return Boolean.valueOf(lt.a.n().contains(((zn) obj).a));
             case 24:
-                bmm bmmVar4 = (bmm) obj;
-                bmmVar4.getClass();
+                HookParamWrapper hookParam4 = (bmm) obj;
+                hookParam4.getClass();
                 try {
-                    objX6 = bmmVar4.d()[1];
+                    objX6 = hookParam4.d()[1];
                     if (objX6 == null) {
                         objX6 = null;
                     }
@@ -293,7 +293,7 @@ public final /* synthetic */ class gi implements bgf {
                 Boolean bool = (Boolean) objX6;
                 if (!(bool != null ? bool.booleanValue() : false)) {
                     try {
-                        objX7 = bmmVar4.d()[0];
+                        objX7 = hookParam4.d()[0];
                         if (objX7 == null) {
                             objX7 = null;
                         }
@@ -301,12 +301,12 @@ public final /* synthetic */ class gi implements bgf {
                         objX7 = bhu.x(th7);
                     }
                     Object obj2 = objX7 instanceof dcx ? null : objX7;
-                    bzo.n(obj2);
+                    throwIfVar1IsNull(obj2);
                     int i5 = bte.a;
                     azg azgVarR = dqc.bi(obj2).r();
                     azgVarR.ab = "field_UserName" /* cnb.z(-443841920367402L) */;
                     Object objE = ((azk) yg.e(azgVarR)).e();
-                    bzo.n(objE);
+                    throwIfVar1IsNull(objE);
                     bcp.a.getClass();
                     Method methodBb = emn.bb(bco.a);
                     dgf.a.getClass();
@@ -380,7 +380,7 @@ public final /* synthetic */ class gi implements bgf {
                 azg azgVarAa = dkz.aa((bmm) obj);
                 azgVarAa.a = dal.b(Button.class);
                 Object objE3 = ((azk) aaz.e(azgVarAa.c())).e();
-                bzo.n(objE3);
+                throwIfVar1IsNull(objE3);
                 ((Button) objE3).callOnClick();
                 return ensVar;
         }

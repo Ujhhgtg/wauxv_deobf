@@ -33,8 +33,8 @@ public final /* synthetic */ class dfq implements bgj {
             case 0:
                 CodeEditor codeEditor = (CodeEditor) obj;
                 ud udVar = (ud) obj2;
-                bzo.q(codeEditor, "editor");
-                bzo.q(udVar, "pos");
+                throwIfVar1IsNull(codeEditor, "editor");
+                throwIfVar1IsNull(udVar, "pos");
                 int i3 = codeEditor.getText().y(udVar.b).b;
                 if (!codeEditor.getProps().v) {
                     return codeEditor.getText().x().o(udVar.b, i3);
@@ -43,8 +43,8 @@ public final /* synthetic */ class dfq implements bgj {
                 int iR = (int) (cna.r(afoVarY, 0, afoVarY.b) & 4294967295L);
                 return udVar.c != iR ? codeEditor.getText().x().o(udVar.b, iR) : codeEditor.getText().x().o(udVar.b, i3);
             case 1:
-                bzo.q((CodeEditor) obj, "<unused var>");
-                bzo.q((ud) obj2, "<unused var>");
+                throwIfVar1IsNull((CodeEditor) obj, "<unused var>");
+                throwIfVar1IsNull((ud) obj2, "<unused var>");
                 ud udVar2 = new ud();
                 udVar2.c = 0;
                 udVar2.b = 0;
@@ -52,14 +52,14 @@ public final /* synthetic */ class dfq implements bgj {
                 return udVar2;
             case 2:
                 CodeEditor codeEditor2 = (CodeEditor) obj;
-                bzo.q(codeEditor2, "editor");
-                bzo.q((ud) obj2, "<unused var>");
+                throwIfVar1IsNull(codeEditor2, "editor");
+                throwIfVar1IsNull((ud) obj2, "<unused var>");
                 return codeEditor2.getText().x().n(codeEditor2.getText().d);
             case 3:
                 CodeEditor codeEditor3 = (CodeEditor) obj;
                 ud udVar3 = (ud) obj2;
-                bzo.q(codeEditor3, "editor");
-                bzo.q(udVar3, "pos");
+                throwIfVar1IsNull(codeEditor3, "editor");
+                throwIfVar1IsNull(udVar3, "pos");
                 y yVar = codeEditor3.j;
                 int iL = yVar.l(udVar3.a);
                 ddm ddmVarQ = yVar.q(iL);
@@ -73,8 +73,8 @@ public final /* synthetic */ class dfq implements bgj {
             case 4:
                 CodeEditor codeEditor4 = (CodeEditor) obj;
                 ud udVar4 = (ud) obj2;
-                bzo.q(codeEditor4, "editor");
-                bzo.q(udVar4, "pos");
+                throwIfVar1IsNull(codeEditor4, "editor");
+                throwIfVar1IsNull(udVar4, "pos");
                 y yVar2 = codeEditor4.j;
                 int iL2 = yVar2.l(udVar4.a);
                 ddm ddmVarQ2 = yVar2.q(iL2);
@@ -88,17 +88,17 @@ public final /* synthetic */ class dfq implements bgj {
             case 5:
                 CodeEditor codeEditor5 = (CodeEditor) obj;
                 ud udVar5 = (ud) obj2;
-                bzo.q(codeEditor5, "editor");
-                bzo.q(udVar5, "pos");
+                throwIfVar1IsNull(codeEditor5, "editor");
+                throwIfVar1IsNull(udVar5, "pos");
                 long j = codeEditor5.j.j(udVar5.b, udVar5.c);
                 return codeEditor5.getText().x().o((int) (j >> 32), (int) (j & 4294967295L));
             case 6:
                 CodeEditor codeEditor6 = (CodeEditor) obj;
                 ud udVar6 = (ud) obj2;
-                bzo.q(codeEditor6, "editor");
-                bzo.q(udVar6, "pos");
+                throwIfVar1IsNull(codeEditor6, "editor");
+                throwIfVar1IsNull(udVar6, "pos");
                 ahy cursor = codeEditor6.getCursor();
-                long jAl3 = bzo.al(udVar6.b, udVar6.c);
+                long jAl3 = KotlinHelpers.al(udVar6.b, udVar6.c);
                 cursor.getClass();
                 int i8 = (int) (jAl3 >> 32);
                 int i9 = (int) (jAl3 & 4294967295L);
@@ -106,21 +106,21 @@ public final /* synthetic */ class dfq implements bgj {
                 aff affVar = cursor.a;
                 int iE = dqqVarD.e(i9, affVar.y(i8));
                 if (iE != i9 || i9 != 0) {
-                    jAl = bzo.al(i8, iE);
+                    jAl = KotlinHelpers.al(i8, iE);
                 } else if (i8 == 0) {
                     jAl = 0;
                 } else {
                     int i10 = i8 - 1;
-                    jAl = bzo.al(i10, affVar.y(i10).b);
+                    jAl = KotlinHelpers.al(i10, affVar.y(i10).b);
                 }
                 return codeEditor6.getText().x().o((int) (jAl >> 32), (int) (jAl & 4294967295L));
             case 7:
                 CodeEditor codeEditor7 = (CodeEditor) obj;
                 ud udVar7 = (ud) obj2;
-                bzo.q(codeEditor7, "editor");
-                bzo.q(udVar7, "pos");
+                throwIfVar1IsNull(codeEditor7, "editor");
+                throwIfVar1IsNull(udVar7, "pos");
                 ahy cursor2 = codeEditor7.getCursor();
-                long jAl4 = bzo.al(udVar7.b, udVar7.c);
+                long jAl4 = KotlinHelpers.al(udVar7.b, udVar7.c);
                 int i11 = (int) (jAl4 >> 32);
                 int i12 = (int) (jAl4 & 4294967295L);
                 aff affVar2 = cursor2.a;
@@ -138,13 +138,13 @@ public final /* synthetic */ class dfq implements bgj {
                 int i14 = selectionStart + iMax;
                 if (i14 == i13 && i12 == i14) {
                     int i15 = i11 + 1;
-                    jAl2 = i15 == affVar2.a.size() ? bzo.al(i11, i13) : bzo.al(i15, 0);
+                    jAl2 = i15 == affVar2.a.size() ? KotlinHelpers.al(i11, i13) : KotlinHelpers.al(i15, 0);
                 } else {
-                    jAl2 = bzo.al(i11, i14);
+                    jAl2 = KotlinHelpers.al(i11, i14);
                 }
                 return codeEditor7.getText().x().o((int) (jAl2 >> 32), (int) (jAl2 & 4294967295L));
             case 8:
-                return Integer.valueOf(bzo.r(((ctr) obj).a.a, ((ctr) obj2).a.a));
+                return Integer.valueOf(KotlinHelpers.r(((ctr) obj).a.a, ((ctr) obj2).a.a));
             case 9:
                 int iIntValue = ((Integer) obj).intValue();
                 long jLongValue = ((Long) obj2).longValue();
@@ -349,14 +349,14 @@ public final /* synthetic */ class dfq implements bgj {
             case 17:
                 MsgInfoBean msgInfoBean = (MsgInfoBean) obj2;
                 String imgPath = msgInfoBean.getImgPath();
-                bzo.n(imgPath);
+                throwIfVar1IsNull(imgPath);
                 ewz.aq(etl.a, new etk(etu.b(etu.a, imgPath), Integer.parseInt(msgInfoBean.getContent()), i2));
                 return ensVar;
             default:
                 MsgInfoBean msgInfoBean2 = (MsgInfoBean) obj2;
                 long msgId = msgInfoBean2.getMsgId();
                 String imgPath2 = msgInfoBean2.getImgPath();
-                bzo.n(imgPath2);
+                throwIfVar1IsNull(imgPath2);
                 String strB = etu.b(etu.a, imgPath2);
                 try {
                     File file = new File(etv.a.o());

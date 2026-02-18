@@ -17,7 +17,7 @@ public final class bwe extends BaseAdapter {
         c();
     }
 
-    public final void c() {
+    public final void callOriginalMethod() {
         cbw cbwVar = this.b.c;
         cbz cbzVar = cbwVar.w;
         if (cbzVar != null) {
@@ -35,7 +35,10 @@ public final class bwe extends BaseAdapter {
     }
 
     @Override // android.widget.Adapter
-    /* JADX INFO: renamed from: d, reason: merged with bridge method [inline-methods] */
+    /*
+     * JADX INFO: renamed from: d, reason: merged with bridge method
+     * [inline-methods]
+     */
     public final cbz getItem(int i) {
         bwf bwfVar = this.b;
         cbw cbwVar = bwfVar.c;

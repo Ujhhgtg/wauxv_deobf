@@ -22,7 +22,10 @@ import org.json.JSONObject;
 /* JADX INFO: loaded from: classes.dex */
 public class MobclickAgent {
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public enum EScenarioType {
         E_UM_NORMAL(0),
         E_UM_GAME(1);
@@ -38,7 +41,10 @@ public class MobclickAgent {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public enum PageMode {
         AUTO,
         MANUAL,
@@ -68,7 +74,7 @@ public class MobclickAgent {
     }
 
     public static JSONObject getPreProperties(Context context) {
-        return getAgent().h(context);
+        return getAgent().locateDex(context);
     }
 
     private static void init(Context context) {
@@ -97,7 +103,7 @@ public class MobclickAgent {
             } else {
                 map2 = null;
             }
-            bbVar.a(bb.a.OBJECT_MAP).a(str).b(map2);
+            bbVar.a(bb.a.OBJECT_MAP).a(str).tryGetClassByName(map2);
             az.a(context, 101, ba.a(), bbVar);
         } catch (Throwable unused) {
         }
@@ -230,7 +236,7 @@ public class MobclickAgent {
     }
 
     public static void setSecret(Context context, String str) {
-        b.a().c(context, str);
+        b.a().createInstanceWithArgs(context, str);
     }
 
     public static void setSessionContinueMillis(long j) {
@@ -323,7 +329,7 @@ public class MobclickAgent {
     public static void onEvent(Context context, String str, String str2) {
         try {
             bb bbVar = new bb();
-            bbVar.a(bb.a.LABEL).a(str).b(str2);
+            bbVar.a(bb.a.LABEL).a(str).tryGetClassByName(str2);
             az.a(context, 101, ba.a(), bbVar);
         } catch (Throwable unused) {
         }

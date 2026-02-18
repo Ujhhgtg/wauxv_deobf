@@ -23,10 +23,10 @@ public final class dfj {
             dfjVar = null;
         }
         dfj dfjVar2 = this.g;
-        bzo.n(dfjVar2);
+        throwIfVar1IsNull(dfjVar2);
         dfjVar2.f = this.f;
         dfj dfjVar3 = this.f;
-        bzo.n(dfjVar3);
+        throwIfVar1IsNull(dfjVar3);
         dfjVar3.g = this.g;
         this.f = null;
         this.g = null;
@@ -34,11 +34,11 @@ public final class dfj {
     }
 
     public final void i(dfj dfjVar) {
-        bzo.q(dfjVar, "segment");
+        throwIfVar1IsNull(dfjVar, "segment");
         dfjVar.g = this;
         dfjVar.f = this.f;
         dfj dfjVar2 = this.f;
-        bzo.n(dfjVar2);
+        throwIfVar1IsNull(dfjVar2);
         dfjVar2.g = dfjVar;
         this.f = dfjVar;
     }
@@ -49,7 +49,7 @@ public final class dfj {
     }
 
     public final void k(dfj dfjVar, int i) {
-        bzo.q(dfjVar, "sink");
+        throwIfVar1IsNull(dfjVar, "sink");
         byte[] bArr = dfjVar.a;
         if (!dfjVar.e) {
             throw new IllegalStateException("only owner can write");
@@ -76,7 +76,7 @@ public final class dfj {
     }
 
     public dfj(byte[] bArr, int i, int i2, boolean z, boolean z2) {
-        bzo.q(bArr, "data");
+        throwIfVar1IsNull(bArr, "data");
         this.a = bArr;
         this.b = i;
         this.c = i2;

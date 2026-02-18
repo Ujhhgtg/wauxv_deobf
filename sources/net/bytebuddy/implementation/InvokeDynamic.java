@@ -60,25 +60,33 @@ public class InvokeDynamic implements Implementation.Composable {
     protected final TerminationHandler terminationHandler;
     protected final Assigner.Typing typing;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static abstract class AbstractDelegator extends InvokeDynamic {
-        public AbstractDelegator(MethodDescription.InDefinedShape inDefinedShape, List<? extends JavaConstant> list, InvocationProvider invocationProvider, TerminationHandler terminationHandler, Assigner assigner, Assigner.Typing typing) {
+        public AbstractDelegator(MethodDescription.InDefinedShape inDefinedShape, List<? extends JavaConstant> list,
+                InvocationProvider invocationProvider, TerminationHandler terminationHandler, Assigner assigner,
+                Assigner.Typing typing) {
             super(inDefinedShape, list, invocationProvider, terminationHandler, assigner, typing);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic, net.bytebuddy.implementation.Implementation.Composable
+        @Override // net.bytebuddy.implementation.InvokeDynamic,
+                  // net.bytebuddy.implementation.Implementation.Composable
         public Implementation andThen(Implementation implementation) {
             return materialize().andThen(implementation);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic, net.bytebuddy.implementation.Implementation
+        @Override // net.bytebuddy.implementation.InvokeDynamic,
+                  // net.bytebuddy.implementation.Implementation
         public ByteCodeAppender appender(Implementation.Target target) {
             return materialize().appender(target);
         }
 
         public abstract InvokeDynamic materialize();
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic, net.bytebuddy.dynamic.scaffold.InstrumentedType.Prepareable
+        @Override // net.bytebuddy.implementation.InvokeDynamic,
+                  // net.bytebuddy.dynamic.scaffold.InstrumentedType.Prepareable
         public InstrumentedType prepare(InstrumentedType instrumentedType) {
             return materialize().prepare(instrumentedType);
         }
@@ -219,7 +227,10 @@ public class InvokeDynamic implements Implementation.Composable {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @HashCodeAndEqualsPlugin.Enhance(includeSyntheticFields = true)
     public class Appender implements ByteCodeAppender {
         private final TypeDescription instrumentedType;
@@ -229,17 +240,26 @@ public class InvokeDynamic implements Implementation.Composable {
         }
 
         @Override // net.bytebuddy.implementation.bytecode.ByteCodeAppender
-        public ByteCodeAppender.Size apply(MethodVisitor methodVisitor, Implementation.Context context, MethodDescription methodDescription) {
+        public ByteCodeAppender.Size apply(MethodVisitor methodVisitor, Implementation.Context context,
+                MethodDescription methodDescription) {
             InvocationProvider.Target targetMake = InvokeDynamic.this.invocationProvider.make(methodDescription);
             TypeDescription typeDescription = this.instrumentedType;
             InvokeDynamic invokeDynamic = InvokeDynamic.this;
-            InvocationProvider.Target.Resolved resolvedResolve = targetMake.resolve(typeDescription, invokeDynamic.assigner, invokeDynamic.typing);
+            InvocationProvider.Target.Resolved resolvedResolve = targetMake.resolve(typeDescription,
+                    invokeDynamic.assigner, invokeDynamic.typing);
             StackManipulation stackManipulation = resolvedResolve.getStackManipulation();
-            StackManipulation stackManipulationDynamic = MethodInvocation.invoke(InvokeDynamic.this.bootstrap).dynamic(resolvedResolve.getInternalName(), resolvedResolve.getReturnType(), resolvedResolve.getParameterTypes(), InvokeDynamic.this.arguments);
+            StackManipulation stackManipulationDynamic = MethodInvocation.invoke(InvokeDynamic.this.bootstrap).dynamic(
+                    resolvedResolve.getInternalName(), resolvedResolve.getReturnType(),
+                    resolvedResolve.getParameterTypes(), InvokeDynamic.this.arguments);
             TerminationHandler terminationHandler = InvokeDynamic.this.terminationHandler;
             TypeDescription returnType = resolvedResolve.getReturnType();
             InvokeDynamic invokeDynamic2 = InvokeDynamic.this;
-            return new ByteCodeAppender.Size(new StackManipulation.Compound(stackManipulation, stackManipulationDynamic, terminationHandler.resolve(methodDescription, returnType, invokeDynamic2.assigner, invokeDynamic2.typing)).apply(methodVisitor, context).getMaximalSize(), methodDescription.getStackSize());
+            return new ByteCodeAppender.Size(
+                    new StackManipulation.Compound(stackManipulation, stackManipulationDynamic,
+                            terminationHandler.resolve(methodDescription, returnType, invokeDynamic2.assigner,
+                                    invokeDynamic2.typing))
+                            .apply(methodVisitor, context).getMaximalSize(),
+                    methodDescription.getStackSize());
         }
 
         public boolean equals(@MaybeNull Object obj) {
@@ -250,7 +270,8 @@ public class InvokeDynamic implements Implementation.Composable {
                 return false;
             }
             Appender appender = (Appender) obj;
-            return this.instrumentedType.equals(appender.instrumentedType) && InvokeDynamic.this.equals(InvokeDynamic.this);
+            return this.instrumentedType.equals(appender.instrumentedType)
+                    && InvokeDynamic.this.equals(InvokeDynamic.this);
         }
 
         public int hashCode() {
@@ -258,57 +279,74 @@ public class InvokeDynamic implements Implementation.Composable {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface InvocationProvider {
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public interface ArgumentProvider {
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum ConstantPoolWrapper {
-                BOOLEAN(Boolean.TYPE, Boolean.class) { // from class: net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider.ConstantPoolWrapper.1
+                BOOLEAN(Boolean.TYPE, Boolean.class) { // from class:
+                                                       // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider.ConstantPoolWrapper.1
                     @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider.ConstantPoolWrapper
                     public ArgumentProvider make(Object obj) {
                         return new WrappingArgumentProvider(IntegerConstant.forValue(((Boolean) obj).booleanValue()));
                     }
                 },
-                BYTE(Byte.TYPE, Byte.class) { // from class: net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider.ConstantPoolWrapper.2
+                BYTE(Byte.TYPE, Byte.class) { // from class:
+                                              // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider.ConstantPoolWrapper.2
                     @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider.ConstantPoolWrapper
                     public ArgumentProvider make(Object obj) {
                         return new WrappingArgumentProvider(IntegerConstant.forValue(((Byte) obj).byteValue()));
                     }
                 },
-                SHORT(Short.TYPE, Short.class) { // from class: net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider.ConstantPoolWrapper.3
+                SHORT(Short.TYPE, Short.class) { // from class:
+                                                 // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider.ConstantPoolWrapper.3
                     @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider.ConstantPoolWrapper
                     public ArgumentProvider make(Object obj) {
                         return new WrappingArgumentProvider(IntegerConstant.forValue(((Short) obj).shortValue()));
                     }
                 },
-                CHARACTER(Character.TYPE, Character.class) { // from class: net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider.ConstantPoolWrapper.4
+                CHARACTER(Character.TYPE, Character.class) { // from class:
+                                                             // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider.ConstantPoolWrapper.4
                     @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider.ConstantPoolWrapper
                     public ArgumentProvider make(Object obj) {
                         return new WrappingArgumentProvider(IntegerConstant.forValue(((Character) obj).charValue()));
                     }
                 },
-                INTEGER(Integer.TYPE, Integer.class) { // from class: net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider.ConstantPoolWrapper.5
+                INTEGER(Integer.TYPE, Integer.class) { // from class:
+                                                       // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider.ConstantPoolWrapper.5
                     @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider.ConstantPoolWrapper
                     public ArgumentProvider make(Object obj) {
                         return new WrappingArgumentProvider(IntegerConstant.forValue(((Integer) obj).intValue()));
                     }
                 },
-                LONG(Long.TYPE, Long.class) { // from class: net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider.ConstantPoolWrapper.6
+                LONG(Long.TYPE, Long.class) { // from class:
+                                              // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider.ConstantPoolWrapper.6
                     @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider.ConstantPoolWrapper
                     public ArgumentProvider make(Object obj) {
                         return new WrappingArgumentProvider(LongConstant.forValue(((Long) obj).longValue()));
                     }
                 },
-                FLOAT(Float.TYPE, Float.class) { // from class: net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider.ConstantPoolWrapper.7
+                FLOAT(Float.TYPE, Float.class) { // from class:
+                                                 // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider.ConstantPoolWrapper.7
                     @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider.ConstantPoolWrapper
                     public ArgumentProvider make(Object obj) {
                         return new WrappingArgumentProvider(FloatConstant.forValue(((Float) obj).floatValue()));
                     }
                 },
-                DOUBLE(Double.TYPE, Double.class) { // from class: net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider.ConstantPoolWrapper.8
+                DOUBLE(Double.TYPE, Double.class) { // from class:
+                                                    // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider.ConstantPoolWrapper.8
                     @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider.ConstantPoolWrapper
                     public ArgumentProvider make(Object obj) {
                         return new WrappingArgumentProvider(DoubleConstant.forValue(((Double) obj).doubleValue()));
@@ -318,7 +356,10 @@ public class InvokeDynamic implements Implementation.Composable {
                 private final TypeDescription primitiveType;
                 private final TypeDescription wrapperType;
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance(includeSyntheticFields = true)
                 public class WrappingArgumentProvider implements ArgumentProvider {
                     private final StackManipulation stackManipulation;
@@ -335,11 +376,13 @@ public class InvokeDynamic implements Implementation.Composable {
                             return false;
                         }
                         WrappingArgumentProvider wrappingArgumentProvider = (WrappingArgumentProvider) obj;
-                        return ConstantPoolWrapper.this.equals(ConstantPoolWrapper.this) && this.stackManipulation.equals(wrappingArgumentProvider.stackManipulation);
+                        return ConstantPoolWrapper.this.equals(ConstantPoolWrapper.this)
+                                && this.stackManipulation.equals(wrappingArgumentProvider.stackManipulation);
                     }
 
                     public int hashCode() {
-                        return ConstantPoolWrapper.this.hashCode() + dkz.g(this.stackManipulation, getClass().hashCode() * 31, 31);
+                        return ConstantPoolWrapper.this.hashCode()
+                                + dkz.g(this.stackManipulation, getClass().hashCode() * 31, 31);
                     }
 
                     @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider
@@ -348,13 +391,45 @@ public class InvokeDynamic implements Implementation.Composable {
                     }
 
                     @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider
-                    public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription, Assigner assigner, Assigner.Typing typing) {
-                        return new Resolved.Simple(new StackManipulation.Compound(this.stackManipulation, assigner.assign(ConstantPoolWrapper.this.primitiveType.asGenericType(), ConstantPoolWrapper.this.wrapperType.asGenericType(), typing)), ConstantPoolWrapper.this.wrapperType);
+                    public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription,
+                            Assigner assigner, Assigner.Typing typing) {
+                        return new Resolved.Simple(
+                                new StackManipulation.Compound(this.stackManipulation,
+                                        assigner.assign(ConstantPoolWrapper.this.primitiveType.asGenericType(),
+                                                ConstantPoolWrapper.this.wrapperType.asGenericType(), typing)),
+                                ConstantPoolWrapper.this.wrapperType);
                     }
                 }
 
                 public static ArgumentProvider of(Object obj) {
-                    return obj instanceof Boolean ? BOOLEAN.make(obj) : obj instanceof Byte ? BYTE.make(obj) : obj instanceof Short ? SHORT.make(obj) : obj instanceof Character ? CHARACTER.make(obj) : obj instanceof Integer ? INTEGER.make(obj) : obj instanceof Long ? LONG.make(obj) : obj instanceof Float ? FLOAT.make(obj) : obj instanceof Double ? DOUBLE.make(obj) : obj instanceof String ? new ForStringConstant((String) obj) : obj instanceof Class ? new ForClassConstant(TypeDescription.ForLoadedType.of((Class) obj)) : obj instanceof TypeDescription ? new ForClassConstant((TypeDescription) obj) : obj instanceof Enum ? new ForEnumerationValue(new EnumerationDescription.ForLoadedEnumeration((Enum) obj)) : obj instanceof EnumerationDescription ? new ForEnumerationValue((EnumerationDescription) obj) : JavaType.METHOD_HANDLE.isInstance(obj) ? new ForJavaConstant(JavaConstant.MethodHandle.ofLoaded(obj)) : JavaType.METHOD_TYPE.isInstance(obj) ? new ForJavaConstant(JavaConstant.MethodType.ofLoaded(obj)) : obj instanceof JavaConstant ? new ForJavaConstant((JavaConstant) obj) : ForInstance.of(obj);
+                    return obj instanceof Boolean ? BOOLEAN.make(obj)
+                            : obj instanceof Byte ? BYTE.make(obj)
+                                    : obj instanceof Short ? SHORT.make(obj)
+                                            : obj instanceof Character ? CHARACTER.make(obj)
+                                                    : obj instanceof Integer ? INTEGER.make(obj)
+                                                            : obj instanceof Long ? LONG.make(obj)
+                                                                    : obj instanceof Float ? FLOAT.make(obj)
+                                                                            : obj instanceof Double ? DOUBLE.make(obj)
+                                                                                    : obj instanceof String
+                                                                                            ? new ForStringConstant(
+                                                                                                    (String) obj)
+                                                                                            : obj instanceof Class
+                                                                                                    ? new ForClassConstant(
+                                                                                                            TypeDescription.ForLoadedType
+                                                                                                                    .of((Class) obj))
+                                                                                                    : obj instanceof TypeDescription
+                                                                                                            ? new ForClassConstant(
+                                                                                                                    (TypeDescription) obj)
+                                                                                                            : obj instanceof Enum
+                                                                                                                    ? new ForEnumerationValue(
+                                                                                                                            new EnumerationDescription.ForLoadedEnumeration(
+                                                                                                                                    (Enum) obj))
+                                                                                                                    : obj instanceof EnumerationDescription
+                                                                                                                            ? new ForEnumerationValue(
+                                                                                                                                    (EnumerationDescription) obj)
+                                                                                                                            : JavaType.METHOD_HANDLE
+                                                                                                                                    .isInstance(
+                                                                                                                                            obj) ? new ForJavaConstant(JavaConstant.MethodHandle.ofLoaded(obj)) : JavaType.METHOD_TYPE.isInstance(obj) ? new ForJavaConstant(JavaConstant.MethodType.ofLoaded(obj)) : obj instanceof JavaConstant ? new ForJavaConstant((JavaConstant) obj) : ForInstance.of(obj);
                 }
 
                 public abstract ArgumentProvider make(Object obj);
@@ -365,7 +440,10 @@ public class InvokeDynamic implements Implementation.Composable {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForBooleanConstant implements ArgumentProvider {
                 private final boolean value;
@@ -378,7 +456,8 @@ public class InvokeDynamic implements Implementation.Composable {
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.value == ((ForBooleanConstant) obj).value;
+                    return obj != null && getClass() == obj.getClass()
+                            && this.value == ((ForBooleanConstant) obj).value;
                 }
 
                 public int hashCode() {
@@ -391,12 +470,17 @@ public class InvokeDynamic implements Implementation.Composable {
                 }
 
                 @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider
-                public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription, Assigner assigner, Assigner.Typing typing) {
-                    return new Resolved.Simple(IntegerConstant.forValue(this.value), TypeDescription.ForLoadedType.of(Boolean.TYPE));
+                public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription,
+                        Assigner assigner, Assigner.Typing typing) {
+                    return new Resolved.Simple(IntegerConstant.forValue(this.value),
+                            TypeDescription.ForLoadedType.of(Boolean.TYPE));
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForByteConstant implements ArgumentProvider {
                 private final byte value;
@@ -422,12 +506,17 @@ public class InvokeDynamic implements Implementation.Composable {
                 }
 
                 @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider
-                public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription, Assigner assigner, Assigner.Typing typing) {
-                    return new Resolved.Simple(IntegerConstant.forValue(this.value), TypeDescription.ForLoadedType.of(Byte.TYPE));
+                public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription,
+                        Assigner assigner, Assigner.Typing typing) {
+                    return new Resolved.Simple(IntegerConstant.forValue(this.value),
+                            TypeDescription.ForLoadedType.of(Byte.TYPE));
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForCharacterConstant implements ArgumentProvider {
                 private final char value;
@@ -440,7 +529,8 @@ public class InvokeDynamic implements Implementation.Composable {
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.value == ((ForCharacterConstant) obj).value;
+                    return obj != null && getClass() == obj.getClass()
+                            && this.value == ((ForCharacterConstant) obj).value;
                 }
 
                 public int hashCode() {
@@ -453,12 +543,17 @@ public class InvokeDynamic implements Implementation.Composable {
                 }
 
                 @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider
-                public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription, Assigner assigner, Assigner.Typing typing) {
-                    return new Resolved.Simple(IntegerConstant.forValue(this.value), TypeDescription.ForLoadedType.of(Character.TYPE));
+                public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription,
+                        Assigner assigner, Assigner.Typing typing) {
+                    return new Resolved.Simple(IntegerConstant.forValue(this.value),
+                            TypeDescription.ForLoadedType.of(Character.TYPE));
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForClassConstant implements ArgumentProvider {
                 private final TypeDescription typeDescription;
@@ -471,7 +566,8 @@ public class InvokeDynamic implements Implementation.Composable {
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.typeDescription.equals(((ForClassConstant) obj).typeDescription);
+                    return obj != null && getClass() == obj.getClass()
+                            && this.typeDescription.equals(((ForClassConstant) obj).typeDescription);
                 }
 
                 public int hashCode() {
@@ -484,12 +580,17 @@ public class InvokeDynamic implements Implementation.Composable {
                 }
 
                 @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider
-                public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription, Assigner assigner, Assigner.Typing typing) {
-                    return new Resolved.Simple(ClassConstant.of(this.typeDescription), TypeDescription.ForLoadedType.of(Class.class));
+                public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription,
+                        Assigner assigner, Assigner.Typing typing) {
+                    return new Resolved.Simple(ClassConstant.of(this.typeDescription),
+                            TypeDescription.ForLoadedType.of(Class.class));
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForDoubleConstant implements ArgumentProvider {
                 private final double value;
@@ -502,7 +603,8 @@ public class InvokeDynamic implements Implementation.Composable {
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && Double.compare(this.value, ((ForDoubleConstant) obj).value) == 0;
+                    return obj != null && getClass() == obj.getClass()
+                            && Double.compare(this.value, ((ForDoubleConstant) obj).value) == 0;
                 }
 
                 public int hashCode() {
@@ -517,12 +619,17 @@ public class InvokeDynamic implements Implementation.Composable {
                 }
 
                 @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider
-                public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription, Assigner assigner, Assigner.Typing typing) {
-                    return new Resolved.Simple(DoubleConstant.forValue(this.value), TypeDescription.ForLoadedType.of(Double.TYPE));
+                public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription,
+                        Assigner assigner, Assigner.Typing typing) {
+                    return new Resolved.Simple(DoubleConstant.forValue(this.value),
+                            TypeDescription.ForLoadedType.of(Double.TYPE));
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForEnumerationValue implements ArgumentProvider {
                 private final EnumerationDescription enumerationDescription;
@@ -535,7 +642,8 @@ public class InvokeDynamic implements Implementation.Composable {
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.enumerationDescription.equals(((ForEnumerationValue) obj).enumerationDescription);
+                    return obj != null && getClass() == obj.getClass()
+                            && this.enumerationDescription.equals(((ForEnumerationValue) obj).enumerationDescription);
                 }
 
                 public int hashCode() {
@@ -548,18 +656,26 @@ public class InvokeDynamic implements Implementation.Composable {
                 }
 
                 @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider
-                public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription, Assigner assigner, Assigner.Typing typing) {
-                    return new Resolved.Simple(FieldAccess.forEnumeration(this.enumerationDescription), this.enumerationDescription.getEnumerationType());
+                public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription,
+                        Assigner assigner, Assigner.Typing typing) {
+                    return new Resolved.Simple(FieldAccess.forEnumeration(this.enumerationDescription),
+                            this.enumerationDescription.getEnumerationType());
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForField implements ArgumentProvider {
                 protected final FieldLocator.Factory fieldLocatorFactory;
                 protected final String fieldName;
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class WithExplicitType extends ForField {
                     private final TypeDescription typeDescription;
@@ -570,10 +686,14 @@ public class InvokeDynamic implements Implementation.Composable {
                     }
 
                     @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider.ForField
-                    public Resolved doResolve(StackManipulation stackManipulation, TypeDescription.Generic generic, Assigner assigner, Assigner.Typing typing) {
-                        StackManipulation stackManipulationAssign = assigner.assign(generic, this.typeDescription.asGenericType(), typing);
+                    public Resolved doResolve(StackManipulation stackManipulation, TypeDescription.Generic generic,
+                            Assigner assigner, Assigner.Typing typing) {
+                        StackManipulation stackManipulationAssign = assigner.assign(generic,
+                                this.typeDescription.asGenericType(), typing);
                         if (stackManipulationAssign.isValid()) {
-                            return new Resolved.Simple(new StackManipulation.Compound(stackManipulation, stackManipulationAssign), this.typeDescription);
+                            return new Resolved.Simple(
+                                    new StackManipulation.Compound(stackManipulation, stackManipulationAssign),
+                                    this.typeDescription);
                         }
                         throw new IllegalStateException("Cannot assign " + generic + " to " + this.typeDescription);
                     }
@@ -586,7 +706,8 @@ public class InvokeDynamic implements Implementation.Composable {
                         if (this == obj) {
                             return true;
                         }
-                        return obj != null && getClass() == obj.getClass() && this.typeDescription.equals(((WithExplicitType) obj).typeDescription);
+                        return obj != null && getClass() == obj.getClass()
+                                && this.typeDescription.equals(((WithExplicitType) obj).typeDescription);
                     }
 
                     @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider.ForField
@@ -600,7 +721,8 @@ public class InvokeDynamic implements Implementation.Composable {
                     this.fieldLocatorFactory = factory;
                 }
 
-                public Resolved doResolve(StackManipulation stackManipulation, TypeDescription.Generic generic, Assigner assigner, Assigner.Typing typing) {
+                public Resolved doResolve(StackManipulation stackManipulation, TypeDescription.Generic generic,
+                        Assigner assigner, Assigner.Typing typing) {
                     return new Resolved.Simple(stackManipulation, generic.asErasure());
                 }
 
@@ -612,7 +734,8 @@ public class InvokeDynamic implements Implementation.Composable {
                         return false;
                     }
                     ForField forField = (ForField) obj;
-                    return this.fieldName.equals(forField.fieldName) && this.fieldLocatorFactory.equals(forField.fieldLocatorFactory);
+                    return this.fieldName.equals(forField.fieldName)
+                            && this.fieldLocatorFactory.equals(forField.fieldLocatorFactory);
                 }
 
                 public int hashCode() {
@@ -625,19 +748,31 @@ public class InvokeDynamic implements Implementation.Composable {
                 }
 
                 @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider
-                public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription, Assigner assigner, Assigner.Typing typing) {
-                    FieldLocator.Resolution resolutionLocate = this.fieldLocatorFactory.make(typeDescription).locate(this.fieldName);
+                public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription,
+                        Assigner assigner, Assigner.Typing typing) {
+                    FieldLocator.Resolution resolutionLocate = this.fieldLocatorFactory.make(typeDescription)
+                            .locate(this.fieldName);
                     if (!resolutionLocate.isResolved()) {
-                        throw new IllegalStateException("Cannot find a field " + this.fieldName + " for " + typeDescription);
+                        throw new IllegalStateException(
+                                "Cannot find a field " + this.fieldName + " for " + typeDescription);
                     }
                     if (resolutionLocate.getField().isStatic() || !methodDescription.isStatic()) {
-                        return doResolve(new StackManipulation.Compound(resolutionLocate.getField().isStatic() ? StackManipulation.Trivial.INSTANCE : MethodVariableAccess.loadThis(), FieldAccess.forField(resolutionLocate.getField()).read()), resolutionLocate.getField().getType(), assigner, typing);
+                        return doResolve(
+                                new StackManipulation.Compound(
+                                        resolutionLocate.getField().isStatic() ? StackManipulation.Trivial.INSTANCE
+                                                : MethodVariableAccess.loadThis(),
+                                        FieldAccess.forField(resolutionLocate.getField()).read()),
+                                resolutionLocate.getField().getType(), assigner, typing);
                     }
-                    throw new IllegalStateException("Cannot access non-static " + resolutionLocate.getField() + " from " + methodDescription);
+                    throw new IllegalStateException(
+                            "Cannot access non-static " + resolutionLocate.getField() + " from " + methodDescription);
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForFloatConstant implements ArgumentProvider {
                 private final float value;
@@ -650,7 +785,8 @@ public class InvokeDynamic implements Implementation.Composable {
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && Float.compare(this.value, ((ForFloatConstant) obj).value) == 0;
+                    return obj != null && getClass() == obj.getClass()
+                            && Float.compare(this.value, ((ForFloatConstant) obj).value) == 0;
                 }
 
                 public int hashCode() {
@@ -663,12 +799,17 @@ public class InvokeDynamic implements Implementation.Composable {
                 }
 
                 @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider
-                public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription, Assigner assigner, Assigner.Typing typing) {
-                    return new Resolved.Simple(FloatConstant.forValue(this.value), TypeDescription.ForLoadedType.of(Float.TYPE));
+                public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription,
+                        Assigner assigner, Assigner.Typing typing) {
+                    return new Resolved.Simple(FloatConstant.forValue(this.value),
+                            TypeDescription.ForLoadedType.of(Float.TYPE));
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForInstance implements ArgumentProvider {
                 private static final String FIELD_PREFIX = "invokeDynamic";
@@ -705,21 +846,31 @@ public class InvokeDynamic implements Implementation.Composable {
 
                 @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider
                 public InstrumentedType prepare(InstrumentedType instrumentedType) {
-                    return instrumentedType.withAuxiliaryField(new FieldDescription.Token(this.name, 4169, this.fieldType.asGenericType()), this.value);
+                    return instrumentedType.withAuxiliaryField(
+                            new FieldDescription.Token(this.name, 4169, this.fieldType.asGenericType()), this.value);
                 }
 
                 @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider
-                public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription, Assigner assigner, Assigner.Typing typing) {
-                    FieldDescription fieldDescription = (FieldDescription) typeDescription.getDeclaredFields().filter(ElementMatchers.named(this.name)).getOnly();
-                    StackManipulation stackManipulationAssign = assigner.assign(fieldDescription.getType(), this.fieldType.asGenericType(), typing);
+                public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription,
+                        Assigner assigner, Assigner.Typing typing) {
+                    FieldDescription fieldDescription = (FieldDescription) typeDescription.getDeclaredFields()
+                            .filter(ElementMatchers.named(this.name)).getOnly();
+                    StackManipulation stackManipulationAssign = assigner.assign(fieldDescription.getType(),
+                            this.fieldType.asGenericType(), typing);
                     if (stackManipulationAssign.isValid()) {
-                        return new Resolved.Simple(new StackManipulation.Compound(FieldAccess.forField(fieldDescription).read(), stackManipulationAssign), fieldDescription.getType().asErasure());
+                        return new Resolved.Simple(
+                                new StackManipulation.Compound(FieldAccess.forField(fieldDescription).read(),
+                                        stackManipulationAssign),
+                                fieldDescription.getType().asErasure());
                     }
                     throw new IllegalStateException("Cannot assign " + fieldDescription + " to " + this.fieldType);
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForIntegerConstant implements ArgumentProvider {
                 private final int value;
@@ -732,7 +883,8 @@ public class InvokeDynamic implements Implementation.Composable {
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.value == ((ForIntegerConstant) obj).value;
+                    return obj != null && getClass() == obj.getClass()
+                            && this.value == ((ForIntegerConstant) obj).value;
                 }
 
                 public int hashCode() {
@@ -745,12 +897,17 @@ public class InvokeDynamic implements Implementation.Composable {
                 }
 
                 @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider
-                public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription, Assigner assigner, Assigner.Typing typing) {
-                    return new Resolved.Simple(IntegerConstant.forValue(this.value), TypeDescription.ForLoadedType.of(Integer.TYPE));
+                public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription,
+                        Assigner assigner, Assigner.Typing typing) {
+                    return new Resolved.Simple(IntegerConstant.forValue(this.value),
+                            TypeDescription.ForLoadedType.of(Integer.TYPE));
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum ForInterceptedMethodInstanceAndParameters implements ArgumentProvider {
                 INSTANCE;
 
@@ -760,12 +917,21 @@ public class InvokeDynamic implements Implementation.Composable {
                 }
 
                 @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider
-                public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription, Assigner assigner, Assigner.Typing typing) {
-                    return new Resolved.Simple(MethodVariableAccess.allArgumentsOf(methodDescription).prependThisReference(), (List<TypeDescription>) (methodDescription.isStatic() ? methodDescription.getParameters().asTypeList().asErasures() : CompoundList.of(methodDescription.getDeclaringType().asErasure(), methodDescription.getParameters().asTypeList().asErasures())));
+                public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription,
+                        Assigner assigner, Assigner.Typing typing) {
+                    return new Resolved.Simple(
+                            MethodVariableAccess.allArgumentsOf(methodDescription).prependThisReference(),
+                            (List<TypeDescription>) (methodDescription.isStatic()
+                                    ? methodDescription.getParameters().asTypeList().asErasures()
+                                    : CompoundList.of(methodDescription.getDeclaringType().asErasure(),
+                                            methodDescription.getParameters().asTypeList().asErasures())));
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum ForInterceptedMethodParameters implements ArgumentProvider {
                 INSTANCE;
 
@@ -775,12 +941,17 @@ public class InvokeDynamic implements Implementation.Composable {
                 }
 
                 @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider
-                public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription, Assigner assigner, Assigner.Typing typing) {
-                    return new Resolved.Simple(MethodVariableAccess.allArgumentsOf(methodDescription), methodDescription.getParameters().asTypeList().asErasures());
+                public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription,
+                        Assigner assigner, Assigner.Typing typing) {
+                    return new Resolved.Simple(MethodVariableAccess.allArgumentsOf(methodDescription),
+                            methodDescription.getParameters().asTypeList().asErasures());
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForJavaConstant implements ArgumentProvider {
                 private final ConstantValue constant;
@@ -793,7 +964,8 @@ public class InvokeDynamic implements Implementation.Composable {
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.constant.equals(((ForJavaConstant) obj).constant);
+                    return obj != null && getClass() == obj.getClass()
+                            && this.constant.equals(((ForJavaConstant) obj).constant);
                 }
 
                 public int hashCode() {
@@ -806,12 +978,16 @@ public class InvokeDynamic implements Implementation.Composable {
                 }
 
                 @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider
-                public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription, Assigner assigner, Assigner.Typing typing) {
+                public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription,
+                        Assigner assigner, Assigner.Typing typing) {
                     return new Resolved.Simple(this.constant.toStackManipulation(), this.constant.getTypeDescription());
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForLongConstant implements ArgumentProvider {
                 private final long value;
@@ -839,17 +1015,25 @@ public class InvokeDynamic implements Implementation.Composable {
                 }
 
                 @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider
-                public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription, Assigner assigner, Assigner.Typing typing) {
-                    return new Resolved.Simple(LongConstant.forValue(this.value), TypeDescription.ForLoadedType.of(Long.TYPE));
+                public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription,
+                        Assigner assigner, Assigner.Typing typing) {
+                    return new Resolved.Simple(LongConstant.forValue(this.value),
+                            TypeDescription.ForLoadedType.of(Long.TYPE));
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForMethodParameter implements ArgumentProvider {
                 protected final int index;
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class WithExplicitType extends ForMethodParameter {
                     private final TypeDescription typeDescription;
@@ -860,10 +1044,14 @@ public class InvokeDynamic implements Implementation.Composable {
                     }
 
                     @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider.ForMethodParameter
-                    public Resolved doResolve(StackManipulation stackManipulation, TypeDescription.Generic generic, Assigner assigner, Assigner.Typing typing) {
-                        StackManipulation stackManipulationAssign = assigner.assign(generic, this.typeDescription.asGenericType(), typing);
+                    public Resolved doResolve(StackManipulation stackManipulation, TypeDescription.Generic generic,
+                            Assigner assigner, Assigner.Typing typing) {
+                        StackManipulation stackManipulationAssign = assigner.assign(generic,
+                                this.typeDescription.asGenericType(), typing);
                         if (stackManipulationAssign.isValid()) {
-                            return new Resolved.Simple(new StackManipulation.Compound(stackManipulation, stackManipulationAssign), this.typeDescription);
+                            return new Resolved.Simple(
+                                    new StackManipulation.Compound(stackManipulation, stackManipulationAssign),
+                                    this.typeDescription);
                         }
                         throw new IllegalStateException("Cannot assign " + generic + " to " + this.typeDescription);
                     }
@@ -876,7 +1064,8 @@ public class InvokeDynamic implements Implementation.Composable {
                         if (this == obj) {
                             return true;
                         }
-                        return obj != null && getClass() == obj.getClass() && this.typeDescription.equals(((WithExplicitType) obj).typeDescription);
+                        return obj != null && getClass() == obj.getClass()
+                                && this.typeDescription.equals(((WithExplicitType) obj).typeDescription);
                     }
 
                     @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider.ForMethodParameter
@@ -889,7 +1078,8 @@ public class InvokeDynamic implements Implementation.Composable {
                     this.index = i;
                 }
 
-                public Resolved doResolve(StackManipulation stackManipulation, TypeDescription.Generic generic, Assigner assigner, Assigner.Typing typing) {
+                public Resolved doResolve(StackManipulation stackManipulation, TypeDescription.Generic generic,
+                        Assigner assigner, Assigner.Typing typing) {
                     return new Resolved.Simple(stackManipulation, generic.asErasure());
                 }
 
@@ -897,7 +1087,8 @@ public class InvokeDynamic implements Implementation.Composable {
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.index == ((ForMethodParameter) obj).index;
+                    return obj != null && getClass() == obj.getClass()
+                            && this.index == ((ForMethodParameter) obj).index;
                 }
 
                 public int hashCode() {
@@ -910,16 +1101,21 @@ public class InvokeDynamic implements Implementation.Composable {
                 }
 
                 @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider
-                public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription, Assigner assigner, Assigner.Typing typing) {
+                public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription,
+                        Assigner assigner, Assigner.Typing typing) {
                     ParameterList<?> parameters = methodDescription.getParameters();
                     if (this.index < parameters.size()) {
-                        return doResolve(MethodVariableAccess.load((ParameterDescription) parameters.get(this.index)), ((ParameterDescription) parameters.get(this.index)).getType(), assigner, typing);
+                        return doResolve(MethodVariableAccess.load((ParameterDescription) parameters.get(this.index)),
+                                ((ParameterDescription) parameters.get(this.index)).getType(), assigner, typing);
                     }
                     throw new IllegalStateException("No parameter " + this.index + " for " + methodDescription);
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForNullValue implements ArgumentProvider {
                 private final TypeDescription typeDescription;
@@ -932,7 +1128,8 @@ public class InvokeDynamic implements Implementation.Composable {
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.typeDescription.equals(((ForNullValue) obj).typeDescription);
+                    return obj != null && getClass() == obj.getClass()
+                            && this.typeDescription.equals(((ForNullValue) obj).typeDescription);
                 }
 
                 public int hashCode() {
@@ -945,12 +1142,16 @@ public class InvokeDynamic implements Implementation.Composable {
                 }
 
                 @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider
-                public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription, Assigner assigner, Assigner.Typing typing) {
+                public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription,
+                        Assigner assigner, Assigner.Typing typing) {
                     return new Resolved.Simple(NullConstant.INSTANCE, this.typeDescription);
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForShortConstant implements ArgumentProvider {
                 private final short value;
@@ -976,12 +1177,17 @@ public class InvokeDynamic implements Implementation.Composable {
                 }
 
                 @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider
-                public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription, Assigner assigner, Assigner.Typing typing) {
-                    return new Resolved.Simple(IntegerConstant.forValue(this.value), TypeDescription.ForLoadedType.of(Short.TYPE));
+                public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription,
+                        Assigner assigner, Assigner.Typing typing) {
+                    return new Resolved.Simple(IntegerConstant.forValue(this.value),
+                            TypeDescription.ForLoadedType.of(Short.TYPE));
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForStringConstant implements ArgumentProvider {
                 private final String value;
@@ -994,7 +1200,8 @@ public class InvokeDynamic implements Implementation.Composable {
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.value.equals(((ForStringConstant) obj).value);
+                    return obj != null && getClass() == obj.getClass()
+                            && this.value.equals(((ForStringConstant) obj).value);
                 }
 
                 public int hashCode() {
@@ -1007,12 +1214,17 @@ public class InvokeDynamic implements Implementation.Composable {
                 }
 
                 @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider
-                public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription, Assigner assigner, Assigner.Typing typing) {
-                    return new Resolved.Simple(new TextConstant(this.value), TypeDescription.ForLoadedType.of(String.class));
+                public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription,
+                        Assigner assigner, Assigner.Typing typing) {
+                    return new Resolved.Simple(new TextConstant(this.value),
+                            TypeDescription.ForLoadedType.of(String.class));
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForThisInstance implements ArgumentProvider {
                 private final TypeDescription typeDescription;
@@ -1025,7 +1237,8 @@ public class InvokeDynamic implements Implementation.Composable {
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.typeDescription.equals(((ForThisInstance) obj).typeDescription);
+                    return obj != null && getClass() == obj.getClass()
+                            && this.typeDescription.equals(((ForThisInstance) obj).typeDescription);
                 }
 
                 public int hashCode() {
@@ -1038,9 +1251,11 @@ public class InvokeDynamic implements Implementation.Composable {
                 }
 
                 @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider
-                public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription, Assigner assigner, Assigner.Typing typing) {
+                public Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription,
+                        Assigner assigner, Assigner.Typing typing) {
                     if (methodDescription.isStatic()) {
-                        throw new IllegalStateException(dkz.t("Cannot get this instance from static method: ", methodDescription));
+                        throw new IllegalStateException(
+                                dkz.t("Cannot get this instance from static method: ", methodDescription));
                     }
                     if (typeDescription.isAssignableTo(this.typeDescription)) {
                         return new Resolved.Simple(MethodVariableAccess.loadThis(), this.typeDescription);
@@ -1049,10 +1264,16 @@ public class InvokeDynamic implements Implementation.Composable {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public interface Resolved {
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class Simple implements Resolved {
                     private final List<TypeDescription> loadedTypes;
@@ -1070,7 +1291,8 @@ public class InvokeDynamic implements Implementation.Composable {
                             return false;
                         }
                         Simple simple = (Simple) obj;
-                        return this.stackManipulation.equals(simple.stackManipulation) && this.loadedTypes.equals(simple.loadedTypes);
+                        return this.stackManipulation.equals(simple.stackManipulation)
+                                && this.loadedTypes.equals(simple.loadedTypes);
                     }
 
                     @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider.Resolved
@@ -1084,7 +1306,8 @@ public class InvokeDynamic implements Implementation.Composable {
                     }
 
                     public int hashCode() {
-                        return this.loadedTypes.hashCode() + dkz.g(this.stackManipulation, getClass().hashCode() * 31, 31);
+                        return this.loadedTypes.hashCode()
+                                + dkz.g(this.stackManipulation, getClass().hashCode() * 31, 31);
                     }
 
                     public Simple(StackManipulation stackManipulation, List<TypeDescription> list) {
@@ -1100,17 +1323,24 @@ public class InvokeDynamic implements Implementation.Composable {
 
             InstrumentedType prepare(InstrumentedType instrumentedType);
 
-            Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription, Assigner assigner, Assigner.Typing typing);
+            Resolved resolve(TypeDescription typeDescription, MethodDescription methodDescription, Assigner assigner,
+                    Assigner.Typing typing);
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class Default implements InvocationProvider {
             private final List<ArgumentProvider> argumentProviders;
             private final NameProvider nameProvider;
             private final ReturnTypeProvider returnTypeProvider;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class Target implements Target {
                 private final List<ArgumentProvider> argumentProviders;
@@ -1118,7 +1348,8 @@ public class InvokeDynamic implements Implementation.Composable {
                 private final String internalName;
                 private final TypeDescription returnType;
 
-                public Target(String str, TypeDescription typeDescription, List<ArgumentProvider> list, MethodDescription methodDescription) {
+                public Target(String str, TypeDescription typeDescription, List<ArgumentProvider> list,
+                        MethodDescription methodDescription) {
                     this.internalName = str;
                     this.returnType = typeDescription;
                     this.argumentProviders = list;
@@ -1133,41 +1364,50 @@ public class InvokeDynamic implements Implementation.Composable {
                         return false;
                     }
                     Target target = (Target) obj;
-                    return this.internalName.equals(target.internalName) && this.returnType.equals(target.returnType) && this.argumentProviders.equals(target.argumentProviders) && this.instrumentedMethod.equals(target.instrumentedMethod);
+                    return this.internalName.equals(target.internalName) && this.returnType.equals(target.returnType)
+                            && this.argumentProviders.equals(target.argumentProviders)
+                            && this.instrumentedMethod.equals(target.instrumentedMethod);
                 }
 
                 public int hashCode() {
-                    return this.instrumentedMethod.hashCode() + bjs.g(this.argumentProviders, dkz.f(this.returnType, bjs.e(this.internalName, getClass().hashCode() * 31, 31), 31), 31);
+                    return this.instrumentedMethod.hashCode() + bjs.g(this.argumentProviders,
+                            dkz.f(this.returnType, bjs.e(this.internalName, getClass().hashCode() * 31, 31), 31), 31);
                 }
 
                 @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.Target
-                public Target.Resolved resolve(TypeDescription typeDescription, Assigner assigner, Assigner.Typing typing) {
+                public Target.Resolved resolve(TypeDescription typeDescription, Assigner assigner,
+                        Assigner.Typing typing) {
                     StackManipulation[] stackManipulationArr = new StackManipulation[this.argumentProviders.size()];
                     ArrayList arrayList = new ArrayList();
                     Iterator<ArgumentProvider> it = this.argumentProviders.iterator();
                     int i = 0;
                     while (it.hasNext()) {
-                        ArgumentProvider.Resolved resolvedResolve = it.next().resolve(typeDescription, this.instrumentedMethod, assigner, typing);
+                        ArgumentProvider.Resolved resolvedResolve = it.next().resolve(typeDescription,
+                                this.instrumentedMethod, assigner, typing);
                         arrayList.addAll(resolvedResolve.getLoadedTypes());
                         stackManipulationArr[i] = resolvedResolve.getLoadInstruction();
                         i++;
                     }
-                    return new Target.Resolved.Simple(new StackManipulation.Compound(stackManipulationArr), this.internalName, this.returnType, arrayList);
+                    return new Target.Resolved.Simple(new StackManipulation.Compound(stackManipulationArr),
+                            this.internalName, this.returnType, arrayList);
                 }
             }
 
             public Default() {
-                this(NameProvider.ForInterceptedMethod.INSTANCE, ReturnTypeProvider.ForInterceptedMethod.INSTANCE, Collections.singletonList(ArgumentProvider.ForInterceptedMethodInstanceAndParameters.INSTANCE));
+                this(NameProvider.ForInterceptedMethod.INSTANCE, ReturnTypeProvider.ForInterceptedMethod.INSTANCE,
+                        Collections.singletonList(ArgumentProvider.ForInterceptedMethodInstanceAndParameters.INSTANCE));
             }
 
             @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider
             public InvocationProvider appendArgument(ArgumentProvider argumentProvider) {
-                return new Default(this.nameProvider, this.returnTypeProvider, CompoundList.of(this.argumentProviders, argumentProvider));
+                return new Default(this.nameProvider, this.returnTypeProvider,
+                        CompoundList.of(this.argumentProviders, argumentProvider));
             }
 
             @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider
             public InvocationProvider appendArguments(List<ArgumentProvider> list) {
-                return new Default(this.nameProvider, this.returnTypeProvider, CompoundList.of((List) this.argumentProviders, (List) list));
+                return new Default(this.nameProvider, this.returnTypeProvider,
+                        CompoundList.of((List) this.argumentProviders, (List) list));
             }
 
             public boolean equals(@MaybeNull Object obj) {
@@ -1178,11 +1418,14 @@ public class InvokeDynamic implements Implementation.Composable {
                     return false;
                 }
                 Default r5 = (Default) obj;
-                return this.nameProvider.equals(r5.nameProvider) && this.returnTypeProvider.equals(r5.returnTypeProvider) && this.argumentProviders.equals(r5.argumentProviders);
+                return this.nameProvider.equals(r5.nameProvider)
+                        && this.returnTypeProvider.equals(r5.returnTypeProvider)
+                        && this.argumentProviders.equals(r5.argumentProviders);
             }
 
             public int hashCode() {
-                return this.argumentProviders.hashCode() + ((this.returnTypeProvider.hashCode() + ((this.nameProvider.hashCode() + (getClass().hashCode() * 31)) * 31)) * 31);
+                return this.argumentProviders.hashCode() + ((this.returnTypeProvider.hashCode()
+                        + ((this.nameProvider.hashCode() + (getClass().hashCode() * 31)) * 31)) * 31);
             }
 
             @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider
@@ -1211,20 +1454,28 @@ public class InvokeDynamic implements Implementation.Composable {
 
             @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider
             public Target make(MethodDescription methodDescription) {
-                return new Target(this.nameProvider.resolve(methodDescription), this.returnTypeProvider.resolve(methodDescription), this.argumentProviders, methodDescription);
+                return new Target(this.nameProvider.resolve(methodDescription),
+                        this.returnTypeProvider.resolve(methodDescription), this.argumentProviders, methodDescription);
             }
 
-            public Default(NameProvider nameProvider, ReturnTypeProvider returnTypeProvider, List<ArgumentProvider> list) {
+            public Default(NameProvider nameProvider, ReturnTypeProvider returnTypeProvider,
+                    List<ArgumentProvider> list) {
                 this.nameProvider = nameProvider;
                 this.returnTypeProvider = returnTypeProvider;
                 this.argumentProviders = list;
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public interface NameProvider {
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForExplicitName implements NameProvider {
                 private final String internalName;
@@ -1237,7 +1488,8 @@ public class InvokeDynamic implements Implementation.Composable {
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.internalName.equals(((ForExplicitName) obj).internalName);
+                    return obj != null && getClass() == obj.getClass()
+                            && this.internalName.equals(((ForExplicitName) obj).internalName);
                 }
 
                 public int hashCode() {
@@ -1250,7 +1502,10 @@ public class InvokeDynamic implements Implementation.Composable {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum ForInterceptedMethod implements NameProvider {
                 INSTANCE;
 
@@ -1263,10 +1518,16 @@ public class InvokeDynamic implements Implementation.Composable {
             String resolve(MethodDescription methodDescription);
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public interface ReturnTypeProvider {
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForExplicitType implements ReturnTypeProvider {
                 private final TypeDescription typeDescription;
@@ -1279,7 +1540,8 @@ public class InvokeDynamic implements Implementation.Composable {
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.typeDescription.equals(((ForExplicitType) obj).typeDescription);
+                    return obj != null && getClass() == obj.getClass()
+                            && this.typeDescription.equals(((ForExplicitType) obj).typeDescription);
                 }
 
                 public int hashCode() {
@@ -1292,7 +1554,10 @@ public class InvokeDynamic implements Implementation.Composable {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum ForInterceptedMethod implements ReturnTypeProvider {
                 INSTANCE;
 
@@ -1305,13 +1570,22 @@ public class InvokeDynamic implements Implementation.Composable {
             TypeDescription resolve(MethodDescription methodDescription);
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public interface Target {
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public interface Resolved {
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class Simple implements Resolved {
                     private final String internalName;
@@ -1319,7 +1593,8 @@ public class InvokeDynamic implements Implementation.Composable {
                     private final TypeDescription returnType;
                     private final StackManipulation stackManipulation;
 
-                    public Simple(StackManipulation stackManipulation, String str, TypeDescription typeDescription, List<TypeDescription> list) {
+                    public Simple(StackManipulation stackManipulation, String str, TypeDescription typeDescription,
+                            List<TypeDescription> list) {
                         this.stackManipulation = stackManipulation;
                         this.internalName = str;
                         this.returnType = typeDescription;
@@ -1334,7 +1609,10 @@ public class InvokeDynamic implements Implementation.Composable {
                             return false;
                         }
                         Simple simple = (Simple) obj;
-                        return this.internalName.equals(simple.internalName) && this.stackManipulation.equals(simple.stackManipulation) && this.returnType.equals(simple.returnType) && this.parameterTypes.equals(simple.parameterTypes);
+                        return this.internalName.equals(simple.internalName)
+                                && this.stackManipulation.equals(simple.stackManipulation)
+                                && this.returnType.equals(simple.returnType)
+                                && this.parameterTypes.equals(simple.parameterTypes);
                     }
 
                     @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.Target.Resolved
@@ -1358,7 +1636,8 @@ public class InvokeDynamic implements Implementation.Composable {
                     }
 
                     public int hashCode() {
-                        return this.parameterTypes.hashCode() + dkz.f(this.returnType, bjs.e(this.internalName, dkz.g(this.stackManipulation, getClass().hashCode() * 31, 31), 31), 31);
+                        return this.parameterTypes.hashCode() + dkz.f(this.returnType, bjs.e(this.internalName,
+                                dkz.g(this.stackManipulation, getClass().hashCode() * 31, 31), 31), 31);
                     }
                 }
 
@@ -1389,40 +1668,57 @@ public class InvokeDynamic implements Implementation.Composable {
         InvocationProvider withoutArguments();
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public enum TerminationHandler {
         RETURNING { // from class: net.bytebuddy.implementation.InvokeDynamic.TerminationHandler.1
             @Override // net.bytebuddy.implementation.InvokeDynamic.TerminationHandler
-            public StackManipulation resolve(MethodDescription methodDescription, TypeDescription typeDescription, Assigner assigner, Assigner.Typing typing) {
-                StackManipulation stackManipulationAssign = assigner.assign(typeDescription.asGenericType(), methodDescription.getReturnType(), typing);
+            public StackManipulation resolve(MethodDescription methodDescription, TypeDescription typeDescription,
+                    Assigner assigner, Assigner.Typing typing) {
+                StackManipulation stackManipulationAssign = assigner.assign(typeDescription.asGenericType(),
+                        methodDescription.getReturnType(), typing);
                 if (stackManipulationAssign.isValid()) {
-                    return new StackManipulation.Compound(stackManipulationAssign, MethodReturn.of(methodDescription.getReturnType()));
+                    return new StackManipulation.Compound(stackManipulationAssign,
+                            MethodReturn.of(methodDescription.getReturnType()));
                 }
                 throw new IllegalStateException("Cannot return " + typeDescription + " from " + methodDescription);
             }
         },
         DROPPING { // from class: net.bytebuddy.implementation.InvokeDynamic.TerminationHandler.2
             @Override // net.bytebuddy.implementation.InvokeDynamic.TerminationHandler
-            public StackManipulation resolve(MethodDescription methodDescription, TypeDescription typeDescription, Assigner assigner, Assigner.Typing typing) {
+            public StackManipulation resolve(MethodDescription methodDescription, TypeDescription typeDescription,
+                    Assigner assigner, Assigner.Typing typing) {
                 return Removal.of(typeDescription);
             }
         };
 
-        public abstract StackManipulation resolve(MethodDescription methodDescription, TypeDescription typeDescription, Assigner assigner, Assigner.Typing typing);
+        public abstract StackManipulation resolve(MethodDescription methodDescription, TypeDescription typeDescription,
+                Assigner assigner, Assigner.Typing typing);
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class WithImplicitArguments extends AbstractDelegator {
-        public WithImplicitArguments(MethodDescription.InDefinedShape inDefinedShape, List<? extends JavaConstant> list, InvocationProvider invocationProvider, TerminationHandler terminationHandler, Assigner assigner, Assigner.Typing typing) {
+        public WithImplicitArguments(MethodDescription.InDefinedShape inDefinedShape, List<? extends JavaConstant> list,
+                InvocationProvider invocationProvider, TerminationHandler terminationHandler, Assigner assigner,
+                Assigner.Typing typing) {
             super(inDefinedShape, list, invocationProvider, terminationHandler, assigner, typing);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic, net.bytebuddy.implementation.Implementation.Composable
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic,
+                  // net.bytebuddy.implementation.Implementation.Composable
         public /* bridge */ /* synthetic */ Implementation andThen(Implementation implementation) {
             return super.andThen(implementation);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic, net.bytebuddy.implementation.Implementation
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic,
+                  // net.bytebuddy.implementation.Implementation
         public /* bridge */ /* synthetic */ ByteCodeAppender appender(Implementation.Target target) {
             return super.appender(target);
         }
@@ -1432,154 +1728,191 @@ public class InvokeDynamic implements Implementation.Composable {
             return withoutArguments();
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic, net.bytebuddy.dynamic.scaffold.InstrumentedType.Prepareable
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic,
+                  // net.bytebuddy.dynamic.scaffold.InstrumentedType.Prepareable
         public /* bridge */ /* synthetic */ InstrumentedType prepare(InstrumentedType instrumentedType) {
             return super.prepare(instrumentedType);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ WithImplicitType withArgument(int i) {
             return super.withArgument(i);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withBooleanValue(boolean[] zArr) {
             return super.withBooleanValue(zArr);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withByteValue(byte[] bArr) {
             return super.withByteValue(bArr);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withCharacterValue(char[] cArr) {
             return super.withCharacterValue(cArr);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withDoubleValue(double[] dArr) {
             return super.withDoubleValue(dArr);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
-        public /* bridge */ /* synthetic */ InvokeDynamic withEnumeration(EnumerationDescription[] enumerationDescriptionArr) {
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
+        public /* bridge */ /* synthetic */ InvokeDynamic withEnumeration(
+                EnumerationDescription[] enumerationDescriptionArr) {
             return super.withEnumeration(enumerationDescriptionArr);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ WithImplicitType withField(String str) {
             return super.withField(str);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withFloatValue(float[] fArr) {
             return super.withFloatValue(fArr);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withImplicitAndMethodArguments() {
             return super.withImplicitAndMethodArguments();
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withInstance(JavaConstant[] javaConstantArr) {
             return super.withInstance(javaConstantArr);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withIntegerValue(int[] iArr) {
             return super.withIntegerValue(iArr);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withLongValue(long[] jArr) {
             return super.withLongValue(jArr);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withMethodArguments() {
             return super.withMethodArguments();
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withNullValue(Class[] clsArr) {
             return super.withNullValue((Class<?>[]) clsArr);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ WithImplicitType withReference(Object obj) {
             return super.withReference(obj);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withShortValue(short[] sArr) {
             return super.withShortValue(sArr);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withThis(Class[] clsArr) {
             return super.withThis((Class<?>[]) clsArr);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withType(TypeDescription[] typeDescriptionArr) {
             return super.withType(typeDescriptionArr);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withValue(Object[] objArr) {
             return super.withValue(objArr);
         }
 
         public InvokeDynamic withoutArguments() {
-            return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.withoutArguments(), this.terminationHandler, this.assigner, this.typing);
+            return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.withoutArguments(),
+                    this.terminationHandler, this.assigner, this.typing);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withArgument(int[] iArr) {
             return super.withArgument(iArr);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public WithImplicitArguments withAssigner(Assigner assigner, Assigner.Typing typing) {
-            return new WithImplicitArguments(this.bootstrap, this.arguments, this.invocationProvider, this.terminationHandler, assigner, typing);
+            return new WithImplicitArguments(this.bootstrap, this.arguments, this.invocationProvider,
+                    this.terminationHandler, assigner, typing);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ WithImplicitType withField(String str, FieldLocator.Factory factory) {
             return super.withField(str, factory);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withNullValue(TypeDescription[] typeDescriptionArr) {
             return super.withNullValue(typeDescriptionArr);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withReference(Object[] objArr) {
             return super.withReference(objArr);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withThis(TypeDescription[] typeDescriptionArr) {
             return super.withThis(typeDescriptionArr);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withField(FieldLocator.Factory factory, String[] strArr) {
             return super.withField(factory, strArr);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withField(String[] strArr) {
             return super.withField(strArr);
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class WithImplicitTarget extends WithImplicitArguments {
-        public WithImplicitTarget(MethodDescription.InDefinedShape inDefinedShape, List<? extends JavaConstant> list, InvocationProvider invocationProvider, TerminationHandler terminationHandler, Assigner assigner, Assigner.Typing typing) {
+        public WithImplicitTarget(MethodDescription.InDefinedShape inDefinedShape, List<? extends JavaConstant> list,
+                InvocationProvider invocationProvider, TerminationHandler terminationHandler, Assigner assigner,
+                Assigner.Typing typing) {
             super(inDefinedShape, list, invocationProvider, terminationHandler, assigner, typing);
         }
 
@@ -1588,11 +1921,16 @@ public class InvokeDynamic implements Implementation.Composable {
         }
 
         public WithImplicitArguments invoke(TypeDescription typeDescription) {
-            return new WithImplicitArguments(this.bootstrap, this.arguments, this.invocationProvider.withReturnTypeProvider(new InvocationProvider.ReturnTypeProvider.ForExplicitType(typeDescription)), this.terminationHandler, this.assigner, this.typing);
+            return new WithImplicitArguments(this.bootstrap, this.arguments,
+                    this.invocationProvider.withReturnTypeProvider(
+                            new InvocationProvider.ReturnTypeProvider.ForExplicitType(typeDescription)),
+                    this.terminationHandler, this.assigner, this.typing);
         }
 
         public WithImplicitArguments invoke(String str) {
-            return new WithImplicitArguments(this.bootstrap, this.arguments, this.invocationProvider.withNameProvider(new InvocationProvider.NameProvider.ForExplicitName(str)), this.terminationHandler, this.assigner, this.typing);
+            return new WithImplicitArguments(this.bootstrap, this.arguments,
+                    this.invocationProvider.withNameProvider(new InvocationProvider.NameProvider.ForExplicitName(str)),
+                    this.terminationHandler, this.assigner, this.typing);
         }
 
         public WithImplicitArguments invoke(String str, Class<?> cls) {
@@ -1600,39 +1938,63 @@ public class InvokeDynamic implements Implementation.Composable {
         }
 
         public WithImplicitArguments invoke(String str, TypeDescription typeDescription) {
-            return new WithImplicitArguments(this.bootstrap, this.arguments, this.invocationProvider.withNameProvider(new InvocationProvider.NameProvider.ForExplicitName(str)).withReturnTypeProvider(new InvocationProvider.ReturnTypeProvider.ForExplicitType(typeDescription)), this.terminationHandler, this.assigner, this.typing);
+            return new WithImplicitArguments(this.bootstrap, this.arguments,
+                    this.invocationProvider.withNameProvider(new InvocationProvider.NameProvider.ForExplicitName(str))
+                            .withReturnTypeProvider(
+                                    new InvocationProvider.ReturnTypeProvider.ForExplicitType(typeDescription)),
+                    this.terminationHandler, this.assigner, this.typing);
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static abstract class WithImplicitType extends AbstractDelegator {
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static class OfArgument extends WithImplicitType {
             private final int index;
 
-            public OfArgument(MethodDescription.InDefinedShape inDefinedShape, List<? extends JavaConstant> list, InvocationProvider invocationProvider, TerminationHandler terminationHandler, Assigner assigner, Assigner.Typing typing, int i) {
+            public OfArgument(MethodDescription.InDefinedShape inDefinedShape, List<? extends JavaConstant> list,
+                    InvocationProvider invocationProvider, TerminationHandler terminationHandler, Assigner assigner,
+                    Assigner.Typing typing, int i) {
                 super(inDefinedShape, list, invocationProvider, terminationHandler, assigner, typing);
                 this.index = i;
             }
 
             @Override // net.bytebuddy.implementation.InvokeDynamic.WithImplicitType
             public InvokeDynamic as(TypeDescription typeDescription) {
-                return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArgument(new InvocationProvider.ArgumentProvider.ForMethodParameter.WithExplicitType(this.index, typeDescription)), this.terminationHandler, this.assigner, this.typing);
+                return new InvokeDynamic(this.bootstrap, this.arguments,
+                        this.invocationProvider.appendArgument(
+                                new InvocationProvider.ArgumentProvider.ForMethodParameter.WithExplicitType(this.index,
+                                        typeDescription)),
+                        this.terminationHandler, this.assigner, this.typing);
             }
 
             @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator
             public InvokeDynamic materialize() {
-                return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArgument(new InvocationProvider.ArgumentProvider.ForMethodParameter(this.index)), this.terminationHandler, this.assigner, this.typing);
+                return new InvokeDynamic(this.bootstrap, this.arguments,
+                        this.invocationProvider
+                                .appendArgument(new InvocationProvider.ArgumentProvider.ForMethodParameter(this.index)),
+                        this.terminationHandler, this.assigner, this.typing);
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static class OfField extends WithImplicitType {
             private final FieldLocator.Factory fieldLocatorFactory;
             private final String fieldName;
 
-            public OfField(MethodDescription.InDefinedShape inDefinedShape, List<? extends JavaConstant> list, InvocationProvider invocationProvider, TerminationHandler terminationHandler, Assigner assigner, Assigner.Typing typing, String str, FieldLocator.Factory factory) {
+            public OfField(MethodDescription.InDefinedShape inDefinedShape, List<? extends JavaConstant> list,
+                    InvocationProvider invocationProvider, TerminationHandler terminationHandler, Assigner assigner,
+                    Assigner.Typing typing, String str, FieldLocator.Factory factory) {
                 super(inDefinedShape, list, invocationProvider, terminationHandler, assigner, typing);
                 this.fieldName = str;
                 this.fieldLocatorFactory = factory;
@@ -1640,21 +2002,33 @@ public class InvokeDynamic implements Implementation.Composable {
 
             @Override // net.bytebuddy.implementation.InvokeDynamic.WithImplicitType
             public InvokeDynamic as(TypeDescription typeDescription) {
-                return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArgument(new InvocationProvider.ArgumentProvider.ForField.WithExplicitType(this.fieldName, this.fieldLocatorFactory, typeDescription)), this.terminationHandler, this.assigner, this.typing);
+                return new InvokeDynamic(this.bootstrap, this.arguments,
+                        this.invocationProvider.appendArgument(
+                                new InvocationProvider.ArgumentProvider.ForField.WithExplicitType(this.fieldName,
+                                        this.fieldLocatorFactory, typeDescription)),
+                        this.terminationHandler, this.assigner, this.typing);
             }
 
             @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator
             public InvokeDynamic materialize() {
-                return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArgument(new InvocationProvider.ArgumentProvider.ForField(this.fieldName, this.fieldLocatorFactory)), this.terminationHandler, this.assigner, this.typing);
+                return new InvokeDynamic(this.bootstrap, this.arguments,
+                        this.invocationProvider.appendArgument(new InvocationProvider.ArgumentProvider.ForField(
+                                this.fieldName, this.fieldLocatorFactory)),
+                        this.terminationHandler, this.assigner, this.typing);
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static class OfInstance extends WithImplicitType {
             private final InvocationProvider.ArgumentProvider argumentProvider;
             private final Object value;
 
-            public OfInstance(MethodDescription.InDefinedShape inDefinedShape, List<? extends JavaConstant> list, InvocationProvider invocationProvider, TerminationHandler terminationHandler, Assigner assigner, Assigner.Typing typing, Object obj) {
+            public OfInstance(MethodDescription.InDefinedShape inDefinedShape, List<? extends JavaConstant> list,
+                    InvocationProvider invocationProvider, TerminationHandler terminationHandler, Assigner assigner,
+                    Assigner.Typing typing, Object obj) {
                 super(inDefinedShape, list, invocationProvider, terminationHandler, assigner, typing);
                 this.value = obj;
                 this.argumentProvider = InvocationProvider.ArgumentProvider.ForInstance.of(obj);
@@ -1663,27 +2037,38 @@ public class InvokeDynamic implements Implementation.Composable {
             @Override // net.bytebuddy.implementation.InvokeDynamic.WithImplicitType
             public InvokeDynamic as(TypeDescription typeDescription) {
                 if (typeDescription.asBoxed().isInstance(this.value)) {
-                    return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArgument(new InvocationProvider.ArgumentProvider.ForInstance(this.value, typeDescription)), this.terminationHandler, this.assigner, this.typing);
+                    return new InvokeDynamic(this.bootstrap, this.arguments,
+                            this.invocationProvider.appendArgument(
+                                    new InvocationProvider.ArgumentProvider.ForInstance(this.value, typeDescription)),
+                            this.terminationHandler, this.assigner, this.typing);
                 }
                 throw new IllegalArgumentException(this.value + " is not of type " + typeDescription);
             }
 
             @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator
             public InvokeDynamic materialize() {
-                return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArgument(this.argumentProvider), this.terminationHandler, this.assigner, this.typing);
+                return new InvokeDynamic(this.bootstrap, this.arguments,
+                        this.invocationProvider.appendArgument(this.argumentProvider), this.terminationHandler,
+                        this.assigner, this.typing);
             }
         }
 
-        public WithImplicitType(MethodDescription.InDefinedShape inDefinedShape, List<? extends JavaConstant> list, InvocationProvider invocationProvider, TerminationHandler terminationHandler, Assigner assigner, Assigner.Typing typing) {
+        public WithImplicitType(MethodDescription.InDefinedShape inDefinedShape, List<? extends JavaConstant> list,
+                InvocationProvider invocationProvider, TerminationHandler terminationHandler, Assigner assigner,
+                Assigner.Typing typing) {
             super(inDefinedShape, list, invocationProvider, terminationHandler, assigner, typing);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic, net.bytebuddy.implementation.Implementation.Composable
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic,
+                  // net.bytebuddy.implementation.Implementation.Composable
         public /* bridge */ /* synthetic */ Implementation andThen(Implementation implementation) {
             return super.andThen(implementation);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic, net.bytebuddy.implementation.Implementation
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic,
+                  // net.bytebuddy.implementation.Implementation
         public /* bridge */ /* synthetic */ ByteCodeAppender appender(Implementation.Target target) {
             return super.appender(target);
         }
@@ -1694,148 +2079,181 @@ public class InvokeDynamic implements Implementation.Composable {
 
         public abstract InvokeDynamic as(TypeDescription typeDescription);
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic, net.bytebuddy.dynamic.scaffold.InstrumentedType.Prepareable
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic,
+                  // net.bytebuddy.dynamic.scaffold.InstrumentedType.Prepareable
         public /* bridge */ /* synthetic */ InstrumentedType prepare(InstrumentedType instrumentedType) {
             return super.prepare(instrumentedType);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ WithImplicitType withArgument(int i) {
             return super.withArgument(i);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
-        public /* bridge */ /* synthetic */ Implementation.Composable withAssigner(Assigner assigner, Assigner.Typing typing) {
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
+        public /* bridge */ /* synthetic */ Implementation.Composable withAssigner(Assigner assigner,
+                Assigner.Typing typing) {
             return super.withAssigner(assigner, typing);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withBooleanValue(boolean[] zArr) {
             return super.withBooleanValue(zArr);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withByteValue(byte[] bArr) {
             return super.withByteValue(bArr);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withCharacterValue(char[] cArr) {
             return super.withCharacterValue(cArr);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withDoubleValue(double[] dArr) {
             return super.withDoubleValue(dArr);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
-        public /* bridge */ /* synthetic */ InvokeDynamic withEnumeration(EnumerationDescription[] enumerationDescriptionArr) {
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
+        public /* bridge */ /* synthetic */ InvokeDynamic withEnumeration(
+                EnumerationDescription[] enumerationDescriptionArr) {
             return super.withEnumeration(enumerationDescriptionArr);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ WithImplicitType withField(String str) {
             return super.withField(str);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withFloatValue(float[] fArr) {
             return super.withFloatValue(fArr);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withImplicitAndMethodArguments() {
             return super.withImplicitAndMethodArguments();
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withInstance(JavaConstant[] javaConstantArr) {
             return super.withInstance(javaConstantArr);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withIntegerValue(int[] iArr) {
             return super.withIntegerValue(iArr);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withLongValue(long[] jArr) {
             return super.withLongValue(jArr);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withMethodArguments() {
             return super.withMethodArguments();
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withNullValue(Class[] clsArr) {
             return super.withNullValue((Class<?>[]) clsArr);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ WithImplicitType withReference(Object obj) {
             return super.withReference(obj);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withShortValue(short[] sArr) {
             return super.withShortValue(sArr);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withThis(Class[] clsArr) {
             return super.withThis((Class<?>[]) clsArr);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withType(TypeDescription[] typeDescriptionArr) {
             return super.withType(typeDescriptionArr);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withValue(Object[] objArr) {
             return super.withValue(objArr);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withArgument(int[] iArr) {
             return super.withArgument(iArr);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ WithImplicitType withField(String str, FieldLocator.Factory factory) {
             return super.withField(str, factory);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withNullValue(TypeDescription[] typeDescriptionArr) {
             return super.withNullValue(typeDescriptionArr);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withReference(Object[] objArr) {
             return super.withReference(objArr);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withThis(TypeDescription[] typeDescriptionArr) {
             return super.withThis(typeDescriptionArr);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withField(FieldLocator.Factory factory, String[] strArr) {
             return super.withField(factory, strArr);
         }
 
-        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator, net.bytebuddy.implementation.InvokeDynamic
+        @Override // net.bytebuddy.implementation.InvokeDynamic.AbstractDelegator,
+                  // net.bytebuddy.implementation.InvokeDynamic
         public /* bridge */ /* synthetic */ InvokeDynamic withField(String[] strArr) {
             return super.withField(strArr);
         }
     }
 
-    public InvokeDynamic(MethodDescription.InDefinedShape inDefinedShape, List<? extends JavaConstant> list, InvocationProvider invocationProvider, TerminationHandler terminationHandler, Assigner assigner, Assigner.Typing typing) {
+    public InvokeDynamic(MethodDescription.InDefinedShape inDefinedShape, List<? extends JavaConstant> list,
+            InvocationProvider invocationProvider, TerminationHandler terminationHandler, Assigner assigner,
+            Assigner.Typing typing) {
         this.bootstrap = inDefinedShape;
         this.arguments = list;
         this.invocationProvider = invocationProvider;
@@ -1854,7 +2272,8 @@ public class InvokeDynamic implements Implementation.Composable {
 
     @Override // net.bytebuddy.implementation.Implementation.Composable
     public Implementation andThen(Implementation implementation) {
-        return new Implementation.Compound(new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider, TerminationHandler.DROPPING, this.assigner, this.typing), implementation);
+        return new Implementation.Compound(new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider,
+                TerminationHandler.DROPPING, this.assigner, this.typing), implementation);
     }
 
     @Override // net.bytebuddy.implementation.Implementation
@@ -1870,11 +2289,18 @@ public class InvokeDynamic implements Implementation.Composable {
             return false;
         }
         InvokeDynamic invokeDynamic = (InvokeDynamic) obj;
-        return this.terminationHandler.equals(invokeDynamic.terminationHandler) && this.typing.equals(invokeDynamic.typing) && this.bootstrap.equals(invokeDynamic.bootstrap) && this.arguments.equals(invokeDynamic.arguments) && this.invocationProvider.equals(invokeDynamic.invocationProvider) && this.assigner.equals(invokeDynamic.assigner);
+        return this.terminationHandler.equals(invokeDynamic.terminationHandler)
+                && this.typing.equals(invokeDynamic.typing) && this.bootstrap.equals(invokeDynamic.bootstrap)
+                && this.arguments.equals(invokeDynamic.arguments)
+                && this.invocationProvider.equals(invokeDynamic.invocationProvider)
+                && this.assigner.equals(invokeDynamic.assigner);
     }
 
     public int hashCode() {
-        return this.typing.hashCode() + dkz.h(this.assigner, (this.terminationHandler.hashCode() + ((this.invocationProvider.hashCode() + bjs.g(this.arguments, dkz.b(this.bootstrap, getClass().hashCode() * 31, 31), 31)) * 31)) * 31, 31);
+        return this.typing.hashCode() + dkz.h(this.assigner,
+                (this.terminationHandler.hashCode() + ((this.invocationProvider.hashCode()
+                        + bjs.g(this.arguments, dkz.b(this.bootstrap, getClass().hashCode() * 31, 31), 31)) * 31)) * 31,
+                31);
     }
 
     @Override // net.bytebuddy.dynamic.scaffold.InstrumentedType.Prepareable
@@ -1886,15 +2312,17 @@ public class InvokeDynamic implements Implementation.Composable {
         ArrayList arrayList = new ArrayList(iArr.length);
         for (int i : iArr) {
             if (i < 0) {
-                throw new IllegalArgumentException(bjs.i(i, "Method parameter indices cannot be negative: "));
+                throw new IllegalArgumentException(concatVar2Var1(i, "Method parameter indices cannot be negative: "));
             }
             arrayList.add(new InvocationProvider.ArgumentProvider.ForMethodParameter(i));
         }
-        return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArguments(arrayList), this.terminationHandler, this.assigner, this.typing);
+        return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArguments(arrayList),
+                this.terminationHandler, this.assigner, this.typing);
     }
 
     public Implementation.Composable withAssigner(Assigner assigner, Assigner.Typing typing) {
-        return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider, this.terminationHandler, assigner, typing);
+        return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider, this.terminationHandler,
+                assigner, typing);
     }
 
     public InvokeDynamic withBooleanValue(boolean... zArr) {
@@ -1902,7 +2330,8 @@ public class InvokeDynamic implements Implementation.Composable {
         for (boolean z : zArr) {
             arrayList.add(new InvocationProvider.ArgumentProvider.ForBooleanConstant(z));
         }
-        return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArguments(arrayList), this.terminationHandler, this.assigner, this.typing);
+        return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArguments(arrayList),
+                this.terminationHandler, this.assigner, this.typing);
     }
 
     public InvokeDynamic withByteValue(byte... bArr) {
@@ -1910,7 +2339,8 @@ public class InvokeDynamic implements Implementation.Composable {
         for (byte b : bArr) {
             arrayList.add(new InvocationProvider.ArgumentProvider.ForByteConstant(b));
         }
-        return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArguments(arrayList), this.terminationHandler, this.assigner, this.typing);
+        return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArguments(arrayList),
+                this.terminationHandler, this.assigner, this.typing);
     }
 
     public InvokeDynamic withCharacterValue(char... cArr) {
@@ -1918,7 +2348,8 @@ public class InvokeDynamic implements Implementation.Composable {
         for (char c : cArr) {
             arrayList.add(new InvocationProvider.ArgumentProvider.ForCharacterConstant(c));
         }
-        return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArguments(arrayList), this.terminationHandler, this.assigner, this.typing);
+        return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArguments(arrayList),
+                this.terminationHandler, this.assigner, this.typing);
     }
 
     public InvokeDynamic withDoubleValue(double... dArr) {
@@ -1926,7 +2357,8 @@ public class InvokeDynamic implements Implementation.Composable {
         for (double d : dArr) {
             arrayList.add(new InvocationProvider.ArgumentProvider.ForDoubleConstant(d));
         }
-        return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArguments(arrayList), this.terminationHandler, this.assigner, this.typing);
+        return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArguments(arrayList),
+                this.terminationHandler, this.assigner, this.typing);
     }
 
     public InvokeDynamic withEnumeration(EnumerationDescription... enumerationDescriptionArr) {
@@ -1934,7 +2366,8 @@ public class InvokeDynamic implements Implementation.Composable {
         for (EnumerationDescription enumerationDescription : enumerationDescriptionArr) {
             arrayList.add(new InvocationProvider.ArgumentProvider.ForEnumerationValue(enumerationDescription));
         }
-        return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArguments(arrayList), this.terminationHandler, this.assigner, this.typing);
+        return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArguments(arrayList),
+                this.terminationHandler, this.assigner, this.typing);
     }
 
     public InvokeDynamic withField(String... strArr) {
@@ -1946,11 +2379,15 @@ public class InvokeDynamic implements Implementation.Composable {
         for (float f : fArr) {
             arrayList.add(new InvocationProvider.ArgumentProvider.ForFloatConstant(f));
         }
-        return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArguments(arrayList), this.terminationHandler, this.assigner, this.typing);
+        return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArguments(arrayList),
+                this.terminationHandler, this.assigner, this.typing);
     }
 
     public InvokeDynamic withImplicitAndMethodArguments() {
-        return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArgument(InvocationProvider.ArgumentProvider.ForInterceptedMethodInstanceAndParameters.INSTANCE), this.terminationHandler, this.assigner, this.typing);
+        return new InvokeDynamic(this.bootstrap, this.arguments,
+                this.invocationProvider.appendArgument(
+                        InvocationProvider.ArgumentProvider.ForInterceptedMethodInstanceAndParameters.INSTANCE),
+                this.terminationHandler, this.assigner, this.typing);
     }
 
     public InvokeDynamic withInstance(ConstantValue... constantValueArr) {
@@ -1958,7 +2395,8 @@ public class InvokeDynamic implements Implementation.Composable {
         for (ConstantValue constantValue : constantValueArr) {
             arrayList.add(new InvocationProvider.ArgumentProvider.ForJavaConstant(constantValue));
         }
-        return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArguments(arrayList), this.terminationHandler, this.assigner, this.typing);
+        return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArguments(arrayList),
+                this.terminationHandler, this.assigner, this.typing);
     }
 
     public InvokeDynamic withIntegerValue(int... iArr) {
@@ -1966,7 +2404,8 @@ public class InvokeDynamic implements Implementation.Composable {
         for (int i : iArr) {
             arrayList.add(new InvocationProvider.ArgumentProvider.ForIntegerConstant(i));
         }
-        return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArguments(arrayList), this.terminationHandler, this.assigner, this.typing);
+        return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArguments(arrayList),
+                this.terminationHandler, this.assigner, this.typing);
     }
 
     public InvokeDynamic withLongValue(long... jArr) {
@@ -1974,11 +2413,15 @@ public class InvokeDynamic implements Implementation.Composable {
         for (long j : jArr) {
             arrayList.add(new InvocationProvider.ArgumentProvider.ForLongConstant(j));
         }
-        return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArguments(arrayList), this.terminationHandler, this.assigner, this.typing);
+        return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArguments(arrayList),
+                this.terminationHandler, this.assigner, this.typing);
     }
 
     public InvokeDynamic withMethodArguments() {
-        return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArgument(InvocationProvider.ArgumentProvider.ForInterceptedMethodParameters.INSTANCE), this.terminationHandler, this.assigner, this.typing);
+        return new InvokeDynamic(this.bootstrap, this.arguments,
+                this.invocationProvider
+                        .appendArgument(InvocationProvider.ArgumentProvider.ForInterceptedMethodParameters.INSTANCE),
+                this.terminationHandler, this.assigner, this.typing);
     }
 
     public InvokeDynamic withNullValue(Class<?>... clsArr) {
@@ -1986,7 +2429,8 @@ public class InvokeDynamic implements Implementation.Composable {
     }
 
     public WithImplicitType withReference(Object obj) {
-        return new WithImplicitType.OfInstance(this.bootstrap, this.arguments, this.invocationProvider, this.terminationHandler, this.assigner, this.typing, obj);
+        return new WithImplicitType.OfInstance(this.bootstrap, this.arguments, this.invocationProvider,
+                this.terminationHandler, this.assigner, this.typing, obj);
     }
 
     public InvokeDynamic withShortValue(short... sArr) {
@@ -1994,7 +2438,8 @@ public class InvokeDynamic implements Implementation.Composable {
         for (short s : sArr) {
             arrayList.add(new InvocationProvider.ArgumentProvider.ForShortConstant(s));
         }
-        return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArguments(arrayList), this.terminationHandler, this.assigner, this.typing);
+        return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArguments(arrayList),
+                this.terminationHandler, this.assigner, this.typing);
     }
 
     public InvokeDynamic withThis(Class<?>... clsArr) {
@@ -2006,7 +2451,8 @@ public class InvokeDynamic implements Implementation.Composable {
         for (TypeDescription typeDescription : typeDescriptionArr) {
             arrayList.add(new InvocationProvider.ArgumentProvider.ForClassConstant(typeDescription));
         }
-        return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArguments(arrayList), this.terminationHandler, this.assigner, this.typing);
+        return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArguments(arrayList),
+                this.terminationHandler, this.assigner, this.typing);
     }
 
     public InvokeDynamic withValue(Object... objArr) {
@@ -2014,7 +2460,8 @@ public class InvokeDynamic implements Implementation.Composable {
         for (Object obj : objArr) {
             arrayList.add(InvocationProvider.ArgumentProvider.ConstantPoolWrapper.of(obj));
         }
-        return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArguments(arrayList), this.terminationHandler, this.assigner, this.typing);
+        return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArguments(arrayList),
+                this.terminationHandler, this.assigner, this.typing);
     }
 
     public static WithImplicitTarget bootstrap(Method method, List<?> list) {
@@ -2027,7 +2474,8 @@ public class InvokeDynamic implements Implementation.Composable {
 
     @Override // net.bytebuddy.implementation.Implementation.Composable
     public Implementation.Composable andThen(Implementation.Composable composable) {
-        return new Implementation.Compound.Composable(new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider, TerminationHandler.DROPPING, this.assigner, this.typing), composable);
+        return new Implementation.Compound.Composable(new InvokeDynamic(this.bootstrap, this.arguments,
+                this.invocationProvider, TerminationHandler.DROPPING, this.assigner, this.typing), composable);
     }
 
     public InvokeDynamic withField(FieldLocator.Factory factory, String... strArr) {
@@ -2035,7 +2483,8 @@ public class InvokeDynamic implements Implementation.Composable {
         for (String str : strArr) {
             arrayList.add(new InvocationProvider.ArgumentProvider.ForField(str, factory));
         }
-        return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArguments(arrayList), this.terminationHandler, this.assigner, this.typing);
+        return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArguments(arrayList),
+                this.terminationHandler, this.assigner, this.typing);
     }
 
     public InvokeDynamic withNullValue(TypeDescription... typeDescriptionArr) {
@@ -2046,7 +2495,8 @@ public class InvokeDynamic implements Implementation.Composable {
             }
             arrayList.add(new InvocationProvider.ArgumentProvider.ForNullValue(typeDescription));
         }
-        return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArguments(arrayList), this.terminationHandler, this.assigner, this.typing);
+        return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArguments(arrayList),
+                this.terminationHandler, this.assigner, this.typing);
     }
 
     public InvokeDynamic withReference(Object... objArr) {
@@ -2054,7 +2504,8 @@ public class InvokeDynamic implements Implementation.Composable {
         for (Object obj : objArr) {
             arrayList.add(InvocationProvider.ArgumentProvider.ForInstance.of(obj));
         }
-        return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArguments(arrayList), this.terminationHandler, this.assigner, this.typing);
+        return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArguments(arrayList),
+                this.terminationHandler, this.assigner, this.typing);
     }
 
     public InvokeDynamic withThis(TypeDescription... typeDescriptionArr) {
@@ -2062,14 +2513,16 @@ public class InvokeDynamic implements Implementation.Composable {
         for (TypeDescription typeDescription : typeDescriptionArr) {
             arrayList.add(new InvocationProvider.ArgumentProvider.ForThisInstance(typeDescription));
         }
-        return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArguments(arrayList), this.terminationHandler, this.assigner, this.typing);
+        return new InvokeDynamic(this.bootstrap, this.arguments, this.invocationProvider.appendArguments(arrayList),
+                this.terminationHandler, this.assigner, this.typing);
     }
 
     public static WithImplicitTarget bootstrap(Constructor<?> constructor, Object... objArr) {
         return bootstrap(new MethodDescription.ForLoadedConstructor(constructor), objArr);
     }
 
-    public static WithImplicitArguments lambda(MethodDescription.InDefinedShape inDefinedShape, TypeDefinition typeDefinition) {
+    public static WithImplicitArguments lambda(MethodDescription.InDefinedShape inDefinedShape,
+            TypeDefinition typeDefinition) {
         return lambda(inDefinedShape, typeDefinition, MethodGraph.Compiler.Default.forJavaHierarchy());
     }
 
@@ -2077,19 +2530,38 @@ public class InvokeDynamic implements Implementation.Composable {
         return bootstrap(new MethodDescription.ForLoadedConstructor(constructor), list);
     }
 
-    public static WithImplicitArguments lambda(MethodDescription.InDefinedShape inDefinedShape, TypeDefinition typeDefinition, MethodGraph.Compiler compiler) {
+    public static WithImplicitArguments lambda(MethodDescription.InDefinedShape inDefinedShape,
+            TypeDefinition typeDefinition, MethodGraph.Compiler compiler) {
         if (typeDefinition.isInterface()) {
-            MethodList methodListFilter = compiler.compile(typeDefinition).listNodes().asMethodList().filter(ElementMatchers.isAbstract());
+            MethodList methodListFilter = compiler.compile(typeDefinition).listNodes().asMethodList()
+                    .filter(ElementMatchers.isAbstract());
             if (methodListFilter.size() == 1) {
-                TypeDescription.Latent latent = new TypeDescription.Latent("java.lang.invoke.LambdaMetafactory", 1, TypeDescription.Generic.OfNonGenericType.ForLoadedType.of(Object.class), new TypeDescription.Generic[0]);
+                TypeDescription.Latent latent = new TypeDescription.Latent("java.lang.invoke.LambdaMetafactory", 1,
+                        TypeDescription.Generic.OfNonGenericType.ForLoadedType.of(Object.class),
+                        new TypeDescription.Generic[0]);
                 List list = Collections.EMPTY_LIST;
                 TypeDescription.Generic genericAsGenericType = JavaType.CALL_SITE.getTypeStub().asGenericType();
-                ParameterDescription.Token token = new ParameterDescription.Token(JavaType.METHOD_HANDLES_LOOKUP.getTypeStub().asGenericType());
-                ParameterDescription.Token token2 = new ParameterDescription.Token(TypeDescription.ForLoadedType.of(String.class).asGenericType());
+                ParameterDescription.Token token = new ParameterDescription.Token(
+                        JavaType.METHOD_HANDLES_LOOKUP.getTypeStub().asGenericType());
+                ParameterDescription.Token token2 = new ParameterDescription.Token(
+                        TypeDescription.ForLoadedType.of(String.class).asGenericType());
                 JavaType javaType = JavaType.METHOD_TYPE;
-                return bootstrap(new MethodDescription.Latent(latent, "metafactory", 9, list, genericAsGenericType, Arrays.asList(token, token2, new ParameterDescription.Token(javaType.getTypeStub().asGenericType()), new ParameterDescription.Token(javaType.getTypeStub().asGenericType()), new ParameterDescription.Token(JavaType.METHOD_HANDLE.getTypeStub().asGenericType()), new ParameterDescription.Token(javaType.getTypeStub().asGenericType())), list, list, AnnotationValue.UNDEFINED, TypeDescription.Generic.UNDEFINED), JavaConstant.MethodType.ofSignature(methodListFilter.asDefined().getOnly()), JavaConstant.MethodHandle.of(inDefinedShape), JavaConstant.MethodType.ofSignature((MethodDescription) methodListFilter.getOnly())).invoke(methodListFilter.asDefined().getOnly().getInternalName());
+                return bootstrap(
+                        new MethodDescription.Latent(latent, "metafactory", 9, list, genericAsGenericType,
+                                Arrays.asList(token, token2,
+                                        new ParameterDescription.Token(javaType.getTypeStub().asGenericType()),
+                                        new ParameterDescription.Token(javaType.getTypeStub().asGenericType()),
+                                        new ParameterDescription.Token(
+                                                JavaType.METHOD_HANDLE.getTypeStub().asGenericType()),
+                                        new ParameterDescription.Token(javaType.getTypeStub().asGenericType())),
+                                list, list, AnnotationValue.UNDEFINED, TypeDescription.Generic.UNDEFINED),
+                        JavaConstant.MethodType.ofSignature(methodListFilter.asDefined().getOnly()),
+                        JavaConstant.MethodHandle.of(inDefinedShape),
+                        JavaConstant.MethodType.ofSignature((MethodDescription) methodListFilter.getOnly()))
+                        .invoke(methodListFilter.asDefined().getOnly().getInternalName());
             }
-            throw new IllegalArgumentException(typeDefinition + " does not define exactly one abstract method: " + methodListFilter);
+            throw new IllegalArgumentException(
+                    typeDefinition + " does not define exactly one abstract method: " + methodListFilter);
         }
         throw new IllegalArgumentException(typeDefinition + " is not an interface type");
     }
@@ -2101,7 +2573,8 @@ public class InvokeDynamic implements Implementation.Composable {
     public static WithImplicitTarget bootstrap(MethodDescription.InDefinedShape inDefinedShape, List<?> list) {
         List<JavaConstant> listWrap = JavaConstant.Simple.wrap(list);
         if (inDefinedShape.isInvokeBootstrap(TypeList.Explicit.of((List<? extends JavaConstant>) listWrap))) {
-            return new WithImplicitTarget(inDefinedShape, listWrap, new InvocationProvider.Default(), TerminationHandler.RETURNING, Assigner.DEFAULT, Assigner.Typing.STATIC);
+            return new WithImplicitTarget(inDefinedShape, listWrap, new InvocationProvider.Default(),
+                    TerminationHandler.RETURNING, Assigner.DEFAULT, Assigner.Typing.STATIC);
         }
         throw new IllegalArgumentException("Not a valid bootstrap method " + inDefinedShape + " for " + listWrap);
     }
@@ -2115,13 +2588,15 @@ public class InvokeDynamic implements Implementation.Composable {
     }
 
     public WithImplicitType withField(String str, FieldLocator.Factory factory) {
-        return new WithImplicitType.OfField(this.bootstrap, this.arguments, this.invocationProvider, this.terminationHandler, this.assigner, this.typing, str, factory);
+        return new WithImplicitType.OfField(this.bootstrap, this.arguments, this.invocationProvider,
+                this.terminationHandler, this.assigner, this.typing, str, factory);
     }
 
     public WithImplicitType withArgument(int i) {
         if (i >= 0) {
-            return new WithImplicitType.OfArgument(this.bootstrap, this.arguments, this.invocationProvider, this.terminationHandler, this.assigner, this.typing, i);
+            return new WithImplicitType.OfArgument(this.bootstrap, this.arguments, this.invocationProvider,
+                    this.terminationHandler, this.assigner, this.typing, i);
         }
-        throw new IllegalArgumentException(bjs.i(i, "Method parameter indices cannot be negative: "));
+        throw new IllegalArgumentException(concatVar2Var1(i, "Method parameter indices cannot be negative: "));
     }
 }

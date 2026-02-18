@@ -29,9 +29,9 @@ import me.hd.wauxv.R;
 public class ih extends EditText implements crb {
     public final ea c;
     public final jl d;
-    public final io e;
+    public final DefaultConfig e;
     public final dri f;
-    public final io g;
+    public final DefaultConfig g;
     public ig h;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -46,11 +46,11 @@ public class ih extends EditText implements crb {
         this.d = jlVar;
         jlVar.t(attributeSet, R.attr.editTextStyle);
         jlVar.q();
-        io ioVar = new io(5, false);
+        DefaultConfig ioVar = new DefaultConfig(5, false);
         ioVar.c = this;
         this.e = ioVar;
         this.f = new dri();
-        io ioVar2 = new io((EditText) this, 4);
+        DefaultConfig ioVar2 = new DefaultConfig((EditText) this, 4);
         this.g = ioVar2;
         ioVar2.am(attributeSet, R.attr.editTextStyle);
         KeyListener keyListener = getKeyListener();
@@ -123,7 +123,7 @@ public class ih extends EditText implements crb {
 
     @Override // android.widget.TextView
     public TextClassifier getTextClassifier() {
-        io ioVar;
+        DefaultConfig ioVar;
         if (Build.VERSION.SDK_INT >= 28 || (ioVar = this.e) == null) {
             return super.getTextClassifier();
         }
@@ -143,7 +143,7 @@ public class ih extends EditText implements crb {
         InputConnection inputConnectionOnCreateInputConnection = super.onCreateInputConnection(editorInfo);
         this.d.getClass();
         jl.o(editorInfo, inputConnectionOnCreateInputConnection, this);
-        bzo.ak(editorInfo, inputConnectionOnCreateInputConnection, this);
+        KotlinHelpers.ak(editorInfo, inputConnectionOnCreateInputConnection, this);
         if (inputConnectionOnCreateInputConnection != null && Build.VERSION.SDK_INT <= 30 && (strArrM = eqz.m(this)) != null) {
             editorInfo.contentMimeTypes = strArrM;
             inputConnectionOnCreateInputConnection = new bpn(inputConnectionOnCreateInputConnection, new qp(this, 8));
@@ -312,7 +312,7 @@ public class ih extends EditText implements crb {
 
     @Override // android.widget.TextView
     public void setTextClassifier(TextClassifier textClassifier) {
-        io ioVar;
+        DefaultConfig ioVar;
         if (Build.VERSION.SDK_INT >= 28 || (ioVar = this.e) == null) {
             super.setTextClassifier(textClassifier);
         } else {

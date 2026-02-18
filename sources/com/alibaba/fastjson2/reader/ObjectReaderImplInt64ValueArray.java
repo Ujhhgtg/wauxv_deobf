@@ -21,28 +21,33 @@ public final class ObjectReaderImplInt64ValueArray extends ObjectReaderPrimitive
         this.builder = function;
     }
 
-    @Override // com.alibaba.fastjson2.reader.ObjectReaderPrimitive, com.alibaba.fastjson2.reader.ObjectReader
+    @Override // com.alibaba.fastjson2.reader.ObjectReaderPrimitive,
+              // com.alibaba.fastjson2.reader.ObjectReader
     public /* bridge */ /* synthetic */ Object createInstance(long j) {
         return super.createInstance(j);
     }
 
-    @Override // com.alibaba.fastjson2.reader.ObjectReaderPrimitive, com.alibaba.fastjson2.reader.ObjectReader
+    @Override // com.alibaba.fastjson2.reader.ObjectReaderPrimitive,
+              // com.alibaba.fastjson2.reader.ObjectReader
     public /* bridge */ /* synthetic */ Class getObjectClass() {
         return super.getObjectClass();
     }
 
-    @Override // com.alibaba.fastjson2.reader.ObjectReaderPrimitive, com.alibaba.fastjson2.reader.ObjectReader
+    @Override // com.alibaba.fastjson2.reader.ObjectReaderPrimitive,
+              // com.alibaba.fastjson2.reader.ObjectReader
     public Object readJSONBObject(JSONReader jSONReader, Type type, Object obj, long j) {
         Function<long[], Object> function;
         long[] int64ValueArray = jSONReader.readInt64ValueArray();
-        return (int64ValueArray == null || (function = this.builder) == null) ? int64ValueArray : function.apply(int64ValueArray);
+        return (int64ValueArray == null || (function = this.builder) == null) ? int64ValueArray
+                : function.apply(int64ValueArray);
     }
 
     @Override // com.alibaba.fastjson2.reader.ObjectReader
     public Object readObject(JSONReader jSONReader, Type type, Object obj, long j) {
         Function<long[], Object> function;
         long[] int64ValueArray = jSONReader.readInt64ValueArray();
-        return (int64ValueArray == null || (function = this.builder) == null) ? int64ValueArray : function.apply(int64ValueArray);
+        return (int64ValueArray == null || (function = this.builder) == null) ? int64ValueArray
+                : function.apply(int64ValueArray);
     }
 
     @Override // com.alibaba.fastjson2.reader.ObjectReader
@@ -56,9 +61,10 @@ public final class ObjectReaderImplInt64ValueArray extends ObjectReaderPrimitive
             } else if (obj instanceof Number) {
                 jLongValue = ((Number) obj).longValue();
             } else {
-                Function typeConvert = JSONFactory.getDefaultObjectReaderProvider().getTypeConvert(obj.getClass(), Long.TYPE);
+                Function typeConvert = JSONFactory.getDefaultObjectReaderProvider().getTypeConvert(obj.getClass(),
+                        Long.TYPE);
                 if (typeConvert == null) {
-                    throw new JSONException(bjs.m(obj, new StringBuilder("can not cast to long ")));
+                    throw new JSONException(concatVar1GetClass(obj, new StringBuilder("can not cast to long ")));
                 }
                 jLongValue = ((Long) typeConvert.apply(obj)).longValue();
             }

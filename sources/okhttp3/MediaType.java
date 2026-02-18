@@ -7,7 +7,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cnd;
 import me.hd.wauxv.obf.dkz;
 import me.hd.wauxv.obf.dnr;
@@ -22,41 +22,46 @@ public final class MediaType {
     private final String subtype;
     private final String type;
     public static final Companion Companion = new Companion(null);
-    private static final Pattern TYPE_SUBTYPE = Pattern.compile("([a-zA-Z0-9-!#$%&'*+.^_`{|}~]+)/([a-zA-Z0-9-!#$%&'*+.^_`{|}~]+)");
-    private static final Pattern PARAMETER = Pattern.compile(";\\s*(?:([a-zA-Z0-9-!#$%&'*+.^_`{|}~]+)=(?:([a-zA-Z0-9-!#$%&'*+.^_`{|}~]+)|\"([^\"]*)\"))?");
+    private static final Pattern TYPE_SUBTYPE = Pattern
+            .compile("([a-zA-Z0-9-!#$%&'*+.^_`{|}~]+)/([a-zA-Z0-9-!#$%&'*+.^_`{|}~]+)");
+    private static final Pattern PARAMETER = Pattern
+            .compile(";\\s*(?:([a-zA-Z0-9-!#$%&'*+.^_`{|}~]+)=(?:([a-zA-Z0-9-!#$%&'*+.^_`{|}~]+)|\"([^\"]*)\"))?");
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
         }
 
         public final MediaType a(String str) {
-            bzo.q(str, "mediaType");
+            throwIfVar1IsNull(str, "mediaType");
             return get(str);
         }
 
         public final MediaType b(String str) {
-            bzo.q(str, "mediaType");
+            throwIfVar1IsNull(str, "mediaType");
             return parse(str);
         }
 
         public final MediaType get(String str) {
-            bzo.q(str, "<this>");
+            throwIfVar1IsNull(str, "<this>");
             Matcher matcher = MediaType.TYPE_SUBTYPE.matcher(str);
             if (!matcher.lookingAt()) {
                 throw new IllegalArgumentException(dkz.o('\"', "No subtype found for: \"", str).toString());
             }
             String strGroup = matcher.group(1);
-            bzo.p(strGroup, "typeSubtype.group(1)");
+            throwIfVar1IsNull(strGroup, "typeSubtype.group(1)");
             Locale locale = Locale.US;
-            bzo.p(locale, "US");
+            throwIfVar1IsNull(locale, "US");
             String lowerCase = strGroup.toLowerCase(locale);
-            bzo.p(lowerCase, "this as java.lang.String).toLowerCase(locale)");
+            throwIfVar1IsNull(lowerCase, "this as java.lang.String).toLowerCase(locale)");
             String strGroup2 = matcher.group(2);
-            bzo.p(strGroup2, "typeSubtype.group(2)");
+            throwIfVar1IsNull(strGroup2, "typeSubtype.group(2)");
             String lowerCase2 = strGroup2.toLowerCase(locale);
-            bzo.p(lowerCase2, "this as java.lang.String).toLowerCase(locale)");
+            throwIfVar1IsNull(lowerCase2, "this as java.lang.String).toLowerCase(locale)");
             ArrayList arrayList = new ArrayList();
             Matcher matcher2 = MediaType.PARAMETER.matcher(str);
             int iEnd = matcher.end();
@@ -65,10 +70,10 @@ public final class MediaType {
                 if (!matcher2.lookingAt()) {
                     StringBuilder sb = new StringBuilder("Parameter is not formatted correctly: \"");
                     String strSubstring = str.substring(iEnd);
-                    bzo.p(strSubstring, "this as java.lang.String).substring(startIndex)");
+                    throwIfVar1IsNull(strSubstring, "this as java.lang.String).substring(startIndex)");
                     sb.append(strSubstring);
                     sb.append("\" for: \"");
-                    throw new IllegalArgumentException(bjs.q(sb, str, '\"').toString());
+                    throw new IllegalArgumentException(concat(sb, str, '\"').toString());
                 }
                 String strGroup3 = matcher2.group(1);
                 if (strGroup3 == null) {
@@ -79,7 +84,7 @@ public final class MediaType {
                         strGroup4 = matcher2.group(3);
                     } else if (dnr.bp(strGroup4, "'", false) && dnr.bi(strGroup4, "'") && strGroup4.length() > 2) {
                         strGroup4 = strGroup4.substring(1, strGroup4.length() - 1);
-                        bzo.p(strGroup4, "this as java.lang.String…ing(startIndex, endIndex)");
+                        throwIfVar1IsNull(strGroup4, "this as java.lang.String…ing(startIndex, endIndex)");
                     }
                     arrayList.add(strGroup3);
                     arrayList.add(strGroup4);
@@ -90,7 +95,7 @@ public final class MediaType {
         }
 
         public final MediaType parse(String str) {
-            bzo.q(str, "<this>");
+            throwIfVar1IsNull(str, "<this>");
             try {
                 return get(str);
             } catch (IllegalArgumentException unused) {
@@ -134,7 +139,7 @@ public final class MediaType {
     }
 
     public boolean equals(Object obj) {
-        return (obj instanceof MediaType) && bzo.f(((MediaType) obj).mediaType, this.mediaType);
+        return (obj instanceof MediaType) && nullSafeIsEqual(((MediaType) obj).mediaType, this.mediaType);
     }
 
     public int hashCode() {
@@ -142,7 +147,7 @@ public final class MediaType {
     }
 
     public final String parameter(String str) {
-        bzo.q(str, "name");
+        throwIfVar1IsNull(str, "name");
         int i = 0;
         int iAv = cnd.av(0, this.parameterNamesAndValues.length - 1, 2);
         if (iAv < 0) {

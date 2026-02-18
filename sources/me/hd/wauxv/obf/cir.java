@@ -12,7 +12,7 @@ public final class cir {
     }
 
     public cir(Bundle bundle) {
-        bzo.q(bundle, "state");
+        throwIfVar1IsNull(bundle, "state");
         bundle.setClassLoader(cir.class.getClassLoader());
         this.a = new xe(bundle);
     }

@@ -28,7 +28,8 @@ public final class dso {
             return false;
         }
         dso dsoVar = (dso) obj;
-        return bzo.f(this.a, dsoVar.a) && bzo.f(this.b, dsoVar.b) && bzo.f(this.c, dsoVar.c) && bzo.f(this.d, dsoVar.d);
+        return nullSafeIsEqual(this.a, dsoVar.a) && nullSafeIsEqual(this.b, dsoVar.b)
+                && nullSafeIsEqual(this.c, dsoVar.c) && nullSafeIsEqual(this.d, dsoVar.d);
     }
 
     public final int hashCode() {
@@ -48,6 +49,6 @@ public final class dso {
         yg.u(sb, this.a, -147184234265386L);
         yg.u(sb, this.b, -147115514788650L);
         yg.u(sb, this.c, -146488449563434L);
-        return bjs.q(sb, this.d, ')');
+        return concat(sb, this.d, ')');
     }
 }

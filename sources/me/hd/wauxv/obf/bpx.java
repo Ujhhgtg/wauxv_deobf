@@ -7,9 +7,12 @@ public final class bpx extends IllegalArgumentException {
         super(dkz.p(i, "Unpaired surrogate at index ", " of ", i2));
     }
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'super' call moved to the top of the method (can break code
+     * semantics)
+     */
     public bpx(String str) {
         super(str);
-        bzo.q(str, "message");
+        throwIfVar1IsNull(str, "message");
     }
 }

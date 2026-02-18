@@ -69,11 +69,14 @@ public class jx implements dcq, cuv {
         if (KeyEvent.metaStateHasNoModifiers(keyEvent.getMetaState())) {
             int selectionStart = Selection.getSelectionStart(editable);
             int selectionEnd = Selection.getSelectionEnd(editable);
-            if (selectionStart != -1 && selectionEnd != -1 && selectionStart == selectionEnd && (emlVarArr = (eml[]) editable.getSpans(selectionStart, selectionEnd, eml.class)) != null && emlVarArr.length > 0) {
+            if (selectionStart != -1 && selectionEnd != -1 && selectionStart == selectionEnd
+                    && (emlVarArr = (eml[]) editable.getSpans(selectionStart, selectionEnd, eml.class)) != null
+                    && emlVarArr.length > 0) {
                 for (eml emlVar : emlVarArr) {
                     int spanStart = editable.getSpanStart(emlVar);
                     int spanEnd = editable.getSpanEnd(emlVar);
-                    if ((z && spanStart == selectionStart) || ((!z && spanEnd == selectionStart) || (selectionStart > spanStart && selectionStart < spanEnd))) {
+                    if ((z && spanStart == selectionStart) || ((!z && spanEnd == selectionStart)
+                            || (selectionStart > spanStart && selectionStart < spanEnd))) {
                         editable.delete(spanStart, spanEnd);
                         return true;
                     }
@@ -218,7 +221,8 @@ public class jx implements dcq, cuv {
                 }
             }
         }
-        if (aukVar.a == 2 && aukVar.c.b != null && ((aukVar.f > 1 || aukVar.h()) && i5 < i3 && zP && (z || !x(charSequence, i4, iCharCount, aukVar.c.b)))) {
+        if (aukVar.a == 2 && aukVar.c.b != null && ((aukVar.f > 1 || aukVar.h()) && i5 < i3 && zP
+                && (z || !x(charSequence, i4, iCharCount, aukVar.c.b)))) {
             auiVar.p(charSequence, i4, iCharCount, aukVar.c.b);
         }
         return auiVar.getResult();
@@ -350,17 +354,21 @@ public class jx implements dcq, cuv {
                 cypVar.reset();
                 return emc.aj(cypVar, options, this);
             default:
-                FileDescriptor fileDescriptor = ((com.bumptech.glide.load.data.a) this.h).b().getFileDescriptor();
+                FileDescriptor fileDescriptor = ((com.bumptech.glide.load.data.a) this.h).tryGetClassByName()
+                        .getFileDescriptor();
                 int i = Build.VERSION.SDK_INT;
                 Bitmap bitmapAx = null;
                 if (i == 34) {
-                    if (((i == 34 && options.inPreferredConfig == Bitmap.Config.HARDWARE) ? ((Boolean) aye.c.get()).booleanValue() : false) && emc.at(this)) {
+                    if (((i == 34 && options.inPreferredConfig == Bitmap.Config.HARDWARE)
+                            ? ((Boolean) aye.c.get()).booleanValue()
+                            : false) && emc.at(this)) {
                         Bitmap.Config config = options.inPreferredConfig;
                         Bitmap.Config config2 = Bitmap.Config.HARDWARE;
                         cmz.k("", config == config2);
                         options.inPreferredConfig = Bitmap.Config.ARGB_8888;
                         try {
-                            Bitmap bitmapDecodeFileDescriptor = BitmapFactory.decodeFileDescriptor(fileDescriptor, null, options);
+                            Bitmap bitmapDecodeFileDescriptor = BitmapFactory.decodeFileDescriptor(fileDescriptor, null,
+                                    options);
                             if (bitmapDecodeFileDescriptor == null) {
                                 if (bitmapDecodeFileDescriptor != null) {
                                 }
@@ -410,7 +418,7 @@ public class jx implements dcq, cuv {
                     q((Class) it.next(), hashSet2);
                 }
             } catch (ClassNotFoundException e) {
-                throw new abt(e);
+                throw new QueryDidNotReturnUniqueResultRuntimeException(e);
             }
         }
     }
@@ -447,7 +455,7 @@ public class jx implements dcq, cuv {
                 hashSet.remove(cls);
                 map.put(cls, objB);
             } catch (Throwable th2) {
-                throw new abt(th2);
+                throw new QueryDidNotReturnUniqueResultRuntimeException(th2);
             }
         }
         Trace.endSection();
@@ -458,13 +466,17 @@ public class jx implements dcq, cuv {
         int resourceId;
         ColorStateList colorStateListV;
         TypedArray typedArray = (TypedArray) this.e;
-        return (!typedArray.hasValue(i) || (resourceId = typedArray.getResourceId(i, 0)) == 0 || (colorStateListV = bht.v((Context) this.h, resourceId)) == null) ? typedArray.getColorStateList(i) : colorStateListV;
+        return (!typedArray.hasValue(i) || (resourceId = typedArray.getResourceId(i, 0)) == 0
+                || (colorStateListV = bht.v((Context) this.h, resourceId)) == null) ? typedArray.getColorStateList(i)
+                        : colorStateListV;
     }
 
     public Drawable s(int i) {
         int resourceId;
         TypedArray typedArray = (TypedArray) this.e;
-        return (!typedArray.hasValue(i) || (resourceId = typedArray.getResourceId(i, 0)) == 0) ? typedArray.getDrawable(i) : cmz.y((Context) this.h, resourceId);
+        return (!typedArray.hasValue(i) || (resourceId = typedArray.getResourceId(i, 0)) == 0)
+                ? typedArray.getDrawable(i)
+                : cmz.y((Context) this.h, resourceId);
     }
 
     public Drawable t(int i) {
@@ -502,7 +514,7 @@ public class jx implements dcq, cuv {
                 }
                 sb.append(" }");
                 String string = sb.toString();
-                bzo.p(string, "toString(...)");
+                throwIfVar1IsNull(string, "toString(...)");
                 return string;
             default:
                 return super.toString();
@@ -544,11 +556,12 @@ public class jx implements dcq, cuv {
                     bog bogVar = (bog) list2.get(i);
                     cyp cypVar2 = null;
                     try {
-                        cyp cypVar3 = new cyp(new FileInputStream(aVar.b().getFileDescriptor()), bvaVar);
+                        cyp cypVar3 = new cyp(new FileInputStream(aVar.tryGetClassByName().getFileDescriptor()),
+                                bvaVar);
                         try {
                             ImageHeaderParser$ImageType imageHeaderParser$ImageTypeL = bogVar.l(cypVar3);
                             cypVar3.i();
-                            aVar.b();
+                            aVar.tryGetClassByName();
                             if (imageHeaderParser$ImageTypeL != ImageHeaderParser$ImageType.UNKNOWN) {
                                 return imageHeaderParser$ImageTypeL;
                             }
@@ -558,7 +571,7 @@ public class jx implements dcq, cuv {
                             if (cypVar2 != null) {
                                 cypVar2.i();
                             }
-                            aVar.b();
+                            aVar.tryGetClassByName();
                             throw th;
                         }
                     } catch (Throwable th2) {
@@ -573,7 +586,7 @@ public class jx implements dcq, cuv {
         String str = (String) this.e;
         if (((Class) this.h) == null) {
             bfu bfuVar = (bfu) this.f;
-            this.h = zf.b(bfuVar != null ? (ClassLoader) bfuVar.invoke() : null, str);
+            this.h = ReflectionWrapper.tryGetClassByName(bfuVar != null ? (ClassLoader) bfuVar.invoke() : null, str);
         }
         Class cls = (Class) this.h;
         if (cls != null) {
@@ -662,11 +675,12 @@ public class jx implements dcq, cuv {
                     bog bogVar = (bog) list3.get(i3);
                     cyp cypVar2 = null;
                     try {
-                        cyp cypVar3 = new cyp(new FileInputStream(aVar.b().getFileDescriptor()), bvaVar3);
+                        cyp cypVar3 = new cyp(new FileInputStream(aVar.tryGetClassByName().getFileDescriptor()),
+                                bvaVar3);
                         try {
                             boolean zO2 = bogVar.o(cypVar3, bvaVar3);
                             cypVar3.i();
-                            aVar.b();
+                            aVar.tryGetClassByName();
                             if (zO2) {
                                 return true;
                             }
@@ -676,7 +690,7 @@ public class jx implements dcq, cuv {
                             if (cypVar2 != null) {
                                 cypVar2.i();
                             }
-                            aVar.b();
+                            aVar.tryGetClassByName();
                             throw th;
                         }
                     } catch (Throwable th4) {

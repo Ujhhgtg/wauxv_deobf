@@ -25,7 +25,7 @@ public final class adw extends cyw {
     public static void c(adw adwVar) {
         List list = adwVar.a;
         adwVar.getClass();
-        bzo.q(list, "list");
+        throwIfVar1IsNull(list, "list");
     }
 
     public static void h(adw adwVar, List list) {
@@ -38,15 +38,15 @@ public final class adw extends cyw {
         adwVar.a = list;
         adwVar.af();
         List list3 = adwVar.a;
-        bzo.q(list2, "previousList");
-        bzo.q(list3, "currentList");
+        throwIfVar1IsNull(list2, "previousList");
+        throwIfVar1IsNull(list3, "currentList");
     }
 
     @Override // me.hd.wauxv.obf.cyw
     public final int d() {
         c(this);
         List list = this.a;
-        bzo.q(list, "items");
+        throwIfVar1IsNull(list, "items");
         return list.size();
     }
 
@@ -70,7 +70,7 @@ public final class adw extends cyw {
             return new dmm(viewGroup);
         }
         Context context = viewGroup.getContext();
-        bzo.p(context, "getContext(...)");
+        throwIfVar1IsNull(context, "getContext(...)");
         return new cxd(LayoutInflater.from(context).inflate(R.layout.item_rv_contact, viewGroup, false));
     }
 
@@ -86,7 +86,7 @@ public final class adw extends cyw {
 
     @Override // me.hd.wauxv.obf.cyw
     public final void k(czx czxVar, int i, List list) {
-        bzo.q(list, "payloads");
+        throwIfVar1IsNull(list, "payloads");
         if (list.isEmpty()) {
             f(czxVar, i);
         } else if (czxVar instanceof dmm) {
@@ -112,7 +112,8 @@ public final class adw extends cyw {
         View view = czxVar.d;
         if (view.getLayoutParams() instanceof dmb) {
             ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
-            bzo.o(layoutParams, "null cannot be cast to non-null type androidx.recyclerview.widget.StaggeredGridLayoutManager.LayoutParams");
+            throwIfVar1IsNull(layoutParams,
+                    "null cannot be cast to non-null type androidx.recyclerview.widget.StaggeredGridLayoutManager.LayoutParams");
             ((dmb) layoutParams).b = true;
         }
     }
@@ -133,7 +134,8 @@ public final class adw extends cyw {
             ImageView imageView = (ImageView) cxdVar.b(R.id.itemContactImageViewAvatar);
             String str = adxVar.a;
             moVar.getClass();
-            XposedBridge.invokeOriginalMethod(emn.bb(mn.a), (Object) null, new Object[]{imageView, str, Float.valueOf(0.1f), Boolean.FALSE});
+            XposedBridge.invokeOriginalMethod(emn.bb(mn.a), (Object) null,
+                    new Object[] { imageView, str, Float.valueOf(0.1f), Boolean.FALSE });
             ((TextView) cxdVar.b(R.id.itemContactTextViewName)).setText(adxVar.b);
             ((TextView) cxdVar.b(R.id.itemContactTextViewDesc)).setText(adxVar.c);
         }

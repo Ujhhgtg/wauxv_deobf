@@ -15,7 +15,8 @@ public final class CstMethodHandle extends TypedConstant {
     public static final int METHOD_HANDLE_TYPE_INVOKE_STATIC = 4;
     public static final int METHOD_HANDLE_TYPE_STATIC_GET = 1;
     public static final int METHOD_HANDLE_TYPE_STATIC_PUT = 0;
-    private static final String[] TYPE_NAMES = {"static-put", "static-get", "instance-put", "instance-get", "invoke-static", "invoke-instance", "invoke-constructor", "invoke-direct", "invoke-interface"};
+    private static final String[] TYPE_NAMES = { "static-put", "static-get", "instance-put", "instance-get",
+            "invoke-static", "invoke-instance", "invoke-constructor", "invoke-direct", "invoke-interface" };
     private final Constant ref;
     private final int type;
 
@@ -52,7 +53,7 @@ public final class CstMethodHandle extends TypedConstant {
             }
         } else {
             if (!isInvocation(i)) {
-                throw new IllegalArgumentException(bjs.i(i, "type is out of range: "));
+                throw new IllegalArgumentException(concatVar2Var1(i, "type is out of range: "));
             }
             if (!(constant instanceof CstBaseMethodRef)) {
                 throw new IllegalArgumentException("ref has wrong type: " + constant.getClass());
@@ -64,7 +65,9 @@ public final class CstMethodHandle extends TypedConstant {
     @Override // com.android.dx.rop.cst.Constant
     public int compareTo0(Constant constant) {
         CstMethodHandle cstMethodHandle = (CstMethodHandle) constant;
-        return getMethodHandleType() == cstMethodHandle.getMethodHandleType() ? getRef().compareTo(cstMethodHandle.getRef()) : Integer.compare(getMethodHandleType(), cstMethodHandle.getMethodHandleType());
+        return getMethodHandleType() == cstMethodHandle.getMethodHandleType()
+                ? getRef().compareTo(cstMethodHandle.getRef())
+                : Integer.compare(getMethodHandleType(), cstMethodHandle.getMethodHandleType());
     }
 
     public int getMethodHandleType() {

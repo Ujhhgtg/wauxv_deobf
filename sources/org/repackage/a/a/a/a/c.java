@@ -24,7 +24,10 @@ public class c {
     public final Object d = new Object();
     public ServiceConnection e = new b(this);
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class a {
         public static final c a = new c(null);
     }
@@ -77,7 +80,7 @@ public class c {
             }
             this.c = string;
         }
-        String strA = ((a.AbstractBinderC0020a.C0021a) this.a).a(this.b, this.c, str);
+        String strA = ((a.AbstractBinderC0020a.C0021a) this.cachedConstructors).a(this.b, this.c, str);
         return TextUtils.isEmpty(strA) ? "" : strA;
     }
 
@@ -87,7 +90,7 @@ public class c {
             throw th;
         }
         if (Looper.myLooper() != Looper.getMainLooper()) {
-            if (this.a == null) {
+            if (this.cachedConstructors == null) {
                 Intent intent = new Intent();
                 intent.setComponent(new ComponentName("com.heytap.openid", "com.heytap.openid.IdentifyService"));
                 intent.setAction("action.com.heytap.openid.OPEN_ID_SERVICE");
@@ -100,18 +103,18 @@ public class c {
                         }
                     }
                 }
-                if (this.a == null) {
+                if (this.cachedConstructors == null) {
                     return "";
                 }
                 try {
-                    return b(context, str);
+                    return tryGetClassByName(context, str);
                 } catch (RemoteException e2) {
                     e2.printStackTrace();
                     return "";
                 }
             }
             try {
-                return b(context, str);
+                return tryGetClassByName(context, str);
             } catch (RemoteException e3) {
                 e3.printStackTrace();
                 return "";

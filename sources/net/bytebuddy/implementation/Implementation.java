@@ -52,19 +52,28 @@ import net.bytebuddy.utility.nullability.MaybeNull;
 /* JADX INFO: loaded from: classes.dex */
 public interface Implementation extends InstrumentedType.Prepareable {
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface Composable extends Implementation {
         Composable andThen(Composable composable);
 
         Implementation andThen(Implementation implementation);
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @HashCodeAndEqualsPlugin.Enhance
     public static class Compound implements Implementation {
         private final List<Implementation> implementations;
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class Composable implements Composable {
             private final Composable composable;
@@ -76,7 +85,8 @@ public interface Implementation extends InstrumentedType.Prepareable {
 
             @Override // net.bytebuddy.implementation.Implementation.Composable
             public Implementation andThen(Implementation implementation) {
-                return new Compound((List<? extends Implementation>) CompoundList.of(this.implementations, this.composable.andThen(implementation)));
+                return new Compound((List<? extends Implementation>) CompoundList.of(this.implementations,
+                        this.composable.andThen(implementation)));
             }
 
             @Override // net.bytebuddy.implementation.Implementation
@@ -100,11 +110,13 @@ public interface Implementation extends InstrumentedType.Prepareable {
                     return false;
                 }
                 Composable composable = (Composable) obj;
-                return this.composable.equals(composable.composable) && this.implementations.equals(composable.implementations);
+                return this.composable.equals(composable.composable)
+                        && this.implementations.equals(composable.implementations);
             }
 
             public int hashCode() {
-                return this.implementations.hashCode() + ((this.composable.hashCode() + (getClass().hashCode() * 31)) * 31);
+                return this.implementations.hashCode()
+                        + ((this.composable.hashCode() + (getClass().hashCode() * 31)) * 31);
             }
 
             @Override // net.bytebuddy.dynamic.scaffold.InstrumentedType.Prepareable
@@ -164,7 +176,8 @@ public interface Implementation extends InstrumentedType.Prepareable {
             if (this == obj) {
                 return true;
             }
-            return obj != null && getClass() == obj.getClass() && this.implementations.equals(((Compound) obj).implementations);
+            return obj != null && getClass() == obj.getClass()
+                    && this.implementations.equals(((Compound) obj).implementations);
         }
 
         public int hashCode() {
@@ -196,10 +209,16 @@ public interface Implementation extends InstrumentedType.Prepareable {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface Context extends MethodAccessorFactory {
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static class Default extends ExtractableView.AbstractBase {
             public static final String ACCESSOR_METHOD_SUFFIX = "accessor";
             public static final String FIELD_CACHE_PREFIX = "cachedValue";
@@ -215,8 +234,12 @@ public interface Implementation extends InstrumentedType.Prepareable {
             private final String suffix;
             private final TypeInitializer typeInitializer;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
-            public static abstract class AbstractPropertyAccessorMethod extends MethodDescription.InDefinedShape.AbstractBase {
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
+            public static abstract class AbstractPropertyAccessorMethod
+                    extends MethodDescription.InDefinedShape.AbstractBase {
                 public abstract int getBaseModifiers();
 
                 @Override // net.bytebuddy.description.ModifierReviewable
@@ -225,13 +248,17 @@ public interface Implementation extends InstrumentedType.Prepareable {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class AccessorMethod extends AbstractPropertyAccessorMethod {
                 private final TypeDescription instrumentedType;
                 private final MethodDescription methodDescription;
                 private final String name;
 
-                public AccessorMethod(TypeDescription typeDescription, MethodDescription methodDescription, TypeDescription typeDescription2, String str) {
+                public AccessorMethod(TypeDescription typeDescription, MethodDescription methodDescription,
+                        TypeDescription typeDescription2, String str) {
                     String str2;
                     this.instrumentedType = typeDescription;
                     this.methodDescription = methodDescription;
@@ -274,9 +301,11 @@ public interface Implementation extends InstrumentedType.Prepareable {
                     return this.name;
                 }
 
-                @Override // net.bytebuddy.description.method.MethodDescription, net.bytebuddy.description.method.MethodDescription.InDefinedShape
+                @Override // net.bytebuddy.description.method.MethodDescription,
+                          // net.bytebuddy.description.method.MethodDescription.InDefinedShape
                 public ParameterList<ParameterDescription.InDefinedShape> getParameters() {
-                    return new ParameterList.Explicit.ForTypes(this, this.methodDescription.getParameters().asTypeList().asRawTypes());
+                    return new ParameterList.Explicit.ForTypes(this,
+                            this.methodDescription.getParameters().asTypeList().asRawTypes());
                 }
 
                 @Override // net.bytebuddy.description.method.MethodDescription
@@ -289,20 +318,26 @@ public interface Implementation extends InstrumentedType.Prepareable {
                     return new TypeList.Generic.Empty();
                 }
 
-                @Override // net.bytebuddy.description.method.MethodDescription, net.bytebuddy.description.DeclaredByType.WithMandatoryDeclaration, net.bytebuddy.description.DeclaredByType
+                @Override // net.bytebuddy.description.method.MethodDescription,
+                          // net.bytebuddy.description.DeclaredByType.WithMandatoryDeclaration,
+                          // net.bytebuddy.description.DeclaredByType
                 @Nonnull
                 public TypeDescription getDeclaringType() {
                     return this.instrumentedType;
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class CacheValueField extends FieldDescription.InDefinedShape.AbstractBase {
                 private final TypeDescription.Generic fieldType;
                 private final TypeDescription instrumentedType;
                 private final String name;
 
-                public CacheValueField(TypeDescription typeDescription, TypeDescription.Generic generic, String str, int i) {
+                public CacheValueField(TypeDescription typeDescription, TypeDescription.Generic generic, String str,
+                        int i) {
                     this.instrumentedType = typeDescription;
                     this.fieldType = generic;
                     StringBuilder sbZ = dkz.z("cachedValue$", str, "$");
@@ -330,16 +365,22 @@ public interface Implementation extends InstrumentedType.Prepareable {
                     return this.fieldType;
                 }
 
-                @Override // net.bytebuddy.description.field.FieldDescription, net.bytebuddy.description.DeclaredByType.WithMandatoryDeclaration, net.bytebuddy.description.DeclaredByType
+                @Override // net.bytebuddy.description.field.FieldDescription,
+                          // net.bytebuddy.description.DeclaredByType.WithMandatoryDeclaration,
+                          // net.bytebuddy.description.DeclaredByType
                 @Nonnull
                 public TypeDescription getDeclaringType() {
                     return this.instrumentedType;
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
-            public static abstract class DelegationRecord extends TypeWriter.MethodPool.Record.ForDefinedMethod implements ByteCodeAppender {
+            public static abstract class DelegationRecord extends TypeWriter.MethodPool.Record.ForDefinedMethod
+                    implements ByteCodeAppender {
                 protected final MethodDescription.InDefinedShape methodDescription;
                 protected final Visibility visibility;
 
@@ -353,7 +394,8 @@ public interface Implementation extends InstrumentedType.Prepareable {
                 }
 
                 @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
-                public void applyBody(MethodVisitor methodVisitor, Context context, AnnotationValueFilter.Factory factory) {
+                public void applyBody(MethodVisitor methodVisitor, Context context,
+                        AnnotationValueFilter.Factory factory) {
                     methodVisitor.visitCode();
                     ByteCodeAppender.Size sizeApplyCode = applyCode(methodVisitor, context);
                     methodVisitor.visitMaxs(sizeApplyCode.getOperandStackSize(), sizeApplyCode.getLocalVariableSize());
@@ -376,7 +418,8 @@ public interface Implementation extends InstrumentedType.Prepareable {
                         return false;
                     }
                     DelegationRecord delegationRecord = (DelegationRecord) obj;
-                    return this.visibility.equals(delegationRecord.visibility) && this.methodDescription.equals(delegationRecord.methodDescription);
+                    return this.visibility.equals(delegationRecord.visibility)
+                            && this.methodDescription.equals(delegationRecord.methodDescription);
                 }
 
                 @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
@@ -395,7 +438,8 @@ public interface Implementation extends InstrumentedType.Prepareable {
 
                 @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
                 public TypeWriter.MethodPool.Record prepend(ByteCodeAppender byteCodeAppender) {
-                    throw new UnsupportedOperationException("Cannot prepend code to a delegation for " + this.methodDescription);
+                    throw new UnsupportedOperationException(
+                            "Cannot prepend code to a delegation for " + this.methodDescription);
                 }
 
                 public abstract DelegationRecord with(MethodAccessorFactory.AccessType accessType);
@@ -406,7 +450,10 @@ public interface Implementation extends InstrumentedType.Prepareable {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class FieldCacheEntry implements StackManipulation {
                 private final TypeDescription fieldType;
                 private final StackManipulation fieldValue;
@@ -427,7 +474,8 @@ public interface Implementation extends InstrumentedType.Prepareable {
                     }
                     if (obj != null && getClass() == obj.getClass()) {
                         FieldCacheEntry fieldCacheEntry = (FieldCacheEntry) obj;
-                        if (this.fieldValue.equals(fieldCacheEntry.fieldValue) && this.fieldType.equals(fieldCacheEntry.fieldType)) {
+                        if (this.fieldValue.equals(fieldCacheEntry.fieldValue)
+                                && this.fieldType.equals(fieldCacheEntry.fieldType)) {
                             return true;
                         }
                     }
@@ -452,7 +500,10 @@ public interface Implementation extends InstrumentedType.Prepareable {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class FieldGetter extends AbstractPropertyAccessorMethod {
                 private final FieldDescription fieldDescription;
                 private final TypeDescription instrumentedType;
@@ -490,7 +541,8 @@ public interface Implementation extends InstrumentedType.Prepareable {
                     return this.name;
                 }
 
-                @Override // net.bytebuddy.description.method.MethodDescription, net.bytebuddy.description.method.MethodDescription.InDefinedShape
+                @Override // net.bytebuddy.description.method.MethodDescription,
+                          // net.bytebuddy.description.method.MethodDescription.InDefinedShape
                 public ParameterList<ParameterDescription.InDefinedShape> getParameters() {
                     return new ParameterList.Empty();
                 }
@@ -505,25 +557,38 @@ public interface Implementation extends InstrumentedType.Prepareable {
                     return new TypeList.Generic.Empty();
                 }
 
-                @Override // net.bytebuddy.description.method.MethodDescription, net.bytebuddy.description.DeclaredByType.WithMandatoryDeclaration, net.bytebuddy.description.DeclaredByType
+                @Override // net.bytebuddy.description.method.MethodDescription,
+                          // net.bytebuddy.description.DeclaredByType.WithMandatoryDeclaration,
+                          // net.bytebuddy.description.DeclaredByType
                 @Nonnull
                 public TypeDescription getDeclaringType() {
                     return this.instrumentedType;
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class FieldGetterDelegation extends DelegationRecord {
                 private final FieldDescription fieldDescription;
 
-                public FieldGetterDelegation(TypeDescription typeDescription, String str, MethodAccessorFactory.AccessType accessType, FieldDescription fieldDescription) {
-                    this(new FieldGetter(typeDescription, fieldDescription, str), accessType.getVisibility(), fieldDescription);
+                public FieldGetterDelegation(TypeDescription typeDescription, String str,
+                        MethodAccessorFactory.AccessType accessType, FieldDescription fieldDescription) {
+                    this(new FieldGetter(typeDescription, fieldDescription, str), accessType.getVisibility(),
+                            fieldDescription);
                 }
 
                 @Override // net.bytebuddy.implementation.bytecode.ByteCodeAppender
-                public ByteCodeAppender.Size apply(MethodVisitor methodVisitor, Context context, MethodDescription methodDescription) {
-                    return new ByteCodeAppender.Size(new StackManipulation.Compound(this.fieldDescription.isStatic() ? StackManipulation.Trivial.INSTANCE : MethodVariableAccess.loadThis(), FieldAccess.forField(this.fieldDescription).read(), MethodReturn.of(this.fieldDescription.getType())).apply(methodVisitor, context).getMaximalSize(), methodDescription.getStackSize());
+                public ByteCodeAppender.Size apply(MethodVisitor methodVisitor, Context context,
+                        MethodDescription methodDescription) {
+                    return new ByteCodeAppender.Size(new StackManipulation.Compound(
+                            this.fieldDescription.isStatic() ? StackManipulation.Trivial.INSTANCE
+                                    : MethodVariableAccess.loadThis(),
+                            FieldAccess.forField(this.fieldDescription).read(),
+                            MethodReturn.of(this.fieldDescription.getType())).apply(methodVisitor, context)
+                            .getMaximalSize(), methodDescription.getStackSize());
                 }
 
                 @Override // net.bytebuddy.implementation.Implementation.Context.Default.DelegationRecord
@@ -534,7 +599,8 @@ public interface Implementation extends InstrumentedType.Prepareable {
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.fieldDescription.equals(((FieldGetterDelegation) obj).fieldDescription);
+                    return obj != null && getClass() == obj.getClass()
+                            && this.fieldDescription.equals(((FieldGetterDelegation) obj).fieldDescription);
                 }
 
                 @Override // net.bytebuddy.implementation.Implementation.Context.Default.DelegationRecord
@@ -544,16 +610,21 @@ public interface Implementation extends InstrumentedType.Prepareable {
 
                 @Override // net.bytebuddy.implementation.Implementation.Context.Default.DelegationRecord
                 public DelegationRecord with(MethodAccessorFactory.AccessType accessType) {
-                    return new FieldGetterDelegation(this.methodDescription, this.visibility.expandTo(accessType.getVisibility()), this.fieldDescription);
+                    return new FieldGetterDelegation(this.methodDescription,
+                            this.visibility.expandTo(accessType.getVisibility()), this.fieldDescription);
                 }
 
-                private FieldGetterDelegation(MethodDescription.InDefinedShape inDefinedShape, Visibility visibility, FieldDescription fieldDescription) {
+                private FieldGetterDelegation(MethodDescription.InDefinedShape inDefinedShape, Visibility visibility,
+                        FieldDescription fieldDescription) {
                     super(inDefinedShape, visibility);
                     this.fieldDescription = fieldDescription;
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class FieldSetter extends AbstractPropertyAccessorMethod {
                 private final FieldDescription fieldDescription;
                 private final TypeDescription instrumentedType;
@@ -591,9 +662,11 @@ public interface Implementation extends InstrumentedType.Prepareable {
                     return this.name;
                 }
 
-                @Override // net.bytebuddy.description.method.MethodDescription, net.bytebuddy.description.method.MethodDescription.InDefinedShape
+                @Override // net.bytebuddy.description.method.MethodDescription,
+                          // net.bytebuddy.description.method.MethodDescription.InDefinedShape
                 public ParameterList<ParameterDescription.InDefinedShape> getParameters() {
-                    return new ParameterList.Explicit.ForTypes(this, (List<? extends TypeDefinition>) Collections.singletonList(this.fieldDescription.getType().asRawType()));
+                    return new ParameterList.Explicit.ForTypes(this, (List<? extends TypeDefinition>) Collections
+                            .singletonList(this.fieldDescription.getType().asRawType()));
                 }
 
                 @Override // net.bytebuddy.description.method.MethodDescription
@@ -606,25 +679,36 @@ public interface Implementation extends InstrumentedType.Prepareable {
                     return new TypeList.Generic.Empty();
                 }
 
-                @Override // net.bytebuddy.description.method.MethodDescription, net.bytebuddy.description.DeclaredByType.WithMandatoryDeclaration, net.bytebuddy.description.DeclaredByType
+                @Override // net.bytebuddy.description.method.MethodDescription,
+                          // net.bytebuddy.description.DeclaredByType.WithMandatoryDeclaration,
+                          // net.bytebuddy.description.DeclaredByType
                 @Nonnull
                 public TypeDescription getDeclaringType() {
                     return this.instrumentedType;
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class FieldSetterDelegation extends DelegationRecord {
                 private final FieldDescription fieldDescription;
 
-                public FieldSetterDelegation(TypeDescription typeDescription, String str, MethodAccessorFactory.AccessType accessType, FieldDescription fieldDescription) {
-                    this(new FieldSetter(typeDescription, fieldDescription, str), accessType.getVisibility(), fieldDescription);
+                public FieldSetterDelegation(TypeDescription typeDescription, String str,
+                        MethodAccessorFactory.AccessType accessType, FieldDescription fieldDescription) {
+                    this(new FieldSetter(typeDescription, fieldDescription, str), accessType.getVisibility(),
+                            fieldDescription);
                 }
 
                 @Override // net.bytebuddy.implementation.bytecode.ByteCodeAppender
-                public ByteCodeAppender.Size apply(MethodVisitor methodVisitor, Context context, MethodDescription methodDescription) {
-                    return new ByteCodeAppender.Size(new StackManipulation.Compound(MethodVariableAccess.allArgumentsOf(methodDescription).prependThisReference(), FieldAccess.forField(this.fieldDescription).write(), MethodReturn.VOID).apply(methodVisitor, context).getMaximalSize(), methodDescription.getStackSize());
+                public ByteCodeAppender.Size apply(MethodVisitor methodVisitor, Context context,
+                        MethodDescription methodDescription) {
+                    return new ByteCodeAppender.Size(new StackManipulation.Compound(
+                            MethodVariableAccess.allArgumentsOf(methodDescription).prependThisReference(),
+                            FieldAccess.forField(this.fieldDescription).write(), MethodReturn.VOID)
+                            .apply(methodVisitor, context).getMaximalSize(), methodDescription.getStackSize());
                 }
 
                 @Override // net.bytebuddy.implementation.Implementation.Context.Default.DelegationRecord
@@ -635,7 +719,8 @@ public interface Implementation extends InstrumentedType.Prepareable {
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.fieldDescription.equals(((FieldSetterDelegation) obj).fieldDescription);
+                    return obj != null && getClass() == obj.getClass()
+                            && this.fieldDescription.equals(((FieldSetterDelegation) obj).fieldDescription);
                 }
 
                 @Override // net.bytebuddy.implementation.Implementation.Context.Default.DelegationRecord
@@ -645,16 +730,20 @@ public interface Implementation extends InstrumentedType.Prepareable {
 
                 @Override // net.bytebuddy.implementation.Implementation.Context.Default.DelegationRecord
                 public DelegationRecord with(MethodAccessorFactory.AccessType accessType) {
-                    return new FieldSetterDelegation(this.methodDescription, this.visibility.expandTo(accessType.getVisibility()), this.fieldDescription);
+                    return new FieldSetterDelegation(this.methodDescription,
+                            this.visibility.expandTo(accessType.getVisibility()), this.fieldDescription);
                 }
 
-                private FieldSetterDelegation(MethodDescription.InDefinedShape inDefinedShape, Visibility visibility, FieldDescription fieldDescription) {
+                private FieldSetterDelegation(MethodDescription.InDefinedShape inDefinedShape, Visibility visibility,
+                        FieldDescription fieldDescription) {
                     super(inDefinedShape, visibility);
                     this.fieldDescription = fieldDescription;
                 }
             }
 
-            public Default(TypeDescription typeDescription, ClassFileVersion classFileVersion, AuxiliaryType.NamingStrategy namingStrategy, TypeInitializer typeInitializer, ClassFileVersion classFileVersion2, FrameGeneration frameGeneration, String str) {
+            public Default(TypeDescription typeDescription, ClassFileVersion classFileVersion,
+                    AuxiliaryType.NamingStrategy namingStrategy, TypeInitializer typeInitializer,
+                    ClassFileVersion classFileVersion2, FrameGeneration frameGeneration, String str) {
                 super(typeDescription, classFileVersion, frameGeneration);
                 this.auxiliaryTypeNamingStrategy = namingStrategy;
                 this.typeInitializer = typeInitializer;
@@ -670,19 +759,23 @@ public interface Implementation extends InstrumentedType.Prepareable {
             }
 
             @Override // net.bytebuddy.implementation.Implementation.Context
-            public FieldDescription.InDefinedShape cache(StackManipulation stackManipulation, TypeDescription typeDescription) {
+            public FieldDescription.InDefinedShape cache(StackManipulation stackManipulation,
+                    TypeDescription typeDescription) {
                 FieldCacheEntry fieldCacheEntry = new FieldCacheEntry(stackManipulation, typeDescription);
                 FieldDescription.InDefinedShape inDefinedShape = this.registeredFieldCacheEntries.get(fieldCacheEntry);
                 if (inDefinedShape != null) {
                     return inDefinedShape;
                 }
                 if (!this.fieldCacheCanAppendEntries) {
-                    throw new IllegalStateException("Cached values cannot be registered after defining the type initializer for " + this.instrumentedType);
+                    throw new IllegalStateException(
+                            "Cached values cannot be registered after defining the type initializer for "
+                                    + this.instrumentedType);
                 }
                 int iHashCode = stackManipulation.hashCode();
                 while (true) {
                     int i = iHashCode + 1;
-                    CacheValueField cacheValueField = new CacheValueField(this.instrumentedType, typeDescription.asGenericType(), this.suffix, iHashCode);
+                    CacheValueField cacheValueField = new CacheValueField(this.instrumentedType,
+                            typeDescription.asGenericType(), this.suffix, iHashCode);
                     if (this.registeredFieldCacheFields.add(cacheValueField)) {
                         this.registeredFieldCacheEntries.put(fieldCacheEntry, cacheValueField);
                         return cacheValueField;
@@ -692,15 +785,20 @@ public interface Implementation extends InstrumentedType.Prepareable {
             }
 
             @Override // net.bytebuddy.implementation.Implementation.Context.ExtractableView
-            public void drain(TypeInitializer.Drain drain, ClassVisitor classVisitor, AnnotationValueFilter.Factory factory) {
+            public void drain(TypeInitializer.Drain drain, ClassVisitor classVisitor,
+                    AnnotationValueFilter.Factory factory) {
                 this.fieldCacheCanAppendEntries = false;
                 TypeInitializer typeInitializerExpandWith = this.typeInitializer;
-                for (Map.Entry<FieldCacheEntry, FieldDescription.InDefinedShape> entry : this.registeredFieldCacheEntries.entrySet()) {
+                for (Map.Entry<FieldCacheEntry, FieldDescription.InDefinedShape> entry : this.registeredFieldCacheEntries
+                        .entrySet()) {
                     ClassVisitor classVisitor2 = classVisitor;
-                    FieldVisitor fieldVisitorVisitField = classVisitor2.visitField(entry.getValue().getModifiers(), entry.getValue().getInternalName(), entry.getValue().getDescriptor(), entry.getValue().getGenericSignature(), FieldDescription.NO_DEFAULT_VALUE);
+                    FieldVisitor fieldVisitorVisitField = classVisitor2.visitField(entry.getValue().getModifiers(),
+                            entry.getValue().getInternalName(), entry.getValue().getDescriptor(),
+                            entry.getValue().getGenericSignature(), FieldDescription.NO_DEFAULT_VALUE);
                     if (fieldVisitorVisitField != null) {
                         fieldVisitorVisitField.visitEnd();
-                        typeInitializerExpandWith = typeInitializerExpandWith.expandWith(entry.getKey().storeIn(entry.getValue()));
+                        typeInitializerExpandWith = typeInitializerExpandWith
+                                .expandWith(entry.getKey().storeIn(entry.getValue()));
                     }
                     classVisitor = classVisitor2;
                 }
@@ -734,47 +832,69 @@ public interface Implementation extends InstrumentedType.Prepareable {
             public TypeDescription register(AuxiliaryType auxiliaryType) {
                 DynamicType dynamicTypeMake = this.auxiliaryTypes.get(auxiliaryType);
                 if (dynamicTypeMake == null) {
-                    dynamicTypeMake = auxiliaryType.make(this.auxiliaryTypeNamingStrategy.name(this.instrumentedType, auxiliaryType), this.auxiliaryClassFileVersion, this);
+                    dynamicTypeMake = auxiliaryType.make(
+                            this.auxiliaryTypeNamingStrategy.name(this.instrumentedType, auxiliaryType),
+                            this.auxiliaryClassFileVersion, this);
                     this.auxiliaryTypes.put(auxiliaryType, dynamicTypeMake);
                 }
                 return dynamicTypeMake.getTypeDescription();
             }
 
             @Override // net.bytebuddy.implementation.MethodAccessorFactory
-            public MethodDescription.InDefinedShape registerAccessorFor(SpecialMethodInvocation specialMethodInvocation, MethodAccessorFactory.AccessType accessType) {
+            public MethodDescription.InDefinedShape registerAccessorFor(SpecialMethodInvocation specialMethodInvocation,
+                    MethodAccessorFactory.AccessType accessType) {
                 DelegationRecord delegationRecord = this.registeredAccessorMethods.get(specialMethodInvocation);
-                DelegationRecord accessorMethodDelegation = delegationRecord == null ? new AccessorMethodDelegation(this.instrumentedType, this.suffix, accessType, specialMethodInvocation) : delegationRecord.with(accessType);
+                DelegationRecord accessorMethodDelegation = delegationRecord == null
+                        ? new AccessorMethodDelegation(this.instrumentedType, this.suffix, accessType,
+                                specialMethodInvocation)
+                        : delegationRecord.with(accessType);
                 this.registeredAccessorMethods.put(specialMethodInvocation, accessorMethodDelegation);
                 return accessorMethodDelegation.getMethod();
             }
 
             @Override // net.bytebuddy.implementation.MethodAccessorFactory
-            public MethodDescription.InDefinedShape registerGetterFor(FieldDescription fieldDescription, MethodAccessorFactory.AccessType accessType) {
+            public MethodDescription.InDefinedShape registerGetterFor(FieldDescription fieldDescription,
+                    MethodAccessorFactory.AccessType accessType) {
                 DelegationRecord delegationRecord = this.registeredGetters.get(fieldDescription);
-                DelegationRecord fieldGetterDelegation = delegationRecord == null ? new FieldGetterDelegation(this.instrumentedType, this.suffix, accessType, fieldDescription) : delegationRecord.with(accessType);
+                DelegationRecord fieldGetterDelegation = delegationRecord == null
+                        ? new FieldGetterDelegation(this.instrumentedType, this.suffix, accessType, fieldDescription)
+                        : delegationRecord.with(accessType);
                 this.registeredGetters.put(fieldDescription, fieldGetterDelegation);
                 return fieldGetterDelegation.getMethod();
             }
 
             @Override // net.bytebuddy.implementation.MethodAccessorFactory
-            public MethodDescription.InDefinedShape registerSetterFor(FieldDescription fieldDescription, MethodAccessorFactory.AccessType accessType) {
+            public MethodDescription.InDefinedShape registerSetterFor(FieldDescription fieldDescription,
+                    MethodAccessorFactory.AccessType accessType) {
                 DelegationRecord delegationRecord = this.registeredSetters.get(fieldDescription);
-                DelegationRecord fieldSetterDelegation = delegationRecord == null ? new FieldSetterDelegation(this.instrumentedType, this.suffix, accessType, fieldDescription) : delegationRecord.with(accessType);
+                DelegationRecord fieldSetterDelegation = delegationRecord == null
+                        ? new FieldSetterDelegation(this.instrumentedType, this.suffix, accessType, fieldDescription)
+                        : delegationRecord.with(accessType);
                 this.registeredSetters.put(fieldDescription, fieldSetterDelegation);
                 return fieldSetterDelegation.getMethod();
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum Factory implements Factory {
                 INSTANCE;
 
                 @Override // net.bytebuddy.implementation.Implementation.Context.Factory
                 @Deprecated
-                public ExtractableView make(TypeDescription typeDescription, AuxiliaryType.NamingStrategy namingStrategy, TypeInitializer typeInitializer, ClassFileVersion classFileVersion, ClassFileVersion classFileVersion2) {
-                    return make(typeDescription, namingStrategy, typeInitializer, classFileVersion, classFileVersion2, classFileVersion.isAtLeast(ClassFileVersion.JAVA_V6) ? FrameGeneration.GENERATE : FrameGeneration.DISABLED);
+                public ExtractableView make(TypeDescription typeDescription,
+                        AuxiliaryType.NamingStrategy namingStrategy, TypeInitializer typeInitializer,
+                        ClassFileVersion classFileVersion, ClassFileVersion classFileVersion2) {
+                    return make(typeDescription, namingStrategy, typeInitializer, classFileVersion, classFileVersion2,
+                            classFileVersion.isAtLeast(ClassFileVersion.JAVA_V6) ? FrameGeneration.GENERATE
+                                    : FrameGeneration.DISABLED);
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class WithFixedSuffix implements Factory {
                     private final String suffix;
@@ -787,7 +907,8 @@ public interface Implementation extends InstrumentedType.Prepareable {
                         if (this == obj) {
                             return true;
                         }
-                        return obj != null && getClass() == obj.getClass() && this.suffix.equals(((WithFixedSuffix) obj).suffix);
+                        return obj != null && getClass() == obj.getClass()
+                                && this.suffix.equals(((WithFixedSuffix) obj).suffix);
                     }
 
                     public int hashCode() {
@@ -796,34 +917,57 @@ public interface Implementation extends InstrumentedType.Prepareable {
 
                     @Override // net.bytebuddy.implementation.Implementation.Context.Factory
                     @Deprecated
-                    public ExtractableView make(TypeDescription typeDescription, AuxiliaryType.NamingStrategy namingStrategy, TypeInitializer typeInitializer, ClassFileVersion classFileVersion, ClassFileVersion classFileVersion2) {
-                        return make(typeDescription, namingStrategy, typeInitializer, classFileVersion, classFileVersion2, classFileVersion.isAtLeast(ClassFileVersion.JAVA_V6) ? FrameGeneration.GENERATE : FrameGeneration.DISABLED);
+                    public ExtractableView make(TypeDescription typeDescription,
+                            AuxiliaryType.NamingStrategy namingStrategy, TypeInitializer typeInitializer,
+                            ClassFileVersion classFileVersion, ClassFileVersion classFileVersion2) {
+                        return make(typeDescription, namingStrategy, typeInitializer, classFileVersion,
+                                classFileVersion2,
+                                classFileVersion.isAtLeast(ClassFileVersion.JAVA_V6) ? FrameGeneration.GENERATE
+                                        : FrameGeneration.DISABLED);
                     }
 
                     @Override // net.bytebuddy.implementation.Implementation.Context.Factory
-                    public ExtractableView make(TypeDescription typeDescription, AuxiliaryType.NamingStrategy namingStrategy, TypeInitializer typeInitializer, ClassFileVersion classFileVersion, ClassFileVersion classFileVersion2, FrameGeneration frameGeneration) {
-                        return new Default(typeDescription, classFileVersion, namingStrategy, typeInitializer, classFileVersion2, frameGeneration, this.suffix);
+                    public ExtractableView make(TypeDescription typeDescription,
+                            AuxiliaryType.NamingStrategy namingStrategy, TypeInitializer typeInitializer,
+                            ClassFileVersion classFileVersion, ClassFileVersion classFileVersion2,
+                            FrameGeneration frameGeneration) {
+                        return new Default(typeDescription, classFileVersion, namingStrategy, typeInitializer,
+                                classFileVersion2, frameGeneration, this.suffix);
                     }
                 }
 
                 @Override // net.bytebuddy.implementation.Implementation.Context.Factory
-                public ExtractableView make(TypeDescription typeDescription, AuxiliaryType.NamingStrategy namingStrategy, TypeInitializer typeInitializer, ClassFileVersion classFileVersion, ClassFileVersion classFileVersion2, FrameGeneration frameGeneration) {
-                    return new Default(typeDescription, classFileVersion, namingStrategy, typeInitializer, classFileVersion2, frameGeneration, RandomString.make());
+                public ExtractableView make(TypeDescription typeDescription,
+                        AuxiliaryType.NamingStrategy namingStrategy, TypeInitializer typeInitializer,
+                        ClassFileVersion classFileVersion, ClassFileVersion classFileVersion2,
+                        FrameGeneration frameGeneration) {
+                    return new Default(typeDescription, classFileVersion, namingStrategy, typeInitializer,
+                            classFileVersion2, frameGeneration, RandomString.make());
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class AccessorMethodDelegation extends DelegationRecord {
                 private final StackManipulation accessorMethodInvocation;
 
-                public AccessorMethodDelegation(TypeDescription typeDescription, String str, MethodAccessorFactory.AccessType accessType, SpecialMethodInvocation specialMethodInvocation) {
-                    this(new AccessorMethod(typeDescription, specialMethodInvocation.getMethodDescription(), specialMethodInvocation.getTypeDescription(), str), accessType.getVisibility(), specialMethodInvocation);
+                public AccessorMethodDelegation(TypeDescription typeDescription, String str,
+                        MethodAccessorFactory.AccessType accessType, SpecialMethodInvocation specialMethodInvocation) {
+                    this(new AccessorMethod(typeDescription, specialMethodInvocation.getMethodDescription(),
+                            specialMethodInvocation.getTypeDescription(), str), accessType.getVisibility(),
+                            specialMethodInvocation);
                 }
 
                 @Override // net.bytebuddy.implementation.bytecode.ByteCodeAppender
-                public ByteCodeAppender.Size apply(MethodVisitor methodVisitor, Context context, MethodDescription methodDescription) {
-                    return new ByteCodeAppender.Size(new StackManipulation.Compound(MethodVariableAccess.allArgumentsOf(methodDescription).prependThisReference(), this.accessorMethodInvocation, MethodReturn.of(methodDescription.getReturnType())).apply(methodVisitor, context).getMaximalSize(), methodDescription.getStackSize());
+                public ByteCodeAppender.Size apply(MethodVisitor methodVisitor, Context context,
+                        MethodDescription methodDescription) {
+                    return new ByteCodeAppender.Size(new StackManipulation.Compound(
+                            MethodVariableAccess.allArgumentsOf(methodDescription).prependThisReference(),
+                            this.accessorMethodInvocation, MethodReturn.of(methodDescription.getReturnType()))
+                            .apply(methodVisitor, context).getMaximalSize(), methodDescription.getStackSize());
                 }
 
                 @Override // net.bytebuddy.implementation.Implementation.Context.Default.DelegationRecord
@@ -834,7 +978,8 @@ public interface Implementation extends InstrumentedType.Prepareable {
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.accessorMethodInvocation.equals(((AccessorMethodDelegation) obj).accessorMethodInvocation);
+                    return obj != null && getClass() == obj.getClass() && this.accessorMethodInvocation
+                            .equals(((AccessorMethodDelegation) obj).accessorMethodInvocation);
                 }
 
                 @Override // net.bytebuddy.implementation.Implementation.Context.Default.DelegationRecord
@@ -844,27 +989,36 @@ public interface Implementation extends InstrumentedType.Prepareable {
 
                 @Override // net.bytebuddy.implementation.Implementation.Context.Default.DelegationRecord
                 public DelegationRecord with(MethodAccessorFactory.AccessType accessType) {
-                    return new AccessorMethodDelegation(this.methodDescription, this.visibility.expandTo(accessType.getVisibility()), this.accessorMethodInvocation);
+                    return new AccessorMethodDelegation(this.methodDescription,
+                            this.visibility.expandTo(accessType.getVisibility()), this.accessorMethodInvocation);
                 }
 
-                private AccessorMethodDelegation(MethodDescription.InDefinedShape inDefinedShape, Visibility visibility, StackManipulation stackManipulation) {
+                private AccessorMethodDelegation(MethodDescription.InDefinedShape inDefinedShape, Visibility visibility,
+                        StackManipulation stackManipulation) {
                     super(inDefinedShape, visibility);
                     this.accessorMethodInvocation = stackManipulation;
                 }
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public interface ExtractableView extends Context {
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static abstract class AbstractBase implements ExtractableView {
                 protected final ClassFileVersion classFileVersion;
                 protected final FrameGeneration frameGeneration;
                 protected final TypeDescription instrumentedType;
 
-                public AbstractBase(TypeDescription typeDescription, ClassFileVersion classFileVersion, FrameGeneration frameGeneration) {
+                public AbstractBase(TypeDescription typeDescription, ClassFileVersion classFileVersion,
+                        FrameGeneration frameGeneration) {
                     this.instrumentedType = typeDescription;
                     this.classFileVersion = classFileVersion;
                     this.frameGeneration = frameGeneration;
@@ -878,7 +1032,9 @@ public interface Implementation extends InstrumentedType.Prepareable {
                         return false;
                     }
                     AbstractBase abstractBase = (AbstractBase) obj;
-                    return this.frameGeneration.equals(abstractBase.frameGeneration) && this.instrumentedType.equals(abstractBase.instrumentedType) && this.classFileVersion.equals(abstractBase.classFileVersion);
+                    return this.frameGeneration.equals(abstractBase.frameGeneration)
+                            && this.instrumentedType.equals(abstractBase.instrumentedType)
+                            && this.classFileVersion.equals(abstractBase.classFileVersion);
                 }
 
                 @Override // net.bytebuddy.implementation.Implementation.Context
@@ -897,7 +1053,8 @@ public interface Implementation extends InstrumentedType.Prepareable {
                 }
 
                 public int hashCode() {
-                    return this.frameGeneration.hashCode() + ((this.classFileVersion.hashCode() + dkz.f(this.instrumentedType, getClass().hashCode() * 31, 31)) * 31);
+                    return this.frameGeneration.hashCode() + ((this.classFileVersion.hashCode()
+                            + dkz.f(this.instrumentedType, getClass().hashCode() * 31, 31)) * 31);
                 }
             }
 
@@ -908,31 +1065,47 @@ public interface Implementation extends InstrumentedType.Prepareable {
             boolean isEnabled();
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public interface Factory {
             @Deprecated
-            ExtractableView make(TypeDescription typeDescription, AuxiliaryType.NamingStrategy namingStrategy, TypeInitializer typeInitializer, ClassFileVersion classFileVersion, ClassFileVersion classFileVersion2);
+            ExtractableView make(TypeDescription typeDescription, AuxiliaryType.NamingStrategy namingStrategy,
+                    TypeInitializer typeInitializer, ClassFileVersion classFileVersion,
+                    ClassFileVersion classFileVersion2);
 
-            ExtractableView make(TypeDescription typeDescription, AuxiliaryType.NamingStrategy namingStrategy, TypeInitializer typeInitializer, ClassFileVersion classFileVersion, ClassFileVersion classFileVersion2, FrameGeneration frameGeneration);
+            ExtractableView make(TypeDescription typeDescription, AuxiliaryType.NamingStrategy namingStrategy,
+                    TypeInitializer typeInitializer, ClassFileVersion classFileVersion,
+                    ClassFileVersion classFileVersion2, FrameGeneration frameGeneration);
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public enum FrameGeneration {
-            GENERATE(true) { // from class: net.bytebuddy.implementation.Implementation.Context.FrameGeneration.1
+            GENERATE(true) { // from class:
+                             // net.bytebuddy.implementation.Implementation.Context.FrameGeneration.1
                 @Override // net.bytebuddy.implementation.Implementation.Context.FrameGeneration
-                public void generate(MethodVisitor methodVisitor, int i, int i2, @MaybeNull Object[] objArr, int i3, @MaybeNull Object[] objArr2, int i4, @MaybeNull Object[] objArr3) {
+                public void generate(MethodVisitor methodVisitor, int i, int i2, @MaybeNull Object[] objArr, int i3,
+                        @MaybeNull Object[] objArr2, int i4, @MaybeNull Object[] objArr3) {
                     methodVisitor.visitFrame(i, i3, objArr2, i2, objArr);
                 }
             },
-            EXPAND(1 == true ? 1 : 0) { // from class: net.bytebuddy.implementation.Implementation.Context.FrameGeneration.2
+            EXPAND(1 == true ? 1 : 0) { // from class:
+                                        // net.bytebuddy.implementation.Implementation.Context.FrameGeneration.2
                 @Override // net.bytebuddy.implementation.Implementation.Context.FrameGeneration
-                public void generate(MethodVisitor methodVisitor, int i, int i2, @MaybeNull Object[] objArr, int i3, @MaybeNull Object[] objArr2, int i4, @MaybeNull Object[] objArr3) {
+                public void generate(MethodVisitor methodVisitor, int i, int i2, @MaybeNull Object[] objArr, int i3,
+                        @MaybeNull Object[] objArr2, int i4, @MaybeNull Object[] objArr3) {
                     methodVisitor.visitFrame(-1, i4, objArr3, i2, objArr);
                 }
             },
-            DISABLED(0 == true ? 1 : 0) { // from class: net.bytebuddy.implementation.Implementation.Context.FrameGeneration.3
+            DISABLED(0 == true ? 1 : 0) { // from class:
+                                          // net.bytebuddy.implementation.Implementation.Context.FrameGeneration.3
                 @Override // net.bytebuddy.implementation.Implementation.Context.FrameGeneration
-                public void generate(MethodVisitor methodVisitor, int i, int i2, @MaybeNull Object[] objArr, int i3, @MaybeNull Object[] objArr2, int i4, @MaybeNull Object[] objArr3) {
+                public void generate(MethodVisitor methodVisitor, int i, int i2, @MaybeNull Object[] objArr, int i3,
+                        @MaybeNull Object[] objArr2, int i4, @MaybeNull Object[] objArr3) {
                 }
             };
 
@@ -940,7 +1113,14 @@ public interface Implementation extends InstrumentedType.Prepareable {
             private final boolean active;
 
             private static Object toStackMapFrame(TypeDefinition typeDefinition) {
-                return (typeDefinition.represents(Boolean.TYPE) || typeDefinition.represents(Byte.TYPE) || typeDefinition.represents(Short.TYPE) || typeDefinition.represents(Character.TYPE) || typeDefinition.represents(Integer.TYPE)) ? Opcodes.INTEGER : typeDefinition.represents(Long.TYPE) ? Opcodes.LONG : typeDefinition.represents(Float.TYPE) ? Opcodes.FLOAT : typeDefinition.represents(Double.TYPE) ? Opcodes.DOUBLE : typeDefinition.asErasure().getInternalName();
+                return (typeDefinition.represents(Boolean.TYPE) || typeDefinition.represents(Byte.TYPE)
+                        || typeDefinition.represents(Short.TYPE) || typeDefinition.represents(Character.TYPE)
+                        || typeDefinition.represents(Integer.TYPE))
+                                ? Opcodes.INTEGER
+                                : typeDefinition.represents(Long.TYPE) ? Opcodes.LONG
+                                        : typeDefinition.represents(Float.TYPE) ? Opcodes.FLOAT
+                                                : typeDefinition.represents(Double.TYPE) ? Opcodes.DOUBLE
+                                                        : typeDefinition.asErasure().getInternalName();
             }
 
             private static Object[] toStackMapFrames(List<? extends TypeDefinition> list) {
@@ -951,9 +1131,11 @@ public interface Implementation extends InstrumentedType.Prepareable {
                 return objArr;
             }
 
-            public void append(MethodVisitor methodVisitor, List<? extends TypeDefinition> list, List<? extends TypeDefinition> list2) {
+            public void append(MethodVisitor methodVisitor, List<? extends TypeDefinition> list,
+                    List<? extends TypeDefinition> list2) {
                 Object[] objArr = EMPTY;
-                generate(methodVisitor, 1, objArr.length, objArr, list.size(), toStackMapFrames(list), list.size() + list2.size(), toStackMapFrames(CompoundList.of((List) list2, (List) list)));
+                generate(methodVisitor, 1, objArr.length, objArr, list.size(), toStackMapFrames(list),
+                        list.size() + list2.size(), toStackMapFrames(CompoundList.of((List) list2, (List) list)));
             }
 
             public void chop(MethodVisitor methodVisitor, int i, List<? extends TypeDefinition> list) {
@@ -961,11 +1143,14 @@ public interface Implementation extends InstrumentedType.Prepareable {
                 generate(methodVisitor, 2, objArr.length, objArr, i, objArr, list.size(), toStackMapFrames(list));
             }
 
-            public void full(MethodVisitor methodVisitor, List<? extends TypeDefinition> list, List<? extends TypeDefinition> list2) {
-                generate(methodVisitor, 0, list.size(), toStackMapFrames(list), list2.size(), toStackMapFrames(list2), list2.size(), toStackMapFrames(list2));
+            public void full(MethodVisitor methodVisitor, List<? extends TypeDefinition> list,
+                    List<? extends TypeDefinition> list2) {
+                generate(methodVisitor, 0, list.size(), toStackMapFrames(list), list2.size(), toStackMapFrames(list2),
+                        list2.size(), toStackMapFrames(list2));
             }
 
-            public abstract void generate(MethodVisitor methodVisitor, int i, int i2, @MaybeNull Object[] objArr, int i3, @MaybeNull Object[] objArr2, int i4, @MaybeNull Object[] objArr3);
+            public abstract void generate(MethodVisitor methodVisitor, int i, int i2, @MaybeNull Object[] objArr,
+                    int i3, @MaybeNull Object[] objArr2, int i4, @MaybeNull Object[] objArr3);
 
             public boolean isActive() {
                 return this.active;
@@ -973,11 +1158,13 @@ public interface Implementation extends InstrumentedType.Prepareable {
 
             public void same(MethodVisitor methodVisitor, List<? extends TypeDefinition> list) {
                 Object[] objArr = EMPTY;
-                generate(methodVisitor, 3, objArr.length, objArr, objArr.length, objArr, list.size(), toStackMapFrames(list));
+                generate(methodVisitor, 3, objArr.length, objArr, objArr.length, objArr, list.size(),
+                        toStackMapFrames(list));
             }
 
-            public void same1(MethodVisitor methodVisitor, TypeDefinition typeDefinition, List<? extends TypeDefinition> list) {
-                Object[] objArr = {toStackMapFrame(typeDefinition)};
+            public void same1(MethodVisitor methodVisitor, TypeDefinition typeDefinition,
+                    List<? extends TypeDefinition> list) {
+                Object[] objArr = { toStackMapFrame(typeDefinition) };
                 Object[] objArr2 = EMPTY;
                 generate(methodVisitor, 4, 1, objArr, objArr2.length, objArr2, list.size(), toStackMapFrames(list));
             }
@@ -997,19 +1184,25 @@ public interface Implementation extends InstrumentedType.Prepareable {
 
         TypeDescription register(AuxiliaryType auxiliaryType);
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static class Disabled extends ExtractableView.AbstractBase {
-            public Disabled(TypeDescription typeDescription, ClassFileVersion classFileVersion, FrameGeneration frameGeneration) {
+            public Disabled(TypeDescription typeDescription, ClassFileVersion classFileVersion,
+                    FrameGeneration frameGeneration) {
                 super(typeDescription, classFileVersion, frameGeneration);
             }
 
             @Override // net.bytebuddy.implementation.Implementation.Context
-            public FieldDescription.InDefinedShape cache(StackManipulation stackManipulation, TypeDescription typeDescription) {
+            public FieldDescription.InDefinedShape cache(StackManipulation stackManipulation,
+                    TypeDescription typeDescription) {
                 throw new IllegalStateException(dkz.u("Field values caching was disabled: ", typeDescription));
             }
 
             @Override // net.bytebuddy.implementation.Implementation.Context.ExtractableView
-            public void drain(TypeInitializer.Drain drain, ClassVisitor classVisitor, AnnotationValueFilter.Factory factory) {
+            public void drain(TypeInitializer.Drain drain, ClassVisitor classVisitor,
+                    AnnotationValueFilter.Factory factory) {
                 drain.apply(classVisitor, TypeInitializer.None.INSTANCE, this);
             }
 
@@ -1029,60 +1222,87 @@ public interface Implementation extends InstrumentedType.Prepareable {
             }
 
             @Override // net.bytebuddy.implementation.MethodAccessorFactory
-            public MethodDescription.InDefinedShape registerAccessorFor(SpecialMethodInvocation specialMethodInvocation, MethodAccessorFactory.AccessType accessType) {
-                throw new IllegalStateException("Registration of method accessors was disabled: " + specialMethodInvocation.getMethodDescription());
+            public MethodDescription.InDefinedShape registerAccessorFor(SpecialMethodInvocation specialMethodInvocation,
+                    MethodAccessorFactory.AccessType accessType) {
+                throw new IllegalStateException("Registration of method accessors was disabled: "
+                        + specialMethodInvocation.getMethodDescription());
             }
 
             @Override // net.bytebuddy.implementation.MethodAccessorFactory
-            public MethodDescription.InDefinedShape registerGetterFor(FieldDescription fieldDescription, MethodAccessorFactory.AccessType accessType) {
+            public MethodDescription.InDefinedShape registerGetterFor(FieldDescription fieldDescription,
+                    MethodAccessorFactory.AccessType accessType) {
                 throw new IllegalStateException("Registration of field accessor was disabled: " + fieldDescription);
             }
 
             @Override // net.bytebuddy.implementation.MethodAccessorFactory
-            public MethodDescription.InDefinedShape registerSetterFor(FieldDescription fieldDescription, MethodAccessorFactory.AccessType accessType) {
+            public MethodDescription.InDefinedShape registerSetterFor(FieldDescription fieldDescription,
+                    MethodAccessorFactory.AccessType accessType) {
                 throw new IllegalStateException("Registration of field accessor was disabled: " + fieldDescription);
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum Factory implements Factory {
                 INSTANCE;
 
                 @Override // net.bytebuddy.implementation.Implementation.Context.Factory
                 @Deprecated
-                public ExtractableView make(TypeDescription typeDescription, AuxiliaryType.NamingStrategy namingStrategy, TypeInitializer typeInitializer, ClassFileVersion classFileVersion, ClassFileVersion classFileVersion2) {
-                    return make(typeDescription, namingStrategy, typeInitializer, classFileVersion, classFileVersion2, classFileVersion.isAtLeast(ClassFileVersion.JAVA_V6) ? FrameGeneration.GENERATE : FrameGeneration.DISABLED);
+                public ExtractableView make(TypeDescription typeDescription,
+                        AuxiliaryType.NamingStrategy namingStrategy, TypeInitializer typeInitializer,
+                        ClassFileVersion classFileVersion, ClassFileVersion classFileVersion2) {
+                    return make(typeDescription, namingStrategy, typeInitializer, classFileVersion, classFileVersion2,
+                            classFileVersion.isAtLeast(ClassFileVersion.JAVA_V6) ? FrameGeneration.GENERATE
+                                    : FrameGeneration.DISABLED);
                 }
 
                 @Override // net.bytebuddy.implementation.Implementation.Context.Factory
-                public ExtractableView make(TypeDescription typeDescription, AuxiliaryType.NamingStrategy namingStrategy, TypeInitializer typeInitializer, ClassFileVersion classFileVersion, ClassFileVersion classFileVersion2, FrameGeneration frameGeneration) {
+                public ExtractableView make(TypeDescription typeDescription,
+                        AuxiliaryType.NamingStrategy namingStrategy, TypeInitializer typeInitializer,
+                        ClassFileVersion classFileVersion, ClassFileVersion classFileVersion2,
+                        FrameGeneration frameGeneration) {
                     if (!typeInitializer.isDefined()) {
                         return new Disabled(typeDescription, classFileVersion, frameGeneration);
                     }
-                    throw new IllegalStateException("Cannot define type initializer which was explicitly disabled: " + typeInitializer);
+                    throw new IllegalStateException(
+                            "Cannot define type initializer which was explicitly disabled: " + typeInitializer);
                 }
             }
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @HashCodeAndEqualsPlugin.Enhance
     public static class Simple implements Implementation {
         private static final int NO_ADDITIONAL_VARIABLES = 0;
         private final ByteCodeAppender byteCodeAppender;
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public interface Dispatcher {
             StackManipulation apply(Target target, MethodDescription methodDescription);
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class ForDispatcher implements Implementation {
             private final int additionalVariableLength;
             private final Dispatcher dispatcher;
             private final InstrumentedType.Prepareable prepareable;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance(includeSyntheticFields = true)
             public class Appender implements ByteCodeAppender {
                 private final Target implementationTarget;
@@ -1092,8 +1312,12 @@ public interface Implementation extends InstrumentedType.Prepareable {
                 }
 
                 @Override // net.bytebuddy.implementation.bytecode.ByteCodeAppender
-                public ByteCodeAppender.Size apply(MethodVisitor methodVisitor, Context context, MethodDescription methodDescription) {
-                    return new ByteCodeAppender.Size(ForDispatcher.this.dispatcher.apply(this.implementationTarget, methodDescription).apply(methodVisitor, context).getMaximalSize(), ForDispatcher.this.additionalVariableLength + methodDescription.getStackSize());
+                public ByteCodeAppender.Size apply(MethodVisitor methodVisitor, Context context,
+                        MethodDescription methodDescription) {
+                    return new ByteCodeAppender.Size(
+                            ForDispatcher.this.dispatcher.apply(this.implementationTarget, methodDescription)
+                                    .apply(methodVisitor, context).getMaximalSize(),
+                            ForDispatcher.this.additionalVariableLength + methodDescription.getStackSize());
                 }
 
                 public boolean equals(@MaybeNull Object obj) {
@@ -1104,11 +1328,13 @@ public interface Implementation extends InstrumentedType.Prepareable {
                         return false;
                     }
                     Appender appender = (Appender) obj;
-                    return this.implementationTarget.equals(appender.implementationTarget) && ForDispatcher.this.equals(ForDispatcher.this);
+                    return this.implementationTarget.equals(appender.implementationTarget)
+                            && ForDispatcher.this.equals(ForDispatcher.this);
                 }
 
                 public int hashCode() {
-                    return ForDispatcher.this.hashCode() + ((this.implementationTarget.hashCode() + (getClass().hashCode() * 31)) * 31);
+                    return ForDispatcher.this.hashCode()
+                            + ((this.implementationTarget.hashCode() + (getClass().hashCode() * 31)) * 31);
                 }
             }
 
@@ -1131,11 +1357,15 @@ public interface Implementation extends InstrumentedType.Prepareable {
                     return false;
                 }
                 ForDispatcher forDispatcher = (ForDispatcher) obj;
-                return this.additionalVariableLength == forDispatcher.additionalVariableLength && this.dispatcher.equals(forDispatcher.dispatcher) && this.prepareable.equals(forDispatcher.prepareable);
+                return this.additionalVariableLength == forDispatcher.additionalVariableLength
+                        && this.dispatcher.equals(forDispatcher.dispatcher)
+                        && this.prepareable.equals(forDispatcher.prepareable);
             }
 
             public int hashCode() {
-                return ((this.prepareable.hashCode() + ((this.dispatcher.hashCode() + (getClass().hashCode() * 31)) * 31)) * 31) + this.additionalVariableLength;
+                return ((this.prepareable.hashCode()
+                        + ((this.dispatcher.hashCode() + (getClass().hashCode() * 31)) * 31)) * 31)
+                        + this.additionalVariableLength;
             }
 
             @Override // net.bytebuddy.dynamic.scaffold.InstrumentedType.Prepareable
@@ -1161,7 +1391,8 @@ public interface Implementation extends InstrumentedType.Prepareable {
             if (this == obj) {
                 return true;
             }
-            return obj != null && getClass() == obj.getClass() && this.byteCodeAppender.equals(((Simple) obj).byteCodeAppender);
+            return obj != null && getClass() == obj.getClass()
+                    && this.byteCodeAppender.equals(((Simple) obj).byteCodeAppender);
         }
 
         public int hashCode() {
@@ -1189,15 +1420,22 @@ public interface Implementation extends InstrumentedType.Prepareable {
             if (i >= 0) {
                 return new ForDispatcher(dispatcher, prepareable, i);
             }
-            throw new IllegalArgumentException(bjs.i(i, "Additional variable length cannot be negative: "));
+            throw new IllegalArgumentException(concatVar2Var1(i, "Additional variable length cannot be negative: "));
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface SpecialMethodInvocation extends StackManipulation {
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
-        public static abstract class AbstractBase extends StackManipulation.AbstractBase implements SpecialMethodInvocation {
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
+        public static abstract class AbstractBase extends StackManipulation.AbstractBase
+                implements SpecialMethodInvocation {
             private transient /* synthetic */ int hashCode;
 
             public boolean equals(@MaybeNull Object obj) {
@@ -1208,12 +1446,15 @@ public interface Implementation extends InstrumentedType.Prepareable {
                     return false;
                 }
                 SpecialMethodInvocation specialMethodInvocation = (SpecialMethodInvocation) obj;
-                return getMethodDescription().asSignatureToken().equals(specialMethodInvocation.getMethodDescription().asSignatureToken()) && getTypeDescription().equals(specialMethodInvocation.getTypeDescription());
+                return getMethodDescription().asSignatureToken()
+                        .equals(specialMethodInvocation.getMethodDescription().asSignatureToken())
+                        && getTypeDescription().equals(specialMethodInvocation.getTypeDescription());
             }
 
             @CachedReturnPlugin.Enhance("hashCode")
             public int hashCode() {
-                int iHashCode = this.hashCode != 0 ? 0 : (getMethodDescription().asSignatureToken().hashCode() * 31) + getTypeDescription().hashCode();
+                int iHashCode = this.hashCode != 0 ? 0
+                        : (getMethodDescription().asSignatureToken().hashCode() * 31) + getTypeDescription().hashCode();
                 if (iHashCode == 0) {
                     return this.hashCode;
                 }
@@ -1222,7 +1463,10 @@ public interface Implementation extends InstrumentedType.Prepareable {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public enum Illegal implements SpecialMethodInvocation {
             INSTANCE;
 
@@ -1257,21 +1501,29 @@ public interface Implementation extends InstrumentedType.Prepareable {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static class Simple extends AbstractBase {
             private final MethodDescription methodDescription;
             private final StackManipulation stackManipulation;
             private final TypeDescription typeDescription;
 
-            public Simple(MethodDescription methodDescription, TypeDescription typeDescription, StackManipulation stackManipulation) {
+            public Simple(MethodDescription methodDescription, TypeDescription typeDescription,
+                    StackManipulation stackManipulation) {
                 this.methodDescription = methodDescription;
                 this.typeDescription = typeDescription;
                 this.stackManipulation = stackManipulation;
             }
 
-            public static SpecialMethodInvocation of(MethodDescription methodDescription, TypeDescription typeDescription) {
-                StackManipulation stackManipulationSpecial = MethodInvocation.invoke(methodDescription).special(typeDescription);
-                return stackManipulationSpecial.isValid() ? new Simple(methodDescription, typeDescription, stackManipulationSpecial) : Illegal.INSTANCE;
+            public static SpecialMethodInvocation of(MethodDescription methodDescription,
+                    TypeDescription typeDescription) {
+                StackManipulation stackManipulationSpecial = MethodInvocation.invoke(methodDescription)
+                        .special(typeDescription);
+                return stackManipulationSpecial.isValid()
+                        ? new Simple(methodDescription, typeDescription, stackManipulationSpecial)
+                        : Illegal.INSTANCE;
             }
 
             @Override // net.bytebuddy.implementation.bytecode.StackManipulation
@@ -1311,10 +1563,16 @@ public interface Implementation extends InstrumentedType.Prepareable {
 
     ByteCodeAppender appender(Target target);
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface Target {
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public interface Factory {
             Target make(TypeDescription typeDescription, MethodGraph.Linked linked, ClassFileVersion classFileVersion);
         }
@@ -1325,28 +1583,39 @@ public interface Implementation extends InstrumentedType.Prepareable {
 
         SpecialMethodInvocation invokeDefault(MethodDescription.SignatureToken signatureToken);
 
-        SpecialMethodInvocation invokeDefault(MethodDescription.SignatureToken signatureToken, TypeDescription typeDescription);
+        SpecialMethodInvocation invokeDefault(MethodDescription.SignatureToken signatureToken,
+                TypeDescription typeDescription);
 
         SpecialMethodInvocation invokeDominant(MethodDescription.SignatureToken signatureToken);
 
         SpecialMethodInvocation invokeSuper(MethodDescription.SignatureToken signatureToken);
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static abstract class AbstractBase implements Target {
             protected final DefaultMethodInvocation defaultMethodInvocation;
             protected final TypeDescription instrumentedType;
             protected final MethodGraph.Linked methodGraph;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum DefaultMethodInvocation {
-                ENABLED { // from class: net.bytebuddy.implementation.Implementation.Target.AbstractBase.DefaultMethodInvocation.1
+                ENABLED { // from class:
+                          // net.bytebuddy.implementation.Implementation.Target.AbstractBase.DefaultMethodInvocation.1
                     @Override // net.bytebuddy.implementation.Implementation.Target.AbstractBase.DefaultMethodInvocation
                     public SpecialMethodInvocation apply(MethodGraph.Node node, TypeDescription typeDescription) {
-                        return node.getSort().isUnique() ? SpecialMethodInvocation.Simple.of(node.getRepresentative(), typeDescription) : SpecialMethodInvocation.Illegal.INSTANCE;
+                        return node.getSort().isUnique()
+                                ? SpecialMethodInvocation.Simple.of(node.getRepresentative(), typeDescription)
+                                : SpecialMethodInvocation.Illegal.INSTANCE;
                     }
                 },
-                DISABLED { // from class: net.bytebuddy.implementation.Implementation.Target.AbstractBase.DefaultMethodInvocation.2
+                DISABLED { // from class:
+                           // net.bytebuddy.implementation.Implementation.Target.AbstractBase.DefaultMethodInvocation.2
                     @Override // net.bytebuddy.implementation.Implementation.Target.AbstractBase.DefaultMethodInvocation
                     public SpecialMethodInvocation apply(MethodGraph.Node node, TypeDescription typeDescription) {
                         return SpecialMethodInvocation.Illegal.INSTANCE;
@@ -1360,7 +1629,8 @@ public interface Implementation extends InstrumentedType.Prepareable {
                 public abstract SpecialMethodInvocation apply(MethodGraph.Node node, TypeDescription typeDescription);
             }
 
-            public AbstractBase(TypeDescription typeDescription, MethodGraph.Linked linked, DefaultMethodInvocation defaultMethodInvocation) {
+            public AbstractBase(TypeDescription typeDescription, MethodGraph.Linked linked,
+                    DefaultMethodInvocation defaultMethodInvocation) {
                 this.instrumentedType = typeDescription;
                 this.methodGraph = linked;
                 this.defaultMethodInvocation = defaultMethodInvocation;
@@ -1374,7 +1644,9 @@ public interface Implementation extends InstrumentedType.Prepareable {
                     return false;
                 }
                 AbstractBase abstractBase = (AbstractBase) obj;
-                return this.defaultMethodInvocation.equals(abstractBase.defaultMethodInvocation) && this.instrumentedType.equals(abstractBase.instrumentedType) && this.methodGraph.equals(abstractBase.methodGraph);
+                return this.defaultMethodInvocation.equals(abstractBase.defaultMethodInvocation)
+                        && this.instrumentedType.equals(abstractBase.instrumentedType)
+                        && this.methodGraph.equals(abstractBase.methodGraph);
             }
 
             @Override // net.bytebuddy.implementation.Implementation.Target
@@ -1383,7 +1655,9 @@ public interface Implementation extends InstrumentedType.Prepareable {
             }
 
             public int hashCode() {
-                return this.defaultMethodInvocation.hashCode() + ((this.methodGraph.hashCode() + dkz.f(this.instrumentedType, getClass().hashCode() * 31, 31)) * 31);
+                return this.defaultMethodInvocation.hashCode()
+                        + ((this.methodGraph.hashCode() + dkz.f(this.instrumentedType, getClass().hashCode() * 31, 31))
+                                * 31);
             }
 
             @Override // net.bytebuddy.implementation.Implementation.Target
@@ -1391,7 +1665,8 @@ public interface Implementation extends InstrumentedType.Prepareable {
                 SpecialMethodInvocation specialMethodInvocation = SpecialMethodInvocation.Illegal.INSTANCE;
                 Iterator<TypeDescription> it = this.instrumentedType.getInterfaces().asErasures().iterator();
                 while (it.hasNext()) {
-                    SpecialMethodInvocation specialMethodInvocationWithCheckedCompatibilityTo = invokeDefault(signatureToken, it.next()).withCheckedCompatibilityTo(signatureToken.asTypeToken());
+                    SpecialMethodInvocation specialMethodInvocationWithCheckedCompatibilityTo = invokeDefault(
+                            signatureToken, it.next()).withCheckedCompatibilityTo(signatureToken.asTypeToken());
                     if (specialMethodInvocationWithCheckedCompatibilityTo.isValid()) {
                         if (specialMethodInvocation.isValid()) {
                             return SpecialMethodInvocation.Illegal.INSTANCE;
@@ -1405,12 +1680,15 @@ public interface Implementation extends InstrumentedType.Prepareable {
             @Override // net.bytebuddy.implementation.Implementation.Target
             public SpecialMethodInvocation invokeDominant(MethodDescription.SignatureToken signatureToken) {
                 SpecialMethodInvocation specialMethodInvocationInvokeSuper = invokeSuper(signatureToken);
-                return specialMethodInvocationInvokeSuper.isValid() ? specialMethodInvocationInvokeSuper : invokeDefault(signatureToken);
+                return specialMethodInvocationInvokeSuper.isValid() ? specialMethodInvocationInvokeSuper
+                        : invokeDefault(signatureToken);
             }
 
             @Override // net.bytebuddy.implementation.Implementation.Target
-            public SpecialMethodInvocation invokeDefault(MethodDescription.SignatureToken signatureToken, TypeDescription typeDescription) {
-                return this.defaultMethodInvocation.apply(this.methodGraph.getInterfaceGraph(typeDescription).locate(signatureToken), typeDescription);
+            public SpecialMethodInvocation invokeDefault(MethodDescription.SignatureToken signatureToken,
+                    TypeDescription typeDescription) {
+                return this.defaultMethodInvocation.apply(
+                        this.methodGraph.getInterfaceGraph(typeDescription).locate(signatureToken), typeDescription);
             }
         }
     }

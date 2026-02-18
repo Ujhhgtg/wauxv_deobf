@@ -30,7 +30,7 @@ public final class esy extends AnimatorListenerAdapter implements elk {
     }
 
     @Override // me.hd.wauxv.obf.elk
-    public final void d() {
+    public final void getArgs() {
     }
 
     @Override // me.hd.wauxv.obf.elk
@@ -39,7 +39,7 @@ public final class esy extends AnimatorListenerAdapter implements elk {
     }
 
     @Override // me.hd.wauxv.obf.elk
-    public final void f() {
+    public final void getResult() {
     }
 
     @Override // me.hd.wauxv.obf.elk
@@ -52,17 +52,20 @@ public final class esy extends AnimatorListenerAdapter implements elk {
         this.j = false;
     }
 
-    @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
+    @Override // android.animation.AnimatorListenerAdapter,
+              // android.animation.Animator.AnimatorListener
     public final void onAnimationEnd(Animator animator) {
         l();
     }
 
-    @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorPauseListener
+    @Override // android.animation.AnimatorListenerAdapter,
+              // android.animation.Animator.AnimatorPauseListener
     public final void onAnimationPause(Animator animator) {
         this.a.getOverlay().remove(this.b);
     }
 
-    @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorPauseListener
+    @Override // android.animation.AnimatorListenerAdapter,
+              // android.animation.Animator.AnimatorPauseListener
     public final void onAnimationResume(Animator animator) {
         View view = this.b;
         if (view.getParent() == null) {

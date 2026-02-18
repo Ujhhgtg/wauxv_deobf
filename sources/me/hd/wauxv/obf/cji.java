@@ -8,7 +8,7 @@ import java.util.Iterator;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class cji extends cjg implements Iterable, bsw {
+public final class cji extends cjg implements Iterable, IEmpty {
     public static final /* synthetic */ int a = 0;
     public final xe b;
 
@@ -18,7 +18,7 @@ public final class cji extends cjg implements Iterable, bsw {
     }
 
     public final void c(cjg cjgVar) {
-        bzo.q(cjgVar, "node");
+        throwIfVar1IsNull(cjgVar, "node");
         xe xeVar = this.b;
         dlo dloVar = (dlo) xeVar.e;
         cji cjiVar = (cji) xeVar.d;
@@ -26,21 +26,25 @@ public final class cji extends cjg implements Iterable, bsw {
         int i = eaVar.a;
         String str = (String) eaVar.f;
         if (i == 0 && str == null) {
-            throw new IllegalArgumentException("Destinations must have an id or route. Call setId(), setRoute(), or include an android:id or app:route in your navigation XML.");
+            throw new IllegalArgumentException(
+                    "Destinations must have an id or route. Call setId(), setRoute(), or include an android:id or app:route in your navigation XML.");
         }
         String str2 = (String) cjiVar.g.f;
-        if (str2 != null && bzo.f(str, str2)) {
-            throw new IllegalArgumentException(("Destination " + cjgVar + " cannot have the same route as graph " + cjiVar).toString());
+        if (str2 != null && nullSafeIsEqual(str, str2)) {
+            throw new IllegalArgumentException(
+                    ("Destination " + cjgVar + " cannot have the same route as graph " + cjiVar).toString());
         }
         if (i == cjiVar.g.a) {
-            throw new IllegalArgumentException(("Destination " + cjgVar + " cannot have the same id as graph " + cjiVar).toString());
+            throw new IllegalArgumentException(
+                    ("Destination " + cjgVar + " cannot have the same id as graph " + cjiVar).toString());
         }
         cjg cjgVar2 = (cjg) dloVar.f(i);
         if (cjgVar2 == cjgVar) {
             return;
         }
         if (cjgVar.h != null) {
-            throw new IllegalStateException("Destination already has a parent set. Call NavGraph.remove() to remove the previous parent.");
+            throw new IllegalStateException(
+                    "Destination already has a parent set. Call NavGraph.remove() to remove the previous parent.");
         }
         if (cjgVar2 != null) {
             cjgVar2.h = null;
@@ -54,12 +58,13 @@ public final class cji extends cjg implements Iterable, bsw {
         String strValueOf;
         super.d(context, attributeSet);
         TypedArray typedArrayObtainAttributes = context.getResources().obtainAttributes(attributeSet, cyc.d);
-        bzo.p(typedArrayObtainAttributes, "obtainAttributes(...)");
+        throwIfVar1IsNull(typedArrayObtainAttributes, "obtainAttributes(...)");
         int resourceId = typedArrayObtainAttributes.getResourceId(0, 0);
         xe xeVar = this.b;
         cji cjiVar = (cji) xeVar.d;
         if (resourceId == cjiVar.g.a) {
-            throw new IllegalArgumentException(("Start destination " + resourceId + " cannot use the same id as the graph " + cjiVar).toString());
+            throw new IllegalArgumentException(
+                    ("Start destination " + resourceId + " cannot use the same id as the graph " + cjiVar).toString());
         }
         xeVar.c = resourceId;
         xeVar.f = null;
@@ -68,7 +73,7 @@ public final class cji extends cjg implements Iterable, bsw {
         } else {
             try {
                 strValueOf = context.getResources().getResourceName(resourceId);
-                bzo.n(strValueOf);
+                throwIfVar1IsNull(strValueOf);
             } catch (Resources.NotFoundException unused) {
                 strValueOf = String.valueOf(resourceId);
             }
@@ -92,7 +97,7 @@ public final class cji extends cjg implements Iterable, bsw {
             return false;
         }
         dlo dloVar = (dlo) xeVar.e;
-        bzo.q(dloVar, "<this>");
+        throwIfVar1IsNull(dloVar, "<this>");
         for (cjg cjgVar : (ada) dfv.a(new z(dloVar, 3))) {
             if (!cjgVar.equals(((dlo) xeVar2.e).f(cjgVar.g.a))) {
                 return false;
@@ -159,7 +164,7 @@ public final class cji extends cjg implements Iterable, bsw {
             sb.append("}");
         }
         String string = sb.toString();
-        bzo.p(string, "toString(...)");
+        throwIfVar1IsNull(string, "toString(...)");
         return string;
     }
 }

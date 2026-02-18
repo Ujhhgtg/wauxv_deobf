@@ -39,8 +39,14 @@ import net.bytebuddy.utility.nullability.MaybeNull;
 /* JADX INFO: loaded from: classes.dex */
 public interface JavaConstant extends ConstantValue {
 
-    /* JADX INFO: renamed from: net.bytebuddy.utility.JavaConstant$1, reason: invalid class name */
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: renamed from: net.bytebuddy.utility.JavaConstant$1, reason:
+     * invalid class name
+     */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static /* synthetic */ class AnonymousClass1 {
         static final /* synthetic */ int[] $SwitchMap$net$bytebuddy$utility$JavaConstant$MethodHandle$HandleType;
 
@@ -52,21 +58,27 @@ public interface JavaConstant extends ConstantValue {
             } catch (NoSuchFieldError unused) {
             }
             try {
-                $SwitchMap$net$bytebuddy$utility$JavaConstant$MethodHandle$HandleType[MethodHandle.HandleType.GET_STATIC_FIELD.ordinal()] = 2;
+                $SwitchMap$net$bytebuddy$utility$JavaConstant$MethodHandle$HandleType[MethodHandle.HandleType.GET_STATIC_FIELD
+                        .ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
             try {
-                $SwitchMap$net$bytebuddy$utility$JavaConstant$MethodHandle$HandleType[MethodHandle.HandleType.PUT_FIELD.ordinal()] = 3;
+                $SwitchMap$net$bytebuddy$utility$JavaConstant$MethodHandle$HandleType[MethodHandle.HandleType.PUT_FIELD
+                        .ordinal()] = 3;
             } catch (NoSuchFieldError unused3) {
             }
             try {
-                $SwitchMap$net$bytebuddy$utility$JavaConstant$MethodHandle$HandleType[MethodHandle.HandleType.PUT_STATIC_FIELD.ordinal()] = 4;
+                $SwitchMap$net$bytebuddy$utility$JavaConstant$MethodHandle$HandleType[MethodHandle.HandleType.PUT_STATIC_FIELD
+                        .ordinal()] = 4;
             } catch (NoSuchFieldError unused4) {
             }
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class Dynamic implements JavaConstant {
         public static final String DEFAULT_NAME = "_";
         private final List<JavaConstant> arguments;
@@ -74,7 +86,8 @@ public interface JavaConstant extends ConstantValue {
         private final String name;
         private final TypeDescription typeDescription;
 
-        public Dynamic(String str, TypeDescription typeDescription, MethodHandle methodHandle, List<JavaConstant> list) {
+        public Dynamic(String str, TypeDescription typeDescription, MethodHandle methodHandle,
+                List<JavaConstant> list) {
             this.name = str;
             this.typeDescription = typeDescription;
             this.bootstrap = methodHandle;
@@ -97,7 +110,8 @@ public interface JavaConstant extends ConstantValue {
                 for (int i = 0; i < type.getDimensions(); i++) {
                     sb.append(TypePool.Default.LazyTypeDescription.GenericTypeToken.COMPONENT_TYPE_PATH);
                 }
-                sb.append(type.getElementType().getDescriptor().replace('/', TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH));
+                sb.append(type.getElementType().getDescriptor().replace('/',
+                        TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH));
                 typeDescriptionResolve = typePool.describe(sb.toString()).resolve();
             } else {
                 typeDescriptionResolve = typePool.describe(type.getClassName()).resolve();
@@ -106,7 +120,8 @@ public interface JavaConstant extends ConstantValue {
             for (int i2 = 0; i2 < constantDynamic.getBootstrapMethodArgumentCount(); i2++) {
                 arrayList.add(Simple.ofAsm(typePool, constantDynamic.getBootstrapMethodArgument(i2)));
             }
-            return new Dynamic(constantDynamic.getName(), typeDescriptionResolve, MethodHandle.ofAsm(typePool, constantDynamic.getBootstrapMethod()), arrayList);
+            return new Dynamic(constantDynamic.getName(), typeDescriptionResolve,
+                    MethodHandle.ofAsm(typePool, constantDynamic.getBootstrapMethod()), arrayList);
         }
 
         public static JavaConstant ofEnumeration(Enum<?> r1) {
@@ -122,7 +137,13 @@ public interface JavaConstant extends ConstantValue {
         }
 
         public static Dynamic ofNullConstant() {
-            return new Dynamic(DEFAULT_NAME, TypeDescription.ForLoadedType.of(Object.class), new MethodHandle(MethodHandle.HandleType.INVOKE_STATIC, JavaType.CONSTANT_BOOTSTRAPS.getTypeStub(), "nullConstant", TypeDescription.ForLoadedType.of(Object.class), Arrays.asList(JavaType.METHOD_HANDLES_LOOKUP.getTypeStub(), TypeDescription.ForLoadedType.of(String.class), TypeDescription.ForLoadedType.of(Class.class))), Collections.EMPTY_LIST);
+            return new Dynamic(DEFAULT_NAME, TypeDescription.ForLoadedType.of(Object.class),
+                    new MethodHandle(MethodHandle.HandleType.INVOKE_STATIC, JavaType.CONSTANT_BOOTSTRAPS.getTypeStub(),
+                            "nullConstant", TypeDescription.ForLoadedType.of(Object.class),
+                            Arrays.asList(JavaType.METHOD_HANDLES_LOOKUP.getTypeStub(),
+                                    TypeDescription.ForLoadedType.of(String.class),
+                                    TypeDescription.ForLoadedType.of(Class.class))),
+                    Collections.EMPTY_LIST);
         }
 
         public static JavaConstant ofPrimitiveType(Class<?> cls) {
@@ -146,7 +167,8 @@ public interface JavaConstant extends ConstantValue {
                 return false;
             }
             Dynamic dynamic = (Dynamic) obj;
-            if (this.name.equals(dynamic.name) && this.typeDescription.equals(dynamic.typeDescription) && this.bootstrap.equals(dynamic.bootstrap)) {
+            if (this.name.equals(dynamic.name) && this.typeDescription.equals(dynamic.typeDescription)
+                    && this.bootstrap.equals(dynamic.bootstrap)) {
                 return this.arguments.equals(dynamic.arguments);
             }
             return false;
@@ -170,7 +192,8 @@ public interface JavaConstant extends ConstantValue {
         }
 
         public int hashCode() {
-            return this.arguments.hashCode() + ((this.bootstrap.hashCode() + dkz.f(this.typeDescription, this.name.hashCode() * 31, 31)) * 31);
+            return this.arguments.hashCode()
+                    + ((this.bootstrap.hashCode() + dkz.f(this.typeDescription, this.name.hashCode() * 31, 31)) * 31);
         }
 
         @Override // net.bytebuddy.utility.JavaConstant
@@ -181,9 +204,14 @@ public interface JavaConstant extends ConstantValue {
             }
             Simple.Dispatcher.OfDynamicConstantDesc ofDynamicConstantDesc = Simple.DYNAMIC_CONSTANT_DESC;
             Simple.Dispatcher.OfMethodHandleDesc ofMethodHandleDesc = Simple.METHOD_HANDLE_DESC;
-            Object objValueOf = Simple.DIRECT_METHOD_HANDLE_DESC_KIND.valueOf(this.bootstrap.getHandleType().getIdentifier(), this.bootstrap.getOwnerType().isInterface());
+            Object objValueOf = Simple.DIRECT_METHOD_HANDLE_DESC_KIND.valueOf(
+                    this.bootstrap.getHandleType().getIdentifier(), this.bootstrap.getOwnerType().isInterface());
             Simple.Dispatcher.OfClassDesc ofClassDesc = Simple.CLASS_DESC;
-            return ofDynamicConstantDesc.ofCanonical(ofMethodHandleDesc.of(objValueOf, ofClassDesc.ofDescriptor(this.bootstrap.getOwnerType().getDescriptor()), this.bootstrap.getName(), this.bootstrap.getDescriptor()), getName(), ofClassDesc.ofDescriptor(this.typeDescription.getDescriptor()), array);
+            return ofDynamicConstantDesc.ofCanonical(
+                    ofMethodHandleDesc.of(objValueOf,
+                            ofClassDesc.ofDescriptor(this.bootstrap.getOwnerType().getDescriptor()),
+                            this.bootstrap.getName(), this.bootstrap.getDescriptor()),
+                    getName(), ofClassDesc.ofDescriptor(this.typeDescription.getDescriptor()), array);
         }
 
         @Override // net.bytebuddy.utility.ConstantValue
@@ -226,17 +254,44 @@ public interface JavaConstant extends ConstantValue {
                 throw new IllegalArgumentException(dkz.u("Not an array type: ", typeDescription));
             }
             JavaType javaType = JavaType.VAR_HANDLE;
-            return new Dynamic(DEFAULT_NAME, javaType.getTypeStub(), new MethodHandle(MethodHandle.HandleType.INVOKE_STATIC, JavaType.CONSTANT_BOOTSTRAPS.getTypeStub(), "arrayVarHandle", javaType.getTypeStub(), Arrays.asList(JavaType.METHOD_HANDLES_LOOKUP.getTypeStub(), TypeDescription.ForLoadedType.of(String.class), TypeDescription.ForLoadedType.of(Class.class), TypeDescription.ForLoadedType.of(Class.class))), Collections.singletonList(Simple.of(typeDescription)));
+            return new Dynamic(DEFAULT_NAME, javaType.getTypeStub(),
+                    new MethodHandle(MethodHandle.HandleType.INVOKE_STATIC, JavaType.CONSTANT_BOOTSTRAPS.getTypeStub(),
+                            "arrayVarHandle", javaType.getTypeStub(),
+                            Arrays.asList(JavaType.METHOD_HANDLES_LOOKUP.getTypeStub(),
+                                    TypeDescription.ForLoadedType.of(String.class),
+                                    TypeDescription.ForLoadedType.of(Class.class),
+                                    TypeDescription.ForLoadedType.of(Class.class))),
+                    Collections.singletonList(Simple.of(typeDescription)));
         }
 
         public static JavaConstant ofEnumeration(EnumerationDescription enumerationDescription) {
-            return new Dynamic(enumerationDescription.getValue(), enumerationDescription.getEnumerationType(), new MethodHandle(MethodHandle.HandleType.INVOKE_STATIC, JavaType.CONSTANT_BOOTSTRAPS.getTypeStub(), "enumConstant", TypeDescription.ForLoadedType.of(Enum.class), Arrays.asList(JavaType.METHOD_HANDLES_LOOKUP.getTypeStub(), TypeDescription.ForLoadedType.of(String.class), TypeDescription.ForLoadedType.of(Class.class))), Collections.EMPTY_LIST);
+            return new Dynamic(enumerationDescription.getValue(), enumerationDescription.getEnumerationType(),
+                    new MethodHandle(MethodHandle.HandleType.INVOKE_STATIC, JavaType.CONSTANT_BOOTSTRAPS.getTypeStub(),
+                            "enumConstant", TypeDescription.ForLoadedType.of(Enum.class),
+                            Arrays.asList(JavaType.METHOD_HANDLES_LOOKUP.getTypeStub(),
+                                    TypeDescription.ForLoadedType.of(String.class),
+                                    TypeDescription.ForLoadedType.of(Class.class))),
+                    Collections.EMPTY_LIST);
         }
 
         public static Dynamic ofField(FieldDescription.InDefinedShape inDefinedShape) {
             if (inDefinedShape.isStatic() && inDefinedShape.isFinal()) {
-                boolean zEquals = inDefinedShape.getType().isPrimitive() ? inDefinedShape.getType().asErasure().asBoxed().equals(inDefinedShape.getType().asErasure()) : inDefinedShape.getDeclaringType().equals(inDefinedShape.getType().asErasure());
-                return new Dynamic(inDefinedShape.getInternalName(), inDefinedShape.getType().asErasure(), new MethodHandle(MethodHandle.HandleType.INVOKE_STATIC, JavaType.CONSTANT_BOOTSTRAPS.getTypeStub(), "getStaticFinal", TypeDescription.ForLoadedType.of(Object.class), zEquals ? Arrays.asList(JavaType.METHOD_HANDLES_LOOKUP.getTypeStub(), TypeDescription.ForLoadedType.of(String.class), TypeDescription.ForLoadedType.of(Class.class)) : Arrays.asList(JavaType.METHOD_HANDLES_LOOKUP.getTypeStub(), TypeDescription.ForLoadedType.of(String.class), TypeDescription.ForLoadedType.of(Class.class), TypeDescription.ForLoadedType.of(Class.class))), zEquals ? Collections.EMPTY_LIST : Collections.singletonList(Simple.of(inDefinedShape.getDeclaringType())));
+                boolean zEquals = inDefinedShape.getType().isPrimitive()
+                        ? inDefinedShape.getType().asErasure().asBoxed().equals(inDefinedShape.getType().asErasure())
+                        : inDefinedShape.getDeclaringType().equals(inDefinedShape.getType().asErasure());
+                return new Dynamic(inDefinedShape.getInternalName(), inDefinedShape.getType().asErasure(),
+                        new MethodHandle(MethodHandle.HandleType.INVOKE_STATIC,
+                                JavaType.CONSTANT_BOOTSTRAPS.getTypeStub(), "getStaticFinal",
+                                TypeDescription.ForLoadedType.of(Object.class),
+                                zEquals ? Arrays.asList(JavaType.METHOD_HANDLES_LOOKUP.getTypeStub(),
+                                        TypeDescription.ForLoadedType.of(String.class),
+                                        TypeDescription.ForLoadedType.of(Class.class))
+                                        : Arrays.asList(JavaType.METHOD_HANDLES_LOOKUP.getTypeStub(),
+                                                TypeDescription.ForLoadedType.of(String.class),
+                                                TypeDescription.ForLoadedType.of(Class.class),
+                                                TypeDescription.ForLoadedType.of(Class.class))),
+                        zEquals ? Collections.EMPTY_LIST
+                                : Collections.singletonList(Simple.of(inDefinedShape.getDeclaringType())));
             }
             throw new IllegalArgumentException("Field must be static and final: " + inDefinedShape);
         }
@@ -247,7 +302,14 @@ public interface JavaConstant extends ConstantValue {
 
         public static JavaConstant ofPrimitiveType(TypeDescription typeDescription) {
             if (typeDescription.isPrimitive()) {
-                return new Dynamic(typeDescription.getDescriptor(), TypeDescription.ForLoadedType.of(Class.class), new MethodHandle(MethodHandle.HandleType.INVOKE_STATIC, JavaType.CONSTANT_BOOTSTRAPS.getTypeStub(), "primitiveClass", TypeDescription.ForLoadedType.of(Class.class), Arrays.asList(JavaType.METHOD_HANDLES_LOOKUP.getTypeStub(), TypeDescription.ForLoadedType.of(String.class), TypeDescription.ForLoadedType.of(Class.class))), Collections.EMPTY_LIST);
+                return new Dynamic(typeDescription.getDescriptor(), TypeDescription.ForLoadedType.of(Class.class),
+                        new MethodHandle(MethodHandle.HandleType.INVOKE_STATIC,
+                                JavaType.CONSTANT_BOOTSTRAPS.getTypeStub(), "primitiveClass",
+                                TypeDescription.ForLoadedType.of(Class.class),
+                                Arrays.asList(JavaType.METHOD_HANDLES_LOOKUP.getTypeStub(),
+                                        TypeDescription.ForLoadedType.of(String.class),
+                                        TypeDescription.ForLoadedType.of(Class.class))),
+                        Collections.EMPTY_LIST);
             }
             throw new IllegalArgumentException(dkz.u("Not a primitive type: ", typeDescription));
         }
@@ -255,17 +317,30 @@ public interface JavaConstant extends ConstantValue {
         public static JavaConstant ofVarHandle(FieldDescription.InDefinedShape inDefinedShape) {
             String internalName = inDefinedShape.getInternalName();
             JavaType javaType = JavaType.VAR_HANDLE;
-            return new Dynamic(internalName, javaType.getTypeStub(), new MethodHandle(MethodHandle.HandleType.INVOKE_STATIC, JavaType.CONSTANT_BOOTSTRAPS.getTypeStub(), inDefinedShape.isStatic() ? "staticFieldVarHandle" : "fieldVarHandle", javaType.getTypeStub(), Arrays.asList(JavaType.METHOD_HANDLES_LOOKUP.getTypeStub(), TypeDescription.ForLoadedType.of(String.class), TypeDescription.ForLoadedType.of(Class.class), TypeDescription.ForLoadedType.of(Class.class), TypeDescription.ForLoadedType.of(Class.class))), Arrays.asList(Simple.of(inDefinedShape.getDeclaringType()), Simple.of(inDefinedShape.getType().asErasure())));
+            return new Dynamic(internalName, javaType.getTypeStub(),
+                    new MethodHandle(MethodHandle.HandleType.INVOKE_STATIC, JavaType.CONSTANT_BOOTSTRAPS.getTypeStub(),
+                            inDefinedShape.isStatic() ? "staticFieldVarHandle" : "fieldVarHandle",
+                            javaType.getTypeStub(),
+                            Arrays.asList(JavaType.METHOD_HANDLES_LOOKUP.getTypeStub(),
+                                    TypeDescription.ForLoadedType.of(String.class),
+                                    TypeDescription.ForLoadedType.of(Class.class),
+                                    TypeDescription.ForLoadedType.of(Class.class),
+                                    TypeDescription.ForLoadedType.of(Class.class))),
+                    Arrays.asList(Simple.of(inDefinedShape.getDeclaringType()),
+                            Simple.of(inDefinedShape.getType().asErasure())));
         }
 
         public JavaConstant withType(TypeDescription typeDescription) {
             if (typeDescription.represents(Void.TYPE)) {
                 throw new IllegalArgumentException("Constant value cannot represent void");
             }
-            if (!getBootstrap().getName().equals(MethodDescription.CONSTRUCTOR_INTERNAL_NAME) ? !typeDescription.asBoxed().isInHierarchyWith(getTypeDescription().asBoxed()) : !getTypeDescription().isAssignableTo(typeDescription)) {
+            if (!getBootstrap().getName().equals(MethodDescription.CONSTRUCTOR_INTERNAL_NAME)
+                    ? !typeDescription.asBoxed().isInHierarchyWith(getTypeDescription().asBoxed())
+                    : !getTypeDescription().isAssignableTo(typeDescription)) {
                 return new Dynamic(getName(), typeDescription, getBootstrap(), getArguments());
             }
-            throw new IllegalArgumentException(typeDescription + " is not compatible with bootstrapped type " + getTypeDescription());
+            throw new IllegalArgumentException(
+                    typeDescription + " is not compatible with bootstrapped type " + getTypeDescription());
         }
 
         public static Dynamic bootstrap(String str, Constructor<?> constructor, Object... objArr) {
@@ -300,115 +375,173 @@ public interface JavaConstant extends ConstantValue {
                 while (it.hasNext()) {
                     arrayList.add(Simple.wrap(it.next()));
                 }
-                if (inDefinedShape.isConstantBootstrap(TypeList.Explicit.of((List<? extends JavaConstant>) arrayList))) {
+                if (inDefinedShape
+                        .isConstantBootstrap(TypeList.Explicit.of((List<? extends JavaConstant>) arrayList))) {
                     if (inDefinedShape.isConstructor()) {
                         typeDescriptionAsErasure = inDefinedShape.getDeclaringType();
                     } else {
                         typeDescriptionAsErasure = inDefinedShape.getReturnType().asErasure();
                     }
-                    return new Dynamic(str, typeDescriptionAsErasure, new MethodHandle(inDefinedShape.isConstructor() ? MethodHandle.HandleType.INVOKE_SPECIAL_CONSTRUCTOR : MethodHandle.HandleType.INVOKE_STATIC, inDefinedShape.getDeclaringType(), inDefinedShape.getInternalName(), inDefinedShape.getReturnType().asErasure(), inDefinedShape.getParameters().asTypeList().asErasures()), arrayList);
+                    return new Dynamic(str, typeDescriptionAsErasure,
+                            new MethodHandle(
+                                    inDefinedShape.isConstructor() ? MethodHandle.HandleType.INVOKE_SPECIAL_CONSTRUCTOR
+                                            : MethodHandle.HandleType.INVOKE_STATIC,
+                                    inDefinedShape.getDeclaringType(), inDefinedShape.getInternalName(),
+                                    inDefinedShape.getReturnType().asErasure(),
+                                    inDefinedShape.getParameters().asTypeList().asErasures()),
+                            arrayList);
                 }
                 throw new IllegalArgumentException("Not a valid bootstrap method " + inDefinedShape + " for " + list);
             }
             throw new IllegalArgumentException("Not a valid field name: ".concat(str));
         }
 
-        /* JADX WARN: Code restructure failed: missing block: B:19:0x0051, code lost:
-        
-            if ((r13.getParameters().size() + ((r13.isStatic() || r13.isConstructor()) ? 0 : 1)) <= (r14.size() + 1)) goto L30;
-         */
-        /* JADX WARN: Code restructure failed: missing block: B:29:0x0071, code lost:
-        
-            if ((r13.getParameters().size() + ((r13.isStatic() || r13.isConstructor()) ? 0 : 1)) == r14.size()) goto L30;
-         */
-        /* JADX WARN: Code restructure failed: missing block: B:31:0x0077, code lost:
-        
-            if (r13.isStatic() != false) goto L36;
-         */
-        /* JADX WARN: Code restructure failed: missing block: B:33:0x007d, code lost:
-        
-            if (r13.isConstructor() == false) goto L35;
-         */
-        /* JADX WARN: Code restructure failed: missing block: B:35:0x0080, code lost:
-        
-            r0 = net.bytebuddy.utility.CompoundList.of(r13.getDeclaringType(), r13.getParameters().asTypeList().asErasures());
-         */
-        /* JADX WARN: Code restructure failed: missing block: B:36:0x0095, code lost:
-        
-            r0 = r13.getParameters().asTypeList().asErasures();
-         */
-        /* JADX WARN: Code restructure failed: missing block: B:38:0x00a5, code lost:
-        
-            if (r13.isVarArgs() == false) goto L40;
-         */
-        /* JADX WARN: Code restructure failed: missing block: B:39:0x00a7, code lost:
-        
-            r0 = net.bytebuddy.utility.CompoundList.of(r0.subList(0, r0.size() - 1), java.util.Collections.nCopies((r14.size() - r0.size()) + 1, ((net.bytebuddy.description.type.TypeDescription) r0.get(r0.size() - 1)).getComponentType())).iterator();
-         */
-        /* JADX WARN: Code restructure failed: missing block: B:40:0x00d6, code lost:
-        
-            r0 = r0.iterator();
-         */
-        /* JADX WARN: Code restructure failed: missing block: B:41:0x00da, code lost:
-        
-            r5 = new java.util.ArrayList(r14.size() + 1);
-            r5.add(net.bytebuddy.utility.JavaConstant.MethodHandle.of(r13));
-            r6 = r14.iterator();
-         */
-        /* JADX WARN: Code restructure failed: missing block: B:43:0x00f3, code lost:
-        
-            if (r6.hasNext() == false) goto L57;
-         */
-        /* JADX WARN: Code restructure failed: missing block: B:44:0x00f5, code lost:
-        
-            r7 = net.bytebuddy.utility.JavaConstant.Simple.wrap(r6.next());
-         */
-        /* JADX WARN: Code restructure failed: missing block: B:45:0x010b, code lost:
-        
-            if (r7.getTypeDescription().isAssignableTo((net.bytebuddy.description.type.TypeDescription) r0.next()) == false) goto L58;
-         */
-        /* JADX WARN: Code restructure failed: missing block: B:46:0x010d, code lost:
-        
-            r5.add(r7);
-         */
-        /* JADX WARN: Code restructure failed: missing block: B:48:0x0128, code lost:
-        
-            throw new java.lang.IllegalArgumentException("Cannot assign " + r14 + " to " + r13);
-         */
-        /* JADX WARN: Code restructure failed: missing block: B:50:0x012f, code lost:
-        
-            if (r13.isConstructor() == false) goto L52;
-         */
-        /* JADX WARN: Code restructure failed: missing block: B:51:0x0131, code lost:
-        
-            r13 = r13.getDeclaringType();
-         */
-        /* JADX WARN: Code restructure failed: missing block: B:52:0x0136, code lost:
-        
-            r13 = r13.getReturnType().asErasure();
-         */
-        /* JADX WARN: Code restructure failed: missing block: B:54:0x018c, code lost:
-        
-            return new net.bytebuddy.utility.JavaConstant.Dynamic(net.bytebuddy.utility.JavaConstant.Dynamic.DEFAULT_NAME, r13, new net.bytebuddy.utility.JavaConstant.MethodHandle(net.bytebuddy.utility.JavaConstant.MethodHandle.HandleType.INVOKE_STATIC, net.bytebuddy.utility.JavaType.CONSTANT_BOOTSTRAPS.getTypeStub(), "invoke", net.bytebuddy.description.type.TypeDescription.ForLoadedType.of(java.lang.Object.class), java.util.Arrays.asList(net.bytebuddy.utility.JavaType.METHOD_HANDLES_LOOKUP.getTypeStub(), net.bytebuddy.description.type.TypeDescription.ForLoadedType.of(java.lang.String.class), net.bytebuddy.description.type.TypeDescription.ForLoadedType.of(java.lang.Class.class), net.bytebuddy.utility.JavaType.METHOD_HANDLE.getTypeStub(), net.bytebuddy.description.type.TypeDescription.ArrayProjection.of(net.bytebuddy.description.type.TypeDescription.ForLoadedType.of(java.lang.Object.class)))), r5);
-         */
-        /* JADX WARN: Code restructure failed: missing block: B:56:0x01a4, code lost:
-        
-            throw new java.lang.IllegalArgumentException("Cannot assign " + r14 + " to " + r13);
+        /*
+         * JADX WARN: Code restructure failed: missing block: B:19:0x0051, code lost:
+         * 
+         * if ((r13.getParameters().size() + ((r13.isStatic() || r13.isConstructor()) ?
+         * 0 : 1)) <= (r14.size() + 1)) goto L30;
          */
         /*
-            Code decompiled incorrectly, please refer to instructions dump.
-            To view partially-correct add '--show-bad-code' argument
-        */
-        public static net.bytebuddy.utility.JavaConstant.Dynamic ofInvocation(net.bytebuddy.description.method.MethodDescription.InDefinedShape r13, java.util.List<?> r14) {
+         * JADX WARN: Code restructure failed: missing block: B:29:0x0071, code lost:
+         * 
+         * if ((r13.getParameters().size() + ((r13.isStatic() || r13.isConstructor()) ?
+         * 0 : 1)) == r14.size()) goto L30;
+         */
+        /*
+         * JADX WARN: Code restructure failed: missing block: B:31:0x0077, code lost:
+         * 
+         * if (r13.isStatic() != false) goto L36;
+         */
+        /*
+         * JADX WARN: Code restructure failed: missing block: B:33:0x007d, code lost:
+         * 
+         * if (r13.isConstructor() == false) goto L35;
+         */
+        /*
+         * JADX WARN: Code restructure failed: missing block: B:35:0x0080, code lost:
+         * 
+         * r0 = net.bytebuddy.utility.CompoundList.of(r13.getDeclaringType(),
+         * r13.getParameters().asTypeList().asErasures());
+         */
+        /*
+         * JADX WARN: Code restructure failed: missing block: B:36:0x0095, code lost:
+         * 
+         * r0 = r13.getParameters().asTypeList().asErasures();
+         */
+        /*
+         * JADX WARN: Code restructure failed: missing block: B:38:0x00a5, code lost:
+         * 
+         * if (r13.isVarArgs() == false) goto L40;
+         */
+        /*
+         * JADX WARN: Code restructure failed: missing block: B:39:0x00a7, code lost:
+         * 
+         * r0 = net.bytebuddy.utility.CompoundList.of(r0.subList(0, r0.size() - 1),
+         * java.util.Collections.nCopies((r14.size() - r0.size()) + 1,
+         * ((net.bytebuddy.description.type.TypeDescription) r0.get(r0.size() -
+         * 1)).getComponentType())).iterator();
+         */
+        /*
+         * JADX WARN: Code restructure failed: missing block: B:40:0x00d6, code lost:
+         * 
+         * r0 = r0.iterator();
+         */
+        /*
+         * JADX WARN: Code restructure failed: missing block: B:41:0x00da, code lost:
+         * 
+         * r5 = new java.util.ArrayList(r14.size() + 1);
+         * r5.add(net.bytebuddy.utility.JavaConstant.MethodHandle.of(r13));
+         * r6 = r14.iterator();
+         */
+        /*
+         * JADX WARN: Code restructure failed: missing block: B:43:0x00f3, code lost:
+         * 
+         * if (r6.hasNext() == false) goto L57;
+         */
+        /*
+         * JADX WARN: Code restructure failed: missing block: B:44:0x00f5, code lost:
+         * 
+         * r7 = net.bytebuddy.utility.JavaConstant.Simple.wrap(r6.next());
+         */
+        /*
+         * JADX WARN: Code restructure failed: missing block: B:45:0x010b, code lost:
+         * 
+         * if (r7.getTypeDescription().isAssignableTo((net.bytebuddy.description.type.
+         * TypeDescription) r0.next()) == false) goto L58;
+         */
+        /*
+         * JADX WARN: Code restructure failed: missing block: B:46:0x010d, code lost:
+         * 
+         * r5.add(r7);
+         */
+        /*
+         * JADX WARN: Code restructure failed: missing block: B:48:0x0128, code lost:
+         * 
+         * throw new java.lang.IllegalArgumentException("Cannot assign " + r14 + " to "
+         * + r13);
+         */
+        /*
+         * JADX WARN: Code restructure failed: missing block: B:50:0x012f, code lost:
+         * 
+         * if (r13.isConstructor() == false) goto L52;
+         */
+        /*
+         * JADX WARN: Code restructure failed: missing block: B:51:0x0131, code lost:
+         * 
+         * r13 = r13.getDeclaringType();
+         */
+        /*
+         * JADX WARN: Code restructure failed: missing block: B:52:0x0136, code lost:
+         * 
+         * r13 = r13.getReturnType().asErasure();
+         */
+        /*
+         * JADX WARN: Code restructure failed: missing block: B:54:0x018c, code lost:
+         * 
+         * return new
+         * net.bytebuddy.utility.JavaConstant.Dynamic(net.bytebuddy.utility.JavaConstant
+         * .Dynamic.DEFAULT_NAME, r13, new
+         * net.bytebuddy.utility.JavaConstant.MethodHandle(net.bytebuddy.utility.
+         * JavaConstant.MethodHandle.HandleType.INVOKE_STATIC,
+         * net.bytebuddy.utility.JavaType.CONSTANT_BOOTSTRAPS.getTypeStub(), "invoke",
+         * net.bytebuddy.description.type.TypeDescription.ForLoadedType.of(java.lang.
+         * Object.class),
+         * java.util.Arrays.asList(net.bytebuddy.utility.JavaType.METHOD_HANDLES_LOOKUP.
+         * getTypeStub(),
+         * net.bytebuddy.description.type.TypeDescription.ForLoadedType.of(java.lang.
+         * String.class),
+         * net.bytebuddy.description.type.TypeDescription.ForLoadedType.of(java.lang.
+         * Class.class), net.bytebuddy.utility.JavaType.METHOD_HANDLE.getTypeStub(),
+         * net.bytebuddy.description.type.TypeDescription.ArrayProjection.of(net.
+         * bytebuddy.description.type.TypeDescription.ForLoadedType.of(java.lang.Object.
+         * class)))), r5);
+         */
+        /*
+         * JADX WARN: Code restructure failed: missing block: B:56:0x01a4, code lost:
+         * 
+         * throw new java.lang.IllegalArgumentException("Cannot assign " + r14 + " to "
+         * + r13);
+         */
+        /*
+         * Code decompiled incorrectly, please refer to instructions dump.
+         * To view partially-correct add '--show-bad-code' argument
+         */
+        public static net.bytebuddy.utility.JavaConstant.Dynamic ofInvocation(
+                net.bytebuddy.description.method.MethodDescription.InDefinedShape r13, java.util.List<?> r14) {
             /*
-                Method dump skipped, instruction units count: 421
-                To view this dump add '--comments-level debug' option
-            */
-            throw new UnsupportedOperationException("Method not decompiled: net.bytebuddy.utility.JavaConstant.Dynamic.ofInvocation(net.bytebuddy.description.method.MethodDescription$InDefinedShape, java.util.List):net.bytebuddy.utility.JavaConstant$Dynamic");
+             * Method dump skipped, instruction units count: 421
+             * To view this dump add '--comments-level debug' option
+             */
+            throw new UnsupportedOperationException(
+                    "Method not decompiled: net.bytebuddy.utility.JavaConstant.Dynamic.ofInvocation(net.bytebuddy.description.method.MethodDescription$InDefinedShape, java.util.List):net.bytebuddy.utility.JavaConstant$Dynamic");
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class MethodHandle implements JavaConstant {
         private static final boolean ACCESS_CONTROLLER;
         protected static final MethodHandles METHOD_HANDLES;
@@ -421,7 +554,10 @@ public interface JavaConstant extends ConstantValue {
         private final List<? extends TypeDescription> parameterTypes;
         private final TypeDescription returnType;
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @JavaDispatcher.Proxied("java.lang.invoke.MethodHandleInfo")
         public interface MethodHandleInfo {
             @JavaDispatcher.Proxied("getDeclaringClass")
@@ -441,11 +577,17 @@ public interface JavaConstant extends ConstantValue {
             Object revealDirect(@JavaDispatcher.Proxied("java.lang.invoke.MethodHandle") Object obj);
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @JavaDispatcher.Proxied("java.lang.invoke.MethodHandles")
         public interface MethodHandles {
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @JavaDispatcher.Proxied("java.lang.invoke.MethodHandles$Lookup")
             public interface Lookup {
                 @JavaDispatcher.Proxied("lookupClass")
@@ -460,7 +602,10 @@ public interface JavaConstant extends ConstantValue {
             Object publicLookup();
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @JavaDispatcher.Proxied("java.lang.invoke.MethodType")
         public interface MethodType {
             @JavaDispatcher.Proxied("parameterArray")
@@ -487,7 +632,8 @@ public interface JavaConstant extends ConstantValue {
             METHOD_HANDLES_LOOKUP = (MethodHandles.Lookup) doPrivileged(JavaDispatcher.of(MethodHandles.Lookup.class));
         }
 
-        public MethodHandle(HandleType handleType, TypeDescription typeDescription, String str, TypeDescription typeDescription2, List<? extends TypeDescription> list) {
+        public MethodHandle(HandleType handleType, TypeDescription typeDescription, String str,
+                TypeDescription typeDescription2, List<? extends TypeDescription> list) {
             this.handleType = handleType;
             this.ownerType = typeDescription;
             this.name = str;
@@ -518,7 +664,8 @@ public interface JavaConstant extends ConstantValue {
                     for (int i = 0; i < type.getDimensions(); i++) {
                         sb.append(TypePool.Default.LazyTypeDescription.GenericTypeToken.COMPONENT_TYPE_PATH);
                     }
-                    sb.append(type.getDescriptor().replace('/', TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH));
+                    sb.append(type.getDescriptor().replace('/',
+                            TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH));
                     arrayList.add(typePool.describe(sb.toString()).resolve());
                 } else {
                     arrayList.add(typePool.describe(type.getClassName()).resolve());
@@ -529,12 +676,16 @@ public interface JavaConstant extends ConstantValue {
                 for (int i2 = 0; i2 < methodType.getReturnType().getDimensions(); i2++) {
                     sb2.append(TypePool.Default.LazyTypeDescription.GenericTypeToken.COMPONENT_TYPE_PATH);
                 }
-                sb2.append(methodType.getReturnType().getDescriptor().replace('/', TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH));
+                sb2.append(methodType.getReturnType().getDescriptor().replace('/',
+                        TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH));
                 typeDescriptionResolve = typePool.describe(sb2.toString()).resolve();
             } else {
                 typeDescriptionResolve = typePool.describe(methodType.getReturnType().getClassName()).resolve();
             }
-            return new MethodHandle(HandleType.of(handle.getTag()), typePool.describe(handle.getOwner().replace('/', TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH)).resolve(), handle.getName(), typeDescriptionResolve, arrayList);
+            return new MethodHandle(HandleType.of(handle.getTag()),
+                    typePool.describe(handle.getOwner().replace('/',
+                            TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH)).resolve(),
+                    handle.getName(), typeDescriptionResolve, arrayList);
         }
 
         public static MethodHandle ofGetter(Field field) {
@@ -566,11 +717,15 @@ public interface JavaConstant extends ConstantValue {
                 return false;
             }
             MethodHandle methodHandle = (MethodHandle) obj;
-            return this.handleType == methodHandle.handleType && this.name.equals(methodHandle.name) && this.ownerType.equals(methodHandle.ownerType) && this.parameterTypes.equals(methodHandle.parameterTypes) && this.returnType.equals(methodHandle.returnType);
+            return this.handleType == methodHandle.handleType && this.name.equals(methodHandle.name)
+                    && this.ownerType.equals(methodHandle.ownerType)
+                    && this.parameterTypes.equals(methodHandle.parameterTypes)
+                    && this.returnType.equals(methodHandle.returnType);
         }
 
         public String getDescriptor() {
-            int i = AnonymousClass1.$SwitchMap$net$bytebuddy$utility$JavaConstant$MethodHandle$HandleType[this.handleType.ordinal()];
+            int i = AnonymousClass1.$SwitchMap$net$bytebuddy$utility$JavaConstant$MethodHandle$HandleType[this.handleType
+                    .ordinal()];
             if (i == 1 || i == 2) {
                 return this.returnType.getDescriptor();
             }
@@ -613,12 +768,16 @@ public interface JavaConstant extends ConstantValue {
         }
 
         public int hashCode() {
-            return this.parameterTypes.hashCode() + dkz.f(this.returnType, bjs.e(this.name, dkz.f(this.ownerType, this.handleType.hashCode() * 31, 31), 31), 31);
+            return this.parameterTypes.hashCode() + dkz.f(this.returnType,
+                    bjs.e(this.name, dkz.f(this.ownerType, this.handleType.hashCode() * 31, 31), 31), 31);
         }
 
         @Override // net.bytebuddy.utility.JavaConstant
         public Object toDescription() {
-            return Simple.METHOD_HANDLE_DESC.of(Simple.DIRECT_METHOD_HANDLE_DESC_KIND.valueOf(this.handleType.getIdentifier(), this.ownerType.isInterface()), Simple.CLASS_DESC.ofDescriptor(this.ownerType.getDescriptor()), this.name, getDescriptor());
+            return Simple.METHOD_HANDLE_DESC.of(
+                    Simple.DIRECT_METHOD_HANDLE_DESC_KIND.valueOf(this.handleType.getIdentifier(),
+                            this.ownerType.isInterface()),
+                    Simple.CLASS_DESC.ofDescriptor(this.ownerType.getDescriptor()), this.name, getDescriptor());
         }
 
         @Override // net.bytebuddy.utility.ConstantValue
@@ -629,7 +788,8 @@ public interface JavaConstant extends ConstantValue {
         public String toString() {
             StringBuilder sb = new StringBuilder();
             sb.append(this.handleType.name());
-            sb.append((!this.ownerType.isInterface() || this.handleType.isField() || this.handleType == HandleType.INVOKE_INTERFACE) ? "" : "@interface");
+            sb.append((!this.ownerType.isInterface() || this.handleType.isField()
+                    || this.handleType == HandleType.INVOKE_INTERFACE) ? "" : "@interface");
             sb.append('/');
             sb.append(this.ownerType.getSimpleName());
             sb.append("::");
@@ -654,7 +814,8 @@ public interface JavaConstant extends ConstantValue {
         }
 
         public static MethodHandle ofGetter(FieldDescription.InDefinedShape inDefinedShape) {
-            return new MethodHandle(HandleType.ofGetter(inDefinedShape), inDefinedShape.getDeclaringType().asErasure(), inDefinedShape.getInternalName(), inDefinedShape.getType().asErasure(), Collections.EMPTY_LIST);
+            return new MethodHandle(HandleType.ofGetter(inDefinedShape), inDefinedShape.getDeclaringType().asErasure(),
+                    inDefinedShape.getInternalName(), inDefinedShape.getType().asErasure(), Collections.EMPTY_LIST);
         }
 
         public static MethodHandle ofLoaded(Object obj, Object obj2) {
@@ -664,32 +825,47 @@ public interface JavaConstant extends ConstantValue {
             if (!JavaType.METHOD_HANDLES_LOOKUP.isInstance(obj2)) {
                 throw new IllegalArgumentException(dkz.r(obj2, "Expected method handle lookup object: "));
             }
-            Object objRevealDirect = ClassFileVersion.ofThisVm(ClassFileVersion.JAVA_V8).isAtMost(ClassFileVersion.JAVA_V7) ? METHOD_HANDLE_INFO.revealDirect(obj) : METHOD_HANDLES_LOOKUP.revealDirect(obj2, obj);
+            Object objRevealDirect = ClassFileVersion.ofThisVm(ClassFileVersion.JAVA_V8)
+                    .isAtMost(ClassFileVersion.JAVA_V7) ? METHOD_HANDLE_INFO.revealDirect(obj)
+                            : METHOD_HANDLES_LOOKUP.revealDirect(obj2, obj);
             MethodHandleInfo methodHandleInfo = METHOD_HANDLE_INFO;
             Object methodType = methodHandleInfo.getMethodType(objRevealDirect);
             HandleType handleTypeOf = HandleType.of(methodHandleInfo.getReferenceKind(objRevealDirect));
-            TypeDescription typeDescriptionOf = TypeDescription.ForLoadedType.of(methodHandleInfo.getDeclaringClass(objRevealDirect));
+            TypeDescription typeDescriptionOf = TypeDescription.ForLoadedType
+                    .of(methodHandleInfo.getDeclaringClass(objRevealDirect));
             String name = methodHandleInfo.getName(objRevealDirect);
             MethodType methodType2 = METHOD_TYPE;
-            return new MethodHandle(handleTypeOf, typeDescriptionOf, name, TypeDescription.ForLoadedType.of(methodType2.returnType(methodType)), new TypeList.ForLoadedTypes(methodType2.parameterArray(methodType)));
+            return new MethodHandle(handleTypeOf, typeDescriptionOf, name,
+                    TypeDescription.ForLoadedType.of(methodType2.returnType(methodType)),
+                    new TypeList.ForLoadedTypes(methodType2.parameterArray(methodType)));
         }
 
         public static MethodHandle ofSetter(FieldDescription.InDefinedShape inDefinedShape) {
-            return new MethodHandle(HandleType.ofSetter(inDefinedShape), inDefinedShape.getDeclaringType().asErasure(), inDefinedShape.getInternalName(), TypeDescription.ForLoadedType.of(Void.TYPE), Collections.singletonList(inDefinedShape.getType().asErasure()));
+            return new MethodHandle(HandleType.ofSetter(inDefinedShape), inDefinedShape.getDeclaringType().asErasure(),
+                    inDefinedShape.getInternalName(), TypeDescription.ForLoadedType.of(Void.TYPE),
+                    Collections.singletonList(inDefinedShape.getType().asErasure()));
         }
 
-        public static MethodHandle ofSpecial(MethodDescription.InDefinedShape inDefinedShape, TypeDescription typeDescription) {
+        public static MethodHandle ofSpecial(MethodDescription.InDefinedShape inDefinedShape,
+                TypeDescription typeDescription) {
             if (inDefinedShape.isSpecializableFor(typeDescription)) {
-                return new MethodHandle(HandleType.ofSpecial(inDefinedShape), typeDescription, inDefinedShape.getInternalName(), inDefinedShape.getReturnType().asErasure(), inDefinedShape.getParameters().asTypeList().asErasures());
+                return new MethodHandle(HandleType.ofSpecial(inDefinedShape), typeDescription,
+                        inDefinedShape.getInternalName(), inDefinedShape.getReturnType().asErasure(),
+                        inDefinedShape.getParameters().asTypeList().asErasures());
             }
             throw new IllegalArgumentException("Cannot specialize " + inDefinedShape + " for " + typeDescription);
         }
 
         public static MethodHandle of(MethodDescription.InDefinedShape inDefinedShape) {
-            return new MethodHandle(HandleType.of(inDefinedShape), inDefinedShape.getDeclaringType(), inDefinedShape.getInternalName(), inDefinedShape.getReturnType().asErasure(), inDefinedShape.getParameters().asTypeList().asErasures());
+            return new MethodHandle(HandleType.of(inDefinedShape), inDefinedShape.getDeclaringType(),
+                    inDefinedShape.getInternalName(), inDefinedShape.getReturnType().asErasure(),
+                    inDefinedShape.getParameters().asTypeList().asErasures());
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public enum HandleType {
             INVOKE_VIRTUAL(5, false),
             INVOKE_STATIC(6, false),
@@ -711,7 +887,11 @@ public interface JavaConstant extends ConstantValue {
 
             public static HandleType of(MethodDescription.InDefinedShape inDefinedShape) {
                 if (!inDefinedShape.isTypeInitializer()) {
-                    return inDefinedShape.isStatic() ? INVOKE_STATIC : inDefinedShape.isConstructor() ? INVOKE_SPECIAL_CONSTRUCTOR : inDefinedShape.isPrivate() ? INVOKE_SPECIAL : inDefinedShape.getDeclaringType().isInterface() ? INVOKE_INTERFACE : INVOKE_VIRTUAL;
+                    return inDefinedShape.isStatic() ? INVOKE_STATIC
+                            : inDefinedShape.isConstructor() ? INVOKE_SPECIAL_CONSTRUCTOR
+                                    : inDefinedShape.isPrivate() ? INVOKE_SPECIAL
+                                            : inDefinedShape.getDeclaringType().isInterface() ? INVOKE_INTERFACE
+                                                    : INVOKE_VIRTUAL;
                 }
                 throw new IllegalArgumentException("Cannot create handle of type initializer " + inDefinedShape);
             }
@@ -745,19 +925,25 @@ public interface JavaConstant extends ConstantValue {
                         return handleType;
                     }
                 }
-                throw new IllegalArgumentException(bjs.i(i, "Unknown handle type: "));
+                throw new IllegalArgumentException(concatVar2Var1(i, "Unknown handle type: "));
             }
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class MethodType implements JavaConstant {
         private static final boolean ACCESS_CONTROLLER;
         private static final Dispatcher DISPATCHER;
         private final List<? extends TypeDescription> parameterTypes;
         private final TypeDescription returnType;
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @JavaDispatcher.Proxied("java.lang.invoke.MethodType")
         public interface Dispatcher {
             @JavaDispatcher.Proxied("parameterArray")
@@ -807,7 +993,8 @@ public interface JavaConstant extends ConstantValue {
                     for (int i = 0; i < type2.getDimensions(); i++) {
                         sb.append(TypePool.Default.LazyTypeDescription.GenericTypeToken.COMPONENT_TYPE_PATH);
                     }
-                    sb.append(type2.getDescriptor().replace('/', TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH));
+                    sb.append(type2.getDescriptor().replace('/',
+                            TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH));
                     arrayList.add(typePool.describe(sb.toString()).resolve());
                 } else {
                     arrayList.add(typePool.describe(type2.getClassName()).resolve());
@@ -818,7 +1005,8 @@ public interface JavaConstant extends ConstantValue {
                 for (int i2 = 0; i2 < type.getReturnType().getDimensions(); i2++) {
                     sb2.append(TypePool.Default.LazyTypeDescription.GenericTypeToken.COMPONENT_TYPE_PATH);
                 }
-                sb2.append(type.getReturnType().getDescriptor().replace('/', TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH));
+                sb2.append(type.getReturnType().getDescriptor().replace('/',
+                        TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH));
                 typeDescriptionResolve = typePool.describe(sb2.toString()).resolve();
             } else {
                 typeDescriptionResolve = typePool.describe(type.getReturnType().getClassName()).resolve();
@@ -863,7 +1051,8 @@ public interface JavaConstant extends ConstantValue {
                 return false;
             }
             MethodType methodType = (MethodType) obj;
-            return this.parameterTypes.equals(methodType.parameterTypes) && this.returnType.equals(methodType.returnType);
+            return this.parameterTypes.equals(methodType.parameterTypes)
+                    && this.returnType.equals(methodType.returnType);
         }
 
         public String getDescriptor() {
@@ -933,11 +1122,16 @@ public interface JavaConstant extends ConstantValue {
         }
 
         public static MethodType ofGetter(FieldDescription fieldDescription) {
-            return new MethodType(fieldDescription.getType().asErasure(), fieldDescription.isStatic() ? Collections.EMPTY_LIST : Collections.singletonList(fieldDescription.getDeclaringType().asErasure()));
+            return new MethodType(fieldDescription.getType().asErasure(),
+                    fieldDescription.isStatic() ? Collections.EMPTY_LIST
+                            : Collections.singletonList(fieldDescription.getDeclaringType().asErasure()));
         }
 
         public static MethodType ofSetter(FieldDescription fieldDescription) {
-            return new MethodType(TypeDescription.ForLoadedType.of(Void.TYPE), fieldDescription.isStatic() ? Collections.singletonList(fieldDescription.getType().asErasure()) : Arrays.asList(fieldDescription.getDeclaringType().asErasure(), fieldDescription.getType().asErasure()));
+            return new MethodType(TypeDescription.ForLoadedType.of(Void.TYPE),
+                    fieldDescription.isStatic() ? Collections.singletonList(fieldDescription.getType().asErasure())
+                            : Arrays.asList(fieldDescription.getDeclaringType().asErasure(),
+                                    fieldDescription.getType().asErasure()));
         }
 
         public static MethodType ofSignature(Constructor<?> constructor) {
@@ -953,7 +1147,8 @@ public interface JavaConstant extends ConstantValue {
         }
 
         public static MethodType ofSignature(MethodDescription methodDescription) {
-            return new MethodType(methodDescription.getReturnType().asErasure(), methodDescription.getParameters().asTypeList().asErasures());
+            return new MethodType(methodDescription.getReturnType().asErasure(),
+                    methodDescription.getParameters().asTypeList().asErasures());
         }
 
         public static MethodType of(Method method) {
@@ -966,9 +1161,12 @@ public interface JavaConstant extends ConstantValue {
 
         public static MethodType of(MethodDescription methodDescription) {
             List listAsErasures;
-            TypeDescription typeDescriptionAsErasure = (methodDescription.isConstructor() ? methodDescription.getDeclaringType() : methodDescription.getReturnType()).asErasure();
+            TypeDescription typeDescriptionAsErasure = (methodDescription.isConstructor()
+                    ? methodDescription.getDeclaringType()
+                    : methodDescription.getReturnType()).asErasure();
             if (!methodDescription.isStatic() && !methodDescription.isConstructor()) {
-                listAsErasures = CompoundList.of(methodDescription.getDeclaringType().asErasure(), methodDescription.getParameters().asTypeList().asErasures());
+                listAsErasures = CompoundList.of(methodDescription.getDeclaringType().asErasure(),
+                        methodDescription.getParameters().asTypeList().asErasures());
             } else {
                 listAsErasures = methodDescription.getParameters().asTypeList().asErasures();
             }
@@ -976,7 +1174,10 @@ public interface JavaConstant extends ConstantValue {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static abstract class Simple<T> implements JavaConstant {
         private static final boolean ACCESS_CONTROLLER;
         protected static final Dispatcher.OfClassDesc CLASS_DESC;
@@ -989,11 +1190,17 @@ public interface JavaConstant extends ConstantValue {
         private final TypeDescription typeDescription;
         protected final T value;
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @JavaDispatcher.Proxied("java.lang.constant.ConstantDesc")
         public interface Dispatcher {
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @JavaDispatcher.Proxied("java.lang.constant.ClassDesc")
             public interface OfClassDesc extends Dispatcher {
                 @JavaDispatcher.Proxied("descriptorString")
@@ -1004,11 +1211,17 @@ public interface JavaConstant extends ConstantValue {
                 Object ofDescriptor(String str);
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @JavaDispatcher.Proxied("java.lang.constant.DirectMethodHandleDesc")
             public interface OfDirectMethodHandleDesc extends Dispatcher {
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @JavaDispatcher.Proxied("java.lang.constant.DirectMethodHandleDesc$Kind")
                 public interface ForKind {
                     @JavaDispatcher.IsStatic
@@ -1029,7 +1242,10 @@ public interface JavaConstant extends ConstantValue {
                 int refKind(Object obj);
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @JavaDispatcher.Proxied("java.lang.constant.DynamicConstantDesc")
             public interface OfDynamicConstantDesc extends Dispatcher {
                 @JavaDispatcher.Proxied("bootstrapArgs")
@@ -1046,10 +1262,15 @@ public interface JavaConstant extends ConstantValue {
 
                 @JavaDispatcher.IsStatic
                 @JavaDispatcher.Proxied("ofCanonical")
-                Object ofCanonical(@JavaDispatcher.Proxied("java.lang.constant.DirectMethodHandleDesc") Object obj, String str, @JavaDispatcher.Proxied("java.lang.constant.ClassDesc") Object obj2, @JavaDispatcher.Proxied("java.lang.constant.ConstantDesc") Object[] objArr);
+                Object ofCanonical(@JavaDispatcher.Proxied("java.lang.constant.DirectMethodHandleDesc") Object obj,
+                        String str, @JavaDispatcher.Proxied("java.lang.constant.ClassDesc") Object obj2,
+                        @JavaDispatcher.Proxied("java.lang.constant.ConstantDesc") Object[] objArr);
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @JavaDispatcher.Proxied("java.lang.constant.MethodHandleDesc")
             public interface OfMethodHandleDesc extends Dispatcher {
                 @JavaDispatcher.Proxied("invocationType")
@@ -1057,15 +1278,20 @@ public interface JavaConstant extends ConstantValue {
 
                 @JavaDispatcher.IsStatic
                 @JavaDispatcher.Proxied("of")
-                Object of(@JavaDispatcher.Proxied("java.lang.constant.DirectMethodHandleDesc$Kind") Object obj, @JavaDispatcher.Proxied("java.lang.constant.ClassDesc") Object obj2, String str, String str2);
+                Object of(@JavaDispatcher.Proxied("java.lang.constant.DirectMethodHandleDesc$Kind") Object obj,
+                        @JavaDispatcher.Proxied("java.lang.constant.ClassDesc") Object obj2, String str, String str2);
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @JavaDispatcher.Proxied("java.lang.constant.MethodTypeDesc")
             public interface OfMethodTypeDesc extends Dispatcher {
                 @JavaDispatcher.IsStatic
                 @JavaDispatcher.Proxied("of")
-                Object of(@JavaDispatcher.Proxied("java.lang.constant.ClassDesc") Object obj, @JavaDispatcher.Proxied("java.lang.constant.ClassDesc") Object[] objArr);
+                Object of(@JavaDispatcher.Proxied("java.lang.constant.ClassDesc") Object obj,
+                        @JavaDispatcher.Proxied("java.lang.constant.ClassDesc") Object[] objArr);
 
                 @JavaDispatcher.IsStatic
                 @JavaDispatcher.Proxied("ofDescriptor")
@@ -1087,10 +1313,16 @@ public interface JavaConstant extends ConstantValue {
             Object[] toArray(int i);
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static abstract class OfTrivialValue<S> extends Simple<S> {
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class ForDouble extends OfTrivialValue<Double> {
                 public ForDouble(Double d) {
                     super(d, TypeDescription.ForLoadedType.of(Double.TYPE));
@@ -1102,7 +1334,10 @@ public interface JavaConstant extends ConstantValue {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class ForFloat extends OfTrivialValue<Float> {
                 public ForFloat(Float f) {
                     super(f, TypeDescription.ForLoadedType.of(Float.TYPE));
@@ -1114,7 +1349,10 @@ public interface JavaConstant extends ConstantValue {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class ForInteger extends OfTrivialValue<Integer> {
                 public ForInteger(Integer num) {
                     super(num, TypeDescription.ForLoadedType.of(Integer.TYPE));
@@ -1126,7 +1364,10 @@ public interface JavaConstant extends ConstantValue {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class ForLong extends OfTrivialValue<Long> {
                 public ForLong(Long l) {
                     super(l, TypeDescription.ForLoadedType.of(Long.TYPE));
@@ -1138,7 +1379,10 @@ public interface JavaConstant extends ConstantValue {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class ForString extends OfTrivialValue<String> {
                 public ForString(String str) {
                     super(str, TypeDescription.ForLoadedType.of(String.class));
@@ -1165,7 +1409,10 @@ public interface JavaConstant extends ConstantValue {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static class OfTypeDescription extends Simple<TypeDescription> {
             public OfTypeDescription(TypeDescription typeDescription) {
                 super(typeDescription, TypeDescription.ForLoadedType.of(Class.class));
@@ -1200,11 +1447,16 @@ public interface JavaConstant extends ConstantValue {
             }
             CONSTANT_DESC = (Dispatcher) doPrivileged(JavaDispatcher.of(Dispatcher.class));
             CLASS_DESC = (Dispatcher.OfClassDesc) doPrivileged(JavaDispatcher.of(Dispatcher.OfClassDesc.class));
-            METHOD_TYPE_DESC = (Dispatcher.OfMethodTypeDesc) doPrivileged(JavaDispatcher.of(Dispatcher.OfMethodTypeDesc.class));
-            METHOD_HANDLE_DESC = (Dispatcher.OfMethodHandleDesc) doPrivileged(JavaDispatcher.of(Dispatcher.OfMethodHandleDesc.class));
-            DIRECT_METHOD_HANDLE_DESC = (Dispatcher.OfDirectMethodHandleDesc) doPrivileged(JavaDispatcher.of(Dispatcher.OfDirectMethodHandleDesc.class));
-            DIRECT_METHOD_HANDLE_DESC_KIND = (Dispatcher.OfDirectMethodHandleDesc.ForKind) doPrivileged(JavaDispatcher.of(Dispatcher.OfDirectMethodHandleDesc.ForKind.class));
-            DYNAMIC_CONSTANT_DESC = (Dispatcher.OfDynamicConstantDesc) doPrivileged(JavaDispatcher.of(Dispatcher.OfDynamicConstantDesc.class));
+            METHOD_TYPE_DESC = (Dispatcher.OfMethodTypeDesc) doPrivileged(
+                    JavaDispatcher.of(Dispatcher.OfMethodTypeDesc.class));
+            METHOD_HANDLE_DESC = (Dispatcher.OfMethodHandleDesc) doPrivileged(
+                    JavaDispatcher.of(Dispatcher.OfMethodHandleDesc.class));
+            DIRECT_METHOD_HANDLE_DESC = (Dispatcher.OfDirectMethodHandleDesc) doPrivileged(
+                    JavaDispatcher.of(Dispatcher.OfDirectMethodHandleDesc.class));
+            DIRECT_METHOD_HANDLE_DESC_KIND = (Dispatcher.OfDirectMethodHandleDesc.ForKind) doPrivileged(
+                    JavaDispatcher.of(Dispatcher.OfDirectMethodHandleDesc.ForKind.class));
+            DYNAMIC_CONSTANT_DESC = (Dispatcher.OfDynamicConstantDesc) doPrivileged(
+                    JavaDispatcher.of(Dispatcher.OfDynamicConstantDesc.class));
         }
 
         public Simple(T t, TypeDescription typeDescription) {
@@ -1219,7 +1471,8 @@ public interface JavaConstant extends ConstantValue {
 
         public static JavaConstant of(TypeDescription typeDescription) {
             if (typeDescription.isPrimitive()) {
-                throw new IllegalArgumentException(dkz.u("A primitive type cannot be represented as a type constant: ", typeDescription));
+                throw new IllegalArgumentException(
+                        dkz.u("A primitive type cannot be represented as a type constant: ", typeDescription));
             }
             return new OfTypeDescription(typeDescription);
         }
@@ -1305,7 +1558,8 @@ public interface JavaConstant extends ConstantValue {
         }
 
         public static JavaConstant wrap(Object obj) {
-            return obj instanceof JavaConstant ? (JavaConstant) obj : obj instanceof TypeDescription ? of((TypeDescription) obj) : ofLoaded(obj);
+            return obj instanceof JavaConstant ? (JavaConstant) obj
+                    : obj instanceof TypeDescription ? of((TypeDescription) obj) : ofLoaded(obj);
         }
 
         public boolean equals(@MaybeNull Object obj) {
@@ -1367,7 +1621,8 @@ public interface JavaConstant extends ConstantValue {
             if (ofClassDesc.isInstance(obj)) {
                 Type type = Type.getType(ofClassDesc.descriptorString(obj));
                 if (type.getSort() == 9) {
-                    className7 = type.getInternalName().replace('/', TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
+                    className7 = type.getInternalName().replace('/',
+                            TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
                 } else {
                     className7 = type.getClassName();
                 }
@@ -1382,7 +1637,8 @@ public interface JavaConstant extends ConstantValue {
                 while (i < length) {
                     Type type2 = Type.getType(CLASS_DESC.descriptorString(objArrParameterArray[i]));
                     if (type2.getSort() == 9) {
-                        className6 = type2.getInternalName().replace('/', TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
+                        className6 = type2.getInternalName().replace('/',
+                                TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
                     } else {
                         className6 = type2.getClassName();
                     }
@@ -1391,7 +1647,8 @@ public interface JavaConstant extends ConstantValue {
                 }
                 Type type3 = Type.getType(CLASS_DESC.descriptorString(METHOD_TYPE_DESC.returnType(obj)));
                 if (type3.getSort() == 9) {
-                    className5 = type3.getInternalName().replace('/', TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
+                    className5 = type3.getInternalName().replace('/',
+                            TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
                 } else {
                     className5 = type3.getClassName();
                 }
@@ -1399,13 +1656,15 @@ public interface JavaConstant extends ConstantValue {
             }
             Dispatcher.OfDirectMethodHandleDesc ofDirectMethodHandleDesc = DIRECT_METHOD_HANDLE_DESC;
             if (ofDirectMethodHandleDesc.isInstance(obj)) {
-                Object[] objArrParameterArray2 = ofMethodTypeDesc.parameterArray(METHOD_HANDLE_DESC.invocationType(obj));
+                Object[] objArrParameterArray2 = ofMethodTypeDesc
+                        .parameterArray(METHOD_HANDLE_DESC.invocationType(obj));
                 ArrayList arrayList2 = new ArrayList(objArrParameterArray2.length);
                 int length2 = objArrParameterArray2.length;
                 while (i < length2) {
                     Type type4 = Type.getType(CLASS_DESC.descriptorString(objArrParameterArray2[i]));
                     if (type4.getSort() == 9) {
-                        className4 = type4.getInternalName().replace('/', TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
+                        className4 = type4.getInternalName().replace('/',
+                                TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
                     } else {
                         className4 = type4.getClassName();
                     }
@@ -1413,25 +1672,35 @@ public interface JavaConstant extends ConstantValue {
                     i++;
                 }
                 Dispatcher.OfClassDesc ofClassDesc2 = CLASS_DESC;
-                Type type5 = Type.getType(ofClassDesc2.descriptorString(METHOD_TYPE_DESC.returnType(METHOD_HANDLE_DESC.invocationType(obj))));
+                Type type5 = Type.getType(ofClassDesc2
+                        .descriptorString(METHOD_TYPE_DESC.returnType(METHOD_HANDLE_DESC.invocationType(obj))));
                 Dispatcher.OfDirectMethodHandleDesc ofDirectMethodHandleDesc2 = DIRECT_METHOD_HANDLE_DESC;
-                MethodHandle.HandleType handleTypeOf = MethodHandle.HandleType.of(ofDirectMethodHandleDesc2.refKind(obj));
-                TypeDescription typeDescriptionResolve2 = typePool.describe(Type.getType(ofClassDesc2.descriptorString(ofDirectMethodHandleDesc2.owner(obj))).getClassName()).resolve();
+                MethodHandle.HandleType handleTypeOf = MethodHandle.HandleType
+                        .of(ofDirectMethodHandleDesc2.refKind(obj));
+                TypeDescription typeDescriptionResolve2 = typePool.describe(Type
+                        .getType(ofClassDesc2.descriptorString(ofDirectMethodHandleDesc2.owner(obj))).getClassName())
+                        .resolve();
                 String strMethodName = ofDirectMethodHandleDesc2.methodName(obj);
                 if (ofDirectMethodHandleDesc2.refKind(obj) == 8) {
                     typeDescriptionResolve = TypeDescription.ForLoadedType.of(Void.TYPE);
                 } else {
-                    typeDescriptionResolve = typePool.describe(type5.getSort() == 9 ? type5.getInternalName().replace('/', TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH) : type5.getClassName()).resolve();
+                    typeDescriptionResolve = typePool.describe(type5.getSort() == 9
+                            ? type5.getInternalName().replace('/',
+                                    TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH)
+                            : type5.getClassName()).resolve();
                 }
-                return new MethodHandle(handleTypeOf, typeDescriptionResolve2, strMethodName, typeDescriptionResolve, arrayList2);
+                return new MethodHandle(handleTypeOf, typeDescriptionResolve2, strMethodName, typeDescriptionResolve,
+                        arrayList2);
             }
             Dispatcher.OfDynamicConstantDesc ofDynamicConstantDesc = DYNAMIC_CONSTANT_DESC;
             if (ofDynamicConstantDesc.isInstance(obj)) {
-                Type methodType = Type.getMethodType(ofDirectMethodHandleDesc.lookupDescriptor(ofDynamicConstantDesc.bootstrapMethod(obj)));
+                Type methodType = Type.getMethodType(
+                        ofDirectMethodHandleDesc.lookupDescriptor(ofDynamicConstantDesc.bootstrapMethod(obj)));
                 ArrayList arrayList3 = new ArrayList(methodType.getArgumentTypes().length);
                 for (Type type6 : methodType.getArgumentTypes()) {
                     if (type6.getSort() == 9) {
-                        className3 = type6.getInternalName().replace('/', TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
+                        className3 = type6.getInternalName().replace('/',
+                                TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
                     } else {
                         className3 = type6.getClassName();
                     }
@@ -1449,23 +1718,33 @@ public interface JavaConstant extends ConstantValue {
                 Type type7 = Type.getType(ofClassDesc3.descriptorString(ofDynamicConstantDesc2.constantType(obj)));
                 String strConstantName = ofDynamicConstantDesc2.constantName(obj);
                 if (type7.getSort() == 9) {
-                    className = type7.getInternalName().replace('/', TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
+                    className = type7.getInternalName().replace('/',
+                            TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
                 } else {
                     className = type7.getClassName();
                 }
                 TypeDescription typeDescriptionResolve3 = typePool.describe(className).resolve();
                 Dispatcher.OfDirectMethodHandleDesc ofDirectMethodHandleDesc3 = DIRECT_METHOD_HANDLE_DESC;
-                MethodHandle.HandleType handleTypeOf2 = MethodHandle.HandleType.of(ofDirectMethodHandleDesc3.refKind(ofDynamicConstantDesc2.bootstrapMethod(obj)));
-                TypeDescription typeDescriptionResolve4 = typePool.describe(Type.getType(ofClassDesc3.descriptorString(ofDirectMethodHandleDesc3.owner(ofDynamicConstantDesc2.bootstrapMethod(obj)))).getClassName()).resolve();
-                String strMethodName2 = ofDirectMethodHandleDesc3.methodName(ofDynamicConstantDesc2.bootstrapMethod(obj));
+                MethodHandle.HandleType handleTypeOf2 = MethodHandle.HandleType
+                        .of(ofDirectMethodHandleDesc3.refKind(ofDynamicConstantDesc2.bootstrapMethod(obj)));
+                TypeDescription typeDescriptionResolve4 = typePool.describe(Type
+                        .getType(ofClassDesc3.descriptorString(
+                                ofDirectMethodHandleDesc3.owner(ofDynamicConstantDesc2.bootstrapMethod(obj))))
+                        .getClassName()).resolve();
+                String strMethodName2 = ofDirectMethodHandleDesc3
+                        .methodName(ofDynamicConstantDesc2.bootstrapMethod(obj));
                 if (methodType.getReturnType().getSort() == 9) {
-                    className2 = methodType.getReturnType().getInternalName().replace('/', TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
+                    className2 = methodType.getReturnType().getInternalName().replace('/',
+                            TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
                 } else {
                     className2 = methodType.getReturnType().getClassName();
                 }
-                return new Dynamic(strConstantName, typeDescriptionResolve3, new MethodHandle(handleTypeOf2, typeDescriptionResolve4, strMethodName2, typePool.describe(className2).resolve(), arrayList3), arrayList4);
+                return new Dynamic(strConstantName, typeDescriptionResolve3, new MethodHandle(handleTypeOf2,
+                        typeDescriptionResolve4, strMethodName2, typePool.describe(className2).resolve(), arrayList3),
+                        arrayList4);
             }
-            throw new IllegalArgumentException(dkz.r(obj, "Not a resolvable constant description or not expressible as a constant pool value: "));
+            throw new IllegalArgumentException(
+                    dkz.r(obj, "Not a resolvable constant description or not expressible as a constant pool value: "));
         }
 
         public static List<JavaConstant> wrap(List<?> list) {
@@ -1478,10 +1757,16 @@ public interface JavaConstant extends ConstantValue {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface Visitor<T> {
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public enum NoOp implements Visitor<JavaConstant> {
             INSTANCE;
 
@@ -1501,13 +1786,19 @@ public interface JavaConstant extends ConstantValue {
             }
 
             @Override // net.bytebuddy.utility.JavaConstant.Visitor
-            /* JADX INFO: renamed from: onType, reason: avoid collision after fix types in other method */
+            /*
+             * JADX INFO: renamed from: onType, reason: avoid collision after fix types in
+             * other method
+             */
             public JavaConstant onType2(Simple<TypeDescription> simple) {
                 return simple;
             }
 
             @Override // net.bytebuddy.utility.JavaConstant.Visitor
-            /* JADX INFO: renamed from: onValue, reason: avoid collision after fix types in other method */
+            /*
+             * JADX INFO: renamed from: onValue, reason: avoid collision after fix types in
+             * other method
+             */
             public JavaConstant onValue2(Simple<?> simple) {
                 return simple;
             }

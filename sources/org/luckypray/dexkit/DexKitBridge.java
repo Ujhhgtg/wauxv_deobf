@@ -8,7 +8,7 @@ import me.hd.wauxv.obf.bag;
 import me.hd.wauxv.obf.bah;
 import me.hd.wauxv.obf.bbb;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.c;
 import me.hd.wauxv.obf.cdg;
 import me.hd.wauxv.obf.cna;
@@ -54,14 +54,14 @@ public final class DexKitBridge implements Closeable {
         bbb bbbVar = new bbb();
         bagVar.c(bbbVar);
         ByteBuffer byteBufferWrap = ByteBuffer.wrap(nativeFindClass(b(this), bbbVar.z()));
-        bzo.p(byteBufferWrap, "wrap(...)");
+        throwIfVar1IsNull(byteBufferWrap, "wrap(...)");
         c cVar = new c();
         cVar.h(byteBufferWrap.position() + bjs.f(byteBufferWrap, ByteOrder.LITTLE_ENDIAN), byteBufferWrap);
         yw ywVar = new yw();
         int iM = cVar.m();
         for (int i = 0; i < iM; i++) {
             c cVarL = cVar.l(i);
-            bzo.n(cVarL);
+            throwIfVar1IsNull(cVarL);
             ywVar.add(cna.t(this, cVarL));
         }
         if (ywVar.size() > 1) {
@@ -74,7 +74,7 @@ public final class DexKitBridge implements Closeable {
         bbb bbbVar = new bbb();
         bahVar.c(bbbVar);
         ByteBuffer byteBufferWrap = ByteBuffer.wrap(nativeFindMethod(b(this), bbbVar.z()));
-        bzo.p(byteBufferWrap, "wrap(...)");
+        throwIfVar1IsNull(byteBufferWrap, "wrap(...)");
         c cVar = new c();
         cVar.h(byteBufferWrap.position() + bjs.f(byteBufferWrap, ByteOrder.LITTLE_ENDIAN), byteBufferWrap);
         cdg cdgVar = new cdg();
@@ -86,12 +86,12 @@ public final class DexKitBridge implements Closeable {
             if (iG2 != 0) {
                 int iF = cVar.f((i * 4) + cVar.j(iG2));
                 ByteBuffer byteBuffer = cVar.b;
-                bzo.p(byteBuffer, "bb");
+                throwIfVar1IsNull(byteBuffer, "bb");
                 cVar2.h(iF, byteBuffer);
             } else {
                 cVar2 = null;
             }
-            bzo.n(cVar2);
+            throwIfVar1IsNull(cVar2);
             cdgVar.add(emn.ak(this, cVar2));
         }
         if (cdgVar.size() > 1) {

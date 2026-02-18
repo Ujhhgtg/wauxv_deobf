@@ -19,14 +19,14 @@ import okhttp3.internal.Util;
 public final class ckw {
     public static final /* synthetic */ ckw a = new ckw();
 
-    /* JADX WARN: Found duplicated region for block: B:81:0x012f  */
-    /* JADX WARN: Found duplicated region for block: B:83:0x014d  */
-    /* JADX WARN: Found duplicated region for block: B:84:0x0160  */
-    /* JADX WARN: Found duplicated region for block: B:87:0x0176  */
+    /* JADX WARN: Found duplicated region for block: B:81:0x012f */
+    /* JADX WARN: Found duplicated region for block: B:83:0x014d */
+    /* JADX WARN: Found duplicated region for block: B:84:0x0160 */
+    /* JADX WARN: Found duplicated region for block: B:87:0x0176 */
     public final Object b(Type type, Response response) throws DownloadFileException, ConvertException {
         rm rmVarSource;
         Request request;
-        bzo.q(type, "succeed");
+        throwIfVar1IsNull(type, "succeed");
         if (type == String.class && response.isSuccessful()) {
             ResponseBody responseBodyBody = response.body();
             if (responseBodyBody != null) {
@@ -37,7 +37,8 @@ public final class ckw {
             if (responseBodyBody2 != null) {
                 return responseBodyBody2.byteString();
             }
-        } else if ((type instanceof GenericArrayType) && ((GenericArrayType) type).getGenericComponentType() == Byte.TYPE && response.isSuccessful()) {
+        } else if ((type instanceof GenericArrayType)
+                && ((GenericArrayType) type).getGenericComponentType() == Byte.TYPE && response.isSuccessful()) {
             ResponseBody responseBodyBody3 = response.body();
             if (responseBodyBody3 != null) {
                 return responseBodyBody3.bytes();
@@ -47,20 +48,21 @@ public final class ckw {
                 if (type == Response.class) {
                     return response;
                 }
-                throw new ConvertException(response, "An exception occurred while converting the NetConverter.DEFAULT", null, null, 12, null);
+                throw new ConvertException(response, "An exception occurred while converting the NetConverter.DEFAULT",
+                        null, null, 12, null);
             }
             Request request2 = response.request();
-            bzo.q(request2, "<this>");
+            throwIfVar1IsNull(request2, "<this>");
             cnc cncVar = (cnc) request2.tag(cnc.class);
             String absolutePath = cncVar != null ? cncVar.a : null;
             if (absolutePath == null) {
                 absolutePath = ckv.j().getFilesDir().getAbsolutePath();
-                bzo.p(absolutePath, "NetConfig.app.filesDir.absolutePath");
+                throwIfVar1IsNull(absolutePath, "NetConfig.app.filesDir.absolutePath");
             }
             File file = new File(absolutePath);
             if (file.isDirectory()) {
                 Request request3 = response.request();
-                bzo.q(request3, "<this>");
+                throwIfVar1IsNull(request3, "<this>");
                 cne cneVar = (cne) request3.tag(cne.class);
                 String strAx = cneVar != null ? cneVar.a : null;
                 if (strAx == null) {
@@ -82,9 +84,9 @@ public final class ckw {
                         } else {
                             String strAu2 = dnj.au(strHeader$default, "filename*=", "");
                             char[] charArray = "UTF-8''".toCharArray();
-                            bzo.p(charArray, "this as java.lang.String).toCharArray()");
+                            throwIfVar1IsNull(charArray, "this as java.lang.String).toCharArray()");
                             char[] cArrCopyOf = Arrays.copyOf(charArray, charArray.length);
-                            bzo.q(cArrCopyOf, "chars");
+                            throwIfVar1IsNull(cArrCopyOf, "chars");
                             int length = strAu2.length();
                             for (int i = 0; i < length; i++) {
                                 char cCharAt = strAu2.charAt(i);
@@ -110,12 +112,13 @@ public final class ckw {
                                 strAx = null;
                             }
                             if (strAx == null) {
-                                strAx = dnj.ax((String) aaz.l(response.request().url().pathSegments()), TypeDescription.Generic.OfWildcardType.SYMBOL);
+                                strAx = dnj.ax((String) aaz.l(response.request().url().pathSegments()),
+                                        TypeDescription.Generic.OfWildcardType.SYMBOL);
                                 if (dnj.ak(strAx)) {
                                     strAx = "unknown_" + System.currentTimeMillis();
                                 } else {
                                     request = response.request();
-                                    bzo.q(request, "<this>");
+                                    throwIfVar1IsNull(request, "<this>");
                                     if (request.tag(cnf.class) != null) {
                                         throw new ClassCastException();
                                     }
@@ -123,12 +126,13 @@ public final class ckw {
                             }
                         }
                     } else {
-                        strAx = dnj.ax((String) aaz.l(response.request().url().pathSegments()), TypeDescription.Generic.OfWildcardType.SYMBOL);
+                        strAx = dnj.ax((String) aaz.l(response.request().url().pathSegments()),
+                                TypeDescription.Generic.OfWildcardType.SYMBOL);
                         if (dnj.ak(strAx)) {
                             strAx = "unknown_" + System.currentTimeMillis();
                         } else {
                             request = response.request();
-                            bzo.q(request, "<this>");
+                            throwIfVar1IsNull(request, "<this>");
                             if (request.tag(cnf.class) != null) {
                                 throw new ClassCastException();
                             }
@@ -140,25 +144,25 @@ public final class ckw {
                 char c = File.separatorChar;
                 int iAm = dnj.am(absolutePath, c, 0, 6);
                 if (iAm != -1) {
-                    bzo.p(absolutePath.substring(0, iAm), "substring(...)");
+                    throwIfVar1IsNull(absolutePath.substring(0, iAm), "substring(...)");
                 }
                 dnj.av(c, absolutePath, absolutePath);
             }
             try {
                 if (file.exists()) {
                     Request request4 = response.request();
-                    bzo.q(request4, "<this>");
+                    throwIfVar1IsNull(request4, "<this>");
                     if (request4.tag(cnd.class) != null) {
                         throw new ClassCastException();
                     }
                     Request request5 = response.request();
-                    bzo.q(request5, "<this>");
+                    throwIfVar1IsNull(request5, "<this>");
                     if (request5.tag(cnb.class) != null) {
                         throw new ClassCastException();
                     }
                 }
                 Request request6 = response.request();
-                bzo.q(request6, "<this>");
+                throwIfVar1IsNull(request6, "<this>");
                 if (request6.tag(cnh.class) != null) {
                     throw new ClassCastException();
                 }
@@ -173,7 +177,7 @@ public final class ckw {
                         Util.closeQuietly(rmVarSource);
                         cykVarAg.close();
                         Request request7 = response.request();
-                        bzo.q(request7, "<this>");
+                        throwIfVar1IsNull(request7, "<this>");
                         if (request7.tag(cnh.class) == null) {
                             return file;
                         }
@@ -189,7 +193,7 @@ public final class ckw {
                 }
             } catch (SocketException e) {
                 Request request8 = response.request();
-                bzo.q(request8, "<this>");
+                throwIfVar1IsNull(request8, "<this>");
                 if (request8.tag(cnh.class) != null) {
                     throw new ClassCastException();
                 }

@@ -18,11 +18,11 @@ public final class brr implements btd {
     @Override // me.hd.wauxv.obf.btd
     public final void c(avt avtVar, Object obj) {
         brp brpVar = (brp) obj;
-        bzo.q(brpVar, "value");
+        throwIfVar1IsNull(brpVar, "value");
         cnb.l(avtVar);
         bsb bsbVar = bsb.b;
         dfx descriptor = bsbVar.getDescriptor();
-        bzo.q(descriptor, "elementDesc");
+        throwIfVar1IsNull(descriptor, "elementDesc");
         kl klVar = new kl(descriptor, 1);
         int size = brpVar.size();
         acn acnVarV = avtVar.v(klVar, size);

@@ -36,11 +36,14 @@ public final class ays {
             return false;
         }
         ays aysVar = (ays) obj;
-        return this.a == aysVar.a && bzo.f(this.b, aysVar.b) && bzo.f(this.c, aysVar.c) && this.d == aysVar.d && bzo.f(this.e, aysVar.e) && bzo.f(this.f, aysVar.f);
+        return this.a == aysVar.a && nullSafeIsEqual(this.b, aysVar.b) && nullSafeIsEqual(this.c, aysVar.c)
+                && this.d == aysVar.d
+                && nullSafeIsEqual(this.e, aysVar.e) && nullSafeIsEqual(this.f, aysVar.f);
     }
 
     public final int hashCode() {
-        int iE = bjs.e(this.e, dts.a(this.d, bjs.e(this.c, bjs.e(this.b, Integer.hashCode(this.a) * 31, 31), 31), 31), 31);
+        int iE = bjs.e(this.e, dts.a(this.d, bjs.e(this.c, bjs.e(this.b, Integer.hashCode(this.a) * 31, 31), 31), 31),
+                31);
         String str = this.f;
         return iE + (str == null ? 0 : str.hashCode());
     }
@@ -53,6 +56,6 @@ public final class ays {
         yg.u(sb, this.c, -130403797039914L);
         dkz.ac(sb, this.d, -130386617170730L);
         yg.u(sb, this.e, -130313602726698L);
-        return bjs.q(sb, this.f, ')');
+        return concat(sb, this.f, ')');
     }
 }

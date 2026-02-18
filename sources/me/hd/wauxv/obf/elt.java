@@ -28,7 +28,7 @@ public final class elt {
     }
 
     public final String toString() {
-        StringBuilder sbR = bjs.r("TransitionValues@" + Integer.toHexString(hashCode()) + ":\n", "    view = ");
+        StringBuilder sbR = concat("TransitionValues@" + Integer.toHexString(hashCode()) + ":\n", "    view = ");
         sbR.append(this.b);
         sbR.append("\n");
         String strS = dkz.s(sbR.toString(), "    values:");

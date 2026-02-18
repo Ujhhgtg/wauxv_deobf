@@ -10,7 +10,7 @@ import java.util.HashMap;
 public final class aop implements aoh {
     public final File b;
     public aoo e;
-    public final io d = new io(14);
+    public final DefaultConfig d = new DefaultConfig(14);
     public final long c = 262144000;
     public final but a = new but(8);
 
@@ -54,7 +54,7 @@ public final class aop implements aoh {
     public final void y(btj btjVar, jx jxVar) {
         aoj aojVar;
         String strS = this.a.s(btjVar);
-        io ioVar = this.d;
+        DefaultConfig ioVar = this.d;
         synchronized (ioVar) {
             aojVar = (aoj) ((HashMap) ioVar.c).get(strS);
             if (aojVar == null) {

@@ -22,7 +22,10 @@ public class beq extends ckl {
     public final bel m = new bel(this, 0);
     public final q n = new q(this, 4);
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class a extends erk {
         public WeakReference a;
 
@@ -30,7 +33,7 @@ public class beq extends ckl {
         public final void h() {
             WeakReference weakReference = this.a;
             if (weakReference == null) {
-                bzo.ar("completeTransition");
+                throwLateinitPropNotInitYet("completeTransition");
                 throw null;
             }
             bfu bfuVar = (bfu) weakReference.get();
@@ -53,7 +56,7 @@ public class beq extends ckl {
         if (z2) {
             abf.ap(arrayList, new beo(str, 0));
         }
-        arrayList.add(new csm(str, Boolean.valueOf(z)));
+        arrayList.add(new Pair(str, Boolean.valueOf(z)));
     }
 
     public static boolean p() {
@@ -86,7 +89,8 @@ public class beq extends ckl {
                     }
                     o(this, str, 6);
                     if (!muVarT.h) {
-                        throw new IllegalStateException("This FragmentTransaction is not allowed to be added to the back stack.");
+                        throw new IllegalStateException(
+                                "This FragmentTransaction is not allowed to be added to the back stack.");
                     }
                     muVarT.g = true;
                     muVarT.i = str;
@@ -117,8 +121,8 @@ public class beq extends ckl {
             public final void b(beg begVar, bdj bdjVar) {
                 Object obj;
                 Object objPrevious;
-                bzo.q(begVar, "<unused var>");
-                bzo.q(bdjVar, "fragment");
+                throwIfVar1IsNull(begVar, "<unused var>");
+                throwIfVar1IsNull(bdjVar, "fragment");
                 cit citVar2 = citVar;
                 List list = (List) ((dml) citVar2.e.h).c();
                 ListIterator listIterator = list.listIterator(list.size());
@@ -129,7 +133,7 @@ public class beq extends ckl {
                         break;
                     }
                     objPrevious = listIterator.previous();
-                } while (!bzo.f(((cio) objPrevious).f, bdjVar.bs));
+                } while (!nullSafeIsEqual(((cio) objPrevious).f, bdjVar.bs));
                 cio cioVar = (cio) objPrevious;
                 boolean zP = beq.p();
                 beq beqVar = this;
@@ -200,7 +204,8 @@ public class beq extends ckl {
         String str = cioVar.f;
         beg begVar = this.b;
         if (begVar.ci()) {
-            Log.i("FragmentNavigator", "Ignoring onLaunchSingleTop() call: FragmentManager has already saved its state");
+            Log.i("FragmentNavigator",
+                    "Ignoring onLaunchSingleTop() call: FragmentManager has already saved its state");
             return;
         }
         mu muVarT = t(cioVar, null);
@@ -214,7 +219,8 @@ public class beq extends ckl {
             begVar.bu(new bed(begVar, str, -1), false);
             o(this, str, 2);
             if (!muVarT.h) {
-                throw new IllegalStateException("This FragmentTransaction is not allowed to be added to the back stack.");
+                throw new IllegalStateException(
+                        "This FragmentTransaction is not allowed to be added to the back stack.");
             }
             muVarT.g = true;
             muVarT.i = str;
@@ -249,8 +255,9 @@ public class beq extends ckl {
                 }
                 if (z) {
                     for (cio cioVar4 : aaz.r(listSubList)) {
-                        if (bzo.f(cioVar4, cioVar2)) {
-                            Log.i("FragmentNavigator", "FragmentManager cannot save the state of the initial destination " + cioVar4);
+                        if (nullSafeIsEqual(cioVar4, cioVar2)) {
+                            Log.i("FragmentNavigator",
+                                    "FragmentManager cannot save the state of the initial destination " + cioVar4);
                         } else {
                             begVar.bu(new bef(begVar, cioVar4.f, 1), false);
                             this.g.add(cioVar4.f);
@@ -260,7 +267,8 @@ public class beq extends ckl {
                     begVar.bu(new bed(begVar, cioVar.f, -1), false);
                 }
                 if (p()) {
-                    Log.v("FragmentNavigator", "Calling popWithTransition via popBackStack() on entry " + cioVar + " with savedState " + z);
+                    Log.v("FragmentNavigator", "Calling popWithTransition via popBackStack() on entry " + cioVar
+                            + " with savedState " + z);
                 }
                 w().n(cioVar, z);
                 return;
@@ -276,20 +284,20 @@ public class beq extends ckl {
                     i = -1;
                     break;
                 }
-                csm csmVar = (csm) it3.next();
-                bzo.q(csmVar, "it");
-                String str2 = (String) csmVar.a;
+                Pair pairVar = (Pair) it3.next();
+                throwIfVar1IsNull(pairVar, "it");
+                String str2 = (String) pairVar.a;
                 if (i2 < 0) {
                     aba.aj();
                     throw null;
                 }
-                if (bzo.f(str, str2)) {
+                if (nullSafeIsEqual(str, str2)) {
                     i = i2;
                     break;
                 }
                 i2++;
             }
-            if ((i >= 0) || !bzo.f(cioVar5.f, cioVar2.f)) {
+            if ((i >= 0) || !nullSafeIsEqual(cioVar5.f, cioVar2.f)) {
                 arrayList.add(next);
             }
         }
@@ -311,29 +319,31 @@ public class beq extends ckl {
         if (linkedHashSet.isEmpty()) {
             return null;
         }
-        return bht.r(new csm("androidx-nav-fragment:navigator:savedIds", new ArrayList(linkedHashSet)));
+        return bht.r(new Pair("androidx-nav-fragment:navigator:savedIds", new ArrayList(linkedHashSet)));
     }
 
     public final void s(bdj bdjVar, cio cioVar, cit citVar) {
-        bzo.q(bdjVar, "fragment");
+        throwIfVar1IsNull(bdjVar, "fragment");
         erq erqVarAj = bdjVar.aj();
         bpg bpgVar = new bpg(0);
         bpgVar.b(dal.b(a.class), new bep(0));
         bmu bmuVarC = bpgVar.c();
         ahv ahvVar = ahv.a;
-        bzo.q(ahvVar, "defaultCreationExtras");
+        throwIfVar1IsNull(ahvVar, "defaultCreationExtras");
         chm chmVar = new chm(erqVarAj, bmuVarC, ahvVar);
         zc zcVarB = dal.b(a.class);
         String strAo = emc.ao(zcVarB);
         if (strAo == null) {
             throw new IllegalArgumentException("Local and anonymous classes can not be ViewModels");
         }
-        ((a) chmVar.ah("androidx.lifecycle.ViewModelProvider.DefaultKey:".concat(strAo), zcVarB)).a = new WeakReference(new ls(cioVar, citVar, this, bdjVar));
+        ((a) chmVar.ah("androidx.lifecycle.ViewModelProvider.DefaultKey:".concat(strAo), zcVarB)).a = new WeakReference(
+                new ls(cioVar, citVar, this, bdjVar));
     }
 
     public final mu t(cio cioVar, cjo cjoVar) {
         cjg cjgVar = cioVar.b;
-        bzo.o(cjgVar, "null cannot be cast to non-null type androidx.navigation.fragment.FragmentNavigator.Destination");
+        throwIfVar1IsNull(cjgVar,
+                "null cannot be cast to non-null type androidx.navigation.fragment.FragmentNavigator.Destination");
         Bundle bundleL = cioVar.h.l();
         String str = ((ber) cjgVar).a;
         if (str == null) {
@@ -348,7 +358,7 @@ public class beq extends ckl {
         bdz bdzVarCe = begVar.ce();
         context.getClassLoader();
         bdj bdjVarE = bdzVarCe.e(str);
-        bzo.p(bdjVarE, "instantiate(...)");
+        throwIfVar1IsNull(bdjVarE, "instantiate(...)");
         bdjVarE.df(bundleL);
         mu muVar = new mu(begVar);
         int i = cjoVar != null ? cjoVar.f : -1;

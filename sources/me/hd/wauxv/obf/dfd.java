@@ -34,8 +34,8 @@ public final class dfd extends czl {
         q();
     }
 
-    /* JADX WARN: Found duplicated region for block: B:15:0x002a  */
-    /* JADX WARN: Found duplicated region for block: B:17:0x002e  */
+    /* JADX WARN: Found duplicated region for block: B:15:0x002a */
+    /* JADX WARN: Found duplicated region for block: B:17:0x002e */
     @Override // me.hd.wauxv.obf.czl
     public final void b(RecyclerView recyclerView, int i, int i2) {
         int i3;
@@ -175,9 +175,12 @@ public final class dfd extends czl {
         this.n = false;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:61:0x0134  */
-    /* JADX WARN: Found duplicated region for block: B:65:0x0140  */
-    /* JADX WARN: Found duplicated region for block: B:67:0x014a A[LOOP:2: B:64:0x013e->B:67:0x014a, LOOP_END] */
+    /* JADX WARN: Found duplicated region for block: B:61:0x0134 */
+    /* JADX WARN: Found duplicated region for block: B:65:0x0140 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:67:0x014a A[LOOP:2:
+     * B:64:0x013e->B:67:0x014a, LOOP_END]
+     */
     /* JADX WARN: Found duplicated region for block: B:82:0x014d A[SYNTHETIC] */
     public final void r() {
         int top;
@@ -244,7 +247,9 @@ public final class dfd extends czl {
                     throw new IllegalStateException("null view contained in the view hierarchy");
                 }
                 ViewGroup.LayoutParams layoutParams2 = viewEr.getLayoutParams();
-                ViewGroup.MarginLayoutParams marginLayoutParams2 = layoutParams2 instanceof ViewGroup.MarginLayoutParams ? (ViewGroup.MarginLayoutParams) layoutParams2 : ey.a;
+                ViewGroup.MarginLayoutParams marginLayoutParams2 = layoutParams2 instanceof ViewGroup.MarginLayoutParams
+                        ? (ViewGroup.MarginLayoutParams) layoutParams2
+                        : ey.a;
                 int[] iArr2 = iArr[i9];
                 if (z) {
                     top2 = viewEr.getLeft();
@@ -282,7 +287,8 @@ public final class dfd extends czl {
                 iEs = linearLayoutManager.es();
                 for (int i14 = 0; i14 < iEs; i14++) {
                     if (!ey.b(linearLayoutManager.er(i14))) {
-                        throw new IllegalStateException("Page(s) contain a ViewGroup with a LayoutTransition (or animateLayoutChanges=\"true\"), which interferes with the scrolling animation. Make sure to call getLayoutTransition().setAnimateParentHierarchy(false) on all ViewGroups with a LayoutTransition before an animation is started.");
+                        throw new IllegalStateException(
+                                "Page(s) contain a ViewGroup with a LayoutTransition (or animateLayoutChanges=\"true\"), which interferes with the scrolling animation. Make sure to call getLayoutTransition().setAnimateParentHierarchy(false) on all ViewGroups with a LayoutTransition before an animation is started.");
                     }
                 }
             }
@@ -290,11 +296,13 @@ public final class dfd extends czl {
             iEs = linearLayoutManager.es();
             while (i14 < iEs) {
                 if (!ey.b(linearLayoutManager.er(i14))) {
-                    throw new IllegalStateException("Page(s) contain a ViewGroup with a LayoutTransition (or animateLayoutChanges=\"true\"), which interferes with the scrolling animation. Make sure to call getLayoutTransition().setAnimateParentHierarchy(false) on all ViewGroups with a LayoutTransition before an animation is started.");
+                    throw new IllegalStateException(
+                            "Page(s) contain a ViewGroup with a LayoutTransition (or animateLayoutChanges=\"true\"), which interferes with the scrolling animation. Make sure to call getLayoutTransition().setAnimateParentHierarchy(false) on all ViewGroups with a LayoutTransition before an animation is started.");
                 }
             }
         }
         Locale locale = Locale.US;
-        throw new IllegalStateException(bjs.i(dfcVar.c, "Page can only be offset by a positive amount, not by "));
+        throw new IllegalStateException(
+                concatVar2Var1(dfcVar.c, "Page can only be offset by a positive amount, not by "));
     }
 }

@@ -13,7 +13,7 @@ public final class ctq {
     public String e;
 
     public ctq(int i, List list, List list2, dhx dhxVar) {
-        bzo.q(list2, "elements");
+        throwIfVar1IsNull(list2, "elements");
         this.a = i;
         this.b = list;
         this.c = list2;
@@ -28,7 +28,8 @@ public final class ctq {
             return false;
         }
         ctq ctqVar = (ctq) obj;
-        return this.a == ctqVar.a && bzo.f(this.b, ctqVar.b) && bzo.f(this.c, ctqVar.c) && bzo.f(this.d, ctqVar.d);
+        return this.a == ctqVar.a && nullSafeIsEqual(this.b, ctqVar.b) && nullSafeIsEqual(this.c, ctqVar.c)
+                && nullSafeIsEqual(this.d, ctqVar.d);
     }
 
     public final int hashCode() {
@@ -40,7 +41,8 @@ public final class ctq {
     }
 
     public final String toString() {
-        return "PlaceholderDefinition(id=" + this.a + ", choices=" + this.b + ", elements=" + this.c + ", transform=" + this.d + ")";
+        return "PlaceholderDefinition(id=" + this.a + ", choices=" + this.b + ", elements=" + this.c + ", transform="
+                + this.d + ")";
     }
 
     public /* synthetic */ ctq(int i) {

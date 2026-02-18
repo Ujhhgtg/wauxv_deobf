@@ -11,10 +11,10 @@ public class arf {
     }
 
     public void b(dox doxVar, dox doxVar2, Window window, View view, boolean z, boolean z2) {
-        bzo.q(doxVar, "statusBarStyle");
-        bzo.q(doxVar2, "navigationBarStyle");
-        bzo.q(window, "window");
-        bzo.q(view, "view");
+        throwIfVar1IsNull(doxVar, "statusBarStyle");
+        throwIfVar1IsNull(doxVar2, "navigationBarStyle");
+        throwIfVar1IsNull(window, "window");
+        throwIfVar1IsNull(view, "view");
         bht.ac(window, false);
         window.setStatusBarColor(z ? doxVar.b : doxVar.a);
         window.setNavigationBarColor(z2 ? doxVar2.b : doxVar2.a);

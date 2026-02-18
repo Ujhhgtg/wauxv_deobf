@@ -12,22 +12,22 @@ public final class gn {
     }
 
     public final float c(BackEvent backEvent) {
-        bzo.q(backEvent, "backEvent");
+        throwIfVar1IsNull(backEvent, "backEvent");
         return backEvent.getProgress();
     }
 
     public final int d(BackEvent backEvent) {
-        bzo.q(backEvent, "backEvent");
+        throwIfVar1IsNull(backEvent, "backEvent");
         return backEvent.getSwipeEdge();
     }
 
     public final float e(BackEvent backEvent) {
-        bzo.q(backEvent, "backEvent");
+        throwIfVar1IsNull(backEvent, "backEvent");
         return backEvent.getTouchX();
     }
 
     public final float f(BackEvent backEvent) {
-        bzo.q(backEvent, "backEvent");
+        throwIfVar1IsNull(backEvent, "backEvent");
         return backEvent.getTouchY();
     }
 }

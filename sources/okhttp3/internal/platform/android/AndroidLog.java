@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.concurrent.CopyOnWriteArraySet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.dnj;
 import okhttp3.OkHttpClient;
 import okhttp3.internal.concurrent.TaskRunner;
@@ -31,7 +31,7 @@ public final class AndroidLog {
         linkedHashMap.put(Http2.class.getName(), "okhttp.Http2");
         linkedHashMap.put(TaskRunner.class.getName(), "okhttp.TaskRunner");
         linkedHashMap.put("okhttp3.mockwebserver.MockWebServer", "okhttp.MockWebServer");
-        knownLoggers = bzo.at(linkedHashMap);
+        knownLoggers = KotlinHelpers.at(linkedHashMap);
     }
 
     private AndroidLog() {
@@ -41,7 +41,8 @@ public final class AndroidLog {
         Logger logger = Logger.getLogger(str);
         if (configuredLoggers.add(logger)) {
             logger.setUseParentHandlers(false);
-            logger.setLevel(Log.isLoggable(str2, 3) ? Level.FINE : Log.isLoggable(str2, 4) ? Level.INFO : Level.WARNING);
+            logger.setLevel(
+                    Log.isLoggable(str2, 3) ? Level.FINE : Log.isLoggable(str2, 4) ? Level.INFO : Level.WARNING);
             logger.addHandler(AndroidLogHandler.INSTANCE);
         }
     }
@@ -53,8 +54,8 @@ public final class AndroidLog {
 
     public final void androidLog$okhttp(String str, int i, String str2, Throwable th) {
         int iMin;
-        bzo.q(str, "loggerName");
-        bzo.q(str2, "message");
+        throwIfVar1IsNull(str, "loggerName");
+        throwIfVar1IsNull(str2, "message");
         String strLoggerTag = loggerTag(str);
         if (Log.isLoggable(strLoggerTag, i)) {
             if (th != null) {
@@ -70,7 +71,7 @@ public final class AndroidLog {
                 while (true) {
                     iMin = Math.min(iAh, i2 + MAX_LOG_LENGTH);
                     String strSubstring = str2.substring(i2, iMin);
-                    bzo.p(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
+                    throwIfVar1IsNull(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
                     Log.println(i, strLoggerTag, strSubstring);
                     if (iMin >= iAh) {
                         break;

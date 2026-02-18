@@ -22,7 +22,7 @@ public final class a extends drk {
             chipTextInputComboView.a.setText(ChipTextInputComboView.c(chipTextInputComboView, "00"));
             return;
         }
-        String strC = ChipTextInputComboView.c(chipTextInputComboView, editable);
+        String strC = ChipTextInputComboView.createInstanceWithArgs(chipTextInputComboView, editable);
         Chip chip = chipTextInputComboView.a;
         if (TextUtils.isEmpty(strC)) {
             strC = ChipTextInputComboView.c(chipTextInputComboView, "00");

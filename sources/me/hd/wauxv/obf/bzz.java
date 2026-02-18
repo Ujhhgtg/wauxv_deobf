@@ -19,29 +19,35 @@ public final class bzz extends ArrayAdapter {
     public ColorStateList b;
     public final /* synthetic */ caa c;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'super' call moved to the top of the method (can break code
+     * semantics)
+     */
     public bzz(caa caaVar, Context context, int i, String[] strArr) {
         super(context, i, strArr);
         this.c = caaVar;
         d();
     }
 
-    public final void d() {
+    public final void getArgs() {
         ColorStateList colorStateList;
         caa caaVar = this.c;
         ColorStateList colorStateList2 = caaVar.l;
         ColorStateList colorStateList3 = null;
         if (colorStateList2 != null) {
-            int[] iArr = {R.attr.state_pressed};
-            colorStateList = new ColorStateList(new int[][]{iArr, new int[0]}, new int[]{colorStateList2.getColorForState(iArr, 0), 0});
+            int[] iArr = { R.attr.state_pressed };
+            colorStateList = new ColorStateList(new int[][] { iArr, new int[0] },
+                    new int[] { colorStateList2.getColorForState(iArr, 0), 0 });
         } else {
             colorStateList = null;
         }
         this.b = colorStateList;
         if (caaVar.k != 0 && caaVar.l != null) {
-            int[] iArr2 = {R.attr.state_hovered, -16842919};
-            int[] iArr3 = {R.attr.state_selected, -16842919};
-            colorStateList3 = new ColorStateList(new int[][]{iArr3, iArr2, new int[0]}, new int[]{abi.d(caaVar.l.getColorForState(iArr3, 0), caaVar.k), abi.d(caaVar.l.getColorForState(iArr2, 0), caaVar.k), caaVar.k});
+            int[] iArr2 = { R.attr.state_hovered, -16842919 };
+            int[] iArr3 = { R.attr.state_selected, -16842919 };
+            colorStateList3 = new ColorStateList(new int[][] { iArr3, iArr2, new int[0] },
+                    new int[] { abi.d(caaVar.l.getColorForState(iArr3, 0), caaVar.k),
+                            abi.d(caaVar.l.getColorForState(iArr2, 0), caaVar.k), caaVar.k });
         }
         this.a = colorStateList3;
     }

@@ -38,13 +38,13 @@ import java.util.zip.Inflater;
 /* JADX INFO: loaded from: classes.dex */
 public abstract class ewz {
     public static final awp q = new awp(3);
-    public static final byte[] r = {JSONB.Constants.BC_INT32_BYTE_MIN, 49, 53, 0};
-    public static final byte[] s = {JSONB.Constants.BC_INT32_BYTE_MIN, 49, JSONB.Constants.BC_INT32_BYTE_MIN, 0};
-    public static final byte[] t = {JSONB.Constants.BC_INT32_BYTE_MIN, JSONB.Constants.BC_INT32_BYTE_MIN, 57, 0};
-    public static final byte[] u = {JSONB.Constants.BC_INT32_BYTE_MIN, JSONB.Constants.BC_INT32_BYTE_MIN, 53, 0};
-    public static final byte[] v = {JSONB.Constants.BC_INT32_BYTE_MIN, JSONB.Constants.BC_INT32_BYTE_MIN, 49, 0};
-    public static final byte[] w = {JSONB.Constants.BC_INT32_BYTE_MIN, JSONB.Constants.BC_INT32_BYTE_MIN, 49, 0};
-    public static final byte[] x = {JSONB.Constants.BC_INT32_BYTE_MIN, JSONB.Constants.BC_INT32_BYTE_MIN, 50, 0};
+    public static final byte[] r = { JSONB.Constants.BC_INT32_BYTE_MIN, 49, 53, 0 };
+    public static final byte[] s = { JSONB.Constants.BC_INT32_BYTE_MIN, 49, JSONB.Constants.BC_INT32_BYTE_MIN, 0 };
+    public static final byte[] t = { JSONB.Constants.BC_INT32_BYTE_MIN, JSONB.Constants.BC_INT32_BYTE_MIN, 57, 0 };
+    public static final byte[] u = { JSONB.Constants.BC_INT32_BYTE_MIN, JSONB.Constants.BC_INT32_BYTE_MIN, 53, 0 };
+    public static final byte[] v = { JSONB.Constants.BC_INT32_BYTE_MIN, JSONB.Constants.BC_INT32_BYTE_MIN, 49, 0 };
+    public static final byte[] w = { JSONB.Constants.BC_INT32_BYTE_MIN, JSONB.Constants.BC_INT32_BYTE_MIN, 49, 0 };
+    public static final byte[] x = { JSONB.Constants.BC_INT32_BYTE_MIN, JSONB.Constants.BC_INT32_BYTE_MIN, 50, 0 };
 
     public static final String aa(CharSequence charSequence) {
         if (charSequence == null) {
@@ -63,13 +63,22 @@ public abstract class ewz {
         }
     }
 
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getInstructions()" because "finallyBlockTerminus" is null
-    	at jadx.core.dex.visitors.finaly.traverser.state.TraverserActivePathState.<init>(TraverserActivePathState.java:253)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.findCommonInsns(MarkFinallyVisitor.java:422)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.extractFinally(MarkFinallyVisitor.java:302)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.processTryBlock(MarkFinallyVisitor.java:222)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:150)
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getInstructions()" because
+     * "finallyBlockTerminus" is null
+     * at
+     * jadx.core.dex.visitors.finaly.traverser.state.TraverserActivePathState.<init>
+     * (TraverserActivePathState.java:253)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.findCommonInsns(
+     * MarkFinallyVisitor.java:422)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.extractFinally(
+     * MarkFinallyVisitor.java:302)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.processTryBlock(
+     * MarkFinallyVisitor.java:222)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:150)
      */
     public static byte[] ac(byte[] bArr) {
         Deflater deflater = new Deflater(1);
@@ -282,7 +291,7 @@ public abstract class ewz {
             return degVar;
         }
         if (iOrdinal != 2) {
-            throw new abt();
+            throw new QueryDidNotReturnUniqueResultRuntimeException();
         }
         enz enzVar = new enz();
         enzVar.a = bfuVar;
@@ -327,7 +336,8 @@ public abstract class ewz {
             return null;
         }
         try {
-            FileInputStream fileInputStream = new FileInputStream(parcelFileDescriptorOpenFileDescriptor.getFileDescriptor());
+            FileInputStream fileInputStream = new FileInputStream(
+                    parcelFileDescriptorOpenFileDescriptor.getFileDescriptor());
             try {
                 FileChannel channel = fileInputStream.getChannel();
                 MappedByteBuffer map = channel.map(FileChannel.MapMode.READ_ONLY, 0L, channel.size());
@@ -376,7 +386,7 @@ public abstract class ewz {
         }
     }
 
-    public static final void aq(Object obj, bgf bgfVar) {
+    public static final void aq(Object obj, IHasInvokeMethod bgfVar) {
         ((Handler) bij.a.getValue()).post(new bjt(bgfVar, obj, 0));
     }
 
@@ -386,7 +396,7 @@ public abstract class ewz {
         while (i2 < i) {
             int i3 = inputStream.read(bArr, i2, i - i2);
             if (i3 < 0) {
-                throw new IllegalStateException(bjs.i(i, "Not enough bytes to read: "));
+                throw new IllegalStateException(concatVar2Var1(i, "Not enough bytes to read: "));
             }
             i2 += i3;
         }
@@ -403,7 +413,8 @@ public abstract class ewz {
             while (!inflater.finished() && !inflater.needsDictionary() && i3 < i) {
                 int i4 = fileInputStream.read(bArr2);
                 if (i4 < 0) {
-                    throw new IllegalStateException("Invalid zip data. Stream ended after $totalBytesRead bytes. Expected " + i + " bytes");
+                    throw new IllegalStateException(
+                            "Invalid zip data. Stream ended after $totalBytesRead bytes. Expected " + i + " bytes");
                 }
                 inflater.setInput(bArr2, 0, i4);
                 try {
@@ -420,7 +431,8 @@ public abstract class ewz {
                 inflater.end();
                 return bArr;
             }
-            throw new IllegalStateException("Didn't read enough bytes during decompression. expected=" + i + " actual=" + i3);
+            throw new IllegalStateException(
+                    "Didn't read enough bytes during decompression. expected=" + i + " actual=" + i3);
         } catch (Throwable th) {
             inflater.end();
             throw th;
@@ -510,7 +522,7 @@ public abstract class ewz {
                 str = i >= 26 ? "038" : i >= 24 ? "037" : "035";
             }
         }
-        return bjs.o("dex\n", str, "\u0000");
+        return concat("dex\n", str, "\u0000");
     }
 
     public abstract int c(ViewGroup.MarginLayoutParams marginLayoutParams);

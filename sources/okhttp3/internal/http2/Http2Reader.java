@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.bjs;
 import me.hd.wauxv.obf.bqf;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.dkz;
 import me.hd.wauxv.obf.dlc;
 import me.hd.wauxv.obf.dqc;
@@ -32,7 +32,10 @@ public final class Http2Reader implements Closeable {
     private final Hpack.Reader hpackReader;
     private final rm source;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
@@ -56,7 +59,10 @@ public final class Http2Reader implements Closeable {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class ContinuationSource implements dlc {
         private int flags;
         private int left;
@@ -66,7 +72,7 @@ public final class Http2Reader implements Closeable {
         private int streamId;
 
         public ContinuationSource(rm rmVar) {
-            bzo.q(rmVar, "source");
+            throwIfVar1IsNull(rmVar, "source");
             this.source = rmVar;
         }
 
@@ -118,7 +124,7 @@ public final class Http2Reader implements Closeable {
 
         @Override // me.hd.wauxv.obf.dlc
         public long read(rh rhVar, long j) throws IOException {
-            bzo.q(rhVar, "sink");
+            throwIfVar1IsNull(rhVar, "sink");
             while (true) {
                 int i = this.left;
                 if (i != 0) {
@@ -164,7 +170,10 @@ public final class Http2Reader implements Closeable {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface Handler {
         void ackSettings();
 
@@ -191,12 +200,12 @@ public final class Http2Reader implements Closeable {
 
     static {
         Logger logger2 = Logger.getLogger(Http2.class.getName());
-        bzo.p(logger2, "getLogger(Http2::class.java.name)");
+        throwIfVar1IsNull(logger2, "getLogger(Http2::class.java.name)");
         logger = logger2;
     }
 
     public Http2Reader(rm rmVar, boolean z) {
-        bzo.q(rmVar, "source");
+        throwIfVar1IsNull(rmVar, "source");
         this.source = rmVar;
         this.client = z;
         ContinuationSource continuationSource = new ContinuationSource(rmVar);
@@ -219,7 +228,7 @@ public final class Http2Reader implements Closeable {
 
     private final void readGoAway(Handler handler, int i, int i2, int i3) throws IOException {
         if (i < 8) {
-            throw new IOException(bjs.i(i, "TYPE_GOAWAY length < 8: "));
+            throw new IOException(concatVar2Var1(i, "TYPE_GOAWAY length < 8: "));
         }
         if (i3 != 0) {
             throw new IOException("TYPE_GOAWAY streamId != 0");
@@ -229,7 +238,7 @@ public final class Http2Reader implements Closeable {
         int i6 = i - 8;
         ErrorCode errorCodeFromHttp2 = ErrorCode.Companion.fromHttp2(i5);
         if (errorCodeFromHttp2 == null) {
-            throw new IOException(bjs.i(i5, "TYPE_GOAWAY unexpected error code: "));
+            throw new IOException(concatVar2Var1(i5, "TYPE_GOAWAY unexpected error code: "));
         }
         sj sjVarE = sj.a;
         if (i6 > 0) {
@@ -264,7 +273,7 @@ public final class Http2Reader implements Closeable {
 
     private final void readPing(Handler handler, int i, int i2, int i3) throws IOException {
         if (i != 8) {
-            throw new IOException(bjs.i(i, "TYPE_PING length != 8: "));
+            throw new IOException(concatVar2Var1(i, "TYPE_PING length != 8: "));
         }
         if (i3 != 0) {
             throw new IOException("TYPE_PING streamId != 0");
@@ -287,7 +296,8 @@ public final class Http2Reader implements Closeable {
             throw new IOException("PROTOCOL_ERROR: TYPE_PUSH_PROMISE streamId == 0");
         }
         int iAnd = (i2 & 8) != 0 ? Util.and(this.source.readByte(), Opcodes.CONST_METHOD_TYPE) : 0;
-        handler.pushPromise(i3, this.source.readInt() & Integer.MAX_VALUE, readHeaderBlock(Companion.lengthWithoutPadding(i - 4, i2, iAnd), iAnd, i2, i3));
+        handler.pushPromise(i3, this.source.readInt() & Integer.MAX_VALUE,
+                readHeaderBlock(Companion.lengthWithoutPadding(i - 4, i2, iAnd), iAnd, i2, i3));
     }
 
     private final void readRstStream(Handler handler, int i, int i2, int i3) throws IOException {
@@ -300,7 +310,7 @@ public final class Http2Reader implements Closeable {
         int i4 = this.source.readInt();
         ErrorCode errorCodeFromHttp2 = ErrorCode.Companion.fromHttp2(i4);
         if (errorCodeFromHttp2 == null) {
-            throw new IOException(bjs.i(i4, "TYPE_RST_STREAM unexpected error code: "));
+            throw new IOException(concatVar2Var1(i4, "TYPE_RST_STREAM unexpected error code: "));
         }
         handler.rstStream(i3, errorCodeFromHttp2);
     }
@@ -317,7 +327,7 @@ public final class Http2Reader implements Closeable {
             return;
         }
         if (i % 6 != 0) {
-            throw new IOException(bjs.i(i, "TYPE_SETTINGS length % 6 != 0: "));
+            throw new IOException(concatVar2Var1(i, "TYPE_SETTINGS length % 6 != 0: "));
         }
         Settings settings = new Settings();
         bqf bqfVarBj = dqc.bj(dqc.bm(0, i), 6);
@@ -333,7 +343,7 @@ public final class Http2Reader implements Closeable {
                         iAnd = 4;
                     } else if (iAnd != 4) {
                         if (iAnd == 5 && (i7 < 16384 || i7 > 16777215)) {
-                            throw new IOException(bjs.i(i7, "PROTOCOL_ERROR SETTINGS_MAX_FRAME_SIZE: "));
+                            throw new IOException(concatVar2Var1(i7, "PROTOCOL_ERROR SETTINGS_MAX_FRAME_SIZE: "));
                         }
                     } else {
                         if (i7 < 0) {
@@ -355,7 +365,7 @@ public final class Http2Reader implements Closeable {
 
     private final void readWindowUpdate(Handler handler, int i, int i2, int i3) throws IOException {
         if (i != 4) {
-            throw new IOException(bjs.i(i, "TYPE_WINDOW_UPDATE length !=4: "));
+            throw new IOException(concatVar2Var1(i, "TYPE_WINDOW_UPDATE length !=4: "));
         }
         long jAnd = Util.and(this.source.readInt(), 2147483647L);
         if (jAnd == 0) {
@@ -370,12 +380,12 @@ public final class Http2Reader implements Closeable {
     }
 
     public final boolean nextFrame(boolean z, Handler handler) throws IOException {
-        bzo.q(handler, "handler");
+        throwIfVar1IsNull(handler, "handler");
         try {
             this.source.ah(9L);
             int medium = Util.readMedium(this.source);
             if (medium > 16384) {
-                throw new IOException(bjs.i(medium, "FRAME_SIZE_ERROR: "));
+                throw new IOException(concatVar2Var1(medium, "FRAME_SIZE_ERROR: "));
             }
             int iAnd = Util.and(this.source.readByte(), Opcodes.CONST_METHOD_TYPE);
             int iAnd2 = Util.and(this.source.readByte(), Opcodes.CONST_METHOD_TYPE);
@@ -425,7 +435,7 @@ public final class Http2Reader implements Closeable {
     }
 
     public final void readConnectionPreface(Handler handler) throws IOException {
-        bzo.q(handler, "handler");
+        throwIfVar1IsNull(handler, "handler");
         if (this.client) {
             if (!nextFrame(true, handler)) {
                 throw new IOException("Required SETTINGS preface not received");
@@ -446,6 +456,7 @@ public final class Http2Reader implements Closeable {
 
     private final void readPriority(Handler handler, int i) {
         int i2 = this.source.readInt();
-        handler.priority(i, i2 & Integer.MAX_VALUE, Util.and(this.source.readByte(), Opcodes.CONST_METHOD_TYPE) + 1, (Integer.MIN_VALUE & i2) != 0);
+        handler.priority(i, i2 & Integer.MAX_VALUE, Util.and(this.source.readByte(), Opcodes.CONST_METHOD_TYPE) + 1,
+                (Integer.MIN_VALUE & i2) != 0);
     }
 }

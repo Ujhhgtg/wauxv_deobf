@@ -6,7 +6,7 @@ import okhttp3.Request;
 /* JADX INFO: loaded from: classes.dex */
 public abstract class dbv {
     public static final void a(Request.Builder builder, eme emeVar) {
-        bzo.q(builder, "<this>");
+        throwIfVar1IsNull(builder, "<this>");
         builder.tag(cnj.class, new cnj(emeVar));
     }
 }

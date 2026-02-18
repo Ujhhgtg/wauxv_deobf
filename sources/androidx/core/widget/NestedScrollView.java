@@ -48,7 +48,7 @@ import me.hd.wauxv.obf.ewz;
 public class NestedScrollView extends FrameLayout implements cku, ckr {
     public static final float a = (float) (Math.log(0.78d) / Math.log(0.9d));
     public static final cah b = new cah(3);
-    public static final int[] c = {R.attr.fillViewport};
+    public static final int[] c = { R.attr.fillViewport };
     public ckq aa;
     public final cjn ab;
     public final cks ac;
@@ -102,7 +102,8 @@ public class NestedScrollView extends FrameLayout implements cku, ckr {
         this.s = viewConfiguration.getScaledTouchSlop();
         this.t = viewConfiguration.getScaledMinimumFlingVelocity();
         this.u = viewConfiguration.getScaledMaximumFlingVelocity();
-        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, c, me.hd.wauxv.R.attr.nestedScrollViewStyle, 0);
+        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, c,
+                me.hd.wauxv.R.attr.nestedScrollViewStyle, 0);
         setFillViewport(typedArrayObtainStyledAttributes.getBoolean(0, false));
         typedArrayObtainStyledAttributes.recycle();
         this.ab = new cjn();
@@ -189,7 +190,9 @@ public class NestedScrollView extends FrameLayout implements cku, ckr {
                 maxScrollAmount = getScrollY();
             } else if (i == 130 && getChildCount() > 0) {
                 View childAt = getChildAt(0);
-                maxScrollAmount = Math.min((childAt.getBottom() + ((FrameLayout.LayoutParams) childAt.getLayoutParams()).bottomMargin) - ((getHeight() + getScrollY()) - getPaddingBottom()), maxScrollAmount);
+                maxScrollAmount = Math
+                        .min((childAt.getBottom() + ((FrameLayout.LayoutParams) childAt.getLayoutParams()).bottomMargin)
+                                - ((getHeight() + getScrollY()) - getPaddingBottom()), maxScrollAmount);
             }
             if (maxScrollAmount == 0) {
                 return false;
@@ -227,10 +230,13 @@ public class NestedScrollView extends FrameLayout implements cku, ckr {
         }
         View childAt = getChildAt(0);
         FrameLayout.LayoutParams layoutParams = (FrameLayout.LayoutParams) childAt.getLayoutParams();
-        int i2 = rect.bottom < (childAt.getHeight() + layoutParams.topMargin) + layoutParams.bottomMargin ? i - verticalFadingEdgeLength : i;
+        int i2 = rect.bottom < (childAt.getHeight() + layoutParams.topMargin) + layoutParams.bottomMargin
+                ? i - verticalFadingEdgeLength
+                : i;
         int i3 = rect.bottom;
         if (i3 > i2 && rect.top > scrollY) {
-            return Math.min(rect.height() > height ? rect.top - scrollY : rect.bottom - i2, (childAt.getBottom() + layoutParams.bottomMargin) - i);
+            return Math.min(rect.height() > height ? rect.top - scrollY : rect.bottom - i2,
+                    (childAt.getBottom() + layoutParams.bottomMargin) - i);
         }
         if (rect.top >= scrollY || i3 >= i2) {
             return 0;
@@ -238,8 +244,8 @@ public class NestedScrollView extends FrameLayout implements cku, ckr {
         return Math.max(rect.height() > height ? 0 - (i2 - rect.bottom) : 0 - (scrollY - rect.top), -getScrollY());
     }
 
-    /* JADX WARN: Found duplicated region for block: B:48:0x0098  */
-    /* JADX WARN: Found duplicated region for block: B:54:0x00ab  */
+    /* JADX WARN: Found duplicated region for block: B:48:0x0098 */
+    /* JADX WARN: Found duplicated region for block: B:54:0x00ab */
     public final boolean ao(KeyEvent keyEvent) {
         View viewFindFocus;
         View viewFindNextFocus;
@@ -247,7 +253,8 @@ public class NestedScrollView extends FrameLayout implements cku, ckr {
         if (getChildCount() > 0) {
             View childAt = getChildAt(0);
             FrameLayout.LayoutParams layoutParams = (FrameLayout.LayoutParams) childAt.getLayoutParams();
-            if (childAt.getHeight() + layoutParams.topMargin + layoutParams.bottomMargin > (getHeight() - getPaddingTop()) - getPaddingBottom()) {
+            if (childAt.getHeight() + layoutParams.topMargin
+                    + layoutParams.bottomMargin > (getHeight() - getPaddingTop()) - getPaddingBottom()) {
                 if (keyEvent.getAction() == 0) {
                     int keyCode = keyEvent.getKeyCode();
                     if (keyCode == 19) {
@@ -318,7 +325,8 @@ public class NestedScrollView extends FrameLayout implements cku, ckr {
         rect.bottom = height;
         if (z && (childCount = getChildCount()) > 0) {
             View childAt = getChildAt(childCount - 1);
-            int paddingBottom = getPaddingBottom() + childAt.getBottom() + ((FrameLayout.LayoutParams) childAt.getLayoutParams()).bottomMargin;
+            int paddingBottom = getPaddingBottom() + childAt.getBottom()
+                    + ((FrameLayout.LayoutParams) childAt.getLayoutParams()).bottomMargin;
             rect.bottom = paddingBottom;
             rect.top = paddingBottom - height;
         }
@@ -405,7 +413,8 @@ public class NestedScrollView extends FrameLayout implements cku, ckr {
             int childCount = getChildCount();
             if (childCount > 0) {
                 View childAt = getChildAt(childCount - 1);
-                int paddingBottom = getPaddingBottom() + childAt.getBottom() + ((FrameLayout.LayoutParams) childAt.getLayoutParams()).bottomMargin;
+                int paddingBottom = getPaddingBottom() + childAt.getBottom()
+                        + ((FrameLayout.LayoutParams) childAt.getLayoutParams()).bottomMargin;
                 if (rect.top + height > paddingBottom) {
                     rect.top = paddingBottom - height;
                 }
@@ -423,7 +432,7 @@ public class NestedScrollView extends FrameLayout implements cku, ckr {
         aw(i, i2, i3);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:32:0x0068  */
+    /* JADX WARN: Found duplicated region for block: B:32:0x0068 */
     public final boolean aw(int i, int i2, int i3) {
         boolean z;
         int height = getHeight();
@@ -471,8 +480,8 @@ public class NestedScrollView extends FrameLayout implements cku, ckr {
         return z;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:52:0x0118  */
-    /* JADX WARN: Found duplicated region for block: B:59:0x0129  */
+    /* JADX WARN: Found duplicated region for block: B:52:0x0118 */
+    /* JADX WARN: Found duplicated region for block: B:59:0x0129 */
     public final int ax(int i, int i2, MotionEvent motionEvent, int i3, int i4, boolean z) {
         int i5;
         int i6;
@@ -500,7 +509,8 @@ public class NestedScrollView extends FrameLayout implements cku, ckr {
         boolean z5 = au(i5, 0, scrollY, scrollRange) && !cksVar.k(i4);
         int scrollY2 = getScrollY() - scrollY;
         if (motionEvent != null && scrollY2 != 0) {
-            getScrollFeedbackProvider().a.onScrollProgress(motionEvent.getDeviceId(), motionEvent.getSource(), i2, scrollY2);
+            getScrollFeedbackProvider().a.onScrollProgress(motionEvent.getDeviceId(), motionEvent.getSource(), i2,
+                    scrollY2);
         }
         iArr2[1] = 0;
         this.ac.i(0, scrollY2, 0, i5 - scrollY2, this.w, i4, iArr2);
@@ -514,7 +524,8 @@ public class NestedScrollView extends FrameLayout implements cku, ckr {
                 cnd.bb(edgeEffect, i8 / getHeight(), 1.0f - (i3 / getWidth()));
                 if (motionEvent != null) {
                     z2 = false;
-                    getScrollFeedbackProvider().a.onScrollLimit(motionEvent.getDeviceId(), motionEvent.getSource(), i2, false);
+                    getScrollFeedbackProvider().a.onScrollLimit(motionEvent.getDeviceId(), motionEvent.getSource(), i2,
+                            false);
                 } else {
                     z2 = false;
                 }
@@ -541,7 +552,8 @@ public class NestedScrollView extends FrameLayout implements cku, ckr {
         if (z4) {
             cnd.bb(edgeEffect2, (-i8) / getHeight(), i3 / getWidth());
             if (motionEvent != null) {
-                getScrollFeedbackProvider().a.onScrollLimit(motionEvent.getDeviceId(), motionEvent.getSource(), i2, true);
+                getScrollFeedbackProvider().a.onScrollLimit(motionEvent.getDeviceId(), motionEvent.getSource(), i2,
+                        true);
             }
             if (!edgeEffect.isFinished()) {
                 edgeEffect.onRelease();
@@ -643,16 +655,16 @@ public class NestedScrollView extends FrameLayout implements cku, ckr {
         return super.computeHorizontalScrollRange();
     }
 
-    /* JADX WARN: Found duplicated region for block: B:22:0x0087  */
-    /* JADX WARN: Found duplicated region for block: B:24:0x0096  */
-    /* JADX WARN: Found duplicated region for block: B:26:0x00bc  */
+    /* JADX WARN: Found duplicated region for block: B:22:0x0087 */
+    /* JADX WARN: Found duplicated region for block: B:24:0x0096 */
+    /* JADX WARN: Found duplicated region for block: B:26:0x00bc */
     /* JADX WARN: Found duplicated region for block: B:30:0x00c6 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:31:0x00c8  */
-    /* JADX WARN: Found duplicated region for block: B:33:0x00ce  */
-    /* JADX WARN: Found duplicated region for block: B:34:0x00d9  */
-    /* JADX WARN: Found duplicated region for block: B:36:0x00df  */
-    /* JADX WARN: Found duplicated region for block: B:40:0x00f9  */
-    /* JADX WARN: Found duplicated region for block: B:42:0x00fd  */
+    /* JADX WARN: Found duplicated region for block: B:31:0x00c8 */
+    /* JADX WARN: Found duplicated region for block: B:33:0x00ce */
+    /* JADX WARN: Found duplicated region for block: B:34:0x00d9 */
+    /* JADX WARN: Found duplicated region for block: B:36:0x00df */
+    /* JADX WARN: Found duplicated region for block: B:40:0x00f9 */
+    /* JADX WARN: Found duplicated region for block: B:42:0x00fd */
     @Override // android.view.View
     public final void computeScroll() {
         int iRound;
@@ -878,7 +890,8 @@ public class NestedScrollView extends FrameLayout implements cku, ckr {
         View childAt = getChildAt(0);
         FrameLayout.LayoutParams layoutParams = (FrameLayout.LayoutParams) childAt.getLayoutParams();
         int verticalFadingEdgeLength = getVerticalFadingEdgeLength();
-        int bottom = ((childAt.getBottom() + layoutParams.bottomMargin) - getScrollY()) - (getHeight() - getPaddingBottom());
+        int bottom = ((childAt.getBottom() + layoutParams.bottomMargin) - getScrollY())
+                - (getHeight() - getPaddingBottom());
         if (bottom < verticalFadingEdgeLength) {
             return bottom / verticalFadingEdgeLength;
         }
@@ -901,7 +914,8 @@ public class NestedScrollView extends FrameLayout implements cku, ckr {
         }
         View childAt = getChildAt(0);
         FrameLayout.LayoutParams layoutParams = (FrameLayout.LayoutParams) childAt.getLayoutParams();
-        return Math.max(0, ((childAt.getHeight() + layoutParams.topMargin) + layoutParams.bottomMargin) - ((getHeight() - getPaddingTop()) - getPaddingBottom()));
+        return Math.max(0, ((childAt.getHeight() + layoutParams.topMargin) + layoutParams.bottomMargin)
+                - ((getHeight() - getPaddingTop()) - getPaddingBottom()));
     }
 
     @Override // android.view.View
@@ -942,13 +956,19 @@ public class NestedScrollView extends FrameLayout implements cku, ckr {
     @Override // android.view.ViewGroup
     public final void measureChild(View view, int i, int i2) {
         ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
-        view.measure(ViewGroup.getChildMeasureSpec(i, getPaddingRight() + getPaddingLeft(), layoutParams.width), View.MeasureSpec.makeMeasureSpec(0, 0));
+        view.measure(ViewGroup.getChildMeasureSpec(i, getPaddingRight() + getPaddingLeft(), layoutParams.width),
+                View.MeasureSpec.makeMeasureSpec(0, 0));
     }
 
     @Override // android.view.ViewGroup
     public final void measureChildWithMargins(View view, int i, int i2, int i3, int i4) {
         ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) view.getLayoutParams();
-        view.measure(ViewGroup.getChildMeasureSpec(i, getPaddingRight() + getPaddingLeft() + marginLayoutParams.leftMargin + marginLayoutParams.rightMargin + i2, marginLayoutParams.width), View.MeasureSpec.makeMeasureSpec(marginLayoutParams.topMargin + marginLayoutParams.bottomMargin, 0));
+        view.measure(
+                ViewGroup.getChildMeasureSpec(i,
+                        getPaddingRight() + getPaddingLeft() + marginLayoutParams.leftMargin
+                                + marginLayoutParams.rightMargin + i2,
+                        marginLayoutParams.width),
+                View.MeasureSpec.makeMeasureSpec(marginLayoutParams.topMargin + marginLayoutParams.bottomMargin, 0));
     }
 
     @Override // android.view.ViewGroup, android.view.View
@@ -978,7 +998,8 @@ public class NestedScrollView extends FrameLayout implements cku, ckr {
                 axisValue = 0.0f;
             }
             if (axisValue != 0.0f) {
-                ax(-((int) (getVerticalScrollFactorCompat() * axisValue)), i, motionEvent, width, 1, ewz.ak(motionEvent, q.a.s));
+                ax(-((int) (getVerticalScrollFactorCompat() * axisValue)), i, motionEvent, width, 1,
+                        ewz.ak(motionEvent, q.cachedConstructors.s));
                 if (i == 0) {
                     return true;
                 }
@@ -989,11 +1010,11 @@ public class NestedScrollView extends FrameLayout implements cku, ckr {
         return false;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:34:0x0083  */
-    /* JADX WARN: Found duplicated region for block: B:36:0x008b  */
-    /* JADX WARN: Found duplicated region for block: B:39:0x00a7  */
-    /* JADX WARN: Found duplicated region for block: B:62:0x0119  */
-    /* JADX WARN: Found duplicated region for block: B:70:0x012f  */
+    /* JADX WARN: Found duplicated region for block: B:34:0x0083 */
+    /* JADX WARN: Found duplicated region for block: B:36:0x008b */
+    /* JADX WARN: Found duplicated region for block: B:39:0x00a7 */
+    /* JADX WARN: Found duplicated region for block: B:62:0x0119 */
+    /* JADX WARN: Found duplicated region for block: B:70:0x012f */
     @Override // android.view.ViewGroup
     public final boolean onInterceptTouchEvent(MotionEvent motionEvent) {
         VelocityTracker velocityTracker;
@@ -1010,7 +1031,8 @@ public class NestedScrollView extends FrameLayout implements cku, ckr {
             if (getChildCount() > 0) {
                 int scrollY = getScrollY();
                 View childAt = getChildAt(0);
-                if (y < childAt.getTop() - scrollY || y >= childAt.getBottom() - scrollY || x < childAt.getLeft() || x >= childAt.getRight()) {
+                if (y < childAt.getTop() - scrollY || y >= childAt.getBottom() - scrollY || x < childAt.getLeft()
+                        || x >= childAt.getRight()) {
                     if (!ba(motionEvent) && this.g.isFinished()) {
                         z = false;
                     }
@@ -1151,9 +1173,15 @@ public class NestedScrollView extends FrameLayout implements cku, ckr {
             View childAt = getChildAt(0);
             FrameLayout.LayoutParams layoutParams = (FrameLayout.LayoutParams) childAt.getLayoutParams();
             int measuredHeight = childAt.getMeasuredHeight();
-            int measuredHeight2 = (((getMeasuredHeight() - getPaddingTop()) - getPaddingBottom()) - layoutParams.topMargin) - layoutParams.bottomMargin;
+            int measuredHeight2 = (((getMeasuredHeight() - getPaddingTop()) - getPaddingBottom())
+                    - layoutParams.topMargin) - layoutParams.bottomMargin;
             if (measuredHeight < measuredHeight2) {
-                childAt.measure(ViewGroup.getChildMeasureSpec(i, getPaddingRight() + getPaddingLeft() + layoutParams.leftMargin + layoutParams.rightMargin, layoutParams.width), View.MeasureSpec.makeMeasureSpec(measuredHeight2, 1073741824));
+                childAt.measure(
+                        ViewGroup.getChildMeasureSpec(i,
+                                getPaddingRight() + getPaddingLeft() + layoutParams.leftMargin
+                                        + layoutParams.rightMargin,
+                                layoutParams.width),
+                        View.MeasureSpec.makeMeasureSpec(measuredHeight2, 1073741824));
             }
         }
     }
@@ -1200,7 +1228,8 @@ public class NestedScrollView extends FrameLayout implements cku, ckr {
         } else if (i == 1) {
             i = 33;
         }
-        View viewFindNextFocus = rect == null ? FocusFinder.getInstance().findNextFocus(this, null, i) : FocusFinder.getInstance().findNextFocusFromRect(this, rect, i);
+        View viewFindNextFocus = rect == null ? FocusFinder.getInstance().findNextFocus(this, null, i)
+                : FocusFinder.getInstance().findNextFocusFromRect(this, rect, i);
         if (viewFindNextFocus != null && ar(viewFindNextFocus, 0, getHeight())) {
             return viewFindNextFocus.requestFocus(i, rect);
         }
@@ -1261,11 +1290,11 @@ public class NestedScrollView extends FrameLayout implements cku, ckr {
         ak(view, 0);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:49:0x0120  */
-    /* JADX WARN: Found duplicated region for block: B:56:0x0136  */
-    /* JADX WARN: Found duplicated region for block: B:59:0x013d  */
-    /* JADX WARN: Found duplicated region for block: B:60:0x0141  */
-    /* JADX WARN: Found duplicated region for block: B:63:0x0148  */
+    /* JADX WARN: Found duplicated region for block: B:49:0x0120 */
+    /* JADX WARN: Found duplicated region for block: B:56:0x0136 */
+    /* JADX WARN: Found duplicated region for block: B:59:0x013d */
+    /* JADX WARN: Found duplicated region for block: B:60:0x0141 */
+    /* JADX WARN: Found duplicated region for block: B:63:0x0148 */
     @Override // android.view.View
     public final boolean onTouchEvent(MotionEvent motionEvent) {
         ViewParent parent;

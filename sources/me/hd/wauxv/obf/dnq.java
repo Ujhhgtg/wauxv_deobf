@@ -11,7 +11,7 @@ public abstract class dnq extends dnp {
         boolean z;
         int i;
         int i2;
-        bzo.q(str, "<this>");
+        throwIfVar1IsNull(str, "<this>");
         cmz.o(10);
         int length = str.length();
         if (length == 0) {
@@ -20,7 +20,7 @@ public abstract class dnq extends dnp {
         int i3 = 0;
         char cCharAt = str.charAt(0);
         int i4 = -2147483647;
-        if (bzo.r(cCharAt, 48) < 0) {
+        if (KotlinHelpers.r(cCharAt, 48) < 0) {
             i = 1;
             if (length == 1) {
                 return null;
@@ -55,7 +55,7 @@ public abstract class dnq extends dnp {
 
     public static Long bg(String str) {
         boolean z;
-        bzo.q(str, "<this>");
+        throwIfVar1IsNull(str, "<this>");
         cmz.o(10);
         int length = str.length();
         if (length == 0) {
@@ -64,7 +64,7 @@ public abstract class dnq extends dnp {
         int i = 0;
         char cCharAt = str.charAt(0);
         long j = -9223372036854775807L;
-        if (bzo.r(cCharAt, 48) < 0) {
+        if (KotlinHelpers.r(cCharAt, 48) < 0) {
             z = true;
             if (length == 1) {
                 return null;

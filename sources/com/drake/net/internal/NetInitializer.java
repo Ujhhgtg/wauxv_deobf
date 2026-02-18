@@ -5,7 +5,7 @@ import com.umeng.analytics.pro.f;
 import java.util.ArrayList;
 import java.util.List;
 import me.hd.wauxv.obf.bpf;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.ckv;
 import me.hd.wauxv.obf.ens;
 
@@ -19,7 +19,7 @@ public final class NetInitializer implements bpf {
 
     @Override // me.hd.wauxv.obf.bpf
     public final Object b(Context context) {
-        bzo.q(context, f.X);
+        throwIfVar1IsNull(context, "context");
         ckv.a = context;
         return ens.a;
     }

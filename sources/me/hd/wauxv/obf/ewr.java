@@ -71,14 +71,15 @@ public final class ewr implements Serializable {
             cdkVar2.h(objE);
             context = (Context) cdkVar2.i(new Object[0]);
         }
-        if (context != null && (packageManager = context.getPackageManager()) != null && (applicationInfo = packageManager.getApplicationInfo(strI2, 1)) != null) {
+        if (context != null && (packageManager = context.getPackageManager()) != null
+                && (applicationInfo = packageManager.getApplicationInfo(strI2, 1)) != null) {
             int i3 = applicationInfo.uid;
             bmu bmuVarBg = dqc.bg(dal.b(UserHandle.class));
             ((cbg) bmuVarBg.h).c = bhu.aa();
             bmuVarBg.v(true);
             cde cdeVarT3 = bmuVarBg.t();
             cdeVarT3.ab = "getUserId";
-            cdeVarT3.z(Arrays.copyOf(new Object[]{dal.b(Integer.TYPE)}, 1));
+            cdeVarT3.z(Arrays.copyOf(new Object[] { dal.b(Integer.TYPE) }, 1));
             cdk cdkVar3 = (cdk) aaz.g(cdeVarT3.aj());
             if (cdkVar3 != null && (num = (Integer) cdkVar3.j(Integer.valueOf(i3))) != null) {
                 iIntValue = num.intValue();
@@ -95,11 +96,16 @@ public final class ewr implements Serializable {
             return false;
         }
         ewr ewrVar = (ewr) obj;
-        return this.a == ewrVar.a && bzo.f(this.b, ewrVar.b) && bzo.f(this.c, ewrVar.c) && bzo.f(this.d, ewrVar.d) && bzo.f(this.e, ewrVar.e) && this.f == ewrVar.f && bzo.f(this.g, ewrVar.g) && bzo.f(this.h, ewrVar.h);
+        return this.a == ewrVar.a && nullSafeIsEqual(this.b, ewrVar.b) && nullSafeIsEqual(this.c, ewrVar.c)
+                && nullSafeIsEqual(this.d, ewrVar.d) && nullSafeIsEqual(this.e, ewrVar.e) && this.f == ewrVar.f
+                && nullSafeIsEqual(this.g, ewrVar.g) && nullSafeIsEqual(this.h, ewrVar.h);
     }
 
     public final int hashCode() {
-        int iE = bjs.e(this.g, dts.a(this.f, bjs.e(this.e, bjs.e(this.d, bjs.e(this.c, bjs.e(this.b, Long.hashCode(this.a) * 31, 31), 31), 31), 31), 31), 31);
+        int iE = bjs.e(this.g,
+                dts.a(this.f, bjs.e(this.e,
+                        bjs.e(this.d, bjs.e(this.c, bjs.e(this.b, Long.hashCode(this.a) * 31, 31), 31), 31), 31), 31),
+                31);
         Throwable th = this.h;
         return iE + (th == null ? 0 : th.hashCode());
     }

@@ -2,7 +2,7 @@ package okhttp3.internal.cache2;
 
 import java.io.IOException;
 import java.nio.channels.FileChannel;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.rh;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -11,12 +11,12 @@ public final class FileOperator {
     private final FileChannel fileChannel;
 
     public FileOperator(FileChannel fileChannel) {
-        bzo.q(fileChannel, "fileChannel");
+        throwIfVar1IsNull(fileChannel, "fileChannel");
         this.fileChannel = fileChannel;
     }
 
     public final void read(long j, rh rhVar, long j2) throws IOException {
-        bzo.q(rhVar, "sink");
+        throwIfVar1IsNull(rhVar, "sink");
         if (j2 < 0) {
             throw new IndexOutOfBoundsException();
         }
@@ -30,7 +30,7 @@ public final class FileOperator {
     }
 
     public final void write(long j, rh rhVar, long j2) throws IOException {
-        bzo.q(rhVar, "source");
+        throwIfVar1IsNull(rhVar, "source");
         if (j2 < 0 || j2 > rhVar.b) {
             throw new IndexOutOfBoundsException();
         }

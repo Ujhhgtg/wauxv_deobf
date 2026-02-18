@@ -17,7 +17,7 @@ public final /* synthetic */ class abo implements Comparator {
     public final int compare(Object obj, Object obj2) {
         switch (this.a) {
             case 0:
-                for (bgf bgfVar : (bgf[]) this.b) {
+                for (IHasInvokeMethod bgfVar : (IHasInvokeMethod[]) this.b) {
                     int iJ = ajn.j((Comparable) bgfVar.invoke(obj), (Comparable) bgfVar.invoke(obj2));
                     if (iJ != 0) {
                         return iJ;

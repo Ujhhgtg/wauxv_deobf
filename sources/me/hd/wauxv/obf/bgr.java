@@ -4,7 +4,7 @@ import net.bytebuddy.description.method.MethodDescription;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public abstract class bgr extends sw implements bgq, bsu, bgp {
+public abstract class bgr extends sw implements bgq, bsu, IEmpty4 {
     public final int m;
     public final int n;
 
@@ -18,7 +18,8 @@ public abstract class bgr extends sw implements bgq, bsu, bgp {
         }
         if (obj instanceof bgr) {
             bgr bgrVar = (bgr) obj;
-            return this.f.equals(bgrVar.f) && this.h.equals(bgrVar.h) && this.n == bgrVar.n && this.m == bgrVar.m && bzo.f(this.d, bgrVar.d) && l().equals(bgrVar.l());
+            return this.f.equals(bgrVar.f) && this.h.equals(bgrVar.h) && this.n == bgrVar.n && this.m == bgrVar.m
+                    && nullSafeIsEqual(this.d, bgrVar.d) && l().equals(bgrVar.l());
         }
         if (obj instanceof bgr) {
             return obj.equals(j());
@@ -48,7 +49,9 @@ public abstract class bgr extends sw implements bgq, bsu, bgp {
             return bsuVarJ.toString();
         }
         String str = this.f;
-        return MethodDescription.CONSTRUCTOR_INTERNAL_NAME.equals(str) ? "constructor (Kotlin reflection is not available)" : bjs.o("function ", str, " (Kotlin reflection is not available)");
+        return MethodDescription.CONSTRUCTOR_INTERNAL_NAME.equals(str)
+                ? "constructor (Kotlin reflection is not available)"
+                : concat("function ", str, " (Kotlin reflection is not available)");
     }
 
     public bgr(int i, Object obj, Class cls, String str, String str2, int i2, int i3) {

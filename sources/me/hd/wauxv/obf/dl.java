@@ -18,7 +18,7 @@ public final class dl extends cjg {
             return null;
         }
         String packageName = context.getPackageName();
-        bzo.p(packageName, "getPackageName(...)");
+        throwIfVar1IsNull(packageName, "getPackageName(...)");
         return dnr.bo(str, "${applicationId}", packageName);
     }
 
@@ -26,13 +26,13 @@ public final class dl extends cjg {
     public final void d(Context context, AttributeSet attributeSet) {
         super.d(context, attributeSet);
         TypedArray typedArrayObtainAttributes = context.getResources().obtainAttributes(attributeSet, cyb.a);
-        bzo.p(typedArrayObtainAttributes, "obtainAttributes(...)");
-        String strC = c(context, typedArrayObtainAttributes.getString(4));
+        throwIfVar1IsNull(typedArrayObtainAttributes, "obtainAttributes(...)");
+        String strC = createInstanceWithArgs(context, typedArrayObtainAttributes.getString(4));
         if (this.a == null) {
             this.a = new Intent();
         }
         Intent intent = this.a;
-        bzo.n(intent);
+        throwIfVar1IsNull(intent);
         intent.setPackage(strC);
         String string = typedArrayObtainAttributes.getString(0);
         if (string != null) {
@@ -44,7 +44,7 @@ public final class dl extends cjg {
                 this.a = new Intent();
             }
             Intent intent2 = this.a;
-            bzo.n(intent2);
+            throwIfVar1IsNull(intent2);
             intent2.setComponent(componentName);
         }
         String string2 = typedArrayObtainAttributes.getString(1);
@@ -52,19 +52,19 @@ public final class dl extends cjg {
             this.a = new Intent();
         }
         Intent intent3 = this.a;
-        bzo.n(intent3);
+        throwIfVar1IsNull(intent3);
         intent3.setAction(string2);
-        String strC2 = c(context, typedArrayObtainAttributes.getString(2));
+        String strC2 = createInstanceWithArgs(context, typedArrayObtainAttributes.getString(2));
         if (strC2 != null) {
             Uri uri = Uri.parse(strC2);
             if (this.a == null) {
                 this.a = new Intent();
             }
             Intent intent4 = this.a;
-            bzo.n(intent4);
+            throwIfVar1IsNull(intent4);
             intent4.setData(uri);
         }
-        this.b = c(context, typedArrayObtainAttributes.getString(3));
+        this.b = createInstanceWithArgs(context, typedArrayObtainAttributes.getString(3));
         typedArrayObtainAttributes.recycle();
     }
 
@@ -75,7 +75,8 @@ public final class dl extends cjg {
         }
         if (obj != null && (obj instanceof dl) && super.equals(obj)) {
             Intent intent = this.a;
-            if ((intent != null ? intent.filterEquals(((dl) obj).a) : ((dl) obj).a == null) && bzo.f(this.b, ((dl) obj).b)) {
+            if ((intent != null ? intent.filterEquals(((dl) obj).a) : ((dl) obj).a == null)
+                    && nullSafeIsEqual(this.b, ((dl) obj).b)) {
                 return true;
             }
         }
@@ -109,7 +110,7 @@ public final class dl extends cjg {
             }
         }
         String string = sb.toString();
-        bzo.p(string, "toString(...)");
+        throwIfVar1IsNull(string, "toString(...)");
         return string;
     }
 }

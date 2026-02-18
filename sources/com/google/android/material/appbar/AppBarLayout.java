@@ -57,7 +57,7 @@ import me.hd.wauxv.obf.ert;
 import me.hd.wauxv.obf.evr;
 import me.hd.wauxv.obf.ff;
 import me.hd.wauxv.obf.gs;
-import me.hd.wauxv.obf.io;
+import me.hd.wauxv.obf.DefaultConfig;
 import me.hd.wauxv.obf.n;
 import me.hd.wauxv.obf.yg;
 
@@ -91,7 +91,10 @@ public class AppBarLayout extends LinearLayout implements agq {
     public final float y;
     public Behavior z;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class Behavior extends BaseBehavior<AppBarLayout> {
         public Behavior() {
         }
@@ -101,7 +104,10 @@ public class AppBarLayout extends LinearLayout implements agq {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class ScrollingViewBehavior extends bkj {
         public ScrollingViewBehavior() {
         }
@@ -176,7 +182,8 @@ public class AppBarLayout extends LinearLayout implements agq {
 
     public AppBarLayout(Context context, AttributeSet attributeSet) {
         Integer numValueOf;
-        super(cmz.aq(context, attributeSet, R.attr.appBarLayoutStyle, R.style.Widget_Design_AppBarLayout), attributeSet, R.attr.appBarLayoutStyle);
+        super(cmz.aq(context, attributeSet, R.attr.appBarLayoutStyle, R.style.Widget_Design_AppBarLayout), attributeSet,
+                R.attr.appBarLayoutStyle);
         this.c = -1;
         this.d = -1;
         this.e = -1;
@@ -188,13 +195,16 @@ public class AppBarLayout extends LinearLayout implements agq {
             setOutlineProvider(ViewOutlineProvider.BOUNDS);
         }
         Context context3 = getContext();
-        TypedArray typedArrayAn = bhu.an(context3, attributeSet, cmz.j, R.attr.appBarLayoutStyle, R.style.Widget_Design_AppBarLayout, new int[0]);
+        TypedArray typedArrayAn = bhu.an(context3, attributeSet, cmz.j, R.attr.appBarLayoutStyle,
+                R.style.Widget_Design_AppBarLayout, new int[0]);
         try {
             if (typedArrayAn.hasValue(0)) {
-                setStateListAnimator(AnimatorInflater.loadStateListAnimator(context3, typedArrayAn.getResourceId(0, 0)));
+                setStateListAnimator(
+                        AnimatorInflater.loadStateListAnimator(context3, typedArrayAn.getResourceId(0, 0)));
             }
             typedArrayAn.recycle();
-            TypedArray typedArrayAn2 = bhu.an(context2, attributeSet, cxs.a, R.attr.appBarLayoutStyle, R.style.Widget_Design_AppBarLayout, new int[0]);
+            TypedArray typedArrayAn2 = bhu.an(context2, attributeSet, cxs.a, R.attr.appBarLayoutStyle,
+                    R.style.Widget_Design_AppBarLayout, new int[0]);
             Drawable drawable = typedArrayAn2.getDrawable(0);
             WeakHashMap weakHashMap = eqz.a;
             setBackground(drawable);
@@ -220,7 +230,9 @@ public class AppBarLayout extends LinearLayout implements agq {
                             Integer num2;
                             AppBarLayout appBarLayout = this.a;
                             ArrayList arrayList = appBarLayout.s;
-                            int iAd = cna.ad(colorStateListX.getDefaultColor(), ((Float) valueAnimator.getAnimatedValue()).floatValue(), colorStateListV.getDefaultColor());
+                            int iAd = cna.ad(colorStateListX.getDefaultColor(),
+                                    ((Float) valueAnimator.getAnimatedValue()).floatValue(),
+                                    colorStateListV.getDefaultColor());
                             ColorStateList colorStateListValueOf = ColorStateList.valueOf(iAd);
                             cau cauVar2 = cauVar;
                             cauVar2.dz(colorStateListValueOf);
@@ -264,14 +276,15 @@ public class AppBarLayout extends LinearLayout implements agq {
                     setBackground(cauVar);
                 }
             }
-            this.t = ajn.ad(context2, R.attr.motionDurationMedium2, getResources().getInteger(R.integer.app_bar_elevation_anim_duration));
+            this.t = ajn.ad(context2, R.attr.motionDurationMedium2,
+                    getResources().getInteger(R.integer.app_bar_elevation_anim_duration));
             this.u = ajn.ae(context2, R.attr.motionEasingStandardInterpolator, ff.a);
             int i2 = 4;
             if (typedArrayAn2.hasValue(4)) {
                 ae(typedArrayAn2.getBoolean(4, false), false, false);
             }
             if (typedArrayAn2.hasValue(3)) {
-                cmz.ao(this, typedArrayAn2.getDimensionPixelSize(3, 0));
+                cmz.trimStackTraceToClass(this, typedArrayAn2.getDimensionPixelSize(3, 0));
             }
             if (typedArrayAn2.hasValue(2)) {
                 setKeyboardNavigationCluster(typedArrayAn2.getBoolean(2, false));
@@ -308,14 +321,17 @@ public class AppBarLayout extends LinearLayout implements agq {
     }
 
     @Override // android.widget.LinearLayout, android.view.ViewGroup
-    /* JADX INFO: renamed from: ab, reason: merged with bridge method [inline-methods] */
+    /*
+     * JADX INFO: renamed from: ab, reason: merged with bridge method
+     * [inline-methods]
+     */
     public final gs generateLayoutParams(AttributeSet attributeSet) {
         Context context = getContext();
         gs gsVar = new gs(context, attributeSet);
         gsVar.a = 1;
         TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, cxs.b);
         gsVar.a = typedArrayObtainStyledAttributes.getInt(1, 0);
-        gsVar.b = typedArrayObtainStyledAttributes.getInt(0, 0) != 1 ? null : new io(2);
+        gsVar.b = typedArrayObtainStyledAttributes.getInt(0, 0) != 1 ? null : new DefaultConfig(2);
         if (typedArrayObtainStyledAttributes.hasValue(2)) {
             gsVar.c = AnimationUtils.loadInterpolator(context, typedArrayObtainStyledAttributes.getResourceId(2, 0));
         }
@@ -362,7 +378,9 @@ public class AppBarLayout extends LinearLayout implements agq {
                         ert ertVarAf = CollapsingToolbarLayout.af(childAt);
                         int i4 = aauVar.a;
                         if (i4 == 1) {
-                            ertVarAf.f(cnf.as(-i, 0, ((collapsingToolbarLayout.getHeight() - CollapsingToolbarLayout.af(childAt).b) - childAt.getHeight()) - ((FrameLayout.LayoutParams) ((aau) childAt.getLayoutParams())).bottomMargin));
+                            ertVarAf.f(cnf.as(-i, 0, ((collapsingToolbarLayout.getHeight()
+                                    - CollapsingToolbarLayout.af(childAt).second) - childAt.getHeight())
+                                    - ((FrameLayout.LayoutParams) ((aau) childAt.getLayoutParams())).bottomMargin));
                         } else if (i4 == 2) {
                             ertVarAf.f(Math.round((-i) * aauVar.b));
                         }
@@ -492,8 +510,8 @@ public class AppBarLayout extends LinearLayout implements agq {
         return behavior;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:21:0x0050  */
-    /* JADX WARN: Found duplicated region for block: B:23:0x0058  */
+    /* JADX WARN: Found duplicated region for block: B:21:0x0050 */
+    /* JADX WARN: Found duplicated region for block: B:23:0x0058 */
     public int getDownNestedPreScrollRange() {
         int iMin;
         int minimumHeight;
@@ -513,7 +531,8 @@ public class AppBarLayout extends LinearLayout implements agq {
                         break;
                     }
                 } else {
-                    int i4 = ((LinearLayout.LayoutParams) gsVar).topMargin + ((LinearLayout.LayoutParams) gsVar).bottomMargin;
+                    int i4 = ((LinearLayout.LayoutParams) gsVar).topMargin
+                            + ((LinearLayout.LayoutParams) gsVar).bottomMargin;
                     if ((i3 & 8) != 0) {
                         WeakHashMap weakHashMap = eqz.a;
                         minimumHeight = childAt.getMinimumHeight();
@@ -559,7 +578,8 @@ public class AppBarLayout extends LinearLayout implements agq {
             View childAt = getChildAt(i2);
             if (childAt.getVisibility() != 8) {
                 gs gsVar = (gs) childAt.getLayoutParams();
-                int measuredHeight = ((LinearLayout.LayoutParams) gsVar).topMargin + ((LinearLayout.LayoutParams) gsVar).bottomMargin + childAt.getMeasuredHeight();
+                int measuredHeight = ((LinearLayout.LayoutParams) gsVar).topMargin
+                        + ((LinearLayout.LayoutParams) gsVar).bottomMargin + childAt.getMeasuredHeight();
                 int i3 = gsVar.a;
                 if ((i3 & 1) == 0) {
                     break;
@@ -640,7 +660,8 @@ public class AppBarLayout extends LinearLayout implements agq {
                 if ((i3 & 1) == 0) {
                     break;
                 }
-                int topInset = measuredHeight + ((LinearLayout.LayoutParams) gsVar).topMargin + ((LinearLayout.LayoutParams) gsVar).bottomMargin + minimumHeight;
+                int topInset = measuredHeight + ((LinearLayout.LayoutParams) gsVar).topMargin
+                        + ((LinearLayout.LayoutParams) gsVar).bottomMargin + minimumHeight;
                 if (i2 == 0) {
                     WeakHashMap weakHashMap = eqz.a;
                     if (childAt.getFitsSystemWindows()) {
@@ -813,7 +834,8 @@ public class AppBarLayout extends LinearLayout implements agq {
     @Override // android.widget.LinearLayout
     public void setOrientation(int i) {
         if (i != 1) {
-            throw new IllegalArgumentException("AppBarLayout is always vertical and does not support horizontal orientation");
+            throw new IllegalArgumentException(
+                    "AppBarLayout is always vertical and does not support horizontal orientation");
         }
         super.setOrientation(i);
     }
@@ -886,11 +908,15 @@ public class AppBarLayout extends LinearLayout implements agq {
     }
 
     @Override // android.widget.LinearLayout, android.view.ViewGroup
-    public final /* bridge */ /* synthetic */ ViewGroup.LayoutParams generateLayoutParams(ViewGroup.LayoutParams layoutParams) {
+    public final /* bridge */ /* synthetic */ ViewGroup.LayoutParams generateLayoutParams(
+            ViewGroup.LayoutParams layoutParams) {
         return aa(layoutParams);
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class BaseBehavior<T extends AppBarLayout> extends bki {
         public int _i;
         public int _j;
@@ -925,7 +951,7 @@ public class AppBarLayout extends LinearLayout implements agq {
             return null;
         }
 
-        /* JADX WARN: Found duplicated region for block: B:27:0x005d  */
+        /* JADX WARN: Found duplicated region for block: B:27:0x005d */
         public static void h(CoordinatorLayout coordinatorLayout, AppBarLayout appBarLayout, int i, int i2, boolean z) {
             View childAt;
             boolean zAg;
@@ -950,7 +976,9 @@ public class AppBarLayout extends LinearLayout implements agq {
                     WeakHashMap weakHashMap = eqz.a;
                     int minimumHeight = childAt.getMinimumHeight();
                     zAg = true;
-                    if (i2 <= 0 || (i4 & 12) == 0 ? (i4 & 2) == 0 || (-i) < (childAt.getBottom() - minimumHeight) - appBarLayout.getTopInset() : (-i) < (childAt.getBottom() - minimumHeight) - appBarLayout.getTopInset()) {
+                    if (i2 <= 0 || (i4 & 12) == 0
+                            ? (i4 & 2) == 0 || (-i) < (childAt.getBottom() - minimumHeight) - appBarLayout.getTopInset()
+                            : (-i) < (childAt.getBottom() - minimumHeight) - appBarLayout.getTopInset()) {
                         zAg = false;
                     }
                 } else {
@@ -997,7 +1025,8 @@ public class AppBarLayout extends LinearLayout implements agq {
         public final void _n(CoordinatorLayout coordinatorLayout, AppBarLayout appBarLayout, int i) {
             int iAbs = Math.abs(q() - i);
             float fAbs = Math.abs(0.0f);
-            int iRound = fAbs > 0.0f ? Math.round((iAbs / fAbs) * 1000.0f) * 3 : (int) (((iAbs / appBarLayout.getHeight()) + 1.0f) * 150.0f);
+            int iRound = fAbs > 0.0f ? Math.round((iAbs / fAbs) * 1000.0f) * 3
+                    : (int) (((iAbs / appBarLayout.getHeight()) + 1.0f) * 150.0f);
             int iQ = q();
             if (iQ == i) {
                 ValueAnimator valueAnimator = this._k;
@@ -1021,8 +1050,9 @@ public class AppBarLayout extends LinearLayout implements agq {
             this._k.start();
         }
 
-        /* JADX WARN: Found duplicated region for block: B:9:0x002b  */
-        public final void _o(CoordinatorLayout coordinatorLayout, AppBarLayout appBarLayout, View view, int i, int[] iArr) {
+        /* JADX WARN: Found duplicated region for block: B:9:0x002b */
+        public final void _o(CoordinatorLayout coordinatorLayout, AppBarLayout appBarLayout, View view, int i,
+                int[] iArr) {
             AppBarLayout appBarLayout2;
             int i2;
             int downNestedPreScrollRange;
@@ -1143,7 +1173,8 @@ public class AppBarLayout extends LinearLayout implements agq {
         }
 
         @Override // me.hd.wauxv.obf.agr
-        public final /* bridge */ /* synthetic */ void k(CoordinatorLayout coordinatorLayout, View view, View view2, int i, int i2, int[] iArr, int i3) {
+        public final /* bridge */ /* synthetic */ void k(CoordinatorLayout coordinatorLayout, View view, View view2,
+                int i, int i2, int[] iArr, int i3) {
             _o(coordinatorLayout, (AppBarLayout) view, view2, i2, iArr);
         }
 
@@ -1182,7 +1213,8 @@ public class AppBarLayout extends LinearLayout implements agq {
         public final boolean o(CoordinatorLayout coordinatorLayout, View view, View view2, int i, int i2) {
             ValueAnimator valueAnimator;
             AppBarLayout appBarLayout = (AppBarLayout) view;
-            boolean z = (i & 2) != 0 && (appBarLayout.m || (appBarLayout.getTotalScrollRange() != 0 && coordinatorLayout.getHeight() - view2.getHeight() <= appBarLayout.getHeight()));
+            boolean z = (i & 2) != 0 && (appBarLayout.m || (appBarLayout.getTotalScrollRange() != 0
+                    && coordinatorLayout.getHeight() - view2.getHeight() <= appBarLayout.getHeight()));
             if (z && (valueAnimator = this._k) != null) {
                 valueAnimator.cancel();
             }
@@ -1239,7 +1271,8 @@ public class AppBarLayout extends LinearLayout implements agq {
                             } else if (interpolator != null) {
                                 int i6 = gsVar.a;
                                 if ((i6 & 1) != 0) {
-                                    topInset = childAt.getHeight() + ((LinearLayout.LayoutParams) gsVar).topMargin + ((LinearLayout.LayoutParams) gsVar).bottomMargin;
+                                    topInset = childAt.getHeight() + ((LinearLayout.LayoutParams) gsVar).topMargin
+                                            + ((LinearLayout.LayoutParams) gsVar).bottomMargin;
                                     if ((i6 & 2) != 0) {
                                         WeakHashMap weakHashMap = eqz.a;
                                         topInset -= childAt.getMinimumHeight();
@@ -1253,7 +1286,9 @@ public class AppBarLayout extends LinearLayout implements agq {
                                 }
                                 if (topInset > 0) {
                                     float f = topInset;
-                                    top = (childAt.getTop() + Math.round(interpolator.getInterpolation((iAbs - childAt.getTop()) / f) * f)) * Integer.signum(iAs);
+                                    top = (childAt.getTop() + Math
+                                            .round(interpolator.getInterpolation((iAbs - childAt.getTop()) / f) * f))
+                                            * Integer.signum(iAs);
                                     break;
                                 }
                             }
@@ -1275,7 +1310,7 @@ public class AppBarLayout extends LinearLayout implements agq {
                         int i9 = 0;
                         while (i9 < appBarLayout.getChildCount()) {
                             gs gsVar2 = (gs) appBarLayout.getChildAt(i9).getLayoutParams();
-                            io ioVar = gsVar2.b;
+                            DefaultConfig ioVar = gsVar2.b;
                             if (ioVar != null && (gsVar2.a & i8) != 0) {
                                 View childAt2 = appBarLayout.getChildAt(i9);
                                 float fAg = ag();
@@ -1309,7 +1344,9 @@ public class AppBarLayout extends LinearLayout implements agq {
                             i8 = 1;
                         }
                     }
-                    if (!zF && appBarLayout.f && (arrayList = (ArrayList) ((dhq) coordinatorLayout.g.f).get(appBarLayout)) != null && !arrayList.isEmpty()) {
+                    if (!zF && appBarLayout.f
+                            && (arrayList = (ArrayList) ((dhq) coordinatorLayout.g.f).get(appBarLayout)) != null
+                            && !arrayList.isEmpty()) {
                         for (int i10 = 0; i10 < arrayList.size(); i10++) {
                             View view2 = (View) arrayList.get(i10);
                             agr agrVar = ((agu) view2.getLayoutParams()).a;
@@ -1387,7 +1424,8 @@ public class AppBarLayout extends LinearLayout implements agq {
                     if (iQ < (minimumHeight + topInset) / 2) {
                         topInset = minimumHeight;
                     }
-                    _n(coordinatorLayout, appBarLayout, cnf.as(topInset + paddingTop, -appBarLayout.getTotalScrollRange(), 0));
+                    _n(coordinatorLayout, appBarLayout,
+                            cnf.as(topInset + paddingTop, -appBarLayout.getTotalScrollRange(), 0));
                 }
             }
         }
@@ -1407,7 +1445,8 @@ public class AppBarLayout extends LinearLayout implements agq {
     }
 
     @Override // android.widget.LinearLayout, android.view.ViewGroup
-    public final /* bridge */ /* synthetic */ LinearLayout.LayoutParams generateLayoutParams(ViewGroup.LayoutParams layoutParams) {
+    public final /* bridge */ /* synthetic */ LinearLayout.LayoutParams generateLayoutParams(
+            ViewGroup.LayoutParams layoutParams) {
         return aa(layoutParams);
     }
 }

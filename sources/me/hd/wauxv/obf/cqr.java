@@ -7,19 +7,22 @@ public final class cqr implements tb {
     public final /* synthetic */ cqt b;
 
     public cqr(cqt cqtVar, bdx bdxVar) {
-        bzo.q(bdxVar, "onBackPressedCallback");
+        throwIfVar1IsNull(bdxVar, "onBackPressedCallback");
         this.b = cqtVar;
         this.a = bdxVar;
     }
 
-    /* JADX WARN: Type inference failed for: r0v2, types: [me.hd.wauxv.obf.bfu, me.hd.wauxv.obf.bgr] */
+    /*
+     * JADX WARN: Type inference failed for: r0v2, types: [me.hd.wauxv.obf.bfu,
+     * me.hd.wauxv.obf.bgr]
+     */
     @Override // me.hd.wauxv.obf.tb
     public final void cancel() {
         cqt cqtVar = this.b;
         km kmVar = cqtVar.b;
         bdx bdxVar = this.a;
         kmVar.remove(bdxVar);
-        if (bzo.f(cqtVar.c, bdxVar)) {
+        if (nullSafeIsEqual(cqtVar.c, bdxVar)) {
             bdxVar.f();
             cqtVar.c = null;
         }

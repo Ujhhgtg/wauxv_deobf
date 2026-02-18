@@ -44,7 +44,8 @@ public final /* synthetic */ class ls implements bfu {
                 bdj bdjVar = (bdj) this.c;
                 for (cio cioVar : (Iterable) ((dml) citVar.f.h).c()) {
                     if (beq.p()) {
-                        Log.v("FragmentNavigator", "Marking transition complete for entry " + cioVar + " due to fragment " + bdjVar + " viewmodel being cleared");
+                        Log.v("FragmentNavigator", "Marking transition complete for entry " + cioVar
+                                + " due to fragment " + bdjVar + " viewmodel being cleared");
                     }
                     citVar.k(cioVar);
                 }
@@ -70,10 +71,13 @@ public final /* synthetic */ class ls implements bfu {
                     bsh bshVar = (bsh) aaz.s(arrayList);
                     if (bshVar != null && (strArrNames = bshVar.names()) != null) {
                         for (String str : strArrNames) {
-                            String str2 = bzo.f(dfxVar.h(), dga.b) ? "enum value" : "property";
+                            String str2 = nullSafeIsEqual(dfxVar.h(), dga.b) ? "enum value" : "property";
                             if (linkedHashMap.containsKey(str)) {
-                                String str3 = "The suggested name '" + str + "' for " + str2 + ' ' + dfxVar.j(i2) + " is already one of the names for " + str2 + ' ' + dfxVar.j(((Number) bzo.x(linkedHashMap, str)).intValue()) + " in " + dfxVar;
-                                bzo.q(str3, "message");
+                                String str3 = "The suggested name '" + str + "' for " + str2 + ' ' + dfxVar.j(i2)
+                                        + " is already one of the names for " + str2 + ' '
+                                        + dfxVar.j(((Number) KotlinHelpers.x(linkedHashMap, str)).intValue()) + " in "
+                                        + dfxVar;
+                                throwIfVar1IsNull(str3, "message");
                                 throw new bsd(str3);
                             }
                             linkedHashMap.put(str, Integer.valueOf(i2));
@@ -82,7 +86,7 @@ public final /* synthetic */ class ls implements bfu {
                 }
                 return linkedHashMap.isEmpty() ? ave.a : linkedHashMap;
             case 4:
-                ayc aycVar = new ayc((String) ((dov) ((io) this.b).c).getValue(), (String) this.c);
+                ayc aycVar = new ayc((String) ((dov) ((DefaultConfig) this.b).c).getValue(), (String) this.c);
                 String strZ = "WAuxiliary" /* cnb.z(-29381871270698L) */;
                 if (strZ.length() == 0) {
                     throw new NoSuchElementException("Char sequence is empty.");
@@ -116,7 +120,7 @@ public final /* synthetic */ class ls implements bfu {
                         Iterable iterable = (Iterable) dmlVar.c();
                         ArrayList arrayList2 = new ArrayList();
                         for (Object obj2 : iterable) {
-                            if (bzo.f((cio) obj2, cioVar2)) {
+                            if (nullSafeIsEqual((cio) obj2, cioVar2)) {
                                 dmlVar.g(arrayList2);
                             } else {
                                 arrayList2.add(obj2);
@@ -135,13 +139,18 @@ public final /* synthetic */ class ls implements bfu {
                 if (dnr.bi(strValueOf, "@chatroom" /* cnb.z(-513020958604074L) */)) {
                     Context context = view.getContext();
                     Intent intent = new Intent();
-                    intent.setClassName(context, "com.tencent.mm.chatroom.ui.ChatroomInfoUI" /* cnb.z(-89438398970666L) */);
+                    intent.setClassName(context, "com.tencent.mm.chatroom.ui.ChatroomInfoUI" /*
+                                                                                              * cnb.z(-89438398970666L)
+                                                                                              */);
                     intent.putExtra("RoomInfo_Id" /* cnb.z(-95253784689450L) */, strValueOf);
                     context.startActivity(intent);
                 } else {
                     Context context2 = view.getContext();
                     Intent intent2 = new Intent();
-                    intent2.setClassName(context2, "com.tencent.mm.plugin.profile.ui.ContactInfoUI" /* cnb.z(-89111981456170L) */);
+                    intent2.setClassName(context2, "com.tencent.mm.plugin.profile.ui.ContactInfoUI" /*
+                                                                                                     * cnb.z(-
+                                                                                                     * 89111981456170L)
+                                                                                                     */);
                     intent2.putExtra("Contact_User" /* cnb.z(-89442693937962L) */, strValueOf);
                     context2.startActivity(intent2);
                 }
@@ -149,7 +158,8 @@ public final /* synthetic */ class ls implements bfu {
             case 7:
                 cua cuaVar = (cua) this.b;
                 ctx ctxVar = (ctx) this.c;
-                cnd.ar(cuaVar).j(R.id.codeFragment, bht.r(new csm("pluginId" /* cnb.z(-418085001493290L) */, ctxVar.f), new csm("pluginPath" /* cnb.z(-417994807180074L) */, ctxVar.b.getAbsolutePath())));
+                cnd.ar(cuaVar).j(R.id.codeFragment, bht.r(new Pair("pluginId" /* cnb.z(-418085001493290L) */, ctxVar.f),
+                        new Pair("pluginPath" /* cnb.z(-417994807180074L) */, ctxVar.b.getAbsolutePath())));
                 return ens.a;
             case 8:
                 return ((dap) this.b).d((CharSequence) this.c);

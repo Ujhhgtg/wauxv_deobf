@@ -34,9 +34,10 @@ class ObjectReaderImplInt16ValueArray extends ObjectReaderPrimitive {
             } else if (obj instanceof Number) {
                 sShortValue = ((Number) obj).shortValue();
             } else {
-                Function typeConvert = JSONFactory.getDefaultObjectReaderProvider().getTypeConvert(obj.getClass(), Short.TYPE);
+                Function typeConvert = JSONFactory.getDefaultObjectReaderProvider().getTypeConvert(obj.getClass(),
+                        Short.TYPE);
                 if (typeConvert == null) {
-                    throw new JSONException(bjs.m(obj, new StringBuilder("can not cast to short ")));
+                    throw new JSONException(concatVar1GetClass(obj, new StringBuilder("can not cast to short ")));
                 }
                 sShortValue = ((Short) typeConvert.apply(obj)).shortValue();
             }
@@ -47,7 +48,8 @@ class ObjectReaderImplInt16ValueArray extends ObjectReaderPrimitive {
         return function != null ? function.apply(sArr) : sArr;
     }
 
-    @Override // com.alibaba.fastjson2.reader.ObjectReaderPrimitive, com.alibaba.fastjson2.reader.ObjectReader
+    @Override // com.alibaba.fastjson2.reader.ObjectReaderPrimitive,
+              // com.alibaba.fastjson2.reader.ObjectReader
     public Object readJSONBObject(JSONReader jSONReader, Type type, Object obj, long j) {
         if (jSONReader.nextIfMatch(JSONB.Constants.BC_TYPED_ANY)) {
             long typeHashCode = jSONReader.readTypeHashCode();

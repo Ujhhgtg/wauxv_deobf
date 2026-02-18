@@ -22,8 +22,14 @@ public class Gender {
     private static final /* synthetic */ Gender[] a;
     public int value;
 
-    /* JADX INFO: renamed from: com.umeng.analytics.Gender$4, reason: invalid class name */
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: renamed from: com.umeng.analytics.Gender$4, reason: invalid class
+     * name
+     */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static /* synthetic */ class AnonymousClass4 {
         static final /* synthetic */ int[] a;
 
@@ -52,7 +58,7 @@ public class Gender {
             @Override // java.lang.Enum
             public String toString() {
                 Locale locale = Locale.US;
-                return bjs.i(this.value, "Male:");
+                return concatVar2Var1(this.value, "Male:");
             }
         };
         Male = gender;
@@ -61,7 +67,7 @@ public class Gender {
             @Override // java.lang.Enum
             public String toString() {
                 Locale locale = Locale.US;
-                return bjs.i(this.value, "Female:");
+                return concatVar2Var1(this.value, "Female:");
             }
         };
         Female = gender2;
@@ -69,11 +75,11 @@ public class Gender {
             @Override // java.lang.Enum
             public String toString() {
                 Locale locale = Locale.US;
-                return bjs.i(this.value, "Unknown:");
+                return concatVar2Var1(this.value, "Unknown:");
             }
         };
         Unknown = gender3;
-        a = new Gender[]{gender, gender2, gender3};
+        a = new Gender[] { gender, gender2, gender3 };
     }
 
     public static Gender getGender(int i) {
@@ -82,7 +88,10 @@ public class Gender {
 
     public static com.umeng.commonsdk.statistics.proto.Gender transGender(Gender gender) {
         int i = AnonymousClass4.a[gender.ordinal()];
-        return i != 1 ? i != 2 ? com.umeng.commonsdk.statistics.proto.Gender.UNKNOWN : com.umeng.commonsdk.statistics.proto.Gender.FEMALE : com.umeng.commonsdk.statistics.proto.Gender.MALE;
+        return i != 1
+                ? i != 2 ? com.umeng.commonsdk.statistics.proto.Gender.UNKNOWN
+                        : com.umeng.commonsdk.statistics.proto.Gender.FEMALE
+                : com.umeng.commonsdk.statistics.proto.Gender.MALE;
     }
 
     public static Gender valueOf(String str) {

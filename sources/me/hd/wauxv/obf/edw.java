@@ -32,7 +32,9 @@ public final class edw {
             return false;
         }
         edw edwVar = (edw) obj;
-        return bzo.f(this.a, edwVar.a) && bzo.f(this.b, edwVar.b) && bzo.f(this.c, edwVar.c) && bzo.f(this.d, edwVar.d) && bzo.f(this.e, edwVar.e) && bzo.f(this.f, edwVar.f);
+        return nullSafeIsEqual(this.a, edwVar.a) && nullSafeIsEqual(this.b, edwVar.b)
+                && nullSafeIsEqual(this.c, edwVar.c) && nullSafeIsEqual(this.d, edwVar.d)
+                && nullSafeIsEqual(this.e, edwVar.e) && nullSafeIsEqual(this.f, edwVar.f);
     }
 
     public final int hashCode() {
@@ -58,6 +60,6 @@ public final class edw {
         bjs.v(sb, this.c, -273439092898602L);
         bjs.v(sb, this.d, -273413323094826L);
         yg.u(sb, this.e, -273396143225642L);
-        return bjs.p(sb, this.f, ')');
+        return concat(sb, this.f, ')');
     }
 }

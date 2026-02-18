@@ -67,10 +67,10 @@ public class yi {
     }
 
     public String ad(String str) {
-        bzo.q(str, "keyToMatch");
+        throwIfVar1IsNull(str, "keyToMatch");
         int i = this.b;
         try {
-            if (n() == 6 && bzo.f(af(), str)) {
+            if (n() == 6 && nullSafeIsEqual(af(), str)) {
                 this.d = null;
                 if (n() == 5) {
                     return af();
@@ -124,7 +124,8 @@ public class yi {
             return i;
         }
         String str = (String) this.f;
-        while (i < str.length() && ((cCharAt = str.charAt(i)) == ' ' || cCharAt == '\n' || cCharAt == '\r' || cCharAt == '\t')) {
+        while (i < str.length()
+                && ((cCharAt = str.charAt(i)) == ' ' || cCharAt == '\n' || cCharAt == '\r' || cCharAt == '\t')) {
             i++;
         }
         this.b = i;
@@ -149,8 +150,9 @@ public class yi {
                 this.b = i - 1;
                 String strS = s();
                 this.b = i;
-                if (bzo.f(strS, "null")) {
-                    v(this.b - 1, "Expected string literal but 'null' literal was found", "Use 'coerceInputValues = true' in 'Json {}' builder to coerce nulls if property has a default value.");
+                if (nullSafeIsEqual(strS, "null")) {
+                    v(this.b - 1, "Expected string literal but 'null' literal was found",
+                            "Use 'coerceInputValues = true' in 'Json {}' builder to coerce nulls if property has a default value.");
                     throw null;
                 }
             } catch (Throwable th) {
@@ -161,7 +163,8 @@ public class yi {
         String strBo = cnf.bo(cnf.ap(c));
         int i2 = this.b;
         int i3 = i2 - 1;
-        g(this, "Expected " + strBo + ", but had '" + ((i2 == str.length() || i3 < 0) ? "EOF" : String.valueOf(str.charAt(i3))) + "' instead", i3, null, 4);
+        g(this, "Expected " + strBo + ", but had '"
+                + ((i2 == str.length() || i3 < 0) ? "EOF" : String.valueOf(str.charAt(i3))) + "' instead", i3, null, 4);
         throw null;
     }
 
@@ -207,7 +210,8 @@ public class yi {
     public int i(int i, CharSequence charSequence) {
         int i2 = i + 4;
         if (i2 < charSequence.length()) {
-            ((StringBuilder) this.e).append((char) (w(i + 3, charSequence) + (w(i, charSequence) << 12) + (w(i + 1, charSequence) << 8) + (w(i + 2, charSequence) << 4)));
+            ((StringBuilder) this.e).append((char) (w(i + 3, charSequence) + (w(i, charSequence) << 12)
+                    + (w(i + 1, charSequence) << 8) + (w(i + 2, charSequence) << 4)));
             return i2;
         }
         this.b = i;
@@ -289,7 +293,8 @@ public class yi {
         if (iAh == -1) {
             s();
             int i2 = this.b;
-            g(this, bjs.o("Expected quotation mark '\"', but had '", (i2 == str.length() || i2 < 0) ? "EOF" : String.valueOf(str.charAt(i2)), "' instead"), i2, null, 4);
+            g(this, concat("Expected quotation mark '\"', but had '",
+                    (i2 == str.length() || i2 < 0) ? "EOF" : String.valueOf(str.charAt(i2)), "' instead"), i2, null, 4);
             throw null;
         }
         int i3 = i;
@@ -349,7 +354,7 @@ public class yi {
         }
         this.b = iAh + 1;
         String strSubstring = str.substring(i, iAh);
-        bzo.p(strSubstring, "substring(...)");
+        throwIfVar1IsNull(strSubstring, "substring(...)");
         return strSubstring;
     }
 
@@ -378,7 +383,8 @@ public class yi {
         String strBo = cnf.bo(b);
         int i = this.b;
         int i2 = i - 1;
-        g(this, "Expected " + strBo + ", but had '" + ((i == str.length() || i2 < 0) ? "EOF" : String.valueOf(str.charAt(i2))) + "' instead", i2, null, 4);
+        g(this, "Expected " + strBo + ", but had '"
+                + ((i == str.length() || i2 < 0) ? "EOF" : String.valueOf(str.charAt(i2))) + "' instead", i2, null, 4);
         throw null;
     }
 
@@ -411,7 +417,10 @@ public class yi {
     /* JADX WARN: Type inference failed for: r6v16 */
     /* JADX WARN: Type inference failed for: r6v18 */
     /* JADX WARN: Type inference failed for: r6v19 */
-    /* JADX WARN: Type inference failed for: r6v2, types: [java.lang.String, java.lang.Throwable] */
+    /*
+     * JADX WARN: Type inference failed for: r6v2, types: [java.lang.String,
+     * java.lang.Throwable]
+     */
     /* JADX WARN: Type inference failed for: r6v9 */
     public long q() {
         boolean z;
@@ -563,7 +572,7 @@ public class yi {
         if (str == null) {
             return m();
         }
-        bzo.n(str);
+        throwIfVar1IsNull(str);
         this.d = null;
         return str;
     }
@@ -572,7 +581,7 @@ public class yi {
         String str = (String) this.f;
         String str2 = (String) this.d;
         if (str2 != null) {
-            bzo.n(str2);
+            throwIfVar1IsNull(str2);
             this.d = null;
             return str2;
         }
@@ -612,7 +621,7 @@ public class yi {
         StringBuilder sb = (StringBuilder) this.e;
         sb.append((CharSequence) this.f, i, i2);
         String string = sb.toString();
-        bzo.p(string, "toString(...)");
+        throwIfVar1IsNull(string, "toString(...)");
         sb.setLength(0);
         return string;
     }
@@ -656,10 +665,10 @@ public class yi {
     }
 
     public void v(int i, String str, String str2) {
-        bzo.q(str, "message");
-        bzo.q(str2, "hint");
+        throwIfVar1IsNull(str, "message");
+        throwIfVar1IsNull(str2, "hint");
         String strConcat = str2.length() == 0 ? "" : "\n".concat(str2);
-        StringBuilder sbR = bjs.r(str, " at path: ");
+        StringBuilder sbR = concat(str, " at path: ");
         sbR.append(((ik) this.c).p());
         sbR.append(strConcat);
         throw cnd.ak(i, sbR.toString(), (String) this.f);
@@ -710,7 +719,7 @@ public class yi {
 
     public yi(String str) {
         this.a = 1;
-        bzo.q(str, "source");
+        throwIfVar1IsNull(str, "source");
         ik ikVar = new ik((byte) 0, 6);
         ikVar.c = new Object[8];
         int[] iArr = new int[8];

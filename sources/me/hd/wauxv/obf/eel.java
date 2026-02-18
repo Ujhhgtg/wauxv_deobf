@@ -28,7 +28,8 @@ public final class eel {
             return false;
         }
         eel eelVar = (eel) obj;
-        return bzo.f(this.a, eelVar.a) && bzo.f(this.b, eelVar.b) && bzo.f(this.c, eelVar.c) && bzo.f(this.d, eelVar.d);
+        return nullSafeIsEqual(this.a, eelVar.a) && nullSafeIsEqual(this.b, eelVar.b)
+                && nullSafeIsEqual(this.c, eelVar.c) && nullSafeIsEqual(this.d, eelVar.d);
     }
 
     public final int hashCode() {

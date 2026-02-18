@@ -25,21 +25,21 @@ public final class cjm {
     public final ckm c;
 
     public cjm(Context context, ckm ckmVar) {
-        bzo.q(ckmVar, "navigatorProvider");
+        throwIfVar1IsNull(ckmVar, "navigatorProvider");
         this.b = context;
         this.c = ckmVar;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:207:0x0379  */
-    /* JADX WARN: Found duplicated region for block: B:209:0x0383  */
-    /* JADX WARN: Found duplicated region for block: B:211:0x0396  */
-    /* JADX WARN: Found duplicated region for block: B:212:0x03a9  */
-    /* JADX WARN: Found duplicated region for block: B:214:0x03ad  */
-    /* JADX WARN: Found duplicated region for block: B:215:0x03b7  */
-    /* JADX WARN: Found duplicated region for block: B:217:0x03bb  */
-    /* JADX WARN: Found duplicated region for block: B:218:0x03c5  */
-    /* JADX WARN: Found duplicated region for block: B:220:0x03c9  */
-    /* JADX WARN: Found duplicated region for block: B:221:0x03d3  */
+    /* JADX WARN: Found duplicated region for block: B:207:0x0379 */
+    /* JADX WARN: Found duplicated region for block: B:209:0x0383 */
+    /* JADX WARN: Found duplicated region for block: B:211:0x0396 */
+    /* JADX WARN: Found duplicated region for block: B:212:0x03a9 */
+    /* JADX WARN: Found duplicated region for block: B:214:0x03ad */
+    /* JADX WARN: Found duplicated region for block: B:215:0x03b7 */
+    /* JADX WARN: Found duplicated region for block: B:217:0x03bb */
+    /* JADX WARN: Found duplicated region for block: B:218:0x03c5 */
+    /* JADX WARN: Found duplicated region for block: B:220:0x03c9 */
+    /* JADX WARN: Found duplicated region for block: B:221:0x03d3 */
     public static cin d(TypedArray typedArray, Resources resources, int i) throws XmlPullParserException {
         boolean z;
         ps psVar;
@@ -79,7 +79,30 @@ public final class cjm {
                 cjvVar = psVar6;
             } else {
                 z = z4;
-                cjvVar = "integer[]".equals(string) ? prVar6 : "List<Int>".equals(string) ? cjv.n : "long".equals(string) ? psVar3 : "long[]".equals(string) ? prVar5 : "List<Long>".equals(string) ? cjv.q : "boolean".equals(string) ? psVar4 : "boolean[]".equals(string) ? prVar : "List<Boolean>".equals(string) ? cjv.w : "string".equals(string) ? psVar5 : "string[]".equals(string) ? prVar3 : "List<String>".equals(string) ? cjv.z : "float".equals(string) ? cjvVar2 : "float[]".equals(string) ? prVar2 : "List<Float>".equals(string) ? cjv.t : null;
+                cjvVar = "integer[]".equals(string) ? prVar6
+                        : "List<Int>".equals(string) ? cjv.n
+                                : "long".equals(string) ? psVar3
+                                        : "long[]".equals(string) ? prVar5
+                                                : "List<Long>".equals(string) ? cjv.q
+                                                        : "boolean".equals(string) ? psVar4
+                                                                : "boolean[]".equals(string) ? prVar
+                                                                        : "List<Boolean>".equals(string) ? cjv.w
+                                                                                : "string".equals(string) ? psVar5
+                                                                                        : "string[]".equals(string)
+                                                                                                ? prVar3
+                                                                                                : "List<String>"
+                                                                                                        .equals(string)
+                                                                                                                ? cjv.z
+                                                                                                                : "float"
+                                                                                                                        .equals(string)
+                                                                                                                                ? cjvVar2
+                                                                                                                                : "float[]"
+                                                                                                                                        .equals(string)
+                                                                                                                                                ? prVar2
+                                                                                                                                                : "List<Float>"
+                                                                                                                                                        .equals(string)
+                                                                                                                                                                ? cjv.t
+                                                                                                                                                                : null;
             }
             if (cjvVar != null) {
                 psVar = psVar3;
@@ -92,19 +115,25 @@ public final class cjm {
             } else {
                 try {
                     psVar = psVar3;
-                    String strConcat = (!dnr.bp(string, ".", false) || resourcePackageName == null) ? string : resourcePackageName.concat(string);
+                    String strConcat = (!dnr.bp(string, ".", false) || resourcePackageName == null) ? string
+                            : resourcePackageName.concat(string);
                     boolean zBi = dnr.bi(string, HttpUrl.PATH_SEGMENT_ENCODE_SET_URI);
                     if (zBi) {
                         z3 = zBi;
                         strConcat = strConcat.substring(0, strConcat.length() - 2);
-                        bzo.p(strConcat, "substring(...)");
+                        throwIfVar1IsNull(strConcat, "substring(...)");
                     } else {
                         z3 = zBi;
                     }
                     Class<?> cls2 = Class.forName(strConcat);
-                    cjv cjrVar = Parcelable.class.isAssignableFrom(cls2) ? z3 ? new cjr(cls2) : new cjs(cls2) : (!Enum.class.isAssignableFrom(cls2) || z3) ? Serializable.class.isAssignableFrom(cls2) ? z3 ? new cjt(cls2) : new cju(cls2) : null : new cjq(cls2);
+                    cjv cjrVar = Parcelable.class.isAssignableFrom(cls2) ? z3 ? new cjr(cls2) : new cjs(cls2)
+                            : (!Enum.class.isAssignableFrom(cls2) || z3)
+                                    ? Serializable.class.isAssignableFrom(cls2) ? z3 ? new cjt(cls2) : new cju(cls2)
+                                            : null
+                                    : new cjq(cls2);
                     if (cjrVar == null) {
-                        throw new IllegalArgumentException((strConcat + " is not Serializable or Parcelable.").toString());
+                        throw new IllegalArgumentException(
+                                (strConcat + " is not Serializable or Parcelable.").toString());
                     }
                     cjvVar = cjrVar;
                 } catch (ClassNotFoundException e) {
@@ -127,7 +156,8 @@ public final class cjm {
                     z2 = false;
                 } else {
                     if (typedValue.type != 16 || typedValue.data != 0) {
-                        throw new XmlPullParserException("unsupported value '" + ((Object) typedValue.string) + "' for " + cjvVar.g() + ". Must be a reference to a resource.");
+                        throw new XmlPullParserException("unsupported value '" + ((Object) typedValue.string) + "' for "
+                                + cjvVar.g() + ". Must be a reference to a resource.");
                     }
                     z2 = false;
                     objI = 0;
@@ -147,7 +177,7 @@ public final class cjm {
                         if (i4 == 3) {
                             String string2 = typedValue.string.toString();
                             if (cjvVar == null) {
-                                bzo.q(string2, "value");
+                                throwIfVar1IsNull(string2, "value");
                                 try {
                                     psVar6.i(string2);
                                     cjvVar = psVar6;
@@ -177,23 +207,23 @@ public final class cjm {
                             cjvVarM = cjvVar;
                             objI = cjvVarM.i(string2);
                         } else if (i4 == 4) {
-                            cjvVarM = bzo.m(typedValue, cjvVar, cjvVar2, string, "float");
+                            cjvVarM = KotlinHelpers.m(typedValue, cjvVar, cjvVar2, string, "float");
                             objI = Float.valueOf(typedValue.getFloat());
                         } else if (i4 == 5) {
-                            cjvVarM = bzo.m(typedValue, cjvVar, psVar6, string, "dimension");
+                            cjvVarM = KotlinHelpers.m(typedValue, cjvVar, psVar6, string, "dimension");
                             objI = Integer.valueOf((int) typedValue.getDimension(resources.getDisplayMetrics()));
                         } else if (i4 == 18) {
-                            cjvVarM = bzo.m(typedValue, cjvVar, psVar4, string, "boolean");
+                            cjvVarM = KotlinHelpers.m(typedValue, cjvVar, psVar4, string, "boolean");
                             objI = Boolean.valueOf(typedValue.data != 0);
                         } else {
                             if (i4 < 16 || i4 > 31) {
                                 throw new XmlPullParserException("unsupported argument type " + typedValue.type);
                             }
                             if (cjvVar == cjvVar2) {
-                                cjvVarM = bzo.m(typedValue, cjvVar, cjvVar2, string, "float");
+                                cjvVarM = KotlinHelpers.m(typedValue, cjvVar, cjvVar2, string, "float");
                                 objI = Float.valueOf(typedValue.data);
                             } else {
-                                cjvVarM = bzo.m(typedValue, cjvVar, psVar6, string, "integer");
+                                cjvVarM = KotlinHelpers.m(typedValue, cjvVar, psVar6, string, "integer");
                                 objI = Integer.valueOf(typedValue.data);
                             }
                         }
@@ -201,7 +231,8 @@ public final class cjm {
                     psVar2 = psVar;
                 } else {
                     if (cjvVar != null) {
-                        throw new XmlPullParserException("unsupported value '" + ((Object) typedValue.string) + "' for " + cjvVar.g() + ". You must use a \"reference\" type to reference other resources.");
+                        throw new XmlPullParserException("unsupported value '" + ((Object) typedValue.string) + "' for "
+                                + cjvVar.g() + ". You must use a \"reference\" type to reference other resources.");
                     }
                     objI = Integer.valueOf(i3);
                 }
@@ -232,27 +263,31 @@ public final class cjm {
             } else if (objI instanceof long[]) {
                 cjvVar2 = prVar5;
             } else if (!(objI instanceof Float) && !(objI instanceof float[])) {
-                cjvVar2 = objI instanceof Boolean ? psVar4 : objI instanceof boolean[] ? prVar : ((objI instanceof String) || objI == null) ? psVar5 : null;
+                cjvVar2 = objI instanceof Boolean ? psVar4
+                        : objI instanceof boolean[] ? prVar
+                                : ((objI instanceof String) || objI == null) ? psVar5 : null;
             }
             if (cjvVar2 == null) {
                 cjvVar2 = prVar2;
                 if ((objI instanceof Object[]) && (((Object[]) objI) instanceof String[])) {
                     cjuVar = prVar3;
                 } else {
-                    bzo.n(objI);
+                    throwIfVar1IsNull(objI);
                     if (objI.getClass().isArray()) {
                         Class<?> componentType2 = objI.getClass().getComponentType();
-                        bzo.n(componentType2);
+                        throwIfVar1IsNull(componentType2);
                         if (Parcelable.class.isAssignableFrom(componentType2)) {
                             Class<?> componentType3 = objI.getClass().getComponentType();
-                            bzo.o(componentType3, "null cannot be cast to non-null type java.lang.Class<android.os.Parcelable>");
+                            throwIfVar1IsNull(componentType3,
+                                    "null cannot be cast to non-null type java.lang.Class<android.os.Parcelable>");
                             cjuVar = new cjr(componentType3);
                         } else if (objI.getClass().isArray()) {
                             componentType = objI.getClass().getComponentType();
-                            bzo.n(componentType);
+                            throwIfVar1IsNull(componentType);
                             if (cls.isAssignableFrom(componentType)) {
                                 Class<?> componentType4 = objI.getClass().getComponentType();
-                                bzo.o(componentType4, "null cannot be cast to non-null type java.lang.Class<java.io.Serializable>");
+                                throwIfVar1IsNull(componentType4,
+                                        "null cannot be cast to non-null type java.lang.Class<java.io.Serializable>");
                                 cjuVar = new cjt(componentType4);
                             } else if (objI instanceof Parcelable) {
                                 cjuVar = new cjs(objI.getClass());
@@ -260,7 +295,8 @@ public final class cjm {
                                 cjuVar = new cjq(objI.getClass());
                             } else {
                                 if (objI instanceof Serializable) {
-                                    throw new IllegalArgumentException("Object of type " + objI.getClass().getName() + " is not supported for navigation arguments.");
+                                    throw new IllegalArgumentException("Object of type " + objI.getClass().getName()
+                                            + " is not supported for navigation arguments.");
                                 }
                                 cjuVar = new cju(objI.getClass());
                             }
@@ -270,16 +306,18 @@ public final class cjm {
                             cjuVar = new cjq(objI.getClass());
                         } else {
                             if (objI instanceof Serializable) {
-                                throw new IllegalArgumentException("Object of type " + objI.getClass().getName() + " is not supported for navigation arguments.");
+                                throw new IllegalArgumentException("Object of type " + objI.getClass().getName()
+                                        + " is not supported for navigation arguments.");
                             }
                             cjuVar = new cju(objI.getClass());
                         }
                     } else if (objI.getClass().isArray()) {
                         componentType = objI.getClass().getComponentType();
-                        bzo.n(componentType);
+                        throwIfVar1IsNull(componentType);
                         if (cls.isAssignableFrom(componentType)) {
                             Class<?> componentType42 = objI.getClass().getComponentType();
-                            bzo.o(componentType42, "null cannot be cast to non-null type java.lang.Class<java.io.Serializable>");
+                            throwIfVar1IsNull(componentType42,
+                                    "null cannot be cast to non-null type java.lang.Class<java.io.Serializable>");
                             cjuVar = new cjt(componentType42);
                         } else if (objI instanceof Parcelable) {
                             cjuVar = new cjs(objI.getClass());
@@ -287,7 +325,8 @@ public final class cjm {
                             cjuVar = new cjq(objI.getClass());
                         } else {
                             if (objI instanceof Serializable) {
-                                throw new IllegalArgumentException("Object of type " + objI.getClass().getName() + " is not supported for navigation arguments.");
+                                throw new IllegalArgumentException("Object of type " + objI.getClass().getName()
+                                        + " is not supported for navigation arguments.");
                             }
                             cjuVar = new cju(objI.getClass());
                         }
@@ -297,7 +336,8 @@ public final class cjm {
                         cjuVar = new cjq(objI.getClass());
                     } else {
                         if (objI instanceof Serializable) {
-                            throw new IllegalArgumentException("Object of type " + objI.getClass().getName() + " is not supported for navigation arguments.");
+                            throw new IllegalArgumentException("Object of type " + objI.getClass().getName()
+                                    + " is not supported for navigation arguments.");
                         }
                         cjuVar = new cju(objI.getClass());
                     }
@@ -311,7 +351,8 @@ public final class cjm {
         return new cin(cjvVarM, z, objI, z5);
     }
 
-    public final cjg e(Resources resources, XmlResourceParser xmlResourceParser, AttributeSet attributeSet, int i) throws XmlPullParserException, IOException {
+    public final cjg e(Resources resources, XmlResourceParser xmlResourceParser, AttributeSet attributeSet, int i)
+            throws XmlPullParserException, IOException {
         int depth;
         Context context;
         ea eaVar;
@@ -322,7 +363,7 @@ public final class cjm {
         String strBo2;
         int i3 = i;
         String name = xmlResourceParser.getName();
-        bzo.p(name, "getName(...)");
+        throwIfVar1IsNull(name, "getName(...)");
         cjg cjgVarC = this.c.d(name).c();
         Context context2 = this.b;
         cjgVarC.d(context2, attributeSet);
@@ -340,7 +381,7 @@ public final class cjm {
                 int[] iArr = cyc.b;
                 if (zEquals) {
                     TypedArray typedArrayObtainAttributes = resources.obtainAttributes(attributeSet, iArr);
-                    bzo.p(typedArrayObtainAttributes, "obtainAttributes(...)");
+                    throwIfVar1IsNull(typedArrayObtainAttributes, "obtainAttributes(...)");
                     String string = typedArrayObtainAttributes.getString(0);
                     if (string == null) {
                         throw new XmlPullParserException("Arguments must have a name");
@@ -351,17 +392,19 @@ public final class cjm {
                     typedArrayObtainAttributes.recycle();
                 } else if ("deepLink".equals(name2)) {
                     TypedArray typedArrayObtainAttributes2 = resources.obtainAttributes(attributeSet, cyc.c);
-                    bzo.p(typedArrayObtainAttributes2, "obtainAttributes(...)");
+                    throwIfVar1IsNull(typedArrayObtainAttributes2, "obtainAttributes(...)");
                     String string2 = typedArrayObtainAttributes2.getString(3);
                     String string3 = typedArrayObtainAttributes2.getString(1);
                     String string4 = typedArrayObtainAttributes2.getString(2);
-                    if ((string2 == null || string2.length() == 0) && ((string3 == null || string3.length() == 0) && (string4 == null || string4.length() == 0))) {
-                        throw new XmlPullParserException("Every <deepLink> must include at least one of app:uri, app:action, or app:mimeType");
+                    if ((string2 == null || string2.length() == 0) && ((string3 == null || string3.length() == 0)
+                            && (string4 == null || string4.length() == 0))) {
+                        throw new XmlPullParserException(
+                                "Every <deepLink> must include at least one of app:uri, app:action, or app:mimeType");
                     }
                     String strBo3 = null;
                     if (string2 != null) {
                         String packageName = context2.getPackageName();
-                        bzo.p(packageName, "getPackageName(...)");
+                        throwIfVar1IsNull(packageName, "getPackageName(...)");
                         strBo = dnr.bo(string2, "${applicationId}", packageName);
                     } else {
                         strBo = null;
@@ -370,7 +413,7 @@ public final class cjm {
                         strBo2 = null;
                     } else {
                         String packageName2 = context2.getPackageName();
-                        bzo.p(packageName2, "getPackageName(...)");
+                        throwIfVar1IsNull(packageName2, "getPackageName(...)");
                         strBo2 = dnr.bo(string3, "${applicationId}", packageName2);
                         if (strBo2.length() <= 0) {
                             throw new IllegalArgumentException("The NavDeepLink cannot have an empty action.");
@@ -378,7 +421,7 @@ public final class cjm {
                     }
                     if (string4 != null) {
                         String packageName3 = context2.getPackageName();
-                        bzo.p(packageName3, "getPackageName(...)");
+                        throwIfVar1IsNull(packageName3, "getPackageName(...)");
                         strBo3 = dnr.bo(string4, "${applicationId}", packageName3);
                     }
                     cjd cjdVar = new cjd(strBo, strBo2, strBo3);
@@ -395,12 +438,21 @@ public final class cjm {
                     typedArrayObtainAttributes2.recycle();
                 } else {
                     if (com.umeng.ccg.a.z.equals(name2)) {
-                        TypedArray typedArrayObtainStyledAttributes = context2.obtainStyledAttributes(attributeSet, cyc.a, 0, 0);
+                        TypedArray typedArrayObtainStyledAttributes = context2.obtainStyledAttributes(attributeSet,
+                                cyc.a, 0, 0);
                         int resourceId = typedArrayObtainStyledAttributes.getResourceId(0, 0);
                         context = context2;
                         cim cimVar = new cim(typedArrayObtainStyledAttributes.getResourceId(1, 0));
-                        cimVar.b = new cjo(typedArrayObtainStyledAttributes.getBoolean(4, false), typedArrayObtainStyledAttributes.getBoolean(10, false), typedArrayObtainStyledAttributes.getResourceId(7, -1), typedArrayObtainStyledAttributes.getBoolean(8, false), typedArrayObtainStyledAttributes.getBoolean(9, false), typedArrayObtainStyledAttributes.getResourceId(2, -1), typedArrayObtainStyledAttributes.getResourceId(3, -1), typedArrayObtainStyledAttributes.getResourceId(5, -1), typedArrayObtainStyledAttributes.getResourceId(6, -1));
-                        Bundle bundleR = bht.r((csm[]) Arrays.copyOf(new csm[0], 0));
+                        cimVar.b = new cjo(typedArrayObtainStyledAttributes.getBoolean(4, false),
+                                typedArrayObtainStyledAttributes.getBoolean(10, false),
+                                typedArrayObtainStyledAttributes.getResourceId(7, -1),
+                                typedArrayObtainStyledAttributes.getBoolean(8, false),
+                                typedArrayObtainStyledAttributes.getBoolean(9, false),
+                                typedArrayObtainStyledAttributes.getResourceId(2, -1),
+                                typedArrayObtainStyledAttributes.getResourceId(3, -1),
+                                typedArrayObtainStyledAttributes.getResourceId(5, -1),
+                                typedArrayObtainStyledAttributes.getResourceId(6, -1));
+                        Bundle bundleR = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                         eaVar = eaVar2;
                         int i5 = 1;
                         int depth3 = xmlResourceParser.getDepth() + 1;
@@ -418,8 +470,9 @@ public final class cjm {
                             }
                             if (next2 == 2 && depth4 <= depth3) {
                                 if ("argument".equals(xmlResourceParser.getName())) {
-                                    TypedArray typedArrayObtainAttributes3 = resources.obtainAttributes(attributeSet, iArr);
-                                    bzo.p(typedArrayObtainAttributes3, "obtainAttributes(...)");
+                                    TypedArray typedArrayObtainAttributes3 = resources.obtainAttributes(attributeSet,
+                                            iArr);
+                                    throwIfVar1IsNull(typedArrayObtainAttributes3, "obtainAttributes(...)");
                                     String string5 = typedArrayObtainAttributes3.getString(0);
                                     if (string5 == null) {
                                         throw new XmlPullParserException("Arguments must have a name");
@@ -440,7 +493,8 @@ public final class cjm {
                             cimVar.c = bundleR;
                         }
                         if (cjgVarC instanceof dl) {
-                            throw new UnsupportedOperationException("Cannot add action " + resourceId + " to " + cjgVarC + " as it does not support actions, indicating that it is a terminal destination in your navigation graph and will never trigger actions.");
+                            throw new UnsupportedOperationException("Cannot add action " + resourceId + " to " + cjgVarC
+                                    + " as it does not support actions, indicating that it is a terminal destination in your navigation graph and will never trigger actions.");
                         }
                         if (resourceId == 0) {
                             throw new IllegalArgumentException("Cannot have an action with actionId 0");
@@ -453,7 +507,7 @@ public final class cjm {
                         i2 = depth2;
                         if ("include".equals(name2) && (cjgVarC instanceof cji)) {
                             TypedArray typedArrayObtainAttributes4 = resources.obtainAttributes(attributeSet, cyb.c);
-                            bzo.p(typedArrayObtainAttributes4, "obtainAttributes(...)");
+                            throwIfVar1IsNull(typedArrayObtainAttributes4, "obtainAttributes(...)");
                             ((cji) cjgVarC).c(f(typedArrayObtainAttributes4.getResourceId(0, 0)));
                             typedArrayObtainAttributes4.recycle();
                         } else if (cjgVarC instanceof cji) {
@@ -475,7 +529,7 @@ public final class cjm {
         int next;
         Resources resources = this.b.getResources();
         XmlResourceParser xml = resources.getXml(i);
-        bzo.p(xml, "getXml(...)");
+        throwIfVar1IsNull(xml, "getXml(...)");
         AttributeSet attributeSetAsAttributeSet = Xml.asAttributeSet(xml);
         do {
             try {
@@ -485,7 +539,8 @@ public final class cjm {
                         break;
                     }
                 } catch (Exception e) {
-                    throw new RuntimeException("Exception inflating " + resources.getResourceName(i) + " line " + xml.getLineNumber(), e);
+                    throw new RuntimeException(
+                            "Exception inflating " + resources.getResourceName(i) + " line " + xml.getLineNumber(), e);
                 }
             } catch (Throwable th) {
                 xml.close();
@@ -496,7 +551,7 @@ public final class cjm {
             throw new XmlPullParserException("No start tag found");
         }
         String name = xml.getName();
-        bzo.n(attributeSetAsAttributeSet);
+        throwIfVar1IsNull(attributeSetAsAttributeSet);
         cjg cjgVarE = e(resources, xml, attributeSetAsAttributeSet, i);
         if (cjgVarE instanceof cji) {
             cji cjiVar = (cji) cjgVarE;

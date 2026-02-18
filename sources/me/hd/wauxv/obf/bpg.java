@@ -21,21 +21,22 @@ public final class bpg {
         }
     }
 
-    public void b(zc zcVar, bgf bgfVar) {
+    public void b(zc zcVar, IHasInvokeMethod bgfVar) {
         LinkedHashMap linkedHashMap = this.a;
         if (!linkedHashMap.containsKey(zcVar)) {
             linkedHashMap.put(zcVar, new erm(zcVar, bgfVar));
             return;
         }
-        throw new IllegalArgumentException(("A `initializer` with the same `clazz` has already been added: " + emc.ao(zcVar) + TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH).toString());
+        throw new IllegalArgumentException(("A `initializer` with the same `clazz` has already been added: "
+                + emc.ao(zcVar) + TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH).toString());
     }
 
     public bmu c() {
         Collection collectionValues = this.a.values();
-        bzo.q(collectionValues, "initializers");
+        throwIfVar1IsNull(collectionValues, "initializers");
         erm[] ermVarArr = (erm[]) collectionValues.toArray(new erm[0]);
         erm[] ermVarArr2 = (erm[]) Arrays.copyOf(ermVarArr, ermVarArr.length);
-        bzo.q(ermVarArr2, "initializers");
+        throwIfVar1IsNull(ermVarArr2, "initializers");
         bmu bmuVar = new bmu();
         bmuVar.h = ermVarArr2;
         return bmuVar;

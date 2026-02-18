@@ -29,7 +29,7 @@ public final class bcl implements dlc {
 
     @Override // me.hd.wauxv.obf.dlc
     public final long read(rh rhVar, long j) throws IOException {
-        bzo.q(rhVar, "sink");
+        throwIfVar1IsNull(rhVar, "sink");
         try {
             long j2 = this.b.read(rhVar, j);
             cyk cykVar = this.d;

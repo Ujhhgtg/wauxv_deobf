@@ -16,7 +16,7 @@ public final class bah extends dqc {
     public final int c(bbb bbbVar) {
         int iT;
         int iV;
-        bzo.q(bbbVar, "fbb");
+        throwIfVar1IsNull(bbbVar, "fbb");
         List list = this.a;
         if (list != null) {
             ArrayList arrayList = new ArrayList(abb.ak(list, 10));

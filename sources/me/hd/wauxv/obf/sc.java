@@ -15,14 +15,14 @@ public final class sc implements dcj {
     public static final sb b = new sb(0);
     public final Context e;
     public final ArrayList f;
-    public final io i;
+    public final DefaultConfig i;
     public final nu h = a;
     public final sb g = b;
 
     public sc(Context context, ArrayList arrayList, oz ozVar, bva bvaVar) {
         this.e = context.getApplicationContext();
         this.f = arrayList;
-        this.i = new io(ozVar, 22, bvaVar);
+        this.i = new DefaultConfig(ozVar, 22, bvaVar);
     }
 
     public static int j(bhi bhiVar, int i, int i2) {
@@ -148,7 +148,7 @@ public final class sc implements dcj {
                 Bitmap.Config config = crwVar.b(bhk.a) == ajo.b ? Bitmap.Config.RGB_565 : Bitmap.Config.ARGB_8888;
                 int iJ = j(bhiVarF, i, i2);
                 nu nuVar = this.h;
-                io ioVar = this.i;
+                DefaultConfig ioVar = this.i;
                 nuVar.getClass();
                 dmg dmgVar = new dmg(ioVar, bhiVarF, byteBuffer, iJ);
                 dmgVar.w(config);

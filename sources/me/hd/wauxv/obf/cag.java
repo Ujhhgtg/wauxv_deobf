@@ -26,7 +26,8 @@ public final class cag implements View.OnClickListener {
                 cal calVar = (cal) this.c;
                 int iCu = ((LinearLayoutManager) calVar.n.getLayoutManager()).cu() - 1;
                 if (iCu >= 0) {
-                    Calendar calendarB = eoq.b(((com.google.android.material.datepicker.c) this.b).a.a.a);
+                    Calendar calendarB = eoq.b(
+                            ((com.google.android.material.datepicker.c) this.b).cachedConstructors.cachedConstructors.cachedConstructors);
                     calendarB.add(2, iCu);
                     calVar.s(new cet(calendarB));
                 }
@@ -35,7 +36,8 @@ public final class cag implements View.OnClickListener {
                 cal calVar2 = (cal) this.c;
                 int iCt = ((LinearLayoutManager) calVar2.n.getLayoutManager()).ct() + 1;
                 if (iCt < calVar2.n.getAdapter().d()) {
-                    Calendar calendarB2 = eoq.b(((com.google.android.material.datepicker.c) this.b).a.a.a);
+                    Calendar calendarB2 = eoq.b(
+                            ((com.google.android.material.datepicker.c) this.b).cachedConstructors.cachedConstructors.cachedConstructors);
                     calendarB2.add(2, iCt);
                     calVar2.s(new cet(calendarB2));
                 }

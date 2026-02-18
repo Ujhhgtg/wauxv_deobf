@@ -63,12 +63,12 @@ public final class ani extends ckl {
                 begVar.p.add(new beu() { // from class: me.hd.wauxv.obf.anf
                     @Override // me.hd.wauxv.obf.beu
                     public final void b(beg begVar2, bdj bdjVar) {
-                        bzo.q(begVar2, "<unused var>");
-                        bzo.q(bdjVar, "childFragment");
+                        throwIfVar1IsNull(begVar2, "<unused var>");
+                        throwIfVar1IsNull(bdjVar, "childFragment");
                         ani aniVar = this.a;
                         LinkedHashSet linkedHashSet = aniVar.f;
                         String str = bdjVar.bs;
-                        if ((linkedHashSet instanceof bsw) && !(linkedHashSet instanceof bsx)) {
+                        if ((linkedHashSet instanceof IEmpty) && !(linkedHashSet instanceof IEmpty2)) {
                             emc.bb(linkedHashSet, "kotlin.collections.MutableCollection");
                             throw null;
                         }
@@ -98,7 +98,8 @@ public final class ani extends ckl {
         String str = cioVar.f;
         beg begVar = this.b;
         if (begVar.ci()) {
-            Log.i("DialogFragmentNavigator", "Ignoring onLaunchSingleTop() call: FragmentManager has already saved its state");
+            Log.i("DialogFragmentNavigator",
+                    "Ignoring onLaunchSingleTop() call: FragmentManager has already saved its state");
             return;
         }
         anc ancVar = (anc) this.h.get(str);
@@ -116,7 +117,7 @@ public final class ani extends ckl {
         ListIterator listIterator = list.listIterator(list.size());
         while (listIterator.hasPrevious()) {
             cio cioVar2 = (cio) listIterator.previous();
-            if (bzo.f(cioVar2.f, str)) {
+            if (nullSafeIsEqual(cioVar2.f, str)) {
                 dml dmlVar = citVarW.c;
                 dmlVar.g(dgg.b(dgg.b((Set) dmlVar.c(), cioVar2), cioVar));
                 citVarW.l(cioVar);
@@ -130,7 +131,8 @@ public final class ani extends ckl {
     public final void l(cio cioVar, boolean z) {
         beg begVar = this.b;
         if (begVar.ci()) {
-            Log.i("DialogFragmentNavigator", "Ignoring popBackStack() call: FragmentManager has already saved its state");
+            Log.i("DialogFragmentNavigator",
+                    "Ignoring popBackStack() call: FragmentManager has already saved its state");
             return;
         }
         List list = (List) ((dml) w().e.h).c();
@@ -147,7 +149,8 @@ public final class ani extends ckl {
 
     public final anc m(cio cioVar) {
         cjg cjgVar = cioVar.b;
-        bzo.o(cjgVar, "null cannot be cast to non-null type androidx.navigation.fragment.DialogFragmentNavigator.Destination");
+        throwIfVar1IsNull(cjgVar,
+                "null cannot be cast to non-null type androidx.navigation.fragment.DialogFragmentNavigator.Destination");
         ang angVar = (ang) cjgVar;
         String str = angVar.a;
         if (str == null) {
@@ -161,7 +164,7 @@ public final class ani extends ckl {
         bdz bdzVarCe = this.b.ce();
         context.getClassLoader();
         bdj bdjVarE = bdzVarCe.e(str);
-        bzo.p(bdjVarE, "instantiate(...)");
+        throwIfVar1IsNull(bdjVarE, "instantiate(...)");
         if (anc.class.isAssignableFrom(bdjVarE.getClass())) {
             anc ancVar = (anc) bdjVarE;
             ancVar.df(cioVar.h.l());

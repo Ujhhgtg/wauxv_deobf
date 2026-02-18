@@ -24,7 +24,7 @@ public final class eab {
             return false;
         }
         eab eabVar = (eab) obj;
-        return bzo.f(this.a, eabVar.a) && bzo.f(this.b, eabVar.b);
+        return nullSafeIsEqual(this.a, eabVar.a) && nullSafeIsEqual(this.b, eabVar.b);
     }
 
     public final int hashCode() {
@@ -38,6 +38,6 @@ public final class eab {
         StringBuilder sb = new StringBuilder();
         sb.append("ll1Proto(module_type=" /* cnb.z(-220233038035754L) */);
         bjs.w(sb, this.a, -221770636327722L);
-        return bjs.q(sb, this.b, ')');
+        return concat(sb, this.b, ')');
     }
 }

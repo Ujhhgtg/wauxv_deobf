@@ -58,21 +58,23 @@ public final class axl {
     public static final boolean a = Log.isLoggable("ExifInterface", 3);
     public static final List b = Arrays.asList(1, 6, 3, 8);
     public static final List c = Arrays.asList(2, 7, 4, 5);
-    public static final int[] d = {8, 8, 8};
-    public static final int[] e = {8};
-    public static final byte[] f = {-1, JSONB.Constants.BC_INT64_NUM_MIN, -1};
-    public static final byte[] g = {102, 116, JSONB.Constants.BC_STR_ASCII, 112};
-    public static final byte[] h = {JSONB.Constants.BC_STR_ASCII_FIX_36, JSONB.Constants.BC_STR_ASCII_FIX_32, 102, 49};
-    public static final byte[] i = {104, 101, JSONB.Constants.BC_STR_ASCII_FIX_32, 99};
-    public static final byte[] j = {79, 76, 89, JSONB.Constants.BC_STR_ASCII_FIX_4, 80, 0};
-    public static final byte[] k = {79, 76, 89, JSONB.Constants.BC_STR_ASCII_FIX_4, 80, 85, 83, 0, 73, 73};
-    public static final byte[] l = {-119, 80, JSONB.Constants.BC_STR_ASCII_FIX_5, JSONB.Constants.BC_INT32_SHORT_MAX, com.umeng.analytics.pro.dn.k, 10, 26, 10};
-    public static final byte[] m = {101, 88, 73, 102};
-    public static final byte[] n = {73, JSONB.Constants.BC_INT32, JSONB.Constants.BC_INT32_SHORT_ZERO, 82};
-    public static final byte[] o = {73, 69, JSONB.Constants.BC_STR_ASCII_FIX_5, JSONB.Constants.BC_INT32_SHORT_ZERO};
-    public static final byte[] p = {82, 73, 70, 70};
-    public static final byte[] q = {87, 69, 66, 80};
-    public static final byte[] r = {69, 88, 73, 70};
+    public static final int[] d = { 8, 8, 8 };
+    public static final int[] e = { 8 };
+    public static final byte[] f = { -1, JSONB.Constants.BC_INT64_NUM_MIN, -1 };
+    public static final byte[] g = { 102, 116, JSONB.Constants.BC_STR_ASCII, 112 };
+    public static final byte[] h = { JSONB.Constants.BC_STR_ASCII_FIX_36, JSONB.Constants.BC_STR_ASCII_FIX_32, 102,
+            49 };
+    public static final byte[] i = { 104, 101, JSONB.Constants.BC_STR_ASCII_FIX_32, 99 };
+    public static final byte[] j = { 79, 76, 89, JSONB.Constants.BC_STR_ASCII_FIX_4, 80, 0 };
+    public static final byte[] k = { 79, 76, 89, JSONB.Constants.BC_STR_ASCII_FIX_4, 80, 85, 83, 0, 73, 73 };
+    public static final byte[] l = { -119, 80, JSONB.Constants.BC_STR_ASCII_FIX_5, JSONB.Constants.BC_INT32_SHORT_MAX,
+            com.umeng.analytics.pro.dn.k, 10, 26, 10 };
+    public static final byte[] m = { 101, 88, 73, 102 };
+    public static final byte[] n = { 73, JSONB.Constants.BC_INT32, JSONB.Constants.BC_INT32_SHORT_ZERO, 82 };
+    public static final byte[] o = { 73, 69, JSONB.Constants.BC_STR_ASCII_FIX_5, JSONB.Constants.BC_INT32_SHORT_ZERO };
+    public static final byte[] p = { 82, 73, 70, 70 };
+    public static final byte[] q = { 87, 69, 66, 80 };
+    public static final byte[] r = { 69, 88, 73, 70 };
 
     static {
         "VP8X".getBytes(Charset.defaultCharset());
@@ -80,20 +82,109 @@ public final class axl {
         "VP8 ".getBytes(Charset.defaultCharset());
         "ANIM".getBytes(Charset.defaultCharset());
         "ANMF".getBytes(Charset.defaultCharset());
-        s = new String[]{"", "BYTE", "STRING", "USHORT", "ULONG", "URATIONAL", "SBYTE", "UNDEFINED", "SSHORT", "SLONG", "SRATIONAL", "SINGLE", "DOUBLE", "IFD"};
-        t = new int[]{0, 1, 1, 2, 4, 8, 1, 1, 2, 4, 8, 4, 8, 1};
-        u = new byte[]{65, 83, 67, 73, 73, 0, 0, 0};
-        axi[] axiVarArr = {new axi("NewSubfileType", Opcodes.CONST_METHOD_HANDLE, 4), new axi("SubfileType", Opcodes.CONST_METHOD_TYPE, 4), new axi("ImageWidth", 256, 3, 4), new axi("ImageLength", 257, 3, 4), new axi("BitsPerSample", 258, 3), new axi("Compression", 259, 3), new axi("PhotometricInterpretation", 262, 3), new axi("ImageDescription", 270, 2), new axi("Make", 271, 2), new axi("Model", 272, 2), new axi("StripOffsets", com.umeng.commonsdk.stateless.b.a, 3, 4), new axi("Orientation", 274, 3), new axi("SamplesPerPixel", 277, 3), new axi("RowsPerStrip", 278, 3, 4), new axi("StripByteCounts", 279, 3, 4), new axi("XResolution", 282, 5), new axi("YResolution", 283, 5), new axi("PlanarConfiguration", 284, 3), new axi("ResolutionUnit", 296, 3), new axi("TransferFunction", com.umeng.ccg.c.p, 3), new axi("Software", com.umeng.ccg.c.t, 2), new axi("DateTime", 306, 2), new axi("Artist", 315, 2), new axi("WhitePoint", 318, 5), new axi("PrimaryChromaticities", 319, 5), new axi("SubIFDPointer", 330, 4), new axi("JPEGInterchangeFormat", 513, 4), new axi("JPEGInterchangeFormatLength", 514, 4), new axi("YCbCrCoefficients", 529, 5), new axi("YCbCrSubSampling", 530, 3), new axi("YCbCrPositioning", 531, 3), new axi("ReferenceBlackWhite", 532, 5), new axi("Copyright", 33432, 2), new axi("ExifIFDPointer", 34665, 4), new axi("GPSInfoIFDPointer", 34853, 4), new axi("SensorTopBorder", 4, 4), new axi("SensorLeftBorder", 5, 4), new axi("SensorBottomBorder", 6, 4), new axi("SensorRightBorder", 7, 4), new axi("ISO", 23, 3), new axi("JpgFromRaw", 46, 7), new axi("Xmp", 700, 1)};
-        axi[] axiVarArr2 = {new axi("ExposureTime", 33434, 5), new axi("FNumber", 33437, 5), new axi("ExposureProgram", 34850, 3), new axi("SpectralSensitivity", 34852, 2), new axi("PhotographicSensitivity", 34855, 3), new axi("OECF", 34856, 7), new axi("SensitivityType", 34864, 3), new axi("StandardOutputSensitivity", 34865, 4), new axi("RecommendedExposureIndex", 34866, 4), new axi("ISOSpeed", 34867, 4), new axi("ISOSpeedLatitudeyyy", 34868, 4), new axi("ISOSpeedLatitudezzz", 34869, 4), new axi("ExifVersion", 36864, 2), new axi("DateTimeOriginal", 36867, 2), new axi("DateTimeDigitized", 36868, 2), new axi("OffsetTime", ModifierContributor.ForParameter.MASK, 2), new axi("OffsetTimeOriginal", 36881, 2), new axi("OffsetTimeDigitized", 36882, 2), new axi("ComponentsConfiguration", 37121, 7), new axi("CompressedBitsPerPixel", 37122, 5), new axi("ShutterSpeedValue", 37377, 10), new axi("ApertureValue", 37378, 5), new axi("BrightnessValue", 37379, 10), new axi("ExposureBiasValue", 37380, 10), new axi("MaxApertureValue", 37381, 5), new axi("SubjectDistance", 37382, 5), new axi("MeteringMode", 37383, 3), new axi("LightSource", 37384, 3), new axi("Flash", 37385, 3), new axi("FocalLength", 37386, 5), new axi("SubjectArea", 37396, 3), new axi("MakerNote", 37500, 7), new axi("UserComment", 37510, 7), new axi("SubSecTime", 37520, 2), new axi("SubSecTimeOriginal", 37521, 2), new axi("SubSecTimeDigitized", 37522, 2), new axi("FlashpixVersion", 40960, 7), new axi("ColorSpace", 40961, 3), new axi("PixelXDimension", 40962, 3, 4), new axi("PixelYDimension", 40963, 3, 4), new axi("RelatedSoundFile", 40964, 2), new axi("InteroperabilityIFDPointer", 40965, 4), new axi("FlashEnergy", 41483, 5), new axi("SpatialFrequencyResponse", 41484, 7), new axi("FocalPlaneXResolution", 41486, 5), new axi("FocalPlaneYResolution", 41487, 5), new axi("FocalPlaneResolutionUnit", 41488, 3), new axi("SubjectLocation", 41492, 3), new axi("ExposureIndex", 41493, 5), new axi("SensingMethod", 41495, 3), new axi("FileSource", 41728, 7), new axi("SceneType", 41729, 7), new axi("CFAPattern", 41730, 7), new axi("CustomRendered", 41985, 3), new axi("ExposureMode", 41986, 3), new axi("WhiteBalance", 41987, 3), new axi("DigitalZoomRatio", 41988, 5), new axi("FocalLengthIn35mmFilm", 41989, 3), new axi("SceneCaptureType", 41990, 3), new axi("GainControl", 41991, 3), new axi("Contrast", 41992, 3), new axi("Saturation", 41993, 3), new axi("Sharpness", 41994, 3), new axi("DeviceSettingDescription", 41995, 7), new axi("SubjectDistanceRange", 41996, 3), new axi("ImageUniqueID", 42016, 2), new axi("CameraOwnerName", 42032, 2), new axi("BodySerialNumber", 42033, 2), new axi("LensSpecification", 42034, 5), new axi("LensMake", 42035, 2), new axi("LensModel", 42036, 2), new axi("Gamma", 42240, 5), new axi("DNGVersion", 50706, 1), new axi("DefaultCropSize", 50720, 3, 4)};
-        axi[] axiVarArr3 = {new axi("GPSVersionID", 0, 1), new axi("GPSLatitudeRef", 1, 2), new axi("GPSLatitude", 2, 5, 10), new axi("GPSLongitudeRef", 3, 2), new axi("GPSLongitude", 4, 5, 10), new axi("GPSAltitudeRef", 5, 1), new axi("GPSAltitude", 6, 5), new axi("GPSTimeStamp", 7, 5), new axi("GPSSatellites", 8, 2), new axi("GPSStatus", 9, 2), new axi("GPSMeasureMode", 10, 2), new axi("GPSDOP", 11, 5), new axi("GPSSpeedRef", 12, 2), new axi("GPSSpeed", 13, 5), new axi("GPSTrackRef", 14, 2), new axi("GPSTrack", 15, 5), new axi("GPSImgDirectionRef", 16, 2), new axi("GPSImgDirection", 17, 5), new axi("GPSMapDatum", 18, 2), new axi("GPSDestLatitudeRef", 19, 2), new axi("GPSDestLatitude", 20, 5), new axi("GPSDestLongitudeRef", 21, 2), new axi("GPSDestLongitude", 22, 5), new axi("GPSDestBearingRef", 23, 2), new axi("GPSDestBearing", 24, 5), new axi("GPSDestDistanceRef", 25, 2), new axi("GPSDestDistance", 26, 5), new axi("GPSProcessingMethod", 27, 7), new axi("GPSAreaInformation", 28, 7), new axi("GPSDateStamp", 29, 2), new axi("GPSDifferential", 30, 3), new axi("GPSHPositioningError", 31, 5)};
-        axi[] axiVarArr4 = {new axi("InteroperabilityIndex", 1, 2)};
-        axi[] axiVarArr5 = {new axi("NewSubfileType", Opcodes.CONST_METHOD_HANDLE, 4), new axi("SubfileType", Opcodes.CONST_METHOD_TYPE, 4), new axi("ThumbnailImageWidth", 256, 3, 4), new axi("ThumbnailImageLength", 257, 3, 4), new axi("BitsPerSample", 258, 3), new axi("Compression", 259, 3), new axi("PhotometricInterpretation", 262, 3), new axi("ImageDescription", 270, 2), new axi("Make", 271, 2), new axi("Model", 272, 2), new axi("StripOffsets", com.umeng.commonsdk.stateless.b.a, 3, 4), new axi("ThumbnailOrientation", 274, 3), new axi("SamplesPerPixel", 277, 3), new axi("RowsPerStrip", 278, 3, 4), new axi("StripByteCounts", 279, 3, 4), new axi("XResolution", 282, 5), new axi("YResolution", 283, 5), new axi("PlanarConfiguration", 284, 3), new axi("ResolutionUnit", 296, 3), new axi("TransferFunction", com.umeng.ccg.c.p, 3), new axi("Software", com.umeng.ccg.c.t, 2), new axi("DateTime", 306, 2), new axi("Artist", 315, 2), new axi("WhitePoint", 318, 5), new axi("PrimaryChromaticities", 319, 5), new axi("SubIFDPointer", 330, 4), new axi("JPEGInterchangeFormat", 513, 4), new axi("JPEGInterchangeFormatLength", 514, 4), new axi("YCbCrCoefficients", 529, 5), new axi("YCbCrSubSampling", 530, 3), new axi("YCbCrPositioning", 531, 3), new axi("ReferenceBlackWhite", 532, 5), new axi("Copyright", 33432, 2), new axi("ExifIFDPointer", 34665, 4), new axi("GPSInfoIFDPointer", 34853, 4), new axi("DNGVersion", 50706, 1), new axi("DefaultCropSize", 50720, 3, 4)};
+        s = new String[] { "", "BYTE", "STRING", "USHORT", "ULONG", "URATIONAL", "SBYTE", "UNDEFINED", "SSHORT",
+                "SLONG", "SRATIONAL", "SINGLE", "DOUBLE", "IFD" };
+        t = new int[] { 0, 1, 1, 2, 4, 8, 1, 1, 2, 4, 8, 4, 8, 1 };
+        u = new byte[] { 65, 83, 67, 73, 73, 0, 0, 0 };
+        axi[] axiVarArr = { new axi("NewSubfileType", Opcodes.CONST_METHOD_HANDLE, 4),
+                new axi("SubfileType", Opcodes.CONST_METHOD_TYPE, 4), new axi("ImageWidth", 256, 3, 4),
+                new axi("ImageLength", 257, 3, 4), new axi("BitsPerSample", 258, 3), new axi("Compression", 259, 3),
+                new axi("PhotometricInterpretation", 262, 3), new axi("ImageDescription", 270, 2),
+                new axi("Make", 271, 2), new axi("Model", 272, 2),
+                new axi("StripOffsets", com.umeng.commonsdk.stateless.b.a, 3, 4), new axi("Orientation", 274, 3),
+                new axi("SamplesPerPixel", 277, 3), new axi("RowsPerStrip", 278, 3, 4),
+                new axi("StripByteCounts", 279, 3, 4), new axi("XResolution", 282, 5), new axi("YResolution", 283, 5),
+                new axi("PlanarConfiguration", 284, 3), new axi("ResolutionUnit", 296, 3),
+                new axi("TransferFunction", com.umeng.ccg.c.p, 3), new axi("Software", com.umeng.ccg.c.t, 2),
+                new axi("DateTime", 306, 2), new axi("Artist", 315, 2), new axi("WhitePoint", 318, 5),
+                new axi("PrimaryChromaticities", 319, 5), new axi("SubIFDPointer", 330, 4),
+                new axi("JPEGInterchangeFormat", 513, 4), new axi("JPEGInterchangeFormatLength", 514, 4),
+                new axi("YCbCrCoefficients", 529, 5), new axi("YCbCrSubSampling", 530, 3),
+                new axi("YCbCrPositioning", 531, 3), new axi("ReferenceBlackWhite", 532, 5),
+                new axi("Copyright", 33432, 2), new axi("ExifIFDPointer", 34665, 4),
+                new axi("GPSInfoIFDPointer", 34853, 4), new axi("SensorTopBorder", 4, 4),
+                new axi("SensorLeftBorder", 5, 4), new axi("SensorBottomBorder", 6, 4),
+                new axi("SensorRightBorder", 7, 4), new axi("ISO", 23, 3), new axi("JpgFromRaw", 46, 7),
+                new axi("Xmp", 700, 1) };
+        axi[] axiVarArr2 = { new axi("ExposureTime", 33434, 5), new axi("FNumber", 33437, 5),
+                new axi("ExposureProgram", 34850, 3), new axi("SpectralSensitivity", 34852, 2),
+                new axi("PhotographicSensitivity", 34855, 3), new axi("OECF", 34856, 7),
+                new axi("SensitivityType", 34864, 3), new axi("StandardOutputSensitivity", 34865, 4),
+                new axi("RecommendedExposureIndex", 34866, 4), new axi("ISOSpeed", 34867, 4),
+                new axi("ISOSpeedLatitudeyyy", 34868, 4), new axi("ISOSpeedLatitudezzz", 34869, 4),
+                new axi("ExifVersion", 36864, 2), new axi("DateTimeOriginal", 36867, 2),
+                new axi("DateTimeDigitized", 36868, 2), new axi("OffsetTime", ModifierContributor.ForParameter.MASK, 2),
+                new axi("OffsetTimeOriginal", 36881, 2), new axi("OffsetTimeDigitized", 36882, 2),
+                new axi("ComponentsConfiguration", 37121, 7), new axi("CompressedBitsPerPixel", 37122, 5),
+                new axi("ShutterSpeedValue", 37377, 10), new axi("ApertureValue", 37378, 5),
+                new axi("BrightnessValue", 37379, 10), new axi("ExposureBiasValue", 37380, 10),
+                new axi("MaxApertureValue", 37381, 5), new axi("SubjectDistance", 37382, 5),
+                new axi("MeteringMode", 37383, 3), new axi("LightSource", 37384, 3), new axi("Flash", 37385, 3),
+                new axi("FocalLength", 37386, 5), new axi("SubjectArea", 37396, 3), new axi("MakerNote", 37500, 7),
+                new axi("UserComment", 37510, 7), new axi("SubSecTime", 37520, 2),
+                new axi("SubSecTimeOriginal", 37521, 2), new axi("SubSecTimeDigitized", 37522, 2),
+                new axi("FlashpixVersion", 40960, 7), new axi("ColorSpace", 40961, 3),
+                new axi("PixelXDimension", 40962, 3, 4), new axi("PixelYDimension", 40963, 3, 4),
+                new axi("RelatedSoundFile", 40964, 2), new axi("InteroperabilityIFDPointer", 40965, 4),
+                new axi("FlashEnergy", 41483, 5), new axi("SpatialFrequencyResponse", 41484, 7),
+                new axi("FocalPlaneXResolution", 41486, 5), new axi("FocalPlaneYResolution", 41487, 5),
+                new axi("FocalPlaneResolutionUnit", 41488, 3), new axi("SubjectLocation", 41492, 3),
+                new axi("ExposureIndex", 41493, 5), new axi("SensingMethod", 41495, 3), new axi("FileSource", 41728, 7),
+                new axi("SceneType", 41729, 7), new axi("CFAPattern", 41730, 7), new axi("CustomRendered", 41985, 3),
+                new axi("ExposureMode", 41986, 3), new axi("WhiteBalance", 41987, 3),
+                new axi("DigitalZoomRatio", 41988, 5), new axi("FocalLengthIn35mmFilm", 41989, 3),
+                new axi("SceneCaptureType", 41990, 3), new axi("GainControl", 41991, 3), new axi("Contrast", 41992, 3),
+                new axi("Saturation", 41993, 3), new axi("Sharpness", 41994, 3),
+                new axi("DeviceSettingDescription", 41995, 7), new axi("SubjectDistanceRange", 41996, 3),
+                new axi("ImageUniqueID", 42016, 2), new axi("CameraOwnerName", 42032, 2),
+                new axi("BodySerialNumber", 42033, 2), new axi("LensSpecification", 42034, 5),
+                new axi("LensMake", 42035, 2), new axi("LensModel", 42036, 2), new axi("Gamma", 42240, 5),
+                new axi("DNGVersion", 50706, 1), new axi("DefaultCropSize", 50720, 3, 4) };
+        axi[] axiVarArr3 = { new axi("GPSVersionID", 0, 1), new axi("GPSLatitudeRef", 1, 2),
+                new axi("GPSLatitude", 2, 5, 10), new axi("GPSLongitudeRef", 3, 2), new axi("GPSLongitude", 4, 5, 10),
+                new axi("GPSAltitudeRef", 5, 1), new axi("GPSAltitude", 6, 5), new axi("GPSTimeStamp", 7, 5),
+                new axi("GPSSatellites", 8, 2), new axi("GPSStatus", 9, 2), new axi("GPSMeasureMode", 10, 2),
+                new axi("GPSDOP", 11, 5), new axi("GPSSpeedRef", 12, 2), new axi("GPSSpeed", 13, 5),
+                new axi("GPSTrackRef", 14, 2), new axi("GPSTrack", 15, 5), new axi("GPSImgDirectionRef", 16, 2),
+                new axi("GPSImgDirection", 17, 5), new axi("GPSMapDatum", 18, 2), new axi("GPSDestLatitudeRef", 19, 2),
+                new axi("GPSDestLatitude", 20, 5), new axi("GPSDestLongitudeRef", 21, 2),
+                new axi("GPSDestLongitude", 22, 5), new axi("GPSDestBearingRef", 23, 2),
+                new axi("GPSDestBearing", 24, 5), new axi("GPSDestDistanceRef", 25, 2),
+                new axi("GPSDestDistance", 26, 5), new axi("GPSProcessingMethod", 27, 7),
+                new axi("GPSAreaInformation", 28, 7), new axi("GPSDateStamp", 29, 2), new axi("GPSDifferential", 30, 3),
+                new axi("GPSHPositioningError", 31, 5) };
+        axi[] axiVarArr4 = { new axi("InteroperabilityIndex", 1, 2) };
+        axi[] axiVarArr5 = { new axi("NewSubfileType", Opcodes.CONST_METHOD_HANDLE, 4),
+                new axi("SubfileType", Opcodes.CONST_METHOD_TYPE, 4), new axi("ThumbnailImageWidth", 256, 3, 4),
+                new axi("ThumbnailImageLength", 257, 3, 4), new axi("BitsPerSample", 258, 3),
+                new axi("Compression", 259, 3), new axi("PhotometricInterpretation", 262, 3),
+                new axi("ImageDescription", 270, 2), new axi("Make", 271, 2), new axi("Model", 272, 2),
+                new axi("StripOffsets", com.umeng.commonsdk.stateless.b.a, 3, 4),
+                new axi("ThumbnailOrientation", 274, 3), new axi("SamplesPerPixel", 277, 3),
+                new axi("RowsPerStrip", 278, 3, 4), new axi("StripByteCounts", 279, 3, 4),
+                new axi("XResolution", 282, 5), new axi("YResolution", 283, 5), new axi("PlanarConfiguration", 284, 3),
+                new axi("ResolutionUnit", 296, 3), new axi("TransferFunction", com.umeng.ccg.c.p, 3),
+                new axi("Software", com.umeng.ccg.c.t, 2), new axi("DateTime", 306, 2), new axi("Artist", 315, 2),
+                new axi("WhitePoint", 318, 5), new axi("PrimaryChromaticities", 319, 5),
+                new axi("SubIFDPointer", 330, 4), new axi("JPEGInterchangeFormat", 513, 4),
+                new axi("JPEGInterchangeFormatLength", 514, 4), new axi("YCbCrCoefficients", 529, 5),
+                new axi("YCbCrSubSampling", 530, 3), new axi("YCbCrPositioning", 531, 3),
+                new axi("ReferenceBlackWhite", 532, 5), new axi("Copyright", 33432, 2),
+                new axi("ExifIFDPointer", 34665, 4), new axi("GPSInfoIFDPointer", 34853, 4),
+                new axi("DNGVersion", 50706, 1), new axi("DefaultCropSize", 50720, 3, 4) };
         v = new axi("StripOffsets", com.umeng.commonsdk.stateless.b.a, 3);
-        w = new axi[][]{axiVarArr, axiVarArr2, axiVarArr3, axiVarArr4, axiVarArr5, axiVarArr, new axi[]{new axi("ThumbnailImage", 256, 7), new axi("CameraSettingsIFDPointer", 8224, 4), new axi("ImageProcessingIFDPointer", 8256, 4)}, new axi[]{new axi("PreviewImageStart", 257, 4), new axi("PreviewImageLength", 258, 4)}, new axi[]{new axi("AspectFrame", 4371, 3)}, new axi[]{new axi("ColorSpace", 55, 3)}};
-        x = new axi[]{new axi("SubIFDPointer", 330, 4), new axi("ExifIFDPointer", 34665, 4), new axi("GPSInfoIFDPointer", 34853, 4), new axi("InteroperabilityIFDPointer", 40965, 4), new axi("CameraSettingsIFDPointer", 8224, 1), new axi("ImageProcessingIFDPointer", 8256, 1)};
+        w = new axi[][] { axiVarArr, axiVarArr2, axiVarArr3, axiVarArr4, axiVarArr5, axiVarArr,
+                new axi[] { new axi("ThumbnailImage", 256, 7), new axi("CameraSettingsIFDPointer", 8224, 4),
+                        new axi("ImageProcessingIFDPointer", 8256, 4) },
+                new axi[] { new axi("PreviewImageStart", 257, 4), new axi("PreviewImageLength", 258, 4) },
+                new axi[] { new axi("AspectFrame", 4371, 3) }, new axi[] { new axi("ColorSpace", 55, 3) } };
+        x = new axi[] { new axi("SubIFDPointer", 330, 4), new axi("ExifIFDPointer", 34665, 4),
+                new axi("GPSInfoIFDPointer", 34853, 4), new axi("InteroperabilityIFDPointer", 40965, 4),
+                new axi("CameraSettingsIFDPointer", 8224, 1), new axi("ImageProcessingIFDPointer", 8256, 1) };
         y = new HashMap[10];
         z = new HashMap[10];
-        aa = new HashSet(Arrays.asList("FNumber", "DigitalZoomRatio", "ExposureTime", "SubjectDistance", "GPSTimeStamp"));
+        aa = new HashSet(
+                Arrays.asList("FNumber", "DigitalZoomRatio", "ExposureTime", "SubjectDistance", "GPSTimeStamp"));
         ab = new HashMap();
         Charset charsetForName = Charset.forName("US-ASCII");
         ac = charsetForName;
@@ -130,7 +221,13 @@ public final class axl {
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:53:0x00d8 A[Catch: all -> 0x005e, TRY_ENTER, TRY_LEAVE, TryCatch #3 {all -> 0x005e, blocks: (B:14:0x004f, B:16:0x0052, B:23:0x0067, B:29:0x0084, B:31:0x008f, B:39:0x00a5, B:34:0x0096, B:37:0x009e, B:38:0x00a2, B:40:0x00af, B:42:0x00b8, B:44:0x00be, B:46:0x00c4, B:48:0x00ca, B:53:0x00d8), top: B:65:0x004f }] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:53:0x00d8 A[Catch: all ->
+     * 0x005e, TRY_ENTER, TRY_LEAVE, TryCatch #3 {all -> 0x005e, blocks:
+     * (B:14:0x004f, B:16:0x0052, B:23:0x0067, B:29:0x0084, B:31:0x008f,
+     * B:39:0x00a5, B:34:0x0096, B:37:0x009e, B:38:0x00a2, B:40:0x00af, B:42:0x00b8,
+     * B:44:0x00be, B:46:0x00c4, B:48:0x00ca, B:53:0x00d8), top: B:65:0x004f }]
+     */
     /* JADX WARN: Found duplicated region for block: B:68:? A[RETURN, SYNTHETIC] */
     public axl(InputStream inputStream) throws IOException {
         axi[][] axiVarArr = w;
@@ -173,7 +270,9 @@ public final class axl {
             } catch (IOException e2) {
                 e = e2;
                 if (z3) {
-                    Log.w("ExifInterface", "Invalid image: ExifInterface got an unsupported image format file(ExifInterface supports JPEG and some RAW image formats only) or a corrupted JPEG file to ExifInterface.", e);
+                    Log.w("ExifInterface",
+                            "Invalid image: ExifInterface got an unsupported image format file(ExifInterface supports JPEG and some RAW image formats only) or a corrupted JPEG file to ExifInterface.",
+                            e);
                 }
                 ar();
                 if (!z3) {
@@ -182,7 +281,9 @@ public final class axl {
             } catch (UnsupportedOperationException e3) {
                 e = e3;
                 if (z3) {
-                    Log.w("ExifInterface", "Invalid image: ExifInterface got an unsupported image format file(ExifInterface supports JPEG and some RAW image formats only) or a corrupted JPEG file to ExifInterface.", e);
+                    Log.w("ExifInterface",
+                            "Invalid image: ExifInterface got an unsupported image format file(ExifInterface supports JPEG and some RAW image formats only) or a corrupted JPEG file to ExifInterface.",
+                            e);
                 }
                 ar();
                 if (!z3) {
@@ -289,7 +390,8 @@ public final class axl {
                 axj axjVar2 = axjVarArr[1];
                 Integer numValueOf2 = Integer.valueOf((int) (axjVar2.a / axjVar2.b));
                 axj axjVar3 = axjVarArr[2];
-                return String.format("%02d:%02d:%02d", numValueOf, numValueOf2, Integer.valueOf((int) (axjVar3.a / axjVar3.b)));
+                return String.format("%02d:%02d:%02d", numValueOf, numValueOf2,
+                        Integer.valueOf((int) (axjVar3.a / axjVar3.b)));
             }
             try {
                 return Double.toString(axhVarAt.h(this.ak));
@@ -302,7 +404,8 @@ public final class axl {
     public final axh at(String str) {
         if ("ISOSpeedRatings".equals(str)) {
             if (a) {
-                Log.d("ExifInterface", "getExifAttribute: Replacing TAG_ISO_SPEED_RATINGS with TAG_PHOTOGRAPHIC_SENSITIVITY.");
+                Log.d("ExifInterface",
+                        "getExifAttribute: Replacing TAG_ISO_SPEED_RATINGS with TAG_PHOTOGRAPHIC_SENSITIVITY.");
             }
             str = "PhotographicSensitivity";
         }
@@ -378,11 +481,13 @@ public final class axl {
                     bh(0, bArr2);
                 }
                 if (a) {
-                    Log.d("ExifInterface", "Heif meta: " + strExtractMetadata + "x" + strExtractMetadata2 + ", rotation " + strExtractMetadata3);
+                    Log.d("ExifInterface", "Heif meta: " + strExtractMetadata + "x" + strExtractMetadata2
+                            + ", rotation " + strExtractMetadata3);
                 }
                 mediaMetadataRetriever.release();
             } catch (RuntimeException unused) {
-                throw new UnsupportedOperationException("Failed to read EXIF from HEIF file. Given stream is either malformed or unsupported.");
+                throw new UnsupportedOperationException(
+                        "Failed to read EXIF from HEIF file. Given stream is either malformed or unsupported.");
             }
         } catch (Throwable th) {
             mediaMetadataRetriever.release();
@@ -393,134 +498,262 @@ public final class axl {
     /* JADX WARN: Found duplicated region for block: B:103:0x0149 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:104:0x018a A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:34:0x00ac A[FALL_THROUGH] */
-    /* JADX WARN: Found duplicated region for block: B:36:0x00b3  */
-    /* JADX WARN: Found duplicated region for block: B:37:0x00b6  */
-    /* JADX WARN: Found duplicated region for block: B:40:0x00ca  */
-    /* JADX WARN: Found duplicated region for block: B:41:0x00cd  */
-    /* JADX WARN: Found duplicated region for block: B:71:0x013f  */
-    /* JADX WARN: Found duplicated region for block: B:74:0x0146 A[LOOP:2: B:69:0x013c->B:74:0x0146, LOOP_END] */
+    /* JADX WARN: Found duplicated region for block: B:36:0x00b3 */
+    /* JADX WARN: Found duplicated region for block: B:37:0x00b6 */
+    /* JADX WARN: Found duplicated region for block: B:40:0x00ca */
+    /* JADX WARN: Found duplicated region for block: B:41:0x00cd */
+    /* JADX WARN: Found duplicated region for block: B:71:0x013f */
+    /*
+     * JADX WARN: Found duplicated region for block: B:74:0x0146 A[LOOP:2:
+     * B:69:0x013c->B:74:0x0146, LOOP_END]
+     */
     /* JADX WARN: Found duplicated region for block: B:77:0x0158 A[MOVE_INLINED] */
-    /*  JADX ERROR: UnsupportedOperationException in pass: RegionMakerVisitor
-        java.lang.UnsupportedOperationException
-        	at java.base/java.util.Collections$UnmodifiableCollection.add(Collections.java:1068)
-        	at jadx.core.dex.visitors.regions.maker.SwitchRegionMaker$1.leaveRegion(SwitchRegionMaker.java:419)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:70)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
-        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverse(DepthRegionTraversal.java:23)
-        	at jadx.core.dex.visitors.regions.maker.SwitchRegionMaker.insertBreaksForCase(SwitchRegionMaker.java:399)
-        	at jadx.core.dex.visitors.regions.maker.SwitchRegionMaker.insertBreaks(SwitchRegionMaker.java:89)
-        	at jadx.core.dex.visitors.regions.PostProcessRegions.leaveRegion(PostProcessRegions.java:33)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:70)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
-        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
-        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-        	at java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1093)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
-        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
-        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-        	at java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1093)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
-        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
-        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-        	at java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1093)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
-        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
-        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-        	at java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1093)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
-        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
-        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-        	at java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1093)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
-        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
-        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-        	at java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1093)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
-        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
-        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-        	at java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1093)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
-        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
-        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
-        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
-        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-        	at java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1093)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
-        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
-        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-        	at java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1093)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
-        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverse(DepthRegionTraversal.java:19)
-        	at jadx.core.dex.visitors.regions.PostProcessRegions.process(PostProcessRegions.java:23)
-        	at jadx.core.dex.visitors.regions.RegionMakerVisitor.visit(RegionMakerVisitor.java:31)
-        */
+    /*
+     * JADX ERROR: UnsupportedOperationException in pass: RegionMakerVisitor
+     * java.lang.UnsupportedOperationException
+     * at
+     * java.base/java.util.Collections$UnmodifiableCollection.add(Collections.java:
+     * 1068)
+     * at jadx.core.dex.visitors.regions.maker.SwitchRegionMaker$1.leaveRegion(
+     * SwitchRegionMaker.java:419)
+     * at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(
+     * DepthRegionTraversal.java:70)
+     * at
+     * jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0
+     * (DepthRegionTraversal.java:68)
+     * at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+     * at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(
+     * DepthRegionTraversal.java:68)
+     * at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverse(
+     * DepthRegionTraversal.java:23)
+     * at
+     * jadx.core.dex.visitors.regions.maker.SwitchRegionMaker.insertBreaksForCase(
+     * SwitchRegionMaker.java:399)
+     * at jadx.core.dex.visitors.regions.maker.SwitchRegionMaker.insertBreaks(
+     * SwitchRegionMaker.java:89)
+     * at jadx.core.dex.visitors.regions.PostProcessRegions.leaveRegion(
+     * PostProcessRegions.java:33)
+     * at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(
+     * DepthRegionTraversal.java:70)
+     * at
+     * jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0
+     * (DepthRegionTraversal.java:68)
+     * at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+     * at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(
+     * DepthRegionTraversal.java:68)
+     * at
+     * jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0
+     * (DepthRegionTraversal.java:68)
+     * at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+     * at
+     * java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.
+     * java:1093)
+     * at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(
+     * DepthRegionTraversal.java:68)
+     * at
+     * jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0
+     * (DepthRegionTraversal.java:68)
+     * at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+     * at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(
+     * DepthRegionTraversal.java:68)
+     * at
+     * jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0
+     * (DepthRegionTraversal.java:68)
+     * at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+     * at
+     * java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.
+     * java:1093)
+     * at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(
+     * DepthRegionTraversal.java:68)
+     * at
+     * jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0
+     * (DepthRegionTraversal.java:68)
+     * at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+     * at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(
+     * DepthRegionTraversal.java:68)
+     * at
+     * jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0
+     * (DepthRegionTraversal.java:68)
+     * at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+     * at
+     * java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.
+     * java:1093)
+     * at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(
+     * DepthRegionTraversal.java:68)
+     * at
+     * jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0
+     * (DepthRegionTraversal.java:68)
+     * at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+     * at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(
+     * DepthRegionTraversal.java:68)
+     * at
+     * jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0
+     * (DepthRegionTraversal.java:68)
+     * at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+     * at
+     * java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.
+     * java:1093)
+     * at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(
+     * DepthRegionTraversal.java:68)
+     * at
+     * jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0
+     * (DepthRegionTraversal.java:68)
+     * at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+     * at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(
+     * DepthRegionTraversal.java:68)
+     * at
+     * jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0
+     * (DepthRegionTraversal.java:68)
+     * at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+     * at
+     * java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.
+     * java:1093)
+     * at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(
+     * DepthRegionTraversal.java:68)
+     * at
+     * jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0
+     * (DepthRegionTraversal.java:68)
+     * at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+     * at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(
+     * DepthRegionTraversal.java:68)
+     * at
+     * jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0
+     * (DepthRegionTraversal.java:68)
+     * at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+     * at
+     * java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.
+     * java:1093)
+     * at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(
+     * DepthRegionTraversal.java:68)
+     * at
+     * jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0
+     * (DepthRegionTraversal.java:68)
+     * at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+     * at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(
+     * DepthRegionTraversal.java:68)
+     * at
+     * jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0
+     * (DepthRegionTraversal.java:68)
+     * at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+     * at
+     * java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.
+     * java:1093)
+     * at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(
+     * DepthRegionTraversal.java:68)
+     * at
+     * jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0
+     * (DepthRegionTraversal.java:68)
+     * at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+     * at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(
+     * DepthRegionTraversal.java:68)
+     * at
+     * jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0
+     * (DepthRegionTraversal.java:68)
+     * at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+     * at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(
+     * DepthRegionTraversal.java:68)
+     * at
+     * jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0
+     * (DepthRegionTraversal.java:68)
+     * at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+     * at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(
+     * DepthRegionTraversal.java:68)
+     * at
+     * jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0
+     * (DepthRegionTraversal.java:68)
+     * at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+     * at
+     * java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.
+     * java:1093)
+     * at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(
+     * DepthRegionTraversal.java:68)
+     * at
+     * jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0
+     * (DepthRegionTraversal.java:68)
+     * at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+     * at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(
+     * DepthRegionTraversal.java:68)
+     * at
+     * jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0
+     * (DepthRegionTraversal.java:68)
+     * at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+     * at
+     * java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.
+     * java:1093)
+     * at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(
+     * DepthRegionTraversal.java:68)
+     * at
+     * jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0
+     * (DepthRegionTraversal.java:68)
+     * at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+     * at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(
+     * DepthRegionTraversal.java:68)
+     * at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverse(
+     * DepthRegionTraversal.java:19)
+     * at
+     * jadx.core.dex.visitors.regions.PostProcessRegions.process(PostProcessRegions.
+     * java:23)
+     * at
+     * jadx.core.dex.visitors.regions.RegionMakerVisitor.visit(RegionMakerVisitor.
+     * java:31)
+     */
     public final void av(me.hd.wauxv.obf.axg r23, int r24, int r25) throws java.lang.Throwable {
         /*
-            Method dump skipped, instruction units count: 540
-            To view this dump add '--comments-level debug' option
-        */
-        throw new UnsupportedOperationException("Method not decompiled: me.hd.wauxv.obf.axl.av(me.hd.wauxv.obf.axg, int, int):void");
+         * Method dump skipped, instruction units count: 540
+         * To view this dump add '--comments-level debug' option
+         */
+        throw new UnsupportedOperationException(
+                "Method not decompiled: me.hd.wauxv.obf.axl.av(me.hd.wauxv.obf.axg, int, int):void");
     }
 
     /* JADX WARN: Found duplicated region for block: B:110:0x0143 A[RETURN] */
-    /* JADX WARN: Found duplicated region for block: B:112:0x0146  */
-    /* JADX WARN: Found duplicated region for block: B:115:0x014d  */
-    /* JADX WARN: Found duplicated region for block: B:118:0x0156 A[LOOP:2: B:113:0x0148->B:118:0x0156, LOOP_END] */
+    /* JADX WARN: Found duplicated region for block: B:112:0x0146 */
+    /* JADX WARN: Found duplicated region for block: B:115:0x014d */
+    /*
+     * JADX WARN: Found duplicated region for block: B:118:0x0156 A[LOOP:2:
+     * B:113:0x0148->B:118:0x0156, LOOP_END]
+     */
     /* JADX WARN: Found duplicated region for block: B:121:0x015c A[RETURN] */
-    /* JADX WARN: Found duplicated region for block: B:123:0x015f  */
-    /* JADX WARN: Found duplicated region for block: B:126:0x0166  */
-    /* JADX WARN: Found duplicated region for block: B:129:0x016f A[LOOP:3: B:124:0x0161->B:129:0x016f, LOOP_END] */
-    /* JADX WARN: Found duplicated region for block: B:133:0x0179  */
-    /* JADX WARN: Found duplicated region for block: B:136:0x0183 A[LOOP:4: B:131:0x0174->B:136:0x0183, LOOP_END] */
+    /* JADX WARN: Found duplicated region for block: B:123:0x015f */
+    /* JADX WARN: Found duplicated region for block: B:126:0x0166 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:129:0x016f A[LOOP:3:
+     * B:124:0x0161->B:129:0x016f, LOOP_END]
+     */
+    /* JADX WARN: Found duplicated region for block: B:133:0x0179 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:136:0x0183 A[LOOP:4:
+     * B:131:0x0174->B:136:0x0183, LOOP_END]
+     */
     /* JADX WARN: Found duplicated region for block: B:138:0x0188 A[RETURN] */
     /* JADX WARN: Found duplicated region for block: B:140:0x018b A[RETURN] */
-    /* JADX WARN: Found duplicated region for block: B:156:0x010d A[EXC_TOP_SPLITTER, SYNTHETIC] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:156:0x010d
+     * A[EXC_TOP_SPLITTER, SYNTHETIC]
+     */
     /* JADX WARN: Found duplicated region for block: B:168:0x0159 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:169:0x0153 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:170:0x0172 A[SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:171:0x016c A[EDGE_INSN: B:171:0x016c->B:128:0x016c BREAK  A[LOOP:3: B:124:0x0161->B:129:0x016f], SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:172:0x0186 A[EDGE_INSN: B:172:0x0186->B:137:0x0186 BREAK  A[LOOP:4: B:131:0x0174->B:136:0x0183], SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:173:0x016c A[EDGE_INSN: B:173:0x016c->B:128:0x016c BREAK  A[LOOP:3: B:124:0x0161->B:129:0x016f], SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:70:0x00e7  */
-    /* JADX WARN: Found duplicated region for block: B:74:0x00ef  */
+    /*
+     * JADX WARN: Found duplicated region for block: B:171:0x016c A[EDGE_INSN:
+     * B:171:0x016c->B:128:0x016c BREAK A[LOOP:3: B:124:0x0161->B:129:0x016f],
+     * SYNTHETIC]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:172:0x0186 A[EDGE_INSN:
+     * B:172:0x0186->B:137:0x0186 BREAK A[LOOP:4: B:131:0x0174->B:136:0x0183],
+     * SYNTHETIC]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:173:0x016c A[EDGE_INSN:
+     * B:173:0x016c->B:128:0x016c BREAK A[LOOP:3: B:124:0x0161->B:129:0x016f],
+     * SYNTHETIC]
+     */
+    /* JADX WARN: Found duplicated region for block: B:70:0x00e7 */
+    /* JADX WARN: Found duplicated region for block: B:74:0x00ef */
     /* JADX WARN: Found duplicated region for block: B:88:0x010b A[RETURN] */
-    /* JADX WARN: Found duplicated region for block: B:94:0x0122  */
-    /* JADX WARN: Found duplicated region for block: B:95:0x0124  */
+    /* JADX WARN: Found duplicated region for block: B:94:0x0122 */
+    /* JADX WARN: Found duplicated region for block: B:95:0x0124 */
     public final int aw(BufferedInputStream bufferedInputStream) throws Throwable {
         axg axgVar;
         int i2;
@@ -1048,7 +1281,8 @@ public final class axl {
                         bk(new axg(bArr3));
                         return;
                     }
-                    throw new IOException("Encountered invalid CRC value for PNG-EXIF chunk.\n recorded CRC value: " + i4 + ", calculated CRC value: " + crc32.getValue());
+                    throw new IOException("Encountered invalid CRC value for PNG-EXIF chunk.\n recorded CRC value: "
+                            + i4 + ", calculated CRC value: " + crc32.getValue());
                 }
                 int i5 = i2 + 4;
                 axgVar.g(i5);
@@ -1232,7 +1466,7 @@ public final class axl {
         }
         int i3 = axkVar.readInt();
         if (i3 < 8) {
-            throw new IOException(bjs.i(i3, "Invalid first Ifd offset: "));
+            throw new IOException(concatVar2Var1(i3, "Invalid first Ifd offset: "));
         }
         int i4 = i3 - 8;
         if (i4 > 0) {
@@ -1252,7 +1486,8 @@ public final class axl {
             Log.d("ExifInterface", sbR.toString());
             for (Map.Entry entry : mapArr[i2].entrySet()) {
                 axh axhVar = (axh) entry.getValue();
-                Log.d("ExifInterface", "tagName: " + ((String) entry.getKey()) + ", tagType: " + axhVar.toString() + ", tagValue: '" + axhVar.j(this.ak) + "'");
+                Log.d("ExifInterface", "tagName: " + ((String) entry.getKey()) + ", tagType: " + axhVar.toString()
+                        + ", tagValue: '" + axhVar.j(this.ak) + "'");
             }
             i2++;
         }
@@ -1264,39 +1499,39 @@ public final class axl {
         bi(axkVar, i2);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:101:0x020f  */
-    /* JADX WARN: Found duplicated region for block: B:103:0x0213  */
-    /* JADX WARN: Found duplicated region for block: B:108:0x0220  */
-    /* JADX WARN: Found duplicated region for block: B:109:0x0225  */
-    /* JADX WARN: Found duplicated region for block: B:110:0x0231  */
-    /* JADX WARN: Found duplicated region for block: B:112:0x0238  */
-    /* JADX WARN: Found duplicated region for block: B:115:0x024f  */
-    /* JADX WARN: Found duplicated region for block: B:117:0x025a  */
+    /* JADX WARN: Found duplicated region for block: B:101:0x020f */
+    /* JADX WARN: Found duplicated region for block: B:103:0x0213 */
+    /* JADX WARN: Found duplicated region for block: B:108:0x0220 */
+    /* JADX WARN: Found duplicated region for block: B:109:0x0225 */
+    /* JADX WARN: Found duplicated region for block: B:110:0x0231 */
+    /* JADX WARN: Found duplicated region for block: B:112:0x0238 */
+    /* JADX WARN: Found duplicated region for block: B:115:0x024f */
+    /* JADX WARN: Found duplicated region for block: B:117:0x025a */
     /* JADX WARN: Found duplicated region for block: B:119:0x0267 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:120:0x0269  */
+    /* JADX WARN: Found duplicated region for block: B:120:0x0269 */
     /* JADX WARN: Found duplicated region for block: B:121:0x0288 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:122:0x028a  */
+    /* JADX WARN: Found duplicated region for block: B:122:0x028a */
     /* JADX WARN: Found duplicated region for block: B:124:0x02a0 A[MOVE_INLINED] */
-    /* JADX WARN: Found duplicated region for block: B:126:0x02cc  */
-    /* JADX WARN: Found duplicated region for block: B:129:0x02d7  */
-    /* JADX WARN: Found duplicated region for block: B:131:0x02df  */
-    /* JADX WARN: Found duplicated region for block: B:140:0x0309  */
+    /* JADX WARN: Found duplicated region for block: B:126:0x02cc */
+    /* JADX WARN: Found duplicated region for block: B:129:0x02d7 */
+    /* JADX WARN: Found duplicated region for block: B:131:0x02df */
+    /* JADX WARN: Found duplicated region for block: B:140:0x0309 */
     /* JADX WARN: Found duplicated region for block: B:167:0x030c A[SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:71:0x014b  */
-    /* JADX WARN: Found duplicated region for block: B:72:0x0152  */
-    /* JADX WARN: Found duplicated region for block: B:74:0x015a  */
-    /* JADX WARN: Found duplicated region for block: B:76:0x0160  */
-    /* JADX WARN: Found duplicated region for block: B:77:0x0174  */
-    /* JADX WARN: Found duplicated region for block: B:80:0x017b  */
-    /* JADX WARN: Found duplicated region for block: B:82:0x0185  */
-    /* JADX WARN: Found duplicated region for block: B:83:0x0187  */
-    /* JADX WARN: Found duplicated region for block: B:84:0x018c  */
-    /* JADX WARN: Found duplicated region for block: B:86:0x018f  */
-    /* JADX WARN: Found duplicated region for block: B:90:0x01d4  */
-    /* JADX WARN: Found duplicated region for block: B:93:0x01e8  */
-    /* JADX WARN: Found duplicated region for block: B:95:0x0203  */
-    /* JADX WARN: Found duplicated region for block: B:97:0x0208  */
-    /* JADX WARN: Found duplicated region for block: B:99:0x020b  */
+    /* JADX WARN: Found duplicated region for block: B:71:0x014b */
+    /* JADX WARN: Found duplicated region for block: B:72:0x0152 */
+    /* JADX WARN: Found duplicated region for block: B:74:0x015a */
+    /* JADX WARN: Found duplicated region for block: B:76:0x0160 */
+    /* JADX WARN: Found duplicated region for block: B:77:0x0174 */
+    /* JADX WARN: Found duplicated region for block: B:80:0x017b */
+    /* JADX WARN: Found duplicated region for block: B:82:0x0185 */
+    /* JADX WARN: Found duplicated region for block: B:83:0x0187 */
+    /* JADX WARN: Found duplicated region for block: B:84:0x018c */
+    /* JADX WARN: Found duplicated region for block: B:86:0x018f */
+    /* JADX WARN: Found duplicated region for block: B:90:0x01d4 */
+    /* JADX WARN: Found duplicated region for block: B:93:0x01e8 */
+    /* JADX WARN: Found duplicated region for block: B:95:0x0203 */
+    /* JADX WARN: Found duplicated region for block: B:97:0x0208 */
+    /* JADX WARN: Found duplicated region for block: B:99:0x020b */
     public final void bi(axk axkVar, int i2) throws IOException {
         HashMap[] mapArr;
         short s2;
@@ -1345,7 +1580,10 @@ public final class axl {
                 z2 = z4;
                 s3 = s5;
                 mapArr2 = mapArr;
-                Log.d("ExifInterface", String.format("ifdType: %d, tagNumber: %d, tagName: %s, dataFormat: %d, numberOfComponents: %d", Integer.valueOf(i2), Integer.valueOf(unsignedShort2), axiVar != null ? axiVar.b : null, Integer.valueOf(unsignedShort3), Integer.valueOf(i8)));
+                Log.d("ExifInterface",
+                        String.format("ifdType: %d, tagNumber: %d, tagName: %s, dataFormat: %d, numberOfComponents: %d",
+                                Integer.valueOf(i2), Integer.valueOf(unsignedShort2), axiVar != null ? axiVar.b : null,
+                                Integer.valueOf(unsignedShort3), Integer.valueOf(i8)));
             } else {
                 s2 = s4;
                 z2 = z4;
@@ -1357,7 +1595,10 @@ public final class axl {
                     int[] iArr = t;
                     if (unsignedShort3 < iArr.length) {
                         int i9 = axiVar.c;
-                        if (i9 == 7 || unsignedShort3 == 7 || i9 == unsignedShort3 || (i3 = axiVar.d) == unsignedShort3 || (((i9 == 4 || i3 == 4) && unsignedShort3 == 3) || (((i9 == 9 || i3 == 9) && unsignedShort3 == 8) || ((i9 == 12 || i3 == 12) && unsignedShort3 == 11)))) {
+                        if (i9 == 7 || unsignedShort3 == 7 || i9 == unsignedShort3 || (i3 = axiVar.d) == unsignedShort3
+                                || (((i9 == 4 || i3 == 4) && unsignedShort3 == 3)
+                                        || (((i9 == 9 || i3 == 9) && unsignedShort3 == 8)
+                                                || ((i9 == 12 || i3 == 12) && unsignedShort3 == 11)))) {
                             if (unsignedShort3 == 7) {
                                 unsignedShort3 = i9;
                             }
@@ -1365,14 +1606,16 @@ public final class axl {
                             j3 = ((long) i8) * ((long) iArr[unsignedShort3]);
                             if (j3 < 0 || j3 > 2147483647L) {
                                 if (z2) {
-                                    Log.d("ExifInterface", "Skip the tag entry since the number of components is invalid: " + i8);
+                                    Log.d("ExifInterface",
+                                            "Skip the tag entry since the number of components is invalid: " + i8);
                                 }
                                 z3 = false;
                             } else {
                                 z3 = true;
                             }
                         } else if (z2) {
-                            Log.d("ExifInterface", "Skip the tag entry since data format (" + s[unsignedShort3] + ") is unexpected for tag: " + axiVar.b);
+                            Log.d("ExifInterface", "Skip the tag entry since data format (" + s[unsignedShort3]
+                                    + ") is unexpected for tag: " + axiVar.b);
                         }
                     }
                     if (z3) {
@@ -1429,14 +1672,17 @@ public final class axl {
                                     j7 = -1;
                                 }
                                 if (z2) {
-                                    Log.d("ExifInterface", String.format("Offset: %d, tagName: %s", Long.valueOf(j7), axiVar.b));
+                                    Log.d("ExifInterface",
+                                            String.format("Offset: %d, tagName: %s", Long.valueOf(j7), axiVar.b));
                                 }
                                 if (j7 > 0) {
                                     if (!hashSet.contains(Integer.valueOf((int) j7))) {
                                         axkVar.h(j7);
                                         bi(axkVar, num.intValue());
                                     } else if (z2) {
-                                        Log.d("ExifInterface", "Skip jump into the IFD since it has already been read: IfdType " + num + " (at " + j7 + ")");
+                                        Log.d("ExifInterface",
+                                                "Skip jump into the IFD since it has already been read: IfdType " + num
+                                                        + " (at " + j7 + ")");
                                     }
                                 } else if (z2) {
                                     Log.d("ExifInterface", "Skip jump into the IFD since its offset is invalid: " + j7);
@@ -1447,14 +1693,17 @@ public final class axl {
                             }
                             j7 = unsignedShort;
                             if (z2) {
-                                Log.d("ExifInterface", String.format("Offset: %d, tagName: %s", Long.valueOf(j7), axiVar.b));
+                                Log.d("ExifInterface",
+                                        String.format("Offset: %d, tagName: %s", Long.valueOf(j7), axiVar.b));
                             }
                             if (j7 > 0) {
                                 if (!hashSet.contains(Integer.valueOf((int) j7))) {
                                     axkVar.h(j7);
                                     bi(axkVar, num.intValue());
                                 } else if (z2) {
-                                    Log.d("ExifInterface", "Skip jump into the IFD since it has already been read: IfdType " + num + " (at " + j7 + ")");
+                                    Log.d("ExifInterface",
+                                            "Skip jump into the IFD since it has already been read: IfdType " + num
+                                                    + " (at " + j7 + ")");
                                 }
                             } else if (z2) {
                                 Log.d("ExifInterface", "Skip jump into the IFD since its offset is invalid: " + j7);
@@ -1472,7 +1721,8 @@ public final class axl {
                             if ("DNGVersion".equals(str)) {
                                 this.ah = 3;
                             }
-                            if (((!"Make".equals(str) || "Model".equals(str)) && axhVar.j(this.ak).contains("PENTAX")) || ("Compression".equals(str) && axhVar.i(this.ak) == 65535)) {
+                            if (((!"Make".equals(str) || "Model".equals(str)) && axhVar.j(this.ak).contains("PENTAX"))
+                                    || ("Compression".equals(str) && axhVar.i(this.ak) == 65535)) {
                                 this.ah = 8;
                             }
                             if (axkVar.e != j6) {
@@ -1538,14 +1788,17 @@ public final class axl {
                                 unsignedShort = axkVar.readShort();
                             }
                             if (z2) {
-                                Log.d("ExifInterface", String.format("Offset: %d, tagName: %s", Long.valueOf(j7), axiVar.b));
+                                Log.d("ExifInterface",
+                                        String.format("Offset: %d, tagName: %s", Long.valueOf(j7), axiVar.b));
                             }
                             if (j7 > 0) {
                                 if (!hashSet.contains(Integer.valueOf((int) j7))) {
                                     axkVar.h(j7);
                                     bi(axkVar, num.intValue());
                                 } else if (z2) {
-                                    Log.d("ExifInterface", "Skip jump into the IFD since it has already been read: IfdType " + num + " (at " + j7 + ")");
+                                    Log.d("ExifInterface",
+                                            "Skip jump into the IFD since it has already been read: IfdType " + num
+                                                    + " (at " + j7 + ")");
                                 }
                             } else if (z2) {
                                 Log.d("ExifInterface", "Skip jump into the IFD since its offset is invalid: " + j7);
@@ -1556,14 +1809,16 @@ public final class axl {
                         }
                         j7 = unsignedShort;
                         if (z2) {
-                            Log.d("ExifInterface", String.format("Offset: %d, tagName: %s", Long.valueOf(j7), axiVar.b));
+                            Log.d("ExifInterface",
+                                    String.format("Offset: %d, tagName: %s", Long.valueOf(j7), axiVar.b));
                         }
                         if (j7 > 0) {
                             if (!hashSet.contains(Integer.valueOf((int) j7))) {
                                 axkVar.h(j7);
                                 bi(axkVar, num.intValue());
                             } else if (z2) {
-                                Log.d("ExifInterface", "Skip jump into the IFD since it has already been read: IfdType " + num + " (at " + j7 + ")");
+                                Log.d("ExifInterface", "Skip jump into the IFD since it has already been read: IfdType "
+                                        + num + " (at " + j7 + ")");
                             }
                         } else if (z2) {
                             Log.d("ExifInterface", "Skip jump into the IFD since its offset is invalid: " + j7);
@@ -1644,14 +1899,16 @@ public final class axl {
                             unsignedShort = axkVar.readShort();
                         }
                         if (z2) {
-                            Log.d("ExifInterface", String.format("Offset: %d, tagName: %s", Long.valueOf(j7), axiVar.b));
+                            Log.d("ExifInterface",
+                                    String.format("Offset: %d, tagName: %s", Long.valueOf(j7), axiVar.b));
                         }
                         if (j7 > 0) {
                             if (!hashSet.contains(Integer.valueOf((int) j7))) {
                                 axkVar.h(j7);
                                 bi(axkVar, num.intValue());
                             } else if (z2) {
-                                Log.d("ExifInterface", "Skip jump into the IFD since it has already been read: IfdType " + num + " (at " + j7 + ")");
+                                Log.d("ExifInterface", "Skip jump into the IFD since it has already been read: IfdType "
+                                        + num + " (at " + j7 + ")");
                             }
                         } else if (z2) {
                             Log.d("ExifInterface", "Skip jump into the IFD since its offset is invalid: " + j7);
@@ -1669,7 +1926,8 @@ public final class axl {
                             axkVar.h(j7);
                             bi(axkVar, num.intValue());
                         } else if (z2) {
-                            Log.d("ExifInterface", "Skip jump into the IFD since it has already been read: IfdType " + num + " (at " + j7 + ")");
+                            Log.d("ExifInterface", "Skip jump into the IFD since it has already been read: IfdType "
+                                    + num + " (at " + j7 + ")");
                         }
                     } else if (z2) {
                         Log.d("ExifInterface", "Skip jump into the IFD since its offset is invalid: " + j7);
@@ -1759,7 +2017,10 @@ public final class axl {
         if (axhVar3 != null) {
             int[] iArr = (int[]) axhVar3.k(this.ak);
             int[] iArr2 = d;
-            if (Arrays.equals(iArr2, iArr) || (this.ah == 3 && (axhVar = (axh) map.get("PhotometricInterpretation")) != null && (((i2 = axhVar.i(this.ak)) == 1 && Arrays.equals(iArr, e)) || (i2 == 6 && Arrays.equals(iArr, iArr2))))) {
+            if (Arrays.equals(iArr2, iArr)
+                    || (this.ah == 3 && (axhVar = (axh) map.get("PhotometricInterpretation")) != null
+                            && (((i2 = axhVar.i(this.ak)) == 1 && Arrays.equals(iArr, e))
+                                    || (i2 == 6 && Arrays.equals(iArr, iArr2))))) {
                 axh axhVar4 = (axh) map.get("StripOffsets");
                 axh axhVar5 = (axh) map.get("StripByteCounts");
                 if (axhVar4 == null || axhVar5 == null) {

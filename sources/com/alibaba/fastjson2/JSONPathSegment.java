@@ -36,7 +36,10 @@ import me.hd.wauxv.obf.ra;
 /* JADX INFO: loaded from: classes.dex */
 abstract class JSONPathSegment {
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class AllSegment extends JSONPathSegment {
         static final AllSegment INSTANCE = new AllSegment(false);
         static final AllSegment INSTANCE_ARRAY = new AllSegment(true);
@@ -46,8 +49,8 @@ abstract class JSONPathSegment {
             this.array = z;
         }
 
-        /* JADX WARN: Found duplicated region for block: B:69:0x00df  */
-        /* JADX WARN: Found duplicated region for block: B:74:0x00f5  */
+        /* JADX WARN: Found duplicated region for block: B:69:0x00df */
+        /* JADX WARN: Found duplicated region for block: B:74:0x00f5 */
         @Override // com.alibaba.fastjson2.JSONPathSegment
         public void accept(JSONReader jSONReader, JSONPath.Context context) {
             Object string;
@@ -222,7 +225,8 @@ abstract class JSONPathSegment {
                 return;
             }
             if (!(obj instanceof JSONPath.Sequence)) {
-                List<FieldWriter> fieldWriters = context.path.getWriterContext().provider.getObjectWriter((Class) obj.getClass()).getFieldWriters();
+                List<FieldWriter> fieldWriters = context.path.getWriterContext().provider
+                        .getObjectWriter((Class) obj.getClass()).getFieldWriters();
                 int size = fieldWriters.size();
                 JSONArray jSONArray3 = new JSONArray(size);
                 while (i < size) {
@@ -264,7 +268,7 @@ abstract class JSONPathSegment {
                 return true;
             }
             if (!(obj instanceof Collection)) {
-                throw new JSONException(bjs.l(AllSegment.class, "UnsupportedOperation "));
+                throw new JSONException(concatVar2Var1(AllSegment.class, "UnsupportedOperation "));
             }
             ((Collection) obj).clear();
             return true;
@@ -285,7 +289,7 @@ abstract class JSONPathSegment {
                     return;
                 }
                 if (obj2 == null || !obj2.getClass().isArray()) {
-                    throw new JSONException(bjs.l(AllSegment.class, "UnsupportedOperation "));
+                    throw new JSONException(concatVar2Var1(AllSegment.class, "UnsupportedOperation "));
                 }
                 int length = Array.getLength(obj2);
                 for (int i = 0; i < length; i++) {
@@ -322,7 +326,7 @@ abstract class JSONPathSegment {
                 return;
             }
             if (obj == null || !obj.getClass().isArray()) {
-                throw new JSONException(bjs.l(AllSegment.class, "UnsupportedOperation "));
+                throw new JSONException(concatVar2Var1(AllSegment.class, "UnsupportedOperation "));
             }
             int length = Array.getLength(obj);
             while (i < length) {
@@ -336,7 +340,10 @@ abstract class JSONPathSegment {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class EntrySetSegment extends JSONPathSegment implements EvalSegment {
         static final EntrySetSegment INSTANCE = new EntrySetSegment();
 
@@ -370,11 +377,17 @@ abstract class JSONPathSegment {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface EvalSegment {
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class KeysSegment extends JSONPathSegment implements EvalSegment {
         static final KeysSegment INSTANCE = new KeysSegment();
 
@@ -404,7 +417,10 @@ abstract class JSONPathSegment {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class LengthSegment extends JSONPathSegment implements EvalSegment {
         static final LengthSegment INSTANCE = new LengthSegment();
 
@@ -424,11 +440,21 @@ abstract class JSONPathSegment {
             if (obj == null) {
                 return;
             }
-            context.value = Integer.valueOf(obj instanceof Collection ? ((Collection) obj).size() : obj.getClass().isArray() ? Array.getLength(obj) : obj instanceof Map ? ((Map) obj).size() : obj instanceof String ? ((String) obj).length() : obj instanceof JSONPath.Sequence ? ((JSONPath.Sequence) obj).values.size() : 1);
+            context.value = Integer
+                    .valueOf(obj instanceof Collection ? ((Collection) obj).size()
+                            : obj.getClass().isArray() ? Array.getLength(obj)
+                                    : obj instanceof Map ? ((Map) obj).size()
+                                            : obj instanceof String ? ((String) obj).length()
+                                                    : obj instanceof JSONPath.Sequence
+                                                            ? ((JSONPath.Sequence) obj).values.size()
+                                                            : 1);
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class MaxSegment extends JSONPathSegment implements EvalSegment {
         static final MaxSegment INSTANCE = new MaxSegment();
 
@@ -472,7 +498,10 @@ abstract class JSONPathSegment {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class MinSegment extends JSONPathSegment implements EvalSegment {
         static final MinSegment INSTANCE = new MinSegment();
 
@@ -516,7 +545,10 @@ abstract class JSONPathSegment {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class MultiIndexSegment extends JSONPathSegment {
         final int[] indexes;
 
@@ -524,7 +556,7 @@ abstract class JSONPathSegment {
             this.indexes = iArr;
         }
 
-        /* JADX WARN: Found duplicated region for block: B:54:0x00a7  */
+        /* JADX WARN: Found duplicated region for block: B:54:0x00a7 */
         @Override // com.alibaba.fastjson2.JSONPathSegment
         public void accept(JSONReader jSONReader, JSONPath.Context context) {
             Object string;
@@ -609,8 +641,8 @@ abstract class JSONPathSegment {
             context.value = jSONArray2;
         }
 
-        /* JADX WARN: Found duplicated region for block: B:41:0x008c  */
-        /* JADX WARN: Found duplicated region for block: B:42:0x0092  */
+        /* JADX WARN: Found duplicated region for block: B:41:0x008c */
+        /* JADX WARN: Found duplicated region for block: B:42:0x0092 */
         @Override // com.alibaba.fastjson2.JSONPathSegment
         public void eval(JSONPath.Context context) {
             Object obj;
@@ -624,7 +656,8 @@ abstract class JSONPathSegment {
                 while (i < size) {
                     context.value = list.get(i);
                     JSONPath.Context context3 = context;
-                    JSONPath.Context context4 = new JSONPath.Context(context.path, context3, context.current, context.next, context.readerFeatures);
+                    JSONPath.Context context4 = new JSONPath.Context(context.path, context3, context.current,
+                            context.next, context.readerFeatures);
                     eval(context4);
                     Object obj3 = context4.value;
                     if (obj3 instanceof Collection) {
@@ -705,7 +738,7 @@ abstract class JSONPathSegment {
                 return;
             }
             if (obj2 == null || !obj2.getClass().isArray()) {
-                throw new JSONException(bjs.l(MultiIndexSegment.class, "UnsupportedOperation "));
+                throw new JSONException(concatVar2Var1(MultiIndexSegment.class, "UnsupportedOperation "));
             }
             int length = Array.getLength(obj2);
             for (int i3 = 0; i3 < length; i3++) {
@@ -734,7 +767,7 @@ abstract class JSONPathSegment {
                 return;
             }
             if (obj == null || !obj.getClass().isArray()) {
-                throw new JSONException(bjs.l(MultiIndexSegment.class, "UnsupportedOperation "));
+                throw new JSONException(concatVar2Var1(MultiIndexSegment.class, "UnsupportedOperation "));
             }
             int length = Array.getLength(obj);
             for (int i3 = 0; i3 < length; i3++) {
@@ -747,7 +780,10 @@ abstract class JSONPathSegment {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class MultiNameSegment extends JSONPathSegment {
         final long[] nameHashCodes;
         final Set<String> nameSet = new HashSet();
@@ -762,101 +798,107 @@ abstract class JSONPathSegment {
             }
         }
 
-        /* JADX WARN: Code restructure failed: missing block: B:9:0x0010, code lost:
-        
-            if ((r0 instanceof com.alibaba.fastjson2.JSONPathSegment.MultiIndexSegment) == false) goto L12;
+        /*
+         * JADX WARN: Code restructure failed: missing block: B:9:0x0010, code lost:
+         * 
+         * if ((r0 instanceof com.alibaba.fastjson2.JSONPathSegment.MultiIndexSegment)
+         * == false) goto L12;
          */
         @Override // com.alibaba.fastjson2.JSONPathSegment
         /*
-            Code decompiled incorrectly, please refer to instructions dump.
-            To view partially-correct add '--show-bad-code' argument
-        */
+         * Code decompiled incorrectly, please refer to instructions dump.
+         * To view partially-correct add '--show-bad-code' argument
+         */
         public void accept(com.alibaba.fastjson2.JSONReader r9, com.alibaba.fastjson2.JSONPath.Context r10) {
             /*
-                r8 = this;
-                com.alibaba.fastjson2.JSONPath$Context r0 = r10.parent
-                if (r0 == 0) goto L16
-                boolean r1 = r0.eval
-                if (r1 != 0) goto L12
-                com.alibaba.fastjson2.JSONPathSegment r0 = r0.current
-                boolean r1 = r0 instanceof com.alibaba.fastjson2.JSONPathFilter
-                if (r1 != 0) goto L12
-                boolean r0 = r0 instanceof com.alibaba.fastjson2.JSONPathSegment.MultiIndexSegment
-                if (r0 == 0) goto L16
-            L12:
-                r8.eval(r10)
-                return
-            L16:
-                java.lang.Object r9 = r9.readAny()
-                boolean r0 = r9 instanceof java.util.Map
-                r1 = 0
-                if (r0 == 0) goto L3d
-                java.util.Map r9 = (java.util.Map) r9
-                com.alibaba.fastjson2.JSONArray r0 = new com.alibaba.fastjson2.JSONArray
-                java.lang.String[] r2 = r8.names
-                int r2 = r2.length
-                r0.<init>(r2)
-                java.lang.String[] r2 = r8.names
-                int r3 = r2.length
-            L2c:
-                if (r1 >= r3) goto L3a
-                r4 = r2[r1]
-                java.lang.Object r4 = r9.get(r4)
-                r0.add(r4)
-                int r1 = r1 + 1
-                goto L2c
-            L3a:
-                r10.value = r0
-                return
-            L3d:
-                boolean r0 = r9 instanceof java.util.Collection
-                if (r0 == 0) goto L88
-                com.alibaba.fastjson2.JSONPathSegment r0 = r10.next
-                if (r0 != 0) goto L85
-                java.util.Collection r9 = (java.util.Collection) r9
-                com.alibaba.fastjson2.JSONArray r0 = new com.alibaba.fastjson2.JSONArray
-                int r2 = r9.size()
-                r0.<init>(r2)
-                java.util.Iterator r9 = r9.iterator()
-            L54:
-                boolean r2 = r9.hasNext()
-                if (r2 == 0) goto L82
-                java.lang.Object r2 = r9.next()
-                boolean r3 = r2 instanceof java.util.Map
-                if (r3 == 0) goto L54
-                java.util.Map r2 = (java.util.Map) r2
-                com.alibaba.fastjson2.JSONArray r3 = new com.alibaba.fastjson2.JSONArray
-                java.lang.String[] r4 = r8.names
-                int r4 = r4.length
-                r3.<init>(r4)
-                java.lang.String[] r4 = r8.names
-                int r5 = r4.length
-                r6 = r1
-            L70:
-                if (r6 >= r5) goto L7e
-                r7 = r4[r6]
-                java.lang.Object r7 = r2.get(r7)
-                r3.add(r7)
-                int r6 = r6 + 1
-                goto L70
-            L7e:
-                r0.add(r3)
-                goto L54
-            L82:
-                r10.value = r0
-                return
-            L85:
-                r10.value = r9
-                return
-            L88:
-                com.alibaba.fastjson2.JSONException r9 = new com.alibaba.fastjson2.JSONException
-                java.lang.String r10 = "UnsupportedOperation "
-                java.lang.Class<com.alibaba.fastjson2.JSONPathSegment$MultiNameSegment> r0 = com.alibaba.fastjson2.JSONPathSegment.MultiNameSegment.class
-                java.lang.String r10 = me.hd.wauxv.obf.bjs.l(r0, r10)
-                r9.<init>(r10)
-                throw r9
-            */
-            throw new UnsupportedOperationException("Method not decompiled: com.alibaba.fastjson2.JSONPathSegment.MultiNameSegment.accept(com.alibaba.fastjson2.JSONReader, com.alibaba.fastjson2.JSONPath$Context):void");
+             * r8 = this;
+             * com.alibaba.fastjson2.JSONPath$Context r0 = r10.parent
+             * if (r0 == 0) goto L16
+             * boolean r1 = r0.eval
+             * if (r1 != 0) goto L12
+             * com.alibaba.fastjson2.JSONPathSegment r0 = r0.current
+             * boolean r1 = r0 instanceof com.alibaba.fastjson2.JSONPathFilter
+             * if (r1 != 0) goto L12
+             * boolean r0 = r0 instanceof
+             * com.alibaba.fastjson2.JSONPathSegment.MultiIndexSegment
+             * if (r0 == 0) goto L16
+             * L12:
+             * r8.eval(r10)
+             * return
+             * L16:
+             * java.lang.Object r9 = r9.readAny()
+             * boolean r0 = r9 instanceof java.util.Map
+             * r1 = 0
+             * if (r0 == 0) goto L3d
+             * java.util.Map r9 = (java.util.Map) r9
+             * com.alibaba.fastjson2.JSONArray r0 = new com.alibaba.fastjson2.JSONArray
+             * java.lang.String[] r2 = r8.names
+             * int r2 = r2.length
+             * r0.<init>(r2)
+             * java.lang.String[] r2 = r8.names
+             * int r3 = r2.length
+             * L2c:
+             * if (r1 >= r3) goto L3a
+             * r4 = r2[r1]
+             * java.lang.Object r4 = r9.get(r4)
+             * r0.add(r4)
+             * int r1 = r1 + 1
+             * goto L2c
+             * L3a:
+             * r10.value = r0
+             * return
+             * L3d:
+             * boolean r0 = r9 instanceof java.util.Collection
+             * if (r0 == 0) goto L88
+             * com.alibaba.fastjson2.JSONPathSegment r0 = r10.next
+             * if (r0 != 0) goto L85
+             * java.util.Collection r9 = (java.util.Collection) r9
+             * com.alibaba.fastjson2.JSONArray r0 = new com.alibaba.fastjson2.JSONArray
+             * int r2 = r9.size()
+             * r0.<init>(r2)
+             * java.util.Iterator r9 = r9.iterator()
+             * L54:
+             * boolean r2 = r9.hasNext()
+             * if (r2 == 0) goto L82
+             * java.lang.Object r2 = r9.next()
+             * boolean r3 = r2 instanceof java.util.Map
+             * if (r3 == 0) goto L54
+             * java.util.Map r2 = (java.util.Map) r2
+             * com.alibaba.fastjson2.JSONArray r3 = new com.alibaba.fastjson2.JSONArray
+             * java.lang.String[] r4 = r8.names
+             * int r4 = r4.length
+             * r3.<init>(r4)
+             * java.lang.String[] r4 = r8.names
+             * int r5 = r4.length
+             * r6 = r1
+             * L70:
+             * if (r6 >= r5) goto L7e
+             * r7 = r4[r6]
+             * java.lang.Object r7 = r2.get(r7)
+             * r3.add(r7)
+             * int r6 = r6 + 1
+             * goto L70
+             * L7e:
+             * r0.add(r3)
+             * goto L54
+             * L82:
+             * r10.value = r0
+             * return
+             * L85:
+             * r10.value = r9
+             * return
+             * L88:
+             * com.alibaba.fastjson2.JSONException r9 = new
+             * com.alibaba.fastjson2.JSONException
+             * java.lang.String r10 = "UnsupportedOperation "
+             * java.lang.Class<com.alibaba.fastjson2.JSONPathSegment$MultiNameSegment> r0 =
+             * com.alibaba.fastjson2.JSONPathSegment.MultiNameSegment.class
+             * java.lang.String r10 = me.hd.wauxv.obf.concatVar2Var1(r0, r10)
+             * r9.<init>(r10)
+             * throw r9
+             */
+            throw new UnsupportedOperationException(
+                    "Method not decompiled: com.alibaba.fastjson2.JSONPathSegment.MultiNameSegment.accept(com.alibaba.fastjson2.JSONReader, com.alibaba.fastjson2.JSONPath$Context):void");
         }
 
         @Override // com.alibaba.fastjson2.JSONPathSegment
@@ -880,7 +922,8 @@ abstract class JSONPathSegment {
                 context.value = obj;
                 return;
             }
-            ObjectWriter objectWriter = context.path.getWriterContext().provider.getObjectWriter((Class) obj.getClass());
+            ObjectWriter objectWriter = context.path.getWriterContext().provider
+                    .getObjectWriter((Class) obj.getClass());
             JSONArray jSONArray2 = new JSONArray(this.names.length);
             while (i < this.names.length) {
                 FieldWriter fieldWriter = objectWriter.getFieldWriter(this.nameHashCodes[i]);
@@ -906,7 +949,7 @@ abstract class JSONPathSegment {
             }
             ObjectReader objectReader = context.path.getReaderContext().provider.getObjectReader(obj.getClass());
             if (!(objectReader instanceof ObjectReaderBean)) {
-                throw new JSONException(bjs.l(MultiNameSegment.class, "UnsupportedOperation "));
+                throw new JSONException(concatVar2Var1(MultiNameSegment.class, "UnsupportedOperation "));
             }
             int i2 = 0;
             for (long j : this.nameHashCodes) {
@@ -936,7 +979,7 @@ abstract class JSONPathSegment {
             }
             ObjectReader objectReader = context.path.getReaderContext().provider.getObjectReader(obj2.getClass());
             if (!(objectReader instanceof ObjectReaderBean)) {
-                throw new JSONException(bjs.l(MultiNameSegment.class, "UnsupportedOperation "));
+                throw new JSONException(concatVar2Var1(MultiNameSegment.class, "UnsupportedOperation "));
             }
             long[] jArr = this.nameHashCodes;
             int length2 = jArr.length;
@@ -972,7 +1015,8 @@ abstract class JSONPathSegment {
                 }
                 return;
             }
-            ObjectWriter objectWriter = context.path.getWriterContext().provider.getObjectWriter((Class) obj.getClass());
+            ObjectWriter objectWriter = context.path.getWriterContext().provider
+                    .getObjectWriter((Class) obj.getClass());
             if (objectWriter instanceof ObjectWriterAdapter) {
                 ObjectReader objectReader = context.path.getReaderContext().provider.getObjectReader(obj.getClass());
                 if (objectReader instanceof ObjectReaderBean) {
@@ -981,7 +1025,9 @@ abstract class JSONPathSegment {
                     while (i < length2) {
                         long j = jArr[i];
                         FieldWriter fieldWriter = objectWriter.getFieldWriter(j);
-                        if (fieldWriter != null && (fieldReader = objectReader.getFieldReader(j)) != null && (objApply = biFunction.apply(obj, (fieldValue = fieldWriter.getFieldValue(obj)))) != fieldValue) {
+                        if (fieldWriter != null && (fieldReader = objectReader.getFieldReader(j)) != null
+                                && (objApply = biFunction.apply(obj,
+                                        (fieldValue = fieldWriter.getFieldValue(obj)))) != fieldValue) {
                             fieldReader.accept(obj, objApply);
                         }
                         i++;
@@ -989,21 +1035,25 @@ abstract class JSONPathSegment {
                     return;
                 }
             }
-            throw new JSONException(bjs.l(MultiNameSegment.class, "UnsupportedOperation "));
+            throw new JSONException(concatVar2Var1(MultiNameSegment.class, "UnsupportedOperation "));
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class RandomIndexSegment extends JSONPathSegment {
         public static final RandomIndexSegment INSTANCE = new RandomIndexSegment();
         Random random;
 
-        /* JADX WARN: Found duplicated region for block: B:53:0x00b6  */
+        /* JADX WARN: Found duplicated region for block: B:53:0x00b6 */
         @Override // com.alibaba.fastjson2.JSONPathSegment
         public void accept(JSONReader jSONReader, JSONPath.Context context) {
             Object string;
             JSONPath.Context context2 = context.parent;
-            if (context2 != null && (context2.eval || ((context2.current instanceof CycleNameSegment) && context.next == null))) {
+            if (context2 != null
+                    && (context2.eval || ((context2.current instanceof CycleNameSegment) && context.next == null))) {
                 eval(context);
                 return;
             }
@@ -1122,7 +1172,10 @@ abstract class JSONPathSegment {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class RangeIndexSegment extends JSONPathSegment {
         final int begin;
         final int end;
@@ -1132,12 +1185,13 @@ abstract class JSONPathSegment {
             this.end = i2;
         }
 
-        /* JADX WARN: Found duplicated region for block: B:77:0x00db  */
+        /* JADX WARN: Found duplicated region for block: B:77:0x00db */
         @Override // com.alibaba.fastjson2.JSONPathSegment
         public void accept(JSONReader jSONReader, JSONPath.Context context) {
             Object string;
             JSONPath.Context context2 = context.parent;
-            if (context2 != null && (context2.eval || ((context2.current instanceof CycleNameSegment) && context.next == null))) {
+            if (context2 != null
+                    && (context2.eval || ((context2.current instanceof CycleNameSegment) && context.next == null))) {
                 eval(context);
                 return;
             }
@@ -1279,7 +1333,7 @@ abstract class JSONPathSegment {
             JSONPath.Context context2 = context.parent;
             Object obj = context2 == null ? context.root : context2.value;
             if (!(obj instanceof List)) {
-                throw new JSONException(bjs.l(RangeIndexSegment.class, "UnsupportedOperation "));
+                throw new JSONException(concatVar2Var1(RangeIndexSegment.class, "UnsupportedOperation "));
             }
             List list = (List) obj;
             int size = list.size();
@@ -1314,7 +1368,7 @@ abstract class JSONPathSegment {
                 return;
             }
             if (obj2 == null || !obj2.getClass().isArray()) {
-                throw new JSONException(bjs.l(RangeIndexSegment.class, "UnsupportedOperation "));
+                throw new JSONException(concatVar2Var1(RangeIndexSegment.class, "UnsupportedOperation "));
             }
             int length = Array.getLength(obj2);
             while (i < length) {
@@ -1346,7 +1400,7 @@ abstract class JSONPathSegment {
                 return;
             }
             if (obj == null || !obj.getClass().isArray()) {
-                throw new JSONException(bjs.l(RangeIndexSegment.class, "UnsupportedOperation "));
+                throw new JSONException(concatVar2Var1(RangeIndexSegment.class, "UnsupportedOperation "));
             }
             int length = Array.getLength(obj);
             while (i < length) {
@@ -1360,7 +1414,10 @@ abstract class JSONPathSegment {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class RootSegment extends JSONPathSegment {
         static final RootSegment INSTANCE = new RootSegment();
 
@@ -1383,7 +1440,10 @@ abstract class JSONPathSegment {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class SelfSegment extends JSONPathSegment {
         static final SelfSegment INSTANCE = new SelfSegment();
 
@@ -1403,14 +1463,19 @@ abstract class JSONPathSegment {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class SumSegment extends JSONPathSegment implements EvalSegment {
         static final SumSegment INSTANCE = new SumSegment();
 
         public static Number add(Number number, Number number2) {
             boolean z = true;
-            boolean z2 = (number instanceof Byte) || (number instanceof Short) || (number instanceof Integer) || (number instanceof Long);
-            boolean z3 = (number2 instanceof Byte) || (number2 instanceof Short) || (number2 instanceof Integer) || (number2 instanceof Long);
+            boolean z2 = (number instanceof Byte) || (number instanceof Short) || (number instanceof Integer)
+                    || (number instanceof Long);
+            boolean z3 = (number2 instanceof Byte) || (number2 instanceof Short) || (number2 instanceof Integer)
+                    || (number2 instanceof Long);
             if (z2 && z3) {
                 return Long.valueOf(number2.longValue() + number.longValue());
             }
@@ -1470,7 +1535,10 @@ abstract class JSONPathSegment {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class ValuesSegment extends JSONPathSegment implements EvalSegment {
         static final ValuesSegment INSTANCE = new ValuesSegment();
 
@@ -1525,14 +1593,20 @@ abstract class JSONPathSegment {
         set(context, Long.valueOf(j));
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class CycleNameSegment extends JSONPathSegment {
         final String name;
         final long nameHashCode;
         static final long HASH_STAR = Fnv.hashCode64("*");
         static final long HASH_EMPTY = Fnv.hashCode64("");
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public class LoopCallback {
             final BiFunction callback;
             final JSONPath.Context context;
@@ -1582,7 +1656,10 @@ abstract class JSONPathSegment {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public class LoopRemove {
             final JSONPath.Context context;
 
@@ -1618,11 +1695,13 @@ abstract class JSONPathSegment {
                 }
                 Class<?> cls = obj.getClass();
                 ObjectReader objectReader = JSONFactory.getDefaultObjectReaderProvider().getObjectReader(cls);
-                if ((objectReader instanceof ObjectReaderBean) && (fieldReader = objectReader.getFieldReader(CycleNameSegment.this.nameHashCode)) != null) {
+                if ((objectReader instanceof ObjectReaderBean)
+                        && (fieldReader = objectReader.getFieldReader(CycleNameSegment.this.nameHashCode)) != null) {
                     fieldReader.accept(obj, (Object) null);
                     this.context.eval = true;
                 } else {
-                    Iterator<FieldWriter> it2 = JSONFactory.getDefaultObjectWriterProvider().getObjectWriter((Class) cls).getFieldWriters().iterator();
+                    Iterator<FieldWriter> it2 = JSONFactory.getDefaultObjectWriterProvider()
+                            .getObjectWriter((Class) cls).getFieldWriters().iterator();
                     while (it2.hasNext()) {
                         accept(it2.next().getFieldValue(obj));
                     }
@@ -1630,7 +1709,10 @@ abstract class JSONPathSegment {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public class LoopSet {
             final JSONPath.Context context;
             final Object value;
@@ -1666,11 +1748,13 @@ abstract class JSONPathSegment {
                 }
                 Class<?> cls = obj.getClass();
                 ObjectReader objectReader = JSONFactory.getDefaultObjectReaderProvider().getObjectReader(cls);
-                if ((objectReader instanceof ObjectReaderBean) && (fieldReader = objectReader.getFieldReader(CycleNameSegment.this.nameHashCode)) != null) {
+                if ((objectReader instanceof ObjectReaderBean)
+                        && (fieldReader = objectReader.getFieldReader(CycleNameSegment.this.nameHashCode)) != null) {
                     fieldReader.accept(obj, this.value);
                     this.context.eval = true;
                 } else {
-                    Iterator<FieldWriter> it = JSONFactory.getDefaultObjectWriterProvider().getObjectWriter((Class) cls).getFieldWriters().iterator();
+                    Iterator<FieldWriter> it = JSONFactory.getDefaultObjectWriterProvider().getObjectWriter((Class) cls)
+                            .getFieldWriters().iterator();
                     while (it.hasNext()) {
                         accept(it.next().getFieldValue(obj));
                     }
@@ -1678,7 +1762,10 @@ abstract class JSONPathSegment {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public class MapRecursive implements Consumer {
             static final int maxLevel = 2048;
             final JSONPath.Context context;
@@ -1726,12 +1813,15 @@ abstract class JSONPathSegment {
                     ObjectWriter objectWriter = this.context.path.getWriterContext().getObjectWriter(obj.getClass());
                     if (objectWriter instanceof ObjectWriterAdapter) {
                         List<FieldWriter> fieldWriters = ((ObjectWriterAdapter) objectWriter).getFieldWriters();
-                        recursive((fieldWriters == null || fieldWriters.isEmpty()) ? new ArrayList() : fieldWriters.stream().filter(new ra(4)).map(new Function() { // from class: com.alibaba.fastjson2.b
-                            @Override // java.util.function.Function
-                            public final Object apply(Object obj2) {
-                                return JSONPathSegment.CycleNameSegment.MapRecursive.lambda$recursive$0(obj, (FieldWriter) obj2);
-                            }
-                        }).collect(Collectors.toList()), list, i + 1);
+                        recursive((fieldWriters == null || fieldWriters.isEmpty()) ? new ArrayList()
+                                : fieldWriters.stream().filter(new ra(4)).map(new Function() { // from class:
+                                                                                               // com.alibaba.fastjson2.b
+                                    @Override // java.util.function.Function
+                                    public final Object apply(Object obj2) {
+                                        return JSONPathSegment.CycleNameSegment.MapRecursive.lambda$recursive$0(obj,
+                                                (FieldWriter) obj2);
+                                    }
+                                }).collect(Collectors.toList()), list, i + 1);
                     }
                 }
             }
@@ -1807,10 +1897,10 @@ abstract class JSONPathSegment {
         /* JADX WARN: Found duplicated region for block: B:140:0x00f8 A[SYNTHETIC] */
         /* JADX WARN: Found duplicated region for block: B:146:0x0085 A[SYNTHETIC] */
         /* JADX WARN: Found duplicated region for block: B:77:0x00f6 A[DONT_INVERT] */
-        /* JADX WARN: Found duplicated region for block: B:79:0x00fa  */
-        /* JADX WARN: Found duplicated region for block: B:80:0x00ff  */
-        /* JADX WARN: Found duplicated region for block: B:86:0x0119  */
-        /* JADX WARN: Found duplicated region for block: B:87:0x011f  */
+        /* JADX WARN: Found duplicated region for block: B:79:0x00fa */
+        /* JADX WARN: Found duplicated region for block: B:80:0x00ff */
+        /* JADX WARN: Found duplicated region for block: B:86:0x0119 */
+        /* JADX WARN: Found duplicated region for block: B:87:0x011f */
         public void accept(JSONReader jSONReader, JSONPath.Context context, List<Object> list) {
             Object string;
             if (jSONReader.jsonb) {
@@ -1973,7 +2063,10 @@ abstract class JSONPathSegment {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public class MapLoop implements BiConsumer, Consumer {
             final JSONPath.Context context;
             final List values;

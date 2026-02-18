@@ -12,12 +12,15 @@ public class cwn extends ua implements avt, acn {
     public final bmu am;
     public final dfx an;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'super' call moved to the top of the method (can break code
+     * semantics)
+     */
     public cwn(cwd cwdVar, bmu bmuVar, dfx dfxVar) {
         super(2, false);
-        bzo.q(cwdVar, "proto");
-        bzo.q(bmuVar, "writer");
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(cwdVar, "proto");
+        throwIfVar1IsNull(bmuVar, "writer");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         this.ak = cwp.e;
         this.al = cwdVar;
         this.am = bmuVar;
@@ -26,25 +29,26 @@ public class cwn extends ua implements avt, acn {
 
     @Override // me.hd.wauxv.obf.acn
     public final void _bz(dfx dfxVar, int i, boolean z) {
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         aq(z ? 1 : 0, ae(dfxVar, i));
     }
 
-    /* JADX WARN: Found duplicated region for block: B:17:0x0045  */
+    /* JADX WARN: Found duplicated region for block: B:17:0x0045 */
     @Override // me.hd.wauxv.obf.acn
     public final void _ca(dfx dfxVar, int i, btd btdVar, Object obj) {
         cwp cwpVar;
-        bzo.q(dfxVar, "descriptor");
-        bzo.q(btdVar, "serializer");
+        throwIfVar1IsNull(dfxVar, "descriptor");
+        throwIfVar1IsNull(btdVar, "serializer");
         if (dfxVar.m(i)) {
             cwpVar = cwp.b;
         } else {
             dfx dfxVarL = dfxVar.l(i);
             if (dfxVarL.f()) {
                 emc emcVarH = dfxVarL.h();
-                if (!bzo.f(emcVarH, dnt.c)) {
+                if (!nullSafeIsEqual(emcVarH, dnt.c)) {
                     dnt dntVar = dnt.b;
-                    cwpVar = bzo.f(emcVarH, dntVar) ? cwp.c : bzo.f(dfxVar.h(), dntVar) ? cwp.d : cwp.a;
+                    cwpVar = nullSafeIsEqual(emcVarH, dntVar) ? cwp.c
+                            : nullSafeIsEqual(dfxVar.h(), dntVar) ? cwp.d : cwp.a;
                 }
             } else {
                 cwpVar = cwp.e;
@@ -56,7 +60,7 @@ public class cwn extends ua implements avt, acn {
     }
 
     public void _cb(long j, String str) {
-        bzo.q(str, "value");
+        throwIfVar1IsNull(str, "value");
         bmu bmuVar = this.am;
         if (j == 19500) {
             bmuVar.getClass();
@@ -71,7 +75,7 @@ public class cwn extends ua implements avt, acn {
 
     @Override // me.hd.wauxv.obf.acn
     public final void a(dfx dfxVar) {
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         if (this.b >= 0) {
             _bw();
         }
@@ -90,17 +94,17 @@ public class cwn extends ua implements avt, acn {
 
     @Override // me.hd.wauxv.obf.avt
     public final void ad(String str) {
-        bzo.q(str, "value");
+        throwIfVar1IsNull(str, "value");
         _cb(_bx(), str);
     }
 
     public long ae(dfx dfxVar, int i) {
-        bzo.q(dfxVar, "<this>");
+        throwIfVar1IsNull(dfxVar, "<this>");
         return ajn.n(dfxVar, i);
     }
 
     public void aj(dfx dfxVar) {
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
     }
 
     public final void ao(long j, double d) {
@@ -153,76 +157,76 @@ public class cwn extends ua implements avt, acn {
 
     @Override // me.hd.wauxv.obf.acn
     public final void d(cvk cvkVar, int i, char c) {
-        bzo.q(cvkVar, "descriptor");
+        throwIfVar1IsNull(cvkVar, "descriptor");
         aq(c, ae(cvkVar, i));
     }
 
     @Override // me.hd.wauxv.obf.acn
     public final void e(cvk cvkVar, int i, float f) {
-        bzo.q(cvkVar, "descriptor");
+        throwIfVar1IsNull(cvkVar, "descriptor");
         ap(ae(cvkVar, i), f);
     }
 
     @Override // me.hd.wauxv.obf.acn
     public final boolean f(dfx dfxVar) {
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         this.al.getClass();
         return false;
     }
 
     @Override // me.hd.wauxv.obf.acn
     public final void g(cvk cvkVar, int i, short s) {
-        bzo.q(cvkVar, "descriptor");
+        throwIfVar1IsNull(cvkVar, "descriptor");
         aq(s, ae(cvkVar, i));
     }
 
     @Override // me.hd.wauxv.obf.acn
     public final avt h(cvk cvkVar, int i) {
-        bzo.q(cvkVar, "descriptor");
+        throwIfVar1IsNull(cvkVar, "descriptor");
         long jAe = ae(cvkVar, i);
-        bzo.q(cvkVar.l(i), "inlineDescriptor");
+        throwIfVar1IsNull(cvkVar.l(i), "inlineDescriptor");
         _by(jAe);
         return this;
     }
 
     @Override // me.hd.wauxv.obf.acn
     public final void i(cvk cvkVar, int i, long j) {
-        bzo.q(cvkVar, "descriptor");
+        throwIfVar1IsNull(cvkVar, "descriptor");
         ar(ae(cvkVar, i), j);
     }
 
     @Override // me.hd.wauxv.obf.acn
     public final void j(cvk cvkVar, int i, double d) {
-        bzo.q(cvkVar, "descriptor");
+        throwIfVar1IsNull(cvkVar, "descriptor");
         ao(ae(cvkVar, i), d);
     }
 
     @Override // me.hd.wauxv.obf.acn
     public final void k(int i, int i2, dfx dfxVar) {
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         aq(i2, ae(dfxVar, i));
     }
 
     @Override // me.hd.wauxv.obf.acn
     public final void l(dfx dfxVar, int i, String str) {
-        bzo.q(dfxVar, "descriptor");
-        bzo.q(str, "value");
+        throwIfVar1IsNull(dfxVar, "descriptor");
+        throwIfVar1IsNull(str, "value");
         _cb(ae(dfxVar, i), str);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:14:0x003c  */
+    /* JADX WARN: Found duplicated region for block: B:14:0x003c */
     @Override // me.hd.wauxv.obf.acn
     public final void m(dfx dfxVar, int i, btd btdVar, Object obj) {
         cwp cwpVar;
-        bzo.q(dfxVar, "descriptor");
-        bzo.q(btdVar, "serializer");
+        throwIfVar1IsNull(dfxVar, "descriptor");
+        throwIfVar1IsNull(btdVar, "serializer");
         if (dfxVar.m(i)) {
             cwpVar = cwp.b;
         } else {
             emc emcVarH = dfxVar.l(i).h();
-            if (!bzo.f(emcVarH, dnt.c)) {
+            if (!nullSafeIsEqual(emcVarH, dnt.c)) {
                 dnt dntVar = dnt.b;
-                cwpVar = bzo.f(emcVarH, dntVar) ? cwp.c : bzo.f(dfxVar.h(), dntVar) ? cwp.d : cwp.a;
+                cwpVar = nullSafeIsEqual(emcVarH, dntVar) ? cwp.c : nullSafeIsEqual(dfxVar.h(), dntVar) ? cwp.d : cwp.a;
             }
         }
         this.ak = cwpVar;
@@ -232,24 +236,25 @@ public class cwn extends ua implements avt, acn {
 
     @Override // me.hd.wauxv.obf.acn
     public final void n(cvk cvkVar, int i, byte b) {
-        bzo.q(cvkVar, "descriptor");
+        throwIfVar1IsNull(cvkVar, "descriptor");
         aq(b, ae(cvkVar, i));
     }
 
     public acn o(dfx dfxVar) {
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         emc emcVarH = dfxVar.h();
-        if (bzo.f(emcVarH, dnt.b)) {
+        if (nullSafeIsEqual(emcVarH, dnt.b)) {
             if (!ajn.x(dfxVar.l(0)) || (_br() & 4294967296L) == 0) {
                 return new dbn(_br(), this.am, this.al, dfxVar);
             }
             return new csf(_br(), this.am, this.al, dfxVar);
         }
-        if (bzo.f(emcVarH, dnt.a) || bzo.f(emcVarH, dnt.n) || (emcVarH instanceof cur)) {
+        if (nullSafeIsEqual(emcVarH, dnt.a) || nullSafeIsEqual(emcVarH, dnt.n) || (emcVarH instanceof cur)) {
             long j_br = _br();
-            return (j_br == 19500 && dfxVar.equals(this.an)) ? this : ajn.w(j_br) ? new crf(this.al, this.am, dfxVar) : new ckn(_br(), this.am, this.al, dfxVar);
+            return (j_br == 19500 && dfxVar.equals(this.an)) ? this
+                    : ajn.w(j_br) ? new crf(this.al, this.am, dfxVar) : new ckn(_br(), this.am, this.al, dfxVar);
         }
-        if (bzo.f(emcVarH, dnt.c)) {
+        if (nullSafeIsEqual(emcVarH, dnt.c)) {
             return new bzn(_br(), this.am, this.al, dfxVar);
         }
         throw new dgb("This serial kind is not supported as structure: " + dfxVar);
@@ -265,12 +270,19 @@ public class cwn extends ua implements avt, acn {
         cwp cwpVar = this.ak;
         if (cwpVar != cwp.a) {
             int iOrdinal = cwpVar.ordinal();
-            throw new dgb(iOrdinal != 1 ? iOrdinal != 2 ? iOrdinal != 3 ? iOrdinal != 4 ? "'null' is not supported in ProtoBuf" : "'null' is not allowed for not-null properties" : "'null' is not supported as the value of a list element in ProtoBuf" : "'null' is not supported as the value of collection types in ProtoBuf" : "'null' is not supported for optional properties in ProtoBuf");
+            throw new dgb(iOrdinal != 1
+                    ? iOrdinal != 2
+                            ? iOrdinal != 3
+                                    ? iOrdinal != 4 ? "'null' is not supported in ProtoBuf"
+                                            : "'null' is not allowed for not-null properties"
+                                    : "'null' is not supported as the value of a list element in ProtoBuf"
+                            : "'null' is not supported as the value of collection types in ProtoBuf"
+                    : "'null' is not supported for optional properties in ProtoBuf");
         }
     }
 
     public avt r(dfx dfxVar) {
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         _by(_bw());
         return this;
     }
@@ -291,11 +303,11 @@ public class cwn extends ua implements avt, acn {
     }
 
     public acn v(dfx dfxVar, int i) {
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         emc emcVarH = dfxVar.h();
         dnt dntVar = dnt.b;
-        if (!bzo.f(emcVarH, dntVar)) {
-            if (bzo.f(emcVarH, dnt.c)) {
+        if (!nullSafeIsEqual(emcVarH, dntVar)) {
+            if (nullSafeIsEqual(emcVarH, dnt.c)) {
                 return new bzn(((long[]) this.c)[this.b], this.am, this.al, dfxVar);
             }
             throw new dgb("This serial kind is not supported as collection: " + dfxVar);
@@ -309,7 +321,7 @@ public class cwn extends ua implements avt, acn {
             bmuVar.n((rw) bmuVar.h, i, cwf.DEFAULT);
         }
         dfx dfxVar2 = this.an;
-        if (!bzo.f(dfxVar2.h(), dntVar) || j_br == 19500 || dfxVar2.equals(dfxVar)) {
+        if (!nullSafeIsEqual(dfxVar2.h(), dntVar) || j_br == 19500 || dfxVar2.equals(dfxVar)) {
             return new dbn(j_br, this.am, this.al, dfxVar);
         }
         return new ckn(this.al, this.am, j_br, dfxVar, new rw());
@@ -322,13 +334,13 @@ public class cwn extends ua implements avt, acn {
 
     @Override // me.hd.wauxv.obf.avt
     public final void x(btd btdVar, Object obj) {
-        bzo.q(btdVar, "serializer");
+        throwIfVar1IsNull(btdVar, "serializer");
         if (!(btdVar instanceof bvt)) {
-            if (!bzo.f(btdVar.getDescriptor(), rx.j.o)) {
+            if (!nullSafeIsEqual(btdVar.getDescriptor(), rx.j.o)) {
                 btdVar.c(this, obj);
                 return;
             }
-            bzo.o(obj, "null cannot be cast to non-null type kotlin.ByteArray");
+            throwIfVar1IsNull(obj, "null cannot be cast to non-null type kotlin.ByteArray");
             byte[] bArr = (byte[]) obj;
             long j_bx = _bx();
             bmu bmuVar = this.am;
@@ -345,14 +357,14 @@ public class cwn extends ua implements avt, acn {
         bsb bsbVar = bsb.b;
         bzm bzmVar = new bzm(0);
         dfz dfzVar = (dfz) bzmVar.d;
-        bzo.q(dfzVar, "elementDesc");
+        throwIfVar1IsNull(dfzVar, "elementDesc");
         kl klVar = new kl(dfzVar, 2);
-        bzo.o(obj, "null cannot be cast to non-null type kotlin.collections.Map<*, *>");
+        throwIfVar1IsNull(obj, "null cannot be cast to non-null type kotlin.collections.Map<*, *>");
         Set setEntrySet = ((Map) obj).entrySet();
-        bzo.q(setEntrySet, "<this>");
+        throwIfVar1IsNull(setEntrySet, "<this>");
         int size = setEntrySet.size();
         acn acnVarV = v(klVar, size);
-        bzo.q(setEntrySet, "<this>");
+        throwIfVar1IsNull(setEntrySet, "<this>");
         Iterator it = setEntrySet.iterator();
         for (int i = 0; i < size; i++) {
             acnVarV._ca(klVar, i, bzmVar, it.next());

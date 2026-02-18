@@ -15,7 +15,7 @@ public class csj extends czj {
     public crz d;
 
     public static int e(View view, atb atbVar) {
-        return ((atbVar.f(view) / 2) + atbVar.h(view)) - ((atbVar.o() / 2) + atbVar.n());
+        return ((atbVar.f(view) / 2) + atbVar.locateDex(view)) - ((atbVar.o() / 2) + atbVar.n());
     }
 
     public static View f(czg czgVar, atb atbVar) {
@@ -28,7 +28,7 @@ public class csj extends czj {
         int i = Integer.MAX_VALUE;
         for (int i2 = 0; i2 < iEs; i2++) {
             View viewEr = czgVar.er(i2);
-            int iAbs = Math.abs(((atbVar.f(viewEr) / 2) + atbVar.h(viewEr)) - iO);
+            int iAbs = Math.abs(((atbVar.f(viewEr) / 2) + atbVar.locateDex(viewEr)) - iO);
             if (iAbs < i) {
                 view = viewEr;
                 i = iAbs;
@@ -107,7 +107,8 @@ public class csj extends czj {
         czg layoutManager;
         View viewI;
         RecyclerView recyclerView = this.a;
-        if (recyclerView == null || (layoutManager = recyclerView.getLayoutManager()) == null || (viewI = i(layoutManager)) == null) {
+        if (recyclerView == null || (layoutManager = recyclerView.getLayoutManager()) == null
+                || (viewI = i(layoutManager)) == null) {
             return;
         }
         int[] iArrH = h(layoutManager, viewI);

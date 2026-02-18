@@ -25,7 +25,9 @@ public final class duw {
     public final String s;
     public final String t;
 
-    public /* synthetic */ duw(int i, String str, String str2, String str3, String str4, Long l, String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12, String str13, String str14, String str15, String str16, Long l2, String str17, String str18) {
+    public /* synthetic */ duw(int i, String str, String str2, String str3, String str4, Long l, String str5,
+            String str6, String str7, String str8, String str9, String str10, String str11, String str12, String str13,
+            String str14, String str15, String str16, Long l2, String str17, String str18) {
         if (1048575 != (i & 1048575)) {
             bht.ah(i, 1048575, duu.b.getDescriptor());
             throw null;
@@ -60,7 +62,19 @@ public final class duw {
             return false;
         }
         duw duwVar = (duw) obj;
-        return bzo.f(this.a, duwVar.a) && bzo.f(this.b, duwVar.b) && bzo.f(this.c, duwVar.c) && bzo.f(this.d, duwVar.d) && bzo.f(this.e, duwVar.e) && bzo.f(this.f, duwVar.f) && bzo.f(this.g, duwVar.g) && bzo.f(this.h, duwVar.h) && bzo.f(this.i, duwVar.i) && bzo.f(this.j, duwVar.j) && bzo.f(this.k, duwVar.k) && bzo.f(this.l, duwVar.l) && bzo.f(this.m, duwVar.m) && bzo.f(this.n, duwVar.n) && bzo.f(this.o, duwVar.o) && bzo.f(this.p, duwVar.p) && bzo.f(this.q, duwVar.q) && bzo.f(this.r, duwVar.r) && bzo.f(this.s, duwVar.s) && bzo.f(this.t, duwVar.t);
+        return nullSafeIsEqual(this.a, duwVar.a) && nullSafeIsEqual(this.b, duwVar.b)
+                && nullSafeIsEqual(this.c, duwVar.c) && nullSafeIsEqual(this.d, duwVar.d)
+                && nullSafeIsEqual(this.e, duwVar.e) && nullSafeIsEqual(this.f, duwVar.f)
+                && nullSafeIsEqual(this.g, duwVar.g)
+                && nullSafeIsEqual(this.h, duwVar.h) && nullSafeIsEqual(this.i, duwVar.i)
+                && nullSafeIsEqual(this.j, duwVar.j)
+                && nullSafeIsEqual(this.k, duwVar.k) && nullSafeIsEqual(this.l, duwVar.l)
+                && nullSafeIsEqual(this.m, duwVar.m)
+                && nullSafeIsEqual(this.n, duwVar.n) && nullSafeIsEqual(this.o, duwVar.o)
+                && nullSafeIsEqual(this.p, duwVar.p)
+                && nullSafeIsEqual(this.q, duwVar.q) && nullSafeIsEqual(this.r, duwVar.r)
+                && nullSafeIsEqual(this.s, duwVar.s)
+                && nullSafeIsEqual(this.t, duwVar.t);
     }
 
     public final int hashCode() {
@@ -128,6 +142,6 @@ public final class duw {
         yg.u(sb, this.q, -327508436187946L);
         dkz.ad(sb, this.r, -327418241874730L);
         yg.u(sb, this.s, -327401062005546L);
-        return bjs.q(sb, this.t, ')');
+        return concat(sb, this.t, ')');
     }
 }

@@ -9,7 +9,7 @@ public final class fh extends dqc {
     @Override // me.hd.wauxv.obf.dqc
     public final int c(bbb bbbVar) {
         fl flVar;
-        bzo.q(bbbVar, "fbb");
+        throwIfVar1IsNull(bbbVar, "fbb");
         dnf dnfVar = this.a;
         int iC = dnfVar != null ? dnfVar.c(bbbVar) : 0;
         fk fkVar = this.b;

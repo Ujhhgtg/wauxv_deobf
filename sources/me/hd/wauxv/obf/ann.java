@@ -20,16 +20,16 @@ public final class ann {
     public int e = -1;
     public int f = -1;
     public int g = -1;
-    public final int[] h = {Integer.MAX_VALUE, 0};
+    public final int[] h = { Integer.MAX_VALUE, 0 };
 
     public ann(Context context, ano anoVar) {
         this.a = context;
         this.b = anoVar;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:30:0x0079  */
-    /* JADX WARN: Found duplicated region for block: B:51:0x00c0  */
-    /* JADX WARN: Found duplicated region for block: B:83:0x0166  */
+    /* JADX WARN: Found duplicated region for block: B:30:0x0079 */
+    /* JADX WARN: Found duplicated region for block: B:51:0x00c0 */
+    /* JADX WARN: Found duplicated region for block: B:83:0x0166 */
     public final void i(MotionEvent motionEvent, int i) {
         int i2;
         int i3;
@@ -66,11 +66,14 @@ public final class ann {
                     scaledMinimumFlingVelocity = Integer.MAX_VALUE;
                 } else {
                     Resources resources = context.getResources();
-                    int identifier = (source2 == 4194304 && i == 26) ? resources.getIdentifier("config_viewMinRotaryEncoderFlingVelocity", "dimen", "android") : -1;
+                    int identifier = (source2 == 4194304 && i == 26)
+                            ? resources.getIdentifier("config_viewMinRotaryEncoderFlingVelocity", "dimen", "android")
+                            : -1;
                     Objects.requireNonNull(viewConfiguration);
                     if (identifier == -1) {
                         scaledMinimumFlingVelocity = viewConfiguration.getScaledMinimumFlingVelocity();
-                    } else if (identifier == 0 || (scaledMinimumFlingVelocity = resources.getDimensionPixelSize(identifier)) < 0) {
+                    } else if (identifier == 0
+                            || (scaledMinimumFlingVelocity = resources.getDimensionPixelSize(identifier)) < 0) {
                         scaledMinimumFlingVelocity = Integer.MAX_VALUE;
                     }
                 }
@@ -86,11 +89,14 @@ public final class ann {
                     scaledMaximumFlingVelocity = Integer.MIN_VALUE;
                 } else {
                     Resources resources2 = context.getResources();
-                    int identifier2 = (source3 == 4194304 && i == 26) ? resources2.getIdentifier("config_viewMaxRotaryEncoderFlingVelocity", "dimen", "android") : -1;
+                    int identifier2 = (source3 == 4194304 && i == 26)
+                            ? resources2.getIdentifier("config_viewMaxRotaryEncoderFlingVelocity", "dimen", "android")
+                            : -1;
                     Objects.requireNonNull(viewConfiguration);
                     if (identifier2 == -1) {
                         scaledMaximumFlingVelocity = viewConfiguration.getScaledMaximumFlingVelocity();
-                    } else if (identifier2 == 0 || (scaledMaximumFlingVelocity = resources2.getDimensionPixelSize(identifier2)) < 0) {
+                    } else if (identifier2 == 0
+                            || (scaledMaximumFlingVelocity = resources2.getDimensionPixelSize(identifier2)) < 0) {
                         scaledMaximumFlingVelocity = Integer.MIN_VALUE;
                     }
                 }
@@ -221,7 +227,7 @@ public final class ann {
             f = 0.0f;
         }
         if (Build.VERSION.SDK_INT >= 34) {
-            yVelocity = ba.b(velocityTracker2, i);
+            yVelocity = ba.tryGetClassByName(velocityTracker2, i);
         } else if (i == 0) {
             yVelocity = velocityTracker2.getXVelocity();
         } else if (i == 1) {

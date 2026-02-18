@@ -8,7 +8,7 @@ import java.util.NoSuchElementException;
 /* JADX INFO: loaded from: classes.dex */
 public abstract class dfv extends dfw {
     public static dft a(Iterator it) {
-        bzo.q(it, "<this>");
+        throwIfVar1IsNull(it, "<this>");
         return new ada(new lb(it, 2));
     }
 
@@ -20,7 +20,7 @@ public abstract class dfv extends dfw {
         return null;
     }
 
-    public static dft ai(Object obj, bgf bgfVar) {
+    public static dft ai(Object obj, IHasInvokeMethod bgfVar) {
         return obj == null ? avg.a : new alu(new wi(obj, 2), bgfVar);
     }
 

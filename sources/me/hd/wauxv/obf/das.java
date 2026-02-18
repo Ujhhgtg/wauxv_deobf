@@ -124,7 +124,8 @@ public final class das {
             }
         }
         if (listUnmodifiableList.isEmpty()) {
-            throw new dar(bjs.m(obj, new StringBuilder("Failed to find any ModelLoaders registered for model class: ")));
+            throw new dar(concatVar1GetClass(obj,
+                    new StringBuilder("Failed to find any ModelLoaders registered for model class: ")));
         }
         int size = listUnmodifiableList.size();
         List arrayList = Collections.EMPTY_LIST;
@@ -142,7 +143,8 @@ public final class das {
         if (!arrayList.isEmpty()) {
             return arrayList;
         }
-        throw new dar("Found ModelLoaders for model class: " + listUnmodifiableList + ", but none that handle this specific model instance: " + obj);
+        throw new dar("Found ModelLoaders for model class: " + listUnmodifiableList
+                + ", but none that handle this specific model instance: " + obj);
     }
 
     public final ajh q(Object obj) {

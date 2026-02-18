@@ -14,7 +14,7 @@ import java.util.NoSuchElementException;
 import me.hd.wauxv.obf.abf;
 import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.avd;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.dqc;
 import okhttp3.Address;
 import okhttp3.Call;
@@ -36,22 +36,25 @@ public final class RouteSelector {
     private List<? extends Proxy> proxies;
     private final RouteDatabase routeDatabase;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
         }
 
         public final String getSocketHost(InetSocketAddress inetSocketAddress) {
-            bzo.q(inetSocketAddress, "<this>");
+            throwIfVar1IsNull(inetSocketAddress, "<this>");
             InetAddress address = inetSocketAddress.getAddress();
             if (address == null) {
                 String hostName = inetSocketAddress.getHostName();
-                bzo.p(hostName, "hostName");
+                throwIfVar1IsNull(hostName, "hostName");
                 return hostName;
             }
             String hostAddress = address.getHostAddress();
-            bzo.p(hostAddress, "address.hostAddress");
+            throwIfVar1IsNull(hostAddress, "address.hostAddress");
             return hostAddress;
         }
 
@@ -59,13 +62,16 @@ public final class RouteSelector {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Selection {
         private int nextRouteIndex;
         private final List<Route> routes;
 
         public Selection(List<Route> list) {
-            bzo.q(list, "routes");
+            throwIfVar1IsNull(list, "routes");
             this.routes = list;
         }
 
@@ -89,10 +95,10 @@ public final class RouteSelector {
     }
 
     public RouteSelector(Address address, RouteDatabase routeDatabase, Call call, EventListener eventListener) {
-        bzo.q(address, "address");
-        bzo.q(routeDatabase, "routeDatabase");
-        bzo.q(call, "call");
-        bzo.q(eventListener, "eventListener");
+        throwIfVar1IsNull(address, "address");
+        throwIfVar1IsNull(routeDatabase, "routeDatabase");
+        throwIfVar1IsNull(call, "call");
+        throwIfVar1IsNull(eventListener, "eventListener");
         this.address = address;
         this.routeDatabase = routeDatabase;
         this.call = call;
@@ -110,7 +116,8 @@ public final class RouteSelector {
 
     private final Proxy nextProxy() throws SocketException, UnknownHostException {
         if (!hasNextProxy()) {
-            throw new SocketException("No route to " + this.address.url().host() + "; exhausted proxy configurations: " + this.proxies);
+            throw new SocketException(
+                    "No route to " + this.address.url().host() + "; exhausted proxy configurations: " + this.proxies);
         }
         List<? extends Proxy> list = this.proxies;
         int i = this.nextProxyIndex;
@@ -132,7 +139,8 @@ public final class RouteSelector {
         } else {
             SocketAddress socketAddressAddress = proxy.address();
             if (!(socketAddressAddress instanceof InetSocketAddress)) {
-                throw new IllegalArgumentException(("Proxy.address() is not an InetSocketAddress: " + socketAddressAddress.getClass()).toString());
+                throw new IllegalArgumentException(
+                        ("Proxy.address() is not an InetSocketAddress: " + socketAddressAddress.getClass()).toString());
             }
             InetSocketAddress inetSocketAddress = (InetSocketAddress) socketAddressAddress;
             strHost = Companion.getSocketHost(inetSocketAddress);
@@ -169,7 +177,8 @@ public final class RouteSelector {
         this.eventListener.proxySelectEnd(this.call, httpUrl, listResetNextProxy$selectProxies);
     }
 
-    private static final List<Proxy> resetNextProxy$selectProxies(Proxy proxy, HttpUrl httpUrl, RouteSelector routeSelector) {
+    private static final List<Proxy> resetNextProxy$selectProxies(Proxy proxy, HttpUrl httpUrl,
+            RouteSelector routeSelector) {
         if (proxy != null) {
             return dqc.bf(proxy);
         }
@@ -181,7 +190,7 @@ public final class RouteSelector {
         if (listSelect == null || listSelect.isEmpty()) {
             return Util.immutableListOf(Proxy.NO_PROXY);
         }
-        bzo.p(listSelect, "proxiesOrNull");
+        throwIfVar1IsNull(listSelect, "proxiesOrNull");
         return Util.toImmutableList(listSelect);
     }
 

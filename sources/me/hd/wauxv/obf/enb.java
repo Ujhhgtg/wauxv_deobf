@@ -11,7 +11,7 @@ public final class enb extends cvj {
     @Override // me.hd.wauxv.obf.cvj
     public final Object c() {
         long[] jArrCopyOf = Arrays.copyOf(this.a, this.b);
-        bzo.p(jArrCopyOf, "copyOf(...)");
+        throwIfVar1IsNull(jArrCopyOf, "copyOf(...)");
         return new ena(jArrCopyOf);
     }
 
@@ -24,7 +24,7 @@ public final class enb extends cvj {
                 i = length;
             }
             long[] jArrCopyOf = Arrays.copyOf(jArr, i);
-            bzo.p(jArrCopyOf, "copyOf(...)");
+            throwIfVar1IsNull(jArrCopyOf, "copyOf(...)");
             this.a = jArrCopyOf;
         }
     }

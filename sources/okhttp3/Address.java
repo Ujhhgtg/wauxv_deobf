@@ -8,7 +8,7 @@ import javax.net.SocketFactory;
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLSocketFactory;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import okhttp3.HttpUrl;
 import okhttp3.internal.Util;
 
@@ -27,14 +27,16 @@ public final class Address {
     private final SSLSocketFactory sslSocketFactory;
     private final HttpUrl url;
 
-    public Address(String str, int i, Dns dns, SocketFactory socketFactory, SSLSocketFactory sSLSocketFactory, HostnameVerifier hostnameVerifier, CertificatePinner certificatePinner, Authenticator authenticator, Proxy proxy, List<? extends Protocol> list, List<ConnectionSpec> list2, ProxySelector proxySelector) {
-        bzo.q(str, "uriHost");
-        bzo.q(dns, "dns");
-        bzo.q(socketFactory, "socketFactory");
-        bzo.q(authenticator, "proxyAuthenticator");
-        bzo.q(list, "protocols");
-        bzo.q(list2, "connectionSpecs");
-        bzo.q(proxySelector, "proxySelector");
+    public Address(String str, int i, Dns dns, SocketFactory socketFactory, SSLSocketFactory sSLSocketFactory,
+            HostnameVerifier hostnameVerifier, CertificatePinner certificatePinner, Authenticator authenticator,
+            Proxy proxy, List<? extends Protocol> list, List<ConnectionSpec> list2, ProxySelector proxySelector) {
+        throwIfVar1IsNull(str, "uriHost");
+        throwIfVar1IsNull(dns, "dns");
+        throwIfVar1IsNull(socketFactory, "socketFactory");
+        throwIfVar1IsNull(authenticator, "proxyAuthenticator");
+        throwIfVar1IsNull(list, "protocols");
+        throwIfVar1IsNull(list2, "connectionSpecs");
+        throwIfVar1IsNull(proxySelector, "proxySelector");
         this.dns = dns;
         this.socketFactory = socketFactory;
         this.sslSocketFactory = sSLSocketFactory;
@@ -85,12 +87,21 @@ public final class Address {
             return false;
         }
         Address address = (Address) obj;
-        return bzo.f(this.url, address.url) && equalsNonHost$okhttp(address);
+        return nullSafeIsEqual(this.url, address.url) && equalsNonHost$okhttp(address);
     }
 
     public final boolean equalsNonHost$okhttp(Address address) {
-        bzo.q(address, "that");
-        return bzo.f(this.dns, address.dns) && bzo.f(this.proxyAuthenticator, address.proxyAuthenticator) && bzo.f(this.protocols, address.protocols) && bzo.f(this.connectionSpecs, address.connectionSpecs) && bzo.f(this.proxySelector, address.proxySelector) && bzo.f(this.proxy, address.proxy) && bzo.f(this.sslSocketFactory, address.sslSocketFactory) && bzo.f(this.hostnameVerifier, address.hostnameVerifier) && bzo.f(this.certificatePinner, address.certificatePinner) && this.url.port() == address.url.port();
+        throwIfVar1IsNull(address, "that");
+        return nullSafeIsEqual(this.dns, address.dns)
+                && nullSafeIsEqual(this.proxyAuthenticator, address.proxyAuthenticator)
+                && nullSafeIsEqual(this.protocols, address.protocols)
+                && nullSafeIsEqual(this.connectionSpecs, address.connectionSpecs)
+                && nullSafeIsEqual(this.proxySelector, address.proxySelector)
+                && nullSafeIsEqual(this.proxy, address.proxy)
+                && nullSafeIsEqual(this.sslSocketFactory, address.sslSocketFactory)
+                && nullSafeIsEqual(this.hostnameVerifier, address.hostnameVerifier)
+                && nullSafeIsEqual(this.certificatePinner, address.certificatePinner)
+                && this.url.port() == address.url.port();
     }
 
     public final Proxy f() {
@@ -106,7 +117,15 @@ public final class Address {
     }
 
     public int hashCode() {
-        return Objects.hashCode(this.certificatePinner) + ((Objects.hashCode(this.hostnameVerifier) + ((Objects.hashCode(this.sslSocketFactory) + ((Objects.hashCode(this.proxy) + ((this.proxySelector.hashCode() + bjs.g(this.connectionSpecs, bjs.g(this.protocols, (this.proxyAuthenticator.hashCode() + ((this.dns.hashCode() + ((this.url.hashCode() + 527) * 31)) * 31)) * 31, 31), 31)) * 31)) * 31)) * 31)) * 31);
+        return Objects.hashCode(this.certificatePinner) + ((Objects.hashCode(this.hostnameVerifier) + ((Objects
+                .hashCode(this.sslSocketFactory)
+                + ((Objects.hashCode(this.proxy) + ((this.proxySelector.hashCode() + bjs.g(this.connectionSpecs,
+                        bjs.g(this.protocols,
+                                (this.proxyAuthenticator.hashCode()
+                                        + ((this.dns.hashCode() + ((this.url.hashCode() + 527) * 31)) * 31)) * 31,
+                                31),
+                        31)) * 31)) * 31))
+                * 31)) * 31);
     }
 
     public final HostnameVerifier hostnameVerifier() {
@@ -165,7 +184,7 @@ public final class Address {
             obj = this.proxySelector;
         }
         sb.append(obj);
-        return bjs.q(sb2, sb.toString(), '}');
+        return concat(sb2, sb.toString(), '}');
     }
 
     public final HttpUrl url() {

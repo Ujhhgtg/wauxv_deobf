@@ -9,7 +9,7 @@ import javax.net.ssl.SSLSocket;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.X509TrustManager;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import okhttp3.Protocol;
 import okhttp3.internal.platform.Platform;
 import okhttp3.internal.platform.android.SocketAdapter;
@@ -19,7 +19,10 @@ import okhttp3.internal.platform.android.SocketAdapter;
 public final class Android10SocketAdapter implements SocketAdapter {
     public static final Companion Companion = new Companion(null);
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
@@ -41,13 +44,15 @@ public final class Android10SocketAdapter implements SocketAdapter {
     }
 
     @Override // okhttp3.internal.platform.android.SocketAdapter
-    public void configureTlsExtensions(SSLSocket sSLSocket, String str, List<? extends Protocol> list) throws IOException {
-        bzo.q(sSLSocket, "sslSocket");
-        bzo.q(list, "protocols");
+    public void configureTlsExtensions(SSLSocket sSLSocket, String str, List<? extends Protocol> list)
+            throws IOException {
+        throwIfVar1IsNull(sSLSocket, "sslSocket");
+        throwIfVar1IsNull(list, "protocols");
         try {
             SSLSockets.setUseSessionTickets(sSLSocket, true);
             SSLParameters sSLParameters = sSLSocket.getSSLParameters();
-            sSLParameters.setApplicationProtocols((String[]) Platform.Companion.alpnProtocolNames(list).toArray(new String[0]));
+            sSLParameters.setApplicationProtocols(
+                    (String[]) Platform.Companion.alpnProtocolNames(list).toArray(new String[0]));
             sSLSocket.setSSLParameters(sSLParameters);
         } catch (IllegalArgumentException e) {
             throw new IOException("Android internal error", e);
@@ -56,7 +61,7 @@ public final class Android10SocketAdapter implements SocketAdapter {
 
     @Override // okhttp3.internal.platform.android.SocketAdapter
     public String getSelectedProtocol(SSLSocket sSLSocket) {
-        bzo.q(sSLSocket, "sslSocket");
+        throwIfVar1IsNull(sSLSocket, "sslSocket");
         String applicationProtocol = sSLSocket.getApplicationProtocol();
         if (applicationProtocol == null ? true : applicationProtocol.equals("")) {
             return null;
@@ -71,7 +76,7 @@ public final class Android10SocketAdapter implements SocketAdapter {
 
     @Override // okhttp3.internal.platform.android.SocketAdapter
     public boolean matchesSocket(SSLSocket sSLSocket) {
-        bzo.q(sSLSocket, "sslSocket");
+        throwIfVar1IsNull(sSLSocket, "sslSocket");
         return SSLSockets.isSupportedSocket(sSLSocket);
     }
 

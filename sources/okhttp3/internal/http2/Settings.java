@@ -1,7 +1,7 @@
 package okhttp3.internal.http2;
 
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.la;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -19,7 +19,10 @@ public final class Settings {
     private int set;
     private final int[] values = new int[10];
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
@@ -76,7 +79,7 @@ public final class Settings {
     }
 
     public final void merge(Settings settings) {
-        bzo.q(settings, "other");
+        throwIfVar1IsNull(settings, "other");
         for (int i = 0; i < 10; i++) {
             if (settings.isSet(i)) {
                 set(i, settings.get(i));

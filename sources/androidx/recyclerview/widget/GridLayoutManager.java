@@ -79,7 +79,8 @@ public class GridLayoutManager extends LinearLayoutManager {
         if (iJ != -1) {
             return this.h.n(iJ, this.c);
         }
-        Log.w("GridLayoutManager", "Cannot find span size for pre layout position. It is not cached, not in the adapter. Pos:" + i);
+        Log.w("GridLayoutManager",
+                "Cannot find span size for pre layout position. It is not cached, not in the adapter. Pos:" + i);
         return 0;
     }
 
@@ -95,7 +96,8 @@ public class GridLayoutManager extends LinearLayoutManager {
         if (iJ != -1) {
             return this.h.o(iJ);
         }
-        Log.w("GridLayoutManager", "Cannot find span size for pre layout position. It is not cached, not in the adapter. Pos:" + i);
+        Log.w("GridLayoutManager",
+                "Cannot find span size for pre layout position. It is not cached, not in the adapter. Pos:" + i);
         return 1;
     }
 
@@ -104,8 +106,10 @@ public class GridLayoutManager extends LinearLayoutManager {
         int iEe2;
         bir birVar = (bir) view.getLayoutParams();
         Rect rect = birVar.d;
-        int i2 = rect.top + rect.bottom + ((ViewGroup.MarginLayoutParams) birVar).topMargin + ((ViewGroup.MarginLayoutParams) birVar).bottomMargin;
-        int i3 = rect.left + rect.right + ((ViewGroup.MarginLayoutParams) birVar).leftMargin + ((ViewGroup.MarginLayoutParams) birVar).rightMargin;
+        int i2 = rect.top + rect.bottom + ((ViewGroup.MarginLayoutParams) birVar).topMargin
+                + ((ViewGroup.MarginLayoutParams) birVar).bottomMargin;
+        int i3 = rect.left + rect.right + ((ViewGroup.MarginLayoutParams) birVar).leftMargin
+                + ((ViewGroup.MarginLayoutParams) birVar).rightMargin;
         int iAw = aw(birVar.a, birVar.b);
         if (this.bd == 1) {
             iEe2 = czg.ee(iAw, i, i3, ((ViewGroup.MarginLayoutParams) birVar).width, false);
@@ -128,7 +132,7 @@ public class GridLayoutManager extends LinearLayoutManager {
         }
         this.b = true;
         if (i < 1) {
-            throw new IllegalArgumentException(bjs.i(i, "Span count should be at least 1. Provided "));
+            throw new IllegalArgumentException(concatVar2Var1(i, "Span count should be at least 1. Provided "));
         }
         this.c = i;
         this.h.q();
@@ -191,30 +195,44 @@ public class GridLayoutManager extends LinearLayoutManager {
         this.j = -1;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:118:0x01a1  */
-    /* JADX WARN: Found duplicated region for block: B:121:0x01a7  */
+    /* JADX WARN: Found duplicated region for block: B:118:0x01a1 */
+    /* JADX WARN: Found duplicated region for block: B:121:0x01a7 */
     /* JADX WARN: Found duplicated region for block: B:121:0x01a7 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:122:0x01a9 A[EDGE_INSN: B:122:0x01a9->B:166:0x027c BREAK  A[LOOP:2: B:126:0x01b9->B:135:0x01e2, LOOP_LABEL: LOOP:2: B:126:0x01b9->B:135:0x01e2]] */
-    /* JADX WARN: Found duplicated region for block: B:123:0x01ac A[ADDED_TO_REGION] */
-    /* JADX WARN: Found duplicated region for block: B:128:0x01bf  */
-    /* JADX WARN: Found duplicated region for block: B:131:0x01cd  */
-    /* JADX WARN: Found duplicated region for block: B:134:0x01da A[LOOP:3: B:129:0x01c7->B:134:0x01da, LOOP_END] */
-    /* JADX WARN: Found duplicated region for block: B:139:0x01f3  */
-    /* JADX WARN: Found duplicated region for block: B:142:0x0213  */
-    /* JADX WARN: Found duplicated region for block: B:143:0x0215  */
+    /*
+     * JADX WARN: Found duplicated region for block: B:122:0x01a9 A[EDGE_INSN:
+     * B:122:0x01a9->B:166:0x027c BREAK A[LOOP:2: B:126:0x01b9->B:135:0x01e2,
+     * LOOP_LABEL: LOOP:2: B:126:0x01b9->B:135:0x01e2]]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:123:0x01ac A[ADDED_TO_REGION]
+     */
+    /* JADX WARN: Found duplicated region for block: B:128:0x01bf */
+    /* JADX WARN: Found duplicated region for block: B:131:0x01cd */
+    /*
+     * JADX WARN: Found duplicated region for block: B:134:0x01da A[LOOP:3:
+     * B:129:0x01c7->B:134:0x01da, LOOP_END]
+     */
+    /* JADX WARN: Found duplicated region for block: B:139:0x01f3 */
+    /* JADX WARN: Found duplicated region for block: B:142:0x0213 */
+    /* JADX WARN: Found duplicated region for block: B:143:0x0215 */
     /* JADX WARN: Found duplicated region for block: B:143:0x0215 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:145:0x0218 A[ADDED_TO_REGION] */
-    /* JADX WARN: Found duplicated region for block: B:150:0x0227  */
-    /* JADX WARN: Found duplicated region for block: B:153:0x0235  */
-    /* JADX WARN: Found duplicated region for block: B:156:0x0243  */
-    /* JADX WARN: Found duplicated region for block: B:163:0x0262  */
-    /* JADX WARN: Found duplicated region for block: B:167:0x027e  */
+    /*
+     * JADX WARN: Found duplicated region for block: B:145:0x0218 A[ADDED_TO_REGION]
+     */
+    /* JADX WARN: Found duplicated region for block: B:150:0x0227 */
+    /* JADX WARN: Found duplicated region for block: B:153:0x0235 */
+    /* JADX WARN: Found duplicated region for block: B:156:0x0243 */
+    /* JADX WARN: Found duplicated region for block: B:163:0x0262 */
+    /* JADX WARN: Found duplicated region for block: B:167:0x027e */
     /* JADX WARN: Found duplicated region for block: B:206:0x01a9 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:207:0x01e5 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:208:0x01e2 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:209:0x01a9 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:210:0x01ff A[SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:211:? A[LOOP:4: B:137:0x01ed->B:211:?, LOOP_END, SYNTHETIC] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:211:? A[LOOP:4:
+     * B:137:0x01ed->B:211:?, LOOP_END, SYNTHETIC]
+     */
     /* JADX WARN: Found duplicated region for block: B:212:0x0254 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:213:0x01a9 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:214:0x0251 A[SYNTHETIC] */
@@ -222,7 +240,10 @@ public class GridLayoutManager extends LinearLayoutManager {
     /* JADX WARN: Found duplicated region for block: B:217:0x022f A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:219:0x01a9 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:220:0x026e A[SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:221:? A[LOOP:7: B:161:0x025c->B:221:?, LOOP_END, SYNTHETIC] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:221:? A[LOOP:7:
+     * B:161:0x025c->B:221:?, LOOP_END, SYNTHETIC]
+     */
     @Override // androidx.recyclerview.widget.LinearLayoutManager, me.hd.wauxv.obf.czg
     public final boolean ag(int i, Bundle bundle) {
         View viewEr;
@@ -265,7 +286,8 @@ public class GridLayoutManager extends LinearLayoutManager {
                     int iAt = at(iX);
                     int iAs = as(iX);
                     if (iAt >= 0 && iAs >= 0) {
-                        if (!au(iX).contains(Integer.valueOf(this.k)) || !av(as(iX), iX).contains(Integer.valueOf(this.l))) {
+                        if (!au(iX).contains(Integer.valueOf(this.k))
+                                || !av(as(iX), iX).contains(Integer.valueOf(this.l))) {
                             this.k = iAt;
                             this.l = iAs;
                         }
@@ -405,7 +427,8 @@ public class GridLayoutManager extends LinearLayoutManager {
                                             }
                                             iIntValue--;
                                         } else {
-                                            if (iAt3 < i7 && av(as(iIntValue), iIntValue).contains(Integer.valueOf(iAs))) {
+                                            if (iAt3 < i7
+                                                    && av(as(iIntValue), iIntValue).contains(Integer.valueOf(iAs))) {
                                                 this.k = iAt3;
                                                 break;
                                             }
@@ -632,7 +655,8 @@ public class GridLayoutManager extends LinearLayoutManager {
                                             }
                                             iIntValue++;
                                         } else {
-                                            if (iAt5 > i7 && (iAs5 == iAs || av(as(iIntValue), iIntValue).contains(Integer.valueOf(iAs)))) {
+                                            if (iAt5 > i7 && (iAs5 == iAs
+                                                    || av(as(iIntValue), iIntValue).contains(Integer.valueOf(iAs)))) {
                                                 this.k = iAt5;
                                                 break;
                                             }
@@ -1097,7 +1121,8 @@ public class GridLayoutManager extends LinearLayoutManager {
     @Override // androidx.recyclerview.widget.LinearLayoutManager
     public final void ap(boolean z) {
         if (z) {
-            throw new UnsupportedOperationException("GridLayoutManager does not support stack from end. Consider using reverse layout");
+            throw new UnsupportedOperationException(
+                    "GridLayoutManager does not support stack from end. Consider using reverse layout");
         }
         super.ap(false);
     }
@@ -1276,21 +1301,23 @@ public class GridLayoutManager extends LinearLayoutManager {
         return ax(cztVar.p() - 1, czoVar, cztVar) + 1;
     }
 
-    /* JADX WARN: Code restructure failed: missing block: B:62:0x00e2, code lost:
-    
-        if (r13 == (r2 > r15)) goto L57;
+    /*
+     * JADX WARN: Code restructure failed: missing block: B:62:0x00e2, code lost:
+     * 
+     * if (r13 == (r2 > r15)) goto L57;
      */
     @Override // androidx.recyclerview.widget.LinearLayoutManager, me.hd.wauxv.obf.czg
     /*
-        Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
-    */
+     * Code decompiled incorrectly, please refer to instructions dump.
+     * To view partially-correct add '--show-bad-code' argument
+     */
     public final android.view.View w(android.view.View r23, int r24, me.hd.wauxv.obf.czo r25, me.hd.wauxv.obf.czt r26) {
         /*
-            Method dump skipped, instruction units count: 326
-            To view this dump add '--comments-level debug' option
-        */
-        throw new UnsupportedOperationException("Method not decompiled: androidx.recyclerview.widget.GridLayoutManager.w(android.view.View, int, me.hd.wauxv.obf.czo, me.hd.wauxv.obf.czt):android.view.View");
+         * Method dump skipped, instruction units count: 326
+         * To view this dump add '--comments-level debug' option
+         */
+        throw new UnsupportedOperationException(
+                "Method not decompiled: androidx.recyclerview.widget.GridLayoutManager.w(android.view.View, int, me.hd.wauxv.obf.czo, me.hd.wauxv.obf.czt):android.view.View");
     }
 
     @Override // androidx.recyclerview.widget.LinearLayoutManager, me.hd.wauxv.obf.czg

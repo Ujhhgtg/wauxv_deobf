@@ -6,7 +6,9 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class dtb {
     public static final dta Companion = new dta();
-    public static final btt[] a = {null, null, null, null, null, null, null, ewz.am(btx.a, new cfh(28)), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null};
+    public static final btt[] a = { null, null, null, null, null, null, null, ewz.am(btx.a, new cfh(28)), null, null,
+            null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null,
+            null };
     public final Integer aa;
     public final String ab;
     public final dxt ac;
@@ -36,7 +38,10 @@ public final class dtb {
     public final String y;
     public final String z;
 
-    public /* synthetic */ dtb(int i, String str, String str2, String str3, String str4, String str5, Integer num, Integer num2, List list, String str6, Long l, String str7, String str8, String str9, Integer num3, String str10, String str11, String str12, String str13, Integer num4, String str14, Integer num5, String str15, String str16, String str17, String str18, Integer num6, String str19, dxt dxtVar) {
+    public /* synthetic */ dtb(int i, String str, String str2, String str3, String str4, String str5, Integer num,
+            Integer num2, List list, String str6, Long l, String str7, String str8, String str9, Integer num3,
+            String str10, String str11, String str12, String str13, Integer num4, String str14, Integer num5,
+            String str15, String str16, String str17, String str18, Integer num6, String str19, dxt dxtVar) {
         if (268435455 != (i & 268435455)) {
             bht.ah(i, 268435455, dsz.b.getDescriptor());
             throw null;
@@ -79,7 +84,20 @@ public final class dtb {
             return false;
         }
         dtb dtbVar = (dtb) obj;
-        return bzo.f(this.b, dtbVar.b) && bzo.f(this.c, dtbVar.c) && bzo.f(this.d, dtbVar.d) && bzo.f(this.e, dtbVar.e) && bzo.f(this.f, dtbVar.f) && bzo.f(this.g, dtbVar.g) && bzo.f(this.h, dtbVar.h) && bzo.f(this.i, dtbVar.i) && bzo.f(this.j, dtbVar.j) && bzo.f(this.k, dtbVar.k) && bzo.f(this.l, dtbVar.l) && bzo.f(this.m, dtbVar.m) && bzo.f(this.n, dtbVar.n) && bzo.f(this.o, dtbVar.o) && bzo.f(this.p, dtbVar.p) && bzo.f(this.q, dtbVar.q) && bzo.f(this.r, dtbVar.r) && bzo.f(this.s, dtbVar.s) && bzo.f(this.t, dtbVar.t) && bzo.f(this.u, dtbVar.u) && bzo.f(this.v, dtbVar.v) && bzo.f(this.w, dtbVar.w) && bzo.f(this.x, dtbVar.x) && bzo.f(this.y, dtbVar.y) && bzo.f(this.z, dtbVar.z) && bzo.f(this.aa, dtbVar.aa) && bzo.f(this.ab, dtbVar.ab) && bzo.f(this.ac, dtbVar.ac);
+        return nullSafeIsEqual(this.b, dtbVar.b) && nullSafeIsEqual(this.c, dtbVar.c)
+                && nullSafeIsEqual(this.d, dtbVar.d) && nullSafeIsEqual(this.e, dtbVar.e)
+                && nullSafeIsEqual(this.f, dtbVar.f) && nullSafeIsEqual(this.g, dtbVar.g)
+                && nullSafeIsEqual(this.h, dtbVar.h) && nullSafeIsEqual(this.i, dtbVar.i)
+                && nullSafeIsEqual(this.j, dtbVar.j) && nullSafeIsEqual(this.k, dtbVar.k)
+                && nullSafeIsEqual(this.l, dtbVar.l) && nullSafeIsEqual(this.m, dtbVar.m)
+                && nullSafeIsEqual(this.n, dtbVar.n) && nullSafeIsEqual(this.o, dtbVar.o)
+                && nullSafeIsEqual(this.p, dtbVar.p) && nullSafeIsEqual(this.q, dtbVar.q)
+                && nullSafeIsEqual(this.r, dtbVar.r) && nullSafeIsEqual(this.s, dtbVar.s)
+                && nullSafeIsEqual(this.t, dtbVar.t) && nullSafeIsEqual(this.u, dtbVar.u)
+                && nullSafeIsEqual(this.v, dtbVar.v) && nullSafeIsEqual(this.w, dtbVar.w)
+                && nullSafeIsEqual(this.x, dtbVar.x) && nullSafeIsEqual(this.y, dtbVar.y)
+                && nullSafeIsEqual(this.z, dtbVar.z) && nullSafeIsEqual(this.aa, dtbVar.aa)
+                && nullSafeIsEqual(this.ab, dtbVar.ab) && nullSafeIsEqual(this.ac, dtbVar.ac);
     }
 
     public final int hashCode() {

@@ -6,7 +6,7 @@ import java.util.List;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class cud extends doo {
+public final class cud extends BaseHook {
     public static final cud a = new cud("PluginHook" /* cnb.z(-485159505754922L) */);
     public static final String b = "核心" /* cnb.z(-485412908825386L) */;
     public static final String c = "插件" /* cnb.z(-485434383661866L) */;
@@ -32,27 +32,27 @@ public final class cud extends doo {
         }
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String f() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getName() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String g() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getCategory() {
         return b;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String o() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getDescription() {
         return h;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final bgf p() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final IHasInvokeMethod p() {
         return i;
     }
 
-    @Override // me.hd.wauxv.obf.doo
+    @Override // me.hd.wauxv.obf.BaseHook
     public final boolean q() {
         return j;
     }

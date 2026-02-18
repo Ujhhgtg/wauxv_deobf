@@ -26,7 +26,7 @@ public final class bzm implements btd {
     public final Object a(ajt ajtVar) {
         switch (this.b) {
             case 0:
-                Object obj = bzo.d;
+                Object obj = KotlinHelpers.d;
                 bsb bsbVar = bsb.b;
                 dnh dnhVar = dnh.b;
                 dfz dfzVar = (dfz) this.d;
@@ -51,7 +51,7 @@ public final class bzm implements btd {
                         objH = acmVarP.h(dfzVar, 0, dnhVar, null);
                     } else {
                         if (iF != 1) {
-                            throw new dgb(bjs.i(iF, "Invalid index: "));
+                            throw new dgb(concatVar2Var1(iF, "Invalid index: "));
                         }
                         objH2 = acmVarP.h(dfzVar, 1, bsbVar, null);
                     }
@@ -63,7 +63,7 @@ public final class bzm implements btd {
                 acmVarP2.getClass();
                 int iF2 = acmVarP2.f(getDescriptor());
                 if (iF2 != -1) {
-                    throw new dgb(bjs.i(iF2, "Unexpected index "));
+                    throw new dgb(concatVar2Var1(iF2, "Unexpected index "));
                 }
                 acmVarP2._bp(descriptor);
                 return ens.a;
@@ -78,19 +78,22 @@ public final class bzm implements btd {
                 acn acnVarO = avtVar.o(dfzVar);
                 dnh dnhVar = dnh.b;
                 Map.Entry entry = (Map.Entry) obj;
-                bzo.q(entry, "<this>");
+                throwIfVar1IsNull(entry, "<this>");
                 acnVarO._ca(dfzVar, 0, dnhVar, entry.getKey());
                 acnVarO._ca(dfzVar, 1, bsb.b, entry.getValue());
                 acnVarO.a(dfzVar);
                 break;
             default:
-                bzo.q(obj, "value");
+                throwIfVar1IsNull(obj, "value");
                 avtVar.o(getDescriptor()).a(getDescriptor());
                 break;
         }
     }
 
-    /* JADX WARN: Type inference failed for: r0v3, types: [java.lang.Object, me.hd.wauxv.obf.btt] */
+    /*
+     * JADX WARN: Type inference failed for: r0v3, types: [java.lang.Object,
+     * me.hd.wauxv.obf.btt]
+     */
     @Override // me.hd.wauxv.obf.btd
     public final dfx getDescriptor() {
         switch (this.b) {

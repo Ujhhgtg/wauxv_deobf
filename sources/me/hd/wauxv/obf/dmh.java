@@ -49,7 +49,8 @@ public final class dmh extends cce implements PopupWindow.OnDismissListener, Vie
         this.c = new cbt(cbwVar, LayoutInflater.from(context), z, R.layout.abc_popup_menu_item_layout);
         this.g = i;
         Resources resources = context.getResources();
-        this.f = Math.max(resources.getDisplayMetrics().widthPixels / 2, resources.getDimensionPixelSize(R.dimen.abc_config_prefDialogWidth));
+        this.f = Math.max(resources.getDisplayMetrics().widthPixels / 2,
+                resources.getDimensionPixelSize(R.dimen.abc_config_prefDialogWidth));
         this.l = view;
         this.h = new cck(context, null, i, 0);
         cbwVar.aa(this, context);
@@ -125,7 +126,8 @@ public final class dmh extends cce implements PopupWindow.OnDismissListener, Vie
         if (this.t) {
             cbw cbwVar = this.b;
             if (cbwVar.n != null) {
-                FrameLayout frameLayout = (FrameLayout) LayoutInflater.from(context).inflate(R.layout.abc_popup_menu_header_item_layout, (ViewGroup) aqeVar, false);
+                FrameLayout frameLayout = (FrameLayout) LayoutInflater.from(context)
+                        .inflate(R.layout.abc_popup_menu_header_item_layout, (ViewGroup) aqeVar, false);
                 TextView textView = (TextView) frameLayout.findViewById(android.R.id.title);
                 if (textView != null) {
                     textView.setText(cbwVar.n);
@@ -257,7 +259,7 @@ public final class dmh extends cce implements PopupWindow.OnDismissListener, Vie
     }
 
     @Override // me.hd.wauxv.obf.dho
-    public final boolean e() {
+    public final boolean getThisObject() {
         return !this.p && this.h.av.isShowing();
     }
 

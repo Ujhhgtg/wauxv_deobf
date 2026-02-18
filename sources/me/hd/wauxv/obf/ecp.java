@@ -19,7 +19,7 @@ public final class ecp {
         if (this == obj) {
             return true;
         }
-        return (obj instanceof ecp) && bzo.f(this.a, ((ecp) obj).a);
+        return (obj instanceof ecp) && nullSafeIsEqual(this.a, ((ecp) obj).a);
     }
 
     public final int hashCode() {

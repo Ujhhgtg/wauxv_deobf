@@ -19,7 +19,7 @@ public final class dsy {
         if (this == obj) {
             return true;
         }
-        return (obj instanceof dsy) && bzo.f(this.a, ((dsy) obj).a);
+        return (obj instanceof dsy) && nullSafeIsEqual(this.a, ((dsy) obj).a);
     }
 
     public final int hashCode() {
@@ -33,6 +33,6 @@ public final class dsy {
     public final String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("FinderContactProto(username=" /* cnb.z(-190756677483306L) */);
-        return bjs.q(sb, this.a, ')');
+        return concat(sb, this.a, ')');
     }
 }

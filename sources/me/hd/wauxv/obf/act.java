@@ -8,7 +8,7 @@ import java.util.Iterator;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class act implements bgf {
+public final /* synthetic */ class act implements IHasInvokeMethod {
     public final /* synthetic */ int a;
 
     public /* synthetic */ act(int i) {
@@ -45,11 +45,12 @@ public final /* synthetic */ class act implements bgf {
                 return ensVar;
             case 1:
                 bag bagVar = (bag) obj;
-                String[] strArr = {"com.tencent.mm.storage" /* cnb.z(-385584983964458L) */};
+                String[] strArr = { "com.tencent.mm.storage" /* cnb.z(-385584983964458L) */ };
                 bagVar.getClass();
                 bagVar.a = la.ab(strArr);
                 zb zbVar = new zb();
-                zbVar.k("MicroMsg.ConfigStorage" /* cnb.z(-385469019847466L) */, "shouldProcessEvent db is close :%s" /* cnb.z(-385919991413546L) */);
+                zbVar.k("MicroMsg.ConfigStorage" /* cnb.z(-385469019847466L) */,
+                        "shouldProcessEvent db is close :%s" /* cnb.z(-385919991413546L) */);
                 bagVar.b = zbVar;
                 return ensVar;
             case 2:
@@ -58,7 +59,14 @@ public final /* synthetic */ class act implements bgf {
             case 3:
                 bah bahVar = (bah) obj;
                 cdj cdjVar = new cdj();
-                cdjVar.t("login_weixin_username" /* cnb.z(-109113644153642L) */, "login_user_name" /* cnb.z(-109001975003946L) */, "last_login_nick_name" /* cnb.z(-108933255527210L) */, "last_login_bind_mobile" /* cnb.z(-109375637158698L) */, "last_login_bind_email" /* cnb.z(-109328392518442L) */, "last_login_bind_qq" /* cnb.z(-109216723368746L) */);
+                cdjVar.t("login_weixin_username" /* cnb.z(-109113644153642L) */,
+                        "login_user_name" /* cnb.z(-109001975003946L) */,
+                        "last_login_nick_name" /* cnb.z(-108933255527210L) */,
+                        "last_login_bind_mobile" /* cnb.z(-109375637158698L) */, "last_login_bind_email" /*
+                                                                                                          * cnb.z(-
+                                                                                                          * 109328392518442L)
+                                                                                                          */,
+                        "last_login_bind_qq" /* cnb.z(-109216723368746L) */);
                 bahVar.getClass();
                 bahVar.d = cdjVar;
                 return ensVar;
@@ -88,10 +96,14 @@ public final /* synthetic */ class act implements bgf {
                 cdj cdjVar4 = new cdj();
                 fj fjVar2 = new fj();
                 cdj cdjVar5 = new cdj();
-                cdjVar5.t("MicroMsg.Label.ContactLabelUI" /* cnb.z(-103392747715370L) */, "cpan[saveContact]" /* cnb.z(-103865194117930L) */);
+                cdjVar5.t("MicroMsg.Label.ContactLabelUI" /* cnb.z(-103392747715370L) */, "cpan[saveContact]" /*
+                                                                                                               * cnb.z(-
+                                                                                                               * 103865194117930L)
+                                                                                                               */);
                 fjVar2.f(cdjVar5);
                 cdj cdjVar6 = new cdj();
-                cdjVar6.t("MicroMsg.Label.ContactLabelManagerImpl" /* cnb.z(-103736345099050L) */, "add contact label faild." /* cnb.z(-105218108816170L) */);
+                cdjVar6.t("MicroMsg.Label.ContactLabelManagerImpl" /* cnb.z(-103736345099050L) */,
+                        "add contact label faild." /* cnb.z(-105218108816170L) */);
                 fjVar2.f(cdjVar6);
                 cdjVar4.j = fjVar2;
                 fjVar.f(cdjVar4);
@@ -107,11 +119,12 @@ public final /* synthetic */ class act implements bgf {
                 return ensVar;
             case 8:
                 bah bahVar2 = (bah) obj;
-                String[] strArr2 = {"com.tencent.mm.storage" /* cnb.z(-360983411292970L) */};
+                String[] strArr2 = { "com.tencent.mm.storage" /* cnb.z(-360983411292970L) */ };
                 bahVar2.getClass();
                 bahVar2.a = la.ab(strArr2);
                 cdj cdjVar7 = new cdj();
-                cdjVar7.t("MicroMsg.Label.ContactLabelStorage" /* cnb.z(-362516714617642L) */, "cpan[getLabelIdByStr] label id is %s" /* cnb.z(-362332031023914L) */);
+                cdjVar7.t("MicroMsg.Label.ContactLabelStorage" /* cnb.z(-362516714617642L) */,
+                        "cpan[getLabelIdByStr] label id is %s" /* cnb.z(-362332031023914L) */);
                 bahVar2.d = cdjVar7;
                 return ensVar;
             case 9:
@@ -148,17 +161,23 @@ public final /* synthetic */ class act implements bgf {
                 cdj cdjVar9 = new cdj();
                 aeg.a.getClass();
                 cdjVar9.o(emn.bb(aee.a).getDeclaringClass());
-                cdjVar9.t("MicroMsg.Label.ContactLabelStorage" /* cnb.z(-386474042194730L) */, "getAllContactLable time:%s count:%s stack:%s" /* cnb.z(-386289358601002L) */, "select * from ContactLabel where isTemporary = 0  order by createTime ASC " /* cnb.z(-383381665741610L) */);
+                cdjVar9.t("MicroMsg.Label.ContactLabelStorage" /* cnb.z(-386474042194730L) */,
+                        "getAllContactLable time:%s count:%s stack:%s" /* cnb.z(-386289358601002L) */,
+                        "select * from ContactLabel where isTemporary = 0  order by createTime ASC " /*
+                                                                                                      * cnb.z(-
+                                                                                                      * 383381665741610L)
+                                                                                                      */);
                 bahVar3.getClass();
                 bahVar3.d = cdjVar9;
                 return ensVar;
             case 14:
                 bah bahVar4 = (bah) obj;
-                String[] strArr3 = {"com.tencent.mm.storage" /* cnb.z(-386830524480298L) */};
+                String[] strArr3 = { "com.tencent.mm.storage" /* cnb.z(-386830524480298L) */ };
                 bahVar4.getClass();
                 bahVar4.a = la.ab(strArr3);
                 cdj cdjVar10 = new cdj();
-                cdjVar10.t("MicroMsg.Label.ContactLabelStorage" /* cnb.z(-386783279840042L) */, "cpan[getLabelIdByStr] label id is %s" /* cnb.z(-386048840432426L) */);
+                cdjVar10.t("MicroMsg.Label.ContactLabelStorage" /* cnb.z(-386783279840042L) */,
+                        "cpan[getLabelIdByStr] label id is %s" /* cnb.z(-386048840432426L) */);
                 bahVar4.d = cdjVar10;
                 return ensVar;
             case 15:
@@ -166,7 +185,8 @@ public final /* synthetic */ class act implements bgf {
                 cdj cdjVar11 = new cdj();
                 aeg.a.getClass();
                 cdjVar11.o(emn.bb(aee.a).getDeclaringClass());
-                cdjVar11.t("MicroMsg.Label.ContactLabelStorage" /* cnb.z(-383574939269930L) */, "getUserNameListById time:%s id:%s count:%s stack:%s" /* cnb.z(-382892039469866L) */);
+                cdjVar11.t("MicroMsg.Label.ContactLabelStorage" /* cnb.z(-383574939269930L) */,
+                        "getUserNameListById time:%s id:%s count:%s stack:%s" /* cnb.z(-382892039469866L) */);
                 bahVar5.getClass();
                 bahVar5.d = cdjVar11;
                 return ensVar;
@@ -193,7 +213,7 @@ public final /* synthetic */ class act implements bgf {
                 return ensVar;
             case 20:
                 bag bagVar4 = (bag) obj;
-                String[] strArr4 = {"com.tencent.mm.storage" /* cnb.z(-384549896846122L) */};
+                String[] strArr4 = { "com.tencent.mm.storage" /* cnb.z(-384549896846122L) */ };
                 bagVar4.getClass();
                 bagVar4.a = la.ab(strArr4);
                 zb zbVar4 = new zb();
@@ -201,17 +221,18 @@ public final /* synthetic */ class act implements bgf {
                 bagVar4.b = zbVar4;
                 return ensVar;
             case 21:
-                Object objE = ((bmm) obj).e();
+                Object objE = ((HookParamWrapper) obj).getThisObject();
                 Activity activity = (Activity) (objE instanceof Activity ? objE : null);
                 if (activity == null) {
                     Class<Activity> clsBf5 = cnf.bf(dal.b(cls));
-                    throw new IllegalStateException("HookParam instance cannot cast to ".concat((clsBf5 != null ? clsBf5 : Activity.class).getName()).toString());
+                    throw new IllegalStateException("HookParam instance cannot cast to "
+                            .concat((clsBf5 != null ? clsBf5 : Activity.class).getName()).toString());
                 }
                 int i6 = bte.a;
                 cde cdeVarT = dqc.bi(activity).t();
                 cdeVarT.ab = "getPreferenceScreen" /* cnb.z(-37649683315498L) */;
                 Object objJ = ((cdk) dkz.m(cdeVarT)).j(new Object[0]);
-                bzo.n(objJ);
+                throwIfVar1IsNull(objJ);
                 BaseAdapter baseAdapter = (BaseAdapter) objJ;
                 for (bnd bndVar : aeq.b) {
                     try {
@@ -222,23 +243,29 @@ public final /* synthetic */ class act implements bgf {
                         ArrayList arrayList = ewq.a;
                         StringBuilder sb = new StringBuilder();
                         sb.append("onAddItems " /* cnb.z(-37529424231210L) */);
-                        ewq.e(yg.n(sb, bndVar instanceof doo ? ((doo) bndVar).f() : "LoadHook" /* cnb.z(-37512244362026L) */, -37473589656362L), e, 12);
+                        ewq.e(yg.n(sb,
+                                bndVar instanceof BaseHook ? ((BaseHook) bndVar).getResult() : "LoadHook" /*
+                                                                                                           * cnb.z(-
+                                                                                                           * 37512244362026L)
+                                                                                                           */,
+                                -37473589656362L), e, 12);
                     }
                 }
                 return ensVar;
             case 22:
-                bmm bmmVar = (bmm) obj;
-                Object objE2 = bmmVar.e();
+                HookParamWrapper hookParam = (HookParamWrapper) obj;
+                Object objE2 = hookParam.getThisObject();
                 if (!(objE2 instanceof Activity)) {
                     objE2 = null;
                 }
                 Activity activity2 = (Activity) objE2;
                 if (activity2 == null) {
                     Class<Activity> clsBf6 = cnf.bf(dal.b(cls));
-                    throw new IllegalStateException("HookParam instance cannot cast to ".concat((clsBf6 != null ? clsBf6 : Activity.class).getName()).toString());
+                    throw new IllegalStateException("HookParam instance cannot cast to "
+                            .concat((clsBf6 != null ? clsBf6 : Activity.class).getName()).toString());
                 }
                 try {
-                    objX = bmmVar.d()[1];
+                    objX = hookParam.getArgs()[1];
                     if (objX == null) {
                         objX = null;
                     }
@@ -246,7 +273,7 @@ public final /* synthetic */ class act implements bgf {
                     objX = bhu.x(th);
                 }
                 Object obj2 = objX instanceof dcx ? null : objX;
-                bzo.n(obj2);
+                throwIfVar1IsNull(obj2);
                 int i7 = bte.a;
                 azg azgVarR = dqc.bi(obj2).r();
                 azgVarR.a = dal.b(cls3);
@@ -260,24 +287,25 @@ public final /* synthetic */ class act implements bgf {
                                 for (aep aepVar2 : bndVar2.a(activity2)) {
                                     if (str.equals(aepVar2.a)) {
                                         aepVar2.d.invoke(activity2);
-                                        bmmVar.g();
+                                        hookParam.setResultTrue();
                                     }
                                 }
                             } catch (Exception e2) {
                                 ArrayList arrayList2 = ewq.a;
                                 StringBuilder sb2 = new StringBuilder();
                                 sb2.append("onAddItems " /* cnb.z(-37439229917994L) */);
-                                ewq.e(yg.n(sb2, bndVar2 instanceof doo ? ((doo) bndVar2).f() : "LoadHook" /* cnb.z(-37903086385962L) */, -37881611549482L), e2, 12);
+                                ewq.e(yg.n(sb2, bndVar2 instanceof BaseHook ? ((BaseHook) bndVar2).getResult()
+                                        : "LoadHook" /* cnb.z(-37903086385962L) */, -37881611549482L), e2, 12);
                             }
                         }
                     }
                 }
                 return ensVar;
             case 23:
-                bmm bmmVar2 = (bmm) obj;
-                bmmVar2.getClass();
+                HookParamWrapper hookParam2 = (HookParamWrapper) obj;
+                hookParam2.getClass();
                 try {
-                    objX2 = bmmVar2.d()[0];
+                    objX2 = hookParam2.getArgs()[0];
                     if (objX2 == null) {
                         objX2 = null;
                     }
@@ -288,7 +316,7 @@ public final /* synthetic */ class act implements bgf {
                     objX2 = null;
                 }
                 try {
-                    objX3 = bmmVar2.d()[1];
+                    objX3 = hookParam2.getArgs()[1];
                     if (objX3 == null) {
                         objX3 = null;
                     }
@@ -298,10 +326,10 @@ public final /* synthetic */ class act implements bgf {
                 if (objX3 instanceof dcx) {
                     objX3 = null;
                 }
-                bzo.n(objX3);
+                throwIfVar1IsNull(objX3);
                 CharSequence charSequence = (CharSequence) objX3;
                 try {
-                    objX4 = bmmVar2.d()[2];
+                    objX4 = hookParam2.getArgs()[2];
                     if (objX4 == null) {
                         objX4 = null;
                     }
@@ -312,7 +340,7 @@ public final /* synthetic */ class act implements bgf {
                     objX4 = null;
                 }
                 try {
-                    objX5 = bmmVar2.d()[3];
+                    objX5 = hookParam2.getArgs()[3];
                     if (objX5 == null) {
                         objX5 = null;
                     }
@@ -323,7 +351,7 @@ public final /* synthetic */ class act implements bgf {
                     objX5 = null;
                 }
                 try {
-                    objX6 = bmmVar2.d()[4];
+                    objX6 = hookParam2.getArgs()[4];
                     if (objX6 == null) {
                         objX6 = null;
                     }
@@ -334,12 +362,17 @@ public final /* synthetic */ class act implements bgf {
                 boolean zBooleanValue = bool != null ? bool.booleanValue() : false;
                 for (Object obj3 : afu.b) {
                     try {
-                        ((gx) obj3).i(bmmVar2, charSequence, zBooleanValue);
+                        ((gx) obj3).i(hookParam2, charSequence, zBooleanValue);
                     } catch (Exception e3) {
                         ArrayList arrayList3 = ewq.a;
                         StringBuilder sb3 = new StringBuilder();
                         sb3.append("onCreateBottomSheetDialogMenu " /* cnb.z(-39286065855274L) */);
-                        ewq.e(yg.n(sb3, obj3 instanceof doo ? ((doo) obj3).f() : "LoadHook" /* cnb.z(-39152921869098L) */, -39114267163434L), e3, 12);
+                        ewq.e(yg.n(sb3,
+                                obj3 instanceof BaseHook ? ((BaseHook) obj3).getResult() : "LoadHook" /*
+                                                                                                       * cnb.z(-
+                                                                                                       * 39152921869098L)
+                                                                                                       */,
+                                -39114267163434L), e3, 12);
                     }
                 }
                 return ensVar;
@@ -376,11 +409,14 @@ public final /* synthetic */ class act implements bgf {
                 return ensVar;
             case 27:
                 bah bahVar8 = (bah) obj;
-                String[] strArr5 = {"com.tencent.mm.ui.conversation" /* cnb.z(-106210246261546L) */};
+                String[] strArr5 = { "com.tencent.mm.ui.conversation" /* cnb.z(-106210246261546L) */ };
                 bahVar8.getClass();
                 bahVar8.a = la.ab(strArr5);
                 cdj cdjVar14 = new cdj();
-                cdjVar14.t("MicroMsg.ConvDelLogic" /* cnb.z(-106626858089258L) */, "del all notify message" /* cnb.z(-106583908416298L) */);
+                cdjVar14.t("MicroMsg.ConvDelLogic" /* cnb.z(-106626858089258L) */, "del all notify message" /*
+                                                                                                             * cnb.z(-
+                                                                                                             * 106583908416298L)
+                                                                                                             */);
                 bahVar8.d = cdjVar14;
                 return ensVar;
             case 28:
@@ -388,11 +424,14 @@ public final /* synthetic */ class act implements bgf {
                 return ensVar;
             default:
                 bah bahVar9 = (bah) obj;
-                String[] strArr6 = {"com.tencent.mm.storage" /* cnb.z(-78988743539498L) */};
+                String[] strArr6 = { "com.tencent.mm.storage" /* cnb.z(-78988743539498L) */ };
                 bahVar9.getClass();
                 bahVar9.a = la.ab(strArr6);
                 cdj cdjVar15 = new cdj();
-                cdjVar15.t("hidden_conv_parent" /* cnb.z(-78340203477802L) */, "message_fold" /* cnb.z(-78207059491626L) */, "appbrandcustomerservicemsg" /* cnb.z(-78202764524330L) */);
+                cdjVar15.t("hidden_conv_parent" /* cnb.z(-78340203477802L) */, "message_fold" /*
+                                                                                               * cnb.z(-78207059491626L)
+                                                                                               */,
+                        "appbrandcustomerservicemsg" /* cnb.z(-78202764524330L) */);
                 bahVar9.d = cdjVar15;
                 return ensVar;
         }

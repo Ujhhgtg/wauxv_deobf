@@ -119,74 +119,138 @@ public final class ASMUtils {
     static final Map<Class, String> descMapping;
     static final Map<MethodInfo, String[]> paramMapping;
     static final Map<Class, String> typeMapping;
-    public static final String TYPE_UNSAFE_UTILS = JDKUtils.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
-    public static final String TYPE_OBJECT_WRITER_ADAPTER = ObjectWriterAdapter.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
-    public static final String TYPE_OBJECT_WRITER_1 = ObjectWriter1.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
-    public static final String TYPE_OBJECT_WRITER_2 = ObjectWriter2.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
-    public static final String TYPE_OBJECT_WRITER_3 = ObjectWriter3.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
-    public static final String TYPE_OBJECT_WRITER_4 = ObjectWriter4.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
-    public static final String TYPE_OBJECT_WRITER_5 = ObjectWriter5.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
-    public static final String TYPE_OBJECT_WRITER_6 = ObjectWriter6.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
-    public static final String TYPE_OBJECT_WRITER_7 = ObjectWriter7.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
-    public static final String TYPE_OBJECT_WRITER_8 = ObjectWriter8.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
-    public static final String TYPE_OBJECT_WRITER_9 = ObjectWriter9.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
-    public static final String TYPE_OBJECT_WRITER_10 = ObjectWriter10.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
-    public static final String TYPE_OBJECT_WRITER_11 = ObjectWriter11.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
-    public static final String TYPE_OBJECT_WRITER_12 = ObjectWriter12.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
-    public static final String TYPE_FIELD_READE = FieldReader.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+    public static final String TYPE_UNSAFE_UTILS = JDKUtils.class.getName()
+            .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+    public static final String TYPE_OBJECT_WRITER_ADAPTER = ObjectWriterAdapter.class.getName()
+            .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+    public static final String TYPE_OBJECT_WRITER_1 = ObjectWriter1.class.getName()
+            .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+    public static final String TYPE_OBJECT_WRITER_2 = ObjectWriter2.class.getName()
+            .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+    public static final String TYPE_OBJECT_WRITER_3 = ObjectWriter3.class.getName()
+            .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+    public static final String TYPE_OBJECT_WRITER_4 = ObjectWriter4.class.getName()
+            .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+    public static final String TYPE_OBJECT_WRITER_5 = ObjectWriter5.class.getName()
+            .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+    public static final String TYPE_OBJECT_WRITER_6 = ObjectWriter6.class.getName()
+            .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+    public static final String TYPE_OBJECT_WRITER_7 = ObjectWriter7.class.getName()
+            .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+    public static final String TYPE_OBJECT_WRITER_8 = ObjectWriter8.class.getName()
+            .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+    public static final String TYPE_OBJECT_WRITER_9 = ObjectWriter9.class.getName()
+            .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+    public static final String TYPE_OBJECT_WRITER_10 = ObjectWriter10.class.getName()
+            .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+    public static final String TYPE_OBJECT_WRITER_11 = ObjectWriter11.class.getName()
+            .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+    public static final String TYPE_OBJECT_WRITER_12 = ObjectWriter12.class.getName()
+            .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+    public static final String TYPE_FIELD_READE = FieldReader.class.getName()
+            .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
 
     static {
-        String strReplace = JSONReader.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+        String strReplace = JSONReader.class.getName()
+                .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
         TYPE_JSON_READER = strReplace;
-        String strReplace2 = ObjectReader.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+        String strReplace2 = ObjectReader.class.getName()
+                .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
         TYPE_OBJECT_READER = strReplace2;
-        TYPE_OBJECT_READER_ADAPTER = ObjectReaderAdapter.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
-        TYPE_OBJECT_READER_1 = ObjectReader1.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
-        TYPE_OBJECT_READER_2 = ObjectReader2.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
-        TYPE_OBJECT_READER_3 = ObjectReader3.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
-        TYPE_OBJECT_READER_4 = ObjectReader4.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
-        TYPE_OBJECT_READER_5 = ObjectReader5.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
-        TYPE_OBJECT_READER_6 = ObjectReader6.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
-        TYPE_OBJECT_READER_7 = ObjectReader7.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
-        TYPE_OBJECT_READER_8 = ObjectReader8.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
-        TYPE_OBJECT_READER_9 = ObjectReader9.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
-        TYPE_OBJECT_READER_10 = ObjectReader10.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
-        TYPE_OBJECT_READER_11 = ObjectReader11.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
-        TYPE_OBJECT_READER_12 = ObjectReader12.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
-        TYPE_OBJECT_READER_NONE_DEFAULT_CONSTRUCTOR = ObjectReaderNoneDefaultConstructor.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
-        TYPE_BYTE_ARRAY_VALUE_CONSUMER = ByteArrayValueConsumer.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
-        TYPE_CHAR_ARRAY_VALUE_CONSUMER = CharArrayValueConsumer.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
-        TYPE_TYPE_UTILS = TypeUtils.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
-        TYPE_DATE_UTILS = DateUtils.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
-        String strReplace3 = ObjectWriter.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+        TYPE_OBJECT_READER_ADAPTER = ObjectReaderAdapter.class.getName()
+                .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+        TYPE_OBJECT_READER_1 = ObjectReader1.class.getName()
+                .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+        TYPE_OBJECT_READER_2 = ObjectReader2.class.getName()
+                .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+        TYPE_OBJECT_READER_3 = ObjectReader3.class.getName()
+                .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+        TYPE_OBJECT_READER_4 = ObjectReader4.class.getName()
+                .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+        TYPE_OBJECT_READER_5 = ObjectReader5.class.getName()
+                .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+        TYPE_OBJECT_READER_6 = ObjectReader6.class.getName()
+                .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+        TYPE_OBJECT_READER_7 = ObjectReader7.class.getName()
+                .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+        TYPE_OBJECT_READER_8 = ObjectReader8.class.getName()
+                .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+        TYPE_OBJECT_READER_9 = ObjectReader9.class.getName()
+                .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+        TYPE_OBJECT_READER_10 = ObjectReader10.class.getName()
+                .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+        TYPE_OBJECT_READER_11 = ObjectReader11.class.getName()
+                .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+        TYPE_OBJECT_READER_12 = ObjectReader12.class.getName()
+                .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+        TYPE_OBJECT_READER_NONE_DEFAULT_CONSTRUCTOR = ObjectReaderNoneDefaultConstructor.class.getName()
+                .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+        TYPE_BYTE_ARRAY_VALUE_CONSUMER = ByteArrayValueConsumer.class.getName()
+                .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+        TYPE_CHAR_ARRAY_VALUE_CONSUMER = CharArrayValueConsumer.class.getName()
+                .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+        TYPE_TYPE_UTILS = TypeUtils.class.getName()
+                .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+        TYPE_DATE_UTILS = DateUtils.class.getName()
+                .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+        String strReplace3 = ObjectWriter.class.getName()
+                .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
         TYPE_OBJECT_WRITER = strReplace3;
-        String strReplace4 = JSONWriter.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+        String strReplace4 = JSONWriter.class.getName()
+                .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
         TYPE_JSON_WRITER = strReplace4;
-        TYPE_JSONB_IO = JSONB.IO.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
-        TYPE_FIELD_WRITER = com.alibaba.fastjson2.writer.FieldWriter.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
-        TYPE_IO_UTILS = IOUtils.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
-        String str = "L" + com.alibaba.fastjson2.writer.FieldWriter.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/') + TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER;
+        TYPE_JSONB_IO = JSONB.IO.class.getName()
+                .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+        TYPE_FIELD_WRITER = com.alibaba.fastjson2.writer.FieldWriter.class.getName()
+                .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+        TYPE_IO_UTILS = IOUtils.class.getName()
+                .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+        String str = "L"
+                + com.alibaba.fastjson2.writer.FieldWriter.class.getName()
+                        .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/')
+                + TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER;
         DESC_FIELD_WRITER = str;
         DESC_FIELD_WRITER_ARRAY = yg.k("[", str);
-        String str2 = "L" + FieldReader.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/') + TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER;
+        String str2 = "L"
+                + FieldReader.class.getName()
+                        .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/')
+                + TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER;
         DESC_FIELD_READER = str2;
         DESC_FIELD_READER_ARRAY = yg.k("[", str2);
-        DESC_JSON_READER = dkz.o(TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER, "L", strReplace);
-        DESC_JSON_WRITER = dkz.o(TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER, "L", strReplace4);
-        DESC_OBJECT_READER = dkz.o(TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER, "L", strReplace2);
-        DESC_OBJECT_WRITER = dkz.o(TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER, "L", strReplace3);
-        DESC_JSONSCHEMA = "L" + JSONSchema.class.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/') + TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER;
+        DESC_JSON_READER = dkz.o(TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER, "L",
+                strReplace);
+        DESC_JSON_WRITER = dkz.o(TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER, "L",
+                strReplace4);
+        DESC_OBJECT_READER = dkz.o(TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER, "L",
+                strReplace2);
+        DESC_OBJECT_WRITER = dkz.o(TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER, "L",
+                strReplace3);
+        DESC_JSONSCHEMA = "L"
+                + JSONSchema.class.getName()
+                        .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/')
+                + TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER;
         HashMap map = new HashMap();
         paramMapping = map;
         HashMap map2 = new HashMap();
         descMapping = map2;
         HashMap map3 = new HashMap();
         typeMapping = map3;
-        map.put(new MethodInfo(ParameterizedTypeImpl.class.getName(), MethodDescription.CONSTRUCTOR_INTERNAL_NAME, new String[]{"[Ljava.lang.reflect.Type;", "java.lang.reflect.Type", "java.lang.reflect.Type"}), new String[]{"actualTypeArguments", "ownerType", "rawType"});
-        map.put(new MethodInfo("org.apache.commons.lang3.tuple.Triple", "of", new String[]{"java.lang.Object", "java.lang.Object", "java.lang.Object"}), new String[]{"left", "middle", "right"});
-        map.put(new MethodInfo("org.apache.commons.lang3.tuple.MutableTriple", MethodDescription.CONSTRUCTOR_INTERNAL_NAME, new String[]{"java.lang.Object", "java.lang.Object", "java.lang.Object"}), new String[]{"left", "middle", "right"});
-        map.put(new MethodInfo("org.javamoney.moneta.Money", MethodDescription.CONSTRUCTOR_INTERNAL_NAME, new String[]{"java.math.BigDecimal", "javax.money.CurrencyUnit", "javax.money.MonetaryContext"}), new String[]{"number", "currency", "monetaryContext"});
-        map.put(new MethodInfo("org.javamoney.moneta.Money", MethodDescription.CONSTRUCTOR_INTERNAL_NAME, new String[]{"java.math.BigDecimal", "javax.money.CurrencyUnit"}), new String[]{"number", "currency"});
+        map.put(new MethodInfo(ParameterizedTypeImpl.class.getName(), MethodDescription.CONSTRUCTOR_INTERNAL_NAME,
+                new String[] { "[Ljava.lang.reflect.Type;", "java.lang.reflect.Type", "java.lang.reflect.Type" }),
+                new String[] { "actualTypeArguments", "ownerType", "rawType" });
+        map.put(new MethodInfo("org.apache.commons.lang3.tuple.Triple", "of",
+                new String[] { "java.lang.Object", "java.lang.Object", "java.lang.Object" }),
+                new String[] { "left", "middle", "right" });
+        map.put(new MethodInfo("org.apache.commons.lang3.tuple.MutableTriple",
+                MethodDescription.CONSTRUCTOR_INTERNAL_NAME,
+                new String[] { "java.lang.Object", "java.lang.Object", "java.lang.Object" }),
+                new String[] { "left", "middle", "right" });
+        map.put(new MethodInfo("org.javamoney.moneta.Money", MethodDescription.CONSTRUCTOR_INTERNAL_NAME,
+                new String[] { "java.math.BigDecimal", "javax.money.CurrencyUnit", "javax.money.MonetaryContext" }),
+                new String[] { "number", "currency", "monetaryContext" });
+        map.put(new MethodInfo("org.javamoney.moneta.Money", MethodDescription.CONSTRUCTOR_INTERNAL_NAME,
+                new String[] { "java.math.BigDecimal", "javax.money.CurrencyUnit" }),
+                new String[] { "number", "currency" });
         Class cls = Integer.TYPE;
         map2.put(cls, "I");
         Class cls2 = Void.TYPE;
@@ -214,12 +278,25 @@ public final class ASMUtils {
         map3.put(cls7, "F");
         map3.put(cls8, "J");
         map3.put(cls9, "D");
-        Class[] clsArr = {String.class, List.class, Collection.class, ObjectReader.class, ObjectReader1.class, ObjectReader2.class, ObjectReader3.class, ObjectReader4.class, ObjectReader5.class, ObjectReader6.class, ObjectReader7.class, ObjectReader8.class, ObjectReader9.class, ObjectReader10.class, ObjectReader11.class, ObjectReader12.class, ObjectReaderAdapter.class, FieldReader.class, JSONReader.class, ObjBoolConsumer.class, ObjCharConsumer.class, ObjByteConsumer.class, ObjShortConsumer.class, ObjIntConsumer.class, ObjLongConsumer.class, ObjFloatConsumer.class, ObjDoubleConsumer.class, BiConsumer.class, JDKUtils.class, ObjectWriterAdapter.class, ObjectWriter1.class, ObjectWriter2.class, ObjectWriter3.class, ObjectWriter4.class, ObjectWriter5.class, ObjectWriter6.class, ObjectWriter7.class, ObjectWriter8.class, ObjectWriter9.class, ObjectWriter10.class, ObjectWriter11.class, ObjectWriter12.class, com.alibaba.fastjson2.writer.FieldWriter.class, JSONPathCompilerReflect.SingleNamePathTyped.class, JSONWriter.Context.class, JSONB.class, JSONSchema.class, JSONType.class, Date.class, Supplier.class};
+        Class[] clsArr = { String.class, List.class, Collection.class, ObjectReader.class, ObjectReader1.class,
+                ObjectReader2.class, ObjectReader3.class, ObjectReader4.class, ObjectReader5.class, ObjectReader6.class,
+                ObjectReader7.class, ObjectReader8.class, ObjectReader9.class, ObjectReader10.class,
+                ObjectReader11.class, ObjectReader12.class, ObjectReaderAdapter.class, FieldReader.class,
+                JSONReader.class, ObjBoolConsumer.class, ObjCharConsumer.class, ObjByteConsumer.class,
+                ObjShortConsumer.class, ObjIntConsumer.class, ObjLongConsumer.class, ObjFloatConsumer.class,
+                ObjDoubleConsumer.class, BiConsumer.class, JDKUtils.class, ObjectWriterAdapter.class,
+                ObjectWriter1.class, ObjectWriter2.class, ObjectWriter3.class, ObjectWriter4.class, ObjectWriter5.class,
+                ObjectWriter6.class, ObjectWriter7.class, ObjectWriter8.class, ObjectWriter9.class,
+                ObjectWriter10.class, ObjectWriter11.class, ObjectWriter12.class,
+                com.alibaba.fastjson2.writer.FieldWriter.class, JSONPathCompilerReflect.SingleNamePathTyped.class,
+                JSONWriter.Context.class, JSONB.class, JSONSchema.class, JSONType.class, Date.class, Supplier.class };
         for (int i = 0; i < 50; i++) {
             Class cls10 = clsArr[i];
-            String strReplace5 = cls10.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+            String strReplace5 = cls10.getName()
+                    .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
             typeMapping.put(cls10, strReplace5);
-            descMapping.put(cls10, "L" + strReplace5 + TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER);
+            descMapping.put(cls10,
+                    "L" + strReplace5 + TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER);
         }
         Map<Class, String> map4 = typeMapping;
         map4.put(JSONWriter.class, TYPE_JSON_WRITER);
@@ -278,11 +355,14 @@ public final class ASMUtils {
                 int length = parameterTypes2.length;
                 Class<?> cls = Integer.TYPE;
                 if (length == 3) {
-                    if (parameterTypes2[0] == String.class && parameterTypes2[1] == CharSequence.class && parameterTypes2[2] == cls) {
-                        return new String[]{"message", "parsedString", "errorIndex"};
+                    if (parameterTypes2[0] == String.class && parameterTypes2[1] == CharSequence.class
+                            && parameterTypes2[2] == cls) {
+                        return new String[] { "message", "parsedString", "errorIndex" };
                     }
-                } else if (parameterTypes2.length == 4 && parameterTypes2[0] == String.class && parameterTypes2[1] == CharSequence.class && parameterTypes2[2] == cls && parameterTypes2[3] == Throwable.class) {
-                    return new String[]{"message", "parsedString", "errorIndex", "cause"};
+                } else if (parameterTypes2.length == 4 && parameterTypes2[0] == String.class
+                        && parameterTypes2[1] == CharSequence.class && parameterTypes2[2] == cls
+                        && parameterTypes2[3] == Throwable.class) {
+                    return new String[] { "message", "parsedString", "errorIndex", "cause" };
                 }
             }
             if (Throwable.class.isAssignableFrom(declaringClass3)) {
@@ -290,13 +370,14 @@ public final class ASMUtils {
                 if (length2 == 1) {
                     Class<?> cls2 = parameterTypes2[0];
                     if (cls2 == String.class) {
-                        return new String[]{"message"};
+                        return new String[] { "message" };
                     }
                     if (Throwable.class.isAssignableFrom(cls2)) {
-                        return new String[]{"cause"};
+                        return new String[] { "cause" };
                     }
-                } else if (length2 == 2 && parameterTypes2[0] == String.class && Throwable.class.isAssignableFrom(parameterTypes2[1])) {
-                    return new String[]{"message", "cause"};
+                } else if (length2 == 2 && parameterTypes2[0] == String.class
+                        && Throwable.class.isAssignableFrom(parameterTypes2[1])) {
+                    return new String[] { "message", "cause" };
                 }
             }
         }
@@ -324,14 +405,18 @@ public final class ASMUtils {
         if (classLoader == null) {
             classLoader = ClassLoader.getSystemClassLoader();
         }
-        InputStream resourceAsStream = classLoader.getResourceAsStream(declaringClass.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/') + ClassFileLocator.CLASS_FILE_EXTENSION);
+        InputStream resourceAsStream = classLoader.getResourceAsStream(
+                declaringClass.getName().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH,
+                        '/') + ClassFileLocator.CLASS_FILE_EXTENSION);
         if (resourceAsStream != null) {
             try {
                 ClassReader classReader = new ClassReader(resourceAsStream);
                 TypeCollector typeCollector = new TypeCollector(name, parameterTypes);
                 classReader.accept(typeCollector);
                 String[] parameterNamesForMethod = typeCollector.getParameterNamesForMethod();
-                if (parameterNamesForMethod != null && parameterNamesForMethod.length == parameterCount - 1 && (declaringClass2 = declaringClass.getDeclaringClass()) != null && declaringClass2.equals(parameterTypes[0])) {
+                if (parameterNamesForMethod != null && parameterNamesForMethod.length == parameterCount - 1
+                        && (declaringClass2 = declaringClass.getDeclaringClass()) != null
+                        && declaringClass2.equals(parameterTypes[0])) {
                     String[] strArr2 = new String[parameterCount];
                     strArr2[0] = "this$0";
                     System.arraycopy(parameterNamesForMethod, 0, strArr2, 1, parameterNamesForMethod.length);
@@ -347,13 +432,14 @@ public final class ASMUtils {
             }
         }
         String[] strArr3 = new String[parameterCount];
-        if (parameterTypes[0] != declaringClass.getDeclaringClass() || Modifier.isStatic(declaringClass.getModifiers())) {
+        if (parameterTypes[0] != declaringClass.getDeclaringClass()
+                || Modifier.isStatic(declaringClass.getModifiers())) {
             i = 0;
         } else {
             strArr3[0] = "this.$0";
         }
         while (i < parameterCount) {
-            strArr3[i] = bjs.i(i, ParameterDescription.NAME_PREFIX);
+            strArr3[i] = concatVar2Var1(i, ParameterDescription.NAME_PREFIX);
             i++;
         }
         return strArr3;
@@ -370,7 +456,10 @@ public final class ASMUtils {
         return "[" + desc(cls.getComponentType());
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class MethodInfo {
         final String className;
         int hash;
@@ -389,7 +478,9 @@ public final class ASMUtils {
             }
             if (obj != null && MethodInfo.class == obj.getClass()) {
                 MethodInfo methodInfo = (MethodInfo) obj;
-                if (Objects.equals(this.className, methodInfo.className) && Objects.equals(this.methodName, methodInfo.methodName) && Arrays.equals(this.paramTypeNames, methodInfo.paramTypeNames)) {
+                if (Objects.equals(this.className, methodInfo.className)
+                        && Objects.equals(this.methodName, methodInfo.methodName)
+                        && Arrays.equals(this.paramTypeNames, methodInfo.paramTypeNames)) {
                     return true;
                 }
             }

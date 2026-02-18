@@ -46,7 +46,7 @@ public final class awd implements awi, awk {
     }
 
     public static void i(String str, long j, awj awjVar) {
-        StringBuilder sbR = bjs.r(str, " in ");
+        StringBuilder sbR = concat(str, " in ");
         sbR.append(bxq.c(j));
         sbR.append("ms, key: ");
         sbR.append(awjVar);

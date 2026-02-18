@@ -2,7 +2,7 @@ package me.hd.wauxv.obf;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class ciu implements bgf {
+public final /* synthetic */ class ciu implements IHasInvokeMethod {
     public final /* synthetic */ dag a;
     public final /* synthetic */ dag b;
     public final /* synthetic */ cix c;
@@ -20,7 +20,7 @@ public final /* synthetic */ class ciu implements bgf {
     @Override // me.hd.wauxv.obf.bgf
     public final Object invoke(Object obj) {
         cio cioVar = (cio) obj;
-        bzo.q(cioVar, "entry");
+        throwIfVar1IsNull(cioVar, "entry");
         this.a.a = true;
         this.b.a = true;
         this.c.am(cioVar, this.d, this.e);

@@ -6,7 +6,7 @@ import java.util.Iterator;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class bzi extends AbstractCollection implements Collection, bsx {
+public final class bzi extends AbstractCollection implements Collection, IEmpty2 {
     public final bzg a;
 
     public bzi(bzg bzgVar) {
@@ -20,7 +20,7 @@ public final class bzi extends AbstractCollection implements Collection, bsx {
 
     @Override // java.util.AbstractCollection, java.util.Collection
     public final boolean addAll(Collection collection) {
-        bzo.q(collection, "elements");
+        throwIfVar1IsNull(collection, "elements");
         throw new UnsupportedOperationException();
     }
 
@@ -60,14 +60,14 @@ public final class bzi extends AbstractCollection implements Collection, bsx {
 
     @Override // java.util.AbstractCollection, java.util.Collection
     public final boolean removeAll(Collection collection) {
-        bzo.q(collection, "elements");
+        throwIfVar1IsNull(collection, "elements");
         this.a.p();
         return super.removeAll(collection);
     }
 
     @Override // java.util.AbstractCollection, java.util.Collection
     public final boolean retainAll(Collection collection) {
-        bzo.q(collection, "elements");
+        throwIfVar1IsNull(collection, "elements");
         this.a.p();
         return super.retainAll(collection);
     }

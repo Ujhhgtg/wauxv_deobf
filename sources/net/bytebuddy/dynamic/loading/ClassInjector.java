@@ -647,7 +647,7 @@ public interface ClassInjector {
             for (String str : set) {
                 int iLastIndexOf = str.lastIndexOf(46);
                 if (!packageDescription.getName().equals(iLastIndexOf == -1 ? "" : str.substring(0, iLastIndexOf))) {
-                    StringBuilder sbR = bjs.r(str, " must be defined in the same package as ");
+                    StringBuilder sbR = concat(str, " must be defined in the same package as ");
                     sbR.append(this.lookup);
                     throw new IllegalArgumentException(sbR.toString());
                 }

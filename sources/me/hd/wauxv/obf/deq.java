@@ -37,7 +37,8 @@ public final class deq implements ero {
         Application application;
         bur burVar = this.f;
         if (burVar == null) {
-            throw new UnsupportedOperationException("SavedStateViewModelFactory constructed with empty constructor supports only calls to create(modelClass: Class<T>, extras: CreationExtras).");
+            throw new UnsupportedOperationException(
+                    "SavedStateViewModelFactory constructed with empty constructor supports only calls to create(modelClass: Class<T>, extras: CreationExtras).");
         }
         boolean zIsAssignableFrom = ev.class.isAssignableFrom(cls);
         Constructor constructorC = (!zIsAssignableFrom || this.c == null) ? der.c(cls, der.b) : der.c(cls, der.a);
@@ -48,11 +49,11 @@ public final class deq implements ero {
             if (dop.f == null) {
                 dop.f = new dop(21);
             }
-            bzo.n(dop.f);
+            throwIfVar1IsNull(dop.f);
             return cnh.q(cls);
         }
         but butVar = this.g;
-        bzo.n(butVar);
+        throwIfVar1IsNull(butVar);
         deh dehVarM = bmy.m(butVar.g(str), this.e);
         dei deiVar = new dei(str, dehVarM);
         deiVar.d(butVar, burVar);
@@ -62,7 +63,8 @@ public final class deq implements ero {
         } else {
             burVar.j(new akz(burVar, 3, butVar));
         }
-        erk erkVarD = (!zIsAssignableFrom || (application = this.c) == null) ? der.d(cls, constructorC, dehVarM) : der.d(cls, constructorC, application, dehVarM);
+        erk erkVarD = (!zIsAssignableFrom || (application = this.c) == null) ? der.d(cls, constructorC, dehVarM)
+                : der.d(cls, constructorC, application, dehVarM);
         erkVarD.getClass();
         erl erlVar = erkVarD.m;
         if (erlVar == null) {
@@ -90,12 +92,15 @@ public final class deq implements ero {
             if (this.f != null) {
                 return h(cls, str);
             }
-            throw new IllegalStateException("SAVED_STATE_REGISTRY_OWNER_KEY andVIEW_MODEL_STORE_OWNER_KEY must be provided in the creation extras tosuccessfully create a ViewModel.");
+            throw new IllegalStateException(
+                    "SAVED_STATE_REGISTRY_OWNER_KEY andVIEW_MODEL_STORE_OWNER_KEY must be provided in the creation extras tosuccessfully create a ViewModel.");
         }
         Application application = (Application) linkedHashMap.get(ern.n);
         boolean zIsAssignableFrom = ev.class.isAssignableFrom(cls);
         Constructor constructorC = (!zIsAssignableFrom || application == null) ? der.c(cls, der.b) : der.c(cls, der.a);
-        return constructorC == null ? this.d.l(cls, chqVar) : (!zIsAssignableFrom || application == null) ? der.d(cls, constructorC, aye.q(chqVar)) : der.d(cls, constructorC, application, aye.q(chqVar));
+        return constructorC == null ? this.d.l(cls, chqVar)
+                : (!zIsAssignableFrom || application == null) ? der.d(cls, constructorC, aye.q(chqVar))
+                        : der.d(cls, constructorC, application, aye.q(chqVar));
     }
 
     public deq(Application application, dep depVar, Bundle bundle) {
@@ -109,7 +114,7 @@ public final class deq implements ero {
                 ern.m = new ern(application);
             }
             ernVar = ern.m;
-            bzo.n(ernVar);
+            throwIfVar1IsNull(ernVar);
         } else {
             ernVar = new ern(null);
         }

@@ -69,7 +69,7 @@ public final class ri implements ajh, ako, crt {
     public boolean g() {
         ByteBuffer byteBuffer = this.b;
         if (byteBuffer == null) {
-            bzo.ar("buffer" /* cnb.z(-22574348106538L) */);
+            throwLateinitPropNotInitYet("buffer" /* cnb.z(-22574348106538L) */);
             throw null;
         }
         int iLimit = byteBuffer.limit();
@@ -77,7 +77,7 @@ public final class ri implements ajh, ako, crt {
         if (byteBuffer2 != null) {
             return iLimit - byteBuffer2.position() <= 1;
         }
-        bzo.ar("buffer" /* cnb.z(-23076859280170L) */);
+        throwLateinitPropNotInitYet("buffer" /* cnb.z(-23076859280170L) */);
         throw null;
     }
 

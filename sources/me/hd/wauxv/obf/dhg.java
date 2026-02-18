@@ -26,7 +26,7 @@ import me.hd.wauxv.R;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class dhg implements bgf {
+public final /* synthetic */ class dhg implements IHasInvokeMethod {
     public final /* synthetic */ int a;
 
     public /* synthetic */ dhg(int i) {
@@ -59,37 +59,40 @@ public final /* synthetic */ class dhg implements bgf {
         ens ensVar = ens.a;
         switch (i) {
             case 0:
-                Object objE = ((bmm) obj).e();
+                Object objE = ((HookParamWrapper) obj).getThisObject();
                 Activity activity = (Activity) (!(objE instanceof Activity) ? null : objE);
                 if (activity == null) {
                     Class<Activity> clsBf = cnf.bf(dal.b(cls2));
-                    throw new IllegalStateException("HookParam instance cannot cast to ".concat((clsBf != null ? clsBf : Activity.class).getName()).toString());
+                    throw new IllegalStateException("HookParam instance cannot cast to "
+                            .concat((clsBf != null ? clsBf : Activity.class).getName()).toString());
                 }
                 int i8 = bte.a;
                 cde cdeVarT = dqc.bi(activity).t();
                 cdeVarT.ab = "getPreferenceScreen" /* cnb.z(-594711236573994L) */;
                 Object objJ = ((cdk) dkz.m(cdeVarT)).j(new Object[0]);
-                bzo.n(objJ);
+                throwIfVar1IsNull(objJ);
                 BaseAdapter baseAdapter = (BaseAdapter) objJ;
                 String stringExtra = activity.getIntent().getStringExtra("Chat_User" /* cnb.z(-594659696966442L) */);
                 if (stringExtra == null) {
                     stringExtra = "异常" /* cnb.z(-594565207685930L) */;
                 }
-                cnb.m(baseAdapter, cnb.y(activity, "WAuxiliary_chatroom_info_pref" /* cnb.z(-594586682522410L) */, "ID: " /* cnb.z(-593890897820458L) */.concat(stringExtra)), 1);
+                cnb.m(baseAdapter, cnb.y(activity, "WAuxiliary_chatroom_info_pref" /* cnb.z(-594586682522410L) */,
+                        "ID: " /* cnb.z(-593890897820458L) */.concat(stringExtra)), 1);
                 return ensVar;
             case 1:
-                bmm bmmVar = (bmm) obj;
-                Object objE2 = bmmVar.e();
+                HookParamWrapper hookParam = (HookParamWrapper) obj;
+                Object objE2 = hookParam.getThisObject();
                 if (!(objE2 instanceof Activity)) {
                     objE2 = null;
                 }
                 Activity activity2 = (Activity) objE2;
                 if (activity2 == null) {
                     Class<Activity> clsBf2 = cnf.bf(dal.b(cls2));
-                    throw new IllegalStateException("HookParam instance cannot cast to ".concat((clsBf2 != null ? clsBf2 : Activity.class).getName()).toString());
+                    throw new IllegalStateException("HookParam instance cannot cast to "
+                            .concat((clsBf2 != null ? clsBf2 : Activity.class).getName()).toString());
                 }
                 try {
-                    objX = bmmVar.d()[1];
+                    objX = hookParam.getArgs()[1];
                     if (objX == null) {
                         objX = null;
                     }
@@ -99,7 +102,7 @@ public final /* synthetic */ class dhg implements bgf {
                 if (objX instanceof dcx) {
                     objX = null;
                 }
-                bzo.n(objX);
+                throwIfVar1IsNull(objX);
                 int i9 = bte.a;
                 azg azgVarR = dqc.bi(objX).r();
                 azgVarR.a = dal.b(cls);
@@ -108,23 +111,26 @@ public final /* synthetic */ class dhg implements bgf {
                 while (it.hasNext()) {
                     String str = (String) ((azk) it.next()).e();
                     if (str != null && str.equals("WAuxiliary_chatroom_info_pref" /* cnb.z(-593903782722346L) */)) {
-                        String stringExtra2 = activity2.getIntent().getStringExtra("Chat_User" /* cnb.z(-593757753834282L) */);
+                        String stringExtra2 = activity2.getIntent().getStringExtra("Chat_User" /*
+                                                                                                * cnb.z(-
+                                                                                                * 593757753834282L)
+                                                                                                */);
                         if (stringExtra2 == null) {
                             stringExtra2 = "异常" /* cnb.z(-594281739844394L) */;
                         }
-                        dnc.b(activity2, stringExtra2);
+                        dnc.tryGetClassByName(activity2, stringExtra2);
                         dnc.g(activity2, 2, "复制成功" /* cnb.z(-594234495204138L) */);
-                        bmmVar.g();
+                        hookParam.setResultTrue();
                     }
                 }
                 return ensVar;
             case 2:
-                Object objF = ((bmm) obj).f();
-                if (!(objF instanceof List) || ((objF instanceof bsw) && !(objF instanceof bsy))) {
+                Object objF = ((HookParamWrapper) obj).getResult();
+                if (!(objF instanceof List) || ((objF instanceof IEmpty) && !(objF instanceof IEmpty3))) {
                     objF = null;
                 }
                 List list = (List) objF;
-                bzo.n(list);
+                throwIfVar1IsNull(list);
                 dov dovVar = new dov(new cfh(23));
                 List list2 = dhm.j;
                 ArrayList arrayList = new ArrayList(abb.ak(list2, 10));
@@ -135,7 +141,7 @@ public final /* synthetic */ class dhg implements bgf {
                         throw null;
                     }
                     Constructor constructor = ((adu) dovVar.getValue()).a;
-                    Object[] objArr = {Integer.valueOf(list.size() + i7), ((dhk) obj2).b};
+                    Object[] objArr = { Integer.valueOf(list.size() + i7), ((dhk) obj2).b };
                     Constructor constructor2 = constructor != null ? constructor : null;
                     if (constructor2 != null && !constructor2.isAccessible()) {
                         constructor2.setAccessible(true);
@@ -151,15 +157,16 @@ public final /* synthetic */ class dhg implements bgf {
             case 4:
                 bah bahVar = (bah) obj;
                 cdj cdjVar = new cdj();
-                cdjVar.t("MicroMsg.EmojiResHelper" /* cnb.z(-458960205249322L) */, "parseSmileyPanelConfig parseXML exception:%s" /* cnb.z(-458857126034218L) */);
+                cdjVar.t("MicroMsg.EmojiResHelper" /* cnb.z(-458960205249322L) */,
+                        "parseSmileyPanelConfig parseXML exception:%s" /* cnb.z(-458857126034218L) */);
                 bahVar.getClass();
                 bahVar.d = cdjVar;
                 return ensVar;
             case 5:
-                bmm bmmVar2 = (bmm) obj;
-                bmmVar2.getClass();
+                HookParamWrapper hookParam2 = (HookParamWrapper) obj;
+                hookParam2.getClass();
                 try {
-                    objX2 = bmmVar2.d()[1];
+                    objX2 = hookParam2.getArgs()[1];
                     if (objX2 == null) {
                         objX2 = null;
                     }
@@ -169,10 +176,10 @@ public final /* synthetic */ class dhg implements bgf {
                 if (objX2 instanceof dcx) {
                     objX2 = null;
                 }
-                bzo.n(objX2);
+                throwIfVar1IsNull(objX2);
                 String str2 = (String) objX2;
                 try {
-                    objX3 = bmmVar2.d()[3];
+                    objX3 = hookParam2.getArgs()[3];
                     if (objX3 == null) {
                         objX3 = null;
                     }
@@ -182,10 +189,10 @@ public final /* synthetic */ class dhg implements bgf {
                 if (objX3 instanceof dcx) {
                     objX3 = null;
                 }
-                bzo.n(objX3);
+                throwIfVar1IsNull(objX3);
                 int iIntValue = ((Number) objX3).intValue();
                 try {
-                    objX4 = bmmVar2.d()[4];
+                    objX4 = hookParam2.getArgs()[4];
                     if (objX4 == null) {
                         objX4 = null;
                     }
@@ -195,10 +202,10 @@ public final /* synthetic */ class dhg implements bgf {
                 if (objX4 instanceof dcx) {
                     objX4 = null;
                 }
-                bzo.n(objX4);
+                throwIfVar1IsNull(objX4);
                 int iIntValue2 = ((Number) objX4).intValue();
                 try {
-                    objX5 = bmmVar2.d()[6];
+                    objX5 = hookParam2.getArgs()[6];
                     if (objX5 == null) {
                         objX5 = null;
                     }
@@ -208,17 +215,17 @@ public final /* synthetic */ class dhg implements bgf {
                 if (objX5 instanceof dcx) {
                     objX5 = null;
                 }
-                bzo.n(objX5);
+                throwIfVar1IsNull(objX5);
                 int i11 = bte.a;
                 azg azgVarR2 = dqc.bi(objX5).r();
                 azgVarR2.ab = "d" /* cnb.z(-465591634754346L) */;
                 azk azkVar = (azk) aaz.e(azgVarR2.c());
                 if (iIntValue == 4 && iIntValue2 == -2005) {
                     Object objE3 = azkVar.e();
-                    bzo.n(objE3);
+                    throwIfVar1IsNull(objE3);
                     if (dnr.bp((String) objE3, "https://weixin110.qq.com/" /* cnb.z(-465600224688938L) */, false)) {
-                        new ek(bmmVar2, 3, 8).q(0);
-                        new ek(bmmVar2, 4, 8).q(0);
+                        new ek(hookParam2, 3, 8).q(0);
+                        new ek(hookParam2, 4, 8).q(0);
                         azkVar.f(str2);
                     }
                 }
@@ -228,11 +235,15 @@ public final /* synthetic */ class dhg implements bgf {
                 return ensVar;
             case 7:
                 bah bahVar2 = (bah) obj;
-                String[] strArr = {"com.tencent.mm.plugin.webview.permission" /* cnb.z(-465505735408426L) */};
+                String[] strArr = { "com.tencent.mm.plugin.webview.permission" /* cnb.z(-465505735408426L) */ };
                 bahVar2.getClass();
                 bahVar2.a = la.ab(strArr);
                 cdj cdjVar2 = new cdj();
-                cdjVar2.t("MicroMsg.LuggageGetA8Key" /* cnb.z(-462580862679850L) */, "WebView-Trace onSceneEnd resp or cb not found(%b/%b), reqUrl: %s, reason: %d" /* cnb.z(-462421948889898L) */);
+                cdjVar2.t("MicroMsg.LuggageGetA8Key" /* cnb.z(-462580862679850L) */,
+                        "WebView-Trace onSceneEnd resp or cb not found(%b/%b), reqUrl: %s, reason: %d" /*
+                                                                                                        * cnb.z(-
+                                                                                                        * 462421948889898L)
+                                                                                                        */);
                 bahVar2.d = cdjVar2;
                 return ensVar;
             case 8:
@@ -242,7 +253,8 @@ public final /* synthetic */ class dhg implements bgf {
                 bah bahVar3 = (bah) obj;
                 cdj cdjVar3 = new cdj();
                 cdj.l(cdjVar3, "com.tencent.mm.ui.HomeUI" /* cnb.z(-636376714312490L) */);
-                cdjVar3.t("MicroMsg.LauncherUI.HomeUI" /* cnb.z(-635719584316202L) */, "[initActionBar] isChattingForeground True!" /* cnb.z(-635569260460842L) */);
+                cdjVar3.t("MicroMsg.LauncherUI.HomeUI" /* cnb.z(-635719584316202L) */,
+                        "[initActionBar] isChattingForeground True!" /* cnb.z(-635569260460842L) */);
                 bahVar3.getClass();
                 bahVar3.d = cdjVar3;
                 return ensVar;
@@ -265,8 +277,8 @@ public final /* synthetic */ class dhg implements bgf {
                 bzyVar.i().show();
                 return ensVar;
             case 11:
-                final bmm bmmVar3 = (bmm) obj;
-                Object objE4 = bmmVar3.e();
+                final HookParamWrapper hookParam3 = (HookParamWrapper) obj;
+                Object objE4 = hookParam3.getThisObject();
                 ViewGroup viewGroup = (ViewGroup) (!(objE4 instanceof ViewGroup) ? null : objE4);
                 if (viewGroup != null) {
                     viewGroup.setOnLongClickListener(new View.OnLongClickListener() { // from class: me.hd.wauxv.obf.dio
@@ -274,10 +286,10 @@ public final /* synthetic */ class dhg implements bgf {
                         public final boolean onLongClick(View view2) throws IllegalAccessException {
                             Object objX9;
                             diq diqVar = diq.a;
-                            bmm bmmVar4 = bmmVar3;
-                            bmmVar4.getClass();
+                            HookParamWrapper hookParam4 = hookParam3;
+                            hookParam4.getClass();
                             try {
-                                objX9 = bmmVar4.d()[0];
+                                objX9 = hookParam4.getArgs()[0];
                                 if (objX9 == null) {
                                     objX9 = null;
                                 }
@@ -287,17 +299,17 @@ public final /* synthetic */ class dhg implements bgf {
                             if (objX9 instanceof dcx) {
                                 objX9 = null;
                             }
-                            bzo.n(objX9);
+                            throwIfVar1IsNull(objX9);
                             int i12 = bte.a;
                             azg azgVarR3 = dqc.bi(objX9).r();
                             azgVarR3.ab = "field_userName" /* cnb.z(-542115067067178L) */;
                             Object objE5 = ((azk) yg.e(azgVarR3)).e();
-                            bzo.n(objE5);
+                            throwIfVar1IsNull(objE5);
                             String str4 = (String) objE5;
                             azg azgVarR4 = dqc.bi(objX9).r();
                             azgVarR4.ab = "field_type" /* cnb.z(-542600398371626L) */;
                             Object objE6 = ((azk) yg.e(azgVarR4)).e();
-                            bzo.n(objE6);
+                            throwIfVar1IsNull(objE6);
                             int iIntValue3 = ((Number) objE6).intValue();
                             azg azgVarR5 = dqc.bi(objX9).r();
                             azgVarR5.ab = "field_thumbUrl" /* cnb.z(-542570333600554L) */;
@@ -338,17 +350,21 @@ public final /* synthetic */ class dhg implements bgf {
                 }
                 cls3 = ViewGroup.class;
                 Class<ViewGroup> clsBf3 = cnf.bf(dal.b(cls3));
-                throw new IllegalStateException("HookParam instance cannot cast to ".concat((clsBf3 != null ? clsBf3 : ViewGroup.class).getName()).toString());
+                throw new IllegalStateException("HookParam instance cannot cast to "
+                        .concat((clsBf3 != null ? clsBf3 : ViewGroup.class).getName()).toString());
             case 12:
                 ((amm) obj).b = new dhg(13);
                 return ensVar;
             case 13:
                 bag bagVar = (bag) obj;
-                String[] strArr2 = {"com.tencent.mm.plugin.sns.model" /* cnb.z(-365694990416682L) */};
+                String[] strArr2 = { "com.tencent.mm.plugin.sns.model" /* cnb.z(-365694990416682L) */ };
                 bagVar.getClass();
                 bagVar.a = la.ab(strArr2);
                 zb zbVar = new zb();
-                zbVar.k("MicroMsg.SnsCore" /* cnb.z(-366107307277098L) */, "do SnsCore preload" /* cnb.z(-366051472702250L) */);
+                zbVar.k("MicroMsg.SnsCore" /* cnb.z(-366107307277098L) */, "do SnsCore preload" /*
+                                                                                                 * cnb.z(-
+                                                                                                 * 366051472702250L)
+                                                                                                 */);
                 bagVar.b = zbVar;
                 return ensVar;
             case 14:
@@ -356,7 +372,7 @@ public final /* synthetic */ class dhg implements bgf {
                 return ensVar;
             case 15:
                 bah bahVar4 = (bah) obj;
-                String[] strArr3 = {"com.tencent.mm.plugin.sns.model" /* cnb.z(-352943232514858L) */};
+                String[] strArr3 = { "com.tencent.mm.plugin.sns.model" /* cnb.z(-352943232514858L) */ };
                 bahVar4.getClass();
                 bahVar4.a = la.ab(strArr3);
                 cdj cdjVar4 = new cdj();
@@ -364,36 +380,45 @@ public final /* synthetic */ class dhg implements bgf {
                     cdjVar4.f = new fj(i5);
                 }
                 fj fjVar = cdjVar4.f;
-                bzo.n(fjVar);
+                throwIfVar1IsNull(fjVar);
                 fjVar.d = new bqh(4);
-                cdjVar4.t("addDownLoadSns" /* cnb.z(-352805793561386L) */, "com.tencent.mm.plugin.sns.model.DownloadManager" /* cnb.z(-352724189182762L) */);
+                cdjVar4.t("addDownLoadSns" /* cnb.z(-352805793561386L) */,
+                        "com.tencent.mm.plugin.sns.model.DownloadManager" /* cnb.z(-352724189182762L) */);
                 bahVar4.d = cdjVar4;
                 return ensVar;
             case 16:
                 View view2 = (View) obj;
                 View viewK = dkz.k(view2, R.layout.module_dialog_sns_info, null, false);
                 int i12 = R.id.moduleDialogCbSnsInfoHideGroupIcon;
-                MaterialCheckBox materialCheckBox = (MaterialCheckBox) cnd.aq(viewK, R.id.moduleDialogCbSnsInfoHideGroupIcon);
+                MaterialCheckBox materialCheckBox = (MaterialCheckBox) cnd.aq(viewK,
+                        R.id.moduleDialogCbSnsInfoHideGroupIcon);
                 if (materialCheckBox != null) {
                     i12 = R.id.moduleDialogEdtSnsInfoTextFormat;
-                    TextInputEditText textInputEditText = (TextInputEditText) cnd.aq(viewK, R.id.moduleDialogEdtSnsInfoTextFormat);
+                    TextInputEditText textInputEditText = (TextInputEditText) cnd.aq(viewK,
+                            R.id.moduleDialogEdtSnsInfoTextFormat);
                     if (textInputEditText != null) {
                         i12 = R.id.moduleDialogEdtSnsInfoTextPlaceholders;
-                        MaterialTextView materialTextView = (MaterialTextView) cnd.aq(viewK, R.id.moduleDialogEdtSnsInfoTextPlaceholders);
+                        MaterialTextView materialTextView = (MaterialTextView) cnd.aq(viewK,
+                                R.id.moduleDialogEdtSnsInfoTextPlaceholders);
                         if (materialTextView != null) {
                             i12 = R.id.moduleDialogEdtSnsInfoTimeFormat;
-                            TextInputEditText textInputEditText2 = (TextInputEditText) cnd.aq(viewK, R.id.moduleDialogEdtSnsInfoTimeFormat);
+                            TextInputEditText textInputEditText2 = (TextInputEditText) cnd.aq(viewK,
+                                    R.id.moduleDialogEdtSnsInfoTimeFormat);
                             if (textInputEditText2 != null) {
                                 i12 = R.id.moduleDialogInputSnsInfoTextFormat;
-                                if (((TextInputLayout) cnd.aq(viewK, R.id.moduleDialogInputSnsInfoTextFormat)) != null) {
+                                if (((TextInputLayout) cnd.aq(viewK,
+                                        R.id.moduleDialogInputSnsInfoTextFormat)) != null) {
                                     i12 = R.id.moduleDialogInputSnsInfoTimeFormat;
-                                    if (((TextInputLayout) cnd.aq(viewK, R.id.moduleDialogInputSnsInfoTimeFormat)) != null) {
-                                        bqr bqrVar = new bqr((LinearLayout) viewK, materialCheckBox, textInputEditText, materialTextView, textInputEditText2);
+                                    if (((TextInputLayout) cnd.aq(viewK,
+                                            R.id.moduleDialogInputSnsInfoTimeFormat)) != null) {
+                                        bqr bqrVar = new bqr((LinearLayout) viewK, materialCheckBox, textInputEditText,
+                                                materialTextView, textInputEditText2);
                                         textInputEditText.setText(djf.a.o());
                                         textInputEditText2.setText(djg.a.o());
                                         materialCheckBox.setChecked(dje.a.i());
                                         materialTextView.setMovementMethod(LinkMovementMethod.getInstance());
-                                        SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder("点击占位符自动添加以下字段:\n" /* cnb.z(-533014031366954L) */);
+                                        SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(
+                                                "点击占位符自动添加以下字段:\n" /* cnb.z(-533014031366954L) */);
                                         String[] strArr4 = djh.b;
                                         int length = strArr4.length;
                                         int i13 = 0;
@@ -402,7 +427,8 @@ public final /* synthetic */ class dhg implements bgf {
                                             Object obj3 = obj;
                                             int length2 = spannableStringBuilder.length();
                                             spannableStringBuilder.append((CharSequence) (str4 + ' '));
-                                            spannableStringBuilder.setSpan(new wf(bqrVar, str4, 4), length2, spannableStringBuilder.length() + (-1), 33);
+                                            spannableStringBuilder.setSpan(new wf(bqrVar, str4, 4), length2,
+                                                    spannableStringBuilder.length() + (-1), 33);
                                             i13++;
                                             obj = obj3;
                                             i6 = i6;
@@ -416,7 +442,10 @@ public final /* synthetic */ class dhg implements bgf {
                                         egVar2.d = djh.i;
                                         bzyVar2.t("保存" /* cnb.z(-532395556076330L) */, new amw(new cfx(bqrVar, 15), 0));
                                         bzyVar2.s("重置" /* cnb.z(-532399851043626L) */, new amw(new cfh(25), 2));
-                                        bjs.x((3 & 2) != 0 ? new amd(i14) : obj4, bzyVar2, "取消" /* cnb.z(-47455093652266L) */);
+                                        bjs.x((3 & 2) != 0 ? new amd(i14) : obj4, bzyVar2, "取消" /*
+                                                                                                 * cnb.z(-
+                                                                                                 * 47455093652266L)
+                                                                                                 */);
                                         LinearLayout linearLayout2 = bqrVar.b;
                                         if (linearLayout2 != null) {
                                             egVar2.r = linearLayout2;
@@ -429,31 +458,37 @@ public final /* synthetic */ class dhg implements bgf {
                         }
                     }
                 }
-                throw new NullPointerException("Missing required view with ID: " /* cnb.z(-660703409077034L) */.concat(viewK.getResources().getResourceName(i12)));
+                throw new NullPointerException("Missing required view with ID: "
+                        /* cnb.z(-660703409077034L) */.concat(viewK.getResources().getResourceName(i12)));
             case 17:
                 bah bahVar5 = (bah) obj;
                 cdj cdjVar5 = new cdj();
-                cdjVar5.t("realTimeUpdate" /* cnb.z(-534272456784682L) */, "com.tencent.mm.plugin.sns.ui.improve.item.ImproveTimelineItemMeasure" /* cnb.z(-534208032275242L) */);
+                cdjVar5.t("realTimeUpdate" /* cnb.z(-534272456784682L) */,
+                        "com.tencent.mm.plugin.sns.ui.improve.item.ImproveTimelineItemMeasure" /*
+                                                                                                * cnb.z(-
+                                                                                                * 534208032275242L)
+                                                                                                */);
                 bahVar5.getClass();
                 bahVar5.d = cdjVar5;
                 return ensVar;
             case 18:
                 int i15 = bte.a;
-                bmu bmuVarBi = dqc.bi(((bmm) obj).e());
+                bmu bmuVarBi = dqc.bi(((HookParamWrapper) obj).getThisObject());
                 azg azgVarR3 = bmuVarBi.r();
                 djb djbVar = djb.a;
                 azgVarR3.a = emn.bb(djbVar).getDeclaringClass();
                 Object objD = ((azk) yg.e(azgVarR3)).d();
-                bzo.n(objD);
+                throwIfVar1IsNull(objD);
                 Object objInvoke = emn.bb(djbVar).invoke(objD, null);
-                bzo.n(objInvoke);
+                throwIfVar1IsNull(objInvoke);
                 cde cdeVarT2 = bmuVarBi.t();
                 cdeVarT2.ab = "getPublishTimeText" /* cnb.z(-532193692613418L) */;
                 Object objJ2 = ((cdk) dkz.m(cdeVarT2)).j(new Object[0]);
-                bzo.n(objJ2);
+                throwIfVar1IsNull(objJ2);
                 TextView textView = (TextView) objJ2;
                 djh.a.getClass();
-                textView.setText(dnr.bo(djh.n(objInvoke), "${originalText}" /* cnb.z(-532627484310314L) */, textView.getText().toString()));
+                textView.setText(dnr.bo(djh.n(objInvoke), "${originalText}" /* cnb.z(-532627484310314L) */,
+                        textView.getText().toString()));
                 cde cdeVarT3 = bmuVarBi.t();
                 cdeVarT3.ab = "getGroupImageStub" /* cnb.z(-532558764833578L) */;
                 View view3 = (View) ((cdk) dkz.m(cdeVarT3)).j(new Object[0]);
@@ -462,11 +497,11 @@ public final /* synthetic */ class dhg implements bgf {
                 }
                 return ensVar;
             case 19:
-                bmm bmmVar4 = (bmm) obj;
+                HookParamWrapper hookParam4 = (HookParamWrapper) obj;
                 int i16 = bte.a;
-                bmu bmuVarBi2 = dqc.bi(bmmVar4.e());
+                bmu bmuVarBi2 = dqc.bi(hookParam4.getThisObject());
                 try {
-                    objX6 = bmmVar4.d()[0];
+                    objX6 = hookParam4.getArgs()[0];
                     if (objX6 == null) {
                         objX6 = null;
                     }
@@ -474,18 +509,19 @@ public final /* synthetic */ class dhg implements bgf {
                     objX6 = bhu.x(th6);
                 }
                 obj = objX6 instanceof dcx ? null : objX6;
-                bzo.n(obj);
+                throwIfVar1IsNull(obj);
                 azg azgVarR4 = dqc.bi(obj).r();
                 azgVarR4.a = "com.tencent.mm.plugin.sns.storage.SnsInfo" /* cnb.z(-532498635291434L) */;
                 Object objD2 = ((azk) yg.e(azgVarR4)).d();
-                bzo.n(objD2);
+                throwIfVar1IsNull(objD2);
                 cde cdeVarT4 = bmuVarBi2.t();
                 cdeVarT4.ab = "getPublishTimeText" /* cnb.z(-533984693975850L) */;
                 Object objJ3 = ((cdk) dkz.m(cdeVarT4)).j(new Object[0]);
-                bzo.n(objJ3);
+                throwIfVar1IsNull(objJ3);
                 TextView textView2 = (TextView) objJ3;
                 djh.a.getClass();
-                textView2.setText(dnr.bo(djh.n(objD2), "${originalText}" /* cnb.z(-533851549989674L) */, textView2.getText().toString()));
+                textView2.setText(dnr.bo(djh.n(objD2), "${originalText}" /* cnb.z(-533851549989674L) */,
+                        textView2.getText().toString()));
                 cde cdeVarT5 = bmuVarBi2.t();
                 cdeVarT5.ab = "getGroupImageStub" /* cnb.z(-534332586326826L) */;
                 View view4 = (View) ((cdk) dkz.m(cdeVarT5)).j(new Object[0]);
@@ -505,14 +541,16 @@ public final /* synthetic */ class dhg implements bgf {
             case 23:
                 bah bahVar6 = (bah) obj;
                 cdj cdjVar6 = new cdj();
-                cdjVar6.t("updateStruct" /* cnb.z(-533636801624874L) */, "com.tencent.mm.plugin.sns.ui.item.improve.TimelineItemMeasure" /* cnb.z(-533563787180842L) */);
+                cdjVar6.t("updateStruct" /* cnb.z(-533636801624874L) */,
+                        "com.tencent.mm.plugin.sns.ui.item.improve.TimelineItemMeasure" /* cnb.z(-533563787180842L) */);
                 bahVar6.getClass();
                 bahVar6.d = cdjVar6;
                 return ensVar;
             case 24:
                 bah bahVar7 = (bah) obj;
                 cdj cdjVar7 = new cdj();
-                cdjVar7.t("getInfo" /* cnb.z(-533396283456298L) */, "com.tencent.mm.plugin.sns.ui.improve.repository.ImproveListItem" /* cnb.z(-533361923717930L) */);
+                cdjVar7.t("getInfo" /* cnb.z(-533396283456298L) */,
+                        "com.tencent.mm.plugin.sns.ui.improve.repository.ImproveListItem" /* cnb.z(-533361923717930L) */);
                 bahVar7.getClass();
                 bahVar7.d = cdjVar7;
                 return ensVar;
@@ -524,15 +562,16 @@ public final /* synthetic */ class dhg implements bgf {
                 cdj cdjVar8 = new cdj();
                 Class<String> clsBf4 = cnf.bf(dal.b(cls));
                 cdjVar8.q(clsBf4 != null ? clsBf4 : String.class);
-                cdjVar8.t("getByLocalId" /* cnb.z(-376969279568682L) */, "com.tencent.mm.plugin.sns.storage.SnsInfoStorage" /* cnb.z(-376947804732202L) */);
+                cdjVar8.t("getByLocalId" /* cnb.z(-376969279568682L) */,
+                        "com.tencent.mm.plugin.sns.storage.SnsInfoStorage" /* cnb.z(-376947804732202L) */);
                 bahVar8.getClass();
                 bahVar8.d = cdjVar8;
                 return ensVar;
             case 27:
-                bmm bmmVar5 = (bmm) obj;
-                bmmVar5.getClass();
+                HookParamWrapper hookParam5 = (HookParamWrapper) obj;
+                hookParam5.getClass();
                 try {
-                    objX7 = bmmVar5.d()[0];
+                    objX7 = hookParam5.getArgs()[0];
                     if (objX7 == null) {
                         objX7 = null;
                     }
@@ -540,7 +579,7 @@ public final /* synthetic */ class dhg implements bgf {
                     objX7 = bhu.x(th7);
                 }
                 obj = objX7 instanceof dcx ? null : objX7;
-                bzo.n(obj);
+                throwIfVar1IsNull(obj);
                 ContextMenu contextMenu = (ContextMenu) obj;
                 for (boa boaVar : djo.b) {
                     try {
@@ -551,15 +590,20 @@ public final /* synthetic */ class dhg implements bgf {
                         ArrayList arrayList2 = ewq.a;
                         StringBuilder sb = new StringBuilder();
                         sb.append("onCreateMenuItems " /* cnb.z(-55310588836650L) */);
-                        ewq.e(yg.n(sb, boaVar instanceof doo ? ((doo) boaVar).f() : "LoadHook" /* cnb.z(-56895431768874L) */, -56805237455658L), e, 12);
+                        ewq.e(yg.n(sb,
+                                boaVar instanceof BaseHook ? ((BaseHook) boaVar).getResult() : "LoadHook" /*
+                                                                                                           * cnb.z(-
+                                                                                                           * 56895431768874L)
+                                                                                                           */,
+                                -56805237455658L), e, 12);
                     }
                 }
                 return ensVar;
             case 28:
-                bmm bmmVar6 = (bmm) obj;
-                bmmVar6.getClass();
+                HookParamWrapper hookParam6 = (HookParamWrapper) obj;
+                hookParam6.getClass();
                 try {
-                    objX8 = bmmVar6.d()[0];
+                    objX8 = hookParam6.getArgs()[0];
                     if (objX8 == null) {
                         objX8 = null;
                     }
@@ -567,27 +611,27 @@ public final /* synthetic */ class dhg implements bgf {
                     objX8 = bhu.x(th8);
                 }
                 obj = objX8 instanceof dcx ? null : objX8;
-                bzo.n(obj);
+                throwIfVar1IsNull(obj);
                 MenuItem menuItem = (MenuItem) obj;
                 for (boa boaVar2 : djo.b) {
                     try {
                         int i17 = bte.a;
-                        azg azgVarR5 = dqc.bi(bmmVar6.e()).r();
+                        azg azgVarR5 = dqc.bi(hookParam6.getThisObject()).r();
                         azgVarR5.a = dal.b(cls2);
                         Object objE5 = ((azk) aaz.e(azgVarR5.c())).e();
-                        bzo.n(objE5);
+                        throwIfVar1IsNull(objE5);
                         Activity activity3 = (Activity) objE5;
-                        azg azgVarR6 = dqc.bi(bmmVar6.e()).r();
-                        abf.ao(azgVarR6.ae, (cdy[]) Arrays.copyOf(new cdy[]{cdy.d}, 1));
+                        azg azgVarR6 = dqc.bi(hookParam6.getThisObject()).r();
+                        abf.ao(azgVarR6.ae, (cdy[]) Arrays.copyOf(new cdy[] { cdy.d }, 1));
                         azgVarR6.a = dal.b(cls);
                         Object objE6 = ((azk) aaz.e(azgVarR6.c())).e();
-                        bzo.n(objE6);
+                        throwIfVar1IsNull(objE6);
                         djj.a.getClass();
                         Object objB = djj.b((String) objE6);
-                        azg azgVarR7 = dqc.bi(bmmVar6.e()).r();
+                        azg azgVarR7 = dqc.bi(hookParam6.getThisObject()).r();
                         azgVarR7.a = "com.tencent.mm.protocal.protobuf.TimeLineObject" /* cnb.z(-56770877717290L) */;
                         Object objD3 = ((azk) aaz.e(azgVarR7.c())).d();
-                        bzo.n(objD3);
+                        throwIfVar1IsNull(objD3);
                         for (djl djlVar2 : boaVar2.a()) {
                             if (menuItem.getItemId() == djlVar2.a) {
                                 djlVar2.c.b(activity3, objB, objD3);
@@ -597,7 +641,12 @@ public final /* synthetic */ class dhg implements bgf {
                         ArrayList arrayList3 = ewq.a;
                         StringBuilder sb2 = new StringBuilder();
                         sb2.append("onCreateMenuItems " /* cnb.z(-57114475100970L) */);
-                        ewq.e(yg.n(sb2, boaVar2 instanceof doo ? ((doo) boaVar2).f() : "LoadHook" /* cnb.z(-57050050591530L) */, -57028575755050L), e2, 12);
+                        ewq.e(yg.n(sb2,
+                                boaVar2 instanceof BaseHook ? ((BaseHook) boaVar2).getResult() : "LoadHook" /*
+                                                                                                             * cnb.z(-
+                                                                                                             * 57050050591530L)
+                                                                                                             */,
+                                -57028575755050L), e2, 12);
                     }
                 }
                 return ensVar;

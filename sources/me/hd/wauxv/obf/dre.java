@@ -20,13 +20,14 @@ public final class dre {
     public final Paint m;
     public final Paint.FontMetricsInt n;
 
-    public dre(int i, Paint.FontMetricsInt fontMetricsInt, int i2, int i3, int i4, int i5, int i6, int i7, float f, bph bphVar, arq arqVar, Paint paint, Paint paint2, Paint.FontMetricsInt fontMetricsInt2) {
-        bzo.q(fontMetricsInt, "textMetrics");
-        bzo.q(bphVar, "inlayHintRendererProvider");
-        bzo.q(arqVar, "colorScheme");
-        bzo.q(paint, "miscPaint");
-        bzo.q(paint2, "graphPaint");
-        bzo.q(fontMetricsInt2, "graphMetrics");
+    public dre(int i, Paint.FontMetricsInt fontMetricsInt, int i2, int i3, int i4, int i5, int i6, int i7, float f,
+            bph bphVar, arq arqVar, Paint paint, Paint paint2, Paint.FontMetricsInt fontMetricsInt2) {
+        throwIfVar1IsNull(fontMetricsInt, "textMetrics");
+        throwIfVar1IsNull(bphVar, "inlayHintRendererProvider");
+        throwIfVar1IsNull(arqVar, "colorScheme");
+        throwIfVar1IsNull(paint, "miscPaint");
+        throwIfVar1IsNull(paint2, "graphPaint");
+        throwIfVar1IsNull(fontMetricsInt2, "graphMetrics");
         this.a = i;
         this.b = fontMetricsInt;
         this.c = i2;
@@ -51,14 +52,29 @@ public final class dre {
             return false;
         }
         dre dreVar = (dre) obj;
-        return this.a == dreVar.a && bzo.f(this.b, dreVar.b) && this.c == dreVar.c && this.d == dreVar.d && this.e == dreVar.e && this.f == dreVar.f && this.g == dreVar.g && this.h == dreVar.h && Float.compare(this.i, dreVar.i) == 0 && bzo.f(this.j, dreVar.j) && bzo.f(this.k, dreVar.k) && bzo.f(this.l, dreVar.l) && bzo.f(this.m, dreVar.m) && bzo.f(this.n, dreVar.n);
+        return this.a == dreVar.a && nullSafeIsEqual(this.b, dreVar.b) && this.c == dreVar.c && this.d == dreVar.d
+                && this.e == dreVar.e && this.f == dreVar.f && this.g == dreVar.g && this.h == dreVar.h
+                && Float.compare(this.i, dreVar.i) == 0 && nullSafeIsEqual(this.j, dreVar.j)
+                && nullSafeIsEqual(this.k, dreVar.k)
+                && nullSafeIsEqual(this.l, dreVar.l) && nullSafeIsEqual(this.m, dreVar.m)
+                && nullSafeIsEqual(this.n, dreVar.n);
     }
 
     public final int hashCode() {
-        return this.n.hashCode() + ((this.m.hashCode() + ((this.l.hashCode() + ((this.k.hashCode() + ((this.j.hashCode() + ((Float.hashCode(this.i) + dts.a(this.h, dts.a(this.g, dts.a(0, dts.a(this.f, dts.a(this.e, dts.a(this.d, dts.a(this.c, (this.b.hashCode() + (Integer.hashCode(this.a) * 31)) * 31, 31), 31), 31), 31), 31), 31), 31)) * 31)) * 31)) * 31)) * 31)) * 31);
+        return this.n.hashCode() + ((this.m.hashCode() + ((this.l.hashCode()
+                + ((this.k.hashCode() + ((this.j.hashCode() + ((Float.hashCode(this.i) + dts.a(this.h,
+                        dts.a(this.g, dts.a(0, dts.a(this.f, dts.a(this.e, dts.a(this.d,
+                                dts.a(this.c, (this.b.hashCode() + (Integer.hashCode(this.a) * 31)) * 31, 31), 31), 31),
+                                31), 31), 31),
+                        31)) * 31)) * 31)) * 31))
+                * 31)) * 31);
     }
 
     public final String toString() {
-        return "TextRowParams(tabWidth=" + this.a + ", textMetrics=" + this.b + ", textTop=" + this.c + ", textBottom=" + this.d + ", textHeight=" + this.e + ", textBaseline=" + this.f + ", rowTop=0, rowBottom=" + this.g + ", rowHeight=" + this.h + ", roundTextBackgroundFactor=" + this.i + ", inlayHintRendererProvider=" + this.j + ", colorScheme=" + this.k + ", miscPaint=" + this.l + ", graphPaint=" + this.m + ", graphMetrics=" + this.n + ")";
+        return "TextRowParams(tabWidth=" + this.a + ", textMetrics=" + this.b + ", textTop=" + this.c + ", textBottom="
+                + this.d + ", textHeight=" + this.e + ", textBaseline=" + this.f + ", rowTop=0, rowBottom=" + this.g
+                + ", rowHeight=" + this.h + ", roundTextBackgroundFactor=" + this.i + ", inlayHintRendererProvider="
+                + this.j + ", colorScheme=" + this.k + ", miscPaint=" + this.l + ", graphPaint=" + this.m
+                + ", graphMetrics=" + this.n + ")";
     }
 }

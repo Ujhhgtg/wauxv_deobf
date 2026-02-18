@@ -24,7 +24,7 @@ public final class dwp {
             return false;
         }
         dwp dwpVar = (dwp) obj;
-        return bzo.f(this.a, dwpVar.a) && bzo.f(this.b, dwpVar.b);
+        return nullSafeIsEqual(this.a, dwpVar.a) && nullSafeIsEqual(this.b, dwpVar.b);
     }
 
     public final int hashCode() {
@@ -38,6 +38,6 @@ public final class dwp {
         StringBuilder sb = new StringBuilder();
         sb.append("d91Proto(has_satisfaction_quest=" /* cnb.z(-166021960825642L) */);
         dts.g(sb, this.a, -165828687297322L);
-        return bjs.p(sb, this.b, ')');
+        return concat(sb, this.b, ')');
     }
 }

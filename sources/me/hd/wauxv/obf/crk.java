@@ -49,7 +49,7 @@ public final class crk extends Drawable {
 
     @Override // android.graphics.drawable.Drawable
     public final void draw(Canvas canvas) {
-        bzo.q(canvas, "canvas");
+        throwIfVar1IsNull(canvas, "canvas");
         o(canvas, this.f);
         o(canvas, -this.f);
         Drawable drawable = this.a;
@@ -81,14 +81,14 @@ public final class crk extends Drawable {
             valueAnimator.cancel();
         }
         ValueAnimator duration = ValueAnimator.ofFloat(this.m, f).setDuration(600L);
-        bzo.p(duration, "setDuration(...)");
+        throwIfVar1IsNull(duration, "setDuration(...)");
         this.g = duration;
         duration.addUpdateListener(new aqi(this, 3));
         ValueAnimator valueAnimator2 = this.g;
         if (valueAnimator2 != null) {
             valueAnimator2.start();
         } else {
-            bzo.ar("openCloseAnim");
+            throwLateinitPropNotInitYet("openCloseAnim");
             throw null;
         }
     }

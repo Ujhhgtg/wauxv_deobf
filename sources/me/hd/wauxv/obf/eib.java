@@ -19,7 +19,7 @@ public final class eib {
         if (this == obj) {
             return true;
         }
-        return (obj instanceof eib) && bzo.f(this.a, ((eib) obj).a);
+        return (obj instanceof eib) && nullSafeIsEqual(this.a, ((eib) obj).a);
     }
 
     public final int hashCode() {

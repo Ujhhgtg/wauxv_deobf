@@ -103,7 +103,10 @@ public final class jl {
             iMin--;
         }
         int i10 = iMin2 + i7;
-        cnf.bm(editorInfo, i7 != i6 ? TextUtils.concat(text.subSequence(i9, i9 + iMin2), text.subSequence(i2, iMin + i2)) : text.subSequence(i9, i10 + iMin + i9), iMin2, i10);
+        cnf.bm(editorInfo,
+                i7 != i6 ? TextUtils.concat(text.subSequence(i9, i9 + iMin2), text.subSequence(i2, iMin + i2))
+                        : text.subSequence(i9, i10 + iMin + i9),
+                iMin2, i10);
     }
 
     public final void p(Drawable drawable, eke ekeVar) {
@@ -202,8 +205,10 @@ public final class jl {
                 z = true;
             }
             x(context, jxVar);
-            string2 = typedArrayObtainStyledAttributes.hasValue(15) ? typedArrayObtainStyledAttributes.getString(15) : null;
-            string = typedArrayObtainStyledAttributes.hasValue(13) ? typedArrayObtainStyledAttributes.getString(13) : null;
+            string2 = typedArrayObtainStyledAttributes.hasValue(15) ? typedArrayObtainStyledAttributes.getString(15)
+                    : null;
+            string = typedArrayObtainStyledAttributes.hasValue(13) ? typedArrayObtainStyledAttributes.getString(13)
+                    : null;
             jxVar.ae();
         } else {
             z = false;
@@ -225,7 +230,8 @@ public final class jl {
         if (typedArrayObtainStyledAttributes2.hasValue(13)) {
             string = typedArrayObtainStyledAttributes2.getString(13);
         }
-        if (i7 >= 28 && typedArrayObtainStyledAttributes2.hasValue(0) && typedArrayObtainStyledAttributes2.getDimensionPixelSize(0, -1) == 0) {
+        if (i7 >= 28 && typedArrayObtainStyledAttributes2.hasValue(0)
+                && typedArrayObtainStyledAttributes2.getDimensionPixelSize(0, -1) == 0) {
             textView.setTextSize(0, 0.0f);
         }
         x(context, jxVar2);
@@ -245,7 +251,7 @@ public final class jl {
             jj.d(textView, string);
         }
         if (string2 != null) {
-            ji.b(textView, ji.a(string2));
+            ji.tryGetClassByName(textView, ji.a(string2));
         }
         jt jtVar = this.i;
         Context context2 = jtVar.h;
@@ -256,13 +262,21 @@ public final class jl {
         if (typedArrayObtainStyledAttributes3.hasValue(5)) {
             jtVar.a = typedArrayObtainStyledAttributes3.getInt(5, 0);
         }
-        float dimension = typedArrayObtainStyledAttributes3.hasValue(4) ? typedArrayObtainStyledAttributes3.getDimension(4, -1.0f) : -1.0f;
-        float dimension2 = typedArrayObtainStyledAttributes3.hasValue(2) ? typedArrayObtainStyledAttributes3.getDimension(2, -1.0f) : -1.0f;
-        float dimension3 = typedArrayObtainStyledAttributes3.hasValue(1) ? typedArrayObtainStyledAttributes3.getDimension(1, -1.0f) : -1.0f;
-        if (!typedArrayObtainStyledAttributes3.hasValue(3) || (resourceId2 = typedArrayObtainStyledAttributes3.getResourceId(3, 0)) <= 0) {
+        float dimension = typedArrayObtainStyledAttributes3.hasValue(4)
+                ? typedArrayObtainStyledAttributes3.getDimension(4, -1.0f)
+                : -1.0f;
+        float dimension2 = typedArrayObtainStyledAttributes3.hasValue(2)
+                ? typedArrayObtainStyledAttributes3.getDimension(2, -1.0f)
+                : -1.0f;
+        float dimension3 = typedArrayObtainStyledAttributes3.hasValue(1)
+                ? typedArrayObtainStyledAttributes3.getDimension(1, -1.0f)
+                : -1.0f;
+        if (!typedArrayObtainStyledAttributes3.hasValue(3)
+                || (resourceId2 = typedArrayObtainStyledAttributes3.getResourceId(3, 0)) <= 0) {
             i2 = 0;
         } else {
-            TypedArray typedArrayObtainTypedArray = typedArrayObtainStyledAttributes3.getResources().obtainTypedArray(resourceId2);
+            TypedArray typedArrayObtainTypedArray = typedArrayObtainStyledAttributes3.getResources()
+                    .obtainTypedArray(resourceId2);
             int length = typedArrayObtainTypedArray.length();
             i2 = 0;
             int[] iArr4 = new int[length];
@@ -303,13 +317,16 @@ public final class jl {
                     dimension = 1.0f;
                 }
                 if (dimension2 <= 0.0f) {
-                    throw new IllegalArgumentException("Minimum auto-size text size (" + dimension2 + "px) is less or equal to (0px)");
+                    throw new IllegalArgumentException(
+                            "Minimum auto-size text size (" + dimension2 + "px) is less or equal to (0px)");
                 }
                 if (f <= dimension2) {
-                    throw new IllegalArgumentException("Maximum auto-size text size (" + f + "px) is less or equal to minimum auto-size text size (" + dimension2 + "px)");
+                    throw new IllegalArgumentException("Maximum auto-size text size (" + f
+                            + "px) is less or equal to minimum auto-size text size (" + dimension2 + "px)");
                 }
                 if (dimension <= 0.0f) {
-                    throw new IllegalArgumentException("The auto-size step granularity (" + dimension + "px) is less or equal to (0px)");
+                    throw new IllegalArgumentException(
+                            "The auto-size step granularity (" + dimension + "px) is less or equal to (0px)");
                 }
                 jtVar.a = 1;
                 jtVar.c = dimension2;
@@ -389,11 +406,14 @@ public final class jl {
                 if (drawableH4 == null) {
                     drawableH4 = compoundDrawablesRelative2[3];
                 }
-                textView.setCompoundDrawablesRelativeWithIntrinsicBounds(drawable, drawableH2, compoundDrawablesRelative2[2], drawableH4);
+                textView.setCompoundDrawablesRelativeWithIntrinsicBounds(drawable, drawableH2,
+                        compoundDrawablesRelative2[2], drawableH4);
             }
         }
         if (typedArrayObtainStyledAttributes4.hasValue(11)) {
-            if (!typedArrayObtainStyledAttributes4.hasValue(11) || (resourceId = typedArrayObtainStyledAttributes4.getResourceId(11, 0)) == 0 || (colorStateList = bht.v(context, resourceId)) == null) {
+            if (!typedArrayObtainStyledAttributes4.hasValue(11)
+                    || (resourceId = typedArrayObtainStyledAttributes4.getResourceId(11, 0)) == 0
+                    || (colorStateList = bht.v(context, resourceId)) == null) {
                 colorStateList = typedArrayObtainStyledAttributes4.getColorStateList(11);
             }
             textView.setCompoundDrawableTintList(colorStateList);
@@ -433,11 +453,12 @@ public final class jl {
         }
         if (dimensionPixelSize != -1.0f) {
             if (i5 == i4) {
-                cnb.ao(textView, (int) dimensionPixelSize);
+                cnb.trimStackTraceToClass(textView, (int) dimensionPixelSize);
             } else if (Build.VERSION.SDK_INT >= 34) {
                 ba.h(textView, i5, dimensionPixelSize);
             } else {
-                cnb.ao(textView, Math.round(TypedValue.applyDimension(i5, dimensionPixelSize, textView.getResources().getDisplayMetrics())));
+                cnb.trimStackTraceToClass(textView, Math.round(TypedValue.applyDimension(i5, dimensionPixelSize,
+                        textView.getResources().getDisplayMetrics())));
             }
         }
     }
@@ -451,11 +472,13 @@ public final class jl {
         if (zHasValue) {
             textView.setAllCaps(typedArrayObtainStyledAttributes.getBoolean(14, false));
         }
-        if (typedArrayObtainStyledAttributes.hasValue(0) && typedArrayObtainStyledAttributes.getDimensionPixelSize(0, -1) == 0) {
+        if (typedArrayObtainStyledAttributes.hasValue(0)
+                && typedArrayObtainStyledAttributes.getDimensionPixelSize(0, -1) == 0) {
             textView.setTextSize(0, 0.0f);
         }
         x(context, jxVar);
-        if (typedArrayObtainStyledAttributes.hasValue(13) && (string = typedArrayObtainStyledAttributes.getString(13)) != null) {
+        if (typedArrayObtainStyledAttributes.hasValue(13)
+                && (string = typedArrayObtainStyledAttributes.getString(13)) != null) {
             jj.d(textView, string);
         }
         jxVar.ae();

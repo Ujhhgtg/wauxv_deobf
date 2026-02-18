@@ -34,8 +34,8 @@ public final /* synthetic */ class ale implements Runnable {
                 ViewGroup viewGroup = (ViewGroup) this.b;
                 View view = (View) this.c;
                 alg algVar = (alg) this.d;
-                bzo.q(viewGroup, "$container");
-                bzo.q(algVar, "this$0");
+                throwIfVar1IsNull(viewGroup, "$container");
+                throwIfVar1IsNull(algVar, "this$0");
                 viewGroup.endViewTransition(view);
                 ((dlr) algVar.a.g).o(algVar);
                 return;
@@ -54,10 +54,10 @@ public final /* synthetic */ class ale implements Runnable {
                 dbgVar.getClass();
                 if (Build.VERSION.SDK_INT >= 29 && (jxVar = dbgVar.b) != null) {
                     Iterator it = ((ArrayList) jxVar.f).iterator();
-                    bzo.p(it, "iterator(...)");
+                    throwIfVar1IsNull(it, "iterator(...)");
                     while (it.hasNext()) {
                         Object next = it.next();
-                        bzo.p(next, "next(...)");
+                        throwIfVar1IsNull(next, "next(...)");
                         dbh dbhVar = (dbh) next;
                         int i = dbhVar.a;
                         int i2 = cjnVar.a;

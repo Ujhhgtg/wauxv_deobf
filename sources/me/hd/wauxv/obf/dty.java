@@ -16,7 +16,8 @@ public final class dty {
     public final String j;
     public final Integer k;
 
-    public /* synthetic */ dty(int i, Integer num, Integer num2, String str, Integer num3, Integer num4, Integer num5, Integer num6, String str2, Integer num7, String str3, Integer num8) {
+    public /* synthetic */ dty(int i, Integer num, Integer num2, String str, Integer num3, Integer num4, Integer num5,
+            Integer num6, String str2, Integer num7, String str3, Integer num8) {
         if (2047 != (i & 2047)) {
             bht.ah(i, 2047, dtw.b.getDescriptor());
             throw null;
@@ -42,7 +43,13 @@ public final class dty {
             return false;
         }
         dty dtyVar = (dty) obj;
-        return bzo.f(this.a, dtyVar.a) && bzo.f(this.b, dtyVar.b) && bzo.f(this.c, dtyVar.c) && bzo.f(this.d, dtyVar.d) && bzo.f(this.e, dtyVar.e) && bzo.f(this.f, dtyVar.f) && bzo.f(this.g, dtyVar.g) && bzo.f(this.h, dtyVar.h) && bzo.f(this.i, dtyVar.i) && bzo.f(this.j, dtyVar.j) && bzo.f(this.k, dtyVar.k);
+        return nullSafeIsEqual(this.a, dtyVar.a) && nullSafeIsEqual(this.b, dtyVar.b)
+                && nullSafeIsEqual(this.c, dtyVar.c) && nullSafeIsEqual(this.d, dtyVar.d)
+                && nullSafeIsEqual(this.e, dtyVar.e) && nullSafeIsEqual(this.f, dtyVar.f)
+                && nullSafeIsEqual(this.g, dtyVar.g)
+                && nullSafeIsEqual(this.h, dtyVar.h) && nullSafeIsEqual(this.i, dtyVar.i)
+                && nullSafeIsEqual(this.j, dtyVar.j)
+                && nullSafeIsEqual(this.k, dtyVar.k);
     }
 
     public final int hashCode() {
@@ -83,6 +90,6 @@ public final class dty {
         yg.u(sb, this.h, -274792007596842L);
         bjs.w(sb, this.i, -274774827727658L);
         yg.u(sb, this.j, -274736173021994L);
-        return bjs.p(sb, this.k, ')');
+        return concat(sb, this.k, ')');
     }
 }

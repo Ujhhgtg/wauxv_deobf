@@ -29,7 +29,7 @@ public final class ewt extends cyw {
         textView.setText(String.format(Locale.getDefault(), "%d", Integer.valueOf(i2)));
         Context context = textView.getContext();
         textView.setContentDescription(eoq.c().get(1) == i2 ? String.format(context.getString(R.string.mtrl_picker_navigate_to_current_year_description), Integer.valueOf(i2)) : String.format(context.getString(R.string.mtrl_picker_navigate_to_year_description), Integer.valueOf(i2)));
-        io ioVar = calVar.l;
+        DefaultConfig ioVar = calVar.l;
         if (eoq.c().get(1) == i2) {
             Object obj = ioVar.d;
         } else {

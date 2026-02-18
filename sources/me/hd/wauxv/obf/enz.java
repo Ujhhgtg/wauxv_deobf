@@ -12,7 +12,7 @@ public final class enz implements btt, Serializable {
     public final Object getValue() {
         if (this.b == arj.n) {
             bfu bfuVar = this.a;
-            bzo.n(bfuVar);
+            throwIfVar1IsNull(bfuVar);
             this.b = bfuVar.invoke();
             this.a = null;
         }

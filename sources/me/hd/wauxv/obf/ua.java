@@ -70,7 +70,7 @@ public abstract class ua {
         long[] jArr = (long[]) this.c;
         if (i >= jArr.length) {
             long[] jArrCopyOf = Arrays.copyOf(jArr, jArr.length * 2);
-            bzo.p(jArrCopyOf, "copyOf(...)");
+            throwIfVar1IsNull(jArrCopyOf, "copyOf(...)");
             this.c = jArrCopyOf;
         }
         ((long[]) this.c)[i] = j;

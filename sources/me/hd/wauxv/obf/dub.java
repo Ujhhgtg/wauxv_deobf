@@ -24,7 +24,7 @@ public final class dub {
             return false;
         }
         dub dubVar = (dub) obj;
-        return bzo.f(this.a, dubVar.a) && bzo.f(this.b, dubVar.b);
+        return nullSafeIsEqual(this.a, dubVar.a) && nullSafeIsEqual(this.b, dubVar.b);
     }
 
     public final int hashCode() {
@@ -38,6 +38,6 @@ public final class dub {
         StringBuilder sb = new StringBuilder();
         sb.append("ScanCodeInfoProto(codeContent=" /* cnb.z(-265549237975850L) */);
         yg.u(sb, this.a, -265948669934378L);
-        return bjs.p(sb, this.b, ')');
+        return concat(sb, this.b, ')');
     }
 }

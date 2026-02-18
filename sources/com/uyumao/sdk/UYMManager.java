@@ -29,7 +29,10 @@ import org.json.JSONObject;
 public class UYMManager {
     public static UYMManager a;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public class a implements ActionInfo {
         public a(UYMManager uYMManager) {
         }
@@ -41,7 +44,7 @@ public class UYMManager {
 
         @Override // com.umeng.ccg.ActionInfo
         public String[] getSupportAction(Context context) {
-            return new String[]{com.umeng.ccg.a.e, com.umeng.ccg.a.d, com.umeng.ccg.a.c, com.umeng.ccg.a.b};
+            return new String[] { com.umeng.ccg.a.e, com.umeng.ccg.a.d, com.umeng.ccg.a.c, com.umeng.ccg.a.b };
         }
 
         @Override // com.umeng.ccg.ActionInfo
@@ -79,7 +82,7 @@ public class UYMManager {
                 if (jSONObject.has("actionName")) {
                     Integer num = d.m.get(jSONObject.optString("actionName"));
                     if (num != null) {
-                        g.a(context, num.intValue(), d.e.a, jSONObject);
+                        g.a(context, num.intValue(), d.e.cachedConstructors, jSONObject);
                     }
                 }
             } catch (Throwable unused) {
@@ -110,9 +113,10 @@ public class UYMManager {
     public static void enableYm6(Context context, boolean z) {
         d.f = z;
         try {
-            Method methodA = t.a("com.umeng.commonsdk.UMConfigure", "enableAplCollection", (Class<?>[]) new Class[]{Boolean.TYPE});
+            Method methodA = t.a("com.umeng.commonsdk.UMConfigure", "enableAplCollection",
+                    (Class<?>[]) new Class[] { Boolean.TYPE });
             if (methodA != null) {
-                t.a(methodA, (Object) null, new Object[]{Boolean.valueOf(z)});
+                t.a(methodA, (Object) null, new Object[] { Boolean.valueOf(z) });
             }
         } catch (Throwable unused) {
         }
@@ -144,20 +148,29 @@ public class UYMManager {
             if (jSONObject.has("actionName")) {
                 Integer num = d.m.get(jSONObject.optString("actionName"));
                 if (num != null) {
-                    g.a(context, num.intValue(), d.e.a, jSONObject);
+                    g.a(context, num.intValue(), d.e.cachedConstructors, jSONObject);
                 }
             }
         } catch (Throwable unused) {
         }
     }
 
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getInstructions()" because "finallyBlockTerminus" is null
-    	at jadx.core.dex.visitors.finaly.traverser.state.TraverserActivePathState.<init>(TraverserActivePathState.java:253)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.findCommonInsns(MarkFinallyVisitor.java:422)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.extractFinally(MarkFinallyVisitor.java:302)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.processTryBlock(MarkFinallyVisitor.java:222)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:150)
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getInstructions()" because
+     * "finallyBlockTerminus" is null
+     * at
+     * jadx.core.dex.visitors.finaly.traverser.state.TraverserActivePathState.<init>
+     * (TraverserActivePathState.java:253)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.findCommonInsns(
+     * MarkFinallyVisitor.java:422)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.extractFinally(
+     * MarkFinallyVisitor.java:302)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.processTryBlock(
+     * MarkFinallyVisitor.java:222)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:150)
      */
     public synchronized void init(Context context) {
         Future<?> future;
@@ -168,7 +181,8 @@ public class UYMManager {
             Context applicationContext = context.getApplicationContext();
             if (!c.a) {
                 c.a = true;
-                if (applicationContext.getSharedPreferences("uyumao_info", 0).getBoolean(new SimpleDateFormat("yyyyMMdd", Locale.getDefault()).format(new Date()), false)) {
+                if (applicationContext.getSharedPreferences("uyumao_info", 0)
+                        .getBoolean(new SimpleDateFormat("yyyyMMdd", Locale.getDefault()).format(new Date()), false)) {
                     new Thread(new com.uyumao.a(applicationContext)).start();
                 } else {
                     l.a().b().execute(new b(applicationContext));
@@ -196,7 +210,8 @@ public class UYMManager {
             if (d.f) {
                 try {
                     WeakReference<Future<?>> weakReference = e.b;
-                    if (weakReference == null || (future = weakReference.get()) == null || future.isDone() || future.isCancelled()) {
+                    if (weakReference == null || (future = weakReference.get()) == null || future.isDone()
+                            || future.isCancelled()) {
                         e.b = new WeakReference<>(s.a(new q()));
                     }
                 } catch (Throwable th) {

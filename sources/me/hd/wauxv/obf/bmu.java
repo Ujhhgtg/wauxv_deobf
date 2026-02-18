@@ -206,7 +206,7 @@ public final class bmu implements cdw, ero, ajh, cab, ank, cbu, esn, ano, cvv, a
         zc zcVarB = dal.b(cls);
         erm[] ermVarArr = (erm[]) this.h;
         erm[] ermVarArr2 = (erm[]) Arrays.copyOf(ermVarArr, ermVarArr.length);
-        bzo.q(ermVarArr2, "initializers");
+        throwIfVar1IsNull(ermVarArr2, "initializers");
         int length = ermVarArr2.length;
         int i = 0;
         while (true) {
@@ -245,7 +245,7 @@ public final class bmu implements cdw, ero, ajh, cab, ank, cbu, esn, ano, cvv, a
         }
         if (iOrdinal != 1) {
             if (iOrdinal != 2) {
-                throw new abt();
+                throw new QueryDidNotReturnUniqueResultRuntimeException();
             }
             ((rw) this.h).f(Integer.reverseBytes(i));
             return;
@@ -271,7 +271,7 @@ public final class bmu implements cdw, ero, ajh, cab, ank, cbu, esn, ano, cvv, a
             rwVar.d(i, j);
         } else if (iOrdinal != 1) {
             if (iOrdinal != 2) {
-                throw new abt();
+                throw new QueryDidNotReturnUniqueResultRuntimeException();
             }
             ((rw) this.h).g(Long.reverseBytes(j));
         } else {
@@ -345,8 +345,8 @@ public final class bmu implements cdw, ero, ajh, cab, ank, cbu, esn, ano, cvv, a
         sb.append('\n');
         String string = sb.toString();
         Charset charset = uj.a;
-        bzo.q(string, "text");
-        bzo.q(charset, "charset");
+        throwIfVar1IsNull(string, "text");
+        throwIfVar1IsNull(charset, "charset");
         FileOutputStream fileOutputStream = new FileOutputStream(file, true);
         try {
             bad.f(fileOutputStream, string, charset);
@@ -377,7 +377,7 @@ public final class bmu implements cdw, ero, ajh, cab, ank, cbu, esn, ano, cvv, a
     }
 
     public void w(byte[] bArr) {
-        bzo.q(bArr, "bytes");
+        throwIfVar1IsNull(bArr, "bytes");
         rw rwVar = (rw) this.h;
         n(rwVar, bArr.length, cwf.DEFAULT);
         int length = bArr.length;
@@ -390,7 +390,7 @@ public final class bmu implements cdw, ero, ajh, cab, ank, cbu, esn, ano, cvv, a
     }
 
     public void x(rw rwVar) {
-        bzo.q(rwVar, "output");
+        throwIfVar1IsNull(rwVar, "output");
         rw rwVar2 = (rw) this.h;
         n(rwVar2, rwVar.c, cwf.DEFAULT);
         int i = rwVar.c;

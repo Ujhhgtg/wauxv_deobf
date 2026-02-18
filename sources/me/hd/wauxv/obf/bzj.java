@@ -5,16 +5,19 @@ package me.hd.wauxv.obf;
 public final class bzj extends cwl {
     public final long ac;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'super' call moved to the top of the method (can break code
+     * semantics)
+     */
     public bzj(cwd cwdVar, cwo cwoVar, long j, dfx dfxVar) {
         super(cwdVar, cwoVar, dfxVar);
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         this.ac = j;
     }
 
     @Override // me.hd.wauxv.obf.cwl
     public final long ad(dfx dfxVar, int i) {
-        bzo.q(dfxVar, "<this>");
+        throwIfVar1IsNull(dfxVar, "<this>");
         int i2 = i % 2;
         long j = this.ac;
         if (i2 == 0) {

@@ -16,7 +16,8 @@ public final class eie {
     public final String j;
     public final Integer k;
 
-    public /* synthetic */ eie(int i, Integer num, String str, Integer num2, String str2, Integer num3, Integer num4, Integer num5, String str3, Integer num6, String str4, Integer num7) {
+    public /* synthetic */ eie(int i, Integer num, String str, Integer num2, String str2, Integer num3, Integer num4,
+            Integer num5, String str3, Integer num6, String str4, Integer num7) {
         if (2047 != (i & 2047)) {
             bht.ah(i, 2047, eic.b.getDescriptor());
             throw null;
@@ -42,7 +43,13 @@ public final class eie {
             return false;
         }
         eie eieVar = (eie) obj;
-        return bzo.f(this.a, eieVar.a) && bzo.f(this.b, eieVar.b) && bzo.f(this.c, eieVar.c) && bzo.f(this.d, eieVar.d) && bzo.f(this.e, eieVar.e) && bzo.f(this.f, eieVar.f) && bzo.f(this.g, eieVar.g) && bzo.f(this.h, eieVar.h) && bzo.f(this.i, eieVar.i) && bzo.f(this.j, eieVar.j) && bzo.f(this.k, eieVar.k);
+        return nullSafeIsEqual(this.a, eieVar.a) && nullSafeIsEqual(this.b, eieVar.b)
+                && nullSafeIsEqual(this.c, eieVar.c) && nullSafeIsEqual(this.d, eieVar.d)
+                && nullSafeIsEqual(this.e, eieVar.e) && nullSafeIsEqual(this.f, eieVar.f)
+                && nullSafeIsEqual(this.g, eieVar.g)
+                && nullSafeIsEqual(this.h, eieVar.h) && nullSafeIsEqual(this.i, eieVar.i)
+                && nullSafeIsEqual(this.j, eieVar.j)
+                && nullSafeIsEqual(this.k, eieVar.k);
     }
 
     public final int hashCode() {
@@ -83,6 +90,6 @@ public final class eie {
         yg.u(sb, this.h, -333349591710506L);
         bjs.w(sb, this.i, -333293757135658L);
         yg.u(sb, this.j, -333323821906730L);
-        return bjs.p(sb, this.k, ')');
+        return concat(sb, this.k, ')');
     }
 }

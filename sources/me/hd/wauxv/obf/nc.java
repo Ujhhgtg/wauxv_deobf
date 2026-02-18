@@ -19,7 +19,7 @@ public abstract class nc implements afw, ahr, Serializable {
         while (true) {
             nc ncVar = (nc) afwVar;
             afw afwVar2 = ncVar.j;
-            bzo.n(afwVar2);
+            throwIfVar1IsNull(afwVar2);
             try {
                 obj = ncVar.i(obj);
                 if (obj == ahq.a) {
@@ -87,7 +87,12 @@ public abstract class nc implements afw, ahr, Serializable {
             jx jxVar2 = cna.c;
             if (jxVar2 == null) {
                 try {
-                    jx jxVar3 = new jx(Class.class.getDeclaredMethod("getModule", null), getClass().getClassLoader().loadClass("java.lang.Module").getDeclaredMethod("getDescriptor", null), getClass().getClassLoader().loadClass("java.lang.module.ModuleDescriptor").getDeclaredMethod("name", null), 16);
+                    jx jxVar3 = new jx(Class.class.getDeclaredMethod("getModule", null),
+                            getClass().getClassLoader().loadClass("java.lang.Module").getDeclaredMethod("getDescriptor",
+                                    null),
+                            getClass().getClassLoader().loadClass("java.lang.module.ModuleDescriptor")
+                                    .getDeclaredMethod("name", null),
+                            16);
                     cna.c = jxVar3;
                     jxVar2 = jxVar3;
                 } catch (Exception unused2) {
@@ -95,7 +100,9 @@ public abstract class nc implements afw, ahr, Serializable {
                     jxVar2 = jxVar;
                 }
             }
-            if (jxVar2 != jxVar && (method = (Method) jxVar2.e) != null && (objInvoke = method.invoke(getClass(), null)) != null && (method2 = (Method) jxVar2.f) != null && (objInvoke2 = method2.invoke(objInvoke, null)) != null) {
+            if (jxVar2 != jxVar && (method = (Method) jxVar2.e) != null
+                    && (objInvoke = method.invoke(getClass(), null)) != null && (method2 = (Method) jxVar2.f) != null
+                    && (objInvoke2 = method2.invoke(objInvoke, null)) != null) {
                 Method method3 = (Method) jxVar2.h;
                 Object objInvoke3 = method3 != null ? method3.invoke(objInvoke2, null) : null;
                 if (objInvoke3 instanceof String) {

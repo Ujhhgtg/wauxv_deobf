@@ -4,7 +4,7 @@ import org.luckypray.dexkit.DexKitBridge;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class ddh extends doo implements bng {
+public final class ddh extends BaseHook implements IRequiresDexLocate {
     public static final ddh a = new ddh("RoundAvatarHook" /* cnb.z(-455721799908138L) */);
     public static final String b = "美化" /* cnb.z(-457040354868010L) */;
     public static final String c = "圆形头像" /* cnb.z(-456993110227754L) */;
@@ -27,18 +27,18 @@ public final class ddh extends doo implements bng {
         }
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String f() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getName() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String g() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getCategory() {
         return b;
     }
 
     @Override // me.hd.wauxv.obf.bng
-    public final void h(DexKitBridge dexKitBridge) {
+    public final void locateDex(DexKitBridge dexKitBridge) {
         emn.aj(ddf.a, dexKitBridge, new dbj(11));
         emn.aj(ddd.a, dexKitBridge, new dbj(12));
         if (cnb.ab(ewk.i) || cnb.ac(ewh.h)) {
@@ -46,17 +46,17 @@ public final class ddh extends doo implements bng {
         }
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String o() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getDescription() {
         return i;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final bgf p() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final IHasInvokeMethod p() {
         return j;
     }
 
-    @Override // me.hd.wauxv.obf.doo
+    @Override // me.hd.wauxv.obf.BaseHook
     public final boolean q() {
         return m;
     }

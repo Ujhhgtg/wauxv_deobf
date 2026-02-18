@@ -18,7 +18,7 @@ public final class bvt extends s {
     @Override // me.hd.wauxv.obf.s
     public final int _s(Object obj) {
         LinkedHashMap linkedHashMap = (LinkedHashMap) obj;
-        bzo.q(linkedHashMap, "<this>");
+        throwIfVar1IsNull(linkedHashMap, "<this>");
         return linkedHashMap.size() * 2;
     }
 
@@ -49,14 +49,14 @@ public final class bvt extends s {
     @Override // me.hd.wauxv.obf.s
     public final Iterator d(Object obj) {
         Map map = (Map) obj;
-        bzo.q(map, "<this>");
+        throwIfVar1IsNull(map, "<this>");
         return map.entrySet().iterator();
     }
 
     @Override // me.hd.wauxv.obf.s
     public final int e(Object obj) {
         Map map = (Map) obj;
-        bzo.q(map, "<this>");
+        throwIfVar1IsNull(map, "<this>");
         return map.size();
     }
 
@@ -64,15 +64,18 @@ public final class bvt extends s {
     public final void g(acm acmVar, int i, Object obj) {
         Map map = (Map) obj;
         bsb bsbVar = bsb.b;
-        bzo.q(map, "builder");
+        throwIfVar1IsNull(map, "builder");
         dnh dnhVar = dnh.b;
         bvs bvsVar = this.j;
         Object objH = acmVar.h(bvsVar, i, dnhVar, null);
         int iF = acmVar.f(bvsVar);
         if (iF != i + 1) {
-            throw new IllegalArgumentException(dkz.p(i, "Value must follow key in a map, index for key: ", ", returned index for value: ", iF).toString());
+            throw new IllegalArgumentException(
+                    dkz.p(i, "Value must follow key in a map, index for key: ", ", returned index for value: ", iF)
+                            .toString());
         }
-        map.put(objH, (!map.containsKey(objH) || (bsb.d.e instanceof cvn)) ? acmVar.h(bvsVar, iF, bsbVar, null) : acmVar.h(bvsVar, iF, bsbVar, bzo.x(map, objH)));
+        map.put(objH, (!map.containsKey(objH) || (bsb.d.e instanceof cvn)) ? acmVar.h(bvsVar, iF, bsbVar, null)
+                : acmVar.h(bvsVar, iF, bsbVar, KotlinHelpers.x(map, objH)));
     }
 
     @Override // me.hd.wauxv.obf.btd
@@ -83,7 +86,7 @@ public final class bvt extends s {
     @Override // me.hd.wauxv.obf.s
     public final Object h(Object obj) {
         Map map = (Map) obj;
-        bzo.q(map, "<this>");
+        throwIfVar1IsNull(map, "<this>");
         LinkedHashMap linkedHashMap = map instanceof LinkedHashMap ? (LinkedHashMap) map : null;
         return linkedHashMap == null ? new LinkedHashMap(map) : linkedHashMap;
     }
@@ -91,7 +94,7 @@ public final class bvt extends s {
     @Override // me.hd.wauxv.obf.s
     public final Object i(Object obj) {
         LinkedHashMap linkedHashMap = (LinkedHashMap) obj;
-        bzo.q(linkedHashMap, "<this>");
+        throwIfVar1IsNull(linkedHashMap, "<this>");
         return linkedHashMap;
     }
 }

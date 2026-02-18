@@ -32,7 +32,9 @@ public final class eex {
             return false;
         }
         eex eexVar = (eex) obj;
-        return bzo.f(this.a, eexVar.a) && bzo.f(this.b, eexVar.b) && bzo.f(this.c, eexVar.c) && bzo.f(this.d, eexVar.d) && bzo.f(this.e, eexVar.e) && bzo.f(this.f, eexVar.f);
+        return nullSafeIsEqual(this.a, eexVar.a) && nullSafeIsEqual(this.b, eexVar.b)
+                && nullSafeIsEqual(this.c, eexVar.c) && nullSafeIsEqual(this.d, eexVar.d)
+                && nullSafeIsEqual(this.e, eexVar.e) && nullSafeIsEqual(this.f, eexVar.f);
     }
 
     public final int hashCode() {
@@ -58,6 +60,6 @@ public final class eex {
         yg.u(sb, this.c, -296726405577514L);
         yg.u(sb, this.d, -296661981068074L);
         yg.u(sb, this.e, -296030620875562L);
-        return bjs.p(sb, this.f, ')');
+        return concat(sb, this.f, ')');
     }
 }

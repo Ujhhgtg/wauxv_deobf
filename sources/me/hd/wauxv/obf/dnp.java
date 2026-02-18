@@ -3,7 +3,7 @@ package me.hd.wauxv.obf;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public abstract class dnp extends dno {
-    /* JADX WARN: Found duplicated region for block: B:106:0x0121  */
+    /* JADX WARN: Found duplicated region for block: B:106:0x0121 */
     /* JADX WARN: Found duplicated region for block: B:69:0x00c5 A[MOVE_INLINED] */
     public static final boolean bc(String str) {
         char c;
@@ -157,7 +157,7 @@ public abstract class dnp extends dno {
     }
 
     public static Float bd(String str) {
-        bzo.q(str, "<this>");
+        throwIfVar1IsNull(str, "<this>");
         try {
             if (bc(str)) {
                 return Float.valueOf(Float.parseFloat(str));

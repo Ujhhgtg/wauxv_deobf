@@ -8,7 +8,7 @@ import okhttp3.OkHttpClient;
 /* JADX INFO: loaded from: classes.dex */
 public abstract class cqi {
     public static final void a(OkHttpClient.Builder builder) {
-        bzo.q(builder, "<this>");
+        throwIfVar1IsNull(builder, "<this>");
         List<Interceptor> listInterceptors = builder.interceptors();
         cld cldVar = cld.a;
         if (listInterceptors.contains(cldVar)) {

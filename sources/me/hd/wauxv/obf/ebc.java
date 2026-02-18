@@ -19,7 +19,8 @@ public final class ebc {
     public final Long m;
     public final Long n;
 
-    public /* synthetic */ ebc(int i, Integer num, Long l, Integer num2, Integer num3, String str, ebu ebuVar, ecp ecpVar, ehs ehsVar, ehs ehsVar2, String str2, String str3, String str4, Long l2, Long l3) {
+    public /* synthetic */ ebc(int i, Integer num, Long l, Integer num2, Integer num3, String str, ebu ebuVar,
+            ecp ecpVar, ehs ehsVar, ehs ehsVar2, String str2, String str3, String str4, Long l2, Long l3) {
         if (16383 != (i & 16383)) {
             bht.ah(i, 16383, eba.b.getDescriptor());
             throw null;
@@ -48,7 +49,13 @@ public final class ebc {
             return false;
         }
         ebc ebcVar = (ebc) obj;
-        return bzo.f(this.a, ebcVar.a) && bzo.f(this.b, ebcVar.b) && bzo.f(this.c, ebcVar.c) && bzo.f(this.d, ebcVar.d) && bzo.f(this.e, ebcVar.e) && bzo.f(this.f, ebcVar.f) && bzo.f(this.g, ebcVar.g) && bzo.f(this.h, ebcVar.h) && bzo.f(this.i, ebcVar.i) && bzo.f(this.j, ebcVar.j) && bzo.f(this.k, ebcVar.k) && bzo.f(this.l, ebcVar.l) && bzo.f(this.m, ebcVar.m) && bzo.f(this.n, ebcVar.n);
+        return nullSafeIsEqual(this.a, ebcVar.a) && nullSafeIsEqual(this.b, ebcVar.b)
+                && nullSafeIsEqual(this.c, ebcVar.c) && nullSafeIsEqual(this.d, ebcVar.d)
+                && nullSafeIsEqual(this.e, ebcVar.e) && nullSafeIsEqual(this.f, ebcVar.f)
+                && nullSafeIsEqual(this.g, ebcVar.g) && nullSafeIsEqual(this.h, ebcVar.h)
+                && nullSafeIsEqual(this.i, ebcVar.i) && nullSafeIsEqual(this.j, ebcVar.j)
+                && nullSafeIsEqual(this.k, ebcVar.k) && nullSafeIsEqual(this.l, ebcVar.l)
+                && nullSafeIsEqual(this.m, ebcVar.m) && nullSafeIsEqual(this.n, ebcVar.n);
     }
 
     public final int hashCode() {

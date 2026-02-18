@@ -18,7 +18,7 @@ public final /* synthetic */ class ake implements bfu {
                 return "val." /* cnb.z(-5510443039530L) */ + this.b;
             default:
                 String str = this.b;
-                bzo.q(str, "uriPattern");
+                throwIfVar1IsNull(str, "uriPattern");
                 return new cjd(str, null, null);
         }
     }

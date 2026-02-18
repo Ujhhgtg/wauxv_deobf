@@ -21,7 +21,7 @@ public final class bbx implements adv {
                 if (bbyVar == null) {
                     bbyVar = new bby(-3);
                 }
-                ((io) this.b).aq(bbyVar);
+                ((DefaultConfig) this.b).aq(bbyVar);
                 return;
             default:
                 bby bbyVar2 = (bby) obj;

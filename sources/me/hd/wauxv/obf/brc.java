@@ -14,7 +14,8 @@ import java.util.regex.Pattern;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class brc extends lj {
-    public static final Pattern aa = Pattern.compile("https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z0-9()@:%_\\+.~#?&/=]*)");
+    public static final Pattern aa = Pattern.compile(
+            "https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z0-9()@:%_\\+.~#?&/=]*)");
     public final ThreadLocal ab = new ThreadLocal();
     public final io ac = new io(26);
 
@@ -40,9 +41,12 @@ public final class brc extends lj {
         }
     }
 
-    /* JADX WARN: Failed to find 'out' block for switch in B:21:0x0048. Please report as an issue. */
-    /* JADX WARN: Found duplicated region for block: B:34:0x007b  */
-    /* JADX WARN: Found duplicated region for block: B:71:0x0100  */
+    /*
+     * JADX WARN: Failed to find 'out' block for switch in B:21:0x0048. Please
+     * report as an issue.
+     */
+    /* JADX WARN: Found duplicated region for block: B:34:0x007b */
+    /* JADX WARN: Found duplicated region for block: B:71:0x0100 */
     /* JADX WARN: Found duplicated region for block: B:76:0x0127 A[SYNTHETIC] */
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Type inference failed for: r5v2 */
@@ -255,7 +259,7 @@ public final class brc extends lj {
                 } else {
                     arrayList.add(new brb(ekkVar, 0));
                 }
-                jAl = bzo.al(0, i2);
+                jAl = KotlinHelpers.al(0, i2);
             } else {
                 ekk ekkVar2 = ekk.f;
                 if (i2 < 1000) {
@@ -263,7 +267,7 @@ public final class brc extends lj {
                 } else {
                     arrayList.add(new brb(ekkVar2, 0));
                 }
-                jAl = bzo.al(1, i2);
+                jAl = KotlinHelpers.al(1, i2);
             }
             iAg = ((int) (jAl >> 32)) == 0 ? ag(afoVar, (int) (jAl & 4294967295L), arrayList, dmkVar) : 1;
         } else {
@@ -412,10 +416,12 @@ public final class brc extends lj {
                     ekk ekkVar4 = ekk.p;
                     ArrayList arrayList3 = arrayList;
                     ekk ekkVar5 = ekk.t;
-                    int i11 = (ekkVar == ekkVar3 || ekkVar == ekkVar2) ? 3 : (ekkVar == ekkVar5 || ekkVar == ekk.u) ? 2 : (ekkVar == ekkVar4 || ekkVar == ekk.q) ? i9 : 0;
+                    int i11 = (ekkVar == ekkVar3 || ekkVar == ekkVar2) ? 3
+                            : (ekkVar == ekkVar5 || ekkVar == ekk.u) ? 2
+                                    : (ekkVar == ekkVar4 || ekkVar == ekk.q) ? i9 : 0;
                     if (i11 > 0) {
                         if (ekkVar == ekkVar3 || ekkVar == ekkVar5 || ekkVar == ekkVar4) {
-                            stack3.push(Long.valueOf(bzo.al(i11, affVar.v(i2, i8))));
+                            stack3.push(Long.valueOf(KotlinHelpers.al(i11, affVar.v(i2, i8))));
                         } else if (!stack3.isEmpty()) {
                             Long l = (Long) stack3.pop();
                             if (((int) (l.longValue() >> 32)) == i11) {
@@ -449,7 +455,9 @@ public final class brc extends lj {
             arrayList = arrayList;
         }
         ArrayList arrayList4 = arrayList;
-        if (ikVar.t() && (jxVar = (jx) this.g) != null && (codeEditor = (CodeEditor) ((WeakReference) jxVar.e).get()) != null && this == codeEditor.getEditorLanguage().e() && ((bmu) jxVar.h) != bmuVar) {
+        if (ikVar.t() && (jxVar = (jx) this.g) != null
+                && (codeEditor = (CodeEditor) ((WeakReference) jxVar.e).get()) != null
+                && this == codeEditor.getEditorLanguage().e() && ((bmu) jxVar.h) != bmuVar) {
             jxVar.h = bmuVar;
             jxVar.af(new dh(jxVar, 10));
         }

@@ -7,7 +7,7 @@ import java.util.Collection;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class cbj implements bgf {
+public final /* synthetic */ class cbj implements IHasInvokeMethod {
     public final /* synthetic */ int a;
     public final /* synthetic */ Object b;
     public final /* synthetic */ Object c;
@@ -42,11 +42,14 @@ public final /* synthetic */ class cbj implements bgf {
                 if (obj5 != null) {
                     zBooleanValue = ((Boolean) bgjVar.g(obj5, obj)).booleanValue();
                     String strB = eoz.b(obj5);
-                    String strBo = strB != null ? dnr.bo(strB.toString(), " (Kotlin reflection is not available)", "") : null;
-                    String strBo2 = obj != null ? dnr.bo(obj.toString(), " (Kotlin reflection is not available)", "") : null;
+                    String strBo = strB != null ? dnr.bo(strB.toString(), " (Kotlin reflection is not available)", "")
+                            : null;
+                    String strBo2 = obj != null ? dnr.bo(obj.toString(), " (Kotlin reflection is not available)", "")
+                            : null;
                     if (cbgVar.e != cbf.c) {
                         dov dovVar = bth.a;
-                        String str2 = "[FILTER] [" + (zBooleanValue ? "HIT" : "MISS") + "] " + str + ": " + strBo + " [RESOLVED] " + strBo2;
+                        String str2 = "[FILTER] [" + (zBooleanValue ? "HIT" : "MISS") + "] " + str + ": " + strBo
+                                + " [RESOLVED] " + strBo2;
                         if (bth.d.ordinal() <= 0) {
                             bth.c.debug(str2);
                         }
@@ -55,7 +58,7 @@ public final /* synthetic */ class cbj implements bgf {
                 return Boolean.valueOf(zBooleanValue);
             case 1:
                 cio cioVar = (cio) obj;
-                bzo.q(cioVar, "it");
+                throwIfVar1IsNull(cioVar, "it");
                 ((dag) obj5).a = true;
                 ((cix) obj3).ab((cjg) obj2, (Bundle) obj4, cioVar, avd.a);
                 return ensVar;

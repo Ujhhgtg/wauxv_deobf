@@ -35,7 +35,7 @@ public final class csk extends Paint {
         return textRunAdvances;
     }
 
-    public final void d() {
+    public final void getArgs() {
         this.a = measureText(" ");
         measureText("\t");
     }

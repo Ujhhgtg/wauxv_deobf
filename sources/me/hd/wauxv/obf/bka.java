@@ -13,7 +13,7 @@ import java.util.List;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class bka implements bgf {
+public final /* synthetic */ class bka implements IHasInvokeMethod {
     public final /* synthetic */ int a;
     public final /* synthetic */ Object b;
     public final /* synthetic */ Object c;
@@ -42,19 +42,19 @@ public final /* synthetic */ class bka implements bgf {
                 ant antVar = (ant) obj3;
                 int iIntValue = ((Integer) obj).intValue();
                 antVar.ai();
-                bbe bbeVar = (bbe) ((List) ((io) obj2).c).get(iIntValue);
+                bbe bbeVar = (bbe) ((List) ((DefaultConfig) obj2).c).get(iIntValue);
                 String str = bbeVar.d;
                 String str2 = bbeVar.e;
-                if (bzo.f(str, "activity" /* cnb.z(-550730771462954L) */)) {
+                if (nullSafeIsEqual(str, "activity" /* cnb.z(-550730771462954L) */)) {
                     Intent intent = new Intent();
                     intent.setClassName(antVar.getContext(), str2);
                     antVar.getContext().startActivity(intent);
-                } else if (bzo.f(str, "wauxv" /* cnb.z(-550709296626474L) */)) {
+                } else if (nullSafeIsEqual(str, "wauxv" /* cnb.z(-550709296626474L) */)) {
                     bbj.a.getClass();
-                    if (bzo.f(str2, "clearUnreadCount" /* cnb.z(-553591219682090L) */)) {
+                    if (nullSafeIsEqual(str2, "clearUnreadCount" /* cnb.z(-553591219682090L) */)) {
                         alc alcVar = aou.a;
                         cnd.bf(akq.f, new lw(i2, afwVar, 3));
-                    } else if (bzo.f(str2, "killProcess" /* cnb.z(-553535385107242L) */)) {
+                    } else if (nullSafeIsEqual(str2, "killProcess" /* cnb.z(-553535385107242L) */)) {
                         Process.killProcess(Process.myPid());
                     }
                 }
@@ -63,7 +63,7 @@ public final /* synthetic */ class bka implements bgf {
                 cjg cjgVar = (cjg) obj3;
                 cix cixVar = ((cjl) obj2).b;
                 cjp cjpVar = (cjp) obj;
-                bzo.q(cjpVar, "$this$navOptions");
+                throwIfVar1IsNull(cjpVar, "$this$navOptions");
                 cjn cjnVar = cjpVar.a;
                 cjnVar.a = 0;
                 cjnVar.b = 0;
@@ -71,7 +71,7 @@ public final /* synthetic */ class bka implements bgf {
                     int i3 = cjg.e;
                     for (cjg cjgVar2 : dfv.ai(cjgVar, new cgu(19))) {
                         cjg cjgVarAf = cixVar.af();
-                        if (bzo.f(cjgVar2, cjgVarAf != null ? cjgVarAf.h : null)) {
+                        if (nullSafeIsEqual(cjgVar2, cjgVarAf != null ? cjgVarAf.h : null)) {
                         }
                     }
                     int i4 = cji.a;
@@ -83,7 +83,7 @@ public final /* synthetic */ class bka implements bgf {
                 ckl cklVar = (ckl) obj3;
                 cjo cjoVar = (cjo) obj2;
                 cio cioVar = (cio) obj;
-                bzo.q(cioVar, "backStackEntry");
+                throwIfVar1IsNull(cioVar, "backStackEntry");
                 ciq ciqVar = cioVar.h;
                 cjg cjgVar3 = cioVar.b;
                 if (cjgVar3 == null) {
@@ -95,13 +95,13 @@ public final /* synthetic */ class bka implements bgf {
                 return cjgVarD.equals(cjgVar3) ? cioVar : cklVar.w().j(cjgVarD, cjgVarD.k(ciqVar.l()));
             case 4:
                 Activity activity = (Activity) obj2;
-                dnc.b(activity, (String) obj3);
+                dnc.tryGetClassByName(activity, (String) obj3);
                 dnc.g(activity, 2, "复制成功" /* cnb.z(-583308098403114L) */);
                 return ensVar;
             default:
                 euh euhVar = (euh) obj2;
                 aki.l((aki) obj3);
-                Object objE = ((bmm) obj).e();
+                Object objE = ((HookParamWrapper) obj).getThisObject();
                 if (!(objE instanceof Context)) {
                     objE = null;
                 }
@@ -109,7 +109,8 @@ public final /* synthetic */ class bka implements bgf {
                 if (context == null) {
                     cls = Context.class;
                     Class<Context> clsBf = cnf.bf(dal.b(cls));
-                    throw new IllegalStateException("HookParam instance cannot cast to ".concat((clsBf != null ? clsBf : Context.class).getName()).toString());
+                    throw new IllegalStateException("HookParam instance cannot cast to "
+                            .concat((clsBf != null ? clsBf : Context.class).getName()).toString());
                 }
                 TextView textView = new TextView(context);
                 textView.setTextSize(16.0f);
@@ -119,7 +120,10 @@ public final /* synthetic */ class bka implements bgf {
                 LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(-1, -2);
                 layoutParams.setMargins(32, 32, 32, 32);
                 progressBar.setLayoutParams(layoutParams);
-                AlertDialog.Builder title = new AlertDialog.Builder(context).setTitle("WAuxiliary" /* cnb.z(-82935818484522L) */);
+                AlertDialog.Builder title = new AlertDialog.Builder(context).setTitle("WAuxiliary" /*
+                                                                                                    * cnb.z(-
+                                                                                                    * 82935818484522L)
+                                                                                                    */);
                 LinearLayout linearLayout = new LinearLayout(context);
                 linearLayout.setOrientation(1);
                 linearLayout.setGravity(17);
@@ -130,7 +134,7 @@ public final /* synthetic */ class bka implements bgf {
                 alc alcVar2 = aou.a;
                 akq akqVar = akq.f;
                 bhp bhpVar = new bhp(euhVar, textView, progressBar, alertDialogShow, null);
-                ahh ahhVarT = bzo.t(auz.a, akqVar, true);
+                ahh ahhVarT = KotlinHelpers.t(auz.a, akqVar, true);
                 alc alcVar3 = aou.a;
                 if (ahhVarT != alcVar3 && ahhVarT._w(arj.a) == null) {
                     ahhVarT = ahhVarT._v(alcVar3);

@@ -49,7 +49,8 @@ public abstract class emf {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    public static Typeface d(Context context, bca bcaVar, Resources resources, int i, String str, int i2, int i3, bht bhtVar, boolean z) {
+    public static Typeface d(Context context, bca bcaVar, Resources resources, int i, String str, int i2, int i3,
+            bht bhtVar, boolean z) {
         Typeface typefaceS;
         Typeface typefaceBuild;
         FontFamily fontFamilyBuild;
@@ -82,18 +83,22 @@ public abstract class emf {
                                             String str4 = bbtVar.f;
                                             Font fontG = g(f(str3));
                                             if (fontG == null) {
-                                                Log.w("TypefaceCompat", "Unable identify the primary font for " + bbtVar.e + ". Falling back to provider font.");
+                                                Log.w("TypefaceCompat", "Unable identify the primary font for "
+                                                        + bbtVar.e + ". Falling back to provider font.");
                                             } else {
                                                 if (TextUtils.isEmpty(str4)) {
                                                     try {
                                                         dql.n();
                                                         dql.w();
-                                                        fontFamilyBuild = dql.h(qc.i(fontG).setFontVariationSettings(str4).build()).build();
+                                                        fontFamilyBuild = dql.locateDex(
+                                                                qc.i(fontG).setFontVariationSettings(str4).build())
+                                                                .build();
                                                     } catch (IOException unused) {
-                                                        Log.e("TypefaceCompat", "Failed to clone Font instance. Fall back to provider font.");
+                                                        Log.e("TypefaceCompat",
+                                                                "Failed to clone Font instance. Fall back to provider font.");
                                                     }
                                                 } else {
-                                                    fontFamilyBuild = dql.h(fontG).build();
+                                                    fontFamilyBuild = dql.locateDex(fontG).build();
                                                 }
                                                 if (customFallbackBuilderC == null) {
                                                     customFallbackBuilderC = dql.c(fontFamilyBuild);
@@ -134,7 +139,7 @@ public abstract class emf {
             bmuVar.h = bhtVar;
             ArrayList arrayList2 = bcdVar.a;
             dby dbyVar = new dby(handler);
-            io ioVar = new io(bmuVar, 10, dbyVar);
+            DefaultConfig ioVar = new DefaultConfig(bmuVar, 10, dbyVar);
             int i10 = 4;
             if (objArr3 != true) {
                 String strE = bbz.e(i3, arrayList2);
@@ -157,7 +162,8 @@ public abstract class emf {
                                 bbw bbwVar = new bbw(strE, context, arrayList2, i3, 1);
                                 ThreadPoolExecutor threadPoolExecutor = bbz.b;
                                 bbx bbxVar2 = new bbx(strE, i6);
-                                Handler handler2 = Looper.myLooper() == null ? new Handler(Looper.getMainLooper()) : new Handler();
+                                Handler handler2 = Looper.myLooper() == null ? new Handler(Looper.getMainLooper())
+                                        : new Handler();
                                 bkh bkhVar = new bkh();
                                 bkhVar.b = bbwVar;
                                 bkhVar.c = bbxVar2;
@@ -171,12 +177,13 @@ public abstract class emf {
                 }
             } else {
                 if (arrayList2.size() > 1) {
-                    throw new IllegalArgumentException("Fallbacks with blocking fetches are not supported for performance reasons");
+                    throw new IllegalArgumentException(
+                            "Fallbacks with blocking fetches are not supported for performance reasons");
                 }
                 bbt bbtVar2 = (bbt) arrayList2.get(0);
                 byj byjVar = bbz.a;
                 ArrayList arrayList5 = new ArrayList(1);
-                Object obj = new Object[]{bbtVar2}[0];
+                Object obj = new Object[] { bbtVar2 }[0];
                 Objects.requireNonNull(obj);
                 arrayList5.add(obj);
                 String strE2 = bbz.e(i3, Collections.unmodifiableList(arrayList5));
@@ -185,7 +192,7 @@ public abstract class emf {
                     dbyVar.execute(new cs(bmuVar, typeface2, i10, z2));
                     typefaceS = typeface2;
                 } else if (i9 == -1) {
-                    Object[] objArr4 = {bbtVar2};
+                    Object[] objArr4 = { bbtVar2 };
                     ArrayList arrayList6 = new ArrayList(1);
                     Object obj2 = objArr4[0];
                     Objects.requireNonNull(obj2);
@@ -197,7 +204,8 @@ public abstract class emf {
                     try {
                         try {
                             try {
-                                bby bbyVar = (bby) bbz.b.submit(new bbw(strE2, context, bbtVar2, i3, 0)).get(i9, TimeUnit.MILLISECONDS);
+                                bby bbyVar = (bby) bbz.b.submit(new bbw(strE2, context, bbtVar2, i3, 0)).get(i9,
+                                        TimeUnit.MILLISECONDS);
                                 ioVar.aq(bbyVar);
                                 typefaceS = bbyVar.a;
                             } catch (InterruptedException e) {
@@ -230,7 +238,8 @@ public abstract class emf {
     }
 
     public static String e(Resources resources, int i, String str, int i2, int i3) {
-        return resources.getResourcePackageName(i) + SignatureVisitor.SUPER + str + SignatureVisitor.SUPER + i2 + SignatureVisitor.SUPER + i + SignatureVisitor.SUPER + i3;
+        return resources.getResourcePackageName(i) + SignatureVisitor.SUPER + str + SignatureVisitor.SUPER + i2
+                + SignatureVisitor.SUPER + i + SignatureVisitor.SUPER + i3;
     }
 
     public static Typeface f(String str) {
@@ -250,7 +259,8 @@ public abstract class emf {
         }
         c.setTextSize(10.0f);
         c.setTypeface(typeface);
-        PositionedGlyphs positionedGlyphsShapeTextRun = TextRunShaper.shapeTextRun((CharSequence) " ", 0, 1, 0, 1, 0.0f, 0.0f, false, c);
+        PositionedGlyphs positionedGlyphsShapeTextRun = TextRunShaper.shapeTextRun((CharSequence) " ", 0, 1, 0, 1, 0.0f,
+                0.0f, false, c);
         if (positionedGlyphsShapeTextRun.glyphCount() == 0) {
             return null;
         }

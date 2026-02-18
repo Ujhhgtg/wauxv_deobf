@@ -6,7 +6,8 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class dyu {
     public static final dyt Companion = new dyt();
-    public static final btt[] a = {null, null, null, null, null, null, null, null, null, null, ewz.am(btx.a, new dtr(9)), null, null, null, null, null};
+    public static final btt[] a = { null, null, null, null, null, null, null, null, null, null,
+            ewz.am(btx.a, new dtr(9)), null, null, null, null, null };
     public final dsy b;
     public final Integer c;
     public final Integer d;
@@ -24,7 +25,9 @@ public final class dyu {
     public final Long p;
     public final dvr q;
 
-    public /* synthetic */ dyu(int i, dsy dsyVar, Integer num, Integer num2, Integer num3, Integer num4, ecg ecgVar, String str, Integer num5, String str2, Boolean bool, List list, Integer num6, Long l, Boolean bool2, Long l2, dvr dvrVar) {
+    public /* synthetic */ dyu(int i, dsy dsyVar, Integer num, Integer num2, Integer num3, Integer num4, ecg ecgVar,
+            String str, Integer num5, String str2, Boolean bool, List list, Integer num6, Long l, Boolean bool2,
+            Long l2, dvr dvrVar) {
         if (65535 != (i & 65535)) {
             bht.ah(i, 65535, dys.b.getDescriptor());
             throw null;
@@ -55,7 +58,14 @@ public final class dyu {
             return false;
         }
         dyu dyuVar = (dyu) obj;
-        return bzo.f(this.b, dyuVar.b) && bzo.f(this.c, dyuVar.c) && bzo.f(this.d, dyuVar.d) && bzo.f(this.e, dyuVar.e) && bzo.f(this.f, dyuVar.f) && bzo.f(this.g, dyuVar.g) && bzo.f(this.h, dyuVar.h) && bzo.f(this.i, dyuVar.i) && bzo.f(this.j, dyuVar.j) && bzo.f(this.k, dyuVar.k) && bzo.f(this.l, dyuVar.l) && bzo.f(this.m, dyuVar.m) && bzo.f(this.n, dyuVar.n) && bzo.f(this.o, dyuVar.o) && bzo.f(this.p, dyuVar.p) && bzo.f(this.q, dyuVar.q);
+        return nullSafeIsEqual(this.b, dyuVar.b) && nullSafeIsEqual(this.c, dyuVar.c)
+                && nullSafeIsEqual(this.d, dyuVar.d) && nullSafeIsEqual(this.e, dyuVar.e)
+                && nullSafeIsEqual(this.f, dyuVar.f) && nullSafeIsEqual(this.g, dyuVar.g)
+                && nullSafeIsEqual(this.h, dyuVar.h) && nullSafeIsEqual(this.i, dyuVar.i)
+                && nullSafeIsEqual(this.j, dyuVar.j) && nullSafeIsEqual(this.k, dyuVar.k)
+                && nullSafeIsEqual(this.l, dyuVar.l) && nullSafeIsEqual(this.m, dyuVar.m)
+                && nullSafeIsEqual(this.n, dyuVar.n) && nullSafeIsEqual(this.o, dyuVar.o)
+                && nullSafeIsEqual(this.p, dyuVar.p) && nullSafeIsEqual(this.q, dyuVar.q);
     }
 
     public final int hashCode() {

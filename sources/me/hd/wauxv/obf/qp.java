@@ -95,18 +95,18 @@ public final /* synthetic */ class qp implements cke, aww, awz, EventListener.Fa
             case 3:
                 final erp erpVar = (erp) this.c;
                 ahu ahuVar = (ahu) uaVar;
-                bzo.q(ahuVar, "event");
+                throwIfVar1IsNull(ahuVar, "event");
                 ContextMenu contextMenu = ahuVar.a;
-                bzo.q(contextMenu, "menu");
+                throwIfVar1IsNull(contextMenu, "menu");
                 CodeEditor codeEditor = (CodeEditor) erpVar.v;
                 Context context = codeEditor.getContext();
-                bzo.p(context, "getContext(...)");
+                throwIfVar1IsNull(context, "getContext(...)");
                 ArrayList<art> arrayList = new ArrayList();
                 art artVar = new art(context);
                 artVar.f(R.string.selectAll);
                 artVar.d = me.hd.wauxv.R.drawable.round_select_all_20;
                 aff text = codeEditor.getText();
-                bzo.p(text, "getText(...)");
+                throwIfVar1IsNull(text, "getText(...)");
                 artVar.c = !(text.d == 0);
                 final int i = 3;
                 int i2 = 0;
@@ -211,7 +211,8 @@ public final /* synthetic */ class qp implements cke, aww, awz, EventListener.Fa
                 arrayList.add(artVar4);
                 for (art artVar5 : arrayList) {
                     artVar5.getClass();
-                    MenuItem onMenuItemClickListener = contextMenu.add(0, 0, 0, artVar5.b).setEnabled(artVar5.c).setOnMenuItemClickListener(artVar5.e);
+                    MenuItem onMenuItemClickListener = contextMenu.add(0, 0, 0, artVar5.b).setEnabled(artVar5.c)
+                            .setOnMenuItemClickListener(artVar5.e);
                     int i6 = artVar5.d;
                     if (i6 != 0) {
                         onMenuItemClickListener.setIcon(i6);
@@ -254,14 +255,14 @@ public final /* synthetic */ class qp implements cke, aww, awz, EventListener.Fa
         ((RecyclerView) dovVar6.getValue()).setAdapter(aekVar.l);
         ael aelVar = aekVar.a;
         if (aelVar == null) {
-            bzo.ar("info" /* cnb.z(-394565760580394L) */);
+            throwLateinitPropNotInitYet("info" /* cnb.z(-394565760580394L) */);
             throw null;
         }
         ((EditText) dovVar.getValue()).setHint(aelVar.f);
         ((EditText) dovVar.getValue()).addTextChangedListener(new wg(aekVar, i2));
         ael aelVar2 = aekVar.a;
         if (aelVar2 == null) {
-            bzo.ar("info" /* cnb.z(-394527105874730L) */);
+            throwLateinitPropNotInitYet("info" /* cnb.z(-394527105874730L) */);
             throw null;
         }
         ((Button) dovVar3.getValue()).setText(aelVar2.h);
@@ -269,37 +270,37 @@ public final /* synthetic */ class qp implements cke, aww, awz, EventListener.Fa
         cde cdeVarT = dqc.bi((Button) dovVar2.getValue()).t();
         cdeVarT.ab = "setIconResource" /* cnb.z(-394539990776618L) */;
         Class cls = Integer.TYPE;
-        cdk cdkVar = (cdk) dkz.n(new Object[]{dal.b(cls)}, 1, cdeVarT);
+        cdk cdkVar = (cdk) dkz.n(new Object[] { dal.b(cls) }, 1, cdeVarT);
         ael aelVar3 = aekVar.a;
         if (aelVar3 == null) {
-            bzo.ar("info" /* cnb.z(-394471271299882L) */);
+            throwLateinitPropNotInitYet("info" /* cnb.z(-394471271299882L) */);
             throw null;
         }
         cdkVar.e(Integer.valueOf(aelVar3.g));
         cde cdeVarT2 = dqc.bi((Button) dovVar3.getValue()).t();
         cdeVarT2.ab = "setIconResource" /* cnb.z(-393882860780330L) */;
-        cdk cdkVar2 = (cdk) dkz.n(new Object[]{dal.b(cls)}, 1, cdeVarT2);
+        cdk cdkVar2 = (cdk) dkz.n(new Object[] { dal.b(cls) }, 1, cdeVarT2);
         ael aelVar4 = aekVar.a;
         if (aelVar4 == null) {
-            bzo.ar("info" /* cnb.z(-393814141303594L) */);
+            throwLateinitPropNotInitYet("info" /* cnb.z(-393814141303594L) */);
             throw null;
         }
         cdkVar2.e(Integer.valueOf(aelVar4.i));
         ael aelVar5 = aekVar.a;
         if (aelVar5 == null) {
-            bzo.ar("info" /* cnb.z(-393827026205482L) */);
+            throwLateinitPropNotInitYet("info" /* cnb.z(-393827026205482L) */);
             throw null;
         }
         ((Button) dovVar3.getValue()).setOnClickListener(new aeh(aelVar5.k, i, aekVar));
         ael aelVar6 = aekVar.a;
         if (aelVar6 == null) {
-            bzo.ar("info" /* cnb.z(-393788371499818L) */);
+            throwLateinitPropNotInitYet("info" /* cnb.z(-393788371499818L) */);
             throw null;
         }
         ((Button) dovVar2.getValue()).setText(aelVar6.j);
         ael aelVar7 = aekVar.a;
         if (aelVar7 == null) {
-            bzo.ar("info" /* cnb.z(-393732536924970L) */);
+            throwLateinitPropNotInitYet("info" /* cnb.z(-393732536924970L) */);
             throw null;
         }
         ((Button) dovVar2.getValue()).setOnClickListener(new aeh(aelVar7.l, i2, aekVar));
@@ -313,29 +314,34 @@ public final /* synthetic */ class qp implements cke, aww, awz, EventListener.Fa
         }
         ael aelVar8 = aekVar.a;
         if (aelVar8 == null) {
-            bzo.ar("info" /* cnb.z(-393762601696042L) */);
+            throwLateinitPropNotInitYet("info" /* cnb.z(-393762601696042L) */);
             throw null;
         }
         for (String str : aaz.z(aelVar8.d.keySet())) {
-            RadioButton radioButton = (RadioButton) ((RadioGroup) dovVar4.getValue()).findViewById(me.hd.wauxv.R.id.rbAll);
+            RadioButton radioButton = (RadioButton) ((RadioGroup) dovVar4.getValue())
+                    .findViewById(me.hd.wauxv.R.id.rbAll);
             ip ipVar = new ip(radioButton.getContext(), null, 0);
             ipVar.setTextColor(radioButton.getTextColors());
             ipVar.setTextSize(radioButton.getTextSize() / ipVar.getResources().getDisplayMetrics().scaledDensity);
             ipVar.setButtonTintList(radioButton.getButtonTintList());
             ipVar.setLayoutParams(radioButton.getLayoutParams());
-            ipVar.setPadding(ipVar.getPaddingLeft(), ipVar.getPaddingTop(), ipVar.getPaddingRight(), ipVar.getPaddingBottom());
+            ipVar.setPadding(ipVar.getPaddingLeft(), ipVar.getPaddingTop(), ipVar.getPaddingRight(),
+                    ipVar.getPaddingBottom());
             ipVar.setGravity(radioButton.getGravity());
             Drawable buttonDrawable = radioButton.getButtonDrawable();
-            ipVar.setButtonDrawable((buttonDrawable == null || (constantState2 = buttonDrawable.getConstantState()) == null) ? null : constantState2.newDrawable());
+            ipVar.setButtonDrawable(
+                    (buttonDrawable == null || (constantState2 = buttonDrawable.getConstantState()) == null) ? null
+                            : constantState2.newDrawable());
             Drawable background = radioButton.getBackground();
-            ipVar.setBackground((background == null || (constantState = background.getConstantState()) == null) ? null : constantState.newDrawable());
+            ipVar.setBackground((background == null || (constantState = background.getConstantState()) == null) ? null
+                    : constantState.newDrawable());
             ipVar.setText(str);
             ((RadioGroup) dovVar4.getValue()).addView(ipVar);
         }
         adw adwVar = aekVar.l;
         ael aelVar9 = aekVar.a;
         if (aelVar9 == null) {
-            bzo.ar("info" /* cnb.z(-393706767121194L) */);
+            throwLateinitPropNotInitYet("info" /* cnb.z(-393706767121194L) */);
             throw null;
         }
         ArrayList arrayList = aelVar9.c;
@@ -345,7 +351,9 @@ public final /* synthetic */ class qp implements cke, aww, awz, EventListener.Fa
         adw.h(adwVar, arrayList);
         aekVar.q();
         aekVar.o();
-        ((CheckBox) aekVar.j.getValue()).setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() { // from class: me.hd.wauxv.obf.aei
+        ((CheckBox) aekVar.j.getValue()).setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() { // from
+                                                                                                                   // class:
+                                                                                                                   // me.hd.wauxv.obf.aei
             @Override // android.widget.CompoundButton.OnCheckedChangeListener
             public final void onCheckedChanged(CompoundButton compoundButton, boolean z) {
                 switch (i) {
@@ -374,7 +382,9 @@ public final /* synthetic */ class qp implements cke, aww, awz, EventListener.Fa
         while (i < childCount2) {
             View childAt2 = radioGroup2.getChildAt(i);
             if (childAt2 instanceof RadioButton) {
-                ((RadioButton) childAt2).setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() { // from class: me.hd.wauxv.obf.aei
+                ((RadioButton) childAt2).setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() { // from
+                                                                                                                   // class:
+                                                                                                                   // me.hd.wauxv.obf.aei
                     @Override // android.widget.CompoundButton.OnCheckedChangeListener
                     public final void onCheckedChanged(CompoundButton compoundButton, boolean z) {
                         switch (i2) {
@@ -402,7 +412,8 @@ public final /* synthetic */ class qp implements cke, aww, awz, EventListener.Fa
             i++;
         }
         bmo.a.getClass();
-        ((LinearLayout) dovVar5.getValue()).getLayoutParams().height = bmo.n().getResources().getDisplayMetrics().heightPixels / 2;
+        ((LinearLayout) dovVar5.getValue())
+                .getLayoutParams().height = bmo.n().getResources().getDisplayMetrics().heightPixels / 2;
     }
 
     @Override // me.hd.wauxv.obf.awz
@@ -458,7 +469,9 @@ public final /* synthetic */ class qp implements cke, aww, awz, EventListener.Fa
                     aseVar.ae = false;
                 } else {
                     int i13 = dfbVar.o;
-                    if ((i13 == 2 || i13 == 3 || i13 == 4 || i13 == 5) && aseVar.ao(4) && ((Math.abs(dfbVar.m - dfbVar.a) > 80 || Math.abs(dfbVar.n - dfbVar.l) > 80) && aseVar.z.isShowing())) {
+                    if ((i13 == 2 || i13 == 3 || i13 == 4 || i13 == 5) && aseVar.ao(4)
+                            && ((Math.abs(dfbVar.m - dfbVar.a) > 80 || Math.abs(dfbVar.n - dfbVar.l) > 80)
+                                    && aseVar.z.isShowing())) {
                         aseVar.i();
                     } else if (aseVar.ao(1)) {
                         aseVar.an(false);

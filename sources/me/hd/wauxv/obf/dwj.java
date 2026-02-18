@@ -24,7 +24,7 @@ public final class dwj {
             return false;
         }
         dwj dwjVar = (dwj) obj;
-        return bzo.f(this.a, dwjVar.a) && bzo.f(this.b, dwjVar.b);
+        return nullSafeIsEqual(this.a, dwjVar.a) && nullSafeIsEqual(this.b, dwjVar.b);
     }
 
     public final int hashCode() {
@@ -38,6 +38,6 @@ public final class dwj {
         StringBuilder sb = new StringBuilder();
         sb.append("cq4Proto(pag_url=" /* cnb.z(-158832185572138L) */);
         yg.u(sb, this.a, -158772056029994L);
-        return bjs.q(sb, this.b, ')');
+        return concat(sb, this.b, ')');
     }
 }

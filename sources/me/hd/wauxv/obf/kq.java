@@ -5,7 +5,7 @@ import java.util.NoSuchElementException;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class kq implements Iterator, bsw {
+public final class kq implements Iterator, IEmpty {
     public int a;
     public int b;
     public boolean c;
@@ -66,14 +66,20 @@ public final class kq implements Iterator, bsw {
         this.c = false;
     }
 
-    /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'this' call moved to the top of the method (can break code
+     * semantics)
+     */
     public kq(kz kzVar) {
         this(kzVar.c);
         this.d = 2;
         this.e = kzVar;
     }
 
-    /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'this' call moved to the top of the method (can break code
+     * semantics)
+     */
     public kq(ku kuVar, int i) {
         this(kuVar.l);
         this.d = i;

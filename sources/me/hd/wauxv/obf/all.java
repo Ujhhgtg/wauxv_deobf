@@ -8,12 +8,12 @@ public final class all {
     public static final all a = new all();
 
     public final void b(AnimatorSet animatorSet) {
-        bzo.q(animatorSet, "animatorSet");
+        throwIfVar1IsNull(animatorSet, "animatorSet");
         animatorSet.reverse();
     }
 
     public final void c(AnimatorSet animatorSet, long j) {
-        bzo.q(animatorSet, "animatorSet");
+        throwIfVar1IsNull(animatorSet, "animatorSet");
         animatorSet.setCurrentPlayTime(j);
     }
 }

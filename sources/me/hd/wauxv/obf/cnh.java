@@ -62,7 +62,9 @@ public abstract class cnh {
         short s2 = (short) ((j >>> 16) & WebSocketProtocol.PAYLOAD_SHORT_MAX);
         short s3 = (short) (s + s2);
         short s4 = (short) (s2 ^ s);
-        return ((((long) ((short) ((s4 >>> 22) | (s4 << 10)))) | (((long) ((short) (((short) ((s3 >>> 23) | (s3 << 9))) + s))) << 16)) << 16) | ((long) ((short) (((short) (((short) ((s << 13) | (s >>> 19))) ^ s4)) ^ (s4 << 5))));
+        return ((((long) ((short) ((s4 >>> 22) | (s4 << 10))))
+                | (((long) ((short) (((short) ((s3 >>> 23) | (s3 << 9))) + s))) << 16)) << 16)
+                | ((long) ((short) (((short) (((short) ((s << 13) | (s >>> 19))) ^ s4)) ^ (s4 << 5))));
     }
 
     public static final void ac(Context context, String str) {
@@ -106,7 +108,9 @@ public abstract class cnh {
         cdeVarT.ak(cdy.c);
         Class cls = Integer.TYPE;
         cdeVarT.a = dal.b(cls);
-        ((cdk) dkz.n(new Object[]{"com.tencent.mm.opensdk.modelmsg.WXMediaMessage" /* cnb.z(-120332098730794L) */, dal.b(String.class), dal.b(String.class), dal.b(String.class), dal.b(cls), dal.b(String.class)}, 6, cdeVarT)).e(obj, str2, "" /* cnb.z(-120130235267882L) */, str, 2, null);
+        ((cdk) dkz.n(new Object[] { "com.tencent.mm.opensdk.modelmsg.WXMediaMessage" /* cnb.z(-120332098730794L) */,
+                dal.b(String.class), dal.b(String.class), dal.b(String.class), dal.b(cls), dal.b(String.class) }, 6,
+                cdeVarT)).e(obj, str2, "" /* cnb.z(-120130235267882L) */, str, 2, null);
     }
 
     public static File af(File file) throws IOException {
@@ -149,7 +153,7 @@ public abstract class cnh {
     }
 
     public static final Set i(dfx dfxVar) {
-        bzo.q(dfxVar, "<this>");
+        throwIfVar1IsNull(dfxVar, "<this>");
         if (dfxVar instanceof sr) {
             return ((sr) dfxVar).a();
         }
@@ -243,11 +247,13 @@ public abstract class cnh {
                         throw th;
                     }
                 } else if (Log.isLoggable("DrawableToBitmap", 5)) {
-                    Log.w("DrawableToBitmap", "Unable to draw " + current + " to Bitmap with Target.SIZE_ORIGINAL because the Drawable has no intrinsic height");
+                    Log.w("DrawableToBitmap", "Unable to draw " + current
+                            + " to Bitmap with Target.SIZE_ORIGINAL because the Drawable has no intrinsic height");
                 }
                 z = true;
             } else if (Log.isLoggable("DrawableToBitmap", 5)) {
-                Log.w("DrawableToBitmap", "Unable to draw " + current + " to Bitmap with Target.SIZE_ORIGINAL because the Drawable has no intrinsic width");
+                Log.w("DrawableToBitmap", "Unable to draw " + current
+                        + " to Bitmap with Target.SIZE_ORIGINAL because the Drawable has no intrinsic width");
             }
             bitmap = null;
             z = true;
@@ -265,14 +271,16 @@ public abstract class cnh {
         nu akjVar = Build.VERSION.SDK_INT >= 28 ? new akj(17) : new nu(17);
         PackageManager packageManager = context.getPackageManager();
         cna.j(packageManager, "Package manager required to locate emoji font provider");
-        Iterator<ResolveInfo> it = packageManager.queryIntentContentProviders(new Intent("androidx.content.action.LOAD_EMOJI_FONT"), 0).iterator();
+        Iterator<ResolveInfo> it = packageManager
+                .queryIntentContentProviders(new Intent("androidx.content.action.LOAD_EMOJI_FONT"), 0).iterator();
         while (true) {
             if (!it.hasNext()) {
                 providerInfo = null;
                 break;
             }
             providerInfo = it.next().providerInfo;
-            if (providerInfo != null && (applicationInfo = providerInfo.applicationInfo) != null && (applicationInfo.flags & 1) == 1) {
+            if (providerInfo != null && (applicationInfo = providerInfo.applicationInfo) != null
+                    && (applicationInfo.flags & 1) == 1) {
                 break;
             }
         }
@@ -302,14 +310,14 @@ public abstract class cnh {
     public static erk q(Class cls) throws InvocationTargetException {
         try {
             Object objNewInstance = cls.getDeclaredConstructor(null).newInstance(null);
-            bzo.n(objNewInstance);
+            throwIfVar1IsNull(objNewInstance);
             return (erk) objNewInstance;
         } catch (IllegalAccessException e2) {
-            throw new RuntimeException(bjs.l(cls, "Cannot create an instance of "), e2);
+            throw new RuntimeException(concatVar2Var1(cls, "Cannot create an instance of "), e2);
         } catch (InstantiationException e3) {
-            throw new RuntimeException(bjs.l(cls, "Cannot create an instance of "), e3);
+            throw new RuntimeException(concatVar2Var1(cls, "Cannot create an instance of "), e3);
         } catch (NoSuchMethodException e4) {
-            throw new RuntimeException(bjs.l(cls, "Cannot create an instance of "), e4);
+            throw new RuntimeException(concatVar2Var1(cls, "Cannot create an instance of "), e4);
         }
     }
 
@@ -408,7 +416,8 @@ public abstract class cnh {
         } else {
             if (!(obj instanceof Dialog)) {
                 ArrayList arrayList = ewq.a;
-                ewq.e("getHostView " /* cnb.z(-71936407239466L) */ + str + " Failed" /* cnb.z(-71863392795434L) */, null, 14);
+                ewq.e("getHostView " /* cnb.z(-71936407239466L) */ + str + " Failed" /* cnb.z(-71863392795434L) */,
+                        null, 14);
                 return null;
             }
             Integer numU3 = u(obj, str);
@@ -433,7 +442,8 @@ public abstract class cnh {
     }
 
     public static File x(String str) {
-        String str2 = "tmp_audio_" /* cnb.z(-398611619773226L) */ + str + '_' + System.currentTimeMillis() + TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH + str;
+        String str2 = "tmp_audio_" /* cnb.z(-398611619773226L) */ + str + '_' + System.currentTimeMillis()
+                + TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH + str;
         String str3 = g;
         if (str3 != null) {
             return new File(str3, str2);
@@ -458,16 +468,18 @@ public abstract class cnh {
             int iOrdinal = bhs.r().ordinal();
             if (iOrdinal != 0) {
                 if (iOrdinal != 1) {
-                    throw new abt();
+                    throw new QueryDidNotReturnUniqueResultRuntimeException();
                 }
-                throw new IllegalStateException("YukiHookAPI cannot support current Hook API or cannot found any available Hook APIs in current environment");
+                throw new IllegalStateException(
+                        "YukiHookAPI cannot support current Hook API or cannot found any available Hook APIs in current environment");
             }
             int iOrdinal2 = bhs.r().ordinal();
             if (iOrdinal2 != 0) {
                 if (iOrdinal2 != 1) {
-                    throw new abt();
+                    throw new QueryDidNotReturnUniqueResultRuntimeException();
                 }
-                throw new IllegalStateException("YukiHookAPI cannot support current Hook API or cannot found any available Hook APIs in current environment");
+                throw new IllegalStateException(
+                        "YukiHookAPI cannot support current Hook API or cannot found any available Hook APIs in current environment");
             }
             int iOrdinal3 = nhVar.e().ordinal();
             if (iOrdinal3 == 0) {
@@ -476,7 +488,7 @@ public abstract class cnh {
                 i = -10000;
             } else {
                 if (iOrdinal3 != 2) {
-                    throw new abt();
+                    throw new QueryDidNotReturnUniqueResultRuntimeException();
                 }
                 i = 10000;
             }

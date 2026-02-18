@@ -26,7 +26,8 @@ public final class ego {
             return false;
         }
         ego egoVar = (ego) obj;
-        return bzo.f(this.a, egoVar.a) && bzo.f(this.b, egoVar.b) && bzo.f(this.c, egoVar.c);
+        return nullSafeIsEqual(this.a, egoVar.a) && nullSafeIsEqual(this.b, egoVar.b)
+                && nullSafeIsEqual(this.c, egoVar.c);
     }
 
     public final int hashCode() {
@@ -43,6 +44,6 @@ public final class ego {
         sb.append("vd1Proto(show_type=" /* cnb.z(-312549065095978L) */);
         bjs.w(sb, this.a, -314146792930090L);
         bjs.w(sb, this.b, -314048008682282L);
-        return bjs.q(sb, this.c, ')');
+        return concat(sb, this.c, ')');
     }
 }

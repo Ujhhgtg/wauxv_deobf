@@ -39,9 +39,10 @@ class ObjectReaderImplInt8ValueArray extends ObjectReaderPrimitive {
             } else if (obj instanceof Number) {
                 bByteValue = ((Number) obj).byteValue();
             } else {
-                Function typeConvert = JSONFactory.getDefaultObjectReaderProvider().getTypeConvert(obj.getClass(), Byte.TYPE);
+                Function typeConvert = JSONFactory.getDefaultObjectReaderProvider().getTypeConvert(obj.getClass(),
+                        Byte.TYPE);
                 if (typeConvert == null) {
-                    throw new JSONException(bjs.m(obj, new StringBuilder("can not cast to byte ")));
+                    throw new JSONException(concatVar1GetClass(obj, new StringBuilder("can not cast to byte ")));
                 }
                 bByteValue = ((Byte) typeConvert.apply(obj)).byteValue();
             }
@@ -52,7 +53,8 @@ class ObjectReaderImplInt8ValueArray extends ObjectReaderPrimitive {
         return function != null ? function.apply(bArr) : bArr;
     }
 
-    @Override // com.alibaba.fastjson2.reader.ObjectReaderPrimitive, com.alibaba.fastjson2.reader.ObjectReader
+    @Override // com.alibaba.fastjson2.reader.ObjectReaderPrimitive,
+              // com.alibaba.fastjson2.reader.ObjectReader
     public Object readJSONBObject(JSONReader jSONReader, Type type, Object obj, long j) {
         byte[] bArrDecode;
         int iIndexOf;

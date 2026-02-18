@@ -15,7 +15,8 @@ public final class duz {
     public final String g;
     public final String h;
 
-    public /* synthetic */ duz(int i, String str, String str2, String str3, String str4, String str5, String str6, String str7, String str8) {
+    public /* synthetic */ duz(int i, String str, String str2, String str3, String str4, String str5, String str6,
+            String str7, String str8) {
         if (255 != (i & Opcodes.CONST_METHOD_TYPE)) {
             bht.ah(i, Opcodes.CONST_METHOD_TYPE, dux.b.getDescriptor());
             throw null;
@@ -38,7 +39,11 @@ public final class duz {
             return false;
         }
         duz duzVar = (duz) obj;
-        return bzo.f(this.a, duzVar.a) && bzo.f(this.b, duzVar.b) && bzo.f(this.c, duzVar.c) && bzo.f(this.d, duzVar.d) && bzo.f(this.e, duzVar.e) && bzo.f(this.f, duzVar.f) && bzo.f(this.g, duzVar.g) && bzo.f(this.h, duzVar.h);
+        return nullSafeIsEqual(this.a, duzVar.a) && nullSafeIsEqual(this.b, duzVar.b)
+                && nullSafeIsEqual(this.c, duzVar.c) && nullSafeIsEqual(this.d, duzVar.d)
+                && nullSafeIsEqual(this.e, duzVar.e) && nullSafeIsEqual(this.f, duzVar.f)
+                && nullSafeIsEqual(this.g, duzVar.g)
+                && nullSafeIsEqual(this.h, duzVar.h);
     }
 
     public final int hashCode() {
@@ -70,6 +75,6 @@ public final class duz {
         yg.u(sb, this.e, -155065499253546L);
         yg.u(sb, this.f, -155516470819626L);
         yg.u(sb, this.g, -155460636244778L);
-        return bjs.q(sb, this.h, ')');
+        return concat(sb, this.h, ')');
     }
 }

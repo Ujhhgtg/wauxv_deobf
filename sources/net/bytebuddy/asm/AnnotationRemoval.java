@@ -40,7 +40,10 @@ public class AnnotationRemoval extends AsmVisitorWrapper.AbstractBase {
     private final int parameters;
     private final boolean type;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class AnnotationRemovingClassVisitor extends ClassVisitor {
         private final ElementMatcher<? super AnnotationDescription> annotationMatcher;
         private final Map<String, AnnotationDescription> annotations;
@@ -99,7 +102,8 @@ public class AnnotationRemoval extends AsmVisitorWrapper.AbstractBase {
                     int index = parameterDescription.getIndex();
                     int i3 = this.parameters;
                     if (index == i3 || i3 < 0) {
-                        for (AnnotationDescription annotationDescription : parameterDescription.getDeclaredAnnotations()) {
+                        for (AnnotationDescription annotationDescription : parameterDescription
+                                .getDeclaredAnnotations()) {
                             map2.put(annotationDescription.getAnnotationType().getDescriptor(), annotationDescription);
                         }
                     }
@@ -116,7 +120,12 @@ public class AnnotationRemoval extends AsmVisitorWrapper.AbstractBase {
             return new AnnotationRemovingMethodVisitor(methodVisitorVisitMethod, this.annotationMatcher, map, map3);
         }
 
-        private AnnotationRemovingClassVisitor(ClassVisitor classVisitor, ElementMatcher<? super FieldDescription.InDefinedShape> elementMatcher, ElementMatcher<? super MethodDescription> elementMatcher2, ElementMatcher<? super AnnotationDescription> elementMatcher3, int i, Map<String, FieldDescription.InDefinedShape> map, Map<String, MethodDescription> map2, Map<String, AnnotationDescription> map3) {
+        private AnnotationRemovingClassVisitor(ClassVisitor classVisitor,
+                ElementMatcher<? super FieldDescription.InDefinedShape> elementMatcher,
+                ElementMatcher<? super MethodDescription> elementMatcher2,
+                ElementMatcher<? super AnnotationDescription> elementMatcher3, int i,
+                Map<String, FieldDescription.InDefinedShape> map, Map<String, MethodDescription> map2,
+                Map<String, AnnotationDescription> map3) {
             super(OpenedClassReader.ASM_API, classVisitor);
             this.fieldMatcher = elementMatcher;
             this.methodMatcher = elementMatcher2;
@@ -128,7 +137,10 @@ public class AnnotationRemoval extends AsmVisitorWrapper.AbstractBase {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class AnnotationRemovingFieldVisitor extends FieldVisitor {
         private final ElementMatcher<? super AnnotationDescription> annotationMatcher;
         private final Map<String, AnnotationDescription> annotations;
@@ -143,14 +155,18 @@ public class AnnotationRemoval extends AsmVisitorWrapper.AbstractBase {
             return null;
         }
 
-        private AnnotationRemovingFieldVisitor(FieldVisitor fieldVisitor, ElementMatcher<? super AnnotationDescription> elementMatcher, Map<String, AnnotationDescription> map) {
+        private AnnotationRemovingFieldVisitor(FieldVisitor fieldVisitor,
+                ElementMatcher<? super AnnotationDescription> elementMatcher, Map<String, AnnotationDescription> map) {
             super(OpenedClassReader.ASM_API, fieldVisitor);
             this.annotationMatcher = elementMatcher;
             this.annotations = map;
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class AnnotationRemovingMethodVisitor extends MethodVisitor {
         private final ElementMatcher<? super AnnotationDescription> annotationMatcher;
         private final Map<String, AnnotationDescription> annotations;
@@ -180,7 +196,9 @@ public class AnnotationRemoval extends AsmVisitorWrapper.AbstractBase {
             return null;
         }
 
-        private AnnotationRemovingMethodVisitor(MethodVisitor methodVisitor, ElementMatcher<? super AnnotationDescription> elementMatcher, Map<Integer, Map<String, AnnotationDescription>> map, Map<String, AnnotationDescription> map2) {
+        private AnnotationRemovingMethodVisitor(MethodVisitor methodVisitor,
+                ElementMatcher<? super AnnotationDescription> elementMatcher,
+                Map<Integer, Map<String, AnnotationDescription>> map, Map<String, AnnotationDescription> map2) {
             super(OpenedClassReader.ASM_API, methodVisitor);
             this.annotationMatcher = elementMatcher;
             this.parameterAnnotations = map;
@@ -188,7 +206,9 @@ public class AnnotationRemoval extends AsmVisitorWrapper.AbstractBase {
         }
     }
 
-    public AnnotationRemoval(boolean z, ElementMatcher<? super FieldDescription.InDefinedShape> elementMatcher, ElementMatcher<? super MethodDescription> elementMatcher2, ElementMatcher<? super AnnotationDescription> elementMatcher3, int i) {
+    public AnnotationRemoval(boolean z, ElementMatcher<? super FieldDescription.InDefinedShape> elementMatcher,
+            ElementMatcher<? super MethodDescription> elementMatcher2,
+            ElementMatcher<? super AnnotationDescription> elementMatcher3, int i) {
         this.type = z;
         this.fieldMatcher = elementMatcher;
         this.methodMatcher = elementMatcher2;
@@ -208,11 +228,17 @@ public class AnnotationRemoval extends AsmVisitorWrapper.AbstractBase {
             return false;
         }
         AnnotationRemoval annotationRemoval = (AnnotationRemoval) obj;
-        return this.type == annotationRemoval.type && this.parameters == annotationRemoval.parameters && this.fieldMatcher.equals(annotationRemoval.fieldMatcher) && this.methodMatcher.equals(annotationRemoval.methodMatcher) && this.annotationMatcher.equals(annotationRemoval.annotationMatcher);
+        return this.type == annotationRemoval.type && this.parameters == annotationRemoval.parameters
+                && this.fieldMatcher.equals(annotationRemoval.fieldMatcher)
+                && this.methodMatcher.equals(annotationRemoval.methodMatcher)
+                && this.annotationMatcher.equals(annotationRemoval.annotationMatcher);
     }
 
     public int hashCode() {
-        return dkz.i(this.annotationMatcher, dkz.i(this.methodMatcher, dkz.i(this.fieldMatcher, ((getClass().hashCode() * 31) + (this.type ? 1 : 0)) * 31, 31), 31), 31) + this.parameters;
+        return dkz.i(this.annotationMatcher,
+                dkz.i(this.methodMatcher,
+                        dkz.i(this.fieldMatcher, ((getClass().hashCode() * 31) + (this.type ? 1 : 0)) * 31, 31), 31),
+                31) + this.parameters;
     }
 
     public AsmVisitorWrapper onConstructorParameter(ElementMatcher<? super MethodDescription> elementMatcher, int i) {
@@ -239,7 +265,7 @@ public class AnnotationRemoval extends AsmVisitorWrapper.AbstractBase {
         if (i >= 0) {
             return new AnnotationRemoval(false, ElementMatchers.none(), elementMatcher, this.annotationMatcher, i);
         }
-        throw new IllegalArgumentException(bjs.i(i, "Parameter index cannot be negative: "));
+        throw new IllegalArgumentException(concatVar2Var1(i, "Parameter index cannot be negative: "));
     }
 
     public AsmVisitorWrapper onInvokableParameters(ElementMatcher<? super MethodDescription> elementMatcher) {
@@ -247,7 +273,8 @@ public class AnnotationRemoval extends AsmVisitorWrapper.AbstractBase {
     }
 
     public AsmVisitorWrapper onInvokables(ElementMatcher<? super MethodDescription> elementMatcher) {
-        return new AnnotationRemoval(false, ElementMatchers.none(), elementMatcher, this.annotationMatcher, METHOD_ONLY);
+        return new AnnotationRemoval(false, ElementMatchers.none(), elementMatcher, this.annotationMatcher,
+                METHOD_ONLY);
     }
 
     public AsmVisitorWrapper onInvokablesAndParameters(ElementMatcher<? super MethodDescription> elementMatcher) {
@@ -275,7 +302,9 @@ public class AnnotationRemoval extends AsmVisitorWrapper.AbstractBase {
     }
 
     @Override // net.bytebuddy.asm.AsmVisitorWrapper
-    public ClassVisitor wrap(TypeDescription typeDescription, ClassVisitor classVisitor, Implementation.Context context, TypePool typePool, FieldList<FieldDescription.InDefinedShape> fieldList, MethodList<?> methodList, int i, int i2) {
+    public ClassVisitor wrap(TypeDescription typeDescription, ClassVisitor classVisitor, Implementation.Context context,
+            TypePool typePool, FieldList<FieldDescription.InDefinedShape> fieldList, MethodList<?> methodList, int i,
+            int i2) {
         HashMap map = new HashMap();
         if (this.type) {
             for (AnnotationDescription annotationDescription : typeDescription.getDeclaredAnnotations()) {
@@ -287,9 +316,11 @@ public class AnnotationRemoval extends AsmVisitorWrapper.AbstractBase {
             map2.put(inDefinedShape.getInternalName() + inDefinedShape.getDescriptor(), inDefinedShape);
         }
         HashMap map3 = new HashMap();
-        for (MethodDescription methodDescription : CompoundList.of(methodList, new MethodDescription.Latent.TypeInitializer(typeDescription))) {
+        for (MethodDescription methodDescription : CompoundList.of(methodList,
+                new MethodDescription.Latent.TypeInitializer(typeDescription))) {
             map3.put(methodDescription.getInternalName() + methodDescription.getDescriptor(), methodDescription);
         }
-        return new AnnotationRemovingClassVisitor(classVisitor, this.fieldMatcher, this.methodMatcher, this.annotationMatcher, this.parameters, map2, map3, map);
+        return new AnnotationRemovingClassVisitor(classVisitor, this.fieldMatcher, this.methodMatcher,
+                this.annotationMatcher, this.parameters, map2, map3, map);
     }
 }

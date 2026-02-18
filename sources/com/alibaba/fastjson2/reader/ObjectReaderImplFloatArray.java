@@ -32,9 +32,10 @@ final class ObjectReaderImplFloatArray extends ObjectReaderPrimitive {
             } else if (obj instanceof Number) {
                 fValueOf = Float.valueOf(((Number) obj).floatValue());
             } else {
-                Function typeConvert = JSONFactory.getDefaultObjectReaderProvider().getTypeConvert(obj.getClass(), Float.class);
+                Function typeConvert = JSONFactory.getDefaultObjectReaderProvider().getTypeConvert(obj.getClass(),
+                        Float.class);
                 if (typeConvert == null) {
-                    throw new JSONException(bjs.m(obj, new StringBuilder("can not cast to Float ")));
+                    throw new JSONException(concatVar1GetClass(obj, new StringBuilder("can not cast to Float ")));
                 }
                 fValueOf = (Float) typeConvert.apply(obj);
             }
@@ -44,7 +45,8 @@ final class ObjectReaderImplFloatArray extends ObjectReaderPrimitive {
         return fArr;
     }
 
-    @Override // com.alibaba.fastjson2.reader.ObjectReaderPrimitive, com.alibaba.fastjson2.reader.ObjectReader
+    @Override // com.alibaba.fastjson2.reader.ObjectReaderPrimitive,
+              // com.alibaba.fastjson2.reader.ObjectReader
     public Object readJSONBObject(JSONReader jSONReader, Type type, Object obj, long j) {
         if (jSONReader.nextIfMatch(JSONB.Constants.BC_TYPED_ANY) && jSONReader.readTypeHashCode() != HASH_TYPE) {
             throw new JSONException("not support autoType : " + jSONReader.getString());

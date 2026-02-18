@@ -22,7 +22,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
 
     @Override // me.hd.wauxv.obf.rm
     public final int ab(crv crvVar) throws EOFException {
-        bzo.q(crvVar, "options");
+        throwIfVar1IsNull(crvVar, "options");
         int iD = b.d(this, crvVar, false);
         if (iD == -1) {
             return -1;
@@ -45,7 +45,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
         int i3 = 0;
         int i4 = 0;
         while (i3 < i) {
-            bzo.n(dfjVar);
+            throwIfVar1IsNull(dfjVar);
             int i5 = dfjVar.c;
             int i6 = dfjVar.b;
             if (i5 == i6) {
@@ -60,7 +60,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
         dfj dfjVar2 = this.a;
         int i7 = 0;
         while (i2 < i) {
-            bzo.n(dfjVar2);
+            throwIfVar1IsNull(dfjVar2);
             bArr[i7] = dfjVar2.a;
             i2 += dfjVar2.c - dfjVar2.b;
             iArr[i7] = Math.min(i2, i);
@@ -97,7 +97,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
             return dfjVarE;
         }
         dfj dfjVar2 = dfjVar.g;
-        bzo.n(dfjVar2);
+        throwIfVar1IsNull(dfjVar2);
         if (dfjVar2.c + i <= 8192 && dfjVar2.e) {
             return dfjVar2;
         }
@@ -130,7 +130,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
         long j = 0;
         do {
             dfj dfjVar = this.a;
-            bzo.n(dfjVar);
+            throwIfVar1IsNull(dfjVar);
             byte[] bArr = dfjVar.a;
             int i3 = dfjVar.b;
             int i4 = dfjVar.c;
@@ -147,7 +147,9 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
                             break;
                         }
                         char[] cArr = ajn.a;
-                        throw new NumberFormatException("Expected leading [0-9a-fA-F] character but was 0x".concat(new String(new char[]{cArr[(b >> 4) & 15], cArr[b & com.umeng.analytics.pro.dn.m]})));
+                        throw new NumberFormatException(
+                                "Expected leading [0-9a-fA-F] character but was 0x".concat(new String(
+                                        new char[] { cArr[(b >> 4) & 15], cArr[b & com.umeng.analytics.pro.dn.m] })));
                     }
                     i = b - 55;
                 }
@@ -181,7 +183,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
     }
 
     public final void al(sj sjVar) {
-        bzo.q(sjVar, "byteString");
+        throwIfVar1IsNull(sjVar, "byteString");
         sjVar.o(sjVar.g(), this);
     }
 
@@ -212,7 +214,12 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
             z = false;
         }
         if (j >= 100000000) {
-            i = j < 1000000000000L ? j < RealConnection.IDLE_CONNECTION_HEALTHY_NS ? j < 1000000000 ? 9 : 10 : j < 100000000000L ? 11 : 12 : j < 1000000000000000L ? j < 10000000000000L ? 13 : j < 100000000000000L ? 14 : 15 : j < 100000000000000000L ? j < 10000000000000000L ? 16 : 17 : j < 1000000000000000000L ? 18 : 19;
+            i = j < 1000000000000L
+                    ? j < RealConnection.IDLE_CONNECTION_HEALTHY_NS ? j < 1000000000 ? 9 : 10
+                            : j < 100000000000L ? 11 : 12
+                    : j < 1000000000000000L ? j < 10000000000000L ? 13 : j < 100000000000000L ? 14 : 15
+                            : j < 100000000000000000L ? j < 10000000000000000L ? 16 : 17
+                                    : j < 1000000000000000000L ? 18 : 19;
         } else if (j >= 10000) {
             i = j < 1000000 ? j < 100000 ? 5 : 6 : j < 10000000 ? 7 : 8;
         } else if (j >= 100) {
@@ -229,7 +236,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
         while (j != 0) {
             long j2 = 10;
             i2--;
-            bArr[i2] = b.a[(int) (j % j2)];
+            bArr[i2] = b.cachedConstructors[(int) (j % j2)];
             j /= j2;
         }
         if (z) {
@@ -260,7 +267,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
         byte[] bArr = dfjVarAg.a;
         int i2 = dfjVarAg.c;
         for (int i3 = (i2 + i) - 1; i3 >= i2; i3--) {
-            bArr[i3] = b.a[(int) (15 & j)];
+            bArr[i3] = b.cachedConstructors[(int) (15 & j)];
             j >>>= 4;
         }
         dfjVarAg.c += i;
@@ -307,7 +314,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
 
     public final void as(String str, int i, int i2, Charset charset) {
         if (i < 0) {
-            throw new IllegalArgumentException(bjs.i(i, "beginIndex < 0: ").toString());
+            throw new IllegalArgumentException(concatVar2Var1(i, "beginIndex < 0: ").toString());
         }
         if (i2 < i) {
             throw new IllegalArgumentException(dkz.p(i2, "endIndex < beginIndex: ", " < ", i).toString());
@@ -322,22 +329,22 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
             return;
         }
         String strSubstring = str.substring(i, i2);
-        bzo.p(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
+        throwIfVar1IsNull(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
         byte[] bytes = strSubstring.getBytes(charset);
-        bzo.p(bytes, "this as java.lang.String).getBytes(charset)");
+        throwIfVar1IsNull(bytes, "this as java.lang.String).getBytes(charset)");
         write(bytes, 0, bytes.length);
     }
 
     public final void at(String str) {
-        bzo.q(str, "string");
+        throwIfVar1IsNull(str, "string");
         au(str, 0, str.length());
     }
 
     public final void au(String str, int i, int i2) {
         char cCharAt;
-        bzo.q(str, "string");
+        throwIfVar1IsNull(str, "string");
         if (i < 0) {
-            throw new IllegalArgumentException(bjs.i(i, "beginIndex < 0: ").toString());
+            throw new IllegalArgumentException(concatVar2Var1(i, "beginIndex < 0: ").toString());
         }
         if (i2 < i) {
             throw new IllegalArgumentException(dkz.p(i2, "endIndex < beginIndex: ", " < ", i).toString());
@@ -457,7 +464,8 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
         StringBuilder sb = new StringBuilder("Unexpected code point: 0x");
         if (i != 0) {
             char[] cArr = ajn.a;
-            char[] cArr2 = {cArr[(i >> 28) & 15], cArr[(i >> 24) & 15], cArr[(i >> 20) & 15], cArr[(i >> 16) & 15], cArr[(i >> 12) & 15], cArr[(i >> 8) & 15], cArr[(i >> 4) & 15], cArr[i & 15]};
+            char[] cArr2 = { cArr[(i >> 28) & 15], cArr[(i >> 24) & 15], cArr[(i >> 20) & 15], cArr[(i >> 16) & 15],
+                    cArr[(i >> 12) & 15], cArr[(i >> 8) & 15], cArr[(i >> 4) & 15], cArr[i & 15] };
             int i5 = 0;
             while (i5 < 8 && cArr2[i5] == '0') {
                 i5++;
@@ -476,7 +484,8 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
         return this;
     }
 
-    @Override // java.io.Closeable, java.lang.AutoCloseable, java.nio.channels.Channel, me.hd.wauxv.obf.dhy
+    @Override // java.io.Closeable, java.lang.AutoCloseable, java.nio.channels.Channel,
+              // me.hd.wauxv.obf.dhy
     public final void close() {
     }
 
@@ -516,9 +525,9 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
             return true;
         }
         dfj dfjVar = this.a;
-        bzo.n(dfjVar);
+        throwIfVar1IsNull(dfjVar);
         dfj dfjVar2 = rhVar.a;
-        bzo.n(dfjVar2);
+        throwIfVar1IsNull(dfjVar2);
         int i = dfjVar.b;
         int i2 = dfjVar2.b;
         long j2 = 0;
@@ -537,12 +546,12 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
             }
             if (i == dfjVar.c) {
                 dfjVar = dfjVar.f;
-                bzo.n(dfjVar);
+                throwIfVar1IsNull(dfjVar);
                 i = dfjVar.b;
             }
             if (i2 == dfjVar2.c) {
                 dfjVar2 = dfjVar2.f;
-                bzo.n(dfjVar2);
+                throwIfVar1IsNull(dfjVar2);
                 i2 = dfjVar2.b;
             }
             j2 += jMin;
@@ -550,22 +559,25 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
         return true;
     }
 
-    /* JADX INFO: renamed from: f, reason: merged with bridge method [inline-methods] */
+    /*
+     * JADX INFO: renamed from: f, reason: merged with bridge method
+     * [inline-methods]
+     */
     public final rh clone() {
         rh rhVar = new rh();
         if (this.b == 0) {
             return rhVar;
         }
         dfj dfjVar = this.a;
-        bzo.n(dfjVar);
+        throwIfVar1IsNull(dfjVar);
         dfj dfjVarJ = dfjVar.j();
         rhVar.a = dfjVarJ;
         dfjVarJ.g = dfjVarJ;
         dfjVarJ.f = dfjVarJ;
         for (dfj dfjVar2 = dfjVar.f; dfjVar2 != dfjVar; dfjVar2 = dfjVar2.f) {
             dfj dfjVar3 = dfjVarJ.g;
-            bzo.n(dfjVar3);
-            bzo.n(dfjVar2);
+            throwIfVar1IsNull(dfjVar3);
+            throwIfVar1IsNull(dfjVar2);
             dfjVar3.i(dfjVar2.j());
         }
         rhVar.b = this.b;
@@ -598,7 +610,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
                 i = (i * 31) + dfjVar.a[i3];
             }
             dfjVar = dfjVar.f;
-            bzo.n(dfjVar);
+            throwIfVar1IsNull(dfjVar);
         } while (dfjVar != this.a);
         return i;
     }
@@ -635,7 +647,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
         boolean z2 = false;
         loop0: while (true) {
             dfj dfjVar = this.a;
-            bzo.n(dfjVar);
+            throwIfVar1IsNull(dfjVar);
             byte[] bArr = dfjVar.a;
             int i3 = dfjVar.b;
             int i4 = dfjVar.c;
@@ -687,7 +699,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
                 if (j5 == j) {
                     throw new EOFException();
                 }
-                StringBuilder sbR = bjs.r(z ? "Expected a digit" : "Expected a digit or '-'", " but was 0x");
+                StringBuilder sbR = concat(z ? "Expected a digit" : "Expected a digit or '-'", " but was 0x");
                 byte bN = n(j);
                 char[] cArr = ajn.a;
                 char c2 = cArr[(bN >> 4) & 15];
@@ -710,7 +722,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
     }
 
     public final void l(long j, rh rhVar, long j2) {
-        bzo.q(rhVar, "out");
+        throwIfVar1IsNull(rhVar, "out");
         long j3 = j;
         aye.n(this.b, j3, j2);
         if (j2 == 0) {
@@ -719,7 +731,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
         rhVar.b += j2;
         dfj dfjVar = this.a;
         while (true) {
-            bzo.n(dfjVar);
+            throwIfVar1IsNull(dfjVar);
             long j4 = dfjVar.c - dfjVar.b;
             if (j3 < j4) {
                 break;
@@ -730,7 +742,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
         dfj dfjVar2 = dfjVar;
         long j5 = j2;
         while (j5 > 0) {
-            bzo.n(dfjVar2);
+            throwIfVar1IsNull(dfjVar2);
             dfj dfjVarJ = dfjVar2.j();
             int i = dfjVarJ.b + ((int) j3);
             dfjVarJ.b = i;
@@ -742,7 +754,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
                 rhVar.a = dfjVarJ;
             } else {
                 dfj dfjVar4 = dfjVar3.g;
-                bzo.n(dfjVar4);
+                throwIfVar1IsNull(dfjVar4);
                 dfjVar4.i(dfjVarJ);
             }
             j5 -= (long) (dfjVarJ.c - dfjVarJ.b);
@@ -759,28 +771,29 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
         long j2 = j != Long.MAX_VALUE ? j + 1 : Long.MAX_VALUE;
         long jO = o(0L, j2, (byte) 10);
         if (jO != -1) {
-            return b.c(this, jO);
+            return b.createInstanceWithArgs(this, jO);
         }
         if (j2 < this.b && n(j2 - 1) == 13 && n(j2) == 10) {
-            return b.c(this, j2);
+            return b.createInstanceWithArgs(this, j2);
         }
         rh rhVar = new rh();
         l(0L, rhVar, Math.min(32, this.b));
-        throw new EOFException("\\n not found: limit=" + Math.min(this.b, j) + " content=" + rhVar.e(rhVar.b).h() + (char) 8230);
+        throw new EOFException(
+                "\\n not found: limit=" + Math.min(this.b, j) + " content=" + rhVar.e(rhVar.b).h() + (char) 8230);
     }
 
     public final byte n(long j) {
         aye.n(this.b, j, 1L);
         dfj dfjVar = this.a;
         if (dfjVar == null) {
-            bzo.n(null);
+            throwIfVar1IsNull(null);
             throw null;
         }
         long j2 = this.b;
         if (j2 - j < j) {
             while (j2 > j) {
                 dfjVar = dfjVar.g;
-                bzo.n(dfjVar);
+                throwIfVar1IsNull(dfjVar);
                 j2 -= (long) (dfjVar.c - dfjVar.b);
             }
             return dfjVar.a[(int) ((((long) dfjVar.b) + j) - j2)];
@@ -794,7 +807,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
                 return dfjVar.a[(int) ((((long) i2) + j) - j3)];
             }
             dfjVar = dfjVar.f;
-            bzo.n(dfjVar);
+            throwIfVar1IsNull(dfjVar);
             j3 = j4;
         }
     }
@@ -815,7 +828,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
         if (j4 - j < j) {
             while (j4 > j) {
                 dfjVar = dfjVar.g;
-                bzo.n(dfjVar);
+                throwIfVar1IsNull(dfjVar);
                 j4 -= (long) (dfjVar.c - dfjVar.b);
             }
             while (j4 < j2) {
@@ -828,7 +841,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
                 }
                 j4 += (long) (dfjVar.c - dfjVar.b);
                 dfjVar = dfjVar.f;
-                bzo.n(dfjVar);
+                throwIfVar1IsNull(dfjVar);
                 j = j4;
             }
             return -1L;
@@ -839,7 +852,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
                 break;
             }
             dfjVar = dfjVar.f;
-            bzo.n(dfjVar);
+            throwIfVar1IsNull(dfjVar);
             j3 = j5;
         }
         while (j3 < j2) {
@@ -852,7 +865,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
             }
             j3 += (long) (dfjVar.c - dfjVar.b);
             dfjVar = dfjVar.f;
-            bzo.n(dfjVar);
+            throwIfVar1IsNull(dfjVar);
             j = j3;
         }
         return -1L;
@@ -860,7 +873,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
 
     @Override // me.hd.wauxv.obf.rm
     public final void p(rh rhVar, long j) throws EOFException {
-        bzo.q(rhVar, "sink");
+        throwIfVar1IsNull(rhVar, "sink");
         long j2 = this.b;
         if (j2 >= j) {
             rhVar.write(this, j);
@@ -883,7 +896,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
 
     @Override // me.hd.wauxv.obf.rl
     public final long r(dlc dlcVar) {
-        bzo.q(dlcVar, "source");
+        throwIfVar1IsNull(dlcVar, "source");
         long j = 0;
         while (true) {
             long j2 = dlcVar.read(this, 8192L);
@@ -896,7 +909,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
 
     @Override // me.hd.wauxv.obf.dlc
     public final long read(rh rhVar, long j) {
-        bzo.q(rhVar, "sink");
+        throwIfVar1IsNull(rhVar, "sink");
         if (j < 0) {
             throw new IllegalArgumentException(dts.b(j, "byteCount < 0: ").toString());
         }
@@ -917,7 +930,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
             throw new EOFException();
         }
         dfj dfjVar = this.a;
-        bzo.n(dfjVar);
+        throwIfVar1IsNull(dfjVar);
         int i = dfjVar.b;
         int i2 = dfjVar.c;
         int i3 = i + 1;
@@ -934,7 +947,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
 
     @Override // me.hd.wauxv.obf.rm
     public final void readFully(byte[] bArr) throws EOFException {
-        bzo.q(bArr, "sink");
+        throwIfVar1IsNull(bArr, "sink");
         int i = 0;
         while (i < bArr.length) {
             int i2 = read(bArr, i, bArr.length - i);
@@ -951,11 +964,12 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
             throw new EOFException();
         }
         dfj dfjVar = this.a;
-        bzo.n(dfjVar);
+        throwIfVar1IsNull(dfjVar);
         int i = dfjVar.b;
         int i2 = dfjVar.c;
         if (i2 - i < 4) {
-            return ((readByte() & 255) << 24) | ((readByte() & 255) << 16) | ((readByte() & 255) << 8) | (readByte() & 255);
+            return ((readByte() & 255) << 24) | ((readByte() & 255) << 16) | ((readByte() & 255) << 8)
+                    | (readByte() & 255);
         }
         byte[] bArr = dfjVar.a;
         int i3 = i + 3;
@@ -978,7 +992,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
             throw new EOFException();
         }
         dfj dfjVar = this.a;
-        bzo.n(dfjVar);
+        throwIfVar1IsNull(dfjVar);
         int i = dfjVar.b;
         int i2 = dfjVar.c;
         if (i2 - i < 8) {
@@ -986,7 +1000,10 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
         }
         byte[] bArr = dfjVar.a;
         int i3 = i + 7;
-        long j = ((((long) bArr[i]) & 255) << 56) | ((((long) bArr[i + 1]) & 255) << 48) | ((((long) bArr[i + 2]) & 255) << 40) | ((((long) bArr[i + 3]) & 255) << 32) | ((((long) bArr[i + 4]) & 255) << 24) | ((((long) bArr[i + 5]) & 255) << 16) | ((((long) bArr[i + 6]) & 255) << 8);
+        long j = ((((long) bArr[i]) & 255) << 56) | ((((long) bArr[i + 1]) & 255) << 48)
+                | ((((long) bArr[i + 2]) & 255) << 40) | ((((long) bArr[i + 3]) & 255) << 32)
+                | ((((long) bArr[i + 4]) & 255) << 24) | ((((long) bArr[i + 5]) & 255) << 16)
+                | ((((long) bArr[i + 6]) & 255) << 8);
         int i4 = i + 8;
         long j2 = j | (((long) bArr[i3]) & 255);
         this.b -= 8;
@@ -1005,7 +1022,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
             throw new EOFException();
         }
         dfj dfjVar = this.a;
-        bzo.n(dfjVar);
+        throwIfVar1IsNull(dfjVar);
         int i = dfjVar.b;
         int i2 = dfjVar.c;
         if (i2 - i < 2) {
@@ -1028,13 +1045,13 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
 
     @Override // me.hd.wauxv.obf.rm
     public final String readString(Charset charset) {
-        bzo.q(charset, "charset");
+        throwIfVar1IsNull(charset, "charset");
         return z(this.b, charset);
     }
 
     @Override // me.hd.wauxv.obf.rm
     public final boolean s(long j, sj sjVar) {
-        bzo.q(sjVar, "bytes");
+        throwIfVar1IsNull(sjVar, "bytes");
         int iG = sjVar.g();
         if (j >= 0 && iG >= 0 && this.b - j >= iG && sjVar.g() >= iG) {
             for (int i = 0; i < iG; i++) {
@@ -1069,7 +1086,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
     public final long t(sj sjVar) {
         int i;
         int i2;
-        bzo.q(sjVar, "targetBytes");
+        throwIfVar1IsNull(sjVar, "targetBytes");
         dfj dfjVar = this.a;
         if (dfjVar == null) {
             return -1L;
@@ -1079,7 +1096,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
         if (j < 0) {
             while (j > 0) {
                 dfjVar = dfjVar.g;
-                bzo.n(dfjVar);
+                throwIfVar1IsNull(dfjVar);
                 j -= (long) (dfjVar.c - dfjVar.b);
             }
             if (sjVar.g() == 2) {
@@ -1093,7 +1110,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
                         if (i >= i3) {
                             j2 = ((long) (dfjVar.c - dfjVar.b)) + j;
                             dfjVar = dfjVar.f;
-                            bzo.n(dfjVar);
+                            throwIfVar1IsNull(dfjVar);
                             j = j2;
                         } else {
                             byte b = bArr[i];
@@ -1129,7 +1146,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
                     } else {
                         j2 = ((long) (dfjVar.c - dfjVar.b)) + j;
                         dfjVar = dfjVar.f;
-                        bzo.n(dfjVar);
+                        throwIfVar1IsNull(dfjVar);
                         j = j2;
                     }
                 }
@@ -1143,7 +1160,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
                 break;
             }
             dfjVar = dfjVar.f;
-            bzo.n(dfjVar);
+            throwIfVar1IsNull(dfjVar);
             j = j3;
         }
         if (sjVar.g() == 2) {
@@ -1157,7 +1174,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
                     if (i >= i6) {
                         j2 = ((long) (dfjVar.c - dfjVar.b)) + j;
                         dfjVar = dfjVar.f;
-                        bzo.n(dfjVar);
+                        throwIfVar1IsNull(dfjVar);
                         j = j2;
                     } else {
                         byte b3 = bArr3[i];
@@ -1193,7 +1210,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
                 } else {
                     j2 = ((long) (dfjVar.c - dfjVar.b)) + j;
                     dfjVar = dfjVar.f;
-                    bzo.n(dfjVar);
+                    throwIfVar1IsNull(dfjVar);
                     j = j2;
                 }
             }
@@ -1222,8 +1239,8 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
     }
 
     public final rf v(rf rfVar) {
-        bzo.q(rfVar, "unsafeCursor");
-        byte[] bArr = b.a;
+        throwIfVar1IsNull(rfVar, "unsafeCursor");
+        byte[] bArr = b.cachedConstructors;
         if (rfVar == aye.b) {
             rfVar = new rf();
         }
@@ -1282,7 +1299,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
     }
 
     public final String z(long j, Charset charset) throws EOFException {
-        bzo.q(charset, "charset");
+        throwIfVar1IsNull(charset, "charset");
         if (j < 0 || j > 2147483647L) {
             throw new IllegalArgumentException(dts.b(j, "byteCount: ").toString());
         }
@@ -1293,7 +1310,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
             return "";
         }
         dfj dfjVar = this.a;
-        bzo.n(dfjVar);
+        throwIfVar1IsNull(dfjVar);
         int i = dfjVar.b;
         if (((long) i) + j > dfjVar.c) {
             return new String(y(j), charset);
@@ -1313,17 +1330,17 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
     @Override // me.hd.wauxv.obf.dhy
     public final void write(rh rhVar, long j) {
         dfj dfjVarE;
-        bzo.q(rhVar, "source");
+        throwIfVar1IsNull(rhVar, "source");
         if (rhVar == this) {
             throw new IllegalArgumentException("source == this");
         }
         aye.n(rhVar.b, 0L, j);
         while (j > 0) {
             dfj dfjVar = rhVar.a;
-            bzo.n(dfjVar);
+            throwIfVar1IsNull(dfjVar);
             int i = dfjVar.c;
             dfj dfjVar2 = rhVar.a;
-            bzo.n(dfjVar2);
+            throwIfVar1IsNull(dfjVar2);
             long j2 = i - dfjVar2.b;
             int i2 = 0;
             if (j < j2) {
@@ -1332,7 +1349,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
                 if (dfjVar4 != null && dfjVar4.e) {
                     if ((((long) dfjVar4.c) + j) - ((long) (dfjVar4.d ? 0 : dfjVar4.b)) <= 8192) {
                         dfj dfjVar5 = rhVar.a;
-                        bzo.n(dfjVar5);
+                        throwIfVar1IsNull(dfjVar5);
                         dfjVar5.k(dfjVar4, (int) j);
                         rhVar.b -= j;
                         this.b += j;
@@ -1340,7 +1357,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
                     }
                 }
                 dfj dfjVar6 = rhVar.a;
-                bzo.n(dfjVar6);
+                throwIfVar1IsNull(dfjVar6);
                 int i3 = (int) j;
                 if (i3 <= 0 || i3 > dfjVar6.c - dfjVar6.b) {
                     throw new IllegalArgumentException("byteCount out of range");
@@ -1357,12 +1374,12 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
                 dfjVarE.c = dfjVarE.b + i3;
                 dfjVar6.b += i3;
                 dfj dfjVar7 = dfjVar6.g;
-                bzo.n(dfjVar7);
+                throwIfVar1IsNull(dfjVar7);
                 dfjVar7.i(dfjVarE);
                 rhVar.a = dfjVarE;
             }
             dfj dfjVar8 = rhVar.a;
-            bzo.n(dfjVar8);
+            throwIfVar1IsNull(dfjVar8);
             long j3 = dfjVar8.c - dfjVar8.b;
             rhVar.a = dfjVar8.h();
             dfj dfjVar9 = this.a;
@@ -1372,28 +1389,28 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
                 dfjVar8.f = dfjVar8;
             } else {
                 dfj dfjVar10 = dfjVar9.g;
-                bzo.n(dfjVar10);
+                throwIfVar1IsNull(dfjVar10);
                 dfjVar10.i(dfjVar8);
                 dfj dfjVar11 = dfjVar8.g;
                 if (dfjVar11 == dfjVar8) {
                     throw new IllegalStateException("cannot compact");
                 }
-                bzo.n(dfjVar11);
+                throwIfVar1IsNull(dfjVar11);
                 if (dfjVar11.e) {
                     int i5 = dfjVar8.c - dfjVar8.b;
                     dfj dfjVar12 = dfjVar8.g;
-                    bzo.n(dfjVar12);
+                    throwIfVar1IsNull(dfjVar12);
                     int i6 = 8192 - dfjVar12.c;
                     dfj dfjVar13 = dfjVar8.g;
-                    bzo.n(dfjVar13);
+                    throwIfVar1IsNull(dfjVar13);
                     if (!dfjVar13.d) {
                         dfj dfjVar14 = dfjVar8.g;
-                        bzo.n(dfjVar14);
+                        throwIfVar1IsNull(dfjVar14);
                         i2 = dfjVar14.b;
                     }
                     if (i5 <= i6 + i2) {
                         dfj dfjVar15 = dfjVar8.g;
-                        bzo.n(dfjVar15);
+                        throwIfVar1IsNull(dfjVar15);
                         dfjVar8.k(dfjVar15, i5);
                         dfjVar8.h();
                         dfl.d(dfjVar8);
@@ -1408,7 +1425,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
 
     @Override // java.nio.channels.ReadableByteChannel
     public final int read(ByteBuffer byteBuffer) {
-        bzo.q(byteBuffer, "sink");
+        throwIfVar1IsNull(byteBuffer, "sink");
         dfj dfjVar = this.a;
         if (dfjVar == null) {
             return -1;
@@ -1426,7 +1443,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
     }
 
     public final int read(byte[] bArr, int i, int i2) {
-        bzo.q(bArr, "sink");
+        throwIfVar1IsNull(bArr, "sink");
         aye.n(bArr.length, i, i2);
         dfj dfjVar = this.a;
         if (dfjVar == null) {
@@ -1448,7 +1465,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
 
     @Override // java.nio.channels.WritableByteChannel
     public final int write(ByteBuffer byteBuffer) {
-        bzo.q(byteBuffer, "source");
+        throwIfVar1IsNull(byteBuffer, "source");
         int iRemaining = byteBuffer.remaining();
         int i = iRemaining;
         while (i > 0) {
@@ -1462,14 +1479,16 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
         return iRemaining;
     }
 
-    /* JADX INFO: renamed from: write, reason: collision with other method in class */
+    /*
+     * JADX INFO: renamed from: write, reason: collision with other method in class
+     */
     public final void m12write(byte[] bArr) {
-        bzo.q(bArr, "source");
+        throwIfVar1IsNull(bArr, "source");
         write(bArr, 0, bArr.length);
     }
 
     public final void write(byte[] bArr, int i, int i2) {
-        bzo.q(bArr, "source");
+        throwIfVar1IsNull(bArr, "source");
         long j = i2;
         aye.n(bArr.length, i, j);
         int i3 = i2 + i;

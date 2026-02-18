@@ -22,7 +22,7 @@ public class cuw implements cuv {
         int i2 = i - 1;
         Object[] objArr = this.a;
         Object obj = objArr[i2];
-        bzo.o(obj, "null cannot be cast to non-null type T of androidx.core.util.Pools.SimplePool");
+        throwIfVar1IsNull(obj, "null cannot be cast to non-null type T of androidx.core.util.Pools.SimplePool");
         objArr[i2] = null;
         this.b--;
         return obj;
@@ -41,7 +41,7 @@ public class cuw implements cuv {
     public boolean l(Object obj) {
         Object[] objArr;
         boolean z;
-        bzo.q(obj, "instance");
+        throwIfVar1IsNull(obj, "instance");
         int i = this.b;
         int i2 = 0;
         while (true) {

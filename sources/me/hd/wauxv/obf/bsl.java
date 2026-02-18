@@ -8,12 +8,12 @@ import java.util.function.Function;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class bsl extends brx implements Map<String, brx>, bsw {
+public final class bsl extends brx implements Map<String, brx>, IEmpty {
     public static final bsk Companion = new bsk();
     public final Map a;
 
     public bsl(Map map) {
-        bzo.q(map, "content");
+        throwIfVar1IsNull(map, "content");
         this.a = map;
     }
 
@@ -23,17 +23,20 @@ public final class bsl extends brx implements Map<String, brx>, bsw {
     }
 
     @Override // java.util.Map
-    public final /* bridge */ /* synthetic */ brx compute(String str, BiFunction<? super String, ? super brx, ? extends brx> biFunction) {
+    public final /* bridge */ /* synthetic */ brx compute(String str,
+            BiFunction<? super String, ? super brx, ? extends brx> biFunction) {
         throw new UnsupportedOperationException("Operation is not supported for read-only collection");
     }
 
     @Override // java.util.Map
-    public final /* bridge */ /* synthetic */ brx computeIfAbsent(String str, Function<? super String, ? extends brx> function) {
+    public final /* bridge */ /* synthetic */ brx computeIfAbsent(String str,
+            Function<? super String, ? extends brx> function) {
         throw new UnsupportedOperationException("Operation is not supported for read-only collection");
     }
 
     @Override // java.util.Map
-    public final /* bridge */ /* synthetic */ brx computeIfPresent(String str, BiFunction<? super String, ? super brx, ? extends brx> biFunction) {
+    public final /* bridge */ /* synthetic */ brx computeIfPresent(String str,
+            BiFunction<? super String, ? super brx, ? extends brx> biFunction) {
         throw new UnsupportedOperationException("Operation is not supported for read-only collection");
     }
 
@@ -60,7 +63,7 @@ public final class bsl extends brx implements Map<String, brx>, bsw {
 
     @Override // java.util.Map
     public final boolean equals(Object obj) {
-        return bzo.f(this.a, obj);
+        return nullSafeIsEqual(this.a, obj);
     }
 
     @Override // java.util.Map
@@ -87,7 +90,8 @@ public final class bsl extends brx implements Map<String, brx>, bsw {
     }
 
     @Override // java.util.Map
-    public final /* bridge */ /* synthetic */ brx merge(String str, brx brxVar, BiFunction<? super brx, ? super brx, ? extends brx> biFunction) {
+    public final /* bridge */ /* synthetic */ brx merge(String str, brx brxVar,
+            BiFunction<? super brx, ? super brx, ? extends brx> biFunction) {
         throw new UnsupportedOperationException("Operation is not supported for read-only collection");
     }
 

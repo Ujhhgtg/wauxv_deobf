@@ -40,7 +40,7 @@ public class CodeObserver implements BytecodeArray.Visitor {
         String strOpName = ByteOps.opName(unsignedByte);
         if (unsignedByte == 196) {
             int unsignedByte2 = this.bytes.getUnsignedByte(i + 1);
-            StringBuilder sbR = bjs.r(strOpName, " ");
+            StringBuilder sbR = concat(strOpName, " ");
             sbR.append(ByteOps.opName(unsignedByte2));
             strOpName = sbR.toString();
         }

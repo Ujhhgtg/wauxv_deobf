@@ -65,7 +65,7 @@ public final class chm implements dom {
         }
         cts ctsVar = (cts) dkz.l(1, arrayList);
         String str2 = ctsVar.a + str;
-        bzo.q(str2, "<set-?>");
+        throwIfVar1IsNull(str2, "<set-?>");
         ctsVar.a = str2;
     }
 
@@ -120,7 +120,8 @@ public final class chm implements dom {
                 bundle.putParcelable(str, (Parcelable) obj);
             } else {
                 if (!(obj instanceof Serializable)) {
-                    throw new IllegalStateException(("Key-Value type " + obj.getClass().getName() + " is not allowed").toString());
+                    throw new IllegalStateException(
+                            ("Key-Value type " + obj.getClass().getName() + " is not allowed").toString());
                 }
                 bundle.putSerializable(str, (Serializable) obj);
             }
@@ -144,10 +145,10 @@ public final class chm implements dom {
         return -1;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:119:0x0274  */
-    /* JADX WARN: Found duplicated region for block: B:122:0x027f  */
-    /* JADX WARN: Found duplicated region for block: B:131:0x02a7  */
-    /* JADX WARN: Found duplicated region for block: B:138:0x02e5  */
+    /* JADX WARN: Found duplicated region for block: B:119:0x0274 */
+    /* JADX WARN: Found duplicated region for block: B:122:0x027f */
+    /* JADX WARN: Found duplicated region for block: B:131:0x02a7 */
+    /* JADX WARN: Found duplicated region for block: B:138:0x02e5 */
     /* JADX WARN: Found duplicated region for block: B:151:0x02b2 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:152:0x02d7 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:153:0x02c6 A[SYNTHETIC] */
@@ -466,198 +467,217 @@ public final class chm implements dom {
         tw twVar = txVar.e;
         String str2 = twVar.a;
         Object obj = twVar.b;
-        ewq.g(6, "YukiHookDataChannel cannot send this data key of \"" + str2 + "\" type " + (obj != null ? obj.getClass() : null) + ", because it is too large (total " + (i / 1024.0f) + " KB, limit " + (exf.d / 1024.0f) + " KB) and cannot be segmented\n" + (!dnj.ak(str) ? str.concat("\n") : "") + "If you want to lift this restriction, use the allowSendTooLargeData function when calling, but this may cause the app crash", null);
+        ewq.g(6, "YukiHookDataChannel cannot send this data key of \"" + str2 + "\" type "
+                + (obj != null ? obj.getClass() : null) + ", because it is too large (total " + (i / 1024.0f)
+                + " KB, limit " + (exf.d / 1024.0f) + " KB) and cannot be segmented\n"
+                + (!dnj.ak(str) ? str.concat("\n") : "")
+                + "If you want to lift this restriction, use the allowSendTooLargeData function when calling, but this may cause the app crash",
+                null);
     }
 
     public static final void k(tx txVar, int i, String str) {
-        j(txVar, i, "Failed to segment " + str + " type because the size of its first element has exceeded the maximum limit");
+        j(txVar, i, "Failed to segment " + str
+                + " type because the size of its first element has exceeded the maximum limit");
     }
 
     public static tx l(tw twVar, String str, int i, int i2) {
         return new tx(str, i > 0, i, i2, twVar);
     }
 
-    public static void n(final chm chmVar, final String str, final bgf bgfVar) {
+    public static void n(final chm chmVar, final String str, final IHasInvokeMethod bgfVar) {
         Context context = (Context) chmVar.c;
         final exf exfVar = (exf) chmVar.f;
-        exfVar.g.put(dkz.s(str, chmVar.ag() + JavaConstant.Dynamic.DEFAULT_NAME + (exf.a ? "X" : context != null ? context.getClass().getName() : "M") + "_0"), new csm(context, new bgj(exfVar, chmVar, str, bgfVar) { // from class: me.hd.wauxv.obf.exd
-            public final /* synthetic */ chm a;
-            public final /* synthetic */ String b;
-            public final /* synthetic */ bgf c;
+        exfVar.g.put(
+                dkz.s(str,
+                        chmVar.ag() + JavaConstant.Dynamic.DEFAULT_NAME
+                                + (exf.a ? "X" : context != null ? context.getClass().getName() : "M") + "_0"),
+                new Pair(context, new bgj(exfVar, chmVar, str, bgfVar) { // from class: me.hd.wauxv.obf.exd
+                    public final /* synthetic */ chm a;
+                    public final /* synthetic */ String b;
+                    public final /* synthetic */ IHasInvokeMethod c;
 
-            {
-                this.a = chmVar;
-                this.b = str;
-                this.c = bgfVar;
-            }
+                    {
+                        this.a = chmVar;
+                        this.b = str;
+                        this.c = bgfVar;
+                    }
 
-            /* JADX WARN: Found duplicated region for block: B:204:0x01ea  */
-            /* JADX WARN: Undo finally extract visitor
-            java.lang.NullPointerException
-            	at java.base/java.util.Objects.requireNonNull(Objects.java:209)
-            	at java.base/java.util.ArrayList.batchRemove(ArrayList.java:816)
-            	at java.base/java.util.ArrayList.removeAll(ArrayList.java:791)
-            	at jadx.core.dex.visitors.finaly.TryCatchEdgeBlockMap.getAllInScope(TryCatchEdgeBlockMap.java:91)
-            	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:204)
-            	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
-             */
-            @Override // me.hd.wauxv.obf.bgj
-            public final Object g(Object obj, Object obj2) {
-                Object objX;
-                Object objX2;
-                Throwable thB;
-                ArrayList arrayList;
-                ArrayList arrayList2;
-                ArrayList arrayList3;
-                ArrayList arrayList4;
-                String str2 = this.b;
-                String str3 = (String) obj;
-                Intent intent = (Intent) obj2;
-                boolean z = exf.a;
-                chm chmVar2 = this.a;
-                boolean zF = bzo.f(str3, z ? exf.j((String) chmVar2.d) : exf.k((Context) chmVar2.c));
-                ens ensVar = ens.a;
-                if (zF) {
-                    try {
-                        Bundle extras = intent.getExtras();
-                        Object serializable = extras != null ? extras.getSerializable(str2 + chmVar2.ag()) : null;
-                        objX = serializable instanceof tx ? (tx) serializable : null;
-                    } catch (Throwable th) {
-                        objX = bhu.x(th);
-                    }
-                    if (objX instanceof dcx) {
-                        objX = null;
-                    }
-                    tx txVar = (tx) objX;
-                    ConcurrentHashMap concurrentHashMap = (ConcurrentHashMap) chmVar2.e;
-                    if (cnb.k && txVar != null) {
-                        tw twVar = txVar.e;
-                        String str4 = twVar.a;
-                        Object obj3 = twVar.b;
-                        int i = txVar.c;
-                        String str5 = txVar.a;
-                        int i2 = txVar.d;
-                        boolean z2 = txVar.b;
-                        bgf bgfVar2 = this.c;
-                        if (z2) {
+                    /* JADX WARN: Found duplicated region for block: B:204:0x01ea */
+                    /*
+                     * JADX WARN: Undo finally extract visitor
+                     * java.lang.NullPointerException
+                     * at java.base/java.util.Objects.requireNonNull(Objects.java:209)
+                     * at java.base/java.util.ArrayList.batchRemove(ArrayList.java:816)
+                     * at java.base/java.util.ArrayList.removeAll(ArrayList.java:791)
+                     * at jadx.core.dex.visitors.finaly.TryCatchEdgeBlockMap.getAllInScope(
+                     * TryCatchEdgeBlockMap.java:91)
+                     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+                     * MarkFinallyVisitor.java:204)
+                     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+                     * java:119)
+                     */
+                    @Override // me.hd.wauxv.obf.bgj
+                    public final Object g(Object obj, Object obj2) {
+                        Object objX;
+                        Object objX2;
+                        Throwable thB;
+                        ArrayList arrayList;
+                        ArrayList arrayList2;
+                        ArrayList arrayList3;
+                        ArrayList arrayList4;
+                        String str2 = this.b;
+                        String str3 = (String) obj;
+                        Intent intent = (Intent) obj2;
+                        boolean z = exf.a;
+                        chm chmVar2 = this.a;
+                        boolean zF = nullSafeIsEqual(str3, z ? exf.j((String) chmVar2.d) : exf.k((Context) chmVar2.c));
+                        ens ensVar = ens.a;
+                        if (zF) {
                             try {
-                                exe exeVar = (exe) concurrentHashMap.get(str5);
-                                if (exeVar == null) {
-                                    ArrayList arrayList5 = new ArrayList();
-                                    ArrayList arrayList6 = new ArrayList();
-                                    ArrayList arrayList7 = new ArrayList();
-                                    ArrayList arrayList8 = new ArrayList();
-                                    exeVar = new exe();
-                                    exeVar.a = arrayList5;
-                                    exeVar.b = arrayList6;
-                                    exeVar.c = arrayList7;
-                                    exeVar.d = arrayList8;
-                                    concurrentHashMap.put(str5, exeVar);
-                                }
-                                arrayList = exeVar.d;
-                                arrayList2 = exeVar.c;
-                                arrayList3 = exeVar.b;
-                                arrayList4 = exeVar.a;
-                            } catch (Throwable th2) {
-                                objX2 = bhu.x(th2);
+                                Bundle extras = intent.getExtras();
+                                Object serializable = extras != null ? extras.getSerializable(str2 + chmVar2.ag())
+                                        : null;
+                                objX = serializable instanceof tx ? (tx) serializable : null;
+                            } catch (Throwable th) {
+                                objX = bhu.x(th);
                             }
-                            if (obj3 instanceof List) {
-                                objX2 = (List) obj3;
-                                if (!arrayList4.isEmpty() || i2 <= 0) {
-                                    arrayList4.add(i2, objX2);
-                                    if (arrayList4.size() == i) {
-                                        ArrayList arrayList9 = new ArrayList();
-                                        Iterator it = arrayList4.iterator();
-                                        while (it.hasNext()) {
-                                            arrayList9.addAll((List) it.next());
+                            if (objX instanceof dcx) {
+                                objX = null;
+                            }
+                            tx txVar = (tx) objX;
+                            ConcurrentHashMap concurrentHashMap = (ConcurrentHashMap) chmVar2.e;
+                            if (cnb.k && txVar != null) {
+                                tw twVar = txVar.e;
+                                String str4 = twVar.a;
+                                Object obj3 = twVar.b;
+                                int i = txVar.c;
+                                String str5 = txVar.a;
+                                int i2 = txVar.d;
+                                boolean z2 = txVar.b;
+                                IHasInvokeMethod bgfVar2 = this.c;
+                                if (z2) {
+                                    try {
+                                        exe exeVar = (exe) concurrentHashMap.get(str5);
+                                        if (exeVar == null) {
+                                            ArrayList arrayList5 = new ArrayList();
+                                            ArrayList arrayList6 = new ArrayList();
+                                            ArrayList arrayList7 = new ArrayList();
+                                            ArrayList arrayList8 = new ArrayList();
+                                            exeVar = new exe();
+                                            exeVar.a = arrayList5;
+                                            exeVar.b = arrayList6;
+                                            exeVar.c = arrayList7;
+                                            exeVar.d = arrayList8;
+                                            concurrentHashMap.put(str5, exeVar);
                                         }
-                                        bgfVar2.invoke(arrayList9);
-                                        arrayList4.clear();
-                                        concurrentHashMap.remove(str5);
+                                        arrayList = exeVar.d;
+                                        arrayList2 = exeVar.c;
+                                        arrayList3 = exeVar.b;
+                                        arrayList4 = exeVar.a;
+                                    } catch (Throwable th2) {
+                                        objX2 = bhu.x(th2);
                                     }
-                                    thB = dcy.b(objX2);
-                                    if (thB != null) {
-                                        ArrayList arrayList10 = ewq.a;
-                                        ewq.g(4, "YukiHookDataChannel cannot merge this segments data key of \"" + str4 + "\"", thB);
-                                    }
-                                }
-                            } else if (obj3 instanceof Map) {
-                                objX2 = (Map) obj3;
-                                if (!arrayList3.isEmpty() || i2 <= 0) {
-                                    arrayList3.add(i2, objX2);
-                                    if (arrayList3.size() == i) {
-                                        LinkedHashMap linkedHashMap = new LinkedHashMap();
-                                        Iterator it2 = arrayList3.iterator();
-                                        while (it2.hasNext()) {
-                                            for (Map.Entry entry : ((Map) it2.next()).entrySet()) {
-                                                linkedHashMap.put(entry.getKey(), entry.getValue());
+                                    if (obj3 instanceof List) {
+                                        objX2 = (List) obj3;
+                                        if (!arrayList4.isEmpty() || i2 <= 0) {
+                                            arrayList4.add(i2, objX2);
+                                            if (arrayList4.size() == i) {
+                                                ArrayList arrayList9 = new ArrayList();
+                                                Iterator it = arrayList4.iterator();
+                                                while (it.hasNext()) {
+                                                    arrayList9.addAll((List) it.next());
+                                                }
+                                                bgfVar2.invoke(arrayList9);
+                                                arrayList4.clear();
+                                                concurrentHashMap.remove(str5);
+                                            }
+                                            thB = dcy.b(objX2);
+                                            if (thB != null) {
+                                                ArrayList arrayList10 = ewq.a;
+                                                ewq.g(4, "YukiHookDataChannel cannot merge this segments data key of \""
+                                                        + str4 + "\"", thB);
                                             }
                                         }
-                                        bgfVar2.invoke(linkedHashMap);
-                                        arrayList3.clear();
-                                        concurrentHashMap.remove(str5);
-                                    }
-                                    thB = dcy.b(objX2);
-                                    if (thB != null) {
-                                        ArrayList arrayList102 = ewq.a;
-                                        ewq.g(4, "YukiHookDataChannel cannot merge this segments data key of \"" + str4 + "\"", thB);
-                                    }
-                                }
-                            } else if (obj3 instanceof Set) {
-                                objX2 = (Set) obj3;
-                                if (!arrayList2.isEmpty() || i2 <= 0) {
-                                    arrayList2.add(i2, objX2);
-                                    if (arrayList2.size() == i) {
-                                        LinkedHashSet linkedHashSet = new LinkedHashSet();
-                                        Iterator it3 = arrayList2.iterator();
-                                        while (it3.hasNext()) {
-                                            linkedHashSet.addAll((Set) it3.next());
-                                        }
-                                        bgfVar2.invoke(linkedHashSet);
-                                        arrayList2.clear();
-                                        concurrentHashMap.remove(str5);
-                                    }
-                                    thB = dcy.b(objX2);
-                                    if (thB != null) {
-                                        ArrayList arrayList1022 = ewq.a;
-                                        ewq.g(4, "YukiHookDataChannel cannot merge this segments data key of \"" + str4 + "\"", thB);
-                                    }
-                                }
-                            } else {
-                                if (obj3 instanceof String) {
-                                    objX2 = (String) obj3;
-                                    if (!arrayList.isEmpty() || i2 <= 0) {
-                                        arrayList.add(i2, objX2);
-                                        if (arrayList.size() == i) {
-                                            StringBuilder sb = new StringBuilder();
-                                            Iterator it4 = arrayList.iterator();
-                                            while (it4.hasNext()) {
-                                                sb.append((String) it4.next());
+                                    } else if (obj3 instanceof Map) {
+                                        objX2 = (Map) obj3;
+                                        if (!arrayList3.isEmpty() || i2 <= 0) {
+                                            arrayList3.add(i2, objX2);
+                                            if (arrayList3.size() == i) {
+                                                LinkedHashMap linkedHashMap = new LinkedHashMap();
+                                                Iterator it2 = arrayList3.iterator();
+                                                while (it2.hasNext()) {
+                                                    for (Map.Entry entry : ((Map) it2.next()).entrySet()) {
+                                                        linkedHashMap.put(entry.getKey(), entry.getValue());
+                                                    }
+                                                }
+                                                bgfVar2.invoke(linkedHashMap);
+                                                arrayList3.clear();
+                                                concurrentHashMap.remove(str5);
                                             }
-                                            bgfVar2.invoke(sb.toString());
-                                            arrayList.clear();
-                                            concurrentHashMap.remove(str5);
+                                            thB = dcy.b(objX2);
+                                            if (thB != null) {
+                                                ArrayList arrayList102 = ewq.a;
+                                                ewq.g(4, "YukiHookDataChannel cannot merge this segments data key of \""
+                                                        + str4 + "\"", thB);
+                                            }
+                                        }
+                                    } else if (obj3 instanceof Set) {
+                                        objX2 = (Set) obj3;
+                                        if (!arrayList2.isEmpty() || i2 <= 0) {
+                                            arrayList2.add(i2, objX2);
+                                            if (arrayList2.size() == i) {
+                                                LinkedHashSet linkedHashSet = new LinkedHashSet();
+                                                Iterator it3 = arrayList2.iterator();
+                                                while (it3.hasNext()) {
+                                                    linkedHashSet.addAll((Set) it3.next());
+                                                }
+                                                bgfVar2.invoke(linkedHashSet);
+                                                arrayList2.clear();
+                                                concurrentHashMap.remove(str5);
+                                            }
+                                            thB = dcy.b(objX2);
+                                            if (thB != null) {
+                                                ArrayList arrayList1022 = ewq.a;
+                                                ewq.g(4, "YukiHookDataChannel cannot merge this segments data key of \""
+                                                        + str4 + "\"", thB);
+                                            }
+                                        }
+                                    } else {
+                                        if (obj3 instanceof String) {
+                                            objX2 = (String) obj3;
+                                            if (!arrayList.isEmpty() || i2 <= 0) {
+                                                arrayList.add(i2, objX2);
+                                                if (arrayList.size() == i) {
+                                                    StringBuilder sb = new StringBuilder();
+                                                    Iterator it4 = arrayList.iterator();
+                                                    while (it4.hasNext()) {
+                                                        sb.append((String) it4.next());
+                                                    }
+                                                    bgfVar2.invoke(sb.toString());
+                                                    arrayList.clear();
+                                                    concurrentHashMap.remove(str5);
+                                                }
+                                            }
+                                        } else {
+                                            ArrayList arrayList11 = ewq.a;
+                                            ewq.g(6, "Unsupported segments data key of \"" + str4 + "\"'s type", null);
+                                            objX2 = ensVar;
+                                        }
+                                        thB = dcy.b(objX2);
+                                        if (thB != null) {
+                                            ArrayList arrayList10222 = ewq.a;
+                                            ewq.g(4, "YukiHookDataChannel cannot merge this segments data key of \""
+                                                    + str4 + "\"", thB);
                                         }
                                     }
-                                } else {
-                                    ArrayList arrayList11 = ewq.a;
-                                    ewq.g(6, "Unsupported segments data key of \"" + str4 + "\"'s type", null);
-                                    objX2 = ensVar;
-                                }
-                                thB = dcy.b(objX2);
-                                if (thB != null) {
-                                    ArrayList arrayList10222 = ewq.a;
-                                    ewq.g(4, "YukiHookDataChannel cannot merge this segments data key of \"" + str4 + "\"", thB);
+                                } else if (obj3 != null) {
+                                    bgfVar2.invoke(obj3);
                                 }
                             }
-                        } else if (obj3 != null) {
-                            bgfVar2.invoke(obj3);
                         }
+                        return ensVar;
                     }
-                }
-                return ensVar;
-            }
-        }));
+                }));
     }
 
     public bdj aa(String str) {
@@ -734,31 +754,41 @@ public final class chm implements dom {
     }
 
     public String ag() {
-        return bjs.i(((String) this.d).hashCode(), JavaConstant.Dynamic.DEFAULT_NAME);
+        return concatVar2Var1(((String) this.d).hashCode(), JavaConstant.Dynamic.DEFAULT_NAME);
     }
 
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getInstructions()" because "finallyBlockTerminus" is null
-    	at jadx.core.dex.visitors.finaly.traverser.state.TraverserActivePathState.<init>(TraverserActivePathState.java:253)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.findCommonInsns(MarkFinallyVisitor.java:422)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.extractFinally(MarkFinallyVisitor.java:302)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.processTryBlock(MarkFinallyVisitor.java:222)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:150)
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getInstructions()" because
+     * "finallyBlockTerminus" is null
+     * at
+     * jadx.core.dex.visitors.finaly.traverser.state.TraverserActivePathState.<init>
+     * (TraverserActivePathState.java:253)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.findCommonInsns(
+     * MarkFinallyVisitor.java:422)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.extractFinally(
+     * MarkFinallyVisitor.java:302)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.processTryBlock(
+     * MarkFinallyVisitor.java:222)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:150)
      */
     public erk ah(String str, zc zcVar) {
         erk erkVar;
         boolean zIsInstance;
         erk erkVarB;
-        bzo.q(str, "key");
+        throwIfVar1IsNull(str, "key");
         synchronized (((dop) this.f)) {
             try {
                 erq erqVar = (erq) this.c;
                 erqVar.getClass();
                 erkVar = (erk) erqVar.a.get(str);
                 Class clsBe = zcVar.c;
-                bzo.q(clsBe, "jClass");
+                throwIfVar1IsNull(clsBe, "jClass");
                 Map map = zc.b;
-                bzo.o(map, "null cannot be cast to non-null type kotlin.collections.Map<K of kotlin.collections.MapsKt__MapsKt.get, V of kotlin.collections.MapsKt__MapsKt.get>");
+                throwIfVar1IsNull(map,
+                        "null cannot be cast to non-null type kotlin.collections.Map<K of kotlin.collections.MapsKt__MapsKt.get, V of kotlin.collections.MapsKt__MapsKt.get>");
                 Integer num = (Integer) map.get(clsBe);
                 if (num != null) {
                     zIsInstance = emc.as(num.intValue(), erkVar);
@@ -772,21 +802,22 @@ public final class chm implements dom {
                     ero eroVar = (ero) this.d;
                     if (eroVar instanceof deq) {
                         deq deqVar = (deq) eroVar;
-                        bzo.n(erkVar);
+                        throwIfVar1IsNull(erkVar);
                         deqVar.getClass();
                         bur burVar = deqVar.f;
                         if (burVar != null) {
                             but butVar = deqVar.g;
-                            bzo.n(butVar);
+                            throwIfVar1IsNull(butVar);
                             aye.m(erkVar, butVar, burVar);
                         }
                     }
-                    bzo.o(erkVar, "null cannot be cast to non-null type T of androidx.lifecycle.viewmodel.ViewModelProviderImpl.getViewModel");
+                    throwIfVar1IsNull(erkVar,
+                            "null cannot be cast to non-null type T of androidx.lifecycle.viewmodel.ViewModelProviderImpl.getViewModel");
                 } else {
                     chq chqVar = new chq((ahx) this.e);
                     chqVar.c.put(erp.s, str);
                     ero eroVar2 = (ero) this.d;
-                    bzo.q(eroVar2, "factory");
+                    throwIfVar1IsNull(eroVar2, "factory");
                     try {
                         try {
                             erkVarB = eroVar2._bh(zcVar, chqVar);
@@ -799,7 +830,7 @@ public final class chm implements dom {
                     erkVar = erkVarB;
                     erq erqVar2 = (erq) this.c;
                     erqVar2.getClass();
-                    bzo.q(erkVar, "viewModel");
+                    throwIfVar1IsNull(erkVar, "viewModel");
                     erk erkVar2 = (erk) erqVar2.a.put(str, erkVar);
                     if (erkVar2 != null) {
                         erkVar2.n();
@@ -871,7 +902,9 @@ public final class chm implements dom {
             int iH = h(twVar);
             if (iH < 0) {
                 ArrayList arrayList = ewq.a;
-                ewq.g(6, "YukiHookDataChannel cannot calculate the byte size of the data key of \"" + str + "\" to be sent, so this data cannot be sent\nIf you want to lift this restriction, use the allowSendTooLargeData function when calling, but this may cause the app crash", null);
+                ewq.g(6, "YukiHookDataChannel cannot calculate the byte size of the data key of \"" + str
+                        + "\" to be sent, so this data cannot be sent\nIf you want to lift this restriction, use the allowSendTooLargeData function when calling, but this may cause the app crash",
+                        null);
                 return;
             }
             if (txVar.b) {
@@ -978,8 +1011,11 @@ public final class chm implements dom {
                 return;
             }
             if (!(obj instanceof String)) {
-                if ((obj instanceof byte[]) || (obj instanceof char[]) || (obj instanceof short[]) || (obj instanceof int[]) || (obj instanceof long[]) || (obj instanceof float[]) || (obj instanceof double[]) || (obj instanceof boolean[]) || (obj instanceof Object[])) {
-                    j(txVar, iH, "Primitive Array type like String[], int[] ... cannot be segmented, the suggestion is send those data using List type");
+                if ((obj instanceof byte[]) || (obj instanceof char[]) || (obj instanceof short[])
+                        || (obj instanceof int[]) || (obj instanceof long[]) || (obj instanceof float[])
+                        || (obj instanceof double[]) || (obj instanceof boolean[]) || (obj instanceof Object[])) {
+                    j(txVar, iH,
+                            "Primitive Array type like String[], int[] ... cannot be segmented, the suggestion is send those data using List type");
                     return;
                 } else {
                     j(txVar, iH, "");
@@ -1000,11 +1036,11 @@ public final class chm implements dom {
                     int i8 = i7 + i6;
                     if (i8 <= str2.length()) {
                         String strSubstring = str2.substring(i7, i8);
-                        bzo.p(strSubstring, "substring(...)");
+                        throwIfVar1IsNull(strSubstring, "substring(...)");
                         arrayList9.add(strSubstring);
                     } else {
                         String strSubstring2 = str2.substring(i7, str2.length());
-                        bzo.p(strSubstring2, "substring(...)");
+                        throwIfVar1IsNull(strSubstring2, "substring(...)");
                         arrayList9.add(strSubstring2);
                     }
                     if (i7 == iAv) {
@@ -1193,7 +1229,8 @@ public final class chm implements dom {
         }
         if (contextH == null) {
             ArrayList arrayList = ewq.a;
-            ewq.g(6, "Failed to sendBroadcast like \"" + twVar.a + "\", because got null context in \"" + str + "\"", null);
+            ewq.g(6, "Failed to sendBroadcast like \"" + twVar.a + "\", because got null context in \"" + str + "\"",
+                    null);
             return;
         }
         Intent intent = new Intent();
@@ -1202,7 +1239,7 @@ public final class chm implements dom {
         }
         boolean z = exf.a;
         intent.setAction(z ? exf.k(null) : exf.j(str));
-        if (!bzo.f(str, "android")) {
+        if (!nullSafeIsEqual(str, "android")) {
             if (z) {
                 str = exm.h;
             }
@@ -1546,9 +1583,9 @@ public final class chm implements dom {
     }
 
     public chm(erq erqVar, ero eroVar, ahx ahxVar) {
-        bzo.q(erqVar, "store");
-        bzo.q(eroVar, "factory");
-        bzo.q(ahxVar, "defaultExtras");
+        throwIfVar1IsNull(erqVar, "store");
+        throwIfVar1IsNull(eroVar, "factory");
+        throwIfVar1IsNull(ahxVar, "defaultExtras");
         this.c = erqVar;
         this.d = eroVar;
         this.e = ahxVar;

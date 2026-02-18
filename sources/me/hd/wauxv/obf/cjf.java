@@ -22,9 +22,12 @@ public final class cjf implements Comparable {
     }
 
     @Override // java.lang.Comparable
-    /* JADX INFO: renamed from: g, reason: merged with bridge method [inline-methods] */
+    /*
+     * JADX INFO: renamed from: g, reason: merged with bridge method
+     * [inline-methods]
+     */
     public final int compareTo(cjf cjfVar) {
-        bzo.q(cjfVar, "other");
+        throwIfVar1IsNull(cjfVar, "other");
         boolean z = cjfVar.e;
         boolean z2 = cjfVar.c;
         Bundle bundle = cjfVar.b;
@@ -50,9 +53,9 @@ public final class cjf implements Comparable {
             return -1;
         }
         if (bundle2 != null) {
-            bzo.q(bundle2, "source");
+            throwIfVar1IsNull(bundle2, "source");
             int size = bundle2.size();
-            bzo.n(bundle);
+            throwIfVar1IsNull(bundle);
             int size2 = size - bundle.size();
             if (size2 > 0) {
                 return 1;

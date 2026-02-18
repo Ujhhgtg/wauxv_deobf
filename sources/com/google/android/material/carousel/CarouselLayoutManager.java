@@ -65,7 +65,8 @@ public class CarouselLayoutManager extends czg implements czs {
             if ((f() ? this.eb : this.ec) > 0.0f) {
                 g();
                 View view = czoVar.s(0, Long.MAX_VALUE).d;
-                throw new IllegalStateException("All children of a RecyclerView using CarouselLayoutManager must use MaskableFrameLayout as their root ViewGroup.");
+                throw new IllegalStateException(
+                        "All children of a RecyclerView using CarouselLayoutManager must use MaskableFrameLayout as their root ViewGroup.");
             }
         }
         fb(czoVar);
@@ -85,7 +86,8 @@ public class CarouselLayoutManager extends czg implements czs {
             return 0;
         }
         View view = czoVar.s(0, Long.MAX_VALUE).d;
-        throw new IllegalStateException("All children of a RecyclerView using CarouselLayoutManager must use MaskableFrameLayout as their root ViewGroup.");
+        throw new IllegalStateException(
+                "All children of a RecyclerView using CarouselLayoutManager must use MaskableFrameLayout as their root ViewGroup.");
     }
 
     @Override // me.hd.wauxv.obf.czg
@@ -94,7 +96,8 @@ public class CarouselLayoutManager extends czg implements czs {
             return 0;
         }
         View view = czoVar.s(0, Long.MAX_VALUE).d;
-        throw new IllegalStateException("All children of a RecyclerView using CarouselLayoutManager must use MaskableFrameLayout as their root ViewGroup.");
+        throw new IllegalStateException(
+                "All children of a RecyclerView using CarouselLayoutManager must use MaskableFrameLayout as their root ViewGroup.");
     }
 
     @Override // me.hd.wauxv.obf.czs
@@ -183,7 +186,7 @@ public class CarouselLayoutManager extends czg implements czs {
     public final void h(int i) {
         ti tiVar;
         if (i != 0 && i != 1) {
-            throw new IllegalArgumentException(bjs.i(i, "invalid orientation:"));
+            throw new IllegalArgumentException(concatVar2Var1(i, "invalid orientation:"));
         }
         bt(null);
         ti tiVar2 = this.b;
@@ -226,9 +229,9 @@ public class CarouselLayoutManager extends czg implements czs {
         return new czh(-2, -2);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:18:0x0038  */
-    /* JADX WARN: Found duplicated region for block: B:20:0x003c  */
-    /* JADX WARN: Found duplicated region for block: B:24:0x0046  */
+    /* JADX WARN: Found duplicated region for block: B:18:0x0038 */
+    /* JADX WARN: Found duplicated region for block: B:20:0x003c */
+    /* JADX WARN: Found duplicated region for block: B:24:0x0046 */
     @Override // me.hd.wauxv.obf.czg
     public final View w(View view, int i, czo czoVar, czt cztVar) {
         byte b;
@@ -295,7 +298,7 @@ public class CarouselLayoutManager extends czg implements czs {
             TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, cxs.g);
             typedArrayObtainStyledAttributes.getInt(0, 0);
             ff();
-            h(typedArrayObtainStyledAttributes.getInt(0, 0));
+            locateDex(typedArrayObtainStyledAttributes.getInt(0, 0));
             typedArrayObtainStyledAttributes.recycle();
         }
     }

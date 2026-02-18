@@ -31,7 +31,7 @@ public abstract class cna {
     public static jx c = null;
     public static String d = "YukiHookAPI";
     public static final ahq a = ahq.a;
-    public static final Integer[] e = {1000, Integer.valueOf(WebSocketProtocol.CLOSE_CLIENT_GOING_AWAY), 1002, 1003};
+    public static final Integer[] e = { 1000, Integer.valueOf(WebSocketProtocol.CLOSE_CLIENT_GOING_AWAY), 1002, 1003 };
 
     static {
         Object obj = null;
@@ -39,7 +39,9 @@ public abstract class cna {
     }
 
     public static final aox aa(brf brfVar, boolean z, bri briVar) {
-        return brfVar instanceof brm ? ((brm) brfVar).ag(z, briVar) : brfVar.p(briVar._ba(), z, new brh(1, briVar, bri.class, "invoke", "invoke(Ljava/lang/Throwable;)V", 0, 0));
+        return brfVar instanceof brm ? ((brm) brfVar).ag(z, briVar)
+                : brfVar.p(briVar._ba(), z,
+                        new brh(1, briVar, bri.class, "invoke", "invoke(Ljava/lang/Throwable;)V", 0, 0));
     }
 
     public static boolean ab(int i) {
@@ -73,7 +75,7 @@ public abstract class cna {
 
     public static boolean ac(byte[] bArr) {
         byte[] bytes = "wxgf" /* cnb.z(-119301306579754L) */.getBytes(uj.a);
-        bzo.p(bytes, "getBytes(...)" /* cnb.z(-119331371350826L) */);
+        throwIfVar1IsNull(bytes, "getBytes(...)" /* cnb.z(-119331371350826L) */);
         if (bArr.length >= bytes.length) {
             Iterable bqiVar = new bqi(0, bytes.length - 1, 1);
             if (!(bqiVar instanceof Collection) || !((Collection) bqiVar).isEmpty()) {
@@ -129,7 +131,9 @@ public abstract class cna {
                 i++;
             }
         }
-        return (!dnr.bp(str, "+", false) || length <= 1 || '0' > (cCharAt = str.charAt(1)) || cCharAt >= ':') ? Long.parseLong(str) : Long.parseLong(dnj.ad(1, str));
+        return (!dnr.bp(str, "+", false) || length <= 1 || '0' > (cCharAt = str.charAt(1)) || cCharAt >= ':')
+                ? Long.parseLong(str)
+                : Long.parseLong(dnj.ad(1, str));
     }
 
     public static boolean ag(String str, String str2, boolean z) {
@@ -147,22 +151,23 @@ public abstract class cna {
     }
 
     public static int ah(Context context, int i) {
-        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(R.style.Animation.Activity, new int[]{i});
+        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(R.style.Animation.Activity,
+                new int[] { i });
         int resourceId = typedArrayObtainStyledAttributes.getResourceId(0, -1);
         typedArrayObtainStyledAttributes.recycle();
         return resourceId;
     }
 
     public static final long ai(long j, aqp aqpVar) {
-        bzo.q(aqpVar, "unit");
+        throwIfVar1IsNull(aqpVar, "unit");
         aqp aqpVar2 = aqp.NANOSECONDS;
-        bzo.q(aqpVar2, "sourceUnit");
+        throwIfVar1IsNull(aqpVar2, "sourceUnit");
         TimeUnit timeUnit = aqpVar.h;
         TimeUnit timeUnit2 = aqpVar2.h;
         long jConvert = timeUnit.convert(4611686018426999999L, timeUnit2);
         if ((-jConvert) > j || j > jConvert) {
             aqp aqpVar3 = aqp.MILLISECONDS;
-            bzo.q(aqpVar3, "targetUnit");
+            throwIfVar1IsNull(aqpVar3, "targetUnit");
             return o(dqc.az(aqpVar3.h.convert(j, timeUnit)));
         }
         long jConvert2 = timeUnit2.convert(j, timeUnit) << 1;
@@ -199,11 +204,12 @@ public abstract class cna {
         while (i3 < length) {
             if (str.charAt(i3) != 'T') {
                 int i4 = i3;
-                while (i4 < str.length() && (('0' <= (cCharAt = str.charAt(i4)) && cCharAt < ':') || dnj.ac("+-.", cCharAt))) {
+                while (i4 < str.length()
+                        && (('0' <= (cCharAt = str.charAt(i4)) && cCharAt < ':') || dnj.ac("+-.", cCharAt))) {
                     i4++;
                 }
                 String strSubstring = str.substring(i3, i4);
-                bzo.p(strSubstring, "substring(...)");
+                throwIfVar1IsNull(strSubstring, "substring(...)");
                 if (strSubstring.length() == 0) {
                     throw new IllegalArgumentException();
                 }
@@ -226,22 +232,24 @@ public abstract class cna {
                     }
                 } else {
                     if (cCharAt3 != 'D') {
-                        throw new IllegalArgumentException("Invalid or unsupported duration ISO non-time unit: " + cCharAt3);
+                        throw new IllegalArgumentException(
+                                "Invalid or unsupported duration ISO non-time unit: " + cCharAt3);
                     }
                     aqpVar = aqp.DAYS;
                 }
                 if (aqpVar2 != null && aqpVar2.compareTo(aqpVar) <= 0) {
                     throw new IllegalArgumentException("Unexpected order of duration components");
                 }
-                int iAh = dnj.ah(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, 0, 6, strSubstring);
+                int iAh = dnj.ah(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, 0, 6,
+                        strSubstring);
                 if (aqpVar != aqp.SECONDS || iAh <= 0) {
                     jI = aqm.i(jI, ai(af(strSubstring), aqpVar));
                 } else {
                     String strSubstring2 = strSubstring.substring(0, iAh);
-                    bzo.p(strSubstring2, "substring(...)");
+                    throwIfVar1IsNull(strSubstring2, "substring(...)");
                     long jI2 = aqm.i(jI, ai(af(strSubstring2), aqpVar));
                     String strSubstring3 = strSubstring.substring(iAh);
-                    bzo.p(strSubstring3, "substring(...)");
+                    throwIfVar1IsNull(strSubstring3, "substring(...)");
                     double d2 = Double.parseDouble(strSubstring3);
                     double dP = cnb.p(d2, aqpVar, aqp.NANOSECONDS);
                     if (Double.isNaN(dP)) {
@@ -319,7 +327,7 @@ public abstract class cna {
         for (String str : bundle.keySet()) {
             Object obj = bundle.get(str);
             Object obj2 = bundle2.get(str);
-            if (obj != obj2 && !bzo.f(obj, obj2)) {
+            if (obj != obj2 && !nullSafeIsEqual(obj, obj2)) {
                 if (obj != null && obj2 != null) {
                     if ((obj instanceof Bundle) && (obj2 instanceof Bundle)) {
                         if (!k((Bundle) obj, (Bundle) obj2)) {
@@ -375,7 +383,23 @@ public abstract class cna {
         int iL = 1;
         while (it.hasNext()) {
             Object obj = bundle.get(it.next());
-            iL = (iL * 31) + (obj instanceof Bundle ? l((Bundle) obj) : obj instanceof Object[] ? Arrays.deepHashCode((Object[]) obj) : obj instanceof byte[] ? Arrays.hashCode((byte[]) obj) : obj instanceof short[] ? Arrays.hashCode((short[]) obj) : obj instanceof int[] ? Arrays.hashCode((int[]) obj) : obj instanceof long[] ? Arrays.hashCode((long[]) obj) : obj instanceof float[] ? Arrays.hashCode((float[]) obj) : obj instanceof double[] ? Arrays.hashCode((double[]) obj) : obj instanceof char[] ? Arrays.hashCode((char[]) obj) : obj instanceof boolean[] ? Arrays.hashCode((boolean[]) obj) : obj != null ? obj.hashCode() : 0);
+            iL = (iL * 31) + (obj instanceof Bundle ? l((Bundle) obj)
+                    : obj instanceof Object[] ? Arrays.deepHashCode((Object[]) obj)
+                            : obj instanceof byte[] ? Arrays.hashCode((byte[]) obj)
+                                    : obj instanceof short[] ? Arrays.hashCode((short[]) obj)
+                                            : obj instanceof int[] ? Arrays.hashCode((int[]) obj)
+                                                    : obj instanceof long[] ? Arrays.hashCode((long[]) obj)
+                                                            : obj instanceof float[] ? Arrays.hashCode((float[]) obj)
+                                                                    : obj instanceof double[]
+                                                                            ? Arrays.hashCode((double[]) obj)
+                                                                            : obj instanceof char[]
+                                                                                    ? Arrays.hashCode((char[]) obj)
+                                                                                    : obj instanceof boolean[]
+                                                                                            ? Arrays.hashCode(
+                                                                                                    (boolean[]) obj)
+                                                                                            : obj != null
+                                                                                                    ? obj.hashCode()
+                                                                                                    : 0);
         }
         return iL;
     }
@@ -385,14 +409,15 @@ public abstract class cna {
         Objects.requireNonNull(charSequence);
         int i = 0;
         int i2 = 0;
-        for (int i3 = 0; i3 < charSequence.length() && ((cCharAt = charSequence.charAt(i3)) == '\t' || cCharAt == ' '); i3++) {
+        for (int i3 = 0; i3 < charSequence.length()
+                && ((cCharAt = charSequence.charAt(i3)) == '\t' || cCharAt == ' '); i3++) {
             if (cCharAt == '\t') {
                 i2++;
             } else {
                 i++;
             }
         }
-        return bzo.al(i, i2);
+        return KotlinHelpers.al(i, i2);
     }
 
     public static String n(int i, int i2, boolean z) {
@@ -453,7 +478,7 @@ public abstract class cna {
                 i2--;
             }
         }
-        return bzo.al(i, i2);
+        return KotlinHelpers.al(i, i2);
     }
 
     public static final void s(long j, int i, int i2, byte[] bArr, int i3) {
@@ -477,7 +502,7 @@ public abstract class cna {
     }
 
     public static yu t(DexKitBridge dexKitBridge, c cVar) {
-        bzo.q(dexKitBridge, "bridge");
+        throwIfVar1IsNull(dexKitBridge, "bridge");
         int iG = cVar.g(4);
         int i = iG != 0 ? cVar.b.getInt(iG + cVar.a) : 0;
         int iG2 = cVar.g(6);
@@ -539,7 +564,8 @@ public abstract class cna {
             return null;
         }
         ComponentName componentName2 = new ComponentName(componentName.getPackageName(), strY);
-        return y(context, componentName2) == null ? Intent.makeMainActivity(componentName2) : new Intent().setComponent(componentName2);
+        return y(context, componentName2) == null ? Intent.makeMainActivity(componentName2)
+                : new Intent().setComponent(componentName2);
     }
 
     public static Intent x(hb hbVar) {
@@ -554,7 +580,8 @@ public abstract class cna {
             }
             ComponentName componentName = new ComponentName(hbVar, strY);
             try {
-                return y(hbVar, componentName) == null ? Intent.makeMainActivity(componentName) : new Intent().setComponent(componentName);
+                return y(hbVar, componentName) == null ? Intent.makeMainActivity(componentName)
+                        : new Intent().setComponent(componentName);
             } catch (PackageManager.NameNotFoundException unused) {
                 Log.e("NavUtils", "getParentActivityIntent: bad parentActivityName '" + strY + "' in manifest");
                 return null;
@@ -566,7 +593,8 @@ public abstract class cna {
 
     public static String y(Context context, ComponentName componentName) throws PackageManager.NameNotFoundException {
         String string;
-        ActivityInfo activityInfo = context.getPackageManager().getActivityInfo(componentName, Build.VERSION.SDK_INT >= 29 ? 269222528 : 787072);
+        ActivityInfo activityInfo = context.getPackageManager().getActivityInfo(componentName,
+                Build.VERSION.SDK_INT >= 29 ? 269222528 : 787072);
         String str = activityInfo.parentActivityName;
         if (str != null) {
             return str;
@@ -594,7 +622,8 @@ public abstract class cna {
             }
         } catch (Throwable th2) {
             if (th != th2) {
-                RuntimeException runtimeException = new RuntimeException("Exception while trying to handle coroutine exception", th2);
+                RuntimeException runtimeException = new RuntimeException(
+                        "Exception while trying to handle coroutine exception", th2);
                 aye.j(runtimeException, th);
                 th = runtimeException;
             }

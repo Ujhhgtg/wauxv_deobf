@@ -30,7 +30,9 @@ public final class dvx {
             return false;
         }
         dvx dvxVar = (dvx) obj;
-        return bzo.f(this.a, dvxVar.a) && bzo.f(this.b, dvxVar.b) && bzo.f(this.c, dvxVar.c) && bzo.f(this.d, dvxVar.d) && bzo.f(this.e, dvxVar.e);
+        return nullSafeIsEqual(this.a, dvxVar.a) && nullSafeIsEqual(this.b, dvxVar.b)
+                && nullSafeIsEqual(this.c, dvxVar.c) && nullSafeIsEqual(this.d, dvxVar.d)
+                && nullSafeIsEqual(this.e, dvxVar.e);
     }
 
     public final int hashCode() {

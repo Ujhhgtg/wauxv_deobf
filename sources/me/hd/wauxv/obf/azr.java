@@ -5,7 +5,7 @@ import org.luckypray.dexkit.DexKitBridge;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class azr extends doo implements bng {
+public final class azr extends BaseHook implements IRequiresDexLocate {
     public static final azr a = new azr("FileDownRedirectHook" /* cnb.z(-492177482316586L) */);
     public static final String b;
     public static final String c;
@@ -31,28 +31,28 @@ public final class azr extends doo implements bng {
         akiVarAb.o();
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String f() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getName() {
         return i;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String g() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getCategory() {
         return c;
     }
 
     @Override // me.hd.wauxv.obf.bng
-    public final void h(DexKitBridge dexKitBridge) {
+    public final void locateDex(DexKitBridge dexKitBridge) {
         emn.aj(azp.a, dexKitBridge, new ayz(7));
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String o() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getDescription() {
         return j;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final bgf p() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final IHasInvokeMethod p() {
         return l;
     }
 }

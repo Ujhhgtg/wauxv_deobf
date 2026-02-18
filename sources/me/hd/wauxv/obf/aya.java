@@ -10,7 +10,7 @@ public final class aya extends ae {
     @Override // me.hd.wauxv.obf.ae
     public final Random d() {
         Object obj = this.e.get();
-        bzo.p(obj, "get(...)");
+        throwIfVar1IsNull(obj, "get(...)");
         return (Random) obj;
     }
 }

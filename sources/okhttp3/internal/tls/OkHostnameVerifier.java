@@ -14,7 +14,7 @@ import javax.net.ssl.SSLException;
 import javax.net.ssl.SSLSession;
 import me.hd.wauxv.obf.aaz;
 import me.hd.wauxv.obf.avd;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.dkz;
 import me.hd.wauxv.obf.dnj;
 import me.hd.wauxv.obf.dnr;
@@ -38,9 +38,9 @@ public final class OkHostnameVerifier implements HostnameVerifier {
             return str;
         }
         Locale locale = Locale.US;
-        bzo.p(locale, "US");
+        throwIfVar1IsNull(locale, "US");
         String lowerCase = str.toLowerCase(locale);
-        bzo.p(lowerCase, "this as java.lang.String).toLowerCase(locale)");
+        throwIfVar1IsNull(lowerCase, "this as java.lang.String).toLowerCase(locale)");
         return lowerCase;
     }
 
@@ -54,7 +54,8 @@ public final class OkHostnameVerifier implements HostnameVerifier {
             }
             ArrayList arrayList = new ArrayList();
             for (List<?> list : subjectAlternativeNames) {
-                if (list != null && list.size() >= 2 && bzo.f(list.get(0), Integer.valueOf(i)) && (obj = list.get(1)) != null) {
+                if (list != null && list.size() >= 2 && nullSafeIsEqual(list.get(0), Integer.valueOf(i))
+                        && (obj = list.get(1)) != null) {
                     arrayList.add((String) obj);
                 }
             }
@@ -128,7 +129,7 @@ public final class OkHostnameVerifier implements HostnameVerifier {
         }
         Iterator<T> it = subjectAltNames.iterator();
         while (it.hasNext()) {
-            if (bzo.f(canonicalHost, HostnamesKt.toCanonicalHost((String) it.next()))) {
+            if (nullSafeIsEqual(canonicalHost, HostnamesKt.toCanonicalHost((String) it.next()))) {
                 return true;
             }
         }
@@ -136,20 +137,20 @@ public final class OkHostnameVerifier implements HostnameVerifier {
     }
 
     public final List<String> allSubjectAltNames(X509Certificate x509Certificate) {
-        bzo.q(x509Certificate, "certificate");
+        throwIfVar1IsNull(x509Certificate, "certificate");
         return aaz.o(getSubjectAltNames(x509Certificate, 7), getSubjectAltNames(x509Certificate, 2));
     }
 
     @Override // javax.net.ssl.HostnameVerifier
     public boolean verify(String str, SSLSession sSLSession) {
-        bzo.q(str, "host");
-        bzo.q(sSLSession, f.aC);
+        throwIfVar1IsNull(str, "host");
+        throwIfVar1IsNull(sSLSession, f.aC);
         if (!isAscii(str)) {
             return false;
         }
         try {
             Certificate certificate = sSLSession.getPeerCertificates()[0];
-            bzo.o(certificate, "null cannot be cast to non-null type java.security.cert.X509Certificate");
+            throwIfVar1IsNull(certificate, "null cannot be cast to non-null type java.security.cert.X509Certificate");
             return verify(str, (X509Certificate) certificate);
         } catch (SSLException unused) {
             return false;
@@ -157,14 +158,16 @@ public final class OkHostnameVerifier implements HostnameVerifier {
     }
 
     public final boolean verify(String str, X509Certificate x509Certificate) {
-        bzo.q(str, "host");
-        bzo.q(x509Certificate, "certificate");
-        return Util.canParseAsIpAddress(str) ? verifyIpAddress(str, x509Certificate) : verifyHostname(str, x509Certificate);
+        throwIfVar1IsNull(str, "host");
+        throwIfVar1IsNull(x509Certificate, "certificate");
+        return Util.canParseAsIpAddress(str) ? verifyIpAddress(str, x509Certificate)
+                : verifyHostname(str, x509Certificate);
     }
 
     private final boolean verifyHostname(String str, String str2) {
         int length;
-        if (str != null && str.length() != 0 && !dnr.bp(str, ".", false) && !dnr.bi(str, "..") && str2 != null && str2.length() != 0 && !dnr.bp(str2, ".", false) && !dnr.bi(str2, "..")) {
+        if (str != null && str.length() != 0 && !dnr.bp(str, ".", false) && !dnr.bi(str, "..") && str2 != null
+                && str2.length() != 0 && !dnr.bp(str2, ".", false) && !dnr.bi(str2, "..")) {
             if (!dnr.bi(str, ".")) {
                 str = str.concat(".");
             }
@@ -173,12 +176,16 @@ public final class OkHostnameVerifier implements HostnameVerifier {
             }
             String strAsciiToLowercase = asciiToLowercase(str2);
             if (!dnj.ab(strAsciiToLowercase, "*", false)) {
-                return bzo.f(str, strAsciiToLowercase);
+                return nullSafeIsEqual(str, strAsciiToLowercase);
             }
-            if (dnr.bp(strAsciiToLowercase, "*.", false) && dnj.ah(TypePool.Default.LazyTypeDescription.GenericTypeToken.WILDCARD_TYPE_PATH, 1, 4, strAsciiToLowercase) == -1 && str.length() >= strAsciiToLowercase.length() && !"*.".equals(strAsciiToLowercase)) {
+            if (dnr.bp(strAsciiToLowercase, "*.", false)
+                    && dnj.ah(TypePool.Default.LazyTypeDescription.GenericTypeToken.WILDCARD_TYPE_PATH, 1, 4,
+                            strAsciiToLowercase) == -1
+                    && str.length() >= strAsciiToLowercase.length() && !"*.".equals(strAsciiToLowercase)) {
                 String strSubstring = strAsciiToLowercase.substring(1);
-                bzo.p(strSubstring, "this as java.lang.String).substring(startIndex)");
-                if (dnr.bi(str, strSubstring) && ((length = str.length() - strSubstring.length()) <= 0 || dnj.am(str, TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, length - 1, 4) == -1)) {
+                throwIfVar1IsNull(strSubstring, "this as java.lang.String).substring(startIndex)");
+                if (dnr.bi(str, strSubstring) && ((length = str.length() - strSubstring.length()) <= 0 || dnj.am(str,
+                        TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, length - 1, 4) == -1)) {
                     return true;
                 }
             }

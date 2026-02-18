@@ -33,7 +33,7 @@ public abstract class ckv {
         if (context != null) {
             return context;
         }
-        bzo.ar("app");
+        throwLateinitPropNotInitYet("app");
         throw null;
     }
 }

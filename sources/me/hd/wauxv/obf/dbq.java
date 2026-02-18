@@ -12,99 +12,102 @@ public class dbq extends Fragment {
     public static final /* synthetic */ int a = 0;
     public bmu b;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class a implements Application.ActivityLifecycleCallbacks {
         public static final dbp Companion = new dbp();
 
         public static final void registerIn(Activity activity) {
             Companion.getClass();
-            bzo.q(activity, "activity");
+            throwIfVar1IsNull(activity, "activity");
             activity.registerActivityLifecycleCallbacks(new a());
         }
 
         @Override // android.app.Application.ActivityLifecycleCallbacks
         public void onActivityCreated(Activity activity, Bundle bundle) {
-            bzo.q(activity, "activity");
+            throwIfVar1IsNull(activity, "activity");
         }
 
         @Override // android.app.Application.ActivityLifecycleCallbacks
         public void onActivityDestroyed(Activity activity) {
-            bzo.q(activity, "activity");
+            throwIfVar1IsNull(activity, "activity");
         }
 
         @Override // android.app.Application.ActivityLifecycleCallbacks
         public void onActivityPaused(Activity activity) {
-            bzo.q(activity, "activity");
+            throwIfVar1IsNull(activity, "activity");
         }
 
         @Override // android.app.Application.ActivityLifecycleCallbacks
         public void onActivityPostCreated(Activity activity, Bundle bundle) {
-            bzo.q(activity, "activity");
+            throwIfVar1IsNull(activity, "activity");
             int i = dbq.a;
             dbo.a(activity, bug.ON_CREATE);
         }
 
         @Override // android.app.Application.ActivityLifecycleCallbacks
         public void onActivityPostResumed(Activity activity) {
-            bzo.q(activity, "activity");
+            throwIfVar1IsNull(activity, "activity");
             int i = dbq.a;
             dbo.a(activity, bug.ON_RESUME);
         }
 
         @Override // android.app.Application.ActivityLifecycleCallbacks
         public void onActivityPostStarted(Activity activity) {
-            bzo.q(activity, "activity");
+            throwIfVar1IsNull(activity, "activity");
             int i = dbq.a;
             dbo.a(activity, bug.ON_START);
         }
 
         @Override // android.app.Application.ActivityLifecycleCallbacks
         public void onActivityPreDestroyed(Activity activity) {
-            bzo.q(activity, "activity");
+            throwIfVar1IsNull(activity, "activity");
             int i = dbq.a;
             dbo.a(activity, bug.ON_DESTROY);
         }
 
         @Override // android.app.Application.ActivityLifecycleCallbacks
         public void onActivityPrePaused(Activity activity) {
-            bzo.q(activity, "activity");
+            throwIfVar1IsNull(activity, "activity");
             int i = dbq.a;
             dbo.a(activity, bug.ON_PAUSE);
         }
 
         @Override // android.app.Application.ActivityLifecycleCallbacks
         public void onActivityPreStopped(Activity activity) {
-            bzo.q(activity, "activity");
+            throwIfVar1IsNull(activity, "activity");
             int i = dbq.a;
             dbo.a(activity, bug.ON_STOP);
         }
 
         @Override // android.app.Application.ActivityLifecycleCallbacks
         public void onActivityResumed(Activity activity) {
-            bzo.q(activity, "activity");
+            throwIfVar1IsNull(activity, "activity");
         }
 
         @Override // android.app.Application.ActivityLifecycleCallbacks
         public void onActivitySaveInstanceState(Activity activity, Bundle bundle) {
-            bzo.q(activity, "activity");
-            bzo.q(bundle, "bundle");
+            throwIfVar1IsNull(activity, "activity");
+            throwIfVar1IsNull(bundle, "bundle");
         }
 
         @Override // android.app.Application.ActivityLifecycleCallbacks
         public void onActivityStarted(Activity activity) {
-            bzo.q(activity, "activity");
+            throwIfVar1IsNull(activity, "activity");
         }
 
         @Override // android.app.Application.ActivityLifecycleCallbacks
         public void onActivityStopped(Activity activity) {
-            bzo.q(activity, "activity");
+            throwIfVar1IsNull(activity, "activity");
         }
     }
 
     public final void c(bug bugVar) {
         if (Build.VERSION.SDK_INT < 29) {
             Activity activity = getActivity();
-            bzo.p(activity, "getActivity(...)");
+            throwIfVar1IsNull(activity, "getActivity(...)");
             dbo.a(activity, bugVar);
         }
     }

@@ -15,7 +15,7 @@ public abstract class abn extends FrameLayout {
 
     @Override // android.view.ViewGroup, android.view.View
     public final void dispatchDraw(Canvas canvas) {
-        bzo.q(canvas, "canvas");
+        throwIfVar1IsNull(canvas, "canvas");
         if (!this.a) {
             super.dispatchDraw(canvas);
             return;
@@ -24,7 +24,7 @@ public abstract class abn extends FrameLayout {
         if (textureView != null) {
             drawChild(canvas, textureView, getDrawingTime());
         } else {
-            bzo.ar("textureView");
+            throwLateinitPropNotInitYet("textureView");
             throw null;
         }
     }
@@ -46,7 +46,7 @@ public abstract class abn extends FrameLayout {
     }
 
     public void setupBaseViews(Context context) {
-        bzo.q(context, com.umeng.analytics.pro.f.X);
+        throwIfVar1IsNull(context, "context");
         if (this.b) {
             this.a = Build.VERSION.SDK_INT < 28;
         } else {

@@ -2,7 +2,7 @@ package me.hd.wauxv.obf;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class dhh extends doo {
+public final class dhh extends BaseHook {
     public static final dhh a;
     public static final String b;
     public static final String c;
@@ -30,23 +30,23 @@ public final class dhh extends doo {
         akiVarAd.o();
         cde cdeVarT2 = bmuVarS.t();
         cdeVarT2.ab = "onPreferenceTreeClick" /* cnb.z(-594822905723690L) */;
-        aki akiVarAd2 = dhhVar.ad((cdk) dkz.n(new Object[]{eoz.a, cvh.a.b()}, 2, cdeVarT2), exgVar);
+        aki akiVarAd2 = dhhVar.ad((cdk) dkz.n(new Object[] { eoz.a, cvh.a.b() }, 2, cdeVarT2), exgVar);
         dhhVar.y(akiVarAd2, new dhg(1));
         akiVarAd2.o();
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String f() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getName() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String g() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getCategory() {
         return b;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String o() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getDescription() {
         return h;
     }
 }

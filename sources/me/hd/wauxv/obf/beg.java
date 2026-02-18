@@ -365,12 +365,13 @@ public final class beg {
             bup bupVar = bdjVar != null ? bdjVar : bdmVar;
             cqtVarAn.getClass();
             bdx bdxVar = this.j;
-            bzo.q(bdxVar, "onBackPressedCallback");
+            throwIfVar1IsNull(bdxVar, "onBackPressedCallback");
             bur burVarAp = bupVar.ap();
             if (burVarAp.c != buh.a) {
                 bdxVar.b.add(new cqq(cqtVarAn, burVarAp, bdxVar));
                 cqtVarAn.k();
-                bdxVar.c = new cqs(0, cqtVarAn, cqt.class, "updateEnabledCallbacks", "updateEnabledCallbacks()V", 0, 0, 0);
+                bdxVar.c = new cqs(0, cqtVarAn, cqt.class, "updateEnabledCallbacks", "updateEnabledCallbacks()V", 0, 0,
+                        0);
             }
         }
         if (bdjVar != null) {
@@ -385,7 +386,7 @@ public final class beg {
         } else if (bdmVar != null) {
             erq erqVarAj = bdmVar.h.aj();
             ahv ahvVar = ahv.a;
-            bzo.q(ahvVar, "defaultCreationExtras");
+            throwIfVar1IsNull(ahvVar, "defaultCreationExtras");
             chm chmVar = new chm(erqVarAj, bej.a, ahvVar);
             zc zcVarB = dal.b(bej.class);
             String strAo = emc.ao(zcVarB);
@@ -424,7 +425,7 @@ public final class beg {
             hb hbVar = bdmVar5.h;
             hbVar.getClass();
             bdu bduVar = this.r;
-            bzo.q(bduVar, "listener");
+            throwIfVar1IsNull(bduVar, "listener");
             hbVar.z.add(bduVar);
         }
         bdm bdmVar6 = this.w;
@@ -432,7 +433,7 @@ public final class beg {
             hb hbVar2 = bdmVar6.h;
             hbVar2.getClass();
             bdu bduVar2 = this.s;
-            bzo.q(bduVar2, "listener");
+            throwIfVar1IsNull(bduVar2, "listener");
             hbVar2.ab.add(bduVar2);
         }
         bdm bdmVar7 = this.w;
@@ -440,7 +441,7 @@ public final class beg {
             hb hbVar3 = bdmVar7.h;
             hbVar3.getClass();
             bdu bduVar3 = this.t;
-            bzo.q(bduVar3, "listener");
+            throwIfVar1IsNull(bduVar3, "listener");
             hbVar3.ac.add(bduVar3);
         }
         bdm bdmVar8 = this.w;
@@ -450,7 +451,7 @@ public final class beg {
         hb hbVar4 = bdmVar8.h;
         hbVar4.getClass();
         bdy bdyVar = this.u;
-        bzo.q(bdyVar, com.umeng.analytics.pro.f.M);
+        throwIfVar1IsNull(bdyVar, com.umeng.analytics.pro.f.M);
         jx jxVar = hbVar4.s;
         ((CopyOnWriteArrayList) jxVar.h).add(bdyVar);
         ((Runnable) jxVar.f).run();
@@ -488,7 +489,7 @@ public final class beg {
         while (it.hasNext()) {
             ViewGroup viewGroup = ((bfb) it.next()).c.by;
             if (viewGroup != null) {
-                bzo.q(cf(), "factory");
+                throwIfVar1IsNull(cf(), "factory");
                 Object tag = viewGroup.getTag(R.id.special_effects_controller_view_tag);
                 if (tag instanceof aln) {
                     alnVar = (aln) tag;
@@ -557,7 +558,8 @@ public final class beg {
 
     public final void be(boolean z) {
         if (z && this.w != null) {
-            cy(new IllegalStateException("Do not call dispatchConfigurationChanged() on host. Host implements OnConfigurationChangedProvider and automatically dispatches configuration changes to fragments."));
+            cy(new IllegalStateException(
+                    "Do not call dispatchConfigurationChanged() on host. Host implements OnConfigurationChangedProvider and automatically dispatches configuration changes to fragments."));
             throw null;
         }
         for (bdj bdjVar : this.c.af()) {
@@ -642,7 +644,7 @@ public final class beg {
             hb hbVar2 = bdmVar2.h;
             hbVar2.getClass();
             bdu bduVar = this.r;
-            bzo.q(bduVar, "listener");
+            throwIfVar1IsNull(bduVar, "listener");
             hbVar2.z.remove(bduVar);
         }
         bdm bdmVar3 = this.w;
@@ -650,7 +652,7 @@ public final class beg {
             hb hbVar3 = bdmVar3.h;
             hbVar3.getClass();
             bdu bduVar2 = this.q;
-            bzo.q(bduVar2, "listener");
+            throwIfVar1IsNull(bduVar2, "listener");
             hbVar3.y.remove(bduVar2);
         }
         bdm bdmVar4 = this.w;
@@ -658,7 +660,7 @@ public final class beg {
             hb hbVar4 = bdmVar4.h;
             hbVar4.getClass();
             bdu bduVar3 = this.s;
-            bzo.q(bduVar3, "listener");
+            throwIfVar1IsNull(bduVar3, "listener");
             hbVar4.ab.remove(bduVar3);
         }
         bdm bdmVar5 = this.w;
@@ -666,7 +668,7 @@ public final class beg {
             hb hbVar5 = bdmVar5.h;
             hbVar5.getClass();
             bdu bduVar4 = this.t;
-            bzo.q(bduVar4, "listener");
+            throwIfVar1IsNull(bduVar4, "listener");
             hbVar5.ac.remove(bduVar4);
         }
         bdm bdmVar6 = this.w;
@@ -674,7 +676,7 @@ public final class beg {
             hb hbVar6 = bdmVar6.h;
             hbVar6.getClass();
             bdy bdyVar = this.u;
-            bzo.q(bdyVar, com.umeng.analytics.pro.f.M);
+            throwIfVar1IsNull(bdyVar, com.umeng.analytics.pro.f.M);
             jx jxVar = hbVar6.s;
             ((CopyOnWriteArrayList) jxVar.h).remove(bdyVar);
             if (((HashMap) jxVar.e).remove(bdyVar) != null) {
@@ -702,7 +704,8 @@ public final class beg {
 
     public final void bi(boolean z) {
         if (z && this.w != null) {
-            cy(new IllegalStateException("Do not call dispatchLowMemory() on host. Host implements OnTrimMemoryProvider and automatically dispatches low memory callbacks to fragments."));
+            cy(new IllegalStateException(
+                    "Do not call dispatchLowMemory() on host. Host implements OnTrimMemoryProvider and automatically dispatches low memory callbacks to fragments."));
             throw null;
         }
         for (bdj bdjVar : this.c.af()) {
@@ -717,7 +720,8 @@ public final class beg {
 
     public final void bj(boolean z) {
         if (z && this.w != null) {
-            cy(new IllegalStateException("Do not call dispatchMultiWindowModeChanged() on host. Host implements OnMultiWindowModeChangedProvider and automatically dispatches multi-window mode changes to fragments."));
+            cy(new IllegalStateException(
+                    "Do not call dispatchMultiWindowModeChanged() on host. Host implements OnMultiWindowModeChangedProvider and automatically dispatches multi-window mode changes to fragments."));
             throw null;
         }
         for (bdj bdjVar : this.c.af()) {
@@ -778,7 +782,8 @@ public final class beg {
 
     public final void bo(boolean z) {
         if (z && this.w != null) {
-            cy(new IllegalStateException("Do not call dispatchPictureInPictureModeChanged() on host. Host implements OnPictureInPictureModeChangedProvider and automatically dispatches picture-in-picture mode changes to fragments."));
+            cy(new IllegalStateException(
+                    "Do not call dispatchPictureInPictureModeChanged() on host. Host implements OnPictureInPictureModeChangedProvider and automatically dispatches picture-in-picture mode changes to fragments."));
             throw null;
         }
         for (bdj bdjVar : this.c.af()) {
@@ -977,16 +982,17 @@ public final class beg {
                     if (bdjVar.cq() != null) {
                         erq erqVarAj = bdjVar.aj();
                         bei beiVar = bwv.a;
-                        bzo.q(erqVarAj, "store");
+                        throwIfVar1IsNull(erqVarAj, "store");
                         ahv ahvVar = ahv.a;
-                        bzo.q(ahvVar, "defaultCreationExtras");
+                        throwIfVar1IsNull(ahvVar, "defaultCreationExtras");
                         chm chmVar2 = new chm(erqVarAj, beiVar, ahvVar);
                         zc zcVarB = dal.b(bwv.class);
                         String strAo = emc.ao(zcVarB);
                         if (strAo == null) {
                             throw new IllegalArgumentException("Local and anonymous classes can not be ViewModels");
                         }
-                        dlo dloVar = ((bwv) chmVar2.ah("androidx.lifecycle.ViewModelProvider.DefaultKey:".concat(strAo), zcVarB)).b;
+                        dlo dloVar = ((bwv) chmVar2.ah("androidx.lifecycle.ViewModelProvider.DefaultKey:".concat(strAo),
+                                zcVarB)).b;
                         if (dloVar.i() > 0) {
                             printWriter.print(strS2);
                             printWriter.println("Loaders:");
@@ -1165,7 +1171,8 @@ public final class beg {
             muVar.s = false;
             muVar.y();
             if (ar(3)) {
-                Log.d("FragmentManager", "Reversing mTransitioningOp " + this.h + " as part of execPendingActions for actions " + this.a);
+                Log.d("FragmentManager", "Reversing mTransitioningOp " + this.h
+                        + " as part of execPendingActions for actions " + this.a);
             }
             this.h.aa(false, false);
             this.a.add(0, this.h);
@@ -1229,7 +1236,8 @@ public final class beg {
             muVar2.s = false;
             muVar2.y();
             if (ar(3)) {
-                Log.d("FragmentManager", "Reversing mTransitioningOp " + this.h + " as part of execSingleAction for action " + muVar);
+                Log.d("FragmentManager",
+                        "Reversing mTransitioningOp " + this.h + " as part of execSingleAction for action " + muVar);
             }
             this.h.aa(false, false);
             this.h.v(this.al, this.am);
@@ -1256,10 +1264,13 @@ public final class beg {
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:113:0x0238 A[PHI: r15
-      0x0238: PHI (r15v25 int) = (r15v24 int), (r15v27 int) binds: [B:105:0x0225, B:109:0x022f] A[DONT_GENERATE, DONT_INLINE]] */
-    /* JADX WARN: Found duplicated region for block: B:25:0x0074  */
-    /* JADX WARN: Found duplicated region for block: B:64:0x0178  */
+    /*
+     * JADX WARN: Found duplicated region for block: B:113:0x0238 A[PHI: r15
+     * 0x0238: PHI (r15v25 int) = (r15v24 int), (r15v27 int) binds: [B:105:0x0225,
+     * B:109:0x022f] A[DONT_GENERATE, DONT_INLINE]]
+     */
+    /* JADX WARN: Found duplicated region for block: B:25:0x0074 */
+    /* JADX WARN: Found duplicated region for block: B:64:0x0178 */
     public final void by(ArrayList arrayList, ArrayList arrayList2, int i, int i2) {
         Object objPrevious;
         String str;
@@ -1679,7 +1690,7 @@ public final class beg {
                             objPrevious = listIterator.previous();
                             dlr dlrVar = (dlr) objPrevious;
                             View view = dlrVar.c.bz;
-                            bzo.p(view, "operation.fragment.mView");
+                            throwIfVar1IsNull(view, "operation.fragment.mView");
                             char c = 4;
                             if (view.getAlpha() != 0.0f || view.getVisibility() != 0) {
                                 int visibility = view.getVisibility();
@@ -2071,7 +2082,8 @@ public final class beg {
         for (bdj bdjVar3 : new ArrayList(bejVar.b.values())) {
             if (map3.get(bdjVar3.aw) == null) {
                 if (ar(2)) {
-                    Log.v("FragmentManager", "Discarding retained Fragment " + bdjVar3 + " that was not found in the set of active Fragments " + behVar.a);
+                    Log.v("FragmentManager", "Discarding retained Fragment " + bdjVar3
+                            + " that was not found in the set of active Fragments " + behVar.a);
                 }
                 this.ao.l(bdjVar3);
                 bdjVar3.bm = this;
@@ -2088,7 +2100,7 @@ public final class beg {
             for (String str3 : arrayList) {
                 bdj bdjVarZ = chmVar.z(str3);
                 if (bdjVarZ == null) {
-                    throw new IllegalStateException(bjs.o("No instantiated fragment for (", str3, ")"));
+                    throw new IllegalStateException(concat("No instantiated fragment for (", str3, ")"));
                 }
                 if (ar(2)) {
                     Log.v("FragmentManager", "restoreSaveState: added (" + str3 + "): " + bdjVarZ);
@@ -2183,7 +2195,8 @@ public final class beg {
                         for (bdj bdjVar2 : (ArrayList) chmVar2.c) {
                             arrayList.add(bdjVar2.aw);
                             if (ar(2)) {
-                                Log.v("FragmentManager", "saveAllState: adding fragment (" + bdjVar2.aw + "): " + bdjVar2);
+                                Log.v("FragmentManager",
+                                        "saveAllState: adding fragment (" + bdjVar2.aw + "): " + bdjVar2);
                             }
                         }
                     }
@@ -2263,13 +2276,15 @@ public final class beg {
             bdjVar.cg = buhVar;
             return;
         }
-        throw new IllegalArgumentException("Fragment " + bdjVar + " is not an active fragment of FragmentManager " + this);
+        throw new IllegalArgumentException(
+                "Fragment " + bdjVar + " is not an active fragment of FragmentManager " + this);
     }
 
     public final void cv(bdj bdjVar) {
         if (bdjVar != null) {
             if (!bdjVar.equals(this.c.z(bdjVar.aw)) || (bdjVar.bn != null && bdjVar.bm != this)) {
-                throw new IllegalArgumentException("Fragment " + bdjVar + " is not an active fragment of FragmentManager " + this);
+                throw new IllegalArgumentException(
+                        "Fragment " + bdjVar + " is not an active fragment of FragmentManager " + this);
             }
         }
         bdj bdjVar2 = this.z;
@@ -2282,7 +2297,8 @@ public final class beg {
         ViewGroup viewGroupCd = cd(bdjVar);
         if (viewGroupCd != null) {
             bdg bdgVar = bdjVar.cc;
-            if ((bdgVar == null ? 0 : bdgVar.e) + (bdgVar == null ? 0 : bdgVar.d) + (bdgVar == null ? 0 : bdgVar.c) + (bdgVar == null ? 0 : bdgVar.b) > 0) {
+            if ((bdgVar == null ? 0 : bdgVar.e) + (bdgVar == null ? 0 : bdgVar.d) + (bdgVar == null ? 0 : bdgVar.c)
+                    + (bdgVar == null ? 0 : bdgVar.b) > 0) {
                 if (viewGroupCd.getTag(R.id.visible_removing_fragment_view_tag) == null) {
                     viewGroupCd.setTag(R.id.visible_removing_fragment_view_tag, bdjVar);
                 }
@@ -2334,8 +2350,14 @@ public final class beg {
         }
     }
 
-    /* JADX WARN: Type inference failed for: r0v7, types: [me.hd.wauxv.obf.bfu, me.hd.wauxv.obf.bgr] */
-    /* JADX WARN: Type inference failed for: r2v6, types: [me.hd.wauxv.obf.bfu, me.hd.wauxv.obf.bgr] */
+    /*
+     * JADX WARN: Type inference failed for: r0v7, types: [me.hd.wauxv.obf.bfu,
+     * me.hd.wauxv.obf.bgr]
+     */
+    /*
+     * JADX WARN: Type inference failed for: r2v6, types: [me.hd.wauxv.obf.bfu,
+     * me.hd.wauxv.obf.bgr]
+     */
     public final void cz() {
         synchronized (this.a) {
             try {

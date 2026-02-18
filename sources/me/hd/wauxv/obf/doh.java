@@ -9,7 +9,7 @@ public abstract class doh {
     public static final dov a = new dov(dx.b);
 
     public static final void b(bfu bfuVar) {
-        if (bzo.f(Looper.myLooper(), Looper.getMainLooper())) {
+        if (nullSafeIsEqual(Looper.myLooper(), Looper.getMainLooper())) {
             bfuVar.invoke();
         } else {
             ((Handler) a.getValue()).post(new dh(bfuVar));

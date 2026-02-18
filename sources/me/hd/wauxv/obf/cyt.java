@@ -177,7 +177,7 @@ public final class cyt extends cyw {
         erp erpVar = daaVar.a;
         int i2 = dab.a;
         Context context = (Context) eaVar.b;
-        io ioVar = (io) erpVar.v;
+        DefaultConfig ioVar = (DefaultConfig) erpVar.v;
         LinkedHashMap linkedHashMap = blu.a;
         Class cls = (Class) ioVar.c;
         ws wsVar = (ws) ioVar.d;

@@ -2,7 +2,7 @@ package okhttp3.internal.platform.android;
 
 import java.lang.reflect.Method;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -12,7 +12,10 @@ public final class CloseGuard {
     private final Method openMethod;
     private final Method warnIfOpenMethod;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
@@ -46,13 +49,13 @@ public final class CloseGuard {
     }
 
     public final Object createAndOpen(String str) {
-        bzo.q(str, "closer");
+        throwIfVar1IsNull(str, "closer");
         Method method = this.getMethod;
         if (method != null) {
             try {
                 Object objInvoke = method.invoke(null, null);
                 Method method2 = this.openMethod;
-                bzo.n(method2);
+                throwIfVar1IsNull(method2);
                 method2.invoke(objInvoke, str);
                 return objInvoke;
             } catch (Exception unused) {
@@ -67,7 +70,7 @@ public final class CloseGuard {
         }
         try {
             Method method = this.warnIfOpenMethod;
-            bzo.n(method);
+            throwIfVar1IsNull(method);
             method.invoke(obj, null);
             return true;
         } catch (Exception unused) {

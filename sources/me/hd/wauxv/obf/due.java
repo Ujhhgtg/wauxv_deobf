@@ -26,7 +26,8 @@ public final class due {
             return false;
         }
         due dueVar = (due) obj;
-        return bzo.f(this.a, dueVar.a) && bzo.f(this.b, dueVar.b) && bzo.f(this.c, dueVar.c);
+        return nullSafeIsEqual(this.a, dueVar.a) && nullSafeIsEqual(this.b, dueVar.b)
+                && nullSafeIsEqual(this.c, dueVar.c);
     }
 
     public final int hashCode() {

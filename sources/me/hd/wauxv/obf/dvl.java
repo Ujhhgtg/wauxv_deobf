@@ -6,7 +6,7 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class dvl {
     public static final dvk Companion = new dvk();
-    public static final btt[] a = {null, null, null, null, null, null, ewz.am(btx.a, new dtr(1)), null, null};
+    public static final btt[] a = { null, null, null, null, null, null, ewz.am(btx.a, new dtr(1)), null, null };
     public final Integer b;
     public final dwm c;
     public final eji d;
@@ -17,7 +17,8 @@ public final class dvl {
     public final efm i;
     public final Boolean j;
 
-    public /* synthetic */ dvl(int i, Integer num, dwm dwmVar, eji ejiVar, dyl dylVar, String str, String str2, List list, efm efmVar, Boolean bool) {
+    public /* synthetic */ dvl(int i, Integer num, dwm dwmVar, eji ejiVar, dyl dylVar, String str, String str2,
+            List list, efm efmVar, Boolean bool) {
         if (511 != (i & 511)) {
             bht.ah(i, 511, dvj.b.getDescriptor());
             throw null;
@@ -41,7 +42,11 @@ public final class dvl {
             return false;
         }
         dvl dvlVar = (dvl) obj;
-        return bzo.f(this.b, dvlVar.b) && bzo.f(this.c, dvlVar.c) && bzo.f(this.d, dvlVar.d) && bzo.f(this.e, dvlVar.e) && bzo.f(this.f, dvlVar.f) && bzo.f(this.g, dvlVar.g) && bzo.f(this.h, dvlVar.h) && bzo.f(this.i, dvlVar.i) && bzo.f(this.j, dvlVar.j);
+        return nullSafeIsEqual(this.b, dvlVar.b) && nullSafeIsEqual(this.c, dvlVar.c)
+                && nullSafeIsEqual(this.d, dvlVar.d) && nullSafeIsEqual(this.e, dvlVar.e)
+                && nullSafeIsEqual(this.f, dvlVar.f) && nullSafeIsEqual(this.g, dvlVar.g)
+                && nullSafeIsEqual(this.h, dvlVar.h) && nullSafeIsEqual(this.i, dvlVar.i)
+                && nullSafeIsEqual(this.j, dvlVar.j);
     }
 
     public final int hashCode() {

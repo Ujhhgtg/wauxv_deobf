@@ -28,7 +28,8 @@ public final class efm {
             return false;
         }
         efm efmVar = (efm) obj;
-        return bzo.f(this.a, efmVar.a) && bzo.f(this.b, efmVar.b) && bzo.f(this.c, efmVar.c) && bzo.f(this.d, efmVar.d);
+        return nullSafeIsEqual(this.a, efmVar.a) && nullSafeIsEqual(this.b, efmVar.b)
+                && nullSafeIsEqual(this.c, efmVar.c) && nullSafeIsEqual(this.d, efmVar.d);
     }
 
     public final int hashCode() {
@@ -48,6 +49,6 @@ public final class efm {
         yg.u(sb, this.a, -283403417025322L);
         yg.u(sb, this.b, -282767761865514L);
         yg.u(sb, this.c, -282664682650410L);
-        return bjs.q(sb, this.d, ')');
+        return concat(sb, this.d, ')');
     }
 }

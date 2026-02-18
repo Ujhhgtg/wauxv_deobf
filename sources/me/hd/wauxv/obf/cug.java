@@ -11,7 +11,7 @@ import me.hd.wauxv.data.bean.info.FriendInfo;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class cug implements bgf {
+public final /* synthetic */ class cug implements IHasInvokeMethod {
     public final /* synthetic */ int a;
     public final /* synthetic */ long b;
     public final /* synthetic */ Object c;
@@ -34,8 +34,8 @@ public final /* synthetic */ class cug implements bgf {
                     for (Map.Entry entry : map.entrySet()) {
                         String str = (String) entry.getKey();
                         String str2 = (String) entry.getValue();
-                        bzo.q(str, "name");
-                        bzo.q(str2, "value");
+                        throwIfVar1IsNull(str, "name");
+                        throwIfVar1IsNull(str2, "value");
                         eojVar.d.addHeader(str, str2);
                     }
                 }
@@ -86,7 +86,8 @@ public final /* synthetic */ class cug implements bgf {
                                 }
                                 LinkedHashSet linkedHashSet = new LinkedHashSet(arrayList3);
                                 if (!setAd.isEmpty()) {
-                                    linkedHashSet.add(j2 + '|' + aaz.k(setAd, ";" /* cnb.z(-535264594230058L) */, null, null, null, 62));
+                                    linkedHashSet.add(j2 + '|'
+                                            + aaz.k(setAd, ";" /* cnb.z(-535264594230058L) */, null, null, null, 62));
                                 }
                                 diyVar.t(linkedHashSet);
                                 dnc.g(null, 3, "已点赞" /* cnb.z(-535273184164650L) */);
@@ -100,13 +101,14 @@ public final /* synthetic */ class cug implements bgf {
                         String wxid = friendInfo.getWxid();
                         StringBuilder sb2 = new StringBuilder();
                         String nickname = friendInfo.getNickname();
-                        if ((dfv.d(dap.b(new dap("\r\n|\r|\n" /* cnb.z(-535432097954602L) */), nickname)) > 3 ? nickname : null) != null) {
+                        if ((dfv.d(dap.b(new dap("\r\n|\r|\n" /* cnb.z(-535432097954602L) */), nickname)) > 3 ? nickname
+                                : null) != null) {
                             sb2.append("已过滤此昵称..." /* cnb.z(-535402033183530L) */);
                         } else {
                             String str3 = nickname.length() > 8 ? nickname : null;
                             if (str3 != null) {
                                 String strSubstring = str3.substring(0, 8);
-                                bzo.p(strSubstring, "substring(...)" /* cnb.z(-535376263379754L) */);
+                                throwIfVar1IsNull(strSubstring, "substring(...)" /* cnb.z(-535376263379754L) */);
                                 sb2.append(strSubstring);
                                 sb2.append("..." /* cnb.z(-535294659001130L) */);
                                 sb = sb2;

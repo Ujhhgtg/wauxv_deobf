@@ -73,7 +73,7 @@ public final class dcl implements dcj {
             }
         }
         Resources.Theme theme = authority.equals(context.getPackageName()) ? (Resources.Theme) crwVar.b(a) : null;
-        Drawable drawableU = theme == null ? bzo.u(context, contextCreatePackageContext, identifier, null) : bzo.u(context, context, identifier, theme);
+        Drawable drawableU = theme == null ? KotlinHelpers.u(context, contextCreatePackageContext, identifier, null) : KotlinHelpers.u(context, context, identifier, theme);
         if (drawableU != null) {
             return new bhb(drawableU, 1);
         }

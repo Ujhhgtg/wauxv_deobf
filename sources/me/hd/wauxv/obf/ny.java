@@ -23,7 +23,7 @@ public final class ny extends oc {
             return false;
         }
         ny nyVar = (ny) obj;
-        return bzo.f(this.a, nyVar.a) && bzo.f(this.b, nyVar.b) && bzo.f(this.c, nyVar.c);
+        return nullSafeIsEqual(this.a, nyVar.a) && nullSafeIsEqual(this.b, nyVar.b) && nullSafeIsEqual(this.c, nyVar.c);
     }
 
     public final int hashCode() {

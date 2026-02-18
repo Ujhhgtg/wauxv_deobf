@@ -78,7 +78,7 @@ public final class ans implements ajb {
                     break;
                 case 1:
                     Context context = anrVar.b;
-                    objOpenRawResourceFd = bzo.u(context, context, i, theme);
+                    objOpenRawResourceFd = KotlinHelpers.u(context, context, i, theme);
                     break;
                 default:
                     objOpenRawResourceFd = resources.openRawResource(i);

@@ -81,10 +81,10 @@ public final class rg extends InputStream {
     public final int read(byte[] bArr, int i, int i2) throws IOException {
         switch (this.a) {
             case 0:
-                bzo.q(bArr, "sink");
+                throwIfVar1IsNull(bArr, "sink");
                 return ((rh) this.b).read(bArr, i, i2);
             default:
-                bzo.q(bArr, "data");
+                throwIfVar1IsNull(bArr, "data");
                 cyl cylVar = (cyl) this.b;
                 rh rhVar = cylVar.b;
                 if (!cylVar.d) {

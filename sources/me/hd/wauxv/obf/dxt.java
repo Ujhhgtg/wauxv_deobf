@@ -32,7 +32,9 @@ public final class dxt {
             return false;
         }
         dxt dxtVar = (dxt) obj;
-        return bzo.f(this.a, dxtVar.a) && bzo.f(this.b, dxtVar.b) && bzo.f(this.c, dxtVar.c) && bzo.f(this.d, dxtVar.d) && bzo.f(this.e, dxtVar.e) && bzo.f(this.f, dxtVar.f);
+        return nullSafeIsEqual(this.a, dxtVar.a) && nullSafeIsEqual(this.b, dxtVar.b)
+                && nullSafeIsEqual(this.c, dxtVar.c) && nullSafeIsEqual(this.d, dxtVar.d)
+                && nullSafeIsEqual(this.e, dxtVar.e) && nullSafeIsEqual(this.f, dxtVar.f);
     }
 
     public final int hashCode() {
@@ -61,6 +63,6 @@ public final class dxt {
         sb.append(this.d);
         sb.append(", commentEggCount=" /* cnb.z(-181367878974250L) */);
         bjs.w(sb, this.e, -181303454464810L);
-        return bjs.p(sb, this.f, ')');
+        return concat(sb, this.f, ')');
     }
 }

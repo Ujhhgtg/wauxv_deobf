@@ -26,7 +26,8 @@ public final class ehg {
             return false;
         }
         ehg ehgVar = (ehg) obj;
-        return bzo.f(this.a, ehgVar.a) && bzo.f(this.b, ehgVar.b) && bzo.f(this.c, ehgVar.c);
+        return nullSafeIsEqual(this.a, ehgVar.a) && nullSafeIsEqual(this.b, ehgVar.b)
+                && nullSafeIsEqual(this.c, ehgVar.c);
     }
 
     public final int hashCode() {

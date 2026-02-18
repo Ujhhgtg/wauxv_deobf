@@ -214,7 +214,8 @@ final class JSONReaderJSONB extends JSONReader {
         if (b == -71) {
             int int32Value2 = readInt32Value();
             BigInteger bigInteger = readBigInteger();
-            return (int32Value2 == 0 ? new BigDecimal(bigInteger) : new BigDecimal(bigInteger, int32Value2)).toBigInteger();
+            return (int32Value2 == 0 ? new BigDecimal(bigInteger) : new BigDecimal(bigInteger, int32Value2))
+                    .toBigInteger();
         }
         if (b != 72) {
             if (b == 124) {
@@ -319,13 +320,13 @@ final class JSONReaderJSONB extends JSONReader {
         return BigInteger.valueOf(intBE2);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:119:0x0184  */
-    /* JADX WARN: Found duplicated region for block: B:121:0x018a  */
+    /* JADX WARN: Found duplicated region for block: B:119:0x0184 */
+    /* JADX WARN: Found duplicated region for block: B:121:0x018a */
     /* JADX WARN: Found duplicated region for block: B:123:0x018e A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:124:0x0190  */
+    /* JADX WARN: Found duplicated region for block: B:124:0x0190 */
     /* JADX WARN: Found duplicated region for block: B:126:0x0194 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:127:0x0196  */
-    /* JADX WARN: Found duplicated region for block: B:139:0x01b6  */
+    /* JADX WARN: Found duplicated region for block: B:127:0x0196 */
+    /* JADX WARN: Found duplicated region for block: B:139:0x01b6 */
     private boolean readBoolValue0(byte b) {
         boolean z;
         int i;
@@ -367,7 +368,8 @@ final class JSONReaderJSONB extends JSONReader {
                         this.strlen = length2;
                         byte[] bArr2 = new byte[length2];
                         System.arraycopy(bArr, this.offset, bArr2, 0, length2);
-                        str = new String(bArr2, b == 125 ? StandardCharsets.UTF_16BE : b == 124 ? StandardCharsets.UTF_16LE : StandardCharsets.UTF_16);
+                        str = new String(bArr2, b == 125 ? StandardCharsets.UTF_16BE
+                                : b == 124 ? StandardCharsets.UTF_16LE : StandardCharsets.UTF_16);
                         this.offset += this.strlen;
                         switch (str) {
                             case "0":
@@ -423,11 +425,13 @@ final class JSONReaderJSONB extends JSONReader {
                 if (length == 5) {
                     i2 = this.offset;
                     b3 = bArr[i2];
-                    if (b3 != 102 && bArr[i2 + 1] == 97 && bArr[i2 + 2] == 108 && bArr[i2 + 3] == 115 && bArr[i2 + 4] == 101) {
+                    if (b3 != 102 && bArr[i2 + 1] == 97 && bArr[i2 + 2] == 108 && bArr[i2 + 3] == 115
+                            && bArr[i2 + 4] == 101) {
                         this.offset = i2 + 5;
                         return z;
                     }
-                    if (b3 == 70 && bArr[i2 + 1] == 65 && bArr[i2 + 2] == 76 && bArr[i2 + 3] == 83 && bArr[i2 + 4] == 69) {
+                    if (b3 == 70 && bArr[i2 + 1] == 65 && bArr[i2 + 2] == 76 && bArr[i2 + 3] == 83
+                            && bArr[i2 + 4] == 69) {
                         this.offset = i2 + 5;
                         return z;
                     }
@@ -645,13 +649,15 @@ final class JSONReaderJSONB extends JSONReader {
                 int int32Value3 = readInt32Value();
                 String str2 = new String(bArr, this.offset, int32Value3, StandardCharsets.ISO_8859_1);
                 this.offset += int32Value3;
-                return str2.indexOf(46) == -1 ? new BigInteger(str2).intValue() : TypeUtils.toBigDecimal(str2).intValue();
+                return str2.indexOf(46) == -1 ? new BigInteger(str2).intValue()
+                        : TypeUtils.toBigDecimal(str2).intValue();
             }
             if (b == 122) {
                 int int32Value4 = readInt32Value();
                 String str3 = new String(bArr, this.offset, int32Value4, StandardCharsets.UTF_8);
                 this.offset += int32Value4;
-                return str3.indexOf(46) == -1 ? new BigInteger(str3).intValue() : TypeUtils.toBigDecimal(str3).intValue();
+                return str3.indexOf(46) == -1 ? new BigInteger(str3).intValue()
+                        : TypeUtils.toBigDecimal(str3).intValue();
             }
             switch (b) {
                 case -81:
@@ -720,7 +726,8 @@ final class JSONReaderJSONB extends JSONReader {
                             int i7 = b - 73;
                             String fixedAsciiString = readFixedAsciiString(i7);
                             this.offset += i7;
-                            return fixedAsciiString.indexOf(46) == -1 ? new BigInteger(fixedAsciiString).intValue() : TypeUtils.toBigDecimal(fixedAsciiString).intValue();
+                            return fixedAsciiString.indexOf(46) == -1 ? new BigInteger(fixedAsciiString).intValue()
+                                    : TypeUtils.toBigDecimal(fixedAsciiString).intValue();
                     }
                     break;
             }
@@ -753,13 +760,15 @@ final class JSONReaderJSONB extends JSONReader {
                 int int32Value3 = readInt32Value();
                 String str2 = new String(bArr, this.offset, int32Value3, StandardCharsets.ISO_8859_1);
                 this.offset += int32Value3;
-                return str2.indexOf(46) == -1 ? new BigInteger(str2).intValue() : TypeUtils.toBigDecimal(str2).intValue();
+                return str2.indexOf(46) == -1 ? new BigInteger(str2).intValue()
+                        : TypeUtils.toBigDecimal(str2).intValue();
             }
             if (b == 122) {
                 int int32Value4 = readInt32Value();
                 String str3 = new String(bArr, this.offset, int32Value4, StandardCharsets.UTF_8);
                 this.offset += int32Value4;
-                return str3.indexOf(46) == -1 ? new BigInteger(str3).intValue() : TypeUtils.toBigDecimal(str3).intValue();
+                return str3.indexOf(46) == -1 ? new BigInteger(str3).intValue()
+                        : TypeUtils.toBigDecimal(str3).intValue();
             }
             switch (b) {
                 case -81:
@@ -834,7 +843,8 @@ final class JSONReaderJSONB extends JSONReader {
                             int i7 = b - 73;
                             String fixedAsciiString = readFixedAsciiString(i7);
                             this.offset += i7;
-                            return fixedAsciiString.indexOf(46) == -1 ? new BigInteger(fixedAsciiString).intValue() : TypeUtils.toBigDecimal(fixedAsciiString).intValue();
+                            return fixedAsciiString.indexOf(46) == -1 ? new BigInteger(fixedAsciiString).intValue()
+                                    : TypeUtils.toBigDecimal(fixedAsciiString).intValue();
                     }
                     break;
             }
@@ -950,7 +960,8 @@ final class JSONReaderJSONB extends JSONReader {
                                 int i7 = b - 73;
                                 String fixedAsciiString = readFixedAsciiString(i7);
                                 this.offset += i7;
-                                return fixedAsciiString.indexOf(46) == -1 ? new BigInteger(fixedAsciiString).intValue() : TypeUtils.toBigDecimal(fixedAsciiString).intValue();
+                                return fixedAsciiString.indexOf(46) == -1 ? new BigInteger(fixedAsciiString).intValue()
+                                        : TypeUtils.toBigDecimal(fixedAsciiString).intValue();
                         }
                         break;
                 }
@@ -1058,7 +1069,8 @@ final class JSONReaderJSONB extends JSONReader {
                         int i4 = b - 73;
                         String fixedAsciiString = readFixedAsciiString(i4);
                         this.offset += i4;
-                        return fixedAsciiString.indexOf(46) == -1 ? new BigInteger(fixedAsciiString).longValue() : TypeUtils.toBigDecimal(fixedAsciiString).longValue();
+                        return fixedAsciiString.indexOf(46) == -1 ? new BigInteger(fixedAsciiString).longValue()
+                                : TypeUtils.toBigDecimal(fixedAsciiString).longValue();
                 }
         }
     }
@@ -1109,8 +1121,12 @@ final class JSONReaderJSONB extends JSONReader {
         throw notSupportType((byte) i);
     }
 
-    /* JADX WARN: Type inference failed for: r4v19, types: [java.time.LocalDateTime] */
-    /* JADX WARN: Type inference failed for: r4v21, types: [java.time.LocalDateTime] */
+    /*
+     * JADX WARN: Type inference failed for: r4v19, types: [java.time.LocalDateTime]
+     */
+    /*
+     * JADX WARN: Type inference failed for: r4v21, types: [java.time.LocalDateTime]
+     */
     private LocalDateTime readLocalDateTime0(int i) {
         if (i == -87) {
             LocalDate localDate = readLocalDate();
@@ -1185,9 +1201,9 @@ final class JSONReaderJSONB extends JSONReader {
         throw new JSONException(sbR.toString());
     }
 
-    /* JADX WARN: Found duplicated region for block: B:27:0x0051  */
-    /* JADX WARN: Found duplicated region for block: B:29:0x0060  */
-    /* JADX WARN: Found duplicated region for block: B:36:0x0079  */
+    /* JADX WARN: Found duplicated region for block: B:27:0x0051 */
+    /* JADX WARN: Found duplicated region for block: B:29:0x0060 */
+    /* JADX WARN: Found duplicated region for block: B:36:0x0079 */
     private String readStringNonAscii() {
         Charset charset;
         String utf16be;
@@ -1334,7 +1350,8 @@ final class JSONReaderJSONB extends JSONReader {
                             case -71:
                                 int int32Value = readInt32Value();
                                 BigInteger bigInteger = readBigInteger();
-                                return (int32Value == 0 ? new BigDecimal(bigInteger) : new BigDecimal(bigInteger, int32Value)).toString();
+                                return (int32Value == 0 ? new BigDecimal(bigInteger)
+                                        : new BigDecimal(bigInteger, int32Value)).toString();
                             case -69:
                                 int int32Value2 = readInt32Value();
                                 byte[] bArr3 = new byte[int32Value2];
@@ -1521,7 +1538,8 @@ final class JSONReaderJSONB extends JSONReader {
             this.offset = i10;
             byte b4 = bArr[i9];
             this.offset = i2 + 7;
-            return ZonedDateTime.of(LocalDateTime.of(i6, b, b2, b3, b4, bArr[i10], readInt32Value()), DateUtils.DEFAULT_ZONE_ID);
+            return ZonedDateTime.of(LocalDateTime.of(i6, b, b2, b3, b4, bArr[i10], readInt32Value()),
+                    DateUtils.DEFAULT_ZONE_ID);
         }
         if (i == -87) {
             byte[] bArr2 = this.bytes;
@@ -1551,7 +1569,8 @@ final class JSONReaderJSONB extends JSONReader {
                     this.offset += 4;
                     return ZonedDateTime.ofInstant(Instant.ofEpochSecond(intBE2 * 60), DateUtils.DEFAULT_ZONE_ID);
                 case -82:
-                    return ZonedDateTime.ofInstant(Instant.ofEpochSecond(readInt64Value(), readInt32Value()), DateUtils.DEFAULT_ZONE_ID);
+                    return ZonedDateTime.ofInstant(Instant.ofEpochSecond(readInt64Value(), readInt32Value()),
+                            DateUtils.DEFAULT_ZONE_ID);
                 case -81:
                     return null;
                 default:
@@ -1568,7 +1587,7 @@ final class JSONReaderJSONB extends JSONReader {
     }
 
     public static JSONException typeRefNotFound(int i) {
-        throw new JSONException(bjs.i(i, "type ref not found : "));
+        throw new JSONException(concatVar2Var1(i, "type ref not found : "));
     }
 
     public void autoTypeError() {
@@ -1591,12 +1610,14 @@ final class JSONReaderJSONB extends JSONReader {
         this.offset = i + 1;
         JSONReader.Context context = this.context;
         long typeHashCode = readTypeHashCode();
-        if (j == typeHashCode && (objectClass2 = (objectReader = context.getObjectReader(cls)).getObjectClass()) != null && objectClass2 == cls) {
+        if (j == typeHashCode && (objectClass2 = (objectReader = context.getObjectReader(cls)).getObjectClass()) != null
+                && objectClass2 == cls) {
             context.provider.registerIfAbsent(typeHashCode, objectReader);
             return objectReader;
         }
         JSONReader.AutoTypeBeforeHandler autoTypeBeforeHandler = context.autoTypeBeforeHandler;
-        if (autoTypeBeforeHandler != null && (objectReaderCheckAutoTypeWithHandler = checkAutoTypeWithHandler(cls, j2, autoTypeBeforeHandler, typeHashCode)) != null) {
+        if (autoTypeBeforeHandler != null && (objectReaderCheckAutoTypeWithHandler = checkAutoTypeWithHandler(cls, j2,
+                autoTypeBeforeHandler, typeHashCode)) != null) {
             return objectReaderCheckAutoTypeWithHandler;
         }
         long j3 = context.features | j2;
@@ -1607,7 +1628,9 @@ final class JSONReaderJSONB extends JSONReader {
             autoTypeError();
         }
         ObjectReader objectReader2 = context.provider.getObjectReader(typeHashCode);
-        if (objectReader2 != null && (objectClass = objectReader2.getObjectClass()) != null && (classLoader = objectClass.getClassLoader()) != null && classLoader != (contextClassLoader = Thread.currentThread().getContextClassLoader())) {
+        if (objectReader2 != null && (objectClass = objectReader2.getObjectClass()) != null
+                && (classLoader = objectClass.getClassLoader()) != null
+                && classLoader != (contextClassLoader = Thread.currentThread().getContextClassLoader())) {
             objectReader2 = getObjectReaderContext(objectReader2, objectClass, contextClassLoader);
         }
         if (objectReader2 == null && (objectReader2 = context.provider.getObjectReader(getString(), cls, j3)) == null) {
@@ -1620,7 +1643,8 @@ final class JSONReaderJSONB extends JSONReader {
         return objectReader2;
     }
 
-    public ObjectReader checkAutoTypeWithHandler(Class cls, long j, JSONReader.AutoTypeBeforeHandler autoTypeBeforeHandler, long j2) {
+    public ObjectReader checkAutoTypeWithHandler(Class cls, long j,
+            JSONReader.AutoTypeBeforeHandler autoTypeBeforeHandler, long j2) {
         Class<?> clsApply = autoTypeBeforeHandler.apply(j2, (Class<?>) cls, j);
         if (clsApply == null) {
             clsApply = autoTypeBeforeHandler.apply(getString(), (Class<?>) cls, j);
@@ -1675,8 +1699,11 @@ final class JSONReaderJSONB extends JSONReader {
     }
 
     /* JADX WARN: Found duplicated region for block: B:28:0x006d A[RETURN] */
-    /* JADX WARN: Found duplicated region for block: B:29:0x006e  */
-    /* JADX WARN: Found duplicated region for block: B:32:0x0077 A[LOOP:1: B:30:0x0073->B:32:0x0077, LOOP_END] */
+    /* JADX WARN: Found duplicated region for block: B:29:0x006e */
+    /*
+     * JADX WARN: Found duplicated region for block: B:32:0x0077 A[LOOP:1:
+     * B:30:0x0073->B:32:0x0077, LOOP_END]
+     */
     public long getNameHashCode() {
         long j;
         long j2;
@@ -1760,8 +1787,8 @@ final class JSONReaderJSONB extends JSONReader {
     }
 
     /* JADX WARN: Found duplicated region for block: B:38:0x0089 A[RETURN] */
-    /* JADX WARN: Found duplicated region for block: B:39:0x008a  */
-    /* JADX WARN: Found duplicated region for block: B:42:0x0093  */
+    /* JADX WARN: Found duplicated region for block: B:39:0x008a */
+    /* JADX WARN: Found duplicated region for block: B:42:0x0093 */
     @Override // com.alibaba.fastjson2.JSONReader
     public long getNameHashCodeLCase() {
         byte b;
@@ -2147,7 +2174,8 @@ final class JSONReaderJSONB extends JSONReader {
         Unsafe unsafe = JDKUtils.UNSAFE;
         long j2 = BASE;
         long j3 = i3;
-        if (unsafe.getLong(bArr, (j2 + j3) - 13) != j || unsafe.getInt(bArr, (j2 + j3) - 5) != i || bArr[i2 + 16] != b) {
+        if (unsafe.getLong(bArr, (j2 + j3) - 13) != j || unsafe.getInt(bArr, (j2 + j3) - 5) != i
+                || bArr[i2 + 16] != b) {
             return false;
         }
         this.offset = i3;
@@ -2165,7 +2193,8 @@ final class JSONReaderJSONB extends JSONReader {
         Unsafe unsafe = JDKUtils.UNSAFE;
         long j3 = BASE;
         long j4 = i2;
-        if (unsafe.getLong(bArr, (j3 + j4) - 14) != j || (unsafe.getLong(bArr, (j3 + j4) - 6) & 281474976710655L) != j2) {
+        if (unsafe.getLong(bArr, (j3 + j4) - 14) != j
+                || (unsafe.getLong(bArr, (j3 + j4) - 6) & 281474976710655L) != j2) {
             return false;
         }
         this.offset = i2;
@@ -2182,7 +2211,8 @@ final class JSONReaderJSONB extends JSONReader {
         Unsafe unsafe = JDKUtils.UNSAFE;
         long j3 = BASE;
         long j4 = i;
-        if (unsafe.getLong(bArr, (j3 + j4) - 15) != j || (unsafe.getLong(bArr, (j3 + j4) - 7) & 72057594037927935L) != j2) {
+        if (unsafe.getLong(bArr, (j3 + j4) - 15) != j
+                || (unsafe.getLong(bArr, (j3 + j4) - 7) & 72057594037927935L) != j2) {
             return false;
         }
         this.offset = i;
@@ -2222,7 +2252,8 @@ final class JSONReaderJSONB extends JSONReader {
         Unsafe unsafe = JDKUtils.UNSAFE;
         long j3 = BASE;
         long j4 = i2;
-        if (unsafe.getLong(bArr, (j3 + j4) - 17) != j || unsafe.getLong(bArr, (j3 + j4) - 9) != j2 || bArr[i + 20] != b) {
+        if (unsafe.getLong(bArr, (j3 + j4) - 17) != j || unsafe.getLong(bArr, (j3 + j4) - 9) != j2
+                || bArr[i + 20] != b) {
             return false;
         }
         this.offset = i2;
@@ -2239,7 +2270,8 @@ final class JSONReaderJSONB extends JSONReader {
         Unsafe unsafe = JDKUtils.UNSAFE;
         long j3 = BASE;
         long j4 = i2;
-        if (unsafe.getLong(bArr, (j3 + j4) - 18) != j || unsafe.getLong(bArr, (j3 + j4) - 10) != j2 || unsafe.getShort(bArr, (j3 + j4) - 2) != i) {
+        if (unsafe.getLong(bArr, (j3 + j4) - 18) != j || unsafe.getLong(bArr, (j3 + j4) - 10) != j2
+                || unsafe.getShort(bArr, (j3 + j4) - 2) != i) {
             return false;
         }
         this.offset = i2;
@@ -2256,7 +2288,8 @@ final class JSONReaderJSONB extends JSONReader {
         Unsafe unsafe = JDKUtils.UNSAFE;
         long j3 = BASE;
         long j4 = i2;
-        if (unsafe.getLong(bArr, (j3 + j4) - 19) != j || unsafe.getLong(bArr, (j3 + j4) - 11) != j2 || (unsafe.getInt(bArr, (j3 + j4) - 3) & 16777215) != i) {
+        if (unsafe.getLong(bArr, (j3 + j4) - 19) != j || unsafe.getLong(bArr, (j3 + j4) - 11) != j2
+                || (unsafe.getInt(bArr, (j3 + j4) - 3) & 16777215) != i) {
             return false;
         }
         this.offset = i2;
@@ -2273,7 +2306,8 @@ final class JSONReaderJSONB extends JSONReader {
         Unsafe unsafe = JDKUtils.UNSAFE;
         long j3 = BASE;
         long j4 = i2;
-        if (unsafe.getLong(bArr, (j3 + j4) - 20) != j || unsafe.getLong(bArr, (j3 + j4) - 12) != j2 || unsafe.getInt(bArr, (j3 + j4) - 4) != i) {
+        if (unsafe.getLong(bArr, (j3 + j4) - 20) != j || unsafe.getLong(bArr, (j3 + j4) - 12) != j2
+                || unsafe.getInt(bArr, (j3 + j4) - 4) != i) {
             return false;
         }
         this.offset = i2;
@@ -2291,7 +2325,8 @@ final class JSONReaderJSONB extends JSONReader {
         Unsafe unsafe = JDKUtils.UNSAFE;
         long j3 = BASE;
         long j4 = i3;
-        if (unsafe.getLong(bArr, (j3 + j4) - 21) != j || unsafe.getLong(bArr, (j3 + j4) - 13) != j2 || unsafe.getInt(bArr, (j3 + j4) - 5) != i || bArr[i2 + 24] != b) {
+        if (unsafe.getLong(bArr, (j3 + j4) - 21) != j || unsafe.getLong(bArr, (j3 + j4) - 13) != j2
+                || unsafe.getInt(bArr, (j3 + j4) - 5) != i || bArr[i2 + 24] != b) {
             return false;
         }
         this.offset = i3;
@@ -2308,7 +2343,8 @@ final class JSONReaderJSONB extends JSONReader {
         Unsafe unsafe = JDKUtils.UNSAFE;
         long j4 = BASE;
         long j5 = i;
-        if (unsafe.getLong(bArr, (j4 + j5) - 22) != j || unsafe.getLong(bArr, (j4 + j5) - 14) != j2 || (unsafe.getLong(bArr, (j4 + j5) - 6) & 281474976710655L) != j3) {
+        if (unsafe.getLong(bArr, (j4 + j5) - 22) != j || unsafe.getLong(bArr, (j4 + j5) - 14) != j2
+                || (unsafe.getLong(bArr, (j4 + j5) - 6) & 281474976710655L) != j3) {
             return false;
         }
         this.offset = i;
@@ -2325,7 +2361,8 @@ final class JSONReaderJSONB extends JSONReader {
         Unsafe unsafe = JDKUtils.UNSAFE;
         long j4 = BASE;
         long j5 = i;
-        if (unsafe.getLong(bArr, (j4 + j5) - 23) != j || unsafe.getLong(bArr, (j4 + j5) - 15) != j2 || (unsafe.getLong(bArr, (j4 + j5) - 7) & 72057594037927935L) != j3) {
+        if (unsafe.getLong(bArr, (j4 + j5) - 23) != j || unsafe.getLong(bArr, (j4 + j5) - 15) != j2
+                || (unsafe.getLong(bArr, (j4 + j5) - 7) & 72057594037927935L) != j3) {
             return false;
         }
         this.offset = i;
@@ -2342,7 +2379,8 @@ final class JSONReaderJSONB extends JSONReader {
         Unsafe unsafe = JDKUtils.UNSAFE;
         long j4 = BASE;
         long j5 = i;
-        if (unsafe.getLong(bArr, (j4 + j5) - 24) != j || unsafe.getLong(bArr, (j4 + j5) - 16) != j2 || unsafe.getLong(bArr, (j4 + j5) - 8) != j3) {
+        if (unsafe.getLong(bArr, (j4 + j5) - 24) != j || unsafe.getLong(bArr, (j4 + j5) - 16) != j2
+                || unsafe.getLong(bArr, (j4 + j5) - 8) != j3) {
             return false;
         }
         this.offset = i;
@@ -2360,7 +2398,8 @@ final class JSONReaderJSONB extends JSONReader {
         Unsafe unsafe = JDKUtils.UNSAFE;
         long j4 = BASE;
         long j5 = i2;
-        if (unsafe.getLong(bArr, (j4 + j5) - 25) != j || unsafe.getLong(bArr, (j4 + j5) - 17) != j2 || unsafe.getLong(bArr, (j4 + j5) - 9) != j3 || bArr[i + 28] != b) {
+        if (unsafe.getLong(bArr, (j4 + j5) - 25) != j || unsafe.getLong(bArr, (j4 + j5) - 17) != j2
+                || unsafe.getLong(bArr, (j4 + j5) - 9) != j3 || bArr[i + 28] != b) {
             return false;
         }
         this.offset = i2;
@@ -2377,7 +2416,8 @@ final class JSONReaderJSONB extends JSONReader {
         Unsafe unsafe = JDKUtils.UNSAFE;
         long j4 = BASE;
         long j5 = i2;
-        if (unsafe.getLong(bArr, (j4 + j5) - 26) != j || unsafe.getLong(bArr, (j4 + j5) - 18) != j2 || unsafe.getLong(bArr, (j4 + j5) - 10) != j3 || unsafe.getShort(bArr, (j4 + j5) - 2) != i) {
+        if (unsafe.getLong(bArr, (j4 + j5) - 26) != j || unsafe.getLong(bArr, (j4 + j5) - 18) != j2
+                || unsafe.getLong(bArr, (j4 + j5) - 10) != j3 || unsafe.getShort(bArr, (j4 + j5) - 2) != i) {
             return false;
         }
         this.offset = i2;
@@ -2404,7 +2444,8 @@ final class JSONReaderJSONB extends JSONReader {
         Unsafe unsafe = JDKUtils.UNSAFE;
         long j4 = BASE;
         long j5 = i2;
-        if (unsafe.getLong(bArr, (j4 + j5) - 27) != j || unsafe.getLong(bArr, (j4 + j5) - 19) != j2 || unsafe.getLong(bArr, (j4 + j5) - 11) != j3 || (unsafe.getInt(bArr, (j4 + j5) - 3) & 16777215) != i) {
+        if (unsafe.getLong(bArr, (j4 + j5) - 27) != j || unsafe.getLong(bArr, (j4 + j5) - 19) != j2
+                || unsafe.getLong(bArr, (j4 + j5) - 11) != j3 || (unsafe.getInt(bArr, (j4 + j5) - 3) & 16777215) != i) {
             return false;
         }
         this.offset = i2;
@@ -2421,7 +2462,8 @@ final class JSONReaderJSONB extends JSONReader {
         Unsafe unsafe = JDKUtils.UNSAFE;
         long j4 = BASE;
         long j5 = i2;
-        if (unsafe.getLong(bArr, (j4 + j5) - 28) != j || unsafe.getLong(bArr, (j4 + j5) - 20) != j2 || unsafe.getLong(bArr, (j4 + j5) - 12) != j3 || unsafe.getInt(bArr, (j4 + j5) - 4) != i) {
+        if (unsafe.getLong(bArr, (j4 + j5) - 28) != j || unsafe.getLong(bArr, (j4 + j5) - 20) != j2
+                || unsafe.getLong(bArr, (j4 + j5) - 12) != j3 || unsafe.getInt(bArr, (j4 + j5) - 4) != i) {
             return false;
         }
         this.offset = i2;
@@ -2439,7 +2481,9 @@ final class JSONReaderJSONB extends JSONReader {
         Unsafe unsafe = JDKUtils.UNSAFE;
         long j4 = BASE;
         long j5 = i3;
-        if (unsafe.getLong(bArr, (j4 + j5) - 29) != j || unsafe.getLong(bArr, (j4 + j5) - 21) != j2 || unsafe.getLong(bArr, (j4 + j5) - 13) != j3 || unsafe.getInt(bArr, (j4 + j5) - 5) != i || bArr[i2 + 32] != b) {
+        if (unsafe.getLong(bArr, (j4 + j5) - 29) != j || unsafe.getLong(bArr, (j4 + j5) - 21) != j2
+                || unsafe.getLong(bArr, (j4 + j5) - 13) != j3 || unsafe.getInt(bArr, (j4 + j5) - 5) != i
+                || bArr[i2 + 32] != b) {
             return false;
         }
         this.offset = i3;
@@ -2456,7 +2500,9 @@ final class JSONReaderJSONB extends JSONReader {
         Unsafe unsafe = JDKUtils.UNSAFE;
         long j5 = BASE;
         long j6 = i;
-        if (unsafe.getLong(bArr, (j5 + j6) - 30) != j || unsafe.getLong(bArr, (j5 + j6) - 22) != j2 || unsafe.getLong(bArr, (j5 + j6) - 14) != j3 || (unsafe.getLong(bArr, (j5 + j6) - 6) & 281474976710655L) != j4) {
+        if (unsafe.getLong(bArr, (j5 + j6) - 30) != j || unsafe.getLong(bArr, (j5 + j6) - 22) != j2
+                || unsafe.getLong(bArr, (j5 + j6) - 14) != j3
+                || (unsafe.getLong(bArr, (j5 + j6) - 6) & 281474976710655L) != j4) {
             return false;
         }
         this.offset = i;
@@ -2473,7 +2519,9 @@ final class JSONReaderJSONB extends JSONReader {
         Unsafe unsafe = JDKUtils.UNSAFE;
         long j5 = BASE;
         long j6 = i;
-        if (unsafe.getLong(bArr, (j5 + j6) - 31) != j || unsafe.getLong(bArr, (j5 + j6) - 23) != j2 || unsafe.getLong(bArr, (j5 + j6) - 15) != j3 || (unsafe.getLong(bArr, (j5 + j6) - 7) & 72057594037927935L) != j4) {
+        if (unsafe.getLong(bArr, (j5 + j6) - 31) != j || unsafe.getLong(bArr, (j5 + j6) - 23) != j2
+                || unsafe.getLong(bArr, (j5 + j6) - 15) != j3
+                || (unsafe.getLong(bArr, (j5 + j6) - 7) & 72057594037927935L) != j4) {
             return false;
         }
         this.offset = i;
@@ -2490,7 +2538,8 @@ final class JSONReaderJSONB extends JSONReader {
         Unsafe unsafe = JDKUtils.UNSAFE;
         long j5 = BASE;
         long j6 = i;
-        if (unsafe.getLong(bArr, (j5 + j6) - 32) != j || unsafe.getLong(bArr, (j5 + j6) - 24) != j2 || unsafe.getLong(bArr, (j5 + j6) - 16) != j3 || unsafe.getLong(bArr, (j5 + j6) - 8) != j4) {
+        if (unsafe.getLong(bArr, (j5 + j6) - 32) != j || unsafe.getLong(bArr, (j5 + j6) - 24) != j2
+                || unsafe.getLong(bArr, (j5 + j6) - 16) != j3 || unsafe.getLong(bArr, (j5 + j6) - 8) != j4) {
             return false;
         }
         this.offset = i;
@@ -2508,7 +2557,9 @@ final class JSONReaderJSONB extends JSONReader {
         Unsafe unsafe = JDKUtils.UNSAFE;
         long j5 = BASE;
         long j6 = i2;
-        if (unsafe.getLong(bArr, (j5 + j6) - 33) != j || unsafe.getLong(bArr, (j5 + j6) - 25) != j2 || unsafe.getLong(bArr, (j5 + j6) - 17) != j3 || unsafe.getLong(bArr, (j5 + j6) - 9) != j4 || bArr[i + 36] != b) {
+        if (unsafe.getLong(bArr, (j5 + j6) - 33) != j || unsafe.getLong(bArr, (j5 + j6) - 25) != j2
+                || unsafe.getLong(bArr, (j5 + j6) - 17) != j3 || unsafe.getLong(bArr, (j5 + j6) - 9) != j4
+                || bArr[i + 36] != b) {
             return false;
         }
         this.offset = i2;
@@ -2525,7 +2576,9 @@ final class JSONReaderJSONB extends JSONReader {
         Unsafe unsafe = JDKUtils.UNSAFE;
         long j5 = BASE;
         long j6 = i2;
-        if (unsafe.getLong(bArr, (j5 + j6) - 34) != j || unsafe.getLong(bArr, (j5 + j6) - 26) != j2 || unsafe.getLong(bArr, (j5 + j6) - 18) != j3 || unsafe.getLong(bArr, (j5 + j6) - 10) != j4 || unsafe.getShort(bArr, (j5 + j6) - 2) != i) {
+        if (unsafe.getLong(bArr, (j5 + j6) - 34) != j || unsafe.getLong(bArr, (j5 + j6) - 26) != j2
+                || unsafe.getLong(bArr, (j5 + j6) - 18) != j3 || unsafe.getLong(bArr, (j5 + j6) - 10) != j4
+                || unsafe.getShort(bArr, (j5 + j6) - 2) != i) {
             return false;
         }
         this.offset = i2;
@@ -2542,7 +2595,9 @@ final class JSONReaderJSONB extends JSONReader {
         Unsafe unsafe = JDKUtils.UNSAFE;
         long j5 = BASE;
         long j6 = i2;
-        if (unsafe.getLong(bArr, (j5 + j6) - 35) != j || unsafe.getLong(bArr, (j5 + j6) - 27) != j2 || unsafe.getLong(bArr, (j5 + j6) - 19) != j3 || unsafe.getLong(bArr, (j5 + j6) - 11) != j4 || (unsafe.getInt(bArr, (j5 + j6) - 3) & 16777215) != i) {
+        if (unsafe.getLong(bArr, (j5 + j6) - 35) != j || unsafe.getLong(bArr, (j5 + j6) - 27) != j2
+                || unsafe.getLong(bArr, (j5 + j6) - 19) != j3 || unsafe.getLong(bArr, (j5 + j6) - 11) != j4
+                || (unsafe.getInt(bArr, (j5 + j6) - 3) & 16777215) != i) {
             return false;
         }
         this.offset = i2;
@@ -2559,7 +2614,9 @@ final class JSONReaderJSONB extends JSONReader {
         Unsafe unsafe = JDKUtils.UNSAFE;
         long j5 = BASE;
         long j6 = i2;
-        if (unsafe.getLong(bArr, (j5 + j6) - 36) != j || unsafe.getLong(bArr, (j5 + j6) - 28) != j2 || unsafe.getLong(bArr, (j5 + j6) - 20) != j3 || unsafe.getLong(bArr, (j5 + j6) - 12) != j4 || unsafe.getInt(bArr, (j5 + j6) - 4) != i) {
+        if (unsafe.getLong(bArr, (j5 + j6) - 36) != j || unsafe.getLong(bArr, (j5 + j6) - 28) != j2
+                || unsafe.getLong(bArr, (j5 + j6) - 20) != j3 || unsafe.getLong(bArr, (j5 + j6) - 12) != j4
+                || unsafe.getInt(bArr, (j5 + j6) - 4) != i) {
             return false;
         }
         this.offset = i2;
@@ -2589,7 +2646,9 @@ final class JSONReaderJSONB extends JSONReader {
         Unsafe unsafe = JDKUtils.UNSAFE;
         long j5 = BASE;
         long j6 = i3;
-        if (unsafe.getLong(bArr, (j5 + j6) - 37) != j || unsafe.getLong(bArr, (j5 + j6) - 29) != j2 || unsafe.getLong(bArr, (j5 + j6) - 21) != j3 || unsafe.getLong(bArr, (j5 + j6) - 13) != j4 || unsafe.getInt(bArr, (j5 + j6) - 5) != i || bArr[i2 + 40] != b) {
+        if (unsafe.getLong(bArr, (j5 + j6) - 37) != j || unsafe.getLong(bArr, (j5 + j6) - 29) != j2
+                || unsafe.getLong(bArr, (j5 + j6) - 21) != j3 || unsafe.getLong(bArr, (j5 + j6) - 13) != j4
+                || unsafe.getInt(bArr, (j5 + j6) - 5) != i || bArr[i2 + 40] != b) {
             return false;
         }
         this.offset = i3;
@@ -2606,7 +2665,9 @@ final class JSONReaderJSONB extends JSONReader {
         Unsafe unsafe = JDKUtils.UNSAFE;
         long j6 = BASE;
         long j7 = i;
-        if (unsafe.getLong(bArr, (j6 + j7) - 38) != j || unsafe.getLong(bArr, (j6 + j7) - 30) != j2 || unsafe.getLong(bArr, (j6 + j7) - 22) != j3 || unsafe.getLong(bArr, (j6 + j7) - 14) != j4 || (unsafe.getLong(bArr, (j6 + j7) - 6) & 281474976710655L) != j5) {
+        if (unsafe.getLong(bArr, (j6 + j7) - 38) != j || unsafe.getLong(bArr, (j6 + j7) - 30) != j2
+                || unsafe.getLong(bArr, (j6 + j7) - 22) != j3 || unsafe.getLong(bArr, (j6 + j7) - 14) != j4
+                || (unsafe.getLong(bArr, (j6 + j7) - 6) & 281474976710655L) != j5) {
             return false;
         }
         this.offset = i;
@@ -2623,7 +2684,9 @@ final class JSONReaderJSONB extends JSONReader {
         Unsafe unsafe = JDKUtils.UNSAFE;
         long j6 = BASE;
         long j7 = i;
-        if (unsafe.getLong(bArr, (j6 + j7) - 39) != j || unsafe.getLong(bArr, (j6 + j7) - 31) != j2 || unsafe.getLong(bArr, (j6 + j7) - 23) != j3 || unsafe.getLong(bArr, (j6 + j7) - 15) != j4 || (unsafe.getLong(bArr, (j6 + j7) - 7) & 72057594037927935L) != j5) {
+        if (unsafe.getLong(bArr, (j6 + j7) - 39) != j || unsafe.getLong(bArr, (j6 + j7) - 31) != j2
+                || unsafe.getLong(bArr, (j6 + j7) - 23) != j3 || unsafe.getLong(bArr, (j6 + j7) - 15) != j4
+                || (unsafe.getLong(bArr, (j6 + j7) - 7) & 72057594037927935L) != j5) {
             return false;
         }
         this.offset = i;
@@ -2640,7 +2703,9 @@ final class JSONReaderJSONB extends JSONReader {
         Unsafe unsafe = JDKUtils.UNSAFE;
         long j6 = BASE;
         long j7 = i;
-        if (unsafe.getLong(bArr, (j6 + j7) - 40) != j || unsafe.getLong(bArr, (j6 + j7) - 32) != j2 || unsafe.getLong(bArr, (j6 + j7) - 24) != j3 || unsafe.getLong(bArr, (j6 + j7) - 16) != j4 || unsafe.getLong(bArr, (j6 + j7) - 8) != j5) {
+        if (unsafe.getLong(bArr, (j6 + j7) - 40) != j || unsafe.getLong(bArr, (j6 + j7) - 32) != j2
+                || unsafe.getLong(bArr, (j6 + j7) - 24) != j3 || unsafe.getLong(bArr, (j6 + j7) - 16) != j4
+                || unsafe.getLong(bArr, (j6 + j7) - 8) != j5) {
             return false;
         }
         this.offset = i;
@@ -2752,13 +2817,15 @@ final class JSONReaderJSONB extends JSONReader {
     }
 
     public JSONException notSupportString() {
-        throw new JSONException("readString not support type " + JSONB.typeName(this.strtype) + ", offset " + this.offset + "/" + this.bytes.length);
+        throw new JSONException("readString not support type " + JSONB.typeName(this.strtype) + ", offset "
+                + this.offset + "/" + this.bytes.length);
     }
 
     @Override // com.alibaba.fastjson2.JSONReader
     public <T> T read(Type type) {
         JSONReader.Context context = this.context;
-        return (T) context.provider.getObjectReader(type, (context.features & JSONReader.Feature.FieldBased.mask) != 0).readJSONBObject(this, null, null, 0L);
+        return (T) context.provider.getObjectReader(type, (context.features & JSONReader.Feature.FieldBased.mask) != 0)
+                .readJSONBObject(this, null, null, 0L);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -2767,7 +2834,10 @@ final class JSONReaderJSONB extends JSONReader {
     /* JADX WARN: Type inference failed for: r17v2 */
     /* JADX WARN: Type inference failed for: r17v4 */
     /* JADX WARN: Type inference failed for: r17v5 */
-    /* JADX WARN: Type inference failed for: r25v0, types: [com.alibaba.fastjson2.JSONReader, com.alibaba.fastjson2.JSONReaderJSONB] */
+    /*
+     * JADX WARN: Type inference failed for: r25v0, types:
+     * [com.alibaba.fastjson2.JSONReader, com.alibaba.fastjson2.JSONReaderJSONB]
+     */
     /* JADX WARN: Type inference failed for: r3v17 */
     /* JADX WARN: Type inference failed for: r3v18, types: [boolean, int] */
     /* JADX WARN: Type inference failed for: r3v33 */
@@ -3222,7 +3292,7 @@ final class JSONReaderJSONB extends JSONReader {
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:13:0x003b  */
+    /* JADX WARN: Found duplicated region for block: B:13:0x003b */
     public Object readAnyObject() {
         ObjectReader objectReader;
         Class objectClass;
@@ -3254,10 +3324,13 @@ final class JSONReaderJSONB extends JSONReader {
             }
             objectReader = context.provider.getObjectReader(typeHashCode);
         }
-        if (objectReader != null && (objectClass = objectReader.getObjectClass()) != null && (classLoader = objectClass.getClassLoader()) != null && classLoader != (contextClassLoader = Thread.currentThread().getContextClassLoader())) {
+        if (objectReader != null && (objectClass = objectReader.getObjectClass()) != null
+                && (classLoader = objectClass.getClassLoader()) != null
+                && classLoader != (contextClassLoader = Thread.currentThread().getContextClassLoader())) {
             objectReader = getObjectReaderContext(objectReader, objectClass, contextClassLoader);
         }
-        if (objectReader == null && (objectReader = context.provider.getObjectReader(getString(), Object.class, j)) == null) {
+        if (objectReader == null
+                && (objectReader = context.provider.getObjectReader(getString(), Object.class, j)) == null) {
             if ((JSONReader.Feature.ErrorOnNotSupportAutoType.mask & j) == 0) {
                 return null;
             }
@@ -3268,13 +3341,13 @@ final class JSONReaderJSONB extends JSONReader {
         return objectReader2.readJSONBObject(this, Object.class, null, context.features);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:70:0x0157  */
-    /* JADX WARN: Found duplicated region for block: B:72:0x015b  */
-    /* JADX WARN: Found duplicated region for block: B:73:0x0176  */
-    /* JADX WARN: Found duplicated region for block: B:75:0x017a  */
-    /* JADX WARN: Found duplicated region for block: B:77:0x0184  */
-    /* JADX WARN: Found duplicated region for block: B:78:0x0186  */
-    /* JADX WARN: Found duplicated region for block: B:79:0x018e  */
+    /* JADX WARN: Found duplicated region for block: B:70:0x0157 */
+    /* JADX WARN: Found duplicated region for block: B:72:0x015b */
+    /* JADX WARN: Found duplicated region for block: B:73:0x0176 */
+    /* JADX WARN: Found duplicated region for block: B:75:0x017a */
+    /* JADX WARN: Found duplicated region for block: B:77:0x0184 */
+    /* JADX WARN: Found duplicated region for block: B:78:0x0186 */
+    /* JADX WARN: Found duplicated region for block: B:79:0x018e */
     @Override // com.alibaba.fastjson2.JSONReader
     public List readArray() {
         Object any;
@@ -3313,7 +3386,9 @@ final class JSONReaderJSONB extends JSONReader {
                         any = supplier != null ? supplier.get() : new JSONArray();
                     }
                 } else {
-                    List arrayList = (this.context.features & JSONReader.Feature.UseNativeObject.mask) != 0 ? new ArrayList(length) : new JSONArray(length);
+                    List arrayList = (this.context.features & JSONReader.Feature.UseNativeObject.mask) != 0
+                            ? new ArrayList(length)
+                            : new JSONArray(length);
                     for (int i4 = 0; i4 < length; i4++) {
                         if (isReference()) {
                             String reference2 = readReference();
@@ -3389,7 +3464,8 @@ final class JSONReaderJSONB extends JSONReader {
             return BigDecimal.valueOf(readInt64Value(), int32Value);
         }
         if (b2 == 72) {
-            BigDecimal bigDecimalValueOf = BigDecimal.valueOf(IOUtils.getIntBE(bArr, check3(i2 + 1, this.end)), int32Value);
+            BigDecimal bigDecimalValueOf = BigDecimal.valueOf(IOUtils.getIntBE(bArr, check3(i2 + 1, this.end)),
+                    int32Value);
             this.offset += 5;
             return bigDecimalValueOf;
         }
@@ -3397,7 +3473,8 @@ final class JSONReaderJSONB extends JSONReader {
             BigInteger bigInteger = readBigInteger();
             return int32Value == 0 ? new BigDecimal(bigInteger) : new BigDecimal(bigInteger, int32Value);
         }
-        BigDecimal bigDecimalValueOf2 = BigDecimal.valueOf(IOUtils.getLongBE(bArr, check7(i2 + 1, this.end)), int32Value);
+        BigDecimal bigDecimalValueOf2 = BigDecimal.valueOf(IOUtils.getLongBE(bArr, check7(i2 + 1, this.end)),
+                int32Value);
         this.offset += 9;
         return bigDecimalValueOf2;
     }
@@ -3501,13 +3578,15 @@ final class JSONReaderJSONB extends JSONReader {
         ZonedDateTime zonedDateTimeOfLocal = null;
         switch (bArr[i2]) {
             case -89:
-                zonedDateTimeOfLocal = ZonedDateTime.ofLocal(LocalDateTime.of(LocalDate.of(1970, 1, 1), readLocalTime()), this.context.getZoneId(), null);
+                zonedDateTimeOfLocal = ZonedDateTime.ofLocal(
+                        LocalDateTime.of(LocalDate.of(1970, 1, 1), readLocalTime()), this.context.getZoneId(), null);
                 break;
             case -88:
                 zonedDateTimeOfLocal = ZonedDateTime.ofLocal(readLocalDateTime(), this.context.getZoneId(), null);
                 break;
             case -87:
-                zonedDateTimeOfLocal = ZonedDateTime.ofLocal(LocalDateTime.of(readLocalDate(), LocalTime.MIN), this.context.getZoneId(), null);
+                zonedDateTimeOfLocal = ZonedDateTime.ofLocal(LocalDateTime.of(readLocalDate(), LocalTime.MIN),
+                        this.context.getZoneId(), null);
                 break;
             case -86:
                 this.offset = i2 + 1;
@@ -3551,24 +3630,27 @@ final class JSONReaderJSONB extends JSONReader {
         if (bArr[i] != -75) {
             return readDoubleValue0();
         }
-        long j = (((long) bArr[i + 8]) & 255) + ((((long) bArr[i + 7]) & 255) << 8) + ((((long) bArr[i + 6]) & 255) << 16) + ((((long) bArr[i + 5]) & 255) << 24) + ((((long) bArr[i + 4]) & 255) << 32) + ((((long) bArr[i + 3]) & 255) << 40) + ((255 & ((long) bArr[i + 2])) << 48) + (((long) bArr[i + 1]) << 56);
+        long j = (((long) bArr[i + 8]) & 255) + ((((long) bArr[i + 7]) & 255) << 8)
+                + ((((long) bArr[i + 6]) & 255) << 16) + ((((long) bArr[i + 5]) & 255) << 24)
+                + ((((long) bArr[i + 4]) & 255) << 32) + ((((long) bArr[i + 3]) & 255) << 40)
+                + ((255 & ((long) bArr[i + 2])) << 48) + (((long) bArr[i + 1]) << 56);
         this.offset = i + 9;
         return Double.longBitsToDouble(j);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:148:0x04ba  */
-    /* JADX WARN: Found duplicated region for block: B:150:0x04c3  */
-    /* JADX WARN: Found duplicated region for block: B:152:0x04d5  */
-    /* JADX WARN: Found duplicated region for block: B:154:0x04db  */
-    /* JADX WARN: Found duplicated region for block: B:156:0x04e6  */
-    /* JADX WARN: Found duplicated region for block: B:158:0x04ee  */
-    /* JADX WARN: Found duplicated region for block: B:159:0x04f9  */
-    /* JADX WARN: Found duplicated region for block: B:161:0x04fc  */
-    /* JADX WARN: Found duplicated region for block: B:89:0x0389  */
-    /* JADX WARN: Found duplicated region for block: B:91:0x038c  */
-    /* JADX WARN: Found duplicated region for block: B:92:0x038e  */
-    /* JADX WARN: Found duplicated region for block: B:94:0x0392  */
-    /* JADX WARN: Found duplicated region for block: B:95:0x039e  */
+    /* JADX WARN: Found duplicated region for block: B:148:0x04ba */
+    /* JADX WARN: Found duplicated region for block: B:150:0x04c3 */
+    /* JADX WARN: Found duplicated region for block: B:152:0x04d5 */
+    /* JADX WARN: Found duplicated region for block: B:154:0x04db */
+    /* JADX WARN: Found duplicated region for block: B:156:0x04e6 */
+    /* JADX WARN: Found duplicated region for block: B:158:0x04ee */
+    /* JADX WARN: Found duplicated region for block: B:159:0x04f9 */
+    /* JADX WARN: Found duplicated region for block: B:161:0x04fc */
+    /* JADX WARN: Found duplicated region for block: B:89:0x0389 */
+    /* JADX WARN: Found duplicated region for block: B:91:0x038c */
+    /* JADX WARN: Found duplicated region for block: B:92:0x038e */
+    /* JADX WARN: Found duplicated region for block: B:94:0x0392 */
+    /* JADX WARN: Found duplicated region for block: B:95:0x039e */
     /* JADX WARN: Found duplicated region for block: B:97:0x03a2 A[MOVE_INLINED] */
     @Override // com.alibaba.fastjson2.JSONReader
     public String readFieldName() {
@@ -3791,7 +3873,8 @@ final class JSONReaderJSONB extends JSONReader {
                             c3 = '\b';
                             i = 32;
                             j = -1;
-                            j2 = (((long) bArr[i10 + 6]) << 48) + ((((long) bArr[i10 + 5]) & 255) << 40) + ((((long) bArr[i10 + 4]) & 255) << 32);
+                            j2 = (((long) bArr[i10 + 6]) << 48) + ((((long) bArr[i10 + 5]) & 255) << 40)
+                                    + ((((long) bArr[i10 + 4]) & 255) << 32);
                             i2 = JDKUtils.UNSAFE.getInt(bArr, BASE + ((long) i10));
                             j3 = ((long) i2) & 4294967295L;
                             c = c3;
@@ -3839,7 +3922,8 @@ final class JSONReaderJSONB extends JSONReader {
                             c4 = '\b';
                             i = 32;
                             j = -1;
-                            j7 = ((long) (bArr[i10] << 16)) + ((((long) bArr[i10 + 1]) & 255) << 8) + (((long) bArr[i10 + 2]) & 255);
+                            j7 = ((long) (bArr[i10] << 16)) + ((((long) bArr[i10 + 1]) & 255) << 8)
+                                    + (((long) bArr[i10 + 2]) & 255);
                             j8 = JDKUtils.UNSAFE.getLong(bArr, BASE + ((long) i10) + 3);
                             j6 = j8;
                             c6 = c4;
@@ -3891,7 +3975,8 @@ final class JSONReaderJSONB extends JSONReader {
                         case 15:
                             c5 = '\b';
                             j = -1;
-                            long j22 = (((long) bArr[i10 + 6]) << 48) + ((((long) bArr[i10 + 5]) & 255) << 40) + ((((long) bArr[i10 + 4]) & 255) << 32);
+                            long j22 = (((long) bArr[i10 + 6]) << 48) + ((((long) bArr[i10 + 5]) & 255) << 40)
+                                    + ((((long) bArr[i10 + 4]) & 255) << 32);
                             Unsafe unsafe5 = JDKUtils.UNSAFE;
                             long j23 = BASE;
                             long j24 = i10;
@@ -3924,7 +4009,9 @@ final class JSONReaderJSONB extends JSONReader {
                             int length3 = ((int) (j27 ^ (j27 >>> i))) & (nameCacheEntry2Arr.length - 1);
                             JSONFactory.NameCacheEntry2 nameCacheEntry2 = nameCacheEntry2Arr[length3];
                             if (nameCacheEntry2 == null) {
-                                strApply = JDKUtils.STRING_CREATOR_JDK8 != null ? JDKUtils.latin1StringJDK8(bArr, i4, i3) : new String(bArr, i4, i3, StandardCharsets.ISO_8859_1);
+                                strApply = JDKUtils.STRING_CREATOR_JDK8 != null
+                                        ? JDKUtils.latin1StringJDK8(bArr, i4, i3)
+                                        : new String(bArr, i4, i3, StandardCharsets.ISO_8859_1);
                                 nameCacheEntry2Arr[length3] = new JSONFactory.NameCacheEntry2(strApply, j5, j6);
                                 this.offset += i3;
                             } else {
@@ -3939,7 +4026,9 @@ final class JSONReaderJSONB extends JSONReader {
                             int length4 = ((int) ((j28 >>> i) ^ j28)) & (nameCacheEntryArr.length - 1);
                             JSONFactory.NameCacheEntry nameCacheEntry = nameCacheEntryArr[length4];
                             if (nameCacheEntry == null) {
-                                strApply = JDKUtils.STRING_CREATOR_JDK8 != null ? JDKUtils.latin1StringJDK8(bArr, i4, i3) : new String(bArr, i4, i3, StandardCharsets.ISO_8859_1);
+                                strApply = JDKUtils.STRING_CREATOR_JDK8 != null
+                                        ? JDKUtils.latin1StringJDK8(bArr, i4, i3)
+                                        : new String(bArr, i4, i3, StandardCharsets.ISO_8859_1);
                                 nameCacheEntryArr[length4] = new JSONFactory.NameCacheEntry(strApply, j28);
                                 this.offset += i3;
                             } else if (nameCacheEntry.value == j28) {
@@ -4169,11 +4258,14 @@ final class JSONReaderJSONB extends JSONReader {
                     case 6:
                         c = '\b';
                         Unsafe unsafe = JDKUtils.UNSAFE;
-                        j = (((long) unsafe.getShort(bArr, 4 + j6)) << 32) + (((long) unsafe.getInt(bArr, j6)) & 4294967295L);
+                        j = (((long) unsafe.getShort(bArr, 4 + j6)) << 32)
+                                + (((long) unsafe.getInt(bArr, j6)) & 4294967295L);
                         break;
                     case 7:
                         c = '\b';
-                        j = (((long) bArr[i7 + 6]) << 48) + ((((long) bArr[i7 + 5]) & 255) << 40) + ((((long) bArr[i7 + 4]) & 255) << 32) + (((long) JDKUtils.UNSAFE.getInt(bArr, j6)) & 4294967295L);
+                        j = (((long) bArr[i7 + 6]) << 48) + ((((long) bArr[i7 + 5]) & 255) << 40)
+                                + ((((long) bArr[i7 + 4]) & 255) << 32)
+                                + (((long) JDKUtils.UNSAFE.getInt(bArr, j6)) & 4294967295L);
                         break;
                     default:
                         c = '\b';
@@ -4245,7 +4337,10 @@ final class JSONReaderJSONB extends JSONReader {
     public String readFixedAsciiString(int i) {
         byte[] bArr = this.bytes;
         int i2 = this.offset;
-        return i == 1 ? TypeUtils.toString((char) (bArr[i2] & 255)) : i == 2 ? TypeUtils.toString((char) (bArr[i2] & 255), (char) (bArr[i2 + 1] & 255)) : JDKUtils.STRING_CREATOR_JDK8 != null ? JDKUtils.latin1StringJDK8(bArr, i2, i) : new String(bArr, i2, i, StandardCharsets.ISO_8859_1);
+        return i == 1 ? TypeUtils.toString((char) (bArr[i2] & 255))
+                : i == 2 ? TypeUtils.toString((char) (bArr[i2] & 255), (char) (bArr[i2 + 1] & 255))
+                        : JDKUtils.STRING_CREATOR_JDK8 != null ? JDKUtils.latin1StringJDK8(bArr, i2, i)
+                                : new String(bArr, i2, i, StandardCharsets.ISO_8859_1);
     }
 
     @Override // com.alibaba.fastjson2.JSONReader
@@ -4254,7 +4349,8 @@ final class JSONReaderJSONB extends JSONReader {
         int i = this.offset;
         byte b = bArr[i];
         if (b == -73) {
-            int i2 = (bArr[i + 4] & 255) + ((bArr[i + 3] & 255) << 8) + ((bArr[i + 2] & 255) << 16) + (bArr[i + 1] << 24);
+            int i2 = (bArr[i + 4] & 255) + ((bArr[i + 3] & 255) << 8) + ((bArr[i + 2] & 255) << 16)
+                    + (bArr[i + 1] << 24);
             this.offset = i + 5;
             return Float.valueOf(Float.intBitsToFloat(i2));
         }
@@ -4408,7 +4504,10 @@ final class JSONReaderJSONB extends JSONReader {
     public int[] readInt32ValueArray() {
         if (nextIfMatch(JSONB.Constants.BC_TYPED_ANY)) {
             long typeHashCode = readTypeHashCode();
-            if (typeHashCode != ObjectReaderImplInt64ValueArray.HASH_TYPE && typeHashCode != ObjectReaderImplInt64Array.HASH_TYPE && typeHashCode != ObjectReaderImplInt32Array.HASH_TYPE && typeHashCode != ObjectReaderImplInt32ValueArray.HASH_TYPE) {
+            if (typeHashCode != ObjectReaderImplInt64ValueArray.HASH_TYPE
+                    && typeHashCode != ObjectReaderImplInt64Array.HASH_TYPE
+                    && typeHashCode != ObjectReaderImplInt32Array.HASH_TYPE
+                    && typeHashCode != ObjectReaderImplInt32ValueArray.HASH_TYPE) {
                 throw new JSONException(info("not support " + getString()));
             }
         }
@@ -4424,7 +4523,8 @@ final class JSONReaderJSONB extends JSONReader {
     }
 
     public JSONException readInt32ValueError(byte b) {
-        throw new JSONException("readInt32Value not support " + JSONB.typeName(b) + ", offset " + this.offset + "/" + this.bytes.length);
+        throw new JSONException("readInt32Value not support " + JSONB.typeName(b) + ", offset " + this.offset + "/"
+                + this.bytes.length);
     }
 
     @Override // com.alibaba.fastjson2.JSONReader
@@ -4518,7 +4618,10 @@ final class JSONReaderJSONB extends JSONReader {
     public long[] readInt64ValueArray() {
         if (nextIfMatch(JSONB.Constants.BC_TYPED_ANY)) {
             long typeHashCode = readTypeHashCode();
-            if (typeHashCode != ObjectReaderImplInt64ValueArray.HASH_TYPE && typeHashCode != ObjectReaderImplInt64Array.HASH_TYPE && typeHashCode != ObjectReaderImplInt32Array.HASH_TYPE && typeHashCode != ObjectReaderImplInt32ValueArray.HASH_TYPE) {
+            if (typeHashCode != ObjectReaderImplInt64ValueArray.HASH_TYPE
+                    && typeHashCode != ObjectReaderImplInt64Array.HASH_TYPE
+                    && typeHashCode != ObjectReaderImplInt32Array.HASH_TYPE
+                    && typeHashCode != ObjectReaderImplInt32ValueArray.HASH_TYPE) {
                 throw new JSONException(info("not support " + getString()));
             }
         }
@@ -4534,7 +4637,8 @@ final class JSONReaderJSONB extends JSONReader {
     }
 
     public JSONException readInt64ValueError(byte b) {
-        throw new JSONException("readInt64Value not support " + JSONB.typeName(b) + ", offset " + this.offset + "/" + this.bytes.length);
+        throw new JSONException("readInt64Value not support " + JSONB.typeName(b) + ", offset " + this.offset + "/"
+                + this.bytes.length);
     }
 
     public int readLength() {
@@ -4841,7 +4945,7 @@ final class JSONReaderJSONB extends JSONReader {
             case 12:
                 return readLocalTime12();
             default:
-                throw new JSONException(bjs.i(stringLength, "not support len : "));
+                throw new JSONException(concatVar2Var1(stringLength, "not support len : "));
         }
     }
 
@@ -5125,18 +5229,24 @@ final class JSONReaderJSONB extends JSONReader {
         throw new JSONException("UnsupportedOperation");
     }
 
-    /* JADX WARN: Found duplicated region for block: B:107:0x01d8  */
-    /* JADX WARN: Found duplicated region for block: B:109:0x01dc  */
-    /* JADX WARN: Found duplicated region for block: B:111:0x01e2  */
-    /* JADX WARN: Found duplicated region for block: B:112:0x01f3  */
-    /* JADX WARN: Found duplicated region for block: B:117:0x0203  */
+    /* JADX WARN: Found duplicated region for block: B:107:0x01d8 */
+    /* JADX WARN: Found duplicated region for block: B:109:0x01dc */
+    /* JADX WARN: Found duplicated region for block: B:111:0x01e2 */
+    /* JADX WARN: Found duplicated region for block: B:112:0x01f3 */
+    /* JADX WARN: Found duplicated region for block: B:117:0x0203 */
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Type inference failed for: r10v25 */
     /* JADX WARN: Type inference failed for: r13v3 */
-    /* JADX WARN: Type inference failed for: r20v0, types: [com.alibaba.fastjson2.JSONReader, com.alibaba.fastjson2.JSONReaderJSONB] */
+    /*
+     * JADX WARN: Type inference failed for: r20v0, types:
+     * [com.alibaba.fastjson2.JSONReader, com.alibaba.fastjson2.JSONReaderJSONB]
+     */
     /* JADX WARN: Type inference failed for: r5v17 */
     /* JADX WARN: Type inference failed for: r5v6 */
-    /* JADX WARN: Type inference failed for: r6v1, types: [java.lang.Object, java.util.Map, java.util.Map<java.lang.String, java.lang.Object>] */
+    /*
+     * JADX WARN: Type inference failed for: r6v1, types: [java.lang.Object,
+     * java.util.Map, java.util.Map<java.lang.String, java.lang.Object>]
+     */
     @Override // com.alibaba.fastjson2.JSONReader
     public Map<String, Object> readObject() {
         long j;
@@ -5388,7 +5498,8 @@ final class JSONReaderJSONB extends JSONReader {
     }
 
     public JSONException readStringError() {
-        throw new JSONException("string value not support input " + JSONB.typeName(this.type) + " offset " + this.offset + "/" + this.bytes.length);
+        throw new JSONException("string value not support input " + JSONB.typeName(this.type) + " offset " + this.offset
+                + "/" + this.bytes.length);
     }
 
     @Override // com.alibaba.fastjson2.JSONReader
@@ -5442,8 +5553,11 @@ final class JSONReaderJSONB extends JSONReader {
         return readTypeHashCode0();
     }
 
-    /* JADX WARN: Found duplicated region for block: B:126:0x0282  */
-    /* JADX WARN: Found duplicated region for block: B:129:0x0287 A[LOOP:3: B:127:0x0283->B:129:0x0287, LOOP_END] */
+    /* JADX WARN: Found duplicated region for block: B:126:0x0282 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:129:0x0287 A[LOOP:3:
+     * B:127:0x0283->B:129:0x0287, LOOP_END]
+     */
     public long readTypeHashCode0() {
         long hashCode;
         long j;
@@ -5611,7 +5725,8 @@ final class JSONReaderJSONB extends JSONReader {
                     hashCode = -3750763034362895579L;
                     while (i18 < this.strlen) {
                         int i19 = this.offset;
-                        hashCode = (hashCode ^ ((long) ((char) ((bArr[(i19 + i18) + 1] & Opcodes.CONST_METHOD_TYPE) | ((bArr[i19 + i18] & Opcodes.CONST_METHOD_TYPE) << 8))))) * Fnv.MAGIC_PRIME;
+                        hashCode = (hashCode ^ ((long) ((char) ((bArr[(i19 + i18) + 1] & Opcodes.CONST_METHOD_TYPE)
+                                | ((bArr[i19 + i18] & Opcodes.CONST_METHOD_TYPE) << 8))))) * Fnv.MAGIC_PRIME;
                         i18 += 2;
                     }
                 } else if (b3 == 124) {
@@ -5619,7 +5734,10 @@ final class JSONReaderJSONB extends JSONReader {
                     while (i18 < this.strlen) {
                         int i20 = this.offset;
                         int i21 = bArr[i20 + i18];
-                        hashCode = (hashCode ^ ((long) ((char) (((bArr[(i20 + i18) + 1] & Opcodes.CONST_METHOD_TYPE) << 8) | (i21 & Opcodes.CONST_METHOD_TYPE))))) * Fnv.MAGIC_PRIME;
+                        hashCode = (hashCode
+                                ^ ((long) ((char) (((bArr[(i20 + i18) + 1] & Opcodes.CONST_METHOD_TYPE) << 8)
+                                        | (i21 & Opcodes.CONST_METHOD_TYPE)))))
+                                * Fnv.MAGIC_PRIME;
                         i18 += 2;
                     }
                 } else {
@@ -5760,7 +5878,7 @@ final class JSONReaderJSONB extends JSONReader {
             this.offset = i + 2;
             byte b2 = bArr[i2];
             if (b2 != 16 && i + 17 >= this.end) {
-                throw new JSONException(bjs.i(b2, "uuid not support "));
+                throw new JSONException(concatVar2Var1(b2, "uuid not support "));
             }
             UUID uuid = new UUID(IOUtils.getLongBE(bArr, this.offset), IOUtils.getLongBE(bArr, this.offset + 8));
             this.offset += 16;
@@ -5776,7 +5894,8 @@ final class JSONReaderJSONB extends JSONReader {
         }
         if (b == 109) {
             if (bArr[i + 9] != 45 || bArr[i + 14] != 45 || bArr[i + 19] != 45 || bArr[i + 24] != 45) {
-                throw new JSONException("Invalid UUID string:  ".concat(new String(bArr, this.offset, 36, StandardCharsets.ISO_8859_1)));
+                throw new JSONException("Invalid UUID string:  "
+                        .concat(new String(bArr, this.offset, 36, StandardCharsets.ISO_8859_1)));
             }
             UUID uuid36 = JSONReaderUTF8.readUUID36(bArr, i2);
             this.offset += 36;
@@ -5799,7 +5918,8 @@ final class JSONReaderJSONB extends JSONReader {
                 return uuid362;
             }
         }
-        throw new JSONException("Invalid UUID string:  ".concat(new String(bArr, this.offset, length, StandardCharsets.UTF_8)));
+        throw new JSONException(
+                "Invalid UUID string:  ".concat(new String(bArr, this.offset, length, StandardCharsets.UTF_8)));
     }
 
     /* JADX WARN: Found duplicated region for block: B:122:0x0229 A[RETURN] */
@@ -5847,7 +5967,8 @@ final class JSONReaderJSONB extends JSONReader {
                         long j9 = Fnv.MAGIC_HASH_CODE;
                         while (i4 < this.strlen) {
                             int i6 = i5 + i4;
-                            j9 = (j9 ^ ((long) ((char) (((bArr[i6 + 1] & 255) << 8) | (bArr[i6] & 255))))) * Fnv.MAGIC_PRIME;
+                            j9 = (j9 ^ ((long) ((char) (((bArr[i6 + 1] & 255) << 8) | (bArr[i6] & 255)))))
+                                    * Fnv.MAGIC_PRIME;
                             i4 += 2;
                         }
                         return j9;
@@ -5855,7 +5976,8 @@ final class JSONReaderJSONB extends JSONReader {
                     long j10 = Fnv.MAGIC_HASH_CODE;
                     for (int i7 = 0; i7 < this.strlen; i7 += 2) {
                         int i8 = i5 + i7;
-                        j10 = (j10 ^ ((long) ((char) (((bArr[i8 + 1] & 255) << 8) | (bArr[i8] & 255))))) * Fnv.MAGIC_PRIME;
+                        j10 = (j10 ^ ((long) ((char) (((bArr[i8 + 1] & 255) << 8) | (bArr[i8] & 255)))))
+                                * Fnv.MAGIC_PRIME;
                     }
                     return j10;
                 }
@@ -5918,7 +6040,8 @@ final class JSONReaderJSONB extends JSONReader {
                 long j12 = Fnv.MAGIC_HASH_CODE;
                 while (i4 < this.strlen) {
                     int i11 = i5 + i4;
-                    j12 = (j12 ^ ((long) ((char) ((bArr[i11 + 1] & 255) | ((bArr[i11] & 255) << 8))))) * Fnv.MAGIC_PRIME;
+                    j12 = (j12 ^ ((long) ((char) ((bArr[i11 + 1] & 255) | ((bArr[i11] & 255) << 8)))))
+                            * Fnv.MAGIC_PRIME;
                     i4 += 2;
                 }
                 return j12;
@@ -5984,7 +6107,8 @@ final class JSONReaderJSONB extends JSONReader {
                 long j14 = Fnv.MAGIC_HASH_CODE;
                 for (int i15 = 0; i15 < this.strlen; i15 += 2) {
                     int i16 = i12 + i15;
-                    j14 = (j14 ^ ((long) ((char) ((bArr[i16 + 1] & 255) | ((bArr[i16] & 255) << 8))))) * Fnv.MAGIC_PRIME;
+                    j14 = (j14 ^ ((long) ((char) ((bArr[i16 + 1] & 255) | ((bArr[i16] & 255) << 8)))))
+                            * Fnv.MAGIC_PRIME;
                 }
                 return j14;
             }
@@ -6049,7 +6173,8 @@ final class JSONReaderJSONB extends JSONReader {
                 long j16 = Fnv.MAGIC_HASH_CODE;
                 for (int i20 = 0; i20 < this.strlen; i20 += 2) {
                     int i21 = i17 + i20;
-                    j16 = (j16 ^ ((long) ((char) (((bArr[i21 + 1] & 255) << 8) | (bArr[i21] & 255))))) * Fnv.MAGIC_PRIME;
+                    j16 = (j16 ^ ((long) ((char) (((bArr[i21 + 1] & 255) << 8) | (bArr[i21] & 255)))))
+                            * Fnv.MAGIC_PRIME;
                 }
                 return j16;
             }
@@ -6239,8 +6364,10 @@ final class JSONReaderJSONB extends JSONReader {
         return true;
     }
 
-    /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
-    /* JADX WARN: Found duplicated region for block: B:66:0x00c8  */
+    /*
+     * JADX WARN: Can't fix incorrect switch cases order, some code will duplicate
+     */
+    /* JADX WARN: Found duplicated region for block: B:66:0x00c8 */
     @Override // com.alibaba.fastjson2.JSONReader
     public void skipValue() {
         byte[] bArr = this.bytes;
@@ -6467,7 +6594,8 @@ final class JSONReaderJSONB extends JSONReader {
     @Override // com.alibaba.fastjson2.JSONReader
     public <T> T read(Class<T> cls) {
         JSONReader.Context context = this.context;
-        return (T) context.provider.getObjectReader(cls, (context.features & JSONReader.Feature.FieldBased.mask) != 0).readJSONBObject(this, null, null, 0L);
+        return (T) context.provider.getObjectReader(cls, (context.features & JSONReader.Feature.FieldBased.mask) != 0)
+                .readJSONBObject(this, null, null, 0L);
     }
 
     @Override // com.alibaba.fastjson2.JSONReader
@@ -6570,7 +6698,8 @@ final class JSONReaderJSONB extends JSONReader {
         }
         if (JDKUtils.JVM_VERSION == 8 && this.strtype == 122 && i < 8192) {
             int iIdentityHashCode = System.identityHashCode(Thread.currentThread());
-            andSet = JSONFactory.CHARS_UPDATER.getAndSet(JSONFactory.CACHE_ITEMS[iIdentityHashCode & (r2.length - 1)], null);
+            andSet = JSONFactory.CHARS_UPDATER.getAndSet(JSONFactory.CACHE_ITEMS[iIdentityHashCode & (r2.length - 1)],
+                    null);
             if (andSet == null) {
                 andSet = new char[8192];
             }
@@ -6608,7 +6737,7 @@ final class JSONReaderJSONB extends JSONReader {
             if (any instanceof Collection) {
                 return new JSONArray((Collection<?>) any);
             }
-            throw new JSONException(bjs.m(any, new StringBuilder("not support class ")));
+            throw new JSONException(concatVar1GetClass(any, new StringBuilder("not support class ")));
         }
         int iStartArray = startArray();
         JSONArray jSONArray = new JSONArray(iStartArray);

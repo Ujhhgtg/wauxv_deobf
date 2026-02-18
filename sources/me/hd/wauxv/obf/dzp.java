@@ -6,7 +6,8 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class dzp {
     public static final dzo Companion = new dzo();
-    public static final btt[] a = {null, null, null, null, null, null, ewz.am(btx.a, new dtr(11)), null, null, null, null};
+    public static final btt[] a = { null, null, null, null, null, null, ewz.am(btx.a, new dtr(11)), null, null, null,
+            null };
     public final Integer b;
     public final String c;
     public final Boolean d;
@@ -19,7 +20,8 @@ public final class dzp {
     public final String k;
     public final String l;
 
-    public /* synthetic */ dzp(int i, Integer num, String str, Boolean bool, Boolean bool2, Boolean bool3, Boolean bool4, List list, Integer num2, Long l, String str2, String str3) {
+    public /* synthetic */ dzp(int i, Integer num, String str, Boolean bool, Boolean bool2, Boolean bool3,
+            Boolean bool4, List list, Integer num2, Long l, String str2, String str3) {
         if (2047 != (i & 2047)) {
             bht.ah(i, 2047, dzn.b.getDescriptor());
             throw null;
@@ -45,7 +47,13 @@ public final class dzp {
             return false;
         }
         dzp dzpVar = (dzp) obj;
-        return bzo.f(this.b, dzpVar.b) && bzo.f(this.c, dzpVar.c) && bzo.f(this.d, dzpVar.d) && bzo.f(this.e, dzpVar.e) && bzo.f(this.f, dzpVar.f) && bzo.f(this.g, dzpVar.g) && bzo.f(this.h, dzpVar.h) && bzo.f(this.i, dzpVar.i) && bzo.f(this.j, dzpVar.j) && bzo.f(this.k, dzpVar.k) && bzo.f(this.l, dzpVar.l);
+        return nullSafeIsEqual(this.b, dzpVar.b) && nullSafeIsEqual(this.c, dzpVar.c)
+                && nullSafeIsEqual(this.d, dzpVar.d) && nullSafeIsEqual(this.e, dzpVar.e)
+                && nullSafeIsEqual(this.f, dzpVar.f) && nullSafeIsEqual(this.g, dzpVar.g)
+                && nullSafeIsEqual(this.h, dzpVar.h)
+                && nullSafeIsEqual(this.i, dzpVar.i) && nullSafeIsEqual(this.j, dzpVar.j)
+                && nullSafeIsEqual(this.k, dzpVar.k)
+                && nullSafeIsEqual(this.l, dzpVar.l);
     }
 
     public final int hashCode() {
@@ -86,6 +94,6 @@ public final class dzp {
         bjs.w(sb, this.i, -199093209004842L);
         dkz.ad(sb, this.j, -199020194560810L);
         yg.u(sb, this.k, -199552770505514L);
-        return bjs.q(sb, this.l, ')');
+        return concat(sb, this.l, ')');
     }
 }

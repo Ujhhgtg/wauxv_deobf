@@ -82,7 +82,7 @@ public final class dlh implements dle {
             cht chtVar2 = new cht();
             chtVar2.a = dev.a;
             chtVar2.b = bqk.a;
-            chtVar2.c = bzo.b;
+            chtVar2.c = KotlinHelpers.b;
             chtVar2.i(dev.d(6));
             this.j = chtVar2;
         }
@@ -147,7 +147,7 @@ public final class dlh implements dle {
                             }
                             cht chtVar4 = chtVar3;
                             j2 = 128;
-                            bzo.q(jArr3, "<this>");
+                            throwIfVar1IsNull(jArr3, "<this>");
                             int length = jArr3.length;
                             int i24 = length - 1;
                             int i25 = length - 2;

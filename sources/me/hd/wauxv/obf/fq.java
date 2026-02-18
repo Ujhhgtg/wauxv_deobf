@@ -23,14 +23,18 @@ public final /* synthetic */ class fq implements bgj {
         this.a = i;
     }
 
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException
-    	at java.base/java.util.Objects.requireNonNull(Objects.java:209)
-    	at java.base/java.util.ArrayList.batchRemove(ArrayList.java:816)
-    	at java.base/java.util.ArrayList.removeAll(ArrayList.java:791)
-    	at jadx.core.dex.visitors.finaly.TryCatchEdgeBlockMap.getAllInScope(TryCatchEdgeBlockMap.java:91)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:204)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException
+     * at java.base/java.util.Objects.requireNonNull(Objects.java:209)
+     * at java.base/java.util.ArrayList.batchRemove(ArrayList.java:816)
+     * at java.base/java.util.ArrayList.removeAll(ArrayList.java:791)
+     * at jadx.core.dex.visitors.finaly.TryCatchEdgeBlockMap.getAllInScope(
+     * TryCatchEdgeBlockMap.java:91)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+     * MarkFinallyVisitor.java:204)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:119)
      */
     @Override // me.hd.wauxv.obf.bgj
     public final Object g(Object obj, Object obj2) {
@@ -59,8 +63,8 @@ public final /* synthetic */ class fq implements bgj {
             case 1:
                 String str = (String) obj;
                 ahf ahfVar = (ahf) obj2;
-                bzo.q(str, "acc");
-                bzo.q(ahfVar, "element");
+                throwIfVar1IsNull(str, "acc");
+                throwIfVar1IsNull(ahfVar, "element");
                 if (str.length() == 0) {
                     return ahfVar.toString();
                 }
@@ -70,8 +74,8 @@ public final /* synthetic */ class fq implements bgj {
             case 3:
                 ahh ahhVar = (ahh) obj;
                 ahf ahfVar2 = (ahf) obj2;
-                bzo.q(ahhVar, "acc");
-                bzo.q(ahfVar2, "element");
+                throwIfVar1IsNull(ahhVar, "acc");
+                throwIfVar1IsNull(ahfVar2, "element");
                 ahh ahhVar_t = ahhVar._t(ahfVar2.getKey());
                 auz auzVar = auz.a;
                 if (ahhVar_t == auzVar) {
@@ -102,7 +106,7 @@ public final /* synthetic */ class fq implements bgj {
                 ens ensVar = ens.a;
                 long msgId = msgInfoBean.getMsgId();
                 String imgPath = msgInfoBean.getImgPath();
-                bzo.n(imgPath);
+                throwIfVar1IsNull(imgPath);
                 aub.a.getClass();
                 Object objB = aub.b(imgPath);
                 atp.a.getClass();
@@ -110,11 +114,13 @@ public final /* synthetic */ class fq implements bgj {
                 cde cdeVarT = dqc.bh(emn.az(ato.a)).t();
                 cdeVarT.ak(cdy.c);
                 Object objE = ((cdk) bjs.h(cdeVarT)).e(new Object[0]);
-                bzo.n(objE);
+                throwIfVar1IsNull(objE);
                 cde cdeVarT2 = dqc.bi(objE).t();
                 cdeVarT2.a = dal.b(byte[].class);
-                Object objJ = ((cdk) dkz.n(new Object[]{"com.tencent.mm.api.IEmojiInfo" /* cnb.z(-90430536416042L) */}, 1, cdeVarT2)).j(objB);
-                bzo.n(objJ);
+                Object objJ = ((cdk) dkz
+                        .n(new Object[] { "com.tencent.mm.api.IEmojiInfo" /* cnb.z(-90430536416042L) */ }, 1, cdeVarT2))
+                        .j(objB);
+                throwIfVar1IsNull(objJ);
                 byte[] bArr = (byte[]) objJ;
                 try {
                     File file = new File(aum.a.o());
@@ -126,14 +132,17 @@ public final /* synthetic */ class fq implements bgj {
                     sb.append(SignatureVisitor.SUPER);
                     sb.append(System.currentTimeMillis());
                     sb.append(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
-                    sb.append(cna.ac(bArr) ? "gif" /* cnb.z(-519106927262506L) */ : "png" /* cnb.z(-519055387654954L) */);
+                    sb.append(
+                            cna.ac(bArr) ? "gif" /* cnb.z(-519106927262506L) */ : "png" /* cnb.z(-519055387654954L) */);
                     String string = sb.toString();
                     File file2 = new File(file, string);
                     if (cna.ac(bArr)) {
-                        cde cdeVarT3 = dqc.bh(ajn.ag("com.tencent.mm.plugin.gif.MMWXGFJNI" /* cnb.z(-119803817753386L) */)).t();
+                        cde cdeVarT3 = dqc.bh(ajn.ag("com.tencent.mm.plugin.gif.MMWXGFJNI" /*
+                                                                                            * cnb.z(-119803817753386L)
+                                                                                            */)).t();
                         cdeVarT3.ab = "nativeWxamToGif" /* cnb.z(-119614839192362L) */;
                         Object objJ2 = ((cdk) aaz.e(cdeVarT3.aj())).j(bArr);
-                        bzo.n(objJ2);
+                        throwIfVar1IsNull(objJ2);
                         bArr = (byte[]) objJ2;
                     }
                     FileOutputStream fileOutputStream = new FileOutputStream(file2);
@@ -157,7 +166,10 @@ public final /* synthetic */ class fq implements bgj {
                 if (thB != null) {
                     String strZ = "保存失败: " /* cnb.z(-519025322883882L) */;
                     String message = thB.getMessage();
-                    dnc.g(null, 3, strZ.concat(message != null ? dnj.az(50, message) : "未知错误" /* cnb.z(-518995258112810L) */));
+                    dnc.g(null, 3, strZ.concat(message != null ? dnj.az(50, message) : "未知错误" /*
+                                                                                               * cnb.z(-
+                                                                                               * 518995258112810L)
+                                                                                               */));
                 }
                 return ensVar;
             case 8:
@@ -167,7 +179,7 @@ public final /* synthetic */ class fq implements bgj {
                 ((Field) obj2).getGenericType();
                 throw null;
             case 9:
-                Boolean bool2 = (Boolean) ((bgf) obj).invoke(((Field) obj2).getGenericType());
+                Boolean bool2 = (Boolean) ((IHasInvokeMethod) obj).invoke(((Field) obj2).getGenericType());
                 bool2.booleanValue();
                 return bool2;
             case 10:
@@ -221,7 +233,7 @@ public final /* synthetic */ class fq implements bgj {
                 return Boolean.valueOf(((Executable) obj2).isVarArgs() != ((Boolean) obj).booleanValue());
             case 15:
                 try {
-                    objX2 = (Boolean) ((bgf) obj).invoke(((Method) obj2).getReturnType());
+                    objX2 = (Boolean) ((IHasInvokeMethod) obj).invoke(((Method) obj2).getReturnType());
                     objX2.getClass();
                     break;
                 } catch (Throwable th4) {
@@ -234,7 +246,7 @@ public final /* synthetic */ class fq implements bgj {
                 return (Boolean) objX2;
             case 16:
                 try {
-                    objX3 = (Boolean) ((bgf) obj).invoke(la.ab(((Executable) obj2).getParameterTypes()));
+                    objX3 = (Boolean) ((IHasInvokeMethod) obj).invoke(la.ab(((Executable) obj2).getParameterTypes()));
                     objX3.getClass();
                     break;
                 } catch (Throwable th5) {
@@ -251,7 +263,7 @@ public final /* synthetic */ class fq implements bgj {
                 return Boolean.valueOf(((Executable) obj2).getParameterCount() == ((Integer) obj).intValue());
             case 19:
                 try {
-                    objX4 = (Boolean) ((bgf) obj).invoke(Integer.valueOf(((Executable) obj2).getParameterCount()));
+                    objX4 = (Boolean) ((IHasInvokeMethod) obj).invoke(Integer.valueOf(((Executable) obj2).getParameterCount()));
                     objX4.getClass();
                     break;
                 } catch (Throwable th6) {
@@ -308,10 +320,10 @@ public final /* synthetic */ class fq implements bgj {
                 }
                 return Boolean.valueOf(z);
             case 23:
-                return Boolean.valueOf(bzo.f(((Member) obj2).getName(), (String) obj));
+                return Boolean.valueOf(nullSafeIsEqual(((Member) obj2).getName(), (String) obj));
             case 24:
                 try {
-                    objX5 = (Boolean) ((bgf) obj).invoke(((Member) obj2).getName());
+                    objX5 = (Boolean) ((IHasInvokeMethod) obj).invoke(((Member) obj2).getName());
                     objX5.getClass();
                     break;
                 } catch (Throwable th7) {
@@ -353,7 +365,7 @@ public final /* synthetic */ class fq implements bgj {
                 }
                 return Boolean.valueOf(z);
             case 28:
-                bgf bgfVar = (bgf) obj;
+                IHasInvokeMethod bgfVar = (IHasInvokeMethod) obj;
                 Member member3 = (Member) obj2;
                 try {
                     cbm cbmVar = cdy.a;

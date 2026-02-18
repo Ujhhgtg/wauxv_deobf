@@ -87,7 +87,8 @@ public class CollapsingToolbarLayout extends FrameLayout {
         int i;
         ColorStateList colorStateListV;
         ColorStateList colorStateListV2;
-        super(cmz.aq(context, attributeSet, R.attr.collapsingToolbarLayoutStyle, R.style.Widget_Design_CollapsingToolbar), attributeSet, R.attr.collapsingToolbarLayoutStyle);
+        super(cmz.aq(context, attributeSet, R.attr.collapsingToolbarLayoutStyle,
+                R.style.Widget_Design_CollapsingToolbar), attributeSet, R.attr.collapsingToolbarLayoutStyle);
         this.a = true;
         this.j = new Rect();
         this.w = -1;
@@ -102,8 +103,10 @@ public class CollapsingToolbarLayout extends FrameLayout {
         this.l = new asy(context2);
         bhu.p(context2, attributeSet, R.attr.collapsingToolbarLayoutStyle, R.style.Widget_Design_CollapsingToolbar);
         int[] iArr = cxs.k;
-        bhu.q(context2, attributeSet, iArr, R.attr.collapsingToolbarLayoutStyle, R.style.Widget_Design_CollapsingToolbar, new int[0]);
-        TypedArray typedArrayObtainStyledAttributes = context2.obtainStyledAttributes(attributeSet, iArr, R.attr.collapsingToolbarLayoutStyle, R.style.Widget_Design_CollapsingToolbar);
+        bhu.q(context2, attributeSet, iArr, R.attr.collapsingToolbarLayoutStyle,
+                R.style.Widget_Design_CollapsingToolbar, new int[0]);
+        TypedArray typedArrayObtainStyledAttributes = context2.obtainStyledAttributes(attributeSet, iArr,
+                R.attr.collapsingToolbarLayoutStyle, R.style.Widget_Design_CollapsingToolbar);
         int i2 = typedArrayObtainStyledAttributes.getInt(4, 8388691);
         if (aatVar.j != i2) {
             aatVar.j = i2;
@@ -140,18 +143,22 @@ public class CollapsingToolbarLayout extends FrameLayout {
         }
         if (typedArrayObtainStyledAttributes.hasValue(22)) {
             int i4 = typedArrayObtainStyledAttributes.getInt(22, -1);
-            setTitleEllipsize(i4 != 0 ? i4 != 1 ? i4 != 3 ? TextUtils.TruncateAt.END : TextUtils.TruncateAt.MARQUEE : TextUtils.TruncateAt.MIDDLE : TextUtils.TruncateAt.START);
+            setTitleEllipsize(i4 != 0 ? i4 != 1 ? i4 != 3 ? TextUtils.TruncateAt.END : TextUtils.TruncateAt.MARQUEE
+                    : TextUtils.TruncateAt.MIDDLE : TextUtils.TruncateAt.START);
         }
-        if (typedArrayObtainStyledAttributes.hasValue(11) && aatVar.n != (colorStateListV2 = cnb.v(context2, typedArrayObtainStyledAttributes, 11))) {
+        if (typedArrayObtainStyledAttributes.hasValue(11)
+                && aatVar.n != (colorStateListV2 = cnb.v(context2, typedArrayObtainStyledAttributes, 11))) {
             aatVar.n = colorStateListV2;
             aatVar.bz(false);
         }
-        if (typedArrayObtainStyledAttributes.hasValue(2) && aatVar.o != (colorStateListV = cnb.v(context2, typedArrayObtainStyledAttributes, 2))) {
+        if (typedArrayObtainStyledAttributes.hasValue(2)
+                && aatVar.o != (colorStateListV = cnb.v(context2, typedArrayObtainStyledAttributes, 2))) {
             aatVar.o = colorStateListV;
             aatVar.bz(false);
         }
         this.w = typedArrayObtainStyledAttributes.getDimensionPixelSize(16, -1);
-        if (typedArrayObtainStyledAttributes.hasValue(14) && (i = typedArrayObtainStyledAttributes.getInt(14, 1)) != aatVar.bn) {
+        if (typedArrayObtainStyledAttributes.hasValue(14)
+                && (i = typedArrayObtainStyledAttributes.getInt(14, 1)) != aatVar.bn) {
             aatVar.bn = i;
             Bitmap bitmap = aatVar.ak;
             if (bitmap != null) {
@@ -161,7 +168,8 @@ public class CollapsingToolbarLayout extends FrameLayout {
             aatVar.bz(false);
         }
         if (typedArrayObtainStyledAttributes.hasValue(21)) {
-            aatVar.av = AnimationUtils.loadInterpolator(context2, typedArrayObtainStyledAttributes.getResourceId(21, 0));
+            aatVar.av = AnimationUtils.loadInterpolator(context2,
+                    typedArrayObtainStyledAttributes.getResourceId(21, 0));
             aatVar.bz(false);
         }
         this.t = typedArrayObtainStyledAttributes.getInt(15, 600);
@@ -190,7 +198,7 @@ public class CollapsingToolbarLayout extends FrameLayout {
         return ertVar2;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:11:0x0020  */
+    /* JADX WARN: Found duplicated region for block: B:11:0x0020 */
     private int getDefaultContentScrimColorForTitleCollapseFadeMode() {
         ColorStateList colorStateListValueOf;
         Context context = getContext();
@@ -302,7 +310,8 @@ public class CollapsingToolbarLayout extends FrameLayout {
             if (view2 == null) {
                 view2 = this.c;
             }
-            int height = ((getHeight() - af(view2).b) - view2.getHeight()) - ((FrameLayout.LayoutParams) ((aau) view2.getLayoutParams())).bottomMargin;
+            int height = ((getHeight() - af(view2).second) - view2.getHeight())
+                    - ((FrameLayout.LayoutParams) ((aau) view2.getLayoutParams())).bottomMargin;
             View view3 = this.e;
             ThreadLocal threadLocal = ama.a;
             int width = view3.getWidth();
@@ -358,7 +367,9 @@ public class CollapsingToolbarLayout extends FrameLayout {
     public final void ak() {
         if (this.c != null && this.m && TextUtils.isEmpty(this.k.ag)) {
             ViewGroup viewGroup = this.c;
-            setTitle(viewGroup instanceof Toolbar ? ((Toolbar) viewGroup).getTitle() : viewGroup instanceof android.widget.Toolbar ? ((android.widget.Toolbar) viewGroup).getTitle() : null);
+            setTitle(viewGroup instanceof Toolbar ? ((Toolbar) viewGroup).getTitle()
+                    : viewGroup instanceof android.widget.Toolbar ? ((android.widget.Toolbar) viewGroup).getTitle()
+                            : null);
         }
     }
 
@@ -405,7 +416,8 @@ public class CollapsingToolbarLayout extends FrameLayout {
         boolean z;
         View view2;
         Drawable drawable = this.o;
-        if (drawable == null || this.q <= 0 || ((view2 = this.d) == null || view2 == this ? view != this.c : view != view2)) {
+        if (drawable == null || this.q <= 0
+                || ((view2 = this.d) == null || view2 == this ? view != this.c : view != view2)) {
             z = false;
         } else {
             int width = getWidth();
@@ -437,7 +449,8 @@ public class CollapsingToolbarLayout extends FrameLayout {
         if (aatVar != null) {
             aatVar.ar = drawableState;
             ColorStateList colorStateList2 = aatVar.o;
-            if ((colorStateList2 != null && colorStateList2.isStateful()) || ((colorStateList = aatVar.n) != null && colorStateList.isStateful())) {
+            if ((colorStateList2 != null && colorStateList2.isStateful())
+                    || ((colorStateList = aatVar.n) != null && colorStateList.isStateful())) {
                 aatVar.bz(false);
                 z = true;
             }
@@ -638,11 +651,11 @@ public class CollapsingToolbarLayout extends FrameLayout {
         ai();
         int childCount3 = getChildCount();
         for (int i7 = 0; i7 < childCount3; i7++) {
-            af(getChildAt(i7)).e();
+            af(getChildAt(i7)).getThisObject();
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:19:0x007f  */
+    /* JADX WARN: Found duplicated region for block: B:19:0x007f */
     @Override // android.widget.FrameLayout, android.view.View
     public final void onMeasure(int i, int i2) {
         CollapsingToolbarLayout collapsingToolbarLayout;
@@ -670,7 +683,8 @@ public class CollapsingToolbarLayout extends FrameLayout {
                     textPaint.setTypeface(aatVar.z);
                     textPaint.setLetterSpacing(aatVar.bg);
                     collapsingToolbarLayout.ad = (i3 - 1) * Math.round(textPaint.descent() + (-textPaint.ascent()));
-                    super.onMeasure(i, View.MeasureSpec.makeMeasureSpec(getMeasuredHeight() + collapsingToolbarLayout.ad, 1073741824));
+                    super.onMeasure(i, View.MeasureSpec
+                            .makeMeasureSpec(getMeasuredHeight() + collapsingToolbarLayout.ad, 1073741824));
                 }
             } else {
                 collapsingToolbarLayout = this;
@@ -685,7 +699,8 @@ public class CollapsingToolbarLayout extends FrameLayout {
                 ViewGroup.LayoutParams layoutParams = viewGroup.getLayoutParams();
                 if (layoutParams instanceof ViewGroup.MarginLayoutParams) {
                     ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) layoutParams;
-                    measuredHeight = viewGroup.getMeasuredHeight() + marginLayoutParams.topMargin + marginLayoutParams.bottomMargin;
+                    measuredHeight = viewGroup.getMeasuredHeight() + marginLayoutParams.topMargin
+                            + marginLayoutParams.bottomMargin;
                 } else {
                     measuredHeight = viewGroup.getMeasuredHeight();
                 }
@@ -695,7 +710,8 @@ public class CollapsingToolbarLayout extends FrameLayout {
             ViewGroup.LayoutParams layoutParams2 = view.getLayoutParams();
             if (layoutParams2 instanceof ViewGroup.MarginLayoutParams) {
                 ViewGroup.MarginLayoutParams marginLayoutParams2 = (ViewGroup.MarginLayoutParams) layoutParams2;
-                measuredHeight2 = view.getMeasuredHeight() + marginLayoutParams2.topMargin + marginLayoutParams2.bottomMargin;
+                measuredHeight2 = view.getMeasuredHeight() + marginLayoutParams2.topMargin
+                        + marginLayoutParams2.bottomMargin;
             } else {
                 measuredHeight2 = view.getMeasuredHeight();
             }

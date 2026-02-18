@@ -30,7 +30,9 @@ public final class dyo {
             return false;
         }
         dyo dyoVar = (dyo) obj;
-        return bzo.f(this.a, dyoVar.a) && bzo.f(this.b, dyoVar.b) && bzo.f(this.c, dyoVar.c) && bzo.f(this.d, dyoVar.d) && bzo.f(this.e, dyoVar.e);
+        return nullSafeIsEqual(this.a, dyoVar.a) && nullSafeIsEqual(this.b, dyoVar.b)
+                && nullSafeIsEqual(this.c, dyoVar.c) && nullSafeIsEqual(this.d, dyoVar.d)
+                && nullSafeIsEqual(this.e, dyoVar.e);
     }
 
     public final int hashCode() {
@@ -54,6 +56,6 @@ public final class dyo {
         sb.append(", object_id=" /* cnb.z(-208361748429610L) */);
         bjs.w(sb, this.c, -208907209276202L);
         yg.u(sb, this.d, -208774065290026L);
-        return bjs.q(sb, this.e, ')');
+        return concat(sb, this.e, ')');
     }
 }

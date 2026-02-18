@@ -59,8 +59,9 @@ public abstract class bkx {
         int i3 = i2 - i;
         if (i3 < 1) {
             String strSubstring = str.substring(i, i2);
-            bzo.p(strSubstring, "substring(...)");
-            throw new NumberFormatException("Expected at least 1 hexadecimal digits at index " + i + ", but was \"" + strSubstring + "\" of length " + i3);
+            throwIfVar1IsNull(strSubstring, "substring(...)");
+            throw new NumberFormatException("Expected at least 1 hexadecimal digits at index " + i + ", but was \""
+                    + strSubstring + "\" of length " + i3);
         }
         if (i3 > 16) {
             int i4 = (i3 + i) - 16;
@@ -78,7 +79,7 @@ public abstract class bkx {
 
     public static long d(String str, int i, int i2) {
         bla blaVar = bla.a;
-        bzo.q(blaVar, "format");
+        throwIfVar1IsNull(blaVar, "format");
         cnh.j(i, i2, str.length());
         if (blaVar.d.b) {
             c(str, i, i2);
@@ -89,8 +90,9 @@ public abstract class bkx {
             return e(str, i, i2);
         }
         String strSubstring = str.substring(i, i2);
-        bzo.p(strSubstring, "substring(...)");
-        throw new NumberFormatException("Expected a hexadecimal number with prefix \"\" and suffix \"\", but was ".concat(strSubstring));
+        throwIfVar1IsNull(strSubstring, "substring(...)");
+        throw new NumberFormatException(
+                "Expected a hexadecimal number with prefix \"\" and suffix \"\", but was ".concat(strSubstring));
     }
 
     public static final long e(String str, int i, int i2) {

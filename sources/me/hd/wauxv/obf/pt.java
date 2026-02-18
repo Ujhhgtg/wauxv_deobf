@@ -11,7 +11,7 @@ public final class pt extends cvj {
     @Override // me.hd.wauxv.obf.cvj
     public final Object c() {
         boolean[] zArrCopyOf = Arrays.copyOf(this.a, this.b);
-        bzo.p(zArrCopyOf, "copyOf(...)");
+        throwIfVar1IsNull(zArrCopyOf, "copyOf(...)");
         return zArrCopyOf;
     }
 
@@ -24,7 +24,7 @@ public final class pt extends cvj {
                 i = length;
             }
             boolean[] zArrCopyOf = Arrays.copyOf(zArr, i);
-            bzo.p(zArrCopyOf, "copyOf(...)");
+            throwIfVar1IsNull(zArrCopyOf, "copyOf(...)");
             this.a = zArrCopyOf;
         }
     }

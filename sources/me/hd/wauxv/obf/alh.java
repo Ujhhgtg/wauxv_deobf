@@ -14,21 +14,28 @@ import me.hd.wauxv.R;
 public final class alh extends nh {
     public final boolean a;
     public boolean b;
-    public io f;
+    public DefaultConfig f;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'super' call moved to the top of the method (can break code
+     * semantics)
+     */
     public alh(dlr dlrVar, boolean z) {
         super(dlrVar);
-        bzo.q(dlrVar, "operation");
+        throwIfVar1IsNull(dlrVar, "operation");
         this.a = z;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:18:0x0027  */
-    /* JADX WARN: Found duplicated region for block: B:80:0x00e5 A[Catch: RuntimeException -> 0x00eb, TRY_LEAVE, TryCatch #2 {RuntimeException -> 0x00eb, blocks: (B:78:0x00df, B:80:0x00e5), top: B:91:0x00df }] */
-    public final io j(Context context) {
+    /* JADX WARN: Found duplicated region for block: B:18:0x0027 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:80:0x00e5 A[Catch:
+     * RuntimeException -> 0x00eb, TRY_LEAVE, TryCatch #2 {RuntimeException ->
+     * 0x00eb, blocks: (B:78:0x00df, B:80:0x00e5), top: B:91:0x00df }]
+     */
+    public final DefaultConfig j(Context context) {
         int iAh;
         Animation animationLoadAnimation;
-        io ioVar;
+        DefaultConfig ioVar;
         Animator animatorLoadAnimator;
         if (this.b) {
             return this.f;
@@ -53,14 +60,26 @@ public final class alh extends nh {
         }
         bdjVar.de(0, 0, 0, 0);
         ViewGroup viewGroup = bdjVar.by;
-        io ioVar2 = null;
+        DefaultConfig ioVar2 = null;
         if (viewGroup != null && viewGroup.getTag(R.id.visible_removing_fragment_view_tag) != null) {
             bdjVar.by.setTag(R.id.visible_removing_fragment_view_tag, null);
         }
         ViewGroup viewGroup2 = bdjVar.by;
         if (viewGroup2 == null || viewGroup2.getLayoutTransition() == null) {
             if (iAh == 0 && i != 0) {
-                iAh = i != 4097 ? i != 8194 ? i != 8197 ? i != 4099 ? i != 4100 ? -1 : z ? cna.ah(context, android.R.attr.activityOpenEnterAnimation) : cna.ah(context, android.R.attr.activityOpenExitAnimation) : z ? R.animator.fragment_fade_enter : R.animator.fragment_fade_exit : z ? cna.ah(context, android.R.attr.activityCloseEnterAnimation) : cna.ah(context, android.R.attr.activityCloseExitAnimation) : z ? R.animator.fragment_close_enter : R.animator.fragment_close_exit : z ? R.animator.fragment_open_enter : R.animator.fragment_open_exit;
+                iAh = i != 4097
+                        ? i != 8194
+                                ? i != 8197
+                                        ? i != 4099
+                                                ? i != 4100 ? -1
+                                                        : z ? cna.ah(context, android.R.attr.activityOpenEnterAnimation)
+                                                                : cna.ah(context,
+                                                                        android.R.attr.activityOpenExitAnimation)
+                                                : z ? R.animator.fragment_fade_enter : R.animator.fragment_fade_exit
+                                        : z ? cna.ah(context, android.R.attr.activityCloseEnterAnimation)
+                                                : cna.ah(context, android.R.attr.activityCloseExitAnimation)
+                                : z ? R.animator.fragment_close_enter : R.animator.fragment_close_exit
+                        : z ? R.animator.fragment_open_enter : R.animator.fragment_open_exit;
             }
             if (iAh != 0) {
                 boolean zEquals = "anim".equals(context.getResources().getResourceTypeName(iAh));
@@ -73,7 +92,7 @@ public final class alh extends nh {
                         try {
                             animatorLoadAnimator = AnimatorInflater.loadAnimator(context, iAh);
                             if (animatorLoadAnimator != null) {
-                                ioVar = new io(animatorLoadAnimator);
+                                ioVar = new DefaultConfig(animatorLoadAnimator);
                                 ioVar2 = ioVar;
                             }
                         } catch (RuntimeException e2) {
@@ -82,18 +101,18 @@ public final class alh extends nh {
                             }
                             Animation animationLoadAnimation2 = AnimationUtils.loadAnimation(context, iAh);
                             if (animationLoadAnimation2 != null) {
-                                ioVar2 = new io(animationLoadAnimation2);
+                                ioVar2 = new DefaultConfig(animationLoadAnimation2);
                             }
                         }
                     }
                     if (animationLoadAnimation != null) {
-                        ioVar = new io(animationLoadAnimation);
+                        ioVar = new DefaultConfig(animationLoadAnimation);
                         ioVar2 = ioVar;
                     }
                 } else {
                     animatorLoadAnimator = AnimatorInflater.loadAnimator(context, iAh);
                     if (animatorLoadAnimator != null) {
-                        ioVar = new io(animatorLoadAnimator);
+                        ioVar = new DefaultConfig(animatorLoadAnimator);
                         ioVar2 = ioVar;
                     }
                 }

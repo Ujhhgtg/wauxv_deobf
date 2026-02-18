@@ -8,7 +8,8 @@ import java.util.concurrent.locks.LockSupport;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class ahm extends Thread {
-    public static final /* synthetic */ AtomicIntegerFieldUpdater a = AtomicIntegerFieldUpdater.newUpdater(ahm.class, "workerCtl$volatile");
+    public static final /* synthetic */ AtomicIntegerFieldUpdater a = AtomicIntegerFieldUpdater.newUpdater(ahm.class,
+            "workerCtl$volatile");
     public final ewb b;
     public final dai c;
     public ahn d;
@@ -296,7 +297,8 @@ public final class ahm extends Thread {
                                 break;
                             } catch (Throwable th) {
                                 Thread threadCurrentThread = Thread.currentThread();
-                                threadCurrentThread.getUncaughtExceptionHandler().uncaughtException(threadCurrentThread, th);
+                                threadCurrentThread.getUncaughtExceptionHandler().uncaughtException(threadCurrentThread,
+                                        th);
                                 break;
                             }
                         }
@@ -307,7 +309,8 @@ public final class ahm extends Thread {
                             dpyVarJ.run();
                         } catch (Throwable th2) {
                             Thread threadCurrentThread2 = Thread.currentThread();
-                            threadCurrentThread2.getUncaughtExceptionHandler().uncaughtException(threadCurrentThread2, th2);
+                            threadCurrentThread2.getUncaughtExceptionHandler().uncaughtException(threadCurrentThread2,
+                                    th2);
                         }
                         aho.b.addAndGet(ahoVar, -2097152L);
                         if (this.d == ahnVar2) {
@@ -358,10 +361,11 @@ public final class ahm extends Thread {
                                                         int i = this.indexInArray;
                                                         o(0);
                                                         ahoVar3.n(this, i, 0);
-                                                        int andDecrement = (int) (atomicLongFieldUpdater.getAndDecrement(ahoVar3) & j);
+                                                        int andDecrement = (int) (atomicLongFieldUpdater
+                                                                .getAndDecrement(ahoVar3) & j);
                                                         if (andDecrement != i) {
                                                             Object objB = ahoVar3.k.b(andDecrement);
-                                                            bzo.n(objB);
+                                                            throwIfVar1IsNull(objB);
                                                             ahm ahmVar = (ahm) objB;
                                                             ahoVar3.k.c(i, ahmVar);
                                                             ahmVar.o(i);

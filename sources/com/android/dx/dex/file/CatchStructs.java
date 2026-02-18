@@ -53,7 +53,7 @@ public final class CatchStructs {
         for (int i3 = 0; i3 < size; i3++) {
             CatchTable.Entry entry = this.table.get(i3);
             CatchHandlerList handlers = entry.getHandlers();
-            StringBuilder sbR = bjs.r(strS, "try ");
+            StringBuilder sbR = concat(strS, "try ");
             sbR.append(Hex.u2or4(entry.getStart()));
             sbR.append("..");
             sbR.append(Hex.u2or4(entry.getEnd()));
@@ -72,7 +72,7 @@ public final class CatchStructs {
         }
         annotatedOutput.annotate(0, str + "handlers:");
         int i4 = this.encodedHandlerHeaderSize;
-        StringBuilder sbR2 = bjs.r(strS, "size: ");
+        StringBuilder sbR2 = concat(strS, "size: ");
         sbR2.append(Hex.u2(this.handlerOffsets.size()));
         annotatedOutput.annotate(i4, sbR2.toString());
         Iterator<Map.Entry<CatchHandlerList, Integer>> it = this.handlerOffsets.entrySet().iterator();

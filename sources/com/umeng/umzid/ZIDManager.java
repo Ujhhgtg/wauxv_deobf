@@ -26,7 +26,10 @@ public class ZIDManager {
     public boolean b = false;
     public boolean c;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public class a implements Runnable {
         public final /* synthetic */ Context a;
         public final /* synthetic */ IZIDCompletionCallback b;
@@ -54,7 +57,10 @@ public class ZIDManager {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public class b implements Runnable {
         public final /* synthetic */ Context a;
 
@@ -68,7 +74,10 @@ public class ZIDManager {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public class c implements Runnable {
         public final /* synthetic */ Context a;
 
@@ -86,7 +95,9 @@ public class ZIDManager {
         SharedPreferences sharedPreferencesA;
         SharedPreferences.Editor editorEdit;
         String strB = d.b(str);
-        if (context == null || strB == null || TextUtils.isEmpty(strB) || (sharedPreferencesA = com.umeng.umzid.a.a(context)) == null || (editorEdit = sharedPreferencesA.edit()) == null) {
+        if (context == null || strB == null || TextUtils.isEmpty(strB)
+                || (sharedPreferencesA = com.umeng.umzid.a.a(context)) == null
+                || (editorEdit = sharedPreferencesA.edit()) == null) {
             return;
         }
         editorEdit.putString("inputDomain", strB).commit();
@@ -112,7 +123,8 @@ public class ZIDManager {
         Method declaredMethod;
         try {
             Method declaredMethod2 = UYMManager.class.getDeclaredMethod("getInstance", null);
-            if (declaredMethod2 == null || (objInvoke = declaredMethod2.invoke(UYMManager.class, null)) == null || (declaredMethod = UYMManager.class.getDeclaredMethod("init", Context.class)) == null) {
+            if (declaredMethod2 == null || (objInvoke = declaredMethod2.invoke(UYMManager.class, null)) == null
+                    || (declaredMethod = UYMManager.class.getDeclaredMethod("init", Context.class)) == null) {
                 return;
             }
             declaredMethod.setAccessible(true);
@@ -121,19 +133,83 @@ public class ZIDManager {
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:17:0x0042  */
-    /* JADX WARN: Found duplicated region for block: B:20:0x004d  */
-    /* JADX WARN: Found duplicated region for block: B:22:0x0050 A[Catch: all -> 0x0163, TRY_ENTER, TryCatch #0 {all -> 0x0163, blocks: (B:14:0x0035, B:16:0x003b, B:18:0x0043, B:22:0x0050, B:24:0x005c, B:26:0x0062, B:28:0x006e, B:30:0x0074, B:32:0x0084, B:34:0x008a, B:36:0x0096, B:38:0x009c, B:41:0x00bf, B:43:0x00c5, B:44:0x00c9, B:46:0x00cf, B:61:0x00ff, B:62:0x0104, B:66:0x0111, B:68:0x0123, B:70:0x0130, B:72:0x0143, B:73:0x0146, B:75:0x0150, B:76:0x0153, B:78:0x015d, B:79:0x0160, B:59:0x00fa), top: B:83:0x0035 }] */
-    /* JADX WARN: Found duplicated region for block: B:29:0x0073  */
-    /* JADX WARN: Found duplicated region for block: B:37:0x009b  */
-    /* JADX WARN: Found duplicated region for block: B:46:0x00cf A[Catch: all -> 0x0163, TRY_LEAVE, TryCatch #0 {all -> 0x0163, blocks: (B:14:0x0035, B:16:0x003b, B:18:0x0043, B:22:0x0050, B:24:0x005c, B:26:0x0062, B:28:0x006e, B:30:0x0074, B:32:0x0084, B:34:0x008a, B:36:0x0096, B:38:0x009c, B:41:0x00bf, B:43:0x00c5, B:44:0x00c9, B:46:0x00cf, B:61:0x00ff, B:62:0x0104, B:66:0x0111, B:68:0x0123, B:70:0x0130, B:72:0x0143, B:73:0x0146, B:75:0x0150, B:76:0x0153, B:78:0x015d, B:79:0x0160, B:59:0x00fa), top: B:83:0x0035 }] */
-    /* JADX WARN: Found duplicated region for block: B:61:0x00ff A[Catch: all -> 0x0163, TryCatch #0 {all -> 0x0163, blocks: (B:14:0x0035, B:16:0x003b, B:18:0x0043, B:22:0x0050, B:24:0x005c, B:26:0x0062, B:28:0x006e, B:30:0x0074, B:32:0x0084, B:34:0x008a, B:36:0x0096, B:38:0x009c, B:41:0x00bf, B:43:0x00c5, B:44:0x00c9, B:46:0x00cf, B:61:0x00ff, B:62:0x0104, B:66:0x0111, B:68:0x0123, B:70:0x0130, B:72:0x0143, B:73:0x0146, B:75:0x0150, B:76:0x0153, B:78:0x015d, B:79:0x0160, B:59:0x00fa), top: B:83:0x0035 }] */
-    /* JADX WARN: Found duplicated region for block: B:65:0x010f  */
-    /* JADX WARN: Found duplicated region for block: B:68:0x0123 A[Catch: all -> 0x0163, TryCatch #0 {all -> 0x0163, blocks: (B:14:0x0035, B:16:0x003b, B:18:0x0043, B:22:0x0050, B:24:0x005c, B:26:0x0062, B:28:0x006e, B:30:0x0074, B:32:0x0084, B:34:0x008a, B:36:0x0096, B:38:0x009c, B:41:0x00bf, B:43:0x00c5, B:44:0x00c9, B:46:0x00cf, B:61:0x00ff, B:62:0x0104, B:66:0x0111, B:68:0x0123, B:70:0x0130, B:72:0x0143, B:73:0x0146, B:75:0x0150, B:76:0x0153, B:78:0x015d, B:79:0x0160, B:59:0x00fa), top: B:83:0x0035 }] */
-    /* JADX WARN: Found duplicated region for block: B:70:0x0130 A[Catch: all -> 0x0163, TryCatch #0 {all -> 0x0163, blocks: (B:14:0x0035, B:16:0x003b, B:18:0x0043, B:22:0x0050, B:24:0x005c, B:26:0x0062, B:28:0x006e, B:30:0x0074, B:32:0x0084, B:34:0x008a, B:36:0x0096, B:38:0x009c, B:41:0x00bf, B:43:0x00c5, B:44:0x00c9, B:46:0x00cf, B:61:0x00ff, B:62:0x0104, B:66:0x0111, B:68:0x0123, B:70:0x0130, B:72:0x0143, B:73:0x0146, B:75:0x0150, B:76:0x0153, B:78:0x015d, B:79:0x0160, B:59:0x00fa), top: B:83:0x0035 }] */
-    /* JADX WARN: Found duplicated region for block: B:72:0x0143 A[Catch: all -> 0x0163, TryCatch #0 {all -> 0x0163, blocks: (B:14:0x0035, B:16:0x003b, B:18:0x0043, B:22:0x0050, B:24:0x005c, B:26:0x0062, B:28:0x006e, B:30:0x0074, B:32:0x0084, B:34:0x008a, B:36:0x0096, B:38:0x009c, B:41:0x00bf, B:43:0x00c5, B:44:0x00c9, B:46:0x00cf, B:61:0x00ff, B:62:0x0104, B:66:0x0111, B:68:0x0123, B:70:0x0130, B:72:0x0143, B:73:0x0146, B:75:0x0150, B:76:0x0153, B:78:0x015d, B:79:0x0160, B:59:0x00fa), top: B:83:0x0035 }] */
-    /* JADX WARN: Found duplicated region for block: B:75:0x0150 A[Catch: all -> 0x0163, TryCatch #0 {all -> 0x0163, blocks: (B:14:0x0035, B:16:0x003b, B:18:0x0043, B:22:0x0050, B:24:0x005c, B:26:0x0062, B:28:0x006e, B:30:0x0074, B:32:0x0084, B:34:0x008a, B:36:0x0096, B:38:0x009c, B:41:0x00bf, B:43:0x00c5, B:44:0x00c9, B:46:0x00cf, B:61:0x00ff, B:62:0x0104, B:66:0x0111, B:68:0x0123, B:70:0x0130, B:72:0x0143, B:73:0x0146, B:75:0x0150, B:76:0x0153, B:78:0x015d, B:79:0x0160, B:59:0x00fa), top: B:83:0x0035 }] */
-    /* JADX WARN: Found duplicated region for block: B:78:0x015d A[Catch: all -> 0x0163, TryCatch #0 {all -> 0x0163, blocks: (B:14:0x0035, B:16:0x003b, B:18:0x0043, B:22:0x0050, B:24:0x005c, B:26:0x0062, B:28:0x006e, B:30:0x0074, B:32:0x0084, B:34:0x008a, B:36:0x0096, B:38:0x009c, B:41:0x00bf, B:43:0x00c5, B:44:0x00c9, B:46:0x00cf, B:61:0x00ff, B:62:0x0104, B:66:0x0111, B:68:0x0123, B:70:0x0130, B:72:0x0143, B:73:0x0146, B:75:0x0150, B:76:0x0153, B:78:0x015d, B:79:0x0160, B:59:0x00fa), top: B:83:0x0035 }] */
+    /* JADX WARN: Found duplicated region for block: B:17:0x0042 */
+    /* JADX WARN: Found duplicated region for block: B:20:0x004d */
+    /*
+     * JADX WARN: Found duplicated region for block: B:22:0x0050 A[Catch: all ->
+     * 0x0163, TRY_ENTER, TryCatch #0 {all -> 0x0163, blocks: (B:14:0x0035,
+     * B:16:0x003b, B:18:0x0043, B:22:0x0050, B:24:0x005c, B:26:0x0062, B:28:0x006e,
+     * B:30:0x0074, B:32:0x0084, B:34:0x008a, B:36:0x0096, B:38:0x009c, B:41:0x00bf,
+     * B:43:0x00c5, B:44:0x00c9, B:46:0x00cf, B:61:0x00ff, B:62:0x0104, B:66:0x0111,
+     * B:68:0x0123, B:70:0x0130, B:72:0x0143, B:73:0x0146, B:75:0x0150, B:76:0x0153,
+     * B:78:0x015d, B:79:0x0160, B:59:0x00fa), top: B:83:0x0035 }]
+     */
+    /* JADX WARN: Found duplicated region for block: B:29:0x0073 */
+    /* JADX WARN: Found duplicated region for block: B:37:0x009b */
+    /*
+     * JADX WARN: Found duplicated region for block: B:46:0x00cf A[Catch: all ->
+     * 0x0163, TRY_LEAVE, TryCatch #0 {all -> 0x0163, blocks: (B:14:0x0035,
+     * B:16:0x003b, B:18:0x0043, B:22:0x0050, B:24:0x005c, B:26:0x0062, B:28:0x006e,
+     * B:30:0x0074, B:32:0x0084, B:34:0x008a, B:36:0x0096, B:38:0x009c, B:41:0x00bf,
+     * B:43:0x00c5, B:44:0x00c9, B:46:0x00cf, B:61:0x00ff, B:62:0x0104, B:66:0x0111,
+     * B:68:0x0123, B:70:0x0130, B:72:0x0143, B:73:0x0146, B:75:0x0150, B:76:0x0153,
+     * B:78:0x015d, B:79:0x0160, B:59:0x00fa), top: B:83:0x0035 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:61:0x00ff A[Catch: all ->
+     * 0x0163, TryCatch #0 {all -> 0x0163, blocks: (B:14:0x0035, B:16:0x003b,
+     * B:18:0x0043, B:22:0x0050, B:24:0x005c, B:26:0x0062, B:28:0x006e, B:30:0x0074,
+     * B:32:0x0084, B:34:0x008a, B:36:0x0096, B:38:0x009c, B:41:0x00bf, B:43:0x00c5,
+     * B:44:0x00c9, B:46:0x00cf, B:61:0x00ff, B:62:0x0104, B:66:0x0111, B:68:0x0123,
+     * B:70:0x0130, B:72:0x0143, B:73:0x0146, B:75:0x0150, B:76:0x0153, B:78:0x015d,
+     * B:79:0x0160, B:59:0x00fa), top: B:83:0x0035 }]
+     */
+    /* JADX WARN: Found duplicated region for block: B:65:0x010f */
+    /*
+     * JADX WARN: Found duplicated region for block: B:68:0x0123 A[Catch: all ->
+     * 0x0163, TryCatch #0 {all -> 0x0163, blocks: (B:14:0x0035, B:16:0x003b,
+     * B:18:0x0043, B:22:0x0050, B:24:0x005c, B:26:0x0062, B:28:0x006e, B:30:0x0074,
+     * B:32:0x0084, B:34:0x008a, B:36:0x0096, B:38:0x009c, B:41:0x00bf, B:43:0x00c5,
+     * B:44:0x00c9, B:46:0x00cf, B:61:0x00ff, B:62:0x0104, B:66:0x0111, B:68:0x0123,
+     * B:70:0x0130, B:72:0x0143, B:73:0x0146, B:75:0x0150, B:76:0x0153, B:78:0x015d,
+     * B:79:0x0160, B:59:0x00fa), top: B:83:0x0035 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:70:0x0130 A[Catch: all ->
+     * 0x0163, TryCatch #0 {all -> 0x0163, blocks: (B:14:0x0035, B:16:0x003b,
+     * B:18:0x0043, B:22:0x0050, B:24:0x005c, B:26:0x0062, B:28:0x006e, B:30:0x0074,
+     * B:32:0x0084, B:34:0x008a, B:36:0x0096, B:38:0x009c, B:41:0x00bf, B:43:0x00c5,
+     * B:44:0x00c9, B:46:0x00cf, B:61:0x00ff, B:62:0x0104, B:66:0x0111, B:68:0x0123,
+     * B:70:0x0130, B:72:0x0143, B:73:0x0146, B:75:0x0150, B:76:0x0153, B:78:0x015d,
+     * B:79:0x0160, B:59:0x00fa), top: B:83:0x0035 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:72:0x0143 A[Catch: all ->
+     * 0x0163, TryCatch #0 {all -> 0x0163, blocks: (B:14:0x0035, B:16:0x003b,
+     * B:18:0x0043, B:22:0x0050, B:24:0x005c, B:26:0x0062, B:28:0x006e, B:30:0x0074,
+     * B:32:0x0084, B:34:0x008a, B:36:0x0096, B:38:0x009c, B:41:0x00bf, B:43:0x00c5,
+     * B:44:0x00c9, B:46:0x00cf, B:61:0x00ff, B:62:0x0104, B:66:0x0111, B:68:0x0123,
+     * B:70:0x0130, B:72:0x0143, B:73:0x0146, B:75:0x0150, B:76:0x0153, B:78:0x015d,
+     * B:79:0x0160, B:59:0x00fa), top: B:83:0x0035 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:75:0x0150 A[Catch: all ->
+     * 0x0163, TryCatch #0 {all -> 0x0163, blocks: (B:14:0x0035, B:16:0x003b,
+     * B:18:0x0043, B:22:0x0050, B:24:0x005c, B:26:0x0062, B:28:0x006e, B:30:0x0074,
+     * B:32:0x0084, B:34:0x008a, B:36:0x0096, B:38:0x009c, B:41:0x00bf, B:43:0x00c5,
+     * B:44:0x00c9, B:46:0x00cf, B:61:0x00ff, B:62:0x0104, B:66:0x0111, B:68:0x0123,
+     * B:70:0x0130, B:72:0x0143, B:73:0x0146, B:75:0x0150, B:76:0x0153, B:78:0x015d,
+     * B:79:0x0160, B:59:0x00fa), top: B:83:0x0035 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:78:0x015d A[Catch: all ->
+     * 0x0163, TryCatch #0 {all -> 0x0163, blocks: (B:14:0x0035, B:16:0x003b,
+     * B:18:0x0043, B:22:0x0050, B:24:0x005c, B:26:0x0062, B:28:0x006e, B:30:0x0074,
+     * B:32:0x0084, B:34:0x008a, B:36:0x0096, B:38:0x009c, B:41:0x00bf, B:43:0x00c5,
+     * B:44:0x00c9, B:46:0x00cf, B:61:0x00ff, B:62:0x0104, B:66:0x0111, B:68:0x0123,
+     * B:70:0x0130, B:72:0x0143, B:73:0x0146, B:75:0x0150, B:76:0x0153, B:78:0x015d,
+     * B:79:0x0160, B:59:0x00fa), top: B:83:0x0035 }]
+     */
     public final String b(Context context) {
         String string;
         String id;
@@ -153,7 +229,7 @@ public class ZIDManager {
         SharedPreferences sharedPreferencesA3;
         String strOptString3 = null;
         try {
-            if (new JSONObject(d.c(context)).optLong("ets") > System.currentTimeMillis()) {
+            if (new JSONObject(d.createInstanceWithArgs(context)).optLong("ets") > System.currentTimeMillis()) {
                 return null;
             }
         } catch (JSONException e) {
@@ -196,7 +272,7 @@ public class ZIDManager {
                 jSONObject3.put("o_mc", string3);
                 a(context, jSONObject3);
                 jSONObject3.put("aaid", d.d(context));
-                jSONObject3.put("uabc", d.c(context));
+                jSONObject3.put("uabc", d.createInstanceWithArgs(context));
                 if (context != null && (sharedPreferencesA = com.umeng.umzid.a.a(context)) != null) {
                     string4 = sharedPreferencesA.getString("resetToken", "");
                 }
@@ -230,7 +306,7 @@ public class ZIDManager {
                     if (jSONObject2.optBoolean("suc")) {
                         d.f(context, id);
                         d.a(context, strE);
-                        d.b(context, strF);
+                        d.tryGetClassByName(context, strF);
                         strOptString3 = jSONObject2.optString("aaid");
                         if (!TextUtils.isEmpty(strOptString3)) {
                             d.e(context, strOptString3);
@@ -241,7 +317,7 @@ public class ZIDManager {
                         }
                         strOptString2 = jSONObject2.optString("resetToken");
                         if (!TextUtils.isEmpty(strOptString2)) {
-                            d.c(context, strOptString2);
+                            d.createInstanceWithArgs(context, strOptString2);
                         }
                     }
                 }
@@ -266,7 +342,7 @@ public class ZIDManager {
             jSONObject3.put("o_mc", string3);
             a(context, jSONObject3);
             jSONObject3.put("aaid", d.d(context));
-            jSONObject3.put("uabc", d.c(context));
+            jSONObject3.put("uabc", d.createInstanceWithArgs(context));
             if (context != null) {
                 string4 = sharedPreferencesA.getString("resetToken", "");
             }
@@ -290,7 +366,7 @@ public class ZIDManager {
                 if (jSONObject2.optBoolean("suc")) {
                     d.f(context, id);
                     d.a(context, strE);
-                    d.b(context, strF);
+                    d.tryGetClassByName(context, strF);
                     strOptString3 = jSONObject2.optString("aaid");
                     if (!TextUtils.isEmpty(strOptString3)) {
                         d.e(context, strOptString3);
@@ -301,7 +377,7 @@ public class ZIDManager {
                     }
                     strOptString2 = jSONObject2.optString("resetToken");
                     if (!TextUtils.isEmpty(strOptString2)) {
-                        d.c(context, strOptString2);
+                        d.createInstanceWithArgs(context, strOptString2);
                     }
                 }
             }
@@ -327,7 +403,7 @@ public class ZIDManager {
     public synchronized void init(Context context, String str, IZIDCompletionCallback iZIDCompletionCallback) {
         SharedPreferences sharedPreferencesA;
         SharedPreferences.Editor editorEdit;
-        boolean zH = d.h(context);
+        boolean zH = d.locateDex(context);
         this.c = zH;
         if (zH) {
             if (context == null) {
@@ -343,7 +419,9 @@ public class ZIDManager {
                 return;
             }
             Context applicationContext = context.getApplicationContext();
-            if (applicationContext != null && str != null && !TextUtils.isEmpty(str) && (sharedPreferencesA = com.umeng.umzid.a.a(applicationContext)) != null && (editorEdit = sharedPreferencesA.edit()) != null) {
+            if (applicationContext != null && str != null && !TextUtils.isEmpty(str)
+                    && (sharedPreferencesA = com.umeng.umzid.a.a(applicationContext)) != null
+                    && (editorEdit = sharedPreferencesA.edit()) != null) {
                 editorEdit.putString("appkey", str).commit();
             }
             String strD = d.d(applicationContext);
@@ -418,7 +496,7 @@ public class ZIDManager {
                 if (jSONObject3.optBoolean("suc")) {
                     d.f(context, id);
                     d.a(context, strE);
-                    d.b(context, strF);
+                    d.tryGetClassByName(context, strF);
                     strOptString = jSONObject3.optString("aaid");
                     if (!TextUtils.isEmpty(strOptString)) {
                         d.e(context, strOptString);
@@ -429,7 +507,7 @@ public class ZIDManager {
                     }
                     String strOptString3 = jSONObject3.optString("resetToken");
                     if (!TextUtils.isEmpty(strOptString3)) {
-                        d.c(context, strOptString3);
+                        d.createInstanceWithArgs(context, strOptString3);
                     }
                 }
             }
@@ -444,9 +522,13 @@ public class ZIDManager {
         return strOptString;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:12:0x0042 A[Catch: all -> 0x004f, TRY_LEAVE, TryCatch #9 {all -> 0x004f, blocks: (B:9:0x0038, B:10:0x003c, B:12:0x0042), top: B:105:0x0038 }] */
-    /* JADX WARN: Found duplicated region for block: B:14:0x004f  */
-    /* JADX WARN: Found duplicated region for block: B:26:0x0084  */
+    /*
+     * JADX WARN: Found duplicated region for block: B:12:0x0042 A[Catch: all ->
+     * 0x004f, TRY_LEAVE, TryCatch #9 {all -> 0x004f, blocks: (B:9:0x0038,
+     * B:10:0x003c, B:12:0x0042), top: B:105:0x0038 }]
+     */
+    /* JADX WARN: Found duplicated region for block: B:14:0x004f */
+    /* JADX WARN: Found duplicated region for block: B:26:0x0084 */
     public final JSONObject a(Context context, JSONObject jSONObject) throws JSONException {
         Locale locale;
         Calendar calendar;

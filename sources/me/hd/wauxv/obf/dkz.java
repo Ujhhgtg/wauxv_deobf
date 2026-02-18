@@ -17,10 +17,10 @@ import net.bytebuddy.matcher.ElementMatcher;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public abstract /* synthetic */ class dkz {
-    public static final /* synthetic */ int[] a = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+    public static final /* synthetic */ int[] a = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
-    public static azg aa(bmm bmmVar) {
-        return dqc.bi(bmmVar.e()).r();
+    public static azg aa(HookParamWrapper hookParam) {
+        return dqc.bi(hookParam.getThisObject()).r();
     }
 
     public static void ab(int i, StringBuilder sb, AnnotatedOutput annotatedOutput, int i2) {

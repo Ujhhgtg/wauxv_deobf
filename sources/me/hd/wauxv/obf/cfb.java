@@ -9,7 +9,7 @@ import me.hd.wauxv.data.bean.info.GroupInfo;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class cfb implements bgf {
+public final /* synthetic */ class cfb implements IHasInvokeMethod {
     public final /* synthetic */ int a;
     public final /* synthetic */ ArrayList b;
     public final /* synthetic */ ArrayList c;
@@ -39,11 +39,17 @@ public final /* synthetic */ class cfb implements bgf {
                 ArrayList arrayList = new ArrayList();
                 ArrayList arrayList2 = new ArrayList();
                 ArrayList arrayList3 = new ArrayList();
-                Cursor cursorAb = bmy.ab(new aer[]{aer.a, aer.b});
+                Cursor cursorAb = bmy.ab(new aer[] { aer.a, aer.b });
                 if (cursorAb != null) {
                     while (cursorAb.moveToNext()) {
                         try {
-                            if (dnr.bi(cursorAb.getString(cursorAb.getColumnIndex("username" /* cnb.z(-514086110493482L) */)), "@chatroom" /* cnb.z(-514545671994154L) */)) {
+                            if (dnr.bi(cursorAb.getString(cursorAb.getColumnIndex("username" /*
+                                                                                              * cnb.z(-514086110493482L)
+                                                                                              */)), "@chatroom" /*
+                                                                                                                 * cnb.z
+                                                                                                                 * (-
+                                                                                                                 * 514545671994154L)
+                                                                                                                 */)) {
                                 GroupInfo groupInfoT = cnb.t(cursorAb);
                                 String roomId = groupInfoT.getRoomId();
                                 StringBuilder sb2 = new StringBuilder();
@@ -66,13 +72,16 @@ public final /* synthetic */ class cfb implements bgf {
                                 String wxid = friendInfoS.getWxid();
                                 StringBuilder sb4 = new StringBuilder();
                                 String nickname = friendInfoS.getNickname();
-                                if ((dfv.d(dap.b(new dap("\r\n|\r|\n" /* cnb.z(-514519902190378L) */), nickname)) > 3 ? nickname : null) != null) {
+                                if ((dfv.d(dap.b(new dap("\r\n|\r|\n" /* cnb.z(-514519902190378L) */), nickname)) > 3
+                                        ? nickname
+                                        : null) != null) {
                                     sb4.append("已过滤此昵称..." /* cnb.z(-514472657550122L) */);
                                 } else {
                                     String str2 = nickname.length() > 8 ? nickname : null;
                                     if (str2 != null) {
                                         String strSubstring = str2.substring(0, 8);
-                                        bzo.p(strSubstring, "substring(...)" /* cnb.z(-514446887746346L) */);
+                                        throwIfVar1IsNull(strSubstring,
+                                                "substring(...)" /* cnb.z(-514446887746346L) */);
                                         sb4.append(strSubstring);
                                         sb4.append("..." /* cnb.z(-514382463236906L) */);
                                         sb = sb4;

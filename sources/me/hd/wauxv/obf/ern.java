@@ -21,7 +21,8 @@ public final class ern extends dop {
         if (application != null) {
             return p(cls, application);
         }
-        throw new UnsupportedOperationException("AndroidViewModelFactory constructed with empty constructor works only with create(modelClass: Class<T>, extras: CreationExtras).");
+        throw new UnsupportedOperationException(
+                "AndroidViewModelFactory constructed with empty constructor works only with create(modelClass: Class<T>, extras: CreationExtras).");
     }
 
     @Override // me.hd.wauxv.obf.dop, me.hd.wauxv.obf.ero
@@ -45,16 +46,16 @@ public final class ern extends dop {
         }
         try {
             erk erkVar = (erk) cls.getConstructor(Application.class).newInstance(application);
-            bzo.n(erkVar);
+            throwIfVar1IsNull(erkVar);
             return erkVar;
         } catch (IllegalAccessException e) {
-            throw new RuntimeException(bjs.l(cls, "Cannot create an instance of "), e);
+            throw new RuntimeException(concatVar2Var1(cls, "Cannot create an instance of "), e);
         } catch (InstantiationException e2) {
-            throw new RuntimeException(bjs.l(cls, "Cannot create an instance of "), e2);
+            throw new RuntimeException(concatVar2Var1(cls, "Cannot create an instance of "), e2);
         } catch (NoSuchMethodException e3) {
-            throw new RuntimeException(bjs.l(cls, "Cannot create an instance of "), e3);
+            throw new RuntimeException(concatVar2Var1(cls, "Cannot create an instance of "), e3);
         } catch (InvocationTargetException e4) {
-            throw new RuntimeException(bjs.l(cls, "Cannot create an instance of "), e4);
+            throw new RuntimeException(concatVar2Var1(cls, "Cannot create an instance of "), e4);
         }
     }
 }

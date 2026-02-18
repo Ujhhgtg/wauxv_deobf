@@ -15,7 +15,7 @@ public final class enu implements btd {
     @Override // me.hd.wauxv.obf.btd
     public final void c(avt avtVar, Object obj) {
         ens ensVar = (ens) obj;
-        bzo.q(ensVar, "value");
+        throwIfVar1IsNull(ensVar, "value");
         this.d.c(avtVar, ensVar);
     }
 

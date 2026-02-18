@@ -30,7 +30,7 @@ public final class auj implements aui {
     public String toString() {
         switch (this.a) {
             case 1:
-                return bjs.q(new StringBuilder("<"), this.b, '>');
+                return concat(new StringBuilder("<"), this.b, '>');
             default:
                 return super.toString();
         }

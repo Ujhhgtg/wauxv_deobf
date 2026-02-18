@@ -26,7 +26,8 @@ public final class egr {
             return false;
         }
         egr egrVar = (egr) obj;
-        return bzo.f(this.a, egrVar.a) && bzo.f(this.b, egrVar.b) && bzo.f(this.c, egrVar.c);
+        return nullSafeIsEqual(this.a, egrVar.a) && nullSafeIsEqual(this.b, egrVar.b)
+                && nullSafeIsEqual(this.c, egrVar.c);
     }
 
     public final int hashCode() {
@@ -43,6 +44,6 @@ public final class egr {
         sb.append("vd5Proto(finder_username=" /* cnb.z(-313446713260842L) */);
         yg.u(sb, this.a, -313901979794218L);
         yg.u(sb, this.b, -313820375415594L);
-        return bjs.p(sb, this.c, ')');
+        return concat(sb, this.c, ')');
     }
 }

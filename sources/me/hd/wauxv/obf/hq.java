@@ -36,7 +36,8 @@ public final class hq implements cqk, afi, ccl {
         Context context = icVar.x;
         int iH2 = evrVar.h();
         ActionBarContextView actionBarContextView = icVar.ai;
-        if (actionBarContextView == null || !(actionBarContextView.getLayoutParams() instanceof ViewGroup.MarginLayoutParams)) {
+        if (actionBarContextView == null
+                || !(actionBarContextView.getLayoutParams() instanceof ViewGroup.MarginLayoutParams)) {
             i = 0;
             z = false;
         } else {
@@ -56,7 +57,8 @@ public final class hq implements cqk, afi, ccl {
                     if (!aye.g) {
                         aye.g = true;
                         try {
-                            Method declaredMethod = View.class.getDeclaredMethod("computeFitSystemWindows", Rect.class, Rect.class);
+                            Method declaredMethod = View.class.getDeclaredMethod("computeFitSystemWindows", Rect.class,
+                                    Rect.class);
                             aye.h = declaredMethod;
                             if (!declaredMethod.isAccessible()) {
                                 aye.h.setAccessible(true);
@@ -82,7 +84,8 @@ public final class hq implements cqk, afi, ccl {
                 evr evrVarA = eqr.a(viewGroup2);
                 int iF = evrVarA == null ? 0 : evrVarA.f();
                 int iG = evrVarA == null ? 0 : evrVarA.g();
-                if (marginLayoutParams.topMargin == i2 && marginLayoutParams.leftMargin == i3 && marginLayoutParams.rightMargin == i4) {
+                if (marginLayoutParams.topMargin == i2 && marginLayoutParams.leftMargin == i3
+                        && marginLayoutParams.rightMargin == i4) {
                     z2 = false;
                 } else {
                     marginLayoutParams.topMargin = i2;
@@ -93,7 +96,8 @@ public final class hq implements cqk, afi, ccl {
                 if (i2 <= 0 || icVar.ap != null) {
                     View view2 = icVar.ap;
                     if (view2 != null) {
-                        ViewGroup.MarginLayoutParams marginLayoutParams2 = (ViewGroup.MarginLayoutParams) view2.getLayoutParams();
+                        ViewGroup.MarginLayoutParams marginLayoutParams2 = (ViewGroup.MarginLayoutParams) view2
+                                .getLayoutParams();
                         int i5 = marginLayoutParams2.height;
                         int i6 = marginLayoutParams.topMargin;
                         if (i5 != i6 || marginLayoutParams2.leftMargin != iF || marginLayoutParams2.rightMargin != iG) {
@@ -107,7 +111,8 @@ public final class hq implements cqk, afi, ccl {
                     View view3 = new View(context);
                     icVar.ap = view3;
                     view3.setVisibility(8);
-                    FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(-1, marginLayoutParams.topMargin, 51);
+                    FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(-1,
+                            marginLayoutParams.topMargin, 51);
                     layoutParams.leftMargin = iF;
                     layoutParams.rightMargin = iG;
                     icVar.an.addView(icVar.ap, -1, layoutParams);
@@ -116,7 +121,9 @@ public final class hq implements cqk, afi, ccl {
                 z = view4 != null;
                 if (z && view4.getVisibility() != 0) {
                     View view5 = icVar.ap;
-                    view5.setBackgroundColor((view5.getWindowSystemUiVisibility() & 8192) != 0 ? context.getColor(R.color.abc_decor_view_status_guard_light) : context.getColor(R.color.abc_decor_view_status_guard));
+                    view5.setBackgroundColor((view5.getWindowSystemUiVisibility() & 8192) != 0
+                            ? context.getColor(R.color.abc_decor_view_status_guard_light)
+                            : context.getColor(R.color.abc_decor_view_status_guard));
                 }
                 if (!icVar.au && z) {
                     iH2 = 0;
@@ -147,7 +154,9 @@ public final class hq implements cqk, afi, ccl {
             int iG2 = evrVar.g();
             int iE = evrVar.e();
             int i7 = Build.VERSION.SDK_INT;
-            evg evfVar = i7 >= 34 ? new evf(evrVar) : i7 >= 31 ? new eve(evrVar) : i7 >= 30 ? new evd(evrVar) : i7 >= 29 ? new evc(evrVar) : new evb(evrVar);
+            evg evfVar = i7 >= 34 ? new evf(evrVar)
+                    : i7 >= 31 ? new eve(evrVar)
+                            : i7 >= 30 ? new evd(evrVar) : i7 >= 29 ? new evc(evrVar) : new evb(evrVar);
             evfVar.i(bps.g(iF2, iH2, iG2, iE));
             evrVarG = evfVar.g();
         } else {
@@ -158,7 +167,7 @@ public final class hq implements cqk, afi, ccl {
         if (windowInsetsI == null) {
             return evrVarG;
         }
-        WindowInsets windowInsetsB = eqo.b(view, windowInsetsI);
+        WindowInsets windowInsetsB = eqo.tryGetClassByName(view, windowInsetsI);
         return !windowInsetsB.equals(windowInsetsI) ? evr.d(view, windowInsetsB) : evrVarG;
     }
 

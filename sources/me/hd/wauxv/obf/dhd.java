@@ -11,7 +11,7 @@ public final class dhd extends cvj {
     @Override // me.hd.wauxv.obf.cvj
     public final Object c() {
         short[] sArrCopyOf = Arrays.copyOf(this.a, this.b);
-        bzo.p(sArrCopyOf, "copyOf(...)");
+        throwIfVar1IsNull(sArrCopyOf, "copyOf(...)");
         return sArrCopyOf;
     }
 
@@ -24,7 +24,7 @@ public final class dhd extends cvj {
                 i = length;
             }
             short[] sArrCopyOf = Arrays.copyOf(sArr, i);
-            bzo.p(sArrCopyOf, "copyOf(...)");
+            throwIfVar1IsNull(sArrCopyOf, "copyOf(...)");
             this.a = sArrCopyOf;
         }
     }

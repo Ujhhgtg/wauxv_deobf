@@ -60,7 +60,8 @@ public final class tm extends cce implements View.OnKeyListener, PopupWindow.OnD
         this.d = z;
         this.p = view.getLayoutDirection() != 1 ? 1 : 0;
         Resources resources = context.getResources();
-        this.b = Math.max(resources.getDisplayMetrics().widthPixels / 2, resources.getDimensionPixelSize(R.dimen.abc_config_prefDialogWidth));
+        this.b = Math.max(resources.getDisplayMetrics().widthPixels / 2,
+                resources.getDimensionPixelSize(R.dimen.abc_config_prefDialogWidth));
         this.f = new Handler();
     }
 
@@ -92,7 +93,7 @@ public final class tm extends cce implements View.OnKeyListener, PopupWindow.OnD
         in inVar = cckVar.av;
         cbwVar2.aq(this);
         if (this.z) {
-            cch.b(inVar, null);
+            cch.tryGetClassByName(inVar, null);
             inVar.setAnimationStyle(0);
         }
         cckVar.dismiss();
@@ -261,26 +262,29 @@ public final class tm extends cce implements View.OnKeyListener, PopupWindow.OnD
         this.t = i;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:103:0x0111 A[EXC_TOP_SPLITTER, SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:55:0x0105  */
-    /* JADX WARN: Found duplicated region for block: B:57:0x010d  */
-    /* JADX WARN: Found duplicated region for block: B:62:0x0123  */
-    /* JADX WARN: Found duplicated region for block: B:65:0x0152  */
-    /* JADX WARN: Found duplicated region for block: B:67:0x015e  */
-    /* JADX WARN: Found duplicated region for block: B:68:0x0161  */
-    /* JADX WARN: Found duplicated region for block: B:69:0x0164  */
-    /* JADX WARN: Found duplicated region for block: B:73:0x016c  */
-    /* JADX WARN: Found duplicated region for block: B:74:0x016e  */
+    /*
+     * JADX WARN: Found duplicated region for block: B:103:0x0111
+     * A[EXC_TOP_SPLITTER, SYNTHETIC]
+     */
+    /* JADX WARN: Found duplicated region for block: B:55:0x0105 */
+    /* JADX WARN: Found duplicated region for block: B:57:0x010d */
+    /* JADX WARN: Found duplicated region for block: B:62:0x0123 */
+    /* JADX WARN: Found duplicated region for block: B:65:0x0152 */
+    /* JADX WARN: Found duplicated region for block: B:67:0x015e */
+    /* JADX WARN: Found duplicated region for block: B:68:0x0161 */
+    /* JADX WARN: Found duplicated region for block: B:69:0x0164 */
+    /* JADX WARN: Found duplicated region for block: B:73:0x016c */
+    /* JADX WARN: Found duplicated region for block: B:74:0x016e */
     /* JADX WARN: Found duplicated region for block: B:77:0x0179 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:79:0x017c  */
+    /* JADX WARN: Found duplicated region for block: B:79:0x017c */
     /* JADX WARN: Found duplicated region for block: B:80:0x0183 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:81:0x0185  */
-    /* JADX WARN: Found duplicated region for block: B:82:0x018a  */
-    /* JADX WARN: Found duplicated region for block: B:84:0x0197  */
-    /* JADX WARN: Found duplicated region for block: B:86:0x019b  */
-    /* JADX WARN: Found duplicated region for block: B:89:0x01a3  */
-    /* JADX WARN: Found duplicated region for block: B:92:0x01ac  */
-    /* JADX WARN: Found duplicated region for block: B:93:0x01b2  */
+    /* JADX WARN: Found duplicated region for block: B:81:0x0185 */
+    /* JADX WARN: Found duplicated region for block: B:82:0x018a */
+    /* JADX WARN: Found duplicated region for block: B:84:0x0197 */
+    /* JADX WARN: Found duplicated region for block: B:86:0x019b */
+    /* JADX WARN: Found duplicated region for block: B:89:0x01a3 */
+    /* JADX WARN: Found duplicated region for block: B:92:0x01ac */
+    /* JADX WARN: Found duplicated region for block: B:93:0x01b2 */
     public final void au(cbw cbwVar) {
         boolean z;
         int i;
@@ -379,7 +383,8 @@ public final class tm extends cce implements View.OnKeyListener, PopupWindow.OnD
                         i7++;
                     }
                 }
-                if (i7 != -1 && (firstVisiblePosition = (i7 + headersCount) - aqeVar2.getFirstVisiblePosition()) >= 0 && firstVisiblePosition < aqeVar2.getChildCount()) {
+                if (i7 != -1 && (firstVisiblePosition = (i7 + headersCount) - aqeVar2.getFirstVisiblePosition()) >= 0
+                        && firstVisiblePosition < aqeVar2.getChildCount()) {
                     childAt = aqeVar2.getChildAt(firstVisiblePosition);
                 }
             }
@@ -448,7 +453,8 @@ public final class tm extends cce implements View.OnKeyListener, PopupWindow.OnD
             if (tlVar == null || !this.v || cbwVar.n == null) {
                 return;
             }
-            FrameLayout frameLayout = (FrameLayout) layoutInflaterFrom.inflate(R.layout.abc_popup_menu_header_item_layout, (ViewGroup) aqeVar3, false);
+            FrameLayout frameLayout = (FrameLayout) layoutInflaterFrom
+                    .inflate(R.layout.abc_popup_menu_header_item_layout, (ViewGroup) aqeVar3, false);
             TextView textView = (TextView) frameLayout.findViewById(android.R.id.title);
             frameLayout.setEnabled(false);
             textView.setText(cbwVar.n);
@@ -539,7 +545,7 @@ public final class tm extends cce implements View.OnKeyListener, PopupWindow.OnD
     }
 
     @Override // me.hd.wauxv.obf.dho
-    public final boolean e() {
+    public final boolean getThisObject() {
         ArrayList arrayList = this.h;
         return arrayList.size() > 0 && ((tl) arrayList.get(0)).a.av.isShowing();
     }

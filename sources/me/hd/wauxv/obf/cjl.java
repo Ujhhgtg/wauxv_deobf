@@ -65,7 +65,9 @@ public final class cjl {
         cix cixVar = this.b;
         cjg cjgVar = cixVar.f.isEmpty() ? cixVar.c : ((cio) cixVar.f.last()).b;
         if (cjgVar == null) {
-            throw new IllegalStateException("No current destination found. Ensure a navigation graph has been set for NavController " + this + TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
+            throw new IllegalStateException(
+                    "No current destination found. Ensure a navigation graph has been set for NavController " + this
+                            + TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
         }
         cim cimVarM = cjgVar.m(i);
         if (cimVarM != null) {
@@ -73,7 +75,7 @@ public final class cjl {
             i2 = cimVarM.a;
             Bundle bundle2 = cimVarM.c;
             if (bundle2 != null) {
-                bundleR = bht.r((csm[]) Arrays.copyOf(new csm[0], 0));
+                bundleR = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                 bundleR.putAll(bundle2);
             } else {
                 bundleR = null;
@@ -85,7 +87,7 @@ public final class cjl {
         }
         if (bundle != null) {
             if (bundleR == null) {
-                bundleR = bht.r((csm[]) Arrays.copyOf(new csm[0], 0));
+                bundleR = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
             }
             bundleR.putAll(bundle);
         }
@@ -101,7 +103,8 @@ public final class cjl {
             }
         }
         if (i2 == 0) {
-            throw new IllegalArgumentException("Destination id == 0 can only be used in conjunction with a valid navOptions.popUpTo");
+            throw new IllegalArgumentException(
+                    "Destination id == 0 can only be used in conjunction with a valid navOptions.popUpTo");
         }
         cjg cjgVarAd = cixVar.ad(i2, null);
         if (cjgVarAd != null) {
@@ -112,7 +115,8 @@ public final class cjl {
         anr anrVar = this.c;
         String strR = bmy.r(anrVar, i2);
         if (cimVarM == null) {
-            throw new IllegalArgumentException("Navigation action/destination " + strR + " cannot be found from the current destination " + cjgVar);
+            throw new IllegalArgumentException("Navigation action/destination " + strR
+                    + " cannot be found from the current destination " + cjgVar);
         }
         StringBuilder sbZ = dkz.z("Navigation destination ", strR, " referenced from action ");
         sbZ.append(bmy.r(anrVar, i));

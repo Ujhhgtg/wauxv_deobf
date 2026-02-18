@@ -25,7 +25,7 @@ import java.util.WeakHashMap;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public abstract class cjy extends FrameLayout implements ccn {
-    public static final int[] a = {R.attr.state_checked};
+    public static final int[] a = { R.attr.state_checked };
     public static final cbm b;
     public static final cjx c;
     public Drawable aa;
@@ -93,18 +93,19 @@ public abstract class cjy extends FrameLayout implements ccn {
         setBackgroundResource(getItemBackgroundResId());
         this.g = getResources().getDimensionPixelSize(getItemDefaultMarginResId());
         this.h = viewGroup.getPaddingBottom();
-        this.i = getResources().getDimensionPixelSize(me.hd.wauxv.R.dimen.m3_navigation_item_active_indicator_label_padding);
+        this.i = getResources()
+                .getDimensionPixelSize(me.hd.wauxv.R.dimen.m3_navigation_item_active_indicator_label_padding);
         WeakHashMap weakHashMap = eqz.a;
         textView.setImportantForAccessibility(2);
         textView2.setImportantForAccessibility(2);
         setFocusable(true);
-        ao(textView.getTextSize(), textView2.getTextSize());
+        trimStackTraceToClass(textView.getTextSize(), textView2.getTextSize());
         if (imageView != null) {
             imageView.addOnLayoutChangeListener(new pw(this, 3));
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:7:0x001f  */
+    /* JADX WARN: Found duplicated region for block: B:7:0x001f */
     public static void ak(TextView textView, int i) {
         int iRound;
         textView.setTextAppearance(i);
@@ -114,7 +115,12 @@ public abstract class cjy extends FrameLayout implements ccn {
             TypedValue typedValue = new TypedValue();
             boolean value = typedArrayObtainStyledAttributes.getValue(0, typedValue);
             typedArrayObtainStyledAttributes.recycle();
-            iRound = !value ? 0 : typedValue.getComplexUnit() == 2 ? Math.round(TypedValue.complexToFloat(typedValue.data) * context.getResources().getDisplayMetrics().density) : TypedValue.complexToDimensionPixelSize(typedValue.data, context.getResources().getDisplayMetrics());
+            iRound = !value ? 0
+                    : typedValue.getComplexUnit() == 2
+                            ? Math.round(TypedValue.complexToFloat(typedValue.data)
+                                    * context.getResources().getDisplayMetrics().density)
+                            : TypedValue.complexToDimensionPixelSize(typedValue.data,
+                                    context.getResources().getDisplayMetrics());
         }
         if (iRound != 0) {
             textView.setTextSize(0, iRound);
@@ -158,14 +164,16 @@ public abstract class cjy extends FrameLayout implements ccn {
     }
 
     private int getSuggestedIconHeight() {
-        return getIconOrContainer().getMeasuredHeight() + ((FrameLayout.LayoutParams) getIconOrContainer().getLayoutParams()).topMargin;
+        return getIconOrContainer().getMeasuredHeight()
+                + ((FrameLayout.LayoutParams) getIconOrContainer().getLayoutParams()).topMargin;
     }
 
     private int getSuggestedIconWidth() {
         mx mxVar = this.aj;
         int minimumWidth = mxVar == null ? 0 : mxVar.getMinimumWidth() - this.aj.e.b.w.intValue();
         FrameLayout.LayoutParams layoutParams = (FrameLayout.LayoutParams) getIconOrContainer().getLayoutParams();
-        return Math.max(minimumWidth, layoutParams.rightMargin) + this.r.getMeasuredWidth() + Math.max(minimumWidth, layoutParams.leftMargin);
+        return Math.max(minimumWidth, layoutParams.rightMargin) + this.r.getMeasuredWidth()
+                + Math.max(minimumWidth, layoutParams.leftMargin);
     }
 
     public final void ao(float f, float f2) {
@@ -189,7 +197,8 @@ public abstract class cjy extends FrameLayout implements ccn {
         boolean z = true;
         if (colorStateList != null) {
             Drawable activeIndicatorDrawable = getActiveIndicatorDrawable();
-            if (this.ae && getActiveIndicatorDrawable() != null && frameLayout != null && activeIndicatorDrawable != null) {
+            if (this.ae && getActiveIndicatorDrawable() != null && frameLayout != null
+                    && activeIndicatorDrawable != null) {
                 rippleDrawable2 = new RippleDrawable(ddb.i(this.e), null, activeIndicatorDrawable);
                 z = false;
             } else if (rippleDrawable == null) {
@@ -273,14 +282,16 @@ public abstract class cjy extends FrameLayout implements ccn {
     public int getSuggestedMinimumHeight() {
         ViewGroup viewGroup = this.s;
         FrameLayout.LayoutParams layoutParams = (FrameLayout.LayoutParams) viewGroup.getLayoutParams();
-        return viewGroup.getMeasuredHeight() + getSuggestedIconHeight() + (viewGroup.getVisibility() == 0 ? this.i : 0) + layoutParams.topMargin + layoutParams.bottomMargin;
+        return viewGroup.getMeasuredHeight() + getSuggestedIconHeight() + (viewGroup.getVisibility() == 0 ? this.i : 0)
+                + layoutParams.topMargin + layoutParams.bottomMargin;
     }
 
     @Override // android.view.View
     public int getSuggestedMinimumWidth() {
         ViewGroup viewGroup = this.s;
         FrameLayout.LayoutParams layoutParams = (FrameLayout.LayoutParams) viewGroup.getLayoutParams();
-        return Math.max(getSuggestedIconWidth(), viewGroup.getMeasuredWidth() + layoutParams.leftMargin + layoutParams.rightMargin);
+        return Math.max(getSuggestedIconWidth(),
+                viewGroup.getMeasuredWidth() + layoutParams.leftMargin + layoutParams.rightMargin);
     }
 
     @Override // me.hd.wauxv.obf.ccn
@@ -322,12 +333,14 @@ public abstract class cjy extends FrameLayout implements ccn {
             }
             accessibilityNodeInfo.setContentDescription(((Object) charSequence) + ", " + ((Object) this.aj.p()));
         }
-        accessibilityNodeInfo.setCollectionItemInfo((AccessibilityNodeInfo.CollectionItemInfo) bc.g(0, 1, getItemVisiblePosition(), 1, isSelected()).e);
+        accessibilityNodeInfo.setCollectionItemInfo(
+                (AccessibilityNodeInfo.CollectionItemInfo) bc.g(0, 1, getItemVisiblePosition(), 1, isSelected()).e);
         if (isSelected()) {
             accessibilityNodeInfo.setClickable(false);
             accessibilityNodeInfo.removeAction((AccessibilityNodeInfo.AccessibilityAction) ax.a.l);
         }
-        accessibilityNodeInfo.getExtras().putCharSequence("AccessibilityNodeInfo.roleDescription", getResources().getString(me.hd.wauxv.R.string.item_view_role_description));
+        accessibilityNodeInfo.getExtras().putCharSequence("AccessibilityNodeInfo.roleDescription",
+                getResources().getString(me.hd.wauxv.R.string.item_view_role_description));
     }
 
     @Override // android.view.View
@@ -425,7 +438,7 @@ public abstract class cjy extends FrameLayout implements ccn {
         refreshDrawableState();
     }
 
-    /* JADX WARN: Found duplicated region for block: B:17:0x0095  */
+    /* JADX WARN: Found duplicated region for block: B:17:0x0095 */
     public void setChecked(boolean z) {
         TextView textView = this.u;
         textView.setPivotX(textView.getWidth() / 2);
@@ -445,8 +458,10 @@ public abstract class cjy extends FrameLayout implements ccn {
                 ValueAnimator valueAnimatorOfFloat = ValueAnimator.ofFloat(this.ad, f);
                 this.ab = valueAnimatorOfFloat;
                 valueAnimatorOfFloat.addUpdateListener(new cjw(this, f));
-                this.ab.setInterpolator(ajn.ae(getContext(), me.hd.wauxv.R.attr.motionEasingEmphasizedInterpolator, ff.b));
-                this.ab.setDuration(ajn.ad(getContext(), me.hd.wauxv.R.attr.motionDurationLong2, getResources().getInteger(me.hd.wauxv.R.integer.material_motion_duration_long_1)));
+                this.ab.setInterpolator(
+                        ajn.ae(getContext(), me.hd.wauxv.R.attr.motionEasingEmphasizedInterpolator, ff.b));
+                this.ab.setDuration(ajn.ad(getContext(), me.hd.wauxv.R.attr.motionDurationLong2,
+                        getResources().getInteger(me.hd.wauxv.R.integer.material_motion_duration_long_1)));
                 this.ab.start();
             } else {
                 ar(f, f);
@@ -620,7 +635,7 @@ public abstract class cjy extends FrameLayout implements ccn {
         this.w = i;
         TextView textView = this.u;
         ak(textView, i);
-        ao(this.t.getTextSize(), textView.getTextSize());
+        trimStackTraceToClass(this.t.getTextSize(), textView.getTextSize());
     }
 
     public void setTextAppearanceActiveBoldEnabled(boolean z) {
@@ -632,7 +647,7 @@ public abstract class cjy extends FrameLayout implements ccn {
     public void setTextAppearanceInactive(int i) {
         TextView textView = this.t;
         ak(textView, i);
-        ao(textView.getTextSize(), this.u.getTextSize());
+        trimStackTraceToClass(textView.getTextSize(), this.u.getTextSize());
     }
 
     public void setTextColor(ColorStateList colorStateList) {

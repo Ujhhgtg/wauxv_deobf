@@ -25,7 +25,8 @@ public final /* synthetic */ class cbk implements bgj {
     }
 
     @Override // me.hd.wauxv.obf.bgj
-    public final Object g(Object obj, Object obj2) throws IllegalAccessException, JSONException, NoSuchMethodException, InstantiationException, InvocationTargetException {
+    public final Object g(Object obj, Object obj2) throws IllegalAccessException, JSONException, NoSuchMethodException,
+            InstantiationException, InvocationTargetException {
         String genericString;
         String strB;
         String content;
@@ -49,7 +50,7 @@ public final /* synthetic */ class cbk implements bgj {
                     }
                     genericString = ((Field) member).toGenericString();
                 }
-                return Boolean.valueOf(bzo.f(genericString, str));
+                return Boolean.valueOf(nullSafeIsEqual(genericString, str));
             case 2:
                 return Boolean.valueOf(((Method) obj2).isDefault() == ((Boolean) obj).booleanValue());
             case 3:
@@ -59,7 +60,7 @@ public final /* synthetic */ class cbk implements bgj {
             case 5:
                 return Boolean.valueOf(((Field) obj2).isEnumConstant() != ((Boolean) obj).booleanValue());
             case 6:
-                Boolean bool = (Boolean) ((bgf) obj).invoke(((Field) obj2).getType());
+                Boolean bool = (Boolean) ((IHasInvokeMethod) obj).invoke(((Field) obj2).getType());
                 bool.booleanValue();
                 return bool;
             case 7:
@@ -77,7 +78,9 @@ public final /* synthetic */ class cbk implements bgj {
                 if (!arrayList.isEmpty()) {
                     String strK = aaz.k(arrayList, "\n" /* cnb.z(-512393893378858L) */, null, null, null, 62);
                     Intent intent = new Intent();
-                    intent.setClassName(context, "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /* cnb.z(-95086280964906L) */);
+                    intent.setClassName(context, "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /*
+                                                                                             * cnb.z(-95086280964906L)
+                                                                                             */);
                     intent.putExtra("Ksnsupload_type" /* cnb.z(-94927367174954L) */, 9);
                     intent.putExtra("Kdescription" /* cnb.z(-94858647698218L) */, strK);
                     context.startActivity(intent);
@@ -117,7 +120,9 @@ public final /* synthetic */ class cbk implements bgj {
                     String strK2 = aaz.k(arrayList2, "\n" /* cnb.z(-512402483313450L) */, null, null, null, 62);
                     ArrayList<String> arrayList4 = new ArrayList<>(arrayList3);
                     Intent intent2 = new Intent();
-                    intent2.setClassName(context2, "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /* cnb.z(-96417720826666L) */);
+                    intent2.setClassName(context2, "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /*
+                                                                                               * cnb.z(-96417720826666L)
+                                                                                               */);
                     intent2.putStringArrayListExtra("sns_kemdia_path_list" /* cnb.z(-96258807036714L) */, arrayList4);
                     intent2.putExtra("Kdescription" /* cnb.z(-96752728275754L) */, strK2);
                     context2.startActivity(intent2);
@@ -156,9 +161,12 @@ public final /* synthetic */ class cbk implements bgj {
                     Method methodBb = emn.bb(epz.a);
                     epx.a.getClass();
                     Object objInvoke = methodBb.invoke(epx.b(), str3);
-                    bzo.o(objInvoke, "null cannot be cast to non-null type kotlin.String" /* cnb.z(-377514740415274L) */);
+                    throwIfVar1IsNull(objInvoke,
+                            "null cannot be cast to non-null type kotlin.String" /* cnb.z(-377514740415274L) */);
                     Intent intent3 = new Intent();
-                    intent3.setClassName(context3, "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /* cnb.z(-96675418864426L) */);
+                    intent3.setClassName(context3, "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /*
+                                                                                               * cnb.z(-96675418864426L)
+                                                                                               */);
                     intent3.putExtra("Ksnsupload_type" /* cnb.z(-96516505074474L) */, 14);
                     intent3.putExtra("KSightPath" /* cnb.z(-95898029783850L) */, strB3);
                     intent3.putExtra("KSightThumbPath" /* cnb.z(-95799245536042L) */, (String) objInvoke);
@@ -196,7 +204,7 @@ public final /* synthetic */ class cbk implements bgj {
                     if (msgInfoBean7 != null) {
                         etu etuVar = etu.a;
                         String imgPath2 = msgInfoBean7.getImgPath();
-                        bzo.n(imgPath2);
+                        throwIfVar1IsNull(imgPath2);
                         strB2 = etu.b(etuVar, imgPath2);
                     } else {
                         strB2 = null;
@@ -210,7 +218,8 @@ public final /* synthetic */ class cbk implements bgj {
                     if (!msgInfoBean8.isVoice()) {
                         msgInfoBean8 = null;
                     }
-                    Integer numValueOf = (msgInfoBean8 == null || (content = msgInfoBean8.getContent()) == null) ? null : Integer.valueOf(Integer.parseInt(content));
+                    Integer numValueOf = (msgInfoBean8 == null || (content = msgInfoBean8.getContent()) == null) ? null
+                            : Integer.valueOf(Integer.parseInt(content));
                     if (numValueOf != null) {
                         arrayList9.add(numValueOf);
                     }
@@ -224,11 +233,12 @@ public final /* synthetic */ class cbk implements bgj {
                 cde cdeVarT = dqc.bi(obj).t();
                 cdeVarT.a = dal.b(Activity.class);
                 Object objJ = ((cdk) aaz.e(cdeVarT.aj())).j(new Object[0]);
-                bzo.n(objJ);
+                throwIfVar1IsNull(objJ);
                 Activity activity = (Activity) objJ;
                 String content5 = ((MsgInfoBean) obj2).getContent();
                 Intent intent4 = new Intent();
-                intent4.setClassName(activity, "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /* cnb.z(-95086280964906L) */);
+                intent4.setClassName(activity,
+                        "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /* cnb.z(-95086280964906L) */);
                 intent4.putExtra("Ksnsupload_type" /* cnb.z(-94927367174954L) */, 9);
                 intent4.putExtra("Kdescription" /* cnb.z(-94858647698218L) */, content5);
                 activity.startActivity(intent4);
@@ -238,15 +248,16 @@ public final /* synthetic */ class cbk implements bgj {
                 cde cdeVarT2 = dqc.bi(obj).t();
                 cdeVarT2.a = dal.b(Activity.class);
                 Object objJ2 = ((cdk) aaz.e(cdeVarT2.aj())).j(new Object[0]);
-                bzo.n(objJ2);
+                throwIfVar1IsNull(objJ2);
                 Activity activity2 = (Activity) objJ2;
                 bop bopVar2 = bop.a;
                 Object origin2 = ((MsgInfoBean) obj2).getOrigin();
                 bopVar2.getClass();
-                ArrayList<String> arrayList10 = new ArrayList<>(new kk(new String[]{bop.b(origin2)}, true));
+                ArrayList<String> arrayList10 = new ArrayList<>(new kk(new String[] { bop.b(origin2) }, true));
                 String strZ2 = "" /* cnb.z(-96679713831722L) */;
                 Intent intent5 = new Intent();
-                intent5.setClassName(activity2, "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /* cnb.z(-96417720826666L) */);
+                intent5.setClassName(activity2,
+                        "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /* cnb.z(-96417720826666L) */);
                 intent5.putStringArrayListExtra("sns_kemdia_path_list" /* cnb.z(-96258807036714L) */, arrayList10);
                 intent5.putExtra("Kdescription" /* cnb.z(-96752728275754L) */, strZ2);
                 activity2.startActivity(intent5);
@@ -256,19 +267,23 @@ public final /* synthetic */ class cbk implements bgj {
                 cde cdeVarT3 = dqc.bi(obj).t();
                 cdeVarT3.a = dal.b(Activity.class);
                 Object objJ3 = ((cdk) aaz.e(cdeVarT3.aj())).j(new Object[0]);
-                bzo.n(objJ3);
+                throwIfVar1IsNull(objJ3);
                 Activity activity3 = (Activity) objJ3;
                 String imgPath3 = ((MsgInfoBean) obj2).getImgPath();
-                bzo.n(imgPath3);
+                throwIfVar1IsNull(imgPath3);
                 eqb.a.getClass();
                 String strB4 = eqb.b(imgPath3);
                 Method methodBb2 = emn.bb(epz.a);
                 epx.a.getClass();
                 Object objInvoke2 = methodBb2.invoke(epx.b(), imgPath3);
-                bzo.o(objInvoke2, "null cannot be cast to non-null type kotlin.String" /* cnb.z(-377514740415274L) */);
+                throwIfVar1IsNull(objInvoke2, "null cannot be cast to non-null type kotlin.String" /*
+                                                                                                    * cnb.z(-
+                                                                                                    * 377514740415274L)
+                                                                                                    */);
                 String strZ3 = "" /* cnb.z(-95726231092010L) */;
                 Intent intent6 = new Intent();
-                intent6.setClassName(activity3, "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /* cnb.z(-96675418864426L) */);
+                intent6.setClassName(activity3,
+                        "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /* cnb.z(-96675418864426L) */);
                 intent6.putExtra("Ksnsupload_type" /* cnb.z(-96516505074474L) */, 14);
                 intent6.putExtra("KSightPath" /* cnb.z(-95898029783850L) */, strB4);
                 intent6.putExtra("KSightThumbPath" /* cnb.z(-95799245536042L) */, (String) objInvoke2);
@@ -290,14 +305,15 @@ public final /* synthetic */ class cbk implements bgj {
                 MsgInfoBean msgInfoBean11 = (MsgInfoBean) obj2;
                 etu etuVar2 = etu.a;
                 String imgPath4 = msgInfoBean11.getImgPath();
-                bzo.n(imgPath4);
-                arj.ah(msgInfoBean11.getTalker(), etu.b(etuVar2, imgPath4), Integer.parseInt(msgInfoBean11.getContent()));
+                throwIfVar1IsNull(imgPath4);
+                arj.ah(msgInfoBean11.getTalker(), etu.b(etuVar2, imgPath4),
+                        Integer.parseInt(msgInfoBean11.getContent()));
                 return ensVar;
             case 18:
                 MsgInfoBean msgInfoBean12 = (MsgInfoBean) obj2;
                 eqb eqbVar2 = eqb.a;
                 String imgPath5 = msgInfoBean12.getImgPath();
-                bzo.n(imgPath5);
+                throwIfVar1IsNull(imgPath5);
                 eqbVar2.getClass();
                 arj.ag(msgInfoBean12.getTalker(), eqb.b(imgPath5));
                 return ensVar;
@@ -305,7 +321,7 @@ public final /* synthetic */ class cbk implements bgj {
                 MsgInfoBean msgInfoBean13 = (MsgInfoBean) obj2;
                 aub aubVar = aub.a;
                 String imgPath6 = msgInfoBean13.getImgPath();
-                bzo.n(imgPath6);
+                throwIfVar1IsNull(imgPath6);
                 aubVar.getClass();
                 auh.c(auh.a, msgInfoBean13.getTalker(), aub.b(imgPath6));
                 return ensVar;
@@ -313,7 +329,7 @@ public final /* synthetic */ class cbk implements bgj {
                 MsgInfoBean msgInfoBean14 = (MsgInfoBean) obj2;
                 String talker = msgInfoBean14.getTalker();
                 MsgInfoBean.QuoteMsg quoteMsg = msgInfoBean14.getQuoteMsg();
-                bzo.n(quoteMsg);
+                throwIfVar1IsNull(quoteMsg);
                 arj.af(talker, quoteMsg.getTitle());
                 return ensVar;
             case 21:
@@ -326,38 +342,39 @@ public final /* synthetic */ class cbk implements bgj {
             case 22:
                 CodeEditor codeEditor = (CodeEditor) obj;
                 ud udVar = (ud) obj2;
-                bzo.q(codeEditor, "editor");
-                bzo.q(udVar, "pos");
+                throwIfVar1IsNull(codeEditor, "editor");
+                throwIfVar1IsNull(udVar, "pos");
                 long jN = codeEditor.j.n(udVar.b, udVar.c);
                 return codeEditor.getText().x().o((int) (jN >> 32), (int) (jN & 4294967295L));
             case 23:
                 CodeEditor codeEditor2 = (CodeEditor) obj;
                 ud udVar2 = (ud) obj2;
-                bzo.q(codeEditor2, "editor");
-                bzo.q(udVar2, "pos");
+                throwIfVar1IsNull(codeEditor2, "editor");
+                throwIfVar1IsNull(udVar2, "pos");
                 aff text = codeEditor2.getText();
-                bzo.p(text, "getText(...)");
-                ud udVar3 = bzo.s(udVar2, text, true).a;
-                bzo.p(udVar3, "getStart(...)");
+                throwIfVar1IsNull(text, "getText(...)");
+                ud udVar3 = KotlinHelpers.s(udVar2, text, true).a;
+                throwIfVar1IsNull(udVar3, "getStart(...)");
                 return codeEditor2.getText().x().o(udVar3.b, udVar3.c);
             case 24:
                 CodeEditor codeEditor3 = (CodeEditor) obj;
                 ud udVar4 = (ud) obj2;
-                bzo.q(codeEditor3, "editor");
-                bzo.q(udVar4, "pos");
+                throwIfVar1IsNull(codeEditor3, "editor");
+                throwIfVar1IsNull(udVar4, "pos");
                 aff text2 = codeEditor3.getText();
-                bzo.p(text2, "getText(...)");
-                ud udVar5 = bzo.s(udVar4, text2, false).b;
-                bzo.p(udVar5, "getEnd(...)");
+                throwIfVar1IsNull(text2, "getText(...)");
+                ud udVar5 = KotlinHelpers.s(udVar4, text2, false).b;
+                throwIfVar1IsNull(udVar5, "getEnd(...)");
                 return codeEditor3.getText().x().o(udVar5.b, udVar5.c);
             case 25:
                 CodeEditor codeEditor4 = (CodeEditor) obj;
                 ud udVar6 = (ud) obj2;
-                bzo.q(codeEditor4, "editor");
-                bzo.q(udVar6, "pos");
+                throwIfVar1IsNull(codeEditor4, "editor");
+                throwIfVar1IsNull(udVar6, "pos");
                 y yVar = codeEditor4.j;
                 int iL = yVar.l(udVar6.a);
-                int iAn = cnd.an(iL - ((int) Math.ceil(codeEditor4.getHeight() / codeEditor4.getRowHeight())), yVar.e() - 1);
+                int iAn = cnd.an(iL - ((int) Math.ceil(codeEditor4.getHeight() / codeEditor4.getRowHeight())),
+                        yVar.e() - 1);
                 int i7 = udVar6.c - yVar.q(iL).d;
                 ddm ddmVarQ = yVar.q(iAn);
                 int i8 = ddmVarQ.a;
@@ -366,11 +383,12 @@ public final /* synthetic */ class cbk implements bgj {
             case 26:
                 CodeEditor codeEditor5 = (CodeEditor) obj;
                 ud udVar7 = (ud) obj2;
-                bzo.q(codeEditor5, "editor");
-                bzo.q(udVar7, "pos");
+                throwIfVar1IsNull(codeEditor5, "editor");
+                throwIfVar1IsNull(udVar7, "pos");
                 y yVar2 = codeEditor5.j;
                 int iL2 = yVar2.l(udVar7.a);
-                int iAn2 = cnd.an(((int) Math.ceil(codeEditor5.getHeight() / codeEditor5.getRowHeight())) + iL2, yVar2.e() - 1);
+                int iAn2 = cnd.an(((int) Math.ceil(codeEditor5.getHeight() / codeEditor5.getRowHeight())) + iL2,
+                        yVar2.e() - 1);
                 int i10 = udVar7.c - yVar2.q(iL2).d;
                 ddm ddmVarQ2 = yVar2.q(iAn2);
                 int i11 = ddmVarQ2.a;
@@ -379,8 +397,8 @@ public final /* synthetic */ class cbk implements bgj {
             case 27:
                 CodeEditor codeEditor6 = (CodeEditor) obj;
                 ud udVar8 = (ud) obj2;
-                bzo.q(codeEditor6, "editor");
-                bzo.q(udVar8, "pos");
+                throwIfVar1IsNull(codeEditor6, "editor");
+                throwIfVar1IsNull(udVar8, "pos");
                 y yVar3 = codeEditor6.j;
                 int i13 = udVar8.c - yVar3.q(yVar3.l(udVar8.a)).d;
                 ddm ddmVarQ3 = yVar3.q(codeEditor6.getFirstVisibleRow());
@@ -390,8 +408,8 @@ public final /* synthetic */ class cbk implements bgj {
             case 28:
                 CodeEditor codeEditor7 = (CodeEditor) obj;
                 ud udVar9 = (ud) obj2;
-                bzo.q(codeEditor7, "editor");
-                bzo.q(udVar9, "pos");
+                throwIfVar1IsNull(codeEditor7, "editor");
+                throwIfVar1IsNull(udVar9, "pos");
                 y yVar4 = codeEditor7.j;
                 int i16 = udVar9.c - yVar4.q(yVar4.l(udVar9.a)).d;
                 ddm ddmVarQ4 = yVar4.q(codeEditor7.getLastVisibleRow());
@@ -401,14 +419,16 @@ public final /* synthetic */ class cbk implements bgj {
             default:
                 CodeEditor codeEditor8 = (CodeEditor) obj;
                 ud udVar10 = (ud) obj2;
-                bzo.q(codeEditor8, "editor");
-                bzo.q(udVar10, "pos");
+                throwIfVar1IsNull(codeEditor8, "editor");
+                throwIfVar1IsNull(udVar10, "pos");
                 if (!codeEditor8.getProps().v) {
                     return codeEditor8.getText().x().o(udVar10.b, 0);
                 }
                 afo afoVarY = codeEditor8.getText().y(udVar10.b);
                 int iR = (int) (cna.r(afoVarY, 0, afoVarY.b) >> 32);
-                return (udVar10.c == iR || iR == codeEditor8.getText().y(udVar10.b).b) ? codeEditor8.getText().x().o(udVar10.b, 0) : codeEditor8.getText().x().o(udVar10.b, iR);
+                return (udVar10.c == iR || iR == codeEditor8.getText().y(udVar10.b).b)
+                        ? codeEditor8.getText().x().o(udVar10.b, 0)
+                        : codeEditor8.getText().x().o(udVar10.b, iR);
         }
     }
 }

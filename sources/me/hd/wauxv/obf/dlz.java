@@ -23,7 +23,7 @@ public final class dlz implements alw {
             }
         }
         alwVar = (alw) linkedList.getFirst();
-        alwVar.b(dqeVar, dqeVar2, i);
+        alwVar.tryGetClassByName(dqeVar, dqeVar2, i);
     }
 
     @Override // me.hd.wauxv.obf.alw
@@ -65,7 +65,8 @@ public final class dlz implements alw {
                 listIterator.add(alwVar);
                 return;
             } else if (iE == iE2) {
-                throw new IllegalArgumentException("Cannot add two delimiter processors for char '" + this.a + "' and minimum length " + iE);
+                throw new IllegalArgumentException(
+                        "Cannot add two delimiter processors for char '" + this.a + "' and minimum length " + iE);
             }
         }
         linkedList.add(alwVar);

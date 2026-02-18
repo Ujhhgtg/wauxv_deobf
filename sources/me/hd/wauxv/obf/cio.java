@@ -29,7 +29,7 @@ public final class cio implements bup, err, bkg, dep {
         this.g = bundle2;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:10:0x0036  */
+    /* JADX WARN: Found duplicated region for block: B:10:0x0036 */
     @Override // me.hd.wauxv.obf.bkg
     public final chq ai() {
         Application application;
@@ -61,17 +61,20 @@ public final class cio implements bup, err, bkg, dep {
     public final erq aj() {
         ciq ciqVar = this.h;
         if (!ciqVar.i) {
-            throw new IllegalStateException("You cannot access the NavBackStackEntry's ViewModels until it is added to the NavController's back stack (i.e., the Lifecycle of the NavBackStackEntry reaches the CREATED state).");
+            throw new IllegalStateException(
+                    "You cannot access the NavBackStackEntry's ViewModels until it is added to the NavController's back stack (i.e., the Lifecycle of the NavBackStackEntry reaches the CREATED state).");
         }
         if (ciqVar.j.c == buh.a) {
-            throw new IllegalStateException("You cannot access the NavBackStackEntry's ViewModels after the NavBackStackEntry is destroyed.");
+            throw new IllegalStateException(
+                    "You cannot access the NavBackStackEntry's ViewModels after the NavBackStackEntry is destroyed.");
         }
         ciy ciyVar = ciqVar.e;
         if (ciyVar == null) {
-            throw new IllegalStateException("You must call setViewModelStore() on your NavHostController before accessing the ViewModelStore of a navigation graph.");
+            throw new IllegalStateException(
+                    "You must call setViewModelStore() on your NavHostController before accessing the ViewModelStore of a navigation graph.");
         }
         String str = ciqVar.f;
-        bzo.q(str, "backStackEntryId");
+        throwIfVar1IsNull(str, "backStackEntryId");
         LinkedHashMap linkedHashMap = ciyVar.a;
         erq erqVar = (erq) linkedHashMap.get(str);
         if (erqVar != null) {
@@ -97,9 +100,11 @@ public final class cio implements bup, err, bkg, dep {
         if (obj != null && (obj instanceof cio)) {
             cio cioVar = (cio) obj;
             Bundle bundle = cioVar.c;
-            if (bzo.f(this.f, cioVar.f) && bzo.f(this.b, cioVar.b) && bzo.f(this.h.j, cioVar.h.j) && bzo.f(ak(), cioVar.ak())) {
+            if (nullSafeIsEqual(this.f, cioVar.f) && nullSafeIsEqual(this.b, cioVar.b)
+                    && nullSafeIsEqual(this.h.j, cioVar.h.j)
+                    && nullSafeIsEqual(ak(), cioVar.ak())) {
                 Bundle bundle2 = this.c;
-                if (bzo.f(bundle2, bundle)) {
+                if (nullSafeIsEqual(bundle2, bundle)) {
                     return true;
                 }
                 if (bundle2 != null && (setKeySet = bundle2.keySet()) != null) {
@@ -107,7 +112,7 @@ public final class cio implements bup, err, bkg, dep {
                         return true;
                     }
                     for (String str : setKeySet) {
-                        if (!bzo.f(bundle2.get(str), bundle != null ? bundle.get(str) : null)) {
+                        if (!nullSafeIsEqual(bundle2.get(str), bundle != null ? bundle.get(str) : null)) {
                         }
                     }
                     return true;

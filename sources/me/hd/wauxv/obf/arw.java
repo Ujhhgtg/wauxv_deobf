@@ -21,7 +21,7 @@ public final class arw extends ase {
     public final aki c;
     public final int d;
     public ud e;
-    public csm f;
+    public Pair f;
 
     public arw(CodeEditor codeEditor) {
         super(codeEditor, 6);
@@ -31,27 +31,27 @@ public final class arw extends ase {
         this.d = (int) (codeEditor.getDpUnit() * 175);
         new ArrayList();
         Float fValueOf = Float.valueOf(0.0f);
-        this.f = new csm(fValueOf, fValueOf);
+        this.f = new Pair(fValueOf, fValueOf);
         final aki akiVar = this.c;
-        bzo.q(akiVar, "value");
+        throwIfVar1IsNull(akiVar, "value");
         if (this.b == null || this.c != akiVar) {
             this.c = akiVar;
             akiVar.c = this;
             LayoutInflater layoutInflaterFrom = LayoutInflater.from(this.aa.getContext());
-            bzo.p(layoutInflaterFrom, "from(...)");
+            throwIfVar1IsNull(layoutInflaterFrom, "from(...)");
             arw arwVar = (arw) akiVar.c;
             if (arwVar == null) {
-                bzo.ar("window");
+                throwLateinitPropNotInitYet("window");
                 throw null;
             }
             Context context = arwVar.aa.getContext();
             View viewInflate = layoutInflaterFrom.inflate(R.layout.diagnostic_tooltip_window, (ViewGroup) null);
-            bzo.p(viewInflate, "inflate(...)");
+            throwIfVar1IsNull(viewInflate, "inflate(...)");
             akiVar.d = viewInflate;
             viewInflate.setClipToOutline(true);
             View view = (View) akiVar.d;
             if (view == null) {
-                bzo.ar("root");
+                throwLateinitPropNotInitYet("root");
                 throw null;
             }
             view.setOnGenericMotionListener(new View.OnGenericMotionListener() { // from class: me.hd.wauxv.obf.akg
@@ -69,61 +69,61 @@ public final class arw extends ase {
             });
             View view2 = (View) akiVar.d;
             if (view2 == null) {
-                bzo.ar("root");
+                throwLateinitPropNotInitYet("root");
                 throw null;
             }
             View viewFindViewById = view2.findViewById(R.id.diagnostic_tooltip_brief_message);
-            bzo.p(viewFindViewById, "findViewById(...)");
+            throwIfVar1IsNull(viewFindViewById, "findViewById(...)");
             akiVar.e = (TextView) viewFindViewById;
             View view3 = (View) akiVar.d;
             if (view3 == null) {
-                bzo.ar("root");
+                throwLateinitPropNotInitYet("root");
                 throw null;
             }
             View viewFindViewById2 = view3.findViewById(R.id.diagnostic_tooltip_detailed_message);
-            bzo.p(viewFindViewById2, "findViewById(...)");
+            throwIfVar1IsNull(viewFindViewById2, "findViewById(...)");
             akiVar.f = (TextView) viewFindViewById2;
             View view4 = (View) akiVar.d;
             if (view4 == null) {
-                bzo.ar("root");
+                throwLateinitPropNotInitYet("root");
                 throw null;
             }
             View viewFindViewById3 = view4.findViewById(R.id.diagnostic_tooltip_preferred_action);
-            bzo.p(viewFindViewById3, "findViewById(...)");
+            throwIfVar1IsNull(viewFindViewById3, "findViewById(...)");
             akiVar.g = (TextView) viewFindViewById3;
             View view5 = (View) akiVar.d;
             if (view5 == null) {
-                bzo.ar("root");
+                throwLateinitPropNotInitYet("root");
                 throw null;
             }
             View viewFindViewById4 = view5.findViewById(R.id.diagnostic_tooltip_more_actions);
-            bzo.p(viewFindViewById4, "findViewById(...)");
+            throwIfVar1IsNull(viewFindViewById4, "findViewById(...)");
             akiVar.h = (TextView) viewFindViewById4;
             View view6 = (View) akiVar.d;
             if (view6 == null) {
-                bzo.ar("root");
+                throwLateinitPropNotInitYet("root");
                 throw null;
             }
             View viewFindViewById5 = view6.findViewById(R.id.diagnostic_container_message);
-            bzo.p(viewFindViewById5, "findViewById(...)");
+            throwIfVar1IsNull(viewFindViewById5, "findViewById(...)");
             akiVar.i = (ViewGroup) viewFindViewById5;
             View view7 = (View) akiVar.d;
             if (view7 == null) {
-                bzo.ar("root");
+                throwLateinitPropNotInitYet("root");
                 throw null;
             }
             View viewFindViewById6 = view7.findViewById(R.id.diagnostic_container_quickfix);
-            bzo.p(viewFindViewById6, "findViewById(...)");
+            throwIfVar1IsNull(viewFindViewById6, "findViewById(...)");
             akiVar.j = (ViewGroup) viewFindViewById6;
             TextView textView = (TextView) akiVar.g;
             if (textView == null) {
-                bzo.ar("quickfixText");
+                throwLateinitPropNotInitYet("quickfixText");
                 throw null;
             }
             textView.setOnClickListener(new akh(akiVar));
             TextView textView2 = (TextView) akiVar.h;
             if (textView2 == null) {
-                bzo.ar("moreActionText");
+                throwLateinitPropNotInitYet("moreActionText");
                 throw null;
             }
             SparseIntArray sparseIntArray = bmx.a;
@@ -132,13 +132,13 @@ public final class arw extends ase {
             textView2.setText(i2 != 0 ? i2 : i);
             TextView textView3 = (TextView) akiVar.h;
             if (textView3 == null) {
-                bzo.ar("moreActionText");
+                throwLateinitPropNotInitYet("moreActionText");
                 throw null;
             }
             textView3.setOnClickListener(new akh(akiVar, context));
             View view8 = (View) akiVar.d;
             if (view8 == null) {
-                bzo.ar("root");
+                throwLateinitPropNotInitYet("root");
                 throw null;
             }
             this.b = view8;
@@ -164,7 +164,7 @@ public final class arw extends ase {
                         arw arwVar2 = this.b;
                         CodeEditor codeEditor2 = arwVar2.aa;
                         dfn dfnVar = (dfn) uaVar;
-                        bzo.q(dfnVar, "event");
+                        throwIfVar1IsNull(dfnVar, "event");
                         if (!arwVar2.a.f || codeEditor2.dy()) {
                             return;
                         }
@@ -172,20 +172,20 @@ public final class arw extends ase {
                             arwVar2.k();
                             return;
                         }
-                        bzo.p(dfnVar.a, "getLeft(...)");
+                        throwIfVar1IsNull(dfnVar.a, "getLeft(...)");
                         codeEditor2.getDiagnostics();
                         arwVar2.k();
                         return;
                     case 1:
-                        bzo.q((dfb) uaVar, "<unused var>");
+                        throwIfVar1IsNull((dfb) uaVar, "<unused var>");
                         this.b.aa.dy();
                         return;
                     case 2:
-                        bzo.q((abg) uaVar, "<unused var>");
+                        throwIfVar1IsNull((abg) uaVar, "<unused var>");
                         this.b.j();
                         return;
                     case 3:
-                        bzo.q((drg) uaVar, "event");
+                        throwIfVar1IsNull((drg) uaVar, "event");
                         arw arwVar3 = this.b;
                         arwVar3.c.getClass();
                         if (arwVar3.z.isShowing()) {
@@ -196,25 +196,26 @@ public final class arw extends ase {
                             int iMakeMeasureSpec = View.MeasureSpec.makeMeasureSpec(width, Integer.MIN_VALUE);
                             ViewGroup viewGroup = (ViewGroup) akiVar2.j;
                             if (viewGroup == null) {
-                                bzo.ar("quickfixPanel");
+                                throwLateinitPropNotInitYet("quickfixPanel");
                                 throw null;
                             }
                             if (viewGroup.getVisibility() == 0) {
                                 ViewGroup viewGroup2 = (ViewGroup) akiVar2.j;
                                 if (viewGroup2 == null) {
-                                    bzo.ar("quickfixPanel");
+                                    throwLateinitPropNotInitYet("quickfixPanel");
                                     throw null;
                                 }
-                                viewGroup2.measure(iMakeMeasureSpec, View.MeasureSpec.makeMeasureSpec(i5, Integer.MIN_VALUE));
+                                viewGroup2.measure(iMakeMeasureSpec,
+                                        View.MeasureSpec.makeMeasureSpec(i5, Integer.MIN_VALUE));
                                 ViewGroup viewGroup3 = (ViewGroup) akiVar2.j;
                                 if (viewGroup3 == null) {
-                                    bzo.ar("quickfixPanel");
+                                    throwLateinitPropNotInitYet("quickfixPanel");
                                     throw null;
                                 }
                                 measuredHeight = viewGroup3.getMeasuredHeight();
                                 ViewGroup viewGroup4 = (ViewGroup) akiVar2.j;
                                 if (viewGroup4 == null) {
-                                    bzo.ar("quickfixPanel");
+                                    throwLateinitPropNotInitYet("quickfixPanel");
                                     throw null;
                                 }
                                 measuredWidth = viewGroup4.getMeasuredWidth();
@@ -231,26 +232,27 @@ public final class arw extends ase {
                             }
                             ViewGroup viewGroup5 = (ViewGroup) akiVar2.i;
                             if (viewGroup5 == null) {
-                                bzo.ar("messagePanel");
+                                throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             ViewGroup.LayoutParams layoutParams = viewGroup5.getLayoutParams();
                             layoutParams.height = -2;
                             ViewGroup viewGroup6 = (ViewGroup) akiVar2.i;
                             if (viewGroup6 == null) {
-                                bzo.ar("messagePanel");
+                                throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup6.setLayoutParams(layoutParams);
                             ViewGroup viewGroup7 = (ViewGroup) akiVar2.i;
                             if (viewGroup7 == null) {
-                                bzo.ar("messagePanel");
+                                throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
-                            viewGroup7.measure(iMakeMeasureSpec, View.MeasureSpec.makeMeasureSpec(i6, Integer.MIN_VALUE));
+                            viewGroup7.measure(iMakeMeasureSpec,
+                                    View.MeasureSpec.makeMeasureSpec(i6, Integer.MIN_VALUE));
                             ViewGroup viewGroup8 = (ViewGroup) akiVar2.i;
                             if (viewGroup8 == null) {
-                                bzo.ar("messagePanel");
+                                throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             int measuredHeight2 = viewGroup8.getMeasuredHeight();
@@ -260,13 +262,13 @@ public final class arw extends ase {
                             layoutParams.height = i6;
                             ViewGroup viewGroup9 = (ViewGroup) akiVar2.i;
                             if (viewGroup9 == null) {
-                                bzo.ar("messagePanel");
+                                throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup9.setLayoutParams(layoutParams);
                             ViewGroup viewGroup10 = (ViewGroup) akiVar2.i;
                             if (viewGroup10 == null) {
-                                bzo.ar("messagePanel");
+                                throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             int measuredWidth2 = viewGroup10.getMeasuredWidth();
@@ -281,14 +283,14 @@ public final class arw extends ase {
                         return;
                     case 4:
                         arx arxVar = (arx) uaVar;
-                        bzo.q(arxVar, "event");
+                        throwIfVar1IsNull(arxVar, "event");
                         if (arxVar.a) {
                             return;
                         }
                         this.b.i();
                         return;
                     default:
-                        bzo.q((asf) uaVar, "<unused var>");
+                        throwIfVar1IsNull((asf) uaVar, "<unused var>");
                         arw arwVar4 = this.b;
                         arwVar4.a.j(false);
                         arwVar4.i();
@@ -314,7 +316,7 @@ public final class arw extends ase {
                         arw arwVar2 = this.b;
                         CodeEditor codeEditor2 = arwVar2.aa;
                         dfn dfnVar = (dfn) uaVar;
-                        bzo.q(dfnVar, "event");
+                        throwIfVar1IsNull(dfnVar, "event");
                         if (!arwVar2.a.f || codeEditor2.dy()) {
                             return;
                         }
@@ -322,20 +324,20 @@ public final class arw extends ase {
                             arwVar2.k();
                             return;
                         }
-                        bzo.p(dfnVar.a, "getLeft(...)");
+                        throwIfVar1IsNull(dfnVar.a, "getLeft(...)");
                         codeEditor2.getDiagnostics();
                         arwVar2.k();
                         return;
                     case 1:
-                        bzo.q((dfb) uaVar, "<unused var>");
+                        throwIfVar1IsNull((dfb) uaVar, "<unused var>");
                         this.b.aa.dy();
                         return;
                     case 2:
-                        bzo.q((abg) uaVar, "<unused var>");
+                        throwIfVar1IsNull((abg) uaVar, "<unused var>");
                         this.b.j();
                         return;
                     case 3:
-                        bzo.q((drg) uaVar, "event");
+                        throwIfVar1IsNull((drg) uaVar, "event");
                         arw arwVar3 = this.b;
                         arwVar3.c.getClass();
                         if (arwVar3.z.isShowing()) {
@@ -346,25 +348,26 @@ public final class arw extends ase {
                             int iMakeMeasureSpec = View.MeasureSpec.makeMeasureSpec(width, Integer.MIN_VALUE);
                             ViewGroup viewGroup = (ViewGroup) akiVar2.j;
                             if (viewGroup == null) {
-                                bzo.ar("quickfixPanel");
+                                throwLateinitPropNotInitYet("quickfixPanel");
                                 throw null;
                             }
                             if (viewGroup.getVisibility() == 0) {
                                 ViewGroup viewGroup2 = (ViewGroup) akiVar2.j;
                                 if (viewGroup2 == null) {
-                                    bzo.ar("quickfixPanel");
+                                    throwLateinitPropNotInitYet("quickfixPanel");
                                     throw null;
                                 }
-                                viewGroup2.measure(iMakeMeasureSpec, View.MeasureSpec.makeMeasureSpec(i5, Integer.MIN_VALUE));
+                                viewGroup2.measure(iMakeMeasureSpec,
+                                        View.MeasureSpec.makeMeasureSpec(i5, Integer.MIN_VALUE));
                                 ViewGroup viewGroup3 = (ViewGroup) akiVar2.j;
                                 if (viewGroup3 == null) {
-                                    bzo.ar("quickfixPanel");
+                                    throwLateinitPropNotInitYet("quickfixPanel");
                                     throw null;
                                 }
                                 measuredHeight = viewGroup3.getMeasuredHeight();
                                 ViewGroup viewGroup4 = (ViewGroup) akiVar2.j;
                                 if (viewGroup4 == null) {
-                                    bzo.ar("quickfixPanel");
+                                    throwLateinitPropNotInitYet("quickfixPanel");
                                     throw null;
                                 }
                                 measuredWidth = viewGroup4.getMeasuredWidth();
@@ -381,26 +384,27 @@ public final class arw extends ase {
                             }
                             ViewGroup viewGroup5 = (ViewGroup) akiVar2.i;
                             if (viewGroup5 == null) {
-                                bzo.ar("messagePanel");
+                                throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             ViewGroup.LayoutParams layoutParams = viewGroup5.getLayoutParams();
                             layoutParams.height = -2;
                             ViewGroup viewGroup6 = (ViewGroup) akiVar2.i;
                             if (viewGroup6 == null) {
-                                bzo.ar("messagePanel");
+                                throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup6.setLayoutParams(layoutParams);
                             ViewGroup viewGroup7 = (ViewGroup) akiVar2.i;
                             if (viewGroup7 == null) {
-                                bzo.ar("messagePanel");
+                                throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
-                            viewGroup7.measure(iMakeMeasureSpec, View.MeasureSpec.makeMeasureSpec(i6, Integer.MIN_VALUE));
+                            viewGroup7.measure(iMakeMeasureSpec,
+                                    View.MeasureSpec.makeMeasureSpec(i6, Integer.MIN_VALUE));
                             ViewGroup viewGroup8 = (ViewGroup) akiVar2.i;
                             if (viewGroup8 == null) {
-                                bzo.ar("messagePanel");
+                                throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             int measuredHeight2 = viewGroup8.getMeasuredHeight();
@@ -410,13 +414,13 @@ public final class arw extends ase {
                             layoutParams.height = i6;
                             ViewGroup viewGroup9 = (ViewGroup) akiVar2.i;
                             if (viewGroup9 == null) {
-                                bzo.ar("messagePanel");
+                                throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup9.setLayoutParams(layoutParams);
                             ViewGroup viewGroup10 = (ViewGroup) akiVar2.i;
                             if (viewGroup10 == null) {
-                                bzo.ar("messagePanel");
+                                throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             int measuredWidth2 = viewGroup10.getMeasuredWidth();
@@ -431,14 +435,14 @@ public final class arw extends ase {
                         return;
                     case 4:
                         arx arxVar = (arx) uaVar;
-                        bzo.q(arxVar, "event");
+                        throwIfVar1IsNull(arxVar, "event");
                         if (arxVar.a) {
                             return;
                         }
                         this.b.i();
                         return;
                     default:
-                        bzo.q((asf) uaVar, "<unused var>");
+                        throwIfVar1IsNull((asf) uaVar, "<unused var>");
                         arw arwVar4 = this.b;
                         arwVar4.a.j(false);
                         arwVar4.i();
@@ -465,7 +469,7 @@ public final class arw extends ase {
                         arw arwVar2 = this.b;
                         CodeEditor codeEditor2 = arwVar2.aa;
                         dfn dfnVar = (dfn) uaVar;
-                        bzo.q(dfnVar, "event");
+                        throwIfVar1IsNull(dfnVar, "event");
                         if (!arwVar2.a.f || codeEditor2.dy()) {
                             return;
                         }
@@ -473,20 +477,20 @@ public final class arw extends ase {
                             arwVar2.k();
                             return;
                         }
-                        bzo.p(dfnVar.a, "getLeft(...)");
+                        throwIfVar1IsNull(dfnVar.a, "getLeft(...)");
                         codeEditor2.getDiagnostics();
                         arwVar2.k();
                         return;
                     case 1:
-                        bzo.q((dfb) uaVar, "<unused var>");
+                        throwIfVar1IsNull((dfb) uaVar, "<unused var>");
                         this.b.aa.dy();
                         return;
                     case 2:
-                        bzo.q((abg) uaVar, "<unused var>");
+                        throwIfVar1IsNull((abg) uaVar, "<unused var>");
                         this.b.j();
                         return;
                     case 3:
-                        bzo.q((drg) uaVar, "event");
+                        throwIfVar1IsNull((drg) uaVar, "event");
                         arw arwVar3 = this.b;
                         arwVar3.c.getClass();
                         if (arwVar3.z.isShowing()) {
@@ -497,25 +501,26 @@ public final class arw extends ase {
                             int iMakeMeasureSpec = View.MeasureSpec.makeMeasureSpec(width, Integer.MIN_VALUE);
                             ViewGroup viewGroup = (ViewGroup) akiVar2.j;
                             if (viewGroup == null) {
-                                bzo.ar("quickfixPanel");
+                                throwLateinitPropNotInitYet("quickfixPanel");
                                 throw null;
                             }
                             if (viewGroup.getVisibility() == 0) {
                                 ViewGroup viewGroup2 = (ViewGroup) akiVar2.j;
                                 if (viewGroup2 == null) {
-                                    bzo.ar("quickfixPanel");
+                                    throwLateinitPropNotInitYet("quickfixPanel");
                                     throw null;
                                 }
-                                viewGroup2.measure(iMakeMeasureSpec, View.MeasureSpec.makeMeasureSpec(i52, Integer.MIN_VALUE));
+                                viewGroup2.measure(iMakeMeasureSpec,
+                                        View.MeasureSpec.makeMeasureSpec(i52, Integer.MIN_VALUE));
                                 ViewGroup viewGroup3 = (ViewGroup) akiVar2.j;
                                 if (viewGroup3 == null) {
-                                    bzo.ar("quickfixPanel");
+                                    throwLateinitPropNotInitYet("quickfixPanel");
                                     throw null;
                                 }
                                 measuredHeight = viewGroup3.getMeasuredHeight();
                                 ViewGroup viewGroup4 = (ViewGroup) akiVar2.j;
                                 if (viewGroup4 == null) {
-                                    bzo.ar("quickfixPanel");
+                                    throwLateinitPropNotInitYet("quickfixPanel");
                                     throw null;
                                 }
                                 measuredWidth = viewGroup4.getMeasuredWidth();
@@ -532,26 +537,27 @@ public final class arw extends ase {
                             }
                             ViewGroup viewGroup5 = (ViewGroup) akiVar2.i;
                             if (viewGroup5 == null) {
-                                bzo.ar("messagePanel");
+                                throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             ViewGroup.LayoutParams layoutParams = viewGroup5.getLayoutParams();
                             layoutParams.height = -2;
                             ViewGroup viewGroup6 = (ViewGroup) akiVar2.i;
                             if (viewGroup6 == null) {
-                                bzo.ar("messagePanel");
+                                throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup6.setLayoutParams(layoutParams);
                             ViewGroup viewGroup7 = (ViewGroup) akiVar2.i;
                             if (viewGroup7 == null) {
-                                bzo.ar("messagePanel");
+                                throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
-                            viewGroup7.measure(iMakeMeasureSpec, View.MeasureSpec.makeMeasureSpec(i6, Integer.MIN_VALUE));
+                            viewGroup7.measure(iMakeMeasureSpec,
+                                    View.MeasureSpec.makeMeasureSpec(i6, Integer.MIN_VALUE));
                             ViewGroup viewGroup8 = (ViewGroup) akiVar2.i;
                             if (viewGroup8 == null) {
-                                bzo.ar("messagePanel");
+                                throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             int measuredHeight2 = viewGroup8.getMeasuredHeight();
@@ -561,13 +567,13 @@ public final class arw extends ase {
                             layoutParams.height = i6;
                             ViewGroup viewGroup9 = (ViewGroup) akiVar2.i;
                             if (viewGroup9 == null) {
-                                bzo.ar("messagePanel");
+                                throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup9.setLayoutParams(layoutParams);
                             ViewGroup viewGroup10 = (ViewGroup) akiVar2.i;
                             if (viewGroup10 == null) {
-                                bzo.ar("messagePanel");
+                                throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             int measuredWidth2 = viewGroup10.getMeasuredWidth();
@@ -582,14 +588,14 @@ public final class arw extends ase {
                         return;
                     case 4:
                         arx arxVar = (arx) uaVar;
-                        bzo.q(arxVar, "event");
+                        throwIfVar1IsNull(arxVar, "event");
                         if (arxVar.a) {
                             return;
                         }
                         this.b.i();
                         return;
                     default:
-                        bzo.q((asf) uaVar, "<unused var>");
+                        throwIfVar1IsNull((asf) uaVar, "<unused var>");
                         arw arwVar4 = this.b;
                         arwVar4.a.j(false);
                         arwVar4.i();
@@ -615,7 +621,7 @@ public final class arw extends ase {
                         arw arwVar2 = this.b;
                         CodeEditor codeEditor2 = arwVar2.aa;
                         dfn dfnVar = (dfn) uaVar;
-                        bzo.q(dfnVar, "event");
+                        throwIfVar1IsNull(dfnVar, "event");
                         if (!arwVar2.a.f || codeEditor2.dy()) {
                             return;
                         }
@@ -623,20 +629,20 @@ public final class arw extends ase {
                             arwVar2.k();
                             return;
                         }
-                        bzo.p(dfnVar.a, "getLeft(...)");
+                        throwIfVar1IsNull(dfnVar.a, "getLeft(...)");
                         codeEditor2.getDiagnostics();
                         arwVar2.k();
                         return;
                     case 1:
-                        bzo.q((dfb) uaVar, "<unused var>");
+                        throwIfVar1IsNull((dfb) uaVar, "<unused var>");
                         this.b.aa.dy();
                         return;
                     case 2:
-                        bzo.q((abg) uaVar, "<unused var>");
+                        throwIfVar1IsNull((abg) uaVar, "<unused var>");
                         this.b.j();
                         return;
                     case 3:
-                        bzo.q((drg) uaVar, "event");
+                        throwIfVar1IsNull((drg) uaVar, "event");
                         arw arwVar3 = this.b;
                         arwVar3.c.getClass();
                         if (arwVar3.z.isShowing()) {
@@ -647,25 +653,26 @@ public final class arw extends ase {
                             int iMakeMeasureSpec = View.MeasureSpec.makeMeasureSpec(width, Integer.MIN_VALUE);
                             ViewGroup viewGroup = (ViewGroup) akiVar2.j;
                             if (viewGroup == null) {
-                                bzo.ar("quickfixPanel");
+                                throwLateinitPropNotInitYet("quickfixPanel");
                                 throw null;
                             }
                             if (viewGroup.getVisibility() == 0) {
                                 ViewGroup viewGroup2 = (ViewGroup) akiVar2.j;
                                 if (viewGroup2 == null) {
-                                    bzo.ar("quickfixPanel");
+                                    throwLateinitPropNotInitYet("quickfixPanel");
                                     throw null;
                                 }
-                                viewGroup2.measure(iMakeMeasureSpec, View.MeasureSpec.makeMeasureSpec(i52, Integer.MIN_VALUE));
+                                viewGroup2.measure(iMakeMeasureSpec,
+                                        View.MeasureSpec.makeMeasureSpec(i52, Integer.MIN_VALUE));
                                 ViewGroup viewGroup3 = (ViewGroup) akiVar2.j;
                                 if (viewGroup3 == null) {
-                                    bzo.ar("quickfixPanel");
+                                    throwLateinitPropNotInitYet("quickfixPanel");
                                     throw null;
                                 }
                                 measuredHeight = viewGroup3.getMeasuredHeight();
                                 ViewGroup viewGroup4 = (ViewGroup) akiVar2.j;
                                 if (viewGroup4 == null) {
-                                    bzo.ar("quickfixPanel");
+                                    throwLateinitPropNotInitYet("quickfixPanel");
                                     throw null;
                                 }
                                 measuredWidth = viewGroup4.getMeasuredWidth();
@@ -682,26 +689,27 @@ public final class arw extends ase {
                             }
                             ViewGroup viewGroup5 = (ViewGroup) akiVar2.i;
                             if (viewGroup5 == null) {
-                                bzo.ar("messagePanel");
+                                throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             ViewGroup.LayoutParams layoutParams = viewGroup5.getLayoutParams();
                             layoutParams.height = -2;
                             ViewGroup viewGroup6 = (ViewGroup) akiVar2.i;
                             if (viewGroup6 == null) {
-                                bzo.ar("messagePanel");
+                                throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup6.setLayoutParams(layoutParams);
                             ViewGroup viewGroup7 = (ViewGroup) akiVar2.i;
                             if (viewGroup7 == null) {
-                                bzo.ar("messagePanel");
+                                throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
-                            viewGroup7.measure(iMakeMeasureSpec, View.MeasureSpec.makeMeasureSpec(i62, Integer.MIN_VALUE));
+                            viewGroup7.measure(iMakeMeasureSpec,
+                                    View.MeasureSpec.makeMeasureSpec(i62, Integer.MIN_VALUE));
                             ViewGroup viewGroup8 = (ViewGroup) akiVar2.i;
                             if (viewGroup8 == null) {
-                                bzo.ar("messagePanel");
+                                throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             int measuredHeight2 = viewGroup8.getMeasuredHeight();
@@ -711,13 +719,13 @@ public final class arw extends ase {
                             layoutParams.height = i62;
                             ViewGroup viewGroup9 = (ViewGroup) akiVar2.i;
                             if (viewGroup9 == null) {
-                                bzo.ar("messagePanel");
+                                throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup9.setLayoutParams(layoutParams);
                             ViewGroup viewGroup10 = (ViewGroup) akiVar2.i;
                             if (viewGroup10 == null) {
-                                bzo.ar("messagePanel");
+                                throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             int measuredWidth2 = viewGroup10.getMeasuredWidth();
@@ -732,14 +740,14 @@ public final class arw extends ase {
                         return;
                     case 4:
                         arx arxVar = (arx) uaVar;
-                        bzo.q(arxVar, "event");
+                        throwIfVar1IsNull(arxVar, "event");
                         if (arxVar.a) {
                             return;
                         }
                         this.b.i();
                         return;
                     default:
-                        bzo.q((asf) uaVar, "<unused var>");
+                        throwIfVar1IsNull((asf) uaVar, "<unused var>");
                         arw arwVar4 = this.b;
                         arwVar4.a.j(false);
                         arwVar4.i();
@@ -765,7 +773,7 @@ public final class arw extends ase {
                         arw arwVar2 = this.b;
                         CodeEditor codeEditor2 = arwVar2.aa;
                         dfn dfnVar = (dfn) uaVar;
-                        bzo.q(dfnVar, "event");
+                        throwIfVar1IsNull(dfnVar, "event");
                         if (!arwVar2.a.f || codeEditor2.dy()) {
                             return;
                         }
@@ -773,20 +781,20 @@ public final class arw extends ase {
                             arwVar2.k();
                             return;
                         }
-                        bzo.p(dfnVar.a, "getLeft(...)");
+                        throwIfVar1IsNull(dfnVar.a, "getLeft(...)");
                         codeEditor2.getDiagnostics();
                         arwVar2.k();
                         return;
                     case 1:
-                        bzo.q((dfb) uaVar, "<unused var>");
+                        throwIfVar1IsNull((dfb) uaVar, "<unused var>");
                         this.b.aa.dy();
                         return;
                     case 2:
-                        bzo.q((abg) uaVar, "<unused var>");
+                        throwIfVar1IsNull((abg) uaVar, "<unused var>");
                         this.b.j();
                         return;
                     case 3:
-                        bzo.q((drg) uaVar, "event");
+                        throwIfVar1IsNull((drg) uaVar, "event");
                         arw arwVar3 = this.b;
                         arwVar3.c.getClass();
                         if (arwVar3.z.isShowing()) {
@@ -797,25 +805,26 @@ public final class arw extends ase {
                             int iMakeMeasureSpec = View.MeasureSpec.makeMeasureSpec(width, Integer.MIN_VALUE);
                             ViewGroup viewGroup = (ViewGroup) akiVar2.j;
                             if (viewGroup == null) {
-                                bzo.ar("quickfixPanel");
+                                throwLateinitPropNotInitYet("quickfixPanel");
                                 throw null;
                             }
                             if (viewGroup.getVisibility() == 0) {
                                 ViewGroup viewGroup2 = (ViewGroup) akiVar2.j;
                                 if (viewGroup2 == null) {
-                                    bzo.ar("quickfixPanel");
+                                    throwLateinitPropNotInitYet("quickfixPanel");
                                     throw null;
                                 }
-                                viewGroup2.measure(iMakeMeasureSpec, View.MeasureSpec.makeMeasureSpec(i52, Integer.MIN_VALUE));
+                                viewGroup2.measure(iMakeMeasureSpec,
+                                        View.MeasureSpec.makeMeasureSpec(i52, Integer.MIN_VALUE));
                                 ViewGroup viewGroup3 = (ViewGroup) akiVar2.j;
                                 if (viewGroup3 == null) {
-                                    bzo.ar("quickfixPanel");
+                                    throwLateinitPropNotInitYet("quickfixPanel");
                                     throw null;
                                 }
                                 measuredHeight = viewGroup3.getMeasuredHeight();
                                 ViewGroup viewGroup4 = (ViewGroup) akiVar2.j;
                                 if (viewGroup4 == null) {
-                                    bzo.ar("quickfixPanel");
+                                    throwLateinitPropNotInitYet("quickfixPanel");
                                     throw null;
                                 }
                                 measuredWidth = viewGroup4.getMeasuredWidth();
@@ -832,26 +841,27 @@ public final class arw extends ase {
                             }
                             ViewGroup viewGroup5 = (ViewGroup) akiVar2.i;
                             if (viewGroup5 == null) {
-                                bzo.ar("messagePanel");
+                                throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             ViewGroup.LayoutParams layoutParams = viewGroup5.getLayoutParams();
                             layoutParams.height = -2;
                             ViewGroup viewGroup6 = (ViewGroup) akiVar2.i;
                             if (viewGroup6 == null) {
-                                bzo.ar("messagePanel");
+                                throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup6.setLayoutParams(layoutParams);
                             ViewGroup viewGroup7 = (ViewGroup) akiVar2.i;
                             if (viewGroup7 == null) {
-                                bzo.ar("messagePanel");
+                                throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
-                            viewGroup7.measure(iMakeMeasureSpec, View.MeasureSpec.makeMeasureSpec(i62, Integer.MIN_VALUE));
+                            viewGroup7.measure(iMakeMeasureSpec,
+                                    View.MeasureSpec.makeMeasureSpec(i62, Integer.MIN_VALUE));
                             ViewGroup viewGroup8 = (ViewGroup) akiVar2.i;
                             if (viewGroup8 == null) {
-                                bzo.ar("messagePanel");
+                                throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             int measuredHeight2 = viewGroup8.getMeasuredHeight();
@@ -861,13 +871,13 @@ public final class arw extends ase {
                             layoutParams.height = i62;
                             ViewGroup viewGroup9 = (ViewGroup) akiVar2.i;
                             if (viewGroup9 == null) {
-                                bzo.ar("messagePanel");
+                                throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup9.setLayoutParams(layoutParams);
                             ViewGroup viewGroup10 = (ViewGroup) akiVar2.i;
                             if (viewGroup10 == null) {
-                                bzo.ar("messagePanel");
+                                throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             int measuredWidth2 = viewGroup10.getMeasuredWidth();
@@ -882,14 +892,14 @@ public final class arw extends ase {
                         return;
                     case 4:
                         arx arxVar = (arx) uaVar;
-                        bzo.q(arxVar, "event");
+                        throwIfVar1IsNull(arxVar, "event");
                         if (arxVar.a) {
                             return;
                         }
                         this.b.i();
                         return;
                     default:
-                        bzo.q((asf) uaVar, "<unused var>");
+                        throwIfVar1IsNull((asf) uaVar, "<unused var>");
                         arw arwVar4 = this.b;
                         arwVar4.a.j(false);
                         arwVar4.i();
@@ -915,7 +925,7 @@ public final class arw extends ase {
                         arw arwVar2 = this.b;
                         CodeEditor codeEditor2 = arwVar2.aa;
                         dfn dfnVar = (dfn) uaVar;
-                        bzo.q(dfnVar, "event");
+                        throwIfVar1IsNull(dfnVar, "event");
                         if (!arwVar2.a.f || codeEditor2.dy()) {
                             return;
                         }
@@ -923,20 +933,20 @@ public final class arw extends ase {
                             arwVar2.k();
                             return;
                         }
-                        bzo.p(dfnVar.a, "getLeft(...)");
+                        throwIfVar1IsNull(dfnVar.a, "getLeft(...)");
                         codeEditor2.getDiagnostics();
                         arwVar2.k();
                         return;
                     case 1:
-                        bzo.q((dfb) uaVar, "<unused var>");
+                        throwIfVar1IsNull((dfb) uaVar, "<unused var>");
                         this.b.aa.dy();
                         return;
                     case 2:
-                        bzo.q((abg) uaVar, "<unused var>");
+                        throwIfVar1IsNull((abg) uaVar, "<unused var>");
                         this.b.j();
                         return;
                     case 3:
-                        bzo.q((drg) uaVar, "event");
+                        throwIfVar1IsNull((drg) uaVar, "event");
                         arw arwVar3 = this.b;
                         arwVar3.c.getClass();
                         if (arwVar3.z.isShowing()) {
@@ -947,25 +957,26 @@ public final class arw extends ase {
                             int iMakeMeasureSpec = View.MeasureSpec.makeMeasureSpec(width, Integer.MIN_VALUE);
                             ViewGroup viewGroup = (ViewGroup) akiVar2.j;
                             if (viewGroup == null) {
-                                bzo.ar("quickfixPanel");
+                                throwLateinitPropNotInitYet("quickfixPanel");
                                 throw null;
                             }
                             if (viewGroup.getVisibility() == 0) {
                                 ViewGroup viewGroup2 = (ViewGroup) akiVar2.j;
                                 if (viewGroup2 == null) {
-                                    bzo.ar("quickfixPanel");
+                                    throwLateinitPropNotInitYet("quickfixPanel");
                                     throw null;
                                 }
-                                viewGroup2.measure(iMakeMeasureSpec, View.MeasureSpec.makeMeasureSpec(i52, Integer.MIN_VALUE));
+                                viewGroup2.measure(iMakeMeasureSpec,
+                                        View.MeasureSpec.makeMeasureSpec(i52, Integer.MIN_VALUE));
                                 ViewGroup viewGroup3 = (ViewGroup) akiVar2.j;
                                 if (viewGroup3 == null) {
-                                    bzo.ar("quickfixPanel");
+                                    throwLateinitPropNotInitYet("quickfixPanel");
                                     throw null;
                                 }
                                 measuredHeight = viewGroup3.getMeasuredHeight();
                                 ViewGroup viewGroup4 = (ViewGroup) akiVar2.j;
                                 if (viewGroup4 == null) {
-                                    bzo.ar("quickfixPanel");
+                                    throwLateinitPropNotInitYet("quickfixPanel");
                                     throw null;
                                 }
                                 measuredWidth = viewGroup4.getMeasuredWidth();
@@ -982,26 +993,27 @@ public final class arw extends ase {
                             }
                             ViewGroup viewGroup5 = (ViewGroup) akiVar2.i;
                             if (viewGroup5 == null) {
-                                bzo.ar("messagePanel");
+                                throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             ViewGroup.LayoutParams layoutParams = viewGroup5.getLayoutParams();
                             layoutParams.height = -2;
                             ViewGroup viewGroup6 = (ViewGroup) akiVar2.i;
                             if (viewGroup6 == null) {
-                                bzo.ar("messagePanel");
+                                throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup6.setLayoutParams(layoutParams);
                             ViewGroup viewGroup7 = (ViewGroup) akiVar2.i;
                             if (viewGroup7 == null) {
-                                bzo.ar("messagePanel");
+                                throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
-                            viewGroup7.measure(iMakeMeasureSpec, View.MeasureSpec.makeMeasureSpec(i62, Integer.MIN_VALUE));
+                            viewGroup7.measure(iMakeMeasureSpec,
+                                    View.MeasureSpec.makeMeasureSpec(i62, Integer.MIN_VALUE));
                             ViewGroup viewGroup8 = (ViewGroup) akiVar2.i;
                             if (viewGroup8 == null) {
-                                bzo.ar("messagePanel");
+                                throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             int measuredHeight2 = viewGroup8.getMeasuredHeight();
@@ -1011,13 +1023,13 @@ public final class arw extends ase {
                             layoutParams.height = i62;
                             ViewGroup viewGroup9 = (ViewGroup) akiVar2.i;
                             if (viewGroup9 == null) {
-                                bzo.ar("messagePanel");
+                                throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup9.setLayoutParams(layoutParams);
                             ViewGroup viewGroup10 = (ViewGroup) akiVar2.i;
                             if (viewGroup10 == null) {
-                                bzo.ar("messagePanel");
+                                throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             int measuredWidth2 = viewGroup10.getMeasuredWidth();
@@ -1032,14 +1044,14 @@ public final class arw extends ase {
                         return;
                     case 4:
                         arx arxVar = (arx) uaVar;
-                        bzo.q(arxVar, "event");
+                        throwIfVar1IsNull(arxVar, "event");
                         if (arxVar.a) {
                             return;
                         }
                         this.b.i();
                         return;
                     default:
-                        bzo.q((asf) uaVar, "<unused var>");
+                        throwIfVar1IsNull((asf) uaVar, "<unused var>");
                         arw arwVar4 = this.b;
                         arwVar4.a.j(false);
                         arwVar4.i();
@@ -1050,14 +1062,14 @@ public final class arw extends ase {
         this.z.setOnDismissListener(new PopupWindow.OnDismissListener() { // from class: me.hd.wauxv.obf.aru
             @Override // android.widget.PopupWindow.OnDismissListener
             public final void onDismiss() {
-                this.a.c.b = false;
+                this.a.c.second = false;
             }
         });
         j();
     }
 
     public static final void g(arw arwVar, bmp bmpVar) {
-        arwVar.f = new csm(Float.valueOf(bmpVar.l.getX()), Float.valueOf(bmpVar.l.getY()));
+        arwVar.f = new Pair(Float.valueOf(bmpVar.l.getX()), Float.valueOf(bmpVar.l.getY()));
     }
 
     public static void h(arw arwVar, dh dhVar) {
@@ -1075,38 +1087,38 @@ public final class arw extends ase {
 
     public final void j() {
         arq colorScheme = this.aa.getColorScheme();
-        bzo.p(colorScheme, "getColorScheme(...)");
+        throwIfVar1IsNull(colorScheme, "getColorScheme(...)");
         aki akiVar = this.c;
         akiVar.getClass();
         SparseIntArray sparseIntArray = colorScheme.b;
         arw arwVar = (arw) akiVar.c;
         if (arwVar == null) {
-            bzo.ar("window");
+            throwLateinitPropNotInitYet("window");
             throw null;
         }
         CodeEditor codeEditor = arwVar.aa;
-        bzo.p(codeEditor, "getEditor(...)");
+        throwIfVar1IsNull(codeEditor, "getEditor(...)");
         TextView textView = (TextView) akiVar.e;
         if (textView == null) {
-            bzo.ar("briefMessageText");
+            throwLateinitPropNotInitYet("briefMessageText");
             throw null;
         }
         textView.setTextColor(sparseIntArray.get(54));
         TextView textView2 = (TextView) akiVar.f;
         if (textView2 == null) {
-            bzo.ar("detailMessageText");
+            throwLateinitPropNotInitYet("detailMessageText");
             throw null;
         }
         textView2.setTextColor(sparseIntArray.get(55));
         TextView textView3 = (TextView) akiVar.g;
         if (textView3 == null) {
-            bzo.ar("quickfixText");
+            throwLateinitPropNotInitYet("quickfixText");
             throw null;
         }
         textView3.setTextColor(sparseIntArray.get(56));
         TextView textView4 = (TextView) akiVar.h;
         if (textView4 == null) {
-            bzo.ar("moreActionText");
+            throwLateinitPropNotInitYet("moreActionText");
             throw null;
         }
         textView4.setTextColor(sparseIntArray.get(56));
@@ -1117,7 +1129,7 @@ public final class arw extends ase {
         if (view != null) {
             view.setBackground(gradientDrawable);
         } else {
-            bzo.ar("root");
+            throwLateinitPropNotInitYet("root");
             throw null;
         }
     }
@@ -1125,9 +1137,9 @@ public final class arw extends ase {
     public final void k() {
         if (this.a.f) {
             CodeEditor codeEditor = this.aa;
-            bzo.p(codeEditor, "getEditor(...)");
+            throwIfVar1IsNull(codeEditor, "getEditor(...)");
             aro aroVar = codeEditor.bx;
-            bzo.p(aroVar, "getComponent(...)");
+            throwIfVar1IsNull(aroVar, "getComponent(...)");
             if (aroVar.z.isShowing()) {
                 i();
             }

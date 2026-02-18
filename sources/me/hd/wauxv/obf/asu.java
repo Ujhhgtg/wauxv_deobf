@@ -37,7 +37,8 @@ public final class asu implements Runnable {
         if (f3 > 0.0f) {
             int i2 = asvVar.e;
             int i3 = (i2 == 0 || i2 == 1) ? codeEditor.getCursor().c.b : codeEditor.getCursor().d.b;
-            if (asvVar.b.b.getCurrX() > (codeEditor.eb() + codeEditor.j.r(i3, codeEditor.getText().y(i3).b)[1]) - (codeEditor.getWidth() * 0.85f)) {
+            if (asvVar.b.b.getCurrX() > (codeEditor.eb() + codeEditor.j.r(i3, codeEditor.getText().y(i3).b)[1])
+                    - (codeEditor.getWidth() * 0.85f)) {
                 f3 = 0.0f;
             }
         }
@@ -83,11 +84,11 @@ public final class asu implements Runnable {
             MotionEvent motionEvent2 = asvVar.z;
             int i4 = asvVar.e;
             if (i4 == 0) {
-                asvVar.c.h(motionEvent2);
+                asvVar.c.locateDex(motionEvent2);
             } else if (i4 == 1) {
-                asvVar.u.h(motionEvent2);
+                asvVar.u.locateDex(motionEvent2);
             } else if (i4 == 2) {
-                asvVar.v.h(motionEvent2);
+                asvVar.v.locateDex(motionEvent2);
             }
         }
         this.h++;

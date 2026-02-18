@@ -24,13 +24,13 @@ public final class dfz implements dfx, sr {
     public final dov v;
 
     public dfz(String str, emc emcVar, int i, List list, zd zdVar) {
-        bzo.q(str, "serialName");
+        throwIfVar1IsNull(str, "serialName");
         this.c = str;
         this.e = emcVar;
         this.n = i;
         ArrayList arrayList = zdVar.b;
-        bzo.q(arrayList, "<this>");
-        HashSet hashSet = new HashSet(bzo.ah(abb.ak(arrayList, 12)));
+        throwIfVar1IsNull(arrayList, "<this>");
+        HashSet hashSet = new HashSet(KotlinHelpers.ah(abb.ak(arrayList, 12)));
         aaz.x(arrayList, hashSet);
         this.o = hashSet;
         String[] strArr = (String[]) arrayList.toArray(new String[0]);
@@ -38,20 +38,20 @@ public final class dfz implements dfx, sr {
         this.q = cnh.n(zdVar.d);
         this.r = (List[]) zdVar.e.toArray(new List[0]);
         this.s = aaz.v(zdVar.f);
-        bzo.q(strArr, "<this>");
+        throwIfVar1IsNull(strArr, "<this>");
         boz bozVar = new boz(new bp(strArr, 3), 0);
         ArrayList arrayList2 = new ArrayList(abb.ak(bozVar, 10));
         Iterator it = bozVar.iterator();
         while (true) {
             aqf aqfVar = (aqf) it;
             if (!aqfVar.b.hasNext()) {
-                this.t = bzo.as(arrayList2);
+                this.t = KotlinHelpers.as(arrayList2);
                 this.u = cnh.n(list);
                 this.v = new dov(new cfx(this, 14));
                 return;
             }
             boy boyVar = (boy) aqfVar.next();
-            arrayList2.add(new csm(boyVar.b, Integer.valueOf(boyVar.a)));
+            arrayList2.add(new Pair(boyVar.b, Integer.valueOf(boyVar.a)));
         }
     }
 
@@ -76,13 +76,14 @@ public final class dfz implements dfx, sr {
         }
         if (obj instanceof dfz) {
             dfx dfxVar = (dfx) obj;
-            if (bzo.f(this.c, dfxVar.b()) && Arrays.equals(this.u, ((dfz) obj).u)) {
+            if (nullSafeIsEqual(this.c, dfxVar.b()) && Arrays.equals(this.u, ((dfz) obj).u)) {
                 int i = dfxVar.i();
                 int i2 = this.n;
                 if (i2 == i) {
                     for (int i3 = 0; i3 < i2; i3++) {
                         dfx[] dfxVarArr = this.q;
-                        if (bzo.f(dfxVarArr[i3].b(), dfxVar.l(i3).b()) && bzo.f(dfxVarArr[i3].h(), dfxVar.l(i3).h())) {
+                        if (nullSafeIsEqual(dfxVarArr[i3].b(), dfxVar.l(i3).b())
+                                && nullSafeIsEqual(dfxVarArr[i3].h(), dfxVar.l(i3).h())) {
                         }
                     }
                     return true;
@@ -99,7 +100,7 @@ public final class dfz implements dfx, sr {
 
     @Override // me.hd.wauxv.obf.dfx
     public final int g(String str) {
-        bzo.q(str, "name");
+        throwIfVar1IsNull(str, "name");
         Integer num = (Integer) this.t.get(str);
         if (num != null) {
             return num.intValue();

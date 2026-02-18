@@ -66,7 +66,8 @@ public abstract class cvp {
         bzgVar.n = true;
         if (bzgVar.j <= 0) {
             bzgVar = bzg.a;
-            bzo.o(bzgVar, "null cannot be cast to non-null type kotlin.collections.Map<K of kotlin.collections.builders.MapBuilder, V of kotlin.collections.builders.MapBuilder>");
+            throwIfVar1IsNull(bzgVar,
+                    "null cannot be cast to non-null type kotlin.collections.Map<K of kotlin.collections.builders.MapBuilder, V of kotlin.collections.builders.MapBuilder>");
         }
         a = bzgVar;
     }

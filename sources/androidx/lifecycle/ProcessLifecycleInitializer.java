@@ -11,7 +11,7 @@ import me.hd.wauxv.obf.bpf;
 import me.hd.wauxv.obf.bug;
 import me.hd.wauxv.obf.buj;
 import me.hd.wauxv.obf.buk;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cvs;
 import me.hd.wauxv.obf.cvt;
 import me.hd.wauxv.obf.jx;
@@ -26,15 +26,16 @@ public final class ProcessLifecycleInitializer implements bpf {
 
     @Override // me.hd.wauxv.obf.bpf
     public final Object b(Context context) {
-        bzo.q(context, f.X);
+        throwIfVar1IsNull(context, "context");
         jx jxVarJ = jx.j(context);
-        bzo.p(jxVarJ, "getInstance(...)");
+        throwIfVar1IsNull(jxVarJ, "getInstance(...)");
         if (!((HashSet) jxVarJ.f).contains(ProcessLifecycleInitializer.class)) {
-            throw new IllegalStateException("ProcessLifecycleInitializer cannot be initialized lazily.\n               Please ensure that you have:\n               <meta-data\n                   android:name='androidx.lifecycle.ProcessLifecycleInitializer'\n                   android:value='androidx.startup' />\n               under InitializationProvider in your AndroidManifest.xml");
+            throw new IllegalStateException(
+                    "ProcessLifecycleInitializer cannot be initialized lazily.\n               Please ensure that you have:\n               <meta-data\n                   android:name='androidx.lifecycle.ProcessLifecycleInitializer'\n                   android:value='androidx.startup' />\n               under InitializationProvider in your AndroidManifest.xml");
         }
         if (!buk.a.getAndSet(true)) {
             Context applicationContext = context.getApplicationContext();
-            bzo.o(applicationContext, "null cannot be cast to non-null type android.app.Application");
+            throwIfVar1IsNull(applicationContext, "null cannot be cast to non-null type android.app.Application");
             ((Application) applicationContext).registerActivityLifecycleCallbacks(new buj());
         }
         cvt cvtVar = cvt.a;
@@ -42,7 +43,7 @@ public final class ProcessLifecycleInitializer implements bpf {
         cvtVar.f = new Handler();
         cvtVar.g.m(bug.ON_CREATE);
         Context applicationContext2 = context.getApplicationContext();
-        bzo.o(applicationContext2, "null cannot be cast to non-null type android.app.Application");
+        throwIfVar1IsNull(applicationContext2, "null cannot be cast to non-null type android.app.Application");
         ((Application) applicationContext2).registerActivityLifecycleCallbacks(new cvs(cvtVar));
         return cvtVar;
     }

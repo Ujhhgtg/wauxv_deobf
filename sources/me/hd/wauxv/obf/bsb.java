@@ -14,7 +14,7 @@ public final class bsb implements btd {
     @Override // me.hd.wauxv.obf.btd
     public final void c(avt avtVar, Object obj) {
         brx brxVar = (brx) obj;
-        bzo.q(brxVar, "value");
+        throwIfVar1IsNull(brxVar, "value");
         cnb.l(avtVar);
         if (brxVar instanceof bsp) {
             avtVar.x(bsq.b, brxVar);
@@ -22,7 +22,7 @@ public final class bsb implements btd {
             avtVar.x(bsn.b, brxVar);
         } else {
             if (!(brxVar instanceof brp)) {
-                throw new abt();
+                throw new QueryDidNotReturnUniqueResultRuntimeException();
             }
             avtVar.x(brr.b, brxVar);
         }

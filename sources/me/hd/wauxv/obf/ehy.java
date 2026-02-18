@@ -28,7 +28,8 @@ public final class ehy {
             return false;
         }
         ehy ehyVar = (ehy) obj;
-        return bzo.f(this.a, ehyVar.a) && bzo.f(this.b, ehyVar.b) && bzo.f(this.c, ehyVar.c) && bzo.f(this.d, ehyVar.d);
+        return nullSafeIsEqual(this.a, ehyVar.a) && nullSafeIsEqual(this.b, ehyVar.b)
+                && nullSafeIsEqual(this.c, ehyVar.c) && nullSafeIsEqual(this.d, ehyVar.d);
     }
 
     public final int hashCode() {
@@ -48,6 +49,6 @@ public final class ehy {
         dkz.ad(sb, this.a, -332623742237482L);
         bjs.w(sb, this.b, -333053238967082L);
         yg.u(sb, this.c, -332997404392234L);
-        return bjs.q(sb, this.d, ')');
+        return concat(sb, this.d, ')');
     }
 }

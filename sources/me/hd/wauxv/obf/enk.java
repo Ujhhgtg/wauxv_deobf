@@ -12,7 +12,7 @@ public final class enk extends dex {
         super(ahhVar._w(enlVar) == null ? ahhVar._v(enlVar) : ahhVar, doiVar);
         this.i = new ThreadLocal();
         ahh ahhVar2 = doiVar.m;
-        bzo.n(ahhVar2);
+        throwIfVar1IsNull(ahhVar2);
         if (ahhVar2._w(arj.a) instanceof ahj) {
             return;
         }
@@ -34,9 +34,9 @@ public final class enk extends dex {
 
     public final void at() {
         if (this.threadLocalIsSet) {
-            csm csmVar = (csm) this.i.get();
-            if (csmVar != null) {
-                bhv.ag((ahh) csmVar.a, csmVar.b);
+            Pair pairVar = (Pair) this.i.get();
+            if (pairVar != null) {
+                bhv.ag((ahh) pairVar.first, pairVar.second);
             }
             this.i.remove();
         }
@@ -44,7 +44,7 @@ public final class enk extends dex {
 
     public final void au(ahh ahhVar, Object obj) {
         this.threadLocalIsSet = true;
-        this.i.set(new csm(ahhVar, obj));
+        this.i.set(new Pair(ahhVar, obj));
     }
 
     @Override // me.hd.wauxv.obf.dex, me.hd.wauxv.obf.brm
@@ -53,9 +53,9 @@ public final class enk extends dex {
         Object objX = aye.x(obj);
         doi doiVar = this.aq;
         ahh ahhVar = doiVar.m;
-        bzo.n(ahhVar);
+        throwIfVar1IsNull(ahhVar);
         Object objAl = bhv.al(ahhVar, null);
-        enk enkVarAu = objAl != bhv.q ? bzo.au(doiVar, ahhVar, objAl) : null;
+        enk enkVarAu = objAl != bhv.q ? KotlinHelpers.au(doiVar, ahhVar, objAl) : null;
         try {
             doiVar._bn(objX);
         } finally {

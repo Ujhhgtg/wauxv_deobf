@@ -14,9 +14,12 @@ import net.bytebuddy.asm.Advice;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class aho implements Executor, Closeable {
-    public static final /* synthetic */ AtomicLongFieldUpdater a = AtomicLongFieldUpdater.newUpdater(aho.class, "parkedWorkersStack$volatile");
-    public static final /* synthetic */ AtomicLongFieldUpdater b = AtomicLongFieldUpdater.newUpdater(aho.class, "controlState$volatile");
-    public static final /* synthetic */ AtomicIntegerFieldUpdater c = AtomicIntegerFieldUpdater.newUpdater(aho.class, "_isTerminated$volatile");
+    public static final /* synthetic */ AtomicLongFieldUpdater a = AtomicLongFieldUpdater.newUpdater(aho.class,
+            "parkedWorkersStack$volatile");
+    public static final /* synthetic */ AtomicLongFieldUpdater b = AtomicLongFieldUpdater.newUpdater(aho.class,
+            "controlState$volatile");
+    public static final /* synthetic */ AtomicIntegerFieldUpdater c = AtomicIntegerFieldUpdater.newUpdater(aho.class,
+            "_isTerminated$volatile");
     public static final auj d = new auj("NOT_IN_STACK", 1);
     private volatile /* synthetic */ int _isTerminated$volatile;
     private volatile /* synthetic */ long controlState$volatile;
@@ -38,10 +41,13 @@ public final class aho implements Executor, Closeable {
             throw new IllegalArgumentException(yg.f(i, "Core pool size ", " should be at least 1").toString());
         }
         if (i2 < i) {
-            throw new IllegalArgumentException(dkz.p(i2, "Max pool size ", " should be greater than or equals to core pool size ", i).toString());
+            throw new IllegalArgumentException(
+                    dkz.p(i2, "Max pool size ", " should be greater than or equals to core pool size ", i).toString());
         }
         if (i2 > 2097150) {
-            throw new IllegalArgumentException(yg.f(i2, "Max pool size ", " should not exceed maximal supported number of threads 2097150").toString());
+            throw new IllegalArgumentException(
+                    yg.f(i2, "Max pool size ", " should not exceed maximal supported number of threads 2097150")
+                            .toString());
         }
         if (j <= 0) {
             throw new IllegalArgumentException(("Idle worker keep alive time " + j + " must be positive").toString());
@@ -52,7 +58,7 @@ public final class aho implements Executor, Closeable {
         this.controlState$volatile = ((long) i) << 42;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:39:0x008a  */
+    /* JADX WARN: Found duplicated region for block: B:39:0x008a */
     @Override // java.io.Closeable, java.lang.AutoCloseable
     public final void close() throws InterruptedException {
         int i;
@@ -60,7 +66,7 @@ public final class aho implements Executor, Closeable {
         if (c.compareAndSet(this, 0, 1)) {
             Thread threadCurrentThread = Thread.currentThread();
             ahm ahmVar = threadCurrentThread instanceof ahm ? (ahm) threadCurrentThread : null;
-            if (ahmVar == null || !bzo.f(ahmVar.i, this)) {
+            if (ahmVar == null || !nullSafeIsEqual(ahmVar.i, this)) {
                 ahmVar = null;
             }
             synchronized (this.k) {
@@ -70,7 +76,7 @@ public final class aho implements Executor, Closeable {
                 int i2 = 1;
                 while (true) {
                     Object objB = this.k.b(i2);
-                    bzo.n(objB);
+                    throwIfVar1IsNull(objB);
                     ahm ahmVar2 = (ahm) objB;
                     if (ahmVar2 != ahmVar) {
                         while (ahmVar2.getState() != Thread.State.TERMINATED) {
@@ -192,7 +198,7 @@ public final class aho implements Executor, Closeable {
         long jAddAndGet = z2 ? atomicLongFieldUpdater.addAndGet(this, 2097152L) : 0L;
         Thread threadCurrentThread = Thread.currentThread();
         ahm ahmVar = threadCurrentThread instanceof ahm ? (ahm) threadCurrentThread : null;
-        if (ahmVar == null || !bzo.f(ahmVar.i, this)) {
+        if (ahmVar == null || !nullSafeIsEqual(ahmVar.i, this)) {
             ahmVar = null;
         }
         if (ahmVar != null && (ahnVar = ahmVar.d) != ahn.e && (dpzVar.ad || ahnVar != ahn.b)) {
@@ -354,7 +360,8 @@ public final class aho implements Executor, Closeable {
             if (ahmVar != null) {
                 ewb ewbVar = ahmVar.b;
                 ewbVar.getClass();
-                int i7 = ewb.a.get(ewbVar) != null ? (ewb.b.get(ewbVar) - ewb.c.get(ewbVar)) + 1 : ewb.b.get(ewbVar) - ewb.c.get(ewbVar);
+                int i7 = ewb.a.get(ewbVar) != null ? (ewb.b.get(ewbVar) - ewb.c.get(ewbVar)) + 1
+                        : ewb.b.get(ewbVar) - ewb.c.get(ewbVar);
                 int iOrdinal = ahmVar.d.ordinal();
                 if (iOrdinal == 0) {
                     i++;
@@ -380,7 +387,7 @@ public final class aho implements Executor, Closeable {
                     }
                 } else {
                     if (iOrdinal != 4) {
-                        throw new abt();
+                        throw new QueryDidNotReturnUniqueResultRuntimeException();
                     }
                     i5++;
                 }

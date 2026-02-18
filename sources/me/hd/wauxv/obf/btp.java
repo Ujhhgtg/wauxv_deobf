@@ -19,7 +19,7 @@ public abstract class btp implements bgq, Serializable {
     public String toString() {
         dal.a.getClass();
         String strA = dam.a(this);
-        bzo.p(strA, "renderLambdaToString(...)");
+        throwIfVar1IsNull(strA, "renderLambdaToString(...)");
         return strA;
     }
 }

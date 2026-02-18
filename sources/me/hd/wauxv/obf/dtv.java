@@ -53,12 +53,19 @@ public final class dtv {
     static {
         cfh cfhVar = new cfh(29);
         btx btxVar = btx.a;
-        a = new btt[]{null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, ewz.am(btxVar, cfhVar), null, ewz.am(btxVar, new dtr(0)), null};
+        a = new btt[] { null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null,
+                null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null,
+                null, null, null, null, null, ewz.am(btxVar, cfhVar), null, ewz.am(btxVar, new dtr(0)), null };
     }
 
-    public /* synthetic */ dtv(int i, int i2, String str, Integer num, String str2, String str3, Integer num2, String str4, Integer num3, Integer num4, String str5, due dueVar, String str6, Integer num5, Integer num6, Integer num7, String str7, Integer num8, String str8, String str9, String str10, String str11, Integer num9, String str12, String str13, Integer num10, Long l, String str14, String str15, Integer num11, String str16, String str17, Integer num12, String str18, String str19, Boolean bool, String str20, String str21, Float f, Integer num13, List list, String str22, List list2, dub dubVar) {
+    public /* synthetic */ dtv(int i, int i2, String str, Integer num, String str2, String str3, Integer num2,
+            String str4, Integer num3, Integer num4, String str5, due dueVar, String str6, Integer num5, Integer num6,
+            Integer num7, String str7, Integer num8, String str8, String str9, String str10, String str11, Integer num9,
+            String str12, String str13, Integer num10, Long l, String str14, String str15, Integer num11, String str16,
+            String str17, Integer num12, String str18, String str19, Boolean bool, String str20, String str21, Float f,
+            Integer num13, List list, String str22, List list2, dub dubVar) {
         if ((1023 != (i2 & 1023)) || (-1 != i)) {
-            bht.ag(new int[]{i, i2}, new int[]{-1, 1023}, dtt.b.getDescriptor());
+            bht.ag(new int[] { i, i2 }, new int[] { -1, 1023 }, dtt.b.getDescriptor());
             throw null;
         }
         this.b = str;
@@ -113,7 +120,27 @@ public final class dtv {
             return false;
         }
         dtv dtvVar = (dtv) obj;
-        return bzo.f(this.b, dtvVar.b) && bzo.f(this.c, dtvVar.c) && bzo.f(this.d, dtvVar.d) && bzo.f(this.e, dtvVar.e) && bzo.f(this.f, dtvVar.f) && bzo.f(this.g, dtvVar.g) && bzo.f(this.h, dtvVar.h) && bzo.f(this.i, dtvVar.i) && bzo.f(this.j, dtvVar.j) && bzo.f(this.k, dtvVar.k) && bzo.f(this.l, dtvVar.l) && bzo.f(this.m, dtvVar.m) && bzo.f(this.n, dtvVar.n) && bzo.f(this.o, dtvVar.o) && bzo.f(this.p, dtvVar.p) && bzo.f(this.q, dtvVar.q) && bzo.f(this.r, dtvVar.r) && bzo.f(this.s, dtvVar.s) && bzo.f(this.t, dtvVar.t) && bzo.f(this.u, dtvVar.u) && bzo.f(this.v, dtvVar.v) && bzo.f(this.w, dtvVar.w) && bzo.f(this.x, dtvVar.x) && bzo.f(this.y, dtvVar.y) && bzo.f(this.z, dtvVar.z) && bzo.f(this.aa, dtvVar.aa) && bzo.f(this.ab, dtvVar.ab) && bzo.f(this.ac, dtvVar.ac) && bzo.f(this.ad, dtvVar.ad) && bzo.f(this.ae, dtvVar.ae) && bzo.f(this.af, dtvVar.af) && bzo.f(this.ag, dtvVar.ag) && bzo.f(this.ah, dtvVar.ah) && bzo.f(this.ai, dtvVar.ai) && bzo.f(this.aj, dtvVar.aj) && bzo.f(this.ak, dtvVar.ak) && bzo.f(this.al, dtvVar.al) && bzo.f(this.am, dtvVar.am) && bzo.f(this.an, dtvVar.an) && bzo.f(this.ao, dtvVar.ao) && bzo.f(this.ap, dtvVar.ap) && bzo.f(this.aq, dtvVar.aq);
+        return nullSafeIsEqual(this.b, dtvVar.b) && nullSafeIsEqual(this.c, dtvVar.c)
+                && nullSafeIsEqual(this.d, dtvVar.d) && nullSafeIsEqual(this.e, dtvVar.e)
+                && nullSafeIsEqual(this.f, dtvVar.f) && nullSafeIsEqual(this.g, dtvVar.g)
+                && nullSafeIsEqual(this.h, dtvVar.h) && nullSafeIsEqual(this.i, dtvVar.i)
+                && nullSafeIsEqual(this.j, dtvVar.j) && nullSafeIsEqual(this.k, dtvVar.k)
+                && nullSafeIsEqual(this.l, dtvVar.l) && nullSafeIsEqual(this.m, dtvVar.m)
+                && nullSafeIsEqual(this.n, dtvVar.n) && nullSafeIsEqual(this.o, dtvVar.o)
+                && nullSafeIsEqual(this.p, dtvVar.p) && nullSafeIsEqual(this.q, dtvVar.q)
+                && nullSafeIsEqual(this.r, dtvVar.r) && nullSafeIsEqual(this.s, dtvVar.s)
+                && nullSafeIsEqual(this.t, dtvVar.t) && nullSafeIsEqual(this.u, dtvVar.u)
+                && nullSafeIsEqual(this.v, dtvVar.v) && nullSafeIsEqual(this.w, dtvVar.w)
+                && nullSafeIsEqual(this.x, dtvVar.x) && nullSafeIsEqual(this.y, dtvVar.y)
+                && nullSafeIsEqual(this.z, dtvVar.z) && nullSafeIsEqual(this.aa, dtvVar.aa)
+                && nullSafeIsEqual(this.ab, dtvVar.ab) && nullSafeIsEqual(this.ac, dtvVar.ac)
+                && nullSafeIsEqual(this.ad, dtvVar.ad) && nullSafeIsEqual(this.ae, dtvVar.ae)
+                && nullSafeIsEqual(this.af, dtvVar.af) && nullSafeIsEqual(this.ag, dtvVar.ag)
+                && nullSafeIsEqual(this.ah, dtvVar.ah) && nullSafeIsEqual(this.ai, dtvVar.ai)
+                && nullSafeIsEqual(this.aj, dtvVar.aj) && nullSafeIsEqual(this.ak, dtvVar.ak)
+                && nullSafeIsEqual(this.al, dtvVar.al) && nullSafeIsEqual(this.am, dtvVar.am)
+                && nullSafeIsEqual(this.an, dtvVar.an) && nullSafeIsEqual(this.ao, dtvVar.ao)
+                && nullSafeIsEqual(this.ap, dtvVar.ap) && nullSafeIsEqual(this.aq, dtvVar.aq);
     }
 
     public final int hashCode() {

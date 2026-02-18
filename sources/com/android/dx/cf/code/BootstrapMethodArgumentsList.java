@@ -24,8 +24,11 @@ public class BootstrapMethodArgumentsList extends FixedSizeList {
     }
 
     public void set(int i, Constant constant) {
-        if (!(constant instanceof CstString) && !(constant instanceof CstType) && !(constant instanceof CstInteger) && !(constant instanceof CstLong) && !(constant instanceof CstFloat) && !(constant instanceof CstDouble) && !(constant instanceof CstMethodHandle) && !(constant instanceof CstProtoRef)) {
-            throw new IllegalArgumentException(bjs.l(constant.getClass(), "bad type for bootstrap argument: "));
+        if (!(constant instanceof CstString) && !(constant instanceof CstType) && !(constant instanceof CstInteger)
+                && !(constant instanceof CstLong) && !(constant instanceof CstFloat) && !(constant instanceof CstDouble)
+                && !(constant instanceof CstMethodHandle) && !(constant instanceof CstProtoRef)) {
+            throw new IllegalArgumentException(
+                    concatVar2Var1(constant.getClass(), "bad type for bootstrap argument: "));
         }
         set0(i, constant);
     }

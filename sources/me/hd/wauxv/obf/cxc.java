@@ -19,7 +19,7 @@ public class cxc implements esn {
 
     public void b(String str) {
         byte b;
-        bzo.q(str, "value");
+        throwIfVar1IsNull(str, "value");
         ek ekVar = (ek) this.i;
         ekVar.j(ekVar.c, str.length() + 2);
         char[] cArr = (char[]) ekVar.d;
@@ -45,7 +45,7 @@ public class cxc implements esn {
                         i4 = i6;
                     } else if (b == 1) {
                         String str2 = dng.a[cCharAt];
-                        bzo.n(str2);
+                        throwIfVar1IsNull(str2);
                         ekVar.j(i4, str2.length());
                         str2.getChars(0, str2.length(), (char[]) ekVar.d, i4);
                         int length3 = str2.length() + i4;
@@ -90,7 +90,7 @@ public class cxc implements esn {
         return this.h;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:21:0x0039  */
+    /* JADX WARN: Found duplicated region for block: B:21:0x0039 */
     public boolean k(int i, CharSequence charSequence) {
         if (charSequence == null || i < 0 || charSequence.length() - i < 0) {
             throw new IllegalArgumentException();
@@ -148,7 +148,7 @@ public class cxc implements esn {
     }
 
     public void n(String str) {
-        bzo.q(str, "v");
+        throwIfVar1IsNull(str, "v");
         ((ek) this.i).u(str);
     }
 
@@ -169,7 +169,7 @@ public class cxc implements esn {
     public void p() {
     }
 
-    /* JADX WARN: Found duplicated region for block: B:33:0x007c  */
+    /* JADX WARN: Found duplicated region for block: B:33:0x007c */
     @Override // me.hd.wauxv.obf.esn
     public evr q(View view, evr evrVar, baw bawVar) {
         boolean z;

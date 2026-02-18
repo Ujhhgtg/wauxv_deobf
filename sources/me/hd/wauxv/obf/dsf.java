@@ -12,7 +12,8 @@ public final class dsf {
     public final Integer f;
     public final Integer g;
 
-    public /* synthetic */ dsf(int i, String str, String str2, String str3, String str4, String str5, Integer num, Integer num2) {
+    public /* synthetic */ dsf(int i, String str, String str2, String str3, String str4, String str5, Integer num,
+            Integer num2) {
         if (127 != (i & 127)) {
             bht.ah(i, 127, dsd.b.getDescriptor());
             throw null;
@@ -34,7 +35,10 @@ public final class dsf {
             return false;
         }
         dsf dsfVar = (dsf) obj;
-        return bzo.f(this.a, dsfVar.a) && bzo.f(this.b, dsfVar.b) && bzo.f(this.c, dsfVar.c) && bzo.f(this.d, dsfVar.d) && bzo.f(this.e, dsfVar.e) && bzo.f(this.f, dsfVar.f) && bzo.f(this.g, dsfVar.g);
+        return nullSafeIsEqual(this.a, dsfVar.a) && nullSafeIsEqual(this.b, dsfVar.b)
+                && nullSafeIsEqual(this.c, dsfVar.c) && nullSafeIsEqual(this.d, dsfVar.d)
+                && nullSafeIsEqual(this.e, dsfVar.e) && nullSafeIsEqual(this.f, dsfVar.f)
+                && nullSafeIsEqual(this.g, dsfVar.g);
     }
 
     public final int hashCode() {
@@ -63,6 +67,6 @@ public final class dsf {
         yg.u(sb, this.d, -149434797128490L);
         yg.u(sb, this.e, -149421912226602L);
         bjs.w(sb, this.f, -149331717913386L);
-        return bjs.p(sb, this.g, ')');
+        return concat(sb, this.g, ')');
     }
 }

@@ -21,7 +21,7 @@ import me.hd.wauxv.obf.bdz;
 import me.hd.wauxv.obf.beg;
 import me.hd.wauxv.obf.bfb;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cya;
 import me.hd.wauxv.obf.eqo;
 import me.hd.wauxv.obf.eqz;
@@ -45,31 +45,34 @@ public final class FragmentContainerView extends FrameLayout {
     }
 
     @Override // android.view.ViewGroup
-    public final void addView(View view, int i, ViewGroup.LayoutParams layoutParams) {
-        bzo.q(view, "child");
-        Object tag = view.getTag(R.id.fragment_container_view_tag);
+    public final void addView(View child, int i, ViewGroup.LayoutParams layoutParams) {
+        throwIfVar1IsNull(child, "child");
+        Object tag = child.getTag(R.id.fragment_container_view_tag);
         if ((tag instanceof bdj ? (bdj) tag : null) != null) {
-            super.addView(view, i, layoutParams);
+            super.addView(child, i, layoutParams);
             return;
         }
-        throw new IllegalStateException(("Views added to a FragmentContainerView must be associated with a Fragment. View " + view + " is not associated with a Fragment.").toString());
+        throw new IllegalStateException(
+                ("Views added to a FragmentContainerView must be associated with a Fragment. View " + child
+                        + " is not associated with a Fragment.").toString());
     }
 
     @Override // android.view.ViewGroup, android.view.View
-    public final WindowInsets dispatchApplyWindowInsets(WindowInsets windowInsets) {
+    public final WindowInsets dispatchApplyWindowInsets(WindowInsets insets) {
         evr evrVarD;
-        bzo.q(windowInsets, "insets");
-        evr evrVarD2 = evr.d(null, windowInsets);
+        throwIfVar1IsNull(insets, "insets");
+        evr evrVarD2 = evr.d(null, insets);
         View.OnApplyWindowInsetsListener onApplyWindowInsetsListener = this.c;
         if (onApplyWindowInsetsListener != null) {
-            WindowInsets windowInsetsOnApplyWindowInsets = onApplyWindowInsetsListener.onApplyWindowInsets(this, windowInsets);
-            bzo.p(windowInsetsOnApplyWindowInsets, "onApplyWindowInsetsListe…lyWindowInsets(v, insets)");
+            WindowInsets windowInsetsOnApplyWindowInsets = onApplyWindowInsetsListener.onApplyWindowInsets(this,
+                    insets);
+            throwIfVar1IsNull(windowInsetsOnApplyWindowInsets, "onApplyWindowInsetsListe…lyWindowInsets(v, insets)");
             evrVarD = evr.d(null, windowInsetsOnApplyWindowInsets);
         } else {
             WeakHashMap weakHashMap = eqz.a;
             WindowInsets windowInsetsI = evrVarD2.i();
             if (windowInsetsI != null) {
-                WindowInsets windowInsetsB = eqo.b(this, windowInsetsI);
+                WindowInsets windowInsetsB = eqo.tryGetClassByName(this, windowInsetsI);
                 if (!windowInsetsB.equals(windowInsetsI)) {
                     evrVarD2 = evr.d(this, windowInsetsB);
                 }
@@ -82,12 +85,12 @@ public final class FragmentContainerView extends FrameLayout {
                 eqz.h(getChildAt(i), evrVarD);
             }
         }
-        return windowInsets;
+        return insets;
     }
 
     @Override // android.view.ViewGroup, android.view.View
     public final void dispatchDraw(Canvas canvas) {
-        bzo.q(canvas, "canvas");
+        throwIfVar1IsNull(canvas, "canvas");
         if (this.d) {
             Iterator it = this.a.iterator();
             while (it.hasNext()) {
@@ -99,8 +102,8 @@ public final class FragmentContainerView extends FrameLayout {
 
     @Override // android.view.ViewGroup
     public final boolean drawChild(Canvas canvas, View view, long j) {
-        bzo.q(canvas, "canvas");
-        bzo.q(view, "child");
+        throwIfVar1IsNull(canvas, "canvas");
+        throwIfVar1IsNull(view, "child");
         if (this.d) {
             ArrayList arrayList = this.a;
             if (!arrayList.isEmpty() && arrayList.contains(view)) {
@@ -118,7 +121,7 @@ public final class FragmentContainerView extends FrameLayout {
 
     @Override // android.view.ViewGroup
     public final void endViewTransition(View view) {
-        bzo.q(view, "view");
+        throwIfVar1IsNull(view, "view");
         this.b.remove(view);
         if (this.a.remove(view)) {
             this.d = true;
@@ -146,7 +149,8 @@ public final class FragmentContainerView extends FrameLayout {
             view = parent instanceof View ? (View) parent : null;
         }
         if (bdjVar == null) {
-            for (Context context = getContext(); context instanceof ContextWrapper; context = ((ContextWrapper) context).getBaseContext()) {
+            for (Context context = getContext(); context instanceof ContextWrapper; context = ((ContextWrapper) context)
+                    .getBaseContext()) {
                 if (context instanceof hb) {
                     hbVar = (hb) context;
                     break;
@@ -158,7 +162,8 @@ public final class FragmentContainerView extends FrameLayout {
             begVarCp = ((bdm) hbVar.c.v).g;
         } else {
             if (!bdjVar.cv()) {
-                throw new IllegalStateException("The Fragment " + bdjVar + " that owns View " + this + " has already been destroyed. Nested fragments should always use the child FragmentManager.");
+                throw new IllegalStateException("The Fragment " + bdjVar + " that owns View " + this
+                        + " has already been destroyed. Nested fragments should always use the child FragmentManager.");
             }
             begVarCp = bdjVar.cp();
         }
@@ -167,7 +172,7 @@ public final class FragmentContainerView extends FrameLayout {
 
     @Override // android.view.View
     public final WindowInsets onApplyWindowInsets(WindowInsets windowInsets) {
-        bzo.q(windowInsets, "insets");
+        throwIfVar1IsNull(windowInsets, "insets");
         return windowInsets;
     }
 
@@ -181,7 +186,7 @@ public final class FragmentContainerView extends FrameLayout {
                 return;
             } else {
                 View childAt = getChildAt(childCount);
-                bzo.p(childAt, "view");
+                throwIfVar1IsNull(childAt, "view");
                 e(childAt);
             }
         }
@@ -189,7 +194,7 @@ public final class FragmentContainerView extends FrameLayout {
 
     @Override // android.view.ViewGroup, android.view.ViewManager
     public final void removeView(View view) {
-        bzo.q(view, "view");
+        throwIfVar1IsNull(view, "view");
         e(view);
         super.removeView(view);
     }
@@ -197,14 +202,14 @@ public final class FragmentContainerView extends FrameLayout {
     @Override // android.view.ViewGroup
     public final void removeViewAt(int i) {
         View childAt = getChildAt(i);
-        bzo.p(childAt, "view");
+        throwIfVar1IsNull(childAt, "view");
         e(childAt);
         super.removeViewAt(i);
     }
 
     @Override // android.view.ViewGroup
     public final void removeViewInLayout(View view) {
-        bzo.q(view, "view");
+        throwIfVar1IsNull(view, "view");
         e(view);
         super.removeViewInLayout(view);
     }
@@ -214,7 +219,7 @@ public final class FragmentContainerView extends FrameLayout {
         int i3 = i + i2;
         for (int i4 = i; i4 < i3; i4++) {
             View childAt = getChildAt(i4);
-            bzo.p(childAt, "view");
+            throwIfVar1IsNull(childAt, "view");
             e(childAt);
         }
         super.removeViews(i, i2);
@@ -225,7 +230,7 @@ public final class FragmentContainerView extends FrameLayout {
         int i3 = i + i2;
         for (int i4 = i; i4 < i3; i4++) {
             View childAt = getChildAt(i4);
-            bzo.p(childAt, "view");
+            throwIfVar1IsNull(childAt, "view");
             e(childAt);
         }
         super.removeViewsInLayout(i, i2);
@@ -237,7 +242,8 @@ public final class FragmentContainerView extends FrameLayout {
 
     @Override // android.view.ViewGroup
     public void setLayoutTransition(LayoutTransition layoutTransition) {
-        throw new UnsupportedOperationException("FragmentContainerView does not support Layout Transitions or animateLayoutChanges=\"true\".");
+        throw new UnsupportedOperationException(
+                "FragmentContainerView does not support Layout Transitions or animateLayoutChanges=\"true\".");
     }
 
     @Override // android.view.View
@@ -247,18 +253,21 @@ public final class FragmentContainerView extends FrameLayout {
 
     @Override // android.view.ViewGroup
     public final void startViewTransition(View view) {
-        bzo.q(view, "view");
+        throwIfVar1IsNull(view, "view");
         if (view.getParent() == this) {
             this.b.add(view);
         }
         super.startViewTransition(view);
     }
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'super' call moved to the top of the method (can break code
+     * semantics)
+     */
     public FragmentContainerView(Context context, AttributeSet attributeSet) {
         String str;
         super(context, attributeSet, 0);
-        bzo.q(context, f.X);
+        throwIfVar1IsNull(context, "context");
         this.a = new ArrayList();
         this.b = new ArrayList();
         this.d = true;
@@ -275,16 +284,20 @@ public final class FragmentContainerView extends FrameLayout {
             if (classAttribute == null || isInEditMode()) {
                 return;
             }
-            throw new UnsupportedOperationException("FragmentContainerView must be within a FragmentActivity to use " + str + "=\"" + classAttribute + '\"');
+            throw new UnsupportedOperationException("FragmentContainerView must be within a FragmentActivity to use "
+                    + str + "=\"" + classAttribute + '\"');
         }
     }
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'super' call moved to the top of the method (can break code
+     * semantics)
+     */
     public FragmentContainerView(Context context, AttributeSet attributeSet, beg begVar) {
         View view;
         super(context, attributeSet);
-        bzo.q(context, f.X);
-        bzo.q(attributeSet, "attrs");
+        throwIfVar1IsNull(context, "context");
+        throwIfVar1IsNull(attributeSet, "attrs");
         this.a = new ArrayList();
         this.b = new ArrayList();
         this.d = true;
@@ -297,12 +310,13 @@ public final class FragmentContainerView extends FrameLayout {
         bdj bdjVarCa = begVar.ca(id);
         if (classAttribute != null && bdjVarCa == null) {
             if (id == -1) {
-                throw new IllegalStateException(bjs.o("FragmentContainerView must have an android:id to add Fragment ", classAttribute, string != null ? " with tag ".concat(string) : ""));
+                throw new IllegalStateException(concat("FragmentContainerView must have an android:id to add Fragment ",
+                        classAttribute, string != null ? " with tag ".concat(string) : ""));
             }
             bdz bdzVarCe = begVar.ce();
             context.getClassLoader();
             bdj bdjVarE = bdzVarCe.e(classAttribute);
-            bzo.p(bdjVarE, "fm.fragmentFactory.insta…ontext.classLoader, name)");
+            throwIfVar1IsNull(bdjVarE, "fm.fragmentFactory.insta…ontext.classLoader, name)");
             bdjVarE.bq = id;
             bdjVarE.br = id;
             bdjVarE.bs = string;

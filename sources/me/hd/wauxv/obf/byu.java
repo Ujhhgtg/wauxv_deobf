@@ -72,8 +72,8 @@ public final class byu extends cyw {
         boolean zCv = bdjVar.cv();
         beg begVar = this.b;
         if (zCv && view == null) {
-            io ioVar = new io(this, bdjVar, frameLayout);
-            io ioVar2 = begVar.o;
+            DefaultConfig ioVar = new DefaultConfig(this, bdjVar, frameLayout);
+            DefaultConfig ioVar2 = begVar.o;
             ioVar2.getClass();
             ((CopyOnWriteArrayList) ioVar2.d).add(new bdt(ioVar));
             return;
@@ -96,8 +96,8 @@ public final class byu extends cyw {
             this.a.j(new akz(this, bffVar));
             return;
         }
-        io ioVar3 = new io(this, bdjVar, frameLayout);
-        io ioVar4 = begVar.o;
+        DefaultConfig ioVar3 = new DefaultConfig(this, bdjVar, frameLayout);
+        DefaultConfig ioVar4 = begVar.o;
         ioVar4.getClass();
         ((CopyOnWriteArrayList) ioVar4.d).add(new bdt(ioVar3));
         erp erpVar = this.q;

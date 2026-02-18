@@ -12,11 +12,11 @@ public final class aqo implements btd {
     public final Object a(ajt ajtVar) {
         int i = aqm.c;
         String strV = ajtVar.v();
-        bzo.q(strV, "value");
+        throwIfVar1IsNull(strV, "value");
         try {
             return new aqm(cna.f(strV));
         } catch (IllegalArgumentException e) {
-            throw new IllegalArgumentException(bjs.o("Invalid ISO duration string format: '", strV, "'."), e);
+            throw new IllegalArgumentException(concat("Invalid ISO duration string format: '", strV, "'."), e);
         }
     }
 

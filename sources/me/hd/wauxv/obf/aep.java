@@ -6,9 +6,9 @@ public final class aep {
     public final String a;
     public final Object b;
     public final int c;
-    public final bgf d;
+    public final IHasInvokeMethod d;
 
-    public aep(String str, Object obj, int i, bgf bgfVar) {
+    public aep(String str, Object obj, int i, IHasInvokeMethod bgfVar) {
         this.a = str;
         this.b = obj;
         this.c = i;

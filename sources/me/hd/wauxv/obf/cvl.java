@@ -7,17 +7,20 @@ import java.util.Iterator;
 public abstract class cvl extends aax {
     public final cvk o;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'super' call moved to the top of the method (can break code
+     * semantics)
+     */
     public cvl(btd btdVar) {
         super(btdVar);
-        bzo.q(btdVar, "primitiveSerializer");
+        throwIfVar1IsNull(btdVar, "primitiveSerializer");
         this.o = new cvk(btdVar.getDescriptor());
     }
 
     @Override // me.hd.wauxv.obf.s
     public final int _s(Object obj) {
         cvj cvjVar = (cvj) obj;
-        bzo.q(cvjVar, "<this>");
+        throwIfVar1IsNull(cvjVar, "<this>");
         return cvjVar.e();
     }
 
@@ -53,7 +56,7 @@ public abstract class cvl extends aax {
     @Override // me.hd.wauxv.obf.s
     public final Object i(Object obj) {
         cvj cvjVar = (cvj) obj;
-        bzo.q(cvjVar, "<this>");
+        throwIfVar1IsNull(cvjVar, "<this>");
         return cvjVar.c();
     }
 
@@ -61,7 +64,7 @@ public abstract class cvl extends aax {
 
     @Override // me.hd.wauxv.obf.aax
     public final void l(Object obj, int i, Object obj2) {
-        bzo.q((cvj) obj, "<this>");
+        throwIfVar1IsNull((cvj) obj, "<this>");
         throw new IllegalStateException("This method lead to boxing and must not be used, use Builder.append instead");
     }
 

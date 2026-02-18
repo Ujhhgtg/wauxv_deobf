@@ -8,7 +8,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.rh;
 import me.hd.wauxv.obf.rl;
 import okhttp3.internal.Util;
@@ -26,7 +26,10 @@ public final class Http2Writer implements Closeable {
     private int maxFrameSize;
     private final rl sink;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
@@ -37,7 +40,7 @@ public final class Http2Writer implements Closeable {
     }
 
     public Http2Writer(rl rlVar, boolean z) {
-        bzo.q(rlVar, "sink");
+        throwIfVar1IsNull(rlVar, "sink");
         this.sink = rlVar;
         this.client = z;
         rh rhVar = new rh();
@@ -57,7 +60,7 @@ public final class Http2Writer implements Closeable {
 
     public final synchronized void applyAndAckSettings(Settings settings) {
         try {
-            bzo.q(settings, "peerSettings");
+            throwIfVar1IsNull(settings, "peerSettings");
             if (this.closed) {
                 throw new IOException("closed");
             }
@@ -107,7 +110,7 @@ public final class Http2Writer implements Closeable {
         frameHeader(i, i3, 0, i2);
         if (i3 > 0) {
             rl rlVar = this.sink;
-            bzo.n(rhVar);
+            throwIfVar1IsNull(rhVar);
             rlVar.write(rhVar, i3);
         }
     }
@@ -138,10 +141,11 @@ public final class Http2Writer implements Closeable {
             i8 = i4;
         }
         if (i6 > this.maxFrameSize) {
-            throw new IllegalArgumentException(("FRAME_SIZE_ERROR length > " + this.maxFrameSize + ": " + i6).toString());
+            throw new IllegalArgumentException(
+                    ("FRAME_SIZE_ERROR length > " + this.maxFrameSize + ": " + i6).toString());
         }
         if ((Integer.MIN_VALUE & i5) != 0) {
-            throw new IllegalArgumentException(bjs.i(i5, "reserved bit set: ").toString());
+            throw new IllegalArgumentException(concatVar2Var1(i5, "reserved bit set: ").toString());
         }
         Util.writeMedium(this.sink, i6);
         this.sink.writeByte(i7 & Opcodes.CONST_METHOD_TYPE);
@@ -154,8 +158,8 @@ public final class Http2Writer implements Closeable {
     }
 
     public final synchronized void goAway(int i, ErrorCode errorCode, byte[] bArr) {
-        bzo.q(errorCode, "errorCode");
-        bzo.q(bArr, "debugData");
+        throwIfVar1IsNull(errorCode, "errorCode");
+        throwIfVar1IsNull(bArr, "debugData");
         if (this.closed) {
             throw new IOException("closed");
         }
@@ -172,7 +176,7 @@ public final class Http2Writer implements Closeable {
     }
 
     public final synchronized void headers(boolean z, int i, List<Header> list) {
-        bzo.q(list, "headerBlock");
+        throwIfVar1IsNull(list, "headerBlock");
         if (this.closed) {
             throw new IOException("closed");
         }
@@ -205,7 +209,7 @@ public final class Http2Writer implements Closeable {
     }
 
     public final synchronized void pushPromise(int i, int i2, List<Header> list) {
-        bzo.q(list, "requestHeaders");
+        throwIfVar1IsNull(list, "requestHeaders");
         if (this.closed) {
             throw new IOException("closed");
         }
@@ -222,7 +226,7 @@ public final class Http2Writer implements Closeable {
     }
 
     public final synchronized void rstStream(int i, ErrorCode errorCode) {
-        bzo.q(errorCode, "errorCode");
+        throwIfVar1IsNull(errorCode, "errorCode");
         if (this.closed) {
             throw new IOException("closed");
         }
@@ -236,7 +240,7 @@ public final class Http2Writer implements Closeable {
 
     public final synchronized void settings(Settings settings) {
         try {
-            bzo.q(settings, "settings");
+            throwIfVar1IsNull(settings, "settings");
             if (this.closed) {
                 throw new IOException("closed");
             }
@@ -260,7 +264,8 @@ public final class Http2Writer implements Closeable {
             throw new IOException("closed");
         }
         if (j == 0 || j > 2147483647L) {
-            throw new IllegalArgumentException(("windowSizeIncrement == 0 || windowSizeIncrement > 0x7fffffffL: " + j).toString());
+            throw new IllegalArgumentException(
+                    ("windowSizeIncrement == 0 || windowSizeIncrement > 0x7fffffffL: " + j).toString());
         }
         frameHeader(i, 4, 8, 0);
         this.sink.writeInt((int) j);

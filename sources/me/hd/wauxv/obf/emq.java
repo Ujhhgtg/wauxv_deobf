@@ -6,7 +6,7 @@ import java.util.Iterator;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class emq implements Collection, bsw {
+public final class emq implements Collection, IEmpty {
     public final byte[] a;
 
     @Override // java.util.Collection
@@ -34,7 +34,7 @@ public final class emq implements Collection, bsw {
 
     @Override // java.util.Collection
     public final boolean containsAll(Collection collection) {
-        bzo.q(collection, "elements");
+        throwIfVar1IsNull(collection, "elements");
         if (collection.isEmpty()) {
             return true;
         }
@@ -52,7 +52,7 @@ public final class emq implements Collection, bsw {
     @Override // java.util.Collection
     public final boolean equals(Object obj) {
         if (obj instanceof emq) {
-            return bzo.f(this.a, ((emq) obj).a);
+            return nullSafeIsEqual(this.a, ((emq) obj).a);
         }
         return false;
     }
@@ -103,7 +103,7 @@ public final class emq implements Collection, bsw {
 
     @Override // java.util.Collection
     public final Object[] toArray(Object[] objArr) {
-        bzo.q(objArr, "array");
+        throwIfVar1IsNull(objArr, "array");
         return bmy.ai(this, objArr);
     }
 }

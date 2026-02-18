@@ -24,7 +24,7 @@ public class lo extends ekc {
         ReentrantLock reentrantLock = new ReentrantLock();
         lock = reentrantLock;
         Condition conditionNewCondition = reentrantLock.newCondition();
-        bzo.p(conditionNewCondition, "newCondition(...)");
+        throwIfVar1IsNull(conditionNewCondition, "newCondition(...)");
         condition = conditionNewCondition;
         long millis = TimeUnit.SECONDS.toMillis(60L);
         IDLE_TIMEOUT_MILLIS = millis;
@@ -72,15 +72,15 @@ public class lo extends ekc {
                 }
                 long jAccess$remainingNanos = access$remainingNanos(this, jNanoTime);
                 lo loVar = head;
-                bzo.n(loVar);
+                throwIfVar1IsNull(loVar);
                 while (loVar.next != null) {
                     lo loVar2 = loVar.next;
-                    bzo.n(loVar2);
+                    throwIfVar1IsNull(loVar2);
                     if (jAccess$remainingNanos < access$remainingNanos(loVar2, jNanoTime)) {
                         break;
                     }
                     loVar = loVar.next;
-                    bzo.n(loVar);
+                    throwIfVar1IsNull(loVar);
                 }
                 this.next = loVar.next;
                 loVar.next = this;
@@ -129,12 +129,12 @@ public class lo extends ekc {
     }
 
     public final dhy sink(dhy dhyVar) {
-        bzo.q(dhyVar, "sink");
+        throwIfVar1IsNull(dhyVar, "sink");
         return new lm(this, 0, dhyVar);
     }
 
     public final dlc source(dlc dlcVar) {
-        bzo.q(dlcVar, "source");
+        throwIfVar1IsNull(dlcVar, "source");
         return new ln(this, dlcVar);
     }
 
@@ -142,7 +142,7 @@ public class lo extends ekc {
     }
 
     public final <T> T withTimeout(bfu bfuVar) throws IOException {
-        bzo.q(bfuVar, "block");
+        throwIfVar1IsNull(bfuVar, "block");
         enter();
         try {
             try {

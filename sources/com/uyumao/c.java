@@ -36,9 +36,9 @@ public class c {
                     jSONObject.put(bt.g, UMUtils.getUMId(context));
                 }
                 if (UMUtils.getActiveUser(context) == null || UMUtils.getActiveUser(context).length != 2) {
-                    jSONObject.put(com.umeng.analytics.pro.f.N, "");
+                    jSONObject.put("puid", "");
                 } else {
-                    jSONObject.put(com.umeng.analytics.pro.f.N, UMUtils.getActiveUser(context)[1]);
+                    jSONObject.put("puid", UMUtils.getActiveUser(context)[1]);
                 }
                 if (DeviceConfig.getAndroidId(context) == null) {
                     jSONObject.put("aid", "");
@@ -130,11 +130,14 @@ public class c {
         try {
             JSONObject jSONObject2 = new JSONObject(strA);
             if (jSONObject2.has(bd.c)) {
-                context.getSharedPreferences("uyumao_info", 0).edit().putString(bd.c, jSONObject2.optString(bd.c)).apply();
+                context.getSharedPreferences("uyumao_info", 0).edit().putString(bd.c, jSONObject2.optString(bd.c))
+                        .apply();
             }
             if (z) {
                 if (jSONObject2.has("resp_code") && jSONObject2.optInt("resp_code") == 0) {
-                    context.getSharedPreferences("uyumao_info", 0).edit().putBoolean(new SimpleDateFormat("yyyyMMdd", Locale.getDefault()).format(new Date()), true).apply();
+                    context.getSharedPreferences("uyumao_info", 0).edit()
+                            .putBoolean(new SimpleDateFormat("yyyyMMdd", Locale.getDefault()).format(new Date()), true)
+                            .apply();
                 }
                 e.a(new File(context.getCacheDir() + File.separator + "net_change"));
             }

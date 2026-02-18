@@ -17,13 +17,16 @@ public final class cwo {
 
     public static void f(int i) {
         if (i < 0) {
-            throw new cwm(bjs.i(i, "Unexpected negative length: "), null);
+            throw new cwm(concatVar2Var1(i, "Unexpected negative length: "), null);
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:21:0x003b  */
-    /* JADX WARN: Found duplicated region for block: B:24:0x0040  */
-    /* JADX WARN: Found duplicated region for block: B:29:0x0058 A[LOOP:0: B:22:0x003c->B:29:0x0058, LOOP_END] */
+    /* JADX WARN: Found duplicated region for block: B:21:0x003b */
+    /* JADX WARN: Found duplicated region for block: B:24:0x0040 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:29:0x0058 A[LOOP:0:
+     * B:22:0x003c->B:29:0x0058, LOOP_END]
+     */
     /* JADX WARN: Found duplicated region for block: B:37:0x004c A[SYNTHETIC] */
     public final int g(cwf cwfVar) {
         int i;
@@ -37,7 +40,7 @@ public final class cwo {
             if (iOrdinal == 2) {
                 return p();
             }
-            throw new abt();
+            throw new QueryDidNotReturnUniqueResultRuntimeException();
         }
         int i2 = ruVar.b;
         int i3 = ruVar.a;
@@ -90,7 +93,7 @@ public final class cwo {
             if (iOrdinal == 2) {
                 return r();
             }
-            throw new abt();
+            throw new QueryDidNotReturnUniqueResultRuntimeException();
         }
         long jG = ruVar.g(false);
         return (jG & Long.MIN_VALUE) ^ ((((jG << 63) >> 63) ^ jG) >> 1);

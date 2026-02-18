@@ -9,7 +9,7 @@ public final class dw {
     public final ArrayList b;
 
     public dw(bur burVar) {
-        bzo.q(burVar, "lifecycle");
+        throwIfVar1IsNull(burVar, "lifecycle");
         this.a = burVar;
         this.b = new ArrayList();
     }

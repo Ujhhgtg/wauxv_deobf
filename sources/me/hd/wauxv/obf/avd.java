@@ -11,7 +11,7 @@ import okhttp3.HttpUrl;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class avd implements List, Serializable, RandomAccess, bsw {
+public final class avd implements List, Serializable, RandomAccess, IEmpty {
     public static final avd a = new avd();
 
     @Override // java.util.List
@@ -36,7 +36,7 @@ public final class avd implements List, Serializable, RandomAccess, bsw {
 
     @Override // java.util.List, java.util.Collection
     public final boolean containsAll(Collection collection) {
-        bzo.q(collection, "elements");
+        throwIfVar1IsNull(collection, "elements");
         return collection.isEmpty();
     }
 
@@ -47,7 +47,8 @@ public final class avd implements List, Serializable, RandomAccess, bsw {
 
     @Override // java.util.List
     public final Object get(int i) {
-        throw new IndexOutOfBoundsException("Empty list doesn't contain element at index " + i + TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
+        throw new IndexOutOfBoundsException("Empty list doesn't contain element at index " + i
+                + TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
     }
 
     @Override // java.util.List, java.util.Collection
@@ -137,7 +138,7 @@ public final class avd implements List, Serializable, RandomAccess, bsw {
         if (i == 0) {
             return ava.a;
         }
-        throw new IndexOutOfBoundsException(bjs.i(i, "Index: "));
+        throw new IndexOutOfBoundsException(concatVar2Var1(i, "Index: "));
     }
 
     @Override // java.util.List, java.util.Collection
@@ -147,7 +148,7 @@ public final class avd implements List, Serializable, RandomAccess, bsw {
 
     @Override // java.util.List, java.util.Collection
     public final Object[] toArray(Object[] objArr) {
-        bzo.q(objArr, "array");
+        throwIfVar1IsNull(objArr, "array");
         return bmy.ai(this, objArr);
     }
 }

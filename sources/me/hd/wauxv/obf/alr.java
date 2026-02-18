@@ -95,11 +95,11 @@ public final class alr implements dhy {
 
     @Override // me.hd.wauxv.obf.dhy
     public final void write(rh rhVar, long j) throws IOException {
-        bzo.q(rhVar, "source");
+        throwIfVar1IsNull(rhVar, "source");
         aye.n(rhVar.b, 0L, j);
         while (j > 0) {
             dfj dfjVar = rhVar.a;
-            bzo.n(dfjVar);
+            throwIfVar1IsNull(dfjVar);
             int iMin = (int) Math.min(j, dfjVar.c - dfjVar.b);
             this.b.setInput(dfjVar.a, dfjVar.b, iMin);
             d(false);

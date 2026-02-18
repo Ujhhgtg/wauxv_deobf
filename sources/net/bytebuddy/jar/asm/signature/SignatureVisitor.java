@@ -18,7 +18,7 @@ public abstract class SignatureVisitor {
     }
 
     private static /* synthetic */ String stringConcat$0(int i) {
-        return bjs.i(i, "Unsupported api ");
+        return concatVar2Var1(i, "Unsupported api ");
     }
 
     public SignatureVisitor visitArrayType() {

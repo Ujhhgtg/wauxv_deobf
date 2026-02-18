@@ -6,7 +6,7 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class ejo {
     public static final ejn Companion = new ejn();
-    public static final btt[] a = {ewz.am(btx.a, new efq(12)), null, null, null};
+    public static final btt[] a = { ewz.am(btx.a, new efq(12)), null, null, null };
     public final List b;
     public final eaq c;
     public final Integer d;
@@ -31,7 +31,8 @@ public final class ejo {
             return false;
         }
         ejo ejoVar = (ejo) obj;
-        return bzo.f(this.b, ejoVar.b) && bzo.f(this.c, ejoVar.c) && bzo.f(this.d, ejoVar.d) && bzo.f(this.e, ejoVar.e);
+        return nullSafeIsEqual(this.b, ejoVar.b) && nullSafeIsEqual(this.c, ejoVar.c)
+                && nullSafeIsEqual(this.d, ejoVar.d) && nullSafeIsEqual(this.e, ejoVar.e);
     }
 
     public final int hashCode() {
@@ -52,6 +53,6 @@ public final class ejo {
         sb.append(this.c);
         sb.append(", audience_cdn_quality_cfg=" /* cnb.z(-344718370143018L) */);
         bjs.w(sb, this.d, -345113507134250L);
-        return bjs.q(sb, this.e, ')');
+        return concat(sb, this.e, ')');
     }
 }

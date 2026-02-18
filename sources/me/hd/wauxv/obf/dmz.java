@@ -8,7 +8,7 @@ public abstract class dmz {
     public static final Set a = dgg._cd(emy.d, end.d, emt.d, eni.d);
 
     public static final boolean b(dfx dfxVar) {
-        bzo.q(dfxVar, "<this>");
+        throwIfVar1IsNull(dfxVar, "<this>");
         return dfxVar.d() && a.contains(dfxVar);
     }
 }

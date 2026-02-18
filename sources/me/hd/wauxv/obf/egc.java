@@ -30,7 +30,9 @@ public final class egc {
             return false;
         }
         egc egcVar = (egc) obj;
-        return bzo.f(this.a, egcVar.a) && bzo.f(this.b, egcVar.b) && bzo.f(this.c, egcVar.c) && bzo.f(this.d, egcVar.d) && bzo.f(this.e, egcVar.e);
+        return nullSafeIsEqual(this.a, egcVar.a) && nullSafeIsEqual(this.b, egcVar.b)
+                && nullSafeIsEqual(this.c, egcVar.c) && nullSafeIsEqual(this.d, egcVar.d)
+                && nullSafeIsEqual(this.e, egcVar.e);
     }
 
     public final int hashCode() {
@@ -53,6 +55,6 @@ public final class egc {
         yg.u(sb, this.b, -308331407211306L);
         yg.u(sb, this.c, -308245507865386L);
         yg.u(sb, this.d, -308241212898090L);
-        return bjs.q(sb, this.e, ')');
+        return concat(sb, this.e, ')');
     }
 }

@@ -21,17 +21,20 @@ public final class ObjectReaderImplInt32Array extends ObjectReaderPrimitive {
         super(Integer[].class);
     }
 
-    @Override // com.alibaba.fastjson2.reader.ObjectReaderPrimitive, com.alibaba.fastjson2.reader.ObjectReader
+    @Override // com.alibaba.fastjson2.reader.ObjectReaderPrimitive,
+              // com.alibaba.fastjson2.reader.ObjectReader
     public /* bridge */ /* synthetic */ Object createInstance(long j) {
         return super.createInstance(j);
     }
 
-    @Override // com.alibaba.fastjson2.reader.ObjectReaderPrimitive, com.alibaba.fastjson2.reader.ObjectReader
+    @Override // com.alibaba.fastjson2.reader.ObjectReaderPrimitive,
+              // com.alibaba.fastjson2.reader.ObjectReader
     public /* bridge */ /* synthetic */ Class getObjectClass() {
         return super.getObjectClass();
     }
 
-    @Override // com.alibaba.fastjson2.reader.ObjectReaderPrimitive, com.alibaba.fastjson2.reader.ObjectReader
+    @Override // com.alibaba.fastjson2.reader.ObjectReaderPrimitive,
+              // com.alibaba.fastjson2.reader.ObjectReader
     public Object readJSONBObject(JSONReader jSONReader, Type type, Object obj, long j) {
         if (jSONReader.nextIfMatch(JSONB.Constants.BC_TYPED_ANY)) {
             long typeHashCode = jSONReader.readTypeHashCode();
@@ -58,7 +61,7 @@ public final class ObjectReaderImplInt32Array extends ObjectReaderPrimitive {
         if (!jSONReader.nextIfArrayStart()) {
             if (!jSONReader.isString()) {
                 if (jSONReader.isNumber()) {
-                    return new Integer[]{jSONReader.readInt32()};
+                    return new Integer[] { jSONReader.readInt32() };
                 }
                 throw new JSONException(jSONReader.info("TODO"));
             }
@@ -101,9 +104,10 @@ public final class ObjectReaderImplInt32Array extends ObjectReaderPrimitive {
             } else if (obj instanceof Number) {
                 numValueOf = Integer.valueOf(((Number) obj).intValue());
             } else {
-                Function typeConvert = JSONFactory.getDefaultObjectReaderProvider().getTypeConvert(obj.getClass(), Integer.class);
+                Function typeConvert = JSONFactory.getDefaultObjectReaderProvider().getTypeConvert(obj.getClass(),
+                        Integer.class);
                 if (typeConvert == null) {
-                    throw new JSONException(bjs.m(obj, new StringBuilder("can not cast to Integer ")));
+                    throw new JSONException(concatVar1GetClass(obj, new StringBuilder("can not cast to Integer ")));
                 }
                 numValueOf = (Integer) typeConvert.apply(obj);
             }

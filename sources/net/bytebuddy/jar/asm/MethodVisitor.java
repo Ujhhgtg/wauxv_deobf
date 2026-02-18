@@ -14,7 +14,7 @@ public abstract class MethodVisitor {
     }
 
     private static /* synthetic */ String stringConcat$0(int i) {
-        return bjs.i(i, "Unsupported api ");
+        return concatVar2Var1(i, "Unsupported api ");
     }
 
     public MethodVisitor getDelegate() {
@@ -162,7 +162,8 @@ public abstract class MethodVisitor {
         }
     }
 
-    public AnnotationVisitor visitLocalVariableAnnotation(int i, TypePath typePath, Label[] labelArr, Label[] labelArr2, int[] iArr, String str, boolean z) {
+    public AnnotationVisitor visitLocalVariableAnnotation(int i, TypePath typePath, Label[] labelArr, Label[] labelArr2,
+            int[] iArr, String str, boolean z) {
         if (this.api < 327680) {
             throw new UnsupportedOperationException(REQUIRES_ASM5);
         }

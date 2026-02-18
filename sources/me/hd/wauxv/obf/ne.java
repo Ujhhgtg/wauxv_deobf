@@ -8,31 +8,31 @@ import java.util.Iterator;
 public abstract class ne extends ArrayList {
     public final Object a() {
         if (super.size() == 0) {
-            throw new abt("No result found for query");
+            throw new QueryDidNotReturnUniqueResultRuntimeException("No result found for query");
         }
         E e = get(0);
         int size = super.size();
         for (int i = 1; i < size; i++) {
-            if (!bzo.f(e, get(i))) {
-                throw new abt(super.size());
+            if (!nullSafeIsEqual(e, get(i))) {
+                throw new QueryDidNotReturnUniqueResultRuntimeException(super.size());
             }
         }
         return e;
     }
 
-    public final Object b(bgf bgfVar) {
-        bzo.q(bgfVar, "predicate");
+    public final Object b(IHasInvokeMethod bgfVar) {
+        throwIfVar1IsNull(bgfVar, "predicate");
         if (super.size() == 0) {
-            throw new abt("No result found for query");
+            throw new QueryDidNotReturnUniqueResultRuntimeException("No result found for query");
         }
         Iterator<E> it = iterator();
-        bzo.p(it, "iterator(...)");
+        throwIfVar1IsNull(it, "iterator(...)");
         Object obj = null;
         while (it.hasNext()) {
             Object next = it.next();
             if (((Boolean) bgfVar.invoke(next)).booleanValue()) {
                 if (obj != null && !obj.equals(next)) {
-                    throw new abt(super.size());
+                    throw new QueryDidNotReturnUniqueResultRuntimeException(super.size());
                 }
                 obj = next;
             }
@@ -40,6 +40,6 @@ public abstract class ne extends ArrayList {
         if (obj != null) {
             return obj;
         }
-        throw new abt("No result found for query");
+        throw new QueryDidNotReturnUniqueResultRuntimeException("No result found for query");
     }
 }

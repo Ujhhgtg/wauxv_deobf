@@ -22,7 +22,7 @@ public final class bcm implements Closeable, Flushable {
     }
 
     public final Response b(Request request) {
-        bzo.q(request, "request");
+        throwIfVar1IsNull(request, "request");
         try {
             DiskLruCache.Snapshot snapshot = this.a.get(bch.a(request));
             if (snapshot != null) {
@@ -32,8 +32,14 @@ public final class bcm implements Closeable, Flushable {
                     Headers headers = bciVar.i;
                     String str = headers.get("Content-Type");
                     String str2 = headers.get("Content-Length");
-                    Response.Builder builderReceivedResponseAtMillis = new Response.Builder().request(new Request.Builder().url(bciVar.c).method(bciVar.e, requestBodyBody).headers(bciVar.d).build()).protocol(bciVar.f).code(bciVar.g).message(bciVar.h).headers(headers).handshake(bciVar.j).sentRequestAtMillis(bciVar.k).receivedResponseAtMillis(bciVar.l);
-                    Response responseBuild = builderReceivedResponseAtMillis.cacheResponse(builderReceivedResponseAtMillis.build()).body(new bcg(snapshot, str, str2)).build();
+                    Response.Builder builderReceivedResponseAtMillis = new Response.Builder()
+                            .request(new Request.Builder().url(bciVar.c).method(bciVar.e, requestBodyBody)
+                                    .headers(bciVar.d).build())
+                            .protocol(bciVar.f).code(bciVar.g).message(bciVar.h).headers(headers).handshake(bciVar.j)
+                            .sentRequestAtMillis(bciVar.k).receivedResponseAtMillis(bciVar.l);
+                    Response responseBuild = builderReceivedResponseAtMillis
+                            .cacheResponse(builderReceivedResponseAtMillis.build()).body(new bcg(snapshot, str, str2))
+                            .build();
                     if (request.tag(cna.class) == null) {
                         return responseBuild.newBuilder().request(request).build();
                     }
@@ -50,7 +56,7 @@ public final class bcm implements Closeable, Flushable {
     public final Response c(Response response) {
         DiskLruCache.Editor editorEdit$default;
         bck bckVar;
-        bzo.q(response, "response");
+        throwIfVar1IsNull(response, "response");
         if (response.isSuccessful()) {
             bci bciVar = new bci(response);
             try {
@@ -75,7 +81,12 @@ public final class bcm implements Closeable, Flushable {
                     cyk cykVarAg = emc.ag(bckVar.c);
                     ResponseBody responseBodyBody = response.body();
                     if (responseBodyBody != null) {
-                        return response.newBuilder().body(new RealResponseBody(Response.header$default(response, "Content-Type", null, 2, null), responseBodyBody.contentLength(), emc.ah(new bcl(responseBodyBody.source(), bckVar, cykVarAg)))).build();
+                        return response.newBuilder()
+                                .body(new RealResponseBody(
+                                        Response.header$default(response, "Content-Type", null, 2, null),
+                                        responseBodyBody.contentLength(),
+                                        emc.ah(new bcl(responseBodyBody.source(), bckVar, cykVarAg))))
+                                .build();
                     }
                 }
             }

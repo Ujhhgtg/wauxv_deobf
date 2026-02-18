@@ -9,7 +9,10 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 public final class clf extends bcz {
     public final /* synthetic */ clg a;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'super' call moved to the top of the method (can break code
+     * semantics)
+     */
     public clf(rl rlVar, clg clgVar) {
         super(rlVar);
         this.a = clgVar;
@@ -17,7 +20,7 @@ public final class clf extends bcz {
 
     @Override // me.hd.wauxv.obf.bcz, me.hd.wauxv.obf.dhy
     public final void write(rh rhVar, long j) {
-        bzo.q(rhVar, "source");
+        throwIfVar1IsNull(rhVar, "source");
         super.write(rhVar, j);
         ConcurrentLinkedQueue concurrentLinkedQueue = this.a.b;
         if (concurrentLinkedQueue == null || concurrentLinkedQueue.isEmpty()) {

@@ -8,7 +8,7 @@ public final class alk {
     public static final alk a = new alk();
 
     public final long b(AnimatorSet animatorSet) {
-        bzo.q(animatorSet, "animatorSet");
+        throwIfVar1IsNull(animatorSet, "animatorSet");
         return animatorSet.getTotalDuration();
     }
 }

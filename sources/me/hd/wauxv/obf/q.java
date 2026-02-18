@@ -21,7 +21,10 @@ public final /* synthetic */ class q implements bgf {
         this.b = obj;
     }
 
-    /* JADX WARN: Type inference failed for: r7v0, types: [java.lang.Object, me.hd.wauxv.obf.dfx] */
+    /*
+     * JADX WARN: Type inference failed for: r7v0, types: [java.lang.Object,
+     * me.hd.wauxv.obf.dfx]
+     */
     @Override // me.hd.wauxv.obf.bgf
     public final Object invoke(Object obj) {
         Object objX;
@@ -41,10 +44,10 @@ public final /* synthetic */ class q implements bgf {
                 return obj == ((r) r7) ? "(this Collection)" : String.valueOf(obj);
             case 1:
                 qb qbVar = (qb) r7;
-                bmm bmmVar = (bmm) obj;
-                bmmVar.getClass();
+                HookParamWrapper hookParam = (bmm) obj;
+                hookParam.getClass();
                 try {
-                    objX = bmmVar.d()[0];
+                    objX = hookParam.d()[0];
                     if (objX == null) {
                         objX = null;
                     }
@@ -61,10 +64,10 @@ public final /* synthetic */ class q implements bgf {
                     String string = compoundButton.getText().toString();
                     ael aelVar = aekVar.a;
                     if (aelVar == null) {
-                        bzo.ar("info" /* cnb.z(-395489178549034L) */);
+                        throwLateinitPropNotInitYet("info" /* cnb.z(-395489178549034L) */);
                         throw null;
                     }
-                    if (bzo.f(string, "全部" /* cnb.z(-395471998679850L) */)) {
+                    if (nullSafeIsEqual(string, "全部" /* cnb.z(-395471998679850L) */)) {
                         arrayList = aelVar.c;
                         if (!aelVar.b || arrayList.isEmpty()) {
                             list2 = arrayList;
@@ -89,7 +92,7 @@ public final /* synthetic */ class q implements bgf {
                 return ensVar;
             case 3:
                 Boolean bool = (Boolean) r7;
-                doo dooVar = (doo) obj;
+                doo dooVar = (BaseHook) obj;
                 if (bool.equals(Boolean.TRUE)) {
                     zAb = dnj.ab(dooVar.g(), "测试" /* cnb.z(-22578643073834L) */, false);
                 } else {
@@ -103,14 +106,14 @@ public final /* synthetic */ class q implements bgf {
                 return Boolean.valueOf(zAb);
             case 4:
                 cio cioVar = (cio) obj;
-                bzo.q(cioVar, "entry");
+                throwIfVar1IsNull(cioVar, "entry");
                 return new acb((beq) r7, z ? 1 : 0, cioVar);
             case 5:
                 aki akiVar = (aki) r7;
-                bmm bmmVar2 = (bmm) obj;
-                bmmVar2.getClass();
+                HookParamWrapper hookParam2 = (bmm) obj;
+                hookParam2.getClass();
                 try {
-                    objX2 = bmmVar2.d()[0];
+                    objX2 = hookParam2.d()[0];
                     if (objX2 == null) {
                         objX2 = null;
                     }
@@ -140,12 +143,12 @@ public final /* synthetic */ class q implements bgf {
             case 6:
                 return ((bzw) r7).c(((Integer) obj).intValue());
             case 7:
-                bmm bmmVar3 = (bmm) obj;
+                HookParamWrapper hookParam3 = (bmm) obj;
                 int parameterCount = ((Constructor) r7).getParameterCount();
                 i = (parameterCount == 13 || parameterCount == 14) ? 8 : 7;
-                bmmVar3.getClass();
+                hookParam3.getClass();
                 try {
-                    objX3 = bmmVar3.d()[i];
+                    objX3 = hookParam3.d()[i];
                     if (objX3 == null) {
                         objX3 = null;
                     }
@@ -159,7 +162,7 @@ public final /* synthetic */ class q implements bgf {
                 if (str == null) {
                     str = "";
                 }
-                ek ekVar = new ek(bmmVar3, i, i2);
+                ek ekVar = new ek(hookParam3, i, i2);
                 cgb.a.getClass();
                 ekVar.q(dnr.bo(dnr.bo(dnr.bo(cfz.a.o(), "${sendText}" /* cnb.z(-469414155647786L) */, str), "${line}" /* cnb.z(-469328256301866L) */, "\n" /* cnb.z(-469293896563498L) */), "${sendTime}" /* cnb.z(-469302486498090L) */, cnh.ag(System.currentTimeMillis(), cga.a.o(), null, 2)));
                 return ensVar;

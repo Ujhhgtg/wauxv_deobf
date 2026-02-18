@@ -72,7 +72,7 @@ public final class czo {
         int i = czxVar.i;
         ArrayList arrayList2 = cznVarK.d(i).a;
         if (((czm) cznVarK.a.get(i)).b <= arrayList2.size()) {
-            bzo.k(view);
+            KotlinHelpers.k(view);
         } else {
             if (RecyclerView.a && arrayList2.contains(czxVar)) {
                 throw new IllegalArgumentException("this scrap item already exists");
@@ -127,7 +127,7 @@ public final class czo {
             for (int i = 0; i < sparseArray.size(); i++) {
                 ArrayList arrayList = ((czm) sparseArray.get(sparseArray.keyAt(i))).a;
                 for (int i2 = 0; i2 < arrayList.size(); i2++) {
-                    bzo.k(((czx) arrayList.get(i2)).d);
+                    KotlinHelpers.k(((czx) arrayList.get(i2)).d);
                 }
             }
         }
@@ -313,7 +313,7 @@ public final class czo {
         if (z || z3 || !z) {
             return;
         }
-        bzo.k(view);
+        KotlinHelpers.k(view);
         czxVar.v = null;
         czxVar.u = null;
     }

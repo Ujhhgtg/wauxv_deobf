@@ -40,7 +40,10 @@ public abstract class JSONPath {
     JSONReader.Context readerContext;
     JSONWriter.Context writerContext;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Context {
         final JSONPathSegment current;
         boolean eval;
@@ -51,7 +54,8 @@ public abstract class JSONPath {
         Object root;
         Object value;
 
-        public Context(JSONPath jSONPath, Context context, JSONPathSegment jSONPathSegment, JSONPathSegment jSONPathSegment2, long j) {
+        public Context(JSONPath jSONPath, Context context, JSONPathSegment jSONPathSegment,
+                JSONPathSegment jSONPathSegment2, long j) {
             this.path = jSONPath;
             this.current = jSONPathSegment;
             this.next = jSONPathSegment2;
@@ -60,7 +64,10 @@ public abstract class JSONPath {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public enum Feature {
         AlwaysReturnList(1),
         NullOnError(2),
@@ -74,7 +81,10 @@ public abstract class JSONPath {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class PreviousPath extends JSONPath {
         static final PreviousPath INSTANCE = new PreviousPath("#-1");
 
@@ -148,7 +158,10 @@ public abstract class JSONPath {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class RootPath extends JSONPath {
         static final RootPath INSTANCE = new RootPath();
 
@@ -220,7 +233,10 @@ public abstract class JSONPath {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class Sequence {
         final List values;
 
@@ -264,10 +280,13 @@ public abstract class JSONPath {
     }
 
     public static JSONPathSingle of(JSONPathSegment jSONPathSegment) {
-        StringBuilder sbY = dkz.y(((jSONPathSegment instanceof JSONPathSegment.MultiIndexSegment) || (jSONPathSegment instanceof JSONPathSegmentIndex)) ? "$" : "$.");
+        StringBuilder sbY = dkz.y(((jSONPathSegment instanceof JSONPathSegment.MultiIndexSegment)
+                || (jSONPathSegment instanceof JSONPathSegmentIndex)) ? "$" : "$.");
         sbY.append(jSONPathSegment.toString());
         String string = sbY.toString();
-        return jSONPathSegment instanceof JSONPathSegmentName ? new JSONPathSingleName(string, (JSONPathSegmentName) jSONPathSegment, new Feature[0]) : new JSONPathSingle(jSONPathSegment, string, new Feature[0]);
+        return jSONPathSegment instanceof JSONPathSegmentName
+                ? new JSONPathSingleName(string, (JSONPathSegmentName) jSONPathSegment, new Feature[0])
+                : new JSONPathSingle(jSONPathSegment, string, new Feature[0]);
     }
 
     public static JSONPathFilter.Operator parseOperator(JSONReader jSONReader) {
@@ -468,7 +487,8 @@ public abstract class JSONPath {
         if (objExtract instanceof Number) {
             return ((Number) objExtract).intValue();
         }
-        Function typeConvert = JSONFactory.getDefaultObjectReaderProvider().getTypeConvert(objExtract.getClass(), Integer.TYPE);
+        Function typeConvert = JSONFactory.getDefaultObjectReaderProvider().getTypeConvert(objExtract.getClass(),
+                Integer.TYPE);
         if (typeConvert != null) {
             return ((Integer) typeConvert.apply(objExtract)).intValue();
         }
@@ -492,7 +512,8 @@ public abstract class JSONPath {
         if (objExtract instanceof Number) {
             return ((Number) objExtract).longValue();
         }
-        Function typeConvert = JSONFactory.getDefaultObjectReaderProvider().getTypeConvert(objExtract.getClass(), Long.TYPE);
+        Function typeConvert = JSONFactory.getDefaultObjectReaderProvider().getTypeConvert(objExtract.getClass(),
+                Long.TYPE);
         if (typeConvert != null) {
             return ((Long) typeConvert.apply(objExtract)).longValue();
         }
@@ -575,8 +596,11 @@ public abstract class JSONPath {
         return of(str2, featureArr).extract(JSONReader.of(str));
     }
 
-    /* JADX WARN: Found duplicated region for block: B:59:0x00ae A[PHI: r10
-      0x00ae: PHI (r10v4 ??) = (r10v3 ??), (r10v8 ??) binds: [B:31:0x0066, B:40:0x0083] A[DONT_GENERATE, DONT_INLINE]] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:59:0x00ae A[PHI: r10
+     * 0x00ae: PHI (r10v4 ??) = (r10v3 ??), (r10v8 ??) binds: [B:31:0x0066,
+     * B:40:0x0083] A[DONT_GENERATE, DONT_INLINE]]
+     */
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Type inference failed for: r10v11 */
     /* JADX WARN: Type inference failed for: r10v13 */
@@ -626,7 +650,7 @@ public abstract class JSONPath {
                             StringBuilder sb = new StringBuilder();
                             sb.append(str);
                             sb.append(TypePool.Default.LazyTypeDescription.GenericTypeToken.COMPONENT_TYPE_PATH);
-                            strQ = bjs.q(sb, JSON.toJSONString(str2, JSONWriter.Feature.UseSingleQuotes), ']');
+                            strQ = concat(sb, JSON.toJSONString(str2, JSONWriter.Feature.UseSingleQuotes), ']');
                         } else {
                             strQ = str + "." + str2;
                         }
@@ -797,7 +821,7 @@ public abstract class JSONPath {
                 valueConsumer.accept((List) objExtract);
                 return;
             }
-            throw new JSONException(bjs.m(objExtract, new StringBuilder("TODO : ")));
+            throw new JSONException(concatVar1GetClass(objExtract, new StringBuilder("TODO : ")));
         }
     }
 
@@ -809,10 +833,11 @@ public abstract class JSONPath {
         return of(strArr, typeArr, null, null, null, featureArr);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:20:0x0058  */
-    /* JADX WARN: Found duplicated region for block: B:50:0x00ac  */
-    /* JADX WARN: Found duplicated region for block: B:63:0x00e4  */
-    public static JSONPath of(String[] strArr, Type[] typeArr, String[] strArr2, long[] jArr, ZoneId zoneId, JSONReader.Feature... featureArr) {
+    /* JADX WARN: Found duplicated region for block: B:20:0x0058 */
+    /* JADX WARN: Found duplicated region for block: B:50:0x00ac */
+    /* JADX WARN: Found duplicated region for block: B:63:0x00e4 */
+    public static JSONPath of(String[] strArr, Type[] typeArr, String[] strArr2, long[] jArr, ZoneId zoneId,
+            JSONReader.Feature... featureArr) {
         Type[] typeArr2;
         boolean z;
         JSONPathSegment jSONPathSegment;
@@ -850,22 +875,26 @@ public abstract class JSONPath {
                         } else {
                             z2 = false;
                         }
-                    } else if (z2 && (jSONPath instanceof JSONPathMulti) && ((JSONPathMulti) jSONPath).segments.size() != jSONPathMulti.segments.size()) {
+                    } else if (z2 && (jSONPath instanceof JSONPathMulti)
+                            && ((JSONPathMulti) jSONPath).segments.size() != jSONPathMulti.segments.size()) {
                         z2 = false;
                     }
                     if (z3 && !(jSONPath instanceof JSONPathSingleName)) {
                         z3 = false;
                     }
-                    if (z4 && (!(jSONPath instanceof JSONPathSingleIndex) || ((JSONPathSingleIndex) jSONPath).index < 0)) {
+                    if (z4 && (!(jSONPath instanceof JSONPathSingleIndex)
+                            || ((JSONPathSingleIndex) jSONPath).index < 0)) {
                         z4 = false;
                     }
-                    if (z5 && (!(jSONPath instanceof JSONPathTwoSegment) || !(((JSONPathTwoSegment) jSONPath).second instanceof JSONPathSegmentName))) {
+                    if (z5 && (!(jSONPath instanceof JSONPathTwoSegment)
+                            || !(((JSONPathTwoSegment) jSONPath).second instanceof JSONPathSegmentName))) {
                         z5 = false;
                     }
                     if (z6) {
                         if (jSONPath instanceof JSONPathTwoSegment) {
                             JSONPathSegment jSONPathSegment2 = ((JSONPathTwoSegment) jSONPath).second;
-                            if (!(jSONPathSegment2 instanceof JSONPathSegmentIndex) || ((JSONPathSegmentIndex) jSONPathSegment2).index < 0) {
+                            if (!(jSONPathSegment2 instanceof JSONPathSegmentIndex)
+                                    || ((JSONPathSegmentIndex) jSONPathSegment2).index < 0) {
                                 z6 = false;
                             }
                         } else {
@@ -879,7 +908,9 @@ public abstract class JSONPath {
                         if (jSONPathMulti2.segments.size() == 3) {
                             JSONPathSegment jSONPathSegment3 = jSONPathMulti2.segments.get(2);
                             linkedHashMap = linkedHashMap2;
-                            if ((jSONPathMulti2.segments.get(0) instanceof JSONPathSegment.AllSegment) || (jSONPathMulti2.segments.get(1) instanceof JSONPathSegment.AllSegment) || !(jSONPathSegment3 instanceof JSONPathSegmentName)) {
+                            if ((jSONPathMulti2.segments.get(0) instanceof JSONPathSegment.AllSegment)
+                                    || (jSONPathMulti2.segments.get(1) instanceof JSONPathSegment.AllSegment)
+                                    || !(jSONPathSegment3 instanceof JSONPathSegmentName)) {
                             }
                         } else {
                             linkedHashMap = linkedHashMap2;
@@ -895,11 +926,13 @@ public abstract class JSONPath {
                 boolean z8 = linkedHashMap2.size() != length;
                 long jOf = JSONReader.Feature.of(featureArr);
                 if (z3 && !z8) {
-                    return new JSONPathTypedMultiNames(jSONPathArr, null, jSONPathArr, typeArr2, strArr2, jArr, zoneId, jOf);
+                    return new JSONPathTypedMultiNames(jSONPathArr, null, jSONPathArr, typeArr2, strArr2, jArr, zoneId,
+                            jOf);
                 }
                 JSONPathMulti jSONPathMulti3 = jSONPathMulti;
                 if (z4) {
-                    return new JSONPathTypedMultiIndexes(jSONPathArr, null, jSONPathArr, typeArr2, strArr2, jArr, zoneId, jOf);
+                    return new JSONPathTypedMultiIndexes(jSONPathArr, null, jSONPathArr, typeArr2, strArr2, jArr,
+                            zoneId, jOf);
                 }
                 if ((z5 && !z8) || z6) {
                     JSONPathSegment jSONPathSegment4 = ((JSONPathTwoSegment) jSONPathArr[0]).first;
@@ -917,22 +950,30 @@ public abstract class JSONPath {
                                 int i4 = 0;
                                 while (i4 < length) {
                                     JSONPathSegmentName jSONPathSegmentName = (JSONPathSegmentName) ((JSONPathTwoSegment) jSONPathArr[i4]).second;
-                                    jSONPathSingleNameArr[i4] = new JSONPathSingleName("$." + jSONPathSegmentName, jSONPathSegmentName, new Feature[0]);
+                                    jSONPathSingleNameArr[i4] = new JSONPathSingleName("$." + jSONPathSegmentName,
+                                            jSONPathSegmentName, new Feature[0]);
                                     i4++;
                                     jSONPathArr = jSONPathArr;
                                     typeArr2 = typeArr2;
                                 }
                                 JSONPath[] jSONPathArr2 = jSONPathArr;
                                 Type[] typeArr4 = typeArr2;
-                                String strSubstring = jSONPath2.path.substring(0, (r3.length() - jSONPathSingleNameArr[0].name.length()) - 1);
+                                String strSubstring = jSONPath2.path.substring(0,
+                                        (r3.length() - jSONPathSingleNameArr[0].name.length()) - 1);
                                 if (jSONPathSegment4 instanceof JSONPathSegmentName) {
-                                    return new JSONPathTypedMultiNamesPrefixName1(jSONPathArr2, new JSONPathSingleName(strSubstring, (JSONPathSegmentName) jSONPathSegment4, new Feature[0]), jSONPathSingleNameArr, typeArr4, strArr2, jArr, zoneId, jOf);
+                                    return new JSONPathTypedMultiNamesPrefixName1(jSONPathArr2,
+                                            new JSONPathSingleName(strSubstring, (JSONPathSegmentName) jSONPathSegment4,
+                                                    new Feature[0]),
+                                            jSONPathSingleNameArr, typeArr4, strArr2, jArr, zoneId, jOf);
                                 }
                                 typeArr2 = typeArr4;
                                 if (jSONPathSegment4 instanceof JSONPathSegmentIndex) {
                                     JSONPathSegmentIndex jSONPathSegmentIndex = (JSONPathSegmentIndex) jSONPathSegment4;
                                     if (jSONPathSegmentIndex.index >= 0) {
-                                        return new JSONPathTypedMultiNamesPrefixIndex1(jSONPathArr2, new JSONPathSingleIndex(strSubstring, jSONPathSegmentIndex, new Feature[0]), jSONPathSingleNameArr, typeArr2, strArr2, jArr, zoneId, jOf);
+                                        return new JSONPathTypedMultiNamesPrefixIndex1(jSONPathArr2,
+                                                new JSONPathSingleIndex(strSubstring, jSONPathSegmentIndex,
+                                                        new Feature[0]),
+                                                jSONPathSingleNameArr, typeArr2, strArr2, jArr, zoneId, jOf);
                                     }
                                 }
                                 jSONPathArr = jSONPathArr2;
@@ -942,17 +983,21 @@ public abstract class JSONPath {
                             int i5 = 0;
                             while (i5 < length) {
                                 JSONPathSegmentIndex jSONPathSegmentIndex2 = (JSONPathSegmentIndex) ((JSONPathTwoSegment) jSONPathArr[i5]).second;
-                                jSONPathSingleIndexArr[i5] = new JSONPathSingleIndex("$" + jSONPathSegmentIndex2, jSONPathSegmentIndex2, new Feature[0]);
+                                jSONPathSingleIndexArr[i5] = new JSONPathSingleIndex("$" + jSONPathSegmentIndex2,
+                                        jSONPathSegmentIndex2, new Feature[0]);
                                 i5++;
                                 jSONPathArr = jSONPathArr;
                             }
                             JSONPath[] jSONPathArr3 = jSONPathArr;
                             if (jSONPathSegment4 instanceof JSONPathSegmentName) {
                                 JSONPathSegmentName jSONPathSegmentName2 = (JSONPathSegmentName) jSONPathSegment4;
-                                jSONPathSingleIndex = new JSONPathSingleName("$." + jSONPathSegmentName2.name, jSONPathSegmentName2, new Feature[0]);
+                                jSONPathSingleIndex = new JSONPathSingleName("$." + jSONPathSegmentName2.name,
+                                        jSONPathSegmentName2, new Feature[0]);
                             } else if (jSONPathSegment4 instanceof JSONPathSegmentIndex) {
                                 JSONPathSegmentIndex jSONPathSegmentIndex3 = (JSONPathSegmentIndex) jSONPathSegment4;
-                                jSONPathSingleIndex = new JSONPathSingleIndex(yg.m(new StringBuilder("$["), "]", jSONPathSegmentIndex3.index), jSONPathSegmentIndex3, new Feature[0]);
+                                jSONPathSingleIndex = new JSONPathSingleIndex(
+                                        yg.m(new StringBuilder("$["), "]", jSONPathSegmentIndex3.index),
+                                        jSONPathSegmentIndex3, new Feature[0]);
                             } else {
                                 jSONPathSingleIndex = null;
                             }
@@ -960,7 +1005,8 @@ public abstract class JSONPath {
                                 jSONPathArr = jSONPathArr3;
                                 break;
                             }
-                            return new JSONPathTypedMultiIndexes(jSONPathArr3, jSONPathSingleIndex, jSONPathSingleIndexArr, typeArr2, strArr2, jArr, zoneId, jOf);
+                            return new JSONPathTypedMultiIndexes(jSONPathArr3, jSONPathSingleIndex,
+                                    jSONPathSingleIndexArr, typeArr2, strArr2, jArr, zoneId, jOf);
                         }
                     }
                 } else if (z7 && !z8) {
@@ -971,7 +1017,8 @@ public abstract class JSONPath {
                     while (true) {
                         if (i7 < length) {
                             JSONPathMulti jSONPathMulti4 = (JSONPathMulti) jSONPathArr[i7];
-                            if (!jSONPathSegment5.equals(jSONPathMulti4.segments.get(i6)) || !jSONPathSegment6.equals(jSONPathMulti4.segments.get(1))) {
+                            if (!jSONPathSegment5.equals(jSONPathMulti4.segments.get(i6))
+                                    || !jSONPathSegment6.equals(jSONPathMulti4.segments.get(1))) {
                                 break;
                             }
                             i7++;
@@ -979,14 +1026,22 @@ public abstract class JSONPath {
                         } else {
                             JSONPathSingleName[] jSONPathSingleNameArr2 = new JSONPathSingleName[length];
                             for (int i8 = 0; i8 < length; i8++) {
-                                JSONPathSegmentName jSONPathSegmentName3 = (JSONPathSegmentName) ((JSONPathMulti) jSONPathArr[i8]).segments.get(2);
-                                jSONPathSingleNameArr2[i8] = new JSONPathSingleName("$." + jSONPathSegmentName3, jSONPathSegmentName3, new Feature[0]);
+                                JSONPathSegmentName jSONPathSegmentName3 = (JSONPathSegmentName) ((JSONPathMulti) jSONPathArr[i8]).segments
+                                        .get(2);
+                                jSONPathSingleNameArr2[i8] = new JSONPathSingleName("$." + jSONPathSegmentName3,
+                                        jSONPathSegmentName3, new Feature[0]);
                             }
-                            JSONPathTwoSegment jSONPathTwoSegment = new JSONPathTwoSegment(jSONPathArr[0].path.substring(0, (r1.length() - jSONPathSingleNameArr2[0].name.length()) - 1), jSONPathSegment5, jSONPathSegment6, new Feature[0]);
-                            if ((jSONPathSegment5 instanceof JSONPathSegmentName) && (jSONPathSegment6 instanceof JSONPathSegmentName)) {
-                                return new JSONPathTypedMultiNamesPrefixName2(jSONPathArr, jSONPathTwoSegment, jSONPathSingleNameArr2, typeArr2, strArr2, jArr, zoneId, jOf);
+                            JSONPathTwoSegment jSONPathTwoSegment = new JSONPathTwoSegment(
+                                    jSONPathArr[0].path.substring(0,
+                                            (r1.length() - jSONPathSingleNameArr2[0].name.length()) - 1),
+                                    jSONPathSegment5, jSONPathSegment6, new Feature[0]);
+                            if ((jSONPathSegment5 instanceof JSONPathSegmentName)
+                                    && (jSONPathSegment6 instanceof JSONPathSegmentName)) {
+                                return new JSONPathTypedMultiNamesPrefixName2(jSONPathArr, jSONPathTwoSegment,
+                                        jSONPathSingleNameArr2, typeArr2, strArr2, jArr, zoneId, jOf);
                             }
-                            return new JSONPathTypedMultiNames(jSONPathArr, jSONPathTwoSegment, jSONPathSingleNameArr2, typeArr2, strArr2, jArr, zoneId, jOf);
+                            return new JSONPathTypedMultiNames(jSONPathArr, jSONPathTwoSegment, jSONPathSingleNameArr2,
+                                    typeArr2, strArr2, jArr, zoneId, jOf);
                         }
                     }
                 }
@@ -1004,7 +1059,9 @@ public abstract class JSONPath {
                             } else if (jSONPath3 instanceof JSONPathSingleName) {
                                 jSONPathSegment = ((JSONPathSingleName) jSONPath3).segment;
                             } else {
-                                jSONPathSegment = jSONPath3 instanceof JSONPathSingleIndex ? ((JSONPathSingleIndex) jSONPath3).segment : null;
+                                jSONPathSegment = jSONPath3 instanceof JSONPathSingleIndex
+                                        ? ((JSONPathSingleIndex) jSONPath3).segment
+                                        : null;
                             }
                             if (!jSONPathSegment8.equals(jSONPathSegment)) {
                                 z9 = false;
@@ -1022,7 +1079,8 @@ public abstract class JSONPath {
                                 z = true;
                                 break;
                             }
-                            if (!jSONPathSegment7.getClass().equals(((JSONPathMulti) jSONPathArr[i12]).segments.get(i9).getClass())) {
+                            if (!jSONPathSegment7.getClass()
+                                    .equals(((JSONPathMulti) jSONPathArr[i12]).segments.get(i9).getClass())) {
                                 z = false;
                                 break;
                             }
@@ -1031,16 +1089,22 @@ public abstract class JSONPath {
                         if (z) {
                             List<JSONPathSegment> listSubList = jSONPathMulti3.segments.subList(0, size - 2);
                             int iLastIndexOf = jSONPathMulti3.path.lastIndexOf(46);
-                            String strSubstring2 = iLastIndexOf != -1 ? jSONPathMulti3.path.substring(0, iLastIndexOf - 1) : null;
+                            String strSubstring2 = iLastIndexOf != -1
+                                    ? jSONPathMulti3.path.substring(0, iLastIndexOf - 1)
+                                    : null;
                             if (strSubstring2 != null) {
-                                JSONPathMulti jSONPathMulti5 = new JSONPathMulti(strSubstring2, listSubList, new Feature[0]);
+                                JSONPathMulti jSONPathMulti5 = new JSONPathMulti(strSubstring2, listSubList,
+                                        new Feature[0]);
                                 if (jSONPathSegment7 instanceof JSONPathSegmentIndex) {
                                     JSONPath[] jSONPathArr4 = new JSONPath[strArr.length];
                                     for (int i13 = 0; i13 < length; i13++) {
-                                        JSONPathSegmentIndex jSONPathSegmentIndex4 = (JSONPathSegmentIndex) ((JSONPathMulti) jSONPathArr[i13]).segments.get(i9);
-                                        jSONPathArr4[i13] = new JSONPathSingleIndex(jSONPathSegmentIndex4.toString(), jSONPathSegmentIndex4, new Feature[0]);
+                                        JSONPathSegmentIndex jSONPathSegmentIndex4 = (JSONPathSegmentIndex) ((JSONPathMulti) jSONPathArr[i13]).segments
+                                                .get(i9);
+                                        jSONPathArr4[i13] = new JSONPathSingleIndex(jSONPathSegmentIndex4.toString(),
+                                                jSONPathSegmentIndex4, new Feature[0]);
                                     }
-                                    return new JSONPathTypedMultiIndexes(jSONPathArr, jSONPathMulti5, jSONPathArr4, typeArr2, strArr2, jArr, zoneId, jOf);
+                                    return new JSONPathTypedMultiIndexes(jSONPathArr, jSONPathMulti5, jSONPathArr4,
+                                            typeArr2, strArr2, jArr, zoneId, jOf);
                                 }
                             }
                         }

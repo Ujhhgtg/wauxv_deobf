@@ -25,12 +25,12 @@ public final class cjs extends cjv {
         if (obj == null || !cjs.class.equals(obj.getClass())) {
             return false;
         }
-        return bzo.f(this.a, ((cjs) obj).a);
+        return nullSafeIsEqual(this.a, ((cjs) obj).a);
     }
 
     @Override // me.hd.wauxv.obf.cjv
     public final Object f(String str, Bundle bundle) {
-        bzo.q(bundle, "bundle");
+        throwIfVar1IsNull(bundle, "bundle");
         return bundle.get(str);
     }
 
@@ -45,13 +45,13 @@ public final class cjs extends cjv {
 
     @Override // me.hd.wauxv.obf.cjv
     public final Object i(String str) {
-        bzo.q(str, "value");
+        throwIfVar1IsNull(str, "value");
         throw new UnsupportedOperationException("Parcelables don't support default values.");
     }
 
     @Override // me.hd.wauxv.obf.cjv
     public final void j(Bundle bundle, String str, Object obj) {
-        bzo.q(str, "key");
+        throwIfVar1IsNull(str, "key");
         this.a.cast(obj);
         if (obj == null || (obj instanceof Parcelable)) {
             bundle.putParcelable(str, (Parcelable) obj);

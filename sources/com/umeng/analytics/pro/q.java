@@ -69,7 +69,10 @@ public class q {
     private boolean v;
     private Object w;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class a {
         public static final int A = 8209;
         public static final int B = 8210;
@@ -106,7 +109,10 @@ public class q {
         public static final int z = 8208;
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class b {
         private static final q a = new q();
 
@@ -175,10 +181,11 @@ public class q {
                     jSONObject = jSONObject.getJSONObject("content");
                     str = "#a";
                 }
-                if (jSONObject.has(str) && (jSONObjectOptJSONObject = jSONObject.optJSONObject("#a")) != null && jSONObjectOptJSONObject.length() > 0 && jSONObjectOptJSONObject.has(f.n)) {
+                if (jSONObject.has(str) && (jSONObjectOptJSONObject = jSONObject.optJSONObject("#a")) != null
+                        && jSONObjectOptJSONObject.length() > 0 && jSONObjectOptJSONObject.has(f.n)) {
                     k.a(a).a(true, false);
                 }
-                k.a(a).b();
+                k.a(a).tryGetClassByName();
                 return;
             }
             jSONObject.has("content");
@@ -189,16 +196,18 @@ public class q {
             }
             if (jSONObject.has(str2)) {
                 JSONObject jSONObject2 = jSONObject.getJSONObject("#a");
-                if (jSONObject2.has(f.n) && (jSONObjectOptJSONObject2 = jSONObject2.getJSONArray(f.n).optJSONObject(0)) != null) {
+                if (jSONObject2.has(f.n)
+                        && (jSONObjectOptJSONObject2 = jSONObject2.getJSONArray(f.n).optJSONObject(0)) != null) {
                     String strOptString = jSONObjectOptJSONObject2.optString("id");
                     if (!TextUtils.isEmpty(strOptString)) {
                         UMRTLog.i(UMRTLog.RTLOG_TAG, "--->>> removeAllInstantData: really delete instant session data");
-                        k.a(a).b(strOptString);
+                        k.a(a).tryGetClassByName(strOptString);
                     }
                 }
             }
-            k.a(a).b();
-            UMRTLog.i(UMRTLog.RTLOG_TAG, "--->>> removeAllInstantData: send INSTANT_SESSION_START_CONTINUE event because OVERSIZE.");
+            k.a(a).tryGetClassByName();
+            UMRTLog.i(UMRTLog.RTLOG_TAG,
+                    "--->>> removeAllInstantData: send INSTANT_SESSION_START_CONTINUE event because OVERSIZE.");
             Context context = a;
             UMWorkDispatch.sendEvent(context, a.l, CoreProtocol.getInstance(context), null);
         } catch (Exception unused) {
@@ -228,11 +237,13 @@ public class q {
             return;
         }
         UMRTLog.i(UMRTLog.RTLOG_TAG, "--->>> constructInstantMessage: request build envelope.");
-        JSONObject jSONObjectBuildEnvelopeWithExtHeader = UMEnvelopeBuild.buildEnvelopeWithExtHeader(a, jSONObject, jSONObject2);
+        JSONObject jSONObjectBuildEnvelopeWithExtHeader = UMEnvelopeBuild.buildEnvelopeWithExtHeader(a, jSONObject,
+                jSONObject2);
         if (jSONObjectBuildEnvelopeWithExtHeader != null) {
             try {
                 if (jSONObjectBuildEnvelopeWithExtHeader.has("exception")) {
-                    UMRTLog.i(UMRTLog.RTLOG_TAG, "Build envelope error code: " + jSONObjectBuildEnvelopeWithExtHeader.getInt("exception"));
+                    UMRTLog.i(UMRTLog.RTLOG_TAG,
+                            "Build envelope error code: " + jSONObjectBuildEnvelopeWithExtHeader.getInt("exception"));
                 }
             } catch (Throwable unused) {
             }
@@ -252,12 +263,15 @@ public class q {
         JSONObject jSONObject = (JSONObject) jSONObjectA.opt("header");
         JSONObject jSONObject2 = (JSONObject) jSONObjectA.opt("content");
         Context context = a;
-        if (context == null || jSONObject == null || jSONObject2 == null || (jSONObjectBuildEnvelopeWithExtHeader = UMEnvelopeBuild.buildEnvelopeWithExtHeader(context, jSONObject, jSONObject2)) == null) {
+        if (context == null || jSONObject == null || jSONObject2 == null
+                || (jSONObjectBuildEnvelopeWithExtHeader = UMEnvelopeBuild.buildEnvelopeWithExtHeader(context,
+                        jSONObject, jSONObject2)) == null) {
             return;
         }
         try {
             if (jSONObjectBuildEnvelopeWithExtHeader.has("exception")) {
-                UMRTLog.i(UMRTLog.RTLOG_TAG, "Build envelope error code: " + jSONObjectBuildEnvelopeWithExtHeader.getInt("exception"));
+                UMRTLog.i(UMRTLog.RTLOG_TAG,
+                        "Build envelope error code: " + jSONObjectBuildEnvelopeWithExtHeader.getInt("exception"));
             }
         } catch (Throwable unused) {
         }
@@ -339,12 +353,16 @@ public class q {
             if (sharedPreferences != null) {
                 String string = sharedPreferences.getString("vers_name", "");
                 if (!TextUtils.isEmpty(string)) {
-                    String str4 = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date(System.currentTimeMillis()));
+                    String str4 = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+                            .format(new Date(System.currentTimeMillis()));
                     if (TextUtils.isEmpty(strImprintProperty)) {
                         jSONObject.put("#$prv", sharedPreferences.getString("vers_pre_version", "0"));
                         jSONObject.put("#uda", sharedPreferences.getString("vers_date", str4));
                     }
-                    sharedPreferences.edit().putString("pre_version", string).putString("cur_version", DeviceConfig.getAppVersionName(a)).putString("pre_date", str4).remove("vers_name").remove("vers_code").remove("vers_date").remove("vers_pre_version").commit();
+                    sharedPreferences.edit().putString("pre_version", string)
+                            .putString("cur_version", DeviceConfig.getAppVersionName(a)).putString("pre_date", str4)
+                            .remove("vers_name").remove("vers_code").remove("vers_date").remove("vers_pre_version")
+                            .commit();
                 }
             }
             return jSONObject;
@@ -400,10 +418,12 @@ public class q {
                 }
                 String string = this.c.getString("pre_date", "");
                 if (TextUtils.isEmpty(string)) {
-                    string = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date(System.currentTimeMillis()));
+                    string = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+                            .format(new Date(System.currentTimeMillis()));
                     this.c.edit().putString("pre_date", string).commit();
                 } else {
-                    String str = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date(System.currentTimeMillis()));
+                    String str = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+                            .format(new Date(System.currentTimeMillis()));
                     if (!string.equals(str)) {
                         this.c.edit().putString("pre_date", str).commit();
                         strImprintProperty = str;
@@ -429,7 +449,7 @@ public class q {
 
     private boolean p() {
         try {
-            if (!TextUtils.isEmpty(w.a().b())) {
+            if (!TextUtils.isEmpty(w.a().tryGetClassByName())) {
                 b(a);
             }
             if (this.g.length() <= 0) {
@@ -463,7 +483,7 @@ public class q {
                         boolean zIsEmpty = TextUtils.isEmpty(strOptString);
                         String str = t;
                         if (zIsEmpty || t.equals(strOptString)) {
-                            String strB = w.a().b();
+                            String strB = w.a().tryGetClassByName();
                             if (!TextUtils.isEmpty(strB)) {
                                 str = strB;
                             }
@@ -482,7 +502,8 @@ public class q {
         Context context;
         SharedPreferences sharedPreferences;
         try {
-            if (!s() || (context = a) == null || (sharedPreferences = PreferenceWrapper.getDefault(context)) == null || sharedPreferences.getLong(l, 0L) != 0) {
+            if (!s() || (context = a) == null || (sharedPreferences = PreferenceWrapper.getDefault(context)) == null
+                    || sharedPreferences.getLong(l, 0L) != 0) {
                 return;
             }
             sharedPreferences.edit().putLong(l, System.currentTimeMillis()).commit();
@@ -494,7 +515,8 @@ public class q {
         SharedPreferences sharedPreferences;
         try {
             Context context = a;
-            return (context == null || (sharedPreferences = PreferenceWrapper.getDefault(context)) == null || sharedPreferences.getLong(m, -1L) == 0) ? false : true;
+            return (context == null || (sharedPreferences = PreferenceWrapper.getDefault(context)) == null
+                    || sharedPreferences.getLong(m, -1L) == 0) ? false : true;
         } catch (Throwable unused) {
             return false;
         }
@@ -548,7 +570,8 @@ public class q {
 
     private void b(JSONObject jSONObject) {
         JSONObject jSONObjectF;
-        if (k.a(UMGlobalContext.getAppContext(a)).c() || (jSONObjectF = k.a(UMGlobalContext.getAppContext(a)).f()) == null) {
+        if (k.a(UMGlobalContext.getAppContext(a)).createInstanceWithArgs()
+                || (jSONObjectF = k.a(UMGlobalContext.getAppContext(a)).getResult()) == null) {
             return;
         }
         String strOptString = jSONObjectF.optString("__av");
@@ -584,8 +607,8 @@ public class q {
                         return;
                     }
                     k.a(a).i();
-                    k.a(a).h();
-                    k.a(a).b(true, false);
+                    k.a(a).locateDex();
+                    k.a(a).tryGetClassByName(true, false);
                     k.a(a).a();
                     return;
                 }
@@ -597,12 +620,13 @@ public class q {
                 jSONObject = jSONObject.getJSONObject("content");
                 str2 = "#a";
             }
-            if (jSONObject.has(str2) && (jSONObjectOptJSONObject = jSONObject.optJSONObject("#a")) != null && jSONObjectOptJSONObject.length() > 0) {
+            if (jSONObject.has(str2) && (jSONObjectOptJSONObject = jSONObject.optJSONObject("#a")) != null
+                    && jSONObjectOptJSONObject.length() > 0) {
                 if (jSONObjectOptJSONObject.has(f.n)) {
-                    k.a(a).b(true, false);
+                    k.a(a).tryGetClassByName(true, false);
                 }
                 if (jSONObjectOptJSONObject.has("ekv") || jSONObjectOptJSONObject.has(f.Z)) {
-                    k.a(a).h();
+                    k.a(a).locateDex();
                 }
                 if (jSONObjectOptJSONObject.has(f.U)) {
                     k.a(a).i();
@@ -613,7 +637,10 @@ public class q {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class c {
         private ReportPolicy.ReportStrategy a = null;
         private int b = -1;
@@ -640,10 +667,12 @@ public class q {
             Defcon service = Defcon.getService(q.a);
             if (service.isOpen()) {
                 ReportPolicy.ReportStrategy reportStrategy = this.a;
-                this.a = ((reportStrategy instanceof ReportPolicy.DefconPolicy) && reportStrategy.isValid()) ? this.a : new ReportPolicy.DefconPolicy(StatTracer.getInstance(q.a), service);
+                this.a = ((reportStrategy instanceof ReportPolicy.DefconPolicy) && reportStrategy.isValid()) ? this.a
+                        : new ReportPolicy.DefconPolicy(StatTracer.getInstance(q.a), service);
             } else {
                 int iA = 0;
-                boolean z = Integer.valueOf(UMEnvelopeBuild.imprintProperty(q.a, "integrated_test", q.t)).intValue() == 1;
+                boolean z = Integer.valueOf(UMEnvelopeBuild.imprintProperty(q.a, "integrated_test", q.t))
+                        .intValue() == 1;
                 if (UMConfigure.isDebugLog() && z && !MLog.DEBUG) {
                     UMLog.mutlInfo(l.K, 3, "\\|", null, null);
                 }
@@ -651,7 +680,8 @@ public class q {
                     this.a = new ReportPolicy.DebugPolicy(StatTracer.getInstance(q.a));
                 } else if (this.f.isInTest() && "RPT".equals(this.f.getTestName())) {
                     if (this.f.getTestPolicy() == 6) {
-                        if (Integer.valueOf(UMEnvelopeBuild.imprintProperty(q.a, "test_report_interval", q.t)).intValue() != -1) {
+                        if (Integer.valueOf(UMEnvelopeBuild.imprintProperty(q.a, "test_report_interval", q.t))
+                                .intValue() != -1) {
                             iA = a(90000);
                         } else {
                             iA = this.c;
@@ -680,11 +710,13 @@ public class q {
                         return;
                     }
                     if (reportStrategy2 instanceof ReportPolicy.ReportByInterval) {
-                        UMLog.mutlInfo(l.J, 3, "", new String[]{"@"}, new String[]{String.valueOf(((ReportPolicy.ReportByInterval) reportStrategy2).getReportInterval() / 1000)});
+                        UMLog.mutlInfo(l.J, 3, "", new String[] { "@" }, new String[] { String.valueOf(
+                                ((ReportPolicy.ReportByInterval) reportStrategy2).getReportInterval() / 1000) });
                     } else if (reportStrategy2 instanceof ReportPolicy.DebugPolicy) {
                         UMLog.mutlInfo(l.L, 3, "", null, null);
                     } else if (reportStrategy2 instanceof ReportPolicy.ReportQuasiRealtime) {
-                        UMLog.mutlInfo(l.M, 3, "", new String[]{"@"}, new String[]{String.valueOf(((ReportPolicy.ReportQuasiRealtime) reportStrategy2).getReportInterval() / 1000)});
+                        UMLog.mutlInfo(l.M, 3, "", new String[] { "@" }, new String[] { String.valueOf(
+                                ((ReportPolicy.ReportQuasiRealtime) reportStrategy2).getReportInterval() / 1000) });
                     }
                 } catch (Throwable unused) {
                 }
@@ -700,44 +732,49 @@ public class q {
             int iIntValue = Integer.valueOf(UMEnvelopeBuild.imprintProperty(q.a, "report_policy", q.t)).intValue();
             int iIntValue2 = Integer.valueOf(UMEnvelopeBuild.imprintProperty(q.a, "report_interval", q.t)).intValue();
             if (iIntValue == -1 || !ReportPolicy.isValid(iIntValue)) {
-                return new int[]{i, i2};
+                return new int[] { i, i2 };
             }
             if (6 == iIntValue) {
                 if (iIntValue2 == -1 || iIntValue2 < 90 || iIntValue2 > 86400) {
                     iIntValue2 = 90;
                 }
-                return new int[]{iIntValue, iIntValue2 * 1000};
+                return new int[] { iIntValue, iIntValue2 * 1000 };
             }
             if (11 == iIntValue) {
                 if (iIntValue2 == -1 || iIntValue2 < 15 || iIntValue2 > 3600) {
                     iIntValue2 = 15;
                 }
-                return new int[]{iIntValue, iIntValue2 * 1000};
+                return new int[] { iIntValue, iIntValue2 * 1000 };
             }
-            return new int[]{i, i2};
+            return new int[] { i, i2 };
         }
 
         public int a(int i) {
-            int iIntValue = Integer.valueOf(UMEnvelopeBuild.imprintProperty(q.a, "test_report_interval", q.t)).intValue();
+            int iIntValue = Integer.valueOf(UMEnvelopeBuild.imprintProperty(q.a, "test_report_interval", q.t))
+                    .intValue();
             return (iIntValue == -1 || iIntValue < 90 || iIntValue > 86400) ? i : iIntValue * 1000;
         }
 
         private ReportPolicy.ReportStrategy b(int i, int i2) {
             if (i == 0) {
                 ReportPolicy.ReportStrategy reportStrategy = this.a;
-                return reportStrategy instanceof ReportPolicy.ReportRealtime ? reportStrategy : new ReportPolicy.ReportRealtime();
+                return reportStrategy instanceof ReportPolicy.ReportRealtime ? reportStrategy
+                        : new ReportPolicy.ReportRealtime();
             }
             if (i == 1) {
                 ReportPolicy.ReportStrategy reportStrategy2 = this.a;
-                return reportStrategy2 instanceof ReportPolicy.ReportAtLaunch ? reportStrategy2 : new ReportPolicy.ReportAtLaunch();
+                return reportStrategy2 instanceof ReportPolicy.ReportAtLaunch ? reportStrategy2
+                        : new ReportPolicy.ReportAtLaunch();
             }
             if (i == 4) {
                 ReportPolicy.ReportStrategy reportStrategy3 = this.a;
-                return reportStrategy3 instanceof ReportPolicy.ReportDaily ? reportStrategy3 : new ReportPolicy.ReportDaily(StatTracer.getInstance(q.a));
+                return reportStrategy3 instanceof ReportPolicy.ReportDaily ? reportStrategy3
+                        : new ReportPolicy.ReportDaily(StatTracer.getInstance(q.a));
             }
             if (i == 5) {
                 ReportPolicy.ReportStrategy reportStrategy4 = this.a;
-                return reportStrategy4 instanceof ReportPolicy.ReportWifiOnly ? reportStrategy4 : new ReportPolicy.ReportWifiOnly(q.a);
+                return reportStrategy4 instanceof ReportPolicy.ReportWifiOnly ? reportStrategy4
+                        : new ReportPolicy.ReportWifiOnly(q.a);
             }
             if (i == 6) {
                 ReportPolicy.ReportStrategy reportStrategy5 = this.a;
@@ -749,11 +786,13 @@ public class q {
             }
             if (i == 8) {
                 ReportPolicy.ReportStrategy reportStrategy6 = this.a;
-                return reportStrategy6 instanceof ReportPolicy.SmartPolicy ? reportStrategy6 : new ReportPolicy.SmartPolicy(StatTracer.getInstance(q.a));
+                return reportStrategy6 instanceof ReportPolicy.SmartPolicy ? reportStrategy6
+                        : new ReportPolicy.SmartPolicy(StatTracer.getInstance(q.a));
             }
             if (i != 11) {
                 ReportPolicy.ReportStrategy reportStrategy7 = this.a;
-                return reportStrategy7 instanceof ReportPolicy.ReportAtLaunch ? reportStrategy7 : new ReportPolicy.ReportAtLaunch();
+                return reportStrategy7 instanceof ReportPolicy.ReportAtLaunch ? reportStrategy7
+                        : new ReportPolicy.ReportAtLaunch();
             }
             ReportPolicy.ReportStrategy reportStrategy8 = this.a;
             if (reportStrategy8 instanceof ReportPolicy.ReportQuasiRealtime) {
@@ -766,13 +805,14 @@ public class q {
         }
     }
 
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException
      */
     private void c(JSONObject jSONObject) {
         try {
-            if (!k.a(a).e()) {
-                JSONObject jSONObjectG = k.a(a).g();
+            if (!k.a(a).getThisObject()) {
+                JSONObject jSONObjectG = k.a(a).setResultTrue();
                 if (jSONObjectG != null) {
                     String strOptString = jSONObjectG.optString("__av");
                     String strOptString2 = jSONObjectG.optString("__vc");
@@ -802,7 +842,8 @@ public class q {
             synchronized (this.w) {
                 try {
                     if (this.u) {
-                        UMRTLog.i(UMRTLog.RTLOG_TAG, "--->>> network is now available, rebuild instant session data packet.");
+                        UMRTLog.i(UMRTLog.RTLOG_TAG,
+                                "--->>> network is now available, rebuild instant session data packet.");
                         Context context = a;
                         UMWorkDispatch.sendEvent(context, a.l, CoreProtocol.getInstance(context), null);
                     }
@@ -823,7 +864,10 @@ public class q {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class d {
         private Map<String, Object> a;
         private String b;
@@ -877,14 +921,38 @@ public class q {
         }
     }
 
-    /* JADX WARN: Not initialized variable reg: 1, insn: 0x0010: MOVE (r16 I:??[OBJECT, ARRAY]) = (r1 I:??[OBJECT, ARRAY]), block:B:2:0x0000 */
-    /* JADX WARN: Not initialized variable reg: 2, insn: 0x0014: MOVE (r17 I:??[OBJECT, ARRAY]) = (r2 I:??[OBJECT, ARRAY]), block:B:2:0x0000 */
-    /* JADX WARN: Not initialized variable reg: 4, insn: 0x0018: MOVE (r18 I:??[OBJECT, ARRAY]) = (r4 I:??[OBJECT, ARRAY]), block:B:2:0x0000 */
-    /* JADX WARN: Not initialized variable reg: 5, insn: 0x001c: MOVE (r19 I:??[OBJECT, ARRAY]) = (r5 I:??[OBJECT, ARRAY]), block:B:2:0x0000 */
-    /* JADX WARN: Not initialized variable reg: 6, insn: 0x0020: MOVE (r20 I:??[OBJECT, ARRAY]) = (r6 I:??[OBJECT, ARRAY]), block:B:2:0x0000 */
-    /* JADX WARN: Not initialized variable reg: 7, insn: 0x0024: MOVE (r21 I:??[OBJECT, ARRAY]) = (r7 I:??[OBJECT, ARRAY]), block:B:2:0x0000 */
-    /* JADX WARN: Not initialized variable reg: 8, insn: 0x0028: MOVE (r22 I:??[OBJECT, ARRAY]) = (r8 I:??[OBJECT, ARRAY]), block:B:2:0x0000 */
-    /* JADX WARN: Not initialized variable reg: 9, insn: 0x0036: MOVE (r23 I:??[OBJECT, ARRAY]) = (r9 I:??[OBJECT, ARRAY]), block:B:8:0x0036 */
+    /*
+     * JADX WARN: Not initialized variable reg: 1, insn: 0x0010: MOVE (r16
+     * I:??[OBJECT, ARRAY]) = (r1 I:??[OBJECT, ARRAY]), block:B:2:0x0000
+     */
+    /*
+     * JADX WARN: Not initialized variable reg: 2, insn: 0x0014: MOVE (r17
+     * I:??[OBJECT, ARRAY]) = (r2 I:??[OBJECT, ARRAY]), block:B:2:0x0000
+     */
+    /*
+     * JADX WARN: Not initialized variable reg: 4, insn: 0x0018: MOVE (r18
+     * I:??[OBJECT, ARRAY]) = (r4 I:??[OBJECT, ARRAY]), block:B:2:0x0000
+     */
+    /*
+     * JADX WARN: Not initialized variable reg: 5, insn: 0x001c: MOVE (r19
+     * I:??[OBJECT, ARRAY]) = (r5 I:??[OBJECT, ARRAY]), block:B:2:0x0000
+     */
+    /*
+     * JADX WARN: Not initialized variable reg: 6, insn: 0x0020: MOVE (r20
+     * I:??[OBJECT, ARRAY]) = (r6 I:??[OBJECT, ARRAY]), block:B:2:0x0000
+     */
+    /*
+     * JADX WARN: Not initialized variable reg: 7, insn: 0x0024: MOVE (r21
+     * I:??[OBJECT, ARRAY]) = (r7 I:??[OBJECT, ARRAY]), block:B:2:0x0000
+     */
+    /*
+     * JADX WARN: Not initialized variable reg: 8, insn: 0x0028: MOVE (r22
+     * I:??[OBJECT, ARRAY]) = (r8 I:??[OBJECT, ARRAY]), block:B:2:0x0000
+     */
+    /*
+     * JADX WARN: Not initialized variable reg: 9, insn: 0x0036: MOVE (r23
+     * I:??[OBJECT, ARRAY]) = (r9 I:??[OBJECT, ARRAY]), block:B:8:0x0036
+     */
     private void d(JSONObject jSONObject) {
         String str;
         String str2;
@@ -980,7 +1048,9 @@ public class q {
                 jSONObject3.put("#h", jSONObject.getJSONObject("#h"));
                 strA = com.umeng.commonsdk.statistics.b.a(str2);
             }
-            if (jSONObject.has(strA) && (jSONObject2 = jSONObject.getJSONObject(com.umeng.commonsdk.statistics.b.a(str2))) != null && jSONObject2.length() > 0) {
+            if (jSONObject.has(strA)
+                    && (jSONObject2 = jSONObject.getJSONObject(com.umeng.commonsdk.statistics.b.a(str2))) != null
+                    && jSONObject2.length() > 0) {
                 jSONObject2.has("#sv");
                 String strA2 = "#dd";
                 if ("#dd" != 0) {
@@ -1025,14 +1095,15 @@ public class q {
         }
     }
 
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException
      */
     public JSONObject b(long j) {
         if (TextUtils.isEmpty(aa.a().d(UMGlobalContext.getAppContext(a)))) {
             return null;
         }
-        JSONObject jSONObjectB = k.a(UMGlobalContext.getAppContext(a)).b(false);
+        JSONObject jSONObjectB = k.a(UMGlobalContext.getAppContext(a)).tryGetClassByName(false);
         String[] strArrA = com.umeng.analytics.c.a(a);
         if (strArrA != null && !TextUtils.isEmpty(strArrA[0]) && !TextUtils.isEmpty(strArrA[1])) {
             JSONObject jSONObject = new JSONObject();
@@ -1049,7 +1120,7 @@ public class q {
         if (jSONObjectB.length() == 1 && jSONObjectB.optJSONObject(f.L) != null && iA != 3) {
             return null;
         }
-        t.a().b(jSONObjectB, a);
+        t.a().tryGetClassByName(jSONObjectB, a);
         if (jSONObjectB.length() <= 0 && iA != 3) {
             return null;
         }
@@ -1071,7 +1142,7 @@ public class q {
             if (jSONObject3.length() > 0) {
                 jSONObject2.put("content", jSONObject3);
             }
-            return b(jSONObject2, j);
+            return tryGetClassByName(jSONObject2, j);
         } catch (Throwable unused2) {
             return jSONObject2;
         }
@@ -1088,7 +1159,9 @@ public class q {
         ReportPolicy.ReportStrategy reportStrategyC = this.b.c();
         boolean zShouldSendMessage = reportStrategyC.shouldSendMessage(z2);
         if (zShouldSendMessage) {
-            if (((reportStrategyC instanceof ReportPolicy.ReportByInterval) || (reportStrategyC instanceof ReportPolicy.DebugPolicy) || (reportStrategyC instanceof ReportPolicy.ReportQuasiRealtime)) && p()) {
+            if (((reportStrategyC instanceof ReportPolicy.ReportByInterval)
+                    || (reportStrategyC instanceof ReportPolicy.DebugPolicy)
+                    || (reportStrategyC instanceof ReportPolicy.ReportQuasiRealtime)) && p()) {
                 d();
             }
             if ((reportStrategyC instanceof ReportPolicy.DefconPolicy) && p()) {
@@ -1155,7 +1228,8 @@ public class q {
                     }
                 }
             }
-            if (jSONObject.has(str) && jSONObject.has("#h") && (jSONObject2 = jSONObject.getJSONObject("#h")) != null && jSONObject2.length() > 0) {
+            if (jSONObject.has(str) && jSONObject.has("#h") && (jSONObject2 = jSONObject.getJSONObject("#h")) != null
+                    && jSONObject2.length() > 0) {
                 jSONObject2.has("#sv");
                 String str2 = "#dd";
                 if ("#dd" != 0) {
@@ -1199,8 +1273,9 @@ public class q {
         }
     }
 
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException
      */
     public void a(Object obj, int i) {
         if (com.umeng.commonsdk.utils.c.a()) {
@@ -1218,7 +1293,7 @@ public class q {
             try {
                 if (i != 4358) {
                     switch (i) {
-                        case a.a /* 4097 */:
+                        case a.cachedConstructors /* 4097 */:
                             if (UMUtils.isMainProgress(a)) {
                                 if (obj != null) {
                                     e(obj);
@@ -1229,9 +1304,10 @@ public class q {
                                 a(false);
                                 return;
                             }
-                            UMProcessDBHelper.getInstance(a).insertEventsInSubProcess(UMFrUtils.getSubProcessName(a), new JSONArray().put(obj));
+                            UMProcessDBHelper.getInstance(a).insertEventsInSubProcess(UMFrUtils.getSubProcessName(a),
+                                    new JSONArray().put(obj));
                             return;
-                        case a.b /* 4098 */:
+                        case a.second /* 4098 */:
                             if (obj != null) {
                                 e(obj);
                             }
@@ -1244,7 +1320,7 @@ public class q {
                             x.a(a);
                             return;
                         case a.d /* 4100 */:
-                            n.c(a);
+                            n.createInstanceWithArgs(a);
                             return;
                         case a.e /* 4101 */:
                             UMRTLog.i(UMRTLog.RTLOG_TAG, "--->>> PROFILE_SIGNIN");
@@ -1269,7 +1345,7 @@ public class q {
                             }
                             return;
                         case a.h /* 4104 */:
-                            w.a().c(a, obj);
+                            w.a().createInstanceWithArgs(a, obj);
                             return;
                         case a.i /* 4105 */:
                             d();
@@ -1281,7 +1357,7 @@ public class q {
                             switch (i) {
                                 case a.k /* 4352 */:
                                     UMRTLog.i(UMRTLog.RTLOG_TAG, "--->>> INSTANT_SESSION_START");
-                                    w.a().b(a, obj);
+                                    w.a().tryGetClassByName(a, obj);
                                     synchronized (this.w) {
                                         try {
                                             this.u = true;
@@ -1299,7 +1375,8 @@ public class q {
                                     return;
                                 case a.n /* 4355 */:
                                     if (!UMUtils.isMainProgress(a)) {
-                                        UMProcessDBHelper.getInstance(a).insertEventsInSubProcess(UMFrUtils.getSubProcessName(a), new JSONArray().put(obj));
+                                        UMProcessDBHelper.getInstance(a).insertEventsInSubProcess(
+                                                UMFrUtils.getSubProcessName(a), new JSONArray().put(obj));
                                         return;
                                     } else {
                                         if (obj != null) {
@@ -1349,18 +1426,23 @@ public class q {
                                                 default:
                                                     switch (i) {
                                                         case a.z /* 8208 */:
-                                                            UMRTLog.i(UMRTLog.RTLOG_TAG, "--->>> receive DELAY_BUILD_ENVELOPE event.");
+                                                            UMRTLog.i(UMRTLog.RTLOG_TAG,
+                                                                    "--->>> receive DELAY_BUILD_ENVELOPE event.");
                                                             Context context = a;
-                                                            UMWorkDispatch.sendEvent(context, a.A, CoreProtocol.getInstance(context), null);
+                                                            UMWorkDispatch.sendEvent(context, a.A,
+                                                                    CoreProtocol.getInstance(context), null);
                                                             Context context2 = a;
-                                                            UMWorkDispatch.sendEvent(context2, a.m, CoreProtocol.getInstance(context2), null);
+                                                            UMWorkDispatch.sendEvent(context2, a.m,
+                                                                    CoreProtocol.getInstance(context2), null);
                                                             return;
                                                         case a.A /* 8209 */:
                                                             a(obj, false);
                                                             return;
                                                         case a.B /* 8210 */:
-                                                            UMRTLog.i(UMRTLog.RTLOG_TAG, "--->>> recv BUILD_ENVELOPE_IMMEDIATELY.");
-                                                            if (UMUtils.isMainProgress(a) && !(this.b.c() instanceof ReportPolicy.ReportQuasiRealtime)) {
+                                                            UMRTLog.i(UMRTLog.RTLOG_TAG,
+                                                                    "--->>> recv BUILD_ENVELOPE_IMMEDIATELY.");
+                                                            if (UMUtils.isMainProgress(a) && !(this.b
+                                                                    .c() instanceof ReportPolicy.ReportQuasiRealtime)) {
                                                                 a(true);
                                                                 return;
                                                             }
@@ -1368,33 +1450,49 @@ public class q {
                                                         default:
                                                             switch (i) {
                                                                 case a.E /* 8213 */:
-                                                                    if (FieldManager.allow(com.umeng.commonsdk.utils.d.E)) {
+                                                                    if (FieldManager
+                                                                            .allow(com.umeng.commonsdk.utils.d.E)) {
                                                                         if (DeviceConfig.getGlobleActivity(a) != null) {
-                                                                            w.b(a);
+                                                                            w.tryGetClassByName(a);
                                                                         }
                                                                         Context context3 = a;
-                                                                        UMWorkDispatch.sendEventEx(context3, a.E, CoreProtocol.getInstance(context3), null, 5000L);
+                                                                        UMWorkDispatch.sendEventEx(context3, a.E,
+                                                                                CoreProtocol.getInstance(context3),
+                                                                                null, 5000L);
                                                                         return;
                                                                     }
                                                                     return;
                                                                 case a.F /* 8214 */:
                                                                     if (obj != null && (obj instanceof JSONObject)) {
-                                                                        String strOptString = ((JSONObject) obj).optString(AnalyticsConfig.RTD_START_TIME);
-                                                                        String strOptString2 = ((JSONObject) obj).optString(AnalyticsConfig.RTD_PERIOD);
-                                                                        String strOptString3 = ((JSONObject) obj).optString(AnalyticsConfig.DEBUG_KEY);
-                                                                        if (TextUtils.isEmpty(strOptString) || TextUtils.isEmpty(strOptString2) || TextUtils.isEmpty(strOptString3)) {
+                                                                        String strOptString = ((JSONObject) obj)
+                                                                                .optString(
+                                                                                        AnalyticsConfig.RTD_START_TIME);
+                                                                        String strOptString2 = ((JSONObject) obj)
+                                                                                .optString(AnalyticsConfig.RTD_PERIOD);
+                                                                        String strOptString3 = ((JSONObject) obj)
+                                                                                .optString(AnalyticsConfig.DEBUG_KEY);
+                                                                        if (TextUtils.isEmpty(strOptString)
+                                                                                || TextUtils.isEmpty(strOptString2)
+                                                                                || TextUtils.isEmpty(strOptString3)) {
                                                                             return;
                                                                         }
                                                                         Context context4 = a;
                                                                         String str = AnalyticsConfig.RTD_SP_FILE;
-                                                                        com.umeng.common.b.a(context4, str, AnalyticsConfig.RTD_START_TIME, strOptString);
-                                                                        com.umeng.common.b.a(a, str, AnalyticsConfig.RTD_PERIOD, strOptString2);
-                                                                        com.umeng.common.b.a(a, str, AnalyticsConfig.DEBUG_KEY, strOptString3);
+                                                                        com.umeng.common.b.a(context4, str,
+                                                                                AnalyticsConfig.RTD_START_TIME,
+                                                                                strOptString);
+                                                                        com.umeng.common.b.a(a, str,
+                                                                                AnalyticsConfig.RTD_PERIOD,
+                                                                                strOptString2);
+                                                                        com.umeng.common.b.a(a, str,
+                                                                                AnalyticsConfig.DEBUG_KEY,
+                                                                                strOptString3);
                                                                         return;
                                                                     }
                                                                     return;
                                                                 case a.G /* 8215 */:
-                                                                    com.umeng.common.b.a(a, AnalyticsConfig.RTD_SP_FILE);
+                                                                    com.umeng.common.b.a(a,
+                                                                            AnalyticsConfig.RTD_SP_FILE);
                                                                     return;
                                                                 default:
                                                                     return;
@@ -1446,12 +1544,13 @@ public class q {
                 }
                 w.a().a(a, j);
                 String strC = aa.a().c(a);
-                boolean zB = w.a().b(a, j, false);
+                boolean zB = w.a().tryGetClassByName(a, j, false);
                 com.umeng.analytics.c.a(a, string, string2);
-                UMRTLog.i(UMRTLog.RTLOG_TAG, "--->>> onProfileSignIn: force generate new session: session id = " + strC);
+                UMRTLog.i(UMRTLog.RTLOG_TAG,
+                        "--->>> onProfileSignIn: force generate new session: session id = " + strC);
                 w.a().a(a, j, true);
                 if (zB) {
-                    w.a().b(a, j);
+                    w.a().tryGetClassByName(a, j);
                 }
             }
         } catch (Throwable unused) {
@@ -1502,12 +1601,13 @@ public class q {
                     return;
                 }
                 w.a().a(a, j);
-                UMRTLog.i(UMRTLog.RTLOG_TAG, "--->>> onProfileSignIn: force generate new session: session id = " + aa.a().c(a));
-                boolean zB = w.a().b(a, j, false);
+                UMRTLog.i(UMRTLog.RTLOG_TAG,
+                        "--->>> onProfileSignIn: force generate new session: session id = " + aa.a().c(a));
+                boolean zB = w.a().tryGetClassByName(a, j, false);
                 com.umeng.analytics.c.b(a);
                 w.a().a(a, j, true);
                 if (zB) {
-                    w.a().b(a, j);
+                    w.a().tryGetClassByName(a, j);
                 }
             }
         } catch (Throwable th) {
@@ -1524,7 +1624,7 @@ public class q {
             }
             jSONObject = null;
             k.a(a).a(true, false);
-            k.a(a).b();
+            k.a(a).tryGetClassByName();
             UMRTLog.i(UMRTLog.RTLOG_TAG, "--->>> Instant session packet overload !!! ");
             return null;
         } catch (Throwable unused) {
@@ -1703,7 +1803,7 @@ public class q {
 
     public void b(Context context) {
         try {
-            k.a(context).d();
+            k.a(context).getArgs();
             q();
         } catch (Throwable unused) {
         }
@@ -1736,7 +1836,8 @@ public class q {
 
     private boolean a(JSONArray jSONArray) {
         int length = jSONArray.length();
-        List listAsList = Arrays.asList("$$_onUMengEnterForeground", "$$_onUMengEnterBackground", "$$_onUMengEnterForegroundInitError");
+        List listAsList = Arrays.asList("$$_onUMengEnterForeground", "$$_onUMengEnterBackground",
+                "$$_onUMengEnterForegroundInitError");
         int i = 0;
         for (int i2 = 0; i2 < length; i2++) {
             try {
@@ -1784,13 +1885,15 @@ public class q {
                 if (!TextUtils.isEmpty(jSONObjectB.optString("userlevel")) && iA != 3) {
                     return null;
                 }
-            } else if (jSONObjectB.length() == 2 && jSONObjectB.optJSONObject(f.L) != null && !TextUtils.isEmpty(jSONObjectB.optString("userlevel")) && iA != 3) {
+            } else if (jSONObjectB.length() == 2 && jSONObjectB.optJSONObject(f.L) != null
+                    && !TextUtils.isEmpty(jSONObjectB.optString("userlevel")) && iA != 3) {
                 return null;
             }
             String strOptString = jSONObjectB.optString(f.n);
             String strOptString2 = jSONObjectB.optString(f.Z);
             String strOptString3 = jSONObjectB.optString("ekv");
-            if (TextUtils.isEmpty(strOptString) && TextUtils.isEmpty(strOptString2) && !TextUtils.isEmpty(strOptString3) && a(jSONObjectB)) {
+            if (TextUtils.isEmpty(strOptString) && TextUtils.isEmpty(strOptString2) && !TextUtils.isEmpty(strOptString3)
+                    && a(jSONObjectB)) {
                 return null;
             }
         } else if (iA != 3) {

@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.dhy;
 import me.hd.wauxv.obf.dlc;
 import me.hd.wauxv.obf.ekc;
@@ -42,17 +42,23 @@ public final class Http2ExchangeCodec implements ExchangeCodec {
     private static final String TRANSFER_ENCODING = "transfer-encoding";
     private static final String ENCODING = "encoding";
     private static final String UPGRADE = "upgrade";
-    private static final List<String> HTTP_2_SKIPPED_REQUEST_HEADERS = Util.immutableListOf(CONNECTION, HOST, KEEP_ALIVE, PROXY_CONNECTION, TE, TRANSFER_ENCODING, ENCODING, UPGRADE, Header.TARGET_METHOD_UTF8, Header.TARGET_PATH_UTF8, Header.TARGET_SCHEME_UTF8, Header.TARGET_AUTHORITY_UTF8);
-    private static final List<String> HTTP_2_SKIPPED_RESPONSE_HEADERS = Util.immutableListOf(CONNECTION, HOST, KEEP_ALIVE, PROXY_CONNECTION, TE, TRANSFER_ENCODING, ENCODING, UPGRADE);
+    private static final List<String> HTTP_2_SKIPPED_REQUEST_HEADERS = Util.immutableListOf(CONNECTION, HOST,
+            KEEP_ALIVE, PROXY_CONNECTION, TE, TRANSFER_ENCODING, ENCODING, UPGRADE, Header.TARGET_METHOD_UTF8,
+            Header.TARGET_PATH_UTF8, Header.TARGET_SCHEME_UTF8, Header.TARGET_AUTHORITY_UTF8);
+    private static final List<String> HTTP_2_SKIPPED_RESPONSE_HEADERS = Util.immutableListOf(CONNECTION, HOST,
+            KEEP_ALIVE, PROXY_CONNECTION, TE, TRANSFER_ENCODING, ENCODING, UPGRADE);
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
         }
 
         public final List<Header> http2HeadersList(Request request) {
-            bzo.q(request, "request");
+            throwIfVar1IsNull(request, "request");
             Headers headers = request.headers();
             ArrayList arrayList = new ArrayList(headers.size() + 4);
             arrayList.add(new Header(Header.TARGET_METHOD, request.method()));
@@ -66,33 +72,36 @@ public final class Http2ExchangeCodec implements ExchangeCodec {
             for (int i = 0; i < size; i++) {
                 String strName = headers.name(i);
                 Locale locale = Locale.US;
-                bzo.p(locale, "US");
+                throwIfVar1IsNull(locale, "US");
                 String lowerCase = strName.toLowerCase(locale);
-                bzo.p(lowerCase, "this as java.lang.String).toLowerCase(locale)");
-                if (!Http2ExchangeCodec.HTTP_2_SKIPPED_REQUEST_HEADERS.contains(lowerCase) || (lowerCase.equals(Http2ExchangeCodec.TE) && bzo.f(headers.value(i), "trailers"))) {
+                throwIfVar1IsNull(lowerCase, "this as java.lang.String).toLowerCase(locale)");
+                if (!Http2ExchangeCodec.HTTP_2_SKIPPED_REQUEST_HEADERS.contains(lowerCase)
+                        || (lowerCase.equals(Http2ExchangeCodec.TE) && nullSafeIsEqual(headers.value(i), "trailers"))) {
                     arrayList.add(new Header(lowerCase, headers.value(i)));
                 }
             }
             return arrayList;
         }
 
-        public final Response.Builder readHttp2HeadersList(Headers headers, Protocol protocol) throws ProtocolException {
-            bzo.q(headers, "headerBlock");
-            bzo.q(protocol, "protocol");
+        public final Response.Builder readHttp2HeadersList(Headers headers, Protocol protocol)
+                throws ProtocolException {
+            throwIfVar1IsNull(headers, "headerBlock");
+            throwIfVar1IsNull(protocol, "protocol");
             Headers.Builder builder = new Headers.Builder();
             int size = headers.size();
             StatusLine statusLine = null;
             for (int i = 0; i < size; i++) {
                 String strName = headers.name(i);
                 String strValue = headers.value(i);
-                if (bzo.f(strName, Header.RESPONSE_STATUS_UTF8)) {
+                if (nullSafeIsEqual(strName, Header.RESPONSE_STATUS_UTF8)) {
                     statusLine = StatusLine.Companion.parse("HTTP/1.1 " + strValue);
                 } else if (!Http2ExchangeCodec.HTTP_2_SKIPPED_RESPONSE_HEADERS.contains(strName)) {
                     builder.addLenient$okhttp(strName, strValue);
                 }
             }
             if (statusLine != null) {
-                return new Response.Builder().protocol(protocol).code(statusLine.code).message(statusLine.message).headers(builder.build());
+                return new Response.Builder().protocol(protocol).code(statusLine.code).message(statusLine.message)
+                        .headers(builder.build());
             }
             throw new ProtocolException("Expected ':status' header not present");
         }
@@ -101,11 +110,12 @@ public final class Http2ExchangeCodec implements ExchangeCodec {
         }
     }
 
-    public Http2ExchangeCodec(OkHttpClient okHttpClient, RealConnection realConnection, RealInterceptorChain realInterceptorChain, Http2Connection http2Connection) {
-        bzo.q(okHttpClient, "client");
-        bzo.q(realConnection, CONNECTION);
-        bzo.q(realInterceptorChain, "chain");
-        bzo.q(http2Connection, "http2Connection");
+    public Http2ExchangeCodec(OkHttpClient okHttpClient, RealConnection realConnection,
+            RealInterceptorChain realInterceptorChain, Http2Connection http2Connection) {
+        throwIfVar1IsNull(okHttpClient, "client");
+        throwIfVar1IsNull(realConnection, CONNECTION);
+        throwIfVar1IsNull(realInterceptorChain, "chain");
+        throwIfVar1IsNull(http2Connection, "http2Connection");
         this.connection = realConnection;
         this.chain = realInterceptorChain;
         this.http2Connection = http2Connection;
@@ -125,16 +135,16 @@ public final class Http2ExchangeCodec implements ExchangeCodec {
 
     @Override // okhttp3.internal.http.ExchangeCodec
     public dhy createRequestBody(Request request, long j) {
-        bzo.q(request, "request");
+        throwIfVar1IsNull(request, "request");
         Http2Stream http2Stream = this.stream;
-        bzo.n(http2Stream);
+        throwIfVar1IsNull(http2Stream);
         return http2Stream.getSink();
     }
 
     @Override // okhttp3.internal.http.ExchangeCodec
     public void finishRequest() {
         Http2Stream http2Stream = this.stream;
-        bzo.n(http2Stream);
+        throwIfVar1IsNull(http2Stream);
         http2Stream.getSink().close();
     }
 
@@ -150,9 +160,9 @@ public final class Http2ExchangeCodec implements ExchangeCodec {
 
     @Override // okhttp3.internal.http.ExchangeCodec
     public dlc openResponseBodySource(Response response) {
-        bzo.q(response, "response");
+        throwIfVar1IsNull(response, "response");
         Http2Stream http2Stream = this.stream;
-        bzo.n(http2Stream);
+        throwIfVar1IsNull(http2Stream);
         return http2Stream.getSource$okhttp();
     }
 
@@ -171,7 +181,7 @@ public final class Http2ExchangeCodec implements ExchangeCodec {
 
     @Override // okhttp3.internal.http.ExchangeCodec
     public long reportedContentLength(Response response) {
-        bzo.q(response, "response");
+        throwIfVar1IsNull(response, "response");
         if (HttpHeaders.promisesBody(response)) {
             return Util.headersContentLength(response);
         }
@@ -181,31 +191,31 @@ public final class Http2ExchangeCodec implements ExchangeCodec {
     @Override // okhttp3.internal.http.ExchangeCodec
     public Headers trailers() {
         Http2Stream http2Stream = this.stream;
-        bzo.n(http2Stream);
+        throwIfVar1IsNull(http2Stream);
         return http2Stream.trailers();
     }
 
     @Override // okhttp3.internal.http.ExchangeCodec
     public void writeRequestHeaders(Request request) throws IOException {
-        bzo.q(request, "request");
+        throwIfVar1IsNull(request, "request");
         if (this.stream != null) {
             return;
         }
         this.stream = this.http2Connection.newStream(Companion.http2HeadersList(request), request.body() != null);
         if (this.canceled) {
             Http2Stream http2Stream = this.stream;
-            bzo.n(http2Stream);
+            throwIfVar1IsNull(http2Stream);
             http2Stream.closeLater(ErrorCode.CANCEL);
             throw new IOException("Canceled");
         }
         Http2Stream http2Stream2 = this.stream;
-        bzo.n(http2Stream2);
+        throwIfVar1IsNull(http2Stream2);
         ekc timeout = http2Stream2.readTimeout();
         long readTimeoutMillis$okhttp = this.chain.getReadTimeoutMillis$okhttp();
         TimeUnit timeUnit = TimeUnit.MILLISECONDS;
         timeout.timeout(readTimeoutMillis$okhttp, timeUnit);
         Http2Stream http2Stream3 = this.stream;
-        bzo.n(http2Stream3);
+        throwIfVar1IsNull(http2Stream3);
         http2Stream3.writeTimeout().timeout(this.chain.getWriteTimeoutMillis$okhttp(), timeUnit);
     }
 }

@@ -14,7 +14,7 @@ public final class zd {
     public final ArrayList f;
 
     public zd(String str) {
-        bzo.q(str, "serialName");
+        throwIfVar1IsNull(str, "serialName");
         this.a = str;
         this.b = new ArrayList();
         this.c = new HashSet();
@@ -25,7 +25,7 @@ public final class zd {
 
     public static void g(zd zdVar, String str, dfx dfxVar) {
         zdVar.getClass();
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         if (!zdVar.c.add(str)) {
             StringBuilder sbZ = dkz.z("Element with name '", str, "' is already registered in ");
             sbZ.append(zdVar.a);

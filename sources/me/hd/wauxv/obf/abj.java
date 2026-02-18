@@ -9,15 +9,15 @@ public final class abj implements ahh, Serializable {
     public final ahf f;
 
     public abj(ahf ahfVar, ahh ahhVar) {
-        bzo.q(ahhVar, "left");
-        bzo.q(ahfVar, "element");
+        throwIfVar1IsNull(ahhVar, "left");
+        throwIfVar1IsNull(ahfVar, "element");
         this.a = ahhVar;
         this.f = ahfVar;
     }
 
     @Override // me.hd.wauxv.obf.ahh
     public final ahh _t(ahg ahgVar) {
-        bzo.q(ahgVar, "key");
+        throwIfVar1IsNull(ahgVar, "key");
         ahf ahfVar = this.f;
         ahf ahfVar_w = ahfVar._w(ahgVar);
         ahh ahhVar = this.a;
@@ -35,13 +35,13 @@ public final class abj implements ahh, Serializable {
 
     @Override // me.hd.wauxv.obf.ahh
     public final ahh _v(ahh ahhVar) {
-        bzo.q(ahhVar, com.umeng.analytics.pro.f.X);
+        throwIfVar1IsNull(ahhVar, "context");
         return ahhVar == auz.a ? this : (ahh) ahhVar._u(this, new fq(3));
     }
 
     @Override // me.hd.wauxv.obf.ahh
     public final ahf _w(ahg ahgVar) {
-        bzo.q(ahgVar, "key");
+        throwIfVar1IsNull(ahgVar, "key");
         abj abjVar = this;
         while (true) {
             ahf ahfVar_w = abjVar.f._w(ahgVar);
@@ -87,15 +87,16 @@ public final class abj implements ahh, Serializable {
                 abj abjVar4 = this;
                 while (true) {
                     ahf ahfVar = abjVar4.f;
-                    if (!bzo.f(abjVar._w(ahfVar.getKey()), ahfVar)) {
+                    if (!nullSafeIsEqual(abjVar._w(ahfVar.getKey()), ahfVar)) {
                         zF = false;
                         break;
                     }
                     ahh ahhVar3 = abjVar4.a;
                     if (!(ahhVar3 instanceof abj)) {
-                        bzo.o(ahhVar3, "null cannot be cast to non-null type kotlin.coroutines.CoroutineContext.Element");
+                        throwIfVar1IsNull(ahhVar3,
+                                "null cannot be cast to non-null type kotlin.coroutines.CoroutineContext.Element");
                         ahf ahfVar2 = (ahf) ahhVar3;
-                        zF = bzo.f(abjVar._w(ahfVar2.getKey()), ahfVar2);
+                        zF = nullSafeIsEqual(abjVar._w(ahfVar2.getKey()), ahfVar2);
                         break;
                     }
                     abjVar4 = (abj) ahhVar3;
@@ -113,6 +114,6 @@ public final class abj implements ahh, Serializable {
     }
 
     public final String toString() {
-        return bjs.q(new StringBuilder("["), (String) _u("", new fq(1)), ']');
+        return concat(new StringBuilder("["), (String) _u("", new fq(1)), ']');
     }
 }

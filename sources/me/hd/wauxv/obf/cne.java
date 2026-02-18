@@ -7,7 +7,7 @@ public final class cne {
 
     public final boolean equals(Object obj) {
         if (obj instanceof cne) {
-            return bzo.f(this.a, ((cne) obj).a);
+            return nullSafeIsEqual(this.a, ((cne) obj).a);
         }
         return false;
     }

@@ -22,7 +22,7 @@ public abstract class doi extends afx implements bgq {
         }
         dal.a.getClass();
         String strA = dam.a(this);
-        bzo.p(strA, "renderLambdaToString(...)");
+        throwIfVar1IsNull(strA, "renderLambdaToString(...)");
         return strA;
     }
 }

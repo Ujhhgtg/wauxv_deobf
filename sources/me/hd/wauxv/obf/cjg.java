@@ -39,7 +39,7 @@ public abstract class cjg {
 
     public void d(Context context, AttributeSet attributeSet) {
         TypedArray typedArrayObtainAttributes = context.getResources().obtainAttributes(attributeSet, cyc.e);
-        bzo.p(typedArrayObtainAttributes, "obtainAttributes(...)");
+        throwIfVar1IsNull(typedArrayObtainAttributes, "obtainAttributes(...)");
         String string = typedArrayObtainAttributes.getString(2);
         ea eaVar = this.g;
         if (string == null) {
@@ -51,7 +51,7 @@ public abstract class cjg {
                 throw new IllegalArgumentException("Cannot have an empty route");
             }
             String strConcat = "android-app://androidx.navigation/".concat(string);
-            bzo.q(strConcat, "uriPattern");
+            throwIfVar1IsNull(strConcat, "uriPattern");
             ArrayList arrayListAk = bhu.ak((LinkedHashMap) eaVar.e, new cjh(new cjd(strConcat, null, null), 1));
             if (!arrayListAk.isEmpty()) {
                 StringBuilder sbZ = dkz.z("Cannot set route \"", string, "\" for destination ");
@@ -85,7 +85,7 @@ public abstract class cjg {
                 cjg cjgVar = (cjg) obj;
                 dlo dloVar = cjgVar.j;
                 ea eaVar2 = cjgVar.g;
-                boolean zF = bzo.f(arrayList, (ArrayList) eaVar2.c);
+                boolean zF = nullSafeIsEqual(arrayList, (ArrayList) eaVar2.c);
                 dlo dloVar2 = this.j;
                 if (dloVar2.i() != dloVar.i()) {
                     z = false;
@@ -98,7 +98,7 @@ public abstract class cjg {
                         break;
                     }
                     int iIntValue = ((Number) it.next()).intValue();
-                    if (!bzo.f(dloVar2.f(iIntValue), dloVar.f(iIntValue))) {
+                    if (!nullSafeIsEqual(dloVar2.f(iIntValue), dloVar.f(iIntValue))) {
                         z = false;
                         break;
                     }
@@ -114,12 +114,13 @@ public abstract class cjg {
                         break;
                     }
                     Map.Entry entry = (Map.Entry) it2.next();
-                    if (!cjgVar.n().containsKey(entry.getKey()) || !bzo.f(cjgVar.n().get(entry.getKey()), entry.getValue())) {
+                    if (!cjgVar.n().containsKey(entry.getKey())
+                            || !nullSafeIsEqual(cjgVar.n().get(entry.getKey()), entry.getValue())) {
                         z2 = false;
                         break;
                     }
                 }
-                if (eaVar.a != eaVar2.a || !bzo.f((String) eaVar.f, (String) eaVar2.f) || !zF || !z || !z2) {
+                if (eaVar.a != eaVar2.a || !nullSafeIsEqual((String) eaVar.f, (String) eaVar2.f) || !zF || !z || !z2) {
                 }
             }
             return false;
@@ -142,7 +143,7 @@ public abstract class cjg {
             iHashCode = iHashCode3 + (str4 != null ? str4.hashCode() : 0);
         }
         dlo dloVar = this.j;
-        bzo.q(dloVar, "<this>");
+        throwIfVar1IsNull(dloVar, "<this>");
         int i3 = 0;
         while (true) {
             if (!(i3 < dloVar.i())) {
@@ -173,12 +174,12 @@ public abstract class cjg {
         if (bundle == null && linkedHashMap.isEmpty()) {
             return null;
         }
-        Bundle bundleR = bht.r((csm[]) Arrays.copyOf(new csm[0], 0));
+        Bundle bundleR = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
         for (Map.Entry entry : linkedHashMap.entrySet()) {
             String str = (String) entry.getKey();
             cin cinVar = (cin) entry.getValue();
             cinVar.getClass();
-            bzo.q(str, "name");
+            throwIfVar1IsNull(str, "name");
             if (cinVar.c && (obj = cinVar.d) != null) {
                 cinVar.a.j(bundleR, str, obj);
             }
@@ -190,8 +191,9 @@ public abstract class cjg {
                 cin cinVar2 = (cin) entry2.getValue();
                 cinVar2.getClass();
                 cjv cjvVar = cinVar2.a;
-                bzo.q(str2, "name");
-                if (cinVar2.b || !bundleR.containsKey(str2) || !bzo.ae(str2, bundleR)) {
+                throwIfVar1IsNull(str2, "name");
+                if (cinVar2.b || !bundleR.containsKey(str2)
+                        || !ifVar2BundleContainsVar1AsKeyAndValueIsNull(str2, bundleR)) {
                     try {
                         cjvVar.f(str2, bundleR);
                     } catch (IllegalStateException unused) {
@@ -206,8 +208,8 @@ public abstract class cjg {
         return bundleR;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:11:0x0023  */
-    /* JADX WARN: Found duplicated region for block: B:14:0x002d  */
+    /* JADX WARN: Found duplicated region for block: B:11:0x0023 */
+    /* JADX WARN: Found duplicated region for block: B:14:0x002d */
     public final int[] l(cjg cjgVar) {
         km kmVar = new km();
         cjg cjgVar2 = this;
@@ -216,12 +218,12 @@ public abstract class cjg {
             cji cjiVar = cjgVar2.h;
             if ((cjgVar != null ? cjgVar.h : null) != null) {
                 cji cjiVar2 = cjgVar.h;
-                bzo.n(cjiVar2);
+                throwIfVar1IsNull(cjiVar2);
                 if (cjiVar2.p(eaVar.a) != cjgVar2) {
                     if (cjiVar != null || cjiVar.b.c != eaVar.a) {
                         kmVar.addFirst(cjgVar2);
                     }
-                    if (!bzo.f(cjiVar, cjgVar) || cjiVar == null) {
+                    if (!nullSafeIsEqual(cjiVar, cjgVar) || cjiVar == null) {
                         break;
                     }
                     cjgVar2 = cjiVar;
@@ -235,7 +237,7 @@ public abstract class cjg {
                 } else {
                     kmVar.addFirst(cjgVar2);
                 }
-                if (!bzo.f(cjiVar, cjgVar)) {
+                if (!nullSafeIsEqual(cjiVar, cjgVar)) {
                     break;
                 }
                 cjgVar2 = cjiVar;
@@ -264,43 +266,49 @@ public abstract class cjg {
     }
 
     public final Map n() {
-        return bzo.at((LinkedHashMap) this.g.e);
+        return KotlinHelpers.at((LinkedHashMap) this.g.e);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:135:0x0308  */
-    /* JADX WARN: Found duplicated region for block: B:137:0x030b  */
-    /* JADX WARN: Found duplicated region for block: B:140:0x0310  */
-    /* JADX WARN: Found duplicated region for block: B:143:0x0325  */
-    /* JADX WARN: Found duplicated region for block: B:150:0x0349  */
+    /* JADX WARN: Found duplicated region for block: B:135:0x0308 */
+    /* JADX WARN: Found duplicated region for block: B:137:0x030b */
+    /* JADX WARN: Found duplicated region for block: B:140:0x0310 */
+    /* JADX WARN: Found duplicated region for block: B:143:0x0325 */
+    /* JADX WARN: Found duplicated region for block: B:150:0x0349 */
     /* JADX WARN: Found duplicated region for block: B:153:0x035c A[MOVE_INLINED] */
-    /* JADX WARN: Found duplicated region for block: B:155:0x0371  */
-    /* JADX WARN: Found duplicated region for block: B:166:0x0377 A[ADDED_TO_REGION, REMOVE, SYNTHETIC] */
+    /* JADX WARN: Found duplicated region for block: B:155:0x0371 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:166:0x0377 A[ADDED_TO_REGION,
+     * REMOVE, SYNTHETIC]
+     */
     /* JADX WARN: Found duplicated region for block: B:168:0x037f A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:16:0x0063 A[DONT_INVERT] */
     /* JADX WARN: Found duplicated region for block: B:170:0x0381 A[SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:17:0x0065  */
+    /* JADX WARN: Found duplicated region for block: B:17:0x0065 */
     /* JADX WARN: Found duplicated region for block: B:18:0x0068 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:19:0x006a  */
-    /* JADX WARN: Found duplicated region for block: B:20:0x006c  */
+    /* JADX WARN: Found duplicated region for block: B:19:0x006a */
+    /* JADX WARN: Found duplicated region for block: B:20:0x006c */
     /* JADX WARN: Found duplicated region for block: B:22:0x0072 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:23:0x0074  */
+    /* JADX WARN: Found duplicated region for block: B:23:0x0074 */
     /* JADX WARN: Found duplicated region for block: B:24:0x0077 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:25:0x0079  */
-    /* JADX WARN: Found duplicated region for block: B:26:0x007b  */
-    /* JADX WARN: Found duplicated region for block: B:28:0x008a  */
-    /* JADX WARN: Found duplicated region for block: B:29:0x008d  */
+    /* JADX WARN: Found duplicated region for block: B:25:0x0079 */
+    /* JADX WARN: Found duplicated region for block: B:26:0x007b */
+    /* JADX WARN: Found duplicated region for block: B:28:0x008a */
+    /* JADX WARN: Found duplicated region for block: B:29:0x008d */
     /* JADX WARN: Found duplicated region for block: B:31:0x0090 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:32:0x0092  */
-    /* JADX WARN: Found duplicated region for block: B:34:0x00a9  */
-    /* JADX WARN: Found duplicated region for block: B:36:0x00b5  */
-    /* JADX WARN: Found duplicated region for block: B:37:0x00bb  */
-    /* JADX WARN: Found duplicated region for block: B:49:0x00fc  */
-    /* JADX WARN: Found duplicated region for block: B:70:0x0179  */
-    /* JADX WARN: Found duplicated region for block: B:71:0x017b  */
-    /* JADX WARN: Found duplicated region for block: B:74:0x0186  */
-    /* JADX WARN: Found duplicated region for block: B:81:0x01bd  */
-    /* JADX WARN: Found duplicated region for block: B:86:0x01ca  */
-    /* JADX WARN: Type inference failed for: r15v12, types: [java.lang.Object, me.hd.wauxv.obf.btt] */
+    /* JADX WARN: Found duplicated region for block: B:32:0x0092 */
+    /* JADX WARN: Found duplicated region for block: B:34:0x00a9 */
+    /* JADX WARN: Found duplicated region for block: B:36:0x00b5 */
+    /* JADX WARN: Found duplicated region for block: B:37:0x00bb */
+    /* JADX WARN: Found duplicated region for block: B:49:0x00fc */
+    /* JADX WARN: Found duplicated region for block: B:70:0x0179 */
+    /* JADX WARN: Found duplicated region for block: B:71:0x017b */
+    /* JADX WARN: Found duplicated region for block: B:74:0x0186 */
+    /* JADX WARN: Found duplicated region for block: B:81:0x01bd */
+    /* JADX WARN: Found duplicated region for block: B:86:0x01ca */
+    /*
+     * JADX WARN: Type inference failed for: r15v12, types: [java.lang.Object,
+     * me.hd.wauxv.obf.btt]
+     */
     public cjf o(jx jxVar) {
         boolean z;
         boolean zF;
@@ -357,7 +365,7 @@ public abstract class cjg {
                     zF = false;
                 } else {
                     dap dapVar4 = (dap) dovVar3.getValue();
-                    bzo.n(dapVar4);
+                    throwIfVar1IsNull(dapVar4);
                     z = true;
                     zF = dapVar4.f(uri.toString());
                 }
@@ -369,7 +377,7 @@ public abstract class cjg {
                             zF2 = false;
                         } else {
                             dap dapVar5 = (dap) dovVar2.getValue();
-                            bzo.n(dapVar5);
+                            throwIfVar1IsNull(dapVar5);
                             zF2 = dapVar5.f(str);
                         }
                         z2 = zF2 ? z : false;
@@ -378,8 +386,8 @@ public abstract class cjg {
                 if (z2) {
                     if (uri != null) {
                         cjdVar.getClass();
-                        bzo.q(uri, "deepLink");
-                        bzo.q(linkedHashMap, "arguments");
+                        throwIfVar1IsNull(uri, "deepLink");
+                        throwIfVar1IsNull(linkedHashMap, "arguments");
                         dapVar2 = (dap) cjdVar.l.getValue();
                         if (dapVar2 != null) {
                             bundle2 = null;
@@ -388,8 +396,10 @@ public abstract class cjg {
                                 it = it2;
                                 dovVar = dovVar2;
                             } else {
-                                bundleR2 = bht.r((csm[]) Arrays.copyOf(new csm[0], 0));
-                                if (!cjdVar.aa(bzxVarE2, bundleR2, linkedHashMap) && (!((Boolean) cjdVar.m.getValue()).booleanValue() || cjdVar.ab(uri, bundleR2, linkedHashMap))) {
+                                bundleR2 = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
+                                if (!cjdVar.aa(bzxVarE2, bundleR2, linkedHashMap)
+                                        && (!((Boolean) cjdVar.m.getValue()).booleanValue()
+                                                || cjdVar.ab(uri, bundleR2, linkedHashMap))) {
                                     String fragment = uri.getFragment();
                                     dapVar3 = (dap) cjdVar.s.getValue();
                                     if (dapVar3 != null || (bzxVarE3 = dapVar3.e(String.valueOf(fragment))) == null) {
@@ -414,7 +424,7 @@ public abstract class cjg {
                                             if (bztVarC != null) {
                                                 strDecode = Uri.decode(bztVarC.a);
                                                 i6 = i8;
-                                                bzo.p(strDecode, "decode(...)");
+                                                throwIfVar1IsNull(strDecode, "decode(...)");
                                             } else {
                                                 i6 = i8;
                                                 strDecode = null;
@@ -434,22 +444,22 @@ public abstract class cjg {
                                     }
                                     dovVar = dovVar2;
                                     i5 = 0;
-                                    if (!bhu.ak(linkedHashMap, new bgf() { // from class: me.hd.wauxv.obf.cjb
+                                    if (!bhu.ak(linkedHashMap, new IHasInvokeMethod() { // from class: me.hd.wauxv.obf.cjb
                                         @Override // me.hd.wauxv.obf.bgf
                                         public final Object invoke(Object obj2) {
                                             boolean zContainsKey;
                                             String str5 = (String) obj2;
                                             switch (i5) {
                                                 case 0:
-                                                    bzo.q(str5, "argName");
+                                                    throwIfVar1IsNull(str5, "argName");
                                                     Bundle bundle4 = bundleR2;
-                                                    bzo.q(bundle4, "source");
+                                                    throwIfVar1IsNull(bundle4, "source");
                                                     zContainsKey = bundle4.containsKey(str5);
                                                     break;
                                                 default:
-                                                    bzo.q(str5, "key");
+                                                    throwIfVar1IsNull(str5, "key");
                                                     Bundle bundle5 = bundleR2;
-                                                    bzo.q(bundle5, "source");
+                                                    throwIfVar1IsNull(bundle5, "source");
                                                     zContainsKey = bundle5.containsKey(str5);
                                                     break;
                                             }
@@ -480,10 +490,10 @@ public abstract class cjg {
                     if (uri == null && str5 != null) {
                         List<String> pathSegments = uri.getPathSegments();
                         Uri uri2 = Uri.parse(str5);
-                        bzo.p(uri2, "parse(...)");
+                        throwIfVar1IsNull(uri2, "parse(...)");
                         List<String> pathSegments2 = uri2.getPathSegments();
-                        bzo.q(pathSegments, "<this>");
-                        bzo.q(pathSegments2, "other");
+                        throwIfVar1IsNull(pathSegments, "<this>");
+                        throwIfVar1IsNull(pathSegments2, "other");
                         LinkedHashSet linkedHashSet = new LinkedHashSet(pathSegments);
                         linkedHashSet.retainAll(pathSegments2);
                         size = linkedHashSet.size();
@@ -492,10 +502,10 @@ public abstract class cjg {
                     z3 = (obj == null && obj.equals(str3)) ? z : false;
                     if (str == null && str2 != null) {
                         dap dapVar6 = (dap) dovVar.getValue();
-                        bzo.n(dapVar6);
+                        throwIfVar1IsNull(dapVar6);
                         if (dapVar6.f(str)) {
                             Pattern patternCompile = Pattern.compile("/");
-                            bzo.p(patternCompile, "compile(...)");
+                            throwIfVar1IsNull(patternCompile, "compile(...)");
                             Matcher matcher = patternCompile.matcher(str2);
                             if (matcher.find()) {
                                 ArrayList arrayList3 = new ArrayList(10);
@@ -530,7 +540,7 @@ public abstract class cjg {
                             String str6 = (String) listU.get(0);
                             String str7 = (String) listU.get(z ? 1 : 0);
                             Pattern patternCompile2 = Pattern.compile("/");
-                            bzo.p(patternCompile2, "compile(...)");
+                            throwIfVar1IsNull(patternCompile2, "compile(...)");
                             Matcher matcher2 = patternCompile2.matcher(str);
                             if (matcher2.find()) {
                                 ArrayList arrayList4 = new ArrayList(10);
@@ -564,8 +574,8 @@ public abstract class cjg {
                             List list2 = listU2;
                             String str8 = (String) list2.get(0);
                             String str9 = (String) list2.get(i4);
-                            i2 = bzo.f(str6, str8) ? 2 : 0;
-                            if (bzo.f(str7, str9)) {
+                            i2 = nullSafeIsEqual(str6, str8) ? 2 : 0;
+                            if (nullSafeIsEqual(str7, str9)) {
                                 i2++;
                             }
                         }
@@ -577,31 +587,32 @@ public abstract class cjg {
                             it2 = it;
                         }
                     } else if (z3 || i2 > -1) {
-                        bzo.q(linkedHashMap, "arguments");
-                        bundleR = bht.r((csm[]) Arrays.copyOf(new csm[0], 0));
-                        if (uri != null && (dapVar = (dap) dovVar3.getValue()) != null && (bzxVarE = dapVar.e(uri.toString())) != null) {
+                        throwIfVar1IsNull(linkedHashMap, "arguments");
+                        bundleR = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
+                        if (uri != null && (dapVar = (dap) dovVar3.getValue()) != null
+                                && (bzxVarE = dapVar.e(uri.toString())) != null) {
                             cjdVar.aa(bzxVarE, bundleR, linkedHashMap);
                             if (((Boolean) cjdVar.m.getValue()).booleanValue()) {
                                 cjdVar.ab(uri, bundleR, linkedHashMap);
                             }
                         }
                         i3 = 1;
-                        if (bhu.ak(linkedHashMap, new bgf() { // from class: me.hd.wauxv.obf.cjb
+                        if (bhu.ak(linkedHashMap, new IHasInvokeMethod() { // from class: me.hd.wauxv.obf.cjb
                             @Override // me.hd.wauxv.obf.bgf
                             public final Object invoke(Object obj2) {
                                 boolean zContainsKey;
                                 String str52 = (String) obj2;
                                 switch (i3) {
                                     case 0:
-                                        bzo.q(str52, "argName");
+                                        throwIfVar1IsNull(str52, "argName");
                                         Bundle bundle4 = bundleR;
-                                        bzo.q(bundle4, "source");
+                                        throwIfVar1IsNull(bundle4, "source");
                                         zContainsKey = bundle4.containsKey(str52);
                                         break;
                                     default:
-                                        bzo.q(str52, "key");
+                                        throwIfVar1IsNull(str52, "key");
                                         Bundle bundle5 = bundleR;
-                                        bzo.q(bundle5, "source");
+                                        throwIfVar1IsNull(bundle5, "source");
                                         zContainsKey = bundle5.containsKey(str52);
                                         break;
                                 }
@@ -629,7 +640,7 @@ public abstract class cjg {
                         zF2 = false;
                     } else {
                         dap dapVar52 = (dap) dovVar2.getValue();
-                        bzo.n(dapVar52);
+                        throwIfVar1IsNull(dapVar52);
                         zF2 = dapVar52.f(str);
                     }
                     if (zF2) {
@@ -639,8 +650,8 @@ public abstract class cjg {
             if (z2) {
                 if (uri != null) {
                     cjdVar.getClass();
-                    bzo.q(uri, "deepLink");
-                    bzo.q(linkedHashMap, "arguments");
+                    throwIfVar1IsNull(uri, "deepLink");
+                    throwIfVar1IsNull(linkedHashMap, "arguments");
                     dapVar2 = (dap) cjdVar.l.getValue();
                     if (dapVar2 != null) {
                         bundle2 = null;
@@ -649,7 +660,7 @@ public abstract class cjg {
                             it = it2;
                             dovVar = dovVar2;
                         } else {
-                            bundleR2 = bht.r((csm[]) Arrays.copyOf(new csm[0], 0));
+                            bundleR2 = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                             if (cjdVar.aa(bzxVarE2, bundleR2, linkedHashMap)) {
                                 it = it2;
                                 dovVar = dovVar2;
@@ -664,22 +675,22 @@ public abstract class cjg {
                                     dovVar = dovVar2;
                                 }
                                 i5 = 0;
-                                if (!bhu.ak(linkedHashMap, new bgf() { // from class: me.hd.wauxv.obf.cjb
+                                if (!bhu.ak(linkedHashMap, new IHasInvokeMethod() { // from class: me.hd.wauxv.obf.cjb
                                     @Override // me.hd.wauxv.obf.bgf
                                     public final Object invoke(Object obj2) {
                                         boolean zContainsKey;
                                         String str52 = (String) obj2;
                                         switch (i5) {
                                             case 0:
-                                                bzo.q(str52, "argName");
+                                                throwIfVar1IsNull(str52, "argName");
                                                 Bundle bundle4 = bundleR2;
-                                                bzo.q(bundle4, "source");
+                                                throwIfVar1IsNull(bundle4, "source");
                                                 zContainsKey = bundle4.containsKey(str52);
                                                 break;
                                             default:
-                                                bzo.q(str52, "key");
+                                                throwIfVar1IsNull(str52, "key");
                                                 Bundle bundle5 = bundleR2;
-                                                bzo.q(bundle5, "source");
+                                                throwIfVar1IsNull(bundle5, "source");
                                                 zContainsKey = bundle5.containsKey(str52);
                                                 break;
                                         }
@@ -716,8 +727,8 @@ public abstract class cjg {
                     cjfVar2 = cjfVar;
                     it2 = it;
                 } else if (z3) {
-                    bzo.q(linkedHashMap, "arguments");
-                    bundleR = bht.r((csm[]) Arrays.copyOf(new csm[0], 0));
+                    throwIfVar1IsNull(linkedHashMap, "arguments");
+                    bundleR = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                     if (uri != null) {
                         cjdVar.aa(bzxVarE, bundleR, linkedHashMap);
                         if (((Boolean) cjdVar.m.getValue()).booleanValue()) {
@@ -725,22 +736,22 @@ public abstract class cjg {
                         }
                     }
                     i3 = 1;
-                    if (bhu.ak(linkedHashMap, new bgf() { // from class: me.hd.wauxv.obf.cjb
+                    if (bhu.ak(linkedHashMap, new IHasInvokeMethod() { // from class: me.hd.wauxv.obf.cjb
                         @Override // me.hd.wauxv.obf.bgf
                         public final Object invoke(Object obj2) {
                             boolean zContainsKey;
                             String str522 = (String) obj2;
                             switch (i3) {
                                 case 0:
-                                    bzo.q(str522, "argName");
+                                    throwIfVar1IsNull(str522, "argName");
                                     Bundle bundle4 = bundleR;
-                                    bzo.q(bundle4, "source");
+                                    throwIfVar1IsNull(bundle4, "source");
                                     zContainsKey = bundle4.containsKey(str522);
                                     break;
                                 default:
-                                    bzo.q(str522, "key");
+                                    throwIfVar1IsNull(str522, "key");
                                     Bundle bundle5 = bundleR;
-                                    bzo.q(bundle5, "source");
+                                    throwIfVar1IsNull(bundle5, "source");
                                     zContainsKey = bundle5.containsKey(str522);
                                     break;
                             }
@@ -754,8 +765,8 @@ public abstract class cjg {
                         it2 = it;
                     }
                 } else {
-                    bzo.q(linkedHashMap, "arguments");
-                    bundleR = bht.r((csm[]) Arrays.copyOf(new csm[0], 0));
+                    throwIfVar1IsNull(linkedHashMap, "arguments");
+                    bundleR = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                     if (uri != null) {
                         cjdVar.aa(bzxVarE, bundleR, linkedHashMap);
                         if (((Boolean) cjdVar.m.getValue()).booleanValue()) {
@@ -763,22 +774,22 @@ public abstract class cjg {
                         }
                     }
                     i3 = 1;
-                    if (bhu.ak(linkedHashMap, new bgf() { // from class: me.hd.wauxv.obf.cjb
+                    if (bhu.ak(linkedHashMap, new IHasInvokeMethod() { // from class: me.hd.wauxv.obf.cjb
                         @Override // me.hd.wauxv.obf.bgf
                         public final Object invoke(Object obj2) {
                             boolean zContainsKey;
                             String str522 = (String) obj2;
                             switch (i3) {
                                 case 0:
-                                    bzo.q(str522, "argName");
+                                    throwIfVar1IsNull(str522, "argName");
                                     Bundle bundle4 = bundleR;
-                                    bzo.q(bundle4, "source");
+                                    throwIfVar1IsNull(bundle4, "source");
                                     zContainsKey = bundle4.containsKey(str522);
                                     break;
                                 default:
-                                    bzo.q(str522, "key");
+                                    throwIfVar1IsNull(str522, "key");
                                     Bundle bundle5 = bundleR;
-                                    bzo.q(bundle5, "source");
+                                    throwIfVar1IsNull(bundle5, "source");
                                     zContainsKey = bundle5.containsKey(str522);
                                     break;
                             }
@@ -823,7 +834,7 @@ public abstract class cjg {
             sb.append(this.i);
         }
         String string = sb.toString();
-        bzo.p(string, "toString(...)");
+        throwIfVar1IsNull(string, "toString(...)");
         return string;
     }
 }

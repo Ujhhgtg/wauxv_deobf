@@ -33,15 +33,16 @@ public final /* synthetic */ class yr implements bfu {
                 if (num == null) {
                     return null;
                 }
-                ByteBuffer byteBufferWrap = ByteBuffer.wrap(DexKitBridge.nativeGetClassByIds(DexKitBridge.b(dexKitBridge), new long[]{nd.d(i2, num.intValue())}));
-                bzo.p(byteBufferWrap, "wrap(...)");
+                ByteBuffer byteBufferWrap = ByteBuffer.wrap(DexKitBridge
+                        .nativeGetClassByIds(DexKitBridge.b(dexKitBridge), new long[] { nd.d(i2, num.intValue()) }));
+                throwIfVar1IsNull(byteBufferWrap, "wrap(...)");
                 c cVar = new c();
                 cVar.h(byteBufferWrap.position() + bjs.f(byteBufferWrap, ByteOrder.LITTLE_ENDIAN), byteBufferWrap);
                 yw ywVar = new yw();
                 int iM = cVar.m();
                 for (int i3 = 0; i3 < iM; i3++) {
                     c cVarL = cVar.l(i3);
-                    bzo.n(cVarL);
+                    throwIfVar1IsNull(cVarL);
                     ywVar.add(cna.t(dexKitBridge, cVarL));
                 }
                 if (!ywVar.isEmpty()) {
@@ -58,15 +59,16 @@ public final /* synthetic */ class yr implements bfu {
                 while (it.hasNext()) {
                     arrayList2.add(Long.valueOf(nd.d(i2, ((Number) it.next()).intValue())));
                 }
-                ByteBuffer byteBufferWrap2 = ByteBuffer.wrap(DexKitBridge.nativeGetClassByIds(DexKitBridge.b(dexKitBridge), aaz.aa(arrayList2)));
-                bzo.p(byteBufferWrap2, "wrap(...)");
+                ByteBuffer byteBufferWrap2 = ByteBuffer
+                        .wrap(DexKitBridge.nativeGetClassByIds(DexKitBridge.b(dexKitBridge), aaz.aa(arrayList2)));
+                throwIfVar1IsNull(byteBufferWrap2, "wrap(...)");
                 c cVar2 = new c();
                 cVar2.h(byteBufferWrap2.position() + bjs.f(byteBufferWrap2, ByteOrder.LITTLE_ENDIAN), byteBufferWrap2);
                 yw ywVar2 = new yw();
                 int iM2 = cVar2.m();
                 for (int i4 = 0; i4 < iM2; i4++) {
                     c cVarL2 = cVar2.l(i4);
-                    bzo.n(cVarL2);
+                    throwIfVar1IsNull(cVarL2);
                     ywVar2.add(cna.t(dexKitBridge, cVarL2));
                 }
                 return ywVar2;

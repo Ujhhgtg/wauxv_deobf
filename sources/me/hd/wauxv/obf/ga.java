@@ -10,7 +10,7 @@ import org.luckypray.dexkit.DexKitBridge;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class ga extends doo implements bob, bng {
+public final class ga extends BaseHook implements IDatabaseOperationsListener, bng {
     public static final ga a = new ga("AntiRevoke2Hook" /* cnb.z(-454085417368362L) */);
     public static final String b = "聊天" /* cnb.z(-454776907103018L) */;
     public static final String c = "阻止消息撤回2" /* cnb.z(-454781202070314L) */;
@@ -18,7 +18,7 @@ public final class ga extends doo implements bob, bng {
     public static final bn i = new bn(14);
 
     @Override // me.hd.wauxv.obf.bmf
-    public final void e() throws NoSuchMethodException {
+    public final void getThisObject() throws NoSuchMethodException {
         Iterator it = aba.ag(fw.a, fy.a, fx.a).iterator();
         while (it.hasNext()) {
             Class clsAz = emn.az((amn) it.next());
@@ -35,47 +35,59 @@ public final class ga extends doo implements bob, bng {
         }
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String f() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getName() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String g() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getCategory() {
         return b;
     }
 
     @Override // me.hd.wauxv.obf.bng
-    public final void h(DexKitBridge dexKitBridge) {
+    public final void locateDex(DexKitBridge dexKitBridge) {
         emn.aj(fw.a, dexKitBridge, new bn(15));
         emn.aj(fy.a, dexKitBridge, new bn(16));
         emn.aj(fx.a, dexKitBridge, new bn(17));
     }
 
-    @Override // me.hd.wauxv.obf.bob
-    public final void j(bmm bmmVar, String str, ContentValues contentValues, String str2, String[] strArr, int i2) throws IOException {
-        if (z() && str.equals("message" /* cnb.z(-454016697891626L) */) && bzo.f(contentValues.get("type" /* cnb.z(-453982338153258L) */), Integer.valueOf(ewg.l.w))) {
+    @Override // me.hd.wauxv.obf.IDatabaseOperationsListener
+    public final void j(HookParamWrapper hookParam, String str, ContentValues contentValues, String str2,
+            String[] strArr,
+            int i2)
+            throws IOException {
+        if (z() && str.equals("message" /* cnb.z(-454016697891626L) */)
+                && nullSafeIsEqual(contentValues.get("type" /* cnb.z(-453982338153258L) */),
+                        Integer.valueOf(ewg.l.w))) {
             String asString = contentValues.getAsString("content" /* cnb.z(-453943683447594L) */);
-            if (dnr.bp(asString, "\"" /* cnb.z(-453909323709226L) */, false) || dnr.bp(asString, "「" /* cnb.z(-453917913643818L) */, false)) {
+            if (dnr.bp(asString, "\"" /* cnb.z(-453909323709226L) */, false) || dnr.bp(asString, "「" /*
+                                                                                                      * cnb.z(-
+                                                                                                      * 453917913643818L)
+                                                                                                      */, false)) {
                 Long asLong = contentValues.getAsLong("msgId" /* cnb.z(-453926503578410L) */);
                 int i3 = bte.a;
                 dlx.a.getClass();
                 cde cdeVarT = dqc.bi(dlx.b()).t();
                 cdeVarT.ab = "rawQuery" /* cnb.z(-103246718827306L) */;
-                Object objJ = ((cdk) dkz.n(new Object[]{dal.b(String.class), dal.b(Object[].class)}, 2, cdeVarT)).j("SELECT createTime, talker FROM message WHERE msgId = ?" /* cnb.z(-453883553905450L) */, new Object[]{asLong});
-                bzo.n(objJ);
+                Object objJ = ((cdk) dkz.n(new Object[] { dal.b(String.class), dal.b(Object[].class) }, 2, cdeVarT)).j(
+                        "SELECT createTime, talker FROM message WHERE msgId = ?" /* cnb.z(-453883553905450L) */,
+                        new Object[] { asLong });
+                throwIfVar1IsNull(objJ);
                 Cursor cursor = (Cursor) objJ;
                 try {
                     if (cursor.moveToFirst()) {
                         long j = cursor.getLong(cursor.getColumnIndex("createTime" /* cnb.z(-453080395021098L) */));
-                        String string = cursor.getString(cursor.getColumnIndex("talker" /* cnb.z(-453067510119210L) */));
+                        String string = cursor
+                                .getString(cursor.getColumnIndex("talker" /* cnb.z(-453067510119210L) */));
                         Pattern patternCompile = Pattern.compile("([\"「])(.*?)([」\"])" /* cnb.z(-453020265478954L) */);
-                        bzo.p(patternCompile, "compile(...)");
+                        throwIfVar1IsNull(patternCompile, "compile(...)");
                         Matcher matcher = patternCompile.matcher(asString);
-                        bzo.p(matcher, "matcher(...)");
+                        throwIfVar1IsNull(matcher, "matcher(...)");
                         bzx bzxVarY = ewz.y(matcher, 0, asString);
-                        aye.w(ewg.j.w, string, "\"" + (bzxVarY != null ? (String) ((bzv) bzxVarY.e()).get(2) : null) + "\" " /* cnb.z(-453509891750698L) */ + fz.a.o(), j + 1);
-                        bmmVar.h(1);
+                        aye.w(ewg.j.w, string, "\"" + (bzxVarY != null ? (String) ((bzv) bzxVarY.e()).get(2) : null)
+                                + "\" " /* cnb.z(-453509891750698L) */ + fz.a.o(), j + 1);
+                        hookParam.setResult(1);
                     }
                     cursor.close();
                 } catch (Throwable th) {
@@ -90,13 +102,13 @@ public final class ga extends doo implements bob, bng {
         }
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String o() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getDescription() {
         return d;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final bgf p() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final IHasInvokeMethod p() {
         return i;
     }
 }

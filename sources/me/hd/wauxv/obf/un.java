@@ -4,7 +4,7 @@ import org.luckypray.dexkit.DexKitBridge;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class un extends doo implements bng {
+public final class un extends BaseHook implements IRequiresDexLocate {
     public static final un a = new un("ChatFavVoiceFilterForwardHook" /* cnb.z(-488586889657130L) */);
     public static final String b = "收藏" /* cnb.z(-477385614949162L) */;
     public static final String c = "聊天收藏语音过滤转发" /* cnb.z(-477389909916458L) */;
@@ -25,24 +25,24 @@ public final class un extends doo implements bng {
         emn.bc(ul.a, new mj(16));
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String f() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getName() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String g() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getCategory() {
         return b;
     }
 
     @Override // me.hd.wauxv.obf.bng
-    public final void h(DexKitBridge dexKitBridge) {
+    public final void locateDex(DexKitBridge dexKitBridge) {
         emn.aj(um.a, dexKitBridge, new mj(19));
         emn.aj(ul.a, dexKitBridge, new mj(20));
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String o() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getDescription() {
         return d;
     }
 }

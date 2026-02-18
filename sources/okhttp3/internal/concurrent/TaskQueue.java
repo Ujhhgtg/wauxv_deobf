@@ -8,7 +8,7 @@ import java.util.concurrent.RejectedExecutionException;
 import java.util.logging.Level;
 import me.hd.wauxv.obf.aaz;
 import me.hd.wauxv.obf.bfu;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.yg;
 import okhttp3.internal.Util;
 
@@ -22,7 +22,10 @@ public final class TaskQueue {
     private boolean shutdown;
     private final TaskRunner taskRunner;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class AwaitIdleTask extends Task {
         private final CountDownLatch latch;
 
@@ -42,12 +45,21 @@ public final class TaskQueue {
         }
     }
 
-    /* JADX INFO: renamed from: okhttp3.internal.concurrent.TaskQueue$execute$1, reason: invalid class name */
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: renamed from: okhttp3.internal.concurrent.TaskQueue$execute$1,
+     * reason: invalid class name
+     */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class AnonymousClass1 extends Task {
         final /* synthetic */ bfu $block;
 
-        /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+        /*
+         * JADX WARN: 'super' call moved to the top of the method (can break code
+         * semantics)
+         */
         public AnonymousClass1(String str, boolean z, bfu bfuVar) {
             super(str, z);
             this.$block = bfuVar;
@@ -60,12 +72,21 @@ public final class TaskQueue {
         }
     }
 
-    /* JADX INFO: renamed from: okhttp3.internal.concurrent.TaskQueue$schedule$2, reason: invalid class name */
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: renamed from: okhttp3.internal.concurrent.TaskQueue$schedule$2,
+     * reason: invalid class name
+     */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class AnonymousClass2 extends Task {
         final /* synthetic */ bfu $block;
 
-        /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+        /*
+         * JADX WARN: 'super' call moved to the top of the method (can break code
+         * semantics)
+         */
         public AnonymousClass2(String str, bfu bfuVar) {
             super(str, false, 2, null);
             this.$block = bfuVar;
@@ -78,22 +99,23 @@ public final class TaskQueue {
     }
 
     public TaskQueue(TaskRunner taskRunner, String str) {
-        bzo.q(taskRunner, "taskRunner");
-        bzo.q(str, "name");
+        throwIfVar1IsNull(taskRunner, "taskRunner");
+        throwIfVar1IsNull(str, "name");
         this.taskRunner = taskRunner;
         this.name = str;
         this.futureTasks = new ArrayList();
     }
 
-    public static /* synthetic */ void execute$default(TaskQueue taskQueue, String str, long j, boolean z, bfu bfuVar, int i, Object obj) {
+    public static /* synthetic */ void execute$default(TaskQueue taskQueue, String str, long j, boolean z, bfu bfuVar,
+            int i, Object obj) {
         if ((i & 2) != 0) {
             j = 0;
         }
         if ((i & 4) != 0) {
             z = true;
         }
-        bzo.q(str, "name");
-        bzo.q(bfuVar, "block");
+        throwIfVar1IsNull(str, "name");
+        throwIfVar1IsNull(bfuVar, "block");
         taskQueue.schedule(new AnonymousClass1(str, z, bfuVar), j);
     }
 
@@ -118,7 +140,7 @@ public final class TaskQueue {
     public final boolean cancelAllAndDecide$okhttp() {
         Task task = this.activeTask;
         if (task != null) {
-            bzo.n(task);
+            throwIfVar1IsNull(task);
             if (task.getCancelable()) {
                 this.cancelActiveTask = true;
             }
@@ -138,8 +160,8 @@ public final class TaskQueue {
     }
 
     public final void execute(String str, long j, boolean z, bfu bfuVar) {
-        bzo.q(str, "name");
-        bzo.q(bfuVar, "block");
+        throwIfVar1IsNull(str, "name");
+        throwIfVar1IsNull(bfuVar, "block");
         schedule(new AnonymousClass1(str, z, bfuVar), j);
     }
 
@@ -198,7 +220,7 @@ public final class TaskQueue {
     }
 
     public final void schedule(Task task, long j) {
-        bzo.q(task, "task");
+        throwIfVar1IsNull(task, "task");
         synchronized (this.taskRunner) {
             if (!this.shutdown) {
                 if (scheduleAndDecide$okhttp(task, j, false)) {
@@ -219,7 +241,7 @@ public final class TaskQueue {
 
     public final boolean scheduleAndDecide$okhttp(Task task, long j, boolean z) {
         String str;
-        bzo.q(task, "task");
+        throwIfVar1IsNull(task, "task");
         task.initQueue$okhttp(this);
         long jNanoTime = this.taskRunner.getBackend().nanoTime();
         long j2 = jNanoTime + j;
@@ -289,18 +311,19 @@ public final class TaskQueue {
         return this.name;
     }
 
-    public static /* synthetic */ void schedule$default(TaskQueue taskQueue, String str, long j, bfu bfuVar, int i, Object obj) {
+    public static /* synthetic */ void schedule$default(TaskQueue taskQueue, String str, long j, bfu bfuVar, int i,
+            Object obj) {
         if ((i & 2) != 0) {
             j = 0;
         }
-        bzo.q(str, "name");
-        bzo.q(bfuVar, "block");
+        throwIfVar1IsNull(str, "name");
+        throwIfVar1IsNull(bfuVar, "block");
         taskQueue.schedule(new AnonymousClass2(str, bfuVar), j);
     }
 
     public final void schedule(String str, long j, bfu bfuVar) {
-        bzo.q(str, "name");
-        bzo.q(bfuVar, "block");
+        throwIfVar1IsNull(str, "name");
+        throwIfVar1IsNull(bfuVar, "block");
         schedule(new AnonymousClass2(str, bfuVar), j);
     }
 }

@@ -15,7 +15,10 @@ import me.hd.wauxv.obf.bjs;
 public final class ci {
     private static final Comparator a = new a();
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class a implements Comparator {
         private a() {
         }
@@ -31,7 +34,11 @@ public final class ci {
             if (obj2 == null) {
                 return 1;
             }
-            return obj instanceof List ? ci.a((List) obj, (List) obj2) : obj instanceof Set ? ci.a((Set) obj, (Set) obj2) : obj instanceof Map ? ci.a((Map) obj, (Map) obj2) : obj instanceof byte[] ? ci.a((byte[]) obj, (byte[]) obj2) : ci.a((Comparable) obj, (Comparable) obj2);
+            return obj instanceof List ? ci.a((List) obj, (List) obj2)
+                    : obj instanceof Set ? ci.a((Set) obj, (Set) obj2)
+                            : obj instanceof Map ? ci.a((Map) obj, (Map) obj2)
+                                    : obj instanceof byte[] ? ci.a((byte[]) obj, (byte[]) obj2)
+                                            : ci.a((Comparable) obj, (Comparable) obj2);
         }
     }
 
@@ -46,7 +53,8 @@ public final class ci {
     }
 
     public static boolean b(ByteBuffer byteBuffer) {
-        return byteBuffer.hasArray() && byteBuffer.position() == 0 && byteBuffer.arrayOffset() == 0 && byteBuffer.remaining() == byteBuffer.capacity();
+        return byteBuffer.hasArray() && byteBuffer.position() == 0 && byteBuffer.arrayOffset() == 0
+                && byteBuffer.remaining() == byteBuffer.capacity();
     }
 
     public static ByteBuffer c(ByteBuffer byteBuffer) {
@@ -65,7 +73,8 @@ public final class ci {
             byteBuffer.slice().get(byteBufferWrap.array());
             return byteBufferWrap;
         }
-        System.arraycopy(byteBuffer.array(), byteBuffer.position() + byteBuffer.arrayOffset(), byteBufferWrap.array(), 0, byteBuffer.remaining());
+        System.arraycopy(byteBuffer.array(), byteBuffer.position() + byteBuffer.arrayOffset(), byteBufferWrap.array(),
+                0, byteBuffer.remaining());
         return byteBufferWrap;
     }
 
@@ -113,7 +122,8 @@ public final class ci {
         if (obj instanceof byte[]) {
             return a((byte[]) obj, (byte[]) obj2);
         }
-        throw new IllegalArgumentException(bjs.m(obj, new StringBuilder("Cannot compare objects of type ")));
+        throw new IllegalArgumentException(
+                concatVar1GetClass(obj, new StringBuilder("Cannot compare objects of type ")));
     }
 
     public static int a(boolean z, boolean z2) {

@@ -6,7 +6,7 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class ede {
     public static final edd Companion = new edd();
-    public static final btt[] a = {null, ewz.am(btx.a, new dtr(23))};
+    public static final btt[] a = { null, ewz.am(btx.a, new dtr(23)) };
     public final Integer b;
     public final List c;
 
@@ -27,7 +27,7 @@ public final class ede {
             return false;
         }
         ede edeVar = (ede) obj;
-        return bzo.f(this.b, edeVar.b) && bzo.f(this.c, edeVar.c);
+        return nullSafeIsEqual(this.b, edeVar.b) && nullSafeIsEqual(this.c, edeVar.c);
     }
 
     public final int hashCode() {

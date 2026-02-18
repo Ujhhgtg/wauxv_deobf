@@ -26,7 +26,8 @@ public final class ecm {
             return false;
         }
         ecm ecmVar = (ecm) obj;
-        return bzo.f(this.a, ecmVar.a) && bzo.f(this.b, ecmVar.b) && bzo.f(this.c, ecmVar.c);
+        return nullSafeIsEqual(this.a, ecmVar.a) && nullSafeIsEqual(this.b, ecmVar.b)
+                && nullSafeIsEqual(this.c, ecmVar.c);
     }
 
     public final int hashCode() {
@@ -44,6 +45,6 @@ public final class ecm {
         sb.append(this.a);
         sb.append(", bitRate=" /* cnb.z(-261679472442154L) */);
         bjs.w(sb, this.b, -261597868063530L);
-        return bjs.q(sb, this.c, ')');
+        return concat(sb, this.c, ')');
     }
 }

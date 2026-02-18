@@ -92,7 +92,8 @@ public class ae extends ab {
             for (int i = 0; i < length; i++) {
                 JSONObject jSONObject = jSONArray.getJSONObject(i);
                 String strOptString = jSONObject.has(f.y) ? jSONObject.optString(f.y) : "";
-                int iValueOf = jSONObject.has(com.umeng.ccg.a.G) ? Integer.valueOf(jSONObject.optInt(com.umeng.ccg.a.G)) : 1;
+                int iValueOf = jSONObject.has(com.umeng.ccg.a.G) ? Integer.valueOf(jSONObject.optInt(com.umeng.ccg.a.G))
+                        : 1;
                 if (!TextUtils.isEmpty(strOptString)) {
                     this.f.add(new Pair<>(strOptString, iValueOf));
                 }
@@ -209,7 +210,7 @@ public class ae extends ab {
 
     @Override // com.umeng.analytics.pro.ab, com.umeng.analytics.pro.aj
     public void b(String str, JSONObject jSONObject) {
-        super.b(str, jSONObject);
+        super.tryGetClassByName(str, jSONObject);
         if (jSONObject.has(com.umeng.ccg.a.B)) {
             a(jSONObject.optInt(com.umeng.ccg.a.B));
         }

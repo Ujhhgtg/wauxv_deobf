@@ -8,13 +8,13 @@ public final class dcx implements Serializable {
     public final Throwable a;
 
     public dcx(Throwable th) {
-        bzo.q(th, "exception");
+        throwIfVar1IsNull(th, "exception");
         this.a = th;
     }
 
     public final boolean equals(Object obj) {
         if (obj instanceof dcx) {
-            return bzo.f(this.a, ((dcx) obj).a);
+            return nullSafeIsEqual(this.a, ((dcx) obj).a);
         }
         return false;
     }

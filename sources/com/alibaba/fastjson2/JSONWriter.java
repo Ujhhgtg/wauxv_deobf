@@ -107,9 +107,13 @@ public abstract class JSONWriter implements Closeable {
     public final boolean utf16;
     public final boolean utf8;
     static final long WRITE_ARRAY_NULL_MASK = Feature.NullAsDefaultValue.mask | Feature.WriteNullListAsEmpty.mask;
-    static final long NONE_DIRECT_FEATURES = (Feature.ReferenceDetection.mask | Feature.NotWriteEmptyArray.mask) | Feature.NotWriteDefaultValue.mask;
+    static final long NONE_DIRECT_FEATURES = (Feature.ReferenceDetection.mask | Feature.NotWriteEmptyArray.mask)
+            | Feature.NotWriteDefaultValue.mask;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Context {
         static final ZoneId DEFAULT_ZONE_ID = ZoneId.systemDefault();
         AfterFilter afterFilter;
@@ -196,7 +200,11 @@ public abstract class JSONWriter implements Closeable {
                     this.contextNameFilter = (ContextNameFilter) filter;
                 }
             }
-            this.hasFilter = (this.propertyPreFilter == null && this.propertyFilter == null && this.nameFilter == null && this.valueFilter == null && this.beforeFilter == null && this.afterFilter == null && this.labelFilter == null && this.contextValueFilter == null && this.contextNameFilter == null) ? false : true;
+            this.hasFilter = (this.propertyPreFilter == null && this.propertyFilter == null && this.nameFilter == null
+                    && this.valueFilter == null && this.beforeFilter == null && this.afterFilter == null
+                    && this.labelFilter == null && this.contextValueFilter == null && this.contextNameFilter == null)
+                            ? false
+                            : true;
         }
 
         public AfterFilter getAfterFilter() {
@@ -221,9 +229,11 @@ public abstract class JSONWriter implements Closeable {
 
         public DateTimeFormatter getDateFormatter() {
             String str;
-            if (this.dateFormatter == null && (str = this.dateFormat) != null && !this.dateFormatMillis && !this.dateFormatISO8601 && !this.dateFormatUnixTime) {
+            if (this.dateFormatter == null && (str = this.dateFormat) != null && !this.dateFormatMillis
+                    && !this.dateFormatISO8601 && !this.dateFormatUnixTime) {
                 Locale locale = this.locale;
-                this.dateFormatter = locale == null ? DateTimeFormatter.ofPattern(str) : DateTimeFormatter.ofPattern(str, locale);
+                this.dateFormatter = locale == null ? DateTimeFormatter.ofPattern(str)
+                        : DateTimeFormatter.ofPattern(str, locale);
             }
             return this.dateFormatter;
         }
@@ -507,7 +517,10 @@ public abstract class JSONWriter implements Closeable {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public enum Feature {
         FieldBased(1),
         IgnoreNoneSerializable(2),
@@ -594,7 +607,7 @@ public abstract class JSONWriter implements Closeable {
     }
 
     public static IllegalArgumentException illegalYear(int i) {
-        return new IllegalArgumentException(bjs.i(i, "Only 4 digits numbers are supported. Provided: "));
+        return new IllegalArgumentException(concatVar2Var1(i, "Only 4 digits numbers are supported. Provided: "));
     }
 
     public static boolean isWriteAsString(long j, long j2) {
@@ -617,7 +630,14 @@ public abstract class JSONWriter implements Closeable {
 
     public static JSONWriter of() {
         Context context = new Context(JSONFactory.defaultObjectWriterProvider);
-        return JDKUtils.JVM_VERSION == 8 ? (JDKUtils.FIELD_STRING_VALUE == null || JDKUtils.ANDROID || JDKUtils.OPENJ9) ? new JSONWriterUTF16JDK8(context) : new JSONWriterUTF16JDK8UF(context) : (JSONFactory.defaultWriterFeatures & Feature.OptimizedForAscii.mask) != 0 ? ofUTF8(context) : (JDKUtils.FIELD_STRING_VALUE == null || JDKUtils.STRING_CODER == null || JDKUtils.STRING_VALUE == null) ? new JSONWriterUTF16(context) : new JSONWriterUTF16JDK9UF(context);
+        return JDKUtils.JVM_VERSION == 8
+                ? (JDKUtils.FIELD_STRING_VALUE == null || JDKUtils.ANDROID || JDKUtils.OPENJ9)
+                        ? new JSONWriterUTF16JDK8(context)
+                        : new JSONWriterUTF16JDK8UF(context)
+                : (JSONFactory.defaultWriterFeatures & Feature.OptimizedForAscii.mask) != 0 ? ofUTF8(context)
+                        : (JDKUtils.FIELD_STRING_VALUE == null || JDKUtils.STRING_CODER == null
+                                || JDKUtils.STRING_VALUE == null) ? new JSONWriterUTF16(context)
+                                        : new JSONWriterUTF16JDK9UF(context);
     }
 
     public static JSONWriter ofJSONB() {
@@ -630,7 +650,13 @@ public abstract class JSONWriter implements Closeable {
 
     public static JSONWriter ofUTF16(Feature... featureArr) {
         Context contextCreateWriteContext = JSONFactory.createWriteContext(featureArr);
-        return JDKUtils.JVM_VERSION == 8 ? (JDKUtils.FIELD_STRING_VALUE == null || JDKUtils.ANDROID || JDKUtils.OPENJ9) ? new JSONWriterUTF16JDK8(contextCreateWriteContext) : new JSONWriterUTF16JDK8UF(contextCreateWriteContext) : (JDKUtils.FIELD_STRING_VALUE == null || JDKUtils.STRING_CODER == null || JDKUtils.STRING_VALUE == null) ? new JSONWriterUTF16(contextCreateWriteContext) : new JSONWriterUTF16JDK9UF(contextCreateWriteContext);
+        return JDKUtils.JVM_VERSION == 8
+                ? (JDKUtils.FIELD_STRING_VALUE == null || JDKUtils.ANDROID || JDKUtils.OPENJ9)
+                        ? new JSONWriterUTF16JDK8(contextCreateWriteContext)
+                        : new JSONWriterUTF16JDK8UF(contextCreateWriteContext)
+                : (JDKUtils.FIELD_STRING_VALUE == null || JDKUtils.STRING_CODER == null
+                        || JDKUtils.STRING_VALUE == null) ? new JSONWriterUTF16(contextCreateWriteContext)
+                                : new JSONWriterUTF16JDK9UF(contextCreateWriteContext);
     }
 
     public static JSONWriter ofUTF8() {
@@ -650,7 +676,8 @@ public abstract class JSONWriter implements Closeable {
         if ((Feature.WriteClassName.mask & j) == 0 || obj == null || (cls2 = obj.getClass()) == cls) {
             return;
         }
-        if ((Feature.NotWriteHashMapArrayListClassName.mask & j) == 0 || !(cls2 == HashMap.class || cls2 == ArrayList.class)) {
+        if ((Feature.NotWriteHashMapArrayListClassName.mask & j) == 0
+                || !(cls2 == HashMap.class || cls2 == ArrayList.class)) {
             if ((j & Feature.NotWriteRootClassName.mask) == 0 || obj != this.rootObject) {
                 writeTypeName(TypeUtils.getTypeName(cls2));
             }
@@ -797,7 +824,8 @@ public abstract class JSONWriter implements Closeable {
         if ((Feature.WriteClassName.mask & j) == 0 || obj == null || (cls2 = obj.getClass()) == cls) {
             return false;
         }
-        if ((Feature.NotWriteHashMapArrayListClassName.mask & j) == 0 || !(cls2 == HashMap.class || cls2 == ArrayList.class)) {
+        if ((Feature.NotWriteHashMapArrayListClassName.mask & j) == 0
+                || !(cls2 == HashMap.class || cls2 == ArrayList.class)) {
             return (j & Feature.NotWriteRootClassName.mask) == 0 || obj != this.rootObject;
         }
         return false;
@@ -819,7 +847,9 @@ public abstract class JSONWriter implements Closeable {
         if (i < i4) {
             return i4;
         }
-        StringBuilder sbR = yg.r(i, "Maximum array size exceeded. Try enabling LargeObject feature instead. Requested size: ", ", max size: ");
+        StringBuilder sbR = yg.r(i,
+                "Maximum array size exceeded. Try enabling LargeObject feature instead. Requested size: ",
+                ", max size: ");
         sbR.append(this.maxArraySize);
         throw new JSONLargeObjectException(sbR.toString());
     }
@@ -836,7 +866,8 @@ public abstract class JSONWriter implements Closeable {
 
     public final void popPath0(Object obj) {
         Path path = this.path;
-        if (path == null || (this.context.features & MASK_REFERENCE_DETECTION) == 0 || obj == Collections.EMPTY_LIST || obj == Collections.EMPTY_SET) {
+        if (path == null || (this.context.features & MASK_REFERENCE_DETECTION) == 0 || obj == Collections.EMPTY_LIST
+                || obj == Collections.EMPTY_SET) {
             return;
         }
         this.path = path.parent;
@@ -888,7 +919,8 @@ public abstract class JSONWriter implements Closeable {
         Path path = this.path;
         Path path2 = Path.ROOT;
         this.path = path == path2 ? fieldWriter.getRootParentPath() : fieldWriter.getPath(path);
-        if (obj == this.rootObject || ((identityHashMap = this.refs) != null && (path2 = identityHashMap.get(obj)) != null)) {
+        if (obj == this.rootObject
+                || ((identityHashMap = this.refs) != null && (path2 = identityHashMap.get(obj)) != null)) {
             return path2.toString();
         }
         if (this.refs == null) {
@@ -1205,7 +1237,8 @@ public abstract class JSONWriter implements Closeable {
     public final boolean writeLocalDateWithFormat(LocalDate localDate) {
         Context context = this.context;
         if (context.dateFormatUnixTime || context.dateFormatMillis) {
-            long epochMilli = LocalDateTime.of(localDate, LocalTime.MIN).atZone(context.getZoneId()).toInstant().toEpochMilli();
+            long epochMilli = LocalDateTime.of(localDate, LocalTime.MIN).atZone(context.getZoneId()).toInstant()
+                    .toEpochMilli();
             if (!context.dateFormatMillis) {
                 epochMilli /= 1000;
             }
@@ -1216,7 +1249,8 @@ public abstract class JSONWriter implements Closeable {
         if (dateFormatter == null) {
             return false;
         }
-        writeString(context.isDateFormatHasHour() ? dateFormatter.format(LocalDateTime.of(localDate, LocalTime.MIN)) : dateFormatter.format(localDate));
+        writeString(context.isDateFormatHasHour() ? dateFormatter.format(LocalDateTime.of(localDate, LocalTime.MIN))
+                : dateFormatter.format(localDate));
         return true;
     }
 
@@ -1437,12 +1471,14 @@ public abstract class JSONWriter implements Closeable {
     }
 
     public final boolean isIgnoreNoneSerializable(Object obj) {
-        return ((this.context.features & Feature.IgnoreNoneSerializable.mask) == 0 || obj == null || Serializable.class.isAssignableFrom(obj.getClass())) ? false : true;
+        return ((this.context.features & Feature.IgnoreNoneSerializable.mask) == 0 || obj == null
+                || Serializable.class.isAssignableFrom(obj.getClass())) ? false : true;
     }
 
     public final boolean isRefDetect(Object obj) {
         long j = this.context.features;
-        return ((Feature.ReferenceDetection.mask & j) == 0 || (j & FieldInfo.DISABLE_REFERENCE_DETECT) != 0 || obj == null || ObjectWriterProvider.isNotReferenceDetect(obj.getClass())) ? false : true;
+        return ((Feature.ReferenceDetection.mask & j) == 0 || (j & FieldInfo.DISABLE_REFERENCE_DETECT) != 0
+                || obj == null || ObjectWriterProvider.isNotReferenceDetect(obj.getClass())) ? false : true;
     }
 
     public void startArray(Object obj, int i) {
@@ -1580,7 +1616,10 @@ public abstract class JSONWriter implements Closeable {
         throw new JSONException("UnsupportedOperation");
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Path {
         Path child0;
         Path child1;
@@ -1603,7 +1642,8 @@ public abstract class JSONWriter implements Closeable {
             }
             if (obj != null && Path.class == obj.getClass()) {
                 Path path = (Path) obj;
-                if (this.index == path.index && Objects.equals(this.parent, path.parent) && Objects.equals(this.name, path.name)) {
+                if (this.index == path.index && Objects.equals(this.parent, path.parent)
+                        && Objects.equals(this.name, path.name)) {
                     return true;
                 }
             }
@@ -1615,10 +1655,10 @@ public abstract class JSONWriter implements Closeable {
         }
 
         /* JADX WARN: Found duplicated region for block: B:139:0x02c9 A[FALL_THROUGH] */
-        /* JADX WARN: Found duplicated region for block: B:141:0x02d6  */
-        /* JADX WARN: Found duplicated region for block: B:142:0x02e2  */
+        /* JADX WARN: Found duplicated region for block: B:141:0x02d6 */
+        /* JADX WARN: Found duplicated region for block: B:142:0x02e2 */
         /* JADX WARN: Found duplicated region for block: B:81:0x018e A[FALL_THROUGH] */
-        /* JADX WARN: Found duplicated region for block: B:83:0x0195  */
+        /* JADX WARN: Found duplicated region for block: B:83:0x0195 */
         public String toString() {
             char c;
             int i;
@@ -1701,28 +1741,42 @@ public abstract class JSONWriter implements Closeable {
                                                                                 i7 = -1;
                                                                             } else {
                                                                                 char cCharAt = str2.charAt(i15 + 1);
-                                                                                if (cCharAt < 56320 || cCharAt >= 57344) {
+                                                                                if (cCharAt < 56320
+                                                                                        || cCharAt >= 57344) {
                                                                                     i6 = i11 + 1;
                                                                                     bArrCopyOf[i11] = JSONB.Constants.BC_INT32_BYTE_MAX;
                                                                                 } else {
-                                                                                    i7 = ((c7 << '\n') + cCharAt) - 56613888;
+                                                                                    i7 = ((c7 << '\n') + cCharAt)
+                                                                                            - 56613888;
                                                                                 }
                                                                             }
                                                                             if (i7 < 0) {
                                                                                 if (i11 == bArrCopyOf.length) {
-                                                                                    bArrCopyOf = Arrays.copyOf(bArrCopyOf, bArrCopyOf.length + (bArrCopyOf.length >> 1));
+                                                                                    bArrCopyOf = Arrays.copyOf(
+                                                                                            bArrCopyOf,
+                                                                                            bArrCopyOf.length
+                                                                                                    + (bArrCopyOf.length >> 1));
                                                                                 }
                                                                                 i6 = i11 + 1;
                                                                                 bArrCopyOf[i11] = JSONB.Constants.BC_INT32_BYTE_MAX;
                                                                             } else {
                                                                                 int i16 = i11 + 3;
                                                                                 if (i16 >= bArrCopyOf.length) {
-                                                                                    bArrCopyOf = Arrays.copyOf(bArrCopyOf, bArrCopyOf.length + (bArrCopyOf.length >> 1));
+                                                                                    bArrCopyOf = Arrays.copyOf(
+                                                                                            bArrCopyOf,
+                                                                                            bArrCopyOf.length
+                                                                                                    + (bArrCopyOf.length >> 1));
                                                                                 }
-                                                                                bArrCopyOf[i11] = (byte) ((i7 >> 18) | 240);
-                                                                                bArrCopyOf[i11 + 1] = (byte) (((i7 >> 12) & 63) | 128);
-                                                                                bArrCopyOf[i11 + 2] = (byte) (((i7 >> 6) & 63) | 128);
-                                                                                bArrCopyOf[i16] = (byte) ((i7 & 63) | 128);
+                                                                                bArrCopyOf[i11] = (byte) ((i7 >> 18)
+                                                                                        | 240);
+                                                                                bArrCopyOf[i11
+                                                                                        + 1] = (byte) (((i7 >> 12) & 63)
+                                                                                                | 128);
+                                                                                bArrCopyOf[i11
+                                                                                        + 2] = (byte) (((i7 >> 6) & 63)
+                                                                                                | 128);
+                                                                                bArrCopyOf[i16] = (byte) ((i7 & 63)
+                                                                                        | 128);
                                                                                 i6 = i11 + 4;
                                                                                 i15++;
                                                                             }
@@ -1734,18 +1788,25 @@ public abstract class JSONWriter implements Closeable {
                                                                     } else if (c7 > 2047) {
                                                                         int i17 = i11 + 2;
                                                                         if (i17 >= bArrCopyOf.length) {
-                                                                            bArrCopyOf = Arrays.copyOf(bArrCopyOf, bArrCopyOf.length + (bArrCopyOf.length >> 1));
+                                                                            bArrCopyOf = Arrays.copyOf(bArrCopyOf,
+                                                                                    bArrCopyOf.length
+                                                                                            + (bArrCopyOf.length >> 1));
                                                                         }
-                                                                        bArrCopyOf[i11] = (byte) (((c7 >> '\f') & 15) | Opcodes.SHL_INT_LIT8);
-                                                                        bArrCopyOf[i11 + 1] = (byte) (((c7 >> 6) & 63) | 128);
+                                                                        bArrCopyOf[i11] = (byte) (((c7 >> '\f') & 15)
+                                                                                | Opcodes.SHL_INT_LIT8);
+                                                                        bArrCopyOf[i11
+                                                                                + 1] = (byte) (((c7 >> 6) & 63) | 128);
                                                                         bArrCopyOf[i17] = (byte) ((c7 & '?') | 128);
                                                                         i11 += 3;
                                                                     } else {
                                                                         int i18 = i11 + 1;
                                                                         if (i18 >= bArrCopyOf.length) {
-                                                                            bArrCopyOf = Arrays.copyOf(bArrCopyOf, bArrCopyOf.length + (bArrCopyOf.length >> 1));
+                                                                            bArrCopyOf = Arrays.copyOf(bArrCopyOf,
+                                                                                    bArrCopyOf.length
+                                                                                            + (bArrCopyOf.length >> 1));
                                                                         }
-                                                                        bArrCopyOf[i11] = (byte) (((c7 >> 6) & 31) | 192);
+                                                                        bArrCopyOf[i11] = (byte) (((c7 >> 6) & 31)
+                                                                                | 192);
                                                                         bArrCopyOf[i18] = (byte) ((c7 & '?') | 128);
                                                                         i11 += 2;
                                                                     }
@@ -1753,7 +1814,9 @@ public abstract class JSONWriter implements Closeable {
                                                                 } else {
                                                                     if (i11 == bArrCopyOf.length) {
                                                                         c2 = c3;
-                                                                        bArrCopyOf = Arrays.copyOf(bArrCopyOf, bArrCopyOf.length + (bArrCopyOf.length >> 1));
+                                                                        bArrCopyOf = Arrays.copyOf(bArrCopyOf,
+                                                                                bArrCopyOf.length
+                                                                                        + (bArrCopyOf.length >> 1));
                                                                     } else {
                                                                         c2 = c3;
                                                                     }
@@ -1772,7 +1835,8 @@ public abstract class JSONWriter implements Closeable {
                                                         c2 = c3;
                                                         i5 = i11 + 1;
                                                         if (i5 >= bArrCopyOf.length) {
-                                                            bArrCopyOf = Arrays.copyOf(bArrCopyOf, bArrCopyOf.length + (bArrCopyOf.length >> 1));
+                                                            bArrCopyOf = Arrays.copyOf(bArrCopyOf,
+                                                                    bArrCopyOf.length + (bArrCopyOf.length >> 1));
                                                         }
                                                         bArrCopyOf[i11] = 92;
                                                         bArrCopyOf[i5] = (byte) c7;
@@ -1793,7 +1857,8 @@ public abstract class JSONWriter implements Closeable {
                                                 c2 = c3;
                                                 i5 = i11 + 1;
                                                 if (i5 >= bArrCopyOf.length) {
-                                                    bArrCopyOf = Arrays.copyOf(bArrCopyOf, bArrCopyOf.length + (bArrCopyOf.length >> 1));
+                                                    bArrCopyOf = Arrays.copyOf(bArrCopyOf,
+                                                            bArrCopyOf.length + (bArrCopyOf.length >> 1));
                                                 }
                                                 bArrCopyOf[i11] = 92;
                                                 bArrCopyOf[i5] = (byte) c7;
@@ -1806,7 +1871,8 @@ public abstract class JSONWriter implements Closeable {
                                         c2 = c3;
                                         i5 = i11 + 1;
                                         if (i5 >= bArrCopyOf.length) {
-                                            bArrCopyOf = Arrays.copyOf(bArrCopyOf, bArrCopyOf.length + (bArrCopyOf.length >> 1));
+                                            bArrCopyOf = Arrays.copyOf(bArrCopyOf,
+                                                    bArrCopyOf.length + (bArrCopyOf.length >> 1));
                                         }
                                         bArrCopyOf[i11] = 92;
                                         bArrCopyOf[i5] = (byte) c7;
@@ -1817,7 +1883,8 @@ public abstract class JSONWriter implements Closeable {
                                 c2 = c3;
                                 i5 = i11 + 1;
                                 if (i5 >= bArrCopyOf.length) {
-                                    bArrCopyOf = Arrays.copyOf(bArrCopyOf, bArrCopyOf.length + (bArrCopyOf.length >> 1));
+                                    bArrCopyOf = Arrays.copyOf(bArrCopyOf,
+                                            bArrCopyOf.length + (bArrCopyOf.length >> 1));
                                 }
                                 bArrCopyOf[i11] = 92;
                                 bArrCopyOf[i5] = (byte) c7;
@@ -1855,28 +1922,42 @@ public abstract class JSONWriter implements Closeable {
                                                                                 i3 = -1;
                                                                             } else {
                                                                                 char cCharAt3 = str2.charAt(i19 + 1);
-                                                                                if (cCharAt3 < 56320 || cCharAt3 >= 57344) {
+                                                                                if (cCharAt3 < 56320
+                                                                                        || cCharAt3 >= 57344) {
                                                                                     i2 = i11 + 1;
                                                                                     bArrCopyOf[i11] = JSONB.Constants.BC_INT32_BYTE_MAX;
                                                                                 } else {
-                                                                                    i3 = ((cCharAt2 << '\n') + cCharAt3) - 56613888;
+                                                                                    i3 = ((cCharAt2 << '\n') + cCharAt3)
+                                                                                            - 56613888;
                                                                                 }
                                                                             }
                                                                             if (i3 < 0) {
                                                                                 if (i11 == bArrCopyOf.length) {
-                                                                                    bArrCopyOf = Arrays.copyOf(bArrCopyOf, bArrCopyOf.length + (bArrCopyOf.length >> 1));
+                                                                                    bArrCopyOf = Arrays.copyOf(
+                                                                                            bArrCopyOf,
+                                                                                            bArrCopyOf.length
+                                                                                                    + (bArrCopyOf.length >> 1));
                                                                                 }
                                                                                 i4 = i11 + 1;
                                                                                 bArrCopyOf[i11] = JSONB.Constants.BC_INT32_BYTE_MAX;
                                                                             } else {
                                                                                 i4 = i11 + 4;
                                                                                 if (i4 >= bArrCopyOf.length) {
-                                                                                    bArrCopyOf = Arrays.copyOf(bArrCopyOf, bArrCopyOf.length + (bArrCopyOf.length >> 1));
+                                                                                    bArrCopyOf = Arrays.copyOf(
+                                                                                            bArrCopyOf,
+                                                                                            bArrCopyOf.length
+                                                                                                    + (bArrCopyOf.length >> 1));
                                                                                 }
-                                                                                bArrCopyOf[i11] = (byte) ((i3 >> 18) | 240);
-                                                                                bArrCopyOf[i11 + 1] = (byte) (((i3 >> 12) & 63) | 128);
-                                                                                bArrCopyOf[i11 + 2] = (byte) (((i3 >> 6) & 63) | 128);
-                                                                                bArrCopyOf[i11 + 3] = (byte) ((i3 & 63) | 128);
+                                                                                bArrCopyOf[i11] = (byte) ((i3 >> 18)
+                                                                                        | 240);
+                                                                                bArrCopyOf[i11
+                                                                                        + 1] = (byte) (((i3 >> 12) & 63)
+                                                                                                | 128);
+                                                                                bArrCopyOf[i11
+                                                                                        + 2] = (byte) (((i3 >> 6) & 63)
+                                                                                                | 128);
+                                                                                bArrCopyOf[i11
+                                                                                        + 3] = (byte) ((i3 & 63) | 128);
                                                                                 i19++;
                                                                             }
                                                                             i11 = i4;
@@ -1888,25 +1969,37 @@ public abstract class JSONWriter implements Closeable {
                                                                     } else if (cCharAt2 > 2047) {
                                                                         int i20 = i11 + 2;
                                                                         if (i20 >= bArrCopyOf.length) {
-                                                                            bArrCopyOf = Arrays.copyOf(bArrCopyOf, bArrCopyOf.length + (bArrCopyOf.length >> 1));
+                                                                            bArrCopyOf = Arrays.copyOf(bArrCopyOf,
+                                                                                    bArrCopyOf.length
+                                                                                            + (bArrCopyOf.length >> 1));
                                                                         }
-                                                                        bArrCopyOf[i11] = (byte) (((cCharAt2 >> '\f') & 15) | Opcodes.SHL_INT_LIT8);
-                                                                        bArrCopyOf[i11 + 1] = (byte) (((cCharAt2 >> 6) & 63) | 128);
-                                                                        bArrCopyOf[i20] = (byte) ((cCharAt2 & '?') | 128);
+                                                                        bArrCopyOf[i11] = (byte) (((cCharAt2 >> '\f')
+                                                                                & 15) | Opcodes.SHL_INT_LIT8);
+                                                                        bArrCopyOf[i11
+                                                                                + 1] = (byte) (((cCharAt2 >> 6) & 63)
+                                                                                        | 128);
+                                                                        bArrCopyOf[i20] = (byte) ((cCharAt2 & '?')
+                                                                                | 128);
                                                                         i11 += 3;
                                                                     } else {
                                                                         int i21 = i11 + 1;
                                                                         if (i21 >= bArrCopyOf.length) {
-                                                                            bArrCopyOf = Arrays.copyOf(bArrCopyOf, bArrCopyOf.length + (bArrCopyOf.length >> 1));
+                                                                            bArrCopyOf = Arrays.copyOf(bArrCopyOf,
+                                                                                    bArrCopyOf.length
+                                                                                            + (bArrCopyOf.length >> 1));
                                                                         }
-                                                                        bArrCopyOf[i11] = (byte) (((cCharAt2 >> 6) & 31) | 192);
-                                                                        bArrCopyOf[i21] = (byte) ((cCharAt2 & '?') | 128);
+                                                                        bArrCopyOf[i11] = (byte) (((cCharAt2 >> 6) & 31)
+                                                                                | 192);
+                                                                        bArrCopyOf[i21] = (byte) ((cCharAt2 & '?')
+                                                                                | 128);
                                                                         i11 += 2;
                                                                     }
                                                                     z = false;
                                                                 } else {
                                                                     if (i11 == bArrCopyOf.length) {
-                                                                        bArrCopyOf = Arrays.copyOf(bArrCopyOf, bArrCopyOf.length + (bArrCopyOf.length >> c8));
+                                                                        bArrCopyOf = Arrays.copyOf(bArrCopyOf,
+                                                                                bArrCopyOf.length
+                                                                                        + (bArrCopyOf.length >> c8));
                                                                     }
                                                                     bArrCopyOf[i11] = (byte) cCharAt2;
                                                                     i11++;
@@ -1924,7 +2017,8 @@ public abstract class JSONWriter implements Closeable {
                                                         i = i11 + 1;
                                                         if (i >= bArrCopyOf.length) {
                                                             c = 1;
-                                                            bArrCopyOf = Arrays.copyOf(bArrCopyOf, bArrCopyOf.length + (bArrCopyOf.length >> 1));
+                                                            bArrCopyOf = Arrays.copyOf(bArrCopyOf,
+                                                                    bArrCopyOf.length + (bArrCopyOf.length >> 1));
                                                         } else {
                                                             c = 1;
                                                         }
@@ -1947,7 +2041,8 @@ public abstract class JSONWriter implements Closeable {
                                                 i = i11 + 1;
                                                 if (i >= bArrCopyOf.length) {
                                                     c = 1;
-                                                    bArrCopyOf = Arrays.copyOf(bArrCopyOf, bArrCopyOf.length + (bArrCopyOf.length >> 1));
+                                                    bArrCopyOf = Arrays.copyOf(bArrCopyOf,
+                                                            bArrCopyOf.length + (bArrCopyOf.length >> 1));
                                                 } else {
                                                     c = 1;
                                                 }
@@ -1962,7 +2057,8 @@ public abstract class JSONWriter implements Closeable {
                                         i = i11 + 1;
                                         if (i >= bArrCopyOf.length) {
                                             c = 1;
-                                            bArrCopyOf = Arrays.copyOf(bArrCopyOf, bArrCopyOf.length + (bArrCopyOf.length >> 1));
+                                            bArrCopyOf = Arrays.copyOf(bArrCopyOf,
+                                                    bArrCopyOf.length + (bArrCopyOf.length >> 1));
                                         } else {
                                             c = 1;
                                         }
@@ -1975,7 +2071,8 @@ public abstract class JSONWriter implements Closeable {
                                 i = i11 + 1;
                                 if (i >= bArrCopyOf.length) {
                                     c = 1;
-                                    bArrCopyOf = Arrays.copyOf(bArrCopyOf, bArrCopyOf.length + (bArrCopyOf.length >> 1));
+                                    bArrCopyOf = Arrays.copyOf(bArrCopyOf,
+                                            bArrCopyOf.length + (bArrCopyOf.length >> 1));
                                 } else {
                                     c = 1;
                                 }
@@ -2099,7 +2196,8 @@ public abstract class JSONWriter implements Closeable {
         if (cls2 == cls) {
             return false;
         }
-        if ((Feature.NotWriteHashMapArrayListClassName.mask & j) == 0 || !(cls2 == HashMap.class || cls2 == ArrayList.class)) {
+        if ((Feature.NotWriteHashMapArrayListClassName.mask & j) == 0
+                || !(cls2 == HashMap.class || cls2 == ArrayList.class)) {
             return (j & Feature.NotWriteRootClassName.mask) == 0 || obj != this.rootObject;
         }
         return false;
@@ -2181,7 +2279,8 @@ public abstract class JSONWriter implements Closeable {
             path = fieldWriter.getPath(path2);
         }
         this.path = path;
-        if (obj == this.rootObject || ((identityHashMap = this.refs) != null && (path3 = identityHashMap.get(obj)) != null)) {
+        if (obj == this.rootObject
+                || ((identityHashMap = this.refs) != null && (path3 = identityHashMap.get(obj)) != null)) {
             return path3.toString();
         }
         if (this.refs == null) {
@@ -2314,7 +2413,8 @@ public abstract class JSONWriter implements Closeable {
         if ((Feature.WriteClassName.mask & j) == 0) {
             return false;
         }
-        if ((Feature.NotWriteHashMapArrayListClassName.mask & j) == 0 || obj == null || !((cls = obj.getClass()) == HashMap.class || cls == ArrayList.class)) {
+        if ((Feature.NotWriteHashMapArrayListClassName.mask & j) == 0 || obj == null
+                || !((cls = obj.getClass()) == HashMap.class || cls == ArrayList.class)) {
             return (j & Feature.NotWriteRootClassName.mask) == 0 || obj != this.rootObject;
         }
         return false;
@@ -2352,7 +2452,7 @@ public abstract class JSONWriter implements Closeable {
         endArray();
     }
 
-    /* JADX WARN: Found duplicated region for block: B:15:0x0031  */
+    /* JADX WARN: Found duplicated region for block: B:15:0x0031 */
     public final boolean isWriteTypeInfo(Object obj, Type type, long j) {
         Class<?> cls;
         long j2 = j | this.context.features;
@@ -2453,7 +2553,8 @@ public abstract class JSONWriter implements Closeable {
         if ((Feature.WriteClassName.mask & j2) == 0) {
             return false;
         }
-        if ((Feature.NotWriteHashMapArrayListClassName.mask & j2) == 0 || obj == null || !((cls = obj.getClass()) == HashMap.class || cls == ArrayList.class)) {
+        if ((Feature.NotWriteHashMapArrayListClassName.mask & j2) == 0 || obj == null
+                || !((cls = obj.getClass()) == HashMap.class || cls == ArrayList.class)) {
             return (j2 & Feature.NotWriteRootClassName.mask) == 0 || obj != this.rootObject;
         }
         return false;

@@ -7,7 +7,7 @@ import org.json.JSONObject;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class cue implements bgf {
+public final /* synthetic */ class cue implements IHasInvokeMethod {
     public final /* synthetic */ int a;
     public final /* synthetic */ Map b;
     public final /* synthetic */ long c;
@@ -33,8 +33,8 @@ public final /* synthetic */ class cue implements bgf {
                     for (Map.Entry entry : map.entrySet()) {
                         String str3 = (String) entry.getKey();
                         String str4 = (String) entry.getValue();
-                        bzo.q(str3, "name");
-                        bzo.q(str4, "value");
+                        throwIfVar1IsNull(str3, "name");
+                        throwIfVar1IsNull(str4, "value");
                         eojVar.d.addHeader(str3, str4);
                     }
                 }
@@ -49,26 +49,27 @@ public final /* synthetic */ class cue implements bgf {
                     for (Map.Entry entry2 : map3.entrySet()) {
                         String str5 = (String) entry2.getKey();
                         String str6 = (String) entry2.getValue();
-                        bzo.q(str5, "name");
-                        bzo.q(str6, "value");
+                        throwIfVar1IsNull(str5, "name");
+                        throwIfVar1IsNull(str6, "value");
                         pqVar.d.addHeader(str5, str6);
                     }
                 }
                 boolean z = false;
-                if (map3 != null && (str = (String) map3.get("Content-Type" /* cnb.z(-404031868500778L) */)) != null && dnj.ab(str, "application/json" /* cnb.z(-403958854056746L) */, true)) {
+                if (map3 != null && (str = (String) map3.get("Content-Type" /* cnb.z(-404031868500778L) */)) != null
+                        && dnj.ab(str, "application/json" /* cnb.z(-403958854056746L) */, true)) {
                     z = true;
                 }
                 if (map2 != null) {
                     if (z) {
                         RequestBody.Companion companion = RequestBody.Companion;
                         String string = new JSONObject(map2).toString();
-                        bzo.p(string, "JSONObject(body ?: return).toString()");
+                        throwIfVar1IsNull(string, "JSONObject(body ?: return).toString()");
                         pqVar.l = companion.create(string, cbb.a);
                     } else {
                         for (Map.Entry entry3 : map2.entrySet()) {
                             String str7 = (String) entry3.getKey();
                             String string2 = ((String) entry3.getValue()).toString();
-                            bzo.q(str7, "name");
+                            throwIfVar1IsNull(str7, "name");
                             FormBody.Builder builder = pqVar.n;
                             if (string2 != null) {
                                 builder.add(str7, string2);

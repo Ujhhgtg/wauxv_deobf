@@ -139,7 +139,7 @@ public final class hg extends CheckedTextView {
     @Override // android.widget.TextView, android.view.View
     public final InputConnection onCreateInputConnection(EditorInfo editorInfo) {
         InputConnection inputConnectionOnCreateInputConnection = super.onCreateInputConnection(editorInfo);
-        bzo.ak(editorInfo, inputConnectionOnCreateInputConnection, this);
+        KotlinHelpers.ak(editorInfo, inputConnectionOnCreateInputConnection, this);
         return inputConnectionOnCreateInputConnection;
     }
 

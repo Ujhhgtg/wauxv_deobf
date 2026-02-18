@@ -19,7 +19,7 @@ public final class bsn implements btd {
     @Override // me.hd.wauxv.obf.btd
     public final void c(avt avtVar, Object obj) {
         bsl bslVar = (bsl) obj;
-        bzo.q(bslVar, "value");
+        throwIfVar1IsNull(bslVar, "value");
         cnb.l(avtVar);
         dnh dnhVar = dnh.b;
         bsb bsbVar = bsb.b;

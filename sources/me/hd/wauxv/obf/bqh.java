@@ -15,7 +15,7 @@ public final class bqh extends dqc {
 
     @Override // me.hd.wauxv.obf.dqc
     public final int c(bbb bbbVar) {
-        bzo.q(bbbVar, "fbb");
+        throwIfVar1IsNull(bbbVar, "fbb");
         int i = this.a;
         int i2 = this.b;
         bbbVar.ab(2);

@@ -24,7 +24,10 @@ public class cz extends dg {
     private byte[] o;
     private byte[] p;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class a implements di {
         protected boolean a;
         protected boolean b;
@@ -210,7 +213,8 @@ public class cz extends dg {
             a(this.o, 0, 4);
             iG = 0;
         }
-        return (bArrF[iG + 3] & 255) | ((bArrF[iG] & 255) << 24) | ((bArrF[iG + 1] & 255) << 16) | ((bArrF[iG + 2] & 255) << 8);
+        return (bArrF[iG + 3] & 255) | ((bArrF[iG] & 255) << 24) | ((bArrF[iG + 1] & 255) << 16)
+                | ((bArrF[iG + 2] & 255) << 8);
     }
 
     @Override // com.umeng.analytics.pro.dg
@@ -225,7 +229,10 @@ public class cz extends dg {
             a(this.p, 0, 8);
             iG = 0;
         }
-        return ((long) (bArrF[iG + 7] & 255)) | (((long) (bArrF[iG] & 255)) << 56) | (((long) (bArrF[iG + 1] & 255)) << 48) | (((long) (bArrF[iG + 2] & 255)) << 40) | (((long) (bArrF[iG + 3] & 255)) << 32) | (((long) (bArrF[iG + 4] & 255)) << 24) | (((long) (bArrF[iG + 5] & 255)) << 16) | (((long) (bArrF[iG + 6] & 255)) << 8);
+        return ((long) (bArrF[iG + 7] & 255)) | (((long) (bArrF[iG] & 255)) << 56)
+                | (((long) (bArrF[iG + 1] & 255)) << 48) | (((long) (bArrF[iG + 2] & 255)) << 40)
+                | (((long) (bArrF[iG + 3] & 255)) << 32) | (((long) (bArrF[iG + 4] & 255)) << 24)
+                | (((long) (bArrF[iG + 5] & 255)) << 16) | (((long) (bArrF[iG + 6] & 255)) << 8);
     }
 
     @Override // com.umeng.analytics.pro.dg
@@ -285,13 +292,13 @@ public class cz extends dg {
 
     public void d(int i) throws dh {
         if (i < 0) {
-            throw new dh(bjs.i(i, "Negative length: "));
+            throw new dh(concatVar2Var1(i, "Negative length: "));
         }
         if (this.f) {
             int i2 = this.e - i;
             this.e = i2;
             if (i2 < 0) {
-                throw new dh(bjs.i(i, "Message length exceeded: "));
+                throw new dh(concatVar2Var1(i, "Message length exceeded: "));
             }
         }
     }

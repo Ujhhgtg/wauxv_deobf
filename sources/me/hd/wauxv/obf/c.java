@@ -44,7 +44,8 @@ public final class c {
         this.e.getClass();
         if (!byteBuffer.hasArray()) {
             if ((i4 | i3 | ((byteBuffer.limit() - i4) - i3)) < 0) {
-                throw new ArrayIndexOutOfBoundsException(String.format("buffer limit=%d, index=%d, limit=%d", Integer.valueOf(byteBuffer.limit()), Integer.valueOf(i4), Integer.valueOf(i3)));
+                throw new ArrayIndexOutOfBoundsException(String.format("buffer limit=%d, index=%d, limit=%d",
+                        Integer.valueOf(byteBuffer.limit()), Integer.valueOf(i4), Integer.valueOf(i3)));
             }
             int i5 = i4 + i3;
             char[] cArr = new char[i3];
@@ -81,7 +82,7 @@ public final class c {
                         throw new IllegalArgumentException("Invalid UTF-8");
                     }
                     i4 += 2;
-                    bzo.ab(b2, byteBuffer.get(i8), cArr, i7);
+                    KotlinHelpers.ab(b2, byteBuffer.get(i8), cArr, i7);
                     i7++;
                 } else if (b2 < -16) {
                     if (i8 >= i5 - 1) {
@@ -89,7 +90,7 @@ public final class c {
                     }
                     int i10 = i4 + 2;
                     i4 += 3;
-                    bzo.aa(b2, byteBuffer.get(i8), byteBuffer.get(i10), cArr, i7);
+                    KotlinHelpers.aa(b2, byteBuffer.get(i8), byteBuffer.get(i10), cArr, i7);
                     i7++;
                 } else {
                     if (i8 >= i5 - 2) {
@@ -99,7 +100,7 @@ public final class c {
                     int i11 = i4 + 3;
                     byte b5 = byteBuffer.get(i4 + 2);
                     i4 += 4;
-                    bzo.z(b2, b4, b5, byteBuffer.get(i11), cArr, i7);
+                    KotlinHelpers.z(b2, b4, b5, byteBuffer.get(i11), cArr, i7);
                     i7 += 2;
                 }
             }
@@ -108,7 +109,8 @@ public final class c {
         byte[] bArrArray = byteBuffer.array();
         int iArrayOffset = byteBuffer.arrayOffset() + i4;
         if ((iArrayOffset | i3 | ((bArrArray.length - iArrayOffset) - i3)) < 0) {
-            throw new ArrayIndexOutOfBoundsException(String.format("buffer length=%d, index=%d, size=%d", Integer.valueOf(bArrArray.length), Integer.valueOf(iArrayOffset), Integer.valueOf(i3)));
+            throw new ArrayIndexOutOfBoundsException(String.format("buffer length=%d, index=%d, size=%d",
+                    Integer.valueOf(bArrArray.length), Integer.valueOf(iArrayOffset), Integer.valueOf(i3)));
         }
         int i12 = iArrayOffset + i3;
         char[] cArr2 = new char[i3];
@@ -145,7 +147,7 @@ public final class c {
                     throw new IllegalArgumentException("Invalid UTF-8");
                 }
                 iArrayOffset += 2;
-                bzo.ab(b7, bArrArray[i15], cArr2, i14);
+                KotlinHelpers.ab(b7, bArrArray[i15], cArr2, i14);
                 i14++;
             } else if (b7 < -16) {
                 if (i15 >= i12 - 1) {
@@ -153,7 +155,7 @@ public final class c {
                 }
                 int i17 = iArrayOffset + 2;
                 iArrayOffset += 3;
-                bzo.aa(b7, bArrArray[i15], bArrArray[i17], cArr2, i14);
+                KotlinHelpers.aa(b7, bArrArray[i15], bArrArray[i17], cArr2, i14);
                 i14++;
             } else {
                 if (i15 >= i12 - 2) {
@@ -163,7 +165,7 @@ public final class c {
                 int i18 = iArrayOffset + 3;
                 byte b10 = bArrArray[iArrayOffset + 2];
                 iArrayOffset += 4;
-                bzo.z(b7, b9, b10, bArrArray[i18], cArr2, i14);
+                KotlinHelpers.z(b7, b9, b10, bArrArray[i18], cArr2, i14);
                 i14 += 2;
             }
         }
@@ -188,7 +190,7 @@ public final class c {
         }
         int iF = f((i * 4) + j(iG));
         ByteBuffer byteBuffer = this.b;
-        bzo.p(byteBuffer, "bb");
+        throwIfVar1IsNull(byteBuffer, "bb");
         cVar.h(iF, byteBuffer);
         return cVar;
     }

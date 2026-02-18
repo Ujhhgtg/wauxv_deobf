@@ -9,7 +9,10 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 public final class cli extends bda {
     public final /* synthetic */ clj a;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'super' call moved to the top of the method (can break code
+     * semantics)
+     */
     public cli(rm rmVar, clj cljVar) {
         super(rmVar);
         this.a = cljVar;
@@ -20,7 +23,7 @@ public final class cli extends bda {
         clj cljVar = this.a;
         clc clcVar = cljVar.c;
         ConcurrentLinkedQueue concurrentLinkedQueue = cljVar.b;
-        bzo.q(rhVar, "sink");
+        throwIfVar1IsNull(rhVar, "sink");
         try {
             long j2 = super.read(rhVar, j);
             if (concurrentLinkedQueue != null && !concurrentLinkedQueue.isEmpty()) {

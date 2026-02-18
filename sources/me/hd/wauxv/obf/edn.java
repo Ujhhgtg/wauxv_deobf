@@ -24,7 +24,7 @@ public final class edn {
             return false;
         }
         edn ednVar = (edn) obj;
-        return bzo.f(this.a, ednVar.a) && bzo.f(this.b, ednVar.b);
+        return nullSafeIsEqual(this.a, ednVar.a) && nullSafeIsEqual(this.b, ednVar.b);
     }
 
     public final int hashCode() {
@@ -39,6 +39,6 @@ public final class edn {
         sb.append("q72Proto(contact=" /* cnb.z(-275702540663594L) */);
         sb.append(this.a);
         sb.append(", friend_follow_num=" /* cnb.z(-275573691644714L) */);
-        return bjs.p(sb, this.b, ')');
+        return concat(sb, this.b, ')');
     }
 }

@@ -9,7 +9,7 @@ public final class cvo implements dfx {
     public final cvn c;
 
     public cvo(String str, cvn cvnVar) {
-        bzo.q(cvnVar, "kind");
+        throwIfVar1IsNull(cvnVar, "kind");
         this.a = str;
         this.c = cvnVar;
     }
@@ -25,7 +25,8 @@ public final class cvo implements dfx {
     }
 
     public final void e() {
-        throw new IllegalStateException(yg.o(new StringBuilder("Primitive descriptor "), this.a, " does not have elements"));
+        throw new IllegalStateException(
+                yg.o(new StringBuilder("Primitive descriptor "), this.a, " does not have elements"));
     }
 
     public final boolean equals(Object obj) {
@@ -36,7 +37,7 @@ public final class cvo implements dfx {
             return false;
         }
         cvo cvoVar = (cvo) obj;
-        return bzo.f(this.a, cvoVar.a) && bzo.f(this.c, cvoVar.c);
+        return nullSafeIsEqual(this.a, cvoVar.a) && nullSafeIsEqual(this.c, cvoVar.c);
     }
 
     @Override // me.hd.wauxv.obf.dfx
@@ -46,7 +47,7 @@ public final class cvo implements dfx {
 
     @Override // me.hd.wauxv.obf.dfx
     public final int g(String str) {
-        bzo.q(str, "name");
+        throwIfVar1IsNull(str, "name");
         e();
         throw null;
     }
@@ -95,6 +96,6 @@ public final class cvo implements dfx {
     }
 
     public final String toString() {
-        return bjs.q(new StringBuilder("PrimitiveDescriptor("), this.a, ')');
+        return concat(new StringBuilder("PrimitiveDescriptor("), this.a, ')');
     }
 }

@@ -9,7 +9,7 @@ public final class auz implements ahh, Serializable {
 
     @Override // me.hd.wauxv.obf.ahh
     public final ahh _t(ahg ahgVar) {
-        bzo.q(ahgVar, "key");
+        throwIfVar1IsNull(ahgVar, "key");
         return this;
     }
 
@@ -20,13 +20,13 @@ public final class auz implements ahh, Serializable {
 
     @Override // me.hd.wauxv.obf.ahh
     public final ahh _v(ahh ahhVar) {
-        bzo.q(ahhVar, com.umeng.analytics.pro.f.X);
+        throwIfVar1IsNull(ahhVar, "context");
         return ahhVar;
     }
 
     @Override // me.hd.wauxv.obf.ahh
     public final ahf _w(ahg ahgVar) {
-        bzo.q(ahgVar, "key");
+        throwIfVar1IsNull(ahgVar, "key");
         return null;
     }
 

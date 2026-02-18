@@ -80,9 +80,18 @@ public abstract class BeanUtils {
     static final ConcurrentMap<Class, Field[]> declaredFieldCache = new ConcurrentHashMap();
     static final ConcurrentMap<Class, Method[]> methodCache = new ConcurrentHashMap();
     static final ConcurrentMap<Class, Constructor[]> constructorCache = new ConcurrentHashMap();
-    static final long[] IGNORE_CLASS_HASH_CODES = {-9214723784238596577L, -9030616758866828325L, -8335274122997354104L, -6963030519018899258L, -4863137578837233966L, -3653547262287832698L, -2819277587813726773L, -2669552864532011468L, -2458634727370886912L, -2291619803571459675L, -1811306045128064037L, -864440709753525476L, -779604756358333743L, 8731803887940231L, 1616814008855344660L, 2164749833121980361L, 2688642392827789427L, 3724195282986200606L, 3742915795806478647L, 3977020351318456359L, 4775491097662790952L, 4882459834864833642L, 6033839080488254886L, 7981148566008458638L, 8344106065386396833L, 9215465129261900012L};
+    static final long[] IGNORE_CLASS_HASH_CODES = { -9214723784238596577L, -9030616758866828325L, -8335274122997354104L,
+            -6963030519018899258L, -4863137578837233966L, -3653547262287832698L, -2819277587813726773L,
+            -2669552864532011468L, -2458634727370886912L, -2291619803571459675L, -1811306045128064037L,
+            -864440709753525476L, -779604756358333743L, 8731803887940231L, 1616814008855344660L, 2164749833121980361L,
+            2688642392827789427L, 3724195282986200606L, 3742915795806478647L, 3977020351318456359L,
+            4775491097662790952L, 4882459834864833642L, 6033839080488254886L, 7981148566008458638L,
+            8344106065386396833L, 9215465129261900012L };
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class GenericArrayTypeImpl implements GenericArrayType, Serializable {
         private static final long serialVersionUID = 0;
         private final Type componentType;
@@ -109,7 +118,10 @@ public abstract class BeanUtils {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class ParameterizedTypeImpl implements ParameterizedType, Serializable {
         private static final long serialVersionUID = 0;
         private final Type ownerType;
@@ -158,7 +170,8 @@ public abstract class BeanUtils {
         }
 
         public int hashCode() {
-            return (Arrays.hashCode(this.typeArguments) ^ this.rawType.hashCode()) ^ BeanUtils.hashCodeOrZero(this.ownerType);
+            return (Arrays.hashCode(this.typeArguments) ^ this.rawType.hashCode())
+                    ^ BeanUtils.hashCodeOrZero(this.ownerType);
         }
 
         public String toString() {
@@ -179,7 +192,10 @@ public abstract class BeanUtils {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class WildcardTypeImpl implements WildcardType, Serializable {
         private static final long serialVersionUID = 0;
         private final Type lowerBound;
@@ -207,12 +223,12 @@ public abstract class BeanUtils {
         @Override // java.lang.reflect.WildcardType
         public Type[] getLowerBounds() {
             Type type = this.lowerBound;
-            return type != null ? new Type[]{type} : BeanUtils.EMPTY_TYPE_ARRAY;
+            return type != null ? new Type[] { type } : BeanUtils.EMPTY_TYPE_ARRAY;
         }
 
         @Override // java.lang.reflect.WildcardType
         public Type[] getUpperBounds() {
-            return new Type[]{this.upperBound};
+            return new Type[] { this.upperBound };
         }
 
         public int hashCode() {
@@ -267,7 +283,8 @@ public abstract class BeanUtils {
             concurrentMap.putIfAbsent(cls, methods);
         }
         for (Method method : methods) {
-            if (!Modifier.isStatic(method.getModifiers()) && method.getParameterCount() == 0 && method.getName().equals(str)) {
+            if (!Modifier.isStatic(method.getModifiers()) && method.getParameterCount() == 0
+                    && method.getName().equals(str)) {
                 return method;
             }
         }
@@ -281,7 +298,8 @@ public abstract class BeanUtils {
         }
         if (type instanceof ParameterizedType) {
             ParameterizedType parameterizedType = (ParameterizedType) type;
-            return new ParameterizedTypeImpl(parameterizedType.getOwnerType(), parameterizedType.getRawType(), parameterizedType.getActualTypeArguments());
+            return new ParameterizedTypeImpl(parameterizedType.getOwnerType(), parameterizedType.getRawType(),
+                    parameterizedType.getActualTypeArguments());
         }
         if (type instanceof GenericArrayType) {
             return new GenericArrayTypeImpl(((GenericArrayType) type).getGenericComponentType());
@@ -374,7 +392,8 @@ public abstract class BeanUtils {
 
     public static void declaredFields(Class cls, Consumer<Field> consumer) {
         boolean zEquals;
-        if (cls == null || consumer == null || ignore(cls) || cls.getName().contains("$$Lambda") || JdbcSupport.isStruct(cls)) {
+        if (cls == null || consumer == null || ignore(cls) || cls.getName().contains("$$Lambda")
+                || JdbcSupport.isStruct(cls)) {
             return;
         }
         if (TypeUtils.isProxy(cls)) {
@@ -418,11 +437,14 @@ public abstract class BeanUtils {
             int modifiers = field3.getModifiers();
             Class<?> type = field3.getType();
             if ((modifiers & 8) == 0 && !ignore(type)) {
-                if (zEquals && "cardsmap_".equals(field3.getName()) && "com.google.protobuf.MapField".equals(type.getName())) {
+                if (zEquals && "cardsmap_".equals(field3.getName())
+                        && "com.google.protobuf.MapField".equals(type.getName())) {
                     return;
                 }
                 Class<?> declaringClass = field3.getDeclaringClass();
-                if (declaringClass != AbstractMap.class && declaringClass != HashMap.class && declaringClass != LinkedHashMap.class && declaringClass != TreeMap.class && declaringClass != ConcurrentHashMap.class) {
+                if (declaringClass != AbstractMap.class && declaringClass != HashMap.class
+                        && declaringClass != LinkedHashMap.class && declaringClass != TreeMap.class
+                        && declaringClass != ConcurrentHashMap.class) {
                     consumer.accept(field3);
                 }
             }
@@ -497,11 +519,14 @@ public abstract class BeanUtils {
             }
             ParameterizedType parameterizedType = (ParameterizedType) type;
             ParameterizedType parameterizedType2 = (ParameterizedType) type2;
-            return equal(parameterizedType.getOwnerType(), parameterizedType2.getOwnerType()) && parameterizedType.getRawType().equals(parameterizedType2.getRawType()) && Arrays.equals(parameterizedType.getActualTypeArguments(), parameterizedType2.getActualTypeArguments());
+            return equal(parameterizedType.getOwnerType(), parameterizedType2.getOwnerType())
+                    && parameterizedType.getRawType().equals(parameterizedType2.getRawType()) && Arrays.equals(
+                            parameterizedType.getActualTypeArguments(), parameterizedType2.getActualTypeArguments());
         }
         if (type instanceof GenericArrayType) {
             if (type2 instanceof GenericArrayType) {
-                return equals(((GenericArrayType) type).getGenericComponentType(), ((GenericArrayType) type2).getGenericComponentType());
+                return equals(((GenericArrayType) type).getGenericComponentType(),
+                        ((GenericArrayType) type2).getGenericComponentType());
             }
             return false;
         }
@@ -511,17 +536,22 @@ public abstract class BeanUtils {
             }
             WildcardType wildcardType = (WildcardType) type;
             WildcardType wildcardType2 = (WildcardType) type2;
-            return Arrays.equals(wildcardType.getUpperBounds(), wildcardType2.getUpperBounds()) && Arrays.equals(wildcardType.getLowerBounds(), wildcardType2.getLowerBounds());
+            return Arrays.equals(wildcardType.getUpperBounds(), wildcardType2.getUpperBounds())
+                    && Arrays.equals(wildcardType.getLowerBounds(), wildcardType2.getLowerBounds());
         }
         if (!(type instanceof TypeVariable) || !(type2 instanceof TypeVariable)) {
             return false;
         }
         TypeVariable typeVariable = (TypeVariable) type;
         TypeVariable typeVariable2 = (TypeVariable) type2;
-        return typeVariable.getGenericDeclaration() == typeVariable2.getGenericDeclaration() && typeVariable.getName().equals(typeVariable2.getName());
+        return typeVariable.getGenericDeclaration() == typeVariable2.getGenericDeclaration()
+                && typeVariable.getName().equals(typeVariable2.getName());
     }
 
-    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
+    /*
+     * JADX WARN: Failed to restore switch over string. Please report as a
+     * decompilation issue
+     */
     public static String fieldName(String str, String str2) {
         char cCharAt;
         char cCharAt2;
@@ -659,7 +689,8 @@ public abstract class BeanUtils {
                 return dots(str, 0, false);
             case 10:
                 char cCharAt5 = str.charAt(0);
-                if (cCharAt5 >= 'a' && cCharAt5 <= 'z' && str.length() > 1 && (cCharAt2 = str.charAt(1)) >= 'a' && cCharAt2 <= 'z') {
+                if (cCharAt5 >= 'a' && cCharAt5 <= 'z' && str.length() > 1 && (cCharAt2 = str.charAt(1)) >= 'a'
+                        && cCharAt2 <= 'z') {
                     char[] charArray2 = str.toCharArray();
                     charArray2[0] = (char) (cCharAt5 - ' ');
                     return new String(charArray2);
@@ -732,12 +763,14 @@ public abstract class BeanUtils {
         throw new NullPointerException("annotationType must not be null");
     }
 
-    private static <A extends Annotation> A findMetaAnnotation(Class<A> cls, Annotation[] annotationArr, boolean z, Set<Annotation> set) {
+    private static <A extends Annotation> A findMetaAnnotation(Class<A> cls, Annotation[] annotationArr, boolean z,
+            Set<Annotation> set) {
         A a;
         for (Annotation annotation : annotationArr) {
             Class<? extends Annotation> clsAnnotationType = annotation.annotationType();
             String name = clsAnnotationType.getName();
-            if (!name.startsWith("java.lang.annotation") && !name.startsWith("kotlin.") && set.add(annotation) && (a = (A) findAnnotation(clsAnnotationType, cls, z, set)) != null) {
+            if (!name.startsWith("java.lang.annotation") && !name.startsWith("kotlin.") && set.add(annotation)
+                    && (a = (A) findAnnotation(clsAnnotationType, cls, z, set)) != null) {
                 return a;
             }
         }
@@ -752,7 +785,8 @@ public abstract class BeanUtils {
             concurrentMap.putIfAbsent(cls, methods);
         }
         for (Method method : methods) {
-            if (method.getName().equals(str) && method.getReturnType() == cls && method.getParameterCount() == 1 && method.getParameterTypes()[0] == cls2) {
+            if (method.getName().equals(str) && method.getReturnType() == cls && method.getParameterCount() == 1
+                    && method.getParameterTypes()[0] == cls2) {
                 return method;
             }
         }
@@ -808,7 +842,8 @@ public abstract class BeanUtils {
         }
         if (z && (declaringClass = cls.getDeclaringClass()) != null) {
             for (Constructor<?> constructor2 : declaredConstructors) {
-                if (constructor2.getParameterCount() == 1 && declaringClass.equals(constructor2.getParameterTypes()[0])) {
+                if (constructor2.getParameterCount() == 1
+                        && declaringClass.equals(constructor2.getParameterTypes()[0])) {
                     return constructor2;
                 }
             }
@@ -833,25 +868,37 @@ public abstract class BeanUtils {
         return strArr;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:42:0x009d A[PHI: r8
-      0x009d: PHI (r8v5 java.lang.reflect.Member) = 
-      (r8v1 java.lang.reflect.Member)
-      (r8v1 java.lang.reflect.Member)
-      (r8v1 java.lang.reflect.Member)
-      (r8v1 java.lang.reflect.Member)
-      (r8v1 java.lang.reflect.Member)
-      (r8v1 java.lang.reflect.Member)
-      (r8v1 java.lang.reflect.Member)
-      (r8v8 java.lang.reflect.Member)
-     binds: [B:11:0x002e, B:14:0x0036, B:17:0x003f, B:19:0x0043, B:22:0x0050, B:38:0x0089, B:40:0x009a, B:41:0x009c] A[DONT_GENERATE, DONT_INLINE]] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:42:0x009d A[PHI: r8
+     * 0x009d: PHI (r8v5 java.lang.reflect.Member) =
+     * (r8v1 java.lang.reflect.Member)
+     * (r8v1 java.lang.reflect.Member)
+     * (r8v1 java.lang.reflect.Member)
+     * (r8v1 java.lang.reflect.Member)
+     * (r8v1 java.lang.reflect.Member)
+     * (r8v1 java.lang.reflect.Member)
+     * (r8v1 java.lang.reflect.Member)
+     * (r8v8 java.lang.reflect.Member)
+     * binds: [B:11:0x002e, B:14:0x0036, B:17:0x003f, B:19:0x0043, B:22:0x0050,
+     * B:38:0x0089, B:40:0x009a, B:41:0x009c] A[DONT_GENERATE, DONT_INLINE]]
+     */
     /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r16v0, types: [java.lang.reflect.Member] */
+    /*
+     * JADX WARN: Type inference failed for: r16v0, types:
+     * [java.lang.reflect.Member]
+     */
     /* JADX WARN: Type inference failed for: r16v1 */
     /* JADX WARN: Type inference failed for: r16v2 */
-    /* JADX WARN: Type inference failed for: r16v3, types: [java.lang.reflect.Member] */
+    /*
+     * JADX WARN: Type inference failed for: r16v3, types:
+     * [java.lang.reflect.Member]
+     */
     /* JADX WARN: Type inference failed for: r16v4 */
     /* JADX WARN: Type inference failed for: r16v5 */
-    /* JADX WARN: Type inference failed for: r16v6, types: [java.lang.reflect.Member] */
+    /*
+     * JADX WARN: Type inference failed for: r16v6, types:
+     * [java.lang.reflect.Member]
+     */
     /* JADX WARN: Type inference failed for: r2v0 */
     /* JADX WARN: Type inference failed for: r2v1, types: [java.lang.String] */
     /* JADX WARN: Type inference failed for: r2v16 */
@@ -1072,7 +1119,8 @@ public abstract class BeanUtils {
         }
     }
 
-    public static Type getParamType(TypeReference typeReference, Class<?> cls, Class cls2, Parameter parameter, Type type) {
+    public static Type getParamType(TypeReference typeReference, Class<?> cls, Class cls2, Parameter parameter,
+            Type type) {
         while (cls != Object.class) {
             if (cls2 == cls) {
                 return resolve(typeReference.getType(), cls2, type);
@@ -1101,7 +1149,8 @@ public abstract class BeanUtils {
         if (type instanceof WildcardType) {
             return getRawType(((WildcardType) type).getUpperBounds()[0]);
         }
-        throw new IllegalArgumentException("Expected a Class, ParameterizedType, or GenericArrayType, but <" + type + "> is of type " + (type == null ? "null" : type.getClass().getName()));
+        throw new IllegalArgumentException("Expected a Class, ParameterizedType, or GenericArrayType, but <" + type
+                + "> is of type " + (type == null ? "null" : type.getClass().getName()));
     }
 
     public static String[] getRecordFieldNames(Class<?> cls) {
@@ -1113,7 +1162,8 @@ public abstract class BeanUtils {
                 RECORD_GET_RECORD_COMPONENTS = Class.class.getMethod("getRecordComponents", null);
             }
             if (RECORD_COMPONENT_GET_NAME == null) {
-                RECORD_COMPONENT_GET_NAME = Class.forName("java.lang.reflect.RecordComponent").getMethod("getName", null);
+                RECORD_COMPONENT_GET_NAME = Class.forName("java.lang.reflect.RecordComponent").getMethod("getName",
+                        null);
             }
             Object[] objArr = (Object[]) RECORD_GET_RECORD_COMPONENTS.invoke(cls, null);
             String[] strArr = new String[objArr.length];
@@ -1122,7 +1172,8 @@ public abstract class BeanUtils {
             }
             return strArr;
         } catch (Exception e) {
-            throw new RuntimeException("Failed to access Methods needed to support `java.lang.Record`: (" + e.getClass().getName() + ") " + e.getMessage(), e);
+            throw new RuntimeException("Failed to access Methods needed to support `java.lang.Record`: ("
+                    + e.getClass().getName() + ") " + e.getMessage(), e);
         }
     }
 
@@ -1168,20 +1219,23 @@ public abstract class BeanUtils {
 
     public static boolean isExtendedMap(Class cls) {
         Class superclass;
-        if (cls == HashMap.class || cls == LinkedHashMap.class || cls == TreeMap.class || cls.getSimpleName().isEmpty() || !(((superclass = cls.getSuperclass()) == HashMap.class || superclass == LinkedHashMap.class || superclass == TreeMap.class) && getDefaultConstructor(cls, false) == null)) {
+        if (cls == HashMap.class || cls == LinkedHashMap.class || cls == TreeMap.class || cls.getSimpleName().isEmpty()
+                || !(((superclass = cls.getSuperclass()) == HashMap.class || superclass == LinkedHashMap.class
+                        || superclass == TreeMap.class) && getDefaultConstructor(cls, false) == null)) {
             return false;
         }
         declaredFields(cls, new ok(superclass, new ArrayList()));
         return !r0.isEmpty();
     }
 
-    /* JADX WARN: Found duplicated region for block: B:18:0x0046  */
+    /* JADX WARN: Found duplicated region for block: B:18:0x0046 */
     /* JADX WARN: Found duplicated region for block: B:26:0x004c A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:27:0x004d A[SYNTHETIC] */
     private static boolean isJSONField(AnnotatedElement annotatedElement) {
         for (Annotation annotation : annotatedElement.getAnnotations()) {
             String name = annotation.annotationType().getName();
-            if (!name.equals("com.fasterxml.jackson.annotation.JsonValue") && !name.equals("com.fasterxml.jackson.annotation.JsonProperty")) {
+            if (!name.equals("com.fasterxml.jackson.annotation.JsonValue")
+                    && !name.equals("com.fasterxml.jackson.annotation.JsonProperty")) {
                 if (!name.equals("com.alibaba.fastjson.annotation.JSONField")) {
                     if (name.equals("com.fasterxml.jackson.annotation.JsonRawValue")) {
                         if (JSONFactory.isUseJacksonAnnotation()) {
@@ -1206,7 +1260,8 @@ public abstract class BeanUtils {
 
     public static boolean isNoneStaticMemberClass(Class cls, Class cls2) {
         Class<?> enclosingClass;
-        if (cls2 == null || cls2.isPrimitive() || cls2 == String.class || cls2 == List.class || (enclosingClass = cls2.getEnclosingClass()) == null) {
+        if (cls2 == null || cls2.isPrimitive() || cls2 == String.class || cls2 == List.class
+                || (enclosingClass = cls2.getEnclosingClass()) == null) {
             return false;
         }
         if (cls != null && !cls.equals(enclosingClass)) {
@@ -1273,7 +1328,8 @@ public abstract class BeanUtils {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public static /* synthetic */ void lambda$getEnumAnnotationNames$4(Annotation annotation, String str, String[] strArr, int i, Method method) {
+    public static /* synthetic */ void lambda$getEnumAnnotationNames$4(Annotation annotation, String str,
+            String[] strArr, int i, Method method) {
         String name = method.getName();
         try {
             Object objInvoke = method.invoke(annotation, null);
@@ -1289,7 +1345,8 @@ public abstract class BeanUtils {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public static /* synthetic */ void lambda$getEnumAnnotationNames$5(Annotation annotation, String str, String[] strArr, int i, Method method) {
+    public static /* synthetic */ void lambda$getEnumAnnotationNames$5(Annotation annotation, String str,
+            String[] strArr, int i, Method method) {
         String name = method.getName();
         try {
             Object objInvoke = method.invoke(annotation, null);
@@ -1318,7 +1375,8 @@ public abstract class BeanUtils {
                     final Annotation annotation = annotations[i];
                     Class<? extends Annotation> clsAnnotationType = annotation.annotationType();
                     String name2 = clsAnnotationType.getName();
-                    if ("com.alibaba.fastjson2.annotation.JSONField".equals(name2) || "com.alibaba.fastjson.annotation.JSONField".equals(name2)) {
+                    if ("com.alibaba.fastjson2.annotation.JSONField".equals(name2)
+                            || "com.alibaba.fastjson.annotation.JSONField".equals(name2)) {
                         strArr2 = strArr;
                         final int i3 = 0;
                         annotationMethods(clsAnnotationType, new Consumer() { // from class: me.hd.wauxv.obf.op
@@ -1326,10 +1384,12 @@ public abstract class BeanUtils {
                             public final void accept(Object obj) {
                                 switch (i3) {
                                     case 0:
-                                        BeanUtils.lambda$getEnumAnnotationNames$4(annotation, strName, strArr2, i2, (Method) obj);
+                                        BeanUtils.lambda$getEnumAnnotationNames$4(annotation, strName, strArr2, i2,
+                                                (Method) obj);
                                         break;
                                     default:
-                                        BeanUtils.lambda$getEnumAnnotationNames$5(annotation, strName, strArr2, i2, (Method) obj);
+                                        BeanUtils.lambda$getEnumAnnotationNames$5(annotation, strName, strArr2, i2,
+                                                (Method) obj);
                                         break;
                                 }
                             }
@@ -1342,10 +1402,12 @@ public abstract class BeanUtils {
                             public final void accept(Object obj) {
                                 switch (i4) {
                                     case 0:
-                                        BeanUtils.lambda$getEnumAnnotationNames$4(annotation, strName, strArr2, i2, (Method) obj);
+                                        BeanUtils.lambda$getEnumAnnotationNames$4(annotation, strName, strArr2, i2,
+                                                (Method) obj);
                                         break;
                                     default:
-                                        BeanUtils.lambda$getEnumAnnotationNames$5(annotation, strName, strArr2, i2, (Method) obj);
+                                        BeanUtils.lambda$getEnumAnnotationNames$5(annotation, strName, strArr2, i2,
+                                                (Method) obj);
                                         break;
                                 }
                             }
@@ -1362,21 +1424,24 @@ public abstract class BeanUtils {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public static /* synthetic */ void lambda$getEnumValueField$7(String str, AtomicReference atomicReference, Method method, Method method2) {
+    public static /* synthetic */ void lambda$getEnumValueField$7(String str, AtomicReference atomicReference,
+            Method method, Method method2) {
         if (method2.getName().equals(str) && isJSONField(method2)) {
             atomicReference.set(method);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public static /* synthetic */ void lambda$getEnumValueField$8(String str, AtomicReference atomicReference, Method method, Method method2) {
+    public static /* synthetic */ void lambda$getEnumValueField$8(String str, AtomicReference atomicReference,
+            Method method, Method method2) {
         if (method2.getName().equals(str) && isJSONField(method2)) {
             atomicReference.set(method);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public static /* synthetic */ void lambda$getField$10(Method method, int i, int i2, Class cls, char c, String str, Field[] fieldArr, Field field) {
+    public static /* synthetic */ void lambda$getField$10(Method method, int i, int i2, Class cls, char c, String str,
+            Field[] fieldArr, Field field) {
         if (field.getDeclaringClass() != method.getDeclaringClass()) {
             return;
         }
@@ -1413,14 +1478,16 @@ public abstract class BeanUtils {
     /* JADX INFO: Access modifiers changed from: private */
     public static /* synthetic */ void lambda$isExtendedMap$20(Class cls, List list, Field field) {
         int modifiers = field.getModifiers();
-        if (Modifier.isStatic(modifiers) || Modifier.isTransient(modifiers) || field.getDeclaringClass().isAssignableFrom(cls) || "this$0".equals(field.getName())) {
+        if (Modifier.isStatic(modifiers) || Modifier.isTransient(modifiers)
+                || field.getDeclaringClass().isAssignableFrom(cls) || "this$0".equals(field.getName())) {
             return;
         }
         list.add(field);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public static /* synthetic */ void lambda$processGsonSerializedName$19(Annotation annotation, FieldInfo fieldInfo, Method method) {
+    public static /* synthetic */ void lambda$processGsonSerializedName$19(Annotation annotation, FieldInfo fieldInfo,
+            Method method) {
         String name = method.getName();
         try {
             Object objInvoke = method.invoke(annotation, null);
@@ -1448,7 +1515,8 @@ public abstract class BeanUtils {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public static /* synthetic */ void lambda$processJacksonJsonFormat$12(Annotation annotation, String[] strArr, Method method) {
+    public static /* synthetic */ void lambda$processJacksonJsonFormat$12(Annotation annotation, String[] strArr,
+            Method method) {
         String name = method.getName();
         try {
             Object objInvoke = method.invoke(annotation, null);
@@ -1469,7 +1537,8 @@ public abstract class BeanUtils {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public static /* synthetic */ void lambda$processJacksonJsonFormat$13(Annotation annotation, BeanInfo beanInfo, Method method) {
+    public static /* synthetic */ void lambda$processJacksonJsonFormat$13(Annotation annotation, BeanInfo beanInfo,
+            Method method) {
         String name = method.getName();
         try {
             Object objInvoke = method.invoke(annotation, null);
@@ -1509,7 +1578,8 @@ public abstract class BeanUtils {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public static /* synthetic */ void lambda$processJacksonJsonIgnore$11(Annotation annotation, FieldInfo fieldInfo, Method method) {
+    public static /* synthetic */ void lambda$processJacksonJsonIgnore$11(Annotation annotation, FieldInfo fieldInfo,
+            Method method) {
         String name = method.getName();
         try {
             Object objInvoke = method.invoke(annotation, null);
@@ -1521,7 +1591,8 @@ public abstract class BeanUtils {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public static /* synthetic */ void lambda$processJacksonJsonInclude$14(Annotation annotation, BeanInfo beanInfo, Method method) {
+    public static /* synthetic */ void lambda$processJacksonJsonInclude$14(Annotation annotation, BeanInfo beanInfo,
+            Method method) {
         String name = method.getName();
         try {
             Object objInvoke = method.invoke(annotation, null);
@@ -1545,7 +1616,8 @@ public abstract class BeanUtils {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public static /* synthetic */ void lambda$processJacksonJsonInclude$15(Annotation annotation, FieldInfo fieldInfo, Method method) {
+    public static /* synthetic */ void lambda$processJacksonJsonInclude$15(Annotation annotation, FieldInfo fieldInfo,
+            Method method) {
         String name = method.getName();
         try {
             Object objInvoke = method.invoke(annotation, null);
@@ -1574,7 +1646,8 @@ public abstract class BeanUtils {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public static /* synthetic */ void lambda$processJacksonJsonSubTypesType$18(Annotation annotation, BeanInfo beanInfo, int i, Method method) {
+    public static /* synthetic */ void lambda$processJacksonJsonSubTypesType$18(Annotation annotation,
+            BeanInfo beanInfo, int i, Method method) {
         String name = method.getName();
         try {
             Object objInvoke = method.invoke(annotation, null);
@@ -1594,7 +1667,8 @@ public abstract class BeanUtils {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public static /* synthetic */ void lambda$processJacksonJsonTypeName$17(Annotation annotation, BeanInfo beanInfo, Method method) {
+    public static /* synthetic */ void lambda$processJacksonJsonTypeName$17(Annotation annotation, BeanInfo beanInfo,
+            Method method) {
         String name = method.getName();
         try {
             Object objInvoke = method.invoke(annotation, null);
@@ -1610,7 +1684,8 @@ public abstract class BeanUtils {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public static /* synthetic */ void lambda$processJacksonJsonUnwrapped$16(Annotation annotation, FieldInfo fieldInfo, Method method) {
+    public static /* synthetic */ void lambda$processJacksonJsonUnwrapped$16(Annotation annotation, FieldInfo fieldInfo,
+            Method method) {
         String name = method.getName();
         try {
             Object objInvoke = method.invoke(annotation, null);
@@ -1622,7 +1697,8 @@ public abstract class BeanUtils {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public static /* synthetic */ void lambda$setters$2(Annotation annotation, AtomicBoolean atomicBoolean, Method method) {
+    public static /* synthetic */ void lambda$setters$2(Annotation annotation, AtomicBoolean atomicBoolean,
+            Method method) {
         try {
             if ("unwrapped".equals(method.getName()) && ((Boolean) method.invoke(annotation, null)).booleanValue()) {
                 atomicBoolean.set(true);
@@ -1654,7 +1730,10 @@ public abstract class BeanUtils {
         annotationMethods(annotation.getClass(), new oi(annotation, fieldInfo, 1));
     }
 
-    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
+    /*
+     * JADX WARN: Failed to restore switch over string. Please report as a
+     * decompilation issue
+     */
     public static void processJSONType1x(BeanInfo beanInfo, Annotation annotation, Method method) {
         try {
             Object objInvoke = method.invoke(annotation, null);
@@ -1879,7 +1958,8 @@ public abstract class BeanUtils {
         annotationMethods(annotation.getClass(), new oh(annotation, beanInfo, 1));
     }
 
-    public static void processJacksonJsonSubTypesType(final BeanInfo beanInfo, final int i, final Annotation annotation) {
+    public static void processJacksonJsonSubTypesType(final BeanInfo beanInfo, final int i,
+            final Annotation annotation) {
         annotationMethods(annotation.getClass(), new Consumer() { // from class: me.hd.wauxv.obf.oo
             @Override // java.util.function.Consumer
             public final void accept(Object obj) {
@@ -1905,7 +1985,8 @@ public abstract class BeanUtils {
                 RECORD_GET_RECORD_COMPONENTS = Class.class.getMethod("getRecordComponents", null);
             }
             if (RECORD_COMPONENT_GET_NAME == null) {
-                RECORD_COMPONENT_GET_NAME = Class.forName("java.lang.reflect.RecordComponent").getMethod("getName", null);
+                RECORD_COMPONENT_GET_NAME = Class.forName("java.lang.reflect.RecordComponent").getMethod("getName",
+                        null);
             }
             Object[] objArr = (Object[]) RECORD_GET_RECORD_COMPONENTS.invoke(cls, null);
             Method[] methodArr = new Method[objArr.length];
@@ -1914,7 +1995,8 @@ public abstract class BeanUtils {
             }
             return methodArr;
         } catch (Exception e) {
-            throw new RuntimeException("Failed to access Methods needed to support `java.lang.Record`: (" + e.getClass().getName() + ") " + e.getMessage(), e);
+            throw new RuntimeException("Failed to access Methods needed to support `java.lang.Record`: ("
+                    + e.getClass().getName() + ") " + e.getMessage(), e);
         }
     }
 
@@ -1927,7 +2009,8 @@ public abstract class BeanUtils {
         if (clsDeclaringClassOf != null) {
             Type genericSupertype = getGenericSupertype(type, cls, clsDeclaringClassOf);
             if (genericSupertype instanceof ParameterizedType) {
-                return ((ParameterizedType) genericSupertype).getActualTypeArguments()[indexOf(clsDeclaringClassOf.getTypeParameters(), typeVariable)];
+                return ((ParameterizedType) genericSupertype)
+                        .getActualTypeArguments()[indexOf(clsDeclaringClassOf.getTypeParameters(), typeVariable)];
             }
         }
         return typeVariable;
@@ -1963,12 +2046,15 @@ public abstract class BeanUtils {
             try {
                 field3.set(obj, obj2);
             } catch (IllegalAccessException unused) {
-                throw new JSONException(bjs.l(cls, "setNoneStaticMemberClassParent error, class "));
+                throw new JSONException(concatVar2Var1(cls, "setNoneStaticMemberClassParent error, class "));
             }
         }
     }
 
-    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
+    /*
+     * JADX WARN: Failed to restore switch over string. Please report as a
+     * decompilation issue
+     */
     public static String setterName(String str, String str2) {
         char c;
         if (str2 == null) {
@@ -2121,13 +2207,22 @@ public abstract class BeanUtils {
         setters(cls, null, null, consumer);
     }
 
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getInstructions()" because "finallyBlockTerminus" is null
-    	at jadx.core.dex.visitors.finaly.traverser.state.TraverserActivePathState.<init>(TraverserActivePathState.java:253)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.findCommonInsns(MarkFinallyVisitor.java:422)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.extractFinally(MarkFinallyVisitor.java:302)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.processTryBlock(MarkFinallyVisitor.java:222)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:150)
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getInstructions()" because
+     * "finallyBlockTerminus" is null
+     * at
+     * jadx.core.dex.visitors.finaly.traverser.state.TraverserActivePathState.<init>
+     * (TraverserActivePathState.java:253)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.findCommonInsns(
+     * MarkFinallyVisitor.java:422)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.extractFinally(
+     * MarkFinallyVisitor.java:302)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.processTryBlock(
+     * MarkFinallyVisitor.java:222)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:150)
      */
     public static String snakeCase(String str, int i) {
         int length = str.length();
@@ -2175,11 +2270,14 @@ public abstract class BeanUtils {
     }
 
     public static WildcardType subtypeOf(Type type) {
-        return new WildcardTypeImpl(type instanceof WildcardType ? ((WildcardType) type).getUpperBounds() : new Type[]{type}, EMPTY_TYPE_ARRAY);
+        return new WildcardTypeImpl(
+                type instanceof WildcardType ? ((WildcardType) type).getUpperBounds() : new Type[] { type },
+                EMPTY_TYPE_ARRAY);
     }
 
     public static WildcardType supertypeOf(Type type) {
-        return new WildcardTypeImpl(new Type[]{Object.class}, type instanceof WildcardType ? ((WildcardType) type).getLowerBounds() : new Type[]{type});
+        return new WildcardTypeImpl(new Type[] { Object.class },
+                type instanceof WildcardType ? ((WildcardType) type).getLowerBounds() : new Type[] { type });
     }
 
     public static String typeToString(Type type) {
@@ -2251,16 +2349,21 @@ public abstract class BeanUtils {
             try {
                 char cCharAt6 = str.charAt(i7);
                 if (i7 == i) {
-                    if (cCharAt6 >= 'a' && cCharAt6 <= 'z' && (i6 = i7 + 1) < length && (cCharAt5 = str.charAt(i6)) >= 'a' && cCharAt5 <= 'z') {
+                    if (cCharAt6 >= 'a' && cCharAt6 <= 'z' && (i6 = i7 + 1) < length
+                            && (cCharAt5 = str.charAt(i6)) >= 'a' && cCharAt5 <= 'z') {
                         cCharAt6 = (char) (cCharAt6 - ' ');
-                    } else if (cCharAt6 == '_' && (i5 = i7 + 1) < length && (cCharAt4 = str.charAt(i5)) >= 'a' && cCharAt4 <= 'z') {
+                    } else if (cCharAt6 == '_' && (i5 = i7 + 1) < length && (cCharAt4 = str.charAt(i5)) >= 'a'
+                            && cCharAt4 <= 'z') {
                         andSet[i8] = cCharAt6;
                         cCharAt6 = (char) (cCharAt4 - ' ');
                         i8++;
                         i7 = i5;
                     }
-                } else if (cCharAt6 < 'A' || cCharAt6 > 'Z' || (i4 = i7 + 1) >= length || ((cCharAt3 = str.charAt(i4)) >= 'A' && cCharAt3 <= 'Z')) {
-                    if (cCharAt6 >= 'A' && cCharAt6 <= 'Z' && i7 > i && (i2 = i7 + 1) < length && (cCharAt = str.charAt(i2)) >= 'A' && cCharAt <= 'Z' && (cCharAt2 = str.charAt(i7 - 1)) >= 'a' && cCharAt2 <= 'z') {
+                } else if (cCharAt6 < 'A' || cCharAt6 > 'Z' || (i4 = i7 + 1) >= length
+                        || ((cCharAt3 = str.charAt(i4)) >= 'A' && cCharAt3 <= 'Z')) {
+                    if (cCharAt6 >= 'A' && cCharAt6 <= 'Z' && i7 > i && (i2 = i7 + 1) < length
+                            && (cCharAt = str.charAt(i2)) >= 'A' && cCharAt <= 'Z'
+                            && (cCharAt2 = str.charAt(i7 - 1)) >= 'a' && cCharAt2 <= 'z') {
                         i3 = i8 + 1;
                         andSet[i8] = c;
                         i8 = i3;
@@ -2287,14 +2390,16 @@ public abstract class BeanUtils {
         int iIndexOf;
         Class<?> returnType;
         String name = method.getName();
-        if (name.startsWith("is") && (((returnType = method.getReturnType()) != Boolean.class && returnType != Boolean.TYPE) || z)) {
+        if (name.startsWith("is")
+                && (((returnType = method.getReturnType()) != Boolean.class && returnType != Boolean.TYPE) || z)) {
             return name;
         }
         String strSubstring = getterName(name, str);
         if (z && (iIndexOf = strSubstring.indexOf(45)) != -1) {
             strSubstring = strSubstring.substring(0, iIndexOf);
         }
-        if (strSubstring.length() > 2 && strSubstring.charAt(0) >= 'A' && strSubstring.charAt(0) <= 'Z' && strSubstring.charAt(1) >= 'A' && strSubstring.charAt(1) <= 'Z') {
+        if (strSubstring.length() > 2 && strSubstring.charAt(0) >= 'A' && strSubstring.charAt(0) <= 'Z'
+                && strSubstring.charAt(1) >= 'A' && strSubstring.charAt(1) <= 'Z') {
             char[] charArray = strSubstring.toCharArray();
             charArray[0] = (char) (charArray[0] + ' ');
             Field declaredField = getDeclaredField(method.getDeclaringClass(), new String(charArray));
@@ -2309,35 +2414,62 @@ public abstract class BeanUtils {
         getters(cls, cls2, false, consumer);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:25:0x0049  */
-    /* JADX WARN: Found duplicated region for block: B:27:0x004d  */
-    /* JADX WARN: Found duplicated region for block: B:30:0x005f  */
-    /* JADX WARN: Found duplicated region for block: B:31:0x0064  */
-    /* JADX WARN: Found duplicated region for block: B:33:0x006a  */
-    /* JADX WARN: Found duplicated region for block: B:35:0x0080  */
-    /* JADX WARN: Found duplicated region for block: B:38:0x0087  */
+    /* JADX WARN: Found duplicated region for block: B:25:0x0049 */
+    /* JADX WARN: Found duplicated region for block: B:27:0x004d */
+    /* JADX WARN: Found duplicated region for block: B:30:0x005f */
+    /* JADX WARN: Found duplicated region for block: B:31:0x0064 */
+    /* JADX WARN: Found duplicated region for block: B:33:0x006a */
+    /* JADX WARN: Found duplicated region for block: B:35:0x0080 */
+    /* JADX WARN: Found duplicated region for block: B:38:0x0087 */
     /* JADX WARN: Found duplicated region for block: B:40:0x0091 A[DONT_INVERT] */
     /* JADX WARN: Found duplicated region for block: B:41:0x0093 A[MOVE_INLINED] */
-    /* JADX WARN: Found duplicated region for block: B:45:0x00a2  */
-    /* JADX WARN: Found duplicated region for block: B:46:0x00ab  */
-    /* JADX WARN: Found duplicated region for block: B:48:0x00af  */
-    /* JADX WARN: Found duplicated region for block: B:50:0x00bd  */
-    /* JADX WARN: Found duplicated region for block: B:52:0x00c7 A[EDGE_INSN: B:52:0x00c7->B:58:0x00dd BREAK  A[LOOP:0: B:3:0x0001->B:64:?]] */
-    /* JADX WARN: Found duplicated region for block: B:53:0x00cc  */
+    /* JADX WARN: Found duplicated region for block: B:45:0x00a2 */
+    /* JADX WARN: Found duplicated region for block: B:46:0x00ab */
+    /* JADX WARN: Found duplicated region for block: B:48:0x00af */
+    /* JADX WARN: Found duplicated region for block: B:50:0x00bd */
+    /*
+     * JADX WARN: Found duplicated region for block: B:52:0x00c7 A[EDGE_INSN:
+     * B:52:0x00c7->B:58:0x00dd BREAK A[LOOP:0: B:3:0x0001->B:64:?]]
+     */
+    /* JADX WARN: Found duplicated region for block: B:53:0x00cc */
     /* JADX WARN: Found duplicated region for block: B:67:0x009d A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:68:0x009d A[SYNTHETIC] */
     /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r11v0, types: [java.lang.reflect.Type] */
-    /* JADX WARN: Type inference failed for: r11v1, types: [java.lang.reflect.Type] */
-    /* JADX WARN: Type inference failed for: r11v10, types: [java.lang.reflect.Type] */
-    /* JADX WARN: Type inference failed for: r11v2, types: [java.lang.reflect.WildcardType] */
-    /* JADX WARN: Type inference failed for: r11v3, types: [java.lang.reflect.WildcardType] */
-    /* JADX WARN: Type inference failed for: r11v4, types: [java.lang.reflect.ParameterizedType] */
-    /* JADX WARN: Type inference failed for: r11v5, types: [java.lang.reflect.GenericArrayType] */
+    /*
+     * JADX WARN: Type inference failed for: r11v0, types: [java.lang.reflect.Type]
+     */
+    /*
+     * JADX WARN: Type inference failed for: r11v1, types: [java.lang.reflect.Type]
+     */
+    /*
+     * JADX WARN: Type inference failed for: r11v10, types: [java.lang.reflect.Type]
+     */
+    /*
+     * JADX WARN: Type inference failed for: r11v2, types:
+     * [java.lang.reflect.WildcardType]
+     */
+    /*
+     * JADX WARN: Type inference failed for: r11v3, types:
+     * [java.lang.reflect.WildcardType]
+     */
+    /*
+     * JADX WARN: Type inference failed for: r11v4, types:
+     * [java.lang.reflect.ParameterizedType]
+     */
+    /*
+     * JADX WARN: Type inference failed for: r11v5, types:
+     * [java.lang.reflect.GenericArrayType]
+     */
     /* JADX WARN: Type inference failed for: r11v6 */
     /* JADX WARN: Type inference failed for: r11v8 */
-    /* JADX WARN: Type inference failed for: r11v9, types: [java.lang.Object, java.lang.reflect.Type] */
-    /* JADX WARN: Type inference failed for: r12v0, types: [java.util.Map, java.util.Map<java.lang.reflect.TypeVariable<?>, java.lang.reflect.Type>] */
+    /*
+     * JADX WARN: Type inference failed for: r11v9, types: [java.lang.Object,
+     * java.lang.reflect.Type]
+     */
+    /*
+     * JADX WARN: Type inference failed for: r12v0, types: [java.util.Map,
+     * java.util.Map<java.lang.reflect.TypeVariable<?>, java.lang.reflect.Type>]
+     */
     /* JADX WARN: Type inference failed for: r1v18 */
     /* JADX WARN: Type inference failed for: r1v20 */
     /* JADX WARN: Type inference failed for: r1v5 */
@@ -2405,7 +2537,8 @@ public abstract class BeanUtils {
                         if (z) {
                             break;
                         }
-                        typeNewParameterizedTypeWithOwner = newParameterizedTypeWithOwner(typeResolve3, type2.getRawType(), actualTypeArguments);
+                        typeNewParameterizedTypeWithOwner = newParameterizedTypeWithOwner(typeResolve3,
+                                type2.getRawType(), actualTypeArguments);
                         type2 = typeNewParameterizedTypeWithOwner;
                         break;
                     }
@@ -2430,7 +2563,8 @@ public abstract class BeanUtils {
                             lowerBounds = wildcardType2.getLowerBounds();
                             upperBounds = wildcardType2.getUpperBounds();
                             if (lowerBounds.length == 1) {
-                                if (upperBounds.length != 1 && (typeResolve = resolve(type, cls, upperBounds[0], map)) != upperBounds[0]) {
+                                if (upperBounds.length != 1
+                                        && (typeResolve = resolve(type, cls, upperBounds[0], map)) != upperBounds[0]) {
                                     type2 = subtypeOf(typeResolve);
                                     break;
                                 }
@@ -2466,7 +2600,8 @@ public abstract class BeanUtils {
                         if (z) {
                             break;
                         }
-                        typeNewParameterizedTypeWithOwner = newParameterizedTypeWithOwner(typeResolve3, type2.getRawType(), actualTypeArguments);
+                        typeNewParameterizedTypeWithOwner = newParameterizedTypeWithOwner(typeResolve3,
+                                type2.getRawType(), actualTypeArguments);
                         type2 = typeNewParameterizedTypeWithOwner;
                         break;
                     }
@@ -2512,51 +2647,67 @@ public abstract class BeanUtils {
         setters(cls, null, cls2, consumer);
     }
 
-    /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
-    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
-    /* JADX WARN: Found duplicated region for block: B:130:0x01ed  */
-    /* JADX WARN: Found duplicated region for block: B:132:0x01f8  */
-    /* JADX WARN: Found duplicated region for block: B:134:0x01fc  */
-    /* JADX WARN: Found duplicated region for block: B:137:0x0209 A[LOOP:2: B:133:0x01fa->B:137:0x0209, LOOP_END] */
-    /* JADX WARN: Found duplicated region for block: B:138:0x020c  */
-    /* JADX WARN: Found duplicated region for block: B:140:0x0213  */
-    /* JADX WARN: Found duplicated region for block: B:143:0x021d  */
-    /* JADX WARN: Found duplicated region for block: B:146:0x0224  */
-    /* JADX WARN: Found duplicated region for block: B:148:0x022a A[ADDED_TO_REGION] */
-    /* JADX WARN: Found duplicated region for block: B:152:0x0231  */
-    /* JADX WARN: Found duplicated region for block: B:154:0x0235  */
-    /* JADX WARN: Found duplicated region for block: B:156:0x0238  */
-    /* JADX WARN: Found duplicated region for block: B:161:0x0241  */
-    /* JADX WARN: Found duplicated region for block: B:164:0x024b  */
-    /* JADX WARN: Found duplicated region for block: B:166:0x024e  */
-    /* JADX WARN: Found duplicated region for block: B:172:0x025b  */
-    /* JADX WARN: Found duplicated region for block: B:174:0x025e  */
-    /* JADX WARN: Found duplicated region for block: B:178:0x0267 A[ADDED_TO_REGION] */
-    /* JADX WARN: Found duplicated region for block: B:185:0x0278 A[ADDED_TO_REGION] */
-    /* JADX WARN: Found duplicated region for block: B:193:0x028d  */
-    /* JADX WARN: Found duplicated region for block: B:194:0x028f  */
-    /* JADX WARN: Found duplicated region for block: B:197:0x0297  */
-    /* JADX WARN: Found duplicated region for block: B:200:0x02a3  */
-    /* JADX WARN: Found duplicated region for block: B:203:0x02ac  */
-    /* JADX WARN: Found duplicated region for block: B:204:0x02af  */
-    /* JADX WARN: Found duplicated region for block: B:207:0x02b8  */
-    /* JADX WARN: Found duplicated region for block: B:208:0x02bb  */
-    /* JADX WARN: Found duplicated region for block: B:211:0x02c4  */
-    /* JADX WARN: Found duplicated region for block: B:212:0x02c7  */
-    /* JADX WARN: Found duplicated region for block: B:215:0x02d0  */
-    /* JADX WARN: Found duplicated region for block: B:216:0x02d3  */
-    /* JADX WARN: Found duplicated region for block: B:219:0x02da  */
+    /*
+     * JADX WARN: Can't fix incorrect switch cases order, some code will duplicate
+     */
+    /*
+     * JADX WARN: Failed to restore switch over string. Please report as a
+     * decompilation issue
+     */
+    /* JADX WARN: Found duplicated region for block: B:130:0x01ed */
+    /* JADX WARN: Found duplicated region for block: B:132:0x01f8 */
+    /* JADX WARN: Found duplicated region for block: B:134:0x01fc */
+    /*
+     * JADX WARN: Found duplicated region for block: B:137:0x0209 A[LOOP:2:
+     * B:133:0x01fa->B:137:0x0209, LOOP_END]
+     */
+    /* JADX WARN: Found duplicated region for block: B:138:0x020c */
+    /* JADX WARN: Found duplicated region for block: B:140:0x0213 */
+    /* JADX WARN: Found duplicated region for block: B:143:0x021d */
+    /* JADX WARN: Found duplicated region for block: B:146:0x0224 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:148:0x022a A[ADDED_TO_REGION]
+     */
+    /* JADX WARN: Found duplicated region for block: B:152:0x0231 */
+    /* JADX WARN: Found duplicated region for block: B:154:0x0235 */
+    /* JADX WARN: Found duplicated region for block: B:156:0x0238 */
+    /* JADX WARN: Found duplicated region for block: B:161:0x0241 */
+    /* JADX WARN: Found duplicated region for block: B:164:0x024b */
+    /* JADX WARN: Found duplicated region for block: B:166:0x024e */
+    /* JADX WARN: Found duplicated region for block: B:172:0x025b */
+    /* JADX WARN: Found duplicated region for block: B:174:0x025e */
+    /*
+     * JADX WARN: Found duplicated region for block: B:178:0x0267 A[ADDED_TO_REGION]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:185:0x0278 A[ADDED_TO_REGION]
+     */
+    /* JADX WARN: Found duplicated region for block: B:193:0x028d */
+    /* JADX WARN: Found duplicated region for block: B:194:0x028f */
+    /* JADX WARN: Found duplicated region for block: B:197:0x0297 */
+    /* JADX WARN: Found duplicated region for block: B:200:0x02a3 */
+    /* JADX WARN: Found duplicated region for block: B:203:0x02ac */
+    /* JADX WARN: Found duplicated region for block: B:204:0x02af */
+    /* JADX WARN: Found duplicated region for block: B:207:0x02b8 */
+    /* JADX WARN: Found duplicated region for block: B:208:0x02bb */
+    /* JADX WARN: Found duplicated region for block: B:211:0x02c4 */
+    /* JADX WARN: Found duplicated region for block: B:212:0x02c7 */
+    /* JADX WARN: Found duplicated region for block: B:215:0x02d0 */
+    /* JADX WARN: Found duplicated region for block: B:216:0x02d3 */
+    /* JADX WARN: Found duplicated region for block: B:219:0x02da */
     /* JADX WARN: Found duplicated region for block: B:221:0x02df A[FALL_THROUGH] */
-    /* JADX WARN: Found duplicated region for block: B:222:0x02e1  */
-    /* JADX WARN: Found duplicated region for block: B:224:0x02ed A[ADDED_TO_REGION] */
-    /* JADX WARN: Found duplicated region for block: B:228:0x02f3  */
+    /* JADX WARN: Found duplicated region for block: B:222:0x02e1 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:224:0x02ed A[ADDED_TO_REGION]
+     */
+    /* JADX WARN: Found duplicated region for block: B:228:0x02f3 */
     /* JADX WARN: Found duplicated region for block: B:237:0x02f6 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:238:0x02f6 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:239:0x02f6 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:247:0x020c A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:248:0x0204 A[SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:49:0x00ac  */
-    /* JADX WARN: Found duplicated region for block: B:89:0x012d  */
+    /* JADX WARN: Found duplicated region for block: B:49:0x00ac */
+    /* JADX WARN: Found duplicated region for block: B:89:0x012d */
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Type inference failed for: r19v0 */
     /* JADX WARN: Type inference failed for: r19v1 */
@@ -3673,32 +3824,45 @@ public abstract class BeanUtils {
         annotationMethods(annotation.getClass(), new oi(annotation, fieldInfo, 3));
     }
 
-    /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
-    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
-    /* JADX WARN: Found duplicated region for block: B:102:0x0165  */
-    /* JADX WARN: Found duplicated region for block: B:104:0x0168 A[ADDED_TO_REGION] */
-    /* JADX WARN: Found duplicated region for block: B:109:0x0178  */
-    /* JADX WARN: Found duplicated region for block: B:113:0x0188  */
-    /* JADX WARN: Found duplicated region for block: B:114:0x018a A[LOOP:2: B:108:0x0176->B:114:0x018a, LOOP_END] */
-    /* JADX WARN: Found duplicated region for block: B:116:0x018f  */
-    /* JADX WARN: Found duplicated region for block: B:118:0x0197  */
-    /* JADX WARN: Found duplicated region for block: B:122:0x01a7  */
-    /* JADX WARN: Found duplicated region for block: B:123:0x01a9 A[LOOP:3: B:117:0x0195->B:123:0x01a9, LOOP_END] */
-    /* JADX WARN: Found duplicated region for block: B:124:0x01ac  */
-    /* JADX WARN: Found duplicated region for block: B:127:0x01b0  */
-    /* JADX WARN: Found duplicated region for block: B:12:0x0032  */
+    /*
+     * JADX WARN: Can't fix incorrect switch cases order, some code will duplicate
+     */
+    /*
+     * JADX WARN: Failed to restore switch over string. Please report as a
+     * decompilation issue
+     */
+    /* JADX WARN: Found duplicated region for block: B:102:0x0165 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:104:0x0168 A[ADDED_TO_REGION]
+     */
+    /* JADX WARN: Found duplicated region for block: B:109:0x0178 */
+    /* JADX WARN: Found duplicated region for block: B:113:0x0188 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:114:0x018a A[LOOP:2:
+     * B:108:0x0176->B:114:0x018a, LOOP_END]
+     */
+    /* JADX WARN: Found duplicated region for block: B:116:0x018f */
+    /* JADX WARN: Found duplicated region for block: B:118:0x0197 */
+    /* JADX WARN: Found duplicated region for block: B:122:0x01a7 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:123:0x01a9 A[LOOP:3:
+     * B:117:0x0195->B:123:0x01a9, LOOP_END]
+     */
+    /* JADX WARN: Found duplicated region for block: B:124:0x01ac */
+    /* JADX WARN: Found duplicated region for block: B:127:0x01b0 */
+    /* JADX WARN: Found duplicated region for block: B:12:0x0032 */
     /* JADX WARN: Found duplicated region for block: B:133:0x01b3 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:135:0x01b3 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:136:0x01b3 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:145:0x0180 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:146:0x01ac A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:147:0x019f A[SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:41:0x0087  */
-    /* JADX WARN: Found duplicated region for block: B:43:0x0091  */
-    /* JADX WARN: Found duplicated region for block: B:92:0x0147  */
+    /* JADX WARN: Found duplicated region for block: B:41:0x0087 */
+    /* JADX WARN: Found duplicated region for block: B:43:0x0091 */
+    /* JADX WARN: Found duplicated region for block: B:92:0x0147 */
     /* JADX WARN: Found duplicated region for block: B:93:0x014c A[MOVE_INLINED] */
-    /* JADX WARN: Found duplicated region for block: B:96:0x0152  */
-    /* JADX WARN: Found duplicated region for block: B:98:0x0159  */
+    /* JADX WARN: Found duplicated region for block: B:96:0x0152 */
+    /* JADX WARN: Found duplicated region for block: B:98:0x0159 */
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Type inference failed for: r13v1 */
     /* JADX WARN: Type inference failed for: r13v2 */
@@ -3997,12 +4161,14 @@ public abstract class BeanUtils {
         }
         if (cls != null) {
             Class<? extends Annotation> clsAnnotationType = annotation.annotationType();
-            return clsAnnotationType == cls ? annotation : (A) findAnnotation(clsAnnotationType, cls, cls.isAnnotationPresent(Inherited.class), new HashSet());
+            return clsAnnotationType == cls ? annotation
+                    : (A) findAnnotation(clsAnnotationType, cls, cls.isAnnotationPresent(Inherited.class),
+                            new HashSet());
         }
         throw new NullPointerException("annotationType must not be null");
     }
 
-    /* JADX WARN: Found duplicated region for block: B:33:0x005f  */
+    /* JADX WARN: Found duplicated region for block: B:33:0x005f */
     public static Field getField(Class cls, final Method method) {
         boolean z;
         boolean z2;
@@ -4055,7 +4221,8 @@ public abstract class BeanUtils {
             field = fieldArr[1];
         }
         if (Throwable.class.isAssignableFrom(cls)) {
-            if (returnType == String.class && ((field == null && "getMessage".equals(name)) || (field == null && "getLocalizedMessage".equals(name)))) {
+            if (returnType == String.class && ((field == null && "getMessage".equals(name))
+                    || (field == null && "getLocalizedMessage".equals(name)))) {
                 return getDeclaredField(cls, "detailMessage");
             }
             if (returnType == Throwable[].class && "getSuppressed".equals(name)) {
@@ -4107,7 +4274,8 @@ public abstract class BeanUtils {
                 concurrentMap.putIfAbsent(cls, methods);
             }
             for (Method method2 : methods) {
-                if (method2.getName().equals(method.getName()) && method2.getParameterCount() == method.getParameterCount()) {
+                if (method2.getName().equals(method.getName())
+                        && method2.getParameterCount() == method.getParameterCount()) {
                     Class<?>[] parameterTypes = method2.getParameterTypes();
                     Class<?>[] parameterTypes2 = method.getParameterTypes();
                     for (int i = 0; i < parameterTypes.length; i++) {
@@ -4121,7 +4289,8 @@ public abstract class BeanUtils {
         return null;
     }
 
-    private static <A extends Annotation> A findAnnotation(AnnotatedElement annotatedElement, Class<A> cls, boolean z, Set<Annotation> set) {
+    private static <A extends Annotation> A findAnnotation(AnnotatedElement annotatedElement, Class<A> cls, boolean z,
+            Set<Annotation> set) {
         Class superclass;
         A a;
         A a2;
@@ -4143,7 +4312,8 @@ public abstract class BeanUtils {
                     return a2;
                 }
             }
-            if (z && (superclass = cls2.getSuperclass()) != null && superclass != Object.class && (a = (A) findAnnotation(superclass, cls, true, set)) != null) {
+            if (z && (superclass = cls2.getSuperclass()) != null && superclass != Object.class
+                    && (a = (A) findAnnotation(superclass, cls, true, set)) != null) {
                 return a;
             }
         }
@@ -4154,7 +4324,10 @@ public abstract class BeanUtils {
         annotationMethods(annotation.getClass(), new oh(annotation, beanInfo, 3));
     }
 
-    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
+    /*
+     * JADX WARN: Failed to restore switch over string. Please report as a
+     * decompilation issue
+     */
     public static String getterName(String str, String str2) {
         char c;
         if (str2 == null) {
@@ -4346,8 +4519,8 @@ public abstract class BeanUtils {
         return new String(cArr);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:32:0x005f  */
-    /* JADX WARN: Found duplicated region for block: B:44:0x0083  */
+    /* JADX WARN: Found duplicated region for block: B:32:0x005f */
+    /* JADX WARN: Found duplicated region for block: B:44:0x0083 */
     public static void setters(Class cls, boolean z, Consumer<Method> consumer) {
         if (ignore(cls)) {
             return;
@@ -4364,7 +4537,9 @@ public abstract class BeanUtils {
                 String name = method.getName();
                 if (!z || (name.length() > 3 && name.startsWith("get"))) {
                     Class<?> returnType = method.getReturnType();
-                    if (returnType == AtomicInteger.class || returnType == AtomicLong.class || returnType == AtomicBoolean.class || returnType == AtomicIntegerArray.class || returnType == AtomicLongArray.class || Collection.class.isAssignableFrom(returnType)) {
+                    if (returnType == AtomicInteger.class || returnType == AtomicLong.class
+                            || returnType == AtomicBoolean.class || returnType == AtomicIntegerArray.class
+                            || returnType == AtomicLongArray.class || Collection.class.isAssignableFrom(returnType)) {
                         consumer.accept(method);
                     } else if (parameterCount == 1 && !Modifier.isStatic(method.getModifiers())) {
                         String name2 = method.getName();

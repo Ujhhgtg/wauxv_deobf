@@ -28,7 +28,8 @@ public final class egu {
             return false;
         }
         egu eguVar = (egu) obj;
-        return bzo.f(this.a, eguVar.a) && bzo.f(this.b, eguVar.b) && bzo.f(this.c, eguVar.c) && bzo.f(this.d, eguVar.d);
+        return nullSafeIsEqual(this.a, eguVar.a) && nullSafeIsEqual(this.b, eguVar.b)
+                && nullSafeIsEqual(this.c, eguVar.c) && nullSafeIsEqual(this.d, eguVar.d);
     }
 
     public final int hashCode() {
@@ -48,6 +49,6 @@ public final class egu {
         yg.u(sb, this.a, -302735064824618L);
         bjs.w(sb, this.b, -302657755413290L);
         bjs.w(sb, this.c, -299827371965226L);
-        return bjs.p(sb, this.d, ')');
+        return concat(sb, this.d, ')');
     }
 }

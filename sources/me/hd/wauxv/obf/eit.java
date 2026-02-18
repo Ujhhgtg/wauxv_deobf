@@ -24,7 +24,7 @@ public final class eit {
             return false;
         }
         eit eitVar = (eit) obj;
-        return bzo.f(this.a, eitVar.a) && bzo.f(this.b, eitVar.b);
+        return nullSafeIsEqual(this.a, eitVar.a) && nullSafeIsEqual(this.b, eitVar.b);
     }
 
     public final int hashCode() {

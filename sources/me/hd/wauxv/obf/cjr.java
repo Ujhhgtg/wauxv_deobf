@@ -15,7 +15,8 @@ public final class cjr extends cjv {
             throw new IllegalArgumentException((cls + " does not implement Parcelable.").toString());
         }
         try {
-            this.a = Class.forName("[L" + cls.getName() + TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER);
+            this.a = Class.forName("[L" + cls.getName()
+                    + TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER);
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
@@ -28,12 +29,12 @@ public final class cjr extends cjv {
         if (obj == null || !cjr.class.equals(obj.getClass())) {
             return false;
         }
-        return bzo.f(this.a, ((cjr) obj).a);
+        return nullSafeIsEqual(this.a, ((cjr) obj).a);
     }
 
     @Override // me.hd.wauxv.obf.cjv
     public final Object f(String str, Bundle bundle) {
-        bzo.q(bundle, "bundle");
+        throwIfVar1IsNull(bundle, "bundle");
         return (Parcelable[]) bundle.get(str);
     }
 
@@ -48,14 +49,14 @@ public final class cjr extends cjv {
 
     @Override // me.hd.wauxv.obf.cjv
     public final Object i(String str) {
-        bzo.q(str, "value");
+        throwIfVar1IsNull(str, "value");
         throw new UnsupportedOperationException("Arrays don't support default values.");
     }
 
     @Override // me.hd.wauxv.obf.cjv
     public final void j(Bundle bundle, String str, Object obj) {
         Parcelable[] parcelableArr = (Parcelable[]) obj;
-        bzo.q(str, "key");
+        throwIfVar1IsNull(str, "key");
         this.a.cast(parcelableArr);
         bundle.putParcelableArray(str, parcelableArr);
     }

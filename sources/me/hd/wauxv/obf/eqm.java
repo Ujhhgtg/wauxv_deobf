@@ -40,7 +40,7 @@ public final class eqm extends bzf {
                 equ.e(view, (CharSequence) obj);
                 break;
             case 2:
-                eqw.c(view, (CharSequence) obj);
+                eqw.createInstanceWithArgs(view, (CharSequence) obj);
                 break;
             default:
                 equ.d(view, ((Boolean) obj).booleanValue());

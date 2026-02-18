@@ -25,7 +25,7 @@ public final class dov implements btt, Serializable {
             objInvoke = this.b;
             if (objInvoke == arjVar) {
                 bfu bfuVar = this.a;
-                bzo.n(bfuVar);
+                throwIfVar1IsNull(bfuVar);
                 objInvoke = bfuVar.invoke();
                 this.b = objInvoke;
                 this.a = null;

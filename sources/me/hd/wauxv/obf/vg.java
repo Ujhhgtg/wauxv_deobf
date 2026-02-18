@@ -6,7 +6,7 @@ import org.luckypray.dexkit.DexKitBridge;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class vg extends doo implements bng, bob {
+public final class vg extends BaseHook implements IRequiresDexLocate, bob {
     public static final vg a;
     public static final String b;
     public static final String c;
@@ -40,27 +40,36 @@ public final class vg extends doo implements bng, bob {
         akiVarAb.o();
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String f() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getName() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String g() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getCategory() {
         return b;
     }
 
     @Override // me.hd.wauxv.obf.bng
-    public final void h(DexKitBridge dexKitBridge) {
+    public final void locateDex(DexKitBridge dexKitBridge) {
         emn.aj(uu.a, dexKitBridge, new mj(29));
     }
 
-    @Override // me.hd.wauxv.obf.bob
-    public final void n(bmm bmmVar, String str) {
+    @Override // me.hd.wauxv.obf.IDatabaseOperationsListener
+    public final void n(HookParamWrapper hookParam, String str) {
         Object next;
         if (z()) {
             Object obj = null;
-            if (dnr.bp(str, "select unReadCount, status, isSend, conversationTime, username, content, msgType, flag, digest, digestUser, attrflag, editingMsg, atCount, unReadMuteCount, UnReadInvite, hasTodo, hbMarkRed, remitMarkRed, parentRef from rconversation where " /* cnb.z(-572012334414634L) */, false)) {
+            if (dnr.bp(str,
+                    "select unReadCount, status, isSend, conversationTime, username, content, msgType, flag, digest, digestUser, attrflag, editingMsg, atCount, unReadMuteCount, UnReadInvite, hasTodo, hbMarkRed, remitMarkRed, parentRef from rconversation where " /*
+                                                                                                                                                                                                                                                                       * cnb
+                                                                                                                                                                                                                                                                       * .
+                                                                                                                                                                                                                                                                       * z
+                                                                                                                                                                                                                                                                       * (
+                                                                                                                                                                                                                                                                       * -
+                                                                                                                                                                                                                                                                       * 572012334414634L)
+                                                                                                                                                                                                                                                                       */,
+                    false)) {
                 if (ux.a.o().equals(bis.a.d)) {
                     return;
                 }
@@ -72,42 +81,55 @@ public final class vg extends doo implements bng, bob {
                         break;
                     }
                     next = it.next();
-                } while (!bzo.f(((biv) next).b, ux.a.o()));
+                } while (!nullSafeIsEqual(((biv) next).b, ux.a.o()));
                 biv bivVar = (biv) next;
                 if (bivVar != null) {
-                    bmmVar.getClass();
-                    new ek(bmmVar, 1, 8).q("select unReadCount, status, isSend, conversationTime, username, content, msgType, flag, digest, digestUser, attrflag, editingMsg, atCount, unReadMuteCount, UnReadInvite, hasTodo, hbMarkRed, remitMarkRed, parentRef from rconversation " /* cnb.z(-573730321333034L) */ + bivVar.g(ux.a.o()));
+                    hookParam.getClass();
+                    new ek(hookParam, 1, 8).q(
+                            "select unReadCount, status, isSend, conversationTime, username, content, msgType, flag, digest, digestUser, attrflag, editingMsg, atCount, unReadMuteCount, UnReadInvite, hasTodo, hbMarkRed, remitMarkRed, parentRef from rconversation "
+                                    /* cnb.z(-573730321333034L) */ + bivVar.g(ux.a.o()));
                 }
             }
-            if (!dnr.bp(str, "select unReadCount, status, isSend, conversationTime, username, content, msgType,flag, digest, digestUser, attrflag, editingMsg, atCount, unReadMuteCount, UnReadInvite, editingQuoteMsgId, hasTodo, hbMarkRed, remitMarkRed, hasSpecialFollow, parentRef from rconversation where " /* cnb.z(-579339548621610L) */, false) || ux.a.o().equals(bis.a.d)) {
+            if (!dnr.bp(str,
+                    "select unReadCount, status, isSend, conversationTime, username, content, msgType,flag, digest, digestUser, attrflag, editingMsg, atCount, unReadMuteCount, UnReadInvite, editingQuoteMsgId, hasTodo, hbMarkRed, remitMarkRed, hasSpecialFollow, parentRef from rconversation where " /*
+                                                                                                                                                                                                                                                                                                           * cnb
+                                                                                                                                                                                                                                                                                                           * .
+                                                                                                                                                                                                                                                                                                           * z
+                                                                                                                                                                                                                                                                                                           * (
+                                                                                                                                                                                                                                                                                                           * -
+                                                                                                                                                                                                                                                                                                           * 579339548621610L)
+                                                                                                                                                                                                                                                                                                           */,
+                    false) || ux.a.o().equals(bis.a.d)) {
                 return;
             }
             biw.a.getClass();
             for (Object obj2 : biw.f()) {
-                if (bzo.f(((biv) obj2).b, ux.a.o())) {
+                if (nullSafeIsEqual(((biv) obj2).b, ux.a.o())) {
                     obj = obj2;
                     break;
                 }
             }
             biv bivVar2 = (biv) obj;
             if (bivVar2 != null) {
-                bmmVar.getClass();
-                new ek(bmmVar, 1, 8).q("select unReadCount, status, isSend, conversationTime, username, content, msgType,flag, digest, digestUser, attrflag, editingMsg, atCount, unReadMuteCount, UnReadInvite, editingQuoteMsgId, hasTodo, hbMarkRed, remitMarkRed, hasSpecialFollow, parentRef from rconversation " /* cnb.z(-580318801165098L) */ + bivVar2.g(ux.a.o()));
+                hookParam.getClass();
+                new ek(hookParam, 1, 8).q(
+                        "select unReadCount, status, isSend, conversationTime, username, content, msgType,flag, digest, digestUser, attrflag, editingMsg, atCount, unReadMuteCount, UnReadInvite, editingQuoteMsgId, hasTodo, hbMarkRed, remitMarkRed, hasSpecialFollow, parentRef from rconversation "
+                                /* cnb.z(-580318801165098L) */ + bivVar2.g(ux.a.o()));
             }
         }
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String o() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getDescription() {
         return d;
     }
 
-    @Override // me.hd.wauxv.obf.doo
+    @Override // me.hd.wauxv.obf.BaseHook
     public final bgf p() {
         return i;
     }
 
-    @Override // me.hd.wauxv.obf.doo
+    @Override // me.hd.wauxv.obf.BaseHook
     public final boolean q() {
         return m;
     }

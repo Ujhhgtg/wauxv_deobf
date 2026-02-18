@@ -28,7 +28,8 @@ public final class dyx {
             return false;
         }
         dyx dyxVar = (dyx) obj;
-        return bzo.f(this.a, dyxVar.a) && bzo.f(this.b, dyxVar.b) && bzo.f(this.c, dyxVar.c) && bzo.f(this.d, dyxVar.d);
+        return nullSafeIsEqual(this.a, dyxVar.a) && nullSafeIsEqual(this.b, dyxVar.b)
+                && nullSafeIsEqual(this.c, dyxVar.c) && nullSafeIsEqual(this.d, dyxVar.d);
     }
 
     public final int hashCode() {
@@ -50,6 +51,6 @@ public final class dyx {
         sb.append(this.b);
         sb.append(", template_creator_h5_url=" /* cnb.z(-195704479808298L) */);
         yg.u(sb, this.c, -195605695560490L);
-        return bjs.q(sb, this.d, ')');
+        return concat(sb, this.d, ')');
     }
 }

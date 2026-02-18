@@ -24,7 +24,7 @@ public final class dwa {
             return false;
         }
         dwa dwaVar = (dwa) obj;
-        return bzo.f(this.a, dwaVar.a) && bzo.f(this.b, dwaVar.b);
+        return nullSafeIsEqual(this.a, dwaVar.a) && nullSafeIsEqual(this.b, dwaVar.b);
     }
 
     public final int hashCode() {
@@ -38,6 +38,6 @@ public final class dwa {
         StringBuilder sb = new StringBuilder();
         sb.append("ca2Proto(url=" /* cnb.z(-175032802212650L) */);
         yg.u(sb, this.a, -175024212278058L);
-        return bjs.q(sb, this.b, ')');
+        return concat(sb, this.b, ')');
     }
 }

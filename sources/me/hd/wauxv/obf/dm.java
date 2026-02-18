@@ -40,7 +40,8 @@ public class dm extends ckl {
         dl dlVar = (dl) cjgVar;
         ea eaVar = dlVar.g;
         if (dlVar.a == null) {
-            throw new IllegalStateException(yg.m(new StringBuilder("Destination "), " does not have an Intent set.", eaVar.a).toString());
+            throw new IllegalStateException(
+                    yg.m(new StringBuilder("Destination "), " does not have an Intent set.", eaVar.a).toString());
         }
         Intent intent2 = new Intent(dlVar.a);
         if (bundle != null) {
@@ -51,14 +52,17 @@ public class dm extends ckl {
                 Matcher matcher = Pattern.compile("\\{(.+?)\\}").matcher(str);
                 while (matcher.find()) {
                     String strGroup = matcher.group(1);
-                    bzo.n(strGroup);
+                    throwIfVar1IsNull(strGroup);
                     if (!bundle.containsKey(strGroup)) {
-                        throw new IllegalArgumentException(("Could not find " + strGroup + " in " + bundle + " to fill data pattern " + str).toString());
+                        throw new IllegalArgumentException(
+                                ("Could not find " + strGroup + " in " + bundle + " to fill data pattern " + str)
+                                        .toString());
                     }
                     matcher.appendReplacement(stringBuffer, "");
                     cin cinVar = (cin) dlVar.n().get(strGroup);
                     cjv cjvVar = cinVar != null ? cinVar.a : null;
-                    stringBuffer.append(cjvVar != null ? cjvVar.b(cjvVar.f(strGroup, bundle)) : Uri.encode(String.valueOf(bundle.get(strGroup))));
+                    stringBuffer.append(cjvVar != null ? cjvVar.b(cjvVar.f(strGroup, bundle))
+                            : Uri.encode(String.valueOf(bundle.get(strGroup))));
                 }
                 matcher.appendTail(stringBuffer);
                 intent2.setData(Uri.parse(stringBuffer.toString()));
@@ -71,7 +75,8 @@ public class dm extends ckl {
         if (cjoVar != null && cjoVar.a) {
             intent2.addFlags(536870912);
         }
-        if (activity != null && (intent = activity.getIntent()) != null && (intExtra = intent.getIntExtra("android-support-navigation:ActivityNavigator:current", 0)) != 0) {
+        if (activity != null && (intent = activity.getIntent()) != null
+                && (intExtra = intent.getIntExtra("android-support-navigation:ActivityNavigator:current", 0)) != 0) {
             intent2.putExtra("android-support-navigation:ActivityNavigator:source", intExtra);
         }
         intent2.putExtra("android-support-navigation:ActivityNavigator:current", eaVar.a);
@@ -80,19 +85,27 @@ public class dm extends ckl {
         if (cjoVar != null) {
             int i = cjoVar.h;
             int i2 = cjoVar.i;
-            if ((i <= 0 || !bzo.f(resources.getResourceTypeName(i), "animator")) && (i2 <= 0 || !bzo.f(resources.getResourceTypeName(i2), "animator"))) {
+            if ((i <= 0 || !nullSafeIsEqual(resources.getResourceTypeName(i), "animator"))
+                    && (i2 <= 0 || !nullSafeIsEqual(resources.getResourceTypeName(i2), "animator"))) {
                 intent2.putExtra("android-support-navigation:ActivityNavigator:popEnterAnim", i);
-                bzo.n(intent2.putExtra("android-support-navigation:ActivityNavigator:popExitAnim", i2));
+                throwIfVar1IsNull(intent2.putExtra("android-support-navigation:ActivityNavigator:popExitAnim", i2));
             } else {
-                Log.w("ActivityNavigator", "Activity destinations do not support Animator resource. Ignoring popEnter resource " + resources.getResourceName(i) + " and popExit resource " + resources.getResourceName(i2) + " when launching " + dlVar);
+                Log.w("ActivityNavigator",
+                        "Activity destinations do not support Animator resource. Ignoring popEnter resource "
+                                + resources.getResourceName(i) + " and popExit resource "
+                                + resources.getResourceName(i2) + " when launching " + dlVar);
             }
         }
         context.startActivity(intent2);
         if (cjoVar != null && activity != null) {
             int i3 = cjoVar.f;
             int i4 = cjoVar.g;
-            if ((i3 > 0 && bzo.f(resources.getResourceTypeName(i3), "animator")) || (i4 > 0 && bzo.f(resources.getResourceTypeName(i4), "animator"))) {
-                Log.w("ActivityNavigator", "Activity destinations do not support Animator resource. Ignoring enter resource " + resources.getResourceName(i3) + " and exit resource " + resources.getResourceName(i4) + "when launching " + dlVar);
+            if ((i3 > 0 && nullSafeIsEqual(resources.getResourceTypeName(i3), "animator"))
+                    || (i4 > 0 && nullSafeIsEqual(resources.getResourceTypeName(i4), "animator"))) {
+                Log.w("ActivityNavigator",
+                        "Activity destinations do not support Animator resource. Ignoring enter resource "
+                                + resources.getResourceName(i3) + " and exit resource " + resources.getResourceName(i4)
+                                + "when launching " + dlVar);
                 return null;
             }
             if (i3 >= 0 || i4 >= 0) {

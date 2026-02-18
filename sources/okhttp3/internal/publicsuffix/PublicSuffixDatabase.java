@@ -18,7 +18,7 @@ import me.hd.wauxv.obf.aqh;
 import me.hd.wauxv.obf.avd;
 import me.hd.wauxv.obf.aye;
 import me.hd.wauxv.obf.bjr;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cnh;
 import me.hd.wauxv.obf.cqj;
 import me.hd.wauxv.obf.cyl;
@@ -41,13 +41,16 @@ public final class PublicSuffixDatabase {
     private byte[] publicSuffixExceptionListBytes;
     private byte[] publicSuffixListBytes;
     public static final Companion Companion = new Companion(null);
-    private static final byte[] WILDCARD_LABEL = {42};
+    private static final byte[] WILDCARD_LABEL = { 42 };
     private static final List<String> PREVAILING_RULE = dqc.bf("*");
     private static final PublicSuffixDatabase instance = new PublicSuffixDatabase();
     private final AtomicBoolean listRead = new AtomicBoolean(false);
     private final CountDownLatch readCompleteLatch = new CountDownLatch(1);
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
@@ -120,7 +123,7 @@ public final class PublicSuffixDatabase {
                         if (length2 >= i11) {
                             if (length2 <= i11) {
                                 Charset charset = StandardCharsets.UTF_8;
-                                bzo.p(charset, "UTF_8");
+                                throwIfVar1IsNull(charset, "UTF_8");
                                 return new String(bArr, i5, i7, charset);
                             }
                         }
@@ -161,9 +164,9 @@ public final class PublicSuffixDatabase {
         for (int i = 0; i < size; i++) {
             String str2 = list.get(i);
             Charset charset = StandardCharsets.UTF_8;
-            bzo.p(charset, "UTF_8");
+            throwIfVar1IsNull(charset, "UTF_8");
             byte[] bytes = str2.getBytes(charset);
-            bzo.p(bytes, "this as java.lang.String).getBytes(charset)");
+            throwIfVar1IsNull(bytes, "this as java.lang.String).getBytes(charset)");
             bArr[i] = bytes;
         }
         int i2 = 0;
@@ -176,7 +179,7 @@ public final class PublicSuffixDatabase {
             Companion companion = Companion;
             byte[] bArr2 = this.publicSuffixListBytes;
             if (bArr2 == null) {
-                bzo.ar("publicSuffixListBytes");
+                throwLateinitPropNotInitYet("publicSuffixListBytes");
                 throw null;
             }
             strBinarySearch = companion.binarySearch(bArr2, bArr, i2);
@@ -201,7 +204,7 @@ public final class PublicSuffixDatabase {
             Companion companion2 = Companion;
             byte[] bArr4 = this.publicSuffixListBytes;
             if (bArr4 == null) {
-                bzo.ar("publicSuffixListBytes");
+                throwLateinitPropNotInitYet("publicSuffixListBytes");
                 throw null;
             }
             strBinarySearch2 = companion2.binarySearch(bArr4, bArr3, i3);
@@ -216,7 +219,7 @@ public final class PublicSuffixDatabase {
                 Companion companion3 = Companion;
                 byte[] bArr5 = this.publicSuffixExceptionListBytes;
                 if (bArr5 == null) {
-                    bzo.ar("publicSuffixExceptionListBytes");
+                    throwLateinitPropNotInitYet("publicSuffixExceptionListBytes");
                     throw null;
                 }
                 String strBinarySearch3 = companion3.binarySearch(bArr5, bArr, i5);
@@ -227,15 +230,18 @@ public final class PublicSuffixDatabase {
             }
         }
         if (str != null) {
-            return dnj.ar("!".concat(str), new char[]{TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH});
+            return dnj.ar("!".concat(str),
+                    new char[] { TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH });
         }
         if (strBinarySearch == null && strBinarySearch2 == null) {
             return PREVAILING_RULE;
         }
         List<String> listAr = avd.a;
-        List<String> listAr2 = strBinarySearch != null ? dnj.ar(strBinarySearch, new char[]{TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH}) : listAr;
+        List<String> listAr2 = strBinarySearch != null ? dnj.ar(strBinarySearch,
+                new char[] { TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH }) : listAr;
         if (strBinarySearch2 != null) {
-            listAr = dnj.ar(strBinarySearch2, new char[]{TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH});
+            listAr = dnj.ar(strBinarySearch2,
+                    new char[] { TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH });
         }
         return listAr2.size() > listAr.size() ? listAr2 : listAr;
     }
@@ -304,8 +310,9 @@ public final class PublicSuffixDatabase {
     }
 
     private final List<String> splitDomain(String str) {
-        List<String> listAr = dnj.ar(str, new char[]{TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH});
-        if (!bzo.f(aaz.l(listAr), "")) {
+        List<String> listAr = dnj.ar(str,
+                new char[] { TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH });
+        if (!nullSafeIsEqual(aaz.l(listAr), "")) {
             return listAr;
         }
         int size = listAr.size() - 1;
@@ -315,9 +322,9 @@ public final class PublicSuffixDatabase {
     public final String getEffectiveTldPlusOne(String str) {
         int size;
         int size2;
-        bzo.q(str, "domain");
+        throwIfVar1IsNull(str, "domain");
         String unicode = IDN.toUnicode(str);
-        bzo.p(unicode, "unicodeDomain");
+        throwIfVar1IsNull(unicode, "unicodeDomain");
         List<String> listSplitDomain = splitDomain(unicode);
         List<String> listFindMatchingRule = findMatchingRule(listSplitDomain);
         int i = 0;
@@ -353,8 +360,8 @@ public final class PublicSuffixDatabase {
     }
 
     public final void setListBytes(byte[] bArr, byte[] bArr2) {
-        bzo.q(bArr, "publicSuffixListBytes");
-        bzo.q(bArr2, "publicSuffixExceptionListBytes");
+        throwIfVar1IsNull(bArr, "publicSuffixListBytes");
+        throwIfVar1IsNull(bArr2, "publicSuffixExceptionListBytes");
         this.publicSuffixListBytes = bArr;
         this.publicSuffixExceptionListBytes = bArr2;
         this.listRead.set(true);

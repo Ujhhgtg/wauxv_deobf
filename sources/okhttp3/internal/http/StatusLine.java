@@ -2,7 +2,7 @@ package okhttp3.internal.http;
 
 import java.net.ProtocolException;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.dnr;
 import okhttp3.Protocol;
 import okhttp3.Response;
@@ -19,14 +19,17 @@ public final class StatusLine {
     public final String message;
     public final Protocol protocol;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
         }
 
         public final StatusLine get(Response response) {
-            bzo.q(response, "response");
+            throwIfVar1IsNull(response, "response");
             return new StatusLine(response.protocol(), response.code(), response.message());
         }
 
@@ -34,7 +37,7 @@ public final class StatusLine {
             Protocol protocol;
             int i;
             String strSubstring;
-            bzo.q(str, "statusLine");
+            throwIfVar1IsNull(str, "statusLine");
             if (dnr.bp(str, "HTTP/1.", false)) {
                 i = 9;
                 if (str.length() < 9 || str.charAt(8) != ' ') {
@@ -62,7 +65,7 @@ public final class StatusLine {
             }
             try {
                 String strSubstring2 = str.substring(i, i2);
-                bzo.p(strSubstring2, "this as java.lang.String…ing(startIndex, endIndex)");
+                throwIfVar1IsNull(strSubstring2, "this as java.lang.String…ing(startIndex, endIndex)");
                 int i3 = Integer.parseInt(strSubstring2);
                 if (str.length() <= i2) {
                     strSubstring = "";
@@ -71,7 +74,7 @@ public final class StatusLine {
                         throw new ProtocolException("Unexpected status line: ".concat(str));
                     }
                     strSubstring = str.substring(i + 4);
-                    bzo.p(strSubstring, "this as java.lang.String).substring(startIndex)");
+                    throwIfVar1IsNull(strSubstring, "this as java.lang.String).substring(startIndex)");
                 }
                 return new StatusLine(protocol, i3, strSubstring);
             } catch (NumberFormatException unused) {
@@ -84,8 +87,8 @@ public final class StatusLine {
     }
 
     public StatusLine(Protocol protocol, int i, String str) {
-        bzo.q(protocol, "protocol");
-        bzo.q(str, "message");
+        throwIfVar1IsNull(protocol, "protocol");
+        throwIfVar1IsNull(str, "message");
         this.protocol = protocol;
         this.code = i;
         this.message = str;
@@ -103,7 +106,7 @@ public final class StatusLine {
         sb.append(' ');
         sb.append(this.message);
         String string = sb.toString();
-        bzo.p(string, "StringBuilder().apply(builderAction).toString()");
+        throwIfVar1IsNull(string, "StringBuilder().apply(builderAction).toString()");
         return string;
     }
 }

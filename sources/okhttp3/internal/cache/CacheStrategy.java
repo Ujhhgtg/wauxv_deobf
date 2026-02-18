@@ -4,7 +4,7 @@ import com.umeng.ccg.c;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.dnr;
 import okhttp3.CacheControl;
 import okhttp3.Headers;
@@ -20,20 +20,25 @@ public final class CacheStrategy {
     private final Response cacheResponse;
     private final Request networkRequest;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
         }
 
-        /* JADX WARN: Found duplicated region for block: B:24:0x003b  */
+        /* JADX WARN: Found duplicated region for block: B:24:0x003b */
         public final boolean isCacheable(Response response, Request request) {
-            bzo.q(response, "response");
-            bzo.q(request, "request");
+            throwIfVar1IsNull(response, "response");
+            throwIfVar1IsNull(request, "request");
             int iCode = response.code();
             if (iCode != 200 && iCode != 410 && iCode != 414 && iCode != 501 && iCode != 203 && iCode != 204) {
                 if (iCode == 307) {
-                    if (Response.header$default(response, "Expires", null, 2, null) == null && response.cacheControl().maxAgeSeconds() == -1 && !response.cacheControl().isPublic() && !response.cacheControl().isPrivate()) {
+                    if (Response.header$default(response, "Expires", null, 2, null) == null
+                            && response.cacheControl().maxAgeSeconds() == -1 && !response.cacheControl().isPublic()
+                            && !response.cacheControl().isPrivate()) {
                         return false;
                     }
                 } else if (iCode != 308 && iCode != 404 && iCode != 405) {
@@ -58,7 +63,10 @@ public final class CacheStrategy {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Factory {
         private int ageSeconds;
         private final Response cacheResponse;
@@ -74,7 +82,7 @@ public final class CacheStrategy {
         private String servedDateString;
 
         public Factory(long j, Request request, Response response) {
-            bzo.q(request, "request");
+            throwIfVar1IsNull(request, "request");
             this.nowMillis = j;
             this.request = request;
             this.cacheResponse = response;
@@ -134,10 +142,13 @@ public final class CacheStrategy {
             long jCacheResponseAge = cacheResponseAge();
             long jComputeFreshnessLifetime = computeFreshnessLifetime();
             if (cacheControl.maxAgeSeconds() != -1) {
-                jComputeFreshnessLifetime = Math.min(jComputeFreshnessLifetime, TimeUnit.SECONDS.toMillis(cacheControl.maxAgeSeconds()));
+                jComputeFreshnessLifetime = Math.min(jComputeFreshnessLifetime,
+                        TimeUnit.SECONDS.toMillis(cacheControl.maxAgeSeconds()));
             }
             long millis = 0;
-            long millis2 = cacheControl.minFreshSeconds() != -1 ? TimeUnit.SECONDS.toMillis(cacheControl.minFreshSeconds()) : 0L;
+            long millis2 = cacheControl.minFreshSeconds() != -1
+                    ? TimeUnit.SECONDS.toMillis(cacheControl.minFreshSeconds())
+                    : 0L;
             if (!cacheControl2.mustRevalidate() && cacheControl.maxStaleSeconds() != -1) {
                 millis = TimeUnit.SECONDS.toMillis(cacheControl.maxStaleSeconds());
             }
@@ -169,14 +180,15 @@ public final class CacheStrategy {
                 str = "If-Modified-Since";
             }
             Headers.Builder builderNewBuilder2 = this.request.headers().newBuilder();
-            bzo.n(str2);
+            throwIfVar1IsNull(str2);
             builderNewBuilder2.addLenient$okhttp(str, str2);
-            return new CacheStrategy(this.request.newBuilder().headers(builderNewBuilder2.build()).build(), this.cacheResponse);
+            return new CacheStrategy(this.request.newBuilder().headers(builderNewBuilder2.build()).build(),
+                    this.cacheResponse);
         }
 
         private final long computeFreshnessLifetime() {
             Response response = this.cacheResponse;
-            bzo.n(response);
+            throwIfVar1IsNull(response);
             if (response.cacheControl().maxAgeSeconds() != -1) {
                 return TimeUnit.SECONDS.toMillis(r0.maxAgeSeconds());
             }
@@ -193,7 +205,7 @@ public final class CacheStrategy {
                 Date date3 = this.servedDate;
                 long time2 = date3 != null ? date3.getTime() : this.sentRequestMillis;
                 Date date4 = this.lastModified;
-                bzo.n(date4);
+                throwIfVar1IsNull(date4);
                 long time3 = time2 - date4.getTime();
                 if (time3 > 0) {
                     return time3 / ((long) 10);
@@ -203,18 +215,21 @@ public final class CacheStrategy {
         }
 
         private final boolean hasConditions(Request request) {
-            return (request.header("If-Modified-Since") == null && request.header("If-None-Match") == null) ? false : true;
+            return (request.header("If-Modified-Since") == null && request.header("If-None-Match") == null) ? false
+                    : true;
         }
 
         private final boolean isFreshnessLifetimeHeuristic() {
             Response response = this.cacheResponse;
-            bzo.n(response);
+            throwIfVar1IsNull(response);
             return response.cacheControl().maxAgeSeconds() == -1 && this.expires == null;
         }
 
         public final CacheStrategy compute() {
             CacheStrategy cacheStrategyComputeCandidate = computeCandidate();
-            return (cacheStrategyComputeCandidate.getNetworkRequest() == null || !this.request.cacheControl().onlyIfCached()) ? cacheStrategyComputeCandidate : new CacheStrategy(null, null);
+            return (cacheStrategyComputeCandidate.getNetworkRequest() == null
+                    || !this.request.cacheControl().onlyIfCached()) ? cacheStrategyComputeCandidate
+                            : new CacheStrategy(null, null);
         }
 
         public final Request getRequest$okhttp() {

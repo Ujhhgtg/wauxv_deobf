@@ -2,7 +2,7 @@ package okhttp3;
 
 import java.net.InetSocketAddress;
 import java.net.Proxy;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -12,9 +12,9 @@ public final class Route {
     private final InetSocketAddress socketAddress;
 
     public Route(Address address, Proxy proxy, InetSocketAddress inetSocketAddress) {
-        bzo.q(address, "address");
-        bzo.q(proxy, "proxy");
-        bzo.q(inetSocketAddress, "socketAddress");
+        throwIfVar1IsNull(address, "address");
+        throwIfVar1IsNull(proxy, "proxy");
+        throwIfVar1IsNull(inetSocketAddress, "socketAddress");
         this.address = address;
         this.proxy = proxy;
         this.socketAddress = inetSocketAddress;
@@ -41,7 +41,8 @@ public final class Route {
             return false;
         }
         Route route = (Route) obj;
-        return bzo.f(route.address, this.address) && bzo.f(route.proxy, this.proxy) && bzo.f(route.socketAddress, this.socketAddress);
+        return nullSafeIsEqual(route.address, this.address) && nullSafeIsEqual(route.proxy, this.proxy)
+                && nullSafeIsEqual(route.socketAddress, this.socketAddress);
     }
 
     public int hashCode() {

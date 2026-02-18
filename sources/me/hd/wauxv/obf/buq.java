@@ -9,7 +9,7 @@ public final class buq {
     public final void c(bup bupVar, bug bugVar) {
         buh buhVarA = bugVar.a();
         buh buhVar = this.a;
-        bzo.q(buhVar, "state1");
+        throwIfVar1IsNull(buhVar, "state1");
         if (buhVarA.compareTo(buhVar) < 0) {
             buhVar = buhVarA;
         }

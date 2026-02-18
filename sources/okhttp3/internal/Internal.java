@@ -1,7 +1,7 @@
 package okhttp3.internal;
 
 import javax.net.ssl.SSLSocket;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import okhttp3.Cache;
 import okhttp3.ConnectionSpec;
 import okhttp3.Cookie;
@@ -14,38 +14,38 @@ import okhttp3.Response;
 /* JADX INFO: loaded from: classes.dex */
 public final class Internal {
     public static final Headers.Builder addHeaderLenient(Headers.Builder builder, String str) {
-        bzo.q(builder, "builder");
-        bzo.q(str, "line");
+        throwIfVar1IsNull(builder, "builder");
+        throwIfVar1IsNull(str, "line");
         return builder.addLenient$okhttp(str);
     }
 
     public static final void applyConnectionSpec(ConnectionSpec connectionSpec, SSLSocket sSLSocket, boolean z) {
-        bzo.q(connectionSpec, "connectionSpec");
-        bzo.q(sSLSocket, "sslSocket");
+        throwIfVar1IsNull(connectionSpec, "connectionSpec");
+        throwIfVar1IsNull(sSLSocket, "sslSocket");
         connectionSpec.apply$okhttp(sSLSocket, z);
     }
 
     public static final Response cacheGet(Cache cache, Request request) {
-        bzo.q(cache, "cache");
-        bzo.q(request, "request");
+        throwIfVar1IsNull(cache, "cache");
+        throwIfVar1IsNull(request, "request");
         return cache.get$okhttp(request);
     }
 
     public static final String cookieToString(Cookie cookie, boolean z) {
-        bzo.q(cookie, "cookie");
+        throwIfVar1IsNull(cookie, "cookie");
         return cookie.toString$okhttp(z);
     }
 
     public static final Cookie parseCookie(long j, HttpUrl httpUrl, String str) {
-        bzo.q(httpUrl, "url");
-        bzo.q(str, "setCookie");
+        throwIfVar1IsNull(httpUrl, "url");
+        throwIfVar1IsNull(str, "setCookie");
         return Cookie.Companion.parse$okhttp(j, httpUrl, str);
     }
 
     public static final Headers.Builder addHeaderLenient(Headers.Builder builder, String str, String str2) {
-        bzo.q(builder, "builder");
-        bzo.q(str, "name");
-        bzo.q(str2, "value");
+        throwIfVar1IsNull(builder, "builder");
+        throwIfVar1IsNull(str, "name");
+        throwIfVar1IsNull(str2, "value");
         return builder.addLenient$okhttp(str, str2);
     }
 }

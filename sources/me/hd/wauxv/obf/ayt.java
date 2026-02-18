@@ -24,7 +24,7 @@ public final class ayt {
             return false;
         }
         ayt aytVar = (ayt) obj;
-        return bzo.f(this.a, aytVar.a) && bzo.f(this.b, aytVar.b);
+        return nullSafeIsEqual(this.a, aytVar.a) && nullSafeIsEqual(this.b, aytVar.b);
     }
 
     public final int hashCode() {
@@ -32,6 +32,9 @@ public final class ayt {
     }
 
     public final String toString() {
-        return "FavInfoProto(chatInfo=" /* cnb.z(-130777459194666L) */ + this.a + ", voiceInfo=" /* cnb.z(-130678674946858L) */ + this.b + ')';
+        return "FavInfoProto(chatInfo=" /* cnb.z(-130777459194666L) */ + this.a + ", voiceInfo=" /*
+                                                                                                  * cnb.z(-
+                                                                                                  * 130678674946858L)
+                                                                                                  */ + this.b + ')';
     }
 }

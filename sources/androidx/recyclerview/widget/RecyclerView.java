@@ -103,7 +103,7 @@ import net.bytebuddy.pool.TypePool;
 public class RecyclerView extends ViewGroup implements ckr {
     public static boolean a;
     public static boolean b;
-    public static final int[] c = {R.attr.nestedScrollingEnabled};
+    public static final int[] c = { R.attr.nestedScrollingEnabled };
     public static final float e = (float) (Math.log(0.78d) / Math.log(0.9d));
     public static final boolean f = true;
     public static final boolean g = true;
@@ -190,7 +190,7 @@ public class RecyclerView extends ViewGroup implements ckr {
 
     static {
         Class cls = Integer.TYPE;
-        h = new Class[]{Context.class, AttributeSet.class, cls, cls};
+        h = new Class[] { Context.class, AttributeSet.class, cls, cls };
         i = new bqv(2);
         j = new czu();
     }
@@ -389,10 +389,13 @@ public class RecyclerView extends ViewGroup implements ckr {
             if (str != null) {
                 throw new IllegalStateException(str);
             }
-            throw new IllegalStateException(yg.i(this, new StringBuilder("Cannot call this method while RecyclerView is computing a layout or scrolling")));
+            throw new IllegalStateException(yg.i(this, new StringBuilder(
+                    "Cannot call this method while RecyclerView is computing a layout or scrolling")));
         }
         if (this.aq > 0) {
-            Log.w("RecyclerView", "Cannot call this method in a scroll callback. Scroll callbacks mightbe run during a measure & layout pass where you cannot change theRecyclerView data. Any method call that might change the structureof the RecyclerView or the adapter contents should be postponed tothe next frame.", new IllegalStateException(yg.i(this, new StringBuilder(""))));
+            Log.w("RecyclerView",
+                    "Cannot call this method in a scroll callback. Scroll callbacks mightbe run during a measure & layout pass where you cannot change theRecyclerView data. Any method call that might change the structureof the RecyclerView or the adapter contents should be postponed tothe next frame.",
+                    new IllegalStateException(yg.i(this, new StringBuilder(""))));
         }
     }
 
@@ -502,7 +505,8 @@ public class RecyclerView extends ViewGroup implements ckr {
     public final void da(int i2, int i3) {
         int paddingRight = getPaddingRight() + getPaddingLeft();
         WeakHashMap weakHashMap = eqz.a;
-        setMeasuredDimension(czg.ed(i2, paddingRight, getMinimumWidth()), czg.ed(i3, getPaddingBottom() + getPaddingTop(), getMinimumHeight()));
+        setMeasuredDimension(czg.ed(i2, paddingRight, getMinimumWidth()),
+                czg.ed(i3, getPaddingBottom() + getPaddingTop(), getMinimumHeight()));
     }
 
     public final void db(View view) {
@@ -519,23 +523,33 @@ public class RecyclerView extends ViewGroup implements ckr {
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:166:0x034a  */
-    /* JADX WARN: Found duplicated region for block: B:185:0x0390  */
-    /* JADX WARN: Found duplicated region for block: B:187:0x0393  */
-    /* JADX WARN: Found duplicated region for block: B:193:0x03aa  */
-    /* JADX WARN: Found duplicated region for block: B:195:0x03b2  */
-    /* JADX WARN: Found duplicated region for block: B:197:0x03b6  */
-    /* JADX WARN: Found duplicated region for block: B:200:0x03be  */
-    /* JADX WARN: Found duplicated region for block: B:203:0x03c5  */
-    /* JADX WARN: Found duplicated region for block: B:206:0x03cf A[LOOP:4: B:199:0x03bc->B:206:0x03cf, LOOP_END] */
-    /* JADX WARN: Found duplicated region for block: B:209:0x03dc  */
-    /* JADX WARN: Found duplicated region for block: B:212:0x03e3  */
-    /* JADX WARN: Found duplicated region for block: B:215:0x03ed A[LOOP:5: B:208:0x03da->B:215:0x03ed, LOOP_END] */
-    /* JADX WARN: Found duplicated region for block: B:217:0x03f2  */
+    /* JADX WARN: Found duplicated region for block: B:166:0x034a */
+    /* JADX WARN: Found duplicated region for block: B:185:0x0390 */
+    /* JADX WARN: Found duplicated region for block: B:187:0x0393 */
+    /* JADX WARN: Found duplicated region for block: B:193:0x03aa */
+    /* JADX WARN: Found duplicated region for block: B:195:0x03b2 */
+    /* JADX WARN: Found duplicated region for block: B:197:0x03b6 */
+    /* JADX WARN: Found duplicated region for block: B:200:0x03be */
+    /* JADX WARN: Found duplicated region for block: B:203:0x03c5 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:206:0x03cf A[LOOP:4:
+     * B:199:0x03bc->B:206:0x03cf, LOOP_END]
+     */
+    /* JADX WARN: Found duplicated region for block: B:209:0x03dc */
+    /* JADX WARN: Found duplicated region for block: B:212:0x03e3 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:215:0x03ed A[LOOP:5:
+     * B:208:0x03da->B:215:0x03ed, LOOP_END]
+     */
+    /* JADX WARN: Found duplicated region for block: B:217:0x03f2 */
     /* JADX WARN: Found duplicated region for block: B:247:0x03d2 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:248:0x03d2 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:249:0x03cd A[SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:251:0x03f0 A[EDGE_INSN: B:251:0x03f0->B:216:0x03f0 BREAK  A[LOOP:5: B:208:0x03da->B:215:0x03ed], SYNTHETIC] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:251:0x03f0 A[EDGE_INSN:
+     * B:251:0x03f0->B:216:0x03f0 BREAK A[LOOP:5: B:208:0x03da->B:215:0x03ed],
+     * SYNTHETIC]
+     */
     /* JADX WARN: Found duplicated region for block: B:252:0x03eb A[SYNTHETIC] */
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Type inference failed for: r3v12 */
@@ -1071,7 +1085,8 @@ public class RecyclerView extends ViewGroup implements ckr {
             for (int i3 = 0; i3 < iAb; i3++) {
                 czx czxVarCs2 = cs(this.p.aa(i3));
                 if (a && czxVarCs2.f == -1 && !czxVarCs2.af()) {
-                    throw new IllegalStateException(yg.i(this, new StringBuilder("view holder cannot have position -1 unless it is removed")));
+                    throw new IllegalStateException(
+                            yg.i(this, new StringBuilder("view holder cannot have position -1 unless it is removed")));
                 }
                 if (!czxVarCs2.am() && czxVarCs2.g == -1) {
                     czxVarCs2.g = czxVarCs2.f;
@@ -1175,7 +1190,8 @@ public class RecyclerView extends ViewGroup implements ckr {
         EdgeEffect edgeEffect = new EdgeEffect(getContext());
         this.av = edgeEffect;
         if (this.r) {
-            edgeEffect.setSize((getMeasuredWidth() - getPaddingLeft()) - getPaddingRight(), (getMeasuredHeight() - getPaddingTop()) - getPaddingBottom());
+            edgeEffect.setSize((getMeasuredWidth() - getPaddingLeft()) - getPaddingRight(),
+                    (getMeasuredHeight() - getPaddingTop()) - getPaddingBottom());
         } else {
             edgeEffect.setSize(getMeasuredWidth(), getMeasuredHeight());
         }
@@ -1284,7 +1300,8 @@ public class RecyclerView extends ViewGroup implements ckr {
         EdgeEffect edgeEffect = new EdgeEffect(getContext());
         this.as = edgeEffect;
         if (this.r) {
-            edgeEffect.setSize((getMeasuredHeight() - getPaddingTop()) - getPaddingBottom(), (getMeasuredWidth() - getPaddingLeft()) - getPaddingRight());
+            edgeEffect.setSize((getMeasuredHeight() - getPaddingTop()) - getPaddingBottom(),
+                    (getMeasuredWidth() - getPaddingLeft()) - getPaddingRight());
         } else {
             edgeEffect.setSize(getMeasuredHeight(), getMeasuredWidth());
         }
@@ -1298,7 +1315,8 @@ public class RecyclerView extends ViewGroup implements ckr {
         EdgeEffect edgeEffect = new EdgeEffect(getContext());
         this.au = edgeEffect;
         if (this.r) {
-            edgeEffect.setSize((getMeasuredHeight() - getPaddingTop()) - getPaddingBottom(), (getMeasuredWidth() - getPaddingLeft()) - getPaddingRight());
+            edgeEffect.setSize((getMeasuredHeight() - getPaddingTop()) - getPaddingBottom(),
+                    (getMeasuredWidth() - getPaddingLeft()) - getPaddingRight());
         } else {
             edgeEffect.setSize(getMeasuredHeight(), getMeasuredWidth());
         }
@@ -1312,7 +1330,8 @@ public class RecyclerView extends ViewGroup implements ckr {
         EdgeEffect edgeEffect = new EdgeEffect(getContext());
         this.at = edgeEffect;
         if (this.r) {
-            edgeEffect.setSize((getMeasuredWidth() - getPaddingLeft()) - getPaddingRight(), (getMeasuredHeight() - getPaddingTop()) - getPaddingBottom());
+            edgeEffect.setSize((getMeasuredWidth() - getPaddingLeft()) - getPaddingRight(),
+                    (getMeasuredHeight() - getPaddingTop()) - getPaddingBottom());
         } else {
             edgeEffect.setSize(getMeasuredWidth(), getMeasuredHeight());
         }
@@ -1474,10 +1493,10 @@ public class RecyclerView extends ViewGroup implements ckr {
         return super.drawChild(canvas, view, j2);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:101:0x0151  */
-    /* JADX WARN: Found duplicated region for block: B:165:0x021d  */
-    /* JADX WARN: Found duplicated region for block: B:43:0x0087  */
-    /* JADX WARN: Found duplicated region for block: B:61:0x00c9  */
+    /* JADX WARN: Found duplicated region for block: B:101:0x0151 */
+    /* JADX WARN: Found duplicated region for block: B:165:0x021d */
+    /* JADX WARN: Found duplicated region for block: B:43:0x0087 */
+    /* JADX WARN: Found duplicated region for block: B:61:0x00c9 */
     /* JADX WARN: Multi-variable type inference failed */
     public final boolean ds(int i2, int i3, int i4, int i5) {
         int iMax;
@@ -1492,7 +1511,8 @@ public class RecyclerView extends ViewGroup implements ckr {
         int i7;
         czg czgVar = this.x;
         if (czgVar == null) {
-            Log.e("RecyclerView", "Cannot fling without a LayoutManager set. Call setLayoutManager with a non-null argument.");
+            Log.e("RecyclerView",
+                    "Cannot fling without a LayoutManager set. Call setLayoutManager with a non-null argument.");
             return false;
         }
         if (!this.ah) {
@@ -1564,7 +1584,10 @@ public class RecyclerView extends ViewGroup implements ckr {
                         if (czjVar != null) {
                             csj csjVar = (csj) czjVar;
                             czg layoutManager = csjVar.a.getLayoutManager();
-                            if (layoutManager == 0 || csjVar.a.getAdapter() == null || ((Math.abs(i6) <= (minFlingVelocity = csjVar.a.getMinFlingVelocity()) && Math.abs(i8) <= minFlingVelocity) || !((z4 = layoutManager instanceof czs)))) {
+                            if (layoutManager == 0 || csjVar.a.getAdapter() == null
+                                    || ((Math.abs(i6) <= (minFlingVelocity = csjVar.a.getMinFlingVelocity())
+                                            && Math.abs(i8) <= minFlingVelocity)
+                                            || !((z4 = layoutManager instanceof czs)))) {
                                 z = z5;
                                 z2 = false;
                                 z3 = true;
@@ -1578,7 +1601,8 @@ public class RecyclerView extends ViewGroup implements ckr {
                                 } else {
                                     int iEt = layoutManager.et();
                                     if (iEt != 0) {
-                                        atb atbVarK = layoutManager.bv() ? csjVar.k(layoutManager) : layoutManager.bu() ? csjVar.j(layoutManager) : null;
+                                        atb atbVarK = layoutManager.bv() ? csjVar.k(layoutManager)
+                                                : layoutManager.bu() ? csjVar.j(layoutManager) : null;
                                         if (atbVarK == null) {
                                             z = z5;
                                             z2 = false;
@@ -1621,7 +1645,15 @@ public class RecyclerView extends ViewGroup implements ckr {
                                                     view = view2;
                                                 }
                                                 if (view != null) {
-                                                    iEl = ((z4 && (pointFBs = ((czs) layoutManager).bs(layoutManager.et() + (-1))) != null && ((pointFBs.x > 0.0f ? 1 : (pointFBs.x == 0.0f ? 0 : -1)) < 0 || (pointFBs.y > 0.0f ? 1 : (pointFBs.y == 0.0f ? 0 : -1)) < 0)) == objArr ? -1 : 1) + czg.el(view);
+                                                    iEl = ((z4
+                                                            && (pointFBs = ((czs) layoutManager)
+                                                                    .bs(layoutManager.et() + (-1))) != null
+                                                            && ((pointFBs.x > 0.0f ? 1
+                                                                    : (pointFBs.x == 0.0f ? 0 : -1)) < 0
+                                                                    || (pointFBs.y > 0.0f ? 1
+                                                                            : (pointFBs.y == 0.0f ? 0
+                                                                                    : -1)) < 0)) == objArr ? -1 : 1)
+                                                            + czg.el(view);
                                                     if (iEl < 0 || iEl >= iEt) {
                                                     }
                                                 }
@@ -1786,13 +1818,15 @@ public class RecyclerView extends ViewGroup implements ckr {
                 czt cztVar = this.bo;
                 if (i6 >= i4) {
                     if (b) {
-                        Log.d("RecyclerView", "offsetPositionRecordsForRemove attached child " + i5 + " holder " + czxVarCs + " now at position " + (czxVarCs.f - i3));
+                        Log.d("RecyclerView", "offsetPositionRecordsForRemove attached child " + i5 + " holder "
+                                + czxVarCs + " now at position " + (czxVarCs.f - i3));
                     }
                     czxVarCs.aj(-i3, z);
                     cztVar.f = true;
                 } else if (i6 >= i2) {
                     if (b) {
-                        Log.d("RecyclerView", "offsetPositionRecordsForRemove attached child " + i5 + " holder " + czxVarCs + " now REMOVED");
+                        Log.d("RecyclerView", "offsetPositionRecordsForRemove attached child " + i5 + " holder "
+                                + czxVarCs + " now REMOVED");
                     }
                     czxVarCs.w(8);
                     czxVarCs.aj(-i3, z);
@@ -1809,7 +1843,8 @@ public class RecyclerView extends ViewGroup implements ckr {
                 int i7 = czxVar.f;
                 if (i7 >= i4) {
                     if (b) {
-                        Log.d("RecyclerView", "offsetPositionRecordsForRemove cached " + size + " holder " + czxVar + " now at position " + (czxVar.f - i3));
+                        Log.d("RecyclerView", "offsetPositionRecordsForRemove cached " + size + " holder " + czxVar
+                                + " now at position " + (czxVar.f - i3));
                     }
                     czxVar.aj(-i3, z);
                 } else if (i7 >= i2) {
@@ -1832,7 +1867,8 @@ public class RecyclerView extends ViewGroup implements ckr {
         this.ap = i3;
         if (i3 < 1) {
             if (a && i3 < 0) {
-                throw new IllegalStateException(yg.i(this, new StringBuilder("layout or scroll counter cannot go below zero.Some calls are not matching")));
+                throw new IllegalStateException(yg.i(this, new StringBuilder(
+                        "layout or scroll counter cannot go below zero.Some calls are not matching")));
             }
             this.ap = 0;
             if (z) {
@@ -2086,14 +2122,18 @@ public class RecyclerView extends ViewGroup implements ckr {
         this.x._g(this, view, this.t, !this.ae, view2 == null);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:30:0x00cb  */
-    /* JADX WARN: Found duplicated region for block: B:32:0x00e3  */
-    /* JADX WARN: Found duplicated region for block: B:34:0x00e7  */
-    /* JADX WARN: Found duplicated region for block: B:35:0x00fe A[DONT_INVERT, PHI: r7
-      0x00fe: PHI (r7v9 boolean) = (r7v7 boolean), (r7v10 boolean) binds: [B:33:0x00e5, B:31:0x00e0] A[DONT_GENERATE, DONT_INLINE]] */
-    /* JADX WARN: Found duplicated region for block: B:36:0x0100  */
-    /* JADX WARN: Found duplicated region for block: B:40:0x0108  */
-    /* JADX WARN: Found duplicated region for block: B:43:0x0111  */
+    /* JADX WARN: Found duplicated region for block: B:30:0x00cb */
+    /* JADX WARN: Found duplicated region for block: B:32:0x00e3 */
+    /* JADX WARN: Found duplicated region for block: B:34:0x00e7 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:35:0x00fe A[DONT_INVERT, PHI:
+     * r7
+     * 0x00fe: PHI (r7v9 boolean) = (r7v7 boolean), (r7v10 boolean) binds:
+     * [B:33:0x00e5, B:31:0x00e0] A[DONT_GENERATE, DONT_INLINE]]
+     */
+    /* JADX WARN: Found duplicated region for block: B:36:0x0100 */
+    /* JADX WARN: Found duplicated region for block: B:40:0x0108 */
+    /* JADX WARN: Found duplicated region for block: B:43:0x0111 */
     public final boolean eo(int i2, int i3, MotionEvent motionEvent, int i4) {
         int i5;
         int i6;
@@ -2267,7 +2307,8 @@ public class RecyclerView extends ViewGroup implements ckr {
         ey();
         czg czgVar = this.x;
         if (czgVar == null) {
-            Log.e("RecyclerView", "Cannot scroll to position a LayoutManager set. Call setLayoutManager with a non-null argument.");
+            Log.e("RecyclerView",
+                    "Cannot scroll to position a LayoutManager set. Call setLayoutManager with a non-null argument.");
         } else {
             czgVar.ch(i2);
             awakenScrollBars();
@@ -2289,7 +2330,8 @@ public class RecyclerView extends ViewGroup implements ckr {
     public final void es(int i2, int i3, boolean z) {
         czg czgVar = this.x;
         if (czgVar == null) {
-            Log.e("RecyclerView", "Cannot smooth scroll without a LayoutManager set. Call setLayoutManager with a non-null argument.");
+            Log.e("RecyclerView",
+                    "Cannot smooth scroll without a LayoutManager set. Call setLayoutManager with a non-null argument.");
             return;
         }
         if (this.ah) {
@@ -2320,7 +2362,8 @@ public class RecyclerView extends ViewGroup implements ckr {
         }
         czg czgVar = this.x;
         if (czgVar == null) {
-            Log.e("RecyclerView", "Cannot smooth scroll without a LayoutManager set. Call setLayoutManager with a non-null argument.");
+            Log.e("RecyclerView",
+                    "Cannot smooth scroll without a LayoutManager set. Call setLayoutManager with a non-null argument.");
         } else {
             czgVar.cj(this, this.bo, i2);
         }
@@ -2348,7 +2391,8 @@ public class RecyclerView extends ViewGroup implements ckr {
     public final void ew(boolean z) {
         if (this.af < 1) {
             if (a) {
-                throw new IllegalStateException(yg.i(this, new StringBuilder("stopInterceptRequestLayout was called more times than startInterceptRequestLayout.")));
+                throw new IllegalStateException(yg.i(this, new StringBuilder(
+                        "stopInterceptRequestLayout was called more times than startInterceptRequestLayout.")));
             }
             this.af = 1;
         }
@@ -2383,10 +2427,10 @@ public class RecyclerView extends ViewGroup implements ckr {
         bvlVar.z();
     }
 
-    /* JADX WARN: Found duplicated region for block: B:118:0x0167  */
+    /* JADX WARN: Found duplicated region for block: B:118:0x0167 */
     /* JADX WARN: Found duplicated region for block: B:137:0x0197 A[RETURN] */
-    /* JADX WARN: Found duplicated region for block: B:138:0x0198  */
-    /* JADX WARN: Found duplicated region for block: B:24:0x004c  */
+    /* JADX WARN: Found duplicated region for block: B:138:0x0198 */
+    /* JADX WARN: Found duplicated region for block: B:24:0x004c */
     @Override // android.view.ViewGroup, android.view.ViewParent
     public final View focusSearch(View view, int i2) {
         View viewW;
@@ -2404,7 +2448,8 @@ public class RecyclerView extends ViewGroup implements ckr {
                 z = focusFinder.findNextFocus(this, view, i2 == 2 ? 130 : 33) == null;
             }
             if (!z && this.x.bu()) {
-                z = focusFinder.findNextFocus(this, view, (this.x.dp.getLayoutDirection() == 1) ^ (i2 == 2) ? 66 : 17) == null;
+                z = focusFinder.findNextFocus(this, view,
+                        (this.x.dp.getLayoutDirection() == 1) ^ (i2 == 2) ? 66 : 17) == null;
             }
             if (z) {
                 cz();
@@ -2618,7 +2663,7 @@ public class RecyclerView extends ViewGroup implements ckr {
         return getScrollingChildHelper().d;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:21:0x0058  */
+    /* JADX WARN: Found duplicated region for block: B:21:0x0058 */
     @Override // android.view.ViewGroup, android.view.View
     public final void onAttachedToWindow() {
         float refreshRate;
@@ -2685,7 +2730,7 @@ public class RecyclerView extends ViewGroup implements ckr {
         czo czoVar = this.m;
         ArrayList arrayList = czoVar.c;
         for (int i3 = 0; i3 < arrayList.size(); i3++) {
-            bzo.k(((czx) arrayList.get(i3)).d);
+            KotlinHelpers.k(((czx) arrayList.get(i3)).d);
         }
         czoVar.m(czoVar.h.w, false);
         while (i2 < getChildCount()) {
@@ -2759,11 +2804,13 @@ public class RecyclerView extends ViewGroup implements ckr {
             int i4 = (int) (axisValue * this.bi);
             if (z) {
                 OverScroller overScroller = this.bl.c;
-                es((overScroller.getFinalX() - overScroller.getCurrX()) + i4, (overScroller.getFinalY() - overScroller.getCurrY()) + i3, true);
+                es((overScroller.getFinalX() - overScroller.getCurrX()) + i4,
+                        (overScroller.getFinalY() - overScroller.getCurrY()) + i3, true);
             } else {
                 czg czgVar = this.x;
                 if (czgVar == null) {
-                    Log.e("RecyclerView", "Cannot scroll without a LayoutManager set. Call setLayoutManager with a non-null argument.");
+                    Log.e("RecyclerView",
+                            "Cannot scroll without a LayoutManager set. Call setLayoutManager with a non-null argument.");
                 } else if (!this.ah) {
                     int[] iArr = this.ca;
                     iArr[0] = 0;
@@ -2869,7 +2916,8 @@ public class RecyclerView extends ViewGroup implements ckr {
                 } else if (actionMasked == 2) {
                     int iFindPointerIndex = motionEvent.findPointerIndex(this.ay);
                     if (iFindPointerIndex < 0) {
-                        Log.e("RecyclerView", "Error processing scroll; pointer index for id " + this.ay + " not found. Did any MotionEvents get skipped?");
+                        Log.e("RecyclerView", "Error processing scroll; pointer index for id " + this.ay
+                                + " not found. Did any MotionEvents get skipped?");
                         return false;
                     }
                     int x2 = (int) (motionEvent.getX(iFindPointerIndex) + 0.5f);
@@ -2955,7 +3003,8 @@ public class RecyclerView extends ViewGroup implements ckr {
             de();
             this.x.fi(i2, i3);
             if (this.x.ci()) {
-                this.x.fh(View.MeasureSpec.makeMeasureSpec(getMeasuredWidth(), 1073741824), View.MeasureSpec.makeMeasureSpec(getMeasuredHeight(), 1073741824));
+                this.x.fh(View.MeasureSpec.makeMeasureSpec(getMeasuredWidth(), 1073741824),
+                        View.MeasureSpec.makeMeasureSpec(getMeasuredHeight(), 1073741824));
                 cztVar.i = true;
                 de();
                 this.x.fi(i2, i3);
@@ -3046,8 +3095,11 @@ public class RecyclerView extends ViewGroup implements ckr {
         this.as = null;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:62:0x0111 A[PHI: r1
-      0x0111: PHI (r1v45 int) = (r1v31 int), (r1v49 int) binds: [B:56:0x00fa, B:60:0x010d] A[DONT_GENERATE, DONT_INLINE]] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:62:0x0111 A[PHI: r1
+     * 0x0111: PHI (r1v45 int) = (r1v31 int), (r1v49 int) binds: [B:56:0x00fa,
+     * B:60:0x010d] A[DONT_GENERATE, DONT_INLINE]]
+     */
     @Override // android.view.View
     public boolean onTouchEvent(MotionEvent motionEvent) {
         boolean zDp;
@@ -3110,7 +3162,8 @@ public class RecyclerView extends ViewGroup implements ckr {
                     } else if (actionMasked == 2) {
                         int iFindPointerIndex = motionEvent.findPointerIndex(this.ay);
                         if (iFindPointerIndex < 0) {
-                            Log.e("RecyclerView", "Error processing scroll; pointer index for id " + this.ay + " not found. Did any MotionEvents get skipped?");
+                            Log.e("RecyclerView", "Error processing scroll; pointer index for id " + this.ay
+                                    + " not found. Did any MotionEvents get skipped?");
                             return false;
                         }
                         int x = (int) (motionEvent.getX(iFindPointerIndex) + 0.5f);
@@ -3204,7 +3257,8 @@ public class RecyclerView extends ViewGroup implements ckr {
             if (czxVarCs.ah()) {
                 czxVarCs.m &= -257;
             } else if (!czxVarCs.am()) {
-                StringBuilder sb = new StringBuilder("Called removeDetachedView with a view which is not flagged as tmp detached.");
+                StringBuilder sb = new StringBuilder(
+                        "Called removeDetachedView with a view which is not flagged as tmp detached.");
                 sb.append(czxVarCs);
                 throw new IllegalArgumentException(yg.i(this, sb));
             }
@@ -3255,7 +3309,8 @@ public class RecyclerView extends ViewGroup implements ckr {
     public final void scrollBy(int i2, int i3) {
         czg czgVar = this.x;
         if (czgVar == null) {
-            Log.e("RecyclerView", "Cannot scroll without a LayoutManager set. Call setLayoutManager with a non-null argument.");
+            Log.e("RecyclerView",
+                    "Cannot scroll without a LayoutManager set. Call setLayoutManager with a non-null argument.");
             return;
         }
         if (this.ah) {
@@ -3276,7 +3331,8 @@ public class RecyclerView extends ViewGroup implements ckr {
 
     @Override // android.view.View
     public final void scrollTo(int i2, int i3) {
-        Log.w("RecyclerView", "RecyclerView does not support scrolling to an absolute position. Use scrollToPosition instead");
+        Log.w("RecyclerView",
+                "RecyclerView does not support scrolling to an absolute position. Use scrollToPosition instead");
     }
 
     @Override // android.view.View, android.view.accessibility.AccessibilityEventSource
@@ -3342,7 +3398,7 @@ public class RecyclerView extends ViewGroup implements ckr {
                 czm czmVar = (czm) sparseArray.valueAt(i2);
                 Iterator it = czmVar.a.iterator();
                 while (it.hasNext()) {
-                    bzo.k(((czx) it.next()).d);
+                    KotlinHelpers.k(((czx) it.next()).d);
                 }
                 czmVar.a.clear();
             }
@@ -3489,7 +3545,8 @@ public class RecyclerView extends ViewGroup implements ckr {
     @Deprecated
     public void setLayoutTransition(LayoutTransition layoutTransition) {
         if (layoutTransition != null) {
-            throw new IllegalArgumentException("Providing a LayoutTransition into RecyclerView is not supported. Please use setItemAnimator() instead for animating changes to the items in this RecyclerView");
+            throw new IllegalArgumentException(
+                    "Providing a LayoutTransition into RecyclerView is not supported. Please use setItemAnimator() instead for animating changes to the items in this RecyclerView");
         }
         super.setLayoutTransition(null);
     }
@@ -3736,7 +3793,8 @@ public class RecyclerView extends ViewGroup implements ckr {
             StateListDrawable stateListDrawable2 = (StateListDrawable) typedArrayObtainStyledAttributes.getDrawable(4);
             Drawable drawable2 = typedArrayObtainStyledAttributes.getDrawable(5);
             if (stateListDrawable == null || drawable == null || stateListDrawable2 == null || drawable2 == null) {
-                throw new IllegalArgumentException(yg.i(this, new StringBuilder("Trying to set fast scroller without both required drawables.")));
+                throw new IllegalArgumentException(
+                        yg.i(this, new StringBuilder("Trying to set fast scroller without both required drawables.")));
             }
             Resources resources = getContext().getResources();
             c2 = 3;
@@ -3744,7 +3802,10 @@ public class RecyclerView extends ViewGroup implements ckr {
             c3 = 1;
             typedArray = typedArrayObtainStyledAttributes;
             i3 = 4;
-            new ayj(this, stateListDrawable, drawable, stateListDrawable2, drawable2, resources.getDimensionPixelSize(me.hd.wauxv.R.dimen.fastscroll_default_thickness), resources.getDimensionPixelSize(me.hd.wauxv.R.dimen.fastscroll_minimum_range), resources.getDimensionPixelOffset(me.hd.wauxv.R.dimen.fastscroll_margin));
+            new ayj(this, stateListDrawable, drawable, stateListDrawable2, drawable2,
+                    resources.getDimensionPixelSize(me.hd.wauxv.R.dimen.fastscroll_default_thickness),
+                    resources.getDimensionPixelSize(me.hd.wauxv.R.dimen.fastscroll_minimum_range),
+                    resources.getDimensionPixelOffset(me.hd.wauxv.R.dimen.fastscroll_margin));
         } else {
             c2 = 3;
             c3 = 1;
@@ -3760,11 +3821,15 @@ public class RecyclerView extends ViewGroup implements ckr {
                 if (strTrim.charAt(0) == '.') {
                     strTrim = context.getPackageName() + strTrim;
                 } else if (!strTrim.contains(".")) {
-                    strTrim = RecyclerView.class.getPackage().getName() + TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH + strTrim;
+                    strTrim = RecyclerView.class.getPackage().getName()
+                            + TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH + strTrim;
                 }
                 String str = strTrim;
                 try {
-                    Class<? extends U> clsAsSubclass = Class.forName(str, false, isInEditMode() ? getClass().getClassLoader() : context.getClassLoader()).asSubclass(czg.class);
+                    Class<? extends U> clsAsSubclass = Class
+                            .forName(str, false,
+                                    isInEditMode() ? getClass().getClassLoader() : context.getClassLoader())
+                            .asSubclass(czg.class);
                     try {
                         Constructor constructor2 = clsAsSubclass.getConstructor(h);
                         Object[] objArr2 = new Object[i3];
@@ -3779,21 +3844,31 @@ public class RecyclerView extends ViewGroup implements ckr {
                             constructor = clsAsSubclass.getConstructor(null);
                         } catch (NoSuchMethodException e3) {
                             e3.initCause(e2);
-                            throw new IllegalStateException(attributeSet.getPositionDescription() + ": Error creating LayoutManager " + str, e3);
+                            throw new IllegalStateException(
+                                    attributeSet.getPositionDescription() + ": Error creating LayoutManager " + str,
+                                    e3);
                         }
                     }
                     constructor.setAccessible(c3);
                     setLayoutManager((czg) constructor.newInstance(objArr));
                 } catch (ClassCastException e4) {
-                    throw new IllegalStateException(attributeSet.getPositionDescription() + ": Class is not a LayoutManager " + str, e4);
+                    throw new IllegalStateException(
+                            attributeSet.getPositionDescription() + ": Class is not a LayoutManager " + str, e4);
                 } catch (ClassNotFoundException e5) {
-                    throw new IllegalStateException(attributeSet.getPositionDescription() + ": Unable to find LayoutManager " + str, e5);
+                    throw new IllegalStateException(
+                            attributeSet.getPositionDescription() + ": Unable to find LayoutManager " + str, e5);
                 } catch (IllegalAccessException e6) {
-                    throw new IllegalStateException(attributeSet.getPositionDescription() + ": Cannot access non-public constructor " + str, e6);
+                    throw new IllegalStateException(
+                            attributeSet.getPositionDescription() + ": Cannot access non-public constructor " + str,
+                            e6);
                 } catch (InstantiationException e7) {
-                    throw new IllegalStateException(attributeSet.getPositionDescription() + ": Could not instantiate the LayoutManager: " + str, e7);
+                    throw new IllegalStateException(
+                            attributeSet.getPositionDescription() + ": Could not instantiate the LayoutManager: " + str,
+                            e7);
                 } catch (InvocationTargetException e8) {
-                    throw new IllegalStateException(attributeSet.getPositionDescription() + ": Could not instantiate the LayoutManager: " + str, e8);
+                    throw new IllegalStateException(
+                            attributeSet.getPositionDescription() + ": Could not instantiate the LayoutManager: " + str,
+                            e8);
                 }
             }
         }

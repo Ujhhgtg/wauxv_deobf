@@ -39,7 +39,7 @@ public abstract class cnf {
     public static final auj ae = new auj("UNDEFINED", 1);
     public static final auj af = new auj("REUSABLE_CLAIMED", 1);
     public static final boolean[] ag = new boolean[3];
-    public static io ah;
+    public static DefaultConfig ah;
     public static long ai;
     public static long aj;
     public static Method ak;
@@ -74,14 +74,14 @@ public abstract class cnf {
             return;
         }
         Iterator it = ckv.g.iterator();
-        bzo.p(it, "NetConfig.runningCalls.iterator()");
+        throwIfVar1IsNull(it, "NetConfig.runningCalls.iterator()");
         while (it.hasNext()) {
             Call call = (Call) ((WeakReference) it.next()).get();
             if (call == null) {
                 it.remove();
             } else {
                 Request request = call.request();
-                bzo.q(request, "<this>");
+                throwIfVar1IsNull(request, "<this>");
                 cni cniVar = (cni) request.tag(cni.class);
                 Object obj = cniVar != null ? cniVar.a : null;
                 if (ahfVar.equals(obj != null ? obj : null)) {
@@ -185,16 +185,20 @@ public abstract class cnf {
         if (!z) {
             return Math.abs(czg.el(view) - czg.el(view2)) + 1;
         }
-        return Math.min(atbVar.o(), atbVar.e(view2) - atbVar.h(view));
+        return Math.min(atbVar.o(), atbVar.e(view2) - atbVar.locateDex(view));
     }
 
     public static int av(czt cztVar, atb atbVar, View view, View view2, czg czgVar, boolean z, boolean z2) {
         if (czgVar.es() == 0 || cztVar.p() == 0 || view == null || view2 == null) {
             return 0;
         }
-        int iMax = z2 ? Math.max(0, (cztVar.p() - Math.max(czg.el(view), czg.el(view2))) - 1) : Math.max(0, Math.min(czg.el(view), czg.el(view2)));
+        int iMax = z2 ? Math.max(0, (cztVar.p() - Math.max(czg.el(view), czg.el(view2))) - 1)
+                : Math.max(0, Math.min(czg.el(view), czg.el(view2)));
         if (z) {
-            return Math.round((iMax * (Math.abs(atbVar.e(view2) - atbVar.h(view)) / (Math.abs(czg.el(view) - czg.el(view2)) + 1))) + (atbVar.n() - atbVar.h(view)));
+            return Math.round(
+                    (iMax * (Math.abs(atbVar.e(view2) - atbVar.locateDex(view))
+                            / (Math.abs(czg.el(view) - czg.el(view2)) + 1)))
+                            + (atbVar.n() - atbVar.locateDex(view)));
         }
         return iMax;
     }
@@ -206,7 +210,8 @@ public abstract class cnf {
         if (!z) {
             return cztVar.p();
         }
-        return (int) (((atbVar.e(view2) - atbVar.h(view)) / (Math.abs(czg.el(view) - czg.el(view2)) + 1)) * cztVar.p());
+        return (int) (((atbVar.e(view2) - atbVar.locateDex(view)) / (Math.abs(czg.el(view) - czg.el(view2)) + 1))
+                * cztVar.p());
     }
 
     public static final void ax(int i, int i2) {
@@ -217,14 +222,14 @@ public abstract class cnf {
     }
 
     public static final void ay(Throwable th) {
-        bzo.q(th, "message");
+        throwIfVar1IsNull(th, "message");
         if (ckv.e) {
             StringWriter stringWriter = new StringWriter();
             PrintWriter printWriter = new PrintWriter(stringWriter);
             th.printStackTrace(printWriter);
             printWriter.flush();
             String string = stringWriter.toString();
-            bzo.p(string, "toString(...)");
+            throwIfVar1IsNull(string, "toString(...)");
             Log.d(ckv.f, string);
         }
     }
@@ -267,14 +272,14 @@ public abstract class cnf {
     }
 
     public static final zc bb(Annotation annotation) {
-        bzo.q(annotation, "<this>");
+        throwIfVar1IsNull(annotation, "<this>");
         Class<? extends Annotation> clsAnnotationType = annotation.annotationType();
-        bzo.p(clsAnnotationType, "annotationType(...)");
+        throwIfVar1IsNull(clsAnnotationType, "annotationType(...)");
         return dal.b(clsAnnotationType);
     }
 
-    public static io bc() {
-        io ioVar = ah;
+    public static DefaultConfig bc() {
+        DefaultConfig ioVar = ah;
         if (ioVar != null) {
             return ioVar;
         }
@@ -282,16 +287,22 @@ public abstract class cnf {
     }
 
     public static final Class bd(bsv bsvVar) {
-        bzo.q(bsvVar, "<this>");
+        throwIfVar1IsNull(bsvVar, "<this>");
         Class clsA = ((yq) bsvVar).a();
-        bzo.o(clsA, "null cannot be cast to non-null type java.lang.Class<T of kotlin.jvm.JvmClassMappingKt.<get-java>>");
+        throwIfVar1IsNull(clsA,
+                "null cannot be cast to non-null type java.lang.Class<T of kotlin.jvm.JvmClassMappingKt.<get-java>>");
         return clsA;
     }
 
-    /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
-    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
+    /*
+     * JADX WARN: Can't fix incorrect switch cases order, some code will duplicate
+     */
+    /*
+     * JADX WARN: Failed to restore switch over string. Please report as a
+     * decompilation issue
+     */
     public static final Class be(bsv bsvVar) {
-        bzo.q(bsvVar, "<this>");
+        throwIfVar1IsNull(bsvVar, "<this>");
         Class clsA = ((yq) bsvVar).a();
         if (clsA.isPrimitive()) {
             String name = clsA.getName();
@@ -346,7 +357,10 @@ public abstract class cnf {
         return clsA;
     }
 
-    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
+    /*
+     * JADX WARN: Failed to restore switch over string. Please report as a
+     * decompilation issue
+     */
     public static final Class bf(zc zcVar) {
         Class clsA = zcVar.a();
         if (clsA.isPrimitive()) {
@@ -474,7 +488,7 @@ public abstract class cnf {
         bmuVarBi.v(true);
         cde cdeVarT = bmuVarBi.t();
         cdeVarT.ab = "addAssetPath";
-        cdeVarT.z(Arrays.copyOf(new Object[]{dal.b(String.class)}, 1));
+        cdeVarT.z(Arrays.copyOf(new Object[] { dal.b(String.class) }, 1));
         cdk cdkVar = (cdk) aaz.g(cdeVarT.aj());
         if (cdkVar != null) {
             objX = cdkVar.e(exm.i);
@@ -520,12 +534,12 @@ public abstract class cnf {
         ahh ahhVar = afxVar.m;
         Throwable thB = dcy.b(obj);
         Object abrVar = thB == null ? obj : new abr(thB, false);
-        bzo.n(ahhVar);
+        throwIfVar1IsNull(ahhVar);
         try {
             if (ahjVar.j(ahhVar)) {
                 aorVar.f = abrVar;
                 aorVar.z = 1;
-                bzo.n(ahhVar);
+                throwIfVar1IsNull(ahhVar);
                 bl(ahjVar, ahhVar, aorVar);
                 return;
             }
@@ -543,13 +557,13 @@ public abstract class cnf {
             }
             awvVarB.ab(true);
             try {
-                bzo.n(ahhVar);
+                throwIfVar1IsNull(ahhVar);
                 brf brfVar = (brf) ahhVar._w(arj.i);
                 if (brfVar == null || brfVar.m()) {
                     Object obj2 = aorVar.g;
-                    bzo.n(ahhVar);
+                    throwIfVar1IsNull(ahhVar);
                     Object objAl = bhv.al(ahhVar, obj2);
-                    enk enkVarAu = objAl != bhv.q ? bzo.au(afxVar, ahhVar, objAl) : null;
+                    enk enkVarAu = objAl != bhv.q ? KotlinHelpers.au(afxVar, ahhVar, objAl) : null;
                     try {
                         afxVar._bn(obj);
                         if (enkVarAu == null || enkVarAu.as()) {
@@ -590,7 +604,8 @@ public abstract class cnf {
         if (editorInfo.extras == null) {
             editorInfo.extras = new Bundle();
         }
-        editorInfo.extras.putCharSequence("androidx.core.view.inputmethod.EditorInfoCompat.CONTENT_SURROUNDING_TEXT", charSequence != null ? new SpannableStringBuilder(charSequence) : null);
+        editorInfo.extras.putCharSequence("androidx.core.view.inputmethod.EditorInfoCompat.CONTENT_SURROUNDING_TEXT",
+                charSequence != null ? new SpannableStringBuilder(charSequence) : null);
         editorInfo.extras.putInt("androidx.core.view.inputmethod.EditorInfoCompat.CONTENT_SELECTION_HEAD", i);
         editorInfo.extras.putInt("androidx.core.view.inputmethod.EditorInfoCompat.CONTENT_SELECTION_END", i2);
     }
@@ -603,7 +618,17 @@ public abstract class cnf {
     }
 
     public static final String bo(byte b) {
-        return b == 1 ? "quotation mark '\"'" : b == 2 ? "string escape sequence '\\'" : b == 4 ? "comma ','" : b == 5 ? "colon ':'" : b == 6 ? "start of the object '{'" : b == 7 ? "end of the object '}'" : b == 8 ? "start of the array '['" : b == 9 ? "end of the array ']'" : b == 10 ? "end of the input" : b == 127 ? "invalid token" : "valid token";
+        return b == 1 ? "quotation mark '\"'"
+                : b == 2 ? "string escape sequence '\\'"
+                        : b == 4 ? "comma ','"
+                                : b == 5 ? "colon ':'"
+                                        : b == 6 ? "start of the object '{'"
+                                                : b == 7 ? "end of the object '}'"
+                                                        : b == 8 ? "start of the array '['"
+                                                                : b == 9 ? "end of the array ']'"
+                                                                        : b == 10 ? "end of the input"
+                                                                                : b == 127 ? "invalid token"
+                                                                                        : "valid token";
     }
 
     public void bp(View view, int i) {

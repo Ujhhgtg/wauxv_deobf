@@ -19,7 +19,7 @@ public abstract class te extends FrameLayout {
     public boolean l;
     public final Rect m;
     public final Rect n;
-    public final io o;
+    public final DefaultConfig o;
 
     public te(Context context, AttributeSet attributeSet) {
         ColorStateList colorStateListValueOf;
@@ -27,7 +27,7 @@ public abstract class te extends FrameLayout {
         Rect rect = new Rect();
         this.m = rect;
         this.n = new Rect();
-        io ioVar = new io(this, 11);
+        DefaultConfig ioVar = new DefaultConfig(this, 11);
         this.o = ioVar;
         TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, cxw.a, me.hd.wauxv.R.attr.materialCardViewStyle, me.hd.wauxv.R.style.CardView);
         if (typedArrayObtainStyledAttributes.hasValue(2)) {
@@ -148,7 +148,7 @@ public abstract class te extends FrameLayout {
     public void setPreventCornerOverlap(boolean z) {
         if (z != this.l) {
             this.l = z;
-            io ioVar = this.o;
+            DefaultConfig ioVar = this.o;
             j.ac(ioVar, ((ddi) ((Drawable) ioVar.c)).e);
         }
     }
@@ -166,7 +166,7 @@ public abstract class te extends FrameLayout {
     public void setUseCompatPadding(boolean z) {
         if (this.k != z) {
             this.k = z;
-            io ioVar = this.o;
+            DefaultConfig ioVar = this.o;
             j.ac(ioVar, ((ddi) ((Drawable) ioVar.c)).e);
         }
     }

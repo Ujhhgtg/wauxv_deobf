@@ -26,7 +26,8 @@ public final class eaw {
             return false;
         }
         eaw eawVar = (eaw) obj;
-        return bzo.f(this.a, eawVar.a) && bzo.f(this.b, eawVar.b) && bzo.f(this.c, eawVar.c);
+        return nullSafeIsEqual(this.a, eawVar.a) && nullSafeIsEqual(this.b, eawVar.b)
+                && nullSafeIsEqual(this.c, eawVar.c);
     }
 
     public final int hashCode() {

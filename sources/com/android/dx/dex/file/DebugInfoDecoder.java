@@ -34,7 +34,10 @@ public class DebugInfoDecoder {
     private int line = 1;
     private int address = 0;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class LocalEntry {
         public int address;
         public boolean isStart;
@@ -53,11 +56,16 @@ public class DebugInfoDecoder {
         }
 
         public String toString() {
-            return String.format("[%x %s v%d %04x %04x %04x]", Integer.valueOf(this.address), this.isStart ? "start" : "end", Integer.valueOf(this.reg), Integer.valueOf(this.nameIndex), Integer.valueOf(this.typeIndex), Integer.valueOf(this.signatureIndex));
+            return String.format("[%x %s v%d %04x %04x %04x]", Integer.valueOf(this.address),
+                    this.isStart ? "start" : "end", Integer.valueOf(this.reg), Integer.valueOf(this.nameIndex),
+                    Integer.valueOf(this.typeIndex), Integer.valueOf(this.signatureIndex));
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class PositionEntry {
         public int address;
         public int line;
@@ -109,7 +117,8 @@ public class DebugInfoDecoder {
         for (int i = 0; i < iAc; i++) {
             Type type = parameterTypes.getType(i);
             int stringIndex = readStringIndex(ekVar);
-            LocalEntry localEntry2 = stringIndex == -1 ? new LocalEntry(0, true, category, -1, 0, 0) : new LocalEntry(0, true, category, stringIndex, 0, 0);
+            LocalEntry localEntry2 = stringIndex == -1 ? new LocalEntry(0, true, category, -1, 0, 0)
+                    : new LocalEntry(0, true, category, stringIndex, 0, 0);
             this.locals.add(localEntry2);
             this.lastEntryForReg[category] = localEntry2;
             category += type.getCategory();
@@ -127,13 +136,15 @@ public class DebugInfoDecoder {
                     break;
                 case 3:
                     int iAc2 = ajn.ac(ekVar);
-                    LocalEntry localEntry3 = new LocalEntry(this.address, true, iAc2, readStringIndex(ekVar), readStringIndex(ekVar), 0);
+                    LocalEntry localEntry3 = new LocalEntry(this.address, true, iAc2, readStringIndex(ekVar),
+                            readStringIndex(ekVar), 0);
                     this.locals.add(localEntry3);
                     this.lastEntryForReg[iAc2] = localEntry3;
                     break;
                 case 4:
                     int iAc3 = ajn.ac(ekVar);
-                    LocalEntry localEntry4 = new LocalEntry(this.address, true, iAc3, readStringIndex(ekVar), readStringIndex(ekVar), readStringIndex(ekVar));
+                    LocalEntry localEntry4 = new LocalEntry(this.address, true, iAc3, readStringIndex(ekVar),
+                            readStringIndex(ekVar), readStringIndex(ekVar));
                     this.locals.add(localEntry4);
                     this.lastEntryForReg[iAc3] = localEntry4;
                     break;
@@ -144,11 +155,12 @@ public class DebugInfoDecoder {
                         if (!localEntry5.isStart) {
                             throw new RuntimeException("nonsensical END_LOCAL on dead register v" + iAc4);
                         }
-                        LocalEntry localEntry6 = new LocalEntry(this.address, false, iAc4, localEntry5.nameIndex, localEntry5.typeIndex, localEntry5.signatureIndex);
+                        LocalEntry localEntry6 = new LocalEntry(this.address, false, iAc4, localEntry5.nameIndex,
+                                localEntry5.typeIndex, localEntry5.signatureIndex);
                         this.locals.add(localEntry6);
                         this.lastEntryForReg[iAc4] = localEntry6;
                     } catch (NullPointerException unused) {
-                        throw new RuntimeException(bjs.i(iAc4, "Encountered END_LOCAL on new v"));
+                        throw new RuntimeException(concatVar2Var1(iAc4, "Encountered END_LOCAL on new v"));
                     }
                     break;
                 case 6:
@@ -158,11 +170,12 @@ public class DebugInfoDecoder {
                         if (localEntry7.isStart) {
                             throw new RuntimeException("nonsensical RESTART_LOCAL on live register v" + iAc5);
                         }
-                        LocalEntry localEntry8 = new LocalEntry(this.address, true, iAc5, localEntry7.nameIndex, localEntry7.typeIndex, 0);
+                        LocalEntry localEntry8 = new LocalEntry(this.address, true, iAc5, localEntry7.nameIndex,
+                                localEntry7.typeIndex, 0);
                         this.locals.add(localEntry8);
                         this.lastEntryForReg[iAc5] = localEntry8;
                     } catch (NullPointerException unused2) {
-                        throw new RuntimeException(bjs.i(iAc5, "Encountered RESTART_LOCAL on new v"));
+                        throw new RuntimeException(concatVar2Var1(iAc5, "Encountered RESTART_LOCAL on new v"));
                     }
                     break;
                 case 7:
@@ -171,7 +184,7 @@ public class DebugInfoDecoder {
                     break;
                 default:
                     if (i2 < 10) {
-                        throw new RuntimeException(bjs.i(i2, "Invalid extended opcode encountered "));
+                        throw new RuntimeException(concatVar2Var1(i2, "Invalid extended opcode encountered "));
                     }
                     int i3 = ((i2 - 10) / 15) + this.address;
                     this.address = i3;
@@ -192,12 +205,14 @@ public class DebugInfoDecoder {
         return ajn.ac(sgVar) - 1;
     }
 
-    public static void validateEncode(byte[] bArr, DexFile dexFile, CstMethodRef cstMethodRef, DalvCode dalvCode, boolean z) {
+    public static void validateEncode(byte[] bArr, DexFile dexFile, CstMethodRef cstMethodRef, DalvCode dalvCode,
+            boolean z) {
         PositionList positions = dalvCode.getPositions();
         LocalList locals = dalvCode.getLocals();
         DalvInsnList insns = dalvCode.getInsns();
         try {
-            validateEncode0(bArr, insns.codeSize(), insns.getRegistersSize(), z, cstMethodRef, dexFile, positions, locals);
+            validateEncode0(bArr, insns.codeSize(), insns.getRegistersSize(), z, cstMethodRef, dexFile, positions,
+                    locals);
         } catch (RuntimeException e) {
             System.err.println("instructions:");
             insns.debugPrint((OutputStream) System.err, "  ", true);
@@ -207,22 +222,26 @@ public class DebugInfoDecoder {
         }
     }
 
-    private static void validateEncode0(byte[] bArr, int i, int i2, boolean z, CstMethodRef cstMethodRef, DexFile dexFile, PositionList positionList, LocalList localList) {
+    private static void validateEncode0(byte[] bArr, int i, int i2, boolean z, CstMethodRef cstMethodRef,
+            DexFile dexFile, PositionList positionList, LocalList localList) {
         LocalEntry localEntry;
         DebugInfoDecoder debugInfoDecoder = new DebugInfoDecoder(bArr, i, i2, z, cstMethodRef, dexFile);
         debugInfoDecoder.decode();
         List<PositionEntry> positionList2 = debugInfoDecoder.getPositionList();
         if (positionList2.size() != positionList.size()) {
-            throw new RuntimeException("Decoded positions table not same size was " + positionList2.size() + " expected " + positionList.size());
+            throw new RuntimeException("Decoded positions table not same size was " + positionList2.size()
+                    + " expected " + positionList.size());
         }
         for (PositionEntry positionEntry : positionList2) {
             int size = positionList.size() - 1;
             while (true) {
                 if (size < 0) {
-                    throw new RuntimeException("Could not match position entry: " + positionEntry.address + ", " + positionEntry.line);
+                    throw new RuntimeException(
+                            "Could not match position entry: " + positionEntry.address + ", " + positionEntry.line);
                 }
                 PositionList.Entry entry = positionList.get(size);
-                if (positionEntry.line != entry.getPosition().getLine() || positionEntry.address != entry.getAddress()) {
+                if (positionEntry.line != entry.getPosition().getLine()
+                        || positionEntry.address != entry.getAddress()) {
                     size--;
                 }
             }

@@ -30,15 +30,15 @@ import okhttp3.internal.cache.DiskLruCache;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class epy implements bgf {
+public final /* synthetic */ class epy implements IHasInvokeMethod {
     public final /* synthetic */ int a;
 
     public /* synthetic */ epy(int i) {
         this.a = i;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:167:0x06be  */
-    /* JADX WARN: Found duplicated region for block: B:173:0x06ca  */
+    /* JADX WARN: Found duplicated region for block: B:167:0x06be */
+    /* JADX WARN: Found duplicated region for block: B:173:0x06ca */
     /* JADX WARN: Multi-variable type inference failed */
     @Override // me.hd.wauxv.obf.bgf
     public final Object invoke(Object obj) throws IllegalAccessException, IOException, InvocationTargetException {
@@ -66,14 +66,22 @@ public final /* synthetic */ class epy implements bgf {
             case 0:
                 bah bahVar = (bah) obj;
                 cdj cdjVar = new cdj();
-                cdjVar.t((cnb.ab(ewk.l) || cnb.ac(ewh.m)) ? "MicroMsg.C2CVideoPathFeatureService" /* cnb.z(-374581277752106L) */ : "MicroMsg.VideoInfoStorage" /* cnb.z(-374392299191082L) */, ".mp4" /* cnb.z(-374847565724458L) */, "success restore file, from " /* cnb.z(-374860450626346L) */);
+                cdjVar.t((cnb.ab(ewk.l) || cnb.ac(ewh.m)) ? "MicroMsg.C2CVideoPathFeatureService"
+                        /* cnb.z(-374581277752106L) */ : "MicroMsg.VideoInfoStorage" /* cnb.z(-374392299191082L) */,
+                        ".mp4" /* cnb.z(-374847565724458L) */, "success restore file, from " /*
+                                                                                              * cnb.z(-374860450626346L)
+                                                                                              */);
                 bahVar.getClass();
                 bahVar.d = cdjVar;
                 return ensVar;
             case 1:
                 bah bahVar2 = (bah) obj;
                 cdj cdjVar2 = new cdj();
-                cdjVar2.t((cnb.ab(ewk.l) || cnb.ac(ewh.m)) ? "MicroMsg.C2CVideoPathFeatureService" /* cnb.z(-374705831803690L) */ : "MicroMsg.VideoInfoStorage" /* cnb.z(-374035816905514L) */, ".jpg" /* cnb.z(-373872608148266L) */, "success restore file, from " /* cnb.z(-373902672919338L) */);
+                cdjVar2.t((cnb.ab(ewk.l) || cnb.ac(ewh.m)) ? "MicroMsg.C2CVideoPathFeatureService"
+                        /* cnb.z(-374705831803690L) */ : "MicroMsg.VideoInfoStorage" /* cnb.z(-374035816905514L) */,
+                        ".jpg" /* cnb.z(-373872608148266L) */, "success restore file, from " /*
+                                                                                              * cnb.z(-373902672919338L)
+                                                                                              */);
                 bahVar2.getClass();
                 bahVar2.d = cdjVar2;
                 return ensVar;
@@ -118,7 +126,9 @@ public final /* synthetic */ class epy implements bgf {
                 View viewK = dkz.k(view3, R.layout.module_dialog_voice_length, null, false);
                 Slider slider = (Slider) cnd.aq(viewK, R.id.moduleDialogSliderVoiceLength);
                 if (slider == null) {
-                    throw new NullPointerException("Missing required view with ID: " /* cnb.z(-660016214309674L) */.concat(viewK.getResources().getResourceName(R.id.moduleDialogSliderVoiceLength)));
+                    throw new NullPointerException(
+                            "Missing required view with ID: " /* cnb.z(-660016214309674L) */.concat(
+                                    viewK.getResources().getResourceName(R.id.moduleDialogSliderVoiceLength)));
                 }
                 LinearLayout linearLayout3 = (LinearLayout) viewK;
                 ceq ceqVar = new ceq(linearLayout3, slider, 1);
@@ -138,24 +148,24 @@ public final /* synthetic */ class epy implements bgf {
                 ((amm) obj).c = new epy(i2);
                 return ensVar;
             case 6:
-                bmm bmmVar = (bmm) obj;
-                if (bmmVar.d().length == 1) {
-                    objX = bmmVar.d()[c];
+                HookParamWrapper hookParam = (HookParamWrapper) obj;
+                if (hookParam.getArgs().length == 1) {
+                    objX = hookParam.getArgs()[c];
                     if (objX == null) {
                         objX = null;
                     }
                     if (objX instanceof dcx) {
                     }
-                    bzo.n(obj);
+                    throwIfVar1IsNull(obj);
                     int i4 = bte.a;
                     azg azgVarR = dqc.bi(obj).r();
                     azgVarR.ab = "l" /* cnb.z(-500058747304746L) */;
                     azgVarR.a = dal.b(cls5);
                     ((azk) aaz.e(azgVarR.c())).f(Integer.valueOf(etq.a.k() * 1000));
-                } else if (bmmVar.d().length == 2 && (bmmVar.d()[0] instanceof String)) {
+                } else if (hookParam.getArgs().length == 2 && (hookParam.getArgs()[0] instanceof String)) {
                     c = 1;
                     try {
-                        objX = bmmVar.d()[c];
+                        objX = hookParam.getArgs()[c];
                         if (objX == null) {
                             objX = null;
                         }
@@ -163,7 +173,7 @@ public final /* synthetic */ class epy implements bgf {
                         objX = bhu.x(th);
                     }
                     Object obj2 = objX instanceof dcx ? null : objX;
-                    bzo.n(obj2);
+                    throwIfVar1IsNull(obj2);
                     int i42 = bte.a;
                     azg azgVarR2 = dqc.bi(obj2).r();
                     azgVarR2.ab = "l" /* cnb.z(-500058747304746L) */;
@@ -174,7 +184,11 @@ public final /* synthetic */ class epy implements bgf {
             case 7:
                 bah bahVar3 = (bah) obj;
                 cdj cdjVar3 = new cdj();
-                cdjVar3.t("MicroMsg.VoiceStorage" /* cnb.z(-500067337239338L) */, "update failed, no values set" /* cnb.z(-499405912275754L) */);
+                cdjVar3.t("MicroMsg.VoiceStorage" /* cnb.z(-500067337239338L) */, "update failed, no values set" /*
+                                                                                                                  * cnb.
+                                                                                                                  * z(-
+                                                                                                                  * 499405912275754L)
+                                                                                                                  */);
                 bahVar3.getClass();
                 bahVar3.d = cdjVar3;
                 return ensVar;
@@ -182,17 +196,17 @@ public final /* synthetic */ class epy implements bgf {
                 List list = (List) obj;
                 Object obj3 = list.get(0);
                 Class<String> clsBf = cnf.bf(dal.b(cls2));
-                if (bzo.f(obj3, clsBf != null ? clsBf : String.class)) {
+                if (nullSafeIsEqual(obj3, clsBf != null ? clsBf : String.class)) {
                     Object obj4 = list.get(1);
                     cls3 = Integer.class;
                     Class<Integer> clsBf2 = cnf.bf(dal.b(cls3));
                     if (clsBf2 == null) {
                         clsBf2 = cls3;
                     }
-                    if (bzo.f(obj4, clsBf2)) {
+                    if (nullSafeIsEqual(obj4, clsBf2)) {
                         Object obj5 = list.get(2);
                         Class<Integer> clsBf3 = cnf.bf(dal.b(cls3));
-                        if (bzo.f(obj5, clsBf3 != null ? clsBf3 : Integer.class)) {
+                        if (nullSafeIsEqual(obj5, clsBf3 != null ? clsBf3 : Integer.class)) {
                             z = true;
                         }
                     }
@@ -214,7 +228,8 @@ public final /* synthetic */ class epy implements bgf {
             case 12:
                 bag bagVar = (bag) obj;
                 zb zbVar = new zb();
-                zbVar.k("MicroMsg.VoiceLogic" /* cnb.z(-105939663321898L) */, "startRecord insert voicestg success" /* cnb.z(-105888123714346L) */);
+                zbVar.k("MicroMsg.VoiceLogic" /* cnb.z(-105939663321898L) */,
+                        "startRecord insert voicestg success" /* cnb.z(-105888123714346L) */);
                 bagVar.getClass();
                 bagVar.b = zbVar;
                 return ensVar;
@@ -237,10 +252,10 @@ public final /* synthetic */ class epy implements bgf {
                 bzyVar4.i().show();
                 return ensVar;
             case 14:
-                bmm bmmVar2 = (bmm) obj;
-                bmmVar2.getClass();
+                HookParamWrapper hookParam2 = (HookParamWrapper) obj;
+                hookParam2.getClass();
                 try {
-                    objX2 = bmmVar2.d()[0];
+                    objX2 = hookParam2.getArgs()[0];
                     if (objX2 == null) {
                         objX2 = null;
                     }
@@ -250,7 +265,7 @@ public final /* synthetic */ class epy implements bgf {
                 if (objX2 instanceof dcx) {
                     objX2 = null;
                 }
-                bzo.n(objX2);
+                throwIfVar1IsNull(objX2);
                 Context baseContext = ((Application) objX2).getBaseContext();
                 eui euiVar = eui.a;
                 euiVar.getClass();
@@ -265,31 +280,33 @@ public final /* synthetic */ class epy implements bgf {
                 bmo.e.i(btcVarArr[2], baseContext.getPackageName());
                 bmo.f.i(btcVarArr[3], baseContext.getClassLoader());
                 bmo.g.i(btcVarArr[4], baseContext.getApplicationInfo().sourceDir);
-                bmo.h.i(btcVarArr[5], baseContext.getPackageManager().getApplicationLabel(baseContext.getApplicationInfo()).toString());
+                bmo.h.i(btcVarArr[5], baseContext.getPackageManager()
+                        .getApplicationLabel(baseContext.getApplicationInfo()).toString());
                 int i5 = bte.a;
                 bmu bmuVarS = yg.s(-28930899704618L);
                 azg azgVarR3 = bmuVarS.r();
                 azgVarR3.ab = "VERSION_NAME" /* cnb.z(-30442728192810L) */;
                 Object objE = ((azk) aaz.e(azgVarR3.c())).e();
-                bzo.n(objE);
+                throwIfVar1IsNull(objE);
                 bc bcVar2 = bmo.i;
                 bcVar2.i(btcVarArr[6], (String) objE);
                 azg azgVarR4 = bmuVarS.r();
                 azgVarR4.ab = "VERSION_CODE" /* cnb.z(-30352533879594L) */;
                 Object objE2 = ((azk) aaz.e(azgVarR4.c())).e();
-                bzo.n(objE2);
+                throwIfVar1IsNull(objE2);
                 bmo.j.i(btcVarArr[7], Integer.valueOf(((Number) objE2).intValue()));
                 azg azgVarR5 = bmuVarS.r();
                 azgVarR5.ab = "CLIENT_VERSION_ARM64" /* cnb.z(-30279519435562L) */;
                 Object objE3 = ((azk) aaz.e(azgVarR5.c())).e();
-                bzo.n(objE3);
+                throwIfVar1IsNull(objE3);
                 bc bcVar3 = bmo.k;
                 bcVar3.i(btcVarArr[8], (String) objE3);
                 azg azgVarR6 = bmuVarS.r();
                 azgVarR6.ab = "BUILD_TAG" /* cnb.z(-30773440674602L) */;
                 Object objE4 = ((azk) aaz.e(azgVarR6.c())).e();
-                bzo.n(objE4);
-                bmo.l.i(btcVarArr[9], Boolean.valueOf(dnj.ab((CharSequence) objE4, "_GP_" /* cnb.z(-30747670870826L) */, false)));
+                throwIfVar1IsNull(objE4);
+                bmo.l.i(btcVarArr[9],
+                        Boolean.valueOf(dnj.ab((CharSequence) objE4, "_GP_" /* cnb.z(-30747670870826L) */, false)));
                 bht bhtVar = anj.a;
                 ng.af(baseContext);
                 anj.g = 3;
@@ -304,7 +321,7 @@ public final /* synthetic */ class epy implements bgf {
                 builder.writeTimeout(30L, timeUnit);
                 cqi.a(builder);
                 OkHttpClient okHttpClientBuild = builder.build();
-                bzo.q(okHttpClientBuild, "value");
+                throwIfVar1IsNull(okHttpClientBuild, "value");
                 List<Interceptor> listInterceptors = okHttpClientBuild.interceptors();
                 cld cldVar = cld.a;
                 if (!listInterceptors.contains(cldVar)) {
@@ -314,15 +331,15 @@ public final /* synthetic */ class epy implements bgf {
                 Cache cache = okHttpClientBuild.cache();
                 if (cache != null) {
                     DiskLruCache diskLruCache = OkHttpUtils.diskLruCache(cache);
-                    bzo.p(diskLruCache, "diskLruCache(it)");
+                    throwIfVar1IsNull(diskLruCache, "diskLruCache(it)");
                     bcmVar = new bcm(diskLruCache);
                 } else {
                     bcmVar = null;
                 }
                 ckv.d = bcmVar;
-                cnf.ah = new io(baseContext, "WAuxiliary_config_default" /* cnb.z(-5665061862186L) */);
-                emc.w = new io(baseContext, "WAuxiliary_config_dex_desc" /* cnb.z(-5922759899946L) */);
-                bhs.h = new io(baseContext, "WAuxiliary_config_plugin" /* cnb.z(-29274497088298L) */);
+                cnf.ah = new DefaultConfig(baseContext, "WAuxiliary_config_default" /* cnb.z(-5665061862186L) */);
+                emc.w = new DefaultConfig(baseContext, "WAuxiliary_config_dex_desc" /* cnb.z(-5922759899946L) */);
+                bhs.h = new DefaultConfig(baseContext, "WAuxiliary_config_plugin" /* cnb.z(-29274497088298L) */);
                 csc cscVar = euiVar.aa;
                 if (cscVar != null) {
                     strI = cscVar.b;
@@ -333,19 +350,23 @@ public final /* synthetic */ class epy implements bgf {
                 if (euiVar.ac().equals(dnj.ba(strI).toString())) {
                     UMConfigure.preInit(baseContext, "68393b1dbc47b67d83776862" /* cnb.z(-72438918413098L) */, bmo.o());
                     ArrayList arrayList = ewq.a;
-                    ewq.d(14, "running on: Android" /* cnb.z(-81728932674346L) */ + Build.VERSION.RELEASE + SignatureVisitor.SUPER + bmo.s());
+                    ewq.d(14, "running on: Android" /* cnb.z(-81728932674346L) */ + Build.VERSION.RELEASE
+                            + SignatureVisitor.SUPER + bmo.s());
                     ewq.d(14, "loading module: WAuxiliary1.2.6.r1238.198c77c" /* cnb.z(-83257941031722L) */);
                     StringBuilder sb = new StringBuilder();
                     sb.append("compile timestamp: " /* cnb.z(-83111912143658L) */);
                     sb.append(exl.c);
                     ewq.d(14, sb.toString());
                     System.loadLibrary("wauxv-core" /* cnb.z(-83541408873258L) */);
-                    LoaderNative.a.loaderInit((String) bcVar.h(btcVarArr[0]), baseContext.getDataDir().getAbsolutePath(), bmo.r(), (String) bcVar2.h(btcVarArr[6]), bmo.q(), (String) bcVar3.h(btcVarArr[8]));
+                    LoaderNative.a.loaderInit((String) bcVar.h(btcVarArr[0]),
+                            baseContext.getDataDir().getAbsolutePath(), bmo.r(), (String) bcVar2.h(btcVarArr[6]),
+                            bmo.q(), (String) bcVar3.h(btcVarArr[8]));
                     dov dovVar = ctf.a;
                     cnh.g = ctf.c("Cache" /* cnb.z(-47098611366698L) */);
                     String str5 = cnh.g;
                     if (str5 == null) {
-                        throw new IllegalArgumentException("AudioUtil must be init" /* cnb.z(-375221227879210L) */.toString());
+                        throw new IllegalArgumentException(
+                                "AudioUtil must be init" /* cnb.z(-375221227879210L) */.toString());
                     }
                     File file = new File(str5);
                     if (!file.exists() && !file.mkdirs()) {
@@ -368,15 +389,17 @@ public final /* synthetic */ class epy implements bgf {
                 }
                 return ensVar;
             case 15:
-                bmm bmmVar3 = (bmm) obj;
-                Object obj6 = ((bmh) bmmVar3.b.b).b.thisObject;
-                if (bzo.f(obj6 != null ? obj6.getClass() : null, ajn.ag("com.tencent.mm.plugin.setting.ui.setting_new.MainSettingsUI" /* cnb.z(-58080842742570L) */))) {
-                    Object objE5 = bmmVar3.e();
+                HookParamWrapper hookParam3 = (HookParamWrapper) obj;
+                Object obj6 = ((bmh) hookParam3.b.b).b.thisObject;
+                if (nullSafeIsEqual(obj6 != null ? obj6.getClass() : null, ajn.ag(
+                        "com.tencent.mm.plugin.setting.ui.setting_new.MainSettingsUI" /* cnb.z(-58080842742570L) */))) {
+                    Object objE5 = hookParam3.getThisObject();
                     Activity activity = (Activity) (objE5 instanceof Activity ? objE5 : null);
                     if (activity == null) {
                         cls4 = Activity.class;
                         Class<Activity> clsBf4 = cnf.bf(dal.b(cls4));
-                        throw new IllegalStateException("HookParam instance cannot cast to ".concat((clsBf4 != null ? clsBf4 : Activity.class).getName()).toString());
+                        throw new IllegalStateException("HookParam instance cannot cast to "
+                                .concat((clsBf4 != null ? clsBf4 : Activity.class).getName()).toString());
                     }
                     euj eujVar = euj.a;
                     String strZ = "WA" /* cnb.z(-57307748629290L) */;
@@ -385,7 +408,9 @@ public final /* synthetic */ class epy implements bgf {
                     int i6 = bte.a;
                     cde cdeVarT2 = dqc.bi(activity).t();
                     cdeVarT2.ab = "addTextOptionMenu" /* cnb.z(-57956288690986L) */;
-                    cdeVarT2.z(Arrays.copyOf(new Object[]{dal.b(cls5), dal.b(cls2), dal.b(MenuItem.OnMenuItemClickListener.class)}, 3));
+                    cdeVarT2.z(Arrays.copyOf(
+                            new Object[] { dal.b(cls5), dal.b(cls2), dal.b(MenuItem.OnMenuItemClickListener.class) },
+                            3));
                     cdeVarT2.ah();
                     ((cdk) aaz.e(cdeVarT2.aj())).e(Integer.valueOf(R.id.Wauxv_Entry_Item), strZ, arsVar);
                 }
@@ -394,35 +419,37 @@ public final /* synthetic */ class epy implements bgf {
                 emn.ax((Context) obj);
                 return ensVar;
             case 17:
-                Object objE6 = ((bmm) obj).e();
+                Object objE6 = ((HookParamWrapper) obj).getThisObject();
                 Context context = (Context) (objE6 instanceof Context ? objE6 : null);
                 if (context == null) {
                     Class<Context> clsBf5 = cnf.bf(dal.b(cls));
-                    throw new IllegalStateException("HookParam instance cannot cast to ".concat((clsBf5 != null ? clsBf5 : Context.class).getName()).toString());
+                    throw new IllegalStateException("HookParam instance cannot cast to "
+                            .concat((clsBf5 != null ? clsBf5 : Context.class).getName()).toString());
                 }
                 int i7 = bte.a;
                 azg azgVarR7 = dqc.bi(context).r();
                 azgVarR7.ab = "adapter" /* cnb.z(-58918361365290L) */;
                 Object objE7 = ((azk) yg.e(azgVarR7)).e();
-                bzo.n(objE7);
+                throwIfVar1IsNull(objE7);
                 BaseAdapter baseAdapter = (BaseAdapter) objE7;
                 for (euk eukVar : eul.b) {
                     cnb.m(baseAdapter, cnb.y(context, eukVar.a, eukVar.b), 0);
                 }
                 return ensVar;
             default:
-                bmm bmmVar4 = (bmm) obj;
-                Object objE8 = bmmVar4.e();
+                HookParamWrapper hookParam4 = (HookParamWrapper) obj;
+                Object objE8 = hookParam4.getThisObject();
                 if (!(objE8 instanceof Context)) {
                     objE8 = null;
                 }
                 Context context2 = (Context) objE8;
                 if (context2 == null) {
                     Class<Context> clsBf6 = cnf.bf(dal.b(cls));
-                    throw new IllegalStateException("HookParam instance cannot cast to ".concat((clsBf6 != null ? clsBf6 : Context.class).getName()).toString());
+                    throw new IllegalStateException("HookParam instance cannot cast to "
+                            .concat((clsBf6 != null ? clsBf6 : Context.class).getName()).toString());
                 }
                 try {
-                    objX3 = bmmVar4.d()[1];
+                    objX3 = hookParam4.getArgs()[1];
                     if (objX3 == null) {
                         objX3 = null;
                     }
@@ -430,7 +457,7 @@ public final /* synthetic */ class epy implements bgf {
                     objX3 = bhu.x(th3);
                 }
                 Object obj7 = objX3 instanceof dcx ? null : objX3;
-                bzo.n(obj7);
+                throwIfVar1IsNull(obj7);
                 int i8 = bte.a;
                 azg azgVarR8 = dqc.bi(obj7).r();
                 azgVarR8.a = dal.b(cls2);
@@ -442,7 +469,7 @@ public final /* synthetic */ class epy implements bgf {
                         for (euk eukVar2 : eul.b) {
                             if (str6.equals(eukVar2.a)) {
                                 eukVar2.c.invoke(context2);
-                                bmmVar4.g();
+                                hookParam4.setResultTrue();
                             }
                         }
                     }

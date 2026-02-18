@@ -14,7 +14,8 @@ public final class edb {
     public final Long h;
     public final String i;
 
-    public /* synthetic */ edb(int i, Integer num, Float f, Integer num2, Integer num3, Float f2, Integer num4, Integer num5, Long l, String str) {
+    public /* synthetic */ edb(int i, Integer num, Float f, Integer num2, Integer num3, Float f2, Integer num4,
+            Integer num5, Long l, String str) {
         if (511 != (i & 511)) {
             bht.ah(i, 511, ecz.b.getDescriptor());
             throw null;
@@ -38,7 +39,11 @@ public final class edb {
             return false;
         }
         edb edbVar = (edb) obj;
-        return bzo.f(this.a, edbVar.a) && bzo.f(this.b, edbVar.b) && bzo.f(this.c, edbVar.c) && bzo.f(this.d, edbVar.d) && bzo.f(this.e, edbVar.e) && bzo.f(this.f, edbVar.f) && bzo.f(this.g, edbVar.g) && bzo.f(this.h, edbVar.h) && bzo.f(this.i, edbVar.i);
+        return nullSafeIsEqual(this.a, edbVar.a) && nullSafeIsEqual(this.b, edbVar.b)
+                && nullSafeIsEqual(this.c, edbVar.c) && nullSafeIsEqual(this.d, edbVar.d)
+                && nullSafeIsEqual(this.e, edbVar.e) && nullSafeIsEqual(this.f, edbVar.f)
+                && nullSafeIsEqual(this.g, edbVar.g)
+                && nullSafeIsEqual(this.h, edbVar.h) && nullSafeIsEqual(this.i, edbVar.i);
     }
 
     public final int hashCode() {
@@ -73,6 +78,6 @@ public final class edb {
         bjs.w(sb, this.f, -247454540757802L);
         bjs.w(sb, this.g, -247871152585514L);
         dkz.ad(sb, this.h, -247759483435818L);
-        return bjs.q(sb, this.i, ')');
+        return concat(sb, this.i, ')');
     }
 }

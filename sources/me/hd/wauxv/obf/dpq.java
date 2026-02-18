@@ -34,7 +34,7 @@ public final class dpq {
                     break;
                 }
                 dpl dplVarAw = tabLayout.aw();
-                CharSequence charSequence = (CharSequence) ((csm) ((List) this.c.c).get(i)).b;
+                CharSequence charSequence = (CharSequence) ((Pair) ((List) this.c.c).get(i)).second;
                 if (TextUtils.isEmpty(null) && !TextUtils.isEmpty(charSequence)) {
                     dplVarAw.f.setContentDescription(charSequence);
                 }

@@ -6,7 +6,7 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class eef {
     public static final eee Companion = new eee();
-    public static final btt[] a = {null, ewz.am(btx.a, new dtr(26)), null, null, null};
+    public static final btt[] a = { null, ewz.am(btx.a, new dtr(26)), null, null, null };
     public final String b;
     public final List c;
     public final String d;
@@ -33,7 +33,9 @@ public final class eef {
             return false;
         }
         eef eefVar = (eef) obj;
-        return bzo.f(this.b, eefVar.b) && bzo.f(this.c, eefVar.c) && bzo.f(this.d, eefVar.d) && bzo.f(this.e, eefVar.e) && bzo.f(this.f, eefVar.f);
+        return nullSafeIsEqual(this.b, eefVar.b) && nullSafeIsEqual(this.c, eefVar.c)
+                && nullSafeIsEqual(this.d, eefVar.d) && nullSafeIsEqual(this.e, eefVar.e)
+                && nullSafeIsEqual(this.f, eefVar.f);
     }
 
     public final int hashCode() {
@@ -56,6 +58,6 @@ public final class eef {
         yg.v(sb, this.c, -277824254507818L);
         yg.u(sb, this.d, -277721175292714L);
         bjs.w(sb, this.e, -277673930652458L);
-        return bjs.q(sb, this.f, ')');
+        return concat(sb, this.f, ')');
     }
 }

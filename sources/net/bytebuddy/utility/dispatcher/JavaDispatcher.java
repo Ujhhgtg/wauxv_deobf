@@ -54,21 +54,30 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
     private final boolean generate;
     private final Class<T> proxy;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
-    @Target({ElementType.METHOD})
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
+    @Target({ ElementType.METHOD })
     @Documented
     @Retention(RetentionPolicy.RUNTIME)
     public @interface Container {
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
-    @Target({ElementType.TYPE, ElementType.METHOD})
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
+    @Target({ ElementType.TYPE, ElementType.METHOD })
     @Documented
     @Retention(RetentionPolicy.RUNTIME)
     public @interface Defaults {
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @HashCodeAndEqualsPlugin.Enhance
     public static class DirectInvoker implements Invoker {
         private DirectInvoker() {
@@ -96,10 +105,16 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface Dispatcher {
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class ForConstructor implements Dispatcher {
             private final Constructor<?> constructor;
@@ -125,7 +140,9 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                     }
                     size += type.getSize();
                 }
-                methodVisitor.visitMethodInsn(183, Type.getInternalName(this.constructor.getDeclaringClass()), MethodDescription.CONSTRUCTOR_INTERNAL_NAME, Type.getConstructorDescriptor(this.constructor), false);
+                methodVisitor.visitMethodInsn(183, Type.getInternalName(this.constructor.getDeclaringClass()),
+                        MethodDescription.CONSTRUCTOR_INTERNAL_NAME, Type.getConstructorDescriptor(this.constructor),
+                        false);
                 methodVisitor.visitInsn(176);
                 return size + 1;
             }
@@ -134,7 +151,8 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                 if (this == obj) {
                     return true;
                 }
-                return obj != null && getClass() == obj.getClass() && this.constructor.equals(((ForConstructor) obj).constructor);
+                return obj != null && getClass() == obj.getClass()
+                        && this.constructor.equals(((ForConstructor) obj).constructor);
             }
 
             public int hashCode() {
@@ -147,7 +165,10 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class ForContainerCreation implements Dispatcher {
             private final Class<?> target;
@@ -168,7 +189,8 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                 if (this == obj) {
                     return true;
                 }
-                return obj != null && getClass() == obj.getClass() && this.target.equals(((ForContainerCreation) obj).target);
+                return obj != null && getClass() == obj.getClass()
+                        && this.target.equals(((ForContainerCreation) obj).target);
             }
 
             public int hashCode() {
@@ -181,7 +203,10 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public enum ForDefaultValue implements Dispatcher {
             VOID(null, 0, 177, 0),
             BOOLEAN(Boolean.FALSE, 3, 172, 1),
@@ -202,7 +227,10 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
             @MaybeNull
             private final Object value;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class OfNonPrimitiveArray implements Dispatcher {
                 private final Class<?> componentType;
@@ -231,7 +259,8 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.componentType.equals(((OfNonPrimitiveArray) obj).componentType);
+                    return obj != null && getClass() == obj.getClass()
+                            && this.componentType.equals(((OfNonPrimitiveArray) obj).componentType);
                 }
 
                 public int hashCode() {
@@ -244,7 +273,10 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum OfPrimitiveArray implements Dispatcher {
                 BOOLEAN(new boolean[0], 4),
                 BYTE(new byte[0], 8),
@@ -317,7 +349,20 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                     return FLOAT;
                 }
                 Class<?> cls9 = Double.TYPE;
-                return cls == cls9 ? DOUBLE : cls.isArray() ? cls.getComponentType() == cls2 ? OfPrimitiveArray.BOOLEAN : cls.getComponentType() == cls3 ? OfPrimitiveArray.BYTE : cls.getComponentType() == cls4 ? OfPrimitiveArray.SHORT : cls.getComponentType() == cls5 ? OfPrimitiveArray.CHARACTER : cls.getComponentType() == cls6 ? OfPrimitiveArray.INTEGER : cls.getComponentType() == cls7 ? OfPrimitiveArray.LONG : cls.getComponentType() == cls8 ? OfPrimitiveArray.FLOAT : cls.getComponentType() == cls9 ? OfPrimitiveArray.DOUBLE : OfNonPrimitiveArray.of(cls.getComponentType()) : REFERENCE;
+                return cls == cls9 ? DOUBLE
+                        : cls.isArray() ? cls.getComponentType() == cls2 ? OfPrimitiveArray.BOOLEAN
+                                : cls.getComponentType() == cls3 ? OfPrimitiveArray.BYTE
+                                        : cls.getComponentType() == cls4 ? OfPrimitiveArray.SHORT
+                                                : cls.getComponentType() == cls5 ? OfPrimitiveArray.CHARACTER
+                                                        : cls.getComponentType() == cls6 ? OfPrimitiveArray.INTEGER
+                                                                : cls.getComponentType() == cls7 ? OfPrimitiveArray.LONG
+                                                                        : cls.getComponentType() == cls8
+                                                                                ? OfPrimitiveArray.FLOAT
+                                                                                : cls.getComponentType() == cls9
+                                                                                        ? OfPrimitiveArray.DOUBLE
+                                                                                        : OfNonPrimitiveArray.of(
+                                                                                                cls.getComponentType())
+                                : REFERENCE;
             }
 
             @Override // net.bytebuddy.utility.dispatcher.JavaDispatcher.Dispatcher
@@ -337,7 +382,10 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class ForInstanceCheck implements Dispatcher {
             private final Class<?> target;
@@ -358,7 +406,8 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                 if (this == obj) {
                     return true;
                 }
-                return obj != null && getClass() == obj.getClass() && this.target.equals(((ForInstanceCheck) obj).target);
+                return obj != null && getClass() == obj.getClass()
+                        && this.target.equals(((ForInstanceCheck) obj).target);
             }
 
             public int hashCode() {
@@ -371,7 +420,10 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class ForNonStaticMethod implements Dispatcher {
             private static final Object[] NO_ARGUMENTS = new Object[0];
@@ -391,12 +443,15 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                     Type type = Type.getType(parameterTypes[i]);
                     methodVisitor.visitVarInsn(type.getOpcode(21), size);
                     if (parameterTypes[i] != (i == 0 ? this.method.getDeclaringClass() : parameterTypes2[i - 1])) {
-                        methodVisitor.visitTypeInsn(192, Type.getInternalName(i == 0 ? this.method.getDeclaringClass() : parameterTypes2[i - 1]));
+                        methodVisitor.visitTypeInsn(192, Type
+                                .getInternalName(i == 0 ? this.method.getDeclaringClass() : parameterTypes2[i - 1]));
                     }
                     size += type.getSize();
                     i++;
                 }
-                methodVisitor.visitMethodInsn(this.method.getDeclaringClass().isInterface() ? 185 : 182, Type.getInternalName(this.method.getDeclaringClass()), this.method.getName(), Type.getMethodDescriptor(this.method), this.method.getDeclaringClass().isInterface());
+                methodVisitor.visitMethodInsn(this.method.getDeclaringClass().isInterface() ? 185 : 182,
+                        Type.getInternalName(this.method.getDeclaringClass()), this.method.getName(),
+                        Type.getMethodDescriptor(this.method), this.method.getDeclaringClass().isInterface());
                 methodVisitor.visitInsn(Type.getReturnType(this.method).getOpcode(172));
                 return Math.max(size - 1, Type.getReturnType(this.method).getSize());
             }
@@ -405,7 +460,8 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                 if (this == obj) {
                     return true;
                 }
-                return obj != null && getClass() == obj.getClass() && this.method.equals(((ForNonStaticMethod) obj).method);
+                return obj != null && getClass() == obj.getClass()
+                        && this.method.equals(((ForNonStaticMethod) obj).method);
             }
 
             public int hashCode() {
@@ -427,7 +483,10 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class ForStaticMethod implements Dispatcher {
             private final Method method;
@@ -451,7 +510,9 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                     }
                     size += type.getSize();
                 }
-                methodVisitor.visitMethodInsn(184, Type.getInternalName(this.method.getDeclaringClass()), this.method.getName(), Type.getMethodDescriptor(this.method), this.method.getDeclaringClass().isInterface());
+                methodVisitor.visitMethodInsn(184, Type.getInternalName(this.method.getDeclaringClass()),
+                        this.method.getName(), Type.getMethodDescriptor(this.method),
+                        this.method.getDeclaringClass().isInterface());
                 methodVisitor.visitInsn(Type.getReturnType(this.method).getOpcode(172));
                 return Math.max(size - 1, Type.getReturnType(this.method).getSize());
             }
@@ -460,7 +521,8 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                 if (this == obj) {
                     return true;
                 }
-                return obj != null && getClass() == obj.getClass() && this.method.equals(((ForStaticMethod) obj).method);
+                return obj != null && getClass() == obj.getClass()
+                        && this.method.equals(((ForStaticMethod) obj).method);
             }
 
             public int hashCode() {
@@ -474,7 +536,10 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class ForUnresolvedMethod implements Dispatcher {
             private final String message;
@@ -488,7 +553,9 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                 methodVisitor.visitTypeInsn(187, Type.getInternalName(IllegalStateException.class));
                 methodVisitor.visitInsn(89);
                 methodVisitor.visitLdcInsn(this.message);
-                methodVisitor.visitMethodInsn(183, Type.getInternalName(IllegalStateException.class), MethodDescription.CONSTRUCTOR_INTERNAL_NAME, Type.getMethodDescriptor(Type.VOID_TYPE, Type.getType((Class<?>) String.class)), false);
+                methodVisitor.visitMethodInsn(183, Type.getInternalName(IllegalStateException.class),
+                        MethodDescription.CONSTRUCTOR_INTERNAL_NAME,
+                        Type.getMethodDescriptor(Type.VOID_TYPE, Type.getType((Class<?>) String.class)), false);
                 methodVisitor.visitInsn(191);
                 return 3;
             }
@@ -497,7 +564,8 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                 if (this == obj) {
                     return true;
                 }
-                return obj != null && getClass() == obj.getClass() && this.message.equals(((ForUnresolvedMethod) obj).message);
+                return obj != null && getClass() == obj.getClass()
+                        && this.message.equals(((ForUnresolvedMethod) obj).message);
             }
 
             public int hashCode() {
@@ -516,7 +584,10 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
         Object invoke(Object[] objArr);
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class DynamicClassLoader extends ClassLoader {
 
         @MaybeNull
@@ -524,10 +595,16 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
         private static final Class<?>[] NO_PARAMETER = new Class[0];
         private static final Object[] NO_ARGUMENT = new Object[0];
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public interface Resolver {
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum CreationAction implements PrivilegedAction<Resolver> {
                 INSTANCE;
 
@@ -535,14 +612,20 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                 public Resolver run() {
                     try {
                         Class<?> cls = Class.forName("java.lang.Module", false, null);
-                        return new ForModuleSystem(Class.class.getMethod("getModule", null), cls.getMethod("isExported", String.class), cls.getMethod("addExports", String.class, cls), ClassLoader.class.getMethod("getUnnamedModule", null));
+                        return new ForModuleSystem(Class.class.getMethod("getModule", null),
+                                cls.getMethod("isExported", String.class),
+                                cls.getMethod("addExports", String.class, cls),
+                                ClassLoader.class.getMethod("getUnnamedModule", null));
                     } catch (Exception unused) {
                         return NoOp.INSTANCE;
                     }
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForModuleSystem implements Resolver {
                 private final Method addExports;
@@ -566,7 +649,8 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                             if (((Boolean) this.isExported.invoke(objInvoke, r0.getName())).booleanValue()) {
                                 return;
                             }
-                            this.addExports.invoke(objInvoke, r0.getName(), this.getUnnamedModule.invoke(classLoader, null));
+                            this.addExports.invoke(objInvoke, r0.getName(),
+                                    this.getUnnamedModule.invoke(classLoader, null));
                         } catch (Exception e) {
                             throw new IllegalStateException("Failed to adjust module graph for dispatcher", e);
                         }
@@ -581,15 +665,23 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                         return false;
                     }
                     ForModuleSystem forModuleSystem = (ForModuleSystem) obj;
-                    return this.getModule.equals(forModuleSystem.getModule) && this.isExported.equals(forModuleSystem.isExported) && this.addExports.equals(forModuleSystem.addExports) && this.getUnnamedModule.equals(forModuleSystem.getUnnamedModule);
+                    return this.getModule.equals(forModuleSystem.getModule)
+                            && this.isExported.equals(forModuleSystem.isExported)
+                            && this.addExports.equals(forModuleSystem.addExports)
+                            && this.getUnnamedModule.equals(forModuleSystem.getUnnamedModule);
                 }
 
                 public int hashCode() {
-                    return this.getUnnamedModule.hashCode() + ((this.addExports.hashCode() + ((this.isExported.hashCode() + ((this.getModule.hashCode() + (getClass().hashCode() * 31)) * 31)) * 31)) * 31);
+                    return this.getUnnamedModule.hashCode()
+                            + ((this.addExports.hashCode() + ((this.isExported.hashCode()
+                                    + ((this.getModule.hashCode() + (getClass().hashCode() * 31)) * 31)) * 31)) * 31);
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum NoOp implements Resolver {
                 INSTANCE;
 
@@ -616,19 +708,26 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
             JavaDispatcher.RESOLVER.accept(this, cls);
         }
 
-        /* JADX WARN: Undo finally extract visitor
-        java.lang.NullPointerException
-        	at java.base/java.util.Objects.requireNonNull(Objects.java:209)
-        	at java.base/java.util.ArrayList.batchRemove(ArrayList.java:816)
-        	at java.base/java.util.ArrayList.removeAll(ArrayList.java:791)
-        	at jadx.core.dex.visitors.finaly.TryCatchEdgeBlockMap.getAllInScope(TryCatchEdgeBlockMap.java:91)
-        	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:204)
-        	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+        /*
+         * JADX WARN: Undo finally extract visitor
+         * java.lang.NullPointerException
+         * at java.base/java.util.Objects.requireNonNull(Objects.java:209)
+         * at java.base/java.util.ArrayList.batchRemove(ArrayList.java:816)
+         * at java.base/java.util.ArrayList.removeAll(ArrayList.java:791)
+         * at jadx.core.dex.visitors.finaly.TryCatchEdgeBlockMap.getAllInScope(
+         * TryCatchEdgeBlockMap.java:91)
+         * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+         * MarkFinallyVisitor.java:204)
+         * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+         * java:119)
          */
         public static Invoker invoker() {
             ClassWriter classWriter = new ClassWriter(0);
-            classWriter.visit(ClassFileVersion.ofThisVm().getMinorMajorVersion(), 1, Type.getInternalName(Invoker.class) + "$Dispatcher", null, Type.getInternalName(Object.class), new String[]{Type.getInternalName(Invoker.class)});
-            Method[] methodArr = (Method[]) GraalImageCode.getCurrent().sorted(Invoker.class.getMethods(), MethodComparator.INSTANCE);
+            classWriter.visit(ClassFileVersion.ofThisVm().getMinorMajorVersion(), 1,
+                    Type.getInternalName(Invoker.class) + "$Dispatcher", null, Type.getInternalName(Object.class),
+                    new String[] { Type.getInternalName(Invoker.class) });
+            Method[] methodArr = (Method[]) GraalImageCode.getCurrent().sorted(Invoker.class.getMethods(),
+                    MethodComparator.INSTANCE);
             int length = methodArr.length;
             int i = 0;
             while (true) {
@@ -642,7 +741,8 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                 for (int i2 = 0; i2 < exceptionTypes.length; i2++) {
                     strArr[i2] = Type.getInternalName(exceptionTypes[i2]);
                 }
-                MethodVisitor methodVisitorVisitMethod = classWriter.visitMethod(1, method.getName(), Type.getMethodDescriptor(method), null, strArr);
+                MethodVisitor methodVisitorVisitMethod = classWriter.visitMethod(1, method.getName(),
+                        Type.getMethodDescriptor(method), null, strArr);
                 methodVisitorVisitMethod.visitCode();
                 Type[] typeArr = new Type[method.getParameterTypes().length - 1];
                 for (int i3 = 0; i3 < method.getParameterTypes().length; i3++) {
@@ -653,17 +753,21 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                     methodVisitorVisitMethod.visitVarInsn(type.getOpcode(21), size);
                     size += type.getSize();
                 }
-                methodVisitorVisitMethod.visitMethodInsn(182, Type.getInternalName(method.getParameterTypes()[0]), method.getName(), Type.getMethodDescriptor(Type.getReturnType(method), typeArr), false);
+                methodVisitorVisitMethod.visitMethodInsn(182, Type.getInternalName(method.getParameterTypes()[0]),
+                        method.getName(), Type.getMethodDescriptor(Type.getReturnType(method), typeArr), false);
                 methodVisitorVisitMethod.visitInsn(Type.getReturnType(method).getOpcode(172));
                 methodVisitorVisitMethod.visitMaxs(Math.max(size - 1, Type.getReturnType(method).getSize()), size);
                 methodVisitorVisitMethod.visitEnd();
                 i++;
             }
             Type type2 = Type.VOID_TYPE;
-            MethodVisitor methodVisitorVisitMethod2 = classWriter.visitMethod(1, MethodDescription.CONSTRUCTOR_INTERNAL_NAME, Type.getMethodDescriptor(type2, new Type[0]), null, null);
+            MethodVisitor methodVisitorVisitMethod2 = classWriter.visitMethod(1,
+                    MethodDescription.CONSTRUCTOR_INTERNAL_NAME, Type.getMethodDescriptor(type2, new Type[0]), null,
+                    null);
             methodVisitorVisitMethod2.visitCode();
             methodVisitorVisitMethod2.visitVarInsn(25, 0);
-            methodVisitorVisitMethod2.visitMethodInsn(183, Type.getInternalName(Object.class), MethodDescription.CONSTRUCTOR_INTERNAL_NAME, Type.getMethodDescriptor(type2, new Type[0]), false);
+            methodVisitorVisitMethod2.visitMethodInsn(183, Type.getInternalName(Object.class),
+                    MethodDescription.CONSTRUCTOR_INTERNAL_NAME, Type.getMethodDescriptor(type2, new Type[0]), false);
             methodVisitorVisitMethod2.visitInsn(177);
             methodVisitorVisitMethod2.visitMaxs(1, 1);
             methodVisitorVisitMethod2.visitEnd();
@@ -672,7 +776,8 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
             try {
                 String property = System.getProperty(TypeWriter.DUMP_PROPERTY);
                 if (property != null) {
-                    FileOutputStream fileOutputStream = new FileOutputStream(new File(property, Invoker.class.getName() + "$Dispatcher.class"));
+                    FileOutputStream fileOutputStream = new FileOutputStream(
+                            new File(property, Invoker.class.getName() + "$Dispatcher.class"));
                     try {
                         fileOutputStream.write(byteArray);
                         fileOutputStream.close();
@@ -684,7 +789,10 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
             } catch (Throwable unused) {
             }
             try {
-                return (Invoker) new DynamicClassLoader(Invoker.class).defineClass(Invoker.class.getName() + "$Dispatcher", byteArray, 0, byteArray.length, JavaDispatcher.class.getProtectionDomain()).getConstructor(NO_PARAMETER).newInstance(NO_ARGUMENT);
+                return (Invoker) new DynamicClassLoader(Invoker.class)
+                        .defineClass(Invoker.class.getName() + "$Dispatcher", byteArray, 0, byteArray.length,
+                                JavaDispatcher.class.getProtectionDomain())
+                        .getConstructor(NO_PARAMETER).newInstance(NO_ARGUMENT);
             } catch (UnsupportedOperationException unused2) {
                 return new DirectInvoker();
             } catch (Exception e) {
@@ -695,7 +803,8 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
         public static Object proxy(Class<?> cls, Map<Method, Dispatcher> map) {
             Class<?> cls2;
             ClassWriter classWriter = new ClassWriter(0);
-            classWriter.visit(ClassFileVersion.JAVA_V5.getMinorMajorVersion(), 1, Type.getInternalName(cls) + "$Proxy", null, Type.getInternalName(Object.class), new String[]{Type.getInternalName(cls)});
+            classWriter.visit(ClassFileVersion.JAVA_V5.getMinorMajorVersion(), 1, Type.getInternalName(cls) + "$Proxy",
+                    null, Type.getInternalName(Object.class), new String[] { Type.getInternalName(cls) });
             Iterator<Map.Entry<Method, Dispatcher>> it = map.entrySet().iterator();
             while (true) {
                 if (!it.hasNext()) {
@@ -707,20 +816,25 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                 for (int i = 0; i < exceptionTypes.length; i++) {
                     strArr[i] = Type.getInternalName(exceptionTypes[i]);
                 }
-                MethodVisitor methodVisitorVisitMethod = classWriter.visitMethod(1, next.getKey().getName(), Type.getMethodDescriptor(next.getKey()), null, strArr);
+                MethodVisitor methodVisitorVisitMethod = classWriter.visitMethod(1, next.getKey().getName(),
+                        Type.getMethodDescriptor(next.getKey()), null, strArr);
                 methodVisitorVisitMethod.visitCode();
                 int size = (next.getKey().getModifiers() & 8) != 0 ? 0 : 1;
                 for (Class<?> cls3 : next.getKey().getParameterTypes()) {
                     size += Type.getType(cls3).getSize();
                 }
-                methodVisitorVisitMethod.visitMaxs(next.getValue().apply(methodVisitorVisitMethod, next.getKey()), size);
+                methodVisitorVisitMethod.visitMaxs(next.getValue().apply(methodVisitorVisitMethod, next.getKey()),
+                        size);
                 methodVisitorVisitMethod.visitEnd();
             }
             Type type = Type.VOID_TYPE;
-            MethodVisitor methodVisitorVisitMethod2 = classWriter.visitMethod(1, MethodDescription.CONSTRUCTOR_INTERNAL_NAME, Type.getMethodDescriptor(type, new Type[0]), null, null);
+            MethodVisitor methodVisitorVisitMethod2 = classWriter.visitMethod(1,
+                    MethodDescription.CONSTRUCTOR_INTERNAL_NAME, Type.getMethodDescriptor(type, new Type[0]), null,
+                    null);
             methodVisitorVisitMethod2.visitCode();
             methodVisitorVisitMethod2.visitVarInsn(25, 0);
-            methodVisitorVisitMethod2.visitMethodInsn(183, Type.getInternalName(Object.class), MethodDescription.CONSTRUCTOR_INTERNAL_NAME, Type.getMethodDescriptor(type, new Type[0]), false);
+            methodVisitorVisitMethod2.visitMethodInsn(183, Type.getInternalName(Object.class),
+                    MethodDescription.CONSTRUCTOR_INTERNAL_NAME, Type.getMethodDescriptor(type, new Type[0]), false);
             methodVisitorVisitMethod2.visitInsn(177);
             methodVisitorVisitMethod2.visitMaxs(1, 1);
             methodVisitorVisitMethod2.visitEnd();
@@ -729,7 +843,8 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
             String str = DUMP_FOLDER;
             if (str != null) {
                 try {
-                    FileOutputStream fileOutputStream = new FileOutputStream(new File(str, cls.getName() + "$Proxy.class"));
+                    FileOutputStream fileOutputStream = new FileOutputStream(
+                            new File(str, cls.getName() + "$Proxy.class"));
                     try {
                         fileOutputStream.write(byteArray);
                         fileOutputStream.close();
@@ -747,7 +862,10 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                 cls2 = cls;
             }
             try {
-                return new DynamicClassLoader(cls2).defineClass(cls2.getName() + "$Proxy", byteArray, 0, byteArray.length, JavaDispatcher.class.getProtectionDomain()).getConstructor(NO_PARAMETER).newInstance(NO_ARGUMENT);
+                return new DynamicClassLoader(cls2)
+                        .defineClass(cls2.getName() + "$Proxy", byteArray, 0, byteArray.length,
+                                JavaDispatcher.class.getProtectionDomain())
+                        .getConstructor(NO_PARAMETER).newInstance(NO_ARGUMENT);
             } catch (Exception e2) {
                 e = e2;
                 throw new IllegalStateException("Failed to create proxy for ".concat(cls2.getName()), e);
@@ -755,14 +873,20 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
-    @Target({ElementType.METHOD})
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
+    @Target({ ElementType.METHOD })
     @Documented
     @Retention(RetentionPolicy.RUNTIME)
     public @interface Instance {
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @HashCodeAndEqualsPlugin.Enhance
     public static class InvokerCreationAction implements PrivilegedAction<Invoker> {
         private InvokerCreationAction() {
@@ -785,29 +909,41 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
-    @Target({ElementType.METHOD})
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
+    @Target({ ElementType.METHOD })
     @Documented
     @Retention(RetentionPolicy.RUNTIME)
     public @interface IsConstructor {
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
-    @Target({ElementType.METHOD})
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
+    @Target({ ElementType.METHOD })
     @Documented
     @Retention(RetentionPolicy.RUNTIME)
     public @interface IsStatic {
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
-    @Target({ElementType.TYPE, ElementType.METHOD, ElementType.PARAMETER})
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
+    @Target({ ElementType.TYPE, ElementType.METHOD, ElementType.PARAMETER })
     @Documented
     @Retention(RetentionPolicy.RUNTIME)
     public @interface Proxied {
         String value();
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @HashCodeAndEqualsPlugin.Enhance
     public static class ProxiedInvocationHandler implements InvocationHandler {
         private static final Object[] NO_ARGUMENTS = new Object[0];
@@ -827,23 +963,36 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                 return false;
             }
             ProxiedInvocationHandler proxiedInvocationHandler = (ProxiedInvocationHandler) obj;
-            return this.name.equals(proxiedInvocationHandler.name) && this.targets.equals(proxiedInvocationHandler.targets);
+            return this.name.equals(proxiedInvocationHandler.name)
+                    && this.targets.equals(proxiedInvocationHandler.targets);
         }
 
         public int hashCode() {
             return this.targets.hashCode() + bjs.e(this.name, getClass().hashCode() * 31, 31);
         }
 
-        /* JADX WARN: Undo finally extract visitor
-        java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
-        	at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.java:210)
-        	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:196)
-        	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:180)
-        	at jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:201)
-        	at jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.java:347)
-        	at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(TryCatchBlockAttr.java:356)
-        	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:202)
-        	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+        /*
+         * JADX WARN: Undo finally extract visitor
+         * java.lang.NullPointerException: Cannot invoke
+         * "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
+         * at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.
+         * java:210)
+         * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+         * TryCatchBlockAttr.java:196)
+         * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+         * TryCatchBlockAttr.java:180)
+         * at
+         * jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:
+         * 201)
+         * at
+         * jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.
+         * java:347)
+         * at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(
+         * TryCatchBlockAttr.java:356)
+         * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+         * MarkFinallyVisitor.java:202)
+         * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+         * java:119)
          */
         @Override // java.lang.reflect.InvocationHandler
         @MaybeNull
@@ -857,7 +1006,8 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                 }
                 if (method.getName().equals("equals")) {
                     Object obj2 = objArr[0];
-                    if (obj2 != null && Proxy.isProxyClass(obj2.getClass()) && Proxy.getInvocationHandler(objArr[0]).equals(this)) {
+                    if (obj2 != null && Proxy.isProxyClass(obj2.getClass())
+                            && Proxy.getInvocationHandler(objArr[0]).equals(this)) {
                         z = true;
                     }
                     return Boolean.valueOf(z);
@@ -958,34 +1108,273 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
         return (iD * 31) + (this.generate ? 1 : 0);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:135:0x02c9 A[Catch: all -> 0x0206, NoSuchMethodException -> 0x0211, ClassNotFoundException -> 0x021c, TryCatch #21 {ClassNotFoundException -> 0x021c, NoSuchMethodException -> 0x0211, all -> 0x0206, blocks: (B:90:0x01ff, B:132:0x02c1, B:133:0x02c6, B:135:0x02c9, B:137:0x02d5, B:140:0x02e0, B:142:0x02e8, B:146:0x02fb, B:148:0x0303, B:121:0x0266, B:122:0x028a, B:123:0x028b, B:124:0x02a7), top: B:332:0x01ff }] */
-    /* JADX WARN: Found duplicated region for block: B:137:0x02d5 A[Catch: all -> 0x0206, NoSuchMethodException -> 0x0211, ClassNotFoundException -> 0x021c, TryCatch #21 {ClassNotFoundException -> 0x021c, NoSuchMethodException -> 0x0211, all -> 0x0206, blocks: (B:90:0x01ff, B:132:0x02c1, B:133:0x02c6, B:135:0x02c9, B:137:0x02d5, B:140:0x02e0, B:142:0x02e8, B:146:0x02fb, B:148:0x0303, B:121:0x0266, B:122:0x028a, B:123:0x028b, B:124:0x02a7), top: B:332:0x01ff }] */
-    /* JADX WARN: Found duplicated region for block: B:142:0x02e8 A[Catch: all -> 0x0206, NoSuchMethodException -> 0x0211, ClassNotFoundException -> 0x021c, LOOP:3: B:140:0x02e0->B:142:0x02e8, LOOP_END, TRY_LEAVE, TryCatch #21 {ClassNotFoundException -> 0x021c, NoSuchMethodException -> 0x0211, all -> 0x0206, blocks: (B:90:0x01ff, B:132:0x02c1, B:133:0x02c6, B:135:0x02c9, B:137:0x02d5, B:140:0x02e0, B:142:0x02e8, B:146:0x02fb, B:148:0x0303, B:121:0x0266, B:122:0x028a, B:123:0x028b, B:124:0x02a7), top: B:332:0x01ff }] */
-    /* JADX WARN: Found duplicated region for block: B:146:0x02fb A[Catch: all -> 0x0206, NoSuchMethodException -> 0x0211, ClassNotFoundException -> 0x021c, TRY_ENTER, TryCatch #21 {ClassNotFoundException -> 0x021c, NoSuchMethodException -> 0x0211, all -> 0x0206, blocks: (B:90:0x01ff, B:132:0x02c1, B:133:0x02c6, B:135:0x02c9, B:137:0x02d5, B:140:0x02e0, B:142:0x02e8, B:146:0x02fb, B:148:0x0303, B:121:0x0266, B:122:0x028a, B:123:0x028b, B:124:0x02a7), top: B:332:0x01ff }] */
-    /* JADX WARN: Found duplicated region for block: B:148:0x0303 A[Catch: all -> 0x0206, NoSuchMethodException -> 0x0211, ClassNotFoundException -> 0x021c, MOVE_INLINED, TRY_LEAVE, TryCatch #21 {ClassNotFoundException -> 0x021c, NoSuchMethodException -> 0x0211, all -> 0x0206, blocks: (B:90:0x01ff, B:132:0x02c1, B:133:0x02c6, B:135:0x02c9, B:137:0x02d5, B:140:0x02e0, B:142:0x02e8, B:146:0x02fb, B:148:0x0303, B:121:0x0266, B:122:0x028a, B:123:0x028b, B:124:0x02a7), top: B:332:0x01ff }] */
-    /* JADX WARN: Found duplicated region for block: B:156:0x0322 A[Catch: all -> 0x0334, NoSuchMethodException -> 0x0337, ClassNotFoundException -> 0x033a, TryCatch #22 {ClassNotFoundException -> 0x033a, NoSuchMethodException -> 0x0337, all -> 0x0334, blocks: (B:154:0x0318, B:156:0x0322, B:157:0x0329, B:159:0x032d, B:166:0x033d, B:190:0x041a, B:167:0x0361, B:168:0x038b, B:181:0x039e, B:182:0x03c0, B:183:0x03c1, B:185:0x03de, B:186:0x03e1, B:187:0x0407, B:188:0x0408, B:191:0x0428, B:194:0x0438, B:196:0x0446, B:198:0x044e, B:202:0x0459, B:212:0x0470, B:213:0x0492, B:214:0x0493, B:216:0x049b, B:218:0x04a4, B:220:0x04b6, B:224:0x04c0, B:226:0x04ca, B:229:0x04d5, B:231:0x04dd, B:237:0x050e, B:234:0x04e8, B:235:0x04ed, B:236:0x050d, B:238:0x0513, B:240:0x051d, B:244:0x052e, B:258:0x0596, B:259:0x05b8, B:217:0x04a0), top: B:331:0x0318 }] */
-    /* JADX WARN: Found duplicated region for block: B:159:0x032d A[Catch: all -> 0x0334, NoSuchMethodException -> 0x0337, ClassNotFoundException -> 0x033a, LOOP:4: B:157:0x0329->B:159:0x032d, LOOP_END, TryCatch #22 {ClassNotFoundException -> 0x033a, NoSuchMethodException -> 0x0337, all -> 0x0334, blocks: (B:154:0x0318, B:156:0x0322, B:157:0x0329, B:159:0x032d, B:166:0x033d, B:190:0x041a, B:167:0x0361, B:168:0x038b, B:181:0x039e, B:182:0x03c0, B:183:0x03c1, B:185:0x03de, B:186:0x03e1, B:187:0x0407, B:188:0x0408, B:191:0x0428, B:194:0x0438, B:196:0x0446, B:198:0x044e, B:202:0x0459, B:212:0x0470, B:213:0x0492, B:214:0x0493, B:216:0x049b, B:218:0x04a4, B:220:0x04b6, B:224:0x04c0, B:226:0x04ca, B:229:0x04d5, B:231:0x04dd, B:237:0x050e, B:234:0x04e8, B:235:0x04ed, B:236:0x050d, B:238:0x0513, B:240:0x051d, B:244:0x052e, B:258:0x0596, B:259:0x05b8, B:217:0x04a0), top: B:331:0x0318 }] */
-    /* JADX WARN: Found duplicated region for block: B:183:0x03c1 A[Catch: all -> 0x0334, NoSuchMethodException -> 0x0337, ClassNotFoundException -> 0x033a, MOVE_INLINED, TryCatch #22 {ClassNotFoundException -> 0x033a, NoSuchMethodException -> 0x0337, all -> 0x0334, blocks: (B:154:0x0318, B:156:0x0322, B:157:0x0329, B:159:0x032d, B:166:0x033d, B:190:0x041a, B:167:0x0361, B:168:0x038b, B:181:0x039e, B:182:0x03c0, B:183:0x03c1, B:185:0x03de, B:186:0x03e1, B:187:0x0407, B:188:0x0408, B:191:0x0428, B:194:0x0438, B:196:0x0446, B:198:0x044e, B:202:0x0459, B:212:0x0470, B:213:0x0492, B:214:0x0493, B:216:0x049b, B:218:0x04a4, B:220:0x04b6, B:224:0x04c0, B:226:0x04ca, B:229:0x04d5, B:231:0x04dd, B:237:0x050e, B:234:0x04e8, B:235:0x04ed, B:236:0x050d, B:238:0x0513, B:240:0x051d, B:244:0x052e, B:258:0x0596, B:259:0x05b8, B:217:0x04a0), top: B:331:0x0318 }] */
-    /* JADX WARN: Found duplicated region for block: B:185:0x03de A[Catch: all -> 0x0334, NoSuchMethodException -> 0x0337, ClassNotFoundException -> 0x033a, TryCatch #22 {ClassNotFoundException -> 0x033a, NoSuchMethodException -> 0x0337, all -> 0x0334, blocks: (B:154:0x0318, B:156:0x0322, B:157:0x0329, B:159:0x032d, B:166:0x033d, B:190:0x041a, B:167:0x0361, B:168:0x038b, B:181:0x039e, B:182:0x03c0, B:183:0x03c1, B:185:0x03de, B:186:0x03e1, B:187:0x0407, B:188:0x0408, B:191:0x0428, B:194:0x0438, B:196:0x0446, B:198:0x044e, B:202:0x0459, B:212:0x0470, B:213:0x0492, B:214:0x0493, B:216:0x049b, B:218:0x04a4, B:220:0x04b6, B:224:0x04c0, B:226:0x04ca, B:229:0x04d5, B:231:0x04dd, B:237:0x050e, B:234:0x04e8, B:235:0x04ed, B:236:0x050d, B:238:0x0513, B:240:0x051d, B:244:0x052e, B:258:0x0596, B:259:0x05b8, B:217:0x04a0), top: B:331:0x0318 }] */
-    /* JADX WARN: Found duplicated region for block: B:188:0x0408 A[Catch: all -> 0x0334, NoSuchMethodException -> 0x0337, ClassNotFoundException -> 0x033a, LOOP:2: B:136:0x02d3->B:188:0x0408, LOOP_END, TryCatch #22 {ClassNotFoundException -> 0x033a, NoSuchMethodException -> 0x0337, all -> 0x0334, blocks: (B:154:0x0318, B:156:0x0322, B:157:0x0329, B:159:0x032d, B:166:0x033d, B:190:0x041a, B:167:0x0361, B:168:0x038b, B:181:0x039e, B:182:0x03c0, B:183:0x03c1, B:185:0x03de, B:186:0x03e1, B:187:0x0407, B:188:0x0408, B:191:0x0428, B:194:0x0438, B:196:0x0446, B:198:0x044e, B:202:0x0459, B:212:0x0470, B:213:0x0492, B:214:0x0493, B:216:0x049b, B:218:0x04a4, B:220:0x04b6, B:224:0x04c0, B:226:0x04ca, B:229:0x04d5, B:231:0x04dd, B:237:0x050e, B:234:0x04e8, B:235:0x04ed, B:236:0x050d, B:238:0x0513, B:240:0x051d, B:244:0x052e, B:258:0x0596, B:259:0x05b8, B:217:0x04a0), top: B:331:0x0318 }] */
-    /* JADX WARN: Found duplicated region for block: B:194:0x0438 A[Catch: all -> 0x0334, NoSuchMethodException -> 0x0337, ClassNotFoundException -> 0x033a, TRY_ENTER, TryCatch #22 {ClassNotFoundException -> 0x033a, NoSuchMethodException -> 0x0337, all -> 0x0334, blocks: (B:154:0x0318, B:156:0x0322, B:157:0x0329, B:159:0x032d, B:166:0x033d, B:190:0x041a, B:167:0x0361, B:168:0x038b, B:181:0x039e, B:182:0x03c0, B:183:0x03c1, B:185:0x03de, B:186:0x03e1, B:187:0x0407, B:188:0x0408, B:191:0x0428, B:194:0x0438, B:196:0x0446, B:198:0x044e, B:202:0x0459, B:212:0x0470, B:213:0x0492, B:214:0x0493, B:216:0x049b, B:218:0x04a4, B:220:0x04b6, B:224:0x04c0, B:226:0x04ca, B:229:0x04d5, B:231:0x04dd, B:237:0x050e, B:234:0x04e8, B:235:0x04ed, B:236:0x050d, B:238:0x0513, B:240:0x051d, B:244:0x052e, B:258:0x0596, B:259:0x05b8, B:217:0x04a0), top: B:331:0x0318 }] */
-    /* JADX WARN: Found duplicated region for block: B:196:0x0446 A[Catch: all -> 0x0334, NoSuchMethodException -> 0x0337, ClassNotFoundException -> 0x033a, TryCatch #22 {ClassNotFoundException -> 0x033a, NoSuchMethodException -> 0x0337, all -> 0x0334, blocks: (B:154:0x0318, B:156:0x0322, B:157:0x0329, B:159:0x032d, B:166:0x033d, B:190:0x041a, B:167:0x0361, B:168:0x038b, B:181:0x039e, B:182:0x03c0, B:183:0x03c1, B:185:0x03de, B:186:0x03e1, B:187:0x0407, B:188:0x0408, B:191:0x0428, B:194:0x0438, B:196:0x0446, B:198:0x044e, B:202:0x0459, B:212:0x0470, B:213:0x0492, B:214:0x0493, B:216:0x049b, B:218:0x04a4, B:220:0x04b6, B:224:0x04c0, B:226:0x04ca, B:229:0x04d5, B:231:0x04dd, B:237:0x050e, B:234:0x04e8, B:235:0x04ed, B:236:0x050d, B:238:0x0513, B:240:0x051d, B:244:0x052e, B:258:0x0596, B:259:0x05b8, B:217:0x04a0), top: B:331:0x0318 }] */
-    /* JADX WARN: Found duplicated region for block: B:202:0x0459 A[Catch: all -> 0x0334, NoSuchMethodException -> 0x0337, ClassNotFoundException -> 0x033a, TRY_LEAVE, TryCatch #22 {ClassNotFoundException -> 0x033a, NoSuchMethodException -> 0x0337, all -> 0x0334, blocks: (B:154:0x0318, B:156:0x0322, B:157:0x0329, B:159:0x032d, B:166:0x033d, B:190:0x041a, B:167:0x0361, B:168:0x038b, B:181:0x039e, B:182:0x03c0, B:183:0x03c1, B:185:0x03de, B:186:0x03e1, B:187:0x0407, B:188:0x0408, B:191:0x0428, B:194:0x0438, B:196:0x0446, B:198:0x044e, B:202:0x0459, B:212:0x0470, B:213:0x0492, B:214:0x0493, B:216:0x049b, B:218:0x04a4, B:220:0x04b6, B:224:0x04c0, B:226:0x04ca, B:229:0x04d5, B:231:0x04dd, B:237:0x050e, B:234:0x04e8, B:235:0x04ed, B:236:0x050d, B:238:0x0513, B:240:0x051d, B:244:0x052e, B:258:0x0596, B:259:0x05b8, B:217:0x04a0), top: B:331:0x0318 }] */
-    /* JADX WARN: Found duplicated region for block: B:214:0x0493 A[Catch: all -> 0x0334, NoSuchMethodException -> 0x0337, ClassNotFoundException -> 0x033a, TryCatch #22 {ClassNotFoundException -> 0x033a, NoSuchMethodException -> 0x0337, all -> 0x0334, blocks: (B:154:0x0318, B:156:0x0322, B:157:0x0329, B:159:0x032d, B:166:0x033d, B:190:0x041a, B:167:0x0361, B:168:0x038b, B:181:0x039e, B:182:0x03c0, B:183:0x03c1, B:185:0x03de, B:186:0x03e1, B:187:0x0407, B:188:0x0408, B:191:0x0428, B:194:0x0438, B:196:0x0446, B:198:0x044e, B:202:0x0459, B:212:0x0470, B:213:0x0492, B:214:0x0493, B:216:0x049b, B:218:0x04a4, B:220:0x04b6, B:224:0x04c0, B:226:0x04ca, B:229:0x04d5, B:231:0x04dd, B:237:0x050e, B:234:0x04e8, B:235:0x04ed, B:236:0x050d, B:238:0x0513, B:240:0x051d, B:244:0x052e, B:258:0x0596, B:259:0x05b8, B:217:0x04a0), top: B:331:0x0318 }] */
-    /* JADX WARN: Found duplicated region for block: B:216:0x049b A[Catch: all -> 0x0334, NoSuchMethodException -> 0x0337, ClassNotFoundException -> 0x033a, TryCatch #22 {ClassNotFoundException -> 0x033a, NoSuchMethodException -> 0x0337, all -> 0x0334, blocks: (B:154:0x0318, B:156:0x0322, B:157:0x0329, B:159:0x032d, B:166:0x033d, B:190:0x041a, B:167:0x0361, B:168:0x038b, B:181:0x039e, B:182:0x03c0, B:183:0x03c1, B:185:0x03de, B:186:0x03e1, B:187:0x0407, B:188:0x0408, B:191:0x0428, B:194:0x0438, B:196:0x0446, B:198:0x044e, B:202:0x0459, B:212:0x0470, B:213:0x0492, B:214:0x0493, B:216:0x049b, B:218:0x04a4, B:220:0x04b6, B:224:0x04c0, B:226:0x04ca, B:229:0x04d5, B:231:0x04dd, B:237:0x050e, B:234:0x04e8, B:235:0x04ed, B:236:0x050d, B:238:0x0513, B:240:0x051d, B:244:0x052e, B:258:0x0596, B:259:0x05b8, B:217:0x04a0), top: B:331:0x0318 }] */
-    /* JADX WARN: Found duplicated region for block: B:217:0x04a0 A[Catch: all -> 0x0334, NoSuchMethodException -> 0x0337, ClassNotFoundException -> 0x033a, TryCatch #22 {ClassNotFoundException -> 0x033a, NoSuchMethodException -> 0x0337, all -> 0x0334, blocks: (B:154:0x0318, B:156:0x0322, B:157:0x0329, B:159:0x032d, B:166:0x033d, B:190:0x041a, B:167:0x0361, B:168:0x038b, B:181:0x039e, B:182:0x03c0, B:183:0x03c1, B:185:0x03de, B:186:0x03e1, B:187:0x0407, B:188:0x0408, B:191:0x0428, B:194:0x0438, B:196:0x0446, B:198:0x044e, B:202:0x0459, B:212:0x0470, B:213:0x0492, B:214:0x0493, B:216:0x049b, B:218:0x04a4, B:220:0x04b6, B:224:0x04c0, B:226:0x04ca, B:229:0x04d5, B:231:0x04dd, B:237:0x050e, B:234:0x04e8, B:235:0x04ed, B:236:0x050d, B:238:0x0513, B:240:0x051d, B:244:0x052e, B:258:0x0596, B:259:0x05b8, B:217:0x04a0), top: B:331:0x0318 }] */
-    /* JADX WARN: Found duplicated region for block: B:220:0x04b6 A[Catch: all -> 0x0334, NoSuchMethodException -> 0x0337, ClassNotFoundException -> 0x033a, TRY_LEAVE, TryCatch #22 {ClassNotFoundException -> 0x033a, NoSuchMethodException -> 0x0337, all -> 0x0334, blocks: (B:154:0x0318, B:156:0x0322, B:157:0x0329, B:159:0x032d, B:166:0x033d, B:190:0x041a, B:167:0x0361, B:168:0x038b, B:181:0x039e, B:182:0x03c0, B:183:0x03c1, B:185:0x03de, B:186:0x03e1, B:187:0x0407, B:188:0x0408, B:191:0x0428, B:194:0x0438, B:196:0x0446, B:198:0x044e, B:202:0x0459, B:212:0x0470, B:213:0x0492, B:214:0x0493, B:216:0x049b, B:218:0x04a4, B:220:0x04b6, B:224:0x04c0, B:226:0x04ca, B:229:0x04d5, B:231:0x04dd, B:237:0x050e, B:234:0x04e8, B:235:0x04ed, B:236:0x050d, B:238:0x0513, B:240:0x051d, B:244:0x052e, B:258:0x0596, B:259:0x05b8, B:217:0x04a0), top: B:331:0x0318 }] */
-    /* JADX WARN: Found duplicated region for block: B:224:0x04c0 A[Catch: all -> 0x0334, NoSuchMethodException -> 0x0337, ClassNotFoundException -> 0x033a, TRY_ENTER, TryCatch #22 {ClassNotFoundException -> 0x033a, NoSuchMethodException -> 0x0337, all -> 0x0334, blocks: (B:154:0x0318, B:156:0x0322, B:157:0x0329, B:159:0x032d, B:166:0x033d, B:190:0x041a, B:167:0x0361, B:168:0x038b, B:181:0x039e, B:182:0x03c0, B:183:0x03c1, B:185:0x03de, B:186:0x03e1, B:187:0x0407, B:188:0x0408, B:191:0x0428, B:194:0x0438, B:196:0x0446, B:198:0x044e, B:202:0x0459, B:212:0x0470, B:213:0x0492, B:214:0x0493, B:216:0x049b, B:218:0x04a4, B:220:0x04b6, B:224:0x04c0, B:226:0x04ca, B:229:0x04d5, B:231:0x04dd, B:237:0x050e, B:234:0x04e8, B:235:0x04ed, B:236:0x050d, B:238:0x0513, B:240:0x051d, B:244:0x052e, B:258:0x0596, B:259:0x05b8, B:217:0x04a0), top: B:331:0x0318 }] */
-    /* JADX WARN: Found duplicated region for block: B:228:0x04d2  */
-    /* JADX WARN: Found duplicated region for block: B:242:0x0529  */
-    /* JADX WARN: Found duplicated region for block: B:248:0x053c A[Catch: all -> 0x0467, NoSuchMethodException -> 0x046a, ClassNotFoundException -> 0x046d, TryCatch #13 {ClassNotFoundException -> 0x046d, NoSuchMethodException -> 0x046a, all -> 0x0467, blocks: (B:204:0x045d, B:246:0x0532, B:248:0x053c, B:250:0x0542, B:251:0x054c, B:252:0x0568, B:253:0x0569, B:255:0x056f, B:256:0x0579, B:257:0x0595), top: B:345:0x045d }] */
-    /* JADX WARN: Found duplicated region for block: B:250:0x0542 A[Catch: all -> 0x0467, NoSuchMethodException -> 0x046a, ClassNotFoundException -> 0x046d, TryCatch #13 {ClassNotFoundException -> 0x046d, NoSuchMethodException -> 0x046a, all -> 0x0467, blocks: (B:204:0x045d, B:246:0x0532, B:248:0x053c, B:250:0x0542, B:251:0x054c, B:252:0x0568, B:253:0x0569, B:255:0x056f, B:256:0x0579, B:257:0x0595), top: B:345:0x045d }] */
-    /* JADX WARN: Found duplicated region for block: B:253:0x0569 A[Catch: all -> 0x0467, NoSuchMethodException -> 0x046a, ClassNotFoundException -> 0x046d, TryCatch #13 {ClassNotFoundException -> 0x046d, NoSuchMethodException -> 0x046a, all -> 0x0467, blocks: (B:204:0x045d, B:246:0x0532, B:248:0x053c, B:250:0x0542, B:251:0x054c, B:252:0x0568, B:253:0x0569, B:255:0x056f, B:256:0x0579, B:257:0x0595), top: B:345:0x045d }] */
-    /* JADX WARN: Found duplicated region for block: B:255:0x056f A[Catch: all -> 0x0467, NoSuchMethodException -> 0x046a, ClassNotFoundException -> 0x046d, TryCatch #13 {ClassNotFoundException -> 0x046d, NoSuchMethodException -> 0x046a, all -> 0x0467, blocks: (B:204:0x045d, B:246:0x0532, B:248:0x053c, B:250:0x0542, B:251:0x054c, B:252:0x0568, B:253:0x0569, B:255:0x056f, B:256:0x0579, B:257:0x0595), top: B:345:0x045d }] */
-    /* JADX WARN: Found duplicated region for block: B:268:0x0606  */
-    /* JADX WARN: Found duplicated region for block: B:272:0x0625  */
-    /* JADX WARN: Found duplicated region for block: B:275:0x0633  */
-    /* JADX WARN: Found duplicated region for block: B:279:0x0652  */
+    /*
+     * JADX WARN: Found duplicated region for block: B:135:0x02c9 A[Catch: all ->
+     * 0x0206, NoSuchMethodException -> 0x0211, ClassNotFoundException -> 0x021c,
+     * TryCatch #21 {ClassNotFoundException -> 0x021c, NoSuchMethodException ->
+     * 0x0211, all -> 0x0206, blocks: (B:90:0x01ff, B:132:0x02c1, B:133:0x02c6,
+     * B:135:0x02c9, B:137:0x02d5, B:140:0x02e0, B:142:0x02e8, B:146:0x02fb,
+     * B:148:0x0303, B:121:0x0266, B:122:0x028a, B:123:0x028b, B:124:0x02a7), top:
+     * B:332:0x01ff }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:137:0x02d5 A[Catch: all ->
+     * 0x0206, NoSuchMethodException -> 0x0211, ClassNotFoundException -> 0x021c,
+     * TryCatch #21 {ClassNotFoundException -> 0x021c, NoSuchMethodException ->
+     * 0x0211, all -> 0x0206, blocks: (B:90:0x01ff, B:132:0x02c1, B:133:0x02c6,
+     * B:135:0x02c9, B:137:0x02d5, B:140:0x02e0, B:142:0x02e8, B:146:0x02fb,
+     * B:148:0x0303, B:121:0x0266, B:122:0x028a, B:123:0x028b, B:124:0x02a7), top:
+     * B:332:0x01ff }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:142:0x02e8 A[Catch: all ->
+     * 0x0206, NoSuchMethodException -> 0x0211, ClassNotFoundException -> 0x021c,
+     * LOOP:3: B:140:0x02e0->B:142:0x02e8, LOOP_END, TRY_LEAVE, TryCatch #21
+     * {ClassNotFoundException -> 0x021c, NoSuchMethodException -> 0x0211, all ->
+     * 0x0206, blocks: (B:90:0x01ff, B:132:0x02c1, B:133:0x02c6, B:135:0x02c9,
+     * B:137:0x02d5, B:140:0x02e0, B:142:0x02e8, B:146:0x02fb, B:148:0x0303,
+     * B:121:0x0266, B:122:0x028a, B:123:0x028b, B:124:0x02a7), top: B:332:0x01ff }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:146:0x02fb A[Catch: all ->
+     * 0x0206, NoSuchMethodException -> 0x0211, ClassNotFoundException -> 0x021c,
+     * TRY_ENTER, TryCatch #21 {ClassNotFoundException -> 0x021c,
+     * NoSuchMethodException -> 0x0211, all -> 0x0206, blocks: (B:90:0x01ff,
+     * B:132:0x02c1, B:133:0x02c6, B:135:0x02c9, B:137:0x02d5, B:140:0x02e0,
+     * B:142:0x02e8, B:146:0x02fb, B:148:0x0303, B:121:0x0266, B:122:0x028a,
+     * B:123:0x028b, B:124:0x02a7), top: B:332:0x01ff }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:148:0x0303 A[Catch: all ->
+     * 0x0206, NoSuchMethodException -> 0x0211, ClassNotFoundException -> 0x021c,
+     * MOVE_INLINED, TRY_LEAVE, TryCatch #21 {ClassNotFoundException -> 0x021c,
+     * NoSuchMethodException -> 0x0211, all -> 0x0206, blocks: (B:90:0x01ff,
+     * B:132:0x02c1, B:133:0x02c6, B:135:0x02c9, B:137:0x02d5, B:140:0x02e0,
+     * B:142:0x02e8, B:146:0x02fb, B:148:0x0303, B:121:0x0266, B:122:0x028a,
+     * B:123:0x028b, B:124:0x02a7), top: B:332:0x01ff }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:156:0x0322 A[Catch: all ->
+     * 0x0334, NoSuchMethodException -> 0x0337, ClassNotFoundException -> 0x033a,
+     * TryCatch #22 {ClassNotFoundException -> 0x033a, NoSuchMethodException ->
+     * 0x0337, all -> 0x0334, blocks: (B:154:0x0318, B:156:0x0322, B:157:0x0329,
+     * B:159:0x032d, B:166:0x033d, B:190:0x041a, B:167:0x0361, B:168:0x038b,
+     * B:181:0x039e, B:182:0x03c0, B:183:0x03c1, B:185:0x03de, B:186:0x03e1,
+     * B:187:0x0407, B:188:0x0408, B:191:0x0428, B:194:0x0438, B:196:0x0446,
+     * B:198:0x044e, B:202:0x0459, B:212:0x0470, B:213:0x0492, B:214:0x0493,
+     * B:216:0x049b, B:218:0x04a4, B:220:0x04b6, B:224:0x04c0, B:226:0x04ca,
+     * B:229:0x04d5, B:231:0x04dd, B:237:0x050e, B:234:0x04e8, B:235:0x04ed,
+     * B:236:0x050d, B:238:0x0513, B:240:0x051d, B:244:0x052e, B:258:0x0596,
+     * B:259:0x05b8, B:217:0x04a0), top: B:331:0x0318 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:159:0x032d A[Catch: all ->
+     * 0x0334, NoSuchMethodException -> 0x0337, ClassNotFoundException -> 0x033a,
+     * LOOP:4: B:157:0x0329->B:159:0x032d, LOOP_END, TryCatch #22
+     * {ClassNotFoundException -> 0x033a, NoSuchMethodException -> 0x0337, all ->
+     * 0x0334, blocks: (B:154:0x0318, B:156:0x0322, B:157:0x0329, B:159:0x032d,
+     * B:166:0x033d, B:190:0x041a, B:167:0x0361, B:168:0x038b, B:181:0x039e,
+     * B:182:0x03c0, B:183:0x03c1, B:185:0x03de, B:186:0x03e1, B:187:0x0407,
+     * B:188:0x0408, B:191:0x0428, B:194:0x0438, B:196:0x0446, B:198:0x044e,
+     * B:202:0x0459, B:212:0x0470, B:213:0x0492, B:214:0x0493, B:216:0x049b,
+     * B:218:0x04a4, B:220:0x04b6, B:224:0x04c0, B:226:0x04ca, B:229:0x04d5,
+     * B:231:0x04dd, B:237:0x050e, B:234:0x04e8, B:235:0x04ed, B:236:0x050d,
+     * B:238:0x0513, B:240:0x051d, B:244:0x052e, B:258:0x0596, B:259:0x05b8,
+     * B:217:0x04a0), top: B:331:0x0318 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:183:0x03c1 A[Catch: all ->
+     * 0x0334, NoSuchMethodException -> 0x0337, ClassNotFoundException -> 0x033a,
+     * MOVE_INLINED, TryCatch #22 {ClassNotFoundException -> 0x033a,
+     * NoSuchMethodException -> 0x0337, all -> 0x0334, blocks: (B:154:0x0318,
+     * B:156:0x0322, B:157:0x0329, B:159:0x032d, B:166:0x033d, B:190:0x041a,
+     * B:167:0x0361, B:168:0x038b, B:181:0x039e, B:182:0x03c0, B:183:0x03c1,
+     * B:185:0x03de, B:186:0x03e1, B:187:0x0407, B:188:0x0408, B:191:0x0428,
+     * B:194:0x0438, B:196:0x0446, B:198:0x044e, B:202:0x0459, B:212:0x0470,
+     * B:213:0x0492, B:214:0x0493, B:216:0x049b, B:218:0x04a4, B:220:0x04b6,
+     * B:224:0x04c0, B:226:0x04ca, B:229:0x04d5, B:231:0x04dd, B:237:0x050e,
+     * B:234:0x04e8, B:235:0x04ed, B:236:0x050d, B:238:0x0513, B:240:0x051d,
+     * B:244:0x052e, B:258:0x0596, B:259:0x05b8, B:217:0x04a0), top: B:331:0x0318 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:185:0x03de A[Catch: all ->
+     * 0x0334, NoSuchMethodException -> 0x0337, ClassNotFoundException -> 0x033a,
+     * TryCatch #22 {ClassNotFoundException -> 0x033a, NoSuchMethodException ->
+     * 0x0337, all -> 0x0334, blocks: (B:154:0x0318, B:156:0x0322, B:157:0x0329,
+     * B:159:0x032d, B:166:0x033d, B:190:0x041a, B:167:0x0361, B:168:0x038b,
+     * B:181:0x039e, B:182:0x03c0, B:183:0x03c1, B:185:0x03de, B:186:0x03e1,
+     * B:187:0x0407, B:188:0x0408, B:191:0x0428, B:194:0x0438, B:196:0x0446,
+     * B:198:0x044e, B:202:0x0459, B:212:0x0470, B:213:0x0492, B:214:0x0493,
+     * B:216:0x049b, B:218:0x04a4, B:220:0x04b6, B:224:0x04c0, B:226:0x04ca,
+     * B:229:0x04d5, B:231:0x04dd, B:237:0x050e, B:234:0x04e8, B:235:0x04ed,
+     * B:236:0x050d, B:238:0x0513, B:240:0x051d, B:244:0x052e, B:258:0x0596,
+     * B:259:0x05b8, B:217:0x04a0), top: B:331:0x0318 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:188:0x0408 A[Catch: all ->
+     * 0x0334, NoSuchMethodException -> 0x0337, ClassNotFoundException -> 0x033a,
+     * LOOP:2: B:136:0x02d3->B:188:0x0408, LOOP_END, TryCatch #22
+     * {ClassNotFoundException -> 0x033a, NoSuchMethodException -> 0x0337, all ->
+     * 0x0334, blocks: (B:154:0x0318, B:156:0x0322, B:157:0x0329, B:159:0x032d,
+     * B:166:0x033d, B:190:0x041a, B:167:0x0361, B:168:0x038b, B:181:0x039e,
+     * B:182:0x03c0, B:183:0x03c1, B:185:0x03de, B:186:0x03e1, B:187:0x0407,
+     * B:188:0x0408, B:191:0x0428, B:194:0x0438, B:196:0x0446, B:198:0x044e,
+     * B:202:0x0459, B:212:0x0470, B:213:0x0492, B:214:0x0493, B:216:0x049b,
+     * B:218:0x04a4, B:220:0x04b6, B:224:0x04c0, B:226:0x04ca, B:229:0x04d5,
+     * B:231:0x04dd, B:237:0x050e, B:234:0x04e8, B:235:0x04ed, B:236:0x050d,
+     * B:238:0x0513, B:240:0x051d, B:244:0x052e, B:258:0x0596, B:259:0x05b8,
+     * B:217:0x04a0), top: B:331:0x0318 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:194:0x0438 A[Catch: all ->
+     * 0x0334, NoSuchMethodException -> 0x0337, ClassNotFoundException -> 0x033a,
+     * TRY_ENTER, TryCatch #22 {ClassNotFoundException -> 0x033a,
+     * NoSuchMethodException -> 0x0337, all -> 0x0334, blocks: (B:154:0x0318,
+     * B:156:0x0322, B:157:0x0329, B:159:0x032d, B:166:0x033d, B:190:0x041a,
+     * B:167:0x0361, B:168:0x038b, B:181:0x039e, B:182:0x03c0, B:183:0x03c1,
+     * B:185:0x03de, B:186:0x03e1, B:187:0x0407, B:188:0x0408, B:191:0x0428,
+     * B:194:0x0438, B:196:0x0446, B:198:0x044e, B:202:0x0459, B:212:0x0470,
+     * B:213:0x0492, B:214:0x0493, B:216:0x049b, B:218:0x04a4, B:220:0x04b6,
+     * B:224:0x04c0, B:226:0x04ca, B:229:0x04d5, B:231:0x04dd, B:237:0x050e,
+     * B:234:0x04e8, B:235:0x04ed, B:236:0x050d, B:238:0x0513, B:240:0x051d,
+     * B:244:0x052e, B:258:0x0596, B:259:0x05b8, B:217:0x04a0), top: B:331:0x0318 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:196:0x0446 A[Catch: all ->
+     * 0x0334, NoSuchMethodException -> 0x0337, ClassNotFoundException -> 0x033a,
+     * TryCatch #22 {ClassNotFoundException -> 0x033a, NoSuchMethodException ->
+     * 0x0337, all -> 0x0334, blocks: (B:154:0x0318, B:156:0x0322, B:157:0x0329,
+     * B:159:0x032d, B:166:0x033d, B:190:0x041a, B:167:0x0361, B:168:0x038b,
+     * B:181:0x039e, B:182:0x03c0, B:183:0x03c1, B:185:0x03de, B:186:0x03e1,
+     * B:187:0x0407, B:188:0x0408, B:191:0x0428, B:194:0x0438, B:196:0x0446,
+     * B:198:0x044e, B:202:0x0459, B:212:0x0470, B:213:0x0492, B:214:0x0493,
+     * B:216:0x049b, B:218:0x04a4, B:220:0x04b6, B:224:0x04c0, B:226:0x04ca,
+     * B:229:0x04d5, B:231:0x04dd, B:237:0x050e, B:234:0x04e8, B:235:0x04ed,
+     * B:236:0x050d, B:238:0x0513, B:240:0x051d, B:244:0x052e, B:258:0x0596,
+     * B:259:0x05b8, B:217:0x04a0), top: B:331:0x0318 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:202:0x0459 A[Catch: all ->
+     * 0x0334, NoSuchMethodException -> 0x0337, ClassNotFoundException -> 0x033a,
+     * TRY_LEAVE, TryCatch #22 {ClassNotFoundException -> 0x033a,
+     * NoSuchMethodException -> 0x0337, all -> 0x0334, blocks: (B:154:0x0318,
+     * B:156:0x0322, B:157:0x0329, B:159:0x032d, B:166:0x033d, B:190:0x041a,
+     * B:167:0x0361, B:168:0x038b, B:181:0x039e, B:182:0x03c0, B:183:0x03c1,
+     * B:185:0x03de, B:186:0x03e1, B:187:0x0407, B:188:0x0408, B:191:0x0428,
+     * B:194:0x0438, B:196:0x0446, B:198:0x044e, B:202:0x0459, B:212:0x0470,
+     * B:213:0x0492, B:214:0x0493, B:216:0x049b, B:218:0x04a4, B:220:0x04b6,
+     * B:224:0x04c0, B:226:0x04ca, B:229:0x04d5, B:231:0x04dd, B:237:0x050e,
+     * B:234:0x04e8, B:235:0x04ed, B:236:0x050d, B:238:0x0513, B:240:0x051d,
+     * B:244:0x052e, B:258:0x0596, B:259:0x05b8, B:217:0x04a0), top: B:331:0x0318 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:214:0x0493 A[Catch: all ->
+     * 0x0334, NoSuchMethodException -> 0x0337, ClassNotFoundException -> 0x033a,
+     * TryCatch #22 {ClassNotFoundException -> 0x033a, NoSuchMethodException ->
+     * 0x0337, all -> 0x0334, blocks: (B:154:0x0318, B:156:0x0322, B:157:0x0329,
+     * B:159:0x032d, B:166:0x033d, B:190:0x041a, B:167:0x0361, B:168:0x038b,
+     * B:181:0x039e, B:182:0x03c0, B:183:0x03c1, B:185:0x03de, B:186:0x03e1,
+     * B:187:0x0407, B:188:0x0408, B:191:0x0428, B:194:0x0438, B:196:0x0446,
+     * B:198:0x044e, B:202:0x0459, B:212:0x0470, B:213:0x0492, B:214:0x0493,
+     * B:216:0x049b, B:218:0x04a4, B:220:0x04b6, B:224:0x04c0, B:226:0x04ca,
+     * B:229:0x04d5, B:231:0x04dd, B:237:0x050e, B:234:0x04e8, B:235:0x04ed,
+     * B:236:0x050d, B:238:0x0513, B:240:0x051d, B:244:0x052e, B:258:0x0596,
+     * B:259:0x05b8, B:217:0x04a0), top: B:331:0x0318 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:216:0x049b A[Catch: all ->
+     * 0x0334, NoSuchMethodException -> 0x0337, ClassNotFoundException -> 0x033a,
+     * TryCatch #22 {ClassNotFoundException -> 0x033a, NoSuchMethodException ->
+     * 0x0337, all -> 0x0334, blocks: (B:154:0x0318, B:156:0x0322, B:157:0x0329,
+     * B:159:0x032d, B:166:0x033d, B:190:0x041a, B:167:0x0361, B:168:0x038b,
+     * B:181:0x039e, B:182:0x03c0, B:183:0x03c1, B:185:0x03de, B:186:0x03e1,
+     * B:187:0x0407, B:188:0x0408, B:191:0x0428, B:194:0x0438, B:196:0x0446,
+     * B:198:0x044e, B:202:0x0459, B:212:0x0470, B:213:0x0492, B:214:0x0493,
+     * B:216:0x049b, B:218:0x04a4, B:220:0x04b6, B:224:0x04c0, B:226:0x04ca,
+     * B:229:0x04d5, B:231:0x04dd, B:237:0x050e, B:234:0x04e8, B:235:0x04ed,
+     * B:236:0x050d, B:238:0x0513, B:240:0x051d, B:244:0x052e, B:258:0x0596,
+     * B:259:0x05b8, B:217:0x04a0), top: B:331:0x0318 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:217:0x04a0 A[Catch: all ->
+     * 0x0334, NoSuchMethodException -> 0x0337, ClassNotFoundException -> 0x033a,
+     * TryCatch #22 {ClassNotFoundException -> 0x033a, NoSuchMethodException ->
+     * 0x0337, all -> 0x0334, blocks: (B:154:0x0318, B:156:0x0322, B:157:0x0329,
+     * B:159:0x032d, B:166:0x033d, B:190:0x041a, B:167:0x0361, B:168:0x038b,
+     * B:181:0x039e, B:182:0x03c0, B:183:0x03c1, B:185:0x03de, B:186:0x03e1,
+     * B:187:0x0407, B:188:0x0408, B:191:0x0428, B:194:0x0438, B:196:0x0446,
+     * B:198:0x044e, B:202:0x0459, B:212:0x0470, B:213:0x0492, B:214:0x0493,
+     * B:216:0x049b, B:218:0x04a4, B:220:0x04b6, B:224:0x04c0, B:226:0x04ca,
+     * B:229:0x04d5, B:231:0x04dd, B:237:0x050e, B:234:0x04e8, B:235:0x04ed,
+     * B:236:0x050d, B:238:0x0513, B:240:0x051d, B:244:0x052e, B:258:0x0596,
+     * B:259:0x05b8, B:217:0x04a0), top: B:331:0x0318 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:220:0x04b6 A[Catch: all ->
+     * 0x0334, NoSuchMethodException -> 0x0337, ClassNotFoundException -> 0x033a,
+     * TRY_LEAVE, TryCatch #22 {ClassNotFoundException -> 0x033a,
+     * NoSuchMethodException -> 0x0337, all -> 0x0334, blocks: (B:154:0x0318,
+     * B:156:0x0322, B:157:0x0329, B:159:0x032d, B:166:0x033d, B:190:0x041a,
+     * B:167:0x0361, B:168:0x038b, B:181:0x039e, B:182:0x03c0, B:183:0x03c1,
+     * B:185:0x03de, B:186:0x03e1, B:187:0x0407, B:188:0x0408, B:191:0x0428,
+     * B:194:0x0438, B:196:0x0446, B:198:0x044e, B:202:0x0459, B:212:0x0470,
+     * B:213:0x0492, B:214:0x0493, B:216:0x049b, B:218:0x04a4, B:220:0x04b6,
+     * B:224:0x04c0, B:226:0x04ca, B:229:0x04d5, B:231:0x04dd, B:237:0x050e,
+     * B:234:0x04e8, B:235:0x04ed, B:236:0x050d, B:238:0x0513, B:240:0x051d,
+     * B:244:0x052e, B:258:0x0596, B:259:0x05b8, B:217:0x04a0), top: B:331:0x0318 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:224:0x04c0 A[Catch: all ->
+     * 0x0334, NoSuchMethodException -> 0x0337, ClassNotFoundException -> 0x033a,
+     * TRY_ENTER, TryCatch #22 {ClassNotFoundException -> 0x033a,
+     * NoSuchMethodException -> 0x0337, all -> 0x0334, blocks: (B:154:0x0318,
+     * B:156:0x0322, B:157:0x0329, B:159:0x032d, B:166:0x033d, B:190:0x041a,
+     * B:167:0x0361, B:168:0x038b, B:181:0x039e, B:182:0x03c0, B:183:0x03c1,
+     * B:185:0x03de, B:186:0x03e1, B:187:0x0407, B:188:0x0408, B:191:0x0428,
+     * B:194:0x0438, B:196:0x0446, B:198:0x044e, B:202:0x0459, B:212:0x0470,
+     * B:213:0x0492, B:214:0x0493, B:216:0x049b, B:218:0x04a4, B:220:0x04b6,
+     * B:224:0x04c0, B:226:0x04ca, B:229:0x04d5, B:231:0x04dd, B:237:0x050e,
+     * B:234:0x04e8, B:235:0x04ed, B:236:0x050d, B:238:0x0513, B:240:0x051d,
+     * B:244:0x052e, B:258:0x0596, B:259:0x05b8, B:217:0x04a0), top: B:331:0x0318 }]
+     */
+    /* JADX WARN: Found duplicated region for block: B:228:0x04d2 */
+    /* JADX WARN: Found duplicated region for block: B:242:0x0529 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:248:0x053c A[Catch: all ->
+     * 0x0467, NoSuchMethodException -> 0x046a, ClassNotFoundException -> 0x046d,
+     * TryCatch #13 {ClassNotFoundException -> 0x046d, NoSuchMethodException ->
+     * 0x046a, all -> 0x0467, blocks: (B:204:0x045d, B:246:0x0532, B:248:0x053c,
+     * B:250:0x0542, B:251:0x054c, B:252:0x0568, B:253:0x0569, B:255:0x056f,
+     * B:256:0x0579, B:257:0x0595), top: B:345:0x045d }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:250:0x0542 A[Catch: all ->
+     * 0x0467, NoSuchMethodException -> 0x046a, ClassNotFoundException -> 0x046d,
+     * TryCatch #13 {ClassNotFoundException -> 0x046d, NoSuchMethodException ->
+     * 0x046a, all -> 0x0467, blocks: (B:204:0x045d, B:246:0x0532, B:248:0x053c,
+     * B:250:0x0542, B:251:0x054c, B:252:0x0568, B:253:0x0569, B:255:0x056f,
+     * B:256:0x0579, B:257:0x0595), top: B:345:0x045d }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:253:0x0569 A[Catch: all ->
+     * 0x0467, NoSuchMethodException -> 0x046a, ClassNotFoundException -> 0x046d,
+     * TryCatch #13 {ClassNotFoundException -> 0x046d, NoSuchMethodException ->
+     * 0x046a, all -> 0x0467, blocks: (B:204:0x045d, B:246:0x0532, B:248:0x053c,
+     * B:250:0x0542, B:251:0x054c, B:252:0x0568, B:253:0x0569, B:255:0x056f,
+     * B:256:0x0579, B:257:0x0595), top: B:345:0x045d }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:255:0x056f A[Catch: all ->
+     * 0x0467, NoSuchMethodException -> 0x046a, ClassNotFoundException -> 0x046d,
+     * TryCatch #13 {ClassNotFoundException -> 0x046d, NoSuchMethodException ->
+     * 0x046a, all -> 0x0467, blocks: (B:204:0x045d, B:246:0x0532, B:248:0x053c,
+     * B:250:0x0542, B:251:0x054c, B:252:0x0568, B:253:0x0569, B:255:0x056f,
+     * B:256:0x0579, B:257:0x0595), top: B:345:0x045d }]
+     */
+    /* JADX WARN: Found duplicated region for block: B:268:0x0606 */
+    /* JADX WARN: Found duplicated region for block: B:272:0x0625 */
+    /* JADX WARN: Found duplicated region for block: B:275:0x0633 */
+    /* JADX WARN: Found duplicated region for block: B:279:0x0652 */
     /* JADX WARN: Found duplicated region for block: B:359:0x039e A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:360:0x0361 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:361:0x03e1 A[SYNTHETIC] */
@@ -995,8 +1384,12 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
     /* JADX WARN: Found duplicated region for block: B:366:0x0579 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:378:0x0414 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:379:0x02df A[SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:381:0x033d A[EDGE_INSN: B:381:0x033d->B:166:0x033d BREAK  A[LOOP:4: B:157:0x0329->B:159:0x032d], SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:80:0x01d5  */
+    /*
+     * JADX WARN: Found duplicated region for block: B:381:0x033d A[EDGE_INSN:
+     * B:381:0x033d->B:166:0x033d BREAK A[LOOP:4: B:157:0x0329->B:159:0x032d],
+     * SYNTHETIC]
+     */
+    /* JADX WARN: Found duplicated region for block: B:80:0x01d5 */
     @Override // java.security.PrivilegedAction
     public T run() {
         Class<Instance> cls;
@@ -1048,7 +1441,9 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
         try {
             Object objInvoke = System.class.getMethod("getSecurityManager", null).invoke(null, null);
             if (objInvoke != null) {
-                Class.forName("java.lang.SecurityManager").getMethod("checkPermission", Permission.class).invoke(objInvoke, Class.forName("java.lang.RuntimePermission").getConstructor(String.class).newInstance("net.bytebuddy.createJavaDispatcher"));
+                Class.forName("java.lang.SecurityManager").getMethod("checkPermission", Permission.class)
+                        .invoke(objInvoke, Class.forName("java.lang.RuntimePermission").getConstructor(String.class)
+                                .newInstance("net.bytebuddy.createJavaDispatcher"));
             }
         } catch (ClassNotFoundException | NoSuchMethodException unused) {
         } catch (IllegalAccessException e) {
@@ -1070,7 +1465,8 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
             boolean z2 = this.generate;
             if (z2) {
                 i = 0;
-                methods = (Method[]) GraalImageCode.getCurrent().sorted(this.proxy.getMethods(), MethodComparator.INSTANCE);
+                methods = (Method[]) GraalImageCode.getCurrent().sorted(this.proxy.getMethods(),
+                        MethodComparator.INSTANCE);
             } else {
                 i = 0;
                 methods = this.proxy.getMethods();
@@ -1085,7 +1481,8 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                     methodArr2 = methods;
                 } else if (method2.isAnnotationPresent(cls9)) {
                     methodArr2 = methods;
-                    if (method2.getParameterTypes().length != 1 || !method2.getParameterTypes()[i].isAssignableFrom(cls11)) {
+                    if (method2.getParameterTypes().length != 1
+                            || !method2.getParameterTypes()[i].isAssignableFrom(cls11)) {
                         throw new IllegalStateException(str5 + method2);
                     }
                     if (method2.getReturnType() != cls8) {
@@ -1096,14 +1493,18 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                     methodArr2 = methods;
                     if (method2.isAnnotationPresent(Container.class)) {
                         if (method2.getParameterTypes().length != 1 || method2.getParameterTypes()[i] != Integer.TYPE) {
-                            throw new IllegalStateException("Container creation requires a single int-typed argument: " + method2);
+                            throw new IllegalStateException(
+                                    "Container creation requires a single int-typed argument: " + method2);
                         }
-                        if (!method2.getReturnType().isArray() || !method2.getReturnType().getComponentType().isAssignableFrom(cls11)) {
-                            throw new IllegalStateException("Container creation requires an assignable array as return value: " + method2);
+                        if (!method2.getReturnType().isArray()
+                                || !method2.getReturnType().getComponentType().isAssignableFrom(cls11)) {
+                            throw new IllegalStateException(
+                                    "Container creation requires an assignable array as return value: " + method2);
                         }
                         linkedHashMap.put(method2, new Dispatcher.ForContainerCreation(cls11));
                     } else {
-                        if (cls11.getName().equals("java.lang.invoke.MethodHandles") && method2.getName().equals("lookup")) {
+                        if (cls11.getName().equals("java.lang.invoke.MethodHandles")
+                                && method2.getName().equals("lookup")) {
                             throw new UnsupportedOperationException("Cannot resolve Byte Buddy lookup via dispatcher");
                         }
                         try {
@@ -1168,23 +1569,29 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                                             cls3 = cls8;
                                             cls4 = cls9;
                                             cls5 = cls10;
-                                            cls7 = Class.forName(((Proxied) annotation).value(), false, this.classLoader);
+                                            cls7 = Class.forName(((Proxied) annotation).value(), false,
+                                                    this.classLoader);
                                             if (parameterTypes[i4].isAssignableFrom(cls7)) {
                                                 parameterTypes[i4] = cls7;
                                                 break;
                                                 break;
                                             }
-                                            throw new IllegalStateException("Cannot resolve to type: " + cls7.getName() + " at " + i4 + " of " + method2);
+                                            throw new IllegalStateException("Cannot resolve to type: " + cls7.getName()
+                                                    + " at " + i4 + " of " + method2);
                                         }
                                         if (!parameterTypes[i4].isPrimitive()) {
-                                            throw new IllegalStateException("Primitive values are not supposed to be proxied: " + i4 + " of " + method2);
+                                            throw new IllegalStateException(
+                                                    "Primitive values are not supposed to be proxied: " + i4 + " of "
+                                                            + method2);
                                         }
                                         i10 = i9;
                                         cls3 = cls8;
                                         cls4 = cls9;
                                         cls5 = cls10;
-                                        if (parameterTypes[i4].isAssignableFrom(Class.forName(((Proxied) annotation).value(), false, this.classLoader))) {
-                                            throw new IllegalStateException("Cannot resolve to component type: " + ((Proxied) annotation).value() + " at " + i4 + " of " + method2);
+                                        if (parameterTypes[i4].isAssignableFrom(Class
+                                                .forName(((Proxied) annotation).value(), false, this.classLoader))) {
+                                            throw new IllegalStateException("Cannot resolve to component type: "
+                                                    + ((Proxied) annotation).value() + " at " + i4 + " of " + method2);
                                         }
                                         sb = new StringBuilder();
                                         i11 = i10;
@@ -1194,12 +1601,14 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                                                 break;
                                                 break;
                                             }
-                                            sb.append(TypePool.Default.LazyTypeDescription.GenericTypeToken.COMPONENT_TYPE_PATH);
+                                            sb.append(
+                                                    TypePool.Default.LazyTypeDescription.GenericTypeToken.COMPONENT_TYPE_PATH);
                                             i11 = i12;
                                         }
                                         sb.append('L');
                                         sb.append(((Proxied) annotation).value());
-                                        sb.append(TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER);
+                                        sb.append(
+                                                TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER);
                                         parameterTypes[i4] = Class.forName(sb.toString(), false, this.classLoader);
                                         break;
                                         break;
@@ -1220,7 +1629,8 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                             if (method2.isAnnotationPresent(IsConstructor.class)) {
                                 constructor = cls11.getConstructor(parameterTypes);
                                 if (method2.getReturnType().isAssignableFrom(cls11)) {
-                                    throw new IllegalStateException("Cannot assign " + constructor.getDeclaringClass().getName() + " to " + method2);
+                                    throw new IllegalStateException("Cannot assign "
+                                            + constructor.getDeclaringClass().getName() + " to " + method2);
                                 }
                                 if ((constructor.getModifiers() & 1) != 0) {
                                     constructor.setAccessible(true);
@@ -1232,16 +1642,19 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                                 linkedHashMap.put(method2, new Dispatcher.ForConstructor(constructor));
                             } else {
                                 Proxied proxied = (Proxied) method2.getAnnotation(Proxied.class);
-                                method = cls11.getMethod(proxied == null ? method2.getName() : proxied.value(), parameterTypes);
+                                method = cls11.getMethod(proxied == null ? method2.getName() : proxied.value(),
+                                        parameterTypes);
                                 if (method2.getReturnType().isAssignableFrom(method.getReturnType())) {
-                                    throw new IllegalStateException("Cannot assign " + method.getReturnType().getName() + " to " + method2);
+                                    throw new IllegalStateException(
+                                            "Cannot assign " + method.getReturnType().getName() + " to " + method2);
                                 }
                                 exceptionTypes = method.getExceptionTypes();
                                 length = exceptionTypes.length;
                                 i5 = 0;
                                 while (i5 < length) {
                                     cls6 = exceptionTypes[i5];
-                                    clsArr = RuntimeException.class.isAssignableFrom(cls6) ? exceptionTypes : exceptionTypes;
+                                    clsArr = RuntimeException.class.isAssignableFrom(cls6) ? exceptionTypes
+                                            : exceptionTypes;
                                     i5++;
                                     exceptionTypes = clsArr;
                                 }
@@ -1254,12 +1667,14 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                                 }
                                 if (Modifier.isStatic(method.getModifiers())) {
                                     if (method2.isAnnotationPresent(IsStatic.class)) {
-                                        throw new IllegalStateException("Resolved method for " + method2 + " was expected to be static: " + method);
+                                        throw new IllegalStateException("Resolved method for " + method2
+                                                + " was expected to be static: " + method);
                                     }
                                     linkedHashMap.put(method2, new Dispatcher.ForStaticMethod(method));
                                 } else {
                                     if (!method2.isAnnotationPresent(IsStatic.class)) {
-                                        throw new IllegalStateException("Resolved method for " + method2 + " was expected to be virtual: " + method);
+                                        throw new IllegalStateException("Resolved method for " + method2
+                                                + " was expected to be virtual: " + method);
                                     }
                                     linkedHashMap.put(method2, new Dispatcher.ForNonStaticMethod(method));
                                 }
@@ -1294,15 +1709,19 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                                                 cls3 = cls8;
                                                 cls4 = cls9;
                                                 cls5 = cls10;
-                                                cls7 = Class.forName(((Proxied) annotation).value(), false, this.classLoader);
+                                                cls7 = Class.forName(((Proxied) annotation).value(), false,
+                                                        this.classLoader);
                                                 if (parameterTypes[i4].isAssignableFrom(cls7)) {
                                                     parameterTypes[i4] = cls7;
                                                     break;
                                                 }
-                                                throw new IllegalStateException("Cannot resolve to type: " + cls7.getName() + " at " + i4 + " of " + method2);
+                                                throw new IllegalStateException("Cannot resolve to type: "
+                                                        + cls7.getName() + " at " + i4 + " of " + method2);
                                             }
                                             if (!parameterTypes[i4].isPrimitive()) {
-                                                throw new IllegalStateException("Primitive values are not supposed to be proxied: " + i4 + " of " + method2);
+                                                throw new IllegalStateException(
+                                                        "Primitive values are not supposed to be proxied: " + i4
+                                                                + " of " + method2);
                                             }
                                             i10 = i9;
                                             cls3 = cls8;
@@ -1313,7 +1732,9 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                                                 cls4 = cls9;
                                                 cls5 = cls10;
                                                 z3 = z;
-                                                objOf3 = zIsAnnotationPresent ? Dispatcher.ForDefaultValue.of(method2.getReturnType()) : Dispatcher.ForDefaultValue.of(method2.getReturnType());
+                                                objOf3 = zIsAnnotationPresent
+                                                        ? Dispatcher.ForDefaultValue.of(method2.getReturnType())
+                                                        : Dispatcher.ForDefaultValue.of(method2.getReturnType());
                                                 linkedHashMap.put(method2, objOf3);
                                                 i13 = i14 + 1;
                                                 methods = methodArr2;
@@ -1329,7 +1750,9 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                                                 cls4 = cls9;
                                                 cls5 = cls10;
                                                 z3 = z;
-                                                objOf2 = zIsAnnotationPresent ? Dispatcher.ForDefaultValue.of(method2.getReturnType()) : Dispatcher.ForDefaultValue.of(method2.getReturnType());
+                                                objOf2 = zIsAnnotationPresent
+                                                        ? Dispatcher.ForDefaultValue.of(method2.getReturnType())
+                                                        : Dispatcher.ForDefaultValue.of(method2.getReturnType());
                                                 linkedHashMap.put(method2, objOf2);
                                                 i13 = i14 + 1;
                                                 methods = methodArr2;
@@ -1345,7 +1768,8 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                                                 cls4 = cls9;
                                                 cls5 = cls10;
                                                 z3 = z;
-                                                linkedHashMap.put(method2, new Dispatcher.ForUnresolvedMethod("Unexpected error: " + th.getMessage()));
+                                                linkedHashMap.put(method2, new Dispatcher.ForUnresolvedMethod(
+                                                        "Unexpected error: " + th.getMessage()));
                                                 i13 = i14 + 1;
                                                 methods = methodArr2;
                                                 length3 = i2;
@@ -1359,8 +1783,12 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                                             try {
                                                 cls5 = cls10;
                                                 try {
-                                                    if (parameterTypes[i4].isAssignableFrom(Class.forName(((Proxied) annotation).value(), false, this.classLoader))) {
-                                                        throw new IllegalStateException("Cannot resolve to component type: " + ((Proxied) annotation).value() + " at " + i4 + " of " + method2);
+                                                    if (parameterTypes[i4].isAssignableFrom(Class.forName(
+                                                            ((Proxied) annotation).value(), false, this.classLoader))) {
+                                                        throw new IllegalStateException(
+                                                                "Cannot resolve to component type: "
+                                                                        + ((Proxied) annotation).value() + " at " + i4
+                                                                        + " of " + method2);
                                                     }
                                                     sb = new StringBuilder();
                                                     i11 = i10;
@@ -1369,13 +1797,16 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                                                         if (i11 > 0) {
                                                             break;
                                                         }
-                                                        sb.append(TypePool.Default.LazyTypeDescription.GenericTypeToken.COMPONENT_TYPE_PATH);
+                                                        sb.append(
+                                                                TypePool.Default.LazyTypeDescription.GenericTypeToken.COMPONENT_TYPE_PATH);
                                                         i11 = i12;
                                                     }
                                                     sb.append('L');
                                                     sb.append(((Proxied) annotation).value());
-                                                    sb.append(TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER);
-                                                    parameterTypes[i4] = Class.forName(sb.toString(), false, this.classLoader);
+                                                    sb.append(
+                                                            TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER);
+                                                    parameterTypes[i4] = Class.forName(sb.toString(), false,
+                                                            this.classLoader);
                                                     break;
                                                 } catch (ClassNotFoundException e8) {
                                                     e = e8;
@@ -1395,8 +1826,11 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                                                 } catch (NoSuchMethodException e9) {
                                                     e = e9;
                                                     z3 = z;
-                                                    if (zIsAnnotationPresent && !method2.isAnnotationPresent(Defaults.class)) {
-                                                        objOf2 = new Dispatcher.ForUnresolvedMethod("Method not available on current VM: " + e.getMessage());
+                                                    if (zIsAnnotationPresent
+                                                            && !method2.isAnnotationPresent(Defaults.class)) {
+                                                        objOf2 = new Dispatcher.ForUnresolvedMethod(
+                                                                "Method not available on current VM: "
+                                                                        + e.getMessage());
                                                     }
                                                     linkedHashMap.put(method2, objOf2);
                                                     i13 = i14 + 1;
@@ -1411,7 +1845,8 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                                                 } catch (Throwable th3) {
                                                     th = th3;
                                                     z3 = z;
-                                                    linkedHashMap.put(method2, new Dispatcher.ForUnresolvedMethod("Unexpected error: " + th.getMessage()));
+                                                    linkedHashMap.put(method2, new Dispatcher.ForUnresolvedMethod(
+                                                            "Unexpected error: " + th.getMessage()));
                                                     i13 = i14 + 1;
                                                     methods = methodArr2;
                                                     length3 = i2;
@@ -1458,7 +1893,8 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                                                 th = th4;
                                                 cls5 = cls10;
                                                 z3 = z;
-                                                linkedHashMap.put(method2, new Dispatcher.ForUnresolvedMethod("Unexpected error: " + th.getMessage()));
+                                                linkedHashMap.put(method2, new Dispatcher.ForUnresolvedMethod(
+                                                        "Unexpected error: " + th.getMessage()));
                                                 i13 = i14 + 1;
                                                 methods = methodArr2;
                                                 length3 = i2;
@@ -1487,7 +1923,8 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                                 if (method2.isAnnotationPresent(IsConstructor.class)) {
                                     constructor = cls11.getConstructor(parameterTypes);
                                     if (method2.getReturnType().isAssignableFrom(cls11)) {
-                                        throw new IllegalStateException("Cannot assign " + constructor.getDeclaringClass().getName() + " to " + method2);
+                                        throw new IllegalStateException("Cannot assign "
+                                                + constructor.getDeclaringClass().getName() + " to " + method2);
                                     }
                                     if ((constructor.getModifiers() & 1) != 0 || (cls11.getModifiers() & 1) == 0) {
                                         constructor.setAccessible(true);
@@ -1509,26 +1946,31 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                                         linkedHashMap.put(method2, objOf2);
                                     } catch (Throwable th5) {
                                         th = th5;
-                                        linkedHashMap.put(method2, new Dispatcher.ForUnresolvedMethod("Unexpected error: " + th.getMessage()));
+                                        linkedHashMap.put(method2, new Dispatcher.ForUnresolvedMethod(
+                                                "Unexpected error: " + th.getMessage()));
                                     }
                                 } else {
                                     Proxied proxied2 = (Proxied) method2.getAnnotation(Proxied.class);
-                                    method = cls11.getMethod(proxied2 == null ? method2.getName() : proxied2.value(), parameterTypes);
+                                    method = cls11.getMethod(proxied2 == null ? method2.getName() : proxied2.value(),
+                                            parameterTypes);
                                     if (method2.getReturnType().isAssignableFrom(method.getReturnType())) {
-                                        throw new IllegalStateException("Cannot assign " + method.getReturnType().getName() + " to " + method2);
+                                        throw new IllegalStateException(
+                                                "Cannot assign " + method.getReturnType().getName() + " to " + method2);
                                     }
                                     exceptionTypes = method.getExceptionTypes();
                                     length = exceptionTypes.length;
                                     i5 = 0;
                                     while (i5 < length) {
                                         cls6 = exceptionTypes[i5];
-                                        if (RuntimeException.class.isAssignableFrom(cls6) && !Error.class.isAssignableFrom(cls6)) {
+                                        if (RuntimeException.class.isAssignableFrom(cls6)
+                                                && !Error.class.isAssignableFrom(cls6)) {
                                             Class<?>[] exceptionTypes2 = method2.getExceptionTypes();
                                             int length4 = exceptionTypes2.length;
                                             int i16 = 0;
                                             while (true) {
                                                 if (i16 >= length4) {
-                                                    throw new IllegalStateException("Resolved method for " + method2 + " throws undeclared checked exception " + cls6.getName());
+                                                    throw new IllegalStateException("Resolved method for " + method2
+                                                            + " throws undeclared checked exception " + cls6.getName());
                                                 }
                                                 clsArr = exceptionTypes;
                                                 if (exceptionTypes2[i16].isAssignableFrom(cls6)) {
@@ -1541,7 +1983,8 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                                         i5++;
                                         exceptionTypes = clsArr;
                                     }
-                                    if ((method.getModifiers() & 1) != 0 || (method.getDeclaringClass().getModifiers() & 1) == 0) {
+                                    if ((method.getModifiers() & 1) != 0
+                                            || (method.getDeclaringClass().getModifiers() & 1) == 0) {
                                         method.setAccessible(true);
                                         z3 = false;
                                     } else {
@@ -1549,12 +1992,14 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                                     }
                                     if (Modifier.isStatic(method.getModifiers())) {
                                         if (method2.isAnnotationPresent(IsStatic.class)) {
-                                            throw new IllegalStateException("Resolved method for " + method2 + " was expected to be static: " + method);
+                                            throw new IllegalStateException("Resolved method for " + method2
+                                                    + " was expected to be static: " + method);
                                         }
                                         linkedHashMap.put(method2, new Dispatcher.ForStaticMethod(method));
                                     } else {
                                         if (!method2.isAnnotationPresent(IsStatic.class)) {
-                                            throw new IllegalStateException("Resolved method for " + method2 + " was expected to be virtual: " + method);
+                                            throw new IllegalStateException("Resolved method for " + method2
+                                                    + " was expected to be virtual: " + method);
                                         }
                                         linkedHashMap.put(method2, new Dispatcher.ForNonStaticMethod(method));
                                     }
@@ -1588,7 +2033,8 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                                         throw new IllegalStateException("Expected self type: " + method2);
                                     }
                                     if (!parameterTypes[i].isAssignableFrom(cls11)) {
-                                        throw new IllegalStateException("Cannot assign self type: " + cls11 + " on " + method2);
+                                        throw new IllegalStateException(
+                                                "Cannot assign self type: " + cls11 + " on " + method2);
                                     }
                                     int length5 = parameterTypes.length - 1;
                                     z = z3;
@@ -1642,7 +2088,8 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                                             cls4 = cls9;
                                             cls5 = cls10;
                                             z3 = z;
-                                            linkedHashMap.put(method2, new Dispatcher.ForUnresolvedMethod("Unexpected error: " + th.getMessage()));
+                                            linkedHashMap.put(method2, new Dispatcher.ForUnresolvedMethod(
+                                                    "Unexpected error: " + th.getMessage()));
                                             i13 = i14 + 1;
                                             methods = methodArr2;
                                             length3 = i2;
@@ -1699,7 +2146,8 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                                     cls3 = cls8;
                                     cls4 = cls9;
                                     cls5 = cls10;
-                                    linkedHashMap.put(method2, new Dispatcher.ForUnresolvedMethod("Unexpected error: " + th.getMessage()));
+                                    linkedHashMap.put(method2,
+                                            new Dispatcher.ForUnresolvedMethod("Unexpected error: " + th.getMessage()));
                                     i13 = i14 + 1;
                                     methods = methodArr2;
                                     length3 = i2;
@@ -1711,7 +2159,8 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                                     i = 0;
                                 }
                                 if (zIsAnnotationPresent && !method2.isAnnotationPresent(Defaults.class)) {
-                                    objOf3 = new Dispatcher.ForUnresolvedMethod("Class not available on current VM: " + e.getMessage());
+                                    objOf3 = new Dispatcher.ForUnresolvedMethod(
+                                            "Class not available on current VM: " + e.getMessage());
                                 }
                                 linkedHashMap.put(method2, objOf3);
                             }
@@ -1743,14 +2192,18 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                 cls10 = cls5;
                 i = 0;
             }
-            return z3 ? (T) DynamicClassLoader.proxy(this.proxy, linkedHashMap) : (T) Proxy.newProxyInstance(this.proxy.getClassLoader(), new Class[]{this.proxy}, new ProxiedInvocationHandler(cls11.getName(), linkedHashMap));
+            return z3 ? (T) DynamicClassLoader.proxy(this.proxy, linkedHashMap)
+                    : (T) Proxy.newProxyInstance(this.proxy.getClassLoader(), new Class[] { this.proxy },
+                            new ProxiedInvocationHandler(cls11.getName(), linkedHashMap));
         } catch (ClassNotFoundException e22) {
             String str7 = "Instance check requires a single regular-typed argument: ";
             String str8 = "Instance check requires a boolean return type: ";
             Class<?> cls12 = cls8;
             Class<Instance> cls13 = cls9;
             Class<?> cls14 = cls10;
-            Method[] methods2 = this.generate ? (Method[]) GraalImageCode.getCurrent().sorted(this.proxy.getMethods(), MethodComparator.INSTANCE) : this.proxy.getMethods();
+            Method[] methods2 = this.generate
+                    ? (Method[]) GraalImageCode.getCurrent().sorted(this.proxy.getMethods(), MethodComparator.INSTANCE)
+                    : this.proxy.getMethods();
             int length6 = methods2.length;
             int i17 = 0;
             while (i17 < length6) {
@@ -1773,11 +2226,13 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                             objOf = Dispatcher.ForDefaultValue.of(method3.getReturnType());
                         } else {
                             methodArr = methods2;
-                            objOf = new Dispatcher.ForUnresolvedMethod("Type not available on current VM: " + e22.getMessage());
+                            objOf = new Dispatcher.ForUnresolvedMethod(
+                                    "Type not available on current VM: " + e22.getMessage());
                         }
                         linkedHashMap.put(method3, objOf);
                     } else {
-                        if (method3.getParameterTypes().length != 1 || method3.getParameterTypes()[0].isPrimitive() || method3.getParameterTypes()[0].isArray()) {
+                        if (method3.getParameterTypes().length != 1 || method3.getParameterTypes()[0].isPrimitive()
+                                || method3.getParameterTypes()[0].isArray()) {
                             throw new IllegalStateException(str7 + method3);
                         }
                         cls2 = cls12;
@@ -1798,7 +2253,9 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
                 str7 = str;
                 methods2 = methodArr;
             }
-            return this.generate ? (T) DynamicClassLoader.proxy(this.proxy, linkedHashMap) : (T) Proxy.newProxyInstance(this.proxy.getClassLoader(), new Class[]{this.proxy}, new ProxiedInvocationHandler(strValue, linkedHashMap));
+            return this.generate ? (T) DynamicClassLoader.proxy(this.proxy, linkedHashMap)
+                    : (T) Proxy.newProxyInstance(this.proxy.getClassLoader(), new Class[] { this.proxy },
+                            new ProxiedInvocationHandler(strValue, linkedHashMap));
         }
     }
 
@@ -1809,13 +2266,15 @@ public class JavaDispatcher<T> implements PrivilegedAction<T> {
     public static <T> PrivilegedAction<T> of(Class<T> cls, @MaybeNull ClassLoader classLoader, boolean z) {
         if (cls.isInterface()) {
             if (!cls.isAnnotationPresent(Proxied.class)) {
-                throw new IllegalArgumentException("Expected " + cls.getName() + " to be annotated with " + Proxied.class.getName());
+                throw new IllegalArgumentException(
+                        "Expected " + cls.getName() + " to be annotated with " + Proxied.class.getName());
             }
             if (!((Proxied) cls.getAnnotation(Proxied.class)).value().startsWith("java.security.")) {
                 return new JavaDispatcher(cls, classLoader, z);
             }
-            throw new IllegalArgumentException("Classes related to Java security cannot be proxied: ".concat(cls.getName()));
+            throw new IllegalArgumentException(
+                    "Classes related to Java security cannot be proxied: ".concat(cls.getName()));
         }
-        throw new IllegalArgumentException(bjs.l(cls, "Expected an interface instead of "));
+        throw new IllegalArgumentException(concatVar2Var1(cls, "Expected an interface instead of "));
     }
 }

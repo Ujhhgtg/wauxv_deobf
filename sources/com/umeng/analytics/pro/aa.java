@@ -22,7 +22,10 @@ public class aa {
     private List<a> d;
     private String e;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface a {
         void a(String str, long j, long j2, long j3);
 
@@ -54,7 +57,7 @@ public class aa {
             editorEdit.commit();
         } catch (Exception unused) {
         }
-        long jH = h(context);
+        long jH = locateDex(context);
         long jI = i(context);
         String str = this.b;
         long jA = w.a(context);
@@ -96,7 +99,8 @@ public class aa {
             if (FieldManager.allow(com.umeng.commonsdk.utils.d.E) && j > 0 && j2 == 0) {
                 long jA = w.a(appContext);
                 if (jA > 0) {
-                    UMRTLog.e(UMRTLog.RTLOG_TAG, "--->>> last session end time stamp = 0, reconstruct it by foreground count value.");
+                    UMRTLog.e(UMRTLog.RTLOG_TAG,
+                            "--->>> last session end time stamp = 0, reconstruct it by foreground count value.");
                     j2 = j + (jA * 5000);
                 }
             }

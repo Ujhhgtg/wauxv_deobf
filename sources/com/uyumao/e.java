@@ -78,14 +78,15 @@ public class e {
     }
 
     public static String[] c(Context context) {
-        String[] strArr = {"", ""};
+        String[] strArr = { "", "" };
         if (context != null) {
             try {
                 if (!a(context, "android.permission.ACCESS_NETWORK_STATE")) {
                     strArr[0] = "";
                     return strArr;
                 }
-                ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService("connectivity");
+                ConnectivityManager connectivityManager = (ConnectivityManager) context
+                        .getSystemService("connectivity");
                 if (connectivityManager == null) {
                     strArr[0] = "";
                     return strArr;
@@ -117,13 +118,15 @@ public class e {
 
     public static JSONArray e(Context context) {
         WifiManager wifiManager;
-        if (context == null || !h(context)) {
+        if (context == null || !locateDex(context)) {
             return null;
         }
         JSONArray jSONArray = new JSONArray();
         JSONObject jSONObject = new JSONObject();
         try {
-            WifiInfo connectionInfo = (!a(context, "android.permission.ACCESS_WIFI_STATE") || (wifiManager = (WifiManager) context.getSystemService("wifi")) == null) ? null : wifiManager.getConnectionInfo();
+            WifiInfo connectionInfo = (!a(context, "android.permission.ACCESS_WIFI_STATE")
+                    || (wifiManager = (WifiManager) context.getSystemService("wifi")) == null) ? null
+                            : wifiManager.getConnectionInfo();
             if (connectionInfo == null) {
                 return null;
             }
@@ -142,13 +145,15 @@ public class e {
 
     public static JSONArray f(Context context) {
         List<ScanResult> scanResults;
-        if (!h(context)) {
+        if (!locateDex(context)) {
             return null;
         }
         JSONArray jSONArray = new JSONArray();
         try {
             WifiManager wifiManager = (WifiManager) context.getSystemService("wifi");
-            if (wifiManager != null && a(context, "android.permission.ACCESS_WIFI_STATE") && a(context, "android.permission.ACCESS_FINE_LOCATION") && (scanResults = wifiManager.getScanResults()) != null) {
+            if (wifiManager != null && a(context, "android.permission.ACCESS_WIFI_STATE")
+                    && a(context, "android.permission.ACCESS_FINE_LOCATION")
+                    && (scanResults = wifiManager.getScanResults()) != null) {
                 int size = scanResults.size();
                 if (size > 100) {
                     size = 100;
@@ -176,9 +181,13 @@ public class e {
     public static String[] g(Context context) {
         WifiManager wifiManager;
         WifiInfo connectionInfo;
-        String[] strArr = {"", ""};
+        String[] strArr = { "", "" };
         try {
-            if (a(context, "android.permission.ACCESS_WIFI_STATE") && a(context, "android.permission.ACCESS_COARSE_LOCATION") && a(context, "android.permission.ACCESS_FINE_LOCATION") && (wifiManager = (WifiManager) context.getApplicationContext().getSystemService("wifi")) != null && (connectionInfo = wifiManager.getConnectionInfo()) != null) {
+            if (a(context, "android.permission.ACCESS_WIFI_STATE")
+                    && a(context, "android.permission.ACCESS_COARSE_LOCATION")
+                    && a(context, "android.permission.ACCESS_FINE_LOCATION")
+                    && (wifiManager = (WifiManager) context.getApplicationContext().getSystemService("wifi")) != null
+                    && (connectionInfo = wifiManager.getConnectionInfo()) != null) {
                 String ssid = connectionInfo.getSSID();
                 String bssid = connectionInfo.getBSSID();
                 if (ssid.length() > 2 && ssid.charAt(0) == '\"' && ssid.charAt(ssid.length() - 1) == '\"') {
@@ -200,7 +209,9 @@ public class e {
         if (context == null) {
             return false;
         }
-        return 3 == ((!a(context, "android.permission.ACCESS_WIFI_STATE") || (wifiManager = (WifiManager) context.getSystemService("wifi")) == null) ? -1 : wifiManager.getWifiState());
+        return 3 == ((!a(context, "android.permission.ACCESS_WIFI_STATE")
+                || (wifiManager = (WifiManager) context.getSystemService("wifi")) == null) ? -1
+                        : wifiManager.getWifiState());
     }
 
     public static byte[] a(byte[] bArr, byte[] bArr2) {
@@ -308,7 +319,9 @@ public class e {
         }
         JSONObject jSONObject = new JSONObject();
         try {
-            if (!a(context, "android.permission.ACCESS_FINE_LOCATION") || !a(context, "android.permission.ACCESS_COARSE_LOCATION") || (locationManager = (LocationManager) context.getSystemService("location")) == null) {
+            if (!a(context, "android.permission.ACCESS_FINE_LOCATION")
+                    || !a(context, "android.permission.ACCESS_COARSE_LOCATION")
+                    || (locationManager = (LocationManager) context.getSystemService("location")) == null) {
                 return null;
             }
             List<String> providers = locationManager.getProviders(true);
@@ -394,7 +407,8 @@ public class e {
                 httpURLConnection.disconnect();
             } catch (Throwable unused3) {
             }
-            if (responseCode == 200 && TextUtils.equals("xgzip", httpURLConnection.getHeaderField("Content-Encoding"))) {
+            if (responseCode == 200
+                    && TextUtils.equals("xgzip", httpURLConnection.getHeaderField("Content-Encoding"))) {
                 byte[] bArrA2 = a(byteArrayOutputStream.toByteArray(), bytes);
                 byteArrayOutputStream.reset();
                 a(bArrA2, byteArrayOutputStream);
@@ -456,7 +470,7 @@ public class e {
                                     jSONArray.put(jSONObject);
                                 } else if (exb.m(cellInfo)) {
                                     JSONObject jSONObject2 = new JSONObject();
-                                    CellIdentityTdscdma cellIdentity = exb.h(cellInfo).getCellIdentity();
+                                    CellIdentityTdscdma cellIdentity = exb.locateDex(cellInfo).getCellIdentity();
                                     int cid = cellIdentity.getCid();
                                     int lac = cellIdentity.getLac();
                                     String mncString2 = cellIdentity.getMncString();
@@ -479,7 +493,8 @@ public class e {
                                     strSubstring = cellIdentity2.getMncString();
                                     strValueOf = cellIdentity2.getMccString();
                                 } else {
-                                    strSubstring = ("00" + String.valueOf(cellIdentity2.getMnc())).substring(r2.length() - 2);
+                                    strSubstring = ("00" + String.valueOf(cellIdentity2.getMnc()))
+                                            .substring(r2.length() - 2);
                                     strValueOf = String.valueOf(cellIdentity2.getMcc());
                                 }
                                 jSONObject3.put("nt", "Lte");
@@ -498,7 +513,8 @@ public class e {
                                     strSubstring2 = cellIdentity3.getMncString();
                                     strValueOf2 = cellIdentity3.getMccString();
                                 } else {
-                                    strSubstring2 = ("00" + String.valueOf(cellIdentity3.getMnc())).substring(r2.length() - 2);
+                                    strSubstring2 = ("00" + String.valueOf(cellIdentity3.getMnc()))
+                                            .substring(r2.length() - 2);
                                     strValueOf2 = String.valueOf(cellIdentity3.getMcc());
                                 }
                                 jSONObject4.put("nt", "Wcdma");
@@ -531,7 +547,8 @@ public class e {
                                     strSubstring3 = cellIdentity5.getMncString();
                                     strValueOf3 = cellIdentity5.getMccString();
                                 } else {
-                                    strSubstring3 = ("00" + String.valueOf(cellIdentity5.getMnc())).substring(r2.length() - 2);
+                                    strSubstring3 = ("00" + String.valueOf(cellIdentity5.getMnc()))
+                                            .substring(r2.length() - 2);
                                     strValueOf3 = String.valueOf(cellIdentity5.getMcc());
                                 }
                                 jSONObject6.put("nt", "Gsm");
@@ -637,7 +654,7 @@ public class e {
                 }
             }
             if (responseCode != 200) {
-                throw new Exception(bjs.i(responseCode, "response code "));
+                throw new Exception(concatVar2Var1(responseCode, "response code "));
             }
         } catch (Throwable th3) {
             th = th3;
@@ -658,7 +675,8 @@ public class e {
         if (file != null) {
             try {
                 if (file.exists()) {
-                    if (file.isDirectory() && (fileArrListFiles = file.listFiles()) != null && fileArrListFiles.length > 0) {
+                    if (file.isDirectory() && (fileArrListFiles = file.listFiles()) != null
+                            && fileArrListFiles.length > 0) {
                         for (File file2 : fileArrListFiles) {
                             a(file2);
                         }
@@ -701,7 +719,9 @@ public class e {
                     return "4G";
                 default:
                     String subtypeName = networkInfo.getSubtypeName();
-                    return TextUtils.isEmpty(subtypeName) ? "" : ("TD-SCDMA".equalsIgnoreCase(subtypeName) || "WCDMA".equalsIgnoreCase(subtypeName) || "CDMA2000".equalsIgnoreCase(subtypeName)) ? "3G" : subtypeName;
+                    return TextUtils.isEmpty(subtypeName) ? ""
+                            : ("TD-SCDMA".equalsIgnoreCase(subtypeName) || "WCDMA".equalsIgnoreCase(subtypeName)
+                                    || "CDMA2000".equalsIgnoreCase(subtypeName)) ? "3G" : subtypeName;
             }
             th.printStackTrace();
             return "";
@@ -723,20 +743,33 @@ public class e {
         if (context == null) {
             return false;
         }
-        return ((Integer) Class.forName("android.content.Context").getMethod("checkSelfPermission", String.class).invoke(context, str)).intValue() == 0;
+        return ((Integer) Class.forName("android.content.Context").getMethod("checkSelfPermission", String.class)
+                .invoke(context, str)).intValue() == 0;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.java:210)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:196)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:180)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:201)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.java:347)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(TryCatchBlockAttr.java:356)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:202)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.
+     * java:210)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:196)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:180)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:
+     * 201)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.
+     * java:347)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(
+     * TryCatchBlockAttr.java:356)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+     * MarkFinallyVisitor.java:202)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:119)
      */
     public static JSONArray a(JSONObject jSONObject, JSONObject jSONObject2) {
         try {

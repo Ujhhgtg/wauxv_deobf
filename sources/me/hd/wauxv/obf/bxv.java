@@ -33,7 +33,7 @@ public abstract class bxv {
         if (property != null) {
             property.equalsIgnoreCase("true");
         }
-        e = new String[]{"2.0"};
+        e = new String[] { "2.0" };
     }
 
     public static ArrayList f() {
@@ -43,41 +43,50 @@ public abstract class bxv {
         cih cihVar = null;
         if (property != null && !property.isEmpty()) {
             try {
-                String str = "Attempting to load provider \"" + property + "\" specified via \"slf4j.provider\" system property";
+                String str = "Attempting to load provider \"" + property
+                        + "\" specified via \"slf4j.provider\" system property";
                 int i = dbr.a;
                 if (dkz.ae(2) >= dkz.ae(dbr.b)) {
                     dbr.d().println("SLF4J(I): " + str);
                 }
                 cihVar = (cih) classLoader.loadClass(property).getConstructor(null).newInstance(null);
             } catch (ClassCastException e2) {
-                dbr.c("Specified SLF4JServiceProvider (" + property + ") does not implement SLF4JServiceProvider interface", e2);
+                dbr.c("Specified SLF4JServiceProvider (" + property
+                        + ") does not implement SLF4JServiceProvider interface", e2);
             } catch (ClassNotFoundException e3) {
                 e = e3;
-                dbr.c("Failed to instantiate the specified SLF4JServiceProvider (" + property + ")", e);
+                dbr.createInstanceWithArgs(
+                        "Failed to instantiate the specified SLF4JServiceProvider (" + property + ")", e);
             } catch (IllegalAccessException e4) {
                 e = e4;
-                dbr.c("Failed to instantiate the specified SLF4JServiceProvider (" + property + ")", e);
+                dbr.createInstanceWithArgs(
+                        "Failed to instantiate the specified SLF4JServiceProvider (" + property + ")", e);
             } catch (InstantiationException e5) {
                 e = e5;
-                dbr.c("Failed to instantiate the specified SLF4JServiceProvider (" + property + ")", e);
+                dbr.createInstanceWithArgs(
+                        "Failed to instantiate the specified SLF4JServiceProvider (" + property + ")", e);
             } catch (NoSuchMethodException e6) {
                 e = e6;
-                dbr.c("Failed to instantiate the specified SLF4JServiceProvider (" + property + ")", e);
+                dbr.createInstanceWithArgs(
+                        "Failed to instantiate the specified SLF4JServiceProvider (" + property + ")", e);
             } catch (InvocationTargetException e7) {
                 e = e7;
-                dbr.c("Failed to instantiate the specified SLF4JServiceProvider (" + property + ")", e);
+                dbr.createInstanceWithArgs(
+                        "Failed to instantiate the specified SLF4JServiceProvider (" + property + ")", e);
             }
         }
         if (cihVar != null) {
             arrayList.add(cihVar);
             return arrayList;
         }
-        Iterator it = (System.getSecurityManager() == null ? ServiceLoader.load(cih.class, classLoader) : (ServiceLoader) AccessController.doPrivileged(new PrivilegedAction() { // from class: me.hd.wauxv.obf.bxu
-            @Override // java.security.PrivilegedAction
-            public final Object run() {
-                return ServiceLoader.load(cih.class, classLoader);
-            }
-        })).iterator();
+        Iterator it = (System.getSecurityManager() == null ? ServiceLoader.load(cih.class, classLoader)
+                : (ServiceLoader) AccessController.doPrivileged(new PrivilegedAction() { // from class:
+                                                                                         // me.hd.wauxv.obf.bxu
+                    @Override // java.security.PrivilegedAction
+                    public final Object run() {
+                        return ServiceLoader.load(cih.class, classLoader);
+                    }
+                })).iterator();
         while (it.hasNext()) {
             try {
                 arrayList.add((cih) it.next());
@@ -109,7 +118,8 @@ public abstract class bxv {
             cihVar = b;
         } else {
             if (i == 2) {
-                throw new IllegalStateException("org.slf4j.LoggerFactory in failed state. Original exception was thrown EARLIER. See also https://www.slf4j.org/codes.html#unsuccessfulInit");
+                throw new IllegalStateException(
+                        "org.slf4j.LoggerFactory in failed state. Original exception was thrown EARLIER. See also https://www.slf4j.org/codes.html#unsuccessfulInit");
             }
             if (i == 3) {
                 cihVar = d;
@@ -143,7 +153,9 @@ public abstract class bxv {
                 LinkedHashSet linkedHashSet = new LinkedHashSet();
                 try {
                     ClassLoader classLoader = bxv.class.getClassLoader();
-                    Enumeration<URL> systemResources = classLoader == null ? ClassLoader.getSystemResources("org/slf4j/impl/StaticLoggerBinder.class") : classLoader.getResources("org/slf4j/impl/StaticLoggerBinder.class");
+                    Enumeration<URL> systemResources = classLoader == null
+                            ? ClassLoader.getSystemResources("org/slf4j/impl/StaticLoggerBinder.class")
+                            : classLoader.getResources("org/slf4j/impl/StaticLoggerBinder.class");
                     while (systemResources.hasMoreElements()) {
                         linkedHashSet.add(systemResources.nextElement());
                     }
@@ -172,7 +184,8 @@ public abstract class bxv {
                             if (z) {
                                 return;
                             }
-                            dbr.e("The requested version 2.0.99 by your slf4j provider is not compatible with " + Arrays.asList(e).toString());
+                            dbr.e("The requested version 2.0.99 by your slf4j provider is not compatible with "
+                                    + Arrays.asList(e).toString());
                             dbr.e("See https://www.slf4j.org/codes.html#version_mismatch for further details.");
                             return;
                         default:
@@ -222,7 +235,8 @@ public abstract class bxv {
                         } else if (dnxVar2.e(dnzVar.a) && dnxVar2.j()) {
                             try {
                                 dnxVar2.d.invoke(dnxVar2.a, dnzVar);
-                            } catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException unused) {
+                            } catch (IllegalAccessException | IllegalArgumentException
+                                    | InvocationTargetException unused) {
                             }
                         }
                     }
@@ -230,7 +244,8 @@ public abstract class bxv {
                 int i2 = i + 1;
                 if (i == 0) {
                     if (dnzVar.b.j()) {
-                        dbr.e("A number (" + size + ") of logging calls during the initialization phase have been intercepted and are");
+                        dbr.e("A number (" + size
+                                + ") of logging calls during the initialization phase have been intercepted and are");
                         dbr.e("now being replayed. These are subject to the filtering rules of the underlying logging system.");
                         dbr.e("See also https://www.slf4j.org/codes.html#replay");
                     } else if (!(dnzVar.b.a instanceof cig)) {
@@ -252,7 +267,8 @@ public abstract class bxv {
 
     public static void j(ArrayList arrayList) {
         if (arrayList.isEmpty()) {
-            throw new IllegalStateException("No providers were found which is impossible after successful initialization.");
+            throw new IllegalStateException(
+                    "No providers were found which is impossible after successful initialization.");
         }
         if (arrayList.size() > 1) {
             String str = "Actual provider is of type [" + arrayList.get(0) + "]";

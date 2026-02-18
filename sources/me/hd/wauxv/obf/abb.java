@@ -8,7 +8,7 @@ import java.util.Iterator;
 /* JADX INFO: loaded from: classes.dex */
 public abstract class abb extends aba {
     public static int ak(Iterable iterable, int i) {
-        bzo.q(iterable, "<this>");
+        throwIfVar1IsNull(iterable, "<this>");
         return iterable instanceof Collection ? ((Collection) iterable).size() : i;
     }
 

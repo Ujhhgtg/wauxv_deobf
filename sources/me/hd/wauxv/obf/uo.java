@@ -2,7 +2,7 @@ package me.hd.wauxv.obf;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class uo extends doo {
+public final class uo extends BaseHook {
     public static final uo a = new uo("ChatFavVoiceForwardHook" /* cnb.z(-477248175995690L) */);
     public static final String b = "收藏" /* cnb.z(-479253925722922L) */;
     public static final String c = "聊天收藏语音转发" /* cnb.z(-479275400559402L) */;
@@ -21,18 +21,18 @@ public final class uo extends doo {
         akiVarAd.o();
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String f() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getName() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String g() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getCategory() {
         return b;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String o() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getDescription() {
         return d;
     }
 }

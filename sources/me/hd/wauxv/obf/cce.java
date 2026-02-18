@@ -83,6 +83,8 @@ public abstract class cce implements dho, ccm, AdapterView.OnItemClickListener {
     @Override // android.widget.AdapterView.OnItemClickListener
     public final void onItemClick(AdapterView adapterView, View view, int i, long j) {
         ListAdapter listAdapter = (ListAdapter) adapterView.getAdapter();
-        (listAdapter instanceof HeaderViewListAdapter ? (cbt) ((HeaderViewListAdapter) listAdapter).getWrappedAdapter() : (cbt) listAdapter).a.ap((MenuItem) listAdapter.getItem(i), this, !(this instanceof tm) ? 0 : 4);
+        (listAdapter instanceof HeaderViewListAdapter ? (cbt) ((HeaderViewListAdapter) listAdapter).getWrappedAdapter()
+                : (cbt) listAdapter).cachedConstructors
+                .ap((MenuItem) listAdapter.getItem(i), this, !(this instanceof tm) ? 0 : 4);
     }
 }

@@ -88,7 +88,8 @@ public abstract class bdj implements ComponentCallbacks, View.OnCreateContextMen
     public LayoutInflater aa(Bundle bundle) {
         bdm bdmVar = this.bn;
         if (bdmVar == null) {
-            throw new IllegalStateException("onGetLayoutInflater() cannot be executed until the Fragment is attached to the FragmentManager.");
+            throw new IllegalStateException(
+                    "onGetLayoutInflater() cannot be executed until the Fragment is attached to the FragmentManager.");
         }
         hb hbVar = bdmVar.h;
         LayoutInflater layoutInflaterCloneInContext = hbVar.getLayoutInflater().cloneInContext(hbVar);
@@ -127,15 +128,15 @@ public abstract class bdj implements ComponentCallbacks, View.OnCreateContextMen
         }
         View view = this.bz;
         bfg bfgVar = this.ci;
-        bzo.q(view, "<this>");
+        throwIfVar1IsNull(view, "<this>");
         view.setTag(R.id.view_tree_lifecycle_owner, bfgVar);
         View view2 = this.bz;
         bfg bfgVar2 = this.ci;
-        bzo.q(view2, "<this>");
+        throwIfVar1IsNull(view2, "<this>");
         view2.setTag(R.id.view_tree_view_model_store_owner, bfgVar2);
         View view3 = this.bz;
         bfg bfgVar3 = this.ci;
-        bzo.q(view3, "<this>");
+        throwIfVar1IsNull(view3, "<this>");
         view3.setTag(R.id.view_tree_saved_state_registry_owner, bfgVar3);
         chv chvVar = this.cj;
         bfg bfgVar4 = this.ci;
@@ -162,7 +163,8 @@ public abstract class bdj implements ComponentCallbacks, View.OnCreateContextMen
             applicationContext = ((ContextWrapper) applicationContext).getBaseContext();
         }
         if (application == null && beg.ar(3)) {
-            Log.d("FragmentManager", "Could not find Application instance from Context " + dc().getApplicationContext() + ", you will not be able to use AndroidViewModel with the default ViewModelProvider.Factory");
+            Log.d("FragmentManager", "Could not find Application instance from Context " + dc().getApplicationContext()
+                    + ", you will not be able to use AndroidViewModel with the default ViewModelProvider.Factory");
         }
         chq chqVar = new chq(0);
         LinkedHashMap linkedHashMap = chqVar.c;
@@ -184,7 +186,8 @@ public abstract class bdj implements ComponentCallbacks, View.OnCreateContextMen
             throw new IllegalStateException("Can't access ViewModels from detached fragment");
         }
         if (cr() == 1) {
-            throw new IllegalStateException("Calling getViewModelStore() before a Fragment reaches onCreate() when using setMaxLifecycle(INITIALIZED) is not supported");
+            throw new IllegalStateException(
+                    "Calling getViewModelStore() before a Fragment reaches onCreate() when using setMaxLifecycle(INITIALIZED) is not supported");
         }
         HashMap map = this.bm.ao.d;
         erq erqVar = (erq) map.get(this.aw);
@@ -308,7 +311,8 @@ public abstract class bdj implements ComponentCallbacks, View.OnCreateContextMen
 
     public final void cy(int i, int i2, Intent intent) {
         if (beg.ar(2)) {
-            Log.v("FragmentManager", "Fragment " + this + " received the following in onActivityResult(): requestCode: " + i + " resultCode: " + i2 + " data: " + intent);
+            Log.v("FragmentManager", "Fragment " + this + " received the following in onActivityResult(): requestCode: "
+                    + i + " resultCode: " + i2 + " data: " + intent);
         }
     }
 
@@ -320,7 +324,8 @@ public abstract class bdj implements ComponentCallbacks, View.OnCreateContextMen
         j jVar = (j) this;
         erp erpVar = new erp(jVar, 24);
         if (this.as > 1) {
-            throw new IllegalStateException(yg.l("Fragment ", this, " is attempting to registerForActivityResult after being created. Fragments must call registerForActivityResult() before they are created (i.e. initialization, onAttach(), or onCreate())."));
+            throw new IllegalStateException(yg.l("Fragment ", this,
+                    " is attempting to registerForActivityResult after being created. Fragments must call registerForActivityResult() before they are created (i.e. initialization, onAttach(), or onCreate())."));
         }
         AtomicReference atomicReference = new AtomicReference();
         bdf bdfVar = new bdf(jVar, erpVar, atomicReference, bhsVar, dqVar);
@@ -354,7 +359,8 @@ public abstract class bdj implements ComponentCallbacks, View.OnCreateContextMen
         if (view != null) {
             return view;
         }
-        throw new IllegalStateException(yg.l("Fragment ", this, " did not return a View from onCreateView() or this was called before onCreateView()."));
+        throw new IllegalStateException(yg.l("Fragment ", this,
+                " did not return a View from onCreateView() or this was called before onCreateView()."));
     }
 
     public final void de(int i, int i2, int i3, int i4) {
@@ -435,7 +441,8 @@ public abstract class bdj implements ComponentCallbacks, View.OnCreateContextMen
     }
 
     @Override // android.view.View.OnCreateContextMenuListener
-    public final void onCreateContextMenu(ContextMenu contextMenu, View view, ContextMenu.ContextMenuInfo contextMenuInfo) {
+    public final void onCreateContextMenu(ContextMenu contextMenu, View view,
+            ContextMenu.ContextMenuInfo contextMenuInfo) {
         db().onCreateContextMenu(contextMenu, view, contextMenuInfo);
     }
 

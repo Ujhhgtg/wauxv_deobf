@@ -56,7 +56,10 @@ public final class ObjectReaderImplMap implements ObjectReader {
     static final Function ENUM_MAP_BUILDER = new cpv(11);
     static final Class CLASS_SINGLETON_MAP = Collections.singletonMap(1, 1).getClass();
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class ObjectCreatorUF implements Function {
         final Field map;
         final long mapOffset;
@@ -96,7 +99,8 @@ public final class ObjectReaderImplMap implements ObjectReader {
         CLASS_EMPTY_NAVIGABLE_MAP = Collections.emptyNavigableMap().getClass();
         CLASS_UNMODIFIABLE_MAP = Collections.unmodifiableMap(map).getClass();
         CLASS_UNMODIFIABLE_SORTED_MAP = Collections.unmodifiableSortedMap(Collections.emptySortedMap()).getClass();
-        CLASS_UNMODIFIABLE_NAVIGABLE_MAP = Collections.unmodifiableNavigableMap(Collections.emptyNavigableMap()).getClass();
+        CLASS_UNMODIFIABLE_NAVIGABLE_MAP = Collections.unmodifiableNavigableMap(Collections.emptyNavigableMap())
+                .getClass();
         INSTANCE = new ObjectReaderImplMap(null, HashMap.class, HashMap.class, 0L, null);
         INSTANCE_OBJECT = new ObjectReaderImplMap(null, JSONObject.class, JSONObject.class, 0L, null);
     }
@@ -127,34 +131,42 @@ public final class ObjectReaderImplMap implements ObjectReader {
         return new EnumMap((Map) obj);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:104:0x0167  */
-    /* JADX WARN: Found duplicated region for block: B:106:0x0172  */
-    /* JADX WARN: Found duplicated region for block: B:108:0x0176  */
-    /* JADX WARN: Found duplicated region for block: B:110:0x0181  */
-    /* JADX WARN: Found duplicated region for block: B:112:0x0185  */
-    /* JADX WARN: Found duplicated region for block: B:113:0x018d  */
-    /* JADX WARN: Found duplicated region for block: B:115:0x0191  */
-    /* JADX WARN: Found duplicated region for block: B:116:0x0199  */
-    /* JADX WARN: Found duplicated region for block: B:118:0x019d  */
-    /* JADX WARN: Found duplicated region for block: B:119:0x01a5  */
-    /* JADX WARN: Found duplicated region for block: B:121:0x01a9  */
-    /* JADX WARN: Found duplicated region for block: B:122:0x01ac  */
-    /* JADX WARN: Found duplicated region for block: B:123:0x01b0  */
-    /* JADX WARN: Found duplicated region for block: B:127:0x01c4 A[Catch: IllegalAccessException -> 0x01c8, NoSuchFieldException -> 0x01ca, TryCatch #2 {IllegalAccessException -> 0x01c8, NoSuchFieldException -> 0x01ca, blocks: (B:125:0x01b8, B:127:0x01c4, B:132:0x01cc), top: B:144:0x01b8 }] */
-    /* JADX WARN: Found duplicated region for block: B:137:0x01e2  */
-    /* JADX WARN: Found duplicated region for block: B:138:0x01e7  */
-    /* JADX WARN: Found duplicated region for block: B:140:0x01ef  */
-    /* JADX WARN: Found duplicated region for block: B:141:0x01f4  */
-    /* JADX WARN: Found duplicated region for block: B:144:0x01b8 A[EXC_TOP_SPLITTER, SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:56:0x00b9  */
+    /* JADX WARN: Found duplicated region for block: B:104:0x0167 */
+    /* JADX WARN: Found duplicated region for block: B:106:0x0172 */
+    /* JADX WARN: Found duplicated region for block: B:108:0x0176 */
+    /* JADX WARN: Found duplicated region for block: B:110:0x0181 */
+    /* JADX WARN: Found duplicated region for block: B:112:0x0185 */
+    /* JADX WARN: Found duplicated region for block: B:113:0x018d */
+    /* JADX WARN: Found duplicated region for block: B:115:0x0191 */
+    /* JADX WARN: Found duplicated region for block: B:116:0x0199 */
+    /* JADX WARN: Found duplicated region for block: B:118:0x019d */
+    /* JADX WARN: Found duplicated region for block: B:119:0x01a5 */
+    /* JADX WARN: Found duplicated region for block: B:121:0x01a9 */
+    /* JADX WARN: Found duplicated region for block: B:122:0x01ac */
+    /* JADX WARN: Found duplicated region for block: B:123:0x01b0 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:127:0x01c4 A[Catch:
+     * IllegalAccessException -> 0x01c8, NoSuchFieldException -> 0x01ca, TryCatch #2
+     * {IllegalAccessException -> 0x01c8, NoSuchFieldException -> 0x01ca, blocks:
+     * (B:125:0x01b8, B:127:0x01c4, B:132:0x01cc), top: B:144:0x01b8 }]
+     */
+    /* JADX WARN: Found duplicated region for block: B:137:0x01e2 */
+    /* JADX WARN: Found duplicated region for block: B:138:0x01e7 */
+    /* JADX WARN: Found duplicated region for block: B:140:0x01ef */
+    /* JADX WARN: Found duplicated region for block: B:141:0x01f4 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:144:0x01b8
+     * A[EXC_TOP_SPLITTER, SYNTHETIC]
+     */
+    /* JADX WARN: Found duplicated region for block: B:56:0x00b9 */
     /* JADX WARN: Found duplicated region for block: B:58:0x00c3 A[MOVE_INLINED] */
-    /* JADX WARN: Found duplicated region for block: B:80:0x010f  */
-    /* JADX WARN: Found duplicated region for block: B:82:0x0117  */
-    /* JADX WARN: Found duplicated region for block: B:84:0x011f  */
-    /* JADX WARN: Found duplicated region for block: B:86:0x0127  */
-    /* JADX WARN: Found duplicated region for block: B:88:0x012f  */
-    /* JADX WARN: Found duplicated region for block: B:90:0x0135  */
-    /* JADX WARN: Found duplicated region for block: B:96:0x0148  */
+    /* JADX WARN: Found duplicated region for block: B:80:0x010f */
+    /* JADX WARN: Found duplicated region for block: B:82:0x0117 */
+    /* JADX WARN: Found duplicated region for block: B:84:0x011f */
+    /* JADX WARN: Found duplicated region for block: B:86:0x0127 */
+    /* JADX WARN: Found duplicated region for block: B:88:0x012f */
+    /* JADX WARN: Found duplicated region for block: B:90:0x0135 */
+    /* JADX WARN: Found duplicated region for block: B:96:0x0148 */
     public static ObjectReader of(Type type, Class cls, long j) {
         Type genericSuperclass;
         Class superclass;
@@ -190,7 +202,8 @@ public final class ObjectReaderImplMap implements ObjectReader {
         } else {
             if (cls != CLASS_UNMODIFIABLE_MAP) {
                 cls2 = TreeMap.class;
-                if (cls != SortedMap.class && cls != CLASS_UNMODIFIABLE_SORTED_MAP && cls != CLASS_UNMODIFIABLE_NAVIGABLE_MAP) {
+                if (cls != SortedMap.class && cls != CLASS_UNMODIFIABLE_SORTED_MAP
+                        && cls != CLASS_UNMODIFIABLE_NAVIGABLE_MAP) {
                     if (cls == ConcurrentMap.class) {
                         superclass = ConcurrentHashMap.class;
                     } else if (cls == ConcurrentNavigableMap.class) {
@@ -207,7 +220,8 @@ public final class ObjectReaderImplMap implements ObjectReader {
                                 cpvVar = new cpv(4);
                             } else if (typeName.equals("java.util.Collections$SynchronizedNavigableMap")) {
                                 cpvVar = new cpv(5);
-                            } else if (typeName.equals("com.google.common.collect.ImmutableMap") || typeName.equals("com.google.common.collect.RegularImmutableMap")) {
+                            } else if (typeName.equals("com.google.common.collect.ImmutableMap")
+                                    || typeName.equals("com.google.common.collect.RegularImmutableMap")) {
                                 cpvVar = GuavaSupport.immutableMapConverter();
                             }
                             cls2 = HashMap.class;
@@ -256,10 +270,12 @@ public final class ObjectReaderImplMap implements ObjectReader {
                                     return new ObjectReaderImplMap(cls3, j, field.get(null));
                                 } catch (IllegalAccessException e) {
                                     e = e;
-                                    throw new IllegalStateException(bjs.l(cls3, "Failed to get singleton of "), e);
+                                    throw new IllegalStateException(concatVar2Var1(cls3, "Failed to get singleton of "),
+                                            e);
                                 } catch (NoSuchFieldException e2) {
                                     e = e2;
-                                    throw new IllegalStateException(bjs.l(cls3, "Failed to get singleton of "), e);
+                                    throw new IllegalStateException(concatVar2Var1(cls3, "Failed to get singleton of "),
+                                            e);
                                 }
                             }
                             if (name.equals("com.google.common.collect.RegularImmutableMap")) {
@@ -267,7 +283,8 @@ public final class ObjectReaderImplMap implements ObjectReader {
                             } else {
                                 genericSuperclass2 = cls3.getGenericSuperclass();
                                 if (cls != JSONObject.class && (genericSuperclass2 instanceof ParameterizedType)) {
-                                    actualTypeArguments = ((ParameterizedType) genericSuperclass2).getActualTypeArguments();
+                                    actualTypeArguments = ((ParameterizedType) genericSuperclass2)
+                                            .getActualTypeArguments();
                                     if (actualTypeArguments.length == 2) {
                                         type4 = actualTypeArguments[0];
                                         type5 = actualTypeArguments[1];
@@ -277,7 +294,8 @@ public final class ObjectReaderImplMap implements ObjectReader {
                                     }
                                 }
                                 if (cls3 == JSONObject1O.class) {
-                                    functionCreateObjectSupplier2 = createObjectSupplier(TypeUtils.CLASS_JSON_OBJECT_1x);
+                                    functionCreateObjectSupplier2 = createObjectSupplier(
+                                            TypeUtils.CLASS_JSON_OBJECT_1x);
                                 } else if (cls == CLASS_UNMODIFIABLE_MAP) {
                                     functionCreateObjectSupplier = new cpv(7);
                                 } else if (cls == CLASS_UNMODIFIABLE_SORTED_MAP) {
@@ -456,38 +474,42 @@ public final class ObjectReaderImplMap implements ObjectReader {
         return this.mapType;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:101:0x01d3  */
-    /* JADX WARN: Found duplicated region for block: B:108:0x00ed A[EDGE_INSN: B:108:0x00ed->B:46:0x00ed BREAK  A[LOOP:0: B:44:0x00e5->B:102:0x01d6], SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:48:0x00f4  */
+    /* JADX WARN: Found duplicated region for block: B:101:0x01d3 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:108:0x00ed A[EDGE_INSN:
+     * B:108:0x00ed->B:46:0x00ed BREAK A[LOOP:0: B:44:0x00e5->B:102:0x01d6],
+     * SYNTHETIC]
+     */
+    /* JADX WARN: Found duplicated region for block: B:48:0x00f4 */
     /* JADX WARN: Found duplicated region for block: B:50:0x00f9 A[RETURN] */
-    /* JADX WARN: Found duplicated region for block: B:51:0x00fa  */
-    /* JADX WARN: Found duplicated region for block: B:53:0x0100  */
-    /* JADX WARN: Found duplicated region for block: B:55:0x0106  */
-    /* JADX WARN: Found duplicated region for block: B:57:0x010c  */
-    /* JADX WARN: Found duplicated region for block: B:58:0x011e  */
-    /* JADX WARN: Found duplicated region for block: B:61:0x012b  */
-    /* JADX WARN: Found duplicated region for block: B:63:0x0135  */
-    /* JADX WARN: Found duplicated region for block: B:65:0x013b  */
-    /* JADX WARN: Found duplicated region for block: B:66:0x0146  */
-    /* JADX WARN: Found duplicated region for block: B:68:0x014c  */
-    /* JADX WARN: Found duplicated region for block: B:71:0x0158  */
-    /* JADX WARN: Found duplicated region for block: B:73:0x015c  */
+    /* JADX WARN: Found duplicated region for block: B:51:0x00fa */
+    /* JADX WARN: Found duplicated region for block: B:53:0x0100 */
+    /* JADX WARN: Found duplicated region for block: B:55:0x0106 */
+    /* JADX WARN: Found duplicated region for block: B:57:0x010c */
+    /* JADX WARN: Found duplicated region for block: B:58:0x011e */
+    /* JADX WARN: Found duplicated region for block: B:61:0x012b */
+    /* JADX WARN: Found duplicated region for block: B:63:0x0135 */
+    /* JADX WARN: Found duplicated region for block: B:65:0x013b */
+    /* JADX WARN: Found duplicated region for block: B:66:0x0146 */
+    /* JADX WARN: Found duplicated region for block: B:68:0x014c */
+    /* JADX WARN: Found duplicated region for block: B:71:0x0158 */
+    /* JADX WARN: Found duplicated region for block: B:73:0x015c */
     /* JADX WARN: Found duplicated region for block: B:75:0x016a A[MOVE_INLINED] */
-    /* JADX WARN: Found duplicated region for block: B:77:0x0178  */
-    /* JADX WARN: Found duplicated region for block: B:78:0x0180  */
-    /* JADX WARN: Found duplicated region for block: B:80:0x0186  */
-    /* JADX WARN: Found duplicated region for block: B:81:0x018c  */
-    /* JADX WARN: Found duplicated region for block: B:83:0x0190  */
+    /* JADX WARN: Found duplicated region for block: B:77:0x0178 */
+    /* JADX WARN: Found duplicated region for block: B:78:0x0180 */
+    /* JADX WARN: Found duplicated region for block: B:80:0x0186 */
+    /* JADX WARN: Found duplicated region for block: B:81:0x018c */
+    /* JADX WARN: Found duplicated region for block: B:83:0x0190 */
     /* JADX WARN: Found duplicated region for block: B:84:0x0196 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:85:0x0198  */
-    /* JADX WARN: Found duplicated region for block: B:87:0x01a2  */
-    /* JADX WARN: Found duplicated region for block: B:88:0x01a4  */
+    /* JADX WARN: Found duplicated region for block: B:85:0x0198 */
+    /* JADX WARN: Found duplicated region for block: B:87:0x01a2 */
+    /* JADX WARN: Found duplicated region for block: B:88:0x01a4 */
     /* JADX WARN: Found duplicated region for block: B:89:0x01ad A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:90:0x01af  */
-    /* JADX WARN: Found duplicated region for block: B:91:0x01b4  */
-    /* JADX WARN: Found duplicated region for block: B:93:0x01b8  */
-    /* JADX WARN: Found duplicated region for block: B:96:0x01c1  */
-    /* JADX WARN: Found duplicated region for block: B:98:0x01c7  */
+    /* JADX WARN: Found duplicated region for block: B:90:0x01af */
+    /* JADX WARN: Found duplicated region for block: B:91:0x01b4 */
+    /* JADX WARN: Found duplicated region for block: B:93:0x01b8 */
+    /* JADX WARN: Found duplicated region for block: B:96:0x01c1 */
+    /* JADX WARN: Found duplicated region for block: B:98:0x01c7 */
     @Override // com.alibaba.fastjson2.reader.ObjectReader
     public Object readJSONBObject(JSONReader jSONReader, Type type, Object obj, long j) {
         JSONException jSONException;
@@ -506,7 +528,8 @@ public final class ObjectReaderImplMap implements ObjectReader {
         ObjectReader objectReaderCheckAutoType;
         Object any2;
         String reference2;
-        ObjectReader objectReaderCheckAutoType2 = jSONReader.checkAutoType(this.mapType, this.mapTypeHash, this.features | j);
+        ObjectReader objectReaderCheckAutoType2 = jSONReader.checkAutoType(this.mapType, this.mapTypeHash,
+                this.features | j);
         if (objectReaderCheckAutoType2 != null && objectReaderCheckAutoType2 != this) {
             return objectReaderCheckAutoType2.readJSONBObject(jSONReader, type, obj, j);
         }
@@ -538,7 +561,8 @@ public final class ObjectReaderImplMap implements ObjectReader {
                                 jSONException = null;
                             } catch (IllegalAccessException | InstantiationException unused) {
                                 this.instanceError = true;
-                                jSONException = new JSONException(jSONReader3.info("create map error " + this.instanceType));
+                                jSONException = new JSONException(
+                                        jSONReader3.info("create map error " + this.instanceType));
                                 map = null;
                             }
                         }
@@ -548,7 +572,8 @@ public final class ObjectReaderImplMap implements ObjectReader {
                                 jSONException = null;
                             } catch (IllegalAccessException | InstantiationException unused2) {
                                 if (jSONException == null) {
-                                    jSONException = new JSONException(jSONReader3.info("create map error " + this.instanceType));
+                                    jSONException = new JSONException(
+                                            jSONReader3.info("create map error " + this.instanceType));
                                 }
                             }
                         }
@@ -590,7 +615,8 @@ public final class ObjectReaderImplMap implements ObjectReader {
                                     jSONReader2 = jSONReader3;
                                     obj3 = obj2;
                                 } else if (type3 == -110) {
-                                    objectReaderCheckAutoType = jSONReader3.checkAutoType(Object.class, 0L, this.features | j2);
+                                    objectReaderCheckAutoType = jSONReader3.checkAutoType(Object.class, 0L,
+                                            this.features | j2);
                                     if (objectReaderCheckAutoType != null) {
                                         Object obj4 = obj2;
                                         any2 = objectReaderCheckAutoType.readJSONBObject(jSONReader, null, obj4, j2);
@@ -620,10 +646,13 @@ public final class ObjectReaderImplMap implements ObjectReader {
                                             object = null;
                                         }
                                     } else {
-                                        object = type3 == -90 ? jSONReader2.readObject() : (type3 >= -108 || type3 > -92) ? jSONReader2.readAny() : jSONReader2.readArray();
+                                        object = type3 == -90 ? jSONReader2.readObject()
+                                                : (type3 >= -108 || type3 > -92) ? jSONReader2.readAny()
+                                                        : jSONReader2.readArray();
                                     }
                                 }
-                                if (object == null || (JSONReader.Feature.IgnoreNullPropertyValue.mask & jFeatures) == 0) {
+                                if (object == null
+                                        || (JSONReader.Feature.IgnoreNullPropertyValue.mask & jFeatures) == 0) {
                                     map2.put(obj3, object);
                                 }
                             }
@@ -645,7 +674,8 @@ public final class ObjectReaderImplMap implements ObjectReader {
                             type3 = jSONReader3.getType();
                             if (type3 < 73) {
                                 if (type3 == -110) {
-                                    objectReaderCheckAutoType = jSONReader3.checkAutoType(Object.class, 0L, this.features | j2);
+                                    objectReaderCheckAutoType = jSONReader3.checkAutoType(Object.class, 0L,
+                                            this.features | j2);
                                     if (objectReaderCheckAutoType != null) {
                                         Object obj42 = obj2;
                                         any2 = objectReaderCheckAutoType.readJSONBObject(jSONReader, null, obj42, j2);
@@ -678,7 +708,8 @@ public final class ObjectReaderImplMap implements ObjectReader {
                                     }
                                 }
                             } else if (type3 == -110) {
-                                objectReaderCheckAutoType = jSONReader3.checkAutoType(Object.class, 0L, this.features | j2);
+                                objectReaderCheckAutoType = jSONReader3.checkAutoType(Object.class, 0L,
+                                        this.features | j2);
                                 if (objectReaderCheckAutoType != null) {
                                     Object obj422 = obj2;
                                     any2 = objectReaderCheckAutoType.readJSONBObject(jSONReader, null, obj422, j2);
@@ -942,7 +973,10 @@ public final class ObjectReaderImplMap implements ObjectReader {
         }
         JSONReader.Context context = jSONReader.getContext();
         Supplier<Map> objectSupplier = jSONReader.getContext().getObjectSupplier();
-        Map map = (objectSupplier == null || !((cls = this.mapType) == null || cls == JSONObject.class || "com.alibaba.fastjson.JSONObject".equals(cls.getName()))) ? (Map) createInstance(context.getFeatures() | j) : objectSupplier.get();
+        Map map = (objectSupplier == null || !((cls = this.mapType) == null || cls == JSONObject.class
+                || "com.alibaba.fastjson.JSONObject".equals(cls.getName())))
+                        ? (Map) createInstance(context.getFeatures() | j)
+                        : objectSupplier.get();
         if (!jSONReader.isString() || jSONReader.isTypeRedirect()) {
             jSONReader.read(map, j);
         } else {

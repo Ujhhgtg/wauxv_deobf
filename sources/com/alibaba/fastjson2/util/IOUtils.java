@@ -58,21 +58,41 @@ public class IOUtils {
         ALSE = z ? 1634497381 : 1702063201;
         ALSE_64 = z ? 27303536604938341L : 28429466576093281L;
         DOT_X0 = z ? 11776L : 46L;
-        sizeTable = new int[]{9, 99, 999, 9999, 99999, 999999, 9999999, 99999999, 999999999, Integer.MAX_VALUE};
+        sizeTable = new int[] { 9, 99, 999, 9999, 99999, 999999, 9999999, 99999999, 999999999, Integer.MAX_VALUE };
         DIGITS_K_32 = new int[1024];
         DIGITS_K_64 = new long[1024];
         MIN_LONG_BYTES = "-9223372036854775808".getBytes();
         MIN_LONG_CHARS = "-9223372036854775808".toCharArray();
-        POWER_TEN = new long[]{10, 100, 1000, 10000, 100000, 1000000, 10000000, 100000000, 1000000000, RealConnection.IDLE_CONNECTION_HEALTHY_NS, 100000000000L, 1000000000000L, 10000000000000L, 100000000000000L, 1000000000000000L, 10000000000000000L, 100000000000000000L, 1000000000000000000L};
-        short[] sArr = {ZERO_ZERO_16, 12592, 12848, 13104, 13360, 13616, 13872, 14128, 14384, 14640, 12337, 12593, 12849, 13105, 13361, 13617, 13873, 14129, 14385, 14641, 12338, 12594, 12850, 13106, 13362, 13618, 13874, 14130, 14386, 14642, 12339, 12595, 12851, 13107, 13363, 13619, 13875, 14131, 14387, 14643, 12340, 12596, 12852, 13108, 13364, 13620, 13876, 14132, 14388, 14644, 12341, 12597, 12853, 13109, 13365, 13621, 13877, 14133, 14389, 14645, 12342, 12598, 12854, 13110, 13366, 13622, 13878, 14134, 14390, 14646, 12343, 12599, 12855, 13111, 13367, 13623, 13879, 14135, 14391, 14647, 12344, 12600, 12856, 13112, 13368, 13624, 13880, 14136, 14392, 14648, 12345, 12601, 12857, 13113, 13369, 13625, 13881, 14137, 14393, 14649, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1};
-        int[] iArr = {ZERO_ZERO_32, 3211312, 3276848, 3342384, 3407920, 3473456, 3538992, 3604528, 3670064, 3735600, 3145777, 3211313, 3276849, 3342385, 3407921, 3473457, 3538993, 3604529, 3670065, 3735601, 3145778, 3211314, 3276850, 3342386, 3407922, 3473458, 3538994, 3604530, 3670066, 3735602, 3145779, 3211315, 3276851, 3342387, 3407923, 3473459, 3538995, 3604531, 3670067, 3735603, 3145780, 3211316, 3276852, 3342388, 3407924, 3473460, 3538996, 3604532, 3670068, 3735604, 3145781, 3211317, 3276853, 3342389, 3407925, 3473461, 3538997, 3604533, 3670069, 3735605, 3145782, 3211318, 3276854, 3342390, 3407926, 3473462, 3538998, 3604534, 3670070, 3735606, 3145783, 3211319, 3276855, 3342391, 3407927, 3473463, 3538999, 3604535, 3670071, 3735607, 3145784, 3211320, 3276856, 3342392, 3407928, 3473464, 3539000, 3604536, 3670072, 3735608, 3145785, 3211321, 3276857, 3342393, 3407929, 3473465, 3539001, 3604537, 3670073, 3735609, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1};
+        POWER_TEN = new long[] { 10, 100, 1000, 10000, 100000, 1000000, 10000000, 100000000, 1000000000,
+                RealConnection.IDLE_CONNECTION_HEALTHY_NS, 100000000000L, 1000000000000L, 10000000000000L,
+                100000000000000L, 1000000000000000L, 10000000000000000L, 100000000000000000L, 1000000000000000000L };
+        short[] sArr = { ZERO_ZERO_16, 12592, 12848, 13104, 13360, 13616, 13872, 14128, 14384, 14640, 12337, 12593,
+                12849, 13105, 13361, 13617, 13873, 14129, 14385, 14641, 12338, 12594, 12850, 13106, 13362, 13618, 13874,
+                14130, 14386, 14642, 12339, 12595, 12851, 13107, 13363, 13619, 13875, 14131, 14387, 14643, 12340, 12596,
+                12852, 13108, 13364, 13620, 13876, 14132, 14388, 14644, 12341, 12597, 12853, 13109, 13365, 13621, 13877,
+                14133, 14389, 14645, 12342, 12598, 12854, 13110, 13366, 13622, 13878, 14134, 14390, 14646, 12343, 12599,
+                12855, 13111, 13367, 13623, 13879, 14135, 14391, 14647, 12344, 12600, 12856, 13112, 13368, 13624, 13880,
+                14136, 14392, 14648, 12345, 12601, 12857, 13113, 13369, 13625, 13881, 14137, 14393, 14649, -1, -1, -1,
+                -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1 };
+        int[] iArr = { ZERO_ZERO_32, 3211312, 3276848, 3342384, 3407920, 3473456, 3538992, 3604528, 3670064, 3735600,
+                3145777, 3211313, 3276849, 3342385, 3407921, 3473457, 3538993, 3604529, 3670065, 3735601, 3145778,
+                3211314, 3276850, 3342386, 3407922, 3473458, 3538994, 3604530, 3670066, 3735602, 3145779, 3211315,
+                3276851, 3342387, 3407923, 3473459, 3538995, 3604531, 3670067, 3735603, 3145780, 3211316, 3276852,
+                3342388, 3407924, 3473460, 3538996, 3604532, 3670068, 3735604, 3145781, 3211317, 3276853, 3342389,
+                3407925, 3473461, 3538997, 3604533, 3670069, 3735605, 3145782, 3211318, 3276854, 3342390, 3407926,
+                3473462, 3538998, 3604534, 3670070, 3735606, 3145783, 3211319, 3276855, 3342391, 3407927, 3473463,
+                3538999, 3604535, 3670071, 3735607, 3145784, 3211320, 3276856, 3342392, 3407928, 3473464, 3539000,
+                3604536, 3670072, 3735608, 3145785, 3211321, 3276857, 3342393, 3407929, 3473465, 3539001, 3604537,
+                3670073, 3735609, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+                -1, -1, -1, -1, -1, -1, -1 };
         PACKED_DIGITS = sArr;
         PACKED_DIGITS_UTF16 = iArr;
         int i = 0;
         while (true) {
             int i2 = 2;
             if (i >= 1000) {
-                ZERO_DOT_LATIN1 = JDKUtils.UNSAFE.getShort(new byte[]{JSONB.Constants.BC_INT32_BYTE_MIN, 46}, JDKUtils.ARRAY_BYTE_BASE_OFFSET);
+                ZERO_DOT_LATIN1 = JDKUtils.UNSAFE.getShort(new byte[] { JSONB.Constants.BC_INT32_BYTE_MIN, 46 },
+                        JDKUtils.ARRAY_BYTE_BASE_OFFSET);
                 return;
             }
             if (i >= 10) {
@@ -121,7 +141,8 @@ public class IOUtils {
                             byte b2 = bArr[i6];
                             byte b3 = bArr[i7];
                             i += 3;
-                            if ((b != -32 || (b2 & 224) != 128) && (b2 & JSONB.Constants.BC_INT64_SHORT_MIN) == 128 && (b3 & JSONB.Constants.BC_INT64_SHORT_MIN) == 128) {
+                            if ((b != -32 || (b2 & 224) != 128) && (b2 & JSONB.Constants.BC_INT64_SHORT_MIN) == 128
+                                    && (b3 & JSONB.Constants.BC_INT64_SHORT_MIN) == 128) {
                                 char c = (char) (((b2 << 6) ^ (b << 12)) ^ ((-123008) ^ b3));
                                 if (c >= 55296 && c < 57344) {
                                     return -1;
@@ -138,7 +159,9 @@ public class IOUtils {
                         byte b6 = bArr[i3];
                         i += 4;
                         int i8 = (((b << 18) ^ (b4 << 12)) ^ (b5 << 6)) ^ (3678080 ^ b6);
-                        if ((b4 & JSONB.Constants.BC_INT64_SHORT_MIN) == 128 && (b5 & JSONB.Constants.BC_INT64_SHORT_MIN) == 128 && (b6 & JSONB.Constants.BC_INT64_SHORT_MIN) == 128 && i8 >= 65536 && i8 < 1114112) {
+                        if ((b4 & JSONB.Constants.BC_INT64_SHORT_MIN) == 128
+                                && (b5 & JSONB.Constants.BC_INT64_SHORT_MIN) == 128
+                                && (b6 & JSONB.Constants.BC_INT64_SHORT_MIN) == 128 && i8 >= 65536 && i8 < 1114112) {
                             char c2 = (char) ((i8 >>> 10) + 55232);
                             bArr2[i5] = (byte) c2;
                             bArr2[i5 + 1] = (byte) (c2 >> '\b');
@@ -177,7 +200,8 @@ public class IOUtils {
     }
 
     public static int digit1(char[] cArr, int i) {
-        int i2 = JDKUtils.UNSAFE.getByte(cArr, JDKUtils.ARRAY_CHAR_BASE_OFFSET + (((long) i) << 1)) + JSONB.Constants.BC_INT64_BYTE_ZERO;
+        int i2 = JDKUtils.UNSAFE.getByte(cArr, JDKUtils.ARRAY_CHAR_BASE_OFFSET + (((long) i) << 1))
+                + JSONB.Constants.BC_INT64_BYTE_ZERO;
         if (i2 < 0 || i2 > 9) {
             return -1;
         }
@@ -380,7 +404,8 @@ public class IOUtils {
 
     public static int indexOfDoubleQuoteV(byte[] bArr, int i, int i2) {
         int i3 = ((i2 - i) & (-8)) + i;
-        for (long j = JDKUtils.ARRAY_BYTE_BASE_OFFSET + ((long) i); i < i3 && notContains(JDKUtils.UNSAFE.getLong(bArr, j), 2459565876494606882L); j += 8) {
+        for (long j = JDKUtils.ARRAY_BYTE_BASE_OFFSET + ((long) i); i < i3
+                && notContains(JDKUtils.UNSAFE.getLong(bArr, j), 2459565876494606882L); j += 8) {
             i += 8;
         }
         return indexOfChar(bArr, 34, i, i2);
@@ -400,7 +425,8 @@ public class IOUtils {
 
     public static int indexOfLineSeparatorV(byte[] bArr, int i, int i2) {
         int i3 = ((i2 - i) & (-8)) + i;
-        for (long j = JDKUtils.ARRAY_BYTE_BASE_OFFSET + ((long) i); i < i3 && notContains(JDKUtils.UNSAFE.getLong(bArr, j), 723401728380766730L); j += 8) {
+        for (long j = JDKUtils.ARRAY_BYTE_BASE_OFFSET + ((long) i); i < i3
+                && notContains(JDKUtils.UNSAFE.getLong(bArr, j), 723401728380766730L); j += 8) {
             i += 8;
         }
         return indexOfChar(bArr, 10, i, i2);
@@ -421,7 +447,8 @@ public class IOUtils {
     public static int indexOfQuoteV(byte[] bArr, int i, int i2, int i3) {
         int i4 = ((i3 - i2) & (-8)) + i2;
         long j = i == 39 ? 2821266740684990247L : 2459565876494606882L;
-        for (long j2 = JDKUtils.ARRAY_BYTE_BASE_OFFSET + ((long) i2); i2 < i4 && notContains(JDKUtils.UNSAFE.getLong(bArr, j2), j); j2 += 8) {
+        for (long j2 = JDKUtils.ARRAY_BYTE_BASE_OFFSET + ((long) i2); i2 < i4
+                && notContains(JDKUtils.UNSAFE.getLong(bArr, j2), j); j2 += 8) {
             i2 += 8;
         }
         return indexOfChar(bArr, i, i2, i3);
@@ -441,7 +468,8 @@ public class IOUtils {
 
     public static int indexOfSlashV(byte[] bArr, int i, int i2) {
         int i3 = ((i2 - i) & (-8)) + i;
-        for (long j = JDKUtils.ARRAY_BYTE_BASE_OFFSET + ((long) i); i < i3 && notContains(JDKUtils.UNSAFE.getLong(bArr, j), 6655295901103053916L); j += 8) {
+        for (long j = JDKUtils.ARRAY_BYTE_BASE_OFFSET + ((long) i); i < i3
+                && notContains(JDKUtils.UNSAFE.getLong(bArr, j), 6655295901103053916L); j += 8) {
             i += 8;
         }
         return indexOfChar(bArr, 92, i, i2);
@@ -488,7 +516,8 @@ public class IOUtils {
         long j = JDKUtils.ARRAY_CHAR_BASE_OFFSET + (((long) i) << 1);
         while (i < i4) {
             Unsafe unsafe = JDKUtils.UNSAFE;
-            if ((convEndian(false, unsafe.getLong(cArr, j) | unsafe.getLong(cArr, 8 + j)) & (-71777214294589696L)) != 0) {
+            if ((convEndian(false, unsafe.getLong(cArr, j) | unsafe.getLong(cArr, 8 + j))
+                    & (-71777214294589696L)) != 0) {
                 break;
             }
             j += 16;
@@ -746,8 +775,10 @@ public class IOUtils {
 
     private static void utf8_char2(byte[] bArr, int i, int i2, char c, byte[] bArr2, int i3) {
         char c2;
-        if (c > 56319 || i2 - i < 1 || (c2 = JDKUtils.UNSAFE.getChar(bArr, JDKUtils.ARRAY_BYTE_BASE_OFFSET + ((long) i))) < 56320 || c2 > 57343) {
-            throw new JSONException(bjs.i(i, "malformed input off : "));
+        if (c > 56319 || i2 - i < 1
+                || (c2 = JDKUtils.UNSAFE.getChar(bArr, JDKUtils.ARRAY_BYTE_BASE_OFFSET + ((long) i))) < 56320
+                || c2 > 57343) {
+            throw new JSONException(concatVar2Var1(i, "malformed input off : "));
         }
         int i4 = ((c << '\n') + c2) - 56613888;
         bArr2[i3] = (byte) ((i4 >> 18) | 240);
@@ -908,7 +939,8 @@ public class IOUtils {
         int i6 = (int) (jMultiplyHigh2 - (jMultiplyHigh3 * 10000));
         if (jMultiplyHigh3 >= 10000) {
             long jMultiplyHigh4 = longBiFunction.multiplyHigh(jMultiplyHigh3, 1844674407370956L);
-            return writeInt8(bArr, writeInt8(bArr, writeInt3(bArr, i2, (int) jMultiplyHigh4), (int) (jMultiplyHigh3 - (10000 * jMultiplyHigh4)), i6), i4, i3);
+            return writeInt8(bArr, writeInt8(bArr, writeInt3(bArr, i2, (int) jMultiplyHigh4),
+                    (int) (jMultiplyHigh3 - (10000 * jMultiplyHigh4)), i6), i4, i3);
         }
         int i7 = (int) jMultiplyHigh3;
         if (i7 < 1000) {
@@ -924,7 +956,8 @@ public class IOUtils {
         int i4 = (int) ((((long) i2) * 1374389535) >> 37);
         int i5 = (int) ((((long) i3) * 1374389535) >> 37);
         short[] sArr = PACKED_DIGITS;
-        long jReverseBytes = (((long) sArr[(i3 - (i5 * 100)) & 127]) << 48) | ((long) ((sArr[(i2 - (i4 * 100)) & 127] << 16) | sArr[i4 & 127])) | (((long) sArr[i5 & 127]) << 32);
+        long jReverseBytes = (((long) sArr[(i3 - (i5 * 100)) & 127]) << 48)
+                | ((long) ((sArr[(i2 - (i4 * 100)) & 127] << 16) | sArr[i4 & 127])) | (((long) sArr[i5 & 127]) << 32);
         if (JDKUtils.BIG_ENDIAN) {
             jReverseBytes = Long.reverseBytes(jReverseBytes);
         }
@@ -932,7 +965,7 @@ public class IOUtils {
         return i + 8;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:13:0x002f  */
+    /* JADX WARN: Found duplicated region for block: B:13:0x002f */
     public static int writeLocalDate(byte[] bArr, int i, int i2, int i3, int i4) {
         int i5;
         int i6;
@@ -948,7 +981,8 @@ public class IOUtils {
                 writeDigitPair(bArr, i, i6);
                 iWriteInt32 = i + 2;
             }
-            putLongLE(bArr, iWriteInt32, (((long) digitPair(i3)) << 24) | ((long) digitPair(i7)) | 49478026199040L | (((long) digitPair(i4)) << 48));
+            putLongLE(bArr, iWriteInt32, (((long) digitPair(i3)) << 24) | ((long) digitPair(i7)) | 49478026199040L
+                    | (((long) digitPair(i4)) << 48));
             return iWriteInt32 + 8;
         }
         i5 = i + 1;
@@ -958,12 +992,14 @@ public class IOUtils {
         i6 = (int) ((((long) i2) * 1374389535) >> 37);
         int i72 = i2 - (i6 * 100);
         iWriteInt32 = i2 < 0 ? writeInt32(bArr, i, i6) : writeInt32(bArr, i, i6);
-        putLongLE(bArr, iWriteInt32, (((long) digitPair(i3)) << 24) | ((long) digitPair(i72)) | 49478026199040L | (((long) digitPair(i4)) << 48));
+        putLongLE(bArr, iWriteInt32, (((long) digitPair(i3)) << 24) | ((long) digitPair(i72)) | 49478026199040L
+                | (((long) digitPair(i4)) << 48));
         return iWriteInt32 + 8;
     }
 
     public static void writeLocalTime(byte[] bArr, int i, int i2, int i3, int i4) {
-        putLongLE(bArr, i, (((long) digitPair(i3)) << 24) | ((long) digitPair(i2)) | 63771678212096L | (((long) digitPair(i4)) << 48));
+        putLongLE(bArr, i, (((long) digitPair(i3)) << 24) | ((long) digitPair(i2)) | 63771678212096L
+                | (((long) digitPair(i4)) << 48));
     }
 
     public static int writeNano(byte[] bArr, int i, int i2) {
@@ -998,7 +1034,8 @@ public class IOUtils {
     }
 
     public static int digit1(byte[] bArr, int i) {
-        int i2 = JDKUtils.UNSAFE.getByte(bArr, JDKUtils.ARRAY_BYTE_BASE_OFFSET + ((long) i)) + JSONB.Constants.BC_INT64_BYTE_ZERO;
+        int i2 = JDKUtils.UNSAFE.getByte(bArr, JDKUtils.ARRAY_BYTE_BASE_OFFSET + ((long) i))
+                + JSONB.Constants.BC_INT64_BYTE_ZERO;
         if (i2 < 0 || i2 > 9) {
             return -1;
         }
@@ -1017,7 +1054,8 @@ public class IOUtils {
     public static int digit4(char[] cArr, int i) {
         long longLE = getLongLE(cArr, i);
         long j = 4222189076152335L & longLE;
-        if (((((-4222189076152336L) & longLE) - 13511005043687472L) | ((1688875630460934L + j) & 67555025218437360L)) != 0) {
+        if (((((-4222189076152336L) & longLE) - 13511005043687472L)
+                | ((1688875630460934L + j) & 67555025218437360L)) != 0) {
             return -1;
         }
         return (int) (((((((longLE & 15) * 10) + ((j >> 16) & 15)) * 10) + (15 & (j >> 32))) * 10) + (j >> 48));
@@ -1040,7 +1078,8 @@ public class IOUtils {
         long j = 4222189076152335L & longLE;
         long j2 = longLE & 18014673391583296L;
         long j3 = j + (((j2 << 1) | (j2 >> 2)) >>> 4);
-        return (int) (((4222124650659840L & j3) >>> 48) + ((64424509440L & j3) >>> 28) + ((983040 & j3) >> 8) + ((j3 & 15) << 12));
+        return (int) (((4222124650659840L & j3) >>> 48) + ((64424509440L & j3) >>> 28) + ((983040 & j3) >> 8)
+                + ((j3 & 15) << 12));
     }
 
     public static int indexOfChar(char[] cArr, int i, int i2, int i3) {
@@ -1134,7 +1173,8 @@ public class IOUtils {
     private static int writeInt3(char[] cArr, int i, int i2) {
         long j = DIGITS_K_64[i2 & 1023];
         int i3 = (int) j;
-        JDKUtils.UNSAFE.putLong(cArr, JDKUtils.ARRAY_CHAR_BASE_OFFSET + (((long) i) << 1), j >> ((((short) i3) + 1) << 4));
+        JDKUtils.UNSAFE.putLong(cArr, JDKUtils.ARRAY_CHAR_BASE_OFFSET + (((long) i) << 1),
+                j >> ((((short) i3) + 1) << 4));
         return (i + 3) - ((byte) i3);
     }
 
@@ -1199,7 +1239,8 @@ public class IOUtils {
                 return j;
             }
             int i3 = i2 & (-8);
-            for (long j2 = JDKUtils.ARRAY_BYTE_BASE_OFFSET; i < i3 && notContains(JDKUtils.UNSAFE.getLong(bArr, j2), 723401728380766730L); j2 += 8) {
+            for (long j2 = JDKUtils.ARRAY_BYTE_BASE_OFFSET; i < i3
+                    && notContains(JDKUtils.UNSAFE.getLong(bArr, j2), 723401728380766730L); j2 += 8) {
                 i += 8;
             }
             while (i < i2) {
@@ -1444,7 +1485,7 @@ public class IOUtils {
         return writeInt8(cArr, i, i4, i3);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:13:0x002f  */
+    /* JADX WARN: Found duplicated region for block: B:13:0x002f */
     public static int writeLocalDate(char[] cArr, int i, int i2, int i3, int i4) {
         int i5;
         int i6;
@@ -1467,7 +1508,8 @@ public class IOUtils {
             int[] iArr = PACKED_DIGITS_UTF16;
             int i8 = iArr[i3 & 127];
             putLongLE(cArr, iWriteInt32, ((long) iArr[i7 & 127]) | (((long) (65535 & i8)) << 48) | 193273528320L);
-            putLongLE(cArr, iWriteInt32 + 4, (((long) iArr[i4 & 127]) << 32) | (((long) (i8 & (-65536))) >> 16) | 2949120);
+            putLongLE(cArr, iWriteInt32 + 4,
+                    (((long) iArr[i4 & 127]) << 32) | (((long) (i8 & (-65536))) >> 16) | 2949120);
             return iWriteInt32 + 8;
         }
         i = i5;
@@ -1477,7 +1519,8 @@ public class IOUtils {
         int[] iArr2 = PACKED_DIGITS_UTF16;
         int i82 = iArr2[i3 & 127];
         putLongLE(cArr, iWriteInt32, ((long) iArr2[i72 & 127]) | (((long) (65535 & i82)) << 48) | 193273528320L);
-        putLongLE(cArr, iWriteInt32 + 4, (((long) iArr2[i4 & 127]) << 32) | (((long) (i82 & (-65536))) >> 16) | 2949120);
+        putLongLE(cArr, iWriteInt32 + 4,
+                (((long) iArr2[i4 & 127]) << 32) | (((long) (i82 & (-65536))) >> 16) | 2949120);
         return iWriteInt32 + 8;
     }
 
@@ -1549,7 +1592,7 @@ public class IOUtils {
             bArr[i3 + 3] = (byte) ((i4 & 63) | 128);
             return;
         }
-        throw new JSONException(bjs.i(i, "malformed input off : "));
+        throw new JSONException(concatVar2Var1(i, "malformed input off : "));
     }
 
     public static int writeDecimal(char[] cArr, int i, long j, int i2) {
@@ -1701,7 +1744,8 @@ public class IOUtils {
             return writeInt8(cArr, iWriteInt4, i4, i3);
         }
         long jMultiplyHigh4 = longBiFunction.multiplyHigh(jMultiplyHigh3, 1844674407370956L);
-        return writeInt8(cArr, writeInt8(cArr, writeInt3(cArr, i2, (int) jMultiplyHigh4), (int) (jMultiplyHigh3 - (10000 * jMultiplyHigh4)), i6), i4, i3);
+        return writeInt8(cArr, writeInt8(cArr, writeInt3(cArr, i2, (int) jMultiplyHigh4),
+                (int) (jMultiplyHigh3 - (10000 * jMultiplyHigh4)), i6), i4, i3);
     }
 
     public static int decodeUTF8(byte[] bArr, int i, int i2, char[] cArr) {
@@ -1733,7 +1777,8 @@ public class IOUtils {
                             byte b3 = bArr[i6];
                             byte b4 = bArr[i7];
                             i += 3;
-                            if ((b2 != -32 || (b3 & 224) != 128) && (b3 & JSONB.Constants.BC_INT64_SHORT_MIN) == 128 && (b4 & JSONB.Constants.BC_INT64_SHORT_MIN) == 128) {
+                            if ((b2 != -32 || (b3 & 224) != 128) && (b3 & JSONB.Constants.BC_INT64_SHORT_MIN) == 128
+                                    && (b4 & JSONB.Constants.BC_INT64_SHORT_MIN) == 128) {
                                 char c = (char) (((b3 << 6) ^ (b2 << 12)) ^ ((-123008) ^ b4));
                                 if (c >= 55296 && c < 57344) {
                                     return -1;
@@ -1750,7 +1795,9 @@ public class IOUtils {
                         byte b7 = bArr[i3];
                         i += 4;
                         int i8 = (((b2 << 18) ^ (b5 << 12)) ^ (b6 << 6)) ^ (3678080 ^ b7);
-                        if ((b5 & JSONB.Constants.BC_INT64_SHORT_MIN) == 128 && (b6 & JSONB.Constants.BC_INT64_SHORT_MIN) == 128 && (b7 & JSONB.Constants.BC_INT64_SHORT_MIN) == 128 && i8 >= 65536 && i8 < 1114112) {
+                        if ((b5 & JSONB.Constants.BC_INT64_SHORT_MIN) == 128
+                                && (b6 & JSONB.Constants.BC_INT64_SHORT_MIN) == 128
+                                && (b7 & JSONB.Constants.BC_INT64_SHORT_MIN) == 128 && i8 >= 65536 && i8 < 1114112) {
                             cArr[i5] = (char) ((i8 >>> 10) + 55232);
                             cArr[i5 + 1] = (char) ((i8 & 1023) + 56320);
                             i5 += 2;

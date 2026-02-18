@@ -33,7 +33,7 @@ public abstract class nh implements cdw {
                     i = 2;
                 } else if (visibility != 4) {
                     if (visibility != 8) {
-                        throw new IllegalArgumentException(bjs.i(visibility, "Unknown visibility "));
+                        throw new IllegalArgumentException(concatVar2Var1(visibility, "Unknown visibility "));
                     }
                     i = 3;
                 }
@@ -60,7 +60,10 @@ public abstract class nh implements cdw {
         return new rv((awp) this.g, 2);
     }
 
-    /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'this' call moved to the top of the method (can break code
+     * semantics)
+     */
     public nh(int i) {
         this(exg.a);
         switch (i) {
@@ -74,7 +77,7 @@ public abstract class nh implements cdw {
     }
 
     public nh(dlr dlrVar) {
-        bzo.q(dlrVar, "operation");
+        throwIfVar1IsNull(dlrVar, "operation");
         this.g = dlrVar;
     }
 }

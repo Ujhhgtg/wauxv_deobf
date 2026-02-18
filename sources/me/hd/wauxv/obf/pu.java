@@ -8,14 +8,14 @@ public final class pu extends cvl {
     @Override // me.hd.wauxv.obf.s
     public final int e(Object obj) {
         boolean[] zArr = (boolean[]) obj;
-        bzo.q(zArr, "<this>");
+        throwIfVar1IsNull(zArr, "<this>");
         return zArr.length;
     }
 
     @Override // me.hd.wauxv.obf.aax, me.hd.wauxv.obf.s
     public final void g(acm acmVar, int i, Object obj) {
         pt ptVar = (pt) obj;
-        bzo.q(ptVar, "builder");
+        throwIfVar1IsNull(ptVar, "builder");
         boolean zL = acmVar.l(this.o, i);
         ptVar.d(ptVar.e() + 1);
         boolean[] zArr = ptVar.a;
@@ -27,7 +27,7 @@ public final class pu extends cvl {
     @Override // me.hd.wauxv.obf.s
     public final Object h(Object obj) {
         boolean[] zArr = (boolean[]) obj;
-        bzo.q(zArr, "<this>");
+        throwIfVar1IsNull(zArr, "<this>");
         pt ptVar = new pt();
         ptVar.a = zArr;
         ptVar.b = zArr.length;
@@ -43,8 +43,8 @@ public final class pu extends cvl {
     @Override // me.hd.wauxv.obf.cvl
     public final void m(acn acnVar, Object obj, int i) {
         boolean[] zArr = (boolean[]) obj;
-        bzo.q(acnVar, "encoder");
-        bzo.q(zArr, "content");
+        throwIfVar1IsNull(acnVar, "encoder");
+        throwIfVar1IsNull(zArr, "content");
         for (int i2 = 0; i2 < i; i2++) {
             acnVar._bz(this.o, i2, zArr[i2]);
         }

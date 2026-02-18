@@ -41,7 +41,7 @@ public class LabeledList extends FixedSizeList {
         for (int i = 0; i < size; i++) {
             LabeledItem labeledItem = (LabeledItem) get0(i);
             if (labeledItem == null) {
-                throw new NullPointerException(bjs.i(i, "null at index "));
+                throw new NullPointerException(concatVar2Var1(i, "null at index "));
             }
             iArr[i] = labeledItem.getLabel();
         }

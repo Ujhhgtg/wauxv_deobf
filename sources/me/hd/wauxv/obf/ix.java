@@ -28,7 +28,7 @@ public final class ix implements jd, DialogInterface.OnClickListener {
     }
 
     @Override // me.hd.wauxv.obf.jd
-    public final boolean e() {
+    public final boolean getThisObject() {
         el elVar = this.a;
         if (elVar != null) {
             return elVar.isShowing();
@@ -37,7 +37,7 @@ public final class ix implements jd, DialogInterface.OnClickListener {
     }
 
     @Override // me.hd.wauxv.obf.jd
-    public final int f() {
+    public final int getResult() {
         return 0;
     }
 

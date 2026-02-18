@@ -23,7 +23,7 @@ import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.bfu;
 import me.hd.wauxv.obf.bjs;
 import me.hd.wauxv.obf.btp;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.dnk;
 import me.hd.wauxv.obf.ekc;
 import me.hd.wauxv.obf.emc;
@@ -84,16 +84,20 @@ public final class RealConnection extends Http2Connection.Listener implements Co
     private rm source;
     private int successCount;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
         }
 
-        public final RealConnection newTestConnection(RealConnectionPool realConnectionPool, Route route, Socket socket, long j) {
-            bzo.q(realConnectionPool, "connectionPool");
-            bzo.q(route, "route");
-            bzo.q(socket, "socket");
+        public final RealConnection newTestConnection(RealConnectionPool realConnectionPool, Route route, Socket socket,
+                long j) {
+            throwIfVar1IsNull(realConnectionPool, "connectionPool");
+            throwIfVar1IsNull(route, "route");
+            throwIfVar1IsNull(socket, "socket");
             RealConnection realConnection = new RealConnection(realConnectionPool, route);
             realConnection.socket = socket;
             realConnection.setIdleAtNs$okhttp(j);
@@ -104,7 +108,10 @@ public final class RealConnection extends Http2Connection.Listener implements Co
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public /* synthetic */ class WhenMappings {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
@@ -122,14 +129,24 @@ public final class RealConnection extends Http2Connection.Listener implements Co
         }
     }
 
-    /* JADX INFO: renamed from: okhttp3.internal.connection.RealConnection$connectTls$1, reason: invalid class name */
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: renamed from:
+     * okhttp3.internal.connection.RealConnection$connectTls$1, reason: invalid
+     * class name
+     */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class AnonymousClass1 extends btp implements bfu {
         final /* synthetic */ Address $address;
         final /* synthetic */ CertificatePinner $certificatePinner;
         final /* synthetic */ Handshake $unverifiedHandshake;
 
-        /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+        /*
+         * JADX WARN: 'super' call moved to the top of the method (can break code
+         * semantics)
+         */
         public AnonymousClass1(CertificatePinner certificatePinner, Handshake handshake, Address address) {
             super(0);
             this.$certificatePinner = certificatePinner;
@@ -139,14 +156,23 @@ public final class RealConnection extends Http2Connection.Listener implements Co
 
         @Override // me.hd.wauxv.obf.bfu
         public final List<Certificate> invoke() {
-            CertificateChainCleaner certificateChainCleaner$okhttp = this.$certificatePinner.getCertificateChainCleaner$okhttp();
-            bzo.n(certificateChainCleaner$okhttp);
-            return certificateChainCleaner$okhttp.clean(this.$unverifiedHandshake.peerCertificates(), this.$address.url().host());
+            CertificateChainCleaner certificateChainCleaner$okhttp = this.$certificatePinner
+                    .getCertificateChainCleaner$okhttp();
+            throwIfVar1IsNull(certificateChainCleaner$okhttp);
+            return certificateChainCleaner$okhttp.clean(this.$unverifiedHandshake.peerCertificates(),
+                    this.$address.url().host());
         }
     }
 
-    /* JADX INFO: renamed from: okhttp3.internal.connection.RealConnection$connectTls$2, reason: invalid class name */
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: renamed from:
+     * okhttp3.internal.connection.RealConnection$connectTls$2, reason: invalid
+     * class name
+     */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class AnonymousClass2 extends btp implements bfu {
         public AnonymousClass2() {
             super(0);
@@ -155,11 +181,12 @@ public final class RealConnection extends Http2Connection.Listener implements Co
         @Override // me.hd.wauxv.obf.bfu
         public final List<X509Certificate> invoke() {
             Handshake handshake = RealConnection.this.handshake;
-            bzo.n(handshake);
+            throwIfVar1IsNull(handshake);
             List<Certificate> listPeerCertificates = handshake.peerCertificates();
             ArrayList arrayList = new ArrayList(abb.ak(listPeerCertificates, 10));
             for (Certificate certificate : listPeerCertificates) {
-                bzo.o(certificate, "null cannot be cast to non-null type java.security.cert.X509Certificate");
+                throwIfVar1IsNull(certificate,
+                        "null cannot be cast to non-null type java.security.cert.X509Certificate");
                 arrayList.add((X509Certificate) certificate);
             }
             return arrayList;
@@ -167,8 +194,8 @@ public final class RealConnection extends Http2Connection.Listener implements Co
     }
 
     public RealConnection(RealConnectionPool realConnectionPool, Route route) {
-        bzo.q(realConnectionPool, "connectionPool");
-        bzo.q(route, "route");
+        throwIfVar1IsNull(realConnectionPool, "connectionPool");
+        throwIfVar1IsNull(route, "route");
         this.connectionPool = realConnectionPool;
         this.route = route;
         this.allocationLimit = 1;
@@ -182,7 +209,7 @@ public final class RealConnection extends Http2Connection.Listener implements Co
             OkHostnameVerifier okHostnameVerifier = OkHostnameVerifier.INSTANCE;
             String strHost = httpUrl.host();
             Certificate certificate = listPeerCertificates.get(0);
-            bzo.o(certificate, "null cannot be cast to non-null type java.security.cert.X509Certificate");
+            throwIfVar1IsNull(certificate, "null cannot be cast to non-null type java.security.cert.X509Certificate");
             if (okHostnameVerifier.verify(strHost, (X509Certificate) certificate)) {
                 return true;
             }
@@ -198,7 +225,7 @@ public final class RealConnection extends Http2Connection.Listener implements Co
         int i3 = type == null ? -1 : WhenMappings.$EnumSwitchMapping$0[type.ordinal()];
         if (i3 == 1 || i3 == 2) {
             socketCreateSocket = address.socketFactory().createSocket();
-            bzo.n(socketCreateSocket);
+            throwIfVar1IsNull(socketCreateSocket);
         } else {
             socketCreateSocket = new Socket(proxy);
         }
@@ -211,12 +238,13 @@ public final class RealConnection extends Http2Connection.Listener implements Co
                 this.source = emc.ah(emc.ba(socketCreateSocket));
                 this.sink = emc.ag(emc.ay(socketCreateSocket));
             } catch (NullPointerException e) {
-                if (bzo.f(e.getMessage(), NPE_THROW_WITH_NULL)) {
+                if (nullSafeIsEqual(e.getMessage(), NPE_THROW_WITH_NULL)) {
                     throw new IOException(e);
                 }
             }
         } catch (ConnectException e2) {
-            ConnectException connectException = new ConnectException("Failed to connect to " + this.route.socketAddress());
+            ConnectException connectException = new ConnectException(
+                    "Failed to connect to " + this.route.socketAddress());
             connectException.initCause(e2);
             throw connectException;
         }
@@ -227,43 +255,56 @@ public final class RealConnection extends Http2Connection.Listener implements Co
         SSLSocketFactory sslSocketFactory = address.sslSocketFactory();
         SSLSocket sSLSocket = null;
         try {
-            bzo.n(sslSocketFactory);
-            Socket socketCreateSocket = sslSocketFactory.createSocket(this.rawSocket, address.url().host(), address.url().port(), true);
-            bzo.o(socketCreateSocket, "null cannot be cast to non-null type javax.net.ssl.SSLSocket");
+            throwIfVar1IsNull(sslSocketFactory);
+            Socket socketCreateSocket = sslSocketFactory.createSocket(this.rawSocket, address.url().host(),
+                    address.url().port(), true);
+            throwIfVar1IsNull(socketCreateSocket, "null cannot be cast to non-null type javax.net.ssl.SSLSocket");
             SSLSocket sSLSocket2 = (SSLSocket) socketCreateSocket;
             try {
-                ConnectionSpec connectionSpecConfigureSecureSocket = connectionSpecSelector.configureSecureSocket(sSLSocket2);
+                ConnectionSpec connectionSpecConfigureSecureSocket = connectionSpecSelector
+                        .configureSecureSocket(sSLSocket2);
                 if (connectionSpecConfigureSecureSocket.supportsTlsExtensions()) {
-                    Platform.Companion.get().configureTlsExtensions(sSLSocket2, address.url().host(), address.protocols());
+                    Platform.Companion.get().configureTlsExtensions(sSLSocket2, address.url().host(),
+                            address.protocols());
                 }
                 sSLSocket2.startHandshake();
                 SSLSession session = sSLSocket2.getSession();
                 Handshake.Companion companion = Handshake.Companion;
-                bzo.p(session, "sslSocketSession");
+                throwIfVar1IsNull(session, "sslSocketSession");
                 Handshake handshake = companion.get(session);
                 HostnameVerifier hostnameVerifier = address.hostnameVerifier();
-                bzo.n(hostnameVerifier);
+                throwIfVar1IsNull(hostnameVerifier);
                 if (hostnameVerifier.verify(address.url().host(), session)) {
                     CertificatePinner certificatePinner = address.certificatePinner();
-                    bzo.n(certificatePinner);
-                    this.handshake = new Handshake(handshake.tlsVersion(), handshake.cipherSuite(), handshake.localCertificates(), new AnonymousClass1(certificatePinner, handshake, address));
+                    throwIfVar1IsNull(certificatePinner);
+                    this.handshake = new Handshake(handshake.tlsVersion(), handshake.cipherSuite(),
+                            handshake.localCertificates(), new AnonymousClass1(certificatePinner, handshake, address));
                     certificatePinner.check$okhttp(address.url().host(), new AnonymousClass2());
-                    String selectedProtocol = connectionSpecConfigureSecureSocket.supportsTlsExtensions() ? Platform.Companion.get().getSelectedProtocol(sSLSocket2) : null;
+                    String selectedProtocol = connectionSpecConfigureSecureSocket.supportsTlsExtensions()
+                            ? Platform.Companion.get().getSelectedProtocol(sSLSocket2)
+                            : null;
                     this.socket = sSLSocket2;
                     this.source = emc.ah(emc.ba(sSLSocket2));
                     this.sink = emc.ag(emc.ay(sSLSocket2));
-                    this.protocol = selectedProtocol != null ? Protocol.Companion.get(selectedProtocol) : Protocol.HTTP_1_1;
+                    this.protocol = selectedProtocol != null ? Protocol.Companion.get(selectedProtocol)
+                            : Protocol.HTTP_1_1;
                     Platform.Companion.get().afterHandshake(sSLSocket2);
                     return;
                 }
                 List<Certificate> listPeerCertificates = handshake.peerCertificates();
                 if (listPeerCertificates.isEmpty()) {
-                    throw new SSLPeerUnverifiedException("Hostname " + address.url().host() + " not verified (no certificates)");
+                    throw new SSLPeerUnverifiedException(
+                            "Hostname " + address.url().host() + " not verified (no certificates)");
                 }
                 Certificate certificate = listPeerCertificates.get(0);
-                bzo.o(certificate, "null cannot be cast to non-null type java.security.cert.X509Certificate");
+                throwIfVar1IsNull(certificate,
+                        "null cannot be cast to non-null type java.security.cert.X509Certificate");
                 X509Certificate x509Certificate = (X509Certificate) certificate;
-                throw new SSLPeerUnverifiedException(dnk.bb("\n              |Hostname " + address.url().host() + " not verified:\n              |    certificate: " + CertificatePinner.Companion.pin(x509Certificate) + "\n              |    DN: " + x509Certificate.getSubjectDN().getName() + "\n              |    subjectAltNames: " + OkHostnameVerifier.INSTANCE.allSubjectAltNames(x509Certificate) + "\n              "));
+                throw new SSLPeerUnverifiedException(dnk.bb("\n              |Hostname " + address.url().host()
+                        + " not verified:\n              |    certificate: "
+                        + CertificatePinner.Companion.pin(x509Certificate) + "\n              |    DN: "
+                        + x509Certificate.getSubjectDN().getName() + "\n              |    subjectAltNames: "
+                        + OkHostnameVerifier.INSTANCE.allSubjectAltNames(x509Certificate) + "\n              "));
             } catch (Throwable th) {
                 th = th;
                 sSLSocket = sSLSocket2;
@@ -304,9 +345,9 @@ public final class RealConnection extends Http2Connection.Listener implements Co
         String str = "CONNECT " + Util.toHostHeader(httpUrl, true) + " HTTP/1.1";
         while (true) {
             rm rmVar = this.source;
-            bzo.n(rmVar);
+            throwIfVar1IsNull(rmVar);
             rl rlVar = this.sink;
-            bzo.n(rlVar);
+            throwIfVar1IsNull(rlVar);
             Http1ExchangeCodec http1ExchangeCodec = new Http1ExchangeCodec(null, this, rmVar, rlVar);
             TimeUnit timeUnit = TimeUnit.MILLISECONDS;
             rmVar.timeout().timeout(i, timeUnit);
@@ -314,7 +355,7 @@ public final class RealConnection extends Http2Connection.Listener implements Co
             http1ExchangeCodec.writeRequest(request.headers(), str);
             http1ExchangeCodec.finishRequest();
             Response.Builder responseHeaders = http1ExchangeCodec.readResponseHeaders(false);
-            bzo.n(responseHeaders);
+            throwIfVar1IsNull(responseHeaders);
             Response responseBuild = responseHeaders.request(request).build();
             http1ExchangeCodec.skipConnectBody(responseBuild);
             int iCode = responseBuild.code();
@@ -327,7 +368,8 @@ public final class RealConnection extends Http2Connection.Listener implements Co
             if (iCode != 407) {
                 throw new IOException("Unexpected response code for CONNECT: " + responseBuild.code());
             }
-            Request requestAuthenticate = this.route.address().proxyAuthenticator().authenticate(this.route, responseBuild);
+            Request requestAuthenticate = this.route.address().proxyAuthenticator().authenticate(this.route,
+                    responseBuild);
             if (requestAuthenticate == null) {
                 throw new IOException("Failed to authenticate with proxy");
             }
@@ -339,12 +381,18 @@ public final class RealConnection extends Http2Connection.Listener implements Co
     }
 
     private final Request createTunnelRequest() {
-        Request requestBuild = new Request.Builder().url(this.route.address().url()).method("CONNECT", null).header("Host", Util.toHostHeader(this.route.address().url(), true)).header("Proxy-Connection", "Keep-Alive").header("User-Agent", Util.userAgent).build();
-        Request requestAuthenticate = this.route.address().proxyAuthenticator().authenticate(this.route, new Response.Builder().request(requestBuild).protocol(Protocol.HTTP_1_1).code(407).message("Preemptive Authenticate").body(Util.EMPTY_RESPONSE).sentRequestAtMillis(-1L).receivedResponseAtMillis(-1L).header("Proxy-Authenticate", "OkHttp-Preemptive").build());
+        Request requestBuild = new Request.Builder().url(this.route.address().url()).method("CONNECT", null)
+                .header("Host", Util.toHostHeader(this.route.address().url(), true))
+                .header("Proxy-Connection", "Keep-Alive").header("User-Agent", Util.userAgent).build();
+        Request requestAuthenticate = this.route.address().proxyAuthenticator().authenticate(this.route,
+                new Response.Builder().request(requestBuild).protocol(Protocol.HTTP_1_1).code(407)
+                        .message("Preemptive Authenticate").body(Util.EMPTY_RESPONSE).sentRequestAtMillis(-1L)
+                        .receivedResponseAtMillis(-1L).header("Proxy-Authenticate", "OkHttp-Preemptive").build());
         return requestAuthenticate == null ? requestBuild : requestAuthenticate;
     }
 
-    private final void establishProtocol(ConnectionSpecSelector connectionSpecSelector, int i, Call call, EventListener eventListener) throws Throwable {
+    private final void establishProtocol(ConnectionSpecSelector connectionSpecSelector, int i, Call call,
+            EventListener eventListener) throws Throwable {
         if (this.route.address().sslSocketFactory() != null) {
             eventListener.secureConnectStart(call);
             connectTls(connectionSpecSelector);
@@ -374,7 +422,8 @@ public final class RealConnection extends Http2Connection.Listener implements Co
         for (Route route : list) {
             Proxy.Type type = route.proxy().type();
             Proxy.Type type2 = Proxy.Type.DIRECT;
-            if (type == type2 && this.route.proxy().type() == type2 && bzo.f(this.route.socketAddress(), route.socketAddress())) {
+            if (type == type2 && this.route.proxy().type() == type2
+                    && nullSafeIsEqual(this.route.socketAddress(), route.socketAddress())) {
                 return true;
             }
         }
@@ -383,13 +432,15 @@ public final class RealConnection extends Http2Connection.Listener implements Co
 
     private final void startHttp2(int i) throws SocketException {
         Socket socket = this.socket;
-        bzo.n(socket);
+        throwIfVar1IsNull(socket);
         rm rmVar = this.source;
-        bzo.n(rmVar);
+        throwIfVar1IsNull(rmVar);
         rl rlVar = this.sink;
-        bzo.n(rlVar);
+        throwIfVar1IsNull(rlVar);
         socket.setSoTimeout(0);
-        Http2Connection http2ConnectionBuild = new Http2Connection.Builder(true, TaskRunner.INSTANCE).socket(socket, this.route.address().url().host(), rmVar, rlVar).listener(this).pingIntervalMillis(i).build();
+        Http2Connection http2ConnectionBuild = new Http2Connection.Builder(true, TaskRunner.INSTANCE)
+                .socket(socket, this.route.address().url().host(), rmVar, rlVar).listener(this).pingIntervalMillis(i)
+                .build();
         this.http2Connection = http2ConnectionBuild;
         this.allocationLimit = Http2Connection.Companion.getDEFAULT_SETTINGS().getMaxConcurrentStreams();
         Http2Connection.start$default(http2ConnectionBuild, false, null, 3, null);
@@ -404,11 +455,11 @@ public final class RealConnection extends Http2Connection.Listener implements Co
         if (httpUrl.port() != httpUrlUrl.port()) {
             return false;
         }
-        if (bzo.f(httpUrl.host(), httpUrlUrl.host())) {
+        if (nullSafeIsEqual(httpUrl.host(), httpUrlUrl.host())) {
             return true;
         }
         if (!this.noCoalescedConnections && (handshake = this.handshake) != null) {
-            bzo.n(handshake);
+            throwIfVar1IsNull(handshake);
             if (certificateSupportHost(httpUrl, handshake)) {
                 return true;
             }
@@ -423,22 +474,26 @@ public final class RealConnection extends Http2Connection.Listener implements Co
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:50:0x00ed  */
-    /* JADX WARN: Found duplicated region for block: B:53:0x00f4  */
-    /* JADX WARN: Found duplicated region for block: B:56:0x011a  */
-    /* JADX WARN: Found duplicated region for block: B:57:0x0120  */
-    /* JADX WARN: Found duplicated region for block: B:59:0x0125  */
-    /* JADX WARN: Found duplicated region for block: B:61:0x012b A[LOOP:0: B:69:0x0084->B:61:0x012b, LOOP_END] */
+    /* JADX WARN: Found duplicated region for block: B:50:0x00ed */
+    /* JADX WARN: Found duplicated region for block: B:53:0x00f4 */
+    /* JADX WARN: Found duplicated region for block: B:56:0x011a */
+    /* JADX WARN: Found duplicated region for block: B:57:0x0120 */
+    /* JADX WARN: Found duplicated region for block: B:59:0x0125 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:61:0x012b A[LOOP:0:
+     * B:69:0x0084->B:61:0x012b, LOOP_END]
+     */
     /* JADX WARN: Found duplicated region for block: B:77:0x0131 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:78:0x0131 A[SYNTHETIC] */
-    public final void connect(int i, int i2, int i3, int i4, boolean z, Call call, EventListener eventListener) throws Throwable {
+    public final void connect(int i, int i2, int i3, int i4, boolean z, Call call, EventListener eventListener)
+            throws Throwable {
         IOException iOException;
         Socket socket;
         Socket socket2;
         Call call2 = call;
         EventListener eventListener2 = eventListener;
-        bzo.q(call2, "call");
-        bzo.q(eventListener2, "eventListener");
+        throwIfVar1IsNull(call2, "call");
+        throwIfVar1IsNull(eventListener2, "eventListener");
         if (this.protocol != null) {
             throw new IllegalStateException("already connected");
         }
@@ -450,7 +505,8 @@ public final class RealConnection extends Http2Connection.Listener implements Co
             }
             String strHost = this.route.address().url().host();
             if (!Platform.Companion.get().isCleartextTrafficPermitted(strHost)) {
-                throw new RouteException(new UnknownServiceException(bjs.o("CLEARTEXT communication to ", strHost, " not permitted by network security policy")));
+                throw new RouteException(new UnknownServiceException(
+                        concat("CLEARTEXT communication to ", strHost, " not permitted by network security policy")));
             }
         } else if (this.route.address().protocols().contains(Protocol.H2_PRIOR_KNOWLEDGE)) {
             throw new RouteException(new UnknownServiceException("H2_PRIOR_KNOWLEDGE cannot be used with HTTPS"));
@@ -495,7 +551,8 @@ public final class RealConnection extends Http2Connection.Listener implements Co
                         this.protocol = null;
                         this.http2Connection = null;
                         this.allocationLimit = 1;
-                        eventListener2.connectFailed(call2, this.route.socketAddress(), this.route.proxy(), null, iOException);
+                        eventListener2.connectFailed(call2, this.route.socketAddress(), this.route.proxy(), null,
+                                iOException);
                         if (routeException == null) {
                             routeException = new RouteException(iOException);
                         } else {
@@ -564,9 +621,9 @@ public final class RealConnection extends Http2Connection.Listener implements Co
     }
 
     public final void connectFailed$okhttp(OkHttpClient okHttpClient, Route route, IOException iOException) {
-        bzo.q(okHttpClient, "client");
-        bzo.q(route, "failedRoute");
-        bzo.q(iOException, "failure");
+        throwIfVar1IsNull(okHttpClient, "client");
+        throwIfVar1IsNull(route, "failedRoute");
+        throwIfVar1IsNull(iOException, "failure");
         if (route.proxy().type() != Proxy.Type.DIRECT) {
             Address address = route.address();
             address.proxySelector().connectFailed(address.url().uri(), route.proxy().address(), iOException);
@@ -604,25 +661,27 @@ public final class RealConnection extends Http2Connection.Listener implements Co
     }
 
     public final boolean isEligible$okhttp(Address address, List<Route> list) {
-        bzo.q(address, "address");
+        throwIfVar1IsNull(address, "address");
         if (Util.assertionsEnabled && !Thread.holdsLock(this)) {
             throw new AssertionError("Thread " + Thread.currentThread().getName() + " MUST hold lock on " + this);
         }
-        if (this.calls.size() >= this.allocationLimit || this.noNewExchanges || !this.route.address().equalsNonHost$okhttp(address)) {
+        if (this.calls.size() >= this.allocationLimit || this.noNewExchanges
+                || !this.route.address().equalsNonHost$okhttp(address)) {
             return false;
         }
-        if (bzo.f(address.url().host(), route().address().url().host())) {
+        if (nullSafeIsEqual(address.url().host(), route().address().url().host())) {
             return true;
         }
-        if (this.http2Connection == null || list == null || !routeMatchesAny(list) || address.hostnameVerifier() != OkHostnameVerifier.INSTANCE || !supportsUrl(address.url())) {
+        if (this.http2Connection == null || list == null || !routeMatchesAny(list)
+                || address.hostnameVerifier() != OkHostnameVerifier.INSTANCE || !supportsUrl(address.url())) {
             return false;
         }
         try {
             CertificatePinner certificatePinner = address.certificatePinner();
-            bzo.n(certificatePinner);
+            throwIfVar1IsNull(certificatePinner);
             String strHost = address.url().host();
             Handshake handshake = handshake();
-            bzo.n(handshake);
+            throwIfVar1IsNull(handshake);
             certificatePinner.check(strHost, handshake.peerCertificates());
             return true;
         } catch (SSLPeerUnverifiedException unused) {
@@ -637,11 +696,11 @@ public final class RealConnection extends Http2Connection.Listener implements Co
         }
         long jNanoTime = System.nanoTime();
         Socket socket = this.rawSocket;
-        bzo.n(socket);
+        throwIfVar1IsNull(socket);
         Socket socket2 = this.socket;
-        bzo.n(socket2);
+        throwIfVar1IsNull(socket2);
         rm rmVar = this.source;
-        bzo.n(rmVar);
+        throwIfVar1IsNull(rmVar);
         if (socket.isClosed() || socket2.isClosed() || socket2.isInputShutdown() || socket2.isOutputShutdown()) {
             return false;
         }
@@ -662,15 +721,16 @@ public final class RealConnection extends Http2Connection.Listener implements Co
         return this.http2Connection != null;
     }
 
-    public final ExchangeCodec newCodec$okhttp(OkHttpClient okHttpClient, RealInterceptorChain realInterceptorChain) throws SocketException {
-        bzo.q(okHttpClient, "client");
-        bzo.q(realInterceptorChain, "chain");
+    public final ExchangeCodec newCodec$okhttp(OkHttpClient okHttpClient, RealInterceptorChain realInterceptorChain)
+            throws SocketException {
+        throwIfVar1IsNull(okHttpClient, "client");
+        throwIfVar1IsNull(realInterceptorChain, "chain");
         Socket socket = this.socket;
-        bzo.n(socket);
+        throwIfVar1IsNull(socket);
         rm rmVar = this.source;
-        bzo.n(rmVar);
+        throwIfVar1IsNull(rmVar);
         rl rlVar = this.sink;
-        bzo.n(rlVar);
+        throwIfVar1IsNull(rlVar);
         Http2Connection http2Connection = this.http2Connection;
         if (http2Connection != null) {
             return new Http2ExchangeCodec(okHttpClient, this, realInterceptorChain, http2Connection);
@@ -685,16 +745,17 @@ public final class RealConnection extends Http2Connection.Listener implements Co
     }
 
     public final RealWebSocket.Streams newWebSocketStreams$okhttp(final Exchange exchange) throws SocketException {
-        bzo.q(exchange, "exchange");
+        throwIfVar1IsNull(exchange, "exchange");
         Socket socket = this.socket;
-        bzo.n(socket);
+        throwIfVar1IsNull(socket);
         final rm rmVar = this.source;
-        bzo.n(rmVar);
+        throwIfVar1IsNull(rmVar);
         final rl rlVar = this.sink;
-        bzo.n(rlVar);
+        throwIfVar1IsNull(rlVar);
         socket.setSoTimeout(0);
         noNewExchanges$okhttp();
-        return new RealWebSocket.Streams(rmVar, rlVar) { // from class: okhttp3.internal.connection.RealConnection$newWebSocketStreams$1
+        return new RealWebSocket.Streams(rmVar, rlVar) { // from class:
+                                                         // okhttp3.internal.connection.RealConnection$newWebSocketStreams$1
             @Override // java.io.Closeable, java.lang.AutoCloseable
             public void close() {
                 exchange.bodyComplete(-1L, true, true, null);
@@ -712,21 +773,21 @@ public final class RealConnection extends Http2Connection.Listener implements Co
 
     @Override // okhttp3.internal.http2.Http2Connection.Listener
     public synchronized void onSettings(Http2Connection http2Connection, Settings settings) {
-        bzo.q(http2Connection, "connection");
-        bzo.q(settings, "settings");
+        throwIfVar1IsNull(http2Connection, "connection");
+        throwIfVar1IsNull(settings, "settings");
         this.allocationLimit = settings.getMaxConcurrentStreams();
     }
 
     @Override // okhttp3.internal.http2.Http2Connection.Listener
     public void onStream(Http2Stream http2Stream) {
-        bzo.q(http2Stream, "stream");
+        throwIfVar1IsNull(http2Stream, "stream");
         http2Stream.close(ErrorCode.REFUSED_STREAM, null);
     }
 
     @Override // okhttp3.Connection
     public Protocol protocol() {
         Protocol protocol = this.protocol;
-        bzo.n(protocol);
+        throwIfVar1IsNull(protocol);
         return protocol;
     }
 
@@ -750,7 +811,7 @@ public final class RealConnection extends Http2Connection.Listener implements Co
     @Override // okhttp3.Connection
     public Socket socket() {
         Socket socket = this.socket;
-        bzo.n(socket);
+        throwIfVar1IsNull(socket);
         return socket;
     }
 
@@ -778,7 +839,7 @@ public final class RealConnection extends Http2Connection.Listener implements Co
 
     public final synchronized void trackFailure$okhttp(RealCall realCall, IOException iOException) {
         try {
-            bzo.q(realCall, "call");
+            throwIfVar1IsNull(realCall, "call");
             if (iOException instanceof StreamResetException) {
                 if (((StreamResetException) iOException).errorCode == ErrorCode.REFUSED_STREAM) {
                     int i = this.refusedStreamCount + 1;
@@ -787,7 +848,8 @@ public final class RealConnection extends Http2Connection.Listener implements Co
                         this.noNewExchanges = true;
                         this.routeFailureCount++;
                     }
-                } else if (((StreamResetException) iOException).errorCode != ErrorCode.CANCEL || !realCall.isCanceled()) {
+                } else if (((StreamResetException) iOException).errorCode != ErrorCode.CANCEL
+                        || !realCall.isCanceled()) {
                     this.noNewExchanges = true;
                     this.routeFailureCount++;
                 }

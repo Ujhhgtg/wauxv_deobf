@@ -37,8 +37,8 @@ public abstract class ccz extends abn {
     public Interpolator n;
     public Interpolator o;
     public cuy p;
-    public bgf q;
-    public bgf r;
+    public IHasInvokeMethod q;
+    public IHasInvokeMethod r;
     public bfu s;
     public FrameLayout t;
     public ImageView u;
@@ -78,12 +78,13 @@ public abstract class ccz extends abn {
         layoutParams.setMargins(((int) this.y) + i, ((int) this.aa) + i, ((int) this.z) + i, i + ((int) this.ab));
         layoutParams.gravity = layoutGravity;
         FrameLayout.LayoutParams layoutParams2 = new FrameLayout.LayoutParams(dimension2, dimension2);
-        layoutParams2.setMargins(((int) this.y) + dimension3, ((int) this.aa) + dimension3, ((int) this.z) + dimension3, dimension3 + ((int) this.ab));
+        layoutParams2.setMargins(((int) this.y) + dimension3, ((int) this.aa) + dimension3, ((int) this.z) + dimension3,
+                dimension3 + ((int) this.ab));
         layoutParams2.gravity = layoutGravity;
         int iO = this.g.o();
         for (int i2 = 0; i2 < iO; i2++) {
             Context context = getContext();
-            bzo.p(context, "getContext(...)");
+            throwIfVar1IsNull(context, "getContext(...)");
             ajw ajwVar = new ajw(context, getResources().getDimension(R.dimen.menu_item_touch_area_size));
             ajwVar.setBackgroundResource(R.drawable.gradient_oval);
             ajwVar.setStateListAnimator(AnimatorInflater.loadStateListAnimator(getContext(), R.animator.button_scale));
@@ -100,7 +101,7 @@ public abstract class ccz extends abn {
             frameLayout.addView(ajwVar, layoutParams);
         }
         Context context2 = getContext();
-        bzo.p(context2, "getContext(...)");
+        throwIfVar1IsNull(context2, "getContext(...)");
         ajw ajwVar2 = new ajw(context2, getResources().getDimension(R.dimen.main_button_touch_area_size));
         ajwVar2.setBackgroundResource(R.drawable.gradient_oval);
         ajwVar2.getBackground().setTint(this.k);
@@ -108,7 +109,7 @@ public abstract class ccz extends abn {
         Drawable drawableMutate = drawable != null ? drawable.mutate() : null;
         int i3 = this.l;
         Context context3 = getContext();
-        bzo.p(context3, "getContext(...)");
+        throwIfVar1IsNull(context3, "getContext(...)");
         crk crkVar = new crk(drawableMutate, i3, context3);
         this.x = crkVar;
         ajwVar2.setImageDrawable(crkVar);
@@ -119,22 +120,24 @@ public abstract class ccz extends abn {
         frameLayout.addView(ajwVar2, layoutParams2);
         if (this.a) {
             this.c = new TextureView(getContext());
-            bzo.ar("textureViewRenderer");
+            throwLateinitPropNotInitYet("textureViewRenderer");
             throw null;
         }
     }
 
     public final ObjectAnimator ae(View view, float f, float f2, long j, Interpolator interpolator, long j2) {
-        bzo.q(interpolator, "interpolator");
-        ObjectAnimator duration = ObjectAnimator.ofFloat(view, (Property<View, Float>) View.TRANSLATION_X, view.getTranslationX(), f).setDuration(j2);
-        bzo.p(duration, "setDuration(...)");
+        throwIfVar1IsNull(interpolator, "interpolator");
+        ObjectAnimator duration = ObjectAnimator
+                .ofFloat(view, (Property<View, Float>) View.TRANSLATION_X, view.getTranslationX(), f).setDuration(j2);
+        throwIfVar1IsNull(duration, "setDuration(...)");
         duration.setInterpolator(interpolator);
         duration.setStartDelay(j);
         duration.start();
         ArrayList arrayList = this.v;
         arrayList.add(duration);
-        ObjectAnimator duration2 = ObjectAnimator.ofFloat(view, (Property<View, Float>) View.TRANSLATION_Y, view.getTranslationY(), f2).setDuration(j2);
-        bzo.p(duration2, "setDuration(...)");
+        ObjectAnimator duration2 = ObjectAnimator
+                .ofFloat(view, (Property<View, Float>) View.TRANSLATION_Y, view.getTranslationY(), f2).setDuration(j2);
+        throwIfVar1IsNull(duration2, "setDuration(...)");
         duration2.setStartDelay(j);
         duration2.setInterpolator(interpolator);
         duration2.start();
@@ -143,16 +146,18 @@ public abstract class ccz extends abn {
     }
 
     public final ObjectAnimator af(View view, float f, long j, long j2, BaseInterpolator baseInterpolator) {
-        bzo.q(view, "view");
-        ObjectAnimator duration = ObjectAnimator.ofFloat(view, (Property<View, Float>) View.SCALE_X, view.getScaleX(), f).setDuration(j);
-        bzo.p(duration, "setDuration(...)");
+        throwIfVar1IsNull(view, "view");
+        ObjectAnimator duration = ObjectAnimator
+                .ofFloat(view, (Property<View, Float>) View.SCALE_X, view.getScaleX(), f).setDuration(j);
+        throwIfVar1IsNull(duration, "setDuration(...)");
         duration.setStartDelay(j2);
         duration.setInterpolator(baseInterpolator);
         duration.start();
         ArrayList arrayList = this.v;
         arrayList.add(duration);
-        ObjectAnimator duration2 = ObjectAnimator.ofFloat(view, (Property<View, Float>) View.SCALE_Y, view.getScaleY(), f).setDuration(j);
-        bzo.p(duration2, "setDuration(...)");
+        ObjectAnimator duration2 = ObjectAnimator
+                .ofFloat(view, (Property<View, Float>) View.SCALE_Y, view.getScaleY(), f).setDuration(j);
+        throwIfVar1IsNull(duration2, "setDuration(...)");
         duration2.setStartDelay(j2);
         duration2.setInterpolator(baseInterpolator);
         duration2.start();
@@ -169,9 +174,9 @@ public abstract class ccz extends abn {
         duration.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() { // from class: me.hd.wauxv.obf.ccx
             @Override // android.animation.ValueAnimator.AnimatorUpdateListener
             public final void onAnimationUpdate(ValueAnimator valueAnimator) {
-                bzo.q(valueAnimator, "animation");
+                throwIfVar1IsNull(valueAnimator, "animation");
                 Object animatedValue = valueAnimator.getAnimatedValue();
-                bzo.o(animatedValue, "null cannot be cast to non-null type kotlin.Int");
+                throwIfVar1IsNull(animatedValue, "null cannot be cast to non-null type kotlin.Int");
                 int iIntValue = ((Integer) animatedValue).intValue();
                 Drawable drawable2 = drawable;
                 drawable2.setAlpha(iIntValue);
@@ -196,10 +201,10 @@ public abstract class ccz extends abn {
     public final void ah() {
         ArrayList arrayList = this.v;
         Iterator it = arrayList.iterator();
-        bzo.p(it, "iterator(...)");
+        throwIfVar1IsNull(it, "iterator(...)");
         while (it.hasNext()) {
             Object next = it.next();
-            bzo.p(next, "next(...)");
+            throwIfVar1IsNull(next, "next(...)");
             ValueAnimator valueAnimator = (ValueAnimator) next;
             valueAnimator.removeAllListeners();
             valueAnimator.cancel();
@@ -212,15 +217,16 @@ public abstract class ccz extends abn {
             ah();
             int i = 2;
             long j = 0;
-            for (int childCount = getMetaBallsContainerFrameLayout().getChildCount() - 2; -1 < childCount; childCount--) {
+            for (int childCount = getMetaBallsContainerFrameLayout().getChildCount()
+                    - 2; -1 < childCount; childCount--) {
                 View childAt = getMetaBallsContainerFrameLayout().getChildAt(childCount);
-                bzo.n(childAt);
+                throwIfVar1IsNull(childAt);
                 long j2 = j;
                 ObjectAnimator objectAnimatorAe = ae(childAt, 0.0f, 0.0f, j2, getCloseInterpolatorAnimator(), this.j);
                 long j3 = (long) (this.j * 0.33f);
                 af(childAt, 0.1f, j3, j2 + j3, new LinearInterpolator());
                 Drawable drawable = ((ImageView) childAt).getDrawable();
-                bzo.p(drawable, "getDrawable(...)");
+                throwIfVar1IsNull(drawable, "getDrawable(...)");
                 ag(drawable, j2, (long) (this.j * 0.16f), 0, false);
                 j = j2 + this.h;
                 if (childCount == 0) {
@@ -229,7 +235,7 @@ public abstract class ccz extends abn {
             }
             long j4 = j;
             ImageView imageView = this.u;
-            bzo.o(imageView, "null cannot be cast to non-null type android.view.View");
+            throwIfVar1IsNull(imageView, "null cannot be cast to non-null type android.view.View");
             ac(this, imageView, 1.0f, 300L, 0L);
             if (this.a) {
                 ValueAnimator duration = ValueAnimator.ofFloat(0.0f, 0.0f).setDuration(this.j + j4);
@@ -249,13 +255,13 @@ public abstract class ccz extends abn {
         }
         boolean z = !this.w;
         this.w = z;
-        bgf bgfVar = this.r;
+        IHasInvokeMethod bgfVar = this.r;
         if (bgfVar != null) {
             bgfVar.invoke(Boolean.valueOf(z));
         }
     }
 
-    public abstract void f();
+    public abstract void getResult();
 
     public final ccv getAdapter() {
         return this.g;
@@ -270,7 +276,7 @@ public abstract class ccz extends abn {
         if (interpolator != null) {
             return interpolator;
         }
-        bzo.ar("closeInterpolatorAnimator");
+        throwLateinitPropNotInitYet("closeInterpolatorAnimator");
         throw null;
     }
 
@@ -299,11 +305,11 @@ public abstract class ccz extends abn {
         if (frameLayout != null) {
             return frameLayout;
         }
-        bzo.ar("metaBallsContainerFrameLayout");
+        throwLateinitPropNotInitYet("metaBallsContainerFrameLayout");
         throw null;
     }
 
-    public final bgf getOnItemSelectedListener() {
+    public final IHasInvokeMethod getOnItemSelectedListener() {
         return this.q;
     }
 
@@ -311,7 +317,7 @@ public abstract class ccz extends abn {
         return this.s;
     }
 
-    public final bgf getOnMenuToggled() {
+    public final IHasInvokeMethod getOnMenuToggled() {
         return this.r;
     }
 
@@ -324,7 +330,7 @@ public abstract class ccz extends abn {
         if (interpolator != null) {
             return interpolator;
         }
-        bzo.ar("openInterpolatorAnimator");
+        throwLateinitPropNotInitYet("openInterpolatorAnimator");
         throw null;
     }
 
@@ -333,7 +339,7 @@ public abstract class ccz extends abn {
     }
 
     public final void setAdapter(ccv ccvVar) {
-        bzo.q(ccvVar, "value");
+        throwIfVar1IsNull(ccvVar, "value");
         this.g = ccvVar;
         ad(getMetaBallsContainerFrameLayout());
     }
@@ -343,7 +349,7 @@ public abstract class ccz extends abn {
     }
 
     public final void setCloseInterpolatorAnimator(Interpolator interpolator) {
-        bzo.q(interpolator, "<set-?>");
+        throwIfVar1IsNull(interpolator, "<set-?>");
         this.o = interpolator;
     }
 
@@ -389,11 +395,11 @@ public abstract class ccz extends abn {
     }
 
     public final void setMetaBallsContainerFrameLayout(FrameLayout frameLayout) {
-        bzo.q(frameLayout, "<set-?>");
+        throwIfVar1IsNull(frameLayout, "<set-?>");
         this.t = frameLayout;
     }
 
-    public final void setOnItemSelectedListener(bgf bgfVar) {
+    public final void setOnItemSelectedListener(IHasInvokeMethod bgfVar) {
         this.q = bgfVar;
     }
 
@@ -401,7 +407,7 @@ public abstract class ccz extends abn {
         this.s = bfuVar;
     }
 
-    public final void setOnMenuToggled(bgf bgfVar) {
+    public final void setOnMenuToggled(IHasInvokeMethod bgfVar) {
         this.r = bgfVar;
     }
 
@@ -410,12 +416,12 @@ public abstract class ccz extends abn {
     }
 
     public final void setOpenInterpolatorAnimator(Interpolator interpolator) {
-        bzo.q(interpolator, "<set-?>");
+        throwIfVar1IsNull(interpolator, "<set-?>");
         this.n = interpolator;
     }
 
     public final void setPositionGravity(cuy cuyVar) {
-        bzo.q(cuyVar, "value");
+        throwIfVar1IsNull(cuyVar, "value");
         this.p = cuyVar;
         if (getMetaBallsContainerFrameLayout().getChildCount() != 0) {
             ad(getMetaBallsContainerFrameLayout());
@@ -424,7 +430,7 @@ public abstract class ccz extends abn {
 
     @Override // me.hd.wauxv.obf.abn
     public final void setupBaseViews(Context context) {
-        bzo.q(context, com.umeng.analytics.pro.f.X);
+        throwIfVar1IsNull(context, "context");
         super.setupBaseViews(context);
         this.y = getPaddingLeft();
         this.z = getPaddingRight();
@@ -438,7 +444,8 @@ public abstract class ccz extends abn {
         }
         FrameLayout metaBallsContainerFrameLayout = getMetaBallsContainerFrameLayout();
         Paint paint = new Paint();
-        paint.setColorFilter(new ColorMatrixColorFilter(new ColorMatrix(new float[]{1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 200.0f, -32640.0f})));
+        paint.setColorFilter(new ColorMatrixColorFilter(new ColorMatrix(new float[] { 1.0f, 0.0f, 0.0f, 0.0f, 0.0f,
+                0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 200.0f, -32640.0f })));
         metaBallsContainerFrameLayout.setLayerType(2, paint);
     }
 }

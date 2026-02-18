@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class qo extends doo {
+public final class qo extends BaseHook {
     public static final qo a;
     public static final String b;
     public static final dov c;
@@ -43,7 +43,7 @@ public final class qo extends doo {
     public final void e() {
         int i2 = bte.a;
         adt adtVarM = yg.s(-438494686083882L).m();
-        adtVarM.z(Arrays.copyOf(new Object[]{dal.b(Context.class)}, 1));
+        adtVarM.z(Arrays.copyOf(new Object[] { dal.b(Context.class) }, 1));
         adu aduVar = (adu) aaz.e(adtVarM.a());
         exg exgVar = exg.a;
         qo qoVar = a;
@@ -52,27 +52,27 @@ public final class qo extends doo {
         akiVarAd.o();
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String f() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getName() {
         return m;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String g() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getCategory() {
         return l;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String o() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getDescription() {
         return n;
     }
 
-    @Override // me.hd.wauxv.obf.doo
+    @Override // me.hd.wauxv.obf.BaseHook
     public final bgf p() {
         return r;
     }
 
-    @Override // me.hd.wauxv.obf.doo
+    @Override // me.hd.wauxv.obf.BaseHook
     public final boolean q() {
         return s;
     }

@@ -3,7 +3,7 @@ package okhttp3.internal.http;
 import java.io.IOException;
 import java.net.ProtocolException;
 import me.hd.wauxv.obf.aye;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cyk;
 import me.hd.wauxv.obf.emc;
 import okhttp3.Interceptor;
@@ -35,10 +35,10 @@ public final class CallServerInterceptor implements Interceptor {
     public Response intercept(Interceptor.Chain chain) throws IOException {
         Response.Builder responseHeaders;
         boolean z;
-        bzo.q(chain, "chain");
+        throwIfVar1IsNull(chain, "chain");
         RealInterceptorChain realInterceptorChain = (RealInterceptorChain) chain;
         Exchange exchange$okhttp = realInterceptorChain.getExchange$okhttp();
-        bzo.n(exchange$okhttp);
+        throwIfVar1IsNull(exchange$okhttp);
         Request request$okhttp = realInterceptorChain.getRequest$okhttp();
         RequestBody requestBodyBody = request$okhttp.body();
         long jCurrentTimeMillis = System.currentTimeMillis();
@@ -100,7 +100,7 @@ public final class CallServerInterceptor implements Interceptor {
         if (responseHeaders == null) {
             try {
                 responseHeaders = exchange$okhttp.readResponseHeaders(false);
-                bzo.n(responseHeaders);
+                throwIfVar1IsNull(responseHeaders);
                 if (z2) {
                     exchange$okhttp.responseHeadersStart();
                     z2 = false;
@@ -113,20 +113,28 @@ public final class CallServerInterceptor implements Interceptor {
                 throw e;
             }
         }
-        Response responseBuild = responseHeaders.request(request$okhttp).handshake(exchange$okhttp.getConnection$okhttp().handshake()).sentRequestAtMillis(jCurrentTimeMillis).receivedResponseAtMillis(System.currentTimeMillis()).build();
+        Response responseBuild = responseHeaders.request(request$okhttp)
+                .handshake(exchange$okhttp.getConnection$okhttp().handshake()).sentRequestAtMillis(jCurrentTimeMillis)
+                .receivedResponseAtMillis(System.currentTimeMillis()).build();
         int iCode = responseBuild.code();
         if (shouldIgnoreAndWaitForRealResponse(iCode)) {
             Response.Builder responseHeaders2 = exchange$okhttp.readResponseHeaders(false);
-            bzo.n(responseHeaders2);
+            throwIfVar1IsNull(responseHeaders2);
             if (z2) {
                 exchange$okhttp.responseHeadersStart();
             }
-            responseBuild = responseHeaders2.request(request$okhttp).handshake(exchange$okhttp.getConnection$okhttp().handshake()).sentRequestAtMillis(jCurrentTimeMillis).receivedResponseAtMillis(System.currentTimeMillis()).build();
+            responseBuild = responseHeaders2.request(request$okhttp)
+                    .handshake(exchange$okhttp.getConnection$okhttp().handshake())
+                    .sentRequestAtMillis(jCurrentTimeMillis).receivedResponseAtMillis(System.currentTimeMillis())
+                    .build();
             iCode = responseBuild.code();
         }
         exchange$okhttp.responseHeadersEnd(responseBuild);
-        Response responseBuild2 = (this.forWebSocket && iCode == 101) ? responseBuild.newBuilder().body(Util.EMPTY_RESPONSE).build() : responseBuild.newBuilder().body(exchange$okhttp.openResponseBody(responseBuild)).build();
-        if ("close".equalsIgnoreCase(responseBuild2.request().header("Connection")) || "close".equalsIgnoreCase(Response.header$default(responseBuild2, "Connection", null, 2, null))) {
+        Response responseBuild2 = (this.forWebSocket && iCode == 101)
+                ? responseBuild.newBuilder().body(Util.EMPTY_RESPONSE).build()
+                : responseBuild.newBuilder().body(exchange$okhttp.openResponseBody(responseBuild)).build();
+        if ("close".equalsIgnoreCase(responseBuild2.request().header("Connection"))
+                || "close".equalsIgnoreCase(Response.header$default(responseBuild2, "Connection", null, 2, null))) {
             exchange$okhttp.noNewExchangesOnConnection();
         }
         if (iCode == 204 || iCode == 205) {

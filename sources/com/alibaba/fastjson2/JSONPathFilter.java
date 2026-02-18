@@ -31,7 +31,10 @@ import net.bytebuddy.pool.TypePool;
 abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment.EvalSegment {
     private boolean and = true;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class EndsWithSegment extends NameFilter {
         final String prefix;
 
@@ -47,7 +50,10 @@ abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class GroupFilter extends JSONPathSegment implements JSONPathSegment.EvalSegment {
         final List<JSONPathFilter> filters;
 
@@ -133,12 +139,16 @@ abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class NameArrayOpSegment extends NameFilter {
         final JSONArray array;
         final Operator operator;
 
-        public NameArrayOpSegment(String str, long j, String[] strArr, long[] jArr, Function function, Operator operator, JSONArray jSONArray) {
+        public NameArrayOpSegment(String str, long j, String[] strArr, long[] jArr, Function function,
+                Operator operator, JSONArray jSONArray) {
             super(str, j, strArr, jArr, function);
             this.operator = operator;
             this.array = jSONArray;
@@ -155,7 +165,10 @@ abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class NameDecimalOpSegment extends NameFilter {
         final Operator operator;
         final BigDecimal value;
@@ -174,7 +187,8 @@ abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment
             }
             if (obj instanceof Boolean) {
                 bigDecimalValueOf = ((Boolean) obj).booleanValue() ? BigDecimal.ONE : BigDecimal.ZERO;
-            } else if ((obj instanceof Byte) || (obj instanceof Short) || (obj instanceof Integer) || (obj instanceof Long)) {
+            } else if ((obj instanceof Byte) || (obj instanceof Short) || (obj instanceof Integer)
+                    || (obj instanceof Long)) {
                 bigDecimalValueOf = BigDecimal.valueOf(((Number) obj).longValue());
             } else if (obj instanceof BigDecimal) {
                 bigDecimalValueOf = (BigDecimal) obj;
@@ -213,7 +227,10 @@ abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class NameDoubleOpSegment extends NameFilter {
         final Operator operator;
         final double value;
@@ -267,7 +284,10 @@ abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class NameExistsFilter extends JSONPathFilter {
         final String name;
         final long nameHashCode;
@@ -344,7 +364,10 @@ abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class NameIntBetweenSegment extends NameFilter {
         private final long begin;
         private final long end;
@@ -401,12 +424,16 @@ abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class NameIntInSegment extends NameFilter {
         private final boolean not;
         private final long[] values;
 
-        public NameIntInSegment(String str, long j, String[] strArr, long[] jArr, Function function, long[] jArr2, boolean z) {
+        public NameIntInSegment(String str, long j, String[] strArr, long[] jArr, Function function, long[] jArr2,
+                boolean z) {
             super(str, j, strArr, jArr, function);
             this.values = jArr2;
             this.not = z;
@@ -481,12 +508,16 @@ abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class NameIntOpSegment extends NameFilter {
         final Operator operator;
         final long value;
 
-        public NameIntOpSegment(String str, long j, String[] strArr, long[] jArr, Function function, Operator operator, long j2) {
+        public NameIntOpSegment(String str, long j, String[] strArr, long[] jArr, Function function, Operator operator,
+                long j2) {
             super(str, j, strArr, jArr, function);
             this.operator = operator;
             this.value = j2;
@@ -496,7 +527,8 @@ abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment
         public boolean apply(Object obj) {
             int iCompareTo;
             boolean z = obj instanceof Boolean;
-            if (z || (obj instanceof Byte) || (obj instanceof Short) || (obj instanceof Integer) || (obj instanceof Long)) {
+            if (z || (obj instanceof Byte) || (obj instanceof Short) || (obj instanceof Integer)
+                    || (obj instanceof Long)) {
                 long jLongValue = z ? ((Boolean) obj).booleanValue() ? 1L : 0L : ((Number) obj).longValue();
                 int iOrdinal = this.operator.ordinal();
                 if (iOrdinal == 0) {
@@ -619,7 +651,10 @@ abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class NameIsNull extends NameFilter {
         public NameIsNull(String str, long j, String[] strArr, long[] jArr, Function function) {
             super(str, j, strArr, jArr, function);
@@ -640,7 +675,10 @@ abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class NameLongContainsSegment extends NameFilter {
         private final boolean not;
         private final long[] values;
@@ -651,7 +689,7 @@ abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment
             this.not = z;
         }
 
-        /* JADX WARN: Found duplicated region for block: B:37:0x0074  */
+        /* JADX WARN: Found duplicated region for block: B:37:0x0074 */
         /* JADX WARN: Found duplicated region for block: B:55:0x0078 A[SYNTHETIC] */
         /* JADX WARN: Found duplicated region for block: B:58:0x0012 A[SYNTHETIC] */
         @Override // com.alibaba.fastjson2.JSONPathFilter.NameFilter
@@ -664,7 +702,10 @@ abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment
                     while (true) {
                         if (it.hasNext()) {
                             Object next = it.next();
-                            if ((((next instanceof Byte) || (next instanceof Short) || (next instanceof Integer) || (next instanceof Long)) && ((Number) next).longValue() == j) || (((next instanceof Float) && j == ((Float) next).floatValue()) || ((next instanceof Double) && j == ((Double) next).doubleValue()))) {
+                            if ((((next instanceof Byte) || (next instanceof Short) || (next instanceof Integer)
+                                    || (next instanceof Long)) && ((Number) next).longValue() == j)
+                                    || (((next instanceof Float) && j == ((Float) next).floatValue())
+                                            || ((next instanceof Double) && j == ((Double) next).doubleValue()))) {
                                 break;
                             }
                             if (next instanceof BigDecimal) {
@@ -693,7 +734,10 @@ abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class NameMatchFilter extends NameFilter {
         final String[] containsValues;
         final String endsWithValue;
@@ -751,12 +795,16 @@ abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class NameObjectOpSegment extends NameFilter {
         final JSONObject object;
         final Operator operator;
 
-        public NameObjectOpSegment(String str, long j, String[] strArr, long[] jArr, Function function, Operator operator, JSONObject jSONObject) {
+        public NameObjectOpSegment(String str, long j, String[] strArr, long[] jArr, Function function,
+                Operator operator, JSONObject jSONObject) {
             super(str, j, strArr, jArr, function);
             this.operator = operator;
             this.object = jSONObject;
@@ -773,7 +821,10 @@ abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class NameRLikeSegment extends NameFilter {
         final boolean not;
         final Pattern pattern;
@@ -791,12 +842,16 @@ abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class NameStringContainsSegment extends NameFilter {
         private final boolean not;
         private final String[] values;
 
-        public NameStringContainsSegment(String str, long j, String[] strArr, long[] jArr, String[] strArr2, boolean z) {
+        public NameStringContainsSegment(String str, long j, String[] strArr, long[] jArr, String[] strArr2,
+                boolean z) {
             super(str, j, strArr, jArr, null);
             this.values = strArr2;
             this.not = z;
@@ -816,7 +871,10 @@ abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class NameStringInSegment extends NameFilter {
         private final boolean not;
         private final String[] values;
@@ -847,12 +905,16 @@ abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class NameStringOpSegment extends NameFilter {
         final Operator operator;
         final String value;
 
-        public NameStringOpSegment(String str, long j, String[] strArr, long[] jArr, Function function, Operator operator, String str2) {
+        public NameStringOpSegment(String str, long j, String[] strArr, long[] jArr, Function function,
+                Operator operator, String str2) {
             super(str, j, strArr, jArr, function);
             this.operator = operator;
             this.value = str2;
@@ -900,7 +962,10 @@ abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class NamesExistsFilter extends JSONPathFilter {
         final long[] nameHashCodes;
         final String[] names;
@@ -963,7 +1028,10 @@ abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public enum Operator {
         EQ,
         NE,
@@ -1035,13 +1103,17 @@ abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class RangeIndexSegmentFilter extends JSONPathFilter {
         final JSONPathSegment.RangeIndexSegment expr;
         final Operator operator;
         final Object value;
 
-        public RangeIndexSegmentFilter(JSONPathSegment.RangeIndexSegment rangeIndexSegment, Operator operator, Object obj) {
+        public RangeIndexSegmentFilter(JSONPathSegment.RangeIndexSegment rangeIndexSegment, Operator operator,
+                Object obj) {
             this.expr = rangeIndexSegment;
             this.operator = operator;
             this.value = obj;
@@ -1049,7 +1121,7 @@ abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment
 
         @Override // com.alibaba.fastjson2.JSONPathSegment
         public void accept(JSONReader jSONReader, JSONPath.Context context) {
-            throw new JSONException(bjs.l(RangeIndexSegmentFilter.class, "UnsupportedOperation "));
+            throw new JSONException(concatVar2Var1(RangeIndexSegmentFilter.class, "UnsupportedOperation "));
         }
 
         @Override // com.alibaba.fastjson2.JSONPathFilter
@@ -1101,7 +1173,7 @@ abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment
             JSONPath.Context context2 = context.parent;
             Object obj = context2 == null ? context.root : context2.value;
             if (!(obj instanceof List)) {
-                throw new JSONException(bjs.m(obj, new StringBuilder("UnsupportedOperation ")));
+                throw new JSONException(concatVar1GetClass(obj, new StringBuilder("UnsupportedOperation ")));
             }
             List list = (List) obj;
             JSONArray jSONArray = new JSONArray(list.size());
@@ -1116,7 +1188,10 @@ abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Segment2Filter extends JSONPathFilter {
         final JSONPathSegment left;
         final Operator operator;
@@ -1130,7 +1205,7 @@ abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment
 
         @Override // com.alibaba.fastjson2.JSONPathSegment
         public void accept(JSONReader jSONReader, JSONPath.Context context) {
-            throw new JSONException(bjs.l(Segment2Filter.class, "UnsupportedOperation "));
+            throw new JSONException(concatVar2Var1(Segment2Filter.class, "UnsupportedOperation "));
         }
 
         @Override // com.alibaba.fastjson2.JSONPathFilter
@@ -1173,7 +1248,7 @@ abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment
             JSONPath.Context context2 = context.parent;
             Object obj = context2 == null ? context.root : context2.value;
             if (!(obj instanceof List)) {
-                throw new JSONException(bjs.m(obj, new StringBuilder("UnsupportedOperation ")));
+                throw new JSONException(concatVar1GetClass(obj, new StringBuilder("UnsupportedOperation ")));
             }
             List list = (List) obj;
             JSONArray jSONArray = new JSONArray(list.size());
@@ -1188,7 +1263,10 @@ abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class SegmentFilter extends JSONPathFilter {
         final JSONPathSegment expr;
         final Operator operator;
@@ -1202,7 +1280,7 @@ abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment
 
         @Override // com.alibaba.fastjson2.JSONPathSegment
         public void accept(JSONReader jSONReader, JSONPath.Context context) {
-            throw new JSONException(bjs.l(SegmentFilter.class, "UnsupportedOperation "));
+            throw new JSONException(concatVar2Var1(SegmentFilter.class, "UnsupportedOperation "));
         }
 
         @Override // com.alibaba.fastjson2.JSONPathFilter
@@ -1241,7 +1319,7 @@ abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment
             JSONPath.Context context2 = context.parent;
             Object obj = context2 == null ? context.root : context2.value;
             if (!(obj instanceof List)) {
-                throw new JSONException(bjs.m(obj, new StringBuilder("UnsupportedOperation ")));
+                throw new JSONException(concatVar1GetClass(obj, new StringBuilder("UnsupportedOperation ")));
             }
             List list = (List) obj;
             JSONArray jSONArray = new JSONArray(list.size());
@@ -1260,7 +1338,7 @@ abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment
             JSONPath.Context context2 = context.parent;
             Object obj = context2 == null ? context.root : context2.value;
             if (!(obj instanceof List)) {
-                throw new JSONException(bjs.l(SegmentFilter.class, "UnsupportedOperation "));
+                throw new JSONException(concatVar2Var1(SegmentFilter.class, "UnsupportedOperation "));
             }
             List list = (List) obj;
             for (int size = list.size() - 1; size >= 0; size--) {
@@ -1287,7 +1365,10 @@ abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class StartsWithSegment extends NameFilter {
         final String prefix;
 
@@ -1314,7 +1395,10 @@ abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment
         return this;
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static abstract class NameFilter extends JSONPathFilter {
         final String fieldName;
         final String[] fieldName2;
@@ -1368,7 +1452,8 @@ abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment
                             obj = ((Map) obj).get(str2);
                         } else {
                             ObjectWriter objectWriter = writerContext.getObjectWriter(obj.getClass());
-                            if (!(objectWriter instanceof ObjectWriterAdapter) || (fieldWriter2 = objectWriter.getFieldWriter(this.fieldNameNameHash2[i])) == null) {
+                            if (!(objectWriter instanceof ObjectWriterAdapter) || (fieldWriter2 = objectWriter
+                                    .getFieldWriter(this.fieldNameNameHash2[i])) == null) {
                                 return false;
                             }
                             obj = fieldWriter2.getFieldValue(obj);
@@ -1412,7 +1497,8 @@ abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment
                         fieldValue = ((Map) fieldValue).get(str3);
                     } else {
                         ObjectWriter objectWriter3 = writerContext.getObjectWriter(fieldValue.getClass());
-                        if (!(objectWriter3 instanceof ObjectWriterAdapter) || (fieldWriter = objectWriter3.getFieldWriter(this.fieldNameNameHash2[i2])) == null) {
+                        if (!(objectWriter3 instanceof ObjectWriterAdapter)
+                                || (fieldWriter = objectWriter3.getFieldWriter(this.fieldNameNameHash2[i2])) == null) {
                             return false;
                         }
                         fieldValue = fieldWriter.getFieldValue(fieldValue);
@@ -1524,7 +1610,10 @@ abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class NameName extends NameFilter {
         final String fieldName1;
         final long fieldNameName1Hash;
@@ -1535,7 +1624,8 @@ abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment
             this.fieldNameName1Hash = j2;
         }
 
-        @Override // com.alibaba.fastjson2.JSONPathFilter.NameFilter, com.alibaba.fastjson2.JSONPathFilter
+        @Override // com.alibaba.fastjson2.JSONPathFilter.NameFilter,
+                  // com.alibaba.fastjson2.JSONPathFilter
         public boolean apply(JSONPath.Context context, Object obj) {
             FieldWriter fieldWriter;
             Object fieldValue;
@@ -1550,7 +1640,8 @@ abstract class JSONPathFilter extends JSONPathSegment implements JSONPathSegment
                 fieldValue = map.get(this.fieldName1);
             } else {
                 ObjectWriter objectWriter = writerContext.getObjectWriter(obj.getClass());
-                if (!(objectWriter instanceof ObjectWriterAdapter) || (fieldWriter = objectWriter.getFieldWriter(this.fieldNameNameHash)) == null) {
+                if (!(objectWriter instanceof ObjectWriterAdapter)
+                        || (fieldWriter = objectWriter.getFieldWriter(this.fieldNameNameHash)) == null) {
                     return false;
                 }
                 Object fieldValue2 = fieldWriter.getFieldValue(obj);

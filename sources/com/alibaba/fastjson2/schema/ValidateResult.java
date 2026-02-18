@@ -29,7 +29,7 @@ public final class ValidateResult {
             if (objArr.length > 0) {
                 string = String.format(str, objArr);
                 if (this.cause != null) {
-                    StringBuilder sbR = bjs.r(string, "; ");
+                    StringBuilder sbR = concat(string, "; ");
                     sbR.append(this.cause.getMessage());
                     string = sbR.toString();
                 }

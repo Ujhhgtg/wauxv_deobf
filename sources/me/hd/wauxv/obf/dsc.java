@@ -24,7 +24,7 @@ public final class dsc {
             return false;
         }
         dsc dscVar = (dsc) obj;
-        return bzo.f(this.a, dscVar.a) && bzo.f(this.b, dscVar.b);
+        return nullSafeIsEqual(this.a, dscVar.a) && nullSafeIsEqual(this.b, dscVar.b);
     }
 
     public final int hashCode() {
@@ -38,6 +38,6 @@ public final class dsc {
         StringBuilder sb = new StringBuilder();
         sb.append("AppActionSceneProto(installedActionScene=" /* cnb.z(-148391120075562L) */);
         bjs.w(sb, this.a, -148227911318314L);
-        return bjs.p(sb, this.b, ')');
+        return concat(sb, this.b, ')');
     }
 }

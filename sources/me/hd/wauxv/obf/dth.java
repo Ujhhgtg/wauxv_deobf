@@ -19,7 +19,7 @@ public final class dth {
         if (this == obj) {
             return true;
         }
-        return (obj instanceof dth) && bzo.f(this.a, ((dth) obj).a);
+        return (obj instanceof dth) && nullSafeIsEqual(this.a, ((dth) obj).a);
     }
 
     public final int hashCode() {
@@ -33,6 +33,6 @@ public final class dth {
     public final String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("FinderMediaProto(url=" /* cnb.z(-183098750794538L) */);
-        return bjs.q(sb, this.a, ')');
+        return concat(sb, this.a, ')');
     }
 }

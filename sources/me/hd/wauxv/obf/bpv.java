@@ -15,25 +15,97 @@ import okhttp3.HttpUrl;
 /* JADX INFO: loaded from: classes.dex */
 public abstract class bpv {
     public static final chm a = new chm(2);
-    public static final Object b = bzo.ai(new csm("boolean", Boolean.TYPE), new csm("byte", Byte.TYPE), new csm("char", Character.TYPE), new csm("short", Short.TYPE), new csm("int", Integer.TYPE), new csm("long", Long.TYPE), new csm("float", Float.TYPE), new csm("double", Double.TYPE), new csm("void", Void.TYPE));
+    public static final Object b = KotlinHelpers.ai(new Pair("boolean", Boolean.TYPE), new Pair("byte", Byte.TYPE),
+            new Pair("char", Character.TYPE), new Pair("short", Short.TYPE), new Pair("int", Integer.TYPE),
+            new Pair("long", Long.TYPE), new Pair("float", Float.TYPE), new Pair("double", Double.TYPE),
+            new Pair("void", Void.TYPE));
 
-    /* JADX WARN: Found duplicated region for block: B:17:0x0047 A[PHI: r3
-      0x0047: PHI (r3v30 java.lang.Object) = (r3v42 java.lang.Object), (r3v43 java.lang.Object) binds: [B:24:0x0061, B:16:0x0045] A[DONT_GENERATE, DONT_INLINE]] */
-    /* JADX WARN: Found duplicated region for block: B:26:0x0064  */
-    /* JADX WARN: Found duplicated region for block: B:29:0x0079 A[Catch: all -> 0x0086, TryCatch #0 {all -> 0x0086, blocks: (B:27:0x0073, B:29:0x0079, B:31:0x007f, B:36:0x008c, B:38:0x009d, B:40:0x00be, B:42:0x00c4, B:43:0x00cc, B:45:0x00d3, B:47:0x00db, B:51:0x00e8, B:53:0x00f0, B:54:0x0102, B:56:0x010c, B:57:0x0110, B:59:0x0117, B:60:0x0122, B:44:0x00cf), top: B:68:0x0073 }] */
-    /* JADX WARN: Found duplicated region for block: B:31:0x007f A[Catch: all -> 0x0086, TryCatch #0 {all -> 0x0086, blocks: (B:27:0x0073, B:29:0x0079, B:31:0x007f, B:36:0x008c, B:38:0x009d, B:40:0x00be, B:42:0x00c4, B:43:0x00cc, B:45:0x00d3, B:47:0x00db, B:51:0x00e8, B:53:0x00f0, B:54:0x0102, B:56:0x010c, B:57:0x0110, B:59:0x0117, B:60:0x0122, B:44:0x00cf), top: B:68:0x0073 }] */
-    /* JADX WARN: Found duplicated region for block: B:34:0x0089  */
-    /* JADX WARN: Found duplicated region for block: B:36:0x008c A[Catch: all -> 0x0086, TryCatch #0 {all -> 0x0086, blocks: (B:27:0x0073, B:29:0x0079, B:31:0x007f, B:36:0x008c, B:38:0x009d, B:40:0x00be, B:42:0x00c4, B:43:0x00cc, B:45:0x00d3, B:47:0x00db, B:51:0x00e8, B:53:0x00f0, B:54:0x0102, B:56:0x010c, B:57:0x0110, B:59:0x0117, B:60:0x0122, B:44:0x00cf), top: B:68:0x0073 }] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:17:0x0047 A[PHI: r3
+     * 0x0047: PHI (r3v30 java.lang.Object) = (r3v42 java.lang.Object), (r3v43
+     * java.lang.Object) binds: [B:24:0x0061, B:16:0x0045] A[DONT_GENERATE,
+     * DONT_INLINE]]
+     */
+    /* JADX WARN: Found duplicated region for block: B:26:0x0064 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:29:0x0079 A[Catch: all ->
+     * 0x0086, TryCatch #0 {all -> 0x0086, blocks: (B:27:0x0073, B:29:0x0079,
+     * B:31:0x007f, B:36:0x008c, B:38:0x009d, B:40:0x00be, B:42:0x00c4, B:43:0x00cc,
+     * B:45:0x00d3, B:47:0x00db, B:51:0x00e8, B:53:0x00f0, B:54:0x0102, B:56:0x010c,
+     * B:57:0x0110, B:59:0x0117, B:60:0x0122, B:44:0x00cf), top: B:68:0x0073 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:31:0x007f A[Catch: all ->
+     * 0x0086, TryCatch #0 {all -> 0x0086, blocks: (B:27:0x0073, B:29:0x0079,
+     * B:31:0x007f, B:36:0x008c, B:38:0x009d, B:40:0x00be, B:42:0x00c4, B:43:0x00cc,
+     * B:45:0x00d3, B:47:0x00db, B:51:0x00e8, B:53:0x00f0, B:54:0x0102, B:56:0x010c,
+     * B:57:0x0110, B:59:0x0117, B:60:0x0122, B:44:0x00cf), top: B:68:0x0073 }]
+     */
+    /* JADX WARN: Found duplicated region for block: B:34:0x0089 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:36:0x008c A[Catch: all ->
+     * 0x0086, TryCatch #0 {all -> 0x0086, blocks: (B:27:0x0073, B:29:0x0079,
+     * B:31:0x007f, B:36:0x008c, B:38:0x009d, B:40:0x00be, B:42:0x00c4, B:43:0x00cc,
+     * B:45:0x00d3, B:47:0x00db, B:51:0x00e8, B:53:0x00f0, B:54:0x0102, B:56:0x010c,
+     * B:57:0x0110, B:59:0x0117, B:60:0x0122, B:44:0x00cf), top: B:68:0x0073 }]
+     */
     /* JADX WARN: Found duplicated region for block: B:37:0x009b A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:38:0x009d A[Catch: all -> 0x0086, TryCatch #0 {all -> 0x0086, blocks: (B:27:0x0073, B:29:0x0079, B:31:0x007f, B:36:0x008c, B:38:0x009d, B:40:0x00be, B:42:0x00c4, B:43:0x00cc, B:45:0x00d3, B:47:0x00db, B:51:0x00e8, B:53:0x00f0, B:54:0x0102, B:56:0x010c, B:57:0x0110, B:59:0x0117, B:60:0x0122, B:44:0x00cf), top: B:68:0x0073 }] */
-    /* JADX WARN: Found duplicated region for block: B:40:0x00be A[Catch: all -> 0x0086, TryCatch #0 {all -> 0x0086, blocks: (B:27:0x0073, B:29:0x0079, B:31:0x007f, B:36:0x008c, B:38:0x009d, B:40:0x00be, B:42:0x00c4, B:43:0x00cc, B:45:0x00d3, B:47:0x00db, B:51:0x00e8, B:53:0x00f0, B:54:0x0102, B:56:0x010c, B:57:0x0110, B:59:0x0117, B:60:0x0122, B:44:0x00cf), top: B:68:0x0073 }] */
-    /* JADX WARN: Found duplicated region for block: B:42:0x00c4 A[Catch: all -> 0x0086, TryCatch #0 {all -> 0x0086, blocks: (B:27:0x0073, B:29:0x0079, B:31:0x007f, B:36:0x008c, B:38:0x009d, B:40:0x00be, B:42:0x00c4, B:43:0x00cc, B:45:0x00d3, B:47:0x00db, B:51:0x00e8, B:53:0x00f0, B:54:0x0102, B:56:0x010c, B:57:0x0110, B:59:0x0117, B:60:0x0122, B:44:0x00cf), top: B:68:0x0073 }] */
-    /* JADX WARN: Found duplicated region for block: B:44:0x00cf A[Catch: all -> 0x0086, TryCatch #0 {all -> 0x0086, blocks: (B:27:0x0073, B:29:0x0079, B:31:0x007f, B:36:0x008c, B:38:0x009d, B:40:0x00be, B:42:0x00c4, B:43:0x00cc, B:45:0x00d3, B:47:0x00db, B:51:0x00e8, B:53:0x00f0, B:54:0x0102, B:56:0x010c, B:57:0x0110, B:59:0x0117, B:60:0x0122, B:44:0x00cf), top: B:68:0x0073 }] */
-    /* JADX WARN: Found duplicated region for block: B:50:0x00e5  */
-    /* JADX WARN: Found duplicated region for block: B:53:0x00f0 A[Catch: all -> 0x0086, LOOP:0: B:51:0x00e8->B:53:0x00f0, LOOP_END, TryCatch #0 {all -> 0x0086, blocks: (B:27:0x0073, B:29:0x0079, B:31:0x007f, B:36:0x008c, B:38:0x009d, B:40:0x00be, B:42:0x00c4, B:43:0x00cc, B:45:0x00d3, B:47:0x00db, B:51:0x00e8, B:53:0x00f0, B:54:0x0102, B:56:0x010c, B:57:0x0110, B:59:0x0117, B:60:0x0122, B:44:0x00cf), top: B:68:0x0073 }] */
-    /* JADX WARN: Found duplicated region for block: B:56:0x010c A[Catch: all -> 0x0086, TryCatch #0 {all -> 0x0086, blocks: (B:27:0x0073, B:29:0x0079, B:31:0x007f, B:36:0x008c, B:38:0x009d, B:40:0x00be, B:42:0x00c4, B:43:0x00cc, B:45:0x00d3, B:47:0x00db, B:51:0x00e8, B:53:0x00f0, B:54:0x0102, B:56:0x010c, B:57:0x0110, B:59:0x0117, B:60:0x0122, B:44:0x00cf), top: B:68:0x0073 }] */
-    /* JADX WARN: Found duplicated region for block: B:59:0x0117 A[Catch: all -> 0x0086, LOOP:1: B:58:0x0115->B:59:0x0117, LOOP_END, TryCatch #0 {all -> 0x0086, blocks: (B:27:0x0073, B:29:0x0079, B:31:0x007f, B:36:0x008c, B:38:0x009d, B:40:0x00be, B:42:0x00c4, B:43:0x00cc, B:45:0x00d3, B:47:0x00db, B:51:0x00e8, B:53:0x00f0, B:54:0x0102, B:56:0x010c, B:57:0x0110, B:59:0x0117, B:60:0x0122, B:44:0x00cf), top: B:68:0x0073 }] */
-    /* JADX WARN: Type inference failed for: r5v2, types: [java.lang.Object, java.util.Map] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:38:0x009d A[Catch: all ->
+     * 0x0086, TryCatch #0 {all -> 0x0086, blocks: (B:27:0x0073, B:29:0x0079,
+     * B:31:0x007f, B:36:0x008c, B:38:0x009d, B:40:0x00be, B:42:0x00c4, B:43:0x00cc,
+     * B:45:0x00d3, B:47:0x00db, B:51:0x00e8, B:53:0x00f0, B:54:0x0102, B:56:0x010c,
+     * B:57:0x0110, B:59:0x0117, B:60:0x0122, B:44:0x00cf), top: B:68:0x0073 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:40:0x00be A[Catch: all ->
+     * 0x0086, TryCatch #0 {all -> 0x0086, blocks: (B:27:0x0073, B:29:0x0079,
+     * B:31:0x007f, B:36:0x008c, B:38:0x009d, B:40:0x00be, B:42:0x00c4, B:43:0x00cc,
+     * B:45:0x00d3, B:47:0x00db, B:51:0x00e8, B:53:0x00f0, B:54:0x0102, B:56:0x010c,
+     * B:57:0x0110, B:59:0x0117, B:60:0x0122, B:44:0x00cf), top: B:68:0x0073 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:42:0x00c4 A[Catch: all ->
+     * 0x0086, TryCatch #0 {all -> 0x0086, blocks: (B:27:0x0073, B:29:0x0079,
+     * B:31:0x007f, B:36:0x008c, B:38:0x009d, B:40:0x00be, B:42:0x00c4, B:43:0x00cc,
+     * B:45:0x00d3, B:47:0x00db, B:51:0x00e8, B:53:0x00f0, B:54:0x0102, B:56:0x010c,
+     * B:57:0x0110, B:59:0x0117, B:60:0x0122, B:44:0x00cf), top: B:68:0x0073 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:44:0x00cf A[Catch: all ->
+     * 0x0086, TryCatch #0 {all -> 0x0086, blocks: (B:27:0x0073, B:29:0x0079,
+     * B:31:0x007f, B:36:0x008c, B:38:0x009d, B:40:0x00be, B:42:0x00c4, B:43:0x00cc,
+     * B:45:0x00d3, B:47:0x00db, B:51:0x00e8, B:53:0x00f0, B:54:0x0102, B:56:0x010c,
+     * B:57:0x0110, B:59:0x0117, B:60:0x0122, B:44:0x00cf), top: B:68:0x0073 }]
+     */
+    /* JADX WARN: Found duplicated region for block: B:50:0x00e5 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:53:0x00f0 A[Catch: all ->
+     * 0x0086, LOOP:0: B:51:0x00e8->B:53:0x00f0, LOOP_END, TryCatch #0 {all ->
+     * 0x0086, blocks: (B:27:0x0073, B:29:0x0079, B:31:0x007f, B:36:0x008c,
+     * B:38:0x009d, B:40:0x00be, B:42:0x00c4, B:43:0x00cc, B:45:0x00d3, B:47:0x00db,
+     * B:51:0x00e8, B:53:0x00f0, B:54:0x0102, B:56:0x010c, B:57:0x0110, B:59:0x0117,
+     * B:60:0x0122, B:44:0x00cf), top: B:68:0x0073 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:56:0x010c A[Catch: all ->
+     * 0x0086, TryCatch #0 {all -> 0x0086, blocks: (B:27:0x0073, B:29:0x0079,
+     * B:31:0x007f, B:36:0x008c, B:38:0x009d, B:40:0x00be, B:42:0x00c4, B:43:0x00cc,
+     * B:45:0x00d3, B:47:0x00db, B:51:0x00e8, B:53:0x00f0, B:54:0x0102, B:56:0x010c,
+     * B:57:0x0110, B:59:0x0117, B:60:0x0122, B:44:0x00cf), top: B:68:0x0073 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:59:0x0117 A[Catch: all ->
+     * 0x0086, LOOP:1: B:58:0x0115->B:59:0x0117, LOOP_END, TryCatch #0 {all ->
+     * 0x0086, blocks: (B:27:0x0073, B:29:0x0079, B:31:0x007f, B:36:0x008c,
+     * B:38:0x009d, B:40:0x00be, B:42:0x00c4, B:43:0x00cc, B:45:0x00d3, B:47:0x00db,
+     * B:51:0x00e8, B:53:0x00f0, B:54:0x0102, B:56:0x010c, B:57:0x0110, B:59:0x0117,
+     * B:60:0x0122, B:44:0x00cf), top: B:68:0x0073 }]
+     */
+    /*
+     * JADX WARN: Type inference failed for: r5v2, types: [java.lang.Object,
+     * java.util.Map]
+     */
     public static Class c(ClassLoader classLoader, String str) {
         ec ecVar;
         Object objB;
@@ -52,23 +124,24 @@ public abstract class bpv {
         Object obj2;
         ec ecVar3;
         Object objB3;
-        bzo.q(str, "typeName");
+        throwIfVar1IsNull(str, "typeName");
         chm chmVar = a;
         chmVar.getClass();
         ReentrantReadWriteLock reentrantReadWriteLock = (ReentrantReadWriteLock) chmVar.c;
         ReentrantReadWriteLock.ReadLock lock = reentrantReadWriteLock.readLock();
-        bzo.p(lock, "readLock(...)");
+        throwIfVar1IsNull(lock, "readLock(...)");
         lock.lock();
         try {
             WeakHashMap weakHashMap2 = (WeakHashMap) chmVar.f;
             if (weakHashMap2 == null) {
                 WeakReference weakReference = (WeakReference) chmVar.d;
-                if ((weakReference != null ? (ClassLoader) weakReference.get() : null) != classLoader || (ecVar3 = (ec) ((HashMap) chmVar.e).get(str)) == null || (objB3 = ecVar3.b()) == null) {
+                if ((weakReference != null ? (ClassLoader) weakReference.get() : null) != classLoader
+                        || (ecVar3 = (ec) ((HashMap) chmVar.e).get(str)) == null || (objB3 = ecVar3.b()) == null) {
                     obj2 = objB;
                     obj2 = objB3;
                     lock.unlock();
                     ReentrantReadWriteLock.WriteLock writeLock = reentrantReadWriteLock.writeLock();
-                    bzo.p(writeLock, "writeLock(...)");
+                    throwIfVar1IsNull(writeLock, "writeLock(...)");
                     writeLock.lock();
                     try {
                         weakHashMap = (WeakHashMap) chmVar.f;
@@ -105,13 +178,13 @@ public abstract class bpv {
                             while (dnr.bi(strSubstring, HttpUrl.PATH_SEGMENT_ENCODE_SET_URI)) {
                                 i++;
                                 strSubstring = strSubstring.substring(0, strSubstring.length() - 2);
-                                bzo.p(strSubstring, "substring(...)");
+                                throwIfVar1IsNull(strSubstring, "substring(...)");
                             }
                             clsLoadClass = (Class) b.get(strSubstring);
                             if (clsLoadClass == null) {
                                 clsLoadClass = classLoader.loadClass(strSubstring);
                             }
-                            bzo.n(clsLoadClass);
+                            throwIfVar1IsNull(clsLoadClass);
                             i2 = 0;
                             cls = clsLoadClass;
                             while (i2 < i) {
@@ -137,7 +210,7 @@ public abstract class bpv {
                     obj2 = objB3;
                     lock.unlock();
                     ReentrantReadWriteLock.WriteLock writeLock2 = reentrantReadWriteLock.writeLock();
-                    bzo.p(writeLock2, "writeLock(...)");
+                    throwIfVar1IsNull(writeLock2, "writeLock(...)");
                     writeLock2.lock();
                     weakHashMap = (WeakHashMap) chmVar.f;
                     if (weakHashMap == null) {
@@ -174,13 +247,13 @@ public abstract class bpv {
                         while (dnr.bi(strSubstring, HttpUrl.PATH_SEGMENT_ENCODE_SET_URI)) {
                             i++;
                             strSubstring = strSubstring.substring(0, strSubstring.length() - 2);
-                            bzo.p(strSubstring, "substring(...)");
+                            throwIfVar1IsNull(strSubstring, "substring(...)");
                         }
                         clsLoadClass = (Class) b.get(strSubstring);
                         if (clsLoadClass == null) {
                             clsLoadClass = classLoader.loadClass(strSubstring);
                         }
-                        bzo.n(clsLoadClass);
+                        throwIfVar1IsNull(clsLoadClass);
                         i2 = 0;
                         cls = clsLoadClass;
                         while (i2 < i) {
@@ -196,13 +269,13 @@ public abstract class bpv {
                         while (dnr.bi(strSubstring, HttpUrl.PATH_SEGMENT_ENCODE_SET_URI)) {
                             i++;
                             strSubstring = strSubstring.substring(0, strSubstring.length() - 2);
-                            bzo.p(strSubstring, "substring(...)");
+                            throwIfVar1IsNull(strSubstring, "substring(...)");
                         }
                         clsLoadClass = (Class) b.get(strSubstring);
                         if (clsLoadClass == null) {
                             clsLoadClass = classLoader.loadClass(strSubstring);
                         }
-                        bzo.n(clsLoadClass);
+                        throwIfVar1IsNull(clsLoadClass);
                         i2 = 0;
                         cls = clsLoadClass;
                         while (i2 < i) {
@@ -226,15 +299,22 @@ public abstract class bpv {
         }
     }
 
-    /* JADX WARN: Type inference failed for: r3v3, types: [java.io.Serializable, java.lang.Object[]] */
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException
-    	at java.base/java.util.Objects.requireNonNull(Objects.java:209)
-    	at java.base/java.util.ArrayList.batchRemove(ArrayList.java:816)
-    	at java.base/java.util.ArrayList.removeAll(ArrayList.java:791)
-    	at jadx.core.dex.visitors.finaly.TryCatchEdgeBlockMap.getAllInScope(TryCatchEdgeBlockMap.java:91)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:204)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+    /*
+     * JADX WARN: Type inference failed for: r3v3, types: [java.io.Serializable,
+     * java.lang.Object[]]
+     */
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException
+     * at java.base/java.util.Objects.requireNonNull(Objects.java:209)
+     * at java.base/java.util.ArrayList.batchRemove(ArrayList.java:816)
+     * at java.base/java.util.ArrayList.removeAll(ArrayList.java:791)
+     * at jadx.core.dex.visitors.finaly.TryCatchEdgeBlockMap.getAllInScope(
+     * TryCatchEdgeBlockMap.java:91)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+     * MarkFinallyVisitor.java:204)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:119)
      */
     public static Serializable d(ClassLoader classLoader, ArrayList arrayList) {
         Object objX;

@@ -33,8 +33,8 @@ public final /* synthetic */ class za implements Comparator {
             case 3:
                 dhr dhrVar = (dhr) obj;
                 dhr dhrVar2 = (dhr) obj2;
-                bzo.n(dhrVar);
-                bzo.n(dhrVar2);
+                throwIfVar1IsNull(dhrVar);
+                throwIfVar1IsNull(dhrVar2);
                 abu abuVar = dhrVar.d;
                 abu abuVar2 = dhrVar2.d;
                 if (abuVar != abuVar2) {

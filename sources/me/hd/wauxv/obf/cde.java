@@ -9,15 +9,17 @@ import java.util.Map;
 /* JADX INFO: loaded from: classes.dex */
 public final class cde extends axd {
     public Object a;
-    public bgf ai;
+    public IHasInvokeMethod ai;
 
     public final List aj() {
         cbg cbgVar = this.aa;
         if (cbgVar == null) {
-            throw new IllegalArgumentException("You must provide a configuration to resolve the member use build(configuration).");
+            throw new IllegalArgumentException(
+                    "You must provide a configuration to resolve the member use build(configuration).");
         }
         List listQ = cbp.q(this, cbgVar, cbgVar.a, new cbo(this, cbgVar, 0));
-        bzo.o(listQ, "null cannot be cast to non-null type kotlin.collections.List<R of com.highcapable.kavaref.resolver.processor.MemberProcessor.resolve>");
+        throwIfVar1IsNull(listQ,
+                "null cannot be cast to non-null type kotlin.collections.List<R of com.highcapable.kavaref.resolver.processor.MemberProcessor.resolve>");
         return listQ;
     }
 
@@ -28,7 +30,9 @@ public final class cde extends axd {
     @Override // me.hd.wauxv.obf.axd, me.hd.wauxv.obf.cbh
     public final Map x() {
         Map mapX = super.x();
-        Map mapAi = bzo.ai(new csm("returnType", this.a), new csm("returnTypeCondition", this.ai), new csm("isBridge", null), new csm("isBridgeNot", null), new csm("isDefault", null), new csm("isDefaultNot", null));
+        Map mapAi = KotlinHelpers.ai(new Pair("returnType", this.a), new Pair("returnTypeCondition", this.ai),
+                new Pair("isBridge", null), new Pair("isBridgeNot", null), new Pair("isDefault", null),
+                new Pair("isDefaultNot", null));
         LinkedHashMap linkedHashMap = new LinkedHashMap(mapX);
         linkedHashMap.putAll(mapAi);
         return linkedHashMap;

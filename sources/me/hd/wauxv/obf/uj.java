@@ -11,12 +11,12 @@ public abstract class uj {
 
     static {
         Charset charsetForName = Charset.forName("UTF-8");
-        bzo.p(charsetForName, "forName(...)");
+        throwIfVar1IsNull(charsetForName, "forName(...)");
         a = charsetForName;
-        bzo.p(Charset.forName("UTF-16"), "forName(...)");
-        bzo.p(Charset.forName("UTF-16BE"), "forName(...)");
-        bzo.p(Charset.forName("UTF-16LE"), "forName(...)");
-        bzo.p(Charset.forName("US-ASCII"), "forName(...)");
-        bzo.p(Charset.forName("ISO-8859-1"), "forName(...)");
+        throwIfVar1IsNull(Charset.forName("UTF-16"), "forName(...)");
+        throwIfVar1IsNull(Charset.forName("UTF-16BE"), "forName(...)");
+        throwIfVar1IsNull(Charset.forName("UTF-16LE"), "forName(...)");
+        throwIfVar1IsNull(Charset.forName("US-ASCII"), "forName(...)");
+        throwIfVar1IsNull(Charset.forName("ISO-8859-1"), "forName(...)");
     }
 }

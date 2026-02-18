@@ -41,7 +41,8 @@ public final class DebugInfoEncoder {
     private int line = 1;
     private final ByteArrayAnnotatedOutput output = new ByteArrayAnnotatedOutput();
 
-    public DebugInfoEncoder(PositionList positionList, LocalList localList, DexFile dexFile, int i, int i2, boolean z, CstMethodRef cstMethodRef) {
+    public DebugInfoEncoder(PositionList positionList, LocalList localList, DexFile dexFile, int i, int i2, boolean z,
+            CstMethodRef cstMethodRef) {
         this.positions = positionList;
         this.locals = localList;
         this.file = dexFile;
@@ -76,7 +77,8 @@ public final class DebugInfoEncoder {
         for (int i = 0; i < size; i++) {
             arrayList.add(this.positions.get(i));
         }
-        Collections.sort(arrayList, new Comparator<PositionList.Entry>() { // from class: com.android.dx.dex.file.DebugInfoEncoder.1
+        Collections.sort(arrayList, new Comparator<PositionList.Entry>() { // from class:
+                                                                           // com.android.dx.dex.file.DebugInfoEncoder.1
             @Override // java.util.Comparator
             public boolean equals(Object obj) {
                 return obj == this;
@@ -111,10 +113,14 @@ public final class DebugInfoEncoder {
         while (true) {
             iEmitLocalsAtAddress = emitLocalsAtAddress(iEmitLocalsAtAddress);
             iEmitPositionsAtAddress = emitPositionsAtAddress(iEmitPositionsAtAddress, arrayListBuildSortedPositions);
-            int address = iEmitLocalsAtAddress < size2 ? this.locals.get(iEmitLocalsAtAddress).getAddress() : Integer.MAX_VALUE;
-            int address2 = iEmitPositionsAtAddress < size ? arrayListBuildSortedPositions.get(iEmitPositionsAtAddress).getAddress() : Integer.MAX_VALUE;
+            int address = iEmitLocalsAtAddress < size2 ? this.locals.get(iEmitLocalsAtAddress).getAddress()
+                    : Integer.MAX_VALUE;
+            int address2 = iEmitPositionsAtAddress < size
+                    ? arrayListBuildSortedPositions.get(iEmitPositionsAtAddress).getAddress()
+                    : Integer.MAX_VALUE;
             int iMin = Math.min(address2, address);
-            if (iMin == Integer.MAX_VALUE || (iMin == this.codeSize && address == Integer.MAX_VALUE && address2 == Integer.MAX_VALUE)) {
+            if (iMin == Integer.MAX_VALUE
+                    || (iMin == this.codeSize && address == Integer.MAX_VALUE && address2 == Integer.MAX_VALUE)) {
                 break;
             }
             if (iMin == address2) {
@@ -210,7 +216,9 @@ public final class DebugInfoEncoder {
                 emitStringIndex(null);
             }
             if (z) {
-                annotate(this.output.getCursor() - cursor3, "parameter " + ((next == null || next.getSignature() != null) ? "<unnamed>" : next.getName().toHuman()) + " v" + paramBase);
+                annotate(this.output.getCursor() - cursor3, "parameter "
+                        + ((next == null || next.getSignature() != null) ? "<unnamed>" : next.getName().toHuman())
+                        + " v" + paramBase);
             }
             paramBase += type.getCategory();
         }
@@ -228,7 +236,8 @@ public final class DebugInfoEncoder {
         if (this.annotateTo == null && this.debugPrint == null) {
             return;
         }
-        annotate(this.output.getCursor() - cursor, String.format("%04x: -local %s", Integer.valueOf(this.address), entryAnnotationString(entry)));
+        annotate(this.output.getCursor() - cursor,
+                String.format("%04x: -local %s", Integer.valueOf(this.address), entryAnnotationString(entry)));
     }
 
     private void emitLocalRestart(LocalList.Entry entry) {
@@ -238,7 +247,8 @@ public final class DebugInfoEncoder {
         if (this.annotateTo == null && this.debugPrint == null) {
             return;
         }
-        annotate(this.output.getCursor() - cursor, String.format("%04x: +local restart %s", Integer.valueOf(this.address), entryAnnotationString(entry)));
+        annotate(this.output.getCursor() - cursor,
+                String.format("%04x: +local restart %s", Integer.valueOf(this.address), entryAnnotationString(entry)));
     }
 
     private void emitLocalStart(LocalList.Entry entry) {
@@ -254,7 +264,8 @@ public final class DebugInfoEncoder {
         if (this.annotateTo == null && this.debugPrint == null) {
             return;
         }
-        annotate(this.output.getCursor() - cursor, String.format("%04x: +local %s", Integer.valueOf(this.address), entryAnnotationString(entry)));
+        annotate(this.output.getCursor() - cursor,
+                String.format("%04x: +local %s", Integer.valueOf(this.address), entryAnnotationString(entry)));
     }
 
     private void emitLocalStartExtended(LocalList.Entry entry) {
@@ -267,7 +278,8 @@ public final class DebugInfoEncoder {
         if (this.annotateTo == null && this.debugPrint == null) {
             return;
         }
-        annotate(this.output.getCursor() - cursor, String.format("%04x: +localx %s", Integer.valueOf(this.address), entryAnnotationString(entry)));
+        annotate(this.output.getCursor() - cursor,
+                String.format("%04x: +localx %s", Integer.valueOf(this.address), entryAnnotationString(entry)));
     }
 
     private int emitLocalsAtAddress(int i) {
@@ -365,7 +377,7 @@ public final class DebugInfoEncoder {
 
     private void emitUnsignedLeb128(int i) {
         if (i < 0) {
-            throw new RuntimeException(bjs.i(i, "Signed value where unsigned required: "));
+            throw new RuntimeException(concatVar2Var1(i, "Signed value where unsigned required: "));
         }
         this.output.writeUleb128(i);
     }
@@ -411,7 +423,8 @@ public final class DebugInfoEncoder {
                 }
             }
         }
-        Collections.sort(arrayList, new Comparator<LocalList.Entry>() { // from class: com.android.dx.dex.file.DebugInfoEncoder.2
+        Collections.sort(arrayList, new Comparator<LocalList.Entry>() { // from class:
+                                                                        // com.android.dx.dex.file.DebugInfoEncoder.2
             @Override // java.util.Comparator
             public boolean equals(Object obj) {
                 return obj == this;

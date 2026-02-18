@@ -19,7 +19,7 @@ public final /* synthetic */ class aca implements cqw {
     public final void b(aci aciVar) {
         switch (this.a) {
             case 0:
-                bzo.q(aciVar, "it");
+                throwIfVar1IsNull(aciVar, "it");
                 hb hbVar = this.c;
                 Bundle bundleG = ((but) hbVar.t.c).g("android:support:activity-result");
                 if (bundleG != null) {
@@ -27,10 +27,13 @@ public final /* synthetic */ class aca implements cqw {
                     LinkedHashMap linkedHashMap = acgVar.b;
                     LinkedHashMap linkedHashMap2 = acgVar.a;
                     Bundle bundle = acgVar.g;
-                    ArrayList<Integer> integerArrayList = bundleG.getIntegerArrayList("KEY_COMPONENT_ACTIVITY_REGISTERED_RCS");
-                    ArrayList<String> stringArrayList = bundleG.getStringArrayList("KEY_COMPONENT_ACTIVITY_REGISTERED_KEYS");
+                    ArrayList<Integer> integerArrayList = bundleG
+                            .getIntegerArrayList("KEY_COMPONENT_ACTIVITY_REGISTERED_RCS");
+                    ArrayList<String> stringArrayList = bundleG
+                            .getStringArrayList("KEY_COMPONENT_ACTIVITY_REGISTERED_KEYS");
                     if (stringArrayList != null && integerArrayList != null) {
-                        ArrayList<String> stringArrayList2 = bundleG.getStringArrayList("KEY_COMPONENT_ACTIVITY_LAUNCHED_KEYS");
+                        ArrayList<String> stringArrayList2 = bundleG
+                                .getStringArrayList("KEY_COMPONENT_ACTIVITY_LAUNCHED_KEYS");
                         if (stringArrayList2 != null) {
                             acgVar.d.addAll(stringArrayList2);
                         }
@@ -49,10 +52,10 @@ public final /* synthetic */ class aca implements cqw {
                                 }
                             }
                             Integer num2 = integerArrayList.get(i);
-                            bzo.p(num2, "rcs[i]");
+                            throwIfVar1IsNull(num2, "rcs[i]");
                             int iIntValue = num2.intValue();
                             String str2 = stringArrayList.get(i);
-                            bzo.p(str2, "keys[i]");
+                            throwIfVar1IsNull(str2, "keys[i]");
                             String str3 = str2;
                             linkedHashMap2.put(Integer.valueOf(iIntValue), str3);
                             acgVar.b.put(str3, Integer.valueOf(iIntValue));

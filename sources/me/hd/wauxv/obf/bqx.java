@@ -176,7 +176,8 @@ public final class bqx extends czd implements czi {
                 float fAbs = Math.abs(x);
                 float fAbs2 = Math.abs(y);
                 float f = this.r;
-                if ((fAbs >= f || fAbs2 >= f) && ((fAbs <= fAbs2 || !layoutManager.bu()) && ((fAbs2 <= fAbs || !layoutManager.bv()) && (viewAm = am(motionEvent)) != null))) {
+                if ((fAbs >= f || fAbs2 >= f) && ((fAbs <= fAbs2 || !layoutManager.bu())
+                        && ((fAbs2 <= fAbs || !layoutManager.bv()) && (viewAm = am(motionEvent)) != null))) {
                     czxVarDv = this.s.dv(viewAm);
                 }
             }
@@ -280,7 +281,8 @@ public final class bqx extends czd implements czi {
             View viewX = recyclerView.p.x(iY);
             float translationX = viewX.getTranslationX();
             float translationY = viewX.getTranslationY();
-            if (x >= viewX.getLeft() + translationX && x <= viewX.getRight() + translationX && y >= viewX.getTop() + translationY && y <= viewX.getBottom() + translationY) {
+            if (x >= viewX.getLeft() + translationX && x <= viewX.getRight() + translationX
+                    && y >= viewX.getTop() + translationY && y <= viewX.getBottom() + translationY) {
                 return viewX;
             }
         }
@@ -319,7 +321,8 @@ public final class bqx extends czd implements czi {
             int i4 = (int) (this.k + this.i);
             int i5 = (int) (this.l + this.j);
             View view = czxVar.d;
-            if (Math.abs(i5 - view.getTop()) >= view.getHeight() * 0.5f || Math.abs(i4 - view.getLeft()) >= view.getWidth() * 0.5f) {
+            if (Math.abs(i5 - view.getTop()) >= view.getHeight() * 0.5f
+                    || Math.abs(i4 - view.getLeft()) >= view.getWidth() * 0.5f) {
                 ArrayList arrayList = this.v;
                 if (arrayList == null) {
                     this.v = new ArrayList();
@@ -343,7 +346,8 @@ public final class bqx extends czd implements czi {
                         i = i8;
                     } else {
                         i = i8;
-                        if (viewEr.getBottom() >= iRound2 && viewEr.getTop() <= height && viewEr.getRight() >= iRound && viewEr.getLeft() <= width) {
+                        if (viewEr.getBottom() >= iRound2 && viewEr.getTop() <= height && viewEr.getRight() >= iRound
+                                && viewEr.getLeft() <= width) {
                             czx czxVarDv = this.s.dv(viewEr);
                             int iAbs5 = Math.abs(i6 - ((viewEr.getRight() + viewEr.getLeft()) / 2));
                             int iAbs6 = Math.abs(i7 - ((viewEr.getBottom() + viewEr.getTop()) / 2));
@@ -390,19 +394,23 @@ public final class bqx extends czd implements czi {
                 int i15 = -1;
                 for (int i16 = 0; i16 < size2; i16++) {
                     czx czxVar3 = (czx) arrayList2.get(i16);
-                    if (left2 > 0 && (right = czxVar3.d.getRight() - width2) < 0 && czxVar3.d.getRight() > view.getRight() && (iAbs4 = Math.abs(right)) > i15) {
+                    if (left2 > 0 && (right = czxVar3.d.getRight() - width2) < 0
+                            && czxVar3.d.getRight() > view.getRight() && (iAbs4 = Math.abs(right)) > i15) {
                         i15 = iAbs4;
                         czxVar2 = czxVar3;
                     }
-                    if (left2 < 0 && (left = czxVar3.d.getLeft() - i13) > 0 && czxVar3.d.getLeft() < view.getLeft() && (iAbs3 = Math.abs(left)) > i15) {
+                    if (left2 < 0 && (left = czxVar3.d.getLeft() - i13) > 0 && czxVar3.d.getLeft() < view.getLeft()
+                            && (iAbs3 = Math.abs(left)) > i15) {
                         i15 = iAbs3;
                         czxVar2 = czxVar3;
                     }
-                    if (top2 < 0 && (top = czxVar3.d.getTop() - i14) > 0 && czxVar3.d.getTop() < view.getTop() && (iAbs2 = Math.abs(top)) > i15) {
+                    if (top2 < 0 && (top = czxVar3.d.getTop() - i14) > 0 && czxVar3.d.getTop() < view.getTop()
+                            && (iAbs2 = Math.abs(top)) > i15) {
                         i15 = iAbs2;
                         czxVar2 = czxVar3;
                     }
-                    if (top2 > 0 && (bottom = czxVar3.d.getBottom() - height2) < 0 && czxVar3.d.getBottom() > view.getBottom() && (iAbs = Math.abs(bottom)) > i15) {
+                    if (top2 > 0 && (bottom = czxVar3.d.getBottom() - height2) < 0
+                            && czxVar3.d.getBottom() > view.getBottom() && (iAbs = Math.abs(bottom)) > i15) {
                         i15 = iAbs;
                         czxVar2 = czxVar3;
                     }
@@ -469,7 +477,8 @@ public final class bqx extends czd implements czi {
                 byte b = iEl < iEl2 ? (byte) 1 : (byte) -1;
                 if (linearLayoutManager.bi) {
                     if (b == 1) {
-                        linearLayoutManager.dg(iEl2, linearLayoutManager.bf.j() - (linearLayoutManager.bf.f(view) + linearLayoutManager.bf.h(view2)));
+                        linearLayoutManager.dg(iEl2, linearLayoutManager.bf.j()
+                                - (linearLayoutManager.bf.f(view) + linearLayoutManager.bf.h(view2)));
                         return;
                     } else {
                         linearLayoutManager.dg(iEl2, linearLayoutManager.bf.j() - linearLayoutManager.bf.e(view2));
@@ -491,9 +500,11 @@ public final class bqx extends czd implements czi {
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:18:0x004a  */
+    /* JADX WARN: Found duplicated region for block: B:18:0x004a */
     /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r0v6, types: [android.view.ViewParent] */
+    /*
+     * JADX WARN: Type inference failed for: r0v6, types: [android.view.ViewParent]
+     */
     /* JADX WARN: Type inference failed for: r12v1 */
     /* JADX WARN: Type inference failed for: r12v10 */
     /* JADX WARN: Type inference failed for: r12v11 */
@@ -644,11 +655,11 @@ public final class bqx extends czd implements czi {
             Context context = ((RecyclerView) xeVar.f).getContext();
             if (Build.VERSION.SDK_INT >= 31) {
                 Object systemService = context.getSystemService("vibrator_manager" /* cnb.z(-71210557766442L) */);
-                bzo.o(systemService, "null cannot be cast to non-null type android.os.VibratorManager" /* cnb.z(-70587787508522L) */);
+                throwIfVar1IsNull(systemService, "null cannot be cast to non-null type android.os.VibratorManager" /* cnb.z(-70587787508522L) */);
                 defaultVibrator = qc.m(systemService).getDefaultVibrator();
             } else {
                 Object systemService2 = context.getSystemService("vibrator" /* cnb.z(-70862665415466L) */);
-                bzo.o(systemService2, "null cannot be cast to non-null type android.os.Vibrator" /* cnb.z(-70841190578986L) */);
+                throwIfVar1IsNull(systemService2, "null cannot be cast to non-null type android.os.Vibrator" /* cnb.z(-70841190578986L) */);
                 defaultVibrator = (Vibrator) systemService2;
             }
             defaultVibrator.vibrate(VibrationEffect.createOneShot(40L, -1));

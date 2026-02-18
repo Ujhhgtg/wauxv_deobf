@@ -16,11 +16,13 @@ public final class bhq {
 
     public static final bhm b(bhq bhqVar, String str) {
         bhqVar.getClass();
-        Pattern patternCompile = Pattern.compile("^(\\d+\\.\\d+\\.\\d+)\\.r(\\d+)\\.(\\w+)$" /* cnb.z(-45140106279722L) */);
-        bzo.p(patternCompile, "compile(...)");
-        bzo.q(str, "input");
+        Pattern patternCompile = Pattern.compile("^(\\d+\\.\\d+\\.\\d+)\\.r(\\d+)\\.(\\w+)$" /*
+                                                                                              * cnb.z(-45140106279722L)
+                                                                                              */);
+        throwIfVar1IsNull(patternCompile, "compile(...)");
+        throwIfVar1IsNull(str, "input");
         Matcher matcher = patternCompile.matcher(str);
-        bzo.p(matcher, "matcher(...)");
+        throwIfVar1IsNull(matcher, "matcher(...)");
         bzx bzxVar = !matcher.matches() ? null : new bzx(matcher, str);
         if (bzxVar == null) {
             return new bhm("1.0.0" /* cnb.z(-45548128172842L) */, 1, "standalone" /* cnb.z(-45505178499882L) */);

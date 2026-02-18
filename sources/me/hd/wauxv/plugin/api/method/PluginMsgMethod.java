@@ -64,7 +64,8 @@ public final class PluginMsgMethod {
     }
 
     @cty
-    public final void revokeMsg(long j) throws IllegalAccessException, InstantiationException, IOException, InvocationTargetException {
+    public final void revokeMsg(long j)
+            throws IllegalAccessException, InstantiationException, IOException, InvocationTargetException {
         cmk cmkVar = cmk.a;
         String strZ = "你撤回了一条消息" /* cnb.z(-133358734539562L) */;
         cmkVar.getClass();
@@ -85,7 +86,8 @@ public final class PluginMsgMethod {
         JSONObject jSONObject4 = new JSONObject();
         String strZ4 = "item" /* cnb.z(-114963389610794L) */;
         JSONObject jSONObject5 = new JSONObject();
-        jSONObject5.put("pagepath" /* cnb.z(-114924734905130L) */, "<![CDATA[" /* cnb.z(-115435836013354L) */ + str3 + "]]>" /* cnb.z(-115410066209578L) */);
+        jSONObject5.put("pagepath" /* cnb.z(-114924734905130L) */,
+                "<![CDATA[" /* cnb.z(-115435836013354L) */ + str3 + "]]>" /* cnb.z(-115410066209578L) */);
         jSONObject5.put("username" /* cnb.z(-115358526602026L) */, str4);
         jSONObject4.put(strZ4, jSONObject5);
         jSONObject3.put(strZ3, jSONObject4);
@@ -110,7 +112,8 @@ public final class PluginMsgMethod {
         jSONObject3.put("type" /* cnb.z(-117669219007274L) */, 1);
         jSONObject3.put("title" /* cnb.z(-118180320115498L) */, str2);
         jSONObject3.put("des" /* cnb.z(-118137370442538L) */, str2);
-        jSONObject3.put("content" /* cnb.z(-118154550311722L) */, "|WA|" /* cnb.z(-118120190573354L) */ + TextUtils.htmlEncode(str3));
+        jSONObject3.put("content" /* cnb.z(-118154550311722L) */,
+                "|WA|" /* cnb.z(-118120190573354L) */ + TextUtils.htmlEncode(str3));
         jSONObject2.put(strZ2, jSONObject3);
         jSONObject.put(strZ, jSONObject2);
         HashSet hashSet = new HashSet();
@@ -132,12 +135,14 @@ public final class PluginMsgMethod {
     }
 
     @cty
-    public final void sendImage(String str, String str2, String str3) throws JSONException, IllegalAccessException, InstantiationException, InvocationTargetException {
+    public final void sendImage(String str, String str2, String str3)
+            throws JSONException, IllegalAccessException, InstantiationException, InvocationTargetException {
         arj.ad(str, str2, str3);
     }
 
     @cty
-    public final void sendLocation(String str, String str2, String str3, String str4, String str5, String str6) throws JSONException {
+    public final void sendLocation(String str, String str2, String str3, String str4, String str5, String str6)
+            throws JSONException {
         arj.ae(str, str2, str3, str4, str5, str6);
     }
 
@@ -178,15 +183,17 @@ public final class PluginMsgMethod {
         ctc ctcVar = ctc.a;
         cde cdeVarT = dqc.bi(dgf.b(emn.az(ctcVar))).t();
         cdeVarT.a = dal.b(String.class);
-        Object objJ = ((cdk) dkz.n(new Object[]{dal.b(String.class), dal.b(String.class)}, 2, cdeVarT)).j(str2, str);
-        bzo.n(objJ);
+        Object objJ = ((cdk) dkz.n(new Object[] { dal.b(String.class), dal.b(String.class) }, 2, cdeVarT)).j(str2, str);
+        throwIfVar1IsNull(objJ);
         String str3 = (String) objJ;
         int iCurrentTimeMillis = (int) (System.currentTimeMillis() / ((long) 1000));
         ctdVar.getClass();
         cde cdeVarT2 = dqc.bi(dgf.b(emn.az(ctcVar))).t();
         cdeVarT2.a = dal.b(Pair.class);
-        Object objJ2 = ((cdk) dkz.n(new Object[]{dal.b(String.class), dal.b(String.class), dal.b(String.class), dal.b(String.class), dal.b(Integer.TYPE), dal.b(Long.TYPE)}, 6, cdeVarT2)).j(str, strB, str2, str3, Integer.valueOf(iCurrentTimeMillis), 0L);
-        bzo.n(objJ2);
+        Object objJ2 = ((cdk) dkz.n(new Object[] { dal.b(String.class), dal.b(String.class), dal.b(String.class),
+                dal.b(String.class), dal.b(Integer.TYPE), dal.b(Long.TYPE) }, 6, cdeVarT2))
+                .j(str, strB, str2, str3, Integer.valueOf(iCurrentTimeMillis), 0L);
+        throwIfVar1IsNull(objJ2);
         alc alcVar = aou.a;
         cnd.bf(akq.f, new ckx((Pair) objJ2, str, str2, null));
     }
@@ -213,14 +220,15 @@ public final class PluginMsgMethod {
         cdeVarT.ak(cdy.c);
         Class cls = Integer.TYPE;
         cdeVarT.a = dal.b(cls);
-        Object objJ = ((cdk) dkz.n(new Object[]{dal.b(cls)}, 1, cdeVarT)).j(Integer.valueOf(type));
-        bzo.n(objJ);
+        Object objJ = ((cdk) dkz.n(new Object[] { dal.b(cls) }, 1, cdeVarT)).j(Integer.valueOf(type));
+        throwIfVar1IsNull(objJ);
         jSONObject4.put(strZ4, ((Number) objJ).intValue());
         jSONObject4.put("svrid" /* cnb.z(-114873195297578L) */, msgInfoBean.getMsgSvrId());
         jSONObject4.put("fromusr" /* cnb.z(-114898965101354L) */, msgInfoBean.getTalker());
         jSONObject4.put("chatusr" /* cnb.z(-114864605362986L) */, msgInfoBean.getSendTalker());
         String strZ5 = "displayname" /* cnb.z(-114830245624618L) */;
-        Cursor cursorAc = arj.ac("select * from rcontact where username = '" /* cnb.z(-85083302132522L) */ + msgInfoBean.getSendTalker() + '\'');
+        Cursor cursorAc = arj.ac("select * from rcontact where username = '"
+                /* cnb.z(-85083302132522L) */ + msgInfoBean.getSendTalker() + '\'');
         cursorAc.moveToFirst();
         jSONObject4.put(strZ5, cnb.s(cursorAc).getNickname());
         jSONObject4.put("msgsource" /* cnb.z(-114744346278698L) */, "" /* cnb.z(-114718576474922L) */);
@@ -247,10 +255,12 @@ public final class PluginMsgMethod {
         JSONObject jSONObject2 = new JSONObject();
         jSONObject2.put("username" /* cnb.z(-116994909141802L) */, str2);
         String strZ2 = "nickname" /* cnb.z(-116956254436138L) */;
-        Cursor cursorAc = arj.ac("select * from rcontact where username = '" /* cnb.z(-85083302132522L) */ + str2 + '\'');
+        Cursor cursorAc = arj
+                .ac("select * from rcontact where username = '" /* cnb.z(-85083302132522L) */ + str2 + '\'');
         cursorAc.moveToFirst();
         jSONObject2.put(strZ2, cnb.s(cursorAc).getNickname());
-        jSONObject2.put("certflag" /* cnb.z(-116866060122922L) */, cnb.z(dnr.bp(str2, "gh_" /* cnb.z(-116827405417258L) */, false) ? -116844585286442L : -118446608087850L));
+        jSONObject2.put("certflag" /* cnb.z(-116866060122922L) */, cnb
+                .z(dnr.bp(str2, "gh_" /* cnb.z(-116827405417258L) */, false) ? -116844585286442L : -118446608087850L));
         jSONObject.put(strZ, jSONObject2);
         HashSet hashSet = new HashSet();
         HashSet hashSet2 = new HashSet();
@@ -317,14 +327,14 @@ public final class PluginMsgMethod {
                             if (name.equals("onSceneEnd" /* cnb.z(-134376641788714L) */)) {
                                 try {
                                     Object obj2 = objArr[0];
-                                    bzo.o(obj2, "null cannot be cast to non-null type kotlin.Int" /* cnb.z(-134295037410090L) */);
+                                    throwIfVar1IsNull(obj2, "null cannot be cast to non-null type kotlin.Int" /* cnb.z(-134295037410090L) */);
                                     Integer num = (Integer) obj2;
                                     Object obj3 = objArr[1];
-                                    bzo.o(obj3, "null cannot be cast to non-null type kotlin.Int" /* cnb.z(-134638634793770L) */);
+                                    throwIfVar1IsNull(obj3, "null cannot be cast to non-null type kotlin.Int" /* cnb.z(-134638634793770L) */);
                                     Integer num2 = (Integer) obj3;
                                     Object obj4 = objArr[2];
                                     String str3 = obj4 instanceof String ? (String) obj4 : null;
-                                    bzo.o(objArr[3], "null cannot be cast to non-null type kotlin.Any" /* cnb.z(-134432476363562L) */);
+                                    throwIfVar1IsNull(objArr[3], "null cannot be cast to non-null type kotlin.Any" /* cnb.z(-134432476363562L) */);
                                     int i2 = bte.a;
                                     cde cdeVarT2 = dqc.bi(objArr[3]).t();
                                     cdeVarT2.ab = "getReqResp" /* cnb.z(-135875585375018L) */;
@@ -367,32 +377,40 @@ public final class PluginMsgMethod {
         Method methodBb = emn.bb(cmd.a);
         byr.a.getClass();
         Object objInvoke = methodBb.invoke(byr.c(), null);
-        bzo.n(objInvoke);
+        throwIfVar1IsNull(objInvoke);
         cdkVar.e(objInvoke, objNewProxyInstance);
     }
 
     @cty
-    public final void sendVideo(String str, String str2) throws IllegalAccessException, NoSuchMethodException, InstantiationException, InvocationTargetException {
+    public final void sendVideo(String str, String str2)
+            throws IllegalAccessException, NoSuchMethodException, InstantiationException, InvocationTargetException {
         arj.ag(str, str2);
     }
 
     @cty
-    public final void sendVoice(String str, String str2, int i) throws IllegalAccessException, InstantiationException, InvocationTargetException {
+    public final void sendVoice(String str, String str2, int i)
+            throws IllegalAccessException, InstantiationException, InvocationTargetException {
         arj.ah(str, str2, i);
     }
 
     @cty
-    public final void sendImage(String str, String str2) throws JSONException, IllegalAccessException, InstantiationException, InvocationTargetException {
+    public final void sendImage(String str, String str2)
+            throws JSONException, IllegalAccessException, InstantiationException, InvocationTargetException {
         arj.ad(str, str2, null);
     }
 
     @cty
     public final void sendLocation(String str, JSONObject jSONObject) throws JSONException {
-        arj.ae(str, jSONObject.optString("poiName" /* cnb.z(-403885839612714L) */), jSONObject.optString("label" /* cnb.z(-403851479874346L) */), jSONObject.optString("x" /* cnb.z(-403808530201386L) */), jSONObject.optString("y" /* cnb.z(-403817120135978L) */), jSONObject.optString("scale" /* cnb.z(-403825710070570L) */));
+        arj.ae(str, jSONObject.optString("poiName" /* cnb.z(-403885839612714L) */),
+                jSONObject.optString("label" /* cnb.z(-403851479874346L) */),
+                jSONObject.optString("x" /* cnb.z(-403808530201386L) */), jSONObject.optString(
+                        "y" /* cnb.z(-403817120135978L) */),
+                jSONObject.optString("scale" /* cnb.z(-403825710070570L) */));
     }
 
     @cty
-    public final void sendVoice(String str, String str2) throws IllegalAccessException, InstantiationException, InvocationTargetException {
+    public final void sendVoice(String str, String str2)
+            throws IllegalAccessException, InstantiationException, InvocationTargetException {
         arj.ah(str, str2, cnh.w(str2));
     }
 }

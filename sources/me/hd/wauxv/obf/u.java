@@ -26,8 +26,8 @@ public abstract class u implements ahf {
 
     @Override // me.hd.wauxv.obf.ahh
     public ahf _w(ahg ahgVar) {
-        bzo.q(ahgVar, "key");
-        if (bzo.f(getKey(), ahgVar)) {
+        throwIfVar1IsNull(ahgVar, "key");
+        if (nullSafeIsEqual(getKey(), ahgVar)) {
             return this;
         }
         return null;

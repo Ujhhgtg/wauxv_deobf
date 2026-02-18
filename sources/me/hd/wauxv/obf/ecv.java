@@ -30,7 +30,9 @@ public final class ecv {
             return false;
         }
         ecv ecvVar = (ecv) obj;
-        return bzo.f(this.a, ecvVar.a) && bzo.f(this.b, ecvVar.b) && bzo.f(this.c, ecvVar.c) && bzo.f(this.d, ecvVar.d) && bzo.f(this.e, ecvVar.e);
+        return nullSafeIsEqual(this.a, ecvVar.a) && nullSafeIsEqual(this.b, ecvVar.b)
+                && nullSafeIsEqual(this.c, ecvVar.c) && nullSafeIsEqual(this.d, ecvVar.d)
+                && nullSafeIsEqual(this.e, ecvVar.e);
     }
 
     public final int hashCode() {
@@ -54,6 +56,6 @@ public final class ecv {
         bjs.w(sb, this.b, -250289219173162L);
         yg.u(sb, this.c, -250229089631018L);
         bjs.w(sb, this.d, -250654291393322L);
-        return bjs.p(sb, this.e, ')');
+        return concat(sb, this.e, ')');
     }
 }

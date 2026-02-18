@@ -52,7 +52,7 @@ public final /* synthetic */ class bq implements View.OnClickListener {
                 ((CheckBox) ((cxd) obj).b(R.id.itemContactCheckBoxSelect)).performClick();
                 return;
             case 4:
-                ((bgf) obj).invoke(view);
+                ((IHasInvokeMethod) obj).invoke(view);
                 return;
             case 5:
                 ((aql) obj).ae();

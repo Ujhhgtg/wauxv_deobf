@@ -5,18 +5,21 @@ package me.hd.wauxv.obf;
 public final class dbn extends cwn {
     public final long af;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'super' call moved to the top of the method (can break code
+     * semantics)
+     */
     public dbn(long j, bmu bmuVar, cwd cwdVar, dfx dfxVar) {
         super(cwdVar, bmuVar, dfxVar);
-        bzo.q(cwdVar, "proto");
-        bzo.q(bmuVar, "writer");
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(cwdVar, "proto");
+        throwIfVar1IsNull(bmuVar, "writer");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         this.af = j;
     }
 
     @Override // me.hd.wauxv.obf.cwn
     public final long ae(dfx dfxVar, int i) {
-        bzo.q(dfxVar, "<this>");
+        throwIfVar1IsNull(dfxVar, "<this>");
         return this.af;
     }
 }

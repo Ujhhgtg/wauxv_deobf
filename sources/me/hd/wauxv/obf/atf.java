@@ -231,7 +231,7 @@ public final class atf {
             } else {
                 charSequence2 = charSequence;
                 try {
-                    eny enyVar2 = (eny) jxVar.ac(charSequence2, i3, i4, Integer.MAX_VALUE, false, new io(enyVar, 17, (nu) jxVar.e));
+                    eny enyVar2 = (eny) jxVar.ac(charSequence2, i3, i4, Integer.MAX_VALUE, false, new DefaultConfig(enyVar, 17, (nu) jxVar.e));
                     if (enyVar2 != null) {
                         Spannable spannable = enyVar2.b;
                         if (z) {

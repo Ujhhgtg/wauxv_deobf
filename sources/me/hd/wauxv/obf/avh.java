@@ -8,7 +8,7 @@ import okhttp3.HttpUrl;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class avh implements Set, Serializable, bsw {
+public final class avh implements Set, Serializable, IEmpty {
     public static final avh a = new avh();
 
     @Override // java.util.Set, java.util.Collection
@@ -33,7 +33,7 @@ public final class avh implements Set, Serializable, bsw {
 
     @Override // java.util.Set, java.util.Collection
     public final boolean containsAll(Collection collection) {
-        bzo.q(collection, "elements");
+        throwIfVar1IsNull(collection, "elements");
         return collection.isEmpty();
     }
 
@@ -88,7 +88,7 @@ public final class avh implements Set, Serializable, bsw {
 
     @Override // java.util.Set, java.util.Collection
     public final Object[] toArray(Object[] objArr) {
-        bzo.q(objArr, "array");
+        throwIfVar1IsNull(objArr, "array");
         return bmy.ai(this, objArr);
     }
 }

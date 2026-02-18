@@ -29,12 +29,18 @@ public class BshClassManager {
     private Interpreter declaringInterpreter;
     protected ClassLoader externalClassLoader;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface Listener {
         void classLoaderChanged();
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class MemberCache {
         private final Map<String, List<Invocable>> cache = new ConcurrentHashMap();
         private final Map<String, Invocable> fields = new ConcurrentHashMap();
@@ -42,7 +48,9 @@ public class BshClassManager {
         public MemberCache(Class<?> cls) {
             Class<?> superclass = cls;
             while (superclass != null) {
-                if (Reflect.isPackageAccessible(superclass) && ((Reflect.isPackageScope(superclass) && !Reflect.isPrivate(superclass)) || Reflect.isPublic(superclass) || Capabilities.haveAccessibility())) {
+                if (Reflect.isPackageAccessible(superclass)
+                        && ((Reflect.isPackageScope(superclass) && !Reflect.isPrivate(superclass))
+                                || Reflect.isPublic(superclass) || Capabilities.haveAccessibility())) {
                     for (Field field : superclass.getDeclaredFields()) {
                         if (Reflect.isPublic(field) || Capabilities.haveAccessibility()) {
                             cacheMember(Invocable.get(field));
@@ -53,7 +61,8 @@ public class BshClassManager {
                             if (cls == superclass) {
                                 cacheMember(Invocable.get(method));
                             } else {
-                                cacheMember(BshClassManager.memberCache.get(superclass).findMethod(method.getName(), method.getParameterTypes()));
+                                cacheMember(BshClassManager.memberCache.get(superclass).findMethod(method.getName(),
+                                        method.getParameterTypes()));
                             }
                         }
                     }
@@ -61,7 +70,8 @@ public class BshClassManager {
                         if (cls == superclass) {
                             cacheMember(Invocable.get(constructor));
                         } else {
-                            cacheMember(BshClassManager.memberCache.get(superclass).findMethod(constructor.getName(), constructor.getParameterTypes()));
+                            cacheMember(BshClassManager.memberCache.get(superclass).findMethod(constructor.getName(),
+                                    constructor.getParameterTypes()));
                         }
                     }
                 }
@@ -91,7 +101,8 @@ public class BshClassManager {
                     }
                     for (Method method : cls.getDeclaredMethods()) {
                         if (Reflect.isPublic(method) || Capabilities.haveAccessibility()) {
-                            cacheMember(BshClassManager.memberCache.get(cls).findMethod(method.getName(), method.getParameterTypes()));
+                            cacheMember(BshClassManager.memberCache.get(cls).findMethod(method.getName(),
+                                    method.getParameterTypes()));
                         }
                     }
                 }
@@ -214,7 +225,8 @@ public class BshClassManager {
         BshClassManager bshClassManager;
         if (Capabilities.classExists("bsh.classpath.ClassManagerImpl")) {
             try {
-                bshClassManager = (BshClassManager) Capabilities.getExisting("bsh.classpath.ClassManagerImpl").getConstructor(null).newInstance(null);
+                bshClassManager = (BshClassManager) Capabilities.getExisting("bsh.classpath.ClassManagerImpl")
+                        .getConstructor(null).newInstance(null);
             } catch (IllegalArgumentException | ReflectiveOperationException | SecurityException e) {
                 throw new InterpreterError("Error loading classmanager", e);
             }
@@ -257,7 +269,8 @@ public class BshClassManager {
         } catch (ClassNotFoundException unused) {
             clsPlainClassForName = null;
         }
-        return (clsPlainClassForName == null && this.declaringInterpreter.getCompatibility()) ? loadSourceClass(str) : clsPlainClassForName;
+        return (clsPlainClassForName == null && this.declaringInterpreter.getCompatibility()) ? loadSourceClass(str)
+                : clsPlainClassForName;
     }
 
     public void classLoaderChanged() {
@@ -270,7 +283,7 @@ public class BshClassManager {
     }
 
     public Class<?> defineClass(String str, byte[] bArr) {
-        throw new InterpreterError(bjs.o("Can't create class (", str, ") without class manager package."));
+        throw new InterpreterError(concat("Can't create class (", str, ") without class manager package."));
     }
 
     public void doSuperImport() throws UtilEvalError {
@@ -311,7 +324,8 @@ public class BshClassManager {
     }
 
     public Class<?> loadSourceClass(String str) {
-        String str2 = "/" + str.replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/') + ".java";
+        String str2 = "/" + str.replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/')
+                + ".java";
         URL resource = getResource(str2);
         if (resource == null) {
             return null;

@@ -6,7 +6,7 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class ehj {
     public static final ehi Companion = new ehi();
-    public static final btt[] a = {ewz.am(btx.a, new efq(4)), null};
+    public static final btt[] a = { ewz.am(btx.a, new efq(4)), null };
     public final List b;
     public final Integer c;
 
@@ -27,7 +27,7 @@ public final class ehj {
             return false;
         }
         ehj ehjVar = (ehj) obj;
-        return bzo.f(this.b, ehjVar.b) && bzo.f(this.c, ehjVar.c);
+        return nullSafeIsEqual(this.b, ehjVar.b) && nullSafeIsEqual(this.c, ehjVar.c);
     }
 
     public final int hashCode() {
@@ -41,6 +41,6 @@ public final class ehj {
         StringBuilder sb = new StringBuilder();
         sb.append("w51Proto(battle_duration=" /* cnb.z(-305994945002282L) */);
         yg.v(sb, this.b, -307549723163434L);
-        return bjs.p(sb, this.c, ')');
+        return concat(sb, this.c, ')');
     }
 }

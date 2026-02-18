@@ -21,7 +21,7 @@ import net.bytebuddy.pool.TypePool;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class cgu implements bgf {
+public final /* synthetic */ class cgu implements IHasInvokeMethod {
     public final /* synthetic */ int a;
 
     public /* synthetic */ cgu(int i) {
@@ -54,11 +54,16 @@ public final /* synthetic */ class cgu implements bgf {
                 return ensVar;
             case 1:
                 bag bagVar = (bag) obj;
-                String[] strArr = {"com.tencent.mm.storage" /* cnb.z(-369904058366762L) */};
+                String[] strArr = { "com.tencent.mm.storage" /* cnb.z(-369904058366762L) */ };
                 bagVar.getClass();
                 bagVar.a = la.ab(strArr);
                 zb zbVar = new zb();
-                zbVar.k("MicroMsg.MsgInfoStorage" /* cnb.z(-369805274118954L) */, "deleted dirty msg ,count is %d" /* cnb.z(-371351462345514L) */);
+                zbVar.k("MicroMsg.MsgInfoStorage" /* cnb.z(-369805274118954L) */, "deleted dirty msg ,count is %d" /*
+                                                                                                                    * cnb
+                                                                                                                    * .z
+                                                                                                                    * (-
+                                                                                                                    * 371351462345514L)
+                                                                                                                    */);
                 bagVar.b = zbVar;
                 return ensVar;
             case 2:
@@ -67,7 +72,8 @@ public final /* synthetic */ class cgu implements bgf {
                 cgy.a.getClass();
                 cdjVar2.o(emn.az(cgv.a));
                 cdjVar2.p(new bqi(2, 3, 1));
-                cdjVar2.t("notifymessage" /* cnb.z(-371201138490154L) */, "msgId=?" /* cnb.z(-371123829078826L) */, "update" /* cnb.z(-371089469340458L) */);
+                cdjVar2.t("notifymessage" /* cnb.z(-371201138490154L) */, "msgId=?" /* cnb.z(-371123829078826L) */,
+                        "update" /* cnb.z(-371089469340458L) */);
                 bahVar2.getClass();
                 bahVar2.d = cdjVar2;
                 return ensVar;
@@ -119,27 +125,36 @@ public final /* synthetic */ class cgu implements bgf {
                 View view = (View) obj;
                 View viewK = dkz.k(view, R.layout.module_dialog_msg_tv_color, null, false);
                 int i5 = R.id.moduleDialogEdtMsgTvColorLeftDarkTextColor;
-                TextInputEditText textInputEditText = (TextInputEditText) cnd.aq(viewK, R.id.moduleDialogEdtMsgTvColorLeftDarkTextColor);
+                TextInputEditText textInputEditText = (TextInputEditText) cnd.aq(viewK,
+                        R.id.moduleDialogEdtMsgTvColorLeftDarkTextColor);
                 if (textInputEditText != null) {
                     i5 = R.id.moduleDialogEdtMsgTvColorLeftLightTextColor;
-                    TextInputEditText textInputEditText2 = (TextInputEditText) cnd.aq(viewK, R.id.moduleDialogEdtMsgTvColorLeftLightTextColor);
+                    TextInputEditText textInputEditText2 = (TextInputEditText) cnd.aq(viewK,
+                            R.id.moduleDialogEdtMsgTvColorLeftLightTextColor);
                     if (textInputEditText2 != null) {
                         i5 = R.id.moduleDialogEdtMsgTvColorRightDarkTextColor;
-                        TextInputEditText textInputEditText3 = (TextInputEditText) cnd.aq(viewK, R.id.moduleDialogEdtMsgTvColorRightDarkTextColor);
+                        TextInputEditText textInputEditText3 = (TextInputEditText) cnd.aq(viewK,
+                                R.id.moduleDialogEdtMsgTvColorRightDarkTextColor);
                         if (textInputEditText3 != null) {
                             i5 = R.id.moduleDialogEdtMsgTvColorRightLightTextColor;
-                            TextInputEditText textInputEditText4 = (TextInputEditText) cnd.aq(viewK, R.id.moduleDialogEdtMsgTvColorRightLightTextColor);
+                            TextInputEditText textInputEditText4 = (TextInputEditText) cnd.aq(viewK,
+                                    R.id.moduleDialogEdtMsgTvColorRightLightTextColor);
                             if (textInputEditText4 != null) {
                                 i5 = R.id.moduleDialogInputMsgTvColorLeftDarkTextColor;
-                                if (((TextInputLayout) cnd.aq(viewK, R.id.moduleDialogInputMsgTvColorLeftDarkTextColor)) != null) {
+                                if (((TextInputLayout) cnd.aq(viewK,
+                                        R.id.moduleDialogInputMsgTvColorLeftDarkTextColor)) != null) {
                                     i5 = R.id.moduleDialogInputMsgTvColorLeftLightTextColor;
-                                    if (((TextInputLayout) cnd.aq(viewK, R.id.moduleDialogInputMsgTvColorLeftLightTextColor)) != null) {
+                                    if (((TextInputLayout) cnd.aq(viewK,
+                                            R.id.moduleDialogInputMsgTvColorLeftLightTextColor)) != null) {
                                         i5 = R.id.moduleDialogInputMsgTvColorRightDarkTextColor;
-                                        if (((TextInputLayout) cnd.aq(viewK, R.id.moduleDialogInputMsgTvColorRightDarkTextColor)) != null) {
+                                        if (((TextInputLayout) cnd.aq(viewK,
+                                                R.id.moduleDialogInputMsgTvColorRightDarkTextColor)) != null) {
                                             i5 = R.id.moduleDialogInputMsgTvColorRightLightTextColor;
-                                            if (((TextInputLayout) cnd.aq(viewK, R.id.moduleDialogInputMsgTvColorRightLightTextColor)) != null) {
+                                            if (((TextInputLayout) cnd.aq(viewK,
+                                                    R.id.moduleDialogInputMsgTvColorRightLightTextColor)) != null) {
                                                 LinearLayout linearLayout = (LinearLayout) viewK;
-                                                ceo ceoVar = new ceo(linearLayout, textInputEditText, textInputEditText2, textInputEditText3, textInputEditText4, 2);
+                                                ceo ceoVar = new ceo(linearLayout, textInputEditText,
+                                                        textInputEditText2, textInputEditText3, textInputEditText4, 2);
                                                 textInputEditText2.setText(che.a.o());
                                                 textInputEditText4.setText(chg.a.o());
                                                 textInputEditText.setText(chd.a.o());
@@ -148,9 +163,13 @@ public final /* synthetic */ class cgu implements bgf {
                                                 eg egVar = (eg) bzyVar.d;
                                                 chh.a.getClass();
                                                 egVar.d = chh.c;
-                                                bzyVar.t("保存" /* cnb.z(-450138342423338L) */, new amw(new cfx(ceoVar, i3), 0));
+                                                bzyVar.t("保存" /* cnb.z(-450138342423338L) */,
+                                                        new amw(new cfx(ceoVar, i3), 0));
                                                 bzyVar.s("重置" /* cnb.z(-450142637390634L) */, new amw(new cfh(9), 2));
-                                                bjs.x((3 & 2) != 0 ? new amd(i2) : null, bzyVar, "取消" /* cnb.z(-47455093652266L) */);
+                                                bjs.x((3 & 2) != 0 ? new amd(i2) : null, bzyVar, "取消" /*
+                                                                                                       * cnb.z(-
+                                                                                                       * 47455093652266L)
+                                                                                                       */);
                                                 if (linearLayout != null) {
                                                     egVar.r = linearLayout;
                                                 }
@@ -164,12 +183,13 @@ public final /* synthetic */ class cgu implements bgf {
                         }
                     }
                 }
-                throw new NullPointerException("Missing required view with ID: " /* cnb.z(-663589627099946L) */.concat(viewK.getResources().getResourceName(i5)));
+                throw new NullPointerException("Missing required view with ID: "
+                        /* cnb.z(-663589627099946L) */.concat(viewK.getResources().getResourceName(i5)));
             case 6:
-                bmm bmmVar = (bmm) obj;
-                bmmVar.getClass();
+                HookParamWrapper hookParam = (HookParamWrapper) obj;
+                hookParam.getClass();
                 try {
-                    objX = bmmVar.d()[2];
+                    objX = hookParam.getArgs()[2];
                     if (objX == null) {
                         objX = null;
                     }
@@ -185,7 +205,7 @@ public final /* synthetic */ class cgu implements bgf {
                 }
                 if (str.equals(".ui.timeline.preload.ui.TmplWebViewMMUI" /* cnb.z(-517182781913898L) */)) {
                     try {
-                        objX2 = bmmVar.d()[3];
+                        objX2 = hookParam.getArgs()[3];
                         if (objX2 == null) {
                             objX2 = null;
                         }
@@ -193,7 +213,7 @@ public final /* synthetic */ class cgu implements bgf {
                         objX2 = bhu.x(th6);
                     }
                     Object obj2 = objX2 instanceof dcx ? null : objX2;
-                    bzo.n(obj2);
+                    throwIfVar1IsNull(obj2);
                     Intent intent = (Intent) obj2;
                     intent.addFlags(Opcodes.ASM8);
                     intent.addFlags(134217728);
@@ -205,7 +225,11 @@ public final /* synthetic */ class cgu implements bgf {
             case 8:
                 bah bahVar3 = (bah) obj;
                 cdj cdjVar3 = new cdj();
-                cdjVar3.t("MicroMsg.PluginHelper" /* cnb.z(-518660250663722L) */, "start multi webview!!!!!!!!!" /* cnb.z(-518548581514026L) */);
+                cdjVar3.t("MicroMsg.PluginHelper" /* cnb.z(-518660250663722L) */, "start multi webview!!!!!!!!!" /*
+                                                                                                                  * cnb.
+                                                                                                                  * z(-
+                                                                                                                  * 518548581514026L)
+                                                                                                                  */);
                 bahVar3.getClass();
                 bahVar3.d = cdjVar3;
                 return ensVar;
@@ -214,16 +238,16 @@ public final /* synthetic */ class cgu implements bgf {
                 azg azgVarR = dqc.bi(obj).r();
                 azgVarR.ab = "field_type" /* cnb.z(-478429292002090L) */;
                 Object objE = ((azk) yg.e(azgVarR)).e();
-                bzo.n(objE);
+                throwIfVar1IsNull(objE);
                 if (((Number) objE).intValue() == 3) {
                     azg azgVarR2 = dqc.bi(obj).r();
                     azgVarR2.ab = "field_favProto" /* cnb.z(-478416407100202L) */;
                     Object objD = ((azk) yg.e(azgVarR2)).d();
-                    bzo.n(objD);
+                    throwIfVar1IsNull(objD);
                     cde cdeVarT = dqc.bi(objD).t();
                     cdeVarT.ab = "getData" /* cnb.z(-478334802721578L) */;
                     Object objJ = ((cdk) dkz.m(cdeVarT)).j(new Object[0]);
-                    bzo.n(objJ);
+                    throwIfVar1IsNull(objJ);
                     cwd cwdVar = cwd.a;
                     cwdVar.getClass();
                     ays aysVar = ((ayt) cwdVar.c(ayt.Companion.serializer(), (byte[]) objJ)).b;
@@ -231,7 +255,8 @@ public final /* synthetic */ class cgu implements bgf {
                     String str2 = aysVar.e;
                     if (string == null) {
                         String strZ3 = cmz.z();
-                        String strValueOf = String.valueOf(str2.hashCode() & com.android.dx.io.Opcodes.CONST_METHOD_TYPE);
+                        String strValueOf = String
+                                .valueOf(str2.hashCode() & com.android.dx.io.Opcodes.CONST_METHOD_TYPE);
                         StringBuilder sbY = dkz.y(strZ3);
                         sbY.append("/favorite/" /* cnb.z(-478300442983210L) */);
                         sbY.append(strValueOf);
@@ -259,11 +284,11 @@ public final /* synthetic */ class cgu implements bgf {
                     azg azgVarR4 = dqc.bi(obj).r();
                     azgVarR4.ab = "field_favProto" /* cnb.z(-475826541820714L) */;
                     Object objD2 = ((azk) yg.e(azgVarR4)).d();
-                    bzo.n(objD2);
+                    throwIfVar1IsNull(objD2);
                     cde cdeVarT2 = dqc.bi(objD2).t();
                     cdeVarT2.ab = "getData" /* cnb.z(-475212361497386L) */;
                     Object objJ2 = ((cdk) dkz.m(cdeVarT2)).j(new Object[0]);
-                    bzo.n(objJ2);
+                    throwIfVar1IsNull(objJ2);
                     cwd cwdVar2 = cwd.a;
                     cwdVar2.getClass();
                     ays aysVar2 = ((ayt) cwdVar2.c(ayt.Companion.serializer(), (byte[]) objJ2)).b;
@@ -271,7 +296,8 @@ public final /* synthetic */ class cgu implements bgf {
                     String str3 = aysVar2.e;
                     if (string2 == null) {
                         String strZ4 = cmz.z();
-                        String strValueOf2 = String.valueOf(str3.hashCode() & com.android.dx.io.Opcodes.CONST_METHOD_TYPE);
+                        String strValueOf2 = String
+                                .valueOf(str3.hashCode() & com.android.dx.io.Opcodes.CONST_METHOD_TYPE);
                         StringBuilder sbY2 = dkz.y(strZ4);
                         sbY2.append("/favorite/" /* cnb.z(-475178001759018L) */);
                         sbY2.append(strValueOf2);
@@ -292,18 +318,18 @@ public final /* synthetic */ class cgu implements bgf {
                 return ensVar;
             case 11:
                 ahx ahxVar = (ahx) obj;
-                bzo.q(ahxVar, "$this$initializer");
+                throwIfVar1IsNull(ahxVar, "$this$initializer");
                 return new cip(aye.q(ahxVar));
             case 12:
                 Context context = (Context) obj;
-                bzo.q(context, "it");
+                throwIfVar1IsNull(context, "it");
                 if (context instanceof ContextWrapper) {
                     return ((ContextWrapper) context).getBaseContext();
                 }
                 return null;
             case 13:
                 cjg cjgVar = (cjg) obj;
-                bzo.q(cjgVar, "destination");
+                throwIfVar1IsNull(cjgVar, "destination");
                 cji cjiVar = cjgVar.h;
                 if (cjiVar == null || cjiVar.b.c != cjgVar.g.a) {
                     return null;
@@ -311,7 +337,7 @@ public final /* synthetic */ class cgu implements bgf {
                 return cjiVar;
             case 14:
                 cjg cjgVar2 = (cjg) obj;
-                bzo.q(cjgVar2, "destination");
+                throwIfVar1IsNull(cjgVar2, "destination");
                 cji cjiVar2 = cjgVar2.h;
                 if (cjiVar2 == null || cjiVar2.b.c != cjgVar2.g.a) {
                     return null;
@@ -319,14 +345,14 @@ public final /* synthetic */ class cgu implements bgf {
                 return cjiVar2;
             case 15:
                 cjg cjgVar3 = (cjg) obj;
-                bzo.q(cjgVar3, "it");
+                throwIfVar1IsNull(cjgVar3, "it");
                 return Integer.valueOf(cjgVar3.g.a);
             case 16:
-                bzo.q((ahx) obj, "$this$initializer");
+                throwIfVar1IsNull((ahx) obj, "$this$initializer");
                 return new ciy();
             case 17:
                 Context context2 = (Context) obj;
-                bzo.q(context2, "it");
+                throwIfVar1IsNull(context2, "it");
                 ContextWrapper contextWrapper = context2 instanceof ContextWrapper ? (ContextWrapper) context2 : null;
                 if (contextWrapper != null) {
                     return contextWrapper.getBaseContext();
@@ -334,18 +360,18 @@ public final /* synthetic */ class cgu implements bgf {
                 return null;
             case 18:
                 Context context3 = (Context) obj;
-                bzo.q(context3, "it");
+                throwIfVar1IsNull(context3, "it");
                 if (context3 instanceof Activity) {
                     return (Activity) context3;
                 }
                 return null;
             case 19:
                 cjg cjgVar4 = (cjg) obj;
-                bzo.q(cjgVar4, "it");
+                throwIfVar1IsNull(cjgVar4, "it");
                 return cjgVar4.h;
             case 20:
                 cjg cjgVar5 = (cjg) obj;
-                bzo.q(cjgVar5, "it");
+                throwIfVar1IsNull(cjgVar5, "it");
                 if (!(cjgVar5 instanceof cji)) {
                     return null;
                 }
@@ -353,7 +379,7 @@ public final /* synthetic */ class cgu implements bgf {
                 return cjiVar3.p(cjiVar3.b.c);
             case 21:
                 View view2 = (View) obj;
-                bzo.q(view2, "it");
+                throwIfVar1IsNull(view2, "it");
                 ViewParent parent = view2.getParent();
                 if (parent instanceof View) {
                     return (View) parent;
@@ -361,7 +387,7 @@ public final /* synthetic */ class cgu implements bgf {
                 return null;
             case 22:
                 View view3 = (View) obj;
-                bzo.q(view3, "it");
+                throwIfVar1IsNull(view3, "it");
                 Object tag = view3.getTag(R.id.nav_controller_view_tag);
                 if (tag instanceof WeakReference) {
                     return (cjl) ((WeakReference) tag).get();
@@ -378,7 +404,8 @@ public final /* synthetic */ class cgu implements bgf {
             case 24:
                 bag bagVar2 = (bag) obj;
                 zb zbVar2 = new zb();
-                zbVar2.k("MicroMsg.NetSceneAddChatRoomMember" /* cnb.z(-112828790864682L) */, "/cgi-bin/micromsg-bin/addchatroommember" /* cnb.z(-113245402692394L) */);
+                zbVar2.k("MicroMsg.NetSceneAddChatRoomMember" /* cnb.z(-112828790864682L) */,
+                        "/cgi-bin/micromsg-bin/addchatroommember" /* cnb.z(-113245402692394L) */);
                 bagVar2.getClass();
                 bagVar2.b = zbVar2;
                 return ensVar;
@@ -407,11 +434,12 @@ public final /* synthetic */ class cgu implements bgf {
                 return ensVar;
             case 27:
                 bag bagVar3 = (bag) obj;
-                String[] strArr4 = {"com.tencent.mm.plugin.remittance.model" /* cnb.z(-112304804854570L) */};
+                String[] strArr4 = { "com.tencent.mm.plugin.remittance.model" /* cnb.z(-112304804854570L) */ };
                 bagVar3.getClass();
                 bagVar3.a = la.ab(strArr4);
                 zb zbVar3 = new zb();
-                zbVar3.k("MicroMsg.NetSceneBeforeTransfer" /* cnb.z(-112669877074730L) */, "/cgi-bin/mmpay-bin/beforetransfer" /* cnb.z(-112532438121258L) */);
+                zbVar3.k("MicroMsg.NetSceneBeforeTransfer" /* cnb.z(-112669877074730L) */,
+                        "/cgi-bin/mmpay-bin/beforetransfer" /* cnb.z(-112532438121258L) */);
                 bagVar3.b = zbVar3;
                 return ensVar;
             case 28:

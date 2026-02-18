@@ -49,18 +49,25 @@ import net.bytebuddy.utility.nullability.MaybeNull;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-@Target({ElementType.PARAMETER})
+@Target({ ElementType.PARAMETER })
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Pipe {
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @HashCodeAndEqualsPlugin.Enhance
     public static class Binder implements TargetMethodAnnotationDrivenBinder.ParameterBinder<Pipe> {
-        private static final MethodDescription.InDefinedShape SERIALIZABLE_PROXY = (MethodDescription.InDefinedShape) TypeDescription.ForLoadedType.of(Pipe.class).getDeclaredMethods().filter(ElementMatchers.named("serializableProxy")).getOnly();
+        private static final MethodDescription.InDefinedShape SERIALIZABLE_PROXY = (MethodDescription.InDefinedShape) TypeDescription.ForLoadedType
+                .of(Pipe.class).getDeclaredMethods().filter(ElementMatchers.named("serializableProxy")).getOnly();
         private final MethodDescription forwardingMethod;
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class RedirectionProxy extends StackManipulation.AbstractBase implements AuxiliaryType {
             private static final String FIELD_NAME_PREFIX = "argument";
@@ -69,35 +76,53 @@ public @interface Pipe {
             private final boolean serializableProxy;
             private final MethodDescription sourceMethod;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum ConstructorCall implements Implementation {
                 INSTANCE;
 
-                private final transient MethodDescription.InDefinedShape objectTypeDefaultConstructor = (MethodDescription.InDefinedShape) TypeDescription.ForLoadedType.of(Object.class).getDeclaredMethods().filter(ElementMatchers.isConstructor()).getOnly();
+                private final transient MethodDescription.InDefinedShape objectTypeDefaultConstructor = (MethodDescription.InDefinedShape) TypeDescription.ForLoadedType
+                        .of(Object.class).getDeclaredMethods().filter(ElementMatchers.isConstructor()).getOnly();
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class Appender implements ByteCodeAppender {
                     private final TypeDescription instrumentedType;
 
                     @Override // net.bytebuddy.implementation.bytecode.ByteCodeAppender
-                    public ByteCodeAppender.Size apply(MethodVisitor methodVisitor, Implementation.Context context, MethodDescription methodDescription) {
-                        FieldList<FieldDescription.InDefinedShape> declaredFields = this.instrumentedType.getDeclaredFields();
+                    public ByteCodeAppender.Size apply(MethodVisitor methodVisitor, Implementation.Context context,
+                            MethodDescription methodDescription) {
+                        FieldList<FieldDescription.InDefinedShape> declaredFields = this.instrumentedType
+                                .getDeclaredFields();
                         StackManipulation[] stackManipulationArr = new StackManipulation[declaredFields.size()];
                         Iterator<FieldDescription.InDefinedShape> it = declaredFields.iterator();
                         int i = 0;
                         while (it.hasNext()) {
-                            stackManipulationArr[i] = new StackManipulation.Compound(MethodVariableAccess.loadThis(), MethodVariableAccess.load((ParameterDescription) methodDescription.getParameters().get(i)), FieldAccess.forField((FieldDescription) it.next()).write());
+                            stackManipulationArr[i] = new StackManipulation.Compound(MethodVariableAccess.loadThis(),
+                                    MethodVariableAccess
+                                            .load((ParameterDescription) methodDescription.getParameters().get(i)),
+                                    FieldAccess.forField((FieldDescription) it.next()).write());
                             i++;
                         }
-                        return new ByteCodeAppender.Size(new StackManipulation.Compound(MethodVariableAccess.loadThis(), MethodInvocation.invoke(ConstructorCall.INSTANCE.objectTypeDefaultConstructor), new StackManipulation.Compound(stackManipulationArr), MethodReturn.VOID).apply(methodVisitor, context).getMaximalSize(), methodDescription.getStackSize());
+                        return new ByteCodeAppender.Size(
+                                new StackManipulation.Compound(MethodVariableAccess.loadThis(),
+                                        MethodInvocation.invoke(ConstructorCall.INSTANCE.objectTypeDefaultConstructor),
+                                        new StackManipulation.Compound(stackManipulationArr), MethodReturn.VOID)
+                                        .apply(methodVisitor, context).getMaximalSize(),
+                                methodDescription.getStackSize());
                     }
 
                     public boolean equals(@MaybeNull Object obj) {
                         if (this == obj) {
                             return true;
                         }
-                        return obj != null && getClass() == obj.getClass() && this.instrumentedType.equals(((Appender) obj).instrumentedType);
+                        return obj != null && getClass() == obj.getClass()
+                                && this.instrumentedType.equals(((Appender) obj).instrumentedType);
                     }
 
                     public int hashCode() {
@@ -123,33 +148,53 @@ public @interface Pipe {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class MethodCall implements Implementation {
                 private final Assigner assigner;
                 private final MethodDescription redirectedMethod;
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance(includeSyntheticFields = true)
                 public class Appender implements ByteCodeAppender {
                     private final TypeDescription instrumentedType;
 
                     @Override // net.bytebuddy.implementation.bytecode.ByteCodeAppender
-                    public ByteCodeAppender.Size apply(MethodVisitor methodVisitor, Implementation.Context context, MethodDescription methodDescription) {
-                        FieldList<FieldDescription.InDefinedShape> declaredFields = this.instrumentedType.getDeclaredFields();
+                    public ByteCodeAppender.Size apply(MethodVisitor methodVisitor, Implementation.Context context,
+                            MethodDescription methodDescription) {
+                        FieldList<FieldDescription.InDefinedShape> declaredFields = this.instrumentedType
+                                .getDeclaredFields();
                         StackManipulation[] stackManipulationArr = new StackManipulation[declaredFields.size()];
                         Iterator<FieldDescription.InDefinedShape> it = declaredFields.iterator();
                         int i = 0;
                         while (it.hasNext()) {
-                            stackManipulationArr[i] = new StackManipulation.Compound(MethodVariableAccess.loadThis(), FieldAccess.forField((FieldDescription) it.next()).read());
+                            stackManipulationArr[i] = new StackManipulation.Compound(MethodVariableAccess.loadThis(),
+                                    FieldAccess.forField((FieldDescription) it.next()).read());
                             i++;
                         }
                         StackManipulation stackManipulationLoadFrom = MethodVariableAccess.REFERENCE.loadFrom(1);
                         Assigner assigner = MethodCall.this.assigner;
-                        TypeDescription.Generic genericOf = TypeDescription.Generic.OfNonGenericType.ForLoadedType.of(Object.class);
-                        TypeDescription.Generic genericAsGenericType = MethodCall.this.redirectedMethod.getDeclaringType().asGenericType();
+                        TypeDescription.Generic genericOf = TypeDescription.Generic.OfNonGenericType.ForLoadedType
+                                .of(Object.class);
+                        TypeDescription.Generic genericAsGenericType = MethodCall.this.redirectedMethod
+                                .getDeclaringType().asGenericType();
                         Assigner.Typing typing = Assigner.Typing.DYNAMIC;
-                        return new ByteCodeAppender.Size(new StackManipulation.Compound(stackManipulationLoadFrom, assigner.assign(genericOf, genericAsGenericType, typing), new StackManipulation.Compound(stackManipulationArr), MethodInvocation.invoke(MethodCall.this.redirectedMethod), MethodCall.this.assigner.assign(MethodCall.this.redirectedMethod.getReturnType(), methodDescription.getReturnType(), typing), MethodReturn.REFERENCE).apply(methodVisitor, context).getMaximalSize(), methodDescription.getStackSize());
+                        return new ByteCodeAppender.Size(
+                                new StackManipulation.Compound(stackManipulationLoadFrom,
+                                        assigner.assign(genericOf, genericAsGenericType, typing),
+                                        new StackManipulation.Compound(stackManipulationArr),
+                                        MethodInvocation.invoke(MethodCall.this.redirectedMethod),
+                                        MethodCall.this.assigner.assign(
+                                                MethodCall.this.redirectedMethod.getReturnType(),
+                                                methodDescription.getReturnType(), typing),
+                                        MethodReturn.REFERENCE).apply(methodVisitor, context).getMaximalSize(),
+                                methodDescription.getStackSize());
                     }
 
                     public boolean equals(@MaybeNull Object obj) {
@@ -160,11 +205,13 @@ public @interface Pipe {
                             return false;
                         }
                         Appender appender = (Appender) obj;
-                        return this.instrumentedType.equals(appender.instrumentedType) && MethodCall.this.equals(MethodCall.this);
+                        return this.instrumentedType.equals(appender.instrumentedType)
+                                && MethodCall.this.equals(MethodCall.this);
                     }
 
                     public int hashCode() {
-                        return MethodCall.this.hashCode() + dkz.f(this.instrumentedType, getClass().hashCode() * 31, 31);
+                        return MethodCall.this.hashCode()
+                                + dkz.f(this.instrumentedType, getClass().hashCode() * 31, 31);
                     }
 
                     private Appender(TypeDescription typeDescription) {
@@ -177,7 +224,8 @@ public @interface Pipe {
                     if (this.redirectedMethod.isAccessibleTo(target.getInstrumentedType())) {
                         return new Appender(target.getInstrumentedType());
                     }
-                    throw new IllegalStateException("Cannot invoke " + this.redirectedMethod + " from outside of class via @Pipe proxy");
+                    throw new IllegalStateException(
+                            "Cannot invoke " + this.redirectedMethod + " from outside of class via @Pipe proxy");
                 }
 
                 public boolean equals(@MaybeNull Object obj) {
@@ -188,7 +236,8 @@ public @interface Pipe {
                         return false;
                     }
                     MethodCall methodCall = (MethodCall) obj;
-                    return this.redirectedMethod.equals(methodCall.redirectedMethod) && this.assigner.equals(methodCall.assigner);
+                    return this.redirectedMethod.equals(methodCall.redirectedMethod)
+                            && this.assigner.equals(methodCall.assigner);
                 }
 
                 public int hashCode() {
@@ -206,7 +255,8 @@ public @interface Pipe {
                 }
             }
 
-            public RedirectionProxy(TypeDescription typeDescription, MethodDescription methodDescription, Assigner assigner, boolean z) {
+            public RedirectionProxy(TypeDescription typeDescription, MethodDescription methodDescription,
+                    Assigner assigner, boolean z) {
                 this.forwardingType = typeDescription;
                 this.sourceMethod = methodDescription;
                 this.assigner = assigner;
@@ -226,13 +276,17 @@ public @interface Pipe {
             }
 
             private static String fieldName(int i) {
-                return bjs.i(i, FIELD_NAME_PREFIX);
+                return concatVar2Var1(i, FIELD_NAME_PREFIX);
             }
 
             @Override // net.bytebuddy.implementation.bytecode.StackManipulation
             public StackManipulation.Size apply(MethodVisitor methodVisitor, Implementation.Context context) {
                 TypeDescription typeDescriptionRegister = context.register(this);
-                return new StackManipulation.Compound(TypeCreation.of(typeDescriptionRegister), Duplication.SINGLE, MethodVariableAccess.allArgumentsOf(this.sourceMethod), MethodInvocation.invoke((MethodDescription.InDefinedShape) typeDescriptionRegister.getDeclaredMethods().filter(ElementMatchers.isConstructor()).getOnly())).apply(methodVisitor, context);
+                return new StackManipulation.Compound(TypeCreation.of(typeDescriptionRegister), Duplication.SINGLE,
+                        MethodVariableAccess.allArgumentsOf(this.sourceMethod),
+                        MethodInvocation.invoke((MethodDescription.InDefinedShape) typeDescriptionRegister
+                                .getDeclaredMethods().filter(ElementMatchers.isConstructor()).getOnly()))
+                        .apply(methodVisitor, context);
             }
 
             public boolean equals(@MaybeNull Object obj) {
@@ -243,7 +297,10 @@ public @interface Pipe {
                     return false;
                 }
                 RedirectionProxy redirectionProxy = (RedirectionProxy) obj;
-                return this.serializableProxy == redirectionProxy.serializableProxy && this.forwardingType.equals(redirectionProxy.forwardingType) && this.sourceMethod.equals(redirectionProxy.sourceMethod) && this.assigner.equals(redirectionProxy.assigner);
+                return this.serializableProxy == redirectionProxy.serializableProxy
+                        && this.forwardingType.equals(redirectionProxy.forwardingType)
+                        && this.sourceMethod.equals(redirectionProxy.sourceMethod)
+                        && this.assigner.equals(redirectionProxy.assigner);
             }
 
             @Override // net.bytebuddy.implementation.auxiliary.AuxiliaryType
@@ -256,15 +313,26 @@ public @interface Pipe {
             }
 
             public int hashCode() {
-                return dkz.h(this.assigner, dkz.c(this.sourceMethod, dkz.f(this.forwardingType, getClass().hashCode() * 31, 31), 31), 31) + (this.serializableProxy ? 1 : 0);
+                return dkz.h(this.assigner,
+                        dkz.c(this.sourceMethod, dkz.f(this.forwardingType, getClass().hashCode() * 31, 31), 31), 31)
+                        + (this.serializableProxy ? 1 : 0);
             }
 
             @Override // net.bytebuddy.implementation.auxiliary.AuxiliaryType
-            public DynamicType make(String str, ClassFileVersion classFileVersion, MethodAccessorFactory methodAccessorFactory) {
+            public DynamicType make(String str, ClassFileVersion classFileVersion,
+                    MethodAccessorFactory methodAccessorFactory) {
                 LinkedHashMap<String, TypeDescription> linkedHashMapExtractFields = extractFields(this.sourceMethod);
-                DynamicType.Builder builderIntercept = new ByteBuddy(classFileVersion).with(TypeValidation.DISABLED).subclass(this.forwardingType, ConstructorStrategy.Default.NO_CONSTRUCTORS).name(str).modifiers(AuxiliaryType.DEFAULT_TYPE_MODIFIER).implement(this.serializableProxy ? new Class[]{Serializable.class} : new Class[0]).method(ElementMatchers.isAbstract().and(ElementMatchers.isDeclaredBy(this.forwardingType))).intercept(new MethodCall(this.sourceMethod, this.assigner)).defineConstructor(new ModifierContributor.ForMethod[0]).withParameters(linkedHashMapExtractFields.values()).intercept(ConstructorCall.INSTANCE);
+                DynamicType.Builder builderIntercept = new ByteBuddy(classFileVersion).with(TypeValidation.DISABLED)
+                        .subclass(this.forwardingType, ConstructorStrategy.Default.NO_CONSTRUCTORS).name(str)
+                        .modifiers(AuxiliaryType.DEFAULT_TYPE_MODIFIER)
+                        .implement(this.serializableProxy ? new Class[] { Serializable.class } : new Class[0])
+                        .method(ElementMatchers.isAbstract().and(ElementMatchers.isDeclaredBy(this.forwardingType)))
+                        .intercept(new MethodCall(this.sourceMethod, this.assigner))
+                        .defineConstructor(new ModifierContributor.ForMethod[0])
+                        .withParameters(linkedHashMapExtractFields.values()).intercept(ConstructorCall.INSTANCE);
                 for (Map.Entry<String, TypeDescription> entry : linkedHashMapExtractFields.entrySet()) {
-                    builderIntercept = builderIntercept.defineField(entry.getKey(), entry.getValue(), Visibility.PRIVATE);
+                    builderIntercept = builderIntercept.defineField(entry.getKey(), entry.getValue(),
+                            Visibility.PRIVATE);
                 }
                 return builderIntercept.make();
             }
@@ -296,25 +364,35 @@ public @interface Pipe {
             if (!methodDescription.getReturnType().asErasure().represents(Object.class)) {
                 throw new IllegalArgumentException(methodDescription + " does not return an Object-type");
             }
-            if (methodDescription.getParameters().size() == 1 && ((ParameterDescription) methodDescription.getParameters().getOnly()).getType().asErasure().represents(Object.class)) {
+            if (methodDescription.getParameters().size() == 1
+                    && ((ParameterDescription) methodDescription.getParameters().getOnly()).getType().asErasure()
+                            .represents(Object.class)) {
                 return methodDescription;
             }
             throw new IllegalArgumentException(methodDescription + " does not take a single Object-typed argument");
         }
 
         @Override // net.bytebuddy.implementation.bind.annotation.TargetMethodAnnotationDrivenBinder.ParameterBinder
-        public MethodDelegationBinder.ParameterBinding<?> bind(AnnotationDescription.Loadable<Pipe> loadable, MethodDescription methodDescription, ParameterDescription parameterDescription, Implementation.Target target, Assigner assigner, Assigner.Typing typing) {
+        public MethodDelegationBinder.ParameterBinding<?> bind(AnnotationDescription.Loadable<Pipe> loadable,
+                MethodDescription methodDescription, ParameterDescription parameterDescription,
+                Implementation.Target target, Assigner assigner, Assigner.Typing typing) {
             if (parameterDescription.getType().asErasure().equals(this.forwardingMethod.getDeclaringType())) {
-                return methodDescription.isStatic() ? MethodDelegationBinder.ParameterBinding.Illegal.INSTANCE : new MethodDelegationBinder.ParameterBinding.Anonymous(new RedirectionProxy(this.forwardingMethod.getDeclaringType().asErasure(), methodDescription, assigner, ((Boolean) loadable.getValue(SERIALIZABLE_PROXY).resolve(Boolean.class)).booleanValue()));
+                return methodDescription.isStatic() ? MethodDelegationBinder.ParameterBinding.Illegal.INSTANCE
+                        : new MethodDelegationBinder.ParameterBinding.Anonymous(new RedirectionProxy(
+                                this.forwardingMethod.getDeclaringType().asErasure(), methodDescription, assigner,
+                                ((Boolean) loadable.getValue(SERIALIZABLE_PROXY).resolve(Boolean.class))
+                                        .booleanValue()));
             }
-            throw new IllegalStateException("Illegal use of @Pipe for " + parameterDescription + " which was installed for " + this.forwardingMethod.getDeclaringType());
+            throw new IllegalStateException("Illegal use of @Pipe for " + parameterDescription
+                    + " which was installed for " + this.forwardingMethod.getDeclaringType());
         }
 
         public boolean equals(@MaybeNull Object obj) {
             if (this == obj) {
                 return true;
             }
-            return obj != null && getClass() == obj.getClass() && this.forwardingMethod.equals(((Binder) obj).forwardingMethod);
+            return obj != null && getClass() == obj.getClass()
+                    && this.forwardingMethod.equals(((Binder) obj).forwardingMethod);
         }
 
         @Override // net.bytebuddy.implementation.bind.annotation.TargetMethodAnnotationDrivenBinder.ParameterBinder
@@ -326,7 +404,8 @@ public @interface Pipe {
             return this.forwardingMethod.hashCode() + (getClass().hashCode() * 31);
         }
 
-        public static TargetMethodAnnotationDrivenBinder.ParameterBinder<Pipe> install(TypeDescription typeDescription) {
+        public static TargetMethodAnnotationDrivenBinder.ParameterBinder<Pipe> install(
+                TypeDescription typeDescription) {
             return new Binder(onlyMethod(typeDescription));
         }
     }

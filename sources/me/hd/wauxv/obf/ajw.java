@@ -28,8 +28,9 @@ public final class ajw extends il {
 
     @Override // android.view.View
     public final boolean onTouchEvent(MotionEvent motionEvent) {
-        bzo.q(motionEvent, "ev");
-        if (motionEvent.getAction() != 0 || getDecreasedHitRect().contains((int) motionEvent.getX(), (int) motionEvent.getY())) {
+        throwIfVar1IsNull(motionEvent, "ev");
+        if (motionEvent.getAction() != 0
+                || getDecreasedHitRect().contains((int) motionEvent.getX(), (int) motionEvent.getY())) {
             return super.onTouchEvent(motionEvent);
         }
         return false;

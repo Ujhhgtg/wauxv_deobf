@@ -129,7 +129,8 @@ public class c implements UMLogDataProtocol {
             try {
                 String str = bwVarA.a;
                 String str2 = bwVarA.b;
-                JSONObject jSONObjectA = new com.umeng.commonsdk.statistics.b().a(this.e.getApplicationContext(), new JSONObject(bwVarA.c), new JSONObject(bwVarA.d), bwVarA.e, str2, bwVarA.f);
+                JSONObject jSONObjectA = new com.umeng.commonsdk.statistics.b().a(this.e.getApplicationContext(),
+                        new JSONObject(bwVarA.c), new JSONObject(bwVarA.d), bwVarA.e, str2, bwVarA.f);
                 if (jSONObjectA == null || !jSONObjectA.has("exception")) {
                     UMRTLog.e(UMRTLog.RTLOG_TAG, "--->>> [有状态]二级缓存记录构建真正信封 成功! 删除二级缓存记录。");
                 } else {
@@ -180,7 +181,8 @@ public class c implements UMLogDataProtocol {
             UMConfigureImpl.init(this.e);
             f++;
             UMRTLog.e(UMRTLog.RTLOG_TAG, "--->>> 要读取 oaid，需等待读取结果.");
-            UMConfigureImpl.registerMessageSendListener(new onMessageSendListener() { // from class: com.umeng.commonsdk.internal.c.5
+            UMConfigureImpl.registerMessageSendListener(new onMessageSendListener() { // from class:
+                                                                                      // com.umeng.commonsdk.internal.c.5
                 @Override // com.umeng.commonsdk.utils.onMessageSendListener
                 public void onMessageSend() {
                     if (c.this.e != null) {
@@ -205,7 +207,8 @@ public class c implements UMLogDataProtocol {
         if (UMUtils.isMainProgress(this.e)) {
             f(this.e);
             UMInnerManager.sendInnerPackage(this.e);
-            if (!FieldManager.allow(com.umeng.commonsdk.utils.d.at) && SdkVersion.SDK_TYPE == 0 && UMUtils.isMainProgress(this.e)) {
+            if (!FieldManager.allow(com.umeng.commonsdk.utils.d.at) && SdkVersion.SDK_TYPE == 0
+                    && UMUtils.isMainProgress(this.e)) {
                 Context context = this.e;
                 UMWorkDispatch.sendEvent(context, a.G, b.a(context).a(), null, 5000L);
             }
@@ -225,17 +228,29 @@ public class c implements UMLogDataProtocol {
         return null;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:288:0x02e3  */
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.java:210)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:196)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:180)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:201)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.java:347)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(TryCatchBlockAttr.java:356)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:202)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+    /* JADX WARN: Found duplicated region for block: B:288:0x02e3 */
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.
+     * java:210)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:196)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:180)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:
+     * 201)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.
+     * java:347)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(
+     * TryCatchBlockAttr.java:356)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+     * MarkFinallyVisitor.java:202)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:119)
      */
     @Override // com.umeng.commonsdk.framework.UMLogDataProtocol
     public void workEvent(Object obj, int i2) throws JSONException, IllegalAccessException, InvocationTargetException {
@@ -271,7 +286,8 @@ public class c implements UMLogDataProtocol {
             switch (i2) {
                 case a.f /* 32769 */:
                     ULog.i("walle", "[internal] workEvent send envelope");
-                    UMInternalManagerAgent.class.getMethod("sendInternalEnvelopeByStateful2", Context.class).invoke(UMInternalManagerAgent.class, this.e);
+                    UMInternalManagerAgent.class.getMethod("sendInternalEnvelopeByStateful2", Context.class)
+                            .invoke(UMInternalManagerAgent.class, this.e);
                     break;
                 case a.h /* 32771 */:
                     if (obj != null && (obj instanceof com.umeng.commonsdk.internal.utils.b)) {
@@ -289,12 +305,14 @@ public class c implements UMLogDataProtocol {
                         }
                         String string = jSONObject.toString();
                         UMRTLog.i(UMRTLog.RTLOG_TAG, "battery info: " + string);
-                        UMInternalUtilsAgent.class.getMethod("saveBattery", Context.class, String.class).invoke(UMInternalUtilsAgent.class, this.e, string);
+                        UMInternalUtilsAgent.class.getMethod("saveBattery", Context.class, String.class)
+                                .invoke(UMInternalUtilsAgent.class, this.e, string);
                         break;
                     }
                     break;
                 case a.l /* 32775 */:
-                    InfoPreferenceAgent.class.getMethod("saveUA", Context.class, String.class).invoke(InfoPreferenceAgent.class, this.e, (String) obj);
+                    InfoPreferenceAgent.class.getMethod("saveUA", Context.class, String.class)
+                            .invoke(InfoPreferenceAgent.class, this.e, (String) obj);
                     break;
                 case a.n /* 32777 */:
                     ULog.i("walle", "[internal] workEvent send envelope");
@@ -302,8 +320,10 @@ public class c implements UMLogDataProtocol {
                     jSONObject2.put(bt.aL, a.e);
                     JSONObject jSONObject3 = new JSONObject();
                     jSONObject3.put(bt.as, new JSONObject());
-                    JSONObject jSONObjectBuildEnvelopeWithExtHeader = UMEnvelopeBuild.buildEnvelopeWithExtHeader(this.e, jSONObject2, jSONObject3);
-                    if (jSONObjectBuildEnvelopeWithExtHeader != null && !jSONObjectBuildEnvelopeWithExtHeader.has("exception")) {
+                    JSONObject jSONObjectBuildEnvelopeWithExtHeader = UMEnvelopeBuild.buildEnvelopeWithExtHeader(this.e,
+                            jSONObject2, jSONObject3);
+                    if (jSONObjectBuildEnvelopeWithExtHeader != null
+                            && !jSONObjectBuildEnvelopeWithExtHeader.has("exception")) {
                         ULog.i("walle", "[internal] workEvent send envelope back, result is ok");
                         break;
                     }
@@ -328,7 +348,7 @@ public class c implements UMLogDataProtocol {
                     break;
                 case a.t /* 32785 */:
                     UMRTLog.e(UMRTLog.RTLOG_TAG, "--->>> [有状态]接收到消费二级缓存数据通知.");
-                    if (!bv.a(this.e).c()) {
+                    if (!bv.a(this.e).createInstanceWithArgs()) {
                         d();
                         if (!UMWorkDispatch.eventHasExist(a.t)) {
                             Context context2 = this.e;
@@ -379,7 +399,7 @@ public class c implements UMLogDataProtocol {
                     }
                     if (FieldManager.allow(com.umeng.commonsdk.utils.d.F)) {
                         UMRTLog.e(UMRTLog.RTLOG_TAG, "--->>> 云控下发参数更新 FirstResume功能 打开，触发 trigger");
-                        n.a(this.e).b(this.e);
+                        n.a(this.e).tryGetClassByName(this.e);
                     }
                     break;
                 case a.x /* 32790 */:
@@ -390,7 +410,8 @@ public class c implements UMLogDataProtocol {
                 case a.y /* 32791 */:
                     UMRTLog.e(UMRTLog.RTLOG_TAG, "--->>> 正常冷启动流程，接收到云控配置加载成功通知。");
                     UMInnerManager.sendInnerPackage(this.e);
-                    if (!FieldManager.allow(com.umeng.commonsdk.utils.d.at) && SdkVersion.SDK_TYPE == 0 && UMUtils.isMainProgress(this.e)) {
+                    if (!FieldManager.allow(com.umeng.commonsdk.utils.d.at) && SdkVersion.SDK_TYPE == 0
+                            && UMUtils.isMainProgress(this.e)) {
                         Context context4 = this.e;
                         UMWorkDispatch.sendEvent(context4, a.G, b.a(context4).a(), null, 5000L);
                     }
@@ -415,7 +436,8 @@ public class c implements UMLogDataProtocol {
                             int i3 = jSONObject4.getInt(a.J);
                             int i4 = jSONObject4.getInt(a.K);
                             int i5 = jSONObject4.getInt("policyGrantResult");
-                            SharedPreferences sharedPreferences2 = this.e.getApplicationContext().getSharedPreferences(a, 0);
+                            SharedPreferences sharedPreferences2 = this.e.getApplicationContext()
+                                    .getSharedPreferences(a, 0);
                             if (sharedPreferences2 != null && (editorEdit = sharedPreferences2.edit()) != null) {
                                 editorEdit.putInt(b, i3);
                                 editorEdit.putInt(c, i4);
@@ -439,7 +461,8 @@ public class c implements UMLogDataProtocol {
                     SelfChecker.doCheck(this.e);
                     break;
                 case a.E /* 32803 */:
-                    ConnectivityManager connectivityManager = (ConnectivityManager) this.e.getSystemService("connectivity");
+                    ConnectivityManager connectivityManager = (ConnectivityManager) this.e
+                            .getSystemService("connectivity");
                     if (connectivityManager == null) {
                         UMRTLog.e(UMRTLog.RTLOG_TAG, "--->>> ConnectivityManager is null!");
                         com.umeng.commonsdk.framework.a.a(false);
@@ -452,14 +475,16 @@ public class c implements UMLogDataProtocol {
                                 com.umeng.commonsdk.framework.a.a(false);
                                 com.umeng.commonsdk.stateless.b.a(false);
                                 if (UMUtils.isMainProgress(this.e)) {
-                                    com.umeng.ccg.c.a(UMGlobalContext.getAppContext(), com.umeng.ccg.c.y, com.umeng.ccg.d.a(), null, 0L);
+                                    com.umeng.ccg.c.a(UMGlobalContext.getAppContext(), com.umeng.ccg.c.y,
+                                            com.umeng.ccg.d.a(), null, 0L);
                                 }
                             } else if (activeNetworkInfo.isAvailable()) {
                                 UMRTLog.i(UMRTLog.RTLOG_TAG, "--->>> network state changed: Available");
                                 com.umeng.commonsdk.framework.a.a(true);
                                 com.umeng.commonsdk.stateless.b.a(true);
                                 if (UMUtils.isMainProgress(this.e)) {
-                                    com.umeng.ccg.c.a(UMGlobalContext.getAppContext(), com.umeng.ccg.c.y, com.umeng.ccg.d.a(), null, 0L);
+                                    com.umeng.ccg.c.a(UMGlobalContext.getAppContext(), com.umeng.ccg.c.y,
+                                            com.umeng.ccg.d.a(), null, 0L);
                                 }
                             } else {
                                 UMRTLog.i(UMRTLog.RTLOG_TAG, "--->>> network state changed: unAvailable");
@@ -478,7 +503,8 @@ public class c implements UMLogDataProtocol {
                     break;
                 case a.G /* 32805 */:
                     UMRTLog.i(UMRTLog.RTLOG_TAG, "recv CLOUD_CONFIG_TRIGGER msg.");
-                    CcgAgent.registerConfigListener(new ConfigListener() { // from class: com.umeng.commonsdk.internal.c.6
+                    CcgAgent.registerConfigListener(new ConfigListener() { // from class:
+                                                                           // com.umeng.commonsdk.internal.c.6
                         @Override // com.umeng.ccg.ConfigListener
                         public void onConfigReady(JSONObject jSONObject5) {
                             if (jSONObject5 == null) {
@@ -536,8 +562,10 @@ public class c implements UMLogDataProtocol {
             JSONObject jSONObject = new JSONObject();
             jSONObject.put("#ak", UMGlobalContext.getInstance(context).getAppkey());
             jSONObject.put("#umid", strImprintProperty);
-            JSONObject jSONObjectBuildSilentEnvelopeWithExtHeader = UMEnvelopeBuild.buildSilentEnvelopeWithExtHeader(context, jSONObject, null, UMServerURL.SILENT_HEART_BEAT);
-            if (jSONObjectBuildSilentEnvelopeWithExtHeader == null || !jSONObjectBuildSilentEnvelopeWithExtHeader.has("exception")) {
+            JSONObject jSONObjectBuildSilentEnvelopeWithExtHeader = UMEnvelopeBuild
+                    .buildSilentEnvelopeWithExtHeader(context, jSONObject, null, UMServerURL.SILENT_HEART_BEAT);
+            if (jSONObjectBuildSilentEnvelopeWithExtHeader == null
+                    || !jSONObjectBuildSilentEnvelopeWithExtHeader.has("exception")) {
                 UMRTLog.e(UMRTLog.RTLOG_TAG, "--->>> 构建心跳报文 成功!!!");
             } else {
                 UMRTLog.e(UMRTLog.RTLOG_TAG, "--->>> 构建心跳报文失败.");
@@ -552,8 +580,10 @@ public class c implements UMLogDataProtocol {
             jSONObject.put("#ak", UMGlobalContext.getInstance(context).getAppkey());
             jSONObject.put("#av", UMGlobalContext.getInstance(context).getAppVersion());
             jSONObject.put(bt.x, AnalyticsConstants.SDK_TYPE);
-            JSONObject jSONObjectBuildZeroEnvelopeWithExtHeader = UMEnvelopeBuild.buildZeroEnvelopeWithExtHeader(context, jSONObject, null, UMServerURL.ZCFG_PATH);
-            if (jSONObjectBuildZeroEnvelopeWithExtHeader == null || !jSONObjectBuildZeroEnvelopeWithExtHeader.has("exception")) {
+            JSONObject jSONObjectBuildZeroEnvelopeWithExtHeader = UMEnvelopeBuild
+                    .buildZeroEnvelopeWithExtHeader(context, jSONObject, null, UMServerURL.ZCFG_PATH);
+            if (jSONObjectBuildZeroEnvelopeWithExtHeader == null
+                    || !jSONObjectBuildZeroEnvelopeWithExtHeader.has("exception")) {
                 UMRTLog.e(UMRTLog.RTLOG_TAG, "--->>> 构建零号报文 成功!!!");
             } else {
                 UMRTLog.e(UMRTLog.RTLOG_TAG, "--->>> 构建零号报文失败.");
@@ -570,7 +600,9 @@ public class c implements UMLogDataProtocol {
         try {
             Class<?> clsA = a("com.umeng.umzid.ZIDManager");
             Method declaredMethod2 = clsA.getDeclaredMethod("getInstance", null);
-            if (declaredMethod2 == null || (objInvoke = declaredMethod2.invoke(clsA, null)) == null || (declaredMethod = clsA.getDeclaredMethod("init", Context.class, String.class, a("com.umeng.umzid.IZIDCompletionCallback"))) == null) {
+            if (declaredMethod2 == null || (objInvoke = declaredMethod2.invoke(clsA, null)) == null
+                    || (declaredMethod = clsA.getDeclaredMethod("init", Context.class, String.class,
+                            a("com.umeng.umzid.IZIDCompletionCallback"))) == null) {
                 return;
             }
             declaredMethod.invoke(objInvoke, applicationContext, appkey, null);

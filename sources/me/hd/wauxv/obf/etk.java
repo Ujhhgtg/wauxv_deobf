@@ -12,7 +12,7 @@ import me.hd.wauxv.data.bean.info.GroupInfo;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class etk implements bgf {
+public final /* synthetic */ class etk implements IHasInvokeMethod {
     public final /* synthetic */ int a;
     public final /* synthetic */ String b;
     public final /* synthetic */ int c;
@@ -42,11 +42,17 @@ public final /* synthetic */ class etk implements bgf {
                 ArrayList arrayList = new ArrayList();
                 ArrayList arrayList2 = new ArrayList();
                 ArrayList arrayList3 = new ArrayList();
-                Cursor cursorAb = bmy.ab(new aer[]{aer.a, aer.b});
+                Cursor cursorAb = bmy.ab(new aer[] { aer.a, aer.b });
                 if (cursorAb != null) {
                     while (cursorAb.moveToNext()) {
                         try {
-                            if (dnr.bi(cursorAb.getString(cursorAb.getColumnIndex("username" /* cnb.z(-521031072611114L) */)), "@chatroom" /* cnb.z(-520992417905450L) */)) {
+                            if (dnr.bi(cursorAb.getString(cursorAb.getColumnIndex("username" /*
+                                                                                              * cnb.z(-521031072611114L)
+                                                                                              */)), "@chatroom" /*
+                                                                                                                 * cnb.z
+                                                                                                                 * (-
+                                                                                                                 * 520992417905450L)
+                                                                                                                 */)) {
                                 GroupInfo groupInfoT = cnb.t(cursorAb);
                                 String roomId = groupInfoT.getRoomId();
                                 StringBuilder sb2 = new StringBuilder();
@@ -69,13 +75,16 @@ public final /* synthetic */ class etk implements bgf {
                                 String wxid = friendInfoS.getWxid();
                                 StringBuilder sb4 = new StringBuilder();
                                 String nickname = friendInfoS.getNickname();
-                                if ((dfv.d(dap.b(new dap("\r\n|\r|\n" /* cnb.z(-520897928624938L) */), nickname)) > 3 ? nickname : null) != null) {
+                                if ((dfv.d(dap.b(new dap("\r\n|\r|\n" /* cnb.z(-520897928624938L) */), nickname)) > 3
+                                        ? nickname
+                                        : null) != null) {
                                     sb4.append("已过滤此昵称..." /* cnb.z(-520318108039978L) */);
                                 } else {
                                     String str2 = nickname.length() > 8 ? nickname : null;
                                     if (str2 != null) {
                                         String strSubstring = str2.substring(0, 8);
-                                        bzo.p(strSubstring, "substring(...)" /* cnb.z(-520292338236202L) */);
+                                        throwIfVar1IsNull(strSubstring,
+                                                "substring(...)" /* cnb.z(-520292338236202L) */);
                                         sb4.append(strSubstring);
                                         sb4.append("..." /* cnb.z(-520210733857578L) */);
                                         sb = sb4;
@@ -117,13 +126,17 @@ public final /* synthetic */ class etk implements bgf {
                 final int i = this.c;
                 bgj bgjVar = new bgj() { // from class: me.hd.wauxv.obf.etj
                     @Override // me.hd.wauxv.obf.bgj
-                    public final Object g(Object obj2, Object obj3) throws IllegalAccessException, InstantiationException, InvocationTargetException {
+                    public final Object g(Object obj2, Object obj3)
+                            throws IllegalAccessException, InstantiationException, InvocationTargetException {
                         List list = (List) obj2;
                         Iterator it = list.iterator();
                         while (it.hasNext()) {
                             arj.ah(((adx) it.next()).a, str3, i);
                         }
-                        dnc.g(null, 3, "已转发至" /* cnb.z(-520206438890282L) */ + list.size() + "个会话" /* cnb.z(-520150604315434L) */);
+                        dnc.g(null, 3, "已转发至" /* cnb.z(-520206438890282L) */ + list.size() + "个会话" /*
+                                                                                                    * cnb.z(-
+                                                                                                    * 520150604315434L)
+                                                                                                    */);
                         return Boolean.FALSE;
                     }
                 };

@@ -10,7 +10,10 @@ import com.umeng.analytics.pro.b;
 /* JADX INFO: loaded from: classes.dex */
 public interface c extends IInterface {
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class a implements c {
         @Override // com.umeng.analytics.pro.c
         public void a(int i, long j, boolean z, float f, double d, String str) {
@@ -36,14 +39,20 @@ public interface c extends IInterface {
 
     void b(com.umeng.analytics.pro.b bVar);
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static abstract class b extends Binder implements c {
         static final int a = 1;
         static final int b = 2;
         static final int c = 3;
         private static final String d = "com.hihonor.cloudservice.oaid.IOAIDService";
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static class a implements c {
             public static c a;
             private IBinder b;
@@ -71,7 +80,7 @@ public interface c extends IInterface {
                     if (this.b.transact(3, parcelObtain, parcelObtain2, 0) || b.a() == null) {
                         parcelObtain2.readException();
                     } else {
-                        b.a().b(bVar);
+                        b.a().tryGetClassByName(bVar);
                     }
                 } finally {
                     parcelObtain2.recycle();
@@ -130,7 +139,9 @@ public interface c extends IInterface {
                 return null;
             }
             IInterface iInterfaceQueryLocalInterface = iBinder.queryLocalInterface(d);
-            return (iInterfaceQueryLocalInterface == null || !(iInterfaceQueryLocalInterface instanceof c)) ? new a(iBinder) : (c) iInterfaceQueryLocalInterface;
+            return (iInterfaceQueryLocalInterface == null || !(iInterfaceQueryLocalInterface instanceof c))
+                    ? new a(iBinder)
+                    : (c) iInterfaceQueryLocalInterface;
         }
 
         @Override // android.os.IInterface
@@ -142,7 +153,8 @@ public interface c extends IInterface {
         public boolean onTransact(int i, Parcel parcel, Parcel parcel2, int i2) {
             if (i == 1) {
                 parcel.enforceInterface(d);
-                a(parcel.readInt(), parcel.readLong(), parcel.readInt() != 0, parcel.readFloat(), parcel.readDouble(), parcel.readString());
+                a(parcel.readInt(), parcel.readLong(), parcel.readInt() != 0, parcel.readFloat(), parcel.readDouble(),
+                        parcel.readString());
                 parcel2.writeNoException();
                 return true;
             }
@@ -166,15 +178,15 @@ public interface c extends IInterface {
         }
 
         public static boolean a(c cVar) {
-            if (a.a != null || cVar == null) {
+            if (a.cachedConstructors != null || cVar == null) {
                 return false;
             }
-            a.a = cVar;
+            a.cachedConstructors = cVar;
             return true;
         }
 
         public static c a() {
-            return a.a;
+            return a.cachedConstructors;
         }
     }
 }

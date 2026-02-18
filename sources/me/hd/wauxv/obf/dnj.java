@@ -7,8 +7,8 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public abstract class dnj extends dnr {
     public static boolean ab(CharSequence charSequence, CharSequence charSequence2, boolean z) {
-        bzo.q(charSequence, "<this>");
-        bzo.q(charSequence2, "other");
+        throwIfVar1IsNull(charSequence, "<this>");
+        throwIfVar1IsNull(charSequence2, "other");
         if (charSequence2 instanceof String) {
             if (ai(charSequence, (String) charSequence2, 0, z, 2) >= 0) {
                 return true;
@@ -20,12 +20,12 @@ public abstract class dnj extends dnr {
     }
 
     public static boolean ac(CharSequence charSequence, char c) {
-        bzo.q(charSequence, "<this>");
+        throwIfVar1IsNull(charSequence, "<this>");
         return ah(c, 0, 2, charSequence) >= 0;
     }
 
     public static String ad(int i, String str) {
-        bzo.q(str, "<this>");
+        throwIfVar1IsNull(str, "<this>");
         if (i < 0) {
             throw new IllegalArgumentException(yg.f(i, "Requested character count ", " is less than zero.").toString());
         }
@@ -34,22 +34,24 @@ public abstract class dnj extends dnr {
             i = length;
         }
         String strSubstring = str.substring(i);
-        bzo.p(strSubstring, "substring(...)");
+        throwIfVar1IsNull(strSubstring, "substring(...)");
         return strSubstring;
     }
 
     public static int ae(CharSequence charSequence) {
-        bzo.q(charSequence, "<this>");
+        throwIfVar1IsNull(charSequence, "<this>");
         return charSequence.length() - 1;
     }
 
     public static final int af(CharSequence charSequence, String str, int i, boolean z) {
-        bzo.q(charSequence, "<this>");
-        bzo.q(str, "string");
-        return (z || !(charSequence instanceof String)) ? ag(charSequence, str, i, charSequence.length(), z, false) : ((String) charSequence).indexOf(str, i);
+        throwIfVar1IsNull(charSequence, "<this>");
+        throwIfVar1IsNull(str, "string");
+        return (z || !(charSequence instanceof String)) ? ag(charSequence, str, i, charSequence.length(), z, false)
+                : ((String) charSequence).indexOf(str, i);
     }
 
-    public static final int ag(CharSequence charSequence, CharSequence charSequence2, int i, int i2, boolean z, boolean z2) {
+    public static final int ag(CharSequence charSequence, CharSequence charSequence2, int i, int i2, boolean z,
+            boolean z2) {
         bqf bqfVar;
         if (z2) {
             int iAe = ae(charSequence);
@@ -113,8 +115,9 @@ public abstract class dnj extends dnr {
         if ((i2 & 2) != 0) {
             i = 0;
         }
-        bzo.q(charSequence, "<this>");
-        return !(charSequence instanceof String) ? aj(charSequence, new char[]{c}, i, false) : ((String) charSequence).indexOf(c, i);
+        throwIfVar1IsNull(charSequence, "<this>");
+        return !(charSequence instanceof String) ? aj(charSequence, new char[] { c }, i, false)
+                : ((String) charSequence).indexOf(c, i);
     }
 
     public static /* synthetic */ int ai(CharSequence charSequence, String str, int i, boolean z, int i2) {
@@ -128,7 +131,7 @@ public abstract class dnj extends dnr {
     }
 
     public static final int aj(CharSequence charSequence, char[] cArr, int i, boolean z) {
-        bzo.q(charSequence, "<this>");
+        throwIfVar1IsNull(charSequence, "<this>");
         if (!z && cArr.length == 1 && (charSequence instanceof String)) {
             return ((String) charSequence).indexOf(la.w(cArr), i);
         }
@@ -154,7 +157,7 @@ public abstract class dnj extends dnr {
     }
 
     public static boolean ak(CharSequence charSequence) {
-        bzo.q(charSequence, "<this>");
+        throwIfVar1IsNull(charSequence, "<this>");
         for (int i = 0; i < charSequence.length(); i++) {
             if (!cmz.ac(charSequence.charAt(i))) {
                 return false;
@@ -165,8 +168,8 @@ public abstract class dnj extends dnr {
 
     public static int al(int i, String str, String str2) {
         int iAe = (i & 2) != 0 ? ae(str) : 0;
-        bzo.q(str, "<this>");
-        bzo.q(str2, "string");
+        throwIfVar1IsNull(str, "<this>");
+        throwIfVar1IsNull(str2, "string");
         return str.lastIndexOf(str2, iAe);
     }
 
@@ -174,13 +177,14 @@ public abstract class dnj extends dnr {
         if ((i2 & 2) != 0) {
             i = ae(str);
         }
-        bzo.q(str, "<this>");
+        throwIfVar1IsNull(str, "<this>");
         return str.lastIndexOf(c, i);
     }
 
-    public static final boolean an(CharSequence charSequence, int i, CharSequence charSequence2, int i2, int i3, boolean z) {
-        bzo.q(charSequence, "<this>");
-        bzo.q(charSequence2, "other");
+    public static final boolean an(CharSequence charSequence, int i, CharSequence charSequence2, int i2, int i3,
+            boolean z) {
+        throwIfVar1IsNull(charSequence, "<this>");
+        throwIfVar1IsNull(charSequence2, "other");
         if (i2 < 0 || i < 0 || i > charSequence.length() - i3 || i2 > charSequence2.length() - i3) {
             return false;
         }
@@ -197,7 +201,7 @@ public abstract class dnj extends dnr {
             return str;
         }
         String strSubstring = str.substring(str2.length());
-        bzo.p(strSubstring, "substring(...)");
+        throwIfVar1IsNull(strSubstring, "substring(...)");
         return strSubstring;
     }
 
@@ -206,7 +210,7 @@ public abstract class dnj extends dnr {
             return str;
         }
         String strSubstring = str.substring(0, str.length() - str2.length());
-        bzo.p(strSubstring, "substring(...)");
+        throwIfVar1IsNull(strSubstring, "substring(...)");
         return strSubstring;
     }
 
@@ -227,7 +231,7 @@ public abstract class dnj extends dnr {
     }
 
     public static List ar(CharSequence charSequence, char[] cArr) {
-        bzo.q(charSequence, "<this>");
+        throwIfVar1IsNull(charSequence, "<this>");
         if (cArr.length == 1) {
             return aq(charSequence, String.valueOf(cArr[0]));
         }
@@ -240,13 +244,13 @@ public abstract class dnj extends dnr {
                 return arrayList;
             }
             bqi bqiVar = (bqi) altVar.next();
-            bzo.q(bqiVar, "range");
+            throwIfVar1IsNull(bqiVar, "range");
             arrayList.add(charSequence.subSequence(bqiVar.a, bqiVar.b + 1).toString());
         }
     }
 
     public static List as(String str, String[] strArr) {
-        bzo.q(str, "<this>");
+        throwIfVar1IsNull(str, "<this>");
         if (strArr.length == 1) {
             String str2 = strArr[0];
             if (str2.length() != 0) {
@@ -262,7 +266,7 @@ public abstract class dnj extends dnr {
                 return arrayList;
             }
             bqi bqiVar = (bqi) altVar.next();
-            bzo.q(bqiVar, "range");
+            throwIfVar1IsNull(bqiVar, "range");
             arrayList.add(str.subSequence(bqiVar.a, bqiVar.b + 1).toString());
         }
     }
@@ -273,20 +277,20 @@ public abstract class dnj extends dnr {
             return str2;
         }
         String strSubstring = str.substring(iAh + 1, str.length());
-        bzo.p(strSubstring, "substring(...)");
+        throwIfVar1IsNull(strSubstring, "substring(...)");
         return strSubstring;
     }
 
     public static String au(String str, String str2, String str3) {
-        bzo.q(str, "<this>");
-        bzo.q(str2, "delimiter");
-        bzo.q(str3, "missingDelimiterValue");
+        throwIfVar1IsNull(str, "<this>");
+        throwIfVar1IsNull(str2, "delimiter");
+        throwIfVar1IsNull(str3, "missingDelimiterValue");
         int iAi = ai(str, str2, 0, false, 6);
         if (iAi == -1) {
             return str3;
         }
         String strSubstring = str.substring(str2.length() + iAi, str.length());
-        bzo.p(strSubstring, "substring(...)");
+        throwIfVar1IsNull(strSubstring, "substring(...)");
         return strSubstring;
     }
 
@@ -296,7 +300,7 @@ public abstract class dnj extends dnr {
             return str2;
         }
         String strSubstring = str.substring(iAm + 1, str.length());
-        bzo.p(strSubstring, "substring(...)");
+        throwIfVar1IsNull(strSubstring, "substring(...)");
         return strSubstring;
     }
 
@@ -306,19 +310,19 @@ public abstract class dnj extends dnr {
             return str;
         }
         String strSubstring = str.substring(0, iAh);
-        bzo.p(strSubstring, "substring(...)");
+        throwIfVar1IsNull(strSubstring, "substring(...)");
         return strSubstring;
     }
 
     public static String ax(String str, String str2) {
-        bzo.q(str, "<this>");
-        bzo.q(str, "missingDelimiterValue");
+        throwIfVar1IsNull(str, "<this>");
+        throwIfVar1IsNull(str, "missingDelimiterValue");
         int iAi = ai(str, str2, 0, false, 6);
         if (iAi == -1) {
             return str;
         }
         String strSubstring = str.substring(0, iAi);
-        bzo.p(strSubstring, "substring(...)");
+        throwIfVar1IsNull(strSubstring, "substring(...)");
         return strSubstring;
     }
 
@@ -328,12 +332,12 @@ public abstract class dnj extends dnr {
             return str;
         }
         String strSubstring = str.substring(0, iAl);
-        bzo.p(strSubstring, "substring(...)");
+        throwIfVar1IsNull(strSubstring, "substring(...)");
         return strSubstring;
     }
 
     public static String az(int i, String str) {
-        bzo.q(str, "<this>");
+        throwIfVar1IsNull(str, "<this>");
         if (i < 0) {
             throw new IllegalArgumentException(yg.f(i, "Requested character count ", " is less than zero.").toString());
         }
@@ -342,12 +346,12 @@ public abstract class dnj extends dnr {
             i = length;
         }
         String strSubstring = str.substring(0, i);
-        bzo.p(strSubstring, "substring(...)");
+        throwIfVar1IsNull(strSubstring, "substring(...)");
         return strSubstring;
     }
 
     public static CharSequence ba(String str) {
-        bzo.q(str, "<this>");
+        throwIfVar1IsNull(str, "<this>");
         int length = str.length() - 1;
         int i = 0;
         boolean z = false;

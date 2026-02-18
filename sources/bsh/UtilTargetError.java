@@ -16,7 +16,7 @@ public class UtilTargetError extends UtilEvalError {
         if (str == null) {
             string = getMessage();
         } else {
-            StringBuilder sbR = bjs.r(str, ": ");
+            StringBuilder sbR = concat(str, ": ");
             sbR.append(getMessage());
             string = sbR.toString();
         }

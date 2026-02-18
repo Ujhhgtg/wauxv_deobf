@@ -9,10 +9,11 @@ public class InvokePolymorphicDecodedInstruction extends DecodedInstruction {
     private final int protoIndex;
     private final int[] registers;
 
-    public InvokePolymorphicDecodedInstruction(InstructionCodec instructionCodec, int i, int i2, IndexType indexType, int i3, int[] iArr) {
+    public InvokePolymorphicDecodedInstruction(InstructionCodec instructionCodec, int i, int i2, IndexType indexType,
+            int i3, int[] iArr) {
         super(instructionCodec, i, i2, indexType, 0, 0L);
         if (i3 != ((short) i3)) {
-            throw new IllegalArgumentException(bjs.i(i3, "protoIndex doesn't fit in a short: "));
+            throw new IllegalArgumentException(concatVar2Var1(i3, "protoIndex doesn't fit in a short: "));
         }
         this.protoIndex = i3;
         this.registers = iArr;
@@ -73,7 +74,8 @@ public class InvokePolymorphicDecodedInstruction extends DecodedInstruction {
 
     @Override // com.android.dx.io.instructions.DecodedInstruction
     public DecodedInstruction withIndex(int i) {
-        throw new UnsupportedOperationException("use withProtoIndex to update both the method and proto indices for invoke-polymorphic");
+        throw new UnsupportedOperationException(
+                "use withProtoIndex to update both the method and proto indices for invoke-polymorphic");
     }
 
     @Override // com.android.dx.io.instructions.DecodedInstruction

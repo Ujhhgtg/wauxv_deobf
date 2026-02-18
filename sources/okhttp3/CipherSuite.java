@@ -6,7 +6,7 @@ import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.dnr;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -136,7 +136,10 @@ public final class CipherSuite {
     public static final CipherSuite TLS_RSA_WITH_SEED_CBC_SHA;
     private final String javaName;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
@@ -152,21 +155,21 @@ public final class CipherSuite {
         private final String secondaryName(String str) {
             if (dnr.bp(str, "TLS_", false)) {
                 String strSubstring = str.substring(4);
-                bzo.p(strSubstring, "this as java.lang.String).substring(startIndex)");
+                throwIfVar1IsNull(strSubstring, "this as java.lang.String).substring(startIndex)");
                 return "SSL_".concat(strSubstring);
             }
             if (!dnr.bp(str, "SSL_", false)) {
                 return str;
             }
             String strSubstring2 = str.substring(4);
-            bzo.p(strSubstring2, "this as java.lang.String).substring(startIndex)");
+            throwIfVar1IsNull(strSubstring2, "this as java.lang.String).substring(startIndex)");
             return "TLS_".concat(strSubstring2);
         }
 
         public final synchronized CipherSuite forJavaName(String str) {
             CipherSuite cipherSuite;
             try {
-                bzo.q(str, "javaName");
+                throwIfVar1IsNull(str, "javaName");
                 cipherSuite = (CipherSuite) CipherSuite.INSTANCES.get(str);
                 if (cipherSuite == null) {
                     cipherSuite = (CipherSuite) CipherSuite.INSTANCES.get(secondaryName(str));
@@ -195,14 +198,14 @@ public final class CipherSuite {
         ORDER_BY_NAME = new Comparator<String>() { // from class: okhttp3.CipherSuite$Companion$ORDER_BY_NAME$1
             @Override // java.util.Comparator
             public int compare(String str, String str2) {
-                bzo.q(str, bt.at);
-                bzo.q(str2, "b");
+                throwIfVar1IsNull(str, bt.at);
+                throwIfVar1IsNull(str2, "b");
                 int iMin = Math.min(str.length(), str2.length());
                 for (int i = 4; i < iMin; i++) {
                     char cCharAt = str.charAt(i);
                     char cCharAt2 = str2.charAt(i);
                     if (cCharAt != cCharAt2) {
-                        return bzo.r(cCharAt, cCharAt2) < 0 ? -1 : 1;
+                        return KotlinHelpers.r(cCharAt, cCharAt2) < 0 ? -1 : 1;
                     }
                 }
                 int length = str.length();
@@ -279,7 +282,8 @@ public final class CipherSuite {
         TLS_DHE_DSS_WITH_AES_256_GCM_SHA384 = companion.init("TLS_DHE_DSS_WITH_AES_256_GCM_SHA384", 163);
         TLS_DH_anon_WITH_AES_128_GCM_SHA256 = companion.init("TLS_DH_anon_WITH_AES_128_GCM_SHA256", 166);
         TLS_DH_anon_WITH_AES_256_GCM_SHA384 = companion.init("TLS_DH_anon_WITH_AES_256_GCM_SHA384", 167);
-        TLS_EMPTY_RENEGOTIATION_INFO_SCSV = companion.init("TLS_EMPTY_RENEGOTIATION_INFO_SCSV", Opcodes.CONST_METHOD_TYPE);
+        TLS_EMPTY_RENEGOTIATION_INFO_SCSV = companion.init("TLS_EMPTY_RENEGOTIATION_INFO_SCSV",
+                Opcodes.CONST_METHOD_TYPE);
         TLS_FALLBACK_SCSV = companion.init("TLS_FALLBACK_SCSV", 22016);
         TLS_ECDH_ECDSA_WITH_NULL_SHA = companion.init("TLS_ECDH_ECDSA_WITH_NULL_SHA", 49153);
         TLS_ECDH_ECDSA_WITH_RC4_128_SHA = companion.init("TLS_ECDH_ECDSA_WITH_RC4_128_SHA", 49154);
@@ -324,10 +328,13 @@ public final class CipherSuite {
         TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384 = companion.init("TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384", 49202);
         TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA = companion.init("TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA", 49205);
         TLS_ECDHE_PSK_WITH_AES_256_CBC_SHA = companion.init("TLS_ECDHE_PSK_WITH_AES_256_CBC_SHA", 49206);
-        TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 = companion.init("TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256", 52392);
-        TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 = companion.init("TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256", 52393);
+        TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 = companion.init("TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+                52392);
+        TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 = companion.init("TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+                52393);
         TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256 = companion.init("TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256", 52394);
-        TLS_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256 = companion.init("TLS_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256", 52396);
+        TLS_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256 = companion.init("TLS_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256",
+                52396);
         TLS_AES_128_GCM_SHA256 = companion.init("TLS_AES_128_GCM_SHA256", 4865);
         TLS_AES_256_GCM_SHA384 = companion.init("TLS_AES_256_GCM_SHA384", 4866);
         TLS_CHACHA20_POLY1305_SHA256 = companion.init("TLS_CHACHA20_POLY1305_SHA256", 4867);

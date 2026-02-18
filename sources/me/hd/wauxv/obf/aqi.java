@@ -33,14 +33,14 @@ public final /* synthetic */ class aqi implements ValueAnimator.AnimatorUpdateLi
                 break;
             case 2:
                 ccz cczVar = (ccz) this.b;
-                bzo.q(valueAnimator, "it");
+                throwIfVar1IsNull(valueAnimator, "it");
                 Choreographer.getInstance().postFrameCallback(new ccy(cczVar));
                 break;
             case 3:
                 crk crkVar = (crk) this.b;
-                bzo.q(valueAnimator, "animation");
+                throwIfVar1IsNull(valueAnimator, "animation");
                 Object animatedValue = valueAnimator.getAnimatedValue();
-                bzo.o(animatedValue, "null cannot be cast to non-null type kotlin.Float");
+                throwIfVar1IsNull(animatedValue, "null cannot be cast to non-null type kotlin.Float");
                 float fFloatValue2 = ((Float) animatedValue).floatValue();
                 crkVar.m = fFloatValue2;
                 float f2 = 1.0f;
@@ -63,7 +63,10 @@ public final /* synthetic */ class aqi implements ValueAnimator.AnimatorUpdateLi
             case 4:
                 don donVar = (don) this.b;
                 Object animatedValue2 = valueAnimator.getAnimatedValue();
-                bzo.o(animatedValue2, "null cannot be cast to non-null type kotlin.Int" /* cnb.z(-412982580345642L) */);
+                throwIfVar1IsNull(animatedValue2, "null cannot be cast to non-null type kotlin.Int" /*
+                                                                                                     * cnb.z(-
+                                                                                                     * 412982580345642L)
+                                                                                                     */);
                 donVar.scrollTo(((Integer) animatedValue2).intValue(), 0);
                 break;
             default:

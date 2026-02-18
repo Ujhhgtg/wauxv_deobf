@@ -15,7 +15,8 @@ public final class yu extends nd {
     public final dov j;
     public final dov k;
 
-    public yu(DexKitBridge dexKitBridge, int i, int i2, int i3, String str, Integer num, ArrayList arrayList, ArrayList arrayList2, ArrayList arrayList3) {
+    public yu(DexKitBridge dexKitBridge, int i, int i2, int i3, String str, Integer num, ArrayList arrayList,
+            ArrayList arrayList2, ArrayList arrayList3) {
         super(dexKitBridge, i, i2);
         this.e = i3;
         this.f = str;
@@ -31,7 +32,7 @@ public final class yu extends nd {
             return true;
         }
         if (obj instanceof yu) {
-            return bzo.f(this.f, ((yu) obj).f);
+            return nullSafeIsEqual(this.f, ((yu) obj).f);
         }
         return false;
     }

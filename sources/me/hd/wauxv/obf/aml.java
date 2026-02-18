@@ -6,7 +6,7 @@ public final class aml {
     public final String a;
 
     public aml(String str) {
-        bzo.q(str, "descriptor");
+        throwIfVar1IsNull(str, "descriptor");
         this.a = ams.f(str);
     }
 
@@ -17,7 +17,7 @@ public final class aml {
         if (!(obj instanceof aml)) {
             return false;
         }
-        return bzo.f(this.a, ((aml) obj).a);
+        return nullSafeIsEqual(this.a, ((aml) obj).a);
     }
 
     public final int hashCode() {

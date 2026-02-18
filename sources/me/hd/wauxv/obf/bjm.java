@@ -14,7 +14,7 @@ import me.hd.wauxv.data.bean.MsgInfoBean;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class bjm extends doo implements bnc {
+public final class bjm extends BaseHook implements bnc {
     public static final bjm a;
     public static final String b;
     public static final String c;
@@ -70,7 +70,7 @@ public final class bjm extends doo implements bnc {
                 if (string != null && string.length() != 0 && string2 != null && string2.length() != 0) {
                     String strAz = dnj.az(6, string2);
                     a.getClass();
-                    s.put(string, new csm(strAz, (bix) n.getValue()));
+                    s.put(string, new Pair(strAz, (bix) n.getValue()));
                 }
             }
         }
@@ -84,8 +84,11 @@ public final class bjm extends doo implements bnc {
                 String string = jSONObject.getString("id" /* cnb.z(-505715219233578L) */);
                 String string2 = jSONObject.getString("title" /* cnb.z(-505719514200874L) */);
                 JSONArray jSONArray = jSONObject.getJSONArray("span" /* cnb.z(-505676564527914L) */);
-                if (string != null && string.length() != 0 && string2 != null && string2.length() != 0 && jSONArray != null && !jSONArray.isEmpty()) {
-                    s.put(string, new csm(dnj.az(6, string2), new bix(new int[]{Color.parseColor(jSONArray.getString(0)), Color.parseColor(jSONArray.getString(1))}, 0, 14)));
+                if (string != null && string.length() != 0 && string2 != null && string2.length() != 0
+                        && jSONArray != null && !jSONArray.isEmpty()) {
+                    s.put(string,
+                            new Pair(dnj.az(6, string2), new bix(new int[] { Color.parseColor(jSONArray.getString(0)),
+                                    Color.parseColor(jSONArray.getString(1)) }, 0, 14)));
                 }
             }
         }
@@ -97,27 +100,28 @@ public final class bjm extends doo implements bnc {
         cnd.bf(akq.f, new eq(2, (afw) null));
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String f() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getName() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String g() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getCategory() {
         return b;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:34:0x010d  */
-    /* JADX WARN: Found duplicated region for block: B:46:0x017d  */
-    /* JADX WARN: Found duplicated region for block: B:47:0x0182  */
-    /* JADX WARN: Found duplicated region for block: B:50:0x0189  */
-    /* JADX WARN: Found duplicated region for block: B:52:0x01bc  */
+    /* JADX WARN: Found duplicated region for block: B:34:0x010d */
+    /* JADX WARN: Found duplicated region for block: B:46:0x017d */
+    /* JADX WARN: Found duplicated region for block: B:47:0x0182 */
+    /* JADX WARN: Found duplicated region for block: B:50:0x0189 */
+    /* JADX WARN: Found duplicated region for block: B:52:0x01bc */
     /* JADX WARN: Found duplicated region for block: B:54:? A[RETURN, SYNTHETIC] */
     @Override // me.hd.wauxv.obf.bnc
-    public final void i(View view, Object obj, Object obj2, MsgInfoBean msgInfoBean) throws IllegalAccessException, InvocationTargetException {
+    public final void i(View view, Object obj, Object obj2, MsgInfoBean msgInfoBean)
+            throws IllegalAccessException, InvocationTargetException {
         boolean zF;
         boolean zBooleanValue;
-        csm csmVar;
+        Pair pairVar;
         String strZ;
         String str;
         bix bixVar;
@@ -125,13 +129,13 @@ public final class bjm extends doo implements bnc {
         String strValueOf;
         String strZ2;
         if (z() && msgInfoBean.isGroupChat()) {
-            csm csmVar2 = (csm) s.get(msgInfoBean.getSendTalker());
+            Pair pairVar2 = (Pair) s.get(msgInfoBean.getSendTalker());
             mg mgVar = xh.a;
             String talker = msgInfoBean.getTalker();
             String sendTalker = msgInfoBean.getSendTalker();
-            csm csmVar3 = new csm(talker, sendTalker);
+            Pair pairVar3 = new Pair(talker, sendTalker);
             mg mgVar2 = xh.a;
-            Boolean bool = (Boolean) mgVar2.get(csmVar3);
+            Boolean bool = (Boolean) mgVar2.get(pairVar3);
             if (bool != null) {
                 zF = bool.booleanValue();
             } else {
@@ -144,21 +148,21 @@ public final class bjm extends doo implements bnc {
                     int i = bte.a;
                     azg azgVarR = dqc.bi(objB).r();
                     azgVarR.ab = "field_roomowner" /* cnb.z(-99733435579178L) */;
-                    zF = bzo.f((String) ((azk) yg.e(azgVarR)).e(), sendTalker);
-                    mgVar2.put(csmVar3, Boolean.valueOf(zF));
+                    zF = nullSafeIsEqual((String) ((azk) yg.e(azgVarR)).e(), sendTalker);
+                    mgVar2.put(pairVar3, Boolean.valueOf(zF));
                 }
             }
             if (zF) {
-                if (csmVar2 == null || (strZ2 = (String) csmVar2.a) == null) {
+                if (pairVar2 == null || (strZ2 = (String) pairVar2.a) == null) {
                     strZ2 = "群主" /* cnb.z(-505706629298986L) */;
                 }
-                csmVar = new csm(strZ2, (bix) l.getValue());
+                pairVar = new Pair(strZ2, (bix) l.getValue());
             } else {
                 String talker2 = msgInfoBean.getTalker();
                 String sendTalker2 = msgInfoBean.getSendTalker();
-                csm csmVar4 = new csm(talker2, sendTalker2);
+                Pair pairVar4 = new Pair(talker2, sendTalker2);
                 mg mgVar3 = xh.b;
-                Boolean bool2 = (Boolean) mgVar3.get(csmVar4);
+                Boolean bool2 = (Boolean) mgVar3.get(pairVar4);
                 if (bool2 != null) {
                     zBooleanValue = bool2.booleanValue();
                 } else {
@@ -174,25 +178,26 @@ public final class bjm extends doo implements bnc {
                             azg azgVarR2 = dqc.bi(objInvoke).r();
                             azgVarR2.ab = "f" /* cnb.z(-99664716102442L) */;
                             Object objE = ((azk) aaz.e(azgVarR2.c())).e();
-                            bzo.n(objE);
+                            throwIfVar1IsNull(objE);
                             zBooleanValue = (((Number) objE).intValue() & 2048) != 0;
                         }
-                        mgVar3.put(csmVar4, Boolean.valueOf(zBooleanValue));
+                        mgVar3.put(pairVar4, Boolean.valueOf(zBooleanValue));
                     }
                 }
                 if (!zBooleanValue) {
-                    if (csmVar2 == null) {
-                        csmVar = new csm("群员" /* cnb.z(-505663679626026L) */, (bix) r.getValue());
+                    if (pairVar2 == null) {
+                        pairVar = new Pair("群员" /* cnb.z(-505663679626026L) */, (bix) r.getValue());
                     }
-                    str = (String) csmVar2.a;
-                    bixVar = (bix) csmVar2.b;
+                    str = (String) pairVar2.a;
+                    bixVar = (bix) pairVar2.b;
                     int i3 = bte.a;
                     azg azgVarR3 = dqc.bi(obj).r();
                     azgVarR3.ab = "userTV" /* cnb.z(-505667974593322L) */;
                     textView = (TextView) ((azk) yg.e(azgVarR3)).e();
                     strValueOf = String.valueOf(textView != null ? textView.getText() : null);
                     if (textView != null) {
-                        SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(str + ' ' + strValueOf);
+                        SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(
+                                str + ' ' + strValueOf);
                         spannableStringBuilder.setSpan(bixVar, 0, str.length(), 33);
                         spannableStringBuilder.setSpan(new StyleSpan(1), 0, str.length(), 33);
                         textView.setText(spannableStringBuilder);
@@ -201,14 +206,14 @@ public final class bjm extends doo implements bnc {
                         textView.setEllipsize(null);
                     }
                 }
-                if (csmVar2 == null || (strZ = (String) csmVar2.a) == null) {
+                if (pairVar2 == null || (strZ = (String) pairVar2.a) == null) {
                     strZ = "管理" /* cnb.z(-505642204789546L) */;
                 }
-                csmVar = new csm(strZ, (bix) m.getValue());
+                pairVar = new Pair(strZ, (bix) m.getValue());
             }
-            csmVar2 = csmVar;
-            str = (String) csmVar2.a;
-            bixVar = (bix) csmVar2.b;
+            pairVar2 = pairVar;
+            str = (String) pairVar2.a;
+            bixVar = (bix) pairVar2.b;
             int i32 = bte.a;
             azg azgVarR32 = dqc.bi(obj).r();
             azgVarR32.ab = "userTV" /* cnb.z(-505667974593322L) */;
@@ -226,12 +231,12 @@ public final class bjm extends doo implements bnc {
         }
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String o() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getDescription() {
         return h;
     }
 
-    @Override // me.hd.wauxv.obf.doo
+    @Override // me.hd.wauxv.obf.BaseHook
     public final bgf p() {
         return j;
     }

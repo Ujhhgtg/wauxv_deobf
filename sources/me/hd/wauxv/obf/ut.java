@@ -55,7 +55,7 @@ public final /* synthetic */ class ut implements cke, awz, aww, cqk, afd {
                 break;
             }
             next = it.next();
-        } while (!bzo.f(((biv) next).b, String.valueOf(menuItem.getTitle())));
+        } while (!nullSafeIsEqual(((biv) next).b, String.valueOf(menuItem.getTitle())));
         if (((biv) next) == null) {
             return false;
         }
@@ -102,7 +102,8 @@ public final /* synthetic */ class ut implements cke, awz, aww, cqk, afd {
             if (!codeEditor.dz(motionEvent.getX(), motionEvent.getY())) {
                 arwVar.e = null;
                 arw.h(arwVar, dhVar);
-            } else if (Math.abs(motionEvent.getX() - ((Number) arwVar.f.a).floatValue()) > 20.0f || Math.abs(motionEvent.getY() - ((Number) arwVar.f.b).floatValue()) > 20.0f) {
+            } else if (Math.abs(motionEvent.getX() - ((Number) arwVar.f.first).floatValue()) > 20.0f
+                    || Math.abs(motionEvent.getY() - ((Number) arwVar.f.second).floatValue()) > 20.0f) {
                 arw.g(arwVar, bmpVar);
                 long jDr = codeEditor.dr(motionEvent.getX(), motionEvent.getY());
                 arwVar.e = codeEditor.getText().x().o((int) (jDr >> 32), (int) (jDr & 4294967295L));
@@ -114,7 +115,7 @@ public final /* synthetic */ class ut implements cke, awz, aww, cqk, afd {
     @Override // me.hd.wauxv.obf.awz
     public void g(ua uaVar, afc afcVar) {
         aro aroVar = (aro) this.a;
-        bgf bgfVar = (bgf) this.b;
+        IHasInvokeMethod bgfVar = (IHasInvokeMethod) this.b;
         if (bgfVar != null) {
             aroVar.getClass();
             if (!((Boolean) bgfVar.invoke(uaVar)).booleanValue()) {

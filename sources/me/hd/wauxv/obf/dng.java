@@ -34,7 +34,7 @@ public abstract class dng {
     }
 
     public static final void c(StringBuilder sb, String str) {
-        bzo.q(str, "value");
+        throwIfVar1IsNull(str, "value");
         sb.append('\"');
         int length = str.length();
         int i = 0;

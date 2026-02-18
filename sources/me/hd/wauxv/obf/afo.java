@@ -24,8 +24,8 @@ public final class afo implements CharSequence, GetChars, Cloneable {
         if (i < this.b) {
             return this.a[i];
         }
-        if (g().g > 0) {
-            return g().f.charAt(i - this.b);
+        if (setResultTrue().g > 0) {
+            return setResultTrue().f.charAt(i - this.b);
         }
         return '\n';
     }
@@ -62,7 +62,7 @@ public final class afo implements CharSequence, GetChars, Cloneable {
         }
     }
 
-    public final bvd g() {
+    public final bvd setResultTrue() {
         bvd bvdVar = this.d;
         return bvdVar == null ? bvd.NONE : bvdVar;
     }
@@ -86,7 +86,7 @@ public final class afo implements CharSequence, GetChars, Cloneable {
             charSequence = "null";
         }
         if (i < 0 || i > this.b) {
-            throw new IndexOutOfBoundsException(bjs.i(i, "dstOffset "));
+            throw new IndexOutOfBoundsException(concatVar2Var1(i, "dstOffset "));
         }
         if (i2 < 0 || i3 < 0 || i2 > i3 || i3 > charSequence.length()) {
             StringBuilder sbQ = yg.q(i2, i3, "start ", ", end ", ", s.length() ");
@@ -118,7 +118,10 @@ public final class afo implements CharSequence, GetChars, Cloneable {
     }
 
     @Override // java.lang.CharSequence
-    /* JADX INFO: renamed from: i, reason: merged with bridge method [inline-methods] */
+    /*
+     * JADX INFO: renamed from: i, reason: merged with bridge method
+     * [inline-methods]
+     */
     public final afo subSequence(int i, int i2) {
         e(i);
         e(i2);

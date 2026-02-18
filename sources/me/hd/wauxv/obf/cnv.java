@@ -38,11 +38,15 @@ public final class cnv {
             return false;
         }
         cnv cnvVar = (cnv) obj;
-        return this.a == cnvVar.a && bzo.f(this.b, cnvVar.b) && this.c == cnvVar.c && this.d == cnvVar.d && this.e == cnvVar.e && this.f == cnvVar.f && this.g == cnvVar.g && bzo.f(this.h, cnvVar.h);
+        return this.a == cnvVar.a && nullSafeIsEqual(this.b, cnvVar.b) && this.c == cnvVar.c && this.d == cnvVar.d
+                && this.e == cnvVar.e && this.f == cnvVar.f && this.g == cnvVar.g && nullSafeIsEqual(this.h, cnvVar.h);
     }
 
     public final int hashCode() {
-        int iA = dts.a(this.g, dts.a(this.f, dts.a(this.e, dts.a(this.d, dts.a(this.c, (this.b.hashCode() + (Integer.hashCode(this.a) * 31)) * 31, 31), 31), 31), 31), 31);
+        int iA = dts.a(this.g, dts.a(this.f,
+                dts.a(this.e, dts.a(this.d,
+                        dts.a(this.c, (this.b.hashCode() + (Integer.hashCode(this.a) * 31)) * 31, 31), 31), 31),
+                31), 31);
         Long l = this.h;
         return iA + (l == null ? 0 : l.hashCode());
     }

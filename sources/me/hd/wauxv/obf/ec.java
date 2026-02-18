@@ -8,7 +8,7 @@ public final class ec {
     public final WeakReference a;
 
     public ec(Object obj) {
-        bzo.q(obj, "v");
+        throwIfVar1IsNull(obj, "v");
         this.a = new WeakReference(obj);
     }
 

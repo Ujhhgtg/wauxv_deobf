@@ -22,6 +22,9 @@ public abstract class cbh {
     }
 
     public Map x() {
-        return bzo.ai(new csm("name", this.ab), new csm("nameCondition", this.ac), new csm("modifiers", this.ad), new csm("modifiersNot", this.ae), new csm("modifiersCondition", null), new csm("isSynthetic", null), new csm("isSyntheticNot", null), new csm("annotations", this.af), new csm("annotationsNot", this.ag), new csm("genericString", null));
+        return KotlinHelpers.ai(new Pair("name", this.ab), new Pair("nameCondition", this.ac),
+                new Pair("modifiers", this.ad), new Pair("modifiersNot", this.ae), new Pair("modifiersCondition", null),
+                new Pair("isSynthetic", null), new Pair("isSyntheticNot", null), new Pair("annotations", this.af),
+                new Pair("annotationsNot", this.ag), new Pair("genericString", null));
     }
 }

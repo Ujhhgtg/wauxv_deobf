@@ -28,7 +28,7 @@ public final class bql implements Parcelable {
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        bzo.q(parcel, "dest");
+        throwIfVar1IsNull(parcel, "dest");
         parcel.writeParcelable(this.a, i);
         parcel.writeParcelable(this.b, i);
         parcel.writeInt(this.c);

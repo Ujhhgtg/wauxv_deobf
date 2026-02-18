@@ -15,7 +15,8 @@ public final class cjt extends cjv {
             throw new IllegalArgumentException((cls + " does not implement Serializable.").toString());
         }
         try {
-            this.a = Class.forName("[L" + cls.getName() + TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER);
+            this.a = Class.forName("[L" + cls.getName()
+                    + TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER);
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
@@ -28,12 +29,12 @@ public final class cjt extends cjv {
         if (obj == null || !cjt.class.equals(obj.getClass())) {
             return false;
         }
-        return bzo.f(this.a, ((cjt) obj).a);
+        return nullSafeIsEqual(this.a, ((cjt) obj).a);
     }
 
     @Override // me.hd.wauxv.obf.cjv
     public final Object f(String str, Bundle bundle) {
-        bzo.q(bundle, "bundle");
+        throwIfVar1IsNull(bundle, "bundle");
         return (Serializable[]) bundle.get(str);
     }
 
@@ -48,16 +49,19 @@ public final class cjt extends cjv {
 
     @Override // me.hd.wauxv.obf.cjv
     public final Object i(String str) {
-        bzo.q(str, "value");
+        throwIfVar1IsNull(str, "value");
         throw new UnsupportedOperationException("Arrays don't support default values.");
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r4v1, types: [java.io.Serializable, java.io.Serializable[], java.lang.Object] */
+    /*
+     * JADX WARN: Type inference failed for: r4v1, types: [java.io.Serializable,
+     * java.io.Serializable[], java.lang.Object]
+     */
     @Override // me.hd.wauxv.obf.cjv
     public final void j(Bundle bundle, String str, Object obj) {
         ?? r4 = (Serializable[]) obj;
-        bzo.q(str, "key");
+        throwIfVar1IsNull(str, "key");
         this.a.cast(r4);
         bundle.putSerializable(str, r4);
     }

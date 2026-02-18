@@ -16,7 +16,7 @@ import me.hd.wauxv.data.bean.MsgInfoBean;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class cfm extends doo implements bnc {
+public final class cfm extends BaseHook implements bnc {
     public static final cfm a;
     public static final String b;
     public static final dov c;
@@ -43,7 +43,8 @@ public final class cfm extends doo implements bnc {
 
     public static void s(View view, boolean z) {
         int iHSVToColor;
-        int color = cnh.aa(view.getContext()) ? Color.parseColor((!z ? cfi.a : cfk.a).o()) : Color.parseColor((!z ? cfj.a : cfl.a).o());
+        int color = cnh.aa(view.getContext()) ? Color.parseColor((!z ? cfi.a : cfk.a).o())
+                : Color.parseColor((!z ? cfj.a : cfl.a).o());
         Resources resources = view.getResources();
         Bitmap bitmap = !z ? (Bitmap) j.getValue() : (Bitmap) h.getValue();
         Integer numValueOf = color != 0 ? Integer.valueOf(color) : null;
@@ -74,7 +75,8 @@ public final class cfm extends doo implements bnc {
         for (int i3 = 0; i3 < 9; i3++) {
             byteBufferAllocate.putInt(1);
         }
-        NinePatchDrawable ninePatchDrawable = new NinePatchDrawable(resources, bitmapCreateBitmap, byteBufferAllocate.array(), new Rect(), null);
+        NinePatchDrawable ninePatchDrawable = new NinePatchDrawable(resources, bitmapCreateBitmap,
+                byteBufferAllocate.array(), new Rect(), null);
         StateListDrawable stateListDrawable = new StateListDrawable();
         if (numValueOf != null) {
             ninePatchDrawable.setTint(numValueOf.intValue());
@@ -98,8 +100,8 @@ public final class cfm extends doo implements bnc {
                 iHSVToColor = Color.HSVToColor(fArr2);
             }
             drawableMutate.setTint(iHSVToColor);
-            stateListDrawable.addState(new int[]{R.attr.state_pressed}, drawableMutate);
-            stateListDrawable.addState(new int[]{R.attr.state_focused}, drawableMutate);
+            stateListDrawable.addState(new int[] { R.attr.state_pressed }, drawableMutate);
+            stateListDrawable.addState(new int[] { R.attr.state_focused }, drawableMutate);
             stateListDrawable.addState(new int[0], ninePatchDrawable);
         }
         view.setBackground(stateListDrawable);
@@ -109,13 +111,13 @@ public final class cfm extends doo implements bnc {
     public final void e() {
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String f() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getName() {
         return m;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String g() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getCategory() {
         return l;
     }
 
@@ -133,7 +135,10 @@ public final class cfm extends doo implements bnc {
             }
             if (type != ewg.c.w) {
                 if (type == ewg.i.w) {
-                    View viewV2 = cnh.v(view, cnb.ab(ewk.c) ? "bkg" /* cnb.z(-426915454253866L) */ : "" /* cnb.z(-428513182087978L) */);
+                    View viewV2 = cnh.v(view, cnb.ab(ewk.c) ? "bkg" /* cnb.z(-426915454253866L) */ : "" /*
+                                                                                                         * cnb.z(-
+                                                                                                         * 428513182087978L)
+                                                                                                         */);
                     if (viewV2 != null) {
                         s(viewV2, msgInfoBean.isSend());
                         return;
@@ -157,12 +162,12 @@ public final class cfm extends doo implements bnc {
         }
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String o() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getDescription() {
         return n;
     }
 
-    @Override // me.hd.wauxv.obf.doo
+    @Override // me.hd.wauxv.obf.BaseHook
     public final bgf p() {
         return r;
     }

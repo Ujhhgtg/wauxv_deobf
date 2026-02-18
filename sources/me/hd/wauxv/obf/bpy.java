@@ -17,7 +17,7 @@ public final class bpy implements bqa {
     }
 
     public bpy(String str, String str2) {
-        bzo.q(str, com.umeng.analytics.pro.f.U);
+        throwIfVar1IsNull(str, com.umeng.analytics.pro.f.U);
         this.a = str;
         this.b = str2;
     }

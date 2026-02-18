@@ -23,7 +23,7 @@ public final class brg extends CancellationException {
             return false;
         }
         brg brgVar = (brg) obj;
-        if (!bzo.f(brgVar.getMessage(), getMessage())) {
+        if (!nullSafeIsEqual(brgVar.getMessage(), getMessage())) {
             return false;
         }
         Object obj2 = brgVar.a;
@@ -34,7 +34,7 @@ public final class brg extends CancellationException {
         if (obj3 == null) {
             obj3 = com.f;
         }
-        return bzo.f(obj2, obj3) && bzo.f(brgVar.getCause(), getCause());
+        return nullSafeIsEqual(obj2, obj3) && nullSafeIsEqual(brgVar.getCause(), getCause());
     }
 
     @Override // java.lang.Throwable
@@ -45,7 +45,7 @@ public final class brg extends CancellationException {
 
     public final int hashCode() {
         String message = getMessage();
-        bzo.n(message);
+        throwIfVar1IsNull(message);
         int iHashCode = message.hashCode() * 31;
         Object obj = this.a;
         if (obj == null) {

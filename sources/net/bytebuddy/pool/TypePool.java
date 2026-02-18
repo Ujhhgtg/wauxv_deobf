@@ -73,14 +73,20 @@ import net.bytebuddy.utility.nullability.UnknownNull;
 /* JADX INFO: loaded from: classes.dex */
 public interface TypePool {
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @HashCodeAndEqualsPlugin.Enhance
     public static abstract class AbstractBase implements TypePool {
         protected static final Map<String, String> PRIMITIVE_DESCRIPTORS;
         protected static final Map<String, TypeDescription> PRIMITIVE_TYPES;
         protected final CacheProvider cacheProvider;
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class ArrayTypeResolution implements Resolution {
             private final int arity;
@@ -103,7 +109,8 @@ public interface TypePool {
                     return false;
                 }
                 ArrayTypeResolution arrayTypeResolution = (ArrayTypeResolution) obj;
-                return this.arity == arrayTypeResolution.arity && this.resolution.equals(arrayTypeResolution.resolution);
+                return this.arity == arrayTypeResolution.arity
+                        && this.resolution.equals(arrayTypeResolution.resolution);
             }
 
             public int hashCode() {
@@ -121,7 +128,10 @@ public interface TypePool {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public interface ComponentTypeReference {
 
             @MaybeNull
@@ -131,7 +141,10 @@ public interface TypePool {
             String resolve();
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static abstract class Hierarchical extends AbstractBase {
             private final TypePool parent;
@@ -176,7 +189,8 @@ public interface TypePool {
         static {
             HashMap map = new HashMap();
             HashMap map2 = new HashMap();
-            Class[] clsArr = {Boolean.TYPE, Byte.TYPE, Short.TYPE, Character.TYPE, Integer.TYPE, Long.TYPE, Float.TYPE, Double.TYPE, Void.TYPE};
+            Class[] clsArr = { Boolean.TYPE, Byte.TYPE, Short.TYPE, Character.TYPE, Integer.TYPE, Long.TYPE, Float.TYPE,
+                    Double.TYPE, Void.TYPE };
             for (int i = 0; i < 9; i++) {
                 Class cls = clsArr[i];
                 map.put(cls.getName(), TypeDescription.ForLoadedType.of(cls));
@@ -217,7 +231,8 @@ public interface TypePool {
                 }
             }
             TypeDescription typeDescription = PRIMITIVE_TYPES.get(str);
-            Resolution resolutionFind = typeDescription == null ? this.cacheProvider.find(str) : new Resolution.Simple(typeDescription);
+            Resolution resolutionFind = typeDescription == null ? this.cacheProvider.find(str)
+                    : new Resolution.Simple(typeDescription);
             if (resolutionFind == null) {
                 resolutionFind = doCache(str, doDescribe(str));
             }
@@ -234,7 +249,8 @@ public interface TypePool {
             if (this == obj) {
                 return true;
             }
-            return obj != null && getClass() == obj.getClass() && this.cacheProvider.equals(((AbstractBase) obj).cacheProvider);
+            return obj != null && getClass() == obj.getClass()
+                    && this.cacheProvider.equals(((AbstractBase) obj).cacheProvider);
         }
 
         public int hashCode() {
@@ -242,19 +258,26 @@ public interface TypePool {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface CacheProvider {
 
         @AlwaysNull
         public static final Resolution UNRESOLVED = null;
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static class Discriminating implements CacheProvider {
             private final CacheProvider matched;
             private final ElementMatcher<String> matcher;
             private final CacheProvider unmatched;
 
-            public Discriminating(ElementMatcher<String> elementMatcher, CacheProvider cacheProvider, CacheProvider cacheProvider2) {
+            public Discriminating(ElementMatcher<String> elementMatcher, CacheProvider cacheProvider,
+                    CacheProvider cacheProvider2) {
                 this.matcher = elementMatcher;
                 this.matched = cacheProvider;
                 this.unmatched = cacheProvider2;
@@ -281,7 +304,10 @@ public interface TypePool {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public enum NoOp implements CacheProvider {
             INSTANCE;
 
@@ -301,13 +327,20 @@ public interface TypePool {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static class Simple implements CacheProvider {
             private final ConcurrentMap<String, Resolution> storage;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class UsingSoftReference implements CacheProvider {
-                private final AtomicReference<SoftReference<Simple>> delegate = new AtomicReference<>(new SoftReference(new Simple()));
+                private final AtomicReference<SoftReference<Simple>> delegate = new AtomicReference<>(
+                        new SoftReference(new Simple()));
 
                 @Override // net.bytebuddy.pool.TypePool.CacheProvider
                 public void clear() {
@@ -353,7 +386,8 @@ public interface TypePool {
 
             public static CacheProvider withObjectType() {
                 Simple simple = new Simple();
-                simple.register(Object.class.getName(), new Resolution.Simple(TypeDescription.ForLoadedType.of(Object.class)));
+                simple.register(Object.class.getName(),
+                        new Resolution.Simple(TypeDescription.ForLoadedType.of(Object.class)));
                 return simple;
             }
 
@@ -383,7 +417,10 @@ public interface TypePool {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class WithIllegalResolutionReattempt implements CacheProvider {
             private final CacheProvider delegate;
@@ -393,7 +430,8 @@ public interface TypePool {
             }
 
             public static CacheProvider of(CacheProvider cacheProvider) {
-                return cacheProvider instanceof WithIllegalResolutionReattempt ? cacheProvider : new WithIllegalResolutionReattempt(cacheProvider);
+                return cacheProvider instanceof WithIllegalResolutionReattempt ? cacheProvider
+                        : new WithIllegalResolutionReattempt(cacheProvider);
             }
 
             @Override // net.bytebuddy.pool.TypePool.CacheProvider
@@ -405,14 +443,16 @@ public interface TypePool {
                 if (this == obj) {
                     return true;
                 }
-                return obj != null && getClass() == obj.getClass() && this.delegate.equals(((WithIllegalResolutionReattempt) obj).delegate);
+                return obj != null && getClass() == obj.getClass()
+                        && this.delegate.equals(((WithIllegalResolutionReattempt) obj).delegate);
             }
 
             @Override // net.bytebuddy.pool.TypePool.CacheProvider
             @MaybeNull
             public Resolution find(String str) {
                 Resolution resolutionFind = this.delegate.find(str);
-                return (resolutionFind == null || resolutionFind.isResolved()) ? resolutionFind : CacheProvider.UNRESOLVED;
+                return (resolutionFind == null || resolutionFind.isResolved()) ? resolutionFind
+                        : CacheProvider.UNRESOLVED;
             }
 
             public int hashCode() {
@@ -433,7 +473,10 @@ public interface TypePool {
         Resolution register(String str, Resolution resolution);
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @HashCodeAndEqualsPlugin.Enhance
     public static class ClassLoading extends AbstractBase.Hierarchical {
 
@@ -465,14 +508,16 @@ public interface TypePool {
         @Override // net.bytebuddy.pool.TypePool.AbstractBase
         public Resolution doDescribe(String str) {
             try {
-                return new Resolution.Simple(TypeDescription.ForLoadedType.of(Class.forName(str, false, this.classLoader)));
+                return new Resolution.Simple(
+                        TypeDescription.ForLoadedType.of(Class.forName(str, false, this.classLoader)));
             } catch (ClassNotFoundException unused) {
                 return new Resolution.Illegal(str);
             }
         }
 
         /* JADX WARN: Found duplicated region for block: B:21:0x002e A[RETURN] */
-        @Override // net.bytebuddy.pool.TypePool.AbstractBase.Hierarchical, net.bytebuddy.pool.TypePool.AbstractBase
+        @Override // net.bytebuddy.pool.TypePool.AbstractBase.Hierarchical,
+                  // net.bytebuddy.pool.TypePool.AbstractBase
         public boolean equals(@MaybeNull Object obj) {
             if (!super.equals(obj)) {
                 return false;
@@ -493,7 +538,8 @@ public interface TypePool {
             }
         }
 
-        @Override // net.bytebuddy.pool.TypePool.AbstractBase.Hierarchical, net.bytebuddy.pool.TypePool.AbstractBase
+        @Override // net.bytebuddy.pool.TypePool.AbstractBase.Hierarchical,
+                  // net.bytebuddy.pool.TypePool.AbstractBase
         public int hashCode() {
             int iHashCode = super.hashCode() * 31;
             ClassLoader classLoader = this.classLoader;
@@ -505,7 +551,10 @@ public interface TypePool {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @HashCodeAndEqualsPlugin.Enhance
     public static class Default extends AbstractBase.Hierarchical {
 
@@ -515,23 +564,38 @@ public interface TypePool {
         protected final AsmClassReader.Factory classReaderFactory;
         protected final ReaderMode readerMode;
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public interface AnnotationRegistrant {
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static abstract class AbstractBase implements AnnotationRegistrant {
                 private final String descriptor;
                 private final Map<String, AnnotationValue<?, ?>> values = new HashMap();
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public static abstract class ForTypeVariable extends AbstractBase {
                     private final String typePath;
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     public static abstract class WithIndex extends ForTypeVariable {
                         private final int index;
 
-                        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                        /*
+                         * JADX INFO: compiled from:
+                         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                         */
                         public static abstract class DoubleIndexed extends WithIndex {
                             private final int preIndex;
 
@@ -545,7 +609,8 @@ public interface TypePool {
                             @Override // net.bytebuddy.pool.TypePool.Default.AnnotationRegistrant.AbstractBase.ForTypeVariable.WithIndex
                             public Map<Integer, Map<String, List<LazyTypeDescription.AnnotationToken>>> getIndexedPathMap() {
                                 Map<Integer, Map<Integer, Map<String, List<LazyTypeDescription.AnnotationToken>>>> doubleIndexedPathMap = getDoubleIndexedPathMap();
-                                Map<Integer, Map<String, List<LazyTypeDescription.AnnotationToken>>> map = doubleIndexedPathMap.get(Integer.valueOf(this.preIndex));
+                                Map<Integer, Map<String, List<LazyTypeDescription.AnnotationToken>>> map = doubleIndexedPathMap
+                                        .get(Integer.valueOf(this.preIndex));
                                 if (map != null) {
                                     return map;
                                 }
@@ -565,7 +630,8 @@ public interface TypePool {
                         @Override // net.bytebuddy.pool.TypePool.Default.AnnotationRegistrant.AbstractBase.ForTypeVariable
                         public Map<String, List<LazyTypeDescription.AnnotationToken>> getPathMap() {
                             Map<Integer, Map<String, List<LazyTypeDescription.AnnotationToken>>> indexedPathMap = getIndexedPathMap();
-                            Map<String, List<LazyTypeDescription.AnnotationToken>> map = indexedPathMap.get(Integer.valueOf(this.index));
+                            Map<String, List<LazyTypeDescription.AnnotationToken>> map = indexedPathMap
+                                    .get(Integer.valueOf(this.index));
                             if (map != null) {
                                 return map;
                             }
@@ -612,11 +678,17 @@ public interface TypePool {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class ForByteCodeElement extends AbstractBase {
                 private final List<LazyTypeDescription.AnnotationToken> annotationTokens;
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public static class WithIndex extends AbstractBase {
                     private final Map<Integer, List<LazyTypeDescription.AnnotationToken>> annotationTokens;
                     private final int index;
@@ -629,7 +701,8 @@ public interface TypePool {
 
                     @Override // net.bytebuddy.pool.TypePool.Default.AnnotationRegistrant.AbstractBase
                     public List<LazyTypeDescription.AnnotationToken> getTokens() {
-                        List<LazyTypeDescription.AnnotationToken> list = this.annotationTokens.get(Integer.valueOf(this.index));
+                        List<LazyTypeDescription.AnnotationToken> list = this.annotationTokens
+                                .get(Integer.valueOf(this.index));
                         if (list != null) {
                             return list;
                         }
@@ -650,19 +723,29 @@ public interface TypePool {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class ForTypeVariable extends AbstractBase.ForTypeVariable {
                 private final Map<String, List<LazyTypeDescription.AnnotationToken>> pathMap;
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public static class WithIndex extends AbstractBase.ForTypeVariable.WithIndex {
                     private final Map<Integer, Map<String, List<LazyTypeDescription.AnnotationToken>>> indexedPathMap;
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     public static class DoubleIndexed extends AbstractBase.ForTypeVariable.WithIndex.DoubleIndexed {
                         private final Map<Integer, Map<Integer, Map<String, List<LazyTypeDescription.AnnotationToken>>>> doubleIndexedPathMap;
 
-                        public DoubleIndexed(String str, @MaybeNull TypePath typePath, int i, int i2, Map<Integer, Map<Integer, Map<String, List<LazyTypeDescription.AnnotationToken>>>> map) {
+                        public DoubleIndexed(String str, @MaybeNull TypePath typePath, int i, int i2,
+                                Map<Integer, Map<Integer, Map<String, List<LazyTypeDescription.AnnotationToken>>>> map) {
                             super(str, typePath, i, i2);
                             this.doubleIndexedPathMap = map;
                         }
@@ -673,7 +756,8 @@ public interface TypePool {
                         }
                     }
 
-                    public WithIndex(String str, @MaybeNull TypePath typePath, int i, Map<Integer, Map<String, List<LazyTypeDescription.AnnotationToken>>> map) {
+                    public WithIndex(String str, @MaybeNull TypePath typePath, int i,
+                            Map<Integer, Map<String, List<LazyTypeDescription.AnnotationToken>>> map) {
                         super(str, typePath, i);
                         this.indexedPathMap = map;
                     }
@@ -684,7 +768,8 @@ public interface TypePool {
                     }
                 }
 
-                public ForTypeVariable(String str, @MaybeNull TypePath typePath, Map<String, List<LazyTypeDescription.AnnotationToken>> map) {
+                public ForTypeVariable(String str, @MaybeNull TypePath typePath,
+                        Map<String, List<LazyTypeDescription.AnnotationToken>> map) {
                     super(str, typePath);
                     this.pathMap = map;
                 }
@@ -700,16 +785,25 @@ public interface TypePool {
             void register(String str, AnnotationValue<?, ?> annotationValue);
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public interface ComponentTypeLocator {
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForAnnotationProperty implements ComponentTypeLocator {
                 private final String annotationName;
                 private final TypePool typePool;
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance(includeSyntheticFields = true)
                 public class Bound implements AbstractBase.ComponentTypeReference {
                     private final String name;
@@ -726,7 +820,8 @@ public interface TypePool {
                             return false;
                         }
                         Bound bound = (Bound) obj;
-                        return this.name.equals(bound.name) && ForAnnotationProperty.this.equals(ForAnnotationProperty.this);
+                        return this.name.equals(bound.name)
+                                && ForAnnotationProperty.this.equals(ForAnnotationProperty.this);
                     }
 
                     public int hashCode() {
@@ -736,14 +831,19 @@ public interface TypePool {
                     @Override // net.bytebuddy.pool.TypePool.AbstractBase.ComponentTypeReference
                     @MaybeNull
                     public String resolve() {
-                        TypeDescription componentType = ((MethodDescription.InDefinedShape) ForAnnotationProperty.this.typePool.describe(ForAnnotationProperty.this.annotationName).resolve().getDeclaredMethods().filter(ElementMatchers.named(this.name)).getOnly()).getReturnType().asErasure().getComponentType();
-                        return componentType == null ? AbstractBase.ComponentTypeReference.NO_ARRAY : componentType.getName();
+                        TypeDescription componentType = ((MethodDescription.InDefinedShape) ForAnnotationProperty.this.typePool
+                                .describe(ForAnnotationProperty.this.annotationName).resolve().getDeclaredMethods()
+                                .filter(ElementMatchers.named(this.name)).getOnly()).getReturnType().asErasure()
+                                .getComponentType();
+                        return componentType == null ? AbstractBase.ComponentTypeReference.NO_ARRAY
+                                : componentType.getName();
                     }
                 }
 
                 public ForAnnotationProperty(TypePool typePool, String str) {
                     this.typePool = typePool;
-                    this.annotationName = str.substring(1, str.length() - 1).replace('/', LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
+                    this.annotationName = str.substring(1, str.length() - 1).replace('/',
+                            LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
                 }
 
                 @Override // net.bytebuddy.pool.TypePool.Default.ComponentTypeLocator
@@ -759,15 +859,20 @@ public interface TypePool {
                         return false;
                     }
                     ForAnnotationProperty forAnnotationProperty = (ForAnnotationProperty) obj;
-                    return this.annotationName.equals(forAnnotationProperty.annotationName) && this.typePool.equals(forAnnotationProperty.typePool);
+                    return this.annotationName.equals(forAnnotationProperty.annotationName)
+                            && this.typePool.equals(forAnnotationProperty.typePool);
                 }
 
                 public int hashCode() {
-                    return this.annotationName.hashCode() + ((this.typePool.hashCode() + (getClass().hashCode() * 31)) * 31);
+                    return this.annotationName.hashCode()
+                            + ((this.typePool.hashCode() + (getClass().hashCode() * 31)) * 31);
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForArrayType implements ComponentTypeLocator, AbstractBase.ComponentTypeReference {
                 private final String componentType;
@@ -785,7 +890,8 @@ public interface TypePool {
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.componentType.equals(((ForArrayType) obj).componentType);
+                    return obj != null && getClass() == obj.getClass()
+                            && this.componentType.equals(((ForArrayType) obj).componentType);
                 }
 
                 public int hashCode() {
@@ -798,7 +904,10 @@ public interface TypePool {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum Illegal implements ComponentTypeLocator {
                 INSTANCE;
 
@@ -811,15 +920,23 @@ public interface TypePool {
             AbstractBase.ComponentTypeReference bind(String str);
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
-        public static class GenericTypeExtractor extends GenericTypeRegistrant.RejectingSignatureVisitor implements GenericTypeRegistrant {
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
+        public static class GenericTypeExtractor extends GenericTypeRegistrant.RejectingSignatureVisitor
+                implements GenericTypeRegistrant {
             private final GenericTypeRegistrant genericTypeRegistrant;
 
             @UnknownNull
             private IncompleteToken incompleteToken;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
-            public static abstract class ForSignature<T extends LazyTypeDescription.GenericTypeToken.Resolution> extends GenericTypeRegistrant.RejectingSignatureVisitor implements GenericTypeRegistrant {
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
+            public static abstract class ForSignature<T extends LazyTypeDescription.GenericTypeToken.Resolution>
+                    extends GenericTypeRegistrant.RejectingSignatureVisitor implements GenericTypeRegistrant {
 
                 @UnknownNull
                 protected List<LazyTypeDescription.GenericTypeToken> currentBounds;
@@ -828,13 +945,17 @@ public interface TypePool {
                 protected String currentTypeParameter;
                 protected final List<LazyTypeDescription.GenericTypeToken.OfFormalTypeVariable> typeVariableTokens = new ArrayList();
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public static class OfField implements GenericTypeRegistrant {
 
                     @UnknownNull
                     private LazyTypeDescription.GenericTypeToken fieldTypeToken;
 
-                    public static LazyTypeDescription.GenericTypeToken.Resolution.ForField extract(@MaybeNull String str) {
+                    public static LazyTypeDescription.GenericTypeToken.Resolution.ForField extract(
+                            @MaybeNull String str) {
                         if (str == null) {
                             return LazyTypeDescription.GenericTypeToken.Resolution.Raw.INSTANCE;
                         }
@@ -854,19 +975,27 @@ public interface TypePool {
                     }
 
                     public LazyTypeDescription.GenericTypeToken.Resolution.ForField resolve() {
-                        return new LazyTypeDescription.GenericTypeToken.Resolution.ForField.Tokenized(this.fieldTypeToken);
+                        return new LazyTypeDescription.GenericTypeToken.Resolution.ForField.Tokenized(
+                                this.fieldTypeToken);
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
-                public static class OfMethod extends ForSignature<LazyTypeDescription.GenericTypeToken.Resolution.ForMethod> {
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
+                public static class OfMethod
+                        extends ForSignature<LazyTypeDescription.GenericTypeToken.Resolution.ForMethod> {
 
                     @UnknownNull
                     private LazyTypeDescription.GenericTypeToken returnTypeToken;
                     private final List<LazyTypeDescription.GenericTypeToken> parameterTypeTokens = new ArrayList();
                     private final List<LazyTypeDescription.GenericTypeToken> exceptionTypeTokens = new ArrayList();
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     @HashCodeAndEqualsPlugin.Enhance(includeSyntheticFields = true)
                     public class ExceptionTypeRegistrant implements GenericTypeRegistrant {
                         public ExceptionTypeRegistrant() {
@@ -889,7 +1018,10 @@ public interface TypePool {
                         }
                     }
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     @HashCodeAndEqualsPlugin.Enhance(includeSyntheticFields = true)
                     public class ParameterTypeRegistrant implements GenericTypeRegistrant {
                         public ParameterTypeRegistrant() {
@@ -912,7 +1044,10 @@ public interface TypePool {
                         }
                     }
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     @HashCodeAndEqualsPlugin.Enhance(includeSyntheticFields = true)
                     public class ReturnTypeTypeRegistrant implements GenericTypeRegistrant {
                         public ReturnTypeTypeRegistrant() {
@@ -935,25 +1070,31 @@ public interface TypePool {
                         }
                     }
 
-                    public static LazyTypeDescription.GenericTypeToken.Resolution.ForMethod extract(@MaybeNull String str) {
+                    public static LazyTypeDescription.GenericTypeToken.Resolution.ForMethod extract(
+                            @MaybeNull String str) {
                         try {
-                            return str == null ? LazyTypeDescription.GenericTypeToken.Resolution.Raw.INSTANCE : (LazyTypeDescription.GenericTypeToken.Resolution.ForMethod) ForSignature.extract(str, new OfMethod());
+                            return str == null ? LazyTypeDescription.GenericTypeToken.Resolution.Raw.INSTANCE
+                                    : (LazyTypeDescription.GenericTypeToken.Resolution.ForMethod) ForSignature
+                                            .extract(str, new OfMethod());
                         } catch (RuntimeException unused) {
                             return LazyTypeDescription.GenericTypeToken.Resolution.Malformed.INSTANCE;
                         }
                     }
 
-                    @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeRegistrant.RejectingSignatureVisitor, net.bytebuddy.jar.asm.signature.SignatureVisitor
+                    @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeRegistrant.RejectingSignatureVisitor,
+                              // net.bytebuddy.jar.asm.signature.SignatureVisitor
                     public SignatureVisitor visitExceptionType() {
                         return new GenericTypeExtractor(new ExceptionTypeRegistrant());
                     }
 
-                    @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeRegistrant.RejectingSignatureVisitor, net.bytebuddy.jar.asm.signature.SignatureVisitor
+                    @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeRegistrant.RejectingSignatureVisitor,
+                              // net.bytebuddy.jar.asm.signature.SignatureVisitor
                     public SignatureVisitor visitParameterType() {
                         return new GenericTypeExtractor(new ParameterTypeRegistrant());
                     }
 
-                    @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeRegistrant.RejectingSignatureVisitor, net.bytebuddy.jar.asm.signature.SignatureVisitor
+                    @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeRegistrant.RejectingSignatureVisitor,
+                              // net.bytebuddy.jar.asm.signature.SignatureVisitor
                     public SignatureVisitor visitReturnType() {
                         collectTypeParameter();
                         return new GenericTypeExtractor(new ReturnTypeTypeRegistrant());
@@ -961,17 +1102,23 @@ public interface TypePool {
 
                     @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeExtractor.ForSignature
                     public LazyTypeDescription.GenericTypeToken.Resolution.ForMethod resolve() {
-                        return new LazyTypeDescription.GenericTypeToken.Resolution.ForMethod.Tokenized(this.returnTypeToken, this.parameterTypeTokens, this.exceptionTypeTokens, this.typeVariableTokens);
+                        return new LazyTypeDescription.GenericTypeToken.Resolution.ForMethod.Tokenized(
+                                this.returnTypeToken, this.parameterTypeTokens, this.exceptionTypeTokens,
+                                this.typeVariableTokens);
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public static class OfRecordComponent implements GenericTypeRegistrant {
 
                     @UnknownNull
                     private LazyTypeDescription.GenericTypeToken recordComponentType;
 
-                    public static LazyTypeDescription.GenericTypeToken.Resolution.ForRecordComponent extract(@MaybeNull String str) {
+                    public static LazyTypeDescription.GenericTypeToken.Resolution.ForRecordComponent extract(
+                            @MaybeNull String str) {
                         if (str == null) {
                             return LazyTypeDescription.GenericTypeToken.Resolution.Raw.INSTANCE;
                         }
@@ -991,18 +1138,26 @@ public interface TypePool {
                     }
 
                     public LazyTypeDescription.GenericTypeToken.Resolution.ForRecordComponent resolve() {
-                        return new LazyTypeDescription.GenericTypeToken.Resolution.ForRecordComponent.Tokenized(this.recordComponentType);
+                        return new LazyTypeDescription.GenericTypeToken.Resolution.ForRecordComponent.Tokenized(
+                                this.recordComponentType);
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
-                public static class OfType extends ForSignature<LazyTypeDescription.GenericTypeToken.Resolution.ForType> {
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
+                public static class OfType
+                        extends ForSignature<LazyTypeDescription.GenericTypeToken.Resolution.ForType> {
                     private final List<LazyTypeDescription.GenericTypeToken> interfaceTypeTokens = new ArrayList();
 
                     @UnknownNull
                     private LazyTypeDescription.GenericTypeToken superClassToken;
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     @HashCodeAndEqualsPlugin.Enhance(includeSyntheticFields = true)
                     public class InterfaceTypeRegistrant implements GenericTypeRegistrant {
                         public InterfaceTypeRegistrant() {
@@ -1025,7 +1180,10 @@ public interface TypePool {
                         }
                     }
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     @HashCodeAndEqualsPlugin.Enhance(includeSyntheticFields = true)
                     public class SuperClassRegistrant implements GenericTypeRegistrant {
                         public SuperClassRegistrant() {
@@ -1048,20 +1206,25 @@ public interface TypePool {
                         }
                     }
 
-                    public static LazyTypeDescription.GenericTypeToken.Resolution.ForType extract(@MaybeNull String str) {
+                    public static LazyTypeDescription.GenericTypeToken.Resolution.ForType extract(
+                            @MaybeNull String str) {
                         try {
-                            return str == null ? LazyTypeDescription.GenericTypeToken.Resolution.Raw.INSTANCE : (LazyTypeDescription.GenericTypeToken.Resolution.ForType) ForSignature.extract(str, new OfType());
+                            return str == null ? LazyTypeDescription.GenericTypeToken.Resolution.Raw.INSTANCE
+                                    : (LazyTypeDescription.GenericTypeToken.Resolution.ForType) ForSignature
+                                            .extract(str, new OfType());
                         } catch (RuntimeException unused) {
                             return LazyTypeDescription.GenericTypeToken.Resolution.Malformed.INSTANCE;
                         }
                     }
 
-                    @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeRegistrant.RejectingSignatureVisitor, net.bytebuddy.jar.asm.signature.SignatureVisitor
+                    @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeRegistrant.RejectingSignatureVisitor,
+                              // net.bytebuddy.jar.asm.signature.SignatureVisitor
                     public SignatureVisitor visitInterface() {
                         return new GenericTypeExtractor(new InterfaceTypeRegistrant());
                     }
 
-                    @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeRegistrant.RejectingSignatureVisitor, net.bytebuddy.jar.asm.signature.SignatureVisitor
+                    @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeRegistrant.RejectingSignatureVisitor,
+                              // net.bytebuddy.jar.asm.signature.SignatureVisitor
                     public SignatureVisitor visitSuperclass() {
                         collectTypeParameter();
                         return new GenericTypeExtractor(new SuperClassRegistrant());
@@ -1069,11 +1232,13 @@ public interface TypePool {
 
                     @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeExtractor.ForSignature
                     public LazyTypeDescription.GenericTypeToken.Resolution.ForType resolve() {
-                        return new LazyTypeDescription.GenericTypeToken.Resolution.ForType.Tokenized(this.superClassToken, this.interfaceTypeTokens, this.typeVariableTokens);
+                        return new LazyTypeDescription.GenericTypeToken.Resolution.ForType.Tokenized(
+                                this.superClassToken, this.interfaceTypeTokens, this.typeVariableTokens);
                     }
                 }
 
-                public static <S extends LazyTypeDescription.GenericTypeToken.Resolution> S extract(String str, ForSignature<S> forSignature) {
+                public static <S extends LazyTypeDescription.GenericTypeToken.Resolution> S extract(String str,
+                        ForSignature<S> forSignature) {
                     new SignatureReader(str).accept(forSignature);
                     return (S) forSignature.resolve();
                 }
@@ -1081,7 +1246,8 @@ public interface TypePool {
                 public void collectTypeParameter() {
                     String str = this.currentTypeParameter;
                     if (str != null) {
-                        this.typeVariableTokens.add(new LazyTypeDescription.GenericTypeToken.ForTypeVariable.Formal(str, this.currentBounds));
+                        this.typeVariableTokens.add(new LazyTypeDescription.GenericTypeToken.ForTypeVariable.Formal(str,
+                                this.currentBounds));
                     }
                 }
 
@@ -1092,37 +1258,50 @@ public interface TypePool {
                         list.add(genericTypeToken);
                         return;
                     }
-                    throw new IllegalStateException("Did not expect " + genericTypeToken + " before finding formal parameter");
+                    throw new IllegalStateException(
+                            "Did not expect " + genericTypeToken + " before finding formal parameter");
                 }
 
                 public abstract T resolve();
 
-                @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeRegistrant.RejectingSignatureVisitor, net.bytebuddy.jar.asm.signature.SignatureVisitor
+                @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeRegistrant.RejectingSignatureVisitor,
+                          // net.bytebuddy.jar.asm.signature.SignatureVisitor
                 public SignatureVisitor visitClassBound() {
                     return new GenericTypeExtractor(this);
                 }
 
-                @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeRegistrant.RejectingSignatureVisitor, net.bytebuddy.jar.asm.signature.SignatureVisitor
+                @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeRegistrant.RejectingSignatureVisitor,
+                          // net.bytebuddy.jar.asm.signature.SignatureVisitor
                 public void visitFormalTypeParameter(String str) {
                     collectTypeParameter();
                     this.currentTypeParameter = str;
                     this.currentBounds = new ArrayList();
                 }
 
-                @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeRegistrant.RejectingSignatureVisitor, net.bytebuddy.jar.asm.signature.SignatureVisitor
+                @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeRegistrant.RejectingSignatureVisitor,
+                          // net.bytebuddy.jar.asm.signature.SignatureVisitor
                 public SignatureVisitor visitInterfaceBound() {
                     return new GenericTypeExtractor(this);
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public interface IncompleteToken {
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public static abstract class AbstractBase implements IncompleteToken {
                     protected final List<LazyTypeDescription.GenericTypeToken> parameters = new ArrayList();
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     public class ForDirectBound implements GenericTypeRegistrant {
                         public ForDirectBound() {
                         }
@@ -1133,25 +1312,33 @@ public interface TypePool {
                         }
                     }
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     public class ForLowerBound implements GenericTypeRegistrant {
                         public ForLowerBound() {
                         }
 
                         @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeRegistrant
                         public void register(LazyTypeDescription.GenericTypeToken genericTypeToken) {
-                            AbstractBase.this.parameters.add(new LazyTypeDescription.GenericTypeToken.ForLowerBoundWildcard(genericTypeToken));
+                            AbstractBase.this.parameters.add(
+                                    new LazyTypeDescription.GenericTypeToken.ForLowerBoundWildcard(genericTypeToken));
                         }
                     }
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     public class ForUpperBound implements GenericTypeRegistrant {
                         public ForUpperBound() {
                         }
 
                         @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeRegistrant
                         public void register(LazyTypeDescription.GenericTypeToken genericTypeToken) {
-                            AbstractBase.this.parameters.add(new LazyTypeDescription.GenericTypeToken.ForUpperBoundWildcard(genericTypeToken));
+                            AbstractBase.this.parameters.add(
+                                    new LazyTypeDescription.GenericTypeToken.ForUpperBoundWildcard(genericTypeToken));
                         }
                     }
 
@@ -1176,7 +1363,10 @@ public interface TypePool {
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class ForInnerClass extends AbstractBase {
                     private static final char INNER_CLASS_SEPARATOR = '$';
@@ -1196,16 +1386,19 @@ public interface TypePool {
                             return false;
                         }
                         ForInnerClass forInnerClass = (ForInnerClass) obj;
-                        return this.internalName.equals(forInnerClass.internalName) && this.outerTypeToken.equals(forInnerClass.outerTypeToken);
+                        return this.internalName.equals(forInnerClass.internalName)
+                                && this.outerTypeToken.equals(forInnerClass.outerTypeToken);
                     }
 
                     @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeExtractor.IncompleteToken
                     public String getName() {
-                        return this.outerTypeToken.getName() + INNER_CLASS_SEPARATOR + this.internalName.replace('/', LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
+                        return this.outerTypeToken.getName() + INNER_CLASS_SEPARATOR
+                                + this.internalName.replace('/', LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
                     }
 
                     public int hashCode() {
-                        return this.outerTypeToken.hashCode() + bjs.e(this.internalName, getClass().hashCode() * 31, 31);
+                        return this.outerTypeToken.hashCode()
+                                + bjs.e(this.internalName, getClass().hashCode() * 31, 31);
                     }
 
                     @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeExtractor.IncompleteToken
@@ -1215,11 +1408,17 @@ public interface TypePool {
 
                     @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeExtractor.IncompleteToken
                     public LazyTypeDescription.GenericTypeToken toToken() {
-                        return (isParameterized() || this.outerTypeToken.isParameterized()) ? new LazyTypeDescription.GenericTypeToken.ForParameterizedType.Nested(getName(), this.parameters, this.outerTypeToken.toToken()) : new LazyTypeDescription.GenericTypeToken.ForRawType(getName());
+                        return (isParameterized() || this.outerTypeToken.isParameterized())
+                                ? new LazyTypeDescription.GenericTypeToken.ForParameterizedType.Nested(getName(),
+                                        this.parameters, this.outerTypeToken.toToken())
+                                : new LazyTypeDescription.GenericTypeToken.ForRawType(getName());
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class ForTopLevelType extends AbstractBase {
                     private final String internalName;
@@ -1232,7 +1431,8 @@ public interface TypePool {
                         if (this == obj) {
                             return true;
                         }
-                        return obj != null && getClass() == obj.getClass() && this.internalName.equals(((ForTopLevelType) obj).internalName);
+                        return obj != null && getClass() == obj.getClass()
+                                && this.internalName.equals(((ForTopLevelType) obj).internalName);
                     }
 
                     @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeExtractor.IncompleteToken
@@ -1251,7 +1451,10 @@ public interface TypePool {
 
                     @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeExtractor.IncompleteToken
                     public LazyTypeDescription.GenericTypeToken toToken() {
-                        return isParameterized() ? new LazyTypeDescription.GenericTypeToken.ForParameterizedType(getName(), this.parameters) : new LazyTypeDescription.GenericTypeToken.ForRawType(getName());
+                        return isParameterized()
+                                ? new LazyTypeDescription.GenericTypeToken.ForParameterizedType(getName(),
+                                        this.parameters)
+                                : new LazyTypeDescription.GenericTypeToken.ForRawType(getName());
                     }
                 }
 
@@ -1276,45 +1479,54 @@ public interface TypePool {
 
             @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeRegistrant
             public void register(LazyTypeDescription.GenericTypeToken genericTypeToken) {
-                this.genericTypeRegistrant.register(new LazyTypeDescription.GenericTypeToken.ForGenericArray(genericTypeToken));
+                this.genericTypeRegistrant
+                        .register(new LazyTypeDescription.GenericTypeToken.ForGenericArray(genericTypeToken));
             }
 
-            @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeRegistrant.RejectingSignatureVisitor, net.bytebuddy.jar.asm.signature.SignatureVisitor
+            @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeRegistrant.RejectingSignatureVisitor,
+                      // net.bytebuddy.jar.asm.signature.SignatureVisitor
             public SignatureVisitor visitArrayType() {
                 return new GenericTypeExtractor(this);
             }
 
-            @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeRegistrant.RejectingSignatureVisitor, net.bytebuddy.jar.asm.signature.SignatureVisitor
+            @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeRegistrant.RejectingSignatureVisitor,
+                      // net.bytebuddy.jar.asm.signature.SignatureVisitor
             public void visitBaseType(char c) {
                 this.genericTypeRegistrant.register(LazyTypeDescription.GenericTypeToken.ForPrimitiveType.of(c));
             }
 
-            @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeRegistrant.RejectingSignatureVisitor, net.bytebuddy.jar.asm.signature.SignatureVisitor
+            @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeRegistrant.RejectingSignatureVisitor,
+                      // net.bytebuddy.jar.asm.signature.SignatureVisitor
             public void visitClassType(String str) {
                 this.incompleteToken = new IncompleteToken.ForTopLevelType(str);
             }
 
-            @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeRegistrant.RejectingSignatureVisitor, net.bytebuddy.jar.asm.signature.SignatureVisitor
+            @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeRegistrant.RejectingSignatureVisitor,
+                      // net.bytebuddy.jar.asm.signature.SignatureVisitor
             public void visitEnd() {
                 this.genericTypeRegistrant.register(this.incompleteToken.toToken());
             }
 
-            @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeRegistrant.RejectingSignatureVisitor, net.bytebuddy.jar.asm.signature.SignatureVisitor
+            @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeRegistrant.RejectingSignatureVisitor,
+                      // net.bytebuddy.jar.asm.signature.SignatureVisitor
             public void visitInnerClassType(String str) {
                 this.incompleteToken = new IncompleteToken.ForInnerClass(str, this.incompleteToken);
             }
 
-            @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeRegistrant.RejectingSignatureVisitor, net.bytebuddy.jar.asm.signature.SignatureVisitor
+            @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeRegistrant.RejectingSignatureVisitor,
+                      // net.bytebuddy.jar.asm.signature.SignatureVisitor
             public void visitTypeArgument() {
                 this.incompleteToken.appendPlaceholder();
             }
 
-            @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeRegistrant.RejectingSignatureVisitor, net.bytebuddy.jar.asm.signature.SignatureVisitor
+            @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeRegistrant.RejectingSignatureVisitor,
+                      // net.bytebuddy.jar.asm.signature.SignatureVisitor
             public void visitTypeVariable(String str) {
                 this.genericTypeRegistrant.register(new LazyTypeDescription.GenericTypeToken.ForTypeVariable(str));
             }
 
-            @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeRegistrant.RejectingSignatureVisitor, net.bytebuddy.jar.asm.signature.SignatureVisitor
+            @Override // net.bytebuddy.pool.TypePool.Default.GenericTypeRegistrant.RejectingSignatureVisitor,
+                      // net.bytebuddy.jar.asm.signature.SignatureVisitor
             public SignatureVisitor visitTypeArgument(char c) {
                 if (c == '+') {
                     return this.incompleteToken.appendUpperBound();
@@ -1329,10 +1541,16 @@ public interface TypePool {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public interface GenericTypeRegistrant {
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class RejectingSignatureVisitor extends SignatureVisitor {
                 private static final String MESSAGE = "Unexpected token in generic signature";
 
@@ -1424,7 +1642,10 @@ public interface TypePool {
             void register(LazyTypeDescription.GenericTypeToken genericTypeToken);
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static class LazyTypeDescription extends TypeDescription.AbstractBase.OfSimpleType {
 
             @AlwaysNull
@@ -1465,16 +1686,25 @@ public interface TypePool {
             private final Map<Integer, Map<String, List<AnnotationToken>>> typeVariableAnnotationTokens;
             private final Map<Integer, Map<Integer, Map<String, List<AnnotationToken>>>> typeVariableBoundsAnnotationTokens;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class AnnotationToken {
                 private final String descriptor;
                 private final Map<String, AnnotationValue<?, ?>> values;
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public interface Resolution {
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     @HashCodeAndEqualsPlugin.Enhance
                     public static class Illegal implements Resolution {
                         private final String annotationType;
@@ -1487,7 +1717,8 @@ public interface TypePool {
                             if (this == obj) {
                                 return true;
                             }
-                            return obj != null && getClass() == obj.getClass() && this.annotationType.equals(((Illegal) obj).annotationType);
+                            return obj != null && getClass() == obj.getClass()
+                                    && this.annotationType.equals(((Illegal) obj).annotationType);
                         }
 
                         public int hashCode() {
@@ -1505,7 +1736,10 @@ public interface TypePool {
                         }
                     }
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     @HashCodeAndEqualsPlugin.Enhance
                     public static class Simple implements Resolution {
                         private final AnnotationDescription annotationDescription;
@@ -1518,7 +1752,8 @@ public interface TypePool {
                             if (this == obj) {
                                 return true;
                             }
-                            return obj != null && getClass() == obj.getClass() && this.annotationDescription.equals(((Simple) obj).annotationDescription);
+                            return obj != null && getClass() == obj.getClass()
+                                    && this.annotationDescription.equals(((Simple) obj).annotationDescription);
                         }
 
                         public int hashCode() {
@@ -1549,7 +1784,10 @@ public interface TypePool {
                 /* JADX INFO: Access modifiers changed from: private */
                 public Resolution toAnnotationDescription(TypePool typePool) {
                     Resolution resolutionDescribe = typePool.describe(getBinaryName());
-                    return resolutionDescribe.isResolved() ? new Resolution.Simple(new LazyAnnotationDescription(typePool, resolutionDescribe.resolve(), this.values)) : new Resolution.Illegal(getBinaryName());
+                    return resolutionDescribe.isResolved()
+                            ? new Resolution.Simple(
+                                    new LazyAnnotationDescription(typePool, resolutionDescribe.resolve(), this.values))
+                            : new Resolution.Illegal(getBinaryName());
                 }
 
                 public boolean equals(@MaybeNull Object obj) {
@@ -1560,7 +1798,8 @@ public interface TypePool {
                         return false;
                     }
                     AnnotationToken annotationToken = (AnnotationToken) obj;
-                    return this.descriptor.equals(annotationToken.descriptor) && this.values.equals(annotationToken.values);
+                    return this.descriptor.equals(annotationToken.descriptor)
+                            && this.values.equals(annotationToken.values);
                 }
 
                 public String getBinaryName() {
@@ -1573,7 +1812,10 @@ public interface TypePool {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class FieldToken {
                 private final List<AnnotationToken> annotationTokens;
@@ -1586,12 +1828,15 @@ public interface TypePool {
                 private final GenericTypeToken.Resolution.ForField signatureResolution;
                 private final Map<String, List<AnnotationToken>> typeAnnotationTokens;
 
-                public FieldToken(String str, int i, String str2, @MaybeNull String str3, Map<String, List<AnnotationToken>> map, List<AnnotationToken> list) {
+                public FieldToken(String str, int i, String str2, @MaybeNull String str3,
+                        Map<String, List<AnnotationToken>> map, List<AnnotationToken> list) {
                     this.modifiers = i & (-131073);
                     this.name = str;
                     this.descriptor = str2;
                     this.genericSignature = str3;
-                    this.signatureResolution = TypeDescription.AbstractBase.RAW_TYPES ? GenericTypeToken.Resolution.Raw.INSTANCE : GenericTypeExtractor.ForSignature.OfField.extract(str3);
+                    this.signatureResolution = TypeDescription.AbstractBase.RAW_TYPES
+                            ? GenericTypeToken.Resolution.Raw.INSTANCE
+                            : GenericTypeExtractor.ForSignature.OfField.extract(str3);
                     this.typeAnnotationTokens = map;
                     this.annotationTokens = list;
                 }
@@ -1599,7 +1844,8 @@ public interface TypePool {
                 /* JADX INFO: Access modifiers changed from: private */
                 public LazyFieldDescription toFieldDescription(LazyTypeDescription lazyTypeDescription) {
                     lazyTypeDescription.getClass();
-                    return new LazyFieldDescription(this.name, this.modifiers, this.descriptor, this.genericSignature, this.signatureResolution, this.typeAnnotationTokens, this.annotationTokens);
+                    return new LazyFieldDescription(this.name, this.modifiers, this.descriptor, this.genericSignature,
+                            this.signatureResolution, this.typeAnnotationTokens, this.annotationTokens);
                 }
 
                 public boolean equals(@MaybeNull Object obj) {
@@ -1610,15 +1856,27 @@ public interface TypePool {
                         return false;
                     }
                     FieldToken fieldToken = (FieldToken) obj;
-                    return this.modifiers == fieldToken.modifiers && this.name.equals(fieldToken.name) && this.descriptor.equals(fieldToken.descriptor) && this.genericSignature.equals(fieldToken.genericSignature) && this.signatureResolution.equals(fieldToken.signatureResolution) && this.typeAnnotationTokens.equals(fieldToken.typeAnnotationTokens) && this.annotationTokens.equals(fieldToken.annotationTokens);
+                    return this.modifiers == fieldToken.modifiers && this.name.equals(fieldToken.name)
+                            && this.descriptor.equals(fieldToken.descriptor)
+                            && this.genericSignature.equals(fieldToken.genericSignature)
+                            && this.signatureResolution.equals(fieldToken.signatureResolution)
+                            && this.typeAnnotationTokens.equals(fieldToken.typeAnnotationTokens)
+                            && this.annotationTokens.equals(fieldToken.annotationTokens);
                 }
 
                 public int hashCode() {
-                    return this.annotationTokens.hashCode() + yg.c(this.typeAnnotationTokens, (this.signatureResolution.hashCode() + bjs.e(this.genericSignature, bjs.e(this.descriptor, (bjs.e(this.name, getClass().hashCode() * 31, 31) + this.modifiers) * 31, 31), 31)) * 31, 31);
+                    return this.annotationTokens.hashCode() + yg.c(this.typeAnnotationTokens,
+                            (this.signatureResolution.hashCode() + bjs.e(this.genericSignature, bjs.e(this.descriptor,
+                                    (bjs.e(this.name, getClass().hashCode() * 31, 31) + this.modifiers) * 31, 31), 31))
+                                    * 31,
+                            31);
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public class FieldTokenList extends FieldList.AbstractBase<FieldDescription.InDefinedShape> {
                 public FieldTokenList() {
                 }
@@ -1630,11 +1888,15 @@ public interface TypePool {
 
                 @Override // java.util.AbstractList, java.util.List
                 public FieldDescription.InDefinedShape get(int i) {
-                    return ((FieldToken) LazyTypeDescription.this.fieldTokens.get(i)).toFieldDescription(LazyTypeDescription.this);
+                    return ((FieldToken) LazyTypeDescription.this.fieldTokens.get(i))
+                            .toFieldDescription(LazyTypeDescription.this);
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public interface GenericTypeToken {
                 public static final char COMPONENT_TYPE_PATH = '[';
                 public static final String EMPTY_TYPE_PATH = "";
@@ -1642,12 +1904,18 @@ public interface TypePool {
                 public static final char INNER_CLASS_PATH = '.';
                 public static final char WILDCARD_TYPE_PATH = '*';
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class ForGenericArray implements GenericTypeToken {
                     private final GenericTypeToken componentTypeToken;
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     public static class LazyGenericArray extends TypeDescription.Generic.OfGenericArray {
                         private final Map<String, List<AnnotationToken>> annotationTokens;
                         private final GenericTypeToken componentTypeToken;
@@ -1655,7 +1923,8 @@ public interface TypePool {
                         private final TypePool typePool;
                         private final TypeVariableSource typeVariableSource;
 
-                        public LazyGenericArray(TypePool typePool, TypeVariableSource typeVariableSource, String str, Map<String, List<AnnotationToken>> map, GenericTypeToken genericTypeToken) {
+                        public LazyGenericArray(TypePool typePool, TypeVariableSource typeVariableSource, String str,
+                                Map<String, List<AnnotationToken>> map, GenericTypeToken genericTypeToken) {
                             this.typePool = typePool;
                             this.typeVariableSource = typeVariableSource;
                             this.typePath = str;
@@ -1665,12 +1934,15 @@ public interface TypePool {
 
                         @Override // net.bytebuddy.description.annotation.AnnotationSource
                         public AnnotationList getDeclaredAnnotations() {
-                            return LazyAnnotationDescription.asListOfNullable(this.typePool, this.annotationTokens.get(this.typePath));
+                            return LazyAnnotationDescription.asListOfNullable(this.typePool,
+                                    this.annotationTokens.get(this.typePath));
                         }
 
                         @Override // net.bytebuddy.description.type.TypeDefinition
                         public TypeDescription.Generic getComponentType() {
-                            return this.componentTypeToken.toGenericType(this.typePool, this.typeVariableSource, bjs.q(new StringBuilder(), this.typePath, GenericTypeToken.COMPONENT_TYPE_PATH), this.annotationTokens);
+                            return this.componentTypeToken.toGenericType(this.typePool, this.typeVariableSource,
+                                    concat(new StringBuilder(), this.typePath, GenericTypeToken.COMPONENT_TYPE_PATH),
+                                    this.annotationTokens);
                         }
                     }
 
@@ -1682,12 +1954,14 @@ public interface TypePool {
                         if (this == obj) {
                             return true;
                         }
-                        return obj != null && getClass() == obj.getClass() && this.componentTypeToken.equals(((ForGenericArray) obj).componentTypeToken);
+                        return obj != null && getClass() == obj.getClass()
+                                && this.componentTypeToken.equals(((ForGenericArray) obj).componentTypeToken);
                     }
 
                     @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken
                     public String getTypePathPrefix() {
-                        throw new IllegalStateException("A generic array type cannot be the owner of a nested type: " + this);
+                        throw new IllegalStateException(
+                                "A generic array type cannot be the owner of a nested type: " + this);
                     }
 
                     public int hashCode() {
@@ -1696,21 +1970,29 @@ public interface TypePool {
 
                     @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken
                     public boolean isPrimaryBound(TypePool typePool) {
-                        throw new IllegalStateException("A generic array type cannot be a type variable bound: " + this);
+                        throw new IllegalStateException(
+                                "A generic array type cannot be a type variable bound: " + this);
                     }
 
                     @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken
-                    public TypeDescription.Generic toGenericType(TypePool typePool, TypeVariableSource typeVariableSource, String str, Map<String, List<AnnotationToken>> map) {
+                    public TypeDescription.Generic toGenericType(TypePool typePool,
+                            TypeVariableSource typeVariableSource, String str, Map<String, List<AnnotationToken>> map) {
                         return new LazyGenericArray(typePool, typeVariableSource, str, map, this.componentTypeToken);
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class ForLowerBoundWildcard implements GenericTypeToken {
                     private final GenericTypeToken boundTypeToken;
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     public static class LazyLowerBoundWildcard extends TypeDescription.Generic.OfWildcardType {
                         private final Map<String, List<AnnotationToken>> annotationTokens;
                         private final GenericTypeToken boundTypeToken;
@@ -1718,7 +2000,8 @@ public interface TypePool {
                         private final TypePool typePool;
                         private final TypeVariableSource typeVariableSource;
 
-                        public LazyLowerBoundWildcard(TypePool typePool, TypeVariableSource typeVariableSource, String str, Map<String, List<AnnotationToken>> map, GenericTypeToken genericTypeToken) {
+                        public LazyLowerBoundWildcard(TypePool typePool, TypeVariableSource typeVariableSource,
+                                String str, Map<String, List<AnnotationToken>> map, GenericTypeToken genericTypeToken) {
                             this.typePool = typePool;
                             this.typeVariableSource = typeVariableSource;
                             this.typePath = str;
@@ -1728,17 +2011,20 @@ public interface TypePool {
 
                         @Override // net.bytebuddy.description.annotation.AnnotationSource
                         public AnnotationList getDeclaredAnnotations() {
-                            return LazyAnnotationDescription.asListOfNullable(this.typePool, this.annotationTokens.get(this.typePath));
+                            return LazyAnnotationDescription.asListOfNullable(this.typePool,
+                                    this.annotationTokens.get(this.typePath));
                         }
 
                         @Override // net.bytebuddy.description.type.TypeDescription.Generic
                         public TypeList.Generic getLowerBounds() {
-                            return new LazyTokenList.ForWildcardBound(this.typePool, this.typeVariableSource, this.typePath, this.annotationTokens, this.boundTypeToken);
+                            return new LazyTokenList.ForWildcardBound(this.typePool, this.typeVariableSource,
+                                    this.typePath, this.annotationTokens, this.boundTypeToken);
                         }
 
                         @Override // net.bytebuddy.description.type.TypeDescription.Generic
                         public TypeList.Generic getUpperBounds() {
-                            return new TypeList.Generic.Explicit(TypeDescription.Generic.OfNonGenericType.ForLoadedType.of(Object.class));
+                            return new TypeList.Generic.Explicit(
+                                    TypeDescription.Generic.OfNonGenericType.ForLoadedType.of(Object.class));
                         }
                     }
 
@@ -1750,12 +2036,14 @@ public interface TypePool {
                         if (this == obj) {
                             return true;
                         }
-                        return obj != null && getClass() == obj.getClass() && this.boundTypeToken.equals(((ForLowerBoundWildcard) obj).boundTypeToken);
+                        return obj != null && getClass() == obj.getClass()
+                                && this.boundTypeToken.equals(((ForLowerBoundWildcard) obj).boundTypeToken);
                     }
 
                     @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken
                     public String getTypePathPrefix() {
-                        throw new IllegalStateException("A lower bound wildcard cannot be the owner of a nested type: " + this);
+                        throw new IllegalStateException(
+                                "A lower bound wildcard cannot be the owner of a nested type: " + this);
                     }
 
                     public int hashCode() {
@@ -1768,18 +2056,25 @@ public interface TypePool {
                     }
 
                     @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken
-                    public TypeDescription.Generic toGenericType(TypePool typePool, TypeVariableSource typeVariableSource, String str, Map<String, List<AnnotationToken>> map) {
+                    public TypeDescription.Generic toGenericType(TypePool typePool,
+                            TypeVariableSource typeVariableSource, String str, Map<String, List<AnnotationToken>> map) {
                         return new LazyLowerBoundWildcard(typePool, typeVariableSource, str, map, this.boundTypeToken);
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class ForParameterizedType implements GenericTypeToken {
                     private final String name;
                     private final List<GenericTypeToken> parameterTypeTokens;
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     public static class LazyParameterizedType extends TypeDescription.Generic.OfParameterizedType {
                         private final Map<String, List<AnnotationToken>> annotationTokens;
                         private final String name;
@@ -1788,7 +2083,9 @@ public interface TypePool {
                         private final TypePool typePool;
                         private final TypeVariableSource typeVariableSource;
 
-                        public LazyParameterizedType(TypePool typePool, TypeVariableSource typeVariableSource, String str, Map<String, List<AnnotationToken>> map, String str2, List<GenericTypeToken> list) {
+                        public LazyParameterizedType(TypePool typePool, TypeVariableSource typeVariableSource,
+                                String str, Map<String, List<AnnotationToken>> map, String str2,
+                                List<GenericTypeToken> list) {
                             this.typePool = typePool;
                             this.typeVariableSource = typeVariableSource;
                             this.typePath = str;
@@ -1804,7 +2101,8 @@ public interface TypePool {
 
                         @Override // net.bytebuddy.description.annotation.AnnotationSource
                         public AnnotationList getDeclaredAnnotations() {
-                            return LazyAnnotationDescription.asListOfNullable(this.typePool, this.annotationTokens.get(this.typePath));
+                            return LazyAnnotationDescription.asListOfNullable(this.typePool,
+                                    this.annotationTokens.get(this.typePath));
                         }
 
                         @Override // net.bytebuddy.description.type.TypeDescription.Generic
@@ -1815,26 +2113,35 @@ public interface TypePool {
                                 throw new MalformedParameterizedTypeException();
                             }
                             TypeDescription enclosingType = typeDescriptionResolve.getEnclosingType();
-                            return enclosingType == null ? TypeDescription.Generic.UNDEFINED : enclosingType.asGenericType();
+                            return enclosingType == null ? TypeDescription.Generic.UNDEFINED
+                                    : enclosingType.asGenericType();
                         }
 
                         @Override // net.bytebuddy.description.type.TypeDescription.Generic
                         public TypeList.Generic getTypeArguments() {
-                            if (this.typePool.describe(this.name).resolve().getTypeVariables().size() == this.parameterTypeTokens.size()) {
-                                return new LazyTokenList(this.typePool, this.typeVariableSource, this.typePath, this.annotationTokens, this.parameterTypeTokens);
+                            if (this.typePool.describe(this.name).resolve().getTypeVariables()
+                                    .size() == this.parameterTypeTokens.size()) {
+                                return new LazyTokenList(this.typePool, this.typeVariableSource, this.typePath,
+                                        this.annotationTokens, this.parameterTypeTokens);
                             }
                             throw new MalformedParameterizedTypeException();
                         }
                     }
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     @HashCodeAndEqualsPlugin.Enhance
                     public static class Nested implements GenericTypeToken {
                         private final String name;
                         private final GenericTypeToken ownerTypeToken;
                         private final List<GenericTypeToken> parameterTypeTokens;
 
-                        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                        /*
+                         * JADX INFO: compiled from:
+                         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                         */
                         public static class LazyParameterizedType extends TypeDescription.Generic.OfParameterizedType {
                             private final Map<String, List<AnnotationToken>> annotationTokens;
                             private final String name;
@@ -1844,7 +2151,9 @@ public interface TypePool {
                             private final TypePool typePool;
                             private final TypeVariableSource typeVariableSource;
 
-                            public LazyParameterizedType(TypePool typePool, TypeVariableSource typeVariableSource, String str, Map<String, List<AnnotationToken>> map, String str2, List<GenericTypeToken> list, GenericTypeToken genericTypeToken) {
+                            public LazyParameterizedType(TypePool typePool, TypeVariableSource typeVariableSource,
+                                    String str, Map<String, List<AnnotationToken>> map, String str2,
+                                    List<GenericTypeToken> list, GenericTypeToken genericTypeToken) {
                                 this.typePool = typePool;
                                 this.typeVariableSource = typeVariableSource;
                                 this.typePath = str;
@@ -1861,18 +2170,22 @@ public interface TypePool {
 
                             @Override // net.bytebuddy.description.annotation.AnnotationSource
                             public AnnotationList getDeclaredAnnotations() {
-                                return LazyAnnotationDescription.asListOfNullable(this.typePool, this.annotationTokens.get(this.typePath + this.ownerTypeToken.getTypePathPrefix()));
+                                return LazyAnnotationDescription.asListOfNullable(this.typePool, this.annotationTokens
+                                        .get(this.typePath + this.ownerTypeToken.getTypePathPrefix()));
                             }
 
                             @Override // net.bytebuddy.description.type.TypeDescription.Generic
                             @MaybeNull
                             public TypeDescription.Generic getOwnerType() {
-                                return this.ownerTypeToken.toGenericType(this.typePool, this.typeVariableSource, this.typePath, this.annotationTokens);
+                                return this.ownerTypeToken.toGenericType(this.typePool, this.typeVariableSource,
+                                        this.typePath, this.annotationTokens);
                             }
 
                             @Override // net.bytebuddy.description.type.TypeDescription.Generic
                             public TypeList.Generic getTypeArguments() {
-                                return new LazyTokenList(this.typePool, this.typeVariableSource, this.typePath + this.ownerTypeToken.getTypePathPrefix(), this.annotationTokens, this.parameterTypeTokens);
+                                return new LazyTokenList(this.typePool, this.typeVariableSource,
+                                        this.typePath + this.ownerTypeToken.getTypePathPrefix(), this.annotationTokens,
+                                        this.parameterTypeTokens);
                             }
                         }
 
@@ -1890,7 +2203,9 @@ public interface TypePool {
                                 return false;
                             }
                             Nested nested = (Nested) obj;
-                            return this.name.equals(nested.name) && this.parameterTypeTokens.equals(nested.parameterTypeTokens) && this.ownerTypeToken.equals(nested.ownerTypeToken);
+                            return this.name.equals(nested.name)
+                                    && this.parameterTypeTokens.equals(nested.parameterTypeTokens)
+                                    && this.ownerTypeToken.equals(nested.ownerTypeToken);
                         }
 
                         @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken
@@ -1899,7 +2214,8 @@ public interface TypePool {
                         }
 
                         public int hashCode() {
-                            return this.ownerTypeToken.hashCode() + bjs.g(this.parameterTypeTokens, bjs.e(this.name, getClass().hashCode() * 31, 31), 31);
+                            return this.ownerTypeToken.hashCode() + bjs.g(this.parameterTypeTokens,
+                                    bjs.e(this.name, getClass().hashCode() * 31, 31), 31);
                         }
 
                         @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken
@@ -1908,8 +2224,11 @@ public interface TypePool {
                         }
 
                         @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken
-                        public TypeDescription.Generic toGenericType(TypePool typePool, TypeVariableSource typeVariableSource, String str, Map<String, List<AnnotationToken>> map) {
-                            return new LazyParameterizedType(typePool, typeVariableSource, str, map, this.name, this.parameterTypeTokens, this.ownerTypeToken);
+                        public TypeDescription.Generic toGenericType(TypePool typePool,
+                                TypeVariableSource typeVariableSource, String str,
+                                Map<String, List<AnnotationToken>> map) {
+                            return new LazyParameterizedType(typePool, typeVariableSource, str, map, this.name,
+                                    this.parameterTypeTokens, this.ownerTypeToken);
                         }
                     }
 
@@ -1926,7 +2245,8 @@ public interface TypePool {
                             return false;
                         }
                         ForParameterizedType forParameterizedType = (ForParameterizedType) obj;
-                        return this.name.equals(forParameterizedType.name) && this.parameterTypeTokens.equals(forParameterizedType.parameterTypeTokens);
+                        return this.name.equals(forParameterizedType.name)
+                                && this.parameterTypeTokens.equals(forParameterizedType.parameterTypeTokens);
                     }
 
                     @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken
@@ -1944,12 +2264,17 @@ public interface TypePool {
                     }
 
                     @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken
-                    public TypeDescription.Generic toGenericType(TypePool typePool, TypeVariableSource typeVariableSource, String str, Map<String, List<AnnotationToken>> map) {
-                        return new LazyParameterizedType(typePool, typeVariableSource, str, map, this.name, this.parameterTypeTokens);
+                    public TypeDescription.Generic toGenericType(TypePool typePool,
+                            TypeVariableSource typeVariableSource, String str, Map<String, List<AnnotationToken>> map) {
+                        return new LazyParameterizedType(typePool, typeVariableSource, str, map, this.name,
+                                this.parameterTypeTokens);
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public enum ForPrimitiveType implements GenericTypeToken {
                     BOOLEAN(Boolean.TYPE),
                     BYTE(Byte.TYPE),
@@ -1963,14 +2288,18 @@ public interface TypePool {
 
                     private final TypeDescription typeDescription;
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     public static class LazyPrimitiveType extends TypeDescription.Generic.OfNonGenericType {
                         private final Map<String, List<AnnotationToken>> annotationTokens;
                         private final TypeDescription typeDescription;
                         private final String typePath;
                         private final TypePool typePool;
 
-                        public LazyPrimitiveType(TypePool typePool, String str, Map<String, List<AnnotationToken>> map, TypeDescription typeDescription) {
+                        public LazyPrimitiveType(TypePool typePool, String str, Map<String, List<AnnotationToken>> map,
+                                TypeDescription typeDescription) {
                             this.typePool = typePool;
                             this.typePath = str;
                             this.annotationTokens = map;
@@ -1984,7 +2313,8 @@ public interface TypePool {
 
                         @Override // net.bytebuddy.description.annotation.AnnotationSource
                         public AnnotationList getDeclaredAnnotations() {
-                            return LazyAnnotationDescription.asListOfNullable(this.typePool, this.annotationTokens.get(this.typePath));
+                            return LazyAnnotationDescription.asListOfNullable(this.typePool,
+                                    this.annotationTokens.get(this.typePath));
                         }
 
                         @Override // net.bytebuddy.description.type.TypeDescription.Generic
@@ -2037,7 +2367,8 @@ public interface TypePool {
 
                     @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken
                     public String getTypePathPrefix() {
-                        throw new IllegalStateException("A primitive type cannot be the owner of a nested type: " + this);
+                        throw new IllegalStateException(
+                                "A primitive type cannot be the owner of a nested type: " + this);
                     }
 
                     @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken
@@ -2046,12 +2377,16 @@ public interface TypePool {
                     }
 
                     @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken
-                    public TypeDescription.Generic toGenericType(TypePool typePool, TypeVariableSource typeVariableSource, String str, Map<String, List<AnnotationToken>> map) {
+                    public TypeDescription.Generic toGenericType(TypePool typePool,
+                            TypeVariableSource typeVariableSource, String str, Map<String, List<AnnotationToken>> map) {
                         return new LazyPrimitiveType(typePool, str, map, this.typeDescription);
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class ForRawType implements GenericTypeToken {
                     private final String name;
@@ -2069,7 +2404,8 @@ public interface TypePool {
 
                     @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken
                     public String getTypePathPrefix() {
-                        throw new IllegalStateException("A non-generic type cannot be the owner of a nested type: " + this);
+                        throw new IllegalStateException(
+                                "A non-generic type cannot be the owner of a nested type: " + this);
                     }
 
                     public int hashCode() {
@@ -2082,23 +2418,32 @@ public interface TypePool {
                     }
 
                     @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken
-                    public TypeDescription.Generic toGenericType(TypePool typePool, TypeVariableSource typeVariableSource, String str, Map<String, List<AnnotationToken>> map) {
-                        return new Resolution.Raw.RawAnnotatedType(typePool, str, map, typePool.describe(this.name).resolve());
+                    public TypeDescription.Generic toGenericType(TypePool typePool,
+                            TypeVariableSource typeVariableSource, String str, Map<String, List<AnnotationToken>> map) {
+                        return new Resolution.Raw.RawAnnotatedType(typePool, str, map,
+                                typePool.describe(this.name).resolve());
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class ForTypeVariable implements GenericTypeToken {
                     private final String symbol;
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     public static class AnnotatedTypeVariable extends TypeDescription.Generic.OfTypeVariable {
                         private final List<AnnotationToken> annotationTokens;
                         private final TypePool typePool;
                         private final TypeDescription.Generic typeVariable;
 
-                        public AnnotatedTypeVariable(TypePool typePool, List<AnnotationToken> list, TypeDescription.Generic generic) {
+                        public AnnotatedTypeVariable(TypePool typePool, List<AnnotationToken> list,
+                                TypeDescription.Generic generic) {
                             this.typePool = typePool;
                             this.annotationTokens = list;
                             this.typeVariable = generic;
@@ -2125,13 +2470,19 @@ public interface TypePool {
                         }
                     }
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     @HashCodeAndEqualsPlugin.Enhance
                     public static class Formal implements OfFormalTypeVariable {
                         private final List<GenericTypeToken> boundTypeTokens;
                         private final String symbol;
 
-                        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                        /*
+                         * JADX INFO: compiled from:
+                         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                         */
                         public static class LazyTypeVariable extends TypeDescription.Generic.OfTypeVariable {
                             private final Map<String, List<AnnotationToken>> annotationTokens;
                             private final List<GenericTypeToken> boundTypeTokens;
@@ -2140,14 +2491,19 @@ public interface TypePool {
                             private final TypePool typePool;
                             private final TypeVariableSource typeVariableSource;
 
-                            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                            /*
+                             * JADX INFO: compiled from:
+                             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                             */
                             public static class LazyBoundTokenList extends TypeList.Generic.AbstractBase {
                                 private final Map<Integer, Map<String, List<AnnotationToken>>> annotationTokens;
                                 private final List<GenericTypeToken> boundTypeTokens;
                                 private final TypePool typePool;
                                 private final TypeVariableSource typeVariableSource;
 
-                                public LazyBoundTokenList(TypePool typePool, TypeVariableSource typeVariableSource, Map<Integer, Map<String, List<AnnotationToken>>> map, List<GenericTypeToken> list) {
+                                public LazyBoundTokenList(TypePool typePool, TypeVariableSource typeVariableSource,
+                                        Map<Integer, Map<String, List<AnnotationToken>>> map,
+                                        List<GenericTypeToken> list) {
                                     this.typePool = typePool;
                                     this.typeVariableSource = typeVariableSource;
                                     this.annotationTokens = map;
@@ -2161,7 +2517,14 @@ public interface TypePool {
 
                                 @Override // java.util.AbstractList, java.util.List
                                 public TypeDescription.Generic get(int i) {
-                                    Map<String, List<AnnotationToken>> map = (this.annotationTokens.containsKey(Integer.valueOf(i)) || this.annotationTokens.containsKey(Integer.valueOf(i + 1))) ? this.annotationTokens.get(Integer.valueOf((!this.boundTypeTokens.get(0).isPrimaryBound(this.typePool) ? 1 : 0) + i)) : Collections.EMPTY_MAP;
+                                    Map<String, List<AnnotationToken>> map = (this.annotationTokens
+                                            .containsKey(Integer.valueOf(i))
+                                            || this.annotationTokens.containsKey(Integer.valueOf(i + 1)))
+                                                    ? this.annotationTokens.get(Integer.valueOf(
+                                                            (!this.boundTypeTokens.get(0).isPrimaryBound(this.typePool)
+                                                                    ? 1
+                                                                    : 0) + i))
+                                                    : Collections.EMPTY_MAP;
                                     GenericTypeToken genericTypeToken = this.boundTypeTokens.get(i);
                                     TypePool typePool = this.typePool;
                                     TypeVariableSource typeVariableSource = this.typeVariableSource;
@@ -2172,7 +2535,10 @@ public interface TypePool {
                                 }
                             }
 
-                            public LazyTypeVariable(TypePool typePool, TypeVariableSource typeVariableSource, Map<String, List<AnnotationToken>> map, Map<Integer, Map<String, List<AnnotationToken>>> map2, String str, List<GenericTypeToken> list) {
+                            public LazyTypeVariable(TypePool typePool, TypeVariableSource typeVariableSource,
+                                    Map<String, List<AnnotationToken>> map,
+                                    Map<Integer, Map<String, List<AnnotationToken>>> map2, String str,
+                                    List<GenericTypeToken> list) {
                                 this.typePool = typePool;
                                 this.typeVariableSource = typeVariableSource;
                                 this.annotationTokens = map;
@@ -2183,7 +2549,8 @@ public interface TypePool {
 
                             @Override // net.bytebuddy.description.annotation.AnnotationSource
                             public AnnotationList getDeclaredAnnotations() {
-                                return LazyAnnotationDescription.asListOfNullable(this.typePool, this.annotationTokens.get(""));
+                                return LazyAnnotationDescription.asListOfNullable(this.typePool,
+                                        this.annotationTokens.get(""));
                             }
 
                             @Override // net.bytebuddy.description.type.TypeDescription.Generic
@@ -2198,7 +2565,8 @@ public interface TypePool {
 
                             @Override // net.bytebuddy.description.type.TypeDescription.Generic
                             public TypeList.Generic getUpperBounds() {
-                                return new LazyBoundTokenList(this.typePool, this.typeVariableSource, this.boundaryAnnotationTokens, this.boundTypeTokens);
+                                return new LazyBoundTokenList(this.typePool, this.typeVariableSource,
+                                        this.boundaryAnnotationTokens, this.boundTypeTokens);
                             }
                         }
 
@@ -2215,7 +2583,8 @@ public interface TypePool {
                                 return false;
                             }
                             Formal formal = (Formal) obj;
-                            return this.symbol.equals(formal.symbol) && this.boundTypeTokens.equals(formal.boundTypeTokens);
+                            return this.symbol.equals(formal.symbol)
+                                    && this.boundTypeTokens.equals(formal.boundTypeTokens);
                         }
 
                         public int hashCode() {
@@ -2223,7 +2592,10 @@ public interface TypePool {
                         }
 
                         @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken.OfFormalTypeVariable
-                        public TypeDescription.Generic toGenericType(TypePool typePool, TypeVariableSource typeVariableSource, @MaybeNull Map<String, List<AnnotationToken>> map, @MaybeNull Map<Integer, Map<String, List<AnnotationToken>>> map2) {
+                        public TypeDescription.Generic toGenericType(TypePool typePool,
+                                TypeVariableSource typeVariableSource,
+                                @MaybeNull Map<String, List<AnnotationToken>> map,
+                                @MaybeNull Map<Integer, Map<String, List<AnnotationToken>>> map2) {
                             if (map == null) {
                                 map = Collections.EMPTY_MAP;
                             }
@@ -2231,18 +2603,23 @@ public interface TypePool {
                             if (map2 == null) {
                                 map2 = Collections.EMPTY_MAP;
                             }
-                            return new LazyTypeVariable(typePool, typeVariableSource, map3, map2, this.symbol, this.boundTypeTokens);
+                            return new LazyTypeVariable(typePool, typeVariableSource, map3, map2, this.symbol,
+                                    this.boundTypeTokens);
                         }
                     }
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     public static class UnresolvedTypeVariable extends TypeDescription.Generic.OfTypeVariable {
                         private final List<AnnotationToken> annotationTokens;
                         private final String symbol;
                         private final TypePool typePool;
                         private final TypeVariableSource typeVariableSource;
 
-                        public UnresolvedTypeVariable(TypeVariableSource typeVariableSource, TypePool typePool, String str, List<AnnotationToken> list) {
+                        public UnresolvedTypeVariable(TypeVariableSource typeVariableSource, TypePool typePool,
+                                String str, List<AnnotationToken> list) {
                             this.typeVariableSource = typeVariableSource;
                             this.typePool = typePool;
                             this.symbol = str;
@@ -2278,12 +2655,14 @@ public interface TypePool {
                         if (this == obj) {
                             return true;
                         }
-                        return obj != null && getClass() == obj.getClass() && this.symbol.equals(((ForTypeVariable) obj).symbol);
+                        return obj != null && getClass() == obj.getClass()
+                                && this.symbol.equals(((ForTypeVariable) obj).symbol);
                     }
 
                     @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken
                     public String getTypePathPrefix() {
-                        throw new IllegalStateException("A type variable cannot be the owner of a nested type: " + this);
+                        throw new IllegalStateException(
+                                "A type variable cannot be the owner of a nested type: " + this);
                     }
 
                     public int hashCode() {
@@ -2296,23 +2675,33 @@ public interface TypePool {
                     }
 
                     @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken
-                    public TypeDescription.Generic toGenericType(TypePool typePool, TypeVariableSource typeVariableSource, String str, Map<String, List<AnnotationToken>> map) {
+                    public TypeDescription.Generic toGenericType(TypePool typePool,
+                            TypeVariableSource typeVariableSource, String str, Map<String, List<AnnotationToken>> map) {
                         TypeDescription.Generic genericFindVariable = typeVariableSource.findVariable(this.symbol);
-                        return genericFindVariable == null ? new UnresolvedTypeVariable(typeVariableSource, typePool, this.symbol, map.get(str)) : new AnnotatedTypeVariable(typePool, map.get(str), genericFindVariable);
+                        return genericFindVariable == null
+                                ? new UnresolvedTypeVariable(typeVariableSource, typePool, this.symbol, map.get(str))
+                                : new AnnotatedTypeVariable(typePool, map.get(str), genericFindVariable);
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public enum ForUnboundWildcard implements GenericTypeToken {
                     INSTANCE;
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     public static class LazyUnboundWildcard extends TypeDescription.Generic.OfWildcardType {
                         private final Map<String, List<AnnotationToken>> annotationTokens;
                         private final String typePath;
                         private final TypePool typePool;
 
-                        public LazyUnboundWildcard(TypePool typePool, String str, Map<String, List<AnnotationToken>> map) {
+                        public LazyUnboundWildcard(TypePool typePool, String str,
+                                Map<String, List<AnnotationToken>> map) {
                             this.typePool = typePool;
                             this.typePath = str;
                             this.annotationTokens = map;
@@ -2320,7 +2709,8 @@ public interface TypePool {
 
                         @Override // net.bytebuddy.description.annotation.AnnotationSource
                         public AnnotationList getDeclaredAnnotations() {
-                            return LazyAnnotationDescription.asListOfNullable(this.typePool, this.annotationTokens.get(this.typePath));
+                            return LazyAnnotationDescription.asListOfNullable(this.typePool,
+                                    this.annotationTokens.get(this.typePath));
                         }
 
                         @Override // net.bytebuddy.description.type.TypeDescription.Generic
@@ -2330,13 +2720,15 @@ public interface TypePool {
 
                         @Override // net.bytebuddy.description.type.TypeDescription.Generic
                         public TypeList.Generic getUpperBounds() {
-                            return new TypeList.Generic.Explicit(TypeDescription.Generic.OfNonGenericType.ForLoadedType.of(Object.class));
+                            return new TypeList.Generic.Explicit(
+                                    TypeDescription.Generic.OfNonGenericType.ForLoadedType.of(Object.class));
                         }
                     }
 
                     @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken
                     public String getTypePathPrefix() {
-                        throw new IllegalStateException("An unbound wildcard cannot be the owner of a nested type: " + this);
+                        throw new IllegalStateException(
+                                "An unbound wildcard cannot be the owner of a nested type: " + this);
                     }
 
                     @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken
@@ -2345,7 +2737,9 @@ public interface TypePool {
                     }
 
                     @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken
-                    public TypeDescription.Generic toGenericType(TypePool typePool, TypeVariableSource typeVariableSource, String str, @MaybeNull Map<String, List<AnnotationToken>> map) {
+                    public TypeDescription.Generic toGenericType(TypePool typePool,
+                            TypeVariableSource typeVariableSource, String str,
+                            @MaybeNull Map<String, List<AnnotationToken>> map) {
                         if (map == null) {
                             map = Collections.EMPTY_MAP;
                         }
@@ -2353,12 +2747,18 @@ public interface TypePool {
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class ForUpperBoundWildcard implements GenericTypeToken {
                     private final GenericTypeToken boundTypeToken;
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     public static class LazyUpperBoundWildcard extends TypeDescription.Generic.OfWildcardType {
                         private final Map<String, List<AnnotationToken>> annotationTokens;
                         private final GenericTypeToken boundTypeToken;
@@ -2366,7 +2766,8 @@ public interface TypePool {
                         private final TypePool typePool;
                         private final TypeVariableSource typeVariableSource;
 
-                        public LazyUpperBoundWildcard(TypePool typePool, TypeVariableSource typeVariableSource, String str, Map<String, List<AnnotationToken>> map, GenericTypeToken genericTypeToken) {
+                        public LazyUpperBoundWildcard(TypePool typePool, TypeVariableSource typeVariableSource,
+                                String str, Map<String, List<AnnotationToken>> map, GenericTypeToken genericTypeToken) {
                             this.typePool = typePool;
                             this.typeVariableSource = typeVariableSource;
                             this.typePath = str;
@@ -2376,7 +2777,8 @@ public interface TypePool {
 
                         @Override // net.bytebuddy.description.annotation.AnnotationSource
                         public AnnotationList getDeclaredAnnotations() {
-                            return LazyAnnotationDescription.asListOfNullable(this.typePool, this.annotationTokens.get(this.typePath));
+                            return LazyAnnotationDescription.asListOfNullable(this.typePool,
+                                    this.annotationTokens.get(this.typePath));
                         }
 
                         @Override // net.bytebuddy.description.type.TypeDescription.Generic
@@ -2386,7 +2788,8 @@ public interface TypePool {
 
                         @Override // net.bytebuddy.description.type.TypeDescription.Generic
                         public TypeList.Generic getUpperBounds() {
-                            return new LazyTokenList.ForWildcardBound(this.typePool, this.typeVariableSource, this.typePath, this.annotationTokens, this.boundTypeToken);
+                            return new LazyTokenList.ForWildcardBound(this.typePool, this.typeVariableSource,
+                                    this.typePath, this.annotationTokens, this.boundTypeToken);
                         }
                     }
 
@@ -2398,12 +2801,14 @@ public interface TypePool {
                         if (this == obj) {
                             return true;
                         }
-                        return obj != null && getClass() == obj.getClass() && this.boundTypeToken.equals(((ForUpperBoundWildcard) obj).boundTypeToken);
+                        return obj != null && getClass() == obj.getClass()
+                                && this.boundTypeToken.equals(((ForUpperBoundWildcard) obj).boundTypeToken);
                     }
 
                     @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken
                     public String getTypePathPrefix() {
-                        throw new IllegalStateException("An upper bound wildcard cannot be the owner of a nested type: " + this);
+                        throw new IllegalStateException(
+                                "An upper bound wildcard cannot be the owner of a nested type: " + this);
                     }
 
                     public int hashCode() {
@@ -2416,12 +2821,16 @@ public interface TypePool {
                     }
 
                     @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken
-                    public TypeDescription.Generic toGenericType(TypePool typePool, TypeVariableSource typeVariableSource, String str, Map<String, List<AnnotationToken>> map) {
+                    public TypeDescription.Generic toGenericType(TypePool typePool,
+                            TypeVariableSource typeVariableSource, String str, Map<String, List<AnnotationToken>> map) {
                         return new LazyUpperBoundWildcard(typePool, typeVariableSource, str, map, this.boundTypeToken);
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public static class LazyTokenList extends TypeList.Generic.AbstractBase {
                     private final Map<String, List<AnnotationToken>> annotationTokens;
                     private final List<GenericTypeToken> genericTypeTokens;
@@ -2429,7 +2838,10 @@ public interface TypePool {
                     private final TypePool typePool;
                     private final TypeVariableSource typeVariableSource;
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     public static class ForWildcardBound extends TypeList.Generic.AbstractBase {
                         private final Map<String, List<AnnotationToken>> annotationTokens;
                         private final GenericTypeToken genericTypeToken;
@@ -2437,7 +2849,8 @@ public interface TypePool {
                         private final TypePool typePool;
                         private final TypeVariableSource typeVariableSource;
 
-                        public ForWildcardBound(TypePool typePool, TypeVariableSource typeVariableSource, String str, Map<String, List<AnnotationToken>> map, GenericTypeToken genericTypeToken) {
+                        public ForWildcardBound(TypePool typePool, TypeVariableSource typeVariableSource, String str,
+                                Map<String, List<AnnotationToken>> map, GenericTypeToken genericTypeToken) {
                             this.typePool = typePool;
                             this.typeVariableSource = typeVariableSource;
                             this.typePath = str;
@@ -2453,13 +2866,16 @@ public interface TypePool {
                         @Override // java.util.AbstractList, java.util.List
                         public TypeDescription.Generic get(int i) {
                             if (i == 0) {
-                                return this.genericTypeToken.toGenericType(this.typePool, this.typeVariableSource, bjs.q(new StringBuilder(), this.typePath, GenericTypeToken.WILDCARD_TYPE_PATH), this.annotationTokens);
+                                return this.genericTypeToken.toGenericType(this.typePool, this.typeVariableSource,
+                                        concat(new StringBuilder(), this.typePath, GenericTypeToken.WILDCARD_TYPE_PATH),
+                                        this.annotationTokens);
                             }
-                            throw new IndexOutOfBoundsException(bjs.i(i, "index = "));
+                            throw new IndexOutOfBoundsException(concatVar2Var1(i, "index = "));
                         }
                     }
 
-                    public LazyTokenList(TypePool typePool, TypeVariableSource typeVariableSource, String str, Map<String, List<AnnotationToken>> map, List<GenericTypeToken> list) {
+                    public LazyTokenList(TypePool typePool, TypeVariableSource typeVariableSource, String str,
+                            Map<String, List<AnnotationToken>> map, List<GenericTypeToken> list) {
                         this.typePool = typePool;
                         this.typeVariableSource = typeVariableSource;
                         this.typePath = str;
@@ -2474,22 +2890,37 @@ public interface TypePool {
 
                     @Override // java.util.AbstractList, java.util.List
                     public TypeDescription.Generic get(int i) {
-                        return this.genericTypeTokens.get(i).toGenericType(this.typePool, this.typeVariableSource, this.typePath + i + GenericTypeToken.INDEXED_TYPE_DELIMITER, this.annotationTokens);
+                        return this.genericTypeTokens.get(i).toGenericType(this.typePool, this.typeVariableSource,
+                                this.typePath + i + GenericTypeToken.INDEXED_TYPE_DELIMITER, this.annotationTokens);
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public interface OfFormalTypeVariable {
-                    TypeDescription.Generic toGenericType(TypePool typePool, TypeVariableSource typeVariableSource, Map<String, List<AnnotationToken>> map, Map<Integer, Map<String, List<AnnotationToken>>> map2);
+                    TypeDescription.Generic toGenericType(TypePool typePool, TypeVariableSource typeVariableSource,
+                            Map<String, List<AnnotationToken>> map,
+                            Map<Integer, Map<String, List<AnnotationToken>>> map2);
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public interface Resolution {
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     public interface ForField {
 
-                        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                        /*
+                         * JADX INFO: compiled from:
+                         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                         */
                         @HashCodeAndEqualsPlugin.Enhance
                         public static class Tokenized implements ForField {
                             private final GenericTypeToken fieldTypeToken;
@@ -2502,7 +2933,8 @@ public interface TypePool {
                                 if (this == obj) {
                                     return true;
                                 }
-                                return obj != null && getClass() == obj.getClass() && this.fieldTypeToken.equals(((Tokenized) obj).fieldTypeToken);
+                                return obj != null && getClass() == obj.getClass()
+                                        && this.fieldTypeToken.equals(((Tokenized) obj).fieldTypeToken);
                             }
 
                             public int hashCode() {
@@ -2510,18 +2942,28 @@ public interface TypePool {
                             }
 
                             @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken.Resolution.ForField
-                            public TypeDescription.Generic resolveFieldType(String str, TypePool typePool, Map<String, List<AnnotationToken>> map, FieldDescription.InDefinedShape inDefinedShape) {
-                                return TokenizedGenericType.of(typePool, this.fieldTypeToken, str, map, inDefinedShape.getDeclaringType());
+                            public TypeDescription.Generic resolveFieldType(String str, TypePool typePool,
+                                    Map<String, List<AnnotationToken>> map,
+                                    FieldDescription.InDefinedShape inDefinedShape) {
+                                return TokenizedGenericType.of(typePool, this.fieldTypeToken, str, map,
+                                        inDefinedShape.getDeclaringType());
                             }
                         }
 
-                        TypeDescription.Generic resolveFieldType(String str, TypePool typePool, Map<String, List<AnnotationToken>> map, FieldDescription.InDefinedShape inDefinedShape);
+                        TypeDescription.Generic resolveFieldType(String str, TypePool typePool,
+                                Map<String, List<AnnotationToken>> map, FieldDescription.InDefinedShape inDefinedShape);
                     }
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     public interface ForMethod extends Resolution {
 
-                        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                        /*
+                         * JADX INFO: compiled from:
+                         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                         */
                         @HashCodeAndEqualsPlugin.Enhance
                         public static class Tokenized implements ForMethod {
                             private final List<GenericTypeToken> exceptionTypeTokens;
@@ -2529,7 +2971,8 @@ public interface TypePool {
                             private final GenericTypeToken returnTypeToken;
                             private final List<OfFormalTypeVariable> typeVariableTokens;
 
-                            public Tokenized(GenericTypeToken genericTypeToken, List<GenericTypeToken> list, List<GenericTypeToken> list2, List<OfFormalTypeVariable> list3) {
+                            public Tokenized(GenericTypeToken genericTypeToken, List<GenericTypeToken> list,
+                                    List<GenericTypeToken> list2, List<OfFormalTypeVariable> list3) {
                                 this.returnTypeToken = genericTypeToken;
                                 this.parameterTypeTokens = list;
                                 this.exceptionTypeTokens = list2;
@@ -2544,45 +2987,79 @@ public interface TypePool {
                                     return false;
                                 }
                                 Tokenized tokenized = (Tokenized) obj;
-                                return this.returnTypeToken.equals(tokenized.returnTypeToken) && this.parameterTypeTokens.equals(tokenized.parameterTypeTokens) && this.exceptionTypeTokens.equals(tokenized.exceptionTypeTokens) && this.typeVariableTokens.equals(tokenized.typeVariableTokens);
+                                return this.returnTypeToken.equals(tokenized.returnTypeToken)
+                                        && this.parameterTypeTokens.equals(tokenized.parameterTypeTokens)
+                                        && this.exceptionTypeTokens.equals(tokenized.exceptionTypeTokens)
+                                        && this.typeVariableTokens.equals(tokenized.typeVariableTokens);
                             }
 
                             public int hashCode() {
-                                return this.typeVariableTokens.hashCode() + bjs.g(this.exceptionTypeTokens, bjs.g(this.parameterTypeTokens, (this.returnTypeToken.hashCode() + (getClass().hashCode() * 31)) * 31, 31), 31);
+                                return this.typeVariableTokens.hashCode() + bjs.g(this.exceptionTypeTokens,
+                                        bjs.g(this.parameterTypeTokens,
+                                                (this.returnTypeToken.hashCode() + (getClass().hashCode() * 31)) * 31,
+                                                31),
+                                        31);
                             }
 
                             @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken.Resolution.ForMethod
-                            public TypeList.Generic resolveExceptionTypes(List<String> list, TypePool typePool, Map<Integer, Map<String, List<AnnotationToken>>> map, MethodDescription.InDefinedShape inDefinedShape) {
-                                return this.exceptionTypeTokens.isEmpty() ? Raw.INSTANCE.resolveExceptionTypes(list, typePool, map, inDefinedShape) : new TokenizedGenericType.TokenList(typePool, this.exceptionTypeTokens, map, list, inDefinedShape);
+                            public TypeList.Generic resolveExceptionTypes(List<String> list, TypePool typePool,
+                                    Map<Integer, Map<String, List<AnnotationToken>>> map,
+                                    MethodDescription.InDefinedShape inDefinedShape) {
+                                return this.exceptionTypeTokens.isEmpty()
+                                        ? Raw.INSTANCE.resolveExceptionTypes(list, typePool, map, inDefinedShape)
+                                        : new TokenizedGenericType.TokenList(typePool, this.exceptionTypeTokens, map,
+                                                list, inDefinedShape);
                             }
 
                             @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken.Resolution.ForMethod
-                            public TypeList.Generic resolveParameterTypes(List<String> list, TypePool typePool, Map<Integer, Map<String, List<AnnotationToken>>> map, MethodDescription.InDefinedShape inDefinedShape) {
-                                return new TokenizedGenericType.TokenList(typePool, this.parameterTypeTokens, map, list, inDefinedShape);
+                            public TypeList.Generic resolveParameterTypes(List<String> list, TypePool typePool,
+                                    Map<Integer, Map<String, List<AnnotationToken>>> map,
+                                    MethodDescription.InDefinedShape inDefinedShape) {
+                                return new TokenizedGenericType.TokenList(typePool, this.parameterTypeTokens, map, list,
+                                        inDefinedShape);
                             }
 
                             @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken.Resolution.ForMethod
-                            public TypeDescription.Generic resolveReturnType(String str, TypePool typePool, Map<String, List<AnnotationToken>> map, MethodDescription.InDefinedShape inDefinedShape) {
-                                return TokenizedGenericType.of(typePool, this.returnTypeToken, str, map, inDefinedShape);
+                            public TypeDescription.Generic resolveReturnType(String str, TypePool typePool,
+                                    Map<String, List<AnnotationToken>> map,
+                                    MethodDescription.InDefinedShape inDefinedShape) {
+                                return TokenizedGenericType.of(typePool, this.returnTypeToken, str, map,
+                                        inDefinedShape);
                             }
 
                             @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken.Resolution
-                            public TypeList.Generic resolveTypeVariables(TypePool typePool, TypeVariableSource typeVariableSource, Map<Integer, Map<String, List<AnnotationToken>>> map, Map<Integer, Map<Integer, Map<String, List<AnnotationToken>>>> map2) {
-                                return new TokenizedGenericType.TypeVariableList(typePool, this.typeVariableTokens, typeVariableSource, map, map2);
+                            public TypeList.Generic resolveTypeVariables(TypePool typePool,
+                                    TypeVariableSource typeVariableSource,
+                                    Map<Integer, Map<String, List<AnnotationToken>>> map,
+                                    Map<Integer, Map<Integer, Map<String, List<AnnotationToken>>>> map2) {
+                                return new TokenizedGenericType.TypeVariableList(typePool, this.typeVariableTokens,
+                                        typeVariableSource, map, map2);
                             }
                         }
 
-                        TypeList.Generic resolveExceptionTypes(List<String> list, TypePool typePool, Map<Integer, Map<String, List<AnnotationToken>>> map, MethodDescription.InDefinedShape inDefinedShape);
+                        TypeList.Generic resolveExceptionTypes(List<String> list, TypePool typePool,
+                                Map<Integer, Map<String, List<AnnotationToken>>> map,
+                                MethodDescription.InDefinedShape inDefinedShape);
 
-                        TypeList.Generic resolveParameterTypes(List<String> list, TypePool typePool, Map<Integer, Map<String, List<AnnotationToken>>> map, MethodDescription.InDefinedShape inDefinedShape);
+                        TypeList.Generic resolveParameterTypes(List<String> list, TypePool typePool,
+                                Map<Integer, Map<String, List<AnnotationToken>>> map,
+                                MethodDescription.InDefinedShape inDefinedShape);
 
-                        TypeDescription.Generic resolveReturnType(String str, TypePool typePool, Map<String, List<AnnotationToken>> map, MethodDescription.InDefinedShape inDefinedShape);
+                        TypeDescription.Generic resolveReturnType(String str, TypePool typePool,
+                                Map<String, List<AnnotationToken>> map,
+                                MethodDescription.InDefinedShape inDefinedShape);
                     }
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     public interface ForRecordComponent {
 
-                        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                        /*
+                         * JADX INFO: compiled from:
+                         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                         */
                         @HashCodeAndEqualsPlugin.Enhance
                         public static class Tokenized implements ForRecordComponent {
                             private final GenericTypeToken recordComponentTypeToken;
@@ -2595,7 +3072,8 @@ public interface TypePool {
                                 if (this == obj) {
                                     return true;
                                 }
-                                return obj != null && getClass() == obj.getClass() && this.recordComponentTypeToken.equals(((Tokenized) obj).recordComponentTypeToken);
+                                return obj != null && getClass() == obj.getClass() && this.recordComponentTypeToken
+                                        .equals(((Tokenized) obj).recordComponentTypeToken);
                             }
 
                             public int hashCode() {
@@ -2603,25 +3081,37 @@ public interface TypePool {
                             }
 
                             @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken.Resolution.ForRecordComponent
-                            public TypeDescription.Generic resolveRecordType(String str, TypePool typePool, Map<String, List<AnnotationToken>> map, RecordComponentDescription.InDefinedShape inDefinedShape) {
-                                return TokenizedGenericType.of(typePool, this.recordComponentTypeToken, str, map, inDefinedShape.getDeclaringType());
+                            public TypeDescription.Generic resolveRecordType(String str, TypePool typePool,
+                                    Map<String, List<AnnotationToken>> map,
+                                    RecordComponentDescription.InDefinedShape inDefinedShape) {
+                                return TokenizedGenericType.of(typePool, this.recordComponentTypeToken, str, map,
+                                        inDefinedShape.getDeclaringType());
                             }
                         }
 
-                        TypeDescription.Generic resolveRecordType(String str, TypePool typePool, Map<String, List<AnnotationToken>> map, RecordComponentDescription.InDefinedShape inDefinedShape);
+                        TypeDescription.Generic resolveRecordType(String str, TypePool typePool,
+                                Map<String, List<AnnotationToken>> map,
+                                RecordComponentDescription.InDefinedShape inDefinedShape);
                     }
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     public interface ForType extends Resolution {
 
-                        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                        /*
+                         * JADX INFO: compiled from:
+                         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                         */
                         @HashCodeAndEqualsPlugin.Enhance
                         public static class Tokenized implements ForType {
                             private final List<GenericTypeToken> interfaceTypeTokens;
                             private final GenericTypeToken superClassToken;
                             private final List<OfFormalTypeVariable> typeVariableTokens;
 
-                            public Tokenized(GenericTypeToken genericTypeToken, List<GenericTypeToken> list, List<OfFormalTypeVariable> list2) {
+                            public Tokenized(GenericTypeToken genericTypeToken, List<GenericTypeToken> list,
+                                    List<OfFormalTypeVariable> list2) {
                                 this.superClassToken = genericTypeToken;
                                 this.interfaceTypeTokens = list;
                                 this.typeVariableTokens = list2;
@@ -2635,120 +3125,167 @@ public interface TypePool {
                                     return false;
                                 }
                                 Tokenized tokenized = (Tokenized) obj;
-                                return this.superClassToken.equals(tokenized.superClassToken) && this.interfaceTypeTokens.equals(tokenized.interfaceTypeTokens) && this.typeVariableTokens.equals(tokenized.typeVariableTokens);
+                                return this.superClassToken.equals(tokenized.superClassToken)
+                                        && this.interfaceTypeTokens.equals(tokenized.interfaceTypeTokens)
+                                        && this.typeVariableTokens.equals(tokenized.typeVariableTokens);
                             }
 
                             public int hashCode() {
-                                return this.typeVariableTokens.hashCode() + bjs.g(this.interfaceTypeTokens, (this.superClassToken.hashCode() + (getClass().hashCode() * 31)) * 31, 31);
+                                return this.typeVariableTokens.hashCode() + bjs.g(this.interfaceTypeTokens,
+                                        (this.superClassToken.hashCode() + (getClass().hashCode() * 31)) * 31, 31);
                             }
 
                             @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken.Resolution.ForType
-                            public TypeList.Generic resolveInterfaceTypes(List<String> list, TypePool typePool, Map<Integer, Map<String, List<AnnotationToken>>> map, TypeDescription typeDescription) {
-                                return new TokenizedGenericType.TokenList(typePool, this.interfaceTypeTokens, map, list, typeDescription);
+                            public TypeList.Generic resolveInterfaceTypes(List<String> list, TypePool typePool,
+                                    Map<Integer, Map<String, List<AnnotationToken>>> map,
+                                    TypeDescription typeDescription) {
+                                return new TokenizedGenericType.TokenList(typePool, this.interfaceTypeTokens, map, list,
+                                        typeDescription);
                             }
 
                             @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken.Resolution.ForType
-                            public TypeDescription.Generic resolveSuperClass(String str, TypePool typePool, Map<String, List<AnnotationToken>> map, TypeDescription typeDescription) {
-                                return TokenizedGenericType.of(typePool, this.superClassToken, str, map, typeDescription);
+                            public TypeDescription.Generic resolveSuperClass(String str, TypePool typePool,
+                                    Map<String, List<AnnotationToken>> map, TypeDescription typeDescription) {
+                                return TokenizedGenericType.of(typePool, this.superClassToken, str, map,
+                                        typeDescription);
                             }
 
                             @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken.Resolution
-                            public TypeList.Generic resolveTypeVariables(TypePool typePool, TypeVariableSource typeVariableSource, Map<Integer, Map<String, List<AnnotationToken>>> map, Map<Integer, Map<Integer, Map<String, List<AnnotationToken>>>> map2) {
-                                return new TokenizedGenericType.TypeVariableList(typePool, this.typeVariableTokens, typeVariableSource, map, map2);
+                            public TypeList.Generic resolveTypeVariables(TypePool typePool,
+                                    TypeVariableSource typeVariableSource,
+                                    Map<Integer, Map<String, List<AnnotationToken>>> map,
+                                    Map<Integer, Map<Integer, Map<String, List<AnnotationToken>>>> map2) {
+                                return new TokenizedGenericType.TypeVariableList(typePool, this.typeVariableTokens,
+                                        typeVariableSource, map, map2);
                             }
                         }
 
-                        TypeList.Generic resolveInterfaceTypes(List<String> list, TypePool typePool, Map<Integer, Map<String, List<AnnotationToken>>> map, TypeDescription typeDescription);
+                        TypeList.Generic resolveInterfaceTypes(List<String> list, TypePool typePool,
+                                Map<Integer, Map<String, List<AnnotationToken>>> map, TypeDescription typeDescription);
 
-                        TypeDescription.Generic resolveSuperClass(String str, TypePool typePool, Map<String, List<AnnotationToken>> map, TypeDescription typeDescription);
+                        TypeDescription.Generic resolveSuperClass(String str, TypePool typePool,
+                                Map<String, List<AnnotationToken>> map, TypeDescription typeDescription);
                     }
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     public enum Malformed implements ForType, ForField, ForMethod, ForRecordComponent {
                         INSTANCE;
 
                         @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken.Resolution.ForMethod
-                        public TypeList.Generic resolveExceptionTypes(List<String> list, TypePool typePool, Map<Integer, Map<String, List<AnnotationToken>>> map, MethodDescription.InDefinedShape inDefinedShape) {
+                        public TypeList.Generic resolveExceptionTypes(List<String> list, TypePool typePool,
+                                Map<Integer, Map<String, List<AnnotationToken>>> map,
+                                MethodDescription.InDefinedShape inDefinedShape) {
                             return new TokenizedGenericType.Malformed.TokenList(typePool, list);
                         }
 
                         @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken.Resolution.ForField
-                        public TypeDescription.Generic resolveFieldType(String str, TypePool typePool, Map<String, List<AnnotationToken>> map, FieldDescription.InDefinedShape inDefinedShape) {
+                        public TypeDescription.Generic resolveFieldType(String str, TypePool typePool,
+                                Map<String, List<AnnotationToken>> map,
+                                FieldDescription.InDefinedShape inDefinedShape) {
                             return new TokenizedGenericType.Malformed(typePool, str);
                         }
 
                         @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken.Resolution.ForType
-                        public TypeList.Generic resolveInterfaceTypes(List<String> list, TypePool typePool, Map<Integer, Map<String, List<AnnotationToken>>> map, TypeDescription typeDescription) {
+                        public TypeList.Generic resolveInterfaceTypes(List<String> list, TypePool typePool,
+                                Map<Integer, Map<String, List<AnnotationToken>>> map, TypeDescription typeDescription) {
                             return new TokenizedGenericType.Malformed.TokenList(typePool, list);
                         }
 
                         @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken.Resolution.ForMethod
-                        public TypeList.Generic resolveParameterTypes(List<String> list, TypePool typePool, Map<Integer, Map<String, List<AnnotationToken>>> map, MethodDescription.InDefinedShape inDefinedShape) {
+                        public TypeList.Generic resolveParameterTypes(List<String> list, TypePool typePool,
+                                Map<Integer, Map<String, List<AnnotationToken>>> map,
+                                MethodDescription.InDefinedShape inDefinedShape) {
                             return new TokenizedGenericType.Malformed.TokenList(typePool, list);
                         }
 
                         @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken.Resolution.ForRecordComponent
-                        public TypeDescription.Generic resolveRecordType(String str, TypePool typePool, Map<String, List<AnnotationToken>> map, RecordComponentDescription.InDefinedShape inDefinedShape) {
+                        public TypeDescription.Generic resolveRecordType(String str, TypePool typePool,
+                                Map<String, List<AnnotationToken>> map,
+                                RecordComponentDescription.InDefinedShape inDefinedShape) {
                             return new TokenizedGenericType.Malformed(typePool, str);
                         }
 
                         @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken.Resolution.ForMethod
-                        public TypeDescription.Generic resolveReturnType(String str, TypePool typePool, Map<String, List<AnnotationToken>> map, MethodDescription.InDefinedShape inDefinedShape) {
+                        public TypeDescription.Generic resolveReturnType(String str, TypePool typePool,
+                                Map<String, List<AnnotationToken>> map,
+                                MethodDescription.InDefinedShape inDefinedShape) {
                             return new TokenizedGenericType.Malformed(typePool, str);
                         }
 
                         @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken.Resolution.ForType
-                        public TypeDescription.Generic resolveSuperClass(String str, TypePool typePool, Map<String, List<AnnotationToken>> map, TypeDescription typeDescription) {
+                        public TypeDescription.Generic resolveSuperClass(String str, TypePool typePool,
+                                Map<String, List<AnnotationToken>> map, TypeDescription typeDescription) {
                             return new TokenizedGenericType.Malformed(typePool, str);
                         }
 
                         @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken.Resolution
-                        public TypeList.Generic resolveTypeVariables(TypePool typePool, TypeVariableSource typeVariableSource, Map<Integer, Map<String, List<AnnotationToken>>> map, Map<Integer, Map<Integer, Map<String, List<AnnotationToken>>>> map2) {
+                        public TypeList.Generic resolveTypeVariables(TypePool typePool,
+                                TypeVariableSource typeVariableSource,
+                                Map<Integer, Map<String, List<AnnotationToken>>> map,
+                                Map<Integer, Map<Integer, Map<String, List<AnnotationToken>>>> map2) {
                             throw new GenericSignatureFormatError();
                         }
                     }
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     public enum Raw implements ForType, ForField, ForMethod, ForRecordComponent {
                         INSTANCE;
 
-                        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                        /*
+                         * JADX INFO: compiled from:
+                         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                         */
                         public static class RawAnnotatedType extends TypeDescription.Generic.OfNonGenericType {
                             private final Map<String, List<AnnotationToken>> annotationTokens;
                             private final TypeDescription typeDescription;
                             private final String typePath;
                             private final TypePool typePool;
 
-                            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                            /*
+                             * JADX INFO: compiled from:
+                             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                             */
                             public static class LazyRawAnnotatedTypeList extends TypeList.Generic.AbstractBase {
                                 private final Map<Integer, Map<String, List<AnnotationToken>>> annotationTokens;
                                 private final List<String> descriptors;
                                 private final TypePool typePool;
 
-                                public LazyRawAnnotatedTypeList(TypePool typePool, Map<Integer, Map<String, List<AnnotationToken>>> map, List<String> list) {
+                                public LazyRawAnnotatedTypeList(TypePool typePool,
+                                        Map<Integer, Map<String, List<AnnotationToken>>> map, List<String> list) {
                                     this.typePool = typePool;
                                     this.annotationTokens = map;
                                     this.descriptors = list;
                                 }
 
-                                public static TypeList.Generic of(TypePool typePool, @MaybeNull Map<Integer, Map<String, List<AnnotationToken>>> map, List<String> list) {
+                                public static TypeList.Generic of(TypePool typePool,
+                                        @MaybeNull Map<Integer, Map<String, List<AnnotationToken>>> map,
+                                        List<String> list) {
                                     if (map == null) {
                                         map = Collections.EMPTY_MAP;
                                     }
                                     return new LazyRawAnnotatedTypeList(typePool, map, list);
                                 }
 
-                                @Override // net.bytebuddy.description.type.TypeList.Generic.AbstractBase, net.bytebuddy.description.type.TypeList.Generic
+                                @Override // net.bytebuddy.description.type.TypeList.Generic.AbstractBase,
+                                          // net.bytebuddy.description.type.TypeList.Generic
                                 public TypeList asErasures() {
                                     return new LazyTypeList(this.typePool, this.descriptors);
                                 }
 
-                                @Override // net.bytebuddy.description.type.TypeList.Generic.AbstractBase, net.bytebuddy.description.type.TypeList.Generic
+                                @Override // net.bytebuddy.description.type.TypeList.Generic.AbstractBase,
+                                          // net.bytebuddy.description.type.TypeList.Generic
                                 public TypeList.Generic asRawTypes() {
                                     return this;
                                 }
 
-                                @Override // net.bytebuddy.description.type.TypeList.Generic.AbstractBase, net.bytebuddy.description.type.TypeList.Generic
+                                @Override // net.bytebuddy.description.type.TypeList.Generic.AbstractBase,
+                                          // net.bytebuddy.description.type.TypeList.Generic
                                 public int getStackSize() {
                                     Iterator<String> it = this.descriptors.iterator();
                                     int size = 0;
@@ -2765,22 +3302,26 @@ public interface TypePool {
 
                                 @Override // java.util.AbstractList, java.util.List
                                 public TypeDescription.Generic get(int i) {
-                                    return RawAnnotatedType.of(this.typePool, this.annotationTokens.get(Integer.valueOf(i)), this.descriptors.get(i));
+                                    return RawAnnotatedType.of(this.typePool,
+                                            this.annotationTokens.get(Integer.valueOf(i)), this.descriptors.get(i));
                                 }
                             }
 
-                            public RawAnnotatedType(TypePool typePool, String str, Map<String, List<AnnotationToken>> map, TypeDescription typeDescription) {
+                            public RawAnnotatedType(TypePool typePool, String str,
+                                    Map<String, List<AnnotationToken>> map, TypeDescription typeDescription) {
                                 this.typePool = typePool;
                                 this.typePath = str;
                                 this.annotationTokens = map;
                                 this.typeDescription = typeDescription;
                             }
 
-                            public static TypeDescription.Generic of(TypePool typePool, @MaybeNull Map<String, List<AnnotationToken>> map, String str) {
+                            public static TypeDescription.Generic of(TypePool typePool,
+                                    @MaybeNull Map<String, List<AnnotationToken>> map, String str) {
                                 if (map == null) {
                                     map = Collections.EMPTY_MAP;
                                 }
-                                return new RawAnnotatedType(typePool, "", map, TokenizedGenericType.toErasure(typePool, str));
+                                return new RawAnnotatedType(typePool, "", map,
+                                        TokenizedGenericType.toErasure(typePool, str));
                             }
 
                             @Override // net.bytebuddy.description.type.TypeDefinition
@@ -2794,91 +3335,125 @@ public interface TypePool {
                                 for (int i = 0; i < this.typeDescription.getInnerClassCount(); i++) {
                                     sb.append(GenericTypeToken.INNER_CLASS_PATH);
                                 }
-                                return LazyAnnotationDescription.asListOfNullable(this.typePool, this.annotationTokens.get(sb.toString()));
+                                return LazyAnnotationDescription.asListOfNullable(this.typePool,
+                                        this.annotationTokens.get(sb.toString()));
                             }
 
                             @Override // net.bytebuddy.description.type.TypeDescription.Generic
                             @MaybeNull
                             public TypeDescription.Generic getOwnerType() {
                                 TypeDescription declaringType = this.typeDescription.getDeclaringType();
-                                return declaringType == null ? TypeDescription.Generic.UNDEFINED : new RawAnnotatedType(this.typePool, this.typePath, this.annotationTokens, declaringType);
+                                return declaringType == null ? TypeDescription.Generic.UNDEFINED
+                                        : new RawAnnotatedType(this.typePool, this.typePath, this.annotationTokens,
+                                                declaringType);
                             }
 
                             @Override // net.bytebuddy.description.type.TypeDefinition
                             @MaybeNull
                             public TypeDescription.Generic getComponentType() {
                                 TypeDescription componentType = this.typeDescription.getComponentType();
-                                return componentType == null ? TypeDescription.Generic.UNDEFINED : new RawAnnotatedType(this.typePool, bjs.q(new StringBuilder(), this.typePath, GenericTypeToken.COMPONENT_TYPE_PATH), this.annotationTokens, componentType);
+                                return componentType == null ? TypeDescription.Generic.UNDEFINED
+                                        : new RawAnnotatedType(this.typePool,
+                                                concat(new StringBuilder(), this.typePath,
+                                                        GenericTypeToken.COMPONENT_TYPE_PATH),
+                                                this.annotationTokens, componentType);
                             }
                         }
 
                         @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken.Resolution.ForMethod
-                        public TypeList.Generic resolveExceptionTypes(List<String> list, TypePool typePool, Map<Integer, Map<String, List<AnnotationToken>>> map, MethodDescription.InDefinedShape inDefinedShape) {
+                        public TypeList.Generic resolveExceptionTypes(List<String> list, TypePool typePool,
+                                Map<Integer, Map<String, List<AnnotationToken>>> map,
+                                MethodDescription.InDefinedShape inDefinedShape) {
                             return RawAnnotatedType.LazyRawAnnotatedTypeList.of(typePool, map, list);
                         }
 
                         @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken.Resolution.ForField
-                        public TypeDescription.Generic resolveFieldType(String str, TypePool typePool, Map<String, List<AnnotationToken>> map, FieldDescription.InDefinedShape inDefinedShape) {
+                        public TypeDescription.Generic resolveFieldType(String str, TypePool typePool,
+                                Map<String, List<AnnotationToken>> map,
+                                FieldDescription.InDefinedShape inDefinedShape) {
                             return RawAnnotatedType.of(typePool, map, str);
                         }
 
                         @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken.Resolution.ForType
-                        public TypeList.Generic resolveInterfaceTypes(List<String> list, TypePool typePool, Map<Integer, Map<String, List<AnnotationToken>>> map, TypeDescription typeDescription) {
+                        public TypeList.Generic resolveInterfaceTypes(List<String> list, TypePool typePool,
+                                Map<Integer, Map<String, List<AnnotationToken>>> map, TypeDescription typeDescription) {
                             return RawAnnotatedType.LazyRawAnnotatedTypeList.of(typePool, map, list);
                         }
 
                         @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken.Resolution.ForMethod
-                        public TypeList.Generic resolveParameterTypes(List<String> list, TypePool typePool, Map<Integer, Map<String, List<AnnotationToken>>> map, MethodDescription.InDefinedShape inDefinedShape) {
+                        public TypeList.Generic resolveParameterTypes(List<String> list, TypePool typePool,
+                                Map<Integer, Map<String, List<AnnotationToken>>> map,
+                                MethodDescription.InDefinedShape inDefinedShape) {
                             return RawAnnotatedType.LazyRawAnnotatedTypeList.of(typePool, map, list);
                         }
 
                         @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken.Resolution.ForRecordComponent
-                        public TypeDescription.Generic resolveRecordType(String str, TypePool typePool, Map<String, List<AnnotationToken>> map, RecordComponentDescription.InDefinedShape inDefinedShape) {
+                        public TypeDescription.Generic resolveRecordType(String str, TypePool typePool,
+                                Map<String, List<AnnotationToken>> map,
+                                RecordComponentDescription.InDefinedShape inDefinedShape) {
                             return RawAnnotatedType.of(typePool, map, str);
                         }
 
                         @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken.Resolution.ForMethod
-                        public TypeDescription.Generic resolveReturnType(String str, TypePool typePool, Map<String, List<AnnotationToken>> map, MethodDescription.InDefinedShape inDefinedShape) {
+                        public TypeDescription.Generic resolveReturnType(String str, TypePool typePool,
+                                Map<String, List<AnnotationToken>> map,
+                                MethodDescription.InDefinedShape inDefinedShape) {
                             return RawAnnotatedType.of(typePool, map, str);
                         }
 
                         @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken.Resolution.ForType
-                        public TypeDescription.Generic resolveSuperClass(String str, TypePool typePool, Map<String, List<AnnotationToken>> map, TypeDescription typeDescription) {
+                        public TypeDescription.Generic resolveSuperClass(String str, TypePool typePool,
+                                Map<String, List<AnnotationToken>> map, TypeDescription typeDescription) {
                             return RawAnnotatedType.of(typePool, map, str);
                         }
 
                         @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.GenericTypeToken.Resolution
-                        public TypeList.Generic resolveTypeVariables(TypePool typePool, TypeVariableSource typeVariableSource, Map<Integer, Map<String, List<AnnotationToken>>> map, Map<Integer, Map<Integer, Map<String, List<AnnotationToken>>>> map2) {
+                        public TypeList.Generic resolveTypeVariables(TypePool typePool,
+                                TypeVariableSource typeVariableSource,
+                                Map<Integer, Map<String, List<AnnotationToken>>> map,
+                                Map<Integer, Map<Integer, Map<String, List<AnnotationToken>>>> map2) {
                             return new TypeList.Generic.Empty();
                         }
                     }
 
-                    TypeList.Generic resolveTypeVariables(TypePool typePool, TypeVariableSource typeVariableSource, Map<Integer, Map<String, List<AnnotationToken>>> map, Map<Integer, Map<Integer, Map<String, List<AnnotationToken>>>> map2);
+                    TypeList.Generic resolveTypeVariables(TypePool typePool, TypeVariableSource typeVariableSource,
+                            Map<Integer, Map<String, List<AnnotationToken>>> map,
+                            Map<Integer, Map<Integer, Map<String, List<AnnotationToken>>>> map2);
                 }
 
                 String getTypePathPrefix();
 
                 boolean isPrimaryBound(TypePool typePool);
 
-                TypeDescription.Generic toGenericType(TypePool typePool, TypeVariableSource typeVariableSource, String str, Map<String, List<AnnotationToken>> map);
+                TypeDescription.Generic toGenericType(TypePool typePool, TypeVariableSource typeVariableSource,
+                        String str, Map<String, List<AnnotationToken>> map);
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class LazyAnnotationDescription extends AnnotationDescription.AbstractBase {
                 private final TypeDescription annotationType;
                 protected final TypePool typePool;
                 protected final Map<String, AnnotationValue<?, ?>> values;
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
-                public static class Loadable<S extends Annotation> extends LazyAnnotationDescription implements AnnotationDescription.Loadable<S> {
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
+                public static class Loadable<S extends Annotation> extends LazyAnnotationDescription
+                        implements AnnotationDescription.Loadable<S> {
                     private final Class<S> annotationType;
 
                     @Override // net.bytebuddy.description.annotation.AnnotationDescription.Loadable
                     public S load() {
-                        return (S) AnnotationDescription.AnnotationInvocationHandler.of(this.annotationType.getClassLoader(), this.annotationType, this.values);
+                        return (S) AnnotationDescription.AnnotationInvocationHandler
+                                .of(this.annotationType.getClassLoader(), this.annotationType, this.values);
                     }
 
-                    @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.LazyAnnotationDescription, net.bytebuddy.description.annotation.AnnotationDescription
+                    @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.LazyAnnotationDescription,
+                              // net.bytebuddy.description.annotation.AnnotationDescription
                     public /* bridge */ /* synthetic */ AnnotationDescription.Loadable prepare(Class cls) {
                         return super.prepare(cls);
                     }
@@ -2889,11 +3464,15 @@ public interface TypePool {
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public static class UnresolvedAnnotationList extends AnnotationList.Explicit {
                     private final List<? extends AnnotationToken> tokens;
 
-                    @Override // net.bytebuddy.description.annotation.AnnotationList.AbstractBase, net.bytebuddy.description.annotation.AnnotationList
+                    @Override // net.bytebuddy.description.annotation.AnnotationList.AbstractBase,
+                              // net.bytebuddy.description.annotation.AnnotationList
                     public List<String> asTypeNames() {
                         ArrayList arrayList = new ArrayList(this.tokens.size());
                         Iterator<? extends AnnotationToken> it = this.tokens.iterator();
@@ -2903,7 +3482,8 @@ public interface TypePool {
                         return arrayList;
                     }
 
-                    private UnresolvedAnnotationList(List<? extends AnnotationDescription> list, List<? extends AnnotationToken> list2) {
+                    private UnresolvedAnnotationList(List<? extends AnnotationDescription> list,
+                            List<? extends AnnotationToken> list2) {
                         super(list);
                         this.tokens = list2;
                     }
@@ -2914,14 +3494,16 @@ public interface TypePool {
                     Iterator<? extends AnnotationToken> it = list.iterator();
                     while (it.hasNext()) {
                         AnnotationToken.Resolution annotationDescription = it.next().toAnnotationDescription(typePool);
-                        if (annotationDescription.isResolved() && annotationDescription.resolve().getAnnotationType().isAnnotation()) {
+                        if (annotationDescription.isResolved()
+                                && annotationDescription.resolve().getAnnotationType().isAnnotation()) {
                             arrayList.add(annotationDescription.resolve());
                         }
                     }
                     return new UnresolvedAnnotationList(arrayList, list);
                 }
 
-                public static AnnotationList asListOfNullable(TypePool typePool, @MaybeNull List<? extends AnnotationToken> list) {
+                public static AnnotationList asListOfNullable(TypePool typePool,
+                        @MaybeNull List<? extends AnnotationToken> list) {
                     return list == null ? new AnnotationList.Empty() : asList(typePool, list);
                 }
 
@@ -2937,13 +3519,18 @@ public interface TypePool {
                         if (annotationValue != null) {
                             return annotationValue.filter(inDefinedShape);
                         }
-                        AnnotationValue<?, ?> defaultValue = ((MethodDescription.InDefinedShape) getAnnotationType().getDeclaredMethods().filter(ElementMatchers.is(inDefinedShape)).getOnly()).getDefaultValue();
-                        return defaultValue == null ? new AnnotationValue.ForMissingValue(this.annotationType, inDefinedShape.getName()) : defaultValue;
+                        AnnotationValue<?, ?> defaultValue = ((MethodDescription.InDefinedShape) getAnnotationType()
+                                .getDeclaredMethods().filter(ElementMatchers.is(inDefinedShape)).getOnly())
+                                .getDefaultValue();
+                        return defaultValue == null
+                                ? new AnnotationValue.ForMissingValue(this.annotationType, inDefinedShape.getName())
+                                : defaultValue;
                     }
                     throw new IllegalArgumentException(inDefinedShape + " is not declared by " + getAnnotationType());
                 }
 
-                private LazyAnnotationDescription(TypePool typePool, TypeDescription typeDescription, Map<String, AnnotationValue<?, ?>> map) {
+                private LazyAnnotationDescription(TypePool typePool, TypeDescription typeDescription,
+                        Map<String, AnnotationValue<?, ?>> map) {
                     this.typePool = typePool;
                     this.annotationType = typeDescription;
                     this.values = map;
@@ -2958,11 +3545,17 @@ public interface TypePool {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static abstract class LazyAnnotationValue<U, V> extends AnnotationValue.AbstractBase<U, V> {
                 private transient /* synthetic */ int hashCode;
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public static class ForAnnotationValue extends LazyAnnotationValue<AnnotationDescription, Annotation> {
                     private final AnnotationToken annotationToken;
                     private transient /* synthetic */ AnnotationValue resolved;
@@ -2975,8 +3568,16 @@ public interface TypePool {
                         AnnotationValue<AnnotationDescription, Annotation> forMissingType = null;
                         Object[] objArr = 0;
                         if (this.resolved == null) {
-                            AnnotationToken.Resolution annotationDescription = this.annotationToken.toAnnotationDescription(this.typePool);
-                            forMissingType = !annotationDescription.isResolved() ? new AnnotationValue.ForMissingType<>(this.annotationToken.getBinaryName()) : !annotationDescription.resolve().getAnnotationType().isAnnotation() ? new ForMismatchedType(annotationDescription.resolve().getAnnotationType().getName(), AnnotationValue.Sort.ANNOTATION) : new AnnotationValue.ForAnnotationDescription<>(annotationDescription.resolve());
+                            AnnotationToken.Resolution annotationDescription = this.annotationToken
+                                    .toAnnotationDescription(this.typePool);
+                            forMissingType = !annotationDescription.isResolved()
+                                    ? new AnnotationValue.ForMissingType<>(this.annotationToken.getBinaryName())
+                                    : !annotationDescription.resolve().getAnnotationType().isAnnotation()
+                                            ? new ForMismatchedType(
+                                                    annotationDescription.resolve().getAnnotationType().getName(),
+                                                    AnnotationValue.Sort.ANNOTATION)
+                                            : new AnnotationValue.ForAnnotationDescription<>(
+                                                    annotationDescription.resolve());
                         }
                         if (forMissingType == null) {
                             return this.resolved;
@@ -2997,14 +3598,17 @@ public interface TypePool {
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public static class ForArray extends LazyAnnotationValue<Object, Object> {
                     private final AbstractBase.ComponentTypeReference componentTypeReference;
                     private transient /* synthetic */ AnnotationValue resolved;
                     private final TypePool typePool;
                     private final List<AnnotationValue<?, ?>> values;
 
-                    /* JADX WARN: Found duplicated region for block: B:46:0x014d  */
+                    /* JADX WARN: Found duplicated region for block: B:46:0x014d */
                     /* JADX WARN: Multi-variable type inference failed */
                     @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.LazyAnnotationValue
                     @CachedReturnPlugin.Enhance("resolved")
@@ -3020,61 +3624,83 @@ public interface TypePool {
                                 if (!resolutionDescribe.isResolved()) {
                                     forMismatchedType = new AnnotationValue.ForMissingType<>(strResolve);
                                 } else if (resolutionDescribe.resolve().isEnum()) {
-                                    forMismatchedType = new AnnotationValue.ForDescriptionArray<>(EnumerationDescription.class, resolutionDescribe.resolve(), this.values);
+                                    forMismatchedType = new AnnotationValue.ForDescriptionArray<>(
+                                            EnumerationDescription.class, resolutionDescribe.resolve(), this.values);
                                 } else if (resolutionDescribe.resolve().isAnnotation()) {
-                                    forMismatchedType = new AnnotationValue.ForDescriptionArray<>(AnnotationDescription.class, resolutionDescribe.resolve(), this.values);
+                                    forMismatchedType = new AnnotationValue.ForDescriptionArray<>(
+                                            AnnotationDescription.class, resolutionDescribe.resolve(), this.values);
                                 } else if (resolutionDescribe.resolve().represents(Class.class)) {
-                                    forMismatchedType = new AnnotationValue.ForDescriptionArray<>(TypeDescription.class, resolutionDescribe.resolve(), this.values);
+                                    forMismatchedType = new AnnotationValue.ForDescriptionArray<>(TypeDescription.class,
+                                            resolutionDescribe.resolve(), this.values);
                                 } else if (resolutionDescribe.resolve().represents(String.class)) {
-                                    forMismatchedType = new AnnotationValue.ForDescriptionArray<>(String.class, resolutionDescribe.resolve(), this.values);
+                                    forMismatchedType = new AnnotationValue.ForDescriptionArray<>(String.class,
+                                            resolutionDescribe.resolve(), this.values);
                                 } else {
                                     TypeDescription typeDescriptionResolve = resolutionDescribe.resolve();
                                     Class cls = Boolean.TYPE;
                                     if (typeDescriptionResolve.represents(cls)) {
-                                        forMismatchedType = new AnnotationValue.ForDescriptionArray<>(cls, resolutionDescribe.resolve(), this.values);
+                                        forMismatchedType = new AnnotationValue.ForDescriptionArray<>(cls,
+                                                resolutionDescribe.resolve(), this.values);
                                     } else {
                                         TypeDescription typeDescriptionResolve2 = resolutionDescribe.resolve();
                                         Class cls2 = Byte.TYPE;
                                         if (typeDescriptionResolve2.represents(cls2)) {
-                                            forMismatchedType = new AnnotationValue.ForDescriptionArray<>(cls2, resolutionDescribe.resolve(), this.values);
+                                            forMismatchedType = new AnnotationValue.ForDescriptionArray<>(cls2,
+                                                    resolutionDescribe.resolve(), this.values);
                                         } else {
                                             TypeDescription typeDescriptionResolve3 = resolutionDescribe.resolve();
                                             Class cls3 = Short.TYPE;
                                             if (typeDescriptionResolve3.represents(cls3)) {
-                                                forMismatchedType = new AnnotationValue.ForDescriptionArray<>(cls3, resolutionDescribe.resolve(), this.values);
+                                                forMismatchedType = new AnnotationValue.ForDescriptionArray<>(cls3,
+                                                        resolutionDescribe.resolve(), this.values);
                                             } else {
                                                 TypeDescription typeDescriptionResolve4 = resolutionDescribe.resolve();
                                                 Class cls4 = Character.TYPE;
                                                 if (typeDescriptionResolve4.represents(cls4)) {
-                                                    forMismatchedType = new AnnotationValue.ForDescriptionArray<>(cls4, resolutionDescribe.resolve(), this.values);
+                                                    forMismatchedType = new AnnotationValue.ForDescriptionArray<>(cls4,
+                                                            resolutionDescribe.resolve(), this.values);
                                                 } else {
-                                                    TypeDescription typeDescriptionResolve5 = resolutionDescribe.resolve();
+                                                    TypeDescription typeDescriptionResolve5 = resolutionDescribe
+                                                            .resolve();
                                                     Class cls5 = Integer.TYPE;
                                                     if (typeDescriptionResolve5.represents(cls5)) {
-                                                        forMismatchedType = new AnnotationValue.ForDescriptionArray<>(cls5, resolutionDescribe.resolve(), this.values);
+                                                        forMismatchedType = new AnnotationValue.ForDescriptionArray<>(
+                                                                cls5, resolutionDescribe.resolve(), this.values);
                                                     } else {
-                                                        TypeDescription typeDescriptionResolve6 = resolutionDescribe.resolve();
+                                                        TypeDescription typeDescriptionResolve6 = resolutionDescribe
+                                                                .resolve();
                                                         Class cls6 = Long.TYPE;
                                                         if (typeDescriptionResolve6.represents(cls6)) {
-                                                            forMismatchedType = new AnnotationValue.ForDescriptionArray<>(cls6, resolutionDescribe.resolve(), this.values);
+                                                            forMismatchedType = new AnnotationValue.ForDescriptionArray<>(
+                                                                    cls6, resolutionDescribe.resolve(), this.values);
                                                         } else {
-                                                            TypeDescription typeDescriptionResolve7 = resolutionDescribe.resolve();
+                                                            TypeDescription typeDescriptionResolve7 = resolutionDescribe
+                                                                    .resolve();
                                                             Class cls7 = Float.TYPE;
                                                             if (typeDescriptionResolve7.represents(cls7)) {
-                                                                forMismatchedType = new AnnotationValue.ForDescriptionArray<>(cls7, resolutionDescribe.resolve(), this.values);
+                                                                forMismatchedType = new AnnotationValue.ForDescriptionArray<>(
+                                                                        cls7, resolutionDescribe.resolve(),
+                                                                        this.values);
                                                             } else {
-                                                                TypeDescription typeDescriptionResolve8 = resolutionDescribe.resolve();
+                                                                TypeDescription typeDescriptionResolve8 = resolutionDescribe
+                                                                        .resolve();
                                                                 Class cls8 = Double.TYPE;
                                                                 if (typeDescriptionResolve8.represents(cls8)) {
-                                                                    forMismatchedType = new AnnotationValue.ForDescriptionArray<>(cls8, resolutionDescribe.resolve(), this.values);
+                                                                    forMismatchedType = new AnnotationValue.ForDescriptionArray<>(
+                                                                            cls8, resolutionDescribe.resolve(),
+                                                                            this.values);
                                                                 } else {
                                                                     sort = AnnotationValue.Sort.NONE;
                                                                     List<AnnotationValue<?, ?>> list = this.values;
                                                                     listIterator = list.listIterator(list.size());
-                                                                    while (listIterator.hasPrevious() && !sort.isDefined()) {
+                                                                    while (listIterator.hasPrevious()
+                                                                            && !sort.isDefined()) {
                                                                         sort = listIterator.previous().getSort();
                                                                     }
-                                                                    forMismatchedType = new ForMismatchedType(AnnotationValue.RenderingDispatcher.CURRENT.toArrayErrorString(sort), sort);
+                                                                    forMismatchedType = new ForMismatchedType(
+                                                                            AnnotationValue.RenderingDispatcher.CURRENT
+                                                                                    .toArrayErrorString(sort),
+                                                                            sort);
                                                                 }
                                                             }
                                                         }
@@ -3091,7 +3717,8 @@ public interface TypePool {
                                 while (listIterator.hasPrevious()) {
                                     sort = listIterator.previous().getSort();
                                 }
-                                forMismatchedType = new ForMismatchedType(AnnotationValue.RenderingDispatcher.CURRENT.toArrayErrorString(sort), sort);
+                                forMismatchedType = new ForMismatchedType(
+                                        AnnotationValue.RenderingDispatcher.CURRENT.toArrayErrorString(sort), sort);
                             }
                         }
                         if (forMismatchedType == null) {
@@ -3106,7 +3733,8 @@ public interface TypePool {
                         return AnnotationValue.Sort.ARRAY;
                     }
 
-                    private ForArray(TypePool typePool, AbstractBase.ComponentTypeReference componentTypeReference, List<AnnotationValue<?, ?>> list) {
+                    private ForArray(TypePool typePool, AbstractBase.ComponentTypeReference componentTypeReference,
+                            List<AnnotationValue<?, ?>> list) {
                         super();
                         this.typePool = typePool;
                         this.componentTypeReference = componentTypeReference;
@@ -3114,7 +3742,10 @@ public interface TypePool {
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public static class ForEnumerationValue extends LazyAnnotationValue<EnumerationDescription, Enum<?>> {
                     private transient /* synthetic */ AnnotationValue resolved;
                     private final String typeName;
@@ -3132,9 +3763,16 @@ public interface TypePool {
                             if (!resolutionDescribe.isResolved()) {
                                 withUnknownConstant = new AnnotationValue.ForMissingType<>(this.typeName);
                             } else if (resolutionDescribe.resolve().isEnum()) {
-                                withUnknownConstant = resolutionDescribe.resolve().getDeclaredFields().filter(ElementMatchers.named(this.value)).isEmpty() ? new AnnotationValue.ForEnumerationDescription.WithUnknownConstant<>(resolutionDescribe.resolve(), this.value) : new AnnotationValue.ForEnumerationDescription<>(new EnumerationDescription.Latent(resolutionDescribe.resolve(), this.value));
+                                withUnknownConstant = resolutionDescribe.resolve().getDeclaredFields()
+                                        .filter(ElementMatchers.named(this.value)).isEmpty()
+                                                ? new AnnotationValue.ForEnumerationDescription.WithUnknownConstant<>(
+                                                        resolutionDescribe.resolve(), this.value)
+                                                : new AnnotationValue.ForEnumerationDescription<>(
+                                                        new EnumerationDescription.Latent(resolutionDescribe.resolve(),
+                                                                this.value));
                             } else {
-                                withUnknownConstant = new ForMismatchedType(this.typeName + "." + this.value, AnnotationValue.Sort.ENUMERATION);
+                                withUnknownConstant = new ForMismatchedType(this.typeName + "." + this.value,
+                                        AnnotationValue.Sort.ENUMERATION);
                             }
                         }
                         if (withUnknownConstant == null) {
@@ -3157,7 +3795,10 @@ public interface TypePool {
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class ForMismatchedType<W, X> extends AnnotationValue.AbstractBase<W, X> {
                     private final AnnotationValue.Sort sort;
@@ -3175,8 +3816,12 @@ public interface TypePool {
                     }
 
                     @Override // net.bytebuddy.description.annotation.AnnotationValue
-                    public AnnotationValue<W, X> filter(MethodDescription.InDefinedShape inDefinedShape, TypeDefinition typeDefinition) {
-                        return new AnnotationValue.ForMismatchedType(inDefinedShape, inDefinedShape.getReturnType().isArray() ? AnnotationValue.RenderingDispatcher.CURRENT.toArrayErrorString(this.sort) : this.value);
+                    public AnnotationValue<W, X> filter(MethodDescription.InDefinedShape inDefinedShape,
+                            TypeDefinition typeDefinition) {
+                        return new AnnotationValue.ForMismatchedType(inDefinedShape,
+                                inDefinedShape.getReturnType().isArray()
+                                        ? AnnotationValue.RenderingDispatcher.CURRENT.toArrayErrorString(this.sort)
+                                        : this.value);
                     }
 
                     @Override // net.bytebuddy.description.annotation.AnnotationValue
@@ -3209,7 +3854,10 @@ public interface TypePool {
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public static class ForTypeValue extends LazyAnnotationValue<TypeDescription, Class<?>> {
                     private transient /* synthetic */ AnnotationValue resolved;
                     private final String typeName;
@@ -3223,7 +3871,9 @@ public interface TypePool {
                             forTypeDescription = null;
                         } else {
                             Resolution resolutionDescribe = this.typePool.describe(this.typeName);
-                            forTypeDescription = resolutionDescribe.isResolved() ? new AnnotationValue.ForTypeDescription(resolutionDescribe.resolve()) : new AnnotationValue.ForMissingType<>(this.typeName);
+                            forTypeDescription = resolutionDescribe.isResolved()
+                                    ? new AnnotationValue.ForTypeDescription(resolutionDescribe.resolve())
+                                    : new AnnotationValue.ForMissingType<>(this.typeName);
                         }
                         if (forTypeDescription == null) {
                             return this.resolved;
@@ -3254,7 +3904,8 @@ public interface TypePool {
                 }
 
                 @Override // net.bytebuddy.description.annotation.AnnotationValue
-                public AnnotationValue<U, V> filter(MethodDescription.InDefinedShape inDefinedShape, TypeDefinition typeDefinition) {
+                public AnnotationValue<U, V> filter(MethodDescription.InDefinedShape inDefinedShape,
+                        TypeDefinition typeDefinition) {
                     return doResolve().filter(inDefinedShape, typeDefinition);
                 }
 
@@ -3288,7 +3939,10 @@ public interface TypePool {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public class LazyFieldDescription extends FieldDescription.InDefinedShape.AbstractBase {
                 private final List<AnnotationToken> annotationTokens;
                 private final String descriptor;
@@ -3302,10 +3956,12 @@ public interface TypePool {
 
                 @Override // net.bytebuddy.description.annotation.AnnotationSource
                 public AnnotationList getDeclaredAnnotations() {
-                    return LazyAnnotationDescription.asListOfNullable(LazyTypeDescription.this.typePool, this.annotationTokens);
+                    return LazyAnnotationDescription.asListOfNullable(LazyTypeDescription.this.typePool,
+                            this.annotationTokens);
                 }
 
-                @Override // net.bytebuddy.description.field.FieldDescription.AbstractBase, net.bytebuddy.description.NamedElement.WithDescriptor
+                @Override // net.bytebuddy.description.field.FieldDescription.AbstractBase,
+                          // net.bytebuddy.description.NamedElement.WithDescriptor
                 @MaybeNull
                 public String getGenericSignature() {
                     return this.genericSignature;
@@ -3323,10 +3979,13 @@ public interface TypePool {
 
                 @Override // net.bytebuddy.description.field.FieldDescription
                 public TypeDescription.Generic getType() {
-                    return this.signatureResolution.resolveFieldType(this.descriptor, LazyTypeDescription.this.typePool, this.typeAnnotationTokens, this);
+                    return this.signatureResolution.resolveFieldType(this.descriptor, LazyTypeDescription.this.typePool,
+                            this.typeAnnotationTokens, this);
                 }
 
-                private LazyFieldDescription(String str, int i, String str2, @MaybeNull String str3, GenericTypeToken.Resolution.ForField forField, Map<String, List<AnnotationToken>> map, List<AnnotationToken> list) {
+                private LazyFieldDescription(String str, int i, String str2, @MaybeNull String str3,
+                        GenericTypeToken.Resolution.ForField forField, Map<String, List<AnnotationToken>> map,
+                        List<AnnotationToken> list) {
                     this.modifiers = i;
                     this.name = str;
                     this.descriptor = str2;
@@ -3336,14 +3995,19 @@ public interface TypePool {
                     this.annotationTokens = list;
                 }
 
-                @Override // net.bytebuddy.description.field.FieldDescription, net.bytebuddy.description.DeclaredByType.WithMandatoryDeclaration, net.bytebuddy.description.DeclaredByType
+                @Override // net.bytebuddy.description.field.FieldDescription,
+                          // net.bytebuddy.description.DeclaredByType.WithMandatoryDeclaration,
+                          // net.bytebuddy.description.DeclaredByType
                 @Nonnull
                 public TypeDescription getDeclaringType() {
                     return LazyTypeDescription.this;
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public class LazyMethodDescription extends MethodDescription.InDefinedShape.AbstractBase {
                 private final List<AnnotationToken> annotationTokens;
 
@@ -3368,7 +4032,10 @@ public interface TypePool {
                 private final Map<Integer, Map<String, List<AnnotationToken>>> typeVariableAnnotationTokens;
                 private final Map<Integer, Map<Integer, Map<String, List<AnnotationToken>>>> typeVariableBoundAnnotationTokens;
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public class LazyNonGenericReceiverType extends TypeDescription.Generic.OfNonGenericType {
                     private final TypeDescription typeDescription;
 
@@ -3387,14 +4054,16 @@ public interface TypePool {
                         for (int i = 0; i < this.typeDescription.getInnerClassCount(); i++) {
                             sb.append(GenericTypeToken.INNER_CLASS_PATH);
                         }
-                        return LazyAnnotationDescription.asListOfNullable(LazyTypeDescription.this.typePool, (List) LazyMethodDescription.this.receiverTypeAnnotationTokens.get(sb.toString()));
+                        return LazyAnnotationDescription.asListOfNullable(LazyTypeDescription.this.typePool,
+                                (List) LazyMethodDescription.this.receiverTypeAnnotationTokens.get(sb.toString()));
                     }
 
                     @Override // net.bytebuddy.description.type.TypeDescription.Generic
                     @MaybeNull
                     public TypeDescription.Generic getOwnerType() {
                         TypeDescription declaringType = this.typeDescription.getDeclaringType();
-                        return declaringType == null ? TypeDescription.Generic.UNDEFINED : LazyMethodDescription.this.new LazyNonGenericReceiverType(declaringType);
+                        return declaringType == null ? TypeDescription.Generic.UNDEFINED
+                                : LazyMethodDescription.this.new LazyNonGenericReceiverType(declaringType);
                     }
 
                     public LazyNonGenericReceiverType(TypeDescription typeDescription) {
@@ -3408,7 +4077,10 @@ public interface TypePool {
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public class LazyParameterDescription extends ParameterDescription.InDefinedShape.AbstractBase {
                     private final int index;
 
@@ -3418,7 +4090,9 @@ public interface TypePool {
 
                     @Override // net.bytebuddy.description.annotation.AnnotationSource
                     public AnnotationList getDeclaredAnnotations() {
-                        return LazyAnnotationDescription.asListOfNullable(LazyTypeDescription.this.typePool, (List) LazyMethodDescription.this.parameterAnnotationTokens.get(Integer.valueOf(this.index)));
+                        return LazyAnnotationDescription.asListOfNullable(LazyTypeDescription.this.typePool,
+                                (List) LazyMethodDescription.this.parameterAnnotationTokens
+                                        .get(Integer.valueOf(this.index)));
                     }
 
                     @Override // net.bytebuddy.description.method.ParameterDescription
@@ -3426,19 +4100,25 @@ public interface TypePool {
                         return this.index;
                     }
 
-                    @Override // net.bytebuddy.description.method.ParameterDescription.AbstractBase, net.bytebuddy.description.ModifierReviewable
+                    @Override // net.bytebuddy.description.method.ParameterDescription.AbstractBase,
+                              // net.bytebuddy.description.ModifierReviewable
                     public int getModifiers() {
-                        return hasModifiers() ? LazyMethodDescription.this.parameterModifiers[this.index].intValue() : super.getModifiers();
+                        return hasModifiers() ? LazyMethodDescription.this.parameterModifiers[this.index].intValue()
+                                : super.getModifiers();
                     }
 
-                    @Override // net.bytebuddy.description.method.ParameterDescription.AbstractBase, net.bytebuddy.description.NamedElement.WithRuntimeName
+                    @Override // net.bytebuddy.description.method.ParameterDescription.AbstractBase,
+                              // net.bytebuddy.description.NamedElement.WithRuntimeName
                     public String getName() {
                         return isNamed() ? LazyMethodDescription.this.parameterNames[this.index] : super.getName();
                     }
 
                     @Override // net.bytebuddy.description.method.ParameterDescription
                     public TypeDescription.Generic getType() {
-                        return LazyMethodDescription.this.signatureResolution.resolveParameterTypes(LazyMethodDescription.this.parameterTypeDescriptors, LazyTypeDescription.this.typePool, LazyMethodDescription.this.parameterTypeAnnotationTokens, LazyMethodDescription.this).get(this.index);
+                        return LazyMethodDescription.this.signatureResolution.resolveParameterTypes(
+                                LazyMethodDescription.this.parameterTypeDescriptors, LazyTypeDescription.this.typePool,
+                                LazyMethodDescription.this.parameterTypeAnnotationTokens, LazyMethodDescription.this)
+                                .get(this.index);
                     }
 
                     @Override // net.bytebuddy.description.method.ParameterDescription
@@ -3451,26 +4131,35 @@ public interface TypePool {
                         return LazyMethodDescription.this.parameterNames[this.index] != null;
                     }
 
-                    @Override // net.bytebuddy.description.method.ParameterDescription, net.bytebuddy.description.method.ParameterDescription.InDefinedShape
+                    @Override // net.bytebuddy.description.method.ParameterDescription,
+                              // net.bytebuddy.description.method.ParameterDescription.InDefinedShape
                     public MethodDescription.InDefinedShape getDeclaringMethod() {
                         return LazyMethodDescription.this;
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public class LazyParameterList extends ParameterList.AbstractBase<ParameterDescription.InDefinedShape> {
                     private LazyParameterList() {
                     }
 
-                    @Override // net.bytebuddy.description.method.ParameterList.AbstractBase, net.bytebuddy.description.method.ParameterList
+                    @Override // net.bytebuddy.description.method.ParameterList.AbstractBase,
+                              // net.bytebuddy.description.method.ParameterList
                     public TypeList.Generic asTypeList() {
-                        return LazyMethodDescription.this.signatureResolution.resolveParameterTypes(LazyMethodDescription.this.parameterTypeDescriptors, LazyTypeDescription.this.typePool, LazyMethodDescription.this.parameterTypeAnnotationTokens, LazyMethodDescription.this);
+                        return LazyMethodDescription.this.signatureResolution.resolveParameterTypes(
+                                LazyMethodDescription.this.parameterTypeDescriptors, LazyTypeDescription.this.typePool,
+                                LazyMethodDescription.this.parameterTypeAnnotationTokens, LazyMethodDescription.this);
                     }
 
-                    @Override // net.bytebuddy.description.method.ParameterList.AbstractBase, net.bytebuddy.description.method.ParameterList
+                    @Override // net.bytebuddy.description.method.ParameterList.AbstractBase,
+                              // net.bytebuddy.description.method.ParameterList
                     public boolean hasExplicitMetaData() {
                         for (int i = 0; i < size(); i++) {
-                            if (LazyMethodDescription.this.parameterNames[i] == null || LazyMethodDescription.this.parameterModifiers[i] == null) {
+                            if (LazyMethodDescription.this.parameterNames[i] == null
+                                    || LazyMethodDescription.this.parameterModifiers[i] == null) {
                                 return false;
                             }
                         }
@@ -3488,15 +4177,24 @@ public interface TypePool {
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public class LazyParameterizedReceiverType extends TypeDescription.Generic.OfParameterizedType {
                     private final TypeDescription typeDescription;
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     public class TypeArgumentList extends TypeList.Generic.AbstractBase {
                         private final List<? extends TypeDescription.Generic> typeVariables;
 
-                        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                        /*
+                         * JADX INFO: compiled from:
+                         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                         */
                         public class AnnotatedTypeVariable extends TypeDescription.Generic.OfTypeVariable {
                             private final int index;
                             private final TypeDescription.Generic typeVariable;
@@ -3508,7 +4206,10 @@ public interface TypePool {
 
                             @Override // net.bytebuddy.description.annotation.AnnotationSource
                             public AnnotationList getDeclaredAnnotations() {
-                                return LazyAnnotationDescription.asListOfNullable(LazyTypeDescription.this.typePool, (List) LazyMethodDescription.this.receiverTypeAnnotationTokens.get(LazyParameterizedReceiverType.this.getTypePath() + this.index + GenericTypeToken.INDEXED_TYPE_DELIMITER));
+                                return LazyAnnotationDescription.asListOfNullable(LazyTypeDescription.this.typePool,
+                                        (List) LazyMethodDescription.this.receiverTypeAnnotationTokens
+                                                .get(LazyParameterizedReceiverType.this.getTypePath() + this.index
+                                                        + GenericTypeToken.INDEXED_TYPE_DELIMITER));
                             }
 
                             @Override // net.bytebuddy.description.type.TypeDescription.Generic
@@ -3562,14 +4263,18 @@ public interface TypePool {
 
                     @Override // net.bytebuddy.description.annotation.AnnotationSource
                     public AnnotationList getDeclaredAnnotations() {
-                        return LazyAnnotationDescription.asListOfNullable(LazyTypeDescription.this.typePool, (List) LazyMethodDescription.this.receiverTypeAnnotationTokens.get(getTypePath()));
+                        return LazyAnnotationDescription.asListOfNullable(LazyTypeDescription.this.typePool,
+                                (List) LazyMethodDescription.this.receiverTypeAnnotationTokens.get(getTypePath()));
                     }
 
                     @Override // net.bytebuddy.description.type.TypeDescription.Generic
                     @MaybeNull
                     public TypeDescription.Generic getOwnerType() {
                         TypeDescription declaringType = this.typeDescription.getDeclaringType();
-                        return declaringType == null ? TypeDescription.Generic.UNDEFINED : (this.typeDescription.isStatic() || !declaringType.isGenerified()) ? LazyMethodDescription.this.new LazyNonGenericReceiverType(declaringType) : LazyMethodDescription.this.new LazyParameterizedReceiverType(declaringType);
+                        return declaringType == null ? TypeDescription.Generic.UNDEFINED
+                                : (this.typeDescription.isStatic() || !declaringType.isGenerified())
+                                        ? LazyMethodDescription.this.new LazyNonGenericReceiverType(declaringType)
+                                        : LazyMethodDescription.this.new LazyParameterizedReceiverType(declaringType);
                     }
 
                     @Override // net.bytebuddy.description.type.TypeDescription.Generic
@@ -3595,10 +4300,12 @@ public interface TypePool {
 
                 @Override // net.bytebuddy.description.method.MethodDescription
                 public TypeList.Generic getExceptionTypes() {
-                    return this.signatureResolution.resolveExceptionTypes(this.exceptionTypeDescriptors, LazyTypeDescription.this.typePool, this.exceptionTypeAnnotationTokens, this);
+                    return this.signatureResolution.resolveExceptionTypes(this.exceptionTypeDescriptors,
+                            LazyTypeDescription.this.typePool, this.exceptionTypeAnnotationTokens, this);
                 }
 
-                @Override // net.bytebuddy.description.method.MethodDescription.AbstractBase, net.bytebuddy.description.NamedElement.WithDescriptor
+                @Override // net.bytebuddy.description.method.MethodDescription.AbstractBase,
+                          // net.bytebuddy.description.NamedElement.WithDescriptor
                 @MaybeNull
                 public String getGenericSignature() {
                     return this.genericSignature;
@@ -3614,36 +4321,53 @@ public interface TypePool {
                     return this.modifiers;
                 }
 
-                @Override // net.bytebuddy.description.method.MethodDescription, net.bytebuddy.description.method.MethodDescription.InDefinedShape
+                @Override // net.bytebuddy.description.method.MethodDescription,
+                          // net.bytebuddy.description.method.MethodDescription.InDefinedShape
                 public ParameterList<ParameterDescription.InDefinedShape> getParameters() {
                     return new LazyParameterList();
                 }
 
-                @Override // net.bytebuddy.description.method.MethodDescription.InDefinedShape.AbstractBase, net.bytebuddy.description.method.MethodDescription
+                @Override // net.bytebuddy.description.method.MethodDescription.InDefinedShape.AbstractBase,
+                          // net.bytebuddy.description.method.MethodDescription
                 @MaybeNull
                 public TypeDescription.Generic getReceiverType() {
                     if (isStatic()) {
                         return TypeDescription.Generic.UNDEFINED;
                     }
                     if (!isConstructor()) {
-                        return LazyTypeDescription.this.isGenerified() ? new LazyParameterizedReceiverType(this) : new LazyNonGenericReceiverType(this);
+                        return LazyTypeDescription.this.isGenerified() ? new LazyParameterizedReceiverType(this)
+                                : new LazyNonGenericReceiverType(this);
                     }
                     TypeDescription declaringType = getDeclaringType();
                     TypeDescription enclosingType = declaringType.getEnclosingType();
-                    return enclosingType == null ? declaringType.isGenerified() ? new LazyParameterizedReceiverType(declaringType) : new LazyNonGenericReceiverType(declaringType) : (declaringType.isStatic() || !declaringType.isGenerified()) ? new LazyNonGenericReceiverType(enclosingType) : new LazyParameterizedReceiverType(enclosingType);
+                    return enclosingType == null
+                            ? declaringType.isGenerified() ? new LazyParameterizedReceiverType(declaringType)
+                                    : new LazyNonGenericReceiverType(declaringType)
+                            : (declaringType.isStatic() || !declaringType.isGenerified())
+                                    ? new LazyNonGenericReceiverType(enclosingType)
+                                    : new LazyParameterizedReceiverType(enclosingType);
                 }
 
                 @Override // net.bytebuddy.description.method.MethodDescription
                 public TypeDescription.Generic getReturnType() {
-                    return this.signatureResolution.resolveReturnType(this.returnTypeDescriptor, LazyTypeDescription.this.typePool, this.returnTypeAnnotationTokens, this);
+                    return this.signatureResolution.resolveReturnType(this.returnTypeDescriptor,
+                            LazyTypeDescription.this.typePool, this.returnTypeAnnotationTokens, this);
                 }
 
                 @Override // net.bytebuddy.description.TypeVariableSource
                 public TypeList.Generic getTypeVariables() {
-                    return this.signatureResolution.resolveTypeVariables(LazyTypeDescription.this.typePool, this, this.typeVariableAnnotationTokens, this.typeVariableBoundAnnotationTokens);
+                    return this.signatureResolution.resolveTypeVariables(LazyTypeDescription.this.typePool, this,
+                            this.typeVariableAnnotationTokens, this.typeVariableBoundAnnotationTokens);
                 }
 
-                private LazyMethodDescription(String str, int i, String str2, @MaybeNull String str3, GenericTypeToken.Resolution.ForMethod forMethod, @MaybeNull String[] strArr, Map<Integer, Map<String, List<AnnotationToken>>> map, Map<Integer, Map<Integer, Map<String, List<AnnotationToken>>>> map2, Map<String, List<AnnotationToken>> map3, Map<Integer, Map<String, List<AnnotationToken>>> map4, Map<Integer, Map<String, List<AnnotationToken>>> map5, Map<String, List<AnnotationToken>> map6, List<AnnotationToken> list, Map<Integer, List<AnnotationToken>> map7, List<MethodToken.ParameterToken> list2, @MaybeNull AnnotationValue<?, ?> annotationValue) {
+                private LazyMethodDescription(String str, int i, String str2, @MaybeNull String str3,
+                        GenericTypeToken.Resolution.ForMethod forMethod, @MaybeNull String[] strArr,
+                        Map<Integer, Map<String, List<AnnotationToken>>> map,
+                        Map<Integer, Map<Integer, Map<String, List<AnnotationToken>>>> map2,
+                        Map<String, List<AnnotationToken>> map3, Map<Integer, Map<String, List<AnnotationToken>>> map4,
+                        Map<Integer, Map<String, List<AnnotationToken>>> map5, Map<String, List<AnnotationToken>> map6,
+                        List<AnnotationToken> list, Map<Integer, List<AnnotationToken>> map7,
+                        List<MethodToken.ParameterToken> list2, @MaybeNull AnnotationValue<?, ?> annotationValue) {
                     this.modifiers = i;
                     this.internalName = str;
                     Type methodType = Type.getMethodType(str2);
@@ -3685,14 +4409,19 @@ public interface TypePool {
                     this.defaultValue = annotationValue;
                 }
 
-                @Override // net.bytebuddy.description.method.MethodDescription, net.bytebuddy.description.DeclaredByType.WithMandatoryDeclaration, net.bytebuddy.description.DeclaredByType
+                @Override // net.bytebuddy.description.method.MethodDescription,
+                          // net.bytebuddy.description.DeclaredByType.WithMandatoryDeclaration,
+                          // net.bytebuddy.description.DeclaredByType
                 @Nonnull
                 public TypeDescription getDeclaringType() {
                     return LazyTypeDescription.this;
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public class LazyModuleDescription extends ModuleDescription.AbstractBase {
                 private final Map<String, ModuleDescription.Exports> exports;
 
@@ -3709,7 +4438,10 @@ public interface TypePool {
                 @MaybeNull
                 private final String version;
 
-                public LazyModuleDescription(String str, int i, @MaybeNull String str2, @MaybeNull String str3, Set<String> set, Map<String, ModuleDescription.Requires> map, Map<String, ModuleDescription.Exports> map2, Map<String, ModuleDescription.Opens> map3, Set<String> set2, Map<String, ModuleDescription.Provides> map4) {
+                public LazyModuleDescription(String str, int i, @MaybeNull String str2, @MaybeNull String str3,
+                        Set<String> set, Map<String, ModuleDescription.Requires> map,
+                        Map<String, ModuleDescription.Exports> map2, Map<String, ModuleDescription.Opens> map3,
+                        Set<String> set2, Map<String, ModuleDescription.Provides> map4) {
                     this.name = str;
                     this.modifiers = i;
                     this.version = str2;
@@ -3729,14 +4461,17 @@ public interface TypePool {
 
                 @Override // net.bytebuddy.description.annotation.AnnotationSource
                 public AnnotationList getDeclaredAnnotations() {
-                    return LazyAnnotationDescription.asListOfNullable(LazyTypeDescription.this.typePool, LazyTypeDescription.this.annotationTokens);
+                    return LazyAnnotationDescription.asListOfNullable(LazyTypeDescription.this.typePool,
+                            LazyTypeDescription.this.annotationTokens);
                 }
 
                 @Override // net.bytebuddy.description.module.ModuleDescription
                 public Map<String, ModuleDescription.Exports> getExports() {
                     LinkedHashMap linkedHashMap = new LinkedHashMap();
                     for (Map.Entry<String, ModuleDescription.Exports> entry : this.exports.entrySet()) {
-                        linkedHashMap.put(entry.getKey().replace('/', GenericTypeToken.INNER_CLASS_PATH), new ModuleDescription.Exports.Simple(new LinkedHashSet(entry.getValue().getTargets()), entry.getValue().getModifiers()));
+                        linkedHashMap.put(entry.getKey().replace('/', GenericTypeToken.INNER_CLASS_PATH),
+                                new ModuleDescription.Exports.Simple(new LinkedHashSet(entry.getValue().getTargets()),
+                                        entry.getValue().getModifiers()));
                     }
                     return linkedHashMap;
                 }
@@ -3760,7 +4495,9 @@ public interface TypePool {
                 public Map<String, ModuleDescription.Opens> getOpens() {
                     LinkedHashMap linkedHashMap = new LinkedHashMap();
                     for (Map.Entry<String, ModuleDescription.Opens> entry : this.opens.entrySet()) {
-                        linkedHashMap.put(entry.getKey().replace('/', GenericTypeToken.INNER_CLASS_PATH), new ModuleDescription.Opens.Simple(new LinkedHashSet(entry.getValue().getTargets()), entry.getValue().getModifiers()));
+                        linkedHashMap.put(entry.getKey().replace('/', GenericTypeToken.INNER_CLASS_PATH),
+                                new ModuleDescription.Opens.Simple(new LinkedHashSet(entry.getValue().getTargets()),
+                                        entry.getValue().getModifiers()));
                     }
                     return linkedHashMap;
                 }
@@ -3784,7 +4521,8 @@ public interface TypePool {
                         while (it.hasNext()) {
                             linkedHashSet.add(it.next().replace('/', GenericTypeToken.INNER_CLASS_PATH));
                         }
-                        linkedHashMap.put(entry.getKey().replace('/', GenericTypeToken.INNER_CLASS_PATH), new ModuleDescription.Provides.Simple(linkedHashSet));
+                        linkedHashMap.put(entry.getKey().replace('/', GenericTypeToken.INNER_CLASS_PATH),
+                                new ModuleDescription.Provides.Simple(linkedHashSet));
                     }
                     return linkedHashMap;
                 }
@@ -3811,7 +4549,10 @@ public interface TypePool {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class LazyNestMemberList extends TypeList.AbstractBase {
                 private final List<String> nestMembers;
                 private final TypeDescription typeDescription;
@@ -3823,7 +4564,8 @@ public interface TypePool {
                     this.nestMembers = list;
                 }
 
-                @Override // net.bytebuddy.description.type.TypeList.AbstractBase, net.bytebuddy.description.type.TypeList
+                @Override // net.bytebuddy.description.type.TypeList.AbstractBase,
+                          // net.bytebuddy.description.type.TypeList
                 public int getStackSize() {
                     return this.nestMembers.size() + 1;
                 }
@@ -3833,7 +4575,8 @@ public interface TypePool {
                     return this.nestMembers.size() + 1;
                 }
 
-                @Override // net.bytebuddy.description.type.TypeList.AbstractBase, net.bytebuddy.description.type.TypeList
+                @Override // net.bytebuddy.description.type.TypeList.AbstractBase,
+                          // net.bytebuddy.description.type.TypeList
                 public String[] toInternalNames() {
                     int i = 1;
                     String[] strArr = new String[this.nestMembers.size() + 1];
@@ -3848,11 +4591,15 @@ public interface TypePool {
 
                 @Override // java.util.AbstractList, java.util.List
                 public TypeDescription get(int i) {
-                    return i == 0 ? this.typeDescription : this.typePool.describe(this.nestMembers.get(i - 1)).resolve();
+                    return i == 0 ? this.typeDescription
+                            : this.typePool.describe(this.nestMembers.get(i - 1)).resolve();
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class LazyPackageDescription extends PackageDescription.AbstractBase {
                 private final String name;
                 private final TypePool typePool;
@@ -3860,7 +4607,8 @@ public interface TypePool {
                 @Override // net.bytebuddy.description.annotation.AnnotationSource
                 public AnnotationList getDeclaredAnnotations() {
                     Resolution resolutionDescribe = this.typePool.describe(this.name + ".package-info");
-                    return resolutionDescribe.isResolved() ? resolutionDescribe.resolve().getDeclaredAnnotations() : new AnnotationList.Empty();
+                    return resolutionDescribe.isResolved() ? resolutionDescribe.resolve().getDeclaredAnnotations()
+                            : new AnnotationList.Empty();
                 }
 
                 @Override // net.bytebuddy.description.NamedElement.WithRuntimeName
@@ -3874,7 +4622,10 @@ public interface TypePool {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public class LazyRecordComponentDescription extends RecordComponentDescription.InDefinedShape.AbstractBase {
                 private final List<AnnotationToken> annotationTokens;
                 private final String descriptor;
@@ -3895,7 +4646,8 @@ public interface TypePool {
                     return LazyAnnotationDescription.asList(LazyTypeDescription.this.typePool, this.annotationTokens);
                 }
 
-                @Override // net.bytebuddy.description.type.RecordComponentDescription.AbstractBase, net.bytebuddy.description.NamedElement.WithDescriptor
+                @Override // net.bytebuddy.description.type.RecordComponentDescription.AbstractBase,
+                          // net.bytebuddy.description.NamedElement.WithDescriptor
                 @MaybeNull
                 public String getGenericSignature() {
                     return this.genericSignature;
@@ -3903,10 +4655,13 @@ public interface TypePool {
 
                 @Override // net.bytebuddy.description.type.RecordComponentDescription
                 public TypeDescription.Generic getType() {
-                    return this.signatureResolution.resolveRecordType(this.descriptor, LazyTypeDescription.this.typePool, this.typeAnnotationTokens, this);
+                    return this.signatureResolution.resolveRecordType(this.descriptor,
+                            LazyTypeDescription.this.typePool, this.typeAnnotationTokens, this);
                 }
 
-                private LazyRecordComponentDescription(String str, String str2, @MaybeNull String str3, GenericTypeToken.Resolution.ForRecordComponent forRecordComponent, Map<String, List<AnnotationToken>> map, List<AnnotationToken> list) {
+                private LazyRecordComponentDescription(String str, String str2, @MaybeNull String str3,
+                        GenericTypeToken.Resolution.ForRecordComponent forRecordComponent,
+                        Map<String, List<AnnotationToken>> map, List<AnnotationToken> list) {
                     this.name = str;
                     this.descriptor = str2;
                     this.genericSignature = str3;
@@ -3915,14 +4670,18 @@ public interface TypePool {
                     this.annotationTokens = list;
                 }
 
-                @Override // net.bytebuddy.description.DeclaredByType.WithMandatoryDeclaration, net.bytebuddy.description.DeclaredByType
+                @Override // net.bytebuddy.description.DeclaredByType.WithMandatoryDeclaration,
+                          // net.bytebuddy.description.DeclaredByType
                 @Nonnull
                 public TypeDescription getDeclaringType() {
                     return LazyTypeDescription.this;
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class LazyTypeList extends TypeList.AbstractBase {
                 private final List<String> descriptors;
                 private final TypePool typePool;
@@ -3932,7 +4691,8 @@ public interface TypePool {
                     this.descriptors = list;
                 }
 
-                @Override // net.bytebuddy.description.type.TypeList.AbstractBase, net.bytebuddy.description.type.TypeList
+                @Override // net.bytebuddy.description.type.TypeList.AbstractBase,
+                          // net.bytebuddy.description.type.TypeList
                 public int getStackSize() {
                     Iterator<String> it = this.descriptors.iterator();
                     int size = 0;
@@ -3947,7 +4707,8 @@ public interface TypePool {
                     return this.descriptors.size();
                 }
 
-                @Override // net.bytebuddy.description.type.TypeList.AbstractBase, net.bytebuddy.description.type.TypeList
+                @Override // net.bytebuddy.description.type.TypeList.AbstractBase,
+                          // net.bytebuddy.description.type.TypeList
                 @MaybeNull
                 public String[] toInternalNames() {
                     int size = this.descriptors.size();
@@ -3967,7 +4728,10 @@ public interface TypePool {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class MethodToken {
                 private final List<AnnotationToken> annotationTokens;
@@ -3993,7 +4757,10 @@ public interface TypePool {
                 private final Map<Integer, Map<String, List<AnnotationToken>>> typeVariableAnnotationTokens;
                 private final Map<Integer, Map<Integer, Map<String, List<AnnotationToken>>>> typeVariableBoundAnnotationTokens;
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class ParameterToken {
 
@@ -4015,59 +4782,64 @@ public interface TypePool {
                         this(NO_NAME);
                     }
 
-                    /* JADX WARN: Code restructure failed: missing block: B:17:0x0024, code lost:
-                    
-                        if (r2 != null) goto L18;
+                    /*
+                     * JADX WARN: Code restructure failed: missing block: B:17:0x0024, code lost:
+                     * 
+                     * if (r2 != null) goto L18;
                      */
                     /* JADX WARN: Found duplicated region for block: B:27:0x0039 A[RETURN] */
                     /*
-                        Code decompiled incorrectly, please refer to instructions dump.
-                        To view partially-correct add '--show-bad-code' argument
-                    */
+                     * Code decompiled incorrectly, please refer to instructions dump.
+                     * To view partially-correct add '--show-bad-code' argument
+                     */
                     public boolean equals(@net.bytebuddy.utility.nullability.MaybeNull java.lang.Object r5) {
                         /*
-                            r4 = this;
-                            r0 = 1
-                            if (r4 != r5) goto L4
-                            return r0
-                        L4:
-                            r1 = 0
-                            if (r5 != 0) goto L8
-                            return r1
-                        L8:
-                            java.lang.Class r2 = r4.getClass()
-                            java.lang.Class r3 = r5.getClass()
-                            if (r2 == r3) goto L13
-                            return r1
-                        L13:
-                            java.lang.Integer r2 = r4.modifiers
-                            net.bytebuddy.pool.TypePool$Default$LazyTypeDescription$MethodToken$ParameterToken r5 = (net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.MethodToken.ParameterToken) r5
-                            java.lang.Integer r3 = r5.modifiers
-                            if (r3 == 0) goto L24
-                            if (r2 == 0) goto L26
-                            boolean r2 = r2.equals(r3)
-                            if (r2 != 0) goto L27
-                            return r1
-                        L24:
-                            if (r2 == 0) goto L27
-                        L26:
-                            return r1
-                        L27:
-                            java.lang.String r2 = r4.name
-                            java.lang.String r5 = r5.name
-                            if (r5 == 0) goto L36
-                            if (r2 == 0) goto L38
-                            boolean r5 = r2.equals(r5)
-                            if (r5 != 0) goto L39
-                            return r1
-                        L36:
-                            if (r2 == 0) goto L39
-                        L38:
-                            return r1
-                        L39:
-                            return r0
-                        */
-                        throw new UnsupportedOperationException("Method not decompiled: net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.MethodToken.ParameterToken.equals(java.lang.Object):boolean");
+                         * r4 = this;
+                         * r0 = 1
+                         * if (r4 != r5) goto L4
+                         * return r0
+                         * L4:
+                         * r1 = 0
+                         * if (r5 != 0) goto L8
+                         * return r1
+                         * L8:
+                         * java.lang.Class r2 = r4.getClass()
+                         * java.lang.Class r3 = r5.getClass()
+                         * if (r2 == r3) goto L13
+                         * return r1
+                         * L13:
+                         * java.lang.Integer r2 = r4.modifiers
+                         * net.bytebuddy.pool.
+                         * TypePool$Default$LazyTypeDescription$MethodToken$ParameterToken r5 =
+                         * (net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.MethodToken.
+                         * ParameterToken) r5
+                         * java.lang.Integer r3 = r5.modifiers
+                         * if (r3 == 0) goto L24
+                         * if (r2 == 0) goto L26
+                         * boolean r2 = r2.equals(r3)
+                         * if (r2 != 0) goto L27
+                         * return r1
+                         * L24:
+                         * if (r2 == 0) goto L27
+                         * L26:
+                         * return r1
+                         * L27:
+                         * java.lang.String r2 = r4.name
+                         * java.lang.String r5 = r5.name
+                         * if (r5 == 0) goto L36
+                         * if (r2 == 0) goto L38
+                         * boolean r5 = r2.equals(r5)
+                         * if (r5 != 0) goto L39
+                         * return r1
+                         * L36:
+                         * if (r2 == 0) goto L39
+                         * L38:
+                         * return r1
+                         * L39:
+                         * return r0
+                         */
+                        throw new UnsupportedOperationException(
+                                "Method not decompiled: net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.MethodToken.ParameterToken.equals(java.lang.Object):boolean");
                     }
 
                     @MaybeNull
@@ -4101,12 +4873,20 @@ public interface TypePool {
                     }
                 }
 
-                public MethodToken(String str, int i, String str2, @MaybeNull String str3, @MaybeNull String[] strArr, Map<Integer, Map<String, List<AnnotationToken>>> map, Map<Integer, Map<Integer, Map<String, List<AnnotationToken>>>> map2, Map<String, List<AnnotationToken>> map3, Map<Integer, Map<String, List<AnnotationToken>>> map4, Map<Integer, Map<String, List<AnnotationToken>>> map5, Map<String, List<AnnotationToken>> map6, List<AnnotationToken> list, Map<Integer, List<AnnotationToken>> map7, List<ParameterToken> list2, @MaybeNull AnnotationValue<?, ?> annotationValue) {
+                public MethodToken(String str, int i, String str2, @MaybeNull String str3, @MaybeNull String[] strArr,
+                        Map<Integer, Map<String, List<AnnotationToken>>> map,
+                        Map<Integer, Map<Integer, Map<String, List<AnnotationToken>>>> map2,
+                        Map<String, List<AnnotationToken>> map3, Map<Integer, Map<String, List<AnnotationToken>>> map4,
+                        Map<Integer, Map<String, List<AnnotationToken>>> map5, Map<String, List<AnnotationToken>> map6,
+                        List<AnnotationToken> list, Map<Integer, List<AnnotationToken>> map7,
+                        List<ParameterToken> list2, @MaybeNull AnnotationValue<?, ?> annotationValue) {
                     this.modifiers = i & (-131073);
                     this.name = str;
                     this.descriptor = str2;
                     this.genericSignature = str3;
-                    this.signatureResolution = TypeDescription.AbstractBase.RAW_TYPES ? GenericTypeToken.Resolution.Raw.INSTANCE : GenericTypeExtractor.ForSignature.OfMethod.extract(str3);
+                    this.signatureResolution = TypeDescription.AbstractBase.RAW_TYPES
+                            ? GenericTypeToken.Resolution.Raw.INSTANCE
+                            : GenericTypeExtractor.ForSignature.OfMethod.extract(str3);
                     this.exceptionName = strArr;
                     this.typeVariableAnnotationTokens = map;
                     this.typeVariableBoundAnnotationTokens = map2;
@@ -4123,7 +4903,12 @@ public interface TypePool {
                 /* JADX INFO: Access modifiers changed from: private */
                 public MethodDescription.InDefinedShape toMethodDescription(LazyTypeDescription lazyTypeDescription) {
                     lazyTypeDescription.getClass();
-                    return new LazyMethodDescription(this.name, this.modifiers, this.descriptor, this.genericSignature, this.signatureResolution, this.exceptionName, this.typeVariableAnnotationTokens, this.typeVariableBoundAnnotationTokens, this.returnTypeAnnotationTokens, this.parameterTypeAnnotationTokens, this.exceptionTypeAnnotationTokens, this.receiverTypeAnnotationTokens, this.annotationTokens, this.parameterAnnotationTokens, this.parameterTokens, this.defaultValue);
+                    return new LazyMethodDescription(this.name, this.modifiers, this.descriptor, this.genericSignature,
+                            this.signatureResolution, this.exceptionName, this.typeVariableAnnotationTokens,
+                            this.typeVariableBoundAnnotationTokens, this.returnTypeAnnotationTokens,
+                            this.parameterTypeAnnotationTokens, this.exceptionTypeAnnotationTokens,
+                            this.receiverTypeAnnotationTokens, this.annotationTokens, this.parameterAnnotationTokens,
+                            this.parameterTokens, this.defaultValue);
                 }
 
                 public boolean equals(@MaybeNull Object obj) {
@@ -4134,15 +4919,50 @@ public interface TypePool {
                         return false;
                     }
                     MethodToken methodToken = (MethodToken) obj;
-                    return this.modifiers == methodToken.modifiers && this.name.equals(methodToken.name) && this.descriptor.equals(methodToken.descriptor) && this.genericSignature.equals(methodToken.genericSignature) && this.signatureResolution.equals(methodToken.signatureResolution) && Arrays.equals(this.exceptionName, methodToken.exceptionName) && this.typeVariableAnnotationTokens.equals(methodToken.typeVariableAnnotationTokens) && this.typeVariableBoundAnnotationTokens.equals(methodToken.typeVariableBoundAnnotationTokens) && this.returnTypeAnnotationTokens.equals(methodToken.returnTypeAnnotationTokens) && this.parameterTypeAnnotationTokens.equals(methodToken.parameterTypeAnnotationTokens) && this.exceptionTypeAnnotationTokens.equals(methodToken.exceptionTypeAnnotationTokens) && this.receiverTypeAnnotationTokens.equals(methodToken.receiverTypeAnnotationTokens) && this.annotationTokens.equals(methodToken.annotationTokens) && this.parameterAnnotationTokens.equals(methodToken.parameterAnnotationTokens) && this.parameterTokens.equals(methodToken.parameterTokens) && this.defaultValue.equals(methodToken.defaultValue);
+                    return this.modifiers == methodToken.modifiers && this.name.equals(methodToken.name)
+                            && this.descriptor.equals(methodToken.descriptor)
+                            && this.genericSignature.equals(methodToken.genericSignature)
+                            && this.signatureResolution.equals(methodToken.signatureResolution)
+                            && Arrays.equals(this.exceptionName, methodToken.exceptionName)
+                            && this.typeVariableAnnotationTokens.equals(methodToken.typeVariableAnnotationTokens)
+                            && this.typeVariableBoundAnnotationTokens
+                                    .equals(methodToken.typeVariableBoundAnnotationTokens)
+                            && this.returnTypeAnnotationTokens.equals(methodToken.returnTypeAnnotationTokens)
+                            && this.parameterTypeAnnotationTokens.equals(methodToken.parameterTypeAnnotationTokens)
+                            && this.exceptionTypeAnnotationTokens.equals(methodToken.exceptionTypeAnnotationTokens)
+                            && this.receiverTypeAnnotationTokens.equals(methodToken.receiverTypeAnnotationTokens)
+                            && this.annotationTokens.equals(methodToken.annotationTokens)
+                            && this.parameterAnnotationTokens.equals(methodToken.parameterAnnotationTokens)
+                            && this.parameterTokens.equals(methodToken.parameterTokens)
+                            && this.defaultValue.equals(methodToken.defaultValue);
                 }
 
                 public int hashCode() {
-                    return this.defaultValue.hashCode() + bjs.g(this.parameterTokens, yg.c(this.parameterAnnotationTokens, bjs.g(this.annotationTokens, yg.c(this.receiverTypeAnnotationTokens, yg.c(this.exceptionTypeAnnotationTokens, yg.c(this.parameterTypeAnnotationTokens, yg.c(this.returnTypeAnnotationTokens, yg.c(this.typeVariableBoundAnnotationTokens, yg.c(this.typeVariableAnnotationTokens, (((this.signatureResolution.hashCode() + bjs.e(this.genericSignature, bjs.e(this.descriptor, (bjs.e(this.name, getClass().hashCode() * 31, 31) + this.modifiers) * 31, 31), 31)) * 31) + Arrays.hashCode(this.exceptionName)) * 31, 31), 31), 31), 31), 31), 31), 31), 31), 31);
+                    return this.defaultValue.hashCode() + bjs.g(this.parameterTokens, yg.c(
+                            this.parameterAnnotationTokens,
+                            bjs.g(this.annotationTokens, yg.c(this.receiverTypeAnnotationTokens, yg.c(
+                                    this.exceptionTypeAnnotationTokens,
+                                    yg.c(this.parameterTypeAnnotationTokens, yg.c(this.returnTypeAnnotationTokens, yg.c(
+                                            this.typeVariableBoundAnnotationTokens,
+                                            yg.c(this.typeVariableAnnotationTokens, (((this.signatureResolution
+                                                    .hashCode()
+                                                    + bjs.e(this.genericSignature,
+                                                            bjs.e(this.descriptor,
+                                                                    (bjs.e(this.name, getClass().hashCode() * 31, 31)
+                                                                            + this.modifiers) * 31,
+                                                                    31),
+                                                            31))
+                                                    * 31) + Arrays.hashCode(this.exceptionName)) * 31, 31),
+                                            31), 31), 31),
+                                    31), 31), 31),
+                            31), 31);
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public class MethodTokenList extends MethodList.AbstractBase<MethodDescription.InDefinedShape> {
                 public MethodTokenList() {
                 }
@@ -4154,11 +4974,15 @@ public interface TypePool {
 
                 @Override // java.util.AbstractList, java.util.List
                 public MethodDescription.InDefinedShape get(int i) {
-                    return ((MethodToken) LazyTypeDescription.this.methodTokens.get(i)).toMethodDescription(LazyTypeDescription.this);
+                    return ((MethodToken) LazyTypeDescription.this.methodTokens.get(i))
+                            .toMethodDescription(LazyTypeDescription.this);
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ModuleToken {
                 private final Map<String, ModuleDescription.Exports> exports;
@@ -4178,7 +5002,10 @@ public interface TypePool {
                 @HashCodeAndEqualsPlugin.ValueHandling(HashCodeAndEqualsPlugin.ValueHandling.Sort.REVERSE_NULLABILITY)
                 private final String version;
 
-                public ModuleToken(String str, int i, @MaybeNull String str2, @MaybeNull String str3, Set<String> set, Map<String, ModuleDescription.Requires> map, Map<String, ModuleDescription.Exports> map2, Map<String, ModuleDescription.Opens> map3, Set<String> set2, Map<String, ModuleDescription.Provides> map4) {
+                public ModuleToken(String str, int i, @MaybeNull String str2, @MaybeNull String str3, Set<String> set,
+                        Map<String, ModuleDescription.Requires> map, Map<String, ModuleDescription.Exports> map2,
+                        Map<String, ModuleDescription.Opens> map3, Set<String> set2,
+                        Map<String, ModuleDescription.Provides> map4) {
                     this.name = str;
                     this.modifiers = i;
                     this.version = str2;
@@ -4194,112 +5021,126 @@ public interface TypePool {
                 /* JADX INFO: Access modifiers changed from: private */
                 public LazyModuleDescription toModuleDescription(LazyTypeDescription lazyTypeDescription) {
                     lazyTypeDescription.getClass();
-                    return lazyTypeDescription.new LazyModuleDescription(this.name, this.modifiers, this.version, this.mainClass, this.packages, this.requires, this.exports, this.opens, this.uses, this.provides);
+                    return lazyTypeDescription.new LazyModuleDescription(this.name, this.modifiers, this.version,
+                            this.mainClass, this.packages, this.requires, this.exports, this.opens, this.uses,
+                            this.provides);
                 }
 
-                /* JADX WARN: Code restructure failed: missing block: B:23:0x0036, code lost:
-                
-                    if (r2 != null) goto L24;
-                 */
-                /* JADX WARN: Code restructure failed: missing block: B:31:0x0048, code lost:
-                
-                    if (r2 != null) goto L32;
+                /*
+                 * JADX WARN: Code restructure failed: missing block: B:23:0x0036, code lost:
+                 * 
+                 * if (r2 != null) goto L24;
                  */
                 /*
-                    Code decompiled incorrectly, please refer to instructions dump.
-                    To view partially-correct add '--show-bad-code' argument
-                */
+                 * JADX WARN: Code restructure failed: missing block: B:31:0x0048, code lost:
+                 * 
+                 * if (r2 != null) goto L32;
+                 */
+                /*
+                 * Code decompiled incorrectly, please refer to instructions dump.
+                 * To view partially-correct add '--show-bad-code' argument
+                 */
                 public boolean equals(@net.bytebuddy.utility.nullability.MaybeNull java.lang.Object r5) {
                     /*
-                        r4 = this;
-                        r0 = 1
-                        if (r4 != r5) goto L4
-                        return r0
-                    L4:
-                        r1 = 0
-                        if (r5 != 0) goto L8
-                        return r1
-                    L8:
-                        java.lang.Class r2 = r4.getClass()
-                        java.lang.Class r3 = r5.getClass()
-                        if (r2 == r3) goto L13
-                        return r1
-                    L13:
-                        int r2 = r4.modifiers
-                        net.bytebuddy.pool.TypePool$Default$LazyTypeDescription$ModuleToken r5 = (net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.ModuleToken) r5
-                        int r3 = r5.modifiers
-                        if (r2 == r3) goto L1c
-                        return r1
-                    L1c:
-                        java.lang.String r2 = r4.name
-                        java.lang.String r3 = r5.name
-                        boolean r2 = r2.equals(r3)
-                        if (r2 != 0) goto L27
-                        return r1
-                    L27:
-                        java.lang.String r2 = r4.version
-                        java.lang.String r3 = r5.version
-                        if (r3 == 0) goto L36
-                        if (r2 == 0) goto L38
-                        boolean r2 = r2.equals(r3)
-                        if (r2 != 0) goto L39
-                        return r1
-                    L36:
-                        if (r2 == 0) goto L39
-                    L38:
-                        return r1
-                    L39:
-                        java.lang.String r2 = r4.mainClass
-                        java.lang.String r3 = r5.mainClass
-                        if (r3 == 0) goto L48
-                        if (r2 == 0) goto L4a
-                        boolean r2 = r2.equals(r3)
-                        if (r2 != 0) goto L4b
-                        return r1
-                    L48:
-                        if (r2 == 0) goto L4b
-                    L4a:
-                        return r1
-                    L4b:
-                        java.util.Set<java.lang.String> r2 = r4.packages
-                        java.util.Set<java.lang.String> r3 = r5.packages
-                        boolean r2 = r2.equals(r3)
-                        if (r2 != 0) goto L56
-                        return r1
-                    L56:
-                        java.util.Map<java.lang.String, net.bytebuddy.description.module.ModuleDescription$Requires> r2 = r4.requires
-                        java.util.Map<java.lang.String, net.bytebuddy.description.module.ModuleDescription$Requires> r3 = r5.requires
-                        boolean r2 = r2.equals(r3)
-                        if (r2 != 0) goto L61
-                        return r1
-                    L61:
-                        java.util.Map<java.lang.String, net.bytebuddy.description.module.ModuleDescription$Exports> r2 = r4.exports
-                        java.util.Map<java.lang.String, net.bytebuddy.description.module.ModuleDescription$Exports> r3 = r5.exports
-                        boolean r2 = r2.equals(r3)
-                        if (r2 != 0) goto L6c
-                        return r1
-                    L6c:
-                        java.util.Map<java.lang.String, net.bytebuddy.description.module.ModuleDescription$Opens> r2 = r4.opens
-                        java.util.Map<java.lang.String, net.bytebuddy.description.module.ModuleDescription$Opens> r3 = r5.opens
-                        boolean r2 = r2.equals(r3)
-                        if (r2 != 0) goto L77
-                        return r1
-                    L77:
-                        java.util.Set<java.lang.String> r2 = r4.uses
-                        java.util.Set<java.lang.String> r3 = r5.uses
-                        boolean r2 = r2.equals(r3)
-                        if (r2 != 0) goto L82
-                        return r1
-                    L82:
-                        java.util.Map<java.lang.String, net.bytebuddy.description.module.ModuleDescription$Provides> r2 = r4.provides
-                        java.util.Map<java.lang.String, net.bytebuddy.description.module.ModuleDescription$Provides> r5 = r5.provides
-                        boolean r5 = r2.equals(r5)
-                        if (r5 != 0) goto L8d
-                        return r1
-                    L8d:
-                        return r0
-                    */
-                    throw new UnsupportedOperationException("Method not decompiled: net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.ModuleToken.equals(java.lang.Object):boolean");
+                     * r4 = this;
+                     * r0 = 1
+                     * if (r4 != r5) goto L4
+                     * return r0
+                     * L4:
+                     * r1 = 0
+                     * if (r5 != 0) goto L8
+                     * return r1
+                     * L8:
+                     * java.lang.Class r2 = r4.getClass()
+                     * java.lang.Class r3 = r5.getClass()
+                     * if (r2 == r3) goto L13
+                     * return r1
+                     * L13:
+                     * int r2 = r4.modifiers
+                     * net.bytebuddy.pool.TypePool$Default$LazyTypeDescription$ModuleToken r5 =
+                     * (net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.ModuleToken) r5
+                     * int r3 = r5.modifiers
+                     * if (r2 == r3) goto L1c
+                     * return r1
+                     * L1c:
+                     * java.lang.String r2 = r4.name
+                     * java.lang.String r3 = r5.name
+                     * boolean r2 = r2.equals(r3)
+                     * if (r2 != 0) goto L27
+                     * return r1
+                     * L27:
+                     * java.lang.String r2 = r4.version
+                     * java.lang.String r3 = r5.version
+                     * if (r3 == 0) goto L36
+                     * if (r2 == 0) goto L38
+                     * boolean r2 = r2.equals(r3)
+                     * if (r2 != 0) goto L39
+                     * return r1
+                     * L36:
+                     * if (r2 == 0) goto L39
+                     * L38:
+                     * return r1
+                     * L39:
+                     * java.lang.String r2 = r4.mainClass
+                     * java.lang.String r3 = r5.mainClass
+                     * if (r3 == 0) goto L48
+                     * if (r2 == 0) goto L4a
+                     * boolean r2 = r2.equals(r3)
+                     * if (r2 != 0) goto L4b
+                     * return r1
+                     * L48:
+                     * if (r2 == 0) goto L4b
+                     * L4a:
+                     * return r1
+                     * L4b:
+                     * java.util.Set<java.lang.String> r2 = r4.packages
+                     * java.util.Set<java.lang.String> r3 = r5.packages
+                     * boolean r2 = r2.equals(r3)
+                     * if (r2 != 0) goto L56
+                     * return r1
+                     * L56:
+                     * java.util.Map<java.lang.String,
+                     * net.bytebuddy.description.module.ModuleDescription$Requires> r2 = r4.requires
+                     * java.util.Map<java.lang.String,
+                     * net.bytebuddy.description.module.ModuleDescription$Requires> r3 = r5.requires
+                     * boolean r2 = r2.equals(r3)
+                     * if (r2 != 0) goto L61
+                     * return r1
+                     * L61:
+                     * java.util.Map<java.lang.String,
+                     * net.bytebuddy.description.module.ModuleDescription$Exports> r2 = r4.exports
+                     * java.util.Map<java.lang.String,
+                     * net.bytebuddy.description.module.ModuleDescription$Exports> r3 = r5.exports
+                     * boolean r2 = r2.equals(r3)
+                     * if (r2 != 0) goto L6c
+                     * return r1
+                     * L6c:
+                     * java.util.Map<java.lang.String,
+                     * net.bytebuddy.description.module.ModuleDescription$Opens> r2 = r4.opens
+                     * java.util.Map<java.lang.String,
+                     * net.bytebuddy.description.module.ModuleDescription$Opens> r3 = r5.opens
+                     * boolean r2 = r2.equals(r3)
+                     * if (r2 != 0) goto L77
+                     * return r1
+                     * L77:
+                     * java.util.Set<java.lang.String> r2 = r4.uses
+                     * java.util.Set<java.lang.String> r3 = r5.uses
+                     * boolean r2 = r2.equals(r3)
+                     * if (r2 != 0) goto L82
+                     * return r1
+                     * L82:
+                     * java.util.Map<java.lang.String,
+                     * net.bytebuddy.description.module.ModuleDescription$Provides> r2 = r4.provides
+                     * java.util.Map<java.lang.String,
+                     * net.bytebuddy.description.module.ModuleDescription$Provides> r5 = r5.provides
+                     * boolean r5 = r2.equals(r5)
+                     * if (r5 != 0) goto L8d
+                     * return r1
+                     * L8d:
+                     * return r0
+                     */
+                    throw new UnsupportedOperationException(
+                            "Method not decompiled: net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.ModuleToken.equals(java.lang.Object):boolean");
                 }
 
                 public int hashCode() {
@@ -4313,11 +5154,17 @@ public interface TypePool {
                     if (str2 != null) {
                         iHashCode += str2.hashCode();
                     }
-                    return this.provides.hashCode() + ((this.uses.hashCode() + yg.c(this.opens, yg.c(this.exports, yg.c(this.requires, (this.packages.hashCode() + (iHashCode * 31)) * 31, 31), 31), 31)) * 31);
+                    return this.provides.hashCode() + ((this.uses.hashCode() + yg.c(this.opens,
+                            yg.c(this.exports,
+                                    yg.c(this.requires, (this.packages.hashCode() + (iHashCode * 31)) * 31, 31), 31),
+                            31)) * 31);
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class RecordComponentToken {
                 private final List<AnnotationToken> annotationTokens;
@@ -4329,19 +5176,24 @@ public interface TypePool {
                 private final GenericTypeToken.Resolution.ForRecordComponent signatureResolution;
                 private final Map<String, List<AnnotationToken>> typeAnnotationTokens;
 
-                public RecordComponentToken(String str, String str2, @MaybeNull String str3, Map<String, List<AnnotationToken>> map, List<AnnotationToken> list) {
+                public RecordComponentToken(String str, String str2, @MaybeNull String str3,
+                        Map<String, List<AnnotationToken>> map, List<AnnotationToken> list) {
                     this.name = str;
                     this.descriptor = str2;
                     this.genericSignature = str3;
-                    this.signatureResolution = TypeDescription.AbstractBase.RAW_TYPES ? GenericTypeToken.Resolution.Raw.INSTANCE : GenericTypeExtractor.ForSignature.OfRecordComponent.extract(str3);
+                    this.signatureResolution = TypeDescription.AbstractBase.RAW_TYPES
+                            ? GenericTypeToken.Resolution.Raw.INSTANCE
+                            : GenericTypeExtractor.ForSignature.OfRecordComponent.extract(str3);
                     this.typeAnnotationTokens = map;
                     this.annotationTokens = list;
                 }
 
                 /* JADX INFO: Access modifiers changed from: private */
-                public RecordComponentDescription.InDefinedShape toRecordComponentDescription(LazyTypeDescription lazyTypeDescription) {
+                public RecordComponentDescription.InDefinedShape toRecordComponentDescription(
+                        LazyTypeDescription lazyTypeDescription) {
                     lazyTypeDescription.getClass();
-                    return new LazyRecordComponentDescription(this.name, this.descriptor, this.genericSignature, this.signatureResolution, this.typeAnnotationTokens, this.annotationTokens);
+                    return new LazyRecordComponentDescription(this.name, this.descriptor, this.genericSignature,
+                            this.signatureResolution, this.typeAnnotationTokens, this.annotationTokens);
                 }
 
                 public boolean equals(@MaybeNull Object obj) {
@@ -4352,16 +5204,29 @@ public interface TypePool {
                         return false;
                     }
                     RecordComponentToken recordComponentToken = (RecordComponentToken) obj;
-                    return this.name.equals(recordComponentToken.name) && this.descriptor.equals(recordComponentToken.descriptor) && this.genericSignature.equals(recordComponentToken.genericSignature) && this.signatureResolution.equals(recordComponentToken.signatureResolution) && this.typeAnnotationTokens.equals(recordComponentToken.typeAnnotationTokens) && this.annotationTokens.equals(recordComponentToken.annotationTokens);
+                    return this.name.equals(recordComponentToken.name)
+                            && this.descriptor.equals(recordComponentToken.descriptor)
+                            && this.genericSignature.equals(recordComponentToken.genericSignature)
+                            && this.signatureResolution.equals(recordComponentToken.signatureResolution)
+                            && this.typeAnnotationTokens.equals(recordComponentToken.typeAnnotationTokens)
+                            && this.annotationTokens.equals(recordComponentToken.annotationTokens);
                 }
 
                 public int hashCode() {
-                    return this.annotationTokens.hashCode() + yg.c(this.typeAnnotationTokens, (this.signatureResolution.hashCode() + bjs.e(this.genericSignature, bjs.e(this.descriptor, bjs.e(this.name, getClass().hashCode() * 31, 31), 31), 31)) * 31, 31);
+                    return this.annotationTokens.hashCode() + yg.c(this.typeAnnotationTokens,
+                            (this.signatureResolution.hashCode() + bjs.e(this.genericSignature,
+                                    bjs.e(this.descriptor, bjs.e(this.name, getClass().hashCode() * 31, 31), 31), 31))
+                                    * 31,
+                            31);
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
-            public class RecordComponentTokenList extends RecordComponentList.AbstractBase<RecordComponentDescription.InDefinedShape> {
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
+            public class RecordComponentTokenList
+                    extends RecordComponentList.AbstractBase<RecordComponentDescription.InDefinedShape> {
                 public RecordComponentTokenList() {
                 }
 
@@ -4372,12 +5237,17 @@ public interface TypePool {
 
                 @Override // java.util.AbstractList, java.util.List
                 public RecordComponentDescription.InDefinedShape get(int i) {
-                    return ((RecordComponentToken) LazyTypeDescription.this.recordComponentTokens.get(i)).toRecordComponentDescription(LazyTypeDescription.this);
+                    return ((RecordComponentToken) LazyTypeDescription.this.recordComponentTokens.get(i))
+                            .toRecordComponentDescription(LazyTypeDescription.this);
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
-            public static class TokenizedGenericType extends TypeDescription.Generic.LazyProjection.WithEagerNavigation {
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
+            public static class TokenizedGenericType
+                    extends TypeDescription.Generic.LazyProjection.WithEagerNavigation {
                 private final Map<String, List<AnnotationToken>> annotationTokens;
                 private transient /* synthetic */ TypeDescription erasure;
                 private final GenericTypeToken genericTypeToken;
@@ -4386,12 +5256,18 @@ public interface TypePool {
                 private final TypePool typePool;
                 private final TypeVariableSource typeVariableSource;
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public static class Malformed extends TypeDescription.Generic.LazyProjection.WithEagerNavigation {
                     private final String rawTypeDescriptor;
                     private final TypePool typePool;
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     public static class TokenList extends TypeList.Generic.AbstractBase {
                         private final List<String> rawTypeDescriptors;
                         private final TypePool typePool;
@@ -4401,7 +5277,8 @@ public interface TypePool {
                             this.rawTypeDescriptors = list;
                         }
 
-                        @Override // net.bytebuddy.description.type.TypeList.Generic.AbstractBase, net.bytebuddy.description.type.TypeList.Generic
+                        @Override // net.bytebuddy.description.type.TypeList.Generic.AbstractBase,
+                                  // net.bytebuddy.description.type.TypeList.Generic
                         public TypeList asErasures() {
                             return new LazyTypeList(this.typePool, this.rawTypeDescriptors);
                         }
@@ -4438,7 +5315,10 @@ public interface TypePool {
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public static class TokenList extends TypeList.Generic.AbstractBase {
                     private final Map<Integer, Map<String, List<AnnotationToken>>> annotationTokens;
                     private final List<GenericTypeToken> genericTypeTokens;
@@ -4446,7 +5326,8 @@ public interface TypePool {
                     private final TypePool typePool;
                     private final TypeVariableSource typeVariableSource;
 
-                    @Override // net.bytebuddy.description.type.TypeList.Generic.AbstractBase, net.bytebuddy.description.type.TypeList.Generic
+                    @Override // net.bytebuddy.description.type.TypeList.Generic.AbstractBase,
+                              // net.bytebuddy.description.type.TypeList.Generic
                     public TypeList asErasures() {
                         return new LazyTypeList(this.typePool, this.rawTypeDescriptors);
                     }
@@ -4456,7 +5337,9 @@ public interface TypePool {
                         return this.rawTypeDescriptors.size();
                     }
 
-                    private TokenList(TypePool typePool, List<GenericTypeToken> list, Map<Integer, Map<String, List<AnnotationToken>>> map, List<String> list2, TypeVariableSource typeVariableSource) {
+                    private TokenList(TypePool typePool, List<GenericTypeToken> list,
+                            Map<Integer, Map<String, List<AnnotationToken>>> map, List<String> list2,
+                            TypeVariableSource typeVariableSource) {
                         this.typePool = typePool;
                         this.genericTypeTokens = list;
                         this.annotationTokens = map;
@@ -4466,11 +5349,19 @@ public interface TypePool {
 
                     @Override // java.util.AbstractList, java.util.List
                     public TypeDescription.Generic get(int i) {
-                        return this.rawTypeDescriptors.size() == this.genericTypeTokens.size() ? TokenizedGenericType.of(this.typePool, this.genericTypeTokens.get(i), this.rawTypeDescriptors.get(i), this.annotationTokens.get(Integer.valueOf(i)), this.typeVariableSource) : TokenizedGenericType.toErasure(this.typePool, this.rawTypeDescriptors.get(i)).asGenericType();
+                        return this.rawTypeDescriptors.size() == this.genericTypeTokens.size()
+                                ? TokenizedGenericType.of(this.typePool, this.genericTypeTokens.get(i),
+                                        this.rawTypeDescriptors.get(i), this.annotationTokens.get(Integer.valueOf(i)),
+                                        this.typeVariableSource)
+                                : TokenizedGenericType.toErasure(this.typePool, this.rawTypeDescriptors.get(i))
+                                        .asGenericType();
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public static class TypeVariableList extends TypeList.Generic.AbstractBase {
                     private final Map<Integer, Map<String, List<AnnotationToken>>> annotationTokens;
                     private final Map<Integer, Map<Integer, Map<String, List<AnnotationToken>>>> boundAnnotationTokens;
@@ -4478,7 +5369,9 @@ public interface TypePool {
                     private final TypeVariableSource typeVariableSource;
                     private final List<GenericTypeToken.OfFormalTypeVariable> typeVariables;
 
-                    public TypeVariableList(TypePool typePool, List<GenericTypeToken.OfFormalTypeVariable> list, TypeVariableSource typeVariableSource, Map<Integer, Map<String, List<AnnotationToken>>> map, Map<Integer, Map<Integer, Map<String, List<AnnotationToken>>>> map2) {
+                    public TypeVariableList(TypePool typePool, List<GenericTypeToken.OfFormalTypeVariable> list,
+                            TypeVariableSource typeVariableSource, Map<Integer, Map<String, List<AnnotationToken>>> map,
+                            Map<Integer, Map<Integer, Map<String, List<AnnotationToken>>>> map2) {
                         this.typePool = typePool;
                         this.typeVariables = list;
                         this.typeVariableSource = typeVariableSource;
@@ -4493,11 +5386,14 @@ public interface TypePool {
 
                     @Override // java.util.AbstractList, java.util.List
                     public TypeDescription.Generic get(int i) {
-                        return this.typeVariables.get(i).toGenericType(this.typePool, this.typeVariableSource, this.annotationTokens.get(Integer.valueOf(i)), this.boundAnnotationTokens.get(Integer.valueOf(i)));
+                        return this.typeVariables.get(i).toGenericType(this.typePool, this.typeVariableSource,
+                                this.annotationTokens.get(Integer.valueOf(i)),
+                                this.boundAnnotationTokens.get(Integer.valueOf(i)));
                     }
                 }
 
-                public TokenizedGenericType(TypePool typePool, GenericTypeToken genericTypeToken, String str, Map<String, List<AnnotationToken>> map, TypeVariableSource typeVariableSource) {
+                public TokenizedGenericType(TypePool typePool, GenericTypeToken genericTypeToken, String str,
+                        Map<String, List<AnnotationToken>> map, TypeVariableSource typeVariableSource) {
                     this.typePool = typePool;
                     this.genericTypeToken = genericTypeToken;
                     this.rawTypeDescriptor = str;
@@ -4505,7 +5401,9 @@ public interface TypePool {
                     this.typeVariableSource = typeVariableSource;
                 }
 
-                public static TypeDescription.Generic of(TypePool typePool, GenericTypeToken genericTypeToken, String str, @MaybeNull Map<String, List<AnnotationToken>> map, TypeVariableSource typeVariableSource) {
+                public static TypeDescription.Generic of(TypePool typePool, GenericTypeToken genericTypeToken,
+                        String str, @MaybeNull Map<String, List<AnnotationToken>> map,
+                        TypeVariableSource typeVariableSource) {
                     if (map == null) {
                         map = Collections.EMPTY_MAP;
                     }
@@ -4514,13 +5412,17 @@ public interface TypePool {
 
                 public static TypeDescription toErasure(TypePool typePool, String str) {
                     Type type = Type.getType(str);
-                    return typePool.describe(type.getSort() == 9 ? type.getInternalName().replace('/', GenericTypeToken.INNER_CLASS_PATH) : type.getClassName()).resolve();
+                    return typePool.describe(
+                            type.getSort() == 9 ? type.getInternalName().replace('/', GenericTypeToken.INNER_CLASS_PATH)
+                                    : type.getClassName())
+                            .resolve();
                 }
 
                 @Override // net.bytebuddy.description.type.TypeDefinition
                 @CachedReturnPlugin.Enhance("erasure")
                 public TypeDescription asErasure() {
-                    TypeDescription erasure = this.erasure != null ? null : toErasure(this.typePool, this.rawTypeDescriptor);
+                    TypeDescription erasure = this.erasure != null ? null
+                            : toErasure(this.typePool, this.rawTypeDescriptor);
                     if (erasure == null) {
                         return this.erasure;
                     }
@@ -4536,7 +5438,9 @@ public interface TypePool {
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.LazyProjection
                 @CachedReturnPlugin.Enhance("resolved")
                 public TypeDescription.Generic resolve() {
-                    TypeDescription.Generic genericType = this.resolved != null ? null : this.genericTypeToken.toGenericType(this.typePool, this.typeVariableSource, "", this.annotationTokens);
+                    TypeDescription.Generic genericType = this.resolved != null ? null
+                            : this.genericTypeToken.toGenericType(this.typePool, this.typeVariableSource, "",
+                                    this.annotationTokens);
                     if (genericType == null) {
                         return this.resolved;
                     }
@@ -4545,10 +5449,16 @@ public interface TypePool {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public interface TypeContainment {
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public enum SelfContained implements TypeContainment {
                     INSTANCE;
 
@@ -4575,7 +5485,10 @@ public interface TypePool {
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class WithinMethod implements TypeContainment {
                     private final String methodDescriptor;
@@ -4596,7 +5509,8 @@ public interface TypePool {
                             return false;
                         }
                         WithinMethod withinMethod = (WithinMethod) obj;
-                        return this.name.equals(withinMethod.name) && this.methodName.equals(withinMethod.methodName) && this.methodDescriptor.equals(withinMethod.methodDescriptor);
+                        return this.name.equals(withinMethod.name) && this.methodName.equals(withinMethod.methodName)
+                                && this.methodDescriptor.equals(withinMethod.methodDescriptor);
                     }
 
                     @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.TypeContainment
@@ -4605,11 +5519,14 @@ public interface TypePool {
                         if (enclosingType == null) {
                             throw new IllegalStateException("Could not resolve enclosing type " + this.name);
                         }
-                        MethodList methodListFilter = enclosingType.getDeclaredMethods().filter(ElementMatchers.hasMethodName(this.methodName).and(ElementMatchers.hasDescriptor(this.methodDescriptor)));
+                        MethodList methodListFilter = enclosingType.getDeclaredMethods()
+                                .filter(ElementMatchers.hasMethodName(this.methodName)
+                                        .and(ElementMatchers.hasDescriptor(this.methodDescriptor)));
                         if (!methodListFilter.isEmpty()) {
                             return (MethodDescription.InDefinedShape) methodListFilter.getOnly();
                         }
-                        throw new IllegalStateException(this.methodName + this.methodDescriptor + " not declared by " + enclosingType);
+                        throw new IllegalStateException(
+                                this.methodName + this.methodDescriptor + " not declared by " + enclosingType);
                     }
 
                     @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.TypeContainment
@@ -4618,7 +5535,8 @@ public interface TypePool {
                     }
 
                     public int hashCode() {
-                        return this.methodDescriptor.hashCode() + bjs.e(this.methodName, bjs.e(this.name, getClass().hashCode() * 31, 31), 31);
+                        return this.methodDescriptor.hashCode()
+                                + bjs.e(this.methodName, bjs.e(this.name, getClass().hashCode() * 31, 31), 31);
                     }
 
                     @Override // net.bytebuddy.pool.TypePool.Default.LazyTypeDescription.TypeContainment
@@ -4632,7 +5550,10 @@ public interface TypePool {
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class WithinType implements TypeContainment {
                     private final boolean localType;
@@ -4691,14 +5612,23 @@ public interface TypePool {
                 boolean isSelfContained();
             }
 
-            public LazyTypeDescription(TypePool typePool, int i, int i2, String str, @MaybeNull String str2, @MaybeNull String[] strArr, @MaybeNull String str3, TypeContainment typeContainment, @MaybeNull String str4, List<String> list, boolean z, @MaybeNull String str5, List<String> list2, Map<String, List<AnnotationToken>> map, Map<Integer, Map<String, List<AnnotationToken>>> map2, Map<Integer, Map<String, List<AnnotationToken>>> map3, Map<Integer, Map<Integer, Map<String, List<AnnotationToken>>>> map4, List<AnnotationToken> list3, @MaybeNull ModuleToken moduleToken, List<FieldToken> list4, List<MethodToken> list5, List<RecordComponentToken> list6, List<String> list7, ClassFileVersion classFileVersion) {
+            public LazyTypeDescription(TypePool typePool, int i, int i2, String str, @MaybeNull String str2,
+                    @MaybeNull String[] strArr, @MaybeNull String str3, TypeContainment typeContainment,
+                    @MaybeNull String str4, List<String> list, boolean z, @MaybeNull String str5, List<String> list2,
+                    Map<String, List<AnnotationToken>> map, Map<Integer, Map<String, List<AnnotationToken>>> map2,
+                    Map<Integer, Map<String, List<AnnotationToken>>> map3,
+                    Map<Integer, Map<Integer, Map<String, List<AnnotationToken>>>> map4, List<AnnotationToken> list3,
+                    @MaybeNull ModuleToken moduleToken, List<FieldToken> list4, List<MethodToken> list5,
+                    List<RecordComponentToken> list6, List<String> list7, ClassFileVersion classFileVersion) {
                 this.typePool = typePool;
                 this.actualModifiers = i & (-33);
                 this.modifiers = (-131105) & i2;
                 this.name = Type.getObjectType(str).getClassName();
                 this.superClassDescriptor = str2 == null ? NO_TYPE : Type.getObjectType(str2).getDescriptor();
                 this.genericSignature = str3;
-                this.signatureResolution = TypeDescription.AbstractBase.RAW_TYPES ? GenericTypeToken.Resolution.Raw.INSTANCE : GenericTypeExtractor.ForSignature.OfType.extract(str3);
+                this.signatureResolution = TypeDescription.AbstractBase.RAW_TYPES
+                        ? GenericTypeToken.Resolution.Raw.INSTANCE
+                        : GenericTypeExtractor.ForSignature.OfType.extract(str3);
                 if (strArr == null) {
                     this.interfaceTypeDescriptors = Collections.EMPTY_LIST;
                 } else {
@@ -4734,12 +5664,14 @@ public interface TypePool {
                 this.classFileVersion = classFileVersion;
             }
 
-            @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase, net.bytebuddy.description.type.TypeDescription
+            @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase,
+                      // net.bytebuddy.description.type.TypeDescription
             public int getActualModifiers(boolean z) {
                 return z ? this.actualModifiers | 32 : this.actualModifiers;
             }
 
-            @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase, net.bytebuddy.description.type.TypeDescription
+            @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase,
+                      // net.bytebuddy.description.type.TypeDescription
             public ClassFileVersion getClassFileVersion() {
                 return this.classFileVersion;
             }
@@ -4749,12 +5681,14 @@ public interface TypePool {
                 return LazyAnnotationDescription.asList(this.typePool, this.annotationTokens);
             }
 
-            @Override // net.bytebuddy.description.type.TypeDescription, net.bytebuddy.description.type.TypeDefinition
+            @Override // net.bytebuddy.description.type.TypeDescription,
+                      // net.bytebuddy.description.type.TypeDefinition
             public FieldList<FieldDescription.InDefinedShape> getDeclaredFields() {
                 return new FieldTokenList();
             }
 
-            @Override // net.bytebuddy.description.type.TypeDescription, net.bytebuddy.description.type.TypeDefinition
+            @Override // net.bytebuddy.description.type.TypeDescription,
+                      // net.bytebuddy.description.type.TypeDefinition
             public MethodList<MethodDescription.InDefinedShape> getDeclaredMethods() {
                 return new MethodTokenList();
             }
@@ -4776,7 +5710,8 @@ public interface TypePool {
                 return this.typeContainment.getEnclosingType(this.typePool);
             }
 
-            @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase, net.bytebuddy.description.NamedElement.WithDescriptor
+            @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase,
+                      // net.bytebuddy.description.NamedElement.WithDescriptor
             @MaybeNull
             public String getGenericSignature() {
                 return this.genericSignature;
@@ -4784,7 +5719,8 @@ public interface TypePool {
 
             @Override // net.bytebuddy.description.type.TypeDefinition
             public TypeList.Generic getInterfaces() {
-                return this.signatureResolution.resolveInterfaceTypes(this.interfaceTypeDescriptors, this.typePool, this.interfaceAnnotationTokens, this);
+                return this.signatureResolution.resolveInterfaceTypes(this.interfaceTypeDescriptors, this.typePool,
+                        this.interfaceAnnotationTokens, this);
             }
 
             @Override // net.bytebuddy.description.ModifierReviewable
@@ -4806,7 +5742,8 @@ public interface TypePool {
             @Override // net.bytebuddy.description.type.TypeDescription
             public TypeList getNestMembers() {
                 String str = this.nestHost;
-                return str == null ? new LazyNestMemberList(this, this.typePool, this.nestMembers) : this.typePool.describe(str).resolve().getNestMembers();
+                return str == null ? new LazyNestMemberList(this, this.typePool, this.nestMembers)
+                        : this.typePool.describe(str).resolve().getNestMembers();
             }
 
             @Override // net.bytebuddy.description.type.TypeDescription
@@ -4814,7 +5751,8 @@ public interface TypePool {
             public PackageDescription getPackage() {
                 String name = getName();
                 int iLastIndexOf = name.lastIndexOf(46);
-                return new LazyPackageDescription(this.typePool, iLastIndexOf == -1 ? "" : name.substring(0, iLastIndexOf));
+                return new LazyPackageDescription(this.typePool,
+                        iLastIndexOf == -1 ? "" : name.substring(0, iLastIndexOf));
             }
 
             @Override // net.bytebuddy.description.type.TypeDescription
@@ -4822,7 +5760,8 @@ public interface TypePool {
                 return new LazyTypeList(this.typePool, this.permittedSubclasses);
             }
 
-            @Override // net.bytebuddy.description.type.TypeDescription, net.bytebuddy.description.type.TypeDefinition
+            @Override // net.bytebuddy.description.type.TypeDescription,
+                      // net.bytebuddy.description.type.TypeDefinition
             public RecordComponentList<RecordComponentDescription.InDefinedShape> getRecordComponents() {
                 return new RecordComponentTokenList();
             }
@@ -4830,12 +5769,15 @@ public interface TypePool {
             @Override // net.bytebuddy.description.type.TypeDefinition
             @MaybeNull
             public TypeDescription.Generic getSuperClass() {
-                return (this.superClassDescriptor == null || isInterface()) ? TypeDescription.Generic.UNDEFINED : this.signatureResolution.resolveSuperClass(this.superClassDescriptor, this.typePool, this.superClassAnnotationTokens, this);
+                return (this.superClassDescriptor == null || isInterface()) ? TypeDescription.Generic.UNDEFINED
+                        : this.signatureResolution.resolveSuperClass(this.superClassDescriptor, this.typePool,
+                                this.superClassAnnotationTokens, this);
             }
 
             @Override // net.bytebuddy.description.TypeVariableSource
             public TypeList.Generic getTypeVariables() {
-                return this.signatureResolution.resolveTypeVariables(this.typePool, this, this.typeVariableAnnotationTokens, this.typeVariableBoundsAnnotationTokens);
+                return this.signatureResolution.resolveTypeVariables(this.typePool, this,
+                        this.typeVariableAnnotationTokens, this.typeVariableBoundsAnnotationTokens);
             }
 
             @Override // net.bytebuddy.description.type.TypeDescription
@@ -4850,10 +5792,12 @@ public interface TypePool {
 
             @Override // net.bytebuddy.description.type.TypeDefinition
             public boolean isRecord() {
-                return (this.actualModifiers & 65536) != 0 && JavaType.RECORD.getTypeStub().getDescriptor().equals(this.superClassDescriptor);
+                return (this.actualModifiers & 65536) != 0
+                        && JavaType.RECORD.getTypeStub().getDescriptor().equals(this.superClassDescriptor);
             }
 
-            @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase, net.bytebuddy.description.type.TypeDescription
+            @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase,
+                      // net.bytebuddy.description.type.TypeDescription
             public boolean isSealed() {
                 return !this.permittedSubclasses.isEmpty();
             }
@@ -4873,7 +5817,10 @@ public interface TypePool {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static class ParameterBag {
             private final Map<Integer, String> parameterRegistry = new HashMap();
             private final Type[] parameterType;
@@ -4891,14 +5838,18 @@ public interface TypePool {
                 int size = z ? StackSize.ZERO.getSize() : StackSize.SINGLE.getSize();
                 for (Type type : this.parameterType) {
                     String str = this.parameterRegistry.get(Integer.valueOf(size));
-                    arrayList.add(str == null ? new LazyTypeDescription.MethodToken.ParameterToken() : new LazyTypeDescription.MethodToken.ParameterToken(str));
+                    arrayList.add(str == null ? new LazyTypeDescription.MethodToken.ParameterToken()
+                            : new LazyTypeDescription.MethodToken.ParameterToken(str));
                     size += type.getSize();
                 }
                 return arrayList;
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public enum ReaderMode {
             EXTENDED(4),
             FAST(1);
@@ -4918,7 +5869,10 @@ public interface TypePool {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public class TypeExtractor extends ClassVisitor {
             private static final int REAL_MODIFIER_MASK = 65535;
             private static final int SUPER_CLASS_INDEX = -1;
@@ -4961,12 +5915,18 @@ public interface TypePool {
             private final Map<Integer, Map<String, List<LazyTypeDescription.AnnotationToken>>> typeVariableAnnotationTokens;
             private final Map<Integer, Map<Integer, Map<String, List<LazyTypeDescription.AnnotationToken>>>> typeVariableBoundsAnnotationTokens;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public class AnnotationExtractor extends AnnotationVisitor {
                 private final AnnotationRegistrant annotationRegistrant;
                 private final ComponentTypeLocator componentTypeLocator;
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public class AnnotationLookup implements AnnotationRegistrant {
                     private final String descriptor;
                     private final String name;
@@ -4979,7 +5939,9 @@ public interface TypePool {
 
                     @Override // net.bytebuddy.pool.TypePool.Default.AnnotationRegistrant
                     public void onComplete() {
-                        AnnotationExtractor.this.annotationRegistrant.register(this.name, new LazyTypeDescription.LazyAnnotationValue.ForAnnotationValue(Default.this, new LazyTypeDescription.AnnotationToken(this.descriptor, this.values)));
+                        AnnotationExtractor.this.annotationRegistrant.register(this.name,
+                                new LazyTypeDescription.LazyAnnotationValue.ForAnnotationValue(Default.this,
+                                        new LazyTypeDescription.AnnotationToken(this.descriptor, this.values)));
                     }
 
                     @Override // net.bytebuddy.pool.TypePool.Default.AnnotationRegistrant
@@ -4988,7 +5950,10 @@ public interface TypePool {
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public class ArrayLookup implements AnnotationRegistrant {
                     private final AbstractBase.ComponentTypeReference componentTypeReference;
                     private final String name;
@@ -4996,7 +5961,9 @@ public interface TypePool {
 
                     @Override // net.bytebuddy.pool.TypePool.Default.AnnotationRegistrant
                     public void onComplete() {
-                        AnnotationExtractor.this.annotationRegistrant.register(this.name, new LazyTypeDescription.LazyAnnotationValue.ForArray(Default.this, this.componentTypeReference, this.values));
+                        AnnotationExtractor.this.annotationRegistrant.register(this.name,
+                                new LazyTypeDescription.LazyAnnotationValue.ForArray(Default.this,
+                                        this.componentTypeReference, this.values));
                     }
 
                     @Override // net.bytebuddy.pool.TypePool.Default.AnnotationRegistrant
@@ -5011,7 +5978,8 @@ public interface TypePool {
                     }
                 }
 
-                public AnnotationExtractor(TypeExtractor typeExtractor, String str, List<LazyTypeDescription.AnnotationToken> list, ComponentTypeLocator componentTypeLocator) {
+                public AnnotationExtractor(TypeExtractor typeExtractor, String str,
+                        List<LazyTypeDescription.AnnotationToken> list, ComponentTypeLocator componentTypeLocator) {
                     this(new AnnotationRegistrant.ForByteCodeElement(str, list), componentTypeLocator);
                 }
 
@@ -5021,18 +5989,26 @@ public interface TypePool {
                         this.annotationRegistrant.register(str, AnnotationValue.ForConstant.of(obj));
                     } else {
                         Type type = (Type) obj;
-                        this.annotationRegistrant.register(str, new LazyTypeDescription.LazyAnnotationValue.ForTypeValue(Default.this, type.getSort() == 9 ? type.getInternalName().replace('/', LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH) : type.getClassName()));
+                        this.annotationRegistrant.register(str,
+                                new LazyTypeDescription.LazyAnnotationValue.ForTypeValue(Default.this,
+                                        type.getSort() == 9
+                                                ? type.getInternalName().replace('/',
+                                                        LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH)
+                                                : type.getClassName()));
                     }
                 }
 
                 @Override // net.bytebuddy.jar.asm.AnnotationVisitor
                 public AnnotationVisitor visitAnnotation(String str, String str2) {
-                    return TypeExtractor.this.new AnnotationExtractor(new AnnotationLookup(str2, str), new ComponentTypeLocator.ForAnnotationProperty(Default.this, str2));
+                    return TypeExtractor.this.new AnnotationExtractor(new AnnotationLookup(str2, str),
+                            new ComponentTypeLocator.ForAnnotationProperty(Default.this, str2));
                 }
 
                 @Override // net.bytebuddy.jar.asm.AnnotationVisitor
                 public AnnotationVisitor visitArray(String str) {
-                    return TypeExtractor.this.new AnnotationExtractor(new ArrayLookup(str, this.componentTypeLocator.bind(str)), ComponentTypeLocator.Illegal.INSTANCE);
+                    return TypeExtractor.this.new AnnotationExtractor(
+                            new ArrayLookup(str, this.componentTypeLocator.bind(str)),
+                            ComponentTypeLocator.Illegal.INSTANCE);
                 }
 
                 @Override // net.bytebuddy.jar.asm.AnnotationVisitor
@@ -5042,21 +6018,31 @@ public interface TypePool {
 
                 @Override // net.bytebuddy.jar.asm.AnnotationVisitor
                 public void visitEnum(String str, String str2, String str3) {
-                    this.annotationRegistrant.register(str, new LazyTypeDescription.LazyAnnotationValue.ForEnumerationValue(Default.this, str2.substring(1, str2.length() - 1).replace('/', LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH), str3));
+                    this.annotationRegistrant.register(str,
+                            new LazyTypeDescription.LazyAnnotationValue.ForEnumerationValue(Default.this,
+                                    str2.substring(1, str2.length() - 1).replace('/',
+                                            LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH),
+                                    str3));
                 }
 
-                public AnnotationExtractor(TypeExtractor typeExtractor, String str, int i, Map<Integer, List<LazyTypeDescription.AnnotationToken>> map, ComponentTypeLocator componentTypeLocator) {
+                public AnnotationExtractor(TypeExtractor typeExtractor, String str, int i,
+                        Map<Integer, List<LazyTypeDescription.AnnotationToken>> map,
+                        ComponentTypeLocator componentTypeLocator) {
                     this(new AnnotationRegistrant.ForByteCodeElement.WithIndex(str, i, map), componentTypeLocator);
                 }
 
-                public AnnotationExtractor(AnnotationRegistrant annotationRegistrant, ComponentTypeLocator componentTypeLocator) {
+                public AnnotationExtractor(AnnotationRegistrant annotationRegistrant,
+                        ComponentTypeLocator componentTypeLocator) {
                     super(OpenedClassReader.ASM_API);
                     this.annotationRegistrant = annotationRegistrant;
                     this.componentTypeLocator = componentTypeLocator;
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public class FieldExtractor extends FieldVisitor {
                 private final List<LazyTypeDescription.AnnotationToken> annotationTokens;
                 private final String descriptor;
@@ -5080,28 +6066,37 @@ public interface TypePool {
                 @Override // net.bytebuddy.jar.asm.FieldVisitor
                 public AnnotationVisitor visitAnnotation(String str, boolean z) {
                     TypeExtractor typeExtractor = TypeExtractor.this;
-                    return new AnnotationExtractor(typeExtractor, str, this.annotationTokens, new ComponentTypeLocator.ForAnnotationProperty(Default.this, str));
+                    return new AnnotationExtractor(typeExtractor, str, this.annotationTokens,
+                            new ComponentTypeLocator.ForAnnotationProperty(Default.this, str));
                 }
 
                 @Override // net.bytebuddy.jar.asm.FieldVisitor
                 public void visitEnd() {
-                    TypeExtractor.this.fieldTokens.add(new LazyTypeDescription.FieldToken(this.internalName, this.modifiers, this.descriptor, this.genericSignature, this.typeAnnotationTokens, this.annotationTokens));
+                    TypeExtractor.this.fieldTokens
+                            .add(new LazyTypeDescription.FieldToken(this.internalName, this.modifiers, this.descriptor,
+                                    this.genericSignature, this.typeAnnotationTokens, this.annotationTokens));
                 }
 
                 @Override // net.bytebuddy.jar.asm.FieldVisitor
                 @MaybeNull
-                public AnnotationVisitor visitTypeAnnotation(int i, @MaybeNull TypePath typePath, String str, boolean z) {
+                public AnnotationVisitor visitTypeAnnotation(int i, @MaybeNull TypePath typePath, String str,
+                        boolean z) {
                     TypeReference typeReference = new TypeReference(i);
                     if (typeReference.getSort() == 19) {
-                        AnnotationRegistrant.ForTypeVariable forTypeVariable = new AnnotationRegistrant.ForTypeVariable(str, typePath, this.typeAnnotationTokens);
+                        AnnotationRegistrant.ForTypeVariable forTypeVariable = new AnnotationRegistrant.ForTypeVariable(
+                                str, typePath, this.typeAnnotationTokens);
                         TypeExtractor typeExtractor = TypeExtractor.this;
-                        return typeExtractor.new AnnotationExtractor(forTypeVariable, new ComponentTypeLocator.ForAnnotationProperty(Default.this, str));
+                        return typeExtractor.new AnnotationExtractor(forTypeVariable,
+                                new ComponentTypeLocator.ForAnnotationProperty(Default.this, str));
                     }
                     throw new IllegalStateException("Unexpected type reference on field: " + typeReference.getSort());
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public class MethodExtractor extends MethodVisitor implements AnnotationRegistrant {
                 private final List<LazyTypeDescription.AnnotationToken> annotationTokens;
 
@@ -5131,7 +6126,8 @@ public interface TypePool {
                 private final Map<Integer, Map<Integer, Map<String, List<LazyTypeDescription.AnnotationToken>>>> typeVariableBoundAnnotationTokens;
                 private int visibleParameterShift;
 
-                public MethodExtractor(int i, String str, String str2, @MaybeNull String str3, @MaybeNull String[] strArr) {
+                public MethodExtractor(int i, String str, String str2, @MaybeNull String str3,
+                        @MaybeNull String[] strArr) {
                     super(OpenedClassReader.ASM_API);
                     this.modifiers = i;
                     this.internalName = str;
@@ -5164,19 +6160,22 @@ public interface TypePool {
                     if (z) {
                         this.visibleParameterShift = Type.getMethodType(this.descriptor).getArgumentTypes().length - i;
                     } else {
-                        this.invisibleParameterShift = Type.getMethodType(this.descriptor).getArgumentTypes().length - i;
+                        this.invisibleParameterShift = Type.getMethodType(this.descriptor).getArgumentTypes().length
+                                - i;
                     }
                 }
 
                 @Override // net.bytebuddy.jar.asm.MethodVisitor
                 public AnnotationVisitor visitAnnotation(String str, boolean z) {
                     TypeExtractor typeExtractor = TypeExtractor.this;
-                    return new AnnotationExtractor(typeExtractor, str, this.annotationTokens, new ComponentTypeLocator.ForAnnotationProperty(Default.this, str));
+                    return new AnnotationExtractor(typeExtractor, str, this.annotationTokens,
+                            new ComponentTypeLocator.ForAnnotationProperty(Default.this, str));
                 }
 
                 @Override // net.bytebuddy.jar.asm.MethodVisitor
                 public AnnotationVisitor visitAnnotationDefault() {
-                    return TypeExtractor.this.new AnnotationExtractor(this, new ComponentTypeLocator.ForArrayType(this.descriptor));
+                    return TypeExtractor.this.new AnnotationExtractor(this,
+                            new ComponentTypeLocator.ForArrayType(this.descriptor));
                 }
 
                 @Override // net.bytebuddy.jar.asm.MethodVisitor
@@ -5204,7 +6203,8 @@ public interface TypePool {
                         str = str2;
                         listResolve = this.parameterTokens;
                     }
-                    list.add(new LazyTypeDescription.MethodToken(str, i, str3, str4, strArr, map, map2, map3, map4, map5, map6, list2, map7, listResolve, this.defaultValue));
+                    list.add(new LazyTypeDescription.MethodToken(str, i, str3, str4, strArr, map, map2, map3, map4,
+                            map5, map6, list2, map7, listResolve, this.defaultValue));
                 }
 
                 @Override // net.bytebuddy.jar.asm.MethodVisitor
@@ -5223,13 +6223,17 @@ public interface TypePool {
 
                 @Override // net.bytebuddy.jar.asm.MethodVisitor
                 public void visitParameter(String str, int i) {
-                    this.parameterTokens.add(new LazyTypeDescription.MethodToken.ParameterToken(str, Integer.valueOf(i)));
+                    this.parameterTokens
+                            .add(new LazyTypeDescription.MethodToken.ParameterToken(str, Integer.valueOf(i)));
                 }
 
                 @Override // net.bytebuddy.jar.asm.MethodVisitor
                 public AnnotationVisitor visitParameterAnnotation(int i, String str, boolean z) {
                     TypeExtractor typeExtractor = TypeExtractor.this;
-                    return new AnnotationExtractor(typeExtractor, str, i + (z ? this.visibleParameterShift : this.invisibleParameterShift), this.parameterAnnotationTokens, new ComponentTypeLocator.ForAnnotationProperty(Default.this, str));
+                    return new AnnotationExtractor(typeExtractor, str,
+                            i + (z ? this.visibleParameterShift : this.invisibleParameterShift),
+                            this.parameterAnnotationTokens,
+                            new ComponentTypeLocator.ForAnnotationProperty(Default.this, str));
                 }
 
                 @Override // net.bytebuddy.jar.asm.MethodVisitor
@@ -5241,7 +6245,8 @@ public interface TypePool {
                     int sort = typeReference.getSort();
                     if (sort == 1) {
                         str2 = str;
-                        withIndex = new AnnotationRegistrant.ForTypeVariable.WithIndex(str2, typePath, typeReference.getTypeParameterIndex(), this.typeVariableAnnotationTokens);
+                        withIndex = new AnnotationRegistrant.ForTypeVariable.WithIndex(str2, typePath,
+                                typeReference.getTypeParameterIndex(), this.typeVariableAnnotationTokens);
                     } else {
                         if (sort == 16) {
                             return null;
@@ -5249,36 +6254,47 @@ public interface TypePool {
                         switch (sort) {
                             case 18:
                                 str2 = str;
-                                withIndex = new AnnotationRegistrant.ForTypeVariable.WithIndex.DoubleIndexed(str2, typePath, typeReference.getTypeParameterBoundIndex(), typeReference.getTypeParameterIndex(), this.typeVariableBoundAnnotationTokens);
+                                withIndex = new AnnotationRegistrant.ForTypeVariable.WithIndex.DoubleIndexed(str2,
+                                        typePath, typeReference.getTypeParameterBoundIndex(),
+                                        typeReference.getTypeParameterIndex(), this.typeVariableBoundAnnotationTokens);
                                 break;
                             case 19:
                                 return null;
                             case 20:
-                                withIndex = new AnnotationRegistrant.ForTypeVariable(str, typePath, this.returnTypeAnnotationTokens);
+                                withIndex = new AnnotationRegistrant.ForTypeVariable(str, typePath,
+                                        this.returnTypeAnnotationTokens);
                                 str2 = str;
                                 break;
                             case 21:
-                                withIndex = new AnnotationRegistrant.ForTypeVariable(str, typePath, this.receiverTypeAnnotationTokens);
+                                withIndex = new AnnotationRegistrant.ForTypeVariable(str, typePath,
+                                        this.receiverTypeAnnotationTokens);
                                 str2 = str;
                                 break;
                             case 22:
-                                withIndex = new AnnotationRegistrant.ForTypeVariable.WithIndex(str, typePath, typeReference.getFormalParameterIndex(), this.parameterTypeAnnotationTokens);
+                                withIndex = new AnnotationRegistrant.ForTypeVariable.WithIndex(str, typePath,
+                                        typeReference.getFormalParameterIndex(), this.parameterTypeAnnotationTokens);
                                 str2 = str;
                                 break;
                             case 23:
-                                withIndex = new AnnotationRegistrant.ForTypeVariable.WithIndex(str, typePath, typeReference.getExceptionIndex(), this.exceptionTypeAnnotationTokens);
+                                withIndex = new AnnotationRegistrant.ForTypeVariable.WithIndex(str, typePath,
+                                        typeReference.getExceptionIndex(), this.exceptionTypeAnnotationTokens);
                                 str2 = str;
                                 break;
                             default:
-                                throw new IllegalStateException("Unexpected type reference on method: " + typeReference.getSort());
+                                throw new IllegalStateException(
+                                        "Unexpected type reference on method: " + typeReference.getSort());
                         }
                     }
                     TypeExtractor typeExtractor = TypeExtractor.this;
-                    return typeExtractor.new AnnotationExtractor(withIndex, new ComponentTypeLocator.ForAnnotationProperty(Default.this, str2));
+                    return typeExtractor.new AnnotationExtractor(withIndex,
+                            new ComponentTypeLocator.ForAnnotationProperty(Default.this, str2));
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public class ModuleExtractor extends ModuleVisitor {
                 private final Map<String, ModuleDescription.Exports> exports;
 
@@ -5310,12 +6326,15 @@ public interface TypePool {
 
                 @Override // net.bytebuddy.jar.asm.ModuleVisitor
                 public void visitEnd() {
-                    TypeExtractor.this.moduleToken = new LazyTypeDescription.ModuleToken(this.name, this.modifiers, this.version, this.mainClass, this.packages, this.requires, this.exports, this.opens, this.uses, this.provides);
+                    TypeExtractor.this.moduleToken = new LazyTypeDescription.ModuleToken(this.name, this.modifiers,
+                            this.version, this.mainClass, this.packages, this.requires, this.exports, this.opens,
+                            this.uses, this.provides);
                 }
 
                 @Override // net.bytebuddy.jar.asm.ModuleVisitor
                 public void visitExport(String str, int i, @MaybeNull String... strArr) {
-                    this.exports.put(str, new ModuleDescription.Exports.Simple(strArr == null ? Collections.EMPTY_SET : new LinkedHashSet(Arrays.asList(strArr)), i));
+                    this.exports.put(str, new ModuleDescription.Exports.Simple(
+                            strArr == null ? Collections.EMPTY_SET : new LinkedHashSet(Arrays.asList(strArr)), i));
                 }
 
                 @Override // net.bytebuddy.jar.asm.ModuleVisitor
@@ -5325,7 +6344,8 @@ public interface TypePool {
 
                 @Override // net.bytebuddy.jar.asm.ModuleVisitor
                 public void visitOpen(String str, int i, @MaybeNull String... strArr) {
-                    this.opens.put(str, new ModuleDescription.Opens.Simple(strArr == null ? Collections.EMPTY_SET : new LinkedHashSet(Arrays.asList(strArr)), i));
+                    this.opens.put(str, new ModuleDescription.Opens.Simple(
+                            strArr == null ? Collections.EMPTY_SET : new LinkedHashSet(Arrays.asList(strArr)), i));
                 }
 
                 @Override // net.bytebuddy.jar.asm.ModuleVisitor
@@ -5335,7 +6355,8 @@ public interface TypePool {
 
                 @Override // net.bytebuddy.jar.asm.ModuleVisitor
                 public void visitProvide(String str, String... strArr) {
-                    this.provides.put(str, new ModuleDescription.Provides.Simple(new LinkedHashSet(Arrays.asList(strArr))));
+                    this.provides.put(str,
+                            new ModuleDescription.Provides.Simple(new LinkedHashSet(Arrays.asList(strArr))));
                 }
 
                 @Override // net.bytebuddy.jar.asm.ModuleVisitor
@@ -5349,7 +6370,10 @@ public interface TypePool {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public class RecordComponentExtractor extends RecordComponentVisitor {
                 private final List<LazyTypeDescription.AnnotationToken> annotationTokens;
                 private final String descriptor;
@@ -5371,23 +6395,28 @@ public interface TypePool {
                 @Override // net.bytebuddy.jar.asm.RecordComponentVisitor
                 public AnnotationVisitor visitAnnotation(String str, boolean z) {
                     TypeExtractor typeExtractor = TypeExtractor.this;
-                    return new AnnotationExtractor(typeExtractor, str, this.annotationTokens, new ComponentTypeLocator.ForAnnotationProperty(Default.this, str));
+                    return new AnnotationExtractor(typeExtractor, str, this.annotationTokens,
+                            new ComponentTypeLocator.ForAnnotationProperty(Default.this, str));
                 }
 
                 @Override // net.bytebuddy.jar.asm.RecordComponentVisitor
                 public void visitEnd() {
-                    TypeExtractor.this.recordComponentTokens.add(new LazyTypeDescription.RecordComponentToken(this.name, this.descriptor, this.genericSignature, this.typeAnnotationTokens, this.annotationTokens));
+                    TypeExtractor.this.recordComponentTokens.add(new LazyTypeDescription.RecordComponentToken(this.name,
+                            this.descriptor, this.genericSignature, this.typeAnnotationTokens, this.annotationTokens));
                 }
 
                 @Override // net.bytebuddy.jar.asm.RecordComponentVisitor
                 public AnnotationVisitor visitTypeAnnotation(int i, TypePath typePath, String str, boolean z) {
                     TypeReference typeReference = new TypeReference(i);
                     if (typeReference.getSort() == 19) {
-                        AnnotationRegistrant.ForTypeVariable forTypeVariable = new AnnotationRegistrant.ForTypeVariable(str, typePath, this.typeAnnotationTokens);
+                        AnnotationRegistrant.ForTypeVariable forTypeVariable = new AnnotationRegistrant.ForTypeVariable(
+                                str, typePath, this.typeAnnotationTokens);
                         TypeExtractor typeExtractor = TypeExtractor.this;
-                        return typeExtractor.new AnnotationExtractor(forTypeVariable, new ComponentTypeLocator.ForAnnotationProperty(Default.this, str));
+                        return typeExtractor.new AnnotationExtractor(forTypeVariable,
+                                new ComponentTypeLocator.ForAnnotationProperty(Default.this, str));
                     }
-                    throw new IllegalStateException("Unexpected type reference on record component: " + typeReference.getSort());
+                    throw new IllegalStateException(
+                            "Unexpected type reference on record component: " + typeReference.getSort());
                 }
             }
 
@@ -5411,7 +6440,8 @@ public interface TypePool {
                 if (this.internalName == null || this.classFileVersion == null) {
                     throw new IllegalStateException("Internal name or class file version were not set");
                 }
-                Map<String, List<LazyTypeDescription.AnnotationToken>> mapRemove = this.superTypeAnnotationTokens.remove(-1);
+                Map<String, List<LazyTypeDescription.AnnotationToken>> mapRemove = this.superTypeAnnotationTokens
+                        .remove(-1);
                 Default r3 = Default.this;
                 int i = this.actualModifiers;
                 int i2 = this.modifiers;
@@ -5428,11 +6458,16 @@ public interface TypePool {
                 if (mapRemove == null) {
                     mapRemove = Collections.EMPTY_MAP;
                 }
-                return new LazyTypeDescription(r3, i, i2, str, str2, strArr, str3, typeContainment, str4, list, z, str5, list2, mapRemove, this.superTypeAnnotationTokens, this.typeVariableAnnotationTokens, this.typeVariableBoundsAnnotationTokens, this.annotationTokens, this.moduleToken, this.fieldTokens, this.methodTokens, this.recordComponentTokens, this.permittedSubclasses, this.classFileVersion);
+                return new LazyTypeDescription(r3, i, i2, str, str2, strArr, str3, typeContainment, str4, list, z, str5,
+                        list2, mapRemove, this.superTypeAnnotationTokens, this.typeVariableAnnotationTokens,
+                        this.typeVariableBoundsAnnotationTokens, this.annotationTokens, this.moduleToken,
+                        this.fieldTokens, this.methodTokens, this.recordComponentTokens, this.permittedSubclasses,
+                        this.classFileVersion);
             }
 
             @Override // net.bytebuddy.jar.asm.ClassVisitor
-            public void visit(int i, int i2, String str, @MaybeNull String str2, @MaybeNull String str3, @MaybeNull String[] strArr) {
+            public void visit(int i, int i2, String str, @MaybeNull String str2, @MaybeNull String str3,
+                    @MaybeNull String[] strArr) {
                 this.modifiers = 65535 & i2;
                 this.actualModifiers = i2;
                 this.internalName = str;
@@ -5444,11 +6479,13 @@ public interface TypePool {
 
             @Override // net.bytebuddy.jar.asm.ClassVisitor
             public AnnotationVisitor visitAnnotation(String str, boolean z) {
-                return new AnnotationExtractor(this, str, this.annotationTokens, new ComponentTypeLocator.ForAnnotationProperty(Default.this, str));
+                return new AnnotationExtractor(this, str, this.annotationTokens,
+                        new ComponentTypeLocator.ForAnnotationProperty(Default.this, str));
             }
 
             @Override // net.bytebuddy.jar.asm.ClassVisitor
-            public FieldVisitor visitField(int i, String str, String str2, @MaybeNull String str3, @MaybeNull Object obj) {
+            public FieldVisitor visitField(int i, String str, String str2, @MaybeNull String str3,
+                    @MaybeNull Object obj) {
                 return new FieldExtractor(i & 65535, str, str2, str3);
             }
 
@@ -5475,8 +6512,10 @@ public interface TypePool {
 
             @Override // net.bytebuddy.jar.asm.ClassVisitor
             @MaybeNull
-            public MethodVisitor visitMethod(int i, String str, String str2, @MaybeNull String str3, @MaybeNull String[] strArr) {
-                return str.equals(MethodDescription.TYPE_INITIALIZER_INTERNAL_NAME) ? Default.IGNORE_METHOD : new MethodExtractor(i & 65535, str, str2, str3, strArr);
+            public MethodVisitor visitMethod(int i, String str, String str2, @MaybeNull String str3,
+                    @MaybeNull String[] strArr) {
+                return str.equals(MethodDescription.TYPE_INITIALIZER_INTERNAL_NAME) ? Default.IGNORE_METHOD
+                        : new MethodExtractor(i & 65535, str, str2, str3, strArr);
             }
 
             @Override // net.bytebuddy.jar.asm.ClassVisitor
@@ -5521,31 +6560,45 @@ public interface TypePool {
                 int sort = typeReference.getSort();
                 if (sort == 0) {
                     str2 = str;
-                    withIndex = new AnnotationRegistrant.ForTypeVariable.WithIndex(str2, typePath, typeReference.getTypeParameterIndex(), this.typeVariableAnnotationTokens);
+                    withIndex = new AnnotationRegistrant.ForTypeVariable.WithIndex(str2, typePath,
+                            typeReference.getTypeParameterIndex(), this.typeVariableAnnotationTokens);
                 } else if (sort == 16) {
                     str2 = str;
-                    withIndex = new AnnotationRegistrant.ForTypeVariable.WithIndex(str2, typePath, typeReference.getSuperTypeIndex(), this.superTypeAnnotationTokens);
+                    withIndex = new AnnotationRegistrant.ForTypeVariable.WithIndex(str2, typePath,
+                            typeReference.getSuperTypeIndex(), this.superTypeAnnotationTokens);
                 } else {
                     if (sort != 17) {
                         throw new IllegalArgumentException("Unexpected type reference: " + typeReference.getSort());
                     }
                     str2 = str;
-                    withIndex = new AnnotationRegistrant.ForTypeVariable.WithIndex.DoubleIndexed(str2, typePath, typeReference.getTypeParameterBoundIndex(), typeReference.getTypeParameterIndex(), this.typeVariableBoundsAnnotationTokens);
+                    withIndex = new AnnotationRegistrant.ForTypeVariable.WithIndex.DoubleIndexed(str2, typePath,
+                            typeReference.getTypeParameterBoundIndex(), typeReference.getTypeParameterIndex(),
+                            this.typeVariableBoundsAnnotationTokens);
                 }
-                return new AnnotationExtractor(withIndex, new ComponentTypeLocator.ForAnnotationProperty(Default.this, str2));
+                return new AnnotationExtractor(withIndex,
+                        new ComponentTypeLocator.ForAnnotationProperty(Default.this, str2));
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class WithLazyResolution extends Default {
             private final LazinessMode lazinessMode;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public class ExtendedLazyTypeDescription extends TypeDescription.AbstractBase.OfSimpleType.WithDelegation {
                 private Delegate delegate;
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public abstract class Delegate {
                     private Delegate() {
                     }
@@ -5562,7 +6615,10 @@ public interface TypePool {
                     public abstract ResolvedDelegate resolve();
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public class LazyInterface extends TypeDescription.Generic.LazyProjection.WithLazyNavigation {
                     private final int index;
                     private final String internalName;
@@ -5574,7 +6630,8 @@ public interface TypePool {
 
                     @Override // net.bytebuddy.description.type.TypeDefinition
                     public TypeDescription asErasure() {
-                        return WithLazyResolution.this.new LazyTypeDescription(this.internalName.replace('/', LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH));
+                        return WithLazyResolution.this.new LazyTypeDescription(
+                                this.internalName.replace('/', LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH));
                     }
 
                     @Override // net.bytebuddy.description.annotation.AnnotationSource
@@ -5588,7 +6645,10 @@ public interface TypePool {
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public class LazyInterfaceList extends TypeList.Generic.AbstractBase {
                     private final List<String> internalNames;
 
@@ -5607,7 +6667,10 @@ public interface TypePool {
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public class LazySuperClass extends TypeDescription.Generic.LazyProjection.WithLazyNavigation {
                     private final String internalName;
 
@@ -5617,7 +6680,8 @@ public interface TypePool {
 
                     @Override // net.bytebuddy.description.type.TypeDefinition
                     public TypeDescription asErasure() {
-                        return WithLazyResolution.this.new LazyTypeDescription(this.internalName.replace('/', LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH));
+                        return WithLazyResolution.this.new LazyTypeDescription(
+                                this.internalName.replace('/', LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH));
                     }
 
                     @Override // net.bytebuddy.description.annotation.AnnotationSource
@@ -5631,7 +6695,10 @@ public interface TypePool {
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public class ResolvedDelegate extends Delegate {
                     private final TypeDescription typeDescription;
 
@@ -5671,13 +6738,17 @@ public interface TypePool {
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public class UnresolvedDelegate extends Delegate {
                     private final AsmClassReader classReader;
 
                     @Override // net.bytebuddy.pool.TypePool.Default.WithLazyResolution.ExtendedLazyTypeDescription.Delegate
                     public TypeList.Generic getInterfaces() {
-                        return ExtendedLazyTypeDescription.this.new LazyInterfaceList(this.classReader.getInterfaceInternalNames());
+                        return ExtendedLazyTypeDescription.this.new LazyInterfaceList(
+                                this.classReader.getInterfaceInternalNames());
                     }
 
                     @Override // net.bytebuddy.pool.TypePool.Default.WithLazyResolution.ExtendedLazyTypeDescription.Delegate
@@ -5687,14 +6758,17 @@ public interface TypePool {
 
                     @Override // net.bytebuddy.pool.TypePool.Default.WithLazyResolution.ExtendedLazyTypeDescription.Delegate
                     public String getName() {
-                        return this.classReader.getInternalName().replace('/', LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
+                        return this.classReader.getInternalName().replace('/',
+                                LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
                     }
 
                     @Override // net.bytebuddy.pool.TypePool.Default.WithLazyResolution.ExtendedLazyTypeDescription.Delegate
                     @MaybeNull
                     public TypeDescription.Generic getSuperClass() {
                         String superClassInternalName = this.classReader.getSuperClassInternalName();
-                        return (superClassInternalName == null || ExtendedLazyTypeDescription.this.isInterface()) ? TypeDescription.Generic.UNDEFINED : ExtendedLazyTypeDescription.this.new LazySuperClass(superClassInternalName);
+                        return (superClassInternalName == null || ExtendedLazyTypeDescription.this.isInterface())
+                                ? TypeDescription.Generic.UNDEFINED
+                                : ExtendedLazyTypeDescription.this.new LazySuperClass(superClassInternalName);
                     }
 
                     @Override // net.bytebuddy.pool.TypePool.Default.WithLazyResolution.ExtendedLazyTypeDescription.Delegate
@@ -5720,7 +6794,8 @@ public interface TypePool {
                     return resolvedDelegateResolve.getTypeDescription();
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase.OfSimpleType.WithDelegation, net.bytebuddy.description.type.TypeDefinition
+                @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase.OfSimpleType.WithDelegation,
+                          // net.bytebuddy.description.type.TypeDefinition
                 public TypeList.Generic getInterfaces() {
                     return this.delegate.getInterfaces();
                 }
@@ -5730,40 +6805,55 @@ public interface TypePool {
                     return this.delegate.getName();
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase.OfSimpleType.WithDelegation, net.bytebuddy.description.type.TypeDefinition
+                @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase.OfSimpleType.WithDelegation,
+                          // net.bytebuddy.description.type.TypeDefinition
                 @MaybeNull
                 public TypeDescription.Generic getSuperClass() {
                     return this.delegate.getSuperClass();
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase.OfSimpleType.WithDelegation, net.bytebuddy.description.ModifierReviewable.AbstractBase, net.bytebuddy.description.ModifierReviewable.OfAbstraction
+                @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase.OfSimpleType.WithDelegation,
+                          // net.bytebuddy.description.ModifierReviewable.AbstractBase,
+                          // net.bytebuddy.description.ModifierReviewable.OfAbstraction
                 public boolean isAbstract() {
                     return (this.delegate.getModifiers() & 1024) == 1024;
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase.OfSimpleType.WithDelegation, net.bytebuddy.description.ModifierReviewable.AbstractBase, net.bytebuddy.description.ModifierReviewable.ForTypeDefinition
+                @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase.OfSimpleType.WithDelegation,
+                          // net.bytebuddy.description.ModifierReviewable.AbstractBase,
+                          // net.bytebuddy.description.ModifierReviewable.ForTypeDefinition
                 public boolean isAnnotation() {
                     return (this.delegate.getModifiers() & 8192) == 8192;
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase.OfSimpleType.WithDelegation, net.bytebuddy.description.ModifierReviewable.AbstractBase, net.bytebuddy.description.ModifierReviewable.OfEnumeration
+                @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase.OfSimpleType.WithDelegation,
+                          // net.bytebuddy.description.ModifierReviewable.AbstractBase,
+                          // net.bytebuddy.description.ModifierReviewable.OfEnumeration
                 public boolean isEnum() {
                     return (this.delegate.getModifiers() & 16384) == 16384;
                 }
 
-                @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase.OfSimpleType.WithDelegation, net.bytebuddy.description.ModifierReviewable.AbstractBase, net.bytebuddy.description.ModifierReviewable.ForTypeDefinition
+                @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase.OfSimpleType.WithDelegation,
+                          // net.bytebuddy.description.ModifierReviewable.AbstractBase,
+                          // net.bytebuddy.description.ModifierReviewable.ForTypeDefinition
                 public boolean isInterface() {
                     return (this.delegate.getModifiers() & 512) == 512;
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum LazinessMode {
                 NAME,
                 EXTENDED
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance(includeSyntheticFields = true)
             public class LazyResolution implements Resolution {
                 private final String name;
@@ -5780,7 +6870,8 @@ public interface TypePool {
                         return false;
                     }
                     LazyResolution lazyResolution = (LazyResolution) obj;
-                    return this.name.equals(lazyResolution.name) && WithLazyResolution.this.equals(WithLazyResolution.this);
+                    return this.name.equals(lazyResolution.name)
+                            && WithLazyResolution.this.equals(WithLazyResolution.this);
                 }
 
                 public int hashCode() {
@@ -5798,7 +6889,10 @@ public interface TypePool {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public class LazyTypeDescription extends TypeDescription.AbstractBase.OfSimpleType.WithDelegation {
                 private transient /* synthetic */ TypeDescription delegate;
                 private final String name;
@@ -5810,7 +6904,8 @@ public interface TypePool {
                 @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase.OfSimpleType.WithDelegation
                 @CachedReturnPlugin.Enhance(MethodDelegation.ImplementationDelegate.FIELD_NAME_PREFIX)
                 public TypeDescription delegate() {
-                    TypeDescription typeDescriptionResolve = this.delegate != null ? null : WithLazyResolution.this.doResolve(this.name).resolve();
+                    TypeDescription typeDescriptionResolve = this.delegate != null ? null
+                            : WithLazyResolution.this.doResolve(this.name).resolve();
                     if (typeDescriptionResolve == null) {
                         return this.delegate;
                     }
@@ -5824,7 +6919,8 @@ public interface TypePool {
                 }
             }
 
-            public WithLazyResolution(CacheProvider cacheProvider, ClassFileLocator classFileLocator, ReaderMode readerMode) {
+            public WithLazyResolution(CacheProvider cacheProvider, ClassFileLocator classFileLocator,
+                    ReaderMode readerMode) {
                 this(cacheProvider, classFileLocator, readerMode, LazinessMode.NAME);
             }
 
@@ -5856,15 +6952,19 @@ public interface TypePool {
 
             @Override // net.bytebuddy.pool.TypePool.Default
             public TypeDescription doParse(AsmClassReader asmClassReader) {
-                return this.lazinessMode == LazinessMode.EXTENDED ? new ExtendedLazyTypeDescription(asmClassReader) : super.doParse(asmClassReader);
+                return this.lazinessMode == LazinessMode.EXTENDED ? new ExtendedLazyTypeDescription(asmClassReader)
+                        : super.doParse(asmClassReader);
             }
 
             public Resolution doResolve(String str) {
                 Resolution resolutionFind = this.cacheProvider.find(str);
-                return resolutionFind == null ? this.cacheProvider.register(str, super.doDescribe(str)) : resolutionFind;
+                return resolutionFind == null ? this.cacheProvider.register(str, super.doDescribe(str))
+                        : resolutionFind;
             }
 
-            @Override // net.bytebuddy.pool.TypePool.Default, net.bytebuddy.pool.TypePool.AbstractBase.Hierarchical, net.bytebuddy.pool.TypePool.AbstractBase
+            @Override // net.bytebuddy.pool.TypePool.Default,
+                      // net.bytebuddy.pool.TypePool.AbstractBase.Hierarchical,
+                      // net.bytebuddy.pool.TypePool.AbstractBase
             public boolean equals(@MaybeNull Object obj) {
                 if (!super.equals(obj)) {
                     return false;
@@ -5872,15 +6972,19 @@ public interface TypePool {
                 if (this == obj) {
                     return true;
                 }
-                return obj != null && getClass() == obj.getClass() && this.lazinessMode.equals(((WithLazyResolution) obj).lazinessMode);
+                return obj != null && getClass() == obj.getClass()
+                        && this.lazinessMode.equals(((WithLazyResolution) obj).lazinessMode);
             }
 
-            @Override // net.bytebuddy.pool.TypePool.Default, net.bytebuddy.pool.TypePool.AbstractBase.Hierarchical, net.bytebuddy.pool.TypePool.AbstractBase
+            @Override // net.bytebuddy.pool.TypePool.Default,
+                      // net.bytebuddy.pool.TypePool.AbstractBase.Hierarchical,
+                      // net.bytebuddy.pool.TypePool.AbstractBase
             public int hashCode() {
                 return this.lazinessMode.hashCode() + (super.hashCode() * 31);
             }
 
-            public WithLazyResolution(CacheProvider cacheProvider, ClassFileLocator classFileLocator, ReaderMode readerMode, TypePool typePool) {
+            public WithLazyResolution(CacheProvider cacheProvider, ClassFileLocator classFileLocator,
+                    ReaderMode readerMode, TypePool typePool) {
                 this(cacheProvider, classFileLocator, readerMode, typePool, LazinessMode.NAME);
             }
 
@@ -5888,30 +6992,37 @@ public interface TypePool {
                 return new WithLazyResolution(new CacheProvider.Simple(), classFileLocator, ReaderMode.FAST);
             }
 
-            public WithLazyResolution(CacheProvider cacheProvider, ClassFileLocator classFileLocator, ReaderMode readerMode, AsmClassReader.Factory factory) {
+            public WithLazyResolution(CacheProvider cacheProvider, ClassFileLocator classFileLocator,
+                    ReaderMode readerMode, AsmClassReader.Factory factory) {
                 this(cacheProvider, classFileLocator, readerMode, factory, LazinessMode.NAME);
             }
 
-            public WithLazyResolution(CacheProvider cacheProvider, ClassFileLocator classFileLocator, ReaderMode readerMode, AsmClassReader.Factory factory, TypePool typePool) {
+            public WithLazyResolution(CacheProvider cacheProvider, ClassFileLocator classFileLocator,
+                    ReaderMode readerMode, AsmClassReader.Factory factory, TypePool typePool) {
                 this(cacheProvider, classFileLocator, readerMode, factory, typePool, LazinessMode.NAME);
             }
 
-            public WithLazyResolution(CacheProvider cacheProvider, ClassFileLocator classFileLocator, ReaderMode readerMode, LazinessMode lazinessMode) {
+            public WithLazyResolution(CacheProvider cacheProvider, ClassFileLocator classFileLocator,
+                    ReaderMode readerMode, LazinessMode lazinessMode) {
                 super(cacheProvider, classFileLocator, readerMode);
                 this.lazinessMode = lazinessMode;
             }
 
-            public WithLazyResolution(CacheProvider cacheProvider, ClassFileLocator classFileLocator, ReaderMode readerMode, TypePool typePool, LazinessMode lazinessMode) {
+            public WithLazyResolution(CacheProvider cacheProvider, ClassFileLocator classFileLocator,
+                    ReaderMode readerMode, TypePool typePool, LazinessMode lazinessMode) {
                 super(cacheProvider, classFileLocator, readerMode, typePool);
                 this.lazinessMode = lazinessMode;
             }
 
-            public WithLazyResolution(CacheProvider cacheProvider, ClassFileLocator classFileLocator, ReaderMode readerMode, AsmClassReader.Factory factory, LazinessMode lazinessMode) {
+            public WithLazyResolution(CacheProvider cacheProvider, ClassFileLocator classFileLocator,
+                    ReaderMode readerMode, AsmClassReader.Factory factory, LazinessMode lazinessMode) {
                 super(cacheProvider, classFileLocator, readerMode, factory);
                 this.lazinessMode = lazinessMode;
             }
 
-            public WithLazyResolution(CacheProvider cacheProvider, ClassFileLocator classFileLocator, ReaderMode readerMode, AsmClassReader.Factory factory, TypePool typePool, LazinessMode lazinessMode) {
+            public WithLazyResolution(CacheProvider cacheProvider, ClassFileLocator classFileLocator,
+                    ReaderMode readerMode, AsmClassReader.Factory factory, TypePool typePool,
+                    LazinessMode lazinessMode) {
                 super(cacheProvider, classFileLocator, readerMode, factory, typePool);
                 this.lazinessMode = lazinessMode;
             }
@@ -5941,7 +7052,9 @@ public interface TypePool {
         public Resolution doDescribe(String str) {
             try {
                 ClassFileLocator.Resolution resolutionLocate = this.classFileLocator.locate(str);
-                return resolutionLocate.isResolved() ? new Resolution.Simple(doParse(this.classReaderFactory.make(resolutionLocate.resolve()))) : new Resolution.Illegal(str);
+                return resolutionLocate.isResolved()
+                        ? new Resolution.Simple(doParse(this.classReaderFactory.make(resolutionLocate.resolve())))
+                        : new Resolution.Illegal(str);
             } catch (IOException e) {
                 throw new IllegalStateException("Error while reading class file", e);
             }
@@ -5953,7 +7066,8 @@ public interface TypePool {
             return typeExtractor.toTypeDescription();
         }
 
-        @Override // net.bytebuddy.pool.TypePool.AbstractBase.Hierarchical, net.bytebuddy.pool.TypePool.AbstractBase
+        @Override // net.bytebuddy.pool.TypePool.AbstractBase.Hierarchical,
+                  // net.bytebuddy.pool.TypePool.AbstractBase
         public boolean equals(@MaybeNull Object obj) {
             if (!super.equals(obj)) {
                 return false;
@@ -5965,15 +7079,19 @@ public interface TypePool {
                 return false;
             }
             Default r5 = (Default) obj;
-            return this.readerMode.equals(r5.readerMode) && this.classFileLocator.equals(r5.classFileLocator) && this.classReaderFactory.equals(r5.classReaderFactory);
+            return this.readerMode.equals(r5.readerMode) && this.classFileLocator.equals(r5.classFileLocator)
+                    && this.classReaderFactory.equals(r5.classReaderFactory);
         }
 
-        @Override // net.bytebuddy.pool.TypePool.AbstractBase.Hierarchical, net.bytebuddy.pool.TypePool.AbstractBase
+        @Override // net.bytebuddy.pool.TypePool.AbstractBase.Hierarchical,
+                  // net.bytebuddy.pool.TypePool.AbstractBase
         public int hashCode() {
-            return this.classReaderFactory.hashCode() + ((this.readerMode.hashCode() + ((this.classFileLocator.hashCode() + (super.hashCode() * 31)) * 31)) * 31);
+            return this.classReaderFactory.hashCode() + ((this.readerMode.hashCode()
+                    + ((this.classFileLocator.hashCode() + (super.hashCode() * 31)) * 31)) * 31);
         }
 
-        public Default(CacheProvider cacheProvider, ClassFileLocator classFileLocator, ReaderMode readerMode, TypePool typePool) {
+        public Default(CacheProvider cacheProvider, ClassFileLocator classFileLocator, ReaderMode readerMode,
+                TypePool typePool) {
             this(cacheProvider, classFileLocator, readerMode, AsmClassReader.Factory.Default.IMPLICIT, typePool);
         }
 
@@ -5981,11 +7099,13 @@ public interface TypePool {
             return new Default(new CacheProvider.Simple(), classFileLocator, ReaderMode.FAST);
         }
 
-        public Default(CacheProvider cacheProvider, ClassFileLocator classFileLocator, ReaderMode readerMode, AsmClassReader.Factory factory) {
+        public Default(CacheProvider cacheProvider, ClassFileLocator classFileLocator, ReaderMode readerMode,
+                AsmClassReader.Factory factory) {
             this(cacheProvider, classFileLocator, readerMode, factory, Empty.INSTANCE);
         }
 
-        public Default(CacheProvider cacheProvider, ClassFileLocator classFileLocator, ReaderMode readerMode, AsmClassReader.Factory factory, TypePool typePool) {
+        public Default(CacheProvider cacheProvider, ClassFileLocator classFileLocator, ReaderMode readerMode,
+                AsmClassReader.Factory factory, TypePool typePool) {
             super(cacheProvider, typePool);
             this.classFileLocator = classFileLocator;
             this.readerMode = readerMode;
@@ -5993,7 +7113,10 @@ public interface TypePool {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public enum Empty implements TypePool {
         INSTANCE;
 
@@ -6007,7 +7130,10 @@ public interface TypePool {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @HashCodeAndEqualsPlugin.Enhance
     public static class Explicit extends AbstractBase.Hierarchical {
         private final Map<String, TypeDescription> types;
@@ -6016,7 +7142,8 @@ public interface TypePool {
             this(Empty.INSTANCE, map);
         }
 
-        public static TypePool wrap(TypeDescription typeDescription, List<? extends DynamicType> list, TypePool typePool) {
+        public static TypePool wrap(TypeDescription typeDescription, List<? extends DynamicType> list,
+                TypePool typePool) {
             HashMap map = new HashMap();
             map.put(typeDescription.getName(), typeDescription);
             Iterator<? extends DynamicType> it = list.iterator();
@@ -6034,7 +7161,8 @@ public interface TypePool {
             return typeDescription == null ? new Resolution.Illegal(str) : new Resolution.Simple(typeDescription);
         }
 
-        @Override // net.bytebuddy.pool.TypePool.AbstractBase.Hierarchical, net.bytebuddy.pool.TypePool.AbstractBase
+        @Override // net.bytebuddy.pool.TypePool.AbstractBase.Hierarchical,
+                  // net.bytebuddy.pool.TypePool.AbstractBase
         public boolean equals(@MaybeNull Object obj) {
             if (!super.equals(obj)) {
                 return false;
@@ -6045,7 +7173,8 @@ public interface TypePool {
             return obj != null && getClass() == obj.getClass() && this.types.equals(((Explicit) obj).types);
         }
 
-        @Override // net.bytebuddy.pool.TypePool.AbstractBase.Hierarchical, net.bytebuddy.pool.TypePool.AbstractBase
+        @Override // net.bytebuddy.pool.TypePool.AbstractBase.Hierarchical,
+                  // net.bytebuddy.pool.TypePool.AbstractBase
         public int hashCode() {
             return this.types.hashCode() + (super.hashCode() * 31);
         }
@@ -6056,12 +7185,18 @@ public interface TypePool {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @HashCodeAndEqualsPlugin.Enhance
     public static class LazyFacade extends AbstractBase {
         private final TypePool typePool;
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class LazyResolution implements Resolution {
             private final String name;
@@ -6098,7 +7233,10 @@ public interface TypePool {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static class LazyTypeDescription extends TypeDescription.AbstractBase.OfSimpleType.WithDelegation {
             private transient /* synthetic */ TypeDescription delegate;
             private final String name;
@@ -6112,7 +7250,8 @@ public interface TypePool {
             @Override // net.bytebuddy.description.type.TypeDescription.AbstractBase.OfSimpleType.WithDelegation
             @CachedReturnPlugin.Enhance(MethodDelegation.ImplementationDelegate.FIELD_NAME_PREFIX)
             public TypeDescription delegate() {
-                TypeDescription typeDescriptionResolve = this.delegate != null ? null : this.typePool.describe(this.name).resolve();
+                TypeDescription typeDescriptionResolve = this.delegate != null ? null
+                        : this.typePool.describe(this.name).resolve();
                 if (typeDescriptionResolve == null) {
                     return this.delegate;
                 }
@@ -6158,10 +7297,16 @@ public interface TypePool {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface Resolution {
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class Illegal implements Resolution {
             private final String name;
@@ -6192,7 +7337,10 @@ public interface TypePool {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static class NoSuchTypeException extends IllegalStateException {
             private static final long serialVersionUID = 1;
             private final String name;
@@ -6207,7 +7355,10 @@ public interface TypePool {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class Simple implements Resolution {
             private final TypeDescription typeDescription;
@@ -6220,7 +7371,8 @@ public interface TypePool {
                 if (this == obj) {
                     return true;
                 }
-                return obj != null && getClass() == obj.getClass() && this.typeDescription.equals(((Simple) obj).typeDescription);
+                return obj != null && getClass() == obj.getClass()
+                        && this.typeDescription.equals(((Simple) obj).typeDescription);
             }
 
             public int hashCode() {

@@ -15,7 +15,7 @@ import me.hd.wauxv.obf.azg;
 import me.hd.wauxv.obf.azk;
 import me.hd.wauxv.obf.bjs;
 import me.hd.wauxv.obf.bte;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cnb;
 import me.hd.wauxv.obf.dgg;
 import me.hd.wauxv.obf.dnc;
@@ -52,7 +52,7 @@ public final class MsgInfoBean {
         azg azgVarR = dqc.bi(obj).r();
         azgVarR.ab = "field_msgId" /* cnb.z(-8396661062442L) */;
         Object objE = ((azk) yg.e(azgVarR)).e();
-        bzo.n(objE);
+        throwIfVar1IsNull(objE);
         this.msgId = ((Number) objE).longValue();
         azg azgVarR2 = dqc.bi(obj).r();
         azgVarR2.ab = "field_msgSvrId" /* cnb.z(-8379481193258L) */;
@@ -60,7 +60,7 @@ public final class MsgInfoBean {
         azg azgVarR3 = dqc.bi(obj).r();
         azgVarR3.ab = "field_type" /* cnb.z(-8315056683818L) */;
         Object objE2 = ((azk) yg.e(azgVarR3)).e();
-        bzo.n(objE2);
+        throwIfVar1IsNull(objE2);
         this.type = ((Number) objE2).intValue();
         azg azgVarR4 = dqc.bi(obj).r();
         azgVarR4.ab = "field_isSend" /* cnb.z(-8766028249898L) */;
@@ -68,12 +68,12 @@ public final class MsgInfoBean {
         azg azgVarR5 = dqc.bi(obj).r();
         azgVarR5.ab = "field_createTime" /* cnb.z(-8761733282602L) */;
         Object objE3 = ((azk) yg.e(azgVarR5)).e();
-        bzo.n(objE3);
+        throwIfVar1IsNull(objE3);
         this.createTime = ((Number) objE3).longValue();
         azg azgVarR6 = dqc.bi(obj).r();
         azgVarR6.ab = "field_talker" /* cnb.z(-8688718838570L) */;
         Object objE4 = ((azk) yg.e(azgVarR6)).e();
-        bzo.n(objE4);
+        throwIfVar1IsNull(objE4);
         this.talker = (String) objE4;
         azg azgVarR7 = dqc.bi(obj).r();
         azgVarR7.ab = "field_content" /* cnb.z(-8615704394538L) */;
@@ -98,7 +98,7 @@ public final class MsgInfoBean {
         if (str == null || str.length() == 0) {
             return avd.a;
         }
-        List listAs = dnj.as(str, new String[]{"," /* cnb.z(-5274219838250L) */});
+        List listAs = dnj.as(str, new String[] { "," /* cnb.z(-5274219838250L) */ });
         ArrayList arrayList = new ArrayList();
         for (Object obj : listAs) {
             if (((String) obj).length() > 0) {
@@ -112,23 +112,29 @@ public final class MsgInfoBean {
         if (isText()) {
             if (!isGroupChat()) {
                 String str = this.originContent;
-                bzo.n(str);
+                throwIfVar1IsNull(str);
                 return str;
             }
             if (isSend()) {
                 String str2 = this.originContent;
-                bzo.n(str2);
+                throwIfVar1IsNull(str2);
                 return str2;
             }
             String str3 = this.originContent;
-            bzo.n(str3);
+            throwIfVar1IsNull(str3);
             return dnj.au(str3, "\n" /* cnb.z(-7722351196970L) */, str3);
         }
         if (isImage()) {
             String strH = this.originContent;
             if (strH != null) {
-                if (dnj.ab(strH, "<msg>" /* cnb.z(-7730941131562L) */, false) && dnj.ab(strH, "</msg>" /* cnb.z(-8237747272490L) */, false)) {
-                    String strAy = dnj.ay(dnj.au(strH, "<msg>" /* cnb.z(-8190502632234L) */, strH), "</msg>" /* cnb.z(-8147552959274L) */);
+                if (dnj.ab(strH, "<msg>" /* cnb.z(-7730941131562L) */, false) && dnj.ab(strH, "</msg>" /*
+                                                                                                        * cnb.z(-
+                                                                                                        * 8237747272490L)
+                                                                                                        */, false)) {
+                    String strAy = dnj.ay(dnj.au(strH, "<msg>" /* cnb.z(-8190502632234L) */, strH), "</msg>" /*
+                                                                                                              * cnb.z(-
+                                                                                                              * 8147552959274L)
+                                                                                                              */);
                     StringBuilder sb = new StringBuilder();
                     sb.append("<msg>" /* cnb.z(-8117488188202L) */);
                     sb.append(dnc.a(strAy));
@@ -145,11 +151,17 @@ public final class MsgInfoBean {
         }
         if (isEmoji()) {
             String str5 = this.originContent;
-            bzo.n(str5);
-            if (!dnj.ab(str5, "<msg>" /* cnb.z(-8108898253610L) */, false) || !dnj.ab(str5, "</msg>" /* cnb.z(-8065948580650L) */, false)) {
+            throwIfVar1IsNull(str5);
+            if (!dnj.ab(str5, "<msg>" /* cnb.z(-8108898253610L) */, false) || !dnj.ab(str5, "</msg>" /*
+                                                                                                      * cnb.z(-
+                                                                                                      * 8065948580650L)
+                                                                                                      */, false)) {
                 return str5;
             }
-            String strAy2 = dnj.ay(dnj.au(str5, "<msg>" /* cnb.z(-8018703940394L) */, str5), "</msg>" /* cnb.z(-7975754267434L) */);
+            String strAy2 = dnj.ay(dnj.au(str5, "<msg>" /* cnb.z(-8018703940394L) */, str5), "</msg>" /*
+                                                                                                       * cnb.z(-
+                                                                                                       * 7975754267434L)
+                                                                                                       */);
             StringBuilder sb2 = new StringBuilder();
             sb2.append("<msg>" /* cnb.z(-5196910426922L) */);
             sb2.append(dnc.a(strAy2));
@@ -157,22 +169,34 @@ public final class MsgInfoBean {
         }
         if (isVoice() || isVideo()) {
             String str6 = this.originContent;
-            bzo.n(str6);
-            return (dnj.ab(str6, "<msg>" /* cnb.z(-5175435590442L) */, false) && dnj.ab(str6, "</msg>" /* cnb.z(-5132485917482L) */, false)) ? dnj.ax(dnj.au(str6, "voicelength=\"" /* cnb.z(-5102421146410L) */, str6), "\"" /* cnb.z(-5025111735082L) */) : dnj.ax(dnj.au(str6, ":" /* cnb.z(-5033701669674L) */, str6), ":" /* cnb.z(-5042291604266L) */);
+            throwIfVar1IsNull(str6);
+            return (dnj.ab(str6, "<msg>" /* cnb.z(-5175435590442L) */, false) && dnj.ab(str6,
+                    "</msg>" /* cnb.z(-5132485917482L) */, false)) ? dnj.ax(dnj.au(str6,
+                            "voicelength=\"" /* cnb.z(-5102421146410L) */, str6), "\"" /* cnb.z(-5025111735082L) */)
+                            : dnj.ax(dnj.au(str6, ":" /* cnb.z(-5033701669674L) */, str6), ":" /*
+                                                                                                * cnb.z(-5042291604266L)
+                                                                                                */);
         }
         if (isShareCard()) {
             String str7 = this.originContent;
-            bzo.n(str7);
-            String strAy3 = dnj.ay(dnj.au(str7, "<msg" /* cnb.z(-5050881538858L) */, str7), "/>" /* cnb.z(-4995046964010L) */);
+            throwIfVar1IsNull(str7);
+            String strAy3 = dnj.ay(dnj.au(str7, "<msg" /* cnb.z(-5050881538858L) */, str7), "/>" /*
+                                                                                                  * cnb.z(-
+                                                                                                  * 4995046964010L)
+                                                                                                  */);
             StringBuilder sb3 = new StringBuilder();
             sb3.append("<msg " /* cnb.z(-5016521800490L) */);
             sb3.append(dnc.a(strAy3));
             return yg.h(-4973572127530L, sb3);
         }
-        if (isShareCard() || isLocation() || isApp() || isLink() || isTransfer() || isRedBag() || isVideoNumberVideo() || isNote() || isQuote() || isFile()) {
+        if (isShareCard() || isLocation() || isApp() || isLink() || isTransfer() || isRedBag() || isVideoNumberVideo()
+                || isNote() || isQuote() || isFile()) {
             String str8 = this.originContent;
-            bzo.n(str8);
-            String strAy4 = dnj.ay(dnj.au(str8, "<msg>" /* cnb.z(-5471788333866L) */, str8), "</msg>" /* cnb.z(-5497558137642L) */);
+            throwIfVar1IsNull(str8);
+            String strAy4 = dnj.ay(dnj.au(str8, "<msg>" /* cnb.z(-5471788333866L) */, str8), "</msg>" /*
+                                                                                                       * cnb.z(-
+                                                                                                       * 5497558137642L)
+                                                                                                       */);
             StringBuilder sb4 = new StringBuilder();
             sb4.append("<msg>" /* cnb.z(-5450313497386L) */);
             sb4.append(dnc.a(strAy4));
@@ -180,11 +204,11 @@ public final class MsgInfoBean {
         }
         if (isPat()) {
             PatMsg patMsg = getPatMsg();
-            bzo.n(patMsg);
+            throwIfVar1IsNull(patMsg);
             return patMsg.getTemplate();
         }
         String str9 = this.originContent;
-        bzo.n(str9);
+        throwIfVar1IsNull(str9);
         return str9;
     }
 
@@ -197,7 +221,7 @@ public final class MsgInfoBean {
             return null;
         }
         String str = this.originContent;
-        bzo.n(str);
+        throwIfVar1IsNull(str);
         return new FileMsg(str);
     }
 
@@ -229,24 +253,25 @@ public final class MsgInfoBean {
         ByteBuffer byteBufferWrap = ByteBuffer.wrap(bArr);
         riVar.b = byteBufferWrap;
         if (byteBufferWrap == null) {
-            bzo.ar("buffer" /* cnb.z(-22604412877610L) */);
+            throwLateinitPropNotInitYet("buffer" /* cnb.z(-22604412877610L) */);
             throw null;
         }
         byteBufferWrap.position(1);
         if (!riVar.g()) {
             ByteBuffer byteBuffer = riVar.b;
             if (byteBuffer == null) {
-                bzo.ar("buffer" /* cnb.z(-22896470653738L) */);
+                throwLateinitPropNotInitYet("buffer" /* cnb.z(-22896470653738L) */);
                 throw null;
             }
             short s = byteBuffer.getShort();
             if (s > 3072) {
-                throw new IllegalArgumentException("Buffer String Length Error" /* cnb.z(-22866405882666L) */.toString());
+                throw new IllegalArgumentException(
+                        "Buffer String Length Error" /* cnb.z(-22866405882666L) */.toString());
             }
             if (s != 0) {
                 ByteBuffer byteBuffer2 = riVar.b;
                 if (byteBuffer2 == null) {
-                    bzo.ar("buffer" /* cnb.z(-22217865820970L) */);
+                    throwLateinitPropNotInitYet("buffer" /* cnb.z(-22217865820970L) */);
                     throw null;
                 }
                 byteBuffer2.position(byteBuffer2.position() + s);
@@ -255,7 +280,7 @@ public final class MsgInfoBean {
         if (!riVar.g()) {
             ByteBuffer byteBuffer3 = riVar.b;
             if (byteBuffer3 == null) {
-                bzo.ar("buffer" /* cnb.z(-23046794509098L) */);
+                throwLateinitPropNotInitYet("buffer" /* cnb.z(-23046794509098L) */);
                 throw null;
             }
             byteBuffer3.position(byteBuffer3.position() + 4);
@@ -265,7 +290,7 @@ public final class MsgInfoBean {
         }
         ByteBuffer byteBuffer4 = riVar.b;
         if (byteBuffer4 == null) {
-            bzo.ar("buffer" /* cnb.z(-23845658426154L) */);
+            throwLateinitPropNotInitYet("buffer" /* cnb.z(-23845658426154L) */);
             throw null;
         }
         int i = byteBuffer4.getShort();
@@ -281,7 +306,7 @@ public final class MsgInfoBean {
             byteBuffer5.get(bArr2);
             return new String(bArr2, StandardCharsets.UTF_8);
         }
-        bzo.ar("buffer" /* cnb.z(-23643794963242L) */);
+        throwLateinitPropNotInitYet("buffer" /* cnb.z(-23643794963242L) */);
         throw null;
     }
 
@@ -302,7 +327,7 @@ public final class MsgInfoBean {
             return null;
         }
         String str = this.originContent;
-        bzo.n(str);
+        throwIfVar1IsNull(str);
         return new PatMsg(str);
     }
 
@@ -311,7 +336,7 @@ public final class MsgInfoBean {
             return null;
         }
         String str = this.originContent;
-        bzo.n(str);
+        throwIfVar1IsNull(str);
         return new QuoteMsg(str);
     }
 
@@ -321,19 +346,20 @@ public final class MsgInfoBean {
         }
         if (isPat()) {
             PatMsg patMsg = getPatMsg();
-            bzo.n(patMsg);
+            throwIfVar1IsNull(patMsg);
             return patMsg.getFromUser();
         }
         if (isSend()) {
             Object objB = acv.b(acv.a, eom.a.f);
-            bzo.o(objB, "null cannot be cast to non-null type kotlin.String" /* cnb.z(-121955596368682L) */);
+            throwIfVar1IsNull(objB,
+                    "null cannot be cast to non-null type kotlin.String" /* cnb.z(-121955596368682L) */);
             return (String) objB;
         }
         if (!isGroupChat()) {
             return this.talker;
         }
         String str = this.originContent;
-        bzo.n(str);
+        throwIfVar1IsNull(str);
         return dnj.ax(str, ":" /* cnb.z(-7713761262378L) */);
     }
 
@@ -350,7 +376,7 @@ public final class MsgInfoBean {
             return null;
         }
         String str = this.originContent;
-        bzo.n(str);
+        throwIfVar1IsNull(str);
         return new TransferMsg(str);
     }
 
@@ -369,7 +395,7 @@ public final class MsgInfoBean {
     public final boolean isAtMe() {
         List<String> atUserList = getAtUserList();
         Object objB = acv.b(acv.a, eom.a.f);
-        bzo.o(objB, "null cannot be cast to non-null type kotlin.String" /* cnb.z(-121955596368682L) */);
+        throwIfVar1IsNull(objB, "null cannot be cast to non-null type kotlin.String" /* cnb.z(-121955596368682L) */);
         return atUserList.contains((String) objB);
     }
 
@@ -405,8 +431,9 @@ public final class MsgInfoBean {
             azg azgVarR = dqc.bi(objB).r();
             azgVarR.ab = "field_chatroomStatus" /* cnb.z(-76149770156842L) */;
             Object objE = ((azk) yg.e(azgVarR)).e();
-            bzo.n(objE);
-            boolean z = dnr.bi(this.talker, "@chatroom" /* cnb.z(-4776003631914L) */) && (((Number) objE).intValue() & 131072) == 131072;
+            throwIfVar1IsNull(objE);
+            boolean z = dnr.bi(this.talker, "@chatroom" /* cnb.z(-4776003631914L) */)
+                    && (((Number) objE).intValue() & 131072) == 131072;
             if (zBi || z) {
                 return true;
             }
@@ -434,7 +461,7 @@ public final class MsgInfoBean {
         boolean z;
         boolean z2;
         Object objB = acv.b(acv.a, eom.a.f);
-        bzo.o(objB, "null cannot be cast to non-null type kotlin.String" /* cnb.z(-121955596368682L) */);
+        throwIfVar1IsNull(objB, "null cannot be cast to non-null type kotlin.String" /* cnb.z(-121955596368682L) */);
         List listAg = aba.ag((String) objB, "notify@all" /* cnb.z(-4660039514922L) */);
         if (!listAg.isEmpty()) {
             Iterator it = listAg.iterator();
@@ -485,7 +512,11 @@ public final class MsgInfoBean {
     }
 
     public final boolean isPrivateChat() {
-        Set set_cd = dgg._cd("gh_" /* cnb.z(-4518305594154L) */, "@chatroom" /* cnb.z(-4535485463338L) */, "weixin" /* cnb.z(-4440996182826L) */, "filehelper" /* cnb.z(-4462471019306L) */, "qqmail" /* cnb.z(-4930622454570L) */);
+        Set set_cd = dgg._cd("gh_" /* cnb.z(-4518305594154L) */, "@chatroom" /* cnb.z(-4535485463338L) */,
+                "weixin" /* cnb.z(-4440996182826L) */, "filehelper" /* cnb.z(-4462471019306L) */, "qqmail" /*
+                                                                                                            * cnb.z(-
+                                                                                                            * 4930622454570L)
+                                                                                                            */);
         if (!dnr.bp(this.talker, "wxid_" /* cnb.z(-4883377814314L) */, false) && !set_cd.isEmpty()) {
             Iterator it = set_cd.iterator();
             while (it.hasNext()) {
@@ -548,11 +579,11 @@ public final class MsgInfoBean {
     }
 
     public final boolean isVoipVideo() {
-        return bzo.f(getContent(), "voip_content_video" /* cnb.z(-6283537152810L) */);
+        return nullSafeIsEqual(getContent(), "voip_content_video" /* cnb.z(-6283537152810L) */);
     }
 
     public final boolean isVoipVoice() {
-        return bzo.f(getContent(), "voip_content_voice" /* cnb.z(-4698694220586L) */);
+        return nullSafeIsEqual(getContent(), "voip_content_voice" /* cnb.z(-4698694220586L) */);
     }
 
     public String toString() {
@@ -572,7 +603,10 @@ public final class MsgInfoBean {
         return jSONObject.toString();
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class FileMsg {
         private final String ext;
         private final JSONObject json;
@@ -583,7 +617,10 @@ public final class MsgInfoBean {
         public FileMsg(JSONObject jSONObject) {
             this.json = jSONObject;
             this.title = bjs.k(-3212635536170L, jSONObject);
-            this.size = Long.parseLong(String.valueOf(jSONObject.getByPath("msg.appmsg.appattach.totallen" /* cnb.z(-3139621092138L) */)));
+            this.size = Long.parseLong(String.valueOf(jSONObject.getByPath("msg.appmsg.appattach.totallen" /*
+                                                                                                            * cnb.z(-
+                                                                                                            * 3139621092138L)
+                                                                                                            */)));
             this.ext = bjs.k(-2443836390186L, jSONObject);
             this.md5 = bjs.k(-2370821946154L, jSONObject);
         }
@@ -618,11 +655,16 @@ public final class MsgInfoBean {
         }
 
         public FileMsg(String str) {
-            this(dnc.e("<msg>" /* cnb.z(-2216203123498L) */ + dnc.a(dnj.ay(dnj.au(str, "<msg>" /* cnb.z(-2289217567530L) */, str), "</msg>" /* cnb.z(-2246267894570L) */)) + "</msg>" /* cnb.z(-2723009264426L) */));
+            this(dnc.e("<msg>" /* cnb.z(-2216203123498L) */ + dnc.a(dnj
+                    .ay(dnj.au(str, "<msg>" /* cnb.z(-2289217567530L) */, str), "</msg>" /* cnb.z(-2246267894570L) */))
+                    + "</msg>" /* cnb.z(-2723009264426L) */));
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class PatMsg {
         private final long createTime;
         private final String fromUser;
@@ -638,14 +680,24 @@ public final class MsgInfoBean {
         public PatMsg(JSONObject jSONObject) {
             this.json = jSONObject;
             this.talker = bjs.k(-2628519983914L, jSONObject);
-            this.recordNum = Integer.parseInt(String.valueOf(jSONObject.getByPath("msg.appmsg.patMsg.records.recordNum" /* cnb.z(-2529735736106L) */)));
+            this.recordNum = Integer.parseInt(String
+                    .valueOf(jSONObject.getByPath("msg.appmsg.patMsg.records.recordNum" /* cnb.z(-2529735736106L) */)));
             this.fromUser = bjs.k(-3990024616746L, getRecordObj());
             this.pattedUser = bjs.k(-3968549780266L, getRecordObj());
             this.template = bjs.k(-3938485009194L, getRecordObj());
-            this.createTime = Long.parseLong(String.valueOf(getRecordObj().getByPath("createTime" /* cnb.z(-3917010172714L) */)));
-            this.readStatus = Integer.parseInt(String.valueOf(getRecordObj().getByPath("readStatus" /* cnb.z(-4367981738794L) */)));
+            this.createTime = Long.parseLong(String.valueOf(getRecordObj().getByPath("createTime" /*
+                                                                                                   * cnb.z(-
+                                                                                                   * 3917010172714L)
+                                                                                                   */)));
+            this.readStatus = Integer.parseInt(String.valueOf(getRecordObj().getByPath("readStatus" /*
+                                                                                                     * cnb.z(-
+                                                                                                     * 4367981738794L)
+                                                                                                     */)));
             this.svrId = Long.parseLong(String.valueOf(getRecordObj().getByPath("svrId" /* cnb.z(-4355096836906L) */)));
-            this.showModifyTip = Integer.parseInt(String.valueOf(getRecordObj().getByPath("showModifyTip" /* cnb.z(-4312147163946L) */)));
+            this.showModifyTip = Integer.parseInt(String.valueOf(getRecordObj().getByPath("showModifyTip" /*
+                                                                                                           * cnb.z(-
+                                                                                                           * 4312147163946L)
+                                                                                                           */)));
         }
 
         public final long getCreateTime() {
@@ -677,7 +729,10 @@ public final class MsgInfoBean {
             if (byPath instanceof JSONArray) {
                 return ((JSONArray) byPath).getJSONObject(0);
             }
-            bzo.o(byPath, "null cannot be cast to non-null type com.alibaba.fastjson2.JSONObject" /* cnb.z(-3543348017962L) */);
+            throwIfVar1IsNull(byPath, "null cannot be cast to non-null type com.alibaba.fastjson2.JSONObject" /*
+                                                                                                               * cnb.z(-
+                                                                                                               * 3543348017962L)
+                                                                                                               */);
             return (JSONObject) byPath;
         }
 
@@ -716,7 +771,10 @@ public final class MsgInfoBean {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class QuoteMsg {
         private final String displayName;
         private final JSONObject json;
@@ -732,18 +790,29 @@ public final class MsgInfoBean {
             this.json = jSONObject;
             this.title = bjs.k(-717259537194L, jSONObject);
             this.msgSource = bjs.k(-592705485610L, jSONObject);
-            Long lBg = dnq.bg(String.valueOf(jSONObject.getByPath("msg.appmsg.refermsg.svrid" /* cnb.z(-1065151888170L) */)));
+            Long lBg = dnq.bg(String.valueOf(jSONObject.getByPath("msg.appmsg.refermsg.svrid" /*
+                                                                                               * cnb.z(-1065151888170L)
+                                                                                               */)));
             this.svrId = lBg != null ? lBg.longValue() : 0L;
             this.sendTalker = bjs.k(-901943130922L, jSONObject);
             this.displayName = bjs.k(-266287971114L, jSONObject);
             this.talker = bjs.k(-128849017642L, jSONObject);
-            this.type = Integer.parseInt(String.valueOf(jSONObject.getByPath("msg.appmsg.refermsg.type" /* cnb.z(-523986008874L) */)));
+            this.type = Integer.parseInt(String.valueOf(jSONObject.getByPath("msg.appmsg.refermsg.type" /*
+                                                                                                         * cnb.z(-
+                                                                                                         * 523986008874L)
+                                                                                                         */)));
             this.originContent = bjs.k(-416611826474L, jSONObject);
         }
 
         public final String getContent() {
             int i = this.type;
-            return i == ewg.a.w ? this.originContent : i == ewg.b.w ? "图片" /* cnb.z(-1885490641706L) */ : i == ewg.e.w ? "视频" /* cnb.z(-1838246001450L) */ : i == ewg.f.w ? "表情" /* cnb.z(-1842540968746L) */ : i == ewg.h.w ? bjs.k(-1795296328490L, this.json) : this.originContent;
+            return i == ewg.a.w ? this.originContent
+                    : i == ewg.b.w ? "图片"
+                            /* cnb.z(-1885490641706L) */ : i == ewg.e.w ? "视频"
+                                    /* cnb.z(-1838246001450L) */ : i == ewg.f.w ? "表情"
+                                            /* cnb.z(-1842540968746L) */ : i == ewg.h.w
+                                                    ? bjs.k(-1795296328490L, this.json)
+                                                    : this.originContent;
         }
 
         public final String getDisplayName() {
@@ -796,11 +865,16 @@ public final class MsgInfoBean {
         }
 
         public QuoteMsg(String str) {
-            this(dnc.e("<msg>" /* cnb.z(-1906965478186L) */ + dnc.a(dnj.ay(dnj.au(str, "<msg>" /* cnb.z(-330712480554L) */, str), "</msg>" /* cnb.z(-287762807594L) */)) + "</msg>" /* cnb.z(-1864015805226L) */));
+            this(dnc.e("<msg>" /* cnb.z(-1906965478186L) */ + dnc.a(
+                    dnj.ay(dnj.au(str, "<msg>" /* cnb.z(-330712480554L) */, str), "</msg>" /* cnb.z(-287762807594L) */))
+                    + "</msg>" /* cnb.z(-1864015805226L) */));
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class TransferMsg {
         private final long beginTransferTime;
         private final String des;
@@ -820,8 +894,10 @@ public final class MsgInfoBean {
             this.feeDesc = bjs.k(-1236950580010L, jSONObject);
             this.transactionId = bjs.k(-1627792603946L, jSONObject);
             this.transferId = bjs.k(-1511828486954L, jSONObject);
-            this.invalidTime = Integer.parseInt(String.valueOf(jSONObject.getByPath("msg.appmsg.wcpayinfo.invalidtime" /* cnb.z(-7421703486250L) */)));
-            this.beginTransferTime = Long.parseLong(String.valueOf(jSONObject.getByPath("msg.appmsg.wcpayinfo.begintransfertime" /* cnb.z(-7279969565482L) */)));
+            this.invalidTime = Integer.parseInt(String
+                    .valueOf(jSONObject.getByPath("msg.appmsg.wcpayinfo.invalidtime" /* cnb.z(-7421703486250L) */)));
+            this.beginTransferTime = Long.parseLong(String.valueOf(
+                    jSONObject.getByPath("msg.appmsg.wcpayinfo.begintransfertime" /* cnb.z(-7279969565482L) */)));
             this.receiverUsername = bjs.k(-7662221654826L, jSONObject);
             this.payerUsername = bjs.k(-7477538061098L, jSONObject);
         }
@@ -881,7 +957,9 @@ public final class MsgInfoBean {
         }
 
         public TransferMsg(String str) {
-            this(dnc.e("<msg>" /* cnb.z(-6734508718890L) */ + dnc.a(dnj.ay(dnj.au(str, "<msg>" /* cnb.z(-6738803686186L) */, str), "</msg>" /* cnb.z(-6764573489962L) */)) + "</msg>" /* cnb.z(-6691559045930L) */));
+            this(dnc.e("<msg>" /* cnb.z(-6734508718890L) */ + dnc.a(dnj
+                    .ay(dnj.au(str, "<msg>" /* cnb.z(-6738803686186L) */, str), "</msg>" /* cnb.z(-6764573489962L) */))
+                    + "</msg>" /* cnb.z(-6691559045930L) */));
         }
     }
 }

@@ -26,7 +26,7 @@ import java.util.concurrent.Future;
 public class jp extends TextView {
     public final ea q;
     public final jl r;
-    public final io s;
+    public final DefaultConfig s;
     public ii t;
     public boolean u;
     public erp v;
@@ -156,7 +156,7 @@ public class jp extends TextView {
 
     @Override // android.widget.TextView
     public TextClassifier getTextClassifier() {
-        io ioVar;
+        DefaultConfig ioVar;
         if (Build.VERSION.SDK_INT >= 28 || (ioVar = this.s) == null) {
             return super.getTextClassifier();
         }
@@ -173,7 +173,7 @@ public class jp extends TextView {
         InputConnection inputConnectionOnCreateInputConnection = super.onCreateInputConnection(editorInfo);
         this.r.getClass();
         jl.o(editorInfo, inputConnectionOnCreateInputConnection, this);
-        bzo.ak(editorInfo, inputConnectionOnCreateInputConnection, this);
+        KotlinHelpers.ak(editorInfo, inputConnectionOnCreateInputConnection, this);
         return inputConnectionOnCreateInputConnection;
     }
 
@@ -261,7 +261,8 @@ public class jp extends TextView {
     }
 
     @Override // android.widget.TextView
-    public final void setCompoundDrawables(Drawable drawable, Drawable drawable2, Drawable drawable3, Drawable drawable4) {
+    public final void setCompoundDrawables(Drawable drawable, Drawable drawable2, Drawable drawable3,
+            Drawable drawable4) {
         super.setCompoundDrawables(drawable, drawable2, drawable3, drawable4);
         jl jlVar = this.r;
         if (jlVar != null) {
@@ -270,7 +271,8 @@ public class jp extends TextView {
     }
 
     @Override // android.widget.TextView
-    public final void setCompoundDrawablesRelative(Drawable drawable, Drawable drawable2, Drawable drawable3, Drawable drawable4) {
+    public final void setCompoundDrawablesRelative(Drawable drawable, Drawable drawable2, Drawable drawable3,
+            Drawable drawable4) {
         super.setCompoundDrawablesRelative(drawable, drawable2, drawable3, drawable4);
         jl jlVar = this.r;
         if (jlVar != null) {
@@ -279,7 +281,8 @@ public class jp extends TextView {
     }
 
     @Override // android.widget.TextView
-    public final void setCompoundDrawablesRelativeWithIntrinsicBounds(Drawable drawable, Drawable drawable2, Drawable drawable3, Drawable drawable4) {
+    public final void setCompoundDrawablesRelativeWithIntrinsicBounds(Drawable drawable, Drawable drawable2,
+            Drawable drawable3, Drawable drawable4) {
         super.setCompoundDrawablesRelativeWithIntrinsicBounds(drawable, drawable2, drawable3, drawable4);
         jl jlVar = this.r;
         if (jlVar != null) {
@@ -288,7 +291,8 @@ public class jp extends TextView {
     }
 
     @Override // android.widget.TextView
-    public final void setCompoundDrawablesWithIntrinsicBounds(Drawable drawable, Drawable drawable2, Drawable drawable3, Drawable drawable4) {
+    public final void setCompoundDrawablesWithIntrinsicBounds(Drawable drawable, Drawable drawable2, Drawable drawable3,
+            Drawable drawable4) {
         super.setCompoundDrawablesWithIntrinsicBounds(drawable, drawable2, drawable3, drawable4);
         jl jlVar = this.r;
         if (jlVar != null) {
@@ -330,7 +334,7 @@ public class jp extends TextView {
 
     @Override // android.widget.TextView
     public void setLineHeight(int i) {
-        cnb.ao(this, i);
+        cnb.trimStackTraceToClass(this, i);
     }
 
     public void setPrecomputedText(cvb cvbVar) {
@@ -378,7 +382,7 @@ public class jp extends TextView {
 
     @Override // android.widget.TextView
     public void setTextClassifier(TextClassifier textClassifier) {
-        io ioVar;
+        DefaultConfig ioVar;
         if (Build.VERSION.SDK_INT >= 28 || (ioVar = this.s) == null) {
             super.setTextClassifier(textClassifier);
         } else {
@@ -398,7 +402,8 @@ public class jp extends TextView {
         TextDirectionHeuristic textDirectionHeuristic2 = cvaVar.b;
         TextDirectionHeuristic textDirectionHeuristic3 = TextDirectionHeuristics.FIRSTSTRONG_RTL;
         int i = 1;
-        if (textDirectionHeuristic2 != textDirectionHeuristic3 && textDirectionHeuristic2 != (textDirectionHeuristic = TextDirectionHeuristics.FIRSTSTRONG_LTR)) {
+        if (textDirectionHeuristic2 != textDirectionHeuristic3
+                && textDirectionHeuristic2 != (textDirectionHeuristic = TextDirectionHeuristics.FIRSTSTRONG_LTR)) {
             if (textDirectionHeuristic2 == TextDirectionHeuristics.ANYRTL_LTR) {
                 i = 2;
             } else if (textDirectionHeuristic2 == TextDirectionHeuristics.LTR) {
@@ -446,7 +451,10 @@ public class jp extends TextView {
         }
     }
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'super' call moved to the top of the method (can break code
+     * semantics)
+     */
     public jp(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
         ekd.b(context);
@@ -460,7 +468,7 @@ public class jp extends TextView {
         this.r = jlVar;
         jlVar.t(attributeSet, i);
         jlVar.q();
-        io ioVar = new io(5, false);
+        DefaultConfig ioVar = new DefaultConfig(5, false);
         ioVar.c = this;
         this.s = ioVar;
         getEmojiTextViewHelper().d(attributeSet, i);
@@ -474,14 +482,17 @@ public class jp extends TextView {
         } else if (i2 >= 34) {
             ba.h(this, i, f);
         } else {
-            cnb.ao(this, Math.round(TypedValue.applyDimension(i, f, getResources().getDisplayMetrics())));
+            cnb.trimStackTraceToClass(this,
+                    Math.round(TypedValue.applyDimension(i, f, getResources().getDisplayMetrics())));
         }
     }
 
     @Override // android.widget.TextView
     public final void setCompoundDrawablesRelativeWithIntrinsicBounds(int i, int i2, int i3, int i4) {
         Context context = getContext();
-        setCompoundDrawablesRelativeWithIntrinsicBounds(i != 0 ? cmz.y(context, i) : null, i2 != 0 ? cmz.y(context, i2) : null, i3 != 0 ? cmz.y(context, i3) : null, i4 != 0 ? cmz.y(context, i4) : null);
+        setCompoundDrawablesRelativeWithIntrinsicBounds(i != 0 ? cmz.y(context, i) : null,
+                i2 != 0 ? cmz.y(context, i2) : null, i3 != 0 ? cmz.y(context, i3) : null,
+                i4 != 0 ? cmz.y(context, i4) : null);
         jl jlVar = this.r;
         if (jlVar != null) {
             jlVar.q();
@@ -491,7 +502,8 @@ public class jp extends TextView {
     @Override // android.widget.TextView
     public final void setCompoundDrawablesWithIntrinsicBounds(int i, int i2, int i3, int i4) {
         Context context = getContext();
-        setCompoundDrawablesWithIntrinsicBounds(i != 0 ? cmz.y(context, i) : null, i2 != 0 ? cmz.y(context, i2) : null, i3 != 0 ? cmz.y(context, i3) : null, i4 != 0 ? cmz.y(context, i4) : null);
+        setCompoundDrawablesWithIntrinsicBounds(i != 0 ? cmz.y(context, i) : null, i2 != 0 ? cmz.y(context, i2) : null,
+                i3 != 0 ? cmz.y(context, i3) : null, i4 != 0 ? cmz.y(context, i4) : null);
         jl jlVar = this.r;
         if (jlVar != null) {
             jlVar.q();

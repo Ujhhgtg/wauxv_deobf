@@ -11,7 +11,7 @@ public final class ene implements Comparable {
 
     @Override // java.lang.Comparable
     public final /* synthetic */ int compareTo(Object obj) {
-        return bzo.r(this.a & 65535, ((ene) obj).a & 65535);
+        return KotlinHelpers.r(this.a & 65535, ((ene) obj).a & 65535);
     }
 
     public final boolean equals(Object obj) {

@@ -22,10 +22,12 @@ public final class efd {
     static {
         dtr dtrVar = new dtr(28);
         btx btxVar = btx.a;
-        a = new btt[]{ewz.am(btxVar, dtrVar), null, ewz.am(btxVar, new dtr(29)), null, null, null, null, null, null, null, null};
+        a = new btt[] { ewz.am(btxVar, dtrVar), null, ewz.am(btxVar, new dtr(29)), null, null, null, null, null, null,
+                null, null };
     }
 
-    public /* synthetic */ efd(int i, List list, egf egfVar, List list2, dwj dwjVar, dwj dwjVar2, dwj dwjVar3, dwj dwjVar4, String str, dwj dwjVar5, String str2, Boolean bool) {
+    public /* synthetic */ efd(int i, List list, egf egfVar, List list2, dwj dwjVar, dwj dwjVar2, dwj dwjVar3,
+            dwj dwjVar4, String str, dwj dwjVar5, String str2, Boolean bool) {
         if (2047 != (i & 2047)) {
             bht.ah(i, 2047, efb.b.getDescriptor());
             throw null;
@@ -51,7 +53,12 @@ public final class efd {
             return false;
         }
         efd efdVar = (efd) obj;
-        return bzo.f(this.b, efdVar.b) && bzo.f(this.c, efdVar.c) && bzo.f(this.d, efdVar.d) && bzo.f(this.e, efdVar.e) && bzo.f(this.f, efdVar.f) && bzo.f(this.g, efdVar.g) && bzo.f(this.h, efdVar.h) && bzo.f(this.i, efdVar.i) && bzo.f(this.j, efdVar.j) && bzo.f(this.k, efdVar.k) && bzo.f(this.l, efdVar.l);
+        return nullSafeIsEqual(this.b, efdVar.b) && nullSafeIsEqual(this.c, efdVar.c)
+                && nullSafeIsEqual(this.d, efdVar.d) && nullSafeIsEqual(this.e, efdVar.e)
+                && nullSafeIsEqual(this.f, efdVar.f) && nullSafeIsEqual(this.g, efdVar.g)
+                && nullSafeIsEqual(this.h, efdVar.h) && nullSafeIsEqual(this.i, efdVar.i)
+                && nullSafeIsEqual(this.j, efdVar.j) && nullSafeIsEqual(this.k, efdVar.k)
+                && nullSafeIsEqual(this.l, efdVar.l);
     }
 
     public final int hashCode() {

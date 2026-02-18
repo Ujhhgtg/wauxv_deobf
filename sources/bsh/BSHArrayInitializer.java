@@ -41,7 +41,7 @@ class BSHArrayInitializer extends SimpleNode {
                 objEval = ((BSHArrayInitializer) nodeJjtGetChild).eval(cls, i - 1, callStack, interpreter);
             }
             if (objEval == Primitive.VOID) {
-                throw new EvalException(bjs.i(i2, "Void in array initializer, position "), this, callStack);
+                throw new EvalException(concatVar2Var1(i2, "Void in array initializer, position "), this, callStack);
             }
             try {
                 Array.set(objNewInstance, i2, normalizeEntry(objEval, cls, i, callStack));
@@ -89,7 +89,8 @@ class BSHArrayInitializer extends SimpleNode {
     private Class<?> inferCommonType(Class<?> cls, Node node, CallStack callStack, Interpreter interpreter) {
         if (Object.class != cls && Types.MapEntry.class != cls) {
             if (node instanceof BSHAssignment) {
-                return Types.getCommonType(cls, Types.arrayElementType(Types.getType(node.eval(callStack, interpreter), Primitive.isWrapperType(cls))));
+                return Types.getCommonType(cls, Types.arrayElementType(
+                        Types.getType(node.eval(callStack, interpreter), Primitive.isWrapperType(cls))));
             }
             if ((node instanceof BSHArrayInitializer) && isMapInArray((BSHArrayInitializer) node)) {
                 return Types.getCommonType(cls, Map.class);
@@ -105,21 +106,28 @@ class BSHArrayInitializer extends SimpleNode {
         int i3 = i;
         while (node.jjtGetNumChildren() > i2) {
             node = node.jjtGetChild(i2);
-            if (!(node instanceof BSHArrayInitializer) || isMapInArray((BSHArrayInitializer) node) || node.jjtGetNumChildren() <= 0) {
+            if (!(node instanceof BSHArrayInitializer) || isMapInArray((BSHArrayInitializer) node)
+                    || node.jjtGetNumChildren() <= 0) {
                 break;
             }
             i3++;
             i2 = 0;
         }
         if (node instanceof BSHArrayInitializer) {
-            return node.jjtGetNumChildren() == 0 ? inferDimensions(i3, i2 + 1, node.jjtGetParent(), callStack, interpreter) : i3;
+            return node.jjtGetNumChildren() == 0
+                    ? inferDimensions(i3, i2 + 1, node.jjtGetParent(), callStack, interpreter)
+                    : i3;
         }
         Object objEval = node.eval(callStack, interpreter);
-        return objEval == Primitive.NULL ? inferDimensions(i3, i2 + 1, node.jjtGetParent(), callStack, interpreter) : i3 + Types.arrayDimensions(Types.getType(objEval));
+        return objEval == Primitive.NULL ? inferDimensions(i3, i2 + 1, node.jjtGetParent(), callStack, interpreter)
+                : i3 + Types.arrayDimensions(Types.getType(objEval));
     }
 
     private boolean isBeanType(Class<?> cls) {
-        return Void.TYPE != cls && !Types.isCollectionType(cls) && (jjtGetChild(0) instanceof BSHAssignment) && (jjtGetChild(0).jjtGetChild(0) instanceof BSHPrimaryExpression) && ((BSHPrimaryExpression) jjtGetChild(0).jjtGetChild(0)).isMapExpression && (jjtGetChild(0).jjtGetChild(0).jjtGetChild(0) instanceof BSHAmbiguousName);
+        return Void.TYPE != cls && !Types.isCollectionType(cls) && (jjtGetChild(0) instanceof BSHAssignment)
+                && (jjtGetChild(0).jjtGetChild(0) instanceof BSHPrimaryExpression)
+                && ((BSHPrimaryExpression) jjtGetChild(0).jjtGetChild(0)).isMapExpression
+                && (jjtGetChild(0).jjtGetChild(0).jjtGetChild(0) instanceof BSHAmbiguousName);
     }
 
     private boolean isMapInArray(BSHArrayInitializer bSHArrayInitializer) {
@@ -184,9 +192,9 @@ class BSHArrayInitializer extends SimpleNode {
         return super.toString() + ": " + this.isMapInArray;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:30:0x0059  */
-    /* JADX WARN: Found duplicated region for block: B:37:0x006a  */
-    /* JADX WARN: Found duplicated region for block: B:38:0x006d  */
+    /* JADX WARN: Found duplicated region for block: B:30:0x0059 */
+    /* JADX WARN: Found duplicated region for block: B:37:0x006a */
+    /* JADX WARN: Found duplicated region for block: B:38:0x006d */
     public Object eval(Class<?> cls, int i, CallStack callStack, Interpreter interpreter) throws EvalException {
         CallStack callStack2;
         Interpreter interpreter2;

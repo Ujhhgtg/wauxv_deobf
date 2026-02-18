@@ -28,7 +28,8 @@ public final class ejr {
             return false;
         }
         ejr ejrVar = (ejr) obj;
-        return bzo.f(this.a, ejrVar.a) && bzo.f(this.b, ejrVar.b) && bzo.f(this.c, ejrVar.c) && bzo.f(this.d, ejrVar.d);
+        return nullSafeIsEqual(this.a, ejrVar.a) && nullSafeIsEqual(this.b, ejrVar.b)
+                && nullSafeIsEqual(this.c, ejrVar.c) && nullSafeIsEqual(this.d, ejrVar.d);
     }
 
     public final int hashCode() {
@@ -48,6 +49,6 @@ public final class ejr {
         bjs.w(sb, this.a, -350456446450474L);
         dkz.ad(sb, this.b, -350379137039146L);
         dkz.ad(sb, this.c, -350314712529706L);
-        return bjs.q(sb, this.d, ')');
+        return concat(sb, this.d, ')');
     }
 }

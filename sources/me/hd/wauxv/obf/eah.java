@@ -6,7 +6,8 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class eah {
     public static final eag Companion = new eag();
-    public static final btt[] a = {null, null, ewz.am(btx.a, new dtr(15)), null, null, null, null, null, null, null, null, null, null, null, null, null};
+    public static final btt[] a = { null, null, ewz.am(btx.a, new dtr(15)), null, null, null, null, null, null, null,
+            null, null, null, null, null, null };
     public final Long b;
     public final String c;
     public final List d;
@@ -24,7 +25,9 @@ public final class eah {
     public final Integer p;
     public final String q;
 
-    public /* synthetic */ eah(int i, Long l, String str, List list, dyi dyiVar, Integer num, Integer num2, ebi ebiVar, String str2, Integer num3, Integer num4, String str3, Long l2, Integer num5, Integer num6, Integer num7, String str4) {
+    public /* synthetic */ eah(int i, Long l, String str, List list, dyi dyiVar, Integer num, Integer num2, ebi ebiVar,
+            String str2, Integer num3, Integer num4, String str3, Long l2, Integer num5, Integer num6, Integer num7,
+            String str4) {
         if (65535 != (i & 65535)) {
             bht.ah(i, 65535, eaf.b.getDescriptor());
             throw null;
@@ -55,7 +58,16 @@ public final class eah {
             return false;
         }
         eah eahVar = (eah) obj;
-        return bzo.f(this.b, eahVar.b) && bzo.f(this.c, eahVar.c) && bzo.f(this.d, eahVar.d) && bzo.f(this.e, eahVar.e) && bzo.f(this.f, eahVar.f) && bzo.f(this.g, eahVar.g) && bzo.f(this.h, eahVar.h) && bzo.f(this.i, eahVar.i) && bzo.f(this.j, eahVar.j) && bzo.f(this.k, eahVar.k) && bzo.f(this.l, eahVar.l) && bzo.f(this.m, eahVar.m) && bzo.f(this.n, eahVar.n) && bzo.f(this.o, eahVar.o) && bzo.f(this.p, eahVar.p) && bzo.f(this.q, eahVar.q);
+        return nullSafeIsEqual(this.b, eahVar.b) && nullSafeIsEqual(this.c, eahVar.c)
+                && nullSafeIsEqual(this.d, eahVar.d) && nullSafeIsEqual(this.e, eahVar.e)
+                && nullSafeIsEqual(this.f, eahVar.f) && nullSafeIsEqual(this.g, eahVar.g)
+                && nullSafeIsEqual(this.h, eahVar.h)
+                && nullSafeIsEqual(this.i, eahVar.i) && nullSafeIsEqual(this.j, eahVar.j)
+                && nullSafeIsEqual(this.k, eahVar.k)
+                && nullSafeIsEqual(this.l, eahVar.l) && nullSafeIsEqual(this.m, eahVar.m)
+                && nullSafeIsEqual(this.n, eahVar.n)
+                && nullSafeIsEqual(this.o, eahVar.o) && nullSafeIsEqual(this.p, eahVar.p)
+                && nullSafeIsEqual(this.q, eahVar.q);
     }
 
     public final int hashCode() {
@@ -113,6 +125,6 @@ public final class eah {
         bjs.w(sb, this.n, -225460013234986L);
         bjs.w(sb, this.o, -225949639506730L);
         bjs.w(sb, this.p, -225825085455146L);
-        return bjs.q(sb, this.q, ')');
+        return concat(sb, this.q, ')');
     }
 }

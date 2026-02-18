@@ -41,27 +41,31 @@ public final class cyo implements bul {
                 }
                 ArrayList<String> stringArrayList = bundleG.getStringArrayList("classes_to_restore");
                 if (stringArrayList == null) {
-                    throw new IllegalStateException("SavedState with restored state for the component \"androidx.savedstate.Restarter\" must contain list of strings by the key \"classes_to_restore\"");
+                    throw new IllegalStateException(
+                            "SavedState with restored state for the component \"androidx.savedstate.Restarter\" must contain list of strings by the key \"classes_to_restore\"");
                 }
                 for (String str : stringArrayList) {
                     try {
-                        Class<? extends U> clsAsSubclass = Class.forName(str, false, cyo.class.getClassLoader()).asSubclass(dem.class);
-                        bzo.n(clsAsSubclass);
+                        Class<? extends U> clsAsSubclass = Class.forName(str, false, cyo.class.getClassLoader())
+                                .asSubclass(dem.class);
+                        throwIfVar1IsNull(clsAsSubclass);
                         try {
                             Constructor declaredConstructor = clsAsSubclass.getDeclaredConstructor(null);
                             declaredConstructor.setAccessible(true);
                             try {
                                 Object objNewInstance = declaredConstructor.newInstance(null);
-                                bzo.n(objNewInstance);
+                                throwIfVar1IsNull(objNewInstance);
                                 if (!(depVar instanceof err)) {
-                                    throw new IllegalStateException(("Internal error: OnRecreation should be registered only on components that implement ViewModelStoreOwner. Received owner: " + depVar).toString());
+                                    throw new IllegalStateException(
+                                            ("Internal error: OnRecreation should be registered only on components that implement ViewModelStoreOwner. Received owner: "
+                                                    + depVar).toString());
                                 }
                                 erq erqVarAj = ((err) depVar).aj();
                                 but butVarAk = depVar.ak();
                                 erqVarAj.getClass();
                                 LinkedHashMap linkedHashMap = erqVarAj.a;
                                 for (String str2 : new HashSet(linkedHashMap.keySet())) {
-                                    bzo.q(str2, "key");
+                                    throwIfVar1IsNull(str2, "key");
                                     erk erkVar = (erk) linkedHashMap.get(str2);
                                     if (erkVar != null) {
                                         aye.m(erkVar, butVarAk, depVar.ap());
@@ -74,10 +78,13 @@ public final class cyo implements bul {
                                 throw new RuntimeException(yg.k("Failed to instantiate ", str), e);
                             }
                         } catch (NoSuchMethodException e2) {
-                            throw new IllegalStateException("Class " + clsAsSubclass.getSimpleName() + " must have default constructor in order to be automatically recreated", e2);
+                            throw new IllegalStateException(
+                                    "Class " + clsAsSubclass.getSimpleName()
+                                            + " must have default constructor in order to be automatically recreated",
+                                    e2);
                         }
                     } catch (ClassNotFoundException e3) {
-                        throw new RuntimeException(bjs.o("Class ", str, " wasn't found"), e3);
+                        throw new RuntimeException(concat("Class ", str, " wasn't found"), e3);
                     }
                 }
                 return;
@@ -121,7 +128,7 @@ public final class cyo implements bul {
                     if (!(iterable instanceof Collection) || !((Collection) iterable).isEmpty()) {
                         Iterator it = iterable.iterator();
                         while (it.hasNext()) {
-                            if (bzo.f(((cio) it.next()).f, ancVar.bs)) {
+                            if (nullSafeIsEqual(((cio) it.next()).f, ancVar.bs)) {
                                 return;
                             }
                         }
@@ -133,7 +140,7 @@ public final class cyo implements bul {
                 if (i == 2) {
                     anc ancVar2 = (anc) bupVar;
                     for (Object obj2 : (Iterable) ((dml) aniVar.w().f.h).c()) {
-                        if (bzo.f(((cio) obj2).f, ancVar2.bs)) {
+                        if (nullSafeIsEqual(((cio) obj2).f, ancVar2.bs)) {
                             obj = obj2;
                         }
                     }
@@ -150,7 +157,7 @@ public final class cyo implements bul {
                     }
                     anc ancVar3 = (anc) bupVar;
                     for (Object obj3 : (Iterable) ((dml) aniVar.w().f.h).c()) {
-                        if (bzo.f(((cio) obj3).f, ancVar3.bs)) {
+                        if (nullSafeIsEqual(((cio) obj3).f, ancVar3.bs)) {
                             obj = obj3;
                         }
                     }
@@ -170,13 +177,14 @@ public final class cyo implements bul {
                 while (true) {
                     if (!listIterator.hasPrevious()) {
                         iNextIndex = -1;
-                    } else if (bzo.f(((cio) listIterator.previous()).f, ancVar4.bs)) {
+                    } else if (nullSafeIsEqual(((cio) listIterator.previous()).f, ancVar4.bs)) {
                         iNextIndex = listIterator.nextIndex();
                     }
                 }
                 cio cioVar3 = (cio) aaz.h(iNextIndex, list);
-                if (!bzo.f(aaz.m(list), cioVar3)) {
-                    Log.i("DialogFragmentNavigator", "Dialog " + ancVar4 + " was dismissed while it was not the top of the back stack, popping all dialogs above this dismissed dialog");
+                if (!nullSafeIsEqual(aaz.m(list), cioVar3)) {
+                    Log.i("DialogFragmentNavigator", "Dialog " + ancVar4
+                            + " was dismissed while it was not the top of the back stack, popping all dialogs above this dismissed dialog");
                 }
                 if (cioVar3 != null) {
                     aniVar.n(iNextIndex, cioVar3, false);

@@ -23,7 +23,7 @@ public final class bes {
         Object objPrevious;
         beq beqVar = this.b;
         ArrayList arrayList = beqVar.h;
-        bzo.q(bdjVar, "fragment");
+        throwIfVar1IsNull(bdjVar, "fragment");
         cit citVar = this.a;
         ArrayList arrayListO = aaz.o((Collection) ((dml) citVar.e.h).c(), (Iterable) ((dml) citVar.f.h).c());
         ListIterator listIterator = arrayListO.listIterator(arrayListO.size());
@@ -34,31 +34,35 @@ public final class bes {
                 break;
             }
             objPrevious = listIterator.previous();
-        } while (!bzo.f(((cio) objPrevious).f, bdjVar.bs));
+        } while (!nullSafeIsEqual(((cio) objPrevious).f, bdjVar.bs));
         cio cioVar = (cio) objPrevious;
         boolean z2 = z && arrayList.isEmpty() && bdjVar.bd;
         for (Object obj2 : arrayList) {
-            if (bzo.f(((csm) obj2).a, bdjVar.bs)) {
+            if (nullSafeIsEqual(((Pair) obj2).first, bdjVar.bs)) {
                 obj = obj2;
                 break;
             }
         }
-        csm csmVar = (csm) obj;
-        if (csmVar != null) {
-            arrayList.remove(csmVar);
+        Pair pairVar = (Pair) obj;
+        if (pairVar != null) {
+            arrayList.remove(pairVar);
         }
         if (!z2 && beq.p()) {
-            Log.v("FragmentNavigator", "OnBackStackChangedCommitted for fragment " + bdjVar + " associated with entry " + cioVar);
+            Log.v("FragmentNavigator",
+                    "OnBackStackChangedCommitted for fragment " + bdjVar + " associated with entry " + cioVar);
         }
-        boolean z3 = csmVar != null && ((Boolean) csmVar.b).booleanValue();
+        boolean z3 = pairVar != null && ((Boolean) pairVar.second).booleanValue();
         if (!z && !z3 && cioVar == null) {
-            throw new IllegalArgumentException(yg.l("The fragment ", bdjVar, " is unknown to the FragmentNavigator. Please use the navigate() function to add fragments to the FragmentNavigator managed FragmentManager.").toString());
+            throw new IllegalArgumentException(yg.l("The fragment ", bdjVar,
+                    " is unknown to the FragmentNavigator. Please use the navigate() function to add fragments to the FragmentNavigator managed FragmentManager.")
+                    .toString());
         }
         if (cioVar != null) {
             beqVar.s(bdjVar, cioVar, citVar);
             if (z2) {
                 if (beq.p()) {
-                    Log.v("FragmentNavigator", "OnBackStackChangedCommitted for fragment " + bdjVar + " popping associated entry " + cioVar + " via system back");
+                    Log.v("FragmentNavigator", "OnBackStackChangedCommitted for fragment " + bdjVar
+                            + " popping associated entry " + cioVar + " via system back");
                 }
                 citVar.n(cioVar, false);
             }
@@ -67,7 +71,7 @@ public final class bes {
 
     public final void d(bdj bdjVar, boolean z) {
         Object objPrevious;
-        bzo.q(bdjVar, "fragment");
+        throwIfVar1IsNull(bdjVar, "fragment");
         if (z) {
             cit citVar = this.a;
             List list = (List) ((dml) citVar.e.h).c();
@@ -78,10 +82,11 @@ public final class bes {
                     break;
                 }
                 objPrevious = listIterator.previous();
-            } while (!bzo.f(((cio) objPrevious).f, bdjVar.bs));
+            } while (!nullSafeIsEqual(((cio) objPrevious).f, bdjVar.bs));
             cio cioVar = (cio) objPrevious;
             if (beq.p()) {
-                Log.v("FragmentNavigator", "OnBackStackChangedStarted for fragment " + bdjVar + " associated with entry " + cioVar);
+                Log.v("FragmentNavigator",
+                        "OnBackStackChangedStarted for fragment " + bdjVar + " associated with entry " + cioVar);
             }
             if (cioVar != null) {
                 dml dmlVar = citVar.c;

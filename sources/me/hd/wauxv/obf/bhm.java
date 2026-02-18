@@ -23,7 +23,7 @@ public final class bhm implements Serializable {
             return false;
         }
         bhm bhmVar = (bhm) obj;
-        return bzo.f(this.a, bhmVar.a) && this.b == bhmVar.b && bzo.f(this.c, bhmVar.c);
+        return nullSafeIsEqual(this.a, bhmVar.a) && this.b == bhmVar.b && nullSafeIsEqual(this.c, bhmVar.c);
     }
 
     public final int hashCode() {
@@ -35,6 +35,6 @@ public final class bhm implements Serializable {
         sb.append("VersionInfo(version=" /* cnb.z(-45346264709930L) */);
         yg.u(sb, this.a, -45221710658346L);
         dkz.ac(sb, this.b, -45217415691050L);
-        return bjs.q(sb, this.c, ')');
+        return concat(sb, this.c, ')');
     }
 }

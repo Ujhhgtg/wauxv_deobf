@@ -16,7 +16,8 @@ public final class efa {
     public final Integer j;
     public final Integer k;
 
-    public /* synthetic */ efa(int i, String str, Integer num, String str2, String str3, String str4, String str5, Integer num2, String str6, String str7, Integer num3, Integer num4) {
+    public /* synthetic */ efa(int i, String str, Integer num, String str2, String str3, String str4, String str5,
+            Integer num2, String str6, String str7, Integer num3, Integer num4) {
         if (2047 != (i & 2047)) {
             bht.ah(i, 2047, eey.b.getDescriptor());
             throw null;
@@ -42,7 +43,13 @@ public final class efa {
             return false;
         }
         efa efaVar = (efa) obj;
-        return bzo.f(this.a, efaVar.a) && bzo.f(this.b, efaVar.b) && bzo.f(this.c, efaVar.c) && bzo.f(this.d, efaVar.d) && bzo.f(this.e, efaVar.e) && bzo.f(this.f, efaVar.f) && bzo.f(this.g, efaVar.g) && bzo.f(this.h, efaVar.h) && bzo.f(this.i, efaVar.i) && bzo.f(this.j, efaVar.j) && bzo.f(this.k, efaVar.k);
+        return nullSafeIsEqual(this.a, efaVar.a) && nullSafeIsEqual(this.b, efaVar.b)
+                && nullSafeIsEqual(this.c, efaVar.c) && nullSafeIsEqual(this.d, efaVar.d)
+                && nullSafeIsEqual(this.e, efaVar.e) && nullSafeIsEqual(this.f, efaVar.f)
+                && nullSafeIsEqual(this.g, efaVar.g)
+                && nullSafeIsEqual(this.h, efaVar.h) && nullSafeIsEqual(this.i, efaVar.i)
+                && nullSafeIsEqual(this.j, efaVar.j)
+                && nullSafeIsEqual(this.k, efaVar.k);
     }
 
     public final int hashCode() {
@@ -83,6 +90,6 @@ public final class efa {
         yg.u(sb, this.h, -284305360157482L);
         yg.u(sb, this.i, -284266705451818L);
         bjs.w(sb, this.j, -284279590353706L);
-        return bjs.p(sb, this.k, ')');
+        return concat(sb, this.k, ')');
     }
 }

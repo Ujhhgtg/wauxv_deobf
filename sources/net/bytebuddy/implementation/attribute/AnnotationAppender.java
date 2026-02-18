@@ -30,8 +30,15 @@ public interface AnnotationAppender {
     @AlwaysNull
     public static final String NO_NAME = null;
 
-    /* JADX INFO: renamed from: net.bytebuddy.implementation.attribute.AnnotationAppender$1, reason: invalid class name */
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: renamed from:
+     * net.bytebuddy.implementation.attribute.AnnotationAppender$1, reason: invalid
+     * class name
+     */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static /* synthetic */ class AnonymousClass1 {
         static final /* synthetic */ int[] $SwitchMap$java$lang$annotation$RetentionPolicy;
 
@@ -53,7 +60,10 @@ public interface AnnotationAppender {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @HashCodeAndEqualsPlugin.Enhance
     public static class ForTypeAnnotations implements TypeDescription.Generic.Visitor<AnnotationAppender> {
         private static final char COMPONENT_TYPE_PATH = '[';
@@ -69,7 +79,8 @@ public interface AnnotationAppender {
         private final String typePath;
         private final int typeReference;
 
-        public ForTypeAnnotations(AnnotationAppender annotationAppender, AnnotationValueFilter annotationValueFilter, TypeReference typeReference) {
+        public ForTypeAnnotations(AnnotationAppender annotationAppender, AnnotationValueFilter annotationValueFilter,
+                TypeReference typeReference) {
             this(annotationAppender, annotationValueFilter, typeReference.getValue(), "");
         }
 
@@ -77,40 +88,56 @@ public interface AnnotationAppender {
             AnnotationAppender annotationAppenderAppend = this.annotationAppender;
             Iterator<AnnotationDescription> it = generic.getDeclaredAnnotations().iterator();
             while (it.hasNext()) {
-                annotationAppenderAppend = annotationAppenderAppend.append(it.next(), this.annotationValueFilter, this.typeReference, str);
+                annotationAppenderAppend = annotationAppenderAppend.append(it.next(), this.annotationValueFilter,
+                        this.typeReference, str);
             }
             return annotationAppenderAppend;
         }
 
-        public static TypeDescription.Generic.Visitor<AnnotationAppender> ofExceptionType(AnnotationAppender annotationAppender, AnnotationValueFilter annotationValueFilter, int i) {
-            return new ForTypeAnnotations(annotationAppender, annotationValueFilter, TypeReference.newExceptionReference(i));
+        public static TypeDescription.Generic.Visitor<AnnotationAppender> ofExceptionType(
+                AnnotationAppender annotationAppender, AnnotationValueFilter annotationValueFilter, int i) {
+            return new ForTypeAnnotations(annotationAppender, annotationValueFilter,
+                    TypeReference.newExceptionReference(i));
         }
 
-        public static TypeDescription.Generic.Visitor<AnnotationAppender> ofFieldType(AnnotationAppender annotationAppender, AnnotationValueFilter annotationValueFilter) {
-            return new ForTypeAnnotations(annotationAppender, annotationValueFilter, TypeReference.newTypeReference(19));
+        public static TypeDescription.Generic.Visitor<AnnotationAppender> ofFieldType(
+                AnnotationAppender annotationAppender, AnnotationValueFilter annotationValueFilter) {
+            return new ForTypeAnnotations(annotationAppender, annotationValueFilter,
+                    TypeReference.newTypeReference(19));
         }
 
-        public static TypeDescription.Generic.Visitor<AnnotationAppender> ofInterfaceType(AnnotationAppender annotationAppender, AnnotationValueFilter annotationValueFilter, int i) {
-            return new ForTypeAnnotations(annotationAppender, annotationValueFilter, TypeReference.newSuperTypeReference(i));
+        public static TypeDescription.Generic.Visitor<AnnotationAppender> ofInterfaceType(
+                AnnotationAppender annotationAppender, AnnotationValueFilter annotationValueFilter, int i) {
+            return new ForTypeAnnotations(annotationAppender, annotationValueFilter,
+                    TypeReference.newSuperTypeReference(i));
         }
 
-        public static TypeDescription.Generic.Visitor<AnnotationAppender> ofMethodParameterType(AnnotationAppender annotationAppender, AnnotationValueFilter annotationValueFilter, int i) {
-            return new ForTypeAnnotations(annotationAppender, annotationValueFilter, TypeReference.newFormalParameterReference(i));
+        public static TypeDescription.Generic.Visitor<AnnotationAppender> ofMethodParameterType(
+                AnnotationAppender annotationAppender, AnnotationValueFilter annotationValueFilter, int i) {
+            return new ForTypeAnnotations(annotationAppender, annotationValueFilter,
+                    TypeReference.newFormalParameterReference(i));
         }
 
-        public static TypeDescription.Generic.Visitor<AnnotationAppender> ofMethodReturnType(AnnotationAppender annotationAppender, AnnotationValueFilter annotationValueFilter) {
-            return new ForTypeAnnotations(annotationAppender, annotationValueFilter, TypeReference.newTypeReference(20));
+        public static TypeDescription.Generic.Visitor<AnnotationAppender> ofMethodReturnType(
+                AnnotationAppender annotationAppender, AnnotationValueFilter annotationValueFilter) {
+            return new ForTypeAnnotations(annotationAppender, annotationValueFilter,
+                    TypeReference.newTypeReference(20));
         }
 
-        public static TypeDescription.Generic.Visitor<AnnotationAppender> ofReceiverType(AnnotationAppender annotationAppender, AnnotationValueFilter annotationValueFilter) {
-            return new ForTypeAnnotations(annotationAppender, annotationValueFilter, TypeReference.newTypeReference(21));
+        public static TypeDescription.Generic.Visitor<AnnotationAppender> ofReceiverType(
+                AnnotationAppender annotationAppender, AnnotationValueFilter annotationValueFilter) {
+            return new ForTypeAnnotations(annotationAppender, annotationValueFilter,
+                    TypeReference.newTypeReference(21));
         }
 
-        public static TypeDescription.Generic.Visitor<AnnotationAppender> ofSuperClass(AnnotationAppender annotationAppender, AnnotationValueFilter annotationValueFilter) {
-            return new ForTypeAnnotations(annotationAppender, annotationValueFilter, TypeReference.newSuperTypeReference(-1));
+        public static TypeDescription.Generic.Visitor<AnnotationAppender> ofSuperClass(
+                AnnotationAppender annotationAppender, AnnotationValueFilter annotationValueFilter) {
+            return new ForTypeAnnotations(annotationAppender, annotationValueFilter,
+                    TypeReference.newSuperTypeReference(-1));
         }
 
-        public static AnnotationAppender ofTypeVariable(AnnotationAppender annotationAppender, AnnotationValueFilter annotationValueFilter, boolean z, List<? extends TypeDescription.Generic> list) {
+        public static AnnotationAppender ofTypeVariable(AnnotationAppender annotationAppender,
+                AnnotationValueFilter annotationValueFilter, boolean z, List<? extends TypeDescription.Generic> list) {
             return ofTypeVariable(annotationAppender, annotationValueFilter, z, 0, list);
         }
 
@@ -122,21 +149,29 @@ public interface AnnotationAppender {
                 return false;
             }
             ForTypeAnnotations forTypeAnnotations = (ForTypeAnnotations) obj;
-            return this.typeReference == forTypeAnnotations.typeReference && this.typePath.equals(forTypeAnnotations.typePath) && this.annotationAppender.equals(forTypeAnnotations.annotationAppender) && this.annotationValueFilter.equals(forTypeAnnotations.annotationValueFilter);
+            return this.typeReference == forTypeAnnotations.typeReference
+                    && this.typePath.equals(forTypeAnnotations.typePath)
+                    && this.annotationAppender.equals(forTypeAnnotations.annotationAppender)
+                    && this.annotationValueFilter.equals(forTypeAnnotations.annotationValueFilter);
         }
 
         public int hashCode() {
-            return this.typePath.hashCode() + ((((this.annotationValueFilter.hashCode() + ((this.annotationAppender.hashCode() + (getClass().hashCode() * 31)) * 31)) * 31) + this.typeReference) * 31);
+            return this.typePath.hashCode() + ((((this.annotationValueFilter.hashCode()
+                    + ((this.annotationAppender.hashCode() + (getClass().hashCode() * 31)) * 31)) * 31)
+                    + this.typeReference) * 31);
         }
 
-        public ForTypeAnnotations(AnnotationAppender annotationAppender, AnnotationValueFilter annotationValueFilter, int i, String str) {
+        public ForTypeAnnotations(AnnotationAppender annotationAppender, AnnotationValueFilter annotationValueFilter,
+                int i, String str) {
             this.annotationAppender = annotationAppender;
             this.annotationValueFilter = annotationValueFilter;
             this.typeReference = i;
             this.typePath = str;
         }
 
-        public static AnnotationAppender ofTypeVariable(AnnotationAppender annotationAppender, AnnotationValueFilter annotationValueFilter, boolean z, int i, List<? extends TypeDescription.Generic> list) {
+        public static AnnotationAppender ofTypeVariable(AnnotationAppender annotationAppender,
+                AnnotationValueFilter annotationValueFilter, boolean z, int i,
+                List<? extends TypeDescription.Generic> list) {
             int i2;
             int i3;
             if (z) {
@@ -152,10 +187,13 @@ public interface AnnotationAppender {
                 while (it.hasNext()) {
                     annotationAppender = annotationAppender.append(it.next(), annotationValueFilter, value, "");
                 }
-                int i4 = (generic.getUpperBounds().get(0).getSort().isTypeVariable() || !generic.getUpperBounds().get(0).isInterface()) ? 0 : 1;
+                int i4 = (generic.getUpperBounds().get(0).getSort().isTypeVariable()
+                        || !generic.getUpperBounds().get(0).isInterface()) ? 0 : 1;
                 Iterator<TypeDescription.Generic> it2 = generic.getUpperBounds().iterator();
                 while (it2.hasNext()) {
-                    annotationAppender = (AnnotationAppender) it2.next().accept(new ForTypeAnnotations(annotationAppender, annotationValueFilter, TypeReference.newTypeParameterBoundReference(i2, i, i4)));
+                    annotationAppender = (AnnotationAppender) it2.next()
+                            .accept(new ForTypeAnnotations(annotationAppender, annotationValueFilter,
+                                    TypeReference.newTypeParameterBoundReference(i2, i, i4)));
                     i4++;
                 }
                 i++;
@@ -165,7 +203,9 @@ public interface AnnotationAppender {
 
         @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
         public AnnotationAppender onGenericArray(TypeDescription.Generic generic) {
-            return (AnnotationAppender) generic.getComponentType().accept(new ForTypeAnnotations(apply(generic, this.typePath), this.annotationValueFilter, this.typeReference, bjs.q(new StringBuilder(), this.typePath, '[')));
+            return (AnnotationAppender) generic.getComponentType()
+                    .accept(new ForTypeAnnotations(apply(generic, this.typePath), this.annotationValueFilter,
+                            this.typeReference, concat(new StringBuilder(), this.typePath, '[')));
         }
 
         @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
@@ -176,7 +216,11 @@ public interface AnnotationAppender {
             }
             AnnotationAppender annotationAppenderApply = apply(generic, sb.toString());
             TypeDescription.Generic componentType = generic.getComponentType();
-            return componentType != null ? (AnnotationAppender) componentType.accept(new ForTypeAnnotations(annotationAppenderApply, this.annotationValueFilter, this.typeReference, bjs.q(new StringBuilder(), this.typePath, '['))) : annotationAppenderApply;
+            return componentType != null
+                    ? (AnnotationAppender) componentType
+                            .accept(new ForTypeAnnotations(annotationAppenderApply, this.annotationValueFilter,
+                                    this.typeReference, concat(new StringBuilder(), this.typePath, '[')))
+                    : annotationAppenderApply;
         }
 
         @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
@@ -189,11 +233,14 @@ public interface AnnotationAppender {
             AnnotationAppender annotationAppenderApply = apply(generic, sb.toString());
             TypeDescription.Generic ownerType = generic.getOwnerType();
             if (ownerType != null) {
-                annotationAppenderApply = (AnnotationAppender) ownerType.accept(new ForTypeAnnotations(annotationAppenderApply, this.annotationValueFilter, this.typeReference, this.typePath));
+                annotationAppenderApply = (AnnotationAppender) ownerType.accept(new ForTypeAnnotations(
+                        annotationAppenderApply, this.annotationValueFilter, this.typeReference, this.typePath));
             }
             Iterator<TypeDescription.Generic> it = generic.getTypeArguments().iterator();
             while (it.hasNext()) {
-                annotationAppenderApply = (AnnotationAppender) it.next().accept(new ForTypeAnnotations(annotationAppenderApply, this.annotationValueFilter, this.typeReference, sb.toString() + i + ';'));
+                annotationAppenderApply = (AnnotationAppender) it.next()
+                        .accept(new ForTypeAnnotations(annotationAppenderApply, this.annotationValueFilter,
+                                this.typeReference, sb.toString() + i + ';'));
                 i++;
             }
             return annotationAppenderApply;
@@ -207,14 +254,23 @@ public interface AnnotationAppender {
         @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor
         public AnnotationAppender onWildcard(TypeDescription.Generic generic) {
             TypeList.Generic lowerBounds = generic.getLowerBounds();
-            return (AnnotationAppender) (lowerBounds.isEmpty() ? generic.getUpperBounds().getOnly() : lowerBounds.getOnly()).accept(new ForTypeAnnotations(apply(generic, this.typePath), this.annotationValueFilter, this.typeReference, bjs.q(new StringBuilder(), this.typePath, '*')));
+            return (AnnotationAppender) (lowerBounds.isEmpty() ? generic.getUpperBounds().getOnly()
+                    : lowerBounds.getOnly())
+                    .accept(new ForTypeAnnotations(apply(generic, this.typePath), this.annotationValueFilter,
+                            this.typeReference, concat(new StringBuilder(), this.typePath, '*')));
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface Target {
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class OnField implements Target {
             private final FieldVisitor fieldVisitor;
@@ -227,7 +283,8 @@ public interface AnnotationAppender {
                 if (this == obj) {
                     return true;
                 }
-                return obj != null && getClass() == obj.getClass() && this.fieldVisitor.equals(((OnField) obj).fieldVisitor);
+                return obj != null && getClass() == obj.getClass()
+                        && this.fieldVisitor.equals(((OnField) obj).fieldVisitor);
             }
 
             public int hashCode() {
@@ -247,7 +304,10 @@ public interface AnnotationAppender {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class OnMethod implements Target {
             private final MethodVisitor methodVisitor;
@@ -260,7 +320,8 @@ public interface AnnotationAppender {
                 if (this == obj) {
                     return true;
                 }
-                return obj != null && getClass() == obj.getClass() && this.methodVisitor.equals(((OnMethod) obj).methodVisitor);
+                return obj != null && getClass() == obj.getClass()
+                        && this.methodVisitor.equals(((OnMethod) obj).methodVisitor);
             }
 
             public int hashCode() {
@@ -280,7 +341,10 @@ public interface AnnotationAppender {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class OnMethodParameter implements Target {
             private final MethodVisitor methodVisitor;
@@ -299,7 +363,8 @@ public interface AnnotationAppender {
                     return false;
                 }
                 OnMethodParameter onMethodParameter = (OnMethodParameter) obj;
-                return this.parameterIndex == onMethodParameter.parameterIndex && this.methodVisitor.equals(onMethodParameter.methodVisitor);
+                return this.parameterIndex == onMethodParameter.parameterIndex
+                        && this.methodVisitor.equals(onMethodParameter.methodVisitor);
             }
 
             public int hashCode() {
@@ -319,7 +384,10 @@ public interface AnnotationAppender {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class OnRecordComponent implements Target {
             private final RecordComponentVisitor recordComponentVisitor;
@@ -332,7 +400,8 @@ public interface AnnotationAppender {
                 if (this == obj) {
                     return true;
                 }
-                return obj != null && getClass() == obj.getClass() && this.recordComponentVisitor.equals(((OnRecordComponent) obj).recordComponentVisitor);
+                return obj != null && getClass() == obj.getClass()
+                        && this.recordComponentVisitor.equals(((OnRecordComponent) obj).recordComponentVisitor);
             }
 
             public int hashCode() {
@@ -352,7 +421,10 @@ public interface AnnotationAppender {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class OnType implements Target {
             private final ClassVisitor classVisitor;
@@ -365,7 +437,8 @@ public interface AnnotationAppender {
                 if (this == obj) {
                     return true;
                 }
-                return obj != null && getClass() == obj.getClass() && this.classVisitor.equals(((OnType) obj).classVisitor);
+                return obj != null && getClass() == obj.getClass()
+                        && this.classVisitor.equals(((OnType) obj).classVisitor);
             }
 
             public int hashCode() {
@@ -394,9 +467,13 @@ public interface AnnotationAppender {
 
     AnnotationAppender append(AnnotationDescription annotationDescription, AnnotationValueFilter annotationValueFilter);
 
-    AnnotationAppender append(AnnotationDescription annotationDescription, AnnotationValueFilter annotationValueFilter, int i, String str);
+    AnnotationAppender append(AnnotationDescription annotationDescription, AnnotationValueFilter annotationValueFilter,
+            int i, String str);
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @HashCodeAndEqualsPlugin.Enhance
     public static class Default implements AnnotationAppender {
         private final Target target;
@@ -405,7 +482,8 @@ public interface AnnotationAppender {
             this.target = target;
         }
 
-        public static void apply(AnnotationVisitor annotationVisitor, TypeDescription typeDescription, @MaybeNull String str, Object obj) {
+        public static void apply(AnnotationVisitor annotationVisitor, TypeDescription typeDescription,
+                @MaybeNull String str, Object obj) {
             if (typeDescription.isArray()) {
                 AnnotationVisitor annotationVisitorVisitArray = annotationVisitor.visitArray(str);
                 int length = Array.getLength(obj);
@@ -417,11 +495,13 @@ public interface AnnotationAppender {
                 return;
             }
             if (typeDescription.isAnnotation()) {
-                handle(annotationVisitor.visitAnnotation(str, typeDescription.getDescriptor()), (AnnotationDescription) obj, AnnotationValueFilter.Default.APPEND_DEFAULTS);
+                handle(annotationVisitor.visitAnnotation(str, typeDescription.getDescriptor()),
+                        (AnnotationDescription) obj, AnnotationValueFilter.Default.APPEND_DEFAULTS);
                 return;
             }
             if (typeDescription.isEnum()) {
-                annotationVisitor.visitEnum(str, typeDescription.getDescriptor(), ((EnumerationDescription) obj).getValue());
+                annotationVisitor.visitEnum(str, typeDescription.getDescriptor(),
+                        ((EnumerationDescription) obj).getValue());
             } else if (typeDescription.represents(Class.class)) {
                 annotationVisitor.visit(str, Type.getType(((TypeDescription) obj).getDescriptor()));
             } else {
@@ -429,25 +509,32 @@ public interface AnnotationAppender {
             }
         }
 
-        private void doAppend(AnnotationDescription annotationDescription, boolean z, AnnotationValueFilter annotationValueFilter) {
-            AnnotationVisitor annotationVisitorVisit = this.target.visit(annotationDescription.getAnnotationType().getDescriptor(), z);
+        private void doAppend(AnnotationDescription annotationDescription, boolean z,
+                AnnotationValueFilter annotationValueFilter) {
+            AnnotationVisitor annotationVisitorVisit = this.target
+                    .visit(annotationDescription.getAnnotationType().getDescriptor(), z);
             if (annotationVisitorVisit != null) {
                 handle(annotationVisitorVisit, annotationDescription, annotationValueFilter);
             }
         }
 
-        private static void handle(AnnotationVisitor annotationVisitor, AnnotationDescription annotationDescription, AnnotationValueFilter annotationValueFilter) {
-            for (MethodDescription.InDefinedShape inDefinedShape : annotationDescription.getAnnotationType().getDeclaredMethods()) {
+        private static void handle(AnnotationVisitor annotationVisitor, AnnotationDescription annotationDescription,
+                AnnotationValueFilter annotationValueFilter) {
+            for (MethodDescription.InDefinedShape inDefinedShape : annotationDescription.getAnnotationType()
+                    .getDeclaredMethods()) {
                 if (annotationValueFilter.isRelevant(annotationDescription, inDefinedShape)) {
-                    apply(annotationVisitor, inDefinedShape.getReturnType().asErasure(), inDefinedShape.getName(), annotationDescription.getValue(inDefinedShape).resolve());
+                    apply(annotationVisitor, inDefinedShape.getReturnType().asErasure(), inDefinedShape.getName(),
+                            annotationDescription.getValue(inDefinedShape).resolve());
                 }
             }
             annotationVisitor.visitEnd();
         }
 
         @Override // net.bytebuddy.implementation.attribute.AnnotationAppender
-        public AnnotationAppender append(AnnotationDescription annotationDescription, AnnotationValueFilter annotationValueFilter) {
-            int i = AnonymousClass1.$SwitchMap$java$lang$annotation$RetentionPolicy[annotationDescription.getRetention().ordinal()];
+        public AnnotationAppender append(AnnotationDescription annotationDescription,
+                AnnotationValueFilter annotationValueFilter) {
+            int i = AnonymousClass1.$SwitchMap$java$lang$annotation$RetentionPolicy[annotationDescription.getRetention()
+                    .ordinal()];
             if (i == 1) {
                 doAppend(annotationDescription, true, annotationValueFilter);
                 return this;
@@ -473,16 +560,20 @@ public interface AnnotationAppender {
             return this.target.hashCode() + (getClass().hashCode() * 31);
         }
 
-        private void doAppend(AnnotationDescription annotationDescription, boolean z, AnnotationValueFilter annotationValueFilter, int i, String str) {
-            AnnotationVisitor annotationVisitorVisit = this.target.visit(annotationDescription.getAnnotationType().getDescriptor(), z, i, str);
+        private void doAppend(AnnotationDescription annotationDescription, boolean z,
+                AnnotationValueFilter annotationValueFilter, int i, String str) {
+            AnnotationVisitor annotationVisitorVisit = this.target
+                    .visit(annotationDescription.getAnnotationType().getDescriptor(), z, i, str);
             if (annotationVisitorVisit != null) {
                 handle(annotationVisitorVisit, annotationDescription, annotationValueFilter);
             }
         }
 
         @Override // net.bytebuddy.implementation.attribute.AnnotationAppender
-        public AnnotationAppender append(AnnotationDescription annotationDescription, AnnotationValueFilter annotationValueFilter, int i, String str) {
-            int i2 = AnonymousClass1.$SwitchMap$java$lang$annotation$RetentionPolicy[annotationDescription.getRetention().ordinal()];
+        public AnnotationAppender append(AnnotationDescription annotationDescription,
+                AnnotationValueFilter annotationValueFilter, int i, String str) {
+            int i2 = AnonymousClass1.$SwitchMap$java$lang$annotation$RetentionPolicy[annotationDescription
+                    .getRetention().ordinal()];
             if (i2 == 1) {
                 doAppend(annotationDescription, true, annotationValueFilter, i, str);
                 return this;

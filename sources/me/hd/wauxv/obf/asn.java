@@ -30,8 +30,8 @@ import net.bytebuddy.jar.asm.signature.SignatureVisitor;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class asn {
-    public static final int[] a = {R.attr.state_pressed, R.attr.state_enabled};
-    public static final int[] b = {R.attr.state_enabled};
+    public static final int[] a = { R.attr.state_pressed, R.attr.state_enabled };
+    public static final int[] b = { R.attr.state_enabled };
     public final Drawable aa;
     public volatile long ab;
     public Paint.FontMetricsInt ac;
@@ -72,7 +72,7 @@ public final class asn {
         long[] jArr = dev.a;
         chwVar.a = jArr;
         chwVar.b = byb.a;
-        chwVar.c = bzo.b;
+        chwVar.c = KotlinHelpers.b;
         int iD = dev.d(6);
         int iMax = iD > 0 ? Math.max(7, dev.c(iD)) : 0;
         chwVar.d = iMax;
@@ -155,7 +155,10 @@ public final class asn {
     /* JADX WARN: Type inference failed for: r14v3, types: [java.util.ArrayList] */
     /* JADX WARN: Type inference failed for: r14v5, types: [java.util.List] */
     /* JADX WARN: Type inference failed for: r14v6 */
-    /* JADX WARN: Type inference failed for: r17v0, types: [java.lang.Object, java.util.List] */
+    /*
+     * JADX WARN: Type inference failed for: r17v0, types: [java.lang.Object,
+     * java.util.List]
+     */
     /* JADX WARN: Type inference failed for: r17v1, types: [me.hd.wauxv.obf.drd] */
     /* JADX WARN: Type inference failed for: r17v2, types: [me.hd.wauxv.obf.drd] */
     /* JADX WARN: Type inference failed for: r17v5 */
@@ -287,7 +290,8 @@ public final class asn {
         drd drdVar = new drd();
         cba cbaVarAc = this.r.getRenderContext().a.ac(ddmVarQ.a);
         ek ekVar = (cbaVarAc == null || cbaVarAc.c < this.ab) ? null : cbaVarAc.b;
-        drdVar.ac(afoVarY, ddmVarQ.d, ddmVarQ.e, ioVar2.l(ddmVarQ.a), ddmVarQ.f, this.ah.z(ddmVarQ.a), this.d, (ekVar == null || ekVar.c <= afoVarY.b) ? null : ekVar, ap());
+        drdVar.ac(afoVarY, ddmVarQ.d, ddmVarQ.e, ioVar2.l(ddmVarQ.a), ddmVarQ.f, this.ah.z(ddmVarQ.a), this.d,
+                (ekVar == null || ekVar.c <= afoVarY.b) ? null : ekVar, ap());
         am(drdVar, ddmVarQ.a);
         return drdVar;
     }
@@ -301,7 +305,9 @@ public final class asn {
         int rowHeightOfText = codeEditor.getRowHeightOfText();
         int iDs = codeEditor.ds(0);
         codeEditor.getRowHeight();
-        return new dre(tabWidth, fontMetricsInt, iDu, iDt, rowHeightOfText, iDs, codeEditor.dt(0), codeEditor.getRowHeight(), codeEditor.getProps().t, codeEditor, codeEditor.getColorScheme(), this.e, this.i, this.ad);
+        return new dre(tabWidth, fontMetricsInt, iDu, iDt, rowHeightOfText, iDs, codeEditor.dt(0),
+                codeEditor.getRowHeight(), codeEditor.getProps().t, codeEditor, codeEditor.getColorScheme(), this.e,
+                this.i, this.ad);
     }
 
     public final void aq(Canvas canvas, float f, float f2, float f3, boolean z) {
@@ -351,7 +357,8 @@ public final class asn {
         if (z) {
             canvas.save();
             canvas.clipRect(rectF.left, rectF.top, codeEditor.getWidth(), rectF.bottom);
-            cskVar.setShadowLayer(Math.min(codeEditor.getDpUnit() * 8.0f, codeEditor.getOffsetX()), 0.0f, 0.0f, -16777216);
+            cskVar.setShadowLayer(Math.min(codeEditor.getDpUnit() * 8.0f, codeEditor.getOffsetX()), 0.0f, 0.0f,
+                    -16777216);
         }
         ar(canvas, i, rectF);
         if (z) {
@@ -378,7 +385,8 @@ public final class asn {
         Paint.FontMetricsInt fontMetricsInt = this.ac;
         int i7 = fontMetricsInt.descent;
         int i8 = fontMetricsInt.ascent;
-        float rowHeight = (((((codeEditor.getRowHeight() * i2) + codeEditor.dt(i2)) / 2.0f) - ((i7 - i8) / 2.0f)) - i8) - codeEditor.getOffsetY();
+        float rowHeight = (((((codeEditor.getRowHeight() * i2) + codeEditor.dt(i2)) / 2.0f) - ((i7 - i8) / 2.0f)) - i8)
+                - codeEditor.getOffsetY();
         synchronized (dqc.class) {
             cArr = dqc.as;
             dqc.as = null;
@@ -525,7 +533,8 @@ public final class asn {
             rectF.bottom = bh(i) - codeEditor.getOffsetY();
             this.d.setColor(i6);
             final float fEb = codeEditor.eb() - codeEditor.getOffsetX();
-            if (codeEditor.af && !codeEditor.getLayout().q(i).b && (codeEditor.getNonPrintablePaintingFlags() & 128) != 0) {
+            if (codeEditor.af && !codeEditor.getLayout().q(i).b
+                    && (codeEditor.getNonPrintablePaintingFlags() & 128) != 0) {
                 fEb += bg();
             }
             drd drdVarAo = ao(i);
@@ -548,7 +557,8 @@ public final class asn {
                     boolean z = codeEditor2.getProps().r;
                     Canvas canvas2 = canvas;
                     if (z) {
-                        canvas2.drawRoundRect(rectF2, codeEditor2.getRowHeight() * codeEditor2.getProps().t, codeEditor2.getRowHeight() * codeEditor2.getProps().t, cskVar);
+                        canvas2.drawRoundRect(rectF2, codeEditor2.getRowHeight() * codeEditor2.getProps().t,
+                                codeEditor2.getRowHeight() * codeEditor2.getProps().t, cskVar);
                         return true;
                     }
                     canvas2.drawRect(rectF2, cskVar);
@@ -558,36 +568,38 @@ public final class asn {
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:123:0x03e6  */
-    /* JADX WARN: Found duplicated region for block: B:24:0x009b  */
-    /* JADX WARN: Found duplicated region for block: B:256:0x072a  */
-    /* JADX WARN: Found duplicated region for block: B:258:0x0737  */
-    /* JADX WARN: Found duplicated region for block: B:261:0x074d  */
-    /* JADX WARN: Found duplicated region for block: B:264:0x075e  */
-    /* JADX WARN: Found duplicated region for block: B:321:0x08b3  */
-    /* JADX WARN: Found duplicated region for block: B:324:0x091d  */
-    /* JADX WARN: Found duplicated region for block: B:325:0x091f  */
-    /* JADX WARN: Found duplicated region for block: B:328:0x092d  */
-    /* JADX WARN: Found duplicated region for block: B:333:0x093b  */
-    /* JADX WARN: Found duplicated region for block: B:335:0x093f  */
-    /* JADX WARN: Found duplicated region for block: B:342:0x0952 A[ADDED_TO_REGION] */
-    /* JADX WARN: Found duplicated region for block: B:346:0x0959  */
-    /* JADX WARN: Found duplicated region for block: B:350:0x0a19  */
+    /* JADX WARN: Found duplicated region for block: B:123:0x03e6 */
+    /* JADX WARN: Found duplicated region for block: B:24:0x009b */
+    /* JADX WARN: Found duplicated region for block: B:256:0x072a */
+    /* JADX WARN: Found duplicated region for block: B:258:0x0737 */
+    /* JADX WARN: Found duplicated region for block: B:261:0x074d */
+    /* JADX WARN: Found duplicated region for block: B:264:0x075e */
+    /* JADX WARN: Found duplicated region for block: B:321:0x08b3 */
+    /* JADX WARN: Found duplicated region for block: B:324:0x091d */
+    /* JADX WARN: Found duplicated region for block: B:325:0x091f */
+    /* JADX WARN: Found duplicated region for block: B:328:0x092d */
+    /* JADX WARN: Found duplicated region for block: B:333:0x093b */
+    /* JADX WARN: Found duplicated region for block: B:335:0x093f */
+    /*
+     * JADX WARN: Found duplicated region for block: B:342:0x0952 A[ADDED_TO_REGION]
+     */
+    /* JADX WARN: Found duplicated region for block: B:346:0x0959 */
+    /* JADX WARN: Found duplicated region for block: B:350:0x0a19 */
     /* JADX WARN: Found duplicated region for block: B:354:0x0a3b A[MOVE_INLINED] */
-    /* JADX WARN: Found duplicated region for block: B:357:0x0aa1  */
-    /* JADX WARN: Found duplicated region for block: B:359:0x0aa9  */
-    /* JADX WARN: Found duplicated region for block: B:366:0x0b14  */
-    /* JADX WARN: Found duplicated region for block: B:369:0x0b1f  */
-    /* JADX WARN: Found duplicated region for block: B:373:0x0b5d  */
-    /* JADX WARN: Found duplicated region for block: B:374:0x0b5f  */
-    /* JADX WARN: Found duplicated region for block: B:377:0x0b89  */
-    /* JADX WARN: Found duplicated region for block: B:379:0x0b94  */
-    /* JADX WARN: Found duplicated region for block: B:383:0x0beb  */
-    /* JADX WARN: Found duplicated region for block: B:385:0x0bef  */
-    /* JADX WARN: Found duplicated region for block: B:389:0x0c39  */
-    /* JADX WARN: Found duplicated region for block: B:391:0x0c41  */
-    /* JADX WARN: Found duplicated region for block: B:46:0x0126  */
-    /* JADX WARN: Found duplicated region for block: B:71:0x01ad  */
+    /* JADX WARN: Found duplicated region for block: B:357:0x0aa1 */
+    /* JADX WARN: Found duplicated region for block: B:359:0x0aa9 */
+    /* JADX WARN: Found duplicated region for block: B:366:0x0b14 */
+    /* JADX WARN: Found duplicated region for block: B:369:0x0b1f */
+    /* JADX WARN: Found duplicated region for block: B:373:0x0b5d */
+    /* JADX WARN: Found duplicated region for block: B:374:0x0b5f */
+    /* JADX WARN: Found duplicated region for block: B:377:0x0b89 */
+    /* JADX WARN: Found duplicated region for block: B:379:0x0b94 */
+    /* JADX WARN: Found duplicated region for block: B:383:0x0beb */
+    /* JADX WARN: Found duplicated region for block: B:385:0x0bef */
+    /* JADX WARN: Found duplicated region for block: B:389:0x0c39 */
+    /* JADX WARN: Found duplicated region for block: B:391:0x0c41 */
+    /* JADX WARN: Found duplicated region for block: B:46:0x0126 */
+    /* JADX WARN: Found duplicated region for block: B:71:0x01ad */
     /* JADX WARN: Multi-variable type inference failed */
     public final void ay(Canvas canvas, float f, ek ekVar, ArrayList arrayList, chs chsVar, chr chrVar) {
         ud udVarN;
@@ -694,11 +706,11 @@ public final class asn {
                 int lastVisibleRow = asnVar2.r.getLastVisibleRow();
                 Iterator it = ((ArrayList) jxVar.f).iterator();
                 udVar = udVar9;
-                bzo.p(it, "iterator(...)");
+                throwIfVar1IsNull(it, "iterator(...)");
                 while (it.hasNext()) {
                     Object next = it.next();
                     Iterator it2 = it;
-                    bzo.p(next, "next(...)");
+                    throwIfVar1IsNull(next, "next(...)");
                     dbh dbhVar3 = (dbh) next;
                     int i30 = dbhVar3.a;
                     if (i30 < firstVisibleRow || i30 > lastVisibleRow) {
@@ -752,9 +764,11 @@ public final class asn {
                 codeEditor7.getProps().getClass();
                 RectF rectF = asnVar2.g;
                 CodeEditor codeEditor8 = asnVar2.r;
-                float fFloatValue = ((Float) ((cfg) codeEditor8.getCursorAnimator()).e.getAnimatedValue()).floatValue() - codeEditor8.getOffsetY();
+                float fFloatValue = ((Float) ((cfg) codeEditor8.getCursorAnimator()).e.getAnimatedValue()).floatValue()
+                        - codeEditor8.getOffsetY();
                 rectF.bottom = fFloatValue;
-                rectF.top = fFloatValue - ((Float) ((cfg) codeEditor8.getCursorAnimator()).f.getAnimatedValue()).floatValue();
+                rectF.top = fFloatValue
+                        - ((Float) ((cfg) codeEditor8.getCursorAnimator()).f.getAnimatedValue()).floatValue();
                 rectF.left = 0.0f;
                 rectF.right = asnVar2.f.right;
                 asnVar2.ar(canvas4, i28, rectF);
@@ -856,7 +870,7 @@ public final class asn {
                                     int i62 = ddmVar2.e;
                                     arq colorScheme = asnVar2.r.getColorScheme();
                                     arpVar.getClass();
-                                    bzo.q(colorScheme, "colorScheme");
+                                    throwIfVar1IsNull(colorScheme, "colorScheme");
                                     int i63 = colorScheme.b.get(arpVar.a);
                                     i20 = i54;
                                     chwVar2 = chwVar5;
@@ -926,7 +940,8 @@ public final class asn {
                 canvas3 = canvas;
                 chwVar = chwVar5;
             }
-            if (asnVar2.af.h() && i50 >= (i16 = (udVar7 = (ahyVar = asnVar2.af).c).b) && i50 <= (i17 = (udVar8 = ahyVar.d).b)) {
+            if (asnVar2.af.h() && i50 >= (i16 = (udVar7 = (ahyVar = asnVar2.af).c).b)
+                    && i50 <= (i17 = (udVar8 = ahyVar.d).b)) {
                 int i65 = i50 == i16 ? udVar7.c : 0;
                 int i66 = i50 == i17 ? udVar8.c : i48;
                 if (asnVar2.be(i50).b == 0 && i50 != asnVar2.af.d.b) {
@@ -938,7 +953,8 @@ public final class asn {
                     rectF2.right = (cskVar.a * f11) + f13;
                     cskVar.setColor(asnVar2.r.getColorScheme().b.get(6));
                     if (asnVar2.r.getProps().r) {
-                        canvas3.drawRoundRect(asnVar2.g, asnVar2.r.getRowHeight() * asnVar2.r.getProps().t, asnVar2.r.getRowHeight() * asnVar2.r.getProps().t, asnVar2.d);
+                        canvas3.drawRoundRect(asnVar2.g, asnVar2.r.getRowHeight() * asnVar2.r.getProps().t,
+                                asnVar2.r.getRowHeight() * asnVar2.r.getProps().t, asnVar2.d);
                     } else {
                         canvas3.drawRect(asnVar2.g, asnVar2.d);
                     }
@@ -974,13 +990,14 @@ public final class asn {
             ctr ctrVarJ2 = snippetController.j();
             if (ctrVarJ2 != null) {
                 aao aaoVar = snippetController.c;
-                bzo.n(aaoVar);
+                throwIfVar1IsNull(aaoVar);
                 List list2 = aaoVar.a;
-                bzo.n(list2);
+                throwIfVar1IsNull(list2);
                 arrayList3 = new ArrayList();
                 for (Object obj : list2) {
                     din dinVar = (din) obj;
-                    if ((dinVar instanceof ctr) && bzo.f(((ctr) dinVar).a, ctrVarJ2.a) && !dinVar.equals(ctrVarJ2)) {
+                    if ((dinVar instanceof ctr) && nullSafeIsEqual(((ctr) dinVar).a, ctrVarJ2.a)
+                            && !dinVar.equals(ctrVarJ2)) {
                         arrayList3.add(obj);
                     }
                 }
@@ -993,13 +1010,13 @@ public final class asn {
             ctr ctrVarJ3 = snippetController.j();
             if (ctrVarJ3 != null) {
                 aao aaoVar2 = snippetController.c;
-                bzo.n(aaoVar2);
+                throwIfVar1IsNull(aaoVar2);
                 List list3 = aaoVar2.a;
-                bzo.n(list3);
+                throwIfVar1IsNull(list3);
                 ArrayList arrayList4 = new ArrayList();
                 for (Object obj2 : list3) {
                     din dinVar3 = (din) obj2;
-                    if ((dinVar3 instanceof ctr) && !bzo.f(((ctr) dinVar3).a, ctrVarJ3.a)) {
+                    if ((dinVar3 instanceof ctr) && !nullSafeIsEqual(((ctr) dinVar3).a, ctrVarJ3.a)) {
                         arrayList4.add(obj2);
                     }
                 }
@@ -1025,7 +1042,7 @@ public final class asn {
             if (i68 != firstVisibleRow || chrVar == null) {
                 i = i69;
                 if (next3.b) {
-                    long jAl = bzo.al(i72, i68);
+                    long jAl = KotlinHelpers.al(i72, i68);
                     ekVar2 = ekVar8;
                     long[] jArr7 = (long[]) ekVar.d;
                     i2 = i70;
@@ -1111,7 +1128,7 @@ public final class asn {
                     } else {
                         break;
                     }
-                    long jAl2 = bzo.al(i77, i76);
+                    long jAl2 = KotlinHelpers.al(i77, i76);
                     i4 = i68;
                     i7 = (int) (jAl2 >> 32);
                     i5 = (int) (jAl2 & 4294967295L);
@@ -1150,7 +1167,8 @@ public final class asn {
                         f8 = f2;
                         ioVar5 = ioVar;
                         drd drdVar = new drd();
-                        drdVar.ac(asnVar2.ag, next3.d, next3.e, dlnVar.l(i72), next3.f, asnVar2.bf(i72), asnVar2.d, ekVar3, asnVar2.ap());
+                        drdVar.ac(asnVar2.ag, next3.d, next3.e, dlnVar.l(i72), next3.f, asnVar2.bf(i72), asnVar2.d,
+                                ekVar3, asnVar2.ap());
                         asnVar2.am(drdVar, i72);
                         canvas2.save();
                         canvas2.translate(-f5, (asnVar2.r.getRowHeight() * i9) - asnVar2.r.getOffsetY());
@@ -1182,7 +1200,8 @@ public final class asn {
                                     float rowHeight = (asnVar2.r.getRowHeight() * i9) - asnVar2.r.getOffsetY();
                                     CodeEditor codeEditor13 = (CodeEditor) jxVar2.e;
                                     if (!canvas2.isHardwareAccelerated()) {
-                                        throw new UnsupportedOperationException("Only hardware-accelerated canvas can be used");
+                                        throw new UnsupportedOperationException(
+                                                "Only hardware-accelerated canvas can be used");
                                     }
                                     dnv styles = codeEditor13.getStyles();
                                     Stack stack = (Stack) jxVar2.h;
@@ -1210,7 +1229,7 @@ public final class asn {
                                         int i79 = size;
                                         Object obj3 = arrayList5.get(i78);
                                         f7 = f6;
-                                        bzo.p(obj3, "get(...)");
+                                        throwIfVar1IsNull(obj3, "get(...)");
                                         dbhVar2 = (dbh) obj3;
                                         if (dbhVar2.a == i72) {
                                             Collections.swap(arrayList5, 0, i78);
@@ -1232,7 +1251,9 @@ public final class asn {
                                         dln dlnVar3 = ioVar7;
                                         asn renderer = codeEditor13.getRenderer();
                                         RenderNode renderNode = dbhVar2.b;
-                                        renderNode.setPosition(0, 0, (int) (renderer.ba(null, i72, 0.0f, 0.0f, dlnVar3, false) + 0.5f), renderer.r.getRowHeight());
+                                        renderNode.setPosition(0, 0,
+                                                (int) (renderer.ba(null, i72, 0.0f, 0.0f, dlnVar3, false) + 0.5f),
+                                                renderer.r.getRowHeight());
                                         try {
                                             renderer.ba(renderNode.beginRecording(), i72, 0.0f, 0.0f, dlnVar3, false);
                                             i72 = i72;
@@ -1264,7 +1285,8 @@ public final class asn {
                             f8 = f2;
                         }
                         drd drdVar2 = new drd();
-                        drdVar2.ac(asnVar2.ag, next3.d, next3.e, dlnVar.l(i72), next3.f, asnVar2.bf(i72), asnVar2.d, ekVar3, asnVar2.ap());
+                        drdVar2.ac(asnVar2.ag, next3.d, next3.e, dlnVar.l(i72), next3.f, asnVar2.bf(i72), asnVar2.d,
+                                ekVar3, asnVar2.ap());
                         asnVar2.am(drdVar2, i72);
                         canvas2.save();
                         canvas2.translate(-f5, (asnVar2.r.getRowHeight() * i9) - asnVar2.r.getOffsetY());
@@ -1293,7 +1315,8 @@ public final class asn {
                         i14 = i10;
                     } else {
                         final drd drdVar3 = new drd();
-                        drdVar3.ac(asnVar2.ag, ddmVar.d, ddmVar.e, dlnVar.l(i72), ddmVar.f, asnVar2.bf(i72), asnVar2.d, ekVar3, asnVar2.ap());
+                        drdVar3.ac(asnVar2.ag, ddmVar.d, ddmVar.e, dlnVar.l(i72), ddmVar.f, asnVar2.bf(i72), asnVar2.d,
+                                ekVar3, asnVar2.ap());
                         canvas2.save();
                         float f18 = f7;
                         canvas2.translate(f18, asnVar2.r.du(i9) - asnVar2.r.getOffsetY());
@@ -1312,9 +1335,11 @@ public final class asn {
                         i14 = i10;
                         i11 = i81;
                         asnVar = this;
-                        drdVar3.z(ddmVar.d, ddmVar.e, canvas2, fMax3, width2, false, new dqy() { // from class: me.hd.wauxv.obf.ash
+                        drdVar3.z(ddmVar.d, ddmVar.e, canvas2, fMax3, width2, false, new dqy() { // from class:
+                                                                                                 // me.hd.wauxv.obf.ash
                             @Override // me.hd.wauxv.obf.dqy
-                            public final void h(Canvas canvas5, char[] cArr2, int i82, int i83, int i84, int i85, boolean z3, float f19, float f20, dre dreVar, dle dleVar) {
+                            public final void h(Canvas canvas5, char[] cArr2, int i82, int i83, int i84, int i85,
+                                    boolean z3, float f19, float f20, dre dreVar, dle dleVar) {
                                 int i86;
                                 int i87;
                                 ahy ahyVar2;
@@ -1352,7 +1377,9 @@ public final class asn {
                                     i86 = i93;
                                     i87 = i99;
                                 }
-                                if ((i86 & 64) == 0 || !asnVar4.af.h() || (i89 = i81) < (i88 = (udVar14 = (ahyVar2 = asnVar4.af).c).b) || i89 > (i90 = (udVar15 = ahyVar2.d).b)) {
+                                if ((i86 & 64) == 0 || !asnVar4.af.h()
+                                        || (i89 = i81) < (i88 = (udVar14 = (ahyVar2 = asnVar4.af).c).b)
+                                        || i89 > (i90 = (udVar15 = ahyVar2.d).b)) {
                                     return;
                                 }
                                 int i101 = i89 == i88 ? udVar14.c : 0;
@@ -1369,7 +1396,8 @@ public final class asn {
                                 int i104 = i101;
                                 if (i94 == 0) {
                                     i91 = i103;
-                                    asnVar5.bc(canvas5, drdVar4, cArr2, i82, i83, i84, i85, z3, f19, f20, i104, Math.min(i87, i103));
+                                    asnVar5.bc(canvas5, drdVar4, cArr2, i82, i83, i84, i85, z3, f19, f20, i104,
+                                            Math.min(i87, i103));
                                     asnVar5 = asnVar5;
                                 } else {
                                     i91 = i103;
@@ -1377,13 +1405,15 @@ public final class asn {
                                 if (i96 == 0) {
                                     i92 = i104;
                                     asnVar3 = asnVar5;
-                                    asnVar3.bc(canvas5, drdVar4, cArr2, i82, i83, i84, i85, z3, f19, f20, Math.max(i87, i104), Math.min(i102, i91));
+                                    asnVar3.bc(canvas5, drdVar4, cArr2, i82, i83, i84, i85, z3, f19, f20,
+                                            Math.max(i87, i104), Math.min(i102, i91));
                                 } else {
                                     i92 = i104;
                                     asnVar3 = asnVar5;
                                 }
                                 if (i98 == 0) {
-                                    asnVar3.bc(canvas5, drdVar4, cArr2, i82, i83, i84, i85, z3, f19, f20, Math.max(i102, i92), i91);
+                                    asnVar3.bc(canvas5, drdVar4, cArr2, i82, i83, i84, i85, z3, f19, f20,
+                                            Math.max(i102, i92), i91);
                                 }
                             }
                         });
@@ -1400,7 +1430,8 @@ public final class asn {
                         iMin2 = Math.min(Math.max(i83, ddmVar.d), ddmVar.e);
                         if (iMin < iMin2) {
                             drd drdVar4 = new drd();
-                            drdVar4.ac(asnVar.ag, ddmVar.d, ddmVar.e, dlnVar.l(i11), ddmVar.f, asnVar.ah.z(i11), asnVar.d, ekVar3, asnVar.ap());
+                            drdVar4.ac(asnVar.ag, ddmVar.d, ddmVar.e, dlnVar.l(i11), ddmVar.f, asnVar.ah.z(i11),
+                                    asnVar.d, ekVar3, asnVar.ap());
                             asnVar.g.top = asnVar.r.dt(i9) - asnVar.r.getOffsetY();
                             RectF rectF3 = asnVar.g;
                             rectF3.bottom = (asnVar.r.getRowHeight() * 0.06f) + rectF3.top;
@@ -1436,7 +1467,8 @@ public final class asn {
                             ud udVar15 = asnVar.af.c;
                             int i84 = affVar2.ad(udVar15.b, udVar15.c) ? 2 : 1;
                             asnVar2 = asnVar;
-                            asm asmVar = new asm(asnVar2, offsetX2, asnVar.bh(i9) - asnVar.r.getOffsetY(), i84, asnVar.r.getLeftHandleDescriptor());
+                            asm asmVar = new asm(asnVar2, offsetX2, asnVar.bh(i9) - asnVar.r.getOffsetY(), i84,
+                                    asnVar.r.getLeftHandleDescriptor());
                             arrayList2 = arrayList;
                             arrayList2.add(asmVar);
                             ud udVar16 = asnVar2.af.c;
@@ -1449,7 +1481,8 @@ public final class asn {
                             float offsetX3 = (fEb2 + layout.r(udVar17.b, udVar17.c)[1]) - asnVar2.r.getOffsetX();
                             aff affVar3 = asnVar2.ah;
                             ud udVar18 = asnVar2.af.d;
-                            asm asmVar2 = new asm(asnVar2, offsetX3, asnVar2.bh(i9) - asnVar2.r.getOffsetY(), affVar3.ad(udVar18.b, udVar18.c) ? 1 : 2, asnVar2.r.getRightHandleDescriptor());
+                            asm asmVar2 = new asm(asnVar2, offsetX3, asnVar2.bh(i9) - asnVar2.r.getOffsetY(),
+                                    affVar3.ad(udVar18.b, udVar18.c) ? 1 : 2, asnVar2.r.getRightHandleDescriptor());
                             arrayList2.add(asmVar2);
                             ud udVar19 = asnVar2.af.d;
                             asnVar2.al(asmVar2, udVar19.b, udVar19.c);
@@ -1461,7 +1494,9 @@ public final class asn {
                         if (udVar3.b == i11 && ak(udVar3.c, ddmVar.d, ddmVar.e, ddmVar.c)) {
                             float fEb3 = asnVar2.r.eb();
                             ud udVar20 = asnVar2.af.c;
-                            asm asmVar3 = new asm(asnVar2, (fEb3 + layout.r(udVar20.b, udVar20.c)[1]) - asnVar2.r.getOffsetX(), asnVar2.bh(i9) - asnVar2.r.getOffsetY(), 0, asnVar2.r.getInsertHandleDescriptor());
+                            asm asmVar3 = new asm(asnVar2,
+                                    (fEb3 + layout.r(udVar20.b, udVar20.c)[1]) - asnVar2.r.getOffsetX(),
+                                    asnVar2.bh(i9) - asnVar2.r.getOffsetY(), 0, asnVar2.r.getInsertHandleDescriptor());
                             arrayList2.add(asmVar3);
                             ud udVar21 = asnVar2.af.c;
                             asnVar2.al(asmVar3, udVar21.b, udVar21.c);
@@ -1469,9 +1504,14 @@ public final class asn {
                     }
                     udVar4 = udVar13;
                     if (udVar4 != null) {
-                        if (!asnVar2.r.dy() && asnVar2.r.bo.h() && (selectingTarget = asnVar2.r.getSelectingTarget()) != null && selectingTarget.b == i11 && ak(selectingTarget.c, ddmVar.d, ddmVar.e, ddmVar.c)) {
+                        if (!asnVar2.r.dy() && asnVar2.r.bo.h()
+                                && (selectingTarget = asnVar2.r.getSelectingTarget()) != null
+                                && selectingTarget.b == i11 && ak(selectingTarget.c, ddmVar.d, ddmVar.e, ddmVar.c)) {
                             i35 = 1;
-                            asm asmVar4 = new asm(asnVar2, (asnVar2.r.eb() + layout.r(selectingTarget.b, selectingTarget.c)[1]) - asnVar2.r.getOffsetX(), asnVar2.bh(i9) - asnVar2.r.getOffsetY(), -1, null);
+                            asm asmVar4 = new asm(asnVar2,
+                                    (asnVar2.r.eb() + layout.r(selectingTarget.b, selectingTarget.c)[1])
+                                            - asnVar2.r.getOffsetX(),
+                                    asnVar2.bh(i9) - asnVar2.r.getOffsetY(), -1, null);
                             arrayList2.add(asmVar4);
                             asnVar2.al(asmVar4, selectingTarget.b, selectingTarget.c);
                         }
@@ -1488,7 +1528,9 @@ public final class asn {
                         i67 = i13;
                         f16 = f;
                     } else if (udVar4.b == i11 && ak(udVar4.c, ddmVar.d, ddmVar.e, ddmVar.c)) {
-                        asm asmVar5 = new asm(asnVar2, (asnVar2.r.eb() + layout.r(udVar4.b, udVar4.c)[1]) - asnVar2.r.getOffsetX(), asnVar2.bh(i9) - asnVar2.r.getOffsetY(), -1, null);
+                        asm asmVar5 = new asm(asnVar2,
+                                (asnVar2.r.eb() + layout.r(udVar4.b, udVar4.c)[1]) - asnVar2.r.getOffsetX(),
+                                asnVar2.bh(i9) - asnVar2.r.getOffsetY(), -1, null);
                         arrayList2.add(asmVar5);
                         asnVar2.al(asmVar5, udVar4.b, udVar4.c);
                     }
@@ -1518,7 +1560,8 @@ public final class asn {
                     f8 = f2;
                     ioVar5 = ioVar;
                     drd drdVar22 = new drd();
-                    drdVar22.ac(asnVar2.ag, next3.d, next3.e, dlnVar.l(i72), next3.f, asnVar2.bf(i72), asnVar2.d, ekVar3, asnVar2.ap());
+                    drdVar22.ac(asnVar2.ag, next3.d, next3.e, dlnVar.l(i72), next3.f, asnVar2.bf(i72), asnVar2.d,
+                            ekVar3, asnVar2.ap());
                     asnVar2.am(drdVar22, i72);
                     canvas2.save();
                     canvas2.translate(-f5, (asnVar2.r.getRowHeight() * i9) - asnVar2.r.getOffsetY());
@@ -1542,7 +1585,8 @@ public final class asn {
                     f8 = f2;
                     ioVar5 = ioVar;
                     drd drdVar222 = new drd();
-                    drdVar222.ac(asnVar2.ag, next3.d, next3.e, dlnVar.l(i72), next3.f, asnVar2.bf(i72), asnVar2.d, ekVar3, asnVar2.ap());
+                    drdVar222.ac(asnVar2.ag, next3.d, next3.e, dlnVar.l(i72), next3.f, asnVar2.bf(i72), asnVar2.d,
+                            ekVar3, asnVar2.ap());
                     asnVar2.am(drdVar222, i72);
                     canvas2.save();
                     canvas2.translate(-f5, (asnVar2.r.getRowHeight() * i9) - asnVar2.r.getOffsetY());
@@ -1585,7 +1629,8 @@ public final class asn {
                     iMin2 = Math.min(Math.max(i832, ddmVar.d), ddmVar.e);
                     if (iMin < iMin2) {
                         drd drdVar42 = new drd();
-                        drdVar42.ac(asnVar.ag, ddmVar.d, ddmVar.e, dlnVar.l(i11), ddmVar.f, asnVar.ah.z(i11), asnVar.d, ekVar3, asnVar.ap());
+                        drdVar42.ac(asnVar.ag, ddmVar.d, ddmVar.e, dlnVar.l(i11), ddmVar.f, asnVar.ah.z(i11), asnVar.d,
+                                ekVar3, asnVar.ap());
                         asnVar.g.top = asnVar.r.dt(i9) - asnVar.r.getOffsetY();
                         RectF rectF32 = asnVar.g;
                         rectF32.bottom = (asnVar.r.getRowHeight() * 0.06f) + rectF32.top;
@@ -1624,7 +1669,8 @@ public final class asn {
                         float offsetX32 = (fEb22 + layout.r(udVar172.b, udVar172.c)[1]) - asnVar2.r.getOffsetX();
                         aff affVar32 = asnVar2.ah;
                         ud udVar182 = asnVar2.af.d;
-                        asm asmVar22 = new asm(asnVar2, offsetX32, asnVar2.bh(i9) - asnVar2.r.getOffsetY(), affVar32.ad(udVar182.b, udVar182.c) ? 1 : 2, asnVar2.r.getRightHandleDescriptor());
+                        asm asmVar22 = new asm(asnVar2, offsetX32, asnVar2.bh(i9) - asnVar2.r.getOffsetY(),
+                                affVar32.ad(udVar182.b, udVar182.c) ? 1 : 2, asnVar2.r.getRightHandleDescriptor());
                         arrayList2.add(asmVar22);
                         ud udVar192 = asnVar2.af.d;
                         asnVar2.al(asmVar22, udVar192.b, udVar192.c);
@@ -1636,7 +1682,9 @@ public final class asn {
                     if (udVar3.b == i11) {
                         float fEb32 = asnVar2.r.eb();
                         ud udVar202 = asnVar2.af.c;
-                        asm asmVar32 = new asm(asnVar2, (fEb32 + layout.r(udVar202.b, udVar202.c)[1]) - asnVar2.r.getOffsetX(), asnVar2.bh(i9) - asnVar2.r.getOffsetY(), 0, asnVar2.r.getInsertHandleDescriptor());
+                        asm asmVar32 = new asm(asnVar2,
+                                (fEb32 + layout.r(udVar202.b, udVar202.c)[1]) - asnVar2.r.getOffsetX(),
+                                asnVar2.bh(i9) - asnVar2.r.getOffsetY(), 0, asnVar2.r.getInsertHandleDescriptor());
                         arrayList2.add(asmVar32);
                         ud udVar212 = asnVar2.af.c;
                         asnVar2.al(asmVar32, udVar212.b, udVar212.c);
@@ -1659,7 +1707,9 @@ public final class asn {
                     i67 = i13;
                     f16 = f;
                 } else if (udVar4.b == i11) {
-                    asm asmVar52 = new asm(asnVar2, (asnVar2.r.eb() + layout.r(udVar4.b, udVar4.c)[1]) - asnVar2.r.getOffsetX(), asnVar2.bh(i9) - asnVar2.r.getOffsetY(), -1, null);
+                    asm asmVar52 = new asm(asnVar2,
+                            (asnVar2.r.eb() + layout.r(udVar4.b, udVar4.c)[1]) - asnVar2.r.getOffsetX(),
+                            asnVar2.bh(i9) - asnVar2.r.getOffsetY(), -1, null);
                     arrayList2.add(asmVar52);
                     asnVar2.al(asmVar52, udVar4.b, udVar4.c);
                 }
@@ -1708,7 +1758,8 @@ public final class asn {
                     f8 = f2;
                     ioVar5 = ioVar;
                     drd drdVar2222 = new drd();
-                    drdVar2222.ac(asnVar2.ag, next3.d, next3.e, dlnVar.l(i72), next3.f, asnVar2.bf(i72), asnVar2.d, ekVar3, asnVar2.ap());
+                    drdVar2222.ac(asnVar2.ag, next3.d, next3.e, dlnVar.l(i72), next3.f, asnVar2.bf(i72), asnVar2.d,
+                            ekVar3, asnVar2.ap());
                     asnVar2.am(drdVar2222, i72);
                     canvas2.save();
                     canvas2.translate(-f5, (asnVar2.r.getRowHeight() * i9) - asnVar2.r.getOffsetY());
@@ -1732,7 +1783,8 @@ public final class asn {
                     f8 = f2;
                     ioVar5 = ioVar;
                     drd drdVar22222 = new drd();
-                    drdVar22222.ac(asnVar2.ag, next3.d, next3.e, dlnVar.l(i72), next3.f, asnVar2.bf(i72), asnVar2.d, ekVar3, asnVar2.ap());
+                    drdVar22222.ac(asnVar2.ag, next3.d, next3.e, dlnVar.l(i72), next3.f, asnVar2.bf(i72), asnVar2.d,
+                            ekVar3, asnVar2.ap());
                     asnVar2.am(drdVar22222, i72);
                     canvas2.save();
                     canvas2.translate(-f5, (asnVar2.r.getRowHeight() * i9) - asnVar2.r.getOffsetY());
@@ -1775,7 +1827,8 @@ public final class asn {
                     iMin2 = Math.min(Math.max(i8322, ddmVar.d), ddmVar.e);
                     if (iMin < iMin2) {
                         drd drdVar422 = new drd();
-                        drdVar422.ac(asnVar.ag, ddmVar.d, ddmVar.e, dlnVar.l(i11), ddmVar.f, asnVar.ah.z(i11), asnVar.d, ekVar3, asnVar.ap());
+                        drdVar422.ac(asnVar.ag, ddmVar.d, ddmVar.e, dlnVar.l(i11), ddmVar.f, asnVar.ah.z(i11), asnVar.d,
+                                ekVar3, asnVar.ap());
                         asnVar.g.top = asnVar.r.dt(i9) - asnVar.r.getOffsetY();
                         RectF rectF322 = asnVar.g;
                         rectF322.bottom = (asnVar.r.getRowHeight() * 0.06f) + rectF322.top;
@@ -1814,7 +1867,8 @@ public final class asn {
                         float offsetX322 = (fEb222 + layout.r(udVar1722.b, udVar1722.c)[1]) - asnVar2.r.getOffsetX();
                         aff affVar322 = asnVar2.ah;
                         ud udVar1822 = asnVar2.af.d;
-                        asm asmVar222 = new asm(asnVar2, offsetX322, asnVar2.bh(i9) - asnVar2.r.getOffsetY(), affVar322.ad(udVar1822.b, udVar1822.c) ? 1 : 2, asnVar2.r.getRightHandleDescriptor());
+                        asm asmVar222 = new asm(asnVar2, offsetX322, asnVar2.bh(i9) - asnVar2.r.getOffsetY(),
+                                affVar322.ad(udVar1822.b, udVar1822.c) ? 1 : 2, asnVar2.r.getRightHandleDescriptor());
                         arrayList2.add(asmVar222);
                         ud udVar1922 = asnVar2.af.d;
                         asnVar2.al(asmVar222, udVar1922.b, udVar1922.c);
@@ -1826,7 +1880,9 @@ public final class asn {
                     if (udVar3.b == i11) {
                         float fEb322 = asnVar2.r.eb();
                         ud udVar2022 = asnVar2.af.c;
-                        asm asmVar322 = new asm(asnVar2, (fEb322 + layout.r(udVar2022.b, udVar2022.c)[1]) - asnVar2.r.getOffsetX(), asnVar2.bh(i9) - asnVar2.r.getOffsetY(), 0, asnVar2.r.getInsertHandleDescriptor());
+                        asm asmVar322 = new asm(asnVar2,
+                                (fEb322 + layout.r(udVar2022.b, udVar2022.c)[1]) - asnVar2.r.getOffsetX(),
+                                asnVar2.bh(i9) - asnVar2.r.getOffsetY(), 0, asnVar2.r.getInsertHandleDescriptor());
                         arrayList2.add(asmVar322);
                         ud udVar2122 = asnVar2.af.c;
                         asnVar2.al(asmVar322, udVar2122.b, udVar2122.c);
@@ -1849,7 +1905,9 @@ public final class asn {
                     i67 = i13;
                     f16 = f;
                 } else if (udVar4.b == i11) {
-                    asm asmVar522 = new asm(asnVar2, (asnVar2.r.eb() + layout.r(udVar4.b, udVar4.c)[1]) - asnVar2.r.getOffsetX(), asnVar2.bh(i9) - asnVar2.r.getOffsetY(), -1, null);
+                    asm asmVar522 = new asm(asnVar2,
+                            (asnVar2.r.eb() + layout.r(udVar4.b, udVar4.c)[1]) - asnVar2.r.getOffsetX(),
+                            asnVar2.bh(i9) - asnVar2.r.getOffsetY(), -1, null);
                     arrayList2.add(asmVar522);
                     asnVar2.al(asmVar522, udVar4.b, udVar4.c);
                 }
@@ -1881,7 +1939,8 @@ public final class asn {
                 f8 = f2;
                 ioVar5 = ioVar;
                 drd drdVar222222 = new drd();
-                drdVar222222.ac(asnVar2.ag, next3.d, next3.e, dlnVar.l(i72), next3.f, asnVar2.bf(i72), asnVar2.d, ekVar3, asnVar2.ap());
+                drdVar222222.ac(asnVar2.ag, next3.d, next3.e, dlnVar.l(i72), next3.f, asnVar2.bf(i72), asnVar2.d,
+                        ekVar3, asnVar2.ap());
                 asnVar2.am(drdVar222222, i72);
                 canvas2.save();
                 canvas2.translate(-f5, (asnVar2.r.getRowHeight() * i9) - asnVar2.r.getOffsetY());
@@ -1905,7 +1964,8 @@ public final class asn {
                 f8 = f2;
                 ioVar5 = ioVar;
                 drd drdVar2222222 = new drd();
-                drdVar2222222.ac(asnVar2.ag, next3.d, next3.e, dlnVar.l(i72), next3.f, asnVar2.bf(i72), asnVar2.d, ekVar3, asnVar2.ap());
+                drdVar2222222.ac(asnVar2.ag, next3.d, next3.e, dlnVar.l(i72), next3.f, asnVar2.bf(i72), asnVar2.d,
+                        ekVar3, asnVar2.ap());
                 asnVar2.am(drdVar2222222, i72);
                 canvas2.save();
                 canvas2.translate(-f5, (asnVar2.r.getRowHeight() * i9) - asnVar2.r.getOffsetY());
@@ -1948,7 +2008,8 @@ public final class asn {
                 iMin2 = Math.min(Math.max(i83222, ddmVar.d), ddmVar.e);
                 if (iMin < iMin2) {
                     drd drdVar4222 = new drd();
-                    drdVar4222.ac(asnVar.ag, ddmVar.d, ddmVar.e, dlnVar.l(i11), ddmVar.f, asnVar.ah.z(i11), asnVar.d, ekVar3, asnVar.ap());
+                    drdVar4222.ac(asnVar.ag, ddmVar.d, ddmVar.e, dlnVar.l(i11), ddmVar.f, asnVar.ah.z(i11), asnVar.d,
+                            ekVar3, asnVar.ap());
                     asnVar.g.top = asnVar.r.dt(i9) - asnVar.r.getOffsetY();
                     RectF rectF3222 = asnVar.g;
                     rectF3222.bottom = (asnVar.r.getRowHeight() * 0.06f) + rectF3222.top;
@@ -1987,7 +2048,8 @@ public final class asn {
                     float offsetX3222 = (fEb2222 + layout.r(udVar17222.b, udVar17222.c)[1]) - asnVar2.r.getOffsetX();
                     aff affVar3222 = asnVar2.ah;
                     ud udVar18222 = asnVar2.af.d;
-                    asm asmVar2222 = new asm(asnVar2, offsetX3222, asnVar2.bh(i9) - asnVar2.r.getOffsetY(), affVar3222.ad(udVar18222.b, udVar18222.c) ? 1 : 2, asnVar2.r.getRightHandleDescriptor());
+                    asm asmVar2222 = new asm(asnVar2, offsetX3222, asnVar2.bh(i9) - asnVar2.r.getOffsetY(),
+                            affVar3222.ad(udVar18222.b, udVar18222.c) ? 1 : 2, asnVar2.r.getRightHandleDescriptor());
                     arrayList2.add(asmVar2222);
                     ud udVar19222 = asnVar2.af.d;
                     asnVar2.al(asmVar2222, udVar19222.b, udVar19222.c);
@@ -1999,7 +2061,9 @@ public final class asn {
                 if (udVar3.b == i11) {
                     float fEb3222 = asnVar2.r.eb();
                     ud udVar20222 = asnVar2.af.c;
-                    asm asmVar3222 = new asm(asnVar2, (fEb3222 + layout.r(udVar20222.b, udVar20222.c)[1]) - asnVar2.r.getOffsetX(), asnVar2.bh(i9) - asnVar2.r.getOffsetY(), 0, asnVar2.r.getInsertHandleDescriptor());
+                    asm asmVar3222 = new asm(asnVar2,
+                            (fEb3222 + layout.r(udVar20222.b, udVar20222.c)[1]) - asnVar2.r.getOffsetX(),
+                            asnVar2.bh(i9) - asnVar2.r.getOffsetY(), 0, asnVar2.r.getInsertHandleDescriptor());
                     arrayList2.add(asmVar3222);
                     ud udVar21222 = asnVar2.af.c;
                     asnVar2.al(asmVar3222, udVar21222.b, udVar21222.c);
@@ -2022,7 +2086,9 @@ public final class asn {
                 i67 = i13;
                 f16 = f;
             } else if (udVar4.b == i11) {
-                asm asmVar5222 = new asm(asnVar2, (asnVar2.r.eb() + layout.r(udVar4.b, udVar4.c)[1]) - asnVar2.r.getOffsetX(), asnVar2.bh(i9) - asnVar2.r.getOffsetY(), -1, null);
+                asm asmVar5222 = new asm(asnVar2,
+                        (asnVar2.r.eb() + layout.r(udVar4.b, udVar4.c)[1]) - asnVar2.r.getOffsetX(),
+                        asnVar2.bh(i9) - asnVar2.r.getOffsetY(), -1, null);
                 arrayList2.add(asmVar5222);
                 asnVar2.al(asmVar5222, udVar4.b, udVar4.c);
             }
@@ -2080,7 +2146,8 @@ public final class asn {
         CodeEditor codeEditor2 = this.r;
         asv eventHandler = codeEditor2.getEventHandler();
         eventHandler.getClass();
-        if (System.currentTimeMillis() - eventHandler.o < 3200 || eventHandler.q || eventHandler.r || (codeEditor2.dy() && codeEditor2.getProps().ae)) {
+        if (System.currentTimeMillis() - eventHandler.o < 3200 || eventHandler.q || eventHandler.r
+                || (codeEditor2.dy() && codeEditor2.getProps().ae)) {
             asv eventHandler2 = codeEditor2.getEventHandler();
             eventHandler2.getClass();
             if (System.currentTimeMillis() - eventHandler2.o < 3000 || eventHandler2.q || eventHandler2.r) {
@@ -2088,7 +2155,8 @@ public final class asn {
                 fCurrentTimeMillis = 0.0f;
             } else {
                 f = 1.0f;
-                if (System.currentTimeMillis() - eventHandler2.o < 3000 || System.currentTimeMillis() - eventHandler2.o >= 3200) {
+                if (System.currentTimeMillis() - eventHandler2.o < 3000
+                        || System.currentTimeMillis() - eventHandler2.o >= 3200) {
                     fCurrentTimeMillis = 1.0f;
                 } else {
                     eventHandler2.a.postInvalidateOnAnimation();
@@ -2111,10 +2179,12 @@ public final class asn {
                 canvas.translate(0.0f, dpUnit * fCurrentTimeMillis);
                 if (codeEditor2.getEventHandler().r) {
                     f2 = 60.0f;
-                    rectF3.set(0.0f, codeEditor2.getHeight() - (codeEditor2.getDpUnit() * 10.0f), codeEditor2.getWidth(), codeEditor2.getHeight());
+                    rectF3.set(0.0f, codeEditor2.getHeight() - (codeEditor2.getDpUnit() * 10.0f),
+                            codeEditor2.getWidth(), codeEditor2.getHeight());
                     Drawable drawable = this.v;
                     if (drawable != null) {
-                        drawable.setBounds((int) rectF3.left, (int) rectF3.top, (int) rectF3.right, (int) rectF3.bottom);
+                        drawable.setBounds((int) rectF3.left, (int) rectF3.top, (int) rectF3.right,
+                                (int) rectF3.bottom);
                         this.v.draw(canvas);
                     } else {
                         ar(canvas, codeEditor2.getColorScheme().b.get(13), rectF3);
@@ -2173,7 +2243,7 @@ public final class asn {
                 int lnPanelPositionMode = codeEditor2.getLnPanelPositionMode();
                 int lnPanelPosition = codeEditor2.getLnPanelPosition();
                 ((arj) codeEditor2.getLineNumberTipTextProvider()).getClass();
-                String strI = bjs.i(codeEditor2.getFirstVisibleLine() + 1, "L");
+                String strI = concatVar2Var1(codeEditor2.getFirstVisibleLine() + 1, "L");
                 csk cskVar = this.d;
                 float textSize = cskVar.getTextSize();
                 cskVar.setTextSize(codeEditor2.getLineInfoTextSize());
@@ -2203,7 +2273,8 @@ public final class asn {
                         if ((lnPanelPosition | 8) == lnPanelPosition) {
                             rectF3.top = ((codeEditor2.getHeight() - dpUnit4) - f10) - codeEditor2.getRowHeight();
                             rectF3.bottom = codeEditor2.getHeight() - dpUnit4;
-                            height3 = ((codeEditor2.ds(0) + (codeEditor2.getHeight() - codeEditor2.getRowHeight())) - dpUnit4) - dpUnit3;
+                            height3 = ((codeEditor2.ds(0) + (codeEditor2.getHeight() - codeEditor2.getRowHeight()))
+                                    - dpUnit4) - dpUnit3;
                         }
                         if ((lnPanelPosition | 1) == lnPanelPosition) {
                             rectF3.left = dpUnit4;
@@ -2339,7 +2410,8 @@ public final class asn {
         List list = Collections.EMPTY_LIST;
         cba cbaVarAc = this.r.getRenderContext().a.ac(i);
         ek ekVar = (cbaVarAc == null || cbaVarAc.c < this.ab) ? null : cbaVarAc.b;
-        drdVar.ac(this.ag, 0, i2, dlnVar2.l(i), list, bf(i), this.d, (ekVar == null || ekVar.c <= this.ag.b) ? null : ekVar, ap());
+        drdVar.ac(this.ag, 0, i2, dlnVar2.l(i), list, bf(i), this.d,
+                (ekVar == null || ekVar.c <= this.ag.b) ? null : ekVar, ap());
         am(drdVar, i);
         if (canvas != null) {
             canvas.save();
@@ -2362,29 +2434,33 @@ public final class asn {
         return cbrVar.a;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:104:0x03a0  */
-    /* JADX WARN: Found duplicated region for block: B:123:0x0477  */
-    /* JADX WARN: Found duplicated region for block: B:173:0x05dd  */
-    /* JADX WARN: Found duplicated region for block: B:229:0x0731  */
-    /* JADX WARN: Found duplicated region for block: B:235:0x0740  */
-    /* JADX WARN: Found duplicated region for block: B:238:0x0749  */
-    /* JADX WARN: Found duplicated region for block: B:240:0x074f  */
+    /* JADX WARN: Found duplicated region for block: B:104:0x03a0 */
+    /* JADX WARN: Found duplicated region for block: B:123:0x0477 */
+    /* JADX WARN: Found duplicated region for block: B:173:0x05dd */
+    /* JADX WARN: Found duplicated region for block: B:229:0x0731 */
+    /* JADX WARN: Found duplicated region for block: B:235:0x0740 */
+    /* JADX WARN: Found duplicated region for block: B:238:0x0749 */
+    /* JADX WARN: Found duplicated region for block: B:240:0x074f */
     /* JADX WARN: Found duplicated region for block: B:245:0x075e A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:246:0x0760  */
-    /* JADX WARN: Found duplicated region for block: B:249:0x0765  */
-    /* JADX WARN: Found duplicated region for block: B:257:0x0781  */
-    /* JADX WARN: Found duplicated region for block: B:258:0x0786  */
-    /* JADX WARN: Found duplicated region for block: B:261:0x078c  */
-    /* JADX WARN: Found duplicated region for block: B:262:0x078e  */
-    /* JADX WARN: Found duplicated region for block: B:268:0x07ae  */
-    /* JADX WARN: Found duplicated region for block: B:275:0x07c7  */
-    /* JADX WARN: Found duplicated region for block: B:277:0x0806  */
-    /* JADX WARN: Found duplicated region for block: B:283:0x083c  */
-    /* JADX WARN: Found duplicated region for block: B:286:0x085e  */
-    /* JADX WARN: Found duplicated region for block: B:290:0x0871  */
-    /* JADX WARN: Found duplicated region for block: B:296:0x0884  */
-    /* JADX WARN: Found duplicated region for block: B:399:0x0c02 A[PHI: r5
-      0x0c02: PHI (r5v15 boolean) = (r5v14 boolean), (r5v16 boolean), (r5v16 boolean) binds: [B:376:0x0b9b, B:389:0x0bd3, B:393:0x0be3] A[DONT_GENERATE, DONT_INLINE]] */
+    /* JADX WARN: Found duplicated region for block: B:246:0x0760 */
+    /* JADX WARN: Found duplicated region for block: B:249:0x0765 */
+    /* JADX WARN: Found duplicated region for block: B:257:0x0781 */
+    /* JADX WARN: Found duplicated region for block: B:258:0x0786 */
+    /* JADX WARN: Found duplicated region for block: B:261:0x078c */
+    /* JADX WARN: Found duplicated region for block: B:262:0x078e */
+    /* JADX WARN: Found duplicated region for block: B:268:0x07ae */
+    /* JADX WARN: Found duplicated region for block: B:275:0x07c7 */
+    /* JADX WARN: Found duplicated region for block: B:277:0x0806 */
+    /* JADX WARN: Found duplicated region for block: B:283:0x083c */
+    /* JADX WARN: Found duplicated region for block: B:286:0x085e */
+    /* JADX WARN: Found duplicated region for block: B:290:0x0871 */
+    /* JADX WARN: Found duplicated region for block: B:296:0x0884 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:399:0x0c02 A[PHI: r5
+     * 0x0c02: PHI (r5v15 boolean) = (r5v14 boolean), (r5v16 boolean), (r5v16
+     * boolean) binds: [B:376:0x0b9b, B:389:0x0bd3, B:393:0x0be3] A[DONT_GENERATE,
+     * DONT_INLINE]]
+     */
     public final void bb(Canvas canvas) {
         Canvas canvas2;
         float f;
@@ -2440,7 +2516,8 @@ public final class asn {
         asnVar3.bi();
         float fEb = asnVar3.r.eb() + (-asnVar3.r.getOffsetX());
         float f8 = fEa + 0.0f;
-        int dividerMarginRight = (int) (asnVar3.r.getDividerMarginRight() + asnVar3.r.getDividerMarginLeft() + asnVar3.r.getDividerWidth() + f8);
+        int dividerMarginRight = (int) (asnVar3.r.getDividerMarginRight() + asnVar3.r.getDividerMarginLeft()
+                + asnVar3.r.getDividerWidth() + f8);
         CodeEditor codeEditor2 = asnVar3.r;
         if (codeEditor2.af) {
             int i12 = asnVar3.ae;
@@ -2515,7 +2592,8 @@ public final class asn {
         chr chrVar3 = chrVar2;
         asnVar3.ay(canvas, fEb, ekVar2, arrayList2, chsVar2, chrVar3);
         CodeEditor codeEditor8 = asnVar3.r;
-        if (codeEditor8.h.c.e() || !codeEditor8.getProps().p || codeEditor8.getCursor().h() || (cjnVar = (cjn) codeEditor8.f.f) == null) {
+        if (codeEditor8.h.c.e() || !codeEditor8.getProps().p || codeEditor8.getCursor().h()
+                || (cjnVar = (cjn) codeEditor8.f.f) == null) {
             canvas2 = canvas;
             f = fEb;
             chsVar = chsVar2;
@@ -2630,9 +2708,11 @@ public final class asn {
                 CodeEditor codeEditor10 = asnVar3.r;
                 if (codeEditor10.au && codeEditor10.dw()) {
                     c = ' ';
-                    asnVar3.g.bottom = ((Float) ((cfg) asnVar3.r.getCursorAnimator()).e.getAnimatedValue()).floatValue() - asnVar3.r.getOffsetY();
+                    asnVar3.g.bottom = ((Float) ((cfg) asnVar3.r.getCursorAnimator()).e.getAnimatedValue()).floatValue()
+                            - asnVar3.r.getOffsetY();
                     RectF rectF2 = asnVar3.g;
-                    rectF2.top = rectF2.bottom - ((Float) ((cfg) asnVar3.r.getCursorAnimator()).f.getAnimatedValue()).floatValue();
+                    rectF2.top = rectF2.bottom
+                            - ((Float) ((cfg) asnVar3.r.getCursorAnimator()).f.getAnimatedValue()).floatValue();
                     RectF rectF3 = asnVar3.g;
                     rectF3.left = f3;
                     rectF3.right = (int) (f - asnVar3.r.getDividerMarginRight());
@@ -2651,7 +2731,8 @@ public final class asn {
             asnVar3.r.getDividerMarginRight();
             CodeEditor codeEditor11 = asnVar3.r;
             int lastVisibleLine2 = codeEditor11.getLastVisibleLine();
-            for (int firstVisibleLine2 = codeEditor11.getFirstVisibleLine(); firstVisibleLine2 <= lastVisibleLine2; firstVisibleLine2++) {
+            for (int firstVisibleLine2 = codeEditor11
+                    .getFirstVisibleLine(); firstVisibleLine2 <= lastVisibleLine2; firstVisibleLine2++) {
                 codeEditor11.getStyles();
             }
             float f10 = f9 + f2;
@@ -2669,7 +2750,8 @@ public final class asn {
                     int i29 = fontMetricsInt.descent;
                     offsetY = fontMetricsInt.ascent;
                     rowHeight2 = (iDt2 / 2.0f) - ((i29 - offsetY) / 2.0f);
-                } else if ((asnVar3.r.getRowHeight() * ((int) (ekVar2.k(0) & 4294967295L))) - asnVar3.r.getOffsetY() > iDt) {
+                } else if ((asnVar3.r.getRowHeight() * ((int) (ekVar2.k(0) & 4294967295L)))
+                        - asnVar3.r.getOffsetY() > iDt) {
                     int iDt22 = asnVar3.r.dt(0);
                     asnVar3.r.getRowHeight();
                     Paint.FontMetricsInt fontMetricsInt2 = asnVar3.ac;
@@ -2681,7 +2763,8 @@ public final class asn {
                     Paint.FontMetricsInt fontMetricsInt3 = asnVar3.ac;
                     int i30 = fontMetricsInt3.descent;
                     int i31 = fontMetricsInt3.ascent;
-                    rowHeight2 = ((((asnVar3.r.getRowHeight() * iK) + asnVar3.r.dt(iK)) / 2.0f) - ((i30 - i31) / 2.0f)) - i31;
+                    rowHeight2 = ((((asnVar3.r.getRowHeight() * iK) + asnVar3.r.dt(iK)) / 2.0f) - ((i30 - i31) / 2.0f))
+                            - i31;
                     offsetY = asnVar3.r.getOffsetY();
                 }
                 float f11 = rowHeight2 - offsetY;
@@ -2723,16 +2806,20 @@ public final class asn {
                 csk cskVar2 = asnVar.d;
                 if (codeEditor12.getProps().n) {
                     ArrayList arrayList3 = codeEditor12.getStyles() == null ? null : codeEditor12.getStyles().b;
-                    if (arrayList3 == null || arrayList3.isEmpty() || (currentCursorBlock = codeEditor12.getCurrentCursorBlock()) < 0 || currentCursorBlock >= arrayList3.size()) {
+                    if (arrayList3 == null || arrayList3.isEmpty()
+                            || (currentCursorBlock = codeEditor12.getCurrentCursorBlock()) < 0
+                            || currentCursorBlock >= arrayList3.size()) {
                         ekVar = ekVar2;
                     } else {
                         aah aahVar = (aah) arrayList3.get(currentCursorBlock);
                         btr layout = codeEditor12.getLayout();
                         try {
-                            float rowHeight3 = (layout.r(aahVar.c, aahVar.d)[0] - codeEditor12.getRowHeight()) - codeEditor12.getOffsetY();
+                            float rowHeight3 = (layout.r(aahVar.c, aahVar.d)[0] - codeEditor12.getRowHeight())
+                                    - codeEditor12.getOffsetY();
                             float offsetY2 = layout.r(aahVar.e, aahVar.f)[0] - codeEditor12.getOffsetY();
                             float fEa2 = codeEditor12.ea();
-                            float dividerMarginLeft = (((codeEditor12.getDividerMarginLeft() + fEa2) + fEa2) / 2.0f) - codeEditor12.getOffsetX();
+                            float dividerMarginLeft = (((codeEditor12.getDividerMarginLeft() + fEa2) + fEa2) / 2.0f)
+                                    - codeEditor12.getOffsetX();
                             cskVar2.setColor(codeEditor12.getColorScheme().b.get(38));
                             cskVar2.setStrokeWidth(codeEditor12.getDpUnit() * codeEditor12.getBlockLineWidth());
                             ekVar = ekVar2;
@@ -2799,12 +2886,22 @@ public final class asn {
                                     try {
                                         i8 = lastVisibleRow;
                                         try {
-                                            float fMin = Math.min(asnVar.ao(aahVar2.e).u(Math.min(aahVar2.f, asnVar.be(i39).b)), asnVar.ao(aahVar2.c).u(Math.min(aahVar2.d, asnVar.be(aahVar2.c).b))) + f5;
-                                            rectF4.top = Math.max(0, codeEditor12.dt(aahVar2.c) - codeEditor12.getOffsetY());
-                                            rectF4.bottom = Math.min(codeEditor12.getHeight(), (codeEditor12.getRowHeight() * aahVar2.e) - codeEditor12.getOffsetY());
-                                            rectF4.left = fMin - ((codeEditor12.getDpUnit() * codeEditor12.getBlockLineWidth()) / 2.0f);
-                                            rectF4.right = ((codeEditor12.getDpUnit() * codeEditor12.getBlockLineWidth()) / 2.0f) + fMin;
-                                            asnVar.ar(canvas2, codeEditor12.getColorScheme().b.get(iCx == currentCursorBlock2 ? 15 : 14), rectF4);
+                                            float fMin = Math.min(
+                                                    asnVar.ao(aahVar2.e).u(Math.min(aahVar2.f, asnVar.be(i39).b)),
+                                                    asnVar.ao(aahVar2.c).u(Math.min(aahVar2.d, asnVar.be(aahVar2.c).b)))
+                                                    + f5;
+                                            rectF4.top = Math.max(0,
+                                                    codeEditor12.dt(aahVar2.c) - codeEditor12.getOffsetY());
+                                            rectF4.bottom = Math.min(codeEditor12.getHeight(),
+                                                    (codeEditor12.getRowHeight() * aahVar2.e)
+                                                            - codeEditor12.getOffsetY());
+                                            rectF4.left = fMin
+                                                    - ((codeEditor12.getDpUnit() * codeEditor12.getBlockLineWidth())
+                                                            / 2.0f);
+                                            rectF4.right = ((codeEditor12.getDpUnit()
+                                                    * codeEditor12.getBlockLineWidth()) / 2.0f) + fMin;
+                                            asnVar.ar(canvas2, codeEditor12.getColorScheme().b
+                                                    .get(iCx == currentCursorBlock2 ? 15 : 14), rectF4);
                                         } catch (IndexOutOfBoundsException unused4) {
                                         }
                                     } catch (IndexOutOfBoundsException unused5) {
@@ -2837,11 +2934,13 @@ public final class asn {
             RectF rectF5 = asnVar.g;
             CodeEditor codeEditor13 = asnVar.r;
             if (codeEditor13.dw()) {
-                float fFloatValue = ((Float) ((cfg) codeEditor13.getCursorAnimator()).d.getAnimatedValue()).floatValue() - codeEditor13.getOffsetY();
+                float fFloatValue = ((Float) ((cfg) codeEditor13.getCursorAnimator()).d.getAnimatedValue()).floatValue()
+                        - codeEditor13.getOffsetY();
                 rectF5.bottom = fFloatValue;
                 codeEditor13.getProps().getClass();
                 rectF5.top = fFloatValue - codeEditor13.getRowHeight();
-                float fFloatValue2 = ((Float) ((cfg) codeEditor13.getCursorAnimator()).c.getAnimatedValue()).floatValue() - codeEditor13.getOffsetX();
+                float fFloatValue2 = ((Float) ((cfg) codeEditor13.getCursorAnimator()).c.getAnimatedValue())
+                        .floatValue() - codeEditor13.getOffsetX();
                 rectF5.left = fFloatValue2 - (codeEditor13.getInsertSelectionWidth() / 2.0f);
                 rectF5.right = (codeEditor13.getInsertSelectionWidth() / 2.0f) + fFloatValue2;
                 asnVar.ar(canvas2, codeEditor13.getColorScheme().b.get(7), rectF5);
@@ -2858,7 +2957,8 @@ public final class asn {
                     dfp handleStyle = codeEditor13.getHandleStyle();
                     float f13 = rectF5.bottom;
                     codeEditor13.getRowHeight();
-                    ((bjz) handleStyle).g(canvas, 0, fFloatValue2, f13, codeEditor13.getColorScheme().b.get(8), codeEditor13.getInsertHandleDescriptor());
+                    ((bjz) handleStyle).g(canvas, 0, fFloatValue2, f13, codeEditor13.getColorScheme().b.get(8),
+                            codeEditor13.getInsertHandleDescriptor());
                     canvas2 = canvas;
                 }
             }
@@ -2881,8 +2981,10 @@ public final class asn {
                                 if (!codeEditor.bc) {
                                     i6 = codeEditor.getEventHandler().e;
                                     z4 = asmVar.g;
-                                    if (i6 == ((z4 || i40 != 1) ? (z4 || i40 != 2) ? i40 : 1 : 2) && i40 != -1 && asnVar5.r.getEventHandler().f) {
-                                        asmVar.b = ((dfoVar.b != 0 ? rectF.width() : 0.0f) * (dfoVar.b == 1 ? 1 : -1)) + asnVar5.r.getEventHandler().g;
+                                    if (i6 == ((z4 || i40 != 1) ? (z4 || i40 != 2) ? i40 : 1 : 2) && i40 != -1
+                                            && asnVar5.r.getEventHandler().f) {
+                                        asmVar.b = ((dfoVar.b != 0 ? rectF.width() : 0.0f) * (dfoVar.b == 1 ? 1 : -1))
+                                                + asnVar5.r.getEventHandler().g;
                                         asmVar.c = asnVar5.r.getEventHandler().h - ((rectF.height() * 2.0f) / 3.0f);
                                     }
                                 }
@@ -2902,7 +3004,7 @@ public final class asn {
                                     float f15 = f6 - rowHeight;
                                     float f16 = f15 / 8.0f;
                                     i4 = i40;
-                                    asnVar5.d.setPathEffect(new DashPathEffect(new float[]{f16, f16}, f15 / 16.0f));
+                                    asnVar5.d.setPathEffect(new DashPathEffect(new float[] { f16, f16 }, f15 / 16.0f));
                                     asnVar5.d.setStrokeWidth(asnVar5.r.getInsertSelectionWidth() * 1.5f);
                                 }
                                 dfo dfoVar4 = dfoVar;
@@ -2933,7 +3035,8 @@ public final class asn {
                                 float f19 = asmVar.c;
                                 asnVar5.r.getRowHeight();
                                 dfo dfoVar6 = dfoVar2;
-                                ((bjz) handleStyle2).g(canvas, i5, f18, f19, asnVar5.r.getColorScheme().b.get(8), dfoVar6);
+                                ((bjz) handleStyle2).g(canvas, i5, f18, f19, asnVar5.r.getColorScheme().b.get(8),
+                                        dfoVar6);
                                 canvas2 = canvas;
                                 if (dfoVar6 == dfoVar3) {
                                     dfoVar6.a.setEmpty();
@@ -2956,7 +3059,8 @@ public final class asn {
                             i6 = codeEditor.getEventHandler().e;
                             z4 = asmVar.g;
                             if (i6 == ((z4 || i40 != 1) ? (z4 || i40 != 2) ? i40 : 1 : 2)) {
-                                asmVar.b = ((dfoVar.b != 0 ? rectF.width() : 0.0f) * (dfoVar.b == 1 ? 1 : -1)) + asnVar5.r.getEventHandler().g;
+                                asmVar.b = ((dfoVar.b != 0 ? rectF.width() : 0.0f) * (dfoVar.b == 1 ? 1 : -1))
+                                        + asnVar5.r.getEventHandler().g;
                                 asmVar.c = asnVar5.r.getEventHandler().h - ((rectF.height() * 2.0f) / 3.0f);
                             }
                         }
@@ -3031,9 +3135,11 @@ public final class asn {
             if (((cfg) asnVar.r.getCursorAnimator()).m()) {
                 CodeEditor codeEditor17 = asnVar.r;
                 if (codeEditor17.au && codeEditor17.dw()) {
-                    asnVar.g.bottom = ((Float) ((cfg) asnVar.r.getCursorAnimator()).e.getAnimatedValue()).floatValue() - asnVar.r.getOffsetY();
+                    asnVar.g.bottom = ((Float) ((cfg) asnVar.r.getCursorAnimator()).e.getAnimatedValue()).floatValue()
+                            - asnVar.r.getOffsetY();
                     RectF rectF6 = asnVar.g;
-                    rectF6.top = rectF6.bottom - ((Float) ((cfg) asnVar.r.getCursorAnimator()).f.getAnimatedValue()).floatValue();
+                    rectF6.top = rectF6.bottom
+                            - ((Float) ((cfg) asnVar.r.getCursorAnimator()).f.getAnimatedValue()).floatValue();
                     RectF rectF7 = asnVar.g;
                     rectF7.left = 0.0f;
                     rectF7.right = (int) (f5 - asnVar.r.getDividerMarginRight());
@@ -3041,13 +3147,15 @@ public final class asn {
                 }
             }
             for (int i43 = 0; i43 < chsVar.b; i43++) {
-                asnVar.aw(canvas2, i42, chsVar.d(i43), (int) ((f5 - asnVar.r.getDividerMarginRight()) + asnVar.r.getOffsetX()));
+                asnVar.aw(canvas2, i42, chsVar.d(i43),
+                        (int) ((f5 - asnVar.r.getDividerMarginRight()) + asnVar.r.getOffsetX()));
             }
             asnVar.r.getDividerMarginRight();
             asnVar.r.getOffsetX();
             CodeEditor codeEditor18 = asnVar.r;
             int lastVisibleLine3 = codeEditor18.getLastVisibleLine();
-            for (int firstVisibleLine3 = codeEditor18.getFirstVisibleLine(); firstVisibleLine3 <= lastVisibleLine3; firstVisibleLine3++) {
+            for (int firstVisibleLine3 = codeEditor18
+                    .getFirstVisibleLine(); firstVisibleLine3 <= lastVisibleLine3; firstVisibleLine3++) {
                 codeEditor18.getStyles();
             }
             asnVar.bi();
@@ -3110,12 +3218,14 @@ public final class asn {
         }
         OverScroller overScroller = codeEditor19.getScroller().b;
         if (overScroller.isOverScrolled()) {
-            if (verticalEdgeEffect.isFinished() && (overScroller.getCurrY() < 0 || overScroller.getCurrY() > codeEditor19.getScrollMaxY())) {
+            if (verticalEdgeEffect.isFinished()
+                    && (overScroller.getCurrY() < 0 || overScroller.getCurrY() > codeEditor19.getScrollMaxY())) {
                 codeEditor19.getEventHandler().i = overScroller.getCurrY() >= codeEditor19.getScrollMaxY() ? z : false;
                 verticalEdgeEffect.onAbsorb((int) overScroller.getCurrVelocity());
                 z2 = z;
             }
-            if (!horizontalEdgeEffect.isFinished() || (overScroller.getCurrX() >= 0 && overScroller.getCurrX() <= codeEditor19.getScrollMaxX())) {
+            if (!horizontalEdgeEffect.isFinished()
+                    || (overScroller.getCurrX() >= 0 && overScroller.getCurrX() <= codeEditor19.getScrollMaxX())) {
                 z3 = z2;
             } else {
                 codeEditor19.getEventHandler().j = overScroller.getCurrX() >= codeEditor19.getScrollMaxX() ? z : false;
@@ -3133,7 +3243,8 @@ public final class asn {
         asnVar2.r.dx();
     }
 
-    public final void bc(Canvas canvas, drd drdVar, char[] cArr, int i, int i2, int i3, int i4, boolean z, float f, float f2, int i5, int i6) {
+    public final void bc(Canvas canvas, drd drdVar, char[] cArr, int i, int i2, int i3, int i4, boolean z, float f,
+            float f2, int i5, int i6) {
         float f3;
         char c;
         int tabWidth;
@@ -3205,7 +3316,8 @@ public final class asn {
                     c2 = c4;
                     c3 = '\t';
                     i8 = 0;
-                    canvas.drawLine(f6 + f9 + f10, rowHeightOfText, ((tabWidth2 + f6) + f10) - f9, rowHeightOfText, this.e);
+                    canvas.drawLine(f6 + f9 + f10, rowHeightOfText, ((tabWidth2 + f6) + f10) - f9, rowHeightOfText,
+                            this.e);
                 } else {
                     c2 = c4;
                     c3 = '\t';
@@ -3230,17 +3342,17 @@ public final class asn {
         anu anuVarBf = bf(i);
         int length = anuVarBf.a.length;
         if (length == 1) {
-            return bzo.al(0, anuVarBf.f(0) ? 1 : 0);
+            return KotlinHelpers.al(0, anuVarBf.f(0) ? 1 : 0);
         }
         int i3 = 0;
         while (i3 < length) {
             int i4 = i3 + 1;
             if (i4 == length || (anuVarBf.d(i3) <= i2 && i2 < anuVarBf.e(i3))) {
-                return bzo.al(this.r.getProps().ah ? 1 : 0, anuVarBf.f(i3) ? 1 : 0);
+                return KotlinHelpers.al(this.r.getProps().ah ? 1 : 0, anuVarBf.f(i3) ? 1 : 0);
             }
             i3 = i4;
         }
-        return bzo.al(0, 0);
+        return KotlinHelpers.al(0, 0);
     }
 
     public final afo be(int i) {
@@ -3312,7 +3424,8 @@ public final class asn {
 
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Type inference failed for: r1v0, types: [me.hd.wauxv.obf.asg] */
-    public final void bk(final Canvas canvas, final float f, int i, int i2, final int i3, final float f2, final int i4) {
+    public final void bk(final Canvas canvas, final float f, int i, int i2, final int i3, final float f2,
+            final int i4) {
         if (i3 != 0 || (f2 > 0.0f && i4 != 0)) {
             bm(canvas, f, i, i2, null, new dqx() { // from class: me.hd.wauxv.obf.asg
                 @Override // me.hd.wauxv.obf.dqx
@@ -3337,7 +3450,8 @@ public final class asn {
                     if (i6 != 0) {
                         cskVar.setColor(i6);
                         if (codeEditor.getProps().r) {
-                            canvas2.drawRoundRect(rectF, codeEditor.getRowHeight() * codeEditor.getProps().t, codeEditor.getRowHeight() * codeEditor.getProps().t, cskVar);
+                            canvas2.drawRoundRect(rectF, codeEditor.getRowHeight() * codeEditor.getProps().t,
+                                    codeEditor.getRowHeight() * codeEditor.getProps().t, cskVar);
                         } else {
                             canvas2.drawRect(rectF, cskVar);
                         }
@@ -3348,7 +3462,8 @@ public final class asn {
                         cskVar.setColor(i5);
                         cskVar.setStrokeWidth(f6);
                         if (codeEditor.getProps().r) {
-                            canvas2.drawRoundRect(rectF, codeEditor.getRowHeight() * codeEditor.getProps().t, codeEditor.getRowHeight() * codeEditor.getProps().t, cskVar);
+                            canvas2.drawRoundRect(rectF, codeEditor.getRowHeight() * codeEditor.getProps().t,
+                                    codeEditor.getRowHeight() * codeEditor.getProps().t, cskVar);
                         } else {
                             canvas2.drawRect(rectF, cskVar);
                         }
@@ -3372,7 +3487,8 @@ public final class asn {
         cskVar.setFakeBoldText(z);
         bm(canvas, f, i, i2, new dqy() { // from class: me.hd.wauxv.obf.asj
             @Override // me.hd.wauxv.obf.dqy
-            public final void h(Canvas canvas2, char[] cArr, int i6, int i7, int i8, int i9, boolean z2, float f2, float f3, dre dreVar, dle dleVar) {
+            public final void h(Canvas canvas2, char[] cArr, int i6, int i7, int i8, int i9, boolean z2, float f2,
+                    float f3, dre dreVar, dle dleVar) {
                 Canvas canvas3;
                 asn asnVar = this.a;
                 csk cskVar2 = asnVar.d;
@@ -3393,7 +3509,8 @@ public final class asn {
                     rectF.right = f2 + f3;
                     cskVar3.setColor(i10);
                     if (codeEditor2.getProps().r) {
-                        canvas4.drawRoundRect(rectF, codeEditor2.getRowHeight() * codeEditor2.getProps().t, codeEditor2.getRowHeight() * codeEditor2.getProps().t, cskVar3);
+                        canvas4.drawRoundRect(rectF, codeEditor2.getRowHeight() * codeEditor2.getProps().t,
+                                codeEditor2.getRowHeight() * codeEditor2.getProps().t, cskVar3);
                     } else {
                         canvas4.drawRect(rectF, cskVar3);
                     }

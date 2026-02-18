@@ -7,7 +7,7 @@ public final class dlb {
     public bgs b;
 
     public dlb(dhr dhrVar, bgs bgsVar) {
-        bzo.q(bgsVar, "score");
+        throwIfVar1IsNull(bgsVar, "score");
         this.a = dhrVar;
         this.b = bgsVar;
     }
@@ -20,7 +20,7 @@ public final class dlb {
             return false;
         }
         dlb dlbVar = (dlb) obj;
-        return bzo.f(this.a, dlbVar.a) && bzo.f(this.b, dlbVar.b);
+        return nullSafeIsEqual(this.a, dlbVar.a) && nullSafeIsEqual(this.b, dlbVar.b);
     }
 
     public final int hashCode() {

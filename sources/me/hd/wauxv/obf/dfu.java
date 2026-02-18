@@ -5,7 +5,7 @@ import java.util.NoSuchElementException;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class dfu implements Iterator, afw, bsw {
+public final class dfu implements Iterator, afw, IEmpty {
     public int a;
     public Object d;
     public Iterator e;
@@ -48,7 +48,7 @@ public final class dfu implements Iterator, afw, bsw {
                     throw g();
                 }
                 Iterator it = this.e;
-                bzo.n(it);
+                throwIfVar1IsNull(it);
                 if (it.hasNext()) {
                     this.a = 2;
                     return true;
@@ -57,7 +57,7 @@ public final class dfu implements Iterator, afw, bsw {
             }
             this.a = 5;
             afw afwVar = this.f;
-            bzo.n(afwVar);
+            throwIfVar1IsNull(afwVar);
             this.f = null;
             afwVar._bn(ens.a);
         }
@@ -75,7 +75,7 @@ public final class dfu implements Iterator, afw, bsw {
         if (i == 2) {
             this.a = 1;
             Iterator it = this.e;
-            bzo.n(it);
+            throwIfVar1IsNull(it);
             return it.next();
         }
         if (i != 3) {

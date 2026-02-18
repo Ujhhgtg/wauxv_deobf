@@ -19,7 +19,7 @@ public final class alj extends dlq {
 
     @Override // me.hd.wauxv.obf.dlq
     public final void b(ViewGroup viewGroup) {
-        bzo.q(viewGroup, "container");
+        throwIfVar1IsNull(viewGroup, "container");
         AnimatorSet animatorSet = this.d;
         alh alhVar = this.a;
         if (animatorSet == null) {
@@ -44,7 +44,7 @@ public final class alj extends dlq {
 
     @Override // me.hd.wauxv.obf.dlq
     public final void c(ViewGroup viewGroup) {
-        bzo.q(viewGroup, "container");
+        throwIfVar1IsNull(viewGroup, "container");
         dlr dlrVar = (dlr) this.a.g;
         AnimatorSet animatorSet = this.d;
         if (animatorSet == null) {
@@ -59,8 +59,8 @@ public final class alj extends dlq {
 
     @Override // me.hd.wauxv.obf.dlq
     public final void e(mt mtVar, ViewGroup viewGroup) {
-        bzo.q(mtVar, "backEvent");
-        bzo.q(viewGroup, "container");
+        throwIfVar1IsNull(mtVar, "backEvent");
+        throwIfVar1IsNull(viewGroup, "container");
         dlr dlrVar = (dlr) this.a.g;
         AnimatorSet animatorSet = this.d;
         if (animatorSet == null) {
@@ -82,22 +82,23 @@ public final class alj extends dlq {
             j = jB - 1;
         }
         if (beg.ar(2)) {
-            Log.v("FragmentManager", "Setting currentPlayTime to " + j + " for Animator " + animatorSet + " on operation " + dlrVar);
+            Log.v("FragmentManager",
+                    "Setting currentPlayTime to " + j + " for Animator " + animatorSet + " on operation " + dlrVar);
         }
-        all.a.c(animatorSet, j);
+        all.a.createInstanceWithArgs(animatorSet, j);
     }
 
     @Override // me.hd.wauxv.obf.dlq
     public final void f(ViewGroup viewGroup) {
         alj aljVar;
-        bzo.q(viewGroup, "container");
+        throwIfVar1IsNull(viewGroup, "container");
         alh alhVar = this.a;
         if (alhVar.h()) {
             return;
         }
         Context context = viewGroup.getContext();
-        bzo.p(context, com.umeng.analytics.pro.f.X);
-        io ioVarJ = alhVar.j(context);
+        throwIfVar1IsNull(context, "context");
+        DefaultConfig ioVarJ = alhVar.j(context);
         this.d = ioVarJ != null ? (AnimatorSet) ioVarJ.d : null;
         dlr dlrVar = (dlr) alhVar.g;
         bdj bdjVar = dlrVar.c;

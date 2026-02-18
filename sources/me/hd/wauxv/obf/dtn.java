@@ -26,7 +26,8 @@ public final class dtn {
             return false;
         }
         dtn dtnVar = (dtn) obj;
-        return bzo.f(this.a, dtnVar.a) && bzo.f(this.b, dtnVar.b) && bzo.f(this.c, dtnVar.c);
+        return nullSafeIsEqual(this.a, dtnVar.a) && nullSafeIsEqual(this.b, dtnVar.b)
+                && nullSafeIsEqual(this.c, dtnVar.c);
     }
 
     public final int hashCode() {
@@ -43,6 +44,6 @@ public final class dtn {
         sb.append("LiteappInfoProto(appId=" /* cnb.z(-224227357621034L) */);
         yg.u(sb, this.a, -224124278405930L);
         yg.u(sb, this.b, -224089918667562L);
-        return bjs.q(sb, this.c, ')');
+        return concat(sb, this.c, ')');
     }
 }

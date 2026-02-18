@@ -31,10 +31,17 @@ public abstract class MemberAttributeExtension<T> {
     protected final AnnotationValueFilter.Factory annotationValueFilterFactory;
     protected final T attributeAppenderFactory;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
-    public static class ForField extends MemberAttributeExtension<FieldAttributeAppender.Factory> implements AsmVisitorWrapper.ForDeclaredFields.FieldVisitorWrapper {
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
+    public static class ForField extends MemberAttributeExtension<FieldAttributeAppender.Factory>
+            implements AsmVisitorWrapper.ForDeclaredFields.FieldVisitorWrapper {
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static class FieldAttributeVisitor extends FieldVisitor {
             private final AnnotationValueFilter annotationValueFilter;
             private final FieldAttributeAppender fieldAttributeAppender;
@@ -46,7 +53,8 @@ public abstract class MemberAttributeExtension<T> {
                 super.visitEnd();
             }
 
-            private FieldAttributeVisitor(FieldVisitor fieldVisitor, FieldDescription fieldDescription, FieldAttributeAppender fieldAttributeAppender, AnnotationValueFilter annotationValueFilter) {
+            private FieldAttributeVisitor(FieldVisitor fieldVisitor, FieldDescription fieldDescription,
+                    FieldAttributeAppender fieldAttributeAppender, AnnotationValueFilter annotationValueFilter) {
                 super(OpenedClassReader.ASM_API, fieldVisitor);
                 this.fieldDescription = fieldDescription;
                 this.fieldAttributeAppender = fieldAttributeAppender;
@@ -63,7 +71,8 @@ public abstract class MemberAttributeExtension<T> {
         }
 
         public ForField attribute(FieldAttributeAppender.Factory factory) {
-            return new ForField(this.annotationValueFilterFactory, new FieldAttributeAppender.Factory.Compound((FieldAttributeAppender.Factory) this.attributeAppenderFactory, factory));
+            return new ForField(this.annotationValueFilterFactory, new FieldAttributeAppender.Factory.Compound(
+                    (FieldAttributeAppender.Factory) this.attributeAppenderFactory, factory));
         }
 
         public AsmVisitorWrapper on(ElementMatcher<? super FieldDescription.InDefinedShape> elementMatcher) {
@@ -71,8 +80,11 @@ public abstract class MemberAttributeExtension<T> {
         }
 
         @Override // net.bytebuddy.asm.AsmVisitorWrapper.ForDeclaredFields.FieldVisitorWrapper
-        public FieldVisitor wrap(TypeDescription typeDescription, FieldDescription.InDefinedShape inDefinedShape, FieldVisitor fieldVisitor) {
-            return new FieldAttributeVisitor(fieldVisitor, inDefinedShape, ((FieldAttributeAppender.Factory) this.attributeAppenderFactory).make(typeDescription), this.annotationValueFilterFactory.on(inDefinedShape));
+        public FieldVisitor wrap(TypeDescription typeDescription, FieldDescription.InDefinedShape inDefinedShape,
+                FieldVisitor fieldVisitor) {
+            return new FieldAttributeVisitor(fieldVisitor, inDefinedShape,
+                    ((FieldAttributeAppender.Factory) this.attributeAppenderFactory).make(typeDescription),
+                    this.annotationValueFilterFactory.on(inDefinedShape));
         }
 
         public ForField(AnnotationValueFilter.Factory factory) {
@@ -80,7 +92,8 @@ public abstract class MemberAttributeExtension<T> {
         }
 
         public ForField annotate(List<? extends Annotation> list) {
-            return annotate((Collection<? extends AnnotationDescription>) new AnnotationList.ForLoadedAnnotations(list));
+            return annotate(
+                    (Collection<? extends AnnotationDescription>) new AnnotationList.ForLoadedAnnotations(list));
         }
 
         public ForField(AnnotationValueFilter.Factory factory, FieldAttributeAppender.Factory factory2) {
@@ -96,10 +109,17 @@ public abstract class MemberAttributeExtension<T> {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
-    public static class ForMethod extends MemberAttributeExtension<MethodAttributeAppender.Factory> implements AsmVisitorWrapper.ForDeclaredMethods.MethodVisitorWrapper {
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
+    public static class ForMethod extends MemberAttributeExtension<MethodAttributeAppender.Factory>
+            implements AsmVisitorWrapper.ForDeclaredMethods.MethodVisitorWrapper {
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static class AttributeAppendingMethodVisitor extends MethodVisitor {
             private final AnnotationValueFilter annotationValueFilter;
             private boolean applicable;
@@ -124,7 +144,8 @@ public abstract class MemberAttributeExtension<T> {
                 super.visitEnd();
             }
 
-            private AttributeAppendingMethodVisitor(MethodVisitor methodVisitor, MethodDescription methodDescription, MethodAttributeAppender methodAttributeAppender, AnnotationValueFilter annotationValueFilter) {
+            private AttributeAppendingMethodVisitor(MethodVisitor methodVisitor, MethodDescription methodDescription,
+                    MethodAttributeAppender methodAttributeAppender, AnnotationValueFilter annotationValueFilter) {
                 super(OpenedClassReader.ASM_API, methodVisitor);
                 this.methodDescription = methodDescription;
                 this.methodAttributeAppender = methodAttributeAppender;
@@ -146,7 +167,8 @@ public abstract class MemberAttributeExtension<T> {
         }
 
         public ForMethod attribute(MethodAttributeAppender.Factory factory) {
-            return new ForMethod(this.annotationValueFilterFactory, new MethodAttributeAppender.Factory.Compound((MethodAttributeAppender.Factory) this.attributeAppenderFactory, factory));
+            return new ForMethod(this.annotationValueFilterFactory, new MethodAttributeAppender.Factory.Compound(
+                    (MethodAttributeAppender.Factory) this.attributeAppenderFactory, factory));
         }
 
         public AsmVisitorWrapper on(ElementMatcher<? super MethodDescription> elementMatcher) {
@@ -154,8 +176,11 @@ public abstract class MemberAttributeExtension<T> {
         }
 
         @Override // net.bytebuddy.asm.AsmVisitorWrapper.ForDeclaredMethods.MethodVisitorWrapper
-        public MethodVisitor wrap(TypeDescription typeDescription, MethodDescription methodDescription, MethodVisitor methodVisitor, Implementation.Context context, TypePool typePool, int i, int i2) {
-            return new AttributeAppendingMethodVisitor(methodVisitor, methodDescription, ((MethodAttributeAppender.Factory) this.attributeAppenderFactory).make(typeDescription), this.annotationValueFilterFactory.on(methodDescription));
+        public MethodVisitor wrap(TypeDescription typeDescription, MethodDescription methodDescription,
+                MethodVisitor methodVisitor, Implementation.Context context, TypePool typePool, int i, int i2) {
+            return new AttributeAppendingMethodVisitor(methodVisitor, methodDescription,
+                    ((MethodAttributeAppender.Factory) this.attributeAppenderFactory).make(typeDescription),
+                    this.annotationValueFilterFactory.on(methodDescription));
         }
 
         public ForMethod(AnnotationValueFilter.Factory factory) {
@@ -163,11 +188,13 @@ public abstract class MemberAttributeExtension<T> {
         }
 
         public ForMethod annotateMethod(List<? extends Annotation> list) {
-            return annotateMethod((Collection<? extends AnnotationDescription>) new AnnotationList.ForLoadedAnnotations(list));
+            return annotateMethod(
+                    (Collection<? extends AnnotationDescription>) new AnnotationList.ForLoadedAnnotations(list));
         }
 
         public ForMethod annotateParameter(int i, List<? extends Annotation> list) {
-            return annotateParameter(i, (Collection<? extends AnnotationDescription>) new AnnotationList.ForLoadedAnnotations(list));
+            return annotateParameter(i,
+                    (Collection<? extends AnnotationDescription>) new AnnotationList.ForLoadedAnnotations(list));
         }
 
         public ForMethod(AnnotationValueFilter.Factory factory, MethodAttributeAppender.Factory factory2) {
@@ -175,11 +202,13 @@ public abstract class MemberAttributeExtension<T> {
         }
 
         public ForMethod annotateMethod(AnnotationDescription... annotationDescriptionArr) {
-            return annotateMethod((Collection<? extends AnnotationDescription>) Arrays.asList(annotationDescriptionArr));
+            return annotateMethod(
+                    (Collection<? extends AnnotationDescription>) Arrays.asList(annotationDescriptionArr));
         }
 
         public ForMethod annotateParameter(int i, AnnotationDescription... annotationDescriptionArr) {
-            return annotateParameter(i, (Collection<? extends AnnotationDescription>) Arrays.asList(annotationDescriptionArr));
+            return annotateParameter(i,
+                    (Collection<? extends AnnotationDescription>) Arrays.asList(annotationDescriptionArr));
         }
 
         public ForMethod annotateMethod(Collection<? extends AnnotationDescription> collection) {
@@ -190,7 +219,7 @@ public abstract class MemberAttributeExtension<T> {
             if (i >= 0) {
                 return attribute(new MethodAttributeAppender.Explicit(i, new ArrayList(collection)));
             }
-            throw new IllegalArgumentException(bjs.i(i, "Parameter index cannot be negative: "));
+            throw new IllegalArgumentException(concatVar2Var1(i, "Parameter index cannot be negative: "));
         }
     }
 
@@ -207,10 +236,12 @@ public abstract class MemberAttributeExtension<T> {
             return false;
         }
         MemberAttributeExtension memberAttributeExtension = (MemberAttributeExtension) obj;
-        return this.annotationValueFilterFactory.equals(memberAttributeExtension.annotationValueFilterFactory) && this.attributeAppenderFactory.equals(memberAttributeExtension.attributeAppenderFactory);
+        return this.annotationValueFilterFactory.equals(memberAttributeExtension.annotationValueFilterFactory)
+                && this.attributeAppenderFactory.equals(memberAttributeExtension.attributeAppenderFactory);
     }
 
     public int hashCode() {
-        return this.attributeAppenderFactory.hashCode() + ((this.annotationValueFilterFactory.hashCode() + (getClass().hashCode() * 31)) * 31);
+        return this.attributeAppenderFactory.hashCode()
+                + ((this.annotationValueFilterFactory.hashCode() + (getClass().hashCode() * 31)) * 31);
     }
 }

@@ -115,7 +115,8 @@ public abstract class ns extends View {
 
     /* JADX WARN: Type inference failed for: r1v5, types: [me.hd.wauxv.obf.nn] */
     public ns(Context context, AttributeSet attributeSet) {
-        super(cmz.aq(context, attributeSet, R.attr.sliderStyle, R.style.Widget_MaterialComponents_Slider), attributeSet, R.attr.sliderStyle);
+        super(cmz.aq(context, attributeSet, R.attr.sliderStyle, R.style.Widget_MaterialComponents_Slider), attributeSet,
+                R.attr.sliderStyle);
         this.l = new ArrayList();
         this.m = new ArrayList();
         this.n = new ArrayList();
@@ -182,35 +183,44 @@ public abstract class ns extends View {
         bhu.p(context2, attributeSet, R.attr.sliderStyle, R.style.Widget_MaterialComponents_Slider);
         int[] iArr = cxs.al;
         bhu.q(context2, attributeSet, iArr, R.attr.sliderStyle, R.style.Widget_MaterialComponents_Slider, new int[0]);
-        TypedArray typedArrayObtainStyledAttributes = context2.obtainStyledAttributes(attributeSet, iArr, R.attr.sliderStyle, R.style.Widget_MaterialComponents_Slider);
+        TypedArray typedArrayObtainStyledAttributes = context2.obtainStyledAttributes(attributeSet, iArr,
+                R.attr.sliderStyle, R.style.Widget_MaterialComponents_Slider);
         this.k = typedArrayObtainStyledAttributes.getResourceId(8, R.style.Widget_MaterialComponents_Tooltip);
         this.aq = typedArrayObtainStyledAttributes.getFloat(3, 0.0f);
         this.ar = typedArrayObtainStyledAttributes.getFloat(4, 1.0f);
         setValues(Float.valueOf(this.aq));
         this.av = typedArrayObtainStyledAttributes.getFloat(2, 0.0f);
-        this.y = (int) Math.ceil(typedArrayObtainStyledAttributes.getDimension(9, (float) Math.ceil(ewz.ag(getContext(), 48))));
+        this.y = (int) Math
+                .ceil(typedArrayObtainStyledAttributes.getDimension(9, (float) Math.ceil(ewz.ag(getContext(), 48))));
         boolean zHasValue = typedArrayObtainStyledAttributes.hasValue(24);
         int i = zHasValue ? 24 : 26;
         int i2 = zHasValue ? 24 : 25;
         ColorStateList colorStateListV = cnb.v(context2, typedArrayObtainStyledAttributes, i);
-        setTrackInactiveTintList(colorStateListV == null ? bht.v(context2, R.color.material_slider_inactive_track_color) : colorStateListV);
+        setTrackInactiveTintList(colorStateListV == null ? bht.v(context2, R.color.material_slider_inactive_track_color)
+                : colorStateListV);
         ColorStateList colorStateListV2 = cnb.v(context2, typedArrayObtainStyledAttributes, i2);
-        setTrackActiveTintList(colorStateListV2 == null ? bht.v(context2, R.color.material_slider_active_track_color) : colorStateListV2);
+        setTrackActiveTintList(colorStateListV2 == null ? bht.v(context2, R.color.material_slider_active_track_color)
+                : colorStateListV2);
         cauVar.dz(cnb.v(context2, typedArrayObtainStyledAttributes, 10));
         if (typedArrayObtainStyledAttributes.hasValue(14)) {
             setThumbStrokeColor(cnb.v(context2, typedArrayObtainStyledAttributes, 14));
         }
         setThumbStrokeWidth(typedArrayObtainStyledAttributes.getDimension(15, 0.0f));
         ColorStateList colorStateListV3 = cnb.v(context2, typedArrayObtainStyledAttributes, 5);
-        setHaloTintList(colorStateListV3 == null ? bht.v(context2, R.color.material_slider_halo_color) : colorStateListV3);
+        setHaloTintList(
+                colorStateListV3 == null ? bht.v(context2, R.color.material_slider_halo_color) : colorStateListV3);
         this.ax = typedArrayObtainStyledAttributes.getBoolean(23, true);
         boolean zHasValue2 = typedArrayObtainStyledAttributes.hasValue(18);
         int i3 = zHasValue2 ? 18 : 20;
         int i4 = zHasValue2 ? 18 : 19;
         ColorStateList colorStateListV4 = cnb.v(context2, typedArrayObtainStyledAttributes, i3);
-        setTickInactiveTintList(colorStateListV4 == null ? bht.v(context2, R.color.material_slider_inactive_tick_marks_color) : colorStateListV4);
+        setTickInactiveTintList(
+                colorStateListV4 == null ? bht.v(context2, R.color.material_slider_inactive_tick_marks_color)
+                        : colorStateListV4);
         ColorStateList colorStateListV5 = cnb.v(context2, typedArrayObtainStyledAttributes, i4);
-        setTickActiveTintList(colorStateListV5 == null ? bht.v(context2, R.color.material_slider_active_tick_marks_color) : colorStateListV5);
+        setTickActiveTintList(
+                colorStateListV5 == null ? bht.v(context2, R.color.material_slider_active_tick_marks_color)
+                        : colorStateListV5);
         setThumbTrackGapSize(typedArrayObtainStyledAttributes.getDimensionPixelSize(16, 0));
         setTrackStopIndicatorSize(typedArrayObtainStyledAttributes.getDimensionPixelSize(29, 0));
         setTrackInsideCornerSize(typedArrayObtainStyledAttributes.getDimensionPixelSize(28, 0));
@@ -281,7 +291,8 @@ public abstract class ns extends View {
 
     public final void bu(Canvas canvas, int i, int i2, float f, Drawable drawable) {
         canvas.save();
-        canvas.translate((this.ad + ((int) (cf(f) * i))) - (drawable.getBounds().width() / 2.0f), i2 - (drawable.getBounds().height() / 2.0f));
+        canvas.translate((this.ad + ((int) (cf(f) * i))) - (drawable.getBounds().width() / 2.0f),
+                i2 - (drawable.getBounds().height() / 2.0f));
         drawable.draw(canvas);
         canvas.restore();
     }
@@ -302,7 +313,8 @@ public abstract class ns extends View {
             }
         }
         if (!it.hasNext()) {
-            throw new IllegalStateException(String.format("Not enough labels(%d) to display all the values(%d)", Integer.valueOf(arrayList.size()), Integer.valueOf(this.as.size())));
+            throw new IllegalStateException(String.format("Not enough labels(%d) to display all the values(%d)",
+                    Integer.valueOf(arrayList.size()), Integer.valueOf(this.as.size())));
         }
         ch((ekv) it.next(), ((Float) this.as.get(this.au)).floatValue());
     }
@@ -326,7 +338,7 @@ public abstract class ns extends View {
         }
         float fCf = cf(fFloatValue);
         float fCf2 = cf(fFloatValue2);
-        return cb() ? new float[]{fCf2, fCf} : new float[]{fCf, fCf2};
+        return cb() ? new float[] { fCf2, fCf } : new float[] { fCf, fCf2 };
     }
 
     public final int by(ColorStateList colorStateList) {
@@ -334,7 +346,8 @@ public abstract class ns extends View {
     }
 
     public final boolean bz(double d) {
-        double dDoubleValue = new BigDecimal(Double.toString(d)).divide(new BigDecimal(Float.toString(this.av)), MathContext.DECIMAL64).doubleValue();
+        double dDoubleValue = new BigDecimal(Double.toString(d))
+                .divide(new BigDecimal(Float.toString(this.av)), MathContext.DECIMAL64).doubleValue();
         return Math.abs(((double) Math.round(dDoubleValue)) - dDoubleValue) < 1.0E-4d;
     }
 
@@ -342,7 +355,8 @@ public abstract class ns extends View {
         if (motionEvent.getToolType(0) != 3) {
             for (ViewParent parent = getParent(); parent instanceof ViewGroup; parent = parent.getParent()) {
                 ViewGroup viewGroup = (ViewGroup) parent;
-                if ((viewGroup.canScrollVertically(1) || viewGroup.canScrollVertically(-1)) && viewGroup.shouldDelayChildPressedState()) {
+                if ((viewGroup.canScrollVertically(1) || viewGroup.canScrollVertically(-1))
+                        && viewGroup.shouldDelayChildPressedState()) {
                     return true;
                 }
             }
@@ -429,7 +443,7 @@ public abstract class ns extends View {
         ama.d(ewz.ah(this), this, rect);
         ekvVar.setBounds(rect);
         ViewGroup viewGroupAh = ewz.ah(this);
-        ((ViewOverlay) (viewGroupAh == null ? null : new eru(viewGroupAh)).a).add(ekvVar);
+        ((ViewOverlay) (viewGroupAh == null ? null : new eru(viewGroupAh)).cachedConstructors).add(ekvVar);
     }
 
     public final void ci(ArrayList arrayList) {
@@ -491,12 +505,15 @@ public abstract class ns extends View {
                 dqkVar.e = true;
                 ekvVar2.invalidateSelf();
             }
-            dqh dqhVar = (!typedArrayAn.hasValue(0) || (resourceId = typedArrayAn.getResourceId(0, 0)) == 0) ? null : new dqh(context2, resourceId);
+            dqh dqhVar = (!typedArrayAn.hasValue(0) || (resourceId = typedArrayAn.getResourceId(0, 0)) == 0) ? null
+                    : new dqh(context2, resourceId);
             if (dqhVar != null && typedArrayAn.hasValue(1)) {
                 dqhVar.j = cnb.v(context2, typedArrayAn, 1);
             }
             dqkVar.j(dqhVar, context2);
-            ekvVar2.dz(ColorStateList.valueOf(typedArrayAn.getColor(7, abi.d(abi.f(cna.u(context2, R.attr.colorOnBackground, ekv.class.getCanonicalName()), 153), abi.f(cna.u(context2, android.R.attr.colorBackground, ekv.class.getCanonicalName()), 229)))));
+            ekvVar2.dz(ColorStateList.valueOf(typedArrayAn.getColor(7, abi.d(
+                    abi.f(cna.u(context2, R.attr.colorOnBackground, ekv.class.getCanonicalName()), 153),
+                    abi.f(cna.u(context2, android.R.attr.colorBackground, ekv.class.getCanonicalName()), 229)))));
             ekvVar2.ed(ColorStateList.valueOf(cna.u(context2, R.attr.colorSurface, ekv.class.getCanonicalName())));
             ekvVar2.h = typedArrayAn.getDimensionPixelSize(2, 0);
             ekvVar2.i = typedArrayAn.getDimensionPixelSize(4, 0);
@@ -551,7 +568,9 @@ public abstract class ns extends View {
         }
         int i2 = i + 1;
         int i3 = i - 1;
-        this.as.set(i, Float.valueOf(cnf.ar(f, i3 < 0 ? this.aq : minSeparation + ((Float) this.as.get(i3)).floatValue(), i2 >= this.as.size() ? this.ar : ((Float) this.as.get(i2)).floatValue() - minSeparation)));
+        this.as.set(i,
+                Float.valueOf(cnf.ar(f, i3 < 0 ? this.aq : minSeparation + ((Float) this.as.get(i3)).floatValue(),
+                        i2 >= this.as.size() ? this.ar : ((Float) this.as.get(i2)).floatValue() - minSeparation)));
         Iterator it = this.m.iterator();
         if (it.hasNext()) {
             if (it.next() != null) {
@@ -664,7 +683,7 @@ public abstract class ns extends View {
         Path path = this.bi;
         path.reset();
         if (rectF.width() >= f2 + f) {
-            path.addRoundRect(rectF, new float[]{f2, f2, f, f, f, f, f2, f2}, Path.Direction.CW);
+            path.addRoundRect(rectF, new float[] { f2, f2, f, f, f, f, f2, f2 }, Path.Direction.CW);
             canvas.drawPath(path, paint);
             return;
         }
@@ -690,7 +709,8 @@ public abstract class ns extends View {
 
     public final void cp() {
         boolean z;
-        int iMax = Math.max(this.z, Math.max(this.ac + getPaddingBottom() + getPaddingTop(), getPaddingBottom() + getPaddingTop() + this.af));
+        int iMax = Math.max(this.z, Math.max(this.ac + getPaddingBottom() + getPaddingTop(),
+                getPaddingBottom() + getPaddingTop() + this.af));
         boolean z2 = true;
         if (iMax == this.aa) {
             z = false;
@@ -698,7 +718,8 @@ public abstract class ns extends View {
             this.aa = iMax;
             z = true;
         }
-        int iMax2 = Math.max(Math.max(Math.max((this.ae / 2) - this.t, 0), Math.max((this.ac - this.u) / 2, 0)), Math.max(Math.max(this.ay - this.v, 0), Math.max(this.az - this.w, 0))) + this.s;
+        int iMax2 = Math.max(Math.max(Math.max((this.ae / 2) - this.t, 0), Math.max((this.ac - this.u) / 2, 0)),
+                Math.max(Math.max(this.ay - this.v, 0), Math.max(this.az - this.w, 0))) + this.s;
         if (this.ad == iMax2) {
             z2 = false;
         } else {
@@ -721,22 +742,27 @@ public abstract class ns extends View {
             float f = this.aq;
             float f2 = this.ar;
             if (f >= f2) {
-                throw new IllegalStateException("valueFrom(" + this.aq + ") must be smaller than valueTo(" + this.ar + ")");
+                throw new IllegalStateException(
+                        "valueFrom(" + this.aq + ") must be smaller than valueTo(" + this.ar + ")");
             }
             if (f2 <= f) {
-                throw new IllegalStateException("valueTo(" + this.ar + ") must be greater than valueFrom(" + this.aq + ")");
+                throw new IllegalStateException(
+                        "valueTo(" + this.ar + ") must be greater than valueFrom(" + this.aq + ")");
             }
             if (this.av > 0.0f && !cr(f2)) {
-                throw new IllegalStateException("The stepSize(" + this.av + ") must be 0, or a factor of the valueFrom(" + this.aq + ")-valueTo(" + this.ar + ") range");
+                throw new IllegalStateException("The stepSize(" + this.av + ") must be 0, or a factor of the valueFrom("
+                        + this.aq + ")-valueTo(" + this.ar + ") range");
             }
             for (Float f3 : this.as) {
                 if (f3.floatValue() < this.aq || f3.floatValue() > this.ar) {
-                    throw new IllegalStateException("Slider value(" + f3 + ") must be greater or equal to valueFrom(" + this.aq + "), and lower or equal to valueTo(" + this.ar + ")");
+                    throw new IllegalStateException("Slider value(" + f3 + ") must be greater or equal to valueFrom("
+                            + this.aq + "), and lower or equal to valueTo(" + this.ar + ")");
                 }
                 if (this.av > 0.0f && !cr(f3.floatValue())) {
                     float f4 = this.aq;
                     float f5 = this.av;
-                    throw new IllegalStateException("Value(" + f3 + ") must be equal to valueFrom(" + f4 + ") plus a multiple of stepSize(" + f5 + ") when using stepSize(" + f5 + ")");
+                    throw new IllegalStateException("Value(" + f3 + ") must be equal to valueFrom(" + f4
+                            + ") plus a multiple of stepSize(" + f5 + ") when using stepSize(" + f5 + ")");
                 }
             }
             float minSeparation = getMinSeparation();
@@ -746,25 +772,31 @@ public abstract class ns extends View {
             float f6 = this.av;
             if (f6 > 0.0f && minSeparation > 0.0f) {
                 if (this.bp != 1) {
-                    throw new IllegalStateException("minSeparation(" + minSeparation + ") cannot be set as a dimension when using stepSize(" + this.av + ")");
+                    throw new IllegalStateException("minSeparation(" + minSeparation
+                            + ") cannot be set as a dimension when using stepSize(" + this.av + ")");
                 }
                 if (minSeparation < f6 || !bz(minSeparation)) {
                     float f7 = this.av;
-                    throw new IllegalStateException("minSeparation(" + minSeparation + ") must be greater or equal and a multiple of stepSize(" + f7 + ") when using stepSize(" + f7 + ")");
+                    throw new IllegalStateException(
+                            "minSeparation(" + minSeparation + ") must be greater or equal and a multiple of stepSize("
+                                    + f7 + ") when using stepSize(" + f7 + ")");
                 }
             }
             float f8 = this.av;
             if (f8 != 0.0f) {
                 if (((int) f8) != f8) {
-                    Log.w("ᛱᛱᛲᲈᛵ", "Floating point value used for stepSize(" + f8 + "). Using floats can have rounding errors which may result in incorrect values. Instead, consider using integers with a custom LabelFormatter to display the value correctly.");
+                    Log.w("ᛱᛱᛲᲈᛵ", "Floating point value used for stepSize(" + f8
+                            + "). Using floats can have rounding errors which may result in incorrect values. Instead, consider using integers with a custom LabelFormatter to display the value correctly.");
                 }
                 float f9 = this.aq;
                 if (((int) f9) != f9) {
-                    Log.w("ᛱᛱᛲᲈᛵ", "Floating point value used for valueFrom(" + f9 + "). Using floats can have rounding errors which may result in incorrect values. Instead, consider using integers with a custom LabelFormatter to display the value correctly.");
+                    Log.w("ᛱᛱᛲᲈᛵ", "Floating point value used for valueFrom(" + f9
+                            + "). Using floats can have rounding errors which may result in incorrect values. Instead, consider using integers with a custom LabelFormatter to display the value correctly.");
                 }
                 float f10 = this.ar;
                 if (((int) f10) != f10) {
-                    Log.w("ᛱᛱᛲᲈᛵ", "Floating point value used for valueTo(" + f10 + "). Using floats can have rounding errors which may result in incorrect values. Instead, consider using integers with a custom LabelFormatter to display the value correctly.");
+                    Log.w("ᛱᛱᛲᲈᛵ", "Floating point value used for valueTo(" + f10
+                            + "). Using floats can have rounding errors which may result in incorrect values. Instead, consider using integers with a custom LabelFormatter to display the value correctly.");
                 }
             }
             this.bc = false;
@@ -772,7 +804,8 @@ public abstract class ns extends View {
     }
 
     public final boolean cr(float f) {
-        return bz(new BigDecimal(Float.toString(f)).subtract(new BigDecimal(Float.toString(this.aq)), MathContext.DECIMAL64).doubleValue());
+        return bz(new BigDecimal(Float.toString(f))
+                .subtract(new BigDecimal(Float.toString(this.aq)), MathContext.DECIMAL64).doubleValue());
     }
 
     public final float cs(float f) {
@@ -865,8 +898,8 @@ public abstract class ns extends View {
     }
 
     /* JADX WARN: Found duplicated region for block: B:117:0x0185 A[SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:59:0x0176  */
-    /* JADX WARN: Found duplicated region for block: B:77:0x01f6  */
+    /* JADX WARN: Found duplicated region for block: B:59:0x0176 */
+    /* JADX WARN: Found duplicated region for block: B:77:0x01f6 */
     @Override // android.view.View
     public final void onDraw(Canvas canvas) {
         int i;
@@ -1058,7 +1091,8 @@ public abstract class ns extends View {
                     nsVar.bu(canvas, i16, i3, fFloatValue5, (Drawable) nsVar.bn.get(i2));
                 } else {
                     if (!nsVar.isEnabled()) {
-                        canvas.drawCircle((nsVar.cf(fFloatValue5) * i16) + nsVar.ad, i3, nsVar.getThumbRadius(), nsVar.c);
+                        canvas.drawCircle((nsVar.cf(fFloatValue5) * i16) + nsVar.ad, i3, nsVar.getThumbRadius(),
+                                nsVar.c);
                     }
                     nsVar.bu(canvas, i16, i3, fFloatValue5, nsVar.bl);
                 }
@@ -1091,8 +1125,8 @@ public abstract class ns extends View {
         nqVar.an(this.au);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:21:0x0047  */
-    /* JADX WARN: Found duplicated region for block: B:22:0x004d  */
+    /* JADX WARN: Found duplicated region for block: B:21:0x0047 */
+    /* JADX WARN: Found duplicated region for block: B:22:0x004d */
     @Override // android.view.View, android.view.KeyEvent.Callback
     public final boolean onKeyDown(int i, KeyEvent keyEvent) {
         if (!isEnabled()) {
@@ -1105,7 +1139,8 @@ public abstract class ns extends View {
         Boolean boolValueOf = null;
         if (this.at == -1) {
             if (i == 61) {
-                boolValueOf = keyEvent.hasNoModifiers() ? Boolean.valueOf(cd(1)) : keyEvent.isShiftPressed() ? Boolean.valueOf(cd(-1)) : Boolean.FALSE;
+                boolValueOf = keyEvent.hasNoModifiers() ? Boolean.valueOf(cd(1))
+                        : keyEvent.isShiftPressed() ? Boolean.valueOf(cd(-1)) : Boolean.FALSE;
             } else if (i == 66) {
                 this.at = this.au;
                 postInvalidate();
@@ -1203,7 +1238,8 @@ public abstract class ns extends View {
     public final void onMeasure(int i, int i2) {
         int i3 = this.aa;
         int i4 = this.ab;
-        super.onMeasure(i, View.MeasureSpec.makeMeasureSpec(i3 + ((i4 == 1 || i4 == 3) ? ((ekv) this.l.get(0)).getIntrinsicHeight() : 0), 1073741824));
+        super.onMeasure(i, View.MeasureSpec.makeMeasureSpec(
+                i3 + ((i4 == 1 || i4 == 3) ? ((ekv) this.l.get(0)).getIntrinsicHeight() : 0), 1073741824));
     }
 
     @Override // android.view.View
@@ -1237,10 +1273,10 @@ public abstract class ns extends View {
         cm();
     }
 
-    /* JADX WARN: Found duplicated region for block: B:26:0x0075  */
-    /* JADX WARN: Found duplicated region for block: B:37:0x00b2  */
-    /* JADX WARN: Found duplicated region for block: B:41:0x00bc  */
-    /* JADX WARN: Found duplicated region for block: B:51:0x00e5  */
+    /* JADX WARN: Found duplicated region for block: B:26:0x0075 */
+    /* JADX WARN: Found duplicated region for block: B:37:0x00b2 */
+    /* JADX WARN: Found duplicated region for block: B:41:0x00bc */
+    /* JADX WARN: Found duplicated region for block: B:51:0x00e5 */
     @Override // android.view.View
     public final boolean onTouchEvent(MotionEvent motionEvent) {
         MotionEvent motionEvent2;
@@ -1263,7 +1299,8 @@ public abstract class ns extends View {
                     motionEvent2 = this.ao;
                     if (motionEvent2 != null && motionEvent2.getActionMasked() == 0) {
                         f = i2;
-                        if (Math.abs(this.ao.getX() - motionEvent.getX()) <= f && Math.abs(this.ao.getY() - motionEvent.getY()) <= f) {
+                        if (Math.abs(this.ao.getX() - motionEvent.getX()) <= f
+                                && Math.abs(this.ao.getY() - motionEvent.getY()) <= f) {
                             slider = (Slider) this;
                             if (slider.getActiveThumbIndex() == -1) {
                                 slider.setActiveThumbIndex(0);

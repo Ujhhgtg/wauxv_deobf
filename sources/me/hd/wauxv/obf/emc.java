@@ -97,7 +97,7 @@ public abstract class emc {
         try {
             return (List) obj;
         } catch (ClassCastException e) {
-            bzo.ao(e, emc.class.getName());
+            KotlinHelpers.ao(e, emc.class.getName());
             throw e;
         }
     }
@@ -119,30 +119,30 @@ public abstract class emc {
     }
 
     public static final cyk ag(dhy dhyVar) {
-        bzo.q(dhyVar, "<this>");
+        throwIfVar1IsNull(dhyVar, "<this>");
         return new cyk(dhyVar);
     }
 
     public static final cyl ah(dlc dlcVar) {
-        bzo.q(dlcVar, "<this>");
+        throwIfVar1IsNull(dlcVar, "<this>");
         return new cyl(dlcVar);
     }
 
     public static final ColorStateList ai(int i) {
-        csm[] csmVarArr = {new csm(0, Integer.valueOf(i))};
+        Pair[] pairVarArr = { new Pair(0, Integer.valueOf(i)) };
         ArrayList arrayList = new ArrayList();
         ArrayList arrayList2 = new ArrayList();
-        csm csmVar = csmVarArr[0];
-        bzo.q(csmVar, "pair");
-        Map mapSingletonMap = Collections.singletonMap(csmVar.a, csmVar.b);
-        bzo.p(mapSingletonMap, "singletonMap(...)");
+        Pair pairVar = pairVarArr[0];
+        throwIfVar1IsNull(pairVar, "pair");
+        Map mapSingletonMap = Collections.singletonMap(pairVar.a, pairVar.b);
+        throwIfVar1IsNull(mapSingletonMap, "singletonMap(...)");
         for (Map.Entry entry : mapSingletonMap.entrySet()) {
             int iIntValue = ((Number) entry.getKey()).intValue();
             int iIntValue2 = ((Number) entry.getValue()).intValue();
             if (iIntValue == 0) {
                 arrayList.add(new int[0]);
             } else {
-                arrayList.add(new int[]{iIntValue});
+                arrayList.add(new int[] { iIntValue });
             }
             arrayList2.add(Integer.valueOf(iIntValue2));
         }
@@ -153,7 +153,9 @@ public abstract class emc {
         int i = Build.VERSION.SDK_INT;
         Bitmap bitmap = null;
         if (i == 34) {
-            if (((i == 34 && options.inPreferredConfig == Bitmap.Config.HARDWARE) ? ((Boolean) aye.c.get()).booleanValue() : false) && at(jxVar)) {
+            if (((i == 34 && options.inPreferredConfig == Bitmap.Config.HARDWARE)
+                    ? ((Boolean) aye.c.get()).booleanValue()
+                    : false) && at(jxVar)) {
                 Bitmap.Config config = options.inPreferredConfig;
                 Bitmap.Config config2 = Bitmap.Config.HARDWARE;
                 cmz.k("", config == config2);
@@ -243,7 +245,9 @@ public abstract class emc {
             return false;
         }
         View view2 = (View) weakReference.get();
-        if (view2 == null || !view2.isAttachedToWindow() || (arrayList = (ArrayList) view2.getTag(R.id.tag_unhandled_key_listeners)) == null || (size = arrayList.size() - 1) < 0) {
+        if (view2 == null || !view2.isAttachedToWindow()
+                || (arrayList = (ArrayList) view2.getTag(R.id.tag_unhandled_key_listeners)) == null
+                || (size = arrayList.size() - 1) < 0) {
             return true;
         }
         arrayList.get(size).getClass();
@@ -293,7 +297,8 @@ public abstract class emc {
                 if (eqz.i(decorView, keyEvent)) {
                     return true;
                 }
-                return keyEvent.dispatch(activity, decorView != null ? decorView.getKeyDispatcherState() : null, activity);
+                return keyEvent.dispatch(activity, decorView != null ? decorView.getKeyDispatcherState() : null,
+                        activity);
             }
             if (callback instanceof Dialog) {
                 Dialog dialog = (Dialog) callback;
@@ -327,7 +332,8 @@ public abstract class emc {
                 if (eqz.i(decorView2, keyEvent)) {
                     return true;
                 }
-                return keyEvent.dispatch(dialog, decorView2 != null ? decorView2.getKeyDispatcherState() : null, dialog);
+                return keyEvent.dispatch(dialog, decorView2 != null ? decorView2.getKeyDispatcherState() : null,
+                        dialog);
             }
             if ((view != null && eqz.i(view, keyEvent)) || btlVar.b(keyEvent)) {
                 return true;
@@ -346,7 +352,7 @@ public abstract class emc {
         String strO;
         Map map = zc.b;
         Class cls = zcVar.c;
-        bzo.q(cls, "jClass");
+        throwIfVar1IsNull(cls, "jClass");
         String strConcat = null;
         if (cls.isAnonymousClass() || cls.isLocalClass()) {
             return null;
@@ -401,7 +407,12 @@ public abstract class emc {
 
     public static boolean as(int i, Object obj) {
         if (obj instanceof bgp) {
-            if ((obj instanceof bgq ? ((bgq) obj).getArity() : obj instanceof bfu ? 0 : obj instanceof bgf ? 1 : obj instanceof bgj ? 2 : obj instanceof bgk ? 3 : obj instanceof blv ? 4 : obj instanceof aak ? 7 : -1) == i) {
+            if ((obj instanceof bgq ? ((bgq) obj).getArity()
+                    : obj instanceof bfu ? 0
+                            : obj instanceof bgf ? 1
+                                    : obj instanceof bgj ? 2
+                                            : obj instanceof bgk ? 3
+                                                    : obj instanceof blv ? 4 : obj instanceof aak ? 7 : -1) == i) {
                 return true;
             }
         }
@@ -427,7 +438,8 @@ public abstract class emc {
 
     public static void au(PackageInfo packageInfo, File file) {
         try {
-            DataOutputStream dataOutputStream = new DataOutputStream(new FileOutputStream(new File(file, "profileinstaller_profileWrittenFor_lastUpdateTime.dat")));
+            DataOutputStream dataOutputStream = new DataOutputStream(
+                    new FileOutputStream(new File(file, "profileinstaller_profileWrittenFor_lastUpdateTime.dat")));
             try {
                 dataOutputStream.writeLong(packageInfo.lastUpdateTime);
                 dataOutputStream.close();
@@ -444,7 +456,8 @@ public abstract class emc {
     }
 
     public static TypedArray av(Resources resources, Resources.Theme theme, AttributeSet attributeSet, int[] iArr) {
-        return theme == null ? resources.obtainAttributes(attributeSet, iArr) : theme.obtainStyledAttributes(attributeSet, iArr, 0, 0);
+        return theme == null ? resources.obtainAttributes(attributeSet, iArr)
+                : theme.obtainStyledAttributes(attributeSet, iArr, 0, 0);
     }
 
     public static cdc aw(MappedByteBuffer mappedByteBuffer) throws IOException {
@@ -473,7 +486,8 @@ public abstract class emc {
             i2++;
         }
         if (j != -1) {
-            byteBufferDuplicate.position(byteBufferDuplicate.position() + ((int) (j - ((long) byteBufferDuplicate.position()))));
+            byteBufferDuplicate
+                    .position(byteBufferDuplicate.position() + ((int) (j - ((long) byteBufferDuplicate.position()))));
             byteBufferDuplicate.position(byteBufferDuplicate.position() + 12);
             long j2 = ((long) byteBufferDuplicate.getInt()) & 4294967295L;
             for (int i4 = 0; i4 < j2; i4++) {
@@ -483,7 +497,8 @@ public abstract class emc {
                 if (1164798569 == i5 || 1701669481 == i5) {
                     byteBufferDuplicate.position((int) (j3 + j));
                     cdc cdcVar = new cdc();
-                    int iPosition = byteBufferDuplicate.position() + bjs.f(byteBufferDuplicate, ByteOrder.LITTLE_ENDIAN);
+                    int iPosition = byteBufferDuplicate.position()
+                            + bjs.f(byteBufferDuplicate, ByteOrder.LITTLE_ENDIAN);
                     cdcVar.e = byteBufferDuplicate;
                     cdcVar.b = iPosition;
                     int i6 = iPosition - byteBufferDuplicate.getInt(iPosition);
@@ -506,7 +521,8 @@ public abstract class emc {
                 Bitmap gainmapContents = gainmap.getGainmapContents();
                 if (gainmapContents.getConfig() == config2) {
                     cmz.k("", gainmapContents.getConfig() == config2);
-                    Bitmap bitmapCreateBitmap = Bitmap.createBitmap(gainmapContents.getWidth(), gainmapContents.getHeight(), Bitmap.Config.ARGB_8888);
+                    Bitmap bitmapCreateBitmap = Bitmap.createBitmap(gainmapContents.getWidth(),
+                            gainmapContents.getHeight(), Bitmap.Config.ARGB_8888);
                     Canvas canvas = new Canvas(bitmapCreateBitmap);
                     Paint paint = new Paint();
                     paint.setColorFilter(bhr.a);
@@ -535,10 +551,10 @@ public abstract class emc {
 
     public static final dhy ay(Socket socket) throws IOException {
         Logger logger = cqj.a;
-        bzo.q(socket, "<this>");
+        throwIfVar1IsNull(socket, "<this>");
         dkw dkwVar = new dkw(socket);
         OutputStream outputStream = socket.getOutputStream();
-        bzo.p(outputStream, "getOutputStream(...)");
+        throwIfVar1IsNull(outputStream, "getOutputStream(...)");
         return dkwVar.sink(new lm(outputStream, 1, dkwVar));
     }
 
@@ -549,43 +565,103 @@ public abstract class emc {
 
     public static final dlc ba(Socket socket) throws IOException {
         Logger logger = cqj.a;
-        bzo.q(socket, "<this>");
+        throwIfVar1IsNull(socket, "<this>");
         dkw dkwVar = new dkw(socket);
         InputStream inputStream = socket.getInputStream();
-        bzo.p(inputStream, "getInputStream(...)");
+        throwIfVar1IsNull(inputStream, "getInputStream(...)");
         return dkwVar.source(new ln(inputStream, dkwVar));
     }
 
     public static void bb(Object obj, String str) {
-        ClassCastException classCastException = new ClassCastException((obj == null ? "null" : obj.getClass().getName()) + " cannot be cast to " + str);
-        bzo.ao(classCastException, emc.class.getName());
+        ClassCastException classCastException = new ClassCastException(
+                (obj == null ? "null" : obj.getClass().getName()) + " cannot be cast to " + str);
+        KotlinHelpers.ao(classCastException, emc.class.getName());
         throw classCastException;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:344:0x00dd  */
-    /* JADX WARN: Found duplicated region for block: B:362:0x010f A[Catch: all -> 0x0122, IllegalStateException -> 0x0125, IOException -> 0x0127, TRY_LEAVE, TryCatch #14 {IllegalStateException -> 0x0125, blocks: (B:360:0x0105, B:362:0x010f, B:373:0x0129, B:374:0x012e), top: B:572:0x0105, outer: #1 }] */
-    /* JADX WARN: Found duplicated region for block: B:373:0x0129 A[Catch: all -> 0x0122, IllegalStateException -> 0x0125, IOException -> 0x0127, TRY_ENTER, TryCatch #14 {IllegalStateException -> 0x0125, blocks: (B:360:0x0105, B:362:0x010f, B:373:0x0129, B:374:0x012e), top: B:572:0x0105, outer: #1 }] */
-    /* JADX WARN: Found duplicated region for block: B:397:0x016a A[Catch: all -> 0x017f, TRY_LEAVE, TryCatch #18 {all -> 0x017f, blocks: (B:395:0x015e, B:397:0x016a, B:408:0x0182, B:409:0x0187), top: B:576:0x015e }] */
-    /* JADX WARN: Found duplicated region for block: B:408:0x0182 A[Catch: all -> 0x017f, TRY_ENTER, TryCatch #18 {all -> 0x017f, blocks: (B:395:0x015e, B:397:0x016a, B:408:0x0182, B:409:0x0187), top: B:576:0x015e }] */
+    /* JADX WARN: Found duplicated region for block: B:344:0x00dd */
+    /*
+     * JADX WARN: Found duplicated region for block: B:362:0x010f A[Catch: all ->
+     * 0x0122, IllegalStateException -> 0x0125, IOException -> 0x0127, TRY_LEAVE,
+     * TryCatch #14 {IllegalStateException -> 0x0125, blocks: (B:360:0x0105,
+     * B:362:0x010f, B:373:0x0129, B:374:0x012e), top: B:572:0x0105, outer: #1 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:373:0x0129 A[Catch: all ->
+     * 0x0122, IllegalStateException -> 0x0125, IOException -> 0x0127, TRY_ENTER,
+     * TryCatch #14 {IllegalStateException -> 0x0125, blocks: (B:360:0x0105,
+     * B:362:0x010f, B:373:0x0129, B:374:0x012e), top: B:572:0x0105, outer: #1 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:397:0x016a A[Catch: all ->
+     * 0x017f, TRY_LEAVE, TryCatch #18 {all -> 0x017f, blocks: (B:395:0x015e,
+     * B:397:0x016a, B:408:0x0182, B:409:0x0187), top: B:576:0x015e }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:408:0x0182 A[Catch: all ->
+     * 0x017f, TRY_ENTER, TryCatch #18 {all -> 0x017f, blocks: (B:395:0x015e,
+     * B:397:0x016a, B:408:0x0182, B:409:0x0187), top: B:576:0x015e }]
+     */
     /* JADX WARN: Found duplicated region for block: B:415:0x0191 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:416:0x0193 A[Catch: IllegalStateException -> 0x0179, IOException -> 0x017b, FileNotFoundException -> 0x017d, TRY_LEAVE, TryCatch #34 {FileNotFoundException -> 0x017d, IOException -> 0x017b, IllegalStateException -> 0x0179, blocks: (B:393:0x0156, B:398:0x0174, B:416:0x0193, B:414:0x0190, B:413:0x018d), top: B:600:0x0156 }] */
-    /* JADX WARN: Found duplicated region for block: B:423:0x01a9  */
-    /* JADX WARN: Found duplicated region for block: B:433:0x01cc A[Catch: all -> 0x01da, TRY_LEAVE, TryCatch #34 {all -> 0x01da, blocks: (B:431:0x01c0, B:433:0x01cc, B:442:0x01dd), top: B:590:0x01c0 }] */
-    /* JADX WARN: Found duplicated region for block: B:442:0x01dd A[Catch: all -> 0x01da, TRY_ENTER, TRY_LEAVE, TryCatch #34 {all -> 0x01da, blocks: (B:431:0x01c0, B:433:0x01cc, B:442:0x01dd), top: B:590:0x01c0 }] */
-    /* JADX WARN: Found duplicated region for block: B:453:0x01fa  */
-    /* JADX WARN: Found duplicated region for block: B:457:0x0204  */
-    /* JADX WARN: Found duplicated region for block: B:458:0x0208  */
-    /* JADX WARN: Found duplicated region for block: B:467:0x0228 A[Catch: all -> 0x0266, TryCatch #6 {all -> 0x0266, blocks: (B:465:0x0222, B:467:0x0228, B:468:0x022c, B:470:0x0232), top: B:560:0x0222 }] */
-    /* JADX WARN: Found duplicated region for block: B:470:0x0232 A[Catch: all -> 0x0266, TRY_LEAVE, TryCatch #6 {all -> 0x0266, blocks: (B:465:0x0222, B:467:0x0228, B:468:0x022c, B:470:0x0232), top: B:560:0x0222 }] */
-    /* JADX WARN: Found duplicated region for block: B:536:0x02b7  */
-    /* JADX WARN: Found duplicated region for block: B:540:0x02c1  */
-    /* JADX WARN: Found duplicated region for block: B:547:0x02d1  */
-    /* JADX WARN: Found duplicated region for block: B:560:0x0222 A[EXC_TOP_SPLITTER, SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:572:0x0105 A[EXC_TOP_SPLITTER, SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:576:0x015e A[EXC_TOP_SPLITTER, SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:597:0x020c A[EXC_TOP_SPLITTER, SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:599:0x01bb A[EXC_TOP_SPLITTER, SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:601:0x0237 A[EDGE_INSN: B:601:0x0237->B:472:0x0237 BREAK  A[LOOP:0: B:468:0x022c->B:602:?], SYNTHETIC] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:416:0x0193 A[Catch:
+     * IllegalStateException -> 0x0179, IOException -> 0x017b, FileNotFoundException
+     * -> 0x017d, TRY_LEAVE, TryCatch #34 {FileNotFoundException -> 0x017d,
+     * IOException -> 0x017b, IllegalStateException -> 0x0179, blocks:
+     * (B:393:0x0156, B:398:0x0174, B:416:0x0193, B:414:0x0190, B:413:0x018d), top:
+     * B:600:0x0156 }]
+     */
+    /* JADX WARN: Found duplicated region for block: B:423:0x01a9 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:433:0x01cc A[Catch: all ->
+     * 0x01da, TRY_LEAVE, TryCatch #34 {all -> 0x01da, blocks: (B:431:0x01c0,
+     * B:433:0x01cc, B:442:0x01dd), top: B:590:0x01c0 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:442:0x01dd A[Catch: all ->
+     * 0x01da, TRY_ENTER, TRY_LEAVE, TryCatch #34 {all -> 0x01da, blocks:
+     * (B:431:0x01c0, B:433:0x01cc, B:442:0x01dd), top: B:590:0x01c0 }]
+     */
+    /* JADX WARN: Found duplicated region for block: B:453:0x01fa */
+    /* JADX WARN: Found duplicated region for block: B:457:0x0204 */
+    /* JADX WARN: Found duplicated region for block: B:458:0x0208 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:467:0x0228 A[Catch: all ->
+     * 0x0266, TryCatch #6 {all -> 0x0266, blocks: (B:465:0x0222, B:467:0x0228,
+     * B:468:0x022c, B:470:0x0232), top: B:560:0x0222 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:470:0x0232 A[Catch: all ->
+     * 0x0266, TRY_LEAVE, TryCatch #6 {all -> 0x0266, blocks: (B:465:0x0222,
+     * B:467:0x0228, B:468:0x022c, B:470:0x0232), top: B:560:0x0222 }]
+     */
+    /* JADX WARN: Found duplicated region for block: B:536:0x02b7 */
+    /* JADX WARN: Found duplicated region for block: B:540:0x02c1 */
+    /* JADX WARN: Found duplicated region for block: B:547:0x02d1 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:560:0x0222
+     * A[EXC_TOP_SPLITTER, SYNTHETIC]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:572:0x0105
+     * A[EXC_TOP_SPLITTER, SYNTHETIC]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:576:0x015e
+     * A[EXC_TOP_SPLITTER, SYNTHETIC]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:597:0x020c
+     * A[EXC_TOP_SPLITTER, SYNTHETIC]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:599:0x01bb
+     * A[EXC_TOP_SPLITTER, SYNTHETIC]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:601:0x0237 A[EDGE_INSN:
+     * B:601:0x0237->B:472:0x0237 BREAK A[LOOP:0: B:468:0x022c->B:602:?], SYNTHETIC]
+     */
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Type inference failed for: r7v10 */
     /* JADX WARN: Type inference failed for: r7v11 */
@@ -611,7 +687,10 @@ public abstract class emc {
     /* JADX WARN: Type inference failed for: r7v47 */
     /* JADX WARN: Type inference failed for: r7v48 */
     /* JADX WARN: Type inference failed for: r7v49 */
-    /* JADX WARN: Type inference failed for: r7v5, types: [java.io.FileInputStream, java.io.InputStream] */
+    /*
+     * JADX WARN: Type inference failed for: r7v5, types: [java.io.FileInputStream,
+     * java.io.InputStream]
+     */
     /* JADX WARN: Type inference failed for: r7v50 */
     /* JADX WARN: Type inference failed for: r7v51 */
     /* JADX WARN: Type inference failed for: r7v52 */
@@ -627,16 +706,28 @@ public abstract class emc {
     /* JADX WARN: Type inference failed for: r9v13 */
     /* JADX WARN: Type inference failed for: r9v14, types: [boolean] */
     /* JADX WARN: Type inference failed for: r9v15 */
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.java:210)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:196)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:180)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:201)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.java:347)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(TryCatchBlockAttr.java:356)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:202)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.
+     * java:210)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:196)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:180)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:
+     * 201)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.
+     * java:347)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(
+     * TryCatchBlockAttr.java:356)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+     * MarkFinallyVisitor.java:202)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:119)
      */
     public static void bc(Context context, Executor executor, cvv cvvVar, boolean z2) {
         boolean z3;
@@ -1179,7 +1270,7 @@ public abstract class emc {
         switch (this.ab) {
             case 13:
                 String strD = dal.b(getClass()).d();
-                bzo.n(strD);
+                throwIfVar1IsNull(strD);
                 return strD;
             default:
                 return super.toString();

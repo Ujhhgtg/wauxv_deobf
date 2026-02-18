@@ -10,7 +10,7 @@ import java.util.LinkedHashMap;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class cf extends doo {
+public final class cf extends BaseHook {
     public static final cf a;
     public static final dov b;
     public static final dov c;
@@ -38,7 +38,8 @@ public final class cf extends doo {
         m = true;
     }
 
-    public static void n(cf cfVar, final blr blrVar, int i2, final int i3, final int i4, float f, String str, boolean z, File file, int i5) throws cth {
+    public static void n(cf cfVar, final blr blrVar, int i2, final int i3, final int i4, float f, String str, boolean z,
+            File file, int i5) throws cth {
         Class cls;
         blu bluVar = blrVar.f;
         boolean z2 = (i5 & 64) != 0;
@@ -46,7 +47,8 @@ public final class cf extends doo {
         int i7 = (i5 & 256) != 0 ? 0 : 1;
         File file2 = (i5 & 512) != 0 ? null : file;
         cfVar.getClass();
-        blq blqVarD = awp.d(bluVar, blrVar.a, blrVar.b, blr.g(blrVar, 0, 0, new bgf() { // from class: me.hd.wauxv.obf.bo
+        blq blqVarD = awp.d(bluVar, blrVar.a, blrVar.b, blr.g(blrVar, 0, 0, new bgf() { // from class:
+                                                                                        // me.hd.wauxv.obf.bo
             @Override // me.hd.wauxv.obf.bgf
             public final Object invoke(Object obj) {
                 RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) obj;
@@ -77,7 +79,8 @@ public final class cf extends doo {
         textView.setText(str);
         textView.setVisibility(z ? 0 : 8);
         if (z2) {
-            textView.setTextColor(Color.parseColor(cnb.z(cnh.aa(textView.getContext()) ? -432924113500970L : -432898343697194L)));
+            textView.setTextColor(
+                    Color.parseColor(cnb.z(cnh.aa(textView.getContext()) ? -432924113500970L : -432898343697194L)));
         }
         textView.setMaxLines(i6);
         textView.setTypeface(textView.getTypeface(), i7);
@@ -85,7 +88,7 @@ public final class cf extends doo {
             textView.setTypeface(Typeface.createFromFile(file2));
         }
         if (linkedHashMap.size() != size) {
-            throw new cth(bjs.o("Performers are not allowed to appear in ", name, " DSL creation process."));
+            throw new cth(concat("Performers are not allowed to appear in ", name, " DSL creation process."));
         }
         Class<TextView> clsBf3 = cnf.bf(dal.b(cls));
         blr.i(blrVar, null, clsBf3 != null ? clsBf3 : TextView.class);
@@ -95,7 +98,7 @@ public final class cf extends doo {
     @Override // me.hd.wauxv.obf.bmf
     public final void e() {
         int i2 = bte.a;
-        cdk cdkVar = (cdk) dkz.n(new Object[]{dal.b(View.class)}, 1, yg.s(-431025737956138L).t());
+        cdk cdkVar = (cdk) dkz.n(new Object[] { dal.b(View.class) }, 1, yg.s(-431025737956138L).t());
         exg exgVar = exg.a;
         cf cfVar = a;
         aki akiVarAd = cfVar.ad(cdkVar, exgVar);
@@ -103,27 +106,27 @@ public final class cf extends doo {
         akiVarAd.o();
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String f() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getName() {
         return j;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String g() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getCategory() {
         return i;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String o() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getDescription() {
         return k;
     }
 
-    @Override // me.hd.wauxv.obf.doo
+    @Override // me.hd.wauxv.obf.BaseHook
     public final bgf p() {
         return l;
     }
 
-    @Override // me.hd.wauxv.obf.doo
+    @Override // me.hd.wauxv.obf.BaseHook
     public final boolean q() {
         return m;
     }

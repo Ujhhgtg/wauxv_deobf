@@ -14,7 +14,8 @@ public final class dut {
     public final Integer h;
     public final String i;
 
-    public /* synthetic */ dut(int i, String str, String str2, Integer num, Integer num2, String str3, Integer num3, String str4, Integer num4, String str5) {
+    public /* synthetic */ dut(int i, String str, String str2, Integer num, Integer num2, String str3, Integer num3,
+            String str4, Integer num4, String str5) {
         if (511 != (i & 511)) {
             bht.ah(i, 511, dur.b.getDescriptor());
             throw null;
@@ -38,7 +39,11 @@ public final class dut {
             return false;
         }
         dut dutVar = (dut) obj;
-        return bzo.f(this.a, dutVar.a) && bzo.f(this.b, dutVar.b) && bzo.f(this.c, dutVar.c) && bzo.f(this.d, dutVar.d) && bzo.f(this.e, dutVar.e) && bzo.f(this.f, dutVar.f) && bzo.f(this.g, dutVar.g) && bzo.f(this.h, dutVar.h) && bzo.f(this.i, dutVar.i);
+        return nullSafeIsEqual(this.a, dutVar.a) && nullSafeIsEqual(this.b, dutVar.b)
+                && nullSafeIsEqual(this.c, dutVar.c) && nullSafeIsEqual(this.d, dutVar.d)
+                && nullSafeIsEqual(this.e, dutVar.e) && nullSafeIsEqual(this.f, dutVar.f)
+                && nullSafeIsEqual(this.g, dutVar.g)
+                && nullSafeIsEqual(this.h, dutVar.h) && nullSafeIsEqual(this.i, dutVar.i);
     }
 
     public final int hashCode() {
@@ -73,6 +78,6 @@ public final class dut {
         bjs.w(sb, this.f, -328144091347754L);
         yg.u(sb, this.g, -328092551740202L);
         bjs.w(sb, this.h, -328062486969130L);
-        return bjs.q(sb, this.i, ')');
+        return concat(sb, this.i, ')');
     }
 }

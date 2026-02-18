@@ -15,14 +15,14 @@ public class sj implements Serializable, Comparable {
     public transient String d;
 
     public sj(byte[] bArr) {
-        bzo.q(bArr, "data");
+        throwIfVar1IsNull(bArr, "data");
         this.b = bArr;
     }
 
     @Override // java.lang.Comparable
     public final int compareTo(Object obj) {
         sj sjVar = (sj) obj;
-        bzo.q(sjVar, "other");
+        throwIfVar1IsNull(sjVar, "other");
         int iG = g();
         int iG2 = sjVar.g();
         int iMin = Math.min(iG, iG2);
@@ -42,8 +42,8 @@ public class sj implements Serializable, Comparable {
     public String e() {
         byte[] bArr = a.a;
         byte[] bArr2 = this.b;
-        bzo.q(bArr2, "<this>");
-        bzo.q(bArr, "map");
+        throwIfVar1IsNull(bArr2, "<this>");
+        throwIfVar1IsNull(bArr, "map");
         byte[] bArr3 = new byte[((bArr2.length + 2) / 3) * 4];
         int length = bArr2.length - (bArr2.length % 3);
         int i = 0;
@@ -99,7 +99,7 @@ public class sj implements Serializable, Comparable {
         MessageDigest messageDigest = MessageDigest.getInstance(str);
         messageDigest.update(this.b, 0, g());
         byte[] bArrDigest = messageDigest.digest();
-        bzo.n(bArrDigest);
+        throwIfVar1IsNull(bArrDigest);
         return new sj(bArrDigest);
     }
 
@@ -140,12 +140,12 @@ public class sj implements Serializable, Comparable {
     }
 
     public boolean k(sj sjVar, int i) {
-        bzo.q(sjVar, "other");
+        throwIfVar1IsNull(sjVar, "other");
         return sjVar.l(this.b, 0, 0, i);
     }
 
     public boolean l(byte[] bArr, int i, int i2, int i3) {
-        bzo.q(bArr, "other");
+        throwIfVar1IsNull(bArr, "other");
         if (i < 0) {
             return false;
         }
@@ -163,7 +163,7 @@ public class sj implements Serializable, Comparable {
             byte b = bArr[i];
             if (b >= 65 && b <= 90) {
                 byte[] bArrCopyOf = Arrays.copyOf(bArr, bArr.length);
-                bzo.p(bArrCopyOf, "copyOf(this, size)");
+                throwIfVar1IsNull(bArrCopyOf, "copyOf(this, size)");
                 bArrCopyOf[i] = (byte) (b + 32);
                 for (int i2 = i + 1; i2 < bArrCopyOf.length; i2++) {
                     byte b2 = bArrCopyOf[i2];
@@ -183,7 +183,7 @@ public class sj implements Serializable, Comparable {
             return str;
         }
         byte[] bArrI = i();
-        bzo.q(bArrI, "<this>");
+        throwIfVar1IsNull(bArrI, "<this>");
         String str2 = new String(bArrI, uj.a);
         this.d = str2;
         return str2;
@@ -193,7 +193,10 @@ public class sj implements Serializable, Comparable {
         rhVar.write(this.b, 0, i);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:179:0x01b6 A[EDGE_INSN: B:179:0x01b6->B:180:0x01b7 BREAK  A[LOOP:0: B:7:0x000e->B:241:0x000e]] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:179:0x01b6 A[EDGE_INSN:
+     * B:179:0x01b6->B:180:0x01b7 BREAK A[LOOP:0: B:7:0x000e->B:241:0x000e]]
+     */
     public String toString() {
         byte b;
         int i;
@@ -257,7 +260,8 @@ public class sj implements Serializable, Comparable {
                                     if (i4 == 64) {
                                         break;
                                     }
-                                    if ((i6 != 10 && i6 != 13 && ((i6 >= 0 && i6 < 32) || (127 <= i6 && i6 < 160))) || i6 == 65533) {
+                                    if ((i6 != 10 && i6 != 13 && ((i6 >= 0 && i6 < 32) || (127 <= i6 && i6 < 160)))
+                                            || i6 == 65533) {
                                         i3 = -1;
                                         break;
                                     }
@@ -317,7 +321,8 @@ public class sj implements Serializable, Comparable {
                                 if (i4 == 64) {
                                     break;
                                 }
-                                if ((i8 != 10 && i8 != 13 && ((i8 >= 0 && i8 < 32) || (127 <= i8 && i8 < 160))) || i8 == 65533) {
+                                if ((i8 != 10 && i8 != 13 && ((i8 >= 0 && i8 < 32) || (127 <= i8 && i8 < 160)))
+                                        || i8 == 65533) {
                                     i3 = -1;
                                     break;
                                 }
@@ -356,7 +361,8 @@ public class sj implements Serializable, Comparable {
                             if (i4 == 64) {
                                 break;
                             }
-                            if ((i10 != 10 && i10 != 13 && ((i10 >= 0 && i10 < 32) || (127 <= i10 && i10 < 160))) || i10 == 65533) {
+                            if ((i10 != 10 && i10 != 13 && ((i10 >= 0 && i10 < 32) || (127 <= i10 && i10 < 160)))
+                                    || i10 == 65533) {
                                 i3 = -1;
                                 break;
                             }
@@ -407,7 +413,7 @@ public class sj implements Serializable, Comparable {
         if (i3 != -1) {
             String strN = n();
             String strSubstring = strN.substring(0, i3);
-            bzo.p(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
+            throwIfVar1IsNull(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
             String strBo = dnr.bo(dnr.bo(dnr.bo(strSubstring, "\\", "\\\\"), "\n", "\\n"), "\r", "\\r");
             if (i3 >= strN.length()) {
                 return dkz.o(']', "[text=", strBo);
@@ -421,7 +427,8 @@ public class sj implements Serializable, Comparable {
         sb.append(bArr.length);
         sb.append(" hex=");
         if (64 > bArr.length) {
-            throw new IllegalArgumentException(dkz.v(new StringBuilder("endIndex > length("), bArr.length, ')').toString());
+            throw new IllegalArgumentException(
+                    dkz.v(new StringBuilder("endIndex > length("), bArr.length, ')').toString());
         }
         sb.append((64 == bArr.length ? this : new sj(la._ap(0, 64, bArr))).h());
         sb.append("…]");

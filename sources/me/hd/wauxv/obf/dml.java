@@ -5,7 +5,8 @@ import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class dml extends emn implements chy {
-    public static final /* synthetic */ AtomicReferenceFieldUpdater a = AtomicReferenceFieldUpdater.newUpdater(dml.class, Object.class, "_state$volatile");
+    public static final /* synthetic */ AtomicReferenceFieldUpdater a = AtomicReferenceFieldUpdater
+            .newUpdater(dml.class, Object.class, "_state$volatile");
     private volatile /* synthetic */ Object _state$volatile;
     public int b;
 
@@ -29,7 +30,7 @@ public final class dml extends emn implements chy {
         }
         synchronized (this) {
             AtomicReferenceFieldUpdater atomicReferenceFieldUpdater = a;
-            if (bzo.f(atomicReferenceFieldUpdater.get(this), obj)) {
+            if (nullSafeIsEqual(atomicReferenceFieldUpdater.get(this), obj)) {
                 return;
             }
             atomicReferenceFieldUpdater.set(this, obj);

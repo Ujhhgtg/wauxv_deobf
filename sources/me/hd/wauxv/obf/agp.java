@@ -7,11 +7,15 @@ import org.luckypray.dexkit.DexKitBridge;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class agp extends bws implements bng {
+public final class agp extends bws implements IRequiresDexLocate {
     public static final agp a = new agp();
 
     public static void b() throws IOException {
-        Cursor cursorAc = arj.ac("SELECT username FROM rconversation WHERE unReadCount>0 OR unReadMuteCount>0" /* cnb.z(-372266290379562L) */);
+        Cursor cursorAc = arj.ac("SELECT username FROM rconversation WHERE unReadCount>0 OR unReadMuteCount>0" /*
+                                                                                                                * cnb.z(
+                                                                                                                * -
+                                                                                                                * 372266290379562L)
+                                                                                                                */);
         while (cursorAc.moveToNext()) {
             try {
                 String string = cursorAc.getString(0);
@@ -41,8 +45,9 @@ public final class agp extends bws implements bng {
         Class<?> declaringClass = emn.bb(agb.a).getDeclaringClass();
         zc zcVarB = dal.b(String.class);
         Class cls = Boolean.TYPE;
-        Object objJ = ((cdk) dkz.n(new Object[]{declaringClass, zcVarB, dal.b(cls), dal.b(cls)}, 4, cdeVarT)).j(obj, str, false, true);
-        bzo.n(objJ);
+        Object objJ = ((cdk) dkz.n(new Object[] { declaringClass, zcVarB, dal.b(cls), dal.b(cls) }, 4, cdeVarT)).j(obj,
+                str, false, true);
+        throwIfVar1IsNull(objJ);
         ((Number) objJ).intValue();
     }
 
@@ -62,7 +67,7 @@ public final class agp extends bws implements bng {
     }
 
     @Override // me.hd.wauxv.obf.bng
-    public final void h(DexKitBridge dexKitBridge) {
+    public final void locateDex(DexKitBridge dexKitBridge) {
         emn.aj(agl.a, dexKitBridge, new age(8));
         emn.aj(ago.a, dexKitBridge, new age(9));
         emn.aj(agn.a, dexKitBridge, new age(10));

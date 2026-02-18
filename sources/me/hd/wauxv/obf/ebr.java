@@ -19,7 +19,7 @@ public final class ebr {
         if (this == obj) {
             return true;
         }
-        return (obj instanceof ebr) && bzo.f(this.a, ((ebr) obj).a);
+        return (obj instanceof ebr) && nullSafeIsEqual(this.a, ((ebr) obj).a);
     }
 
     public final int hashCode() {
@@ -33,6 +33,6 @@ public final class ebr {
     public final String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("ni1Proto(audience_no_privilege=" /* cnb.z(-259235636050730L) */);
-        return bjs.p(sb, this.a, ')');
+        return concat(sb, this.a, ')');
     }
 }

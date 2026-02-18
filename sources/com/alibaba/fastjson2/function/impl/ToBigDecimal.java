@@ -20,7 +20,8 @@ public class ToBigDecimal implements Function {
         if (obj instanceof Boolean) {
             return ((Boolean) obj).booleanValue() ? BigDecimal.ONE : BigDecimal.ZERO;
         }
-        if ((obj instanceof Byte) || (obj instanceof Short) || (obj instanceof Integer) || (obj instanceof Long) || (obj instanceof AtomicInteger) || (obj instanceof AtomicLong)) {
+        if ((obj instanceof Byte) || (obj instanceof Short) || (obj instanceof Integer) || (obj instanceof Long)
+                || (obj instanceof AtomicInteger) || (obj instanceof AtomicLong)) {
             return BigDecimal.valueOf(((Number) obj).longValue());
         }
         if ((obj instanceof Float) || (obj instanceof Double)) {
@@ -32,6 +33,6 @@ public class ToBigDecimal implements Function {
         if (obj instanceof String) {
             return new BigDecimal((String) obj);
         }
-        throw new JSONException(bjs.m(obj, new StringBuilder("can not cast to BigDecimal ")));
+        throw new JSONException(concatVar1GetClass(obj, new StringBuilder("can not cast to BigDecimal ")));
     }
 }

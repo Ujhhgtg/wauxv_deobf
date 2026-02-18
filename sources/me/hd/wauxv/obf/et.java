@@ -10,8 +10,8 @@ public class et implements ahp, Closeable {
     public final ahh b;
 
     public et(bug bugVar, ahj ahjVar) {
-        bzo.q(bugVar, "lifeEvent");
-        bzo.q(ahjVar, "dispatcher");
+        throwIfVar1IsNull(bugVar, "lifeEvent");
+        throwIfVar1IsNull(ahjVar, "dispatcher");
         doh.b(new dx(bugVar, this));
         es esVar = new es(this);
         this.a = esVar;
@@ -23,7 +23,8 @@ public class et implements ahp, Closeable {
         if (brfVar != null) {
             brfVar.q(null);
         } else {
-            throw new IllegalStateException(("Scope cannot be cancelled because it does not have a job: " + this).toString());
+            throw new IllegalStateException(
+                    ("Scope cannot be cancelled because it does not have a job: " + this).toString());
         }
     }
 
@@ -33,7 +34,7 @@ public class et implements ahp, Closeable {
     }
 
     public void d(Throwable th) {
-        bzo.q(th, "e");
+        throwIfVar1IsNull(th, "e");
         f(th);
     }
 
@@ -43,7 +44,7 @@ public class et implements ahp, Closeable {
     }
 
     public void f(Throwable th) {
-        bzo.q(th, "e");
+        throwIfVar1IsNull(th, "e");
         cnf.ay(th);
     }
 }

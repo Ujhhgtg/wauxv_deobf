@@ -20,8 +20,8 @@ public final class bvy extends ad implements RandomAccess, Serializable {
     public final bvz g;
 
     public bvy(Object[] objArr, int i, int i2, bvy bvyVar, bvz bvzVar) {
-        bzo.q(objArr, "backing");
-        bzo.q(bvzVar, "root");
+        throwIfVar1IsNull(objArr, "backing");
+        throwIfVar1IsNull(bvzVar, "root");
         this.c = objArr;
         this.d = i;
         this.e = i2;
@@ -36,7 +36,8 @@ public final class bvy extends ad implements RandomAccess, Serializable {
         return this.e;
     }
 
-    @Override // java.util.AbstractList, java.util.AbstractCollection, java.util.Collection, java.util.List
+    @Override // java.util.AbstractList, java.util.AbstractCollection, java.util.Collection,
+              // java.util.List
     public final boolean add(Object obj) {
         l();
         k();
@@ -46,7 +47,7 @@ public final class bvy extends ad implements RandomAccess, Serializable {
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
     public final boolean addAll(Collection collection) {
-        bzo.q(collection, "elements");
+        throwIfVar1IsNull(collection, "elements");
         l();
         k();
         int size = collection.size();
@@ -65,7 +66,8 @@ public final class bvy extends ad implements RandomAccess, Serializable {
         return m(this.d + i);
     }
 
-    @Override // java.util.AbstractList, java.util.AbstractCollection, java.util.Collection, java.util.List
+    @Override // java.util.AbstractList, java.util.AbstractCollection, java.util.Collection,
+              // java.util.List
     public final void clear() {
         l();
         k();
@@ -84,7 +86,7 @@ public final class bvy extends ad implements RandomAccess, Serializable {
             int i = this.e;
             if (i == list.size()) {
                 for (int i2 = 0; i2 < i; i2++) {
-                    if (bzo.f(objArr[this.d + i2], list.get(i2))) {
+                    if (nullSafeIsEqual(objArr[this.d + i2], list.get(i2))) {
                     }
                 }
                 return true;
@@ -134,7 +136,7 @@ public final class bvy extends ad implements RandomAccess, Serializable {
     public final int indexOf(Object obj) {
         k();
         for (int i = 0; i < this.e; i++) {
-            if (bzo.f(this.c[this.d + i], obj)) {
+            if (nullSafeIsEqual(this.c[this.d + i], obj)) {
                 return i;
             }
         }
@@ -147,7 +149,8 @@ public final class bvy extends ad implements RandomAccess, Serializable {
         return this.e == 0;
     }
 
-    @Override // java.util.AbstractList, java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.List
+    @Override // java.util.AbstractList, java.util.AbstractCollection, java.util.Collection,
+              // java.lang.Iterable, java.util.List
     public final Iterator iterator() {
         return listIterator(0);
     }
@@ -182,7 +185,7 @@ public final class bvy extends ad implements RandomAccess, Serializable {
     public final int lastIndexOf(Object obj) {
         k();
         for (int i = this.e - 1; i >= 0; i--) {
-            if (bzo.f(this.c[this.d + i], obj)) {
+            if (nullSafeIsEqual(this.c[this.d + i], obj)) {
                 return i;
             }
         }
@@ -251,7 +254,7 @@ public final class bvy extends ad implements RandomAccess, Serializable {
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
     public final boolean removeAll(Collection collection) {
-        bzo.q(collection, "elements");
+        throwIfVar1IsNull(collection, "elements");
         l();
         k();
         return o(this.d, this.e, collection, false) > 0;
@@ -259,7 +262,7 @@ public final class bvy extends ad implements RandomAccess, Serializable {
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
     public final boolean retainAll(Collection collection) {
-        bzo.q(collection, "elements");
+        throwIfVar1IsNull(collection, "elements");
         l();
         k();
         return o(this.d, this.e, collection, true) > 0;
@@ -288,14 +291,14 @@ public final class bvy extends ad implements RandomAccess, Serializable {
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
     public final Object[] toArray(Object[] objArr) {
-        bzo.q(objArr, "array");
+        throwIfVar1IsNull(objArr, "array");
         k();
         int length = objArr.length;
         int i = this.e;
         int i2 = this.d;
         if (length < i) {
             Object[] objArrCopyOfRange = Arrays.copyOfRange(this.c, i2, i + i2, objArr.getClass());
-            bzo.p(objArrCopyOfRange, "copyOfRange(...)");
+            throwIfVar1IsNull(objArrCopyOfRange, "copyOfRange(...)");
             return objArrCopyOfRange;
         }
         la._aj(0, i2, this.c, i + i2, objArr);
@@ -336,7 +339,7 @@ public final class bvy extends ad implements RandomAccess, Serializable {
 
     @Override // java.util.AbstractList, java.util.List
     public final boolean addAll(int i, Collection collection) {
-        bzo.q(collection, "elements");
+        throwIfVar1IsNull(collection, "elements");
         l();
         k();
         int i2 = this.e;

@@ -9,14 +9,17 @@ public final class co extends bcy {
     public final /* synthetic */ int a = 0;
     public final /* synthetic */ View b;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'super' call moved to the top of the method (can break code
+     * semantics)
+     */
     public co(ActionMenuItemView actionMenuItemView) {
         super(actionMenuItemView);
         this.b = actionMenuItemView;
     }
 
     @Override // me.hd.wauxv.obf.bcy
-    public final dho c() {
+    public final dho callOriginalMethod() {
         cq cqVar;
         switch (this.a) {
             case 0:
@@ -35,7 +38,7 @@ public final class co extends bcy {
     }
 
     @Override // me.hd.wauxv.obf.bcy
-    public final boolean d() {
+    public final boolean getArgs() {
         dho dhoVarC;
         switch (this.a) {
             case 0:
@@ -49,7 +52,7 @@ public final class co extends bcy {
     }
 
     @Override // me.hd.wauxv.obf.bcy
-    public boolean e() {
+    public boolean getThisObject() {
         switch (this.a) {
             case 1:
                 cw cwVar = ((ct) this.b).a;
@@ -63,7 +66,10 @@ public final class co extends bcy {
         }
     }
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'super' call moved to the top of the method (can break code
+     * semantics)
+     */
     public co(ct ctVar, ct ctVar2) {
         super(ctVar2);
         this.b = ctVar;

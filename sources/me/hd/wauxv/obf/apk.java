@@ -8,14 +8,14 @@ public final class apk extends cvl {
     @Override // me.hd.wauxv.obf.s
     public final int e(Object obj) {
         double[] dArr = (double[]) obj;
-        bzo.q(dArr, "<this>");
+        throwIfVar1IsNull(dArr, "<this>");
         return dArr.length;
     }
 
     @Override // me.hd.wauxv.obf.aax, me.hd.wauxv.obf.s
     public final void g(acm acmVar, int i, Object obj) {
         apj apjVar = (apj) obj;
-        bzo.q(apjVar, "builder");
+        throwIfVar1IsNull(apjVar, "builder");
         double d_bq = acmVar._bq(this.o, i);
         apjVar.d(apjVar.e() + 1);
         double[] dArr = apjVar.a;
@@ -27,7 +27,7 @@ public final class apk extends cvl {
     @Override // me.hd.wauxv.obf.s
     public final Object h(Object obj) {
         double[] dArr = (double[]) obj;
-        bzo.q(dArr, "<this>");
+        throwIfVar1IsNull(dArr, "<this>");
         apj apjVar = new apj();
         apjVar.a = dArr;
         apjVar.b = dArr.length;
@@ -43,8 +43,8 @@ public final class apk extends cvl {
     @Override // me.hd.wauxv.obf.cvl
     public final void m(acn acnVar, Object obj, int i) {
         double[] dArr = (double[]) obj;
-        bzo.q(acnVar, "encoder");
-        bzo.q(dArr, "content");
+        throwIfVar1IsNull(acnVar, "encoder");
+        throwIfVar1IsNull(dArr, "content");
         for (int i2 = 0; i2 < i; i2++) {
             acnVar.j(this.o, i2, dArr[i2]);
         }

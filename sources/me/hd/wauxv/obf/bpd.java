@@ -30,7 +30,7 @@ public final class bpd implements dlc {
 
     public final long e(rh rhVar, long j) throws IOException {
         Inflater inflater = this.b;
-        bzo.q(rhVar, "sink");
+        throwIfVar1IsNull(rhVar, "sink");
         if (j < 0) {
             throw new IllegalArgumentException(dts.b(j, "byteCount < 0: ").toString());
         }
@@ -45,7 +45,7 @@ public final class bpd implements dlc {
                 cyl cylVar = this.a;
                 if (zNeedsInput && !cylVar.i()) {
                     dfj dfjVar = cylVar.b.a;
-                    bzo.n(dfjVar);
+                    throwIfVar1IsNull(dfjVar);
                     int i = dfjVar.c;
                     int i2 = dfjVar.b;
                     int i3 = i - i2;
@@ -78,7 +78,7 @@ public final class bpd implements dlc {
 
     @Override // me.hd.wauxv.obf.dlc
     public final long read(rh rhVar, long j) throws IOException {
-        bzo.q(rhVar, "sink");
+        throwIfVar1IsNull(rhVar, "sink");
         do {
             long jE = e(rhVar, j);
             if (jE > 0) {

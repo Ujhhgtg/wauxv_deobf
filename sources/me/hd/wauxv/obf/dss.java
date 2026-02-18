@@ -6,7 +6,8 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class dss {
     public static final dsr Companion = new dsr();
-    public static final btt[] a = {null, null, null, null, ewz.am(btx.a, new cfh(27)), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null};
+    public static final btt[] a = { null, null, null, null, ewz.am(btx.a, new cfh(27)), null, null, null, null, null,
+            null, null, null, null, null, null, null, null, null, null, null };
     public final String b;
     public final Integer c;
     public final String d;
@@ -29,7 +30,9 @@ public final class dss {
     public final dvo u;
     public final eaz v;
 
-    public /* synthetic */ dss(int i, String str, Integer num, String str2, String str3, List list, Integer num2, String str4, dty dtyVar, dtb dtbVar, dvo dvoVar, dzj dzjVar, egc egcVar, duh duhVar, edz edzVar, Integer num3, dvo dvoVar2, eiq eiqVar, duz duzVar, ebo eboVar, dvo dvoVar3, eaz eazVar) {
+    public /* synthetic */ dss(int i, String str, Integer num, String str2, String str3, List list, Integer num2,
+            String str4, dty dtyVar, dtb dtbVar, dvo dvoVar, dzj dzjVar, egc egcVar, duh duhVar, edz edzVar,
+            Integer num3, dvo dvoVar2, eiq eiqVar, duz duzVar, ebo eboVar, dvo dvoVar3, eaz eazVar) {
         if (2097151 != (i & 2097151)) {
             bht.ah(i, 2097151, dsq.b.getDescriptor());
             throw null;
@@ -65,7 +68,17 @@ public final class dss {
             return false;
         }
         dss dssVar = (dss) obj;
-        return bzo.f(this.b, dssVar.b) && bzo.f(this.c, dssVar.c) && bzo.f(this.d, dssVar.d) && bzo.f(this.e, dssVar.e) && bzo.f(this.f, dssVar.f) && bzo.f(this.g, dssVar.g) && bzo.f(this.h, dssVar.h) && bzo.f(this.i, dssVar.i) && bzo.f(this.j, dssVar.j) && bzo.f(this.k, dssVar.k) && bzo.f(this.l, dssVar.l) && bzo.f(this.m, dssVar.m) && bzo.f(this.n, dssVar.n) && bzo.f(this.o, dssVar.o) && bzo.f(this.p, dssVar.p) && bzo.f(this.q, dssVar.q) && bzo.f(this.r, dssVar.r) && bzo.f(this.s, dssVar.s) && bzo.f(this.t, dssVar.t) && bzo.f(this.u, dssVar.u) && bzo.f(this.v, dssVar.v);
+        return nullSafeIsEqual(this.b, dssVar.b) && nullSafeIsEqual(this.c, dssVar.c)
+                && nullSafeIsEqual(this.d, dssVar.d) && nullSafeIsEqual(this.e, dssVar.e)
+                && nullSafeIsEqual(this.f, dssVar.f) && nullSafeIsEqual(this.g, dssVar.g)
+                && nullSafeIsEqual(this.h, dssVar.h) && nullSafeIsEqual(this.i, dssVar.i)
+                && nullSafeIsEqual(this.j, dssVar.j) && nullSafeIsEqual(this.k, dssVar.k)
+                && nullSafeIsEqual(this.l, dssVar.l) && nullSafeIsEqual(this.m, dssVar.m)
+                && nullSafeIsEqual(this.n, dssVar.n) && nullSafeIsEqual(this.o, dssVar.o)
+                && nullSafeIsEqual(this.p, dssVar.p) && nullSafeIsEqual(this.q, dssVar.q)
+                && nullSafeIsEqual(this.r, dssVar.r) && nullSafeIsEqual(this.s, dssVar.s)
+                && nullSafeIsEqual(this.t, dssVar.t) && nullSafeIsEqual(this.u, dssVar.u)
+                && nullSafeIsEqual(this.v, dssVar.v);
     }
 
     public final int hashCode() {

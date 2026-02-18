@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.zip.Deflater;
 import me.hd.wauxv.obf.alr;
 import me.hd.wauxv.obf.aye;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cnh;
 import me.hd.wauxv.obf.rf;
 import me.hd.wauxv.obf.rh;
@@ -38,7 +38,7 @@ public final class MessageDeflater implements Closeable {
     }
 
     public final void deflate(rh rhVar) throws IOException {
-        bzo.q(rhVar, "buffer");
+        throwIfVar1IsNull(rhVar, "buffer");
         if (this.deflatedBytes.b != 0) {
             throw new IllegalArgumentException("Failed requirement.");
         }

@@ -6,6 +6,6 @@ import java.io.Closeable;
 /* JADX INFO: loaded from: classes.dex */
 public abstract class axe extends ahj implements Closeable, AutoCloseable {
     static {
-        bzo.q(ahj.h, "baseKey");
+        throwIfVar1IsNull(ahj.h, "baseKey");
     }
 }

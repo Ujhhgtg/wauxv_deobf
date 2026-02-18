@@ -106,81 +106,87 @@ public class SideSheetBehavior<V extends View> extends agr {
         return false;
     }
 
-    /* JADX WARN: Code restructure failed: missing block: B:14:0x002d, code lost:
-    
-        if (r1.ak(r0, r3.getTop()) != false) goto L24;
-     */
-    /* JADX WARN: Code restructure failed: missing block: B:23:0x004b, code lost:
-    
-        if (r3 != false) goto L24;
-     */
-    /* JADX WARN: Code restructure failed: missing block: B:24:0x004d, code lost:
-    
-        al(2);
-        r2.r.f(r4);
-     */
-    /* JADX WARN: Code restructure failed: missing block: B:25:0x0056, code lost:
-    
-        return;
+    /*
+     * JADX WARN: Code restructure failed: missing block: B:14:0x002d, code lost:
+     * 
+     * if (r1.ak(r0, r3.getTop()) != false) goto L24;
      */
     /*
-        Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
-    */
+     * JADX WARN: Code restructure failed: missing block: B:23:0x004b, code lost:
+     * 
+     * if (r3 != false) goto L24;
+     */
+    /*
+     * JADX WARN: Code restructure failed: missing block: B:24:0x004d, code lost:
+     * 
+     * al(2);
+     * r2.r.f(r4);
+     */
+    /*
+     * JADX WARN: Code restructure failed: missing block: B:25:0x0056, code lost:
+     * 
+     * return;
+     */
+    /*
+     * Code decompiled incorrectly, please refer to instructions dump.
+     * To view partially-correct add '--show-bad-code' argument
+     */
     public final void an(android.view.View r3, int r4, boolean r5) {
         /*
-            r2 = this;
-            r0 = 3
-            if (r4 == r0) goto L19
-            r0 = 5
-            if (r4 != r0) goto Ld
-            me.hd.wauxv.obf.ewz r0 = r2.f
-            int r0 = r0.f()
-            goto L1f
-        Ld:
-            java.lang.IllegalArgumentException r3 = new java.lang.IllegalArgumentException
-            java.lang.String r5 = "Invalid state to get outer edge offset: "
-            java.lang.String r4 = me.hd.wauxv.obf.bjs.i(r4, r5)
-            r3.<init>(r4)
-            throw r3
-        L19:
-            me.hd.wauxv.obf.ewz r0 = r2.f
-            int r0 = r0.e()
-        L1f:
-            me.hd.wauxv.obf.era r1 = r2.x
-            if (r1 == 0) goto L57
-            if (r5 == 0) goto L30
-            int r3 = r3.getTop()
-            boolean r3 = r1.ak(r0, r3)
-            if (r3 == 0) goto L57
-            goto L4d
-        L30:
-            int r5 = r3.getTop()
-            r1.s = r3
-            r3 = -1
-            r1.d = r3
-            r3 = 0
-            boolean r3 = r1.ad(r0, r5, r3, r3)
-            if (r3 != 0) goto L4b
-            int r5 = r1.b
-            if (r5 != 0) goto L4b
-            android.view.View r5 = r1.s
-            if (r5 == 0) goto L4b
-            r5 = 0
-            r1.s = r5
-        L4b:
-            if (r3 == 0) goto L57
-        L4d:
-            r3 = 2
-            r2.al(r3)
-            me.hd.wauxv.obf.qf r3 = r2.r
-            r3.f(r4)
-            return
-        L57:
-            r2.al(r4)
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.google.android.material.sidesheet.SideSheetBehavior.an(android.view.View, int, boolean):void");
+         * r2 = this;
+         * r0 = 3
+         * if (r4 == r0) goto L19
+         * r0 = 5
+         * if (r4 != r0) goto Ld
+         * me.hd.wauxv.obf.ewz r0 = r2.f
+         * int r0 = r0.f()
+         * goto L1f
+         * Ld:
+         * java.lang.IllegalArgumentException r3 = new
+         * java.lang.IllegalArgumentException
+         * java.lang.String r5 = "Invalid state to get outer edge offset: "
+         * java.lang.String r4 = me.hd.wauxv.obf.concatVar2Var1(r4, r5)
+         * r3.<init>(r4)
+         * throw r3
+         * L19:
+         * me.hd.wauxv.obf.ewz r0 = r2.f
+         * int r0 = r0.e()
+         * L1f:
+         * me.hd.wauxv.obf.era r1 = r2.x
+         * if (r1 == 0) goto L57
+         * if (r5 == 0) goto L30
+         * int r3 = r3.getTop()
+         * boolean r3 = r1.ak(r0, r3)
+         * if (r3 == 0) goto L57
+         * goto L4d
+         * L30:
+         * int r5 = r3.getTop()
+         * r1.s = r3
+         * r3 = -1
+         * r1.d = r3
+         * r3 = 0
+         * boolean r3 = r1.ad(r0, r5, r3, r3)
+         * if (r3 != 0) goto L4b
+         * int r5 = r1.b
+         * if (r5 != 0) goto L4b
+         * android.view.View r5 = r1.s
+         * if (r5 == 0) goto L4b
+         * r5 = 0
+         * r1.s = r5
+         * L4b:
+         * if (r3 == 0) goto L57
+         * L4d:
+         * r3 = 2
+         * r2.al(r3)
+         * me.hd.wauxv.obf.qf r3 = r2.r
+         * r3.f(r4)
+         * return
+         * L57:
+         * r2.al(r4)
+         * return
+         */
+        throw new UnsupportedOperationException(
+                "Method not decompiled: com.google.android.material.sidesheet.SideSheetBehavior.an(android.view.View, int, boolean):void");
     }
 
     public final void ao() {
@@ -232,7 +238,8 @@ public class SideSheetBehavior<V extends View> extends agr {
         if (weakReference == null) {
             this.ae = new WeakReference(view);
             Context context = view.getContext();
-            ajn.ae(context, R.attr.motionEasingStandardDecelerateInterpolator, new PathInterpolator(0.0f, 0.0f, 0.0f, 1.0f));
+            ajn.ae(context, R.attr.motionEasingStandardDecelerateInterpolator,
+                    new PathInterpolator(0.0f, 0.0f, 0.0f, 1.0f));
             ajn.ad(context, R.attr.motionDurationMedium2, 300);
             ajn.ad(context, R.attr.motionDurationShort3, 150);
             ajn.ad(context, R.attr.motionDurationShort2, 100);
@@ -274,7 +281,8 @@ public class SideSheetBehavior<V extends View> extends agr {
                 this.f = new buc(this, i3);
                 if (dgmVar != null) {
                     WeakReference weakReference2 = this.ae;
-                    if (weakReference2 != null && (view3 = (View) weakReference2.get()) != null && (view3.getLayoutParams() instanceof agu)) {
+                    if (weakReference2 != null && (view3 = (View) weakReference2.get()) != null
+                            && (view3.getLayoutParams() instanceof agu)) {
                         aguVar = (agu) view3.getLayoutParams();
                     }
                     if (aguVar == null || ((ViewGroup.MarginLayoutParams) aguVar).rightMargin <= 0) {
@@ -289,12 +297,14 @@ public class SideSheetBehavior<V extends View> extends agr {
                 }
             } else {
                 if (i6 != 1) {
-                    throw new IllegalArgumentException(yg.f(i6, "Invalid sheet edge position value: ", ". Must be 0 or 1."));
+                    throw new IllegalArgumentException(
+                            yg.f(i6, "Invalid sheet edge position value: ", ". Must be 0 or 1."));
                 }
                 this.f = new buc(this, i4);
                 if (dgmVar != null) {
                     WeakReference weakReference3 = this.ae;
-                    if (weakReference3 != null && (view2 = (View) weakReference3.get()) != null && (view2.getLayoutParams() instanceof agu)) {
+                    if (weakReference3 != null && (view2 = (View) weakReference3.get()) != null
+                            && (view2.getLayoutParams() instanceof agu)) {
                         aguVar = (agu) view2.getLayoutParams();
                     }
                     if (aguVar == null || ((ViewGroup.MarginLayoutParams) aguVar).leftMargin <= 0) {
@@ -329,7 +339,8 @@ public class SideSheetBehavior<V extends View> extends agr {
             i4 = this.f.f();
         }
         view.offsetLeftAndRight(i4);
-        if (this.af == null && (i2 = this.ag) != -1 && (viewFindViewById = coordinatorLayout.findViewById(i2)) != null) {
+        if (this.af == null && (i2 = this.ag) != -1
+                && (viewFindViewById = coordinatorLayout.findViewById(i2)) != null) {
             this.af = new WeakReference(viewFindViewById);
         }
         Iterator it = this.aj.iterator();
@@ -344,7 +355,15 @@ public class SideSheetBehavior<V extends View> extends agr {
     @Override // me.hd.wauxv.obf.agr
     public final boolean j(CoordinatorLayout coordinatorLayout, View view, int i, int i2, int i3) {
         ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) view.getLayoutParams();
-        view.measure(ViewGroup.getChildMeasureSpec(i, coordinatorLayout.getPaddingRight() + coordinatorLayout.getPaddingLeft() + marginLayoutParams.leftMargin + marginLayoutParams.rightMargin + i2, marginLayoutParams.width), ViewGroup.getChildMeasureSpec(i3, coordinatorLayout.getPaddingBottom() + coordinatorLayout.getPaddingTop() + marginLayoutParams.topMargin + marginLayoutParams.bottomMargin, marginLayoutParams.height));
+        view.measure(
+                ViewGroup.getChildMeasureSpec(i,
+                        coordinatorLayout.getPaddingRight() + coordinatorLayout.getPaddingLeft()
+                                + marginLayoutParams.leftMargin + marginLayoutParams.rightMargin + i2,
+                        marginLayoutParams.width),
+                ViewGroup.getChildMeasureSpec(i3,
+                        coordinatorLayout.getPaddingBottom() + coordinatorLayout.getPaddingTop()
+                                + marginLayoutParams.topMargin + marginLayoutParams.bottomMargin,
+                        marginLayoutParams.height));
         return true;
     }
 

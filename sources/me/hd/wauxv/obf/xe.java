@@ -25,7 +25,7 @@ public final class xe {
         this.c = i;
         ciq ciqVar = cioVar.h;
         this.e = ciqVar.l();
-        Bundle bundleR = bht.r((csm[]) Arrays.copyOf(new csm[0], 0));
+        Bundle bundleR = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
         this.f = bundleR;
         ciqVar.h.ab(bundleR);
     }
@@ -106,7 +106,7 @@ public final class xe {
         dlo dloVar = (dlo) this.e;
         cjg cjgVarK = (cjg) dloVar.f(i);
         if (cjgVar2 != null) {
-            if (bzo.f(cjgVarK, cjgVar2) && bzo.f(cjgVarK.h, cjgVar2.h)) {
+            if (nullSafeIsEqual(cjgVarK, cjgVar2) && nullSafeIsEqual(cjgVarK.h, cjgVar2.h)) {
                 return cjgVarK;
             }
             cjgVarK = null;
@@ -121,7 +121,8 @@ public final class xe {
                     break;
                 }
                 cjg cjgVar3 = (cjg) it.next();
-                cjgVarK = (!(cjgVar3 instanceof cji) || cjgVar3.equals(cjgVar)) ? null : ((cji) cjgVar3).b.k(i, cjiVar, cjgVar2, true);
+                cjgVarK = (!(cjgVar3 instanceof cji) || cjgVar3.equals(cjgVar)) ? null
+                        : ((cji) cjgVar3).b.k(i, cjiVar, cjgVar2, true);
             } while (cjgVarK == null);
         }
         if (cjgVarK != null) {
@@ -132,15 +133,18 @@ public final class xe {
             return null;
         }
         cji cjiVar3 = cjiVar.h;
-        bzo.n(cjiVar3);
+        throwIfVar1IsNull(cjiVar3);
         return cjiVar3.b.k(i, cjiVar, cjgVar2, z);
     }
 
     public int l(RecyclerView recyclerView, int i, int i2, long j) {
         if (this.c == -1) {
-            this.c = recyclerView.getResources().getDimensionPixelSize(R.dimen.item_touch_helper_max_drag_scroll_per_frame);
+            this.c = recyclerView.getResources()
+                    .getDimensionPixelSize(R.dimen.item_touch_helper_max_drag_scroll_per_frame);
         }
-        int interpolation = (int) (a.getInterpolation(j <= 2000 ? j / 2000.0f : 1.0f) * ((int) (b.getInterpolation(Math.min(1.0f, (Math.abs(i2) * 1.0f) / i)) * ((int) Math.signum(i2)) * this.c)));
+        int interpolation = (int) (a.getInterpolation(j <= 2000 ? j / 2000.0f : 1.0f)
+                * ((int) (b.getInterpolation(Math.min(1.0f, (Math.abs(i2) * 1.0f) / i)) * ((int) Math.signum(i2))
+                        * this.c)));
         return interpolation == 0 ? i2 > 0 ? 1 : -1 : interpolation;
     }
 
@@ -155,7 +159,7 @@ public final class xe {
                 break;
             }
             cjg cjgVar2 = (cjg) cjjVar.next();
-            cjfVarQ = bzo.f(cjgVar2, cjgVar) ? null : cjgVar2.o(jxVar);
+            cjfVarQ = nullSafeIsEqual(cjgVar2, cjgVar) ? null : cjgVar2.o(jxVar);
             if (cjfVarQ != null) {
                 arrayList.add(cjfVarQ);
             }
@@ -165,7 +169,7 @@ public final class xe {
         if (cjiVar2 != null && z && !cjiVar2.equals(cjgVar)) {
             cjfVarQ = cjiVar2.q(jxVar, cjiVar);
         }
-        return (cjf) aaz.n(la.o(new cjf[]{cjfVar, cjfVar2, cjfVarQ}));
+        return (cjf) aaz.n(la.o(new cjf[] { cjfVar, cjfVar2, cjfVarQ }));
     }
 
     public xe(cji cjiVar) {
@@ -174,11 +178,11 @@ public final class xe {
     }
 
     public xe(Bundle bundle) {
-        bzo.q(bundle, "state");
+        throwIfVar1IsNull(bundle, "state");
         String string = bundle.getString("nav-entry-state:id");
         if (string != null) {
             this.d = string;
-            this.c = bzo.v("nav-entry-state:destination-id", bundle);
+            this.c = KotlinHelpers.v("nav-entry-state:destination-id", bundle);
             Bundle bundle2 = bundle.getBundle("nav-entry-state:args");
             if (bundle2 != null) {
                 this.e = bundle2;

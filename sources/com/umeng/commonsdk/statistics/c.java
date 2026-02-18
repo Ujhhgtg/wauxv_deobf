@@ -54,7 +54,7 @@ public class c {
         this.n = 0;
         this.a = null;
         this.r = context;
-        this.i = ImprintHandler.getImprintService(context).c();
+        this.i = ImprintHandler.getImprintService(context).createInstanceWithArgs();
         this.k = Defcon.getService(this.r);
         SharedPreferences sharedPreferences = PreferenceWrapper.getDefault(this.r);
         this.l = sharedPreferences.getLong(o, 0L);
@@ -99,7 +99,9 @@ public class c {
             boolean zC = aVarA.c(name);
             boolean zD = aVarA.d(name);
             String strD = com.umeng.commonsdk.stateless.d.d(name);
-            byte[] bArrA = this.f.a(byteArray, zA, zC, !TextUtils.isEmpty(strD) ? com.umeng.commonsdk.stateless.d.c(strD) : zD ? UMServerURL.SILENT_HEART_BEAT : zC ? UMServerURL.ZCFG_PATH : UMServerURL.PATH_ANALYTICS);
+            byte[] bArrA = this.f.a(byteArray, zA, zC, !TextUtils.isEmpty(strD)
+                    ? com.umeng.commonsdk.stateless.d.c(strD)
+                    : zD ? UMServerURL.SILENT_HEART_BEAT : zC ? UMServerURL.ZCFG_PATH : UMServerURL.PATH_ANALYTICS);
             int iA = bArrA == null ? 1 : a(bArrA);
             if (UMConfigure.isDebugLog()) {
                 if (zD && iA == 2) {
@@ -141,7 +143,8 @@ public class c {
                     FieldManager.a().a(this.r);
                     UMRTLog.e(UMRTLog.RTLOG_TAG, "--->>> 零号报文应答内容报错!!! ，特殊处理!，继续正常流程。");
                     Context context = this.r;
-                    UMWorkDispatch.sendEvent(context, com.umeng.commonsdk.internal.a.s, com.umeng.commonsdk.internal.b.a(context).a(), null);
+                    UMWorkDispatch.sendEvent(context, com.umeng.commonsdk.internal.a.s,
+                            com.umeng.commonsdk.internal.b.a(context).a(), null);
                     return true;
                 }
             }

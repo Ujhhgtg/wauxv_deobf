@@ -8,7 +8,7 @@ public final class ru {
     public final byte[] c;
 
     public ru(byte[] bArr, int i) {
-        bzo.q(bArr, "array");
+        throwIfVar1IsNull(bArr, "array");
         this.c = bArr;
         this.a = i;
     }
@@ -35,7 +35,7 @@ public final class ru {
         int i2 = this.b;
         int i3 = i2 + i;
         byte[] bArr = this.c;
-        bzo.q(bArr, "<this>");
+        throwIfVar1IsNull(bArr, "<this>");
         cnh.j(i2, i3, bArr.length);
         String str = new String(bArr, i2, i3 - i2, uj.a);
         this.b += i;

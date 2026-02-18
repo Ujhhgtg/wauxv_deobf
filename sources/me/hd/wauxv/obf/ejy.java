@@ -33,7 +33,10 @@ public final class ejy {
     public final duq y;
     public final String z;
 
-    public /* synthetic */ ejy(int i, String str, String str2, Integer num, Integer num2, String str3, dtq dtqVar, dsf dsfVar, dss dssVar, String str4, String str5, String str6, Integer num3, Integer num4, String str7, drz drzVar, Integer num5, duk dukVar, String str8, String str9, dut dutVar, Integer num6, duw duwVar, Integer num7, dtn dtnVar, duq duqVar, String str10, Boolean bool, dtk dtkVar) {
+    public /* synthetic */ ejy(int i, String str, String str2, Integer num, Integer num2, String str3, dtq dtqVar,
+            dsf dsfVar, dss dssVar, String str4, String str5, String str6, Integer num3, Integer num4, String str7,
+            drz drzVar, Integer num5, duk dukVar, String str8, String str9, dut dutVar, Integer num6, duw duwVar,
+            Integer num7, dtn dtnVar, duq duqVar, String str10, Boolean bool, dtk dtkVar) {
         if (268435455 != (i & 268435455)) {
             bht.ah(i, 268435455, drw.b.getDescriptor());
             throw null;
@@ -76,7 +79,20 @@ public final class ejy {
             return false;
         }
         ejy ejyVar = (ejy) obj;
-        return bzo.f(this.a, ejyVar.a) && bzo.f(this.b, ejyVar.b) && bzo.f(this.c, ejyVar.c) && bzo.f(this.d, ejyVar.d) && bzo.f(this.e, ejyVar.e) && bzo.f(this.f, ejyVar.f) && bzo.f(this.g, ejyVar.g) && bzo.f(this.h, ejyVar.h) && bzo.f(this.i, ejyVar.i) && bzo.f(this.j, ejyVar.j) && bzo.f(this.k, ejyVar.k) && bzo.f(this.l, ejyVar.l) && bzo.f(this.m, ejyVar.m) && bzo.f(this.n, ejyVar.n) && bzo.f(this.o, ejyVar.o) && bzo.f(this.p, ejyVar.p) && bzo.f(this.q, ejyVar.q) && bzo.f(this.r, ejyVar.r) && bzo.f(this.s, ejyVar.s) && bzo.f(this.t, ejyVar.t) && bzo.f(this.u, ejyVar.u) && bzo.f(this.v, ejyVar.v) && bzo.f(this.w, ejyVar.w) && bzo.f(this.x, ejyVar.x) && bzo.f(this.y, ejyVar.y) && bzo.f(this.z, ejyVar.z) && bzo.f(this.aa, ejyVar.aa) && bzo.f(this.ab, ejyVar.ab);
+        return nullSafeIsEqual(this.a, ejyVar.a) && nullSafeIsEqual(this.b, ejyVar.b)
+                && nullSafeIsEqual(this.c, ejyVar.c) && nullSafeIsEqual(this.d, ejyVar.d)
+                && nullSafeIsEqual(this.e, ejyVar.e) && nullSafeIsEqual(this.f, ejyVar.f)
+                && nullSafeIsEqual(this.g, ejyVar.g) && nullSafeIsEqual(this.h, ejyVar.h)
+                && nullSafeIsEqual(this.i, ejyVar.i) && nullSafeIsEqual(this.j, ejyVar.j)
+                && nullSafeIsEqual(this.k, ejyVar.k) && nullSafeIsEqual(this.l, ejyVar.l)
+                && nullSafeIsEqual(this.m, ejyVar.m) && nullSafeIsEqual(this.n, ejyVar.n)
+                && nullSafeIsEqual(this.o, ejyVar.o) && nullSafeIsEqual(this.p, ejyVar.p)
+                && nullSafeIsEqual(this.q, ejyVar.q) && nullSafeIsEqual(this.r, ejyVar.r)
+                && nullSafeIsEqual(this.s, ejyVar.s) && nullSafeIsEqual(this.t, ejyVar.t)
+                && nullSafeIsEqual(this.u, ejyVar.u) && nullSafeIsEqual(this.v, ejyVar.v)
+                && nullSafeIsEqual(this.w, ejyVar.w) && nullSafeIsEqual(this.x, ejyVar.x)
+                && nullSafeIsEqual(this.y, ejyVar.y) && nullSafeIsEqual(this.z, ejyVar.z)
+                && nullSafeIsEqual(this.aa, ejyVar.aa) && nullSafeIsEqual(this.ab, ejyVar.ab);
     }
 
     public final int hashCode() {

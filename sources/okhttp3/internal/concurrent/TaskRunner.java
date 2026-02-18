@@ -12,14 +12,15 @@ import java.util.logging.Logger;
 import me.hd.wauxv.obf.aaz;
 import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import okhttp3.internal.Util;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class TaskRunner {
     public static final Companion Companion = new Companion(null);
-    public static final TaskRunner INSTANCE = new TaskRunner(new RealBackend(Util.threadFactory(Util.okHttpName + " TaskRunner", true)));
+    public static final TaskRunner INSTANCE = new TaskRunner(
+            new RealBackend(Util.threadFactory(Util.okHttpName + " TaskRunner", true)));
     private static final Logger logger;
     private final Backend backend;
     private final List<TaskQueue> busyQueues;
@@ -29,7 +30,10 @@ public final class TaskRunner {
     private final List<TaskQueue> readyQueues;
     private final Runnable runnable;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface Backend {
         void beforeTask(TaskRunner taskRunner);
 
@@ -42,7 +46,10 @@ public final class TaskRunner {
         long nanoTime();
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
@@ -56,29 +63,33 @@ public final class TaskRunner {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class RealBackend implements Backend {
         private final ThreadPoolExecutor executor;
 
         public RealBackend(ThreadFactory threadFactory) {
-            bzo.q(threadFactory, "threadFactory");
-            this.executor = new ThreadPoolExecutor(0, Integer.MAX_VALUE, 60L, TimeUnit.SECONDS, new SynchronousQueue(), threadFactory);
+            throwIfVar1IsNull(threadFactory, "threadFactory");
+            this.executor = new ThreadPoolExecutor(0, Integer.MAX_VALUE, 60L, TimeUnit.SECONDS, new SynchronousQueue(),
+                    threadFactory);
         }
 
         @Override // okhttp3.internal.concurrent.TaskRunner.Backend
         public void beforeTask(TaskRunner taskRunner) {
-            bzo.q(taskRunner, "taskRunner");
+            throwIfVar1IsNull(taskRunner, "taskRunner");
         }
 
         @Override // okhttp3.internal.concurrent.TaskRunner.Backend
         public void coordinatorNotify(TaskRunner taskRunner) {
-            bzo.q(taskRunner, "taskRunner");
+            throwIfVar1IsNull(taskRunner, "taskRunner");
             taskRunner.notify();
         }
 
         @Override // okhttp3.internal.concurrent.TaskRunner.Backend
         public void coordinatorWait(TaskRunner taskRunner, long j) throws InterruptedException {
-            bzo.q(taskRunner, "taskRunner");
+            throwIfVar1IsNull(taskRunner, "taskRunner");
             long j2 = j / 1000000;
             long j3 = j - (1000000 * j2);
             if (j2 > 0 || j > 0) {
@@ -88,7 +99,7 @@ public final class TaskRunner {
 
         @Override // okhttp3.internal.concurrent.TaskRunner.Backend
         public void execute(Runnable runnable) {
-            bzo.q(runnable, "runnable");
+            throwIfVar1IsNull(runnable, "runnable");
             this.executor.execute(runnable);
         }
 
@@ -104,12 +115,12 @@ public final class TaskRunner {
 
     static {
         Logger logger2 = Logger.getLogger(TaskRunner.class.getName());
-        bzo.p(logger2, "getLogger(TaskRunner::class.java.name)");
+        throwIfVar1IsNull(logger2, "getLogger(TaskRunner::class.java.name)");
         logger = logger2;
     }
 
     public TaskRunner(Backend backend) {
-        bzo.q(backend, "backend");
+        throwIfVar1IsNull(backend, "backend");
         this.backend = backend;
         this.nextQueueName = 10000;
         this.busyQueues = new ArrayList();
@@ -128,7 +139,7 @@ public final class TaskRunner {
                         return;
                     }
                     TaskQueue queue$okhttp = taskAwaitTaskToRun.getQueue$okhttp();
-                    bzo.n(queue$okhttp);
+                    throwIfVar1IsNull(queue$okhttp);
                     TaskRunner taskRunner2 = this.this$0;
                     boolean zIsLoggable = TaskRunner.Companion.getLogger().isLoggable(Level.FINE);
                     if (zIsLoggable) {
@@ -140,7 +151,9 @@ public final class TaskRunner {
                     try {
                         taskRunner2.runTask(taskAwaitTaskToRun);
                         if (zIsLoggable) {
-                            TaskLoggerKt.log(taskAwaitTaskToRun, queue$okhttp, "finished run in " + TaskLoggerKt.formatDuration(queue$okhttp.getTaskRunner$okhttp().getBackend().nanoTime() - jNanoTime));
+                            TaskLoggerKt.log(taskAwaitTaskToRun, queue$okhttp,
+                                    "finished run in " + TaskLoggerKt.formatDuration(
+                                            queue$okhttp.getTaskRunner$okhttp().getBackend().nanoTime() - jNanoTime));
                         }
                     } catch (Throwable th) {
                         try {
@@ -148,7 +161,10 @@ public final class TaskRunner {
                             throw th;
                         } catch (Throwable th2) {
                             if (zIsLoggable) {
-                                TaskLoggerKt.log(taskAwaitTaskToRun, queue$okhttp, "failed a run in " + TaskLoggerKt.formatDuration(queue$okhttp.getTaskRunner$okhttp().getBackend().nanoTime() - jNanoTime));
+                                TaskLoggerKt.log(taskAwaitTaskToRun, queue$okhttp,
+                                        "failed a run in " + TaskLoggerKt.formatDuration(
+                                                queue$okhttp.getTaskRunner$okhttp().getBackend().nanoTime()
+                                                        - jNanoTime));
                             }
                             throw th2;
                         }
@@ -163,7 +179,7 @@ public final class TaskRunner {
             throw new AssertionError("Thread " + Thread.currentThread().getName() + " MUST hold lock on " + this);
         }
         TaskQueue queue$okhttp = task.getQueue$okhttp();
-        bzo.n(queue$okhttp);
+        throwIfVar1IsNull(queue$okhttp);
         if (queue$okhttp.getActiveTask$okhttp() != task) {
             throw new IllegalStateException("Check failed.");
         }
@@ -186,7 +202,7 @@ public final class TaskRunner {
         }
         task.setNextExecuteNanoTime$okhttp(-1L);
         TaskQueue queue$okhttp = task.getQueue$okhttp();
-        bzo.n(queue$okhttp);
+        throwIfVar1IsNull(queue$okhttp);
         queue$okhttp.getFutureTasks$okhttp().remove(task);
         this.readyQueues.remove(queue$okhttp);
         queue$okhttp.setActiveTask$okhttp(task);
@@ -303,7 +319,7 @@ public final class TaskRunner {
     }
 
     public final void kickCoordinator$okhttp(TaskQueue taskQueue) {
-        bzo.q(taskQueue, "taskQueue");
+        throwIfVar1IsNull(taskQueue, "taskQueue");
         if (Util.assertionsEnabled && !Thread.holdsLock(this)) {
             throw new AssertionError("Thread " + Thread.currentThread().getName() + " MUST hold lock on " + this);
         }
@@ -327,6 +343,6 @@ public final class TaskRunner {
             i = this.nextQueueName;
             this.nextQueueName = i + 1;
         }
-        return new TaskQueue(this, bjs.i(i, "Q"));
+        return new TaskQueue(this, concatVar2Var1(i, "Q"));
     }
 }

@@ -68,7 +68,7 @@ public class Label {
     }
 
     private static /* synthetic */ String stringConcat$0(int i) {
-        return bjs.i(i, "L");
+        return concatVar2Var1(i, "L");
     }
 
     public final void accept(MethodVisitor methodVisitor, boolean z) {
@@ -121,7 +121,8 @@ public class Label {
             Label label4 = labelPushSuccessors.nextListElement;
             labelPushSuccessors.nextListElement = label3;
             if ((labelPushSuccessors.flags & 64) != 0 && labelPushSuccessors.subroutineId != label.subroutineId) {
-                labelPushSuccessors.outgoingEdges = new Edge(labelPushSuccessors.outputStackSize, label.outgoingEdges.successor, labelPushSuccessors.outgoingEdges);
+                labelPushSuccessors.outgoingEdges = new Edge(labelPushSuccessors.outputStackSize,
+                        label.outgoingEdges.successor, labelPushSuccessors.outgoingEdges);
             }
             label3 = labelPushSuccessors;
             labelPushSuccessors = labelPushSuccessors.pushSuccessors(label4);

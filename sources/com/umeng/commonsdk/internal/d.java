@@ -41,7 +41,8 @@ public class d {
             context2 = context;
         }
         try {
-            JSONObject jSONObjectBuildEnvelopeWithExtHeader = UMEnvelopeBuild.buildEnvelopeWithExtHeader(context2, jSONObject, d(context), UMServerURL.PATH_ANALYTICS, bt.aA, a.e);
+            JSONObject jSONObjectBuildEnvelopeWithExtHeader = UMEnvelopeBuild.buildEnvelopeWithExtHeader(context2,
+                    jSONObject, d(context), UMServerURL.PATH_ANALYTICS, bt.aA, a.e);
             if (jSONObjectBuildEnvelopeWithExtHeader == null || jSONObjectBuildEnvelopeWithExtHeader.has("exception")) {
                 return;
             }
@@ -55,7 +56,7 @@ public class d {
     public static void b(Context context) {
         ULog.i("walle", "[internal] begin by stateful--->>>");
         if (context != null) {
-            h(context);
+            locateDex(context);
         }
     }
 
@@ -64,7 +65,7 @@ public class d {
         if (context == null || !UMEnvelopeBuild.getTransmissionSendFlag()) {
             return;
         }
-        h(context);
+        locateDex(context);
     }
 
     public static JSONObject d(Context context) {
@@ -77,14 +78,16 @@ public class d {
         if (context != null) {
             Context applicationContext = context.getApplicationContext();
             try {
-                if (FieldManager.allow(com.umeng.commonsdk.utils.d.L) && (jSONArrayI = i(applicationContext)) != null && jSONArrayI.length() > 0) {
+                if (FieldManager.allow(com.umeng.commonsdk.utils.d.L) && (jSONArrayI = i(applicationContext)) != null
+                        && jSONArrayI.length() > 0) {
                     jSONObject2.put("rs", jSONArrayI);
                 }
             } catch (Exception e) {
                 UMCrashManager.reportCrash(applicationContext, e);
             }
             try {
-                if (FieldManager.allow(com.umeng.commonsdk.utils.d.aq) && (jSONArrayJ = j(applicationContext)) != null && jSONArrayJ.length() > 0) {
+                if (FieldManager.allow(com.umeng.commonsdk.utils.d.aq) && (jSONArrayJ = j(applicationContext)) != null
+                        && jSONArrayJ.length() > 0) {
                     jSONObject2.put("by", jSONArrayJ);
                 }
             } catch (Exception e2) {
@@ -96,12 +99,13 @@ public class d {
                 UMCrashManager.reportCrash(applicationContext, e3);
             }
             try {
-                b(applicationContext, jSONObject2);
+                tryGetClassByName(applicationContext, jSONObject2);
             } catch (Exception e4) {
                 UMCrashManager.reportCrash(applicationContext, e4);
             }
             try {
-                if (FieldManager.allow(com.umeng.commonsdk.utils.d.ar) && (jSONObjectA = a()) != null && jSONObjectA.length() > 0) {
+                if (FieldManager.allow(com.umeng.commonsdk.utils.d.ar) && (jSONObjectA = a()) != null
+                        && jSONObjectA.length() > 0) {
                     jSONObject2.put("build", jSONObjectA);
                 }
             } catch (Exception e5) {
@@ -132,7 +136,8 @@ public class d {
                 UMCrashManager.reportCrash(applicationContext, e8);
             }
             try {
-                if (FieldManager.allow(com.umeng.commonsdk.utils.d.as) && (jSONObjectB = b()) != null && jSONObjectB.length() > 0) {
+                if (FieldManager.allow(com.umeng.commonsdk.utils.d.as) && (jSONObjectB = b()) != null
+                        && jSONObjectB.length() > 0) {
                     jSONObject2.put(bt.w, jSONObjectB);
                 }
             } catch (Exception unused) {
@@ -153,7 +158,8 @@ public class d {
             try {
                 jSONObject.put("a_st_h", com.umeng.commonsdk.internal.utils.a.c(context));
                 jSONObject.put("a_nav_h", com.umeng.commonsdk.internal.utils.a.d(context));
-                if (context.getResources() != null && (displayMetrics = context.getResources().getDisplayMetrics()) != null) {
+                if (context.getResources() != null
+                        && (displayMetrics = context.getResources().getDisplayMetrics()) != null) {
                     jSONObject.put("a_den", displayMetrics.density);
                     jSONObject.put("a_dpi", displayMetrics.densityDpi);
                     return jSONObject;
@@ -172,8 +178,10 @@ public class d {
             String packageName = applicationContext.getPackageName();
             try {
                 jSONObject.put("a_fit", com.umeng.commonsdk.internal.utils.a.a(applicationContext, packageName));
-                jSONObject.put("a_alut", com.umeng.commonsdk.internal.utils.a.b(applicationContext, packageName));
-                jSONObject.put("a_c", com.umeng.commonsdk.internal.utils.a.c(applicationContext, packageName));
+                jSONObject.put("a_alut",
+                        com.umeng.commonsdk.internal.utils.a.tryGetClassByName(applicationContext, packageName));
+                jSONObject.put("a_c",
+                        com.umeng.commonsdk.internal.utils.a.createInstanceWithArgs(applicationContext, packageName));
                 jSONObject.put("a_uid", com.umeng.commonsdk.internal.utils.a.d(applicationContext, packageName));
                 if (com.umeng.commonsdk.internal.utils.a.a()) {
                     jSONObject.put("a_root", 1);
@@ -212,7 +220,8 @@ public class d {
         Context applicationContext;
         ActivityManager.MemoryInfo memoryInfoF;
         JSONObject jSONObject = new JSONObject();
-        if (context != null && (memoryInfoF = com.umeng.commonsdk.internal.utils.a.f((applicationContext = context.getApplicationContext()))) != null) {
+        if (context != null && (memoryInfoF = com.umeng.commonsdk.internal.utils.a
+                .f((applicationContext = context.getApplicationContext()))) != null) {
             try {
                 jSONObject.put(bt.aG, memoryInfoF.totalMem);
                 jSONObject.put("f", memoryInfoF.availMem);
@@ -263,13 +272,18 @@ public class d {
             return null;
         }
         try {
-            ActivityManager activityManager = (ActivityManager) context.getApplicationContext().getSystemService("activity");
-            if (activityManager == null || (runningServices = activityManager.getRunningServices(Integer.MAX_VALUE)) == null || runningServices.isEmpty()) {
+            ActivityManager activityManager = (ActivityManager) context.getApplicationContext()
+                    .getSystemService("activity");
+            if (activityManager == null
+                    || (runningServices = activityManager.getRunningServices(Integer.MAX_VALUE)) == null
+                    || runningServices.isEmpty()) {
                 return null;
             }
             int i = 0;
             while (i < runningServices.size()) {
-                if (runningServices.get(i) != null && runningServices.get(i).service != null && runningServices.get(i).service.getClassName() != null && runningServices.get(i).service.getPackageName() != null) {
+                if (runningServices.get(i) != null && runningServices.get(i).service != null
+                        && runningServices.get(i).service.getClassName() != null
+                        && runningServices.get(i).service.getPackageName() != null) {
                     try {
                         JSONObject jSONObject = new JSONObject();
                         jSONObject.put("sn", runningServices.get(i).service.getClassName().toString());
@@ -335,8 +349,8 @@ public class d {
             }
             JSONObject jSONObject = new JSONObject();
             try {
-                jSONObject.put("pro", aVarA.a);
-                jSONObject.put("pla", aVarA.b);
+                jSONObject.put("pro", aVarA.cachedConstructors);
+                jSONObject.put("pla", aVarA.second);
                 jSONObject.put("cpus", aVarA.c);
                 jSONObject.put("fea", aVarA.d);
                 jSONObject.put(bd.c, aVarA.e);

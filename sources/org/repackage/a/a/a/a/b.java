@@ -11,19 +11,19 @@ public class b implements ServiceConnection {
     public final /* synthetic */ c a;
 
     public b(c cVar) {
-        this.a = cVar;
+        this.cachedConstructors = cVar;
     }
 
     @Override // android.content.ServiceConnection
     public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
-        this.a.a = a.AbstractBinderC0020a.a(iBinder);
-        synchronized (this.a.d) {
-            this.a.d.notify();
+        this.cachedConstructors.cachedConstructors = a.AbstractBinderC0020a.a(iBinder);
+        synchronized (this.cachedConstructors.d) {
+            this.cachedConstructors.d.notify();
         }
     }
 
     @Override // android.content.ServiceConnection
     public void onServiceDisconnected(ComponentName componentName) {
-        this.a.a = null;
+        this.cachedConstructors.cachedConstructors = null;
     }
 }

@@ -10,14 +10,14 @@ public final class cyk implements rl {
     public boolean d;
 
     public cyk(dhy dhyVar) {
-        bzo.q(dhyVar, "sink");
+        throwIfVar1IsNull(dhyVar, "sink");
         this.a = dhyVar;
         this.b = new rh();
     }
 
     @Override // me.hd.wauxv.obf.rl
     public final rl ae(sj sjVar) {
-        bzo.q(sjVar, "byteString");
+        throwIfVar1IsNull(sjVar, "byteString");
         if (this.d) {
             throw new IllegalStateException("closed");
         }
@@ -28,7 +28,7 @@ public final class cyk implements rl {
 
     @Override // me.hd.wauxv.obf.rl
     public final rl af(int i, int i2, byte[] bArr) {
-        bzo.q(bArr, "source");
+        throwIfVar1IsNull(bArr, "source");
         if (this.d) {
             throw new IllegalStateException("closed");
         }
@@ -120,9 +120,9 @@ public final class cyk implements rl {
             j = 0;
         } else {
             dfj dfjVar = rhVar.a;
-            bzo.n(dfjVar);
+            throwIfVar1IsNull(dfjVar);
             dfj dfjVar2 = dfjVar.g;
-            bzo.n(dfjVar2);
+            throwIfVar1IsNull(dfjVar2);
             int i = dfjVar2.c;
             if (i < 8192 && dfjVar2.e) {
                 j -= (long) (i - dfjVar2.b);
@@ -136,7 +136,7 @@ public final class cyk implements rl {
 
     @Override // me.hd.wauxv.obf.rl
     public final rl q(String str) {
-        bzo.q(str, "string");
+        throwIfVar1IsNull(str, "string");
         if (this.d) {
             throw new IllegalStateException("closed");
         }
@@ -179,7 +179,7 @@ public final class cyk implements rl {
 
     @Override // java.nio.channels.WritableByteChannel
     public final int write(ByteBuffer byteBuffer) {
-        bzo.q(byteBuffer, "source");
+        throwIfVar1IsNull(byteBuffer, "source");
         if (this.d) {
             throw new IllegalStateException("closed");
         }
@@ -220,7 +220,7 @@ public final class cyk implements rl {
 
     @Override // me.hd.wauxv.obf.dhy
     public final void write(rh rhVar, long j) {
-        bzo.q(rhVar, "source");
+        throwIfVar1IsNull(rhVar, "source");
         if (!this.d) {
             this.b.write(rhVar, j);
             j();
@@ -231,7 +231,7 @@ public final class cyk implements rl {
 
     @Override // me.hd.wauxv.obf.rl
     public final rl write(byte[] bArr) {
-        bzo.q(bArr, "source");
+        throwIfVar1IsNull(bArr, "source");
         if (!this.d) {
             this.b.m12write(bArr);
             j();

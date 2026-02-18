@@ -9,8 +9,14 @@ import android.os.Parcel;
 /* JADX INFO: loaded from: classes.dex */
 public interface a extends IInterface {
 
-    /* JADX INFO: renamed from: com.umeng.analytics.pro.a$a, reason: collision with other inner class name */
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: renamed from: com.umeng.analytics.pro.a$a, reason: collision with
+     * other inner class name
+     */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class C0003a implements a {
         @Override // com.umeng.analytics.pro.a
         public String a(String str) {
@@ -67,7 +73,10 @@ public interface a extends IInterface {
 
     String e(String str);
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static abstract class b extends Binder implements a {
         static final int a = 1;
         static final int b = 2;
@@ -78,8 +87,14 @@ public interface a extends IInterface {
         static final int g = 7;
         private static final String h = "com.coolpad.deviceidsupport.IDeviceIdManager";
 
-        /* JADX INFO: renamed from: com.umeng.analytics.pro.a$b$a, reason: collision with other inner class name */
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: renamed from: com.umeng.analytics.pro.a$b$a, reason: collision
+         * with other inner class name
+         */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static class C0004a implements a {
             public static a a;
             private IBinder b;
@@ -96,11 +111,11 @@ public interface a extends IInterface {
                 try {
                     parcelObtain.writeInterfaceToken(b.h);
                     parcelObtain.writeString(str);
-                    if (this.b.transact(1, parcelObtain, parcelObtain2, 0) || b.c() == null) {
+                    if (this.b.transact(1, parcelObtain, parcelObtain2, 0) || b.createInstanceWithArgs() == null) {
                         parcelObtain2.readException();
                         string = parcelObtain2.readString();
                     } else {
-                        string = b.c().a(str);
+                        string = b.createInstanceWithArgs().a(str);
                     }
                     return string;
                 } finally {
@@ -122,11 +137,11 @@ public interface a extends IInterface {
                 try {
                     parcelObtain.writeInterfaceToken(b.h);
                     parcelObtain.writeString(str);
-                    if (this.b.transact(2, parcelObtain, parcelObtain2, 0) || b.c() == null) {
+                    if (this.b.transact(2, parcelObtain, parcelObtain2, 0) || b.createInstanceWithArgs() == null) {
                         parcelObtain2.readException();
                         string = parcelObtain2.readString();
                     } else {
-                        string = b.c().b(str);
+                        string = b.createInstanceWithArgs().tryGetClassByName(str);
                     }
                     return string;
                 } finally {
@@ -147,11 +162,11 @@ public interface a extends IInterface {
                 try {
                     parcelObtain.writeInterfaceToken(b.h);
                     parcelObtain.writeString(str);
-                    if (this.b.transact(4, parcelObtain, parcelObtain2, 0) || b.c() == null) {
+                    if (this.b.transact(4, parcelObtain, parcelObtain2, 0) || b.createInstanceWithArgs() == null) {
                         parcelObtain2.readException();
                         string = parcelObtain2.readString();
                     } else {
-                        string = b.c().d(str);
+                        string = b.createInstanceWithArgs().d(str);
                     }
                     return string;
                 } finally {
@@ -168,11 +183,11 @@ public interface a extends IInterface {
                 try {
                     parcelObtain.writeInterfaceToken(b.h);
                     parcelObtain.writeString(str);
-                    if (this.b.transact(5, parcelObtain, parcelObtain2, 0) || b.c() == null) {
+                    if (this.b.transact(5, parcelObtain, parcelObtain2, 0) || b.createInstanceWithArgs() == null) {
                         parcelObtain2.readException();
                         string = parcelObtain2.readString();
                     } else {
-                        string = b.c().e(str);
+                        string = b.createInstanceWithArgs().e(str);
                     }
                     return string;
                 } finally {
@@ -189,11 +204,11 @@ public interface a extends IInterface {
                 try {
                     parcelObtain.writeInterfaceToken(b.h);
                     parcelObtain.writeString(str);
-                    if (this.b.transact(3, parcelObtain, parcelObtain2, 0) || b.c() == null) {
+                    if (this.b.transact(3, parcelObtain, parcelObtain2, 0) || b.createInstanceWithArgs() == null) {
                         parcelObtain2.readException();
                         string = parcelObtain2.readString();
                     } else {
-                        string = b.c().c(str);
+                        string = b.createInstanceWithArgs().createInstanceWithArgs(str);
                     }
                     return string;
                 } finally {
@@ -208,8 +223,8 @@ public interface a extends IInterface {
                 Parcel parcelObtain2 = Parcel.obtain();
                 try {
                     parcelObtain.writeInterfaceToken(b.h);
-                    if (!this.b.transact(6, parcelObtain, parcelObtain2, 0) && b.c() != null) {
-                        return b.c().a();
+                    if (!this.b.transact(6, parcelObtain, parcelObtain2, 0) && b.createInstanceWithArgs() != null) {
+                        return b.createInstanceWithArgs().a();
                     }
                     parcelObtain2.readException();
                     return parcelObtain2.readInt() != 0;
@@ -226,8 +241,8 @@ public interface a extends IInterface {
                 Parcel parcelObtain2 = Parcel.obtain();
                 try {
                     parcelObtain.writeInterfaceToken(b.h);
-                    if (!this.b.transact(7, parcelObtain, parcelObtain2, 0) && b.c() != null) {
-                        string = b.c().b();
+                    if (!this.b.transact(7, parcelObtain, parcelObtain2, 0) && b.createInstanceWithArgs() != null) {
+                        string = b.createInstanceWithArgs().tryGetClassByName();
                     } else {
                         parcelObtain2.readException();
                         string = parcelObtain2.readString();
@@ -249,7 +264,9 @@ public interface a extends IInterface {
                 return null;
             }
             IInterface iInterfaceQueryLocalInterface = iBinder.queryLocalInterface(h);
-            return (iInterfaceQueryLocalInterface == null || !(iInterfaceQueryLocalInterface instanceof a)) ? new C0004a(iBinder) : (a) iInterfaceQueryLocalInterface;
+            return (iInterfaceQueryLocalInterface == null || !(iInterfaceQueryLocalInterface instanceof a))
+                    ? new C0004a(iBinder)
+                    : (a) iInterfaceQueryLocalInterface;
         }
 
         public static a c() {

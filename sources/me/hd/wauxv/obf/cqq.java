@@ -9,8 +9,8 @@ public final class cqq implements bul, tb {
     public final /* synthetic */ cqt d;
 
     public cqq(cqt cqtVar, bur burVar, bdx bdxVar) {
-        bzo.q(burVar, "lifecycle");
-        bzo.q(bdxVar, "onBackPressedCallback");
+        throwIfVar1IsNull(burVar, "lifecycle");
+        throwIfVar1IsNull(bdxVar, "onBackPressedCallback");
         this.d = cqtVar;
         this.a = burVar;
         this.b = bdxVar;
@@ -32,7 +32,7 @@ public final class cqq implements bul, tb {
     public final void e(bup bupVar, bug bugVar) {
         if (bugVar == bug.ON_START) {
             bdx bdxVar = this.b;
-            bzo.q(bdxVar, "onBackPressedCallback");
+            throwIfVar1IsNull(bdxVar, "onBackPressedCallback");
             cqt cqtVar = this.d;
             cqtVar.b.addLast(bdxVar);
             cqr cqrVar = new cqr(cqtVar, bdxVar);

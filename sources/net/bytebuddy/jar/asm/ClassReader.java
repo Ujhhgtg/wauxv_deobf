@@ -154,7 +154,8 @@ public class ClassReader {
         return readUnsignedShort(iArr[i] + 1);
     }
 
-    private Attribute readAttribute(Attribute[] attributeArr, String str, int i, int i2, char[] cArr, int i3, Label[] labelArr) {
+    private Attribute readAttribute(Attribute[] attributeArr, String str, int i, int i2, char[] cArr, int i3,
+            Label[] labelArr) {
         for (Attribute attribute : attributeArr) {
             if (attribute.type.equals(str)) {
                 return attribute.read(this, i, i2, cArr, i3, labelArr);
@@ -185,54 +186,75 @@ public class ClassReader {
         throw new IllegalArgumentException();
     }
 
-    /* JADX WARN: Found duplicated region for block: B:148:0x03c9  */
-    /* JADX WARN: Found duplicated region for block: B:150:0x03cf  */
-    /* JADX WARN: Found duplicated region for block: B:151:0x03db  */
-    /* JADX WARN: Found duplicated region for block: B:153:0x03e0  */
-    /* JADX WARN: Found duplicated region for block: B:158:0x03f3  */
-    /* JADX WARN: Found duplicated region for block: B:161:0x040f  */
-    /* JADX WARN: Found duplicated region for block: B:163:0x0413  */
-    /* JADX WARN: Found duplicated region for block: B:164:0x0416  */
-    /* JADX WARN: Found duplicated region for block: B:174:0x0444  */
-    /* JADX WARN: Found duplicated region for block: B:176:0x0455  */
-    /* JADX WARN: Found duplicated region for block: B:179:0x0470  */
-    /* JADX WARN: Found duplicated region for block: B:180:0x0482  */
-    /* JADX WARN: Found duplicated region for block: B:182:0x048c  */
-    /* JADX WARN: Found duplicated region for block: B:185:0x04ab  */
-    /* JADX WARN: Found duplicated region for block: B:186:0x04b7  */
+    /* JADX WARN: Found duplicated region for block: B:148:0x03c9 */
+    /* JADX WARN: Found duplicated region for block: B:150:0x03cf */
+    /* JADX WARN: Found duplicated region for block: B:151:0x03db */
+    /* JADX WARN: Found duplicated region for block: B:153:0x03e0 */
+    /* JADX WARN: Found duplicated region for block: B:158:0x03f3 */
+    /* JADX WARN: Found duplicated region for block: B:161:0x040f */
+    /* JADX WARN: Found duplicated region for block: B:163:0x0413 */
+    /* JADX WARN: Found duplicated region for block: B:164:0x0416 */
+    /* JADX WARN: Found duplicated region for block: B:174:0x0444 */
+    /* JADX WARN: Found duplicated region for block: B:176:0x0455 */
+    /* JADX WARN: Found duplicated region for block: B:179:0x0470 */
+    /* JADX WARN: Found duplicated region for block: B:180:0x0482 */
+    /* JADX WARN: Found duplicated region for block: B:182:0x048c */
+    /* JADX WARN: Found duplicated region for block: B:185:0x04ab */
+    /* JADX WARN: Found duplicated region for block: B:186:0x04b7 */
     /* JADX WARN: Found duplicated region for block: B:187:0x04c5 A[MOVE_INLINED] */
-    /* JADX WARN: Found duplicated region for block: B:189:0x050e A[LOOP:12: B:188:0x050c->B:189:0x050e, LOOP_END] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:189:0x050e A[LOOP:12:
+     * B:188:0x050c->B:189:0x050e, LOOP_END]
+     */
     /* JADX WARN: Found duplicated region for block: B:191:0x0528 A[MOVE_INLINED] */
-    /* JADX WARN: Found duplicated region for block: B:193:0x0554  */
-    /* JADX WARN: Found duplicated region for block: B:194:0x055a  */
-    /* JADX WARN: Found duplicated region for block: B:196:0x0562  */
-    /* JADX WARN: Found duplicated region for block: B:198:0x0568  */
-    /* JADX WARN: Found duplicated region for block: B:202:0x0572  */
-    /* JADX WARN: Found duplicated region for block: B:203:0x0576 A[PHI: r37 r42
-      0x0576: PHI (r37v14 boolean) = (r37v2 boolean), (r37v4 boolean), (r37v10 boolean), (r37v11 boolean), (r37v15 boolean) binds: [B:221:0x0681, B:219:0x0658, B:213:0x0609, B:212:0x05f5, B:201:0x0570] A[DONT_GENERATE, DONT_INLINE]
-      0x0576: PHI (r42v15 int) = (r42v3 int), (r42v5 int), (r42v11 int), (r42v12 int), (r42v16 int) binds: [B:221:0x0681, B:219:0x0658, B:213:0x0609, B:212:0x05f5, B:201:0x0570] A[DONT_GENERATE, DONT_INLINE]] */
-    /* JADX WARN: Found duplicated region for block: B:204:0x057a  */
-    /* JADX WARN: Found duplicated region for block: B:206:0x059c A[LOOP:13: B:205:0x059a->B:206:0x059c, LOOP_END] */
-    /* JADX WARN: Found duplicated region for block: B:208:0x05b7  */
-    /* JADX WARN: Found duplicated region for block: B:210:0x05e1 A[LOOP:14: B:209:0x05df->B:210:0x05e1, LOOP_END] */
-    /* JADX WARN: Found duplicated region for block: B:212:0x05f5  */
-    /* JADX WARN: Found duplicated region for block: B:213:0x0609  */
-    /* JADX WARN: Found duplicated region for block: B:214:0x061e  */
-    /* JADX WARN: Found duplicated region for block: B:216:0x0633  */
-    /* JADX WARN: Found duplicated region for block: B:217:0x0645  */
-    /* JADX WARN: Found duplicated region for block: B:219:0x0658  */
-    /* JADX WARN: Found duplicated region for block: B:220:0x066d  */
-    /* JADX WARN: Found duplicated region for block: B:221:0x0681  */
-    /* JADX WARN: Found duplicated region for block: B:222:0x0692  */
-    /* JADX WARN: Found duplicated region for block: B:223:0x06a0  */
-    /* JADX WARN: Found duplicated region for block: B:225:0x06ac  */
-    /* JADX WARN: Found duplicated region for block: B:229:0x06b3  */
-    /* JADX WARN: Found duplicated region for block: B:230:0x06cf  */
-    /* JADX WARN: Found duplicated region for block: B:234:0x06e4  */
-    /* JADX WARN: Found duplicated region for block: B:236:0x06e9 A[ADDED_TO_REGION] */
+    /* JADX WARN: Found duplicated region for block: B:193:0x0554 */
+    /* JADX WARN: Found duplicated region for block: B:194:0x055a */
+    /* JADX WARN: Found duplicated region for block: B:196:0x0562 */
+    /* JADX WARN: Found duplicated region for block: B:198:0x0568 */
+    /* JADX WARN: Found duplicated region for block: B:202:0x0572 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:203:0x0576 A[PHI: r37 r42
+     * 0x0576: PHI (r37v14 boolean) = (r37v2 boolean), (r37v4 boolean), (r37v10
+     * boolean), (r37v11 boolean), (r37v15 boolean) binds: [B:221:0x0681,
+     * B:219:0x0658, B:213:0x0609, B:212:0x05f5, B:201:0x0570] A[DONT_GENERATE,
+     * DONT_INLINE]
+     * 0x0576: PHI (r42v15 int) = (r42v3 int), (r42v5 int), (r42v11 int), (r42v12
+     * int), (r42v16 int) binds: [B:221:0x0681, B:219:0x0658, B:213:0x0609,
+     * B:212:0x05f5, B:201:0x0570] A[DONT_GENERATE, DONT_INLINE]]
+     */
+    /* JADX WARN: Found duplicated region for block: B:204:0x057a */
+    /*
+     * JADX WARN: Found duplicated region for block: B:206:0x059c A[LOOP:13:
+     * B:205:0x059a->B:206:0x059c, LOOP_END]
+     */
+    /* JADX WARN: Found duplicated region for block: B:208:0x05b7 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:210:0x05e1 A[LOOP:14:
+     * B:209:0x05df->B:210:0x05e1, LOOP_END]
+     */
+    /* JADX WARN: Found duplicated region for block: B:212:0x05f5 */
+    /* JADX WARN: Found duplicated region for block: B:213:0x0609 */
+    /* JADX WARN: Found duplicated region for block: B:214:0x061e */
+    /* JADX WARN: Found duplicated region for block: B:216:0x0633 */
+    /* JADX WARN: Found duplicated region for block: B:217:0x0645 */
+    /* JADX WARN: Found duplicated region for block: B:219:0x0658 */
+    /* JADX WARN: Found duplicated region for block: B:220:0x066d */
+    /* JADX WARN: Found duplicated region for block: B:221:0x0681 */
+    /* JADX WARN: Found duplicated region for block: B:222:0x0692 */
+    /* JADX WARN: Found duplicated region for block: B:223:0x06a0 */
+    /* JADX WARN: Found duplicated region for block: B:225:0x06ac */
+    /* JADX WARN: Found duplicated region for block: B:229:0x06b3 */
+    /* JADX WARN: Found duplicated region for block: B:230:0x06cf */
+    /* JADX WARN: Found duplicated region for block: B:234:0x06e4 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:236:0x06e9 A[ADDED_TO_REGION]
+     */
     /* JADX WARN: Found duplicated region for block: B:342:0x03ed A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:354:0x0729 A[SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:355:0x0721 A[ADDED_TO_REGION, REMOVE, SYNTHETIC] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:355:0x0721 A[ADDED_TO_REGION,
+     * REMOVE, SYNTHETIC]
+     */
     private void readCode(MethodVisitor methodVisitor, Context context, int i) {
         int i2;
         char[] cArr;
@@ -641,7 +663,8 @@ public class ClassReader {
                 Label labelCreateLabel = classReader2.createLabel(classReader2.readUnsignedShort(i51), labelArr5);
                 Label labelCreateLabel2 = classReader2.createLabel(classReader2.readUnsignedShort(i51 + 2), labelArr5);
                 Label labelCreateLabel3 = classReader2.createLabel(classReader2.readUnsignedShort(i51 + 4), labelArr5);
-                String utf84 = classReader2.readUTF8(classReader2.cpInfoOffsets[classReader2.readUnsignedShort(i51 + 6)], cArr2);
+                String utf84 = classReader2
+                        .readUTF8(classReader2.cpInfoOffsets[classReader2.readUnsignedShort(i51 + 6)], cArr2);
                 i51 += 8;
                 methodVisitor3.visitTryCatchBlock(labelCreateLabel, labelCreateLabel2, labelCreateLabel3, utf84);
                 unsignedShort5 = i52;
@@ -681,7 +704,9 @@ public class ClassReader {
                             while (true) {
                                 i2 = i55;
                                 if (i59 < i2 - 2) {
-                                    if (bArr2[i59] != b4 || (unsignedShort2 = classReader3.readUnsignedShort(i59 + 1)) < 0 || unsignedShort2 >= i39) {
+                                    if (bArr2[i59] != b4
+                                            || (unsignedShort2 = classReader3.readUnsignedShort(i59 + 1)) < 0
+                                            || unsignedShort2 >= i39) {
                                         i37 = i59;
                                         b = b4;
                                     } else {
@@ -756,7 +781,9 @@ public class ClassReader {
                                             iArr7 = iArr12;
                                             i35 = unsignedShort3;
                                             i36 = stackMapFrame;
-                                            methodVisitor.visitFrame(-1, context.currentFrameLocalCount, context.currentFrameLocalTypes, context.currentFrameStackCount, context.currentFrameStackTypes);
+                                            methodVisitor.visitFrame(-1, context.currentFrameLocalCount,
+                                                    context.currentFrameLocalTypes, context.currentFrameStackCount,
+                                                    context.currentFrameStackTypes);
                                         } else {
                                             iArr6 = iArr11;
                                             i33 = i40;
@@ -765,7 +792,9 @@ public class ClassReader {
                                             iArr7 = iArr12;
                                             i35 = unsignedShort3;
                                             i36 = stackMapFrame;
-                                            methodVisitor2.visitFrame(context.currentFrameType, context.currentFrameLocalCountDelta, context.currentFrameLocalTypes, context.currentFrameStackCount, context.currentFrameStackTypes);
+                                            methodVisitor2.visitFrame(context.currentFrameType,
+                                                    context.currentFrameLocalCountDelta, context.currentFrameLocalTypes,
+                                                    context.currentFrameStackCount, context.currentFrameStackTypes);
                                         }
                                         z11 = false;
                                     } else {
@@ -928,17 +957,28 @@ public class ClassReader {
                                             typeAnnotationBytecodeOffset = i62;
                                             i22 = i65;
                                             z11 = z3;
-                                            while (iArr3 != null && i22 < iArr3.length && typeAnnotationBytecodeOffset <= i68) {
+                                            while (iArr3 != null && i22 < iArr3.length
+                                                    && typeAnnotationBytecodeOffset <= i68) {
                                                 if (typeAnnotationBytecodeOffset == i68) {
-                                                    int typeAnnotationTarget = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                                    int typeAnnotationTarget = classReader3
+                                                            .readTypeAnnotationTarget(context, iArr3[i22]);
                                                     i32 = i14;
                                                     boolean z12 = z9;
-                                                    classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget, cArr), z12), typeAnnotationTarget + 2, z12, cArr);
+                                                    classReader3
+                                                            .readElementValues(
+                                                                    methodVisitor2.visitInsnAnnotation(
+                                                                            context.currentTypeAnnotationTarget,
+                                                                            context.currentTypeAnnotationTargetPath,
+                                                                            classReader3.readUTF8(typeAnnotationTarget,
+                                                                                    cArr),
+                                                                            z12),
+                                                                    typeAnnotationTarget + 2, z12, cArr);
                                                 } else {
                                                     i32 = i14;
                                                 }
                                                 i22++;
-                                                typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                                typeAnnotationBytecodeOffset = classReader3
+                                                        .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                                 i14 = i32;
                                                 z9 = true;
                                             }
@@ -954,18 +994,27 @@ public class ClassReader {
                                                         i28 = i11;
                                                     } else {
                                                         if (typeAnnotationBytecodeOffset2 == i68) {
-                                                            int typeAnnotationTarget2 = classReader3.readTypeAnnotationTarget(context, iArr5[i25]);
+                                                            int typeAnnotationTarget2 = classReader3
+                                                                    .readTypeAnnotationTarget(context, iArr5[i25]);
                                                             i29 = i25;
                                                             i30 = typeAnnotationBytecodeOffset;
                                                             i31 = i11;
-                                                            classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget2, cArr), false), typeAnnotationTarget2 + 2, true, cArr);
+                                                            classReader3.readElementValues(
+                                                                    methodVisitor2.visitInsnAnnotation(
+                                                                            context.currentTypeAnnotationTarget,
+                                                                            context.currentTypeAnnotationTargetPath,
+                                                                            classReader3.readUTF8(typeAnnotationTarget2,
+                                                                                    cArr),
+                                                                            false),
+                                                                    typeAnnotationTarget2 + 2, true, cArr);
                                                         } else {
                                                             i29 = i25;
                                                             i30 = typeAnnotationBytecodeOffset;
                                                             i31 = i11;
                                                         }
                                                         i25 = i29 + 1;
-                                                        typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                                        typeAnnotationBytecodeOffset2 = classReader3
+                                                                .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                                         iArr2 = iArr5;
                                                         typeAnnotationBytecodeOffset = i30;
                                                         i11 = i31;
@@ -1005,15 +1054,25 @@ public class ClassReader {
                                             z11 = z3;
                                             while (iArr3 != null) {
                                                 if (typeAnnotationBytecodeOffset == i68) {
-                                                    int typeAnnotationTarget3 = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                                    int typeAnnotationTarget3 = classReader3
+                                                            .readTypeAnnotationTarget(context, iArr3[i22]);
                                                     i32 = i14;
                                                     boolean z122 = z9;
-                                                    classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget3, cArr), z122), typeAnnotationTarget3 + 2, z122, cArr);
+                                                    classReader3
+                                                            .readElementValues(
+                                                                    methodVisitor2.visitInsnAnnotation(
+                                                                            context.currentTypeAnnotationTarget,
+                                                                            context.currentTypeAnnotationTargetPath,
+                                                                            classReader3.readUTF8(typeAnnotationTarget3,
+                                                                                    cArr),
+                                                                            z122),
+                                                                    typeAnnotationTarget3 + 2, z122, cArr);
                                                 } else {
                                                     i32 = i14;
                                                 }
                                                 i22++;
-                                                typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                                typeAnnotationBytecodeOffset = classReader3
+                                                        .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                                 i14 = i32;
                                                 z9 = true;
                                             }
@@ -1035,7 +1094,8 @@ public class ClassReader {
                                                     iArr5 = iArr2;
                                                 }
                                                 i25 = i29 + 1;
-                                                typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                                typeAnnotationBytecodeOffset2 = classReader3
+                                                        .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                                 iArr2 = iArr5;
                                                 typeAnnotationBytecodeOffset = i30;
                                                 i11 = i31;
@@ -1066,15 +1126,25 @@ public class ClassReader {
                                             z11 = z3;
                                             while (iArr3 != null) {
                                                 if (typeAnnotationBytecodeOffset == i68) {
-                                                    int typeAnnotationTarget32 = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                                    int typeAnnotationTarget32 = classReader3
+                                                            .readTypeAnnotationTarget(context, iArr3[i22]);
                                                     i32 = i14;
                                                     boolean z1222 = z9;
-                                                    classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget32, cArr), z1222), typeAnnotationTarget32 + 2, z1222, cArr);
+                                                    classReader3
+                                                            .readElementValues(
+                                                                    methodVisitor2.visitInsnAnnotation(
+                                                                            context.currentTypeAnnotationTarget,
+                                                                            context.currentTypeAnnotationTargetPath,
+                                                                            classReader3.readUTF8(
+                                                                                    typeAnnotationTarget32, cArr),
+                                                                            z1222),
+                                                                    typeAnnotationTarget32 + 2, z1222, cArr);
                                                 } else {
                                                     i32 = i14;
                                                 }
                                                 i22++;
-                                                typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                                typeAnnotationBytecodeOffset = classReader3
+                                                        .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                                 i14 = i32;
                                                 z9 = true;
                                             }
@@ -1096,7 +1166,8 @@ public class ClassReader {
                                                     iArr5 = iArr2;
                                                 }
                                                 i25 = i29 + 1;
-                                                typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                                typeAnnotationBytecodeOffset2 = classReader3
+                                                        .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                                 iArr2 = iArr5;
                                                 typeAnnotationBytecodeOffset = i30;
                                                 i11 = i31;
@@ -1121,22 +1192,32 @@ public class ClassReader {
                                         case 18:
                                             i13 = i5;
                                             z4 = z;
-                                            methodVisitor2.visitLdcInsn(classReader3.readConst(bArr[i67 + 1] & 255, cArr));
+                                            methodVisitor2
+                                                    .visitLdcInsn(classReader3.readConst(bArr[i67 + 1] & 255, cArr));
                                             i14 = i67 + 2;
                                             typeAnnotationBytecodeOffset = i62;
                                             i22 = i65;
                                             z11 = z3;
                                             while (iArr3 != null) {
                                                 if (typeAnnotationBytecodeOffset == i68) {
-                                                    int typeAnnotationTarget322 = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                                    int typeAnnotationTarget322 = classReader3
+                                                            .readTypeAnnotationTarget(context, iArr3[i22]);
                                                     i32 = i14;
                                                     boolean z12222 = z9;
-                                                    classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget322, cArr), z12222), typeAnnotationTarget322 + 2, z12222, cArr);
+                                                    classReader3.readElementValues(
+                                                            methodVisitor2.visitInsnAnnotation(
+                                                                    context.currentTypeAnnotationTarget,
+                                                                    context.currentTypeAnnotationTargetPath,
+                                                                    classReader3.readUTF8(typeAnnotationTarget322,
+                                                                            cArr),
+                                                                    z12222),
+                                                            typeAnnotationTarget322 + 2, z12222, cArr);
                                                 } else {
                                                     i32 = i14;
                                                 }
                                                 i22++;
-                                                typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                                typeAnnotationBytecodeOffset = classReader3
+                                                        .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                                 i14 = i32;
                                                 z9 = true;
                                             }
@@ -1158,7 +1239,8 @@ public class ClassReader {
                                                     iArr5 = iArr2;
                                                 }
                                                 i25 = i29 + 1;
-                                                typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                                typeAnnotationBytecodeOffset2 = classReader3
+                                                        .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                                 iArr2 = iArr5;
                                                 typeAnnotationBytecodeOffset = i30;
                                                 i11 = i31;
@@ -1184,21 +1266,31 @@ public class ClassReader {
                                         case 20:
                                             i13 = i5;
                                             z4 = z;
-                                            methodVisitor2.visitLdcInsn(classReader3.readConst(classReader3.readUnsignedShort(i67 + 1), cArr));
+                                            methodVisitor2.visitLdcInsn(classReader3
+                                                    .readConst(classReader3.readUnsignedShort(i67 + 1), cArr));
                                             typeAnnotationBytecodeOffset = i62;
                                             i22 = i65;
                                             z11 = z3;
                                             while (iArr3 != null) {
                                                 if (typeAnnotationBytecodeOffset == i68) {
-                                                    int typeAnnotationTarget3222 = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                                    int typeAnnotationTarget3222 = classReader3
+                                                            .readTypeAnnotationTarget(context, iArr3[i22]);
                                                     i32 = i14;
                                                     boolean z122222 = z9;
-                                                    classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget3222, cArr), z122222), typeAnnotationTarget3222 + 2, z122222, cArr);
+                                                    classReader3.readElementValues(
+                                                            methodVisitor2.visitInsnAnnotation(
+                                                                    context.currentTypeAnnotationTarget,
+                                                                    context.currentTypeAnnotationTargetPath,
+                                                                    classReader3.readUTF8(typeAnnotationTarget3222,
+                                                                            cArr),
+                                                                    z122222),
+                                                            typeAnnotationTarget3222 + 2, z122222, cArr);
                                                 } else {
                                                     i32 = i14;
                                                 }
                                                 i22++;
-                                                typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                                typeAnnotationBytecodeOffset = classReader3
+                                                        .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                                 i14 = i32;
                                                 z9 = true;
                                             }
@@ -1220,7 +1312,8 @@ public class ClassReader {
                                                     iArr5 = iArr2;
                                                 }
                                                 i25 = i29 + 1;
-                                                typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                                typeAnnotationBytecodeOffset2 = classReader3
+                                                        .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                                 iArr2 = iArr5;
                                                 typeAnnotationBytecodeOffset = i30;
                                                 i11 = i31;
@@ -1262,15 +1355,24 @@ public class ClassReader {
                                             z11 = z3;
                                             while (iArr3 != null) {
                                                 if (typeAnnotationBytecodeOffset == i68) {
-                                                    int typeAnnotationTarget32222 = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                                    int typeAnnotationTarget32222 = classReader3
+                                                            .readTypeAnnotationTarget(context, iArr3[i22]);
                                                     i32 = i14;
                                                     boolean z1222222 = z9;
-                                                    classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget32222, cArr), z1222222), typeAnnotationTarget32222 + 2, z1222222, cArr);
+                                                    classReader3.readElementValues(
+                                                            methodVisitor2.visitInsnAnnotation(
+                                                                    context.currentTypeAnnotationTarget,
+                                                                    context.currentTypeAnnotationTargetPath,
+                                                                    classReader3.readUTF8(typeAnnotationTarget32222,
+                                                                            cArr),
+                                                                    z1222222),
+                                                            typeAnnotationTarget32222 + 2, z1222222, cArr);
                                                 } else {
                                                     i32 = i14;
                                                 }
                                                 i22++;
-                                                typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                                typeAnnotationBytecodeOffset = classReader3
+                                                        .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                                 i14 = i32;
                                                 z9 = true;
                                             }
@@ -1292,7 +1394,8 @@ public class ClassReader {
                                                     iArr5 = iArr2;
                                                 }
                                                 i25 = i29 + 1;
-                                                typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                                typeAnnotationBytecodeOffset2 = classReader3
+                                                        .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                                 iArr2 = iArr5;
                                                 typeAnnotationBytecodeOffset = i30;
                                                 i11 = i31;
@@ -1344,15 +1447,24 @@ public class ClassReader {
                                             z11 = z3;
                                             while (iArr3 != null) {
                                                 if (typeAnnotationBytecodeOffset == i68) {
-                                                    int typeAnnotationTarget322222 = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                                    int typeAnnotationTarget322222 = classReader3
+                                                            .readTypeAnnotationTarget(context, iArr3[i22]);
                                                     i32 = i14;
                                                     boolean z12222222 = z9;
-                                                    classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget322222, cArr), z12222222), typeAnnotationTarget322222 + 2, z12222222, cArr);
+                                                    classReader3.readElementValues(
+                                                            methodVisitor2.visitInsnAnnotation(
+                                                                    context.currentTypeAnnotationTarget,
+                                                                    context.currentTypeAnnotationTargetPath,
+                                                                    classReader3.readUTF8(typeAnnotationTarget322222,
+                                                                            cArr),
+                                                                    z12222222),
+                                                            typeAnnotationTarget322222 + 2, z12222222, cArr);
                                                 } else {
                                                     i32 = i14;
                                                 }
                                                 i22++;
-                                                typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                                typeAnnotationBytecodeOffset = classReader3
+                                                        .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                                 i14 = i32;
                                                 z9 = true;
                                             }
@@ -1374,7 +1486,8 @@ public class ClassReader {
                                                     iArr5 = iArr2;
                                                 }
                                                 i25 = i29 + 1;
-                                                typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                                typeAnnotationBytecodeOffset2 = classReader3
+                                                        .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                                 iArr2 = iArr5;
                                                 typeAnnotationBytecodeOffset = i30;
                                                 i11 = i31;
@@ -1426,15 +1539,24 @@ public class ClassReader {
                                             z11 = z3;
                                             while (iArr3 != null) {
                                                 if (typeAnnotationBytecodeOffset == i68) {
-                                                    int typeAnnotationTarget3222222 = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                                    int typeAnnotationTarget3222222 = classReader3
+                                                            .readTypeAnnotationTarget(context, iArr3[i22]);
                                                     i32 = i14;
                                                     boolean z122222222 = z9;
-                                                    classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget3222222, cArr), z122222222), typeAnnotationTarget3222222 + 2, z122222222, cArr);
+                                                    classReader3.readElementValues(
+                                                            methodVisitor2.visitInsnAnnotation(
+                                                                    context.currentTypeAnnotationTarget,
+                                                                    context.currentTypeAnnotationTargetPath,
+                                                                    classReader3.readUTF8(typeAnnotationTarget3222222,
+                                                                            cArr),
+                                                                    z122222222),
+                                                            typeAnnotationTarget3222222 + 2, z122222222, cArr);
                                                 } else {
                                                     i32 = i14;
                                                 }
                                                 i22++;
-                                                typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                                typeAnnotationBytecodeOffset = classReader3
+                                                        .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                                 i14 = i32;
                                                 z9 = true;
                                             }
@@ -1456,7 +1578,8 @@ public class ClassReader {
                                                     iArr5 = iArr2;
                                                 }
                                                 i25 = i29 + 1;
-                                                typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                                typeAnnotationBytecodeOffset2 = classReader3
+                                                        .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                                 iArr2 = iArr5;
                                                 typeAnnotationBytecodeOffset = i30;
                                                 i11 = i31;
@@ -1487,15 +1610,24 @@ public class ClassReader {
                                             z11 = z3;
                                             while (iArr3 != null) {
                                                 if (typeAnnotationBytecodeOffset == i68) {
-                                                    int typeAnnotationTarget32222222 = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                                    int typeAnnotationTarget32222222 = classReader3
+                                                            .readTypeAnnotationTarget(context, iArr3[i22]);
                                                     i32 = i14;
                                                     boolean z1222222222 = z9;
-                                                    classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget32222222, cArr), z1222222222), typeAnnotationTarget32222222 + 2, z1222222222, cArr);
+                                                    classReader3.readElementValues(
+                                                            methodVisitor2.visitInsnAnnotation(
+                                                                    context.currentTypeAnnotationTarget,
+                                                                    context.currentTypeAnnotationTargetPath,
+                                                                    classReader3.readUTF8(typeAnnotationTarget32222222,
+                                                                            cArr),
+                                                                    z1222222222),
+                                                            typeAnnotationTarget32222222 + 2, z1222222222, cArr);
                                                 } else {
                                                     i32 = i14;
                                                 }
                                                 i22++;
-                                                typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                                typeAnnotationBytecodeOffset = classReader3
+                                                        .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                                 i14 = i32;
                                                 z9 = true;
                                             }
@@ -1517,7 +1649,8 @@ public class ClassReader {
                                                     iArr5 = iArr2;
                                                 }
                                                 i25 = i29 + 1;
-                                                typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                                typeAnnotationBytecodeOffset2 = classReader3
+                                                        .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                                 iArr2 = iArr5;
                                                 typeAnnotationBytecodeOffset = i30;
                                                 i11 = i31;
@@ -1559,21 +1692,31 @@ public class ClassReader {
                                         case 199:
                                             i13 = i5;
                                             z4 = z;
-                                            methodVisitor2.visitJumpInsn(i12, labelArr[classReader3.readShort(i67 + 1) + i68]);
+                                            methodVisitor2.visitJumpInsn(i12,
+                                                    labelArr[classReader3.readShort(i67 + 1) + i68]);
                                             typeAnnotationBytecodeOffset = i62;
                                             i22 = i65;
                                             z11 = z3;
                                             while (iArr3 != null) {
                                                 if (typeAnnotationBytecodeOffset == i68) {
-                                                    int typeAnnotationTarget322222222 = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                                    int typeAnnotationTarget322222222 = classReader3
+                                                            .readTypeAnnotationTarget(context, iArr3[i22]);
                                                     i32 = i14;
                                                     boolean z12222222222 = z9;
-                                                    classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget322222222, cArr), z12222222222), typeAnnotationTarget322222222 + 2, z12222222222, cArr);
+                                                    classReader3.readElementValues(
+                                                            methodVisitor2.visitInsnAnnotation(
+                                                                    context.currentTypeAnnotationTarget,
+                                                                    context.currentTypeAnnotationTargetPath,
+                                                                    classReader3.readUTF8(typeAnnotationTarget322222222,
+                                                                            cArr),
+                                                                    z12222222222),
+                                                            typeAnnotationTarget322222222 + 2, z12222222222, cArr);
                                                 } else {
                                                     i32 = i14;
                                                 }
                                                 i22++;
-                                                typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                                typeAnnotationBytecodeOffset = classReader3
+                                                        .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                                 i14 = i32;
                                                 z9 = true;
                                             }
@@ -1595,7 +1738,8 @@ public class ClassReader {
                                                     iArr5 = iArr2;
                                                 }
                                                 i25 = i29 + 1;
-                                                typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                                typeAnnotationBytecodeOffset2 = classReader3
+                                                        .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                                 iArr2 = iArr5;
                                                 typeAnnotationBytecodeOffset = i30;
                                                 i11 = i31;
@@ -1637,15 +1781,24 @@ public class ClassReader {
                                             z11 = z3;
                                             while (iArr3 != null) {
                                                 if (typeAnnotationBytecodeOffset == i68) {
-                                                    int typeAnnotationTarget3222222222 = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                                    int typeAnnotationTarget3222222222 = classReader3
+                                                            .readTypeAnnotationTarget(context, iArr3[i22]);
                                                     i32 = i14;
                                                     boolean z122222222222 = z9;
-                                                    classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget3222222222, cArr), z122222222222), typeAnnotationTarget3222222222 + 2, z122222222222, cArr);
+                                                    classReader3.readElementValues(
+                                                            methodVisitor2.visitInsnAnnotation(
+                                                                    context.currentTypeAnnotationTarget,
+                                                                    context.currentTypeAnnotationTargetPath,
+                                                                    classReader3.readUTF8(
+                                                                            typeAnnotationTarget3222222222, cArr),
+                                                                    z122222222222),
+                                                            typeAnnotationTarget3222222222 + 2, z122222222222, cArr);
                                                 } else {
                                                     i32 = i14;
                                                 }
                                                 i22++;
-                                                typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                                typeAnnotationBytecodeOffset = classReader3
+                                                        .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                                 i14 = i32;
                                                 z9 = true;
                                             }
@@ -1667,7 +1820,8 @@ public class ClassReader {
                                                     iArr5 = iArr2;
                                                 }
                                                 i25 = i29 + 1;
-                                                typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                                typeAnnotationBytecodeOffset2 = classReader3
+                                                        .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                                 iArr2 = iArr5;
                                                 typeAnnotationBytecodeOffset = i30;
                                                 i11 = i31;
@@ -1709,15 +1863,24 @@ public class ClassReader {
                                             z11 = z3;
                                             while (iArr3 != null) {
                                                 if (typeAnnotationBytecodeOffset == i68) {
-                                                    int typeAnnotationTarget32222222222 = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                                    int typeAnnotationTarget32222222222 = classReader3
+                                                            .readTypeAnnotationTarget(context, iArr3[i22]);
                                                     i32 = i14;
                                                     boolean z1222222222222 = z9;
-                                                    classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget32222222222, cArr), z1222222222222), typeAnnotationTarget32222222222 + 2, z1222222222222, cArr);
+                                                    classReader3.readElementValues(
+                                                            methodVisitor2.visitInsnAnnotation(
+                                                                    context.currentTypeAnnotationTarget,
+                                                                    context.currentTypeAnnotationTargetPath,
+                                                                    classReader3.readUTF8(
+                                                                            typeAnnotationTarget32222222222, cArr),
+                                                                    z1222222222222),
+                                                            typeAnnotationTarget32222222222 + 2, z1222222222222, cArr);
                                                 } else {
                                                     i32 = i14;
                                                 }
                                                 i22++;
-                                                typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                                typeAnnotationBytecodeOffset = classReader3
+                                                        .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                                 i14 = i32;
                                                 z9 = true;
                                             }
@@ -1739,7 +1902,8 @@ public class ClassReader {
                                                     iArr5 = iArr2;
                                                 }
                                                 i25 = i29 + 1;
-                                                typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                                typeAnnotationBytecodeOffset2 = classReader3
+                                                        .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                                 iArr2 = iArr5;
                                                 typeAnnotationBytecodeOffset = i30;
                                                 i11 = i31;
@@ -1772,7 +1936,8 @@ public class ClassReader {
                                             i13 = i5;
                                             z4 = z;
                                             i19 = classReader3.cpInfoOffsets[classReader3.readUnsignedShort(i67 + 1)];
-                                            int i78 = classReader3.cpInfoOffsets[classReader3.readUnsignedShort(i19 + 2)];
+                                            int i78 = classReader3.cpInfoOffsets[classReader3
+                                                    .readUnsignedShort(i19 + 2)];
                                             str = classReader3.readClass(i19, cArr);
                                             utf82 = classReader3.readUTF8(i78, cArr);
                                             utf83 = classReader3.readUTF8(i78 + 2, cArr);
@@ -1794,15 +1959,25 @@ public class ClassReader {
                                             z11 = z3;
                                             while (iArr3 != null) {
                                                 if (typeAnnotationBytecodeOffset == i68) {
-                                                    int typeAnnotationTarget322222222222 = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                                    int typeAnnotationTarget322222222222 = classReader3
+                                                            .readTypeAnnotationTarget(context, iArr3[i22]);
                                                     i32 = i14;
                                                     boolean z12222222222222 = z9;
-                                                    classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget322222222222, cArr), z12222222222222), typeAnnotationTarget322222222222 + 2, z12222222222222, cArr);
+                                                    classReader3.readElementValues(
+                                                            methodVisitor2.visitInsnAnnotation(
+                                                                    context.currentTypeAnnotationTarget,
+                                                                    context.currentTypeAnnotationTargetPath,
+                                                                    classReader3.readUTF8(
+                                                                            typeAnnotationTarget322222222222, cArr),
+                                                                    z12222222222222),
+                                                            typeAnnotationTarget322222222222 + 2, z12222222222222,
+                                                            cArr);
                                                 } else {
                                                     i32 = i14;
                                                 }
                                                 i22++;
-                                                typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                                typeAnnotationBytecodeOffset = classReader3
+                                                        .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                                 i14 = i32;
                                                 z9 = true;
                                             }
@@ -1824,7 +1999,8 @@ public class ClassReader {
                                                     iArr5 = iArr2;
                                                 }
                                                 i25 = i29 + 1;
-                                                typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                                typeAnnotationBytecodeOffset2 = classReader3
+                                                        .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                                 iArr2 = iArr5;
                                                 typeAnnotationBytecodeOffset = i30;
                                                 i11 = i31;
@@ -1847,12 +2023,16 @@ public class ClassReader {
                                             stackMapFrame = i28;
                                             break;
                                         case 186:
-                                            int i79 = classReader3.cpInfoOffsets[classReader3.readUnsignedShort(i67 + 1)];
-                                            int i80 = classReader3.cpInfoOffsets[classReader3.readUnsignedShort(i79 + 2)];
+                                            int i79 = classReader3.cpInfoOffsets[classReader3
+                                                    .readUnsignedShort(i67 + 1)];
+                                            int i80 = classReader3.cpInfoOffsets[classReader3
+                                                    .readUnsignedShort(i79 + 2)];
                                             String utf85 = classReader3.readUTF8(i80, cArr);
                                             String utf86 = classReader3.readUTF8(i80 + 2, cArr);
-                                            int i81 = classReader3.bootstrapMethodOffsets[classReader3.readUnsignedShort(i79)];
-                                            Handle handle = (Handle) classReader3.readConst(classReader3.readUnsignedShort(i81), cArr);
+                                            int i81 = classReader3.bootstrapMethodOffsets[classReader3
+                                                    .readUnsignedShort(i79)];
+                                            Handle handle = (Handle) classReader3
+                                                    .readConst(classReader3.readUnsignedShort(i81), cArr);
                                             unsignedShort = classReader3.readUnsignedShort(i81 + 2);
                                             objArr = new Object[unsignedShort];
                                             z4 = z;
@@ -1860,7 +2040,8 @@ public class ClassReader {
                                             i13 = i5;
                                             i21 = 0;
                                             while (i21 < unsignedShort) {
-                                                objArr[i21] = classReader3.readConst(classReader3.readUnsignedShort(i20), cArr);
+                                                objArr[i21] = classReader3
+                                                        .readConst(classReader3.readUnsignedShort(i20), cArr);
                                                 i20 += 2;
                                                 i21++;
                                                 unsignedShort = unsignedShort;
@@ -1872,15 +2053,25 @@ public class ClassReader {
                                             z11 = z3;
                                             while (iArr3 != null) {
                                                 if (typeAnnotationBytecodeOffset == i68) {
-                                                    int typeAnnotationTarget3222222222222 = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                                    int typeAnnotationTarget3222222222222 = classReader3
+                                                            .readTypeAnnotationTarget(context, iArr3[i22]);
                                                     i32 = i14;
                                                     boolean z122222222222222 = z9;
-                                                    classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget3222222222222, cArr), z122222222222222), typeAnnotationTarget3222222222222 + 2, z122222222222222, cArr);
+                                                    classReader3.readElementValues(
+                                                            methodVisitor2.visitInsnAnnotation(
+                                                                    context.currentTypeAnnotationTarget,
+                                                                    context.currentTypeAnnotationTargetPath,
+                                                                    classReader3.readUTF8(
+                                                                            typeAnnotationTarget3222222222222, cArr),
+                                                                    z122222222222222),
+                                                            typeAnnotationTarget3222222222222 + 2, z122222222222222,
+                                                            cArr);
                                                 } else {
                                                     i32 = i14;
                                                 }
                                                 i22++;
-                                                typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                                typeAnnotationBytecodeOffset = classReader3
+                                                        .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                                 i14 = i32;
                                                 z9 = true;
                                             }
@@ -1902,7 +2093,8 @@ public class ClassReader {
                                                     iArr5 = iArr2;
                                                 }
                                                 i25 = i29 + 1;
-                                                typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                                typeAnnotationBytecodeOffset2 = classReader3
+                                                        .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                                 iArr2 = iArr5;
                                                 typeAnnotationBytecodeOffset = i30;
                                                 i11 = i31;
@@ -1938,15 +2130,25 @@ public class ClassReader {
                                             z11 = z3;
                                             while (iArr3 != null) {
                                                 if (typeAnnotationBytecodeOffset == i68) {
-                                                    int typeAnnotationTarget32222222222222 = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                                    int typeAnnotationTarget32222222222222 = classReader3
+                                                            .readTypeAnnotationTarget(context, iArr3[i22]);
                                                     i32 = i14;
                                                     boolean z1222222222222222 = z9;
-                                                    classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget32222222222222, cArr), z1222222222222222), typeAnnotationTarget32222222222222 + 2, z1222222222222222, cArr);
+                                                    classReader3.readElementValues(
+                                                            methodVisitor2.visitInsnAnnotation(
+                                                                    context.currentTypeAnnotationTarget,
+                                                                    context.currentTypeAnnotationTargetPath,
+                                                                    classReader3.readUTF8(
+                                                                            typeAnnotationTarget32222222222222, cArr),
+                                                                    z1222222222222222),
+                                                            typeAnnotationTarget32222222222222 + 2, z1222222222222222,
+                                                            cArr);
                                                 } else {
                                                     i32 = i14;
                                                 }
                                                 i22++;
-                                                typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                                typeAnnotationBytecodeOffset = classReader3
+                                                        .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                                 i14 = i32;
                                                 z9 = true;
                                             }
@@ -1968,7 +2170,8 @@ public class ClassReader {
                                                     iArr5 = iArr2;
                                                 }
                                                 i25 = i29 + 1;
-                                                typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                                typeAnnotationBytecodeOffset2 = classReader3
+                                                        .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                                 iArr2 = iArr5;
                                                 typeAnnotationBytecodeOffset = i30;
                                                 i11 = i31;
@@ -1994,10 +2197,12 @@ public class ClassReader {
                                             i23 = bArr[i67 + 1] & 255;
                                             c = 132;
                                             if (i23 == 132) {
-                                                methodVisitor2.visitIincInsn(classReader3.readUnsignedShort(i67 + 2), classReader3.readShort(i67 + 4));
+                                                methodVisitor2.visitIincInsn(classReader3.readUnsignedShort(i67 + 2),
+                                                        classReader3.readShort(i67 + 4));
                                                 i14 = i67 + 6;
                                             } else {
-                                                methodVisitor2.visitVarInsn(i23, classReader3.readUnsignedShort(i67 + 2));
+                                                methodVisitor2.visitVarInsn(i23,
+                                                        classReader3.readUnsignedShort(i67 + 2));
                                                 i14 = i67 + 4;
                                             }
                                             i13 = i5;
@@ -2007,15 +2212,25 @@ public class ClassReader {
                                             z11 = z3;
                                             while (iArr3 != null) {
                                                 if (typeAnnotationBytecodeOffset == i68) {
-                                                    int typeAnnotationTarget322222222222222 = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                                    int typeAnnotationTarget322222222222222 = classReader3
+                                                            .readTypeAnnotationTarget(context, iArr3[i22]);
                                                     i32 = i14;
                                                     boolean z12222222222222222 = z9;
-                                                    classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget322222222222222, cArr), z12222222222222222), typeAnnotationTarget322222222222222 + 2, z12222222222222222, cArr);
+                                                    classReader3.readElementValues(
+                                                            methodVisitor2.visitInsnAnnotation(
+                                                                    context.currentTypeAnnotationTarget,
+                                                                    context.currentTypeAnnotationTargetPath,
+                                                                    classReader3.readUTF8(
+                                                                            typeAnnotationTarget322222222222222, cArr),
+                                                                    z12222222222222222),
+                                                            typeAnnotationTarget322222222222222 + 2, z12222222222222222,
+                                                            cArr);
                                                 } else {
                                                     i32 = i14;
                                                 }
                                                 i22++;
-                                                typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                                typeAnnotationBytecodeOffset = classReader3
+                                                        .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                                 i14 = i32;
                                                 z9 = true;
                                             }
@@ -2037,7 +2252,8 @@ public class ClassReader {
                                                     iArr5 = iArr2;
                                                 }
                                                 i25 = i29 + 1;
-                                                typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                                typeAnnotationBytecodeOffset2 = classReader3
+                                                        .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                                 iArr2 = iArr5;
                                                 typeAnnotationBytecodeOffset = i30;
                                                 i11 = i31;
@@ -2060,7 +2276,8 @@ public class ClassReader {
                                             stackMapFrame = i28;
                                             break;
                                         case 197:
-                                            methodVisitor2.visitMultiANewArrayInsn(classReader3.readClass(i67 + 1, cArr), bArr[i67 + 3] & 255);
+                                            methodVisitor2.visitMultiANewArrayInsn(
+                                                    classReader3.readClass(i67 + 1, cArr), bArr[i67 + 3] & 255);
                                             i14 = i67 + 4;
                                             i13 = i5;
                                             z4 = z;
@@ -2069,15 +2286,25 @@ public class ClassReader {
                                             z11 = z3;
                                             while (iArr3 != null) {
                                                 if (typeAnnotationBytecodeOffset == i68) {
-                                                    int typeAnnotationTarget3222222222222222 = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                                    int typeAnnotationTarget3222222222222222 = classReader3
+                                                            .readTypeAnnotationTarget(context, iArr3[i22]);
                                                     i32 = i14;
                                                     boolean z122222222222222222 = z9;
-                                                    classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget3222222222222222, cArr), z122222222222222222), typeAnnotationTarget3222222222222222 + 2, z122222222222222222, cArr);
+                                                    classReader3.readElementValues(
+                                                            methodVisitor2.visitInsnAnnotation(
+                                                                    context.currentTypeAnnotationTarget,
+                                                                    context.currentTypeAnnotationTargetPath,
+                                                                    classReader3.readUTF8(
+                                                                            typeAnnotationTarget3222222222222222, cArr),
+                                                                    z122222222222222222),
+                                                            typeAnnotationTarget3222222222222222 + 2,
+                                                            z122222222222222222, cArr);
                                                 } else {
                                                     i32 = i14;
                                                 }
                                                 i22++;
-                                                typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                                typeAnnotationBytecodeOffset = classReader3
+                                                        .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                                 i14 = i32;
                                                 z9 = true;
                                             }
@@ -2099,7 +2326,8 @@ public class ClassReader {
                                                     iArr5 = iArr2;
                                                 }
                                                 i25 = i29 + 1;
-                                                typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                                typeAnnotationBytecodeOffset2 = classReader3
+                                                        .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                                 iArr2 = iArr5;
                                                 typeAnnotationBytecodeOffset = i30;
                                                 i11 = i31;
@@ -2123,7 +2351,8 @@ public class ClassReader {
                                             break;
                                         case 200:
                                         case 201:
-                                            methodVisitor2.visitJumpInsn(i12 - i60, labelArr[classReader3.readInt(i67 + 1) + i68]);
+                                            methodVisitor2.visitJumpInsn(i12 - i60,
+                                                    labelArr[classReader3.readInt(i67 + 1) + i68]);
                                             i14 = i67 + 5;
                                             i13 = i5;
                                             z4 = z;
@@ -2132,15 +2361,24 @@ public class ClassReader {
                                             z11 = z3;
                                             while (iArr3 != null) {
                                                 if (typeAnnotationBytecodeOffset == i68) {
-                                                    int typeAnnotationTarget32222222222222222 = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                                    int typeAnnotationTarget32222222222222222 = classReader3
+                                                            .readTypeAnnotationTarget(context, iArr3[i22]);
                                                     i32 = i14;
                                                     boolean z1222222222222222222 = z9;
-                                                    classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget32222222222222222, cArr), z1222222222222222222), typeAnnotationTarget32222222222222222 + 2, z1222222222222222222, cArr);
+                                                    classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(
+                                                            context.currentTypeAnnotationTarget,
+                                                            context.currentTypeAnnotationTargetPath,
+                                                            classReader3.readUTF8(typeAnnotationTarget32222222222222222,
+                                                                    cArr),
+                                                            z1222222222222222222),
+                                                            typeAnnotationTarget32222222222222222 + 2,
+                                                            z1222222222222222222, cArr);
                                                 } else {
                                                     i32 = i14;
                                                 }
                                                 i22++;
-                                                typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                                typeAnnotationBytecodeOffset = classReader3
+                                                        .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                                 i14 = i32;
                                                 z9 = true;
                                             }
@@ -2162,7 +2400,8 @@ public class ClassReader {
                                                     iArr5 = iArr2;
                                                 }
                                                 i25 = i29 + 1;
-                                                typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                                typeAnnotationBytecodeOffset2 = classReader3
+                                                        .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                                 iArr2 = iArr5;
                                                 typeAnnotationBytecodeOffset = i30;
                                                 i11 = i31;
@@ -2208,7 +2447,8 @@ public class ClassReader {
                                                 methodVisitor2.visitJumpInsn(i24 + 33, label);
                                                 z6 = z3;
                                             } else {
-                                                methodVisitor2.visitJumpInsn(i24 < 167 ? ((i24 + 1) ^ 1) - 1 : i24 ^ 1, classReader3.createLabel(i68 + 3, labelArr));
+                                                methodVisitor2.visitJumpInsn(i24 < 167 ? ((i24 + 1) ^ 1) - 1 : i24 ^ 1,
+                                                        classReader3.createLabel(i68 + 3, labelArr));
                                                 methodVisitor2.visitJumpInsn(200, label);
                                                 z6 = z9;
                                             }
@@ -2220,15 +2460,26 @@ public class ClassReader {
                                             i22 = i65;
                                             while (iArr3 != null) {
                                                 if (typeAnnotationBytecodeOffset == i68) {
-                                                    int typeAnnotationTarget322222222222222222 = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                                    int typeAnnotationTarget322222222222222222 = classReader3
+                                                            .readTypeAnnotationTarget(context, iArr3[i22]);
                                                     i32 = i14;
                                                     boolean z12222222222222222222 = z9;
-                                                    classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget322222222222222222, cArr), z12222222222222222222), typeAnnotationTarget322222222222222222 + 2, z12222222222222222222, cArr);
+                                                    classReader3.readElementValues(
+                                                            methodVisitor2.visitInsnAnnotation(
+                                                                    context.currentTypeAnnotationTarget,
+                                                                    context.currentTypeAnnotationTargetPath,
+                                                                    classReader3.readUTF8(
+                                                                            typeAnnotationTarget322222222222222222,
+                                                                            cArr),
+                                                                    z12222222222222222222),
+                                                            typeAnnotationTarget322222222222222222 + 2,
+                                                            z12222222222222222222, cArr);
                                                 } else {
                                                     i32 = i14;
                                                 }
                                                 i22++;
-                                                typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                                typeAnnotationBytecodeOffset = classReader3
+                                                        .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                                 i14 = i32;
                                                 z9 = true;
                                             }
@@ -2250,7 +2501,8 @@ public class ClassReader {
                                                     iArr5 = iArr2;
                                                 }
                                                 i25 = i29 + 1;
-                                                typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                                typeAnnotationBytecodeOffset2 = classReader3
+                                                        .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                                 iArr2 = iArr5;
                                                 typeAnnotationBytecodeOffset = i30;
                                                 i11 = i31;
@@ -2273,7 +2525,8 @@ public class ClassReader {
                                             stackMapFrame = i28;
                                             break;
                                         case com.android.dx.io.Opcodes.REM_INT_LIT8 /* 220 */:
-                                            methodVisitor2.visitJumpInsn(200, labelArr[classReader3.readInt(i67 + 1) + i68]);
+                                            methodVisitor2.visitJumpInsn(200,
+                                                    labelArr[classReader3.readInt(i67 + 1) + i68]);
                                             i14 = i67 + 5;
                                             i13 = i5;
                                             z4 = z;
@@ -2282,15 +2535,26 @@ public class ClassReader {
                                             i22 = i65;
                                             while (iArr3 != null) {
                                                 if (typeAnnotationBytecodeOffset == i68) {
-                                                    int typeAnnotationTarget3222222222222222222 = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                                    int typeAnnotationTarget3222222222222222222 = classReader3
+                                                            .readTypeAnnotationTarget(context, iArr3[i22]);
                                                     i32 = i14;
                                                     boolean z122222222222222222222 = z9;
-                                                    classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget3222222222222222222, cArr), z122222222222222222222), typeAnnotationTarget3222222222222222222 + 2, z122222222222222222222, cArr);
+                                                    classReader3.readElementValues(
+                                                            methodVisitor2.visitInsnAnnotation(
+                                                                    context.currentTypeAnnotationTarget,
+                                                                    context.currentTypeAnnotationTargetPath,
+                                                                    classReader3.readUTF8(
+                                                                            typeAnnotationTarget3222222222222222222,
+                                                                            cArr),
+                                                                    z122222222222222222222),
+                                                            typeAnnotationTarget3222222222222222222 + 2,
+                                                            z122222222222222222222, cArr);
                                                 } else {
                                                     i32 = i14;
                                                 }
                                                 i22++;
-                                                typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                                typeAnnotationBytecodeOffset = classReader3
+                                                        .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                                 i14 = i32;
                                                 z9 = true;
                                             }
@@ -2312,7 +2576,8 @@ public class ClassReader {
                                                     iArr5 = iArr2;
                                                 }
                                                 i25 = i29 + 1;
-                                                typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                                typeAnnotationBytecodeOffset2 = classReader3
+                                                        .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                                 iArr2 = iArr5;
                                                 typeAnnotationBytecodeOffset = i30;
                                                 i11 = i31;
@@ -2476,15 +2741,25 @@ public class ClassReader {
                                     z11 = z3;
                                     while (iArr3 != null) {
                                         if (typeAnnotationBytecodeOffset == i68) {
-                                            int typeAnnotationTarget32222222222222222222 = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                            int typeAnnotationTarget32222222222222222222 = classReader3
+                                                    .readTypeAnnotationTarget(context, iArr3[i22]);
                                             i32 = i14;
                                             boolean z1222222222222222222222 = z9;
-                                            classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget32222222222222222222, cArr), z1222222222222222222222), typeAnnotationTarget32222222222222222222 + 2, z1222222222222222222222, cArr);
+                                            classReader3.readElementValues(
+                                                    methodVisitor2.visitInsnAnnotation(
+                                                            context.currentTypeAnnotationTarget,
+                                                            context.currentTypeAnnotationTargetPath,
+                                                            classReader3.readUTF8(
+                                                                    typeAnnotationTarget32222222222222222222, cArr),
+                                                            z1222222222222222222222),
+                                                    typeAnnotationTarget32222222222222222222 + 2,
+                                                    z1222222222222222222222, cArr);
                                         } else {
                                             i32 = i14;
                                         }
                                         i22++;
-                                        typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                        typeAnnotationBytecodeOffset = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                         i14 = i32;
                                         z9 = true;
                                     }
@@ -2506,7 +2781,8 @@ public class ClassReader {
                                             iArr5 = iArr2;
                                         }
                                         i25 = i29 + 1;
-                                        typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                        typeAnnotationBytecodeOffset2 = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                         iArr2 = iArr5;
                                         typeAnnotationBytecodeOffset = i30;
                                         i11 = i31;
@@ -2539,15 +2815,25 @@ public class ClassReader {
                                     z11 = z3;
                                     while (iArr3 != null) {
                                         if (typeAnnotationBytecodeOffset == i68) {
-                                            int typeAnnotationTarget322222222222222222222 = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                            int typeAnnotationTarget322222222222222222222 = classReader3
+                                                    .readTypeAnnotationTarget(context, iArr3[i22]);
                                             i32 = i14;
                                             boolean z12222222222222222222222 = z9;
-                                            classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget322222222222222222222, cArr), z12222222222222222222222), typeAnnotationTarget322222222222222222222 + 2, z12222222222222222222222, cArr);
+                                            classReader3.readElementValues(
+                                                    methodVisitor2.visitInsnAnnotation(
+                                                            context.currentTypeAnnotationTarget,
+                                                            context.currentTypeAnnotationTargetPath,
+                                                            classReader3.readUTF8(
+                                                                    typeAnnotationTarget322222222222222222222, cArr),
+                                                            z12222222222222222222222),
+                                                    typeAnnotationTarget322222222222222222222 + 2,
+                                                    z12222222222222222222222, cArr);
                                         } else {
                                             i32 = i14;
                                         }
                                         i22++;
-                                        typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                        typeAnnotationBytecodeOffset = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                         i14 = i32;
                                         z9 = true;
                                     }
@@ -2569,7 +2855,8 @@ public class ClassReader {
                                             iArr5 = iArr2;
                                         }
                                         i25 = i29 + 1;
-                                        typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                        typeAnnotationBytecodeOffset2 = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                         iArr2 = iArr5;
                                         typeAnnotationBytecodeOffset = i30;
                                         i11 = i31;
@@ -2600,15 +2887,25 @@ public class ClassReader {
                                     z11 = z3;
                                     while (iArr3 != null) {
                                         if (typeAnnotationBytecodeOffset == i68) {
-                                            int typeAnnotationTarget3222222222222222222222 = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                            int typeAnnotationTarget3222222222222222222222 = classReader3
+                                                    .readTypeAnnotationTarget(context, iArr3[i22]);
                                             i32 = i14;
                                             boolean z122222222222222222222222 = z9;
-                                            classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget3222222222222222222222, cArr), z122222222222222222222222), typeAnnotationTarget3222222222222222222222 + 2, z122222222222222222222222, cArr);
+                                            classReader3.readElementValues(
+                                                    methodVisitor2.visitInsnAnnotation(
+                                                            context.currentTypeAnnotationTarget,
+                                                            context.currentTypeAnnotationTargetPath,
+                                                            classReader3.readUTF8(
+                                                                    typeAnnotationTarget3222222222222222222222, cArr),
+                                                            z122222222222222222222222),
+                                                    typeAnnotationTarget3222222222222222222222 + 2,
+                                                    z122222222222222222222222, cArr);
                                         } else {
                                             i32 = i14;
                                         }
                                         i22++;
-                                        typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                        typeAnnotationBytecodeOffset = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                         i14 = i32;
                                         z9 = true;
                                     }
@@ -2630,7 +2927,8 @@ public class ClassReader {
                                             iArr5 = iArr2;
                                         }
                                         i25 = i29 + 1;
-                                        typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                        typeAnnotationBytecodeOffset2 = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                         iArr2 = iArr5;
                                         typeAnnotationBytecodeOffset = i30;
                                         i11 = i31;
@@ -2662,15 +2960,25 @@ public class ClassReader {
                                     z11 = z3;
                                     while (iArr3 != null) {
                                         if (typeAnnotationBytecodeOffset == i68) {
-                                            int typeAnnotationTarget32222222222222222222222 = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                            int typeAnnotationTarget32222222222222222222222 = classReader3
+                                                    .readTypeAnnotationTarget(context, iArr3[i22]);
                                             i32 = i14;
                                             boolean z1222222222222222222222222 = z9;
-                                            classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget32222222222222222222222, cArr), z1222222222222222222222222), typeAnnotationTarget32222222222222222222222 + 2, z1222222222222222222222222, cArr);
+                                            classReader3.readElementValues(
+                                                    methodVisitor2.visitInsnAnnotation(
+                                                            context.currentTypeAnnotationTarget,
+                                                            context.currentTypeAnnotationTargetPath,
+                                                            classReader3.readUTF8(
+                                                                    typeAnnotationTarget32222222222222222222222, cArr),
+                                                            z1222222222222222222222222),
+                                                    typeAnnotationTarget32222222222222222222222 + 2,
+                                                    z1222222222222222222222222, cArr);
                                         } else {
                                             i32 = i14;
                                         }
                                         i22++;
-                                        typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                        typeAnnotationBytecodeOffset = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                         i14 = i32;
                                         z9 = true;
                                     }
@@ -2692,7 +3000,8 @@ public class ClassReader {
                                             iArr5 = iArr2;
                                         }
                                         i25 = i29 + 1;
-                                        typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                        typeAnnotationBytecodeOffset2 = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                         iArr2 = iArr5;
                                         typeAnnotationBytecodeOffset = i30;
                                         i11 = i31;
@@ -2718,21 +3027,32 @@ public class ClassReader {
                                 case 20:
                                     i13 = i5;
                                     z4 = z;
-                                    methodVisitor2.visitLdcInsn(classReader3.readConst(classReader3.readUnsignedShort(i67 + 1), cArr));
+                                    methodVisitor2.visitLdcInsn(
+                                            classReader3.readConst(classReader3.readUnsignedShort(i67 + 1), cArr));
                                     typeAnnotationBytecodeOffset = i62;
                                     i22 = i65;
                                     z11 = z3;
                                     while (iArr3 != null) {
                                         if (typeAnnotationBytecodeOffset == i68) {
-                                            int typeAnnotationTarget322222222222222222222222 = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                            int typeAnnotationTarget322222222222222222222222 = classReader3
+                                                    .readTypeAnnotationTarget(context, iArr3[i22]);
                                             i32 = i14;
                                             boolean z12222222222222222222222222 = z9;
-                                            classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget322222222222222222222222, cArr), z12222222222222222222222222), typeAnnotationTarget322222222222222222222222 + 2, z12222222222222222222222222, cArr);
+                                            classReader3.readElementValues(
+                                                    methodVisitor2.visitInsnAnnotation(
+                                                            context.currentTypeAnnotationTarget,
+                                                            context.currentTypeAnnotationTargetPath,
+                                                            classReader3.readUTF8(
+                                                                    typeAnnotationTarget322222222222222222222222, cArr),
+                                                            z12222222222222222222222222),
+                                                    typeAnnotationTarget322222222222222222222222 + 2,
+                                                    z12222222222222222222222222, cArr);
                                         } else {
                                             i32 = i14;
                                         }
                                         i22++;
-                                        typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                        typeAnnotationBytecodeOffset = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                         i14 = i32;
                                         z9 = true;
                                     }
@@ -2754,7 +3074,8 @@ public class ClassReader {
                                             iArr5 = iArr2;
                                         }
                                         i25 = i29 + 1;
-                                        typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                        typeAnnotationBytecodeOffset2 = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                         iArr2 = iArr5;
                                         typeAnnotationBytecodeOffset = i30;
                                         i11 = i31;
@@ -2796,15 +3117,24 @@ public class ClassReader {
                                     z11 = z3;
                                     while (iArr3 != null) {
                                         if (typeAnnotationBytecodeOffset == i68) {
-                                            int typeAnnotationTarget3222222222222222222222222 = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                            int typeAnnotationTarget3222222222222222222222222 = classReader3
+                                                    .readTypeAnnotationTarget(context, iArr3[i22]);
                                             i32 = i14;
                                             boolean z122222222222222222222222222 = z9;
-                                            classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget3222222222222222222222222, cArr), z122222222222222222222222222), typeAnnotationTarget3222222222222222222222222 + 2, z122222222222222222222222222, cArr);
+                                            classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(
+                                                    context.currentTypeAnnotationTarget,
+                                                    context.currentTypeAnnotationTargetPath,
+                                                    classReader3.readUTF8(typeAnnotationTarget3222222222222222222222222,
+                                                            cArr),
+                                                    z122222222222222222222222222),
+                                                    typeAnnotationTarget3222222222222222222222222 + 2,
+                                                    z122222222222222222222222222, cArr);
                                         } else {
                                             i32 = i14;
                                         }
                                         i22++;
-                                        typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                        typeAnnotationBytecodeOffset = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                         i14 = i32;
                                         z9 = true;
                                     }
@@ -2826,7 +3156,8 @@ public class ClassReader {
                                             iArr5 = iArr2;
                                         }
                                         i25 = i29 + 1;
-                                        typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                        typeAnnotationBytecodeOffset2 = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                         iArr2 = iArr5;
                                         typeAnnotationBytecodeOffset = i30;
                                         i11 = i31;
@@ -2878,15 +3209,26 @@ public class ClassReader {
                                     z11 = z3;
                                     while (iArr3 != null) {
                                         if (typeAnnotationBytecodeOffset == i68) {
-                                            int typeAnnotationTarget32222222222222222222222222 = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                            int typeAnnotationTarget32222222222222222222222222 = classReader3
+                                                    .readTypeAnnotationTarget(context, iArr3[i22]);
                                             i32 = i14;
                                             boolean z1222222222222222222222222222 = z9;
-                                            classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget32222222222222222222222222, cArr), z1222222222222222222222222222), typeAnnotationTarget32222222222222222222222222 + 2, z1222222222222222222222222222, cArr);
+                                            classReader3.readElementValues(
+                                                    methodVisitor2.visitInsnAnnotation(
+                                                            context.currentTypeAnnotationTarget,
+                                                            context.currentTypeAnnotationTargetPath,
+                                                            classReader3.readUTF8(
+                                                                    typeAnnotationTarget32222222222222222222222222,
+                                                                    cArr),
+                                                            z1222222222222222222222222222),
+                                                    typeAnnotationTarget32222222222222222222222222 + 2,
+                                                    z1222222222222222222222222222, cArr);
                                         } else {
                                             i32 = i14;
                                         }
                                         i22++;
-                                        typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                        typeAnnotationBytecodeOffset = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                         i14 = i32;
                                         z9 = true;
                                     }
@@ -2908,7 +3250,8 @@ public class ClassReader {
                                             iArr5 = iArr2;
                                         }
                                         i25 = i29 + 1;
-                                        typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                        typeAnnotationBytecodeOffset2 = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                         iArr2 = iArr5;
                                         typeAnnotationBytecodeOffset = i30;
                                         i11 = i31;
@@ -2960,15 +3303,26 @@ public class ClassReader {
                                     z11 = z3;
                                     while (iArr3 != null) {
                                         if (typeAnnotationBytecodeOffset == i68) {
-                                            int typeAnnotationTarget322222222222222222222222222 = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                            int typeAnnotationTarget322222222222222222222222222 = classReader3
+                                                    .readTypeAnnotationTarget(context, iArr3[i22]);
                                             i32 = i14;
                                             boolean z12222222222222222222222222222 = z9;
-                                            classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget322222222222222222222222222, cArr), z12222222222222222222222222222), typeAnnotationTarget322222222222222222222222222 + 2, z12222222222222222222222222222, cArr);
+                                            classReader3.readElementValues(
+                                                    methodVisitor2.visitInsnAnnotation(
+                                                            context.currentTypeAnnotationTarget,
+                                                            context.currentTypeAnnotationTargetPath,
+                                                            classReader3.readUTF8(
+                                                                    typeAnnotationTarget322222222222222222222222222,
+                                                                    cArr),
+                                                            z12222222222222222222222222222),
+                                                    typeAnnotationTarget322222222222222222222222222 + 2,
+                                                    z12222222222222222222222222222, cArr);
                                         } else {
                                             i32 = i14;
                                         }
                                         i22++;
-                                        typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                        typeAnnotationBytecodeOffset = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                         i14 = i32;
                                         z9 = true;
                                     }
@@ -2990,7 +3344,8 @@ public class ClassReader {
                                             iArr5 = iArr2;
                                         }
                                         i25 = i29 + 1;
-                                        typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                        typeAnnotationBytecodeOffset2 = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                         iArr2 = iArr5;
                                         typeAnnotationBytecodeOffset = i30;
                                         i11 = i31;
@@ -3021,15 +3376,26 @@ public class ClassReader {
                                     z11 = z3;
                                     while (iArr3 != null) {
                                         if (typeAnnotationBytecodeOffset == i68) {
-                                            int typeAnnotationTarget3222222222222222222222222222 = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                            int typeAnnotationTarget3222222222222222222222222222 = classReader3
+                                                    .readTypeAnnotationTarget(context, iArr3[i22]);
                                             i32 = i14;
                                             boolean z122222222222222222222222222222 = z9;
-                                            classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget3222222222222222222222222222, cArr), z122222222222222222222222222222), typeAnnotationTarget3222222222222222222222222222 + 2, z122222222222222222222222222222, cArr);
+                                            classReader3.readElementValues(
+                                                    methodVisitor2.visitInsnAnnotation(
+                                                            context.currentTypeAnnotationTarget,
+                                                            context.currentTypeAnnotationTargetPath,
+                                                            classReader3.readUTF8(
+                                                                    typeAnnotationTarget3222222222222222222222222222,
+                                                                    cArr),
+                                                            z122222222222222222222222222222),
+                                                    typeAnnotationTarget3222222222222222222222222222 + 2,
+                                                    z122222222222222222222222222222, cArr);
                                         } else {
                                             i32 = i14;
                                         }
                                         i22++;
-                                        typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                        typeAnnotationBytecodeOffset = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                         i14 = i32;
                                         z9 = true;
                                     }
@@ -3051,7 +3417,8 @@ public class ClassReader {
                                             iArr5 = iArr2;
                                         }
                                         i25 = i29 + 1;
-                                        typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                        typeAnnotationBytecodeOffset2 = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                         iArr2 = iArr5;
                                         typeAnnotationBytecodeOffset = i30;
                                         i11 = i31;
@@ -3099,15 +3466,26 @@ public class ClassReader {
                                     z11 = z3;
                                     while (iArr3 != null) {
                                         if (typeAnnotationBytecodeOffset == i68) {
-                                            int typeAnnotationTarget32222222222222222222222222222 = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                            int typeAnnotationTarget32222222222222222222222222222 = classReader3
+                                                    .readTypeAnnotationTarget(context, iArr3[i22]);
                                             i32 = i14;
                                             boolean z1222222222222222222222222222222 = z9;
-                                            classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget32222222222222222222222222222, cArr), z1222222222222222222222222222222), typeAnnotationTarget32222222222222222222222222222 + 2, z1222222222222222222222222222222, cArr);
+                                            classReader3.readElementValues(
+                                                    methodVisitor2.visitInsnAnnotation(
+                                                            context.currentTypeAnnotationTarget,
+                                                            context.currentTypeAnnotationTargetPath,
+                                                            classReader3.readUTF8(
+                                                                    typeAnnotationTarget32222222222222222222222222222,
+                                                                    cArr),
+                                                            z1222222222222222222222222222222),
+                                                    typeAnnotationTarget32222222222222222222222222222 + 2,
+                                                    z1222222222222222222222222222222, cArr);
                                         } else {
                                             i32 = i14;
                                         }
                                         i22++;
-                                        typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                        typeAnnotationBytecodeOffset = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                         i14 = i32;
                                         z9 = true;
                                     }
@@ -3129,7 +3507,8 @@ public class ClassReader {
                                             iArr5 = iArr2;
                                         }
                                         i25 = i29 + 1;
-                                        typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                        typeAnnotationBytecodeOffset2 = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                         iArr2 = iArr5;
                                         typeAnnotationBytecodeOffset = i30;
                                         i11 = i31;
@@ -3171,15 +3550,26 @@ public class ClassReader {
                                     z11 = z3;
                                     while (iArr3 != null) {
                                         if (typeAnnotationBytecodeOffset == i68) {
-                                            int typeAnnotationTarget322222222222222222222222222222 = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                            int typeAnnotationTarget322222222222222222222222222222 = classReader3
+                                                    .readTypeAnnotationTarget(context, iArr3[i22]);
                                             i32 = i14;
                                             boolean z12222222222222222222222222222222 = z9;
-                                            classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget322222222222222222222222222222, cArr), z12222222222222222222222222222222), typeAnnotationTarget322222222222222222222222222222 + 2, z12222222222222222222222222222222, cArr);
+                                            classReader3.readElementValues(
+                                                    methodVisitor2.visitInsnAnnotation(
+                                                            context.currentTypeAnnotationTarget,
+                                                            context.currentTypeAnnotationTargetPath,
+                                                            classReader3.readUTF8(
+                                                                    typeAnnotationTarget322222222222222222222222222222,
+                                                                    cArr),
+                                                            z12222222222222222222222222222222),
+                                                    typeAnnotationTarget322222222222222222222222222222 + 2,
+                                                    z12222222222222222222222222222222, cArr);
                                         } else {
                                             i32 = i14;
                                         }
                                         i22++;
-                                        typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                        typeAnnotationBytecodeOffset = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                         i14 = i32;
                                         z9 = true;
                                     }
@@ -3201,7 +3591,8 @@ public class ClassReader {
                                             iArr5 = iArr2;
                                         }
                                         i25 = i29 + 1;
-                                        typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                        typeAnnotationBytecodeOffset2 = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                         iArr2 = iArr5;
                                         typeAnnotationBytecodeOffset = i30;
                                         i11 = i31;
@@ -3243,15 +3634,26 @@ public class ClassReader {
                                     z11 = z3;
                                     while (iArr3 != null) {
                                         if (typeAnnotationBytecodeOffset == i68) {
-                                            int typeAnnotationTarget3222222222222222222222222222222 = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                            int typeAnnotationTarget3222222222222222222222222222222 = classReader3
+                                                    .readTypeAnnotationTarget(context, iArr3[i22]);
                                             i32 = i14;
                                             boolean z122222222222222222222222222222222 = z9;
-                                            classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget3222222222222222222222222222222, cArr), z122222222222222222222222222222222), typeAnnotationTarget3222222222222222222222222222222 + 2, z122222222222222222222222222222222, cArr);
+                                            classReader3.readElementValues(
+                                                    methodVisitor2.visitInsnAnnotation(
+                                                            context.currentTypeAnnotationTarget,
+                                                            context.currentTypeAnnotationTargetPath,
+                                                            classReader3.readUTF8(
+                                                                    typeAnnotationTarget3222222222222222222222222222222,
+                                                                    cArr),
+                                                            z122222222222222222222222222222222),
+                                                    typeAnnotationTarget3222222222222222222222222222222 + 2,
+                                                    z122222222222222222222222222222222, cArr);
                                         } else {
                                             i32 = i14;
                                         }
                                         i22++;
-                                        typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                        typeAnnotationBytecodeOffset = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                         i14 = i32;
                                         z9 = true;
                                     }
@@ -3273,7 +3675,8 @@ public class ClassReader {
                                             iArr5 = iArr2;
                                         }
                                         i25 = i29 + 1;
-                                        typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                        typeAnnotationBytecodeOffset2 = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                         iArr2 = iArr5;
                                         typeAnnotationBytecodeOffset = i30;
                                         i11 = i31;
@@ -3329,15 +3732,24 @@ public class ClassReader {
                                     z11 = z3;
                                     while (iArr3 != null) {
                                         if (typeAnnotationBytecodeOffset == i68) {
-                                            int typeAnnotationTarget32222222222222222222222222222222 = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                            int typeAnnotationTarget32222222222222222222222222222222 = classReader3
+                                                    .readTypeAnnotationTarget(context, iArr3[i22]);
                                             i32 = i14;
                                             boolean z1222222222222222222222222222222222 = z9;
-                                            classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget32222222222222222222222222222222, cArr), z1222222222222222222222222222222222), typeAnnotationTarget32222222222222222222222222222222 + 2, z1222222222222222222222222222222222, cArr);
+                                            classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(
+                                                    context.currentTypeAnnotationTarget,
+                                                    context.currentTypeAnnotationTargetPath,
+                                                    classReader3.readUTF8(
+                                                            typeAnnotationTarget32222222222222222222222222222222, cArr),
+                                                    z1222222222222222222222222222222222),
+                                                    typeAnnotationTarget32222222222222222222222222222222 + 2,
+                                                    z1222222222222222222222222222222222, cArr);
                                         } else {
                                             i32 = i14;
                                         }
                                         i22++;
-                                        typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                        typeAnnotationBytecodeOffset = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                         i14 = i32;
                                         z9 = true;
                                     }
@@ -3359,7 +3771,8 @@ public class ClassReader {
                                             iArr5 = iArr2;
                                         }
                                         i25 = i29 + 1;
-                                        typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                        typeAnnotationBytecodeOffset2 = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                         iArr2 = iArr5;
                                         typeAnnotationBytecodeOffset = i30;
                                         i11 = i31;
@@ -3386,8 +3799,10 @@ public class ClassReader {
                                     int i802 = classReader3.cpInfoOffsets[classReader3.readUnsignedShort(i792 + 2)];
                                     String utf852 = classReader3.readUTF8(i802, cArr);
                                     String utf862 = classReader3.readUTF8(i802 + 2, cArr);
-                                    int i812 = classReader3.bootstrapMethodOffsets[classReader3.readUnsignedShort(i792)];
-                                    Handle handle2 = (Handle) classReader3.readConst(classReader3.readUnsignedShort(i812), cArr);
+                                    int i812 = classReader3.bootstrapMethodOffsets[classReader3
+                                            .readUnsignedShort(i792)];
+                                    Handle handle2 = (Handle) classReader3
+                                            .readConst(classReader3.readUnsignedShort(i812), cArr);
                                     unsignedShort = classReader3.readUnsignedShort(i812 + 2);
                                     objArr = new Object[unsignedShort];
                                     z4 = z;
@@ -3407,15 +3822,25 @@ public class ClassReader {
                                     z11 = z3;
                                     while (iArr3 != null) {
                                         if (typeAnnotationBytecodeOffset == i68) {
-                                            int typeAnnotationTarget322222222222222222222222222222222 = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                            int typeAnnotationTarget322222222222222222222222222222222 = classReader3
+                                                    .readTypeAnnotationTarget(context, iArr3[i22]);
                                             i32 = i14;
                                             boolean z12222222222222222222222222222222222 = z9;
-                                            classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget322222222222222222222222222222222, cArr), z12222222222222222222222222222222222), typeAnnotationTarget322222222222222222222222222222222 + 2, z12222222222222222222222222222222222, cArr);
+                                            classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(
+                                                    context.currentTypeAnnotationTarget,
+                                                    context.currentTypeAnnotationTargetPath,
+                                                    classReader3.readUTF8(
+                                                            typeAnnotationTarget322222222222222222222222222222222,
+                                                            cArr),
+                                                    z12222222222222222222222222222222222),
+                                                    typeAnnotationTarget322222222222222222222222222222222 + 2,
+                                                    z12222222222222222222222222222222222, cArr);
                                         } else {
                                             i32 = i14;
                                         }
                                         i22++;
-                                        typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                        typeAnnotationBytecodeOffset = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                         i14 = i32;
                                         z9 = true;
                                     }
@@ -3437,7 +3862,8 @@ public class ClassReader {
                                             iArr5 = iArr2;
                                         }
                                         i25 = i29 + 1;
-                                        typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                        typeAnnotationBytecodeOffset2 = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                         iArr2 = iArr5;
                                         typeAnnotationBytecodeOffset = i30;
                                         i11 = i31;
@@ -3473,15 +3899,25 @@ public class ClassReader {
                                     z11 = z3;
                                     while (iArr3 != null) {
                                         if (typeAnnotationBytecodeOffset == i68) {
-                                            int typeAnnotationTarget3222222222222222222222222222222222 = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                            int typeAnnotationTarget3222222222222222222222222222222222 = classReader3
+                                                    .readTypeAnnotationTarget(context, iArr3[i22]);
                                             i32 = i14;
                                             boolean z122222222222222222222222222222222222 = z9;
-                                            classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget3222222222222222222222222222222222, cArr), z122222222222222222222222222222222222), typeAnnotationTarget3222222222222222222222222222222222 + 2, z122222222222222222222222222222222222, cArr);
+                                            classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(
+                                                    context.currentTypeAnnotationTarget,
+                                                    context.currentTypeAnnotationTargetPath,
+                                                    classReader3.readUTF8(
+                                                            typeAnnotationTarget3222222222222222222222222222222222,
+                                                            cArr),
+                                                    z122222222222222222222222222222222222),
+                                                    typeAnnotationTarget3222222222222222222222222222222222 + 2,
+                                                    z122222222222222222222222222222222222, cArr);
                                         } else {
                                             i32 = i14;
                                         }
                                         i22++;
-                                        typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                        typeAnnotationBytecodeOffset = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                         i14 = i32;
                                         z9 = true;
                                     }
@@ -3503,7 +3939,8 @@ public class ClassReader {
                                             iArr5 = iArr2;
                                         }
                                         i25 = i29 + 1;
-                                        typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                        typeAnnotationBytecodeOffset2 = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                         iArr2 = iArr5;
                                         typeAnnotationBytecodeOffset = i30;
                                         i11 = i31;
@@ -3529,7 +3966,8 @@ public class ClassReader {
                                     i23 = bArr[i67 + 1] & 255;
                                     c = 132;
                                     if (i23 == 132) {
-                                        methodVisitor2.visitIincInsn(classReader3.readUnsignedShort(i67 + 2), classReader3.readShort(i67 + 4));
+                                        methodVisitor2.visitIincInsn(classReader3.readUnsignedShort(i67 + 2),
+                                                classReader3.readShort(i67 + 4));
                                         i14 = i67 + 6;
                                     } else {
                                         methodVisitor2.visitVarInsn(i23, classReader3.readUnsignedShort(i67 + 2));
@@ -3542,15 +3980,25 @@ public class ClassReader {
                                     z11 = z3;
                                     while (iArr3 != null) {
                                         if (typeAnnotationBytecodeOffset == i68) {
-                                            int typeAnnotationTarget32222222222222222222222222222222222 = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                            int typeAnnotationTarget32222222222222222222222222222222222 = classReader3
+                                                    .readTypeAnnotationTarget(context, iArr3[i22]);
                                             i32 = i14;
                                             boolean z1222222222222222222222222222222222222 = z9;
-                                            classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget32222222222222222222222222222222222, cArr), z1222222222222222222222222222222222222), typeAnnotationTarget32222222222222222222222222222222222 + 2, z1222222222222222222222222222222222222, cArr);
+                                            classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(
+                                                    context.currentTypeAnnotationTarget,
+                                                    context.currentTypeAnnotationTargetPath,
+                                                    classReader3.readUTF8(
+                                                            typeAnnotationTarget32222222222222222222222222222222222,
+                                                            cArr),
+                                                    z1222222222222222222222222222222222222),
+                                                    typeAnnotationTarget32222222222222222222222222222222222 + 2,
+                                                    z1222222222222222222222222222222222222, cArr);
                                         } else {
                                             i32 = i14;
                                         }
                                         i22++;
-                                        typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                        typeAnnotationBytecodeOffset = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                         i14 = i32;
                                         z9 = true;
                                     }
@@ -3572,7 +4020,8 @@ public class ClassReader {
                                             iArr5 = iArr2;
                                         }
                                         i25 = i29 + 1;
-                                        typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                        typeAnnotationBytecodeOffset2 = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                         iArr2 = iArr5;
                                         typeAnnotationBytecodeOffset = i30;
                                         i11 = i31;
@@ -3595,7 +4044,8 @@ public class ClassReader {
                                     stackMapFrame = i28;
                                     break;
                                 case 197:
-                                    methodVisitor2.visitMultiANewArrayInsn(classReader3.readClass(i67 + 1, cArr), bArr[i67 + 3] & 255);
+                                    methodVisitor2.visitMultiANewArrayInsn(classReader3.readClass(i67 + 1, cArr),
+                                            bArr[i67 + 3] & 255);
                                     i14 = i67 + 4;
                                     i13 = i5;
                                     z4 = z;
@@ -3604,15 +4054,25 @@ public class ClassReader {
                                     z11 = z3;
                                     while (iArr3 != null) {
                                         if (typeAnnotationBytecodeOffset == i68) {
-                                            int typeAnnotationTarget322222222222222222222222222222222222 = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                            int typeAnnotationTarget322222222222222222222222222222222222 = classReader3
+                                                    .readTypeAnnotationTarget(context, iArr3[i22]);
                                             i32 = i14;
                                             boolean z12222222222222222222222222222222222222 = z9;
-                                            classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget322222222222222222222222222222222222, cArr), z12222222222222222222222222222222222222), typeAnnotationTarget322222222222222222222222222222222222 + 2, z12222222222222222222222222222222222222, cArr);
+                                            classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(
+                                                    context.currentTypeAnnotationTarget,
+                                                    context.currentTypeAnnotationTargetPath,
+                                                    classReader3.readUTF8(
+                                                            typeAnnotationTarget322222222222222222222222222222222222,
+                                                            cArr),
+                                                    z12222222222222222222222222222222222222),
+                                                    typeAnnotationTarget322222222222222222222222222222222222 + 2,
+                                                    z12222222222222222222222222222222222222, cArr);
                                         } else {
                                             i32 = i14;
                                         }
                                         i22++;
-                                        typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                        typeAnnotationBytecodeOffset = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                         i14 = i32;
                                         z9 = true;
                                     }
@@ -3634,7 +4094,8 @@ public class ClassReader {
                                             iArr5 = iArr2;
                                         }
                                         i25 = i29 + 1;
-                                        typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                        typeAnnotationBytecodeOffset2 = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                         iArr2 = iArr5;
                                         typeAnnotationBytecodeOffset = i30;
                                         i11 = i31;
@@ -3658,7 +4119,8 @@ public class ClassReader {
                                     break;
                                 case 200:
                                 case 201:
-                                    methodVisitor2.visitJumpInsn(i12 - i60, labelArr[classReader3.readInt(i67 + 1) + i68]);
+                                    methodVisitor2.visitJumpInsn(i12 - i60,
+                                            labelArr[classReader3.readInt(i67 + 1) + i68]);
                                     i14 = i67 + 5;
                                     i13 = i5;
                                     z4 = z;
@@ -3667,15 +4129,25 @@ public class ClassReader {
                                     z11 = z3;
                                     while (iArr3 != null) {
                                         if (typeAnnotationBytecodeOffset == i68) {
-                                            int typeAnnotationTarget3222222222222222222222222222222222222 = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                            int typeAnnotationTarget3222222222222222222222222222222222222 = classReader3
+                                                    .readTypeAnnotationTarget(context, iArr3[i22]);
                                             i32 = i14;
                                             boolean z122222222222222222222222222222222222222 = z9;
-                                            classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget3222222222222222222222222222222222222, cArr), z122222222222222222222222222222222222222), typeAnnotationTarget3222222222222222222222222222222222222 + 2, z122222222222222222222222222222222222222, cArr);
+                                            classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(
+                                                    context.currentTypeAnnotationTarget,
+                                                    context.currentTypeAnnotationTargetPath,
+                                                    classReader3.readUTF8(
+                                                            typeAnnotationTarget3222222222222222222222222222222222222,
+                                                            cArr),
+                                                    z122222222222222222222222222222222222222),
+                                                    typeAnnotationTarget3222222222222222222222222222222222222 + 2,
+                                                    z122222222222222222222222222222222222222, cArr);
                                         } else {
                                             i32 = i14;
                                         }
                                         i22++;
-                                        typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                        typeAnnotationBytecodeOffset = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                         i14 = i32;
                                         z9 = true;
                                     }
@@ -3697,7 +4169,8 @@ public class ClassReader {
                                             iArr5 = iArr2;
                                         }
                                         i25 = i29 + 1;
-                                        typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                        typeAnnotationBytecodeOffset2 = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                         iArr2 = iArr5;
                                         typeAnnotationBytecodeOffset = i30;
                                         i11 = i31;
@@ -3755,15 +4228,25 @@ public class ClassReader {
                                     i22 = i65;
                                     while (iArr3 != null) {
                                         if (typeAnnotationBytecodeOffset == i68) {
-                                            int typeAnnotationTarget32222222222222222222222222222222222222 = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                            int typeAnnotationTarget32222222222222222222222222222222222222 = classReader3
+                                                    .readTypeAnnotationTarget(context, iArr3[i22]);
                                             i32 = i14;
                                             boolean z1222222222222222222222222222222222222222 = z9;
-                                            classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget32222222222222222222222222222222222222, cArr), z1222222222222222222222222222222222222222), typeAnnotationTarget32222222222222222222222222222222222222 + 2, z1222222222222222222222222222222222222222, cArr);
+                                            classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(
+                                                    context.currentTypeAnnotationTarget,
+                                                    context.currentTypeAnnotationTargetPath,
+                                                    classReader3.readUTF8(
+                                                            typeAnnotationTarget32222222222222222222222222222222222222,
+                                                            cArr),
+                                                    z1222222222222222222222222222222222222222),
+                                                    typeAnnotationTarget32222222222222222222222222222222222222 + 2,
+                                                    z1222222222222222222222222222222222222222, cArr);
                                         } else {
                                             i32 = i14;
                                         }
                                         i22++;
-                                        typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                        typeAnnotationBytecodeOffset = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                         i14 = i32;
                                         z9 = true;
                                     }
@@ -3785,7 +4268,8 @@ public class ClassReader {
                                             iArr5 = iArr2;
                                         }
                                         i25 = i29 + 1;
-                                        typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                        typeAnnotationBytecodeOffset2 = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                         iArr2 = iArr5;
                                         typeAnnotationBytecodeOffset = i30;
                                         i11 = i31;
@@ -3817,15 +4301,25 @@ public class ClassReader {
                                     i22 = i65;
                                     while (iArr3 != null) {
                                         if (typeAnnotationBytecodeOffset == i68) {
-                                            int typeAnnotationTarget322222222222222222222222222222222222222 = classReader3.readTypeAnnotationTarget(context, iArr3[i22]);
+                                            int typeAnnotationTarget322222222222222222222222222222222222222 = classReader3
+                                                    .readTypeAnnotationTarget(context, iArr3[i22]);
                                             i32 = i14;
                                             boolean z12222222222222222222222222222222222222222 = z9;
-                                            classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader3.readUTF8(typeAnnotationTarget322222222222222222222222222222222222222, cArr), z12222222222222222222222222222222222222222), typeAnnotationTarget322222222222222222222222222222222222222 + 2, z12222222222222222222222222222222222222222, cArr);
+                                            classReader3.readElementValues(methodVisitor2.visitInsnAnnotation(
+                                                    context.currentTypeAnnotationTarget,
+                                                    context.currentTypeAnnotationTargetPath,
+                                                    classReader3.readUTF8(
+                                                            typeAnnotationTarget322222222222222222222222222222222222222,
+                                                            cArr),
+                                                    z12222222222222222222222222222222222222222),
+                                                    typeAnnotationTarget322222222222222222222222222222222222222 + 2,
+                                                    z12222222222222222222222222222222222222222, cArr);
                                         } else {
                                             i32 = i14;
                                         }
                                         i22++;
-                                        typeAnnotationBytecodeOffset = classReader3.getTypeAnnotationBytecodeOffset(iArr3, i22);
+                                        typeAnnotationBytecodeOffset = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr3, i22);
                                         i14 = i32;
                                         z9 = true;
                                     }
@@ -3847,7 +4341,8 @@ public class ClassReader {
                                             iArr5 = iArr2;
                                         }
                                         i25 = i29 + 1;
-                                        typeAnnotationBytecodeOffset2 = classReader3.getTypeAnnotationBytecodeOffset(iArr5, i25);
+                                        typeAnnotationBytecodeOffset2 = classReader3
+                                                .getTypeAnnotationBytecodeOffset(iArr5, i25);
                                         iArr2 = iArr5;
                                         typeAnnotationBytecodeOffset = i30;
                                         i11 = i31;
@@ -3917,7 +4412,8 @@ public class ClassReader {
                                             if (i91 >= iArr.length) {
                                                 i7 = unsignedShort10;
                                                 utf8 = null;
-                                            } else if (iArr[i91] == unsignedShort9 && iArr[i91 + 1] == unsignedShort11) {
+                                            } else if (iArr[i91] == unsignedShort9
+                                                    && iArr[i91 + 1] == unsignedShort11) {
                                                 utf8 = classReader3.readUTF8(iArr[i91 + 2], cArr);
                                                 i7 = unsignedShort10;
                                             } else {
@@ -3928,7 +4424,8 @@ public class ClassReader {
                                         i7 = unsignedShort10;
                                         utf8 = null;
                                     }
-                                    methodVisitor2.visitLocalVariable(utf87, utf88, utf8, labelArr[unsignedShort9], labelArr[i7 + unsignedShort9], unsignedShort11);
+                                    methodVisitor2.visitLocalVariable(utf87, utf88, utf8, labelArr[unsignedShort9],
+                                            labelArr[i7 + unsignedShort9], unsignedShort11);
                                     methodVisitor2 = methodVisitor;
                                     classReader3 = classReader3;
                                     unsignedShort8 = i89;
@@ -3949,7 +4446,15 @@ public class ClassReader {
                                 if (i96 == 64 || i96 == i92) {
                                     int typeAnnotationTarget4 = classReader4.readTypeAnnotationTarget(context, i95);
                                     i6 = i94;
-                                    classReader4.readElementValues(methodVisitor.visitLocalVariableAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, context.currentLocalVariableAnnotationRangeStarts, context.currentLocalVariableAnnotationRangeEnds, context.currentLocalVariableAnnotationRangeIndices, classReader4.readUTF8(typeAnnotationTarget4, cArr), true), typeAnnotationTarget4 + 2, true, cArr);
+                                    classReader4.readElementValues(
+                                            methodVisitor.visitLocalVariableAnnotation(
+                                                    context.currentTypeAnnotationTarget,
+                                                    context.currentTypeAnnotationTargetPath,
+                                                    context.currentLocalVariableAnnotationRangeStarts,
+                                                    context.currentLocalVariableAnnotationRangeEnds,
+                                                    context.currentLocalVariableAnnotationRangeIndices,
+                                                    classReader4.readUTF8(typeAnnotationTarget4, cArr), true),
+                                            typeAnnotationTarget4 + 2, true, cArr);
                                 } else {
                                     i6 = i94;
                                 }
@@ -3965,7 +4470,15 @@ public class ClassReader {
                                 int i99 = classReader4.readByte(i98);
                                 if (i99 == i93 || i99 == 65) {
                                     int typeAnnotationTarget5 = classReader4.readTypeAnnotationTarget(context, i98);
-                                    classReader4.readElementValues(methodVisitor.visitLocalVariableAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, context.currentLocalVariableAnnotationRangeStarts, context.currentLocalVariableAnnotationRangeEnds, context.currentLocalVariableAnnotationRangeIndices, classReader4.readUTF8(typeAnnotationTarget5, cArr), false), typeAnnotationTarget5 + 2, true, cArr);
+                                    classReader4.readElementValues(
+                                            methodVisitor.visitLocalVariableAnnotation(
+                                                    context.currentTypeAnnotationTarget,
+                                                    context.currentTypeAnnotationTargetPath,
+                                                    context.currentLocalVariableAnnotationRangeStarts,
+                                                    context.currentLocalVariableAnnotationRangeEnds,
+                                                    context.currentLocalVariableAnnotationRangeIndices,
+                                                    classReader4.readUTF8(typeAnnotationTarget5, cArr), false),
+                                            typeAnnotationTarget5 + 2, true, cArr);
                                 }
                                 i97++;
                                 i93 = 64;
@@ -3994,7 +4507,8 @@ public class ClassReader {
                                     int unsignedShort13 = classReader2.readUnsignedShort(i102);
                                     classReader2.createDebugLabel(unsignedShort13, labelArr5);
                                     int i104 = i102;
-                                    classReader2.createDebugLabel(classReader2.readUnsignedShort(i104 + 2) + unsignedShort13, labelArr5);
+                                    classReader2.createDebugLabel(
+                                            classReader2.readUnsignedShort(i104 + 2) + unsignedShort13, labelArr5);
                                     i102 = i104 + 10;
                                     unsignedShort12 = i103;
                                 } else {
@@ -4030,7 +4544,8 @@ public class ClassReader {
                         } else {
                             typeAnnotations = iArr8;
                             b2 = b3;
-                            Attribute attribute6 = classReader2.readAttribute(context.attributePrototypes, utf89, i101, i100, cArr2, i, labelArr5);
+                            Attribute attribute6 = classReader2.readAttribute(context.attributePrototypes, utf89, i101,
+                                    i100, cArr2, i, labelArr5);
                             classReader = classReader2;
                             labelArr4 = labelArr5;
                             attribute6.nextAttribute = attribute2;
@@ -4104,7 +4619,8 @@ public class ClassReader {
         int i2 = 0;
         if (annotationVisitor == null) {
             int i3 = this.classFileBuffer[i] & 255;
-            return i3 != 64 ? i3 != 91 ? i3 != 101 ? i + 3 : i + 5 : readElementValues(null, i + 1, false, cArr) : readElementValues(null, i + 3, true, cArr);
+            return i3 != 64 ? i3 != 91 ? i3 != 101 ? i + 3 : i + 5 : readElementValues(null, i + 1, false, cArr)
+                    : readElementValues(null, i + 3, true, cArr);
         }
         int i4 = i + 1;
         int i5 = this.classFileBuffer[i] & 255;
@@ -4130,7 +4646,8 @@ public class ClassReader {
             }
             if (i5 != 73 && i5 != 74) {
                 if (i5 == 90) {
-                    annotationVisitor.visit(str, readInt(this.cpInfoOffsets[readUnsignedShort(i4)]) == 0 ? Boolean.FALSE : Boolean.TRUE);
+                    annotationVisitor.visit(str,
+                            readInt(this.cpInfoOffsets[readUnsignedShort(i4)]) == 0 ? Boolean.FALSE : Boolean.TRUE);
                     return i + 3;
                 }
                 if (i5 == 91) {
@@ -4211,7 +4728,8 @@ public class ClassReader {
                         case 68:
                             double[] dArr = new double[unsignedShort];
                             while (i2 < unsignedShort) {
-                                dArr[i2] = Double.longBitsToDouble(readLong(this.cpInfoOffsets[readUnsignedShort(i6 + 1)]));
+                                dArr[i2] = Double
+                                        .longBitsToDouble(readLong(this.cpInfoOffsets[readUnsignedShort(i6 + 1)]));
                                 i6 += 3;
                                 i2++;
                             }
@@ -4223,10 +4741,12 @@ public class ClassReader {
                 }
                 switch (i5) {
                     case 66:
-                        annotationVisitor.visit(str, Byte.valueOf((byte) readInt(this.cpInfoOffsets[readUnsignedShort(i4)])));
+                        annotationVisitor.visit(str,
+                                Byte.valueOf((byte) readInt(this.cpInfoOffsets[readUnsignedShort(i4)])));
                         return i + 3;
                     case 67:
-                        annotationVisitor.visit(str, Character.valueOf((char) readInt(this.cpInfoOffsets[readUnsignedShort(i4)])));
+                        annotationVisitor.visit(str,
+                                Character.valueOf((char) readInt(this.cpInfoOffsets[readUnsignedShort(i4)])));
                         return i + 3;
                     case 68:
                         break;
@@ -4257,7 +4777,8 @@ public class ClassReader {
                 if (unsignedShort <= 0) {
                     break;
                 }
-                elementValue = readElementValue(annotationVisitor, elementValue + 2, readUTF8(elementValue, cArr), cArr);
+                elementValue = readElementValue(annotationVisitor, elementValue + 2, readUTF8(elementValue, cArr),
+                        cArr);
                 unsignedShort = i3;
             }
         }
@@ -4326,7 +4847,8 @@ public class ClassReader {
                             i2 = i14;
                             int i15 = i8;
                             i3 = i13;
-                            Attribute attribute2 = readAttribute(context2.attributePrototypes, utf84, i2, i3, cArr, -1, null);
+                            Attribute attribute2 = readAttribute(context2.attributePrototypes, utf84, i2, i3, cArr, -1,
+                                    null);
                             attribute2.nextAttribute = attribute;
                             attribute = attribute2;
                             i9 = i9;
@@ -4376,7 +4898,9 @@ public class ClassReader {
                 if (unsignedShort4 <= 0) {
                     break;
                 }
-                elementValues = readElementValues(fieldVisitorVisitField.visitAnnotation(readUTF8(elementValues, cArr), true), elementValues + 2, true, cArr);
+                elementValues = readElementValues(
+                        fieldVisitorVisitField.visitAnnotation(readUTF8(elementValues, cArr), true), elementValues + 2,
+                        true, cArr);
                 unsignedShort4 = i21;
             }
         }
@@ -4388,7 +4912,9 @@ public class ClassReader {
                 if (unsignedShort5 <= 0) {
                     break;
                 }
-                elementValues2 = readElementValues(fieldVisitorVisitField.visitAnnotation(readUTF8(elementValues2, cArr), false), elementValues2 + 2, true, cArr);
+                elementValues2 = readElementValues(
+                        fieldVisitorVisitField.visitAnnotation(readUTF8(elementValues2, cArr), false),
+                        elementValues2 + 2, true, cArr);
                 unsignedShort5 = i22;
             }
         }
@@ -4401,7 +4927,10 @@ public class ClassReader {
                     break;
                 }
                 int typeAnnotationTarget = readTypeAnnotationTarget(context, elementValues3);
-                elementValues3 = readElementValues(fieldVisitorVisitField.visitTypeAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, readUTF8(typeAnnotationTarget, cArr), true), typeAnnotationTarget + 2, true, cArr);
+                elementValues3 = readElementValues(
+                        fieldVisitorVisitField.visitTypeAnnotation(context.currentTypeAnnotationTarget,
+                                context.currentTypeAnnotationTargetPath, readUTF8(typeAnnotationTarget, cArr), true),
+                        typeAnnotationTarget + 2, true, cArr);
                 unsignedShort6 = i23;
             }
         }
@@ -4414,7 +4943,10 @@ public class ClassReader {
                     break;
                 }
                 int typeAnnotationTarget2 = readTypeAnnotationTarget(context, elementValues4);
-                elementValues4 = readElementValues(fieldVisitorVisitField.visitTypeAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, readUTF8(typeAnnotationTarget2, cArr), false), typeAnnotationTarget2 + 2, true, cArr);
+                elementValues4 = readElementValues(
+                        fieldVisitorVisitField.visitTypeAnnotation(context.currentTypeAnnotationTarget,
+                                context.currentTypeAnnotationTargetPath, readUTF8(typeAnnotationTarget2, cArr), false),
+                        typeAnnotationTarget2 + 2, true, cArr);
                 unsignedShort7 = i24;
             }
         }
@@ -4513,7 +5045,8 @@ public class ClassReader {
                 } else {
                     i4 = i10;
                     i5 = i20;
-                    Attribute attribute2 = classReader.readAttribute(context.attributePrototypes, utf8, i22, i5, cArr3, -1, null);
+                    Attribute attribute2 = classReader.readAttribute(context.attributePrototypes, utf8, i22, i5, cArr3,
+                            -1, null);
                     cArr2 = cArr3;
                     attribute2.nextAttribute = attribute;
                     attribute = attribute2;
@@ -4543,7 +5076,9 @@ public class ClassReader {
         int i29 = i11;
         int i30 = i13;
         int i31 = i12;
-        MethodVisitor methodVisitorVisitMethod = classVisitor.visitMethod(context.currentMethodAccessFlags, context.currentMethodName, context.currentMethodDescriptor, unsignedShort2 == 0 ? null : classReader.readUtf(unsignedShort2, cArr4), strArr);
+        MethodVisitor methodVisitorVisitMethod = classVisitor.visitMethod(context.currentMethodAccessFlags,
+                context.currentMethodName, context.currentMethodDescriptor,
+                unsignedShort2 == 0 ? null : classReader.readUtf(unsignedShort2, cArr4), strArr);
         if (methodVisitorVisitMethod == null) {
             return i7;
         }
@@ -4555,7 +5090,8 @@ public class ClassReader {
             int i32 = unsignedShort2;
             i2 = i31;
             cArr = cArr4;
-            boolean zCanCopyMethodAttributes = methodWriter.canCopyMethodAttributes(classReader, z, z2, unsignedShort4, i32, i14);
+            boolean zCanCopyMethodAttributes = methodWriter.canCopyMethodAttributes(classReader, z, z2, unsignedShort4,
+                    i32, i14);
             classReader = classReader;
             if (zCanCopyMethodAttributes) {
                 methodWriter.setMethodAttributesSource(i, i7 - i);
@@ -4574,13 +5110,15 @@ public class ClassReader {
                 if (i33 <= 0) {
                     break;
                 }
-                methodVisitorVisitMethod.visitParameter(classReader.readUTF8(i34, cArr), classReader.readUnsignedShort(i34 + 2));
+                methodVisitorVisitMethod.visitParameter(classReader.readUTF8(i34, cArr),
+                        classReader.readUnsignedShort(i34 + 2));
                 i34 += 4;
                 i33 = i35;
             }
         }
         if (i3 != 0) {
-            AnnotationVisitor annotationVisitorVisitAnnotationDefault = methodVisitorVisitMethod.visitAnnotationDefault();
+            AnnotationVisitor annotationVisitorVisitAnnotationDefault = methodVisitorVisitMethod
+                    .visitAnnotationDefault();
             classReader.readElementValue(annotationVisitorVisitAnnotationDefault, i3, null, cArr);
             if (annotationVisitorVisitAnnotationDefault != null) {
                 annotationVisitorVisitAnnotationDefault.visitEnd();
@@ -4594,7 +5132,9 @@ public class ClassReader {
                 if (unsignedShort5 <= 0) {
                     break;
                 }
-                elementValues = classReader.readElementValues(methodVisitorVisitMethod.visitAnnotation(classReader.readUTF8(elementValues, cArr), true), elementValues + 2, true, cArr);
+                elementValues = classReader.readElementValues(
+                        methodVisitorVisitMethod.visitAnnotation(classReader.readUTF8(elementValues, cArr), true),
+                        elementValues + 2, true, cArr);
                 unsignedShort5 = i36;
             }
         }
@@ -4606,7 +5146,9 @@ public class ClassReader {
                 if (unsignedShort6 <= 0) {
                     break;
                 }
-                elementValues2 = classReader.readElementValues(methodVisitorVisitMethod.visitAnnotation(classReader.readUTF8(elementValues2, cArr), false), elementValues2 + 2, true, cArr);
+                elementValues2 = classReader.readElementValues(
+                        methodVisitorVisitMethod.visitAnnotation(classReader.readUTF8(elementValues2, cArr), false),
+                        elementValues2 + 2, true, cArr);
                 unsignedShort6 = i37;
             }
         }
@@ -4619,7 +5161,11 @@ public class ClassReader {
                     break;
                 }
                 int typeAnnotationTarget = classReader.readTypeAnnotationTarget(context, elementValues3);
-                elementValues3 = classReader.readElementValues(methodVisitorVisitMethod.visitTypeAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader.readUTF8(typeAnnotationTarget, cArr), true), typeAnnotationTarget + 2, true, cArr);
+                elementValues3 = classReader.readElementValues(
+                        methodVisitorVisitMethod.visitTypeAnnotation(context.currentTypeAnnotationTarget,
+                                context.currentTypeAnnotationTargetPath,
+                                classReader.readUTF8(typeAnnotationTarget, cArr), true),
+                        typeAnnotationTarget + 2, true, cArr);
                 unsignedShort7 = i38;
             }
         }
@@ -4632,7 +5178,11 @@ public class ClassReader {
                     break;
                 }
                 int typeAnnotationTarget2 = classReader.readTypeAnnotationTarget(context, elementValues4);
-                elementValues4 = classReader.readElementValues(methodVisitorVisitMethod.visitTypeAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader.readUTF8(typeAnnotationTarget2, cArr), false), typeAnnotationTarget2 + 2, true, cArr);
+                elementValues4 = classReader.readElementValues(
+                        methodVisitorVisitMethod.visitTypeAnnotation(context.currentTypeAnnotationTarget,
+                                context.currentTypeAnnotationTargetPath,
+                                classReader.readUTF8(typeAnnotationTarget2, cArr), false),
+                        typeAnnotationTarget2 + 2, true, cArr);
                 unsignedShort8 = i39;
             }
         }
@@ -4663,7 +5213,8 @@ public class ClassReader {
         String[] strArr;
         char[] cArr = context.charBuffer;
         int i3 = i + 6;
-        ModuleVisitor moduleVisitorVisitModule = classVisitor.visitModule(readModule(i, cArr), readUnsignedShort(i + 2), readUTF8(i + 4, cArr));
+        ModuleVisitor moduleVisitorVisitModule = classVisitor.visitModule(readModule(i, cArr), readUnsignedShort(i + 2),
+                readUTF8(i + 4, cArr));
         if (moduleVisitorVisitModule == null) {
             return;
         }
@@ -4785,7 +5336,9 @@ public class ClassReader {
             while (true) {
                 int i4 = unsignedShort - 1;
                 if (unsignedShort > 0) {
-                    elementValues = readElementValues(methodVisitor.visitParameterAnnotation(i3, readUTF8(elementValues, cArr), z), elementValues + 2, true, cArr);
+                    elementValues = readElementValues(
+                            methodVisitor.visitParameterAnnotation(i3, readUTF8(elementValues, cArr), z),
+                            elementValues + 2, true, cArr);
                     unsignedShort = i4;
                 }
             }
@@ -4869,7 +5422,8 @@ public class ClassReader {
         int i15 = i5;
         Attribute attribute5 = attribute2;
         int i16 = i6;
-        RecordComponentVisitor recordComponentVisitorVisitRecordComponent = classVisitor.visitRecordComponent(utf8, utf82, utf83);
+        RecordComponentVisitor recordComponentVisitorVisitRecordComponent = classVisitor.visitRecordComponent(utf8,
+                utf82, utf83);
         if (recordComponentVisitorVisitRecordComponent == null) {
             return i4;
         }
@@ -4881,7 +5435,9 @@ public class ClassReader {
                 if (unsignedShort2 <= 0) {
                     break;
                 }
-                elementValues = readElementValues(recordComponentVisitorVisitRecordComponent.visitAnnotation(readUTF8(elementValues, cArr), true), elementValues + 2, true, cArr);
+                elementValues = readElementValues(
+                        recordComponentVisitorVisitRecordComponent.visitAnnotation(readUTF8(elementValues, cArr), true),
+                        elementValues + 2, true, cArr);
                 unsignedShort2 = i17;
             }
         }
@@ -4893,7 +5449,8 @@ public class ClassReader {
                 if (unsignedShort3 <= 0) {
                     break;
                 }
-                elementValues2 = readElementValues(recordComponentVisitorVisitRecordComponent.visitAnnotation(readUTF8(elementValues2, cArr), false), elementValues2 + 2, true, cArr);
+                elementValues2 = readElementValues(recordComponentVisitorVisitRecordComponent
+                        .visitAnnotation(readUTF8(elementValues2, cArr), false), elementValues2 + 2, true, cArr);
                 unsignedShort3 = i18;
             }
         }
@@ -4906,7 +5463,9 @@ public class ClassReader {
                     break;
                 }
                 int typeAnnotationTarget = readTypeAnnotationTarget(context, elementValues3);
-                elementValues3 = readElementValues(recordComponentVisitorVisitRecordComponent.visitTypeAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, readUTF8(typeAnnotationTarget, cArr), true), typeAnnotationTarget + 2, true, cArr);
+                elementValues3 = readElementValues(recordComponentVisitorVisitRecordComponent.visitTypeAnnotation(
+                        context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath,
+                        readUTF8(typeAnnotationTarget, cArr), true), typeAnnotationTarget + 2, true, cArr);
                 unsignedShort4 = i19;
             }
         }
@@ -4919,7 +5478,9 @@ public class ClassReader {
                     break;
                 }
                 int typeAnnotationTarget2 = readTypeAnnotationTarget(context, elementValues4);
-                elementValues4 = readElementValues(recordComponentVisitorVisitRecordComponent.visitTypeAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, readUTF8(typeAnnotationTarget2, cArr), false), typeAnnotationTarget2 + 2, true, cArr);
+                elementValues4 = readElementValues(recordComponentVisitorVisitRecordComponent.visitTypeAnnotation(
+                        context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath,
+                        readUTF8(typeAnnotationTarget2, cArr), false), typeAnnotationTarget2 + 2, true, cArr);
                 unsignedShort5 = i20;
             }
         }
@@ -4953,7 +5514,8 @@ public class ClassReader {
             context.currentFrameStackCount = 0;
         } else if (i2 < 128) {
             i2 -= 64;
-            verificationTypeInfo = readVerificationTypeInfo(verificationTypeInfo, context.currentFrameStackTypes, 0, cArr, labelArr);
+            verificationTypeInfo = readVerificationTypeInfo(verificationTypeInfo, context.currentFrameStackTypes, 0,
+                    cArr, labelArr);
             context.currentFrameType = 4;
             context.currentFrameStackCount = 1;
         } else {
@@ -4964,7 +5526,8 @@ public class ClassReader {
             int i3 = verificationTypeInfo;
             verificationTypeInfo = i3 + 2;
             if (i2 == 247) {
-                verificationTypeInfo = readVerificationTypeInfo(verificationTypeInfo, context.currentFrameStackTypes, 0, cArr, labelArr);
+                verificationTypeInfo = readVerificationTypeInfo(verificationTypeInfo, context.currentFrameStackTypes, 0,
+                        cArr, labelArr);
                 context.currentFrameType = 4;
                 context.currentFrameStackCount = 1;
             } else if (i2 >= 248 && i2 < 251) {
@@ -4981,7 +5544,8 @@ public class ClassReader {
                 int i6 = z2 ? context.currentFrameLocalCount : 0;
                 int i7 = i5;
                 while (i7 > 0) {
-                    verificationTypeInfo = readVerificationTypeInfo(verificationTypeInfo, context.currentFrameLocalTypes, i6, cArr, labelArr);
+                    verificationTypeInfo = readVerificationTypeInfo(verificationTypeInfo,
+                            context.currentFrameLocalTypes, i6, cArr, labelArr);
                     i7--;
                     i6++;
                 }
@@ -4996,13 +5560,15 @@ public class ClassReader {
                 context.currentFrameLocalCountDelta = unsignedShort2;
                 context.currentFrameLocalCount = unsignedShort2;
                 for (int i8 = 0; i8 < unsignedShort2; i8++) {
-                    verificationTypeInfo2 = readVerificationTypeInfo(verificationTypeInfo2, context.currentFrameLocalTypes, i8, cArr, labelArr);
+                    verificationTypeInfo2 = readVerificationTypeInfo(verificationTypeInfo2,
+                            context.currentFrameLocalTypes, i8, cArr, labelArr);
                 }
                 int unsignedShort3 = readUnsignedShort(verificationTypeInfo2);
                 verificationTypeInfo = verificationTypeInfo2 + 2;
                 context.currentFrameStackCount = unsignedShort3;
                 for (int i9 = 0; i9 < unsignedShort3; i9++) {
-                    verificationTypeInfo = readVerificationTypeInfo(verificationTypeInfo, context.currentFrameStackTypes, i9, cArr, labelArr);
+                    verificationTypeInfo = readVerificationTypeInfo(verificationTypeInfo,
+                            context.currentFrameStackTypes, i9, cArr, labelArr);
                 }
             }
             i2 = unsignedShort;
@@ -5013,13 +5579,22 @@ public class ClassReader {
         return verificationTypeInfo;
     }
 
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getInstructions()" because "finallyBlockTerminus" is null
-    	at jadx.core.dex.visitors.finaly.traverser.state.TraverserActivePathState.<init>(TraverserActivePathState.java:253)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.findCommonInsns(MarkFinallyVisitor.java:422)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.extractFinally(MarkFinallyVisitor.java:302)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.processTryBlock(MarkFinallyVisitor.java:222)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:150)
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getInstructions()" because
+     * "finallyBlockTerminus" is null
+     * at
+     * jadx.core.dex.visitors.finaly.traverser.state.TraverserActivePathState.<init>
+     * (TraverserActivePathState.java:253)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.findCommonInsns(
+     * MarkFinallyVisitor.java:422)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.extractFinally(
+     * MarkFinallyVisitor.java:302)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.processTryBlock(
+     * MarkFinallyVisitor.java:222)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:150)
      */
     private static byte[] readStream(InputStream inputStream, boolean z) throws IOException {
         if (inputStream == null) {
@@ -5072,9 +5647,11 @@ public class ClassReader {
         return readUTF8(this.cpInfoOffsets[readUnsignedShort(i)], cArr);
     }
 
-    /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
-    /* JADX WARN: Found duplicated region for block: B:17:0x006d  */
-    /* JADX WARN: Found duplicated region for block: B:18:0x0070  */
+    /*
+     * JADX WARN: Can't fix incorrect switch cases order, some code will duplicate
+     */
+    /* JADX WARN: Found duplicated region for block: B:17:0x006d */
+    /* JADX WARN: Found duplicated region for block: B:18:0x0070 */
     private int readTypeAnnotationTarget(Context context, int i) {
         int i2;
         int i3;
@@ -5114,8 +5691,10 @@ public class ClassReader {
                                 int unsignedShort3 = readUnsignedShort(i3 + 2);
                                 int unsignedShort4 = readUnsignedShort(i3 + 4);
                                 i3 += 6;
-                                context.currentLocalVariableAnnotationRangeStarts[i6] = createLabel(unsignedShort2, context.currentMethodLabels);
-                                context.currentLocalVariableAnnotationRangeEnds[i6] = createLabel(unsignedShort2 + unsignedShort3, context.currentMethodLabels);
+                                context.currentLocalVariableAnnotationRangeStarts[i6] = createLabel(unsignedShort2,
+                                        context.currentMethodLabels);
+                                context.currentLocalVariableAnnotationRangeEnds[i6] = createLabel(
+                                        unsignedShort2 + unsignedShort3, context.currentMethodLabels);
                                 context.currentLocalVariableAnnotationRangeIndices[i6] = unsignedShort4;
                             }
                             break;
@@ -5214,7 +5793,9 @@ public class ClassReader {
             if (i5 == 66) {
                 TypePath typePath = i7 != 0 ? new TypePath(this.classFileBuffer, i2) : null;
                 int iC = bjs.c(i7, 2, 1, i2);
-                elementValues = readElementValues(methodVisitor.visitTryCatchAnnotation(i4 & (-256), typePath, readUTF8(iC, cArr), z), iC + 2, true, cArr);
+                elementValues = readElementValues(
+                        methodVisitor.visitTryCatchAnnotation(i4 & (-256), typePath, readUTF8(iC, cArr), z), iC + 2,
+                        true, cArr);
             } else {
                 elementValues = readElementValues(null, bjs.c(i7, 2, 3, i2), true, cArr);
             }
@@ -5259,7 +5840,7 @@ public class ClassReader {
     }
 
     private static /* synthetic */ String stringConcat$0(short s) {
-        return bjs.i(s, "Unsupported class file major version ");
+        return concatVar2Var1(s, "Unsupported class file major version ");
     }
 
     private static /* synthetic */ String stringConcat$1(String str) {
@@ -5388,7 +5969,8 @@ public class ClassReader {
                         int i3 = readByte(i2);
                         int i4 = this.cpInfoOffsets[readUnsignedShort(i2 + 1)];
                         int i5 = this.cpInfoOffsets[readUnsignedShort(i4 + 2)];
-                        return new Handle(i3, readClass(i4, cArr), readUTF8(i5, cArr), readUTF8(i5 + 2, cArr), this.classFileBuffer[i4 - 1] == 11);
+                        return new Handle(i3, readClass(i4, cArr), readUTF8(i5, cArr), readUTF8(i5 + 2, cArr),
+                                this.classFileBuffer[i4 - 1] == 11);
                     case 16:
                         return Type.getMethodType(readUTF8(i2, cArr));
                     case 17:
@@ -5657,7 +6239,10 @@ public class ClassReader {
         if (i10 != 0) {
             String str15 = classReader.readClass(i10, cArr);
             int unsignedShort4 = classReader.readUnsignedShort(i10 + 2);
-            classVisitor.visitOuterClass(str15, unsignedShort4 == 0 ? null : classReader.readUTF8(classReader.cpInfoOffsets[unsignedShort4], cArr), unsignedShort4 == 0 ? null : classReader.readUTF8(classReader.cpInfoOffsets[unsignedShort4] + 2, cArr));
+            classVisitor.visitOuterClass(str15,
+                    unsignedShort4 == 0 ? null : classReader.readUTF8(classReader.cpInfoOffsets[unsignedShort4], cArr),
+                    unsignedShort4 == 0 ? null
+                            : classReader.readUTF8(classReader.cpInfoOffsets[unsignedShort4] + 2, cArr));
         }
         if (i9 != 0) {
             int unsignedShort5 = classReader.readUnsignedShort(i9);
@@ -5667,7 +6252,9 @@ public class ClassReader {
                 if (unsignedShort5 <= 0) {
                     break;
                 }
-                elementValues = classReader.readElementValues(classVisitor.visitAnnotation(classReader.readUTF8(elementValues, cArr), true), elementValues + 2, true, cArr);
+                elementValues = classReader.readElementValues(
+                        classVisitor.visitAnnotation(classReader.readUTF8(elementValues, cArr), true),
+                        elementValues + 2, true, cArr);
                 unsignedShort5 = i24;
             }
         }
@@ -5680,7 +6267,9 @@ public class ClassReader {
                 if (unsignedShort6 <= 0) {
                     break;
                 }
-                elementValues2 = classReader.readElementValues(classVisitor.visitAnnotation(classReader.readUTF8(elementValues2, cArr), false), elementValues2 + 2, true, cArr);
+                elementValues2 = classReader.readElementValues(
+                        classVisitor.visitAnnotation(classReader.readUTF8(elementValues2, cArr), false),
+                        elementValues2 + 2, true, cArr);
                 unsignedShort6 = i26;
             }
         }
@@ -5694,7 +6283,11 @@ public class ClassReader {
                     break;
                 }
                 int typeAnnotationTarget = classReader.readTypeAnnotationTarget(context, elementValues3);
-                elementValues3 = classReader.readElementValues(classVisitor.visitTypeAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader.readUTF8(typeAnnotationTarget, cArr), true), typeAnnotationTarget + 2, true, cArr);
+                elementValues3 = classReader.readElementValues(
+                        classVisitor.visitTypeAnnotation(context.currentTypeAnnotationTarget,
+                                context.currentTypeAnnotationTargetPath,
+                                classReader.readUTF8(typeAnnotationTarget, cArr), true),
+                        typeAnnotationTarget + 2, true, cArr);
                 unsignedShort7 = i28;
             }
         }
@@ -5708,7 +6301,11 @@ public class ClassReader {
                     break;
                 }
                 int typeAnnotationTarget2 = classReader.readTypeAnnotationTarget(context, elementValues4);
-                elementValues4 = classReader.readElementValues(classVisitor.visitTypeAnnotation(context.currentTypeAnnotationTarget, context.currentTypeAnnotationTargetPath, classReader.readUTF8(typeAnnotationTarget2, cArr), false), typeAnnotationTarget2 + 2, true, cArr);
+                elementValues4 = classReader.readElementValues(
+                        classVisitor.visitTypeAnnotation(context.currentTypeAnnotationTarget,
+                                context.currentTypeAnnotationTargetPath,
+                                classReader.readUTF8(typeAnnotationTarget2, cArr), false),
+                        typeAnnotationTarget2 + 2, true, cArr);
                 unsignedShort8 = i30;
             }
         }
@@ -5755,7 +6352,8 @@ public class ClassReader {
                 if (unsignedShort11 <= 0) {
                     break;
                 }
-                classVisitor.visitInnerClass(classReader.readClass(i38, cArr), classReader.readClass(i38 + 2, cArr), classReader.readUTF8(i38 + 4, cArr), classReader.readUnsignedShort(i38 + 6));
+                classVisitor.visitInnerClass(classReader.readClass(i38, cArr), classReader.readClass(i38 + 2, cArr),
+                        classReader.readUTF8(i38 + 4, cArr), classReader.readUnsignedShort(i38 + 6));
                 i38 += 8;
                 unsignedShort11 = i39;
             }
@@ -5797,9 +6395,14 @@ public class ClassReader {
         }
     }
 
-    /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
-    /* JADX WARN: Found duplicated region for block: B:19:0x0056 A[PHI: r8
-      0x0056: PHI (r8v3 int) = (r8v0 int), (r8v1 int), (r8v4 int) binds: [B:12:0x0045, B:22:0x0062, B:18:0x0055] A[DONT_GENERATE, DONT_INLINE]] */
+    /*
+     * JADX WARN: Can't fix incorrect switch cases order, some code will duplicate
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:19:0x0056 A[PHI: r8
+     * 0x0056: PHI (r8v3 int) = (r8v0 int), (r8v1 int), (r8v4 int) binds:
+     * [B:12:0x0045, B:22:0x0062, B:18:0x0055] A[DONT_GENERATE, DONT_INLINE]]
+     */
     public ClassReader(byte[] bArr, int i, boolean z) {
         this.classFileBuffer = bArr;
         this.b = bArr;
@@ -5909,7 +6512,8 @@ public class ClassReader {
                     i3 = i5 + 1;
                     int i7 = i + 2;
                     i += 3;
-                    cArr[i5] = (char) (((b & dn.m) << 12) + ((bArr[i6] & JSONB.Constants.BC_INT32_BYTE_MAX) << 6) + (bArr[i7] & JSONB.Constants.BC_INT32_BYTE_MAX));
+                    cArr[i5] = (char) (((b & dn.m) << 12) + ((bArr[i6] & JSONB.Constants.BC_INT32_BYTE_MAX) << 6)
+                            + (bArr[i7] & JSONB.Constants.BC_INT32_BYTE_MAX));
                 }
                 i5 = i3;
             }
@@ -5922,6 +6526,9 @@ public class ClassReader {
     }
 
     public ClassReader(String str) {
-        this(readStream(ClassLoader.getSystemResourceAsStream(stringConcat$1(str.replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/'))), true));
+        this(readStream(
+                ClassLoader.getSystemResourceAsStream(stringConcat$1(
+                        str.replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/'))),
+                true));
     }
 }

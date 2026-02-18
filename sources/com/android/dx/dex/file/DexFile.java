@@ -48,7 +48,10 @@ public final class DexFile {
     private final MixedItemSection typeLists;
     private final MixedItemSection wordData;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Storage {
         byte[] storage;
 
@@ -58,7 +61,8 @@ public final class DexFile {
 
         public byte[] getStorage(int i) {
             if (this.storage.length < i) {
-                Logger.getAnonymousLogger().log(Level.FINER, "DexFile storage too small  " + this.storage.length + " vs " + i);
+                Logger.getAnonymousLogger().log(Level.FINER,
+                        "DexFile storage too small  " + this.storage.length + " vs " + i);
                 this.storage = new byte[i];
             }
             return this.storage;
@@ -75,7 +79,8 @@ public final class DexFile {
         MixedItemSection.SortType sortType2 = MixedItemSection.SortType.TYPE;
         MixedItemSection mixedItemSection2 = new MixedItemSection("word_data", this, 4, sortType2);
         this.wordData = mixedItemSection2;
-        MixedItemSection mixedItemSection3 = new MixedItemSection("string_data", this, 1, MixedItemSection.SortType.INSTANCE);
+        MixedItemSection mixedItemSection3 = new MixedItemSection("string_data", this, 1,
+                MixedItemSection.SortType.INSTANCE);
         this.stringData = mixedItemSection3;
         MixedItemSection mixedItemSection4 = new MixedItemSection(null, this, 1, sortType);
         this.classData = mixedItemSection4;
@@ -100,11 +105,16 @@ public final class DexFile {
             this.callSiteIds = callSiteIdsSection;
             MethodHandlesSection methodHandlesSection = new MethodHandlesSection(this);
             this.methodHandles = methodHandlesSection;
-            this.sections = new Section[]{headerSection, stringIdsSection, typeIdsSection, protoIdsSection, fieldIdsSection, methodIdsSection, classDefsSection, callSiteIdsSection, methodHandlesSection, mixedItemSection2, mixedItemSection, mixedItemSection3, mixedItemSection5, mixedItemSection4, mixedItemSection6};
+            this.sections = new Section[] { headerSection, stringIdsSection, typeIdsSection, protoIdsSection,
+                    fieldIdsSection, methodIdsSection, classDefsSection, callSiteIdsSection, methodHandlesSection,
+                    mixedItemSection2, mixedItemSection, mixedItemSection3, mixedItemSection5, mixedItemSection4,
+                    mixedItemSection6 };
         } else {
             this.callSiteIds = null;
             this.methodHandles = null;
-            this.sections = new Section[]{headerSection, stringIdsSection, typeIdsSection, protoIdsSection, fieldIdsSection, methodIdsSection, classDefsSection, mixedItemSection2, mixedItemSection, mixedItemSection3, mixedItemSection5, mixedItemSection4, mixedItemSection6};
+            this.sections = new Section[] { headerSection, stringIdsSection, typeIdsSection, protoIdsSection,
+                    fieldIdsSection, methodIdsSection, classDefsSection, mixedItemSection2, mixedItemSection,
+                    mixedItemSection3, mixedItemSection5, mixedItemSection4, mixedItemSection6 };
         }
         this.fileSize = -1;
         this.dumpWidth = 79;
@@ -138,8 +148,18 @@ public final class DexFile {
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:54:0x00f3 A[Catch: RuntimeException -> 0x00e6, TryCatch #0 {RuntimeException -> 0x00e6, blocks: (B:44:0x00d9, B:46:0x00e1, B:54:0x00f3, B:56:0x00fe, B:57:0x0104, B:58:0x0107, B:59:0x011e, B:51:0x00e8), top: B:74:0x00d9 }] */
-    /* JADX WARN: Found duplicated region for block: B:56:0x00fe A[Catch: RuntimeException -> 0x00e6, TryCatch #0 {RuntimeException -> 0x00e6, blocks: (B:44:0x00d9, B:46:0x00e1, B:54:0x00f3, B:56:0x00fe, B:57:0x0104, B:58:0x0107, B:59:0x011e, B:51:0x00e8), top: B:74:0x00d9 }] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:54:0x00f3 A[Catch:
+     * RuntimeException -> 0x00e6, TryCatch #0 {RuntimeException -> 0x00e6, blocks:
+     * (B:44:0x00d9, B:46:0x00e1, B:54:0x00f3, B:56:0x00fe, B:57:0x0104,
+     * B:58:0x0107, B:59:0x011e, B:51:0x00e8), top: B:74:0x00d9 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:56:0x00fe A[Catch:
+     * RuntimeException -> 0x00e6, TryCatch #0 {RuntimeException -> 0x00e6, blocks:
+     * (B:44:0x00d9, B:46:0x00e1, B:54:0x00f3, B:56:0x00fe, B:57:0x0104,
+     * B:58:0x0107, B:59:0x011e, B:51:0x00e8), top: B:74:0x00d9 }]
+     */
     /* JADX WARN: Found duplicated region for block: B:83:0x0107 A[SYNTHETIC] */
     private ByteArrayAnnotatedOutput toDex0(boolean z, boolean z2, Storage storage) {
         int fileOffset;
@@ -168,7 +188,7 @@ public final class DexFile {
             if ((section != this.callSiteIds && section != this.methodHandles) || !section.items().isEmpty()) {
                 int fileOffset2 = section.setFileOffset(iWriteSize);
                 if (fileOffset2 < iWriteSize) {
-                    throw new RuntimeException(bjs.i(i, "bogus placement for section "));
+                    throw new RuntimeException(concatVar2Var1(i, "bogus placement for section "));
                 }
                 try {
                     MixedItemSection mixedItemSection = this.map;
@@ -221,7 +241,8 @@ public final class DexFile {
         calcSignature(storage2, byteArrayAnnotatedOutput.getCursor());
         calcChecksum(storage2, byteArrayAnnotatedOutput.getCursor());
         if (z) {
-            this.wordData.writeIndexAnnotation(byteArrayAnnotatedOutput, ItemType.TYPE_CODE_ITEM, "\nmethod code index:\n\n");
+            this.wordData.writeIndexAnnotation(byteArrayAnnotatedOutput, ItemType.TYPE_CODE_ITEM,
+                    "\nmethod code index:\n\n");
             getStatistics().writeAnnotation(byteArrayAnnotatedOutput);
             byteArrayAnnotatedOutput.finishAnnotating();
         }

@@ -15,9 +15,9 @@ import me.hd.wauxv.R;
 /* JADX INFO: loaded from: classes.dex */
 public abstract class dg extends hb implements cea {
     public eqj _ac;
-    public final bgf a;
+    public final IHasInvokeMethod a;
 
-    public dg(bgf bgfVar) {
+    public dg(IHasInvokeMethod bgfVar) {
         ((but) this.t.c).ad("androidx:appcompat", new gz(this));
         am(new ha(this));
         this.a = bgfVar;
@@ -34,7 +34,8 @@ public abstract class dg extends hb implements cea {
         return cebVar2;
     }
 
-    @Override // me.hd.wauxv.obf.hb, me.hd.wauxv.obf.aci, android.app.Activity, android.content.ComponentCallbacks
+    @Override // me.hd.wauxv.obf.hb, me.hd.wauxv.obf.aci, android.app.Activity,
+              // android.content.ComponentCallbacks
     public final void onConfigurationChanged(Configuration configuration) {
         Resources resources;
         boolean z = exm.a;
@@ -59,7 +60,8 @@ public abstract class dg extends hb implements cea {
             typedArrayObtainStyledAttributes.recycle();
             getTheme().applyStyle(resourceId, true);
             Window window = getWindow();
-            Resources.Theme theme = (window == null || (viewPeekDecorView = window.peekDecorView()) == null || (context = viewPeekDecorView.getContext()) == null) ? null : context.getTheme();
+            Resources.Theme theme = (window == null || (viewPeekDecorView = window.peekDecorView()) == null
+                    || (context = viewPeekDecorView.getContext()) == null) ? null : context.getTheme();
             if (theme != null) {
                 theme.applyStyle(resourceId, true);
             }
@@ -69,27 +71,27 @@ public abstract class dg extends hb implements cea {
         dox doxVar = new dox(0, 0, dowVar);
         dox doxVar2 = new dox(are.a, are.b, dowVar);
         View decorView = getWindow().getDecorView();
-        bzo.p(decorView, "window.decorView");
+        throwIfVar1IsNull(decorView, "window.decorView");
         Resources resources = decorView.getResources();
-        bzo.p(resources, "view.resources");
+        throwIfVar1IsNull(resources, "view.resources");
         boolean zBooleanValue = ((Boolean) dowVar.invoke(resources)).booleanValue();
         Resources resources2 = decorView.getResources();
-        bzo.p(resources2, "view.resources");
+        throwIfVar1IsNull(resources2, "view.resources");
         boolean zBooleanValue2 = ((Boolean) dowVar.invoke(resources2)).booleanValue();
         int i2 = Build.VERSION.SDK_INT;
         arf ariVar = i2 >= 30 ? new ari() : i2 >= 29 ? new arh() : i2 >= 28 ? new arg() : new arf();
         Window window2 = getWindow();
-        bzo.p(window2, "window");
+        throwIfVar1IsNull(window2, "window");
         ariVar.b(doxVar, doxVar2, window2, decorView, zBooleanValue, zBooleanValue2);
         Window window3 = getWindow();
-        bzo.p(window3, "window");
+        throwIfVar1IsNull(window3, "window");
         ariVar.a(window3);
         eqj eqjVar = (eqj) this.a.invoke(getLayoutInflater());
         this._ac = eqjVar;
-        bzo.n(eqjVar);
+        throwIfVar1IsNull(eqjVar);
         setContentView(eqjVar.getRoot());
         eqj eqjVar2 = this._ac;
-        bzo.n(eqjVar2);
+        throwIfVar1IsNull(eqjVar2);
         View root = eqjVar2.getRoot();
         df dfVar = new df(0);
         WeakHashMap weakHashMap = eqz.a;

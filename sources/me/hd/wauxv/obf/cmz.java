@@ -46,9 +46,9 @@ public abstract class cmz {
     public static final cwa e = new cwa("link-destination");
     public static final cwa f = new cwa("paragraph-is-in-tight-list");
     public static final cwa g = new cwa("code-block-info");
-    public static final int[] h = {R.attr.theme, me.hd.wauxv.R.attr.theme};
-    public static final int[] i = {me.hd.wauxv.R.attr.materialThemeOverlay};
-    public static final int[] j = {R.attr.stateListAnimator};
+    public static final int[] h = { R.attr.theme, me.hd.wauxv.R.attr.theme };
+    public static final int[] i = { me.hd.wauxv.R.attr.materialThemeOverlay };
+    public static final int[] j = { R.attr.stateListAnimator };
 
     public static final void aa(ahh ahhVar, Throwable th) {
         Throwable runtimeException;
@@ -60,11 +60,13 @@ public abstract class cmz {
                 if (th == th2) {
                     runtimeException = th;
                 } else {
-                    runtimeException = new RuntimeException("Exception while trying to handle coroutine exception", th2);
+                    runtimeException = new RuntimeException("Exception while trying to handle coroutine exception",
+                            th2);
                     aye.j(runtimeException, th);
                 }
                 Thread threadCurrentThread = Thread.currentThread();
-                threadCurrentThread.getUncaughtExceptionHandler().uncaughtException(threadCurrentThread, runtimeException);
+                threadCurrentThread.getUncaughtExceptionHandler().uncaughtException(threadCurrentThread,
+                        runtimeException);
             }
         }
         try {
@@ -76,13 +78,13 @@ public abstract class cmz {
     }
 
     public static afw ab(afw afwVar) {
-        bzo.q(afwVar, "<this>");
+        throwIfVar1IsNull(afwVar, "<this>");
         afx afxVar = afwVar instanceof afx ? (afx) afwVar : null;
         if (afxVar == null || (afwVar = afxVar.n) != null) {
             return afwVar;
         }
         ahh ahhVar = afxVar.m;
-        bzo.n(ahhVar);
+        throwIfVar1IsNull(ahhVar);
         afy afyVar = (afy) ahhVar._w(arj.a);
         afw aorVar = afyVar != null ? new aor((ahj) afyVar, afxVar) : afxVar;
         afxVar.n = aorVar;
@@ -94,8 +96,9 @@ public abstract class cmz {
     }
 
     public static final void ad(String str) {
-        bzo.q(str, "key");
-        throw new IllegalArgumentException(bjs.o("No valid saved state was found for the key '", str, "'. It may be missing, null, or not of the expected type. This can occur if the value was saved with a different type or if the saved state was modified unexpectedly."));
+        throwIfVar1IsNull(str, "key");
+        throw new IllegalArgumentException(concat("No valid saved state was found for the key '", str,
+                "'. It may be missing, null, or not of the expected type. This can occur if the value was saved with a different type or if the saved state was modified unexpectedly."));
     }
 
     public static boolean ae(File file) {
@@ -112,7 +115,8 @@ public abstract class cmz {
     public static long af(int i2, boolean z, boolean z2, boolean z3) {
         l(i2);
         l(0);
-        return (z ? 274877906944L : 0L) | (((long) i2) + (((long) 0) << 19)) | (z2 ? 549755813888L : 0L) | (z3 ? 2199023255552L : 0L);
+        return (z ? 274877906944L : 0L) | (((long) i2) + (((long) 0) << 19)) | (z2 ? 549755813888L : 0L)
+                | (z3 ? 2199023255552L : 0L);
     }
 
     public static void ag(File file, File file2) {
@@ -166,21 +170,31 @@ public abstract class cmz {
     /* JADX WARN: Type inference failed for: r10v9 */
     /* JADX WARN: Type inference failed for: r4v24 */
     /* JADX WARN: Type inference failed for: r4v25 */
-    /* JADX WARN: Type inference failed for: r4v26, types: [android.content.res.TypedArray] */
+    /*
+     * JADX WARN: Type inference failed for: r4v26, types:
+     * [android.content.res.TypedArray]
+     */
     /* JADX WARN: Type inference failed for: r4v27 */
     /* JADX WARN: Type inference failed for: r4v28 */
     /* JADX WARN: Type inference failed for: r4v29 */
-    /* JADX WARN: Type inference failed for: r4v30, types: [android.content.res.TypedArray] */
+    /*
+     * JADX WARN: Type inference failed for: r4v30, types:
+     * [android.content.res.TypedArray]
+     */
     /* JADX WARN: Type inference failed for: r4v38 */
     /* JADX WARN: Type inference failed for: r4v39 */
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException
-    	at java.base/java.util.Objects.requireNonNull(Objects.java:209)
-    	at java.base/java.util.ArrayList.batchRemove(ArrayList.java:816)
-    	at java.base/java.util.ArrayList.removeAll(ArrayList.java:791)
-    	at jadx.core.dex.visitors.finaly.TryCatchEdgeBlockMap.getAllInScope(TryCatchEdgeBlockMap.java:91)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:204)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException
+     * at java.base/java.util.Objects.requireNonNull(Objects.java:209)
+     * at java.base/java.util.ArrayList.batchRemove(ArrayList.java:816)
+     * at java.base/java.util.ArrayList.removeAll(ArrayList.java:791)
+     * at jadx.core.dex.visitors.finaly.TryCatchEdgeBlockMap.getAllInScope(
+     * TryCatchEdgeBlockMap.java:91)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+     * MarkFinallyVisitor.java:204)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:119)
      */
     public static bca ai(XmlResourceParser xmlResourceParser, Resources resources) throws Exception {
         int next;
@@ -471,15 +485,19 @@ public abstract class cmz {
         if (typedValueAl != null) {
             return typedValueAl;
         }
-        throw new IllegalArgumentException(String.format("%1$s requires a value for the %2$s attribute to be set in your app theme. You can either set the attribute in your theme or update your theme to inherit from Theme.MaterialComponents (or a descendant).", str, context.getResources().getResourceName(i2)));
+        throw new IllegalArgumentException(String.format(
+                "%1$s requires a value for the %2$s attribute to be set in your app theme. You can either set the attribute in your theme or update your theme to inherit from Theme.MaterialComponents (or a descendant).",
+                str, context.getResources().getResourceName(i2)));
     }
 
     public static void ao(AppBarLayout appBarLayout, float f2) {
         int integer = appBarLayout.getResources().getInteger(me.hd.wauxv.R.integer.app_bar_elevation_anim_duration);
         StateListAnimator stateListAnimator = new StateListAnimator();
         long j2 = integer;
-        stateListAnimator.addState(new int[]{R.attr.state_enabled, me.hd.wauxv.R.attr.state_liftable, -1610876047}, ObjectAnimator.ofFloat(appBarLayout, "elevation", 0.0f).setDuration(j2));
-        stateListAnimator.addState(new int[]{R.attr.state_enabled}, ObjectAnimator.ofFloat(appBarLayout, "elevation", f2).setDuration(j2));
+        stateListAnimator.addState(new int[] { R.attr.state_enabled, me.hd.wauxv.R.attr.state_liftable, -1610876047 },
+                ObjectAnimator.ofFloat(appBarLayout, "elevation", 0.0f).setDuration(j2));
+        stateListAnimator.addState(new int[] { R.attr.state_enabled },
+                ObjectAnimator.ofFloat(appBarLayout, "elevation", f2).setDuration(j2));
         stateListAnimator.addState(new int[0], ObjectAnimator.ofFloat(appBarLayout, "elevation", 0.0f).setDuration(0L));
         appBarLayout.setStateListAnimator(stateListAnimator);
     }
@@ -581,7 +599,7 @@ public abstract class cmz {
                 i2 = (int) (f2 * i3);
             }
         }
-        LayerDrawable layerDrawable = new LayerDrawable(new Drawable[]{drawable, drawable2});
+        LayerDrawable layerDrawable = new LayerDrawable(new Drawable[] { drawable, drawable2 });
         layerDrawable.setLayerSize(1, i2, i3);
         layerDrawable.setLayerGravity(1, 17);
         return layerDrawable;
@@ -689,7 +707,10 @@ public abstract class cmz {
         if (zcVarB.equals(dal.b(String.class))) {
             Object string2 = sharedPreferences.getString(strZ2, null);
             if (string2 == null) {
-                throw new NullPointerException("null cannot be cast to non-null type kotlin.Int" /* cnb.z(-122522532051754L) */);
+                throw new NullPointerException("null cannot be cast to non-null type kotlin.Int" /*
+                                                                                                  * cnb.z(-
+                                                                                                  * 122522532051754L)
+                                                                                                  */);
             }
             numValueOf = (Integer) string2;
         } else if (zcVarB.equals(dal.b(Integer.TYPE))) {
@@ -706,7 +727,7 @@ public abstract class cmz {
         }
         sb.append(numValueOf.intValue());
         byte[] bytes = sb.toString().getBytes(uj.a);
-        bzo.p(bytes, "getBytes(...)" /* cnb.z(-80569291504426L) */);
+        throwIfVar1IsNull(bytes, "getBytes(...)" /* cnb.z(-80569291504426L) */);
         try {
             MessageDigest messageDigest = MessageDigest.getInstance("MD5" /* cnb.z(-47145856006954L) */);
             messageDigest.update(bytes);
@@ -714,7 +735,7 @@ public abstract class cmz {
             StringBuffer stringBuffer = new StringBuffer();
             for (byte b2 : bArrDigest) {
                 String upperCase = Integer.toHexString(b2 & 255).toUpperCase(Locale.getDefault());
-                bzo.p(upperCase, "toUpperCase(...)" /* cnb.z(-47218870450986L) */);
+                throwIfVar1IsNull(upperCase, "toUpperCase(...)" /* cnb.z(-47218870450986L) */);
                 if (upperCase.length() < 2) {
                     stringBuffer.append(0);
                 }
@@ -724,9 +745,9 @@ public abstract class cmz {
         } catch (Exception e2) {
             e2.printStackTrace();
         }
-        bzo.n(string);
+        throwIfVar1IsNull(string);
         String lowerCase = string.toLowerCase(Locale.ROOT);
-        bzo.p(lowerCase, "toLowerCase(...)" /* cnb.z(-119447335467818L) */);
+        throwIfVar1IsNull(lowerCase, "toLowerCase(...)" /* cnb.z(-119447335467818L) */);
         StringBuilder sb2 = new StringBuilder();
         bmo.a.getClass();
         sb2.append(bmo.n().getDataDir().getAbsolutePath());

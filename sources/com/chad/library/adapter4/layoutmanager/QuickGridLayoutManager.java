@@ -5,7 +5,7 @@ import android.util.AttributeSet;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.umeng.analytics.pro.f;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cwx;
 import me.hd.wauxv.obf.cyw;
 
@@ -14,10 +14,13 @@ import me.hd.wauxv.obf.cyw;
 public class QuickGridLayoutManager extends GridLayoutManager {
     public cyw dl;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'super' call moved to the top of the method (can break code
+     * semantics)
+     */
     public QuickGridLayoutManager(Context context, AttributeSet attributeSet, int i, int i2) {
         super(context, attributeSet, i, i2);
-        bzo.q(context, f.X);
+        throwIfVar1IsNull(context, "context");
         cwx cwxVar = new cwx(this);
         cwxVar.a = this.h;
         this.h = cwxVar;

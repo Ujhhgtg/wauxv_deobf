@@ -10,13 +10,14 @@ public final class aqg implements dft, aqh {
     public final int b;
 
     public aqg(dft dftVar, int i) {
-        bzo.q(dftVar, "sequence");
+        throwIfVar1IsNull(dftVar, "sequence");
         this.a = dftVar;
         this.b = i;
         if (i >= 0) {
             return;
         }
-        throw new IllegalArgumentException(("count must be non-negative, but was " + i + TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH).toString());
+        throw new IllegalArgumentException(("count must be non-negative, but was " + i
+                + TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH).toString());
     }
 
     @Override // me.hd.wauxv.obf.aqh

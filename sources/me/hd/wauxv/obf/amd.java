@@ -96,13 +96,17 @@ public final /* synthetic */ class amd implements bfu {
                 dnh dnhVar = dnh.b;
                 return new daj(zcVarB);
             case 11:
-                return new bix(new int[]{Color.parseColor(bjh.a.o()), Color.parseColor(bji.a.o())}, Color.parseColor(bjj.a.o()), 12);
+                return new bix(new int[] { Color.parseColor(bjh.a.o()), Color.parseColor(bji.a.o()) },
+                        Color.parseColor(bjj.a.o()), 12);
             case 12:
-                return new bix(new int[]{Color.parseColor(biy.a.o()), Color.parseColor(biz.a.o())}, Color.parseColor(bja.a.o()), 12);
+                return new bix(new int[] { Color.parseColor(biy.a.o()), Color.parseColor(biz.a.o()) },
+                        Color.parseColor(bja.a.o()), 12);
             case 13:
-                return new bix(new int[]{Color.parseColor(bjb.a.o()), Color.parseColor(bjc.a.o())}, Color.parseColor(bjd.a.o()), 12);
+                return new bix(new int[] { Color.parseColor(bjb.a.o()), Color.parseColor(bjc.a.o()) },
+                        Color.parseColor(bjd.a.o()), 12);
             case 14:
-                return new bix(new int[]{Color.parseColor(bje.a.o()), Color.parseColor(bjf.a.o())}, Color.parseColor(bjg.a.o()), 12);
+                return new bix(new int[] { Color.parseColor(bje.a.o()), Color.parseColor(bjf.a.o()) },
+                        Color.parseColor(bjg.a.o()), 12);
             case 15:
                 bjh.a.u("#FFF9E8C8" /* cnb.z(-505547715509034L) */);
                 bji.a.u("#FFFEF3D6" /* cnb.z(-505521945705258L) */);
@@ -161,12 +165,12 @@ public final /* synthetic */ class amd implements bfu {
             case 26:
                 return bxv.g();
             case 27:
-                return Boolean.valueOf(zf.g(bth.class.getClassLoader(), "android.os.Build"));
+                return Boolean.valueOf(ReflectionWrapper.g(bth.class.getClassLoader(), "android.os.Build"));
             case 28:
                 bxf bxfVar = bxf.a;
                 cem cemVar = bxj.c;
                 if (cemVar == null) {
-                    bzo.ar("binding" /* cnb.z(-496249111313194L) */);
+                    throwLateinitPropNotInitYet("binding" /* cnb.z(-496249111313194L) */);
                     throw null;
                 }
                 bxfVar.q(Float.parseFloat(String.valueOf(cemVar.c.getText())));
@@ -176,7 +180,7 @@ public final /* synthetic */ class amd implements bfu {
                     bxgVar.q(Float.parseFloat(String.valueOf(cemVar2.d.getText())));
                     return ensVar;
                 }
-                bzo.ar("binding" /* cnb.z(-496214751574826L) */);
+                throwLateinitPropNotInitYet("binding" /* cnb.z(-496214751574826L) */);
                 throw null;
             default:
                 bxf.a.q(31.135633f);

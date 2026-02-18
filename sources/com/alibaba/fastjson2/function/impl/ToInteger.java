@@ -24,6 +24,6 @@ public class ToInteger implements Function {
         if (obj instanceof Number) {
             return Integer.valueOf(((Number) obj).intValue());
         }
-        throw new JSONException(bjs.m(obj, new StringBuilder("can not cast to Integer ")));
+        throw new JSONException(concatVar1GetClass(obj, new StringBuilder("can not cast to Integer ")));
     }
 }

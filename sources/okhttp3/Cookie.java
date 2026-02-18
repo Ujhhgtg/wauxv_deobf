@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
 import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.avd;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.dnj;
 import me.hd.wauxv.obf.dnr;
 import me.hd.wauxv.obf.yg;
@@ -36,11 +36,15 @@ public final class Cookie {
     private final String value;
     public static final Companion Companion = new Companion(null);
     private static final Pattern YEAR_PATTERN = Pattern.compile("(\\d{2,4})[^\\d]*");
-    private static final Pattern MONTH_PATTERN = Pattern.compile("(?i)(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec).*");
+    private static final Pattern MONTH_PATTERN = Pattern
+            .compile("(?i)(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec).*");
     private static final Pattern DAY_OF_MONTH_PATTERN = Pattern.compile("(\\d{1,2})[^\\d]*");
     private static final Pattern TIME_PATTERN = Pattern.compile("(\\d{1,2}):(\\d{1,2}):(\\d{1,2})[^\\d]*");
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Builder {
         private String domain;
         private boolean hostOnly;
@@ -64,13 +68,14 @@ public final class Cookie {
             long j = this.expiresAt;
             String str3 = this.domain;
             if (str3 != null) {
-                return new Cookie(str, str2, j, str3, this.path, this.secure, this.httpOnly, this.persistent, this.hostOnly, null);
+                return new Cookie(str, str2, j, str3, this.path, this.secure, this.httpOnly, this.persistent,
+                        this.hostOnly, null);
             }
             throw new NullPointerException("builder.domain == null");
         }
 
         public final Builder domain(String str) {
-            bzo.q(str, "domain");
+            throwIfVar1IsNull(str, "domain");
             return domain(str, false);
         }
 
@@ -87,7 +92,7 @@ public final class Cookie {
         }
 
         public final Builder hostOnlyDomain(String str) {
-            bzo.q(str, "domain");
+            throwIfVar1IsNull(str, "domain");
             return domain(str, true);
         }
 
@@ -97,8 +102,8 @@ public final class Cookie {
         }
 
         public final Builder name(String str) {
-            bzo.q(str, "name");
-            if (!bzo.f(dnj.ba(str).toString(), str)) {
+            throwIfVar1IsNull(str, "name");
+            if (!nullSafeIsEqual(dnj.ba(str).toString(), str)) {
                 throw new IllegalArgumentException("name is not trimmed");
             }
             this.name = str;
@@ -106,7 +111,7 @@ public final class Cookie {
         }
 
         public final Builder path(String str) {
-            bzo.q(str, "path");
+            throwIfVar1IsNull(str, "path");
             if (!dnr.bp(str, "/", false)) {
                 throw new IllegalArgumentException("path must start with '/'");
             }
@@ -120,8 +125,8 @@ public final class Cookie {
         }
 
         public final Builder value(String str) {
-            bzo.q(str, "value");
-            if (!bzo.f(dnj.ba(str).toString(), str)) {
+            throwIfVar1IsNull(str, "value");
+            if (!nullSafeIsEqual(dnj.ba(str).toString(), str)) {
                 throw new IllegalArgumentException("value is not trimmed");
             }
             this.value = str;
@@ -139,7 +144,10 @@ public final class Cookie {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
@@ -148,7 +156,9 @@ public final class Cookie {
         private final int dateCharacterOffset(String str, int i, int i2, boolean z) {
             while (i < i2) {
                 char cCharAt = str.charAt(i);
-                if (((cCharAt < ' ' && cCharAt != '\t') || cCharAt >= 127 || ('0' <= cCharAt && cCharAt < ':') || (('a' <= cCharAt && cCharAt < '{') || (('A' <= cCharAt && cCharAt < '[') || cCharAt == ':'))) == (!z)) {
+                if (((cCharAt < ' ' && cCharAt != '\t') || cCharAt >= 127 || ('0' <= cCharAt && cCharAt < ':')
+                        || (('a' <= cCharAt && cCharAt < '{')
+                                || (('A' <= cCharAt && cCharAt < '[') || cCharAt == ':'))) == (!z)) {
                     return i;
                 }
                 i++;
@@ -158,7 +168,9 @@ public final class Cookie {
 
         /* JADX INFO: Access modifiers changed from: private */
         public final boolean domainMatch(String str, String str2) {
-            return bzo.f(str, str2) || (dnr.bi(str, str2) && str.charAt((str.length() - str2.length()) - 1) == '.' && !Util.canParseAsIpAddress(str));
+            return nullSafeIsEqual(str, str2)
+                    || (dnr.bi(str, str2) && str.charAt((str.length() - str2.length()) - 1) == '.'
+                            && !Util.canParseAsIpAddress(str));
         }
 
         private final String parseDomain(String str) {
@@ -186,31 +198,31 @@ public final class Cookie {
                 matcher.region(iDateCharacterOffset, iDateCharacterOffset2);
                 if (i4 == -1 && matcher.usePattern(Cookie.TIME_PATTERN).matches()) {
                     String strGroup = matcher.group(1);
-                    bzo.p(strGroup, "matcher.group(1)");
+                    throwIfVar1IsNull(strGroup, "matcher.group(1)");
                     i4 = Integer.parseInt(strGroup);
                     String strGroup2 = matcher.group(2);
-                    bzo.p(strGroup2, "matcher.group(2)");
+                    throwIfVar1IsNull(strGroup2, "matcher.group(2)");
                     i6 = Integer.parseInt(strGroup2);
                     String strGroup3 = matcher.group(3);
-                    bzo.p(strGroup3, "matcher.group(3)");
+                    throwIfVar1IsNull(strGroup3, "matcher.group(3)");
                     i7 = Integer.parseInt(strGroup3);
                 } else if (i5 == -1 && matcher.usePattern(Cookie.DAY_OF_MONTH_PATTERN).matches()) {
                     String strGroup4 = matcher.group(1);
-                    bzo.p(strGroup4, "matcher.group(1)");
+                    throwIfVar1IsNull(strGroup4, "matcher.group(1)");
                     i5 = Integer.parseInt(strGroup4);
                 } else if (iAi == -1 && matcher.usePattern(Cookie.MONTH_PATTERN).matches()) {
                     String strGroup5 = matcher.group(1);
-                    bzo.p(strGroup5, "matcher.group(1)");
+                    throwIfVar1IsNull(strGroup5, "matcher.group(1)");
                     Locale locale = Locale.US;
-                    bzo.p(locale, "US");
+                    throwIfVar1IsNull(locale, "US");
                     String lowerCase = strGroup5.toLowerCase(locale);
-                    bzo.p(lowerCase, "this as java.lang.String).toLowerCase(locale)");
+                    throwIfVar1IsNull(lowerCase, "this as java.lang.String).toLowerCase(locale)");
                     String strPattern = Cookie.MONTH_PATTERN.pattern();
-                    bzo.p(strPattern, "MONTH_PATTERN.pattern()");
+                    throwIfVar1IsNull(strPattern, "MONTH_PATTERN.pattern()");
                     iAi = dnj.ai(strPattern, lowerCase, 0, false, 6) / 4;
                 } else if (i3 == -1 && matcher.usePattern(Cookie.YEAR_PATTERN).matches()) {
                     String strGroup6 = matcher.group(1);
-                    bzo.p(strGroup6, "matcher.group(1)");
+                    throwIfVar1IsNull(strGroup6, "matcher.group(1)");
                     i3 = Integer.parseInt(strGroup6);
                 }
                 iDateCharacterOffset = dateCharacterOffset(str, iDateCharacterOffset2 + 1, i2, false);
@@ -260,8 +272,8 @@ public final class Cookie {
                 return j;
             } catch (NumberFormatException e) {
                 Pattern patternCompile = Pattern.compile("-?\\d+");
-                bzo.p(patternCompile, "compile(...)");
-                bzo.q(str, "input");
+                throwIfVar1IsNull(patternCompile, "compile(...)");
+                throwIfVar1IsNull(str, "input");
                 if (patternCompile.matcher(str).matches()) {
                     return dnr.bp(str, "-", false) ? Long.MIN_VALUE : Long.MAX_VALUE;
                 }
@@ -272,29 +284,36 @@ public final class Cookie {
         /* JADX INFO: Access modifiers changed from: private */
         public final boolean pathMatch(HttpUrl httpUrl, String str) {
             String strEncodedPath = httpUrl.encodedPath();
-            if (bzo.f(strEncodedPath, str)) {
+            if (nullSafeIsEqual(strEncodedPath, str)) {
                 return true;
             }
-            return dnr.bp(strEncodedPath, str, false) && (dnr.bi(str, "/") || strEncodedPath.charAt(str.length()) == '/');
+            return dnr.bp(strEncodedPath, str, false)
+                    && (dnr.bi(str, "/") || strEncodedPath.charAt(str.length()) == '/');
         }
 
         public final Cookie parse(HttpUrl httpUrl, String str) {
-            bzo.q(httpUrl, "url");
-            bzo.q(str, "setCookie");
+            throwIfVar1IsNull(httpUrl, "url");
+            throwIfVar1IsNull(str, "setCookie");
             return parse$okhttp(System.currentTimeMillis(), httpUrl, str);
         }
 
         public final Cookie parse$okhttp(long j, HttpUrl httpUrl, String str) {
             long j2;
-            bzo.q(httpUrl, "url");
-            bzo.q(str, "setCookie");
-            int iDelimiterOffset$default = Util.delimiterOffset$default(str, TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER, 0, 0, 6, (Object) null);
-            int iDelimiterOffset$default2 = Util.delimiterOffset$default(str, SignatureVisitor.INSTANCEOF, 0, iDelimiterOffset$default, 2, (Object) null);
+            throwIfVar1IsNull(httpUrl, "url");
+            throwIfVar1IsNull(str, "setCookie");
+            int iDelimiterOffset$default = Util.delimiterOffset$default(str,
+                    TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER, 0, 0, 6,
+                    (Object) null);
+            int iDelimiterOffset$default2 = Util.delimiterOffset$default(str, SignatureVisitor.INSTANCEOF, 0,
+                    iDelimiterOffset$default, 2, (Object) null);
             String domain = null;
             if (iDelimiterOffset$default2 != iDelimiterOffset$default) {
-                String strTrimSubstring$default = Util.trimSubstring$default(str, 0, iDelimiterOffset$default2, 1, null);
-                if (strTrimSubstring$default.length() != 0 && Util.indexOfControlOrNonAscii(strTrimSubstring$default) == -1) {
-                    String strTrimSubstring = Util.trimSubstring(str, iDelimiterOffset$default2 + 1, iDelimiterOffset$default);
+                String strTrimSubstring$default = Util.trimSubstring$default(str, 0, iDelimiterOffset$default2, 1,
+                        null);
+                if (strTrimSubstring$default.length() != 0
+                        && Util.indexOfControlOrNonAscii(strTrimSubstring$default) == -1) {
+                    String strTrimSubstring = Util.trimSubstring(str, iDelimiterOffset$default2 + 1,
+                            iDelimiterOffset$default);
                     if (Util.indexOfControlOrNonAscii(strTrimSubstring) == -1) {
                         int i = iDelimiterOffset$default + 1;
                         int length = str.length();
@@ -306,10 +325,15 @@ public final class Cookie {
                         long maxAge = -1;
                         long expires = DatesKt.MAX_DATE;
                         while (i < length) {
-                            int iDelimiterOffset = Util.delimiterOffset(str, TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER, i, length);
-                            int iDelimiterOffset2 = Util.delimiterOffset(str, SignatureVisitor.INSTANCEOF, i, iDelimiterOffset);
+                            int iDelimiterOffset = Util.delimiterOffset(str,
+                                    TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER, i,
+                                    length);
+                            int iDelimiterOffset2 = Util.delimiterOffset(str, SignatureVisitor.INSTANCEOF, i,
+                                    iDelimiterOffset);
                             String strTrimSubstring2 = Util.trimSubstring(str, i, iDelimiterOffset2);
-                            String strTrimSubstring3 = iDelimiterOffset2 < iDelimiterOffset ? Util.trimSubstring(str, iDelimiterOffset2 + 1, iDelimiterOffset) : "";
+                            String strTrimSubstring3 = iDelimiterOffset2 < iDelimiterOffset
+                                    ? Util.trimSubstring(str, iDelimiterOffset2 + 1, iDelimiterOffset)
+                                    : "";
                             if (dnr.bj(strTrimSubstring2, "expires", true)) {
                                 try {
                                     expires = parseExpires(strTrimSubstring3, 0, strTrimSubstring3.length());
@@ -345,7 +369,8 @@ public final class Cookie {
                         } else if (!domainMatch(strHost, domain)) {
                             return null;
                         }
-                        if (strHost.length() != domain.length() && PublicSuffixDatabase.Companion.get().getEffectiveTldPlusOne(domain) == null) {
+                        if (strHost.length() != domain.length()
+                                && PublicSuffixDatabase.Companion.get().getEffectiveTldPlusOne(domain) == null) {
                             return null;
                         }
                         String strSubstring = "/";
@@ -354,11 +379,12 @@ public final class Cookie {
                             int iAm = dnj.am(strEncodedPath, '/', 0, 6);
                             if (iAm != 0) {
                                 strSubstring = strEncodedPath.substring(0, iAm);
-                                bzo.p(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
+                                throwIfVar1IsNull(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
                             }
                             str2 = strSubstring;
                         }
-                        return new Cookie(strTrimSubstring$default, strTrimSubstring, j2, domain, str2, z3, z, z2, z4, null);
+                        return new Cookie(strTrimSubstring$default, strTrimSubstring, j2, domain, str2, z3, z, z2, z4,
+                                null);
                     }
                 }
             }
@@ -366,8 +392,8 @@ public final class Cookie {
         }
 
         public final List<Cookie> parseAll(HttpUrl httpUrl, Headers headers) {
-            bzo.q(httpUrl, "url");
-            bzo.q(headers, "headers");
+            throwIfVar1IsNull(httpUrl, "url");
+            throwIfVar1IsNull(headers, "headers");
             List<String> listValues = headers.values("Set-Cookie");
             int size = listValues.size();
             ArrayList arrayList = null;
@@ -384,7 +410,7 @@ public final class Cookie {
                 return avd.a;
             }
             List<Cookie> listUnmodifiableList = Collections.unmodifiableList(arrayList);
-            bzo.p(listUnmodifiableList, "{\n        Collections.un…ableList(cookies)\n      }");
+            throwIfVar1IsNull(listUnmodifiableList, "{\n        Collections.un…ableList(cookies)\n      }");
             return listUnmodifiableList;
         }
 
@@ -392,7 +418,8 @@ public final class Cookie {
         }
     }
 
-    public /* synthetic */ Cookie(String str, String str2, long j, String str3, String str4, boolean z, boolean z2, boolean z3, boolean z4, akd akdVar) {
+    public /* synthetic */ Cookie(String str, String str2, long j, String str3, String str4, boolean z, boolean z2,
+            boolean z3, boolean z4, akd akdVar) {
         this(str, str2, j, str3, str4, z, z2, z3, z4);
     }
 
@@ -433,7 +460,12 @@ public final class Cookie {
             return false;
         }
         Cookie cookie = (Cookie) obj;
-        return bzo.f(cookie.name, this.name) && bzo.f(cookie.value, this.value) && cookie.expiresAt == this.expiresAt && bzo.f(cookie.domain, this.domain) && bzo.f(cookie.path, this.path) && cookie.secure == this.secure && cookie.httpOnly == this.httpOnly && cookie.persistent == this.persistent && cookie.hostOnly == this.hostOnly;
+        return nullSafeIsEqual(cookie.name, this.name) && nullSafeIsEqual(cookie.value, this.value)
+                && cookie.expiresAt == this.expiresAt
+                && nullSafeIsEqual(cookie.domain, this.domain) && nullSafeIsEqual(cookie.path, this.path)
+                && cookie.secure == this.secure
+                && cookie.httpOnly == this.httpOnly && cookie.persistent == this.persistent
+                && cookie.hostOnly == this.hostOnly;
     }
 
     public final long expiresAt() {
@@ -453,7 +485,11 @@ public final class Cookie {
     }
 
     public int hashCode() {
-        return Boolean.hashCode(this.hostOnly) + ((Boolean.hashCode(this.persistent) + ((Boolean.hashCode(this.httpOnly) + ((Boolean.hashCode(this.secure) + bjs.e(this.path, bjs.e(this.domain, (Long.hashCode(this.expiresAt) + bjs.e(this.value, bjs.e(this.name, 527, 31), 31)) * 31, 31), 31)) * 31)) * 31)) * 31);
+        return Boolean.hashCode(this.hostOnly) + ((Boolean.hashCode(this.persistent) + ((Boolean.hashCode(this.httpOnly)
+                + ((Boolean.hashCode(this.secure) + bjs.e(this.path, bjs.e(this.domain,
+                        (Long.hashCode(this.expiresAt) + bjs.e(this.value, bjs.e(this.name, 527, 31), 31)) * 31, 31),
+                        31)) * 31))
+                * 31)) * 31);
     }
 
     public final boolean hostOnly() {
@@ -469,8 +505,10 @@ public final class Cookie {
     }
 
     public final boolean matches(HttpUrl httpUrl) {
-        bzo.q(httpUrl, "url");
-        if ((this.hostOnly ? bzo.f(httpUrl.host(), this.domain) : Companion.domainMatch(httpUrl.host(), this.domain)) && Companion.pathMatch(httpUrl, this.path)) {
+        throwIfVar1IsNull(httpUrl, "url");
+        if ((this.hostOnly ? nullSafeIsEqual(httpUrl.host(), this.domain)
+                : Companion.domainMatch(httpUrl.host(), this.domain))
+                && Companion.pathMatch(httpUrl, this.path)) {
             return !this.secure || httpUrl.isHttps();
         }
         return false;
@@ -525,7 +563,7 @@ public final class Cookie {
             sb.append("; httponly");
         }
         String string = sb.toString();
-        bzo.p(string, "toString()");
+        throwIfVar1IsNull(string, "toString()");
         return string;
     }
 
@@ -533,7 +571,8 @@ public final class Cookie {
         return this.value;
     }
 
-    private Cookie(String str, String str2, long j, String str3, String str4, boolean z, boolean z2, boolean z3, boolean z4) {
+    private Cookie(String str, String str2, long j, String str3, String str4, boolean z, boolean z2, boolean z3,
+            boolean z4) {
         this.name = str;
         this.value = str2;
         this.expiresAt = j;

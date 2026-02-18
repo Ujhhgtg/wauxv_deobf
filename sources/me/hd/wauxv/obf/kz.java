@@ -8,9 +8,9 @@ import java.util.Set;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class kz implements Collection, Set, bsx {
-    public int[] a = bzo.a;
-    public Object[] b = bzo.b;
+public final class kz implements Collection, Set, IEmpty2 {
+    public int[] a = KotlinHelpers.a;
+    public Object[] b = KotlinHelpers.b;
     public int c;
 
     public kz(int i) {
@@ -78,7 +78,7 @@ public final class kz implements Collection, Set, bsx {
 
     @Override // java.util.Collection, java.util.Set
     public final boolean addAll(Collection collection) {
-        bzo.q(collection, "elements");
+        throwIfVar1IsNull(collection, "elements");
         int size = collection.size() + this.c;
         int i = this.c;
         int[] iArr = this.a;
@@ -106,8 +106,8 @@ public final class kz implements Collection, Set, bsx {
     @Override // java.util.Collection, java.util.Set
     public final void clear() {
         if (this.c != 0) {
-            this.a = bzo.a;
-            this.b = bzo.b;
+            this.a = KotlinHelpers.a;
+            this.b = KotlinHelpers.b;
             this.c = 0;
         }
         if (this.c != 0) {
@@ -122,7 +122,7 @@ public final class kz implements Collection, Set, bsx {
 
     @Override // java.util.Collection, java.util.Set
     public final boolean containsAll(Collection collection) {
-        bzo.q(collection, "elements");
+        throwIfVar1IsNull(collection, "elements");
         Iterator it = collection.iterator();
         while (it.hasNext()) {
             if (!contains(it.next())) {
@@ -226,7 +226,7 @@ public final class kz implements Collection, Set, bsx {
 
     @Override // java.util.Collection, java.util.Set
     public final boolean removeAll(Collection collection) {
-        bzo.q(collection, "elements");
+        throwIfVar1IsNull(collection, "elements");
         Iterator it = collection.iterator();
         boolean zRemove = false;
         while (it.hasNext()) {
@@ -237,7 +237,7 @@ public final class kz implements Collection, Set, bsx {
 
     @Override // java.util.Collection, java.util.Set
     public final boolean retainAll(Collection collection) {
-        bzo.q(collection, "elements");
+        throwIfVar1IsNull(collection, "elements");
         boolean z = false;
         for (int i = this.c - 1; -1 < i; i--) {
             if (!aaz.b(collection, this.b[i])) {
@@ -278,13 +278,13 @@ public final class kz implements Collection, Set, bsx {
         }
         sb.append('}');
         String string = sb.toString();
-        bzo.p(string, "toString(...)");
+        throwIfVar1IsNull(string, "toString(...)");
         return string;
     }
 
     @Override // java.util.Collection, java.util.Set
     public final Object[] toArray(Object[] objArr) {
-        bzo.q(objArr, "array");
+        throwIfVar1IsNull(objArr, "array");
         int i = this.c;
         if (objArr.length < i) {
             objArr = (Object[]) Array.newInstance(objArr.getClass().getComponentType(), i);

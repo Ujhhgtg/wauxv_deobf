@@ -30,7 +30,7 @@ public class ad extends ab {
 
     @Override // com.umeng.analytics.pro.ab, com.umeng.analytics.pro.aj
     public void b(String str, JSONObject jSONObject) {
-        super.b(str, jSONObject);
+        super.tryGetClassByName(str, jSONObject);
         if (jSONObject.has(com.umeng.ccg.a.z)) {
             d(jSONObject.optString(com.umeng.ccg.a.z));
         }

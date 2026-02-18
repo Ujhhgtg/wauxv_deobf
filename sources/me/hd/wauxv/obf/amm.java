@@ -6,9 +6,9 @@ import org.luckypray.dexkit.DexKitBridge;
 /* JADX INFO: loaded from: classes.dex */
 public final class amm {
     public final DexKitBridge a;
-    public bgf b;
-    public bgf c;
-    public bgf d;
+    public IHasInvokeMethod b;
+    public IHasInvokeMethod c;
+    public IHasInvokeMethod d;
 
     public amm(DexKitBridge dexKitBridge, amn amnVar) {
         this.a = dexKitBridge;

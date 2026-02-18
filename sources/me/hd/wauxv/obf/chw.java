@@ -313,7 +313,7 @@ public final class chw {
         }
         sb.append('}');
         String string = sb.toString();
-        bzo.p(string, "toString(...)");
+        throwIfVar1IsNull(string, "toString(...)");
         return string;
     }
 }

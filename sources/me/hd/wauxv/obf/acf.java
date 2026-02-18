@@ -43,9 +43,12 @@ public final /* synthetic */ class acf implements Runnable {
             case 1:
                 acg acgVar2 = (acg) this.b;
                 IntentSender.SendIntentException sendIntentException = (IntentSender.SendIntentException) this.d;
-                bzo.q(acgVar2, "this$0");
-                bzo.q(sendIntentException, "$e");
-                acgVar2.i(this.c, 0, new Intent().setAction("androidx.activity.result.contract.action.INTENT_SENDER_REQUEST").putExtra("androidx.activity.result.contract.extra.SEND_INTENT_EXCEPTION", sendIntentException));
+                throwIfVar1IsNull(acgVar2, "this$0");
+                throwIfVar1IsNull(sendIntentException, "$e");
+                acgVar2.i(this.c, 0,
+                        new Intent().setAction("androidx.activity.result.contract.action.INTENT_SENDER_REQUEST")
+                                .putExtra("androidx.activity.result.contract.extra.SEND_INTENT_EXCEPTION",
+                                        sendIntentException));
                 break;
             case 2:
                 ((amg) this.b).b.j(this.c, this.d);

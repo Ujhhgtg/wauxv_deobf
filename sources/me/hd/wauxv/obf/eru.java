@@ -45,7 +45,7 @@ public final class eru implements bnh {
         for (int i = 0; i < length; i++) {
             bArr[i] = (byte) (jArr2[i] & 4294967295L);
             bpz[] bpzVarArr = (bpz[]) this.a;
-            long jAl = bzo.al(anuVar.d(i), anuVar.e(i));
+            long jAl = KotlinHelpers.al(anuVar.d(i), anuVar.e(i));
             int i2 = (int) (4294967295L & jArr2[i]);
             bpz bpzVar = new bpz();
             bpzVar.a = jAl;

@@ -20,7 +20,7 @@ public final class pc implements dhy {
 
     @Override // me.hd.wauxv.obf.dhy
     public final void write(rh rhVar, long j) throws EOFException {
-        bzo.q(rhVar, "source");
+        throwIfVar1IsNull(rhVar, "source");
         rhVar.skip(j);
     }
 }

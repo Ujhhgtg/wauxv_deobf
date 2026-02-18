@@ -6,7 +6,7 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class dwg {
     public static final dwf Companion = new dwf();
-    public static final btt[] a = {null, null, null, null, null, null, null, null, null, ewz.am(btx.a, new dtr(3))};
+    public static final btt[] a = { null, null, null, null, null, null, null, null, null, ewz.am(btx.a, new dtr(3)) };
     public final String b;
     public final Long c;
     public final Long d;
@@ -18,7 +18,8 @@ public final class dwg {
     public final Integer j;
     public final List k;
 
-    public /* synthetic */ dwg(int i, String str, Long l, Long l2, String str2, String str3, Long l3, Boolean bool, Boolean bool2, Integer num, List list) {
+    public /* synthetic */ dwg(int i, String str, Long l, Long l2, String str2, String str3, Long l3, Boolean bool,
+            Boolean bool2, Integer num, List list) {
         if (1023 != (i & 1023)) {
             bht.ah(i, 1023, dwe.b.getDescriptor());
             throw null;
@@ -43,7 +44,11 @@ public final class dwg {
             return false;
         }
         dwg dwgVar = (dwg) obj;
-        return bzo.f(this.b, dwgVar.b) && bzo.f(this.c, dwgVar.c) && bzo.f(this.d, dwgVar.d) && bzo.f(this.e, dwgVar.e) && bzo.f(this.f, dwgVar.f) && bzo.f(this.g, dwgVar.g) && bzo.f(this.h, dwgVar.h) && bzo.f(this.i, dwgVar.i) && bzo.f(this.j, dwgVar.j) && bzo.f(this.k, dwgVar.k);
+        return nullSafeIsEqual(this.b, dwgVar.b) && nullSafeIsEqual(this.c, dwgVar.c)
+                && nullSafeIsEqual(this.d, dwgVar.d) && nullSafeIsEqual(this.e, dwgVar.e)
+                && nullSafeIsEqual(this.f, dwgVar.f) && nullSafeIsEqual(this.g, dwgVar.g)
+                && nullSafeIsEqual(this.h, dwgVar.h) && nullSafeIsEqual(this.i, dwgVar.i)
+                && nullSafeIsEqual(this.j, dwgVar.j) && nullSafeIsEqual(this.k, dwgVar.k);
     }
 
     public final int hashCode() {

@@ -44,14 +44,17 @@ public final class bds implements LayoutInflater.Factory2 {
             typedArrayObtainStyledAttributes.recycle();
             if (attributeValue != null) {
                 try {
-                    zIsAssignableFrom = bdj.class.isAssignableFrom(bdz.c(context.getClassLoader(), attributeValue));
+                    zIsAssignableFrom = bdj.class
+                            .isAssignableFrom(bdz.createInstanceWithArgs(context.getClassLoader(), attributeValue));
                 } catch (ClassNotFoundException unused) {
                     zIsAssignableFrom = false;
                 }
                 if (zIsAssignableFrom) {
                     int id = view != null ? view.getId() : 0;
                     if (id == -1 && resourceId == -1 && string == null) {
-                        throw new IllegalArgumentException(attributeSet.getPositionDescription() + ": Must specify unique android:id, android:tag, or have a parent with an id for " + attributeValue);
+                        throw new IllegalArgumentException(attributeSet.getPositionDescription()
+                                + ": Must specify unique android:id, android:tag, or have a parent with an id for "
+                                + attributeValue);
                     }
                     bdj bdjVarCa = resourceId != -1 ? begVar.ca(resourceId) : null;
                     if (bdjVarCa == null && string != null) {
@@ -75,11 +78,16 @@ public final class bds implements LayoutInflater.Factory2 {
                         bdjVarCa.i(bdmVar.e, attributeSet, bdjVarCa.at);
                         bfbVarBc = begVar.aw(bdjVarCa);
                         if (beg.ar(2)) {
-                            Log.v("FragmentManager", "Fragment " + bdjVarCa + " has been inflated via the <fragment> tag: id=0x" + Integer.toHexString(resourceId));
+                            Log.v("FragmentManager",
+                                    "Fragment " + bdjVarCa + " has been inflated via the <fragment> tag: id=0x"
+                                            + Integer.toHexString(resourceId));
                         }
                     } else {
                         if (bdjVarCa.bh) {
-                            throw new IllegalArgumentException(attributeSet.getPositionDescription() + ": Duplicate id 0x" + Integer.toHexString(resourceId) + ", tag " + string + ", or parent id 0x" + Integer.toHexString(id) + " with another fragment for " + attributeValue);
+                            throw new IllegalArgumentException(
+                                    attributeSet.getPositionDescription() + ": Duplicate id 0x"
+                                            + Integer.toHexString(resourceId) + ", tag " + string + ", or parent id 0x"
+                                            + Integer.toHexString(id) + " with another fragment for " + attributeValue);
                         }
                         bdjVarCa.bh = true;
                         bdjVarCa.bm = begVar;
@@ -88,19 +96,23 @@ public final class bds implements LayoutInflater.Factory2 {
                         bdjVarCa.i(bdmVar2.e, attributeSet, bdjVarCa.at);
                         bfbVarBc = begVar.bc(bdjVarCa);
                         if (beg.ar(2)) {
-                            Log.v("FragmentManager", "Retained Fragment " + bdjVarCa + " has been re-attached via the <fragment> tag: id=0x" + Integer.toHexString(resourceId));
+                            Log.v("FragmentManager",
+                                    "Retained Fragment " + bdjVarCa
+                                            + " has been re-attached via the <fragment> tag: id=0x"
+                                            + Integer.toHexString(resourceId));
                         }
                     }
                     ViewGroup viewGroup = (ViewGroup) view;
                     bfc bfcVar = bfd.a;
-                    bfd.c(new bex(bdjVarCa, "Attempting to use <fragment> tag to add fragment " + bdjVarCa + " to container " + viewGroup));
+                    bfd.c(new bex(bdjVarCa, "Attempting to use <fragment> tag to add fragment " + bdjVarCa
+                            + " to container " + viewGroup));
                     bfd.b(bdjVarCa).getClass();
                     bdjVarCa.by = viewGroup;
                     bfbVarBc.p();
                     bfbVarBc.o();
                     View view2 = bdjVarCa.bz;
                     if (view2 == null) {
-                        throw new IllegalStateException(bjs.o("Fragment ", attributeValue, " did not create a view."));
+                        throw new IllegalStateException(concat("Fragment ", attributeValue, " did not create a view."));
                     }
                     if (resourceId != 0) {
                         view2.setId(resourceId);

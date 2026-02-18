@@ -39,7 +39,7 @@ public abstract class Remapper {
     }
 
     private static /* synthetic */ String stringConcat$0(int i) {
-        return bjs.i(i, "Unsupported api ");
+        return concatVar2Var1(i, "Unsupported api ");
     }
 
     @Deprecated
@@ -72,7 +72,9 @@ public abstract class Remapper {
         if (!strMapType.equals(str)) {
             int iLastIndexOf = str.lastIndexOf(47);
             int iLastIndexOf2 = strMapType.lastIndexOf(47);
-            if ((iLastIndexOf == -1 || iLastIndexOf2 == -1 || !str.substring(iLastIndexOf).equals(strMapType.substring(iLastIndexOf2))) && strMapType.contains("$")) {
+            if ((iLastIndexOf == -1 || iLastIndexOf2 == -1
+                    || !str.substring(iLastIndexOf).equals(strMapType.substring(iLastIndexOf2)))
+                    && strMapType.contains("$")) {
                 int iLastIndexOf3 = strMapType.lastIndexOf(36);
                 do {
                     iLastIndexOf3++;
@@ -163,9 +165,11 @@ public abstract class Remapper {
             i = handle.getTag() <= 4 ? 1 : 0;
             int tag = handle.getTag();
             String strMapType = mapType(handle.getOwner());
-            String strMapFieldName = i != 0 ? mapFieldName(handle.getOwner(), handle.getName(), handle.getDesc()) : mapMethodName(handle.getOwner(), handle.getName(), handle.getDesc());
+            String strMapFieldName = i != 0 ? mapFieldName(handle.getOwner(), handle.getName(), handle.getDesc())
+                    : mapMethodName(handle.getOwner(), handle.getName(), handle.getDesc());
             String desc = handle.getDesc();
-            return new Handle(tag, strMapType, strMapFieldName, i != 0 ? mapDesc(desc) : mapMethodDesc(desc), handle.isInterface());
+            return new Handle(tag, strMapType, strMapFieldName, i != 0 ? mapDesc(desc) : mapMethodDesc(desc),
+                    handle.isInterface());
         }
         if (!(obj instanceof ConstantDynamic)) {
             return obj;
@@ -183,7 +187,10 @@ public abstract class Remapper {
             objArr2[i] = mapValue(bootstrapMethodArgument);
             i++;
         }
-        return new ConstantDynamic(this.api == 0 ? mapInvokeDynamicMethodName(name, descriptor) : mapInvokeDynamicMethodName(name, descriptor, bootstrapMethod, objArr), mapDesc(descriptor), (Handle) mapValue(bootstrapMethod), objArr2);
+        return new ConstantDynamic(
+                this.api == 0 ? mapInvokeDynamicMethodName(name, descriptor)
+                        : mapInvokeDynamicMethodName(name, descriptor, bootstrapMethod, objArr),
+                mapDesc(descriptor), (Handle) mapValue(bootstrapMethod), objArr2);
     }
 
     public String mapInvokeDynamicMethodName(String str, String str2, Handle handle, Object... objArr) {

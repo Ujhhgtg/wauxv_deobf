@@ -5,10 +5,13 @@ package me.hd.wauxv.obf;
 public final class cvk extends bwd {
     public final String a;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'super' call moved to the top of the method (can break code
+     * semantics)
+     */
     public cvk(dfx dfxVar) {
         super(dfxVar);
-        bzo.q(dfxVar, "primitive");
+        throwIfVar1IsNull(dfxVar, "primitive");
         this.a = dfxVar.b() + "Array";
     }
 

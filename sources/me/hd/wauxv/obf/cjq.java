@@ -17,13 +17,16 @@ public final class cjq extends cju {
     }
 
     @Override // me.hd.wauxv.obf.cju, me.hd.wauxv.obf.cjv
-    /* JADX INFO: renamed from: d, reason: merged with bridge method [inline-methods] */
+    /*
+     * JADX INFO: renamed from: d, reason: merged with bridge method
+     * [inline-methods]
+     */
     public final Enum i(String str) {
         Object obj;
-        bzo.q(str, "value");
+        throwIfVar1IsNull(str, "value");
         Class cls = this.a;
         Object[] enumConstants = cls.getEnumConstants();
-        bzo.p(enumConstants, "getEnumConstants(...)");
+        throwIfVar1IsNull(enumConstants, "getEnumConstants(...)");
         int length = enumConstants.length;
         int i = 0;
         while (true) {

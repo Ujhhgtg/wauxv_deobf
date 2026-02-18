@@ -33,7 +33,8 @@ public final class byc implements Cloneable {
 
     public final Object clone() throws CloneNotSupportedException {
         Object objClone = super.clone();
-        bzo.o(objClone, "null cannot be cast to non-null type androidx.collection.LongSparseArray<E of androidx.collection.LongSparseArray>");
+        throwIfVar1IsNull(objClone,
+                "null cannot be cast to non-null type androidx.collection.LongSparseArray<E of androidx.collection.LongSparseArray>");
         byc bycVar = (byc) objClone;
         bycVar.b = (long[]) this.b.clone();
         bycVar.c = (Object[]) this.c.clone();
@@ -52,8 +53,8 @@ public final class byc implements Cloneable {
 
     public final Object f(long j) {
         Object obj;
-        int iJ = bzo.j(this.b, this.d, j);
-        if (iJ < 0 || (obj = this.c[iJ]) == bzo.c) {
+        int iJ = KotlinHelpers.j(this.b, this.d, j);
+        if (iJ < 0 || (obj = this.c[iJ]) == KotlinHelpers.c) {
             return null;
         }
         return obj;
@@ -67,7 +68,7 @@ public final class byc implements Cloneable {
             int i2 = 0;
             for (int i3 = 0; i3 < i; i3++) {
                 Object obj = objArr[i3];
-                if (obj != bzo.c) {
+                if (obj != KotlinHelpers.c) {
                     if (i3 != i2) {
                         jArr[i2] = jArr[i3];
                         objArr[i2] = obj;
@@ -79,7 +80,7 @@ public final class byc implements Cloneable {
             this.a = false;
             this.d = i2;
         }
-        return bzo.j(this.b, this.d, j);
+        return KotlinHelpers.j(this.b, this.d, j);
     }
 
     public final long h(int i) {
@@ -94,7 +95,7 @@ public final class byc implements Cloneable {
             int i3 = 0;
             for (int i4 = 0; i4 < i2; i4++) {
                 Object obj = objArr[i4];
-                if (obj != bzo.c) {
+                if (obj != KotlinHelpers.c) {
                     if (i4 != i3) {
                         jArr[i3] = jArr[i4];
                         objArr[i3] = obj;
@@ -110,8 +111,8 @@ public final class byc implements Cloneable {
     }
 
     public final void i(Object obj, long j) {
-        Object obj2 = bzo.c;
-        int iJ = bzo.j(this.b, this.d, j);
+        Object obj2 = KotlinHelpers.c;
+        int iJ = KotlinHelpers.j(this.b, this.d, j);
         if (iJ >= 0) {
             this.c[iJ] = obj;
             return;
@@ -144,7 +145,7 @@ public final class byc implements Cloneable {
                 }
                 this.a = false;
                 this.d = i3;
-                i = ~bzo.j(this.b, i3, j);
+                i = ~KotlinHelpers.j(this.b, i3, j);
             }
         }
         int i5 = this.d;
@@ -159,17 +160,17 @@ public final class byc implements Cloneable {
             }
             int i9 = i6 / 8;
             long[] jArrCopyOf = Arrays.copyOf(this.b, i9);
-            bzo.p(jArrCopyOf, "copyOf(...)");
+            throwIfVar1IsNull(jArrCopyOf, "copyOf(...)");
             this.b = jArrCopyOf;
             Object[] objArrCopyOf = Arrays.copyOf(this.c, i9);
-            bzo.p(objArrCopyOf, "copyOf(...)");
+            throwIfVar1IsNull(objArrCopyOf, "copyOf(...)");
             this.c = objArrCopyOf;
         }
         int i10 = this.d - i;
         if (i10 != 0) {
             long[] jArr2 = this.b;
             int i11 = i + 1;
-            bzo.q(jArr2, "<this>");
+            throwIfVar1IsNull(jArr2, "<this>");
             System.arraycopy(jArr2, i, jArr2, i11, i10);
             Object[] objArr3 = this.c;
             la._aj(i11, i, objArr3, this.d, objArr3);
@@ -180,11 +181,11 @@ public final class byc implements Cloneable {
     }
 
     public final void j(long j) {
-        int iJ = bzo.j(this.b, this.d, j);
+        int iJ = KotlinHelpers.j(this.b, this.d, j);
         if (iJ >= 0) {
             Object[] objArr = this.c;
             Object obj = objArr[iJ];
-            Object obj2 = bzo.c;
+            Object obj2 = KotlinHelpers.c;
             if (obj != obj2) {
                 objArr[iJ] = obj2;
                 this.a = true;
@@ -200,7 +201,7 @@ public final class byc implements Cloneable {
             int i2 = 0;
             for (int i3 = 0; i3 < i; i3++) {
                 Object obj = objArr[i3];
-                if (obj != bzo.c) {
+                if (obj != KotlinHelpers.c) {
                     if (i3 != i2) {
                         jArr[i2] = jArr[i3];
                         objArr[i2] = obj;
@@ -227,7 +228,7 @@ public final class byc implements Cloneable {
             int i3 = 0;
             for (int i4 = 0; i4 < i2; i4++) {
                 Object obj = objArr[i4];
-                if (obj != bzo.c) {
+                if (obj != KotlinHelpers.c) {
                     if (i4 != i3) {
                         jArr[i3] = jArr[i4];
                         objArr[i3] = obj;
@@ -264,7 +265,7 @@ public final class byc implements Cloneable {
         }
         sb.append('}');
         String string = sb.toString();
-        bzo.p(string, "toString(...)");
+        throwIfVar1IsNull(string, "toString(...)");
         return string;
     }
 }

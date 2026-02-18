@@ -49,7 +49,7 @@ public final class ant extends ccz {
     }
 
     @Override // me.hd.wauxv.obf.ccz
-    public final void f() {
+    public final void getResult() {
         ant antVar = this;
         antVar.ah();
         float startAngle = antVar.getStartAngle();
@@ -72,13 +72,14 @@ public final class ant extends ccz {
             float fSin = antVar.e * i3 * f2 * ((float) Math.sin(d));
             View childAt = antVar.getMetaBallsContainerFrameLayout().getChildAt(i);
             long openAnimationDuration = (long) (antVar.getOpenAnimationDuration() * 0.33f);
-            bzo.n(childAt);
-            antVar.ae(childAt, fCos, fSin, delayBetweenItemsAnimation, antVar.getOpenInterpolatorAnimator(), antVar.getOpenAnimationDuration());
+            throwIfVar1IsNull(childAt);
+            antVar.ae(childAt, fCos, fSin, delayBetweenItemsAnimation, antVar.getOpenInterpolatorAnimator(),
+                    antVar.getOpenAnimationDuration());
             long j = delayBetweenItemsAnimation;
             ccz.ac(this, childAt, 1.0f, (long) (antVar.getOpenAnimationDuration() * 0.125f), j);
             ImageView imageView = (ImageView) childAt;
             Drawable drawable = imageView.getDrawable();
-            bzo.p(drawable, "getDrawable(...)");
+            throwIfVar1IsNull(drawable, "getDrawable(...)");
             ag(drawable, j + openAnimationDuration, openAnimationDuration, Opcodes.CONST_METHOD_TYPE, true);
             delayBetweenItemsAnimation = getDelayBetweenItemsAnimation() + j;
             imageView.setEnabled(true);
@@ -88,7 +89,7 @@ public final class ant extends ccz {
         }
         long j2 = delayBetweenItemsAnimation;
         ImageView menuButton = getMenuButton();
-        bzo.o(menuButton, "null cannot be cast to non-null type android.view.View");
+        throwIfVar1IsNull(menuButton, "null cannot be cast to non-null type android.view.View");
         ccz.ac(this, menuButton, 0.78f, 300L, 0L);
         if (this.a) {
             ValueAnimator duration = ValueAnimator.ofFloat(0.0f, 0.0f).setDuration(j2 + this.j);
@@ -102,7 +103,7 @@ public final class ant extends ccz {
         if (axqVar != null) {
             return axqVar;
         }
-        bzo.ar("expandDirection");
+        throwLateinitPropNotInitYet("expandDirection");
         throw null;
     }
 
@@ -111,7 +112,7 @@ public final class ant extends ccz {
     }
 
     public final void setExpandDirection(axq axqVar) {
-        bzo.q(axqVar, "<set-?>");
+        throwIfVar1IsNull(axqVar, "<set-?>");
         this.d = axqVar;
     }
 

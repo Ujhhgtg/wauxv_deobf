@@ -24,6 +24,6 @@ public class ToFloat implements Function {
         if (obj instanceof Number) {
             return Float.valueOf(((Number) obj).floatValue());
         }
-        throw new JSONException(bjs.m(obj, new StringBuilder("can not cast to Float ")));
+        throw new JSONException(concatVar1GetClass(obj, new StringBuilder("can not cast to Float ")));
     }
 }

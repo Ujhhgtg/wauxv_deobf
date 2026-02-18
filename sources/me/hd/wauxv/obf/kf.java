@@ -40,7 +40,7 @@ public final class kf extends nh {
                     i = 0;
                 } else {
                     if (iOrdinal != 1) {
-                        throw new abt();
+                        throw new QueryDidNotReturnUniqueResultRuntimeException();
                     }
                     i = -1;
                 }
@@ -69,7 +69,7 @@ public final class kf extends nh {
                     }
                     break;
                 } else if (iOrdinal2 != 1) {
-                    throw new abt();
+                    throw new QueryDidNotReturnUniqueResultRuntimeException();
                 }
                 return Integer.valueOf(iIntValue);
             default:
@@ -80,7 +80,7 @@ public final class kf extends nh {
                 if (iOrdinal3 == 1) {
                     return "unknown";
                 }
-                throw new abt();
+                throw new QueryDidNotReturnUniqueResultRuntimeException();
         }
     }
 }

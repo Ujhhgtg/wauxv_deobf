@@ -23,7 +23,8 @@ public final class adx {
             return false;
         }
         adx adxVar = (adx) obj;
-        return bzo.f(this.a, adxVar.a) && bzo.f(this.b, adxVar.b) && bzo.f(this.c, adxVar.c) && this.d == adxVar.d;
+        return nullSafeIsEqual(this.a, adxVar.a) && nullSafeIsEqual(this.b, adxVar.b)
+                && nullSafeIsEqual(this.c, adxVar.c) && this.d == adxVar.d;
     }
 
     public final int hashCode() {

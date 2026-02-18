@@ -24,7 +24,7 @@ public final /* synthetic */ class bdv implements den {
     public final Bundle c() {
         Bundle bundleR;
         LinkedHashMap linkedHashMap;
-        csm[] csmVarArr;
+        Pair[] pairVarArr;
         switch (this.a) {
             case 0:
                 return ((beg) this.b).cr();
@@ -35,8 +35,8 @@ public final /* synthetic */ class bdv implements den {
                 km<cio> kmVar = cixVar.f;
                 LinkedHashMap linkedHashMap3 = cixVar.k;
                 ArrayList arrayList = new ArrayList();
-                Bundle bundleR2 = bht.r((csm[]) Arrays.copyOf(new csm[0], 0));
-                for (Map.Entry entry : bzo.at(cixVar.r.b).entrySet()) {
+                Bundle bundleR2 = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
+                for (Map.Entry entry : KotlinHelpers.at(cixVar.r.b).entrySet()) {
                     String str = (String) entry.getKey();
                     Bundle bundleR3 = ((ckl) entry.getValue()).r();
                     if (bundleR3 != null) {
@@ -47,7 +47,7 @@ public final /* synthetic */ class bdv implements den {
                 if (arrayList.isEmpty()) {
                     bundleR = null;
                 } else {
-                    bundleR = bht.r((csm[]) Arrays.copyOf(new csm[0], 0));
+                    bundleR = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                     cnb.ai(bundleR2, "android-support-nav:controller:navigatorState:names", arrayList);
                     cnb.ag(bundleR, "android-support-nav:controller:navigatorState", bundleR2);
                 }
@@ -55,23 +55,23 @@ public final /* synthetic */ class bdv implements den {
                     linkedHashMap = linkedHashMap2;
                 } else {
                     if (bundleR == null) {
-                        bundleR = bht.r((csm[]) Arrays.copyOf(new csm[0], 0));
+                        bundleR = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                     }
                     ArrayList<? extends Parcelable> arrayList2 = new ArrayList<>();
                     for (cio cioVar : kmVar) {
-                        bzo.q(cioVar, "entry");
+                        throwIfVar1IsNull(cioVar, "entry");
                         int i = cioVar.b.g.a;
                         String str2 = cioVar.f;
                         ciq ciqVar = cioVar.h;
                         Bundle bundleL = ciqVar.l();
                         LinkedHashMap linkedHashMap4 = linkedHashMap2;
-                        Bundle bundleR4 = bht.r((csm[]) Arrays.copyOf(new csm[0], 0));
+                        Bundle bundleR4 = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                         ciqVar.h.ab(bundleR4);
-                        Bundle bundleR5 = bht.r((csm[]) Arrays.copyOf(new csm[0], 0));
+                        Bundle bundleR5 = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                         cnb.ah("nav-entry-state:id", str2, bundleR5);
                         bundleR5.putInt("nav-entry-state:destination-id", i);
                         if (bundleL == null) {
-                            bundleL = bht.r((csm[]) Arrays.copyOf(new csm[0], 0));
+                            bundleL = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                         }
                         cnb.ag(bundleR5, "nav-entry-state:args", bundleL);
                         cnb.ag(bundleR5, "nav-entry-state:saved-state", bundleR4);
@@ -83,7 +83,7 @@ public final /* synthetic */ class bdv implements den {
                 }
                 if (!linkedHashMap3.isEmpty()) {
                     if (bundleR == null) {
-                        bundleR = bht.r((csm[]) Arrays.copyOf(new csm[0], 0));
+                        bundleR = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                     }
                     int[] iArr = new int[linkedHashMap3.size()];
                     ArrayList arrayList3 = new ArrayList();
@@ -104,7 +104,7 @@ public final /* synthetic */ class bdv implements den {
                 }
                 if (!linkedHashMap.isEmpty()) {
                     if (bundleR == null) {
-                        bundleR = bht.r((csm[]) Arrays.copyOf(new csm[0], 0));
+                        bundleR = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                     }
                     ArrayList arrayList4 = new ArrayList();
                     for (Map.Entry entry3 : linkedHashMap.entrySet()) {
@@ -116,26 +116,26 @@ public final /* synthetic */ class bdv implements den {
                         while (it.hasNext()) {
                             xe xeVar = ((cir) it.next()).a;
                             xeVar.getClass();
-                            Bundle bundleR6 = bht.r((csm[]) Arrays.copyOf(new csm[0], 0));
+                            Bundle bundleR6 = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                             cnb.ah("nav-entry-state:id", (String) xeVar.d, bundleR6);
                             bundleR6.putInt("nav-entry-state:destination-id", xeVar.c);
                             Bundle bundleR7 = (Bundle) xeVar.e;
                             if (bundleR7 == null) {
-                                bundleR7 = bht.r((csm[]) Arrays.copyOf(new csm[0], 0));
+                                bundleR7 = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                             }
                             cnb.ag(bundleR6, "nav-entry-state:args", bundleR7);
                             cnb.ag(bundleR6, "nav-entry-state:saved-state", (Bundle) xeVar.f);
                             arrayList5.add(bundleR6);
                         }
                         String str5 = "android-support-nav:controller:backStackStates:" + str4;
-                        bzo.q(str5, "key");
+                        throwIfVar1IsNull(str5, "key");
                         bundleR.putParcelableArrayList(str5, arrayList5);
                     }
                     cnb.ai(bundleR, "android-support-nav:controller:backStackStates", arrayList4);
                 }
                 if (cjlVar.e) {
                     if (bundleR == null) {
-                        bundleR = bht.r((csm[]) Arrays.copyOf(new csm[0], 0));
+                        bundleR = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                     }
                     bundleR.putBoolean("android-support-nav:controller:deepLinkHandled", cjlVar.e);
                 }
@@ -143,35 +143,35 @@ public final /* synthetic */ class bdv implements den {
                     return bundleR;
                 }
                 Bundle bundle = Bundle.EMPTY;
-                bzo.p(bundle, "EMPTY");
+                throwIfVar1IsNull(bundle, "EMPTY");
                 return bundle;
             case 2:
                 int i4 = ((NavHostFragment) this.b).c;
                 if (i4 != 0) {
-                    return bht.r(new csm("android-support-nav:fragment:graphId", Integer.valueOf(i4)));
+                    return bht.r(new Pair("android-support-nav:fragment:graphId", Integer.valueOf(i4)));
                 }
                 Bundle bundle2 = Bundle.EMPTY;
-                bzo.n(bundle2);
+                throwIfVar1IsNull(bundle2);
                 return bundle2;
             default:
                 blq blqVar = (blq) this.b;
-                for (Map.Entry entry4 : bzo.at((LinkedHashMap) blqVar.d).entrySet()) {
+                for (Map.Entry entry4 : KotlinHelpers.at((LinkedHashMap) blqVar.d).entrySet()) {
                     blqVar.j((String) entry4.getKey(), ((dml) ((chy) entry4.getValue())).c());
                 }
-                for (Map.Entry entry5 : bzo.at((LinkedHashMap) blqVar.b).entrySet()) {
+                for (Map.Entry entry5 : KotlinHelpers.at((LinkedHashMap) blqVar.b).entrySet()) {
                     blqVar.j((String) entry5.getKey(), ((den) entry5.getValue()).c());
                 }
                 LinkedHashMap linkedHashMap5 = (LinkedHashMap) blqVar.a;
                 if (linkedHashMap5.isEmpty()) {
-                    csmVarArr = new csm[0];
+                    pairVarArr = new Pair[0];
                 } else {
                     ArrayList arrayList6 = new ArrayList(linkedHashMap5.size());
                     for (Map.Entry entry6 : linkedHashMap5.entrySet()) {
-                        arrayList6.add(new csm((String) entry6.getKey(), entry6.getValue()));
+                        arrayList6.add(new Pair((String) entry6.getKey(), entry6.getValue()));
                     }
-                    csmVarArr = (csm[]) arrayList6.toArray(new csm[0]);
+                    pairVarArr = (Pair[]) arrayList6.toArray(new Pair[0]);
                 }
-                return bht.r((csm[]) Arrays.copyOf(csmVarArr, csmVarArr.length));
+                return bht.r((Pair[]) Arrays.copyOf(pairVarArr, pairVarArr.length));
         }
     }
 }

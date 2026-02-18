@@ -17,7 +17,8 @@ public final class drz {
     public final dsl k;
     public final dsl l;
 
-    public /* synthetic */ drz(int i, Integer num, String str, Integer num2, String str2, String str3, String str4, dso dsoVar, String str5, dsc dscVar, dsi dsiVar, dsl dslVar, dsl dslVar2) {
+    public /* synthetic */ drz(int i, Integer num, String str, Integer num2, String str2, String str3, String str4,
+            dso dsoVar, String str5, dsc dscVar, dsi dsiVar, dsl dslVar, dsl dslVar2) {
         if (4095 != (i & 4095)) {
             bht.ah(i, 4095, drx.b.getDescriptor());
             throw null;
@@ -44,7 +45,12 @@ public final class drz {
             return false;
         }
         drz drzVar = (drz) obj;
-        return bzo.f(this.a, drzVar.a) && bzo.f(this.b, drzVar.b) && bzo.f(this.c, drzVar.c) && bzo.f(this.d, drzVar.d) && bzo.f(this.e, drzVar.e) && bzo.f(this.f, drzVar.f) && bzo.f(this.g, drzVar.g) && bzo.f(this.h, drzVar.h) && bzo.f(this.i, drzVar.i) && bzo.f(this.j, drzVar.j) && bzo.f(this.k, drzVar.k) && bzo.f(this.l, drzVar.l);
+        return nullSafeIsEqual(this.a, drzVar.a) && nullSafeIsEqual(this.b, drzVar.b)
+                && nullSafeIsEqual(this.c, drzVar.c) && nullSafeIsEqual(this.d, drzVar.d)
+                && nullSafeIsEqual(this.e, drzVar.e) && nullSafeIsEqual(this.f, drzVar.f)
+                && nullSafeIsEqual(this.g, drzVar.g) && nullSafeIsEqual(this.h, drzVar.h)
+                && nullSafeIsEqual(this.i, drzVar.i) && nullSafeIsEqual(this.j, drzVar.j)
+                && nullSafeIsEqual(this.k, drzVar.k) && nullSafeIsEqual(this.l, drzVar.l);
     }
 
     public final int hashCode() {

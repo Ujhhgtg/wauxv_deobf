@@ -6,7 +6,7 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class eft {
     public static final efs Companion = new efs();
-    public static final btt[] a = {null, ewz.am(btx.a, new efq(0))};
+    public static final btt[] a = { null, ewz.am(btx.a, new efq(0)) };
     public final Integer b;
     public final List c;
 
@@ -27,7 +27,7 @@ public final class eft {
             return false;
         }
         eft eftVar = (eft) obj;
-        return bzo.f(this.b, eftVar.b) && bzo.f(this.c, eftVar.c);
+        return nullSafeIsEqual(this.b, eftVar.b) && nullSafeIsEqual(this.c, eftVar.c);
     }
 
     public final int hashCode() {

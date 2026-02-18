@@ -4,7 +4,7 @@ import java.util.List;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class cif extends doo implements bnj {
+public final class cif extends BaseHook implements bnj {
     public static final cif a = new cif("MyFavMenuForwardHook" /* cnb.z(-476011225414442L) */);
     public static final String b = "收藏" /* cnb.z(-476857333971754L) */;
     public static final String c = "我的收藏语音转发" /* cnb.z(-476878808808234L) */;
@@ -14,13 +14,13 @@ public final class cif extends doo implements bnj {
     public final void e() {
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String f() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getName() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String g() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getCategory() {
         return b;
     }
 
@@ -28,8 +28,8 @@ public final class cif extends doo implements bnj {
         return !z() ? avd.a : dqc.bf(new ayv("转发[WA]" /* cnb.z(-475886671362858L) */, new cgu(10)));
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String o() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getDescription() {
         return h;
     }
 }

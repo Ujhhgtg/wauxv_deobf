@@ -11,7 +11,7 @@ import me.hd.wauxv.obf.cnb;
 import me.hd.wauxv.obf.cnh;
 import me.hd.wauxv.obf.cty;
 import me.hd.wauxv.obf.dqc;
-import me.hd.wauxv.obf.zf;
+import me.hd.wauxv.obf.ReflectionWrapper;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -23,7 +23,8 @@ public final class PluginMediaMsgMethod {
 
     @cty
     public final void shareFile(String str, String str2, String str3, String str4) throws IllegalAccessException {
-        Object objC = zf.c(ajn.ag("com.tencent.mm.opensdk.modelmsg.WXFileObject" /* cnb.z(-92732638886698L) */), new Object[0]);
+        Object objC = ReflectionWrapper.createInstanceWithArgs(
+                ajn.ag("com.tencent.mm.opensdk.modelmsg.WXFileObject" /* cnb.z(-92732638886698L) */), new Object[0]);
         int i = bte.a;
         azg azgVarR = dqc.bi(objC).r();
         azgVarR.ab = "filePath" /* cnb.z(-94171452930858L) */;
@@ -32,8 +33,11 @@ public final class PluginMediaMsgMethod {
     }
 
     @cty
-    public final void shareMiniProgram(String str, String str2, String str3, String str4, String str5, byte[] bArr, String str6) throws IllegalAccessException {
-        Object objC = zf.c(ajn.ag("com.tencent.mm.opensdk.modelmsg.WXMiniProgramObject" /* cnb.z(-94132798225194L) */), new Object[0]);
+    public final void shareMiniProgram(String str, String str2, String str3, String str4, String str5, byte[] bArr,
+            String str6) throws IllegalAccessException {
+        Object objC = ReflectionWrapper.createInstanceWithArgs(
+                ajn.ag("com.tencent.mm.opensdk.modelmsg.WXMiniProgramObject" /* cnb.z(-94132798225194L) */),
+                new Object[0]);
         int i = bte.a;
         bmu bmuVarBi = dqc.bi(objC);
         azg azgVarR = bmuVarBi.r();
@@ -46,8 +50,10 @@ public final class PluginMediaMsgMethod {
     }
 
     @cty
-    public final void shareMusic(String str, String str2, String str3, String str4, String str5, byte[] bArr, String str6) throws IllegalAccessException {
-        Object objC = zf.c(ajn.ag("com.tencent.mm.opensdk.modelmsg.WXMusicObject" /* cnb.z(-94416266066730L) */), new Object[0]);
+    public final void shareMusic(String str, String str2, String str3, String str4, String str5, byte[] bArr,
+            String str6) throws IllegalAccessException {
+        Object objC = ReflectionWrapper.createInstanceWithArgs(
+                ajn.ag("com.tencent.mm.opensdk.modelmsg.WXMusicObject" /* cnb.z(-94416266066730L) */), new Object[0]);
         int i = bte.a;
         bmu bmuVarBi = dqc.bi(objC);
         azg azgVarR = bmuVarBi.r();
@@ -60,8 +66,11 @@ public final class PluginMediaMsgMethod {
     }
 
     @cty
-    public final void shareMusicVideo(String str, String str2, String str3, String str4, String str5, String str6, int i, String str7, byte[] bArr, String str8) throws IllegalAccessException {
-        Object objC = zf.c(ajn.ag("com.tencent.mm.opensdk.modelmsg.WXMusicVideoObject" /* cnb.z(-93540092738346L) */), new Object[0]);
+    public final void shareMusicVideo(String str, String str2, String str3, String str4, String str5, String str6,
+            int i, String str7, byte[] bArr, String str8) throws IllegalAccessException {
+        Object objC = ReflectionWrapper.createInstanceWithArgs(
+                ajn.ag("com.tencent.mm.opensdk.modelmsg.WXMusicVideoObject" /* cnb.z(-93540092738346L) */),
+                new Object[0]);
         int i2 = bte.a;
         bmu bmuVarBi = dqc.bi(objC);
         azg azgVarR = bmuVarBi.r();
@@ -84,7 +93,8 @@ public final class PluginMediaMsgMethod {
 
     @cty
     public final void shareText(String str, String str2, String str3) throws IllegalAccessException {
-        Object objC = zf.c(ajn.ag("com.tencent.mm.opensdk.modelmsg.WXTextObject" /* cnb.z(-117286966917930L) */), new Object[0]);
+        Object objC = ReflectionWrapper.createInstanceWithArgs(
+                ajn.ag("com.tencent.mm.opensdk.modelmsg.WXTextObject" /* cnb.z(-117286966917930L) */), new Object[0]);
         int i = bte.a;
         azg azgVarR = dqc.bi(objC).r();
         azgVarR.ab = "text" /* cnb.z(-117128053127978L) */;
@@ -93,8 +103,10 @@ public final class PluginMediaMsgMethod {
     }
 
     @cty
-    public final void shareVideo(String str, String str2, String str3, String str4, byte[] bArr, String str5) throws IllegalAccessException {
-        Object objC = zf.c(ajn.ag("com.tencent.mm.opensdk.modelmsg.WXVideoObject" /* cnb.z(-117639154236202L) */), new Object[0]);
+    public final void shareVideo(String str, String str2, String str3, String str4, byte[] bArr, String str5)
+            throws IllegalAccessException {
+        Object objC = ReflectionWrapper.createInstanceWithArgs(
+                ajn.ag("com.tencent.mm.opensdk.modelmsg.WXVideoObject" /* cnb.z(-117639154236202L) */), new Object[0]);
         int i = bte.a;
         azg azgVarR = dqc.bi(objC).r();
         azgVarR.ab = "videoUrl" /* cnb.z(-117424405871402L) */;
@@ -103,8 +115,11 @@ public final class PluginMediaMsgMethod {
     }
 
     @cty
-    public final void shareWebpage(String str, String str2, String str3, String str4, byte[] bArr, String str5) throws IllegalAccessException {
-        Object objC = zf.c(ajn.ag("com.tencent.mm.opensdk.modelmsg.WXWebpageObject" /* cnb.z(-117385751165738L) */), new Object[0]);
+    public final void shareWebpage(String str, String str2, String str3, String str4, byte[] bArr, String str5)
+            throws IllegalAccessException {
+        Object objC = ReflectionWrapper.createInstanceWithArgs(
+                ajn.ag("com.tencent.mm.opensdk.modelmsg.WXWebpageObject" /* cnb.z(-117385751165738L) */),
+                new Object[0]);
         int i = bte.a;
         azg azgVarR = dqc.bi(objC).r();
         azgVarR.ab = "webpageUrl" /* cnb.z(-116629836921642L) */;

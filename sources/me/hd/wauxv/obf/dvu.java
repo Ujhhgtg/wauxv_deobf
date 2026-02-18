@@ -28,7 +28,8 @@ public final class dvu {
             return false;
         }
         dvu dvuVar = (dvu) obj;
-        return bzo.f(this.a, dvuVar.a) && bzo.f(this.b, dvuVar.b) && bzo.f(this.c, dvuVar.c) && bzo.f(this.d, dvuVar.d);
+        return nullSafeIsEqual(this.a, dvuVar.a) && nullSafeIsEqual(this.b, dvuVar.b)
+                && nullSafeIsEqual(this.c, dvuVar.c) && nullSafeIsEqual(this.d, dvuVar.d);
     }
 
     public final int hashCode() {
@@ -48,6 +49,6 @@ public final class dvu {
         bjs.w(sb, this.a, -174513111169834L);
         bjs.w(sb, this.b, -174397147052842L);
         bjs.w(sb, this.c, -174796579011370L);
-        return bjs.p(sb, this.d, ')');
+        return concat(sb, this.d, ')');
     }
 }

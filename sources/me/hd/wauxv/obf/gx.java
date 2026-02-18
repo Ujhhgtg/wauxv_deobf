@@ -2,7 +2,7 @@ package me.hd.wauxv.obf;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class gx extends doo implements bne {
+public final class gx extends BaseHook implements bne {
     public static final gx a = new gx("AppBrandForceShareHook" /* cnb.z(-410341175458602L) */);
     public static final String b = "小程序" /* cnb.z(-410534448986922L) */;
     public static final String c = "程序强制分享" /* cnb.z(-410551628856106L) */;
@@ -13,37 +13,40 @@ public final class gx extends doo implements bne {
     public final void e() {
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String f() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getName() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String g() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getCategory() {
         return b;
     }
 
-    public final void i(bmm bmmVar, CharSequence charSequence, boolean z) {
+    public final void i(HookParamWrapper hookParam, CharSequence charSequence, boolean z) {
         if (z() && z) {
             boolean z2 = true;
-            boolean z3 = charSequence.equals("转发给朋友" /* cnb.z(-410225211341610L) */) || charSequence.equals("分享到朋友圈" /* cnb.z(-410250981145386L) */);
-            boolean z4 = charSequence.equals("轉發給朋友" /* cnb.z(-410220916374314L) */) || charSequence.equals("分享到朋友圈" /* cnb.z(-410177966701354L) */);
-            if (!charSequence.equals("Send to Chat" /* cnb.z(-410130722061098L) */) && !charSequence.equals("Share on Moments" /* cnb.z(-410607463430954L) */)) {
+            boolean z3 = charSequence.equals("转发给朋友" /* cnb.z(-410225211341610L) */)
+                    || charSequence.equals("分享到朋友圈" /* cnb.z(-410250981145386L) */);
+            boolean z4 = charSequence.equals("轉發給朋友" /* cnb.z(-410220916374314L) */)
+                    || charSequence.equals("分享到朋友圈" /* cnb.z(-410177966701354L) */);
+            if (!charSequence.equals("Send to Chat" /* cnb.z(-410130722061098L) */)
+                    && !charSequence.equals("Share on Moments" /* cnb.z(-410607463430954L) */)) {
                 z2 = false;
             }
             if (z3 || z4 || z2) {
-                bmmVar.getClass();
-                new ek(bmmVar, 4, 8).q(Boolean.FALSE);
+                hookParam.getClass();
+                new ek(hookParam, 4, 8).q(Boolean.FALSE);
             }
         }
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String o() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getDescription() {
         return d;
     }
 
-    @Override // me.hd.wauxv.obf.doo
+    @Override // me.hd.wauxv.obf.BaseHook
     public final boolean q() {
         return h;
     }

@@ -2,7 +2,7 @@ package me.hd.wauxv.data.bean.db;
 
 import java.util.Arrays;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cnb;
 import me.hd.wauxv.obf.dkz;
 import me.hd.wauxv.obf.yg;
@@ -40,7 +40,10 @@ public final class RContactInfo {
     private int weiboFlag;
     private String weiboNickname;
 
-    public RContactInfo(String str, String str2, String str3, String str4, String str5, String str6, String str7, int i, int i2, long j, int i3, String str8, String str9, String str10, byte[] bArr, int i4, String str11, int i5, int i6, String str12, String str13, String str14, String str15, String str16, long j2, byte[] bArr2, long j3) {
+    public RContactInfo(String str, String str2, String str3, String str4, String str5, String str6, String str7, int i,
+            int i2, long j, int i3, String str8, String str9, String str10, byte[] bArr, int i4, String str11, int i5,
+            int i6, String str12, String str13, String str14, String str15, String str16, long j2, byte[] bArr2,
+            long j3) {
         this.username = str;
         this.alias = str2;
         this.conRemark = str3;
@@ -70,7 +73,10 @@ public final class RContactInfo {
         this.createTime = j3;
     }
 
-    public static /* synthetic */ RContactInfo copy$default(RContactInfo rContactInfo, String str, String str2, String str3, String str4, String str5, String str6, String str7, int i, int i2, long j, int i3, String str8, String str9, String str10, byte[] bArr, int i4, String str11, int i5, int i6, String str12, String str13, String str14, String str15, String str16, long j2, byte[] bArr2, long j3, int i7, Object obj) {
+    public static /* synthetic */ RContactInfo copy$default(RContactInfo rContactInfo, String str, String str2,
+            String str3, String str4, String str5, String str6, String str7, int i, int i2, long j, int i3, String str8,
+            String str9, String str10, byte[] bArr, int i4, String str11, int i5, int i6, String str12, String str13,
+            String str14, String str15, String str16, long j2, byte[] bArr2, long j3, int i7, Object obj) {
         long j4;
         byte[] bArr3;
         String str17 = (i7 & 1) != 0 ? rContactInfo.username : str;
@@ -108,7 +114,8 @@ public final class RContactInfo {
             j4 = j3;
             bArr3 = bArr6;
         }
-        return rContactInfo.copy(str26, str18, str19, str20, str21, str22, str23, i8, i9, j5, i10, str24, str25, str27, bArr5, i11, str28, i12, i13, str29, str30, str31, str32, str33, j6, bArr3, j4);
+        return rContactInfo.copy(str26, str18, str19, str20, str21, str22, str23, i8, i9, j5, i10, str24, str25, str27,
+                bArr5, i11, str28, i12, i13, str29, str30, str31, str32, str33, j6, bArr3, j4);
     }
 
     public final String component1() {
@@ -219,8 +226,12 @@ public final class RContactInfo {
         return this.type;
     }
 
-    public final RContactInfo copy(String str, String str2, String str3, String str4, String str5, String str6, String str7, int i, int i2, long j, int i3, String str8, String str9, String str10, byte[] bArr, int i4, String str11, int i5, int i6, String str12, String str13, String str14, String str15, String str16, long j2, byte[] bArr2, long j3) {
-        return new RContactInfo(str, str2, str3, str4, str5, str6, str7, i, i2, j, i3, str8, str9, str10, bArr, i4, str11, i5, i6, str12, str13, str14, str15, str16, j2, bArr2, j3);
+    public final RContactInfo copy(String str, String str2, String str3, String str4, String str5, String str6,
+            String str7, int i, int i2, long j, int i3, String str8, String str9, String str10, byte[] bArr, int i4,
+            String str11, int i5, int i6, String str12, String str13, String str14, String str15, String str16, long j2,
+            byte[] bArr2, long j3) {
+        return new RContactInfo(str, str2, str3, str4, str5, str6, str7, i, i2, j, i3, str8, str9, str10, bArr, i4,
+                str11, i5, i6, str12, str13, str14, str15, str16, j2, bArr2, j3);
     }
 
     public boolean equals(Object obj) {
@@ -230,9 +241,33 @@ public final class RContactInfo {
         if (!RContactInfo.class.equals(obj != null ? obj.getClass() : null)) {
             return false;
         }
-        bzo.o(obj, "null cannot be cast to non-null type me.hd.wauxv.data.bean.db.RContactInfo" /* cnb.z(-17544941402922L) */);
+        throwIfVar1IsNull(obj, "null cannot be cast to non-null type me.hd.wauxv.data.bean.db.RContactInfo" /*
+                                                                                                             * cnb.z(-
+                                                                                                             * 17544941402922L)
+                                                                                                             */);
         RContactInfo rContactInfo = (RContactInfo) obj;
-        return this.showHead == rContactInfo.showHead && this.type == rContactInfo.type && this.uiType == rContactInfo.uiType && this.weiboFlag == rContactInfo.weiboFlag && this.verifyFlag == rContactInfo.verifyFlag && this.chatroomFlag == rContactInfo.chatroomFlag && this.deleteFlag == rContactInfo.deleteFlag && this.usernameFlag == rContactInfo.usernameFlag && this.createTime == rContactInfo.createTime && bzo.f(this.username, rContactInfo.username) && bzo.f(this.alias, rContactInfo.alias) && bzo.f(this.conRemark, rContactInfo.conRemark) && bzo.f(this.domainList, rContactInfo.domainList) && bzo.f(this.nickname, rContactInfo.nickname) && bzo.f(this.pyInitial, rContactInfo.pyInitial) && bzo.f(this.quanPin, rContactInfo.quanPin) && bzo.f(this.weiboNickname, rContactInfo.weiboNickname) && bzo.f(this.conRemarkPYFull, rContactInfo.conRemarkPYFull) && bzo.f(this.conRemarkPYShort, rContactInfo.conRemarkPYShort) && Arrays.equals(this.lvbuff, rContactInfo.lvbuff) && bzo.f(this.encryptUsername, rContactInfo.encryptUsername) && bzo.f(this.contactLabelIds, rContactInfo.contactLabelIds) && bzo.f(this.descWordingId, rContactInfo.descWordingId) && bzo.f(this.openImAppid, rContactInfo.openImAppid) && bzo.f(this.sourceExtInfo, rContactInfo.sourceExtInfo) && bzo.f(this.ticket, rContactInfo.ticket) && Arrays.equals(this.contactExtra, rContactInfo.contactExtra);
+        return this.showHead == rContactInfo.showHead && this.type == rContactInfo.type
+                && this.uiType == rContactInfo.uiType && this.weiboFlag == rContactInfo.weiboFlag
+                && this.verifyFlag == rContactInfo.verifyFlag && this.chatroomFlag == rContactInfo.chatroomFlag
+                && this.deleteFlag == rContactInfo.deleteFlag && this.usernameFlag == rContactInfo.usernameFlag
+                && this.createTime == rContactInfo.createTime && nullSafeIsEqual(this.username, rContactInfo.username)
+                && nullSafeIsEqual(this.alias, rContactInfo.alias)
+                && nullSafeIsEqual(this.conRemark, rContactInfo.conRemark)
+                && nullSafeIsEqual(this.domainList, rContactInfo.domainList)
+                && nullSafeIsEqual(this.nickname, rContactInfo.nickname)
+                && nullSafeIsEqual(this.pyInitial, rContactInfo.pyInitial)
+                && nullSafeIsEqual(this.quanPin, rContactInfo.quanPin)
+                && nullSafeIsEqual(this.weiboNickname, rContactInfo.weiboNickname)
+                && nullSafeIsEqual(this.conRemarkPYFull, rContactInfo.conRemarkPYFull)
+                && nullSafeIsEqual(this.conRemarkPYShort, rContactInfo.conRemarkPYShort)
+                && Arrays.equals(this.lvbuff, rContactInfo.lvbuff)
+                && nullSafeIsEqual(this.encryptUsername, rContactInfo.encryptUsername)
+                && nullSafeIsEqual(this.contactLabelIds, rContactInfo.contactLabelIds)
+                && nullSafeIsEqual(this.descWordingId, rContactInfo.descWordingId)
+                && nullSafeIsEqual(this.openImAppid, rContactInfo.openImAppid)
+                && nullSafeIsEqual(this.sourceExtInfo, rContactInfo.sourceExtInfo)
+                && nullSafeIsEqual(this.ticket, rContactInfo.ticket)
+                && Arrays.equals(this.contactExtra, rContactInfo.contactExtra);
     }
 
     public final String getAlias() {
@@ -344,7 +379,23 @@ public final class RContactInfo {
     }
 
     public int hashCode() {
-        return Arrays.hashCode(this.contactExtra) + bjs.e(this.ticket, bjs.e(this.sourceExtInfo, bjs.e(this.openImAppid, bjs.e(this.descWordingId, bjs.e(this.contactLabelIds, bjs.e(this.encryptUsername, (Arrays.hashCode(this.lvbuff) + bjs.e(this.conRemarkPYShort, bjs.e(this.conRemarkPYFull, bjs.e(this.weiboNickname, bjs.e(this.quanPin, bjs.e(this.pyInitial, bjs.e(this.nickname, bjs.e(this.domainList, bjs.e(this.conRemark, bjs.e(this.alias, bjs.e(this.username, (Long.hashCode(this.createTime) + ((Long.hashCode(this.usernameFlag) + ((((((((((Long.hashCode(this.uiType) + (((this.showHead * 31) + this.type) * 31)) * 31) + this.weiboFlag) * 31) + this.verifyFlag) * 31) + this.chatroomFlag) * 31) + this.deleteFlag) * 31)) * 31)) * 31, 31), 31), 31), 31), 31), 31), 31), 31), 31), 31)) * 31, 31), 31), 31), 31), 31), 31);
+        return Arrays.hashCode(this.contactExtra) + bjs.e(this.ticket, bjs.e(this.sourceExtInfo, bjs.e(this.openImAppid,
+                bjs.e(this.descWordingId, bjs.e(this.contactLabelIds, bjs.e(this.encryptUsername, (Arrays.hashCode(
+                        this.lvbuff)
+                        + bjs.e(this.conRemarkPYShort, bjs.e(this.conRemarkPYFull, bjs.e(this.weiboNickname,
+                                bjs.e(this.quanPin, bjs.e(this.pyInitial, bjs.e(this.nickname, bjs.e(this.domainList,
+                                        bjs.e(this.conRemark, bjs.e(this.alias, bjs.e(this.username,
+                                                (Long.hashCode(this.createTime) + ((Long.hashCode(this.usernameFlag)
+                                                        + ((((((((((Long.hashCode(this.uiType)
+                                                                + (((this.showHead * 31) + this.type) * 31)) * 31)
+                                                                + this.weiboFlag) * 31) + this.verifyFlag) * 31)
+                                                                + this.chatroomFlag) * 31) + this.deleteFlag) * 31))
+                                                        * 31)) * 31,
+                                                31), 31), 31),
+                                        31), 31), 31), 31),
+                                31), 31), 31))
+                        * 31, 31), 31), 31),
+                31), 31), 31);
     }
 
     public final void setAlias(String str) {

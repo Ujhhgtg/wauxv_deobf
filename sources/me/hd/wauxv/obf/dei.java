@@ -17,8 +17,8 @@ public final class dei implements bul, AutoCloseable {
     }
 
     public final void d(but butVar, bur burVar) {
-        bzo.q(butVar, "registry");
-        bzo.q(burVar, "lifecycle");
+        throwIfVar1IsNull(butVar, "registry");
+        throwIfVar1IsNull(burVar, "lifecycle");
         if (this.c) {
             throw new IllegalStateException("Already attached to lifecycleOwner");
         }

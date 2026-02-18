@@ -11,7 +11,7 @@ public final class emp implements Comparable {
 
     @Override // java.lang.Comparable
     public final /* synthetic */ int compareTo(Object obj) {
-        return bzo.r(this.a & 255, ((emp) obj).a & 255);
+        return KotlinHelpers.r(this.a & 255, ((emp) obj).a & 255);
     }
 
     public final boolean equals(Object obj) {

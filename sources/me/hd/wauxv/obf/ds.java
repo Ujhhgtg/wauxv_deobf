@@ -21,12 +21,14 @@ public final class ds extends bhs {
         Bundle bundleExtra;
         switch (this.a) {
             case 0:
-                Intent type = new Intent("android.intent.action.GET_CONTENT").addCategory("android.intent.category.OPENABLE").setType(str);
-                bzo.p(type, "Intent(Intent.ACTION_GET…          .setType(input)");
+                Intent type = new Intent("android.intent.action.GET_CONTENT")
+                        .addCategory("android.intent.category.OPENABLE").setType(str);
+                throwIfVar1IsNull(type, "Intent(Intent.ACTION_GET…          .setType(input)");
                 return type;
             case 1:
-                Intent intentPutExtra = new Intent("androidx.activity.result.contract.action.REQUEST_PERMISSIONS").putExtra("androidx.activity.result.contract.extra.PERMISSIONS", (String[]) str);
-                bzo.p(intentPutExtra, "Intent(ACTION_REQUEST_PE…EXTRA_PERMISSIONS, input)");
+                Intent intentPutExtra = new Intent("androidx.activity.result.contract.action.REQUEST_PERMISSIONS")
+                        .putExtra("androidx.activity.result.contract.extra.PERMISSIONS", (String[]) str);
+                throwIfVar1IsNull(intentPutExtra, "Intent(ACTION_REQUEST_PE…EXTRA_PERMISSIONS, input)");
                 return intentPutExtra;
             case 2:
                 return (Intent) str;
@@ -34,7 +36,8 @@ public final class ds extends bhs {
                 bql bqlVar = (bql) str;
                 Intent intent = new Intent("androidx.activity.result.contract.action.INTENT_SENDER_REQUEST");
                 Intent intent2 = bqlVar.b;
-                if (intent2 != null && (bundleExtra = intent2.getBundleExtra("androidx.activity.result.contract.extra.ACTIVITY_OPTIONS_BUNDLE")) != null) {
+                if (intent2 != null && (bundleExtra = intent2
+                        .getBundleExtra("androidx.activity.result.contract.extra.ACTIVITY_OPTIONS_BUNDLE")) != null) {
                     intent.putExtra("androidx.activity.result.contract.extra.ACTIVITY_OPTIONS_BUNDLE", bundleExtra);
                     intent2.removeExtra("androidx.activity.result.contract.extra.ACTIVITY_OPTIONS_BUNDLE");
                     if (intent2.getBooleanExtra("androidx.fragment.extra.ACTIVITY_OPTIONS_BUNDLE", false)) {
@@ -65,7 +68,7 @@ public final class ds extends bhs {
                         return null;
                     }
                 }
-                int iAh = bzo.ah(strArr.length);
+                int iAh = KotlinHelpers.ah(strArr.length);
                 if (iAh < 16) {
                     iAh = 16;
                 }
@@ -92,14 +95,16 @@ public final class ds extends bhs {
                 return null;
             case 1:
                 if (i == -1 && intent != null) {
-                    String[] stringArrayExtra = intent.getStringArrayExtra("androidx.activity.result.contract.extra.PERMISSIONS");
-                    int[] intArrayExtra = intent.getIntArrayExtra("androidx.activity.result.contract.extra.PERMISSION_GRANT_RESULTS");
+                    String[] stringArrayExtra = intent
+                            .getStringArrayExtra("androidx.activity.result.contract.extra.PERMISSIONS");
+                    int[] intArrayExtra = intent
+                            .getIntArrayExtra("androidx.activity.result.contract.extra.PERMISSION_GRANT_RESULTS");
                     if (intArrayExtra != null && stringArrayExtra != null) {
                         ArrayList arrayList = new ArrayList(intArrayExtra.length);
                         for (int i2 : intArrayExtra) {
                             arrayList.add(Boolean.valueOf(i2 == 0));
                         }
-                        return bzo.as(aaz.ae(la.o(stringArrayExtra), arrayList));
+                        return KotlinHelpers.as(aaz.ae(la.o(stringArrayExtra), arrayList));
                     }
                 }
                 return ave.a;

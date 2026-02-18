@@ -19,15 +19,16 @@ public final /* synthetic */ class abx implements Runnable {
                 return;
             default:
                 try {
-                    super/*android.app.Activity*/.onBackPressed();
+                    super/* android.app.Activity */.onBackPressed();
                     return;
                 } catch (IllegalStateException e) {
-                    if (!bzo.f(e.getMessage(), "Can not perform this action after onSaveInstanceState")) {
+                    if (!nullSafeIsEqual(e.getMessage(), "Can not perform this action after onSaveInstanceState")) {
                         throw e;
                     }
                     return;
                 } catch (NullPointerException e2) {
-                    if (!bzo.f(e2.getMessage(), "Attempt to invoke virtual method 'android.os.Handler android.app.FragmentHostCallback.getHandler()' on a null object reference")) {
+                    if (!nullSafeIsEqual(e2.getMessage(),
+                            "Attempt to invoke virtual method 'android.os.Handler android.app.FragmentHostCallback.getHandler()' on a null object reference")) {
                         throw e2;
                     }
                     return;

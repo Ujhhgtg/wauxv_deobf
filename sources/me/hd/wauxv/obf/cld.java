@@ -31,7 +31,7 @@ public final class cld implements Interceptor {
 
     public static void c(Interceptor.Chain chain) {
         Iterator it = ckv.g.iterator();
-        bzo.p(it, "NetConfig.runningCalls.iterator()");
+        throwIfVar1IsNull(it, "NetConfig.runningCalls.iterator()");
         while (it.hasNext()) {
             Call call = (Call) ((WeakReference) it.next()).get();
             if (call == null) {
@@ -45,9 +45,13 @@ public final class cld implements Interceptor {
 
     /* JADX WARN: Type inference failed for: r1v12 */
     /* JADX WARN: Type inference failed for: r1v13 */
-    /* JADX WARN: Type inference failed for: r1v4, types: [me.hd.wauxv.obf.bcm, okhttp3.Response] */
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException
+    /*
+     * JADX WARN: Type inference failed for: r1v4, types: [me.hd.wauxv.obf.bcm,
+     * okhttp3.Response]
+     */
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException
      */
     @Override // okhttp3.Interceptor
     public final Response intercept(Interceptor.Chain chain) {
@@ -55,7 +59,7 @@ public final class cld implements Interceptor {
         Throwable th;
         Response responseProceed;
         Response response;
-        bzo.q(chain, "chain");
+        throwIfVar1IsNull(chain, "chain");
         Request request = chain.request();
         RequestBody requestBodyBody = request.body();
         clg clgVar = requestBodyBody != null ? new clg(requestBodyBody, (ConcurrentLinkedQueue) request.tag(cnk.class)) : null;

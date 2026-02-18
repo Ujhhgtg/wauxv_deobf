@@ -23,11 +23,11 @@ public final class bpw implements Comparable, Serializable {
     @Override // java.lang.Comparable
     public final int compareTo(Object obj) {
         bpw bpwVar = (bpw) obj;
-        bzo.q(bpwVar, "other");
+        throwIfVar1IsNull(bpwVar, "other");
         long j = this.c;
         long j2 = bpwVar.c;
         int i = j < j2 ? -1 : j == j2 ? 0 : 1;
-        return i != 0 ? i : bzo.r(this.d, bpwVar.d);
+        return i != 0 ? i : KotlinHelpers.r(this.d, bpwVar.d);
     }
 
     public final boolean equals(Object obj) {
@@ -92,10 +92,10 @@ public final class bpw implements Comparable, Serializable {
             StringBuilder sb2 = new StringBuilder();
             if (i6 >= 0) {
                 sb2.append(i6 + 10000);
-                bzo.p(sb2.deleteCharAt(0), "deleteCharAt(...)");
+                throwIfVar1IsNull(sb2.deleteCharAt(0), "deleteCharAt(...)");
             } else {
                 sb2.append(i6 - 10000);
-                bzo.p(sb2.deleteCharAt(1), "deleteCharAt(...)");
+                throwIfVar1IsNull(sb2.deleteCharAt(1), "deleteCharAt(...)");
             }
             sb.append((CharSequence) sb2);
         } else {
@@ -127,9 +127,9 @@ public final class bpw implements Comparable, Serializable {
             }
             int i14 = i11 - (i11 % 3);
             String strValueOf = String.valueOf((i12 / iArr[i14]) + iArr[9 - i14]);
-            bzo.o(strValueOf, "null cannot be cast to non-null type java.lang.String");
+            throwIfVar1IsNull(strValueOf, "null cannot be cast to non-null type java.lang.String");
             String strSubstring = strValueOf.substring(1);
-            bzo.p(strSubstring, "substring(...)");
+            throwIfVar1IsNull(strSubstring, "substring(...)");
             sb.append(strSubstring);
         }
         sb.append('Z');

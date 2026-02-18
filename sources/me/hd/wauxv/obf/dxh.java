@@ -16,7 +16,8 @@ public final class dxh {
     public final String j;
     public final Integer k;
 
-    public /* synthetic */ dxh(int i, String str, String str2, String str3, String str4, Integer num, Float f, Integer num2, Boolean bool, Boolean bool2, String str5, Integer num3) {
+    public /* synthetic */ dxh(int i, String str, String str2, String str3, String str4, Integer num, Float f,
+            Integer num2, Boolean bool, Boolean bool2, String str5, Integer num3) {
         if (2047 != (i & 2047)) {
             bht.ah(i, 2047, dxf.b.getDescriptor());
             throw null;
@@ -42,7 +43,13 @@ public final class dxh {
             return false;
         }
         dxh dxhVar = (dxh) obj;
-        return bzo.f(this.a, dxhVar.a) && bzo.f(this.b, dxhVar.b) && bzo.f(this.c, dxhVar.c) && bzo.f(this.d, dxhVar.d) && bzo.f(this.e, dxhVar.e) && bzo.f(this.f, dxhVar.f) && bzo.f(this.g, dxhVar.g) && bzo.f(this.h, dxhVar.h) && bzo.f(this.i, dxhVar.i) && bzo.f(this.j, dxhVar.j) && bzo.f(this.k, dxhVar.k);
+        return nullSafeIsEqual(this.a, dxhVar.a) && nullSafeIsEqual(this.b, dxhVar.b)
+                && nullSafeIsEqual(this.c, dxhVar.c) && nullSafeIsEqual(this.d, dxhVar.d)
+                && nullSafeIsEqual(this.e, dxhVar.e) && nullSafeIsEqual(this.f, dxhVar.f)
+                && nullSafeIsEqual(this.g, dxhVar.g)
+                && nullSafeIsEqual(this.h, dxhVar.h) && nullSafeIsEqual(this.i, dxhVar.i)
+                && nullSafeIsEqual(this.j, dxhVar.j)
+                && nullSafeIsEqual(this.k, dxhVar.k);
     }
 
     public final int hashCode() {
@@ -83,6 +90,6 @@ public final class dxh {
         dts.g(sb, this.h, -189901978991402L);
         dts.g(sb, this.i, -189738770234154L);
         yg.u(sb, this.j, -189670050757418L);
-        return bjs.p(sb, this.k, ')');
+        return concat(sb, this.k, ')');
     }
 }

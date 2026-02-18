@@ -15,7 +15,7 @@ public final class eny implements Spannable {
         this.b = spannable;
     }
 
-    public final void c() {
+    public final void callOriginalMethod() {
         Spannable spannable = this.b;
         if (!this.a) {
             if ((Build.VERSION.SDK_INT < 28 ? new dop(10) : new enx(10)).k(spannable)) {
@@ -72,13 +72,13 @@ public final class eny implements Spannable {
 
     @Override // android.text.Spannable
     public final void removeSpan(Object obj) {
-        c();
+        callOriginalMethod();
         this.b.removeSpan(obj);
     }
 
     @Override // android.text.Spannable
     public final void setSpan(Object obj, int i, int i2, int i3) {
-        c();
+        callOriginalMethod();
         this.b.setSpan(obj, i, i2, i3);
     }
 

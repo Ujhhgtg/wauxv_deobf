@@ -13,10 +13,10 @@ public abstract class dgg extends emn {
         }
         if (length == 1) {
             Set setSingleton = Collections.singleton(objArr[0]);
-            bzo.p(setSingleton, "singleton(...)");
+            throwIfVar1IsNull(setSingleton, "singleton(...)");
             return setSingleton;
         }
-        LinkedHashSet linkedHashSet = new LinkedHashSet(bzo.ah(objArr.length));
+        LinkedHashSet linkedHashSet = new LinkedHashSet(KotlinHelpers.ah(objArr.length));
         for (Object obj : objArr) {
             linkedHashSet.add(obj);
         }
@@ -37,8 +37,8 @@ public abstract class dgg extends emn {
     }
 
     public static LinkedHashSet b(Set set, cio cioVar) {
-        bzo.q(set, "<this>");
-        LinkedHashSet linkedHashSet = new LinkedHashSet(bzo.ah(set.size() + 1));
+        throwIfVar1IsNull(set, "<this>");
+        LinkedHashSet linkedHashSet = new LinkedHashSet(KotlinHelpers.ah(set.size() + 1));
         linkedHashSet.addAll(set);
         linkedHashSet.add(cioVar);
         return linkedHashSet;

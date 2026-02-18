@@ -129,7 +129,8 @@ public final class ajp {
                         Iterator it2 = avwVar.a.iterator();
                         while (true) {
                             if (!it2.hasNext()) {
-                                throw new IllegalArgumentException("No transcoder registered to transcode from " + cls8 + " to " + cls9);
+                                throw new IllegalArgumentException(
+                                        "No transcoder registered to transcode from " + cls8 + " to " + cls9);
                             }
                             ekz ekzVar = (ekz) it2.next();
                             if (ekzVar.a.isAssignableFrom(cls8) && cls9.isAssignableFrom(ekzVar.b)) {
@@ -178,7 +179,7 @@ public final class ajp {
         if (avuVar != null) {
             return avuVar;
         }
-        throw new dar(bjs.l(obj.getClass(), "Failed to find source encoder for data class: "));
+        throw new dar(concatVar2Var1(obj.getClass(), "Failed to find source encoder for data class: "));
     }
 
     public final elc w(Class cls) {
@@ -197,6 +198,7 @@ public final class ajp {
         if (!this.j.isEmpty() || !this.q) {
             return env.b;
         }
-        throw new IllegalArgumentException("Missing transformation for " + cls + ". If you wish to ignore unknown resource types, use the optional transformation methods.");
+        throw new IllegalArgumentException("Missing transformation for " + cls
+                + ". If you wish to ignore unknown resource types, use the optional transformation methods.");
     }
 }

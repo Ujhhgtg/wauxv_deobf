@@ -44,12 +44,13 @@ import org.xmlpull.v1.XmlSerializer;
 /* JADX INFO: loaded from: classes.dex */
 public abstract class bhu {
     public static final Object g = new Object();
-    public static final int[] h = {1, 10, 100, 1000, 10000, 100000, 1000000, 10000000, 100000000, Http2Connection.DEGRADED_PONG_TIMEOUT_NS};
-    public static final int[] i = {1, 2, 4, 5, 7, 8, 10, 11, 13, 14};
-    public static final int[] j = {3, 6};
-    public static final int[] k = {1, 2, 4, 5, 7, 8};
-    public static final int[] l = {R.attr.colorPrimary};
-    public static final int[] m = {R.attr.colorPrimaryVariant};
+    public static final int[] h = { 1, 10, 100, 1000, 10000, 100000, 1000000, 10000000, 100000000,
+            Http2Connection.DEGRADED_PONG_TIMEOUT_NS };
+    public static final int[] i = { 1, 2, 4, 5, 7, 8, 10, 11, 13, 14 };
+    public static final int[] j = { 3, 6 };
+    public static final int[] k = { 1, 2, 4, 5, 7, 8 };
+    public static final int[] l = { R.attr.colorPrimary };
+    public static final int[] m = { R.attr.colorPrimaryVariant };
 
     public static ep aa() {
         return (ep) ep.a.getValue();
@@ -128,7 +129,7 @@ public abstract class bhu {
     }
 
     public static final int af(dfx dfxVar, dfx[] dfxVarArr) {
-        bzo.q(dfxVarArr, "typeParams");
+        throwIfVar1IsNull(dfxVarArr, "typeParams");
         int iHashCode = (dfxVar.b().hashCode() * 31) + Arrays.hashCode(dfxVarArr);
         z zVar = new z(dfxVar);
         int iHashCode2 = 1;
@@ -185,7 +186,7 @@ public abstract class bhu {
         if (i2 == 512) {
             return 9;
         }
-        throw new IllegalArgumentException(bjs.i(i2, "type needs to be >= FIRST and <= LAST, type="));
+        throw new IllegalArgumentException(concatVar2Var1(i2, "type needs to be >= FIRST and <= LAST, type="));
     }
 
     public static void ah(ayd aydVar) {
@@ -319,13 +320,13 @@ public abstract class bhu {
         return false;
     }
 
-    public static final ArrayList ak(Map map, bgf bgfVar) {
-        bzo.q(map, "<this>");
+    public static final ArrayList ak(Map map, IHasInvokeMethod bgfVar) {
+        throwIfVar1IsNull(map, "<this>");
         LinkedHashMap linkedHashMap = new LinkedHashMap();
         for (Map.Entry entry : map.entrySet()) {
             cin cinVar = (cin) entry.getValue();
             Boolean boolValueOf = cinVar != null ? Boolean.valueOf(cinVar.b) : null;
-            bzo.n(boolValueOf);
+            throwIfVar1IsNull(boolValueOf);
             if (!boolValueOf.booleanValue() && !cinVar.c) {
                 linkedHashMap.put(entry.getKey(), entry.getValue());
             }
@@ -370,7 +371,7 @@ public abstract class bhu {
         return new jx(context, context.obtainStyledAttributes(attributeSet, iArr, i2, i3));
     }
 
-    public static final bpy ap(String str, String str2, int i2, bgf bgfVar) {
+    public static final bpy ap(String str, String str2, int i2, IHasInvokeMethod bgfVar) {
         char cCharAt = str.charAt(i2);
         if (((Boolean) bgfVar.invoke(Character.valueOf(cCharAt))).booleanValue()) {
             return null;
@@ -379,7 +380,7 @@ public abstract class bhu {
     }
 
     public static final bpy aq(String str, String str2) {
-        StringBuilder sbR = bjs.r(str2, " when parsing an Instant from \"");
+        StringBuilder sbR = concat(str2, " when parsing an Instant from \"");
         sbR.append(bg(64, str));
         sbR.append('\"');
         return new bpy(sbR.toString(), str);
@@ -389,7 +390,10 @@ public abstract class bhu {
         return (str.charAt(i2 + 1) - '0') + ((str.charAt(i2) - '0') * 10);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:42:0x003e A[EXC_TOP_SPLITTER, SYNTHETIC] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:42:0x003e A[EXC_TOP_SPLITTER,
+     * SYNTHETIC]
+     */
     public static void as(Context context, String str) {
         synchronized (g) {
             if (str.equals("")) {
@@ -397,7 +401,8 @@ public abstract class bhu {
                 return;
             }
             try {
-                FileOutputStream fileOutputStreamOpenFileOutput = context.openFileOutput("androidx.appcompat.app.AppCompatDelegate.application_locales_record_file", 0);
+                FileOutputStream fileOutputStreamOpenFileOutput = context
+                        .openFileOutput("androidx.appcompat.app.AppCompatDelegate.application_locales_record_file", 0);
                 XmlSerializer xmlSerializerNewSerializer = Xml.newSerializer();
                 try {
                     try {
@@ -417,7 +422,8 @@ public abstract class bhu {
                         throw th;
                     }
                 } catch (Exception e) {
-                    Log.w("AppLocalesStorageHelper", "Storing App Locales : Failed to persist app-locales in storage ", e);
+                    Log.w("AppLocalesStorageHelper", "Storing App Locales : Failed to persist app-locales in storage ",
+                            e);
                     if (fileOutputStreamOpenFileOutput != null) {
                         try {
                             fileOutputStreamOpenFileOutput.close();
@@ -429,7 +435,8 @@ public abstract class bhu {
                     fileOutputStreamOpenFileOutput.close();
                 }
             } catch (FileNotFoundException unused3) {
-                Log.w("AppLocalesStorageHelper", "Storing App Locales : FileNotFoundException: Cannot open file androidx.appcompat.app.AppCompatDelegate.application_locales_record_file for writing ");
+                Log.w("AppLocalesStorageHelper",
+                        "Storing App Locales : FileNotFoundException: Cannot open file androidx.appcompat.app.AppCompatDelegate.application_locales_record_file for writing ");
             }
         }
     }
@@ -494,14 +501,20 @@ public abstract class bhu {
         s(aydVar);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:48:0x0046 A[EXC_TOP_SPLITTER, PHI: r1
-      0x0046: PHI (r1v2 java.lang.String) = (r1v0 java.lang.String), (r1v4 java.lang.String) binds: [B:29:0x0053, B:23:0x0044] A[DONT_GENERATE, DONT_INLINE], SYNTHETIC] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:48:0x0046 A[EXC_TOP_SPLITTER,
+     * PHI: r1
+     * 0x0046: PHI (r1v2 java.lang.String) = (r1v0 java.lang.String), (r1v4
+     * java.lang.String) binds: [B:29:0x0053, B:23:0x0044] A[DONT_GENERATE,
+     * DONT_INLINE], SYNTHETIC]
+     */
     public static String au(Context context) {
         String attributeValue;
         synchronized (g) {
             attributeValue = "";
             try {
-                FileInputStream fileInputStreamOpenFileInput = context.openFileInput("androidx.appcompat.app.AppCompatDelegate.application_locales_record_file");
+                FileInputStream fileInputStreamOpenFileInput = context
+                        .openFileInput("androidx.appcompat.app.AppCompatDelegate.application_locales_record_file");
                 try {
                     try {
                         XmlPullParser xmlPullParserNewPullParser = Xml.newPullParser();
@@ -511,7 +524,8 @@ public abstract class bhu {
                             int next = xmlPullParserNewPullParser.next();
                             if (next != 1 && (next != 3 || xmlPullParserNewPullParser.getDepth() > depth)) {
                                 if (next != 3 && next != 4 && xmlPullParserNewPullParser.getName().equals("locales")) {
-                                    attributeValue = xmlPullParserNewPullParser.getAttributeValue(null, "application_locales");
+                                    attributeValue = xmlPullParserNewPullParser.getAttributeValue(null,
+                                            "application_locales");
                                     break;
                                 }
                             } else {
@@ -519,7 +533,8 @@ public abstract class bhu {
                             }
                         }
                     } catch (IOException | XmlPullParserException unused) {
-                        Log.w("AppLocalesStorageHelper", "Reading app Locales : Unable to parse through file :androidx.appcompat.app.AppCompatDelegate.application_locales_record_file");
+                        Log.w("AppLocalesStorageHelper",
+                                "Reading app Locales : Unable to parse through file :androidx.appcompat.app.AppCompatDelegate.application_locales_record_file");
                         if (fileInputStreamOpenFileInput != null) {
                             try {
                                 fileInputStreamOpenFileInput.close();
@@ -549,7 +564,8 @@ public abstract class bhu {
         return attributeValue;
     }
 
-    public static void av(TextInputLayout textInputLayout, CheckableImageButton checkableImageButton, ColorStateList colorStateList) {
+    public static void av(TextInputLayout textInputLayout, CheckableImageButton checkableImageButton,
+            ColorStateList colorStateList) {
         Drawable drawable = checkableImageButton.getDrawable();
         if (checkableImageButton.getDrawable() == null || colorStateList == null || !colorStateList.isStateful()) {
             return;
@@ -617,33 +633,46 @@ public abstract class bhu {
     }
 
     public static final void az(Object[] objArr, int i2, int i3) {
-        bzo.q(objArr, "<this>");
+        throwIfVar1IsNull(objArr, "<this>");
         while (i2 < i3) {
             objArr[i2] = null;
             i2++;
         }
     }
 
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getPredecessors()" because "start" is null
-    	at jadx.core.utils.BlockUtils.followEmptyUpPathWithinSet(BlockUtils.java:1223)
-    	at jadx.core.utils.BlockUtils.followEmptyUpPathWithinSet(BlockUtils.java:1217)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.cutHandlerBlocks(MarkFinallyVisitor.java:249)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:123)
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getPredecessors()" because "start" is null
+     * at
+     * jadx.core.utils.BlockUtils.followEmptyUpPathWithinSet(BlockUtils.java:1223)
+     * at
+     * jadx.core.utils.BlockUtils.followEmptyUpPathWithinSet(BlockUtils.java:1217)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.cutHandlerBlocks(
+     * MarkFinallyVisitor.java:249)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:123)
      */
-    /*  JADX ERROR: JadxRuntimeException in pass: RegionMakerVisitor
-        jadx.core.utils.exceptions.JadxRuntimeException: Can't find top splitter block for handler:B:220:0x00cf
-        	at jadx.core.utils.BlockUtils.getTopSplitterForHandler(BlockUtils.java:1478)
-        	at jadx.core.dex.visitors.regions.maker.ExcHandlersRegionMaker.collectHandlerRegions(ExcHandlersRegionMaker.java:53)
-        	at jadx.core.dex.visitors.regions.maker.ExcHandlersRegionMaker.process(ExcHandlersRegionMaker.java:38)
-        	at jadx.core.dex.visitors.regions.RegionMakerVisitor.visit(RegionMakerVisitor.java:27)
-        */
+    /*
+     * JADX ERROR: JadxRuntimeException in pass: RegionMakerVisitor
+     * jadx.core.utils.exceptions.JadxRuntimeException: Can't find top splitter
+     * block for handler:B:220:0x00cf
+     * at jadx.core.utils.BlockUtils.getTopSplitterForHandler(BlockUtils.java:1478)
+     * at jadx.core.dex.visitors.regions.maker.ExcHandlersRegionMaker.
+     * collectHandlerRegions(ExcHandlersRegionMaker.java:53)
+     * at jadx.core.dex.visitors.regions.maker.ExcHandlersRegionMaker.process(
+     * ExcHandlersRegionMaker.java:38)
+     * at
+     * jadx.core.dex.visitors.regions.RegionMakerVisitor.visit(RegionMakerVisitor.
+     * java:27)
+     */
     public static void ba(me.hd.wauxv.obf.ayd r14) {
         /*
-            Method dump skipped, instruction units count: 607
-            To view this dump add '--comments-level debug' option
-        */
-        throw new UnsupportedOperationException("Method not decompiled: me.hd.wauxv.obf.bhu.ba(me.hd.wauxv.obf.ayd):void");
+         * Method dump skipped, instruction units count: 607
+         * To view this dump add '--comments-level debug' option
+         */
+        throw new UnsupportedOperationException(
+                "Method not decompiled: me.hd.wauxv.obf.bhu.ba(me.hd.wauxv.obf.ayd):void");
     }
 
     public static void bb(CheckableImageButton checkableImageButton, View.OnLongClickListener onLongClickListener) {
@@ -826,11 +855,12 @@ public abstract class bhu {
         }
         sb.append("]");
         String string = sb.toString();
-        bzo.p(string, "toString(...)");
+        throwIfVar1IsNull(string, "toString(...)");
         return string;
     }
 
-    public static void o(TextInputLayout textInputLayout, CheckableImageButton checkableImageButton, ColorStateList colorStateList, PorterDuff.Mode mode) {
+    public static void o(TextInputLayout textInputLayout, CheckableImageButton checkableImageButton,
+            ColorStateList colorStateList, PorterDuff.Mode mode) {
         Drawable drawable = checkableImageButton.getDrawable();
         if (drawable != null) {
             drawable = drawable.mutate();
@@ -842,7 +872,8 @@ public abstract class bhu {
                 int length = drawableState.length;
                 int[] iArrCopyOf = Arrays.copyOf(drawableState, drawableState.length + drawableState2.length);
                 System.arraycopy(drawableState2, 0, iArrCopyOf, length, drawableState2.length);
-                drawable.setTintList(ColorStateList.valueOf(colorStateList.getColorForState(iArrCopyOf, colorStateList.getDefaultColor())));
+                drawable.setTintList(ColorStateList
+                        .valueOf(colorStateList.getColorForState(iArrCopyOf, colorStateList.getDefaultColor())));
             }
             if (mode != null) {
                 drawable.setTintMode(mode);
@@ -859,7 +890,8 @@ public abstract class bhu {
         typedArrayObtainStyledAttributes.recycle();
         if (z) {
             TypedValue typedValue = new TypedValue();
-            if (!context.getTheme().resolveAttribute(R.attr.isMaterialTheme, typedValue, true) || (typedValue.type == 18 && typedValue.data == 0)) {
+            if (!context.getTheme().resolveAttribute(R.attr.isMaterialTheme, typedValue, true)
+                    || (typedValue.type == 18 && typedValue.data == 0)) {
                 r(context, m, "Theme.MaterialComponents");
             }
         }
@@ -896,7 +928,8 @@ public abstract class bhu {
         }
         typedArrayObtainStyledAttributes.recycle();
         if (!z) {
-            throw new IllegalArgumentException("This component requires that you specify a valid TextAppearance attribute. Update your app theme to inherit from Theme.MaterialComponents (or a descendant).");
+            throw new IllegalArgumentException(
+                    "This component requires that you specify a valid TextAppearance attribute. Update your app theme to inherit from Theme.MaterialComponents (or a descendant).");
         }
     }
 
@@ -905,7 +938,8 @@ public abstract class bhu {
         for (int i2 = 0; i2 < iArr.length; i2++) {
             if (!typedArrayObtainStyledAttributes.hasValue(i2)) {
                 typedArrayObtainStyledAttributes.recycle();
-                throw new IllegalArgumentException(bjs.o("The style on this component requires your app theme to be ", str, " (or a descendant)."));
+                throw new IllegalArgumentException(concat("The style on this component requires your app theme to be ",
+                        str, " (or a descendant)."));
             }
         }
         typedArrayObtainStyledAttributes.recycle();
@@ -932,12 +966,24 @@ public abstract class bhu {
     }
 
     public static ImageView.ScaleType u(int i2) {
-        return i2 != 0 ? i2 != 1 ? i2 != 2 ? i2 != 3 ? i2 != 5 ? i2 != 6 ? ImageView.ScaleType.CENTER : ImageView.ScaleType.CENTER_INSIDE : ImageView.ScaleType.CENTER_CROP : ImageView.ScaleType.FIT_END : ImageView.ScaleType.FIT_CENTER : ImageView.ScaleType.FIT_START : ImageView.ScaleType.FIT_XY;
+        return i2 != 0
+                ? i2 != 1
+                        ? i2 != 2
+                                ? i2 != 3
+                                        ? i2 != 5
+                                                ? i2 != 6 ? ImageView.ScaleType.CENTER
+                                                        : ImageView.ScaleType.CENTER_INSIDE
+                                                : ImageView.ScaleType.CENTER_CROP
+                                        : ImageView.ScaleType.FIT_END
+                                : ImageView.ScaleType.FIT_CENTER
+                        : ImageView.ScaleType.FIT_START
+                : ImageView.ScaleType.FIT_XY;
     }
 
     public static void v(ayd aydVar, MappedByteBuffer mappedByteBuffer, MappedByteBuffer mappedByteBuffer2, int i2) {
         if (mappedByteBuffer.capacity() != mappedByteBuffer2.capacity()) {
-            MappedByteBuffer mappedByteBufferAw = aw(mappedByteBuffer2 == aydVar.y ? aydVar.w : aydVar.v, mappedByteBuffer.capacity());
+            MappedByteBuffer mappedByteBufferAw = aw(mappedByteBuffer2 == aydVar.y ? aydVar.w : aydVar.v,
+                    mappedByteBuffer.capacity());
             if (mappedByteBufferAw == null) {
                 Log.e("FastKV", aydVar.e, new Exception("map failed"));
                 be(aydVar);
@@ -971,7 +1017,7 @@ public abstract class bhu {
     }
 
     public static final dcx x(Throwable th) {
-        bzo.q(th, "exception");
+        throwIfVar1IsNull(th, "exception");
         return new dcx(th);
     }
 

@@ -11,7 +11,7 @@ public final class cnc {
 
     public final boolean equals(Object obj) {
         if (obj instanceof cnc) {
-            return bzo.f(this.a, ((cnc) obj).a);
+            return nullSafeIsEqual(this.a, ((cnc) obj).a);
         }
         return false;
     }

@@ -48,13 +48,19 @@ public class ClassFileVersion implements Comparable<ClassFileVersion>, Serializa
     private static final long serialVersionUID = 1;
     private final int versionNumber;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface VersionLocator {
         public static final String EARLY_ACCESS = "-ea";
         public static final String INTERNAL = "-internal";
         public static final String JAVA_VERSION = "java.version";
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class Resolved implements VersionLocator {
             private final ClassFileVersion classFileVersion;
@@ -67,7 +73,8 @@ public class ClassFileVersion implements Comparable<ClassFileVersion>, Serializa
                 if (this == obj) {
                     return true;
                 }
-                return obj != null && getClass() == obj.getClass() && this.classFileVersion.equals(((Resolved) obj).classFileVersion);
+                return obj != null && getClass() == obj.getClass()
+                        && this.classFileVersion.equals(((Resolved) obj).classFileVersion);
             }
 
             public int hashCode() {
@@ -80,7 +87,10 @@ public class ClassFileVersion implements Comparable<ClassFileVersion>, Serializa
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public enum Resolver implements PrivilegedAction<VersionLocator> {
             INSTANCE;
 
@@ -95,7 +105,9 @@ public class ClassFileVersion implements Comparable<ClassFileVersion>, Serializa
                         } catch (NoSuchMethodException unused) {
                             method = cls.getMethod("major", null);
                         }
-                        return new Resolved(ClassFileVersion.ofJavaVersion(((Integer) method.invoke(Runtime.class.getMethod("version", null).invoke(null, null), null)).intValue()));
+                        return new Resolved(ClassFileVersion.ofJavaVersion(
+                                ((Integer) method.invoke(Runtime.class.getMethod("version", null).invoke(null, null),
+                                        null)).intValue()));
                     } catch (Throwable th) {
                         return new Unresolved(th.getMessage());
                     }
@@ -120,15 +132,20 @@ public class ClassFileVersion implements Comparable<ClassFileVersion>, Serializa
                         int iIndexOf = property.indexOf(46, iArr[i - 1] + 1);
                         iArr[i] = iIndexOf;
                         if (iIndexOf == -1) {
-                            throw new IllegalStateException("This JVM's version string does not seem to be valid: " + property);
+                            throw new IllegalStateException(
+                                    "This JVM's version string does not seem to be valid: " + property);
                         }
                     }
-                    return new Resolved(ClassFileVersion.ofJavaVersion(Integer.parseInt(property.substring(iArr[1] + 1, iArr[2]))));
+                    return new Resolved(
+                            ClassFileVersion.ofJavaVersion(Integer.parseInt(property.substring(iArr[1] + 1, iArr[2]))));
                 }
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class Unresolved implements VersionLocator {
             private final String message;
@@ -150,7 +167,8 @@ public class ClassFileVersion implements Comparable<ClassFileVersion>, Serializa
 
             @Override // net.bytebuddy.ClassFileVersion.VersionLocator
             public ClassFileVersion resolve() {
-                throw new IllegalStateException("Failed to resolve the class file version of the current VM: " + this.message);
+                throw new IllegalStateException(
+                        "Failed to resolve the class file version of the current VM: " + this.message);
             }
         }
 
@@ -220,7 +238,12 @@ public class ClassFileVersion implements Comparable<ClassFileVersion>, Serializa
         JAVA_V25 = classFileVersion25;
         ClassFileVersion classFileVersion26 = new ClassFileVersion(70);
         JAVA_V26 = classFileVersion26;
-        CLASS_FILE_VERSIONS = new ClassFileVersion[]{classFileVersion, classFileVersion2, classFileVersion3, classFileVersion4, classFileVersion5, classFileVersion6, classFileVersion7, classFileVersion8, classFileVersion9, classFileVersion10, classFileVersion11, classFileVersion12, classFileVersion13, classFileVersion14, classFileVersion15, classFileVersion16, classFileVersion17, classFileVersion18, classFileVersion19, classFileVersion20, classFileVersion21, classFileVersion22, classFileVersion23, classFileVersion24, classFileVersion25, classFileVersion26};
+        CLASS_FILE_VERSIONS = new ClassFileVersion[] { classFileVersion, classFileVersion2, classFileVersion3,
+                classFileVersion4, classFileVersion5, classFileVersion6, classFileVersion7, classFileVersion8,
+                classFileVersion9, classFileVersion10, classFileVersion11, classFileVersion12, classFileVersion13,
+                classFileVersion14, classFileVersion15, classFileVersion16, classFileVersion17, classFileVersion18,
+                classFileVersion19, classFileVersion20, classFileVersion21, classFileVersion22, classFileVersion23,
+                classFileVersion24, classFileVersion25, classFileVersion26 };
         VERSION_LOCATOR = (VersionLocator) doPrivileged(VersionLocator.Resolver.INSTANCE);
     }
 
@@ -243,14 +266,16 @@ public class ClassFileVersion implements Comparable<ClassFileVersion>, Serializa
 
     public static ClassFileVersion ofClassFile(byte[] bArr) {
         if (bArr.length < 7) {
-            throw new IllegalArgumentException(yg.m(new StringBuilder("Supplied byte array is too short to be a class file with "), " byte", bArr.length));
+            throw new IllegalArgumentException(
+                    yg.m(new StringBuilder("Supplied byte array is too short to be a class file with "), " byte",
+                            bArr.length));
         }
         return ofMinorMajor(bArr[7] | (bArr[4] << 24) | (bArr[5] << 16) | (bArr[6] << 8));
     }
 
     public static ClassFileVersion ofJavaVersion(int i) {
         if (i < 1) {
-            throw new IllegalArgumentException(bjs.i(i, "Java version must be positive: "));
+            throw new IllegalArgumentException(concatVar2Var1(i, "Java version must be positive: "));
         }
         int i2 = i - 1;
         ClassFileVersion[] classFileVersionArr = CLASS_FILE_VERSIONS;
@@ -266,7 +291,8 @@ public class ClassFileVersion implements Comparable<ClassFileVersion>, Serializa
             } else {
                 int i2 = Integer.parseInt(str.substring(iIndexOf + 1));
                 if (Integer.parseInt(str.substring(0, iIndexOf)) != 1 || i2 > 8) {
-                    throw new IllegalArgumentException("Java versions with minor version must be of format 1.[1-7]: ".concat(str));
+                    throw new IllegalArgumentException(
+                            "Java versions with minor version must be of format 1.[1-7]: ".concat(str));
                 }
                 i = i2;
             }
@@ -296,7 +322,8 @@ public class ClassFileVersion implements Comparable<ClassFileVersion>, Serializa
         if (this == obj) {
             return true;
         }
-        return obj != null && getClass() == obj.getClass() && this.versionNumber == ((ClassFileVersion) obj).versionNumber;
+        return obj != null && getClass() == obj.getClass()
+                && this.versionNumber == ((ClassFileVersion) obj).versionNumber;
     }
 
     public int getJavaVersion() {

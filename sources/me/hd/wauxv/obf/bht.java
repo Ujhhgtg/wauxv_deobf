@@ -39,12 +39,16 @@ import okhttp3.internal.ws.WebSocketProtocol;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public abstract class bht implements ckp {
-    public static final int[] g = {R.attr.name, R.attr.tint, R.attr.height, R.attr.width, R.attr.alpha, R.attr.autoMirrored, R.attr.tintMode, R.attr.viewportWidth, R.attr.viewportHeight};
-    public static final int[] h = {R.attr.name, R.attr.pivotX, R.attr.pivotY, R.attr.scaleX, R.attr.scaleY, R.attr.rotation, R.attr.translateX, R.attr.translateY};
-    public static final int[] i = {R.attr.name, R.attr.fillColor, R.attr.pathData, R.attr.strokeColor, R.attr.strokeWidth, R.attr.trimPathStart, R.attr.trimPathEnd, R.attr.trimPathOffset, R.attr.strokeLineCap, R.attr.strokeLineJoin, R.attr.strokeMiterLimit, R.attr.strokeAlpha, R.attr.fillAlpha, R.attr.fillType};
-    public static final int[] j = {R.attr.name, R.attr.pathData, R.attr.fillType};
-    public static final int[] k = {R.attr.drawable};
-    public static final int[] l = {R.attr.name, R.attr.animation};
+    public static final int[] g = { R.attr.name, R.attr.tint, R.attr.height, R.attr.width, R.attr.alpha,
+            R.attr.autoMirrored, R.attr.tintMode, R.attr.viewportWidth, R.attr.viewportHeight };
+    public static final int[] h = { R.attr.name, R.attr.pivotX, R.attr.pivotY, R.attr.scaleX, R.attr.scaleY,
+            R.attr.rotation, R.attr.translateX, R.attr.translateY };
+    public static final int[] i = { R.attr.name, R.attr.fillColor, R.attr.pathData, R.attr.strokeColor,
+            R.attr.strokeWidth, R.attr.trimPathStart, R.attr.trimPathEnd, R.attr.trimPathOffset, R.attr.strokeLineCap,
+            R.attr.strokeLineJoin, R.attr.strokeMiterLimit, R.attr.strokeAlpha, R.attr.fillAlpha, R.attr.fillType };
+    public static final int[] j = { R.attr.name, R.attr.pathData, R.attr.fillType };
+    public static final int[] k = { R.attr.drawable };
+    public static final int[] l = { R.attr.name, R.attr.animation };
     public static final cwa m = new cwa("image-destination");
     public static final cwa n = new cwa("image-replacement-text-is-link");
     public static final cwa o = new cwa("image-size");
@@ -69,7 +73,7 @@ public abstract class bht implements ckp {
         return charSequence.length();
     }
 
-    /* JADX WARN: Found duplicated region for block: B:11:0x001b  */
+    /* JADX WARN: Found duplicated region for block: B:11:0x001b */
     /* JADX WARN: Found duplicated region for block: B:21:0x001a A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:9:0x0018 A[DONT_INVERT] */
     public static int ab(CharSequence charSequence, int i2, char c) {
@@ -106,7 +110,7 @@ public abstract class bht implements ckp {
             ay.d(window, z);
         } else {
             if (i2 >= 30) {
-                ay.c(window, z);
+                ay.createInstanceWithArgs(window, z);
                 return;
             }
             View decorView = window.getDecorView();
@@ -161,13 +165,15 @@ public abstract class bht implements ckp {
         }
         Long lBg = dnq.bg(property);
         if (lBg == null) {
-            throw new IllegalStateException(("System property '" + str + "' has unrecognized value '" + property + '\'').toString());
+            throw new IllegalStateException(
+                    ("System property '" + str + "' has unrecognized value '" + property + '\'').toString());
         }
         long jLongValue = lBg.longValue();
         if (j3 <= jLongValue && jLongValue <= j4) {
             return jLongValue;
         }
-        throw new IllegalStateException(("System property '" + str + "' should be in range " + j3 + ".." + j4 + ", but is '" + jLongValue + '\'').toString());
+        throw new IllegalStateException(("System property '" + str + "' should be in range " + j3 + ".." + j4
+                + ", but is '" + jLongValue + '\'').toString());
     }
 
     public static int af(String str, int i2, int i3) {
@@ -175,7 +181,7 @@ public abstract class bht implements ckp {
     }
 
     public static final void ag(int[] iArr, int[] iArr2, dfx dfxVar) {
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         ArrayList arrayList = new ArrayList();
         int length = iArr2.length;
         for (int i2 = 0; i2 < length; i2++) {
@@ -193,7 +199,7 @@ public abstract class bht implements ckp {
     }
 
     public static final void ah(int i2, int i3, dfx dfxVar) {
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         ArrayList arrayList = new ArrayList();
         int i4 = (~i2) & i3;
         for (int i5 = 0; i5 < 32; i5++) {
@@ -225,11 +231,11 @@ public abstract class bht implements ckp {
         dloVar.d = i3;
     }
 
-    public static final Bundle r(csm... csmVarArr) {
-        Bundle bundle = new Bundle(csmVarArr.length);
-        for (csm csmVar : csmVarArr) {
-            String str = (String) csmVar.a;
-            Object obj = csmVar.b;
+    public static final Bundle r(Pair... pairVarArr) {
+        Bundle bundle = new Bundle(pairVarArr.length);
+        for (Pair pairVar : pairVarArr) {
+            String str = (String) pairVar.first;
+            Object obj = pairVar.second;
             if (obj == null) {
                 bundle.putString(str, null);
             } else if (obj instanceof Boolean) {
@@ -272,7 +278,7 @@ public abstract class bht implements ckp {
                 bundle.putShortArray(str, (short[]) obj);
             } else if (obj instanceof Object[]) {
                 Class<?> componentType = obj.getClass().getComponentType();
-                bzo.n(componentType);
+                throwIfVar1IsNull(componentType);
                 if (Parcelable.class.isAssignableFrom(componentType)) {
                     bundle.putParcelableArray(str, (Parcelable[]) obj);
                 } else if (String.class.isAssignableFrom(componentType)) {
@@ -281,7 +287,8 @@ public abstract class bht implements ckp {
                     bundle.putCharSequenceArray(str, (CharSequence[]) obj);
                 } else {
                     if (!Serializable.class.isAssignableFrom(componentType)) {
-                        throw new IllegalArgumentException("Illegal value array type " + componentType.getCanonicalName() + " for key \"" + str + '\"');
+                        throw new IllegalArgumentException("Illegal value array type "
+                                + componentType.getCanonicalName() + " for key \"" + str + '\"');
                     }
                     bundle.putSerializable(str, (Serializable) obj);
                 }
@@ -293,7 +300,8 @@ public abstract class bht implements ckp {
                 bundle.putSize(str, (Size) obj);
             } else {
                 if (!(obj instanceof SizeF)) {
-                    throw new IllegalArgumentException("Illegal value type " + obj.getClass().getCanonicalName() + " for key \"" + str + '\"');
+                    throw new IllegalArgumentException(
+                            "Illegal value type " + obj.getClass().getCanonicalName() + " for key \"" + str + '\"');
                 }
                 bundle.putSizeF(str, (SizeF) obj);
             }
@@ -303,7 +311,9 @@ public abstract class bht implements ckp {
 
     public static int s(Context context, String str) {
         if (str != null) {
-            return (Build.VERSION.SDK_INT >= 33 || !TextUtils.equals("android.permission.POST_NOTIFICATIONS", str)) ? context.checkPermission(str, Process.myPid(), Process.myUid()) : new cpc(context).g.areNotificationsEnabled() ? 0 : -1;
+            return (Build.VERSION.SDK_INT >= 33 || !TextUtils.equals("android.permission.POST_NOTIFICATIONS", str))
+                    ? context.checkPermission(str, Process.myPid(), Process.myUid())
+                    : new cpc(context).g.areNotificationsEnabled() ? 0 : -1;
         }
         throw new NullPointerException("permission must be non-null");
     }
@@ -334,11 +344,13 @@ public abstract class bht implements ckp {
                     }
                     byte b2 = byteBuffer.get();
                     byte b3 = byteBuffer.get();
-                    if ((b2 & JSONB.Constants.BC_INT64_SHORT_MIN) != 128 || (b3 & JSONB.Constants.BC_INT64_SHORT_MIN) != 128) {
+                    if ((b2 & JSONB.Constants.BC_INT64_SHORT_MIN) != 128
+                            || (b3 & JSONB.Constants.BC_INT64_SHORT_MIN) != 128) {
                         throw new UTFDataFormatException("bad second or third byte");
                     }
                     i2 = i3 + 1;
-                    cArr[i3] = (char) (((c & 15) << 12) | ((b2 & JSONB.Constants.BC_INT32_BYTE_MAX) << 6) | (b3 & JSONB.Constants.BC_INT32_BYTE_MAX));
+                    cArr[i3] = (char) (((c & 15) << 12) | ((b2 & JSONB.Constants.BC_INT32_BYTE_MAX) << 6)
+                            | (b3 & JSONB.Constants.BC_INT32_BYTE_MAX));
                 }
                 i3 = i2;
             }
@@ -460,7 +472,7 @@ public abstract class bht implements ckp {
         StringBuffer stringBuffer = new StringBuffer();
         for (byte b : bArrDigest) {
             String upperCase = Integer.toHexString(b & 255).toUpperCase(Locale.getDefault());
-            bzo.p(upperCase, "toUpperCase(...)" /* cnb.z(-47218870450986L) */);
+            throwIfVar1IsNull(upperCase, "toUpperCase(...)" /* cnb.z(-47218870450986L) */);
             if (upperCase.length() < 2) {
                 stringBuffer.append(0);
             }
@@ -477,7 +489,7 @@ public abstract class bht implements ckp {
         wordInstance.setText(new uh(afoVar));
         int iFollowing = wordInstance.following(i2);
         int iPrevious = wordInstance.previous();
-        return (i2 < iPrevious || i2 > iFollowing) ? y(i2, afoVar) : bzo.al(iPrevious, iFollowing);
+        return (i2 < iPrevious || i2 > iFollowing) ? y(i2, afoVar) : KotlinHelpers.al(iPrevious, iFollowing);
     }
 
     public static long y(int i2, CharSequence charSequence) {
@@ -496,7 +508,7 @@ public abstract class bht implements ckp {
                 i2--;
             }
         }
-        return bzo.al(i2, i3);
+        return KotlinHelpers.al(i2, i3);
     }
 
     /* JADX WARN: Found duplicated region for block: B:49:0x0077 A[RETURN] */

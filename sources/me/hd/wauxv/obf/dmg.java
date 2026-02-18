@@ -13,7 +13,7 @@ import java.util.Iterator;
 /* JADX INFO: loaded from: classes.dex */
 public final class dmg {
     public int[] a;
-    public final io c;
+    public final DefaultConfig c;
     public ByteBuffer d;
     public byte[] e;
     public short[] f;
@@ -33,18 +33,30 @@ public final class dmg {
     public final int[] b = new int[256];
     public Bitmap.Config t = Bitmap.Config.ARGB_8888;
 
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.java:210)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:196)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:180)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:201)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.java:347)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(TryCatchBlockAttr.java:356)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:202)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.
+     * java:210)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:196)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:180)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:
+     * 201)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.
+     * java:347)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(
+     * TryCatchBlockAttr.java:356)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+     * MarkFinallyVisitor.java:202)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:119)
      */
-    public dmg(io ioVar, bhi bhiVar, ByteBuffer byteBuffer, int i) {
+    public dmg(DefaultConfig ioVar, bhi bhiVar, ByteBuffer byteBuffer, int i) {
         this.c = ioVar;
         this.l = new bhi();
         synchronized (this) {
@@ -76,7 +88,7 @@ public final class dmg {
                 int i4 = i2 * i3;
                 bva bvaVar = (bva) this.c.d;
                 this.i = bvaVar == null ? new byte[i4] : (byte[]) bvaVar.i(i4, byte[].class);
-                io ioVar2 = this.c;
+                DefaultConfig ioVar2 = this.c;
                 int i5 = this.r * this.q;
                 bva bvaVar2 = (bva) ioVar2.d;
                 this.j = bvaVar2 == null ? new int[i5] : (int[]) bvaVar2.i(i5, int[].class);
@@ -88,7 +100,8 @@ public final class dmg {
 
     public final Bitmap u() {
         Boolean bool = this.s;
-        Bitmap bitmapN = ((oz) this.c.c).n(this.r, this.q, (bool == null || bool.booleanValue()) ? Bitmap.Config.ARGB_8888 : this.t);
+        Bitmap bitmapN = ((oz) this.c.c).n(this.r, this.q,
+                (bool == null || bool.booleanValue()) ? Bitmap.Config.ARGB_8888 : this.t);
         bitmapN.setHasAlpha(true);
         return bitmapN;
     }
@@ -106,7 +119,8 @@ public final class dmg {
                 this.o = 0;
                 if (this.e == null) {
                     bva bvaVar = (bva) this.c.d;
-                    this.e = bvaVar == null ? new byte[Opcodes.CONST_METHOD_TYPE] : (byte[]) bvaVar.i(Opcodes.CONST_METHOD_TYPE, byte[].class);
+                    this.e = bvaVar == null ? new byte[Opcodes.CONST_METHOD_TYPE]
+                            : (byte[]) bvaVar.i(Opcodes.CONST_METHOD_TYPE, byte[].class);
                 }
                 bhd bhdVar = (bhd) this.l.e.get(this.k);
                 int i2 = this.k - 1;
@@ -150,12 +164,16 @@ public final class dmg {
             this.t = config;
             return;
         }
-        throw new IllegalArgumentException("Unsupported format: " + config + ", must be one of " + config3 + " or " + config2);
+        throw new IllegalArgumentException(
+                "Unsupported format: " + config + ", must be one of " + config3 + " or " + config2);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:26:0x0047  */
-    /* JADX WARN: Found duplicated region for block: B:98:0x01dc A[PHI: r5
-      0x01dc: PHI (r5v24 int) = (r5v18 int), (r5v26 int), (r5v26 int) binds: [B:93:0x01c8, B:95:0x01d3, B:96:0x01d5] A[DONT_GENERATE, DONT_INLINE]] */
+    /* JADX WARN: Found duplicated region for block: B:26:0x0047 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:98:0x01dc A[PHI: r5
+     * 0x01dc: PHI (r5v24 int) = (r5v18 int), (r5v26 int), (r5v26 int) binds:
+     * [B:93:0x01c8, B:95:0x01d3, B:96:0x01d5] A[DONT_GENERATE, DONT_INLINE]]
+     */
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Type inference failed for: r6v22 */
     /* JADX WARN: Type inference failed for: r6v23 */
@@ -178,7 +196,7 @@ public final class dmg {
         int i8;
         Bitmap bitmap;
         int i9;
-        io ioVar = this.c;
+        DefaultConfig ioVar = this.c;
         byte b2 = 0;
         int[] iArr3 = this.j;
         if (bhdVar2 == null) {
@@ -242,7 +260,7 @@ public final class dmg {
         }
         byte[] bArr3 = this.g;
         if (this.h == null) {
-            this.h = new byte[q.a.a];
+            this.h = new byte[q.cachedConstructors.cachedConstructors];
         }
         byte[] bArr4 = this.h;
         int i24 = this.d.get() & 255;
@@ -512,7 +530,8 @@ public final class dmg {
                                 i84++;
                                 i83 = i85;
                             }
-                            int i87 = i81 == 0 ? 0 : ((i77 / i81) << 24) | ((i78 / i81) << 16) | ((i79 / i81) << 8) | (i80 / i81);
+                            int i87 = i81 == 0 ? 0
+                                    : ((i77 / i81) << 24) | ((i78 / i81) << 16) | ((i79 / i81) << 8) | (i80 / i81);
                             if (i87 != 0) {
                                 iArr5[i73] = i87;
                             } else if (z && bool == null) {
@@ -575,7 +594,8 @@ public final class dmg {
                 }
             }
             Boolean bool2 = this.s;
-            this.s = Boolean.valueOf((bool2 != null && bool2.booleanValue()) || !(this.s != null || b4 == 0 || b5 == -1));
+            this.s = Boolean
+                    .valueOf((bool2 != null && bool2.booleanValue()) || !(this.s != null || b4 == 0 || b5 == -1));
         }
         if (this.n && ((i6 = bhdVar.g) == 0 || i6 == 1)) {
             if (this.m == null) {

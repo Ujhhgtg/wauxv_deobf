@@ -26,11 +26,12 @@ public abstract class bkd {
     public static final Handler a(Looper looper) throws IllegalAccessException, InvocationTargetException {
         if (Build.VERSION.SDK_INT >= 28) {
             Object objInvoke = Handler.class.getDeclaredMethod("createAsync", Looper.class).invoke(null, looper);
-            bzo.o(objInvoke, "null cannot be cast to non-null type android.os.Handler");
+            throwIfVar1IsNull(objInvoke, "null cannot be cast to non-null type android.os.Handler");
             return (Handler) objInvoke;
         }
         try {
-            return (Handler) Handler.class.getDeclaredConstructor(Looper.class, Handler.Callback.class, Boolean.TYPE).newInstance(looper, null, Boolean.TRUE);
+            return (Handler) Handler.class.getDeclaredConstructor(Looper.class, Handler.Callback.class, Boolean.TYPE)
+                    .newInstance(looper, null, Boolean.TRUE);
         } catch (NoSuchMethodException unused) {
             return new Handler(looper);
         }

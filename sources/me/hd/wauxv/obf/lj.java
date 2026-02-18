@@ -18,7 +18,7 @@ public abstract class lj extends hz {
         if (this.b != null) {
             w();
             lh lhVar = this.b;
-            li liVar = new li(bzo.al(udVar.b, udVar.c), bzo.al(udVar2.b, udVar2.c), null);
+            li liVar = new li(KotlinHelpers.al(udVar.b, udVar.c), KotlinHelpers.al(udVar2.b, udVar2.c), null);
             lhVar.getClass();
             Message messageObtain = Message.obtain();
             messageObtain.what = 11451402;
@@ -45,7 +45,7 @@ public abstract class lj extends hz {
         if (this.b != null) {
             w();
             lh lhVar = this.b;
-            li liVar = new li(bzo.al(udVar.b, udVar.c), bzo.al(udVar2.b, udVar2.c), charSequence);
+            li liVar = new li(KotlinHelpers.al(udVar.b, udVar.c), KotlinHelpers.al(udVar2.b, udVar2.c), charSequence);
             lhVar.getClass();
             Message messageObtain = Message.obtain();
             messageObtain.what = 11451402;

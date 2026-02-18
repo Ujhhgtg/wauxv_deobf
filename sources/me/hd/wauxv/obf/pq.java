@@ -20,7 +20,9 @@ public final class pq extends ni {
     /* JADX WARN: Type inference failed for: r1v1, types: [okhttp3.RequestBody] */
     /* JADX WARN: Type inference failed for: r1v8, types: [okhttp3.FormBody] */
     /* JADX WARN: Type inference failed for: r1v9 */
-    /* JADX WARN: Type inference failed for: r2v0, types: [okhttp3.Request$Builder] */
+    /*
+     * JADX WARN: Type inference failed for: r2v0, types: [okhttp3.Request$Builder]
+     */
     @Override // me.hd.wauxv.obf.ni
     public final Request f() {
         MultipartBody.Builder builder = this.m;
@@ -38,9 +40,9 @@ public final class pq extends ni {
             }
         }
         Request.Builder builderUrl = this.d.method(bjs.z(this.p), Build).url(this.a.build());
-        bzo.q(builderUrl, "<this>");
+        throwIfVar1IsNull(builderUrl, "<this>");
         ckw ckwVar = this.b;
-        bzo.q(ckwVar, "converter");
+        throwIfVar1IsNull(ckwVar, "converter");
         builderUrl.tag(ckw.class, ckwVar);
         return builderUrl.build();
     }

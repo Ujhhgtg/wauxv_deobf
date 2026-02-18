@@ -38,7 +38,10 @@ public class w implements aa.a {
     private static boolean l = true;
     private static long m;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class a {
         private static final w a = new w();
 
@@ -85,8 +88,8 @@ public class w implements aa.a {
     }
 
     private void f(Context context) {
-        q.a(context).b(context);
-        q.a(context).d();
+        q.a(context).tryGetClassByName(context);
+        q.a(context).getArgs();
     }
 
     public void c(Context context, Object obj) {
@@ -197,7 +200,8 @@ public class w implements aa.a {
                     editorEdit.putString(f.aF, appVersionName);
                     editorEdit.commit();
                 } else if (!string.equals(appVersionName)) {
-                    UMRTLog.i(UMRTLog.RTLOG_TAG, "--->>> onStartSessionInternal: upgrade version: " + string + "-> " + appVersionName);
+                    UMRTLog.i(UMRTLog.RTLOG_TAG,
+                            "--->>> onStartSessionInternal: upgrade version: " + string + "-> " + appVersionName);
                     int i2 = sharedPreferences.getInt("versioncode", 0);
                     String string2 = sharedPreferences.getString("pre_date", "");
                     String string3 = sharedPreferences.getString("pre_version", "");
@@ -216,7 +220,7 @@ public class w implements aa.a {
                     if (j) {
                         j = false;
                         b(i, jLongValue, true);
-                        b(i, jLongValue);
+                        tryGetClassByName(i, jLongValue);
                         return;
                     }
                     return;
@@ -267,16 +271,28 @@ public class w implements aa.a {
         return c(i);
     }
 
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.java:210)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:196)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:180)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:201)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.java:347)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(TryCatchBlockAttr.java:356)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:202)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.
+     * java:210)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:196)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:180)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:
+     * 201)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.
+     * java:347)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(
+     * TryCatchBlockAttr.java:356)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+     * MarkFinallyVisitor.java:202)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:119)
      */
     public boolean b(Context context, long j2, boolean z) {
         String strA;
@@ -293,21 +309,23 @@ public class w implements aa.a {
                     if (z) {
                         j3 = k;
                         if (j3 == 0) {
-                            UMRTLog.i(UMRTLog.RTLOG_TAG, "------>>> lastActivityEndTime = 0, In-app upgrade, use currentTime: = " + j2);
+                            UMRTLog.i(UMRTLog.RTLOG_TAG,
+                                    "------>>> lastActivityEndTime = 0, In-app upgrade, use currentTime: = " + j2);
                             j3 = j2;
                         } else {
-                            UMRTLog.i(UMRTLog.RTLOG_TAG, "------>>> lastActivityEndTime != 0, app upgrade, use lastActivityEndTime: = " + k);
+                            UMRTLog.i(UMRTLog.RTLOG_TAG,
+                                    "------>>> lastActivityEndTime != 0, app upgrade, use lastActivityEndTime: = " + k);
                         }
-                        c(i, Long.valueOf(j3));
+                        createInstanceWithArgs(i, Long.valueOf(j3));
                     } else {
-                        c(i, Long.valueOf(j2));
+                        createInstanceWithArgs(i, Long.valueOf(j2));
                         j3 = j2;
                     }
                     JSONObject jSONObject = new JSONObject();
                     if (z) {
-                        jSONObject.put(g.d.a.g, j3);
+                        jSONObject.put(g.d.cachedConstructors.g, j3);
                     } else {
-                        jSONObject.put(g.d.a.g, j2);
+                        jSONObject.put(g.d.cachedConstructors.g, j2);
                     }
                     JSONObject jSONObjectB = com.umeng.analytics.b.a().b();
                     if (jSONObjectB != null && jSONObjectB.length() > 0) {
@@ -319,13 +337,13 @@ public class w implements aa.a {
                     }
                     if (FieldManager.allow(com.umeng.commonsdk.utils.d.E)) {
                         UMRTLog.e(UMRTLog.RTLOG_TAG, "--->>>*** foregroundCount = " + m);
-                        jSONObject.put(g.d.a.h, m);
+                        jSONObject.put(g.d.cachedConstructors.h, m);
                         m = 0L;
                     } else {
-                        jSONObject.put(g.d.a.h, 0L);
+                        jSONObject.put(g.d.cachedConstructors.h, 0L);
                     }
-                    k.a(context).a(strA, jSONObject, k.a.END);
-                    q.a(i).e();
+                    k.a(context).a(strA, jSONObject, k.cachedConstructors.END);
+                    q.a(i).getThisObject();
                 } catch (Throwable unused) {
                 }
                 return true;
@@ -353,7 +371,7 @@ public class w implements aa.a {
             if (jSONObjectC != null && jSONObjectC.length() > 0) {
                 jSONObject.put("__pp", jSONObjectC);
             }
-            k.a(context).a(strB, jSONObject, k.a.INSTANTSESSIONBEGIN);
+            k.a(context).a(strB, jSONObject, k.cachedConstructors.INSTANTSESSIONBEGIN);
             q.a(context).a(jSONObject, z);
         } catch (Throwable unused) {
         }
@@ -365,7 +383,7 @@ public class w implements aa.a {
             return;
         }
         try {
-            q.a(i).c((Object) null);
+            q.a(i).createInstanceWithArgs((Object) null);
         } catch (Throwable unused) {
         }
     }
@@ -381,7 +399,8 @@ public class w implements aa.a {
         UMRTLog.i(UMRTLog.RTLOG_TAG, "saveSessionToDB: complete");
         if (AnalyticsConstants.SUB_PROCESS_EVENT) {
             Context context = i;
-            UMWorkDispatch.sendEvent(context, UMProcessDBDatasSender.UM_PROCESS_EVENT_KEY, UMProcessDBDatasSender.getInstance(context), Long.valueOf(System.currentTimeMillis()));
+            UMWorkDispatch.sendEvent(context, UMProcessDBDatasSender.UM_PROCESS_EVENT_KEY,
+                    UMProcessDBDatasSender.getInstance(context), Long.valueOf(System.currentTimeMillis()));
         }
     }
 
@@ -402,8 +421,8 @@ public class w implements aa.a {
         }
         try {
             JSONObject jSONObject = new JSONObject();
-            jSONObject.put(g.d.a.g, j3);
-            jSONObject.put(g.d.a.h, j4);
+            jSONObject.put(g.d.cachedConstructors.g, j3);
+            jSONObject.put(g.d.cachedConstructors.h, j4);
             JSONObject jSONObjectB = com.umeng.analytics.b.a().b();
             if (jSONObjectB != null && jSONObjectB.length() > 0) {
                 jSONObject.put("__sp", jSONObjectB);
@@ -412,13 +431,13 @@ public class w implements aa.a {
             if (jSONObjectC != null && jSONObjectC.length() > 0) {
                 jSONObject.put("__pp", jSONObjectC);
             }
-            k.a(context).a(h, jSONObject, k.a.END);
+            k.a(context).a(h, jSONObject, k.cachedConstructors.END);
         } catch (Exception unused) {
         }
         try {
             JSONObject jSONObject2 = new JSONObject();
             jSONObject2.put("__e", j2);
-            k.a(context).a(str, jSONObject2, k.a.BEGIN);
+            k.a(context).a(str, jSONObject2, k.cachedConstructors.BEGIN);
             if (FieldManager.allow(com.umeng.commonsdk.utils.d.E)) {
                 m = j4;
                 d(context);
@@ -440,14 +459,14 @@ public class w implements aa.a {
             JSONObject jSONObject = new JSONObject();
             jSONObject.put("__ii", str);
             jSONObject.put("__e", j2);
-            jSONObject.put(g.d.a.g, j3);
+            jSONObject.put(g.d.cachedConstructors.g, j3);
             double[] location = AnalyticsConfig.getLocation();
             if (location != null) {
                 JSONObject jSONObject2 = new JSONObject();
                 jSONObject2.put(f.C, location[0]);
                 jSONObject2.put(f.D, location[1]);
                 jSONObject2.put("ts", System.currentTimeMillis());
-                jSONObject.put(g.d.a.e, jSONObject2);
+                jSONObject.put(g.d.cachedConstructors.e, jSONObject2);
             }
             Class<?> cls = Class.forName("android.net.TrafficStats");
             Class cls2 = Integer.TYPE;
@@ -463,9 +482,9 @@ public class w implements aa.a {
                 JSONObject jSONObject3 = new JSONObject();
                 jSONObject3.put(f.H, jLongValue);
                 jSONObject3.put(f.G, jLongValue2);
-                jSONObject.put(g.d.a.d, jSONObject3);
+                jSONObject.put(g.d.cachedConstructors.d, jSONObject3);
             }
-            k.a(i).a(str, jSONObject, k.a.NEWSESSION);
+            k.a(i).a(str, jSONObject, k.cachedConstructors.NEWSESSION);
             x.a(i);
             n.c(i);
         } catch (Throwable unused) {

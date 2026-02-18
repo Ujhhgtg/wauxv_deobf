@@ -27,7 +27,7 @@ public class chv {
     public static void k(String str) {
         ((kj) kj.c().b).getClass();
         if (Looper.getMainLooper().getThread() != Thread.currentThread()) {
-            throw new IllegalStateException(bjs.o("Cannot invoke ", str, " on a background thread"));
+            throw new IllegalStateException(concat("Cannot invoke ", str, " on a background thread"));
         }
     }
 

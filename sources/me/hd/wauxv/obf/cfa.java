@@ -8,7 +8,7 @@ import me.hd.wauxv.data.bean.MsgInfoBean;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class cfa extends doo implements bnq {
+public final class cfa extends BaseHook implements bnq {
     public static final cfa b = new cfa("MoreMsgRevokeHook" /* cnb.z(-512814800173866L) */);
     public static final String c = "菜单" /* cnb.z(-512716015926058L) */;
     public static final String h = "多选消息撤回" /* cnb.z(-512651591416618L) */;
@@ -20,7 +20,8 @@ public final class cfa extends doo implements bnq {
             Iterator it = arrayList.iterator();
             while (it.hasNext()) {
                 if (((MsgInfoBean) it.next()).isSend()) {
-                    return dqc.bf(new cev(R.id.MenuItem_MoreBtnBar_Revoke, "批量撤回" /* cnb.z(-512685951154986L) */, new cbk(10)));
+                    return dqc.bf(new cev(R.id.MenuItem_MoreBtnBar_Revoke, "批量撤回" /* cnb.z(-512685951154986L) */,
+                            new cbk(10)));
                 }
             }
         }
@@ -31,18 +32,18 @@ public final class cfa extends doo implements bnq {
     public final void e() {
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String f() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getName() {
         return h;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String g() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getCategory() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String o() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getDescription() {
         return i;
     }
 }

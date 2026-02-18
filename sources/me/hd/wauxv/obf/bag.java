@@ -13,7 +13,7 @@ public final class bag extends dqc {
     @Override // me.hd.wauxv.obf.dqc
     public final int c(bbb bbbVar) {
         int iT;
-        bzo.q(bbbVar, "fbb");
+        throwIfVar1IsNull(bbbVar, "fbb");
         List list = this.a;
         if (list != null) {
             ArrayList arrayList = new ArrayList(abb.ak(list, 10));

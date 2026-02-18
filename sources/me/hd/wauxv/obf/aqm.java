@@ -37,7 +37,7 @@ public final class aqm implements Comparable {
         if (i2 != 0) {
             sb.append(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
             String strValueOf = String.valueOf(i2);
-            bzo.q(strValueOf, "<this>");
+            throwIfVar1IsNull(strValueOf, "<this>");
             if (i3 < 0) {
                 throw new IllegalArgumentException(yg.f(i3, "Desired length ", " is less than zero."));
             }
@@ -90,7 +90,8 @@ public final class aqm implements Comparable {
         if (h(j)) {
             return 0;
         }
-        return (int) ((((int) j) & 1) == 1 ? ((j >> 1) % ((long) 1000)) * ((long) 1000000) : (j >> 1) % ((long) Http2Connection.DEGRADED_PONG_TIMEOUT_NS));
+        return (int) ((((int) j) & 1) == 1 ? ((j >> 1) % ((long) 1000)) * ((long) 1000000)
+                : (j >> 1) % ((long) Http2Connection.DEGRADED_PONG_TIMEOUT_NS));
     }
 
     public static final boolean h(long j) {
@@ -102,7 +103,8 @@ public final class aqm implements Comparable {
             if (!h(j2) || (j2 ^ j) >= 0) {
                 return j;
             }
-            throw new IllegalArgumentException("Summing infinite durations of different signs yields an undefined result.");
+            throw new IllegalArgumentException(
+                    "Summing infinite durations of different signs yields an undefined result.");
         }
         if (h(j2)) {
             return j2;
@@ -124,7 +126,7 @@ public final class aqm implements Comparable {
     }
 
     public static final long j(long j, aqp aqpVar) {
-        bzo.q(aqpVar, "unit");
+        throwIfVar1IsNull(aqpVar, "unit");
         if (j == a) {
             return Long.MAX_VALUE;
         }
@@ -133,7 +135,7 @@ public final class aqm implements Comparable {
         }
         long j2 = j >> 1;
         aqp aqpVar2 = (((int) j) & 1) == 0 ? aqp.NANOSECONDS : aqp.MILLISECONDS;
-        bzo.q(aqpVar2, "sourceUnit");
+        throwIfVar1IsNull(aqpVar2, "sourceUnit");
         return aqpVar.h.convert(j2, aqpVar2.h);
     }
 

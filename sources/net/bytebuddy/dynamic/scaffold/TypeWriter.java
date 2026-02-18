@@ -98,7 +98,10 @@ import net.bytebuddy.utility.visitor.MetadataAwareClassVisitor;
 public interface TypeWriter<T> {
     public static final String DUMP_PROPERTY = "net.bytebuddy.dump";
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @HashCodeAndEqualsPlugin.Enhance
     public static abstract class Default<S> implements TypeWriter<S> {
         private static final boolean ACCESS_CONTROLLER;
@@ -130,7 +133,10 @@ public interface TypeWriter<T> {
         protected final TypePool typePool;
         protected final TypeValidation typeValidation;
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class ClassDumpAction implements PrivilegedExceptionAction<Void> {
 
@@ -142,10 +148,16 @@ public interface TypeWriter<T> {
             private final long suffix;
             private final String target;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public interface Dispatcher {
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public enum Disabled implements Dispatcher {
                     INSTANCE;
 
@@ -154,7 +166,10 @@ public interface TypeWriter<T> {
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class Enabled implements Dispatcher {
                     private final String folder;
@@ -168,7 +183,8 @@ public interface TypeWriter<T> {
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ClassDumpAction.Dispatcher
                     public void dump(TypeDescription typeDescription, boolean z, byte[] bArr) {
                         try {
-                            Default.doPrivileged(new ClassDumpAction(this.folder, typeDescription, z, this.timestamp, bArr));
+                            Default.doPrivileged(
+                                    new ClassDumpAction(this.folder, typeDescription, z, this.timestamp, bArr));
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
@@ -211,11 +227,15 @@ public interface TypeWriter<T> {
                     return false;
                 }
                 ClassDumpAction classDumpAction = (ClassDumpAction) obj;
-                return this.original == classDumpAction.original && this.suffix == classDumpAction.suffix && this.target.equals(classDumpAction.target) && this.instrumentedType.equals(classDumpAction.instrumentedType) && Arrays.equals(this.binaryRepresentation, classDumpAction.binaryRepresentation);
+                return this.original == classDumpAction.original && this.suffix == classDumpAction.suffix
+                        && this.target.equals(classDumpAction.target)
+                        && this.instrumentedType.equals(classDumpAction.instrumentedType)
+                        && Arrays.equals(this.binaryRepresentation, classDumpAction.binaryRepresentation);
             }
 
             public int hashCode() {
-                int iF = (dkz.f(this.instrumentedType, bjs.e(this.target, getClass().hashCode() * 31, 31), 31) + (this.original ? 1 : 0)) * 31;
+                int iF = (dkz.f(this.instrumentedType, bjs.e(this.target, getClass().hashCode() * 31, 31), 31)
+                        + (this.original ? 1 : 0)) * 31;
                 long j = this.suffix;
                 return Arrays.hashCode(this.binaryRepresentation) + ((iF + ((int) (j ^ (j >>> 32)))) * 31);
             }
@@ -238,12 +258,18 @@ public interface TypeWriter<T> {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class ForCreation<U> extends Default<U> {
             private final MethodPool methodPool;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public class CreationClassVisitor extends MetadataAwareClassVisitor {
                 private final Set<String> declaredTypes;
                 private final Implementation.Context.ExtractableView implementationContext;
@@ -253,7 +279,9 @@ public interface TypeWriter<T> {
                 private final Set<SignatureKey> visitedFields;
                 private final Set<SignatureKey> visitedMethods;
 
-                public CreationClassVisitor(ClassVisitor classVisitor, Implementation.Context.ExtractableView extractableView, @MaybeNull ModuleDescription moduleDescription) {
+                public CreationClassVisitor(ClassVisitor classVisitor,
+                        Implementation.Context.ExtractableView extractableView,
+                        @MaybeNull ModuleDescription moduleDescription) {
                     super(OpenedClassReader.ASM_API, classVisitor);
                     this.declaredTypes = new HashSet();
                     this.visitedFields = new HashSet();
@@ -268,7 +296,8 @@ public interface TypeWriter<T> {
                     TypeAttributeAppender typeAttributeAppender = forCreation.typeAttributeAppender;
                     ClassVisitor classVisitor = this.cv;
                     TypeDescription typeDescription = forCreation.instrumentedType;
-                    typeAttributeAppender.apply(classVisitor, typeDescription, forCreation.annotationValueFilterFactory.on(typeDescription));
+                    typeAttributeAppender.apply(classVisitor, typeDescription,
+                            forCreation.annotationValueFilterFactory.on(typeDescription));
                 }
 
                 @Override // net.bytebuddy.utility.visitor.MetadataAwareClassVisitor
@@ -283,30 +312,43 @@ public interface TypeWriter<T> {
                 public void onVisitEnd() {
                     for (TypeDescription typeDescription : ForCreation.this.instrumentedType.getDeclaredTypes()) {
                         if (!this.declaredTypes.contains(typeDescription.getInternalName())) {
-                            this.cv.visitInnerClass(typeDescription.getInternalName(), typeDescription.isMemberType() ? ForCreation.this.instrumentedType.getInternalName() : Default.NO_REFERENCE, typeDescription.isAnonymousType() ? Default.NO_REFERENCE : typeDescription.getSimpleName(), typeDescription.getModifiers());
+                            this.cv.visitInnerClass(typeDescription.getInternalName(),
+                                    typeDescription.isMemberType() ? ForCreation.this.instrumentedType.getInternalName()
+                                            : Default.NO_REFERENCE,
+                                    typeDescription.isAnonymousType() ? Default.NO_REFERENCE
+                                            : typeDescription.getSimpleName(),
+                                    typeDescription.getModifiers());
                         }
                     }
                     for (FieldDescription.InDefinedShape inDefinedShape : ForCreation.this.fields) {
-                        if (!this.visitedFields.contains(new SignatureKey(inDefinedShape.getName(), inDefinedShape.getDescriptor()))) {
-                            ForCreation.this.fieldPool.target(inDefinedShape).apply(this.cv, ForCreation.this.annotationValueFilterFactory);
+                        if (!this.visitedFields
+                                .contains(new SignatureKey(inDefinedShape.getName(), inDefinedShape.getDescriptor()))) {
+                            ForCreation.this.fieldPool.target(inDefinedShape).apply(this.cv,
+                                    ForCreation.this.annotationValueFilterFactory);
                         }
                     }
                     Iterator<?> it = ForCreation.this.instrumentedMethods.iterator();
                     while (it.hasNext()) {
                         MethodDescription methodDescription = (MethodDescription) it.next();
-                        if (!this.visitedMethods.contains(new SignatureKey(methodDescription.getInternalName(), methodDescription.getDescriptor()))) {
-                            ForCreation.this.methodPool.target(methodDescription).apply(this.cv, this.implementationContext, ForCreation.this.annotationValueFilterFactory);
+                        if (!this.visitedMethods.contains(new SignatureKey(methodDescription.getInternalName(),
+                                methodDescription.getDescriptor()))) {
+                            ForCreation.this.methodPool.target(methodDescription).apply(this.cv,
+                                    this.implementationContext, ForCreation.this.annotationValueFilterFactory);
                         }
                     }
                     Implementation.Context.ExtractableView extractableView = this.implementationContext;
                     ForCreation forCreation = ForCreation.this;
-                    extractableView.drain(new TypeInitializer.Drain.Default(forCreation.instrumentedType, forCreation.methodPool, ForCreation.this.annotationValueFilterFactory), this.cv, ForCreation.this.annotationValueFilterFactory);
+                    extractableView.drain(
+                            new TypeInitializer.Drain.Default(forCreation.instrumentedType, forCreation.methodPool,
+                                    ForCreation.this.annotationValueFilterFactory),
+                            this.cv, ForCreation.this.annotationValueFilterFactory);
                     super.onVisitEnd();
                 }
 
                 @Override // net.bytebuddy.utility.visitor.MetadataAwareClassVisitor
                 @MaybeNull
-                public FieldVisitor onVisitField(int i, String str, String str2, @MaybeNull String str3, @MaybeNull Object obj) {
+                public FieldVisitor onVisitField(int i, String str, String str2, @MaybeNull String str3,
+                        @MaybeNull Object obj) {
                     this.visitedFields.add(new SignatureKey(str, str2));
                     return super.onVisitField(i, str, str2, str3, obj);
                 }
@@ -319,7 +361,8 @@ public interface TypeWriter<T> {
 
                 @Override // net.bytebuddy.utility.visitor.MetadataAwareClassVisitor
                 @MaybeNull
-                public MethodVisitor onVisitMethod(int i, String str, String str2, @MaybeNull String str3, @MaybeNull String[] strArr) {
+                public MethodVisitor onVisitMethod(int i, String str, String str2, @MaybeNull String str3,
+                        @MaybeNull String[] strArr) {
                     this.visitedMethods.add(new SignatureKey(str, str2));
                     return super.onVisitMethod(i, str, str2, str3, strArr);
                 }
@@ -331,22 +374,30 @@ public interface TypeWriter<T> {
                     if (moduleDescription == null) {
                         return null;
                     }
-                    return new PatchingModuleVisitor(this.cv.visitModule(moduleDescription.getActualName(), this.moduleDescription.getModifiers(), this.moduleDescription.getVersion()), this.moduleDescription);
+                    return new PatchingModuleVisitor(
+                            this.cv.visitModule(moduleDescription.getActualName(),
+                                    this.moduleDescription.getModifiers(), this.moduleDescription.getVersion()),
+                            this.moduleDescription);
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public class ImplementationContextClassVisitor extends ContextClassVisitor {
                 private final Implementation.Context.ExtractableView implementationContext;
 
-                public ImplementationContextClassVisitor(ClassVisitor classVisitor, Implementation.Context.ExtractableView extractableView) {
+                public ImplementationContextClassVisitor(ClassVisitor classVisitor,
+                        Implementation.Context.ExtractableView extractableView) {
                     super(classVisitor);
                     this.implementationContext = extractableView;
                 }
 
                 @Override // net.bytebuddy.utility.visitor.ContextClassVisitor
                 public List<DynamicType> getAuxiliaryTypes() {
-                    return CompoundList.of((List) ForCreation.this.auxiliaryTypes, (List) this.implementationContext.getAuxiliaryTypes());
+                    return CompoundList.of((List) ForCreation.this.auxiliaryTypes,
+                            (List) this.implementationContext.getAuxiliaryTypes());
                 }
 
                 @Override // net.bytebuddy.utility.visitor.ContextClassVisitor
@@ -355,7 +406,10 @@ public interface TypeWriter<T> {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class PatchingModuleVisitor extends ModuleVisitor {
                 private final Map<String, ModuleDescription.Exports> exports;
 
@@ -372,35 +426,50 @@ public interface TypeWriter<T> {
                     String mainClass = moduleDescription.getMainClass();
                     this.mainClass = mainClass;
                     if (mainClass != null) {
-                        this.mainClass = mainClass.replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+                        this.mainClass = mainClass
+                                .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
                     }
                     this.packages = new LinkedHashSet();
                     Iterator<String> it = moduleDescription.getPackages().iterator();
                     while (it.hasNext()) {
-                        this.packages.add(it.next().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/'));
+                        this.packages.add(it.next()
+                                .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/'));
                     }
                     this.requires = new LinkedHashMap(moduleDescription.getRequires());
                     this.exports = new LinkedHashMap();
-                    for (Map.Entry<String, ModuleDescription.Exports> entry : moduleDescription.getExports().entrySet()) {
-                        this.exports.put(entry.getKey().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/'), entry.getValue());
+                    for (Map.Entry<String, ModuleDescription.Exports> entry : moduleDescription.getExports()
+                            .entrySet()) {
+                        this.exports.put(
+                                entry.getKey().replace(
+                                        TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/'),
+                                entry.getValue());
                     }
                     this.opens = new LinkedHashMap();
                     for (Map.Entry<String, ModuleDescription.Opens> entry2 : moduleDescription.getOpens().entrySet()) {
-                        this.opens.put(entry2.getKey().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/'), entry2.getValue());
+                        this.opens.put(
+                                entry2.getKey().replace(
+                                        TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/'),
+                                entry2.getValue());
                     }
                     this.uses = new LinkedHashSet();
                     Iterator<String> it2 = moduleDescription.getUses().iterator();
                     while (it2.hasNext()) {
-                        this.uses.add(it2.next().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/'));
+                        this.uses.add(it2.next()
+                                .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/'));
                     }
                     this.provides = new LinkedHashMap();
-                    for (Map.Entry<String, ModuleDescription.Provides> entry3 : moduleDescription.getProvides().entrySet()) {
+                    for (Map.Entry<String, ModuleDescription.Provides> entry3 : moduleDescription.getProvides()
+                            .entrySet()) {
                         LinkedHashSet linkedHashSet = new LinkedHashSet();
                         Iterator<String> it3 = entry3.getValue().getProviders().iterator();
                         while (it3.hasNext()) {
-                            linkedHashSet.add(it3.next().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/'));
+                            linkedHashSet.add(it3.next().replace(
+                                    TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/'));
                         }
-                        this.provides.put(entry3.getKey().replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/'), linkedHashSet);
+                        this.provides.put(
+                                entry3.getKey().replace(
+                                        TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/'),
+                                linkedHashSet);
                     }
                 }
 
@@ -415,7 +484,8 @@ public interface TypeWriter<T> {
                         super.visitPackage(it.next());
                     }
                     for (Map.Entry<String, ModuleDescription.Requires> entry : this.requires.entrySet()) {
-                        super.visitRequire(entry.getKey(), entry.getValue().getModifiers(), entry.getValue().getVersion());
+                        super.visitRequire(entry.getKey(), entry.getValue().getModifiers(),
+                                entry.getValue().getVersion());
                     }
                     Iterator<Map.Entry<String, ModuleDescription.Exports>> it2 = this.exports.entrySet().iterator();
                     while (true) {
@@ -432,14 +502,17 @@ public interface TypeWriter<T> {
                         super.visitExport(key, modifiers, strArr);
                     }
                     for (Map.Entry<String, ModuleDescription.Opens> entry2 : this.opens.entrySet()) {
-                        super.visitOpen(entry2.getKey(), entry2.getValue().getModifiers(), entry2.getValue().getTargets().isEmpty() ? null : (String[]) entry2.getValue().getTargets().toArray(new String[0]));
+                        super.visitOpen(entry2.getKey(), entry2.getValue().getModifiers(),
+                                entry2.getValue().getTargets().isEmpty() ? null
+                                        : (String[]) entry2.getValue().getTargets().toArray(new String[0]));
                     }
                     Iterator<String> it3 = this.uses.iterator();
                     while (it3.hasNext()) {
                         super.visitUse(it3.next());
                     }
                     for (Map.Entry<String, Set<String>> entry3 : this.provides.entrySet()) {
-                        super.visitProvide(entry3.getKey(), entry3.getValue().isEmpty() ? null : (String[]) entry3.getValue().toArray(new String[0]));
+                        super.visitProvide(entry3.getKey(), entry3.getValue().isEmpty() ? null
+                                : (String[]) entry3.getValue().toArray(new String[0]));
                     }
                     super.visitEnd();
                 }
@@ -448,7 +521,8 @@ public interface TypeWriter<T> {
                 public void visitExport(String str, int i, @MaybeNull String... strArr) {
                     ModuleDescription.Exports exportsRemove = this.exports.remove(str);
                     if (exportsRemove != null) {
-                        super.visitExport(str, exportsRemove.getModifiers(), exportsRemove.getTargets().isEmpty() ? null : (String[]) exportsRemove.getTargets().toArray(new String[0]));
+                        super.visitExport(str, exportsRemove.getModifiers(), exportsRemove.getTargets().isEmpty() ? null
+                                : (String[]) exportsRemove.getTargets().toArray(new String[0]));
                     } else {
                         super.visitExport(str, i, strArr);
                     }
@@ -467,7 +541,8 @@ public interface TypeWriter<T> {
                 public void visitOpen(String str, int i, @MaybeNull String... strArr) {
                     ModuleDescription.Opens opensRemove = this.opens.remove(str);
                     if (opensRemove != null) {
-                        super.visitOpen(str, opensRemove.getModifiers(), opensRemove.getTargets().isEmpty() ? null : (String[]) opensRemove.getTargets().toArray(new String[0]));
+                        super.visitOpen(str, opensRemove.getModifiers(), opensRemove.getTargets().isEmpty() ? null
+                                : (String[]) opensRemove.getTargets().toArray(new String[0]));
                     } else {
                         super.visitOpen(str, i, strArr);
                     }
@@ -506,13 +581,27 @@ public interface TypeWriter<T> {
                 }
             }
 
-            public ForCreation(TypeDescription typeDescription, ClassFileVersion classFileVersion, FieldPool fieldPool, MethodPool methodPool, RecordComponentPool recordComponentPool, List<? extends DynamicType> list, FieldList<FieldDescription.InDefinedShape> fieldList, MethodList<?> methodList, MethodList<?> methodList2, RecordComponentList<RecordComponentDescription.InDefinedShape> recordComponentList, LoadedTypeInitializer loadedTypeInitializer, TypeInitializer typeInitializer, TypeAttributeAppender typeAttributeAppender, AsmVisitorWrapper asmVisitorWrapper, AnnotationValueFilter.Factory factory, AnnotationRetention annotationRetention, AuxiliaryType.NamingStrategy namingStrategy, Implementation.Context.Factory factory2, TypeValidation typeValidation, AsmClassReader.Factory factory3, AsmClassWriter.Factory factory4, TypePool typePool) {
-                super(typeDescription, classFileVersion, fieldPool, recordComponentPool, list, fieldList, methodList, methodList2, recordComponentList, loadedTypeInitializer, typeInitializer, typeAttributeAppender, asmVisitorWrapper, factory, annotationRetention, namingStrategy, factory2, typeValidation, factory3, factory4, typePool);
+            public ForCreation(TypeDescription typeDescription, ClassFileVersion classFileVersion, FieldPool fieldPool,
+                    MethodPool methodPool, RecordComponentPool recordComponentPool, List<? extends DynamicType> list,
+                    FieldList<FieldDescription.InDefinedShape> fieldList, MethodList<?> methodList,
+                    MethodList<?> methodList2,
+                    RecordComponentList<RecordComponentDescription.InDefinedShape> recordComponentList,
+                    LoadedTypeInitializer loadedTypeInitializer, TypeInitializer typeInitializer,
+                    TypeAttributeAppender typeAttributeAppender, AsmVisitorWrapper asmVisitorWrapper,
+                    AnnotationValueFilter.Factory factory, AnnotationRetention annotationRetention,
+                    AuxiliaryType.NamingStrategy namingStrategy, Implementation.Context.Factory factory2,
+                    TypeValidation typeValidation, AsmClassReader.Factory factory3, AsmClassWriter.Factory factory4,
+                    TypePool typePool) {
+                super(typeDescription, classFileVersion, fieldPool, recordComponentPool, list, fieldList, methodList,
+                        methodList2, recordComponentList, loadedTypeInitializer, typeInitializer, typeAttributeAppender,
+                        asmVisitorWrapper, factory, annotationRetention, namingStrategy, factory2, typeValidation,
+                        factory3, factory4, typePool);
                 this.methodPool = methodPool;
             }
 
             @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default
-            public Default<U>.UnresolvedType create(TypeInitializer typeInitializer, ClassDumpAction.Dispatcher dispatcher) {
+            public Default<U>.UnresolvedType create(TypeInitializer typeInitializer,
+                    ClassDumpAction.Dispatcher dispatcher) {
                 int iMergeWriter = this.asmVisitorWrapper.mergeWriter(0);
                 int iMergeReader = this.asmVisitorWrapper.mergeReader(0);
                 AsmClassWriter asmClassWriterMake = this.classWriterFactory.make(iMergeWriter, this.typePool);
@@ -520,9 +609,23 @@ public interface TypeWriter<T> {
                 TypeDescription typeDescription = this.instrumentedType;
                 AuxiliaryType.NamingStrategy namingStrategy = this.auxiliaryTypeNamingStrategy;
                 ClassFileVersion classFileVersion = this.classFileVersion;
-                Implementation.Context.ExtractableView extractableViewMake = factory.make(typeDescription, namingStrategy, typeInitializer, classFileVersion, classFileVersion, ((iMergeWriter & 2) == 0 && classFileVersion.isAtLeast(ClassFileVersion.JAVA_V6)) ? (iMergeReader & 8) == 0 ? Implementation.Context.FrameGeneration.GENERATE : Implementation.Context.FrameGeneration.EXPAND : Implementation.Context.FrameGeneration.DISABLED);
-                ClassVisitor classVisitorWrap = this.asmVisitorWrapper.wrap(this.instrumentedType, ValidatingClassVisitor.of(asmClassWriterMake.getVisitor(), this.typeValidation), extractableViewMake, this.typePool, this.fields, this.methods, iMergeWriter, iMergeReader);
-                classVisitorWrap.visit(this.classFileVersion.getMinorMajorVersion(), this.instrumentedType.getActualModifiers(!r2.isInterface()), this.instrumentedType.getInternalName(), this.instrumentedType.getGenericSignature(), this.instrumentedType.getName().equals(ModuleDescription.MODULE_CLASS_NAME) ? null : (this.instrumentedType.getSuperClass() == null ? TypeDescription.ForLoadedType.of(Object.class) : this.instrumentedType.getSuperClass().asErasure()).getInternalName(), this.instrumentedType.getInterfaces().asErasures().toInternalNames());
+                Implementation.Context.ExtractableView extractableViewMake = factory.make(typeDescription,
+                        namingStrategy, typeInitializer, classFileVersion, classFileVersion,
+                        ((iMergeWriter & 2) == 0 && classFileVersion.isAtLeast(ClassFileVersion.JAVA_V6))
+                                ? (iMergeReader & 8) == 0 ? Implementation.Context.FrameGeneration.GENERATE
+                                        : Implementation.Context.FrameGeneration.EXPAND
+                                : Implementation.Context.FrameGeneration.DISABLED);
+                ClassVisitor classVisitorWrap = this.asmVisitorWrapper.wrap(this.instrumentedType,
+                        ValidatingClassVisitor.of(asmClassWriterMake.getVisitor(), this.typeValidation),
+                        extractableViewMake, this.typePool, this.fields, this.methods, iMergeWriter, iMergeReader);
+                classVisitorWrap.visit(this.classFileVersion.getMinorMajorVersion(),
+                        this.instrumentedType.getActualModifiers(!r2.isInterface()),
+                        this.instrumentedType.getInternalName(), this.instrumentedType.getGenericSignature(),
+                        this.instrumentedType.getName().equals(ModuleDescription.MODULE_CLASS_NAME) ? null
+                                : (this.instrumentedType.getSuperClass() == null
+                                        ? TypeDescription.ForLoadedType.of(Object.class)
+                                        : this.instrumentedType.getSuperClass().asErasure()).getInternalName(),
+                        this.instrumentedType.getInterfaces().asErasures().toInternalNames());
                 ModuleDescription moduleDescription = this.instrumentedType.toModuleDescription();
                 if (moduleDescription != null) {
                     moduleDescription.accept(classVisitorWrap);
@@ -532,15 +635,19 @@ public interface TypeWriter<T> {
                 }
                 MethodDescription.InDefinedShape enclosingMethod = this.instrumentedType.getEnclosingMethod();
                 if (enclosingMethod != null) {
-                    classVisitorWrap.visitOuterClass(enclosingMethod.getDeclaringType().getInternalName(), enclosingMethod.getInternalName(), enclosingMethod.getDescriptor());
+                    classVisitorWrap.visitOuterClass(enclosingMethod.getDeclaringType().getInternalName(),
+                            enclosingMethod.getInternalName(), enclosingMethod.getDescriptor());
                 } else if (this.instrumentedType.isLocalType() || this.instrumentedType.isAnonymousType()) {
-                    classVisitorWrap.visitOuterClass(this.instrumentedType.getEnclosingType().getInternalName(), Default.NO_REFERENCE, Default.NO_REFERENCE);
+                    classVisitorWrap.visitOuterClass(this.instrumentedType.getEnclosingType().getInternalName(),
+                            Default.NO_REFERENCE, Default.NO_REFERENCE);
                 }
                 TypeAttributeAppender typeAttributeAppender = this.typeAttributeAppender;
                 TypeDescription typeDescription2 = this.instrumentedType;
-                typeAttributeAppender.apply(classVisitorWrap, typeDescription2, this.annotationValueFilterFactory.on(typeDescription2));
+                typeAttributeAppender.apply(classVisitorWrap, typeDescription2,
+                        this.annotationValueFilterFactory.on(typeDescription2));
                 if (this.instrumentedType.isNestHost()) {
-                    Iterator<TypeDescription> it = this.instrumentedType.getNestMembers().filter(ElementMatchers.not(ElementMatchers.is(this.instrumentedType))).iterator();
+                    Iterator<TypeDescription> it = this.instrumentedType.getNestMembers()
+                            .filter(ElementMatchers.not(ElementMatchers.is(this.instrumentedType))).iterator();
                     while (it.hasNext()) {
                         classVisitorWrap.visitNestMember(it.next().getInternalName());
                     }
@@ -551,18 +658,28 @@ public interface TypeWriter<T> {
                 }
                 TypeDescription declaringType = this.instrumentedType.getDeclaringType();
                 if (declaringType != null) {
-                    classVisitorWrap.visitInnerClass(this.instrumentedType.getInternalName(), declaringType.getInternalName(), this.instrumentedType.getSimpleName(), this.instrumentedType.getModifiers());
+                    classVisitorWrap.visitInnerClass(this.instrumentedType.getInternalName(),
+                            declaringType.getInternalName(), this.instrumentedType.getSimpleName(),
+                            this.instrumentedType.getModifiers());
                 } else if (this.instrumentedType.isLocalType()) {
-                    classVisitorWrap.visitInnerClass(this.instrumentedType.getInternalName(), Default.NO_REFERENCE, this.instrumentedType.getSimpleName(), this.instrumentedType.getModifiers());
+                    classVisitorWrap.visitInnerClass(this.instrumentedType.getInternalName(), Default.NO_REFERENCE,
+                            this.instrumentedType.getSimpleName(), this.instrumentedType.getModifiers());
                 } else if (this.instrumentedType.isAnonymousType()) {
-                    classVisitorWrap.visitInnerClass(this.instrumentedType.getInternalName(), Default.NO_REFERENCE, Default.NO_REFERENCE, this.instrumentedType.getModifiers());
+                    classVisitorWrap.visitInnerClass(this.instrumentedType.getInternalName(), Default.NO_REFERENCE,
+                            Default.NO_REFERENCE, this.instrumentedType.getModifiers());
                 }
                 for (TypeDescription typeDescription3 : this.instrumentedType.getDeclaredTypes()) {
-                    classVisitorWrap.visitInnerClass(typeDescription3.getInternalName(), typeDescription3.isMemberType() ? this.instrumentedType.getInternalName() : Default.NO_REFERENCE, typeDescription3.isAnonymousType() ? Default.NO_REFERENCE : typeDescription3.getSimpleName(), typeDescription3.getModifiers());
+                    classVisitorWrap.visitInnerClass(typeDescription3.getInternalName(),
+                            typeDescription3.isMemberType() ? this.instrumentedType.getInternalName()
+                                    : Default.NO_REFERENCE,
+                            typeDescription3.isAnonymousType() ? Default.NO_REFERENCE
+                                    : typeDescription3.getSimpleName(),
+                            typeDescription3.getModifiers());
                 }
                 Iterator<RecordComponentDescription.InDefinedShape> it3 = this.recordComponents.iterator();
                 while (it3.hasNext()) {
-                    this.recordComponentPool.target(it3.next()).apply(classVisitorWrap, this.annotationValueFilterFactory);
+                    this.recordComponentPool.target(it3.next()).apply(classVisitorWrap,
+                            this.annotationValueFilterFactory);
                 }
                 Iterator<FieldDescription.InDefinedShape> it4 = this.fields.iterator();
                 while (it4.hasNext()) {
@@ -570,11 +687,16 @@ public interface TypeWriter<T> {
                 }
                 Iterator<?> it5 = this.instrumentedMethods.iterator();
                 while (it5.hasNext()) {
-                    this.methodPool.target((MethodDescription) it5.next()).apply(classVisitorWrap, extractableViewMake, this.annotationValueFilterFactory);
+                    this.methodPool.target((MethodDescription) it5.next()).apply(classVisitorWrap, extractableViewMake,
+                            this.annotationValueFilterFactory);
                 }
-                extractableViewMake.drain(new TypeInitializer.Drain.Default(this.instrumentedType, this.methodPool, this.annotationValueFilterFactory), classVisitorWrap, this.annotationValueFilterFactory);
+                extractableViewMake.drain(
+                        new TypeInitializer.Drain.Default(this.instrumentedType, this.methodPool,
+                                this.annotationValueFilterFactory),
+                        classVisitorWrap, this.annotationValueFilterFactory);
                 classVisitorWrap.visitEnd();
-                return new UnresolvedType(asmClassWriterMake.getBinaryRepresentation(), extractableViewMake.getAuxiliaryTypes());
+                return new UnresolvedType(asmClassWriterMake.getBinaryRepresentation(),
+                        extractableViewMake.getAuxiliaryTypes());
             }
 
             @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default
@@ -585,7 +707,8 @@ public interface TypeWriter<T> {
                 if (this == obj) {
                     return true;
                 }
-                return obj != null && getClass() == obj.getClass() && this.methodPool.equals(((ForCreation) obj).methodPool);
+                return obj != null && getClass() == obj.getClass()
+                        && this.methodPool.equals(((ForCreation) obj).methodPool);
             }
 
             @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default
@@ -600,12 +723,25 @@ public interface TypeWriter<T> {
                 AuxiliaryType.NamingStrategy namingStrategy = this.auxiliaryTypeNamingStrategy;
                 TypeInitializer typeInitializer = this.typeInitializer;
                 ClassFileVersion classFileVersion = this.classFileVersion;
-                Implementation.Context.ExtractableView extractableViewMake = factory.make(typeDescription, namingStrategy, typeInitializer, classFileVersion, classFileVersion, ((i & 2) == 0 && classFileVersion.isAtLeast(ClassFileVersion.JAVA_V6)) ? (i2 & 8) == 0 ? Implementation.Context.FrameGeneration.GENERATE : Implementation.Context.FrameGeneration.EXPAND : Implementation.Context.FrameGeneration.DISABLED);
-                return new ImplementationContextClassVisitor(new CreationClassVisitor(this.asmVisitorWrapper.wrap(this.instrumentedType, ValidatingClassVisitor.of(classVisitor, this.typeValidation), extractableViewMake, this.typePool, this.fields, this.methods, this.asmVisitorWrapper.mergeWriter(i), this.asmVisitorWrapper.mergeReader(i2)), extractableViewMake, this.instrumentedType.toModuleDescription()), extractableViewMake);
+                Implementation.Context.ExtractableView extractableViewMake = factory.make(typeDescription,
+                        namingStrategy, typeInitializer, classFileVersion, classFileVersion,
+                        ((i & 2) == 0 && classFileVersion.isAtLeast(ClassFileVersion.JAVA_V6))
+                                ? (i2 & 8) == 0 ? Implementation.Context.FrameGeneration.GENERATE
+                                        : Implementation.Context.FrameGeneration.EXPAND
+                                : Implementation.Context.FrameGeneration.DISABLED);
+                return new ImplementationContextClassVisitor(new CreationClassVisitor(
+                        this.asmVisitorWrapper.wrap(this.instrumentedType,
+                                ValidatingClassVisitor.of(classVisitor, this.typeValidation), extractableViewMake,
+                                this.typePool, this.fields, this.methods, this.asmVisitorWrapper.mergeWriter(i),
+                                this.asmVisitorWrapper.mergeReader(i2)),
+                        extractableViewMake, this.instrumentedType.toModuleDescription()), extractableViewMake);
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static class SignatureKey {
             private final String descriptor;
             private final String internalName;
@@ -621,7 +757,8 @@ public interface TypeWriter<T> {
                 }
                 if (obj != null && getClass() == obj.getClass()) {
                     SignatureKey signatureKey = (SignatureKey) obj;
-                    if (this.internalName.equals(signatureKey.internalName) && this.descriptor.equals(signatureKey.descriptor)) {
+                    if (this.internalName.equals(signatureKey.internalName)
+                            && this.descriptor.equals(signatureKey.descriptor)) {
                         return true;
                     }
                 }
@@ -633,7 +770,10 @@ public interface TypeWriter<T> {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance(includeSyntheticFields = true)
         public class UnresolvedType {
             private final List<? extends DynamicType> auxiliaryTypes;
@@ -652,7 +792,9 @@ public interface TypeWriter<T> {
                     return false;
                 }
                 UnresolvedType unresolvedType = (UnresolvedType) obj;
-                return Arrays.equals(this.binaryRepresentation, unresolvedType.binaryRepresentation) && this.auxiliaryTypes.equals(unresolvedType.auxiliaryTypes) && Default.this.equals(Default.this);
+                return Arrays.equals(this.binaryRepresentation, unresolvedType.binaryRepresentation)
+                        && this.auxiliaryTypes.equals(unresolvedType.auxiliaryTypes)
+                        && Default.this.equals(Default.this);
             }
 
             public byte[] getBinaryRepresentation() {
@@ -660,16 +802,22 @@ public interface TypeWriter<T> {
             }
 
             public int hashCode() {
-                return Default.this.hashCode() + bjs.g(this.auxiliaryTypes, (Arrays.hashCode(this.binaryRepresentation) + (getClass().hashCode() * 31)) * 31, 31);
+                return Default.this.hashCode() + bjs.g(this.auxiliaryTypes,
+                        (Arrays.hashCode(this.binaryRepresentation) + (getClass().hashCode() * 31)) * 31, 31);
             }
 
             public DynamicType.Unloaded<S> toDynamicType(TypeResolutionStrategy.Resolved resolved) {
                 Default r1 = Default.this;
-                return new DynamicType.Default.Unloaded(r1.instrumentedType, this.binaryRepresentation, r1.loadedTypeInitializer, CompoundList.of((List) r1.auxiliaryTypes, (List) this.auxiliaryTypes), resolved);
+                return new DynamicType.Default.Unloaded(r1.instrumentedType, this.binaryRepresentation,
+                        r1.loadedTypeInitializer, CompoundList.of((List) r1.auxiliaryTypes, (List) this.auxiliaryTypes),
+                        resolved);
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static class ValidatingClassVisitor extends ClassVisitor {
 
             @AlwaysNull
@@ -684,10 +832,16 @@ public interface TypeWriter<T> {
             @UnknownNull
             private Constraint constraint;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public interface Constraint {
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class Compound implements Constraint {
                     private final List<Constraint> constraints = new ArrayList();
@@ -759,7 +913,8 @@ public interface TypeWriter<T> {
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ValidatingClassVisitor.Constraint
-                    public void assertMethod(String str, boolean z, boolean z2, boolean z3, boolean z4, boolean z5, boolean z6, boolean z7, boolean z8) {
+                    public void assertMethod(String str, boolean z, boolean z2, boolean z3, boolean z4, boolean z5,
+                            boolean z6, boolean z7, boolean z8) {
                         Iterator<Constraint> it = this.constraints.iterator();
                         while (it.hasNext()) {
                             it.next().assertMethod(str, z, z2, z3, z4, z5, z6, z7, z8);
@@ -834,7 +989,8 @@ public interface TypeWriter<T> {
                         if (this == obj) {
                             return true;
                         }
-                        return obj != null && getClass() == obj.getClass() && this.constraints.equals(((Compound) obj).constraints);
+                        return obj != null && getClass() == obj.getClass()
+                                && this.constraints.equals(((Compound) obj).constraints);
                     }
 
                     public int hashCode() {
@@ -842,7 +998,10 @@ public interface TypeWriter<T> {
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public enum ForAnnotation implements Constraint {
                     CLASSIC(true),
                     JAVA_8(false);
@@ -872,7 +1031,8 @@ public interface TypeWriter<T> {
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ValidatingClassVisitor.Constraint
                     public void assertField(String str, boolean z, boolean z2, boolean z3, boolean z4) {
                         if (!z2 || !z || !z3) {
-                            throw new IllegalStateException(bjs.o("Cannot only define public, static, final field '", str, "' for interface type"));
+                            throw new IllegalStateException(concat("Cannot only define public, static, final field '",
+                                    str, "' for interface type"));
                         }
                     }
 
@@ -885,7 +1045,8 @@ public interface TypeWriter<T> {
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ValidatingClassVisitor.Constraint
-                    public void assertMethod(String str, boolean z, boolean z2, boolean z3, boolean z4, boolean z5, boolean z6, boolean z7, boolean z8) {
+                    public void assertMethod(String str, boolean z, boolean z2, boolean z3, boolean z4, boolean z5,
+                            boolean z6, boolean z7, boolean z8) {
                         if (str.equals(MethodDescription.TYPE_INITIALIZER_INTERNAL_NAME)) {
                             return;
                         }
@@ -893,10 +1054,12 @@ public interface TypeWriter<T> {
                             throw new IllegalStateException("Cannot define constructor for interface type");
                         }
                         if (this.classic && !z5) {
-                            throw new IllegalStateException(bjs.o("Cannot define non-virtual method '", str, "' for a pre-Java 8 annotation type"));
+                            throw new IllegalStateException(concat("Cannot define non-virtual method '", str,
+                                    "' for a pre-Java 8 annotation type"));
                         }
                         if (!z4 && z7) {
-                            throw new IllegalStateException(bjs.o("Cannot define method '", str, "' with the given signature as an annotation type method"));
+                            throw new IllegalStateException(concat("Cannot define method '", str,
+                                    "' with the given signature as an annotation type method"));
                         }
                     }
 
@@ -936,7 +1099,10 @@ public interface TypeWriter<T> {
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public enum ForClass implements Constraint {
                     MANIFEST(true),
                     ABSTRACT(false);
@@ -957,7 +1123,8 @@ public interface TypeWriter<T> {
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ValidatingClassVisitor.Constraint
                     public void assertDefaultValue(String str) {
-                        throw new IllegalStateException(bjs.o("Cannot define default value for '", str, "' for non-annotation type"));
+                        throw new IllegalStateException(
+                                concat("Cannot define default value for '", str, "' for non-annotation type"));
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ValidatingClassVisitor.Constraint
@@ -977,9 +1144,11 @@ public interface TypeWriter<T> {
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ValidatingClassVisitor.Constraint
-                    public void assertMethod(String str, boolean z, boolean z2, boolean z3, boolean z4, boolean z5, boolean z6, boolean z7, boolean z8) {
+                    public void assertMethod(String str, boolean z, boolean z2, boolean z3, boolean z4, boolean z5,
+                            boolean z6, boolean z7, boolean z8) {
                         if (z && this.manifestType) {
-                            throw new IllegalStateException(bjs.o("Cannot define abstract method '", str, "' for non-abstract class"));
+                            throw new IllegalStateException(
+                                    concat("Cannot define abstract method '", str, "' for non-abstract class"));
                         }
                     }
 
@@ -1016,7 +1185,10 @@ public interface TypeWriter<T> {
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class ForClassFileVersion implements Constraint {
                     private final ClassFileVersion classFileVersion;
@@ -1028,14 +1200,16 @@ public interface TypeWriter<T> {
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ValidatingClassVisitor.Constraint
                     public void assertAnnotation() {
                         if (this.classFileVersion.isLessThan(ClassFileVersion.JAVA_V5)) {
-                            throw new IllegalStateException("Cannot write annotations for class file version " + this.classFileVersion);
+                            throw new IllegalStateException(
+                                    "Cannot write annotations for class file version " + this.classFileVersion);
                         }
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ValidatingClassVisitor.Constraint
                     public void assertDefaultMethodCall() {
                         if (this.classFileVersion.isLessThan(ClassFileVersion.JAVA_V8)) {
-                            throw new IllegalStateException("Cannot invoke default method for class file version " + this.classFileVersion);
+                            throw new IllegalStateException(
+                                    "Cannot invoke default method for class file version " + this.classFileVersion);
                         }
                     }
 
@@ -1046,7 +1220,8 @@ public interface TypeWriter<T> {
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ValidatingClassVisitor.Constraint
                     public void assertDynamicValueInConstantPool() {
                         if (this.classFileVersion.isLessThan(ClassFileVersion.JAVA_V11)) {
-                            throw new IllegalStateException("Cannot write dynamic constant for class file version " + this.classFileVersion);
+                            throw new IllegalStateException(
+                                    "Cannot write dynamic constant for class file version " + this.classFileVersion);
                         }
                     }
 
@@ -1063,86 +1238,103 @@ public interface TypeWriter<T> {
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ValidatingClassVisitor.Constraint
                     public void assertHandleInConstantPool() {
                         if (this.classFileVersion.isLessThan(ClassFileVersion.JAVA_V7)) {
-                            throw new IllegalStateException("Cannot write method handle to constant pool for class file version " + this.classFileVersion);
+                            throw new IllegalStateException(
+                                    "Cannot write method handle to constant pool for class file version "
+                                            + this.classFileVersion);
                         }
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ValidatingClassVisitor.Constraint
                     public void assertInvokeDynamic() {
                         if (this.classFileVersion.isLessThan(ClassFileVersion.JAVA_V7)) {
-                            throw new IllegalStateException("Cannot write invoke dynamic instruction for class file version " + this.classFileVersion);
+                            throw new IllegalStateException(
+                                    "Cannot write invoke dynamic instruction for class file version "
+                                            + this.classFileVersion);
                         }
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ValidatingClassVisitor.Constraint
-                    public void assertMethod(String str, boolean z, boolean z2, boolean z3, boolean z4, boolean z5, boolean z6, boolean z7, boolean z8) {
+                    public void assertMethod(String str, boolean z, boolean z2, boolean z3, boolean z4, boolean z5,
+                            boolean z6, boolean z7, boolean z8) {
                         if (z8 && !this.classFileVersion.isAtLeast(ClassFileVersion.JAVA_V4)) {
-                            StringBuilder sbZ = dkz.z("Cannot define generic method '", str, "' for class file version ");
+                            StringBuilder sbZ = dkz.z("Cannot define generic method '", str,
+                                    "' for class file version ");
                             sbZ.append(this.classFileVersion);
                             throw new IllegalStateException(sbZ.toString());
                         }
                         if (!z5 && z) {
-                            throw new IllegalStateException(bjs.o("Cannot define static or non-virtual method '", str, "' to be abstract"));
+                            throw new IllegalStateException(
+                                    concat("Cannot define static or non-virtual method '", str, "' to be abstract"));
                         }
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ValidatingClassVisitor.Constraint
                     public void assertMethodTypeInConstantPool() {
                         if (this.classFileVersion.isLessThan(ClassFileVersion.JAVA_V7)) {
-                            throw new IllegalStateException("Cannot write method type to constant pool for class file version " + this.classFileVersion);
+                            throw new IllegalStateException(
+                                    "Cannot write method type to constant pool for class file version "
+                                            + this.classFileVersion);
                         }
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ValidatingClassVisitor.Constraint
                     public void assertNestMate() {
                         if (this.classFileVersion.isLessThan(ClassFileVersion.JAVA_V11)) {
-                            throw new IllegalStateException("Cannot define nest mate for class file version " + this.classFileVersion);
+                            throw new IllegalStateException(
+                                    "Cannot define nest mate for class file version " + this.classFileVersion);
                         }
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ValidatingClassVisitor.Constraint
                     public void assertPermittedSubclass() {
                         if (this.classFileVersion.isLessThan(ClassFileVersion.JAVA_V17)) {
-                            throw new IllegalStateException("Cannot define permitted subclasses for class file version " + this.classFileVersion);
+                            throw new IllegalStateException("Cannot define permitted subclasses for class file version "
+                                    + this.classFileVersion);
                         }
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ValidatingClassVisitor.Constraint
                     public void assertRecord() {
                         if (this.classFileVersion.isLessThan(ClassFileVersion.JAVA_V14)) {
-                            throw new IllegalStateException("Cannot define record for class file version " + this.classFileVersion);
+                            throw new IllegalStateException(
+                                    "Cannot define record for class file version " + this.classFileVersion);
                         }
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ValidatingClassVisitor.Constraint
                     public void assertSubRoutine() {
                         if (this.classFileVersion.isGreaterThan(ClassFileVersion.JAVA_V5)) {
-                            throw new IllegalStateException("Cannot write subroutine for class file version " + this.classFileVersion);
+                            throw new IllegalStateException(
+                                    "Cannot write subroutine for class file version " + this.classFileVersion);
                         }
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ValidatingClassVisitor.Constraint
                     public void assertType(int i, @MaybeNull String str, boolean z, boolean z2) {
                         if ((i & 8192) != 0 && !this.classFileVersion.isAtLeast(ClassFileVersion.JAVA_V5)) {
-                            throw new IllegalStateException("Cannot define annotation type for class file version " + this.classFileVersion);
+                            throw new IllegalStateException(
+                                    "Cannot define annotation type for class file version " + this.classFileVersion);
                         }
                         if (!z2 || this.classFileVersion.isAtLeast(ClassFileVersion.JAVA_V4)) {
                             return;
                         }
-                        throw new IllegalStateException("Cannot define a generic type for class file version " + this.classFileVersion);
+                        throw new IllegalStateException(
+                                "Cannot define a generic type for class file version " + this.classFileVersion);
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ValidatingClassVisitor.Constraint
                     public void assertTypeAnnotation() {
                         if (this.classFileVersion.isLessThan(ClassFileVersion.JAVA_V5)) {
-                            throw new IllegalStateException("Cannot write type annotations for class file version " + this.classFileVersion);
+                            throw new IllegalStateException(
+                                    "Cannot write type annotations for class file version " + this.classFileVersion);
                         }
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ValidatingClassVisitor.Constraint
                     public void assertTypeInConstantPool() {
                         if (this.classFileVersion.isLessThan(ClassFileVersion.JAVA_V5)) {
-                            throw new IllegalStateException("Cannot write type to constant pool for class file version " + this.classFileVersion);
+                            throw new IllegalStateException("Cannot write type to constant pool for class file version "
+                                    + this.classFileVersion);
                         }
                     }
 
@@ -1150,7 +1342,8 @@ public interface TypeWriter<T> {
                         if (this == obj) {
                             return true;
                         }
-                        return obj != null && getClass() == obj.getClass() && this.classFileVersion.equals(((ForClassFileVersion) obj).classFileVersion);
+                        return obj != null && getClass() == obj.getClass()
+                                && this.classFileVersion.equals(((ForClassFileVersion) obj).classFileVersion);
                     }
 
                     public int hashCode() {
@@ -1158,7 +1351,10 @@ public interface TypeWriter<T> {
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public enum ForInterface implements Constraint {
                     CLASSIC(true),
                     JAVA_8(false);
@@ -1179,7 +1375,8 @@ public interface TypeWriter<T> {
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ValidatingClassVisitor.Constraint
                     public void assertDefaultValue(String str) {
-                        throw new IllegalStateException(bjs.o("Cannot define default value for '", str, "' for non-annotation type"));
+                        throw new IllegalStateException(
+                                concat("Cannot define default value for '", str, "' for non-annotation type"));
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ValidatingClassVisitor.Constraint
@@ -1189,7 +1386,8 @@ public interface TypeWriter<T> {
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ValidatingClassVisitor.Constraint
                     public void assertField(String str, boolean z, boolean z2, boolean z3, boolean z4) {
                         if (!z2 || !z || !z3) {
-                            throw new IllegalStateException(bjs.o("Cannot only define public, static, final field '", str, "' for interface type"));
+                            throw new IllegalStateException(concat("Cannot only define public, static, final field '",
+                                    str, "' for interface type"));
                         }
                     }
 
@@ -1202,7 +1400,8 @@ public interface TypeWriter<T> {
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ValidatingClassVisitor.Constraint
-                    public void assertMethod(String str, boolean z, boolean z2, boolean z3, boolean z4, boolean z5, boolean z6, boolean z7, boolean z8) {
+                    public void assertMethod(String str, boolean z, boolean z2, boolean z3, boolean z4, boolean z5,
+                            boolean z6, boolean z7, boolean z8) {
                         if (str.equals(MethodDescription.TYPE_INITIALIZER_INTERNAL_NAME)) {
                             return;
                         }
@@ -1211,13 +1410,16 @@ public interface TypeWriter<T> {
                         }
                         boolean z9 = this.classic;
                         if (z9 && !z2) {
-                            throw new IllegalStateException(bjs.o("Cannot define non-public method '", str, "' for interface type"));
+                            throw new IllegalStateException(
+                                    concat("Cannot define non-public method '", str, "' for interface type"));
                         }
                         if (z9 && !z5) {
-                            throw new IllegalStateException(bjs.o("Cannot define non-virtual method '", str, "' for a pre-Java 8 interface type"));
+                            throw new IllegalStateException(concat("Cannot define non-virtual method '", str,
+                                    "' for a pre-Java 8 interface type"));
                         }
                         if (z9 && !z) {
-                            throw new IllegalStateException(bjs.o("Cannot define default method '", str, "' for pre-Java 8 interface type"));
+                            throw new IllegalStateException(
+                                    concat("Cannot define default method '", str, "' for pre-Java 8 interface type"));
                         }
                     }
 
@@ -1257,7 +1459,10 @@ public interface TypeWriter<T> {
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public enum ForModuleType implements Constraint {
                     INSTANCE;
 
@@ -1291,7 +1496,8 @@ public interface TypeWriter<T> {
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ValidatingClassVisitor.Constraint
-                    public void assertMethod(String str, boolean z, boolean z2, boolean z3, boolean z4, boolean z5, boolean z6, boolean z7, boolean z8) {
+                    public void assertMethod(String str, boolean z, boolean z2, boolean z3, boolean z4, boolean z5,
+                            boolean z6, boolean z7, boolean z8) {
                         throw new IllegalStateException("Cannot define a method for a module description type");
                     }
 
@@ -1330,7 +1536,8 @@ public interface TypeWriter<T> {
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ValidatingClassVisitor.Constraint
                     public void assertTypeAnnotation() {
-                        throw new IllegalStateException("Cannot define a type annotation for a module description type");
+                        throw new IllegalStateException(
+                                "Cannot define a type annotation for a module description type");
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ValidatingClassVisitor.Constraint
@@ -1338,7 +1545,10 @@ public interface TypeWriter<T> {
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public enum ForPackageType implements Constraint {
                     INSTANCE;
 
@@ -1372,7 +1582,8 @@ public interface TypeWriter<T> {
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ValidatingClassVisitor.Constraint
-                    public void assertMethod(String str, boolean z, boolean z2, boolean z3, boolean z4, boolean z5, boolean z6, boolean z7, boolean z8) {
+                    public void assertMethod(String str, boolean z, boolean z2, boolean z3, boolean z4, boolean z5,
+                            boolean z6, boolean z7, boolean z8) {
                         throw new IllegalStateException("Cannot define a method for a package description type");
                     }
 
@@ -1418,7 +1629,10 @@ public interface TypeWriter<T> {
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public enum ForRecord implements Constraint {
                     INSTANCE;
 
@@ -1451,7 +1665,8 @@ public interface TypeWriter<T> {
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ValidatingClassVisitor.Constraint
-                    public void assertMethod(String str, boolean z, boolean z2, boolean z3, boolean z4, boolean z5, boolean z6, boolean z7, boolean z8) {
+                    public void assertMethod(String str, boolean z, boolean z2, boolean z3, boolean z4, boolean z5,
+                            boolean z6, boolean z7, boolean z8) {
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ValidatingClassVisitor.Constraint
@@ -1507,7 +1722,8 @@ public interface TypeWriter<T> {
 
                 void assertInvokeDynamic();
 
-                void assertMethod(String str, boolean z, boolean z2, boolean z3, boolean z4, boolean z5, boolean z6, boolean z7, boolean z8);
+                void assertMethod(String str, boolean z, boolean z2, boolean z3, boolean z4, boolean z5, boolean z6,
+                        boolean z7, boolean z8);
 
                 void assertMethodTypeInConstantPool();
 
@@ -1526,7 +1742,10 @@ public interface TypeWriter<T> {
                 void assertTypeInConstantPool();
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public class ValidatingFieldVisitor extends FieldVisitor {
                 public ValidatingFieldVisitor(FieldVisitor fieldVisitor) {
                     super(OpenedClassReader.ASM_API, fieldVisitor);
@@ -1539,7 +1758,10 @@ public interface TypeWriter<T> {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public class ValidatingMethodVisitor extends MethodVisitor {
                 private final String name;
 
@@ -1619,7 +1841,8 @@ public interface TypeWriter<T> {
             }
 
             @Override // net.bytebuddy.jar.asm.ClassVisitor
-            public void visit(int i, int i2, String str, @MaybeNull String str2, @MaybeNull String str3, @MaybeNull String[] strArr) {
+            public void visit(int i, int i2, String str, @MaybeNull String str2, @MaybeNull String str3,
+                    @MaybeNull String[] strArr) {
                 boolean z;
                 ClassFileVersion classFileVersionOfMinorMajor = ClassFileVersion.ofMinorMajor(i);
                 ArrayList arrayList = new ArrayList();
@@ -1630,11 +1853,16 @@ public interface TypeWriter<T> {
                     arrayList.add(Constraint.ForPackageType.INSTANCE);
                 } else if ((i2 & 8192) != 0) {
                     if (!classFileVersionOfMinorMajor.isAtLeast(ClassFileVersion.JAVA_V5)) {
-                        throw new IllegalStateException("Cannot define an annotation type for class file version " + classFileVersionOfMinorMajor);
+                        throw new IllegalStateException("Cannot define an annotation type for class file version "
+                                + classFileVersionOfMinorMajor);
                     }
-                    arrayList.add(classFileVersionOfMinorMajor.isAtLeast(ClassFileVersion.JAVA_V8) ? Constraint.ForAnnotation.JAVA_8 : Constraint.ForAnnotation.CLASSIC);
+                    arrayList.add(classFileVersionOfMinorMajor.isAtLeast(ClassFileVersion.JAVA_V8)
+                            ? Constraint.ForAnnotation.JAVA_8
+                            : Constraint.ForAnnotation.CLASSIC);
                 } else if ((i2 & 512) != 0) {
-                    arrayList.add(classFileVersionOfMinorMajor.isAtLeast(ClassFileVersion.JAVA_V8) ? Constraint.ForInterface.JAVA_8 : Constraint.ForInterface.CLASSIC);
+                    arrayList.add(classFileVersionOfMinorMajor.isAtLeast(ClassFileVersion.JAVA_V8)
+                            ? Constraint.ForInterface.JAVA_8
+                            : Constraint.ForInterface.CLASSIC);
                 } else if ((i2 & 1024) != 0) {
                     arrayList.add(Constraint.ForClass.ABSTRACT);
                 } else {
@@ -1662,39 +1890,47 @@ public interface TypeWriter<T> {
                 return super.visitAnnotation(str, z);
             }
 
-            /* JADX WARN: Code restructure failed: missing block: B:35:0x006c, code lost:
-            
-                if (r2.intValue() <= 1) goto L51;
+            /*
+             * JADX WARN: Code restructure failed: missing block: B:35:0x006c, code lost:
+             * 
+             * if (r2.intValue() <= 1) goto L51;
              */
-            /* JADX WARN: Code restructure failed: missing block: B:40:0x0080, code lost:
-            
-                if (r2.intValue() <= 32767) goto L51;
+            /*
+             * JADX WARN: Code restructure failed: missing block: B:40:0x0080, code lost:
+             * 
+             * if (r2.intValue() <= 32767) goto L51;
              */
-            /* JADX WARN: Code restructure failed: missing block: B:45:0x0093, code lost:
-            
-                if (r2.intValue() <= 65535) goto L51;
+            /*
+             * JADX WARN: Code restructure failed: missing block: B:45:0x0093, code lost:
+             * 
+             * if (r2.intValue() <= 65535) goto L51;
              */
-            /* JADX WARN: Code restructure failed: missing block: B:50:0x00a7, code lost:
-            
-                if (r2.intValue() <= 127) goto L51;
+            /*
+             * JADX WARN: Code restructure failed: missing block: B:50:0x00a7, code lost:
+             * 
+             * if (r2.intValue() <= 127) goto L51;
              */
             @Override // net.bytebuddy.jar.asm.ClassVisitor
             @net.bytebuddy.utility.nullability.MaybeNull
             /*
-                Code decompiled incorrectly, please refer to instructions dump.
-                To view partially-correct add '--show-bad-code' argument
-            */
-            public net.bytebuddy.jar.asm.FieldVisitor visitField(int r10, java.lang.String r11, java.lang.String r12, @net.bytebuddy.utility.nullability.MaybeNull java.lang.String r13, @net.bytebuddy.utility.nullability.MaybeNull java.lang.Object r14) {
+             * Code decompiled incorrectly, please refer to instructions dump.
+             * To view partially-correct add '--show-bad-code' argument
+             */
+            public net.bytebuddy.jar.asm.FieldVisitor visitField(int r10, java.lang.String r11, java.lang.String r12,
+                    @net.bytebuddy.utility.nullability.MaybeNull java.lang.String r13,
+                    @net.bytebuddy.utility.nullability.MaybeNull java.lang.Object r14) {
                 /*
-                    Method dump skipped, instruction units count: 302
-                    To view this dump add '--comments-level debug' option
-                */
-                throw new UnsupportedOperationException("Method not decompiled: net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ValidatingClassVisitor.visitField(int, java.lang.String, java.lang.String, java.lang.String, java.lang.Object):net.bytebuddy.jar.asm.FieldVisitor");
+                 * Method dump skipped, instruction units count: 302
+                 * To view this dump add '--comments-level debug' option
+                 */
+                throw new UnsupportedOperationException(
+                        "Method not decompiled: net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ValidatingClassVisitor.visitField(int, java.lang.String, java.lang.String, java.lang.String, java.lang.Object):net.bytebuddy.jar.asm.FieldVisitor");
             }
 
             @Override // net.bytebuddy.jar.asm.ClassVisitor
             @MaybeNull
-            public MethodVisitor visitMethod(int i, String str, String str2, @MaybeNull String str3, @MaybeNull String[] strArr) {
+            public MethodVisitor visitMethod(int i, String str, String str2, @MaybeNull String str3,
+                    @MaybeNull String[] strArr) {
                 boolean z;
                 boolean z2;
                 boolean z3;
@@ -1728,7 +1964,8 @@ public interface TypeWriter<T> {
                     z4 = z3;
                     z3 = z;
                 }
-                if (str.equals(MethodDescription.CONSTRUCTOR_INTERNAL_NAME) || str.equals(MethodDescription.TYPE_INITIALIZER_INTERNAL_NAME) || (i & 10) != 0) {
+                if (str.equals(MethodDescription.CONSTRUCTOR_INTERNAL_NAME)
+                        || str.equals(MethodDescription.TYPE_INITIALIZER_INTERNAL_NAME) || (i & 10) != 0) {
                     z5 = z4;
                     z4 = z;
                 } else {
@@ -1746,7 +1983,8 @@ public interface TypeWriter<T> {
                 }
                 constraint.assertMethod(str, z7, z8, z2, z3, z4, zEquals, z5, z6);
                 MethodVisitor methodVisitorVisitMethod = super.visitMethod(i, str, str2, str3, strArr);
-                return methodVisitorVisitMethod == null ? IGNORE_METHOD : new ValidatingMethodVisitor(methodVisitorVisitMethod, str);
+                return methodVisitorVisitMethod == null ? IGNORE_METHOD
+                        : new ValidatingMethodVisitor(methodVisitorVisitMethod, str);
             }
 
             @Override // net.bytebuddy.jar.asm.ClassVisitor
@@ -1795,7 +2033,17 @@ public interface TypeWriter<T> {
             DUMP_FOLDER = str;
         }
 
-        public Default(TypeDescription typeDescription, ClassFileVersion classFileVersion, FieldPool fieldPool, RecordComponentPool recordComponentPool, List<? extends DynamicType> list, FieldList<FieldDescription.InDefinedShape> fieldList, MethodList<?> methodList, MethodList<?> methodList2, RecordComponentList<RecordComponentDescription.InDefinedShape> recordComponentList, LoadedTypeInitializer loadedTypeInitializer, TypeInitializer typeInitializer, TypeAttributeAppender typeAttributeAppender, AsmVisitorWrapper asmVisitorWrapper, AnnotationValueFilter.Factory factory, AnnotationRetention annotationRetention, AuxiliaryType.NamingStrategy namingStrategy, Implementation.Context.Factory factory2, TypeValidation typeValidation, AsmClassReader.Factory factory3, AsmClassWriter.Factory factory4, TypePool typePool) {
+        public Default(TypeDescription typeDescription, ClassFileVersion classFileVersion, FieldPool fieldPool,
+                RecordComponentPool recordComponentPool, List<? extends DynamicType> list,
+                FieldList<FieldDescription.InDefinedShape> fieldList, MethodList<?> methodList,
+                MethodList<?> methodList2,
+                RecordComponentList<RecordComponentDescription.InDefinedShape> recordComponentList,
+                LoadedTypeInitializer loadedTypeInitializer, TypeInitializer typeInitializer,
+                TypeAttributeAppender typeAttributeAppender, AsmVisitorWrapper asmVisitorWrapper,
+                AnnotationValueFilter.Factory factory, AnnotationRetention annotationRetention,
+                AuxiliaryType.NamingStrategy namingStrategy, Implementation.Context.Factory factory2,
+                TypeValidation typeValidation, AsmClassReader.Factory factory3, AsmClassWriter.Factory factory4,
+                TypePool typePool) {
             this.instrumentedType = typeDescription;
             this.classFileVersion = classFileVersion;
             this.fieldPool = fieldPool;
@@ -1824,23 +2072,72 @@ public interface TypeWriter<T> {
             return ACCESS_CONTROLLER ? (T) AccessController.doPrivileged(privilegedAction) : privilegedAction.run();
         }
 
-        public static <U> TypeWriter<U> forCreation(MethodRegistry.Compiled compiled, List<? extends DynamicType> list, FieldPool fieldPool, RecordComponentPool recordComponentPool, TypeAttributeAppender typeAttributeAppender, AsmVisitorWrapper asmVisitorWrapper, ClassFileVersion classFileVersion, AnnotationValueFilter.Factory factory, AnnotationRetention annotationRetention, AuxiliaryType.NamingStrategy namingStrategy, Implementation.Context.Factory factory2, TypeValidation typeValidation, AsmClassReader.Factory factory3, AsmClassWriter.Factory factory4, TypePool typePool) {
-            return new ForCreation(compiled.getInstrumentedType(), classFileVersion, fieldPool, compiled, recordComponentPool, list, compiled.getInstrumentedType().getDeclaredFields(), compiled.getMethods(), compiled.getInstrumentedMethods(), compiled.getInstrumentedType().getRecordComponents(), compiled.getLoadedTypeInitializer(), compiled.getTypeInitializer(), typeAttributeAppender, asmVisitorWrapper, factory, annotationRetention, namingStrategy, factory2, typeValidation, factory3, factory4, typePool);
+        public static <U> TypeWriter<U> forCreation(MethodRegistry.Compiled compiled, List<? extends DynamicType> list,
+                FieldPool fieldPool, RecordComponentPool recordComponentPool,
+                TypeAttributeAppender typeAttributeAppender, AsmVisitorWrapper asmVisitorWrapper,
+                ClassFileVersion classFileVersion, AnnotationValueFilter.Factory factory,
+                AnnotationRetention annotationRetention, AuxiliaryType.NamingStrategy namingStrategy,
+                Implementation.Context.Factory factory2, TypeValidation typeValidation, AsmClassReader.Factory factory3,
+                AsmClassWriter.Factory factory4, TypePool typePool) {
+            return new ForCreation(compiled.getInstrumentedType(), classFileVersion, fieldPool, compiled,
+                    recordComponentPool, list, compiled.getInstrumentedType().getDeclaredFields(),
+                    compiled.getMethods(), compiled.getInstrumentedMethods(),
+                    compiled.getInstrumentedType().getRecordComponents(), compiled.getLoadedTypeInitializer(),
+                    compiled.getTypeInitializer(), typeAttributeAppender, asmVisitorWrapper, factory,
+                    annotationRetention, namingStrategy, factory2, typeValidation, factory3, factory4, typePool);
         }
 
-        public static <U> TypeWriter<U> forDecoration(TypeDescription typeDescription, ClassFileVersion classFileVersion, List<? extends DynamicType> list, List<? extends MethodDescription> list2, TypeAttributeAppender typeAttributeAppender, AsmVisitorWrapper asmVisitorWrapper, AnnotationValueFilter.Factory factory, AnnotationRetention annotationRetention, AuxiliaryType.NamingStrategy namingStrategy, Implementation.Context.Factory factory2, TypeValidation typeValidation, AsmClassReader.Factory factory3, AsmClassWriter.Factory factory4, TypePool typePool, ClassFileLocator classFileLocator) {
-            return new ForInlining.WithDecorationOnly(typeDescription, classFileVersion, list, new MethodList.Explicit(list2), typeAttributeAppender, asmVisitorWrapper, factory, annotationRetention, namingStrategy, factory2, typeValidation, factory3, factory4, typePool, classFileLocator);
+        public static <U> TypeWriter<U> forDecoration(TypeDescription typeDescription,
+                ClassFileVersion classFileVersion, List<? extends DynamicType> list,
+                List<? extends MethodDescription> list2, TypeAttributeAppender typeAttributeAppender,
+                AsmVisitorWrapper asmVisitorWrapper, AnnotationValueFilter.Factory factory,
+                AnnotationRetention annotationRetention, AuxiliaryType.NamingStrategy namingStrategy,
+                Implementation.Context.Factory factory2, TypeValidation typeValidation, AsmClassReader.Factory factory3,
+                AsmClassWriter.Factory factory4, TypePool typePool, ClassFileLocator classFileLocator) {
+            return new ForInlining.WithDecorationOnly(typeDescription, classFileVersion, list,
+                    new MethodList.Explicit(list2), typeAttributeAppender, asmVisitorWrapper, factory,
+                    annotationRetention, namingStrategy, factory2, typeValidation, factory3, factory4, typePool,
+                    classFileLocator);
         }
 
-        public static <U> TypeWriter<U> forRebasing(MethodRegistry.Prepared prepared, List<? extends DynamicType> list, FieldPool fieldPool, RecordComponentPool recordComponentPool, TypeAttributeAppender typeAttributeAppender, AsmVisitorWrapper asmVisitorWrapper, ClassFileVersion classFileVersion, AnnotationValueFilter.Factory factory, AnnotationRetention annotationRetention, AuxiliaryType.NamingStrategy namingStrategy, Implementation.Context.Factory factory2, TypeValidation typeValidation, AsmClassReader.Factory factory3, AsmClassWriter.Factory factory4, TypePool typePool, TypeDescription typeDescription, ClassFileLocator classFileLocator, MethodRebaseResolver methodRebaseResolver) {
-            return new ForInlining.WithFullProcessing(prepared.getInstrumentedType(), classFileVersion, fieldPool, recordComponentPool, CompoundList.of((List) list, (List) methodRebaseResolver.getAuxiliaryTypes()), prepared.getInstrumentedType().getDeclaredFields(), prepared.getMethods(), prepared.getInstrumentedMethods(), prepared.getInstrumentedType().getRecordComponents(), prepared.getLoadedTypeInitializer(), prepared.getTypeInitializer(), typeAttributeAppender, asmVisitorWrapper, factory, annotationRetention, namingStrategy, factory2, typeValidation, factory3, factory4, typePool, typeDescription, classFileLocator, prepared, new RebaseImplementationTarget.Factory(methodRebaseResolver), methodRebaseResolver);
+        public static <U> TypeWriter<U> forRebasing(MethodRegistry.Prepared prepared, List<? extends DynamicType> list,
+                FieldPool fieldPool, RecordComponentPool recordComponentPool,
+                TypeAttributeAppender typeAttributeAppender, AsmVisitorWrapper asmVisitorWrapper,
+                ClassFileVersion classFileVersion, AnnotationValueFilter.Factory factory,
+                AnnotationRetention annotationRetention, AuxiliaryType.NamingStrategy namingStrategy,
+                Implementation.Context.Factory factory2, TypeValidation typeValidation, AsmClassReader.Factory factory3,
+                AsmClassWriter.Factory factory4, TypePool typePool, TypeDescription typeDescription,
+                ClassFileLocator classFileLocator, MethodRebaseResolver methodRebaseResolver) {
+            return new ForInlining.WithFullProcessing(prepared.getInstrumentedType(), classFileVersion, fieldPool,
+                    recordComponentPool, CompoundList.of((List) list, (List) methodRebaseResolver.getAuxiliaryTypes()),
+                    prepared.getInstrumentedType().getDeclaredFields(), prepared.getMethods(),
+                    prepared.getInstrumentedMethods(), prepared.getInstrumentedType().getRecordComponents(),
+                    prepared.getLoadedTypeInitializer(), prepared.getTypeInitializer(), typeAttributeAppender,
+                    asmVisitorWrapper, factory, annotationRetention, namingStrategy, factory2, typeValidation, factory3,
+                    factory4, typePool, typeDescription, classFileLocator, prepared,
+                    new RebaseImplementationTarget.Factory(methodRebaseResolver), methodRebaseResolver);
         }
 
-        public static <U> TypeWriter<U> forRedefinition(MethodRegistry.Prepared prepared, List<? extends DynamicType> list, FieldPool fieldPool, RecordComponentPool recordComponentPool, TypeAttributeAppender typeAttributeAppender, AsmVisitorWrapper asmVisitorWrapper, ClassFileVersion classFileVersion, AnnotationValueFilter.Factory factory, AnnotationRetention annotationRetention, AuxiliaryType.NamingStrategy namingStrategy, Implementation.Context.Factory factory2, TypeValidation typeValidation, AsmClassReader.Factory factory3, AsmClassWriter.Factory factory4, TypePool typePool, TypeDescription typeDescription, ClassFileLocator classFileLocator) {
-            return new ForInlining.WithFullProcessing(prepared.getInstrumentedType(), classFileVersion, fieldPool, recordComponentPool, list, prepared.getInstrumentedType().getDeclaredFields(), prepared.getMethods(), prepared.getInstrumentedMethods(), prepared.getInstrumentedType().getRecordComponents(), prepared.getLoadedTypeInitializer(), prepared.getTypeInitializer(), typeAttributeAppender, asmVisitorWrapper, factory, annotationRetention, namingStrategy, factory2, typeValidation, factory3, factory4, typePool, typeDescription, classFileLocator, prepared, SubclassImplementationTarget.Factory.LEVEL_TYPE, MethodRebaseResolver.Disabled.INSTANCE);
+        public static <U> TypeWriter<U> forRedefinition(MethodRegistry.Prepared prepared,
+                List<? extends DynamicType> list, FieldPool fieldPool, RecordComponentPool recordComponentPool,
+                TypeAttributeAppender typeAttributeAppender, AsmVisitorWrapper asmVisitorWrapper,
+                ClassFileVersion classFileVersion, AnnotationValueFilter.Factory factory,
+                AnnotationRetention annotationRetention, AuxiliaryType.NamingStrategy namingStrategy,
+                Implementation.Context.Factory factory2, TypeValidation typeValidation, AsmClassReader.Factory factory3,
+                AsmClassWriter.Factory factory4, TypePool typePool, TypeDescription typeDescription,
+                ClassFileLocator classFileLocator) {
+            return new ForInlining.WithFullProcessing(prepared.getInstrumentedType(), classFileVersion, fieldPool,
+                    recordComponentPool, list, prepared.getInstrumentedType().getDeclaredFields(),
+                    prepared.getMethods(), prepared.getInstrumentedMethods(),
+                    prepared.getInstrumentedType().getRecordComponents(), prepared.getLoadedTypeInitializer(),
+                    prepared.getTypeInitializer(), typeAttributeAppender, asmVisitorWrapper, factory,
+                    annotationRetention, namingStrategy, factory2, typeValidation, factory3, factory4, typePool,
+                    typeDescription, classFileLocator, prepared, SubclassImplementationTarget.Factory.LEVEL_TYPE,
+                    MethodRebaseResolver.Disabled.INSTANCE);
         }
 
-        public abstract Default<S>.UnresolvedType create(TypeInitializer typeInitializer, ClassDumpAction.Dispatcher dispatcher);
+        public abstract Default<S>.UnresolvedType create(TypeInitializer typeInitializer,
+                ClassDumpAction.Dispatcher dispatcher);
 
         public boolean equals(@MaybeNull Object obj) {
             if (this == obj) {
@@ -1850,18 +2147,69 @@ public interface TypeWriter<T> {
                 return false;
             }
             Default r5 = (Default) obj;
-            return this.annotationRetention.equals(r5.annotationRetention) && this.typeValidation.equals(r5.typeValidation) && this.instrumentedType.equals(r5.instrumentedType) && this.classFileVersion.equals(r5.classFileVersion) && this.fieldPool.equals(r5.fieldPool) && this.recordComponentPool.equals(r5.recordComponentPool) && this.auxiliaryTypes.equals(r5.auxiliaryTypes) && this.fields.equals(r5.fields) && this.methods.equals(r5.methods) && this.instrumentedMethods.equals(r5.instrumentedMethods) && this.recordComponents.equals(r5.recordComponents) && this.loadedTypeInitializer.equals(r5.loadedTypeInitializer) && this.typeInitializer.equals(r5.typeInitializer) && this.typeAttributeAppender.equals(r5.typeAttributeAppender) && this.asmVisitorWrapper.equals(r5.asmVisitorWrapper) && this.annotationValueFilterFactory.equals(r5.annotationValueFilterFactory) && this.auxiliaryTypeNamingStrategy.equals(r5.auxiliaryTypeNamingStrategy) && this.implementationContextFactory.equals(r5.implementationContextFactory) && this.classReaderFactory.equals(r5.classReaderFactory) && this.classWriterFactory.equals(r5.classWriterFactory) && this.typePool.equals(r5.typePool);
+            return this.annotationRetention.equals(r5.annotationRetention)
+                    && this.typeValidation.equals(r5.typeValidation)
+                    && this.instrumentedType.equals(r5.instrumentedType)
+                    && this.classFileVersion.equals(r5.classFileVersion) && this.fieldPool.equals(r5.fieldPool)
+                    && this.recordComponentPool.equals(r5.recordComponentPool)
+                    && this.auxiliaryTypes.equals(r5.auxiliaryTypes) && this.fields.equals(r5.fields)
+                    && this.methods.equals(r5.methods) && this.instrumentedMethods.equals(r5.instrumentedMethods)
+                    && this.recordComponents.equals(r5.recordComponents)
+                    && this.loadedTypeInitializer.equals(r5.loadedTypeInitializer)
+                    && this.typeInitializer.equals(r5.typeInitializer)
+                    && this.typeAttributeAppender.equals(r5.typeAttributeAppender)
+                    && this.asmVisitorWrapper.equals(r5.asmVisitorWrapper)
+                    && this.annotationValueFilterFactory.equals(r5.annotationValueFilterFactory)
+                    && this.auxiliaryTypeNamingStrategy.equals(r5.auxiliaryTypeNamingStrategy)
+                    && this.implementationContextFactory.equals(r5.implementationContextFactory)
+                    && this.classReaderFactory.equals(r5.classReaderFactory)
+                    && this.classWriterFactory.equals(r5.classWriterFactory) && this.typePool.equals(r5.typePool);
         }
 
         public int hashCode() {
-            return this.typePool.hashCode() + ((this.classWriterFactory.hashCode() + ((this.classReaderFactory.hashCode() + ((this.typeValidation.hashCode() + ((this.implementationContextFactory.hashCode() + ((this.auxiliaryTypeNamingStrategy.hashCode() + ((this.annotationRetention.hashCode() + ((this.annotationValueFilterFactory.hashCode() + ((this.asmVisitorWrapper.hashCode() + ((this.typeAttributeAppender.hashCode() + ((this.typeInitializer.hashCode() + ((this.loadedTypeInitializer.hashCode() + ((this.recordComponents.hashCode() + ((this.instrumentedMethods.hashCode() + ((this.methods.hashCode() + ((this.fields.hashCode() + bjs.g(this.auxiliaryTypes, (this.recordComponentPool.hashCode() + ((this.fieldPool.hashCode() + ((this.classFileVersion.hashCode() + dkz.f(this.instrumentedType, getClass().hashCode() * 31, 31)) * 31)) * 31)) * 31, 31)) * 31)) * 31)) * 31)) * 31)) * 31)) * 31)) * 31)) * 31)) * 31)) * 31)) * 31)) * 31)) * 31)) * 31)) * 31);
+            return this.typePool.hashCode() + ((this.classWriterFactory.hashCode() + ((this.classReaderFactory
+                    .hashCode()
+                    + ((this.typeValidation.hashCode() + ((this.implementationContextFactory.hashCode()
+                            + ((this.auxiliaryTypeNamingStrategy.hashCode() + ((this.annotationRetention.hashCode()
+                                    + ((this.annotationValueFilterFactory.hashCode() + ((this.asmVisitorWrapper
+                                            .hashCode()
+                                            + ((this.typeAttributeAppender.hashCode() + ((this.typeInitializer
+                                                    .hashCode()
+                                                    + ((this.loadedTypeInitializer.hashCode() + ((this.recordComponents
+                                                            .hashCode()
+                                                            + ((this.instrumentedMethods.hashCode() + ((this.methods
+                                                                    .hashCode()
+                                                                    + ((this.fields.hashCode() + bjs.g(
+                                                                            this.auxiliaryTypes,
+                                                                            (this.recordComponentPool.hashCode()
+                                                                                    + ((this.fieldPool.hashCode()
+                                                                                            + ((this.classFileVersion
+                                                                                                    .hashCode()
+                                                                                                    + dkz.f(this.instrumentedType,
+                                                                                                            getClass()
+                                                                                                                    .hashCode()
+                                                                                                                    * 31,
+                                                                                                            31))
+                                                                                                    * 31))
+                                                                                            * 31))
+                                                                                    * 31,
+                                                                            31)) * 31))
+                                                                    * 31)) * 31))
+                                                            * 31)) * 31))
+                                                    * 31)) * 31))
+                                            * 31)) * 31))
+                                    * 31)) * 31))
+                            * 31)) * 31))
+                    * 31)) * 31);
         }
 
         @Override // net.bytebuddy.dynamic.scaffold.TypeWriter
         public DynamicType.Unloaded<S> make(TypeResolutionStrategy.Resolved resolved) {
             String str = DUMP_FOLDER;
-            ClassDumpAction.Dispatcher enabled = str == null ? ClassDumpAction.Dispatcher.Disabled.INSTANCE : new ClassDumpAction.Dispatcher.Enabled(str, System.currentTimeMillis());
-            Default<S>.UnresolvedType unresolvedTypeCreate = create(resolved.injectedInto(this.typeInitializer), enabled);
+            ClassDumpAction.Dispatcher enabled = str == null ? ClassDumpAction.Dispatcher.Disabled.INSTANCE
+                    : new ClassDumpAction.Dispatcher.Enabled(str, System.currentTimeMillis());
+            Default<S>.UnresolvedType unresolvedTypeCreate = create(resolved.injectedInto(this.typeInitializer),
+                    enabled);
             enabled.dump(this.instrumentedType, false, unresolvedTypeCreate.getBinaryRepresentation());
             return unresolvedTypeCreate.toDynamicType(resolved);
         }
@@ -1869,10 +2217,14 @@ public interface TypeWriter<T> {
         /* JADX INFO: Access modifiers changed from: private */
         @AccessControllerPlugin.Enhance
         public static <T> T doPrivileged(PrivilegedExceptionAction<T> privilegedExceptionAction) {
-            return ACCESS_CONTROLLER ? (T) AccessController.doPrivileged(privilegedExceptionAction) : privilegedExceptionAction.run();
+            return ACCESS_CONTROLLER ? (T) AccessController.doPrivileged(privilegedExceptionAction)
+                    : privilegedExceptionAction.run();
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static abstract class ForInlining<U> extends Default<U> {
 
@@ -1890,7 +2242,10 @@ public interface TypeWriter<T> {
             protected final ClassFileLocator classFileLocator;
             protected final TypeDescription originalType;
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class ContextRegistry {
 
                 @UnknownNull
@@ -1905,7 +2260,10 @@ public interface TypeWriter<T> {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public class RegistryContextClassVisitor extends ContextClassVisitor {
                 private final ContextRegistry contextRegistry;
 
@@ -1916,7 +2274,8 @@ public interface TypeWriter<T> {
 
                 @Override // net.bytebuddy.utility.visitor.ContextClassVisitor
                 public List<DynamicType> getAuxiliaryTypes() {
-                    return CompoundList.of((List) ForInlining.this.auxiliaryTypes, (List) this.contextRegistry.getAuxiliaryTypes());
+                    return CompoundList.of((List) ForInlining.this.auxiliaryTypes,
+                            (List) this.contextRegistry.getAuxiliaryTypes());
                 }
 
                 @Override // net.bytebuddy.utility.visitor.ContextClassVisitor
@@ -1925,10 +2284,16 @@ public interface TypeWriter<T> {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class WithDecorationOnly<V> extends ForInlining<V> {
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public class DecorationClassVisitor extends MetadataAwareClassVisitor implements TypeInitializer.Drain {
                     private final ContextRegistry contextRegistry;
 
@@ -1937,7 +2302,8 @@ public interface TypeWriter<T> {
                     private final int readerFlags;
                     private final int writerFlags;
 
-                    public DecorationClassVisitor(ClassVisitor classVisitor, ContextRegistry contextRegistry, int i, int i2) {
+                    public DecorationClassVisitor(ClassVisitor classVisitor, ContextRegistry contextRegistry, int i,
+                            int i2) {
                         super(OpenedClassReader.ASM_API, classVisitor);
                         this.contextRegistry = contextRegistry;
                         this.writerFlags = i;
@@ -1945,7 +2311,8 @@ public interface TypeWriter<T> {
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeInitializer.Drain
-                    public void apply(ClassVisitor classVisitor, TypeInitializer typeInitializer, Implementation.Context context) {
+                    public void apply(ClassVisitor classVisitor, TypeInitializer typeInitializer,
+                            Implementation.Context context) {
                     }
 
                     @Override // net.bytebuddy.utility.visitor.MetadataAwareClassVisitor
@@ -1954,42 +2321,63 @@ public interface TypeWriter<T> {
                         TypeAttributeAppender typeAttributeAppender = withDecorationOnly.typeAttributeAppender;
                         ClassVisitor classVisitor = this.cv;
                         TypeDescription typeDescription = withDecorationOnly.instrumentedType;
-                        typeAttributeAppender.apply(classVisitor, typeDescription, withDecorationOnly.annotationValueFilterFactory.on(typeDescription));
+                        typeAttributeAppender.apply(classVisitor, typeDescription,
+                                withDecorationOnly.annotationValueFilterFactory.on(typeDescription));
                     }
 
                     @Override // net.bytebuddy.utility.visitor.MetadataAwareClassVisitor
                     @MaybeNull
                     public AnnotationVisitor onVisitAnnotation(String str, boolean z) {
-                        return WithDecorationOnly.this.annotationRetention.isEnabled() ? this.cv.visitAnnotation(str, z) : ForInlining.IGNORE_ANNOTATION;
+                        return WithDecorationOnly.this.annotationRetention.isEnabled() ? this.cv.visitAnnotation(str, z)
+                                : ForInlining.IGNORE_ANNOTATION;
                     }
 
                     @Override // net.bytebuddy.utility.visitor.MetadataAwareClassVisitor
                     public void onVisitEnd() {
-                        this.implementationContext.drain(this, this.cv, WithDecorationOnly.this.annotationValueFilterFactory);
+                        this.implementationContext.drain(this, this.cv,
+                                WithDecorationOnly.this.annotationValueFilterFactory);
                         this.cv.visitEnd();
                     }
 
                     @Override // net.bytebuddy.utility.visitor.MetadataAwareClassVisitor
                     @MaybeNull
                     public AnnotationVisitor onVisitTypeAnnotation(int i, TypePath typePath, String str, boolean z) {
-                        return WithDecorationOnly.this.annotationRetention.isEnabled() ? this.cv.visitTypeAnnotation(i, typePath, str, z) : ForInlining.IGNORE_ANNOTATION;
+                        return WithDecorationOnly.this.annotationRetention.isEnabled()
+                                ? this.cv.visitTypeAnnotation(i, typePath, str, z)
+                                : ForInlining.IGNORE_ANNOTATION;
                     }
 
                     @Override // net.bytebuddy.jar.asm.ClassVisitor
                     public void visit(int i, int i2, String str, String str2, String str3, String[] strArr) {
                         ClassFileVersion classFileVersionOfMinorMajor = ClassFileVersion.ofMinorMajor(i);
                         WithDecorationOnly withDecorationOnly = WithDecorationOnly.this;
-                        Implementation.Context.ExtractableView extractableViewMake = withDecorationOnly.implementationContextFactory.make(withDecorationOnly.instrumentedType, withDecorationOnly.auxiliaryTypeNamingStrategy, withDecorationOnly.typeInitializer, classFileVersionOfMinorMajor, withDecorationOnly.classFileVersion, ((this.writerFlags & 2) == 0 && classFileVersionOfMinorMajor.isAtLeast(ClassFileVersion.JAVA_V6)) ? (this.readerFlags & 8) == 0 ? Implementation.Context.FrameGeneration.GENERATE : Implementation.Context.FrameGeneration.EXPAND : Implementation.Context.FrameGeneration.DISABLED);
+                        Implementation.Context.ExtractableView extractableViewMake = withDecorationOnly.implementationContextFactory
+                                .make(withDecorationOnly.instrumentedType,
+                                        withDecorationOnly.auxiliaryTypeNamingStrategy,
+                                        withDecorationOnly.typeInitializer, classFileVersionOfMinorMajor,
+                                        withDecorationOnly.classFileVersion,
+                                        ((this.writerFlags & 2) == 0
+                                                && classFileVersionOfMinorMajor.isAtLeast(ClassFileVersion.JAVA_V6))
+                                                        ? (this.readerFlags & 8) == 0
+                                                                ? Implementation.Context.FrameGeneration.GENERATE
+                                                                : Implementation.Context.FrameGeneration.EXPAND
+                                                        : Implementation.Context.FrameGeneration.DISABLED);
                         this.implementationContext = extractableViewMake;
                         this.contextRegistry.setImplementationContext(extractableViewMake);
                         WithDecorationOnly withDecorationOnly2 = WithDecorationOnly.this;
-                        ClassVisitor classVisitorWrap = withDecorationOnly2.asmVisitorWrapper.wrap(withDecorationOnly2.instrumentedType, this.cv, this.implementationContext, withDecorationOnly2.typePool, withDecorationOnly2.fields, withDecorationOnly2.methods, this.writerFlags, this.readerFlags);
+                        ClassVisitor classVisitorWrap = withDecorationOnly2.asmVisitorWrapper.wrap(
+                                withDecorationOnly2.instrumentedType, this.cv, this.implementationContext,
+                                withDecorationOnly2.typePool, withDecorationOnly2.fields, withDecorationOnly2.methods,
+                                this.writerFlags, this.readerFlags);
                         this.cv = classVisitorWrap;
                         classVisitorWrap.visit(i, i2, str, str2, str3, strArr);
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public static class LazyFieldList extends FieldList.AbstractBase<FieldDescription.InDefinedShape> {
                     private final TypeDescription instrumentedType;
 
@@ -2008,12 +2396,24 @@ public interface TypeWriter<T> {
                     }
                 }
 
-                public WithDecorationOnly(TypeDescription typeDescription, ClassFileVersion classFileVersion, List<? extends DynamicType> list, MethodList<?> methodList, TypeAttributeAppender typeAttributeAppender, AsmVisitorWrapper asmVisitorWrapper, AnnotationValueFilter.Factory factory, AnnotationRetention annotationRetention, AuxiliaryType.NamingStrategy namingStrategy, Implementation.Context.Factory factory2, TypeValidation typeValidation, AsmClassReader.Factory factory3, AsmClassWriter.Factory factory4, TypePool typePool, ClassFileLocator classFileLocator) {
-                    super(typeDescription, classFileVersion, FieldPool.Disabled.INSTANCE, RecordComponentPool.Disabled.INSTANCE, list, new LazyFieldList(typeDescription), methodList, new MethodList.Empty(), new RecordComponentList.Empty(), LoadedTypeInitializer.NoOp.INSTANCE, TypeInitializer.None.INSTANCE, typeAttributeAppender, asmVisitorWrapper, factory, annotationRetention, namingStrategy, factory2, typeValidation, factory3, factory4, typePool, typeDescription, classFileLocator);
+                public WithDecorationOnly(TypeDescription typeDescription, ClassFileVersion classFileVersion,
+                        List<? extends DynamicType> list, MethodList<?> methodList,
+                        TypeAttributeAppender typeAttributeAppender, AsmVisitorWrapper asmVisitorWrapper,
+                        AnnotationValueFilter.Factory factory, AnnotationRetention annotationRetention,
+                        AuxiliaryType.NamingStrategy namingStrategy, Implementation.Context.Factory factory2,
+                        TypeValidation typeValidation, AsmClassReader.Factory factory3, AsmClassWriter.Factory factory4,
+                        TypePool typePool, ClassFileLocator classFileLocator) {
+                    super(typeDescription, classFileVersion, FieldPool.Disabled.INSTANCE,
+                            RecordComponentPool.Disabled.INSTANCE, list, new LazyFieldList(typeDescription), methodList,
+                            new MethodList.Empty(), new RecordComponentList.Empty(),
+                            LoadedTypeInitializer.NoOp.INSTANCE, TypeInitializer.None.INSTANCE, typeAttributeAppender,
+                            asmVisitorWrapper, factory, annotationRetention, namingStrategy, factory2, typeValidation,
+                            factory3, factory4, typePool, typeDescription, classFileLocator);
                 }
 
                 @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ForInlining
-                public ClassVisitor writeTo(ClassVisitor classVisitor, TypeInitializer typeInitializer, ContextRegistry contextRegistry, int i, int i2) {
+                public ClassVisitor writeTo(ClassVisitor classVisitor, TypeInitializer typeInitializer,
+                        ContextRegistry contextRegistry, int i, int i2) {
                     if (typeInitializer.isDefined()) {
                         throw new UnsupportedOperationException("Cannot apply a type initializer for a decoration");
                     }
@@ -2021,14 +2421,28 @@ public interface TypeWriter<T> {
                 }
             }
 
-            public ForInlining(TypeDescription typeDescription, ClassFileVersion classFileVersion, FieldPool fieldPool, RecordComponentPool recordComponentPool, List<? extends DynamicType> list, FieldList<FieldDescription.InDefinedShape> fieldList, MethodList<?> methodList, MethodList<?> methodList2, RecordComponentList<RecordComponentDescription.InDefinedShape> recordComponentList, LoadedTypeInitializer loadedTypeInitializer, TypeInitializer typeInitializer, TypeAttributeAppender typeAttributeAppender, AsmVisitorWrapper asmVisitorWrapper, AnnotationValueFilter.Factory factory, AnnotationRetention annotationRetention, AuxiliaryType.NamingStrategy namingStrategy, Implementation.Context.Factory factory2, TypeValidation typeValidation, AsmClassReader.Factory factory3, AsmClassWriter.Factory factory4, TypePool typePool, TypeDescription typeDescription2, ClassFileLocator classFileLocator) {
-                super(typeDescription, classFileVersion, fieldPool, recordComponentPool, list, fieldList, methodList, methodList2, recordComponentList, loadedTypeInitializer, typeInitializer, typeAttributeAppender, asmVisitorWrapper, factory, annotationRetention, namingStrategy, factory2, typeValidation, factory3, factory4, typePool);
+            public ForInlining(TypeDescription typeDescription, ClassFileVersion classFileVersion, FieldPool fieldPool,
+                    RecordComponentPool recordComponentPool, List<? extends DynamicType> list,
+                    FieldList<FieldDescription.InDefinedShape> fieldList, MethodList<?> methodList,
+                    MethodList<?> methodList2,
+                    RecordComponentList<RecordComponentDescription.InDefinedShape> recordComponentList,
+                    LoadedTypeInitializer loadedTypeInitializer, TypeInitializer typeInitializer,
+                    TypeAttributeAppender typeAttributeAppender, AsmVisitorWrapper asmVisitorWrapper,
+                    AnnotationValueFilter.Factory factory, AnnotationRetention annotationRetention,
+                    AuxiliaryType.NamingStrategy namingStrategy, Implementation.Context.Factory factory2,
+                    TypeValidation typeValidation, AsmClassReader.Factory factory3, AsmClassWriter.Factory factory4,
+                    TypePool typePool, TypeDescription typeDescription2, ClassFileLocator classFileLocator) {
+                super(typeDescription, classFileVersion, fieldPool, recordComponentPool, list, fieldList, methodList,
+                        methodList2, recordComponentList, loadedTypeInitializer, typeInitializer, typeAttributeAppender,
+                        asmVisitorWrapper, factory, annotationRetention, namingStrategy, factory2, typeValidation,
+                        factory3, factory4, typePool);
                 this.originalType = typeDescription2;
                 this.classFileLocator = classFileLocator;
             }
 
             @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default
-            public Default<U>.UnresolvedType create(TypeInitializer typeInitializer, ClassDumpAction.Dispatcher dispatcher) {
+            public Default<U>.UnresolvedType create(TypeInitializer typeInitializer,
+                    ClassDumpAction.Dispatcher dispatcher) {
                 int iMergeWriter;
                 int iMergeReader;
                 AsmClassReader asmClassReaderMake;
@@ -2046,8 +2460,12 @@ public interface TypeWriter<T> {
                     e = e;
                 }
                 try {
-                    asmClassReaderMake.accept(writeTo(ValidatingClassVisitor.of(asmClassWriterMake.getVisitor(), this.typeValidation), typeInitializer, contextRegistry, iMergeWriter, iMergeReader), iMergeReader);
-                    return new UnresolvedType(asmClassWriterMake.getBinaryRepresentation(), contextRegistry.getAuxiliaryTypes());
+                    asmClassReaderMake.accept(
+                            writeTo(ValidatingClassVisitor.of(asmClassWriterMake.getVisitor(), this.typeValidation),
+                                    typeInitializer, contextRegistry, iMergeWriter, iMergeReader),
+                            iMergeReader);
+                    return new UnresolvedType(asmClassWriterMake.getBinaryRepresentation(),
+                            contextRegistry.getAuxiliaryTypes());
                 } catch (IOException e2) {
                     e = e2;
                     throw new RuntimeException("The class file could not be written", e);
@@ -2066,7 +2484,8 @@ public interface TypeWriter<T> {
                     return false;
                 }
                 ForInlining forInlining = (ForInlining) obj;
-                return this.originalType.equals(forInlining.originalType) && this.classFileLocator.equals(forInlining.classFileLocator);
+                return this.originalType.equals(forInlining.originalType)
+                        && this.classFileLocator.equals(forInlining.classFileLocator);
             }
 
             @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default
@@ -2077,12 +2496,20 @@ public interface TypeWriter<T> {
             @Override // net.bytebuddy.dynamic.scaffold.TypeWriter
             public ContextClassVisitor wrap(ClassVisitor classVisitor, int i, int i2) {
                 ContextRegistry contextRegistry = new ContextRegistry();
-                return new RegistryContextClassVisitor(writeTo(ValidatingClassVisitor.of(classVisitor, this.typeValidation), this.typeInitializer, contextRegistry, this.asmVisitorWrapper.mergeWriter(i), this.asmVisitorWrapper.mergeReader(i2)), contextRegistry);
+                return new RegistryContextClassVisitor(
+                        writeTo(ValidatingClassVisitor.of(classVisitor, this.typeValidation), this.typeInitializer,
+                                contextRegistry, this.asmVisitorWrapper.mergeWriter(i),
+                                this.asmVisitorWrapper.mergeReader(i2)),
+                        contextRegistry);
             }
 
-            public abstract ClassVisitor writeTo(ClassVisitor classVisitor, TypeInitializer typeInitializer, ContextRegistry contextRegistry, int i, int i2);
+            public abstract ClassVisitor writeTo(ClassVisitor classVisitor, TypeInitializer typeInitializer,
+                    ContextRegistry contextRegistry, int i, int i2);
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class WithFullProcessing<V> extends ForInlining<V> {
                 private static final Object[] EMPTY = new Object[0];
@@ -2090,11 +2517,18 @@ public interface TypeWriter<T> {
                 private final MethodRebaseResolver methodRebaseResolver;
                 private final MethodRegistry.Prepared methodRegistry;
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public interface InitializationHandler {
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
-                    public static abstract class Appending extends MethodVisitor implements InitializationHandler, TypeInitializer.Drain {
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
+                    public static abstract class Appending extends MethodVisitor
+                            implements InitializationHandler, TypeInitializer.Drain {
                         protected final AnnotationValueFilter.Factory annotationValueFilterFactory;
                         protected final FrameWriter frameWriter;
                         protected final TypeDescription instrumentedType;
@@ -2102,11 +2536,17 @@ public interface TypeWriter<T> {
                         protected final MethodPool.Record record;
                         protected int stackSize;
 
-                        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                        /*
+                         * JADX INFO: compiled from:
+                         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                         */
                         public interface FrameWriter {
                             public static final Object[] EMPTY = new Object[0];
 
-                            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                            /*
+                             * JADX INFO: compiled from:
+                             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                             */
                             public static class Active implements FrameWriter {
                                 private int currentLocalVariableLength;
 
@@ -2138,12 +2578,15 @@ public interface TypeWriter<T> {
                                     } else if (i == 2) {
                                         this.currentLocalVariableLength -= i2;
                                     } else if (i != 3 && i != 4) {
-                                        throw new IllegalStateException(bjs.i(i, "Unexpected frame type: "));
+                                        throw new IllegalStateException(concatVar2Var1(i, "Unexpected frame type: "));
                                     }
                                 }
                             }
 
-                            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                            /*
+                             * JADX INFO: compiled from:
+                             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                             */
                             public enum Expanding implements FrameWriter {
                                 INSTANCE;
 
@@ -2159,7 +2602,10 @@ public interface TypeWriter<T> {
                                 }
                             }
 
-                            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                            /*
+                             * JADX INFO: compiled from:
+                             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                             */
                             public enum NoOp implements FrameWriter {
                                 INSTANCE;
 
@@ -2177,16 +2623,24 @@ public interface TypeWriter<T> {
                             void onFrame(int i, int i2);
                         }
 
-                        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                        /*
+                         * JADX INFO: compiled from:
+                         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                         */
                         public static abstract class WithDrain extends Appending {
                             protected final Label appended;
                             protected final Label original;
 
-                            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                            /*
+                             * JADX INFO: compiled from:
+                             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                             */
                             public static class WithActiveRecord extends WithDrain {
                                 private final Label label;
 
-                                public WithActiveRecord(MethodVisitor methodVisitor, TypeDescription typeDescription, MethodPool.Record record, AnnotationValueFilter.Factory factory, boolean z, boolean z2) {
+                                public WithActiveRecord(MethodVisitor methodVisitor, TypeDescription typeDescription,
+                                        MethodPool.Record record, AnnotationValueFilter.Factory factory, boolean z,
+                                        boolean z2) {
                                     super(methodVisitor, typeDescription, record, factory, z, z2);
                                     this.label = new Label();
                                 }
@@ -2197,7 +2651,8 @@ public interface TypeWriter<T> {
                                     this.frameWriter.emitFrame(this.mv);
                                     ByteCodeAppender.Size sizeApplyCode = this.record.applyCode(this.mv, context);
                                     this.stackSize = Math.max(this.stackSize, sizeApplyCode.getOperandStackSize());
-                                    this.localVariableLength = Math.max(this.localVariableLength, sizeApplyCode.getLocalVariableSize());
+                                    this.localVariableLength = Math.max(this.localVariableLength,
+                                            sizeApplyCode.getLocalVariableSize());
                                 }
 
                                 @Override // net.bytebuddy.jar.asm.MethodVisitor
@@ -2210,9 +2665,14 @@ public interface TypeWriter<T> {
                                 }
                             }
 
-                            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                            /*
+                             * JADX INFO: compiled from:
+                             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                             */
                             public static class WithoutActiveRecord extends WithDrain {
-                                public WithoutActiveRecord(MethodVisitor methodVisitor, TypeDescription typeDescription, MethodPool.Record record, AnnotationValueFilter.Factory factory, boolean z, boolean z2) {
+                                public WithoutActiveRecord(MethodVisitor methodVisitor, TypeDescription typeDescription,
+                                        MethodPool.Record record, AnnotationValueFilter.Factory factory, boolean z,
+                                        boolean z2) {
                                     super(methodVisitor, typeDescription, record, factory, z, z2);
                                 }
 
@@ -2221,7 +2681,9 @@ public interface TypeWriter<T> {
                                 }
                             }
 
-                            public WithDrain(MethodVisitor methodVisitor, TypeDescription typeDescription, MethodPool.Record record, AnnotationValueFilter.Factory factory, boolean z, boolean z2) {
+                            public WithDrain(MethodVisitor methodVisitor, TypeDescription typeDescription,
+                                    MethodPool.Record record, AnnotationValueFilter.Factory factory, boolean z,
+                                    boolean z2) {
                                 super(methodVisitor, typeDescription, record, factory, z, z2);
                                 this.appended = new Label();
                                 this.original = new Label();
@@ -2242,21 +2704,30 @@ public interface TypeWriter<T> {
                                 this.frameWriter.emitFrame(this.mv);
                             }
 
-                            @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ForInlining.WithFullProcessing.InitializationHandler.Appending, net.bytebuddy.jar.asm.MethodVisitor
+                            @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ForInlining.WithFullProcessing.InitializationHandler.Appending,
+                                      // net.bytebuddy.jar.asm.MethodVisitor
                             public void visitEnd() {
                                 this.mv.visitLabel(this.appended);
                                 this.frameWriter.emitFrame(this.mv);
                             }
                         }
 
-                        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                        /*
+                         * JADX INFO: compiled from:
+                         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                         */
                         public static abstract class WithoutDrain extends Appending {
 
-                            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                            /*
+                             * JADX INFO: compiled from:
+                             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                             */
                             public static class WithActiveRecord extends WithoutDrain {
                                 private final Label label;
 
-                                public WithActiveRecord(MethodVisitor methodVisitor, TypeDescription typeDescription, MethodPool.Record record, AnnotationValueFilter.Factory factory, boolean z, boolean z2) {
+                                public WithActiveRecord(MethodVisitor methodVisitor, TypeDescription typeDescription,
+                                        MethodPool.Record record, AnnotationValueFilter.Factory factory, boolean z,
+                                        boolean z2) {
                                     super(methodVisitor, typeDescription, record, factory, z, z2);
                                     this.label = new Label();
                                 }
@@ -2267,7 +2738,8 @@ public interface TypeWriter<T> {
                                     this.frameWriter.emitFrame(this.mv);
                                     ByteCodeAppender.Size sizeApplyCode = this.record.applyCode(this.mv, context);
                                     this.stackSize = Math.max(this.stackSize, sizeApplyCode.getOperandStackSize());
-                                    this.localVariableLength = Math.max(this.localVariableLength, sizeApplyCode.getLocalVariableSize());
+                                    this.localVariableLength = Math.max(this.localVariableLength,
+                                            sizeApplyCode.getLocalVariableSize());
                                 }
 
                                 @Override // net.bytebuddy.jar.asm.MethodVisitor
@@ -2280,9 +2752,13 @@ public interface TypeWriter<T> {
                                 }
                             }
 
-                            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                            /*
+                             * JADX INFO: compiled from:
+                             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                             */
                             public static class WithoutActiveRecord extends WithoutDrain {
-                                public WithoutActiveRecord(MethodVisitor methodVisitor, TypeDescription typeDescription, MethodPool.Record record, AnnotationValueFilter.Factory factory) {
+                                public WithoutActiveRecord(MethodVisitor methodVisitor, TypeDescription typeDescription,
+                                        MethodPool.Record record, AnnotationValueFilter.Factory factory) {
                                     super(methodVisitor, typeDescription, record, factory, false, false);
                                 }
 
@@ -2291,7 +2767,9 @@ public interface TypeWriter<T> {
                                 }
                             }
 
-                            public WithoutDrain(MethodVisitor methodVisitor, TypeDescription typeDescription, MethodPool.Record record, AnnotationValueFilter.Factory factory, boolean z, boolean z2) {
+                            public WithoutDrain(MethodVisitor methodVisitor, TypeDescription typeDescription,
+                                    MethodPool.Record record, AnnotationValueFilter.Factory factory, boolean z,
+                                    boolean z2) {
                                 super(methodVisitor, typeDescription, record, factory, z, z2);
                             }
 
@@ -2299,12 +2777,15 @@ public interface TypeWriter<T> {
                             public void onStart() {
                             }
 
-                            @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ForInlining.WithFullProcessing.InitializationHandler.Appending, net.bytebuddy.jar.asm.MethodVisitor
+                            @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ForInlining.WithFullProcessing.InitializationHandler.Appending,
+                                      // net.bytebuddy.jar.asm.MethodVisitor
                             public void visitEnd() {
                             }
                         }
 
-                        public Appending(MethodVisitor methodVisitor, TypeDescription typeDescription, MethodPool.Record record, AnnotationValueFilter.Factory factory, boolean z, boolean z2) {
+                        public Appending(MethodVisitor methodVisitor, TypeDescription typeDescription,
+                                MethodPool.Record record, AnnotationValueFilter.Factory factory, boolean z,
+                                boolean z2) {
                             super(OpenedClassReader.ASM_API, methodVisitor);
                             this.instrumentedType = typeDescription;
                             this.record = record;
@@ -2318,30 +2799,50 @@ public interface TypeWriter<T> {
                             }
                         }
 
-                        public static InitializationHandler of(boolean z, MethodVisitor methodVisitor, TypeDescription typeDescription, MethodPool methodPool, AnnotationValueFilter.Factory factory, boolean z2, boolean z3) {
-                            return z ? withDrain(methodVisitor, typeDescription, methodPool, factory, z2, z3) : withoutDrain(methodVisitor, typeDescription, methodPool, factory, z2, z3);
+                        public static InitializationHandler of(boolean z, MethodVisitor methodVisitor,
+                                TypeDescription typeDescription, MethodPool methodPool,
+                                AnnotationValueFilter.Factory factory, boolean z2, boolean z3) {
+                            return z ? withDrain(methodVisitor, typeDescription, methodPool, factory, z2, z3)
+                                    : withoutDrain(methodVisitor, typeDescription, methodPool, factory, z2, z3);
                         }
 
-                        private static WithDrain withDrain(MethodVisitor methodVisitor, TypeDescription typeDescription, MethodPool methodPool, AnnotationValueFilter.Factory factory, boolean z, boolean z2) {
-                            MethodPool.Record recordTarget = methodPool.target(new MethodDescription.Latent.TypeInitializer(typeDescription));
-                            return recordTarget.getSort().isImplemented() ? new WithDrain.WithActiveRecord(methodVisitor, typeDescription, recordTarget, factory, z, z2) : new WithDrain.WithoutActiveRecord(methodVisitor, typeDescription, recordTarget, factory, z, z2);
+                        private static WithDrain withDrain(MethodVisitor methodVisitor, TypeDescription typeDescription,
+                                MethodPool methodPool, AnnotationValueFilter.Factory factory, boolean z, boolean z2) {
+                            MethodPool.Record recordTarget = methodPool
+                                    .target(new MethodDescription.Latent.TypeInitializer(typeDescription));
+                            return recordTarget.getSort().isImplemented()
+                                    ? new WithDrain.WithActiveRecord(methodVisitor, typeDescription, recordTarget,
+                                            factory, z, z2)
+                                    : new WithDrain.WithoutActiveRecord(methodVisitor, typeDescription, recordTarget,
+                                            factory, z, z2);
                         }
 
-                        private static WithoutDrain withoutDrain(MethodVisitor methodVisitor, TypeDescription typeDescription, MethodPool methodPool, AnnotationValueFilter.Factory factory, boolean z, boolean z2) {
-                            MethodPool.Record recordTarget = methodPool.target(new MethodDescription.Latent.TypeInitializer(typeDescription));
-                            return recordTarget.getSort().isImplemented() ? new WithoutDrain.WithActiveRecord(methodVisitor, typeDescription, recordTarget, factory, z, z2) : new WithoutDrain.WithoutActiveRecord(methodVisitor, typeDescription, recordTarget, factory);
+                        private static WithoutDrain withoutDrain(MethodVisitor methodVisitor,
+                                TypeDescription typeDescription, MethodPool methodPool,
+                                AnnotationValueFilter.Factory factory, boolean z, boolean z2) {
+                            MethodPool.Record recordTarget = methodPool
+                                    .target(new MethodDescription.Latent.TypeInitializer(typeDescription));
+                            return recordTarget.getSort().isImplemented()
+                                    ? new WithoutDrain.WithActiveRecord(methodVisitor, typeDescription, recordTarget,
+                                            factory, z, z2)
+                                    : new WithoutDrain.WithoutActiveRecord(methodVisitor, typeDescription, recordTarget,
+                                            factory);
                         }
 
                         @Override // net.bytebuddy.dynamic.scaffold.TypeInitializer.Drain
-                        public void apply(ClassVisitor classVisitor, TypeInitializer typeInitializer, Implementation.Context context) {
-                            ByteCodeAppender.Size sizeApply = typeInitializer.apply(this.mv, context, new MethodDescription.Latent.TypeInitializer(this.instrumentedType));
+                        public void apply(ClassVisitor classVisitor, TypeInitializer typeInitializer,
+                                Implementation.Context context) {
+                            ByteCodeAppender.Size sizeApply = typeInitializer.apply(this.mv, context,
+                                    new MethodDescription.Latent.TypeInitializer(this.instrumentedType));
                             this.stackSize = Math.max(this.stackSize, sizeApply.getOperandStackSize());
-                            this.localVariableLength = Math.max(this.localVariableLength, sizeApply.getLocalVariableSize());
+                            this.localVariableLength = Math.max(this.localVariableLength,
+                                    sizeApply.getLocalVariableSize());
                             onComplete(context);
                         }
 
                         @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ForInlining.WithFullProcessing.InitializationHandler
-                        public void complete(ClassVisitor classVisitor, Implementation.Context.ExtractableView extractableView) {
+                        public void complete(ClassVisitor classVisitor,
+                                Implementation.Context.ExtractableView extractableView) {
                             extractableView.drain(this, classVisitor, this.annotationValueFilterFactory);
                             this.mv.visitMaxs(this.stackSize, this.localVariableLength);
                             this.mv.visitEnd();
@@ -2362,7 +2863,8 @@ public interface TypeWriter<T> {
                         public abstract void visitEnd();
 
                         @Override // net.bytebuddy.jar.asm.MethodVisitor
-                        public void visitFrame(int i, int i2, @MaybeNull Object[] objArr, int i3, @MaybeNull Object[] objArr2) {
+                        public void visitFrame(int i, int i2, @MaybeNull Object[] objArr, int i3,
+                                @MaybeNull Object[] objArr2) {
                             super.visitFrame(i, i2, objArr, i3, objArr2);
                             this.frameWriter.onFrame(i, i2);
                         }
@@ -2374,14 +2876,20 @@ public interface TypeWriter<T> {
                         }
                     }
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
-                    public static class Creating extends TypeInitializer.Drain.Default implements InitializationHandler {
-                        public Creating(TypeDescription typeDescription, MethodPool methodPool, AnnotationValueFilter.Factory factory) {
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
+                    public static class Creating extends TypeInitializer.Drain.Default
+                            implements InitializationHandler {
+                        public Creating(TypeDescription typeDescription, MethodPool methodPool,
+                                AnnotationValueFilter.Factory factory) {
                             super(typeDescription, methodPool, factory);
                         }
 
                         @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ForInlining.WithFullProcessing.InitializationHandler
-                        public void complete(ClassVisitor classVisitor, Implementation.Context.ExtractableView extractableView) {
+                        public void complete(ClassVisitor classVisitor,
+                                Implementation.Context.ExtractableView extractableView) {
                             extractableView.drain(this, classVisitor, this.annotationValueFilterFactory);
                         }
                     }
@@ -2389,21 +2897,40 @@ public interface TypeWriter<T> {
                     void complete(ClassVisitor classVisitor, Implementation.Context.ExtractableView extractableView);
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public static class OpenedClassRemapper extends ClassRemapper {
                     public OpenedClassRemapper(ClassVisitor classVisitor, Remapper remapper) {
                         super(OpenedClassReader.ASM_API, classVisitor, remapper);
                     }
                 }
 
-                public WithFullProcessing(TypeDescription typeDescription, ClassFileVersion classFileVersion, FieldPool fieldPool, RecordComponentPool recordComponentPool, List<? extends DynamicType> list, FieldList<FieldDescription.InDefinedShape> fieldList, MethodList<?> methodList, MethodList<?> methodList2, RecordComponentList<RecordComponentDescription.InDefinedShape> recordComponentList, LoadedTypeInitializer loadedTypeInitializer, TypeInitializer typeInitializer, TypeAttributeAppender typeAttributeAppender, AsmVisitorWrapper asmVisitorWrapper, AnnotationValueFilter.Factory factory, AnnotationRetention annotationRetention, AuxiliaryType.NamingStrategy namingStrategy, Implementation.Context.Factory factory2, TypeValidation typeValidation, AsmClassReader.Factory factory3, AsmClassWriter.Factory factory4, TypePool typePool, TypeDescription typeDescription2, ClassFileLocator classFileLocator, MethodRegistry.Prepared prepared, Implementation.Target.Factory factory5, MethodRebaseResolver methodRebaseResolver) {
-                    super(typeDescription, classFileVersion, fieldPool, recordComponentPool, list, fieldList, methodList, methodList2, recordComponentList, loadedTypeInitializer, typeInitializer, typeAttributeAppender, asmVisitorWrapper, factory, annotationRetention, namingStrategy, factory2, typeValidation, factory3, factory4, typePool, typeDescription2, classFileLocator);
+                public WithFullProcessing(TypeDescription typeDescription, ClassFileVersion classFileVersion,
+                        FieldPool fieldPool, RecordComponentPool recordComponentPool, List<? extends DynamicType> list,
+                        FieldList<FieldDescription.InDefinedShape> fieldList, MethodList<?> methodList,
+                        MethodList<?> methodList2,
+                        RecordComponentList<RecordComponentDescription.InDefinedShape> recordComponentList,
+                        LoadedTypeInitializer loadedTypeInitializer, TypeInitializer typeInitializer,
+                        TypeAttributeAppender typeAttributeAppender, AsmVisitorWrapper asmVisitorWrapper,
+                        AnnotationValueFilter.Factory factory, AnnotationRetention annotationRetention,
+                        AuxiliaryType.NamingStrategy namingStrategy, Implementation.Context.Factory factory2,
+                        TypeValidation typeValidation, AsmClassReader.Factory factory3, AsmClassWriter.Factory factory4,
+                        TypePool typePool, TypeDescription typeDescription2, ClassFileLocator classFileLocator,
+                        MethodRegistry.Prepared prepared, Implementation.Target.Factory factory5,
+                        MethodRebaseResolver methodRebaseResolver) {
+                    super(typeDescription, classFileVersion, fieldPool, recordComponentPool, list, fieldList,
+                            methodList, methodList2, recordComponentList, loadedTypeInitializer, typeInitializer,
+                            typeAttributeAppender, asmVisitorWrapper, factory, annotationRetention, namingStrategy,
+                            factory2, typeValidation, factory3, factory4, typePool, typeDescription2, classFileLocator);
                     this.methodRegistry = prepared;
                     this.implementationTargetFactory = factory5;
                     this.methodRebaseResolver = methodRebaseResolver;
                 }
 
-                @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ForInlining, net.bytebuddy.dynamic.scaffold.TypeWriter.Default
+                @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ForInlining,
+                          // net.bytebuddy.dynamic.scaffold.TypeWriter.Default
                 public boolean equals(@MaybeNull Object obj) {
                     if (!super.equals(obj)) {
                         return false;
@@ -2415,21 +2942,34 @@ public interface TypeWriter<T> {
                         return false;
                     }
                     WithFullProcessing withFullProcessing = (WithFullProcessing) obj;
-                    return this.methodRegistry.equals(withFullProcessing.methodRegistry) && this.implementationTargetFactory.equals(withFullProcessing.implementationTargetFactory) && this.methodRebaseResolver.equals(withFullProcessing.methodRebaseResolver);
+                    return this.methodRegistry.equals(withFullProcessing.methodRegistry)
+                            && this.implementationTargetFactory.equals(withFullProcessing.implementationTargetFactory)
+                            && this.methodRebaseResolver.equals(withFullProcessing.methodRebaseResolver);
                 }
 
-                @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ForInlining, net.bytebuddy.dynamic.scaffold.TypeWriter.Default
+                @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ForInlining,
+                          // net.bytebuddy.dynamic.scaffold.TypeWriter.Default
                 public int hashCode() {
-                    return this.methodRebaseResolver.hashCode() + ((this.implementationTargetFactory.hashCode() + ((this.methodRegistry.hashCode() + (super.hashCode() * 31)) * 31)) * 31);
+                    return this.methodRebaseResolver.hashCode() + ((this.implementationTargetFactory.hashCode()
+                            + ((this.methodRegistry.hashCode() + (super.hashCode() * 31)) * 31)) * 31);
                 }
 
                 @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default.ForInlining
-                public ClassVisitor writeTo(ClassVisitor classVisitor, TypeInitializer typeInitializer, ContextRegistry contextRegistry, int i, int i2) {
-                    RedefinitionClassVisitor redefinitionClassVisitor = new RedefinitionClassVisitor(classVisitor, typeInitializer, contextRegistry, i, i2);
-                    return this.originalType.getName().equals(this.instrumentedType.getName()) ? redefinitionClassVisitor : new OpenedClassRemapper(redefinitionClassVisitor, new SimpleRemapper(OpenedClassReader.ASM_API, this.originalType.getInternalName(), this.instrumentedType.getInternalName()));
+                public ClassVisitor writeTo(ClassVisitor classVisitor, TypeInitializer typeInitializer,
+                        ContextRegistry contextRegistry, int i, int i2) {
+                    RedefinitionClassVisitor redefinitionClassVisitor = new RedefinitionClassVisitor(classVisitor,
+                            typeInitializer, contextRegistry, i, i2);
+                    return this.originalType.getName().equals(this.instrumentedType.getName())
+                            ? redefinitionClassVisitor
+                            : new OpenedClassRemapper(redefinitionClassVisitor,
+                                    new SimpleRemapper(OpenedClassReader.ASM_API, this.originalType.getInternalName(),
+                                            this.instrumentedType.getInternalName()));
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public class RedefinitionClassVisitor extends MetadataAwareClassVisitor {
                     private final ContextRegistry contextRegistry;
                     private final LinkedHashMap<SignatureKey, FieldDescription> declarableFields;
@@ -2456,7 +2996,10 @@ public interface TypeWriter<T> {
                     private final TypeInitializer typeInitializer;
                     private final int writerFlags;
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     public class AttributeObtainingFieldVisitor extends FieldVisitor {
                         private final FieldPool.Record record;
 
@@ -2468,7 +3011,9 @@ public interface TypeWriter<T> {
                         @Override // net.bytebuddy.jar.asm.FieldVisitor
                         @MaybeNull
                         public AnnotationVisitor visitAnnotation(String str, boolean z) {
-                            return WithFullProcessing.this.annotationRetention.isEnabled() ? super.visitAnnotation(str, z) : ForInlining.IGNORE_ANNOTATION;
+                            return WithFullProcessing.this.annotationRetention.isEnabled()
+                                    ? super.visitAnnotation(str, z)
+                                    : ForInlining.IGNORE_ANNOTATION;
                         }
 
                         @Override // net.bytebuddy.jar.asm.FieldVisitor
@@ -2479,12 +3024,18 @@ public interface TypeWriter<T> {
 
                         @Override // net.bytebuddy.jar.asm.FieldVisitor
                         @MaybeNull
-                        public AnnotationVisitor visitTypeAnnotation(int i, @MaybeNull TypePath typePath, String str, boolean z) {
-                            return WithFullProcessing.this.annotationRetention.isEnabled() ? super.visitTypeAnnotation(i, typePath, str, z) : ForInlining.IGNORE_ANNOTATION;
+                        public AnnotationVisitor visitTypeAnnotation(int i, @MaybeNull TypePath typePath, String str,
+                                boolean z) {
+                            return WithFullProcessing.this.annotationRetention.isEnabled()
+                                    ? super.visitTypeAnnotation(i, typePath, str, z)
+                                    : ForInlining.IGNORE_ANNOTATION;
                         }
                     }
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     public class AttributeObtainingMethodVisitor extends MethodVisitor {
                         private final MethodVisitor actualMethodVisitor;
                         private final MethodPool.Record record;
@@ -2506,7 +3057,9 @@ public interface TypeWriter<T> {
                         @Override // net.bytebuddy.jar.asm.MethodVisitor
                         @MaybeNull
                         public AnnotationVisitor visitAnnotation(String str, boolean z) {
-                            return WithFullProcessing.this.annotationRetention.isEnabled() ? super.visitAnnotation(str, z) : ForInlining.IGNORE_ANNOTATION;
+                            return WithFullProcessing.this.annotationRetention.isEnabled()
+                                    ? super.visitAnnotation(str, z)
+                                    : ForInlining.IGNORE_ANNOTATION;
                         }
 
                         @Override // net.bytebuddy.jar.asm.MethodVisitor
@@ -2522,35 +3075,48 @@ public interface TypeWriter<T> {
 
                         @Override // net.bytebuddy.jar.asm.MethodVisitor
                         public void visitEnd() {
-                            this.record.applyBody(this.actualMethodVisitor, RedefinitionClassVisitor.this.implementationContext, WithFullProcessing.this.annotationValueFilterFactory);
+                            this.record.applyBody(this.actualMethodVisitor,
+                                    RedefinitionClassVisitor.this.implementationContext,
+                                    WithFullProcessing.this.annotationValueFilterFactory);
                             this.actualMethodVisitor.visitEnd();
                         }
 
                         @Override // net.bytebuddy.jar.asm.MethodVisitor
                         @MaybeNull
                         public AnnotationVisitor visitParameterAnnotation(int i, String str, boolean z) {
-                            return WithFullProcessing.this.annotationRetention.isEnabled() ? super.visitParameterAnnotation(i, str, z) : ForInlining.IGNORE_ANNOTATION;
+                            return WithFullProcessing.this.annotationRetention.isEnabled()
+                                    ? super.visitParameterAnnotation(i, str, z)
+                                    : ForInlining.IGNORE_ANNOTATION;
                         }
 
                         @Override // net.bytebuddy.jar.asm.MethodVisitor
                         @MaybeNull
-                        public AnnotationVisitor visitTypeAnnotation(int i, @MaybeNull TypePath typePath, String str, boolean z) {
-                            return WithFullProcessing.this.annotationRetention.isEnabled() ? super.visitTypeAnnotation(i, typePath, str, z) : ForInlining.IGNORE_ANNOTATION;
+                        public AnnotationVisitor visitTypeAnnotation(int i, @MaybeNull TypePath typePath, String str,
+                                boolean z) {
+                            return WithFullProcessing.this.annotationRetention.isEnabled()
+                                    ? super.visitTypeAnnotation(i, typePath, str, z)
+                                    : ForInlining.IGNORE_ANNOTATION;
                         }
                     }
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     public class AttributeObtainingRecordComponentVisitor extends RecordComponentVisitor {
                         private final RecordComponentPool.Record record;
 
-                        public AttributeObtainingRecordComponentVisitor(RecordComponentVisitor recordComponentVisitor, RecordComponentPool.Record record) {
+                        public AttributeObtainingRecordComponentVisitor(RecordComponentVisitor recordComponentVisitor,
+                                RecordComponentPool.Record record) {
                             super(OpenedClassReader.ASM_API, recordComponentVisitor);
                             this.record = record;
                         }
 
                         @Override // net.bytebuddy.jar.asm.RecordComponentVisitor
                         public AnnotationVisitor visitAnnotation(String str, boolean z) {
-                            return WithFullProcessing.this.annotationRetention.isEnabled() ? super.visitAnnotation(str, z) : ForInlining.IGNORE_ANNOTATION;
+                            return WithFullProcessing.this.annotationRetention.isEnabled()
+                                    ? super.visitAnnotation(str, z)
+                                    : ForInlining.IGNORE_ANNOTATION;
                         }
 
                         @Override // net.bytebuddy.jar.asm.RecordComponentVisitor
@@ -2561,17 +3127,23 @@ public interface TypeWriter<T> {
 
                         @Override // net.bytebuddy.jar.asm.RecordComponentVisitor
                         public AnnotationVisitor visitTypeAnnotation(int i, TypePath typePath, String str, boolean z) {
-                            return WithFullProcessing.this.annotationRetention.isEnabled() ? super.visitTypeAnnotation(i, typePath, str, z) : ForInlining.IGNORE_ANNOTATION;
+                            return WithFullProcessing.this.annotationRetention.isEnabled()
+                                    ? super.visitTypeAnnotation(i, typePath, str, z)
+                                    : ForInlining.IGNORE_ANNOTATION;
                         }
                     }
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     public class CodePreservingMethodVisitor extends MethodVisitor {
                         private final MethodVisitor actualMethodVisitor;
                         private final MethodPool.Record record;
                         private final MethodRebaseResolver.Resolution resolution;
 
-                        public CodePreservingMethodVisitor(MethodVisitor methodVisitor, MethodPool.Record record, MethodRebaseResolver.Resolution resolution) {
+                        public CodePreservingMethodVisitor(MethodVisitor methodVisitor, MethodPool.Record record,
+                                MethodRebaseResolver.Resolution resolution) {
                             super(OpenedClassReader.ASM_API, methodVisitor);
                             this.actualMethodVisitor = methodVisitor;
                             this.record = record;
@@ -2589,7 +3161,9 @@ public interface TypeWriter<T> {
                         @Override // net.bytebuddy.jar.asm.MethodVisitor
                         @MaybeNull
                         public AnnotationVisitor visitAnnotation(String str, boolean z) {
-                            return WithFullProcessing.this.annotationRetention.isEnabled() ? super.visitAnnotation(str, z) : ForInlining.IGNORE_ANNOTATION;
+                            return WithFullProcessing.this.annotationRetention.isEnabled()
+                                    ? super.visitAnnotation(str, z)
+                                    : ForInlining.IGNORE_ANNOTATION;
                         }
 
                         @Override // net.bytebuddy.jar.asm.MethodVisitor
@@ -2600,25 +3174,40 @@ public interface TypeWriter<T> {
 
                         @Override // net.bytebuddy.jar.asm.MethodVisitor
                         public void visitCode() {
-                            this.record.applyBody(this.actualMethodVisitor, RedefinitionClassVisitor.this.implementationContext, WithFullProcessing.this.annotationValueFilterFactory);
+                            this.record.applyBody(this.actualMethodVisitor,
+                                    RedefinitionClassVisitor.this.implementationContext,
+                                    WithFullProcessing.this.annotationValueFilterFactory);
                             this.actualMethodVisitor.visitEnd();
                             if (!this.resolution.isRebased()) {
                                 this.mv = ForInlining.IGNORE_METHOD;
                                 super.visitCode();
                                 return;
                             }
-                            this.mv = ((ClassVisitor) RedefinitionClassVisitor.this).cv.visitMethod(this.resolution.getResolvedMethod().getActualModifiers(), this.resolution.getResolvedMethod().getInternalName(), this.resolution.getResolvedMethod().getDescriptor(), this.resolution.getResolvedMethod().getGenericSignature(), this.resolution.getResolvedMethod().getExceptionTypes().asErasures().toInternalNames());
+                            this.mv = ((ClassVisitor) RedefinitionClassVisitor.this).cv.visitMethod(
+                                    this.resolution.getResolvedMethod().getActualModifiers(),
+                                    this.resolution.getResolvedMethod().getInternalName(),
+                                    this.resolution.getResolvedMethod().getDescriptor(),
+                                    this.resolution.getResolvedMethod().getGenericSignature(), this.resolution
+                                            .getResolvedMethod().getExceptionTypes().asErasures().toInternalNames());
                             super.visitCode();
-                            if (this.resolution.getAppendedParameters().isEmpty() || !RedefinitionClassVisitor.this.implementationContext.getFrameGeneration().isActive()) {
+                            if (this.resolution.getAppendedParameters().isEmpty()
+                                    || !RedefinitionClassVisitor.this.implementationContext.getFrameGeneration()
+                                            .isActive()) {
                                 return;
                             }
-                            if (RedefinitionClassVisitor.this.implementationContext.getFrameGeneration() != Implementation.Context.FrameGeneration.GENERATE || this.resolution.getAppendedParameters().size() >= 4) {
-                                int size = (this.resolution.getResolvedMethod().getParameters().size() - this.resolution.getAppendedParameters().size()) + 1;
+                            if (RedefinitionClassVisitor.this.implementationContext
+                                    .getFrameGeneration() != Implementation.Context.FrameGeneration.GENERATE
+                                    || this.resolution.getAppendedParameters().size() >= 4) {
+                                int size = (this.resolution.getResolvedMethod().getParameters().size()
+                                        - this.resolution.getAppendedParameters().size()) + 1;
                                 Object[] objArr = new Object[size];
                                 objArr[0] = Opcodes.UNINITIALIZED_THIS;
                                 for (int i = 1; i < size; i++) {
-                                    TypeDescription.Generic type = this.resolution.getResolvedMethod().getParameters().get(i - 1).getType();
-                                    if (type.represents(Boolean.TYPE) || type.represents(Byte.TYPE) || type.represents(Short.TYPE) || type.represents(Character.TYPE) || type.represents(Integer.TYPE)) {
+                                    TypeDescription.Generic type = this.resolution.getResolvedMethod().getParameters()
+                                            .get(i - 1).getType();
+                                    if (type.represents(Boolean.TYPE) || type.represents(Byte.TYPE)
+                                            || type.represents(Short.TYPE) || type.represents(Character.TYPE)
+                                            || type.represents(Integer.TYPE)) {
                                         objArr[i] = Opcodes.INTEGER;
                                     } else if (type.represents(Long.TYPE)) {
                                         objArr[i] = Opcodes.LONG;
@@ -2630,9 +3219,12 @@ public interface TypeWriter<T> {
                                         objArr[i] = type.asErasure().getInternalName();
                                     }
                                 }
-                                super.visitFrame((RedefinitionClassVisitor.this.readerFlags & 8) == 0 ? 0 : -1, size, objArr, WithFullProcessing.EMPTY.length, WithFullProcessing.EMPTY);
+                                super.visitFrame((RedefinitionClassVisitor.this.readerFlags & 8) == 0 ? 0 : -1, size,
+                                        objArr, WithFullProcessing.EMPTY.length, WithFullProcessing.EMPTY);
                             } else {
-                                super.visitFrame(2, this.resolution.getAppendedParameters().size(), WithFullProcessing.EMPTY, WithFullProcessing.EMPTY.length, WithFullProcessing.EMPTY);
+                                super.visitFrame(2, this.resolution.getAppendedParameters().size(),
+                                        WithFullProcessing.EMPTY, WithFullProcessing.EMPTY.length,
+                                        WithFullProcessing.EMPTY);
                             }
                             super.visitInsn(0);
                         }
@@ -2645,17 +3237,25 @@ public interface TypeWriter<T> {
                         @Override // net.bytebuddy.jar.asm.MethodVisitor
                         @MaybeNull
                         public AnnotationVisitor visitParameterAnnotation(int i, String str, boolean z) {
-                            return WithFullProcessing.this.annotationRetention.isEnabled() ? super.visitParameterAnnotation(i, str, z) : ForInlining.IGNORE_ANNOTATION;
+                            return WithFullProcessing.this.annotationRetention.isEnabled()
+                                    ? super.visitParameterAnnotation(i, str, z)
+                                    : ForInlining.IGNORE_ANNOTATION;
                         }
 
                         @Override // net.bytebuddy.jar.asm.MethodVisitor
                         @MaybeNull
-                        public AnnotationVisitor visitTypeAnnotation(int i, @MaybeNull TypePath typePath, String str, boolean z) {
-                            return WithFullProcessing.this.annotationRetention.isEnabled() ? super.visitTypeAnnotation(i, typePath, str, z) : ForInlining.IGNORE_ANNOTATION;
+                        public AnnotationVisitor visitTypeAnnotation(int i, @MaybeNull TypePath typePath, String str,
+                                boolean z) {
+                            return WithFullProcessing.this.annotationRetention.isEnabled()
+                                    ? super.visitTypeAnnotation(i, typePath, str, z)
+                                    : ForInlining.IGNORE_ANNOTATION;
                         }
                     }
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     public class DeduplicatingClassVisitor extends ClassVisitor {
                         public DeduplicatingClassVisitor(ClassVisitor classVisitor) {
                             super(OpenedClassReader.ASM_API, classVisitor);
@@ -2663,27 +3263,30 @@ public interface TypeWriter<T> {
 
                         @Override // net.bytebuddy.jar.asm.ClassVisitor
                         @MaybeNull
-                        public FieldVisitor visitField(int i, String str, String str2, @MaybeNull String str3, @MaybeNull Object obj) {
+                        public FieldVisitor visitField(int i, String str, String str2, @MaybeNull String str3,
+                                @MaybeNull Object obj) {
                             if (RedefinitionClassVisitor.this.fieldKeys.contains(new SignatureKey(str, str2))) {
-                                throw new IllegalStateException(bjs.o("Field already defined: ", str, str2));
+                                throw new IllegalStateException(concat("Field already defined: ", str, str2));
                             }
                             return super.visitField(i, str, str2, str3, obj);
                         }
 
                         @Override // net.bytebuddy.jar.asm.ClassVisitor
                         @MaybeNull
-                        public MethodVisitor visitMethod(int i, String str, String str2, @MaybeNull String str3, @MaybeNull String[] strArr) {
+                        public MethodVisitor visitMethod(int i, String str, String str2, @MaybeNull String str3,
+                                @MaybeNull String[] strArr) {
                             if (!RedefinitionClassVisitor.this.methodsKeys.contains(new SignatureKey(str, str2))) {
                                 return super.visitMethod(i, str, str2, str3, strArr);
                             }
                             if ((i & 64) != 0) {
                                 return null;
                             }
-                            throw new IllegalStateException(bjs.o("Method already defined: ", str, str2));
+                            throw new IllegalStateException(concat("Method already defined: ", str, str2));
                         }
                     }
 
-                    public RedefinitionClassVisitor(ClassVisitor classVisitor, TypeInitializer typeInitializer, ContextRegistry contextRegistry, int i, int i2) {
+                    public RedefinitionClassVisitor(ClassVisitor classVisitor, TypeInitializer typeInitializer,
+                            ContextRegistry contextRegistry, int i, int i2) {
                         super(OpenedClassReader.ASM_API, classVisitor);
                         this.fieldKeys = new HashSet();
                         this.methodsKeys = new HashSet();
@@ -2691,39 +3294,55 @@ public interface TypeWriter<T> {
                         this.contextRegistry = contextRegistry;
                         this.writerFlags = i;
                         this.readerFlags = i2;
-                        this.declarableFields = new LinkedHashMap<>((int) Math.ceil(((double) WithFullProcessing.this.fields.size()) / 0.75d));
+                        this.declarableFields = new LinkedHashMap<>(
+                                (int) Math.ceil(((double) WithFullProcessing.this.fields.size()) / 0.75d));
                         for (FieldDescription.InDefinedShape inDefinedShape : WithFullProcessing.this.fields) {
-                            this.declarableFields.put(new SignatureKey(inDefinedShape.getInternalName(), inDefinedShape.getDescriptor()), inDefinedShape);
+                            this.declarableFields.put(
+                                    new SignatureKey(inDefinedShape.getInternalName(), inDefinedShape.getDescriptor()),
+                                    inDefinedShape);
                         }
-                        this.declarableMethods = new LinkedHashMap<>((int) Math.ceil(((double) WithFullProcessing.this.instrumentedMethods.size()) / 0.75d));
+                        this.declarableMethods = new LinkedHashMap<>(
+                                (int) Math.ceil(((double) WithFullProcessing.this.instrumentedMethods.size()) / 0.75d));
                         Iterator<?> it = WithFullProcessing.this.instrumentedMethods.iterator();
                         while (it.hasNext()) {
                             MethodDescription methodDescription = (MethodDescription) it.next();
-                            this.declarableMethods.put(new SignatureKey(methodDescription.getInternalName(), methodDescription.getDescriptor()), methodDescription);
+                            this.declarableMethods.put(new SignatureKey(methodDescription.getInternalName(),
+                                    methodDescription.getDescriptor()), methodDescription);
                         }
-                        this.declarableRecordComponents = new LinkedHashMap<>((int) Math.ceil(((double) WithFullProcessing.this.recordComponents.size()) / 0.75d));
+                        this.declarableRecordComponents = new LinkedHashMap<>(
+                                (int) Math.ceil(((double) WithFullProcessing.this.recordComponents.size()) / 0.75d));
                         for (RecordComponentDescription.InDefinedShape inDefinedShape2 : WithFullProcessing.this.recordComponents) {
                             this.declarableRecordComponents.put(inDefinedShape2.getActualName(), inDefinedShape2);
                         }
                         if (WithFullProcessing.this.instrumentedType.isNestHost()) {
-                            this.nestMembers = new LinkedHashSet((int) Math.ceil(((double) WithFullProcessing.this.instrumentedType.getNestMembers().size()) / 0.75d));
-                            Iterator<TypeDescription> it2 = WithFullProcessing.this.instrumentedType.getNestMembers().filter(ElementMatchers.not(ElementMatchers.is(WithFullProcessing.this.instrumentedType))).iterator();
+                            this.nestMembers = new LinkedHashSet((int) Math
+                                    .ceil(((double) WithFullProcessing.this.instrumentedType.getNestMembers().size())
+                                            / 0.75d));
+                            Iterator<TypeDescription> it2 = WithFullProcessing.this.instrumentedType.getNestMembers()
+                                    .filter(ElementMatchers
+                                            .not(ElementMatchers.is(WithFullProcessing.this.instrumentedType)))
+                                    .iterator();
                             while (it2.hasNext()) {
                                 this.nestMembers.add(it2.next().getInternalName());
                             }
                         } else {
                             this.nestMembers = Collections.EMPTY_SET;
                         }
-                        this.declaredTypes = new LinkedHashMap<>((int) Math.ceil(((double) WithFullProcessing.this.instrumentedType.getDeclaredTypes().size()) / 0.75d));
-                        for (TypeDescription typeDescription : WithFullProcessing.this.instrumentedType.getDeclaredTypes()) {
+                        this.declaredTypes = new LinkedHashMap<>((int) Math.ceil(
+                                ((double) WithFullProcessing.this.instrumentedType.getDeclaredTypes().size()) / 0.75d));
+                        for (TypeDescription typeDescription : WithFullProcessing.this.instrumentedType
+                                .getDeclaredTypes()) {
                             this.declaredTypes.put(typeDescription.getInternalName(), typeDescription);
                         }
                         if (!WithFullProcessing.this.instrumentedType.isSealed()) {
                             this.permittedSubclasses = null;
                             return;
                         }
-                        this.permittedSubclasses = new LinkedHashSet((int) Math.ceil(((double) WithFullProcessing.this.instrumentedType.getPermittedSubtypes().size()) / 0.75d));
-                        Iterator<TypeDescription> it3 = WithFullProcessing.this.instrumentedType.getPermittedSubtypes().iterator();
+                        this.permittedSubclasses = new LinkedHashSet((int) Math
+                                .ceil(((double) WithFullProcessing.this.instrumentedType.getPermittedSubtypes().size())
+                                        / 0.75d));
+                        Iterator<TypeDescription> it3 = WithFullProcessing.this.instrumentedType.getPermittedSubtypes()
+                                .iterator();
                         while (it3.hasNext()) {
                             this.permittedSubclasses.add(it3.next().getInternalName());
                         }
@@ -2739,12 +3358,14 @@ public interface TypeWriter<T> {
                         TypeAttributeAppender typeAttributeAppender = withFullProcessing.typeAttributeAppender;
                         ClassVisitor classVisitor = this.cv;
                         TypeDescription typeDescription = withFullProcessing.instrumentedType;
-                        typeAttributeAppender.apply(classVisitor, typeDescription, withFullProcessing.annotationValueFilterFactory.on(typeDescription));
+                        typeAttributeAppender.apply(classVisitor, typeDescription,
+                                withFullProcessing.annotationValueFilterFactory.on(typeDescription));
                     }
 
                     @Override // net.bytebuddy.utility.visitor.MetadataAwareClassVisitor
                     public void onModule() {
-                        ModuleDescription moduleDescription = WithFullProcessing.this.instrumentedType.toModuleDescription();
+                        ModuleDescription moduleDescription = WithFullProcessing.this.instrumentedType
+                                .toModuleDescription();
                         if (moduleDescription != null) {
                             moduleDescription.accept(this.cv);
                         }
@@ -2760,18 +3381,24 @@ public interface TypeWriter<T> {
 
                     @Override // net.bytebuddy.utility.visitor.MetadataAwareClassVisitor
                     public void onOuterType() {
-                        MethodDescription.InDefinedShape enclosingMethod = WithFullProcessing.this.instrumentedType.getEnclosingMethod();
+                        MethodDescription.InDefinedShape enclosingMethod = WithFullProcessing.this.instrumentedType
+                                .getEnclosingMethod();
                         if (enclosingMethod != null) {
-                            this.cv.visitOuterClass(enclosingMethod.getDeclaringType().getInternalName(), enclosingMethod.getInternalName(), enclosingMethod.getDescriptor());
-                        } else if (WithFullProcessing.this.instrumentedType.isLocalType() || WithFullProcessing.this.instrumentedType.isAnonymousType()) {
-                            this.cv.visitOuterClass(WithFullProcessing.this.instrumentedType.getEnclosingType().getInternalName(), Default.NO_REFERENCE, Default.NO_REFERENCE);
+                            this.cv.visitOuterClass(enclosingMethod.getDeclaringType().getInternalName(),
+                                    enclosingMethod.getInternalName(), enclosingMethod.getDescriptor());
+                        } else if (WithFullProcessing.this.instrumentedType.isLocalType()
+                                || WithFullProcessing.this.instrumentedType.isAnonymousType()) {
+                            this.cv.visitOuterClass(
+                                    WithFullProcessing.this.instrumentedType.getEnclosingType().getInternalName(),
+                                    Default.NO_REFERENCE, Default.NO_REFERENCE);
                         }
                     }
 
                     @Override // net.bytebuddy.utility.visitor.MetadataAwareClassVisitor
                     @MaybeNull
                     public AnnotationVisitor onVisitAnnotation(String str, boolean z) {
-                        return WithFullProcessing.this.annotationRetention.isEnabled() ? this.cv.visitAnnotation(str, z) : ForInlining.IGNORE_ANNOTATION;
+                        return WithFullProcessing.this.annotationRetention.isEnabled() ? this.cv.visitAnnotation(str, z)
+                                : ForInlining.IGNORE_ANNOTATION;
                     }
 
                     @Override // net.bytebuddy.utility.visitor.MetadataAwareClassVisitor
@@ -2789,26 +3416,43 @@ public interface TypeWriter<T> {
                         }
                         TypeDescription declaringType = WithFullProcessing.this.instrumentedType.getDeclaringType();
                         if (declaringType != null) {
-                            this.cv.visitInnerClass(WithFullProcessing.this.instrumentedType.getInternalName(), declaringType.getInternalName(), WithFullProcessing.this.instrumentedType.getSimpleName(), WithFullProcessing.this.instrumentedType.getModifiers());
+                            this.cv.visitInnerClass(WithFullProcessing.this.instrumentedType.getInternalName(),
+                                    declaringType.getInternalName(),
+                                    WithFullProcessing.this.instrumentedType.getSimpleName(),
+                                    WithFullProcessing.this.instrumentedType.getModifiers());
                         } else if (WithFullProcessing.this.instrumentedType.isLocalType()) {
-                            this.cv.visitInnerClass(WithFullProcessing.this.instrumentedType.getInternalName(), Default.NO_REFERENCE, WithFullProcessing.this.instrumentedType.getSimpleName(), WithFullProcessing.this.instrumentedType.getModifiers());
+                            this.cv.visitInnerClass(WithFullProcessing.this.instrumentedType.getInternalName(),
+                                    Default.NO_REFERENCE, WithFullProcessing.this.instrumentedType.getSimpleName(),
+                                    WithFullProcessing.this.instrumentedType.getModifiers());
                         } else if (WithFullProcessing.this.instrumentedType.isAnonymousType()) {
-                            this.cv.visitInnerClass(WithFullProcessing.this.instrumentedType.getInternalName(), Default.NO_REFERENCE, Default.NO_REFERENCE, WithFullProcessing.this.instrumentedType.getModifiers());
+                            this.cv.visitInnerClass(WithFullProcessing.this.instrumentedType.getInternalName(),
+                                    Default.NO_REFERENCE, Default.NO_REFERENCE,
+                                    WithFullProcessing.this.instrumentedType.getModifiers());
                         }
                         for (TypeDescription typeDescription : this.declaredTypes.values()) {
-                            this.cv.visitInnerClass(typeDescription.getInternalName(), typeDescription.isMemberType() ? WithFullProcessing.this.instrumentedType.getInternalName() : Default.NO_REFERENCE, typeDescription.isAnonymousType() ? Default.NO_REFERENCE : typeDescription.getSimpleName(), typeDescription.getModifiers());
+                            this.cv.visitInnerClass(typeDescription.getInternalName(),
+                                    typeDescription.isMemberType()
+                                            ? WithFullProcessing.this.instrumentedType.getInternalName()
+                                            : Default.NO_REFERENCE,
+                                    typeDescription.isAnonymousType() ? Default.NO_REFERENCE
+                                            : typeDescription.getSimpleName(),
+                                    typeDescription.getModifiers());
                         }
                         Iterator<RecordComponentDescription> it3 = this.declarableRecordComponents.values().iterator();
                         while (it3.hasNext()) {
-                            WithFullProcessing.this.recordComponentPool.target(it3.next()).apply(this.cv, WithFullProcessing.this.annotationValueFilterFactory);
+                            WithFullProcessing.this.recordComponentPool.target(it3.next()).apply(this.cv,
+                                    WithFullProcessing.this.annotationValueFilterFactory);
                         }
                         Iterator<FieldDescription> it4 = this.declarableFields.values().iterator();
                         while (it4.hasNext()) {
-                            WithFullProcessing.this.fieldPool.target(it4.next()).apply(new DeduplicatingClassVisitor(this.cv), WithFullProcessing.this.annotationValueFilterFactory);
+                            WithFullProcessing.this.fieldPool.target(it4.next()).apply(
+                                    new DeduplicatingClassVisitor(this.cv),
+                                    WithFullProcessing.this.annotationValueFilterFactory);
                         }
                         Iterator<MethodDescription> it5 = this.declarableMethods.values().iterator();
                         while (it5.hasNext()) {
-                            this.methodPool.target(it5.next()).apply(new DeduplicatingClassVisitor(this.cv), this.implementationContext, WithFullProcessing.this.annotationValueFilterFactory);
+                            this.methodPool.target(it5.next()).apply(new DeduplicatingClassVisitor(this.cv),
+                                    this.implementationContext, WithFullProcessing.this.annotationValueFilterFactory);
                         }
                         this.initializationHandler.complete(this.cv, this.implementationContext);
                         this.cv.visitEnd();
@@ -2816,12 +3460,14 @@ public interface TypeWriter<T> {
 
                     @Override // net.bytebuddy.utility.visitor.MetadataAwareClassVisitor
                     @MaybeNull
-                    public FieldVisitor onVisitField(int i, String str, String str2, @MaybeNull String str3, @MaybeNull Object obj) {
+                    public FieldVisitor onVisitField(int i, String str, String str2, @MaybeNull String str3,
+                            @MaybeNull Object obj) {
                         SignatureKey signatureKey = new SignatureKey(str, str2);
                         this.fieldKeys.add(signatureKey);
                         FieldDescription fieldDescriptionRemove = this.declarableFields.remove(signatureKey);
                         if (fieldDescriptionRemove != null) {
-                            FieldPool.Record recordTarget = WithFullProcessing.this.fieldPool.target(fieldDescriptionRemove);
+                            FieldPool.Record recordTarget = WithFullProcessing.this.fieldPool
+                                    .target(fieldDescriptionRemove);
                             if (!recordTarget.isImplicit()) {
                                 return redefine(recordTarget, obj, i, str3);
                             }
@@ -2838,14 +3484,21 @@ public interface TypeWriter<T> {
                         if (typeDescriptionRemove == null) {
                             this.cv.visitInnerClass(str, str2, str3, i);
                         } else {
-                            this.cv.visitInnerClass(str, (typeDescriptionRemove.isMemberType() || (str2 != null && str3 == null && typeDescriptionRemove.isAnonymousType())) ? WithFullProcessing.this.instrumentedType.getInternalName() : Default.NO_REFERENCE, typeDescriptionRemove.isAnonymousType() ? Default.NO_REFERENCE : typeDescriptionRemove.getSimpleName(), typeDescriptionRemove.getModifiers());
+                            this.cv.visitInnerClass(str, (typeDescriptionRemove.isMemberType()
+                                    || (str2 != null && str3 == null && typeDescriptionRemove.isAnonymousType()))
+                                            ? WithFullProcessing.this.instrumentedType.getInternalName()
+                                            : Default.NO_REFERENCE,
+                                    typeDescriptionRemove.isAnonymousType() ? Default.NO_REFERENCE
+                                            : typeDescriptionRemove.getSimpleName(),
+                                    typeDescriptionRemove.getModifiers());
                         }
                     }
 
                     /* JADX WARN: Multi-variable type inference failed */
                     @Override // net.bytebuddy.utility.visitor.MetadataAwareClassVisitor
                     @MaybeNull
-                    public MethodVisitor onVisitMethod(int i, String str, String str2, @MaybeNull String str3, @MaybeNull String[] strArr) {
+                    public MethodVisitor onVisitMethod(int i, String str, String str2, @MaybeNull String str3,
+                            @MaybeNull String[] strArr) {
                         if (!str.equals(MethodDescription.TYPE_INITIALIZER_INTERNAL_NAME)) {
                             SignatureKey signatureKey = new SignatureKey(str, str2);
                             this.methodsKeys.add(signatureKey);
@@ -2861,7 +3514,12 @@ public interface TypeWriter<T> {
                         }
                         boolean zIsEnabled = this.implementationContext.isEnabled();
                         WithFullProcessing withFullProcessing = WithFullProcessing.this;
-                        InitializationHandler initializationHandlerOf = InitializationHandler.Appending.of(zIsEnabled, methodVisitorVisitMethod, withFullProcessing.instrumentedType, this.methodPool, withFullProcessing.annotationValueFilterFactory, (this.writerFlags & 2) == 0 && this.implementationContext.getClassFileVersion().isAtLeast(ClassFileVersion.JAVA_V6), (this.readerFlags & 8) != 0);
+                        InitializationHandler initializationHandlerOf = InitializationHandler.Appending.of(zIsEnabled,
+                                methodVisitorVisitMethod, withFullProcessing.instrumentedType, this.methodPool,
+                                withFullProcessing.annotationValueFilterFactory,
+                                (this.writerFlags & 2) == 0 && this.implementationContext.getClassFileVersion()
+                                        .isAtLeast(ClassFileVersion.JAVA_V6),
+                                (this.readerFlags & 8) != 0);
                         this.initializationHandler = initializationHandlerOf;
                         return (MethodVisitor) initializationHandlerOf;
                     }
@@ -2905,10 +3563,13 @@ public interface TypeWriter<T> {
 
                     @Override // net.bytebuddy.utility.visitor.MetadataAwareClassVisitor
                     @MaybeNull
-                    public RecordComponentVisitor onVisitRecordComponent(String str, String str2, @MaybeNull String str3) {
-                        RecordComponentDescription recordComponentDescriptionRemove = this.declarableRecordComponents.remove(str);
+                    public RecordComponentVisitor onVisitRecordComponent(String str, String str2,
+                            @MaybeNull String str3) {
+                        RecordComponentDescription recordComponentDescriptionRemove = this.declarableRecordComponents
+                                .remove(str);
                         if (recordComponentDescriptionRemove != null) {
-                            RecordComponentPool.Record recordTarget = WithFullProcessing.this.recordComponentPool.target(recordComponentDescriptionRemove);
+                            RecordComponentPool.Record recordTarget = WithFullProcessing.this.recordComponentPool
+                                    .target(recordComponentDescriptionRemove);
                             if (!recordTarget.isImplicit()) {
                                 return redefine(recordTarget, str3);
                             }
@@ -2919,7 +3580,9 @@ public interface TypeWriter<T> {
                     @Override // net.bytebuddy.utility.visitor.MetadataAwareClassVisitor
                     @MaybeNull
                     public AnnotationVisitor onVisitTypeAnnotation(int i, TypePath typePath, String str, boolean z) {
-                        return WithFullProcessing.this.annotationRetention.isEnabled() ? this.cv.visitTypeAnnotation(i, typePath, str, z) : ForInlining.IGNORE_ANNOTATION;
+                        return WithFullProcessing.this.annotationRetention.isEnabled()
+                                ? this.cv.visitTypeAnnotation(i, typePath, str, z)
+                                : ForInlining.IGNORE_ANNOTATION;
                     }
 
                     @MaybeNull
@@ -2931,30 +3594,66 @@ public interface TypeWriter<T> {
                         if (!TypeDescription.AbstractBase.RAW_TYPES) {
                             str = recordComponent.getGenericSignature();
                         }
-                        RecordComponentVisitor recordComponentVisitorVisitRecordComponent = classVisitor.visitRecordComponent(actualName, descriptor, str);
-                        return recordComponentVisitorVisitRecordComponent == null ? ForInlining.IGNORE_RECORD_COMPONENT : new AttributeObtainingRecordComponentVisitor(recordComponentVisitorVisitRecordComponent, record);
+                        RecordComponentVisitor recordComponentVisitorVisitRecordComponent = classVisitor
+                                .visitRecordComponent(actualName, descriptor, str);
+                        return recordComponentVisitorVisitRecordComponent == null ? ForInlining.IGNORE_RECORD_COMPONENT
+                                : new AttributeObtainingRecordComponentVisitor(
+                                        recordComponentVisitorVisitRecordComponent, record);
                     }
 
                     @Override // net.bytebuddy.jar.asm.ClassVisitor
                     public void visit(int i, int i2, String str, String str2, String str3, String[] strArr) {
                         ClassFileVersion classFileVersionOfMinorMajor = ClassFileVersion.ofMinorMajor(i);
-                        MethodRegistry.Compiled compiledCompile = WithFullProcessing.this.methodRegistry.compile(WithFullProcessing.this.implementationTargetFactory, classFileVersionOfMinorMajor);
+                        MethodRegistry.Compiled compiledCompile = WithFullProcessing.this.methodRegistry.compile(
+                                WithFullProcessing.this.implementationTargetFactory, classFileVersionOfMinorMajor);
                         this.methodPool = compiledCompile;
                         WithFullProcessing withFullProcessing = WithFullProcessing.this;
-                        this.initializationHandler = new InitializationHandler.Creating(withFullProcessing.instrumentedType, compiledCompile, withFullProcessing.annotationValueFilterFactory);
+                        this.initializationHandler = new InitializationHandler.Creating(
+                                withFullProcessing.instrumentedType, compiledCompile,
+                                withFullProcessing.annotationValueFilterFactory);
                         WithFullProcessing withFullProcessing2 = WithFullProcessing.this;
-                        this.implementationContext = withFullProcessing2.implementationContextFactory.make(withFullProcessing2.instrumentedType, withFullProcessing2.auxiliaryTypeNamingStrategy, this.typeInitializer, classFileVersionOfMinorMajor, withFullProcessing2.classFileVersion, ((this.writerFlags & 2) == 0 && classFileVersionOfMinorMajor.isAtLeast(ClassFileVersion.JAVA_V6)) ? (this.readerFlags & 8) == 0 ? Implementation.Context.FrameGeneration.GENERATE : Implementation.Context.FrameGeneration.EXPAND : Implementation.Context.FrameGeneration.DISABLED);
-                        this.retainDeprecationModifiers = classFileVersionOfMinorMajor.isLessThan(ClassFileVersion.JAVA_V5);
+                        this.implementationContext = withFullProcessing2.implementationContextFactory.make(
+                                withFullProcessing2.instrumentedType, withFullProcessing2.auxiliaryTypeNamingStrategy,
+                                this.typeInitializer, classFileVersionOfMinorMajor,
+                                withFullProcessing2.classFileVersion,
+                                ((this.writerFlags & 2) == 0
+                                        && classFileVersionOfMinorMajor.isAtLeast(ClassFileVersion.JAVA_V6))
+                                                ? (this.readerFlags & 8) == 0
+                                                        ? Implementation.Context.FrameGeneration.GENERATE
+                                                        : Implementation.Context.FrameGeneration.EXPAND
+                                                : Implementation.Context.FrameGeneration.DISABLED);
+                        this.retainDeprecationModifiers = classFileVersionOfMinorMajor
+                                .isLessThan(ClassFileVersion.JAVA_V5);
                         this.contextRegistry.setImplementationContext(this.implementationContext);
                         WithFullProcessing withFullProcessing3 = WithFullProcessing.this;
-                        ClassVisitor classVisitorWrap = withFullProcessing3.asmVisitorWrapper.wrap(withFullProcessing3.instrumentedType, this.cv, this.implementationContext, withFullProcessing3.typePool, withFullProcessing3.fields, withFullProcessing3.methods, this.writerFlags, this.readerFlags);
+                        ClassVisitor classVisitorWrap = withFullProcessing3.asmVisitorWrapper.wrap(
+                                withFullProcessing3.instrumentedType, this.cv, this.implementationContext,
+                                withFullProcessing3.typePool, withFullProcessing3.fields, withFullProcessing3.methods,
+                                this.writerFlags, this.readerFlags);
                         this.cv = classVisitorWrap;
                         TypeDescription typeDescription = WithFullProcessing.this.instrumentedType;
-                        classVisitorWrap.visit(i, typeDescription.getActualModifiers(((i2 & 32) == 0 || typeDescription.isInterface()) ? false : true) | resolveDeprecationModifiers(i2) | (((i2 & 16) == 0 || !WithFullProcessing.this.instrumentedType.isAnonymousType()) ? 0 : 16) | (WithFullProcessing.this.instrumentedType.isModuleType() ? 32768 : 0), WithFullProcessing.this.instrumentedType.getInternalName(), TypeDescription.AbstractBase.RAW_TYPES ? str2 : WithFullProcessing.this.instrumentedType.getGenericSignature(), WithFullProcessing.this.instrumentedType.getSuperClass() == null ? WithFullProcessing.this.instrumentedType.isInterface() ? TypeDescription.ForLoadedType.of(Object.class).getInternalName() : Default.NO_REFERENCE : WithFullProcessing.this.instrumentedType.getSuperClass().asErasure().getInternalName(), WithFullProcessing.this.instrumentedType.getInterfaces().asErasures().toInternalNames());
+                        classVisitorWrap.visit(i, typeDescription
+                                .getActualModifiers(((i2 & 32) == 0 || typeDescription.isInterface()) ? false : true)
+                                | resolveDeprecationModifiers(i2)
+                                | (((i2 & 16) == 0 || !WithFullProcessing.this.instrumentedType.isAnonymousType()) ? 0
+                                        : 16)
+                                | (WithFullProcessing.this.instrumentedType.isModuleType() ? 32768 : 0),
+                                WithFullProcessing.this.instrumentedType.getInternalName(),
+                                TypeDescription.AbstractBase.RAW_TYPES ? str2
+                                        : WithFullProcessing.this.instrumentedType.getGenericSignature(),
+                                WithFullProcessing.this.instrumentedType.getSuperClass() == null
+                                        ? WithFullProcessing.this.instrumentedType.isInterface()
+                                                ? TypeDescription.ForLoadedType.of(Object.class).getInternalName()
+                                                : Default.NO_REFERENCE
+                                        : WithFullProcessing.this.instrumentedType.getSuperClass().asErasure()
+                                                .getInternalName(),
+                                WithFullProcessing.this.instrumentedType.getInterfaces().asErasures()
+                                        .toInternalNames());
                     }
 
                     @MaybeNull
-                    public FieldVisitor redefine(FieldPool.Record record, @MaybeNull Object obj, int i, @MaybeNull String str) {
+                    public FieldVisitor redefine(FieldPool.Record record, @MaybeNull Object obj, int i,
+                            @MaybeNull String str) {
                         FieldDescription field = record.getField();
                         ClassVisitor classVisitor = this.cv;
                         int actualModifiers = field.getActualModifiers() | resolveDeprecationModifiers(i);
@@ -2963,23 +3662,36 @@ public interface TypeWriter<T> {
                         if (!TypeDescription.AbstractBase.RAW_TYPES) {
                             str = field.getGenericSignature();
                         }
-                        FieldVisitor fieldVisitorVisitField = classVisitor.visitField(actualModifiers, internalName, descriptor, str, record.resolveDefault(obj));
-                        return fieldVisitorVisitField == null ? ForInlining.IGNORE_FIELD : new AttributeObtainingFieldVisitor(fieldVisitorVisitField, record);
+                        FieldVisitor fieldVisitorVisitField = classVisitor.visitField(actualModifiers, internalName,
+                                descriptor, str, record.resolveDefault(obj));
+                        return fieldVisitorVisitField == null ? ForInlining.IGNORE_FIELD
+                                : new AttributeObtainingFieldVisitor(fieldVisitorVisitField, record);
                     }
 
                     @MaybeNull
-                    public MethodVisitor redefine(MethodDescription methodDescription, boolean z, int i, @MaybeNull String str) {
+                    public MethodVisitor redefine(MethodDescription methodDescription, boolean z, int i,
+                            @MaybeNull String str) {
                         MethodPool.Record recordTarget = this.methodPool.target(methodDescription);
                         if (!recordTarget.getSort().isDefined()) {
-                            return this.cv.visitMethod(methodDescription.getActualModifiers() | resolveDeprecationModifiers(i), methodDescription.getInternalName(), methodDescription.getDescriptor(), TypeDescription.AbstractBase.RAW_TYPES ? str : methodDescription.getGenericSignature(), methodDescription.getExceptionTypes().asErasures().toInternalNames());
+                            return this.cv.visitMethod(
+                                    methodDescription.getActualModifiers() | resolveDeprecationModifiers(i),
+                                    methodDescription.getInternalName(), methodDescription.getDescriptor(),
+                                    TypeDescription.AbstractBase.RAW_TYPES ? str
+                                            : methodDescription.getGenericSignature(),
+                                    methodDescription.getExceptionTypes().asErasures().toInternalNames());
                         }
                         MethodDescription method = recordTarget.getMethod();
                         ClassVisitor classVisitor = this.cv;
-                        int iResolve = ModifierContributor.Resolver.of(Collections.singleton(recordTarget.getVisibility())).resolve(method.getActualModifiers(recordTarget.getSort().isImplemented())) | resolveDeprecationModifiers(i);
+                        int iResolve = ModifierContributor.Resolver
+                                .of(Collections.singleton(recordTarget.getVisibility()))
+                                .resolve(method.getActualModifiers(recordTarget.getSort().isImplemented()))
+                                | resolveDeprecationModifiers(i);
                         String internalName = method.getInternalName();
                         String descriptor = method.getDescriptor();
                         boolean z2 = TypeDescription.AbstractBase.RAW_TYPES;
-                        MethodVisitor methodVisitorVisitMethod = classVisitor.visitMethod(iResolve, internalName, descriptor, z2 ? str : method.getGenericSignature(), method.getExceptionTypes().asErasures().toInternalNames());
+                        MethodVisitor methodVisitorVisitMethod = classVisitor.visitMethod(iResolve, internalName,
+                                descriptor, z2 ? str : method.getGenericSignature(),
+                                method.getExceptionTypes().asErasures().toInternalNames());
                         if (methodVisitorVisitMethod == null) {
                             return ForInlining.IGNORE_METHOD;
                         }
@@ -2987,29 +3699,46 @@ public interface TypeWriter<T> {
                             return new AttributeObtainingMethodVisitor(methodVisitorVisitMethod, recordTarget);
                         }
                         if (methodDescription.isNative()) {
-                            MethodRebaseResolver.Resolution resolutionResolve = WithFullProcessing.this.methodRebaseResolver.resolve(method.asDefined());
+                            MethodRebaseResolver.Resolution resolutionResolve = WithFullProcessing.this.methodRebaseResolver
+                                    .resolve(method.asDefined());
                             if (resolutionResolve.isRebased()) {
-                                MethodVisitor methodVisitorVisitMethod2 = visitMethod(resolveDeprecationModifiers(i) | resolutionResolve.getResolvedMethod().getActualModifiers(), resolutionResolve.getResolvedMethod().getInternalName(), resolutionResolve.getResolvedMethod().getDescriptor(), z2 ? str : method.getGenericSignature(), resolutionResolve.getResolvedMethod().getExceptionTypes().asErasures().toInternalNames());
+                                MethodVisitor methodVisitorVisitMethod2 = visitMethod(
+                                        resolveDeprecationModifiers(i)
+                                                | resolutionResolve.getResolvedMethod().getActualModifiers(),
+                                        resolutionResolve.getResolvedMethod().getInternalName(),
+                                        resolutionResolve.getResolvedMethod().getDescriptor(),
+                                        z2 ? str : method.getGenericSignature(), resolutionResolve.getResolvedMethod()
+                                                .getExceptionTypes().asErasures().toInternalNames());
                                 if (methodVisitorVisitMethod2 != null) {
                                     methodVisitorVisitMethod2.visitEnd();
                                 }
                             }
                             return new AttributeObtainingMethodVisitor(methodVisitorVisitMethod, recordTarget);
                         }
-                        return new CodePreservingMethodVisitor(methodVisitorVisitMethod, recordTarget, WithFullProcessing.this.methodRebaseResolver.resolve(method.asDefined()));
+                        return new CodePreservingMethodVisitor(methodVisitorVisitMethod, recordTarget,
+                                WithFullProcessing.this.methodRebaseResolver.resolve(method.asDefined()));
                     }
                 }
             }
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface MethodPool {
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public interface Record {
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class AccessBridgeWrapper implements Record {
                 private final MethodAttributeAppender attributeAppender;
@@ -3018,13 +3747,17 @@ public interface TypeWriter<T> {
                 private final Record delegate;
                 private final TypeDescription instrumentedType;
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public static class AccessorBridge extends MethodDescription.InDefinedShape.AbstractBase {
                     private final MethodDescription bridgeTarget;
                     private final MethodDescription.TypeToken bridgeType;
                     private final TypeDescription instrumentedType;
 
-                    public AccessorBridge(MethodDescription methodDescription, MethodDescription.TypeToken typeToken, TypeDescription typeDescription) {
+                    public AccessorBridge(MethodDescription methodDescription, MethodDescription.TypeToken typeToken,
+                            TypeDescription typeDescription) {
                         this.bridgeTarget = methodDescription;
                         this.bridgeType = typeToken;
                         this.instrumentedType = typeDescription;
@@ -3043,7 +3776,8 @@ public interface TypeWriter<T> {
 
                     @Override // net.bytebuddy.description.method.MethodDescription
                     public TypeList.Generic getExceptionTypes() {
-                        return this.bridgeTarget.getExceptionTypes().accept(TypeDescription.Generic.Visitor.TypeErasing.INSTANCE);
+                        return this.bridgeTarget.getExceptionTypes()
+                                .accept(TypeDescription.Generic.Visitor.TypeErasing.INSTANCE);
                     }
 
                     @Override // net.bytebuddy.description.NamedElement.WithRuntimeName
@@ -3056,7 +3790,8 @@ public interface TypeWriter<T> {
                         return (this.bridgeTarget.getModifiers() | 4160) & (-1281);
                     }
 
-                    @Override // net.bytebuddy.description.method.MethodDescription, net.bytebuddy.description.method.MethodDescription.InDefinedShape
+                    @Override // net.bytebuddy.description.method.MethodDescription,
+                              // net.bytebuddy.description.method.MethodDescription.InDefinedShape
                     public ParameterList<ParameterDescription.InDefinedShape> getParameters() {
                         return new ParameterList.Explicit.ForTypes(this, this.bridgeType.getParameterTypes());
                     }
@@ -3071,14 +3806,19 @@ public interface TypeWriter<T> {
                         return new TypeList.Generic.Empty();
                     }
 
-                    @Override // net.bytebuddy.description.method.MethodDescription, net.bytebuddy.description.DeclaredByType.WithMandatoryDeclaration, net.bytebuddy.description.DeclaredByType
+                    @Override // net.bytebuddy.description.method.MethodDescription,
+                              // net.bytebuddy.description.DeclaredByType.WithMandatoryDeclaration,
+                              // net.bytebuddy.description.DeclaredByType
                     @Nonnull
                     public TypeDescription getDeclaringType() {
                         return this.instrumentedType;
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public static class BridgeTarget extends MethodDescription.InDefinedShape.AbstractBase {
                     private final MethodDescription bridgeTarget;
                     private final TypeDescription instrumentedType;
@@ -3114,9 +3854,11 @@ public interface TypeWriter<T> {
                         return this.bridgeTarget.getModifiers();
                     }
 
-                    @Override // net.bytebuddy.description.method.MethodDescription, net.bytebuddy.description.method.MethodDescription.InDefinedShape
+                    @Override // net.bytebuddy.description.method.MethodDescription,
+                              // net.bytebuddy.description.method.MethodDescription.InDefinedShape
                     public ParameterList<ParameterDescription.InDefinedShape> getParameters() {
-                        return new ParameterList.ForTokens(this, this.bridgeTarget.getParameters().asTokenList(ElementMatchers.is(this.instrumentedType)));
+                        return new ParameterList.ForTokens(this, this.bridgeTarget.getParameters()
+                                .asTokenList(ElementMatchers.is(this.instrumentedType)));
                     }
 
                     @Override // net.bytebuddy.description.method.MethodDescription
@@ -3129,14 +3871,18 @@ public interface TypeWriter<T> {
                         return this.bridgeTarget.getTypeVariables();
                     }
 
-                    @Override // net.bytebuddy.description.method.MethodDescription, net.bytebuddy.description.DeclaredByType.WithMandatoryDeclaration, net.bytebuddy.description.DeclaredByType
+                    @Override // net.bytebuddy.description.method.MethodDescription,
+                              // net.bytebuddy.description.DeclaredByType.WithMandatoryDeclaration,
+                              // net.bytebuddy.description.DeclaredByType
                     @Nonnull
                     public TypeDescription getDeclaringType() {
                         return this.instrumentedType;
                     }
                 }
 
-                public AccessBridgeWrapper(Record record, TypeDescription typeDescription, MethodDescription methodDescription, Set<MethodDescription.TypeToken> set, MethodAttributeAppender methodAttributeAppender) {
+                public AccessBridgeWrapper(Record record, TypeDescription typeDescription,
+                        MethodDescription methodDescription, Set<MethodDescription.TypeToken> set,
+                        MethodAttributeAppender methodAttributeAppender) {
                     this.delegate = record;
                     this.instrumentedType = typeDescription;
                     this.bridgeTarget = methodDescription;
@@ -3144,30 +3890,53 @@ public interface TypeWriter<T> {
                     this.attributeAppender = methodAttributeAppender;
                 }
 
-                public static Record of(Record record, TypeDescription typeDescription, MethodDescription methodDescription, Set<MethodDescription.TypeToken> set, MethodAttributeAppender methodAttributeAppender) {
+                public static Record of(Record record, TypeDescription typeDescription,
+                        MethodDescription methodDescription, Set<MethodDescription.TypeToken> set,
+                        MethodAttributeAppender methodAttributeAppender) {
                     HashSet hashSet = new HashSet();
                     for (MethodDescription.TypeToken typeToken : set) {
                         if (methodDescription.isBridgeCompatible(typeToken)) {
                             hashSet.add(typeToken);
                         }
                     }
-                    return (hashSet.isEmpty() || (typeDescription.isInterface() && !record.getSort().isImplemented())) ? record : new AccessBridgeWrapper(record, typeDescription, methodDescription, hashSet, methodAttributeAppender);
+                    return (hashSet.isEmpty() || (typeDescription.isInterface() && !record.getSort().isImplemented()))
+                            ? record
+                            : new AccessBridgeWrapper(record, typeDescription, methodDescription, hashSet,
+                                    methodAttributeAppender);
                 }
 
                 @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
-                public void apply(ClassVisitor classVisitor, Implementation.Context context, AnnotationValueFilter.Factory factory) {
+                public void apply(ClassVisitor classVisitor, Implementation.Context context,
+                        AnnotationValueFilter.Factory factory) {
                     this.delegate.apply(classVisitor, context, factory);
                     Iterator<MethodDescription.TypeToken> it = this.bridgeTypes.iterator();
                     while (it.hasNext()) {
-                        AccessorBridge accessorBridge = new AccessorBridge(this.bridgeTarget, it.next(), this.instrumentedType);
+                        AccessorBridge accessorBridge = new AccessorBridge(this.bridgeTarget, it.next(),
+                                this.instrumentedType);
                         BridgeTarget bridgeTarget = new BridgeTarget(this.bridgeTarget, this.instrumentedType);
                         ClassVisitor classVisitor2 = classVisitor;
-                        MethodVisitor methodVisitorVisitMethod = classVisitor2.visitMethod(accessorBridge.getActualModifiers(true, getVisibility()), accessorBridge.getInternalName(), accessorBridge.getDescriptor(), NamedElement.WithDescriptor.NON_GENERIC_SIGNATURE, accessorBridge.getExceptionTypes().asErasures().toInternalNames());
+                        MethodVisitor methodVisitorVisitMethod = classVisitor2.visitMethod(
+                                accessorBridge.getActualModifiers(true, getVisibility()),
+                                accessorBridge.getInternalName(), accessorBridge.getDescriptor(),
+                                NamedElement.WithDescriptor.NON_GENERIC_SIGNATURE,
+                                accessorBridge.getExceptionTypes().asErasures().toInternalNames());
                         if (methodVisitorVisitMethod != null) {
-                            this.attributeAppender.apply(methodVisitorVisitMethod, accessorBridge, factory.on(this.instrumentedType));
+                            this.attributeAppender.apply(methodVisitorVisitMethod, accessorBridge,
+                                    factory.on(this.instrumentedType));
                             methodVisitorVisitMethod.visitCode();
-                            ByteCodeAppender.Size sizeApply = new ByteCodeAppender.Simple(MethodVariableAccess.allArgumentsOf(accessorBridge).asBridgeOf(bridgeTarget).prependThisReference(), MethodInvocation.invoke((MethodDescription.InDefinedShape) bridgeTarget).virtual(this.instrumentedType), bridgeTarget.getReturnType().asErasure().isAssignableTo(accessorBridge.getReturnType().asErasure()) ? StackManipulation.Trivial.INSTANCE : TypeCasting.to(accessorBridge.getReturnType().asErasure()), MethodReturn.of(accessorBridge.getReturnType())).apply(methodVisitorVisitMethod, context, accessorBridge);
-                            methodVisitorVisitMethod.visitMaxs(sizeApply.getOperandStackSize(), sizeApply.getLocalVariableSize());
+                            ByteCodeAppender.Size sizeApply = new ByteCodeAppender.Simple(
+                                    MethodVariableAccess.allArgumentsOf(accessorBridge).asBridgeOf(bridgeTarget)
+                                            .prependThisReference(),
+                                    MethodInvocation.invoke((MethodDescription.InDefinedShape) bridgeTarget)
+                                            .virtual(this.instrumentedType),
+                                    bridgeTarget.getReturnType().asErasure()
+                                            .isAssignableTo(accessorBridge.getReturnType().asErasure())
+                                                    ? StackManipulation.Trivial.INSTANCE
+                                                    : TypeCasting.to(accessorBridge.getReturnType().asErasure()),
+                                    MethodReturn.of(accessorBridge.getReturnType()))
+                                    .apply(methodVisitorVisitMethod, context, accessorBridge);
+                            methodVisitorVisitMethod.visitMaxs(sizeApply.getOperandStackSize(),
+                                    sizeApply.getLocalVariableSize());
                             methodVisitorVisitMethod.visitEnd();
                         }
                         classVisitor = classVisitor2;
@@ -3180,7 +3949,8 @@ public interface TypeWriter<T> {
                 }
 
                 @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
-                public void applyBody(MethodVisitor methodVisitor, Implementation.Context context, AnnotationValueFilter.Factory factory) {
+                public void applyBody(MethodVisitor methodVisitor, Implementation.Context context,
+                        AnnotationValueFilter.Factory factory) {
                     this.delegate.applyBody(methodVisitor, context, factory);
                 }
 
@@ -3202,7 +3972,11 @@ public interface TypeWriter<T> {
                         return false;
                     }
                     AccessBridgeWrapper accessBridgeWrapper = (AccessBridgeWrapper) obj;
-                    return this.delegate.equals(accessBridgeWrapper.delegate) && this.instrumentedType.equals(accessBridgeWrapper.instrumentedType) && this.bridgeTarget.equals(accessBridgeWrapper.bridgeTarget) && this.bridgeTypes.equals(accessBridgeWrapper.bridgeTypes) && this.attributeAppender.equals(accessBridgeWrapper.attributeAppender);
+                    return this.delegate.equals(accessBridgeWrapper.delegate)
+                            && this.instrumentedType.equals(accessBridgeWrapper.instrumentedType)
+                            && this.bridgeTarget.equals(accessBridgeWrapper.bridgeTarget)
+                            && this.bridgeTypes.equals(accessBridgeWrapper.bridgeTypes)
+                            && this.attributeAppender.equals(accessBridgeWrapper.attributeAppender);
                 }
 
                 @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
@@ -3221,19 +3995,30 @@ public interface TypeWriter<T> {
                 }
 
                 public int hashCode() {
-                    return this.attributeAppender.hashCode() + ((this.bridgeTypes.hashCode() + dkz.c(this.bridgeTarget, dkz.f(this.instrumentedType, (this.delegate.hashCode() + (getClass().hashCode() * 31)) * 31, 31), 31)) * 31);
+                    return this.attributeAppender.hashCode()
+                            + ((this.bridgeTypes.hashCode() + dkz.c(this.bridgeTarget,
+                                    dkz.f(this.instrumentedType,
+                                            (this.delegate.hashCode() + (getClass().hashCode() * 31)) * 31, 31),
+                                    31)) * 31);
                 }
 
                 @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
                 public Record prepend(ByteCodeAppender byteCodeAppender) {
-                    return new AccessBridgeWrapper(this.delegate.prepend(byteCodeAppender), this.instrumentedType, this.bridgeTarget, this.bridgeTypes, this.attributeAppender);
+                    return new AccessBridgeWrapper(this.delegate.prepend(byteCodeAppender), this.instrumentedType,
+                            this.bridgeTarget, this.bridgeTypes, this.attributeAppender);
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static abstract class ForDefinedMethod implements Record {
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class OfVisibilityBridge extends ForDefinedMethod implements ByteCodeAppender {
                     private final MethodAttributeAppender attributeAppender;
@@ -3241,7 +4026,10 @@ public interface TypeWriter<T> {
                     private final TypeDescription bridgeType;
                     private final MethodDescription visibilityBridge;
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     public static class VisibilityBridge extends MethodDescription.InDefinedShape.AbstractBase {
                         private final MethodDescription bridgeTarget;
                         private final TypeDescription instrumentedType;
@@ -3277,9 +4065,11 @@ public interface TypeWriter<T> {
                             return (this.bridgeTarget.getModifiers() | 4160) & (-257);
                         }
 
-                        @Override // net.bytebuddy.description.method.MethodDescription, net.bytebuddy.description.method.MethodDescription.InDefinedShape
+                        @Override // net.bytebuddy.description.method.MethodDescription,
+                                  // net.bytebuddy.description.method.MethodDescription.InDefinedShape
                         public ParameterList<ParameterDescription.InDefinedShape> getParameters() {
-                            return new ParameterList.Explicit.ForTypes(this, this.bridgeTarget.getParameters().asTypeList().asRawTypes());
+                            return new ParameterList.Explicit.ForTypes(this,
+                                    this.bridgeTarget.getParameters().asTypeList().asRawTypes());
                         }
 
                         @Override // net.bytebuddy.description.method.MethodDescription
@@ -3292,26 +4082,32 @@ public interface TypeWriter<T> {
                             return new TypeList.Generic.Empty();
                         }
 
-                        @Override // net.bytebuddy.description.method.MethodDescription, net.bytebuddy.description.DeclaredByType.WithMandatoryDeclaration, net.bytebuddy.description.DeclaredByType
+                        @Override // net.bytebuddy.description.method.MethodDescription,
+                                  // net.bytebuddy.description.DeclaredByType.WithMandatoryDeclaration,
+                                  // net.bytebuddy.description.DeclaredByType
                         @Nonnull
                         public TypeDescription getDeclaringType() {
                             return this.instrumentedType;
                         }
                     }
 
-                    public OfVisibilityBridge(MethodDescription methodDescription, MethodDescription methodDescription2, TypeDescription typeDescription, MethodAttributeAppender methodAttributeAppender) {
+                    public OfVisibilityBridge(MethodDescription methodDescription, MethodDescription methodDescription2,
+                            TypeDescription typeDescription, MethodAttributeAppender methodAttributeAppender) {
                         this.visibilityBridge = methodDescription;
                         this.bridgeTarget = methodDescription2;
                         this.bridgeType = typeDescription;
                         this.attributeAppender = methodAttributeAppender;
                     }
 
-                    public static Record of(TypeDescription typeDescription, MethodDescription methodDescription, MethodAttributeAppender methodAttributeAppender) {
+                    public static Record of(TypeDescription typeDescription, MethodDescription methodDescription,
+                            MethodAttributeAppender methodAttributeAppender) {
                         TypeDefinition superClass = null;
                         if (methodDescription.isDefaultMethod()) {
                             TypeDescription typeDescriptionAsErasure = methodDescription.getDeclaringType().asErasure();
-                            for (TypeDescription typeDescription2 : typeDescription.getInterfaces().asErasures().filter(ElementMatchers.isSubTypeOf(typeDescriptionAsErasure))) {
-                                if (superClass == null || typeDescriptionAsErasure.isAssignableTo(superClass.asErasure())) {
+                            for (TypeDescription typeDescription2 : typeDescription.getInterfaces().asErasures()
+                                    .filter(ElementMatchers.isSubTypeOf(typeDescriptionAsErasure))) {
+                                if (superClass == null
+                                        || typeDescriptionAsErasure.isAssignableTo(superClass.asErasure())) {
                                     superClass = typeDescription2;
                                 }
                             }
@@ -3319,12 +4115,18 @@ public interface TypeWriter<T> {
                         if (superClass == null && (superClass = typeDescription.getSuperClass()) == null) {
                             superClass = TypeDescription.ForLoadedType.of(Object.class);
                         }
-                        return new OfVisibilityBridge(new VisibilityBridge(typeDescription, methodDescription), methodDescription, superClass.asErasure(), methodAttributeAppender);
+                        return new OfVisibilityBridge(new VisibilityBridge(typeDescription, methodDescription),
+                                methodDescription, superClass.asErasure(), methodAttributeAppender);
                     }
 
                     @Override // net.bytebuddy.implementation.bytecode.ByteCodeAppender
-                    public ByteCodeAppender.Size apply(MethodVisitor methodVisitor, Implementation.Context context, MethodDescription methodDescription) {
-                        return new ByteCodeAppender.Simple(MethodVariableAccess.allArgumentsOf(methodDescription).prependThisReference(), MethodInvocation.invoke(this.bridgeTarget).special(this.bridgeType), MethodReturn.of(methodDescription.getReturnType())).apply(methodVisitor, context, methodDescription);
+                    public ByteCodeAppender.Size apply(MethodVisitor methodVisitor, Implementation.Context context,
+                            MethodDescription methodDescription) {
+                        return new ByteCodeAppender.Simple(
+                                MethodVariableAccess.allArgumentsOf(methodDescription).prependThisReference(),
+                                MethodInvocation.invoke(this.bridgeTarget).special(this.bridgeType),
+                                MethodReturn.of(methodDescription.getReturnType()))
+                                .apply(methodVisitor, context, methodDescription);
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
@@ -3335,15 +4137,18 @@ public interface TypeWriter<T> {
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
-                    public void applyBody(MethodVisitor methodVisitor, Implementation.Context context, AnnotationValueFilter.Factory factory) {
+                    public void applyBody(MethodVisitor methodVisitor, Implementation.Context context,
+                            AnnotationValueFilter.Factory factory) {
                         applyAttributes(methodVisitor, factory);
                         methodVisitor.visitCode();
                         ByteCodeAppender.Size sizeApplyCode = applyCode(methodVisitor, context);
-                        methodVisitor.visitMaxs(sizeApplyCode.getOperandStackSize(), sizeApplyCode.getLocalVariableSize());
+                        methodVisitor.visitMaxs(sizeApplyCode.getOperandStackSize(),
+                                sizeApplyCode.getLocalVariableSize());
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
-                    public ByteCodeAppender.Size applyCode(MethodVisitor methodVisitor, Implementation.Context context) {
+                    public ByteCodeAppender.Size applyCode(MethodVisitor methodVisitor,
+                            Implementation.Context context) {
                         return apply(methodVisitor, context, this.visibilityBridge);
                     }
 
@@ -3359,7 +4164,10 @@ public interface TypeWriter<T> {
                             return false;
                         }
                         OfVisibilityBridge ofVisibilityBridge = (OfVisibilityBridge) obj;
-                        return this.visibilityBridge.equals(ofVisibilityBridge.visibilityBridge) && this.bridgeTarget.equals(ofVisibilityBridge.bridgeTarget) && this.bridgeType.equals(ofVisibilityBridge.bridgeType) && this.attributeAppender.equals(ofVisibilityBridge.attributeAppender);
+                        return this.visibilityBridge.equals(ofVisibilityBridge.visibilityBridge)
+                                && this.bridgeTarget.equals(ofVisibilityBridge.bridgeTarget)
+                                && this.bridgeType.equals(ofVisibilityBridge.bridgeType)
+                                && this.attributeAppender.equals(ofVisibilityBridge.attributeAppender);
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
@@ -3378,23 +4186,30 @@ public interface TypeWriter<T> {
                     }
 
                     public int hashCode() {
-                        return this.attributeAppender.hashCode() + dkz.f(this.bridgeType, dkz.c(this.bridgeTarget, dkz.c(this.visibilityBridge, getClass().hashCode() * 31, 31), 31), 31);
+                        return this.attributeAppender.hashCode() + dkz.f(this.bridgeType, dkz.c(this.bridgeTarget,
+                                dkz.c(this.visibilityBridge, getClass().hashCode() * 31, 31), 31), 31);
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
                     public Record prepend(ByteCodeAppender byteCodeAppender) {
-                        return new WithBody(this.visibilityBridge, new ByteCodeAppender.Compound(this, byteCodeAppender), this.attributeAppender, this.bridgeTarget.getVisibility());
+                        return new WithBody(this.visibilityBridge,
+                                new ByteCodeAppender.Compound(this, byteCodeAppender), this.attributeAppender,
+                                this.bridgeTarget.getVisibility());
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class WithAnnotationDefaultValue extends ForDefinedMethod {
                     private final AnnotationValue<?, ?> annotationValue;
                     private final MethodAttributeAppender methodAttributeAppender;
                     private final MethodDescription methodDescription;
 
-                    public WithAnnotationDefaultValue(MethodDescription methodDescription, AnnotationValue<?, ?> annotationValue, MethodAttributeAppender methodAttributeAppender) {
+                    public WithAnnotationDefaultValue(MethodDescription methodDescription,
+                            AnnotationValue<?, ?> annotationValue, MethodAttributeAppender methodAttributeAppender) {
                         this.methodDescription = methodDescription;
                         this.annotationValue = annotationValue;
                         this.methodAttributeAppender = methodAttributeAppender;
@@ -3402,29 +4217,37 @@ public interface TypeWriter<T> {
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
                     public void applyAttributes(MethodVisitor methodVisitor, AnnotationValueFilter.Factory factory) {
-                        throw new IllegalStateException("Cannot apply attributes for default value on " + this.methodDescription);
+                        throw new IllegalStateException(
+                                "Cannot apply attributes for default value on " + this.methodDescription);
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
-                    public void applyBody(MethodVisitor methodVisitor, Implementation.Context context, AnnotationValueFilter.Factory factory) {
+                    public void applyBody(MethodVisitor methodVisitor, Implementation.Context context,
+                            AnnotationValueFilter.Factory factory) {
                         MethodAttributeAppender methodAttributeAppender = this.methodAttributeAppender;
                         MethodDescription methodDescription = this.methodDescription;
                         methodAttributeAppender.apply(methodVisitor, methodDescription, factory.on(methodDescription));
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
-                    public ByteCodeAppender.Size applyCode(MethodVisitor methodVisitor, Implementation.Context context) {
-                        throw new IllegalStateException("Cannot apply code for default value on " + this.methodDescription);
+                    public ByteCodeAppender.Size applyCode(MethodVisitor methodVisitor,
+                            Implementation.Context context) {
+                        throw new IllegalStateException(
+                                "Cannot apply code for default value on " + this.methodDescription);
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
                     public void applyHead(MethodVisitor methodVisitor) {
                         if (this.methodDescription.isDefaultValue(this.annotationValue)) {
-                            AnnotationVisitor annotationVisitorVisitAnnotationDefault = methodVisitor.visitAnnotationDefault();
-                            AnnotationAppender.Default.apply(annotationVisitorVisitAnnotationDefault, this.methodDescription.getReturnType().asErasure(), AnnotationAppender.NO_NAME, this.annotationValue.resolve());
+                            AnnotationVisitor annotationVisitorVisitAnnotationDefault = methodVisitor
+                                    .visitAnnotationDefault();
+                            AnnotationAppender.Default.apply(annotationVisitorVisitAnnotationDefault,
+                                    this.methodDescription.getReturnType().asErasure(), AnnotationAppender.NO_NAME,
+                                    this.annotationValue.resolve());
                             annotationVisitorVisitAnnotationDefault.visitEnd();
                         } else {
-                            throw new IllegalStateException("Cannot set " + this.annotationValue + " as default for " + this.methodDescription);
+                            throw new IllegalStateException(
+                                    "Cannot set " + this.annotationValue + " as default for " + this.methodDescription);
                         }
                     }
 
@@ -3436,7 +4259,10 @@ public interface TypeWriter<T> {
                             return false;
                         }
                         WithAnnotationDefaultValue withAnnotationDefaultValue = (WithAnnotationDefaultValue) obj;
-                        return this.methodDescription.equals(withAnnotationDefaultValue.methodDescription) && this.annotationValue.equals(withAnnotationDefaultValue.annotationValue) && this.methodAttributeAppender.equals(withAnnotationDefaultValue.methodAttributeAppender);
+                        return this.methodDescription.equals(withAnnotationDefaultValue.methodDescription)
+                                && this.annotationValue.equals(withAnnotationDefaultValue.annotationValue)
+                                && this.methodAttributeAppender
+                                        .equals(withAnnotationDefaultValue.methodAttributeAppender);
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
@@ -3455,16 +4281,21 @@ public interface TypeWriter<T> {
                     }
 
                     public int hashCode() {
-                        return this.methodAttributeAppender.hashCode() + ((this.annotationValue.hashCode() + dkz.c(this.methodDescription, getClass().hashCode() * 31, 31)) * 31);
+                        return this.methodAttributeAppender.hashCode() + ((this.annotationValue.hashCode()
+                                + dkz.c(this.methodDescription, getClass().hashCode() * 31, 31)) * 31);
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
                     public Record prepend(ByteCodeAppender byteCodeAppender) {
-                        throw new IllegalStateException("Cannot prepend code for default value on " + this.methodDescription);
+                        throw new IllegalStateException(
+                                "Cannot prepend code for default value on " + this.methodDescription);
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class WithBody extends ForDefinedMethod {
                     private final ByteCodeAppender byteCodeAppender;
@@ -3473,7 +4304,8 @@ public interface TypeWriter<T> {
                     private final Visibility visibility;
 
                     public WithBody(MethodDescription methodDescription, ByteCodeAppender byteCodeAppender) {
-                        this(methodDescription, byteCodeAppender, MethodAttributeAppender.NoOp.INSTANCE, methodDescription.getVisibility());
+                        this(methodDescription, byteCodeAppender, MethodAttributeAppender.NoOp.INSTANCE,
+                                methodDescription.getVisibility());
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
@@ -3484,15 +4316,18 @@ public interface TypeWriter<T> {
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
-                    public void applyBody(MethodVisitor methodVisitor, Implementation.Context context, AnnotationValueFilter.Factory factory) {
+                    public void applyBody(MethodVisitor methodVisitor, Implementation.Context context,
+                            AnnotationValueFilter.Factory factory) {
                         applyAttributes(methodVisitor, factory);
                         methodVisitor.visitCode();
                         ByteCodeAppender.Size sizeApplyCode = applyCode(methodVisitor, context);
-                        methodVisitor.visitMaxs(sizeApplyCode.getOperandStackSize(), sizeApplyCode.getLocalVariableSize());
+                        methodVisitor.visitMaxs(sizeApplyCode.getOperandStackSize(),
+                                sizeApplyCode.getLocalVariableSize());
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
-                    public ByteCodeAppender.Size applyCode(MethodVisitor methodVisitor, Implementation.Context context) {
+                    public ByteCodeAppender.Size applyCode(MethodVisitor methodVisitor,
+                            Implementation.Context context) {
                         return this.byteCodeAppender.apply(methodVisitor, context, this.methodDescription);
                     }
 
@@ -3508,7 +4343,10 @@ public interface TypeWriter<T> {
                             return false;
                         }
                         WithBody withBody = (WithBody) obj;
-                        return this.visibility.equals(withBody.visibility) && this.methodDescription.equals(withBody.methodDescription) && this.byteCodeAppender.equals(withBody.byteCodeAppender) && this.methodAttributeAppender.equals(withBody.methodAttributeAppender);
+                        return this.visibility.equals(withBody.visibility)
+                                && this.methodDescription.equals(withBody.methodDescription)
+                                && this.byteCodeAppender.equals(withBody.byteCodeAppender)
+                                && this.methodAttributeAppender.equals(withBody.methodAttributeAppender);
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
@@ -3527,15 +4365,20 @@ public interface TypeWriter<T> {
                     }
 
                     public int hashCode() {
-                        return this.visibility.hashCode() + ((this.methodAttributeAppender.hashCode() + ((this.byteCodeAppender.hashCode() + dkz.c(this.methodDescription, getClass().hashCode() * 31, 31)) * 31)) * 31);
+                        return this.visibility.hashCode()
+                                + ((this.methodAttributeAppender.hashCode() + ((this.byteCodeAppender.hashCode()
+                                        + dkz.c(this.methodDescription, getClass().hashCode() * 31, 31)) * 31)) * 31);
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
                     public Record prepend(ByteCodeAppender byteCodeAppender) {
-                        return new WithBody(this.methodDescription, new ByteCodeAppender.Compound(byteCodeAppender, this.byteCodeAppender), this.methodAttributeAppender, this.visibility);
+                        return new WithBody(this.methodDescription,
+                                new ByteCodeAppender.Compound(byteCodeAppender, this.byteCodeAppender),
+                                this.methodAttributeAppender, this.visibility);
                     }
 
-                    public WithBody(MethodDescription methodDescription, ByteCodeAppender byteCodeAppender, MethodAttributeAppender methodAttributeAppender, Visibility visibility) {
+                    public WithBody(MethodDescription methodDescription, ByteCodeAppender byteCodeAppender,
+                            MethodAttributeAppender methodAttributeAppender, Visibility visibility) {
                         this.methodDescription = methodDescription;
                         this.byteCodeAppender = byteCodeAppender;
                         this.methodAttributeAppender = methodAttributeAppender;
@@ -3543,14 +4386,18 @@ public interface TypeWriter<T> {
                     }
                 }
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 @HashCodeAndEqualsPlugin.Enhance
                 public static class WithoutBody extends ForDefinedMethod {
                     private final MethodAttributeAppender methodAttributeAppender;
                     private final MethodDescription methodDescription;
                     private final Visibility visibility;
 
-                    public WithoutBody(MethodDescription methodDescription, MethodAttributeAppender methodAttributeAppender, Visibility visibility) {
+                    public WithoutBody(MethodDescription methodDescription,
+                            MethodAttributeAppender methodAttributeAppender, Visibility visibility) {
                         this.methodDescription = methodDescription;
                         this.methodAttributeAppender = methodAttributeAppender;
                         this.visibility = visibility;
@@ -3564,13 +4411,16 @@ public interface TypeWriter<T> {
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
-                    public void applyBody(MethodVisitor methodVisitor, Implementation.Context context, AnnotationValueFilter.Factory factory) {
+                    public void applyBody(MethodVisitor methodVisitor, Implementation.Context context,
+                            AnnotationValueFilter.Factory factory) {
                         applyAttributes(methodVisitor, factory);
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
-                    public ByteCodeAppender.Size applyCode(MethodVisitor methodVisitor, Implementation.Context context) {
-                        throw new IllegalStateException("Cannot apply code for abstract method on " + this.methodDescription);
+                    public ByteCodeAppender.Size applyCode(MethodVisitor methodVisitor,
+                            Implementation.Context context) {
+                        throw new IllegalStateException(
+                                "Cannot apply code for abstract method on " + this.methodDescription);
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
@@ -3585,7 +4435,9 @@ public interface TypeWriter<T> {
                             return false;
                         }
                         WithoutBody withoutBody = (WithoutBody) obj;
-                        return this.visibility.equals(withoutBody.visibility) && this.methodDescription.equals(withoutBody.methodDescription) && this.methodAttributeAppender.equals(withoutBody.methodAttributeAppender);
+                        return this.visibility.equals(withoutBody.visibility)
+                                && this.methodDescription.equals(withoutBody.methodDescription)
+                                && this.methodAttributeAppender.equals(withoutBody.methodAttributeAppender);
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
@@ -3604,25 +4456,33 @@ public interface TypeWriter<T> {
                     }
 
                     public int hashCode() {
-                        return this.visibility.hashCode() + ((this.methodAttributeAppender.hashCode() + dkz.c(this.methodDescription, getClass().hashCode() * 31, 31)) * 31);
+                        return this.visibility.hashCode() + ((this.methodAttributeAppender.hashCode()
+                                + dkz.c(this.methodDescription, getClass().hashCode() * 31, 31)) * 31);
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
                     public Record prepend(ByteCodeAppender byteCodeAppender) {
-                        throw new IllegalStateException("Cannot prepend code for abstract method on " + this.methodDescription);
+                        throw new IllegalStateException(
+                                "Cannot prepend code for abstract method on " + this.methodDescription);
                     }
                 }
 
                 @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
-                public void apply(ClassVisitor classVisitor, Implementation.Context context, AnnotationValueFilter.Factory factory) {
-                    MethodVisitor methodVisitorVisitMethod = classVisitor.visitMethod(getMethod().getActualModifiers(getSort().isImplemented(), getVisibility()), getMethod().getInternalName(), getMethod().getDescriptor(), getMethod().getGenericSignature(), getMethod().getExceptionTypes().asErasures().toInternalNames());
+                public void apply(ClassVisitor classVisitor, Implementation.Context context,
+                        AnnotationValueFilter.Factory factory) {
+                    MethodVisitor methodVisitorVisitMethod = classVisitor.visitMethod(
+                            getMethod().getActualModifiers(getSort().isImplemented(), getVisibility()),
+                            getMethod().getInternalName(), getMethod().getDescriptor(),
+                            getMethod().getGenericSignature(),
+                            getMethod().getExceptionTypes().asErasures().toInternalNames());
                     if (methodVisitorVisitMethod != null) {
                         ParameterList<?> parameters = getMethod().getParameters();
                         if (parameters.hasExplicitMetaData()) {
                             Iterator<?> it = parameters.iterator();
                             while (it.hasNext()) {
                                 ParameterDescription parameterDescription = (ParameterDescription) it.next();
-                                methodVisitorVisitMethod.visitParameter(parameterDescription.getName(), parameterDescription.getModifiers());
+                                methodVisitorVisitMethod.visitParameter(parameterDescription.getName(),
+                                        parameterDescription.getModifiers());
                             }
                         }
                         applyHead(methodVisitorVisitMethod);
@@ -3632,7 +4492,10 @@ public interface TypeWriter<T> {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForNonImplementedMethod implements Record {
                 private final MethodDescription methodDescription;
@@ -3642,7 +4505,8 @@ public interface TypeWriter<T> {
                 }
 
                 @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
-                public void apply(ClassVisitor classVisitor, Implementation.Context context, AnnotationValueFilter.Factory factory) {
+                public void apply(ClassVisitor classVisitor, Implementation.Context context,
+                        AnnotationValueFilter.Factory factory) {
                 }
 
                 @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
@@ -3650,25 +4514,30 @@ public interface TypeWriter<T> {
                 }
 
                 @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
-                public void applyBody(MethodVisitor methodVisitor, Implementation.Context context, AnnotationValueFilter.Factory factory) {
-                    throw new IllegalStateException("Cannot apply body for non-implemented method on " + this.methodDescription);
+                public void applyBody(MethodVisitor methodVisitor, Implementation.Context context,
+                        AnnotationValueFilter.Factory factory) {
+                    throw new IllegalStateException(
+                            "Cannot apply body for non-implemented method on " + this.methodDescription);
                 }
 
                 @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
                 public ByteCodeAppender.Size applyCode(MethodVisitor methodVisitor, Implementation.Context context) {
-                    throw new IllegalStateException("Cannot apply code for non-implemented method on " + this.methodDescription);
+                    throw new IllegalStateException(
+                            "Cannot apply code for non-implemented method on " + this.methodDescription);
                 }
 
                 @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
                 public void applyHead(MethodVisitor methodVisitor) {
-                    throw new IllegalStateException("Cannot apply head for non-implemented method on " + this.methodDescription);
+                    throw new IllegalStateException(
+                            "Cannot apply head for non-implemented method on " + this.methodDescription);
                 }
 
                 public boolean equals(@MaybeNull Object obj) {
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.methodDescription.equals(((ForNonImplementedMethod) obj).methodDescription);
+                    return obj != null && getClass() == obj.getClass()
+                            && this.methodDescription.equals(((ForNonImplementedMethod) obj).methodDescription);
                 }
 
                 @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
@@ -3693,11 +4562,17 @@ public interface TypeWriter<T> {
                 @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
                 public Record prepend(ByteCodeAppender byteCodeAppender) {
                     MethodDescription methodDescription = this.methodDescription;
-                    return new ForDefinedMethod.WithBody(methodDescription, new ByteCodeAppender.Compound(byteCodeAppender, new ByteCodeAppender.Simple(DefaultValue.of(methodDescription.getReturnType()), MethodReturn.of(this.methodDescription.getReturnType()))));
+                    return new ForDefinedMethod.WithBody(methodDescription,
+                            new ByteCodeAppender.Compound(byteCodeAppender,
+                                    new ByteCodeAppender.Simple(DefaultValue.of(methodDescription.getReturnType()),
+                                            MethodReturn.of(this.methodDescription.getReturnType()))));
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public enum Sort {
                 SKIPPED(false, false),
                 DEFINED(true, false),
@@ -3720,11 +4595,13 @@ public interface TypeWriter<T> {
                 }
             }
 
-            void apply(ClassVisitor classVisitor, Implementation.Context context, AnnotationValueFilter.Factory factory);
+            void apply(ClassVisitor classVisitor, Implementation.Context context,
+                    AnnotationValueFilter.Factory factory);
 
             void applyAttributes(MethodVisitor methodVisitor, AnnotationValueFilter.Factory factory);
 
-            void applyBody(MethodVisitor methodVisitor, Implementation.Context context, AnnotationValueFilter.Factory factory);
+            void applyBody(MethodVisitor methodVisitor, Implementation.Context context,
+                    AnnotationValueFilter.Factory factory);
 
             ByteCodeAppender.Size applyCode(MethodVisitor methodVisitor, Implementation.Context context);
 
@@ -3746,10 +4623,16 @@ public interface TypeWriter<T> {
 
     ContextClassVisitor wrap(ClassVisitor classVisitor, int i, int i2);
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface RecordComponentPool {
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public enum Disabled implements RecordComponentPool {
             INSTANCE;
 
@@ -3761,7 +4644,10 @@ public interface TypeWriter<T> {
 
         Record target(RecordComponentDescription recordComponentDescription);
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public interface Record {
             void apply(ClassVisitor classVisitor, AnnotationValueFilter.Factory factory);
 
@@ -3773,24 +4659,32 @@ public interface TypeWriter<T> {
 
             boolean isImplicit();
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForExplicitRecordComponent implements Record {
                 private final RecordComponentAttributeAppender attributeAppender;
                 private final RecordComponentDescription recordComponentDescription;
 
-                public ForExplicitRecordComponent(RecordComponentAttributeAppender recordComponentAttributeAppender, RecordComponentDescription recordComponentDescription) {
+                public ForExplicitRecordComponent(RecordComponentAttributeAppender recordComponentAttributeAppender,
+                        RecordComponentDescription recordComponentDescription) {
                     this.attributeAppender = recordComponentAttributeAppender;
                     this.recordComponentDescription = recordComponentDescription;
                 }
 
                 @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.RecordComponentPool.Record
                 public void apply(ClassVisitor classVisitor, AnnotationValueFilter.Factory factory) {
-                    RecordComponentVisitor recordComponentVisitorVisitRecordComponent = classVisitor.visitRecordComponent(this.recordComponentDescription.getActualName(), this.recordComponentDescription.getDescriptor(), this.recordComponentDescription.getGenericSignature());
+                    RecordComponentVisitor recordComponentVisitorVisitRecordComponent = classVisitor
+                            .visitRecordComponent(this.recordComponentDescription.getActualName(),
+                                    this.recordComponentDescription.getDescriptor(),
+                                    this.recordComponentDescription.getGenericSignature());
                     if (recordComponentVisitorVisitRecordComponent != null) {
                         RecordComponentAttributeAppender recordComponentAttributeAppender = this.attributeAppender;
                         RecordComponentDescription recordComponentDescription = this.recordComponentDescription;
-                        recordComponentAttributeAppender.apply(recordComponentVisitorVisitRecordComponent, recordComponentDescription, factory.on(recordComponentDescription));
+                        recordComponentAttributeAppender.apply(recordComponentVisitorVisitRecordComponent,
+                                recordComponentDescription, factory.on(recordComponentDescription));
                         recordComponentVisitorVisitRecordComponent.visitEnd();
                     }
                 }
@@ -3803,7 +4697,9 @@ public interface TypeWriter<T> {
                         return false;
                     }
                     ForExplicitRecordComponent forExplicitRecordComponent = (ForExplicitRecordComponent) obj;
-                    return this.attributeAppender.equals(forExplicitRecordComponent.attributeAppender) && this.recordComponentDescription.equals(forExplicitRecordComponent.recordComponentDescription);
+                    return this.attributeAppender.equals(forExplicitRecordComponent.attributeAppender)
+                            && this.recordComponentDescription
+                                    .equals(forExplicitRecordComponent.recordComponentDescription);
                 }
 
                 @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.RecordComponentPool.Record
@@ -3817,7 +4713,8 @@ public interface TypeWriter<T> {
                 }
 
                 public int hashCode() {
-                    return this.recordComponentDescription.hashCode() + ((this.attributeAppender.hashCode() + (getClass().hashCode() * 31)) * 31);
+                    return this.recordComponentDescription.hashCode()
+                            + ((this.attributeAppender.hashCode() + (getClass().hashCode() * 31)) * 31);
                 }
 
                 @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.RecordComponentPool.Record
@@ -3826,14 +4723,19 @@ public interface TypeWriter<T> {
                 }
 
                 @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.RecordComponentPool.Record
-                public void apply(RecordComponentVisitor recordComponentVisitor, AnnotationValueFilter.Factory factory) {
+                public void apply(RecordComponentVisitor recordComponentVisitor,
+                        AnnotationValueFilter.Factory factory) {
                     RecordComponentAttributeAppender recordComponentAttributeAppender = this.attributeAppender;
                     RecordComponentDescription recordComponentDescription = this.recordComponentDescription;
-                    recordComponentAttributeAppender.apply(recordComponentVisitor, recordComponentDescription, factory.on(recordComponentDescription));
+                    recordComponentAttributeAppender.apply(recordComponentVisitor, recordComponentDescription,
+                            factory.on(recordComponentDescription));
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForImplicitRecordComponent implements Record {
                 private final RecordComponentDescription recordComponentDescription;
@@ -3844,11 +4746,15 @@ public interface TypeWriter<T> {
 
                 @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.RecordComponentPool.Record
                 public void apply(ClassVisitor classVisitor, AnnotationValueFilter.Factory factory) {
-                    RecordComponentVisitor recordComponentVisitorVisitRecordComponent = classVisitor.visitRecordComponent(this.recordComponentDescription.getActualName(), this.recordComponentDescription.getDescriptor(), this.recordComponentDescription.getGenericSignature());
+                    RecordComponentVisitor recordComponentVisitorVisitRecordComponent = classVisitor
+                            .visitRecordComponent(this.recordComponentDescription.getActualName(),
+                                    this.recordComponentDescription.getDescriptor(),
+                                    this.recordComponentDescription.getGenericSignature());
                     if (recordComponentVisitorVisitRecordComponent != null) {
                         RecordComponentAttributeAppender.ForInstrumentedRecordComponent forInstrumentedRecordComponent = RecordComponentAttributeAppender.ForInstrumentedRecordComponent.INSTANCE;
                         RecordComponentDescription recordComponentDescription = this.recordComponentDescription;
-                        forInstrumentedRecordComponent.apply(recordComponentVisitorVisitRecordComponent, recordComponentDescription, factory.on(recordComponentDescription));
+                        forInstrumentedRecordComponent.apply(recordComponentVisitorVisitRecordComponent,
+                                recordComponentDescription, factory.on(recordComponentDescription));
                         recordComponentVisitorVisitRecordComponent.visitEnd();
                     }
                 }
@@ -3857,7 +4763,8 @@ public interface TypeWriter<T> {
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.recordComponentDescription.equals(((ForImplicitRecordComponent) obj).recordComponentDescription);
+                    return obj != null && getClass() == obj.getClass() && this.recordComponentDescription
+                            .equals(((ForImplicitRecordComponent) obj).recordComponentDescription);
                 }
 
                 @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.RecordComponentPool.Record
@@ -3867,7 +4774,8 @@ public interface TypeWriter<T> {
 
                 @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.RecordComponentPool.Record
                 public RecordComponentAttributeAppender getRecordComponentAppender() {
-                    throw new IllegalStateException("An implicit field record does not expose a field appender: " + this);
+                    throw new IllegalStateException(
+                            "An implicit field record does not expose a field appender: " + this);
                 }
 
                 public int hashCode() {
@@ -3880,17 +4788,25 @@ public interface TypeWriter<T> {
                 }
 
                 @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.RecordComponentPool.Record
-                public void apply(RecordComponentVisitor recordComponentVisitor, AnnotationValueFilter.Factory factory) {
-                    throw new IllegalStateException("An implicit field record is not intended for partial application: " + this);
+                public void apply(RecordComponentVisitor recordComponentVisitor,
+                        AnnotationValueFilter.Factory factory) {
+                    throw new IllegalStateException(
+                            "An implicit field record is not intended for partial application: " + this);
                 }
             }
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface FieldPool {
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public enum Disabled implements FieldPool {
             INSTANCE;
 
@@ -3902,7 +4818,10 @@ public interface TypeWriter<T> {
 
         Record target(FieldDescription fieldDescription);
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public interface Record {
             void apply(ClassVisitor classVisitor, AnnotationValueFilter.Factory factory);
 
@@ -3917,7 +4836,10 @@ public interface TypeWriter<T> {
             @MaybeNull
             Object resolveDefault(@MaybeNull Object obj);
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForExplicitField implements Record {
                 private final FieldAttributeAppender attributeAppender;
@@ -3927,7 +4849,8 @@ public interface TypeWriter<T> {
                 private final Object defaultValue;
                 private final FieldDescription fieldDescription;
 
-                public ForExplicitField(FieldAttributeAppender fieldAttributeAppender, @MaybeNull Object obj, FieldDescription fieldDescription) {
+                public ForExplicitField(FieldAttributeAppender fieldAttributeAppender, @MaybeNull Object obj,
+                        FieldDescription fieldDescription) {
                     this.attributeAppender = fieldAttributeAppender;
                     this.defaultValue = obj;
                     this.fieldDescription = fieldDescription;
@@ -3935,67 +4858,78 @@ public interface TypeWriter<T> {
 
                 @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.FieldPool.Record
                 public void apply(ClassVisitor classVisitor, AnnotationValueFilter.Factory factory) {
-                    FieldVisitor fieldVisitorVisitField = classVisitor.visitField(this.fieldDescription.getActualModifiers(), this.fieldDescription.getInternalName(), this.fieldDescription.getDescriptor(), this.fieldDescription.getGenericSignature(), resolveDefault(FieldDescription.NO_DEFAULT_VALUE));
+                    FieldVisitor fieldVisitorVisitField = classVisitor.visitField(
+                            this.fieldDescription.getActualModifiers(), this.fieldDescription.getInternalName(),
+                            this.fieldDescription.getDescriptor(), this.fieldDescription.getGenericSignature(),
+                            resolveDefault(FieldDescription.NO_DEFAULT_VALUE));
                     if (fieldVisitorVisitField != null) {
                         FieldAttributeAppender fieldAttributeAppender = this.attributeAppender;
                         FieldDescription fieldDescription = this.fieldDescription;
-                        fieldAttributeAppender.apply(fieldVisitorVisitField, fieldDescription, factory.on(fieldDescription));
+                        fieldAttributeAppender.apply(fieldVisitorVisitField, fieldDescription,
+                                factory.on(fieldDescription));
                         fieldVisitorVisitField.visitEnd();
                     }
                 }
 
-                /* JADX WARN: Code restructure failed: missing block: B:20:0x002f, code lost:
-                
-                    if (r2 != null) goto L21;
+                /*
+                 * JADX WARN: Code restructure failed: missing block: B:20:0x002f, code lost:
+                 * 
+                 * if (r2 != null) goto L21;
                  */
                 /*
-                    Code decompiled incorrectly, please refer to instructions dump.
-                    To view partially-correct add '--show-bad-code' argument
-                */
+                 * Code decompiled incorrectly, please refer to instructions dump.
+                 * To view partially-correct add '--show-bad-code' argument
+                 */
                 public boolean equals(@net.bytebuddy.utility.nullability.MaybeNull java.lang.Object r5) {
                     /*
-                        r4 = this;
-                        r0 = 1
-                        if (r4 != r5) goto L4
-                        return r0
-                    L4:
-                        r1 = 0
-                        if (r5 != 0) goto L8
-                        return r1
-                    L8:
-                        java.lang.Class r2 = r4.getClass()
-                        java.lang.Class r3 = r5.getClass()
-                        if (r2 == r3) goto L13
-                        return r1
-                    L13:
-                        net.bytebuddy.implementation.attribute.FieldAttributeAppender r2 = r4.attributeAppender
-                        net.bytebuddy.dynamic.scaffold.TypeWriter$FieldPool$Record$ForExplicitField r5 = (net.bytebuddy.dynamic.scaffold.TypeWriter.FieldPool.Record.ForExplicitField) r5
-                        net.bytebuddy.implementation.attribute.FieldAttributeAppender r3 = r5.attributeAppender
-                        boolean r2 = r2.equals(r3)
-                        if (r2 != 0) goto L20
-                        return r1
-                    L20:
-                        java.lang.Object r2 = r4.defaultValue
-                        java.lang.Object r3 = r5.defaultValue
-                        if (r3 == 0) goto L2f
-                        if (r2 == 0) goto L31
-                        boolean r2 = r2.equals(r3)
-                        if (r2 != 0) goto L32
-                        return r1
-                    L2f:
-                        if (r2 == 0) goto L32
-                    L31:
-                        return r1
-                    L32:
-                        net.bytebuddy.description.field.FieldDescription r2 = r4.fieldDescription
-                        net.bytebuddy.description.field.FieldDescription r5 = r5.fieldDescription
-                        boolean r5 = r2.equals(r5)
-                        if (r5 != 0) goto L3d
-                        return r1
-                    L3d:
-                        return r0
-                    */
-                    throw new UnsupportedOperationException("Method not decompiled: net.bytebuddy.dynamic.scaffold.TypeWriter.FieldPool.Record.ForExplicitField.equals(java.lang.Object):boolean");
+                     * r4 = this;
+                     * r0 = 1
+                     * if (r4 != r5) goto L4
+                     * return r0
+                     * L4:
+                     * r1 = 0
+                     * if (r5 != 0) goto L8
+                     * return r1
+                     * L8:
+                     * java.lang.Class r2 = r4.getClass()
+                     * java.lang.Class r3 = r5.getClass()
+                     * if (r2 == r3) goto L13
+                     * return r1
+                     * L13:
+                     * net.bytebuddy.implementation.attribute.FieldAttributeAppender r2 =
+                     * r4.attributeAppender
+                     * net.bytebuddy.dynamic.scaffold.TypeWriter$FieldPool$Record$ForExplicitField
+                     * r5 =
+                     * (net.bytebuddy.dynamic.scaffold.TypeWriter.FieldPool.Record.ForExplicitField)
+                     * r5
+                     * net.bytebuddy.implementation.attribute.FieldAttributeAppender r3 =
+                     * r5.attributeAppender
+                     * boolean r2 = r2.equals(r3)
+                     * if (r2 != 0) goto L20
+                     * return r1
+                     * L20:
+                     * java.lang.Object r2 = r4.defaultValue
+                     * java.lang.Object r3 = r5.defaultValue
+                     * if (r3 == 0) goto L2f
+                     * if (r2 == 0) goto L31
+                     * boolean r2 = r2.equals(r3)
+                     * if (r2 != 0) goto L32
+                     * return r1
+                     * L2f:
+                     * if (r2 == 0) goto L32
+                     * L31:
+                     * return r1
+                     * L32:
+                     * net.bytebuddy.description.field.FieldDescription r2 = r4.fieldDescription
+                     * net.bytebuddy.description.field.FieldDescription r5 = r5.fieldDescription
+                     * boolean r5 = r2.equals(r5)
+                     * if (r5 != 0) goto L3d
+                     * return r1
+                     * L3d:
+                     * return r0
+                     */
+                    throw new UnsupportedOperationException(
+                            "Method not decompiled: net.bytebuddy.dynamic.scaffold.TypeWriter.FieldPool.Record.ForExplicitField.equals(java.lang.Object):boolean");
                 }
 
                 @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.FieldPool.Record
@@ -4037,7 +4971,10 @@ public interface TypeWriter<T> {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class ForImplicitField implements Record {
                 private final FieldDescription fieldDescription;
@@ -4048,11 +4985,15 @@ public interface TypeWriter<T> {
 
                 @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.FieldPool.Record
                 public void apply(ClassVisitor classVisitor, AnnotationValueFilter.Factory factory) {
-                    FieldVisitor fieldVisitorVisitField = classVisitor.visitField(this.fieldDescription.getActualModifiers(), this.fieldDescription.getInternalName(), this.fieldDescription.getDescriptor(), this.fieldDescription.getGenericSignature(), FieldDescription.NO_DEFAULT_VALUE);
+                    FieldVisitor fieldVisitorVisitField = classVisitor.visitField(
+                            this.fieldDescription.getActualModifiers(), this.fieldDescription.getInternalName(),
+                            this.fieldDescription.getDescriptor(), this.fieldDescription.getGenericSignature(),
+                            FieldDescription.NO_DEFAULT_VALUE);
                     if (fieldVisitorVisitField != null) {
                         FieldAttributeAppender.ForInstrumentedField forInstrumentedField = FieldAttributeAppender.ForInstrumentedField.INSTANCE;
                         FieldDescription fieldDescription = this.fieldDescription;
-                        forInstrumentedField.apply(fieldVisitorVisitField, fieldDescription, factory.on(fieldDescription));
+                        forInstrumentedField.apply(fieldVisitorVisitField, fieldDescription,
+                                factory.on(fieldDescription));
                         fieldVisitorVisitField.visitEnd();
                     }
                 }
@@ -4061,7 +5002,8 @@ public interface TypeWriter<T> {
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.fieldDescription.equals(((ForImplicitField) obj).fieldDescription);
+                    return obj != null && getClass() == obj.getClass()
+                            && this.fieldDescription.equals(((ForImplicitField) obj).fieldDescription);
                 }
 
                 @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.FieldPool.Record
@@ -4071,7 +5013,8 @@ public interface TypeWriter<T> {
 
                 @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.FieldPool.Record
                 public FieldAttributeAppender getFieldAppender() {
-                    throw new IllegalStateException("An implicit field record does not expose a field appender: " + this);
+                    throw new IllegalStateException(
+                            "An implicit field record does not expose a field appender: " + this);
                 }
 
                 public int hashCode() {
@@ -4085,12 +5028,14 @@ public interface TypeWriter<T> {
 
                 @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.FieldPool.Record
                 public Object resolveDefault(@MaybeNull Object obj) {
-                    throw new IllegalStateException("An implicit field record does not expose a default value: " + this);
+                    throw new IllegalStateException(
+                            "An implicit field record does not expose a default value: " + this);
                 }
 
                 @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.FieldPool.Record
                 public void apply(FieldVisitor fieldVisitor, AnnotationValueFilter.Factory factory) {
-                    throw new IllegalStateException("An implicit field record is not intended for partial application: " + this);
+                    throw new IllegalStateException(
+                            "An implicit field record is not intended for partial application: " + this);
                 }
             }
         }

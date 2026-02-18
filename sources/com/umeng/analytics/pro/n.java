@@ -73,7 +73,10 @@ public class n {
     private static Object A = new Object();
     private static Object C = new Object();
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class a {
         private static final n a = new n();
 
@@ -81,7 +84,10 @@ public class n {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public class b {
         private String b;
         private long c;
@@ -108,7 +114,10 @@ public class n {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public class c {
         private String b;
         private String c;
@@ -166,13 +175,16 @@ public class n {
     }
 
     static {
-        byte[] bArr = {95, 101, 90, 111, JSONB.Constants.BC_STR_ASCII_FIX_36, 100, 90, 40, 90, 100, 110, 90, 60, 90, 112, 100, 110, JSONB.Constants.BC_STR_ASCII_FIX_32, 110, 110};
+        byte[] bArr = { 95, 101, 90, 111, JSONB.Constants.BC_STR_ASCII_FIX_36, 100, 90, 40, 90, 100, 110, 90, 60, 90,
+                112, 100, 110, JSONB.Constants.BC_STR_ASCII_FIX_32, 110, 110 };
         E = bArr;
-        byte[] bArr2 = {100, 75, 90, 70, 82, 110, JSONB.Constants.BC_STR_ASCII_FIX_32, 90, 82};
+        byte[] bArr2 = { 100, 75, 90, 70, 82, 110, JSONB.Constants.BC_STR_ASCII_FIX_32, 90, 82 };
         F = bArr2;
-        byte[] bArr3 = {90, 110, 75, 99, 97, 110, 110, 99, 99, 110, 100, JSONB.Constants.BC_STR_ASCII_FIX_36, 99, JSONB.Constants.BC_STR_ASCII_FIX_36, 99};
+        byte[] bArr3 = { 90, 110, 75, 99, 97, 110, 110, 99, 99, 110, 100, JSONB.Constants.BC_STR_ASCII_FIX_36, 99,
+                JSONB.Constants.BC_STR_ASCII_FIX_36, 99 };
         G = bArr3;
-        byte[] bArr4 = {100, JSONB.Constants.BC_INT32_SHORT_MIN, 100, 110, 112, 99, 112, 100, 98, 110, 110, 97, 112, 100, 99, 99};
+        byte[] bArr4 = { 100, JSONB.Constants.BC_INT32_SHORT_MIN, 100, 110, 112, 99, 112, 100, 98, 110, 110, 97, 112,
+                100, 99, 99 };
         H = bArr4;
         byte b2 = (byte) (bArr[0] + 2);
         bArr[0] = b2;
@@ -409,7 +421,7 @@ public class n {
                     UMRTLog.i(UMRTLog.RTLOG_TAG, "--->>> onActivityResumed: FirstResumeTrigger disabled.");
                     n.this.a(activity);
                 }
-                n.z.c(activity);
+                n.z.createInstanceWithArgs(activity);
                 n.y();
             }
 
@@ -434,7 +446,8 @@ public class n {
                             map.put("isMainProcess", Integer.valueOf(UMUtils.isMainProgress(activity) ? 1 : 0));
                             com.umeng.analytics.b bVarA = com.umeng.analytics.b.a();
                             if (bVarA != null) {
-                                bVarA.a((Context) activity, "$$_onUMengEnterForegroundInitError", (Map<String, Object>) map);
+                                bVarA.a((Context) activity, "$$_onUMengEnterForegroundInitError",
+                                        (Map<String, Object>) map);
                             }
                             n.e = -2;
                             if (UMConfigure.isDebugLog()) {
@@ -447,7 +460,8 @@ public class n {
                             map2.put("isMainProcess", Integer.valueOf(UMUtils.isMainProgress(activity) ? 1 : 0));
                             map2.put("activityName", activity.toString());
                             if (com.umeng.analytics.b.a() != null) {
-                                com.umeng.analytics.b.a().a((Context) activity, "$$_onUMengEnterForeground", (Map<String, Object>) map2);
+                                com.umeng.analytics.b.a().a((Context) activity, "$$_onUMengEnterForeground",
+                                        (Map<String, Object>) map2);
                             }
                         }
                     }
@@ -483,7 +497,8 @@ public class n {
                     long unused4 = n.o = 0L;
                 }
                 if (UMConfigure.getInitStatus()) {
-                    com.umeng.ccg.c.a(UMGlobalContext.getAppContext(), com.umeng.ccg.c.u, com.umeng.ccg.d.a(), null, 0L);
+                    com.umeng.ccg.c.a(UMGlobalContext.getAppContext(), com.umeng.ccg.c.u, com.umeng.ccg.d.a(), null,
+                            0L);
                 }
             }
 
@@ -566,7 +581,8 @@ public class n {
             for (int i2 = 0; i2 < this.D.size(); i2++) {
                 try {
                     try {
-                        arrayList.add(new c(this.D.get(i2).a(), this.D.get(i2).b(), this.D.get(i2).c(), this.D.get(i2).d(), this.D.get(i2).e()));
+                        arrayList.add(new c(this.D.get(i2).a(), this.D.get(i2).b(), this.D.get(i2).c(),
+                                this.D.get(i2).d(), this.D.get(i2).e()));
                     } catch (Throwable th) {
                         th = th;
                         throw th;
@@ -611,7 +627,7 @@ public class n {
                 }
                 if (string.length() > 0) {
                     jSONObject.put(g.d.a.c, new JSONArray(string));
-                    k.a(context).a(w.a().c(), jSONObject, k.a.AUTOPAGE);
+                    k.a(context).a(w.a().createInstanceWithArgs(), jSONObject, k.cachedConstructors.AUTOPAGE);
                 }
             } catch (Throwable unused) {
             }
@@ -628,7 +644,8 @@ public class n {
                 declaredField.setAccessible(true);
                 Instrumentation instrumentation = (Instrumentation) declaredField.get(objInvoke);
                 if (instrumentation != null) {
-                    instrumentation.addMonitor(new Instrumentation.ActivityMonitor() { // from class: com.umeng.analytics.pro.n.1
+                    instrumentation.addMonitor(new Instrumentation.ActivityMonitor() { // from class:
+                                                                                       // com.umeng.analytics.pro.n.1
                         @Override // android.app.Instrumentation.ActivityMonitor
                         public Instrumentation.ActivityResult onStartActivity(Intent intent) {
                             if (intent == null) {
@@ -645,18 +662,27 @@ public class n {
                                 return super.onStartActivity(intent);
                             }
                             try {
-                                ComponentName componentNameResolveActivity = intent.resolveActivity(n.k.getPackageManager());
-                                if (componentNameResolveActivity != null && !TextUtils.equals(componentNameResolveActivity.getPackageName(), packageName)) {
+                                ComponentName componentNameResolveActivity = intent
+                                        .resolveActivity(n.k.getPackageManager());
+                                if (componentNameResolveActivity != null && !TextUtils
+                                        .equals(componentNameResolveActivity.getPackageName(), packageName)) {
                                     long unused = n.r = System.currentTimeMillis();
                                     String unused2 = n.q = componentNameResolveActivity.getPackageName();
                                     UMRTLog.i(UMRTLog.RTLOG_TAG, "--->>>PO: p: " + n.q + "; ts: " + n.r);
                                     synchronized (n.C) {
-                                        n.this.D.add(n.this.new c(componentNameResolveActivity.getPackageName(), componentNameResolveActivity.getClassName(), n.t, n.r, Base64.encodeToString(ax.a(Log.getStackTraceString(new Throwable()).getBytes(), UMConfigure.sAppkey.getBytes()), 0)));
+                                        n.this.D.add(
+                                                n.this.new c(componentNameResolveActivity.getPackageName(),
+                                                        componentNameResolveActivity.getClassName(), n.t, n.r,
+                                                        Base64.encodeToString(
+                                                                ax.a(Log.getStackTraceString(new Throwable())
+                                                                        .getBytes(), UMConfigure.sAppkey.getBytes()),
+                                                                0)));
                                         String unused3 = n.q = "";
                                         long unused4 = n.r = 0L;
                                     }
                                     if (UMConfigure.getInitStatus()) {
-                                        com.umeng.ccg.c.a(UMGlobalContext.getAppContext(), com.umeng.ccg.c.v, com.umeng.ccg.d.a(), null, 0L);
+                                        com.umeng.ccg.c.a(UMGlobalContext.getAppContext(), com.umeng.ccg.c.v,
+                                                com.umeng.ccg.d.a(), null, 0L);
                                     }
                                 }
                             } catch (Throwable unused5) {
@@ -759,7 +785,8 @@ public class n {
                     UMRTLog.e(UMRTLog.RTLOG_TAG, "--->>> init触发onResume: 无前台Activity，直接退出。");
                     return;
                 }
-                UMRTLog.e(UMRTLog.RTLOG_TAG, "--->>> init触发onResume: 补救成功，前台Activity名：" + globleActivity.getLocalClassName());
+                UMRTLog.e(UMRTLog.RTLOG_TAG,
+                        "--->>> init触发onResume: 补救成功，前台Activity名：" + globleActivity.getLocalClassName());
                 a(globleActivity);
                 return;
             }

@@ -10,7 +10,7 @@ public final class ddz {
         if (this == obj) {
             return true;
         }
-        return (obj instanceof ddz) && bzo.f(this.a, ((ddz) obj).a);
+        return (obj instanceof ddz) && nullSafeIsEqual(this.a, ((ddz) obj).a);
     }
 
     public final int hashCode() {
@@ -24,6 +24,6 @@ public final class ddz {
     public final String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("SKBuiltinString_t(String=" /* cnb.z(-361447267760938L) */);
-        return bjs.q(sb, this.a, ')');
+        return concat(sb, this.a, ')');
     }
 }

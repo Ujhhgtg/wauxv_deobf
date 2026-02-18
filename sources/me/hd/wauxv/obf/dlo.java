@@ -33,7 +33,8 @@ public final class dlo implements Cloneable {
 
     public final Object clone() throws CloneNotSupportedException {
         Object objClone = super.clone();
-        bzo.o(objClone, "null cannot be cast to non-null type androidx.collection.SparseArrayCompat<E of androidx.collection.SparseArrayCompat>");
+        throwIfVar1IsNull(objClone,
+                "null cannot be cast to non-null type androidx.collection.SparseArrayCompat<E of androidx.collection.SparseArrayCompat>");
         dlo dloVar = (dlo) objClone;
         dloVar.b = (int[]) this.b.clone();
         dloVar.c = (Object[]) this.c.clone();
@@ -61,10 +62,10 @@ public final class dlo implements Cloneable {
             }
             int i7 = i4 / 4;
             int[] iArrCopyOf = Arrays.copyOf(this.b, i7);
-            bzo.p(iArrCopyOf, "copyOf(...)");
+            throwIfVar1IsNull(iArrCopyOf, "copyOf(...)");
             this.b = iArrCopyOf;
             Object[] objArrCopyOf = Arrays.copyOf(this.c, i7);
-            bzo.p(objArrCopyOf, "copyOf(...)");
+            throwIfVar1IsNull(objArrCopyOf, "copyOf(...)");
             this.c = objArrCopyOf;
         }
         this.b[i3] = i;
@@ -74,7 +75,7 @@ public final class dlo implements Cloneable {
 
     public final Object f(int i) {
         Object obj;
-        int i2 = bzo.i(this.b, this.d, i);
+        int i2 = KotlinHelpers.i(this.b, this.d, i);
         if (i2 < 0 || (obj = this.c[i2]) == bht.p) {
             return null;
         }
@@ -89,7 +90,7 @@ public final class dlo implements Cloneable {
     }
 
     public final void h(int i, Object obj) {
-        int i2 = bzo.i(this.b, this.d, i);
+        int i2 = KotlinHelpers.i(this.b, this.d, i);
         if (i2 >= 0) {
             this.c[i2] = obj;
             return;
@@ -106,7 +107,7 @@ public final class dlo implements Cloneable {
         }
         if (this.a && i4 >= this.b.length) {
             bht.q(this);
-            i3 = ~bzo.i(this.b, this.d, i);
+            i3 = ~KotlinHelpers.i(this.b, this.d, i);
         }
         int i5 = this.d;
         if (i5 >= this.b.length) {
@@ -120,10 +121,10 @@ public final class dlo implements Cloneable {
             }
             int i9 = i6 / 4;
             int[] iArrCopyOf = Arrays.copyOf(this.b, i9);
-            bzo.p(iArrCopyOf, "copyOf(...)");
+            throwIfVar1IsNull(iArrCopyOf, "copyOf(...)");
             this.b = iArrCopyOf;
             Object[] objArrCopyOf = Arrays.copyOf(this.c, i9);
-            bzo.p(objArrCopyOf, "copyOf(...)");
+            throwIfVar1IsNull(objArrCopyOf, "copyOf(...)");
             this.c = objArrCopyOf;
         }
         int i10 = this.d;
@@ -179,7 +180,7 @@ public final class dlo implements Cloneable {
         }
         sb.append('}');
         String string = sb.toString();
-        bzo.p(string, "toString(...)");
+        throwIfVar1IsNull(string, "toString(...)");
         return string;
     }
 }

@@ -11,7 +11,7 @@ public final class brq implements dfx {
 
     public brq() {
         dfx descriptor = bsb.b.getDescriptor();
-        bzo.q(descriptor, "elementDesc");
+        throwIfVar1IsNull(descriptor, "elementDesc");
         this.e = new kl(descriptor, 1);
     }
 
@@ -34,7 +34,7 @@ public final class brq implements dfx {
 
     @Override // me.hd.wauxv.obf.dfx
     public final int g(String str) {
-        bzo.q(str, "name");
+        throwIfVar1IsNull(str, "name");
         return this.e.g(str);
     }
 

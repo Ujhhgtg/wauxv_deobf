@@ -22,7 +22,7 @@ public final class blr {
         this.d = context;
     }
 
-    public static blq g(blr blrVar, int i, int i2, bgf bgfVar, int i3) {
+    public static blq g(blr blrVar, int i, int i2, IHasInvokeMethod bgfVar, int i3) {
         if ((i3 & 1) != 0) {
             i = -3;
         }
@@ -54,10 +54,11 @@ public final class blr {
         blrVar.e = i;
         if (i > 1) {
             if (viewGroup == null || !blrVar.c) {
-                if (str == null || (strO = bjs.o("\"", str, "\"")) == null) {
+                if (str == null || (strO = concat("\"", str, "\"")) == null) {
                     strO = "<anonymous>";
                 }
-                String str2 = viewGroup == null ? "No parent view group found" : "Parent view group declares attachToParent = false";
+                String str2 = viewGroup == null ? "No parent view group found"
+                        : "Parent view group declares attachToParent = false";
                 StringBuilder sb = new StringBuilder("Provide view ");
                 sb.append(cls);
                 sb.append("(");

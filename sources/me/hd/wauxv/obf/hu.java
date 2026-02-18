@@ -20,7 +20,7 @@ public final /* synthetic */ class hu implements OnBackInvokedCallback {
                 break;
             case 1:
                 bfu bfuVar = (bfu) this.b;
-                bzo.q(bfuVar, "$onBackInvoked");
+                throwIfVar1IsNull(bfuVar, "$onBackInvoked");
                 bfuVar.invoke();
                 break;
             default:

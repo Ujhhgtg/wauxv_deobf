@@ -11,7 +11,7 @@ public final class dkw extends lo {
     public final Socket a;
 
     public dkw(Socket socket) {
-        bzo.q(socket, "socket");
+        throwIfVar1IsNull(socket, "socket");
         this.a = socket;
     }
 

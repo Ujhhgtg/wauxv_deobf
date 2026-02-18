@@ -9,9 +9,9 @@ public final class acc {
     public static final acc a = new acc();
 
     public final OnBackInvokedDispatcher b(Activity activity) {
-        bzo.q(activity, "activity");
+        throwIfVar1IsNull(activity, "activity");
         OnBackInvokedDispatcher onBackInvokedDispatcher = activity.getOnBackInvokedDispatcher();
-        bzo.p(onBackInvokedDispatcher, "activity.getOnBackInvokedDispatcher()");
+        throwIfVar1IsNull(onBackInvokedDispatcher, "activity.getOnBackInvokedDispatcher()");
         return onBackInvokedDispatcher;
     }
 }

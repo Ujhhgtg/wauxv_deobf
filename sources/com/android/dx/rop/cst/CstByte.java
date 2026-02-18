@@ -46,6 +46,6 @@ public final class CstByte extends CstLiteral32 {
         if (b == i) {
             return make(b);
         }
-        throw new IllegalArgumentException(bjs.i(i, "bogus byte value: "));
+        throw new IllegalArgumentException(concatVar2Var1(i, "bogus byte value: "));
     }
 }

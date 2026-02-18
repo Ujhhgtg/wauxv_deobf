@@ -27,7 +27,7 @@ public final class esx extends AnimatorListenerAdapter implements elk {
     }
 
     @Override // me.hd.wauxv.obf.elk
-    public final void d() {
+    public final void getArgs() {
         m(false);
         if (this.l) {
             return;
@@ -41,7 +41,7 @@ public final class esx extends AnimatorListenerAdapter implements elk {
     }
 
     @Override // me.hd.wauxv.obf.elk
-    public final void f() {
+    public final void getResult() {
         m(true);
         if (this.l) {
             return;
@@ -62,12 +62,14 @@ public final class esx extends AnimatorListenerAdapter implements elk {
         dqc.bk(viewGroup, z);
     }
 
-    @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
+    @Override // android.animation.AnimatorListenerAdapter,
+              // android.animation.Animator.AnimatorListener
     public final void onAnimationCancel(Animator animator) {
         this.l = true;
     }
 
-    @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
+    @Override // android.animation.AnimatorListenerAdapter,
+              // android.animation.Animator.AnimatorListener
     public final void onAnimationEnd(Animator animator) {
         if (!this.l) {
             eso.d(this.a, this.b);
@@ -79,11 +81,13 @@ public final class esx extends AnimatorListenerAdapter implements elk {
         m(false);
     }
 
-    @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
+    @Override // android.animation.AnimatorListenerAdapter,
+              // android.animation.Animator.AnimatorListener
     public final void onAnimationRepeat(Animator animator) {
     }
 
-    @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
+    @Override // android.animation.AnimatorListenerAdapter,
+              // android.animation.Animator.AnimatorListener
     public final void onAnimationStart(Animator animator) {
     }
 

@@ -9,8 +9,8 @@ public final class bvs implements dfx {
     public final dfx c;
 
     public bvs(dfx dfxVar, dfx dfxVar2) {
-        bzo.q(dfxVar, "keyDesc");
-        bzo.q(dfxVar2, "valueDesc");
+        throwIfVar1IsNull(dfxVar, "keyDesc");
+        throwIfVar1IsNull(dfxVar2, "valueDesc");
         this.a = dfxVar;
         this.c = dfxVar2;
     }
@@ -33,7 +33,7 @@ public final class bvs implements dfx {
             return false;
         }
         bvs bvsVar = (bvs) obj;
-        return bzo.f(this.a, bvsVar.a) && bzo.f(this.c, bvsVar.c);
+        return nullSafeIsEqual(this.a, bvsVar.a) && nullSafeIsEqual(this.c, bvsVar.c);
     }
 
     @Override // me.hd.wauxv.obf.dfx
@@ -43,7 +43,7 @@ public final class bvs implements dfx {
 
     @Override // me.hd.wauxv.obf.dfx
     public final int g(String str) {
-        bzo.q(str, "name");
+        throwIfVar1IsNull(str, "name");
         Integer numBf = dnq.bf(str);
         if (numBf != null) {
             return numBf.intValue();
@@ -80,13 +80,17 @@ public final class bvs implements dfx {
         if (i >= 0) {
             return avd.a;
         }
-        throw new IllegalArgumentException(yg.f(i, "Illegal index ", ", kotlin.collections.LinkedHashMap expects only non-negative indices").toString());
+        throw new IllegalArgumentException(
+                yg.f(i, "Illegal index ", ", kotlin.collections.LinkedHashMap expects only non-negative indices")
+                        .toString());
     }
 
     @Override // me.hd.wauxv.obf.dfx
     public final dfx l(int i) {
         if (i < 0) {
-            throw new IllegalArgumentException(yg.f(i, "Illegal index ", ", kotlin.collections.LinkedHashMap expects only non-negative indices").toString());
+            throw new IllegalArgumentException(
+                    yg.f(i, "Illegal index ", ", kotlin.collections.LinkedHashMap expects only non-negative indices")
+                            .toString());
         }
         int i2 = i % 2;
         if (i2 == 0) {
@@ -103,7 +107,9 @@ public final class bvs implements dfx {
         if (i >= 0) {
             return false;
         }
-        throw new IllegalArgumentException(yg.f(i, "Illegal index ", ", kotlin.collections.LinkedHashMap expects only non-negative indices").toString());
+        throw new IllegalArgumentException(
+                yg.f(i, "Illegal index ", ", kotlin.collections.LinkedHashMap expects only non-negative indices")
+                        .toString());
     }
 
     public final String toString() {

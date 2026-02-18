@@ -28,10 +28,13 @@ public final class dwv {
     static {
         dtr dtrVar = new dtr(6);
         btx btxVar = btx.a;
-        a = new btt[]{null, null, null, null, null, null, ewz.am(btxVar, dtrVar), null, null, null, null, null, null, ewz.am(btxVar, new dtr(7)), null, null, null};
+        a = new btt[] { null, null, null, null, null, null, ewz.am(btxVar, dtrVar), null, null, null, null, null, null,
+                ewz.am(btxVar, new dtr(7)), null, null, null };
     }
 
-    public /* synthetic */ dwv(int i, String str, Integer num, dyu dyuVar, dyu dyuVar2, Integer num2, dyr dyrVar, List list, dxk dxkVar, egi egiVar, Boolean bool, dzs dzsVar, edh edhVar, dxb dxbVar, List list2, edt edtVar, ehj ehjVar, dwd dwdVar) {
+    public /* synthetic */ dwv(int i, String str, Integer num, dyu dyuVar, dyu dyuVar2, Integer num2, dyr dyrVar,
+            List list, dxk dxkVar, egi egiVar, Boolean bool, dzs dzsVar, edh edhVar, dxb dxbVar, List list2, edt edtVar,
+            ehj ehjVar, dwd dwdVar) {
         if (131071 != (i & 131071)) {
             bht.ah(i, 131071, dwt.b.getDescriptor());
             throw null;
@@ -63,7 +66,15 @@ public final class dwv {
             return false;
         }
         dwv dwvVar = (dwv) obj;
-        return bzo.f(this.b, dwvVar.b) && bzo.f(this.c, dwvVar.c) && bzo.f(this.d, dwvVar.d) && bzo.f(this.e, dwvVar.e) && bzo.f(this.f, dwvVar.f) && bzo.f(this.g, dwvVar.g) && bzo.f(this.h, dwvVar.h) && bzo.f(this.i, dwvVar.i) && bzo.f(this.j, dwvVar.j) && bzo.f(this.k, dwvVar.k) && bzo.f(this.l, dwvVar.l) && bzo.f(this.m, dwvVar.m) && bzo.f(this.n, dwvVar.n) && bzo.f(this.o, dwvVar.o) && bzo.f(this.p, dwvVar.p) && bzo.f(this.q, dwvVar.q) && bzo.f(this.r, dwvVar.r);
+        return nullSafeIsEqual(this.b, dwvVar.b) && nullSafeIsEqual(this.c, dwvVar.c)
+                && nullSafeIsEqual(this.d, dwvVar.d) && nullSafeIsEqual(this.e, dwvVar.e)
+                && nullSafeIsEqual(this.f, dwvVar.f) && nullSafeIsEqual(this.g, dwvVar.g)
+                && nullSafeIsEqual(this.h, dwvVar.h) && nullSafeIsEqual(this.i, dwvVar.i)
+                && nullSafeIsEqual(this.j, dwvVar.j) && nullSafeIsEqual(this.k, dwvVar.k)
+                && nullSafeIsEqual(this.l, dwvVar.l) && nullSafeIsEqual(this.m, dwvVar.m)
+                && nullSafeIsEqual(this.n, dwvVar.n) && nullSafeIsEqual(this.o, dwvVar.o)
+                && nullSafeIsEqual(this.p, dwvVar.p) && nullSafeIsEqual(this.q, dwvVar.q)
+                && nullSafeIsEqual(this.r, dwvVar.r);
     }
 
     public final int hashCode() {

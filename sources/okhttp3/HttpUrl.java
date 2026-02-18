@@ -22,7 +22,7 @@ import me.hd.wauxv.obf.avd;
 import me.hd.wauxv.obf.avh;
 import me.hd.wauxv.obf.bjs;
 import me.hd.wauxv.obf.bqf;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cnd;
 import me.hd.wauxv.obf.dnj;
 import me.hd.wauxv.obf.dnr;
@@ -60,9 +60,13 @@ public final class HttpUrl {
     private final String url;
     private final String username;
     public static final Companion Companion = new Companion(null);
-    private static final char[] HEX_DIGITS = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
+    private static final char[] HEX_DIGITS = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D',
+            'E', 'F' };
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Builder {
         public static final Companion Companion = new Companion(null);
         public static final String INVALID_HOST = "Invalid URL host";
@@ -75,7 +79,10 @@ public final class HttpUrl {
         private String encodedPassword = "";
         private int port = -1;
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static final class Companion {
             public /* synthetic */ Companion(akd akdVar) {
                 this();
@@ -85,7 +92,8 @@ public final class HttpUrl {
             public final int parsePort(String str, int i, int i2) {
                 int i3;
                 try {
-                    i3 = Integer.parseInt(Companion.canonicalize$okhttp$default(HttpUrl.Companion, str, i, i2, "", false, false, false, false, null, 248, null));
+                    i3 = Integer.parseInt(Companion.canonicalize$okhttp$default(HttpUrl.Companion, str, i, i2, "",
+                            false, false, false, false, null, 248, null));
                 } catch (NumberFormatException unused) {
                 }
                 if (1 > i3 || i3 >= 65536) {
@@ -119,7 +127,8 @@ public final class HttpUrl {
                     return -1;
                 }
                 char cCharAt = str.charAt(i);
-                if ((bzo.r(cCharAt, 97) >= 0 && bzo.r(cCharAt, 122) <= 0) || (bzo.r(cCharAt, 65) >= 0 && bzo.r(cCharAt, 90) <= 0)) {
+                if ((KotlinHelpers.r(cCharAt, 97) >= 0 && KotlinHelpers.r(cCharAt, 122) <= 0)
+                        || (KotlinHelpers.r(cCharAt, 65) >= 0 && KotlinHelpers.r(cCharAt, 90) <= 0)) {
                     while (true) {
                         i++;
                         if (i >= i2) {
@@ -173,16 +182,17 @@ public final class HttpUrl {
             }
             Companion companion = HttpUrl.Companion;
             String str = this.scheme;
-            bzo.n(str);
+            throwIfVar1IsNull(str);
             return companion.defaultPort(str);
         }
 
         private final boolean isDot(String str) {
-            return bzo.f(str, ".") || dnr.bj(str, "%2e", true);
+            return nullSafeIsEqual(str, ".") || dnr.bj(str, "%2e", true);
         }
 
         private final boolean isDotDot(String str) {
-            return bzo.f(str, "..") || dnr.bj(str, "%2e.", true) || dnr.bj(str, ".%2e", true) || dnr.bj(str, "%2e%2e", true);
+            return nullSafeIsEqual(str, "..") || dnr.bj(str, "%2e.", true) || dnr.bj(str, ".%2e", true)
+                    || dnr.bj(str, "%2e%2e", true);
         }
 
         private final void pop() {
@@ -194,7 +204,8 @@ public final class HttpUrl {
         }
 
         private final void push(String str, int i, int i2, boolean z, boolean z2) {
-            String strCanonicalize$okhttp$default = Companion.canonicalize$okhttp$default(HttpUrl.Companion, str, i, i2, HttpUrl.PATH_SEGMENT_ENCODE_SET, z2, false, false, false, null, 240, null);
+            String strCanonicalize$okhttp$default = Companion.canonicalize$okhttp$default(HttpUrl.Companion, str, i, i2,
+                    HttpUrl.PATH_SEGMENT_ENCODE_SET, z2, false, false, false, null, 240, null);
             if (isDot(strCanonicalize$okhttp$default)) {
                 return;
             }
@@ -214,7 +225,7 @@ public final class HttpUrl {
 
         private final void removeAllCanonicalQueryParameters(String str) {
             List<String> list = this.encodedQueryNamesAndValues;
-            bzo.n(list);
+            throwIfVar1IsNull(list);
             int size = list.size() - 2;
             int iAv = cnd.av(size, 0, -2);
             if (iAv > size) {
@@ -222,16 +233,16 @@ public final class HttpUrl {
             }
             while (true) {
                 List<String> list2 = this.encodedQueryNamesAndValues;
-                bzo.n(list2);
-                if (bzo.f(str, list2.get(size))) {
+                throwIfVar1IsNull(list2);
+                if (nullSafeIsEqual(str, list2.get(size))) {
                     List<String> list3 = this.encodedQueryNamesAndValues;
-                    bzo.n(list3);
+                    throwIfVar1IsNull(list3);
                     list3.remove(size + 1);
                     List<String> list4 = this.encodedQueryNamesAndValues;
-                    bzo.n(list4);
+                    throwIfVar1IsNull(list4);
                     list4.remove(size);
                     List<String> list5 = this.encodedQueryNamesAndValues;
-                    bzo.n(list5);
+                    throwIfVar1IsNull(list5);
                     if (list5.isEmpty()) {
                         this.encodedQueryNamesAndValues = null;
                         return;
@@ -275,54 +286,62 @@ public final class HttpUrl {
         }
 
         public final Builder addEncodedPathSegment(String str) {
-            bzo.q(str, "encodedPathSegment");
+            throwIfVar1IsNull(str, "encodedPathSegment");
             push(str, 0, str.length(), false, true);
             return this;
         }
 
         public final Builder addEncodedPathSegments(String str) {
-            bzo.q(str, "encodedPathSegments");
+            throwIfVar1IsNull(str, "encodedPathSegments");
             return addPathSegments(str, true);
         }
 
         public final Builder addEncodedQueryParameter(String str, String str2) {
-            bzo.q(str, "encodedName");
+            throwIfVar1IsNull(str, "encodedName");
             if (this.encodedQueryNamesAndValues == null) {
                 this.encodedQueryNamesAndValues = new ArrayList();
             }
             List<String> list = this.encodedQueryNamesAndValues;
-            bzo.n(list);
+            throwIfVar1IsNull(list);
             Companion companion = HttpUrl.Companion;
-            list.add(Companion.canonicalize$okhttp$default(companion, str, 0, 0, HttpUrl.QUERY_COMPONENT_REENCODE_SET, true, false, true, false, null, Opcodes.DIV_INT_LIT16, null));
+            list.add(Companion.canonicalize$okhttp$default(companion, str, 0, 0, HttpUrl.QUERY_COMPONENT_REENCODE_SET,
+                    true, false, true, false, null, Opcodes.DIV_INT_LIT16, null));
             List<String> list2 = this.encodedQueryNamesAndValues;
-            bzo.n(list2);
-            list2.add(str2 != null ? Companion.canonicalize$okhttp$default(companion, str2, 0, 0, HttpUrl.QUERY_COMPONENT_REENCODE_SET, true, false, true, false, null, Opcodes.DIV_INT_LIT16, null) : null);
+            throwIfVar1IsNull(list2);
+            list2.add(str2 != null
+                    ? Companion.canonicalize$okhttp$default(companion, str2, 0, 0, HttpUrl.QUERY_COMPONENT_REENCODE_SET,
+                            true, false, true, false, null, Opcodes.DIV_INT_LIT16, null)
+                    : null);
             return this;
         }
 
         public final Builder addPathSegment(String str) {
-            bzo.q(str, "pathSegment");
+            throwIfVar1IsNull(str, "pathSegment");
             push(str, 0, str.length(), false, false);
             return this;
         }
 
         public final Builder addPathSegments(String str) {
-            bzo.q(str, "pathSegments");
+            throwIfVar1IsNull(str, "pathSegments");
             return addPathSegments(str, false);
         }
 
         public final Builder addQueryParameter(String str, String str2) {
-            bzo.q(str, "name");
+            throwIfVar1IsNull(str, "name");
             if (this.encodedQueryNamesAndValues == null) {
                 this.encodedQueryNamesAndValues = new ArrayList();
             }
             List<String> list = this.encodedQueryNamesAndValues;
-            bzo.n(list);
+            throwIfVar1IsNull(list);
             Companion companion = HttpUrl.Companion;
-            list.add(Companion.canonicalize$okhttp$default(companion, str, 0, 0, HttpUrl.QUERY_COMPONENT_ENCODE_SET, false, false, true, false, null, Opcodes.DIV_INT_LIT8, null));
+            list.add(Companion.canonicalize$okhttp$default(companion, str, 0, 0, HttpUrl.QUERY_COMPONENT_ENCODE_SET,
+                    false, false, true, false, null, Opcodes.DIV_INT_LIT8, null));
             List<String> list2 = this.encodedQueryNamesAndValues;
-            bzo.n(list2);
-            list2.add(str2 != null ? Companion.canonicalize$okhttp$default(companion, str2, 0, 0, HttpUrl.QUERY_COMPONENT_ENCODE_SET, false, false, true, false, null, Opcodes.DIV_INT_LIT8, null) : null);
+            throwIfVar1IsNull(list2);
+            list2.add(str2 != null
+                    ? Companion.canonicalize$okhttp$default(companion, str2, 0, 0, HttpUrl.QUERY_COMPONENT_ENCODE_SET,
+                            false, false, true, false, null, Opcodes.DIV_INT_LIT8, null)
+                    : null);
             return this;
         }
 
@@ -333,8 +352,10 @@ public final class HttpUrl {
                 throw new IllegalStateException("scheme == null");
             }
             Companion companion = HttpUrl.Companion;
-            String strPercentDecode$okhttp$default = Companion.percentDecode$okhttp$default(companion, this.encodedUsername, 0, 0, false, 7, null);
-            String strPercentDecode$okhttp$default2 = Companion.percentDecode$okhttp$default(companion, this.encodedPassword, 0, 0, false, 7, null);
+            String strPercentDecode$okhttp$default = Companion.percentDecode$okhttp$default(companion,
+                    this.encodedUsername, 0, 0, false, 7, null);
+            String strPercentDecode$okhttp$default2 = Companion.percentDecode$okhttp$default(companion,
+                    this.encodedPassword, 0, 0, false, 7, null);
             String str2 = this.host;
             if (str2 == null) {
                 throw new IllegalStateException("host == null");
@@ -344,35 +365,44 @@ public final class HttpUrl {
             ArrayList arrayList2 = new ArrayList(abb.ak(list, 10));
             Iterator<T> it = list.iterator();
             while (it.hasNext()) {
-                arrayList2.add(Companion.percentDecode$okhttp$default(HttpUrl.Companion, (String) it.next(), 0, 0, false, 7, null));
+                arrayList2.add(Companion.percentDecode$okhttp$default(HttpUrl.Companion, (String) it.next(), 0, 0,
+                        false, 7, null));
             }
             List<String> list2 = this.encodedQueryNamesAndValues;
             if (list2 != null) {
                 ArrayList arrayList3 = new ArrayList(abb.ak(list2, 10));
                 for (String str3 : list2) {
-                    arrayList3.add(str3 != null ? Companion.percentDecode$okhttp$default(HttpUrl.Companion, str3, 0, 0, true, 3, null) : null);
+                    arrayList3.add(str3 != null
+                            ? Companion.percentDecode$okhttp$default(HttpUrl.Companion, str3, 0, 0, true, 3, null)
+                            : null);
                 }
                 arrayList = arrayList3;
             } else {
                 arrayList = null;
             }
             String str4 = this.encodedFragment;
-            return new HttpUrl(str, strPercentDecode$okhttp$default, strPercentDecode$okhttp$default2, str2, iEffectivePort, arrayList2, arrayList, str4 != null ? Companion.percentDecode$okhttp$default(HttpUrl.Companion, str4, 0, 0, false, 7, null) : null, toString());
+            return new HttpUrl(str, strPercentDecode$okhttp$default, strPercentDecode$okhttp$default2, str2,
+                    iEffectivePort, arrayList2, arrayList,
+                    str4 != null ? Companion.percentDecode$okhttp$default(HttpUrl.Companion, str4, 0, 0, false, 7, null)
+                            : null,
+                    toString());
         }
 
         public final Builder encodedFragment(String str) {
-            this.encodedFragment = str != null ? Companion.canonicalize$okhttp$default(HttpUrl.Companion, str, 0, 0, "", true, false, false, true, null, 179, null) : null;
+            this.encodedFragment = str != null ? Companion.canonicalize$okhttp$default(HttpUrl.Companion, str, 0, 0, "",
+                    true, false, false, true, null, 179, null) : null;
             return this;
         }
 
         public final Builder encodedPassword(String str) {
-            bzo.q(str, "encodedPassword");
-            this.encodedPassword = Companion.canonicalize$okhttp$default(HttpUrl.Companion, str, 0, 0, " \"':;<=>@[]^`{}|/\\?#", true, false, false, false, null, 243, null);
+            throwIfVar1IsNull(str, "encodedPassword");
+            this.encodedPassword = Companion.canonicalize$okhttp$default(HttpUrl.Companion, str, 0, 0,
+                    " \"':;<=>@[]^`{}|/\\?#", true, false, false, false, null, 243, null);
             return this;
         }
 
         public final Builder encodedPath(String str) {
-            bzo.q(str, "encodedPath");
+            throwIfVar1IsNull(str, "encodedPath");
             if (!dnr.bp(str, "/", false)) {
                 throw new IllegalArgumentException("unexpected encodedPath: ".concat(str).toString());
             }
@@ -383,18 +413,23 @@ public final class HttpUrl {
         public final Builder encodedQuery(String str) {
             Companion companion;
             String strCanonicalize$okhttp$default;
-            this.encodedQueryNamesAndValues = (str == null || (strCanonicalize$okhttp$default = Companion.canonicalize$okhttp$default((companion = HttpUrl.Companion), str, 0, 0, HttpUrl.QUERY_ENCODE_SET, true, false, true, false, null, Opcodes.DIV_INT_LIT16, null)) == null) ? null : companion.toQueryNamesAndValues$okhttp(strCanonicalize$okhttp$default);
+            this.encodedQueryNamesAndValues = (str == null || (strCanonicalize$okhttp$default = Companion
+                    .canonicalize$okhttp$default((companion = HttpUrl.Companion), str, 0, 0, HttpUrl.QUERY_ENCODE_SET,
+                            true, false, true, false, null, Opcodes.DIV_INT_LIT16, null)) == null) ? null
+                                    : companion.toQueryNamesAndValues$okhttp(strCanonicalize$okhttp$default);
             return this;
         }
 
         public final Builder encodedUsername(String str) {
-            bzo.q(str, "encodedUsername");
-            this.encodedUsername = Companion.canonicalize$okhttp$default(HttpUrl.Companion, str, 0, 0, " \"':;<=>@[]^`{}|/\\?#", true, false, false, false, null, 243, null);
+            throwIfVar1IsNull(str, "encodedUsername");
+            this.encodedUsername = Companion.canonicalize$okhttp$default(HttpUrl.Companion, str, 0, 0,
+                    " \"':;<=>@[]^`{}|/\\?#", true, false, false, false, null, 243, null);
             return this;
         }
 
         public final Builder fragment(String str) {
-            this.encodedFragment = str != null ? Companion.canonicalize$okhttp$default(HttpUrl.Companion, str, 0, 0, "", false, false, false, true, null, 187, null) : null;
+            this.encodedFragment = str != null ? Companion.canonicalize$okhttp$default(HttpUrl.Companion, str, 0, 0, "",
+                    false, false, false, true, null, 187, null) : null;
             return this;
         }
 
@@ -431,8 +466,9 @@ public final class HttpUrl {
         }
 
         public final Builder host(String str) {
-            bzo.q(str, "host");
-            String canonicalHost = HostnamesKt.toCanonicalHost(Companion.percentDecode$okhttp$default(HttpUrl.Companion, str, 0, 0, false, 7, null));
+            throwIfVar1IsNull(str, "host");
+            String canonicalHost = HostnamesKt.toCanonicalHost(
+                    Companion.percentDecode$okhttp$default(HttpUrl.Companion, str, 0, 0, false, 7, null));
             if (canonicalHost == null) {
                 throw new IllegalArgumentException("unexpected host: ".concat(str));
             }
@@ -453,11 +489,14 @@ public final class HttpUrl {
             char c;
             int i6;
             String str4 = str;
-            bzo.q(str4, "input");
-            int iIndexOfFirstNonAsciiWhitespace$default = Util.indexOfFirstNonAsciiWhitespace$default(str4, 0, 0, 3, null);
-            int iIndexOfLastNonAsciiWhitespace$default = Util.indexOfLastNonAsciiWhitespace$default(str4, iIndexOfFirstNonAsciiWhitespace$default, 0, 2, null);
+            throwIfVar1IsNull(str4, "input");
+            int iIndexOfFirstNonAsciiWhitespace$default = Util.indexOfFirstNonAsciiWhitespace$default(str4, 0, 0, 3,
+                    null);
+            int iIndexOfLastNonAsciiWhitespace$default = Util.indexOfLastNonAsciiWhitespace$default(str4,
+                    iIndexOfFirstNonAsciiWhitespace$default, 0, 2, null);
             Companion companion = Companion;
-            int iSchemeDelimiterOffset = companion.schemeDelimiterOffset(str4, iIndexOfFirstNonAsciiWhitespace$default, iIndexOfLastNonAsciiWhitespace$default);
+            int iSchemeDelimiterOffset = companion.schemeDelimiterOffset(str4, iIndexOfFirstNonAsciiWhitespace$default,
+                    iIndexOfLastNonAsciiWhitespace$default);
             String str5 = "this as java.lang.String…ing(startIndex, endIndex)";
             boolean z2 = true;
             int i7 = -1;
@@ -469,7 +508,7 @@ public final class HttpUrl {
                     if (!dnr.bq(str4, true, iIndexOfFirstNonAsciiWhitespace$default, "http:")) {
                         StringBuilder sb = new StringBuilder("Expected URL scheme 'http' or 'https' but was '");
                         String strSubstring = str4.substring(0, iSchemeDelimiterOffset);
-                        bzo.p(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
+                        throwIfVar1IsNull(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
                         sb.append(strSubstring);
                         sb.append('\'');
                         throw new IllegalArgumentException(sb.toString());
@@ -479,20 +518,26 @@ public final class HttpUrl {
                 }
             } else {
                 if (httpUrl == null) {
-                    throw new IllegalArgumentException(yg.k("Expected URL scheme 'http' or 'https' but no scheme was found for ", str4.length() > 6 ? dnj.az(6, str4).concat("...") : str4));
+                    throw new IllegalArgumentException(
+                            yg.k("Expected URL scheme 'http' or 'https' but no scheme was found for ",
+                                    str4.length() > 6 ? dnj.az(6, str4).concat("...") : str4));
                 }
                 this.scheme = httpUrl.scheme();
             }
-            int iSlashCount = companion.slashCount(str4, iIndexOfFirstNonAsciiWhitespace$default, iIndexOfLastNonAsciiWhitespace$default);
+            int iSlashCount = companion.slashCount(str4, iIndexOfFirstNonAsciiWhitespace$default,
+                    iIndexOfLastNonAsciiWhitespace$default);
             int i8 = 63;
             int i9 = 35;
-            if (iSlashCount >= 2 || httpUrl == null || !bzo.f(httpUrl.scheme(), this.scheme)) {
+            if (iSlashCount >= 2 || httpUrl == null || !nullSafeIsEqual(httpUrl.scheme(), this.scheme)) {
                 int i10 = iIndexOfFirstNonAsciiWhitespace$default + iSlashCount;
                 boolean z3 = false;
                 boolean z4 = false;
                 while (true) {
-                    iDelimiterOffset = Util.delimiterOffset(str4, "@/\\?#", i10, iIndexOfLastNonAsciiWhitespace$default);
-                    int iCharAt = iDelimiterOffset != iIndexOfLastNonAsciiWhitespace$default ? str4.charAt(iDelimiterOffset) : i7;
+                    iDelimiterOffset = Util.delimiterOffset(str4, "@/\\?#", i10,
+                            iIndexOfLastNonAsciiWhitespace$default);
+                    int iCharAt = iDelimiterOffset != iIndexOfLastNonAsciiWhitespace$default
+                            ? str4.charAt(iDelimiterOffset)
+                            : i7;
                     if (iCharAt == i7 || iCharAt == i9 || iCharAt == 47 || iCharAt == 92 || iCharAt == i8) {
                         break;
                     }
@@ -507,7 +552,9 @@ public final class HttpUrl {
                             sb2.append("%40");
                             str4 = str;
                             i4 = iDelimiterOffset;
-                            sb2.append(Companion.canonicalize$okhttp$default(HttpUrl.Companion, str4, i10, iDelimiterOffset, " \"':;<=>@[]^`{}|/\\?#", true, false, false, false, null, 240, null));
+                            sb2.append(Companion.canonicalize$okhttp$default(HttpUrl.Companion, str4, i10,
+                                    iDelimiterOffset, " \"':;<=>@[]^`{}|/\\?#", true, false, false, false, null, 240,
+                                    null));
                             this.encodedPassword = sb2.toString();
                         } else {
                             int iDelimiterOffset2 = Util.delimiterOffset(str4, ':', i10, iDelimiterOffset);
@@ -516,14 +563,19 @@ public final class HttpUrl {
                             i3 = i7;
                             i2 = iIndexOfLastNonAsciiWhitespace$default;
                             z = z2;
-                            String strCanonicalize$okhttp$default = Companion.canonicalize$okhttp$default(companion2, str4, i10, iDelimiterOffset2, " \"':;<=>@[]^`{}|/\\?#", true, false, false, false, null, 240, null);
+                            String strCanonicalize$okhttp$default = Companion.canonicalize$okhttp$default(companion2,
+                                    str4, i10, iDelimiterOffset2, " \"':;<=>@[]^`{}|/\\?#", true, false, false, false,
+                                    null, 240, null);
                             if (z4) {
-                                strCanonicalize$okhttp$default = this.encodedUsername + "%40" + strCanonicalize$okhttp$default;
+                                strCanonicalize$okhttp$default = this.encodedUsername + "%40"
+                                        + strCanonicalize$okhttp$default;
                             }
                             this.encodedUsername = strCanonicalize$okhttp$default;
                             if (iDelimiterOffset2 != iDelimiterOffset) {
                                 i5 = iDelimiterOffset;
-                                this.encodedPassword = Companion.canonicalize$okhttp$default(companion2, str, iDelimiterOffset2 + 1, i5, " \"':;<=>@[]^`{}|/\\?#", true, false, false, false, null, 240, null);
+                                this.encodedPassword = Companion.canonicalize$okhttp$default(companion2, str,
+                                        iDelimiterOffset2 + 1, i5, " \"':;<=>@[]^`{}|/\\?#", true, false, false, false,
+                                        null, 240, null);
                                 z3 = z;
                             } else {
                                 i5 = iDelimiterOffset;
@@ -548,13 +600,14 @@ public final class HttpUrl {
                 int iPortColonOffset = companion3.portColonOffset(str4, i10, iDelimiterOffset);
                 int i12 = iPortColonOffset + 1;
                 if (i12 < iDelimiterOffset) {
-                    this.host = HostnamesKt.toCanonicalHost(Companion.percentDecode$okhttp$default(HttpUrl.Companion, str4, i10, iPortColonOffset, false, 4, null));
+                    this.host = HostnamesKt.toCanonicalHost(Companion.percentDecode$okhttp$default(HttpUrl.Companion,
+                            str4, i10, iPortColonOffset, false, 4, null));
                     int port = companion3.parsePort(str4, i12, iDelimiterOffset);
                     this.port = port;
                     if (port == i11) {
                         StringBuilder sb3 = new StringBuilder("Invalid URL port: \"");
                         String strSubstring2 = str4.substring(i12, iDelimiterOffset);
-                        bzo.p(strSubstring2, str6);
+                        throwIfVar1IsNull(strSubstring2, str6);
                         sb3.append(strSubstring2);
                         sb3.append('\"');
                         throw new IllegalArgumentException(sb3.toString().toString());
@@ -563,15 +616,16 @@ public final class HttpUrl {
                 } else {
                     str2 = str6;
                     Companion companion4 = HttpUrl.Companion;
-                    this.host = HostnamesKt.toCanonicalHost(Companion.percentDecode$okhttp$default(companion4, str4, i10, iPortColonOffset, false, 4, null));
+                    this.host = HostnamesKt.toCanonicalHost(Companion.percentDecode$okhttp$default(companion4, str4,
+                            i10, iPortColonOffset, false, 4, null));
                     String str7 = this.scheme;
-                    bzo.n(str7);
+                    throwIfVar1IsNull(str7);
                     this.port = companion4.defaultPort(str7);
                 }
                 if (this.host == null) {
                     StringBuilder sb4 = new StringBuilder("Invalid URL host: \"");
                     String strSubstring3 = str4.substring(i10, iPortColonOffset);
-                    bzo.p(strSubstring3, str2);
+                    throwIfVar1IsNull(strSubstring3, str2);
                     sb4.append(strSubstring3);
                     sb4.append('\"');
                     throw new IllegalArgumentException(sb4.toString().toString());
@@ -584,7 +638,8 @@ public final class HttpUrl {
                 this.port = httpUrl.port();
                 this.encodedPathSegments.clear();
                 this.encodedPathSegments.addAll(httpUrl.encodedPathSegments());
-                if (iIndexOfFirstNonAsciiWhitespace$default == iIndexOfLastNonAsciiWhitespace$default || str4.charAt(iIndexOfFirstNonAsciiWhitespace$default) == '#') {
+                if (iIndexOfFirstNonAsciiWhitespace$default == iIndexOfLastNonAsciiWhitespace$default
+                        || str4.charAt(iIndexOfFirstNonAsciiWhitespace$default) == '#') {
                     encodedQuery(httpUrl.encodedQuery());
                 }
                 i = iIndexOfLastNonAsciiWhitespace$default;
@@ -599,24 +654,28 @@ public final class HttpUrl {
                 c = '#';
                 int iDelimiterOffset4 = Util.delimiterOffset(str4, '#', iDelimiterOffset3, i13);
                 Companion companion5 = HttpUrl.Companion;
-                this.encodedQueryNamesAndValues = companion5.toQueryNamesAndValues$okhttp(Companion.canonicalize$okhttp$default(companion5, str4, iDelimiterOffset3 + 1, iDelimiterOffset4, HttpUrl.QUERY_ENCODE_SET, true, false, true, false, null, Opcodes.ADD_INT_LIT16, null));
+                this.encodedQueryNamesAndValues = companion5.toQueryNamesAndValues$okhttp(Companion
+                        .canonicalize$okhttp$default(companion5, str4, iDelimiterOffset3 + 1, iDelimiterOffset4,
+                                HttpUrl.QUERY_ENCODE_SET, true, false, true, false, null, Opcodes.ADD_INT_LIT16, null));
                 i6 = iDelimiterOffset4;
             }
             if (i6 < i13 && str4.charAt(i6) == c) {
-                this.encodedFragment = Companion.canonicalize$okhttp$default(HttpUrl.Companion, str4, i6 + 1, i13, "", true, false, false, true, null, 176, null);
+                this.encodedFragment = Companion.canonicalize$okhttp$default(HttpUrl.Companion, str4, i6 + 1, i13, "",
+                        true, false, false, true, null, 176, null);
             }
             return this;
         }
 
         public final Builder password(String str) {
-            bzo.q(str, "password");
-            this.encodedPassword = Companion.canonicalize$okhttp$default(HttpUrl.Companion, str, 0, 0, " \"':;<=>@[]^`{}|/\\?#", false, false, false, false, null, Opcodes.INVOKE_POLYMORPHIC_RANGE, null);
+            throwIfVar1IsNull(str, "password");
+            this.encodedPassword = Companion.canonicalize$okhttp$default(HttpUrl.Companion, str, 0, 0,
+                    " \"':;<=>@[]^`{}|/\\?#", false, false, false, false, null, Opcodes.INVOKE_POLYMORPHIC_RANGE, null);
             return this;
         }
 
         public final Builder port(int i) {
             if (1 > i || i >= 65536) {
-                throw new IllegalArgumentException(bjs.i(i, "unexpected port: ").toString());
+                throw new IllegalArgumentException(concatVar2Var1(i, "unexpected port: ").toString());
             }
             this.port = i;
             return this;
@@ -625,7 +684,10 @@ public final class HttpUrl {
         public final Builder query(String str) {
             Companion companion;
             String strCanonicalize$okhttp$default;
-            this.encodedQueryNamesAndValues = (str == null || (strCanonicalize$okhttp$default = Companion.canonicalize$okhttp$default((companion = HttpUrl.Companion), str, 0, 0, HttpUrl.QUERY_ENCODE_SET, false, false, true, false, null, Opcodes.DIV_INT_LIT8, null)) == null) ? null : companion.toQueryNamesAndValues$okhttp(strCanonicalize$okhttp$default);
+            this.encodedQueryNamesAndValues = (str == null || (strCanonicalize$okhttp$default = Companion
+                    .canonicalize$okhttp$default((companion = HttpUrl.Companion), str, 0, 0, HttpUrl.QUERY_ENCODE_SET,
+                            false, false, true, false, null, Opcodes.DIV_INT_LIT8, null)) == null) ? null
+                                    : companion.toQueryNamesAndValues$okhttp(strCanonicalize$okhttp$default);
             return this;
         }
 
@@ -634,9 +696,9 @@ public final class HttpUrl {
             String str = this.host;
             if (str != null) {
                 Pattern patternCompile = Pattern.compile("[\"<>^`{|}]");
-                bzo.p(patternCompile, "compile(...)");
+                throwIfVar1IsNull(patternCompile, "compile(...)");
                 strReplaceAll = patternCompile.matcher(str).replaceAll("");
-                bzo.p(strReplaceAll, "replaceAll(...)");
+                throwIfVar1IsNull(strReplaceAll, "replaceAll(...)");
             } else {
                 strReplaceAll = null;
             }
@@ -644,36 +706,45 @@ public final class HttpUrl {
             int size = this.encodedPathSegments.size();
             for (int i = 0; i < size; i++) {
                 List<String> list = this.encodedPathSegments;
-                list.set(i, Companion.canonicalize$okhttp$default(HttpUrl.Companion, list.get(i), 0, 0, HttpUrl.PATH_SEGMENT_ENCODE_SET_URI, true, true, false, false, null, 227, null));
+                list.set(i, Companion.canonicalize$okhttp$default(HttpUrl.Companion, list.get(i), 0, 0,
+                        HttpUrl.PATH_SEGMENT_ENCODE_SET_URI, true, true, false, false, null, 227, null));
             }
             List<String> list2 = this.encodedQueryNamesAndValues;
             if (list2 != null) {
                 int size2 = list2.size();
                 for (int i2 = 0; i2 < size2; i2++) {
                     String str2 = list2.get(i2);
-                    list2.set(i2, str2 != null ? Companion.canonicalize$okhttp$default(HttpUrl.Companion, str2, 0, 0, HttpUrl.QUERY_COMPONENT_ENCODE_SET_URI, true, true, true, false, null, 195, null) : null);
+                    list2.set(i2,
+                            str2 != null ? Companion.canonicalize$okhttp$default(HttpUrl.Companion, str2, 0, 0,
+                                    HttpUrl.QUERY_COMPONENT_ENCODE_SET_URI, true, true, true, false, null, 195, null)
+                                    : null);
                 }
             }
             String str3 = this.encodedFragment;
-            this.encodedFragment = str3 != null ? Companion.canonicalize$okhttp$default(HttpUrl.Companion, str3, 0, 0, HttpUrl.FRAGMENT_ENCODE_SET_URI, true, true, false, true, null, 163, null) : null;
+            this.encodedFragment = str3 != null
+                    ? Companion.canonicalize$okhttp$default(HttpUrl.Companion, str3, 0, 0,
+                            HttpUrl.FRAGMENT_ENCODE_SET_URI, true, true, false, true, null, 163, null)
+                    : null;
             return this;
         }
 
         public final Builder removeAllEncodedQueryParameters(String str) {
-            bzo.q(str, "encodedName");
+            throwIfVar1IsNull(str, "encodedName");
             if (this.encodedQueryNamesAndValues == null) {
                 return this;
             }
-            removeAllCanonicalQueryParameters(Companion.canonicalize$okhttp$default(HttpUrl.Companion, str, 0, 0, HttpUrl.QUERY_COMPONENT_REENCODE_SET, true, false, true, false, null, Opcodes.DIV_INT_LIT16, null));
+            removeAllCanonicalQueryParameters(Companion.canonicalize$okhttp$default(HttpUrl.Companion, str, 0, 0,
+                    HttpUrl.QUERY_COMPONENT_REENCODE_SET, true, false, true, false, null, Opcodes.DIV_INT_LIT16, null));
             return this;
         }
 
         public final Builder removeAllQueryParameters(String str) {
-            bzo.q(str, "name");
+            throwIfVar1IsNull(str, "name");
             if (this.encodedQueryNamesAndValues == null) {
                 return this;
             }
-            removeAllCanonicalQueryParameters(Companion.canonicalize$okhttp$default(HttpUrl.Companion, str, 0, 0, HttpUrl.QUERY_COMPONENT_ENCODE_SET, false, false, true, false, null, Opcodes.DIV_INT_LIT8, null));
+            removeAllCanonicalQueryParameters(Companion.canonicalize$okhttp$default(HttpUrl.Companion, str, 0, 0,
+                    HttpUrl.QUERY_COMPONENT_ENCODE_SET, false, false, true, false, null, Opcodes.DIV_INT_LIT8, null));
             return this;
         }
 
@@ -686,7 +757,7 @@ public final class HttpUrl {
         }
 
         public final Builder scheme(String str) {
-            bzo.q(str, "scheme");
+            throwIfVar1IsNull(str, "scheme");
             if (str.equalsIgnoreCase("http")) {
                 this.scheme = "http";
                 return this;
@@ -703,13 +774,14 @@ public final class HttpUrl {
         }
 
         public final void setEncodedPassword$okhttp(String str) {
-            bzo.q(str, "<set-?>");
+            throwIfVar1IsNull(str, "<set-?>");
             this.encodedPassword = str;
         }
 
         public final Builder setEncodedPathSegment(int i, String str) {
-            bzo.q(str, "encodedPathSegment");
-            String strCanonicalize$okhttp$default = Companion.canonicalize$okhttp$default(HttpUrl.Companion, str, 0, 0, HttpUrl.PATH_SEGMENT_ENCODE_SET, true, false, false, false, null, 243, null);
+            throwIfVar1IsNull(str, "encodedPathSegment");
+            String strCanonicalize$okhttp$default = Companion.canonicalize$okhttp$default(HttpUrl.Companion, str, 0, 0,
+                    HttpUrl.PATH_SEGMENT_ENCODE_SET, true, false, false, false, null, 243, null);
             this.encodedPathSegments.set(i, strCanonicalize$okhttp$default);
             if (isDot(strCanonicalize$okhttp$default) || isDotDot(strCanonicalize$okhttp$default)) {
                 throw new IllegalArgumentException("unexpected path segment: ".concat(str).toString());
@@ -722,14 +794,14 @@ public final class HttpUrl {
         }
 
         public final Builder setEncodedQueryParameter(String str, String str2) {
-            bzo.q(str, "encodedName");
+            throwIfVar1IsNull(str, "encodedName");
             removeAllEncodedQueryParameters(str);
             addEncodedQueryParameter(str, str2);
             return this;
         }
 
         public final void setEncodedUsername$okhttp(String str) {
-            bzo.q(str, "<set-?>");
+            throwIfVar1IsNull(str, "<set-?>");
             this.encodedUsername = str;
         }
 
@@ -738,8 +810,10 @@ public final class HttpUrl {
         }
 
         public final Builder setPathSegment(int i, String str) {
-            bzo.q(str, "pathSegment");
-            String strCanonicalize$okhttp$default = Companion.canonicalize$okhttp$default(HttpUrl.Companion, str, 0, 0, HttpUrl.PATH_SEGMENT_ENCODE_SET, false, false, false, false, null, Opcodes.INVOKE_POLYMORPHIC_RANGE, null);
+            throwIfVar1IsNull(str, "pathSegment");
+            String strCanonicalize$okhttp$default = Companion.canonicalize$okhttp$default(HttpUrl.Companion, str, 0, 0,
+                    HttpUrl.PATH_SEGMENT_ENCODE_SET, false, false, false, false, null, Opcodes.INVOKE_POLYMORPHIC_RANGE,
+                    null);
             if (isDot(strCanonicalize$okhttp$default) || isDotDot(strCanonicalize$okhttp$default)) {
                 throw new IllegalArgumentException("unexpected path segment: ".concat(str).toString());
             }
@@ -752,7 +826,7 @@ public final class HttpUrl {
         }
 
         public final Builder setQueryParameter(String str, String str2) {
-            bzo.q(str, "name");
+            throwIfVar1IsNull(str, "name");
             removeAllQueryParameters(str);
             addQueryParameter(str, str2);
             return this;
@@ -802,7 +876,7 @@ public final class HttpUrl {
             if (this.encodedQueryNamesAndValues != null) {
                 sb.append('?');
                 List<String> list = this.encodedQueryNamesAndValues;
-                bzo.n(list);
+                throwIfVar1IsNull(list);
                 companion.toQueryString$okhttp(list, sb);
             }
             if (this.encodedFragment != null) {
@@ -810,13 +884,14 @@ public final class HttpUrl {
                 sb.append(this.encodedFragment);
             }
             String string = sb.toString();
-            bzo.p(string, "StringBuilder().apply(builderAction).toString()");
+            throwIfVar1IsNull(string, "StringBuilder().apply(builderAction).toString()");
             return string;
         }
 
         public final Builder username(String str) {
-            bzo.q(str, "username");
-            this.encodedUsername = Companion.canonicalize$okhttp$default(HttpUrl.Companion, str, 0, 0, " \"':;<=>@[]^`{}|/\\?#", false, false, false, false, null, Opcodes.INVOKE_POLYMORPHIC_RANGE, null);
+            throwIfVar1IsNull(str, "username");
+            this.encodedUsername = Companion.canonicalize$okhttp$default(HttpUrl.Companion, str, 0, 0,
+                    " \"':;<=>@[]^`{}|/\\?#", false, false, false, false, null, Opcodes.INVOKE_POLYMORPHIC_RANGE, null);
             return this;
         }
 
@@ -850,13 +925,17 @@ public final class HttpUrl {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
         }
 
-        public static /* synthetic */ String canonicalize$okhttp$default(Companion companion, String str, int i, int i2, String str2, boolean z, boolean z2, boolean z3, boolean z4, Charset charset, int i3, Object obj) {
+        public static /* synthetic */ String canonicalize$okhttp$default(Companion companion, String str, int i, int i2,
+                String str2, boolean z, boolean z2, boolean z3, boolean z4, Charset charset, int i3, Object obj) {
             if ((i3 & 1) != 0) {
                 i = 0;
             }
@@ -883,10 +962,12 @@ public final class HttpUrl {
 
         private final boolean isPercentEncoded(String str, int i, int i2) {
             int i3 = i + 2;
-            return i3 < i2 && str.charAt(i) == '%' && Util.parseHexDigit(str.charAt(i + 1)) != -1 && Util.parseHexDigit(str.charAt(i3)) != -1;
+            return i3 < i2 && str.charAt(i) == '%' && Util.parseHexDigit(str.charAt(i + 1)) != -1
+                    && Util.parseHexDigit(str.charAt(i3)) != -1;
         }
 
-        public static /* synthetic */ String percentDecode$okhttp$default(Companion companion, String str, int i, int i2, boolean z, int i3, Object obj) {
+        public static /* synthetic */ String percentDecode$okhttp$default(Companion companion, String str, int i,
+                int i2, boolean z, int i3, Object obj) {
             if ((i3 & 1) != 0) {
                 i = 0;
             }
@@ -899,14 +980,17 @@ public final class HttpUrl {
             return companion.percentDecode$okhttp(str, i, i2, z);
         }
 
-        private final void writeCanonicalized(rh rhVar, String str, int i, int i2, String str2, boolean z, boolean z2, boolean z3, boolean z4, Charset charset) throws EOFException {
+        private final void writeCanonicalized(rh rhVar, String str, int i, int i2, String str2, boolean z, boolean z2,
+                boolean z3, boolean z4, Charset charset) throws EOFException {
             rh rhVar2 = null;
             while (i < i2) {
                 int iCodePointAt = str.codePointAt(i);
                 if (!z || (iCodePointAt != 9 && iCodePointAt != 10 && iCodePointAt != 12 && iCodePointAt != 13)) {
                     if (iCodePointAt == 43 && z3) {
                         rhVar.at(z ? "+" : "%2B");
-                    } else if (iCodePointAt < 32 || iCodePointAt == 127 || ((iCodePointAt >= 128 && !z4) || dnj.ac(str2, (char) iCodePointAt) || (iCodePointAt == 37 && (!z || (z2 && !isPercentEncoded(str, i, i2)))))) {
+                    } else if (iCodePointAt < 32 || iCodePointAt == 127
+                            || ((iCodePointAt >= 128 && !z4) || dnj.ac(str2, (char) iCodePointAt)
+                                    || (iCodePointAt == 37 && (!z || (z2 && !isPercentEncoded(str, i, i2)))))) {
                         if (rhVar2 == null) {
                             rhVar2 = new rh();
                         }
@@ -954,17 +1038,21 @@ public final class HttpUrl {
         }
 
         public final HttpUrl a(String str) {
-            bzo.q(str, "url");
+            throwIfVar1IsNull(str, "url");
             return get(str);
         }
 
-        public final String canonicalize$okhttp(String str, int i, int i2, String str2, boolean z, boolean z2, boolean z3, boolean z4, Charset charset) throws EOFException {
-            bzo.q(str, "<this>");
-            bzo.q(str2, "encodeSet");
+        public final String canonicalize$okhttp(String str, int i, int i2, String str2, boolean z, boolean z2,
+                boolean z3, boolean z4, Charset charset) throws EOFException {
+            throwIfVar1IsNull(str, "<this>");
+            throwIfVar1IsNull(str2, "encodeSet");
             int iCharCount = i;
             while (iCharCount < i2) {
                 int iCodePointAt = str.codePointAt(iCharCount);
-                if (iCodePointAt < 32 || iCodePointAt == 127 || ((iCodePointAt >= 128 && !z4) || dnj.ac(str2, (char) iCodePointAt) || ((iCodePointAt == 37 && (!z || (z2 && !isPercentEncoded(str, iCharCount, i2)))) || (iCodePointAt == 43 && z3)))) {
+                if (iCodePointAt < 32 || iCodePointAt == 127
+                        || ((iCodePointAt >= 128 && !z4) || dnj.ac(str2, (char) iCodePointAt)
+                                || ((iCodePointAt == 37 && (!z || (z2 && !isPercentEncoded(str, iCharCount, i2))))
+                                        || (iCodePointAt == 43 && z3)))) {
                     rh rhVar = new rh();
                     rhVar.au(str, i, iCharCount);
                     writeCanonicalized(rhVar, str, iCharCount, i2, str2, z, z2, z3, z4, charset);
@@ -973,17 +1061,17 @@ public final class HttpUrl {
                 iCharCount += Character.charCount(iCodePointAt);
             }
             String strSubstring = str.substring(i, i2);
-            bzo.p(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
+            throwIfVar1IsNull(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
             return strSubstring;
         }
 
         public final HttpUrl d(String str) {
-            bzo.q(str, "url");
+            throwIfVar1IsNull(str, "url");
             return parse(str);
         }
 
         public final int defaultPort(String str) {
-            bzo.q(str, "scheme");
+            throwIfVar1IsNull(str, "scheme");
             if (str.equals("http")) {
                 return 80;
             }
@@ -991,12 +1079,12 @@ public final class HttpUrl {
         }
 
         public final HttpUrl get(String str) {
-            bzo.q(str, "<this>");
+            throwIfVar1IsNull(str, "<this>");
             return new Builder().parse$okhttp(null, str).build();
         }
 
         public final HttpUrl parse(String str) {
-            bzo.q(str, "<this>");
+            throwIfVar1IsNull(str, "<this>");
             try {
                 return get(str);
             } catch (IllegalArgumentException unused) {
@@ -1005,7 +1093,7 @@ public final class HttpUrl {
         }
 
         public final String percentDecode$okhttp(String str, int i, int i2, boolean z) {
-            bzo.q(str, "<this>");
+            throwIfVar1IsNull(str, "<this>");
             for (int i3 = i; i3 < i2; i3++) {
                 char cCharAt = str.charAt(i3);
                 if (cCharAt == '%' || (cCharAt == '+' && z)) {
@@ -1016,13 +1104,13 @@ public final class HttpUrl {
                 }
             }
             String strSubstring = str.substring(i, i2);
-            bzo.p(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
+            throwIfVar1IsNull(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
             return strSubstring;
         }
 
         public final void toPathString$okhttp(List<String> list, StringBuilder sb) {
-            bzo.q(list, "<this>");
-            bzo.q(sb, "out");
+            throwIfVar1IsNull(list, "<this>");
+            throwIfVar1IsNull(sb, "out");
             int size = list.size();
             for (int i = 0; i < size; i++) {
                 sb.append('/');
@@ -1031,7 +1119,7 @@ public final class HttpUrl {
         }
 
         public final List<String> toQueryNamesAndValues$okhttp(String str) {
-            bzo.q(str, "<this>");
+            throwIfVar1IsNull(str, "<this>");
             ArrayList arrayList = new ArrayList();
             int i = 0;
             while (i <= str.length()) {
@@ -1042,15 +1130,15 @@ public final class HttpUrl {
                 int iAh2 = dnj.ah(SignatureVisitor.INSTANCEOF, i, 4, str);
                 if (iAh2 == -1 || iAh2 > iAh) {
                     String strSubstring = str.substring(i, iAh);
-                    bzo.p(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
+                    throwIfVar1IsNull(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
                     arrayList.add(strSubstring);
                     arrayList.add(null);
                 } else {
                     String strSubstring2 = str.substring(i, iAh2);
-                    bzo.p(strSubstring2, "this as java.lang.String…ing(startIndex, endIndex)");
+                    throwIfVar1IsNull(strSubstring2, "this as java.lang.String…ing(startIndex, endIndex)");
                     arrayList.add(strSubstring2);
                     String strSubstring3 = str.substring(iAh2 + 1, iAh);
-                    bzo.p(strSubstring3, "this as java.lang.String…ing(startIndex, endIndex)");
+                    throwIfVar1IsNull(strSubstring3, "this as java.lang.String…ing(startIndex, endIndex)");
                     arrayList.add(strSubstring3);
                 }
                 i = iAh + 1;
@@ -1059,8 +1147,8 @@ public final class HttpUrl {
         }
 
         public final void toQueryString$okhttp(List<String> list, StringBuilder sb) {
-            bzo.q(list, "<this>");
-            bzo.q(sb, "out");
+            throwIfVar1IsNull(list, "<this>");
+            throwIfVar1IsNull(sb, "out");
             bqf bqfVarBj = dqc.bj(dqc.bm(0, list.size()), 2);
             int i = bqfVarBj.a;
             int i2 = bqfVarBj.b;
@@ -1091,37 +1179,38 @@ public final class HttpUrl {
         }
 
         public final HttpUrl c(URL url) {
-            bzo.q(url, "url");
+            throwIfVar1IsNull(url, "url");
             return get(url);
         }
 
         public final HttpUrl get(URL url) {
-            bzo.q(url, "<this>");
+            throwIfVar1IsNull(url, "<this>");
             String string = url.toString();
-            bzo.p(string, "toString()");
+            throwIfVar1IsNull(string, "toString()");
             return parse(string);
         }
 
         public final HttpUrl b(URI uri) {
-            bzo.q(uri, "uri");
+            throwIfVar1IsNull(uri, "uri");
             return get(uri);
         }
 
         public final HttpUrl get(URI uri) {
-            bzo.q(uri, "<this>");
+            throwIfVar1IsNull(uri, "<this>");
             String string = uri.toString();
-            bzo.p(string, "toString()");
+            throwIfVar1IsNull(string, "toString()");
             return parse(string);
         }
     }
 
-    public HttpUrl(String str, String str2, String str3, String str4, int i, List<String> list, List<String> list2, String str5, String str6) {
-        bzo.q(str, "scheme");
-        bzo.q(str2, "username");
-        bzo.q(str3, "password");
-        bzo.q(str4, "host");
-        bzo.q(list, "pathSegments");
-        bzo.q(str6, "url");
+    public HttpUrl(String str, String str2, String str3, String str4, int i, List<String> list, List<String> list2,
+            String str5, String str6) {
+        throwIfVar1IsNull(str, "scheme");
+        throwIfVar1IsNull(str2, "username");
+        throwIfVar1IsNull(str3, "password");
+        throwIfVar1IsNull(str4, "host");
+        throwIfVar1IsNull(list, "pathSegments");
+        throwIfVar1IsNull(str6, "url");
         this.scheme = str;
         this.username = str2;
         this.password = str3;
@@ -1131,7 +1220,7 @@ public final class HttpUrl {
         this.queryNamesAndValues = list2;
         this.fragment = str5;
         this.url = str6;
-        this.isHttps = bzo.f(str, "https");
+        this.isHttps = nullSafeIsEqual(str, "https");
     }
 
     public static final int defaultPort(String str) {
@@ -1171,7 +1260,7 @@ public final class HttpUrl {
             return null;
         }
         String strSubstring = this.url.substring(dnj.ah('#', 0, 6, this.url) + 1);
-        bzo.p(strSubstring, "this as java.lang.String).substring(startIndex)");
+        throwIfVar1IsNull(strSubstring, "this as java.lang.String).substring(startIndex)");
         return strSubstring;
     }
 
@@ -1179,8 +1268,9 @@ public final class HttpUrl {
         if (this.password.length() == 0) {
             return "";
         }
-        String strSubstring = this.url.substring(dnj.ah(':', this.scheme.length() + 3, 4, this.url) + 1, dnj.ah('@', 0, 6, this.url));
-        bzo.p(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
+        String strSubstring = this.url.substring(dnj.ah(':', this.scheme.length() + 3, 4, this.url) + 1,
+                dnj.ah('@', 0, 6, this.url));
+        throwIfVar1IsNull(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
         return strSubstring;
     }
 
@@ -1188,7 +1278,7 @@ public final class HttpUrl {
         int iAh = dnj.ah('/', this.scheme.length() + 3, 4, this.url);
         String str = this.url;
         String strSubstring = this.url.substring(iAh, Util.delimiterOffset(str, "?#", iAh, str.length()));
-        bzo.p(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
+        throwIfVar1IsNull(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
         return strSubstring;
     }
 
@@ -1201,7 +1291,7 @@ public final class HttpUrl {
             int i = iAh + 1;
             int iDelimiterOffset2 = Util.delimiterOffset(this.url, '/', i, iDelimiterOffset);
             String strSubstring = this.url.substring(i, iDelimiterOffset2);
-            bzo.p(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
+            throwIfVar1IsNull(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
             arrayList.add(strSubstring);
             iAh = iDelimiterOffset2;
         }
@@ -1215,7 +1305,7 @@ public final class HttpUrl {
         int iAh = dnj.ah('?', 0, 6, this.url) + 1;
         String str = this.url;
         String strSubstring = this.url.substring(iAh, Util.delimiterOffset(str, '#', iAh, str.length()));
-        bzo.p(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
+        throwIfVar1IsNull(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
         return strSubstring;
     }
 
@@ -1226,12 +1316,12 @@ public final class HttpUrl {
         int length = this.scheme.length() + 3;
         String str = this.url;
         String strSubstring = this.url.substring(length, Util.delimiterOffset(str, ":@", length, str.length()));
-        bzo.p(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
+        throwIfVar1IsNull(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
         return strSubstring;
     }
 
     public boolean equals(Object obj) {
-        return (obj instanceof HttpUrl) && bzo.f(((HttpUrl) obj).url, this.url);
+        return (obj instanceof HttpUrl) && nullSafeIsEqual(((HttpUrl) obj).url, this.url);
     }
 
     public final String f() {
@@ -1338,7 +1428,7 @@ public final class HttpUrl {
     }
 
     public final String queryParameter(String str) {
-        bzo.q(str, "name");
+        throwIfVar1IsNull(str, "name");
         List<String> list = this.queryNamesAndValues;
         if (list == null) {
             return null;
@@ -1365,7 +1455,7 @@ public final class HttpUrl {
             throw new IndexOutOfBoundsException();
         }
         String str = list.get(i * 2);
-        bzo.n(str);
+        throwIfVar1IsNull(str);
         return str;
     }
 
@@ -1381,7 +1471,7 @@ public final class HttpUrl {
         if ((i3 > 0 && i <= i2) || (i3 < 0 && i2 <= i)) {
             while (true) {
                 String str = this.queryNamesAndValues.get(i);
-                bzo.n(str);
+                throwIfVar1IsNull(str);
                 linkedHashSet.add(str);
                 if (i == i2) {
                     break;
@@ -1390,7 +1480,7 @@ public final class HttpUrl {
             }
         }
         Set<String> setUnmodifiableSet = Collections.unmodifiableSet(linkedHashSet);
-        bzo.p(setUnmodifiableSet, "unmodifiableSet(result)");
+        throwIfVar1IsNull(setUnmodifiableSet, "unmodifiableSet(result)");
         return setUnmodifiableSet;
     }
 
@@ -1403,7 +1493,7 @@ public final class HttpUrl {
     }
 
     public final List<String> queryParameterValues(String str) {
-        bzo.q(str, "name");
+        throwIfVar1IsNull(str, "name");
         if (this.queryNamesAndValues == null) {
             return avd.a;
         }
@@ -1424,7 +1514,7 @@ public final class HttpUrl {
             }
         }
         List<String> listUnmodifiableList = Collections.unmodifiableList(arrayList);
-        bzo.p(listUnmodifiableList, "unmodifiableList(result)");
+        throwIfVar1IsNull(listUnmodifiableList, "unmodifiableList(result)");
         return listUnmodifiableList;
     }
 
@@ -1442,12 +1532,12 @@ public final class HttpUrl {
 
     public final String redact() {
         Builder builderNewBuilder = newBuilder("/...");
-        bzo.n(builderNewBuilder);
+        throwIfVar1IsNull(builderNewBuilder);
         return builderNewBuilder.username("").password("").build().toString();
     }
 
     public final HttpUrl resolve(String str) {
-        bzo.q(str, "link");
+        throwIfVar1IsNull(str, "link");
         Builder builderNewBuilder = newBuilder(str);
         if (builderNewBuilder != null) {
             return builderNewBuilder.build();
@@ -1481,12 +1571,12 @@ public final class HttpUrl {
         } catch (URISyntaxException e) {
             try {
                 Pattern patternCompile = Pattern.compile("[\\u0000-\\u001F\\u007F-\\u009F\\p{javaWhitespace}]");
-                bzo.p(patternCompile, "compile(...)");
-                bzo.q(string, "input");
+                throwIfVar1IsNull(patternCompile, "compile(...)");
+                throwIfVar1IsNull(string, "input");
                 String strReplaceAll = patternCompile.matcher(string).replaceAll("");
-                bzo.p(strReplaceAll, "replaceAll(...)");
+                throwIfVar1IsNull(strReplaceAll, "replaceAll(...)");
                 URI uriCreate = URI.create(strReplaceAll);
-                bzo.p(uriCreate, "{\n      // Unlikely edge…Unexpected!\n      }\n    }");
+                throwIfVar1IsNull(uriCreate, "{\n      // Unlikely edge…Unexpected!\n      }\n    }");
                 return uriCreate;
             } catch (Exception unused) {
                 throw new RuntimeException(e);
@@ -1515,7 +1605,7 @@ public final class HttpUrl {
     }
 
     public final Builder newBuilder(String str) {
-        bzo.q(str, "link");
+        throwIfVar1IsNull(str, "link");
         try {
             return new Builder().parse$okhttp(this, str);
         } catch (IllegalArgumentException unused) {

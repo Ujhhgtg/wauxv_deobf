@@ -17,7 +17,7 @@ public final class eov implements Comparable, Serializable {
     @Override // java.lang.Comparable
     public final int compareTo(Object obj) {
         eov eovVar = (eov) obj;
-        bzo.q(eovVar, "other");
+        throwIfVar1IsNull(eovVar, "other");
         long j = eovVar.b;
         long j2 = this.b;
         return j2 != j ? Long.compareUnsigned(j2, j) : Long.compareUnsigned(this.c, eovVar.c);

@@ -103,20 +103,20 @@ public abstract class la extends cnf {
     }
 
     public static void _aj(int i, int i2, Object[] objArr, int i3, Object[] objArr2) {
-        bzo.q(objArr, "<this>");
-        bzo.q(objArr2, "destination");
+        throwIfVar1IsNull(objArr, "<this>");
+        throwIfVar1IsNull(objArr2, "destination");
         System.arraycopy(objArr, i2, objArr2, i, i3 - i2);
     }
 
     public static void _ak(byte[] bArr, int i, int i2, byte[] bArr2, int i3) {
-        bzo.q(bArr, "<this>");
-        bzo.q(bArr2, "destination");
+        throwIfVar1IsNull(bArr, "<this>");
+        throwIfVar1IsNull(bArr2, "destination");
         System.arraycopy(bArr, i2, bArr2, i, i3 - i2);
     }
 
     public static void _al(int[] iArr, int i, int i2, int i3, int[] iArr2) {
-        bzo.q(iArr, "<this>");
-        bzo.q(iArr2, "destination");
+        throwIfVar1IsNull(iArr, "<this>");
+        throwIfVar1IsNull(iArr2, "destination");
         System.arraycopy(iArr, i2, iArr2, i, i3 - i2);
     }
 
@@ -148,22 +148,22 @@ public abstract class la extends cnf {
     }
 
     public static byte[] _ap(int i, int i2, byte[] bArr) {
-        bzo.q(bArr, "<this>");
+        throwIfVar1IsNull(bArr, "<this>");
         cnf.ax(i2, bArr.length);
         byte[] bArrCopyOfRange = Arrays.copyOfRange(bArr, i, i2);
-        bzo.p(bArrCopyOfRange, "copyOfRange(...)");
+        throwIfVar1IsNull(bArrCopyOfRange, "copyOfRange(...)");
         return bArrCopyOfRange;
     }
 
     public static List a(Object[] objArr) {
-        bzo.q(objArr, "<this>");
+        throwIfVar1IsNull(objArr, "<this>");
         List listAsList = Arrays.asList(objArr);
-        bzo.p(listAsList, "asList(...)");
+        throwIfVar1IsNull(listAsList, "asList(...)");
         return listAsList;
     }
 
     public static List aa(long[] jArr) {
-        bzo.q(jArr, "<this>");
+        throwIfVar1IsNull(jArr, "<this>");
         int length = jArr.length;
         if (length == 0) {
             return avd.a;
@@ -179,13 +179,13 @@ public abstract class la extends cnf {
     }
 
     public static List ab(Object[] objArr) {
-        bzo.q(objArr, "<this>");
+        throwIfVar1IsNull(objArr, "<this>");
         int length = objArr.length;
         return length != 0 ? length != 1 ? new ArrayList(new kk(objArr, false)) : dqc.bf(objArr[0]) : avd.a;
     }
 
     public static List ac(boolean[] zArr) {
-        bzo.q(zArr, "<this>");
+        throwIfVar1IsNull(zArr, "<this>");
         int length = zArr.length;
         if (length == 0) {
             return avd.a;
@@ -201,7 +201,7 @@ public abstract class la extends cnf {
     }
 
     public static ArrayList ad(int[] iArr) {
-        bzo.q(iArr, "<this>");
+        throwIfVar1IsNull(iArr, "<this>");
         ArrayList arrayList = new ArrayList(iArr.length);
         for (int i : iArr) {
             arrayList.add(Integer.valueOf(i));
@@ -210,32 +210,32 @@ public abstract class la extends cnf {
     }
 
     public static dft b(Object[] objArr) {
-        bzo.q(objArr, "<this>");
+        throwIfVar1IsNull(objArr, "<this>");
         return objArr.length == 0 ? avg.a : new lb(objArr, 0);
     }
 
     public static Object[] k(Object[] objArr, int i, int i2) {
-        bzo.q(objArr, "<this>");
+        throwIfVar1IsNull(objArr, "<this>");
         cnf.ax(i2, objArr.length);
         Object[] objArrCopyOfRange = Arrays.copyOfRange(objArr, i, i2);
-        bzo.p(objArrCopyOfRange, "copyOfRange(...)");
+        throwIfVar1IsNull(objArrCopyOfRange, "copyOfRange(...)");
         return objArrCopyOfRange;
     }
 
     public static void l(Object[] objArr, int i, int i2) {
-        bzo.q(objArr, "<this>");
+        throwIfVar1IsNull(objArr, "<this>");
         Arrays.fill(objArr, i, i2, (Object) null);
     }
 
     public static void m(int[] iArr) {
         int length = iArr.length;
-        bzo.q(iArr, "<this>");
+        throwIfVar1IsNull(iArr, "<this>");
         Arrays.fill(iArr, 0, length, 0);
     }
 
     public static void n(long[] jArr) {
         int length = jArr.length;
-        bzo.q(jArr, "<this>");
+        throwIfVar1IsNull(jArr, "<this>");
         Arrays.fill(jArr, 0, length, -9187201950435737472L);
     }
 
@@ -250,7 +250,7 @@ public abstract class la extends cnf {
     }
 
     public static Object p(Object[] objArr) {
-        bzo.q(objArr, "<this>");
+        throwIfVar1IsNull(objArr, "<this>");
         if (objArr.length != 0) {
             return objArr[0];
         }
@@ -275,7 +275,7 @@ public abstract class la extends cnf {
     }
 
     public static int s(Object[] objArr, Object obj) {
-        bzo.q(objArr, "<this>");
+        throwIfVar1IsNull(objArr, "<this>");
         int i = 0;
         if (obj == null) {
             int length = objArr.length;
@@ -297,8 +297,9 @@ public abstract class la extends cnf {
         return -1;
     }
 
-    public static final void t(Object[] objArr, StringBuilder sb, CharSequence charSequence, CharSequence charSequence2, CharSequence charSequence3, CharSequence charSequence4, bgf bgfVar) {
-        bzo.q(objArr, "<this>");
+    public static final void t(Object[] objArr, StringBuilder sb, CharSequence charSequence, CharSequence charSequence2,
+            CharSequence charSequence3, CharSequence charSequence4, IHasInvokeMethod bgfVar) {
+        throwIfVar1IsNull(objArr, "<this>");
         sb.append(charSequence2);
         int i = 0;
         for (Object obj : objArr) {
@@ -311,7 +312,7 @@ public abstract class la extends cnf {
         sb.append(charSequence3);
     }
 
-    public static String u(Object[] objArr, String str, String str2, String str3, bgf bgfVar, int i) {
+    public static String u(Object[] objArr, String str, String str2, String str3, IHasInvokeMethod bgfVar, int i) {
         if ((i & 1) != 0) {
             str = ", ";
         }
@@ -321,21 +322,21 @@ public abstract class la extends cnf {
         if ((i & 32) != 0) {
             bgfVar = null;
         }
-        bzo.q(objArr, "<this>");
-        bzo.q(str4, "separator");
-        bzo.q(str5, "prefix");
+        throwIfVar1IsNull(objArr, "<this>");
+        throwIfVar1IsNull(str4, "separator");
+        throwIfVar1IsNull(str5, "prefix");
         StringBuilder sb = new StringBuilder();
         t(objArr, sb, str4, str5, str6, "...", bgfVar);
         return sb.toString();
     }
 
     public static byte[] v(byte[] bArr, byte[] bArr2) {
-        bzo.q(bArr, "<this>");
+        throwIfVar1IsNull(bArr, "<this>");
         int length = bArr.length;
         int length2 = bArr2.length;
         byte[] bArrCopyOf = Arrays.copyOf(bArr, length + length2);
         System.arraycopy(bArr2, 0, bArrCopyOf, length, length2);
-        bzo.n(bArrCopyOf);
+        throwIfVar1IsNull(bArrCopyOf);
         return bArrCopyOf;
     }
 
@@ -351,12 +352,12 @@ public abstract class la extends cnf {
     }
 
     public static byte[] x(byte[] bArr, bqi bqiVar) {
-        bzo.q(bqiVar, "indices");
+        throwIfVar1IsNull(bqiVar, "indices");
         return bqiVar.isEmpty() ? new byte[0] : _ap(bqiVar.a, bqiVar.b + 1, bArr);
     }
 
     public static List y(float[] fArr) {
-        bzo.q(fArr, "<this>");
+        throwIfVar1IsNull(fArr, "<this>");
         int length = fArr.length;
         if (length == 0) {
             return avd.a;
@@ -372,7 +373,7 @@ public abstract class la extends cnf {
     }
 
     public static List z(int[] iArr) {
-        bzo.q(iArr, "<this>");
+        throwIfVar1IsNull(iArr, "<this>");
         int length = iArr.length;
         return length != 0 ? length != 1 ? ad(iArr) : dqc.bf(Integer.valueOf(iArr[0])) : avd.a;
     }

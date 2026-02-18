@@ -7,7 +7,7 @@ import java.net.SocketTimeoutException;
 import java.util.ArrayDeque;
 import java.util.List;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.dhy;
 import me.hd.wauxv.obf.dlc;
 import me.hd.wauxv.obf.dts;
@@ -38,7 +38,10 @@ public final class Http2Stream {
     private long writeBytesTotal;
     private final StreamTimeout writeTimeout;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
@@ -48,7 +51,10 @@ public final class Http2Stream {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public final class FramingSource implements dlc {
         private boolean closed;
         private boolean finished;
@@ -68,7 +74,8 @@ public final class Http2Stream {
                 Http2Stream.this.getConnection().updateConnectionFlowControl$okhttp(j);
                 return;
             }
-            throw new AssertionError("Thread " + Thread.currentThread().getName() + " MUST NOT hold lock on " + http2Stream);
+            throw new AssertionError(
+                    "Thread " + Thread.currentThread().getName() + " MUST NOT hold lock on " + http2Stream);
         }
 
         @Override // java.io.Closeable, java.lang.AutoCloseable
@@ -80,7 +87,7 @@ public final class Http2Stream {
                 rh rhVar = this.readBuffer;
                 j = rhVar.b;
                 rhVar.d();
-                bzo.o(http2Stream, "null cannot be cast to non-null type java.lang.Object");
+                throwIfVar1IsNull(http2Stream, "null cannot be cast to non-null type java.lang.Object");
                 http2Stream.notifyAll();
             }
             if (j > 0) {
@@ -114,7 +121,7 @@ public final class Http2Stream {
             IOException errorException$okhttp;
             boolean z;
             long j2;
-            bzo.q(rhVar, "sink");
+            throwIfVar1IsNull(rhVar, "sink");
             long j3 = 0;
             if (j < 0) {
                 throw new IllegalArgumentException(dts.b(j, "byteCount < 0: ").toString());
@@ -130,7 +137,7 @@ public final class Http2Stream {
                             errorException$okhttp = http2Stream.getErrorException$okhttp();
                             if (errorException$okhttp == null) {
                                 ErrorCode errorCode$okhttp = http2Stream.getErrorCode$okhttp();
-                                bzo.n(errorCode$okhttp);
+                                throwIfVar1IsNull(errorCode$okhttp);
                                 errorException$okhttp = new StreamResetException(errorCode$okhttp);
                             }
                         }
@@ -143,9 +150,12 @@ public final class Http2Stream {
                         if (j4 > j3) {
                             j2 = rhVar2.read(rhVar, Math.min(j, j4));
                             http2Stream.setReadBytesTotal$okhttp(http2Stream.getReadBytesTotal() + j2);
-                            long readBytesTotal = http2Stream.getReadBytesTotal() - http2Stream.getReadBytesAcknowledged();
-                            if (errorException$okhttp == null && readBytesTotal >= http2Stream.getConnection().getOkHttpSettings().getInitialWindowSize() / 2) {
-                                http2Stream.getConnection().writeWindowUpdateLater$okhttp(http2Stream.getId(), readBytesTotal);
+                            long readBytesTotal = http2Stream.getReadBytesTotal()
+                                    - http2Stream.getReadBytesAcknowledged();
+                            if (errorException$okhttp == null && readBytesTotal >= http2Stream.getConnection()
+                                    .getOkHttpSettings().getInitialWindowSize() / 2) {
+                                http2Stream.getConnection().writeWindowUpdateLater$okhttp(http2Stream.getId(),
+                                        readBytesTotal);
                                 http2Stream.setReadBytesAcknowledged$okhttp(http2Stream.getReadBytesTotal());
                             }
                         } else {
@@ -178,10 +188,11 @@ public final class Http2Stream {
         public final void receive$okhttp(rm rmVar, long j) throws EOFException {
             boolean z;
             boolean z2;
-            bzo.q(rmVar, "source");
+            throwIfVar1IsNull(rmVar, "source");
             Http2Stream http2Stream = Http2Stream.this;
             if (Util.assertionsEnabled && Thread.holdsLock(http2Stream)) {
-                throw new AssertionError("Thread " + Thread.currentThread().getName() + " MUST NOT hold lock on " + http2Stream);
+                throw new AssertionError(
+                        "Thread " + Thread.currentThread().getName() + " MUST NOT hold lock on " + http2Stream);
             }
             long j2 = j;
             while (j2 > 0) {
@@ -213,7 +224,8 @@ public final class Http2Stream {
                             boolean z3 = rhVar.b == 0;
                             rhVar.r(this.receiveBuffer);
                             if (z3) {
-                                bzo.o(http2Stream2, "null cannot be cast to non-null type java.lang.Object");
+                                throwIfVar1IsNull(http2Stream2,
+                                        "null cannot be cast to non-null type java.lang.Object");
                                 http2Stream2.notifyAll();
                             }
                         }
@@ -243,7 +255,10 @@ public final class Http2Stream {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public final class StreamTimeout extends lo {
         public StreamTimeout() {
         }
@@ -271,7 +286,7 @@ public final class Http2Stream {
     }
 
     public Http2Stream(int i, Http2Connection http2Connection, boolean z, boolean z2, Headers headers) {
-        bzo.q(http2Connection, "connection");
+        throwIfVar1IsNull(http2Connection, "connection");
         this.id = i;
         this.connection = http2Connection;
         this.writeBytesMaximum = http2Connection.getPeerSettings().getInitialWindowSize();
@@ -327,7 +342,8 @@ public final class Http2Stream {
         }
         synchronized (this) {
             try {
-                z = !this.source.getFinished$okhttp() && this.source.getClosed$okhttp() && (this.sink.getFinished() || this.sink.getClosed());
+                z = !this.source.getFinished$okhttp() && this.source.getClosed$okhttp()
+                        && (this.sink.getFinished() || this.sink.getClosed());
                 zIsOpen = isOpen();
             } catch (Throwable th) {
                 throw th;
@@ -356,27 +372,27 @@ public final class Http2Stream {
                 throw iOException;
             }
             ErrorCode errorCode = this.errorCode;
-            bzo.n(errorCode);
+            throwIfVar1IsNull(errorCode);
             throw new StreamResetException(errorCode);
         }
     }
 
     public final void close(ErrorCode errorCode, IOException iOException) {
-        bzo.q(errorCode, "rstStatusCode");
+        throwIfVar1IsNull(errorCode, "rstStatusCode");
         if (closeInternal(errorCode, iOException)) {
             this.connection.writeSynReset$okhttp(this.id, errorCode);
         }
     }
 
     public final void closeLater(ErrorCode errorCode) {
-        bzo.q(errorCode, "errorCode");
+        throwIfVar1IsNull(errorCode, "errorCode");
         if (closeInternal(errorCode, null)) {
             this.connection.writeSynResetLater$okhttp(this.id, errorCode);
         }
     }
 
     public final void enqueueTrailers(Headers headers) {
-        bzo.q(headers, "trailers");
+        throwIfVar1IsNull(headers, "trailers");
         synchronized (this) {
             if (this.sink.getFinished()) {
                 throw new IllegalStateException("already finished");
@@ -474,7 +490,7 @@ public final class Http2Stream {
     }
 
     public final void receiveData(rm rmVar, int i) {
-        bzo.q(rmVar, "source");
+        throwIfVar1IsNull(rmVar, "source");
         if (!Util.assertionsEnabled || !Thread.holdsLock(this)) {
             this.source.receive$okhttp(rmVar, i);
             return;
@@ -484,7 +500,7 @@ public final class Http2Stream {
 
     public final void receiveHeaders(Headers headers, boolean z) {
         boolean zIsOpen;
-        bzo.q(headers, "headers");
+        throwIfVar1IsNull(headers, "headers");
         if (Util.assertionsEnabled && Thread.holdsLock(this)) {
             throw new AssertionError("Thread " + Thread.currentThread().getName() + " MUST NOT hold lock on " + this);
         }
@@ -512,7 +528,7 @@ public final class Http2Stream {
     }
 
     public final synchronized void receiveRstStream(ErrorCode errorCode) {
-        bzo.q(errorCode, "errorCode");
+        throwIfVar1IsNull(errorCode, "errorCode");
         if (this.errorCode == null) {
             this.errorCode = errorCode;
             notifyAll();
@@ -561,17 +577,18 @@ public final class Http2Stream {
                 throw iOException;
             }
             ErrorCode errorCode = this.errorCode;
-            bzo.n(errorCode);
+            throwIfVar1IsNull(errorCode);
             throw new StreamResetException(errorCode);
         }
         headersRemoveFirst = this.headersQueue.removeFirst();
-        bzo.p(headersRemoveFirst, "headersQueue.removeFirst()");
+        throwIfVar1IsNull(headersRemoveFirst, "headersQueue.removeFirst()");
         return headersRemoveFirst;
     }
 
     public final synchronized Headers trailers() throws IOException {
         Headers trailers;
-        if (!this.source.getFinished$okhttp() || !this.source.getReceiveBuffer().i() || !this.source.getReadBuffer().i()) {
+        if (!this.source.getFinished$okhttp() || !this.source.getReceiveBuffer().i()
+                || !this.source.getReadBuffer().i()) {
             if (this.errorCode == null) {
                 throw new IllegalStateException("too early; can't read the trailers yet");
             }
@@ -580,7 +597,7 @@ public final class Http2Stream {
                 throw iOException;
             }
             ErrorCode errorCode = this.errorCode;
-            bzo.n(errorCode);
+            throwIfVar1IsNull(errorCode);
             throw new StreamResetException(errorCode);
         }
         trailers = this.source.getTrailers();
@@ -601,7 +618,7 @@ public final class Http2Stream {
 
     public final void writeHeaders(List<Header> list, boolean z, boolean z2) {
         boolean z3;
-        bzo.q(list, "responseHeaders");
+        throwIfVar1IsNull(list, "responseHeaders");
         if (Util.assertionsEnabled && Thread.holdsLock(this)) {
             throw new AssertionError("Thread " + Thread.currentThread().getName() + " MUST NOT hold lock on " + this);
         }
@@ -627,7 +644,10 @@ public final class Http2Stream {
         return this.writeTimeout;
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public final class FramingSink implements dhy {
         private boolean closed;
         private boolean finished;
@@ -645,7 +665,8 @@ public final class Http2Stream {
             Http2Stream http2Stream = Http2Stream.this;
             synchronized (http2Stream) {
                 http2Stream.getWriteTimeout$okhttp().enter();
-                while (http2Stream.getWriteBytesTotal() >= http2Stream.getWriteBytesMaximum() && !this.finished && !this.closed && http2Stream.getErrorCode$okhttp() == null) {
+                while (http2Stream.getWriteBytesTotal() >= http2Stream.getWriteBytesMaximum() && !this.finished
+                        && !this.closed && http2Stream.getErrorCode$okhttp() == null) {
                     try {
                         http2Stream.waitForIo$okhttp();
                     } catch (Throwable th) {
@@ -655,7 +676,8 @@ public final class Http2Stream {
                 }
                 http2Stream.getWriteTimeout$okhttp().exitAndThrowIfTimedOut();
                 http2Stream.checkOutNotClosed$okhttp();
-                jMin = Math.min(http2Stream.getWriteBytesMaximum() - http2Stream.getWriteBytesTotal(), this.sendBuffer.b);
+                jMin = Math.min(http2Stream.getWriteBytesMaximum() - http2Stream.getWriteBytesTotal(),
+                        this.sendBuffer.b);
                 http2Stream.setWriteBytesTotal$okhttp(http2Stream.getWriteBytesTotal() + jMin);
                 z2 = z && jMin == this.sendBuffer.b;
             }
@@ -671,7 +693,8 @@ public final class Http2Stream {
         public void close() throws IOException {
             Http2Stream http2Stream = Http2Stream.this;
             if (Util.assertionsEnabled && Thread.holdsLock(http2Stream)) {
-                throw new AssertionError("Thread " + Thread.currentThread().getName() + " MUST NOT hold lock on " + http2Stream);
+                throw new AssertionError(
+                        "Thread " + Thread.currentThread().getName() + " MUST NOT hold lock on " + http2Stream);
             }
             Http2Stream http2Stream2 = Http2Stream.this;
             synchronized (http2Stream2) {
@@ -688,7 +711,7 @@ public final class Http2Stream {
                         Http2Connection connection = Http2Stream.this.getConnection();
                         int id = Http2Stream.this.getId();
                         Headers headers = this.trailers;
-                        bzo.n(headers);
+                        throwIfVar1IsNull(headers);
                         connection.writeHeaders$okhttp(id, z, Util.toHeaderList(headers));
                     } else if (z2) {
                         while (this.sendBuffer.b > 0) {
@@ -710,7 +733,8 @@ public final class Http2Stream {
         public void flush() throws IOException {
             Http2Stream http2Stream = Http2Stream.this;
             if (Util.assertionsEnabled && Thread.holdsLock(http2Stream)) {
-                throw new AssertionError("Thread " + Thread.currentThread().getName() + " MUST NOT hold lock on " + http2Stream);
+                throw new AssertionError(
+                        "Thread " + Thread.currentThread().getName() + " MUST NOT hold lock on " + http2Stream);
             }
             Http2Stream http2Stream2 = Http2Stream.this;
             synchronized (http2Stream2) {
@@ -753,7 +777,7 @@ public final class Http2Stream {
 
         @Override // me.hd.wauxv.obf.dhy
         public void write(rh rhVar, long j) throws IOException {
-            bzo.q(rhVar, "source");
+            throwIfVar1IsNull(rhVar, "source");
             Http2Stream http2Stream = Http2Stream.this;
             if (!Util.assertionsEnabled || !Thread.holdsLock(http2Stream)) {
                 this.sendBuffer.write(rhVar, j);
@@ -761,7 +785,8 @@ public final class Http2Stream {
                     emitFrame(false);
                 }
             } else {
-                throw new AssertionError("Thread " + Thread.currentThread().getName() + " MUST NOT hold lock on " + http2Stream);
+                throw new AssertionError(
+                        "Thread " + Thread.currentThread().getName() + " MUST NOT hold lock on " + http2Stream);
             }
         }
 

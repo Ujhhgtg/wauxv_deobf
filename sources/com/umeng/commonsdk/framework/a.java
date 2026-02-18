@@ -56,8 +56,14 @@ public class a implements UMImprintChangeCallback {
     private static int v = 15;
     private static Object w = new Object();
 
-    /* JADX INFO: renamed from: com.umeng.commonsdk.framework.a$a, reason: collision with other inner class name */
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: renamed from: com.umeng.commonsdk.framework.a$a, reason: collision
+     * with other inner class name
+     */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class FileObserverC0011a extends FileObserver {
         public FileObserverC0011a(String str) {
             super(str);
@@ -70,7 +76,7 @@ public class a implements UMImprintChangeCallback {
             }
             ULog.d("--->>> envelope file created >>> " + str);
             UMRTLog.i(UMRTLog.RTLOG_TAG, "--->>> envelope file created >>> " + str);
-            a.c(273);
+            a.createInstanceWithArgs(273);
         }
     }
 
@@ -103,7 +109,8 @@ public class a implements UMImprintChangeCallback {
                 a = handlerThread;
                 handlerThread.start();
                 if (i == null) {
-                    FileObserverC0011a fileObserverC0011a = new FileObserverC0011a(UMFrUtils.getEnvelopeDirPath(context));
+                    FileObserverC0011a fileObserverC0011a = new FileObserverC0011a(
+                            UMFrUtils.getEnvelopeDirPath(context));
                     i = fileObserverC0011a;
                     fileObserverC0011a.startWatching();
                     ULog.d("--->>> FileMonitor has already started!");
@@ -179,7 +186,9 @@ public class a implements UMImprintChangeCallback {
                     UMRTLog.i(UMRTLog.RTLOG_TAG, "--->>> switch to report_policy 11");
                     r = true;
                     v = 15;
-                    int iIntValue = Integer.valueOf(UMEnvelopeBuild.imprintProperty(UMModuleRegister.getAppContext(), q, "15")).intValue();
+                    int iIntValue = Integer
+                            .valueOf(UMEnvelopeBuild.imprintProperty(UMModuleRegister.getAppContext(), q, "15"))
+                            .intValue();
                     UMRTLog.i(UMRTLog.RTLOG_TAG, "--->>> set report_interval value to: " + iIntValue);
                     if (iIntValue < 3 || iIntValue > 90) {
                         v = 15;
@@ -323,15 +332,19 @@ public class a implements UMImprintChangeCallback {
         }
         if (Build.VERSION.SDK_INT >= 33) {
             if (DeviceConfig.checkPermission(context, "android.permission.ACCESS_NETWORK_STATE")) {
-                NetworkRequest networkRequestBuild = new NetworkRequest.Builder().addTransportType(0).addTransportType(1).build();
+                NetworkRequest networkRequestBuild = new NetworkRequest.Builder().addTransportType(0)
+                        .addTransportType(1).build();
                 if (j != null) {
                     final Context applicationContext = context.getApplicationContext();
                     UMRTLog.i(UMRTLog.RTLOG_TAG, "--->>> 注册网络状态监听器:registerNetworkCallback");
-                    j.registerNetworkCallback(networkRequestBuild, new ConnectivityManager.NetworkCallback() { // from class: com.umeng.commonsdk.framework.a.1
+                    j.registerNetworkCallback(networkRequestBuild, new ConnectivityManager.NetworkCallback() { // from
+                                                                                                               // class:
+                                                                                                               // com.umeng.commonsdk.framework.a.1
                         @Override // android.net.ConnectivityManager.NetworkCallback
                         public void onAvailable(Network network) {
                             Context context2 = applicationContext;
-                            UMWorkDispatch.sendEvent(context2, com.umeng.commonsdk.internal.a.E, b.a(context2).a(), null);
+                            UMWorkDispatch.sendEvent(context2, com.umeng.commonsdk.internal.a.E, b.a(context2).a(),
+                                    null);
                         }
 
                         @Override // android.net.ConnectivityManager.NetworkCallback
@@ -343,7 +356,8 @@ public class a implements UMImprintChangeCallback {
                         public void onLost(Network network) {
                             UMRTLog.i(UMRTLog.RTLOG_TAG, "--->>> onLost");
                             Context context2 = applicationContext;
-                            UMWorkDispatch.sendEvent(context2, com.umeng.commonsdk.internal.a.E, b.a(context2).a(), null, 2000L);
+                            UMWorkDispatch.sendEvent(context2, com.umeng.commonsdk.internal.a.E, b.a(context2).a(),
+                                    null, 2000L);
                         }
                     });
                     return;

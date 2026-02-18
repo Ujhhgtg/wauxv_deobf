@@ -13,18 +13,19 @@ public abstract class der {
     public static final List b = dqc.bf(deh.class);
 
     public static final Constructor c(Class cls, List list) {
-        bzo.q(list, com.umeng.ccg.a.A);
+        throwIfVar1IsNull(list, com.umeng.ccg.a.A);
         z zVarAe = cnb.ae(cls.getConstructors());
         while (zVarAe.hasNext()) {
             Constructor constructor = (Constructor) zVarAe.next();
             Class<?>[] parameterTypes = constructor.getParameterTypes();
-            bzo.p(parameterTypes, "getParameterTypes(...)");
+            throwIfVar1IsNull(parameterTypes, "getParameterTypes(...)");
             List listAb = la.ab(parameterTypes);
             if (list.equals(listAb)) {
                 return constructor;
             }
             if (list.size() == listAb.size() && listAb.containsAll(list)) {
-                throw new UnsupportedOperationException("Class " + cls.getSimpleName() + " must have parameters in the proper order: " + list);
+                throw new UnsupportedOperationException(
+                        "Class " + cls.getSimpleName() + " must have parameters in the proper order: " + list);
             }
         }
         return null;
@@ -34,11 +35,11 @@ public abstract class der {
         try {
             return (erk) constructor.newInstance(Arrays.copyOf(objArr, objArr.length));
         } catch (IllegalAccessException e) {
-            throw new RuntimeException(bjs.l(cls, "Failed to access "), e);
+            throw new RuntimeException(concatVar2Var1(cls, "Failed to access "), e);
         } catch (InstantiationException e2) {
             throw new RuntimeException("A " + cls + " cannot be instantiated.", e2);
         } catch (InvocationTargetException e3) {
-            throw new RuntimeException(bjs.l(cls, "An exception happened in constructor of "), e3.getCause());
+            throw new RuntimeException(concatVar2Var1(cls, "An exception happened in constructor of "), e3.getCause());
         }
     }
 }

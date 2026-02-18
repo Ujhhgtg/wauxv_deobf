@@ -25,7 +25,7 @@ public final /* synthetic */ class acb implements bul {
                 hb hbVar = (hb) this.c;
                 if (bugVar == bug.ON_CREATE) {
                     OnBackInvokedDispatcher onBackInvokedDispatcherB = acc.a.b(hbVar);
-                    bzo.q(onBackInvokedDispatcherB, "invoker");
+                    throwIfVar1IsNull(onBackInvokedDispatcherB, "invoker");
                     cqtVar.e = onBackInvokedDispatcherB;
                     cqtVar.j(cqtVar.g);
                 }
@@ -35,13 +35,15 @@ public final /* synthetic */ class acb implements bul {
                 cio cioVar = (cio) this.c;
                 if (bugVar == bug.ON_RESUME && ((List) ((dml) beqVar.w().e.h).c()).contains(cioVar)) {
                     if (beq.p()) {
-                        Log.v("FragmentNavigator", "Marking transition complete for entry " + cioVar + " due to fragment " + bupVar + " view lifecycle reaching RESUMED");
+                        Log.v("FragmentNavigator", "Marking transition complete for entry " + cioVar
+                                + " due to fragment " + bupVar + " view lifecycle reaching RESUMED");
                     }
                     beqVar.w().k(cioVar);
                 }
                 if (bugVar == bug.ON_DESTROY) {
                     if (beq.p()) {
-                        Log.v("FragmentNavigator", "Marking transition complete for entry " + cioVar + " due to fragment " + bupVar + " view lifecycle reaching DESTROYED");
+                        Log.v("FragmentNavigator", "Marking transition complete for entry " + cioVar
+                                + " due to fragment " + bupVar + " view lifecycle reaching DESTROYED");
                     }
                     beqVar.w().k(cioVar);
                 }

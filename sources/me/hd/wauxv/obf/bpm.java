@@ -30,13 +30,13 @@ public final class bpm {
     public final BitSet m;
     public final BitSet n;
     public final HashMap o;
-    public final io p;
+    public final DefaultConfig p;
     public String q;
     public int r;
     public alv s;
     public qx t;
 
-    public bpm(io ioVar) {
+    public bpm(DefaultConfig ioVar) {
         List list = (List) ioVar.c;
         HashMap map = new HashMap();
         v(Arrays.asList(new lf(TypePool.Default.LazyTypeDescription.GenericTypeToken.WILDCARD_TYPE_PATH), new lf('_')), map);

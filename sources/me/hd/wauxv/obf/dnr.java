@@ -6,15 +6,15 @@ import net.bytebuddy.pool.TypePool;
 /* JADX INFO: loaded from: classes.dex */
 public abstract class dnr extends dnq {
     public static byte[] bh(String str) {
-        bzo.q(str, "<this>");
+        throwIfVar1IsNull(str, "<this>");
         byte[] bytes = str.getBytes(uj.a);
-        bzo.p(bytes, "getBytes(...)");
+        throwIfVar1IsNull(bytes, "getBytes(...)");
         return bytes;
     }
 
     public static boolean bi(String str, String str2) {
-        bzo.q(str, "<this>");
-        bzo.q(str2, "suffix");
+        throwIfVar1IsNull(str, "<this>");
+        throwIfVar1IsNull(str2, "suffix");
         return str.endsWith(str2);
     }
 
@@ -23,19 +23,20 @@ public abstract class dnr extends dnq {
     }
 
     public static void bk() {
-        bzo.p(String.CASE_INSENSITIVE_ORDER, "CASE_INSENSITIVE_ORDER");
+        throwIfVar1IsNull(String.CASE_INSENSITIVE_ORDER, "CASE_INSENSITIVE_ORDER");
     }
 
     public static boolean bl(int i, int i2, int i3, String str, String str2, boolean z) {
-        bzo.q(str, "<this>");
-        bzo.q(str2, "other");
+        throwIfVar1IsNull(str, "<this>");
+        throwIfVar1IsNull(str2, "other");
         return !z ? str.regionMatches(i, str2, i2, i3) : str.regionMatches(z, i, str2, i2, i3);
     }
 
     public static String bm(int i, String str) {
-        bzo.q(str, "<this>");
+        throwIfVar1IsNull(str, "<this>");
         if (i < 0) {
-            throw new IllegalArgumentException(("Count 'n' must be non-negative, but was " + i + TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH).toString());
+            throw new IllegalArgumentException(("Count 'n' must be non-negative, but was " + i
+                    + TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH).toString());
         }
         if (i == 0) {
             return "";
@@ -67,20 +68,20 @@ public abstract class dnr extends dnq {
             }
         }
         String string = sb.toString();
-        bzo.n(string);
+        throwIfVar1IsNull(string);
         return string;
     }
 
     public static String bn(String str, char c, char c2) {
-        bzo.q(str, "<this>");
+        throwIfVar1IsNull(str, "<this>");
         String strReplace = str.replace(c, c2);
-        bzo.p(strReplace, "replace(...)");
+        throwIfVar1IsNull(strReplace, "replace(...)");
         return strReplace;
     }
 
     public static String bo(String str, String str2, String str3) {
-        bzo.q(str, "<this>");
-        bzo.q(str3, "newValue");
+        throwIfVar1IsNull(str, "<this>");
+        throwIfVar1IsNull(str3, "newValue");
         int iAf = dnj.af(str, str2, 0, false);
         if (iAf < 0) {
             return str;
@@ -104,18 +105,18 @@ public abstract class dnr extends dnq {
         } while (iAf > 0);
         sb.append((CharSequence) str, i2, str.length());
         String string = sb.toString();
-        bzo.p(string, "toString(...)");
+        throwIfVar1IsNull(string, "toString(...)");
         return string;
     }
 
     public static boolean bp(String str, String str2, boolean z) {
-        bzo.q(str, "<this>");
-        bzo.q(str2, "prefix");
+        throwIfVar1IsNull(str, "<this>");
+        throwIfVar1IsNull(str2, "prefix");
         return !z ? str.startsWith(str2) : bl(0, 0, str2.length(), str, str2, z);
     }
 
     public static boolean bq(String str, boolean z, int i, String str2) {
-        bzo.q(str, "<this>");
+        throwIfVar1IsNull(str, "<this>");
         return !z ? str.startsWith(str2, i) : bl(i, 0, str2.length(), str, str2, z);
     }
 }

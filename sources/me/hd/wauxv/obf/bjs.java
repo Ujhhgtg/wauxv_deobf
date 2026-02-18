@@ -14,8 +14,8 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public abstract /* synthetic */ class bjs {
     public static final void a(int i, View view, ViewGroup viewGroup) {
-        bzo.q(view, "view");
-        bzo.q(viewGroup, "container");
+        throwIfVar1IsNull(view, "view");
+        throwIfVar1IsNull(viewGroup, "container");
         if (beg.ar(2)) {
             Log.v("FragmentManager", "SpecialEffectsController: Calling apply state");
         }
@@ -25,7 +25,8 @@ public abstract /* synthetic */ class bjs {
             ViewGroup viewGroup2 = parent instanceof ViewGroup ? (ViewGroup) parent : null;
             if (viewGroup2 != null) {
                 if (beg.ar(2)) {
-                    Log.v("FragmentManager", "SpecialEffectsController: Removing view " + view + " from container " + viewGroup2);
+                    Log.v("FragmentManager",
+                            "SpecialEffectsController: Removing view " + view + " from container " + viewGroup2);
                 }
                 viewGroup2.removeView(view);
                 return;
@@ -39,7 +40,8 @@ public abstract /* synthetic */ class bjs {
             ViewParent parent2 = view.getParent();
             if ((parent2 instanceof ViewGroup ? (ViewGroup) parent2 : null) == null) {
                 if (beg.ar(2)) {
-                    Log.v("FragmentManager", "SpecialEffectsController: Adding view " + view + " to Container " + viewGroup);
+                    Log.v("FragmentManager",
+                            "SpecialEffectsController: Adding view " + view + " to Container " + viewGroup);
                 }
                 viewGroup.addView(view);
             }
@@ -144,53 +146,60 @@ public abstract /* synthetic */ class bjs {
         return String.valueOf(jSONObject.getByPath(cnb.z(j)));
     }
 
-    public static String l(Class cls, String str) {
-        return str + cls;
-    }
+    // replaced with human readable concat()
+    // public static String l(Class cls, String str) {
+    // return str + cls;
+    // }
 
-    public static String m(Object obj, StringBuilder sb) {
-        sb.append(obj.getClass());
-        return sb.toString();
-    }
+    // replaced with human readable concat()
+    // public static String m(Object obj, StringBuilder sb) {
+    // sb.append(obj.getClass());
+    // return sb.toString();
+    // }
 
-    public static String n(Object obj, StringBuilder sb, String str) {
-        sb.append(obj.getClass());
-        sb.append(str);
-        return sb.toString();
-    }
+    // replaced with human readable concat()
+    // public static String n(Object obj, StringBuilder sb, String str) {
+    // sb.append(obj.getClass());
+    // sb.append(str);
+    // return sb.toString();
+    // }
 
-    public static String o(String str, String str2, String str3) {
-        return str + str2 + str3;
-    }
+    // replaced with human readable concat()
+    // public static String o(String str, String str2, String str3) {
+    // return str + str2 + str3;
+    // }
 
-    public static String p(StringBuilder sb, Integer num, char c) {
-        sb.append(num);
-        sb.append(c);
-        return sb.toString();
-    }
+    // replaced with human readable concat()
+    // public static String p(StringBuilder sb, Integer num, char c) {
+    // sb.append(num);
+    // sb.append(c);
+    // return sb.toString();
+    // }
 
-    public static String q(StringBuilder sb, String str, char c) {
-        sb.append(str);
-        sb.append(c);
-        return sb.toString();
-    }
+    // replaced with human readable concat()
+    // public static String q(StringBuilder sb, String str, char c) {
+    // sb.append(str);
+    // sb.append(c);
+    // return sb.toString();
+    // }
 
-    public static StringBuilder r(String str, String str2) {
-        StringBuilder sb = new StringBuilder();
-        sb.append(str);
-        sb.append(str2);
-        return sb;
-    }
+    // replaced with human readable concat()
+    // public static StringBuilder r(String str, String str2) {
+    // StringBuilder sb = new StringBuilder();
+    // sb.append(str);
+    // sb.append(str2);
+    // return sb;
+    // }
 
     public static BigInteger s(long j, BigInteger bigInteger, BigInteger bigInteger2) {
-        bzo.p(bigInteger, cnb.z(j));
+        throwIfVar1IsNull(bigInteger, cnb.z(j));
         return bigInteger.and(bigInteger2);
     }
 
     public static /* synthetic */ void t(int i, String str) {
         if (i == 0) {
             StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
-            String name = bzo.class.getName();
+            String name = KotlinHelpers.class.getName();
             int i2 = 0;
             while (!stackTrace[i2].getClassName().equals(name)) {
                 i2++;
@@ -199,8 +208,10 @@ public abstract /* synthetic */ class bjs {
                 i2++;
             }
             StackTraceElement stackTraceElement = stackTrace[i2];
-            NullPointerException nullPointerException = new NullPointerException("Parameter specified as non-null is null: method " + stackTraceElement.getClassName() + "." + stackTraceElement.getMethodName() + ", parameter " + str);
-            bzo.ao(nullPointerException, bzo.class.getName());
+            NullPointerException nullPointerException = new NullPointerException(
+                    "Parameter specified as non-null is null: method " + stackTraceElement.getClassName() + "."
+                            + stackTraceElement.getMethodName() + ", parameter " + str);
+            KotlinHelpers.trimStackTraceToClass(nullPointerException, KotlinHelpers.class.getName());
             throw nullPointerException;
         }
     }

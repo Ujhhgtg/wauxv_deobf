@@ -11,7 +11,10 @@ import org.json.JSONObject;
 public class CoreProtocol implements UMLogDataProtocol, UMSenderStateNotify {
     private static Context a;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class a {
         private static final CoreProtocol a = new CoreProtocol();
 
@@ -23,7 +26,7 @@ public class CoreProtocol implements UMLogDataProtocol, UMSenderStateNotify {
         if (a == null && context != null) {
             a = context.getApplicationContext();
         }
-        return a.a;
+        return a.cachedConstructors;
     }
 
     @Override // com.umeng.commonsdk.framework.UMSenderStateNotify
@@ -33,7 +36,7 @@ public class CoreProtocol implements UMLogDataProtocol, UMSenderStateNotify {
 
     @Override // com.umeng.commonsdk.framework.UMSenderStateNotify
     public void onSenderIdle() {
-        q.a(a).b();
+        q.a(a).tryGetClassByName();
     }
 
     @Override // com.umeng.commonsdk.framework.UMLogDataProtocol

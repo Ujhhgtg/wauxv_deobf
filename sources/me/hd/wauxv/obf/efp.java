@@ -12,7 +12,8 @@ public final class efp {
     public final dwj f;
     public final dwj g;
 
-    public /* synthetic */ efp(int i, String str, dwj dwjVar, dwj dwjVar2, dwj dwjVar3, dwj dwjVar4, dwj dwjVar5, dwj dwjVar6) {
+    public /* synthetic */ efp(int i, String str, dwj dwjVar, dwj dwjVar2, dwj dwjVar3, dwj dwjVar4, dwj dwjVar5,
+            dwj dwjVar6) {
         if (127 != (i & 127)) {
             bht.ah(i, 127, efn.b.getDescriptor());
             throw null;
@@ -34,7 +35,10 @@ public final class efp {
             return false;
         }
         efp efpVar = (efp) obj;
-        return bzo.f(this.a, efpVar.a) && bzo.f(this.b, efpVar.b) && bzo.f(this.c, efpVar.c) && bzo.f(this.d, efpVar.d) && bzo.f(this.e, efpVar.e) && bzo.f(this.f, efpVar.f) && bzo.f(this.g, efpVar.g);
+        return nullSafeIsEqual(this.a, efpVar.a) && nullSafeIsEqual(this.b, efpVar.b)
+                && nullSafeIsEqual(this.c, efpVar.c) && nullSafeIsEqual(this.d, efpVar.d)
+                && nullSafeIsEqual(this.e, efpVar.e) && nullSafeIsEqual(this.f, efpVar.f)
+                && nullSafeIsEqual(this.g, efpVar.g);
     }
 
     public final int hashCode() {

@@ -14,7 +14,8 @@ import io.github.rosemoe.sora.widget.CodeEditor;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class asv implements GestureDetector.OnGestureListener, GestureDetector.OnDoubleTapListener, ScaleGestureDetector.OnScaleGestureListener {
+public final class asv implements GestureDetector.OnGestureListener, GestureDetector.OnDoubleTapListener,
+        ScaleGestureDetector.OnScaleGestureListener {
     public final CodeEditor a;
     public float aa;
     public float ab;
@@ -145,14 +146,14 @@ public final class asv implements GestureDetector.OnGestureListener, GestureDete
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:20:0x004c  */
-    /* JADX WARN: Found duplicated region for block: B:22:0x0051  */
-    /* JADX WARN: Found duplicated region for block: B:24:0x0055  */
-    /* JADX WARN: Found duplicated region for block: B:26:0x0059  */
-    /* JADX WARN: Found duplicated region for block: B:27:0x005c  */
-    /* JADX WARN: Found duplicated region for block: B:30:0x0072  */
+    /* JADX WARN: Found duplicated region for block: B:20:0x004c */
+    /* JADX WARN: Found duplicated region for block: B:22:0x0051 */
+    /* JADX WARN: Found duplicated region for block: B:24:0x0055 */
+    /* JADX WARN: Found duplicated region for block: B:26:0x0059 */
+    /* JADX WARN: Found duplicated region for block: B:27:0x005c */
+    /* JADX WARN: Found duplicated region for block: B:30:0x0072 */
     /* JADX WARN: Found duplicated region for block: B:31:0x007f A[MOVE_INLINED] */
-    /* JADX WARN: Found duplicated region for block: B:34:0x009d  */
+    /* JADX WARN: Found duplicated region for block: B:34:0x009d */
     public final boolean ax(MotionEvent motionEvent, boolean z) {
         int iMin;
         int iMax;
@@ -230,22 +231,24 @@ public final class asv implements GestureDetector.OnGestureListener, GestureDete
         return this.e != -1;
     }
 
-    /* JADX WARN: Code restructure failed: missing block: B:8:0x001f, code lost:
-    
-        if (r0 != 3) goto L67;
-     */
-    /* JADX WARN: Found duplicated region for block: B:47:0x013f  */
-    /* JADX WARN: Found duplicated region for block: B:64:0x0198  */
     /*
-        Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
-    */
+     * JADX WARN: Code restructure failed: missing block: B:8:0x001f, code lost:
+     * 
+     * if (r0 != 3) goto L67;
+     */
+    /* JADX WARN: Found duplicated region for block: B:47:0x013f */
+    /* JADX WARN: Found duplicated region for block: B:64:0x0198 */
+    /*
+     * Code decompiled incorrectly, please refer to instructions dump.
+     * To view partially-correct add '--show-bad-code' argument
+     */
     public final boolean az(android.view.MotionEvent r12) {
         /*
-            Method dump skipped, instruction units count: 694
-            To view this dump add '--comments-level debug' option
-        */
-        throw new UnsupportedOperationException("Method not decompiled: me.hd.wauxv.obf.asv.az(android.view.MotionEvent):boolean");
+         * Method dump skipped, instruction units count: 694
+         * To view this dump add '--comments-level debug' option
+         */
+        throw new UnsupportedOperationException(
+                "Method not decompiled: me.hd.wauxv.obf.asv.az(android.view.MotionEvent):boolean");
     }
 
     public final void ba() {
@@ -272,9 +275,11 @@ public final class asv implements GestureDetector.OnGestureListener, GestureDete
         int iMin2 = Math.min(iMax, codeEditor.getScrollMaxX());
         codeEditor.i.g(new dfb(codeEditor, overScroller.getCurrX(), overScroller.getCurrY(), iMin2, iMin, 1));
         if (z) {
-            asoVar.d(overScroller.getCurrX(), overScroller.getCurrY(), iMin2 - overScroller.getCurrX(), iMin - overScroller.getCurrY(), asoVar.a.getProps().i);
+            asoVar.d(overScroller.getCurrX(), overScroller.getCurrY(), iMin2 - overScroller.getCurrX(),
+                    iMin - overScroller.getCurrY(), asoVar.a.getProps().i);
         } else {
-            asoVar.d(asoVar.b.getCurrX(), overScroller.getCurrY(), iMin2 - overScroller.getCurrX(), iMin - overScroller.getCurrY(), 0);
+            asoVar.d(asoVar.b.getCurrX(), overScroller.getCurrY(), iMin2 - overScroller.getCurrX(),
+                    iMin - overScroller.getCurrY(), 0);
             overScroller.abortAnimation();
             asoVar.c();
         }
@@ -345,7 +350,8 @@ public final class asv implements GestureDetector.OnGestureListener, GestureDete
         long jDr = codeEditor.dr(motionEvent.getX(), motionEvent.getY());
         int i = (int) (jDr >> 32);
         int i2 = (int) (jDr & 4294967295L);
-        if ((at(new aak(3), codeEditor.getText().x().o(i, i2), motionEvent) & 2) == 0 && !codeEditor.getCursor().h() && motionEvent.getPointerCount() == 1) {
+        if ((at(new aak(3), codeEditor.getText().x().o(i, i2), motionEvent) & 2) == 0 && !codeEditor.getCursor().h()
+                && motionEvent.getPointerCount() == 1) {
             codeEditor.en(i, i2);
         }
         return true;
@@ -362,8 +368,8 @@ public final class asv implements GestureDetector.OnGestureListener, GestureDete
     }
 
     /* JADX WARN: Found duplicated region for block: B:11:0x002c A[RETURN] */
-    /* JADX WARN: Found duplicated region for block: B:12:0x002d  */
-    /* JADX WARN: Found duplicated region for block: B:16:0x0080  */
+    /* JADX WARN: Found duplicated region for block: B:12:0x002d */
+    /* JADX WARN: Found duplicated region for block: B:16:0x0080 */
     @Override // android.view.GestureDetector.OnGestureListener
     public final boolean onFling(MotionEvent motionEvent, MotionEvent motionEvent2, float f, float f2) {
         float f3;
@@ -388,7 +394,8 @@ public final class asv implements GestureDetector.OnGestureListener, GestureDete
             int scrollMaxY = codeEditor.getScrollMaxY();
             codeEditor.getProps().getClass();
             codeEditor.getProps().getClass();
-            overScroller2.fling(overScroller2.getCurrX(), overScroller2.getCurrY(), (int) (-f3), (int) (-f4), 0, scrollMaxX, 0, scrollMaxY, 0, 0);
+            overScroller2.fling(overScroller2.getCurrX(), overScroller2.getCurrY(), (int) (-f3), (int) (-f4), 0,
+                    scrollMaxX, 0, scrollMaxY, 0, 0);
             asoVar.c();
             dpUnit = codeEditor.getDpUnit() * 2000.0f;
             if (Math.abs(f3) < dpUnit || Math.abs(f4) >= dpUnit) {
@@ -397,7 +404,8 @@ public final class asv implements GestureDetector.OnGestureListener, GestureDete
             }
             codeEditor.ce.onRelease();
             codeEditor.cd.onRelease();
-            codeEditor.i.g(new dfb(codeEditor, overScroller2.getCurrX(), overScroller2.getCurrY(), overScroller2.getFinalX(), overScroller2.getFinalY(), 2));
+            codeEditor.i.g(new dfb(codeEditor, overScroller2.getCurrX(), overScroller2.getCurrY(),
+                    overScroller2.getFinalX(), overScroller2.getFinalY(), 2));
             codeEditor.postInvalidateOnAnimation();
             return false;
         }
@@ -415,7 +423,8 @@ public final class asv implements GestureDetector.OnGestureListener, GestureDete
         int scrollMaxY2 = codeEditor.getScrollMaxY();
         codeEditor.getProps().getClass();
         codeEditor.getProps().getClass();
-        overScroller22.fling(overScroller22.getCurrX(), overScroller22.getCurrY(), (int) (-f3), (int) (-f4), 0, scrollMaxX2, 0, scrollMaxY2, 0, 0);
+        overScroller22.fling(overScroller22.getCurrX(), overScroller22.getCurrY(), (int) (-f3), (int) (-f4), 0,
+                scrollMaxX2, 0, scrollMaxY2, 0, 0);
         asoVar2.c();
         dpUnit = codeEditor.getDpUnit() * 2000.0f;
         if (Math.abs(f3) < dpUnit) {
@@ -427,7 +436,8 @@ public final class asv implements GestureDetector.OnGestureListener, GestureDete
         }
         codeEditor.ce.onRelease();
         codeEditor.cd.onRelease();
-        codeEditor.i.g(new dfb(codeEditor, overScroller22.getCurrX(), overScroller22.getCurrY(), overScroller22.getFinalX(), overScroller22.getFinalY(), 2));
+        codeEditor.i.g(new dfb(codeEditor, overScroller22.getCurrX(), overScroller22.getCurrY(),
+                overScroller22.getFinalX(), overScroller22.getFinalY(), 2));
         codeEditor.postInvalidateOnAnimation();
         return false;
     }
@@ -482,8 +492,11 @@ public final class asv implements GestureDetector.OnGestureListener, GestureDete
             aso asoVar = this.b;
             OverScroller overScroller = asoVar.b;
             OverScroller overScroller2 = asoVar.b;
-            int iMax = (int) Math.max(0.0f, Math.min((scaleGestureDetector.getScaleFactor() * (overScroller2.getCurrX() + focusX)) - focusX, codeEditor.getScrollMaxX()));
-            int iMax2 = (int) Math.max(0.0f, Math.min(((overScroller.getCurrY() + focusY) * rowHeight2) - focusY, codeEditor.getScrollMaxY()));
+            int iMax = (int) Math.max(0.0f,
+                    Math.min((scaleGestureDetector.getScaleFactor() * (overScroller2.getCurrX() + focusX)) - focusX,
+                            codeEditor.getScrollMaxX()));
+            int iMax2 = (int) Math.max(0.0f,
+                    Math.min(((overScroller.getCurrY() + focusY) * rowHeight2) - focusY, codeEditor.getScrollMaxY()));
             codeEditor.i.g(new dfb(codeEditor, overScroller2.getCurrX(), overScroller2.getCurrY(), iMax, iMax2, 5));
             this.b.d(iMax, iMax2, 0, 0, 0);
             overScroller2.abortAnimation();
@@ -608,21 +621,26 @@ public final class asv implements GestureDetector.OnGestureListener, GestureDete
             z2 = false;
         }
         int i2 = iMin2;
-        asoVar.d(asoVar.b.getCurrX(), overScroller2.getCurrY(), i2 - overScroller2.getCurrX(), i - overScroller2.getCurrY(), 0);
+        asoVar.d(asoVar.b.getCurrX(), overScroller2.getCurrY(), i2 - overScroller2.getCurrX(),
+                i - overScroller2.getCurrY(), 0);
         if (z && overScroller2.getCurrY() + f4 < -2.0f) {
-            codeEditor.getVerticalEdgeEffect().onPull((-f4) / codeEditor.getMeasuredHeight(), Math.max(0.0f, Math.min(1.0f, motionEvent2.getX() / codeEditor.getWidth())));
+            codeEditor.getVerticalEdgeEffect().onPull((-f4) / codeEditor.getMeasuredHeight(),
+                    Math.max(0.0f, Math.min(1.0f, motionEvent2.getX() / codeEditor.getWidth())));
             this.i = false;
         }
         if (z && overScroller2.getCurrY() + f4 > codeEditor.getScrollMaxY() + 2.0f) {
-            codeEditor.getVerticalEdgeEffect().onPull(f4 / codeEditor.getMeasuredHeight(), Math.max(0.0f, Math.min(1.0f, motionEvent2.getX() / codeEditor.getWidth())));
+            codeEditor.getVerticalEdgeEffect().onPull(f4 / codeEditor.getMeasuredHeight(),
+                    Math.max(0.0f, Math.min(1.0f, motionEvent2.getX() / codeEditor.getWidth())));
             this.i = true;
         }
         if (z2 && overScroller2.getCurrX() + f3 < -2.0f) {
-            codeEditor.getHorizontalEdgeEffect().onPull((-f3) / codeEditor.getMeasuredWidth(), Math.max(0.0f, Math.min(1.0f, motionEvent2.getY() / codeEditor.getHeight())));
+            codeEditor.getHorizontalEdgeEffect().onPull((-f3) / codeEditor.getMeasuredWidth(),
+                    Math.max(0.0f, Math.min(1.0f, motionEvent2.getY() / codeEditor.getHeight())));
             this.j = false;
         }
         if (z2 && overScroller2.getCurrX() + f3 > codeEditor.getScrollMaxX() + 2.0f) {
-            codeEditor.getHorizontalEdgeEffect().onPull(f3 / codeEditor.getMeasuredWidth(), Math.max(0.0f, Math.min(1.0f, motionEvent2.getY() / codeEditor.getHeight())));
+            codeEditor.getHorizontalEdgeEffect().onPull(f3 / codeEditor.getMeasuredWidth(),
+                    Math.max(0.0f, Math.min(1.0f, motionEvent2.getY() / codeEditor.getHeight())));
             this.j = true;
         }
         codeEditor.invalidate();
@@ -646,7 +664,7 @@ public final class asv implements GestureDetector.OnGestureListener, GestureDete
         asoVar.c();
         CodeEditor codeEditor = this.a;
         codeEditor.dx();
-        bzo.q(motionEvent, "event");
+        throwIfVar1IsNull(motionEvent, "event");
         long jAf = ajn.af(codeEditor, motionEvent, -1);
         int i = (int) (jAf >> 32);
         int i2 = (int) (jAf & 4294967295L);
@@ -655,7 +673,10 @@ public final class asv implements GestureDetector.OnGestureListener, GestureDete
         int i4 = (int) (jDr & 4294967295L);
         codeEditor.performClick();
         if (i == 2) {
-            if (codeEditor.getLayout().q(Math.max(0, Math.min(((int) (motionEvent.getY() + codeEditor.getOffsetX())) / codeEditor.getRowHeight(), codeEditor.getLayout().e() - 1))).b) {
+            if (codeEditor.getLayout()
+                    .q(Math.max(0,
+                            Math.min(((int) (motionEvent.getY() + codeEditor.getOffsetX())) / codeEditor.getRowHeight(),
+                                    codeEditor.getLayout().e() - 1))).b) {
                 codeEditor.getRenderer().r.getStyles();
             }
         }

@@ -20,7 +20,7 @@ public abstract class dfl {
     }
 
     public static final void d(dfj dfjVar) {
-        bzo.q(dfjVar, "segment");
+        throwIfVar1IsNull(dfjVar, "segment");
         if (dfjVar.f != null || dfjVar.g != null) {
             throw new IllegalArgumentException("Failed requirement.");
         }

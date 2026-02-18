@@ -8,7 +8,7 @@ import java.util.List;
 public abstract class dnk extends aye {
     public static String bb(String str) {
         List listBf;
-        bzo.q(str, "<this>");
+        throwIfVar1IsNull(str, "<this>");
         if (dnj.ak("|")) {
             throw new IllegalArgumentException("marginPrefix must be non-blank string.");
         }
@@ -56,7 +56,7 @@ public abstract class dnk extends aye {
                 }
                 if (i3 != -1 && dnr.bq(str2, false, i3, "|")) {
                     strSubstring = str2.substring("|".length() + i3);
-                    bzo.p(strSubstring, "substring(...)");
+                    throwIfVar1IsNull(strSubstring, "substring(...)");
                 }
                 if (strSubstring == null) {
                     strSubstring = str2;

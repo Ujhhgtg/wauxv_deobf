@@ -4,7 +4,7 @@ import android.os.Handler;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class lx extends doo implements Runnable {
+public final class lx extends BaseHook implements Runnable {
     public static final lx a = new lx("AutoCleanHook" /* cnb.z(-511217072339754L) */);
     public static final String b = "杂项" /* cnb.z(-511161237764906L) */;
     public static final String c = "自动瘦身" /* cnb.z(-511165532732202L) */;
@@ -16,23 +16,23 @@ public final class lx extends doo implements Runnable {
         ((Handler) bij.a.getValue()).postDelayed(this, 30000L);
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String f() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getName() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String g() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getCategory() {
         return b;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String o() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getDescription() {
         return d;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final bgf p() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final IHasInvokeMethod p() {
         return h;
     }
 
@@ -45,7 +45,7 @@ public final class lx extends doo implements Runnable {
             alc alcVar = aou.a;
             akq akqVar = akq.f;
             lw lwVar = new lw(2, null, 0);
-            ahh ahhVarT = bzo.t(auz.a, akqVar, true);
+            ahh ahhVarT = KotlinHelpers.t(auz.a, akqVar, true);
             alc alcVar2 = aou.a;
             if (ahhVarT != alcVar2 && ahhVarT._w(arj.a) == null) {
                 ahhVarT = ahhVarT._v(alcVar2);

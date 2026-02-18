@@ -7,9 +7,12 @@ import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public class tc extends aot implements afw, ahr {
-    public static final /* synthetic */ AtomicIntegerFieldUpdater a = AtomicIntegerFieldUpdater.newUpdater(tc.class, "_decisionAndIndex$volatile");
-    public static final /* synthetic */ AtomicReferenceFieldUpdater d = AtomicReferenceFieldUpdater.newUpdater(tc.class, Object.class, "_state$volatile");
-    public static final /* synthetic */ AtomicReferenceFieldUpdater e = AtomicReferenceFieldUpdater.newUpdater(tc.class, Object.class, "_parentHandle$volatile");
+    public static final /* synthetic */ AtomicIntegerFieldUpdater a = AtomicIntegerFieldUpdater.newUpdater(tc.class,
+            "_decisionAndIndex$volatile");
+    public static final /* synthetic */ AtomicReferenceFieldUpdater d = AtomicReferenceFieldUpdater.newUpdater(tc.class,
+            Object.class, "_state$volatile");
+    public static final /* synthetic */ AtomicReferenceFieldUpdater e = AtomicReferenceFieldUpdater.newUpdater(tc.class,
+            Object.class, "_parentHandle$volatile");
     private volatile /* synthetic */ int _decisionAndIndex$volatile;
     private volatile /* synthetic */ Object _parentHandle$volatile;
     private volatile /* synthetic */ Object _state$volatile;
@@ -25,7 +28,9 @@ public class tc extends aot implements afw, ahr {
     }
 
     public static void h(sz szVar, Object obj) {
-        throw new IllegalStateException(("It's prohibited to register multiple handlers, tried to register " + szVar + ", already has " + obj).toString());
+        throw new IllegalStateException(
+                ("It's prohibited to register multiple handlers, tried to register " + szVar + ", already has " + obj)
+                        .toString());
     }
 
     public static void i(tc tcVar, Object obj, int i) throws aoq {
@@ -117,7 +122,8 @@ public class tc extends aot implements afw, ahr {
                             bgkVar.b(cancellationException, obj2, ahhVar);
                             return;
                         } catch (Throwable th) {
-                            cna.z(ahhVar, new abt("Exception in resume onCancellation handler for " + this, th));
+                            cna.z(ahhVar, new QueryDidNotReturnUniqueResultRuntimeException(
+                                    "Exception in resume onCancellation handler for " + this, th));
                             return;
                         }
                     }
@@ -171,7 +177,8 @@ public class tc extends aot implements afw, ahr {
                     break;
             }
         } catch (Throwable th2) {
-            cna.z(this.g, new abt("Exception in invokeOnCancellation handler for " + this, th2));
+            cna.z(this.g, new QueryDidNotReturnUniqueResultRuntimeException(
+                    "Exception in invokeOnCancellation handler for " + this, th2));
         }
     }
 
@@ -230,7 +237,7 @@ public class tc extends aot implements afw, ahr {
                         aor aorVar = (aor) afwVar;
                         ahj ahjVar = aorVar.d;
                         ahh ahhVar = aorVar.e.m;
-                        bzo.n(ahhVar);
+                        throwIfVar1IsNull(ahhVar);
                         try {
                             if (ahjVar.j(ahhVar)) {
                                 cnf.bl(ahjVar, ahhVar, this);
@@ -346,7 +353,8 @@ public class tc extends aot implements afw, ahr {
             return false;
         }
         afw afwVar = this.f;
-        bzo.o(afwVar, "null cannot be cast to non-null type kotlinx.coroutines.internal.DispatchedContinuation<*>");
+        throwIfVar1IsNull(afwVar,
+                "null cannot be cast to non-null type kotlinx.coroutines.internal.DispatchedContinuation<*>");
         return aor.a.get((aor) afwVar) != null;
     }
 

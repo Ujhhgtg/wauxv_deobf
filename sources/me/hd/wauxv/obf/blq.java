@@ -23,7 +23,7 @@ public final class blq {
     public Object e;
 
     public blq(Map map) {
-        bzo.q(map, "initialState");
+        throwIfVar1IsNull(map, "initialState");
         this.a = new LinkedHashMap(map);
         this.b = new LinkedHashMap();
         this.c = new LinkedHashMap();
@@ -44,18 +44,21 @@ public final class blq {
             if (i == -3) {
                 i = z ? -1 : -2;
             }
-            ViewGroup.LayoutParams layoutParams = (ViewGroup.LayoutParams) zf.e(cls, new Object[]{Integer.valueOf(i), Integer.valueOf(i2 != -3 ? i2 : -2)});
+            ViewGroup.LayoutParams layoutParams = (ViewGroup.LayoutParams) ReflectionWrapper.e(cls,
+                    new Object[] { Integer.valueOf(i), Integer.valueOf(i2 != -3 ? i2 : -2) });
             if (layoutParams == null) {
-                throw new IllegalStateException(("Create ViewGroup.LayoutParams failed. Could not found the default constructor LayoutParams(width, height) in " + cls + ".").toString());
+                throw new IllegalStateException(
+                        ("Create ViewGroup.LayoutParams failed. Could not found the default constructor LayoutParams(width, height) in "
+                                + cls + ".").toString());
             }
             LinkedHashMap linkedHashMap = ((blu) this.a).f;
             String name = layoutParams.getClass().getName();
             int size = linkedHashMap.size();
-            ((bgf) poVar.d).invoke(layoutParams);
+            ((IHasInvokeMethod) poVar.d).invoke(layoutParams);
             if (linkedHashMap.size() == size) {
                 return layoutParams;
             }
-            throw new cth(bjs.o("Performers are not allowed to appear in ", name, " DSL creation process."));
+            throw new cth(concat("Performers are not allowed to appear in ", name, " DSL creation process."));
         }
         erp erpVar = (erp) this.e;
         if (erpVar == null) {
@@ -72,7 +75,7 @@ public final class blq {
                 bmuVarBi.v(true);
                 cde cdeVarT = bmuVarBi.t();
                 cdeVarT.ab = "generateLayoutParams";
-                cdeVarT.z(Arrays.copyOf(new Object[]{dal.b(ViewGroup.LayoutParams.class)}, 1));
+                cdeVarT.z(Arrays.copyOf(new Object[] { dal.b(ViewGroup.LayoutParams.class) }, 1));
                 cdeVarT.ah();
                 cdk cdkVar = (cdk) aaz.g(cdeVarT.aj());
                 if (cdkVar != null) {
@@ -86,7 +89,8 @@ public final class blq {
         if (layoutParamsF != null) {
             return layoutParamsF;
         }
-        ViewGroup.LayoutParams layoutParams3 = (ViewGroup.LayoutParams) zf.e(cls, new Object[]{-2, -2});
+        ViewGroup.LayoutParams layoutParams3 = (ViewGroup.LayoutParams) ReflectionWrapper.e(cls,
+                new Object[] { -2, -2 });
         if (layoutParams3 != null) {
             return layoutParams3;
         }
@@ -101,7 +105,8 @@ public final class blq {
             throw new IllegalStateException("You must call setGraph() before constructing the deep link");
         }
         if (arrayList.isEmpty()) {
-            throw new IllegalStateException("You must call setDestination() or addDestination() before constructing the deep link");
+            throw new IllegalStateException(
+                    "You must call setDestination() or addDestination() before constructing the deep link");
         }
         ArrayList arrayList2 = new ArrayList();
         ArrayList<? extends Parcelable> arrayList3 = new ArrayList<>();
@@ -139,7 +144,8 @@ public final class blq {
             cjg cjgVarH = h(i2);
             if (cjgVarH == null) {
                 int i3 = cjg.e;
-                throw new IllegalArgumentException("Navigation destination " + bmy.r((anr) this.b, i2) + " cannot be found in the navigation graph " + cjiVar);
+                throw new IllegalArgumentException("Navigation destination " + bmy.r((anr) this.b, i2)
+                        + " cannot be found in the navigation graph " + cjiVar);
             }
             int[] iArrL = cjgVarH.l(cjgVar);
             int length = iArrL.length;
@@ -155,7 +161,7 @@ public final class blq {
     public cjg h(int i) {
         km kmVar = new km();
         cji cjiVar = (cji) this.d;
-        bzo.n(cjiVar);
+        throwIfVar1IsNull(cjiVar);
         kmVar.addLast(cjiVar);
         while (!kmVar.isEmpty()) {
             cjg cjgVar = (cjg) kmVar.removeFirst();
@@ -180,7 +186,7 @@ public final class blq {
     }
 
     public void j(String str, Object obj) {
-        bzo.q(str, "key");
+        throwIfVar1IsNull(str, "key");
         ((LinkedHashMap) this.a).put(str, obj);
         chy chyVar = (chy) ((LinkedHashMap) this.c).get(str);
         if (chyVar != null) {
@@ -202,7 +208,8 @@ public final class blq {
             int i = ((cje) it.next()).a;
             if (h(i) == null) {
                 int i2 = cjg.e;
-                StringBuilder sbZ = dkz.z("Navigation destination ", bmy.r((anr) this.b, i), " cannot be found in the navigation graph ");
+                StringBuilder sbZ = dkz.z("Navigation destination ", bmy.r((anr) this.b, i),
+                        " cannot be found in the navigation graph ");
                 sbZ.append((cji) this.d);
                 throw new IllegalArgumentException(sbZ.toString());
             }
@@ -222,7 +229,8 @@ public final class blq {
         Context context = cjlVar.a;
         this.a = context;
         this.b = new anr(context, 8);
-        Activity activity = (Activity) dfv.ah(new bae(new dpu(dfv.ai(context, new cgu(17)), new cgu(18), 1), false, new dbj(21)));
+        Activity activity = (Activity) dfv
+                .ah(new bae(new dpu(dfv.ai(context, new cgu(17)), new cgu(18), 1), false, new dbj(21)));
         if (activity != null) {
             launchIntentForPackage = new Intent(context, activity.getClass());
         } else {

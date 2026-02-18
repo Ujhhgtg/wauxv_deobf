@@ -20,7 +20,7 @@ public final class amq {
 
     public amq(String str) {
         int i;
-        bzo.q(str, "descriptor");
+        throwIfVar1IsNull(str, "descriptor");
         this.e = new dov(new bp(this, 17));
         int iAh = 0;
         int iAi = dnj.ai(str, "->", 0, false, 6);
@@ -31,13 +31,13 @@ public final class amq {
             throw new IllegalAccessError("not method descriptor: ".concat(str));
         }
         String strSubstring = str.substring(0, iAi);
-        bzo.p(strSubstring, "substring(...)");
+        throwIfVar1IsNull(strSubstring, "substring(...)");
         this.a = ams.f(strSubstring);
         String strSubstring2 = str.substring(iAi + 2, iAi2);
-        bzo.p(strSubstring2, "substring(...)");
+        throwIfVar1IsNull(strSubstring2, "substring(...)");
         this.b = strSubstring2;
         String strSubstring3 = str.substring(i2, iAi3);
-        bzo.p(strSubstring3, "substring(...)");
+        throwIfVar1IsNull(strSubstring3, "substring(...)");
         ArrayList arrayList = new ArrayList();
         loop0: while (true) {
             i = iAh;
@@ -47,7 +47,8 @@ public final class amq {
                 }
                 char cCharAt = strSubstring3.charAt(iAh);
                 if (cCharAt == 'L') {
-                    iAh = dnj.ah(TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER, iAh, 4, strSubstring3);
+                    iAh = dnj.ah(TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER, iAh, 4,
+                            strSubstring3);
                     break;
                 } else if (cCharAt != '[') {
                     break;
@@ -57,7 +58,7 @@ public final class amq {
             }
             iAh++;
             String strSubstring4 = strSubstring3.substring(i, iAh);
-            bzo.p(strSubstring4, "substring(...)");
+            throwIfVar1IsNull(strSubstring4, "substring(...)");
             arrayList.add(ams.f(strSubstring4));
         }
         if (i != iAh) {
@@ -65,12 +66,14 @@ public final class amq {
         }
         this.c = arrayList;
         String strSubstring5 = str.substring(iAi3 + 1);
-        bzo.p(strSubstring5, "substring(...)");
+        throwIfVar1IsNull(strSubstring5, "substring(...)");
         this.d = ams.f(strSubstring5);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r6v5, types: [java.lang.reflect.Method] */
+    /*
+     * JADX WARN: Type inference failed for: r6v5, types: [java.lang.reflect.Method]
+     */
     /* JADX WARN: Type inference failed for: r6v9 */
     public static Method f(amq amqVar, ClassLoader classLoader) throws NoSuchMethodException {
         Object objX;
@@ -78,14 +81,16 @@ public final class amq {
         dov dovVar = amqVar.e;
         chm chmVar = bpv.a;
         String str = amqVar.b;
-        if (bzo.f(str, MethodDescription.TYPE_INITIALIZER_INTERNAL_NAME) || bzo.f(str, MethodDescription.CONSTRUCTOR_INTERNAL_NAME)) {
+        if (nullSafeIsEqual(str, MethodDescription.TYPE_INITIALIZER_INTERNAL_NAME)
+                || nullSafeIsEqual(str, MethodDescription.CONSTRUCTOR_INTERNAL_NAME)) {
             throw new IllegalArgumentException((amqVar + " not a method").toString());
         }
         Class clsC = bpv.c(classLoader, amqVar.a);
         Object objD = bpv.d(classLoader, amqVar.c);
         Throwable thB = dcy.b(objD);
         if (thB != null) {
-            NoSuchMethodException noSuchMethodException = new NoSuchMethodException("Method " + amqVar + " not available: parameter type(s) missing");
+            NoSuchMethodException noSuchMethodException = new NoSuchMethodException(
+                    "Method " + amqVar + " not available: parameter type(s) missing");
             noSuchMethodException.initCause(thB);
             throw noSuchMethodException;
         }
@@ -97,7 +102,8 @@ public final class amq {
         }
         Throwable thB2 = dcy.b(objX);
         if (thB2 != null) {
-            NoSuchMethodException noSuchMethodException2 = new NoSuchMethodException("Method " + amqVar + " not available: return type missing");
+            NoSuchMethodException noSuchMethodException2 = new NoSuchMethodException(
+                    "Method " + amqVar + " not available: return type missing");
             noSuchMethodException2.initCause(thB2);
             throw noSuchMethodException2;
         }
@@ -110,9 +116,10 @@ public final class amq {
                 for (Class superclass2 = clsC; superclass2 != null; superclass2 = superclass2.getSuperclass()) {
                     try {
                         Method[] declaredMethods = superclass2.getDeclaredMethods();
-                        bzo.p(declaredMethods, "getDeclaredMethods(...)");
+                        throwIfVar1IsNull(declaredMethods, "getDeclaredMethods(...)");
                         for (Method method : declaredMethods) {
-                            if (bzo.f(method.getName(), str) && bzo.f((String) dovVar.getValue(), ams.d(method))) {
+                            if (nullSafeIsEqual(method.getName(), str)
+                                    && nullSafeIsEqual((String) dovVar.getValue(), ams.d(method))) {
                                 method.setAccessible(true);
                                 bool = method;
                                 return bool;
@@ -130,14 +137,15 @@ public final class amq {
                 throw new NoSuchMethodException("Method " + amqVar + " not found");
             }
             try {
-                Method declaredMethod = superclass.getDeclaredMethod(str, (Class[]) Arrays.copyOf(clsArr, clsArr.length));
+                Method declaredMethod = superclass.getDeclaredMethod(str,
+                        (Class[]) Arrays.copyOf(clsArr, clsArr.length));
                 declaredMethod.setAccessible(true);
                 objX2 = declaredMethod;
             } catch (Throwable th2) {
                 objX2 = bhu.x(th2);
             }
             Method method3 = (Method) (objX2 instanceof dcx ? null : objX2);
-            if (method3 != null && bzo.f(method3.getReturnType(), cls)) {
+            if (method3 != null && nullSafeIsEqual(method3.getReturnType(), cls)) {
                 return method3;
             }
             superclass = superclass.getSuperclass();
@@ -152,11 +160,12 @@ public final class amq {
             return false;
         }
         amq amqVar = (amq) obj;
-        return bzo.f(this.a, amqVar.a) && bzo.f(this.b, amqVar.b) && bzo.f(this.c, amqVar.c) && bzo.f(this.d, amqVar.d);
+        return nullSafeIsEqual(this.a, amqVar.a) && nullSafeIsEqual(this.b, amqVar.b)
+                && nullSafeIsEqual(this.c, amqVar.c) && nullSafeIsEqual(this.d, amqVar.d);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:26:0x007b  */
-    /* JADX WARN: Found duplicated region for block: B:28:0x0081  */
+    /* JADX WARN: Found duplicated region for block: B:26:0x007b */
+    /* JADX WARN: Found duplicated region for block: B:28:0x0081 */
     public final Constructor g(ClassLoader classLoader) throws NoSuchMethodException {
         Object objX;
         Member reflectedMethod;
@@ -165,20 +174,22 @@ public final class amq {
         dov dovVar = this.e;
         chm chmVar = bpv.a;
         String str = this.b;
-        if (!bzo.f(str, MethodDescription.CONSTRUCTOR_INTERNAL_NAME)) {
+        if (!nullSafeIsEqual(str, MethodDescription.CONSTRUCTOR_INTERNAL_NAME)) {
             throw new IllegalArgumentException((this + " not a constructor").toString());
         }
         Class clsC = bpv.c(classLoader, this.a);
         Object objD = bpv.d(classLoader, this.c);
         Throwable thB = dcy.b(objD);
         if (thB != null) {
-            NoSuchMethodException noSuchMethodException = new NoSuchMethodException("Constructor " + this + " not available: parameter type(s) missing");
+            NoSuchMethodException noSuchMethodException = new NoSuchMethodException(
+                    "Constructor " + this + " not available: parameter type(s) missing");
             noSuchMethodException.initCause(thB);
             throw noSuchMethodException;
         }
         Class[] clsArr = (Class[]) objD;
         try {
-            Constructor declaredConstructor = clsC.getDeclaredConstructor((Class[]) Arrays.copyOf(clsArr, clsArr.length));
+            Constructor declaredConstructor = clsC
+                    .getDeclaredConstructor((Class[]) Arrays.copyOf(clsArr, clsArr.length));
             declaredConstructor.setAccessible(true);
             objX = declaredConstructor;
         } catch (Throwable th) {
@@ -195,13 +206,13 @@ public final class amq {
         }
         try {
             declaredConstructors = clsC.getDeclaredConstructors();
-            bzo.p(declaredConstructors, "getDeclaredConstructors(...)");
+            throwIfVar1IsNull(declaredConstructors, "getDeclaredConstructors(...)");
         } catch (Throwable unused) {
         }
         for (Constructor<?> constructor2 : declaredConstructors) {
             String str2 = (String) dovVar.getValue();
-            bzo.n(constructor2);
-            if (bzo.f(str2, ams.c(constructor2))) {
+            throwIfVar1IsNull(constructor2);
+            if (nullSafeIsEqual(str2, ams.c(constructor2))) {
                 constructor2.setAccessible(true);
                 return constructor2;
             }

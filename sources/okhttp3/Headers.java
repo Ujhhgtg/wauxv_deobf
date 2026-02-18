@@ -15,11 +15,11 @@ import java.util.TreeSet;
 import me.hd.wauxv.obf.abf;
 import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.avd;
-import me.hd.wauxv.obf.bsw;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.IEmpty;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cnb;
 import me.hd.wauxv.obf.cnd;
-import me.hd.wauxv.obf.csm;
+import me.hd.wauxv.obf.Pair;
 import me.hd.wauxv.obf.dnj;
 import me.hd.wauxv.obf.dnr;
 import okhttp3.internal.Util;
@@ -27,31 +27,34 @@ import okhttp3.internal.http.DatesKt;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class Headers implements Iterable<csm>, bsw {
+public final class Headers implements Iterable<Pair>, IEmpty {
     public static final Companion Companion = new Companion(null);
     private final String[] namesAndValues;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Builder {
         private final List<String> namesAndValues = new ArrayList(20);
 
         public final Builder add(String str) {
-            bzo.q(str, "line");
+            throwIfVar1IsNull(str, "line");
             int iAh = dnj.ah(':', 0, 6, str);
             if (iAh == -1) {
                 throw new IllegalArgumentException("Unexpected header: ".concat(str).toString());
             }
             String strSubstring = str.substring(0, iAh);
-            bzo.p(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
+            throwIfVar1IsNull(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
             String string = dnj.ba(strSubstring).toString();
             String strSubstring2 = str.substring(iAh + 1);
-            bzo.p(strSubstring2, "this as java.lang.String).substring(startIndex)");
+            throwIfVar1IsNull(strSubstring2, "this as java.lang.String).substring(startIndex)");
             add(string, strSubstring2);
             return this;
         }
 
         public final Builder addAll(Headers headers) {
-            bzo.q(headers, "headers");
+            throwIfVar1IsNull(headers, "headers");
             int size = headers.size();
             for (int i = 0; i < size; i++) {
                 addLenient$okhttp(headers.name(i), headers.value(i));
@@ -60,13 +63,13 @@ public final class Headers implements Iterable<csm>, bsw {
         }
 
         public final Builder addLenient$okhttp(String str) {
-            bzo.q(str, "line");
+            throwIfVar1IsNull(str, "line");
             int iAh = dnj.ah(':', 1, 4, str);
             if (iAh != -1) {
                 String strSubstring = str.substring(0, iAh);
-                bzo.p(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
+                throwIfVar1IsNull(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
                 String strSubstring2 = str.substring(iAh + 1);
-                bzo.p(strSubstring2, "this as java.lang.String).substring(startIndex)");
+                throwIfVar1IsNull(strSubstring2, "this as java.lang.String).substring(startIndex)");
                 addLenient$okhttp(strSubstring, strSubstring2);
                 return this;
             }
@@ -75,14 +78,14 @@ public final class Headers implements Iterable<csm>, bsw {
                 return this;
             }
             String strSubstring3 = str.substring(1);
-            bzo.p(strSubstring3, "this as java.lang.String).substring(startIndex)");
+            throwIfVar1IsNull(strSubstring3, "this as java.lang.String).substring(startIndex)");
             addLenient$okhttp("", strSubstring3);
             return this;
         }
 
         public final Builder addUnsafeNonAscii(String str, String str2) {
-            bzo.q(str, "name");
-            bzo.q(str2, "value");
+            throwIfVar1IsNull(str, "name");
+            throwIfVar1IsNull(str2, "value");
             Headers.Companion.checkName(str);
             addLenient$okhttp(str, str2);
             return this;
@@ -93,7 +96,7 @@ public final class Headers implements Iterable<csm>, bsw {
         }
 
         public final String get(String str) {
-            bzo.q(str, "name");
+            throwIfVar1IsNull(str, "name");
             int size = this.namesAndValues.size() - 2;
             int iAv = cnd.av(size, 0, -2);
             if (iAv > size) {
@@ -113,7 +116,7 @@ public final class Headers implements Iterable<csm>, bsw {
         }
 
         public final Builder removeAll(String str) {
-            bzo.q(str, "name");
+            throwIfVar1IsNull(str, "name");
             int i = 0;
             while (i < this.namesAndValues.size()) {
                 if (str.equalsIgnoreCase(this.namesAndValues.get(i))) {
@@ -127,21 +130,21 @@ public final class Headers implements Iterable<csm>, bsw {
         }
 
         public final Builder set(String str, Date date) {
-            bzo.q(str, "name");
-            bzo.q(date, "value");
+            throwIfVar1IsNull(str, "name");
+            throwIfVar1IsNull(date, "value");
             set(str, DatesKt.toHttpDateString(date));
             return this;
         }
 
         public final Builder set(String str, Instant instant) {
-            bzo.q(str, "name");
-            bzo.q(instant, "value");
+            throwIfVar1IsNull(str, "name");
+            throwIfVar1IsNull(instant, "value");
             return set(str, new Date(instant.toEpochMilli()));
         }
 
         public final Builder set(String str, String str2) {
-            bzo.q(str, "name");
-            bzo.q(str2, "value");
+            throwIfVar1IsNull(str, "name");
+            throwIfVar1IsNull(str2, "value");
             Companion companion = Headers.Companion;
             companion.checkName(str);
             companion.checkValue(str2, str);
@@ -151,8 +154,8 @@ public final class Headers implements Iterable<csm>, bsw {
         }
 
         public final Builder add(String str, String str2) {
-            bzo.q(str, "name");
-            bzo.q(str2, "value");
+            throwIfVar1IsNull(str, "name");
+            throwIfVar1IsNull(str2, "value");
             Companion companion = Headers.Companion;
             companion.checkName(str);
             companion.checkValue(str2, str);
@@ -161,29 +164,32 @@ public final class Headers implements Iterable<csm>, bsw {
         }
 
         public final Builder add(String str, Date date) {
-            bzo.q(str, "name");
-            bzo.q(date, "value");
+            throwIfVar1IsNull(str, "name");
+            throwIfVar1IsNull(date, "value");
             add(str, DatesKt.toHttpDateString(date));
             return this;
         }
 
         public final Builder addLenient$okhttp(String str, String str2) {
-            bzo.q(str, "name");
-            bzo.q(str2, "value");
+            throwIfVar1IsNull(str, "name");
+            throwIfVar1IsNull(str2, "value");
             this.namesAndValues.add(str);
             this.namesAndValues.add(dnj.ba(str2).toString());
             return this;
         }
 
         public final Builder add(String str, Instant instant) {
-            bzo.q(str, "name");
-            bzo.q(instant, "value");
+            throwIfVar1IsNull(str, "name");
+            throwIfVar1IsNull(instant, "value");
             add(str, new Date(instant.toEpochMilli()));
             return this;
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
@@ -198,7 +204,8 @@ public final class Headers implements Iterable<csm>, bsw {
             for (int i = 0; i < length; i++) {
                 char cCharAt = str.charAt(i);
                 if ('!' > cCharAt || cCharAt >= 127) {
-                    throw new IllegalArgumentException(Util.format("Unexpected char %#04x at %d in header name: %s", Integer.valueOf(cCharAt), Integer.valueOf(i), str).toString());
+                    throw new IllegalArgumentException(Util.format("Unexpected char %#04x at %d in header name: %s",
+                            Integer.valueOf(cCharAt), Integer.valueOf(i), str).toString());
                 }
             }
         }
@@ -210,7 +217,8 @@ public final class Headers implements Iterable<csm>, bsw {
                 char cCharAt = str.charAt(i);
                 if (cCharAt != '\t' && (' ' > cCharAt || cCharAt >= 127)) {
                     StringBuilder sb = new StringBuilder();
-                    sb.append(Util.format("Unexpected char %#04x at %d in %s value", Integer.valueOf(cCharAt), Integer.valueOf(i), str2));
+                    sb.append(Util.format("Unexpected char %#04x at %d in %s value", Integer.valueOf(cCharAt),
+                            Integer.valueOf(i), str2));
                     sb.append(Util.isSensitiveHeader(str2) ? "" : ": ".concat(str));
                     throw new IllegalArgumentException(sb.toString().toString());
                 }
@@ -234,12 +242,12 @@ public final class Headers implements Iterable<csm>, bsw {
         }
 
         public final Headers b(String... strArr) {
-            bzo.q(strArr, "namesAndValues");
+            throwIfVar1IsNull(strArr, "namesAndValues");
             return of((String[]) Arrays.copyOf(strArr, strArr.length));
         }
 
         public final Headers of(String... strArr) {
-            bzo.q(strArr, "namesAndValues");
+            throwIfVar1IsNull(strArr, "namesAndValues");
             if (strArr.length % 2 != 0) {
                 throw new IllegalArgumentException("Expected alternating header names and values");
             }
@@ -273,12 +281,12 @@ public final class Headers implements Iterable<csm>, bsw {
         }
 
         public final Headers a(Map<String, String> map) {
-            bzo.q(map, "headers");
+            throwIfVar1IsNull(map, "headers");
             return of(map);
         }
 
         public final Headers of(Map<String, String> map) {
-            bzo.q(map, "<this>");
+            throwIfVar1IsNull(map, "<this>");
             String[] strArr = new String[map.size() * 2];
             int i = 0;
             for (Map.Entry<String, String> entry : map.entrySet()) {
@@ -323,12 +331,12 @@ public final class Headers implements Iterable<csm>, bsw {
     }
 
     public final String get(String str) {
-        bzo.q(str, "name");
+        throwIfVar1IsNull(str, "name");
         return Companion.get(this.namesAndValues, str);
     }
 
     public final Date getDate(String str) {
-        bzo.q(str, "name");
+        throwIfVar1IsNull(str, "name");
         String str2 = get(str);
         if (str2 != null) {
             return DatesKt.toHttpDateOrNull(str2);
@@ -337,7 +345,7 @@ public final class Headers implements Iterable<csm>, bsw {
     }
 
     public final Instant getInstant(String str) {
-        bzo.q(str, "name");
+        throwIfVar1IsNull(str, "name");
         Date date = getDate(str);
         if (date != null) {
             return date.toInstant();
@@ -350,13 +358,13 @@ public final class Headers implements Iterable<csm>, bsw {
     }
 
     @Override // java.lang.Iterable
-    public Iterator<csm> iterator() {
+    public Iterator<Pair> iterator() {
         int size = size();
-        csm[] csmVarArr = new csm[size];
+        Pair[] pairVarArr = new Pair[size];
         for (int i = 0; i < size; i++) {
-            csmVarArr[i] = new csm(name(i), value(i));
+            pairVarArr[i] = new Pair(name(i), value(i));
         }
-        return cnb.ae(csmVarArr);
+        return cnb.ae(pairVarArr);
     }
 
     public final String name(int i) {
@@ -371,7 +379,7 @@ public final class Headers implements Iterable<csm>, bsw {
             treeSet.add(name(i));
         }
         Set<String> setUnmodifiableSet = Collections.unmodifiableSet(treeSet);
-        bzo.p(setUnmodifiableSet, "unmodifiableSet(result)");
+        throwIfVar1IsNull(setUnmodifiableSet, "unmodifiableSet(result)");
         return setUnmodifiableSet;
     }
 
@@ -392,9 +400,9 @@ public final class Headers implements Iterable<csm>, bsw {
         for (int i = 0; i < size; i++) {
             String strName = name(i);
             Locale locale = Locale.US;
-            bzo.p(locale, "US");
+            throwIfVar1IsNull(locale, "US");
             String lowerCase = strName.toLowerCase(locale);
-            bzo.p(lowerCase, "this as java.lang.String).toLowerCase(locale)");
+            throwIfVar1IsNull(lowerCase, "this as java.lang.String).toLowerCase(locale)");
             List arrayList = (List) treeMap.get(lowerCase);
             if (arrayList == null) {
                 arrayList = new ArrayList(2);
@@ -420,7 +428,7 @@ public final class Headers implements Iterable<csm>, bsw {
             sb.append("\n");
         }
         String string = sb.toString();
-        bzo.p(string, "StringBuilder().apply(builderAction).toString()");
+        throwIfVar1IsNull(string, "StringBuilder().apply(builderAction).toString()");
         return string;
     }
 
@@ -429,7 +437,7 @@ public final class Headers implements Iterable<csm>, bsw {
     }
 
     public final List<String> values(String str) {
-        bzo.q(str, "name");
+        throwIfVar1IsNull(str, "name");
         int size = size();
         ArrayList arrayList = null;
         for (int i = 0; i < size; i++) {
@@ -444,7 +452,7 @@ public final class Headers implements Iterable<csm>, bsw {
             return avd.a;
         }
         List<String> listUnmodifiableList = Collections.unmodifiableList(arrayList);
-        bzo.p(listUnmodifiableList, "{\n      Collections.unmodifiableList(result)\n    }");
+        throwIfVar1IsNull(listUnmodifiableList, "{\n      Collections.unmodifiableList(result)\n    }");
         return listUnmodifiableList;
     }
 

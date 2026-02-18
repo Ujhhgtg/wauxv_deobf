@@ -98,7 +98,8 @@ public final class awa extends LinearLayout {
         int i = 1;
         if (typedArray.hasValue(30)) {
             ac(typedArray.getInt(30, 0));
-            if (typedArray.hasValue(27) && checkableImageButtonW2.getContentDescription() != (text = typedArray.getText(27))) {
+            if (typedArray.hasValue(27)
+                    && checkableImageButtonW2.getContentDescription() != (text = typedArray.getText(27))) {
                 checkableImageButtonW2.setContentDescription(text);
             }
             checkableImageButtonW2.setCheckable(typedArray.getBoolean(26, true));
@@ -115,7 +116,8 @@ public final class awa extends LinearLayout {
                 checkableImageButtonW2.setContentDescription(text2);
             }
         }
-        int dimensionPixelSize = typedArray.getDimensionPixelSize(29, getResources().getDimensionPixelSize(R.dimen.mtrl_min_touch_target_size));
+        int dimensionPixelSize = typedArray.getDimensionPixelSize(29,
+                getResources().getDimensionPixelSize(R.dimen.mtrl_min_touch_target_size));
         if (dimensionPixelSize < 0) {
             throw new IllegalArgumentException("endIconSize cannot be less than 0");
         }
@@ -221,7 +223,8 @@ public final class awa extends LinearLayout {
         }
         checkableImageButton.setCheckable(awbVarX2.ak());
         if (!awbVarX2.z(textInputLayout.getBoxBackgroundMode())) {
-            throw new IllegalStateException("The current box background mode " + textInputLayout.getBoxBackgroundMode() + " is not supported by the end icon mode " + i);
+            throw new IllegalStateException("The current box background mode " + textInputLayout.getBoxBackgroundMode()
+                    + " is not supported by the end icon mode " + i);
         }
         awbVarX2.r();
         qp qpVarY = awbVarX2.y();
@@ -304,7 +307,8 @@ public final class awa extends LinearLayout {
             WeakHashMap weakHashMap = eqz.a;
             paddingEnd = editText.getPaddingEnd();
         }
-        int dimensionPixelSize = getContext().getResources().getDimensionPixelSize(R.dimen.material_input_text_to_prefix_suffix_padding);
+        int dimensionPixelSize = getContext().getResources()
+                .getDimensionPixelSize(R.dimen.material_input_text_to_prefix_suffix_padding);
         int paddingTop = textInputLayout.e.getPaddingTop();
         int paddingBottom = textInputLayout.e.getPaddingBottom();
         WeakHashMap weakHashMap2 = eqz.a;
@@ -324,7 +328,8 @@ public final class awa extends LinearLayout {
     }
 
     public final CheckableImageButton w(ViewGroup viewGroup, LayoutInflater layoutInflater, int i) {
-        CheckableImageButton checkableImageButton = (CheckableImageButton) layoutInflater.inflate(R.layout.design_text_input_end_icon, viewGroup, false);
+        CheckableImageButton checkableImageButton = (CheckableImageButton) layoutInflater
+                .inflate(R.layout.design_text_input_end_icon, viewGroup, false);
         checkableImageButton.setId(i);
         if (cnb.ad(getContext())) {
             ((ViewGroup.MarginLayoutParams) checkableImageButton.getLayoutParams()).setMarginStart(0);
@@ -352,7 +357,7 @@ public final class awa extends LinearLayout {
             aisVar = new zv(awaVar);
         } else {
             if (i != 3) {
-                throw new IllegalArgumentException(bjs.i(i, "Invalid end icon mode: "));
+                throw new IllegalArgumentException(concatVar2Var1(i, "Invalid end icon mode: "));
             }
             aisVar = new aql(awaVar);
         }
@@ -364,7 +369,8 @@ public final class awa extends LinearLayout {
         int marginStart;
         if (z() || aa()) {
             CheckableImageButton checkableImageButton = this.g;
-            marginStart = ((ViewGroup.MarginLayoutParams) checkableImageButton.getLayoutParams()).getMarginStart() + checkableImageButton.getMeasuredWidth();
+            marginStart = ((ViewGroup.MarginLayoutParams) checkableImageButton.getLayoutParams()).getMarginStart()
+                    + checkableImageButton.getMeasuredWidth();
         } else {
             marginStart = 0;
         }

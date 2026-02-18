@@ -33,10 +33,12 @@ public final class bdf extends bdh {
         bdm bdmVar = jVar2.bn;
         final acg acgVar = bdmVar != null ? bdmVar.h.x : jVar2.db().x;
         LinkedHashMap linkedHashMap = acgVar.c;
-        bzo.q(string, "key");
+        throwIfVar1IsNull(string, "key");
         bur burVar = jVar.ch;
         if (burVar.c.compareTo(buh.d) >= 0) {
-            throw new IllegalStateException(("LifecycleOwner " + jVar + " is attempting to register while current state is " + burVar.c + ". LifecycleOwners must call register before they are STARTED.").toString());
+            throw new IllegalStateException(
+                    ("LifecycleOwner " + jVar + " is attempting to register while current state is " + burVar.c
+                            + ". LifecycleOwners must call register before they are STARTED.").toString());
         }
         acgVar.l(string);
         dw dwVar = (dw) linkedHashMap.get(string);

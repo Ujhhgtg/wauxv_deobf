@@ -8,7 +8,7 @@ import java.util.List;
 import javax.net.ssl.SSLPeerUnverifiedException;
 import javax.net.ssl.X509TrustManager;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import okhttp3.internal.tls.CertificateChainCleaner;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -18,7 +18,10 @@ public final class AndroidCertificateChainCleaner extends CertificateChainCleane
     private final X509TrustManager trustManager;
     private final X509TrustManagerExtensions x509TrustManagerExtensions;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
@@ -26,7 +29,7 @@ public final class AndroidCertificateChainCleaner extends CertificateChainCleane
 
         public final AndroidCertificateChainCleaner buildIfSupported(X509TrustManager x509TrustManager) {
             X509TrustManagerExtensions x509TrustManagerExtensions;
-            bzo.q(x509TrustManager, "trustManager");
+            throwIfVar1IsNull(x509TrustManager, "trustManager");
             try {
                 x509TrustManagerExtensions = new X509TrustManagerExtensions(x509TrustManager);
             } catch (IllegalArgumentException unused) {
@@ -42,20 +45,22 @@ public final class AndroidCertificateChainCleaner extends CertificateChainCleane
         }
     }
 
-    public AndroidCertificateChainCleaner(X509TrustManager x509TrustManager, X509TrustManagerExtensions x509TrustManagerExtensions) {
-        bzo.q(x509TrustManager, "trustManager");
-        bzo.q(x509TrustManagerExtensions, "x509TrustManagerExtensions");
+    public AndroidCertificateChainCleaner(X509TrustManager x509TrustManager,
+            X509TrustManagerExtensions x509TrustManagerExtensions) {
+        throwIfVar1IsNull(x509TrustManager, "trustManager");
+        throwIfVar1IsNull(x509TrustManagerExtensions, "x509TrustManagerExtensions");
         this.trustManager = x509TrustManager;
         this.x509TrustManagerExtensions = x509TrustManagerExtensions;
     }
 
     @Override // okhttp3.internal.tls.CertificateChainCleaner
     public List<Certificate> clean(List<? extends Certificate> list, String str) throws SSLPeerUnverifiedException {
-        bzo.q(list, "chain");
-        bzo.q(str, "hostname");
+        throwIfVar1IsNull(list, "chain");
+        throwIfVar1IsNull(str, "hostname");
         try {
-            List<X509Certificate> listCheckServerTrusted = this.x509TrustManagerExtensions.checkServerTrusted((X509Certificate[]) list.toArray(new X509Certificate[0]), "RSA", str);
-            bzo.p(listCheckServerTrusted, "x509TrustManagerExtensio…ficates, \"RSA\", hostname)");
+            List<X509Certificate> listCheckServerTrusted = this.x509TrustManagerExtensions
+                    .checkServerTrusted((X509Certificate[]) list.toArray(new X509Certificate[0]), "RSA", str);
+            throwIfVar1IsNull(listCheckServerTrusted, "x509TrustManagerExtensio…ficates, \"RSA\", hostname)");
             return listCheckServerTrusted;
         } catch (CertificateException e) {
             SSLPeerUnverifiedException sSLPeerUnverifiedException = new SSLPeerUnverifiedException(e.getMessage());
@@ -65,7 +70,8 @@ public final class AndroidCertificateChainCleaner extends CertificateChainCleane
     }
 
     public boolean equals(Object obj) {
-        return (obj instanceof AndroidCertificateChainCleaner) && ((AndroidCertificateChainCleaner) obj).trustManager == this.trustManager;
+        return (obj instanceof AndroidCertificateChainCleaner)
+                && ((AndroidCertificateChainCleaner) obj).trustManager == this.trustManager;
     }
 
     public int hashCode() {

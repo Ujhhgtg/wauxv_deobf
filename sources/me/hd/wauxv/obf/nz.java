@@ -13,7 +13,7 @@ public final class nz extends oc {
         if (this == obj) {
             return true;
         }
-        return (obj instanceof nz) && bzo.f(this.a, ((nz) obj).a);
+        return (obj instanceof nz) && nullSafeIsEqual(this.a, ((nz) obj).a);
     }
 
     public final int hashCode() {
@@ -23,6 +23,6 @@ public final class nz extends oc {
     public final String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("Header(title=" /* cnb.z(-388986598062890L) */);
-        return bjs.q(sb, this.a, ')');
+        return concat(sb, this.a, ')');
     }
 }

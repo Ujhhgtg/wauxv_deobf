@@ -29,7 +29,7 @@ public final class bcx implements Runnable {
                 bcy bcyVar = this.b;
                 bcyVar.o();
                 View view = bcyVar.i;
-                if (view.isEnabled() && !view.isLongClickable() && bcyVar.d()) {
+                if (view.isEnabled() && !view.isLongClickable() && bcyVar.getArgs()) {
                     view.getParent().requestDisallowInterceptTouchEvent(true);
                     long jUptimeMillis = SystemClock.uptimeMillis();
                     MotionEvent motionEventObtain = MotionEvent.obtain(jUptimeMillis, jUptimeMillis, 3, 0.0f, 0.0f, 0);

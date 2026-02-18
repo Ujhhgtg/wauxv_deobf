@@ -16,7 +16,10 @@ public class t {
     private static final int d = 3;
     private final long e;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class a {
         public static final t a = new t();
 
@@ -25,7 +28,7 @@ public class t {
     }
 
     public static t a() {
-        return a.a;
+        return a.cachedConstructors;
     }
 
     private JSONArray c() {
@@ -125,7 +128,7 @@ public class t {
         int iA = a(context);
         if (iA == 1) {
             a(jSONObject, true);
-            k.a(context).b(false, true);
+            k.a(context).tryGetClassByName(false, true);
         } else {
             if (iA == 2) {
                 jSONObject.remove(f.n);
@@ -134,12 +137,12 @@ public class t {
                 } catch (Exception unused) {
                 }
                 a(jSONObject, true);
-                k.a(context).b(false, true);
+                k.a(context).tryGetClassByName(false, true);
                 return;
             }
             if (iA == 3) {
                 a(jSONObject, false);
-                k.a(context).b(false, true);
+                k.a(context).tryGetClassByName(false, true);
             }
         }
     }

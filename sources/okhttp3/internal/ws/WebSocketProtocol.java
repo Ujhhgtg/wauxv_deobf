@@ -1,7 +1,7 @@
 package okhttp3.internal.ws;
 
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.nu;
 import me.hd.wauxv.obf.rf;
 import me.hd.wauxv.obf.rh;
@@ -39,14 +39,14 @@ public final class WebSocketProtocol {
     }
 
     public final String acceptHeader(String str) {
-        bzo.q(str, "key");
+        throwIfVar1IsNull(str, "key");
         sj sjVar = sj.a;
         return nu.g(str.concat(ACCEPT_MAGIC)).f("SHA-1").e();
     }
 
     public final String closeCodeExceptionMessage(int i) {
         if (i < 1000 || i >= 5000) {
-            return bjs.i(i, "Code must be in range [1000,5000): ");
+            return concatVar2Var1(i, "Code must be in range [1000,5000): ");
         }
         if ((1004 > i || i >= 1007) && (1015 > i || i >= 3000)) {
             return null;
@@ -56,8 +56,8 @@ public final class WebSocketProtocol {
 
     public final void toggleMask(rf rfVar, byte[] bArr) {
         long j;
-        bzo.q(rfVar, "cursor");
-        bzo.q(bArr, "key");
+        throwIfVar1IsNull(rfVar, "cursor");
+        throwIfVar1IsNull(bArr, "key");
         int length = bArr.length;
         int i = 0;
         do {
@@ -74,7 +74,7 @@ public final class WebSocketProtocol {
             }
             long j2 = rfVar.d;
             rh rhVar = rfVar.a;
-            bzo.n(rhVar);
+            throwIfVar1IsNull(rhVar);
             if (j2 == rhVar.b) {
                 throw new IllegalStateException("no more bytes");
             }
@@ -87,7 +87,7 @@ public final class WebSocketProtocol {
         if (strCloseCodeExceptionMessage == null) {
             return;
         }
-        bzo.n(strCloseCodeExceptionMessage);
+        throwIfVar1IsNull(strCloseCodeExceptionMessage);
         throw new IllegalArgumentException(strCloseCodeExceptionMessage.toString());
     }
 }

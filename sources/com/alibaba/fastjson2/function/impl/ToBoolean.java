@@ -49,6 +49,6 @@ public class ToBoolean implements Function {
                     return this.defaultValue;
             }
         }
-        throw new JSONException(bjs.m(obj, new StringBuilder("can not cast to Byte ")));
+        throw new JSONException(concatVar1GetClass(obj, new StringBuilder("can not cast to Byte ")));
     }
 }

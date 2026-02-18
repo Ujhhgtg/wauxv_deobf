@@ -6,7 +6,7 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class ehv {
     public static final ehu Companion = new ehu();
-    public static final btt[] a = {ewz.am(btx.a, new efq(5))};
+    public static final btt[] a = { ewz.am(btx.a, new efq(5)) };
     public final List b;
 
     public /* synthetic */ ehv(int i, List list) {
@@ -22,7 +22,7 @@ public final class ehv {
         if (this == obj) {
             return true;
         }
-        return (obj instanceof ehv) && bzo.f(this.b, ((ehv) obj).b);
+        return (obj instanceof ehv) && nullSafeIsEqual(this.b, ((ehv) obj).b);
     }
 
     public final int hashCode() {

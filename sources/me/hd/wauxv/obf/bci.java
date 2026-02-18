@@ -48,7 +48,7 @@ public final class bci {
     }
 
     public bci(dlc dlcVar) throws IOException {
-        bzo.q(dlcVar, "rawSource");
+        throwIfVar1IsNull(dlcVar, "rawSource");
         try {
             cyl cylVarAh = emc.ah(dlcVar);
             this.c = cylVarAh.m(Long.MAX_VALUE);
@@ -82,7 +82,10 @@ public final class bci {
                 if (strM.length() > 0) {
                     throw new IOException("expected \"\" but was \"" + strM + '\"');
                 }
-                this.j = Handshake.Companion.get(!cylVarAh.i() ? TlsVersion.Companion.forJavaName(cylVarAh.m(Long.MAX_VALUE)) : TlsVersion.SSL_3_0, CipherSuite.Companion.forJavaName(cylVarAh.m(Long.MAX_VALUE)), m(cylVarAh), m(cylVarAh));
+                this.j = Handshake.Companion.get(
+                        !cylVarAh.i() ? TlsVersion.Companion.forJavaName(cylVarAh.m(Long.MAX_VALUE))
+                                : TlsVersion.SSL_3_0,
+                        CipherSuite.Companion.forJavaName(cylVarAh.m(Long.MAX_VALUE)), m(cylVarAh), m(cylVarAh));
             } else {
                 this.j = null;
             }
@@ -107,7 +110,7 @@ public final class bci {
                 rh rhVar = new rh();
                 sj sjVar = sj.a;
                 sj sjVarE = nu.e(strM);
-                bzo.n(sjVarE);
+                throwIfVar1IsNull(sjVarE);
                 rhVar.al(sjVarE);
                 arrayList.add(certificateFactory.generateCertificate(new rg(rhVar, i)));
             }
@@ -125,7 +128,7 @@ public final class bci {
             while (it.hasNext()) {
                 byte[] encoded = ((Certificate) it.next()).getEncoded();
                 sj sjVar = sj.a;
-                bzo.p(encoded, "bytes");
+                throwIfVar1IsNull(encoded, "bytes");
                 cykVar.q(nu.i(encoded).e());
                 cykVar.writeByte(10);
             }
@@ -177,7 +180,7 @@ public final class bci {
             cykVarAg.writeByte(10);
             if (dnr.bp(str, "https://", false)) {
                 cykVarAg.writeByte(10);
-                bzo.n(handshake);
+                throwIfVar1IsNull(handshake);
                 cykVarAg.q(handshake.cipherSuite().javaName());
                 cykVarAg.writeByte(10);
                 n(cykVarAg, handshake.peerCertificates());
@@ -202,15 +205,15 @@ public final class bci {
         if (th != null) {
             throw th;
         }
-        bzo.n(ensVar);
+        throwIfVar1IsNull(ensVar);
     }
 
     public bci(Response response) {
         Headers headersBuild;
-        bzo.q(response, "response");
+        throwIfVar1IsNull(response, "response");
         this.c = response.request().url().toString();
         Response responseNetworkResponse = response.networkResponse();
-        bzo.n(responseNetworkResponse);
+        throwIfVar1IsNull(responseNetworkResponse);
         Headers headers = responseNetworkResponse.request().headers();
         Headers headers2 = response.headers();
         int size = headers2.size();
@@ -222,7 +225,7 @@ public final class bci {
                     dnr.bk();
                     treeSet = new TreeSet(String.CASE_INSENSITIVE_ORDER);
                 }
-                Iterator it = dnj.ar(strValue, new char[]{','}).iterator();
+                Iterator it = dnj.ar(strValue, new char[] { ',' }).iterator();
                 while (it.hasNext()) {
                     treeSet.add(dnj.ba((String) it.next()).toString());
                 }

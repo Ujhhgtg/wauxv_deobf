@@ -56,7 +56,8 @@ public class bvl {
             if (i5 == 1) {
                 return i4 - i2;
             }
-            throw new IllegalArgumentException("snap preference should be one of the constants defined in SmoothScroller, starting with SNAP_");
+            throw new IllegalArgumentException(
+                    "snap preference should be one of the constants defined in SmoothScroller, starting with SNAP_");
         }
         int i6 = i3 - i;
         if (i6 > 0) {
@@ -75,7 +76,9 @@ public class bvl {
             return 0;
         }
         czh czhVar = (czh) view.getLayoutParams();
-        return v(czg.eg(view) - ((ViewGroup.MarginLayoutParams) czhVar).leftMargin, czg.ej(view) + ((ViewGroup.MarginLayoutParams) czhVar).rightMargin, czgVar.ev(), czgVar.eb - czgVar.ew(), i);
+        return v(czg.eg(view) - ((ViewGroup.MarginLayoutParams) czhVar).leftMargin,
+                czg.ej(view) + ((ViewGroup.MarginLayoutParams) czhVar).rightMargin, czgVar.ev(),
+                czgVar.eb - czgVar.ew(), i);
     }
 
     public int c(View view, int i) {
@@ -84,7 +87,9 @@ public class bvl {
             return 0;
         }
         czh czhVar = (czh) view.getLayoutParams();
-        return v(czg.ek(view) - ((ViewGroup.MarginLayoutParams) czhVar).topMargin, czg.ef(view) + ((ViewGroup.MarginLayoutParams) czhVar).bottomMargin, czgVar.ex(), czgVar.ec - czgVar.eu(), i);
+        return v(czg.ek(view) - ((ViewGroup.MarginLayoutParams) czhVar).topMargin,
+                czg.ef(view) + ((ViewGroup.MarginLayoutParams) czhVar).bottomMargin, czgVar.ex(),
+                czgVar.ec - czgVar.eu(), i);
     }
 
     public float d(DisplayMetrics displayMetrics) {
@@ -96,7 +101,9 @@ public class bvl {
         if (obj instanceof czs) {
             return ((czs) obj).bs(i);
         }
-        Log.w("RecyclerView", "You should override computeScrollVectorForPosition when the LayoutManager does not implement " + czs.class.getCanonicalName());
+        Log.w("RecyclerView",
+                "You should override computeScrollVectorForPosition when the LayoutManager does not implement "
+                        + czs.class.getCanonicalName());
         return null;
     }
 
@@ -109,7 +116,7 @@ public class bvl {
         return (int) Math.ceil(fAbs * this.s);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:50:0x00f8  */
+    /* JADX WARN: Found duplicated region for block: B:50:0x00f8 */
     public final void x(int i, int i2) {
         PointF pointFE;
         RecyclerView recyclerView = this.g;
@@ -194,7 +201,7 @@ public class bvl {
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:10:0x0015  */
+    /* JADX WARN: Found duplicated region for block: B:10:0x0015 */
     public void y(View view, czr czrVar) {
         int i;
         PointF pointF = this.p;
@@ -203,7 +210,7 @@ public class bvl {
             float f = pointF.x;
             i = f == 0.0f ? 0 : f > 0.0f ? 1 : -1;
         }
-        int iB = b(view, i);
+        int iB = tryGetClassByName(view, i);
         PointF pointF2 = this.p;
         if (pointF2 != null) {
             float f2 = pointF2.y;
@@ -211,7 +218,7 @@ public class bvl {
                 i2 = f2 > 0.0f ? 1 : -1;
             }
         }
-        int iC = c(view, i2);
+        int iC = createInstanceWithArgs(view, i2);
         int iCeil = (int) Math.ceil(((double) w((int) Math.sqrt((iC * iC) + (iB * iB)))) / 0.3356d);
         if (iCeil > 0) {
             czrVar.a = -iB;

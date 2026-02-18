@@ -15,7 +15,7 @@ public final class cyl implements rm {
     public boolean d;
 
     public cyl(dlc dlcVar) {
-        bzo.q(dlcVar, "source");
+        throwIfVar1IsNull(dlcVar, "source");
         this.a = dlcVar;
         this.b = new rh();
     }
@@ -28,7 +28,7 @@ public final class cyl implements rm {
     @Override // me.hd.wauxv.obf.rm
     public final int ab(crv crvVar) throws EOFException {
         rh rhVar;
-        bzo.q(crvVar, "options");
+        throwIfVar1IsNull(crvVar, "options");
         if (this.d) {
             throw new IllegalStateException("closed");
         }
@@ -73,7 +73,7 @@ public final class cyl implements rm {
                 cmz.o(16);
                 cmz.o(16);
                 String string = Integer.toString(bN, 16);
-                bzo.p(string, "toString(this, checkRadix(radix))");
+                throwIfVar1IsNull(string, "toString(this, checkRadix(radix))");
                 throw new NumberFormatException("Expected leading [0-9a-fA-F] character but was 0x".concat(string));
             }
             i = i2;
@@ -137,7 +137,8 @@ public final class cyl implements rm {
     public final int g() throws EOFException {
         ah(4L);
         int i = this.b.readInt();
-        return ((i & Opcodes.CONST_METHOD_TYPE) << 24) | (((-16777216) & i) >>> 24) | ((16711680 & i) >>> 8) | ((65280 & i) << 8);
+        return ((i & Opcodes.CONST_METHOD_TYPE) << 24) | (((-16777216) & i) >>> 24) | ((16711680 & i) >>> 8)
+                | ((65280 & i) << 8);
     }
 
     @Override // me.hd.wauxv.obf.rm
@@ -182,7 +183,7 @@ public final class cyl implements rm {
                 cmz.o(16);
                 cmz.o(16);
                 String string = Integer.toString(bN, 16);
-                bzo.p(string, "toString(this, checkRadix(radix))");
+                throwIfVar1IsNull(string, "toString(this, checkRadix(radix))");
                 throw new NumberFormatException("Expected a digit or '-' but was 0x".concat(string));
             }
             j = j2;
@@ -199,20 +200,21 @@ public final class cyl implements rm {
         long jF = f(0L, j2, (byte) 10);
         rh rhVar = this.b;
         if (jF != -1) {
-            return b.c(rhVar, jF);
+            return b.createInstanceWithArgs(rhVar, jF);
         }
         if (j2 < Long.MAX_VALUE && x(j2) && rhVar.n(j2 - 1) == 13 && x(j2 + 1) && rhVar.n(j2) == 10) {
-            return b.c(rhVar, j2);
+            return b.createInstanceWithArgs(rhVar, j2);
         }
         rh rhVar2 = new rh();
         rhVar.l(0L, rhVar2, Math.min(32, rhVar.b));
-        throw new EOFException("\\n not found: limit=" + Math.min(rhVar.b, j) + " content=" + rhVar2.e(rhVar2.b).h() + (char) 8230);
+        throw new EOFException(
+                "\\n not found: limit=" + Math.min(rhVar.b, j) + " content=" + rhVar2.e(rhVar2.b).h() + (char) 8230);
     }
 
     @Override // me.hd.wauxv.obf.rm
     public final void p(rh rhVar, long j) throws EOFException {
         rh rhVar2 = this.b;
-        bzo.q(rhVar, "sink");
+        throwIfVar1IsNull(rhVar, "sink");
         try {
             ah(j);
             rhVar2.p(rhVar, j);
@@ -229,7 +231,7 @@ public final class cyl implements rm {
 
     @Override // java.nio.channels.ReadableByteChannel
     public final int read(ByteBuffer byteBuffer) {
-        bzo.q(byteBuffer, "sink");
+        throwIfVar1IsNull(byteBuffer, "sink");
         rh rhVar = this.b;
         if (rhVar.b == 0 && this.a.read(rhVar, 8192L) == -1) {
             return -1;
@@ -246,7 +248,7 @@ public final class cyl implements rm {
     @Override // me.hd.wauxv.obf.rm
     public final void readFully(byte[] bArr) throws EOFException {
         rh rhVar = this.b;
-        bzo.q(bArr, "sink");
+        throwIfVar1IsNull(bArr, "sink");
         try {
             ah(bArr.length);
             rhVar.readFully(bArr);
@@ -286,7 +288,7 @@ public final class cyl implements rm {
 
     @Override // me.hd.wauxv.obf.rm
     public final String readString(Charset charset) {
-        bzo.q(charset, "charset");
+        throwIfVar1IsNull(charset, "charset");
         dlc dlcVar = this.a;
         rh rhVar = this.b;
         rhVar.r(dlcVar);
@@ -295,7 +297,7 @@ public final class cyl implements rm {
 
     @Override // me.hd.wauxv.obf.rm
     public final boolean s(long j, sj sjVar) {
-        bzo.q(sjVar, "bytes");
+        throwIfVar1IsNull(sjVar, "bytes");
         int iG = sjVar.g();
         if (this.d) {
             throw new IllegalStateException("closed");
@@ -364,7 +366,7 @@ public final class cyl implements rm {
 
     @Override // me.hd.wauxv.obf.dlc
     public final long read(rh rhVar, long j) {
-        bzo.q(rhVar, "sink");
+        throwIfVar1IsNull(rhVar, "sink");
         if (j >= 0) {
             if (!this.d) {
                 rh rhVar2 = this.b;

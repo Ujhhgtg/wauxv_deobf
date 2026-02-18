@@ -32,7 +32,9 @@ public final class ebu {
             return false;
         }
         ebu ebuVar = (ebu) obj;
-        return bzo.f(this.a, ebuVar.a) && bzo.f(this.b, ebuVar.b) && bzo.f(this.c, ebuVar.c) && bzo.f(this.d, ebuVar.d) && bzo.f(this.e, ebuVar.e) && bzo.f(this.f, ebuVar.f);
+        return nullSafeIsEqual(this.a, ebuVar.a) && nullSafeIsEqual(this.b, ebuVar.b)
+                && nullSafeIsEqual(this.c, ebuVar.c) && nullSafeIsEqual(this.d, ebuVar.d)
+                && nullSafeIsEqual(this.e, ebuVar.e) && nullSafeIsEqual(this.f, ebuVar.f);
     }
 
     public final int hashCode() {
@@ -59,6 +61,6 @@ public final class ebu {
         bjs.w(sb, this.c, -255610683652906L);
         dkz.ad(sb, this.d, -255533374241578L);
         yg.u(sb, this.e, -255426000059178L);
-        return bjs.p(sb, this.f, ')');
+        return concat(sb, this.f, ')');
     }
 }

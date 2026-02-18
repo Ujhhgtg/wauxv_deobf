@@ -57,7 +57,10 @@ public interface ClassFileLocator extends Closeable {
     public static final String CLASS_FILE_EXTENSION = ".class";
     public static final String META_INF_VERSIONS = "META-INF/versions/";
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @HashCodeAndEqualsPlugin.Enhance
     public static class Compound implements ClassFileLocator, Closeable {
         private final List<ClassFileLocator> classFileLocators;
@@ -78,7 +81,8 @@ public interface ClassFileLocator extends Closeable {
             if (this == obj) {
                 return true;
             }
-            return obj != null && getClass() == obj.getClass() && this.classFileLocators.equals(((Compound) obj).classFileLocators);
+            return obj != null && getClass() == obj.getClass()
+                    && this.classFileLocators.equals(((Compound) obj).classFileLocators);
         }
 
         public int hashCode() {
@@ -109,7 +113,10 @@ public interface ClassFileLocator extends Closeable {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @HashCodeAndEqualsPlugin.Enhance
     public static class Filtering implements ClassFileLocator {
         private final ClassFileLocator delegate;
@@ -146,14 +153,20 @@ public interface ClassFileLocator extends Closeable {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @HashCodeAndEqualsPlugin.Enhance
     public static class ForClassLoader implements ClassFileLocator {
         private static final boolean ACCESS_CONTROLLER;
         private static final ClassLoader BOOT_LOADER_PROXY;
         private final ClassLoader classLoader;
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public enum BootLoaderProxyCreationAction implements PrivilegedAction<ClassLoader> {
             INSTANCE;
 
@@ -164,7 +177,10 @@ public interface ClassFileLocator extends Closeable {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static class WeaklyReferenced extends WeakReference<ClassLoader> implements ClassFileLocator {
             private final int hashCode;
 
@@ -174,7 +190,10 @@ public interface ClassFileLocator extends Closeable {
             }
 
             public static ClassFileLocator of(@MaybeNull ClassLoader classLoader) {
-                return (classLoader == null || classLoader == ClassLoader.getSystemClassLoader() || classLoader == ClassLoader.getSystemClassLoader().getParent()) ? ForClassLoader.of(classLoader) : new WeaklyReferenced(classLoader);
+                return (classLoader == null || classLoader == ClassLoader.getSystemClassLoader()
+                        || classLoader == ClassLoader.getSystemClassLoader().getParent())
+                                ? ForClassLoader.of(classLoader)
+                                : new WeaklyReferenced(classLoader);
             }
 
             @Override // java.io.Closeable, java.lang.AutoCloseable
@@ -186,7 +205,8 @@ public interface ClassFileLocator extends Closeable {
                 if (this == obj) {
                     return true;
                 }
-                return obj != null && getClass() == obj.getClass() && (classLoader = ((WeaklyReferenced) obj).get()) != null && get() == classLoader;
+                return obj != null && getClass() == obj.getClass()
+                        && (classLoader = ((WeaklyReferenced) obj).get()) != null && get() == classLoader;
             }
 
             public int hashCode() {
@@ -250,7 +270,7 @@ public interface ClassFileLocator extends Closeable {
                 }
                 return locate(classLoader, TypeDescription.ForLoadedType.getName(cls)).resolve();
             } catch (IOException e) {
-                throw new IllegalStateException(bjs.l(cls, "Cannot read class file for "), e);
+                throw new IllegalStateException(concatVar2Var1(cls, "Cannot read class file for "), e);
             }
         }
 
@@ -266,7 +286,8 @@ public interface ClassFileLocator extends Closeable {
             if (this == obj) {
                 return true;
             }
-            return obj != null && getClass() == obj.getClass() && this.classLoader.equals(((ForClassLoader) obj).classLoader);
+            return obj != null && getClass() == obj.getClass()
+                    && this.classLoader.equals(((ForClassLoader) obj).classLoader);
         }
 
         public int hashCode() {
@@ -279,7 +300,9 @@ public interface ClassFileLocator extends Closeable {
         }
 
         public static Resolution locate(ClassLoader classLoader, String str) throws IOException {
-            InputStream resourceAsStream = classLoader.getResourceAsStream(str.replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/') + ClassFileLocator.CLASS_FILE_EXTENSION);
+            InputStream resourceAsStream = classLoader.getResourceAsStream(
+                    str.replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/')
+                            + ClassFileLocator.CLASS_FILE_EXTENSION);
             if (resourceAsStream == null) {
                 return new Resolution.Illegal(str);
             }
@@ -311,7 +334,10 @@ public interface ClassFileLocator extends Closeable {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @HashCodeAndEqualsPlugin.Enhance
     public static class ForFolder extends MultiReleaseAware {
         private final File folder;
@@ -331,7 +357,8 @@ public interface ClassFileLocator extends Closeable {
             if (file2.exists()) {
                 FileInputStream fileInputStream = new FileInputStream(file2);
                 try {
-                    z = Boolean.parseBoolean(new Manifest(fileInputStream).getMainAttributes().getValue("Multi-Release"));
+                    z = Boolean
+                            .parseBoolean(new Manifest(fileInputStream).getMainAttributes().getValue("Multi-Release"));
                     fileInputStream.close();
                 } catch (Throwable th) {
                     fileInputStream.close();
@@ -403,7 +430,10 @@ public interface ClassFileLocator extends Closeable {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @HashCodeAndEqualsPlugin.Enhance
     public static class ForInstrumentation implements ClassFileLocator {
         private static final boolean ACCESS_CONTROLLER;
@@ -411,16 +441,26 @@ public interface ClassFileLocator extends Closeable {
         private final ClassLoadingDelegate classLoadingDelegate;
         private final Instrumentation instrumentation;
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public interface ClassLoadingDelegate {
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class Default implements ClassLoadingDelegate {
-                private static final ClassLoader BOOT_LOADER_PROXY = (ClassLoader) ForInstrumentation.doPrivileged(BootLoaderProxyCreationAction.INSTANCE);
+                private static final ClassLoader BOOT_LOADER_PROXY = (ClassLoader) ForInstrumentation
+                        .doPrivileged(BootLoaderProxyCreationAction.INSTANCE);
                 protected final ClassLoader classLoader;
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public enum BootLoaderProxyCreationAction implements PrivilegedAction<ClassLoader> {
                     INSTANCE;
 
@@ -449,7 +489,8 @@ public interface ClassFileLocator extends Closeable {
                     if (this == obj) {
                         return true;
                     }
-                    return obj != null && getClass() == obj.getClass() && this.classLoader.equals(((Default) obj).classLoader);
+                    return obj != null && getClass() == obj.getClass()
+                            && this.classLoader.equals(((Default) obj).classLoader);
                 }
 
                 @Override // net.bytebuddy.dynamic.ClassFileLocator.ForInstrumentation.ClassLoadingDelegate
@@ -469,7 +510,10 @@ public interface ClassFileLocator extends Closeable {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             @HashCodeAndEqualsPlugin.Enhance
             public static class Explicit implements ClassLoadingDelegate {
                 private final ClassLoadingDelegate fallbackDelegate;
@@ -501,7 +545,8 @@ public interface ClassFileLocator extends Closeable {
                 }
 
                 public int hashCode() {
-                    return this.types.hashCode() + ((this.fallbackDelegate.hashCode() + (getClass().hashCode() * 31)) * 31);
+                    return this.types.hashCode()
+                            + ((this.fallbackDelegate.hashCode() + (getClass().hashCode() * 31)) * 31);
                 }
 
                 @Override // net.bytebuddy.dynamic.ClassFileLocator.ForInstrumentation.ClassLoadingDelegate
@@ -519,17 +564,26 @@ public interface ClassFileLocator extends Closeable {
                 }
             }
 
-            /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+            /*
+             * JADX INFO: compiled from:
+             * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+             */
             public static class ForDelegatingClassLoader extends Default {
                 private static final boolean ACCESS_CONTROLLER;
                 private static final String DELEGATING_CLASS_LOADER_NAME = "sun.reflect.DelegatingClassLoader";
                 private static final Dispatcher.Initializable DISPATCHER;
                 private static final int ONLY = 0;
 
-                /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                /*
+                 * JADX INFO: compiled from:
+                 * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                 */
                 public interface Dispatcher {
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     public enum CreationAction implements PrivilegedAction<Initializable> {
                         INSTANCE;
 
@@ -543,12 +597,18 @@ public interface ClassFileLocator extends Closeable {
                         }
                     }
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     public interface Initializable {
                         Dispatcher initialize();
                     }
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     @HashCodeAndEqualsPlugin.Enhance
                     public static class Resolved implements Dispatcher, Initializable, PrivilegedAction<Dispatcher> {
                         private static final boolean ACCESS_CONTROLLER;
@@ -558,7 +618,8 @@ public interface ClassFileLocator extends Closeable {
                             boolean z = false;
                             try {
                                 Class.forName("java.security.AccessController", false, null);
-                                ACCESS_CONTROLLER = Boolean.parseBoolean(System.getProperty("net.bytebuddy.securitymanager", "true"));
+                                ACCESS_CONTROLLER = Boolean
+                                        .parseBoolean(System.getProperty("net.bytebuddy.securitymanager", "true"));
                             } catch (ClassNotFoundException unused) {
                                 ACCESS_CONTROLLER = z;
                             } catch (SecurityException unused2) {
@@ -573,14 +634,16 @@ public interface ClassFileLocator extends Closeable {
 
                         @AccessControllerPlugin.Enhance
                         private static <T> T doPrivileged(PrivilegedAction<T> privilegedAction) {
-                            return ACCESS_CONTROLLER ? (T) AccessController.doPrivileged(privilegedAction) : privilegedAction.run();
+                            return ACCESS_CONTROLLER ? (T) AccessController.doPrivileged(privilegedAction)
+                                    : privilegedAction.run();
                         }
 
                         public boolean equals(@MaybeNull Object obj) {
                             if (this == obj) {
                                 return true;
                             }
-                            return obj != null && getClass() == obj.getClass() && this.field.equals(((Resolved) obj).field);
+                            return obj != null && getClass() == obj.getClass()
+                                    && this.field.equals(((Resolved) obj).field);
                         }
 
                         @Override // net.bytebuddy.dynamic.ClassFileLocator.ForInstrumentation.ClassLoadingDelegate.ForDelegatingClassLoader.Dispatcher
@@ -608,7 +671,10 @@ public interface ClassFileLocator extends Closeable {
                         }
                     }
 
-                    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+                    /*
+                     * JADX INFO: compiled from:
+                     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+                     */
                     @HashCodeAndEqualsPlugin.Enhance
                     public static class Unresolved implements Initializable {
                         private final String message;
@@ -621,7 +687,8 @@ public interface ClassFileLocator extends Closeable {
                             if (this == obj) {
                                 return true;
                             }
-                            return obj != null && getClass() == obj.getClass() && this.message.equals(((Unresolved) obj).message);
+                            return obj != null && getClass() == obj.getClass()
+                                    && this.message.equals(((Unresolved) obj).message);
                         }
 
                         public int hashCode() {
@@ -641,7 +708,8 @@ public interface ClassFileLocator extends Closeable {
                     boolean z = false;
                     try {
                         Class.forName("java.security.AccessController", false, null);
-                        ACCESS_CONTROLLER = Boolean.parseBoolean(System.getProperty("net.bytebuddy.securitymanager", "true"));
+                        ACCESS_CONTROLLER = Boolean
+                                .parseBoolean(System.getProperty("net.bytebuddy.securitymanager", "true"));
                     } catch (ClassNotFoundException unused) {
                         ACCESS_CONTROLLER = z;
                     } catch (SecurityException unused2) {
@@ -657,14 +725,16 @@ public interface ClassFileLocator extends Closeable {
 
                 @AccessControllerPlugin.Enhance
                 private static <T> T doPrivileged(PrivilegedAction<T> privilegedAction) {
-                    return ACCESS_CONTROLLER ? (T) AccessController.doPrivileged(privilegedAction) : privilegedAction.run();
+                    return ACCESS_CONTROLLER ? (T) AccessController.doPrivileged(privilegedAction)
+                            : privilegedAction.run();
                 }
 
                 public static boolean isDelegating(@MaybeNull ClassLoader classLoader) {
                     return classLoader != null && classLoader.getClass().getName().equals(DELEGATING_CLASS_LOADER_NAME);
                 }
 
-                @Override // net.bytebuddy.dynamic.ClassFileLocator.ForInstrumentation.ClassLoadingDelegate.Default, net.bytebuddy.dynamic.ClassFileLocator.ForInstrumentation.ClassLoadingDelegate
+                @Override // net.bytebuddy.dynamic.ClassFileLocator.ForInstrumentation.ClassLoadingDelegate.Default,
+                          // net.bytebuddy.dynamic.ClassFileLocator.ForInstrumentation.ClassLoadingDelegate
                 public Class<?> locate(String str) {
                     try {
                         Vector<Class<?>> vectorExtract = DISPATCHER.initialize().extract(this.classLoader);
@@ -685,7 +755,10 @@ public interface ClassFileLocator extends Closeable {
             Class<?> locate(String str);
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @JavaDispatcher.Proxied("java.lang.instrument.Instrumentation")
         public interface Dispatcher {
             @JavaDispatcher.Proxied("addTransformer")
@@ -698,7 +771,10 @@ public interface ClassFileLocator extends Closeable {
             void retransformClasses(Instrumentation instrumentation, Class<?>[] clsArr);
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static class ExtractionClassFileTransformer implements ClassFileTransformer {
 
             @AlwaysNull
@@ -722,8 +798,11 @@ public interface ClassFileLocator extends Closeable {
             }
 
             @MaybeNull
-            public byte[] transform(@MaybeNull ClassLoader classLoader, @MaybeNull String str, @MaybeNull Class<?> cls, @MaybeNull ProtectionDomain protectionDomain, byte[] bArr) {
-                if (str != null && ElementMatchers.isChildOf(this.classLoader).matches(classLoader) && this.typeName.equals(str.replace('/', TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH))) {
+            public byte[] transform(@MaybeNull ClassLoader classLoader, @MaybeNull String str, @MaybeNull Class<?> cls,
+                    @MaybeNull ProtectionDomain protectionDomain, byte[] bArr) {
+                if (str != null && ElementMatchers.isChildOf(this.classLoader).matches(classLoader)
+                        && this.typeName.equals(str.replace('/',
+                                TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH))) {
                     this.binaryRepresentation = (byte[]) bArr.clone();
                 }
                 return DO_NOT_TRANSFORM;
@@ -791,23 +870,28 @@ public interface ClassFileLocator extends Closeable {
                 return false;
             }
             ForInstrumentation forInstrumentation = (ForInstrumentation) obj;
-            return this.instrumentation.equals(forInstrumentation.instrumentation) && this.classLoadingDelegate.equals(forInstrumentation.classLoadingDelegate);
+            return this.instrumentation.equals(forInstrumentation.instrumentation)
+                    && this.classLoadingDelegate.equals(forInstrumentation.classLoadingDelegate);
         }
 
         public int hashCode() {
-            return this.classLoadingDelegate.hashCode() + ((this.instrumentation.hashCode() + (getClass().hashCode() * 31)) * 31);
+            return this.classLoadingDelegate.hashCode()
+                    + ((this.instrumentation.hashCode() + (getClass().hashCode() * 31)) * 31);
         }
 
         @Override // net.bytebuddy.dynamic.ClassFileLocator
         public Resolution locate(String str) {
             try {
-                ExtractionClassFileTransformer extractionClassFileTransformer = new ExtractionClassFileTransformer(this.classLoadingDelegate.getClassLoader(), str);
+                ExtractionClassFileTransformer extractionClassFileTransformer = new ExtractionClassFileTransformer(
+                        this.classLoadingDelegate.getClassLoader(), str);
                 Dispatcher dispatcher = DISPATCHER;
                 dispatcher.addTransformer(this.instrumentation, extractionClassFileTransformer, true);
                 try {
-                    dispatcher.retransformClasses(this.instrumentation, new Class[]{this.classLoadingDelegate.locate(str)});
+                    dispatcher.retransformClasses(this.instrumentation,
+                            new Class[] { this.classLoadingDelegate.locate(str) });
                     byte[] binaryRepresentation = extractionClassFileTransformer.getBinaryRepresentation();
-                    return binaryRepresentation == null ? new Resolution.Illegal(str) : new Resolution.Explicit(binaryRepresentation);
+                    return binaryRepresentation == null ? new Resolution.Illegal(str)
+                            : new Resolution.Explicit(binaryRepresentation);
                 } finally {
                     this.instrumentation.removeTransformer(extractionClassFileTransformer);
                 }
@@ -828,10 +912,14 @@ public interface ClassFileLocator extends Closeable {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @HashCodeAndEqualsPlugin.Enhance
     public static class ForJarFile extends MultiReleaseAware {
-        private static final List<String> RUNTIME_LOCATIONS = Arrays.asList("lib/rt.jar", "../lib/rt.jar", "../Classes/classes.jar");
+        private static final List<String> RUNTIME_LOCATIONS = Arrays.asList("lib/rt.jar", "../lib/rt.jar",
+                "../Classes/classes.jar");
 
         @HashCodeAndEqualsPlugin.ValueHandling(HashCodeAndEqualsPlugin.ValueHandling.Sort.IGNORE)
         private final boolean close;
@@ -934,7 +1022,8 @@ public interface ClassFileLocator extends Closeable {
             return of(jarFile, classFileVersion, false);
         }
 
-        private static ClassFileLocator of(JarFile jarFile, ClassFileVersion classFileVersion, boolean z) throws IOException {
+        private static ClassFileLocator of(JarFile jarFile, ClassFileVersion classFileVersion, boolean z)
+                throws IOException {
             int[] iArr;
             if (classFileVersion.getJavaVersion() < 9) {
                 return new ForJarFile(jarFile);
@@ -945,7 +1034,8 @@ public interface ClassFileLocator extends Closeable {
                 Enumeration<JarEntry> enumerationEntries = jarFile.entries();
                 while (enumerationEntries.hasMoreElements()) {
                     String name = enumerationEntries.nextElement().getName();
-                    if (name.endsWith(ClassFileLocator.CLASS_FILE_EXTENSION) && name.startsWith(ClassFileLocator.META_INF_VERSIONS)) {
+                    if (name.endsWith(ClassFileLocator.CLASS_FILE_EXTENSION)
+                            && name.startsWith(ClassFileLocator.META_INF_VERSIONS)) {
                         try {
                             int i = Integer.parseInt(name.substring(18, name.indexOf(47, 18)));
                             if (i > 7 && i <= classFileVersion.getJavaVersion()) {
@@ -967,13 +1057,19 @@ public interface ClassFileLocator extends Closeable {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @HashCodeAndEqualsPlugin.Enhance
     public static class ForModule implements ClassFileLocator {
         private static final Object[] NO_ARGUMENT = new Object[0];
         private final JavaModule module;
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static class WeaklyReferenced extends WeakReference<Object> implements ClassFileLocator {
             private final int hashCode;
 
@@ -983,7 +1079,13 @@ public interface ClassFileLocator extends Closeable {
             }
 
             public static ClassFileLocator of(JavaModule javaModule) {
-                return javaModule.isNamed() ? (javaModule.getClassLoader() == null || javaModule.getClassLoader() == ClassLoader.getSystemClassLoader() || javaModule.getClassLoader() == ClassLoader.getSystemClassLoader().getParent()) ? new ForModule(javaModule) : new WeaklyReferenced(javaModule.unwrap()) : ForClassLoader.WeaklyReferenced.of(javaModule.getClassLoader());
+                return javaModule.isNamed()
+                        ? (javaModule.getClassLoader() == null
+                                || javaModule.getClassLoader() == ClassLoader.getSystemClassLoader()
+                                || javaModule.getClassLoader() == ClassLoader.getSystemClassLoader().getParent())
+                                        ? new ForModule(javaModule)
+                                        : new WeaklyReferenced(javaModule.unwrap())
+                        : ForClassLoader.WeaklyReferenced.of(javaModule.getClassLoader());
             }
 
             @Override // java.io.Closeable, java.lang.AutoCloseable
@@ -995,7 +1097,8 @@ public interface ClassFileLocator extends Closeable {
                 if (this == obj) {
                     return true;
                 }
-                return obj != null && getClass() == obj.getClass() && (obj2 = ((WeaklyReferenced) obj).get()) != null && get() == obj2;
+                return obj != null && getClass() == obj.getClass() && (obj2 = ((WeaklyReferenced) obj).get()) != null
+                        && get() == obj2;
             }
 
             public int hashCode() {
@@ -1022,7 +1125,8 @@ public interface ClassFileLocator extends Closeable {
                 HashMap map = new HashMap();
                 Class<?> cls = Class.forName("java.lang.ModuleLayer");
                 Method method = JavaType.MODULE.load().getMethod("getPackages", null);
-                for (Object obj : (Set) cls.getMethod("modules", null).invoke(cls.getMethod("boot", null).invoke(null, null), null)) {
+                for (Object obj : (Set) cls.getMethod("modules", null)
+                        .invoke(cls.getMethod("boot", null).invoke(null, null), null)) {
                     ClassFileLocator classFileLocatorOf = of(JavaModule.of(obj));
                     Iterator it = ((Set) method.invoke(obj, NO_ARGUMENT)).iterator();
                     while (it.hasNext()) {
@@ -1056,7 +1160,9 @@ public interface ClassFileLocator extends Closeable {
         }
 
         public static Resolution locate(JavaModule javaModule, String str) throws IOException {
-            InputStream resourceAsStream = javaModule.getResourceAsStream(str.replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/') + ClassFileLocator.CLASS_FILE_EXTENSION);
+            InputStream resourceAsStream = javaModule.getResourceAsStream(
+                    str.replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/')
+                            + ClassFileLocator.CLASS_FILE_EXTENSION);
             if (resourceAsStream == null) {
                 return new Resolution.Illegal(str);
             }
@@ -1068,7 +1174,10 @@ public interface ClassFileLocator extends Closeable {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @HashCodeAndEqualsPlugin.Enhance
     public static abstract class MultiReleaseAware implements ClassFileLocator {
         private static final String MULTI_RELEASE_ATTRIBUTE = "Multi-Release";
@@ -1086,7 +1195,8 @@ public interface ClassFileLocator extends Closeable {
             if (this == obj) {
                 return true;
             }
-            return obj != null && getClass() == obj.getClass() && Arrays.equals(this.version, ((MultiReleaseAware) obj).version);
+            return obj != null && getClass() == obj.getClass()
+                    && Arrays.equals(this.version, ((MultiReleaseAware) obj).version);
         }
 
         public int hashCode() {
@@ -1096,7 +1206,8 @@ public interface ClassFileLocator extends Closeable {
         @Override // net.bytebuddy.dynamic.ClassFileLocator
         public Resolution locate(String str) {
             String str2;
-            String str3 = str.replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/') + ClassFileLocator.CLASS_FILE_EXTENSION;
+            String str3 = str.replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/')
+                    + ClassFileLocator.CLASS_FILE_EXTENSION;
             int i = 0;
             while (true) {
                 int[] iArr = this.version;
@@ -1117,7 +1228,10 @@ public interface ClassFileLocator extends Closeable {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public enum NoOp implements ClassFileLocator {
         INSTANCE;
 
@@ -1131,7 +1245,10 @@ public interface ClassFileLocator extends Closeable {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @HashCodeAndEqualsPlugin.Enhance
     public static class PackageDiscriminating implements ClassFileLocator {
         private final Map<String, ClassFileLocator> classFileLocators;
@@ -1152,7 +1269,8 @@ public interface ClassFileLocator extends Closeable {
             if (this == obj) {
                 return true;
             }
-            return obj != null && getClass() == obj.getClass() && this.classFileLocators.equals(((PackageDiscriminating) obj).classFileLocators);
+            return obj != null && getClass() == obj.getClass()
+                    && this.classFileLocators.equals(((PackageDiscriminating) obj).classFileLocators);
         }
 
         public int hashCode() {
@@ -1162,15 +1280,22 @@ public interface ClassFileLocator extends Closeable {
         @Override // net.bytebuddy.dynamic.ClassFileLocator
         public Resolution locate(String str) {
             int iLastIndexOf = str.lastIndexOf(46);
-            ClassFileLocator classFileLocator = this.classFileLocators.get(iLastIndexOf == -1 ? "" : str.substring(0, iLastIndexOf));
+            ClassFileLocator classFileLocator = this.classFileLocators
+                    .get(iLastIndexOf == -1 ? "" : str.substring(0, iLastIndexOf));
             return classFileLocator == null ? new Resolution.Illegal(str) : classFileLocator.locate(str);
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface Resolution {
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class Explicit implements Resolution {
             private final byte[] binaryRepresentation;
@@ -1183,7 +1308,8 @@ public interface ClassFileLocator extends Closeable {
                 if (this == obj) {
                     return true;
                 }
-                return obj != null && getClass() == obj.getClass() && Arrays.equals(this.binaryRepresentation, ((Explicit) obj).binaryRepresentation);
+                return obj != null && getClass() == obj.getClass()
+                        && Arrays.equals(this.binaryRepresentation, ((Explicit) obj).binaryRepresentation);
             }
 
             public int hashCode() {
@@ -1201,7 +1327,10 @@ public interface ClassFileLocator extends Closeable {
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class Illegal implements Resolution {
             private final String typeName;
@@ -1237,7 +1366,10 @@ public interface ClassFileLocator extends Closeable {
         byte[] resolve();
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @HashCodeAndEqualsPlugin.Enhance
     public static class Simple implements ClassFileLocator {
         private final Map<String, byte[]> classFiles;
@@ -1254,7 +1386,10 @@ public interface ClassFileLocator extends Closeable {
             HashMap map2 = new HashMap();
             for (Map.Entry<String, byte[]> entry : map.entrySet()) {
                 if (entry.getKey().endsWith(ClassFileLocator.CLASS_FILE_EXTENSION)) {
-                    map2.put(entry.getKey().substring(0, entry.getKey().length() - 6).replace('/', TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH), entry.getValue());
+                    map2.put(
+                            entry.getKey().substring(0, entry.getKey().length() - 6).replace('/',
+                                    TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH),
+                            entry.getValue());
                 }
             }
             return new Simple(map2);
@@ -1296,7 +1431,10 @@ public interface ClassFileLocator extends Closeable {
 
     Resolution locate(String str);
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @HashCodeAndEqualsPlugin.Enhance
     public static class ForModuleFile implements ClassFileLocator {
         private static final List<String> BOOT_LOCATIONS = Arrays.asList("jmods", "../jmods", "modules");
@@ -1353,7 +1491,9 @@ public interface ClassFileLocator extends Closeable {
 
         @Override // net.bytebuddy.dynamic.ClassFileLocator
         public Resolution locate(String str) throws IOException {
-            ZipEntry entry = this.zipFile.getEntry("classes/" + str.replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/') + ClassFileLocator.CLASS_FILE_EXTENSION);
+            ZipEntry entry = this.zipFile.getEntry("classes/"
+                    + str.replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/')
+                    + ClassFileLocator.CLASS_FILE_EXTENSION);
             if (entry == null) {
                 return new Resolution.Illegal(str);
             }
@@ -1381,7 +1521,8 @@ public interface ClassFileLocator extends Closeable {
                             if (file2.isDirectory()) {
                                 arrayList.add(ForFolder.of(file2, classFileVersionOfThisVm));
                             } else if (file2.isFile()) {
-                                arrayList.add(file2.getName().endsWith(JMOD_FILE_EXTENSION) ? of(file2) : ForJarFile.of(file2, classFileVersionOfThisVm));
+                                arrayList.add(file2.getName().endsWith(JMOD_FILE_EXTENSION) ? of(file2)
+                                        : ForJarFile.of(file2, classFileVersionOfThisVm));
                             }
                         }
                     }
@@ -1410,13 +1551,19 @@ public interface ClassFileLocator extends Closeable {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @HashCodeAndEqualsPlugin.Enhance
     public static class ForUrl implements ClassFileLocator {
         private static final boolean ACCESS_CONTROLLER;
         private final ClassLoader classLoader;
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class ClassLoaderCreationAction implements PrivilegedAction<ClassLoader> {
             private final URL[] url;
@@ -1429,7 +1576,8 @@ public interface ClassFileLocator extends Closeable {
                 if (this == obj) {
                     return true;
                 }
-                return obj != null && getClass() == obj.getClass() && Arrays.equals(this.url, ((ClassLoaderCreationAction) obj).url);
+                return obj != null && getClass() == obj.getClass()
+                        && Arrays.equals(this.url, ((ClassLoaderCreationAction) obj).url);
             }
 
             public int hashCode() {

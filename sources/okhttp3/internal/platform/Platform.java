@@ -23,7 +23,7 @@ import javax.net.ssl.TrustManagerFactory;
 import javax.net.ssl.X509TrustManager;
 import me.hd.wauxv.obf.abb;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.rh;
 import okhttp3.OkHttpClient;
 import okhttp3.Protocol;
@@ -43,7 +43,10 @@ public class Platform {
     private static final Logger logger;
     private static volatile Platform platform;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
@@ -56,7 +59,7 @@ public class Platform {
                 return platformBuildIfSupported;
             }
             Platform platformBuildIfSupported2 = AndroidPlatform.Companion.buildIfSupported();
-            bzo.n(platformBuildIfSupported2);
+            throwIfVar1IsNull(platformBuildIfSupported2);
             return platformBuildIfSupported2;
         }
 
@@ -64,13 +67,16 @@ public class Platform {
             OpenJSSEPlatform openJSSEPlatformBuildIfSupported;
             BouncyCastlePlatform bouncyCastlePlatformBuildIfSupported;
             ConscryptPlatform conscryptPlatformBuildIfSupported;
-            if (isConscryptPreferred() && (conscryptPlatformBuildIfSupported = ConscryptPlatform.Companion.buildIfSupported()) != null) {
+            if (isConscryptPreferred()
+                    && (conscryptPlatformBuildIfSupported = ConscryptPlatform.Companion.buildIfSupported()) != null) {
                 return conscryptPlatformBuildIfSupported;
             }
-            if (isBouncyCastlePreferred() && (bouncyCastlePlatformBuildIfSupported = BouncyCastlePlatform.Companion.buildIfSupported()) != null) {
+            if (isBouncyCastlePreferred() && (bouncyCastlePlatformBuildIfSupported = BouncyCastlePlatform.Companion
+                    .buildIfSupported()) != null) {
                 return bouncyCastlePlatformBuildIfSupported;
             }
-            if (isOpenJSSEPreferred() && (openJSSEPlatformBuildIfSupported = OpenJSSEPlatform.Companion.buildIfSupported()) != null) {
+            if (isOpenJSSEPreferred()
+                    && (openJSSEPlatformBuildIfSupported = OpenJSSEPlatform.Companion.buildIfSupported()) != null) {
                 return openJSSEPlatformBuildIfSupported;
             }
             Jdk9Platform jdk9PlatformBuildIfSupported = Jdk9Platform.Companion.buildIfSupported();
@@ -98,7 +104,8 @@ public class Platform {
             return "OpenJSSE".equals(Security.getProviders()[0].getName());
         }
 
-        public static /* synthetic */ void resetForTests$default(Companion companion, Platform platform, int i, Object obj) {
+        public static /* synthetic */ void resetForTests$default(Companion companion, Platform platform, int i,
+                Object obj) {
             if ((i & 1) != 0) {
                 platform = companion.findPlatform();
             }
@@ -106,7 +113,7 @@ public class Platform {
         }
 
         public final List<String> alpnProtocolNames(List<? extends Protocol> list) {
-            bzo.q(list, "protocols");
+            throwIfVar1IsNull(list, "protocols");
             ArrayList arrayList = new ArrayList();
             for (Object obj : list) {
                 if (((Protocol) obj) != Protocol.HTTP_1_0) {
@@ -122,7 +129,7 @@ public class Platform {
         }
 
         public final byte[] concatLengthPrefixed(List<? extends Protocol> list) {
-            bzo.q(list, "protocols");
+            throwIfVar1IsNull(list, "protocols");
             rh rhVar = new rh();
             for (String str : alpnProtocolNames(list)) {
                 rhVar.am(str.length());
@@ -140,7 +147,7 @@ public class Platform {
         }
 
         public final void resetForTests(Platform platform) {
-            bzo.q(platform, "platform");
+            throwIfVar1IsNull(platform, "platform");
             Platform.platform = platform;
         }
 
@@ -159,9 +166,11 @@ public class Platform {
         return Companion.get();
     }
 
-    public static /* synthetic */ void log$default(Platform platform2, String str, int i, Throwable th, int i2, Object obj) {
+    public static /* synthetic */ void log$default(Platform platform2, String str, int i, Throwable th, int i2,
+            Object obj) {
         if (obj != null) {
-            throw new UnsupportedOperationException("Super calls with default arguments not supported in this target, function: log");
+            throw new UnsupportedOperationException(
+                    "Super calls with default arguments not supported in this target, function: log");
         }
         if ((i2 & 2) != 0) {
             i = 4;
@@ -173,29 +182,29 @@ public class Platform {
     }
 
     public void afterHandshake(SSLSocket sSLSocket) {
-        bzo.q(sSLSocket, "sslSocket");
+        throwIfVar1IsNull(sSLSocket, "sslSocket");
     }
 
     public CertificateChainCleaner buildCertificateChainCleaner(X509TrustManager x509TrustManager) {
-        bzo.q(x509TrustManager, "trustManager");
+        throwIfVar1IsNull(x509TrustManager, "trustManager");
         return new BasicCertificateChainCleaner(buildTrustRootIndex(x509TrustManager));
     }
 
     public TrustRootIndex buildTrustRootIndex(X509TrustManager x509TrustManager) {
-        bzo.q(x509TrustManager, "trustManager");
+        throwIfVar1IsNull(x509TrustManager, "trustManager");
         X509Certificate[] acceptedIssuers = x509TrustManager.getAcceptedIssuers();
-        bzo.p(acceptedIssuers, "trustManager.acceptedIssuers");
+        throwIfVar1IsNull(acceptedIssuers, "trustManager.acceptedIssuers");
         return new BasicTrustRootIndex((X509Certificate[]) Arrays.copyOf(acceptedIssuers, acceptedIssuers.length));
     }
 
     public void configureTlsExtensions(SSLSocket sSLSocket, String str, List<Protocol> list) {
-        bzo.q(sSLSocket, "sslSocket");
-        bzo.q(list, "protocols");
+        throwIfVar1IsNull(sSLSocket, "sslSocket");
+        throwIfVar1IsNull(list, "protocols");
     }
 
     public void connectSocket(Socket socket, InetSocketAddress inetSocketAddress, int i) throws IOException {
-        bzo.q(socket, "socket");
-        bzo.q(inetSocketAddress, "address");
+        throwIfVar1IsNull(socket, "socket");
+        throwIfVar1IsNull(inetSocketAddress, "address");
         socket.connect(inetSocketAddress, i);
     }
 
@@ -204,12 +213,12 @@ public class Platform {
     }
 
     public String getSelectedProtocol(SSLSocket sSLSocket) {
-        bzo.q(sSLSocket, "sslSocket");
+        throwIfVar1IsNull(sSLSocket, "sslSocket");
         return null;
     }
 
     public Object getStackTraceForCloseable(String str) {
-        bzo.q(str, "closer");
+        throwIfVar1IsNull(str, "closer");
         if (logger.isLoggable(Level.FINE)) {
             return new Throwable(str);
         }
@@ -217,36 +226,37 @@ public class Platform {
     }
 
     public boolean isCleartextTrafficPermitted(String str) {
-        bzo.q(str, "hostname");
+        throwIfVar1IsNull(str, "hostname");
         return true;
     }
 
     public void log(String str, int i, Throwable th) {
-        bzo.q(str, "message");
+        throwIfVar1IsNull(str, "message");
         logger.log(i == 5 ? Level.WARNING : Level.INFO, str, th);
     }
 
     public void logCloseableLeak(String str, Object obj) {
-        bzo.q(str, "message");
+        throwIfVar1IsNull(str, "message");
         if (obj == null) {
-            str = str.concat(" To see where this was allocated, set the OkHttpClient logger level to FINE: Logger.getLogger(OkHttpClient.class.getName()).setLevel(Level.FINE);");
+            str = str.concat(
+                    " To see where this was allocated, set the OkHttpClient logger level to FINE: Logger.getLogger(OkHttpClient.class.getName()).setLevel(Level.FINE);");
         }
         log(str, 5, (Throwable) obj);
     }
 
     public SSLContext newSSLContext() throws NoSuchAlgorithmException {
         SSLContext sSLContext = SSLContext.getInstance("TLS");
-        bzo.p(sSLContext, "getInstance(\"TLS\")");
+        throwIfVar1IsNull(sSLContext, "getInstance(\"TLS\")");
         return sSLContext;
     }
 
     public SSLSocketFactory newSslSocketFactory(X509TrustManager x509TrustManager) {
-        bzo.q(x509TrustManager, "trustManager");
+        throwIfVar1IsNull(x509TrustManager, "trustManager");
         try {
             SSLContext sSLContextNewSSLContext = newSSLContext();
-            sSLContextNewSSLContext.init(null, new TrustManager[]{x509TrustManager}, null);
+            sSLContextNewSSLContext.init(null, new TrustManager[] { x509TrustManager }, null);
             SSLSocketFactory socketFactory = sSLContextNewSSLContext.getSocketFactory();
-            bzo.p(socketFactory, "newSSLContext().apply {\n…ll)\n      }.socketFactory");
+            throwIfVar1IsNull(socketFactory, "newSSLContext().apply {\n…ll)\n      }.socketFactory");
             return socketFactory;
         } catch (GeneralSecurityException e) {
             throw new AssertionError("No System TLS: " + e, e);
@@ -254,19 +264,20 @@ public class Platform {
     }
 
     public X509TrustManager platformTrustManager() {
-        TrustManagerFactory trustManagerFactory = TrustManagerFactory.getInstance(TrustManagerFactory.getDefaultAlgorithm());
+        TrustManagerFactory trustManagerFactory = TrustManagerFactory
+                .getInstance(TrustManagerFactory.getDefaultAlgorithm());
         trustManagerFactory.init((KeyStore) null);
         TrustManager[] trustManagers = trustManagerFactory.getTrustManagers();
-        bzo.n(trustManagers);
+        throwIfVar1IsNull(trustManagers);
         if (trustManagers.length == 1) {
             TrustManager trustManager = trustManagers[0];
             if (trustManager instanceof X509TrustManager) {
-                bzo.o(trustManager, "null cannot be cast to non-null type javax.net.ssl.X509TrustManager");
+                throwIfVar1IsNull(trustManager, "null cannot be cast to non-null type javax.net.ssl.X509TrustManager");
                 return (X509TrustManager) trustManager;
             }
         }
         String string = Arrays.toString(trustManagers);
-        bzo.p(string, "toString(this)");
+        throwIfVar1IsNull(string, "toString(this)");
         throw new IllegalStateException("Unexpected default trust managers: ".concat(string).toString());
     }
 
@@ -275,9 +286,10 @@ public class Platform {
     }
 
     public X509TrustManager trustManager(SSLSocketFactory sSLSocketFactory) {
-        bzo.q(sSLSocketFactory, "sslSocketFactory");
+        throwIfVar1IsNull(sSLSocketFactory, "sslSocketFactory");
         try {
-            Object fieldOrNull = Util.readFieldOrNull(sSLSocketFactory, Class.forName("sun.security.ssl.SSLContextImpl"), f.X);
+            Object fieldOrNull = Util.readFieldOrNull(sSLSocketFactory,
+                    Class.forName("sun.security.ssl.SSLContextImpl"), f.X);
             if (fieldOrNull == null) {
                 return null;
             }

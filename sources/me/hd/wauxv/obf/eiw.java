@@ -26,7 +26,8 @@ public final class eiw {
             return false;
         }
         eiw eiwVar = (eiw) obj;
-        return bzo.f(this.a, eiwVar.a) && bzo.f(this.b, eiwVar.b) && bzo.f(this.c, eiwVar.c);
+        return nullSafeIsEqual(this.a, eiwVar.a) && nullSafeIsEqual(this.b, eiwVar.b)
+                && nullSafeIsEqual(this.c, eiwVar.c);
     }
 
     public final int hashCode() {
@@ -43,6 +44,6 @@ public final class eiw {
         sb.append("y4Proto(d=" /* cnb.z(-325365247507242L) */);
         bjs.w(sb, this.a, -325352362605354L);
         bjs.w(sb, this.b, -325296528030506L);
-        return bjs.q(sb, this.c, ')');
+        return concat(sb, this.c, ')');
     }
 }

@@ -9,7 +9,7 @@ import me.hd.wauxv.data.bean.info.GroupInfo;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class cid implements bgf {
+public final /* synthetic */ class cid implements IHasInvokeMethod {
     public final /* synthetic */ int a;
     public final /* synthetic */ String b;
     public final /* synthetic */ ays c;
@@ -41,11 +41,17 @@ public final /* synthetic */ class cid implements bgf {
                 ArrayList arrayList = new ArrayList();
                 ArrayList arrayList2 = new ArrayList();
                 ArrayList arrayList3 = new ArrayList();
-                Cursor cursorAb = bmy.ab(new aer[]{aer.a, aer.b});
+                Cursor cursorAb = bmy.ab(new aer[] { aer.a, aer.b });
                 if (cursorAb != null) {
                     while (cursorAb.moveToNext()) {
                         try {
-                            if (dnr.bi(cursorAb.getString(cursorAb.getColumnIndex("username" /* cnb.z(-478644040366890L) */)), "@chatroom" /* cnb.z(-478622565530410L) */)) {
+                            if (dnr.bi(cursorAb.getString(cursorAb.getColumnIndex("username" /*
+                                                                                              * cnb.z(-478644040366890L)
+                                                                                              */)), "@chatroom" /*
+                                                                                                                 * cnb.z
+                                                                                                                 * (-
+                                                                                                                 * 478622565530410L)
+                                                                                                                 */)) {
                                 GroupInfo groupInfoT = cnb.t(cursorAb);
                                 String roomId = groupInfoT.getRoomId();
                                 StringBuilder sb3 = new StringBuilder();
@@ -68,13 +74,16 @@ public final /* synthetic */ class cid implements bgf {
                                 String wxid = friendInfoS.getWxid();
                                 StringBuilder sb5 = new StringBuilder();
                                 String nickname = friendInfoS.getNickname();
-                                if ((dfv.d(dap.b(new dap("\r\n|\r|\n" /* cnb.z(-478596795726634L) */), nickname)) > 3 ? nickname : null) != null) {
+                                if ((dfv.d(dap.b(new dap("\r\n|\r|\n" /* cnb.z(-478596795726634L) */), nickname)) > 3
+                                        ? nickname
+                                        : null) != null) {
                                     sb5.append("已过滤此昵称..." /* cnb.z(-475800772016938L) */);
                                 } else {
                                     String str3 = nickname.length() > 8 ? nickname : null;
                                     if (str3 != null) {
                                         String strSubstring = str3.substring(0, 8);
-                                        bzo.p(strSubstring, "substring(...)" /* cnb.z(-475775002213162L) */);
+                                        throwIfVar1IsNull(strSubstring,
+                                                "substring(...)" /* cnb.z(-475775002213162L) */);
                                         sb5.append(strSubstring);
                                         sb5.append("..." /* cnb.z(-475710577703722L) */);
                                         sb = sb5;
@@ -130,11 +139,13 @@ public final /* synthetic */ class cid implements bgf {
                 ArrayList arrayList4 = new ArrayList();
                 ArrayList arrayList5 = new ArrayList();
                 ArrayList arrayList6 = new ArrayList();
-                Cursor cursorAb2 = bmy.ab(new aer[]{aer.a, aer.b});
+                Cursor cursorAb2 = bmy.ab(new aer[] { aer.a, aer.b });
                 if (cursorAb2 != null) {
                     while (cursorAb2.moveToNext()) {
                         try {
-                            if (dnr.bi(cursorAb2.getString(cursorAb2.getColumnIndex("username" /* cnb.z(-475521599142698L) */)), "@chatroom" /* cnb.z(-475482944437034L) */)) {
+                            if (dnr.bi(cursorAb2
+                                    .getString(cursorAb2.getColumnIndex("username" /* cnb.z(-475521599142698L) */)),
+                                    "@chatroom" /* cnb.z(-475482944437034L) */)) {
                                 GroupInfo groupInfoT2 = cnb.t(cursorAb2);
                                 String roomId2 = groupInfoT2.getRoomId();
                                 StringBuilder sb6 = new StringBuilder();
@@ -157,13 +168,16 @@ public final /* synthetic */ class cid implements bgf {
                                 String wxid2 = friendInfoS2.getWxid();
                                 StringBuilder sb8 = new StringBuilder();
                                 String nickname2 = friendInfoS2.getNickname();
-                                if ((dfv.d(dap.b(new dap("\r\n|\r|\n" /* cnb.z(-475457174633258L) */), nickname2)) > 3 ? nickname2 : null) != null) {
+                                if ((dfv.d(dap.b(new dap("\r\n|\r|\n" /* cnb.z(-475457174633258L) */), nickname2)) > 3
+                                        ? nickname2
+                                        : null) != null) {
                                     sb8.append("已过滤此昵称..." /* cnb.z(-475427109862186L) */);
                                 } else {
                                     String str4 = nickname2.length() > 8 ? nickname2 : null;
                                     if (str4 != null) {
                                         String strSubstring2 = str4.substring(0, 8);
-                                        bzo.p(strSubstring2, "substring(...)" /* cnb.z(-475401340058410L) */);
+                                        throwIfVar1IsNull(strSubstring2,
+                                                "substring(...)" /* cnb.z(-475401340058410L) */);
                                         sb8.append(strSubstring2);
                                         sb8.append("..." /* cnb.z(-475319735679786L) */);
                                         sb2 = sb8;

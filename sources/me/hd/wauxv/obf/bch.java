@@ -7,7 +7,7 @@ import okhttp3.Request;
 /* JADX INFO: loaded from: classes.dex */
 public abstract class bch {
     public static String a(Request request) {
-        bzo.q(request, "request");
+        throwIfVar1IsNull(request, "request");
         yg.t(request.tag(cmz.class));
         String str = request.method() + request.url();
         sj sjVar = sj.a;

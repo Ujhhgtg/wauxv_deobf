@@ -7,7 +7,7 @@ import java.net.Proxy;
 import java.util.concurrent.TimeUnit;
 import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.bdb;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.dhy;
 import me.hd.wauxv.obf.dlc;
 import me.hd.wauxv.obf.dnj;
@@ -52,7 +52,10 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
     private int state;
     private Headers trailers;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public abstract class AbstractSource implements dlc {
         private boolean closed;
         private final bdb timeout;
@@ -74,7 +77,7 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
 
         @Override // me.hd.wauxv.obf.dlc
         public long read(rh rhVar, long j) throws IOException {
-            bzo.q(rhVar, "sink");
+            throwIfVar1IsNull(rhVar, "sink");
             try {
                 return Http1ExchangeCodec.this.source.read(rhVar, j);
             } catch (IOException e) {
@@ -106,7 +109,10 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public final class ChunkedSink implements dhy {
         private boolean closed;
         private final bdb timeout;
@@ -141,7 +147,7 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
 
         @Override // me.hd.wauxv.obf.dhy
         public void write(rh rhVar, long j) {
-            bzo.q(rhVar, "source");
+            throwIfVar1IsNull(rhVar, "source");
             if (this.closed) {
                 throw new IllegalStateException("closed");
             }
@@ -155,17 +161,23 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public final class ChunkedSource extends AbstractSource {
         private long bytesRemainingInChunk;
         private boolean hasMoreChunks;
         final /* synthetic */ Http1ExchangeCodec this$0;
         private final HttpUrl url;
 
-        /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+        /*
+         * JADX WARN: 'super' call moved to the top of the method (can break code
+         * semantics)
+         */
         public ChunkedSource(Http1ExchangeCodec http1ExchangeCodec, HttpUrl httpUrl) {
             super();
-            bzo.q(httpUrl, "url");
+            throwIfVar1IsNull(httpUrl, "url");
             this.this$0 = http1ExchangeCodec;
             this.url = httpUrl;
             this.bytesRemainingInChunk = Http1ExchangeCodec.NO_CHUNK_YET;
@@ -180,18 +192,19 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
                 this.bytesRemainingInChunk = this.this$0.source.aj();
                 String string = dnj.ba(this.this$0.source.aa()).toString();
                 if (this.bytesRemainingInChunk < 0 || (string.length() > 0 && !dnr.bp(string, ";", false))) {
-                    throw new ProtocolException("expected chunk size and optional extensions but was \"" + this.bytesRemainingInChunk + string + '\"');
+                    throw new ProtocolException("expected chunk size and optional extensions but was \""
+                            + this.bytesRemainingInChunk + string + '\"');
                 }
                 if (this.bytesRemainingInChunk == 0) {
                     this.hasMoreChunks = false;
                     Http1ExchangeCodec http1ExchangeCodec = this.this$0;
                     http1ExchangeCodec.trailers = http1ExchangeCodec.headersReader.readHeaders();
                     OkHttpClient okHttpClient = this.this$0.client;
-                    bzo.n(okHttpClient);
+                    throwIfVar1IsNull(okHttpClient);
                     CookieJar cookieJar = okHttpClient.cookieJar();
                     HttpUrl httpUrl = this.url;
                     Headers headers = this.this$0.trailers;
-                    bzo.n(headers);
+                    throwIfVar1IsNull(headers);
                     HttpHeaders.receiveHeaders(cookieJar, httpUrl, headers);
                     responseBodyComplete();
                 }
@@ -200,7 +213,8 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
             }
         }
 
-        @Override // okhttp3.internal.http1.Http1ExchangeCodec.AbstractSource, java.io.Closeable, java.lang.AutoCloseable
+        @Override // okhttp3.internal.http1.Http1ExchangeCodec.AbstractSource, java.io.Closeable,
+                  // java.lang.AutoCloseable
         public void close() {
             if (getClosed()) {
                 return;
@@ -214,7 +228,7 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
 
         @Override // okhttp3.internal.http1.Http1ExchangeCodec.AbstractSource, me.hd.wauxv.obf.dlc
         public long read(rh rhVar, long j) throws IOException {
-            bzo.q(rhVar, "sink");
+            throwIfVar1IsNull(rhVar, "sink");
             if (j < 0) {
                 throw new IllegalArgumentException(dts.b(j, "byteCount < 0: ").toString());
             }
@@ -243,7 +257,10 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
@@ -253,7 +270,10 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public final class FixedLengthSource extends AbstractSource {
         private long bytesRemaining;
 
@@ -265,7 +285,8 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
             }
         }
 
-        @Override // okhttp3.internal.http1.Http1ExchangeCodec.AbstractSource, java.io.Closeable, java.lang.AutoCloseable
+        @Override // okhttp3.internal.http1.Http1ExchangeCodec.AbstractSource, java.io.Closeable,
+                  // java.lang.AutoCloseable
         public void close() {
             if (getClosed()) {
                 return;
@@ -279,7 +300,7 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
 
         @Override // okhttp3.internal.http1.Http1ExchangeCodec.AbstractSource, me.hd.wauxv.obf.dlc
         public long read(rh rhVar, long j) throws IOException {
-            bzo.q(rhVar, "sink");
+            throwIfVar1IsNull(rhVar, "sink");
             if (j < 0) {
                 throw new IllegalArgumentException(dts.b(j, "byteCount < 0: ").toString());
             }
@@ -306,7 +327,10 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public final class KnownLengthSink implements dhy {
         private boolean closed;
         private final bdb timeout;
@@ -340,7 +364,7 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
 
         @Override // me.hd.wauxv.obf.dhy
         public void write(rh rhVar, long j) {
-            bzo.q(rhVar, "source");
+            throwIfVar1IsNull(rhVar, "source");
             if (this.closed) {
                 throw new IllegalStateException("closed");
             }
@@ -349,7 +373,10 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public final class UnknownLengthSource extends AbstractSource {
         private boolean inputExhausted;
 
@@ -357,7 +384,8 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
             super();
         }
 
-        @Override // okhttp3.internal.http1.Http1ExchangeCodec.AbstractSource, java.io.Closeable, java.lang.AutoCloseable
+        @Override // okhttp3.internal.http1.Http1ExchangeCodec.AbstractSource, java.io.Closeable,
+                  // java.lang.AutoCloseable
         public void close() {
             if (getClosed()) {
                 return;
@@ -370,7 +398,7 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
 
         @Override // okhttp3.internal.http1.Http1ExchangeCodec.AbstractSource, me.hd.wauxv.obf.dlc
         public long read(rh rhVar, long j) throws IOException {
-            bzo.q(rhVar, "sink");
+            throwIfVar1IsNull(rhVar, "sink");
             if (j < 0) {
                 throw new IllegalArgumentException(dts.b(j, "byteCount < 0: ").toString());
             }
@@ -391,9 +419,9 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
     }
 
     public Http1ExchangeCodec(OkHttpClient okHttpClient, RealConnection realConnection, rm rmVar, rl rlVar) {
-        bzo.q(realConnection, "connection");
-        bzo.q(rmVar, "source");
-        bzo.q(rlVar, "sink");
+        throwIfVar1IsNull(realConnection, "connection");
+        throwIfVar1IsNull(rmVar, "source");
+        throwIfVar1IsNull(rlVar, "sink");
         this.client = okHttpClient;
         this.connection = realConnection;
         this.source = rmVar;
@@ -405,7 +433,7 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
     public final void detachTimeout(bdb bdbVar) {
         ekc ekcVar = bdbVar.a;
         ekc ekcVar2 = ekc.NONE;
-        bzo.q(ekcVar2, MethodDelegation.ImplementationDelegate.FIELD_NAME_PREFIX);
+        throwIfVar1IsNull(ekcVar2, MethodDelegation.ImplementationDelegate.FIELD_NAME_PREFIX);
         bdbVar.a = ekcVar2;
         ekcVar.clearDeadline();
         ekcVar.clearTimeout();
@@ -463,7 +491,7 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
 
     @Override // okhttp3.internal.http.ExchangeCodec
     public dhy createRequestBody(Request request, long j) throws ProtocolException {
-        bzo.q(request, "request");
+        throwIfVar1IsNull(request, "request");
         if (request.body() != null && request.body().isDuplex()) {
             throw new ProtocolException("Duplex connections are not supported for HTTP/1");
         }
@@ -473,7 +501,8 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
         if (j != NO_CHUNK_YET) {
             return newKnownLengthSink();
         }
-        throw new IllegalStateException("Cannot stream a request body without chunked encoding or a known content length!");
+        throw new IllegalStateException(
+                "Cannot stream a request body without chunked encoding or a known content length!");
     }
 
     @Override // okhttp3.internal.http.ExchangeCodec
@@ -497,7 +526,7 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
 
     @Override // okhttp3.internal.http.ExchangeCodec
     public dlc openResponseBodySource(Response response) {
-        bzo.q(response, "response");
+        throwIfVar1IsNull(response, "response");
         if (!HttpHeaders.promisesBody(response)) {
             return newFixedLengthSource(0L);
         }
@@ -505,7 +534,8 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
             return newChunkedSource(response.request().url());
         }
         long jHeadersContentLength = Util.headersContentLength(response);
-        return jHeadersContentLength != NO_CHUNK_YET ? newFixedLengthSource(jHeadersContentLength) : newUnknownLengthSource();
+        return jHeadersContentLength != NO_CHUNK_YET ? newFixedLengthSource(jHeadersContentLength)
+                : newUnknownLengthSource();
     }
 
     @Override // okhttp3.internal.http.ExchangeCodec
@@ -516,7 +546,8 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
         }
         try {
             StatusLine statusLine = StatusLine.Companion.parse(this.headersReader.readLine());
-            Response.Builder builderHeaders = new Response.Builder().protocol(statusLine.protocol).code(statusLine.code).message(statusLine.message).headers(this.headersReader.readHeaders());
+            Response.Builder builderHeaders = new Response.Builder().protocol(statusLine.protocol).code(statusLine.code)
+                    .message(statusLine.message).headers(this.headersReader.readHeaders());
             if (z && statusLine.code == 100) {
                 return null;
             }
@@ -532,13 +563,14 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
             this.state = 3;
             return builderHeaders;
         } catch (EOFException e) {
-            throw new IOException(yg.k("unexpected end of stream on ", getConnection().route().address().url().redact()), e);
+            throw new IOException(
+                    yg.k("unexpected end of stream on ", getConnection().route().address().url().redact()), e);
         }
     }
 
     @Override // okhttp3.internal.http.ExchangeCodec
     public long reportedContentLength(Response response) {
-        bzo.q(response, "response");
+        throwIfVar1IsNull(response, "response");
         if (HttpHeaders.promisesBody(response)) {
             return isChunked(response) ? NO_CHUNK_YET : Util.headersContentLength(response);
         }
@@ -546,7 +578,7 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
     }
 
     public final void skipConnectBody(Response response) {
-        bzo.q(response, "response");
+        throwIfVar1IsNull(response, "response");
         long jHeadersContentLength = Util.headersContentLength(response);
         if (jHeadersContentLength == NO_CHUNK_YET) {
             return;
@@ -566,8 +598,8 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
     }
 
     public final void writeRequest(Headers headers, String str) {
-        bzo.q(headers, "headers");
-        bzo.q(str, "requestLine");
+        throwIfVar1IsNull(headers, "headers");
+        throwIfVar1IsNull(str, "requestLine");
         if (this.state != 0) {
             throw new IllegalStateException(("state: " + this.state).toString());
         }
@@ -582,10 +614,10 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
 
     @Override // okhttp3.internal.http.ExchangeCodec
     public void writeRequestHeaders(Request request) {
-        bzo.q(request, "request");
+        throwIfVar1IsNull(request, "request");
         RequestLine requestLine = RequestLine.INSTANCE;
         Proxy.Type type = getConnection().route().proxy().type();
-        bzo.p(type, "connection.route().proxy.type()");
+        throwIfVar1IsNull(type, "connection.route().proxy.type()");
         writeRequest(request.headers(), requestLine.get(request, type));
     }
 

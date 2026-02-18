@@ -17,7 +17,7 @@ public final class art {
 
     public final void f(int i) {
         String string = this.a.getString(i);
-        bzo.p(string, "getString(...)");
+        throwIfVar1IsNull(string, "getString(...)");
         this.b = string;
     }
 }

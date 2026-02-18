@@ -12,7 +12,10 @@ import net.bytebuddy.pool.TypePool;
 public final class lw extends doi implements bgj {
     public final /* synthetic */ int a;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'super' call moved to the top of the method (can break code
+     * semantics)
+     */
     public /* synthetic */ lw(int i, afw afwVar, int i2) {
         super(i, afwVar);
         this.a = i2;
@@ -146,11 +149,19 @@ public final class lw extends doi implements bgj {
                 if (fileArrListFiles2 != null) {
                     for (File file2 : fileArrListFiles2) {
                         if (file2.isFile()) {
-                            List listAg = aba.ag("png" /* cnb.z(-474357663005482L) */, "jpg" /* cnb.z(-474306123397930L) */, "gif" /* cnb.z(-474323303267114L) */);
+                            List listAg = aba.ag("png" /* cnb.z(-474357663005482L) */, "jpg" /*
+                                                                                              * cnb.z(-474306123397930L)
+                                                                                              */, "gif" /*
+                                                                                                         * cnb.z(-
+                                                                                                         * 474323303267114L)
+                                                                                                         */);
                             String name = file2.getName();
-                            bzo.p(name, "getName(...)");
-                            String lowerCase = dnj.av(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, name, "").toLowerCase(Locale.ROOT);
-                            bzo.p(lowerCase, "toLowerCase(...)" /* cnb.z(-474271763659562L) */);
+                            throwIfVar1IsNull(name, "getName(...)");
+                            String lowerCase = dnj
+                                    .av(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, name,
+                                            "")
+                                    .toLowerCase(Locale.ROOT);
+                            throwIfVar1IsNull(lowerCase, "toLowerCase(...)" /* cnb.z(-474271763659562L) */);
                             if (listAg.contains(lowerCase)) {
                                 auh auhVar = auh.a;
                                 String absolutePath = file2.getAbsolutePath();
@@ -160,7 +171,8 @@ public final class lw extends doi implements bgj {
                                 Object objB = aub.b(strB);
                                 atz.a.getClass();
                                 emn.bb(aty.a).invoke(objB, null, Boolean.TRUE);
-                                arrayList2.add(emn.ba(csn.a).newInstance(objB, 2, "" /* cnb.z(-474215929084714L) */, 0));
+                                arrayList2
+                                        .add(emn.ba(csn.a).newInstance(objB, 2, "" /* cnb.z(-474215929084714L) */, 0));
                             }
                         }
                     }

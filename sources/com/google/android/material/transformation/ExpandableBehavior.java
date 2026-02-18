@@ -32,7 +32,7 @@ public abstract class ExpandableBehavior extends agr {
             List listAf = coordinatorLayout.af(view);
             int size = listAf.size();
             for (int i2 = 0; i2 < size; i2++) {
-                b(view, (View) listAf.get(i2));
+                tryGetClassByName(view, (View) listAf.get(i2));
             }
         }
         return false;

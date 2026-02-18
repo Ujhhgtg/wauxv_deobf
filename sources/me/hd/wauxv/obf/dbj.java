@@ -17,7 +17,7 @@ import net.bytebuddy.description.method.MethodDescription;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class dbj implements bgf {
+public final /* synthetic */ class dbj implements IHasInvokeMethod {
     public final /* synthetic */ int a;
 
     public /* synthetic */ dbj(int i) {
@@ -44,7 +44,10 @@ public final /* synthetic */ class dbj implements bgf {
             case 1:
                 bag bagVar = (bag) obj;
                 zb zbVar = new zb();
-                zbVar.k("RepairerConfigThread" /* cnb.z(-55817394977578L) */, "ValueStrategy_" /* cnb.z(-55211804588842L) */);
+                zbVar.k("RepairerConfigThread" /* cnb.z(-55817394977578L) */, "ValueStrategy_" /*
+                                                                                                * cnb.z(-
+                                                                                                * 55211804588842L)
+                                                                                                */);
                 bagVar.getClass();
                 bagVar.b = zbVar;
                 return ens.a;
@@ -62,7 +65,8 @@ public final /* synthetic */ class dbj implements bgf {
                 cls2 = clsBf2 != null ? clsBf2 : String.class;
                 Class<Object> clsBf3 = cnf.bf(dal.b(cls));
                 cdjVar.q(cls2, clsBf3 != null ? clsBf3 : Object.class);
-                cdjVar.t("String" /* cnb.z(-55147380079402L) */, "Int" /* cnb.z(-55100135439146L) */, "Long" /* cnb.z(-55048595831594L) */, "Float" /* cnb.z(-55078660602666L) */);
+                cdjVar.t("String" /* cnb.z(-55147380079402L) */, "Int" /* cnb.z(-55100135439146L) */,
+                        "Long" /* cnb.z(-55048595831594L) */, "Float" /* cnb.z(-55078660602666L) */);
                 bahVar.getClass();
                 bahVar.d = cdjVar;
                 return ens.a;
@@ -71,7 +75,9 @@ public final /* synthetic */ class dbj implements bgf {
                 View viewK = dkz.k(view, R.layout.module_dialog_round_avatar, null, false);
                 Slider slider = (Slider) cnd.aq(viewK, R.id.moduleDialogSliderRoundAvatar);
                 if (slider == null) {
-                    throw new NullPointerException("Missing required view with ID: " /* cnb.z(-660428531170090L) */.concat(viewK.getResources().getResourceName(R.id.moduleDialogSliderRoundAvatar)));
+                    throw new NullPointerException(
+                            "Missing required view with ID: " /* cnb.z(-660428531170090L) */.concat(
+                                    viewK.getResources().getResourceName(R.id.moduleDialogSliderRoundAvatar)));
                 }
                 LinearLayout linearLayout = (LinearLayout) viewK;
                 ceq ceqVar = new ceq(linearLayout, slider, 0);
@@ -89,7 +95,8 @@ public final /* synthetic */ class dbj implements bgf {
                 return ens.a;
             case 4:
                 String str = ((cdf) obj).h().b;
-                return Boolean.valueOf((bzo.f(str, MethodDescription.TYPE_INITIALIZER_INTERNAL_NAME) || bzo.f(str, MethodDescription.CONSTRUCTOR_INTERNAL_NAME)) ? false : true);
+                return Boolean.valueOf((nullSafeIsEqual(str, MethodDescription.TYPE_INITIALIZER_INTERNAL_NAME)
+                        || nullSafeIsEqual(str, MethodDescription.CONSTRUCTOR_INTERNAL_NAME)) ? false : true);
             case 5:
                 bah bahVar2 = (bah) obj;
                 cdj cdjVar2 = new cdj();
@@ -98,7 +105,7 @@ public final /* synthetic */ class dbj implements bgf {
                 bahVar2.d = cdjVar2;
                 return ens.a;
             case 6:
-                return Boolean.valueOf(bzo.f(((cdf) obj).h().b, MethodDescription.CONSTRUCTOR_INTERNAL_NAME));
+                return Boolean.valueOf(nullSafeIsEqual(((cdf) obj).h().b, MethodDescription.CONSTRUCTOR_INTERNAL_NAME));
             case 7:
                 bah bahVar3 = (bah) obj;
                 cdj cdjVar3 = new cdj();
@@ -125,14 +132,14 @@ public final /* synthetic */ class dbj implements bgf {
                 akiVarAb.o();
                 return ens.a;
             case 9:
-                bmm bmmVar = (bmm) obj;
-                bmmVar.getClass();
-                new ek(bmmVar, 2, 8).q(Float.valueOf(ddg.a.j()));
+                HookParamWrapper hookParam = (HookParamWrapper) obj;
+                hookParam.getClass();
+                new ek(hookParam, 2, 8).q(Float.valueOf(ddg.a.j()));
                 return ens.a;
             case 10:
-                bmm bmmVar2 = (bmm) obj;
-                bmmVar2.getClass();
-                new ek(bmmVar2, 3, 8).q(Float.valueOf(ddg.a.j()));
+                HookParamWrapper hookParam2 = (HookParamWrapper) obj;
+                hookParam2.getClass();
+                new ek(hookParam2, 3, 8).q(Float.valueOf(ddg.a.j()));
                 return ens.a;
             case 11:
                 ((amm) obj).c = new dbj(7);
@@ -148,9 +155,9 @@ public final /* synthetic */ class dbj implements bgf {
                 ammVar3.d = new dbj(4);
                 return ens.a;
             case 14:
-                bmm bmmVar3 = (bmm) obj;
-                bmmVar3.getClass();
-                new ek(bmmVar3, 2, 8).q(Float.valueOf(ddg.a.j()));
+                HookParamWrapper hookParam3 = (HookParamWrapper) obj;
+                hookParam3.getClass();
+                new ek(hookParam3, 2, 8).q(Float.valueOf(ddg.a.j()));
                 return ens.a;
             case 15:
                 bah bahVar4 = (bah) obj;
@@ -167,7 +174,9 @@ public final /* synthetic */ class dbj implements bgf {
                 cdj cdjVar5 = new cdj();
                 fj fjVar = new fj();
                 cdj cdjVar6 = new cdj();
-                cdjVar6.t("MicroMsg.ChattingUI.VideoComponent" /* cnb.z(-101528731908906L) */, "send video path: %s, toUser:%s, origin:%b" /* cnb.z(-102993315756842L) */, "ChattingUI_importMultiVideo" /* cnb.z(-102830106999594L) */);
+                cdjVar6.t("MicroMsg.ChattingUI.VideoComponent" /* cnb.z(-101528731908906L) */,
+                        "send video path: %s, toUser:%s, origin:%b" /* cnb.z(-102993315756842L) */,
+                        "ChattingUI_importMultiVideo" /* cnb.z(-102830106999594L) */);
                 fjVar.f(cdjVar6);
                 cdjVar5.j = fjVar;
                 cdj.m(cdjVar5, 9);
@@ -184,27 +193,35 @@ public final /* synthetic */ class dbj implements bgf {
                 View view2 = (View) obj;
                 View viewK2 = dkz.k(view2, R.layout.module_dialog_say_hi_remark_name, null, false);
                 int i = R.id.moduleDialogEdtSayHiRemarkNameTextFormat;
-                TextInputEditText textInputEditText = (TextInputEditText) cnd.aq(viewK2, R.id.moduleDialogEdtSayHiRemarkNameTextFormat);
+                TextInputEditText textInputEditText = (TextInputEditText) cnd.aq(viewK2,
+                        R.id.moduleDialogEdtSayHiRemarkNameTextFormat);
                 if (textInputEditText != null) {
                     i = R.id.moduleDialogEdtSayHiRemarkNameTextPlaceholders;
-                    MaterialTextView materialTextView = (MaterialTextView) cnd.aq(viewK2, R.id.moduleDialogEdtSayHiRemarkNameTextPlaceholders);
+                    MaterialTextView materialTextView = (MaterialTextView) cnd.aq(viewK2,
+                            R.id.moduleDialogEdtSayHiRemarkNameTextPlaceholders);
                     if (materialTextView != null) {
                         i = R.id.moduleDialogEdtSayHiRemarkNameTimeFormat;
-                        TextInputEditText textInputEditText2 = (TextInputEditText) cnd.aq(viewK2, R.id.moduleDialogEdtSayHiRemarkNameTimeFormat);
+                        TextInputEditText textInputEditText2 = (TextInputEditText) cnd.aq(viewK2,
+                                R.id.moduleDialogEdtSayHiRemarkNameTimeFormat);
                         if (textInputEditText2 != null) {
                             i = R.id.moduleDialogInputSayHiRemarkNameTextFormat;
-                            if (((TextInputLayout) cnd.aq(viewK2, R.id.moduleDialogInputSayHiRemarkNameTextFormat)) != null) {
+                            if (((TextInputLayout) cnd.aq(viewK2,
+                                    R.id.moduleDialogInputSayHiRemarkNameTextFormat)) != null) {
                                 i = R.id.moduleDialogInputSayHiRemarkNameTimeFormat;
-                                if (((TextInputLayout) cnd.aq(viewK2, R.id.moduleDialogInputSayHiRemarkNameTimeFormat)) != null) {
-                                    cem cemVar = new cem((LinearLayout) viewK2, textInputEditText, materialTextView, textInputEditText2, 5);
+                                if (((TextInputLayout) cnd.aq(viewK2,
+                                        R.id.moduleDialogInputSayHiRemarkNameTimeFormat)) != null) {
+                                    cem cemVar = new cem((LinearLayout) viewK2, textInputEditText, materialTextView,
+                                            textInputEditText2, 5);
                                     textInputEditText.setText(des.a.o());
                                     textInputEditText2.setText(det.a.o());
                                     materialTextView.setMovementMethod(LinkMovementMethod.getInstance());
-                                    SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder("点击占位符自动添加以下字段:\n" /* cnb.z(-515219981859626L) */);
+                                    SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(
+                                            "点击占位符自动添加以下字段:\n" /* cnb.z(-515219981859626L) */);
                                     for (String str2 : deu.b) {
                                         int length = spannableStringBuilder.length();
                                         spannableStringBuilder.append((CharSequence) (str2 + ' '));
-                                        spannableStringBuilder.setSpan(new wf(cemVar, str2, 3), length, spannableStringBuilder.length() + (-1), 33);
+                                        spannableStringBuilder.setSpan(new wf(cemVar, str2, 3), length,
+                                                spannableStringBuilder.length() + (-1), 33);
                                     }
                                     materialTextView.setText(spannableStringBuilder);
                                     bzy bzyVar2 = new bzy(view2.getContext());
@@ -213,7 +230,8 @@ public final /* synthetic */ class dbj implements bgf {
                                     egVar2.d = deu.h;
                                     bzyVar2.t("保存" /* cnb.z(-515151262382890L) */, new amw(new cfx(cemVar, 13), 0));
                                     bzyVar2.s("重置" /* cnb.z(-515653773556522L) */, new amw(new cfh(22), 2));
-                                    bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar2, "取消" /* cnb.z(-47455093652266L) */);
+                                    bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar2,
+                                            "取消" /* cnb.z(-47455093652266L) */);
                                     LinearLayout linearLayout2 = cemVar.b;
                                     if (linearLayout2 != null) {
                                         egVar2.r = linearLayout2;
@@ -225,9 +243,10 @@ public final /* synthetic */ class dbj implements bgf {
                         }
                     }
                 }
-                throw new NullPointerException("Missing required view with ID: " /* cnb.z(-660291092216618L) */.concat(viewK2.getResources().getResourceName(i)));
+                throw new NullPointerException("Missing required view with ID: "
+                        /* cnb.z(-660291092216618L) */.concat(viewK2.getResources().getResourceName(i)));
             case 19:
-                Object objE = ((bmm) obj).e();
+                Object objE = ((HookParamWrapper) obj).getThisObject();
                 if (!(objE instanceof Activity)) {
                     objE = null;
                 }
@@ -235,17 +254,21 @@ public final /* synthetic */ class dbj implements bgf {
                 if (activity == null) {
                     cls9 = Activity.class;
                     Class<Activity> clsBf10 = cnf.bf(dal.b(cls9));
-                    throw new IllegalStateException("HookParam instance cannot cast to ".concat((clsBf10 != null ? clsBf10 : Activity.class).getName()).toString());
+                    throw new IllegalStateException("HookParam instance cannot cast to "
+                            .concat((clsBf10 != null ? clsBf10 : Activity.class).getName()).toString());
                 }
                 String stringExtra = activity.getIntent().getStringExtra("Contact_Nick" /* cnb.z(-515507744668458L) */);
-                bzo.n(stringExtra);
+                throwIfVar1IsNull(stringExtra);
                 Intent intent = activity.getIntent();
                 String strZ = "Contact_RemarkName" /* cnb.z(-515486269831978L) */;
                 deu.a.getClass();
-                intent.putExtra(strZ, dnr.bo(dnr.bo(des.a.o(), "${nick}" /* cnb.z(-518308063345450L) */, stringExtra), "${time}" /* cnb.z(-518273703607082L) */, cnh.ag(System.currentTimeMillis(), det.a.o(), null, 2)));
+                intent.putExtra(strZ,
+                        dnr.bo(dnr.bo(des.a.o(), "${nick}" /* cnb.z(-518308063345450L) */, stringExtra),
+                                "${time}" /* cnb.z(-518273703607082L) */,
+                                cnh.ag(System.currentTimeMillis(), det.a.o(), null, 2)));
                 return ens.a;
             case 20:
-                bzo.q(obj, "it");
+                throwIfVar1IsNull(obj, "it");
                 return Integer.valueOf(cyj.f.c(2147418112) + 65536);
             case 21:
                 return Boolean.valueOf(obj == null);
@@ -256,11 +279,12 @@ public final /* synthetic */ class dbj implements bgf {
                 return ens.a;
             case 23:
                 bag bagVar2 = (bag) obj;
-                String[] strArr = {"com.tencent.mm.storage" /* cnb.z(-370724397120298L) */};
+                String[] strArr = { "com.tencent.mm.storage" /* cnb.z(-370724397120298L) */ };
                 bagVar2.getClass();
                 bagVar2.a = la.ab(strArr);
                 zb zbVar2 = new zb();
-                zbVar2.k("MicroMsg.ServerConfigInfoStorage" /* cnb.z(-370608433003306L) */, "writeConfigToLocalFile, path: %s, info:%s" /* cnb.z(-371033634765610L) */);
+                zbVar2.k("MicroMsg.ServerConfigInfoStorage" /* cnb.z(-370608433003306L) */,
+                        "writeConfigToLocalFile, path: %s, info:%s" /* cnb.z(-371033634765610L) */);
                 bagVar2.b = zbVar2;
                 return ens.a;
             case 24:
@@ -286,14 +310,14 @@ public final /* synthetic */ class dbj implements bgf {
                 bahVar7.d = cdjVar8;
                 return ens.a;
             case 27:
-                ((bmm) obj).g();
+                ((HookParamWrapper) obj).setResultTrue();
                 return ens.a;
             case 28:
                 ((amm) obj).c = new dbj(29);
                 return ens.a;
             default:
                 bah bahVar8 = (bah) obj;
-                String[] strArr2 = {"com.tencent.mm.pluginsdk.model.app" /* cnb.z(-514867794541354L) */};
+                String[] strArr2 = { "com.tencent.mm.pluginsdk.model.app" /* cnb.z(-514867794541354L) */ };
                 bahVar8.getClass();
                 bahVar8.a = la.ab(strArr2);
                 cdj cdjVar9 = new cdj();

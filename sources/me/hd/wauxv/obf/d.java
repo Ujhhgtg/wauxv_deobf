@@ -34,13 +34,15 @@ public final /* synthetic */ class d implements View.OnClickListener {
             case 4:
                 String strZ = "EmojiGroupInfo" /* cnb.z(-474172979411754L) */;
                 String strZ2 = "productID = ?" /* cnb.z(-471411315440426L) */;
-                String[] strArr = {"wa.panel.emoji.group" /* cnb.z(-471334006029098L) */};
+                String[] strArr = { "wa.panel.emoji.group" /* cnb.z(-471334006029098L) */ };
                 int i = bte.a;
                 dlx.a.getClass();
                 cde cdeVarT = dqc.bi(dlx.b()).t();
                 cdeVarT.ab = "delete" /* cnb.z(-103225243990826L) */;
-                Object objJ = ((cdk) dkz.n(new Object[]{dal.b(String.class), dal.b(String.class), dal.b(String[].class)}, 3, cdeVarT)).j(strZ, strZ2, strArr);
-                bzo.n(objJ);
+                Object objJ = ((cdk) dkz.n(
+                        new Object[] { dal.b(String.class), dal.b(String.class), dal.b(String[].class) }, 3, cdeVarT))
+                        .j(strZ, strZ2, strArr);
+                throwIfVar1IsNull(objJ);
                 ((Number) objJ).intValue();
                 dnc.g(null, 3, "清除成功" /* cnb.z(-471226631846698L) */);
                 break;

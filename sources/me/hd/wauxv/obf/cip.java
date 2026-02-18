@@ -4,6 +4,6 @@ package me.hd.wauxv.obf;
 /* JADX INFO: loaded from: classes.dex */
 public final class cip extends erk {
     public cip(deh dehVar) {
-        bzo.q(dehVar, "handle");
+        throwIfVar1IsNull(dehVar, "handle");
     }
 }

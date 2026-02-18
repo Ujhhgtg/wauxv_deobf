@@ -68,8 +68,10 @@ public abstract class axs extends aq {
         accessibilityEventObtain2.setPassword(accessibilityNodeInfo.isPassword());
         accessibilityEventObtain2.setEnabled(accessibilityNodeInfo.isEnabled());
         accessibilityEventObtain2.setChecked(accessibilityNodeInfo.isChecked());
-        if (accessibilityEventObtain2.getText().isEmpty() && accessibilityEventObtain2.getContentDescription() == null) {
-            throw new RuntimeException("Callbacks must add text or a content description in populateEventForVirtualViewId()");
+        if (accessibilityEventObtain2.getText().isEmpty()
+                && accessibilityEventObtain2.getContentDescription() == null) {
+            throw new RuntimeException(
+                    "Callbacks must add text or a content description in populateEventForVirtualViewId()");
         }
         accessibilityEventObtain2.setClassName(accessibilityNodeInfo.getClassName());
         accessibilityEventObtain2.setSource(view, i);
@@ -90,19 +92,22 @@ public abstract class axs extends aq {
         accessibilityNodeInfoObtain.setParent(view);
         r(i, bdVar);
         if (bdVar.i() == null && accessibilityNodeInfoObtain.getContentDescription() == null) {
-            throw new RuntimeException("Callbacks must add text or a content description in populateNodeForVirtualViewId()");
+            throw new RuntimeException(
+                    "Callbacks must add text or a content description in populateNodeForVirtualViewId()");
         }
         Rect rect2 = this.x;
-        bdVar.h(rect2);
+        bdVar.locateDex(rect2);
         if (rect2.equals(rect)) {
             throw new RuntimeException("Callbacks must set parent bounds in populateNodeForVirtualViewId()");
         }
         int actions = accessibilityNodeInfoObtain.getActions();
         if ((actions & 64) != 0) {
-            throw new RuntimeException("Callbacks must not add ACTION_ACCESSIBILITY_FOCUS in populateNodeForVirtualViewId()");
+            throw new RuntimeException(
+                    "Callbacks must not add ACTION_ACCESSIBILITY_FOCUS in populateNodeForVirtualViewId()");
         }
         if ((actions & 128) != 0) {
-            throw new RuntimeException("Callbacks must not add ACTION_CLEAR_ACCESSIBILITY_FOCUS in populateNodeForVirtualViewId()");
+            throw new RuntimeException(
+                    "Callbacks must not add ACTION_CLEAR_ACCESSIBILITY_FOCUS in populateNodeForVirtualViewId()");
         }
         accessibilityNodeInfoObtain.setPackageName(view.getContext().getPackageName());
         bdVar.b = i;
@@ -126,7 +131,7 @@ public abstract class axs extends aq {
         Rect rect3 = this.w;
         accessibilityNodeInfoObtain.getBoundsInScreen(rect3);
         if (rect3.equals(rect)) {
-            bdVar.h(rect3);
+            bdVar.locateDex(rect3);
             rect3.offset(iArr[0] - view.getScrollX(), iArr[1] - view.getScrollY());
         }
         Rect rect4 = this.y;
@@ -159,7 +164,7 @@ public abstract class axs extends aq {
         }
         int action = motionEvent.getAction();
         if (action == 7 || action == 9) {
-            int iC = c(motionEvent.getX(), motionEvent.getY());
+            int iC = createInstanceWithArgs(motionEvent.getX(), motionEvent.getY());
             int i2 = this.af;
             if (i2 != iC) {
                 this.af = iC;
@@ -201,17 +206,17 @@ public abstract class axs extends aq {
     /* JADX WARN: Found duplicated region for block: B:40:0x00bc A[DONT_INVERT] */
     /* JADX WARN: Found duplicated region for block: B:41:0x00be A[DONT_INVERT] */
     /* JADX WARN: Found duplicated region for block: B:42:0x00c0 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:43:0x00c2  */
-    /* JADX WARN: Found duplicated region for block: B:44:0x00ce  */
-    /* JADX WARN: Found duplicated region for block: B:46:0x00d4  */
-    /* JADX WARN: Found duplicated region for block: B:47:0x00e0  */
-    /* JADX WARN: Found duplicated region for block: B:48:0x00eb  */
-    /* JADX WARN: Found duplicated region for block: B:51:0x0106  */
-    /* JADX WARN: Found duplicated region for block: B:54:0x010f  */
-    /* JADX WARN: Found duplicated region for block: B:57:0x011c  */
-    /* JADX WARN: Found duplicated region for block: B:66:0x0131  */
-    /* JADX WARN: Found duplicated region for block: B:68:0x014f  */
-    /* JADX WARN: Found duplicated region for block: B:89:0x01a9  */
+    /* JADX WARN: Found duplicated region for block: B:43:0x00c2 */
+    /* JADX WARN: Found duplicated region for block: B:44:0x00ce */
+    /* JADX WARN: Found duplicated region for block: B:46:0x00d4 */
+    /* JADX WARN: Found duplicated region for block: B:47:0x00e0 */
+    /* JADX WARN: Found duplicated region for block: B:48:0x00eb */
+    /* JADX WARN: Found duplicated region for block: B:51:0x0106 */
+    /* JADX WARN: Found duplicated region for block: B:54:0x010f */
+    /* JADX WARN: Found duplicated region for block: B:57:0x011c */
+    /* JADX WARN: Found duplicated region for block: B:66:0x0131 */
+    /* JADX WARN: Found duplicated region for block: B:68:0x014f */
+    /* JADX WARN: Found duplicated region for block: B:89:0x01a9 */
     public final boolean al(int i, Rect rect) {
         int i2;
         int i3;
@@ -271,12 +276,13 @@ public abstract class axs extends aq {
             bdVar = (bd) obj;
         } else {
             if (i != 17 && i != 33 && i != 66 && i != 130) {
-                throw new IllegalArgumentException("direction must be one of {FOCUS_FORWARD, FOCUS_BACKWARD, FOCUS_UP, FOCUS_DOWN, FOCUS_LEFT, FOCUS_RIGHT}.");
+                throw new IllegalArgumentException(
+                        "direction must be one of {FOCUS_FORWARD, FOCUS_BACKWARD, FOCUS_UP, FOCUS_DOWN, FOCUS_LEFT, FOCUS_RIGHT}.");
             }
             Rect rect4 = new Rect();
             int i14 = this.ae;
             if (i14 != Integer.MIN_VALUE) {
-                am(i14).h(rect4);
+                am(i14).locateDex(rect4);
             } else {
                 if (rect != null) {
                     rect4.set(rect);
@@ -294,7 +300,8 @@ public abstract class axs extends aq {
                         rect4.set(-1, 0, -1, height);
                     } else {
                         if (i != 130) {
-                            throw new IllegalArgumentException("direction must be one of {FOCUS_UP, FOCUS_DOWN, FOCUS_LEFT, FOCUS_RIGHT}.");
+                            throw new IllegalArgumentException(
+                                    "direction must be one of {FOCUS_UP, FOCUS_DOWN, FOCUS_LEFT, FOCUS_RIGHT}.");
                         }
                         i5 = -1;
                         rect4.set(0, -1, width, -1);
@@ -312,7 +319,8 @@ public abstract class axs extends aq {
                     rect2.offset(-(rect4.width() + 1), 0);
                 } else {
                     if (i == 130) {
-                        throw new IllegalArgumentException("direction must be one of {FOCUS_UP, FOCUS_DOWN, FOCUS_LEFT, FOCUS_RIGHT}.");
+                        throw new IllegalArgumentException(
+                                "direction must be one of {FOCUS_UP, FOCUS_DOWN, FOCUS_LEFT, FOCUS_RIGHT}.");
                     }
                     i2 = 0;
                     rect2.offset(0, -(rect4.height() + 1));
@@ -325,17 +333,17 @@ public abstract class axs extends aq {
                     bdVar2 = (bd) dloVar.j(i7);
                     if (bdVar2 == bdVar3) {
                         awpVar.getClass();
-                        bdVar2.h(rect3);
-                        if (bzo.ac(i, rect4, rect3)) {
-                            if (bzo.ac(i, rect4, rect2) || bzo.g(i, rect4, rect3, rect2)) {
+                        bdVar2.locateDex(rect3);
+                        if (KotlinHelpers.ac(i, rect4, rect3)) {
+                            if (KotlinHelpers.ac(i, rect4, rect2) || KotlinHelpers.g(i, rect4, rect3, rect2)) {
                                 rect2.set(rect3);
                                 bdVar = bdVar2;
-                            } else if (bzo.g(i, rect4, rect2, rect3)) {
-                                int iAg2 = bzo.ag(i, rect4, rect3);
-                                int iAj2 = bzo.aj(i, rect4, rect3);
+                            } else if (KotlinHelpers.g(i, rect4, rect2, rect3)) {
+                                int iAg2 = KotlinHelpers.ag(i, rect4, rect3);
+                                int iAj2 = KotlinHelpers.aj(i, rect4, rect3);
                                 i8 = (iAj2 * iAj2) + (iAg2 * 13 * iAg2);
-                                iAg = bzo.ag(i, rect4, rect2);
-                                iAj = bzo.aj(i, rect4, rect2);
+                                iAg = KotlinHelpers.ag(i, rect4, rect2);
+                                iAj = KotlinHelpers.aj(i, rect4, rect2);
                                 if (i8 < (iAj * iAj) + (iAg * 13 * iAg)) {
                                     rect2.set(rect3);
                                     bdVar = bdVar2;
@@ -359,7 +367,8 @@ public abstract class axs extends aq {
                 rect2.offset(-(rect4.width() + 1), 0);
             } else {
                 if (i == 130) {
-                    throw new IllegalArgumentException("direction must be one of {FOCUS_UP, FOCUS_DOWN, FOCUS_LEFT, FOCUS_RIGHT}.");
+                    throw new IllegalArgumentException(
+                            "direction must be one of {FOCUS_UP, FOCUS_DOWN, FOCUS_LEFT, FOCUS_RIGHT}.");
                 }
                 i2 = 0;
                 rect2.offset(0, -(rect4.height() + 1));
@@ -372,17 +381,17 @@ public abstract class axs extends aq {
                 bdVar2 = (bd) dloVar.j(i7);
                 if (bdVar2 == bdVar3) {
                     awpVar.getClass();
-                    bdVar2.h(rect3);
-                    if (bzo.ac(i, rect4, rect3)) {
-                        if (bzo.ac(i, rect4, rect2)) {
+                    bdVar2.locateDex(rect3);
+                    if (KotlinHelpers.ac(i, rect4, rect3)) {
+                        if (KotlinHelpers.ac(i, rect4, rect2)) {
                             rect2.set(rect3);
                             bdVar = bdVar2;
-                        } else if (bzo.g(i, rect4, rect2, rect3)) {
-                            int iAg22 = bzo.ag(i, rect4, rect3);
-                            int iAj22 = bzo.aj(i, rect4, rect3);
+                        } else if (KotlinHelpers.g(i, rect4, rect2, rect3)) {
+                            int iAg22 = KotlinHelpers.ag(i, rect4, rect3);
+                            int iAj22 = KotlinHelpers.aj(i, rect4, rect3);
                             i8 = (iAj22 * iAj22) + (iAg22 * 13 * iAg22);
-                            iAg = bzo.ag(i, rect4, rect2);
-                            iAj = bzo.aj(i, rect4, rect2);
+                            iAg = KotlinHelpers.ag(i, rect4, rect2);
+                            iAj = KotlinHelpers.aj(i, rect4, rect2);
                             if (i8 < (iAj * iAj) + (iAg * 13 * iAg)) {
                                 rect2.set(rect3);
                                 bdVar = bdVar2;

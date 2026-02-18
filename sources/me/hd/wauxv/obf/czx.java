@@ -150,7 +150,7 @@ public abstract class czx {
     }
 
     public final String toString() {
-        StringBuilder sbR = bjs.r(getClass().isAnonymousClass() ? "ViewHolder" : getClass().getSimpleName(), "{");
+        StringBuilder sbR = concat(getClass().isAnonymousClass() ? "ViewHolder" : getClass().getSimpleName(), "{");
         sbR.append(Integer.toHexString(hashCode()));
         sbR.append(" position=");
         sbR.append(this.f);

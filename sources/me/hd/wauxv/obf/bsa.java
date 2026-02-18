@@ -7,7 +7,8 @@ public final class bsa {
     public boolean b;
 
     public bsa(dfx dfxVar) {
-        bzo.q(dfxVar, "descriptor");
-        this.a = new asx(dfxVar, new brz(2, this, bsa.class, "readIfAbsent", "readIfAbsent(Lkotlinx/serialization/descriptors/SerialDescriptor;I)Z", 0, 0, 0));
+        throwIfVar1IsNull(dfxVar, "descriptor");
+        this.a = new asx(dfxVar, new brz(2, this, bsa.class, "readIfAbsent",
+                "readIfAbsent(Lkotlinx/serialization/descriptors/SerialDescriptor;I)Z", 0, 0, 0));
     }
 }

@@ -20,7 +20,7 @@ public final class im extends MultiAutoCompleteTextView {
     public static final int[] a = {R.attr.popupBackground};
     public final ea b;
     public final jl c;
-    public final io d;
+    public final DefaultConfig d;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public im(Context context, AttributeSet attributeSet) {
@@ -39,7 +39,7 @@ public final class im extends MultiAutoCompleteTextView {
         this.c = jlVar;
         jlVar.t(attributeSet, me.hd.wauxv.R.attr.autoCompleteTextViewStyle);
         jlVar.q();
-        io ioVar = new io((EditText) this, 4);
+        DefaultConfig ioVar = new DefaultConfig((EditText) this, 4);
         this.d = ioVar;
         ioVar.am(attributeSet, me.hd.wauxv.R.attr.autoCompleteTextViewStyle);
         KeyListener keyListener = getKeyListener();
@@ -101,7 +101,7 @@ public final class im extends MultiAutoCompleteTextView {
     @Override // android.widget.TextView, android.view.View
     public final InputConnection onCreateInputConnection(EditorInfo editorInfo) {
         InputConnection inputConnectionOnCreateInputConnection = super.onCreateInputConnection(editorInfo);
-        bzo.ak(editorInfo, inputConnectionOnCreateInputConnection, this);
+        KotlinHelpers.ak(editorInfo, inputConnectionOnCreateInputConnection, this);
         return this.d.an(inputConnectionOnCreateInputConnection, editorInfo);
     }
 

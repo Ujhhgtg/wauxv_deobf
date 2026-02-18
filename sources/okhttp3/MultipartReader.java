@@ -6,7 +6,7 @@ import java.net.ProtocolException;
 import java.util.concurrent.TimeUnit;
 import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.b;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.crv;
 import me.hd.wauxv.obf.dfj;
 import me.hd.wauxv.obf.dlc;
@@ -35,7 +35,10 @@ public final class MultipartReader implements Closeable {
     private int partCount;
     private final rm source;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
@@ -49,14 +52,17 @@ public final class MultipartReader implements Closeable {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Part implements Closeable {
         private final rm body;
         private final Headers headers;
 
         public Part(Headers headers, rm rmVar) {
-            bzo.q(headers, "headers");
-            bzo.q(rmVar, "body");
+            throwIfVar1IsNull(headers, "headers");
+            throwIfVar1IsNull(rmVar, "body");
             this.headers = headers;
             this.body = rmVar;
         }
@@ -75,7 +81,10 @@ public final class MultipartReader implements Closeable {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public final class PartSource implements dlc {
         private final ekc timeout = new ekc();
 
@@ -84,7 +93,7 @@ public final class MultipartReader implements Closeable {
 
         @Override // java.io.Closeable, java.lang.AutoCloseable
         public void close() {
-            if (bzo.f(MultipartReader.this.currentPart, this)) {
+            if (nullSafeIsEqual(MultipartReader.this.currentPart, this)) {
                 MultipartReader.this.currentPart = null;
             }
         }
@@ -93,11 +102,11 @@ public final class MultipartReader implements Closeable {
         public long read(rh rhVar, long j) {
             long j2;
             long j3;
-            bzo.q(rhVar, "sink");
+            throwIfVar1IsNull(rhVar, "sink");
             if (j < 0) {
                 throw new IllegalArgumentException(dts.b(j, "byteCount < 0: ").toString());
             }
-            if (!bzo.f(MultipartReader.this.currentPart, this)) {
+            if (!nullSafeIsEqual(MultipartReader.this.currentPart, this)) {
                 throw new IllegalStateException("closed");
             }
             ekc ekcVarTimeout = MultipartReader.this.source.timeout();
@@ -119,7 +128,8 @@ public final class MultipartReader implements Closeable {
                 }
                 try {
                     long jCurrentPartBytesRemaining = multipartReader.currentPartBytesRemaining(j);
-                    return jCurrentPartBytesRemaining == 0 ? -1L : multipartReader.source.read(rhVar, jCurrentPartBytesRemaining);
+                    return jCurrentPartBytesRemaining == 0 ? -1L
+                            : multipartReader.source.read(rhVar, jCurrentPartBytesRemaining);
                 } finally {
                     ekcVarTimeout.timeout(jTimeoutNanos, TimeUnit.NANOSECONDS);
                     if (ekcVar.hasDeadline()) {
@@ -136,7 +146,8 @@ public final class MultipartReader implements Closeable {
             }
             try {
                 long jCurrentPartBytesRemaining2 = multipartReader.currentPartBytesRemaining(j);
-                long j4 = jCurrentPartBytesRemaining2 == 0 ? -1L : multipartReader.source.read(rhVar, jCurrentPartBytesRemaining2);
+                long j4 = jCurrentPartBytesRemaining2 == 0 ? -1L
+                        : multipartReader.source.read(rhVar, jCurrentPartBytesRemaining2);
                 ekcVarTimeout.timeout(jTimeoutNanos, timeUnit);
                 if (ekcVar.hasDeadline()) {
                     j3 = j2;
@@ -163,8 +174,8 @@ public final class MultipartReader implements Closeable {
     }
 
     public MultipartReader(rm rmVar, String str) {
-        bzo.q(rmVar, "source");
-        bzo.q(str, "boundary");
+        throwIfVar1IsNull(rmVar, "source");
+        throwIfVar1IsNull(str, "boundary");
         this.source = rmVar;
         this.boundary = str;
         rh rhVar = new rh();
@@ -178,8 +189,8 @@ public final class MultipartReader implements Closeable {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    /* JADX WARN: Found duplicated region for block: B:44:0x0117  */
-    /* JADX WARN: Found duplicated region for block: B:46:0x012e  */
+    /* JADX WARN: Found duplicated region for block: B:44:0x0117 */
+    /* JADX WARN: Found duplicated region for block: B:46:0x012e */
     public final long currentPartBytesRemaining(long j) {
         long j2;
         long j3;
@@ -190,7 +201,7 @@ public final class MultipartReader implements Closeable {
         rh rhVarC = this.source.c();
         sj sjVar = this.crlfDashDashBoundary;
         rhVarC.getClass();
-        bzo.q(sjVar, "bytes");
+        throwIfVar1IsNull(sjVar, "bytes");
         if (sjVar.g() <= 0) {
             throw new IllegalArgumentException("bytes is empty");
         }
@@ -201,7 +212,7 @@ public final class MultipartReader implements Closeable {
             if (j7 < 0) {
                 while (j7 > 0) {
                     dfjVar = dfjVar.g;
-                    bzo.n(dfjVar);
+                    throwIfVar1IsNull(dfjVar);
                     j7 -= (long) (dfjVar.c - dfjVar.b);
                 }
                 j2 = 1;
@@ -220,9 +231,9 @@ public final class MultipartReader implements Closeable {
                             if (i >= iMin) {
                                 j8 = j4 + ((long) (dfjVar.c - dfjVar.b));
                                 dfjVar = dfjVar.f;
-                                bzo.n(dfjVar);
+                                throwIfVar1IsNull(dfjVar);
                                 j7 = j8;
-                            } else if (bArr[i] == b && b.b(dfjVar, i + 1, bArrI, iG)) {
+                            } else if (bArr[i] == b && b.tryGetClassByName(dfjVar, i + 1, bArrI, iG)) {
                                 j5 = i - dfjVar.b;
                                 j6 = j5 + j4;
                             } else {
@@ -241,7 +252,7 @@ public final class MultipartReader implements Closeable {
                         break;
                     }
                     dfjVar = dfjVar.f;
-                    bzo.n(dfjVar);
+                    throwIfVar1IsNull(dfjVar);
                     j10 = j11;
                 }
                 byte[] bArrI2 = sjVar.i();
@@ -258,7 +269,7 @@ public final class MultipartReader implements Closeable {
                             if (i2 >= iMin2) {
                                 j8 = j4 + ((long) (dfjVar.c - dfjVar.b));
                                 dfjVar = dfjVar.f;
-                                bzo.n(dfjVar);
+                                throwIfVar1IsNull(dfjVar);
                                 j10 = j8;
                             } else if (bArr2[i2] == b2 && b.b(dfjVar, i2 + 1, bArrI2, iG2)) {
                                 j5 = i2 - dfjVar.b;
@@ -270,7 +281,8 @@ public final class MultipartReader implements Closeable {
                     }
                 }
             }
-            return j6 == j3 ? Math.min(j, (this.source.c().b - ((long) this.crlfDashDashBoundary.g())) + j2) : Math.min(j, j6);
+            return j6 == j3 ? Math.min(j, (this.source.c().b - ((long) this.crlfDashDashBoundary.g())) + j2)
+                    : Math.min(j, j6);
         }
         j2 = 1;
         j3 = -1;
@@ -344,7 +356,7 @@ public final class MultipartReader implements Closeable {
     /* JADX WARN: Illegal instructions before constructor call */
     public MultipartReader(ResponseBody responseBody) throws ProtocolException {
         String strParameter;
-        bzo.q(responseBody, "response");
+        throwIfVar1IsNull(responseBody, "response");
         rm rmVarSource = responseBody.source();
         MediaType mediaTypeContentType = responseBody.contentType();
         if (mediaTypeContentType != null && (strParameter = mediaTypeContentType.parameter("boundary")) != null) {

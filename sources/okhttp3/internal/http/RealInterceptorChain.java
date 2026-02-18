@@ -2,7 +2,7 @@ package okhttp3.internal.http;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import okhttp3.Call;
 import okhttp3.Connection;
 import okhttp3.Interceptor;
@@ -26,10 +26,11 @@ public final class RealInterceptorChain implements Interceptor.Chain {
     private final int writeTimeoutMillis;
 
     /* JADX WARN: Multi-variable type inference failed */
-    public RealInterceptorChain(RealCall realCall, List<? extends Interceptor> list, int i, Exchange exchange, Request request, int i2, int i3, int i4) {
-        bzo.q(realCall, "call");
-        bzo.q(list, "interceptors");
-        bzo.q(request, "request");
+    public RealInterceptorChain(RealCall realCall, List<? extends Interceptor> list, int i, Exchange exchange,
+            Request request, int i2, int i3, int i4) {
+        throwIfVar1IsNull(realCall, "call");
+        throwIfVar1IsNull(list, "interceptors");
+        throwIfVar1IsNull(request, "request");
         this.call = realCall;
         this.interceptors = list;
         this.index = i;
@@ -40,7 +41,8 @@ public final class RealInterceptorChain implements Interceptor.Chain {
         this.writeTimeoutMillis = i4;
     }
 
-    public static /* synthetic */ RealInterceptorChain copy$okhttp$default(RealInterceptorChain realInterceptorChain, int i, Exchange exchange, Request request, int i2, int i3, int i4, int i5, Object obj) {
+    public static /* synthetic */ RealInterceptorChain copy$okhttp$default(RealInterceptorChain realInterceptorChain,
+            int i, Exchange exchange, Request request, int i2, int i3, int i4, int i5, Object obj) {
         if ((i5 & 1) != 0) {
             i = realInterceptorChain.index;
         }
@@ -84,7 +86,7 @@ public final class RealInterceptorChain implements Interceptor.Chain {
     }
 
     public final RealInterceptorChain copy$okhttp(int i, Exchange exchange, Request request, int i2, int i3, int i4) {
-        bzo.q(request, "request");
+        throwIfVar1IsNull(request, "request");
         return new RealInterceptorChain(this.call, this.interceptors, i, exchange, request, i2, i3, i4);
     }
 
@@ -114,7 +116,7 @@ public final class RealInterceptorChain implements Interceptor.Chain {
 
     @Override // okhttp3.Interceptor.Chain
     public Response proceed(Request request) {
-        bzo.q(request, "request");
+        throwIfVar1IsNull(request, "request");
         if (this.index >= this.interceptors.size()) {
             throw new IllegalStateException("Check failed.");
         }
@@ -122,25 +124,31 @@ public final class RealInterceptorChain implements Interceptor.Chain {
         Exchange exchange = this.exchange;
         if (exchange != null) {
             if (!exchange.getFinder$okhttp().sameHostAndPort(request.url())) {
-                throw new IllegalStateException(("network interceptor " + this.interceptors.get(this.index - 1) + " must retain the same host and port").toString());
+                throw new IllegalStateException(("network interceptor " + this.interceptors.get(this.index - 1)
+                        + " must retain the same host and port").toString());
             }
             if (this.calls != 1) {
-                throw new IllegalStateException(("network interceptor " + this.interceptors.get(this.index - 1) + " must call proceed() exactly once").toString());
+                throw new IllegalStateException(("network interceptor " + this.interceptors.get(this.index - 1)
+                        + " must call proceed() exactly once").toString());
             }
         }
-        RealInterceptorChain realInterceptorChainCopy$okhttp$default = copy$okhttp$default(this, this.index + 1, null, request, 0, 0, 0, 58, null);
+        RealInterceptorChain realInterceptorChainCopy$okhttp$default = copy$okhttp$default(this, this.index + 1, null,
+                request, 0, 0, 0, 58, null);
         Interceptor interceptor = this.interceptors.get(this.index);
         Response responseIntercept = interceptor.intercept(realInterceptorChainCopy$okhttp$default);
         if (responseIntercept == null) {
             throw new NullPointerException("interceptor " + interceptor + " returned null");
         }
-        if (this.exchange != null && this.index + 1 < this.interceptors.size() && realInterceptorChainCopy$okhttp$default.calls != 1) {
-            throw new IllegalStateException(("network interceptor " + interceptor + " must call proceed() exactly once").toString());
+        if (this.exchange != null && this.index + 1 < this.interceptors.size()
+                && realInterceptorChainCopy$okhttp$default.calls != 1) {
+            throw new IllegalStateException(
+                    ("network interceptor " + interceptor + " must call proceed() exactly once").toString());
         }
         if (responseIntercept.body() != null) {
             return responseIntercept;
         }
-        throw new IllegalStateException(("interceptor " + interceptor + " returned a response with no body").toString());
+        throw new IllegalStateException(
+                ("interceptor " + interceptor + " returned a response with no body").toString());
     }
 
     @Override // okhttp3.Interceptor.Chain
@@ -155,27 +163,30 @@ public final class RealInterceptorChain implements Interceptor.Chain {
 
     @Override // okhttp3.Interceptor.Chain
     public Interceptor.Chain withConnectTimeout(int i, TimeUnit timeUnit) {
-        bzo.q(timeUnit, "unit");
+        throwIfVar1IsNull(timeUnit, "unit");
         if (this.exchange == null) {
-            return copy$okhttp$default(this, 0, null, null, Util.checkDuration("connectTimeout", i, timeUnit), 0, 0, 55, null);
+            return copy$okhttp$default(this, 0, null, null, Util.checkDuration("connectTimeout", i, timeUnit), 0, 0, 55,
+                    null);
         }
         throw new IllegalStateException("Timeouts can't be adjusted in a network interceptor");
     }
 
     @Override // okhttp3.Interceptor.Chain
     public Interceptor.Chain withReadTimeout(int i, TimeUnit timeUnit) {
-        bzo.q(timeUnit, "unit");
+        throwIfVar1IsNull(timeUnit, "unit");
         if (this.exchange == null) {
-            return copy$okhttp$default(this, 0, null, null, 0, Util.checkDuration("readTimeout", i, timeUnit), 0, 47, null);
+            return copy$okhttp$default(this, 0, null, null, 0, Util.checkDuration("readTimeout", i, timeUnit), 0, 47,
+                    null);
         }
         throw new IllegalStateException("Timeouts can't be adjusted in a network interceptor");
     }
 
     @Override // okhttp3.Interceptor.Chain
     public Interceptor.Chain withWriteTimeout(int i, TimeUnit timeUnit) {
-        bzo.q(timeUnit, "unit");
+        throwIfVar1IsNull(timeUnit, "unit");
         if (this.exchange == null) {
-            return copy$okhttp$default(this, 0, null, null, 0, 0, Util.checkDuration("writeTimeout", i, timeUnit), 31, null);
+            return copy$okhttp$default(this, 0, null, null, 0, 0, Util.checkDuration("writeTimeout", i, timeUnit), 31,
+                    null);
         }
         throw new IllegalStateException("Timeouts can't be adjusted in a network interceptor");
     }

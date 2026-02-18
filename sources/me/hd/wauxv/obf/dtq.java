@@ -22,7 +22,8 @@ public final class dtq {
     public final String n;
     public final String o;
 
-    public /* synthetic */ dtq(int i, Float f, Float f2, String str, String str2, String str3, String str4, Integer num, String str5, Integer num2, Integer num3, Integer num4, Float f3, Integer num5, String str6, String str7) {
+    public /* synthetic */ dtq(int i, Float f, Float f2, String str, String str2, String str3, String str4, Integer num,
+            String str5, Integer num2, Integer num3, Integer num4, Float f3, Integer num5, String str6, String str7) {
         if (32767 != (i & Advice.MethodSizeHandler.UNDEFINED_SIZE)) {
             bht.ah(i, Advice.MethodSizeHandler.UNDEFINED_SIZE, dto.b.getDescriptor());
             throw null;
@@ -52,7 +53,15 @@ public final class dtq {
             return false;
         }
         dtq dtqVar = (dtq) obj;
-        return bzo.f(this.a, dtqVar.a) && bzo.f(this.b, dtqVar.b) && bzo.f(this.c, dtqVar.c) && bzo.f(this.d, dtqVar.d) && bzo.f(this.e, dtqVar.e) && bzo.f(this.f, dtqVar.f) && bzo.f(this.g, dtqVar.g) && bzo.f(this.h, dtqVar.h) && bzo.f(this.i, dtqVar.i) && bzo.f(this.j, dtqVar.j) && bzo.f(this.k, dtqVar.k) && bzo.f(this.l, dtqVar.l) && bzo.f(this.m, dtqVar.m) && bzo.f(this.n, dtqVar.n) && bzo.f(this.o, dtqVar.o);
+        return nullSafeIsEqual(this.a, dtqVar.a) && nullSafeIsEqual(this.b, dtqVar.b)
+                && nullSafeIsEqual(this.c, dtqVar.c) && nullSafeIsEqual(this.d, dtqVar.d)
+                && nullSafeIsEqual(this.e, dtqVar.e) && nullSafeIsEqual(this.f, dtqVar.f)
+                && nullSafeIsEqual(this.g, dtqVar.g)
+                && nullSafeIsEqual(this.h, dtqVar.h) && nullSafeIsEqual(this.i, dtqVar.i)
+                && nullSafeIsEqual(this.j, dtqVar.j)
+                && nullSafeIsEqual(this.k, dtqVar.k) && nullSafeIsEqual(this.l, dtqVar.l)
+                && nullSafeIsEqual(this.m, dtqVar.m)
+                && nullSafeIsEqual(this.n, dtqVar.n) && nullSafeIsEqual(this.o, dtqVar.o);
     }
 
     public final int hashCode() {
@@ -105,6 +114,6 @@ public final class dtq {
         bjs.v(sb, this.l, -226980431657770L);
         bjs.w(sb, this.m, -226924597082922L);
         yg.u(sb, this.n, -226864467540778L);
-        return bjs.q(sb, this.o, ')');
+        return concat(sb, this.o, ')');
     }
 }

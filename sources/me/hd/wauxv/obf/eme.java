@@ -13,7 +13,7 @@ public final class eme {
 
     public eme(zc zcVar, boolean z) {
         List list = Collections.EMPTY_LIST;
-        bzo.q(list, "arguments");
+        throwIfVar1IsNull(list, "arguments");
         this.a = zcVar;
         this.b = list;
         this.c = z ? 1 : 0;
@@ -28,7 +28,7 @@ public final class eme {
             return false;
         }
         List list = Collections.EMPTY_LIST;
-        return bzo.f(list, list) && this.c == emeVar.c;
+        return nullSafeIsEqual(list, list) && this.c == emeVar.c;
     }
 
     public final int hashCode() {
@@ -38,9 +38,21 @@ public final class eme {
     public final String toString() {
         StringBuilder sb = new StringBuilder();
         Class clsBd = cnf.bd(this.a);
-        String name = clsBd.isArray() ? clsBd.equals(boolean[].class) ? "kotlin.BooleanArray" : clsBd.equals(char[].class) ? "kotlin.CharArray" : clsBd.equals(byte[].class) ? "kotlin.ByteArray" : clsBd.equals(short[].class) ? "kotlin.ShortArray" : clsBd.equals(int[].class) ? "kotlin.IntArray" : clsBd.equals(float[].class) ? "kotlin.FloatArray" : clsBd.equals(long[].class) ? "kotlin.LongArray" : clsBd.equals(double[].class) ? "kotlin.DoubleArray" : "kotlin.Array" : clsBd.getName();
+        String name = clsBd.isArray()
+                ? clsBd.equals(boolean[].class) ? "kotlin.BooleanArray"
+                        : clsBd.equals(char[].class) ? "kotlin.CharArray"
+                                : clsBd.equals(byte[].class) ? "kotlin.ByteArray"
+                                        : clsBd.equals(short[].class) ? "kotlin.ShortArray"
+                                                : clsBd.equals(int[].class) ? "kotlin.IntArray"
+                                                        : clsBd.equals(float[].class) ? "kotlin.FloatArray"
+                                                                : clsBd.equals(long[].class) ? "kotlin.LongArray"
+                                                                        : clsBd.equals(double[].class)
+                                                                                ? "kotlin.DoubleArray"
+                                                                                : "kotlin.Array"
+                : clsBd.getName();
         List list = Collections.EMPTY_LIST;
-        sb.append(name + (list.isEmpty() ? "" : aaz.k(list, ", ", "<", ">", new dos(10), 24)) + ((this.c & 1) != 0 ? TypeDescription.Generic.OfWildcardType.SYMBOL : ""));
+        sb.append(name + (list.isEmpty() ? "" : aaz.k(list, ", ", "<", ">", new dos(10), 24))
+                + ((this.c & 1) != 0 ? TypeDescription.Generic.OfWildcardType.SYMBOL : ""));
         sb.append(" (Kotlin reflection is not available)");
         return sb.toString();
     }

@@ -10,7 +10,7 @@ public final class bdb extends ekc {
     public ekc a;
 
     public bdb(ekc ekcVar) {
-        bzo.q(ekcVar, MethodDelegation.ImplementationDelegate.FIELD_NAME_PREFIX);
+        throwIfVar1IsNull(ekcVar, MethodDelegation.ImplementationDelegate.FIELD_NAME_PREFIX);
         this.a = ekcVar;
     }
 
@@ -41,7 +41,7 @@ public final class bdb extends ekc {
 
     @Override // me.hd.wauxv.obf.ekc
     public final ekc timeout(long j, TimeUnit timeUnit) {
-        bzo.q(timeUnit, "unit");
+        throwIfVar1IsNull(timeUnit, "unit");
         return this.a.timeout(j, timeUnit);
     }
 

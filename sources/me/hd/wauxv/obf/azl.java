@@ -14,7 +14,7 @@ public final class azl extends dqc {
     @Override // me.hd.wauxv.obf.dqc
     public final int c(bbb bbbVar) {
         int iT;
-        bzo.q(bbbVar, "fbb");
+        throwIfVar1IsNull(bbbVar, "fbb");
         List list = this.a;
         if (list != null) {
             ArrayList arrayList = new ArrayList(abb.ak(list, 10));
@@ -48,7 +48,7 @@ public final class azl extends dqc {
     }
 
     public final void f(Class cls) {
-        bzo.q(cls, "clazz");
+        throwIfVar1IsNull(cls, "clazz");
         azi aziVar = new azi();
         zb zbVar = new zb();
         zbVar.j(ams.e(cls), dne.Equals);

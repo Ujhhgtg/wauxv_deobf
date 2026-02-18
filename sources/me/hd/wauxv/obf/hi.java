@@ -19,7 +19,7 @@ public final /* synthetic */ class hi implements Runnable {
         this.b = context;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:28:0x008d  */
+    /* JADX WARN: Found duplicated region for block: B:28:0x008d */
     @Override // java.lang.Runnable
     public final void run() {
         bwy bwyVar;
@@ -30,7 +30,8 @@ public final /* synthetic */ class hi implements Runnable {
                 int i = Build.VERSION.SDK_INT;
                 if (i >= 33) {
                     Context context2 = this.b;
-                    ComponentName componentName = new ComponentName(context2, "androidx.appcompat.app.AppLocalesMetadataHolderService");
+                    ComponentName componentName = new ComponentName(context2,
+                            "androidx.appcompat.app.AppLocalesMetadataHolderService");
                     if (context2.getPackageManager().getComponentEnabledSetting(componentName) != 1) {
                         if (i >= 33) {
                             kz kzVar = ho.g;
@@ -56,7 +57,7 @@ public final /* synthetic */ class hi implements Runnable {
                             String strAu = bhu.au(context2);
                             Object systemService2 = context2.getSystemService("locale");
                             if (systemService2 != null) {
-                                hk.b(systemService2, hj.a(strAu));
+                                hk.tryGetClassByName(systemService2, hj.a(strAu));
                             }
                         }
                         context2.getPackageManager().setComponentEnabledSetting(componentName, 1, 1);
@@ -65,7 +66,8 @@ public final /* synthetic */ class hi implements Runnable {
                 ho.f = true;
                 break;
             case 1:
-                new ThreadPoolExecutor(0, 1, 0L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue()).execute(new hi(this.b, 2));
+                new ThreadPoolExecutor(0, 1, 0L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue())
+                        .execute(new hi(this.b, 2));
                 break;
             default:
                 emc.bc(this.b, new cvu(), emc.v, false);

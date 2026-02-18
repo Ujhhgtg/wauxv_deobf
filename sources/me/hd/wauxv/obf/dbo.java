@@ -11,7 +11,7 @@ public abstract class dbo {
     /* JADX WARN: Multi-variable type inference failed */
     public static void a(Activity activity, bug bugVar) {
         bur burVarAp;
-        bzo.q(bugVar, "event");
+        throwIfVar1IsNull(bugVar, "event");
         if (!(activity instanceof bup) || (burVarAp = ((bup) activity).ap()) == null) {
             return;
         }
@@ -25,7 +25,8 @@ public abstract class dbo {
         }
         FragmentManager fragmentManager = activity.getFragmentManager();
         if (fragmentManager.findFragmentByTag("androidx.lifecycle.LifecycleDispatcher.report_fragment_tag") == null) {
-            fragmentManager.beginTransaction().add(new dbq(), "androidx.lifecycle.LifecycleDispatcher.report_fragment_tag").commit();
+            fragmentManager.beginTransaction()
+                    .add(new dbq(), "androidx.lifecycle.LifecycleDispatcher.report_fragment_tag").commit();
             fragmentManager.executePendingTransactions();
         }
     }

@@ -10,7 +10,10 @@ import okhttp3.Interceptor;
 public final class clc extends btp implements bfu {
     public final /* synthetic */ Interceptor.Chain a;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'super' call moved to the top of the method (can break code
+     * semantics)
+     */
     public clc(Interceptor.Chain chain) {
         super(0);
         this.a = chain;
@@ -19,7 +22,7 @@ public final class clc extends btp implements bfu {
     @Override // me.hd.wauxv.obf.bfu
     public final Object invoke() {
         Iterator it = ckv.g.iterator();
-        bzo.p(it, "NetConfig.runningCalls.iterator()");
+        throwIfVar1IsNull(it, "NetConfig.runningCalls.iterator()");
         while (it.hasNext()) {
             Call call = (Call) ((WeakReference) it.next()).get();
             if (call == null) {

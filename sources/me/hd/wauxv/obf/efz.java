@@ -6,7 +6,9 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class efz {
     public static final efy Companion = new efy();
-    public static final btt[] a = {null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, ewz.am(btx.a, new efq(1)), null, null, null, null, null, null, null};
+    public static final btt[] a = { null, null, null, null, null, null, null, null, null, null, null, null, null, null,
+            null, null, null, null, null, null, null, null, ewz.am(btx.a, new efq(1)), null, null, null, null, null,
+            null, null };
     public final egx aa;
     public final ecv ab;
     public final Integer ac;
@@ -38,7 +40,10 @@ public final class efz {
     public final String y;
     public final dvu z;
 
-    public /* synthetic */ efz(int i, Long l, dsy dsyVar, String str, String str2, Integer num, String str3, Long l2, Integer num2, Integer num3, String str4, String str5, String str6, Integer num4, Long l3, Integer num5, dte dteVar, eiz eizVar, Long l4, eju ejuVar, dte dteVar2, efj efjVar, Integer num6, List list, String str7, dvu dvuVar, egx egxVar, ecv ecvVar, Integer num7, String str8, ehy ehyVar) {
+    public /* synthetic */ efz(int i, Long l, dsy dsyVar, String str, String str2, Integer num, String str3, Long l2,
+            Integer num2, Integer num3, String str4, String str5, String str6, Integer num4, Long l3, Integer num5,
+            dte dteVar, eiz eizVar, Long l4, eju ejuVar, dte dteVar2, efj efjVar, Integer num6, List list, String str7,
+            dvu dvuVar, egx egxVar, ecv ecvVar, Integer num7, String str8, ehy ehyVar) {
         if (1073741823 != (i & 1073741823)) {
             bht.ah(i, 1073741823, efx.b.getDescriptor());
             throw null;
@@ -83,7 +88,21 @@ public final class efz {
             return false;
         }
         efz efzVar = (efz) obj;
-        return bzo.f(this.b, efzVar.b) && bzo.f(this.c, efzVar.c) && bzo.f(this.d, efzVar.d) && bzo.f(this.e, efzVar.e) && bzo.f(this.f, efzVar.f) && bzo.f(this.g, efzVar.g) && bzo.f(this.h, efzVar.h) && bzo.f(this.i, efzVar.i) && bzo.f(this.j, efzVar.j) && bzo.f(this.k, efzVar.k) && bzo.f(this.l, efzVar.l) && bzo.f(this.m, efzVar.m) && bzo.f(this.n, efzVar.n) && bzo.f(this.o, efzVar.o) && bzo.f(this.p, efzVar.p) && bzo.f(this.q, efzVar.q) && bzo.f(this.r, efzVar.r) && bzo.f(this.s, efzVar.s) && bzo.f(this.t, efzVar.t) && bzo.f(this.u, efzVar.u) && bzo.f(this.v, efzVar.v) && bzo.f(this.w, efzVar.w) && bzo.f(this.x, efzVar.x) && bzo.f(this.y, efzVar.y) && bzo.f(this.z, efzVar.z) && bzo.f(this.aa, efzVar.aa) && bzo.f(this.ab, efzVar.ab) && bzo.f(this.ac, efzVar.ac) && bzo.f(this.ad, efzVar.ad) && bzo.f(this.ae, efzVar.ae);
+        return nullSafeIsEqual(this.b, efzVar.b) && nullSafeIsEqual(this.c, efzVar.c)
+                && nullSafeIsEqual(this.d, efzVar.d) && nullSafeIsEqual(this.e, efzVar.e)
+                && nullSafeIsEqual(this.f, efzVar.f) && nullSafeIsEqual(this.g, efzVar.g)
+                && nullSafeIsEqual(this.h, efzVar.h) && nullSafeIsEqual(this.i, efzVar.i)
+                && nullSafeIsEqual(this.j, efzVar.j) && nullSafeIsEqual(this.k, efzVar.k)
+                && nullSafeIsEqual(this.l, efzVar.l) && nullSafeIsEqual(this.m, efzVar.m)
+                && nullSafeIsEqual(this.n, efzVar.n) && nullSafeIsEqual(this.o, efzVar.o)
+                && nullSafeIsEqual(this.p, efzVar.p) && nullSafeIsEqual(this.q, efzVar.q)
+                && nullSafeIsEqual(this.r, efzVar.r) && nullSafeIsEqual(this.s, efzVar.s)
+                && nullSafeIsEqual(this.t, efzVar.t) && nullSafeIsEqual(this.u, efzVar.u)
+                && nullSafeIsEqual(this.v, efzVar.v) && nullSafeIsEqual(this.w, efzVar.w)
+                && nullSafeIsEqual(this.x, efzVar.x) && nullSafeIsEqual(this.y, efzVar.y)
+                && nullSafeIsEqual(this.z, efzVar.z) && nullSafeIsEqual(this.aa, efzVar.aa)
+                && nullSafeIsEqual(this.ab, efzVar.ab) && nullSafeIsEqual(this.ac, efzVar.ac)
+                && nullSafeIsEqual(this.ad, efzVar.ad) && nullSafeIsEqual(this.ae, efzVar.ae);
     }
 
     public final int hashCode() {

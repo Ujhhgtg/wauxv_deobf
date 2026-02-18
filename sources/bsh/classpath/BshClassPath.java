@@ -66,7 +66,10 @@ public class BshClassPath implements ClassPathListener, NameSource {
     private static final Pattern dotClass = Pattern.compile("\\.[^\\.]+$");
     private static final Pattern splitClass = Pattern.compile("\\.(?=[^.]+$)");
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class AmbiguousName {
         List<String> list;
 
@@ -85,21 +88,29 @@ public class BshClassPath implements ClassPathListener, NameSource {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static abstract class ClassSource {
         Object source;
 
         public abstract byte[] getCode(String str);
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class DirClassSource extends ClassSource {
         public DirClassSource(File file) {
             this.source = file;
         }
 
         public static byte[] readBytesFromFile(File file, String str) {
-            File file2 = new File(file, str.replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, File.separatorChar) + ClassFileLocator.CLASS_FILE_EXTENSION);
+            File file2 = new File(file,
+                    str.replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH,
+                            File.separatorChar) + ClassFileLocator.CLASS_FILE_EXTENSION);
             if (!file2.exists()) {
                 return null;
             }
@@ -149,7 +160,10 @@ public class BshClassPath implements ClassPathListener, NameSource {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class GeneratedClassSource extends ClassSource {
         public GeneratedClassSource(byte[] bArr) {
             this.source = bArr;
@@ -161,26 +175,38 @@ public class BshClassPath implements ClassPathListener, NameSource {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class JarClassSource extends ClassSource {
         public JarClassSource(URL url) {
             this.source = url;
         }
 
-        /* JADX WARN: Undo finally extract visitor
-        jadx.core.utils.exceptions.JadxRuntimeException: Expected to find fallthrough terminus for handler TryEdge: [PREMATURE_EXIT B:27:0x0035 -> B:9:0x0045] - Handler: None
-        	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.findCommonInsns(MarkFinallyVisitor.java:419)
-        	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.extractFinally(MarkFinallyVisitor.java:302)
-        	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.processTryBlock(MarkFinallyVisitor.java:222)
-        	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:150)
+        /*
+         * JADX WARN: Undo finally extract visitor
+         * jadx.core.utils.exceptions.JadxRuntimeException: Expected to find fallthrough
+         * terminus for handler TryEdge: [PREMATURE_EXIT B:27:0x0035 -> B:9:0x0045] -
+         * Handler: None
+         * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.findCommonInsns(
+         * MarkFinallyVisitor.java:419)
+         * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.extractFinally(
+         * MarkFinallyVisitor.java:302)
+         * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.processTryBlock(
+         * MarkFinallyVisitor.java:222)
+         * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+         * java:150)
          */
         @Override // bsh.classpath.BshClassPath.ClassSource
         public byte[] getCode(String str) {
-            String str2 = "/" + str.replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/') + ClassFileLocator.CLASS_FILE_EXTENSION;
+            String str2 = "/" + str.replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/')
+                    + ClassFileLocator.CLASS_FILE_EXTENSION;
             try {
-                URLClassLoader uRLClassLoader = new URLClassLoader(new URL[]{getURL()});
+                URLClassLoader uRLClassLoader = new URLClassLoader(new URL[] { getURL() });
                 try {
-                    DataInputStream dataInputStream = new DataInputStream(uRLClassLoader.loadClass(str).getResourceAsStream(str2));
+                    DataInputStream dataInputStream = new DataInputStream(
+                            uRLClassLoader.loadClass(str).getResourceAsStream(str2));
                     try {
                         byte[] bArr = new byte[dataInputStream.available()];
                         dataInputStream.readFully(bArr);
@@ -217,7 +243,10 @@ public class BshClassPath implements ClassPathListener, NameSource {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class JrtClassSource extends ClassSource {
         public JrtClassSource(URL url) {
             this.source = url;
@@ -226,7 +255,9 @@ public class BshClassPath implements ClassPathListener, NameSource {
         @Override // bsh.classpath.BshClassPath.ClassSource
         public byte[] getCode(String str) {
             try {
-                DataInputStream dataInputStream = new DataInputStream((InputStream) new URL(this.source + ("/" + str.replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/') + ClassFileLocator.CLASS_FILE_EXTENSION)).getContent());
+                DataInputStream dataInputStream = new DataInputStream((InputStream) new URL(this.source + ("/"
+                        + str.replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/')
+                        + ClassFileLocator.CLASS_FILE_EXTENSION)).getContent());
                 try {
                     byte[] bArr = new byte[dataInputStream.available()];
                     dataInputStream.readFully(bArr);
@@ -254,7 +285,10 @@ public class BshClassPath implements ClassPathListener, NameSource {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface MappingFeedback {
         void classMapping(String str);
 
@@ -265,7 +299,10 @@ public class BshClassPath implements ClassPathListener, NameSource {
         void startClassMapping();
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class UnqualifiedNameTable extends HashMap<String, AmbiguousName> {
         private static final long serialVersionUID = 1;
 
@@ -334,7 +371,7 @@ public class BshClassPath implements ClassPathListener, NameSource {
     public static BshClassPath getBootClassPath() throws ClassPathException {
         if (bootClassPath == null) {
             try {
-                bootClassPath = new BshClassPath("Boot Class Path", new URL[]{getRTJarPath()});
+                bootClassPath = new BshClassPath("Boot Class Path", new URL[] { getRTJarPath() });
             } catch (MalformedURLException e) {
                 throw new ClassPathException(" can't find boot jar: " + e, e);
             }
@@ -344,7 +381,8 @@ public class BshClassPath implements ClassPathListener, NameSource {
 
     private static URL getRTJarPath() {
         String externalForm = Class.class.getResource("/java/lang/String.class").toExternalForm();
-        return externalForm.startsWith("jrt:/") ? new URL(externalForm.substring(0, externalForm.indexOf(47, 5))) : new URL(externalForm.replaceFirst("[^!]*$", "/"));
+        return externalForm.startsWith("jrt:/") ? new URL(externalForm.substring(0, externalForm.indexOf(47, 5)))
+                : new URL(externalForm.replaceFirst("[^!]*$", "/"));
     }
 
     private UnqualifiedNameTable getUnqualifiedNameTable() {
@@ -390,7 +428,8 @@ public class BshClassPath implements ClassPathListener, NameSource {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public static /* synthetic */ void lambda$buildUnqualifiedNameTable$4(UnqualifiedNameTable unqualifiedNameTable, BshClassPath bshClassPath) {
+    public static /* synthetic */ void lambda$buildUnqualifiedNameTable$4(UnqualifiedNameTable unqualifiedNameTable,
+            BshClassPath bshClassPath) {
         bshClassPath.classSource.keySet().forEach(new a(unqualifiedNameTable, 2));
     }
 
@@ -485,9 +524,11 @@ public class BshClassPath implements ClassPathListener, NameSource {
         } catch (FileSystemAlreadyExistsException unused2) {
         }
         try {
-            Stream<Path> streamWalk = Files.walk(FileSystems.getFileSystem(url.toURI()).getPath("/", new String[0]), new FileVisitOption[0]);
+            Stream<Path> streamWalk = Files.walk(FileSystems.getFileSystem(url.toURI()).getPath("/", new String[0]),
+                    new FileVisitOption[0]);
             try {
-                String[] strArr = (String[]) streamWalk.map(new ky(1)).filter(new ra(1)).map(new ky(2)).toArray(new rb(0));
+                String[] strArr = (String[]) streamWalk.map(new ky(1)).filter(new ra(1)).map(new ky(2))
+                        .toArray(new rb(0));
                 streamWalk.close();
                 return strArr;
             } catch (Throwable th) {
@@ -508,9 +549,12 @@ public class BshClassPath implements ClassPathListener, NameSource {
     public static String[] searchJrtFSForClasses(URL url) throws Exception {
         try {
             try {
-                Stream<Path> streamWalk = Files.walk(FileSystems.getFileSystem(new URI("jrt:/")).getPath("modules", url.getPath()), new FileVisitOption[0]);
+                Stream<Path> streamWalk = Files.walk(
+                        FileSystems.getFileSystem(new URI("jrt:/")).getPath("modules", url.getPath()),
+                        new FileVisitOption[0]);
                 try {
-                    String[] strArr = (String[]) streamWalk.map(new ky(1)).filter(new ra(1)).map(new ky(2)).toArray(new rb(1));
+                    String[] strArr = (String[]) streamWalk.map(new ky(1)).filter(new ra(1)).map(new ky(2))
+                            .toArray(new rb(1));
                     streamWalk.close();
                     return strArr;
                 } catch (Throwable th) {
@@ -533,7 +577,8 @@ public class BshClassPath implements ClassPathListener, NameSource {
 
     public static String[] splitClassname(String str) {
         String strCanonicalizeClassName = canonicalizeClassName(str);
-        return strCanonicalizeClassName.indexOf(46) == -1 ? new String[]{"<unpackaged>", strCanonicalizeClassName} : splitClass.split(strCanonicalizeClassName);
+        return strCanonicalizeClassName.indexOf(46) == -1 ? new String[] { "<unpackaged>", strCanonicalizeClassName }
+                : splitClass.split(strCanonicalizeClassName);
     }
 
     public static String[] traverseDirForClasses(File file) throws IOException {
@@ -720,7 +765,7 @@ public class BshClassPath implements ClassPathListener, NameSource {
                 map(urlArr[i]);
             } catch (Exception e) {
                 errorWhileMapping("Error constructing classpath: " + urlArr[i] + ": " + e);
-                throw new RuntimeException(bjs.i(i, "Failed to map class path "), e);
+                throw new RuntimeException(concatVar2Var1(i, "Failed to map class path "), e);
             }
         }
     }
@@ -790,7 +835,8 @@ public class BshClassPath implements ClassPathListener, NameSource {
     }
 
     public String toString() {
-        return "BshClassPath " + this.name + "(" + super.toString() + ") path= " + this.path + "\ncompPaths = {" + this.compPaths + " }";
+        return "BshClassPath " + this.name + "(" + super.toString() + ") path= " + this.path + "\ncompPaths = {"
+                + this.compPaths + " }";
     }
 
     public void insureInitialized(boolean z) {

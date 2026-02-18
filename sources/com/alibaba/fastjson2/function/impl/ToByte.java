@@ -24,6 +24,6 @@ public class ToByte implements Function {
         if (obj instanceof Number) {
             return Byte.valueOf(((Number) obj).byteValue());
         }
-        throw new JSONException(bjs.m(obj, new StringBuilder("can not cast to Byte ")));
+        throw new JSONException(concatVar1GetClass(obj, new StringBuilder("can not cast to Byte ")));
     }
 }

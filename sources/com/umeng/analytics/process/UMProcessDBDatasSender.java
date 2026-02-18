@@ -38,7 +38,10 @@ public class UMProcessDBDatasSender implements UMLogDataProtocol {
     private FileLockUtil mLockUtil = new FileLockUtil();
     private q.c mPolicySelector;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public class ConstructMessageCallback implements FileLockCallback {
         private ConstructMessageCallback() {
         }
@@ -57,11 +60,14 @@ public class UMProcessDBDatasSender implements UMLogDataProtocol {
         public boolean onFileLock(String str) {
             JSONObject jSONObjectBuildEnvelopeWithExtHeader;
             UMProcessDBDatasSender uMProcessDBDatasSender = UMProcessDBDatasSender.this;
-            JSONObject jSONObject = uMProcessDBDatasSender.setupReportData(UMEnvelopeBuild.maxDataSpace(uMProcessDBDatasSender.mContext));
+            JSONObject jSONObject = uMProcessDBDatasSender
+                    .setupReportData(UMEnvelopeBuild.maxDataSpace(uMProcessDBDatasSender.mContext));
             if (jSONObject != null && jSONObject.length() >= 1) {
                 JSONObject jSONObject2 = (JSONObject) jSONObject.opt("header");
                 JSONObject jSONObject3 = (JSONObject) jSONObject.opt("content");
-                if (UMProcessDBDatasSender.this.mContext != null && jSONObject2 != null && jSONObject3 != null && (jSONObjectBuildEnvelopeWithExtHeader = UMEnvelopeBuild.buildEnvelopeWithExtHeader(UMProcessDBDatasSender.this.mContext, jSONObject2, jSONObject3)) != null) {
+                if (UMProcessDBDatasSender.this.mContext != null && jSONObject2 != null && jSONObject3 != null
+                        && (jSONObjectBuildEnvelopeWithExtHeader = UMEnvelopeBuild.buildEnvelopeWithExtHeader(
+                                UMProcessDBDatasSender.this.mContext, jSONObject2, jSONObject3)) != null) {
                     UMProcessDBDatasSender.this.removeCacheData(jSONObjectBuildEnvelopeWithExtHeader);
                 }
             }
@@ -69,7 +75,10 @@ public class UMProcessDBDatasSender implements UMLogDataProtocol {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public class ReplaceCallback implements FileLockCallback {
         private ReplaceCallback() {
         }
@@ -93,7 +102,8 @@ public class UMProcessDBDatasSender implements UMLogDataProtocol {
             if (str.startsWith(str2)) {
                 str = str.replaceFirst(str2, "");
             }
-            UMProcessDBHelper.getInstance(UMProcessDBDatasSender.this.mContext).deleteEventDatas(str.replace(a.d, ""), null, null);
+            UMProcessDBHelper.getInstance(UMProcessDBDatasSender.this.mContext).deleteEventDatas(str.replace(a.d, ""),
+                    null, null);
             return true;
         }
     }
@@ -105,7 +115,7 @@ public class UMProcessDBDatasSender implements UMLogDataProtocol {
         if (defconProcesserHandler() != 0) {
             return;
         }
-        this.mLockUtil.doFileOperateion(b.b(this.mContext, ""), new ConstructMessageCallback());
+        this.mLockUtil.doFileOperateion(b.tryGetClassByName(this.mContext, ""), new ConstructMessageCallback());
     }
 
     private int defconProcesserHandler() throws Throwable {
@@ -126,7 +136,8 @@ public class UMProcessDBDatasSender implements UMLogDataProtocol {
             if (this.mGeneralBodyIds == null) {
                 this.mGeneralBodyIds = new ArrayList();
             }
-            mainEvents = UMProcessDBHelper.getInstance(this.mContext).readMainEvents(UMEnvelopeBuild.maxDataSpace(this.mContext) - 2000, this.mGeneralBodyIds);
+            mainEvents = UMProcessDBHelper.getInstance(this.mContext)
+                    .readMainEvents(UMEnvelopeBuild.maxDataSpace(this.mContext) - 2000, this.mGeneralBodyIds);
             SharedPreferences sharedPreferences = PreferenceWrapper.getDefault(this.mContext);
             if (sharedPreferences != null) {
                 String string = sharedPreferences.getString("userlevel", "");
@@ -145,7 +156,8 @@ public class UMProcessDBDatasSender implements UMLogDataProtocol {
             }
             if (ABTest.getService(this.mContext).isInTest()) {
                 JSONObject jSONObject2 = new JSONObject();
-                jSONObject2.put(ABTest.getService(this.mContext).getTestName(), ABTest.getService(this.mContext).getGroupInfo());
+                jSONObject2.put(ABTest.getService(this.mContext).getTestName(),
+                        ABTest.getService(this.mContext).getGroupInfo());
                 mainEvents.put(f.K, jSONObject2);
             }
         } catch (Throwable unused) {
@@ -175,7 +187,8 @@ public class UMProcessDBDatasSender implements UMLogDataProtocol {
             } else {
                 jSONObject.put("sdk_version", "9.8.8");
             }
-            if (this.mGeneralBodyIds.size() <= 0 || (versionInfoFromColumId = UMProcessDBHelper.getInstance(this.mContext).readVersionInfoFromColumId(this.mGeneralBodyIds.get(0))) == null) {
+            if (this.mGeneralBodyIds.size() <= 0 || (versionInfoFromColumId = UMProcessDBHelper
+                    .getInstance(this.mContext).readVersionInfoFromColumId(this.mGeneralBodyIds.get(0))) == null) {
                 strOptString = "";
                 strOptString2 = "";
             } else {
@@ -203,7 +216,9 @@ public class UMProcessDBDatasSender implements UMLogDataProtocol {
             jSONObject.put(f.an, "1.0.0");
             if (TextUtils.isEmpty(strImprintProperty)) {
                 jSONObject.put(f.l, sharedPreferences.getString("vers_pre_version", "0"));
-                jSONObject.put(f.m, sharedPreferences.getString("vers_date", new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date(System.currentTimeMillis()))));
+                jSONObject.put(f.m,
+                        sharedPreferences.getString("vers_date", new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+                                .format(new Date(System.currentTimeMillis()))));
             }
             return jSONObject;
         } catch (Throwable th) {
@@ -237,7 +252,8 @@ public class UMProcessDBDatasSender implements UMLogDataProtocol {
             return;
         }
         JSONObject jSONObject = (JSONObject) obj;
-        if (!jSONObject.has("#a") || (jSONObjectOptJSONObject = jSONObject.optJSONObject("#a")) == null || jSONObjectOptJSONObject.length() <= 0 || !jSONObjectOptJSONObject.has("ekv")) {
+        if (!jSONObject.has("#a") || (jSONObjectOptJSONObject = jSONObject.optJSONObject("#a")) == null
+                || jSONObjectOptJSONObject.length() <= 0 || !jSONObjectOptJSONObject.has("ekv")) {
             return;
         }
         UMProcessDBHelper.getInstance(this.mContext).deleteMainProcessEventDatasByIds(this.mGeneralBodyIds);
@@ -266,10 +282,12 @@ public class UMProcessDBDatasSender implements UMLogDataProtocol {
             if (jSONObject2.length() > 0) {
                 if (jSONObject2.has("analytics")) {
                     JSONObject jSONObjectOptJSONObject = jSONObject2.optJSONObject("analytics");
-                    if (jSONObjectOptJSONObject.length() == 1 && (jSONObjectOptJSONObject.optJSONObject(f.L) != null || !TextUtils.isEmpty(jSONObjectOptJSONObject.optString("userlevel")))) {
+                    if (jSONObjectOptJSONObject.length() == 1 && (jSONObjectOptJSONObject.optJSONObject(f.L) != null
+                            || !TextUtils.isEmpty(jSONObjectOptJSONObject.optString("userlevel")))) {
                         return null;
                     }
-                    if (jSONObjectOptJSONObject.length() == 2 && jSONObjectOptJSONObject.optJSONObject(f.L) != null && !TextUtils.isEmpty(jSONObjectOptJSONObject.optString("userlevel"))) {
+                    if (jSONObjectOptJSONObject.length() == 2 && jSONObjectOptJSONObject.optJSONObject(f.L) != null
+                            && !TextUtils.isEmpty(jSONObjectOptJSONObject.optString("userlevel"))) {
                         return null;
                     }
                 }
@@ -285,7 +303,8 @@ public class UMProcessDBDatasSender implements UMLogDataProtocol {
         if (UMUtils.isMainProgress(this.mContext) && !com.umeng.commonsdk.utils.c.a()) {
             switch (i) {
                 case UM_PROCESS_EVENT_KEY /* 36945 */:
-                    executor.schedule(new Runnable() { // from class: com.umeng.analytics.process.UMProcessDBDatasSender.1
+                    executor.schedule(new Runnable() { // from class:
+                                                       // com.umeng.analytics.process.UMProcessDBDatasSender.1
                         @Override // java.lang.Runnable
                         public void run() {
                             UMRTLog.i(UMRTLog.RTLOG_TAG, "--->>> call processDBToMain start.");

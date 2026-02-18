@@ -40,7 +40,7 @@ public abstract class t extends brm implements afw, ahp {
     }
 
     @Override // me.hd.wauxv.obf.brm
-    public final void f(abt abtVar) {
+    public final void f(QueryDidNotReturnUniqueResultRuntimeException abtVar) {
         cna.z(this.a, abtVar);
     }
 
@@ -74,7 +74,7 @@ public abstract class t extends brm implements afw, ahp {
                 return;
             }
             if (iOrdinal != 3) {
-                throw new abt();
+                throw new QueryDidNotReturnUniqueResultRuntimeException();
             }
             try {
                 ahh ahhVar = this.a;

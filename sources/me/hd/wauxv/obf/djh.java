@@ -5,7 +5,7 @@ import org.luckypray.dexkit.DexKitBridge;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class djh extends doo implements bng {
+public final class djh extends BaseHook implements IRequiresDexLocate {
     public static final djh a;
     public static final String[] b;
     public static final String c;
@@ -29,31 +29,33 @@ public final class djh extends doo implements bng {
         azg azgVarR = dqc.bi(obj).r();
         azgVarR.ab = "field_snsId" /* cnb.z(-535771400370986L) */;
         Object objE = ((azk) yg.e(azgVarR)).e();
-        bzo.n(objE);
+        throwIfVar1IsNull(objE);
         long jLongValue = ((Number) objE).longValue();
         azg azgVarR2 = dqc.bi(obj).r();
         azgVarR2.ab = "field_userName" /* cnb.z(-532936721955626L) */;
         Object objE2 = ((azk) yg.e(azgVarR2)).e();
-        bzo.n(objE2);
+        throwIfVar1IsNull(objE2);
         azg azgVarR3 = dqc.bi(obj).r();
         azgVarR3.ab = "field_createTime" /* cnb.z(-532855117577002L) */;
         Object objE3 = ((azk) yg.e(azgVarR3)).e();
-        bzo.n(objE3);
+        throwIfVar1IsNull(objE3);
         int iIntValue = ((Number) objE3).intValue();
         azg azgVarR4 = dqc.bi(obj).r();
         azgVarR4.ab = "field_type" /* cnb.z(-532799283002154L) */;
         Object objE4 = ((azk) yg.e(azgVarR4)).e();
-        bzo.n(objE4);
+        throwIfVar1IsNull(objE4);
         int iIntValue2 = ((Number) objE4).intValue();
-        String strBo = dnr.bo(djf.a.o(), "${time}" /* cnb.z(-532769218231082L) */, cnh.ag(((long) iIntValue) * 1000, djg.a.o(), null, 2));
+        String strBo = dnr.bo(djf.a.o(), "${time}" /* cnb.z(-532769218231082L) */,
+                cnh.ag(((long) iIntValue) * 1000, djg.a.o(), null, 2));
         String strZ = "${type}" /* cnb.z(-532734858492714L) */;
         String strZ2 = "0x" /* cnb.z(-533250254568234L) */;
         cmz.o(16);
         String string = Integer.toString(iIntValue2, 16);
-        bzo.p(string, "toString(...)" /* cnb.z(-533203009927978L) */);
+        throwIfVar1IsNull(string, "toString(...)" /* cnb.z(-533203009927978L) */);
         String upperCase = string.toUpperCase(Locale.ROOT);
-        bzo.p(upperCase, "toUpperCase(...)" /* cnb.z(-533194419993386L) */);
-        return dnr.bo(dnr.bo(dnr.bo(strBo, strZ, strZ2.concat(upperCase)), "${snsId}" /* cnb.z(-533121405549354L) */, String.valueOf(jLongValue)), "${userName}" /* cnb.z(-533031211236138L) */, (String) objE2);
+        throwIfVar1IsNull(upperCase, "toUpperCase(...)" /* cnb.z(-533194419993386L) */);
+        return dnr.bo(dnr.bo(dnr.bo(strBo, strZ, strZ2.concat(upperCase)), "${snsId}" /* cnb.z(-533121405549354L) */,
+                String.valueOf(jLongValue)), "${userName}" /* cnb.z(-533031211236138L) */, (String) objE2);
     }
 
     @Override // me.hd.wauxv.obf.bmf
@@ -71,18 +73,18 @@ public final class djh extends doo implements bng {
         }
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String f() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getName() {
         return i;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String g() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getCategory() {
         return c;
     }
 
     @Override // me.hd.wauxv.obf.bng
-    public final void h(DexKitBridge dexKitBridge) {
+    public final void locateDex(DexKitBridge dexKitBridge) {
         if (!cnb.ab(ewk.d) && !cnb.ac(ewh.d)) {
             emn.aj(djd.a, dexKitBridge, new dhg(22));
         } else {
@@ -91,12 +93,12 @@ public final class djh extends doo implements bng {
         }
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String o() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getDescription() {
         return j;
     }
 
-    @Override // me.hd.wauxv.obf.doo
+    @Override // me.hd.wauxv.obf.BaseHook
     public final bgf p() {
         return m;
     }

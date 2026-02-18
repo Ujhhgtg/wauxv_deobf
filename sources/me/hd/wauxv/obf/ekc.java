@@ -14,7 +14,7 @@ public class ekc {
     private long timeoutNanos;
 
     public final void awaitSignal(Condition condition) throws InterruptedIOException {
-        bzo.q(condition, "condition");
+        throwIfVar1IsNull(condition, "condition");
         try {
             boolean zHasDeadline = hasDeadline();
             long jTimeoutNanos = timeoutNanos();
@@ -53,7 +53,7 @@ public class ekc {
     }
 
     public final ekc deadline(long j, TimeUnit timeUnit) {
-        bzo.q(timeUnit, "unit");
+        throwIfVar1IsNull(timeUnit, "unit");
         if (j <= 0) {
             throw new IllegalArgumentException(dts.b(j, "duration <= 0: ").toString());
         }
@@ -72,8 +72,8 @@ public class ekc {
     }
 
     public final <T> T intersectWith(ekc ekcVar, bfu bfuVar) {
-        bzo.q(ekcVar, "other");
-        bzo.q(bfuVar, "block");
+        throwIfVar1IsNull(ekcVar, "other");
+        throwIfVar1IsNull(bfuVar, "block");
         long jTimeoutNanos = timeoutNanos();
         ekb ekbVar = Companion;
         long jTimeoutNanos2 = ekcVar.timeoutNanos();
@@ -120,7 +120,7 @@ public class ekc {
     }
 
     public ekc timeout(long j, TimeUnit timeUnit) {
-        bzo.q(timeUnit, "unit");
+        throwIfVar1IsNull(timeUnit, "unit");
         if (j < 0) {
             throw new IllegalArgumentException(dts.b(j, "timeout < 0: ").toString());
         }
@@ -133,7 +133,7 @@ public class ekc {
     }
 
     public final void waitUntilNotified(Object obj) throws InterruptedIOException {
-        bzo.q(obj, "monitor");
+        throwIfVar1IsNull(obj, "monitor");
         try {
             boolean zHasDeadline = hasDeadline();
             long jTimeoutNanos = timeoutNanos();

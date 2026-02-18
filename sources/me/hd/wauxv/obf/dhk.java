@@ -19,7 +19,7 @@ public final class dhk {
             return false;
         }
         dhk dhkVar = (dhk) obj;
-        return bzo.f(this.a, dhkVar.a) && bzo.f(this.b, dhkVar.b);
+        return nullSafeIsEqual(this.a, dhkVar.a) && nullSafeIsEqual(this.b, dhkVar.b);
     }
 
     public final int hashCode() {
@@ -30,6 +30,6 @@ public final class dhk {
         StringBuilder sb = new StringBuilder();
         sb.append("HideConfig(title=" /* cnb.z(-459531435899690L) */);
         yg.u(sb, this.a, -459471306357546L);
-        return bjs.q(sb, this.b, ')');
+        return concat(sb, this.b, ')');
     }
 }

@@ -32,24 +32,27 @@ class JSONPathSegmentName extends JSONPathSegment {
         this.nameHashCode = j;
     }
 
-    /* JADX WARN: Code restructure failed: missing block: B:9:0x0016, code lost:
-    
-        if ((r3 instanceof com.alibaba.fastjson2.JSONPathSegment.MultiIndexSegment) == false) goto L12;
+    /*
+     * JADX WARN: Code restructure failed: missing block: B:9:0x0016, code lost:
+     * 
+     * if ((r3 instanceof com.alibaba.fastjson2.JSONPathSegment.MultiIndexSegment)
+     * == false) goto L12;
      */
-    /* JADX WARN: Found duplicated region for block: B:102:0x0150  */
-    /* JADX WARN: Found duplicated region for block: B:113:0x0173  */
-    /* JADX WARN: Found duplicated region for block: B:162:0x0212  */
+    /* JADX WARN: Found duplicated region for block: B:102:0x0150 */
+    /* JADX WARN: Found duplicated region for block: B:113:0x0173 */
+    /* JADX WARN: Found duplicated region for block: B:162:0x0212 */
     @Override // com.alibaba.fastjson2.JSONPathSegment
     /*
-        Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
-    */
+     * Code decompiled incorrectly, please refer to instructions dump.
+     * To view partially-correct add '--show-bad-code' argument
+     */
     public void accept(com.alibaba.fastjson2.JSONReader r19, com.alibaba.fastjson2.JSONPath.Context r20) {
         /*
-            Method dump skipped, instruction units count: 658
-            To view this dump add '--comments-level debug' option
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.alibaba.fastjson2.JSONPathSegmentName.accept(com.alibaba.fastjson2.JSONReader, com.alibaba.fastjson2.JSONPath$Context):void");
+         * Method dump skipped, instruction units count: 658
+         * To view this dump add '--comments-level debug' option
+         */
+        throw new UnsupportedOperationException(
+                "Method not decompiled: com.alibaba.fastjson2.JSONPathSegmentName.accept(com.alibaba.fastjson2.JSONReader, com.alibaba.fastjson2.JSONPath$Context):void");
     }
 
     @Override // com.alibaba.fastjson2.JSONPathSegment
@@ -73,7 +76,9 @@ class JSONPathSegmentName extends JSONPathSegment {
                         return true;
                     }
                     ObjectWriter objectWriter = context.path.getWriterContext().getObjectWriter(obj2.getClass());
-                    if ((objectWriter instanceof ObjectWriterAdapter) && (fieldWriter4 = objectWriter.getFieldWriter(this.nameHashCode)) != null && fieldWriter4.getFieldValue(obj2) != null) {
+                    if ((objectWriter instanceof ObjectWriterAdapter)
+                            && (fieldWriter4 = objectWriter.getFieldWriter(this.nameHashCode)) != null
+                            && fieldWriter4.getFieldValue(obj2) != null) {
                         return true;
                     }
                 }
@@ -87,7 +92,9 @@ class JSONPathSegmentName extends JSONPathSegment {
                         return true;
                     }
                     ObjectWriter objectWriter2 = context.path.getWriterContext().getObjectWriter(obj3.getClass());
-                    if ((objectWriter2 instanceof ObjectWriterAdapter) && (fieldWriter3 = objectWriter2.getFieldWriter(this.nameHashCode)) != null && fieldWriter3.getFieldValue(obj3) != null) {
+                    if ((objectWriter2 instanceof ObjectWriterAdapter)
+                            && (fieldWriter3 = objectWriter2.getFieldWriter(this.nameHashCode)) != null
+                            && fieldWriter3.getFieldValue(obj3) != null) {
                         return true;
                     }
                 }
@@ -101,14 +108,18 @@ class JSONPathSegmentName extends JSONPathSegment {
                         return true;
                     }
                     ObjectWriter objectWriter3 = context.path.getWriterContext().getObjectWriter(obj4.getClass());
-                    if ((objectWriter3 instanceof ObjectWriterAdapter) && (fieldWriter2 = objectWriter3.getFieldWriter(this.nameHashCode)) != null && fieldWriter2.getFieldValue(obj4) != null) {
+                    if ((objectWriter3 instanceof ObjectWriterAdapter)
+                            && (fieldWriter2 = objectWriter3.getFieldWriter(this.nameHashCode)) != null
+                            && fieldWriter2.getFieldValue(obj4) != null) {
                         return true;
                     }
                 }
             }
         }
         ObjectWriter objectWriter4 = context.path.getWriterContext().getObjectWriter(obj.getClass());
-        return (!(objectWriter4 instanceof ObjectWriterAdapter) || (fieldWriter = objectWriter4.getFieldWriter(this.nameHashCode)) == null || fieldWriter.getFieldValue(obj) == null) ? false : true;
+        return (!(objectWriter4 instanceof ObjectWriterAdapter)
+                || (fieldWriter = objectWriter4.getFieldWriter(this.nameHashCode)) == null
+                || fieldWriter.getFieldValue(obj) == null) ? false : true;
     }
 
     public boolean equals(Object obj) {
@@ -117,7 +128,8 @@ class JSONPathSegmentName extends JSONPathSegment {
         }
         if (obj != null && getClass() == obj.getClass()) {
             JSONPathSegmentName jSONPathSegmentName = (JSONPathSegmentName) obj;
-            if (this.nameHashCode == jSONPathSegmentName.nameHashCode && Objects.equals(this.name, jSONPathSegmentName.name)) {
+            if (this.nameHashCode == jSONPathSegmentName.nameHashCode
+                    && Objects.equals(this.name, jSONPathSegmentName.name)) {
                 return true;
             }
         }
@@ -188,7 +200,8 @@ class JSONPathSegmentName extends JSONPathSegment {
             while (it.hasNext()) {
                 context.value = it.next();
                 JSONPath.Context context3 = context;
-                JSONPath.Context context4 = new JSONPath.Context(context.path, context3, context.current, context.next, context.readerFeatures);
+                JSONPath.Context context4 = new JSONPath.Context(context.path, context3, context.current, context.next,
+                        context.readerFeatures);
                 eval(context4);
                 Object obj4 = context4.value;
                 if (obj4 != null || (context3.path.features & JSONPath.Feature.KeepNullValue.mask) != 0) {
@@ -229,7 +242,7 @@ class JSONPathSegmentName extends JSONPathSegment {
         }
         if (!(obj2 instanceof String)) {
             if (!(obj2 instanceof Number) && !(obj2 instanceof Boolean)) {
-                throw new JSONException(bjs.m(obj2, new StringBuilder("not support : ")));
+                throw new JSONException(concatVar1GetClass(obj2, new StringBuilder("not support : ")));
             }
             context.value = null;
             return;
@@ -256,7 +269,8 @@ class JSONPathSegmentName extends JSONPathSegment {
             return true;
         }
         if (!(obj instanceof Collection)) {
-            FieldReader fieldReader = context.path.getReaderContext().getProvider().getObjectReader(obj.getClass()).getFieldReader(this.nameHashCode);
+            FieldReader fieldReader = context.path.getReaderContext().getProvider().getObjectReader(obj.getClass())
+                    .getFieldReader(this.nameHashCode);
             if (fieldReader != null) {
                 fieldReader.accept(obj, (Object) null);
             }
@@ -268,7 +282,8 @@ class JSONPathSegmentName extends JSONPathSegment {
                 if (obj2 instanceof Map) {
                     ((Map) obj2).remove(this.name);
                 } else {
-                    FieldReader fieldReader2 = context.path.getReaderContext().getProvider().getObjectReader(obj2.getClass()).getFieldReader(this.nameHashCode);
+                    FieldReader fieldReader2 = context.path.getReaderContext().getProvider()
+                            .getObjectReader(obj2.getClass()).getFieldReader(this.nameHashCode);
                     if (fieldReader2 != null) {
                         fieldReader2.accept(obj2, (Object) null);
                     }
@@ -310,7 +325,8 @@ class JSONPathSegmentName extends JSONPathSegment {
             if (fieldReader == null) {
                 return;
             }
-            if (obj != null && (cls = obj.getClass()) != (cls2 = fieldReader.fieldClass) && (typeConvert = provider.getTypeConvert(cls, cls2)) != null) {
+            if (obj != null && (cls = obj.getClass()) != (cls2 = fieldReader.fieldClass)
+                    && (typeConvert = provider.getTypeConvert(cls, cls2)) != null) {
                 obj = typeConvert.apply(obj);
             }
             fieldReader.accept(obj2, obj);
@@ -321,7 +337,8 @@ class JSONPathSegmentName extends JSONPathSegment {
                 if (obj3 instanceof Map) {
                     Map map2 = (Map) obj3;
                     Object objPut2 = map2.put(this.name, obj);
-                    if (objPut2 != null && (context.readerFeatures & JSONReader.Feature.DuplicateKeyValueAsArray.mask) != 0) {
+                    if (objPut2 != null
+                            && (context.readerFeatures & JSONReader.Feature.DuplicateKeyValueAsArray.mask) != 0) {
                         if (objPut2 instanceof Collection) {
                             ((Collection) objPut2).add(obj);
                             map2.put(this.name, obj);
@@ -330,7 +347,8 @@ class JSONPathSegmentName extends JSONPathSegment {
                         }
                     }
                 } else {
-                    FieldReader fieldReader2 = context.path.getReaderContext().getProvider().getObjectReader(obj3.getClass()).getFieldReader(this.nameHashCode);
+                    FieldReader fieldReader2 = context.path.getReaderContext().getProvider()
+                            .getObjectReader(obj3.getClass()).getFieldReader(this.nameHashCode);
                     if (fieldReader2 != null) {
                         fieldReader2.accept(obj3, obj);
                     }

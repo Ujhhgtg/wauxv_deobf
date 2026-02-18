@@ -15,7 +15,8 @@ public final class egf {
     public final String g;
     public final String h;
 
-    public /* synthetic */ egf(int i, Boolean bool, Integer num, Float f, String str, Boolean bool2, String str2, String str3, String str4) {
+    public /* synthetic */ egf(int i, Boolean bool, Integer num, Float f, String str, Boolean bool2, String str2,
+            String str3, String str4) {
         if (255 != (i & Opcodes.CONST_METHOD_TYPE)) {
             bht.ah(i, Opcodes.CONST_METHOD_TYPE, egd.b.getDescriptor());
             throw null;
@@ -38,7 +39,11 @@ public final class egf {
             return false;
         }
         egf egfVar = (egf) obj;
-        return bzo.f(this.a, egfVar.a) && bzo.f(this.b, egfVar.b) && bzo.f(this.c, egfVar.c) && bzo.f(this.d, egfVar.d) && bzo.f(this.e, egfVar.e) && bzo.f(this.f, egfVar.f) && bzo.f(this.g, egfVar.g) && bzo.f(this.h, egfVar.h);
+        return nullSafeIsEqual(this.a, egfVar.a) && nullSafeIsEqual(this.b, egfVar.b)
+                && nullSafeIsEqual(this.c, egfVar.c) && nullSafeIsEqual(this.d, egfVar.d)
+                && nullSafeIsEqual(this.e, egfVar.e) && nullSafeIsEqual(this.f, egfVar.f)
+                && nullSafeIsEqual(this.g, egfVar.g)
+                && nullSafeIsEqual(this.h, egfVar.h);
     }
 
     public final int hashCode() {
@@ -70,6 +75,6 @@ public final class egf {
         dts.g(sb, this.e, -315181880048426L);
         yg.u(sb, this.f, -315078800833322L);
         yg.u(sb, this.g, -315044441094954L);
-        return bjs.q(sb, this.h, ')');
+        return concat(sb, this.h, ')');
     }
 }

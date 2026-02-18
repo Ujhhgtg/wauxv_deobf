@@ -26,7 +26,10 @@ public final class eaq {
     public final Integer t;
     public final ebf u;
 
-    public /* synthetic */ eaq(int i, Integer num, Integer num2, Integer num3, Integer num4, Integer num5, Integer num6, Integer num7, Integer num8, Integer num9, Integer num10, Integer num11, Integer num12, Integer num13, Integer num14, Integer num15, Integer num16, ebf ebfVar, ebf ebfVar2, ebf ebfVar3, Integer num17, ebf ebfVar4) {
+    public /* synthetic */ eaq(int i, Integer num, Integer num2, Integer num3, Integer num4, Integer num5, Integer num6,
+            Integer num7, Integer num8, Integer num9, Integer num10, Integer num11, Integer num12, Integer num13,
+            Integer num14, Integer num15, Integer num16, ebf ebfVar, ebf ebfVar2, ebf ebfVar3, Integer num17,
+            ebf ebfVar4) {
         if (2097151 != (i & 2097151)) {
             bht.ah(i, 2097151, eao.b.getDescriptor());
             throw null;
@@ -62,7 +65,17 @@ public final class eaq {
             return false;
         }
         eaq eaqVar = (eaq) obj;
-        return bzo.f(this.a, eaqVar.a) && bzo.f(this.b, eaqVar.b) && bzo.f(this.c, eaqVar.c) && bzo.f(this.d, eaqVar.d) && bzo.f(this.e, eaqVar.e) && bzo.f(this.f, eaqVar.f) && bzo.f(this.g, eaqVar.g) && bzo.f(this.h, eaqVar.h) && bzo.f(this.i, eaqVar.i) && bzo.f(this.j, eaqVar.j) && bzo.f(this.k, eaqVar.k) && bzo.f(this.l, eaqVar.l) && bzo.f(this.m, eaqVar.m) && bzo.f(this.n, eaqVar.n) && bzo.f(this.o, eaqVar.o) && bzo.f(this.p, eaqVar.p) && bzo.f(this.q, eaqVar.q) && bzo.f(this.r, eaqVar.r) && bzo.f(this.s, eaqVar.s) && bzo.f(this.t, eaqVar.t) && bzo.f(this.u, eaqVar.u);
+        return nullSafeIsEqual(this.a, eaqVar.a) && nullSafeIsEqual(this.b, eaqVar.b)
+                && nullSafeIsEqual(this.c, eaqVar.c) && nullSafeIsEqual(this.d, eaqVar.d)
+                && nullSafeIsEqual(this.e, eaqVar.e) && nullSafeIsEqual(this.f, eaqVar.f)
+                && nullSafeIsEqual(this.g, eaqVar.g) && nullSafeIsEqual(this.h, eaqVar.h)
+                && nullSafeIsEqual(this.i, eaqVar.i) && nullSafeIsEqual(this.j, eaqVar.j)
+                && nullSafeIsEqual(this.k, eaqVar.k) && nullSafeIsEqual(this.l, eaqVar.l)
+                && nullSafeIsEqual(this.m, eaqVar.m) && nullSafeIsEqual(this.n, eaqVar.n)
+                && nullSafeIsEqual(this.o, eaqVar.o) && nullSafeIsEqual(this.p, eaqVar.p)
+                && nullSafeIsEqual(this.q, eaqVar.q) && nullSafeIsEqual(this.r, eaqVar.r)
+                && nullSafeIsEqual(this.s, eaqVar.s) && nullSafeIsEqual(this.t, eaqVar.t)
+                && nullSafeIsEqual(this.u, eaqVar.u);
     }
 
     public final int hashCode() {

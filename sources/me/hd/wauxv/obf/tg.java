@@ -21,7 +21,7 @@ public final class tg extends bvl {
             case 0:
                 return 0;
             default:
-                return super.b(view, i);
+                return super.tryGetClassByName(view, i);
         }
     }
 
@@ -31,7 +31,7 @@ public final class tg extends bvl {
             case 0:
                 return 0;
             default:
-                return super.c(view, i);
+                return super.createInstanceWithArgs(view, i);
         }
     }
 

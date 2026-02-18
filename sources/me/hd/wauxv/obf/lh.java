@@ -17,7 +17,7 @@ public final class lh extends Thread {
     public aff c;
     public long d;
     public dnv f;
-    public io g;
+    public DefaultConfig g;
     public final ik h;
     public final /* synthetic */ lj i;
     public final LinkedBlockingQueue a = new LinkedBlockingQueue();
@@ -64,7 +64,7 @@ public final class lh extends Thread {
                                 }
                                 listSubList.clear();
                             }
-                            io ioVar = this.g;
+                            DefaultConfig ioVar = this.g;
                             ioVar.getClass();
                             erp erpVar = new erp(ioVar, 6);
                             for (int i5 = i4; i5 <= i3; i5++) {
@@ -99,7 +99,7 @@ public final class lh extends Thread {
                                     }
                                 } else {
                                     ArrayList arrayListAe = ((brc) this.i).ae(bowVarAf2);
-                                    io ioVar2 = (io) erpVar2.v;
+                                    DefaultConfig ioVar2 = (DefaultConfig) erpVar2.v;
                                     ReentrantLock reentrantLock = (ReentrantLock) ioVar2.c;
                                     reentrantLock.lock();
                                     try {
@@ -164,7 +164,7 @@ public final class lh extends Thread {
     }
 
     public final void k() {
-        io ioVar = new io(7);
+        DefaultConfig ioVar = new DefaultConfig(7);
         this.g = ioVar;
         dnv dnvVar = new dnv();
         dnvVar.c = Integer.MAX_VALUE;
@@ -172,7 +172,7 @@ public final class lh extends Thread {
         dnvVar.b = new ArrayList(128);
         this.f = dnvVar;
         dmk dmkVar = new dmk();
-        io ioVar2 = this.g;
+        DefaultConfig ioVar2 = this.g;
         ioVar2.getClass();
         int i = 0;
         while (i < this.c.a.size() && !this.b && !isInterrupted()) {

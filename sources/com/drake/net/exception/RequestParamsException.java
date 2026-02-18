@@ -1,7 +1,7 @@
 package com.drake.net.exception;
 
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import okhttp3.Response;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -9,7 +9,8 @@ import okhttp3.Response;
 public final class RequestParamsException extends HttpResponseException {
     private Object tag;
 
-    public /* synthetic */ RequestParamsException(Response response, String str, Throwable th, Object obj, int i, akd akdVar) {
+    public /* synthetic */ RequestParamsException(Response response, String str, Throwable th, Object obj, int i,
+            akd akdVar) {
         this(response, (i & 2) != 0 ? null : str, (i & 4) != 0 ? null : th, (i & 8) != 0 ? null : obj);
     }
 
@@ -21,10 +22,13 @@ public final class RequestParamsException extends HttpResponseException {
         this.tag = obj;
     }
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'super' call moved to the top of the method (can break code
+     * semantics)
+     */
     public RequestParamsException(Response response, String str, Throwable th, Object obj) {
         super(response, str, th);
-        bzo.q(response, "response");
+        throwIfVar1IsNull(response, "response");
         this.tag = obj;
     }
 }

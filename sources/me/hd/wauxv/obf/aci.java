@@ -59,7 +59,8 @@ public abstract class aci extends Activity implements err, bkg, dep, bup, btl {
         this.ad = new CopyOnWriteArrayList();
         bur burVar = this.q;
         if (burVar == null) {
-            throw new IllegalStateException("getLifecycle() returned null in ComponentActivity's constructor. Please make sure you are lazily constructing your Lifecycle in the first call to getLifecycle() rather than relying on field initialization.");
+            throw new IllegalStateException(
+                    "getLifecycle() returned null in ComponentActivity's constructor. Please make sure you are lazily constructing your Lifecycle in the first call to getLifecycle() rather than relying on field initialization.");
         }
         final int i = 0;
         burVar.j(new bul() { // from class: me.hd.wauxv.obf.aby
@@ -70,7 +71,8 @@ public abstract class aci extends Activity implements err, bkg, dep, bup, btl {
                 switch (i) {
                     case 0:
                         hb hbVar2 = hbVar;
-                        if (bugVar == bug.ON_STOP && (window = hbVar2.getWindow()) != null && (viewPeekDecorView = window.peekDecorView()) != null) {
+                        if (bugVar == bug.ON_STOP && (window = hbVar2.getWindow()) != null
+                                && (viewPeekDecorView = window.peekDecorView()) != null) {
                             viewPeekDecorView.cancelPendingInputEvents();
                             break;
                         }
@@ -100,7 +102,8 @@ public abstract class aci extends Activity implements err, bkg, dep, bup, btl {
                 switch (i2) {
                     case 0:
                         hb hbVar2 = hbVar;
-                        if (bugVar == bug.ON_STOP && (window = hbVar2.getWindow()) != null && (viewPeekDecorView = window.peekDecorView()) != null) {
+                        if (bugVar == bug.ON_STOP && (window = hbVar2.getWindow()) != null
+                                && (viewPeekDecorView = window.peekDecorView()) != null) {
                             viewPeekDecorView.cancelPendingInputEvents();
                             break;
                         }
@@ -138,7 +141,7 @@ public abstract class aci extends Activity implements err, bkg, dep, bup, btl {
         LinkedHashMap linkedHashMap = chqVar.c;
         if (application != null) {
             Application application2 = getApplication();
-            bzo.p(application2, "application");
+            throwIfVar1IsNull(application2, "application");
             linkedHashMap.put(ern.n, application2);
         }
         linkedHashMap.put(aye.d, this);
@@ -154,7 +157,8 @@ public abstract class aci extends Activity implements err, bkg, dep, bup, btl {
     @Override // me.hd.wauxv.obf.err
     public final erq aj() {
         if (getApplication() == null) {
-            throw new IllegalStateException("Your activity is not yet attached to the Application instance. You can't request ViewModel before onCreate call.");
+            throw new IllegalStateException(
+                    "Your activity is not yet attached to the Application instance. You can't request ViewModel before onCreate call.");
         }
         if (this.u == null) {
             acd acdVar = (acd) getLastNonConfigurationInstance();
@@ -166,7 +170,7 @@ public abstract class aci extends Activity implements err, bkg, dep, bup, btl {
             }
         }
         erq erqVar = this.u;
-        bzo.n(erqVar);
+        throwIfVar1IsNull(erqVar);
         return erqVar;
     }
 
@@ -176,7 +180,7 @@ public abstract class aci extends Activity implements err, bkg, dep, bup, btl {
     }
 
     public final void al(adv advVar) {
-        bzo.q(advVar, "listener");
+        throwIfVar1IsNull(advVar, "listener");
         this.y.add(advVar);
     }
 
@@ -196,19 +200,19 @@ public abstract class aci extends Activity implements err, bkg, dep, bup, btl {
 
     public final void ao() {
         View decorView = getWindow().getDecorView();
-        bzo.p(decorView, "window.decorView");
+        throwIfVar1IsNull(decorView, "window.decorView");
         decorView.setTag(R.id.view_tree_lifecycle_owner, this);
         View decorView2 = getWindow().getDecorView();
-        bzo.p(decorView2, "window.decorView");
+        throwIfVar1IsNull(decorView2, "window.decorView");
         decorView2.setTag(R.id.view_tree_view_model_store_owner, this);
         View decorView3 = getWindow().getDecorView();
-        bzo.p(decorView3, "window.decorView");
+        throwIfVar1IsNull(decorView3, "window.decorView");
         decorView3.setTag(R.id.view_tree_saved_state_registry_owner, this);
         View decorView4 = getWindow().getDecorView();
-        bzo.p(decorView4, "window.decorView");
+        throwIfVar1IsNull(decorView4, "window.decorView");
         decorView4.setTag(R.id.view_tree_on_back_pressed_dispatcher_owner, this);
         View decorView5 = getWindow().getDecorView();
-        bzo.p(decorView5, "window.decorView");
+        throwIfVar1IsNull(decorView5, "window.decorView");
         decorView5.setTag(R.id.report_drawn, this);
     }
 
@@ -224,22 +228,22 @@ public abstract class aci extends Activity implements err, bkg, dep, bup, btl {
     }
 
     public final void ar(Bundle bundle) {
-        bzo.q(bundle, "outState");
+        throwIfVar1IsNull(bundle, "outState");
         this.q.p(buh.c);
         super.onSaveInstanceState(bundle);
     }
 
     @Override // me.hd.wauxv.obf.btl
     public final boolean b(KeyEvent keyEvent) {
-        bzo.q(keyEvent, "event");
+        throwIfVar1IsNull(keyEvent, "event");
         return super.dispatchKeyEvent(keyEvent);
     }
 
     @Override // android.app.Activity, android.view.Window.Callback
     public boolean dispatchKeyEvent(KeyEvent keyEvent) {
-        bzo.q(keyEvent, "event");
+        throwIfVar1IsNull(keyEvent, "event");
         View decorView = getWindow().getDecorView();
-        bzo.p(decorView, "getDecorView(...)");
+        throwIfVar1IsNull(decorView, "getDecorView(...)");
         if (emc.al(decorView, keyEvent)) {
             return true;
         }
@@ -248,9 +252,9 @@ public abstract class aci extends Activity implements err, bkg, dep, bup, btl {
 
     @Override // android.app.Activity, android.view.Window.Callback
     public final boolean dispatchKeyShortcutEvent(KeyEvent keyEvent) {
-        bzo.q(keyEvent, "event");
+        throwIfVar1IsNull(keyEvent, "event");
         View decorView = getWindow().getDecorView();
-        bzo.p(decorView, "getDecorView(...)");
+        throwIfVar1IsNull(decorView, "getDecorView(...)");
         if (emc.al(decorView, keyEvent)) {
             return true;
         }
@@ -272,7 +276,7 @@ public abstract class aci extends Activity implements err, bkg, dep, bup, btl {
 
     @Override // android.app.Activity, android.content.ComponentCallbacks
     public void onConfigurationChanged(Configuration configuration) {
-        bzo.q(configuration, "newConfig");
+        throwIfVar1IsNull(configuration, "newConfig");
         super.onConfigurationChanged(configuration);
         Iterator it = this.y.iterator();
         while (it.hasNext()) {
@@ -297,7 +301,7 @@ public abstract class aci extends Activity implements err, bkg, dep, bup, btl {
 
     @Override // android.app.Activity, android.view.Window.Callback
     public final boolean onCreatePanelMenu(int i, Menu menu) {
-        bzo.q(menu, "menu");
+        throwIfVar1IsNull(menu, "menu");
         if (i != 0) {
             return true;
         }
@@ -312,7 +316,7 @@ public abstract class aci extends Activity implements err, bkg, dep, bup, btl {
 
     @Override // android.app.Activity, android.view.Window.Callback
     public boolean onMenuItemSelected(int i, MenuItem menuItem) {
-        bzo.q(menuItem, "item");
+        throwIfVar1IsNull(menuItem, "item");
         if (super.onMenuItemSelected(i, menuItem)) {
             return true;
         }
@@ -340,7 +344,7 @@ public abstract class aci extends Activity implements err, bkg, dep, bup, btl {
 
     @Override // android.app.Activity
     public final void onNewIntent(Intent intent) {
-        bzo.q(intent, "intent");
+        throwIfVar1IsNull(intent, "intent");
         super.onNewIntent(intent);
         Iterator it = this.aa.iterator();
         while (it.hasNext()) {
@@ -350,7 +354,7 @@ public abstract class aci extends Activity implements err, bkg, dep, bup, btl {
 
     @Override // android.app.Activity, android.view.Window.Callback
     public void onPanelClosed(int i, Menu menu) {
-        bzo.q(menu, "menu");
+        throwIfVar1IsNull(menu, "menu");
         Iterator it = ((CopyOnWriteArrayList) this.s.h).iterator();
         while (it.hasNext()) {
             ((bdy) it.next()).a.bm();
@@ -371,7 +375,7 @@ public abstract class aci extends Activity implements err, bkg, dep, bup, btl {
 
     @Override // android.app.Activity, android.view.Window.Callback
     public final boolean onPreparePanel(int i, View view, Menu menu) {
-        bzo.q(menu, "menu");
+        throwIfVar1IsNull(menu, "menu");
         if (i != 0) {
             return true;
         }
@@ -385,9 +389,10 @@ public abstract class aci extends Activity implements err, bkg, dep, bup, btl {
 
     @Override // android.app.Activity
     public void onRequestPermissionsResult(int i, String[] strArr, int[] iArr) {
-        bzo.q(strArr, "permissions");
-        bzo.q(iArr, "grantResults");
-        if (this.x.i(i, -1, new Intent().putExtra("androidx.activity.result.contract.extra.PERMISSIONS", strArr).putExtra("androidx.activity.result.contract.extra.PERMISSION_GRANT_RESULTS", iArr))) {
+        throwIfVar1IsNull(strArr, "permissions");
+        throwIfVar1IsNull(iArr, "grantResults");
+        if (this.x.i(i, -1, new Intent().putExtra("androidx.activity.result.contract.extra.PERMISSIONS", strArr)
+                .putExtra("androidx.activity.result.contract.extra.PERMISSION_GRANT_RESULTS", iArr))) {
             return;
         }
         super.onRequestPermissionsResult(i, strArr, iArr);
@@ -410,7 +415,7 @@ public abstract class aci extends Activity implements err, bkg, dep, bup, btl {
 
     @Override // android.app.Activity
     public final void onSaveInstanceState(Bundle bundle) {
-        bzo.q(bundle, "outState");
+        throwIfVar1IsNull(bundle, "outState");
         bur burVar = this.q;
         if (burVar != null) {
             burVar.p(buh.c);
@@ -437,12 +442,19 @@ public abstract class aci extends Activity implements err, bkg, dep, bup, btl {
         }
     }
 
-    /* JADX WARN: Undo finally extract visitor
-    jadx.core.utils.exceptions.JadxRuntimeException: Expected to find fallthrough terminus for handler TryEdge: [PREMATURE_EXIT B:24:0x001d -> B:5:0x000c] - Handler: None
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.findCommonInsns(MarkFinallyVisitor.java:419)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.extractFinally(MarkFinallyVisitor.java:302)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.processTryBlock(MarkFinallyVisitor.java:222)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:150)
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * jadx.core.utils.exceptions.JadxRuntimeException: Expected to find fallthrough
+     * terminus for handler TryEdge: [PREMATURE_EXIT B:24:0x001d -> B:5:0x000c] -
+     * Handler: None
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.findCommonInsns(
+     * MarkFinallyVisitor.java:419)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.extractFinally(
+     * MarkFinallyVisitor.java:302)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.processTryBlock(
+     * MarkFinallyVisitor.java:222)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:150)
      */
     @Override // android.app.Activity
     public final void reportFullyDrawn() {
@@ -475,7 +487,7 @@ public abstract class aci extends Activity implements err, bkg, dep, bup, btl {
     public void setContentView(View view) {
         ao();
         View decorView = getWindow().getDecorView();
-        bzo.p(decorView, "window.decorView");
+        throwIfVar1IsNull(decorView, "window.decorView");
         ace aceVar = this.v;
         aceVar.getClass();
         if (!aceVar.c) {
@@ -487,31 +499,33 @@ public abstract class aci extends Activity implements err, bkg, dep, bup, btl {
 
     @Override // android.app.Activity
     public final void startActivityForResult(Intent intent, int i) {
-        bzo.q(intent, "intent");
+        throwIfVar1IsNull(intent, "intent");
         super.startActivityForResult(intent, i);
     }
 
     @Override // android.app.Activity
-    public final void startIntentSenderForResult(IntentSender intentSender, int i, Intent intent, int i2, int i3, int i4) throws IntentSender.SendIntentException {
-        bzo.q(intentSender, "intent");
+    public final void startIntentSenderForResult(IntentSender intentSender, int i, Intent intent, int i2, int i3,
+            int i4) throws IntentSender.SendIntentException {
+        throwIfVar1IsNull(intentSender, "intent");
         super.startIntentSenderForResult(intentSender, i, intent, i2, i3, i4);
     }
 
     @Override // android.app.Activity
     public final void startActivityForResult(Intent intent, int i, Bundle bundle) {
-        bzo.q(intent, "intent");
+        throwIfVar1IsNull(intent, "intent");
         super.startActivityForResult(intent, i, bundle);
     }
 
     @Override // android.app.Activity
-    public final void startIntentSenderForResult(IntentSender intentSender, int i, Intent intent, int i2, int i3, int i4, Bundle bundle) throws IntentSender.SendIntentException {
-        bzo.q(intentSender, "intent");
+    public final void startIntentSenderForResult(IntentSender intentSender, int i, Intent intent, int i2, int i3,
+            int i4, Bundle bundle) throws IntentSender.SendIntentException {
+        throwIfVar1IsNull(intentSender, "intent");
         super.startIntentSenderForResult(intentSender, i, intent, i2, i3, i4, bundle);
     }
 
     @Override // android.app.Activity
     public final void onMultiWindowModeChanged(boolean z, Configuration configuration) {
-        bzo.q(configuration, "newConfig");
+        throwIfVar1IsNull(configuration, "newConfig");
         this.ae = true;
         try {
             super.onMultiWindowModeChanged(z, configuration);
@@ -528,7 +542,7 @@ public abstract class aci extends Activity implements err, bkg, dep, bup, btl {
 
     @Override // android.app.Activity
     public final void onPictureInPictureModeChanged(boolean z, Configuration configuration) {
-        bzo.q(configuration, "newConfig");
+        throwIfVar1IsNull(configuration, "newConfig");
         this.af = true;
         try {
             super.onPictureInPictureModeChanged(z, configuration);

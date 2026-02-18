@@ -10,7 +10,10 @@ import android.os.Parcel;
 /* JADX INFO: loaded from: classes.dex */
 public interface b extends IInterface {
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class a implements b {
         @Override // com.umeng.analytics.pro.b
         public void a(int i, long j, boolean z, float f, double d, String str) {
@@ -30,15 +33,24 @@ public interface b extends IInterface {
 
     void a(int i, Bundle bundle);
 
-    /* JADX INFO: renamed from: com.umeng.analytics.pro.b$b, reason: collision with other inner class name */
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: renamed from: com.umeng.analytics.pro.b$b, reason: collision with
+     * other inner class name
+     */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static abstract class AbstractBinderC0005b extends Binder implements b {
         static final int a = 1;
         static final int b = 2;
         private static final String c = "com.hihonor.cloudservice.oaid.IOAIDCallBack";
 
         /* JADX INFO: renamed from: com.umeng.analytics.pro.b$b$a */
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static class a implements b {
             public static b a;
             private IBinder b;
@@ -113,7 +125,9 @@ public interface b extends IInterface {
                 return null;
             }
             IInterface iInterfaceQueryLocalInterface = iBinder.queryLocalInterface(c);
-            return (iInterfaceQueryLocalInterface == null || !(iInterfaceQueryLocalInterface instanceof b)) ? new a(iBinder) : (b) iInterfaceQueryLocalInterface;
+            return (iInterfaceQueryLocalInterface == null || !(iInterfaceQueryLocalInterface instanceof b))
+                    ? new a(iBinder)
+                    : (b) iInterfaceQueryLocalInterface;
         }
 
         @Override // android.os.IInterface
@@ -125,7 +139,8 @@ public interface b extends IInterface {
         public boolean onTransact(int i, Parcel parcel, Parcel parcel2, int i2) {
             if (i == 1) {
                 parcel.enforceInterface(c);
-                a(parcel.readInt(), parcel.readLong(), parcel.readInt() != 0, parcel.readFloat(), parcel.readDouble(), parcel.readString());
+                a(parcel.readInt(), parcel.readLong(), parcel.readInt() != 0, parcel.readFloat(), parcel.readDouble(),
+                        parcel.readString());
                 parcel2.writeNoException();
                 return true;
             }
@@ -143,15 +158,15 @@ public interface b extends IInterface {
         }
 
         public static boolean a(b bVar) {
-            if (a.a != null || bVar == null) {
+            if (a.cachedConstructors != null || bVar == null) {
                 return false;
             }
-            a.a = bVar;
+            a.cachedConstructors = bVar;
             return true;
         }
 
         public static b a() {
-            return a.a;
+            return a.cachedConstructors;
         }
     }
 }

@@ -42,7 +42,10 @@ public class cuc implements dfx, sr {
                 this.b = this;
             }
 
-            /* JADX WARN: Type inference failed for: r1v1, types: [java.lang.Object, me.hd.wauxv.obf.btt] */
+            /*
+             * JADX WARN: Type inference failed for: r1v1, types: [java.lang.Object,
+             * me.hd.wauxv.obf.btt]
+             */
             @Override // me.hd.wauxv.obf.bfu
             public final Object invoke() {
                 switch (i4) {
@@ -67,7 +70,10 @@ public class cuc implements dfx, sr {
                 this.b = this;
             }
 
-            /* JADX WARN: Type inference failed for: r1v1, types: [java.lang.Object, me.hd.wauxv.obf.btt] */
+            /*
+             * JADX WARN: Type inference failed for: r1v1, types: [java.lang.Object,
+             * me.hd.wauxv.obf.btt]
+             */
             @Override // me.hd.wauxv.obf.bfu
             public final Object invoke() {
                 switch (i5) {
@@ -90,7 +96,10 @@ public class cuc implements dfx, sr {
                 this.b = this;
             }
 
-            /* JADX WARN: Type inference failed for: r1v1, types: [java.lang.Object, me.hd.wauxv.obf.btt] */
+            /*
+             * JADX WARN: Type inference failed for: r1v1, types: [java.lang.Object,
+             * me.hd.wauxv.obf.btt]
+             */
             @Override // me.hd.wauxv.obf.bfu
             public final Object invoke() {
                 switch (i6) {
@@ -107,7 +116,10 @@ public class cuc implements dfx, sr {
         });
     }
 
-    /* JADX WARN: Type inference failed for: r0v0, types: [java.lang.Object, java.util.Map] */
+    /*
+     * JADX WARN: Type inference failed for: r0v0, types: [java.lang.Object,
+     * java.util.Map]
+     */
     @Override // me.hd.wauxv.obf.sr
     public final Set a() {
         return this.t.keySet();
@@ -123,20 +135,28 @@ public class cuc implements dfx, sr {
         return false;
     }
 
-    /* JADX WARN: Type inference failed for: r2v2, types: [java.lang.Object, me.hd.wauxv.obf.btt] */
-    /* JADX WARN: Type inference failed for: r6v3, types: [java.lang.Object, me.hd.wauxv.obf.btt] */
+    /*
+     * JADX WARN: Type inference failed for: r2v2, types: [java.lang.Object,
+     * me.hd.wauxv.obf.btt]
+     */
+    /*
+     * JADX WARN: Type inference failed for: r6v3, types: [java.lang.Object,
+     * me.hd.wauxv.obf.btt]
+     */
     public boolean equals(Object obj) {
         if (this == obj) {
             return true;
         }
         if (obj instanceof cuc) {
             dfx dfxVar = (dfx) obj;
-            if (this.e.equals(dfxVar.b()) && Arrays.equals((dfx[]) this.v.getValue(), (dfx[]) ((cuc) obj).v.getValue())) {
+            if (this.e.equals(dfxVar.b())
+                    && Arrays.equals((dfx[]) this.v.getValue(), (dfx[]) ((cuc) obj).v.getValue())) {
                 int i = dfxVar.i();
                 int i2 = this.o;
                 if (i2 == i) {
                     for (int i3 = 0; i3 < i2; i3++) {
-                        if (bzo.f(l(i3).b(), dfxVar.l(i3).b()) && bzo.f(l(i3).h(), dfxVar.l(i3).h())) {
+                        if (nullSafeIsEqual(l(i3).b(), dfxVar.l(i3).b())
+                                && nullSafeIsEqual(l(i3).h(), dfxVar.l(i3).h())) {
                         }
                     }
                     return true;
@@ -151,10 +171,13 @@ public class cuc implements dfx, sr {
         return false;
     }
 
-    /* JADX WARN: Type inference failed for: r0v1, types: [java.lang.Object, java.util.Map] */
+    /*
+     * JADX WARN: Type inference failed for: r0v1, types: [java.lang.Object,
+     * java.util.Map]
+     */
     @Override // me.hd.wauxv.obf.dfx
     public final int g(String str) {
-        bzo.q(str, "name");
+        throwIfVar1IsNull(str, "name");
         Integer num = (Integer) this.t.get(str);
         if (num != null) {
             return num.intValue();
@@ -172,7 +195,10 @@ public class cuc implements dfx, sr {
         return dnt.a;
     }
 
-    /* JADX WARN: Type inference failed for: r0v0, types: [java.lang.Object, me.hd.wauxv.obf.btt] */
+    /*
+     * JADX WARN: Type inference failed for: r0v0, types: [java.lang.Object,
+     * me.hd.wauxv.obf.btt]
+     */
     public int hashCode() {
         return ((Number) this.w.getValue()).intValue();
     }
@@ -193,7 +219,10 @@ public class cuc implements dfx, sr {
         return list == null ? avd.a : list;
     }
 
-    /* JADX WARN: Type inference failed for: r0v0, types: [java.lang.Object, me.hd.wauxv.obf.btt] */
+    /*
+     * JADX WARN: Type inference failed for: r0v0, types: [java.lang.Object,
+     * me.hd.wauxv.obf.btt]
+     */
     @Override // me.hd.wauxv.obf.dfx
     public dfx l(int i) {
         return ((btd[]) this.u.getValue())[i].getDescriptor();
@@ -209,7 +238,7 @@ public class cuc implements dfx, sr {
     }
 
     public final void x(String str, boolean z) {
-        bzo.q(str, "name");
+        throwIfVar1IsNull(str, "name");
         int i = this.p + 1;
         this.p = i;
         String[] strArr = this.q;

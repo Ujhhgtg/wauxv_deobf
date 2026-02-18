@@ -8,7 +8,7 @@ public final class fm extends dqc {
 
     @Override // me.hd.wauxv.obf.dqc
     public final int c(bbb bbbVar) {
-        bzo.q(bbbVar, "fbb");
+        throwIfVar1IsNull(bbbVar, "fbb");
         zb zbVar = this.a;
         int iC = zbVar != null ? zbVar.c(bbbVar) : 0;
         fi fiVar = this.b;

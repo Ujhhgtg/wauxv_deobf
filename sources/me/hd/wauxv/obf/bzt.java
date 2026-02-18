@@ -19,7 +19,7 @@ public final class bzt {
             return false;
         }
         bzt bztVar = (bzt) obj;
-        return bzo.f(this.a, bztVar.a) && bzo.f(this.b, bztVar.b);
+        return nullSafeIsEqual(this.a, bztVar.a) && nullSafeIsEqual(this.b, bztVar.b);
     }
 
     public final int hashCode() {

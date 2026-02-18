@@ -101,7 +101,10 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
     public static final ObjectReaderCreatorASM INSTANCE = new ObjectReaderCreatorASM(DynamicClassLoader.getInstance());
     protected static final AtomicLong seed = new AtomicLong();
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class FieldReaderInfo {
         final String acceptDesc;
         final String interfaceDesc;
@@ -122,7 +125,10 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class ObjectReadContext {
         final BeanInfo beanInfo;
         final String classNameFull;
@@ -139,7 +145,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
         final String objectType;
         final boolean publicClass;
 
-        public ObjectReadContext(BeanInfo beanInfo, Class cls, ClassWriter classWriter, boolean z, FieldReader[] fieldReaderArr, Constructor constructor) {
+        public ObjectReadContext(BeanInfo beanInfo, Class cls, ClassWriter classWriter, boolean z,
+                FieldReader[] fieldReaderArr, Constructor constructor) {
             this.beanInfo = beanInfo;
             this.objectClass = cls;
             this.cw = classWriter;
@@ -184,9 +191,11 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                 this.classNameFull = string;
                 return;
             }
-            String str = ObjectReaderCreatorASM.packageName + TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH + string;
+            String str = ObjectReaderCreatorASM.packageName
+                    + TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH + string;
             this.classNameFull = str;
-            this.classNameType = str.replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/');
+            this.classNameType = str.replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH,
+                    '/');
         }
 
         public boolean disableAutoType() {
@@ -222,40 +231,55 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
         StringBuilder sb2 = new StringBuilder("(Ljava/lang/Class;Ljava/util/function/Supplier;");
         String str3 = ASMUtils.DESC_FIELD_READER_ARRAY;
         METHOD_DESC_INIT = yg.o(sb2, str3, ")V");
-        METHOD_DESC_ADAPTER_INIT = "(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;J" + ASMUtils.DESC_JSONSCHEMA + "Ljava/util/function/Supplier;Ljava/util/function/Function;" + str3 + ")V";
-        METHOD_DESC_READ_OBJECT = bjs.o("(", str, "Ljava/lang/reflect/Type;Ljava/lang/Object;J)Ljava/lang/Object;");
+        METHOD_DESC_ADAPTER_INIT = "(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;J" + ASMUtils.DESC_JSONSCHEMA
+                + "Ljava/util/function/Supplier;Ljava/util/function/Function;" + str3 + ")V";
+        METHOD_DESC_READ_OBJECT = concat("(", str, "Ljava/lang/reflect/Type;Ljava/lang/Object;J)Ljava/lang/Object;");
         StringBuilder sb3 = new StringBuilder("(J)");
         sb3.append(ASMUtils.DESC_FIELD_READER);
         METHOD_DESC_GET_FIELD_READER = sb3.toString();
-        METHOD_DESC_READ_FIELD_VALUE = bjs.o("(", str, "Ljava/lang/Object;)V");
-        READ_FIELD_READER_UL = bjs.o("(J", str, "JLjava/lang/Object;)V");
-        METHOD_DESC_ADD_RESOLVE_TASK = bjs.o("(", str, "Ljava/lang/Object;Ljava/lang/String;)V");
+        METHOD_DESC_READ_FIELD_VALUE = concat("(", str, "Ljava/lang/Object;)V");
+        READ_FIELD_READER_UL = concat("(J", str, "JLjava/lang/Object;)V");
+        METHOD_DESC_ADD_RESOLVE_TASK = concat("(", str, "Ljava/lang/Object;Ljava/lang/String;)V");
         METHOD_DESC_CHECK_ARRAY_AUTO_TYPE = "(" + str + ")" + str2;
-        METHOD_DESC_PROCESS_EXTRA = bjs.o("(", str, "Ljava/lang/Object;J)V");
+        METHOD_DESC_PROCESS_EXTRA = concat("(", str, "Ljava/lang/Object;J)V");
         METHOD_DESC_JSON_READER_CHECK_ARRAY_AUTO_TYPE = "(" + str + "J)" + str2;
-        METHOD_DESC_READ_ARRAY_MAPPING_JSONB_OBJECT0 = bjs.o("(", str, "Ljava/lang/Object;I)V");
+        METHOD_DESC_READ_ARRAY_MAPPING_JSONB_OBJECT0 = concat("(", str, "Ljava/lang/Object;I)V");
         HashMap map = new HashMap();
         infos = map;
         Package r1 = ObjectReaderCreatorASM.class.getPackage();
         packageName = r1 != null ? r1.getName() : "";
-        map.put(Boolean.TYPE, new FieldReaderInfo(ASMUtils.type(ObjBoolConsumer.class), "(Ljava/lang/Object;Z)V", "(Z)V", 21, "readFieldBoolValue", "()Z", 54));
-        map.put(Character.TYPE, new FieldReaderInfo(ASMUtils.type(ObjCharConsumer.class), "(Ljava/lang/Object;C)V", "(C)V", 21, "readInt32Value", "()C", 54));
-        map.put(Byte.TYPE, new FieldReaderInfo(ASMUtils.type(ObjByteConsumer.class), "(Ljava/lang/Object;B)V", "(B)V", 21, "readInt32Value", "()B", 54));
-        map.put(Short.TYPE, new FieldReaderInfo(ASMUtils.type(ObjShortConsumer.class), "(Ljava/lang/Object;S)V", "(S)V", 21, "readInt32Value", "()S", 54));
-        map.put(Integer.TYPE, new FieldReaderInfo(ASMUtils.type(ObjIntConsumer.class), "(Ljava/lang/Object;I)V", "(I)V", 21, "readInt32Value", "()I", 54));
-        map.put(Long.TYPE, new FieldReaderInfo(ASMUtils.type(ObjLongConsumer.class), "(Ljava/lang/Object;J)V", "(J)V", 22, "readInt64Value", "()V", 55));
-        map.put(Float.TYPE, new FieldReaderInfo(ASMUtils.type(ObjFloatConsumer.class), "(Ljava/lang/Object;F)V", "(F)V", 23, "readFieldFloatValue", "()F", 56));
-        map.put(Double.TYPE, new FieldReaderInfo(ASMUtils.type(ObjDoubleConsumer.class), "(Ljava/lang/Object;D)V", "(D)V", 24, "readFloatDoubleValue", "()D", 57));
-        map.put(String.class, new FieldReaderInfo(ASMUtils.type(BiConsumer.class), "(Ljava/lang/Object;Ljava/lang/Object;)V", "(Ljava/lang/String;)V", 25, "readString", "()Ljava/lang/String;", 58));
-        map.put(Integer.class, new FieldReaderInfo(ASMUtils.type(BiConsumer.class), "(Ljava/lang/Object;Ljava/lang/Integer;)V", "(Ljava/lang/Integer;)V", 25, "readInt32", "()Ljava/lang/Integer;", 58));
+        map.put(Boolean.TYPE, new FieldReaderInfo(ASMUtils.type(ObjBoolConsumer.class), "(Ljava/lang/Object;Z)V",
+                "(Z)V", 21, "readFieldBoolValue", "()Z", 54));
+        map.put(Character.TYPE, new FieldReaderInfo(ASMUtils.type(ObjCharConsumer.class), "(Ljava/lang/Object;C)V",
+                "(C)V", 21, "readInt32Value", "()C", 54));
+        map.put(Byte.TYPE, new FieldReaderInfo(ASMUtils.type(ObjByteConsumer.class), "(Ljava/lang/Object;B)V", "(B)V",
+                21, "readInt32Value", "()B", 54));
+        map.put(Short.TYPE, new FieldReaderInfo(ASMUtils.type(ObjShortConsumer.class), "(Ljava/lang/Object;S)V", "(S)V",
+                21, "readInt32Value", "()S", 54));
+        map.put(Integer.TYPE, new FieldReaderInfo(ASMUtils.type(ObjIntConsumer.class), "(Ljava/lang/Object;I)V", "(I)V",
+                21, "readInt32Value", "()I", 54));
+        map.put(Long.TYPE, new FieldReaderInfo(ASMUtils.type(ObjLongConsumer.class), "(Ljava/lang/Object;J)V", "(J)V",
+                22, "readInt64Value", "()V", 55));
+        map.put(Float.TYPE, new FieldReaderInfo(ASMUtils.type(ObjFloatConsumer.class), "(Ljava/lang/Object;F)V", "(F)V",
+                23, "readFieldFloatValue", "()F", 56));
+        map.put(Double.TYPE, new FieldReaderInfo(ASMUtils.type(ObjDoubleConsumer.class), "(Ljava/lang/Object;D)V",
+                "(D)V", 24, "readFloatDoubleValue", "()D", 57));
+        map.put(String.class,
+                new FieldReaderInfo(ASMUtils.type(BiConsumer.class), "(Ljava/lang/Object;Ljava/lang/Object;)V",
+                        "(Ljava/lang/String;)V", 25, "readString", "()Ljava/lang/String;", 58));
+        map.put(Integer.class,
+                new FieldReaderInfo(ASMUtils.type(BiConsumer.class), "(Ljava/lang/Object;Ljava/lang/Integer;)V",
+                        "(Ljava/lang/Integer;)V", 25, "readInt32", "()Ljava/lang/Integer;", 58));
         fieldItemObjectReader = new String[1024];
     }
 
     public ObjectReaderCreatorASM(ClassLoader classLoader) {
-        this.classLoader = classLoader instanceof DynamicClassLoader ? (DynamicClassLoader) classLoader : new DynamicClassLoader(classLoader);
+        this.classLoader = classLoader instanceof DynamicClassLoader ? (DynamicClassLoader) classLoader
+                : new DynamicClassLoader(classLoader);
     }
 
-    private void createObjectForNonConstructor(ObjectReadContext objectReadContext, MethodWriterContext methodWriterContext) {
+    private void createObjectForNonConstructor(ObjectReadContext objectReadContext,
+            MethodWriterContext methodWriterContext) {
         Constructor constructor;
         Class cls;
         Constructor constructor2;
@@ -263,7 +287,14 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
         MethodWriter methodWriter = methodWriterContext.mw;
         ObjectReaderNoneDefaultConstructor objectReaderNoneDefaultConstructor = (ObjectReaderNoneDefaultConstructor) objectReadContext.objectReaderAdapter;
         int i = 0;
-        if (!this.classLoader.isExternalClass(objectReadContext.objectClass) && objectReadContext.objectClass.getTypeParameters().length == 0 && (((constructor = objectReaderNoneDefaultConstructor.constructor) == null || Modifier.isPublic(constructor.getModifiers())) && (((cls = objectReadContext.objectClass) == null || Modifier.isPublic(cls.getModifiers())) && objectReaderNoneDefaultConstructor.factoryFunction == null && ((constructor2 = objectReaderNoneDefaultConstructor.noneDefaultConstructor) == null || Modifier.isPublic(constructor2.getModifiers()))))) {
+        if (!this.classLoader.isExternalClass(objectReadContext.objectClass)
+                && objectReadContext.objectClass.getTypeParameters().length == 0
+                && (((constructor = objectReaderNoneDefaultConstructor.constructor) == null
+                        || Modifier.isPublic(constructor.getModifiers()))
+                        && (((cls = objectReadContext.objectClass) == null || Modifier.isPublic(cls.getModifiers()))
+                                && objectReaderNoneDefaultConstructor.factoryFunction == null
+                                && ((constructor2 = objectReaderNoneDefaultConstructor.noneDefaultConstructor) == null
+                                        || Modifier.isPublic(constructor2.getModifiers()))))) {
             methodWriter.new_(objectReadContext.objectType);
             methodWriter.dup();
             StringBuilder sb = new StringBuilder("(");
@@ -275,7 +306,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                 i++;
             }
             sb.append(")V");
-            methodWriter.invokespecial(objectReadContext.objectType, MethodDescription.CONSTRUCTOR_INTERNAL_NAME, sb.toString());
+            methodWriter.invokespecial(objectReadContext.objectType, MethodDescription.CONSTRUCTOR_INTERNAL_NAME,
+                    sb.toString());
             return;
         }
         methodWriter.aload(0);
@@ -307,7 +339,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
             methodWriter.aastore();
             i++;
         }
-        methodWriter.invokevirtual(ASMUtils.TYPE_OBJECT_READER_NONE_DEFAULT_CONSTRUCTOR, "createInstance", TypeProxy.SilentConstruction.Appender.NEW_INSTANCE_METHOD_DESCRIPTOR);
+        methodWriter.invokevirtual(ASMUtils.TYPE_OBJECT_READER_NONE_DEFAULT_CONSTRUCTOR, "createInstance",
+                TypeProxy.SilentConstruction.Appender.NEW_INSTANCE_METHOD_DESCRIPTOR);
     }
 
     private Function createValueConsumer0(Class cls, FieldReader[] fieldReaderArr, boolean z) {
@@ -339,8 +372,10 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
         classWriter.visitField(17, "consumer", "Ljava/util/function/Consumer;");
         classWriter.visitField(1, "object", strDesc2);
         String str = "object";
-        classWriter.visit(52, 49, strReplace, "java/lang/Object", new String[]{z ? ASMUtils.TYPE_BYTE_ARRAY_VALUE_CONSUMER : ASMUtils.TYPE_CHAR_ARRAY_VALUE_CONSUMER});
-        MethodWriter methodWriterVisitMethod = classWriter.visitMethod(1, MethodDescription.CONSTRUCTOR_INTERNAL_NAME, "(Ljava/util/function/Consumer;)V", 32);
+        classWriter.visit(52, 49, strReplace, "java/lang/Object",
+                new String[] { z ? ASMUtils.TYPE_BYTE_ARRAY_VALUE_CONSUMER : ASMUtils.TYPE_CHAR_ARRAY_VALUE_CONSUMER });
+        MethodWriter methodWriterVisitMethod = classWriter.visitMethod(1, MethodDescription.CONSTRUCTOR_INTERNAL_NAME,
+                "(Ljava/util/function/Consumer;)V", 32);
         methodWriterVisitMethod.aload(0);
         methodWriterVisitMethod.invokespecial("java/lang/Object", MethodDescription.CONSTRUCTOR_INTERNAL_NAME, "()V");
         methodWriterVisitMethod.aload(0);
@@ -366,7 +401,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
         methodWriterVisitMethod3.putfield(strReplace, str, strDesc2);
         methodWriterVisitMethod3.return_();
         methodWriterVisitMethod3.visitMaxs(3, 3);
-        MethodWriter methodWriterVisitMethod4 = classWriter.visitMethod(1, "accept", z ? "(II[BIILjava/nio/charset/Charset;)V" : "(II[CII)V", 32);
+        MethodWriter methodWriterVisitMethod4 = classWriter.visitMethod(1, "accept",
+                z ? "(II[BIILjava/nio/charset/Charset;)V" : "(II[CII)V", 32);
         Label label = new Label();
         Label label2 = new Label();
         Label label3 = new Label();
@@ -414,7 +450,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
             int i4 = length;
             Class cls5 = Integer.TYPE;
             Label[] labelArr2 = labelArr;
-            if (type == Integer.class || type == cls5 || type == Short.class || type == cls4 || type == Byte.class || type == cls3) {
+            if (type == Integer.class || type == cls5 || type == Short.class || type == cls4 || type == Byte.class
+                    || type == cls3) {
                 methodWriterVisitMethod4.aload(3);
                 methodWriterVisitMethod4.iload(4);
                 methodWriterVisitMethod4.iload(5);
@@ -448,7 +485,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                     methodWriterVisitMethod4.aload(3);
                     methodWriterVisitMethod4.iload(4);
                     methodWriterVisitMethod4.iload(5);
-                    methodWriterVisitMethod4.invokestatic(ASMUtils.TYPE_TYPE_UTILS, "parseLong", z ? "([BII)J" : "([CII)J");
+                    methodWriterVisitMethod4.invokestatic(ASMUtils.TYPE_TYPE_UTILS, "parseLong",
+                            z ? "([BII)J" : "([CII)J");
                     if (type == cls6) {
                         strDesc = "J";
                     } else {
@@ -462,7 +500,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                         methodWriterVisitMethod4.aload(3);
                         methodWriterVisitMethod4.iload(4);
                         methodWriterVisitMethod4.iload(5);
-                        methodWriterVisitMethod4.invokestatic(ASMUtils.TYPE_TYPE_UTILS, "parseFloat", z ? "([BII)F" : "([CII)F");
+                        methodWriterVisitMethod4.invokestatic(ASMUtils.TYPE_TYPE_UTILS, "parseFloat",
+                                z ? "([BII)F" : "([CII)F");
                         if (type == cls7) {
                             strDesc = "F";
                             strO = "(F)V";
@@ -477,12 +516,14 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                             methodWriterVisitMethod4.aload(3);
                             methodWriterVisitMethod4.iload(4);
                             methodWriterVisitMethod4.iload(5);
-                            methodWriterVisitMethod4.invokestatic(ASMUtils.TYPE_TYPE_UTILS, "parseDouble", z ? "([BII)D" : "([CII)D");
+                            methodWriterVisitMethod4.invokestatic(ASMUtils.TYPE_TYPE_UTILS, "parseDouble",
+                                    z ? "([BII)D" : "([CII)D");
                             if (type == cls8) {
                                 strDesc = "D";
                                 strO = "(D)V";
                             } else {
-                                methodWriterVisitMethod4.invokestatic("java/lang/Double", "valueOf", "(D)Ljava/lang/Double;");
+                                methodWriterVisitMethod4.invokestatic("java/lang/Double", "valueOf",
+                                        "(D)Ljava/lang/Double;");
                                 strDesc = "Ljava/lang/Double;";
                                 strO = "(Ljava/lang/Double;)V";
                             }
@@ -492,7 +533,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                                 methodWriterVisitMethod4.aload(3);
                                 methodWriterVisitMethod4.iload(4);
                                 methodWriterVisitMethod4.iload(5);
-                                methodWriterVisitMethod4.invokestatic(ASMUtils.TYPE_TYPE_UTILS, "parseBoolean", z ? "([BII)Ljava/lang/Boolean;" : "([CII)Ljava/lang/Boolean;");
+                                methodWriterVisitMethod4.invokestatic(ASMUtils.TYPE_TYPE_UTILS, "parseBoolean",
+                                        z ? "([BII)Ljava/lang/Boolean;" : "([CII)Ljava/lang/Boolean;");
                                 if (type == cls9) {
                                     methodWriterVisitMethod4.invokevirtual("java/lang/Boolean", "booleanValue", "()Z");
                                     strDesc = "Z";
@@ -509,18 +551,22 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                                 methodWriterVisitMethod4.iload(5);
                                 if (z) {
                                     methodWriterVisitMethod4.aload(6);
-                                    methodWriterVisitMethod4.invokestatic(ASMUtils.TYPE_DATE_UTILS, "parseMillis", "([BIILjava/nio/charset/Charset;)J");
+                                    methodWriterVisitMethod4.invokestatic(ASMUtils.TYPE_DATE_UTILS, "parseMillis",
+                                            "([BIILjava/nio/charset/Charset;)J");
                                 } else {
-                                    methodWriterVisitMethod4.invokestatic(ASMUtils.TYPE_DATE_UTILS, "parseMillis", "([CII)J");
+                                    methodWriterVisitMethod4.invokestatic(ASMUtils.TYPE_DATE_UTILS, "parseMillis",
+                                            "([CII)J");
                                 }
-                                methodWriterVisitMethod4.invokespecial("java/util/Date", MethodDescription.CONSTRUCTOR_INTERNAL_NAME, "(J)V");
+                                methodWriterVisitMethod4.invokespecial("java/util/Date",
+                                        MethodDescription.CONSTRUCTOR_INTERNAL_NAME, "(J)V");
                                 strDesc = "Ljava/util/Date;";
                                 strO = "(Ljava/util/Date;)V";
                             } else if (type == BigDecimal.class) {
                                 methodWriterVisitMethod4.aload(3);
                                 methodWriterVisitMethod4.iload(4);
                                 methodWriterVisitMethod4.iload(5);
-                                methodWriterVisitMethod4.invokestatic(ASMUtils.TYPE_TYPE_UTILS, "parseBigDecimal", z ? "([BII)Ljava/math/BigDecimal;" : "([CII)Ljava/math/BigDecimal;");
+                                methodWriterVisitMethod4.invokestatic(ASMUtils.TYPE_TYPE_UTILS, "parseBigDecimal",
+                                        z ? "([BII)Ljava/math/BigDecimal;" : "([CII)Ljava/math/BigDecimal;");
                                 strDesc = "Ljava/math/BigDecimal;";
                                 strO = "(Ljava/math/BigDecimal;)V";
                             } else {
@@ -531,18 +577,22 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                                 methodWriterVisitMethod4.iload(5);
                                 if (z) {
                                     methodWriterVisitMethod4.aload(6);
-                                    methodWriterVisitMethod4.invokespecial("java/lang/String", MethodDescription.CONSTRUCTOR_INTERNAL_NAME, "([BIILjava/nio/charset/Charset;)V");
+                                    methodWriterVisitMethod4.invokespecial("java/lang/String",
+                                            MethodDescription.CONSTRUCTOR_INTERNAL_NAME,
+                                            "([BIILjava/nio/charset/Charset;)V");
                                 } else {
-                                    methodWriterVisitMethod4.invokespecial("java/lang/String", MethodDescription.CONSTRUCTOR_INTERNAL_NAME, "([CII)V");
+                                    methodWriterVisitMethod4.invokespecial("java/lang/String",
+                                            MethodDescription.CONSTRUCTOR_INTERNAL_NAME, "([CII)V");
                                 }
                                 if (type == String.class) {
                                     strDesc = "Ljava/lang/String;";
                                     strO = "(Ljava/lang/String;)V";
                                 } else {
                                     strDesc = ASMUtils.desc(cls2);
-                                    strO = cls2 == Character.TYPE ? "(C)V" : bjs.o("(", strDesc, ")V");
+                                    strO = cls2 == Character.TYPE ? "(C)V" : concat("(", strDesc, ")V");
                                     methodWriterVisitMethod4.visitLdcInsn(cls2);
-                                    methodWriterVisitMethod4.invokestatic(ASMUtils.TYPE_TYPE_UTILS, "cast", "(Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;");
+                                    methodWriterVisitMethod4.invokestatic(ASMUtils.TYPE_TYPE_UTILS, "cast",
+                                            "(Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;");
                                     methodWriterVisitMethod4.checkcast(ASMUtils.type(cls2));
                                 }
                             }
@@ -588,7 +638,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
         methodWriterVisitMethod4.visitMaxs(3, 3);
         byte[] byteArray = classWriter.toByteArray();
         try {
-            return new cpt(this.classLoader.defineClassPublic(string, byteArray, 0, byteArray.length).getConstructor(Consumer.class), 1);
+            return new cpt(this.classLoader.defineClassPublic(string, byteArray, 0, byteArray.length)
+                    .getConstructor(Consumer.class), 1);
         } catch (Throwable th) {
             th.printStackTrace();
             return null;
@@ -678,7 +729,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
         Constructor constructor = objectReadContext.defaultConstructor;
         Supplier<T> supplier = objectReadContext.objectReaderAdapter.creator;
         Class<?> cls = objectReadContext.objectClass;
-        boolean z = Modifier.isPublic(cls == null ? 1 : cls.getModifiers()) && (cls == null || !this.classLoader.isExternalClass(cls));
+        boolean z = Modifier.isPublic(cls == null ? 1 : cls.getModifiers())
+                && (cls == null || !this.classLoader.isExternalClass(cls));
         if (constructor != null && z && Modifier.isPublic(constructor.getModifiers())) {
             newObject(methodWriter, objectReadContext.objectType, objectReadContext.defaultConstructor);
         } else {
@@ -729,8 +781,10 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
         }
     }
 
-    private void genInitFields(FieldReader[] fieldReaderArr, String str, boolean z, int i, MethodWriter methodWriter, String str2) {
-        if ((str2 == ASMUtils.TYPE_OBJECT_READER_ADAPTER || str2 == ASMUtils.TYPE_OBJECT_READER_NONE_DEFAULT_CONSTRUCTOR) && z) {
+    private void genInitFields(FieldReader[] fieldReaderArr, String str, boolean z, int i, MethodWriter methodWriter,
+            String str2) {
+        if ((str2 == ASMUtils.TYPE_OBJECT_READER_ADAPTER
+                || str2 == ASMUtils.TYPE_OBJECT_READER_NONE_DEFAULT_CONSTRUCTOR) && z) {
             for (int i2 = 0; i2 < fieldReaderArr.length; i2++) {
                 methodWriter.aload(0);
                 methodWriter.aload(i);
@@ -741,12 +795,14 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
         }
     }
 
-    private static void genInitForNonDefaultConstructor(FieldReader[] fieldReaderArr, MethodWriterContext methodWriterContext) {
+    private static void genInitForNonDefaultConstructor(FieldReader[] fieldReaderArr,
+            MethodWriterContext methodWriterContext) {
         MethodWriter methodWriter = methodWriterContext.mw;
         for (FieldReader fieldReader : fieldReaderArr) {
             Class cls = fieldReader.fieldClass;
             int iVar = methodWriterContext.var(fieldReader);
-            if (cls == Byte.TYPE || cls == Short.TYPE || cls == Integer.TYPE || cls == Boolean.TYPE || cls == Character.TYPE) {
+            if (cls == Byte.TYPE || cls == Short.TYPE || cls == Integer.TYPE || cls == Boolean.TYPE
+                    || cls == Character.TYPE) {
                 methodWriter.iconst_0();
                 methodWriter.istore(iVar);
             } else if (cls == Long.TYPE) {
@@ -771,7 +827,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
         ObjectReaderAdapter objectReaderAdapter = objectReadContext.objectReaderAdapter;
         FieldReader[] fieldReaderArr = objectReadContext.fieldReaders;
         int i = 1;
-        MethodWriter methodWriterVisitMethod = objectReadContext.cw.visitMethod(1, "getFieldReader", "(J)" + ASMUtils.DESC_FIELD_READER, 512);
+        MethodWriter methodWriterVisitMethod = objectReadContext.cw.visitMethod(1, "getFieldReader",
+                "(J)" + ASMUtils.DESC_FIELD_READER, 512);
         Label label = new Label();
         if (fieldReaderArr.length > 6) {
             TreeMap treeMap = new TreeMap();
@@ -782,7 +839,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                     break;
                 }
                 long j = jArr[i2];
-                ((List) treeMap.computeIfAbsent(Integer.valueOf((int) ((j >>> 32) ^ j)), new cpl(8))).add(Long.valueOf(j));
+                ((List) treeMap.computeIfAbsent(Integer.valueOf((int) ((j >>> 32) ^ j)), new cpl(8)))
+                        .add(Long.valueOf(j));
                 i2++;
             }
             int size = treeMap.size();
@@ -822,9 +880,11 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                     methodWriterVisitMethod.visitLdcInsn(jLongValue);
                     methodWriterVisitMethod.lcmp();
                     methodWriterVisitMethod.ifne(label3);
-                    short s = objectReaderAdapter.mapping[Arrays.binarySearch(objectReaderAdapter.hashCodes, jLongValue)];
+                    short s = objectReaderAdapter.mapping[Arrays.binarySearch(objectReaderAdapter.hashCodes,
+                            jLongValue)];
                     methodWriterVisitMethod.aload(0);
-                    methodWriterVisitMethod.getfield(objectReadContext.classNameType, CodeGenUtils.fieldReader(s), ASMUtils.DESC_FIELD_READER);
+                    methodWriterVisitMethod.getfield(objectReadContext.classNameType, CodeGenUtils.fieldReader(s),
+                            ASMUtils.DESC_FIELD_READER);
                     methodWriterVisitMethod.goto_(label);
                     if (label3 != label2) {
                         methodWriterVisitMethod.visitLabel(label3);
@@ -851,7 +911,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                 methodWriterVisitMethod.ifne(label4);
                 methodWriterVisitMethod.visitLabel(label5);
                 methodWriterVisitMethod.aload(0);
-                methodWriterVisitMethod.getfield(objectReadContext.classNameType, CodeGenUtils.fieldReader(i8), ASMUtils.DESC_FIELD_READER);
+                methodWriterVisitMethod.getfield(objectReadContext.classNameType, CodeGenUtils.fieldReader(i8),
+                        ASMUtils.DESC_FIELD_READER);
                 methodWriterVisitMethod.goto_(label);
                 methodWriterVisitMethod.visitLabel(label4);
             }
@@ -866,7 +927,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
     private void genMethodGetFieldReaderLCase(ObjectReadContext objectReadContext) {
         ObjectReaderAdapter objectReaderAdapter = objectReadContext.objectReaderAdapter;
         FieldReader[] fieldReaderArr = objectReadContext.fieldReaders;
-        MethodWriter methodWriterVisitMethod = objectReadContext.cw.visitMethod(1, "getFieldReaderLCase", "(J)" + ASMUtils.DESC_FIELD_READER, 512);
+        MethodWriter methodWriterVisitMethod = objectReadContext.cw.visitMethod(1, "getFieldReaderLCase",
+                "(J)" + ASMUtils.DESC_FIELD_READER, 512);
         Label label = new Label();
         if (fieldReaderArr.length > 6) {
             TreeMap treeMap = new TreeMap();
@@ -877,7 +939,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                     break;
                 }
                 long j = jArr[i];
-                ((List) treeMap.computeIfAbsent(Integer.valueOf((int) ((j >>> 32) ^ j)), new cpl(9))).add(Long.valueOf(j));
+                ((List) treeMap.computeIfAbsent(Integer.valueOf((int) ((j >>> 32) ^ j)), new cpl(9)))
+                        .add(Long.valueOf(j));
                 i++;
             }
             int size = treeMap.size();
@@ -912,9 +975,11 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                     methodWriterVisitMethod.visitLdcInsn(jLongValue);
                     methodWriterVisitMethod.lcmp();
                     methodWriterVisitMethod.ifne(label2);
-                    short s = objectReaderAdapter.mappingLCase[Arrays.binarySearch(objectReaderAdapter.hashCodesLCase, jLongValue)];
+                    short s = objectReaderAdapter.mappingLCase[Arrays.binarySearch(objectReaderAdapter.hashCodesLCase,
+                            jLongValue)];
                     methodWriterVisitMethod.aload(0);
-                    methodWriterVisitMethod.getfield(objectReadContext.classNameType, CodeGenUtils.fieldReader(s), ASMUtils.DESC_FIELD_READER);
+                    methodWriterVisitMethod.getfield(objectReadContext.classNameType, CodeGenUtils.fieldReader(s),
+                            ASMUtils.DESC_FIELD_READER);
                     methodWriterVisitMethod.goto_(label);
                 }
                 methodWriterVisitMethod.goto_(label2);
@@ -933,7 +998,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                 methodWriterVisitMethod.ifne(label3);
                 methodWriterVisitMethod.visitLabel(label4);
                 methodWriterVisitMethod.aload(0);
-                methodWriterVisitMethod.getfield(objectReadContext.classNameType, CodeGenUtils.fieldReader(i5), ASMUtils.DESC_FIELD_READER);
+                methodWriterVisitMethod.getfield(objectReadContext.classNameType, CodeGenUtils.fieldReader(i5),
+                        ASMUtils.DESC_FIELD_READER);
                 methodWriterVisitMethod.goto_(label);
                 methodWriterVisitMethod.visitLabel(label3);
             }
@@ -1034,7 +1100,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
             methodWriterVisitMethod.lload(4);
             str = str4;
             i = iVar22;
-            methodWriterVisitMethod.visitLdcInsn(JSONReader.Feature.SupportSmartMatch.mask | JSONReader.Feature.SupportAutoType.mask);
+            methodWriterVisitMethod
+                    .visitLdcInsn(JSONReader.Feature.SupportSmartMatch.mask | JSONReader.Feature.SupportAutoType.mask);
             methodWriterVisitMethod.land();
             methodWriterVisitMethod.lconst_0();
             methodWriterVisitMethod.lcmp();
@@ -1045,7 +1112,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
             methodWriterVisitMethod.aload(2);
             methodWriterVisitMethod.aload(3);
             methodWriterVisitMethod.lload(4);
-            methodWriterVisitMethod.invokespecial(ASMUtils.TYPE_OBJECT_READER_NONE_DEFAULT_CONSTRUCTOR, "readJSONBObject", str3);
+            methodWriterVisitMethod.invokespecial(ASMUtils.TYPE_OBJECT_READER_NONE_DEFAULT_CONSTRUCTOR,
+                    "readJSONBObject", str3);
             methodWriterVisitMethod.areturn();
             methodWriterVisitMethod.visitLabel(label9);
             genInitForNonDefaultConstructor(fieldReaderArr2, methodWriterContext3);
@@ -1120,7 +1188,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
             methodWriterVisitMethod.aload(0);
             methodWriterVisitMethod.aload(1);
             i5 = i8;
-            methodWriterVisitMethod.invokevirtual(str2, "autoType", yg.o(new StringBuilder("("), ASMUtils.DESC_JSON_READER, ")Ljava/lang/Object;"));
+            methodWriterVisitMethod.invokevirtual(str2, "autoType",
+                    yg.o(new StringBuilder("("), ASMUtils.DESC_JSON_READER, ")Ljava/lang/Object;"));
             methodWriterVisitMethod.astore(i3);
             methodWriterVisitMethod.goto_(label11);
             methodWriterVisitMethod.visitLabel(label14);
@@ -1128,7 +1197,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
         if (z3) {
             if (objectReadContext.objectReaderAdapter instanceof ObjectReaderNoneDefaultConstructor) {
                 MethodWriterContext methodWriterContext4 = methodWriterContext;
-                genReadHashCode64ValueForNonDefaultConstructor(objectReadContext, methodWriterContext4, i5, z4, i3, label2);
+                genReadHashCode64ValueForNonDefaultConstructor(objectReadContext, methodWriterContext4, i5, z4, i3,
+                        label2);
                 methodWriterContext = methodWriterContext4;
                 label3 = label2;
             } else {
@@ -1138,7 +1208,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                 methodWriterVisitMethod.aload(1);
                 methodWriterVisitMethod.lload(4);
                 methodWriterVisitMethod.aload(i3);
-                methodWriterVisitMethod.invokevirtual(ASMUtils.TYPE_OBJECT_READER_ADAPTER, "readFieldValue", READ_FIELD_READER_UL);
+                methodWriterVisitMethod.invokevirtual(ASMUtils.TYPE_OBJECT_READER_ADAPTER, "readFieldValue",
+                        READ_FIELD_READER_UL);
             }
             methodWriterVisitMethod.goto_(label3);
             objectReaderCreatorASM = this;
@@ -1164,7 +1235,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                         break;
                     }
                     long j2 = jArr[i10];
-                    ((List) treeMap.computeIfAbsent(Integer.valueOf((int) (j2 ^ (j2 >>> 32))), new cpl(7))).add(Long.valueOf(j2));
+                    ((List) treeMap.computeIfAbsent(Integer.valueOf((int) (j2 ^ (j2 >>> 32))), new cpl(7)))
+                            .add(Long.valueOf(j2));
                     i10++;
                     methodWriterContext = methodWriterContext2;
                 }
@@ -1212,7 +1284,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                         methodWriterVisitMethod.lcmp();
                         methodWriterVisitMethod.ifne(label17);
                         int i18 = i9;
-                        short s = objectReaderAdapter2.mapping[Arrays.binarySearch(objectReaderAdapter2.hashCodes, jLongValue)];
+                        short s = objectReaderAdapter2.mapping[Arrays.binarySearch(objectReaderAdapter2.hashCodes,
+                                jLongValue)];
                         FieldReader fieldReader = fieldReaderArr2[s];
                         ObjectReaderAdapter objectReaderAdapter3 = objectReaderAdapter2;
                         int i19 = iVar2;
@@ -1275,7 +1348,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                 methodWriterContext = methodWriterContext2;
                 i3 = i12;
                 methodWriterVisitMethod.visitLabel(label15);
-                if (!objectReadContext2.disableSmartMatch() && !(objectReadContext2.objectReaderAdapter instanceof ObjectReaderNoneDefaultConstructor)) {
+                if (!objectReadContext2.disableSmartMatch()
+                        && !(objectReadContext2.objectReaderAdapter instanceof ObjectReaderNoneDefaultConstructor)) {
                     Label label19 = new Label();
                     if ((j & JSONReader.Feature.SupportSmartMatch.mask) == 0) {
                         methodWriterVisitMethod.aload(1);
@@ -1286,14 +1360,16 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                     methodWriterVisitMethod.aload(0);
                     methodWriterVisitMethod.aload(1);
                     methodWriterVisitMethod.invokevirtual(ASMUtils.TYPE_JSON_READER, str14, "()J");
-                    methodWriterVisitMethod.invokeinterface(ASMUtils.TYPE_OBJECT_READER, "getFieldReaderLCase", METHOD_DESC_GET_FIELD_READER);
+                    methodWriterVisitMethod.invokeinterface(ASMUtils.TYPE_OBJECT_READER, "getFieldReaderLCase",
+                            METHOD_DESC_GET_FIELD_READER);
                     methodWriterVisitMethod.dup();
                     methodWriterVisitMethod.astore(i25);
                     methodWriterVisitMethod.ifnull(label19);
                     methodWriterVisitMethod.aload(i25);
                     methodWriterVisitMethod.aload(1);
                     methodWriterVisitMethod.aload(i3);
-                    methodWriterVisitMethod.invokevirtual(ASMUtils.TYPE_FIELD_READE, "readFieldValueJSONB", METHOD_DESC_READ_FIELD_VALUE);
+                    methodWriterVisitMethod.invokevirtual(ASMUtils.TYPE_FIELD_READE, "readFieldValueJSONB",
+                            METHOD_DESC_READ_FIELD_VALUE);
                     methodWriterVisitMethod.goto_(label3);
                     methodWriterVisitMethod.visitLabel(label19);
                 }
@@ -1362,7 +1438,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
             methodWriterVisitMethod.aload(1);
             methodWriterVisitMethod.aload(i3);
             methodWriterVisitMethod.lload(4);
-            methodWriterVisitMethod.invokevirtual(ASMUtils.TYPE_OBJECT_READER_ADAPTER, "processExtra", METHOD_DESC_PROCESS_EXTRA);
+            methodWriterVisitMethod.invokevirtual(ASMUtils.TYPE_OBJECT_READER_ADAPTER, "processExtra",
+                    METHOD_DESC_PROCESS_EXTRA);
         }
         methodWriterVisitMethod.goto_(label3);
         methodWriterVisitMethod.visitLabel(label3);
@@ -1385,7 +1462,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
         FieldReader[] fieldReaderArr = objectReadContext2.fieldReaders;
         String str = objectReadContext2.classNameType;
         boolean z = (j & JSONReader.Feature.FieldBased.mask) != 0;
-        MethodWriter methodWriterVisitMethod = objectReadContext2.cw.visitMethod(1, "readArrayMappingJSONBObject", METHOD_DESC_READ_OBJECT, 512);
+        MethodWriter methodWriterVisitMethod = objectReadContext2.cw.visitMethod(1, "readArrayMappingJSONBObject",
+                METHOD_DESC_READ_OBJECT, 512);
         MethodWriterContext methodWriterContext = new MethodWriterContext(methodWriterVisitMethod, 6, true);
         methodWriterVisitMethod.aload(1);
         methodWriterVisitMethod.lload(4);
@@ -1429,43 +1507,60 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
         methodWriterVisitMethod.aload(1);
         methodWriterVisitMethod.aload(i3);
         methodWriterVisitMethod.iload(iVar2);
-        methodWriterVisitMethod.invokevirtual(ASMUtils.TYPE_OBJECT_READER_ADAPTER, "readArrayMappingJSONBObject0", METHOD_DESC_READ_ARRAY_MAPPING_JSONB_OBJECT0);
+        methodWriterVisitMethod.invokevirtual(ASMUtils.TYPE_OBJECT_READER_ADAPTER, "readArrayMappingJSONBObject0",
+                METHOD_DESC_READ_ARRAY_MAPPING_JSONB_OBJECT0);
         methodWriterVisitMethod.visitLabel(label2);
         methodWriterVisitMethod.aload(i3);
         methodWriterVisitMethod.areturn();
         methodWriterVisitMethod.visitMaxs(5, 10);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:101:0x0593  */
-    /* JADX WARN: Found duplicated region for block: B:103:0x059d  */
-    /* JADX WARN: Found duplicated region for block: B:107:0x05c2  */
-    /* JADX WARN: Found duplicated region for block: B:109:0x05e9  */
-    /* JADX WARN: Found duplicated region for block: B:110:0x05f6  */
-    /* JADX WARN: Found duplicated region for block: B:114:0x061b  */
-    /* JADX WARN: Found duplicated region for block: B:116:0x0621  */
-    /* JADX WARN: Found duplicated region for block: B:117:0x062f  */
-    /* JADX WARN: Found duplicated region for block: B:121:0x064f  */
-    /* JADX WARN: Found duplicated region for block: B:124:0x066a  */
-    /* JADX WARN: Found duplicated region for block: B:125:0x066e  */
-    /* JADX WARN: Found duplicated region for block: B:128:0x036f A[EDGE_INSN: B:128:0x036f->B:67:0x036f BREAK  A[LOOP:0: B:64:0x033a->B:66:0x0347], SYNTHETIC] */
+    /* JADX WARN: Found duplicated region for block: B:101:0x0593 */
+    /* JADX WARN: Found duplicated region for block: B:103:0x059d */
+    /* JADX WARN: Found duplicated region for block: B:107:0x05c2 */
+    /* JADX WARN: Found duplicated region for block: B:109:0x05e9 */
+    /* JADX WARN: Found duplicated region for block: B:110:0x05f6 */
+    /* JADX WARN: Found duplicated region for block: B:114:0x061b */
+    /* JADX WARN: Found duplicated region for block: B:116:0x0621 */
+    /* JADX WARN: Found duplicated region for block: B:117:0x062f */
+    /* JADX WARN: Found duplicated region for block: B:121:0x064f */
+    /* JADX WARN: Found duplicated region for block: B:124:0x066a */
+    /* JADX WARN: Found duplicated region for block: B:125:0x066e */
+    /*
+     * JADX WARN: Found duplicated region for block: B:128:0x036f A[EDGE_INSN:
+     * B:128:0x036f->B:67:0x036f BREAK A[LOOP:0: B:64:0x033a->B:66:0x0347],
+     * SYNTHETIC]
+     */
     /* JADX WARN: Found duplicated region for block: B:134:0x045b A[SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:52:0x02dc  */
-    /* JADX WARN: Found duplicated region for block: B:55:0x02e2  */
+    /* JADX WARN: Found duplicated region for block: B:52:0x02dc */
+    /* JADX WARN: Found duplicated region for block: B:55:0x02e2 */
     /* JADX WARN: Found duplicated region for block: B:57:0x02e8 A[MOVE_INLINED] */
     /* JADX WARN: Found duplicated region for block: B:58:0x02f5 A[MOVE_INLINED] */
-    /* JADX WARN: Found duplicated region for block: B:61:0x0324  */
-    /* JADX WARN: Found duplicated region for block: B:63:0x0332  */
-    /* JADX WARN: Found duplicated region for block: B:66:0x0347 A[LOOP:0: B:64:0x033a->B:66:0x0347, LOOP_END] */
-    /* JADX WARN: Found duplicated region for block: B:70:0x0387 A[LOOP:1: B:68:0x0381->B:70:0x0387, LOOP_END] */
-    /* JADX WARN: Found duplicated region for block: B:73:0x03c0 A[LOOP:2: B:72:0x03be->B:73:0x03c0, LOOP_END] */
-    /* JADX WARN: Found duplicated region for block: B:76:0x03d3  */
-    /* JADX WARN: Found duplicated region for block: B:78:0x03ef  */
-    /* JADX WARN: Found duplicated region for block: B:80:0x0402  */
-    /* JADX WARN: Found duplicated region for block: B:81:0x0408  */
-    /* JADX WARN: Found duplicated region for block: B:84:0x0458  */
-    /* JADX WARN: Found duplicated region for block: B:93:0x04f1  */
+    /* JADX WARN: Found duplicated region for block: B:61:0x0324 */
+    /* JADX WARN: Found duplicated region for block: B:63:0x0332 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:66:0x0347 A[LOOP:0:
+     * B:64:0x033a->B:66:0x0347, LOOP_END]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:70:0x0387 A[LOOP:1:
+     * B:68:0x0381->B:70:0x0387, LOOP_END]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:73:0x03c0 A[LOOP:2:
+     * B:72:0x03be->B:73:0x03c0, LOOP_END]
+     */
+    /* JADX WARN: Found duplicated region for block: B:76:0x03d3 */
+    /* JADX WARN: Found duplicated region for block: B:78:0x03ef */
+    /* JADX WARN: Found duplicated region for block: B:80:0x0402 */
+    /* JADX WARN: Found duplicated region for block: B:81:0x0408 */
+    /* JADX WARN: Found duplicated region for block: B:84:0x0458 */
+    /* JADX WARN: Found duplicated region for block: B:93:0x04f1 */
     /* JADX WARN: Found duplicated region for block: B:95:0x053f A[MOVE_INLINED] */
-    /* JADX WARN: Found duplicated region for block: B:98:0x0554 A[LOOP:5: B:96:0x0551->B:98:0x0554, LOOP_END, MOVE_INLINED] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:98:0x0554 A[LOOP:5:
+     * B:96:0x0551->B:98:0x0554, LOOP_END, MOVE_INLINED]
+     */
     private <T> void genMethodReadObject(ObjectReadContext objectReadContext, long j) {
         boolean z;
         int i;
@@ -1645,7 +1740,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
             methodWriterVisitMethod.lload(4);
             str = str9;
             str2 = "(J)Z";
-            methodWriterVisitMethod.visitLdcInsn(JSONReader.Feature.SupportSmartMatch.mask | JSONReader.Feature.SupportAutoType.mask);
+            methodWriterVisitMethod
+                    .visitLdcInsn(JSONReader.Feature.SupportSmartMatch.mask | JSONReader.Feature.SupportAutoType.mask);
             methodWriterVisitMethod.land();
             methodWriterVisitMethod.lconst_0();
             methodWriterVisitMethod.lcmp();
@@ -1656,7 +1752,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
             methodWriterVisitMethod.aload(2);
             methodWriterVisitMethod.aload(3);
             methodWriterVisitMethod.lload(4);
-            methodWriterVisitMethod.invokespecial(ASMUtils.TYPE_OBJECT_READER_NONE_DEFAULT_CONSTRUCTOR, "readObject", str8);
+            methodWriterVisitMethod.invokespecial(ASMUtils.TYPE_OBJECT_READER_NONE_DEFAULT_CONSTRUCTOR, "readObject",
+                    str8);
             methodWriterVisitMethod.areturn();
             methodWriterVisitMethod.visitLabel(label21);
             fieldReaderArr2 = fieldReaderArr;
@@ -1711,7 +1808,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
             methodWriterVisitMethod.visitLdcInsn(-1L);
             methodWriterVisitMethod.lcmp();
             methodWriterVisitMethod.ifeq(label23);
-            if (zDisableAutoType && !(objectReadContext2.objectReaderAdapter instanceof ObjectReaderNoneDefaultConstructor)) {
+            if (zDisableAutoType
+                    && !(objectReadContext2.objectReaderAdapter instanceof ObjectReaderNoneDefaultConstructor)) {
                 Label label27 = new Label();
                 methodWriterVisitMethod.iload(iVar2);
                 methodWriterVisitMethod.ifne(label27);
@@ -1731,7 +1829,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                 methodWriterVisitMethod.aload(0);
                 methodWriterVisitMethod.getfield(str7, "objectClass", "Ljava/lang/Class;");
                 methodWriterVisitMethod.lload(4);
-                methodWriterVisitMethod.invokevirtual(ASMUtils.TYPE_OBJECT_READER_ADAPTER, "autoType", "(" + ASMUtils.desc(JSONReader.class) + "Ljava/lang/Class;J)Ljava/lang/Object;");
+                methodWriterVisitMethod.invokevirtual(ASMUtils.TYPE_OBJECT_READER_ADAPTER, "autoType",
+                        "(" + ASMUtils.desc(JSONReader.class) + "Ljava/lang/Class;J)Ljava/lang/Object;");
                 methodWriterVisitMethod.areturn();
                 methodWriterVisitMethod.visitLabel(label27);
             }
@@ -1751,7 +1850,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                             break;
                         }
                         long j4 = jArr[i14];
-                        ((List) treeMap.computeIfAbsent(Integer.valueOf((int) (j4 ^ (j4 >>> 32))), new cpl(10))).add(Long.valueOf(j4));
+                        ((List) treeMap.computeIfAbsent(Integer.valueOf((int) (j4 ^ (j4 >>> 32))), new cpl(10)))
+                                .add(Long.valueOf(j4));
                         i14++;
                         methodWriterContext4 = methodWriterContext5;
                         i8 = i8;
@@ -1802,7 +1902,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                             methodWriterVisitMethod.lcmp();
                             methodWriterVisitMethod.ifne(label28);
                             label12 = label28;
-                            short s = objectReadContext2.objectReaderAdapter.mapping[Arrays.binarySearch(objectReadContext2.objectReaderAdapter.hashCodes, jLongValue)];
+                            short s = objectReadContext2.objectReaderAdapter.mapping[Arrays
+                                    .binarySearch(objectReadContext2.objectReaderAdapter.hashCodes, jLongValue)];
                             int i25 = i10;
                             int i26 = size2;
                             boolean z10 = z8;
@@ -1818,7 +1919,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                             Label label31 = label3;
                             Label label32 = label23;
                             label13 = label10;
-                            genReadFieldValue(objectReadContext2, fieldReaderArr2[s], z10, methodWriterContext7, i29, s, false);
+                            genReadFieldValue(objectReadContext2, fieldReaderArr2[s], z10, methodWriterContext7, i29, s,
+                                    false);
                             methodWriterVisitMethod.goto_(label31);
                             if (label12 != label13) {
                                 methodWriterVisitMethod.visitLabel(label12);
@@ -1872,7 +1974,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                     label6 = label3;
                     label7 = label23;
                     methodWriterVisitMethod.visitLabel(label10);
-                    if (!zDisableSmartMatch && !(objectReadContext2.objectReaderAdapter instanceof ObjectReaderNoneDefaultConstructor)) {
+                    if (!zDisableSmartMatch
+                            && !(objectReadContext2.objectReaderAdapter instanceof ObjectReaderNoneDefaultConstructor)) {
                         label11 = new Label();
                         feature2 = JSONReader.Feature.SupportSmartMatch;
                         if ((j & feature2.mask) == 0) {
@@ -1886,7 +1989,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                         methodWriterVisitMethod.aload(0);
                         methodWriterVisitMethod.aload(1);
                         methodWriterVisitMethod.invokevirtual(ASMUtils.TYPE_JSON_READER, str5, str6);
-                        methodWriterVisitMethod.invokeinterface(ASMUtils.TYPE_OBJECT_READER, "getFieldReaderLCase", METHOD_DESC_GET_FIELD_READER);
+                        methodWriterVisitMethod.invokeinterface(ASMUtils.TYPE_OBJECT_READER, "getFieldReaderLCase",
+                                METHOD_DESC_GET_FIELD_READER);
                         methodWriterVisitMethod.dup();
                         int i31 = i2;
                         methodWriterVisitMethod.astore(i31);
@@ -1894,7 +1998,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                         methodWriterVisitMethod.aload(i31);
                         methodWriterVisitMethod.aload(1);
                         methodWriterVisitMethod.aload(i8);
-                        methodWriterVisitMethod.invokevirtual(ASMUtils.TYPE_FIELD_READE, "readFieldValue", METHOD_DESC_READ_FIELD_VALUE);
+                        methodWriterVisitMethod.invokevirtual(ASMUtils.TYPE_FIELD_READE, "readFieldValue",
+                                METHOD_DESC_READ_FIELD_VALUE);
                         methodWriterVisitMethod.goto_(label6);
                         methodWriterVisitMethod.visitLabel(label11);
                     }
@@ -1968,7 +2073,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                             methodWriterContext4 = methodWriterContext9;
                             z6 = z12;
                             i8 = i32;
-                            genReadFieldValue(objectReadContext, fieldReader2, z6, methodWriterContext4, i8, i33, false);
+                            genReadFieldValue(objectReadContext, fieldReader2, z6, methodWriterContext4, i8, i33,
+                                    false);
                             methodWriterVisitMethod.goto_(label6);
                             methodWriterVisitMethod.visitLabel(label9);
                             i13 = i33 + 1;
@@ -1987,7 +2093,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                         methodWriterVisitMethod.aload(1);
                         methodWriterVisitMethod.aload(i8);
                         methodWriterVisitMethod.lload(4);
-                        methodWriterVisitMethod.invokevirtual(ASMUtils.TYPE_OBJECT_READER_ADAPTER, "processExtra", METHOD_DESC_PROCESS_EXTRA);
+                        methodWriterVisitMethod.invokevirtual(ASMUtils.TYPE_OBJECT_READER_ADAPTER, "processExtra",
+                                METHOD_DESC_PROCESS_EXTRA);
                     }
                     methodWriterVisitMethod.goto_(label6);
                 }
@@ -2008,7 +2115,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
             }
             if (objectReadContext2.objectReaderAdapter instanceof ObjectReaderNoneDefaultConstructor) {
                 MethodWriterContext methodWriterContext10 = methodWriterContext3;
-                genReadHashCode64ValueForNonDefaultConstructor(objectReadContext2, methodWriterContext10, i9, z5, i8, label2);
+                genReadHashCode64ValueForNonDefaultConstructor(objectReadContext2, methodWriterContext10, i9, z5, i8,
+                        label2);
                 methodWriterContext4 = methodWriterContext10;
                 label14 = label2;
             } else {
@@ -2019,7 +2127,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                 methodWriterVisitMethod.aload(1);
                 methodWriterVisitMethod.lload(4);
                 methodWriterVisitMethod.aload(i8);
-                methodWriterVisitMethod.invokevirtual(ASMUtils.TYPE_OBJECT_READER_ADAPTER, "readFieldValue", READ_FIELD_READER_UL);
+                methodWriterVisitMethod.invokevirtual(ASMUtils.TYPE_OBJECT_READER_ADAPTER, "readFieldValue",
+                        READ_FIELD_READER_UL);
             }
             methodWriterVisitMethod.goto_(label14);
             label4 = label18;
@@ -2038,7 +2147,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                     methodWriterVisitMethod.aload(1);
                     methodWriterVisitMethod.aload(i8);
                     methodWriterVisitMethod.lload(4);
-                    methodWriterVisitMethod.invokevirtual(ASMUtils.TYPE_OBJECT_READER_ADAPTER, "processExtra", METHOD_DESC_PROCESS_EXTRA);
+                    methodWriterVisitMethod.invokevirtual(ASMUtils.TYPE_OBJECT_READER_ADAPTER, "processExtra",
+                            METHOD_DESC_PROCESS_EXTRA);
                 }
                 methodWriterVisitMethod.goto_(label6);
             }
@@ -2095,7 +2205,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                         break;
                     }
                     long j42 = jArr[i14];
-                    ((List) treeMap.computeIfAbsent(Integer.valueOf((int) (j42 ^ (j42 >>> 32))), new cpl(10))).add(Long.valueOf(j42));
+                    ((List) treeMap.computeIfAbsent(Integer.valueOf((int) (j42 ^ (j42 >>> 32))), new cpl(10)))
+                            .add(Long.valueOf(j42));
                     i14++;
                     methodWriterContext4 = methodWriterContext5;
                     i8 = i8;
@@ -2147,7 +2258,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                         methodWriterVisitMethod.lcmp();
                         methodWriterVisitMethod.ifne(label28);
                         label12 = label28;
-                        short s2 = objectReadContext2.objectReaderAdapter.mapping[Arrays.binarySearch(objectReadContext2.objectReaderAdapter.hashCodes, jLongValue2)];
+                        short s2 = objectReadContext2.objectReaderAdapter.mapping[Arrays
+                                .binarySearch(objectReadContext2.objectReaderAdapter.hashCodes, jLongValue2)];
                         int i252 = i10;
                         int i262 = size2;
                         boolean z102 = z8;
@@ -2163,7 +2275,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                         Label label312 = label3;
                         Label label322 = label23;
                         label13 = label10;
-                        genReadFieldValue(objectReadContext2, fieldReaderArr2[s2], z102, methodWriterContext72, i292, s2, false);
+                        genReadFieldValue(objectReadContext2, fieldReaderArr2[s2], z102, methodWriterContext72, i292,
+                                s2, false);
                         methodWriterVisitMethod.goto_(label312);
                         if (label12 != label13) {
                             methodWriterVisitMethod.visitLabel(label12);
@@ -2231,7 +2344,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                     methodWriterVisitMethod.aload(0);
                     methodWriterVisitMethod.aload(1);
                     methodWriterVisitMethod.invokevirtual(ASMUtils.TYPE_JSON_READER, str5, str6);
-                    methodWriterVisitMethod.invokeinterface(ASMUtils.TYPE_OBJECT_READER, "getFieldReaderLCase", METHOD_DESC_GET_FIELD_READER);
+                    methodWriterVisitMethod.invokeinterface(ASMUtils.TYPE_OBJECT_READER, "getFieldReaderLCase",
+                            METHOD_DESC_GET_FIELD_READER);
                     methodWriterVisitMethod.dup();
                     int i312 = i2;
                     methodWriterVisitMethod.astore(i312);
@@ -2239,7 +2353,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                     methodWriterVisitMethod.aload(i312);
                     methodWriterVisitMethod.aload(1);
                     methodWriterVisitMethod.aload(i8);
-                    methodWriterVisitMethod.invokevirtual(ASMUtils.TYPE_FIELD_READE, "readFieldValue", METHOD_DESC_READ_FIELD_VALUE);
+                    methodWriterVisitMethod.invokevirtual(ASMUtils.TYPE_FIELD_READE, "readFieldValue",
+                            METHOD_DESC_READ_FIELD_VALUE);
                     methodWriterVisitMethod.goto_(label6);
                     methodWriterVisitMethod.visitLabel(label11);
                 }
@@ -2332,7 +2447,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                     methodWriterVisitMethod.aload(1);
                     methodWriterVisitMethod.aload(i8);
                     methodWriterVisitMethod.lload(4);
-                    methodWriterVisitMethod.invokevirtual(ASMUtils.TYPE_OBJECT_READER_ADAPTER, "processExtra", METHOD_DESC_PROCESS_EXTRA);
+                    methodWriterVisitMethod.invokevirtual(ASMUtils.TYPE_OBJECT_READER_ADAPTER, "processExtra",
+                            METHOD_DESC_PROCESS_EXTRA);
                 }
                 methodWriterVisitMethod.goto_(label6);
             }
@@ -2353,7 +2469,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
         }
         if (objectReadContext2.objectReaderAdapter instanceof ObjectReaderNoneDefaultConstructor) {
             MethodWriterContext methodWriterContext102 = methodWriterContext3;
-            genReadHashCode64ValueForNonDefaultConstructor(objectReadContext2, methodWriterContext102, i9, z5, i8, label2);
+            genReadHashCode64ValueForNonDefaultConstructor(objectReadContext2, methodWriterContext102, i9, z5, i8,
+                    label2);
             methodWriterContext4 = methodWriterContext102;
             label14 = label2;
         } else {
@@ -2364,7 +2481,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
             methodWriterVisitMethod.aload(1);
             methodWriterVisitMethod.lload(4);
             methodWriterVisitMethod.aload(i8);
-            methodWriterVisitMethod.invokevirtual(ASMUtils.TYPE_OBJECT_READER_ADAPTER, "readFieldValue", READ_FIELD_READER_UL);
+            methodWriterVisitMethod.invokevirtual(ASMUtils.TYPE_OBJECT_READER_ADAPTER, "readFieldValue",
+                    READ_FIELD_READER_UL);
         }
         methodWriterVisitMethod.goto_(label14);
         label4 = label18;
@@ -2383,7 +2501,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                 methodWriterVisitMethod.aload(1);
                 methodWriterVisitMethod.aload(i8);
                 methodWriterVisitMethod.lload(4);
-                methodWriterVisitMethod.invokevirtual(ASMUtils.TYPE_OBJECT_READER_ADAPTER, "processExtra", METHOD_DESC_PROCESS_EXTRA);
+                methodWriterVisitMethod.invokevirtual(ASMUtils.TYPE_OBJECT_READER_ADAPTER, "processExtra",
+                        METHOD_DESC_PROCESS_EXTRA);
             }
             methodWriterVisitMethod.goto_(label6);
         }
@@ -2403,11 +2522,12 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
         methodWriterVisitMethod.visitMaxs(5, 10);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:140:0x0a8b  */
-    /* JADX WARN: Found duplicated region for block: B:141:0x0a8e  */
-    /* JADX WARN: Found duplicated region for block: B:144:0x0ab0  */
+    /* JADX WARN: Found duplicated region for block: B:140:0x0a8b */
+    /* JADX WARN: Found duplicated region for block: B:141:0x0a8e */
+    /* JADX WARN: Found duplicated region for block: B:144:0x0ab0 */
     /* JADX WARN: Found duplicated region for block: B:157:0x0ab5 A[SYNTHETIC] */
-    private void genRead243(ObjectReadContext objectReadContext, boolean z, MethodWriterContext methodWriterContext, int i, Label label, Label label2) {
+    private void genRead243(ObjectReadContext objectReadContext, boolean z, MethodWriterContext methodWriterContext,
+            int i, Label label, Label label2) {
         boolean z2;
         Label label3;
         boolean z3;
@@ -4057,7 +4177,7 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                         list = list2;
                         break;
                     default:
-                        throw new IllegalStateException(bjs.i(length, "fieldNameLength "));
+                        throw new IllegalStateException(concatVar2Var1(length, "fieldNameLength "));
                 }
             }
             boolean z7 = z4;
@@ -4070,7 +4190,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
         methodWriter.visitLabel(label4);
     }
 
-    private void genRead57(ObjectReadContext objectReadContext, boolean z, MethodWriterContext methodWriterContext, int i, Label label, Label label2) {
+    private void genRead57(ObjectReadContext objectReadContext, boolean z, MethodWriterContext methodWriterContext,
+            int i, Label label, Label label2) {
         String str;
         MethodWriterContext methodWriterContext2 = methodWriterContext;
         ObjectReadContext objectReadContext2 = objectReadContext;
@@ -4105,7 +4226,7 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                 str = "nextIfName8Match1";
             } else {
                 if (length != 7) {
-                    throw new IllegalStateException(bjs.i(length, "length "));
+                    throw new IllegalStateException(concatVar2Var1(length, "length "));
                 }
                 bArr[i2] = 34;
                 System.arraycopy(bytes, i2, bArr, 1, 7);
@@ -4129,11 +4250,12 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:55:0x02b5  */
-    /* JADX WARN: Found duplicated region for block: B:56:0x02b7  */
-    /* JADX WARN: Found duplicated region for block: B:59:0x02e2  */
+    /* JADX WARN: Found duplicated region for block: B:55:0x02b5 */
+    /* JADX WARN: Found duplicated region for block: B:56:0x02b7 */
+    /* JADX WARN: Found duplicated region for block: B:59:0x02e2 */
     /* JADX WARN: Found duplicated region for block: B:76:0x02e5 A[SYNTHETIC] */
-    private void genReadEnumValueRaw(FieldReader fieldReader, String str, MethodWriterContext methodWriterContext, int i, Type type, Class cls, long j, String str2) {
+    private void genReadEnumValueRaw(FieldReader fieldReader, String str, MethodWriterContext methodWriterContext,
+            int i, Type type, Class cls, long j, String str2) {
         int iMin;
         int iMax;
         Label[] labelArr;
@@ -4485,7 +4607,7 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                             labelArr2 = labelArr;
                             break;
                         default:
-                            throw new IllegalStateException(bjs.i(length2, "fieldNameLength "));
+                            throw new IllegalStateException(concatVar2Var1(length2, "fieldNameLength "));
                     }
                 }
                 methodWriter.goto_(label);
@@ -4501,94 +4623,96 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
         gwGetFieldType(str, methodWriter, i, type);
         methodWriter.visitLdcInsn(fieldReader.fieldName);
         methodWriter.visitLdcInsn(j);
-        methodWriter.invokeinterface(ASMUtils.TYPE_OBJECT_READER, z3 ? "readJSONBObject" : "readObject", METHOD_DESC_READ_OBJECT);
+        methodWriter.invokeinterface(ASMUtils.TYPE_OBJECT_READER, z3 ? "readJSONBObject" : "readObject",
+                METHOD_DESC_READ_OBJECT);
         methodWriter.visitLabel(label2);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:210:0x064d  */
-    /* JADX WARN: Found duplicated region for block: B:227:0x0688  */
-    /* JADX WARN: Found duplicated region for block: B:229:0x068b  */
-    /* JADX WARN: Found duplicated region for block: B:230:0x0698  */
-    /* JADX WARN: Found duplicated region for block: B:232:0x06a0  */
-    /* JADX WARN: Found duplicated region for block: B:234:0x06ab  */
-    /* JADX WARN: Found duplicated region for block: B:236:0x06af  */
-    /* JADX WARN: Found duplicated region for block: B:237:0x06b9  */
-    /* JADX WARN: Found duplicated region for block: B:239:0x06bd  */
-    /* JADX WARN: Found duplicated region for block: B:240:0x06c7  */
-    /* JADX WARN: Found duplicated region for block: B:242:0x06cb  */
-    /* JADX WARN: Found duplicated region for block: B:243:0x06d5  */
-    /* JADX WARN: Found duplicated region for block: B:245:0x06d9  */
-    /* JADX WARN: Found duplicated region for block: B:246:0x06e1  */
-    /* JADX WARN: Found duplicated region for block: B:248:0x06e5  */
-    /* JADX WARN: Found duplicated region for block: B:249:0x06ed  */
-    /* JADX WARN: Found duplicated region for block: B:251:0x06f1  */
-    /* JADX WARN: Found duplicated region for block: B:252:0x06f9  */
-    /* JADX WARN: Found duplicated region for block: B:254:0x06fd  */
-    /* JADX WARN: Found duplicated region for block: B:255:0x0705  */
-    /* JADX WARN: Found duplicated region for block: B:258:0x072f  */
-    /* JADX WARN: Found duplicated region for block: B:260:0x0747  */
-    /* JADX WARN: Found duplicated region for block: B:262:0x074d  */
-    /* JADX WARN: Found duplicated region for block: B:264:0x075c  */
-    /* JADX WARN: Found duplicated region for block: B:272:0x076b  */
-    /* JADX WARN: Found duplicated region for block: B:274:0x0771  */
+    /* JADX WARN: Found duplicated region for block: B:210:0x064d */
+    /* JADX WARN: Found duplicated region for block: B:227:0x0688 */
+    /* JADX WARN: Found duplicated region for block: B:229:0x068b */
+    /* JADX WARN: Found duplicated region for block: B:230:0x0698 */
+    /* JADX WARN: Found duplicated region for block: B:232:0x06a0 */
+    /* JADX WARN: Found duplicated region for block: B:234:0x06ab */
+    /* JADX WARN: Found duplicated region for block: B:236:0x06af */
+    /* JADX WARN: Found duplicated region for block: B:237:0x06b9 */
+    /* JADX WARN: Found duplicated region for block: B:239:0x06bd */
+    /* JADX WARN: Found duplicated region for block: B:240:0x06c7 */
+    /* JADX WARN: Found duplicated region for block: B:242:0x06cb */
+    /* JADX WARN: Found duplicated region for block: B:243:0x06d5 */
+    /* JADX WARN: Found duplicated region for block: B:245:0x06d9 */
+    /* JADX WARN: Found duplicated region for block: B:246:0x06e1 */
+    /* JADX WARN: Found duplicated region for block: B:248:0x06e5 */
+    /* JADX WARN: Found duplicated region for block: B:249:0x06ed */
+    /* JADX WARN: Found duplicated region for block: B:251:0x06f1 */
+    /* JADX WARN: Found duplicated region for block: B:252:0x06f9 */
+    /* JADX WARN: Found duplicated region for block: B:254:0x06fd */
+    /* JADX WARN: Found duplicated region for block: B:255:0x0705 */
+    /* JADX WARN: Found duplicated region for block: B:258:0x072f */
+    /* JADX WARN: Found duplicated region for block: B:260:0x0747 */
+    /* JADX WARN: Found duplicated region for block: B:262:0x074d */
+    /* JADX WARN: Found duplicated region for block: B:264:0x075c */
+    /* JADX WARN: Found duplicated region for block: B:272:0x076b */
+    /* JADX WARN: Found duplicated region for block: B:274:0x0771 */
     /* JADX WARN: Found duplicated region for block: B:277:0x077a A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:278:0x077c  */
+    /* JADX WARN: Found duplicated region for block: B:278:0x077c */
     /* JADX WARN: Found duplicated region for block: B:279:0x0782 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:280:0x0784  */
+    /* JADX WARN: Found duplicated region for block: B:280:0x0784 */
     /* JADX WARN: Found duplicated region for block: B:281:0x078a A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:282:0x078c  */
+    /* JADX WARN: Found duplicated region for block: B:282:0x078c */
     /* JADX WARN: Found duplicated region for block: B:283:0x0792 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:284:0x0794  */
+    /* JADX WARN: Found duplicated region for block: B:284:0x0794 */
     /* JADX WARN: Found duplicated region for block: B:285:0x079c A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:286:0x079e  */
+    /* JADX WARN: Found duplicated region for block: B:286:0x079e */
     /* JADX WARN: Found duplicated region for block: B:287:0x07a4 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:288:0x07a6  */
+    /* JADX WARN: Found duplicated region for block: B:288:0x07a6 */
     /* JADX WARN: Found duplicated region for block: B:289:0x07ae A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:290:0x07b0  */
-    /* JADX WARN: Found duplicated region for block: B:291:0x07b8  */
-    /* JADX WARN: Found duplicated region for block: B:294:0x07d4  */
-    /* JADX WARN: Found duplicated region for block: B:295:0x0813  */
-    /* JADX WARN: Found duplicated region for block: B:296:0x0822  */
+    /* JADX WARN: Found duplicated region for block: B:290:0x07b0 */
+    /* JADX WARN: Found duplicated region for block: B:291:0x07b8 */
+    /* JADX WARN: Found duplicated region for block: B:294:0x07d4 */
+    /* JADX WARN: Found duplicated region for block: B:295:0x0813 */
+    /* JADX WARN: Found duplicated region for block: B:296:0x0822 */
     /* JADX WARN: Found duplicated region for block: B:298:0x082e A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:299:0x0830  */
+    /* JADX WARN: Found duplicated region for block: B:299:0x0830 */
     /* JADX WARN: Found duplicated region for block: B:300:0x0834 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:301:0x0836  */
+    /* JADX WARN: Found duplicated region for block: B:301:0x0836 */
     /* JADX WARN: Found duplicated region for block: B:302:0x083a A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:303:0x083c  */
+    /* JADX WARN: Found duplicated region for block: B:303:0x083c */
     /* JADX WARN: Found duplicated region for block: B:304:0x0840 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:305:0x0842  */
+    /* JADX WARN: Found duplicated region for block: B:305:0x0842 */
     /* JADX WARN: Found duplicated region for block: B:306:0x0846 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:307:0x0848  */
+    /* JADX WARN: Found duplicated region for block: B:307:0x0848 */
     /* JADX WARN: Found duplicated region for block: B:308:0x084c A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:309:0x084e  */
+    /* JADX WARN: Found duplicated region for block: B:309:0x084e */
     /* JADX WARN: Found duplicated region for block: B:310:0x0851 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:311:0x0853  */
+    /* JADX WARN: Found duplicated region for block: B:311:0x0853 */
     /* JADX WARN: Found duplicated region for block: B:312:0x0856 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:313:0x0858  */
-    /* JADX WARN: Found duplicated region for block: B:314:0x085b  */
-    /* JADX WARN: Found duplicated region for block: B:316:0x085f  */
-    /* JADX WARN: Found duplicated region for block: B:317:0x0862  */
-    /* JADX WARN: Found duplicated region for block: B:319:0x0866  */
-    /* JADX WARN: Found duplicated region for block: B:320:0x0869  */
-    /* JADX WARN: Found duplicated region for block: B:322:0x086d  */
-    /* JADX WARN: Found duplicated region for block: B:323:0x0870  */
-    /* JADX WARN: Found duplicated region for block: B:325:0x0874  */
-    /* JADX WARN: Found duplicated region for block: B:326:0x0877  */
-    /* JADX WARN: Found duplicated region for block: B:328:0x087b  */
-    /* JADX WARN: Found duplicated region for block: B:329:0x087e  */
-    /* JADX WARN: Found duplicated region for block: B:331:0x0882  */
-    /* JADX WARN: Found duplicated region for block: B:332:0x0885  */
-    /* JADX WARN: Found duplicated region for block: B:334:0x0889  */
-    /* JADX WARN: Found duplicated region for block: B:335:0x088c  */
-    /* JADX WARN: Found duplicated region for block: B:337:0x0890  */
-    /* JADX WARN: Found duplicated region for block: B:338:0x0893  */
-    /* JADX WARN: Found duplicated region for block: B:340:0x0897  */
-    /* JADX WARN: Found duplicated region for block: B:341:0x089a  */
-    /* JADX WARN: Found duplicated region for block: B:343:0x089e  */
-    /* JADX WARN: Found duplicated region for block: B:344:0x08a1  */
-    /* JADX WARN: Found duplicated region for block: B:346:0x08a4  */
-    /* JADX WARN: Found duplicated region for block: B:349:0x08be  */
-    private <T> void genReadFieldValue(ObjectReadContext objectReadContext, FieldReader fieldReader, boolean z, MethodWriterContext methodWriterContext, int i, int i2, boolean z2) {
+    /* JADX WARN: Found duplicated region for block: B:313:0x0858 */
+    /* JADX WARN: Found duplicated region for block: B:314:0x085b */
+    /* JADX WARN: Found duplicated region for block: B:316:0x085f */
+    /* JADX WARN: Found duplicated region for block: B:317:0x0862 */
+    /* JADX WARN: Found duplicated region for block: B:319:0x0866 */
+    /* JADX WARN: Found duplicated region for block: B:320:0x0869 */
+    /* JADX WARN: Found duplicated region for block: B:322:0x086d */
+    /* JADX WARN: Found duplicated region for block: B:323:0x0870 */
+    /* JADX WARN: Found duplicated region for block: B:325:0x0874 */
+    /* JADX WARN: Found duplicated region for block: B:326:0x0877 */
+    /* JADX WARN: Found duplicated region for block: B:328:0x087b */
+    /* JADX WARN: Found duplicated region for block: B:329:0x087e */
+    /* JADX WARN: Found duplicated region for block: B:331:0x0882 */
+    /* JADX WARN: Found duplicated region for block: B:332:0x0885 */
+    /* JADX WARN: Found duplicated region for block: B:334:0x0889 */
+    /* JADX WARN: Found duplicated region for block: B:335:0x088c */
+    /* JADX WARN: Found duplicated region for block: B:337:0x0890 */
+    /* JADX WARN: Found duplicated region for block: B:338:0x0893 */
+    /* JADX WARN: Found duplicated region for block: B:340:0x0897 */
+    /* JADX WARN: Found duplicated region for block: B:341:0x089a */
+    /* JADX WARN: Found duplicated region for block: B:343:0x089e */
+    /* JADX WARN: Found duplicated region for block: B:344:0x08a1 */
+    /* JADX WARN: Found duplicated region for block: B:346:0x08a4 */
+    /* JADX WARN: Found duplicated region for block: B:349:0x08be */
+    private <T> void genReadFieldValue(ObjectReadContext objectReadContext, FieldReader fieldReader, boolean z,
+            MethodWriterContext methodWriterContext, int i, int i2, boolean z2) {
         Class<?> cls;
         boolean z3;
         Class<?> cls2;
@@ -4678,7 +4802,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
             methodWriter2.aload(i);
         }
         int modifiers = ((z || method == null) && field3 != null) ? field3.getModifiers() : 0;
-        if (z && Modifier.isPublic(cls31.getModifiers()) && Modifier.isPublic(modifiers) && !Modifier.isFinal(modifiers) && !this.classLoader.isExternalClass(cls31)) {
+        if (z && Modifier.isPublic(cls31.getModifiers()) && Modifier.isPublic(modifiers) && !Modifier.isFinal(modifiers)
+                && !this.classLoader.isExternalClass(cls31)) {
             methodWriter2.checkcast(objectReadContext.objectType);
         }
         Class<?> cls33 = Character.TYPE;
@@ -4742,13 +4867,15 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                                 Label label6 = new Label();
                                 cls2 = cls35;
                                 cls3 = cls36;
-                                methodWriter2.invokevirtual(ASMUtils.TYPE_JSON_READER, "readString", "()Ljava/lang/String;");
+                                methodWriter2.invokevirtual(ASMUtils.TYPE_JSON_READER, "readString",
+                                        "()Ljava/lang/String;");
                                 methodWriter2.dup();
                                 methodWriter2.ifnull(label6);
                                 if ("trim".equals(str9)) {
                                     methodWriter2.invokevirtual("java/lang/String", "trim", "()Ljava/lang/String;");
                                 } else if ("upper".equals(str9)) {
-                                    methodWriter2.invokevirtual("java/lang/String", "toUpperCase", "()Ljava/lang/String;");
+                                    methodWriter2.invokevirtual("java/lang/String", "toUpperCase",
+                                            "()Ljava/lang/String;");
                                 }
                                 methodWriter2.visitLabel(label6);
                                 fieldReader3 = fieldReader;
@@ -4760,45 +4887,57 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                                 if (cls32 == Boolean.class) {
                                     z4 = true;
                                     methodWriter2.aload(1);
-                                    methodWriter2.invokevirtual(ASMUtils.TYPE_JSON_READER, "readBool", "()Ljava/lang/Boolean;");
+                                    methodWriter2.invokevirtual(ASMUtils.TYPE_JSON_READER, "readBool",
+                                            "()Ljava/lang/Boolean;");
                                 } else {
                                     z4 = true;
                                     if (cls32 == Byte.class) {
                                         methodWriter2.aload(1);
-                                        methodWriter2.invokevirtual(ASMUtils.TYPE_JSON_READER, "readInt8", "()Ljava/lang/Byte;");
+                                        methodWriter2.invokevirtual(ASMUtils.TYPE_JSON_READER, "readInt8",
+                                                "()Ljava/lang/Byte;");
                                     } else if (cls32 == Short.class) {
                                         methodWriter2.aload(1);
-                                        methodWriter2.invokevirtual(ASMUtils.TYPE_JSON_READER, "readInt16", "()Ljava/lang/Short;");
+                                        methodWriter2.invokevirtual(ASMUtils.TYPE_JSON_READER, "readInt16",
+                                                "()Ljava/lang/Short;");
                                     } else if (cls32 == Integer.class) {
                                         methodWriter2.aload(1);
-                                        methodWriter2.invokevirtual(ASMUtils.TYPE_JSON_READER, "readInt32", "()Ljava/lang/Integer;");
+                                        methodWriter2.invokevirtual(ASMUtils.TYPE_JSON_READER, "readInt32",
+                                                "()Ljava/lang/Integer;");
                                     } else if (cls32 == Long.class) {
                                         methodWriter2.aload(1);
-                                        methodWriter2.invokevirtual(ASMUtils.TYPE_JSON_READER, "readInt64", "()Ljava/lang/Long;");
+                                        methodWriter2.invokevirtual(ASMUtils.TYPE_JSON_READER, "readInt64",
+                                                "()Ljava/lang/Long;");
                                     } else if (cls32 == Float.class) {
                                         methodWriter2.aload(1);
-                                        methodWriter2.invokevirtual(ASMUtils.TYPE_JSON_READER, "readFloat", "()Ljava/lang/Float;");
+                                        methodWriter2.invokevirtual(ASMUtils.TYPE_JSON_READER, "readFloat",
+                                                "()Ljava/lang/Float;");
                                     } else if (cls32 == Double.class) {
                                         methodWriter2.aload(1);
-                                        methodWriter2.invokevirtual(ASMUtils.TYPE_JSON_READER, "readDouble", "()Ljava/lang/Double;");
+                                        methodWriter2.invokevirtual(ASMUtils.TYPE_JSON_READER, "readDouble",
+                                                "()Ljava/lang/Double;");
                                     } else if (cls32 == BigDecimal.class) {
                                         methodWriter2.aload(1);
-                                        methodWriter2.invokevirtual(ASMUtils.TYPE_JSON_READER, "readBigDecimal", "()Ljava/math/BigDecimal;");
+                                        methodWriter2.invokevirtual(ASMUtils.TYPE_JSON_READER, "readBigDecimal",
+                                                "()Ljava/math/BigDecimal;");
                                     } else if (cls32 == BigInteger.class) {
                                         methodWriter2.aload(1);
-                                        methodWriter2.invokevirtual(ASMUtils.TYPE_JSON_READER, "readBigInteger", "()Ljava/math/BigInteger;");
+                                        methodWriter2.invokevirtual(ASMUtils.TYPE_JSON_READER, "readBigInteger",
+                                                "()Ljava/math/BigInteger;");
                                     } else if (cls32 == Number.class) {
                                         methodWriter2.aload(1);
-                                        methodWriter2.invokevirtual(ASMUtils.TYPE_JSON_READER, "readNumber", "()Ljava/lang/Number;");
+                                        methodWriter2.invokevirtual(ASMUtils.TYPE_JSON_READER, "readNumber",
+                                                "()Ljava/lang/Number;");
                                     } else if (cls32 == UUID.class) {
                                         methodWriter2.aload(1);
-                                        methodWriter2.invokevirtual(ASMUtils.TYPE_JSON_READER, "readUUID", "()Ljava/util/UUID;");
+                                        methodWriter2.invokevirtual(ASMUtils.TYPE_JSON_READER, "readUUID",
+                                                "()Ljava/util/UUID;");
                                     } else {
                                         if (cls32 == LocalDate.class) {
                                             fieldReader2 = fieldReader;
                                             if (fieldReader2.format == null) {
                                                 methodWriter2.aload(1);
-                                                methodWriter2.invokevirtual(ASMUtils.TYPE_JSON_READER, "readLocalDate", "()Ljava/time/LocalDate;");
+                                                methodWriter2.invokevirtual(ASMUtils.TYPE_JSON_READER, "readLocalDate",
+                                                        "()Ljava/time/LocalDate;");
                                             }
                                             methodWriterContext2 = methodWriterContext;
                                             cls17 = Integer.class;
@@ -4808,16 +4947,20 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                                         }
                                         if (cls32 == OffsetDateTime.class && fieldReader2.format == null) {
                                             methodWriter2.aload(1);
-                                            methodWriter2.invokevirtual(ASMUtils.TYPE_JSON_READER, "readOffsetDateTime", "()Ljava/time/OffsetDateTime;");
+                                            methodWriter2.invokevirtual(ASMUtils.TYPE_JSON_READER, "readOffsetDateTime",
+                                                    "()Ljava/time/OffsetDateTime;");
                                         } else if (cls32 == Date.class && fieldReader2.format == null) {
                                             methodWriter2.aload(1);
-                                            methodWriter2.invokevirtual(ASMUtils.TYPE_JSON_READER, "readDate", "()Ljava/util/Date;");
+                                            methodWriter2.invokevirtual(ASMUtils.TYPE_JSON_READER, "readDate",
+                                                    "()Ljava/util/Date;");
                                         } else if (cls32 == Calendar.class && fieldReader2.format == null) {
                                             methodWriter2.aload(1);
-                                            methodWriter2.invokevirtual(ASMUtils.TYPE_JSON_READER, "readCalendar", "()Ljava/util/Calendar;");
+                                            methodWriter2.invokevirtual(ASMUtils.TYPE_JSON_READER, "readCalendar",
+                                                    "()Ljava/util/Calendar;");
                                         } else {
                                             Label label7 = new Label();
-                                            boolean zDisableReferenceDetect = objectReadContext.disableReferenceDetect();
+                                            boolean zDisableReferenceDetect = objectReadContext
+                                                    .disableReferenceDetect();
                                             if (zDisableReferenceDetect) {
                                                 cls4 = Integer.class;
                                                 numValueOf = null;
@@ -4825,7 +4968,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                                                 cls4 = Integer.class;
                                                 numValueOf = Integer.valueOf(methodWriterContext.var("REFERENCE"));
                                             }
-                                            if (zDisableReferenceDetect || ObjectWriterProvider.isPrimitiveOrEnum(cls32)) {
+                                            if (zDisableReferenceDetect
+                                                    || ObjectWriterProvider.isPrimitiveOrEnum(cls32)) {
                                                 i3 = i;
                                                 cls5 = Long.class;
                                                 cls6 = cls38;
@@ -4844,14 +4988,16 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                                                 methodWriter2.invokevirtual(str10, "isReference", str);
                                                 methodWriter2.ifeq(label8);
                                                 methodWriter2.aload(1);
-                                                methodWriter2.invokevirtual(str10, "readReference", "()Ljava/lang/String;");
+                                                methodWriter2.invokevirtual(str10, "readReference",
+                                                        "()Ljava/lang/String;");
                                                 objectReadContext2 = objectReadContext;
                                                 Class<?> cls42 = objectReadContext2.objectClass;
                                                 if (cls42 == null || cls32.isAssignableFrom(cls42)) {
                                                     methodWriter2.dup();
                                                     methodWriter2.astore(num.intValue());
                                                     methodWriter2.visitLdcInsn("..");
-                                                    methodWriter2.invokevirtual("java/lang/String", "equals", "(Ljava/lang/Object;)Z");
+                                                    methodWriter2.invokevirtual("java/lang/String", "equals",
+                                                            "(Ljava/lang/Object;)Z");
                                                     methodWriter2.ifeq(label9);
                                                     if (cls37 != null) {
                                                         cls21 = cls37;
@@ -4874,11 +5020,13 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                                                 }
                                                 methodWriter2.aload(0);
                                                 cls37 = cls21;
-                                                methodWriter2.getfield(str8, CodeGenUtils.fieldReader(i2), ASMUtils.DESC_FIELD_READER);
+                                                methodWriter2.getfield(str8, CodeGenUtils.fieldReader(i2),
+                                                        ASMUtils.DESC_FIELD_READER);
                                                 methodWriter2.aload(1);
                                                 methodWriter2.aload(i3);
                                                 methodWriter2.aload(num.intValue());
-                                                methodWriter2.invokevirtual(ASMUtils.TYPE_FIELD_READE, "addResolveTask", METHOD_DESC_ADD_RESOLVE_TASK);
+                                                methodWriter2.invokevirtual(ASMUtils.TYPE_FIELD_READE, "addResolveTask",
+                                                        METHOD_DESC_ADD_RESOLVE_TASK);
                                                 methodWriter2.pop();
                                                 label = label5;
                                                 methodWriter2.goto_(label);
@@ -4890,24 +5038,31 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                                                 Label label10 = new Label();
                                                 methodWriter2.lload(4);
                                                 label2 = label7;
-                                                methodWriter2.visitLdcInsn(JSONReader.Feature.IgnoreNoneSerializable.mask);
+                                                methodWriter2
+                                                        .visitLdcInsn(JSONReader.Feature.IgnoreNoneSerializable.mask);
                                                 methodWriter2.land();
                                                 methodWriter2.lconst_0();
                                                 methodWriter2.lcmp();
                                                 methodWriter2.ifeq(label10);
                                                 methodWriter2.aload(1);
-                                                methodWriter2.invokevirtual(ASMUtils.TYPE_JSON_READER, "skipValue", "()V");
+                                                methodWriter2.invokevirtual(ASMUtils.TYPE_JSON_READER, "skipValue",
+                                                        "()V");
                                                 if (!(objectReadContext2.objectReaderAdapter instanceof ObjectReaderNoneDefaultConstructor)) {
                                                     methodWriter2.pop();
                                                 }
                                                 methodWriter2.goto_(label);
                                                 methodWriter2.visitLabel(label10);
                                             }
-                                            boolean z7 = List.class.isAssignableFrom(cls32) && fieldReader.getInitReader() == null && !cls32.getName().startsWith("com.google.common.collect.Immutable");
-                                            if (z7 && (mapping = TypeUtils.getMapping(type2)) != null && (Collection.class.isAssignableFrom(mapping) || !Modifier.isPublic(mapping.getModifiers()))) {
+                                            boolean z7 = List.class.isAssignableFrom(cls32)
+                                                    && fieldReader.getInitReader() == null && !cls32.getName()
+                                                            .startsWith("com.google.common.collect.Immutable");
+                                            if (z7 && (mapping = TypeUtils.getMapping(type2)) != null
+                                                    && (Collection.class.isAssignableFrom(mapping)
+                                                            || !Modifier.isPublic(mapping.getModifiers()))) {
                                                 z7 = false;
                                             }
-                                            if (z7 && !cls32.isInterface() && !BeanUtils.hasPublicDefaultConstructor(cls32)) {
+                                            if (z7 && !cls32.isInterface()
+                                                    && !BeanUtils.hasPublicDefaultConstructor(cls32)) {
                                                 z7 = false;
                                             }
                                             if (z7) {
@@ -4933,7 +5088,9 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                                                 cls19 = cls6;
                                                 objectReaderCreatorASM = this;
                                                 objectReadContext3 = objectReadContext2;
-                                                objectReaderCreatorASM.genReadFieldValueList(fieldReader3, str3, methodWriterContext2, i3, i2, z2, cls43, cls32, type, j, type2, strType, objectReadContext3, z);
+                                                objectReaderCreatorASM.genReadFieldValueList(fieldReader3, str3,
+                                                        methodWriterContext2, i3, i2, z2, cls43, cls32, type, j, type2,
+                                                        strType, objectReadContext3, z);
                                                 cls12 = cls43;
                                                 cls20 = cls32;
                                                 methodWriter = methodWriter2;
@@ -4968,16 +5125,20 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                                                 methodWriter.ifeq(label13);
                                                 if (cls32 == Optional.class) {
                                                     str3 = str8;
-                                                    methodWriter.invokestatic("java/util/Optional", "empty", "()Ljava/util/Optional;");
+                                                    methodWriter.invokestatic("java/util/Optional", "empty",
+                                                            "()Ljava/util/Optional;");
                                                 } else if (cls32 == OptionalInt.class) {
                                                     str3 = str8;
-                                                    methodWriter.invokestatic("java/util/OptionalInt", "empty", "()Ljava/util/OptionalInt;");
+                                                    methodWriter.invokestatic("java/util/OptionalInt", "empty",
+                                                            "()Ljava/util/OptionalInt;");
                                                 } else if (cls32 == OptionalLong.class) {
                                                     str3 = str8;
-                                                    methodWriter.invokestatic("java/util/OptionalLong", "empty", "()Ljava/util/OptionalLong;");
+                                                    methodWriter.invokestatic("java/util/OptionalLong", "empty",
+                                                            "()Ljava/util/OptionalLong;");
                                                 } else if (cls32 == OptionalDouble.class) {
                                                     str3 = str8;
-                                                    methodWriter.invokestatic("java/util/OptionalDouble", "empty", "()Ljava/util/OptionalDouble;");
+                                                    methodWriter.invokestatic("java/util/OptionalDouble", "empty",
+                                                            "()Ljava/util/OptionalDouble;");
                                                 } else {
                                                     str3 = str8;
                                                     methodWriter.aconst_null();
@@ -4986,7 +5147,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                                                 methodWriter.visitLabel(label13);
                                                 if (cls32 == String[].class) {
                                                     methodWriter.aload(1);
-                                                    methodWriter.invokevirtual(str11, "readStringArray", "()[Ljava/lang/String;");
+                                                    methodWriter.invokevirtual(str11, "readStringArray",
+                                                            "()[Ljava/lang/String;");
                                                 } else if (cls32 == int[].class) {
                                                     methodWriter.aload(1);
                                                     methodWriter.invokevirtual(str11, "readInt32ValueArray", "()[I");
@@ -5000,7 +5162,9 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                                                         z5 = true;
                                                         label4 = label12;
                                                         methodWriterContext2 = methodWriterContext;
-                                                        objectReaderCreatorASM.genReadEnumValueRaw(fieldReader3, str3, methodWriterContext2, i2, type, cls32, j, strFieldObjectReader);
+                                                        objectReaderCreatorASM.genReadEnumValueRaw(fieldReader3, str3,
+                                                                methodWriterContext2, i2, type, cls32, j,
+                                                                strFieldObjectReader);
                                                         cls20 = cls32;
                                                     } else {
                                                         cls20 = cls32;
@@ -5009,23 +5173,33 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                                                         z5 = true;
                                                         label4 = label12;
                                                         methodWriterContext2 = methodWriterContext;
-                                                        objectReaderCreatorASM.genReadObject(fieldReader3, str3, methodWriterContext2, i2, type, j, strFieldObjectReader);
+                                                        objectReaderCreatorASM.genReadObject(fieldReader3, str3,
+                                                                methodWriterContext2, i2, type, j,
+                                                                strFieldObjectReader);
                                                     }
-                                                    if (method != null || ((cls12 == null || Modifier.isPublic(cls12.getModifiers())) && Modifier.isPublic(modifiers) && !Modifier.isFinal(modifiers) && !objectReaderCreatorASM.classLoader.isExternalClass(cls12))) {
+                                                    if (method != null || ((cls12 == null
+                                                            || Modifier.isPublic(cls12.getModifiers()))
+                                                            && Modifier.isPublic(modifiers)
+                                                            && !Modifier.isFinal(modifiers)
+                                                            && !objectReaderCreatorASM.classLoader
+                                                                    .isExternalClass(cls12))) {
                                                         methodWriter.checkcast(strType);
                                                     }
                                                     if (fieldReader3.noneStaticMemberClass) {
                                                         try {
-                                                            long jObjectFieldOffset = JDKUtils.UNSAFE.objectFieldOffset(cls20.getDeclaredField("this$0"));
+                                                            long jObjectFieldOffset = JDKUtils.UNSAFE.objectFieldOffset(
+                                                                    cls20.getDeclaredField("this$0"));
                                                             Label label14 = new Label();
                                                             methodWriter.dup();
                                                             methodWriter.ifnull(label14);
                                                             methodWriter.dup();
-                                                            methodWriter.getstatic(ASMUtils.TYPE_UNSAFE_UTILS, "UNSAFE", "Lsun/misc/Unsafe;");
+                                                            methodWriter.getstatic(ASMUtils.TYPE_UNSAFE_UTILS, "UNSAFE",
+                                                                    "Lsun/misc/Unsafe;");
                                                             methodWriter.swap();
                                                             methodWriter.visitLdcInsn(jObjectFieldOffset);
                                                             methodWriter.aload(i6);
-                                                            methodWriter.invokevirtual("sun/misc/Unsafe", "putObject", "(Ljava/lang/Object;JLjava/lang/Object;)V");
+                                                            methodWriter.invokevirtual("sun/misc/Unsafe", "putObject",
+                                                                    "(Ljava/lang/Object;JLjava/lang/Object;)V");
                                                             methodWriter.visitLabel(label14);
                                                         } catch (NoSuchFieldException unused) {
                                                         }
@@ -5090,7 +5264,12 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                         }
                         field2 = field;
                         if (field2 != null) {
-                            if (((cls12.getModifiers() & 1) == 0 && (modifiers & 1) != 0 && (modifiers & 16) == 0 && (ObjectWriterProvider.isPrimitiveOrEnum(cls20) || cls20.getName().startsWith("java.") || cls20.getClassLoader() == ObjectReaderProvider.FASTJSON2_CLASS_LOADER) && !objectReaderCreatorASM.classLoader.isExternalClass(cls12) && field2.getDeclaringClass() == cls12) ? z5 : false) {
+                            if (((cls12.getModifiers() & 1) == 0 && (modifiers & 1) != 0 && (modifiers & 16) == 0
+                                    && (ObjectWriterProvider.isPrimitiveOrEnum(cls20)
+                                            || cls20.getName().startsWith("java.")
+                                            || cls20.getClassLoader() == ObjectReaderProvider.FASTJSON2_CLASS_LOADER)
+                                    && !objectReaderCreatorASM.classLoader.isExternalClass(cls12)
+                                    && field2.getDeclaringClass() == cls12) ? z5 : false) {
                                 methodWriter.putfield(objectReadContext3.objectType, field2.getName(), str2);
                             } else {
                                 iVar2 = methodWriterContext2.var(cls20);
@@ -5165,7 +5344,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                                 }
                                 methodWriter.storeLocal(cls20, methodWriterContext2.var(fieldReader3));
                             } else {
-                                if (!objectReadContext3.externalClass && method != null && objectReadContext3.publicClass) {
+                                if (!objectReadContext3.externalClass && method != null
+                                        && objectReadContext3.publicClass) {
                                     z5 = false;
                                 }
                                 if (z5) {
@@ -5204,16 +5384,20 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                                             i4 = 25;
                                         }
                                         methodWriter.aload(0);
-                                        methodWriter.getfield(str3, CodeGenUtils.fieldReader(i2), ASMUtils.DESC_FIELD_READER);
+                                        methodWriter.getfield(str3, CodeGenUtils.fieldReader(i2),
+                                                ASMUtils.DESC_FIELD_READER);
                                         function = fieldReader3.getFunction();
                                         if (function instanceof FieldBiConsumer) {
-                                            methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_READE, "getFunction", "()Ljava/util/function/BiConsumer;");
+                                            methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_READE, "getFunction",
+                                                    "()Ljava/util/function/BiConsumer;");
                                             methodWriter.checkcast(ASMUtils.type(FieldBiConsumer.class));
-                                            methodWriter.getfield(ASMUtils.type(FieldBiConsumer.class), "consumer", ASMUtils.desc(FieldConsumer.class));
+                                            methodWriter.getfield(ASMUtils.type(FieldBiConsumer.class), "consumer",
+                                                    ASMUtils.desc(FieldConsumer.class));
                                             methodWriter.swap();
                                             methodWriter.visitLdcInsn(((FieldBiConsumer) function).fieldIndex);
                                             methodWriter.visitVarInsn(i4, iVar);
-                                            methodWriter.invokeinterface(ASMUtils.type(FieldConsumer.class), "accept", "(Ljava/lang/Object;ILjava/lang/Object;)V");
+                                            methodWriter.invokeinterface(ASMUtils.type(FieldConsumer.class), "accept",
+                                                    "(Ljava/lang/Object;ILjava/lang/Object;)V");
                                         } else {
                                             methodWriter.swap();
                                             methodWriter.visitVarInsn(i4, iVar);
@@ -5222,16 +5406,20 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                                     }
                                     i4 = 21;
                                     methodWriter.aload(0);
-                                    methodWriter.getfield(str3, CodeGenUtils.fieldReader(i2), ASMUtils.DESC_FIELD_READER);
+                                    methodWriter.getfield(str3, CodeGenUtils.fieldReader(i2),
+                                            ASMUtils.DESC_FIELD_READER);
                                     function = fieldReader3.getFunction();
                                     if (function instanceof FieldBiConsumer) {
-                                        methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_READE, "getFunction", "()Ljava/util/function/BiConsumer;");
+                                        methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_READE, "getFunction",
+                                                "()Ljava/util/function/BiConsumer;");
                                         methodWriter.checkcast(ASMUtils.type(FieldBiConsumer.class));
-                                        methodWriter.getfield(ASMUtils.type(FieldBiConsumer.class), "consumer", ASMUtils.desc(FieldConsumer.class));
+                                        methodWriter.getfield(ASMUtils.type(FieldBiConsumer.class), "consumer",
+                                                ASMUtils.desc(FieldConsumer.class));
                                         methodWriter.swap();
                                         methodWriter.visitLdcInsn(((FieldBiConsumer) function).fieldIndex);
                                         methodWriter.visitVarInsn(i4, iVar);
-                                        methodWriter.invokeinterface(ASMUtils.type(FieldConsumer.class), "accept", "(Ljava/lang/Object;ILjava/lang/Object;)V");
+                                        methodWriter.invokeinterface(ASMUtils.type(FieldConsumer.class), "accept",
+                                                "(Ljava/lang/Object;ILjava/lang/Object;)V");
                                     } else {
                                         methodWriter.swap();
                                         methodWriter.visitVarInsn(i4, iVar);
@@ -5242,7 +5430,36 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                                     String name = method.getName();
                                     cls30 = Void.TYPE;
                                     if (returnType != cls30) {
-                                        string = cls20 == cls29 ? "(Z)V" : cls20 == cls28 ? "(B)V" : cls20 == cls27 ? "(S)V" : cls20 == cls26 ? "(I)V" : cls20 == cls25 ? "(J)V" : cls20 == cls22 ? "(C)V" : cls20 == cls24 ? "(F)V" : cls20 == cls23 ? "(D)V" : cls20 == cls7 ? "(Ljava/lang/Boolean;)V" : cls20 == cls17 ? "(Ljava/lang/Integer;)V" : cls20 == cls18 ? "(Ljava/lang/Long;)V" : cls20 == Float.class ? "(Ljava/lang/Float;)V" : cls20 == Double.class ? "(Ljava/lang/Double;)V" : cls20 == BigDecimal.class ? "(Ljava/math/BigDecimal;)V" : cls20 == cls9 ? "(Ljava/lang/String;)V" : cls20 == UUID.class ? "(Ljava/util/UUID;)V" : cls20 == List.class ? "(Ljava/util/List;)V" : cls20 == Map.class ? "(Ljava/util/Map;)V" : null;
+                                        string = cls20 == cls29 ? "(Z)V"
+                                                : cls20 == cls28 ? "(B)V"
+                                                        : cls20 == cls27 ? "(S)V"
+                                                                : cls20 == cls26 ? "(I)V"
+                                                                        : cls20 == cls25 ? "(J)V"
+                                                                                : cls20 == cls22 ? "(C)V"
+                                                                                        : cls20 == cls24 ? "(F)V"
+                                                                                                : cls20 == cls23
+                                                                                                        ? "(D)V"
+                                                                                                        : cls20 == cls7
+                                                                                                                ? "(Ljava/lang/Boolean;)V"
+                                                                                                                : cls20 == cls17
+                                                                                                                        ? "(Ljava/lang/Integer;)V"
+                                                                                                                        : cls20 == cls18
+                                                                                                                                ? "(Ljava/lang/Long;)V"
+                                                                                                                                : cls20 == Float.class
+                                                                                                                                        ? "(Ljava/lang/Float;)V"
+                                                                                                                                        : cls20 == Double.class
+                                                                                                                                                ? "(Ljava/lang/Double;)V"
+                                                                                                                                                : cls20 == BigDecimal.class
+                                                                                                                                                        ? "(Ljava/math/BigDecimal;)V"
+                                                                                                                                                        : cls20 == cls9
+                                                                                                                                                                ? "(Ljava/lang/String;)V"
+                                                                                                                                                                : cls20 == UUID.class
+                                                                                                                                                                        ? "(Ljava/util/UUID;)V"
+                                                                                                                                                                        : cls20 == List.class
+                                                                                                                                                                                ? "(Ljava/util/List;)V"
+                                                                                                                                                                                : cls20 == Map.class
+                                                                                                                                                                                        ? "(Ljava/util/Map;)V"
+                                                                                                                                                                                        : null;
                                     }
                                     if (string == null) {
                                         StringBuilder sbZ = dkz.z("(", str4, ")");
@@ -5289,7 +5506,11 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
         cls20 = cls32;
         field2 = field;
         if (field2 != null) {
-            if (((cls12.getModifiers() & 1) == 0 && (modifiers & 1) != 0 && (modifiers & 16) == 0 && (ObjectWriterProvider.isPrimitiveOrEnum(cls20) || cls20.getName().startsWith("java.") || cls20.getClassLoader() == ObjectReaderProvider.FASTJSON2_CLASS_LOADER) && !objectReaderCreatorASM.classLoader.isExternalClass(cls12) && field2.getDeclaringClass() == cls12) ? z5 : false) {
+            if (((cls12.getModifiers() & 1) == 0 && (modifiers & 1) != 0 && (modifiers & 16) == 0
+                    && (ObjectWriterProvider.isPrimitiveOrEnum(cls20) || cls20.getName().startsWith("java.")
+                            || cls20.getClassLoader() == ObjectReaderProvider.FASTJSON2_CLASS_LOADER)
+                    && !objectReaderCreatorASM.classLoader.isExternalClass(cls12)
+                    && field2.getDeclaringClass() == cls12) ? z5 : false) {
                 methodWriter.putfield(objectReadContext3.objectType, field2.getName(), str2);
             } else {
                 iVar2 = methodWriterContext2.var(cls20);
@@ -5406,13 +5627,16 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                         methodWriter.getfield(str3, CodeGenUtils.fieldReader(i2), ASMUtils.DESC_FIELD_READER);
                         function = fieldReader3.getFunction();
                         if (function instanceof FieldBiConsumer) {
-                            methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_READE, "getFunction", "()Ljava/util/function/BiConsumer;");
+                            methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_READE, "getFunction",
+                                    "()Ljava/util/function/BiConsumer;");
                             methodWriter.checkcast(ASMUtils.type(FieldBiConsumer.class));
-                            methodWriter.getfield(ASMUtils.type(FieldBiConsumer.class), "consumer", ASMUtils.desc(FieldConsumer.class));
+                            methodWriter.getfield(ASMUtils.type(FieldBiConsumer.class), "consumer",
+                                    ASMUtils.desc(FieldConsumer.class));
                             methodWriter.swap();
                             methodWriter.visitLdcInsn(((FieldBiConsumer) function).fieldIndex);
                             methodWriter.visitVarInsn(i4, iVar);
-                            methodWriter.invokeinterface(ASMUtils.type(FieldConsumer.class), "accept", "(Ljava/lang/Object;ILjava/lang/Object;)V");
+                            methodWriter.invokeinterface(ASMUtils.type(FieldConsumer.class), "accept",
+                                    "(Ljava/lang/Object;ILjava/lang/Object;)V");
                         } else {
                             methodWriter.swap();
                             methodWriter.visitVarInsn(i4, iVar);
@@ -5424,13 +5648,16 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                     methodWriter.getfield(str3, CodeGenUtils.fieldReader(i2), ASMUtils.DESC_FIELD_READER);
                     function = fieldReader3.getFunction();
                     if (function instanceof FieldBiConsumer) {
-                        methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_READE, "getFunction", "()Ljava/util/function/BiConsumer;");
+                        methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_READE, "getFunction",
+                                "()Ljava/util/function/BiConsumer;");
                         methodWriter.checkcast(ASMUtils.type(FieldBiConsumer.class));
-                        methodWriter.getfield(ASMUtils.type(FieldBiConsumer.class), "consumer", ASMUtils.desc(FieldConsumer.class));
+                        methodWriter.getfield(ASMUtils.type(FieldBiConsumer.class), "consumer",
+                                ASMUtils.desc(FieldConsumer.class));
                         methodWriter.swap();
                         methodWriter.visitLdcInsn(((FieldBiConsumer) function).fieldIndex);
                         methodWriter.visitVarInsn(i4, iVar);
-                        methodWriter.invokeinterface(ASMUtils.type(FieldConsumer.class), "accept", "(Ljava/lang/Object;ILjava/lang/Object;)V");
+                        methodWriter.invokeinterface(ASMUtils.type(FieldConsumer.class), "accept",
+                                "(Ljava/lang/Object;ILjava/lang/Object;)V");
                     } else {
                         methodWriter.swap();
                         methodWriter.visitVarInsn(i4, iVar);
@@ -5459,7 +5686,9 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
         methodWriter.visitLabel(label3);
     }
 
-    private void genReadFieldValueList(FieldReader fieldReader, String str, MethodWriterContext methodWriterContext, int i, int i2, boolean z, Class cls, Class cls2, Type type, long j, Type type2, String str2, ObjectReadContext objectReadContext, boolean z2) {
+    private void genReadFieldValueList(FieldReader fieldReader, String str, MethodWriterContext methodWriterContext,
+            int i, int i2, boolean z, Class cls, Class cls2, Type type, long j, Type type2, String str2,
+            ObjectReadContext objectReadContext, boolean z2) {
         Class cls3;
         int iVar;
         String str3;
@@ -5523,7 +5752,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                 methodWriter.getfield(str, strFieldReader, ASMUtils.DESC_FIELD_READER);
                 methodWriter.aload(1);
                 str10 = str11;
-                methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_READE, "checkObjectAutoType", METHOD_DESC_CHECK_ARRAY_AUTO_TYPE);
+                methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_READE, "checkObjectAutoType",
+                        METHOD_DESC_CHECK_ARRAY_AUTO_TYPE);
                 methodWriter.dup();
                 methodWriter.astore(iVar2);
                 methodWriter.ifnull(label7);
@@ -5716,7 +5946,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                     methodWriter.aload(0);
                     methodWriter.getfield(str, CodeGenUtils.fieldReader(i2), ASMUtils.DESC_FIELD_READER);
                     methodWriter.aload(1);
-                    methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_READE, "getItemObjectReader", METHOD_DESC_GET_ITEM_OBJECT_READER);
+                    methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_READE, "getItemObjectReader",
+                            METHOD_DESC_GET_ITEM_OBJECT_READER);
                     methodWriter.putfield(str, strFieldItemObjectReader, str18);
                     methodWriter.visitLabel(label15);
                     if (!objectReadContext.disableReferenceDetect()) {
@@ -5746,7 +5977,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                         methodWriter.lload(4);
                         label = label13;
                         label2 = label4;
-                        methodWriter.invokeinterface(ASMUtils.TYPE_OBJECT_READER, z3 ? "readArrayMappingJSONBObject" : "readArrayMappingObject", METHOD_DESC_READ_OBJECT);
+                        methodWriter.invokeinterface(ASMUtils.TYPE_OBJECT_READER,
+                                z3 ? "readArrayMappingJSONBObject" : "readArrayMappingObject", METHOD_DESC_READ_OBJECT);
                         methodWriter.goto_(label17);
                         methodWriter.visitLabel(label16);
                     } else {
@@ -5764,7 +5996,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                     objectReaderCreatorASM.gwGetFieldType(str, methodWriter, i5, type4);
                     methodWriter.visitLdcInsn(fieldReader2.fieldName);
                     methodWriter.lload(4);
-                    methodWriter.invokeinterface(ASMUtils.TYPE_OBJECT_READER, z3 ? str3 : "readObject", METHOD_DESC_READ_OBJECT);
+                    methodWriter.invokeinterface(ASMUtils.TYPE_OBJECT_READER, z3 ? str3 : "readObject",
+                            METHOD_DESC_READ_OBJECT);
                     if (z) {
                         methodWriter.visitLabel(label17);
                     }
@@ -5795,7 +6028,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
         methodWriter.aload(i6);
     }
 
-    private void genReadHashCode64ValueForNonDefaultConstructor(ObjectReadContext objectReadContext, MethodWriterContext methodWriterContext, int i, boolean z, int i2, Label label) {
+    private void genReadHashCode64ValueForNonDefaultConstructor(ObjectReadContext objectReadContext,
+            MethodWriterContext methodWriterContext, int i, boolean z, int i2, Label label) {
         FieldReader[] fieldReaderArr = objectReadContext.fieldReaders;
         MethodWriter methodWriter = methodWriterContext.mw;
         methodWriter.aload(0);
@@ -5819,7 +6053,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
         methodWriter.invokevirtual(ASMUtils.TYPE_JSON_READER, "skipValue", "()V");
     }
 
-    private void genReadObject(FieldReader fieldReader, String str, MethodWriterContext methodWriterContext, int i, Type type, long j, String str2) {
+    private void genReadObject(FieldReader fieldReader, String str, MethodWriterContext methodWriterContext, int i,
+            Type type, long j, String str2) {
         Label label = new Label();
         MethodWriter methodWriter = methodWriterContext.mw;
         boolean z = methodWriterContext.jsonb;
@@ -5840,7 +6075,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
         gwGetFieldType(str, methodWriter, i, type);
         methodWriter.visitLdcInsn(fieldReader.fieldName);
         methodWriter.visitLdcInsn(j);
-        methodWriter.invokeinterface(ASMUtils.TYPE_OBJECT_READER, z ? "readJSONBObject" : "readObject", METHOD_DESC_READ_OBJECT);
+        methodWriter.invokeinterface(ASMUtils.TYPE_OBJECT_READER, z ? "readJSONBObject" : "readObject",
+                METHOD_DESC_READ_OBJECT);
     }
 
     private void gwGetFieldType(String str, MethodWriter methodWriter, int i, Type type) {
@@ -5859,14 +6095,17 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
         methodWriter.getfield(ASMUtils.TYPE_FIELD_READE, "fieldType", "Ljava/lang/reflect/Type;");
     }
 
-    private <T> ObjectReaderBean jitObjectReader(Class<T> cls, Type type, boolean z, boolean z2, int i, BeanInfo beanInfo, Supplier<T> supplier, FieldReader[] fieldReaderArr, Constructor constructor) throws IllegalAccessException, NoSuchMethodException {
+    private <T> ObjectReaderBean jitObjectReader(Class<T> cls, Type type, boolean z, boolean z2, int i,
+            BeanInfo beanInfo, Supplier<T> supplier, FieldReader[] fieldReaderArr, Constructor constructor)
+            throws IllegalAccessException, NoSuchMethodException {
         String str;
         Supplier<T> supplierCreateSupplier;
         FieldReader[] fieldReaderArr2;
         Class<T> cls2;
         String str2;
         ClassWriter classWriter = new ClassWriter(new cpu(cls, 1));
-        ObjectReadContext objectReadContext = new ObjectReadContext(beanInfo, cls, classWriter, z2, fieldReaderArr, constructor);
+        ObjectReadContext objectReadContext = new ObjectReadContext(beanInfo, cls, classWriter, z2, fieldReaderArr,
+                constructor);
         boolean z3 = true;
         boolean z4 = fieldReaderArr.length <= 96;
         switch (fieldReaderArr.length) {
@@ -5915,7 +6154,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
             genFields(fieldReaderArr, classWriter, str3);
         }
         classWriter.visit(52, 49, objectReadContext.classNameType, str3, new String[0]);
-        MethodWriter methodWriterVisitMethod = classWriter.visitMethod(1, MethodDescription.CONSTRUCTOR_INTERNAL_NAME, METHOD_DESC_INIT, fieldReaderArr.length <= 12 ? 32 : 128);
+        MethodWriter methodWriterVisitMethod = classWriter.visitMethod(1, MethodDescription.CONSTRUCTOR_INTERNAL_NAME,
+                METHOD_DESC_INIT, fieldReaderArr.length <= 12 ? 32 : 128);
         methodWriterVisitMethod.aload(0);
         methodWriterVisitMethod.aload(1);
         String str4 = beanInfo.typeKey;
@@ -5931,27 +6171,32 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
         methodWriterVisitMethod.aload(2);
         methodWriterVisitMethod.aconst_null();
         methodWriterVisitMethod.aload(3);
-        methodWriterVisitMethod.invokespecial(str3, MethodDescription.CONSTRUCTOR_INTERNAL_NAME, METHOD_DESC_ADAPTER_INIT);
+        methodWriterVisitMethod.invokespecial(str3, MethodDescription.CONSTRUCTOR_INTERNAL_NAME,
+                METHOD_DESC_ADAPTER_INIT);
         genInitFields(fieldReaderArr, objectReadContext.classNameType, z5, 3, methodWriterVisitMethod, str3);
         methodWriterVisitMethod.return_();
         methodWriterVisitMethod.visitMaxs(3, 3);
         String str5 = (z && constructor == null) ? "createInstance0" : "createInstance";
-        if ((z2 && constructor != null) || (z && (constructor == null || !Modifier.isPublic(constructor.getModifiers()) || !Modifier.isPublic(cls.getModifiers())))) {
+        if ((z2 && constructor != null) || (z && (constructor == null || !Modifier.isPublic(constructor.getModifiers())
+                || !Modifier.isPublic(cls.getModifiers())))) {
             MethodWriter methodWriterVisitMethod2 = classWriter.visitMethod(1, str5, "(J)Ljava/lang/Object;", 32);
             methodWriterVisitMethod2.getstatic(ASMUtils.TYPE_UNSAFE_UTILS, "UNSAFE", "Lsun/misc/Unsafe;");
             methodWriterVisitMethod2.aload(0);
             methodWriterVisitMethod2.getfield(ASMUtils.TYPE_OBJECT_READER_ADAPTER, "objectClass", "Ljava/lang/Class;");
-            methodWriterVisitMethod2.invokevirtual("sun/misc/Unsafe", "allocateInstance", "(Ljava/lang/Class;)Ljava/lang/Object;");
+            methodWriterVisitMethod2.invokevirtual("sun/misc/Unsafe", "allocateInstance",
+                    "(Ljava/lang/Class;)Ljava/lang/Object;");
             methodWriterVisitMethod2.areturn();
             methodWriterVisitMethod2.visitMaxs(3, 3);
-        } else if (constructor != null && Modifier.isPublic(constructor.getModifiers()) && Modifier.isPublic(cls.getModifiers())) {
+        } else if (constructor != null && Modifier.isPublic(constructor.getModifiers())
+                && Modifier.isPublic(cls.getModifiers())) {
             MethodWriter methodWriterVisitMethod3 = classWriter.visitMethod(1, str5, "(J)Ljava/lang/Object;", 32);
             newObject(methodWriterVisitMethod3, objectReadContext.objectType, constructor);
             methodWriterVisitMethod3.areturn();
             methodWriterVisitMethod3.visitMaxs(3, 3);
         }
         if (constructor != null) {
-            if (Modifier.isPublic(i) && !this.classLoader.isExternalClass(cls) && Modifier.isPublic(constructor.getModifiers())) {
+            if (Modifier.isPublic(i) && !this.classLoader.isExternalClass(cls)
+                    && Modifier.isPublic(constructor.getModifiers())) {
                 z3 = false;
             }
             supplierCreateSupplier = createSupplier(constructor, z3);
@@ -5967,7 +6212,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
             boolean zDisableSupportArrayMapping = objectReadContext.disableSupportArrayMapping();
             boolean zDisableJSONB = objectReadContext.disableJSONB();
             fieldReaderArr2 = fieldReaderArr;
-            ObjectReaderAdapter objectReaderAdapter = new ObjectReaderAdapter(cls, beanInfo.typeKey, beanInfo.typeName, j2, null, supplierCreateSupplier, null, fieldReaderArr2);
+            ObjectReaderAdapter objectReaderAdapter = new ObjectReaderAdapter(cls, beanInfo.typeKey, beanInfo.typeName,
+                    j2, null, supplierCreateSupplier, null, fieldReaderArr2);
             cls2 = cls;
             objectReadContext.objectReaderAdapter = objectReaderAdapter;
             if (!zDisableJSONB) {
@@ -5977,7 +6223,13 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                 }
             }
             genMethodReadObject(objectReadContext, j2);
-            if (str3 == ASMUtils.TYPE_OBJECT_READER_ADAPTER || str3 == ASMUtils.TYPE_OBJECT_READER_1 || str3 == ASMUtils.TYPE_OBJECT_READER_2 || str3 == ASMUtils.TYPE_OBJECT_READER_3 || str3 == ASMUtils.TYPE_OBJECT_READER_4 || str3 == ASMUtils.TYPE_OBJECT_READER_5 || str3 == ASMUtils.TYPE_OBJECT_READER_6 || str3 == ASMUtils.TYPE_OBJECT_READER_7 || str3 == ASMUtils.TYPE_OBJECT_READER_8 || str3 == ASMUtils.TYPE_OBJECT_READER_9 || str3 == ASMUtils.TYPE_OBJECT_READER_10 || str3 == ASMUtils.TYPE_OBJECT_READER_11 || str3 == ASMUtils.TYPE_OBJECT_READER_12) {
+            if (str3 == ASMUtils.TYPE_OBJECT_READER_ADAPTER || str3 == ASMUtils.TYPE_OBJECT_READER_1
+                    || str3 == ASMUtils.TYPE_OBJECT_READER_2 || str3 == ASMUtils.TYPE_OBJECT_READER_3
+                    || str3 == ASMUtils.TYPE_OBJECT_READER_4 || str3 == ASMUtils.TYPE_OBJECT_READER_5
+                    || str3 == ASMUtils.TYPE_OBJECT_READER_6 || str3 == ASMUtils.TYPE_OBJECT_READER_7
+                    || str3 == ASMUtils.TYPE_OBJECT_READER_8 || str3 == ASMUtils.TYPE_OBJECT_READER_9
+                    || str3 == ASMUtils.TYPE_OBJECT_READER_10 || str3 == ASMUtils.TYPE_OBJECT_READER_11
+                    || str3 == ASMUtils.TYPE_OBJECT_READER_12) {
                 genMethodGetFieldReader(objectReadContext);
                 genMethodGetFieldReaderLCase(objectReadContext);
             }
@@ -5987,7 +6239,9 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
         }
         byte[] byteArray = classWriter.toByteArray();
         try {
-            return (ObjectReaderBean) this.classLoader.defineClassPublic(objectReadContext.classNameFull, byteArray, 0, byteArray.length).getConstructors()[0].newInstance(cls2, supplierCreateSupplier, fieldReaderArr2);
+            return (ObjectReaderBean) this.classLoader
+                    .defineClassPublic(objectReadContext.classNameFull, byteArray, 0, byteArray.length)
+                    .getConstructors()[0].newInstance(cls2, supplierCreateSupplier, fieldReaderArr2);
         } catch (Throwable th) {
             StringBuilder sb = new StringBuilder("create objectReader error");
             if (type == null) {
@@ -6066,24 +6320,45 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
     }
 
     @Override // com.alibaba.fastjson2.reader.ObjectReaderCreator
-    public Function<Consumer, ByteArrayValueConsumer> createByteArrayValueConsumerCreator(Class cls, FieldReader[] fieldReaderArr) {
+    public Function<Consumer, ByteArrayValueConsumer> createByteArrayValueConsumerCreator(Class cls,
+            FieldReader[] fieldReaderArr) {
         return createValueConsumer0(cls, fieldReaderArr, true);
     }
 
     @Override // com.alibaba.fastjson2.reader.ObjectReaderCreator
-    public Function<Consumer, CharArrayValueConsumer> createCharArrayValueConsumerCreator(Class cls, FieldReader[] fieldReaderArr) {
+    public Function<Consumer, CharArrayValueConsumer> createCharArrayValueConsumerCreator(Class cls,
+            FieldReader[] fieldReaderArr) {
         return createValueConsumer0(cls, fieldReaderArr, false);
     }
 
     @Override // com.alibaba.fastjson2.reader.ObjectReaderCreator
-    public <T> ObjectReaderNoneDefaultConstructor createNoneDefaultConstructorObjectReader(Class cls, BeanInfo beanInfo, Function<Map<Long, Object>, T> function, List<Constructor> list, String[] strArr, FieldReader[] fieldReaderArr, FieldReader[] fieldReaderArr2) {
+    public <T> ObjectReaderNoneDefaultConstructor createNoneDefaultConstructorObjectReader(Class cls, BeanInfo beanInfo,
+            Function<Map<Long, Object>, T> function, List<Constructor> list, String[] strArr,
+            FieldReader[] fieldReaderArr, FieldReader[] fieldReaderArr2) {
         Class<?> cls2;
         Constructor constructor;
-        ObjectReaderNoneDefaultConstructor objectReaderNoneDefaultConstructor = new ObjectReaderNoneDefaultConstructor(cls, beanInfo.typeKey, beanInfo.typeName, beanInfo.readerFeatures, function, list, strArr, fieldReaderArr, fieldReaderArr2, beanInfo.seeAlso, beanInfo.seeAlsoNames);
-        boolean z = beanInfo.autoTypeBeforeHandler == null && fieldReaderArr2.length == 0 && ((function instanceof ConstructorFunction) || (function instanceof FactoryFunction)) && ((list == null || list.isEmpty()) && !this.classLoader.isExternalClass(cls) && (beanInfo.readerFeatures & JSONReader.Feature.SupportAutoType.mask) == 0 && (((constructor = objectReaderNoneDefaultConstructor.noneDefaultConstructor) == null || constructor.getParameterCount() == fieldReaderArr.length) && ((!(function instanceof FactoryFunction) || ((FactoryFunction) function).paramNames.length == fieldReaderArr.length) && fieldReaderArr.length <= 64)));
+        ObjectReaderNoneDefaultConstructor objectReaderNoneDefaultConstructor = new ObjectReaderNoneDefaultConstructor(
+                cls, beanInfo.typeKey, beanInfo.typeName, beanInfo.readerFeatures, function, list, strArr,
+                fieldReaderArr, fieldReaderArr2, beanInfo.seeAlso, beanInfo.seeAlsoNames);
+        boolean z = beanInfo.autoTypeBeforeHandler == null && fieldReaderArr2.length == 0
+                && ((function instanceof ConstructorFunction) || (function instanceof FactoryFunction))
+                && ((list == null || list.isEmpty()) && !this.classLoader.isExternalClass(cls)
+                        && (beanInfo.readerFeatures & JSONReader.Feature.SupportAutoType.mask) == 0
+                        && (((constructor = objectReaderNoneDefaultConstructor.noneDefaultConstructor) == null
+                                || constructor.getParameterCount() == fieldReaderArr.length)
+                                && ((!(function instanceof FactoryFunction)
+                                        || ((FactoryFunction) function).paramNames.length == fieldReaderArr.length)
+                                        && fieldReaderArr.length <= 64)));
         if (z) {
             for (FieldReader fieldReader : fieldReaderArr) {
-                if (fieldReader.getInitReader() != null || fieldReader.defaultValue != null || fieldReader.schema != null || (((cls2 = fieldReader.fieldClass) != null && (!Modifier.isPublic(cls2.getModifiers()) || this.classLoader.isExternalClass(cls2))) || (((fieldReader instanceof FieldReaderMapField) && ((FieldReaderMapField) fieldReader).arrayToMapKey != null) || ((fieldReader instanceof FieldReaderMapMethod) && ((FieldReaderMapMethod) fieldReader).arrayToMapKey != null)))) {
+                if (fieldReader.getInitReader() != null || fieldReader.defaultValue != null
+                        || fieldReader.schema != null
+                        || (((cls2 = fieldReader.fieldClass) != null
+                                && (!Modifier.isPublic(cls2.getModifiers()) || this.classLoader.isExternalClass(cls2)))
+                                || (((fieldReader instanceof FieldReaderMapField)
+                                        && ((FieldReaderMapField) fieldReader).arrayToMapKey != null)
+                                        || ((fieldReader instanceof FieldReaderMapMethod)
+                                                && ((FieldReaderMapMethod) fieldReader).arrayToMapKey != null)))) {
                     z = false;
                     break;
                 }
@@ -6095,12 +6370,15 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
         boolean z2 = cls != null && this.classLoader.isExternalClass(cls);
         ClassWriter classWriter = new ClassWriter(new cpu(cls, 2));
         beanInfo.readerFeatures |= FieldInfo.DISABLE_REFERENCE_DETECT;
-        ObjectReadContext objectReadContext = new ObjectReadContext(beanInfo, cls, classWriter, z2, fieldReaderArr, null);
+        ObjectReadContext objectReadContext = new ObjectReadContext(beanInfo, cls, classWriter, z2, fieldReaderArr,
+                null);
         objectReadContext.objectReaderAdapter = objectReaderNoneDefaultConstructor;
         String str = ASMUtils.TYPE_OBJECT_READER_NONE_DEFAULT_CONSTRUCTOR;
         genFields(fieldReaderArr, classWriter, str);
         classWriter.visit(52, 49, objectReadContext.classNameType, str, new String[0]);
-        MethodWriter methodWriterVisitMethod = classWriter.visitMethod(1, MethodDescription.CONSTRUCTOR_INTERNAL_NAME, "(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;JLjava/util/function/Function;Ljava/util/List;[Ljava/lang/String;[Lcom/alibaba/fastjson2/reader/FieldReader;[Lcom/alibaba/fastjson2/reader/FieldReader;[Ljava/lang/Class;[Ljava/lang/String;)V", fieldReaderArr2.length <= 12 ? 32 : 128);
+        MethodWriter methodWriterVisitMethod = classWriter.visitMethod(1, MethodDescription.CONSTRUCTOR_INTERNAL_NAME,
+                "(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;JLjava/util/function/Function;Ljava/util/List;[Ljava/lang/String;[Lcom/alibaba/fastjson2/reader/FieldReader;[Lcom/alibaba/fastjson2/reader/FieldReader;[Ljava/lang/Class;[Ljava/lang/String;)V",
+                fieldReaderArr2.length <= 12 ? 32 : 128);
         methodWriterVisitMethod.aload(0);
         methodWriterVisitMethod.aload(1);
         methodWriterVisitMethod.aload(2);
@@ -6113,7 +6391,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
         methodWriterVisitMethod.aload(10);
         methodWriterVisitMethod.aload(11);
         methodWriterVisitMethod.aload(12);
-        methodWriterVisitMethod.invokespecial(str, MethodDescription.CONSTRUCTOR_INTERNAL_NAME, "(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;JLjava/util/function/Function;Ljava/util/List;[Ljava/lang/String;[Lcom/alibaba/fastjson2/reader/FieldReader;[Lcom/alibaba/fastjson2/reader/FieldReader;[Ljava/lang/Class;[Ljava/lang/String;)V");
+        methodWriterVisitMethod.invokespecial(str, MethodDescription.CONSTRUCTOR_INTERNAL_NAME,
+                "(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;JLjava/util/function/Function;Ljava/util/List;[Ljava/lang/String;[Lcom/alibaba/fastjson2/reader/FieldReader;[Lcom/alibaba/fastjson2/reader/FieldReader;[Ljava/lang/Class;[Ljava/lang/String;)V");
         genInitFields(fieldReaderArr, objectReadContext.classNameType, true, 9, methodWriterVisitMethod, str);
         methodWriterVisitMethod.return_();
         methodWriterVisitMethod.visitMaxs(3, 3);
@@ -6123,7 +6402,11 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
         }
         byte[] byteArray = classWriter.toByteArray();
         try {
-            return (ObjectReaderNoneDefaultConstructor) this.classLoader.defineClassPublic(objectReadContext.classNameFull, byteArray, 0, byteArray.length).getConstructors()[0].newInstance(cls, beanInfo.typeKey, beanInfo.typeName, Long.valueOf(beanInfo.readerFeatures), function, list, strArr, fieldReaderArr, fieldReaderArr2, null, null);
+            return (ObjectReaderNoneDefaultConstructor) this.classLoader
+                    .defineClassPublic(objectReadContext.classNameFull, byteArray, 0, byteArray.length)
+                    .getConstructors()[0].newInstance(cls, beanInfo.typeKey, beanInfo.typeName,
+                            Long.valueOf(beanInfo.readerFeatures), function, list, strArr, fieldReaderArr,
+                            fieldReaderArr2, null, null);
         } catch (Throwable th) {
             StringBuilder sb = new StringBuilder("create objectReader error");
             sb.append(cls == null ? "" : ", objectType " + cls.getTypeName());
@@ -6132,7 +6415,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
     }
 
     @Override // com.alibaba.fastjson2.reader.ObjectReaderCreator
-    public <T> ObjectReader<T> createObjectReader(Class<T> cls, Type type, boolean z, ObjectReaderProvider objectReaderProvider) {
+    public <T> ObjectReader<T> createObjectReader(Class<T> cls, Type type, boolean z,
+            ObjectReaderProvider objectReaderProvider) {
         Constructor defaultConstructor;
         String str;
         Class cls2;
@@ -6153,12 +6437,14 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                 Constructor<T> declaredConstructor = beanInfo.deserializer.getDeclaredConstructor(null);
                 declaredConstructor.setAccessible(true);
                 return (ObjectReader) declaredConstructor.newInstance(null);
-            } catch (IllegalAccessException | InstantiationException | NoSuchMethodException | InvocationTargetException e) {
+            } catch (IllegalAccessException | InstantiationException | NoSuchMethodException
+                    | InvocationTargetException e) {
                 throw new JSONException("create deserializer error", e);
             }
         }
         boolean z3 = (z && (cls.isInterface() || BeanUtils.isRecord(cls))) ? false : z;
-        if (Enum.class.isAssignableFrom(cls) && ((method = beanInfo.createMethod) == null || method.getParameterCount() == 1)) {
+        if (Enum.class.isAssignableFrom(cls)
+                && ((method = beanInfo.createMethod) == null || method.getParameterCount() == 1)) {
             return createEnumReader(cls, beanInfo.createMethod, objectReaderProvider);
         }
         if (beanInfo.creatorConstructor != null || beanInfo.createMethod != null) {
@@ -6173,17 +6459,23 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
         if (cls == Class.class) {
             return ObjectReaderImplClass.INSTANCE;
         }
-        FieldReader[] fieldReaderArrCreateFieldReaders = createFieldReaders(cls, type, beanInfo, z3, objectReaderProvider);
+        FieldReader[] fieldReaderArrCreateFieldReaders = createFieldReaders(cls, type, beanInfo, z3,
+                objectReaderProvider);
         boolean z4 = fieldReaderArrCreateFieldReaders.length <= 96;
         if (!z3) {
             if (JDKUtils.JVM_VERSION >= 9 && cls == StackTraceElement.class) {
                 try {
-                    return createObjectReaderNoneDefaultConstructor(StackTraceElement.class.getConstructor(String.class, String.class, String.class, String.class, String.class, String.class, Integer.TYPE), "", "classLoaderName", "moduleName", "moduleVersion", "declaringClass", "methodName", "fileName", "lineNumber");
+                    return createObjectReaderNoneDefaultConstructor(
+                            StackTraceElement.class.getConstructor(String.class, String.class, String.class,
+                                    String.class, String.class, String.class, Integer.TYPE),
+                            "", "classLoaderName", "moduleName", "moduleVersion", "declaringClass", "methodName",
+                            "fileName", "lineNumber");
                 } catch (NoSuchMethodException | SecurityException unused) {
                 }
             }
             for (FieldReader fieldReader : fieldReaderArrCreateFieldReaders) {
-                if (fieldReader.isReadOnly() || fieldReader.isUnwrapped() || (fieldReader.features & FieldInfo.READ_USING_MASK) != 0) {
+                if (fieldReader.isReadOnly() || fieldReader.isUnwrapped()
+                        || (fieldReader.features & FieldInfo.READ_USING_MASK) != 0) {
                     z4 = false;
                     break;
                 }
@@ -6194,7 +6486,12 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
         }
         if (z4) {
             for (FieldReader fieldReader2 : fieldReaderArrCreateFieldReaders) {
-                if (fieldReader2.defaultValue != null || fieldReader2.schema != null || (((cls2 = fieldReader2.fieldClass) != null && !Modifier.isPublic(cls2.getModifiers())) || (((fieldReader2 instanceof FieldReaderMapField) && ((FieldReaderMapField) fieldReader2).arrayToMapKey != null) || ((fieldReader2 instanceof FieldReaderMapMethod) && ((FieldReaderMapMethod) fieldReader2).arrayToMapKey != null)))) {
+                if (fieldReader2.defaultValue != null || fieldReader2.schema != null
+                        || (((cls2 = fieldReader2.fieldClass) != null && !Modifier.isPublic(cls2.getModifiers()))
+                                || (((fieldReader2 instanceof FieldReaderMapField)
+                                        && ((FieldReaderMapField) fieldReader2).arrayToMapKey != null)
+                                        || ((fieldReader2 instanceof FieldReaderMapMethod)
+                                                && ((FieldReaderMapMethod) fieldReader2).arrayToMapKey != null)))) {
                     z4 = false;
                     break;
                 }
@@ -6206,7 +6503,8 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
         if (!z4) {
             return super.createObjectReader(cls, type, z3, objectReaderProvider);
         }
-        if (Modifier.isInterface(modifiers) || Modifier.isAbstract(modifiers) || (defaultConstructor = BeanUtils.getDefaultConstructor(cls, true)) == null) {
+        if (Modifier.isInterface(modifiers) || Modifier.isAbstract(modifiers)
+                || (defaultConstructor = BeanUtils.getDefaultConstructor(cls, true)) == null) {
             defaultConstructor = null;
         } else {
             try {
@@ -6215,10 +6513,19 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
             }
         }
         Class[] clsArr = beanInfo.seeAlso;
-        return (clsArr == null || clsArr.length == 0) ? (z3 || defaultConstructor != null) ? jitObjectReader(cls, type, z3, z2, modifiers, beanInfo, null, fieldReaderArrCreateFieldReaders, defaultConstructor) : super.createObjectReader(cls, type, false, objectReaderProvider) : createObjectReaderSeeAlso(cls, beanInfo.typeKey, clsArr, beanInfo.seeAlsoNames, beanInfo.seeAlsoDefault, fieldReaderArrCreateFieldReaders);
+        return (clsArr == null || clsArr.length == 0)
+                ? (z3 || defaultConstructor != null)
+                        ? jitObjectReader(cls, type, z3, z2, modifiers, beanInfo, null,
+                                fieldReaderArrCreateFieldReaders, defaultConstructor)
+                        : super.createObjectReader(cls, type, false, objectReaderProvider)
+                : createObjectReaderSeeAlso(cls, beanInfo.typeKey, clsArr, beanInfo.seeAlsoNames,
+                        beanInfo.seeAlsoDefault, fieldReaderArrCreateFieldReaders);
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class MethodWriterContext {
         static final int FEATURES = 4;
         static final int FIELD_NAME = 3;
@@ -6279,13 +6586,15 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
     }
 
     @Override // com.alibaba.fastjson2.reader.ObjectReaderCreator
-    public <T> ObjectReader<T> createObjectReader(Class<T> cls, String str, String str2, long j, JSONSchema jSONSchema, Supplier<T> supplier, Function function, FieldReader... fieldReaderArr) {
+    public <T> ObjectReader<T> createObjectReader(Class<T> cls, String str, String str2, long j, JSONSchema jSONSchema,
+            Supplier<T> supplier, Function function, FieldReader... fieldReaderArr) {
         if (cls == null && supplier != null && function == null) {
             for (FieldReader fieldReader : fieldReaderArr) {
                 if (fieldReader.getFunction() != null) {
                 }
             }
-            return jitObjectReader(cls, cls, false, false, 0, new BeanInfo(JSONFactory.getDefaultObjectReaderProvider()), supplier, fieldReaderArr, null);
+            return jitObjectReader(cls, cls, false, false, 0,
+                    new BeanInfo(JSONFactory.getDefaultObjectReaderProvider()), supplier, fieldReaderArr, null);
         }
         return super.createObjectReader(cls, str, str2, j, jSONSchema, supplier, function, fieldReaderArr);
     }

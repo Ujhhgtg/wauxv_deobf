@@ -7,7 +7,7 @@ public final class dil {
     public final aao b;
 
     public dil(int i, aao aaoVar) {
-        bzo.q(aaoVar, "snippet");
+        throwIfVar1IsNull(aaoVar, "snippet");
         this.a = i;
         this.b = aaoVar;
     }
@@ -20,7 +20,7 @@ public final class dil {
             return false;
         }
         dil dilVar = (dil) obj;
-        return this.a == dilVar.a && bzo.f(this.b, dilVar.b);
+        return this.a == dilVar.a && nullSafeIsEqual(this.b, dilVar.b);
     }
 
     public final int hashCode() {

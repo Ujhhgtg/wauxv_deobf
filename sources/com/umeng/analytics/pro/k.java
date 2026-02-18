@@ -40,7 +40,10 @@ public class k {
     private String k;
     private List<String> l;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public enum a {
         AUTOPAGE,
         PAGE,
@@ -50,7 +53,10 @@ public class k {
         INSTANTSESSIONBEGIN
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class b {
         private static final k a = new k();
 
@@ -59,7 +65,7 @@ public class k {
     }
 
     public static k a(Context context) {
-        k kVar = b.a;
+        k kVar = b.cachedConstructors;
         if (d == null && context != null) {
             d = context.getApplicationContext();
             kVar.k();
@@ -145,10 +151,10 @@ public class k {
                         sQLiteDatabaseA.endTransaction();
                     } catch (Throwable unused) {
                     }
-                    i.a(d).b();
+                    i.a(d).tryGetClassByName();
                     return;
                 }
-                String[] strArr = {"", "-1"};
+                String[] strArr = { "", "-1" };
                 for (int i = 0; i < 2; i++) {
                     sQLiteDatabaseA.execSQL("update __et set __i=\"" + strC + "\" where __i=\"" + strArr[i] + "\"");
                 }
@@ -160,7 +166,7 @@ public class k {
                     } catch (Throwable unused2) {
                     }
                 }
-                i.a(d).b();
+                i.a(d).tryGetClassByName();
             }
         } catch (SQLiteDatabaseCorruptException unused3) {
             j.a(d);
@@ -174,9 +180,17 @@ public class k {
         return this.i.isEmpty();
     }
 
-    /* JADX WARN: Found duplicated region for block: B:53:0x0089 A[DONT_GENERATE, EXC_TOP_SPLITTER, PHI: r4 r6
-      0x0089: PHI (r4v3 org.json.JSONObject) = (r4v2 org.json.JSONObject), (r4v5 org.json.JSONObject) binds: [B:28:0x0087, B:34:0x00a1] A[DONT_GENERATE, DONT_INLINE]
-      0x0089: PHI (r6v3 android.database.sqlite.SQLiteDatabase) = (r6v2 android.database.sqlite.SQLiteDatabase), (r6v4 android.database.sqlite.SQLiteDatabase) binds: [B:28:0x0087, B:34:0x00a1] A[DONT_GENERATE, DONT_INLINE], SYNTHETIC] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:53:0x0089 A[DONT_GENERATE,
+     * EXC_TOP_SPLITTER, PHI: r4 r6
+     * 0x0089: PHI (r4v3 org.json.JSONObject) = (r4v2 org.json.JSONObject), (r4v5
+     * org.json.JSONObject) binds: [B:28:0x0087, B:34:0x00a1] A[DONT_GENERATE,
+     * DONT_INLINE]
+     * 0x0089: PHI (r6v3 android.database.sqlite.SQLiteDatabase) = (r6v2
+     * android.database.sqlite.SQLiteDatabase), (r6v4
+     * android.database.sqlite.SQLiteDatabase) binds: [B:28:0x0087, B:34:0x00a1]
+     * A[DONT_GENERATE, DONT_INLINE], SYNTHETIC]
+     */
     public JSONObject f() {
         JSONObject jSONObject;
         SQLiteDatabase sQLiteDatabaseA;
@@ -195,7 +209,8 @@ public class k {
             sQLiteDatabaseA = i.a(d).a();
             try {
                 sQLiteDatabaseA.beginTransaction();
-                Cursor cursorA = a(g.c.a, sQLiteDatabaseA, null, "__ii=? ", new String[]{this.l.get(0)}, null, null, null, null);
+                Cursor cursorA = a(g.c.cachedConstructors, sQLiteDatabaseA, null, "__ii=? ",
+                        new String[] { this.l.get(0) }, null, null, null, null);
                 if (cursorA != null) {
                     try {
                         if (cursorA.moveToNext()) {
@@ -221,7 +236,7 @@ public class k {
                                         } catch (Throwable unused2) {
                                         }
                                     }
-                                    i.a(d).b();
+                                    i.a(d).tryGetClassByName();
                                 }
                             } catch (Throwable unused3) {
                                 cursor = cursorA;
@@ -247,7 +262,7 @@ public class k {
                     sQLiteDatabaseA.endTransaction();
                 } catch (Throwable unused6) {
                 }
-                i.a(d).b();
+                i.a(d).tryGetClassByName();
                 return jSONObject2;
             } catch (SQLiteDatabaseCorruptException unused7) {
                 jSONObject = null;
@@ -263,9 +278,17 @@ public class k {
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:53:0x0089 A[DONT_GENERATE, EXC_TOP_SPLITTER, PHI: r4 r6
-      0x0089: PHI (r4v3 org.json.JSONObject) = (r4v2 org.json.JSONObject), (r4v5 org.json.JSONObject) binds: [B:28:0x0087, B:34:0x00a1] A[DONT_GENERATE, DONT_INLINE]
-      0x0089: PHI (r6v3 android.database.sqlite.SQLiteDatabase) = (r6v2 android.database.sqlite.SQLiteDatabase), (r6v4 android.database.sqlite.SQLiteDatabase) binds: [B:28:0x0087, B:34:0x00a1] A[DONT_GENERATE, DONT_INLINE], SYNTHETIC] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:53:0x0089 A[DONT_GENERATE,
+     * EXC_TOP_SPLITTER, PHI: r4 r6
+     * 0x0089: PHI (r4v3 org.json.JSONObject) = (r4v2 org.json.JSONObject), (r4v5
+     * org.json.JSONObject) binds: [B:28:0x0087, B:34:0x00a1] A[DONT_GENERATE,
+     * DONT_INLINE]
+     * 0x0089: PHI (r6v3 android.database.sqlite.SQLiteDatabase) = (r6v2
+     * android.database.sqlite.SQLiteDatabase), (r6v4
+     * android.database.sqlite.SQLiteDatabase) binds: [B:28:0x0087, B:34:0x00a1]
+     * A[DONT_GENERATE, DONT_INLINE], SYNTHETIC]
+     */
     public JSONObject g() {
         JSONObject jSONObject;
         SQLiteDatabase sQLiteDatabaseA;
@@ -284,7 +307,8 @@ public class k {
             sQLiteDatabaseA = i.a(d).a();
             try {
                 sQLiteDatabaseA.beginTransaction();
-                Cursor cursorA = a(g.d.a, sQLiteDatabaseA, null, "__ii=? ", new String[]{this.i.get(0)}, null, null, null, null);
+                Cursor cursorA = a(g.d.cachedConstructors, sQLiteDatabaseA, null, "__ii=? ",
+                        new String[] { this.i.get(0) }, null, null, null, null);
                 if (cursorA != null) {
                     try {
                         if (cursorA.moveToNext()) {
@@ -310,7 +334,7 @@ public class k {
                                         } catch (Throwable unused2) {
                                         }
                                     }
-                                    i.a(d).b();
+                                    i.a(d).tryGetClassByName();
                                 }
                             } catch (Throwable unused3) {
                                 cursor = cursorA;
@@ -336,7 +360,7 @@ public class k {
                     sQLiteDatabaseA.endTransaction();
                 } catch (Throwable unused6) {
                 }
-                i.a(d).b();
+                i.a(d).tryGetClassByName();
                 return jSONObject2;
             } catch (SQLiteDatabaseCorruptException unused7) {
                 jSONObject = null;
@@ -360,7 +384,8 @@ public class k {
                 sQLiteDatabaseA.beginTransaction();
                 if (this.j.size() > 0) {
                     for (int i = 0; i < this.j.size(); i++) {
-                        sQLiteDatabaseA.delete(g.b.a, "rowid=?", new String[]{String.valueOf(this.j.get(i).intValue())});
+                        sQLiteDatabaseA.delete(g.b.cachedConstructors, "rowid=?",
+                                new String[] { String.valueOf(this.j.get(i).intValue()) });
                     }
                 }
                 this.j.clear();
@@ -372,7 +397,7 @@ public class k {
                     } catch (Throwable unused) {
                     }
                 }
-                i.a(d).b();
+                i.a(d).tryGetClassByName();
             }
         } catch (SQLiteDatabaseCorruptException unused2) {
             j.a(d);
@@ -397,7 +422,7 @@ public class k {
                     } catch (Throwable unused) {
                     }
                 }
-                i.a(d).b();
+                i.a(d).tryGetClassByName();
             }
         } catch (SQLiteDatabaseCorruptException unused2) {
             j.a(d);
@@ -414,15 +439,15 @@ public class k {
                 sQLiteDatabaseA = i.a(d).a();
                 try {
                     sQLiteDatabaseA.beginTransaction();
-                    sQLiteDatabaseA.delete(g.a.a, "__i=?", new String[]{this.k});
-                    sQLiteDatabaseA.delete(g.b.a, "__i=?", new String[]{this.k});
+                    sQLiteDatabaseA.delete(g.a.cachedConstructors, "__i=?", new String[] { this.k });
+                    sQLiteDatabaseA.delete(g.b.cachedConstructors, "__i=?", new String[] { this.k });
                     sQLiteDatabaseA.setTransactionSuccessful();
                 } catch (SQLiteDatabaseCorruptException unused) {
                     try {
                         j.a(d);
                         if (sQLiteDatabaseA != null) {
                         }
-                        i.a(d).b();
+                        i.a(d).tryGetClassByName();
                         this.k = null;
                     } catch (Throwable th) {
                         if (sQLiteDatabaseA != null) {
@@ -431,13 +456,13 @@ public class k {
                             } catch (Throwable unused2) {
                             }
                         }
-                        i.a(d).b();
+                        i.a(d).tryGetClassByName();
                         throw th;
                     }
                 } catch (Throwable unused3) {
                     if (sQLiteDatabaseA != null) {
                     }
-                    i.a(d).b();
+                    i.a(d).tryGetClassByName();
                     this.k = null;
                 }
             } catch (SQLiteDatabaseCorruptException unused4) {
@@ -449,7 +474,7 @@ public class k {
                 sQLiteDatabaseA.endTransaction();
             } catch (Throwable unused6) {
             }
-            i.a(d).b();
+            i.a(d).tryGetClassByName();
         }
         this.k = null;
     }
@@ -467,7 +492,8 @@ public class k {
             JSONObject jSONObjectOptJSONObject = jSONObject.optJSONObject("__sp");
             JSONObject jSONObjectOptJSONObject2 = jSONObject.optJSONObject("__pp");
             String strC = "";
-            String strC2 = (jSONObjectOptJSONObject == null || jSONObjectOptJSONObject.length() <= 0) ? "" : c(jSONObjectOptJSONObject.toString());
+            String strC2 = (jSONObjectOptJSONObject == null || jSONObjectOptJSONObject.length() <= 0) ? ""
+                    : c(jSONObjectOptJSONObject.toString());
             if (jSONObjectOptJSONObject2 != null && jSONObjectOptJSONObject2.length() > 0) {
                 strC = c(jSONObjectOptJSONObject2.toString());
             }
@@ -478,7 +504,7 @@ public class k {
             contentValues.put("__pp", strC);
             contentValues.put("__av", UMGlobalContext.getInstance(d).getAppVersion());
             contentValues.put("__vc", UMUtils.getAppVersionCode(d));
-            sQLiteDatabase.insert(g.c.a, null, contentValues);
+            sQLiteDatabase.insert(g.c.cachedConstructors, null, contentValues);
         } catch (Throwable unused) {
         }
     }
@@ -491,14 +517,15 @@ public class k {
         strD = null;
         String strD = null;
         try {
-            JSONObject jSONObjectOptJSONObject = jSONObject.optJSONObject(g.d.a.e);
+            JSONObject jSONObjectOptJSONObject = jSONObject.optJSONObject(g.d.cachedConstructors.e);
             if (jSONObjectOptJSONObject != null) {
                 sQLiteDatabase2 = sQLiteDatabase;
-                cursorA = a(g.d.a, sQLiteDatabase2, new String[]{g.d.a.e}, "__ii=? ", new String[]{str}, null, null, null, null);
+                cursorA = a(g.d.cachedConstructors, sQLiteDatabase2, new String[] { g.d.cachedConstructors.e },
+                        "__ii=? ", new String[] { str }, null, null, null, null);
                 if (cursorA != null) {
                     while (cursorA.moveToNext()) {
                         try {
-                            strD = d(cursorA.getString(cursorA.getColumnIndex(g.d.a.e)));
+                            strD = d(cursorA.getString(cursorA.getColumnIndex(g.d.cachedConstructors.e)));
                         } catch (Throwable unused) {
                             cursor = cursorA;
                             if (cursor != null) {
@@ -524,14 +551,15 @@ public class k {
                     sQLiteDatabase2.execSQL("update  __sd set __d=\"" + strC + "\" where __ii=\"" + str + "\"");
                 }
             }
-            JSONObject jSONObjectOptJSONObject2 = jSONObject.optJSONObject(g.d.a.d);
+            JSONObject jSONObjectOptJSONObject2 = jSONObject.optJSONObject(g.d.cachedConstructors.d);
             if (jSONObjectOptJSONObject2 != null) {
                 String strC2 = c(jSONObjectOptJSONObject2.toString());
                 if (!TextUtils.isEmpty(strC2)) {
                     sQLiteDatabase2.execSQL("update  __sd set __c=\"" + strC2 + "\" where __ii=\"" + str + "\"");
                 }
             }
-            sQLiteDatabase2.execSQL("update  __sd set __f=\"" + String.valueOf(jSONObject.optLong(g.d.a.g)) + "\" where __ii=\"" + str + "\"");
+            sQLiteDatabase2.execSQL("update  __sd set __f=\""
+                    + String.valueOf(jSONObject.optLong(g.d.cachedConstructors.g)) + "\" where __ii=\"" + str + "\"");
             if (cursorA != null) {
                 cursorA.close();
             }
@@ -539,7 +567,8 @@ public class k {
         }
     }
 
-    private Cursor a(String str, SQLiteDatabase sQLiteDatabase, String[] strArr, String str2, String[] strArr2, String str3, String str4, String str5, String str6) {
+    private Cursor a(String str, SQLiteDatabase sQLiteDatabase, String[] strArr, String str2, String[] strArr2,
+            String str3, String str4, String str5, String str6) {
         if (sQLiteDatabase == null) {
             return null;
         }
@@ -557,139 +586,190 @@ public class k {
         this.i.clear();
     }
 
-    /* JADX WARN: Code restructure failed: missing block: B:77:0x00a2, code lost:
-    
-        if (r2 != null) goto L78;
-     */
-    /* JADX WARN: Code restructure failed: missing block: B:78:0x00a4, code lost:
-    
-        r2.endTransaction();
-     */
-    /* JADX WARN: Code restructure failed: missing block: B:81:0x00ad, code lost:
-    
-        if (r2 != null) goto L78;
-     */
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.java:210)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:196)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:180)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:201)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.java:347)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(TryCatchBlockAttr.java:356)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:202)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+    /*
+     * JADX WARN: Code restructure failed: missing block: B:77:0x00a2, code lost:
+     * 
+     * if (r2 != null) goto L78;
      */
     /*
-        Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
-    */
+     * JADX WARN: Code restructure failed: missing block: B:78:0x00a4, code lost:
+     * 
+     * r2.endTransaction();
+     */
+    /*
+     * JADX WARN: Code restructure failed: missing block: B:81:0x00ad, code lost:
+     * 
+     * if (r2 != null) goto L78;
+     */
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.
+     * java:210)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:196)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:180)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:
+     * 201)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.
+     * java:347)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(
+     * TryCatchBlockAttr.java:356)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+     * MarkFinallyVisitor.java:202)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:119)
+     */
+    /*
+     * Code decompiled incorrectly, please refer to instructions dump.
+     * To view partially-correct add '--show-bad-code' argument
+     */
     public void a(org.json.JSONArray r11) {
         /*
-            r10 = this;
-            java.lang.String r0 = "__t"
-            java.lang.String r1 = "__i"
-            r2 = 0
-            android.content.Context r3 = com.umeng.analytics.pro.k.d     // Catch: java.lang.Throwable -> La2 android.database.sqlite.SQLiteDatabaseCorruptException -> La8
-            com.umeng.analytics.pro.i r3 = com.umeng.analytics.pro.i.a(r3)     // Catch: java.lang.Throwable -> La2 android.database.sqlite.SQLiteDatabaseCorruptException -> La8
-            android.database.sqlite.SQLiteDatabase r3 = r3.a()     // Catch: java.lang.Throwable -> La2 android.database.sqlite.SQLiteDatabaseCorruptException -> La8
-            r3.beginTransaction()     // Catch: java.lang.Throwable -> L35 android.database.sqlite.SQLiteDatabaseCorruptException -> La0
-            r4 = 0
-        L13:
-            int r5 = r11.length()     // Catch: java.lang.Throwable -> L35 android.database.sqlite.SQLiteDatabaseCorruptException -> La0
-            if (r4 >= r5) goto L90
-            org.json.JSONObject r5 = r11.getJSONObject(r4)     // Catch: java.lang.Throwable -> L35 java.lang.Exception -> L8d
-            android.content.ContentValues r6 = new android.content.ContentValues     // Catch: java.lang.Throwable -> L35 java.lang.Exception -> L8d
-            r6.<init>()     // Catch: java.lang.Throwable -> L35 java.lang.Exception -> L8d
-            java.lang.String r7 = r5.optString(r1)     // Catch: java.lang.Throwable -> L35 java.lang.Exception -> L8d
-            boolean r8 = android.text.TextUtils.isEmpty(r7)     // Catch: java.lang.Throwable -> L35 java.lang.Exception -> L8d
-            java.lang.String r9 = "-1"
-            if (r8 != 0) goto L37
-            boolean r8 = r9.equals(r7)     // Catch: java.lang.Throwable -> L35 java.lang.Exception -> L8d
-            if (r8 == 0) goto L46
-            goto L37
-        L35:
-            r2 = r3
-            goto La2
-        L37:
-            com.umeng.analytics.pro.w r7 = com.umeng.analytics.pro.w.a()     // Catch: java.lang.Throwable -> L35 java.lang.Exception -> L8d
-            java.lang.String r7 = r7.b()     // Catch: java.lang.Throwable -> L35 java.lang.Exception -> L8d
-            boolean r8 = android.text.TextUtils.isEmpty(r7)     // Catch: java.lang.Throwable -> L35 java.lang.Exception -> L8d
-            if (r8 == 0) goto L46
-            r7 = r9
-        L46:
-            r6.put(r1, r7)     // Catch: java.lang.Throwable -> L35 java.lang.Exception -> L8d
-            java.lang.String r7 = "__e"
-            java.lang.String r8 = "id"
-            java.lang.String r8 = r5.optString(r8)     // Catch: java.lang.Throwable -> L35 java.lang.Exception -> L8d
-            r6.put(r7, r8)     // Catch: java.lang.Throwable -> L35 java.lang.Exception -> L8d
-            int r7 = r5.optInt(r0)     // Catch: java.lang.Throwable -> L35 java.lang.Exception -> L8d
-            java.lang.Integer r7 = java.lang.Integer.valueOf(r7)     // Catch: java.lang.Throwable -> L35 java.lang.Exception -> L8d
-            r6.put(r0, r7)     // Catch: java.lang.Throwable -> L35 java.lang.Exception -> L8d
-            java.lang.String r7 = "__av"
-            android.content.Context r8 = com.umeng.analytics.pro.k.d     // Catch: java.lang.Throwable -> L35 java.lang.Exception -> L8d
-            java.lang.String r8 = com.umeng.commonsdk.utils.UMUtils.getAppVersionName(r8)     // Catch: java.lang.Throwable -> L35 java.lang.Exception -> L8d
-            r6.put(r7, r8)     // Catch: java.lang.Throwable -> L35 java.lang.Exception -> L8d
-            java.lang.String r7 = "__vc"
-            android.content.Context r8 = com.umeng.analytics.pro.k.d     // Catch: java.lang.Throwable -> L35 java.lang.Exception -> L8d
-            java.lang.String r8 = com.umeng.commonsdk.utils.UMUtils.getAppVersionCode(r8)     // Catch: java.lang.Throwable -> L35 java.lang.Exception -> L8d
-            r6.put(r7, r8)     // Catch: java.lang.Throwable -> L35 java.lang.Exception -> L8d
-            r5.remove(r1)     // Catch: java.lang.Throwable -> L35 java.lang.Exception -> L8d
-            r5.remove(r0)     // Catch: java.lang.Throwable -> L35 java.lang.Exception -> L8d
-            java.lang.String r7 = "__s"
-            java.lang.String r5 = r5.toString()     // Catch: java.lang.Throwable -> L35 java.lang.Exception -> L8d
-            java.lang.String r5 = r10.c(r5)     // Catch: java.lang.Throwable -> L35 java.lang.Exception -> L8d
-            r6.put(r7, r5)     // Catch: java.lang.Throwable -> L35 java.lang.Exception -> L8d
-            java.lang.String r5 = "__et"
-            r3.insert(r5, r2, r6)     // Catch: java.lang.Throwable -> L35 java.lang.Exception -> L8d
-        L8d:
-            int r4 = r4 + 1
-            goto L13
-        L90:
-            r3.setTransactionSuccessful()     // Catch: java.lang.Throwable -> L35 android.database.sqlite.SQLiteDatabaseCorruptException -> La0
-            r3.endTransaction()     // Catch: java.lang.Throwable -> L96
-        L96:
-            android.content.Context r11 = com.umeng.analytics.pro.k.d
-            com.umeng.analytics.pro.i r11 = com.umeng.analytics.pro.i.a(r11)
-            r11.b()
-            goto Lb0
-        La0:
-            r2 = r3
-            goto La8
-        La2:
-            if (r2 == 0) goto L96
-        La4:
-            r2.endTransaction()     // Catch: java.lang.Throwable -> L96
-            goto L96
-        La8:
-            android.content.Context r11 = com.umeng.analytics.pro.k.d     // Catch: java.lang.Throwable -> Lb1
-            com.umeng.analytics.pro.j.a(r11)     // Catch: java.lang.Throwable -> Lb1
-            if (r2 == 0) goto L96
-            goto La4
-        Lb0:
-            return
-        Lb1:
-            r11 = move-exception
-            if (r2 == 0) goto Lb7
-            r2.endTransaction()     // Catch: java.lang.Throwable -> Lb7
-        Lb7:
-            android.content.Context r0 = com.umeng.analytics.pro.k.d
-            com.umeng.analytics.pro.i r0 = com.umeng.analytics.pro.i.a(r0)
-            r0.b()
-            throw r11
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.umeng.analytics.pro.k.a(org.json.JSONArray):void");
+         * r10 = this;
+         * java.lang.String r0 = "__t"
+         * java.lang.String r1 = "__i"
+         * r2 = 0
+         * android.content.Context r3 = com.umeng.analytics.pro.k.d // Catch:
+         * java.lang.Throwable -> La2
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> La8
+         * com.umeng.analytics.pro.i r3 = com.umeng.analytics.pro.i.a(r3) // Catch:
+         * java.lang.Throwable -> La2
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> La8
+         * android.database.sqlite.SQLiteDatabase r3 = r3.a() // Catch:
+         * java.lang.Throwable -> La2
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> La8
+         * r3.beginTransaction() // Catch: java.lang.Throwable -> L35
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> La0
+         * r4 = 0
+         * L13:
+         * int r5 = r11.length() // Catch: java.lang.Throwable -> L35
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> La0
+         * if (r4 >= r5) goto L90
+         * org.json.JSONObject r5 = r11.getJSONObject(r4) // Catch: java.lang.Throwable
+         * -> L35 java.lang.Exception -> L8d
+         * android.content.ContentValues r6 = new android.content.ContentValues //
+         * Catch: java.lang.Throwable -> L35 java.lang.Exception -> L8d
+         * r6.<init>() // Catch: java.lang.Throwable -> L35 java.lang.Exception -> L8d
+         * java.lang.String r7 = r5.optString(r1) // Catch: java.lang.Throwable -> L35
+         * java.lang.Exception -> L8d
+         * boolean r8 = android.text.TextUtils.isEmpty(r7) // Catch: java.lang.Throwable
+         * -> L35 java.lang.Exception -> L8d
+         * java.lang.String r9 = "-1"
+         * if (r8 != 0) goto L37
+         * boolean r8 = r9.equals(r7) // Catch: java.lang.Throwable -> L35
+         * java.lang.Exception -> L8d
+         * if (r8 == 0) goto L46
+         * goto L37
+         * L35:
+         * r2 = r3
+         * goto La2
+         * L37:
+         * com.umeng.analytics.pro.w r7 = com.umeng.analytics.pro.w.a() // Catch:
+         * java.lang.Throwable -> L35 java.lang.Exception -> L8d
+         * java.lang.String r7 = r7.b() // Catch: java.lang.Throwable -> L35
+         * java.lang.Exception -> L8d
+         * boolean r8 = android.text.TextUtils.isEmpty(r7) // Catch: java.lang.Throwable
+         * -> L35 java.lang.Exception -> L8d
+         * if (r8 == 0) goto L46
+         * r7 = r9
+         * L46:
+         * r6.put(r1, r7) // Catch: java.lang.Throwable -> L35 java.lang.Exception ->
+         * L8d
+         * java.lang.String r7 = "__e"
+         * java.lang.String r8 = "id"
+         * java.lang.String r8 = r5.optString(r8) // Catch: java.lang.Throwable -> L35
+         * java.lang.Exception -> L8d
+         * r6.put(r7, r8) // Catch: java.lang.Throwable -> L35 java.lang.Exception ->
+         * L8d
+         * int r7 = r5.optInt(r0) // Catch: java.lang.Throwable -> L35
+         * java.lang.Exception -> L8d
+         * java.lang.Integer r7 = java.lang.Integer.valueOf(r7) // Catch:
+         * java.lang.Throwable -> L35 java.lang.Exception -> L8d
+         * r6.put(r0, r7) // Catch: java.lang.Throwable -> L35 java.lang.Exception ->
+         * L8d
+         * java.lang.String r7 = "__av"
+         * android.content.Context r8 = com.umeng.analytics.pro.k.d // Catch:
+         * java.lang.Throwable -> L35 java.lang.Exception -> L8d
+         * java.lang.String r8 = com.umeng.commonsdk.utils.UMUtils.getAppVersionName(r8)
+         * // Catch: java.lang.Throwable -> L35 java.lang.Exception -> L8d
+         * r6.put(r7, r8) // Catch: java.lang.Throwable -> L35 java.lang.Exception ->
+         * L8d
+         * java.lang.String r7 = "__vc"
+         * android.content.Context r8 = com.umeng.analytics.pro.k.d // Catch:
+         * java.lang.Throwable -> L35 java.lang.Exception -> L8d
+         * java.lang.String r8 = com.umeng.commonsdk.utils.UMUtils.getAppVersionCode(r8)
+         * // Catch: java.lang.Throwable -> L35 java.lang.Exception -> L8d
+         * r6.put(r7, r8) // Catch: java.lang.Throwable -> L35 java.lang.Exception ->
+         * L8d
+         * r5.remove(r1) // Catch: java.lang.Throwable -> L35 java.lang.Exception -> L8d
+         * r5.remove(r0) // Catch: java.lang.Throwable -> L35 java.lang.Exception -> L8d
+         * java.lang.String r7 = "__s"
+         * java.lang.String r5 = r5.toString() // Catch: java.lang.Throwable -> L35
+         * java.lang.Exception -> L8d
+         * java.lang.String r5 = r10.c(r5) // Catch: java.lang.Throwable -> L35
+         * java.lang.Exception -> L8d
+         * r6.put(r7, r5) // Catch: java.lang.Throwable -> L35 java.lang.Exception ->
+         * L8d
+         * java.lang.String r5 = "__et"
+         * r3.insert(r5, r2, r6) // Catch: java.lang.Throwable -> L35
+         * java.lang.Exception -> L8d
+         * L8d:
+         * int r4 = r4 + 1
+         * goto L13
+         * L90:
+         * r3.setTransactionSuccessful() // Catch: java.lang.Throwable -> L35
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> La0
+         * r3.endTransaction() // Catch: java.lang.Throwable -> L96
+         * L96:
+         * android.content.Context r11 = com.umeng.analytics.pro.k.d
+         * com.umeng.analytics.pro.i r11 = com.umeng.analytics.pro.i.a(r11)
+         * r11.b()
+         * goto Lb0
+         * La0:
+         * r2 = r3
+         * goto La8
+         * La2:
+         * if (r2 == 0) goto L96
+         * La4:
+         * r2.endTransaction() // Catch: java.lang.Throwable -> L96
+         * goto L96
+         * La8:
+         * android.content.Context r11 = com.umeng.analytics.pro.k.d // Catch:
+         * java.lang.Throwable -> Lb1
+         * com.umeng.analytics.pro.j.a(r11) // Catch: java.lang.Throwable -> Lb1
+         * if (r2 == 0) goto L96
+         * goto La4
+         * Lb0:
+         * return
+         * Lb1:
+         * r11 = move-exception
+         * if (r2 == 0) goto Lb7
+         * r2.endTransaction() // Catch: java.lang.Throwable -> Lb7
+         * Lb7:
+         * android.content.Context r0 = com.umeng.analytics.pro.k.d
+         * com.umeng.analytics.pro.i r0 = com.umeng.analytics.pro.i.a(r0)
+         * r0.b()
+         * throw r11
+         */
+        throw new UnsupportedOperationException(
+                "Method not decompiled: com.umeng.analytics.pro.k.a(org.json.JSONArray):void");
     }
 
     public JSONObject b(boolean z) {
         JSONObject jSONObject = new JSONObject();
-        b(jSONObject, z);
+        tryGetClassByName(jSONObject, z);
         return jSONObject;
     }
 
     public String d(String str) {
         try {
-            return TextUtils.isEmpty(e) ? str : new String(DataHelper.decrypt(Base64.decode(str.getBytes(), 0), e.getBytes()));
+            return TextUtils.isEmpty(e) ? str
+                    : new String(DataHelper.decrypt(Base64.decode(str.getBytes(), 0), e.getBytes()));
         } catch (Exception unused) {
             if (Build.VERSION.SDK_INT >= 29 && !TextUtils.isEmpty(str)) {
                 try {
@@ -712,19 +792,37 @@ public class k {
     /* JADX WARN: Type inference failed for: r13v12 */
     /* JADX WARN: Type inference failed for: r13v13 */
     /* JADX WARN: Type inference failed for: r13v2 */
-    /* JADX WARN: Type inference failed for: r13v3, types: [android.database.Cursor] */
-    /* JADX WARN: Type inference failed for: r13v6, types: [android.database.Cursor] */
-    /* JADX WARN: Type inference failed for: r13v7, types: [android.database.Cursor] */
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.java:210)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:196)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:180)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:201)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.java:347)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(TryCatchBlockAttr.java:356)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:202)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+    /*
+     * JADX WARN: Type inference failed for: r13v3, types: [android.database.Cursor]
+     */
+    /*
+     * JADX WARN: Type inference failed for: r13v6, types: [android.database.Cursor]
+     */
+    /*
+     * JADX WARN: Type inference failed for: r13v7, types: [android.database.Cursor]
+     */
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.
+     * java:210)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:196)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:180)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:
+     * 201)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.
+     * java:347)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(
+     * TryCatchBlockAttr.java:356)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+     * MarkFinallyVisitor.java:202)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:119)
      */
     private void b(JSONObject jSONObject, String str) {
         SQLiteDatabase sQLiteDatabaseA;
@@ -736,10 +834,12 @@ public class k {
                 try {
                     sQLiteDatabaseA.beginTransaction();
                     if (!TextUtils.isEmpty(str)) {
-                        cursorA = a(g.a.a, sQLiteDatabaseA, null, "__i=? ", new String[]{str}, null, null, null, null);
+                        cursorA = a(g.a.cachedConstructors, sQLiteDatabaseA, null, "__i=? ", new String[] { str }, null,
+                                null, null, null);
                     } else {
                         try {
-                            cursorA = a(g.a.a, sQLiteDatabaseA, null, null, null, null, null, null, null);
+                            cursorA = a(g.a.cachedConstructors, sQLiteDatabaseA, null, null, null, null, null, null,
+                                    null);
                         } catch (SQLiteDatabaseCorruptException unused) {
                             jSONObject = cursor;
                             j.a(d);
@@ -748,7 +848,7 @@ public class k {
                             }
                             if (sQLiteDatabaseA != null) {
                             }
-                            i.a(d).b();
+                            i.a(d).tryGetClassByName();
                         } catch (Throwable unused2) {
                             jSONObject = cursor;
                             j.a(d);
@@ -757,7 +857,7 @@ public class k {
                             }
                             if (sQLiteDatabaseA != null) {
                             }
-                            i.a(d).b();
+                            i.a(d).tryGetClassByName();
                         }
                     }
                     cursor = cursorA;
@@ -790,7 +890,7 @@ public class k {
                     } catch (Throwable unused5) {
                     }
                 }
-                i.a(d).b();
+                i.a(d).tryGetClassByName();
                 throw th;
             }
         } catch (SQLiteDatabaseCorruptException unused6) {
@@ -804,113 +904,160 @@ public class k {
             sQLiteDatabaseA.endTransaction();
         } catch (Throwable unused8) {
         }
-        i.a(d).b();
+        i.a(d).tryGetClassByName();
     }
 
     public String c(String str) {
         try {
-            return TextUtils.isEmpty(e) ? str : Base64.encodeToString(DataHelper.encrypt(str.getBytes(), e.getBytes()), 0);
+            return TextUtils.isEmpty(e) ? str
+                    : Base64.encodeToString(DataHelper.encrypt(str.getBytes(), e.getBytes()), 0);
         } catch (Exception unused) {
             return null;
         }
     }
 
-    /* JADX WARN: Code restructure failed: missing block: B:51:0x0060, code lost:
-    
-        if (r0 != null) goto L52;
-     */
-    /* JADX WARN: Code restructure failed: missing block: B:52:0x0062, code lost:
-    
-        r0.endTransaction();
-     */
-    /* JADX WARN: Code restructure failed: missing block: B:55:0x006b, code lost:
-    
-        if (r0 != null) goto L52;
-     */
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.java:210)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:196)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:180)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:201)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.java:347)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(TryCatchBlockAttr.java:356)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:202)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+    /*
+     * JADX WARN: Code restructure failed: missing block: B:51:0x0060, code lost:
+     * 
+     * if (r0 != null) goto L52;
      */
     /*
-        Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
-    */
+     * JADX WARN: Code restructure failed: missing block: B:52:0x0062, code lost:
+     * 
+     * r0.endTransaction();
+     */
+    /*
+     * JADX WARN: Code restructure failed: missing block: B:55:0x006b, code lost:
+     * 
+     * if (r0 != null) goto L52;
+     */
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.
+     * java:210)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:196)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:180)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:
+     * 201)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.
+     * java:347)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(
+     * TryCatchBlockAttr.java:356)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+     * MarkFinallyVisitor.java:202)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:119)
+     */
+    /*
+     * Code decompiled incorrectly, please refer to instructions dump.
+     * To view partially-correct add '--show-bad-code' argument
+     */
     public boolean a(java.lang.String r5, java.lang.String r6, int r7) {
         /*
-            r4 = this;
-            r0 = 0
-            android.content.Context r1 = com.umeng.analytics.pro.k.d     // Catch: java.lang.Throwable -> L60 android.database.sqlite.SQLiteDatabaseCorruptException -> L66
-            com.umeng.analytics.pro.i r1 = com.umeng.analytics.pro.i.a(r1)     // Catch: java.lang.Throwable -> L60 android.database.sqlite.SQLiteDatabaseCorruptException -> L66
-            android.database.sqlite.SQLiteDatabase r1 = r1.a()     // Catch: java.lang.Throwable -> L60 android.database.sqlite.SQLiteDatabaseCorruptException -> L66
-            r1.beginTransaction()     // Catch: java.lang.Throwable -> L4c android.database.sqlite.SQLiteDatabaseCorruptException -> L4e
-            android.content.ContentValues r2 = new android.content.ContentValues     // Catch: java.lang.Throwable -> L4c android.database.sqlite.SQLiteDatabaseCorruptException -> L4e
-            r2.<init>()     // Catch: java.lang.Throwable -> L4c android.database.sqlite.SQLiteDatabaseCorruptException -> L4e
-            java.lang.String r3 = "__i"
-            r2.put(r3, r5)     // Catch: java.lang.Throwable -> L4c android.database.sqlite.SQLiteDatabaseCorruptException -> L4e
-            java.lang.String r5 = r4.c(r6)     // Catch: java.lang.Throwable -> L4c android.database.sqlite.SQLiteDatabaseCorruptException -> L4e
-            boolean r6 = android.text.TextUtils.isEmpty(r5)     // Catch: java.lang.Throwable -> L4c android.database.sqlite.SQLiteDatabaseCorruptException -> L4e
-            if (r6 != 0) goto L50
-            java.lang.String r6 = "__a"
-            r2.put(r6, r5)     // Catch: java.lang.Throwable -> L4c android.database.sqlite.SQLiteDatabaseCorruptException -> L4e
-            java.lang.String r5 = "__t"
-            java.lang.Integer r6 = java.lang.Integer.valueOf(r7)     // Catch: java.lang.Throwable -> L4c android.database.sqlite.SQLiteDatabaseCorruptException -> L4e
-            r2.put(r5, r6)     // Catch: java.lang.Throwable -> L4c android.database.sqlite.SQLiteDatabaseCorruptException -> L4e
-            java.lang.String r5 = "__av"
-            android.content.Context r6 = com.umeng.analytics.pro.k.d     // Catch: java.lang.Throwable -> L4c android.database.sqlite.SQLiteDatabaseCorruptException -> L4e
-            java.lang.String r6 = com.umeng.commonsdk.utils.UMUtils.getAppVersionName(r6)     // Catch: java.lang.Throwable -> L4c android.database.sqlite.SQLiteDatabaseCorruptException -> L4e
-            r2.put(r5, r6)     // Catch: java.lang.Throwable -> L4c android.database.sqlite.SQLiteDatabaseCorruptException -> L4e
-            java.lang.String r5 = "__vc"
-            android.content.Context r6 = com.umeng.analytics.pro.k.d     // Catch: java.lang.Throwable -> L4c android.database.sqlite.SQLiteDatabaseCorruptException -> L4e
-            java.lang.String r6 = com.umeng.commonsdk.utils.UMUtils.getAppVersionCode(r6)     // Catch: java.lang.Throwable -> L4c android.database.sqlite.SQLiteDatabaseCorruptException -> L4e
-            r2.put(r5, r6)     // Catch: java.lang.Throwable -> L4c android.database.sqlite.SQLiteDatabaseCorruptException -> L4e
-            java.lang.String r5 = "__er"
-            r1.insert(r5, r0, r2)     // Catch: java.lang.Throwable -> L4c android.database.sqlite.SQLiteDatabaseCorruptException -> L4e
-            goto L50
-        L4c:
-            r0 = r1
-            goto L60
-        L4e:
-            r0 = r1
-            goto L66
-        L50:
-            r1.setTransactionSuccessful()     // Catch: java.lang.Throwable -> L4c android.database.sqlite.SQLiteDatabaseCorruptException -> L4e
-            r1.endTransaction()     // Catch: java.lang.Throwable -> L56
-        L56:
-            android.content.Context r5 = com.umeng.analytics.pro.k.d
-            com.umeng.analytics.pro.i r5 = com.umeng.analytics.pro.i.a(r5)
-            r5.b()
-            goto L6e
-        L60:
-            if (r0 == 0) goto L56
-        L62:
-            r0.endTransaction()     // Catch: java.lang.Throwable -> L56
-            goto L56
-        L66:
-            android.content.Context r5 = com.umeng.analytics.pro.k.d     // Catch: java.lang.Throwable -> L70
-            com.umeng.analytics.pro.j.a(r5)     // Catch: java.lang.Throwable -> L70
-            if (r0 == 0) goto L56
-            goto L62
-        L6e:
-            r5 = 0
-            return r5
-        L70:
-            r5 = move-exception
-            if (r0 == 0) goto L76
-            r0.endTransaction()     // Catch: java.lang.Throwable -> L76
-        L76:
-            android.content.Context r6 = com.umeng.analytics.pro.k.d
-            com.umeng.analytics.pro.i r6 = com.umeng.analytics.pro.i.a(r6)
-            r6.b()
-            throw r5
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.umeng.analytics.pro.k.a(java.lang.String, java.lang.String, int):boolean");
+         * r4 = this;
+         * r0 = 0
+         * android.content.Context r1 = com.umeng.analytics.pro.k.d // Catch:
+         * java.lang.Throwable -> L60
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L66
+         * com.umeng.analytics.pro.i r1 = com.umeng.analytics.pro.i.a(r1) // Catch:
+         * java.lang.Throwable -> L60
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L66
+         * android.database.sqlite.SQLiteDatabase r1 = r1.a() // Catch:
+         * java.lang.Throwable -> L60
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L66
+         * r1.beginTransaction() // Catch: java.lang.Throwable -> L4c
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L4e
+         * android.content.ContentValues r2 = new android.content.ContentValues //
+         * Catch: java.lang.Throwable -> L4c
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L4e
+         * r2.<init>() // Catch: java.lang.Throwable -> L4c
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L4e
+         * java.lang.String r3 = "__i"
+         * r2.put(r3, r5) // Catch: java.lang.Throwable -> L4c
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L4e
+         * java.lang.String r5 = r4.c(r6) // Catch: java.lang.Throwable -> L4c
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L4e
+         * boolean r6 = android.text.TextUtils.isEmpty(r5) // Catch: java.lang.Throwable
+         * -> L4c android.database.sqlite.SQLiteDatabaseCorruptException -> L4e
+         * if (r6 != 0) goto L50
+         * java.lang.String r6 = "__a"
+         * r2.put(r6, r5) // Catch: java.lang.Throwable -> L4c
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L4e
+         * java.lang.String r5 = "__t"
+         * java.lang.Integer r6 = java.lang.Integer.valueOf(r7) // Catch:
+         * java.lang.Throwable -> L4c
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L4e
+         * r2.put(r5, r6) // Catch: java.lang.Throwable -> L4c
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L4e
+         * java.lang.String r5 = "__av"
+         * android.content.Context r6 = com.umeng.analytics.pro.k.d // Catch:
+         * java.lang.Throwable -> L4c
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L4e
+         * java.lang.String r6 = com.umeng.commonsdk.utils.UMUtils.getAppVersionName(r6)
+         * // Catch: java.lang.Throwable -> L4c
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L4e
+         * r2.put(r5, r6) // Catch: java.lang.Throwable -> L4c
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L4e
+         * java.lang.String r5 = "__vc"
+         * android.content.Context r6 = com.umeng.analytics.pro.k.d // Catch:
+         * java.lang.Throwable -> L4c
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L4e
+         * java.lang.String r6 = com.umeng.commonsdk.utils.UMUtils.getAppVersionCode(r6)
+         * // Catch: java.lang.Throwable -> L4c
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L4e
+         * r2.put(r5, r6) // Catch: java.lang.Throwable -> L4c
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L4e
+         * java.lang.String r5 = "__er"
+         * r1.insert(r5, r0, r2) // Catch: java.lang.Throwable -> L4c
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L4e
+         * goto L50
+         * L4c:
+         * r0 = r1
+         * goto L60
+         * L4e:
+         * r0 = r1
+         * goto L66
+         * L50:
+         * r1.setTransactionSuccessful() // Catch: java.lang.Throwable -> L4c
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L4e
+         * r1.endTransaction() // Catch: java.lang.Throwable -> L56
+         * L56:
+         * android.content.Context r5 = com.umeng.analytics.pro.k.d
+         * com.umeng.analytics.pro.i r5 = com.umeng.analytics.pro.i.a(r5)
+         * r5.b()
+         * goto L6e
+         * L60:
+         * if (r0 == 0) goto L56
+         * L62:
+         * r0.endTransaction() // Catch: java.lang.Throwable -> L56
+         * goto L56
+         * L66:
+         * android.content.Context r5 = com.umeng.analytics.pro.k.d // Catch:
+         * java.lang.Throwable -> L70
+         * com.umeng.analytics.pro.j.a(r5) // Catch: java.lang.Throwable -> L70
+         * if (r0 == 0) goto L56
+         * goto L62
+         * L6e:
+         * r5 = 0
+         * return r5
+         * L70:
+         * r5 = move-exception
+         * if (r0 == 0) goto L76
+         * r0.endTransaction() // Catch: java.lang.Throwable -> L76
+         * L76:
+         * android.content.Context r6 = com.umeng.analytics.pro.k.d
+         * com.umeng.analytics.pro.i r6 = com.umeng.analytics.pro.i.a(r6)
+         * r6.b()
+         * throw r5
+         */
+        throw new UnsupportedOperationException(
+                "Method not decompiled: com.umeng.analytics.pro.k.a(java.lang.String, java.lang.String, int):boolean");
     }
 
     private JSONArray b(JSONArray jSONArray) {
@@ -925,33 +1072,53 @@ public class k {
         return jSONArray2;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:110:0x00ae  */
-    /* JADX WARN: Found duplicated region for block: B:121:0x00d5  */
-    /* JADX WARN: Found duplicated region for block: B:128:0x00e5  */
-    /* JADX WARN: Found duplicated region for block: B:144:0x00b1 A[EXC_TOP_SPLITTER, PHI: r0 r1 r4
-      0x00b1: PHI (r0v6 java.lang.String) = (r0v2 java.lang.String), (r0v3 java.lang.String), (r0v12 java.lang.String), (r0v12 java.lang.String) binds: [B:122:0x00d8, B:129:0x00e8, B:109:0x00ac, B:110:0x00ae] A[DONT_GENERATE, DONT_INLINE]
-      0x00b1: PHI (r1v6 android.database.Cursor) = 
-      (r1v3 android.database.Cursor)
-      (r1v4 android.database.Cursor)
-      (r1v11 android.database.Cursor)
-      (r1v11 android.database.Cursor)
-     binds: [B:122:0x00d8, B:129:0x00e8, B:109:0x00ac, B:110:0x00ae] A[DONT_GENERATE, DONT_INLINE]
-      0x00b1: PHI (r4v6 android.database.sqlite.SQLiteDatabase) = 
-      (r4v3 android.database.sqlite.SQLiteDatabase)
-      (r4v4 android.database.sqlite.SQLiteDatabase)
-      (r4v7 android.database.sqlite.SQLiteDatabase)
-      (r4v7 android.database.sqlite.SQLiteDatabase)
-     binds: [B:122:0x00d8, B:129:0x00e8, B:109:0x00ac, B:110:0x00ae] A[DONT_GENERATE, DONT_INLINE], SYNTHETIC] */
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.java:210)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:196)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:180)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:201)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.java:347)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(TryCatchBlockAttr.java:356)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:202)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+    /* JADX WARN: Found duplicated region for block: B:110:0x00ae */
+    /* JADX WARN: Found duplicated region for block: B:121:0x00d5 */
+    /* JADX WARN: Found duplicated region for block: B:128:0x00e5 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:144:0x00b1
+     * A[EXC_TOP_SPLITTER, PHI: r0 r1 r4
+     * 0x00b1: PHI (r0v6 java.lang.String) = (r0v2 java.lang.String), (r0v3
+     * java.lang.String), (r0v12 java.lang.String), (r0v12 java.lang.String) binds:
+     * [B:122:0x00d8, B:129:0x00e8, B:109:0x00ac, B:110:0x00ae] A[DONT_GENERATE,
+     * DONT_INLINE]
+     * 0x00b1: PHI (r1v6 android.database.Cursor) =
+     * (r1v3 android.database.Cursor)
+     * (r1v4 android.database.Cursor)
+     * (r1v11 android.database.Cursor)
+     * (r1v11 android.database.Cursor)
+     * binds: [B:122:0x00d8, B:129:0x00e8, B:109:0x00ac, B:110:0x00ae]
+     * A[DONT_GENERATE, DONT_INLINE]
+     * 0x00b1: PHI (r4v6 android.database.sqlite.SQLiteDatabase) =
+     * (r4v3 android.database.sqlite.SQLiteDatabase)
+     * (r4v4 android.database.sqlite.SQLiteDatabase)
+     * (r4v7 android.database.sqlite.SQLiteDatabase)
+     * (r4v7 android.database.sqlite.SQLiteDatabase)
+     * binds: [B:122:0x00d8, B:129:0x00e8, B:109:0x00ac, B:110:0x00ae]
+     * A[DONT_GENERATE, DONT_INLINE], SYNTHETIC]
+     */
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.
+     * java:210)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:196)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:180)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:
+     * 201)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.
+     * java:347)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(
+     * TryCatchBlockAttr.java:356)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+     * MarkFinallyVisitor.java:202)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:119)
      */
     private String b(JSONObject jSONObject, boolean z) {
         Cursor cursorA;
@@ -975,7 +1142,7 @@ public class k {
                     } catch (Throwable unused3) {
                     }
                 }
-                i.a(d).b();
+                i.a(d).tryGetClassByName();
                 throw th;
             }
         } catch (SQLiteDatabaseCorruptException unused4) {
@@ -986,7 +1153,7 @@ public class k {
             sQLiteDatabaseA = null;
         }
         try {
-            cursorA = a(g.c.a, sQLiteDatabaseA, null, null, null, null, null, null, null);
+            cursorA = a(g.c.cachedConstructors, sQLiteDatabaseA, null, null, null, null, null, null, null);
             if (cursorA != null) {
                 try {
                     JSONArray jSONArray = new JSONArray();
@@ -1028,7 +1195,7 @@ public class k {
                     }
                     if (sQLiteDatabaseA != null) {
                     }
-                    i.a(d).b();
+                    i.a(d).tryGetClassByName();
                     return string;
                 } catch (Throwable unused7) {
                     j.a(d);
@@ -1037,7 +1204,7 @@ public class k {
                     }
                     if (sQLiteDatabaseA != null) {
                     }
-                    i.a(d).b();
+                    i.a(d).tryGetClassByName();
                     return string;
                 }
             } else {
@@ -1055,7 +1222,7 @@ public class k {
             if (sQLiteDatabaseA != null) {
                 sQLiteDatabaseA.endTransaction();
             }
-            i.a(d).b();
+            i.a(d).tryGetClassByName();
             return string;
         } catch (Throwable unused9) {
             cursorA = null;
@@ -1066,142 +1233,205 @@ public class k {
             if (sQLiteDatabaseA != null) {
                 sQLiteDatabaseA.endTransaction();
             }
-            i.a(d).b();
+            i.a(d).tryGetClassByName();
             return string;
         }
         try {
             sQLiteDatabaseA.endTransaction();
         } catch (Throwable unused10) {
         }
-        i.a(d).b();
+        i.a(d).tryGetClassByName();
         return string;
     }
 
-    /* JADX WARN: Code restructure failed: missing block: B:86:0x008e, code lost:
-    
-        if (r2 != null) goto L87;
-     */
-    /* JADX WARN: Code restructure failed: missing block: B:87:0x0090, code lost:
-    
-        r2.endTransaction();
-     */
-    /* JADX WARN: Code restructure failed: missing block: B:90:0x0099, code lost:
-    
-        if (r2 != null) goto L87;
-     */
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.java:210)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:196)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:180)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:201)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.java:347)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(TryCatchBlockAttr.java:356)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:202)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+    /*
+     * JADX WARN: Code restructure failed: missing block: B:86:0x008e, code lost:
+     * 
+     * if (r2 != null) goto L87;
      */
     /*
-        Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
-    */
+     * JADX WARN: Code restructure failed: missing block: B:87:0x0090, code lost:
+     * 
+     * r2.endTransaction();
+     */
+    /*
+     * JADX WARN: Code restructure failed: missing block: B:90:0x0099, code lost:
+     * 
+     * if (r2 != null) goto L87;
+     */
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.
+     * java:210)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:196)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:180)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:
+     * 201)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.
+     * java:347)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(
+     * TryCatchBlockAttr.java:356)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+     * MarkFinallyVisitor.java:202)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:119)
+     */
+    /*
+     * Code decompiled incorrectly, please refer to instructions dump.
+     * To view partially-correct add '--show-bad-code' argument
+     */
     public boolean a(java.lang.String r7, org.json.JSONObject r8, com.umeng.analytics.pro.k.a r9) {
         /*
-            r6 = this;
-            java.lang.String r0 = "__e"
-            r1 = 0
-            if (r8 != 0) goto L6
-            return r1
-        L6:
-            r2 = 0
-            android.content.Context r3 = com.umeng.analytics.pro.k.d     // Catch: java.lang.Throwable -> L8e android.database.sqlite.SQLiteDatabaseCorruptException -> L94
-            com.umeng.analytics.pro.i r3 = com.umeng.analytics.pro.i.a(r3)     // Catch: java.lang.Throwable -> L8e android.database.sqlite.SQLiteDatabaseCorruptException -> L94
-            android.database.sqlite.SQLiteDatabase r3 = r3.a()     // Catch: java.lang.Throwable -> L8e android.database.sqlite.SQLiteDatabaseCorruptException -> L94
-            r3.beginTransaction()     // Catch: java.lang.Throwable -> L4f android.database.sqlite.SQLiteDatabaseCorruptException -> L51
-            com.umeng.analytics.pro.k$a r4 = com.umeng.analytics.pro.k.a.BEGIN     // Catch: java.lang.Throwable -> L4f android.database.sqlite.SQLiteDatabaseCorruptException -> L51
-            if (r9 != r4) goto L53
-            java.lang.Object r8 = r8.opt(r0)     // Catch: java.lang.Throwable -> L4f android.database.sqlite.SQLiteDatabaseCorruptException -> L51
-            java.lang.Long r8 = (java.lang.Long) r8     // Catch: java.lang.Throwable -> L4f android.database.sqlite.SQLiteDatabaseCorruptException -> L51
-            long r8 = r8.longValue()     // Catch: java.lang.Throwable -> L4f android.database.sqlite.SQLiteDatabaseCorruptException -> L51
-            android.content.ContentValues r4 = new android.content.ContentValues     // Catch: java.lang.Throwable -> L4f android.database.sqlite.SQLiteDatabaseCorruptException -> L51
-            r4.<init>()     // Catch: java.lang.Throwable -> L4f android.database.sqlite.SQLiteDatabaseCorruptException -> L51
-            java.lang.String r5 = "__ii"
-            r4.put(r5, r7)     // Catch: java.lang.Throwable -> L4f android.database.sqlite.SQLiteDatabaseCorruptException -> L51
-            java.lang.String r7 = java.lang.String.valueOf(r8)     // Catch: java.lang.Throwable -> L4f android.database.sqlite.SQLiteDatabaseCorruptException -> L51
-            r4.put(r0, r7)     // Catch: java.lang.Throwable -> L4f android.database.sqlite.SQLiteDatabaseCorruptException -> L51
-            java.lang.String r7 = "__av"
-            android.content.Context r8 = com.umeng.analytics.pro.k.d     // Catch: java.lang.Throwable -> L4f android.database.sqlite.SQLiteDatabaseCorruptException -> L51
-            java.lang.String r8 = com.umeng.commonsdk.utils.UMUtils.getAppVersionName(r8)     // Catch: java.lang.Throwable -> L4f android.database.sqlite.SQLiteDatabaseCorruptException -> L51
-            r4.put(r7, r8)     // Catch: java.lang.Throwable -> L4f android.database.sqlite.SQLiteDatabaseCorruptException -> L51
-            java.lang.String r7 = "__vc"
-            android.content.Context r8 = com.umeng.analytics.pro.k.d     // Catch: java.lang.Throwable -> L4f android.database.sqlite.SQLiteDatabaseCorruptException -> L51
-            java.lang.String r8 = com.umeng.commonsdk.utils.UMUtils.getAppVersionCode(r8)     // Catch: java.lang.Throwable -> L4f android.database.sqlite.SQLiteDatabaseCorruptException -> L51
-            r4.put(r7, r8)     // Catch: java.lang.Throwable -> L4f android.database.sqlite.SQLiteDatabaseCorruptException -> L51
-            java.lang.String r7 = "__sd"
-            r3.insert(r7, r2, r4)     // Catch: java.lang.Throwable -> L4f android.database.sqlite.SQLiteDatabaseCorruptException -> L51
-            goto L7e
-        L4f:
-            r2 = r3
-            goto L8e
-        L51:
-            r2 = r3
-            goto L94
-        L53:
-            com.umeng.analytics.pro.k$a r0 = com.umeng.analytics.pro.k.a.INSTANTSESSIONBEGIN     // Catch: java.lang.Throwable -> L4f android.database.sqlite.SQLiteDatabaseCorruptException -> L51
-            if (r9 != r0) goto L5b
-            r6.b(r7, r8, r3)     // Catch: java.lang.Throwable -> L4f android.database.sqlite.SQLiteDatabaseCorruptException -> L51
-            goto L7e
-        L5b:
-            com.umeng.analytics.pro.k$a r0 = com.umeng.analytics.pro.k.a.END     // Catch: java.lang.Throwable -> L4f android.database.sqlite.SQLiteDatabaseCorruptException -> L51
-            if (r9 != r0) goto L63
-            r6.a(r7, r8, r3)     // Catch: java.lang.Throwable -> L4f android.database.sqlite.SQLiteDatabaseCorruptException -> L51
-            goto L7e
-        L63:
-            com.umeng.analytics.pro.k$a r0 = com.umeng.analytics.pro.k.a.PAGE     // Catch: java.lang.Throwable -> L4f android.database.sqlite.SQLiteDatabaseCorruptException -> L51
-            if (r9 != r0) goto L6d
-            java.lang.String r9 = "__a"
-            r6.a(r7, r8, r3, r9)     // Catch: java.lang.Throwable -> L4f android.database.sqlite.SQLiteDatabaseCorruptException -> L51
-            goto L7e
-        L6d:
-            com.umeng.analytics.pro.k$a r0 = com.umeng.analytics.pro.k.a.AUTOPAGE     // Catch: java.lang.Throwable -> L4f android.database.sqlite.SQLiteDatabaseCorruptException -> L51
-            if (r9 != r0) goto L77
-            java.lang.String r9 = "__b"
-            r6.a(r7, r8, r3, r9)     // Catch: java.lang.Throwable -> L4f android.database.sqlite.SQLiteDatabaseCorruptException -> L51
-            goto L7e
-        L77:
-            com.umeng.analytics.pro.k$a r0 = com.umeng.analytics.pro.k.a.NEWSESSION     // Catch: java.lang.Throwable -> L4f android.database.sqlite.SQLiteDatabaseCorruptException -> L51
-            if (r9 != r0) goto L7e
-            r6.c(r7, r8, r3)     // Catch: java.lang.Throwable -> L4f android.database.sqlite.SQLiteDatabaseCorruptException -> L51
-        L7e:
-            r3.setTransactionSuccessful()     // Catch: java.lang.Throwable -> L4f android.database.sqlite.SQLiteDatabaseCorruptException -> L51
-            r3.endTransaction()     // Catch: java.lang.Throwable -> L84
-        L84:
-            android.content.Context r7 = com.umeng.analytics.pro.k.d
-            com.umeng.analytics.pro.i r7 = com.umeng.analytics.pro.i.a(r7)
-            r7.b()
-            goto L9c
-        L8e:
-            if (r2 == 0) goto L84
-        L90:
-            r2.endTransaction()     // Catch: java.lang.Throwable -> L84
-            goto L84
-        L94:
-            android.content.Context r7 = com.umeng.analytics.pro.k.d     // Catch: java.lang.Throwable -> L9d
-            com.umeng.analytics.pro.j.a(r7)     // Catch: java.lang.Throwable -> L9d
-            if (r2 == 0) goto L84
-            goto L90
-        L9c:
-            return r1
-        L9d:
-            r7 = move-exception
-            if (r2 == 0) goto La3
-            r2.endTransaction()     // Catch: java.lang.Throwable -> La3
-        La3:
-            android.content.Context r8 = com.umeng.analytics.pro.k.d
-            com.umeng.analytics.pro.i r8 = com.umeng.analytics.pro.i.a(r8)
-            r8.b()
-            throw r7
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.umeng.analytics.pro.k.a(java.lang.String, org.json.JSONObject, com.umeng.analytics.pro.k$a):boolean");
+         * r6 = this;
+         * java.lang.String r0 = "__e"
+         * r1 = 0
+         * if (r8 != 0) goto L6
+         * return r1
+         * L6:
+         * r2 = 0
+         * android.content.Context r3 = com.umeng.analytics.pro.k.d // Catch:
+         * java.lang.Throwable -> L8e
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L94
+         * com.umeng.analytics.pro.i r3 = com.umeng.analytics.pro.i.a(r3) // Catch:
+         * java.lang.Throwable -> L8e
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L94
+         * android.database.sqlite.SQLiteDatabase r3 = r3.a() // Catch:
+         * java.lang.Throwable -> L8e
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L94
+         * r3.beginTransaction() // Catch: java.lang.Throwable -> L4f
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L51
+         * com.umeng.analytics.pro.k$a r4 = com.umeng.analytics.pro.k.a.BEGIN // Catch:
+         * java.lang.Throwable -> L4f
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L51
+         * if (r9 != r4) goto L53
+         * java.lang.Object r8 = r8.opt(r0) // Catch: java.lang.Throwable -> L4f
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L51
+         * java.lang.Long r8 = (java.lang.Long) r8 // Catch: java.lang.Throwable -> L4f
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L51
+         * long r8 = r8.longValue() // Catch: java.lang.Throwable -> L4f
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L51
+         * android.content.ContentValues r4 = new android.content.ContentValues //
+         * Catch: java.lang.Throwable -> L4f
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L51
+         * r4.<init>() // Catch: java.lang.Throwable -> L4f
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L51
+         * java.lang.String r5 = "__ii"
+         * r4.put(r5, r7) // Catch: java.lang.Throwable -> L4f
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L51
+         * java.lang.String r7 = java.lang.String.valueOf(r8) // Catch:
+         * java.lang.Throwable -> L4f
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L51
+         * r4.put(r0, r7) // Catch: java.lang.Throwable -> L4f
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L51
+         * java.lang.String r7 = "__av"
+         * android.content.Context r8 = com.umeng.analytics.pro.k.d // Catch:
+         * java.lang.Throwable -> L4f
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L51
+         * java.lang.String r8 = com.umeng.commonsdk.utils.UMUtils.getAppVersionName(r8)
+         * // Catch: java.lang.Throwable -> L4f
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L51
+         * r4.put(r7, r8) // Catch: java.lang.Throwable -> L4f
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L51
+         * java.lang.String r7 = "__vc"
+         * android.content.Context r8 = com.umeng.analytics.pro.k.d // Catch:
+         * java.lang.Throwable -> L4f
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L51
+         * java.lang.String r8 = com.umeng.commonsdk.utils.UMUtils.getAppVersionCode(r8)
+         * // Catch: java.lang.Throwable -> L4f
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L51
+         * r4.put(r7, r8) // Catch: java.lang.Throwable -> L4f
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L51
+         * java.lang.String r7 = "__sd"
+         * r3.insert(r7, r2, r4) // Catch: java.lang.Throwable -> L4f
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L51
+         * goto L7e
+         * L4f:
+         * r2 = r3
+         * goto L8e
+         * L51:
+         * r2 = r3
+         * goto L94
+         * L53:
+         * com.umeng.analytics.pro.k$a r0 =
+         * com.umeng.analytics.pro.k.a.INSTANTSESSIONBEGIN // Catch: java.lang.Throwable
+         * -> L4f android.database.sqlite.SQLiteDatabaseCorruptException -> L51
+         * if (r9 != r0) goto L5b
+         * r6.b(r7, r8, r3) // Catch: java.lang.Throwable -> L4f
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L51
+         * goto L7e
+         * L5b:
+         * com.umeng.analytics.pro.k$a r0 = com.umeng.analytics.pro.k.a.END // Catch:
+         * java.lang.Throwable -> L4f
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L51
+         * if (r9 != r0) goto L63
+         * r6.a(r7, r8, r3) // Catch: java.lang.Throwable -> L4f
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L51
+         * goto L7e
+         * L63:
+         * com.umeng.analytics.pro.k$a r0 = com.umeng.analytics.pro.k.a.PAGE // Catch:
+         * java.lang.Throwable -> L4f
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L51
+         * if (r9 != r0) goto L6d
+         * java.lang.String r9 = "__a"
+         * r6.a(r7, r8, r3, r9) // Catch: java.lang.Throwable -> L4f
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L51
+         * goto L7e
+         * L6d:
+         * com.umeng.analytics.pro.k$a r0 = com.umeng.analytics.pro.k.a.AUTOPAGE //
+         * Catch: java.lang.Throwable -> L4f
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L51
+         * if (r9 != r0) goto L77
+         * java.lang.String r9 = "__b"
+         * r6.a(r7, r8, r3, r9) // Catch: java.lang.Throwable -> L4f
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L51
+         * goto L7e
+         * L77:
+         * com.umeng.analytics.pro.k$a r0 = com.umeng.analytics.pro.k.a.NEWSESSION //
+         * Catch: java.lang.Throwable -> L4f
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L51
+         * if (r9 != r0) goto L7e
+         * r6.c(r7, r8, r3) // Catch: java.lang.Throwable -> L4f
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L51
+         * L7e:
+         * r3.setTransactionSuccessful() // Catch: java.lang.Throwable -> L4f
+         * android.database.sqlite.SQLiteDatabaseCorruptException -> L51
+         * r3.endTransaction() // Catch: java.lang.Throwable -> L84
+         * L84:
+         * android.content.Context r7 = com.umeng.analytics.pro.k.d
+         * com.umeng.analytics.pro.i r7 = com.umeng.analytics.pro.i.a(r7)
+         * r7.b()
+         * goto L9c
+         * L8e:
+         * if (r2 == 0) goto L84
+         * L90:
+         * r2.endTransaction() // Catch: java.lang.Throwable -> L84
+         * goto L84
+         * L94:
+         * android.content.Context r7 = com.umeng.analytics.pro.k.d // Catch:
+         * java.lang.Throwable -> L9d
+         * com.umeng.analytics.pro.j.a(r7) // Catch: java.lang.Throwable -> L9d
+         * if (r2 == 0) goto L84
+         * goto L90
+         * L9c:
+         * return r1
+         * L9d:
+         * r7 = move-exception
+         * if (r2 == 0) goto La3
+         * r2.endTransaction() // Catch: java.lang.Throwable -> La3
+         * La3:
+         * android.content.Context r8 = com.umeng.analytics.pro.k.d
+         * com.umeng.analytics.pro.i r8 = com.umeng.analytics.pro.i.a(r8)
+         * r8.b()
+         * throw r7
+         */
+        throw new UnsupportedOperationException(
+                "Method not decompiled: com.umeng.analytics.pro.k.a(java.lang.String, org.json.JSONObject, com.umeng.analytics.pro.k$a):boolean");
     }
 
     public void b(boolean z, boolean z2) {
@@ -1216,7 +1446,7 @@ public class k {
                     }
                 } else if (this.i.size() > 0) {
                     for (int i = 0; i < this.i.size(); i++) {
-                        sQLiteDatabaseA.delete(g.d.a, "__ii=?", new String[]{this.i.get(i)});
+                        sQLiteDatabaseA.delete(g.d.cachedConstructors, "__ii=?", new String[] { this.i.get(i) });
                     }
                 }
                 sQLiteDatabaseA.setTransactionSuccessful();
@@ -1227,7 +1457,7 @@ public class k {
                     } catch (Throwable unused) {
                     }
                 }
-                i.a(d).b();
+                i.a(d).tryGetClassByName();
             }
         } catch (SQLiteDatabaseCorruptException unused2) {
             j.a(d);
@@ -1240,8 +1470,8 @@ public class k {
     private void a(String str, JSONObject jSONObject, SQLiteDatabase sQLiteDatabase) {
         String strC;
         try {
-            long jLongValue = ((Long) jSONObject.opt(g.d.a.g)).longValue();
-            Object objOpt = jSONObject.opt(g.d.a.h);
+            long jLongValue = ((Long) jSONObject.opt(g.d.cachedConstructors.g)).longValue();
+            Object objOpt = jSONObject.opt(g.d.cachedConstructors.h);
             long jLongValue2 = (objOpt == null || !(objOpt instanceof Long)) ? 0L : ((Long) objOpt).longValue();
             JSONObject jSONObjectOptJSONObject = jSONObject.optJSONObject("__sp");
             JSONObject jSONObjectOptJSONObject2 = jSONObject.optJSONObject("__pp");
@@ -1254,12 +1484,17 @@ public class k {
             if (jSONObjectOptJSONObject2 != null && jSONObjectOptJSONObject2.length() > 0) {
                 strC2 = c(jSONObjectOptJSONObject2.toString());
             }
-            sQLiteDatabase.execSQL("update __sd set __f=\"" + jLongValue + "\", __g=\"" + jLongValue2 + "\", __sp=\"" + strC + "\", __pp=\"" + strC2 + "\" where __ii=\"" + str + "\"");
+            sQLiteDatabase.execSQL("update __sd set __f=\"" + jLongValue + "\", __g=\"" + jLongValue2 + "\", __sp=\""
+                    + strC + "\", __pp=\"" + strC2 + "\" where __ii=\"" + str + "\"");
         } catch (Throwable unused) {
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:20:0x0055 A[Catch: Exception -> 0x0058, TRY_LEAVE, TryCatch #3 {Exception -> 0x0058, blocks: (B:18:0x0050, B:20:0x0055), top: B:33:0x0050 }] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:20:0x0055 A[Catch: Exception
+     * -> 0x0058, TRY_LEAVE, TryCatch #3 {Exception -> 0x0058, blocks: (B:18:0x0050,
+     * B:20:0x0055), top: B:33:0x0050 }]
+     */
     public long a(String str) throws Throwable {
         SQLiteDatabase sQLiteDatabaseA;
         Cursor cursorA = null;
@@ -1277,10 +1512,11 @@ public class k {
         }
         try {
             sQLiteDatabaseA.beginTransaction();
-            cursorA = a(g.d.a, sQLiteDatabaseA, new String[]{g.d.a.g}, "__ii=? ", new String[]{str}, null, null, null, null);
+            cursorA = a(g.d.cachedConstructors, sQLiteDatabaseA, new String[] { g.d.cachedConstructors.g }, "__ii=? ",
+                    new String[] { str }, null, null, null, null);
             if (cursorA != null) {
                 cursorA.moveToFirst();
-                j = cursorA.getLong(cursorA.getColumnIndex(g.d.a.g));
+                j = cursorA.getLong(cursorA.getColumnIndex(g.d.cachedConstructors.g));
             }
             if (cursorA != null) {
                 cursorA.close();
@@ -1291,7 +1527,7 @@ public class k {
             }
             if (sQLiteDatabaseA != null) {
             }
-            i.a(d).b();
+            i.a(d).tryGetClassByName();
             return j;
         } catch (Throwable th2) {
             th = th2;
@@ -1302,17 +1538,17 @@ public class k {
                         sQLiteDatabaseA.endTransaction();
                     }
                 } catch (Exception unused4) {
-                    i.a(d).b();
+                    i.a(d).tryGetClassByName();
                     throw th;
                 }
             } else if (sQLiteDatabaseA != null) {
                 sQLiteDatabaseA.endTransaction();
             }
-            i.a(d).b();
+            i.a(d).tryGetClassByName();
             throw th;
         }
         sQLiteDatabaseA.endTransaction();
-        i.a(d).b();
+        i.a(d).tryGetClassByName();
         return j;
     }
 
@@ -1323,7 +1559,7 @@ public class k {
                 sQLiteDatabaseA = i.a(d).a();
                 sQLiteDatabaseA.beginTransaction();
                 if (!TextUtils.isEmpty(str)) {
-                    sQLiteDatabaseA.delete(g.c.a, "__ii=?", new String[]{str});
+                    sQLiteDatabaseA.delete(g.c.cachedConstructors, "__ii=?", new String[] { str });
                 }
                 sQLiteDatabaseA.setTransactionSuccessful();
             } finally {
@@ -1333,7 +1569,7 @@ public class k {
                     } catch (Throwable unused) {
                     }
                 }
-                i.a(d).b();
+                i.a(d).tryGetClassByName();
             }
         } catch (SQLiteDatabaseCorruptException unused2) {
             j.a(d);
@@ -1343,17 +1579,47 @@ public class k {
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:23:0x0055 A[Catch: all -> 0x0062, LOOP:1: B:53:0x004f->B:23:0x0055, LOOP_END, TryCatch #1 {all -> 0x0062, blocks: (B:21:0x004f, B:23:0x0055, B:25:0x0065, B:27:0x0070, B:28:0x0075, B:35:0x0084, B:37:0x008a, B:39:0x0090, B:41:0x0096, B:43:0x00a4, B:40:0x0093), top: B:53:0x004f }] */
-    /* JADX WARN: Found duplicated region for block: B:27:0x0070 A[Catch: all -> 0x0062, TryCatch #1 {all -> 0x0062, blocks: (B:21:0x004f, B:23:0x0055, B:25:0x0065, B:27:0x0070, B:28:0x0075, B:35:0x0084, B:37:0x008a, B:39:0x0090, B:41:0x0096, B:43:0x00a4, B:40:0x0093), top: B:53:0x004f }] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:23:0x0055 A[Catch: all ->
+     * 0x0062, LOOP:1: B:53:0x004f->B:23:0x0055, LOOP_END, TryCatch #1 {all ->
+     * 0x0062, blocks: (B:21:0x004f, B:23:0x0055, B:25:0x0065, B:27:0x0070,
+     * B:28:0x0075, B:35:0x0084, B:37:0x008a, B:39:0x0090, B:41:0x0096, B:43:0x00a4,
+     * B:40:0x0093), top: B:53:0x004f }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:27:0x0070 A[Catch: all ->
+     * 0x0062, TryCatch #1 {all -> 0x0062, blocks: (B:21:0x004f, B:23:0x0055,
+     * B:25:0x0065, B:27:0x0070, B:28:0x0075, B:35:0x0084, B:37:0x008a, B:39:0x0090,
+     * B:41:0x0096, B:43:0x00a4, B:40:0x0093), top: B:53:0x004f }]
+     */
     /* JADX WARN: Found duplicated region for block: B:31:0x007d A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:32:0x007f  */
-    /* JADX WARN: Found duplicated region for block: B:34:0x0083  */
-    /* JADX WARN: Found duplicated region for block: B:39:0x0090 A[Catch: all -> 0x0062, TRY_ENTER, TryCatch #1 {all -> 0x0062, blocks: (B:21:0x004f, B:23:0x0055, B:25:0x0065, B:27:0x0070, B:28:0x0075, B:35:0x0084, B:37:0x008a, B:39:0x0090, B:41:0x0096, B:43:0x00a4, B:40:0x0093), top: B:53:0x004f }] */
-    /* JADX WARN: Found duplicated region for block: B:43:0x00a4 A[Catch: all -> 0x0062, MOVE_INLINED, TRY_LEAVE, TryCatch #1 {all -> 0x0062, blocks: (B:21:0x004f, B:23:0x0055, B:25:0x0065, B:27:0x0070, B:28:0x0075, B:35:0x0084, B:37:0x008a, B:39:0x0090, B:41:0x0096, B:43:0x00a4, B:40:0x0093), top: B:53:0x004f }] */
-    /* JADX WARN: Found duplicated region for block: B:45:0x00d7  */
-    /* JADX WARN: Found duplicated region for block: B:51:0x008a A[EXC_TOP_SPLITTER, SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:53:0x004f A[EXC_TOP_SPLITTER, LOOP:1: B:53:0x004f->B:23:0x0055, LOOP_START, PHI: r12
-      0x004f: PHI (r12v2 java.lang.String) = (r12v7 java.lang.String), (r12v3 java.lang.String) binds: [B:20:0x004d, B:23:0x0055] A[DONT_GENERATE, DONT_INLINE], SYNTHETIC] */
+    /* JADX WARN: Found duplicated region for block: B:32:0x007f */
+    /* JADX WARN: Found duplicated region for block: B:34:0x0083 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:39:0x0090 A[Catch: all ->
+     * 0x0062, TRY_ENTER, TryCatch #1 {all -> 0x0062, blocks: (B:21:0x004f,
+     * B:23:0x0055, B:25:0x0065, B:27:0x0070, B:28:0x0075, B:35:0x0084, B:37:0x008a,
+     * B:39:0x0090, B:41:0x0096, B:43:0x00a4, B:40:0x0093), top: B:53:0x004f }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:43:0x00a4 A[Catch: all ->
+     * 0x0062, MOVE_INLINED, TRY_LEAVE, TryCatch #1 {all -> 0x0062, blocks:
+     * (B:21:0x004f, B:23:0x0055, B:25:0x0065, B:27:0x0070, B:28:0x0075,
+     * B:35:0x0084, B:37:0x008a, B:39:0x0090, B:41:0x0096, B:43:0x00a4,
+     * B:40:0x0093), top: B:53:0x004f }]
+     */
+    /* JADX WARN: Found duplicated region for block: B:45:0x00d7 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:51:0x008a A[EXC_TOP_SPLITTER,
+     * SYNTHETIC]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:53:0x004f A[EXC_TOP_SPLITTER,
+     * LOOP:1: B:53:0x004f->B:23:0x0055, LOOP_START, PHI: r12
+     * 0x004f: PHI (r12v2 java.lang.String) = (r12v7 java.lang.String), (r12v3
+     * java.lang.String) binds: [B:20:0x004d, B:23:0x0055] A[DONT_GENERATE,
+     * DONT_INLINE], SYNTHETIC]
+     */
     /* JADX WARN: Found duplicated region for block: B:59:0x0093 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:65:? A[RETURN, SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:66:? A[RETURN, SYNTHETIC] */
@@ -1378,8 +1644,8 @@ public class k {
                     return;
                 }
             } else {
-                if (g.d.a.c.equals(str2)) {
-                    jSONArrayOptJSONArray = jSONObject.optJSONArray(g.d.a.c);
+                if (g.d.cachedConstructors.c.equals(str2)) {
+                    jSONArrayOptJSONArray = jSONObject.optJSONArray(g.d.cachedConstructors.c);
                     if (jSONArrayOptJSONArray == null) {
                         return;
                     }
@@ -1389,7 +1655,8 @@ public class k {
                 } else {
                     jSONArray = null;
                 }
-                cursorA = a(g.d.a, sQLiteDatabase, new String[]{str2}, "__ii=? ", new String[]{str}, null, null, null, null);
+                cursorA = a(g.d.cachedConstructors, sQLiteDatabase, new String[] { str2 }, "__ii=? ",
+                        new String[] { str }, null, null, null, null);
                 if (cursorA != null) {
                     while (cursorA.moveToNext()) {
                         try {
@@ -1433,7 +1700,8 @@ public class k {
                 }
             }
             jSONArray = jSONArrayOptJSONArray;
-            cursorA = a(g.d.a, sQLiteDatabase, new String[]{str2}, "__ii=? ", new String[]{str}, null, null, null, null);
+            cursorA = a(g.d.cachedConstructors, sQLiteDatabase, new String[] { str2 }, "__ii=? ", new String[] { str },
+                    null, null, null, null);
             if (cursorA != null) {
                 while (cursorA.moveToNext()) {
                     strD = d(cursorA.getString(cursorA.getColumnIndex(str2)));
@@ -1473,13 +1741,13 @@ public class k {
         JSONObject jSONObject = new JSONObject();
         if (!z) {
             a(jSONObject, z);
-            b(jSONObject, (String) null);
+            tryGetClassByName(jSONObject, (String) null);
             a(jSONObject, (String) null);
             return jSONObject;
         }
         String strA = a(jSONObject, z);
         if (!TextUtils.isEmpty(strA)) {
-            b(jSONObject, strA);
+            tryGetClassByName(jSONObject, strA);
             a(jSONObject, strA);
         }
         return jSONObject;
@@ -1493,19 +1761,37 @@ public class k {
     /* JADX WARN: Type inference failed for: r13v12 */
     /* JADX WARN: Type inference failed for: r13v13 */
     /* JADX WARN: Type inference failed for: r13v2 */
-    /* JADX WARN: Type inference failed for: r13v3, types: [android.database.Cursor] */
-    /* JADX WARN: Type inference failed for: r13v6, types: [android.database.Cursor] */
-    /* JADX WARN: Type inference failed for: r13v7, types: [android.database.Cursor] */
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.java:210)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:196)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:180)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:201)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.java:347)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(TryCatchBlockAttr.java:356)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:202)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+    /*
+     * JADX WARN: Type inference failed for: r13v3, types: [android.database.Cursor]
+     */
+    /*
+     * JADX WARN: Type inference failed for: r13v6, types: [android.database.Cursor]
+     */
+    /*
+     * JADX WARN: Type inference failed for: r13v7, types: [android.database.Cursor]
+     */
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.
+     * java:210)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:196)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:180)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:
+     * 201)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.
+     * java:347)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(
+     * TryCatchBlockAttr.java:356)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+     * MarkFinallyVisitor.java:202)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:119)
      */
     private void a(JSONObject jSONObject, String str) {
         SQLiteDatabase sQLiteDatabaseA;
@@ -1520,12 +1806,14 @@ public class k {
                 try {
                     sQLiteDatabaseA.beginTransaction();
                     if (!TextUtils.isEmpty(str)) {
-                        cursorA = a(g.b.a, sQLiteDatabaseA, null, "__i=? ", new String[]{str}, null, null, null, null);
+                        cursorA = a(g.b.cachedConstructors, sQLiteDatabaseA, null, "__i=? ", new String[] { str }, null,
+                                null, null, null);
                         kVar = this;
                     } else {
                         kVar = this;
                         try {
-                            cursorA = kVar.a(g.b.a, sQLiteDatabaseA, null, null, null, null, null, null, null);
+                            cursorA = kVar.a(g.b.cachedConstructors, sQLiteDatabaseA, null, null, null, null, null,
+                                    null, null);
                         } catch (SQLiteDatabaseCorruptException unused) {
                             jSONObject = cursor;
                             j.a(d);
@@ -1534,7 +1822,7 @@ public class k {
                             }
                             if (sQLiteDatabaseA != null) {
                             }
-                            i.a(d).b();
+                            i.a(d).tryGetClassByName();
                         } catch (Throwable unused2) {
                             jSONObject = cursor;
                             j.a(d);
@@ -1543,7 +1831,7 @@ public class k {
                             }
                             if (sQLiteDatabaseA != null) {
                             }
-                            i.a(d).b();
+                            i.a(d).tryGetClassByName();
                         }
                     }
                     cursor = cursorA;
@@ -1631,7 +1919,7 @@ public class k {
                     } catch (Throwable unused5) {
                     }
                 }
-                i.a(d).b();
+                i.a(d).tryGetClassByName();
                 throw th;
             }
         } catch (SQLiteDatabaseCorruptException unused6) {
@@ -1645,35 +1933,55 @@ public class k {
             sQLiteDatabaseA.endTransaction();
         } catch (Throwable unused8) {
         }
-        i.a(d).b();
+        i.a(d).tryGetClassByName();
     }
 
-    /* JADX WARN: Found duplicated region for block: B:248:0x0241  */
-    /* JADX WARN: Found duplicated region for block: B:255:0x0250  */
-    /* JADX WARN: Found duplicated region for block: B:283:0x0213 A[EXC_TOP_SPLITTER, PHI: r0 r6 r16
-      0x0213: PHI (r0v6 java.lang.String) = (r0v2 java.lang.String), (r0v3 java.lang.String), (r0v39 java.lang.String), (r0v39 java.lang.String) binds: [B:249:0x0244, B:256:0x0253, B:236:0x020e, B:237:0x0210] A[DONT_GENERATE, DONT_INLINE]
-      0x0213: PHI (r6v6 android.database.Cursor) = 
-      (r6v3 android.database.Cursor)
-      (r6v4 android.database.Cursor)
-      (r6v36 android.database.Cursor)
-      (r6v36 android.database.Cursor)
-     binds: [B:249:0x0244, B:256:0x0253, B:236:0x020e, B:237:0x0210] A[DONT_GENERATE, DONT_INLINE]
-      0x0213: PHI (r16v6 android.database.sqlite.SQLiteDatabase) = 
-      (r16v3 android.database.sqlite.SQLiteDatabase)
-      (r16v4 android.database.sqlite.SQLiteDatabase)
-      (r16v28 android.database.sqlite.SQLiteDatabase)
-      (r16v28 android.database.sqlite.SQLiteDatabase)
-     binds: [B:249:0x0244, B:256:0x0253, B:236:0x020e, B:237:0x0210] A[DONT_GENERATE, DONT_INLINE], SYNTHETIC] */
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.java:210)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:196)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:180)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:201)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.java:347)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(TryCatchBlockAttr.java:356)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:202)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+    /* JADX WARN: Found duplicated region for block: B:248:0x0241 */
+    /* JADX WARN: Found duplicated region for block: B:255:0x0250 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:283:0x0213
+     * A[EXC_TOP_SPLITTER, PHI: r0 r6 r16
+     * 0x0213: PHI (r0v6 java.lang.String) = (r0v2 java.lang.String), (r0v3
+     * java.lang.String), (r0v39 java.lang.String), (r0v39 java.lang.String) binds:
+     * [B:249:0x0244, B:256:0x0253, B:236:0x020e, B:237:0x0210] A[DONT_GENERATE,
+     * DONT_INLINE]
+     * 0x0213: PHI (r6v6 android.database.Cursor) =
+     * (r6v3 android.database.Cursor)
+     * (r6v4 android.database.Cursor)
+     * (r6v36 android.database.Cursor)
+     * (r6v36 android.database.Cursor)
+     * binds: [B:249:0x0244, B:256:0x0253, B:236:0x020e, B:237:0x0210]
+     * A[DONT_GENERATE, DONT_INLINE]
+     * 0x0213: PHI (r16v6 android.database.sqlite.SQLiteDatabase) =
+     * (r16v3 android.database.sqlite.SQLiteDatabase)
+     * (r16v4 android.database.sqlite.SQLiteDatabase)
+     * (r16v28 android.database.sqlite.SQLiteDatabase)
+     * (r16v28 android.database.sqlite.SQLiteDatabase)
+     * binds: [B:249:0x0244, B:256:0x0253, B:236:0x020e, B:237:0x0210]
+     * A[DONT_GENERATE, DONT_INLINE], SYNTHETIC]
+     */
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.
+     * java:210)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:196)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:180)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:
+     * 201)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.
+     * java:347)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(
+     * TryCatchBlockAttr.java:356)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+     * MarkFinallyVisitor.java:202)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:119)
      */
     private String a(JSONObject jSONObject, boolean z) {
         Cursor cursor;
@@ -1687,7 +1995,8 @@ public class k {
                 try {
                     sQLiteDatabaseA.beginTransaction();
                     try {
-                        Cursor cursorA = a(g.d.a, sQLiteDatabaseA, null, null, null, null, null, null, null);
+                        Cursor cursorA = a(g.d.cachedConstructors, sQLiteDatabaseA, null, null, null, null, null, null,
+                                null);
                         if (cursorA != null) {
                             try {
                                 jSONArray = new JSONArray();
@@ -1698,9 +2007,11 @@ public class k {
                                         break;
                                     }
                                     JSONObject jSONObject2 = new JSONObject();
-                                    String string2 = cursorA.getString(cursorA.getColumnIndex(g.d.a.g));
+                                    String string2 = cursorA
+                                            .getString(cursorA.getColumnIndex(g.d.cachedConstructors.g));
                                     String string3 = cursorA.getString(cursorA.getColumnIndex("__e"));
-                                    String string4 = cursorA.getString(cursorA.getColumnIndex(g.d.a.h));
+                                    String string4 = cursorA
+                                            .getString(cursorA.getColumnIndex(g.d.cachedConstructors.h));
                                     string = cursorA.getString(cursorA.getColumnIndex("__ii"));
                                     try {
                                         if (TextUtils.isEmpty(string2) || TextUtils.isEmpty(string3)) {
@@ -1710,9 +2021,12 @@ public class k {
                                         } else {
                                             if (Long.parseLong(string2) - Long.parseLong(string3) > 0) {
                                                 String string5 = cursorA.getString(cursorA.getColumnIndex("__a"));
-                                                String string6 = cursorA.getString(cursorA.getColumnIndex(g.d.a.c));
-                                                String string7 = cursorA.getString(cursorA.getColumnIndex(g.d.a.d));
-                                                String string8 = cursorA.getString(cursorA.getColumnIndex(g.d.a.e));
+                                                String string6 = cursorA
+                                                        .getString(cursorA.getColumnIndex(g.d.cachedConstructors.c));
+                                                String string7 = cursorA
+                                                        .getString(cursorA.getColumnIndex(g.d.cachedConstructors.d));
+                                                String string8 = cursorA
+                                                        .getString(cursorA.getColumnIndex(g.d.cachedConstructors.e));
                                                 this.i.add(string);
                                                 String string9 = cursorA.getString(cursorA.getColumnIndex("__sp"));
                                                 String string10 = cursorA.getString(cursorA.getColumnIndex("__pp"));
@@ -1723,18 +2037,21 @@ public class k {
                                                 if (!FieldManager.allow(com.umeng.commonsdk.utils.d.E)) {
                                                     cursor = cursorA;
                                                     sQLiteDatabase = sQLiteDatabaseA;
-                                                    jSONObject2.put("duration", Long.parseLong(string2) - Long.parseLong(string3));
+                                                    jSONObject2.put("duration",
+                                                            Long.parseLong(string2) - Long.parseLong(string3));
                                                 } else {
                                                     try {
                                                         if (Long.parseLong(string4) <= 0) {
-                                                            jSONObject2.put("duration", Long.parseLong(string2) - Long.parseLong(string3));
+                                                            jSONObject2.put("duration",
+                                                                    Long.parseLong(string2) - Long.parseLong(string3));
                                                             cursor = cursorA;
                                                             sQLiteDatabase = sQLiteDatabaseA;
                                                         } else {
                                                             cursor = cursorA;
                                                             sQLiteDatabase = sQLiteDatabaseA;
                                                             jSONObject2.put("duration", Long.parseLong(string4));
-                                                            jSONObject2.put(f.s, Long.parseLong(string2) - Long.parseLong(string3));
+                                                            jSONObject2.put(f.s,
+                                                                    Long.parseLong(string2) - Long.parseLong(string3));
                                                         }
                                                     } catch (SQLiteDatabaseCorruptException unused) {
                                                         cursor = cursorA;
@@ -1747,7 +2064,7 @@ public class k {
                                                         if (sQLiteDatabase != null) {
                                                             sQLiteDatabase.endTransaction();
                                                         }
-                                                        i.a(d).b();
+                                                        i.a(d).tryGetClassByName();
                                                         return string;
                                                     } catch (Throwable unused2) {
                                                         cursor = cursorA;
@@ -1760,7 +2077,7 @@ public class k {
                                                         if (sQLiteDatabase != null) {
                                                             sQLiteDatabase.endTransaction();
                                                         }
-                                                        i.a(d).b();
+                                                        i.a(d).tryGetClassByName();
                                                         return string;
                                                     }
                                                 }
@@ -1781,7 +2098,7 @@ public class k {
                                                         jSONObject2.put(f.F, new JSONObject(d(string7)));
                                                     }
                                                     if (!TextUtils.isEmpty(string8)) {
-                                                        jSONObject2.put(f.B, new JSONArray(d(string8)));
+                                                        jSONObject2.put("locations", new JSONArray(d(string8)));
                                                     }
                                                     if (!TextUtils.isEmpty(string9)) {
                                                         jSONObject2.put(f.aA, new JSONObject(d(string9)));
@@ -1800,7 +2117,7 @@ public class k {
                                                     }
                                                     if (sQLiteDatabase != null) {
                                                     }
-                                                    i.a(d).b();
+                                                    i.a(d).tryGetClassByName();
                                                     return string;
                                                 } catch (Throwable unused4) {
                                                     string = str;
@@ -1810,7 +2127,7 @@ public class k {
                                                     }
                                                     if (sQLiteDatabase != null) {
                                                     }
-                                                    i.a(d).b();
+                                                    i.a(d).tryGetClassByName();
                                                     return string;
                                                 }
                                             } else {
@@ -1836,7 +2153,7 @@ public class k {
                                         if (sQLiteDatabase != null) {
                                             sQLiteDatabase.endTransaction();
                                         }
-                                        i.a(d).b();
+                                        i.a(d).tryGetClassByName();
                                         return string;
                                     } catch (Throwable unused6) {
                                         cursor = cursorA;
@@ -1848,7 +2165,7 @@ public class k {
                                         if (sQLiteDatabase != null) {
                                             sQLiteDatabase.endTransaction();
                                         }
-                                        i.a(d).b();
+                                        i.a(d).tryGetClassByName();
                                         return string;
                                     }
                                 }
@@ -1862,7 +2179,7 @@ public class k {
                                         sQLiteDatabase.endTransaction();
                                     } catch (Throwable unused9) {
                                     }
-                                    i.a(d).b();
+                                    i.a(d).tryGetClassByName();
                                     return string;
                                 }
                                 if (jSONArray.length() > 0) {
@@ -1875,7 +2192,7 @@ public class k {
                                 }
                                 if (sQLiteDatabase != null) {
                                 }
-                                i.a(d).b();
+                                i.a(d).tryGetClassByName();
                                 return string;
                             } catch (Throwable unused11) {
                                 j.a(d);
@@ -1884,7 +2201,7 @@ public class k {
                                 }
                                 if (sQLiteDatabase != null) {
                                 }
-                                i.a(d).b();
+                                i.a(d).tryGetClassByName();
                                 return string;
                             }
                         } else {
@@ -1905,7 +2222,7 @@ public class k {
                         if (sQLiteDatabase != null) {
                             sQLiteDatabase.endTransaction();
                         }
-                        i.a(d).b();
+                        i.a(d).tryGetClassByName();
                         return string;
                     } catch (Throwable unused13) {
                         sQLiteDatabase = sQLiteDatabaseA;
@@ -1917,7 +2234,7 @@ public class k {
                         if (sQLiteDatabase != null) {
                             sQLiteDatabase.endTransaction();
                         }
-                        i.a(d).b();
+                        i.a(d).tryGetClassByName();
                         return string;
                     }
                 } catch (SQLiteDatabaseCorruptException unused14) {
@@ -1933,7 +2250,7 @@ public class k {
                     } catch (Throwable unused16) {
                     }
                 }
-                i.a(d).b();
+                i.a(d).tryGetClassByName();
                 throw th;
             }
         } catch (SQLiteDatabaseCorruptException unused17) {
@@ -1947,20 +2264,32 @@ public class k {
             sQLiteDatabase.endTransaction();
         } catch (Throwable unused19) {
         }
-        i.a(d).b();
+        i.a(d).tryGetClassByName();
         return string;
     }
 
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.java:210)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:196)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:180)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:201)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.java:347)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(TryCatchBlockAttr.java:356)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:202)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.
+     * java:210)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:196)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:180)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:
+     * 201)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.
+     * java:347)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(
+     * TryCatchBlockAttr.java:356)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+     * MarkFinallyVisitor.java:202)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:119)
      */
     public void a(boolean z, boolean z2) {
         SQLiteDatabase sQLiteDatabaseA = null;
@@ -1978,7 +2307,7 @@ public class k {
                             if (str == null) {
                                 i2 = 1;
                             }
-                            sQLiteDatabaseA.delete(g.c.a, "__ii=?", new String[]{str});
+                            sQLiteDatabaseA.delete(g.c.cachedConstructors, "__ii=?", new String[] { str });
                             i++;
                         }
                         i = i2;
@@ -1997,25 +2326,25 @@ public class k {
                     } catch (Throwable unused) {
                     }
                 }
-                i.a(d).b();
+                i.a(d).tryGetClassByName();
                 throw th;
             }
         } catch (SQLiteDatabaseCorruptException unused2) {
             j.a(d);
             if (sQLiteDatabaseA != null) {
             }
-            i.a(d).b();
+            i.a(d).tryGetClassByName();
         } catch (Throwable unused3) {
             j.a(d);
             if (sQLiteDatabaseA != null) {
             }
-            i.a(d).b();
+            i.a(d).tryGetClassByName();
         }
         try {
             sQLiteDatabaseA.endTransaction();
         } catch (Throwable unused4) {
         }
-        i.a(d).b();
+        i.a(d).tryGetClassByName();
     }
 
     public void a(boolean z, String str) {
@@ -2025,10 +2354,10 @@ public class k {
                 sQLiteDatabaseA = i.a(d).a();
                 sQLiteDatabaseA.beginTransaction();
                 if (!TextUtils.isEmpty(str)) {
-                    sQLiteDatabaseA.delete(g.a.a, "__i=?", new String[]{str});
-                    sQLiteDatabaseA.delete(g.b.a, "__i=?", new String[]{str});
+                    sQLiteDatabaseA.delete(g.a.cachedConstructors, "__i=?", new String[] { str });
+                    sQLiteDatabaseA.delete(g.b.cachedConstructors, "__i=?", new String[] { str });
                     this.j.clear();
-                    sQLiteDatabaseA.delete(g.d.a, "__ii=?", new String[]{str});
+                    sQLiteDatabaseA.delete(g.d.cachedConstructors, "__ii=?", new String[] { str });
                 }
                 sQLiteDatabaseA.setTransactionSuccessful();
             } finally {
@@ -2038,7 +2367,7 @@ public class k {
                     } catch (Throwable unused) {
                     }
                 }
-                i.a(d).b();
+                i.a(d).tryGetClassByName();
             }
         } catch (SQLiteDatabaseCorruptException unused2) {
             j.a(d);

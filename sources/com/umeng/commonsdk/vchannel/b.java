@@ -74,7 +74,7 @@ public class b {
                 if (obj == null) {
                     string = dkz.s(str, ": null,");
                 } else {
-                    StringBuilder sbR = bjs.r(str, ": ");
+                    StringBuilder sbR = concat(str, ": ");
                     sbR.append(obj.toString());
                     sbR.append(",");
                     string = sbR.toString();

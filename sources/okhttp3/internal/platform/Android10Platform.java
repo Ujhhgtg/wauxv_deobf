@@ -9,7 +9,7 @@ import javax.net.ssl.SSLSocket;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.X509TrustManager;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.la;
 import okhttp3.Protocol;
 import okhttp3.internal.platform.android.Android10SocketAdapter;
@@ -28,7 +28,10 @@ public final class Android10Platform extends Platform {
     private static final boolean isSupported;
     private final List<SocketAdapter> socketAdapters;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
@@ -54,7 +57,10 @@ public final class Android10Platform extends Platform {
     }
 
     public Android10Platform() {
-        ArrayList arrayListO = la.o(new SocketAdapter[]{Android10SocketAdapter.Companion.buildIfSupported(), new DeferredSocketAdapter(AndroidSocketAdapter.Companion.getPlayProviderFactory()), new DeferredSocketAdapter(ConscryptSocketAdapter.Companion.getFactory()), new DeferredSocketAdapter(BouncyCastleSocketAdapter.Companion.getFactory())});
+        ArrayList arrayListO = la.o(new SocketAdapter[] { Android10SocketAdapter.Companion.buildIfSupported(),
+                new DeferredSocketAdapter(AndroidSocketAdapter.Companion.getPlayProviderFactory()),
+                new DeferredSocketAdapter(ConscryptSocketAdapter.Companion.getFactory()),
+                new DeferredSocketAdapter(BouncyCastleSocketAdapter.Companion.getFactory()) });
         ArrayList arrayList = new ArrayList();
         for (Object obj : arrayListO) {
             if (((SocketAdapter) obj).isSupported()) {
@@ -66,16 +72,18 @@ public final class Android10Platform extends Platform {
 
     @Override // okhttp3.internal.platform.Platform
     public CertificateChainCleaner buildCertificateChainCleaner(X509TrustManager x509TrustManager) {
-        bzo.q(x509TrustManager, "trustManager");
-        AndroidCertificateChainCleaner androidCertificateChainCleanerBuildIfSupported = AndroidCertificateChainCleaner.Companion.buildIfSupported(x509TrustManager);
-        return androidCertificateChainCleanerBuildIfSupported != null ? androidCertificateChainCleanerBuildIfSupported : super.buildCertificateChainCleaner(x509TrustManager);
+        throwIfVar1IsNull(x509TrustManager, "trustManager");
+        AndroidCertificateChainCleaner androidCertificateChainCleanerBuildIfSupported = AndroidCertificateChainCleaner.Companion
+                .buildIfSupported(x509TrustManager);
+        return androidCertificateChainCleanerBuildIfSupported != null ? androidCertificateChainCleanerBuildIfSupported
+                : super.buildCertificateChainCleaner(x509TrustManager);
     }
 
     @Override // okhttp3.internal.platform.Platform
     public void configureTlsExtensions(SSLSocket sSLSocket, String str, List<? extends Protocol> list) {
         Object next;
-        bzo.q(sSLSocket, "sslSocket");
-        bzo.q(list, "protocols");
+        throwIfVar1IsNull(sSLSocket, "sslSocket");
+        throwIfVar1IsNull(list, "protocols");
         Iterator<T> it = this.socketAdapters.iterator();
         do {
             if (!it.hasNext()) {
@@ -93,7 +101,7 @@ public final class Android10Platform extends Platform {
     @Override // okhttp3.internal.platform.Platform
     public String getSelectedProtocol(SSLSocket sSLSocket) {
         Object next;
-        bzo.q(sSLSocket, "sslSocket");
+        throwIfVar1IsNull(sSLSocket, "sslSocket");
         Iterator<T> it = this.socketAdapters.iterator();
         do {
             if (!it.hasNext()) {
@@ -111,14 +119,14 @@ public final class Android10Platform extends Platform {
 
     @Override // okhttp3.internal.platform.Platform
     public boolean isCleartextTrafficPermitted(String str) {
-        bzo.q(str, "hostname");
+        throwIfVar1IsNull(str, "hostname");
         return NetworkSecurityPolicy.getInstance().isCleartextTrafficPermitted(str);
     }
 
     @Override // okhttp3.internal.platform.Platform
     public X509TrustManager trustManager(SSLSocketFactory sSLSocketFactory) {
         Object next;
-        bzo.q(sSLSocketFactory, "sslSocketFactory");
+        throwIfVar1IsNull(sSLSocketFactory, "sslSocketFactory");
         Iterator<T> it = this.socketAdapters.iterator();
         do {
             if (!it.hasNext()) {

@@ -3,7 +3,7 @@ package okhttp3.internal.http;
 import java.util.List;
 import me.hd.wauxv.obf.aba;
 import me.hd.wauxv.obf.bjr;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.emc;
 import net.bytebuddy.jar.asm.signature.SignatureVisitor;
 import okhttp3.Cookie;
@@ -22,7 +22,7 @@ public final class BridgeInterceptor implements Interceptor {
     private final CookieJar cookieJar;
 
     public BridgeInterceptor(CookieJar cookieJar) {
-        bzo.q(cookieJar, "cookieJar");
+        throwIfVar1IsNull(cookieJar, "cookieJar");
         this.cookieJar = cookieJar;
     }
 
@@ -45,14 +45,14 @@ public final class BridgeInterceptor implements Interceptor {
             i = i2;
         }
         String string = sb.toString();
-        bzo.p(string, "StringBuilder().apply(builderAction).toString()");
+        throwIfVar1IsNull(string, "StringBuilder().apply(builderAction).toString()");
         return string;
     }
 
     @Override // okhttp3.Interceptor
     public Response intercept(Interceptor.Chain chain) {
         ResponseBody responseBodyBody;
-        bzo.q(chain, "chain");
+        throwIfVar1IsNull(chain, "chain");
         Request request = chain.request();
         Request.Builder builderNewBuilder = request.newBuilder();
         RequestBody requestBodyBody = request.body();
@@ -92,10 +92,13 @@ public final class BridgeInterceptor implements Interceptor {
         Response responseProceed = chain.proceed(builderNewBuilder.build());
         HttpHeaders.receiveHeaders(this.cookieJar, request.url(), responseProceed.headers());
         Response.Builder builderRequest = responseProceed.newBuilder().request(request);
-        if (z && "gzip".equalsIgnoreCase(Response.header$default(responseProceed, "Content-Encoding", null, 2, null)) && HttpHeaders.promisesBody(responseProceed) && (responseBodyBody = responseProceed.body()) != null) {
+        if (z && "gzip".equalsIgnoreCase(Response.header$default(responseProceed, "Content-Encoding", null, 2, null))
+                && HttpHeaders.promisesBody(responseProceed) && (responseBodyBody = responseProceed.body()) != null) {
             bjr bjrVar = new bjr(responseBodyBody.source());
-            builderRequest.headers(responseProceed.headers().newBuilder().removeAll("Content-Encoding").removeAll("Content-Length").build());
-            builderRequest.body(new RealResponseBody(Response.header$default(responseProceed, "Content-Type", null, 2, null), -1L, emc.ah(bjrVar)));
+            builderRequest.headers(responseProceed.headers().newBuilder().removeAll("Content-Encoding")
+                    .removeAll("Content-Length").build());
+            builderRequest.body(new RealResponseBody(
+                    Response.header$default(responseProceed, "Content-Type", null, 2, null), -1L, emc.ah(bjrVar)));
         }
         return builderRequest.build();
     }

@@ -3,7 +3,7 @@ package me.hd.wauxv.data.bean.db;
 import java.util.Arrays;
 import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cnb;
 import me.hd.wauxv.obf.dkz;
 import me.hd.wauxv.obf.yg;
@@ -46,7 +46,10 @@ public final class ChatRoomInfo {
     private final int style;
     private final String xmlChatroomnotice;
 
-    public ChatRoomInfo(String str, Long l, Long l2, long j, long j2, String str2, String str3, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12, byte[] bArr, byte[] bArr2, byte[] bArr3, int i, int i2, int i3, int i4, int i5, int i6, int i7, int i8, int i9, long j3, int i10, int i11, long j4) {
+    public ChatRoomInfo(String str, Long l, Long l2, long j, long j2, String str2, String str3, String str4,
+            String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12,
+            byte[] bArr, byte[] bArr2, byte[] bArr3, int i, int i2, int i3, int i4, int i5, int i6, int i7, int i8,
+            int i9, long j3, int i10, int i11, long j4) {
         this.chatroomname = str;
         this.addtime = l;
         this.modifytime = l2;
@@ -81,7 +84,11 @@ public final class ChatRoomInfo {
         this.compactFlag = j4;
     }
 
-    public static /* synthetic */ ChatRoomInfo copy$default(ChatRoomInfo chatRoomInfo, String str, Long l, Long l2, long j, long j2, String str2, String str3, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12, byte[] bArr, byte[] bArr2, byte[] bArr3, int i, int i2, int i3, int i4, int i5, int i6, int i7, int i8, int i9, long j3, int i10, int i11, long j4, int i12, Object obj) {
+    public static /* synthetic */ ChatRoomInfo copy$default(ChatRoomInfo chatRoomInfo, String str, Long l, Long l2,
+            long j, long j2, String str2, String str3, String str4, String str5, String str6, String str7, String str8,
+            String str9, String str10, String str11, String str12, byte[] bArr, byte[] bArr2, byte[] bArr3, int i,
+            int i2, int i3, int i4, int i5, int i6, int i7, int i8, int i9, long j3, int i10, int i11, long j4, int i12,
+            Object obj) {
         long j5;
         int i13;
         int i14;
@@ -208,7 +215,8 @@ public final class ChatRoomInfo {
             l3 = l5;
             l4 = l6;
         }
-        return chatRoomInfo.copy(str31, l3, l4, j7, j8, str13, str14, str15, str16, str17, str18, str19, str32, str20, str22, str21, bArr4, bArr5, bArr6, i15, i16, i17, i18, i19, i20, i21, i22, i23, j6, i13, i14, j5);
+        return chatRoomInfo.copy(str31, l3, l4, j7, j8, str13, str14, str15, str16, str17, str18, str19, str32, str20,
+                str22, str21, bArr4, bArr5, bArr6, i15, i16, i17, i18, i19, i20, i21, i22, i23, j6, i13, i14, j5);
     }
 
     public final String component1() {
@@ -339,8 +347,12 @@ public final class ChatRoomInfo {
         return this.roomowner;
     }
 
-    public final ChatRoomInfo copy(String str, Long l, Long l2, long j, long j2, String str2, String str3, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12, byte[] bArr, byte[] bArr2, byte[] bArr3, int i, int i2, int i3, int i4, int i5, int i6, int i7, int i8, int i9, long j3, int i10, int i11, long j4) {
-        return new ChatRoomInfo(str, l, l2, j, j2, str2, str3, str4, str5, str6, str7, str8, str9, str10, str11, str12, bArr, bArr2, bArr3, i, i2, i3, i4, i5, i6, i7, i8, i9, j3, i10, i11, j4);
+    public final ChatRoomInfo copy(String str, Long l, Long l2, long j, long j2, String str2, String str3, String str4,
+            String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12,
+            byte[] bArr, byte[] bArr2, byte[] bArr3, int i, int i2, int i3, int i4, int i5, int i6, int i7, int i8,
+            int i9, long j3, int i10, int i11, long j4) {
+        return new ChatRoomInfo(str, l, l2, j, j2, str2, str3, str4, str5, str6, str7, str8, str9, str10, str11, str12,
+                bArr, bArr2, bArr3, i, i2, i3, i4, i5, i6, i7, i8, i9, j3, i10, i11, j4);
     }
 
     public boolean equals(Object obj) {
@@ -350,9 +362,37 @@ public final class ChatRoomInfo {
         if (!ChatRoomInfo.class.equals(obj != null ? obj.getClass() : null)) {
             return false;
         }
-        bzo.o(obj, "null cannot be cast to non-null type me.hd.wauxv.data.bean.db.ChatRoomInfo" /* cnb.z(-8942121909034L) */);
+        throwIfVar1IsNull(obj, "null cannot be cast to non-null type me.hd.wauxv.data.bean.db.ChatRoomInfo" /*
+                                                                                                             * cnb.z(-
+                                                                                                             * 8942121909034L)
+                                                                                                             */);
         ChatRoomInfo chatRoomInfo = (ChatRoomInfo) obj;
-        if (!bzo.f(this.addtime, chatRoomInfo.addtime) || !bzo.f(this.modifytime, chatRoomInfo.modifytime) || this.chatroomnoticePublishTime != chatRoomInfo.chatroomnoticePublishTime || this.chatroomfamilystatusmodifytime != chatRoomInfo.chatroomfamilystatusmodifytime || this.roomflag != chatRoomInfo.roomflag || this.isShowname != chatRoomInfo.isShowname || this.style != chatRoomInfo.style || this.chatroomdataflag != chatRoomInfo.chatroomdataflag || this.chatroomStatus != chatRoomInfo.chatroomStatus || this.openIMRoomMigrateStatus != chatRoomInfo.openIMRoomMigrateStatus || this.spamStatus != chatRoomInfo.spamStatus || this.chatroomVersion != chatRoomInfo.chatroomVersion || this.chatroomNoticeNew != chatRoomInfo.chatroomNoticeNew || this.chatroomLocalVersion != chatRoomInfo.chatroomLocalVersion || this.memberCount != chatRoomInfo.memberCount || this.oldChatroomVersion != chatRoomInfo.oldChatroomVersion || this.compactFlag != chatRoomInfo.compactFlag || !bzo.f(this.chatroomname, chatRoomInfo.chatroomname) || !bzo.f(this.memberlist, chatRoomInfo.memberlist) || !bzo.f(this.displayname, chatRoomInfo.displayname) || !bzo.f(this.chatroomnick, chatRoomInfo.chatroomnick) || !bzo.f(this.roomowner, chatRoomInfo.roomowner) || !bzo.f(this.selfDisplayName, chatRoomInfo.selfDisplayName) || !bzo.f(this.chatroomnotice, chatRoomInfo.chatroomnotice) || !bzo.f(this.xmlChatroomnotice, chatRoomInfo.xmlChatroomnotice) || !bzo.f(this.chatroomnoticeEditor, chatRoomInfo.chatroomnoticeEditor) || !bzo.f(this.associateOpenIMRoomName, chatRoomInfo.associateOpenIMRoomName) || !bzo.f(this.saveByteVersion, chatRoomInfo.saveByteVersion) || !bzo.f(this.handleByteVersion, chatRoomInfo.handleByteVersion)) {
+        if (!nullSafeIsEqual(this.addtime, chatRoomInfo.addtime)
+                || !nullSafeIsEqual(this.modifytime, chatRoomInfo.modifytime)
+                || this.chatroomnoticePublishTime != chatRoomInfo.chatroomnoticePublishTime
+                || this.chatroomfamilystatusmodifytime != chatRoomInfo.chatroomfamilystatusmodifytime
+                || this.roomflag != chatRoomInfo.roomflag || this.isShowname != chatRoomInfo.isShowname
+                || this.style != chatRoomInfo.style || this.chatroomdataflag != chatRoomInfo.chatroomdataflag
+                || this.chatroomStatus != chatRoomInfo.chatroomStatus
+                || this.openIMRoomMigrateStatus != chatRoomInfo.openIMRoomMigrateStatus
+                || this.spamStatus != chatRoomInfo.spamStatus || this.chatroomVersion != chatRoomInfo.chatroomVersion
+                || this.chatroomNoticeNew != chatRoomInfo.chatroomNoticeNew
+                || this.chatroomLocalVersion != chatRoomInfo.chatroomLocalVersion
+                || this.memberCount != chatRoomInfo.memberCount
+                || this.oldChatroomVersion != chatRoomInfo.oldChatroomVersion
+                || this.compactFlag != chatRoomInfo.compactFlag
+                || !nullSafeIsEqual(this.chatroomname, chatRoomInfo.chatroomname)
+                || !nullSafeIsEqual(this.memberlist, chatRoomInfo.memberlist)
+                || !nullSafeIsEqual(this.displayname, chatRoomInfo.displayname)
+                || !nullSafeIsEqual(this.chatroomnick, chatRoomInfo.chatroomnick)
+                || !nullSafeIsEqual(this.roomowner, chatRoomInfo.roomowner)
+                || !nullSafeIsEqual(this.selfDisplayName, chatRoomInfo.selfDisplayName)
+                || !nullSafeIsEqual(this.chatroomnotice, chatRoomInfo.chatroomnotice)
+                || !nullSafeIsEqual(this.xmlChatroomnotice, chatRoomInfo.xmlChatroomnotice)
+                || !nullSafeIsEqual(this.chatroomnoticeEditor, chatRoomInfo.chatroomnoticeEditor)
+                || !nullSafeIsEqual(this.associateOpenIMRoomName, chatRoomInfo.associateOpenIMRoomName)
+                || !nullSafeIsEqual(this.saveByteVersion, chatRoomInfo.saveByteVersion)
+                || !nullSafeIsEqual(this.handleByteVersion, chatRoomInfo.handleByteVersion)) {
             return false;
         }
         byte[] bArr = this.roomdata;
@@ -513,7 +553,15 @@ public final class ChatRoomInfo {
         Long l = this.addtime;
         int iHashCode = (l != null ? Long.hashCode(l.longValue()) : 0) * 31;
         Long l2 = this.modifytime;
-        int iE = bjs.e(this.chatroomname, (Long.hashCode(this.compactFlag) + ((((((Long.hashCode(this.chatroomLocalVersion) + ((((((((((((((((((((Long.hashCode(this.chatroomfamilystatusmodifytime) + ((Long.hashCode(this.chatroomnoticePublishTime) + ((iHashCode + (l2 != null ? Long.hashCode(l2.longValue()) : 0)) * 31)) * 31)) * 31) + this.roomflag) * 31) + this.isShowname) * 31) + this.style) * 31) + this.chatroomdataflag) * 31) + this.chatroomStatus) * 31) + this.openIMRoomMigrateStatus) * 31) + this.spamStatus) * 31) + this.chatroomVersion) * 31) + this.chatroomNoticeNew) * 31)) * 31) + this.memberCount) * 31) + this.oldChatroomVersion) * 31)) * 31, 31);
+        int iE = bjs.e(this.chatroomname, (Long.hashCode(this.compactFlag) + ((((((Long.hashCode(
+                this.chatroomLocalVersion)
+                + ((((((((((((((((((((Long.hashCode(this.chatroomfamilystatusmodifytime)
+                        + ((Long.hashCode(this.chatroomnoticePublishTime)
+                                + ((iHashCode + (l2 != null ? Long.hashCode(l2.longValue()) : 0)) * 31)) * 31))
+                        * 31) + this.roomflag) * 31) + this.isShowname) * 31) + this.style) * 31)
+                        + this.chatroomdataflag) * 31) + this.chatroomStatus) * 31) + this.openIMRoomMigrateStatus)
+                        * 31) + this.spamStatus) * 31) + this.chatroomVersion) * 31) + this.chatroomNoticeNew) * 31))
+                * 31) + this.memberCount) * 31) + this.oldChatroomVersion) * 31)) * 31, 31);
         String str = this.memberlist;
         int iHashCode2 = (iE + (str != null ? str.hashCode() : 0)) * 31;
         String str2 = this.displayname;
@@ -593,7 +641,16 @@ public final class ChatRoomInfo {
         return sb.toString();
     }
 
-    public /* synthetic */ ChatRoomInfo(String str, Long l, Long l2, long j, long j2, String str2, String str3, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12, byte[] bArr, byte[] bArr2, byte[] bArr3, int i, int i2, int i3, int i4, int i5, int i6, int i7, int i8, int i9, long j3, int i10, int i11, long j4, int i12, akd akdVar) {
-        this(str, l, l2, (i12 & 8) != 0 ? 0L : j, (i12 & 16) != 0 ? 0L : j2, str2, str3, str4, str5, str6, str7, str8, str9, str10, str11, str12, bArr, bArr2, bArr3, (i12 & Opcodes.ASM8) != 0 ? 0 : i, (i12 & 1048576) != 0 ? 0 : i2, (i12 & 2097152) != 0 ? 0 : i3, (i12 & 4194304) != 0 ? 0 : i4, (i12 & 8388608) != 0 ? 0 : i5, (i12 & Http2Connection.OKHTTP_CLIENT_WINDOW_SIZE) != 0 ? 0 : i6, (i12 & 33554432) != 0 ? 0 : i7, (i12 & 67108864) != 0 ? 0 : i8, (i12 & 134217728) != 0 ? 0 : i9, (i12 & 268435456) != 0 ? 0L : j3, (i12 & 536870912) != 0 ? -1 : i10, (i12 & 1073741824) != 0 ? 0 : i11, (i12 & Integer.MIN_VALUE) != 0 ? 0L : j4);
+    public /* synthetic */ ChatRoomInfo(String str, Long l, Long l2, long j, long j2, String str2, String str3,
+            String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11,
+            String str12, byte[] bArr, byte[] bArr2, byte[] bArr3, int i, int i2, int i3, int i4, int i5, int i6,
+            int i7, int i8, int i9, long j3, int i10, int i11, long j4, int i12, akd akdVar) {
+        this(str, l, l2, (i12 & 8) != 0 ? 0L : j, (i12 & 16) != 0 ? 0L : j2, str2, str3, str4, str5, str6, str7, str8,
+                str9, str10, str11, str12, bArr, bArr2, bArr3, (i12 & Opcodes.ASM8) != 0 ? 0 : i,
+                (i12 & 1048576) != 0 ? 0 : i2, (i12 & 2097152) != 0 ? 0 : i3, (i12 & 4194304) != 0 ? 0 : i4,
+                (i12 & 8388608) != 0 ? 0 : i5, (i12 & Http2Connection.OKHTTP_CLIENT_WINDOW_SIZE) != 0 ? 0 : i6,
+                (i12 & 33554432) != 0 ? 0 : i7, (i12 & 67108864) != 0 ? 0 : i8, (i12 & 134217728) != 0 ? 0 : i9,
+                (i12 & 268435456) != 0 ? 0L : j3, (i12 & 536870912) != 0 ? -1 : i10, (i12 & 1073741824) != 0 ? 0 : i11,
+                (i12 & Integer.MIN_VALUE) != 0 ? 0L : j4);
     }
 }

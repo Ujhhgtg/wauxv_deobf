@@ -38,7 +38,7 @@ public class est extends bhs {
     public void al(View view, Matrix matrix) {
         if (a) {
             try {
-                esq.b(view, matrix);
+                esq.tryGetClassByName(view, matrix);
             } catch (NoSuchMethodError unused) {
                 a = false;
             }
@@ -48,7 +48,7 @@ public class est extends bhs {
     public void am(View view, Matrix matrix) {
         if (ah) {
             try {
-                esq.c(view, matrix);
+                esq.createInstanceWithArgs(view, matrix);
             } catch (NoSuchMethodError unused) {
                 ah = false;
             }

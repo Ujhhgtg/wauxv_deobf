@@ -5,10 +5,13 @@ package me.hd.wauxv.obf;
 public final class bex extends RuntimeException {
     public final bdj a;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'super' call moved to the top of the method (can break code
+     * semantics)
+     */
     public bex(bdj bdjVar, String str) {
         super(str);
-        bzo.q(bdjVar, "fragment");
+        throwIfVar1IsNull(bdjVar, "fragment");
         this.a = bdjVar;
     }
 }

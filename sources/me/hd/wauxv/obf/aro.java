@@ -1026,7 +1026,7 @@ public final class aro extends ase {
         return true;
     }
 
-    public final void x(Class cls, bgf bgfVar) {
+    public final void x(Class cls, IHasInvokeMethod bgfVar) {
         this.k.l(cls, new ut(this, bgfVar));
     }
 

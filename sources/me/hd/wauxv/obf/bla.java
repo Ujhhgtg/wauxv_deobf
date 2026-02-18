@@ -16,8 +16,8 @@ public final class bla {
     }
 
     public bla(boolean z, bky bkyVar, bkz bkzVar) {
-        bzo.q(bkyVar, "bytes");
-        bzo.q(bkzVar, "number");
+        throwIfVar1IsNull(bkyVar, "bytes");
+        throwIfVar1IsNull(bkzVar, "number");
         this.b = z;
         this.c = bkyVar;
         this.d = bkzVar;

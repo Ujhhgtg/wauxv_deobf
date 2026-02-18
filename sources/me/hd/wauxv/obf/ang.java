@@ -13,7 +13,7 @@ public final class ang extends cjg implements bbn {
     public final void d(Context context, AttributeSet attributeSet) {
         super.d(context, attributeSet);
         TypedArray typedArrayObtainAttributes = context.getResources().obtainAttributes(attributeSet, cyd.a);
-        bzo.p(typedArrayObtainAttributes, "obtainAttributes(...)");
+        throwIfVar1IsNull(typedArrayObtainAttributes, "obtainAttributes(...)");
         String string = typedArrayObtainAttributes.getString(0);
         if (string != null) {
             this.a = string;
@@ -26,7 +26,7 @@ public final class ang extends cjg implements bbn {
         if (this == obj) {
             return true;
         }
-        return obj != null && (obj instanceof ang) && super.equals(obj) && bzo.f(this.a, ((ang) obj).a);
+        return obj != null && (obj instanceof ang) && super.equals(obj) && nullSafeIsEqual(this.a, ((ang) obj).a);
     }
 
     @Override // me.hd.wauxv.obf.cjg

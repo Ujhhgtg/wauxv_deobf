@@ -36,7 +36,7 @@ public final class Rop {
             throw new NullPointerException("exceptions == null");
         }
         if (i2 < 1 || i2 > 6) {
-            throw new IllegalArgumentException(bjs.i(i2, "invalid branchingness: "));
+            throw new IllegalArgumentException(concatVar2Var1(i2, "invalid branchingness: "));
         }
         if (typeList2.size() != 0 && i2 != 6) {
             throw new IllegalArgumentException("exceptions / branchingness mismatch");
@@ -62,7 +62,8 @@ public final class Rop {
             return false;
         }
         Rop rop = (Rop) obj;
-        return this.opcode == rop.opcode && this.branchingness == rop.branchingness && this.result == rop.result && this.sources.equals(rop.sources) && this.exceptions.equals(rop.exceptions);
+        return this.opcode == rop.opcode && this.branchingness == rop.branchingness && this.result == rop.result
+                && this.sources.equals(rop.sources) && this.exceptions.equals(rop.exceptions);
     }
 
     public int getBranchingness() {
@@ -91,7 +92,8 @@ public final class Rop {
     }
 
     public int hashCode() {
-        return this.exceptions.hashCode() + ((this.sources.hashCode() + ((this.result.hashCode() + (((this.opcode * 31) + this.branchingness) * 31)) * 31)) * 31);
+        return this.exceptions.hashCode() + ((this.sources.hashCode()
+                + ((this.result.hashCode() + (((this.opcode * 31) + this.branchingness) * 31)) * 31)) * 31);
     }
 
     public boolean isCallLike() {

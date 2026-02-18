@@ -9,19 +9,19 @@ public final class cqn {
     public static final cqn a = new cqn();
 
     public final OnBackInvokedCallback b(bfu bfuVar) {
-        bzo.q(bfuVar, "onBackInvoked");
+        throwIfVar1IsNull(bfuVar, "onBackInvoked");
         return new hu(bfuVar, 1);
     }
 
     public final void c(Object obj, int i, Object obj2) {
-        bzo.q(obj, "dispatcher");
-        bzo.q(obj2, "callback");
+        throwIfVar1IsNull(obj, "dispatcher");
+        throwIfVar1IsNull(obj2, "callback");
         ((OnBackInvokedDispatcher) obj).registerOnBackInvokedCallback(i, (OnBackInvokedCallback) obj2);
     }
 
     public final void d(Object obj, Object obj2) {
-        bzo.q(obj, "dispatcher");
-        bzo.q(obj2, "callback");
+        throwIfVar1IsNull(obj, "dispatcher");
+        throwIfVar1IsNull(obj2, "callback");
         ((OnBackInvokedDispatcher) obj).unregisterOnBackInvokedCallback((OnBackInvokedCallback) obj2);
     }
 }

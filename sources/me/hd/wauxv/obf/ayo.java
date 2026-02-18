@@ -19,7 +19,7 @@ public final class ayo {
         if (this == obj) {
             return true;
         }
-        return (obj instanceof ayo) && bzo.f(this.a, ((ayo) obj).a);
+        return (obj instanceof ayo) && nullSafeIsEqual(this.a, ((ayo) obj).a);
     }
 
     public final int hashCode() {
@@ -29,6 +29,6 @@ public final class ayo {
     public final String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("ChatInfoProto(senderId=" /* cnb.z(-124828929489706L) */);
-        return bjs.q(sb, this.a, ')');
+        return concat(sb, this.a, ')');
     }
 }

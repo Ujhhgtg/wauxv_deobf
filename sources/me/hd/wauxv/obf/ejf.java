@@ -24,7 +24,7 @@ public final class ejf {
             return false;
         }
         ejf ejfVar = (ejf) obj;
-        return bzo.f(this.a, ejfVar.a) && bzo.f(this.b, ejfVar.b);
+        return nullSafeIsEqual(this.a, ejfVar.a) && nullSafeIsEqual(this.b, ejfVar.b);
     }
 
     public final int hashCode() {

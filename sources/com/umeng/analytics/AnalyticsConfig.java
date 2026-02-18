@@ -70,14 +70,14 @@ public class AnalyticsConfig {
 
     public static String getSecretKey(Context context) {
         if (TextUtils.isEmpty(d)) {
-            d = com.umeng.common.b.a(context).c();
+            d = com.umeng.common.b.a(context).createInstanceWithArgs();
         }
         return d;
     }
 
     public static int getVerticalType(Context context) {
         if (e == 0) {
-            e = com.umeng.common.b.a(context).d();
+            e = com.umeng.common.b.a(context).getArgs();
         }
         return e;
     }

@@ -21,20 +21,20 @@ public abstract class ni {
 
     public Request f() {
         Request.Builder builderUrl = this.d.method(bjs.z(this.c), null).url(this.a.build());
-        bzo.q(builderUrl, "<this>");
+        throwIfVar1IsNull(builderUrl, "<this>");
         ckw ckwVar = this.b;
-        bzo.q(ckwVar, "converter");
+        throwIfVar1IsNull(ckwVar, "converter");
         builderUrl.tag(ckw.class, ckwVar);
         return builderUrl.build();
     }
 
-    public final void g(bgf bgfVar) {
+    public final void g(IHasInvokeMethod bgfVar) {
         bcm bcmVar;
         OkHttpClient.Builder builderNewBuilder = this.e.newBuilder();
         bgfVar.invoke(builderNewBuilder);
         cqi.a(builderNewBuilder);
         OkHttpClient okHttpClientBuild = builderNewBuilder.build();
-        bzo.q(okHttpClientBuild, "value");
+        throwIfVar1IsNull(okHttpClientBuild, "value");
         List<Interceptor> listInterceptors = okHttpClientBuild.interceptors();
         cld cldVar = cld.a;
         if (!listInterceptors.contains(cldVar)) {
@@ -44,7 +44,7 @@ public abstract class ni {
         Cache cache = okHttpClientBuild.cache();
         if (cache != null) {
             DiskLruCache diskLruCache = OkHttpUtils.diskLruCache(cache);
-            bzo.p(diskLruCache, "diskLruCache(it)");
+            throwIfVar1IsNull(diskLruCache, "diskLruCache(it)");
             bcmVar = new bcm(diskLruCache);
         } else {
             bcmVar = null;
@@ -53,13 +53,13 @@ public abstract class ni {
     }
 
     public final void h(String str) {
-        bzo.q(str, "name");
+        throwIfVar1IsNull(str, "name");
         this.d.tag(cnc.class, new cnc(str));
     }
 
     public final void i(ahf ahfVar) {
         Request.Builder builder = this.d;
-        bzo.q(builder, "<this>");
+        throwIfVar1IsNull(builder, "<this>");
         if (ahfVar == null) {
             ahfVar = null;
         }
@@ -70,13 +70,13 @@ public abstract class ni {
         HttpUrl httpUrl = str != null ? HttpUrl.Companion.parse(str) : null;
         if (httpUrl != null) {
             HttpUrl.Builder builderNewBuilder = httpUrl.newBuilder();
-            bzo.q(builderNewBuilder, "<set-?>");
+            throwIfVar1IsNull(builderNewBuilder, "<set-?>");
             this.a = builderNewBuilder;
             return;
         }
         try {
             HttpUrl.Builder builderNewBuilder2 = HttpUrl.Companion.get(ckv.b + str).newBuilder();
-            bzo.q(builderNewBuilder2, "<set-?>");
+            throwIfVar1IsNull(builderNewBuilder2, "<set-?>");
             this.a = builderNewBuilder2;
         } catch (Throwable th) {
             throw new URLParseException(yg.o(new StringBuilder(), ckv.b, str), th);

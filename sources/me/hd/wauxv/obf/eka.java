@@ -16,7 +16,7 @@ public final class eka extends ekc {
 
     @Override // me.hd.wauxv.obf.ekc
     public final ekc timeout(long j, TimeUnit timeUnit) {
-        bzo.q(timeUnit, "unit");
+        throwIfVar1IsNull(timeUnit, "unit");
         return this;
     }
 }

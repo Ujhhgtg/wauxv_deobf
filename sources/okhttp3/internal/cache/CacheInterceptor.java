@@ -4,7 +4,7 @@ import com.umeng.commonsdk.statistics.SdkVersion;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cyk;
 import me.hd.wauxv.obf.dhy;
 import me.hd.wauxv.obf.dlc;
@@ -35,7 +35,10 @@ public final class CacheInterceptor implements Interceptor {
     public static final Companion Companion = new Companion(null);
     private final Cache cache;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
@@ -48,7 +51,9 @@ public final class CacheInterceptor implements Interceptor {
             for (int i = 0; i < size; i++) {
                 String strName = headers.name(i);
                 String strValue = headers.value(i);
-                if ((!"Warning".equalsIgnoreCase(strName) || !dnr.bp(strValue, SdkVersion.MINI_VERSION, false)) && (isContentSpecificHeader(strName) || !isEndToEnd(strName) || headers2.get(strName) == null)) {
+                if ((!"Warning".equalsIgnoreCase(strName) || !dnr.bp(strValue, SdkVersion.MINI_VERSION, false))
+                        && (isContentSpecificHeader(strName) || !isEndToEnd(strName)
+                                || headers2.get(strName) == null)) {
                     builder.addLenient$okhttp(strName, strValue);
                 }
             }
@@ -63,16 +68,21 @@ public final class CacheInterceptor implements Interceptor {
         }
 
         private final boolean isContentSpecificHeader(String str) {
-            return "Content-Length".equalsIgnoreCase(str) || "Content-Encoding".equalsIgnoreCase(str) || "Content-Type".equalsIgnoreCase(str);
+            return "Content-Length".equalsIgnoreCase(str) || "Content-Encoding".equalsIgnoreCase(str)
+                    || "Content-Type".equalsIgnoreCase(str);
         }
 
         private final boolean isEndToEnd(String str) {
-            return ("Connection".equalsIgnoreCase(str) || "Keep-Alive".equalsIgnoreCase(str) || "Proxy-Authenticate".equalsIgnoreCase(str) || "Proxy-Authorization".equalsIgnoreCase(str) || "TE".equalsIgnoreCase(str) || "Trailers".equalsIgnoreCase(str) || "Transfer-Encoding".equalsIgnoreCase(str) || "Upgrade".equalsIgnoreCase(str)) ? false : true;
+            return ("Connection".equalsIgnoreCase(str) || "Keep-Alive".equalsIgnoreCase(str)
+                    || "Proxy-Authenticate".equalsIgnoreCase(str) || "Proxy-Authorization".equalsIgnoreCase(str)
+                    || "TE".equalsIgnoreCase(str) || "Trailers".equalsIgnoreCase(str)
+                    || "Transfer-Encoding".equalsIgnoreCase(str) || "Upgrade".equalsIgnoreCase(str)) ? false : true;
         }
 
         /* JADX INFO: Access modifiers changed from: private */
         public final Response stripBody(Response response) {
-            return (response != null ? response.body() : null) != null ? response.newBuilder().body(null).build() : response;
+            return (response != null ? response.body() : null) != null ? response.newBuilder().body(null).build()
+                    : response;
         }
 
         private Companion() {
@@ -89,10 +99,11 @@ public final class CacheInterceptor implements Interceptor {
         }
         dhy dhyVarBody = cacheRequest.body();
         ResponseBody responseBodyBody = response.body();
-        bzo.n(responseBodyBody);
+        throwIfVar1IsNull(responseBodyBody);
         final rm rmVarSource = responseBodyBody.source();
         final cyk cykVarAg = emc.ag(dhyVarBody);
-        dlc dlcVar = new dlc() { // from class: okhttp3.internal.cache.CacheInterceptor$cacheWritingResponse$cacheWritingSource$1
+        dlc dlcVar = new dlc() { // from class:
+                                 // okhttp3.internal.cache.CacheInterceptor$cacheWritingResponse$cacheWritingSource$1
             private boolean cacheRequestClosed;
 
             @Override // java.io.Closeable, java.lang.AutoCloseable
@@ -106,7 +117,7 @@ public final class CacheInterceptor implements Interceptor {
 
             @Override // me.hd.wauxv.obf.dlc
             public long read(rh rhVar, long j) throws IOException {
-                bzo.q(rhVar, "sink");
+                throwIfVar1IsNull(rhVar, "sink");
                 try {
                     long j2 = rmVarSource.read(rhVar, j);
                     if (j2 == -1) {
@@ -134,7 +145,10 @@ public final class CacheInterceptor implements Interceptor {
                 return rmVarSource.timeout();
             }
         };
-        return response.newBuilder().body(new RealResponseBody(Response.header$default(response, "Content-Type", null, 2, null), response.body().contentLength(), emc.ah(dlcVar))).build();
+        return response.newBuilder()
+                .body(new RealResponseBody(Response.header$default(response, "Content-Type", null, 2, null),
+                        response.body().contentLength(), emc.ah(dlcVar)))
+                .build();
     }
 
     public final Cache getCache$okhttp() {
@@ -147,11 +161,12 @@ public final class CacheInterceptor implements Interceptor {
         ResponseBody responseBodyBody;
         ResponseBody responseBodyBody2;
         ResponseBody responseBodyBody3;
-        bzo.q(chain, "chain");
+        throwIfVar1IsNull(chain, "chain");
         Call call = chain.call();
         Cache cache = this.cache;
         Response response = cache != null ? cache.get$okhttp(chain.request()) : null;
-        CacheStrategy cacheStrategyCompute = new CacheStrategy.Factory(System.currentTimeMillis(), chain.request(), response).compute();
+        CacheStrategy cacheStrategyCompute = new CacheStrategy.Factory(System.currentTimeMillis(), chain.request(),
+                response).compute();
         Request networkRequest = cacheStrategyCompute.getNetworkRequest();
         Response cacheResponse = cacheStrategyCompute.getCacheResponse();
         Cache cache2 = this.cache;
@@ -166,13 +181,16 @@ public final class CacheInterceptor implements Interceptor {
             Util.closeQuietly(responseBodyBody3);
         }
         if (networkRequest == null && cacheResponse == null) {
-            Response responseBuild = new Response.Builder().request(chain.request()).protocol(Protocol.HTTP_1_1).code(504).message("Unsatisfiable Request (only-if-cached)").body(Util.EMPTY_RESPONSE).sentRequestAtMillis(-1L).receivedResponseAtMillis(System.currentTimeMillis()).build();
+            Response responseBuild = new Response.Builder().request(chain.request()).protocol(Protocol.HTTP_1_1)
+                    .code(504).message("Unsatisfiable Request (only-if-cached)").body(Util.EMPTY_RESPONSE)
+                    .sentRequestAtMillis(-1L).receivedResponseAtMillis(System.currentTimeMillis()).build();
             eventListener$okhttp.satisfactionFailure(call, responseBuild);
             return responseBuild;
         }
         if (networkRequest == null) {
-            bzo.n(cacheResponse);
-            Response responseBuild2 = cacheResponse.newBuilder().cacheResponse(Companion.stripBody(cacheResponse)).build();
+            throwIfVar1IsNull(cacheResponse);
+            Response responseBuild2 = cacheResponse.newBuilder().cacheResponse(Companion.stripBody(cacheResponse))
+                    .build();
             eventListener$okhttp.cacheHit(call, responseBuild2);
             return responseBuild2;
         }
@@ -190,12 +208,17 @@ public final class CacheInterceptor implements Interceptor {
                 if (responseProceed != null && responseProceed.code() == 304) {
                     Response.Builder builderNewBuilder = cacheResponse.newBuilder();
                     Companion companion = Companion;
-                    Response responseBuild3 = builderNewBuilder.headers(companion.combine(cacheResponse.headers(), responseProceed.headers())).sentRequestAtMillis(responseProceed.sentRequestAtMillis()).receivedResponseAtMillis(responseProceed.receivedResponseAtMillis()).cacheResponse(companion.stripBody(cacheResponse)).networkResponse(companion.stripBody(responseProceed)).build();
+                    Response responseBuild3 = builderNewBuilder
+                            .headers(companion.combine(cacheResponse.headers(), responseProceed.headers()))
+                            .sentRequestAtMillis(responseProceed.sentRequestAtMillis())
+                            .receivedResponseAtMillis(responseProceed.receivedResponseAtMillis())
+                            .cacheResponse(companion.stripBody(cacheResponse))
+                            .networkResponse(companion.stripBody(responseProceed)).build();
                     ResponseBody responseBodyBody4 = responseProceed.body();
-                    bzo.n(responseBodyBody4);
+                    throwIfVar1IsNull(responseBodyBody4);
                     responseBodyBody4.close();
                     Cache cache3 = this.cache;
-                    bzo.n(cache3);
+                    throwIfVar1IsNull(cache3);
                     cache3.trackConditionalCacheHit$okhttp();
                     this.cache.update$okhttp(cacheResponse, responseBuild3);
                     eventListener$okhttp.cacheHit(call, responseBuild3);
@@ -206,13 +229,16 @@ public final class CacheInterceptor implements Interceptor {
                     Util.closeQuietly(responseBodyBody5);
                 }
             }
-            bzo.n(responseProceed);
+            throwIfVar1IsNull(responseProceed);
             Response.Builder builderNewBuilder2 = responseProceed.newBuilder();
             Companion companion2 = Companion;
-            Response responseBuild4 = builderNewBuilder2.cacheResponse(companion2.stripBody(cacheResponse)).networkResponse(companion2.stripBody(responseProceed)).build();
+            Response responseBuild4 = builderNewBuilder2.cacheResponse(companion2.stripBody(cacheResponse))
+                    .networkResponse(companion2.stripBody(responseProceed)).build();
             if (this.cache != null) {
-                if (HttpHeaders.promisesBody(responseBuild4) && CacheStrategy.Companion.isCacheable(responseBuild4, networkRequest)) {
-                    Response responseCacheWritingResponse = cacheWritingResponse(this.cache.put$okhttp(responseBuild4), responseBuild4);
+                if (HttpHeaders.promisesBody(responseBuild4)
+                        && CacheStrategy.Companion.isCacheable(responseBuild4, networkRequest)) {
+                    Response responseCacheWritingResponse = cacheWritingResponse(this.cache.put$okhttp(responseBuild4),
+                            responseBuild4);
                     if (cacheResponse != null) {
                         eventListener$okhttp.cacheMiss(call);
                     }

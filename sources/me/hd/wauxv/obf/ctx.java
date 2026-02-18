@@ -59,17 +59,26 @@ public final class ctx {
                         Properties properties = new Properties();
                         ctx ctxVar = this.b;
                         if (ctxVar.c.exists()) {
-                            properties.load(new BufferedReader(new InputStreamReader(new FileInputStream(ctxVar.c), uj.a), 8192));
+                            properties.load(new BufferedReader(
+                                    new InputStreamReader(new FileInputStream(ctxVar.c), uj.a), 8192));
                         }
                         return properties;
                     case 1:
-                        return ((Properties) this.b.e.getValue()).getProperty("name" /* cnb.z(-401639571716906L) */, "未知" /* cnb.z(-401652456618794L) */);
+                        return ((Properties) this.b.e.getValue()).getProperty("name" /* cnb.z(-401639571716906L) */,
+                                "未知" /* cnb.z(-401652456618794L) */);
                     case 2:
-                        return ((Properties) this.b.e.getValue()).getProperty("author" /* cnb.z(-401605211978538L) */, "未知" /* cnb.z(-401626686815018L) */);
+                        return ((Properties) this.b.e.getValue()).getProperty("author" /* cnb.z(-401605211978538L) */,
+                                "未知" /* cnb.z(-401626686815018L) */);
                     case 3:
-                        return ((Properties) this.b.e.getValue()).getProperty("version" /* cnb.z(-390034570083114L) */, "未知" /* cnb.z(-390000210344746L) */);
+                        return ((Properties) this.b.e.getValue()).getProperty("version" /* cnb.z(-390034570083114L) */,
+                                "未知" /* cnb.z(-390000210344746L) */);
                     case 4:
-                        return ((Properties) this.b.e.getValue()).getProperty("updateTime" /* cnb.z(-390004505312042L) */, "未知" /* cnb.z(-389922900933418L) */);
+                        return ((Properties) this.b.e.getValue()).getProperty("updateTime" /*
+                                                                                            * cnb.z(-390004505312042L)
+                                                                                            */, "未知" /*
+                                                                                                      * cnb.z(-
+                                                                                                      * 389922900933418L)
+                                                                                                      */);
                     default:
                         ctx ctxVar2 = this.b;
                         File file2 = ctxVar2.d;
@@ -106,17 +115,26 @@ public final class ctx {
                         Properties properties = new Properties();
                         ctx ctxVar = this.b;
                         if (ctxVar.c.exists()) {
-                            properties.load(new BufferedReader(new InputStreamReader(new FileInputStream(ctxVar.c), uj.a), 8192));
+                            properties.load(new BufferedReader(
+                                    new InputStreamReader(new FileInputStream(ctxVar.c), uj.a), 8192));
                         }
                         return properties;
                     case 1:
-                        return ((Properties) this.b.e.getValue()).getProperty("name" /* cnb.z(-401639571716906L) */, "未知" /* cnb.z(-401652456618794L) */);
+                        return ((Properties) this.b.e.getValue()).getProperty("name" /* cnb.z(-401639571716906L) */,
+                                "未知" /* cnb.z(-401652456618794L) */);
                     case 2:
-                        return ((Properties) this.b.e.getValue()).getProperty("author" /* cnb.z(-401605211978538L) */, "未知" /* cnb.z(-401626686815018L) */);
+                        return ((Properties) this.b.e.getValue()).getProperty("author" /* cnb.z(-401605211978538L) */,
+                                "未知" /* cnb.z(-401626686815018L) */);
                     case 3:
-                        return ((Properties) this.b.e.getValue()).getProperty("version" /* cnb.z(-390034570083114L) */, "未知" /* cnb.z(-390000210344746L) */);
+                        return ((Properties) this.b.e.getValue()).getProperty("version" /* cnb.z(-390034570083114L) */,
+                                "未知" /* cnb.z(-390000210344746L) */);
                     case 4:
-                        return ((Properties) this.b.e.getValue()).getProperty("updateTime" /* cnb.z(-390004505312042L) */, "未知" /* cnb.z(-389922900933418L) */);
+                        return ((Properties) this.b.e.getValue()).getProperty("updateTime" /*
+                                                                                            * cnb.z(-390004505312042L)
+                                                                                            */, "未知" /*
+                                                                                                      * cnb.z(-
+                                                                                                      * 389922900933418L)
+                                                                                                      */);
                     default:
                         ctx ctxVar2 = this.b;
                         File file2 = ctxVar2.d;
@@ -151,17 +169,26 @@ public final class ctx {
                         Properties properties = new Properties();
                         ctx ctxVar = this.b;
                         if (ctxVar.c.exists()) {
-                            properties.load(new BufferedReader(new InputStreamReader(new FileInputStream(ctxVar.c), uj.a), 8192));
+                            properties.load(new BufferedReader(
+                                    new InputStreamReader(new FileInputStream(ctxVar.c), uj.a), 8192));
                         }
                         return properties;
                     case 1:
-                        return ((Properties) this.b.e.getValue()).getProperty("name" /* cnb.z(-401639571716906L) */, "未知" /* cnb.z(-401652456618794L) */);
+                        return ((Properties) this.b.e.getValue()).getProperty("name" /* cnb.z(-401639571716906L) */,
+                                "未知" /* cnb.z(-401652456618794L) */);
                     case 2:
-                        return ((Properties) this.b.e.getValue()).getProperty("author" /* cnb.z(-401605211978538L) */, "未知" /* cnb.z(-401626686815018L) */);
+                        return ((Properties) this.b.e.getValue()).getProperty("author" /* cnb.z(-401605211978538L) */,
+                                "未知" /* cnb.z(-401626686815018L) */);
                     case 3:
-                        return ((Properties) this.b.e.getValue()).getProperty("version" /* cnb.z(-390034570083114L) */, "未知" /* cnb.z(-390000210344746L) */);
+                        return ((Properties) this.b.e.getValue()).getProperty("version" /* cnb.z(-390034570083114L) */,
+                                "未知" /* cnb.z(-390000210344746L) */);
                     case 4:
-                        return ((Properties) this.b.e.getValue()).getProperty("updateTime" /* cnb.z(-390004505312042L) */, "未知" /* cnb.z(-389922900933418L) */);
+                        return ((Properties) this.b.e.getValue()).getProperty("updateTime" /*
+                                                                                            * cnb.z(-390004505312042L)
+                                                                                            */, "未知" /*
+                                                                                                      * cnb.z(-
+                                                                                                      * 389922900933418L)
+                                                                                                      */);
                     default:
                         ctx ctxVar2 = this.b;
                         File file2 = ctxVar2.d;
@@ -196,17 +223,26 @@ public final class ctx {
                         Properties properties = new Properties();
                         ctx ctxVar = this.b;
                         if (ctxVar.c.exists()) {
-                            properties.load(new BufferedReader(new InputStreamReader(new FileInputStream(ctxVar.c), uj.a), 8192));
+                            properties.load(new BufferedReader(
+                                    new InputStreamReader(new FileInputStream(ctxVar.c), uj.a), 8192));
                         }
                         return properties;
                     case 1:
-                        return ((Properties) this.b.e.getValue()).getProperty("name" /* cnb.z(-401639571716906L) */, "未知" /* cnb.z(-401652456618794L) */);
+                        return ((Properties) this.b.e.getValue()).getProperty("name" /* cnb.z(-401639571716906L) */,
+                                "未知" /* cnb.z(-401652456618794L) */);
                     case 2:
-                        return ((Properties) this.b.e.getValue()).getProperty("author" /* cnb.z(-401605211978538L) */, "未知" /* cnb.z(-401626686815018L) */);
+                        return ((Properties) this.b.e.getValue()).getProperty("author" /* cnb.z(-401605211978538L) */,
+                                "未知" /* cnb.z(-401626686815018L) */);
                     case 3:
-                        return ((Properties) this.b.e.getValue()).getProperty("version" /* cnb.z(-390034570083114L) */, "未知" /* cnb.z(-390000210344746L) */);
+                        return ((Properties) this.b.e.getValue()).getProperty("version" /* cnb.z(-390034570083114L) */,
+                                "未知" /* cnb.z(-390000210344746L) */);
                     case 4:
-                        return ((Properties) this.b.e.getValue()).getProperty("updateTime" /* cnb.z(-390004505312042L) */, "未知" /* cnb.z(-389922900933418L) */);
+                        return ((Properties) this.b.e.getValue()).getProperty("updateTime" /*
+                                                                                            * cnb.z(-390004505312042L)
+                                                                                            */, "未知" /*
+                                                                                                      * cnb.z(-
+                                                                                                      * 389922900933418L)
+                                                                                                      */);
                     default:
                         ctx ctxVar2 = this.b;
                         File file2 = ctxVar2.d;
@@ -241,17 +277,26 @@ public final class ctx {
                         Properties properties = new Properties();
                         ctx ctxVar = this.b;
                         if (ctxVar.c.exists()) {
-                            properties.load(new BufferedReader(new InputStreamReader(new FileInputStream(ctxVar.c), uj.a), 8192));
+                            properties.load(new BufferedReader(
+                                    new InputStreamReader(new FileInputStream(ctxVar.c), uj.a), 8192));
                         }
                         return properties;
                     case 1:
-                        return ((Properties) this.b.e.getValue()).getProperty("name" /* cnb.z(-401639571716906L) */, "未知" /* cnb.z(-401652456618794L) */);
+                        return ((Properties) this.b.e.getValue()).getProperty("name" /* cnb.z(-401639571716906L) */,
+                                "未知" /* cnb.z(-401652456618794L) */);
                     case 2:
-                        return ((Properties) this.b.e.getValue()).getProperty("author" /* cnb.z(-401605211978538L) */, "未知" /* cnb.z(-401626686815018L) */);
+                        return ((Properties) this.b.e.getValue()).getProperty("author" /* cnb.z(-401605211978538L) */,
+                                "未知" /* cnb.z(-401626686815018L) */);
                     case 3:
-                        return ((Properties) this.b.e.getValue()).getProperty("version" /* cnb.z(-390034570083114L) */, "未知" /* cnb.z(-390000210344746L) */);
+                        return ((Properties) this.b.e.getValue()).getProperty("version" /* cnb.z(-390034570083114L) */,
+                                "未知" /* cnb.z(-390000210344746L) */);
                     case 4:
-                        return ((Properties) this.b.e.getValue()).getProperty("updateTime" /* cnb.z(-390004505312042L) */, "未知" /* cnb.z(-389922900933418L) */);
+                        return ((Properties) this.b.e.getValue()).getProperty("updateTime" /*
+                                                                                            * cnb.z(-390004505312042L)
+                                                                                            */, "未知" /*
+                                                                                                      * cnb.z(-
+                                                                                                      * 389922900933418L)
+                                                                                                      */);
                     default:
                         ctx ctxVar2 = this.b;
                         File file2 = ctxVar2.d;
@@ -286,17 +331,26 @@ public final class ctx {
                         Properties properties = new Properties();
                         ctx ctxVar = this.b;
                         if (ctxVar.c.exists()) {
-                            properties.load(new BufferedReader(new InputStreamReader(new FileInputStream(ctxVar.c), uj.a), 8192));
+                            properties.load(new BufferedReader(
+                                    new InputStreamReader(new FileInputStream(ctxVar.c), uj.a), 8192));
                         }
                         return properties;
                     case 1:
-                        return ((Properties) this.b.e.getValue()).getProperty("name" /* cnb.z(-401639571716906L) */, "未知" /* cnb.z(-401652456618794L) */);
+                        return ((Properties) this.b.e.getValue()).getProperty("name" /* cnb.z(-401639571716906L) */,
+                                "未知" /* cnb.z(-401652456618794L) */);
                     case 2:
-                        return ((Properties) this.b.e.getValue()).getProperty("author" /* cnb.z(-401605211978538L) */, "未知" /* cnb.z(-401626686815018L) */);
+                        return ((Properties) this.b.e.getValue()).getProperty("author" /* cnb.z(-401605211978538L) */,
+                                "未知" /* cnb.z(-401626686815018L) */);
                     case 3:
-                        return ((Properties) this.b.e.getValue()).getProperty("version" /* cnb.z(-390034570083114L) */, "未知" /* cnb.z(-390000210344746L) */);
+                        return ((Properties) this.b.e.getValue()).getProperty("version" /* cnb.z(-390034570083114L) */,
+                                "未知" /* cnb.z(-390000210344746L) */);
                     case 4:
-                        return ((Properties) this.b.e.getValue()).getProperty("updateTime" /* cnb.z(-390004505312042L) */, "未知" /* cnb.z(-389922900933418L) */);
+                        return ((Properties) this.b.e.getValue()).getProperty("updateTime" /*
+                                                                                            * cnb.z(-390004505312042L)
+                                                                                            */, "未知" /*
+                                                                                                      * cnb.z(-
+                                                                                                      * 389922900933418L)
+                                                                                                      */);
                     default:
                         ctx ctxVar2 = this.b;
                         File file2 = ctxVar2.d;
@@ -321,15 +375,15 @@ public final class ctx {
     }
 
     public final boolean equals(Object obj) {
-        return (obj instanceof ctx) && bzo.f(((ctx) obj).b.getAbsolutePath(), this.b.getAbsolutePath());
+        return (obj instanceof ctx) && nullSafeIsEqual(((ctx) obj).b.getAbsolutePath(), this.b.getAbsolutePath());
     }
 
     public final int hashCode() {
         return this.b.getAbsolutePath().hashCode();
     }
 
-    /* JADX WARN: Found duplicated region for block: B:29:0x0068  */
-    /* JADX WARN: Found duplicated region for block: B:33:0x00e0  */
+    /* JADX WARN: Found duplicated region for block: B:29:0x0068 */
+    /* JADX WARN: Found duplicated region for block: B:33:0x00e0 */
     /* JADX WARN: Found duplicated region for block: B:40:? A[RETURN, SYNTHETIC] */
     public final Object n(String str, Object... objArr) throws IOException {
         Object objX;
@@ -356,7 +410,9 @@ public final class ctx {
                     thB = dcy.b(objX);
                     if (thB != null) {
                         ArrayList arrayList = ewq.a;
-                        ewq.e("Plugin[" /* cnb.z(-402288111778602L) */ + this.f + "]: callBshMethod " /* cnb.z(-402253752040234L) */ + str + " Failed: " /* cnb.z(-402193622498090L) */ + thB.getMessage(), null, 14);
+                        ewq.e("Plugin[" /* cnb.z(-402288111778602L) */ + this.f
+                                + "]: callBshMethod " /* cnb.z(-402253752040234L) */ + str
+                                + " Failed: " /* cnb.z(-402193622498090L) */ + thB.getMessage(), null, 14);
                         StringBuilder sb = new StringBuilder();
                         sb.append("callBshMethod " /* cnb.z(-402167852694314L) */);
                         sb.append(str);
@@ -370,7 +426,7 @@ public final class ctx {
                     return objX;
                 }
                 BshMethod bshMethod2 = methods[i];
-                if (bzo.f(bshMethod2.getName(), str)) {
+                if (nullSafeIsEqual(bshMethod2.getName(), str)) {
                     if (!z) {
                         z = true;
                         bshMethod = bshMethod2;
@@ -383,12 +439,15 @@ public final class ctx {
             if (bshMethod != null) {
                 objX = bshMethod.invoke(objArr, o());
                 if (objX instanceof Primitive) {
-                    objX = bzo.f(((Primitive) objX).getType(), Void.TYPE) ? ens.a : ((Primitive) objX).getValue();
+                    objX = nullSafeIsEqual(((Primitive) objX).getType(), Void.TYPE) ? ens.a
+                            : ((Primitive) objX).getValue();
                 }
                 thB = dcy.b(objX);
                 if (thB != null) {
                     ArrayList arrayList2 = ewq.a;
-                    ewq.e("Plugin[" /* cnb.z(-402288111778602L) */ + this.f + "]: callBshMethod " /* cnb.z(-402253752040234L) */ + str + " Failed: " /* cnb.z(-402193622498090L) */ + thB.getMessage(), null, 14);
+                    ewq.e("Plugin[" /* cnb.z(-402288111778602L) */ + this.f
+                            + "]: callBshMethod " /* cnb.z(-402253752040234L) */ + str
+                            + " Failed: " /* cnb.z(-402193622498090L) */ + thB.getMessage(), null, 14);
                     StringBuilder sb2 = new StringBuilder();
                     sb2.append("callBshMethod " /* cnb.z(-402167852694314L) */);
                     sb2.append(str);
@@ -411,9 +470,9 @@ public final class ctx {
         String str = this.f;
         boolean zContainsKey = map2.containsKey(str);
         File file = this.b;
-        if (zContainsKey && bzo.f(map.get(str), bht.w(file))) {
+        if (zContainsKey && nullSafeIsEqual(map.get(str), bht.w(file))) {
             Object obj = map2.get(str);
-            bzo.n(obj);
+            throwIfVar1IsNull(obj);
             return (Interpreter) obj;
         }
         Interpreter interpreter = new Interpreter();
@@ -453,7 +512,7 @@ public final class ctx {
     }
 
     public final boolean p() {
-        io ioVar = bhs.h;
+        DefaultConfig ioVar = bhs.h;
         if (ioVar != null) {
             return ioVar.ah(this.l, false);
         }
@@ -461,7 +520,7 @@ public final class ctx {
     }
 
     public final void q(boolean z) {
-        io ioVar = bhs.h;
+        DefaultConfig ioVar = bhs.h;
         if (ioVar == null) {
             throw new IllegalArgumentException("PluginConfig must be init" /* cnb.z(-29368986368810L) */.toString());
         }

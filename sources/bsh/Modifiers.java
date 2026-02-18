@@ -87,7 +87,7 @@ public class Modifiers implements Serializable, Cloneable {
         if (num != null) {
             return num.intValue();
         }
-        throw new IllegalStateException(bjs.o("Unknown modifier: '", str, "'"));
+        throw new IllegalStateException(concat("Unknown modifier: '", str, "'"));
     }
 
     public void addModifier(String str) {
@@ -130,7 +130,8 @@ public class Modifiers implements Serializable, Cloneable {
         sb.append(Modifier.toString(this.modifiers));
         int i = this.modifiers;
         Map<String, Integer> map = CONST;
-        sb.append((i & map.get("enum").intValue()) != 0 ? " enum" : (this.modifiers & map.get("default").intValue()) != 0 ? " default" : "");
+        sb.append((i & map.get("enum").intValue()) != 0 ? " enum"
+                : (this.modifiers & map.get("default").intValue()) != 0 ? " default" : "");
         return sb.toString();
     }
 
@@ -150,7 +151,10 @@ public class Modifiers implements Serializable, Cloneable {
         this.modifiers = i | this.modifiers;
     }
 
-    /* JADX INFO: renamed from: clone, reason: merged with bridge method [inline-methods] */
+    /*
+     * JADX INFO: renamed from: clone, reason: merged with bridge method
+     * [inline-methods]
+     */
     public Modifiers m2clone() {
         return (Modifiers) super.clone();
     }

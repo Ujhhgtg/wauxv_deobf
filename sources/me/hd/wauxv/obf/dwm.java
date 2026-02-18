@@ -6,7 +6,7 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class dwm {
     public static final dwl Companion = new dwl();
-    public static final btt[] a = {ewz.am(btx.a, new dtr(4)), null, null};
+    public static final btt[] a = { ewz.am(btx.a, new dtr(4)), null, null };
     public final List b;
     public final String c;
     public final String d;
@@ -29,7 +29,8 @@ public final class dwm {
             return false;
         }
         dwm dwmVar = (dwm) obj;
-        return bzo.f(this.b, dwmVar.b) && bzo.f(this.c, dwmVar.c) && bzo.f(this.d, dwmVar.d);
+        return nullSafeIsEqual(this.b, dwmVar.b) && nullSafeIsEqual(this.c, dwmVar.c)
+                && nullSafeIsEqual(this.d, dwmVar.d);
     }
 
     public final int hashCode() {
@@ -46,6 +47,6 @@ public final class dwm {
         sb.append("cy1Proto(post_guide_topic_tags=" /* cnb.z(-160313949289258L) */);
         yg.v(sb, this.b, -159626754521898L);
         yg.u(sb, this.c, -159506495437610L);
-        return bjs.q(sb, this.d, ')');
+        return concat(sb, this.d, ')');
     }
 }

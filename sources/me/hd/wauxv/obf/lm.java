@@ -95,14 +95,17 @@ public final class lm implements dhy {
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:25:0x009e A[LOOP:1: B:12:0x0065->B:25:0x009e, LOOP_END] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:25:0x009e A[LOOP:1:
+     * B:12:0x0065->B:25:0x009e, LOOP_END]
+     */
     /* JADX WARN: Found duplicated region for block: B:49:0x00a0 A[SYNTHETIC] */
     @Override // me.hd.wauxv.obf.dhy
     public final void write(rh rhVar, long j) throws IOException {
         lo loVar;
         switch (this.a) {
             case 0:
-                bzo.q(rhVar, "source");
+                throwIfVar1IsNull(rhVar, "source");
                 aye.n(rhVar.b, 0L, j);
                 long j2 = j;
                 while (true) {
@@ -111,7 +114,7 @@ public final class lm implements dhy {
                         return;
                     }
                     dfj dfjVar = rhVar.a;
-                    bzo.n(dfjVar);
+                    throwIfVar1IsNull(dfjVar);
                     try {
                         try {
                             while (j3 < 65536) {
@@ -128,7 +131,7 @@ public final class lm implements dhy {
                                     j2 -= j3;
                                 } else {
                                     dfjVar = dfjVar.f;
-                                    bzo.n(dfjVar);
+                                    throwIfVar1IsNull(dfjVar);
                                 }
                             }
                             dhyVar.write(rhVar, j3);
@@ -152,12 +155,12 @@ public final class lm implements dhy {
                 }
                 break;
             default:
-                bzo.q(rhVar, "source");
+                throwIfVar1IsNull(rhVar, "source");
                 aye.n(rhVar.b, 0L, j);
                 while (j > 0) {
                     ((ekc) this.c).throwIfReached();
                     dfj dfjVar2 = rhVar.a;
-                    bzo.n(dfjVar2);
+                    throwIfVar1IsNull(dfjVar2);
                     int iMin = (int) Math.min(j, dfjVar2.c - dfjVar2.b);
                     ((OutputStream) this.b).write(dfjVar2.a, dfjVar2.b, iMin);
                     int i = dfjVar2.b + iMin;

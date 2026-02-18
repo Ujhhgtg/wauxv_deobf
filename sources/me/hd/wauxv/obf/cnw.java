@@ -6,7 +6,7 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class cnw {
     public static final cns Companion = new cns();
-    public static final btt[] a = {null, null, ewz.am(btx.a, new cfh(12))};
+    public static final btt[] a = { null, null, ewz.am(btx.a, new cfh(12)) };
     public final nm b;
     public final int c;
     public final List d;
@@ -29,7 +29,7 @@ public final class cnw {
             return false;
         }
         cnw cnwVar = (cnw) obj;
-        return bzo.f(this.b, cnwVar.b) && this.c == cnwVar.c && bzo.f(this.d, cnwVar.d);
+        return nullSafeIsEqual(this.b, cnwVar.b) && this.c == cnwVar.c && nullSafeIsEqual(this.d, cnwVar.d);
     }
 
     public final int hashCode() {

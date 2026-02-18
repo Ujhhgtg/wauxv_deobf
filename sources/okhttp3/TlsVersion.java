@@ -1,7 +1,7 @@
 package okhttp3;
 
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -15,15 +15,21 @@ public enum TlsVersion {
     public static final Companion Companion = new Companion(null);
     private final String javaName;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
         }
 
-        /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
+        /*
+         * JADX WARN: Failed to restore switch over string. Please report as a
+         * decompilation issue
+         */
         public final TlsVersion forJavaName(String str) {
-            bzo.q(str, "javaName");
+            throwIfVar1IsNull(str, "javaName");
             int iHashCode = str.hashCode();
             if (iHashCode != 79201641) {
                 if (iHashCode != 79923350) {

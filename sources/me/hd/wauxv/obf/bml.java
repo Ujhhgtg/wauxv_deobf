@@ -43,7 +43,10 @@ public final class bml {
                 objX = bhu.x(th);
             }
             if (!exm.b && exm.g != null) {
-                ewq.g(4, "You cannot load a hooker in \"onInit\" or \"onXposedEvent\" method! Aborted" /* cnb.z(-77674483546922L) */, null);
+                ewq.g(4, "You cannot load a hooker in \"onInit\" or \"onXposedEvent\" method! Aborted" /*
+                                                                                                        * cnb.z(-
+                                                                                                        * 77674483546922L)
+                                                                                                        */, null);
                 return;
             }
             blx blxVar2 = new blx(4);
@@ -79,7 +82,8 @@ public final class bml {
         ClassLoader classLoader3 = classLoader;
         ApplicationInfo applicationInfo = loadPackageParam2 != null ? loadPackageParam2.appInfo : null;
         boolean z4 = exm.a;
-        if ((bzo.f(str2, "com.miui.contentcatcher") || bzo.f(str2, "com.miui.catcherpatch")) && (classLoader2 = exm.class.getClassLoader()) != null && zf.g(classLoader2, "android.miui.R")) {
+        if ((nullSafeIsEqual(str2, "com.miui.contentcatcher") || nullSafeIsEqual(str2, "com.miui.catcherpatch"))
+                && (classLoader2 = exm.class.getClassLoader()) != null && zf.g(classLoader2, "android.miui.R")) {
             return;
         }
         int iOrdinal = bmkVar4.ordinal();
@@ -91,7 +95,7 @@ public final class bml {
                 bmk bmkVar5 = bmk.c;
                 if (!exm.k(str2, bmkVar5)) {
                     ki.a.getClass();
-                    if (bzo.f(str2, ki.i())) {
+                    if (nullSafeIsEqual(str2, ki.i())) {
                         cscVarJ = exm.j(bmkVar5, str2, null, null, null, null, 28);
                     }
                 }
@@ -106,7 +110,8 @@ public final class bml {
         if (cscVarJ != null) {
             try {
                 bmk bmkVar6 = cscVarJ.a;
-                if ((bmkVar6 == bmkVar || (bmkVar6 != bmkVar && (cscVarJ.d instanceof PathClassLoader))) && (blxVar = exm.g) != null) {
+                if ((bmkVar6 == bmkVar || (bmkVar6 != bmkVar && (cscVarJ.d instanceof PathClassLoader)))
+                        && (blxVar = exm.g) != null) {
                     LinkedHashMap linkedHashMap = exm.d;
                     String str4 = "android-zygote";
                     csb csbVar = (csb) linkedHashMap.get(bmkVar6 == bmkVar ? "android-zygote" : cscVarJ.b);

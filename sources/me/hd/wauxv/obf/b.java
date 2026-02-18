@@ -9,7 +9,7 @@ public abstract class b {
 
     static {
         byte[] bytes = "0123456789abcdef".getBytes(uj.a);
-        bzo.p(bytes, "this as java.lang.String).getBytes(charset)");
+        throwIfVar1IsNull(bytes, "this as java.lang.String).getBytes(charset)");
         a = bytes;
     }
 
@@ -19,7 +19,7 @@ public abstract class b {
         for (int i4 = 1; i4 < i2; i4++) {
             if (i == i3) {
                 dfjVar = dfjVar.f;
-                bzo.n(dfjVar);
+                throwIfVar1IsNull(dfjVar);
                 bArr2 = dfjVar.a;
                 i = dfjVar.b;
                 i3 = dfjVar.c;
@@ -46,7 +46,10 @@ public abstract class b {
         return strZ2;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:49:0x00a3 A[LOOP:0: B:8:0x001e->B:49:0x00a3, LOOP_END] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:49:0x00a3 A[LOOP:0:
+     * B:8:0x001e->B:49:0x00a3, LOOP_END]
+     */
     /* JADX WARN: Found duplicated region for block: B:55:0x00a2 A[SYNTHETIC] */
     public static final int d(rh rhVar, crv crvVar, boolean z) {
         int i;
@@ -54,7 +57,7 @@ public abstract class b {
         int i3;
         dfj dfjVar;
         int i4;
-        bzo.q(crvVar, "options");
+        throwIfVar1IsNull(crvVar, "options");
         dfj dfjVar2 = rhVar.a;
         if (dfjVar2 == null) {
             return z ? -2 : -1;
@@ -86,7 +89,7 @@ public abstract class b {
                         i = iArr[i11 + i10];
                         if (i13 == i6) {
                             dfjVar3 = dfjVar3.f;
-                            bzo.n(dfjVar3);
+                            throwIfVar1IsNull(dfjVar3);
                             int i16 = dfjVar3.b;
                             byte[] bArr2 = dfjVar3.a;
                             i2 = dfjVar3.c;
@@ -122,9 +125,9 @@ public abstract class b {
                 if ((bArr[i5] & 255) == iArr[i11]) {
                     boolean z2 = i20 == i18;
                     if (i19 == i6) {
-                        bzo.n(dfjVar3);
+                        throwIfVar1IsNull(dfjVar3);
                         dfj dfjVar4 = dfjVar3.f;
-                        bzo.n(dfjVar4);
+                        throwIfVar1IsNull(dfjVar4);
                         i3 = dfjVar4.b;
                         byte[] bArr3 = dfjVar4.a;
                         i4 = dfjVar4.c;

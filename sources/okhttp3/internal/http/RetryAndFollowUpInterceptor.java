@@ -15,7 +15,7 @@ import javax.net.ssl.SSLPeerUnverifiedException;
 import me.hd.wauxv.obf.aaz;
 import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.avd;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import okhttp3.HttpUrl;
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
@@ -38,7 +38,10 @@ public final class RetryAndFollowUpInterceptor implements Interceptor {
     private static final int MAX_FOLLOW_UPS = 20;
     private final OkHttpClient client;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
@@ -49,17 +52,20 @@ public final class RetryAndFollowUpInterceptor implements Interceptor {
     }
 
     public RetryAndFollowUpInterceptor(OkHttpClient okHttpClient) {
-        bzo.q(okHttpClient, "client");
+        throwIfVar1IsNull(okHttpClient, "client");
         this.client = okHttpClient;
     }
 
     private final Request buildRedirectRequest(Response response, String str) {
         String strHeader$default;
         HttpUrl httpUrlResolve;
-        if (!this.client.followRedirects() || (strHeader$default = Response.header$default(response, "Location", null, 2, null)) == null || (httpUrlResolve = response.request().url().resolve(strHeader$default)) == null) {
+        if (!this.client.followRedirects()
+                || (strHeader$default = Response.header$default(response, "Location", null, 2, null)) == null
+                || (httpUrlResolve = response.request().url().resolve(strHeader$default)) == null) {
             return null;
         }
-        if (!bzo.f(httpUrlResolve.scheme(), response.request().url().scheme()) && !this.client.followSslRedirects()) {
+        if (!nullSafeIsEqual(httpUrlResolve.scheme(), response.request().url().scheme())
+                && !this.client.followSslRedirects()) {
             return null;
         }
         Request.Builder builderNewBuilder = response.request().newBuilder();
@@ -86,7 +92,8 @@ public final class RetryAndFollowUpInterceptor implements Interceptor {
 
     private final Request followUpRequest(Response response, Exchange exchange) throws ProtocolException {
         RealConnection connection$okhttp;
-        Route route = (exchange == null || (connection$okhttp = exchange.getConnection$okhttp()) == null) ? null : connection$okhttp.route();
+        Route route = (exchange == null || (connection$okhttp = exchange.getConnection$okhttp()) == null) ? null
+                : connection$okhttp.route();
         int iCode = response.code();
         String strMethod = response.request().method();
         if (iCode != 307 && iCode != 308) {
@@ -95,7 +102,8 @@ public final class RetryAndFollowUpInterceptor implements Interceptor {
             }
             if (iCode == 421) {
                 RequestBody requestBodyBody = response.request().body();
-                if ((requestBodyBody != null && requestBodyBody.isOneShot()) || exchange == null || !exchange.isCoalescedConnection$okhttp()) {
+                if ((requestBodyBody != null && requestBodyBody.isOneShot()) || exchange == null
+                        || !exchange.isCoalescedConnection$okhttp()) {
                     return null;
                 }
                 exchange.getConnection$okhttp().noCoalescedConnections$okhttp();
@@ -103,13 +111,14 @@ public final class RetryAndFollowUpInterceptor implements Interceptor {
             }
             if (iCode == 503) {
                 Response responsePriorResponse = response.priorResponse();
-                if ((responsePriorResponse == null || responsePriorResponse.code() != 503) && retryAfter(response, Integer.MAX_VALUE) == 0) {
+                if ((responsePriorResponse == null || responsePriorResponse.code() != 503)
+                        && retryAfter(response, Integer.MAX_VALUE) == 0) {
                     return response.request();
                 }
                 return null;
             }
             if (iCode == 407) {
-                bzo.n(route);
+                throwIfVar1IsNull(route);
                 if (route.proxy().type() == Proxy.Type.HTTP) {
                     return this.client.proxyAuthenticator().authenticate(route, response);
                 }
@@ -124,7 +133,8 @@ public final class RetryAndFollowUpInterceptor implements Interceptor {
                     return null;
                 }
                 Response responsePriorResponse2 = response.priorResponse();
-                if ((responsePriorResponse2 == null || responsePriorResponse2.code() != 408) && retryAfter(response, 0) <= 0) {
+                if ((responsePriorResponse2 == null || responsePriorResponse2.code() != 408)
+                        && retryAfter(response, 0) <= 0) {
                     return response.request();
                 }
                 return null;
@@ -146,19 +156,24 @@ public final class RetryAndFollowUpInterceptor implements Interceptor {
         if (iOException instanceof ProtocolException) {
             return false;
         }
-        return iOException instanceof InterruptedIOException ? (iOException instanceof SocketTimeoutException) && !z : (((iOException instanceof SSLHandshakeException) && (iOException.getCause() instanceof CertificateException)) || (iOException instanceof SSLPeerUnverifiedException)) ? false : true;
+        return iOException instanceof InterruptedIOException ? (iOException instanceof SocketTimeoutException) && !z
+                : (((iOException instanceof SSLHandshakeException)
+                        && (iOException.getCause() instanceof CertificateException))
+                        || (iOException instanceof SSLPeerUnverifiedException)) ? false : true;
     }
 
     private final boolean recover(IOException iOException, RealCall realCall, Request request, boolean z) {
         if (this.client.retryOnConnectionFailure()) {
-            return !(z && requestIsOneShot(iOException, request)) && isRecoverable(iOException, z) && realCall.retryAfterFailure();
+            return !(z && requestIsOneShot(iOException, request)) && isRecoverable(iOException, z)
+                    && realCall.retryAfterFailure();
         }
         return false;
     }
 
     private final boolean requestIsOneShot(IOException iOException, Request request) {
         RequestBody requestBodyBody = request.body();
-        return (requestBodyBody != null && requestBodyBody.isOneShot()) || (iOException instanceof FileNotFoundException);
+        return (requestBodyBody != null && requestBodyBody.isOneShot())
+                || (iOException instanceof FileNotFoundException);
     }
 
     private final int retryAfter(Response response, int i) {
@@ -167,19 +182,19 @@ public final class RetryAndFollowUpInterceptor implements Interceptor {
             return i;
         }
         Pattern patternCompile = Pattern.compile("\\d+");
-        bzo.p(patternCompile, "compile(...)");
+        throwIfVar1IsNull(patternCompile, "compile(...)");
         if (!patternCompile.matcher(strHeader$default).matches()) {
             return Integer.MAX_VALUE;
         }
         Integer numValueOf = Integer.valueOf(strHeader$default);
-        bzo.p(numValueOf, "valueOf(header)");
+        throwIfVar1IsNull(numValueOf, "valueOf(header)");
         return numValueOf.intValue();
     }
 
     @Override // okhttp3.Interceptor
     public Response intercept(Interceptor.Chain chain) {
         Response responseProceed;
-        bzo.q(chain, "chain");
+        throwIfVar1IsNull(chain, "chain");
         RealInterceptorChain realInterceptorChain = (RealInterceptorChain) chain;
         Request request$okhttp = realInterceptorChain.getRequest$okhttp();
         RealCall call$okhttp = realInterceptorChain.getCall$okhttp();
@@ -221,7 +236,8 @@ public final class RetryAndFollowUpInterceptor implements Interceptor {
                 }
             }
             if (response != null) {
-                responseProceed = responseProceed.newBuilder().priorResponse(response.newBuilder().body(null).build()).build();
+                responseProceed = responseProceed.newBuilder().priorResponse(response.newBuilder().body(null).build())
+                        .build();
             }
             response = responseProceed;
             Exchange interceptorScopedExchange$okhttp = call$okhttp.getInterceptorScopedExchange$okhttp();

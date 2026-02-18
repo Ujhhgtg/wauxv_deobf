@@ -15,7 +15,7 @@ public final class bip {
             return false;
         }
         bip bipVar = (bip) obj;
-        return bzo.f(this.a, bipVar.a) && bzo.f(this.b, bipVar.b);
+        return nullSafeIsEqual(this.a, bipVar.a) && nullSafeIsEqual(this.b, bipVar.b);
     }
 
     public final int hashCode() {

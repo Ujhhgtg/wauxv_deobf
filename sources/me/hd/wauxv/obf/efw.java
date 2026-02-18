@@ -32,7 +32,9 @@ public final class efw {
             return false;
         }
         efw efwVar = (efw) obj;
-        return bzo.f(this.a, efwVar.a) && bzo.f(this.b, efwVar.b) && bzo.f(this.c, efwVar.c) && bzo.f(this.d, efwVar.d) && bzo.f(this.e, efwVar.e) && bzo.f(this.f, efwVar.f);
+        return nullSafeIsEqual(this.a, efwVar.a) && nullSafeIsEqual(this.b, efwVar.b)
+                && nullSafeIsEqual(this.c, efwVar.c) && nullSafeIsEqual(this.d, efwVar.d)
+                && nullSafeIsEqual(this.e, efwVar.e) && nullSafeIsEqual(this.f, efwVar.f);
     }
 
     public final int hashCode() {
@@ -58,6 +60,6 @@ public final class efw {
         dkz.ad(sb, this.c, -286878045567786L);
         dkz.ad(sb, this.d, -286869455633194L);
         dts.g(sb, this.e, -286800736156458L);
-        return bjs.p(sb, this.f, ')');
+        return concat(sb, this.f, ')');
     }
 }

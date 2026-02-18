@@ -16,7 +16,7 @@ import me.hd.wauxv.obf.bmo;
 import me.hd.wauxv.obf.bmu;
 import me.hd.wauxv.obf.bpy;
 import me.hd.wauxv.obf.but;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.chm;
 import me.hd.wauxv.obf.cme;
 import me.hd.wauxv.obf.cmq;
@@ -130,7 +130,8 @@ public final class PluginOtherMethod {
     }
 
     @cty
-    public final void uploadDeviceStep(long j) throws IllegalAccessException, NoSuchMethodException, InstantiationException, InvocationTargetException {
+    public final void uploadDeviceStep(long j)
+            throws IllegalAccessException, NoSuchMethodException, InstantiationException, InvocationTargetException {
         cmr.a.getClass();
         Constructor constructorBa = emn.ba(cmq.a);
         String strZ = "" /* cnb.z(-140136192932650L) */;
@@ -146,7 +147,7 @@ public final class PluginOtherMethod {
         Integer numValueOf3 = Integer.valueOf((int) j);
         dgd.a.getClass();
         Object objInvoke = emn.bb(dgc.a).invoke(null, null);
-        bzo.n(objInvoke);
+        throwIfVar1IsNull(objInvoke);
         cme.b(cme.a, constructorBa.newInstance(strZ, strZ2, numValueOf, numValueOf2, numValueOf3, objInvoke, 1));
     }
 }

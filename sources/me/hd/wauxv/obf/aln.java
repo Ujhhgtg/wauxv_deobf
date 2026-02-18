@@ -22,16 +22,16 @@ public final class aln {
     public boolean f;
 
     public aln(ViewGroup viewGroup) {
-        bzo.q(viewGroup, "container");
+        throwIfVar1IsNull(viewGroup, "container");
         this.a = viewGroup;
         this.b = new ArrayList();
         this.c = new ArrayList();
     }
 
     public static final aln g(ViewGroup viewGroup, beg begVar) {
-        bzo.q(viewGroup, "container");
-        bzo.q(begVar, "fragmentManager");
-        bzo.p(begVar.cf(), "fragmentManager.specialEffectsControllerFactory");
+        throwIfVar1IsNull(viewGroup, "container");
+        throwIfVar1IsNull(begVar, "fragmentManager");
+        throwIfVar1IsNull(begVar.cf(), "fragmentManager.specialEffectsControllerFactory");
         Object tag = viewGroup.getTag(R.id.special_effects_controller_view_tag);
         if (tag instanceof aln) {
             return (aln) tag;
@@ -83,7 +83,7 @@ public final class aln {
     }
 
     public final void i(dlr dlrVar) {
-        bzo.q(dlrVar, "operation");
+        throwIfVar1IsNull(dlrVar, "operation");
         if (dlrVar.i) {
             bjs.a(dlrVar.a, dlrVar.c.dd(), this.a);
             dlrVar.i = false;
@@ -106,7 +106,7 @@ public final class aln {
             next = it.next();
             dlr dlrVar = (dlr) next;
             View view = dlrVar.c.bz;
-            bzo.p(view, "operation.fragment.mView");
+            throwIfVar1IsNull(view, "operation.fragment.mView");
             if (view.getAlpha() != 0.0f || view.getVisibility() != 0) {
                 int visibility = view.getVisibility();
                 if (visibility == 0) {
@@ -115,7 +115,7 @@ public final class aln {
                     }
                 } else {
                     if (visibility != 4 && visibility != 8) {
-                        throw new IllegalArgumentException(bjs.i(visibility, "Unknown visibility "));
+                        throw new IllegalArgumentException(concatVar2Var1(visibility, "Unknown visibility "));
                     }
                 }
             }
@@ -126,13 +126,13 @@ public final class aln {
             Object objPrevious = listIterator.previous();
             dlr dlrVar3 = (dlr) objPrevious;
             View view2 = dlrVar3.c.bz;
-            bzo.p(view2, "operation.fragment.mView");
+            throwIfVar1IsNull(view2, "operation.fragment.mView");
             if (view2.getAlpha() != 0.0f || view2.getVisibility() != 0) {
                 int visibility2 = view2.getVisibility();
                 if (visibility2 == 0) {
                     continue;
                 } else if (visibility2 != 4 && visibility2 != 8) {
-                    throw new IllegalArgumentException(bjs.i(visibility2, "Unknown visibility "));
+                    throw new IllegalArgumentException(concatVar2Var1(visibility2, "Unknown visibility "));
                 }
             }
             if (dlrVar3.a == 2) {
@@ -223,8 +223,8 @@ public final class aln {
         for (alh alhVar : arrayList2) {
             Context context = this.a.getContext();
             dlr dlrVar6 = (dlr) alhVar.g;
-            bzo.p(context, com.umeng.analytics.pro.f.X);
-            io ioVarJ = alhVar.j(context);
+            throwIfVar1IsNull(context, "context");
+            DefaultConfig ioVarJ = alhVar.j(context);
             if (ioVarJ != null) {
                 if (((AnimatorSet) ioVarJ.d) == null) {
                     arrayList6.add(alhVar);
@@ -237,7 +237,8 @@ public final class aln {
                         dlrVar6.j.add(new alj(alhVar));
                         z3 = true;
                     } else if (beg.ar(2)) {
-                        Log.v("FragmentManager", "Ignoring Animator set on " + bdjVar3 + " as this Fragment was involved in a Transition.");
+                        Log.v("FragmentManager", "Ignoring Animator set on " + bdjVar3
+                                + " as this Fragment was involved in a Transition.");
                     }
                 }
             }
@@ -249,16 +250,18 @@ public final class aln {
                 if (!z3) {
                     dlrVar7.j.add(new alg(alhVar2));
                 } else if (beg.ar(2)) {
-                    Log.v("FragmentManager", "Ignoring Animation set on " + bdjVar4 + " as Animations cannot run alongside Animators.");
+                    Log.v("FragmentManager",
+                            "Ignoring Animation set on " + bdjVar4 + " as Animations cannot run alongside Animators.");
                 }
             } else if (beg.ar(2)) {
-                Log.v("FragmentManager", "Ignoring Animation set on " + bdjVar4 + " as Animations cannot run alongside Transitions.");
+                Log.v("FragmentManager",
+                        "Ignoring Animation set on " + bdjVar4 + " as Animations cannot run alongside Transitions.");
             }
         }
     }
 
     public final void k(List list) {
-        bzo.q(list, "operations");
+        throwIfVar1IsNull(list, "operations");
         ArrayList arrayList = new ArrayList();
         Iterator it = list.iterator();
         while (it.hasNext()) {
@@ -287,7 +290,7 @@ public final class aln {
         synchronized (this.b) {
             try {
                 bdj bdjVar = bfbVar.c;
-                bzo.p(bdjVar, "fragmentStateManager.fragment");
+                throwIfVar1IsNull(bdjVar, "fragmentStateManager.fragment");
                 dlr dlrVarN = n(bdjVar);
                 if (dlrVarN == null) {
                     bdj bdjVar2 = bfbVar.c;
@@ -336,7 +339,8 @@ public final class aln {
                 for (dlr dlrVar2 : arrayListAb) {
                     if (this.d) {
                         if (beg.ar(2)) {
-                            Log.v("FragmentManager", "SpecialEffectsController: Completing non-seekable operation " + dlrVar2);
+                            Log.v("FragmentManager",
+                                    "SpecialEffectsController: Completing non-seekable operation " + dlrVar2);
                         }
                         dlrVar2.n();
                     } else {
@@ -375,7 +379,8 @@ public final class aln {
                     }
                     this.d = z;
                     if (beg.ar(2)) {
-                        Log.v("FragmentManager", "SpecialEffectsController: Operation seekable = " + zH + " \ntransition = " + z2);
+                        Log.v("FragmentManager",
+                                "SpecialEffectsController: Operation seekable = " + zH + " \ntransition = " + z2);
                     }
                     if (!z2) {
                         q(arrayListAb2);
@@ -404,7 +409,7 @@ public final class aln {
         while (it.hasNext()) {
             next = it.next();
             dlr dlrVar = (dlr) next;
-            if (bzo.f(dlrVar.c, bdjVar) && !dlrVar.e) {
+            if (nullSafeIsEqual(dlrVar.c, bdjVar) && !dlrVar.e) {
                 return (dlr) next;
             }
         }
@@ -418,7 +423,7 @@ public final class aln {
         while (it.hasNext()) {
             next = it.next();
             dlr dlrVar = (dlr) next;
-            if (bzo.f(dlrVar.c, bdjVar) && !dlrVar.e) {
+            if (nullSafeIsEqual(dlrVar.c, bdjVar) && !dlrVar.e) {
                 return (dlr) next;
             }
         }
@@ -442,7 +447,9 @@ public final class aln {
                 }
                 for (dlr dlrVar : arrayListAb) {
                     if (beg.ar(2)) {
-                        Log.v("FragmentManager", "SpecialEffectsController: " + (zIsAttachedToWindow ? "" : "Container " + this.a + " is not attached to window. ") + "Cancelling running operation " + dlrVar);
+                        Log.v("FragmentManager", "SpecialEffectsController: "
+                                + (zIsAttachedToWindow ? "" : "Container " + this.a + " is not attached to window. ")
+                                + "Cancelling running operation " + dlrVar);
                     }
                     dlrVar.m(this.a);
                 }
@@ -453,7 +460,9 @@ public final class aln {
                 }
                 for (dlr dlrVar2 : arrayListAb2) {
                     if (beg.ar(2)) {
-                        Log.v("FragmentManager", "SpecialEffectsController: " + (zIsAttachedToWindow ? "" : "Container " + this.a + " is not attached to window. ") + "Cancelling pending operation " + dlrVar2);
+                        Log.v("FragmentManager", "SpecialEffectsController: "
+                                + (zIsAttachedToWindow ? "" : "Container " + this.a + " is not attached to window. ")
+                                + "Cancelling pending operation " + dlrVar2);
                     }
                     dlrVar2.m(this.a);
                 }
@@ -473,18 +482,20 @@ public final class aln {
                 int i2 = dlrVar.b;
                 if (i2 == 2) {
                     bdj bdjVar = bfbVar.c;
-                    bzo.p(bdjVar, "fragmentStateManager.fragment");
+                    throwIfVar1IsNull(bdjVar, "fragmentStateManager.fragment");
                     View viewFindFocus = bdjVar.bz.findFocus();
                     if (viewFindFocus != null) {
                         bdjVar.co().k = viewFindFocus;
                         if (beg.ar(2)) {
-                            Log.v("FragmentManager", "requestFocus: Saved focused view " + viewFindFocus + " for Fragment " + bdjVar);
+                            Log.v("FragmentManager",
+                                    "requestFocus: Saved focused view " + viewFindFocus + " for Fragment " + bdjVar);
                         }
                     }
                     View viewDd = dlrVar.c.dd();
                     if (viewDd.getParent() == null) {
                         if (beg.ar(2)) {
-                            Log.v("FragmentManager", "Adding fragment " + bdjVar + " view " + viewDd + " to container in onStart");
+                            Log.v("FragmentManager",
+                                    "Adding fragment " + bdjVar + " view " + viewDd + " to container in onStart");
                         }
                         bfbVar.g();
                         viewDd.setAlpha(0.0f);
@@ -506,10 +517,11 @@ public final class aln {
                     }
                 } else if (i2 == 3) {
                     bdj bdjVar2 = bfbVar.c;
-                    bzo.p(bdjVar2, "fragmentStateManager.fragment");
+                    throwIfVar1IsNull(bdjVar2, "fragmentStateManager.fragment");
                     View viewDd2 = bdjVar2.dd();
                     if (beg.ar(2)) {
-                        Log.v("FragmentManager", "Clearing focus " + viewDd2.findFocus() + " on view " + viewDd2 + " for Fragment " + bdjVar2);
+                        Log.v("FragmentManager", "Clearing focus " + viewDd2.findFocus() + " on view " + viewDd2
+                                + " for Fragment " + bdjVar2);
                     }
                     viewDd2.clearFocus();
                 }
@@ -526,7 +538,7 @@ public final class aln {
             dlq dlqVar = (dlq) listZ.get(i3);
             dlqVar.getClass();
             ViewGroup viewGroup = this.a;
-            bzo.q(viewGroup, "container");
+            throwIfVar1IsNull(viewGroup, "container");
             if (!dlqVar.g) {
                 dlqVar.f(viewGroup);
             }
@@ -543,7 +555,7 @@ public final class aln {
                     i = 4;
                     if (visibility != 4) {
                         if (visibility != 8) {
-                            throw new IllegalArgumentException(bjs.i(visibility, "Unknown visibility "));
+                            throw new IllegalArgumentException(concatVar2Var1(visibility, "Unknown visibility "));
                         }
                         i = 3;
                     }

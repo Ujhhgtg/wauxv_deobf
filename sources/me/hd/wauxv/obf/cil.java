@@ -19,14 +19,14 @@ public final class cil implements Comparator {
             case 0:
                 Comparable comparable = (Comparable) obj;
                 Comparable comparable2 = (Comparable) obj2;
-                bzo.q(comparable, com.umeng.analytics.pro.bt.at);
-                bzo.q(comparable2, "b");
+                throwIfVar1IsNull(comparable, com.umeng.analytics.pro.bt.at);
+                throwIfVar1IsNull(comparable2, "b");
                 return comparable.compareTo(comparable2);
             default:
                 Comparable comparable3 = (Comparable) obj;
                 Comparable comparable4 = (Comparable) obj2;
-                bzo.q(comparable3, com.umeng.analytics.pro.bt.at);
-                bzo.q(comparable4, "b");
+                throwIfVar1IsNull(comparable3, com.umeng.analytics.pro.bt.at);
+                throwIfVar1IsNull(comparable4, "b");
                 return comparable4.compareTo(comparable3);
         }
     }

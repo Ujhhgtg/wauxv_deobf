@@ -32,7 +32,9 @@ public final class dzy {
             return false;
         }
         dzy dzyVar = (dzy) obj;
-        return bzo.f(this.a, dzyVar.a) && bzo.f(this.b, dzyVar.b) && bzo.f(this.c, dzyVar.c) && bzo.f(this.d, dzyVar.d) && bzo.f(this.e, dzyVar.e) && bzo.f(this.f, dzyVar.f);
+        return nullSafeIsEqual(this.a, dzyVar.a) && nullSafeIsEqual(this.b, dzyVar.b)
+                && nullSafeIsEqual(this.c, dzyVar.c) && nullSafeIsEqual(this.d, dzyVar.d)
+                && nullSafeIsEqual(this.e, dzyVar.e) && nullSafeIsEqual(this.f, dzyVar.f);
     }
 
     public final int hashCode() {
@@ -58,6 +60,6 @@ public final class dzy {
         yg.u(sb, this.c, -220842923391786L);
         bjs.w(sb, this.d, -220791383784234L);
         dkz.ad(sb, this.e, -220177203460906L);
-        return bjs.q(sb, this.f, ')');
+        return concat(sb, this.f, ')');
     }
 }

@@ -72,7 +72,7 @@ public final class ewq {
             }
         }
         if (iOrdinal != 3) {
-            throw new abt();
+            throw new QueryDidNotReturnUniqueResultRuntimeException();
         }
         k(ewrVar);
         boolean z4 = exm.a;
@@ -90,9 +90,10 @@ public final class ewq {
                 int iOrdinal = bhs.r().ordinal();
                 if (iOrdinal != 0) {
                     if (iOrdinal == 1) {
-                        throw new IllegalStateException("YukiHookAPI cannot support current Hook API or cannot found any available Hook APIs in current environment");
+                        throw new IllegalStateException(
+                                "YukiHookAPI cannot support current Hook API or cannot found any available Hook APIs in current environment");
                     }
-                    throw new abt();
+                    throw new QueryDidNotReturnUniqueResultRuntimeException();
                 }
                 XposedBridge.log(string);
                 if (th != null) {

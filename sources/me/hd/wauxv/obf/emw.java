@@ -11,7 +11,7 @@ public final class emw extends cvj {
     @Override // me.hd.wauxv.obf.cvj
     public final Object c() {
         int[] iArrCopyOf = Arrays.copyOf(this.a, this.b);
-        bzo.p(iArrCopyOf, "copyOf(...)");
+        throwIfVar1IsNull(iArrCopyOf, "copyOf(...)");
         return new emv(iArrCopyOf);
     }
 
@@ -24,7 +24,7 @@ public final class emw extends cvj {
                 i = length;
             }
             int[] iArrCopyOf = Arrays.copyOf(iArr, i);
-            bzo.p(iArrCopyOf, "copyOf(...)");
+            throwIfVar1IsNull(iArrCopyOf, "copyOf(...)");
             this.a = iArrCopyOf;
         }
     }

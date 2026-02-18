@@ -23,7 +23,9 @@ public final class csv implements ParameterizedType, Type {
             return false;
         }
         ParameterizedType parameterizedType = (ParameterizedType) obj;
-        return bzo.f(this.a, parameterizedType.getRawType()) && bzo.f(this.b, parameterizedType.getOwnerType()) && Arrays.equals(this.c, parameterizedType.getActualTypeArguments());
+        return nullSafeIsEqual(this.a, parameterizedType.getRawType())
+                && nullSafeIsEqual(this.b, parameterizedType.getOwnerType())
+                && Arrays.equals(this.c, parameterizedType.getActualTypeArguments());
     }
 
     @Override // java.lang.reflect.ParameterizedType

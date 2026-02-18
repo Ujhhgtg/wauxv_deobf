@@ -29,7 +29,7 @@ import org.xmlpull.v1.XmlPullParserException;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public abstract class bzo {
+public abstract class KotlinHelpers {
     public static final int[] a = new int[0];
     public static final Object[] b = new Object[0];
     public static final Object c = new Object();
@@ -40,7 +40,8 @@ public abstract class bzo {
         if (ad(b3) || ((b2 == -32 && b3 < -96) || ((b2 == -19 && b3 >= -96) || ad(b4)))) {
             throw new IllegalArgumentException("Invalid UTF-8");
         }
-        cArr[i] = (char) (((b2 & com.umeng.analytics.pro.dn.m) << 12) | ((b3 & JSONB.Constants.BC_INT32_BYTE_MAX) << 6) | (b4 & JSONB.Constants.BC_INT32_BYTE_MAX));
+        cArr[i] = (char) (((b2 & com.umeng.analytics.pro.dn.m) << 12) | ((b3 & JSONB.Constants.BC_INT32_BYTE_MAX) << 6)
+                | (b4 & JSONB.Constants.BC_INT32_BYTE_MAX));
     }
 
     public static void ab(byte b2, byte b3, char[] cArr, int i) {
@@ -70,21 +71,18 @@ public abstract class bzo {
             return (i6 < i7 || rect.right <= i7) && rect.right < rect2.right;
         }
         if (i != 130) {
-            throw new IllegalArgumentException("direction must be one of {FOCUS_UP, FOCUS_DOWN, FOCUS_LEFT, FOCUS_RIGHT}.");
+            throw new IllegalArgumentException(
+                    "direction must be one of {FOCUS_UP, FOCUS_DOWN, FOCUS_LEFT, FOCUS_RIGHT}.");
         }
         int i8 = rect.top;
         int i9 = rect2.top;
         return (i8 < i9 || rect.bottom <= i9) && rect.bottom < rect2.bottom;
     }
 
-    public static boolean ad(byte b2) {
-        return b2 > -65;
-    }
-
-    public static final boolean ae(String str, Bundle bundle) {
-        q(str, "key");
-        return bundle.containsKey(str) && bundle.get(str) == null;
-    }
+    // public static final boolean ae(String str, Bundle bundle) {
+    // throwIfVar1IsNull(str, "key");
+    // return bundle.containsKey(str) && bundle.get(str) == null;
+    // }
 
     public static Drawable af(Context context, int i, Resources.Theme theme) {
         if (theme != null) {
@@ -110,7 +108,8 @@ public abstract class bzo {
             i3 = rect.right;
         } else {
             if (i != 130) {
-                throw new IllegalArgumentException("direction must be one of {FOCUS_UP, FOCUS_DOWN, FOCUS_LEFT, FOCUS_RIGHT}.");
+                throw new IllegalArgumentException(
+                        "direction must be one of {FOCUS_UP, FOCUS_DOWN, FOCUS_LEFT, FOCUS_RIGHT}.");
             }
             i2 = rect2.top;
             i3 = rect.bottom;
@@ -131,12 +130,12 @@ public abstract class bzo {
         return Integer.MAX_VALUE;
     }
 
-    public static Map ai(csm... csmVarArr) {
-        if (csmVarArr.length <= 0) {
+    public static Map ai(Pair... pairVarArr) {
+        if (pairVarArr.length <= 0) {
             return ave.a;
         }
-        LinkedHashMap linkedHashMap = new LinkedHashMap(ah(csmVarArr.length));
-        am(linkedHashMap, csmVarArr);
+        LinkedHashMap linkedHashMap = new LinkedHashMap(ah(pairVarArr.length));
+        am(linkedHashMap, pairVarArr);
         return linkedHashMap;
     }
 
@@ -145,7 +144,8 @@ public abstract class bzo {
             if (i != 33) {
                 if (i != 66) {
                     if (i != 130) {
-                        throw new IllegalArgumentException("direction must be one of {FOCUS_UP, FOCUS_DOWN, FOCUS_LEFT, FOCUS_RIGHT}.");
+                        throw new IllegalArgumentException(
+                                "direction must be one of {FOCUS_UP, FOCUS_DOWN, FOCUS_LEFT, FOCUS_RIGHT}.");
                     }
                 }
             }
@@ -166,9 +166,9 @@ public abstract class bzo {
         return (((long) i2) & 4294967295L) | ((((long) i) & 4294967295L) << 32);
     }
 
-    public static final void am(HashMap map, csm[] csmVarArr) {
-        for (csm csmVar : csmVarArr) {
-            map.put(csmVar.a, csmVar.b);
+    public static final void am(HashMap map, Pair[] pairVarArr) {
+        for (Pair pairVar : pairVarArr) {
+            map.put(pairVar.first, pairVar.second);
         }
     }
 
@@ -185,7 +185,7 @@ public abstract class bzo {
         return string;
     }
 
-    public static void ao(RuntimeException runtimeException, String str) {
+    public static void trimStackTraceToClass(RuntimeException runtimeException, String str) {
         StackTraceElement[] stackTrace = runtimeException.getStackTrace();
         int length = stackTrace.length;
         int i = -1;
@@ -198,7 +198,7 @@ public abstract class bzo {
     }
 
     public static final ewf ap(brn brnVar, dfx dfxVar) {
-        q(dfxVar, "desc");
+        throwIfVar1IsNull(dfxVar, "desc");
         emc emcVarH = dfxVar.h();
         if (emcVarH instanceof cur) {
             return ewf.d;
@@ -218,15 +218,19 @@ public abstract class bzo {
         throw cnd.aj(dfxVarL);
     }
 
-    public static void aq() {
-        throw new UnsupportedOperationException("This function has a reified type parameter and thus can only be inlined at compilation time, not called directly.");
-    }
+    // public static void aq() {
+    // throw new UnsupportedOperationException(
+    // "This function has a reified type parameter and thus can only be inlined at
+    // compilation time, not called directly.");
+    // }
 
-    public static void ar(String str) {
-        abt abtVar = new abt(bjs.o("lateinit property ", str, " has not been initialized"));
-        ao(abtVar, bzo.class.getName());
-        throw abtVar;
-    }
+    // public static void ar(String str) {
+    // QueryDidNotReturnUniqueResultRuntimeException abtVar = new
+    // QueryDidNotReturnUniqueResultRuntimeException(
+    // concat("lateinit property ", str, " has not been initialized"));
+    // trimStackTraceToClass(abtVar, KotlinHelpers.class.getName());
+    // throw abtVar;
+    // }
 
     public static Map as(ArrayList arrayList) {
         int size = arrayList.size();
@@ -234,23 +238,23 @@ public abstract class bzo {
             return ave.a;
         }
         if (size == 1) {
-            csm csmVar = (csm) arrayList.get(0);
-            q(csmVar, "pair");
-            Map mapSingletonMap = Collections.singletonMap(csmVar.a, csmVar.b);
+            Pair pairVar = (Pair) arrayList.get(0);
+            throwIfVar1IsNull(pairVar, "pair");
+            Map mapSingletonMap = Collections.singletonMap(pairVar.first, pairVar.second);
             p(mapSingletonMap, "singletonMap(...)");
             return mapSingletonMap;
         }
         LinkedHashMap linkedHashMap = new LinkedHashMap(ah(arrayList.size()));
         Iterator it = arrayList.iterator();
         while (it.hasNext()) {
-            csm csmVar2 = (csm) it.next();
-            linkedHashMap.put(csmVar2.a, csmVar2.b);
+            Pair pairVar2 = (Pair) it.next();
+            linkedHashMap.put(pairVar2.first, pairVar2.second);
         }
         return linkedHashMap;
     }
 
     public static Map at(Map map) {
-        q(map, "<this>");
+        throwIfVar1IsNull(map, "<this>");
         int size = map.size();
         if (size == 0) {
             return ave.a;
@@ -258,7 +262,7 @@ public abstract class bzo {
         if (size != 1) {
             return new LinkedHashMap(map);
         }
-        q(map, "<this>");
+        throwIfVar1IsNull(map, "<this>");
         Map.Entry entry = (Map.Entry) map.entrySet().iterator().next();
         Map mapSingletonMap = Collections.singletonMap(entry.getKey(), entry.getValue());
         p(mapSingletonMap, "with(...)");
@@ -289,17 +293,19 @@ public abstract class bzo {
         return obj == null ? obj2 == null : obj.equals(obj2);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:24:0x0042  */
+    /* JADX WARN: Found duplicated region for block: B:24:0x0042 */
     /* JADX WARN: Found duplicated region for block: B:24:0x0042 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:25:0x0044 A[ADDED_TO_REGION] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:25:0x0044 A[ADDED_TO_REGION]
+     */
     /* JADX WARN: Found duplicated region for block: B:29:0x004d A[DONT_INVERT] */
     /* JADX WARN: Found duplicated region for block: B:30:0x004f A[DONT_INVERT] */
     /* JADX WARN: Found duplicated region for block: B:31:0x0051 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:32:0x0053  */
-    /* JADX WARN: Found duplicated region for block: B:34:0x0059  */
-    /* JADX WARN: Found duplicated region for block: B:36:0x005f  */
-    /* JADX WARN: Found duplicated region for block: B:37:0x0064  */
-    /* JADX WARN: Found duplicated region for block: B:38:0x0069  */
+    /* JADX WARN: Found duplicated region for block: B:32:0x0053 */
+    /* JADX WARN: Found duplicated region for block: B:34:0x0059 */
+    /* JADX WARN: Found duplicated region for block: B:36:0x005f */
+    /* JADX WARN: Found duplicated region for block: B:37:0x0064 */
+    /* JADX WARN: Found duplicated region for block: B:38:0x0069 */
     /* JADX WARN: Found duplicated region for block: B:44:? A[RETURN, SYNTHETIC] */
     public static boolean g(int i, Rect rect, Rect rect2, Rect rect3) {
         int iAg;
@@ -313,7 +319,8 @@ public abstract class bzo {
             if (i != 33) {
                 if (i != 66) {
                     if (i != 130) {
-                        throw new IllegalArgumentException("direction must be one of {FOCUS_UP, FOCUS_DOWN, FOCUS_LEFT, FOCUS_RIGHT}.");
+                        throw new IllegalArgumentException(
+                                "direction must be one of {FOCUS_UP, FOCUS_DOWN, FOCUS_LEFT, FOCUS_RIGHT}.");
                     }
                     if (rect.bottom <= rect3.top) {
                         if (i != 17 && i != 66) {
@@ -329,7 +336,8 @@ public abstract class bzo {
                                 i3 = rect.right;
                             } else {
                                 if (i == 130) {
-                                    throw new IllegalArgumentException("direction must be one of {FOCUS_UP, FOCUS_DOWN, FOCUS_LEFT, FOCUS_RIGHT}.");
+                                    throw new IllegalArgumentException(
+                                            "direction must be one of {FOCUS_UP, FOCUS_DOWN, FOCUS_LEFT, FOCUS_RIGHT}.");
                                 }
                                 i2 = rect3.bottom;
                                 i3 = rect.bottom;
@@ -353,7 +361,8 @@ public abstract class bzo {
                             i3 = rect.right;
                         } else {
                             if (i == 130) {
-                                throw new IllegalArgumentException("direction must be one of {FOCUS_UP, FOCUS_DOWN, FOCUS_LEFT, FOCUS_RIGHT}.");
+                                throw new IllegalArgumentException(
+                                        "direction must be one of {FOCUS_UP, FOCUS_DOWN, FOCUS_LEFT, FOCUS_RIGHT}.");
                             }
                             i2 = rect3.bottom;
                             i3 = rect.bottom;
@@ -377,7 +386,8 @@ public abstract class bzo {
                         i3 = rect.right;
                     } else {
                         if (i == 130) {
-                            throw new IllegalArgumentException("direction must be one of {FOCUS_UP, FOCUS_DOWN, FOCUS_LEFT, FOCUS_RIGHT}.");
+                            throw new IllegalArgumentException(
+                                    "direction must be one of {FOCUS_UP, FOCUS_DOWN, FOCUS_LEFT, FOCUS_RIGHT}.");
                         }
                         i2 = rect3.bottom;
                         i3 = rect.bottom;
@@ -401,7 +411,8 @@ public abstract class bzo {
                     i3 = rect.right;
                 } else {
                     if (i == 130) {
-                        throw new IllegalArgumentException("direction must be one of {FOCUS_UP, FOCUS_DOWN, FOCUS_LEFT, FOCUS_RIGHT}.");
+                        throw new IllegalArgumentException(
+                                "direction must be one of {FOCUS_UP, FOCUS_DOWN, FOCUS_LEFT, FOCUS_RIGHT}.");
                     }
                     i2 = rect3.bottom;
                     i3 = rect.bottom;
@@ -419,7 +430,8 @@ public abstract class bzo {
             if (i != 33) {
                 if (i != 66) {
                     if (i != 130) {
-                        throw new IllegalArgumentException("direction must be one of {FOCUS_UP, FOCUS_DOWN, FOCUS_LEFT, FOCUS_RIGHT}.");
+                        throw new IllegalArgumentException(
+                                "direction must be one of {FOCUS_UP, FOCUS_DOWN, FOCUS_LEFT, FOCUS_RIGHT}.");
                     }
                 }
             }
@@ -429,7 +441,7 @@ public abstract class bzo {
     }
 
     public static final int i(int[] iArr, int i, int i2) {
-        q(iArr, "array");
+        throwIfVar1IsNull(iArr, "array");
         int i3 = i - 1;
         int i4 = 0;
         while (i4 <= i3) {
@@ -498,57 +510,62 @@ public abstract class bzo {
         return dfxVar;
     }
 
-    public static cjv m(TypedValue typedValue, cjv cjvVar, cjv cjvVar2, String str, String str2) throws XmlPullParserException {
+    public static cjv m(TypedValue typedValue, cjv cjvVar, cjv cjvVar2, String str, String str2)
+            throws XmlPullParserException {
         if (cjvVar == null || cjvVar == cjvVar2) {
             return cjvVar == null ? cjvVar2 : cjvVar;
         }
         throw new XmlPullParserException("Type is " + str + " but found " + str2 + ": " + typedValue.data);
     }
 
-    public static void n(Object obj) {
-        if (obj != null) {
-            return;
-        }
-        NullPointerException nullPointerException = new NullPointerException();
-        ao(nullPointerException, bzo.class.getName());
-        throw nullPointerException;
-    }
+    // public static void n(Object obj) {
+    // if (obj != null) {
+    // return;
+    // }
+    // NullPointerException nullPointerException = new NullPointerException();
+    // trimStackTraceToClass(nullPointerException, KotlinHelpers.class.getName());
+    // throw nullPointerException;
+    // }
 
-    public static void o(Object obj, String str) {
-        if (obj != null) {
-            return;
-        }
-        NullPointerException nullPointerException = new NullPointerException(str);
-        ao(nullPointerException, bzo.class.getName());
-        throw nullPointerException;
-    }
+    // public static void o(Object obj, String str) {
+    // if (obj != null) {
+    // return;
+    // }
+    // NullPointerException nullPointerException = new NullPointerException(str);
+    // trimStackTraceToClass(nullPointerException, KotlinHelpers.class.getName());
+    // throw nullPointerException;
+    // }
 
-    public static void p(Object obj, String str) {
-        if (obj != null) {
-            return;
-        }
-        NullPointerException nullPointerException = new NullPointerException(str.concat(" must not be null"));
-        ao(nullPointerException, bzo.class.getName());
-        throw nullPointerException;
-    }
+    // public static void p(Object obj, String str) {
+    // if (obj != null) {
+    // return;
+    // }
+    // NullPointerException nullPointerException = new
+    // NullPointerException(str.concat(" must not be null"));
+    // trimStackTraceToClass(nullPointerException, KotlinHelpers.class.getName());
+    // throw nullPointerException;
+    // }
 
-    public static void q(Object obj, String str) {
-        if (obj == null) {
-            StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
-            String name = bzo.class.getName();
-            int i = 0;
-            while (!stackTrace[i].getClassName().equals(name)) {
-                i++;
-            }
-            while (stackTrace[i].getClassName().equals(name)) {
-                i++;
-            }
-            StackTraceElement stackTraceElement = stackTrace[i];
-            NullPointerException nullPointerException = new NullPointerException("Parameter specified as non-null is null: method " + stackTraceElement.getClassName() + "." + stackTraceElement.getMethodName() + ", parameter " + str);
-            ao(nullPointerException, bzo.class.getName());
-            throw nullPointerException;
-        }
-    }
+    // public static void q(Object obj, String str) {
+    // if (obj == null) {
+    // StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
+    // String name = KotlinHelpers.class.getName();
+    // int i = 0;
+    // while (!stackTrace[i].getClassName().equals(name)) {
+    // i++;
+    // }
+    // while (stackTrace[i].getClassName().equals(name)) {
+    // i++;
+    // }
+    // StackTraceElement stackTraceElement = stackTrace[i];
+    // NullPointerException nullPointerException = new NullPointerException(
+    // "Parameter specified as non-null is null: method " +
+    // stackTraceElement.getClassName() + "."
+    // + stackTraceElement.getMethodName() + ", parameter " + str);
+    // trimStackTraceToClass(nullPointerException, KotlinHelpers.class.getName());
+    // throw nullPointerException;
+    // }
+    // }
 
     public static int r(int i, int i2) {
         if (i < i2) {
@@ -637,8 +654,9 @@ public abstract class bzo {
     }
 
     public static final ArrayList w(String str, Bundle bundle) {
-        q(str, "key");
-        ArrayList arrayListC = Build.VERSION.SDK_INT >= 34 ? az.c(bundle, str, cnf.bd(dal.b(Bundle.class))) : bundle.getParcelableArrayList(str);
+        throwIfVar1IsNull(str, "key");
+        ArrayList arrayListC = Build.VERSION.SDK_INT >= 34 ? az.c(bundle, str, cnf.bd(dal.b(Bundle.class)))
+                : bundle.getParcelableArrayList(str);
         if (arrayListC != null) {
             return arrayListC;
         }
@@ -647,7 +665,7 @@ public abstract class bzo {
     }
 
     public static Object x(Map map, Object obj) {
-        q(map, "<this>");
+        throwIfVar1IsNull(map, "<this>");
         Object obj2 = map.get(obj);
         if (obj2 != null || map.containsKey(obj)) {
             return obj2;
@@ -655,12 +673,12 @@ public abstract class bzo {
         throw new NoSuchElementException("Key " + obj + " is missing in the map.");
     }
 
-    /* JADX WARN: Found duplicated region for block: B:16:0x0048  */
+    /* JADX WARN: Found duplicated region for block: B:16:0x0048 */
     public static final dqs y(aff affVar, int i, int i2, boolean z) {
         int i3;
         int i4;
         int i5;
-        q(affVar, "text");
+        throwIfVar1IsNull(affVar, "text");
         afo afoVarY = affVar.y(i);
         long jX = bht.x(afoVarY, i2, z);
         int i6 = (int) (jX >> 32);
@@ -699,7 +717,8 @@ public abstract class bzo {
     public static void z(byte b2, byte b3, byte b4, byte b5, char[] cArr, int i) {
         if (!ad(b3)) {
             if ((((b3 + 112) + (b2 << 28)) >> 30) == 0 && !ad(b4) && !ad(b5)) {
-                int i2 = ((b2 & 7) << 18) | ((b3 & JSONB.Constants.BC_INT32_BYTE_MAX) << 12) | ((b4 & JSONB.Constants.BC_INT32_BYTE_MAX) << 6) | (b5 & JSONB.Constants.BC_INT32_BYTE_MAX);
+                int i2 = ((b2 & 7) << 18) | ((b3 & JSONB.Constants.BC_INT32_BYTE_MAX) << 12)
+                        | ((b4 & JSONB.Constants.BC_INT32_BYTE_MAX) << 6) | (b5 & JSONB.Constants.BC_INT32_BYTE_MAX);
                 cArr[i] = (char) ((i2 >>> 10) + 55232);
                 cArr[i + 1] = (char) ((i2 & 1023) + 56320);
                 return;

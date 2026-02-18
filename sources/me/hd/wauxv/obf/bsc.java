@@ -32,7 +32,7 @@ public final class bsc implements dfx {
 
     @Override // me.hd.wauxv.obf.dfx
     public final int g(String str) {
-        bzo.q(str, "name");
+        throwIfVar1IsNull(str, "name");
         return c().g(str);
     }
 

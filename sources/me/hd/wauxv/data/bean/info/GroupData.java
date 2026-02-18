@@ -3,7 +3,7 @@ package me.hd.wauxv.data.bean.info;
 import java.util.List;
 import java.util.Map;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cnb;
 import me.hd.wauxv.obf.dkz;
 import me.hd.wauxv.obf.dts;
@@ -23,7 +23,8 @@ public final class GroupData {
     private String owner;
     private String roomId;
 
-    public GroupData(String str, List<String> list, List<String> list2, int i, Map<String, String> map, String str2, String str3, String str4, String str5, long j) {
+    public GroupData(String str, List<String> list, List<String> list2, int i, Map<String, String> map, String str2,
+            String str3, String str4, String str5, long j) {
         this.roomId = str;
         this.memberIds = list;
         this.memberNames = list2;
@@ -37,7 +38,8 @@ public final class GroupData {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    public static /* synthetic */ GroupData copy$default(GroupData groupData, String str, List list, List list2, int i, Map map, String str2, String str3, String str4, String str5, long j, int i2, Object obj) {
+    public static /* synthetic */ GroupData copy$default(GroupData groupData, String str, List list, List list2, int i,
+            Map map, String str2, String str3, String str4, String str5, long j, int i2, Object obj) {
         if ((i2 & 1) != 0) {
             str = groupData.roomId;
         }
@@ -118,7 +120,8 @@ public final class GroupData {
         return this.noticeEditor;
     }
 
-    public final GroupData copy(String str, List<String> list, List<String> list2, int i, Map<String, String> map, String str2, String str3, String str4, String str5, long j) {
+    public final GroupData copy(String str, List<String> list, List<String> list2, int i, Map<String, String> map,
+            String str2, String str3, String str4, String str5, long j) {
         return new GroupData(str, list, list2, i, map, str2, str3, str4, str5, j);
     }
 
@@ -130,7 +133,13 @@ public final class GroupData {
             return false;
         }
         GroupData groupData = (GroupData) obj;
-        return bzo.f(this.roomId, groupData.roomId) && bzo.f(this.memberIds, groupData.memberIds) && bzo.f(this.memberNames, groupData.memberNames) && this.memberCount == groupData.memberCount && bzo.f(this.membersHash, groupData.membersHash) && bzo.f(this.mineRoomName, groupData.mineRoomName) && bzo.f(this.owner, groupData.owner) && bzo.f(this.notice, groupData.notice) && bzo.f(this.noticeEditor, groupData.noticeEditor) && this.noticeTime == groupData.noticeTime;
+        return nullSafeIsEqual(this.roomId, groupData.roomId) && nullSafeIsEqual(this.memberIds, groupData.memberIds)
+                && nullSafeIsEqual(this.memberNames, groupData.memberNames) && this.memberCount == groupData.memberCount
+                && nullSafeIsEqual(this.membersHash, groupData.membersHash)
+                && nullSafeIsEqual(this.mineRoomName, groupData.mineRoomName)
+                && nullSafeIsEqual(this.owner, groupData.owner) && nullSafeIsEqual(this.notice, groupData.notice)
+                && nullSafeIsEqual(this.noticeEditor, groupData.noticeEditor)
+                && this.noticeTime == groupData.noticeTime;
     }
 
     public final int getMemberCount() {
@@ -174,7 +183,13 @@ public final class GroupData {
     }
 
     public int hashCode() {
-        return Long.hashCode(this.noticeTime) + bjs.e(this.noticeEditor, bjs.e(this.notice, bjs.e(this.owner, bjs.e(this.mineRoomName, yg.c(this.membersHash, dts.a(this.memberCount, bjs.g(this.memberNames, bjs.g(this.memberIds, this.roomId.hashCode() * 31, 31), 31), 31), 31), 31), 31), 31), 31);
+        return Long.hashCode(this.noticeTime)
+                + bjs.e(this.noticeEditor,
+                        bjs.e(this.notice, bjs.e(this.owner, bjs.e(this.mineRoomName, yg.c(this.membersHash,
+                                dts.a(this.memberCount, bjs.g(this.memberNames,
+                                        bjs.g(this.memberIds, this.roomId.hashCode() * 31, 31), 31), 31),
+                                31), 31), 31), 31),
+                        31);
     }
 
     public final void setMemberCount(int i) {

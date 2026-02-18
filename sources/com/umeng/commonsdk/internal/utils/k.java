@@ -26,7 +26,7 @@ public class k {
         if (c(context)) {
             return;
         }
-        final String[] strArr = {"unknown", "unknown", "unknown"};
+        final String[] strArr = { "unknown", "unknown", "unknown" };
         new Thread() { // from class: com.umeng.commonsdk.internal.utils.k.1
             @Override // java.lang.Thread, java.lang.Runnable
             public void run() {
@@ -36,7 +36,7 @@ public class k {
                     strArr[1] = k.a();
                     strArr[2] = k.b();
                     ULog.i("diskType = " + strArr[0] + "; ThremalZone = " + strArr[1] + "; GoldFishRc = " + strArr[2]);
-                    k.b(context, strArr);
+                    k.tryGetClassByName(context, strArr);
                 } catch (Throwable th) {
                     UMCrashManager.reportCrash(context, th);
                 }
@@ -46,7 +46,9 @@ public class k {
 
     public static boolean c(Context context) {
         SharedPreferences sharedPreferences;
-        return (context == null || (sharedPreferences = context.getApplicationContext().getSharedPreferences(a, 0)) == null || TextUtils.isEmpty(sharedPreferences.getString(b, ""))) ? false : true;
+        return (context == null
+                || (sharedPreferences = context.getApplicationContext().getSharedPreferences(a, 0)) == null
+                || TextUtils.isEmpty(sharedPreferences.getString(b, ""))) ? false : true;
     }
 
     public static String a(Context context) {
@@ -71,7 +73,8 @@ public class k {
     /* JADX INFO: Access modifiers changed from: private */
     public static void b(Context context, String[] strArr) {
         SharedPreferences sharedPreferences;
-        if (context == null || (sharedPreferences = context.getApplicationContext().getSharedPreferences(a, 0)) == null) {
+        if (context == null
+                || (sharedPreferences = context.getApplicationContext().getSharedPreferences(a, 0)) == null) {
             return;
         }
         synchronized (e) {

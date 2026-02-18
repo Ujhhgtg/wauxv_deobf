@@ -24,6 +24,6 @@ public class ToLong implements Function {
         if (obj instanceof Number) {
             return Long.valueOf(((Number) obj).longValue());
         }
-        throw new JSONException(bjs.m(obj, new StringBuilder("can not cast to Long ")));
+        throw new JSONException(concatVar1GetClass(obj, new StringBuilder("can not cast to Long ")));
     }
 }

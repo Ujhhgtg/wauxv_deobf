@@ -23,10 +23,10 @@ import me.hd.wauxv.obf.bek;
 import me.hd.wauxv.obf.bez;
 import me.hd.wauxv.obf.bku;
 import me.hd.wauxv.obf.byu;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cer;
 import me.hd.wauxv.obf.cnb;
-import me.hd.wauxv.obf.csm;
+import me.hd.wauxv.obf.Pair;
 import me.hd.wauxv.obf.cua;
 import me.hd.wauxv.obf.cyw;
 import me.hd.wauxv.obf.dpo;
@@ -51,7 +51,7 @@ public final class ModuleNavFragment extends bdo {
     @Override // me.hd.wauxv.obf.bdj
     public final void k(View view) throws IllegalAccessException, InvocationTargetException {
         eqj eqjVar = this.d;
-        bzo.n(eqjVar);
+        throwIfVar1IsNull(eqjVar);
         CoordinatorLayout coordinatorLayout = ((bek) eqjVar).a;
         StringBuilder sb = new StringBuilder();
         sb.append("免费模块仅供学习,勿在国内平台传播\n" /* cnb.z(-394900768029482L) */);
@@ -63,7 +63,10 @@ public final class ModuleNavFragment extends bdo {
         sb2.append('\n');
         sb.append(sb2.toString());
         Object objInvoke = emn.bb(acw.a).invoke(null, null);
-        bzo.o(objInvoke, "null cannot be cast to non-null type kotlin.collections.Map<*, *>" /* cnb.z(-107949708016426L) */);
+        throwIfVar1IsNull(objInvoke, "null cannot be cast to non-null type kotlin.collections.Map<*, *>" /*
+                                                                                                          * cnb.z(-
+                                                                                                          * 107949708016426L)
+                                                                                                          */);
         Object obj = ((Map) objInvoke).get("last_login_alias" /* cnb.z(-109568910687018L) */);
         String str = obj instanceof String ? (String) obj : null;
         if (str != null) {
@@ -78,27 +81,33 @@ public final class ModuleNavFragment extends bdo {
         frameLayout.setBackground(new eua(etzVar));
         coordinatorLayout.addView(frameLayout);
         eqj eqjVar2 = this.d;
-        bzo.n(eqjVar2);
+        throwIfVar1IsNull(eqjVar2);
         MaterialToolbar materialToolbar = ((bek) eqjVar2).d;
         materialToolbar.setTitle("WAuxiliary" /* cnb.z(-394763329076010L) */);
         materialToolbar.setSubtitle("1.2.6.r1238.198c77c" /* cnb.z(-394750444174122L) */);
         eqj eqjVar3 = this.d;
-        bzo.n(eqjVar3);
+        throwIfVar1IsNull(eqjVar3);
         ViewPager2 viewPager2 = ((bek) eqjVar3).c;
         viewPager2.setUserInputEnabled(true);
-        List listAg = aba.ag(new csm(new bku(), "辅助" /* cnb.z(-395179940903722L) */), new csm(new cua(), "插件" /* cnb.z(-395184235871018L) */), new csm(new amf(), "开发" /* cnb.z(-395205710707498L) */), new csm(new j(), "关于" /* cnb.z(-395141286198058L) */));
+        List listAg = aba.ag(
+                new Pair(new bku(), "辅助" /* cnb.z(-395179940903722L) */), new Pair(new cua(),
+                        "插件" /* cnb.z(-395184235871018L) */),
+                new Pair(new amf(), "开发" /* cnb.z(-395205710707498L) */), new Pair(new j(), "关于" /*
+                                                                                                  * cnb.z(-
+                                                                                                  * 395141286198058L)
+                                                                                                  */));
         hb hbVarDb = db();
         ArrayList arrayList = new ArrayList(abb.ak(listAg, 10));
         Iterator it = listAg.iterator();
         while (it.hasNext()) {
-            arrayList.add((bdo) ((csm) it.next()).a);
+            arrayList.add((bdo) ((Pair) it.next()).first);
         }
         viewPager2.setAdapter(new byu(hbVarDb, arrayList));
         eqj eqjVar4 = this.d;
-        bzo.n(eqjVar4);
+        throwIfVar1IsNull(eqjVar4);
         TabLayout tabLayout = ((bek) eqjVar4).b;
         eqj eqjVar5 = this.d;
-        bzo.n(eqjVar5);
+        throwIfVar1IsNull(eqjVar5);
         ViewPager2 viewPager22 = ((bek) eqjVar5).c;
         dpq dpqVar = new dpq(tabLayout, viewPager22, new qp(listAg, 10));
         if (dpqVar.e) {

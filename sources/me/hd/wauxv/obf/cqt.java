@@ -27,7 +27,8 @@ public final class cqt {
         int i = Build.VERSION.SDK_INT;
         if (i >= 33) {
             if (i >= 34) {
-                onBackInvokedCallbackB = cqp.a.b(new cql(this, 0), new cql(this, 1), new cqm(this, 0), new cqm(this, 1));
+                onBackInvokedCallbackB = cqp.a.b(new cql(this, 0), new cql(this, 1), new cqm(this, 0),
+                        new cqm(this, 1));
             } else {
                 onBackInvokedCallbackB = cqn.a.b(new cqm(this, 2));
             }
@@ -123,7 +124,8 @@ public final class cqt {
                     begVar.cz();
                     if (beg.ar(3)) {
                         Log.d("FragmentManager", "Op is being set to null");
-                        Log.d("FragmentManager", "OnBackPressedCallback enabled=" + bdxVar2.a + " for  FragmentManager " + begVar);
+                        Log.d("FragmentManager",
+                                "OnBackPressedCallback enabled=" + bdxVar2.a + " for  FragmentManager " + begVar);
                     }
                 } else if (bdxVar2.a) {
                     if (beg.ar(3)) {
@@ -141,7 +143,7 @@ public final class cqt {
                 cix cixVar = ((cjl) bdxVar.e).b;
                 if (!cixVar.f.isEmpty()) {
                     cjg cjgVarAf = cixVar.af();
-                    bzo.n(cjgVarAf);
+                    throwIfVar1IsNull(cjgVarAf);
                     if (cixVar.al(cjgVarAf.g.a, true, false)) {
                         cixVar.ac();
                     }

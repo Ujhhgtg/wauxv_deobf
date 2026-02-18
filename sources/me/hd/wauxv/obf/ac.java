@@ -31,7 +31,7 @@ public abstract class ac extends r implements List {
             Iterator it = collection.iterator();
             Iterator<E> it2 = iterator();
             while (it2.hasNext()) {
-                if (!bzo.f(it2.next(), it.next())) {
+                if (!nullSafeIsEqual(it2.next(), it.next())) {
                 }
             }
             return true;
@@ -55,7 +55,7 @@ public abstract class ac extends r implements List {
         Iterator it = iterator();
         int i = 0;
         while (it.hasNext()) {
-            if (bzo.f(it.next(), obj)) {
+            if (nullSafeIsEqual(it.next(), obj)) {
                 return i;
             }
             i++;
@@ -72,7 +72,7 @@ public abstract class ac extends r implements List {
     public int lastIndexOf(Object obj) {
         ListIterator listIterator = listIterator(size());
         while (listIterator.hasPrevious()) {
-            if (bzo.f(listIterator.previous(), obj)) {
+            if (nullSafeIsEqual(listIterator.previous(), obj)) {
                 return listIterator.nextIndex();
             }
         }

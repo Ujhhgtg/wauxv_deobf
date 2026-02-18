@@ -20,13 +20,13 @@ public final class ace implements ViewTreeObserver.OnDrawListener, Runnable, Exe
 
     @Override // java.util.concurrent.Executor
     public final void execute(Runnable runnable) {
-        bzo.q(runnable, "runnable");
+        throwIfVar1IsNull(runnable, "runnable");
         this.b = runnable;
         View decorView = this.d.getWindow().getDecorView();
-        bzo.p(decorView, "window.decorView");
+        throwIfVar1IsNull(decorView, "window.decorView");
         if (!this.c) {
             decorView.postOnAnimation(new dh(this, 4));
-        } else if (bzo.f(Looper.myLooper(), Looper.getMainLooper())) {
+        } else if (nullSafeIsEqual(Looper.myLooper(), Looper.getMainLooper())) {
             decorView.invalidate();
         } else {
             decorView.postInvalidate();

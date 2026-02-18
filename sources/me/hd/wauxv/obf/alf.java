@@ -22,7 +22,7 @@ public final class alf implements Animation.AnimationListener {
 
     @Override // android.view.animation.Animation.AnimationListener
     public final void onAnimationEnd(Animation animation) {
-        bzo.q(animation, "animation");
+        throwIfVar1IsNull(animation, "animation");
         ViewGroup viewGroup = this.b;
         viewGroup.post(new ale(viewGroup, this.c, this.d, 0));
         if (beg.ar(2)) {
@@ -32,12 +32,12 @@ public final class alf implements Animation.AnimationListener {
 
     @Override // android.view.animation.Animation.AnimationListener
     public final void onAnimationRepeat(Animation animation) {
-        bzo.q(animation, "animation");
+        throwIfVar1IsNull(animation, "animation");
     }
 
     @Override // android.view.animation.Animation.AnimationListener
     public final void onAnimationStart(Animation animation) {
-        bzo.q(animation, "animation");
+        throwIfVar1IsNull(animation, "animation");
         if (beg.ar(2)) {
             Log.v("FragmentManager", "Animation from operation " + this.a + " has reached onAnimationStart.");
         }

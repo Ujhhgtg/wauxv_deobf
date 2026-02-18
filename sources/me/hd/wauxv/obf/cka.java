@@ -16,8 +16,8 @@ import java.util.WeakHashMap;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public abstract class cka extends ViewGroup implements cco {
-    public static final int[] i = {R.attr.state_checked};
-    public static final int[] j = {-16842910};
+    public static final int[] i = { R.attr.state_checked };
+    public static final int[] j = { -16842910 };
     public ColorStateList aa;
     public int ab;
     public final SparseArray ac;
@@ -68,7 +68,8 @@ public abstract class cka extends ViewGroup implements cco {
             mi miVar = new mi();
             this.k = miVar;
             miVar._at(0);
-            miVar.r(ajn.ad(getContext(), me.hd.wauxv.R.attr.motionDurationMedium4, getResources().getInteger(me.hd.wauxv.R.integer.material_motion_duration_long_1)));
+            miVar.r(ajn.ad(getContext(), me.hd.wauxv.R.attr.motionDurationMedium4,
+                    getResources().getInteger(me.hd.wauxv.R.integer.material_motion_duration_long_1)));
             miVar.t(ajn.ae(getContext(), me.hd.wauxv.R.attr.motionEasingStandard, ff.b));
             miVar._ar(new drf());
         }
@@ -83,7 +84,7 @@ public abstract class cka extends ViewGroup implements cco {
 
     private cjy getNewItem() {
         cjy cjyVar = (cjy) this.m.acquire();
-        return cjyVar == null ? h(getContext()) : cjyVar;
+        return cjyVar == null ? locateDex(getContext()) : cjyVar;
     }
 
     private void setBadgeIfNeeded(cjy cjyVar) {
@@ -220,7 +221,8 @@ public abstract class cka extends ViewGroup implements cco {
         int[] iArr = i;
         int[] iArr2 = ViewGroup.EMPTY_STATE_SET;
         int[] iArr3 = j;
-        return new ColorStateList(new int[][]{iArr3, iArr, iArr2}, new int[]{colorStateListV.getColorForState(iArr3, defaultColor), i2, defaultColor});
+        return new ColorStateList(new int[][] { iArr3, iArr, iArr2 },
+                new int[] { colorStateListV.getColorForState(iArr3, defaultColor), i2, defaultColor });
     }
 
     public final cau as() {
@@ -336,7 +338,8 @@ public abstract class cka extends ViewGroup implements cco {
     @Override // android.view.View
     public final void onInitializeAccessibilityNodeInfo(AccessibilityNodeInfo accessibilityNodeInfo) {
         super.onInitializeAccessibilityNodeInfo(accessibilityNodeInfo);
-        accessibilityNodeInfo.setCollectionInfo((AccessibilityNodeInfo.CollectionInfo) bc.f(1, this.ao.ak().size(), 1).e);
+        accessibilityNodeInfo
+                .setCollectionInfo((AccessibilityNodeInfo.CollectionInfo) bc.f(1, this.ao.ak().size(), 1).e);
     }
 
     public void setActiveIndicatorLabelPadding(int i2) {

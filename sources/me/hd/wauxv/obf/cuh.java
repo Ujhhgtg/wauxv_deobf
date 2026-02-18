@@ -21,7 +21,8 @@ public final class cuh {
             return false;
         }
         cuh cuhVar = (cuh) obj;
-        return bzo.f(this.a, cuhVar.a) && bzo.f(this.b, cuhVar.b) && bzo.f(this.c, cuhVar.c);
+        return nullSafeIsEqual(this.a, cuhVar.a) && nullSafeIsEqual(this.b, cuhVar.b)
+                && nullSafeIsEqual(this.c, cuhVar.c);
     }
 
     public final int hashCode() {

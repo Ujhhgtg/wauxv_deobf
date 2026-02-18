@@ -2,7 +2,7 @@ package me.hd.wauxv.obf;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class beo implements bgf {
+public final /* synthetic */ class beo implements IHasInvokeMethod {
     public final /* synthetic */ int a;
     public final /* synthetic */ String b;
 
@@ -15,14 +15,14 @@ public final /* synthetic */ class beo implements bgf {
     public final Object invoke(Object obj) {
         switch (this.a) {
             case 0:
-                csm csmVar = (csm) obj;
-                bzo.q(csmVar, "it");
-                return Boolean.valueOf(bzo.f(csmVar.a, this.b));
+                Pair pairVar = (Pair) obj;
+                throwIfVar1IsNull(pairVar, "it");
+                return Boolean.valueOf(nullSafeIsEqual(pairVar.first, this.b));
             case 1:
                 eoj eojVar = (eoj) obj;
                 eojVar.h(dip.a.o());
                 String str = this.b;
-                bzo.q(str, "name");
+                throwIfVar1IsNull(str, "name");
                 eojVar.d.tag(cne.class, new cne(str));
                 return ens.a;
             case 2:

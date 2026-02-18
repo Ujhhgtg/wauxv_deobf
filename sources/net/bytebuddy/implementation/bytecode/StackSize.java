@@ -17,8 +17,14 @@ public enum StackSize {
 
     private final int size;
 
-    /* JADX INFO: renamed from: net.bytebuddy.implementation.bytecode.StackSize$1, reason: invalid class name */
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: renamed from: net.bytebuddy.implementation.bytecode.StackSize$1,
+     * reason: invalid class name
+     */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static /* synthetic */ class AnonymousClass1 {
         static final /* synthetic */ int[] $SwitchMap$net$bytebuddy$implementation$bytecode$StackSize;
 
@@ -91,7 +97,7 @@ public enum StackSize {
         if (i == 2) {
             return DOUBLE;
         }
-        throw new IllegalArgumentException(bjs.i(i, "Unexpected stack size value: "));
+        throw new IllegalArgumentException(concatVar2Var1(i, "Unexpected stack size value: "));
     }
 
     public static int of(TypeDefinition... typeDefinitionArr) {

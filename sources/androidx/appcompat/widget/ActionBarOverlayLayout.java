@@ -53,7 +53,7 @@ import me.hd.wauxv.obf.evr;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public class ActionBarOverlayLayout extends ViewGroup implements aju, ckt, cku {
-    public static final int[] a = {R.attr.actionBarSize, android.R.attr.windowContentOverlay};
+    public static final int[] a = { R.attr.actionBarSize, android.R.attr.windowContentOverlay };
     public static final evr b;
     public static final Rect c;
     public final ci aa;
@@ -234,7 +234,8 @@ public class ActionBarOverlayLayout extends ViewGroup implements aju, ckt, cku {
                 wrapper = (ajv) callbackFindViewById;
             } else {
                 if (!(callbackFindViewById instanceof Toolbar)) {
-                    throw new IllegalStateException("Can't make a decor toolbar out of ".concat(callbackFindViewById.getClass().getSimpleName()));
+                    throw new IllegalStateException("Can't make a decor toolbar out of "
+                            .concat(callbackFindViewById.getClass().getSimpleName()));
                 }
                 wrapper = ((Toolbar) callbackFindViewById).getWrapper();
             }
@@ -403,23 +404,25 @@ public class ActionBarOverlayLayout extends ViewGroup implements aju, ckt, cku {
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:22:0x00aa  */
-    /* JADX WARN: Found duplicated region for block: B:24:0x00cf  */
-    /* JADX WARN: Found duplicated region for block: B:25:0x00d5  */
-    /* JADX WARN: Found duplicated region for block: B:27:0x00d9  */
-    /* JADX WARN: Found duplicated region for block: B:28:0x00df  */
-    /* JADX WARN: Found duplicated region for block: B:30:0x00e3  */
-    /* JADX WARN: Found duplicated region for block: B:31:0x00e9  */
-    /* JADX WARN: Found duplicated region for block: B:33:0x00ed  */
-    /* JADX WARN: Found duplicated region for block: B:34:0x00f3  */
+    /* JADX WARN: Found duplicated region for block: B:22:0x00aa */
+    /* JADX WARN: Found duplicated region for block: B:24:0x00cf */
+    /* JADX WARN: Found duplicated region for block: B:25:0x00d5 */
+    /* JADX WARN: Found duplicated region for block: B:27:0x00d9 */
+    /* JADX WARN: Found duplicated region for block: B:28:0x00df */
+    /* JADX WARN: Found duplicated region for block: B:30:0x00e3 */
+    /* JADX WARN: Found duplicated region for block: B:31:0x00e9 */
+    /* JADX WARN: Found duplicated region for block: B:33:0x00ed */
+    /* JADX WARN: Found duplicated region for block: B:34:0x00f3 */
     @Override // android.view.View
     public final void onMeasure(int i, int i2) {
         int measuredHeight;
         ap();
         measureChildWithMargins(this.g, i, 0, i2, 0);
         cl clVar = (cl) this.g.getLayoutParams();
-        int iMax = Math.max(0, this.g.getMeasuredWidth() + ((ViewGroup.MarginLayoutParams) clVar).leftMargin + ((ViewGroup.MarginLayoutParams) clVar).rightMargin);
-        int iMax2 = Math.max(0, this.g.getMeasuredHeight() + ((ViewGroup.MarginLayoutParams) clVar).topMargin + ((ViewGroup.MarginLayoutParams) clVar).bottomMargin);
+        int iMax = Math.max(0, this.g.getMeasuredWidth() + ((ViewGroup.MarginLayoutParams) clVar).leftMargin
+                + ((ViewGroup.MarginLayoutParams) clVar).rightMargin);
+        int iMax2 = Math.max(0, this.g.getMeasuredHeight() + ((ViewGroup.MarginLayoutParams) clVar).topMargin
+                + ((ViewGroup.MarginLayoutParams) clVar).bottomMargin);
         int iCombineMeasuredStates = View.combineMeasuredStates(0, this.g.getMeasuredState());
         WeakHashMap weakHashMap = eqz.a;
         boolean z = (getWindowSystemUiVisibility() & 256) != 0;
@@ -439,7 +442,9 @@ public class ActionBarOverlayLayout extends ViewGroup implements aju, ckt, cku {
             bps bpsVarG = bps.g(this.v.f(), this.v.h() + measuredHeight, this.v.g(), this.v.e());
             evr evrVar = this.v;
             int i3 = Build.VERSION.SDK_INT;
-            evg evfVar = i3 >= 34 ? new evf(evrVar) : i3 >= 31 ? new eve(evrVar) : i3 >= 30 ? new evd(evrVar) : i3 >= 29 ? new evc(evrVar) : new evb(evrVar);
+            evg evfVar = i3 >= 34 ? new evf(evrVar)
+                    : i3 >= 31 ? new eve(evrVar)
+                            : i3 >= 30 ? new evd(evrVar) : i3 >= 29 ? new evc(evrVar) : new evb(evrVar);
             evfVar.i(bpsVarG);
             this.v = evfVar.g();
         } else {
@@ -454,7 +459,7 @@ public class ActionBarOverlayLayout extends ViewGroup implements aju, ckt, cku {
                 if (i32 >= 34) {
                 }
                 evfVar.i(bpsVarG2);
-                this.v = evfVar.g();
+                this.v = evfVar.setResultTrue();
             } else {
                 rect2.top += measuredHeight;
                 rect2.bottom = rect2.bottom;
@@ -469,10 +474,18 @@ public class ActionBarOverlayLayout extends ViewGroup implements aju, ckt, cku {
         }
         measureChildWithMargins(this.f, i, 0, i2, 0);
         cl clVar2 = (cl) this.f.getLayoutParams();
-        int iMax3 = Math.max(iMax, this.f.getMeasuredWidth() + ((ViewGroup.MarginLayoutParams) clVar2).leftMargin + ((ViewGroup.MarginLayoutParams) clVar2).rightMargin);
-        int iMax4 = Math.max(iMax2, this.f.getMeasuredHeight() + ((ViewGroup.MarginLayoutParams) clVar2).topMargin + ((ViewGroup.MarginLayoutParams) clVar2).bottomMargin);
+        int iMax3 = Math.max(iMax, this.f.getMeasuredWidth() + ((ViewGroup.MarginLayoutParams) clVar2).leftMargin
+                + ((ViewGroup.MarginLayoutParams) clVar2).rightMargin);
+        int iMax4 = Math.max(iMax2, this.f.getMeasuredHeight() + ((ViewGroup.MarginLayoutParams) clVar2).topMargin
+                + ((ViewGroup.MarginLayoutParams) clVar2).bottomMargin);
         int iCombineMeasuredStates2 = View.combineMeasuredStates(iCombineMeasuredStates, this.f.getMeasuredState());
-        setMeasuredDimension(View.resolveSizeAndState(Math.max(getPaddingRight() + getPaddingLeft() + iMax3, getSuggestedMinimumWidth()), i, iCombineMeasuredStates2), View.resolveSizeAndState(Math.max(getPaddingBottom() + getPaddingTop() + iMax4, getSuggestedMinimumHeight()), i2, iCombineMeasuredStates2 << 16));
+        setMeasuredDimension(
+                View.resolveSizeAndState(
+                        Math.max(getPaddingRight() + getPaddingLeft() + iMax3, getSuggestedMinimumWidth()), i,
+                        iCombineMeasuredStates2),
+                View.resolveSizeAndState(
+                        Math.max(getPaddingBottom() + getPaddingTop() + iMax4, getSuggestedMinimumHeight()), i2,
+                        iCombineMeasuredStates2 << 16));
     }
 
     @Override // android.view.ViewGroup, android.view.ViewParent

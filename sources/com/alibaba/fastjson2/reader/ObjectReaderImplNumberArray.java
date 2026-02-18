@@ -24,9 +24,10 @@ class ObjectReaderImplNumberArray extends ObjectReaderPrimitive {
         int i = 0;
         for (Object objApply : collection) {
             if (objApply != null && !(objApply instanceof Number)) {
-                Function typeConvert = JSONFactory.getDefaultObjectReaderProvider().getTypeConvert(objApply.getClass(), Number.class);
+                Function typeConvert = JSONFactory.getDefaultObjectReaderProvider().getTypeConvert(objApply.getClass(),
+                        Number.class);
                 if (typeConvert == null) {
-                    throw new JSONException(bjs.m(objApply, new StringBuilder("can not cast to Number ")));
+                    throw new JSONException(concatVar1GetClass(objApply, new StringBuilder("can not cast to Number ")));
                 }
                 objApply = typeConvert.apply(objApply);
             }
@@ -36,7 +37,8 @@ class ObjectReaderImplNumberArray extends ObjectReaderPrimitive {
         return numberArr;
     }
 
-    @Override // com.alibaba.fastjson2.reader.ObjectReaderPrimitive, com.alibaba.fastjson2.reader.ObjectReader
+    @Override // com.alibaba.fastjson2.reader.ObjectReaderPrimitive,
+              // com.alibaba.fastjson2.reader.ObjectReader
     public Object readJSONBObject(JSONReader jSONReader, Type type, Object obj, long j) {
         int iStartArray = jSONReader.startArray();
         if (iStartArray == -1) {

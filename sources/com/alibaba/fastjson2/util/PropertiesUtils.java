@@ -26,8 +26,11 @@ import net.bytebuddy.pool.TypePool;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public class PropertiesUtils {
-    /* JADX WARN: Found duplicated region for block: B:59:0x00ab A[PHI: r10
-      0x00ab: PHI (r10v4 ??) = (r10v3 ??), (r10v8 ??) binds: [B:31:0x0063, B:40:0x0080] A[DONT_GENERATE, DONT_INLINE]] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:59:0x00ab A[PHI: r10
+     * 0x00ab: PHI (r10v4 ??) = (r10v3 ??), (r10v8 ??) binds: [B:31:0x0063,
+     * B:40:0x0080] A[DONT_GENERATE, DONT_INLINE]]
+     */
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Type inference failed for: r10v11 */
     /* JADX WARN: Type inference failed for: r10v13 */
@@ -76,7 +79,7 @@ public class PropertiesUtils {
                             StringBuilder sb = new StringBuilder();
                             sb.append(str);
                             sb.append(TypePool.Default.LazyTypeDescription.GenericTypeToken.COMPONENT_TYPE_PATH);
-                            strQ = bjs.q(sb, JSON.toJSONString(str2, JSONWriter.Feature.UseSingleQuotes), ']');
+                            strQ = concat(sb, JSON.toJSONString(str2, JSONWriter.Feature.UseSingleQuotes), ']');
                         } else {
                             if (str != null) {
                                 str2 = str + "." + str2;
@@ -130,14 +133,16 @@ public class PropertiesUtils {
     }
 
     public static <T> T toJavaObject(Properties properties, Class<T> cls) {
-        return (T) toJavaObject(properties, JSONFactory.getDefaultObjectReaderProvider(), cls, new JSONReader.Feature[0]);
+        return (T) toJavaObject(properties, JSONFactory.getDefaultObjectReaderProvider(), cls,
+                new JSONReader.Feature[0]);
     }
 
     public static Properties toProperties(Object obj) {
         return toProperties(JSONFactory.getDefaultObjectWriterProvider(), obj, new JSONWriter.Feature[0]);
     }
 
-    public static <T> T toJavaObject(Properties properties, ObjectReaderProvider objectReaderProvider, Class<T> cls, JSONReader.Feature... featureArr) {
+    public static <T> T toJavaObject(Properties properties, ObjectReaderProvider objectReaderProvider, Class<T> cls,
+            JSONReader.Feature... featureArr) {
         ObjectReader objectReader = objectReaderProvider.getObjectReader(cls);
         T t = (T) objectReader.createInstance(JSONReader.Feature.of(featureArr));
         for (Map.Entry entry : properties.entrySet()) {
@@ -155,7 +160,8 @@ public class PropertiesUtils {
         return t;
     }
 
-    public static Properties toProperties(ObjectWriterProvider objectWriterProvider, Object obj, JSONWriter.Feature... featureArr) {
+    public static Properties toProperties(ObjectWriterProvider objectWriterProvider, Object obj,
+            JSONWriter.Feature... featureArr) {
         IdentityHashMap identityHashMap = new IdentityHashMap();
         Properties properties = new Properties();
         paths(objectWriterProvider, identityHashMap, properties, null, obj);

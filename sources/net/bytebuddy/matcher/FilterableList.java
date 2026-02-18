@@ -12,8 +12,12 @@ import net.bytebuddy.matcher.FilterableList;
 /* JADX INFO: loaded from: classes.dex */
 public interface FilterableList<T, S extends FilterableList<T, S>> extends List<T> {
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
-    public static abstract class AbstractBase<T, S extends FilterableList<T, S>> extends AbstractList<T> implements FilterableList<T, S> {
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
+    public static abstract class AbstractBase<T, S extends FilterableList<T, S>> extends AbstractList<T>
+            implements FilterableList<T, S> {
         private static final int ONLY = 0;
 
         @Override // net.bytebuddy.matcher.FilterableList
@@ -45,8 +49,12 @@ public interface FilterableList<T, S extends FilterableList<T, S>> extends List<
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
-    public static class Empty<T, S extends FilterableList<T, S>> extends AbstractList<T> implements FilterableList<T, S> {
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
+    public static class Empty<T, S extends FilterableList<T, S>> extends AbstractList<T>
+            implements FilterableList<T, S> {
         @Override // net.bytebuddy.matcher.FilterableList
         public S filter(ElementMatcher<? super T> elementMatcher) {
             return this;
@@ -54,7 +62,7 @@ public interface FilterableList<T, S extends FilterableList<T, S>> extends List<
 
         @Override // java.util.AbstractList, java.util.List
         public T get(int i) {
-            throw new IndexOutOfBoundsException(bjs.i(i, "index = "));
+            throw new IndexOutOfBoundsException(concatVar2Var1(i, "index = "));
         }
 
         @Override // net.bytebuddy.matcher.FilterableList
@@ -73,7 +81,7 @@ public interface FilterableList<T, S extends FilterableList<T, S>> extends List<
                 return this;
             }
             if (i <= i2) {
-                throw new IndexOutOfBoundsException(bjs.i(i, "fromIndex = "));
+                throw new IndexOutOfBoundsException(concatVar2Var1(i, "fromIndex = "));
             }
             throw new IllegalArgumentException("fromIndex(" + i + ") > toIndex(" + i2 + ")");
         }

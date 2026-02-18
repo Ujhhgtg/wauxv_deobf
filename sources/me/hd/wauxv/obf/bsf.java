@@ -7,7 +7,7 @@ public final class bsf extends bsp {
     public final String b;
 
     public bsf(String str, boolean z) {
-        bzo.q(str, "body");
+        throwIfVar1IsNull(str, "body");
         this.a = z;
         this.b = str.toString();
     }
@@ -25,7 +25,7 @@ public final class bsf extends bsp {
             return false;
         }
         bsf bsfVar = (bsf) obj;
-        return this.a == bsfVar.a && bzo.f(this.b, bsfVar.b);
+        return this.a == bsfVar.a && nullSafeIsEqual(this.b, bsfVar.b);
     }
 
     public final int hashCode() {

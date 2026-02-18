@@ -47,7 +47,7 @@ public abstract class aye {
     public static final boolean i(String str) {
         for (int i = 0; i < str.length(); i++) {
             char cCharAt = str.charAt(i);
-            if (bzo.r(cCharAt, 128) >= 0 || Character.isLetter(cCharAt)) {
+            if (KotlinHelpers.r(cCharAt, 128) >= 0 || Character.isLetter(cCharAt)) {
                 return true;
             }
         }
@@ -55,8 +55,8 @@ public abstract class aye {
     }
 
     public static void j(Throwable th, Throwable th2) {
-        bzo.q(th, "<this>");
-        bzo.q(th2, "exception");
+        throwIfVar1IsNull(th, "<this>");
+        throwIfVar1IsNull(th2, "exception");
         if (th != th2) {
             Integer num = bqy.a;
             if (num == null || num.intValue() >= 19) {
@@ -70,7 +70,7 @@ public abstract class aye {
         }
     }
 
-    public static void k(StringBuilder sb, Object obj, bgf bgfVar) {
+    public static void k(StringBuilder sb, Object obj, IHasInvokeMethod bgfVar) {
         if (bgfVar != null) {
             sb.append((CharSequence) bgfVar.invoke(obj));
             return;
@@ -85,8 +85,8 @@ public abstract class aye {
     }
 
     public static final boolean l(byte[] bArr, int i, int i2, byte[] bArr2, int i3) {
-        bzo.q(bArr, com.umeng.analytics.pro.bt.at);
-        bzo.q(bArr2, "b");
+        throwIfVar1IsNull(bArr, com.umeng.analytics.pro.bt.at);
+        throwIfVar1IsNull(bArr2, "b");
         for (int i4 = 0; i4 < i3; i4++) {
             if (bArr[i4 + i] != bArr2[i4 + i2]) {
                 return false;
@@ -97,8 +97,8 @@ public abstract class aye {
 
     public static final void m(erk erkVar, but butVar, bur burVar) {
         AutoCloseable autoCloseable;
-        bzo.q(butVar, "registry");
-        bzo.q(burVar, "lifecycle");
+        throwIfVar1IsNull(butVar, "registry");
+        throwIfVar1IsNull(burVar, "lifecycle");
         erl erlVar = erkVar.m;
         if (erlVar != null) {
             synchronized (erlVar.a) {
@@ -144,12 +144,16 @@ public abstract class aye {
                 String packageName2 = context.getPackageName();
                 if (iMyUid2 == iMyUid && Objects.equals(packageName2, packageName) && Build.VERSION.SDK_INT >= 29) {
                     AppOpsManager appOpsManager = (AppOpsManager) context.getSystemService(AppOpsManager.class);
-                    iNoteProxyOpNoThrow = appOpsManager == null ? 1 : appOpsManager.checkOpNoThrow(strPermissionToOp, Binder.getCallingUid(), packageName);
+                    iNoteProxyOpNoThrow = appOpsManager == null ? 1
+                            : appOpsManager.checkOpNoThrow(strPermissionToOp, Binder.getCallingUid(), packageName);
                     if (iNoteProxyOpNoThrow == 0) {
-                        iNoteProxyOpNoThrow = appOpsManager != null ? appOpsManager.checkOpNoThrow(strPermissionToOp, iMyUid, ke.a(context)) : 1;
+                        iNoteProxyOpNoThrow = appOpsManager != null
+                                ? appOpsManager.checkOpNoThrow(strPermissionToOp, iMyUid, ke.a(context))
+                                : 1;
                     }
                 } else {
-                    iNoteProxyOpNoThrow = ((AppOpsManager) context.getSystemService(AppOpsManager.class)).noteProxyOpNoThrow(strPermissionToOp, packageName);
+                    iNoteProxyOpNoThrow = ((AppOpsManager) context.getSystemService(AppOpsManager.class))
+                            .noteProxyOpNoThrow(strPermissionToOp, packageName);
                 }
                 if (iNoteProxyOpNoThrow != 0) {
                     return -2;
@@ -202,8 +206,10 @@ public abstract class aye {
             i = i2;
             ozVar = ozVar2;
             int i3 = 1;
-            dasVar.n("Animation", InputStream.class, Drawable.class, new fa(new io(arrayListO, i3, bvaVar), i3));
-            dasVar.n("Animation", ByteBuffer.class, Drawable.class, new fa(new io(arrayListO, 1, bvaVar), 0));
+            dasVar.n("Animation", InputStream.class, Drawable.class,
+                    new fa(new DefaultConfig(arrayListO, i3, bvaVar), i3));
+            dasVar.n("Animation", ByteBuffer.class, Drawable.class,
+                    new fa(new DefaultConfig(arrayListO, 1, bvaVar), 0));
         } else {
             ozVar = ozVar2;
             i = i2;
@@ -236,7 +242,7 @@ public abstract class aye {
         dasVar.n("BitmapDrawable", ByteBuffer.class, BitmapDrawable.class, new ou(resources, rzVar));
         dasVar.n("BitmapDrawable", InputStream.class, BitmapDrawable.class, new ou(resources, ouVar));
         dasVar.n("BitmapDrawable", cls, BitmapDrawable.class, new ou(resources, epuVar));
-        dasVar.m(BitmapDrawable.class, new io(ozVar3, 8, owVar));
+        dasVar.m(BitmapDrawable.class, new DefaultConfig(ozVar3, 8, owVar));
         dasVar.n("Animation", InputStream.class, bha.class, new dmv(arrayListO, scVar, bvaVar));
         dasVar.n("Animation", ByteBuffer.class, bha.class, scVar);
         dasVar.m(bha.class, new awp(12));
@@ -317,7 +323,7 @@ public abstract class aye {
     }
 
     public static final deh q(ahx ahxVar) {
-        bzo.q(ahxVar, "<this>");
+        throwIfVar1IsNull(ahxVar, "<this>");
         dep depVar = (dep) ahxVar.b(d);
         if (depVar == null) {
             throw new IllegalArgumentException("CreationExtras must have a value by `SAVED_STATE_REGISTRY_OWNER_KEY`");
@@ -335,7 +341,8 @@ public abstract class aye {
         Bundle bundle2 = null;
         dek dekVar = denVarT instanceof dek ? (dek) denVarT : null;
         if (dekVar == null) {
-            throw new IllegalStateException("enableSavedStateHandles() wasn't called prior to createSavedStateHandle() call");
+            throw new IllegalStateException(
+                    "enableSavedStateHandles() wasn't called prior to createSavedStateHandle() call");
         }
         LinkedHashMap linkedHashMap = u(errVar).a;
         deh dehVar = (deh) linkedHashMap.get(str);
@@ -347,7 +354,7 @@ public abstract class aye {
         if (bundle3 != null && bundle3.containsKey(str)) {
             Bundle bundle4 = bundle3.getBundle(str);
             if (bundle4 == null) {
-                bundle4 = bht.r((csm[]) Arrays.copyOf(new csm[0], 0));
+                bundle4 = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
             }
             bundle3.remove(str);
             if (bundle3.isEmpty()) {
@@ -388,16 +395,17 @@ public abstract class aye {
     }
 
     public static final btd t(btd btdVar) {
-        bzo.q(btdVar, "<this>");
+        throwIfVar1IsNull(btdVar, "<this>");
         return btdVar.getDescriptor().f() ? btdVar : new cpe(btdVar);
     }
 
     public static final del u(err errVar) {
         dej dejVar = new dej();
         ahx ahxVarAi = errVar instanceof bkg ? ((bkg) errVar).ai() : ahv.a;
-        bzo.q(dejVar, "factory");
-        bzo.q(ahxVarAi, "extras");
-        return (del) ((chm) new erp(errVar.aj(), dejVar, ahxVarAi).v).ah("androidx.lifecycle.internal.SavedStateHandlesVM", dal.b(del.class));
+        throwIfVar1IsNull(dejVar, "factory");
+        throwIfVar1IsNull(ahxVarAi, "extras");
+        return (del) ((chm) new erp(errVar.aj(), dejVar, ahxVarAi).v)
+                .ah("androidx.lifecycle.internal.SavedStateHandlesVM", dal.b(del.class));
     }
 
     public static Activity v() {
@@ -409,17 +417,17 @@ public abstract class aye {
             cde cdeVarT = bmuVarBh.t();
             cdeVarT.ab = "currentActivityThread" /* cnb.z(-74217034873642L) */;
             Object objE = ((cdk) aaz.e(cdeVarT.aj())).e(new Object[0]);
-            bzo.n(objE);
+            throwIfVar1IsNull(objE);
             azg azgVarR = dqc.bi(objE).r();
             azgVarR.ab = "mActivities" /* cnb.z(-74105365723946L) */;
             Object objE2 = ((azk) aaz.e(azgVarR.c())).e();
-            bzo.n(objE2);
+            throwIfVar1IsNull(objE2);
             for (Object obj : ((Map) objE2).values()) {
                 int i2 = bte.a;
                 azg azgVarR2 = dqc.bi(obj).r();
                 azgVarR2.ab = "paused" /* cnb.z(-74019466378026L) */;
                 Object objE3 = ((azk) aaz.e(azgVarR2.c())).e();
-                bzo.n(objE3);
+                throwIfVar1IsNull(objE3);
                 if (!((Boolean) objE3).booleanValue()) {
                     azg azgVarR3 = dqc.bi(obj).r();
                     azgVarR3.ab = "activity" /* cnb.z(-74040941214506L) */;
@@ -434,7 +442,8 @@ public abstract class aye {
         }
     }
 
-    public static long w(int i, String str, String str2, long j) throws IllegalAccessException, NoSuchMethodException, InvocationTargetException {
+    public static long w(int i, String str, String str2, long j)
+            throws IllegalAccessException, NoSuchMethodException, InvocationTargetException {
         cge cgeVar = cge.a;
         ContentValues contentValues = new ContentValues();
         contentValues.put("msgid" /* cnb.z(-116269059668778L) */, (Integer) 0);
@@ -445,11 +454,11 @@ public abstract class aye {
         contentValues.put("talker" /* cnb.z(-116088671042346L) */, str);
         contentValues.put("content" /* cnb.z(-116058606271274L) */, str2);
         cgeVar.getClass();
-        Object objC = zf.c(emn.az(cgd.a), new Object[0]);
+        Object objC = ReflectionWrapper.createInstanceWithArgs(emn.az(cgd.a), new Object[0]);
         int i2 = bte.a;
         cde cdeVarT = dqc.bi(objC).t();
         cdeVarT.ab = "convertFrom" /* cnb.z(-75690208656170L) */;
-        cdeVarT.z(Arrays.copyOf(new Object[]{dal.b(ContentValues.class), dal.b(Boolean.TYPE)}, 2));
+        cdeVarT.z(Arrays.copyOf(new Object[] { dal.b(ContentValues.class), dal.b(Boolean.TYPE) }, 2));
         cdeVarT.ah();
         ((cdk) aaz.e(cdeVarT.aj())).e(contentValues, Boolean.TRUE);
         cgy.a.getClass();
@@ -461,9 +470,9 @@ public abstract class aye {
         cde cdeVarT2 = dqc.bi(dgf.b(emn.az(dmt.a))).t();
         cdeVarT2.a = emn.az(cgv.a);
         Object objE = ((cdk) bjs.h(cdeVarT2)).e(new Object[0]);
-        bzo.n(objE);
+        throwIfVar1IsNull(objE);
         Object objInvoke = methodBb.invoke(objE, objC);
-        bzo.o(objInvoke, "null cannot be cast to non-null type kotlin.Long" /* cnb.z(-370294900390698L) */);
+        throwIfVar1IsNull(objInvoke, "null cannot be cast to non-null type kotlin.Long" /* cnb.z(-370294900390698L) */);
         return ((Long) objInvoke).longValue();
     }
 

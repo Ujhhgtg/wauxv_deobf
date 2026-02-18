@@ -26,7 +26,7 @@ public final class ki {
         a = new ki();
         new LinkedHashMap();
         d = new LinkedHashMap();
-        e = zf.h("android.app.ActivityThread", null, 6);
+        e = ReflectionWrapper.h("android.app.ActivityThread", null, 6);
     }
 
     public static ClassLoader g() {
@@ -136,7 +136,7 @@ public final class ki {
         if (str == null) {
             str = "";
         }
-        Class clsF = zf.f(str, 2, classLoader);
+        Class clsF = ReflectionWrapper.f(str, 2, classLoader);
         if (clsF != null) {
             int i = bte.a;
             bmu bmuVarBh = dqc.bh(clsF);

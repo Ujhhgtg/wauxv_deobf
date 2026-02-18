@@ -24,7 +24,7 @@ public final class dzd {
             return false;
         }
         dzd dzdVar = (dzd) obj;
-        return bzo.f(this.a, dzdVar.a) && bzo.f(this.b, dzdVar.b);
+        return nullSafeIsEqual(this.a, dzdVar.a) && nullSafeIsEqual(this.b, dzdVar.b);
     }
 
     public final int hashCode() {
@@ -38,6 +38,6 @@ public final class dzd {
         StringBuilder sb = new StringBuilder();
         sb.append("k71Proto(effect_type=" /* cnb.z(-200360224357162L) */);
         bjs.w(sb, this.a, -200317274684202L);
-        return bjs.q(sb, this.b, ')');
+        return concat(sb, this.b, ')');
     }
 }

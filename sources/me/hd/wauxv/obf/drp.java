@@ -6,7 +6,8 @@ import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public class drp {
-    public static final /* synthetic */ AtomicIntegerFieldUpdater b = AtomicIntegerFieldUpdater.newUpdater(drp.class, "_size$volatile");
+    public static final /* synthetic */ AtomicIntegerFieldUpdater b = AtomicIntegerFieldUpdater.newUpdater(drp.class,
+            "_size$volatile");
     private volatile /* synthetic */ int _size$volatile;
     public aws[] c;
 
@@ -19,7 +20,7 @@ public class drp {
             this.c = awsVarArr;
         } else if (atomicIntegerFieldUpdater.get(this) >= awsVarArr.length) {
             Object[] objArrCopyOf = Arrays.copyOf(awsVarArr, atomicIntegerFieldUpdater.get(this) * 2);
-            bzo.p(objArrCopyOf, "copyOf(...)");
+            throwIfVar1IsNull(objArrCopyOf, "copyOf(...)");
             awsVarArr = (aws[]) objArrCopyOf;
             this.c = awsVarArr;
         }
@@ -30,12 +31,21 @@ public class drp {
         f(i);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:12:0x0045  */
-    /* JADX WARN: Found duplicated region for block: B:14:0x0052  */
-    /* JADX WARN: Found duplicated region for block: B:17:0x0063  */
-    /* JADX WARN: Found duplicated region for block: B:21:0x0075 A[LOOP:0: B:9:0x003a->B:21:0x0075, LOOP_END] */
-    /* JADX WARN: Found duplicated region for block: B:24:0x007a A[EDGE_INSN: B:24:0x007a->B:22:0x007a BREAK  A[LOOP:0: B:9:0x003a->B:21:0x0075], SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:25:0x007a A[EDGE_INSN: B:25:0x007a->B:22:0x007a BREAK  A[LOOP:0: B:9:0x003a->B:21:0x0075], SYNTHETIC] */
+    /* JADX WARN: Found duplicated region for block: B:12:0x0045 */
+    /* JADX WARN: Found duplicated region for block: B:14:0x0052 */
+    /* JADX WARN: Found duplicated region for block: B:17:0x0063 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:21:0x0075 A[LOOP:0:
+     * B:9:0x003a->B:21:0x0075, LOOP_END]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:24:0x007a A[EDGE_INSN:
+     * B:24:0x007a->B:22:0x007a BREAK A[LOOP:0: B:9:0x003a->B:21:0x0075], SYNTHETIC]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:25:0x007a A[EDGE_INSN:
+     * B:25:0x007a->B:22:0x007a BREAK A[LOOP:0: B:9:0x003a->B:21:0x0075], SYNTHETIC]
+     */
     /* JADX WARN: Found duplicated region for block: B:26:? A[SYNTHETIC] */
     public final aws e(int i) {
         int i2;
@@ -47,7 +57,7 @@ public class drp {
         Comparable comparable3;
         Object obj;
         Object[] objArr2 = this.c;
-        bzo.n(objArr2);
+        throwIfVar1IsNull(objArr2);
         AtomicIntegerFieldUpdater atomicIntegerFieldUpdater = b;
         atomicIntegerFieldUpdater.set(this, atomicIntegerFieldUpdater.get(this) - 1);
         if (i < atomicIntegerFieldUpdater.get(this)) {
@@ -55,9 +65,9 @@ public class drp {
             int i5 = (i - 1) / 2;
             if (i > 0) {
                 aws awsVar = objArr2[i];
-                bzo.n(awsVar);
+                throwIfVar1IsNull(awsVar);
                 Object obj2 = objArr2[i5];
-                bzo.n(obj2);
+                throwIfVar1IsNull(obj2);
                 if (awsVar.compareTo(obj2) < 0) {
                     g(i, i5);
                     f(i5);
@@ -69,13 +79,13 @@ public class drp {
                             break;
                         }
                         objArr = this.c;
-                        bzo.n(objArr);
+                        throwIfVar1IsNull(objArr);
                         i4 = i2 + 2;
                         if (i4 < atomicIntegerFieldUpdater.get(this)) {
                             comparable3 = objArr[i4];
-                            bzo.n(comparable3);
+                            throwIfVar1IsNull(comparable3);
                             obj = objArr[i3];
-                            bzo.n(obj);
+                            throwIfVar1IsNull(obj);
                             if (comparable3.compareTo(obj) >= 0) {
                                 i4 = i3;
                             }
@@ -83,9 +93,9 @@ public class drp {
                             i4 = i3;
                         }
                         comparable = objArr[i];
-                        bzo.n(comparable);
+                        throwIfVar1IsNull(comparable);
                         comparable2 = objArr[i4];
-                        bzo.n(comparable2);
+                        throwIfVar1IsNull(comparable2);
                         if (comparable.compareTo(comparable2) <= 0) {
                             break;
                         }
@@ -102,13 +112,13 @@ public class drp {
                         break;
                     }
                     objArr = this.c;
-                    bzo.n(objArr);
+                    throwIfVar1IsNull(objArr);
                     i4 = i2 + 2;
                     if (i4 < atomicIntegerFieldUpdater.get(this)) {
                         comparable3 = objArr[i4];
-                        bzo.n(comparable3);
+                        throwIfVar1IsNull(comparable3);
                         obj = objArr[i3];
-                        bzo.n(obj);
+                        throwIfVar1IsNull(obj);
                         if (comparable3.compareTo(obj) >= 0) {
                             i4 = i3;
                         }
@@ -116,9 +126,9 @@ public class drp {
                         i4 = i3;
                     }
                     comparable = objArr[i];
-                    bzo.n(comparable);
+                    throwIfVar1IsNull(comparable);
                     comparable2 = objArr[i4];
-                    bzo.n(comparable2);
+                    throwIfVar1IsNull(comparable2);
                     if (comparable.compareTo(comparable2) <= 0) {
                         break;
                         break;
@@ -129,7 +139,7 @@ public class drp {
             }
         }
         aws awsVar2 = objArr2[atomicIntegerFieldUpdater.get(this)];
-        bzo.n(awsVar2);
+        throwIfVar1IsNull(awsVar2);
         awsVar2.g(null);
         awsVar2.d = -1;
         objArr2[atomicIntegerFieldUpdater.get(this)] = null;
@@ -139,12 +149,12 @@ public class drp {
     public final void f(int i) {
         while (i > 0) {
             aws[] awsVarArr = this.c;
-            bzo.n(awsVarArr);
+            throwIfVar1IsNull(awsVarArr);
             int i2 = (i - 1) / 2;
             aws awsVar = awsVarArr[i2];
-            bzo.n(awsVar);
+            throwIfVar1IsNull(awsVar);
             aws awsVar2 = awsVarArr[i];
-            bzo.n(awsVar2);
+            throwIfVar1IsNull(awsVar2);
             if (awsVar.compareTo(awsVar2) <= 0) {
                 return;
             }
@@ -155,11 +165,11 @@ public class drp {
 
     public final void g(int i, int i2) {
         aws[] awsVarArr = this.c;
-        bzo.n(awsVarArr);
+        throwIfVar1IsNull(awsVarArr);
         aws awsVar = awsVarArr[i2];
-        bzo.n(awsVar);
+        throwIfVar1IsNull(awsVar);
         aws awsVar2 = awsVarArr[i];
-        bzo.n(awsVar2);
+        throwIfVar1IsNull(awsVar2);
         awsVarArr[i] = awsVar;
         awsVarArr[i2] = awsVar2;
         awsVar.d = i;

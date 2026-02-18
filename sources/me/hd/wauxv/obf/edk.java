@@ -24,7 +24,7 @@ public final class edk {
             return false;
         }
         edk edkVar = (edk) obj;
-        return bzo.f(this.a, edkVar.a) && bzo.f(this.b, edkVar.b);
+        return nullSafeIsEqual(this.a, edkVar.a) && nullSafeIsEqual(this.b, edkVar.b);
     }
 
     public final int hashCode() {
@@ -38,6 +38,6 @@ public final class edk {
         StringBuilder sb = new StringBuilder();
         sb.append("poProto(d=" /* cnb.z(-252015796026154L) */);
         yg.u(sb, this.a, -251934191647530L);
-        return bjs.p(sb, this.b, ')');
+        return concat(sb, this.b, ')');
     }
 }

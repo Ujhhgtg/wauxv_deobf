@@ -204,7 +204,8 @@ public class Toolbar extends ViewGroup {
 
     public final void aw(View view, boolean z) {
         ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
-        ekp ekpVarAr = layoutParams == null ? ar() : !checkLayoutParams(layoutParams) ? as(layoutParams) : (ekp) layoutParams;
+        ekp ekpVarAr = layoutParams == null ? ar()
+                : !checkLayoutParams(layoutParams) ? as(layoutParams) : (ekp) layoutParams;
         ekpVarAr.b = 1;
         if (!z || this.i == null) {
             addView(view, ekpVarAr);
@@ -295,7 +296,8 @@ public class Toolbar extends ViewGroup {
             return getPaddingTop() - i2;
         }
         if (i3 == 80) {
-            return (((getHeight() - getPaddingBottom()) - measuredHeight) - ((ViewGroup.MarginLayoutParams) ekpVar).bottomMargin) - i2;
+            return (((getHeight() - getPaddingBottom()) - measuredHeight)
+                    - ((ViewGroup.MarginLayoutParams) ekpVar).bottomMargin) - i2;
         }
         int paddingTop = getPaddingTop();
         int paddingBottom = getPaddingBottom();
@@ -368,14 +370,21 @@ public class Toolbar extends ViewGroup {
         int iMax = Math.max(0, i6) + Math.max(0, i5);
         iArr[0] = Math.max(0, -i5);
         iArr[1] = Math.max(0, -i6);
-        view.measure(ViewGroup.getChildMeasureSpec(i, getPaddingRight() + getPaddingLeft() + iMax + i2, marginLayoutParams.width), ViewGroup.getChildMeasureSpec(i3, getPaddingBottom() + getPaddingTop() + marginLayoutParams.topMargin + marginLayoutParams.bottomMargin + i4, marginLayoutParams.height));
+        view.measure(
+                ViewGroup.getChildMeasureSpec(i, getPaddingRight() + getPaddingLeft() + iMax + i2,
+                        marginLayoutParams.width),
+                ViewGroup.getChildMeasureSpec(i3, getPaddingBottom() + getPaddingTop() + marginLayoutParams.topMargin
+                        + marginLayoutParams.bottomMargin + i4, marginLayoutParams.height));
         return view.getMeasuredWidth() + iMax;
     }
 
     public final void bj(View view, int i, int i2, int i3, int i4) {
         ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) view.getLayoutParams();
-        int childMeasureSpec = ViewGroup.getChildMeasureSpec(i, getPaddingRight() + getPaddingLeft() + marginLayoutParams.leftMargin + marginLayoutParams.rightMargin + i2, marginLayoutParams.width);
-        int childMeasureSpec2 = ViewGroup.getChildMeasureSpec(i3, getPaddingBottom() + getPaddingTop() + marginLayoutParams.topMargin + marginLayoutParams.bottomMargin, marginLayoutParams.height);
+        int childMeasureSpec = ViewGroup.getChildMeasureSpec(i, getPaddingRight() + getPaddingLeft()
+                + marginLayoutParams.leftMargin + marginLayoutParams.rightMargin + i2, marginLayoutParams.width);
+        int childMeasureSpec2 = ViewGroup.getChildMeasureSpec(i3,
+                getPaddingBottom() + getPaddingTop() + marginLayoutParams.topMargin + marginLayoutParams.bottomMargin,
+                marginLayoutParams.height);
         int mode = View.MeasureSpec.getMode(childMeasureSpec2);
         if (mode != 1073741824 && i4 >= 0) {
             if (mode != 0) {
@@ -395,12 +404,13 @@ public class Toolbar extends ViewGroup {
         if (Build.VERSION.SDK_INT >= 33) {
             OnBackInvokedDispatcher onBackInvokedDispatcherA = ekn.a(this);
             eko ekoVar = this.al;
-            boolean z = (ekoVar == null || ekoVar.b == null || onBackInvokedDispatcherA == null || !isAttachedToWindow() || !this.ap) ? false : true;
+            boolean z = (ekoVar == null || ekoVar.b == null || onBackInvokedDispatcherA == null || !isAttachedToWindow()
+                    || !this.ap) ? false : true;
             if (z && this.ao == null) {
                 if (this.an == null) {
                     this.an = ekn.b(new ekl(this, 0));
                 }
-                ekn.c(onBackInvokedDispatcherA, this.an);
+                ekn.createInstanceWithArgs(onBackInvokedDispatcherA, this.an);
                 this.ao = onBackInvokedDispatcherA;
                 return;
             }
@@ -423,7 +433,8 @@ public class Toolbar extends ViewGroup {
     }
 
     @Override // android.view.ViewGroup
-    public final /* bridge */ /* synthetic */ ViewGroup.LayoutParams generateLayoutParams(ViewGroup.LayoutParams layoutParams) {
+    public final /* bridge */ /* synthetic */ ViewGroup.LayoutParams generateLayoutParams(
+            ViewGroup.LayoutParams layoutParams) {
         return as(layoutParams);
     }
 
@@ -488,7 +499,9 @@ public class Toolbar extends ViewGroup {
     public int getCurrentContentInsetEnd() {
         cbw cbwVar;
         ActionMenuView actionMenuView = this.a;
-        return (actionMenuView == null || (cbwVar = actionMenuView.a) == null || !cbwVar.hasVisibleItems()) ? getContentInsetEnd() : Math.max(getContentInsetEnd(), Math.max(this.v, 0));
+        return (actionMenuView == null || (cbwVar = actionMenuView.a) == null || !cbwVar.hasVisibleItems())
+                ? getContentInsetEnd()
+                : Math.max(getContentInsetEnd(), Math.max(this.v, 0));
     }
 
     public int getCurrentContentInsetLeft() {
@@ -500,7 +513,8 @@ public class Toolbar extends ViewGroup {
     }
 
     public int getCurrentContentInsetStart() {
-        return getNavigationIcon() != null ? Math.max(getContentInsetStart(), Math.max(this.u, 0)) : getContentInsetStart();
+        return getNavigationIcon() != null ? Math.max(getContentInsetStart(), Math.max(this.u, 0))
+                : getContentInsetStart();
     }
 
     public Drawable getLogo() {
@@ -740,59 +754,73 @@ public class Toolbar extends ViewGroup {
         return true;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:100:0x027d  */
-    /* JADX WARN: Found duplicated region for block: B:103:0x028f A[LOOP:0: B:102:0x028d->B:103:0x028f, LOOP_END] */
-    /* JADX WARN: Found duplicated region for block: B:106:0x02a7 A[LOOP:1: B:105:0x02a5->B:106:0x02a7, LOOP_END] */
-    /* JADX WARN: Found duplicated region for block: B:109:0x02c7 A[LOOP:2: B:108:0x02c5->B:109:0x02c7, LOOP_END, MOVE_INLINED] */
+    /* JADX WARN: Found duplicated region for block: B:100:0x027d */
+    /*
+     * JADX WARN: Found duplicated region for block: B:103:0x028f A[LOOP:0:
+     * B:102:0x028d->B:103:0x028f, LOOP_END]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:106:0x02a7 A[LOOP:1:
+     * B:105:0x02a5->B:106:0x02a7, LOOP_END]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:109:0x02c7 A[LOOP:2:
+     * B:108:0x02c5->B:109:0x02c7, LOOP_END, MOVE_INLINED]
+     */
     /* JADX WARN: Found duplicated region for block: B:113:0x030d A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:114:0x030f  */
-    /* JADX WARN: Found duplicated region for block: B:115:0x0313  */
-    /* JADX WARN: Found duplicated region for block: B:118:0x031a A[LOOP:3: B:117:0x0318->B:118:0x031a, LOOP_END] */
+    /* JADX WARN: Found duplicated region for block: B:114:0x030f */
+    /* JADX WARN: Found duplicated region for block: B:115:0x0313 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:118:0x031a A[LOOP:3:
+     * B:117:0x0318->B:118:0x031a, LOOP_END]
+     */
     /* JADX WARN: Found duplicated region for block: B:19:0x0062 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:20:0x0064  */
-    /* JADX WARN: Found duplicated region for block: B:21:0x006b  */
+    /* JADX WARN: Found duplicated region for block: B:20:0x0064 */
+    /* JADX WARN: Found duplicated region for block: B:21:0x006b */
     /* JADX WARN: Found duplicated region for block: B:24:0x0079 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:25:0x007b  */
-    /* JADX WARN: Found duplicated region for block: B:26:0x0082  */
+    /* JADX WARN: Found duplicated region for block: B:25:0x007b */
+    /* JADX WARN: Found duplicated region for block: B:26:0x0082 */
     /* JADX WARN: Found duplicated region for block: B:29:0x00b6 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:30:0x00b8  */
-    /* JADX WARN: Found duplicated region for block: B:31:0x00bf  */
+    /* JADX WARN: Found duplicated region for block: B:30:0x00b8 */
+    /* JADX WARN: Found duplicated region for block: B:31:0x00bf */
     /* JADX WARN: Found duplicated region for block: B:34:0x00cd A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:35:0x00cf  */
-    /* JADX WARN: Found duplicated region for block: B:36:0x00d6  */
-    /* JADX WARN: Found duplicated region for block: B:39:0x00ea  */
-    /* JADX WARN: Found duplicated region for block: B:40:0x0101  */
-    /* JADX WARN: Found duplicated region for block: B:42:0x0106  */
-    /* JADX WARN: Found duplicated region for block: B:43:0x011f  */
+    /* JADX WARN: Found duplicated region for block: B:35:0x00cf */
+    /* JADX WARN: Found duplicated region for block: B:36:0x00d6 */
+    /* JADX WARN: Found duplicated region for block: B:39:0x00ea */
+    /* JADX WARN: Found duplicated region for block: B:40:0x0101 */
+    /* JADX WARN: Found duplicated region for block: B:42:0x0106 */
+    /* JADX WARN: Found duplicated region for block: B:43:0x011f */
     /* JADX WARN: Found duplicated region for block: B:46:0x0125 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:47:0x0127  */
-    /* JADX WARN: Found duplicated region for block: B:48:0x012a  */
-    /* JADX WARN: Found duplicated region for block: B:50:0x012e  */
-    /* JADX WARN: Found duplicated region for block: B:51:0x0131  */
-    /* JADX WARN: Found duplicated region for block: B:54:0x0143  */
-    /* JADX WARN: Found duplicated region for block: B:56:0x014b A[ADDED_TO_REGION] */
-    /* JADX WARN: Found duplicated region for block: B:63:0x0164  */
+    /* JADX WARN: Found duplicated region for block: B:47:0x0127 */
+    /* JADX WARN: Found duplicated region for block: B:48:0x012a */
+    /* JADX WARN: Found duplicated region for block: B:50:0x012e */
+    /* JADX WARN: Found duplicated region for block: B:51:0x0131 */
+    /* JADX WARN: Found duplicated region for block: B:54:0x0143 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:56:0x014b A[ADDED_TO_REGION]
+     */
+    /* JADX WARN: Found duplicated region for block: B:63:0x0164 */
     /* JADX WARN: Found duplicated region for block: B:65:0x0168 A[MOVE_INLINED] */
-    /* JADX WARN: Found duplicated region for block: B:67:0x0179  */
-    /* JADX WARN: Found duplicated region for block: B:68:0x017b  */
-    /* JADX WARN: Found duplicated region for block: B:70:0x0187  */
-    /* JADX WARN: Found duplicated region for block: B:72:0x0193  */
-    /* JADX WARN: Found duplicated region for block: B:73:0x019d  */
+    /* JADX WARN: Found duplicated region for block: B:67:0x0179 */
+    /* JADX WARN: Found duplicated region for block: B:68:0x017b */
+    /* JADX WARN: Found duplicated region for block: B:70:0x0187 */
+    /* JADX WARN: Found duplicated region for block: B:72:0x0193 */
+    /* JADX WARN: Found duplicated region for block: B:73:0x019d */
     /* JADX WARN: Found duplicated region for block: B:75:0x01aa A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:76:0x01ac  */
-    /* JADX WARN: Found duplicated region for block: B:77:0x01af  */
-    /* JADX WARN: Found duplicated region for block: B:80:0x01c2  */
-    /* JADX WARN: Found duplicated region for block: B:81:0x01e6  */
-    /* JADX WARN: Found duplicated region for block: B:83:0x01e9  */
-    /* JADX WARN: Found duplicated region for block: B:84:0x020d  */
-    /* JADX WARN: Found duplicated region for block: B:86:0x0210  */
+    /* JADX WARN: Found duplicated region for block: B:76:0x01ac */
+    /* JADX WARN: Found duplicated region for block: B:77:0x01af */
+    /* JADX WARN: Found duplicated region for block: B:80:0x01c2 */
+    /* JADX WARN: Found duplicated region for block: B:81:0x01e6 */
+    /* JADX WARN: Found duplicated region for block: B:83:0x01e9 */
+    /* JADX WARN: Found duplicated region for block: B:84:0x020d */
+    /* JADX WARN: Found duplicated region for block: B:86:0x0210 */
     /* JADX WARN: Found duplicated region for block: B:88:0x0218 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:89:0x021a  */
-    /* JADX WARN: Found duplicated region for block: B:91:0x021e  */
-    /* JADX WARN: Found duplicated region for block: B:94:0x0232  */
-    /* JADX WARN: Found duplicated region for block: B:95:0x0255  */
-    /* JADX WARN: Found duplicated region for block: B:97:0x0258  */
-    /* JADX WARN: Found duplicated region for block: B:98:0x027a  */
+    /* JADX WARN: Found duplicated region for block: B:89:0x021a */
+    /* JADX WARN: Found duplicated region for block: B:91:0x021e */
+    /* JADX WARN: Found duplicated region for block: B:94:0x0232 */
+    /* JADX WARN: Found duplicated region for block: B:95:0x0255 */
+    /* JADX WARN: Found duplicated region for block: B:97:0x0258 */
+    /* JADX WARN: Found duplicated region for block: B:98:0x027a */
     @Override // android.view.ViewGroup, android.view.View
     public void onLayout(boolean z, int i, int i2, int i3, int i4) {
         int iBg;
@@ -894,14 +922,16 @@ public class Toolbar extends ViewGroup {
             if (zBk) {
                 ekp ekpVar3 = (ekp) this.b.getLayoutParams();
                 z2 = z4;
-                measuredHeight = this.b.getMeasuredHeight() + ((ViewGroup.MarginLayoutParams) ekpVar3).topMargin + ((ViewGroup.MarginLayoutParams) ekpVar3).bottomMargin;
+                measuredHeight = this.b.getMeasuredHeight() + ((ViewGroup.MarginLayoutParams) ekpVar3).topMargin
+                        + ((ViewGroup.MarginLayoutParams) ekpVar3).bottomMargin;
             } else {
                 z2 = z4;
                 measuredHeight = 0;
             }
             if (zBk2) {
                 ekp ekpVar4 = (ekp) this.c.getLayoutParams();
-                measuredHeight = this.c.getMeasuredHeight() + ((ViewGroup.MarginLayoutParams) ekpVar4).topMargin + ((ViewGroup.MarginLayoutParams) ekpVar4).bottomMargin + measuredHeight;
+                measuredHeight = this.c.getMeasuredHeight() + ((ViewGroup.MarginLayoutParams) ekpVar4).topMargin
+                        + ((ViewGroup.MarginLayoutParams) ekpVar4).bottomMargin + measuredHeight;
             }
             if (zBk || zBk2) {
                 jp jpVar = zBk ? this.b : this.c;
@@ -924,12 +954,14 @@ public class Toolbar extends ViewGroup {
                         i14 = ((ViewGroup.MarginLayoutParams) ekpVar).bottomMargin;
                         i15 = this.s;
                         if (i13 < i14 + i15) {
-                            iMax2 = Math.max(0, iMax2 - ((((ViewGroup.MarginLayoutParams) ekpVar2).bottomMargin + i15) - i13));
+                            iMax2 = Math.max(0,
+                                    iMax2 - ((((ViewGroup.MarginLayoutParams) ekpVar2).bottomMargin + i15) - i13));
                         }
                     }
                     paddingTop = paddingTop2 + iMax2;
                 } else {
-                    paddingTop = (((height - paddingBottom) - ((ViewGroup.MarginLayoutParams) ekpVar2).bottomMargin) - this.s) - i5;
+                    paddingTop = (((height - paddingBottom) - ((ViewGroup.MarginLayoutParams) ekpVar2).bottomMargin)
+                            - this.s) - i5;
                 }
                 if (z2) {
                     int i25 = (z3 ? this.p : 0) - iArr[1];
@@ -946,7 +978,8 @@ public class Toolbar extends ViewGroup {
                         i10 = iMin;
                     }
                     if (zBk2) {
-                        int i26 = paddingTop + ((ViewGroup.MarginLayoutParams) ((ekp) this.c.getLayoutParams())).topMargin;
+                        int i26 = paddingTop
+                                + ((ViewGroup.MarginLayoutParams) ((ekp) this.c.getLayoutParams())).topMargin;
                         this.c.layout(iMin - this.c.getMeasuredWidth(), i26, iMin, this.c.getMeasuredHeight() + i26);
                         i11 = iMin - this.q;
                     } else {
@@ -971,7 +1004,8 @@ public class Toolbar extends ViewGroup {
                         i8 = iMax;
                     }
                     if (zBk2) {
-                        int i28 = paddingTop + ((ViewGroup.MarginLayoutParams) ((ekp) this.c.getLayoutParams())).topMargin;
+                        int i28 = paddingTop
+                                + ((ViewGroup.MarginLayoutParams) ((ekp) this.c.getLayoutParams())).topMargin;
                         int measuredWidth4 = this.c.getMeasuredWidth() + iMax;
                         this.c.layout(iMax, i28, measuredWidth4, this.c.getMeasuredHeight() + i28);
                         i9 = measuredWidth4 + this.q;
@@ -1069,14 +1103,16 @@ public class Toolbar extends ViewGroup {
         if (zBk) {
             ekp ekpVar32 = (ekp) this.b.getLayoutParams();
             z2 = z4;
-            measuredHeight = this.b.getMeasuredHeight() + ((ViewGroup.MarginLayoutParams) ekpVar32).topMargin + ((ViewGroup.MarginLayoutParams) ekpVar32).bottomMargin;
+            measuredHeight = this.b.getMeasuredHeight() + ((ViewGroup.MarginLayoutParams) ekpVar32).topMargin
+                    + ((ViewGroup.MarginLayoutParams) ekpVar32).bottomMargin;
         } else {
             z2 = z4;
             measuredHeight = 0;
         }
         if (zBk2) {
             ekp ekpVar42 = (ekp) this.c.getLayoutParams();
-            measuredHeight = this.c.getMeasuredHeight() + ((ViewGroup.MarginLayoutParams) ekpVar42).topMargin + ((ViewGroup.MarginLayoutParams) ekpVar42).bottomMargin + measuredHeight;
+            measuredHeight = this.c.getMeasuredHeight() + ((ViewGroup.MarginLayoutParams) ekpVar42).topMargin
+                    + ((ViewGroup.MarginLayoutParams) ekpVar42).bottomMargin + measuredHeight;
         }
         if (zBk) {
             if (zBk) {
@@ -1102,12 +1138,14 @@ public class Toolbar extends ViewGroup {
                     i14 = ((ViewGroup.MarginLayoutParams) ekpVar).bottomMargin;
                     i15 = this.s;
                     if (i13 < i14 + i15) {
-                        iMax2 = Math.max(0, iMax2 - ((((ViewGroup.MarginLayoutParams) ekpVar2).bottomMargin + i15) - i13));
+                        iMax2 = Math.max(0,
+                                iMax2 - ((((ViewGroup.MarginLayoutParams) ekpVar2).bottomMargin + i15) - i13));
                     }
                 }
                 paddingTop = paddingTop2 + iMax2;
             } else {
-                paddingTop = (((height - paddingBottom) - ((ViewGroup.MarginLayoutParams) ekpVar2).bottomMargin) - this.s) - i5;
+                paddingTop = (((height - paddingBottom) - ((ViewGroup.MarginLayoutParams) ekpVar2).bottomMargin)
+                        - this.s) - i5;
             }
             if (z2) {
                 int i252 = (z3 ? this.p : 0) - iArr[1];
@@ -1184,12 +1222,14 @@ public class Toolbar extends ViewGroup {
                     i14 = ((ViewGroup.MarginLayoutParams) ekpVar).bottomMargin;
                     i15 = this.s;
                     if (i13 < i14 + i15) {
-                        iMax2 = Math.max(0, iMax2 - ((((ViewGroup.MarginLayoutParams) ekpVar2).bottomMargin + i15) - i13));
+                        iMax2 = Math.max(0,
+                                iMax2 - ((((ViewGroup.MarginLayoutParams) ekpVar2).bottomMargin + i15) - i13));
                     }
                 }
                 paddingTop = paddingTop2 + iMax2;
             } else {
-                paddingTop = (((height - paddingBottom) - ((ViewGroup.MarginLayoutParams) ekpVar2).bottomMargin) - this.s) - i5;
+                paddingTop = (((height - paddingBottom) - ((ViewGroup.MarginLayoutParams) ekpVar2).bottomMargin)
+                        - this.s) - i5;
             }
             if (z2) {
                 int i2522 = (z3 ? this.p : 0) - iArr[1];
@@ -1206,7 +1246,8 @@ public class Toolbar extends ViewGroup {
                     i10 = iMin;
                 }
                 if (zBk2) {
-                    int i2622 = paddingTop + ((ViewGroup.MarginLayoutParams) ((ekp) this.c.getLayoutParams())).topMargin;
+                    int i2622 = paddingTop
+                            + ((ViewGroup.MarginLayoutParams) ((ekp) this.c.getLayoutParams())).topMargin;
                     this.c.layout(iMin - this.c.getMeasuredWidth(), i2622, iMin, this.c.getMeasuredHeight() + i2622);
                     i11 = iMin - this.q;
                 } else {
@@ -1231,7 +1272,8 @@ public class Toolbar extends ViewGroup {
                     i8 = iMax;
                 }
                 if (zBk2) {
-                    int i2822 = paddingTop + ((ViewGroup.MarginLayoutParams) ((ekp) this.c.getLayoutParams())).topMargin;
+                    int i2822 = paddingTop
+                            + ((ViewGroup.MarginLayoutParams) ((ekp) this.c.getLayoutParams())).topMargin;
                     int measuredWidth422 = this.c.getMeasuredWidth() + iMax;
                     this.c.layout(iMax, i2822, measuredWidth422, this.c.getMeasuredHeight() + i2822);
                     i9 = measuredWidth422 + this.q;
@@ -1387,8 +1429,10 @@ public class Toolbar extends ViewGroup {
         int iMax7 = Math.max(iMax, iAu);
         int paddingRight = getPaddingRight() + getPaddingLeft() + i5 + iMax2;
         int paddingBottom = getPaddingBottom() + getPaddingTop() + iMax7;
-        int iResolveSizeAndState = View.resolveSizeAndState(Math.max(paddingRight, getSuggestedMinimumWidth()), i, (-16777216) & iCombineMeasuredStates2);
-        int iResolveSizeAndState2 = View.resolveSizeAndState(Math.max(paddingBottom, getSuggestedMinimumHeight()), i2, iCombineMeasuredStates2 << 16);
+        int iResolveSizeAndState = View.resolveSizeAndState(Math.max(paddingRight, getSuggestedMinimumWidth()), i,
+                (-16777216) & iCombineMeasuredStates2);
+        int iResolveSizeAndState2 = View.resolveSizeAndState(Math.max(paddingBottom, getSuggestedMinimumHeight()), i2,
+                iCombineMeasuredStates2 << 16);
         if (!this.am) {
             i3 = iResolveSizeAndState2;
             break;
@@ -1639,7 +1683,8 @@ public class Toolbar extends ViewGroup {
         this.w = typedArray.getInteger(0, 8388627);
         this.n = typedArray.getInteger(2, 48);
         int dimensionPixelOffset = typedArray.getDimensionPixelOffset(22, 0);
-        dimensionPixelOffset = typedArray.hasValue(27) ? typedArray.getDimensionPixelOffset(27, dimensionPixelOffset) : dimensionPixelOffset;
+        dimensionPixelOffset = typedArray.hasValue(27) ? typedArray.getDimensionPixelOffset(27, dimensionPixelOffset)
+                : dimensionPixelOffset;
         this.s = dimensionPixelOffset;
         this.r = dimensionPixelOffset;
         this.q = dimensionPixelOffset;

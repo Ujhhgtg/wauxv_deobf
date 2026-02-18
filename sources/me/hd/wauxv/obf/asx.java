@@ -11,7 +11,7 @@ public final class asx {
 
     /* JADX WARN: Multi-variable type inference failed */
     public asx(dfx dfxVar, bgj bgjVar) {
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         this.b = dfxVar;
         this.c = (bgr) bgjVar;
         int i = dfxVar.i();
@@ -39,7 +39,10 @@ public final class asx {
         }
     }
 
-    /* JADX WARN: Type inference failed for: r8v0, types: [me.hd.wauxv.obf.bgj, me.hd.wauxv.obf.bgr] */
+    /*
+     * JADX WARN: Type inference failed for: r8v0, types: [me.hd.wauxv.obf.bgj,
+     * me.hd.wauxv.obf.bgr]
+     */
     public final int g() {
         ?? r8;
         int iNumberOfTrailingZeros;

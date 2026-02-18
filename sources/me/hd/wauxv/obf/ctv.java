@@ -14,7 +14,7 @@ public final class ctv extends ae {
     @Override // me.hd.wauxv.obf.ae
     public final Random d() {
         ThreadLocalRandom threadLocalRandomCurrent = ThreadLocalRandom.current();
-        bzo.p(threadLocalRandomCurrent, "current(...)");
+        throwIfVar1IsNull(threadLocalRandomCurrent, "current(...)");
         return threadLocalRandomCurrent;
     }
 }

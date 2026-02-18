@@ -24,7 +24,7 @@ public final class dxw {
             return false;
         }
         dxw dxwVar = (dxw) obj;
-        return bzo.f(this.a, dxwVar.a) && bzo.f(this.b, dxwVar.b);
+        return nullSafeIsEqual(this.a, dxwVar.a) && nullSafeIsEqual(this.b, dxwVar.b);
     }
 
     public final int hashCode() {
@@ -38,6 +38,6 @@ public final class dxw {
         StringBuilder sb = new StringBuilder();
         sb.append("gf1Proto(seat_id=" /* cnb.z(-181814555573034L) */);
         bjs.w(sb, this.a, -181754426030890L);
-        return bjs.q(sb, this.b, ')');
+        return concat(sb, this.b, ')');
     }
 }

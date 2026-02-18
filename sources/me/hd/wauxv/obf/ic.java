@@ -56,7 +56,7 @@ import java.util.WeakHashMap;
 /* JADX INFO: loaded from: classes.dex */
 public final class ic extends ho implements cbu, LayoutInflater.Factory2 {
     public static final dhq t = new dhq(0);
-    public static final int[] u = {R.attr.windowBackground};
+    public static final int[] u = { R.attr.windowBackground };
     public static final boolean v = !"robolectric".equals(Build.FINGERPRINT);
     public final Object aa;
     public eut ab;
@@ -167,13 +167,16 @@ public final class ic extends ho implements cbu, LayoutInflater.Factory2 {
                 }
                 i++;
             }
-            bwyVar2 = new bwy(new bwz(new LocaleList((Locale[]) linkedHashSet.toArray(new Locale[linkedHashSet.size()]))));
+            bwyVar2 = new bwy(
+                    new bwz(new LocaleList((Locale[]) linkedHashSet.toArray(new Locale[linkedHashSet.size()]))));
         }
         return bwyVar2.b.a.isEmpty() ? bwyVarB : bwyVar2;
     }
 
     public static Configuration bv(Context context, int i, bwy bwyVar, Configuration configuration, boolean z) {
-        int i2 = i != 1 ? i != 2 ? z ? 0 : context.getApplicationContext().getResources().getConfiguration().uiMode & 48 : 32 : 16;
+        int i2 = i != 1
+                ? i != 2 ? z ? 0 : context.getApplicationContext().getResources().getConfiguration().uiMode & 48 : 32
+                : 16;
         Configuration configuration2 = new Configuration();
         configuration2.fontScale = 0.0f;
         if (configuration != null) {
@@ -186,24 +189,26 @@ public final class ic extends ho implements cbu, LayoutInflater.Factory2 {
         return configuration2;
     }
 
-    /* JADX WARN: Code restructure failed: missing block: B:19:0x0048, code lost:
-    
-        if (r6.ai() != false) goto L20;
+    /*
+     * JADX WARN: Code restructure failed: missing block: B:19:0x0048, code lost:
+     * 
+     * if (r6.ai() != false) goto L20;
      */
     @Override // me.hd.wauxv.obf.cbu
     /*
-        Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
-    */
+     * Code decompiled incorrectly, please refer to instructions dump.
+     * To view partially-correct add '--show-bad-code' argument
+     */
     public final void bw(me.hd.wauxv.obf.cbw r6) {
         /*
-            Method dump skipped, instruction units count: 241
-            To view this dump add '--comments-level debug' option
-        */
-        throw new UnsupportedOperationException("Method not decompiled: me.hd.wauxv.obf.ic.bw(me.hd.wauxv.obf.cbw):void");
+         * Method dump skipped, instruction units count: 241
+         * To view this dump add '--comments-level debug' option
+         */
+        throw new UnsupportedOperationException(
+                "Method not decompiled: me.hd.wauxv.obf.ic.bw(me.hd.wauxv.obf.cbw):void");
     }
 
-    /* JADX WARN: Found duplicated region for block: B:20:0x002a  */
+    /* JADX WARN: Found duplicated region for block: B:20:0x002a */
     @Override // me.hd.wauxv.obf.cbu
     public final boolean bx(cbw cbwVar, MenuItem menuItem) {
         ib ibVar;
@@ -228,7 +233,7 @@ public final class ic extends ho implements cbu, LayoutInflater.Factory2 {
         return false;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:71:0x00f8  */
+    /* JADX WARN: Found duplicated region for block: B:71:0x00f8 */
     /* JADX WARN: Multi-variable type inference failed */
     public final boolean by(boolean z, boolean z2) {
         int i;
@@ -260,7 +265,8 @@ public final class ic extends ho implements cbu, LayoutInflater.Factory2 {
                 i = 0;
             } else {
                 try {
-                    ActivityInfo activityInfo = packageManager.getActivityInfo(new ComponentName(context, obj.getClass()), i3 >= 29 ? 269221888 : 786432);
+                    ActivityInfo activityInfo = packageManager
+                            .getActivityInfo(new ComponentName(context, obj.getClass()), i3 >= 29 ? 269221888 : 786432);
                     if (activityInfo != null) {
                         this.bh = activityInfo.configChanges;
                     }
@@ -355,7 +361,7 @@ public final class ic extends ho implements cbu, LayoutInflater.Factory2 {
         return z5;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:35:0x0074  */
+    /* JADX WARN: Found duplicated region for block: B:35:0x0074 */
     public final void bz(Window window) {
         Drawable drawableM;
         OnBackInvokedDispatcher onBackInvokedDispatcher;
@@ -373,7 +379,8 @@ public final class ic extends ho implements cbu, LayoutInflater.Factory2 {
         window.setCallback(hwVar);
         Context context = this.x;
         TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes((AttributeSet) null, u);
-        if (!typedArrayObtainStyledAttributes.hasValue(0) || (resourceId = typedArrayObtainStyledAttributes.getResourceId(0, 0)) == 0) {
+        if (!typedArrayObtainStyledAttributes.hasValue(0)
+                || (resourceId = typedArrayObtainStyledAttributes.getResourceId(0, 0)) == 0) {
             drawableM = null;
         } else {
             C0023if c0023ifD = C0023if.d();
@@ -391,7 +398,7 @@ public final class ic extends ho implements cbu, LayoutInflater.Factory2 {
         }
         Object obj = this.w;
         if (onBackInvokedDispatcher != null && (onBackInvokedCallback = this.bt) != null) {
-            hv.c(onBackInvokedDispatcher, onBackInvokedCallback);
+            hv.createInstanceWithArgs(onBackInvokedDispatcher, onBackInvokedCallback);
             this.bt = null;
         }
         if (obj instanceof Activity) {
@@ -488,27 +495,27 @@ public final class ic extends ho implements cbu, LayoutInflater.Factory2 {
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:101:0x0147  */
+    /* JADX WARN: Found duplicated region for block: B:101:0x0147 */
     /* JADX WARN: Found duplicated region for block: B:104:0x014e A[RETURN] */
-    /* JADX WARN: Found duplicated region for block: B:21:0x003f  */
+    /* JADX WARN: Found duplicated region for block: B:21:0x003f */
     /* JADX WARN: Found duplicated region for block: B:23:0x004a A[DONT_INVERT] */
     /* JADX WARN: Found duplicated region for block: B:24:0x004c A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:26:0x0050  */
-    /* JADX WARN: Found duplicated region for block: B:28:0x0056  */
-    /* JADX WARN: Found duplicated region for block: B:30:0x005e  */
-    /* JADX WARN: Found duplicated region for block: B:32:0x0062  */
-    /* JADX WARN: Found duplicated region for block: B:35:0x006b  */
+    /* JADX WARN: Found duplicated region for block: B:26:0x0050 */
+    /* JADX WARN: Found duplicated region for block: B:28:0x0056 */
+    /* JADX WARN: Found duplicated region for block: B:30:0x005e */
+    /* JADX WARN: Found duplicated region for block: B:32:0x0062 */
+    /* JADX WARN: Found duplicated region for block: B:35:0x006b */
     /* JADX WARN: Found duplicated region for block: B:38:0x006f A[DONT_INVERT] */
     /* JADX WARN: Found duplicated region for block: B:39:0x0071 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:41:0x0075  */
-    /* JADX WARN: Found duplicated region for block: B:44:0x007b  */
-    /* JADX WARN: Found duplicated region for block: B:46:0x0085  */
-    /* JADX WARN: Found duplicated region for block: B:78:0x0105  */
-    /* JADX WARN: Found duplicated region for block: B:80:0x0109  */
-    /* JADX WARN: Found duplicated region for block: B:91:0x0123  */
-    /* JADX WARN: Found duplicated region for block: B:95:0x012d  */
-    /* JADX WARN: Found duplicated region for block: B:97:0x013b  */
-    /* JADX WARN: Found duplicated region for block: B:99:0x013f  */
+    /* JADX WARN: Found duplicated region for block: B:41:0x0075 */
+    /* JADX WARN: Found duplicated region for block: B:44:0x007b */
+    /* JADX WARN: Found duplicated region for block: B:46:0x0085 */
+    /* JADX WARN: Found duplicated region for block: B:78:0x0105 */
+    /* JADX WARN: Found duplicated region for block: B:80:0x0109 */
+    /* JADX WARN: Found duplicated region for block: B:91:0x0123 */
+    /* JADX WARN: Found duplicated region for block: B:95:0x012d */
+    /* JADX WARN: Found duplicated region for block: B:97:0x013b */
+    /* JADX WARN: Found duplicated region for block: B:99:0x013f */
     public final boolean cd(KeyEvent keyEvent) {
         View decorView;
         int keyCode;
@@ -526,7 +533,8 @@ public final class ic extends ho implements cbu, LayoutInflater.Factory2 {
         cw cwVar3;
         ib ibVarCi2;
         Object obj = this.w;
-        if ((!(obj instanceof btl) && !(obj instanceof el)) || (decorView = this.y.getDecorView()) == null || !emc.al(decorView, keyEvent)) {
+        if ((!(obj instanceof btl) && !(obj instanceof el)) || (decorView = this.y.getDecorView()) == null
+                || !emc.al(decorView, keyEvent)) {
             if (keyEvent.getKeyCode() == 82) {
                 hw hwVar = this.z;
                 Window.Callback callback = this.y.getCallback();
@@ -563,7 +571,9 @@ public final class ic extends ho implements cbu, LayoutInflater.Factory2 {
                                         ActionBarOverlayLayout actionBarOverlayLayout = (ActionBarOverlayLayout) ajuVar;
                                         actionBarOverlayLayout.ap();
                                         toolbar = ((ekt) actionBarOverlayLayout.h).a;
-                                        if (toolbar.getVisibility() == 0 || (actionMenuView = toolbar.a) == null || !actionMenuView.f || ViewConfiguration.get(context).hasPermanentMenuKey()) {
+                                        if (toolbar.getVisibility() == 0 || (actionMenuView = toolbar.a) == null
+                                                || !actionMenuView.f
+                                                || ViewConfiguration.get(context).hasPermanentMenuKey()) {
                                             z = ibVarCi.m;
                                             if (!z || ibVarCi.l) {
                                                 cc(ibVarCi, true);
@@ -585,19 +595,22 @@ public final class ic extends ho implements cbu, LayoutInflater.Factory2 {
                                             ActionBarOverlayLayout actionBarOverlayLayout2 = (ActionBarOverlayLayout) this.ae;
                                             actionBarOverlayLayout2.ap();
                                             ActionMenuView actionMenuView2 = ((ekt) actionBarOverlayLayout2.h).a.a;
-                                            if (actionMenuView2 == null || (cwVar2 = actionMenuView2.g) == null || !cwVar2.ai()) {
+                                            if (actionMenuView2 == null || (cwVar2 = actionMenuView2.g) == null
+                                                    || !cwVar2.ai()) {
                                                 if (!this.bd && cp(ibVarCi, keyEvent)) {
                                                     ActionBarOverlayLayout actionBarOverlayLayout3 = (ActionBarOverlayLayout) this.ae;
                                                     actionBarOverlayLayout3.ap();
                                                     ActionMenuView actionMenuView3 = ((ekt) actionBarOverlayLayout3.h).a.a;
-                                                    if (actionMenuView3 == null || (cwVar = actionMenuView3.g) == null || !cwVar.am()) {
+                                                    if (actionMenuView3 == null || (cwVar = actionMenuView3.g) == null
+                                                            || !cwVar.am()) {
                                                     }
                                                 }
                                             } else {
                                                 ActionBarOverlayLayout actionBarOverlayLayout4 = (ActionBarOverlayLayout) this.ae;
                                                 actionBarOverlayLayout4.ap();
                                                 ActionMenuView actionMenuView4 = ((ekt) actionBarOverlayLayout4.h).a.a;
-                                                z2 = (actionMenuView4 == null || (cwVar3 = actionMenuView4.g) == null || !cwVar3.ag()) ? false : true;
+                                                z2 = (actionMenuView4 == null || (cwVar3 = actionMenuView4.g) == null
+                                                        || !cwVar3.ag()) ? false : true;
                                             }
                                         }
                                     } else {
@@ -608,7 +621,8 @@ public final class ic extends ho implements cbu, LayoutInflater.Factory2 {
                                         z2 = z;
                                     }
                                     if (z2) {
-                                        audioManager = (AudioManager) context.getApplicationContext().getSystemService("audio");
+                                        audioManager = (AudioManager) context.getApplicationContext()
+                                                .getSystemService("audio");
                                         if (audioManager != null) {
                                             audioManager.playSoundEffect(0);
                                             return true;
@@ -727,7 +741,8 @@ public final class ic extends ho implements cbu, LayoutInflater.Factory2 {
         TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(iArr);
         if (!typedArrayObtainStyledAttributes.hasValue(117)) {
             typedArrayObtainStyledAttributes.recycle();
-            throw new IllegalStateException("You need to use a Theme.AppCompat theme (or descendant) with this activity.");
+            throw new IllegalStateException(
+                    "You need to use a Theme.AppCompat theme (or descendant) with this activity.");
         }
         int i = 0;
         int i2 = 1;
@@ -748,15 +763,21 @@ public final class ic extends ho implements cbu, LayoutInflater.Factory2 {
         this.y.getDecorView();
         LayoutInflater layoutInflaterFrom = LayoutInflater.from(context);
         if (this.aw) {
-            viewGroup = this.au ? (ViewGroup) layoutInflaterFrom.inflate(me.hd.wauxv.R.layout.abc_screen_simple_overlay_action_mode, (ViewGroup) null) : (ViewGroup) layoutInflaterFrom.inflate(me.hd.wauxv.R.layout.abc_screen_simple, (ViewGroup) null);
+            viewGroup = this.au
+                    ? (ViewGroup) layoutInflaterFrom.inflate(me.hd.wauxv.R.layout.abc_screen_simple_overlay_action_mode,
+                            (ViewGroup) null)
+                    : (ViewGroup) layoutInflaterFrom.inflate(me.hd.wauxv.R.layout.abc_screen_simple, (ViewGroup) null);
         } else if (this.av) {
-            viewGroup = (ViewGroup) layoutInflaterFrom.inflate(me.hd.wauxv.R.layout.abc_dialog_title_material, (ViewGroup) null);
+            viewGroup = (ViewGroup) layoutInflaterFrom.inflate(me.hd.wauxv.R.layout.abc_dialog_title_material,
+                    (ViewGroup) null);
             this.at = false;
             this.as = false;
         } else if (this.as) {
             TypedValue typedValue = new TypedValue();
             context.getTheme().resolveAttribute(me.hd.wauxv.R.attr.actionBarTheme, typedValue, true);
-            viewGroup = (ViewGroup) LayoutInflater.from(typedValue.resourceId != 0 ? new afv(context, typedValue.resourceId) : context).inflate(me.hd.wauxv.R.layout.abc_screen_toolbar, (ViewGroup) null);
+            viewGroup = (ViewGroup) LayoutInflater
+                    .from(typedValue.resourceId != 0 ? new afv(context, typedValue.resourceId) : context)
+                    .inflate(me.hd.wauxv.R.layout.abc_screen_toolbar, (ViewGroup) null);
             aju ajuVar = (aju) viewGroup.findViewById(me.hd.wauxv.R.id.decor_content_parent);
             this.ae = ajuVar;
             ajuVar.setWindowCallback(this.y.getCallback());
@@ -773,7 +794,10 @@ public final class ic extends ho implements cbu, LayoutInflater.Factory2 {
             viewGroup = null;
         }
         if (viewGroup == null) {
-            throw new IllegalArgumentException("AppCompat does not support the current theme features: { windowActionBar: " + this.as + ", windowActionBarOverlay: " + this.at + ", android:windowIsFloating: " + this.av + ", windowActionModeOverlay: " + this.au + ", windowNoTitle: " + this.aw + " }");
+            throw new IllegalArgumentException(
+                    "AppCompat does not support the current theme features: { windowActionBar: " + this.as
+                            + ", windowActionBarOverlay: " + this.at + ", android:windowIsFloating: " + this.av
+                            + ", windowActionModeOverlay: " + this.au + ", windowNoTitle: " + this.aw + " }");
         }
         hq hqVar = new hq(this, i);
         WeakHashMap weakHashMap = eqz.a;
@@ -794,7 +818,8 @@ public final class ic extends ho implements cbu, LayoutInflater.Factory2 {
         } catch (InvocationTargetException e2) {
             Log.d("ViewUtils", "Could not invoke makeOptionalFitsSystemWindows", e2);
         }
-        ContentFrameLayout contentFrameLayout = (ContentFrameLayout) viewGroup.findViewById(me.hd.wauxv.R.id.action_bar_activity_content);
+        ContentFrameLayout contentFrameLayout = (ContentFrameLayout) viewGroup
+                .findViewById(me.hd.wauxv.R.id.action_bar_activity_content);
         ViewGroup viewGroup2 = (ViewGroup) this.y.findViewById(R.id.content);
         if (viewGroup2 != null) {
             while (viewGroup2.getChildCount() > 0) {
@@ -841,7 +866,8 @@ public final class ic extends ho implements cbu, LayoutInflater.Factory2 {
         }
         ContentFrameLayout contentFrameLayout2 = (ContentFrameLayout) this.an.findViewById(R.id.content);
         View decorView = this.y.getDecorView();
-        contentFrameLayout2.g.set(decorView.getPaddingLeft(), decorView.getPaddingTop(), decorView.getPaddingRight(), decorView.getPaddingBottom());
+        contentFrameLayout2.g.set(decorView.getPaddingLeft(), decorView.getPaddingTop(), decorView.getPaddingRight(),
+                decorView.getPaddingBottom());
         if (contentFrameLayout2.isLaidOut()) {
             contentFrameLayout2.requestLayout();
         }
@@ -947,15 +973,17 @@ public final class ic extends ho implements cbu, LayoutInflater.Factory2 {
                 if (i != 0) {
                     if (i != 1 && i != 2) {
                         if (i != 3) {
-                            throw new IllegalStateException("Unknown value set for night mode. Please use one of the MODE_NIGHT values from AppCompatDelegate.");
+                            throw new IllegalStateException(
+                                    "Unknown value set for night mode. Please use one of the MODE_NIGHT values from AppCompatDelegate.");
                         }
                         if (this.bk == null) {
                             this.bk = new hx(this, context);
                         }
                         return this.bk.e();
                     }
-                } else if (((UiModeManager) context.getApplicationContext().getSystemService("uimode")).getNightMode() != 0) {
-                    return ch(context).e();
+                } else if (((UiModeManager) context.getApplicationContext().getSystemService("uimode"))
+                        .getNightMode() != 0) {
+                    return ch(context).getThisObject();
                 }
             }
             return i;
@@ -977,7 +1005,8 @@ public final class ic extends ho implements cbu, LayoutInflater.Factory2 {
             }
             cj();
             eut eutVar = this.ab;
-            if (eutVar == null || (ajvVar = eutVar.at) == null || (ekoVar = ((ekt) ajvVar).a.al) == null || ekoVar.b == null) {
+            if (eutVar == null || (ajvVar = eutVar.at) == null || (ekoVar = ((ekt) ajvVar).a.al) == null
+                    || ekoVar.b == null) {
                 return false;
             }
             eko ekoVar2 = ((ekt) ajvVar).a.al;
@@ -992,22 +1021,24 @@ public final class ic extends ho implements cbu, LayoutInflater.Factory2 {
         return true;
     }
 
-    /* JADX WARN: Code restructure failed: missing block: B:87:0x0176, code lost:
-    
-        if (r2.f.getCount() > 0) goto L88;
+    /*
+     * JADX WARN: Code restructure failed: missing block: B:87:0x0176, code lost:
+     * 
+     * if (r2.f.getCount() > 0) goto L88;
      */
-    /* JADX WARN: Found duplicated region for block: B:100:0x01d3  */
+    /* JADX WARN: Found duplicated region for block: B:100:0x01d3 */
     /* JADX WARN: Found duplicated region for block: B:105:? A[RETURN, SYNTHETIC] */
     /*
-        Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
-    */
+     * Code decompiled incorrectly, please refer to instructions dump.
+     * To view partially-correct add '--show-bad-code' argument
+     */
     public final void cn(me.hd.wauxv.obf.ib r18, android.view.KeyEvent r19) {
         /*
-            Method dump skipped, instruction units count: 474
-            To view this dump add '--comments-level debug' option
-        */
-        throw new UnsupportedOperationException("Method not decompiled: me.hd.wauxv.obf.ic.cn(me.hd.wauxv.obf.ib, android.view.KeyEvent):void");
+         * Method dump skipped, instruction units count: 474
+         * To view this dump add '--comments-level debug' option
+         */
+        throw new UnsupportedOperationException(
+                "Method not decompiled: me.hd.wauxv.obf.ic.cn(me.hd.wauxv.obf.ib, android.view.KeyEvent):void");
     }
 
     public final boolean co(ib ibVar, int i, KeyEvent keyEvent) {
@@ -1021,12 +1052,12 @@ public final class ic extends ho implements cbu, LayoutInflater.Factory2 {
         return false;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:59:0x00d0  */
-    /* JADX WARN: Found duplicated region for block: B:64:0x00da  */
-    /* JADX WARN: Found duplicated region for block: B:68:0x00f8  */
+    /* JADX WARN: Found duplicated region for block: B:59:0x00d0 */
+    /* JADX WARN: Found duplicated region for block: B:64:0x00da */
+    /* JADX WARN: Found duplicated region for block: B:68:0x00f8 */
     /* JADX WARN: Found duplicated region for block: B:71:0x00fd A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:72:0x00ff  */
-    /* JADX WARN: Found duplicated region for block: B:79:0x0114  */
+    /* JADX WARN: Found duplicated region for block: B:72:0x00ff */
+    /* JADX WARN: Found duplicated region for block: B:79:0x0114 */
     public final boolean cp(ib ibVar, KeyEvent keyEvent) {
         cbw cbwVar;
         aju ajuVar;
@@ -1067,7 +1098,8 @@ public final class ic extends ho implements cbu, LayoutInflater.Factory2 {
                                 themeNewTheme = context.getResources().newTheme();
                                 themeNewTheme.setTo(theme);
                                 themeNewTheme.applyStyle(typedValue.resourceId, true);
-                                themeNewTheme.resolveAttribute(me.hd.wauxv.R.attr.actionBarWidgetTheme, typedValue, true);
+                                themeNewTheme.resolveAttribute(me.hd.wauxv.R.attr.actionBarWidgetTheme, typedValue,
+                                        true);
                             } else {
                                 theme.resolveAttribute(me.hd.wauxv.R.attr.actionBarWidgetTheme, typedValue, true);
                                 themeNewTheme = null;
@@ -1158,7 +1190,8 @@ public final class ic extends ho implements cbu, LayoutInflater.Factory2 {
                     ibVar.h.au();
                     return false;
                 }
-                ibVar.h.setQwertyMode(KeyCharacterMap.load(keyEvent != null ? keyEvent.getDeviceId() : -1).getKeyboardType() != 1);
+                ibVar.h.setQwertyMode(
+                        KeyCharacterMap.load(keyEvent != null ? keyEvent.getDeviceId() : -1).getKeyboardType() != 1);
                 ibVar.h.au();
             }
             ibVar.k = true;
@@ -1183,12 +1216,12 @@ public final class ic extends ho implements cbu, LayoutInflater.Factory2 {
                 z = true;
             }
             if (z && this.bt == null) {
-                this.bt = hv.b(this.bs, this);
+                this.bt = hv.tryGetClassByName(this.bs, this);
             } else {
                 if (z || (onBackInvokedCallback = this.bt) == null) {
                     return;
                 }
-                hv.c(this.bs, onBackInvokedCallback);
+                hv.createInstanceWithArgs(this.bs, onBackInvokedCallback);
                 this.bt = null;
             }
         }
@@ -1203,7 +1236,8 @@ public final class ic extends ho implements cbu, LayoutInflater.Factory2 {
             if (layoutInflaterFrom.getFactory2() instanceof ic) {
                 return;
             }
-            Log.i("AppCompatDelegate", "The Activity's LayoutInflater already has a Factory installed so we can not install AppCompat's");
+            Log.i("AppCompatDelegate",
+                    "The Activity's LayoutInflater already has a Factory installed so we can not install AppCompat's");
         }
     }
 
@@ -1242,7 +1276,7 @@ public final class ic extends ho implements cbu, LayoutInflater.Factory2 {
         this.bc = true;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:22:0x004d  */
+    /* JADX WARN: Found duplicated region for block: B:22:0x004d */
     @Override // me.hd.wauxv.obf.ho
     public final void n() {
         if (this.w instanceof Activity) {
@@ -1277,10 +1311,12 @@ public final class ic extends ho implements cbu, LayoutInflater.Factory2 {
     @Override // me.hd.wauxv.obf.ho
     public final boolean o(int i) {
         if (i == 8) {
-            Log.i("AppCompatDelegate", "You should now use the AppCompatDelegate.FEATURE_SUPPORT_ACTION_BAR id when requesting this feature.");
+            Log.i("AppCompatDelegate",
+                    "You should now use the AppCompatDelegate.FEATURE_SUPPORT_ACTION_BAR id when requesting this feature.");
             i = 108;
         } else if (i == 9) {
-            Log.i("AppCompatDelegate", "You should now use the AppCompatDelegate.FEATURE_SUPPORT_ACTION_BAR_OVERLAY id when requesting this feature.");
+            Log.i("AppCompatDelegate",
+                    "You should now use the AppCompatDelegate.FEATURE_SUPPORT_ACTION_BAR_OVERLAY id when requesting this feature.");
             i = 109;
         }
         if (this.aw && i == 108) {
@@ -1322,7 +1358,10 @@ public final class ic extends ho implements cbu, LayoutInflater.Factory2 {
         return true;
     }
 
-    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
+    /*
+     * JADX WARN: Failed to restore switch over string. Please report as a
+     * decompilation issue
+     */
     @Override // android.view.LayoutInflater.Factory2
     public final View onCreateView(View view, String str, Context context, AttributeSet attributeSet) {
         View iqVar;
@@ -1337,9 +1376,11 @@ public final class ic extends ho implements cbu, LayoutInflater.Factory2 {
                 this.br = new jw();
             } else {
                 try {
-                    this.br = (jw) context2.getClassLoader().loadClass(string).getDeclaredConstructor(null).newInstance(null);
+                    this.br = (jw) context2.getClassLoader().loadClass(string).getDeclaredConstructor(null)
+                            .newInstance(null);
                 } catch (Throwable th) {
-                    Log.i("AppCompatDelegate", "Failed to instantiate custom view inflater " + string + ". Falling back to default.", th);
+                    Log.i("AppCompatDelegate",
+                            "Failed to instantiate custom view inflater " + string + ". Falling back to default.", th);
                     this.br = new jw();
                 }
             }
@@ -1354,7 +1395,8 @@ public final class ic extends ho implements cbu, LayoutInflater.Factory2 {
             Log.i("AppCompatViewInflater", "app:theme is now deprecated. Please move to using android:theme instead.");
         }
         typedArrayObtainStyledAttributes2.recycle();
-        Context afvVar = (resourceId == 0 || ((context instanceof afv) && ((afv) context).b == resourceId)) ? context : new afv(context, resourceId);
+        Context afvVar = (resourceId == 0 || ((context instanceof afv) && ((afv) context).b == resourceId)) ? context
+                : new afv(context, resourceId);
         str.getClass();
         switch (str.hashCode()) {
             case -1946472170:
@@ -1440,13 +1482,13 @@ public final class ic extends ho implements cbu, LayoutInflater.Factory2 {
                 iqVar = jwVar.a(afvVar, attributeSet);
                 break;
             case 11:
-                iqVar = jwVar.c(afvVar, attributeSet);
+                iqVar = jwVar.createInstanceWithArgs(afvVar, attributeSet);
                 break;
             case 12:
                 iqVar = new ih(afvVar, attributeSet);
                 break;
             case 13:
-                iqVar = jwVar.b(afvVar, attributeSet);
+                iqVar = jwVar.tryGetClassByName(afvVar, attributeSet);
                 break;
             default:
                 iqVar = null;
@@ -1510,7 +1552,8 @@ public final class ic extends ho implements cbu, LayoutInflater.Factory2 {
                 if (typedArrayObtainStyledAttributes4.hasValue(0)) {
                     boolean z = typedArrayObtainStyledAttributes4.getBoolean(0, false);
                     WeakHashMap weakHashMap = eqz.a;
-                    new eqm(me.hd.wauxv.R.id.tag_accessibility_heading, Boolean.class, 0, 28, 3).k(view2, Boolean.valueOf(z));
+                    new eqm(me.hd.wauxv.R.id.tag_accessibility_heading, Boolean.class, 0, 28, 3).k(view2,
+                            Boolean.valueOf(z));
                 }
                 typedArrayObtainStyledAttributes4.recycle();
                 TypedArray typedArrayObtainStyledAttributes5 = afvVar.obtainStyledAttributes(attributeSet, jw.i);
@@ -1522,7 +1565,8 @@ public final class ic extends ho implements cbu, LayoutInflater.Factory2 {
                 if (typedArrayObtainStyledAttributes6.hasValue(0)) {
                     boolean z2 = typedArrayObtainStyledAttributes6.getBoolean(0, false);
                     WeakHashMap weakHashMap2 = eqz.a;
-                    new eqm(me.hd.wauxv.R.id.tag_screen_reader_focusable, Boolean.class, 0, 28, 0).k(view2, Boolean.valueOf(z2));
+                    new eqm(me.hd.wauxv.R.id.tag_screen_reader_focusable, Boolean.class, 0, 28, 0).k(view2,
+                            Boolean.valueOf(z2));
                 }
                 typedArrayObtainStyledAttributes6.recycle();
             }

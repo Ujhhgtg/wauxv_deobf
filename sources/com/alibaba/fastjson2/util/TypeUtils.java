@@ -141,11 +141,14 @@ public class TypeUtils {
     static final Map<String, Class> TYPE_MAPPINGS;
     public static final Class CLASS_SINGLE_SET = Collections.singleton(1).getClass();
     public static final Class CLASS_SINGLE_LIST = Collections.singletonList(1).getClass();
-    public static final Class CLASS_UNMODIFIABLE_COLLECTION = Collections.unmodifiableCollection(new ArrayList()).getClass();
+    public static final Class CLASS_UNMODIFIABLE_COLLECTION = Collections.unmodifiableCollection(new ArrayList())
+            .getClass();
     public static final Class CLASS_UNMODIFIABLE_LIST = Collections.unmodifiableList(new ArrayList()).getClass();
     public static final Class CLASS_UNMODIFIABLE_SET = Collections.unmodifiableSet(new HashSet()).getClass();
-    public static final Class CLASS_UNMODIFIABLE_SORTED_SET = Collections.unmodifiableSortedSet(new TreeSet()).getClass();
-    public static final Class CLASS_UNMODIFIABLE_NAVIGABLE_SET = Collections.unmodifiableNavigableSet(new TreeSet()).getClass();
+    public static final Class CLASS_UNMODIFIABLE_SORTED_SET = Collections.unmodifiableSortedSet(new TreeSet())
+            .getClass();
+    public static final Class CLASS_UNMODIFIABLE_NAVIGABLE_SET = Collections.unmodifiableNavigableSet(new TreeSet())
+            .getClass();
     public static final ParameterizedType PARAM_TYPE_LIST_STR = new ParameterizedTypeImpl(List.class, String.class);
     public static final MethodType METHOD_TYPE_SUPPLIER = MethodType.methodType(Supplier.class);
     public static final MethodType METHOD_TYPE_FUNCTION = MethodType.methodType(Function.class);
@@ -157,12 +160,18 @@ public class TypeUtils {
     public static final MethodType METHOD_TYPE_BI_FUNCTION = MethodType.methodType(BiFunction.class);
     public static final MethodType METHOD_TYPE_BI_CONSUMER = MethodType.methodType(BiConsumer.class);
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class Cache {
         volatile char[] chars;
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class X1 {
         static final Function<byte[], char[]> TO_CHARS;
 
@@ -172,7 +181,13 @@ public class TypeUtils {
                 try {
                     Class<?> cls = Class.forName("java.lang.StringLatin1");
                     MethodHandles.Lookup lookupTrustedLookup = JDKUtils.trustedLookup(cls);
-                    functionInvokeExact = (Function) LambdaMetafactory.metafactory(lookupTrustedLookup, "apply", MethodType.methodType(Function.class), MethodType.methodType((Class<?>) Object.class, (Class<?>) Object.class), lookupTrustedLookup.findStatic(cls, "toChars", MethodType.methodType((Class<?>) char[].class, (Class<?>) byte[].class)), MethodType.methodType((Class<?>) char[].class, (Class<?>) byte[].class)).getTarget().invokeExact();
+                    functionInvokeExact = (Function) LambdaMetafactory
+                            .metafactory(lookupTrustedLookup, "apply", MethodType.methodType(Function.class),
+                                    MethodType.methodType((Class<?>) Object.class, (Class<?>) Object.class),
+                                    lookupTrustedLookup.findStatic(cls, "toChars",
+                                            MethodType.methodType((Class<?>) char[].class, (Class<?>) byte[].class)),
+                                    MethodType.methodType((Class<?>) char[].class, (Class<?>) byte[].class))
+                            .getTarget().invokeExact();
                 } catch (Throwable unused) {
                     functionInvokeExact = null;
                 }
@@ -186,7 +201,10 @@ public class TypeUtils {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class X2 {
         static final char END = '~';
         static final int SIZE2 = 95;
@@ -203,7 +221,7 @@ public class TypeUtils {
             String[] strArr2 = new String[9025];
             for (char c2 = ' '; c2 <= '~'; c2 = (char) (c2 + 1)) {
                 for (char c3 = ' '; c3 <= '~'; c3 = (char) (c3 + 1)) {
-                    strArr2[(c3 - ' ') + ((c2 - ' ') * 95)] = new String(new char[]{c2, c3});
+                    strArr2[(c3 - ' ') + ((c2 - ' ') * 95)] = new String(new char[] { c2, c3 });
                 }
             }
             chars2 = strArr2;
@@ -233,10 +251,13 @@ public class TypeUtils {
         BIGINT_INT64_MAX = BigInteger.valueOf(Long.MAX_VALUE);
         BIGINT_JAVASCRIPT_LOW = BigInteger.valueOf(LONG_JAVASCRIPT_LOW);
         BIGINT_JAVASCRIPT_HIGH = BigInteger.valueOf(LONG_JAVASCRIPT_HIGH);
-        SMALL_10_POW = new double[]{1.0d, 10.0d, 100.0d, 1000.0d, 10000.0d, 100000.0d, 1000000.0d, 1.0E7d, 1.0E8d, 1.0E9d, 1.0E10d, 1.0E11d, 1.0E12d, 1.0E13d, 1.0E14d, 1.0E15d, 1.0E16d, 1.0E17d, 1.0E18d, 1.0E19d, 1.0E20d, 1.0E21d, 1.0E22d};
-        SINGLE_SMALL_10_POW = new float[]{1.0f, 10.0f, 100.0f, 1000.0f, 10000.0f, 100000.0f, 1000000.0f, 1.0E7f, 1.0E8f, 1.0E9f, 1.0E10f};
-        BIG_10_POW = new double[]{1.0E16d, 1.0E32d, 1.0E64d, 1.0E128d, 1.0E256d};
-        TINY_10_POW = new double[]{1.0E-16d, 1.0E-32d, 1.0E-64d, 1.0E-128d, 1.0E-256d};
+        SMALL_10_POW = new double[] { 1.0d, 10.0d, 100.0d, 1000.0d, 10000.0d, 100000.0d, 1000000.0d, 1.0E7d, 1.0E8d,
+                1.0E9d, 1.0E10d, 1.0E11d, 1.0E12d, 1.0E13d, 1.0E14d, 1.0E15d, 1.0E16d, 1.0E17d, 1.0E18d, 1.0E19d,
+                1.0E20d, 1.0E21d, 1.0E22d };
+        SINGLE_SMALL_10_POW = new float[] { 1.0f, 10.0f, 100.0f, 1000.0f, 10000.0f, 100000.0f, 1000000.0f, 1.0E7f,
+                1.0E8f, 1.0E9f, 1.0E10f };
+        BIG_10_POW = new double[] { 1.0E16d, 1.0E32d, 1.0E64d, 1.0E128d, 1.0E256d };
+        TINY_10_POW = new double[] { 1.0E-16d, 1.0E-32d, 1.0E-64d, 1.0E-128d, 1.0E-256d };
         CACHE = new Cache();
         CHARS_UPDATER = AtomicReferenceFieldUpdater.newUpdater(Cache.class, char[].class, "chars");
         NAME_MAPPINGS = new IdentityHashMap();
@@ -333,7 +354,22 @@ public class TypeUtils {
         map.put(JSONArray.class, "JSONArray");
         map.put(Currency.class, "Currency");
         map.put(TimeUnit.class, "TimeUnit");
-        Class[] clsArr = {Object.class, Cloneable.class, AutoCloseable.class, Exception.class, RuntimeException.class, IllegalAccessError.class, IllegalAccessException.class, IllegalArgumentException.class, IllegalMonitorStateException.class, IllegalStateException.class, IllegalThreadStateException.class, IndexOutOfBoundsException.class, InstantiationError.class, InstantiationException.class, InternalError.class, InterruptedException.class, LinkageError.class, NegativeArraySizeException.class, NoClassDefFoundError.class, NoSuchFieldError.class, NoSuchFieldException.class, NoSuchMethodError.class, NoSuchMethodException.class, NullPointerException.class, NumberFormatException.class, OutOfMemoryError.class, SecurityException.class, StackOverflowError.class, StringIndexOutOfBoundsException.class, TypeNotPresentException.class, VerifyError.class, StackTraceElement.class, Hashtable.class, TreeMap.class, IdentityHashMap.class, WeakHashMap.class, HashSet.class, LinkedHashSet.class, TreeSet.class, LinkedList.class, TimeUnit.class, ConcurrentHashMap.class, AtomicInteger.class, AtomicLong.class, Collections.EMPTY_MAP.getClass(), Boolean.class, Character.class, Byte.class, Short.class, Integer.class, Long.class, Float.class, Double.class, Number.class, String.class, BigDecimal.class, BigInteger.class, BitSet.class, Calendar.class, Date.class, Locale.class, UUID.class, Currency.class, SimpleDateFormat.class, JSONObject.class, JSONArray.class, ConcurrentSkipListMap.class, ConcurrentSkipListSet.class};
+        Class[] clsArr = { Object.class, Cloneable.class, AutoCloseable.class, Exception.class, RuntimeException.class,
+                IllegalAccessError.class, IllegalAccessException.class, IllegalArgumentException.class,
+                IllegalMonitorStateException.class, IllegalStateException.class, IllegalThreadStateException.class,
+                IndexOutOfBoundsException.class, InstantiationError.class, InstantiationException.class,
+                InternalError.class, InterruptedException.class, LinkageError.class, NegativeArraySizeException.class,
+                NoClassDefFoundError.class, NoSuchFieldError.class, NoSuchFieldException.class, NoSuchMethodError.class,
+                NoSuchMethodException.class, NullPointerException.class, NumberFormatException.class,
+                OutOfMemoryError.class, SecurityException.class, StackOverflowError.class,
+                StringIndexOutOfBoundsException.class, TypeNotPresentException.class, VerifyError.class,
+                StackTraceElement.class, Hashtable.class, TreeMap.class, IdentityHashMap.class, WeakHashMap.class,
+                HashSet.class, LinkedHashSet.class, TreeSet.class, LinkedList.class, TimeUnit.class,
+                ConcurrentHashMap.class, AtomicInteger.class, AtomicLong.class, Collections.EMPTY_MAP.getClass(),
+                Boolean.class, Character.class, Byte.class, Short.class, Integer.class, Long.class, Float.class,
+                Double.class, Number.class, String.class, BigDecimal.class, BigInteger.class, BitSet.class,
+                Calendar.class, Date.class, Locale.class, UUID.class, Currency.class, SimpleDateFormat.class,
+                JSONObject.class, JSONArray.class, ConcurrentSkipListMap.class, ConcurrentSkipListSet.class };
         for (int i = 0; i < 68; i++) {
             Class cls4 = clsArr[i];
             Map<String, Class> map3 = TYPE_MAPPINGS;
@@ -349,7 +385,7 @@ public class TypeUtils {
         map4.put("[Object", Object[].class);
         map4.put("StackTraceElement", StackTraceElement.class);
         map4.put("[StackTraceElement", StackTraceElement[].class);
-        String[] strArr = {"java.util.Collections$UnmodifiableMap", "java.util.Collections$UnmodifiableCollection"};
+        String[] strArr = { "java.util.Collections$UnmodifiableMap", "java.util.Collections$UnmodifiableCollection" };
         for (int i2 = 0; i2 < 2; i2++) {
             Class clsLoadClass2 = loadClass(strArr[i2]);
             TYPE_MAPPINGS.put(clsLoadClass2.getName(), clsLoadClass2);
@@ -539,8 +575,11 @@ public class TypeUtils {
         return ((Comparable) obj).compareTo(obj2);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:65:0x00ca A[PHI: r18
-      0x00ca: PHI (r18v2 double) = (r18v0 double), (r18v4 double) binds: [B:85:0x0102, B:58:0x00b4] A[DONT_GENERATE, DONT_INLINE]] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:65:0x00ca A[PHI: r18
+     * 0x00ca: PHI (r18v2 double) = (r18v0 double), (r18v4 double) binds:
+     * [B:85:0x0102, B:58:0x00b4] A[DONT_GENERATE, DONT_INLINE]]
+     */
     public static double doubleValue(boolean z, int i, byte[] bArr, int i2) {
         double d;
         long j;
@@ -904,7 +943,13 @@ public class TypeUtils {
     }
 
     public static Class<?> getArrayClass(Class cls) {
-        return cls == Integer.TYPE ? int[].class : cls == Byte.TYPE ? byte[].class : cls == Short.TYPE ? short[].class : cls == Long.TYPE ? long[].class : cls == String.class ? String[].class : cls == Object.class ? Object[].class : Array.newInstance((Class<?>) cls, 1).getClass();
+        return cls == Integer.TYPE ? int[].class
+                : cls == Byte.TYPE ? byte[].class
+                        : cls == Short.TYPE ? short[].class
+                                : cls == Long.TYPE ? long[].class
+                                        : cls == String.class ? String[].class
+                                                : cls == Object.class ? Object[].class
+                                                        : Array.newInstance((Class<?>) cls, 1).getClass();
     }
 
     public static Class<?> getClass(Type type) {
@@ -927,7 +972,9 @@ public class TypeUtils {
                 return getClass(upperBounds[0]);
             }
         }
-        return type instanceof GenericArrayType ? getArrayClass(getClass(((GenericArrayType) type).getGenericComponentType())) : Object.class;
+        return type instanceof GenericArrayType
+                ? getArrayClass(getClass(((GenericArrayType) type).getGenericComponentType()))
+                : Object.class;
     }
 
     public static Object getDefaultValue(Type type) {
@@ -1010,7 +1057,9 @@ public class TypeUtils {
                 return getMapping(upperBounds[0]);
             }
         }
-        return type instanceof GenericArrayType ? getArrayClass(getClass(((GenericArrayType) type).getGenericComponentType())) : Object.class;
+        return type instanceof GenericArrayType
+                ? getArrayClass(getClass(((GenericArrayType) type).getGenericComponentType()))
+                : Object.class;
     }
 
     public static String getTypeName(Class cls) {
@@ -1052,7 +1101,9 @@ public class TypeUtils {
         ParameterizedType parameterizedType = (ParameterizedType) type;
         Type rawType = parameterizedType.getRawType();
         Type[] actualTypeArguments = parameterizedType.getActualTypeArguments();
-        return (rawType == List.class && actualTypeArguments.length == 1 && actualTypeArguments[0] == String.class) ? PARAM_TYPE_LIST_STR : type;
+        return (rawType == List.class && actualTypeArguments.length == 1 && actualTypeArguments[0] == String.class)
+                ? PARAM_TYPE_LIST_STR
+                : type;
     }
 
     public static boolean isFunction(Class cls) {
@@ -1072,7 +1123,8 @@ public class TypeUtils {
             return bigInteger.compareTo(BIGINT_INT32_MIN) >= 0 && bigInteger.compareTo(BIGINT_INT32_MAX) <= 0;
         }
         int[] iArr = (int[]) JDKUtils.UNSAFE.getObject(bigInteger, j);
-        return iArr.length == 0 || (iArr.length == 1 && ((i = iArr[0]) >= 0 || (i == Integer.MIN_VALUE && bigInteger.signum() == -1)));
+        return iArr.length == 0
+                || (iArr.length == 1 && ((i = iArr[0]) >= 0 || (i == Integer.MIN_VALUE && bigInteger.signum() == -1)));
     }
 
     public static boolean isInt64(BigInteger bigInteger) {
@@ -1121,29 +1173,37 @@ public class TypeUtils {
                 }
             }
         }
-        return (bigDecimal.signum() == 0 ? new BigDecimal(BigInteger.ZERO, 0) : bigDecimal.stripTrailingZeros()).scale() == 0;
+        return (bigDecimal.signum() == 0 ? new BigDecimal(BigInteger.ZERO, 0) : bigDecimal.stripTrailingZeros())
+                .scale() == 0;
     }
 
     public static boolean isJavaScriptSupport(long j) {
         return j >= LONG_JAVASCRIPT_LOW && j <= LONG_JAVASCRIPT_HIGH;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:23:0x003a  */
-    /* JADX WARN: Found duplicated region for block: B:24:0x003c  */
-    /* JADX WARN: Found duplicated region for block: B:37:0x005c  */
+    /* JADX WARN: Found duplicated region for block: B:23:0x003a */
+    /* JADX WARN: Found duplicated region for block: B:24:0x003c */
+    /* JADX WARN: Found duplicated region for block: B:37:0x005c */
     /* JADX WARN: Found duplicated region for block: B:39:0x005f A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:40:0x0061  */
-    /* JADX WARN: Found duplicated region for block: B:51:0x007d  */
+    /* JADX WARN: Found duplicated region for block: B:40:0x0061 */
+    /* JADX WARN: Found duplicated region for block: B:51:0x007d */
     /* JADX WARN: Found duplicated region for block: B:52:0x0080 A[RETURN] */
-    /* JADX WARN: Found duplicated region for block: B:53:0x0081  */
+    /* JADX WARN: Found duplicated region for block: B:53:0x0081 */
     /* JADX WARN: Found duplicated region for block: B:62:0x0091 A[RETURN] */
-    /* JADX WARN: Found duplicated region for block: B:63:0x0092  */
+    /* JADX WARN: Found duplicated region for block: B:63:0x0092 */
     /* JADX WARN: Found duplicated region for block: B:66:0x009c A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:67:0x009e  */
-    /* JADX WARN: Found duplicated region for block: B:69:0x00a7 A[ADDED_TO_REGION] */
-    /* JADX WARN: Found duplicated region for block: B:71:0x00ab  */
-    /* JADX WARN: Found duplicated region for block: B:73:0x00b3 A[ADDED_TO_REGION] */
-    /* JADX WARN: Found duplicated region for block: B:86:0x00b8 A[ADDED_TO_REGION, REMOVE, SYNTHETIC] */
+    /* JADX WARN: Found duplicated region for block: B:67:0x009e */
+    /*
+     * JADX WARN: Found duplicated region for block: B:69:0x00a7 A[ADDED_TO_REGION]
+     */
+    /* JADX WARN: Found duplicated region for block: B:71:0x00ab */
+    /*
+     * JADX WARN: Found duplicated region for block: B:73:0x00b3 A[ADDED_TO_REGION]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:86:0x00b8 A[ADDED_TO_REGION,
+     * REMOVE, SYNTHETIC]
+     */
     public static boolean isNumber(String str) {
         int i;
         int length;
@@ -1295,19 +1355,31 @@ public class TypeUtils {
 
     public static boolean isProxy(Class<?> cls) {
         String name = cls.getName();
-        if (name.indexOf(36) != -1 && (name.contains("$EnhancerBySpringCGLIB$") || name.contains("$EnhancerByCGLIB$") || name.contains("$FastClassBySpringCGLIB$") || name.contains("$FastClassByCGLIB$") || name.contains("$EnhancerBySpringCGLIB$") || name.contains("$EnhancerByCGLIB$"))) {
+        if (name.indexOf(36) != -1 && (name.contains("$EnhancerBySpringCGLIB$") || name.contains("$EnhancerByCGLIB$")
+                || name.contains("$FastClassBySpringCGLIB$") || name.contains("$FastClassByCGLIB$")
+                || name.contains("$EnhancerBySpringCGLIB$") || name.contains("$EnhancerByCGLIB$"))) {
             return true;
         }
         for (Class<?> cls2 : cls.getInterfaces()) {
             String name2 = cls2.getName();
-            if (name2.equals("javassist.util.proxy.ProxyObject") || name2.equals("org.springframework.cglib.proxy.Factory") || name2.equals("org.springframework.context.annotation.ConfigurationClassEnhancer$EnhancedConfiguration") || name2.equals("org.springframework.cloud.context.config.annotation.RefreshScope") || name2.equals("org.mockito.cglib.proxy.Factory") || name2.equals("org.apache.ibatis.javassist.util.proxy.ProxyObject") || name2.equals("net.sf.cglib.proxy.Factory") || name2.equals("org.hibernate.proxy.HibernateProxy")) {
+            if (name2.equals("javassist.util.proxy.ProxyObject")
+                    || name2.equals("org.springframework.cglib.proxy.Factory")
+                    || name2.equals(
+                            "org.springframework.context.annotation.ConfigurationClassEnhancer$EnhancedConfiguration")
+                    || name2.equals("org.springframework.cloud.context.config.annotation.RefreshScope")
+                    || name2.equals("org.mockito.cglib.proxy.Factory")
+                    || name2.equals("org.apache.ibatis.javassist.util.proxy.ProxyObject")
+                    || name2.equals("net.sf.cglib.proxy.Factory")
+                    || name2.equals("org.hibernate.proxy.HibernateProxy")) {
                 return true;
             }
-            if (name2.startsWith("org.springframework.cloud.context.config.annotation.") && name2.endsWith("RefreshScope")) {
+            if (name2.startsWith("org.springframework.cloud.context.config.annotation.")
+                    && name2.endsWith("RefreshScope")) {
                 return true;
             }
         }
-        return name.contains("$SpringCGLIB$") || name.contains("$SpringCGLIB$") || name.contains("$EnhancerBySpringCGLIB$");
+        return name.contains("$SpringCGLIB$") || name.contains("$SpringCGLIB$")
+                || name.contains("$EnhancerBySpringCGLIB$");
     }
 
     public static boolean isUUID(String str) {
@@ -1317,7 +1389,8 @@ public class TypeUtils {
         if (str.length() == 32) {
             for (int i = 0; i < 32; i++) {
                 char cCharAt = str.charAt(i);
-                if ((cCharAt < '0' || cCharAt > '9') && ((cCharAt < 'A' || cCharAt > 'F') && (cCharAt < 'a' || cCharAt > 'f'))) {
+                if ((cCharAt < '0' || cCharAt > '9')
+                        && ((cCharAt < 'A' || cCharAt > 'F') && (cCharAt < 'a' || cCharAt > 'f'))) {
                     return false;
                 }
             }
@@ -1332,14 +1405,18 @@ public class TypeUtils {
                 if (cCharAt2 != '-') {
                     return false;
                 }
-            } else if ((cCharAt2 < '0' || cCharAt2 > '9') && ((cCharAt2 < 'A' || cCharAt2 > 'F') && (cCharAt2 < 'a' || cCharAt2 > 'f'))) {
+            } else if ((cCharAt2 < '0' || cCharAt2 > '9')
+                    && ((cCharAt2 < 'A' || cCharAt2 > 'F') && (cCharAt2 < 'a' || cCharAt2 > 'f'))) {
                 return false;
             }
         }
         return true;
     }
 
-    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
+    /*
+     * JADX WARN: Failed to restore switch over string. Please report as a
+     * decompilation issue
+     */
     public static Class loadClass(String str) {
         if (str.length() >= 192) {
             return null;
@@ -1956,16 +2033,18 @@ public class TypeUtils {
         if (methodHandleFindStatic == null) {
             try {
                 Class<?> cls2 = Class.forName("java.lang.reflect.Proxy");
-                methodHandleFindStatic = JDKUtils.trustedLookup(cls2).findStatic(cls2, "newProxyInstance", MethodType.methodType(Object.class, ClassLoader.class, Class[].class, InvocationHandler.class));
+                methodHandleFindStatic = JDKUtils.trustedLookup(cls2).findStatic(cls2, "newProxyInstance",
+                        MethodType.methodType(Object.class, ClassLoader.class, Class[].class, InvocationHandler.class));
                 METHOD_NEW_PROXY_INSTANCE = methodHandleFindStatic;
             } catch (Throwable unused) {
                 METHOD_NEW_PROXY_INSTANCE_ERROR = true;
             }
         }
         try {
-            return (T) (Object) methodHandleFindStatic.invokeExact(cls.getClassLoader(), new Class[]{cls}, jSONObject);
+            return (T) (Object) methodHandleFindStatic.invokeExact(cls.getClassLoader(), new Class[] { cls },
+                    jSONObject);
         } catch (Throwable th) {
-            throw new JSONException(bjs.l(cls, "create proxy error : "), th);
+            throw new JSONException(concatVar2Var1(cls, "create proxy error : "), th);
         }
     }
 
@@ -1974,7 +2053,18 @@ public class TypeUtils {
             return cls;
         }
         String name = cls.getName();
-        return !name.equals("double") ? !name.equals("int") ? !name.equals("byte") ? !name.equals("char") ? !name.equals("long") ? !name.equals("boolean") ? !name.equals("float") ? !name.equals("short") ? cls : Short.class : Float.class : Boolean.class : Long.class : Character.class : Byte.class : Integer.class : Double.class;
+        return !name
+                .equals("double")
+                        ? !name.equals("int")
+                                ? !name.equals("byte")
+                                        ? !name.equals("char")
+                                                ? !name.equals("long") ? !name.equals("boolean") ? !name.equals("float")
+                                                        ? !name.equals("short") ? cls : Short.class
+                                                        : Float.class : Boolean.class : Long.class
+                                                : Character.class
+                                        : Byte.class
+                                : Integer.class
+                        : Double.class;
     }
 
     public static BigDecimal parseBigDecimal(char[] cArr, int i, int i2) {
@@ -2031,46 +2121,195 @@ public class TypeUtils {
             return null;
         }
         boolean z = true;
-        if ((i2 != 1 || ((b = bArr[i]) != 49 && b != 89)) && (i2 != 4 || (IOUtils.getIntUnaligned(bArr, i) | 538976288) != IOUtils.TRUE)) {
+        if ((i2 != 1 || ((b = bArr[i]) != 49 && b != 89))
+                && (i2 != 4 || (IOUtils.getIntUnaligned(bArr, i) | 538976288) != IOUtils.TRUE)) {
             z = false;
         }
         return Boolean.valueOf(z);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:107:0x004c A[EDGE_INSN: B:107:0x004c->B:27:0x004c BREAK  A[LOOP:0: B:13:0x0023->B:24:0x0041], SYNTHETIC] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:107:0x004c A[EDGE_INSN:
+     * B:107:0x004c->B:27:0x004c BREAK A[LOOP:0: B:13:0x0023->B:24:0x0041],
+     * SYNTHETIC]
+     */
     /* JADX WARN: Found duplicated region for block: B:108:0x0046 A[SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:112:0x008e A[EDGE_INSN: B:112:0x008e->B:47:0x008e BREAK  A[LOOP:1: B:28:0x004f->B:44:0x0082], SYNTHETIC] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:112:0x008e A[EDGE_INSN:
+     * B:112:0x008e->B:47:0x008e BREAK A[LOOP:1: B:28:0x004f->B:44:0x0082],
+     * SYNTHETIC]
+     */
     /* JADX WARN: Found duplicated region for block: B:113:0x0088 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:118:0x00ec A[SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:15:0x002d A[Catch: StringIndexOutOfBoundsException -> 0x011d, TRY_ENTER, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011d, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079, B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2, B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102, B:99:0x0110, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b, B:101:0x0115, B:102:0x011c), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:17:0x0031 A[Catch: StringIndexOutOfBoundsException -> 0x011d, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011d, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079, B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2, B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102, B:99:0x0110, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b, B:101:0x0115, B:102:0x011c), top: B:106:0x0008 }] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:15:0x002d A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011d, TRY_ENTER, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011d, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079,
+     * B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2,
+     * B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102,
+     * B:99:0x0110, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b,
+     * B:101:0x0115, B:102:0x011c), top: B:106:0x0008 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:17:0x0031 A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011d, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011d, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079,
+     * B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2,
+     * B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102,
+     * B:99:0x0110, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b,
+     * B:101:0x0115, B:102:0x011c), top: B:106:0x0008 }]
+     */
     /* JADX WARN: Found duplicated region for block: B:18:0x0034 A[DONT_INVERT] */
     /* JADX WARN: Found duplicated region for block: B:19:0x0036 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:20:0x0038 A[Catch: StringIndexOutOfBoundsException -> 0x011d, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011d, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079, B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2, B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102, B:99:0x0110, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b, B:101:0x0115, B:102:0x011c), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:22:0x003c A[Catch: StringIndexOutOfBoundsException -> 0x011d, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011d, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079, B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2, B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102, B:99:0x0110, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b, B:101:0x0115, B:102:0x011c), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:30:0x0053 A[Catch: StringIndexOutOfBoundsException -> 0x011d, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011d, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079, B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2, B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102, B:99:0x0110, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b, B:101:0x0115, B:102:0x011c), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:34:0x0065  */
-    /* JADX WARN: Found duplicated region for block: B:36:0x0069 A[Catch: StringIndexOutOfBoundsException -> 0x011d, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011d, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079, B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2, B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102, B:99:0x0110, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b, B:101:0x0115, B:102:0x011c), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:37:0x0073  */
+    /*
+     * JADX WARN: Found duplicated region for block: B:20:0x0038 A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011d, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011d, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079,
+     * B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2,
+     * B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102,
+     * B:99:0x0110, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b,
+     * B:101:0x0115, B:102:0x011c), top: B:106:0x0008 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:22:0x003c A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011d, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011d, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079,
+     * B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2,
+     * B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102,
+     * B:99:0x0110, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b,
+     * B:101:0x0115, B:102:0x011c), top: B:106:0x0008 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:30:0x0053 A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011d, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011d, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079,
+     * B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2,
+     * B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102,
+     * B:99:0x0110, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b,
+     * B:101:0x0115, B:102:0x011c), top: B:106:0x0008 }]
+     */
+    /* JADX WARN: Found duplicated region for block: B:34:0x0065 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:36:0x0069 A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011d, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011d, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079,
+     * B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2,
+     * B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102,
+     * B:99:0x0110, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b,
+     * B:101:0x0115, B:102:0x011c), top: B:106:0x0008 }]
+     */
+    /* JADX WARN: Found duplicated region for block: B:37:0x0073 */
     /* JADX WARN: Found duplicated region for block: B:39:0x0077 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:40:0x0079 A[Catch: StringIndexOutOfBoundsException -> 0x011d, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011d, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079, B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2, B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102, B:99:0x0110, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b, B:101:0x0115, B:102:0x011c), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:42:0x007d A[Catch: StringIndexOutOfBoundsException -> 0x011d, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011d, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079, B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2, B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102, B:99:0x0110, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b, B:101:0x0115, B:102:0x011c), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:49:0x0092  */
-    /* JADX WARN: Found duplicated region for block: B:50:0x0095  */
+    /*
+     * JADX WARN: Found duplicated region for block: B:40:0x0079 A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011d, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011d, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079,
+     * B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2,
+     * B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102,
+     * B:99:0x0110, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b,
+     * B:101:0x0115, B:102:0x011c), top: B:106:0x0008 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:42:0x007d A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011d, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011d, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079,
+     * B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2,
+     * B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102,
+     * B:99:0x0110, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b,
+     * B:101:0x0115, B:102:0x011c), top: B:106:0x0008 }]
+     */
+    /* JADX WARN: Found duplicated region for block: B:49:0x0092 */
+    /* JADX WARN: Found duplicated region for block: B:50:0x0095 */
     /* JADX WARN: Found duplicated region for block: B:53:0x009a A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:54:0x009c A[Catch: StringIndexOutOfBoundsException -> 0x011d, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011d, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079, B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2, B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102, B:99:0x0110, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b, B:101:0x0115, B:102:0x011c), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:55:0x009e A[Catch: StringIndexOutOfBoundsException -> 0x011d, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011d, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079, B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2, B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102, B:99:0x0110, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b, B:101:0x0115, B:102:0x011c), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:57:0x00a2 A[Catch: StringIndexOutOfBoundsException -> 0x011d, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011d, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079, B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2, B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102, B:99:0x0110, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b, B:101:0x0115, B:102:0x011c), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:62:0x00ad  */
-    /* JADX WARN: Found duplicated region for block: B:73:0x00d0  */
-    /* JADX WARN: Found duplicated region for block: B:75:0x00d5  */
-    /* JADX WARN: Found duplicated region for block: B:87:0x00fb A[Catch: StringIndexOutOfBoundsException -> 0x011d, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011d, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079, B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2, B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102, B:99:0x0110, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b, B:101:0x0115, B:102:0x011c), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:89:0x00ff  */
-    /* JADX WARN: Found duplicated region for block: B:91:0x0102 A[Catch: StringIndexOutOfBoundsException -> 0x011d, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011d, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079, B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2, B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102, B:99:0x0110, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b, B:101:0x0115, B:102:0x011c), top: B:106:0x0008 }] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:54:0x009c A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011d, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011d, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079,
+     * B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2,
+     * B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102,
+     * B:99:0x0110, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b,
+     * B:101:0x0115, B:102:0x011c), top: B:106:0x0008 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:55:0x009e A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011d, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011d, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079,
+     * B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2,
+     * B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102,
+     * B:99:0x0110, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b,
+     * B:101:0x0115, B:102:0x011c), top: B:106:0x0008 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:57:0x00a2 A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011d, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011d, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079,
+     * B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2,
+     * B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102,
+     * B:99:0x0110, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b,
+     * B:101:0x0115, B:102:0x011c), top: B:106:0x0008 }]
+     */
+    /* JADX WARN: Found duplicated region for block: B:62:0x00ad */
+    /* JADX WARN: Found duplicated region for block: B:73:0x00d0 */
+    /* JADX WARN: Found duplicated region for block: B:75:0x00d5 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:87:0x00fb A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011d, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011d, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079,
+     * B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2,
+     * B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102,
+     * B:99:0x0110, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b,
+     * B:101:0x0115, B:102:0x011c), top: B:106:0x0008 }]
+     */
+    /* JADX WARN: Found duplicated region for block: B:89:0x00ff */
+    /*
+     * JADX WARN: Found duplicated region for block: B:91:0x0102 A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011d, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011d, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079,
+     * B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2,
+     * B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102,
+     * B:99:0x0110, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b,
+     * B:101:0x0115, B:102:0x011c), top: B:106:0x0008 }]
+     */
     /* JADX WARN: Found duplicated region for block: B:94:0x0108 A[DONT_INVERT] */
     /* JADX WARN: Found duplicated region for block: B:95:0x010a A[RETURN] */
     /* JADX WARN: Found duplicated region for block: B:97:0x010d A[RETURN] */
-    /* JADX WARN: Found duplicated region for block: B:99:0x0110 A[Catch: StringIndexOutOfBoundsException -> 0x011d, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011d, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079, B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2, B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102, B:99:0x0110, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b, B:101:0x0115, B:102:0x011c), top: B:106:0x0008 }] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:99:0x0110 A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011d, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011d, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079,
+     * B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2,
+     * B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102,
+     * B:99:0x0110, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b,
+     * B:101:0x0115, B:102:0x011c), top: B:106:0x0008 }]
+     */
     public static double parseDouble(byte[] bArr, int i, int i2) {
         boolean z;
         int i3;
@@ -2361,40 +2600,188 @@ public class TypeUtils {
         throw new NumberFormatException("For input string: \"" + new String(bArr, i, i2) + "\"");
     }
 
-    /* JADX WARN: Found duplicated region for block: B:107:0x004c A[EDGE_INSN: B:107:0x004c->B:27:0x004c BREAK  A[LOOP:0: B:13:0x0023->B:24:0x0041], SYNTHETIC] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:107:0x004c A[EDGE_INSN:
+     * B:107:0x004c->B:27:0x004c BREAK A[LOOP:0: B:13:0x0023->B:24:0x0041],
+     * SYNTHETIC]
+     */
     /* JADX WARN: Found duplicated region for block: B:108:0x0046 A[SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:112:0x008e A[EDGE_INSN: B:112:0x008e->B:47:0x008e BREAK  A[LOOP:1: B:28:0x004f->B:44:0x0082], SYNTHETIC] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:112:0x008e A[EDGE_INSN:
+     * B:112:0x008e->B:47:0x008e BREAK A[LOOP:1: B:28:0x004f->B:44:0x0082],
+     * SYNTHETIC]
+     */
     /* JADX WARN: Found duplicated region for block: B:113:0x0088 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:118:0x00ec A[SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:15:0x002d A[Catch: StringIndexOutOfBoundsException -> 0x011c, TRY_ENTER, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011c, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079, B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2, B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102, B:99:0x010f, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b, B:101:0x0114, B:102:0x011b), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:17:0x0031 A[Catch: StringIndexOutOfBoundsException -> 0x011c, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011c, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079, B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2, B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102, B:99:0x010f, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b, B:101:0x0114, B:102:0x011b), top: B:106:0x0008 }] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:15:0x002d A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011c, TRY_ENTER, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011c, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079,
+     * B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2,
+     * B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102,
+     * B:99:0x010f, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b,
+     * B:101:0x0114, B:102:0x011b), top: B:106:0x0008 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:17:0x0031 A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011c, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011c, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079,
+     * B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2,
+     * B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102,
+     * B:99:0x010f, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b,
+     * B:101:0x0114, B:102:0x011b), top: B:106:0x0008 }]
+     */
     /* JADX WARN: Found duplicated region for block: B:18:0x0034 A[DONT_INVERT] */
     /* JADX WARN: Found duplicated region for block: B:19:0x0036 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:20:0x0038 A[Catch: StringIndexOutOfBoundsException -> 0x011c, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011c, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079, B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2, B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102, B:99:0x010f, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b, B:101:0x0114, B:102:0x011b), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:22:0x003c A[Catch: StringIndexOutOfBoundsException -> 0x011c, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011c, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079, B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2, B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102, B:99:0x010f, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b, B:101:0x0114, B:102:0x011b), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:30:0x0053 A[Catch: StringIndexOutOfBoundsException -> 0x011c, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011c, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079, B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2, B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102, B:99:0x010f, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b, B:101:0x0114, B:102:0x011b), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:34:0x0065  */
-    /* JADX WARN: Found duplicated region for block: B:36:0x0069 A[Catch: StringIndexOutOfBoundsException -> 0x011c, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011c, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079, B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2, B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102, B:99:0x010f, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b, B:101:0x0114, B:102:0x011b), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:37:0x0073  */
+    /*
+     * JADX WARN: Found duplicated region for block: B:20:0x0038 A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011c, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011c, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079,
+     * B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2,
+     * B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102,
+     * B:99:0x010f, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b,
+     * B:101:0x0114, B:102:0x011b), top: B:106:0x0008 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:22:0x003c A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011c, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011c, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079,
+     * B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2,
+     * B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102,
+     * B:99:0x010f, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b,
+     * B:101:0x0114, B:102:0x011b), top: B:106:0x0008 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:30:0x0053 A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011c, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011c, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079,
+     * B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2,
+     * B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102,
+     * B:99:0x010f, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b,
+     * B:101:0x0114, B:102:0x011b), top: B:106:0x0008 }]
+     */
+    /* JADX WARN: Found duplicated region for block: B:34:0x0065 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:36:0x0069 A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011c, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011c, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079,
+     * B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2,
+     * B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102,
+     * B:99:0x010f, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b,
+     * B:101:0x0114, B:102:0x011b), top: B:106:0x0008 }]
+     */
+    /* JADX WARN: Found duplicated region for block: B:37:0x0073 */
     /* JADX WARN: Found duplicated region for block: B:39:0x0077 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:40:0x0079 A[Catch: StringIndexOutOfBoundsException -> 0x011c, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011c, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079, B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2, B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102, B:99:0x010f, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b, B:101:0x0114, B:102:0x011b), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:42:0x007d A[Catch: StringIndexOutOfBoundsException -> 0x011c, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011c, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079, B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2, B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102, B:99:0x010f, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b, B:101:0x0114, B:102:0x011b), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:49:0x0092  */
-    /* JADX WARN: Found duplicated region for block: B:50:0x0095  */
+    /*
+     * JADX WARN: Found duplicated region for block: B:40:0x0079 A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011c, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011c, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079,
+     * B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2,
+     * B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102,
+     * B:99:0x010f, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b,
+     * B:101:0x0114, B:102:0x011b), top: B:106:0x0008 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:42:0x007d A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011c, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011c, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079,
+     * B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2,
+     * B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102,
+     * B:99:0x010f, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b,
+     * B:101:0x0114, B:102:0x011b), top: B:106:0x0008 }]
+     */
+    /* JADX WARN: Found duplicated region for block: B:49:0x0092 */
+    /* JADX WARN: Found duplicated region for block: B:50:0x0095 */
     /* JADX WARN: Found duplicated region for block: B:53:0x009a A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:54:0x009c A[Catch: StringIndexOutOfBoundsException -> 0x011c, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011c, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079, B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2, B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102, B:99:0x010f, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b, B:101:0x0114, B:102:0x011b), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:55:0x009e A[Catch: StringIndexOutOfBoundsException -> 0x011c, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011c, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079, B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2, B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102, B:99:0x010f, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b, B:101:0x0114, B:102:0x011b), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:57:0x00a2 A[Catch: StringIndexOutOfBoundsException -> 0x011c, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011c, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079, B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2, B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102, B:99:0x010f, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b, B:101:0x0114, B:102:0x011b), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:62:0x00ad  */
-    /* JADX WARN: Found duplicated region for block: B:73:0x00d0  */
-    /* JADX WARN: Found duplicated region for block: B:75:0x00d5  */
-    /* JADX WARN: Found duplicated region for block: B:87:0x00fb A[Catch: StringIndexOutOfBoundsException -> 0x011c, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011c, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079, B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2, B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102, B:99:0x010f, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b, B:101:0x0114, B:102:0x011b), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:89:0x00ff  */
-    /* JADX WARN: Found duplicated region for block: B:91:0x0102 A[Catch: StringIndexOutOfBoundsException -> 0x011c, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011c, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079, B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2, B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102, B:99:0x010f, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b, B:101:0x0114, B:102:0x011b), top: B:106:0x0008 }] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:54:0x009c A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011c, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011c, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079,
+     * B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2,
+     * B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102,
+     * B:99:0x010f, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b,
+     * B:101:0x0114, B:102:0x011b), top: B:106:0x0008 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:55:0x009e A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011c, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011c, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079,
+     * B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2,
+     * B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102,
+     * B:99:0x010f, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b,
+     * B:101:0x0114, B:102:0x011b), top: B:106:0x0008 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:57:0x00a2 A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011c, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011c, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079,
+     * B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2,
+     * B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102,
+     * B:99:0x010f, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b,
+     * B:101:0x0114, B:102:0x011b), top: B:106:0x0008 }]
+     */
+    /* JADX WARN: Found duplicated region for block: B:62:0x00ad */
+    /* JADX WARN: Found duplicated region for block: B:73:0x00d0 */
+    /* JADX WARN: Found duplicated region for block: B:75:0x00d5 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:87:0x00fb A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011c, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011c, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079,
+     * B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2,
+     * B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102,
+     * B:99:0x010f, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b,
+     * B:101:0x0114, B:102:0x011b), top: B:106:0x0008 }]
+     */
+    /* JADX WARN: Found duplicated region for block: B:89:0x00ff */
+    /*
+     * JADX WARN: Found duplicated region for block: B:91:0x0102 A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011c, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011c, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079,
+     * B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2,
+     * B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102,
+     * B:99:0x010f, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b,
+     * B:101:0x0114, B:102:0x011b), top: B:106:0x0008 }]
+     */
     /* JADX WARN: Found duplicated region for block: B:94:0x0108 A[DONT_INVERT] */
     /* JADX WARN: Found duplicated region for block: B:95:0x010a A[RETURN] */
     /* JADX WARN: Found duplicated region for block: B:97:0x010d A[RETURN] */
-    /* JADX WARN: Found duplicated region for block: B:99:0x010f A[Catch: StringIndexOutOfBoundsException -> 0x011c, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011c, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079, B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2, B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102, B:99:0x010f, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b, B:101:0x0114, B:102:0x011b), top: B:106:0x0008 }] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:99:0x010f A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011c, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011c, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0082, B:36:0x0069, B:40:0x0079,
+     * B:42:0x007d, B:45:0x0088, B:46:0x008d, B:47:0x008e, B:54:0x009c, B:57:0x00a2,
+     * B:63:0x00b0, B:76:0x00d7, B:79:0x00e3, B:81:0x00ee, B:85:0x00f7, B:91:0x0102,
+     * B:99:0x010f, B:87:0x00fb, B:70:0x00c3, B:55:0x009e, B:10:0x001b,
+     * B:101:0x0114, B:102:0x011b), top: B:106:0x0008 }]
+     */
     public static float parseFloat(byte[] bArr, int i, int i2) {
         boolean z;
         int i3;
@@ -2920,7 +3307,7 @@ public class TypeUtils {
                 return DateUtils.parseDate((String) obj2);
             }
         }
-        throw new JSONException(bjs.m(obj, new StringBuilder("can not cast to Date from ")));
+        throw new JSONException(concatVar1GetClass(obj, new StringBuilder("can not cast to Date from ")));
     }
 
     public static Double toDouble(Object obj) {
@@ -3031,7 +3418,7 @@ public class TypeUtils {
             if (obj instanceof Map) {
                 return (Instant) ObjectReaderImplInstant.INSTANCE.createInstance((Map) obj, 0L);
             }
-            throw new JSONException(bjs.m(obj, new StringBuilder("can not cast to Date from ")));
+            throw new JSONException(concatVar1GetClass(obj, new StringBuilder("can not cast to Date from ")));
         }
         String str = (String) obj;
         if (str.isEmpty() || "null".equals(str)) {
@@ -3121,7 +3508,7 @@ public class TypeUtils {
             return ((Number) obj).longValue();
         }
         if (!(obj instanceof String)) {
-            throw new JSONException(bjs.m(obj, new StringBuilder("can not cast to long from ")));
+            throw new JSONException(concatVar1GetClass(obj, new StringBuilder("can not cast to long from ")));
         }
         String str = (String) obj;
         if (str.isEmpty() || "null".equals(str)) {
@@ -3245,20 +3632,29 @@ public class TypeUtils {
                     z = z2;
                     if (i6 == 1) {
                         char cCharAt2 = str.charAt(i5 - 1);
-                        if ((cCharAt2 < '0' || cCharAt2 > '9') && ((cCharAt2 < 'A' || cCharAt2 > 'F') && (cCharAt2 < 'a' || cCharAt2 > 'f'))) {
+                        if ((cCharAt2 < '0' || cCharAt2 > '9')
+                                && ((cCharAt2 < 'A' || cCharAt2 > 'F') && (cCharAt2 < 'a' || cCharAt2 > 'f'))) {
                             return z;
                         }
                     } else if (i6 == i) {
                         char cCharAt3 = str.charAt(i5 - 2);
                         char cCharAt4 = str.charAt(i5 - 1);
-                        if (((cCharAt3 < '0' || cCharAt3 > '9') && ((cCharAt3 < 'A' || cCharAt3 > 'F') && (cCharAt3 < 'a' || cCharAt3 > 'f'))) || ((cCharAt4 < '0' || cCharAt4 > '9') && ((cCharAt4 < 'A' || cCharAt4 > 'F') && (cCharAt4 < 'a' || cCharAt4 > 'f')))) {
+                        if (((cCharAt3 < '0' || cCharAt3 > '9')
+                                && ((cCharAt3 < 'A' || cCharAt3 > 'F') && (cCharAt3 < 'a' || cCharAt3 > 'f')))
+                                || ((cCharAt4 < '0' || cCharAt4 > '9') && ((cCharAt4 < 'A' || cCharAt4 > 'F')
+                                        && (cCharAt4 < 'a' || cCharAt4 > 'f')))) {
                             return z;
                         }
                     } else if (i6 == 3) {
                         char cCharAt5 = str.charAt(i5 - 3);
                         char cCharAt6 = str.charAt(i5 - 2);
                         char cCharAt7 = str.charAt(i5 - 1);
-                        if (((cCharAt5 < '0' || cCharAt5 > '9') && ((cCharAt5 < 'A' || cCharAt5 > 'F') && (cCharAt5 < 'a' || cCharAt5 > 'f'))) || (((cCharAt6 < '0' || cCharAt6 > '9') && ((cCharAt6 < 'A' || cCharAt6 > 'F') && (cCharAt6 < 'a' || cCharAt6 > 'f'))) || ((cCharAt7 < '0' || cCharAt7 > '9') && ((cCharAt7 < 'A' || cCharAt7 > 'F') && (cCharAt7 < 'a' || cCharAt7 > 'f'))))) {
+                        if (((cCharAt5 < '0' || cCharAt5 > '9')
+                                && ((cCharAt5 < 'A' || cCharAt5 > 'F') && (cCharAt5 < 'a' || cCharAt5 > 'f')))
+                                || (((cCharAt6 < '0' || cCharAt6 > '9')
+                                        && ((cCharAt6 < 'A' || cCharAt6 > 'F') && (cCharAt6 < 'a' || cCharAt6 > 'f')))
+                                        || ((cCharAt7 < '0' || cCharAt7 > '9') && ((cCharAt7 < 'A' || cCharAt7 > 'F')
+                                                && (cCharAt7 < 'a' || cCharAt7 > 'f'))))) {
                             return z;
                         }
                     } else {
@@ -3269,7 +3665,16 @@ public class TypeUtils {
                         char cCharAt9 = str.charAt(i5 - 3);
                         char cCharAt10 = str.charAt(i5 - 2);
                         char cCharAt11 = str.charAt(i5 - 1);
-                        if (((cCharAt8 < '0' || cCharAt8 > '9') && ((cCharAt8 < 'A' || cCharAt8 > 'F') && (cCharAt8 < 'a' || cCharAt8 > 'f'))) || (((cCharAt9 < '0' || cCharAt9 > '9') && ((cCharAt9 < 'A' || cCharAt9 > 'F') && (cCharAt9 < 'a' || cCharAt9 > 'f'))) || (((cCharAt10 < '0' || cCharAt10 > '9') && ((cCharAt10 < 'A' || cCharAt10 > 'F') && (cCharAt10 < 'a' || cCharAt10 > 'f'))) || ((cCharAt11 < '0' || cCharAt11 > '9') && ((cCharAt11 < 'A' || cCharAt11 > 'F') && (cCharAt11 < 'a' || cCharAt11 > 'f')))))) {
+                        if (((cCharAt8 < '0' || cCharAt8 > '9')
+                                && ((cCharAt8 < 'A' || cCharAt8 > 'F') && (cCharAt8 < 'a' || cCharAt8 > 'f')))
+                                || (((cCharAt9 < '0' || cCharAt9 > '9')
+                                        && ((cCharAt9 < 'A' || cCharAt9 > 'F') && (cCharAt9 < 'a' || cCharAt9 > 'f')))
+                                        || (((cCharAt10 < '0' || cCharAt10 > '9')
+                                                && ((cCharAt10 < 'A' || cCharAt10 > 'F')
+                                                        && (cCharAt10 < 'a' || cCharAt10 > 'f')))
+                                                || ((cCharAt11 < '0' || cCharAt11 > '9')
+                                                        && ((cCharAt11 < 'A' || cCharAt11 > 'F')
+                                                                && (cCharAt11 < 'a' || cCharAt11 > 'f')))))) {
                             return z;
                         }
                     }
@@ -3298,7 +3703,8 @@ public class TypeUtils {
 
     public static boolean isJavaScriptSupport(BigDecimal bigDecimal) {
         boolean z = bigDecimal.precision() < 16 || isJavaScriptSupport(bigDecimal.unscaledValue());
-        return (z || bigDecimal.scale() == 0) ? z : bigDecimal.compareTo(BigDecimal.valueOf(bigDecimal.doubleValue())) == 0;
+        return (z || bigDecimal.scale() == 0) ? z
+                : bigDecimal.compareTo(BigDecimal.valueOf(bigDecimal.doubleValue())) == 0;
     }
 
     public static boolean validateIPv4(String str, int i) {
@@ -3325,7 +3731,8 @@ public class TypeUtils {
                             char cCharAt3 = str.charAt(i4 - 3);
                             char cCharAt4 = str.charAt(i4 - 2);
                             char cCharAt5 = str.charAt(i4 - 1);
-                            if (cCharAt3 >= '0' && cCharAt3 <= '2' && cCharAt4 >= '0' && cCharAt4 <= '9' && cCharAt5 >= '0' && cCharAt5 <= '9') {
+                            if (cCharAt3 >= '0' && cCharAt3 <= '2' && cCharAt4 >= '0' && cCharAt4 <= '9'
+                                    && cCharAt5 >= '0' && cCharAt5 <= '9') {
                                 if ((cCharAt5 - '0') + yg.b(cCharAt4, 48, 10, (cCharAt3 - '0') * 100) > 255) {
                                 }
                             }
@@ -3357,7 +3764,8 @@ public class TypeUtils {
             return null;
         }
         boolean z = true;
-        if ((i2 != 1 || ((c = cArr[i]) != '1' && c != 'Y')) && (i2 != 4 || (IOUtils.getLongLE(cArr, i) | 9007336695791648L) != 28429475166421108L)) {
+        if ((i2 != 1 || ((c = cArr[i]) != '1' && c != 'Y'))
+                && (i2 != 4 || (IOUtils.getLongLE(cArr, i) | 9007336695791648L) != 28429475166421108L)) {
             z = false;
         }
         return Boolean.valueOf(z);
@@ -3370,15 +3778,15 @@ public class TypeUtils {
                 return strArr[b];
             }
         }
-        return new String(new byte[]{b}, StandardCharsets.ISO_8859_1);
+        return new String(new byte[] { b }, StandardCharsets.ISO_8859_1);
     }
 
     public static boolean isJavaScriptSupport(BigInteger bigInteger) {
         return bigInteger.compareTo(BIGINT_JAVASCRIPT_LOW) >= 0 && bigInteger.compareTo(BIGINT_JAVASCRIPT_HIGH) <= 0;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:39:0x0070  */
-    /* JADX WARN: Found duplicated region for block: B:41:0x0073  */
+    /* JADX WARN: Found duplicated region for block: B:39:0x0070 */
+    /* JADX WARN: Found duplicated region for block: B:41:0x0073 */
     public static BigDecimal parseBigDecimal(byte[] bArr, int i, int i2) {
         int i3;
         boolean z;
@@ -3523,14 +3931,14 @@ public class TypeUtils {
         if (c >= ' ' && c <= '~' && c2 >= ' ' && c2 <= '~') {
             return X2.chars2[(c2 - ' ') + ((c - ' ') * 95)];
         }
-        return new String(new char[]{c, c2});
+        return new String(new char[] { c, c2 });
     }
 
     public static String toString(byte b, byte b2) {
         if (b >= 32 && b <= 126 && b2 >= 32 && b2 <= 126) {
             return X2.chars2[(b2 - 32) + ((b - 32) * 95)];
         }
-        return new String(new byte[]{b, b2}, StandardCharsets.ISO_8859_1);
+        return new String(new byte[] { b, b2 }, StandardCharsets.ISO_8859_1);
     }
 
     public static BigDecimal toBigDecimal(long j) {
@@ -3673,40 +4081,188 @@ public class TypeUtils {
         return true;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:107:0x004c A[EDGE_INSN: B:107:0x004c->B:27:0x004c BREAK  A[LOOP:0: B:13:0x0023->B:24:0x0041], SYNTHETIC] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:107:0x004c A[EDGE_INSN:
+     * B:107:0x004c->B:27:0x004c BREAK A[LOOP:0: B:13:0x0023->B:24:0x0041],
+     * SYNTHETIC]
+     */
     /* JADX WARN: Found duplicated region for block: B:108:0x0046 A[SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:112:0x0090 A[EDGE_INSN: B:112:0x0090->B:47:0x0090 BREAK  A[LOOP:1: B:28:0x004f->B:44:0x0084], SYNTHETIC] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:112:0x0090 A[EDGE_INSN:
+     * B:112:0x0090->B:47:0x0090 BREAK A[LOOP:1: B:28:0x004f->B:44:0x0084],
+     * SYNTHETIC]
+     */
     /* JADX WARN: Found duplicated region for block: B:113:0x008a A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:118:0x00ee A[SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:15:0x002d A[Catch: StringIndexOutOfBoundsException -> 0x011f, TRY_ENTER, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011f, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b, B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4, B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104, B:99:0x0112, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b, B:101:0x0117, B:102:0x011e), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:17:0x0031 A[Catch: StringIndexOutOfBoundsException -> 0x011f, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011f, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b, B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4, B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104, B:99:0x0112, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b, B:101:0x0117, B:102:0x011e), top: B:106:0x0008 }] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:15:0x002d A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011f, TRY_ENTER, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011f, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b,
+     * B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4,
+     * B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104,
+     * B:99:0x0112, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b,
+     * B:101:0x0117, B:102:0x011e), top: B:106:0x0008 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:17:0x0031 A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011f, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011f, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b,
+     * B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4,
+     * B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104,
+     * B:99:0x0112, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b,
+     * B:101:0x0117, B:102:0x011e), top: B:106:0x0008 }]
+     */
     /* JADX WARN: Found duplicated region for block: B:18:0x0034 A[DONT_INVERT] */
     /* JADX WARN: Found duplicated region for block: B:19:0x0036 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:20:0x0038 A[Catch: StringIndexOutOfBoundsException -> 0x011f, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011f, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b, B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4, B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104, B:99:0x0112, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b, B:101:0x0117, B:102:0x011e), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:22:0x003c A[Catch: StringIndexOutOfBoundsException -> 0x011f, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011f, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b, B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4, B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104, B:99:0x0112, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b, B:101:0x0117, B:102:0x011e), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:30:0x0053 A[Catch: StringIndexOutOfBoundsException -> 0x011f, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011f, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b, B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4, B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104, B:99:0x0112, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b, B:101:0x0117, B:102:0x011e), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:34:0x0066  */
-    /* JADX WARN: Found duplicated region for block: B:36:0x006a A[Catch: StringIndexOutOfBoundsException -> 0x011f, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011f, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b, B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4, B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104, B:99:0x0112, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b, B:101:0x0117, B:102:0x011e), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:37:0x0075  */
+    /*
+     * JADX WARN: Found duplicated region for block: B:20:0x0038 A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011f, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011f, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b,
+     * B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4,
+     * B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104,
+     * B:99:0x0112, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b,
+     * B:101:0x0117, B:102:0x011e), top: B:106:0x0008 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:22:0x003c A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011f, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011f, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b,
+     * B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4,
+     * B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104,
+     * B:99:0x0112, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b,
+     * B:101:0x0117, B:102:0x011e), top: B:106:0x0008 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:30:0x0053 A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011f, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011f, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b,
+     * B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4,
+     * B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104,
+     * B:99:0x0112, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b,
+     * B:101:0x0117, B:102:0x011e), top: B:106:0x0008 }]
+     */
+    /* JADX WARN: Found duplicated region for block: B:34:0x0066 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:36:0x006a A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011f, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011f, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b,
+     * B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4,
+     * B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104,
+     * B:99:0x0112, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b,
+     * B:101:0x0117, B:102:0x011e), top: B:106:0x0008 }]
+     */
+    /* JADX WARN: Found duplicated region for block: B:37:0x0075 */
     /* JADX WARN: Found duplicated region for block: B:39:0x0079 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:40:0x007b A[Catch: StringIndexOutOfBoundsException -> 0x011f, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011f, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b, B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4, B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104, B:99:0x0112, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b, B:101:0x0117, B:102:0x011e), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:42:0x007f A[Catch: StringIndexOutOfBoundsException -> 0x011f, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011f, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b, B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4, B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104, B:99:0x0112, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b, B:101:0x0117, B:102:0x011e), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:49:0x0094  */
-    /* JADX WARN: Found duplicated region for block: B:50:0x0097  */
+    /*
+     * JADX WARN: Found duplicated region for block: B:40:0x007b A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011f, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011f, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b,
+     * B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4,
+     * B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104,
+     * B:99:0x0112, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b,
+     * B:101:0x0117, B:102:0x011e), top: B:106:0x0008 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:42:0x007f A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011f, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011f, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b,
+     * B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4,
+     * B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104,
+     * B:99:0x0112, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b,
+     * B:101:0x0117, B:102:0x011e), top: B:106:0x0008 }]
+     */
+    /* JADX WARN: Found duplicated region for block: B:49:0x0094 */
+    /* JADX WARN: Found duplicated region for block: B:50:0x0097 */
     /* JADX WARN: Found duplicated region for block: B:53:0x009c A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:54:0x009e A[Catch: StringIndexOutOfBoundsException -> 0x011f, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011f, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b, B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4, B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104, B:99:0x0112, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b, B:101:0x0117, B:102:0x011e), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:55:0x00a0 A[Catch: StringIndexOutOfBoundsException -> 0x011f, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011f, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b, B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4, B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104, B:99:0x0112, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b, B:101:0x0117, B:102:0x011e), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:57:0x00a4 A[Catch: StringIndexOutOfBoundsException -> 0x011f, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011f, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b, B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4, B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104, B:99:0x0112, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b, B:101:0x0117, B:102:0x011e), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:62:0x00af  */
-    /* JADX WARN: Found duplicated region for block: B:73:0x00d2  */
-    /* JADX WARN: Found duplicated region for block: B:75:0x00d7  */
-    /* JADX WARN: Found duplicated region for block: B:87:0x00fd A[Catch: StringIndexOutOfBoundsException -> 0x011f, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011f, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b, B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4, B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104, B:99:0x0112, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b, B:101:0x0117, B:102:0x011e), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:89:0x0101  */
-    /* JADX WARN: Found duplicated region for block: B:91:0x0104 A[Catch: StringIndexOutOfBoundsException -> 0x011f, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011f, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b, B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4, B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104, B:99:0x0112, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b, B:101:0x0117, B:102:0x011e), top: B:106:0x0008 }] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:54:0x009e A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011f, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011f, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b,
+     * B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4,
+     * B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104,
+     * B:99:0x0112, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b,
+     * B:101:0x0117, B:102:0x011e), top: B:106:0x0008 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:55:0x00a0 A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011f, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011f, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b,
+     * B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4,
+     * B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104,
+     * B:99:0x0112, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b,
+     * B:101:0x0117, B:102:0x011e), top: B:106:0x0008 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:57:0x00a4 A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011f, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011f, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b,
+     * B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4,
+     * B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104,
+     * B:99:0x0112, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b,
+     * B:101:0x0117, B:102:0x011e), top: B:106:0x0008 }]
+     */
+    /* JADX WARN: Found duplicated region for block: B:62:0x00af */
+    /* JADX WARN: Found duplicated region for block: B:73:0x00d2 */
+    /* JADX WARN: Found duplicated region for block: B:75:0x00d7 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:87:0x00fd A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011f, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011f, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b,
+     * B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4,
+     * B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104,
+     * B:99:0x0112, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b,
+     * B:101:0x0117, B:102:0x011e), top: B:106:0x0008 }]
+     */
+    /* JADX WARN: Found duplicated region for block: B:89:0x0101 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:91:0x0104 A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011f, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011f, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b,
+     * B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4,
+     * B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104,
+     * B:99:0x0112, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b,
+     * B:101:0x0117, B:102:0x011e), top: B:106:0x0008 }]
+     */
     /* JADX WARN: Found duplicated region for block: B:94:0x010a A[DONT_INVERT] */
     /* JADX WARN: Found duplicated region for block: B:95:0x010c A[RETURN] */
     /* JADX WARN: Found duplicated region for block: B:97:0x010f A[RETURN] */
-    /* JADX WARN: Found duplicated region for block: B:99:0x0112 A[Catch: StringIndexOutOfBoundsException -> 0x011f, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011f, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b, B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4, B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104, B:99:0x0112, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b, B:101:0x0117, B:102:0x011e), top: B:106:0x0008 }] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:99:0x0112 A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011f, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011f, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b,
+     * B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4,
+     * B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104,
+     * B:99:0x0112, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b,
+     * B:101:0x0117, B:102:0x011e), top: B:106:0x0008 }]
+     */
     public static double parseDouble(char[] cArr, int i, int i2) {
         boolean z;
         int i3;
@@ -4012,40 +4568,188 @@ public class TypeUtils {
         throw new NumberFormatException("empty String");
     }
 
-    /* JADX WARN: Found duplicated region for block: B:107:0x004c A[EDGE_INSN: B:107:0x004c->B:27:0x004c BREAK  A[LOOP:0: B:13:0x0023->B:24:0x0041], SYNTHETIC] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:107:0x004c A[EDGE_INSN:
+     * B:107:0x004c->B:27:0x004c BREAK A[LOOP:0: B:13:0x0023->B:24:0x0041],
+     * SYNTHETIC]
+     */
     /* JADX WARN: Found duplicated region for block: B:108:0x0046 A[SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:112:0x0090 A[EDGE_INSN: B:112:0x0090->B:47:0x0090 BREAK  A[LOOP:1: B:28:0x004f->B:44:0x0084], SYNTHETIC] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:112:0x0090 A[EDGE_INSN:
+     * B:112:0x0090->B:47:0x0090 BREAK A[LOOP:1: B:28:0x004f->B:44:0x0084],
+     * SYNTHETIC]
+     */
     /* JADX WARN: Found duplicated region for block: B:113:0x008a A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:118:0x00ee A[SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:15:0x002d A[Catch: StringIndexOutOfBoundsException -> 0x011e, TRY_ENTER, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011e, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b, B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4, B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104, B:99:0x0111, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b, B:101:0x0116, B:102:0x011d), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:17:0x0031 A[Catch: StringIndexOutOfBoundsException -> 0x011e, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011e, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b, B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4, B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104, B:99:0x0111, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b, B:101:0x0116, B:102:0x011d), top: B:106:0x0008 }] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:15:0x002d A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011e, TRY_ENTER, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011e, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b,
+     * B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4,
+     * B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104,
+     * B:99:0x0111, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b,
+     * B:101:0x0116, B:102:0x011d), top: B:106:0x0008 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:17:0x0031 A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011e, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011e, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b,
+     * B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4,
+     * B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104,
+     * B:99:0x0111, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b,
+     * B:101:0x0116, B:102:0x011d), top: B:106:0x0008 }]
+     */
     /* JADX WARN: Found duplicated region for block: B:18:0x0034 A[DONT_INVERT] */
     /* JADX WARN: Found duplicated region for block: B:19:0x0036 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:20:0x0038 A[Catch: StringIndexOutOfBoundsException -> 0x011e, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011e, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b, B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4, B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104, B:99:0x0111, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b, B:101:0x0116, B:102:0x011d), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:22:0x003c A[Catch: StringIndexOutOfBoundsException -> 0x011e, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011e, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b, B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4, B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104, B:99:0x0111, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b, B:101:0x0116, B:102:0x011d), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:30:0x0053 A[Catch: StringIndexOutOfBoundsException -> 0x011e, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011e, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b, B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4, B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104, B:99:0x0111, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b, B:101:0x0116, B:102:0x011d), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:34:0x0066  */
-    /* JADX WARN: Found duplicated region for block: B:36:0x006a A[Catch: StringIndexOutOfBoundsException -> 0x011e, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011e, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b, B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4, B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104, B:99:0x0111, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b, B:101:0x0116, B:102:0x011d), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:37:0x0075  */
+    /*
+     * JADX WARN: Found duplicated region for block: B:20:0x0038 A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011e, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011e, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b,
+     * B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4,
+     * B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104,
+     * B:99:0x0111, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b,
+     * B:101:0x0116, B:102:0x011d), top: B:106:0x0008 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:22:0x003c A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011e, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011e, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b,
+     * B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4,
+     * B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104,
+     * B:99:0x0111, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b,
+     * B:101:0x0116, B:102:0x011d), top: B:106:0x0008 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:30:0x0053 A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011e, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011e, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b,
+     * B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4,
+     * B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104,
+     * B:99:0x0111, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b,
+     * B:101:0x0116, B:102:0x011d), top: B:106:0x0008 }]
+     */
+    /* JADX WARN: Found duplicated region for block: B:34:0x0066 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:36:0x006a A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011e, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011e, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b,
+     * B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4,
+     * B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104,
+     * B:99:0x0111, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b,
+     * B:101:0x0116, B:102:0x011d), top: B:106:0x0008 }]
+     */
+    /* JADX WARN: Found duplicated region for block: B:37:0x0075 */
     /* JADX WARN: Found duplicated region for block: B:39:0x0079 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:40:0x007b A[Catch: StringIndexOutOfBoundsException -> 0x011e, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011e, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b, B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4, B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104, B:99:0x0111, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b, B:101:0x0116, B:102:0x011d), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:42:0x007f A[Catch: StringIndexOutOfBoundsException -> 0x011e, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011e, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b, B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4, B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104, B:99:0x0111, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b, B:101:0x0116, B:102:0x011d), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:49:0x0094  */
-    /* JADX WARN: Found duplicated region for block: B:50:0x0097  */
+    /*
+     * JADX WARN: Found duplicated region for block: B:40:0x007b A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011e, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011e, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b,
+     * B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4,
+     * B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104,
+     * B:99:0x0111, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b,
+     * B:101:0x0116, B:102:0x011d), top: B:106:0x0008 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:42:0x007f A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011e, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011e, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b,
+     * B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4,
+     * B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104,
+     * B:99:0x0111, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b,
+     * B:101:0x0116, B:102:0x011d), top: B:106:0x0008 }]
+     */
+    /* JADX WARN: Found duplicated region for block: B:49:0x0094 */
+    /* JADX WARN: Found duplicated region for block: B:50:0x0097 */
     /* JADX WARN: Found duplicated region for block: B:53:0x009c A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:54:0x009e A[Catch: StringIndexOutOfBoundsException -> 0x011e, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011e, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b, B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4, B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104, B:99:0x0111, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b, B:101:0x0116, B:102:0x011d), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:55:0x00a0 A[Catch: StringIndexOutOfBoundsException -> 0x011e, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011e, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b, B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4, B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104, B:99:0x0111, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b, B:101:0x0116, B:102:0x011d), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:57:0x00a4 A[Catch: StringIndexOutOfBoundsException -> 0x011e, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011e, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b, B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4, B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104, B:99:0x0111, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b, B:101:0x0116, B:102:0x011d), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:62:0x00af  */
-    /* JADX WARN: Found duplicated region for block: B:73:0x00d2  */
-    /* JADX WARN: Found duplicated region for block: B:75:0x00d7  */
-    /* JADX WARN: Found duplicated region for block: B:87:0x00fd A[Catch: StringIndexOutOfBoundsException -> 0x011e, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011e, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b, B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4, B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104, B:99:0x0111, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b, B:101:0x0116, B:102:0x011d), top: B:106:0x0008 }] */
-    /* JADX WARN: Found duplicated region for block: B:89:0x0101  */
-    /* JADX WARN: Found duplicated region for block: B:91:0x0104 A[Catch: StringIndexOutOfBoundsException -> 0x011e, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011e, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b, B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4, B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104, B:99:0x0111, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b, B:101:0x0116, B:102:0x011d), top: B:106:0x0008 }] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:54:0x009e A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011e, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011e, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b,
+     * B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4,
+     * B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104,
+     * B:99:0x0111, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b,
+     * B:101:0x0116, B:102:0x011d), top: B:106:0x0008 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:55:0x00a0 A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011e, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011e, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b,
+     * B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4,
+     * B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104,
+     * B:99:0x0111, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b,
+     * B:101:0x0116, B:102:0x011d), top: B:106:0x0008 }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:57:0x00a4 A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011e, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011e, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b,
+     * B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4,
+     * B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104,
+     * B:99:0x0111, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b,
+     * B:101:0x0116, B:102:0x011d), top: B:106:0x0008 }]
+     */
+    /* JADX WARN: Found duplicated region for block: B:62:0x00af */
+    /* JADX WARN: Found duplicated region for block: B:73:0x00d2 */
+    /* JADX WARN: Found duplicated region for block: B:75:0x00d7 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:87:0x00fd A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011e, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011e, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b,
+     * B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4,
+     * B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104,
+     * B:99:0x0111, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b,
+     * B:101:0x0116, B:102:0x011d), top: B:106:0x0008 }]
+     */
+    /* JADX WARN: Found duplicated region for block: B:89:0x0101 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:91:0x0104 A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011e, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011e, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b,
+     * B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4,
+     * B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104,
+     * B:99:0x0111, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b,
+     * B:101:0x0116, B:102:0x011d), top: B:106:0x0008 }]
+     */
     /* JADX WARN: Found duplicated region for block: B:94:0x010a A[DONT_INVERT] */
     /* JADX WARN: Found duplicated region for block: B:95:0x010c A[RETURN] */
     /* JADX WARN: Found duplicated region for block: B:97:0x010f A[RETURN] */
-    /* JADX WARN: Found duplicated region for block: B:99:0x0111 A[Catch: StringIndexOutOfBoundsException -> 0x011e, TryCatch #0 {StringIndexOutOfBoundsException -> 0x011e, blocks: (B:4:0x000a, B:11:0x001e, B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046, B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b, B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4, B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104, B:99:0x0111, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b, B:101:0x0116, B:102:0x011d), top: B:106:0x0008 }] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:99:0x0111 A[Catch:
+     * StringIndexOutOfBoundsException -> 0x011e, TryCatch #0
+     * {StringIndexOutOfBoundsException -> 0x011e, blocks: (B:4:0x000a, B:11:0x001e,
+     * B:15:0x002d, B:17:0x0031, B:24:0x0041, B:20:0x0038, B:22:0x003c, B:25:0x0046,
+     * B:26:0x004b, B:30:0x0053, B:33:0x005b, B:44:0x0084, B:36:0x006a, B:40:0x007b,
+     * B:42:0x007f, B:45:0x008a, B:46:0x008f, B:47:0x0090, B:54:0x009e, B:57:0x00a4,
+     * B:63:0x00b2, B:76:0x00d9, B:79:0x00e5, B:81:0x00f0, B:85:0x00f9, B:91:0x0104,
+     * B:99:0x0111, B:87:0x00fd, B:70:0x00c5, B:55:0x00a0, B:10:0x001b,
+     * B:101:0x0116, B:102:0x011d), top: B:106:0x0008 }]
+     */
     public static float parseFloat(char[] cArr, int i, int i2) {
         boolean z;
         int i3;
@@ -4357,7 +5061,8 @@ public class TypeUtils {
             return null;
         }
         ToIntFunction<String> toIntFunction = JDKUtils.STRING_CODER;
-        if (toIntFunction != null && toIntFunction.applyAsInt(str) == JDKUtils.LATIN1.byteValue() && (function = JDKUtils.STRING_VALUE) != null) {
+        if (toIntFunction != null && toIntFunction.applyAsInt(str) == JDKUtils.LATIN1.byteValue()
+                && (function = JDKUtils.STRING_VALUE) != null) {
             byte[] bArrApply = function.apply(str);
             return parseBigDecimal(bArrApply, 0, bArrApply.length);
         }
@@ -4550,7 +5255,8 @@ public class TypeUtils {
             } else {
                 jSONReaderOf = JSONReader.of(str);
             }
-            return (T) JSONFactory.getDefaultObjectReaderProvider().getObjectReader(cls).readObject(jSONReaderOf, cls, null, 0L);
+            return (T) JSONFactory.getDefaultObjectReaderProvider().getObjectReader(cls).readObject(jSONReaderOf, cls,
+                    null, 0L);
         }
         if (obj instanceof Collection) {
             return (T) objectReaderProvider.getObjectReader(cls).createInstance((Collection) obj);
@@ -4572,19 +5278,25 @@ public class TypeUtils {
             }
         }
         if (obj.getClass().getName().equals("org.bson.types.Decimal128") && cls == Double.class) {
-            ObjectWriter objectWriter = JSONFactory.getDefaultObjectWriterProvider().getObjectWriter((Class) obj.getClass());
-            if ((objectWriter instanceof ObjectWriterPrimitiveImpl) && (function2 = ((ObjectWriterPrimitiveImpl) objectWriter).getFunction()) != null && (typeConvert = objectReaderProvider.getTypeConvert(function2.apply(obj).getClass(), cls)) != null) {
+            ObjectWriter objectWriter = JSONFactory.getDefaultObjectWriterProvider()
+                    .getObjectWriter((Class) obj.getClass());
+            if ((objectWriter instanceof ObjectWriterPrimitiveImpl)
+                    && (function2 = ((ObjectWriterPrimitiveImpl) objectWriter).getFunction()) != null
+                    && (typeConvert = objectReaderProvider.getTypeConvert(function2.apply(obj).getClass(),
+                            cls)) != null) {
                 return (T) typeConvert.apply(obj);
             }
         }
-        ObjectWriter objectWriter2 = JSONFactory.getDefaultObjectWriterProvider().getObjectWriter((Class) obj.getClass());
-        if ((objectWriter2 instanceof ObjectWriterPrimitiveImpl) && (function = ((ObjectWriterPrimitiveImpl) objectWriter2).getFunction()) != null) {
+        ObjectWriter objectWriter2 = JSONFactory.getDefaultObjectWriterProvider()
+                .getObjectWriter((Class) obj.getClass());
+        if ((objectWriter2 instanceof ObjectWriterPrimitiveImpl)
+                && (function = ((ObjectWriterPrimitiveImpl) objectWriter2).getFunction()) != null) {
             T t = (T) function.apply(obj);
             if (cls.isInstance(t)) {
                 return t;
             }
         }
-        throw new JSONException(bjs.m(obj, dkz.z("can not cast to ", name, ", from ")));
+        throw new JSONException(concatVar1GetClass(obj, dkz.z("can not cast to ", name, ", from ")));
     }
 
     public static boolean isInteger(char[] cArr, int i, int i2) {
@@ -4628,7 +5340,8 @@ public class TypeUtils {
         float fScalb;
         float f2;
         float f3;
-        long jNumberOfLeadingZeros = ((long) (64 - Long.numberOfLeadingZeros(j))) - ((long) Math.ceil(((double) i2) * L));
+        long jNumberOfLeadingZeros = ((long) (64 - Long.numberOfLeadingZeros(j)))
+                - ((long) Math.ceil(((double) i2) * L));
         if (jNumberOfLeadingZeros < -151) {
             f2 = i;
             f3 = 0.0f;
@@ -4645,7 +5358,8 @@ public class TypeUtils {
                     fScalb = Math.scalb(i4 | iDivideKnuthLong, i3);
                 } else {
                     f = i;
-                    fScalb = Math.scalb(i4 | (iDivideKnuthLong >> r2) | Integer.signum(iDivideKnuthLong & ((1 << r2) - 1)), -151);
+                    fScalb = Math.scalb(
+                            i4 | (iDivideKnuthLong >> r2) | Integer.signum(iDivideKnuthLong & ((1 << r2) - 1)), -151);
                 }
                 return fScalb * f;
             }
@@ -4656,7 +5370,8 @@ public class TypeUtils {
     }
 
     public static double doubleValue(int i, long j, int i2) {
-        long jNumberOfLeadingZeros = ((long) (64 - Long.numberOfLeadingZeros(j))) - ((long) Math.ceil(((double) i2) * L));
+        long jNumberOfLeadingZeros = ((long) (64 - Long.numberOfLeadingZeros(j)))
+                - ((long) Math.ceil(((double) i2) * L));
         if (jNumberOfLeadingZeros < -1076) {
             return ((double) i) * 0.0d;
         }

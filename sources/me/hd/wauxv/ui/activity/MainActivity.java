@@ -24,7 +24,7 @@ import me.hd.wauxv.obf.bhp;
 import me.hd.wauxv.obf.bhq;
 import me.hd.wauxv.obf.byx;
 import me.hd.wauxv.obf.byz;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.bzy;
 import me.hd.wauxv.obf.cnb;
 import me.hd.wauxv.obf.cnd;
@@ -49,7 +49,8 @@ public final class MainActivity extends dg {
     }
 
     public final boolean au(Context context) {
-        return context.getPackageManager().getComponentEnabledSetting(new ComponentName(context.getPackageName(), this.at)) == 2;
+        return context.getPackageManager()
+                .getComponentEnabledSetting(new ComponentName(context.getPackageName(), this.at)) == 2;
     }
 
     public final void av() {
@@ -64,13 +65,23 @@ public final class MainActivity extends dg {
                 MaterialTextView materialTextView2 = (MaterialTextView) cnd.aq(viewInflate, R.id.aboutTextViewTitle);
                 if (materialTextView2 != null) {
                     i = R.id.aboutTextViewVersion;
-                    MaterialTextView materialTextView3 = (MaterialTextView) cnd.aq(viewInflate, R.id.aboutTextViewVersion);
+                    MaterialTextView materialTextView3 = (MaterialTextView) cnd.aq(viewInflate,
+                            R.id.aboutTextViewVersion);
                     if (materialTextView3 != null) {
                         LinearLayout linearLayout = (LinearLayout) viewInflate;
                         materialTextView2.setText("WAuxiliary" /* cnb.z(-390438297008938L) */);
                         materialTextView3.setText("1.2.6.r1238.198c77c" /* cnb.z(-390408232237866L) */);
                         materialTextView.setMovementMethod(LinkMovementMethod.getInstance());
-                        materialTextView.setText(Html.fromHtml("在 <b><a href=\"https://github.com/HdShare/WAuxiliary_Public\">GitHub</a></b> 查看公开源码<br/>\n在 <b><a href=\"https://github.com/HdShare/WAuxiliary_Plugin\">GitHub</a></b> 查看插件源码<br/>\n加入我们的 <b><a href=\"https://t.me/Hd_WAuxiliary_CI\">Telegram</a></b> 频道<br/>\n加入我们的 <b><a href=\"https://t.me/Hd_WAuxiliary\">Telegram</a></b> 群组<br/>" /* cnb.z(-390356692630314L) */, 0));
+                        materialTextView.setText(Html.fromHtml(
+                                "在 <b><a href=\"https://github.com/HdShare/WAuxiliary_Public\">GitHub</a></b> 查看公开源码<br/>\n在 <b><a href=\"https://github.com/HdShare/WAuxiliary_Plugin\">GitHub</a></b> 查看插件源码<br/>\n加入我们的 <b><a href=\"https://t.me/Hd_WAuxiliary_CI\">Telegram</a></b> 频道<br/>\n加入我们的 <b><a href=\"https://t.me/Hd_WAuxiliary\">Telegram</a></b> 群组<br/>" /*
+                                                                                                                                                                                                                                                                                                                                                                             * cnb
+                                                                                                                                                                                                                                                                                                                                                                             * .
+                                                                                                                                                                                                                                                                                                                                                                             * z
+                                                                                                                                                                                                                                                                                                                                                                             * (
+                                                                                                                                                                                                                                                                                                                                                                             * -
+                                                                                                                                                                                                                                                                                                                                                                             * 390356692630314L)
+                                                                                                                                                                                                                                                                                                                                                                             */,
+                                0));
                         if (linearLayout != null) {
                             ((eg) bzyVar.d).r = linearLayout;
                         }
@@ -80,14 +91,16 @@ public final class MainActivity extends dg {
                 }
             }
         }
-        throw new NullPointerException("Missing required view with ID: " /* cnb.z(-634611482753834L) */.concat(viewInflate.getResources().getResourceName(i)));
+        throw new NullPointerException("Missing required view with ID: "
+                /* cnb.z(-634611482753834L) */.concat(viewInflate.getResources().getResourceName(i)));
     }
 
-    @Override // me.hd.wauxv.obf.dg, me.hd.wauxv.obf.hb, me.hd.wauxv.obf.aci, android.app.Activity
+    @Override // me.hd.wauxv.obf.dg, me.hd.wauxv.obf.hb, me.hd.wauxv.obf.aci,
+              // android.app.Activity
     public final void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         eqj eqjVar = this._ac;
-        bzo.n(eqjVar);
+        throwIfVar1IsNull(eqjVar);
         CoordinatorLayout coordinatorLayout = ((dj) eqjVar).a;
         etz etzVar = new etz(null, abi.f(getColor(R.color.md_theme_primary), 48), 61);
         FrameLayout frameLayout = new FrameLayout(coordinatorLayout.getContext());
@@ -102,16 +115,16 @@ public final class MainActivity extends dg {
         alc alcVar = aou.a;
         cnd.bf(akq.f, new bhp(strZ, byxVar, this, null));
         eqj eqjVar2 = this._ac;
-        bzo.n(eqjVar2);
+        throwIfVar1IsNull(eqjVar2);
         ((dj) eqjVar2).l.setTitle("WAuxiliary" /* cnb.z(-391241455893290L) */);
         eqj eqjVar3 = this._ac;
-        bzo.n(eqjVar3);
+        throwIfVar1IsNull(eqjVar3);
         MenuItem menuItemFindItem = ((dj) eqjVar3).l.getMenu().findItem(R.id.tab_hide_desktop_icon);
         menuItemFindItem.setChecked(au(this));
         final int i2 = 1;
         menuItemFindItem.setOnMenuItemClickListener(new aam(this, i2, menuItemFindItem));
         eqj eqjVar4 = this._ac;
-        bzo.n(eqjVar4);
+        throwIfVar1IsNull(eqjVar4);
         ((dj) eqjVar4).l.setOnClickListener(new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.byy
             public final /* synthetic */ MainActivity b;
 
@@ -136,7 +149,7 @@ public final class MainActivity extends dg {
             }
         });
         eqj eqjVar5 = this._ac;
-        bzo.n(eqjVar5);
+        throwIfVar1IsNull(eqjVar5);
         ((dj) eqjVar5).e.setOnClickListener(new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.byy
             public final /* synthetic */ MainActivity b;
 
@@ -162,48 +175,48 @@ public final class MainActivity extends dg {
         });
         if (exl.a) {
             eqj eqjVar6 = this._ac;
-            bzo.n(eqjVar6);
+            throwIfVar1IsNull(eqjVar6);
             ((dj) eqjVar6).h.setText(getString(R.string.main_status_activated));
             eqj eqjVar7 = this._ac;
-            bzo.n(eqjVar7);
+            throwIfVar1IsNull(eqjVar7);
             ((dj) eqjVar7).h.setTextColor(getColor(R.color.md_theme_onTertiaryContainer));
             eqj eqjVar8 = this._ac;
-            bzo.n(eqjVar8);
+            throwIfVar1IsNull(eqjVar8);
             ((dj) eqjVar8).i.setText("1.2.6.r1238.198c77c" /* cnb.z(-391159851514666L) */);
             eqj eqjVar9 = this._ac;
-            bzo.n(eqjVar9);
+            throwIfVar1IsNull(eqjVar9);
             ((dj) eqjVar9).i.setTextColor(getColor(R.color.md_theme_onTertiaryContainer));
             eqj eqjVar10 = this._ac;
-            bzo.n(eqjVar10);
+            throwIfVar1IsNull(eqjVar10);
             ((dj) eqjVar10).f.setImageResource(R.drawable.ic_status_activated_24dp);
             eqj eqjVar11 = this._ac;
-            bzo.n(eqjVar11);
+            throwIfVar1IsNull(eqjVar11);
             ((dj) eqjVar11).f.setImageTintList(getColorStateList(R.color.md_theme_onTertiaryContainer));
             eqj eqjVar12 = this._ac;
-            bzo.n(eqjVar12);
+            throwIfVar1IsNull(eqjVar12);
             ((dj) eqjVar12).d.setCardBackgroundColor(getColor(R.color.md_theme_tertiaryContainer));
             return;
         }
         eqj eqjVar13 = this._ac;
-        bzo.n(eqjVar13);
+        throwIfVar1IsNull(eqjVar13);
         ((dj) eqjVar13).h.setText(getString(R.string.main_status_not_activated));
         eqj eqjVar14 = this._ac;
-        bzo.n(eqjVar14);
+        throwIfVar1IsNull(eqjVar14);
         ((dj) eqjVar14).h.setTextColor(getColor(R.color.md_theme_onErrorContainer));
         eqj eqjVar15 = this._ac;
-        bzo.n(eqjVar15);
+        throwIfVar1IsNull(eqjVar15);
         ((dj) eqjVar15).i.setText("1.2.6.r1238.198c77c" /* cnb.z(-390558556093226L) */);
         eqj eqjVar16 = this._ac;
-        bzo.n(eqjVar16);
+        throwIfVar1IsNull(eqjVar16);
         ((dj) eqjVar16).i.setTextColor(getColor(R.color.md_theme_onErrorContainer));
         eqj eqjVar17 = this._ac;
-        bzo.n(eqjVar17);
+        throwIfVar1IsNull(eqjVar17);
         ((dj) eqjVar17).f.setImageResource(R.drawable.ic_status_not_activated_24dp);
         eqj eqjVar18 = this._ac;
-        bzo.n(eqjVar18);
+        throwIfVar1IsNull(eqjVar18);
         ((dj) eqjVar18).f.setImageTintList(getColorStateList(R.color.md_theme_onErrorContainer));
         eqj eqjVar19 = this._ac;
-        bzo.n(eqjVar19);
+        throwIfVar1IsNull(eqjVar19);
         ((dj) eqjVar19).d.setCardBackgroundColor(getColor(R.color.md_theme_errorContainer));
     }
 }

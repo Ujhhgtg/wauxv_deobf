@@ -23,7 +23,8 @@ public final class oa extends oc {
             return false;
         }
         oa oaVar = (oa) obj;
-        return bzo.f(this.a, oaVar.a) && bzo.f(this.b, oaVar.b) && this.c.equals(oaVar.c) && this.d.equals(oaVar.d);
+        return nullSafeIsEqual(this.a, oaVar.a) && nullSafeIsEqual(this.b, oaVar.b) && this.c.equals(oaVar.c)
+                && this.d.equals(oaVar.d);
     }
 
     public final int hashCode() {

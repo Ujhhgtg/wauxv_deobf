@@ -10,7 +10,7 @@ public abstract class ctu {
     static {
         Method method;
         Method[] methods = Throwable.class.getMethods();
-        bzo.n(methods);
+        throwIfVar1IsNull(methods);
         int length = methods.length;
         int i = 0;
         while (true) {
@@ -19,10 +19,10 @@ public abstract class ctu {
                 break;
             }
             Method method2 = methods[i];
-            if (bzo.f(method2.getName(), "addSuppressed")) {
+            if (nullSafeIsEqual(method2.getName(), "addSuppressed")) {
                 Class<?>[] parameterTypes = method2.getParameterTypes();
-                bzo.p(parameterTypes, "getParameterTypes(...)");
-                if (bzo.f(parameterTypes.length == 1 ? parameterTypes[0] : null, Throwable.class)) {
+                throwIfVar1IsNull(parameterTypes, "getParameterTypes(...)");
+                if (nullSafeIsEqual(parameterTypes.length == 1 ? parameterTypes[0] : null, Throwable.class)) {
                     method = method2;
                     break;
                 }
@@ -31,7 +31,7 @@ public abstract class ctu {
         }
         a = method;
         int length2 = methods.length;
-        for (int i2 = 0; i2 < length2 && !bzo.f(methods[i2].getName(), "getSuppressed"); i2++) {
+        for (int i2 = 0; i2 < length2 && !nullSafeIsEqual(methods[i2].getName(), "getSuppressed"); i2++) {
         }
     }
 }

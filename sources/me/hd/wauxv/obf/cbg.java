@@ -22,7 +22,8 @@ public final class cbg {
             return false;
         }
         cbg cbgVar = (cbg) obj;
-        return bzo.f(this.a, cbgVar.a) && bzo.f(this.b, cbgVar.b) && bzo.f(this.c, cbgVar.c) && this.d == cbgVar.d && this.e == cbgVar.e;
+        return nullSafeIsEqual(this.a, cbgVar.a) && nullSafeIsEqual(this.b, cbgVar.b)
+                && nullSafeIsEqual(this.c, cbgVar.c) && this.d == cbgVar.d && this.e == cbgVar.e;
     }
 
     public final int hashCode() {
@@ -30,10 +31,12 @@ public final class cbg {
         Object obj = this.b;
         int iHashCode2 = (iHashCode + (obj == null ? 0 : obj.hashCode())) * 31;
         cbm cbmVar = this.c;
-        return this.e.hashCode() + ((Boolean.hashCode(this.d) + ((iHashCode2 + (cbmVar != null ? cbmVar.hashCode() : 0)) * 31)) * 31);
+        return this.e.hashCode()
+                + ((Boolean.hashCode(this.d) + ((iHashCode2 + (cbmVar != null ? cbmVar.hashCode() : 0)) * 31)) * 31);
     }
 
     public final String toString() {
-        return "Configuration(declaringClass=" + this.a + ", memberInstance=" + this.b + ", processorResolver=" + this.c + ", superclass=" + this.d + ", optional=" + this.e + ")";
+        return "Configuration(declaringClass=" + this.a + ", memberInstance=" + this.b + ", processorResolver=" + this.c
+                + ", superclass=" + this.d + ", optional=" + this.e + ")";
     }
 }

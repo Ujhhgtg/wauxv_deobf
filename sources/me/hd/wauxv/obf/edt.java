@@ -26,7 +26,8 @@ public final class edt {
             return false;
         }
         edt edtVar = (edt) obj;
-        return bzo.f(this.a, edtVar.a) && bzo.f(this.b, edtVar.b) && bzo.f(this.c, edtVar.c);
+        return nullSafeIsEqual(this.a, edtVar.a) && nullSafeIsEqual(this.b, edtVar.b)
+                && nullSafeIsEqual(this.c, edtVar.c);
     }
 
     public final int hashCode() {

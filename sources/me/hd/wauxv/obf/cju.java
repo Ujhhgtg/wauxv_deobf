@@ -21,9 +21,12 @@ public class cju extends cjv {
     }
 
     @Override // me.hd.wauxv.obf.cjv
-    /* JADX INFO: renamed from: c, reason: merged with bridge method [inline-methods] */
+    /*
+     * JADX INFO: renamed from: c, reason: merged with bridge method
+     * [inline-methods]
+     */
     public Serializable i(String str) {
-        bzo.q(str, "value");
+        throwIfVar1IsNull(str, "value");
         throw new UnsupportedOperationException("Serializables don't support default values.");
     }
 
@@ -34,12 +37,12 @@ public class cju extends cjv {
         if (!(obj instanceof cju)) {
             return false;
         }
-        return bzo.f(this.e, ((cju) obj).e);
+        return nullSafeIsEqual(this.e, ((cju) obj).e);
     }
 
     @Override // me.hd.wauxv.obf.cjv
     public final Object f(String str, Bundle bundle) {
-        bzo.q(bundle, "bundle");
+        throwIfVar1IsNull(bundle, "bundle");
         return (Serializable) bundle.get(str);
     }
 
@@ -55,8 +58,8 @@ public class cju extends cjv {
     @Override // me.hd.wauxv.obf.cjv
     public final void j(Bundle bundle, String str, Object obj) {
         Serializable serializable = (Serializable) obj;
-        bzo.q(str, "key");
-        bzo.q(serializable, "value");
+        throwIfVar1IsNull(str, "key");
+        throwIfVar1IsNull(serializable, "value");
         this.e.cast(serializable);
         bundle.putSerializable(str, serializable);
     }

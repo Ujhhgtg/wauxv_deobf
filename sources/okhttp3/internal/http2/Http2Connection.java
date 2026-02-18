@@ -12,7 +12,7 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.bfu;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.dai;
 import me.hd.wauxv.obf.dkz;
 import me.hd.wauxv.obf.emc;
@@ -70,7 +70,10 @@ public final class Http2Connection implements Closeable {
     private final Http2Writer writer;
     private final TaskQueue writerQueue;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Builder {
         private boolean client;
         public String connectionName;
@@ -83,14 +86,15 @@ public final class Http2Connection implements Closeable {
         private final TaskRunner taskRunner;
 
         public Builder(boolean z, TaskRunner taskRunner) {
-            bzo.q(taskRunner, "taskRunner");
+            throwIfVar1IsNull(taskRunner, "taskRunner");
             this.client = z;
             this.taskRunner = taskRunner;
             this.listener = Listener.REFUSE_INCOMING_STREAMS;
             this.pushObserver = PushObserver.CANCEL;
         }
 
-        public static /* synthetic */ Builder socket$default(Builder builder, Socket socket, String str, rm rmVar, rl rlVar, int i, Object obj) {
+        public static /* synthetic */ Builder socket$default(Builder builder, Socket socket, String str, rm rmVar,
+                rl rlVar, int i, Object obj) {
             if ((i & 2) != 0) {
                 str = Util.peerName(socket);
             }
@@ -116,7 +120,7 @@ public final class Http2Connection implements Closeable {
             if (str != null) {
                 return str;
             }
-            bzo.ar("connectionName");
+            throwLateinitPropNotInitYet("connectionName");
             throw null;
         }
 
@@ -137,7 +141,7 @@ public final class Http2Connection implements Closeable {
             if (rlVar != null) {
                 return rlVar;
             }
-            bzo.ar("sink");
+            throwLateinitPropNotInitYet("sink");
             throw null;
         }
 
@@ -146,7 +150,7 @@ public final class Http2Connection implements Closeable {
             if (socket != null) {
                 return socket;
             }
-            bzo.ar("socket");
+            throwLateinitPropNotInitYet("socket");
             throw null;
         }
 
@@ -155,7 +159,7 @@ public final class Http2Connection implements Closeable {
             if (rmVar != null) {
                 return rmVar;
             }
-            bzo.ar("source");
+            throwLateinitPropNotInitYet("source");
             throw null;
         }
 
@@ -164,7 +168,7 @@ public final class Http2Connection implements Closeable {
         }
 
         public final Builder listener(Listener listener) {
-            bzo.q(listener, "listener");
+            throwIfVar1IsNull(listener, "listener");
             this.listener = listener;
             return this;
         }
@@ -175,7 +179,7 @@ public final class Http2Connection implements Closeable {
         }
 
         public final Builder pushObserver(PushObserver pushObserver) {
-            bzo.q(pushObserver, "pushObserver");
+            throwIfVar1IsNull(pushObserver, "pushObserver");
             this.pushObserver = pushObserver;
             return this;
         }
@@ -185,12 +189,12 @@ public final class Http2Connection implements Closeable {
         }
 
         public final void setConnectionName$okhttp(String str) {
-            bzo.q(str, "<set-?>");
+            throwIfVar1IsNull(str, "<set-?>");
             this.connectionName = str;
         }
 
         public final void setListener$okhttp(Listener listener) {
-            bzo.q(listener, "<set-?>");
+            throwIfVar1IsNull(listener, "<set-?>");
             this.listener = listener;
         }
 
@@ -199,49 +203,49 @@ public final class Http2Connection implements Closeable {
         }
 
         public final void setPushObserver$okhttp(PushObserver pushObserver) {
-            bzo.q(pushObserver, "<set-?>");
+            throwIfVar1IsNull(pushObserver, "<set-?>");
             this.pushObserver = pushObserver;
         }
 
         public final void setSink$okhttp(rl rlVar) {
-            bzo.q(rlVar, "<set-?>");
+            throwIfVar1IsNull(rlVar, "<set-?>");
             this.sink = rlVar;
         }
 
         public final void setSocket$okhttp(Socket socket) {
-            bzo.q(socket, "<set-?>");
+            throwIfVar1IsNull(socket, "<set-?>");
             this.socket = socket;
         }
 
         public final void setSource$okhttp(rm rmVar) {
-            bzo.q(rmVar, "<set-?>");
+            throwIfVar1IsNull(rmVar, "<set-?>");
             this.source = rmVar;
         }
 
         public final Builder socket(Socket socket) {
-            bzo.q(socket, "socket");
+            throwIfVar1IsNull(socket, "socket");
             return socket$default(this, socket, null, null, null, 14, null);
         }
 
         public final Builder socket(Socket socket, String str) {
-            bzo.q(socket, "socket");
-            bzo.q(str, "peerName");
+            throwIfVar1IsNull(socket, "socket");
+            throwIfVar1IsNull(str, "peerName");
             return socket$default(this, socket, str, null, null, 12, null);
         }
 
         public final Builder socket(Socket socket, String str, rm rmVar) {
-            bzo.q(socket, "socket");
-            bzo.q(str, "peerName");
-            bzo.q(rmVar, "source");
+            throwIfVar1IsNull(socket, "socket");
+            throwIfVar1IsNull(str, "peerName");
+            throwIfVar1IsNull(rmVar, "source");
             return socket$default(this, socket, str, rmVar, null, 8, null);
         }
 
         public final Builder socket(Socket socket, String str, rm rmVar, rl rlVar) {
             String strConcat;
-            bzo.q(socket, "socket");
-            bzo.q(str, "peerName");
-            bzo.q(rmVar, "source");
-            bzo.q(rlVar, "sink");
+            throwIfVar1IsNull(socket, "socket");
+            throwIfVar1IsNull(str, "peerName");
+            throwIfVar1IsNull(rmVar, "source");
+            throwIfVar1IsNull(rlVar, "sink");
             setSocket$okhttp(socket);
             if (this.client) {
                 strConcat = Util.okHttpName + ' ' + str;
@@ -255,7 +259,10 @@ public final class Http2Connection implements Closeable {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
@@ -269,18 +276,25 @@ public final class Http2Connection implements Closeable {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static abstract class Listener {
         public static final Companion Companion = new Companion(null);
-        public static final Listener REFUSE_INCOMING_STREAMS = new Listener() { // from class: okhttp3.internal.http2.Http2Connection$Listener$Companion$REFUSE_INCOMING_STREAMS$1
+        public static final Listener REFUSE_INCOMING_STREAMS = new Listener() { // from class:
+                                                                                // okhttp3.internal.http2.Http2Connection$Listener$Companion$REFUSE_INCOMING_STREAMS$1
             @Override // okhttp3.internal.http2.Http2Connection.Listener
             public void onStream(Http2Stream http2Stream) {
-                bzo.q(http2Stream, "stream");
+                throwIfVar1IsNull(http2Stream, "stream");
                 http2Stream.close(ErrorCode.REFUSED_STREAM, null);
             }
         };
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static final class Companion {
             public /* synthetic */ Companion(akd akdVar) {
                 this();
@@ -291,20 +305,23 @@ public final class Http2Connection implements Closeable {
         }
 
         public void onSettings(Http2Connection http2Connection, Settings settings) {
-            bzo.q(http2Connection, "connection");
-            bzo.q(settings, "settings");
+            throwIfVar1IsNull(http2Connection, "connection");
+            throwIfVar1IsNull(settings, "settings");
         }
 
         public abstract void onStream(Http2Stream http2Stream);
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public final class ReaderRunnable implements Http2Reader.Handler, bfu {
         private final Http2Reader reader;
         final /* synthetic */ Http2Connection this$0;
 
         public ReaderRunnable(Http2Connection http2Connection, Http2Reader http2Reader) {
-            bzo.q(http2Reader, "reader");
+            throwIfVar1IsNull(http2Reader, "reader");
             this.this$0 = http2Connection;
             this.reader = http2Reader;
         }
@@ -315,25 +332,29 @@ public final class Http2Connection implements Closeable {
 
         @Override // okhttp3.internal.http2.Http2Reader.Handler
         public void alternateService(int i, String str, sj sjVar, String str2, int i2, long j) {
-            bzo.q(str, "origin");
-            bzo.q(sjVar, "protocol");
-            bzo.q(str2, "host");
+            throwIfVar1IsNull(str, "origin");
+            throwIfVar1IsNull(sjVar, "protocol");
+            throwIfVar1IsNull(str2, "host");
         }
 
-        /* JADX WARN: Undo finally extract visitor
-        java.lang.NullPointerException
-        	at java.base/java.util.Objects.requireNonNull(Objects.java:209)
-        	at java.base/java.util.ArrayList.batchRemove(ArrayList.java:816)
-        	at java.base/java.util.ArrayList.removeAll(ArrayList.java:791)
-        	at jadx.core.dex.visitors.finaly.TryCatchEdgeBlockMap.getAllInScope(TryCatchEdgeBlockMap.java:91)
-        	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:204)
-        	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+        /*
+         * JADX WARN: Undo finally extract visitor
+         * java.lang.NullPointerException
+         * at java.base/java.util.Objects.requireNonNull(Objects.java:209)
+         * at java.base/java.util.ArrayList.batchRemove(ArrayList.java:816)
+         * at java.base/java.util.ArrayList.removeAll(ArrayList.java:791)
+         * at jadx.core.dex.visitors.finaly.TryCatchEdgeBlockMap.getAllInScope(
+         * TryCatchEdgeBlockMap.java:91)
+         * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+         * MarkFinallyVisitor.java:204)
+         * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+         * java:119)
          */
         public final void applyAndAckSettings(boolean z, Settings settings) {
             long initialWindowSize;
             int i;
             Http2Stream[] http2StreamArr;
-            bzo.q(settings, "settings");
+            throwIfVar1IsNull(settings, "settings");
             final dai daiVar = new dai();
             Http2Writer writer = this.this$0.getWriter();
             final Http2Connection http2Connection = this.this$0;
@@ -349,16 +370,22 @@ public final class Http2Connection implements Closeable {
                                 settings = settings2;
                             }
                             daiVar.a = settings;
-                            initialWindowSize = ((long) settings.getInitialWindowSize()) - ((long) peerSettings.getInitialWindowSize());
-                            http2StreamArr = (initialWindowSize == 0 || http2Connection.getStreams$okhttp().isEmpty()) ? null : (Http2Stream[]) http2Connection.getStreams$okhttp().values().toArray(new Http2Stream[0]);
+                            initialWindowSize = ((long) settings.getInitialWindowSize())
+                                    - ((long) peerSettings.getInitialWindowSize());
+                            http2StreamArr = (initialWindowSize == 0 || http2Connection.getStreams$okhttp().isEmpty())
+                                    ? null
+                                    : (Http2Stream[]) http2Connection.getStreams$okhttp().values()
+                                            .toArray(new Http2Stream[0]);
                             http2Connection.setPeerSettings((Settings) daiVar.a);
                             TaskQueue taskQueue = http2Connection.settingsListenerQueue;
                             final String str = http2Connection.getConnectionName$okhttp() + " onSettings";
                             final boolean z2 = true;
-                            taskQueue.schedule(new Task(str, z2) { // from class: okhttp3.internal.http2.Http2Connection$ReaderRunnable$applyAndAckSettings$lambda$7$lambda$6$$inlined$execute$default$1
+                            taskQueue.schedule(new Task(str, z2) { // from class:
+                                                                   // okhttp3.internal.http2.Http2Connection$ReaderRunnable$applyAndAckSettings$lambda$7$lambda$6$$inlined$execute$default$1
                                 @Override // okhttp3.internal.concurrent.Task
                                 public long runOnce() {
-                                    http2Connection.getListener$okhttp().onSettings(http2Connection, (Settings) daiVar.a);
+                                    http2Connection.getListener$okhttp().onSettings(http2Connection,
+                                            (Settings) daiVar.a);
                                     return -1L;
                                 }
                             }, 0L);
@@ -390,7 +417,7 @@ public final class Http2Connection implements Closeable {
 
         @Override // okhttp3.internal.http2.Http2Reader.Handler
         public void data(boolean z, int i, rm rmVar, int i2) {
-            bzo.q(rmVar, "source");
+            throwIfVar1IsNull(rmVar, "source");
             if (this.this$0.pushedStream$okhttp(i)) {
                 this.this$0.pushDataLater$okhttp(i, rmVar, i2, z);
                 return;
@@ -417,8 +444,8 @@ public final class Http2Connection implements Closeable {
         public void goAway(int i, ErrorCode errorCode, sj sjVar) {
             int i2;
             Object[] array;
-            bzo.q(errorCode, "errorCode");
-            bzo.q(sjVar, "debugData");
+            throwIfVar1IsNull(errorCode, "errorCode");
+            throwIfVar1IsNull(sjVar, "debugData");
             sjVar.g();
             Http2Connection http2Connection = this.this$0;
             synchronized (http2Connection) {
@@ -435,7 +462,7 @@ public final class Http2Connection implements Closeable {
 
         @Override // okhttp3.internal.http2.Http2Reader.Handler
         public void headers(boolean z, int i, int i2, List<Header> list) {
-            bzo.q(list, "headerBlock");
+            throwIfVar1IsNull(list, "headerBlock");
             if (this.this$0.pushedStream$okhttp(i)) {
                 this.this$0.pushHeadersLater$okhttp(i, list, z);
                 return;
@@ -460,16 +487,19 @@ public final class Http2Connection implements Closeable {
                 http2Connection.setLastGoodStreamId$okhttp(i);
                 http2Connection.getStreams$okhttp().put(Integer.valueOf(i), http2Stream);
                 TaskQueue taskQueueNewQueue = http2Connection.taskRunner.newQueue();
-                final String str = http2Connection.getConnectionName$okhttp() + TypePool.Default.LazyTypeDescription.GenericTypeToken.COMPONENT_TYPE_PATH + i + "] onStream";
+                final String str = http2Connection.getConnectionName$okhttp()
+                        + TypePool.Default.LazyTypeDescription.GenericTypeToken.COMPONENT_TYPE_PATH + i + "] onStream";
                 final boolean z2 = true;
-                taskQueueNewQueue.schedule(new Task(str, z2) { // from class: okhttp3.internal.http2.Http2Connection$ReaderRunnable$headers$lambda$2$$inlined$execute$default$1
+                taskQueueNewQueue.schedule(new Task(str, z2) { // from class:
+                                                               // okhttp3.internal.http2.Http2Connection$ReaderRunnable$headers$lambda$2$$inlined$execute$default$1
                     @Override // okhttp3.internal.concurrent.Task
                     public long runOnce() {
                         try {
                             http2Connection.getListener$okhttp().onStream(http2Stream);
                             return -1L;
                         } catch (IOException e) {
-                            Platform.Companion.get().log("Http2Connection.Listener failure for " + http2Connection.getConnectionName$okhttp(), 4, e);
+                            Platform.Companion.get().log("Http2Connection.Listener failure for "
+                                    + http2Connection.getConnectionName$okhttp(), 4, e);
                             try {
                                 http2Stream.close(ErrorCode.PROTOCOL_ERROR, e);
                                 return -1L;
@@ -488,16 +518,28 @@ public final class Http2Connection implements Closeable {
             return ens.a;
         }
 
-        /* JADX WARN: Undo finally extract visitor
-        java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
-        	at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.java:210)
-        	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:196)
-        	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:180)
-        	at jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:201)
-        	at jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.java:347)
-        	at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(TryCatchBlockAttr.java:356)
-        	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:202)
-        	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+        /*
+         * JADX WARN: Undo finally extract visitor
+         * java.lang.NullPointerException: Cannot invoke
+         * "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
+         * at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.
+         * java:210)
+         * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+         * TryCatchBlockAttr.java:196)
+         * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+         * TryCatchBlockAttr.java:180)
+         * at
+         * jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:
+         * 201)
+         * at
+         * jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.
+         * java:347)
+         * at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(
+         * TryCatchBlockAttr.java:356)
+         * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+         * MarkFinallyVisitor.java:202)
+         * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+         * java:119)
          */
         @Override // okhttp3.internal.http2.Http2Reader.Handler
         public void ping(boolean z, final int i, final int i2) {
@@ -506,7 +548,8 @@ public final class Http2Connection implements Closeable {
                 final String str = this.this$0.getConnectionName$okhttp() + " ping";
                 final Http2Connection http2Connection = this.this$0;
                 final boolean z2 = true;
-                taskQueue.schedule(new Task(str, z2) { // from class: okhttp3.internal.http2.Http2Connection$ReaderRunnable$ping$$inlined$execute$default$1
+                taskQueue.schedule(new Task(str, z2) { // from class:
+                                                       // okhttp3.internal.http2.Http2Connection$ReaderRunnable$ping$$inlined$execute$default$1
                     @Override // okhttp3.internal.concurrent.Task
                     public long runOnce() {
                         http2Connection.writePing(true, i, i2);
@@ -524,7 +567,7 @@ public final class Http2Connection implements Closeable {
                         http2Connection2.degradedPongsReceived++;
                     } else if (i == 3) {
                         http2Connection2.awaitPongsReceived++;
-                        bzo.o(http2Connection2, "null cannot be cast to non-null type java.lang.Object");
+                        throwIfVar1IsNull(http2Connection2, "null cannot be cast to non-null type java.lang.Object");
                         http2Connection2.notifyAll();
                     }
                 } catch (Throwable th) {
@@ -539,13 +582,13 @@ public final class Http2Connection implements Closeable {
 
         @Override // okhttp3.internal.http2.Http2Reader.Handler
         public void pushPromise(int i, int i2, List<Header> list) throws Throwable {
-            bzo.q(list, "requestHeaders");
+            throwIfVar1IsNull(list, "requestHeaders");
             this.this$0.pushRequestLater$okhttp(i2, list);
         }
 
         @Override // okhttp3.internal.http2.Http2Reader.Handler
         public void rstStream(int i, ErrorCode errorCode) {
-            bzo.q(errorCode, "errorCode");
+            throwIfVar1IsNull(errorCode, "errorCode");
             if (this.this$0.pushedStream$okhttp(i)) {
                 this.this$0.pushResetLater$okhttp(i, errorCode);
                 return;
@@ -558,11 +601,12 @@ public final class Http2Connection implements Closeable {
 
         @Override // okhttp3.internal.http2.Http2Reader.Handler
         public void settings(final boolean z, final Settings settings) {
-            bzo.q(settings, "settings");
+            throwIfVar1IsNull(settings, "settings");
             TaskQueue taskQueue = this.this$0.writerQueue;
             final String str = this.this$0.getConnectionName$okhttp() + " applyAndAckSettings";
             final boolean z2 = true;
-            taskQueue.schedule(new Task(str, z2) { // from class: okhttp3.internal.http2.Http2Connection$ReaderRunnable$settings$$inlined$execute$default$1
+            taskQueue.schedule(new Task(str, z2) { // from class:
+                                                   // okhttp3.internal.http2.Http2Connection$ReaderRunnable$settings$$inlined$execute$default$1
                 @Override // okhttp3.internal.concurrent.Task
                 public long runOnce() {
                     this.applyAndAckSettings(z, settings);
@@ -590,10 +634,18 @@ public final class Http2Connection implements Closeable {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        /* JADX WARN: Type inference failed for: r0v0, types: [okhttp3.internal.http2.ErrorCode] */
+        /*
+         * JADX WARN: Type inference failed for: r0v0, types:
+         * [okhttp3.internal.http2.ErrorCode]
+         */
         /* JADX WARN: Type inference failed for: r0v3 */
-        /* JADX WARN: Type inference failed for: r0v5, types: [java.io.Closeable, okhttp3.internal.http2.Http2Reader] */
-        /* JADX INFO: renamed from: invoke, reason: collision with other method in class */
+        /*
+         * JADX WARN: Type inference failed for: r0v5, types: [java.io.Closeable,
+         * okhttp3.internal.http2.Http2Reader]
+         */
+        /*
+         * JADX INFO: renamed from: invoke, reason: collision with other method in class
+         */
         public void m13invoke() throws Throwable {
             ErrorCode errorCode;
             ErrorCode errorCode2 = ErrorCode.INTERNAL_ERROR;
@@ -642,7 +694,7 @@ public final class Http2Connection implements Closeable {
     }
 
     public Http2Connection(Builder builder) {
-        bzo.q(builder, "builder");
+        throwIfVar1IsNull(builder, "builder");
         boolean client$okhttp = builder.getClient$okhttp();
         this.client = client$okhttp;
         this.listener = builder.getListener$okhttp();
@@ -671,7 +723,8 @@ public final class Http2Connection implements Closeable {
         if (builder.getPingIntervalMillis$okhttp() != 0) {
             final long nanos = TimeUnit.MILLISECONDS.toNanos(builder.getPingIntervalMillis$okhttp());
             final String strS = dkz.s(connectionName$okhttp, " ping");
-            taskQueueNewQueue.schedule(new Task(strS) { // from class: okhttp3.internal.http2.Http2Connection$special$$inlined$schedule$1
+            taskQueueNewQueue.schedule(new Task(strS) { // from class:
+                                                        // okhttp3.internal.http2.Http2Connection$special$$inlined$schedule$1
                 @Override // okhttp3.internal.concurrent.Task
                 public long runOnce() {
                     boolean z;
@@ -700,7 +753,8 @@ public final class Http2Connection implements Closeable {
         close$okhttp(errorCode, errorCode, iOException);
     }
 
-    public static /* synthetic */ void start$default(Http2Connection http2Connection, boolean z, TaskRunner taskRunner, int i, Object obj) {
+    public static /* synthetic */ void start$default(Http2Connection http2Connection, boolean z, TaskRunner taskRunner,
+            int i, Object obj) {
         if ((i & 1) != 0) {
             z = true;
         }
@@ -724,8 +778,8 @@ public final class Http2Connection implements Closeable {
     public final void close$okhttp(ErrorCode errorCode, ErrorCode errorCode2, IOException iOException) {
         int i;
         Object[] array;
-        bzo.q(errorCode, "connectionCode");
-        bzo.q(errorCode2, "streamCode");
+        throwIfVar1IsNull(errorCode, "connectionCode");
+        throwIfVar1IsNull(errorCode2, "streamCode");
         if (Util.assertionsEnabled && Thread.holdsLock(this)) {
             throw new AssertionError("Thread " + Thread.currentThread().getName() + " MUST NOT hold lock on " + this);
         }
@@ -839,7 +893,7 @@ public final class Http2Connection implements Closeable {
     }
 
     public final Http2Stream newStream(List<Header> list, boolean z) {
-        bzo.q(list, "requestHeaders");
+        throwIfVar1IsNull(list, "requestHeaders");
         return newStream(0, list, z);
     }
 
@@ -848,15 +902,17 @@ public final class Http2Connection implements Closeable {
     }
 
     public final void pushDataLater$okhttp(final int i, rm rmVar, final int i2, final boolean z) {
-        bzo.q(rmVar, "source");
+        throwIfVar1IsNull(rmVar, "source");
         final rh rhVar = new rh();
         long j = i2;
         rmVar.ah(j);
         rmVar.read(rhVar, j);
         TaskQueue taskQueue = this.pushQueue;
-        final String str = this.connectionName + TypePool.Default.LazyTypeDescription.GenericTypeToken.COMPONENT_TYPE_PATH + i + "] onData";
+        final String str = this.connectionName
+                + TypePool.Default.LazyTypeDescription.GenericTypeToken.COMPONENT_TYPE_PATH + i + "] onData";
         final boolean z2 = true;
-        taskQueue.schedule(new Task(str, z2) { // from class: okhttp3.internal.http2.Http2Connection$pushDataLater$$inlined$execute$default$1
+        taskQueue.schedule(new Task(str, z2) { // from class:
+                                               // okhttp3.internal.http2.Http2Connection$pushDataLater$$inlined$execute$default$1
             @Override // okhttp3.internal.concurrent.Task
             public long runOnce() {
                 try {
@@ -879,11 +935,13 @@ public final class Http2Connection implements Closeable {
     }
 
     public final void pushHeadersLater$okhttp(final int i, final List<Header> list, final boolean z) {
-        bzo.q(list, "requestHeaders");
+        throwIfVar1IsNull(list, "requestHeaders");
         TaskQueue taskQueue = this.pushQueue;
-        final String str = this.connectionName + TypePool.Default.LazyTypeDescription.GenericTypeToken.COMPONENT_TYPE_PATH + i + "] onHeaders";
+        final String str = this.connectionName
+                + TypePool.Default.LazyTypeDescription.GenericTypeToken.COMPONENT_TYPE_PATH + i + "] onHeaders";
         final boolean z2 = true;
-        taskQueue.schedule(new Task(str, z2) { // from class: okhttp3.internal.http2.Http2Connection$pushHeadersLater$$inlined$execute$default$1
+        taskQueue.schedule(new Task(str, z2) { // from class:
+                                               // okhttp3.internal.http2.Http2Connection$pushHeadersLater$$inlined$execute$default$1
             @Override // okhttp3.internal.concurrent.Task
             public long runOnce() {
                 boolean zOnHeaders = this.pushObserver.onHeaders(i, list, z);
@@ -907,15 +965,18 @@ public final class Http2Connection implements Closeable {
 
     public final void pushRequestLater$okhttp(final int i, final List<Header> list) throws Throwable {
         Throwable th;
-        bzo.q(list, "requestHeaders");
+        throwIfVar1IsNull(list, "requestHeaders");
         synchronized (this) {
             try {
                 if (!this.currentPushRequests.contains(Integer.valueOf(i))) {
                     this.currentPushRequests.add(Integer.valueOf(i));
                     TaskQueue taskQueue = this.pushQueue;
-                    final String str = this.connectionName + TypePool.Default.LazyTypeDescription.GenericTypeToken.COMPONENT_TYPE_PATH + i + "] onRequest";
+                    final String str = this.connectionName
+                            + TypePool.Default.LazyTypeDescription.GenericTypeToken.COMPONENT_TYPE_PATH + i
+                            + "] onRequest";
                     final boolean z = true;
-                    taskQueue.schedule(new Task(str, z) { // from class: okhttp3.internal.http2.Http2Connection$pushRequestLater$$inlined$execute$default$1
+                    taskQueue.schedule(new Task(str, z) { // from class:
+                                                          // okhttp3.internal.http2.Http2Connection$pushRequestLater$$inlined$execute$default$1
                         @Override // okhttp3.internal.concurrent.Task
                         public long runOnce() {
                             if (!this.pushObserver.onRequest(i, list)) {
@@ -948,11 +1009,13 @@ public final class Http2Connection implements Closeable {
     }
 
     public final void pushResetLater$okhttp(final int i, final ErrorCode errorCode) {
-        bzo.q(errorCode, "errorCode");
+        throwIfVar1IsNull(errorCode, "errorCode");
         TaskQueue taskQueue = this.pushQueue;
-        final String str = this.connectionName + TypePool.Default.LazyTypeDescription.GenericTypeToken.COMPONENT_TYPE_PATH + i + "] onReset";
+        final String str = this.connectionName
+                + TypePool.Default.LazyTypeDescription.GenericTypeToken.COMPONENT_TYPE_PATH + i + "] onReset";
         final boolean z = true;
-        taskQueue.schedule(new Task(str, z) { // from class: okhttp3.internal.http2.Http2Connection$pushResetLater$$inlined$execute$default$1
+        taskQueue.schedule(new Task(str, z) { // from class:
+                                              // okhttp3.internal.http2.Http2Connection$pushResetLater$$inlined$execute$default$1
             @Override // okhttp3.internal.concurrent.Task
             public long runOnce() {
                 this.pushObserver.onReset(i, errorCode);
@@ -965,7 +1028,7 @@ public final class Http2Connection implements Closeable {
     }
 
     public final Http2Stream pushStream(int i, List<Header> list, boolean z) {
-        bzo.q(list, "requestHeaders");
+        throwIfVar1IsNull(list, "requestHeaders");
         if (this.client) {
             throw new IllegalStateException("Client cannot push requests.");
         }
@@ -995,7 +1058,8 @@ public final class Http2Connection implements Closeable {
             TaskQueue taskQueue = this.writerQueue;
             final String strO = yg.o(new StringBuilder(), this.connectionName, " ping");
             final boolean z = true;
-            taskQueue.schedule(new Task(strO, z) { // from class: okhttp3.internal.http2.Http2Connection$sendDegradedPingLater$$inlined$execute$default$1
+            taskQueue.schedule(new Task(strO, z) { // from class:
+                                                   // okhttp3.internal.http2.Http2Connection$sendDegradedPingLater$$inlined$execute$default$1
                 @Override // okhttp3.internal.concurrent.Task
                 public long runOnce() {
                     this.writePing(false, 2, 0);
@@ -1014,12 +1078,12 @@ public final class Http2Connection implements Closeable {
     }
 
     public final void setPeerSettings(Settings settings) {
-        bzo.q(settings, "<set-?>");
+        throwIfVar1IsNull(settings, "<set-?>");
         this.peerSettings = settings;
     }
 
     public final void setSettings(Settings settings) {
-        bzo.q(settings, "settings");
+        throwIfVar1IsNull(settings, "settings");
         synchronized (this.writer) {
             synchronized (this) {
                 if (this.isShutdown) {
@@ -1032,7 +1096,7 @@ public final class Http2Connection implements Closeable {
     }
 
     public final void shutdown(ErrorCode errorCode) {
-        bzo.q(errorCode, "statusCode");
+        throwIfVar1IsNull(errorCode, "statusCode");
         synchronized (this.writer) {
             synchronized (this) {
                 if (this.isShutdown) {
@@ -1098,7 +1162,7 @@ public final class Http2Connection implements Closeable {
     }
 
     public final void writeHeaders$okhttp(int i, boolean z, List<Header> list) {
-        bzo.q(list, "alternating");
+        throwIfVar1IsNull(list, "alternating");
         this.writer.headers(z, i, list);
     }
 
@@ -1116,16 +1180,18 @@ public final class Http2Connection implements Closeable {
     }
 
     public final void writeSynReset$okhttp(int i, ErrorCode errorCode) {
-        bzo.q(errorCode, "statusCode");
+        throwIfVar1IsNull(errorCode, "statusCode");
         this.writer.rstStream(i, errorCode);
     }
 
     public final void writeSynResetLater$okhttp(final int i, final ErrorCode errorCode) {
-        bzo.q(errorCode, "errorCode");
+        throwIfVar1IsNull(errorCode, "errorCode");
         TaskQueue taskQueue = this.writerQueue;
-        final String str = this.connectionName + TypePool.Default.LazyTypeDescription.GenericTypeToken.COMPONENT_TYPE_PATH + i + "] writeSynReset";
+        final String str = this.connectionName
+                + TypePool.Default.LazyTypeDescription.GenericTypeToken.COMPONENT_TYPE_PATH + i + "] writeSynReset";
         final boolean z = true;
-        taskQueue.schedule(new Task(str, z) { // from class: okhttp3.internal.http2.Http2Connection$writeSynResetLater$$inlined$execute$default$1
+        taskQueue.schedule(new Task(str, z) { // from class:
+                                              // okhttp3.internal.http2.Http2Connection$writeSynResetLater$$inlined$execute$default$1
             @Override // okhttp3.internal.concurrent.Task
             public long runOnce() {
                 try {
@@ -1141,9 +1207,11 @@ public final class Http2Connection implements Closeable {
 
     public final void writeWindowUpdateLater$okhttp(final int i, final long j) {
         TaskQueue taskQueue = this.writerQueue;
-        final String str = this.connectionName + TypePool.Default.LazyTypeDescription.GenericTypeToken.COMPONENT_TYPE_PATH + i + "] windowUpdate";
+        final String str = this.connectionName
+                + TypePool.Default.LazyTypeDescription.GenericTypeToken.COMPONENT_TYPE_PATH + i + "] windowUpdate";
         final boolean z = true;
-        taskQueue.schedule(new Task(str, z) { // from class: okhttp3.internal.http2.Http2Connection$writeWindowUpdateLater$$inlined$execute$default$1
+        taskQueue.schedule(new Task(str, z) { // from class:
+                                              // okhttp3.internal.http2.Http2Connection$writeWindowUpdateLater$$inlined$execute$default$1
             @Override // okhttp3.internal.concurrent.Task
             public long runOnce() {
                 try {
@@ -1157,16 +1225,28 @@ public final class Http2Connection implements Closeable {
         }, 0L);
     }
 
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.java:210)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:196)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:180)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:201)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.java:347)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(TryCatchBlockAttr.java:356)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:202)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.
+     * java:210)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:196)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:180)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:
+     * 201)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.
+     * java:347)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(
+     * TryCatchBlockAttr.java:356)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+     * MarkFinallyVisitor.java:202)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:119)
      */
     private final Http2Stream newStream(int i, List<Header> list, boolean z) throws Throwable {
         Throwable th;
@@ -1190,7 +1270,8 @@ public final class Http2Connection implements Closeable {
                                 int i2 = this.nextStreamId;
                                 this.nextStreamId = i2 + 2;
                                 Http2Stream http2Stream = new Http2Stream(i2, this, z2, false, null);
-                                boolean z3 = !z || this.writeBytesTotal >= this.writeBytesMaximum || http2Stream.getWriteBytesTotal() >= http2Stream.getWriteBytesMaximum();
+                                boolean z3 = !z || this.writeBytesTotal >= this.writeBytesMaximum
+                                        || http2Stream.getWriteBytesTotal() >= http2Stream.getWriteBytesMaximum();
                                 if (http2Stream.isOpen()) {
                                     this.streams.put(Integer.valueOf(i2), http2Stream);
                                 }
@@ -1198,7 +1279,8 @@ public final class Http2Connection implements Closeable {
                                     this.writer.headers(z2, i2, list);
                                 } else {
                                     if (this.client) {
-                                        throw new IllegalArgumentException("client streams shouldn't have associated stream IDs");
+                                        throw new IllegalArgumentException(
+                                                "client streams shouldn't have associated stream IDs");
                                     }
                                     this.writer.pushPromise(i, i2, list);
                                 }
@@ -1231,7 +1313,7 @@ public final class Http2Connection implements Closeable {
     }
 
     public final void start(boolean z, TaskRunner taskRunner) {
-        bzo.q(taskRunner, "taskRunner");
+        throwIfVar1IsNull(taskRunner, "taskRunner");
         if (z) {
             this.writer.connectionPreface();
             this.writer.settings(this.okHttpSettings);
@@ -1239,7 +1321,8 @@ public final class Http2Connection implements Closeable {
                 this.writer.windowUpdate(0, r5 - 65535);
             }
         }
-        taskRunner.newQueue().schedule(new TaskQueue.AnonymousClass1(this.connectionName, true, this.readerRunnable), 0L);
+        taskRunner.newQueue().schedule(new TaskQueue.AnonymousClass1(this.connectionName, true, this.readerRunnable),
+                0L);
     }
 
     public final void writePing() {

@@ -24,7 +24,7 @@ public final class bls implements Serializable {
             return false;
         }
         bls blsVar = (bls) obj;
-        return bzo.f(this.a, blsVar.a) && this.b.equals(blsVar.b) && this.c.equals(blsVar.c);
+        return nullSafeIsEqual(this.a, blsVar.a) && this.b.equals(blsVar.b) && this.c.equals(blsVar.c);
     }
 
     public final int hashCode() {

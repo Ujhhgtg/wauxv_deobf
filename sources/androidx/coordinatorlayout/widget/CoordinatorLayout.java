@@ -78,7 +78,7 @@ public class CoordinatorLayout extends ViewGroup implements ckt, cku {
         Package r0 = CoordinatorLayout.class.getPackage();
         a = r0 != null ? r0.getName() : null;
         d = new ex(1);
-        b = new Class[]{Context.class, AttributeSet.class};
+        b = new Class[] { Context.class, AttributeSet.class };
         c = new ThreadLocal();
         e = new cux(12);
     }
@@ -93,7 +93,8 @@ public class CoordinatorLayout extends ViewGroup implements ckt, cku {
         this.k = new int[2];
         this.x = new cjn();
         int[] iArr = cxy.a;
-        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, iArr, R.attr.coordinatorLayoutStyle, 0);
+        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, iArr,
+                R.attr.coordinatorLayoutStyle, 0);
         eqz.r(this, context, iArr, attributeSet, typedArrayObtainStyledAttributes, R.attr.coordinatorLayoutStyle, 0);
         int resourceId = typedArrayObtainStyledAttributes.getResourceId(0, 0);
         if (resourceId != 0) {
@@ -160,7 +161,8 @@ public class CoordinatorLayout extends ViewGroup implements ckt, cku {
                         }
                     }
                 } catch (Exception e2) {
-                    Log.e("CoordinatorLayout", "Default behavior class " + agsVar.value().getName() + " could not be instantiated. Did you forget a default constructor?", e2);
+                    Log.e("CoordinatorLayout", "Default behavior class " + agsVar.value().getName()
+                            + " could not be instantiated. Did you forget a default constructor?", e2);
                 }
             }
             aguVar.b = true;
@@ -193,7 +195,8 @@ public class CoordinatorLayout extends ViewGroup implements ckt, cku {
         for (int i = 0; i < getChildCount(); i++) {
             View childAt = getChildAt(i);
             agu aguVar = (agu) childAt.getLayoutParams();
-            height += childAt.getHeight() + ((ViewGroup.MarginLayoutParams) aguVar).topMargin + ((ViewGroup.MarginLayoutParams) aguVar).bottomMargin;
+            height += childAt.getHeight() + ((ViewGroup.MarginLayoutParams) aguVar).topMargin
+                    + ((ViewGroup.MarginLayoutParams) aguVar).bottomMargin;
         }
         return height;
     }
@@ -239,8 +242,10 @@ public class CoordinatorLayout extends ViewGroup implements ckt, cku {
     public final void ad(agu aguVar, Rect rect, int i, int i2) {
         int width = getWidth();
         int height = getHeight();
-        int iMax = Math.max(getPaddingLeft() + ((ViewGroup.MarginLayoutParams) aguVar).leftMargin, Math.min(rect.left, ((width - getPaddingRight()) - i) - ((ViewGroup.MarginLayoutParams) aguVar).rightMargin));
-        int iMax2 = Math.max(getPaddingTop() + ((ViewGroup.MarginLayoutParams) aguVar).topMargin, Math.min(rect.top, ((height - getPaddingBottom()) - i2) - ((ViewGroup.MarginLayoutParams) aguVar).bottomMargin));
+        int iMax = Math.max(getPaddingLeft() + ((ViewGroup.MarginLayoutParams) aguVar).leftMargin, Math.min(rect.left,
+                ((width - getPaddingRight()) - i) - ((ViewGroup.MarginLayoutParams) aguVar).rightMargin));
+        int iMax2 = Math.max(getPaddingTop() + ((ViewGroup.MarginLayoutParams) aguVar).topMargin, Math.min(rect.top,
+                ((height - getPaddingBottom()) - i2) - ((ViewGroup.MarginLayoutParams) aguVar).bottomMargin));
         rect.set(iMax, iMax2, i + iMax, i2 + iMax2);
     }
 
@@ -443,7 +448,8 @@ public class CoordinatorLayout extends ViewGroup implements ckt, cku {
         }
         rectF.set(rect);
         matrix.mapRect(rectF);
-        rect.set((int) (rectF.left + 0.5f), (int) (rectF.top + 0.5f), (int) (rectF.right + 0.5f), (int) (rectF.bottom + 0.5f));
+        rect.set((int) (rectF.left + 0.5f), (int) (rectF.top + 0.5f), (int) (rectF.right + 0.5f),
+                (int) (rectF.bottom + 0.5f));
     }
 
     public final int an(int i) {
@@ -496,7 +502,7 @@ public class CoordinatorLayout extends ViewGroup implements ckt, cku {
         return iArr[1] > 0;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:34:0x00dc  */
+    /* JADX WARN: Found duplicated region for block: B:34:0x00dc */
     public final void aq(int i) {
         int i2;
         Rect rect;
@@ -635,7 +641,8 @@ public class CoordinatorLayout extends ViewGroup implements ckt, cku {
                         rectY.right = Math.max(rectY.right, getWidth() - rectY2.left);
                     }
                 }
-                if (aguVar5.h != 0 && view4.getVisibility() == 0 && view4.isLaidOut() && view4.getWidth() > 0 && view4.getHeight() > 0) {
+                if (aguVar5.h != 0 && view4.getVisibility() == 0 && view4.isLaidOut() && view4.getWidth() > 0
+                        && view4.getHeight() > 0) {
                     agu aguVar6 = (agu) view4.getLayoutParams();
                     agr agrVar2 = aguVar6.a;
                     Rect rectY7 = y();
@@ -644,7 +651,8 @@ public class CoordinatorLayout extends ViewGroup implements ckt, cku {
                     if (agrVar2 == null || !agrVar2.a(view4)) {
                         rectY7.set(rectY8);
                     } else if (!rectY8.contains(rectY7)) {
-                        throw new IllegalArgumentException("Rect should be within the child's bounds. Rect:" + rectY7.toShortString() + " | Bounds:" + rectY8.toShortString());
+                        throw new IllegalArgumentException("Rect should be within the child's bounds. Rect:"
+                                + rectY7.toShortString() + " | Bounds:" + rectY8.toShortString());
                     }
                     rectY8.setEmpty();
                     cuxVar.l(rectY8);
@@ -653,26 +661,34 @@ public class CoordinatorLayout extends ViewGroup implements ckt, cku {
                         cuxVar.l(rectY7);
                     } else {
                         int absoluteGravity2 = Gravity.getAbsoluteGravity(aguVar6.h, layoutDirection);
-                        if ((absoluteGravity2 & 48) != 48 || (i8 = (rectY7.top - ((ViewGroup.MarginLayoutParams) aguVar6).topMargin) - aguVar6.j) >= (i9 = rectY.top)) {
+                        if ((absoluteGravity2 & 48) != 48
+                                || (i8 = (rectY7.top - ((ViewGroup.MarginLayoutParams) aguVar6).topMargin)
+                                        - aguVar6.j) >= (i9 = rectY.top)) {
                             z = false;
                         } else {
                             ac(view4, i9 - i8);
                             z = true;
                         }
-                        if ((absoluteGravity2 & 80) == 80 && (height = ((getHeight() - rectY7.bottom) - ((ViewGroup.MarginLayoutParams) aguVar6).bottomMargin) + aguVar6.j) < (i7 = rectY.bottom)) {
+                        if ((absoluteGravity2 & 80) == 80 && (height = ((getHeight() - rectY7.bottom)
+                                - ((ViewGroup.MarginLayoutParams) aguVar6).bottomMargin)
+                                + aguVar6.j) < (i7 = rectY.bottom)) {
                             ac(view4, height - i7);
                             z = true;
                         }
                         if (!z) {
                             ac(view4, 0);
                         }
-                        if ((absoluteGravity2 & 3) != 3 || (i5 = (rectY7.left - ((ViewGroup.MarginLayoutParams) aguVar6).leftMargin) - aguVar6.i) >= (i6 = rectY.left)) {
+                        if ((absoluteGravity2 & 3) != 3
+                                || (i5 = (rectY7.left - ((ViewGroup.MarginLayoutParams) aguVar6).leftMargin)
+                                        - aguVar6.i) >= (i6 = rectY.left)) {
                             z2 = false;
                         } else {
                             ab(view4, i6 - i5);
                             z2 = true;
                         }
-                        if ((absoluteGravity2 & 5) == 5 && (width = ((getWidth() - rectY7.right) - ((ViewGroup.MarginLayoutParams) aguVar6).rightMargin) + aguVar6.i) < (i4 = rectY.right)) {
+                        if ((absoluteGravity2 & 5) == 5 && (width = ((getWidth() - rectY7.right)
+                                - ((ViewGroup.MarginLayoutParams) aguVar6).rightMargin)
+                                + aguVar6.i) < (i4 = rectY.right)) {
                             ab(view4, width - i4);
                             z2 = true;
                         }
@@ -705,7 +721,7 @@ public class CoordinatorLayout extends ViewGroup implements ckt, cku {
                     View view5 = (View) arrayList.get(i20);
                     agu aguVar7 = (agu) view5.getLayoutParams();
                     agr agrVar3 = aguVar7.a;
-                    if (agrVar3 != null && agrVar3.b(view5, view4)) {
+                    if (agrVar3 != null && agrVar3.tryGetClassByName(view5, view4)) {
                         if (i == 0 && aguVar7.o) {
                             aguVar7.o = false;
                         } else {
@@ -740,7 +756,8 @@ public class CoordinatorLayout extends ViewGroup implements ckt, cku {
         agu aguVar = (agu) view.getLayoutParams();
         View view2 = aguVar.k;
         if (view2 == null && aguVar.f != -1) {
-            throw new IllegalStateException("An anchor may not be changed after CoordinatorLayout measurement begins before layout is complete.");
+            throw new IllegalStateException(
+                    "An anchor may not be changed after CoordinatorLayout measurement begins before layout is complete.");
         }
         cux cuxVar = e;
         if (view2 != null) {
@@ -786,14 +803,21 @@ public class CoordinatorLayout extends ViewGroup implements ckt, cku {
                 iAn += measuredWidth2;
             }
             int i6 = i5 != 16 ? i5 != 80 ? 0 : measuredHeight2 : measuredHeight2 / 2;
-            int iMax = Math.max(getPaddingLeft() + ((ViewGroup.MarginLayoutParams) aguVar3).leftMargin, Math.min(iAn, ((width - getPaddingRight()) - measuredWidth2) - ((ViewGroup.MarginLayoutParams) aguVar3).rightMargin));
-            int iMax2 = Math.max(getPaddingTop() + ((ViewGroup.MarginLayoutParams) aguVar3).topMargin, Math.min(i6, ((height - getPaddingBottom()) - measuredHeight2) - ((ViewGroup.MarginLayoutParams) aguVar3).bottomMargin));
+            int iMax = Math.max(getPaddingLeft() + ((ViewGroup.MarginLayoutParams) aguVar3).leftMargin,
+                    Math.min(iAn, ((width - getPaddingRight()) - measuredWidth2)
+                            - ((ViewGroup.MarginLayoutParams) aguVar3).rightMargin));
+            int iMax2 = Math.max(getPaddingTop() + ((ViewGroup.MarginLayoutParams) aguVar3).topMargin,
+                    Math.min(i6, ((height - getPaddingBottom()) - measuredHeight2)
+                            - ((ViewGroup.MarginLayoutParams) aguVar3).bottomMargin));
             view.layout(iMax, iMax2, measuredWidth2 + iMax, measuredHeight2 + iMax2);
             return;
         }
         agu aguVar4 = (agu) view.getLayoutParams();
         Rect rectY3 = y();
-        rectY3.set(getPaddingLeft() + ((ViewGroup.MarginLayoutParams) aguVar4).leftMargin, getPaddingTop() + ((ViewGroup.MarginLayoutParams) aguVar4).topMargin, (getWidth() - getPaddingRight()) - ((ViewGroup.MarginLayoutParams) aguVar4).rightMargin, (getHeight() - getPaddingBottom()) - ((ViewGroup.MarginLayoutParams) aguVar4).bottomMargin);
+        rectY3.set(getPaddingLeft() + ((ViewGroup.MarginLayoutParams) aguVar4).leftMargin,
+                getPaddingTop() + ((ViewGroup.MarginLayoutParams) aguVar4).topMargin,
+                (getWidth() - getPaddingRight()) - ((ViewGroup.MarginLayoutParams) aguVar4).rightMargin,
+                (getHeight() - getPaddingBottom()) - ((ViewGroup.MarginLayoutParams) aguVar4).bottomMargin);
         if (this.s != null) {
             WeakHashMap weakHashMap = eqz.a;
             if (getFitsSystemWindows() && !view.getFitsSystemWindows()) {
@@ -886,50 +910,114 @@ public class CoordinatorLayout extends ViewGroup implements ckt, cku {
 
     /* JADX WARN: Found duplicated region for block: B:103:0x0089 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:31:0x007c A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:32:0x007e  */
-    /* JADX WARN: Found duplicated region for block: B:34:0x0084  */
-    /* JADX WARN: Found duplicated region for block: B:37:0x0091  */
-    /*  JADX ERROR: JadxRuntimeException in pass: RegionMakerVisitor
-        jadx.core.utils.exceptions.JadxRuntimeException: Not found exit edge by exit block: B:38:0x0095
-        	at jadx.core.dex.visitors.regions.maker.LoopRegionMaker.checkLoopExits(LoopRegionMaker.java:272)
-        	at jadx.core.dex.visitors.regions.maker.LoopRegionMaker.makeLoopRegion(LoopRegionMaker.java:237)
-        	at jadx.core.dex.visitors.regions.maker.LoopRegionMaker.process(LoopRegionMaker.java:80)
-        	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:91)
-        	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:68)
-        	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:118)
-        	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:108)
-        	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:68)
-        	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:112)
-        	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:108)
-        	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:68)
-        	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:112)
-        	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:108)
-        	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:68)
-        	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:112)
-        	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:108)
-        	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:68)
-        	at jadx.core.dex.visitors.regions.maker.LoopRegionMaker.makeEndlessLoop(LoopRegionMaker.java:590)
-        	at jadx.core.dex.visitors.regions.maker.LoopRegionMaker.process(LoopRegionMaker.java:82)
-        	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:91)
-        	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:68)
-        	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:118)
-        	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:108)
-        	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:68)
-        	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:118)
-        	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:108)
-        	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:68)
-        	at jadx.core.dex.visitors.regions.maker.LoopRegionMaker.process(LoopRegionMaker.java:162)
-        	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:91)
-        	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:68)
-        	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeMthRegion(RegionMaker.java:48)
-        	at jadx.core.dex.visitors.regions.RegionMakerVisitor.visit(RegionMakerVisitor.java:25)
-        */
+    /* JADX WARN: Found duplicated region for block: B:32:0x007e */
+    /* JADX WARN: Found duplicated region for block: B:34:0x0084 */
+    /* JADX WARN: Found duplicated region for block: B:37:0x0091 */
+    /*
+     * JADX ERROR: JadxRuntimeException in pass: RegionMakerVisitor
+     * jadx.core.utils.exceptions.JadxRuntimeException: Not found exit edge by exit
+     * block: B:38:0x0095
+     * at jadx.core.dex.visitors.regions.maker.LoopRegionMaker.checkLoopExits(
+     * LoopRegionMaker.java:272)
+     * at jadx.core.dex.visitors.regions.maker.LoopRegionMaker.makeLoopRegion(
+     * LoopRegionMaker.java:237)
+     * at
+     * jadx.core.dex.visitors.regions.maker.LoopRegionMaker.process(LoopRegionMaker.
+     * java:80)
+     * at
+     * jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:
+     * 91)
+     * at
+     * jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:
+     * 68)
+     * at
+     * jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java
+     * :118)
+     * at
+     * jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:
+     * 108)
+     * at
+     * jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:
+     * 68)
+     * at
+     * jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java
+     * :112)
+     * at
+     * jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:
+     * 108)
+     * at
+     * jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:
+     * 68)
+     * at
+     * jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java
+     * :112)
+     * at
+     * jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:
+     * 108)
+     * at
+     * jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:
+     * 68)
+     * at
+     * jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java
+     * :112)
+     * at
+     * jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:
+     * 108)
+     * at
+     * jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:
+     * 68)
+     * at jadx.core.dex.visitors.regions.maker.LoopRegionMaker.makeEndlessLoop(
+     * LoopRegionMaker.java:590)
+     * at
+     * jadx.core.dex.visitors.regions.maker.LoopRegionMaker.process(LoopRegionMaker.
+     * java:82)
+     * at
+     * jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:
+     * 91)
+     * at
+     * jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:
+     * 68)
+     * at
+     * jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java
+     * :118)
+     * at
+     * jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:
+     * 108)
+     * at
+     * jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:
+     * 68)
+     * at
+     * jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java
+     * :118)
+     * at
+     * jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:
+     * 108)
+     * at
+     * jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:
+     * 68)
+     * at
+     * jadx.core.dex.visitors.regions.maker.LoopRegionMaker.process(LoopRegionMaker.
+     * java:162)
+     * at
+     * jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:
+     * 91)
+     * at
+     * jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:
+     * 68)
+     * at
+     * jadx.core.dex.visitors.regions.maker.RegionMaker.makeMthRegion(RegionMaker.
+     * java:48)
+     * at
+     * jadx.core.dex.visitors.regions.RegionMakerVisitor.visit(RegionMakerVisitor.
+     * java:25)
+     */
     public final void av() {
         /*
-            Method dump skipped, instruction units count: 400
-            To view this dump add '--comments-level debug' option
-        */
-        throw new UnsupportedOperationException("Method not decompiled: androidx.coordinatorlayout.widget.CoordinatorLayout.av():void");
+         * Method dump skipped, instruction units count: 400
+         * To view this dump add '--comments-level debug' option
+         */
+        throw new UnsupportedOperationException(
+                "Method not decompiled: androidx.coordinatorlayout.widget.CoordinatorLayout.av():void");
     }
 
     public final void aw() {
@@ -981,7 +1069,8 @@ public class CoordinatorLayout extends ViewGroup implements ckt, cku {
                 return keyEvent.isAltPressed() ? ap(getHeight()) : ap((int) (getHeight() * 0.2f));
             }
             if (keyCode == 62) {
-                return keyEvent.isShiftPressed() ? ap(-getFullContentHeight()) : ap(getFullContentHeight() - getHeight());
+                return keyEvent.isShiftPressed() ? ap(-getFullContentHeight())
+                        : ap(getFullContentHeight() - getHeight());
             }
             if (keyCode == 92) {
                 return ap(-getHeight());
@@ -1127,19 +1216,20 @@ public class CoordinatorLayout extends ViewGroup implements ckt, cku {
         int size = arrayList.size();
         for (int i5 = 0; i5 < size; i5++) {
             View view = (View) arrayList.get(i5);
-            if (view.getVisibility() != 8 && ((agrVar = ((agu) view.getLayoutParams()).a) == null || !agrVar.i(this, view, layoutDirection))) {
+            if (view.getVisibility() != 8 && ((agrVar = ((agu) view.getLayoutParams()).a) == null
+                    || !agrVar.i(this, view, layoutDirection))) {
                 ar(view, layoutDirection);
             }
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:40:0x00ac  */
-    /* JADX WARN: Found duplicated region for block: B:70:0x012e  */
+    /* JADX WARN: Found duplicated region for block: B:40:0x00ac */
+    /* JADX WARN: Found duplicated region for block: B:70:0x012e */
     /* JADX WARN: Found duplicated region for block: B:72:0x0136 A[MOVE_INLINED] */
-    /* JADX WARN: Found duplicated region for block: B:73:0x0161  */
+    /* JADX WARN: Found duplicated region for block: B:73:0x0161 */
     /* JADX WARN: Found duplicated region for block: B:76:0x016b A[MOVE_INLINED] */
-    /* JADX WARN: Found duplicated region for block: B:79:0x018a  */
-    /* JADX WARN: Found duplicated region for block: B:80:0x018d  */
+    /* JADX WARN: Found duplicated region for block: B:79:0x018a */
+    /* JADX WARN: Found duplicated region for block: B:80:0x018d */
     @Override // android.view.View
     public final void onMeasure(int i, int i2) {
         boolean z;
@@ -1287,9 +1377,14 @@ public class CoordinatorLayout extends ViewGroup implements ckt, cku {
                             if (zJ) {
                                 coordinatorLayout = this;
                             }
-                            int iMax2 = Math.max(i8, view.getMeasuredWidth() + i17 + ((ViewGroup.MarginLayoutParams) aguVar).leftMargin + ((ViewGroup.MarginLayoutParams) aguVar).rightMargin);
-                            int iMax3 = Math.max(i10, view.getMeasuredHeight() + i18 + ((ViewGroup.MarginLayoutParams) aguVar).topMargin + ((ViewGroup.MarginLayoutParams) aguVar).bottomMargin);
-                            iCombineMeasuredStates = View.combineMeasuredStates(iCombineMeasuredStates, view.getMeasuredState());
+                            int iMax2 = Math.max(i8,
+                                    view.getMeasuredWidth() + i17 + ((ViewGroup.MarginLayoutParams) aguVar).leftMargin
+                                            + ((ViewGroup.MarginLayoutParams) aguVar).rightMargin);
+                            int iMax3 = Math.max(i10,
+                                    view.getMeasuredHeight() + i18 + ((ViewGroup.MarginLayoutParams) aguVar).topMargin
+                                            + ((ViewGroup.MarginLayoutParams) aguVar).bottomMargin);
+                            iCombineMeasuredStates = View.combineMeasuredStates(iCombineMeasuredStates,
+                                    view.getMeasuredState());
                             suggestedMinimumWidth = iMax2;
                             suggestedMinimumHeight = iMax3;
                         } else {
@@ -1306,9 +1401,14 @@ public class CoordinatorLayout extends ViewGroup implements ckt, cku {
                         }
                         coordinatorLayout = this;
                         coordinatorLayout.measureChildWithMargins(view, iMakeMeasureSpec, i11, i12, 0);
-                        int iMax22 = Math.max(i8, view.getMeasuredWidth() + i17 + ((ViewGroup.MarginLayoutParams) aguVar).leftMargin + ((ViewGroup.MarginLayoutParams) aguVar).rightMargin);
-                        int iMax32 = Math.max(i10, view.getMeasuredHeight() + i18 + ((ViewGroup.MarginLayoutParams) aguVar).topMargin + ((ViewGroup.MarginLayoutParams) aguVar).bottomMargin);
-                        iCombineMeasuredStates = View.combineMeasuredStates(iCombineMeasuredStates, view.getMeasuredState());
+                        int iMax22 = Math.max(i8,
+                                view.getMeasuredWidth() + i17 + ((ViewGroup.MarginLayoutParams) aguVar).leftMargin
+                                        + ((ViewGroup.MarginLayoutParams) aguVar).rightMargin);
+                        int iMax32 = Math.max(i10,
+                                view.getMeasuredHeight() + i18 + ((ViewGroup.MarginLayoutParams) aguVar).topMargin
+                                        + ((ViewGroup.MarginLayoutParams) aguVar).bottomMargin);
+                        iCombineMeasuredStates = View.combineMeasuredStates(iCombineMeasuredStates,
+                                view.getMeasuredState());
                         suggestedMinimumWidth = iMax22;
                         suggestedMinimumHeight = iMax32;
                     } else {
@@ -1354,9 +1454,14 @@ public class CoordinatorLayout extends ViewGroup implements ckt, cku {
                         if (zJ) {
                             coordinatorLayout = this;
                         }
-                        int iMax222 = Math.max(i8, view.getMeasuredWidth() + i17 + ((ViewGroup.MarginLayoutParams) aguVar).leftMargin + ((ViewGroup.MarginLayoutParams) aguVar).rightMargin);
-                        int iMax322 = Math.max(i10, view.getMeasuredHeight() + i18 + ((ViewGroup.MarginLayoutParams) aguVar).topMargin + ((ViewGroup.MarginLayoutParams) aguVar).bottomMargin);
-                        iCombineMeasuredStates = View.combineMeasuredStates(iCombineMeasuredStates, view.getMeasuredState());
+                        int iMax222 = Math.max(i8,
+                                view.getMeasuredWidth() + i17 + ((ViewGroup.MarginLayoutParams) aguVar).leftMargin
+                                        + ((ViewGroup.MarginLayoutParams) aguVar).rightMargin);
+                        int iMax322 = Math.max(i10,
+                                view.getMeasuredHeight() + i18 + ((ViewGroup.MarginLayoutParams) aguVar).topMargin
+                                        + ((ViewGroup.MarginLayoutParams) aguVar).bottomMargin);
+                        iCombineMeasuredStates = View.combineMeasuredStates(iCombineMeasuredStates,
+                                view.getMeasuredState());
                         suggestedMinimumWidth = iMax222;
                         suggestedMinimumHeight = iMax322;
                     } else {
@@ -1373,9 +1478,14 @@ public class CoordinatorLayout extends ViewGroup implements ckt, cku {
                     }
                     coordinatorLayout = this;
                     coordinatorLayout.measureChildWithMargins(view, iMakeMeasureSpec, i11, i12, 0);
-                    int iMax2222 = Math.max(i8, view.getMeasuredWidth() + i17 + ((ViewGroup.MarginLayoutParams) aguVar).leftMargin + ((ViewGroup.MarginLayoutParams) aguVar).rightMargin);
-                    int iMax3222 = Math.max(i10, view.getMeasuredHeight() + i18 + ((ViewGroup.MarginLayoutParams) aguVar).topMargin + ((ViewGroup.MarginLayoutParams) aguVar).bottomMargin);
-                    iCombineMeasuredStates = View.combineMeasuredStates(iCombineMeasuredStates, view.getMeasuredState());
+                    int iMax2222 = Math.max(i8,
+                            view.getMeasuredWidth() + i17 + ((ViewGroup.MarginLayoutParams) aguVar).leftMargin
+                                    + ((ViewGroup.MarginLayoutParams) aguVar).rightMargin);
+                    int iMax3222 = Math.max(i10,
+                            view.getMeasuredHeight() + i18 + ((ViewGroup.MarginLayoutParams) aguVar).topMargin
+                                    + ((ViewGroup.MarginLayoutParams) aguVar).bottomMargin);
+                    iCombineMeasuredStates = View.combineMeasuredStates(iCombineMeasuredStates,
+                            view.getMeasuredState());
                     suggestedMinimumWidth = iMax2222;
                     suggestedMinimumHeight = iMax3222;
                 }
@@ -1418,9 +1528,14 @@ public class CoordinatorLayout extends ViewGroup implements ckt, cku {
                     if (zJ) {
                         coordinatorLayout = this;
                     }
-                    int iMax22222 = Math.max(i8, view.getMeasuredWidth() + i17 + ((ViewGroup.MarginLayoutParams) aguVar).leftMargin + ((ViewGroup.MarginLayoutParams) aguVar).rightMargin);
-                    int iMax32222 = Math.max(i10, view.getMeasuredHeight() + i18 + ((ViewGroup.MarginLayoutParams) aguVar).topMargin + ((ViewGroup.MarginLayoutParams) aguVar).bottomMargin);
-                    iCombineMeasuredStates = View.combineMeasuredStates(iCombineMeasuredStates, view.getMeasuredState());
+                    int iMax22222 = Math.max(i8,
+                            view.getMeasuredWidth() + i17 + ((ViewGroup.MarginLayoutParams) aguVar).leftMargin
+                                    + ((ViewGroup.MarginLayoutParams) aguVar).rightMargin);
+                    int iMax32222 = Math.max(i10,
+                            view.getMeasuredHeight() + i18 + ((ViewGroup.MarginLayoutParams) aguVar).topMargin
+                                    + ((ViewGroup.MarginLayoutParams) aguVar).bottomMargin);
+                    iCombineMeasuredStates = View.combineMeasuredStates(iCombineMeasuredStates,
+                            view.getMeasuredState());
                     suggestedMinimumWidth = iMax22222;
                     suggestedMinimumHeight = iMax32222;
                 } else {
@@ -1437,8 +1552,12 @@ public class CoordinatorLayout extends ViewGroup implements ckt, cku {
                 }
                 coordinatorLayout = this;
                 coordinatorLayout.measureChildWithMargins(view, iMakeMeasureSpec, i11, i12, 0);
-                int iMax222222 = Math.max(i8, view.getMeasuredWidth() + i17 + ((ViewGroup.MarginLayoutParams) aguVar).leftMargin + ((ViewGroup.MarginLayoutParams) aguVar).rightMargin);
-                int iMax322222 = Math.max(i10, view.getMeasuredHeight() + i18 + ((ViewGroup.MarginLayoutParams) aguVar).topMargin + ((ViewGroup.MarginLayoutParams) aguVar).bottomMargin);
+                int iMax222222 = Math.max(i8,
+                        view.getMeasuredWidth() + i17 + ((ViewGroup.MarginLayoutParams) aguVar).leftMargin
+                                + ((ViewGroup.MarginLayoutParams) aguVar).rightMargin);
+                int iMax322222 = Math.max(i10,
+                        view.getMeasuredHeight() + i18 + ((ViewGroup.MarginLayoutParams) aguVar).topMargin
+                                + ((ViewGroup.MarginLayoutParams) aguVar).bottomMargin);
                 iCombineMeasuredStates = View.combineMeasuredStates(iCombineMeasuredStates, view.getMeasuredState());
                 suggestedMinimumWidth = iMax222222;
                 suggestedMinimumHeight = iMax322222;
@@ -1450,7 +1569,8 @@ public class CoordinatorLayout extends ViewGroup implements ckt, cku {
             arrayList3 = arrayList;
         }
         int i26 = iCombineMeasuredStates;
-        coordinatorLayout.setMeasuredDimension(View.resolveSizeAndState(suggestedMinimumWidth, i, (-16777216) & i26), View.resolveSizeAndState(suggestedMinimumHeight, i2, i26 << 16));
+        coordinatorLayout.setMeasuredDimension(View.resolveSizeAndState(suggestedMinimumWidth, i, (-16777216) & i26),
+                View.resolveSizeAndState(suggestedMinimumHeight, i2, i26 << 16));
     }
 
     @Override // android.view.ViewGroup, android.view.ViewParent
@@ -1514,7 +1634,7 @@ public class CoordinatorLayout extends ViewGroup implements ckt, cku {
         for (int i = 0; i < childCount; i++) {
             View childAt = getChildAt(i);
             int id = childAt.getId();
-            agr agrVar = aa(childAt).a;
+            agr agrVar = aa(childAt).cachedConstructors;
             if (id != -1 && agrVar != null && (parcelable2 = (Parcelable) sparseArray.get(id)) != null) {
                 agrVar.m(childAt, parcelable2);
             }
@@ -1674,6 +1794,9 @@ public class CoordinatorLayout extends ViewGroup implements ckt, cku {
 
     @Override // android.view.ViewGroup
     public final ViewGroup.LayoutParams generateLayoutParams(ViewGroup.LayoutParams layoutParams) {
-        return layoutParams instanceof agu ? new agu((agu) layoutParams) : layoutParams instanceof ViewGroup.MarginLayoutParams ? new agu((ViewGroup.MarginLayoutParams) layoutParams) : new agu(layoutParams);
+        return layoutParams instanceof agu ? new agu((agu) layoutParams)
+                : layoutParams instanceof ViewGroup.MarginLayoutParams
+                        ? new agu((ViewGroup.MarginLayoutParams) layoutParams)
+                        : new agu(layoutParams);
     }
 }

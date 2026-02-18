@@ -12,13 +12,14 @@ public final class bsq implements btd {
         if (brxVarBw instanceof bsp) {
             return (bsp) brxVarBw;
         }
-        throw cnd.ak(-1, "Unexpected JSON element, expected JsonPrimitive, had " + dal.b(brxVarBw.getClass()), brxVarBw.toString());
+        throw cnd.ak(-1, "Unexpected JSON element, expected JsonPrimitive, had " + dal.b(brxVarBw.getClass()),
+                brxVarBw.toString());
     }
 
     @Override // me.hd.wauxv.obf.btd
     public final void c(avt avtVar, Object obj) {
         bsp bspVar = (bsp) obj;
-        bzo.q(bspVar, "value");
+        throwIfVar1IsNull(bspVar, "value");
         cnb.l(avtVar);
         if (bspVar instanceof bsi) {
             avtVar.x(bsj.b, bsi.INSTANCE);

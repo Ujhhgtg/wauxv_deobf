@@ -6,7 +6,7 @@ public final class cts implements ctk {
     public String a;
 
     public cts(String str) {
-        bzo.q(str, "text");
+        throwIfVar1IsNull(str, "text");
         this.a = str;
     }
 
@@ -14,7 +14,7 @@ public final class cts implements ctk {
         if (this == obj) {
             return true;
         }
-        return (obj instanceof cts) && bzo.f(this.a, ((cts) obj).a);
+        return (obj instanceof cts) && nullSafeIsEqual(this.a, ((cts) obj).a);
     }
 
     public final int hashCode() {
@@ -22,6 +22,6 @@ public final class cts implements ctk {
     }
 
     public final String toString() {
-        return bjs.o("PlainPlaceholderElement(text=", this.a, ")");
+        return concat("PlainPlaceholderElement(text=", this.a, ")");
     }
 }

@@ -333,7 +333,7 @@ public final class hw implements Window.Callback {
         if (daVar != null) {
             daVar.c();
         }
-        io ioVar = new io(icVar, chmVar, 3, z);
+        DefaultConfig ioVar = new DefaultConfig(icVar, chmVar, 3, z);
         icVar.cj();
         eut eutVar = icVar.ab;
         int i2 = 1;

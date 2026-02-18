@@ -5,7 +5,7 @@ import java.util.NoSuchElementException;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class bgy implements Iterator, bsw {
+public final class bgy implements Iterator, IEmpty {
     public Object a;
     public int b = -2;
     public final /* synthetic */ alu c;
@@ -21,9 +21,9 @@ public final class bgy implements Iterator, bsw {
         if (i == -2) {
             objInvoke = ((bfu) aluVar.b).invoke();
         } else {
-            bgf bgfVar = (bgf) aluVar.c;
+            IHasInvokeMethod bgfVar = (IHasInvokeMethod) aluVar.c;
             Object obj = this.a;
-            bzo.n(obj);
+            throwIfVar1IsNull(obj);
             objInvoke = bgfVar.invoke(obj);
         }
         this.a = objInvoke;
@@ -47,7 +47,7 @@ public final class bgy implements Iterator, bsw {
             throw new NoSuchElementException();
         }
         Object obj = this.a;
-        bzo.o(obj, "null cannot be cast to non-null type T of kotlin.sequences.GeneratorSequence");
+        throwIfVar1IsNull(obj, "null cannot be cast to non-null type T of kotlin.sequences.GeneratorSequence");
         this.b = -1;
         return obj;
     }

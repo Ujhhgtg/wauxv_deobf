@@ -18,7 +18,7 @@ public abstract class bdo extends bdj {
     public final View g(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         eqj eqjVar = (eqj) this.c.b(layoutInflater, viewGroup, Boolean.FALSE);
         this.d = eqjVar;
-        bzo.n(eqjVar);
+        throwIfVar1IsNull(eqjVar);
         return eqjVar.getRoot();
     }
 

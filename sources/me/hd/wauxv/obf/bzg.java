@@ -118,7 +118,7 @@ public final class bzg implements Map, Serializable, bsz {
             return null;
         }
         Object[] objArr = this.c;
-        bzo.n(objArr);
+        throwIfVar1IsNull(objArr);
         return objArr[iU];
     }
 
@@ -137,7 +137,7 @@ public final class bzg implements Map, Serializable, bsz {
             Object obj = bzgVar.b[i2];
             int iHashCode = obj != null ? obj.hashCode() : 0;
             Object[] objArr = bzgVar.c;
-            bzo.n(objArr);
+            throwIfVar1IsNull(objArr);
             Object obj2 = objArr[bzdVar.c];
             int iHashCode2 = obj2 != null ? obj2.hashCode() : 0;
             bzdVar.j();
@@ -194,7 +194,7 @@ public final class bzg implements Map, Serializable, bsz {
                     }
                     return i4;
                 }
-                if (bzo.f(this.b[i3 - 1], obj)) {
+                if (nullSafeIsEqual(this.b[i3 - 1], obj)) {
                     return -i3;
                 }
                 i2++;
@@ -238,7 +238,7 @@ public final class bzg implements Map, Serializable, bsz {
 
     @Override // java.util.Map
     public final void putAll(Map map) {
-        bzo.q(map, "from");
+        throwIfVar1IsNull(map, "from");
         p();
         Set<Map.Entry> setEntrySet = map.entrySet();
         if (setEntrySet.isEmpty()) {
@@ -260,7 +260,7 @@ public final class bzg implements Map, Serializable, bsz {
                 objArr[iO] = entry.getValue();
             } else {
                 int i = (-iO) - 1;
-                if (!bzo.f(entry.getValue(), objArr[i])) {
+                if (!nullSafeIsEqual(entry.getValue(), objArr[i])) {
                     objArr[i] = entry.getValue();
                 }
             }
@@ -301,7 +301,7 @@ public final class bzg implements Map, Serializable, bsz {
     }
 
     public final boolean r(Collection collection) {
-        bzo.q(collection, "m");
+        throwIfVar1IsNull(collection, "m");
         for (Object obj : collection) {
             if (obj != null) {
                 try {
@@ -323,21 +323,21 @@ public final class bzg implements Map, Serializable, bsz {
             return null;
         }
         Object[] objArr = this.c;
-        bzo.n(objArr);
+        throwIfVar1IsNull(objArr);
         Object obj2 = objArr[iU];
         y(iU);
         return obj2;
     }
 
     public final boolean s(Map.Entry entry) {
-        bzo.q(entry, "entry");
+        throwIfVar1IsNull(entry, "entry");
         int iU = u(entry.getKey());
         if (iU < 0) {
             return false;
         }
         Object[] objArr = this.c;
-        bzo.n(objArr);
-        return bzo.f(objArr[iU], entry.getValue());
+        throwIfVar1IsNull(objArr);
+        return nullSafeIsEqual(objArr[iU], entry.getValue());
     }
 
     @Override // java.util.Map
@@ -370,18 +370,18 @@ public final class bzg implements Map, Serializable, bsz {
                 i6 = i5 > 2147483639 ? Integer.MAX_VALUE : 2147483639;
             }
             Object[] objArrCopyOf2 = Arrays.copyOf(objArr, i6);
-            bzo.p(objArrCopyOf2, "copyOf(...)");
+            throwIfVar1IsNull(objArrCopyOf2, "copyOf(...)");
             this.b = objArrCopyOf2;
             Object[] objArr2 = this.c;
             if (objArr2 != null) {
                 objArrCopyOf = Arrays.copyOf(objArr2, i6);
-                bzo.p(objArrCopyOf, "copyOf(...)");
+                throwIfVar1IsNull(objArrCopyOf, "copyOf(...)");
             } else {
                 objArrCopyOf = null;
             }
             this.c = objArrCopyOf;
             int[] iArrCopyOf = Arrays.copyOf(this.d, i6);
-            bzo.p(iArrCopyOf, "copyOf(...)");
+            throwIfVar1IsNull(iArrCopyOf, "copyOf(...)");
             this.d = iArrCopyOf;
             int iHighestOneBit = Integer.highestOneBit((i6 >= 1 ? i6 : 1) * 3);
             if (iHighestOneBit > this.e.length) {
@@ -414,7 +414,7 @@ public final class bzg implements Map, Serializable, bsz {
             }
             sb.append(SignatureVisitor.INSTANCEOF);
             Object[] objArr = bzgVar.c;
-            bzo.n(objArr);
+            throwIfVar1IsNull(objArr);
             Object obj2 = objArr[bzdVar.c];
             if (obj2 == bzgVar) {
                 sb.append("(this Map)");
@@ -426,7 +426,7 @@ public final class bzg implements Map, Serializable, bsz {
         }
         sb.append("}");
         String string = sb.toString();
-        bzo.p(string, "toString(...)");
+        throwIfVar1IsNull(string, "toString(...)");
         return string;
     }
 
@@ -440,7 +440,7 @@ public final class bzg implements Map, Serializable, bsz {
             }
             if (i2 > 0) {
                 int i3 = i2 - 1;
-                if (bzo.f(this.b[i3], obj)) {
+                if (nullSafeIsEqual(this.b[i3], obj)) {
                     return i3;
                 }
             }
@@ -461,8 +461,8 @@ public final class bzg implements Map, Serializable, bsz {
             }
             if (this.d[i] >= 0) {
                 Object[] objArr = this.c;
-                bzo.n(objArr);
-                if (bzo.f(objArr[i], obj)) {
+                throwIfVar1IsNull(objArr);
+                if (nullSafeIsEqual(objArr[i], obj)) {
                     return i;
                 }
             }
@@ -504,7 +504,8 @@ public final class bzg implements Map, Serializable, bsz {
                 }
                 i4--;
                 if (i4 < 0) {
-                    throw new IllegalStateException("This cannot happen with fixed magic multiplier and grow-only hash array. Have object hashCodes changed?");
+                    throw new IllegalStateException(
+                            "This cannot happen with fixed magic multiplier and grow-only hash array. Have object hashCodes changed?");
                 }
                 iW = iW == 0 ? iArr.length - 1 : iW - 1;
             }
@@ -516,7 +517,7 @@ public final class bzg implements Map, Serializable, bsz {
 
     public final void y(int i) {
         Object[] objArr = this.b;
-        bzo.q(objArr, "<this>");
+        throwIfVar1IsNull(objArr, "<this>");
         objArr[i] = null;
         Object[] objArr2 = this.c;
         if (objArr2 != null) {

@@ -6,7 +6,7 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class dxk {
     public static final dxj Companion = new dxj();
-    public static final btt[] a = {null, null, null, null, null, ewz.am(btx.a, new dtr(8)), null};
+    public static final btt[] a = { null, null, null, null, null, ewz.am(btx.a, new dtr(8)), null };
     public final String b;
     public final Long c;
     public final String d;
@@ -15,7 +15,8 @@ public final class dxk {
     public final List g;
     public final Integer h;
 
-    public /* synthetic */ dxk(int i, String str, Long l, String str2, dyu dyuVar, Integer num, List list, Integer num2) {
+    public /* synthetic */ dxk(int i, String str, Long l, String str2, dyu dyuVar, Integer num, List list,
+            Integer num2) {
         if (127 != (i & 127)) {
             bht.ah(i, 127, dxi.b.getDescriptor());
             throw null;
@@ -37,7 +38,10 @@ public final class dxk {
             return false;
         }
         dxk dxkVar = (dxk) obj;
-        return bzo.f(this.b, dxkVar.b) && bzo.f(this.c, dxkVar.c) && bzo.f(this.d, dxkVar.d) && bzo.f(this.e, dxkVar.e) && bzo.f(this.f, dxkVar.f) && bzo.f(this.g, dxkVar.g) && bzo.f(this.h, dxkVar.h);
+        return nullSafeIsEqual(this.b, dxkVar.b) && nullSafeIsEqual(this.c, dxkVar.c)
+                && nullSafeIsEqual(this.d, dxkVar.d) && nullSafeIsEqual(this.e, dxkVar.e)
+                && nullSafeIsEqual(this.f, dxkVar.f) && nullSafeIsEqual(this.g, dxkVar.g)
+                && nullSafeIsEqual(this.h, dxkVar.h);
     }
 
     public final int hashCode() {
@@ -67,6 +71,6 @@ public final class dxk {
         sb.append(", status=" /* cnb.z(-190808217090858L) */);
         bjs.w(sb, this.f, -190782447287082L);
         yg.v(sb, this.g, -191276368526122L);
-        return bjs.p(sb, this.h, ')');
+        return concat(sb, this.h, ')');
     }
 }

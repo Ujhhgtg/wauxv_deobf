@@ -23,17 +23,20 @@ public final class ObjectReaderImplInt32ValueArray extends ObjectReaderPrimitive
         this.builder = function;
     }
 
-    @Override // com.alibaba.fastjson2.reader.ObjectReaderPrimitive, com.alibaba.fastjson2.reader.ObjectReader
+    @Override // com.alibaba.fastjson2.reader.ObjectReaderPrimitive,
+              // com.alibaba.fastjson2.reader.ObjectReader
     public /* bridge */ /* synthetic */ Object createInstance(long j) {
         return super.createInstance(j);
     }
 
-    @Override // com.alibaba.fastjson2.reader.ObjectReaderPrimitive, com.alibaba.fastjson2.reader.ObjectReader
+    @Override // com.alibaba.fastjson2.reader.ObjectReaderPrimitive,
+              // com.alibaba.fastjson2.reader.ObjectReader
     public /* bridge */ /* synthetic */ Class getObjectClass() {
         return super.getObjectClass();
     }
 
-    @Override // com.alibaba.fastjson2.reader.ObjectReaderPrimitive, com.alibaba.fastjson2.reader.ObjectReader
+    @Override // com.alibaba.fastjson2.reader.ObjectReaderPrimitive,
+              // com.alibaba.fastjson2.reader.ObjectReader
     public Object readJSONBObject(JSONReader jSONReader, Type type, Object obj, long j) {
         if (jSONReader.nextIfMatch(JSONB.Constants.BC_TYPED_ANY)) {
             long typeHashCode = jSONReader.readTypeHashCode();
@@ -106,9 +109,10 @@ public final class ObjectReaderImplInt32ValueArray extends ObjectReaderPrimitive
             } else if (obj instanceof Number) {
                 iIntValue = ((Number) obj).intValue();
             } else {
-                Function typeConvert = JSONFactory.getDefaultObjectReaderProvider().getTypeConvert(obj.getClass(), Integer.TYPE);
+                Function typeConvert = JSONFactory.getDefaultObjectReaderProvider().getTypeConvert(obj.getClass(),
+                        Integer.TYPE);
                 if (typeConvert == null) {
-                    throw new JSONException(bjs.m(obj, new StringBuilder("can not cast to int ")));
+                    throw new JSONException(concatVar1GetClass(obj, new StringBuilder("can not cast to int ")));
                 }
                 iIntValue = ((Integer) typeConvert.apply(obj)).intValue();
             }

@@ -11,7 +11,7 @@ public final class emu implements Comparable {
 
     @Override // java.lang.Comparable
     public final int compareTo(Object obj) {
-        return bzo.r(this.a ^ Integer.MIN_VALUE, ((emu) obj).a ^ Integer.MIN_VALUE);
+        return KotlinHelpers.r(this.a ^ Integer.MIN_VALUE, ((emu) obj).a ^ Integer.MIN_VALUE);
     }
 
     public final boolean equals(Object obj) {

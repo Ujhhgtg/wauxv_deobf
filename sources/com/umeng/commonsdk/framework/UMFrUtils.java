@@ -41,7 +41,8 @@ public class UMFrUtils {
         if (context != null) {
             Context applicationContext = context.getApplicationContext();
             try {
-                return ((Integer) Class.forName("android.content.Context").getMethod("checkSelfPermission", String.class).invoke(context, str)).intValue() == 0;
+                return ((Integer) Class.forName("android.content.Context")
+                        .getMethod("checkSelfPermission", String.class).invoke(context, str)).intValue() == 0;
             } catch (Throwable th) {
                 UMCrashManager.reportCrash(applicationContext, th);
             }
@@ -49,14 +50,18 @@ public class UMFrUtils {
         return false;
     }
 
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException
-    	at java.base/java.util.Objects.requireNonNull(Objects.java:209)
-    	at java.base/java.util.ArrayList.batchRemove(ArrayList.java:816)
-    	at java.base/java.util.ArrayList.removeAll(ArrayList.java:791)
-    	at jadx.core.dex.visitors.finaly.TryCatchEdgeBlockMap.getAllInScope(TryCatchEdgeBlockMap.java:91)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:204)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException
+     * at java.base/java.util.Objects.requireNonNull(Objects.java:209)
+     * at java.base/java.util.ArrayList.batchRemove(ArrayList.java:816)
+     * at java.base/java.util.ArrayList.removeAll(ArrayList.java:791)
+     * at jadx.core.dex.visitors.finaly.TryCatchEdgeBlockMap.getAllInScope(
+     * TryCatchEdgeBlockMap.java:91)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+     * MarkFinallyVisitor.java:204)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:119)
      */
     public static int envelopeFileNumber(Context context) {
         String[] list;
@@ -107,7 +112,8 @@ public class UMFrUtils {
         synchronized (mEnvelopeFileLock) {
             try {
                 if (mDefaultEnvelopeDirPath == null) {
-                    mDefaultEnvelopeDirPath = context.getFilesDir().getAbsolutePath() + File.separator + "." + mDefaultEnvelopeDir;
+                    mDefaultEnvelopeDirPath = context.getFilesDir().getAbsolutePath() + File.separator + "."
+                            + mDefaultEnvelopeDir;
                 }
                 File file = new File(mDefaultEnvelopeDirPath);
                 if (!file.exists() && !file.mkdir()) {
@@ -130,9 +136,13 @@ public class UMFrUtils {
             try {
                 File[] fileArrListFiles = file.listFiles();
                 if (fileArrListFiles != null && fileArrListFiles.length != 0) {
-                    Arrays.sort(fileArrListFiles, new Comparator<File>() { // from class: com.umeng.commonsdk.framework.UMFrUtils.2
+                    Arrays.sort(fileArrListFiles, new Comparator<File>() { // from class:
+                                                                           // com.umeng.commonsdk.framework.UMFrUtils.2
                         @Override // java.util.Comparator
-                        /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
+                        /*
+                         * JADX INFO: renamed from: a, reason: merged with bridge method
+                         * [inline-methods]
+                         */
                         public int compare(File file2, File file3) {
                             long jLastModified = file2.lastModified() - file3.lastModified();
                             if (jLastModified > 0) {
@@ -220,7 +230,9 @@ public class UMFrUtils {
                 return strSubstring;
             }
             String packageName = context.getPackageName();
-            return currentProcessName.length() > packageName.length() ? currentProcessName.substring(packageName.length() + 1, currentProcessName.length()) : currentProcessName;
+            return currentProcessName.length() > packageName.length()
+                    ? currentProcessName.substring(packageName.length() + 1, currentProcessName.length())
+                    : currentProcessName;
         } catch (Throwable th) {
             UMCrashManager.reportCrash(context.getApplicationContext(), th);
             return strSubstring;
@@ -270,7 +282,9 @@ public class UMFrUtils {
         ConnectivityManager connectivityManager;
         NetworkInfo activeNetworkInfo;
         try {
-            if (!checkPermission(context, "android.permission.ACCESS_NETWORK_STATE") || (connectivityManager = (ConnectivityManager) context.getSystemService("connectivity")) == null || (activeNetworkInfo = connectivityManager.getActiveNetworkInfo()) == null) {
+            if (!checkPermission(context, "android.permission.ACCESS_NETWORK_STATE")
+                    || (connectivityManager = (ConnectivityManager) context.getSystemService("connectivity")) == null
+                    || (activeNetworkInfo = connectivityManager.getActiveNetworkInfo()) == null) {
                 return false;
             }
             return activeNetworkInfo.isConnectedOrConnecting();
@@ -300,14 +314,18 @@ public class UMFrUtils {
         }
     }
 
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException
-    	at java.base/java.util.Objects.requireNonNull(Objects.java:209)
-    	at java.base/java.util.ArrayList.batchRemove(ArrayList.java:816)
-    	at java.base/java.util.ArrayList.removeAll(ArrayList.java:791)
-    	at jadx.core.dex.visitors.finaly.TryCatchEdgeBlockMap.getAllInScope(TryCatchEdgeBlockMap.java:91)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:204)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException
+     * at java.base/java.util.Objects.requireNonNull(Objects.java:209)
+     * at java.base/java.util.ArrayList.batchRemove(ArrayList.java:816)
+     * at java.base/java.util.ArrayList.removeAll(ArrayList.java:791)
+     * at jadx.core.dex.visitors.finaly.TryCatchEdgeBlockMap.getAllInScope(
+     * TryCatchEdgeBlockMap.java:91)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+     * MarkFinallyVisitor.java:204)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:119)
      */
     public static void removeRedundantEnvelopeFiles(Context context, int i) {
         File file = new File(getEnvelopeDirPath(context));
@@ -315,9 +333,13 @@ public class UMFrUtils {
             try {
                 File[] fileArrListFiles = file.listFiles();
                 if (fileArrListFiles != null && fileArrListFiles.length > i) {
-                    Arrays.sort(fileArrListFiles, new Comparator<File>() { // from class: com.umeng.commonsdk.framework.UMFrUtils.1
+                    Arrays.sort(fileArrListFiles, new Comparator<File>() { // from class:
+                                                                           // com.umeng.commonsdk.framework.UMFrUtils.1
                         @Override // java.util.Comparator
-                        /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
+                        /*
+                         * JADX INFO: renamed from: a, reason: merged with bridge method
+                         * [inline-methods]
+                         */
                         public int compare(File file2, File file3) {
                             long jLastModified = file2.lastModified() - file3.lastModified();
                             if (jLastModified > 0) {
@@ -344,16 +366,28 @@ public class UMFrUtils {
         }
     }
 
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.java:210)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:196)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:180)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:201)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.java:347)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(TryCatchBlockAttr.java:356)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:202)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.
+     * java:210)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:196)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:180)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:
+     * 201)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.
+     * java:347)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(
+     * TryCatchBlockAttr.java:356)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+     * MarkFinallyVisitor.java:202)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:119)
      */
     public static int saveEnvelopeFile(Context context, String str, byte[] bArr) {
         FileOutputStream fileOutputStream;
@@ -382,7 +416,7 @@ public class UMFrUtils {
                 fileOutputStream.write(bArr);
                 fileOutputStream.close();
                 boolean zA = com.umeng.commonsdk.statistics.internal.a.a(context).a(str);
-                boolean zB = com.umeng.commonsdk.statistics.internal.a.a(context).b(str);
+                boolean zB = com.umeng.commonsdk.statistics.internal.a.a(context).tryGetClassByName(str);
                 if (zA) {
                     updateLastSuccessfulBuildTime(context);
                 }
@@ -447,7 +481,8 @@ public class UMFrUtils {
                 try {
                     String envelopeDirPath = getEnvelopeDirPath(context);
                     for (int i = 0; i < fileArrListFiles.length; i++) {
-                        fileArrListFiles[i].renameTo(new File(envelopeDirPath + File.separator + fileArrListFiles[i].getName()));
+                        fileArrListFiles[i]
+                                .renameTo(new File(envelopeDirPath + File.separator + fileArrListFiles[i].getName()));
                     }
                     if (file.isDirectory()) {
                         file.delete();
@@ -463,16 +498,28 @@ public class UMFrUtils {
         }
     }
 
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.java:210)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:196)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(TryCatchBlockAttr.java:180)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:201)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.java:347)
-    	at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(TryCatchBlockAttr.java:356)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:202)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getSuccessors()" because "blk" is null
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.exploreTryPath(TryCatchBlockAttr.
+     * java:210)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:196)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getFallthroughTryEdges(
+     * TryCatchBlockAttr.java:180)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getTryEdges(TryCatchBlockAttr.java:
+     * 201)
+     * at
+     * jadx.core.dex.trycatch.TryCatchBlockAttr.getEdgeBlockMap(TryCatchBlockAttr.
+     * java:347)
+     * at jadx.core.dex.trycatch.TryCatchBlockAttr.getExecutionScopeGroups(
+     * TryCatchBlockAttr.java:356)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+     * MarkFinallyVisitor.java:202)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:119)
      */
     public static byte[] toByteArray(String str) {
         Throwable th;
@@ -493,7 +540,8 @@ public class UMFrUtils {
                     th = th2;
                 }
                 try {
-                    MappedByteBuffer mappedByteBufferLoad = channel.map(FileChannel.MapMode.READ_ONLY, 0L, channel.size()).load();
+                    MappedByteBuffer mappedByteBufferLoad = channel
+                            .map(FileChannel.MapMode.READ_ONLY, 0L, channel.size()).load();
                     bArr = new byte[(int) channel.size()];
                     if (mappedByteBufferLoad.remaining() > 0) {
                         mappedByteBufferLoad.get(bArr, 0, mappedByteBufferLoad.remaining());

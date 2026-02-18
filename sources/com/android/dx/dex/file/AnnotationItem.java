@@ -89,7 +89,7 @@ public final class AnnotationItem extends OffsettedItem {
     }
 
     public void annotateTo(AnnotatedOutput annotatedOutput, String str) {
-        StringBuilder sbR = bjs.r(str, "visibility: ");
+        StringBuilder sbR = concat(str, "visibility: ");
         sbR.append(this.annotation.getVisibility().toHuman());
         annotatedOutput.annotate(0, sbR.toString());
         annotatedOutput.annotate(0, str + "type: " + this.annotation.getType().toHuman());

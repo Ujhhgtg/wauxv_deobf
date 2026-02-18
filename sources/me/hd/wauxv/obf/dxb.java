@@ -24,7 +24,7 @@ public final class dxb {
             return false;
         }
         dxb dxbVar = (dxb) obj;
-        return bzo.f(this.a, dxbVar.a) && bzo.f(this.b, dxbVar.b);
+        return nullSafeIsEqual(this.a, dxbVar.a) && nullSafeIsEqual(this.b, dxbVar.b);
     }
 
     public final int hashCode() {

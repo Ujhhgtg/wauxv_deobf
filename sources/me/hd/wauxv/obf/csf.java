@@ -5,27 +5,27 @@ package me.hd.wauxv.obf;
 public final class csf extends ckn {
     public csf(long j, bmu bmuVar, cwd cwdVar, dfx dfxVar) {
         rw rwVar = new rw();
-        bzo.q(cwdVar, "proto");
-        bzo.q(bmuVar, "writer");
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(cwdVar, "proto");
+        throwIfVar1IsNull(bmuVar, "writer");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         super(cwdVar, bmuVar, j, dfxVar, rwVar);
     }
 
     @Override // me.hd.wauxv.obf.cwn
     public final void _cb(long j, String str) {
-        bzo.q(str, "value");
+        throwIfVar1IsNull(str, "value");
         throw new dgb("Packing only supports primitive number types");
     }
 
     @Override // me.hd.wauxv.obf.ckn, me.hd.wauxv.obf.cwn
     public final long ae(dfx dfxVar, int i) {
-        bzo.q(dfxVar, "<this>");
+        throwIfVar1IsNull(dfxVar, "<this>");
         return 19500L;
     }
 
     @Override // me.hd.wauxv.obf.ckn, me.hd.wauxv.obf.cwn
     public final void aj(dfx dfxVar) {
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         if (this.ai.c > 0) {
             super.aj(dfxVar);
         }
@@ -33,13 +33,13 @@ public final class csf extends ckn {
 
     @Override // me.hd.wauxv.obf.cwn, me.hd.wauxv.obf.avt
     public final acn o(dfx dfxVar) {
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         throw new dgb("Packing only supports primitive number types");
     }
 
     @Override // me.hd.wauxv.obf.cwn, me.hd.wauxv.obf.avt
     public final acn v(dfx dfxVar, int i) {
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         throw new dgb("Packing only supports primitive number types");
     }
 }

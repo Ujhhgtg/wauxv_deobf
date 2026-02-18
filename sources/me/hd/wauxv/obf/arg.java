@@ -7,7 +7,7 @@ import android.view.Window;
 public class arg extends arf {
     @Override // me.hd.wauxv.obf.arf
     public void a(Window window) {
-        bzo.q(window, "window");
+        throwIfVar1IsNull(window, "window");
         window.getAttributes().layoutInDisplayCutoutMode = 1;
     }
 }

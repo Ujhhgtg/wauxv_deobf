@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.nio.channels.FileChannel;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.dlc;
 import me.hd.wauxv.obf.ekc;
 import me.hd.wauxv.obf.nu;
@@ -33,16 +33,19 @@ public final class Relay {
     private long upstreamPos;
     private Thread upstreamReader;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
         }
 
         public final Relay edit(File file, dlc dlcVar, sj sjVar, long j) throws IOException {
-            bzo.q(file, "file");
-            bzo.q(dlcVar, "upstream");
-            bzo.q(sjVar, "metadata");
+            throwIfVar1IsNull(file, "file");
+            throwIfVar1IsNull(dlcVar, "upstream");
+            throwIfVar1IsNull(sjVar, "metadata");
             RandomAccessFile randomAccessFile = new RandomAccessFile(file, "rw");
             Relay relay = new Relay(randomAccessFile, dlcVar, 0L, sjVar, j, null);
             randomAccessFile.setLength(0L);
@@ -51,14 +54,14 @@ public final class Relay {
         }
 
         public final Relay read(File file) throws IOException {
-            bzo.q(file, "file");
+            throwIfVar1IsNull(file, "file");
             RandomAccessFile randomAccessFile = new RandomAccessFile(file, "rw");
             FileChannel channel = randomAccessFile.getChannel();
-            bzo.p(channel, "randomAccessFile.channel");
+            throwIfVar1IsNull(channel, "randomAccessFile.channel");
             FileOperator fileOperator = new FileOperator(channel);
             rh rhVar = new rh();
             fileOperator.read(0L, rhVar, Relay.FILE_HEADER_SIZE);
-            if (!bzo.f(rhVar.e(r11.g()), Relay.PREFIX_CLEAN)) {
+            if (!nullSafeIsEqual(rhVar.e(r11.setResultTrue()), Relay.PREFIX_CLEAN)) {
                 throw new IOException("unreadable cache file");
             }
             long j = rhVar.readLong();
@@ -72,7 +75,10 @@ public final class Relay {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public final class RelaySource implements dlc {
         private FileOperator fileOperator;
         private long sourcePos;
@@ -80,9 +86,9 @@ public final class Relay {
 
         public RelaySource() {
             RandomAccessFile file = Relay.this.getFile();
-            bzo.n(file);
+            throwIfVar1IsNull(file);
             FileChannel channel = file.getChannel();
-            bzo.p(channel, "file!!.channel");
+            throwIfVar1IsNull(channel, "file!!.channel");
             this.fileOperator = new FileOperator(channel);
         }
 
@@ -107,18 +113,27 @@ public final class Relay {
             }
         }
 
-        /* JADX WARN: Undo finally extract visitor
-        java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getInstructions()" because "finallyBlockTerminus" is null
-        	at jadx.core.dex.visitors.finaly.traverser.state.TraverserActivePathState.<init>(TraverserActivePathState.java:253)
-        	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.findCommonInsns(MarkFinallyVisitor.java:422)
-        	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.extractFinally(MarkFinallyVisitor.java:302)
-        	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.processTryBlock(MarkFinallyVisitor.java:222)
-        	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:150)
+        /*
+         * JADX WARN: Undo finally extract visitor
+         * java.lang.NullPointerException: Cannot invoke
+         * "jadx.core.dex.nodes.BlockNode.getInstructions()" because
+         * "finallyBlockTerminus" is null
+         * at
+         * jadx.core.dex.visitors.finaly.traverser.state.TraverserActivePathState.<init>
+         * (TraverserActivePathState.java:253)
+         * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.findCommonInsns(
+         * MarkFinallyVisitor.java:422)
+         * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.extractFinally(
+         * MarkFinallyVisitor.java:302)
+         * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.processTryBlock(
+         * MarkFinallyVisitor.java:222)
+         * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+         * java:150)
          */
         @Override // me.hd.wauxv.obf.dlc
         public long read(rh rhVar, long j) throws IOException {
             char c;
-            bzo.q(rhVar, "sink");
+            throwIfVar1IsNull(rhVar, "sink");
             if (this.fileOperator == null) {
                 throw new IllegalStateException("Check failed.");
             }
@@ -154,14 +169,14 @@ public final class Relay {
                 if (c == 2) {
                     long jMin2 = Math.min(j, Relay.this.getUpstreamPos() - this.sourcePos);
                     FileOperator fileOperator = this.fileOperator;
-                    bzo.n(fileOperator);
+                    throwIfVar1IsNull(fileOperator);
                     fileOperator.read(this.sourcePos + Relay.FILE_HEADER_SIZE, rhVar, jMin2);
                     this.sourcePos += jMin2;
                     return jMin2;
                 }
                 try {
                     dlc upstream = Relay.this.getUpstream();
-                    bzo.n(upstream);
+                    throwIfVar1IsNull(upstream);
                     long j2 = upstream.read(Relay.this.getUpstreamBuffer(), Relay.this.getBufferMaxSize());
                     if (j2 == -1) {
                         Relay relay2 = Relay.this;
@@ -181,8 +196,9 @@ public final class Relay {
                     Relay.this.getUpstreamBuffer().l(0L, rhVar, jMin3);
                     this.sourcePos += jMin3;
                     FileOperator fileOperator2 = this.fileOperator;
-                    bzo.n(fileOperator2);
-                    fileOperator2.write(Relay.this.getUpstreamPos() + Relay.FILE_HEADER_SIZE, Relay.this.getUpstreamBuffer().clone(), j2);
+                    throwIfVar1IsNull(fileOperator2);
+                    fileOperator2.write(Relay.this.getUpstreamPos() + Relay.FILE_HEADER_SIZE,
+                            Relay.this.getUpstreamBuffer().clone(), j2);
                     Relay relay4 = Relay.this;
                     synchronized (relay4) {
                         try {
@@ -246,9 +262,9 @@ public final class Relay {
             throw new IllegalArgumentException("Failed requirement.");
         }
         RandomAccessFile randomAccessFile = this.file;
-        bzo.n(randomAccessFile);
+        throwIfVar1IsNull(randomAccessFile);
         FileChannel channel = randomAccessFile.getChannel();
-        bzo.p(channel, "file!!.channel");
+        throwIfVar1IsNull(channel, "file!!.channel");
         new FileOperator(channel).write(0L, rhVar, FILE_HEADER_SIZE);
     }
 
@@ -256,20 +272,20 @@ public final class Relay {
         rh rhVar = new rh();
         rhVar.al(this.metadata);
         RandomAccessFile randomAccessFile = this.file;
-        bzo.n(randomAccessFile);
+        throwIfVar1IsNull(randomAccessFile);
         FileChannel channel = randomAccessFile.getChannel();
-        bzo.p(channel, "file!!.channel");
+        throwIfVar1IsNull(channel, "file!!.channel");
         new FileOperator(channel).write(FILE_HEADER_SIZE + j, rhVar, this.metadata.g());
     }
 
     public final void commit(long j) throws IOException {
         writeMetadata(j);
         RandomAccessFile randomAccessFile = this.file;
-        bzo.n(randomAccessFile);
+        throwIfVar1IsNull(randomAccessFile);
         randomAccessFile.getChannel().force(false);
         writeHeader(PREFIX_CLEAN, j, this.metadata.g());
         RandomAccessFile randomAccessFile2 = this.file;
-        bzo.n(randomAccessFile2);
+        throwIfVar1IsNull(randomAccessFile2);
         randomAccessFile2.getChannel().force(false);
         synchronized (this) {
             this.complete = true;

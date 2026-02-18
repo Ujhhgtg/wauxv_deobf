@@ -28,12 +28,12 @@ public abstract class bcy implements View.OnTouchListener, View.OnAttachStateCha
         this.h = (ViewConfiguration.getLongPressTimeout() + tapTimeout) / 2;
     }
 
-    public abstract dho c();
+    public abstract dho callOriginalMethod();
 
-    public abstract boolean d();
+    public abstract boolean getArgs();
 
-    public boolean e() {
-        dho dhoVarC = c();
+    public boolean getThisObject() {
+        dho dhoVarC = callOriginalMethod();
         if (dhoVarC == null || !dhoVarC.e()) {
             return true;
         }
@@ -53,10 +53,10 @@ public abstract class bcy implements View.OnTouchListener, View.OnAttachStateCha
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:22:0x005c  */
-    /* JADX WARN: Found duplicated region for block: B:24:0x0062  */
-    /* JADX WARN: Found duplicated region for block: B:25:0x0065  */
-    /* JADX WARN: Found duplicated region for block: B:50:0x00cb  */
+    /* JADX WARN: Found duplicated region for block: B:22:0x005c */
+    /* JADX WARN: Found duplicated region for block: B:24:0x0062 */
+    /* JADX WARN: Found duplicated region for block: B:25:0x0065 */
+    /* JADX WARN: Found duplicated region for block: B:50:0x00cb */
     @Override // android.view.View.OnTouchListener
     public final boolean onTouch(View view, MotionEvent motionEvent) {
         boolean z;
@@ -64,9 +64,9 @@ public abstract class bcy implements View.OnTouchListener, View.OnAttachStateCha
         boolean z2 = this.l;
         View view2 = this.i;
         if (z2) {
-            dho dhoVarC = c();
+            dho dhoVarC = callOriginalMethod();
             if (dhoVarC == null || !dhoVarC.e() || (aqeVarAi = dhoVarC.ai()) == null || !aqeVarAi.isShown()) {
-                z = !e();
+                z = !getThisObject();
             } else {
                 MotionEvent motionEventObtainNoHistory = MotionEvent.obtainNoHistory(motionEvent);
                 int[] iArr = this.n;
@@ -79,7 +79,7 @@ public abstract class bcy implements View.OnTouchListener, View.OnAttachStateCha
                 int actionMasked = motionEvent.getActionMasked();
                 boolean z3 = (actionMasked == 1 || actionMasked == 3) ? false : true;
                 if (!zN || !z3) {
-                    if (!e()) {
+                    if (!getThisObject()) {
                     }
                 }
             }
@@ -105,10 +105,11 @@ public abstract class bcy implements View.OnTouchListener, View.OnAttachStateCha
                         float y = motionEvent.getY(iFindPointerIndex);
                         float f = this.f;
                         float f2 = -f;
-                        if (x < f2 || y < f2 || x >= (view2.getRight() - view2.getLeft()) + f || y >= (view2.getBottom() - view2.getTop()) + f) {
+                        if (x < f2 || y < f2 || x >= (view2.getRight() - view2.getLeft()) + f
+                                || y >= (view2.getBottom() - view2.getTop()) + f) {
                             o();
                             view2.getParent().requestDisallowInterceptTouchEvent(true);
-                            if (d()) {
+                            if (getArgs()) {
                                 z = true;
                             }
                         }

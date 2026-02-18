@@ -26,7 +26,8 @@ public final class eeo {
             return false;
         }
         eeo eeoVar = (eeo) obj;
-        return bzo.f(this.a, eeoVar.a) && bzo.f(this.b, eeoVar.b) && bzo.f(this.c, eeoVar.c);
+        return nullSafeIsEqual(this.a, eeoVar.a) && nullSafeIsEqual(this.b, eeoVar.b)
+                && nullSafeIsEqual(this.c, eeoVar.c);
     }
 
     public final int hashCode() {
@@ -43,6 +44,6 @@ public final class eeo {
         sb.append("sm0Proto(biz_nickname=" /* cnb.z(-272584394406698L) */);
         yg.u(sb, this.a, -272537149766442L);
         yg.u(sb, this.b, -272468430289706L);
-        return bjs.p(sb, this.c, ')');
+        return concat(sb, this.c, ')');
     }
 }

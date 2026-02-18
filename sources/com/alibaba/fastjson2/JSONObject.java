@@ -52,11 +52,16 @@ import me.hd.wauxv.obf.yg;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public class JSONObject extends LinkedHashMap<String, Object> implements InvocationHandler {
-    static final long NONE_DIRECT_FEATURES = ((JSONWriter.Feature.ReferenceDetection.mask | JSONWriter.Feature.PrettyFormat.mask) | JSONWriter.Feature.NotWriteEmptyArray.mask) | JSONWriter.Feature.NotWriteDefaultValue.mask;
+    static final long NONE_DIRECT_FEATURES = ((JSONWriter.Feature.ReferenceDetection.mask
+            | JSONWriter.Feature.PrettyFormat.mask) | JSONWriter.Feature.NotWriteEmptyArray.mask)
+            | JSONWriter.Feature.NotWriteDefaultValue.mask;
     static ObjectReader<JSONArray> arrayReader = null;
     private static final long serialVersionUID = 1;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class NameConsumer implements Consumer<Method> {
         final Annotation annotation;
         String name;
@@ -185,7 +190,11 @@ public class JSONObject extends LinkedHashMap<String, Object> implements Invocat
             return null;
         }
         if (obj instanceof Number) {
-            return obj instanceof BigDecimal ? (BigDecimal) obj : obj instanceof BigInteger ? new BigDecimal((BigInteger) obj) : obj instanceof Float ? TypeUtils.toBigDecimal(((Float) obj).floatValue()) : obj instanceof Double ? TypeUtils.toBigDecimal(((Double) obj).doubleValue()) : BigDecimal.valueOf(((Number) obj).longValue());
+            return obj instanceof BigDecimal ? (BigDecimal) obj
+                    : obj instanceof BigInteger ? new BigDecimal((BigInteger) obj)
+                            : obj instanceof Float ? TypeUtils.toBigDecimal(((Float) obj).floatValue())
+                                    : obj instanceof Double ? TypeUtils.toBigDecimal(((Double) obj).doubleValue())
+                                            : BigDecimal.valueOf(((Number) obj).longValue());
         }
         if (obj instanceof String) {
             return TypeUtils.toBigDecimal(((String) obj).trim());
@@ -193,7 +202,7 @@ public class JSONObject extends LinkedHashMap<String, Object> implements Invocat
         if (obj instanceof Boolean) {
             return ((Boolean) obj).booleanValue() ? BigDecimal.ONE : BigDecimal.ZERO;
         }
-        throw new JSONException(bjs.n(obj, new StringBuilder("Can not cast '"), "' to BigDecimal"));
+        throw new JSONException(concatVar1GetClassAndVar3(obj, new StringBuilder("Can not cast '"), "' to BigDecimal"));
     }
 
     public BigInteger getBigInteger(String str) {
@@ -202,13 +211,16 @@ public class JSONObject extends LinkedHashMap<String, Object> implements Invocat
             return null;
         }
         if (obj instanceof Number) {
-            return obj instanceof BigInteger ? (BigInteger) obj : obj instanceof BigDecimal ? ((BigDecimal) obj).toBigInteger() : BigInteger.valueOf(((Number) obj).longValue());
+            return obj instanceof BigInteger ? (BigInteger) obj
+                    : obj instanceof BigDecimal ? ((BigDecimal) obj).toBigInteger()
+                            : BigInteger.valueOf(((Number) obj).longValue());
         }
         if (!(obj instanceof String)) {
             if (obj instanceof Boolean) {
                 return ((Boolean) obj).booleanValue() ? BigInteger.ONE : BigInteger.ZERO;
             }
-            throw new JSONException(bjs.n(obj, new StringBuilder("Can not cast '"), "' to BigInteger"));
+            throw new JSONException(
+                    concatVar1GetClassAndVar3(obj, new StringBuilder("Can not cast '"), "' to BigInteger"));
         }
         String strTrim = ((String) obj).trim();
         if (strTrim.isEmpty() || "null".equalsIgnoreCase(strTrim)) {
@@ -229,7 +241,8 @@ public class JSONObject extends LinkedHashMap<String, Object> implements Invocat
             return Boolean.valueOf(((Number) obj).intValue() == 1);
         }
         if (!(obj instanceof String)) {
-            throw new JSONException(bjs.n(obj, new StringBuilder("Can not cast '"), "' to boolean"));
+            throw new JSONException(
+                    concatVar1GetClassAndVar3(obj, new StringBuilder("Can not cast '"), "' to boolean"));
         }
         String str2 = (String) obj;
         if (str2.isEmpty() || "null".equalsIgnoreCase(str2)) {
@@ -245,7 +258,8 @@ public class JSONObject extends LinkedHashMap<String, Object> implements Invocat
 
     public Object getByPath(String str) {
         JSONPath jSONPathOf = JSONPath.of(str);
-        return jSONPathOf instanceof JSONPathSingleName ? get(((JSONPathSingleName) jSONPathOf).name) : jSONPathOf.eval(this);
+        return jSONPathOf instanceof JSONPathSingleName ? get(((JSONPathSingleName) jSONPathOf).name)
+                : jSONPathOf.eval(this);
     }
 
     public Byte getByte(String str) {
@@ -257,7 +271,7 @@ public class JSONObject extends LinkedHashMap<String, Object> implements Invocat
             return Byte.valueOf(((Number) obj).byteValue());
         }
         if (!(obj instanceof String)) {
-            throw new JSONException(bjs.n(obj, new StringBuilder("Can not cast '"), "' to byte"));
+            throw new JSONException(concatVar1GetClassAndVar3(obj, new StringBuilder("Can not cast '"), "' to byte"));
         }
         String strTrim = ((String) obj).trim();
         if (strTrim.isEmpty() || "null".equalsIgnoreCase(strTrim)) {
@@ -293,7 +307,9 @@ public class JSONObject extends LinkedHashMap<String, Object> implements Invocat
         if (obj == null) {
             return null;
         }
-        return obj instanceof Date ? (Date) obj : obj instanceof String ? DateUtils.parseDate((String) obj) : obj instanceof Number ? new Date(((Number) obj).longValue()) : TypeUtils.toDate(obj);
+        return obj instanceof Date ? (Date) obj
+                : obj instanceof String ? DateUtils.parseDate((String) obj)
+                        : obj instanceof Number ? new Date(((Number) obj).longValue()) : TypeUtils.toDate(obj);
     }
 
     public Double getDouble(String str) {
@@ -308,7 +324,7 @@ public class JSONObject extends LinkedHashMap<String, Object> implements Invocat
             return Double.valueOf(((Number) obj).doubleValue());
         }
         if (!(obj instanceof String)) {
-            throw new JSONException(bjs.n(obj, new StringBuilder("Can not cast '"), "' to double"));
+            throw new JSONException(concatVar1GetClassAndVar3(obj, new StringBuilder("Can not cast '"), "' to double"));
         }
         String strTrim = ((String) obj).trim();
         if (strTrim.isEmpty() || "null".equalsIgnoreCase(strTrim)) {
@@ -337,7 +353,7 @@ public class JSONObject extends LinkedHashMap<String, Object> implements Invocat
             return Float.valueOf(((Number) obj).floatValue());
         }
         if (!(obj instanceof String)) {
-            throw new JSONException(bjs.n(obj, new StringBuilder("Can not cast '"), "' to float"));
+            throw new JSONException(concatVar1GetClassAndVar3(obj, new StringBuilder("Can not cast '"), "' to float"));
         }
         String strTrim = ((String) obj).trim();
         if (strTrim.isEmpty() || "null".equalsIgnoreCase(strTrim)) {
@@ -391,13 +407,15 @@ public class JSONObject extends LinkedHashMap<String, Object> implements Invocat
             if (obj instanceof Boolean) {
                 return ((Boolean) obj).booleanValue() ? 1 : 0;
             }
-            throw new JSONException(bjs.n(obj, new StringBuilder("Can not cast '"), "' to Integer"));
+            throw new JSONException(
+                    concatVar1GetClassAndVar3(obj, new StringBuilder("Can not cast '"), "' to Integer"));
         }
         String strTrim = ((String) obj).trim();
         if (strTrim.isEmpty() || "null".equalsIgnoreCase(strTrim)) {
             return null;
         }
-        return strTrim.indexOf(46) != -1 ? Integer.valueOf((int) Double.parseDouble(strTrim)) : Integer.valueOf(Integer.parseInt(strTrim));
+        return strTrim.indexOf(46) != -1 ? Integer.valueOf((int) Double.parseDouble(strTrim))
+                : Integer.valueOf(Integer.parseInt(strTrim));
     }
 
     public JSONArray getJSONArray(String str) {
@@ -467,7 +485,8 @@ public class JSONObject extends LinkedHashMap<String, Object> implements Invocat
             put(str, jSONObject);
             return jSONObject;
         }
-        ObjectWriter objectWriter = JSONFactory.getDefaultObjectWriterProvider().getObjectWriter((Class) obj.getClass());
+        ObjectWriter objectWriter = JSONFactory.getDefaultObjectWriterProvider()
+                .getObjectWriter((Class) obj.getClass());
         if (!(objectWriter instanceof ObjectWriterAdapter)) {
             return null;
         }
@@ -512,10 +531,11 @@ public class JSONObject extends LinkedHashMap<String, Object> implements Invocat
             if (strTrim.isEmpty() || "null".equalsIgnoreCase(strTrim)) {
                 return null;
             }
-            return strTrim.indexOf(46) != -1 ? Long.valueOf((long) Double.parseDouble(strTrim)) : Long.valueOf(Long.parseLong(strTrim));
+            return strTrim.indexOf(46) != -1 ? Long.valueOf((long) Double.parseDouble(strTrim))
+                    : Long.valueOf(Long.parseLong(strTrim));
         }
         if (!(obj instanceof Boolean)) {
-            throw new JSONException(bjs.n(obj, new StringBuilder("Can not cast '"), "' to Long"));
+            throw new JSONException(concatVar1GetClassAndVar3(obj, new StringBuilder("Can not cast '"), "' to Long"));
         }
         if (((Boolean) obj).booleanValue()) {
             return Long.valueOf(serialVersionUID);
@@ -552,7 +572,8 @@ public class JSONObject extends LinkedHashMap<String, Object> implements Invocat
                 return (T) defaultObjectReaderProvider.getObjectReader(cls, z).createInstance((Map) t, featureArr);
             }
             if (t instanceof Collection) {
-                return (T) defaultObjectReaderProvider.getObjectReader(cls, z).createInstance((Collection) t, featureArr);
+                return (T) defaultObjectReaderProvider.getObjectReader(cls, z).createInstance((Collection) t,
+                        featureArr);
             }
             Class<?> mapping = TypeUtils.getMapping(cls);
             if (!mapping.isInstance(t)) {
@@ -608,7 +629,7 @@ public class JSONObject extends LinkedHashMap<String, Object> implements Invocat
             return Short.valueOf(((Number) obj).shortValue());
         }
         if (!(obj instanceof String)) {
-            throw new JSONException(bjs.n(obj, new StringBuilder("Can not cast '"), "' to short"));
+            throw new JSONException(concatVar1GetClassAndVar3(obj, new StringBuilder("Can not cast '"), "' to short"));
         }
         String strTrim = ((String) obj).trim();
         if (strTrim.isEmpty() || "null".equalsIgnoreCase(strTrim)) {
@@ -641,30 +662,35 @@ public class JSONObject extends LinkedHashMap<String, Object> implements Invocat
         if (obj == null) {
             return null;
         }
-        return obj instanceof String ? (String) obj : obj instanceof Date ? DateUtils.toString(((Date) obj).getTime(), false, DateUtils.DEFAULT_ZONE_ID) : ((obj instanceof Boolean) || (obj instanceof Character) || (obj instanceof Number) || (obj instanceof UUID) || (obj instanceof Enum) || (obj instanceof TemporalAccessor)) ? obj.toString() : JSON.toJSONString(obj);
+        return obj instanceof String ? (String) obj
+                : obj instanceof Date ? DateUtils.toString(((Date) obj).getTime(), false, DateUtils.DEFAULT_ZONE_ID)
+                        : ((obj instanceof Boolean) || (obj instanceof Character) || (obj instanceof Number)
+                                || (obj instanceof UUID) || (obj instanceof Enum) || (obj instanceof TemporalAccessor))
+                                        ? obj.toString()
+                                        : JSON.toJSONString(obj);
     }
 
     public ZonedDateTime getZonedDateTime(String str) {
         return getZonedDateTime(str, null);
     }
 
-    /* JADX WARN: Found duplicated region for block: B:60:0x00fe  */
-    /* JADX WARN: Found duplicated region for block: B:62:0x0106  */
-    /* JADX WARN: Found duplicated region for block: B:64:0x010e  */
-    /* JADX WARN: Found duplicated region for block: B:66:0x0116  */
-    /* JADX WARN: Found duplicated region for block: B:68:0x011f  */
-    /* JADX WARN: Found duplicated region for block: B:70:0x012a  */
-    /* JADX WARN: Found duplicated region for block: B:72:0x014b  */
-    /* JADX WARN: Found duplicated region for block: B:74:0x014e  */
-    /* JADX WARN: Found duplicated region for block: B:76:0x0158  */
-    /* JADX WARN: Found duplicated region for block: B:78:0x0160  */
-    /* JADX WARN: Found duplicated region for block: B:80:0x0169  */
-    /* JADX WARN: Found duplicated region for block: B:82:0x0171  */
-    /* JADX WARN: Found duplicated region for block: B:84:0x0176  */
-    /* JADX WARN: Found duplicated region for block: B:86:0x017e  */
-    /* JADX WARN: Found duplicated region for block: B:88:0x0183  */
-    /* JADX WARN: Found duplicated region for block: B:90:0x018b  */
-    /* JADX WARN: Found duplicated region for block: B:92:0x0194  */
+    /* JADX WARN: Found duplicated region for block: B:60:0x00fe */
+    /* JADX WARN: Found duplicated region for block: B:62:0x0106 */
+    /* JADX WARN: Found duplicated region for block: B:64:0x010e */
+    /* JADX WARN: Found duplicated region for block: B:66:0x0116 */
+    /* JADX WARN: Found duplicated region for block: B:68:0x011f */
+    /* JADX WARN: Found duplicated region for block: B:70:0x012a */
+    /* JADX WARN: Found duplicated region for block: B:72:0x014b */
+    /* JADX WARN: Found duplicated region for block: B:74:0x014e */
+    /* JADX WARN: Found duplicated region for block: B:76:0x0158 */
+    /* JADX WARN: Found duplicated region for block: B:78:0x0160 */
+    /* JADX WARN: Found duplicated region for block: B:80:0x0169 */
+    /* JADX WARN: Found duplicated region for block: B:82:0x0171 */
+    /* JADX WARN: Found duplicated region for block: B:84:0x0176 */
+    /* JADX WARN: Found duplicated region for block: B:86:0x017e */
+    /* JADX WARN: Found duplicated region for block: B:88:0x0183 */
+    /* JADX WARN: Found duplicated region for block: B:90:0x018b */
+    /* JADX WARN: Found duplicated region for block: B:92:0x0194 */
     @Override // java.lang.reflect.InvocationHandler
     public Object invoke(Object obj, Method method, Object[] objArr) {
         Object obj2;
@@ -683,16 +709,16 @@ public class JSONObject extends LinkedHashMap<String, Object> implements Invocat
             Class<?>[] interfaces = obj.getClass().getInterfaces();
             Class<?> cls2 = interfaces.length == 1 ? interfaces[0] : null;
             if (returnType != cls && returnType != cls2) {
-                throw new JSONException(bjs.o("This method '", name, "' is not a setter"));
+                throw new JSONException(concat("This method '", name, "' is not a setter"));
             }
             String jSONFieldName = getJSONFieldName(method);
             if (jSONFieldName == null) {
                 if (!name.startsWith("set")) {
-                    throw new JSONException(bjs.o("This method '", name, "' is not a setter"));
+                    throw new JSONException(concat("This method '", name, "' is not a setter"));
                 }
                 String strSubstring2 = name.substring(3);
                 if (strSubstring2.length() == 0) {
-                    throw new JSONException(bjs.o("This method '", name, "' is an illegal setter"));
+                    throw new JSONException(concat("This method '", name, "' is an illegal setter"));
                 }
                 jSONFieldName = Character.toLowerCase(strSubstring2.charAt(0)) + strSubstring2.substring(1);
             }
@@ -706,7 +732,7 @@ public class JSONObject extends LinkedHashMap<String, Object> implements Invocat
             throw new UnsupportedOperationException(method.toGenericString());
         }
         if (returnType == cls) {
-            throw new JSONException(bjs.o("This method '", name, "' is not a getter"));
+            throw new JSONException(concat("This method '", name, "' is not a getter"));
         }
         String jSONFieldName2 = getJSONFieldName(method);
         if (jSONFieldName2 == null) {
@@ -729,10 +755,12 @@ public class JSONObject extends LinkedHashMap<String, Object> implements Invocat
                             return Integer.valueOf(size());
                         }
                         declaringClass = method.getDeclaringClass();
-                        if (declaringClass.isInterface() || Modifier.isAbstract(method.getModifiers()) || JDKUtils.ANDROID || JDKUtils.GRAAL) {
-                            throw new JSONException(bjs.o("This method '", name, "' is not a getter"));
+                        if (declaringClass.isInterface() || Modifier.isAbstract(method.getModifiers())
+                                || JDKUtils.ANDROID || JDKUtils.GRAAL) {
+                            throw new JSONException(concat("This method '", name, "' is not a getter"));
                         }
-                        return (Object) JDKUtils.trustedLookup(declaringClass).findSpecial(declaringClass, method.getName(), MethodType.methodType(returnType), declaringClass).invoke(obj);
+                        return (Object) JDKUtils.trustedLookup(declaringClass).findSpecial(declaringClass,
+                                method.getName(), MethodType.methodType(returnType), declaringClass).invoke(obj);
                     }
                     if ("isEmpty".equals(name)) {
                         obj2 = get("empty");
@@ -742,7 +770,7 @@ public class JSONObject extends LinkedHashMap<String, Object> implements Invocat
                     } else {
                         strSubstring = name.substring(2);
                         if (!strSubstring.isEmpty()) {
-                            throw new JSONException(bjs.o("This method '", name, "' is an illegal getter"));
+                            throw new JSONException(concat("This method '", name, "' is an illegal getter"));
                         }
                         obj2 = get(Character.toLowerCase(strSubstring.charAt(0)) + strSubstring.substring(1));
                         if (obj2 == null) {
@@ -762,7 +790,7 @@ public class JSONObject extends LinkedHashMap<String, Object> implements Invocat
                 }
                 String str = new String(cArr);
                 if (str.isEmpty()) {
-                    throw new JSONException(bjs.o("This method '", name, "' is an illegal getter"));
+                    throw new JSONException(concat("This method '", name, "' is an illegal getter"));
                 }
                 obj2 = get(str);
                 if (obj2 == null) {
@@ -785,7 +813,7 @@ public class JSONObject extends LinkedHashMap<String, Object> implements Invocat
                     declaringClass = method.getDeclaringClass();
                     if (declaringClass.isInterface()) {
                     }
-                    throw new JSONException(bjs.o("This method '", name, "' is not a getter"));
+                    throw new JSONException(concat("This method '", name, "' is not a getter"));
                 }
                 if ("isEmpty".equals(name)) {
                     obj2 = get("empty");
@@ -795,7 +823,7 @@ public class JSONObject extends LinkedHashMap<String, Object> implements Invocat
                 } else {
                     strSubstring = name.substring(2);
                     if (!strSubstring.isEmpty()) {
-                        throw new JSONException(bjs.o("This method '", name, "' is an illegal getter"));
+                        throw new JSONException(concat("This method '", name, "' is an illegal getter"));
                     }
                     obj2 = get(Character.toLowerCase(strSubstring.charAt(0)) + strSubstring.substring(1));
                     if (obj2 == null) {
@@ -809,7 +837,9 @@ public class JSONObject extends LinkedHashMap<String, Object> implements Invocat
                 return null;
             }
         }
-        return (returnType.isInstance(obj2) || (typeConvert = JSONFactory.getDefaultObjectReaderProvider().getTypeConvert(obj2.getClass(), method.getGenericReturnType())) == null) ? obj2 : typeConvert.apply(obj2);
+        return (returnType.isInstance(obj2) || (typeConvert = JSONFactory.getDefaultObjectReaderProvider()
+                .getTypeConvert(obj2.getClass(), method.getGenericReturnType())) == null) ? obj2
+                        : typeConvert.apply(obj2);
     }
 
     public boolean isArray(Object obj) {
@@ -918,13 +948,18 @@ public class JSONObject extends LinkedHashMap<String, Object> implements Invocat
 
     @Override // java.util.HashMap, java.util.AbstractMap, java.util.Map
     public boolean containsKey(Object obj) {
-        return ((obj instanceof Number) || (obj instanceof Character) || (obj instanceof Boolean) || (obj instanceof UUID)) ? super.containsKey(obj) || super.containsKey((Object) obj.toString()) : super.containsKey(obj);
+        return ((obj instanceof Number) || (obj instanceof Character) || (obj instanceof Boolean)
+                || (obj instanceof UUID)) ? super.containsKey(obj) || super.containsKey((Object) obj.toString())
+                        : super.containsKey(obj);
     }
 
-    @Override // java.util.LinkedHashMap, java.util.HashMap, java.util.AbstractMap, java.util.Map
+    @Override // java.util.LinkedHashMap, java.util.HashMap, java.util.AbstractMap,
+              // java.util.Map
     public Object get(Object obj) {
         Object obj2;
-        return (((obj instanceof Number) || (obj instanceof Character) || (obj instanceof Boolean) || (obj instanceof UUID)) && (obj2 = super.get((Object) obj.toString())) != null) ? obj2 : super.get(obj);
+        return (((obj instanceof Number) || (obj instanceof Character) || (obj instanceof Boolean)
+                || (obj instanceof UUID)) && (obj2 = super.get((Object) obj.toString())) != null) ? obj2
+                        : super.get(obj);
     }
 
     public int getIntValue(String str, int i) {
@@ -934,7 +969,8 @@ public class JSONObject extends LinkedHashMap<String, Object> implements Invocat
                 return ((Number) obj).intValue();
             }
             if (!(obj instanceof String)) {
-                throw new JSONException(bjs.n(obj, new StringBuilder("Can not cast '"), "' to int value"));
+                throw new JSONException(
+                        concatVar1GetClassAndVar3(obj, new StringBuilder("Can not cast '"), "' to int value"));
             }
             String strTrim = ((String) obj).trim();
             if (!strTrim.isEmpty() && !"null".equalsIgnoreCase(strTrim)) {
@@ -946,17 +982,21 @@ public class JSONObject extends LinkedHashMap<String, Object> implements Invocat
 
     public LocalDate getLocalDate(String str, LocalDate localDate) {
         Object obj = super.get((Object) str);
-        return obj == null ? localDate : obj instanceof LocalDate ? (LocalDate) obj : (LocalDate) TypeUtils.cast(obj, LocalDate.class);
+        return obj == null ? localDate
+                : obj instanceof LocalDate ? (LocalDate) obj : (LocalDate) TypeUtils.cast(obj, LocalDate.class);
     }
 
     public LocalDateTime getLocalDateTime(String str, LocalDateTime localDateTime) {
         Object obj = super.get((Object) str);
-        return obj == null ? localDateTime : obj instanceof LocalDateTime ? (LocalDateTime) obj : (LocalDateTime) TypeUtils.cast(obj, LocalDateTime.class);
+        return obj == null ? localDateTime
+                : obj instanceof LocalDateTime ? (LocalDateTime) obj
+                        : (LocalDateTime) TypeUtils.cast(obj, LocalDateTime.class);
     }
 
     public LocalTime getLocalTime(String str, LocalTime localTime) {
         Object obj = super.get((Object) str);
-        return obj == null ? localTime : obj instanceof LocalTime ? (LocalTime) obj : (LocalTime) TypeUtils.cast(obj, LocalTime.class);
+        return obj == null ? localTime
+                : obj instanceof LocalTime ? (LocalTime) obj : (LocalTime) TypeUtils.cast(obj, LocalTime.class);
     }
 
     public long getLongValue(String str, long j) {
@@ -966,7 +1006,8 @@ public class JSONObject extends LinkedHashMap<String, Object> implements Invocat
                 return ((Number) obj).longValue();
             }
             if (!(obj instanceof String)) {
-                throw new JSONException(bjs.n(obj, new StringBuilder("Can not cast '"), "' to long value"));
+                throw new JSONException(
+                        concatVar1GetClassAndVar3(obj, new StringBuilder("Can not cast '"), "' to long value"));
             }
             String strTrim = ((String) obj).trim();
             if (!strTrim.isEmpty() && !"null".equalsIgnoreCase(strTrim)) {
@@ -978,22 +1019,29 @@ public class JSONObject extends LinkedHashMap<String, Object> implements Invocat
 
     public OffsetDateTime getOffsetDateTime(String str, OffsetDateTime offsetDateTime) {
         Object obj = super.get((Object) str);
-        return obj == null ? offsetDateTime : obj instanceof OffsetDateTime ? (OffsetDateTime) obj : (OffsetDateTime) TypeUtils.cast(obj, OffsetDateTime.class);
+        return obj == null ? offsetDateTime
+                : obj instanceof OffsetDateTime ? (OffsetDateTime) obj
+                        : (OffsetDateTime) TypeUtils.cast(obj, OffsetDateTime.class);
     }
 
     public OffsetTime getOffsetTime(String str, OffsetTime offsetTime) {
         Object obj = super.get((Object) str);
-        return obj == null ? offsetTime : obj instanceof OffsetTime ? (OffsetTime) obj : (OffsetTime) TypeUtils.cast(obj, OffsetTime.class);
+        return obj == null ? offsetTime
+                : obj instanceof OffsetTime ? (OffsetTime) obj : (OffsetTime) TypeUtils.cast(obj, OffsetTime.class);
     }
 
     @Override // java.util.LinkedHashMap, java.util.HashMap, java.util.Map
     public Object getOrDefault(Object obj, Object obj2) {
-        return ((obj instanceof Number) || (obj instanceof Character) || (obj instanceof Boolean) || (obj instanceof UUID)) ? super.getOrDefault((Object) obj.toString(), obj2) : super.getOrDefault(obj, obj2);
+        return ((obj instanceof Number) || (obj instanceof Character) || (obj instanceof Boolean)
+                || (obj instanceof UUID)) ? super.getOrDefault((Object) obj.toString(), obj2)
+                        : super.getOrDefault(obj, obj2);
     }
 
     public ZonedDateTime getZonedDateTime(String str, ZonedDateTime zonedDateTime) {
         Object obj = super.get((Object) str);
-        return obj == null ? zonedDateTime : obj instanceof ZonedDateTime ? (ZonedDateTime) obj : (ZonedDateTime) TypeUtils.cast(obj, ZonedDateTime.class);
+        return obj == null ? zonedDateTime
+                : obj instanceof ZonedDateTime ? (ZonedDateTime) obj
+                        : (ZonedDateTime) TypeUtils.cast(obj, ZonedDateTime.class);
     }
 
     public <T> T to(Type type, JSONReader.Feature... featureArr) {
@@ -1005,7 +1053,8 @@ public class JSONObject extends LinkedHashMap<String, Object> implements Invocat
             }
             j |= feature.mask;
         }
-        return type == String.class ? (T) toString() : (T) JSONFactory.getDefaultObjectReaderProvider().getObjectReader(type, z).createInstance(this, j);
+        return type == String.class ? (T) toString()
+                : (T) JSONFactory.getDefaultObjectReaderProvider().getObjectReader(type, z).createInstance(this, j);
     }
 
     public <T> T toJavaObject(Type type, JSONReader.Feature... featureArr) {
@@ -1066,7 +1115,8 @@ public class JSONObject extends LinkedHashMap<String, Object> implements Invocat
             } else if (value instanceof Iterable) {
                 nameFilter((Iterable<?>) value, nameFilter);
             }
-            if ((key instanceof String) && (strProcess = nameFilter.process(map, (str = (String) key), value)) != null && !strProcess.equals(str)) {
+            if ((key instanceof String) && (strProcess = nameFilter.process(map, (str = (String) key), value)) != null
+                    && !strProcess.equals(str)) {
                 if (jSONObject == null) {
                     jSONObject = new JSONObject();
                 }
@@ -1128,7 +1178,8 @@ public class JSONObject extends LinkedHashMap<String, Object> implements Invocat
         return date2 == null ? date : date2;
     }
 
-    public static JSONObject of(String str, Object obj, String str2, Object obj2, String str3, Object obj3, String str4, Object obj4) {
+    public static JSONObject of(String str, Object obj, String str2, Object obj2, String str3, Object obj3, String str4,
+            Object obj4) {
         JSONObject jSONObject = new JSONObject(4, 1.0f);
         jSONObject.put(str, obj);
         jSONObject.put(str2, obj2);
@@ -1154,10 +1205,12 @@ public class JSONObject extends LinkedHashMap<String, Object> implements Invocat
         if (cls == Void.class || cls == Void.TYPE) {
             return null;
         }
-        return (T) JSONFactory.getDefaultObjectReaderProvider().getObjectReader(cls, zIsEnabled).createInstance(this, jOf);
+        return (T) JSONFactory.getDefaultObjectReaderProvider().getObjectReader(cls, zIsEnabled).createInstance(this,
+                jOf);
     }
 
-    public static JSONObject of(String str, Object obj, String str2, Object obj2, String str3, Object obj3, String str4, Object obj4, String str5, Object obj5) {
+    public static JSONObject of(String str, Object obj, String str2, Object obj2, String str3, Object obj3, String str4,
+            Object obj4, String str5, Object obj5) {
         JSONObject jSONObject = new JSONObject(5);
         jSONObject.put(str, obj);
         jSONObject.put(str2, obj2);
@@ -1171,7 +1224,8 @@ public class JSONObject extends LinkedHashMap<String, Object> implements Invocat
         valueFilter(this, valueFilter);
     }
 
-    public static JSONObject of(String str, Object obj, String str2, Object obj2, String str3, Object obj3, String str4, Object obj4, String str5, Object obj5, Object... objArr) {
+    public static JSONObject of(String str, Object obj, String str2, Object obj2, String str3, Object obj3, String str4,
+            Object obj4, String str5, Object obj5, Object... objArr) {
         JSONObject jSONObject = new JSONObject(5);
         jSONObject.put(str, obj);
         jSONObject.put(str2, obj2);
@@ -1204,15 +1258,18 @@ public class JSONObject extends LinkedHashMap<String, Object> implements Invocat
                         if (!jSONObject.containsKey(str)) {
                             jSONObject.put(str, objArr[i2]);
                         } else {
-                            throw new JSONException("The value corresponding to the even bit index of kvArray is key and cannot be duplicated");
+                            throw new JSONException(
+                                    "The value corresponding to the even bit index of kvArray is key and cannot be duplicated");
                         }
                     } else if (jSONObject.put(str, objArr[i2]) == null) {
                         z = objArr[i2] == null;
                     } else {
-                        throw new JSONException("The value corresponding to the even bit index of kvArray is key and cannot be duplicated");
+                        throw new JSONException(
+                                "The value corresponding to the even bit index of kvArray is key and cannot be duplicated");
                     }
                 } else {
-                    throw new JSONException("The value corresponding to the even bit index of kvArray is key, which cannot be null and must be of type string");
+                    throw new JSONException(
+                            "The value corresponding to the even bit index of kvArray is key, which cannot be null and must be of type string");
                 }
             }
             return jSONObject;
@@ -1244,7 +1301,8 @@ public class JSONObject extends LinkedHashMap<String, Object> implements Invocat
                 return (T) defaultObjectReaderProvider.getObjectReader(type, z).createInstance((Map) t, featureArr);
             }
             if (t instanceof Collection) {
-                return (T) defaultObjectReaderProvider.getObjectReader(type, z).createInstance((Collection) t, featureArr);
+                return (T) defaultObjectReaderProvider.getObjectReader(type, z).createInstance((Collection) t,
+                        featureArr);
             }
             if (!(type instanceof Class) || !((Class) type).isInstance(t)) {
                 if (t instanceof String) {
@@ -1255,7 +1313,8 @@ public class JSONObject extends LinkedHashMap<String, Object> implements Invocat
                 }
                 JSONReader jSONReaderOf = JSONReader.of(JSON.toJSONString(t));
                 jSONReaderOf.context.config(featureArr);
-                return (T) defaultObjectReaderProvider.getObjectReader(type, z).readObject(jSONReaderOf, null, null, 0L);
+                return (T) defaultObjectReaderProvider.getObjectReader(type, z).readObject(jSONReaderOf, null, null,
+                        0L);
             }
         }
         return t;

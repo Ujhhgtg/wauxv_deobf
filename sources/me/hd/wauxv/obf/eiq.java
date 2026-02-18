@@ -26,7 +26,9 @@ public final class eiq {
     public final String t;
     public final String u;
 
-    public /* synthetic */ eiq(int i, String str, String str2, String str3, String str4, String str5, String str6, String str7, String str8, Long l, String str9, Integer num, String str10, String str11, String str12, String str13, String str14, String str15, String str16, Integer num2, String str17, String str18) {
+    public /* synthetic */ eiq(int i, String str, String str2, String str3, String str4, String str5, String str6,
+            String str7, String str8, Long l, String str9, Integer num, String str10, String str11, String str12,
+            String str13, String str14, String str15, String str16, Integer num2, String str17, String str18) {
         if (2097151 != (i & 2097151)) {
             bht.ah(i, 2097151, eio.b.getDescriptor());
             throw null;
@@ -62,7 +64,19 @@ public final class eiq {
             return false;
         }
         eiq eiqVar = (eiq) obj;
-        return bzo.f(this.a, eiqVar.a) && bzo.f(this.b, eiqVar.b) && bzo.f(this.c, eiqVar.c) && bzo.f(this.d, eiqVar.d) && bzo.f(this.e, eiqVar.e) && bzo.f(this.f, eiqVar.f) && bzo.f(this.g, eiqVar.g) && bzo.f(this.h, eiqVar.h) && bzo.f(this.i, eiqVar.i) && bzo.f(this.j, eiqVar.j) && bzo.f(this.k, eiqVar.k) && bzo.f(this.l, eiqVar.l) && bzo.f(this.m, eiqVar.m) && bzo.f(this.n, eiqVar.n) && bzo.f(this.o, eiqVar.o) && bzo.f(this.p, eiqVar.p) && bzo.f(this.q, eiqVar.q) && bzo.f(this.r, eiqVar.r) && bzo.f(this.s, eiqVar.s) && bzo.f(this.t, eiqVar.t) && bzo.f(this.u, eiqVar.u);
+        return nullSafeIsEqual(this.a, eiqVar.a) && nullSafeIsEqual(this.b, eiqVar.b)
+                && nullSafeIsEqual(this.c, eiqVar.c) && nullSafeIsEqual(this.d, eiqVar.d)
+                && nullSafeIsEqual(this.e, eiqVar.e) && nullSafeIsEqual(this.f, eiqVar.f)
+                && nullSafeIsEqual(this.g, eiqVar.g)
+                && nullSafeIsEqual(this.h, eiqVar.h) && nullSafeIsEqual(this.i, eiqVar.i)
+                && nullSafeIsEqual(this.j, eiqVar.j)
+                && nullSafeIsEqual(this.k, eiqVar.k) && nullSafeIsEqual(this.l, eiqVar.l)
+                && nullSafeIsEqual(this.m, eiqVar.m)
+                && nullSafeIsEqual(this.n, eiqVar.n) && nullSafeIsEqual(this.o, eiqVar.o)
+                && nullSafeIsEqual(this.p, eiqVar.p)
+                && nullSafeIsEqual(this.q, eiqVar.q) && nullSafeIsEqual(this.r, eiqVar.r)
+                && nullSafeIsEqual(this.s, eiqVar.s)
+                && nullSafeIsEqual(this.t, eiqVar.t) && nullSafeIsEqual(this.u, eiqVar.u);
     }
 
     public final int hashCode() {
@@ -133,6 +147,6 @@ public final class eiq {
         yg.u(sb, this.r, -323930728430378L);
         bjs.w(sb, this.s, -323853419019050L);
         yg.u(sb, this.t, -324325865421610L);
-        return bjs.q(sb, this.u, ')');
+        return concat(sb, this.u, ')');
     }
 }

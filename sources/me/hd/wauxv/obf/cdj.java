@@ -45,7 +45,7 @@ public final class cdj extends dqc {
         int iV;
         int i;
         int iV2;
-        bzo.q(bbbVar, "fbb");
+        throwIfVar1IsNull(bbbVar, "fbb");
         dnf dnfVar = this.a;
         int iC = dnfVar != null ? dnfVar.c(bbbVar) : 0;
         an anVar = this.b;
@@ -73,7 +73,7 @@ public final class cdj extends dqc {
             Iterator it2 = arrayList2.iterator();
             while (it2.hasNext()) {
                 cpg cpgVar = ((cpf) it2.next()).b;
-                bzo.n(cpgVar);
+                throwIfVar1IsNull(cpgVar);
                 arrayList3.add(new emp(cpgVar.h));
             }
             byte[] bArrY = aye.y(arrayList3);
@@ -92,7 +92,8 @@ public final class cdj extends dqc {
             Iterator it3 = arrayList4.iterator();
             while (it3.hasNext()) {
                 avk avkVar = ((cpf) it3.next()).a;
-                bzo.o(avkVar, "null cannot be cast to non-null type org.luckypray.dexkit.query.base.BaseQuery");
+                throwIfVar1IsNull(avkVar,
+                        "null cannot be cast to non-null type org.luckypray.dexkit.query.base.BaseQuery");
                 arrayList5.add(Integer.valueOf(avkVar.c(bbbVar)));
             }
             int[] iArrY = aaz.y(arrayList5);
@@ -139,7 +140,7 @@ public final class cdj extends dqc {
     }
 
     public final void o(Class cls) {
-        bzo.q(cls, "clazz");
+        throwIfVar1IsNull(cls, "clazz");
         zb zbVar = new zb();
         zbVar.j(ams.e(cls), dne.Equals);
         this.d = zbVar;
@@ -150,7 +151,7 @@ public final class cdj extends dqc {
             this.f = new fj(4);
         }
         fj fjVar = this.f;
-        bzo.n(fjVar);
+        throwIfVar1IsNull(fjVar);
         bqh bqhVar = new bqh();
         bqhVar.a = bqiVar.a;
         bqhVar.b = bqiVar.b;
@@ -181,7 +182,7 @@ public final class cdj extends dqc {
     }
 
     public final void r(Class cls) {
-        bzo.q(cls, "clazz");
+        throwIfVar1IsNull(cls, "clazz");
         zb zbVar = new zb();
         zbVar.j(ams.e(cls), dne.Equals);
         this.e = zbVar;
@@ -203,7 +204,7 @@ public final class cdj extends dqc {
         ArrayList arrayList = new ArrayList(numberArr.length);
         for (Number number : numberArr) {
             cpf cpfVar = new cpf();
-            bzo.q(number, "number");
+            throwIfVar1IsNull(number, "number");
             if (number instanceof Byte) {
                 cpfVar.a = new avl(number.byteValue());
                 cpfVar.b = cpg.ByteValue;

@@ -19,7 +19,7 @@ public final class efg {
         if (this == obj) {
             return true;
         }
-        return (obj instanceof efg) && bzo.f(this.a, ((efg) obj).a);
+        return (obj instanceof efg) && nullSafeIsEqual(this.a, ((efg) obj).a);
     }
 
     public final int hashCode() {
@@ -33,6 +33,6 @@ public final class efg {
     public final String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("t90Proto(d=" /* cnb.z(-282548718533418L) */);
-        return bjs.p(sb, this.a, ')');
+        return concat(sb, this.a, ')');
     }
 }

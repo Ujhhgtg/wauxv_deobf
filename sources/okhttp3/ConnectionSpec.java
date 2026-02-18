@@ -7,7 +7,7 @@ import java.util.Objects;
 import javax.net.ssl.SSLSocket;
 import me.hd.wauxv.obf.aaz;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cil;
 import okhttp3.internal.Util;
 
@@ -26,7 +26,10 @@ public final class ConnectionSpec {
     private final boolean supportsTlsExtensions;
     private final String[] tlsVersionsAsString;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
@@ -46,16 +49,27 @@ public final class ConnectionSpec {
         CipherSuite cipherSuite7 = CipherSuite.TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384;
         CipherSuite cipherSuite8 = CipherSuite.TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256;
         CipherSuite cipherSuite9 = CipherSuite.TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256;
-        CipherSuite[] cipherSuiteArr = {cipherSuite, cipherSuite2, cipherSuite3, cipherSuite4, cipherSuite5, cipherSuite6, cipherSuite7, cipherSuite8, cipherSuite9};
+        CipherSuite[] cipherSuiteArr = { cipherSuite, cipherSuite2, cipherSuite3, cipherSuite4, cipherSuite5,
+                cipherSuite6, cipherSuite7, cipherSuite8, cipherSuite9 };
         RESTRICTED_CIPHER_SUITES = cipherSuiteArr;
-        CipherSuite[] cipherSuiteArr2 = {cipherSuite, cipherSuite2, cipherSuite3, cipherSuite4, cipherSuite5, cipherSuite6, cipherSuite7, cipherSuite8, cipherSuite9, CipherSuite.TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, CipherSuite.TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, CipherSuite.TLS_RSA_WITH_AES_128_GCM_SHA256, CipherSuite.TLS_RSA_WITH_AES_256_GCM_SHA384, CipherSuite.TLS_RSA_WITH_AES_128_CBC_SHA, CipherSuite.TLS_RSA_WITH_AES_256_CBC_SHA, CipherSuite.TLS_RSA_WITH_3DES_EDE_CBC_SHA};
+        CipherSuite[] cipherSuiteArr2 = { cipherSuite, cipherSuite2, cipherSuite3, cipherSuite4, cipherSuite5,
+                cipherSuite6, cipherSuite7, cipherSuite8, cipherSuite9, CipherSuite.TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA,
+                CipherSuite.TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, CipherSuite.TLS_RSA_WITH_AES_128_GCM_SHA256,
+                CipherSuite.TLS_RSA_WITH_AES_256_GCM_SHA384, CipherSuite.TLS_RSA_WITH_AES_128_CBC_SHA,
+                CipherSuite.TLS_RSA_WITH_AES_256_CBC_SHA, CipherSuite.TLS_RSA_WITH_3DES_EDE_CBC_SHA };
         APPROVED_CIPHER_SUITES = cipherSuiteArr2;
-        Builder builderCipherSuites = new Builder(true).cipherSuites((CipherSuite[]) Arrays.copyOf(cipherSuiteArr, cipherSuiteArr.length));
+        Builder builderCipherSuites = new Builder(true)
+                .cipherSuites((CipherSuite[]) Arrays.copyOf(cipherSuiteArr, cipherSuiteArr.length));
         TlsVersion tlsVersion = TlsVersion.TLS_1_3;
         TlsVersion tlsVersion2 = TlsVersion.TLS_1_2;
         RESTRICTED_TLS = builderCipherSuites.tlsVersions(tlsVersion, tlsVersion2).supportsTlsExtensions(true).build();
-        MODERN_TLS = new Builder(true).cipherSuites((CipherSuite[]) Arrays.copyOf(cipherSuiteArr2, cipherSuiteArr2.length)).tlsVersions(tlsVersion, tlsVersion2).supportsTlsExtensions(true).build();
-        COMPATIBLE_TLS = new Builder(true).cipherSuites((CipherSuite[]) Arrays.copyOf(cipherSuiteArr2, cipherSuiteArr2.length)).tlsVersions(tlsVersion, tlsVersion2, TlsVersion.TLS_1_1, TlsVersion.TLS_1_0).supportsTlsExtensions(true).build();
+        MODERN_TLS = new Builder(true)
+                .cipherSuites((CipherSuite[]) Arrays.copyOf(cipherSuiteArr2, cipherSuiteArr2.length))
+                .tlsVersions(tlsVersion, tlsVersion2).supportsTlsExtensions(true).build();
+        COMPATIBLE_TLS = new Builder(true)
+                .cipherSuites((CipherSuite[]) Arrays.copyOf(cipherSuiteArr2, cipherSuiteArr2.length))
+                .tlsVersions(tlsVersion, tlsVersion2, TlsVersion.TLS_1_1, TlsVersion.TLS_1_0)
+                .supportsTlsExtensions(true).build();
         CLEARTEXT = new Builder(false).build();
     }
 
@@ -71,32 +85,36 @@ public final class ConnectionSpec {
         String[] enabledProtocols;
         if (this.cipherSuitesAsString != null) {
             String[] enabledCipherSuites2 = sSLSocket.getEnabledCipherSuites();
-            bzo.p(enabledCipherSuites2, "sslSocket.enabledCipherSuites");
-            enabledCipherSuites = Util.intersect(enabledCipherSuites2, this.cipherSuitesAsString, CipherSuite.Companion.getORDER_BY_NAME$okhttp());
+            throwIfVar1IsNull(enabledCipherSuites2, "sslSocket.enabledCipherSuites");
+            enabledCipherSuites = Util.intersect(enabledCipherSuites2, this.cipherSuitesAsString,
+                    CipherSuite.Companion.getORDER_BY_NAME$okhttp());
         } else {
             enabledCipherSuites = sSLSocket.getEnabledCipherSuites();
         }
         if (this.tlsVersionsAsString != null) {
             String[] enabledProtocols2 = sSLSocket.getEnabledProtocols();
-            bzo.p(enabledProtocols2, "sslSocket.enabledProtocols");
+            throwIfVar1IsNull(enabledProtocols2, "sslSocket.enabledProtocols");
             enabledProtocols = Util.intersect(enabledProtocols2, this.tlsVersionsAsString, cil.a);
         } else {
             enabledProtocols = sSLSocket.getEnabledProtocols();
         }
         String[] supportedCipherSuites = sSLSocket.getSupportedCipherSuites();
-        bzo.p(supportedCipherSuites, "supportedCipherSuites");
-        int iIndexOf = Util.indexOf(supportedCipherSuites, "TLS_FALLBACK_SCSV", CipherSuite.Companion.getORDER_BY_NAME$okhttp());
+        throwIfVar1IsNull(supportedCipherSuites, "supportedCipherSuites");
+        int iIndexOf = Util.indexOf(supportedCipherSuites, "TLS_FALLBACK_SCSV",
+                CipherSuite.Companion.getORDER_BY_NAME$okhttp());
         if (z && iIndexOf != -1) {
-            bzo.p(enabledCipherSuites, "cipherSuitesIntersection");
+            throwIfVar1IsNull(enabledCipherSuites, "cipherSuitesIntersection");
             String str = supportedCipherSuites[iIndexOf];
-            bzo.p(str, "supportedCipherSuites[indexOfFallbackScsv]");
+            throwIfVar1IsNull(str, "supportedCipherSuites[indexOfFallbackScsv]");
             enabledCipherSuites = Util.concat(enabledCipherSuites, str);
         }
         Builder builder = new Builder(this);
-        bzo.p(enabledCipherSuites, "cipherSuitesIntersection");
-        Builder builderCipherSuites = builder.cipherSuites((String[]) Arrays.copyOf(enabledCipherSuites, enabledCipherSuites.length));
-        bzo.p(enabledProtocols, "tlsVersionsIntersection");
-        return builderCipherSuites.tlsVersions((String[]) Arrays.copyOf(enabledProtocols, enabledProtocols.length)).build();
+        throwIfVar1IsNull(enabledCipherSuites, "cipherSuitesIntersection");
+        Builder builderCipherSuites = builder
+                .cipherSuites((String[]) Arrays.copyOf(enabledCipherSuites, enabledCipherSuites.length));
+        throwIfVar1IsNull(enabledProtocols, "tlsVersionsIntersection");
+        return builderCipherSuites.tlsVersions((String[]) Arrays.copyOf(enabledProtocols, enabledProtocols.length))
+                .build();
     }
 
     public final List<CipherSuite> a() {
@@ -104,7 +122,7 @@ public final class ConnectionSpec {
     }
 
     public final void apply$okhttp(SSLSocket sSLSocket, boolean z) {
-        bzo.q(sSLSocket, "sslSocket");
+        throwIfVar1IsNull(sSLSocket, "sslSocket");
         ConnectionSpec connectionSpecSupportedSpec = supportedSpec(sSLSocket, z);
         if (connectionSpecSupportedSpec.tlsVersions() != null) {
             sSLSocket.setEnabledProtocols(connectionSpecSupportedSpec.tlsVersionsAsString);
@@ -146,7 +164,9 @@ public final class ConnectionSpec {
         if (z != connectionSpec.isTls) {
             return false;
         }
-        return !z || (Arrays.equals(this.cipherSuitesAsString, connectionSpec.cipherSuitesAsString) && Arrays.equals(this.tlsVersionsAsString, connectionSpec.tlsVersionsAsString) && this.supportsTlsExtensions == connectionSpec.supportsTlsExtensions);
+        return !z || (Arrays.equals(this.cipherSuitesAsString, connectionSpec.cipherSuitesAsString)
+                && Arrays.equals(this.tlsVersionsAsString, connectionSpec.tlsVersionsAsString)
+                && this.supportsTlsExtensions == connectionSpec.supportsTlsExtensions);
     }
 
     public int hashCode() {
@@ -156,11 +176,12 @@ public final class ConnectionSpec {
         String[] strArr = this.cipherSuitesAsString;
         int iHashCode = (527 + (strArr != null ? Arrays.hashCode(strArr) : 0)) * 31;
         String[] strArr2 = this.tlsVersionsAsString;
-        return ((iHashCode + (strArr2 != null ? Arrays.hashCode(strArr2) : 0)) * 31) + (!this.supportsTlsExtensions ? 1 : 0);
+        return ((iHashCode + (strArr2 != null ? Arrays.hashCode(strArr2) : 0)) * 31)
+                + (!this.supportsTlsExtensions ? 1 : 0);
     }
 
     public final boolean isCompatible(SSLSocket sSLSocket) {
-        bzo.q(sSLSocket, "socket");
+        throwIfVar1IsNull(sSLSocket, "socket");
         if (!this.isTls) {
             return false;
         }
@@ -169,7 +190,8 @@ public final class ConnectionSpec {
             return false;
         }
         String[] strArr2 = this.cipherSuitesAsString;
-        return strArr2 == null || Util.hasIntersection(strArr2, sSLSocket.getEnabledCipherSuites(), CipherSuite.Companion.getORDER_BY_NAME$okhttp());
+        return strArr2 == null || Util.hasIntersection(strArr2, sSLSocket.getEnabledCipherSuites(),
+                CipherSuite.Companion.getORDER_BY_NAME$okhttp());
     }
 
     public final boolean isTls() {
@@ -196,10 +218,15 @@ public final class ConnectionSpec {
         if (!this.isTls) {
             return "ConnectionSpec()";
         }
-        return "ConnectionSpec(cipherSuites=" + Objects.toString(cipherSuites(), "[all enabled]") + ", tlsVersions=" + Objects.toString(tlsVersions(), "[all enabled]") + ", supportsTlsExtensions=" + this.supportsTlsExtensions + ')';
+        return "ConnectionSpec(cipherSuites=" + Objects.toString(cipherSuites(), "[all enabled]") + ", tlsVersions="
+                + Objects.toString(tlsVersions(), "[all enabled]") + ", supportsTlsExtensions="
+                + this.supportsTlsExtensions + ')';
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Builder {
         private String[] cipherSuites;
         private boolean supportsTlsExtensions;
@@ -231,7 +258,7 @@ public final class ConnectionSpec {
         }
 
         public final Builder cipherSuites(CipherSuite... cipherSuiteArr) {
-            bzo.q(cipherSuiteArr, "cipherSuites");
+            throwIfVar1IsNull(cipherSuiteArr, "cipherSuites");
             if (!this.tls) {
                 throw new IllegalArgumentException("no cipher suites for cleartext connections");
             }
@@ -284,7 +311,7 @@ public final class ConnectionSpec {
         }
 
         public final Builder tlsVersions(TlsVersion... tlsVersionArr) {
-            bzo.q(tlsVersionArr, "tlsVersions");
+            throwIfVar1IsNull(tlsVersionArr, "tlsVersions");
             if (!this.tls) {
                 throw new IllegalArgumentException("no TLS versions for cleartext connections");
             }
@@ -297,7 +324,7 @@ public final class ConnectionSpec {
         }
 
         public Builder(ConnectionSpec connectionSpec) {
-            bzo.q(connectionSpec, "connectionSpec");
+            throwIfVar1IsNull(connectionSpec, "connectionSpec");
             this.tls = connectionSpec.isTls();
             this.cipherSuites = connectionSpec.cipherSuitesAsString;
             this.tlsVersions = connectionSpec.tlsVersionsAsString;
@@ -305,7 +332,7 @@ public final class ConnectionSpec {
         }
 
         public final Builder cipherSuites(String... strArr) {
-            bzo.q(strArr, "cipherSuites");
+            throwIfVar1IsNull(strArr, "cipherSuites");
             if (this.tls) {
                 if (!(strArr.length == 0)) {
                     this.cipherSuites = (String[]) strArr.clone();
@@ -317,7 +344,7 @@ public final class ConnectionSpec {
         }
 
         public final Builder tlsVersions(String... strArr) {
-            bzo.q(strArr, "tlsVersions");
+            throwIfVar1IsNull(strArr, "tlsVersions");
             if (this.tls) {
                 if (!(strArr.length == 0)) {
                     this.tlsVersions = (String[]) strArr.clone();

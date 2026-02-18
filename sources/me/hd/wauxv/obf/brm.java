@@ -11,8 +11,10 @@ import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public class brm implements brf, csx {
-    public static final /* synthetic */ AtomicReferenceFieldUpdater r = AtomicReferenceFieldUpdater.newUpdater(brm.class, Object.class, "_state$volatile");
-    public static final /* synthetic */ AtomicReferenceFieldUpdater s = AtomicReferenceFieldUpdater.newUpdater(brm.class, Object.class, "_parentHandle$volatile");
+    public static final /* synthetic */ AtomicReferenceFieldUpdater r = AtomicReferenceFieldUpdater
+            .newUpdater(brm.class, Object.class, "_state$volatile");
+    public static final /* synthetic */ AtomicReferenceFieldUpdater s = AtomicReferenceFieldUpdater
+            .newUpdater(brm.class, Object.class, "_parentHandle$volatile");
     private volatile /* synthetic */ Object _parentHandle$volatile;
     private volatile /* synthetic */ Object _state$volatile;
 
@@ -52,7 +54,8 @@ public class brm implements brf, csx {
 
     public static String u(Object obj) {
         if (!(obj instanceof brl)) {
-            return obj instanceof bou ? ((bou) obj).b() ? "Active" : "New" : obj instanceof abr ? "Cancelled" : "Completed";
+            return obj instanceof bou ? ((bou) obj).b() ? "Active" : "New"
+                    : obj instanceof abr ? "Cancelled" : "Completed";
         }
         brl brlVar = (brl) obj;
         return brlVar.i() ? "Cancelling" : brl.a.get(brlVar) == 1 ? "Completing" : "Active";
@@ -75,8 +78,8 @@ public class brm implements brf, csx {
 
     @Override // me.hd.wauxv.obf.ahh
     public final ahf _w(ahg ahgVar) {
-        bzo.q(ahgVar, "key");
-        if (bzo.f(arj.i, ahgVar)) {
+        throwIfVar1IsNull(ahgVar, "key");
+        if (nullSafeIsEqual(arj.i, ahgVar)) {
             return this;
         }
         return null;
@@ -107,7 +110,8 @@ public class brm implements brf, csx {
             if (brgVar != null && arrayListJ.size() > 1) {
                 Set setNewSetFromMap = Collections.newSetFromMap(new IdentityHashMap(arrayListJ.size()));
                 for (Throwable th2 : arrayListJ) {
-                    if (th2 != brgVar && th2 != brgVar && !(th2 instanceof CancellationException) && setNewSetFromMap.add(th2)) {
+                    if (th2 != brgVar && th2 != brgVar && !(th2 instanceof CancellationException)
+                            && setNewSetFromMap.add(th2)) {
                         aye.j(brgVar, th2);
                     }
                 }
@@ -117,13 +121,14 @@ public class brm implements brf, csx {
             obj = new abr(brgVar, false);
         }
         if (brgVar != null && (w(brgVar) || ad(brgVar))) {
-            bzo.o(obj, "null cannot be cast to non-null type kotlinx.coroutines.CompletedExceptionally");
+            throwIfVar1IsNull(obj, "null cannot be cast to non-null type kotlinx.coroutines.CompletedExceptionally");
             abr.b.compareAndSet((abr) obj, 0, 1);
         }
         g(obj);
         AtomicReferenceFieldUpdater atomicReferenceFieldUpdater = r;
         Object bovVar = obj instanceof bou ? new bov((bou) obj) : obj;
-        while (!atomicReferenceFieldUpdater.compareAndSet(this, brlVar, bovVar) && atomicReferenceFieldUpdater.get(this) == brlVar) {
+        while (!atomicReferenceFieldUpdater.compareAndSet(this, brlVar, bovVar)
+                && atomicReferenceFieldUpdater.get(this) == brlVar) {
         }
         y(brlVar, obj);
         return obj;
@@ -169,7 +174,7 @@ public class brm implements brf, csx {
         atomicReferenceFieldUpdater.set(this, conVar);
     }
 
-    public final aox af(bgf bgfVar) {
+    public final aox af(IHasInvokeMethod bgfVar) {
         return ag(true, new yd(bgfVar, 1));
     }
 
@@ -255,8 +260,9 @@ public class brm implements brf, csx {
     public final void aj(cok cokVar, Throwable th) {
         cokVar.n(new bwa(4), 4);
         Object obj = bxl.k.get(cokVar);
-        bzo.o(obj, "null cannot be cast to non-null type kotlinx.coroutines.internal.LockFreeLinkedListNode");
-        abt abtVar = null;
+        throwIfVar1IsNull(obj,
+                "null cannot be cast to non-null type kotlinx.coroutines.internal.LockFreeLinkedListNode");
+        QueryDidNotReturnUniqueResultRuntimeException abtVar = null;
         for (bxl bxlVarQ = (bxl) obj; !bxlVarQ.equals(cokVar); bxlVarQ = bxlVarQ.q()) {
             if ((bxlVarQ instanceof bri) && ((bri) bxlVarQ)._ba()) {
                 try {
@@ -265,7 +271,8 @@ public class brm implements brf, csx {
                     if (abtVar != null) {
                         aye.j(abtVar, th2);
                     } else {
-                        abtVar = new abt("Exception in completion handler " + bxlVarQ + " for " + this, th2);
+                        abtVar = new QueryDidNotReturnUniqueResultRuntimeException(
+                                "Exception in completion handler " + bxlVarQ + " for " + this, th2);
                     }
                 }
             }
@@ -418,7 +425,7 @@ public class brm implements brf, csx {
         return "Job was cancelled";
     }
 
-    public void f(abt abtVar) {
+    public void f(QueryDidNotReturnUniqueResultRuntimeException abtVar) {
         throw abtVar;
     }
 
@@ -559,24 +566,43 @@ public class brm implements brf, csx {
         return sb.toString();
     }
 
-    /* JADX WARN: Found duplicated region for block: B:18:0x003c A[PHI: r0
-      0x003c: PHI (r0v1 java.lang.Object) = (r0v0 java.lang.Object), (r0v13 java.lang.Object) binds: [B:3:0x0006, B:16:0x0038] A[DONT_GENERATE, DONT_INLINE]] */
-    /* JADX WARN: Found duplicated region for block: B:20:0x0040  */
-    /* JADX WARN: Found duplicated region for block: B:26:0x005a  */
-    /* JADX WARN: Found duplicated region for block: B:27:0x005c  */
-    /* JADX WARN: Found duplicated region for block: B:29:0x005f A[Catch: all -> 0x0065, TRY_LEAVE, TryCatch #0 {, blocks: (B:24:0x004d, B:29:0x005f, B:34:0x0067, B:36:0x0070, B:37:0x0074), top: B:81:0x004d }] */
-    /* JADX WARN: Found duplicated region for block: B:34:0x0067 A[Catch: all -> 0x0065, MOVE_INLINED, TRY_ENTER, TryCatch #0 {, blocks: (B:24:0x004d, B:29:0x005f, B:34:0x0067, B:36:0x0070, B:37:0x0074), top: B:81:0x004d }] */
-    /* JADX WARN: Found duplicated region for block: B:36:0x0070 A[Catch: all -> 0x0065, TryCatch #0 {, blocks: (B:24:0x004d, B:29:0x005f, B:34:0x0067, B:36:0x0070, B:37:0x0074), top: B:81:0x004d }] */
-    /* JADX WARN: Found duplicated region for block: B:39:0x0083  */
-    /* JADX WARN: Found duplicated region for block: B:42:0x0087  */
-    /* JADX WARN: Found duplicated region for block: B:46:0x0093  */
+    /*
+     * JADX WARN: Found duplicated region for block: B:18:0x003c A[PHI: r0
+     * 0x003c: PHI (r0v1 java.lang.Object) = (r0v0 java.lang.Object), (r0v13
+     * java.lang.Object) binds: [B:3:0x0006, B:16:0x0038] A[DONT_GENERATE,
+     * DONT_INLINE]]
+     */
+    /* JADX WARN: Found duplicated region for block: B:20:0x0040 */
+    /* JADX WARN: Found duplicated region for block: B:26:0x005a */
+    /* JADX WARN: Found duplicated region for block: B:27:0x005c */
+    /*
+     * JADX WARN: Found duplicated region for block: B:29:0x005f A[Catch: all ->
+     * 0x0065, TRY_LEAVE, TryCatch #0 {, blocks: (B:24:0x004d, B:29:0x005f,
+     * B:34:0x0067, B:36:0x0070, B:37:0x0074), top: B:81:0x004d }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:34:0x0067 A[Catch: all ->
+     * 0x0065, MOVE_INLINED, TRY_ENTER, TryCatch #0 {, blocks: (B:24:0x004d,
+     * B:29:0x005f, B:34:0x0067, B:36:0x0070, B:37:0x0074), top: B:81:0x004d }]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:36:0x0070 A[Catch: all ->
+     * 0x0065, TryCatch #0 {, blocks: (B:24:0x004d, B:29:0x005f, B:34:0x0067,
+     * B:36:0x0070, B:37:0x0074), top: B:81:0x004d }]
+     */
+    /* JADX WARN: Found duplicated region for block: B:39:0x0083 */
+    /* JADX WARN: Found duplicated region for block: B:42:0x0087 */
+    /* JADX WARN: Found duplicated region for block: B:46:0x0093 */
     /* JADX WARN: Found duplicated region for block: B:48:0x0097 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:49:0x0099  */
-    /* JADX WARN: Found duplicated region for block: B:59:0x00be  */
-    /* JADX WARN: Found duplicated region for block: B:64:0x00d3  */
+    /* JADX WARN: Found duplicated region for block: B:49:0x0099 */
+    /* JADX WARN: Found duplicated region for block: B:59:0x00be */
+    /* JADX WARN: Found duplicated region for block: B:64:0x00d3 */
     /* JADX WARN: Found duplicated region for block: B:78:0x0103 A[RETURN] */
-    /* JADX WARN: Found duplicated region for block: B:79:0x0104  */
-    /* JADX WARN: Found duplicated region for block: B:81:0x004d A[EXC_TOP_SPLITTER, SYNTHETIC] */
+    /* JADX WARN: Found duplicated region for block: B:79:0x0104 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:81:0x004d A[EXC_TOP_SPLITTER,
+     * SYNTHETIC]
+     */
     /* JADX WARN: Found duplicated region for block: B:86:0x00c6 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:87:0x00ad A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:88:0x004c A[SYNTHETIC] */
@@ -588,7 +614,10 @@ public class brm implements brf, csx {
     /* JADX WARN: Found duplicated region for block: B:95:0x0042 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:96:0x0042 A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:97:0x0042 A[SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:98:? A[LOOP:2: B:56:0x00b2->B:98:?, LOOP_END, SYNTHETIC] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:98:? A[LOOP:2:
+     * B:56:0x00b2->B:98:?, LOOP_END, SYNTHETIC]
+     */
     public final boolean v(Object obj) {
         Throwable thZ;
         AtomicReferenceFieldUpdater atomicReferenceFieldUpdater;
@@ -774,7 +803,7 @@ public class brm implements brf, csx {
             yeVar.e();
             atomicReferenceFieldUpdater.set(this, con.b);
         }
-        abt abtVar = null;
+        QueryDidNotReturnUniqueResultRuntimeException abtVar = null;
         abr abrVar = obj instanceof abr ? (abr) obj : null;
         Throwable th = abrVar != null ? abrVar.c : null;
         if (bouVar instanceof bri) {
@@ -782,7 +811,8 @@ public class brm implements brf, csx {
                 ((bri) bouVar).d(th);
                 return;
             } catch (Throwable th2) {
-                f(new abt("Exception in completion handler " + bouVar + " for " + this, th2));
+                f(new QueryDidNotReturnUniqueResultRuntimeException(
+                        "Exception in completion handler " + bouVar + " for " + this, th2));
                 return;
             }
         }
@@ -790,7 +820,8 @@ public class brm implements brf, csx {
         if (cokVarC != null) {
             cokVarC.n(new bwa(1), 1);
             Object obj2 = bxl.k.get(cokVarC);
-            bzo.o(obj2, "null cannot be cast to non-null type kotlinx.coroutines.internal.LockFreeLinkedListNode");
+            throwIfVar1IsNull(obj2,
+                    "null cannot be cast to non-null type kotlinx.coroutines.internal.LockFreeLinkedListNode");
             for (bxl bxlVarQ = (bxl) obj2; !bxlVarQ.equals(cokVarC); bxlVarQ = bxlVarQ.q()) {
                 if (bxlVarQ instanceof bri) {
                     try {
@@ -799,7 +830,8 @@ public class brm implements brf, csx {
                         if (abtVar != null) {
                             aye.j(abtVar, th3);
                         } else {
-                            abtVar = new abt("Exception in completion handler " + bxlVarQ + " for " + this, th3);
+                            abtVar = new QueryDidNotReturnUniqueResultRuntimeException(
+                                    "Exception in completion handler " + bxlVarQ + " for " + this, th3);
                         }
                     }
                 }
@@ -827,7 +859,9 @@ public class brm implements brf, csx {
             }
             thH = null;
         }
-        CancellationException cancellationException = thH instanceof CancellationException ? (CancellationException) thH : null;
-        return cancellationException == null ? new brg("Parent job is ".concat(u(obj2)), thH, brmVar) : cancellationException;
+        CancellationException cancellationException = thH instanceof CancellationException ? (CancellationException) thH
+                : null;
+        return cancellationException == null ? new brg("Parent job is ".concat(u(obj2)), thH, brmVar)
+                : cancellationException;
     }
 }

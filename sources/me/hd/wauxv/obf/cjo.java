@@ -33,11 +33,14 @@ public final class cjo {
             return false;
         }
         cjo cjoVar = (cjo) obj;
-        return this.a == cjoVar.a && this.b == cjoVar.b && this.c == cjoVar.c && this.d == cjoVar.d && this.e == cjoVar.e && this.f == cjoVar.f && this.g == cjoVar.g && this.h == cjoVar.h && this.i == cjoVar.i;
+        return this.a == cjoVar.a && this.b == cjoVar.b && this.c == cjoVar.c && this.d == cjoVar.d
+                && this.e == cjoVar.e && this.f == cjoVar.f && this.g == cjoVar.g && this.h == cjoVar.h
+                && this.i == cjoVar.i;
     }
 
     public final int hashCode() {
-        return ((((((((((((((((this.a ? 1 : 0) * 31) + (this.b ? 1 : 0)) * 31) + this.c) * 923521) + (this.d ? 1 : 0)) * 31) + (this.e ? 1 : 0)) * 31) + this.f) * 31) + this.g) * 31) + this.h) * 31) + this.i;
+        return ((((((((((((((((this.a ? 1 : 0) * 31) + (this.b ? 1 : 0)) * 31) + this.c) * 923521) + (this.d ? 1 : 0))
+                * 31) + (this.e ? 1 : 0)) * 31) + this.f) * 31) + this.g) * 31) + this.h) * 31) + this.i;
     }
 
     public final String toString() {
@@ -66,7 +69,7 @@ public final class cjo {
             sb.append(")");
         }
         String string = sb.toString();
-        bzo.p(string, "toString(...)");
+        throwIfVar1IsNull(string, "toString(...)");
         return string;
     }
 }

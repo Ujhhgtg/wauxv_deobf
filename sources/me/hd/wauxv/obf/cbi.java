@@ -27,7 +27,7 @@ public final /* synthetic */ class cbi implements bgj {
         boolean zE;
         switch (this.a) {
             case 0:
-                zF = bzo.f(((Method) obj2).getReturnType(), cbp.t(obj, this.b, "Method: returnType"));
+                zF = nullSafeIsEqual(((Method) obj2).getReturnType(), cbp.t(obj, this.b, "Method: returnType"));
                 return Boolean.valueOf(zF);
             case 1:
                 zF = cbp.e((List) obj, la.ab(((Executable) obj2).getParameterTypes()), this.b);
@@ -147,7 +147,7 @@ public final /* synthetic */ class cbi implements bgj {
                 zE = cbp.e(set2, arrayList8, this.b);
                 break;
             default:
-                zF = bzo.f(((Field) obj2).getType(), cbp.t(obj, this.b, "Field: type"));
+                zF = nullSafeIsEqual(((Field) obj2).getType(), cbp.t(obj, this.b, "Field: type"));
                 return Boolean.valueOf(zF);
         }
         zF = !zE;

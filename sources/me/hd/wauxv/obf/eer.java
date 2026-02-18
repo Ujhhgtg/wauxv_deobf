@@ -6,7 +6,8 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class eer {
     public static final eeq Companion = new eeq();
-    public static final btt[] a = {null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, ewz.am(btx.a, new dtr(27)), null};
+    public static final btt[] a = { null, null, null, null, null, null, null, null, null, null, null, null, null, null,
+            null, ewz.am(btx.a, new dtr(27)), null };
     public final Float b;
     public final Float c;
     public final String d;
@@ -25,7 +26,9 @@ public final class eer {
     public final List q;
     public final Integer r;
 
-    public /* synthetic */ eer(int i, Float f, Float f2, String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, Integer num2, String str8, String str9, String str10, Long l, List list, Integer num3) {
+    public /* synthetic */ eer(int i, Float f, Float f2, String str, String str2, String str3, String str4, Integer num,
+            String str5, String str6, String str7, Integer num2, String str8, String str9, String str10, Long l,
+            List list, Integer num3) {
         if (131071 != (i & 131071)) {
             bht.ah(i, 131071, eep.b.getDescriptor());
             throw null;
@@ -57,7 +60,17 @@ public final class eer {
             return false;
         }
         eer eerVar = (eer) obj;
-        return bzo.f(this.b, eerVar.b) && bzo.f(this.c, eerVar.c) && bzo.f(this.d, eerVar.d) && bzo.f(this.e, eerVar.e) && bzo.f(this.f, eerVar.f) && bzo.f(this.g, eerVar.g) && bzo.f(this.h, eerVar.h) && bzo.f(this.i, eerVar.i) && bzo.f(this.j, eerVar.j) && bzo.f(this.k, eerVar.k) && bzo.f(this.l, eerVar.l) && bzo.f(this.m, eerVar.m) && bzo.f(this.n, eerVar.n) && bzo.f(this.o, eerVar.o) && bzo.f(this.p, eerVar.p) && bzo.f(this.q, eerVar.q) && bzo.f(this.r, eerVar.r);
+        return nullSafeIsEqual(this.b, eerVar.b) && nullSafeIsEqual(this.c, eerVar.c)
+                && nullSafeIsEqual(this.d, eerVar.d) && nullSafeIsEqual(this.e, eerVar.e)
+                && nullSafeIsEqual(this.f, eerVar.f) && nullSafeIsEqual(this.g, eerVar.g)
+                && nullSafeIsEqual(this.h, eerVar.h)
+                && nullSafeIsEqual(this.i, eerVar.i) && nullSafeIsEqual(this.j, eerVar.j)
+                && nullSafeIsEqual(this.k, eerVar.k)
+                && nullSafeIsEqual(this.l, eerVar.l) && nullSafeIsEqual(this.m, eerVar.m)
+                && nullSafeIsEqual(this.n, eerVar.n)
+                && nullSafeIsEqual(this.o, eerVar.o) && nullSafeIsEqual(this.p, eerVar.p)
+                && nullSafeIsEqual(this.q, eerVar.q)
+                && nullSafeIsEqual(this.r, eerVar.r);
     }
 
     public final int hashCode() {
@@ -116,6 +129,6 @@ public final class eer {
         yg.u(sb, this.o, -270424025856810L);
         dkz.ad(sb, this.p, -270389666118442L);
         yg.v(sb, this.q, -270312356707114L);
-        return bjs.p(sb, this.r, ')');
+        return concat(sb, this.r, ')');
     }
 }

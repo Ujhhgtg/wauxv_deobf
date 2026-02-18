@@ -24,7 +24,7 @@ public final class ehp {
             return false;
         }
         ehp ehpVar = (ehp) obj;
-        return bzo.f(this.a, ehpVar.a) && bzo.f(this.b, ehpVar.b);
+        return nullSafeIsEqual(this.a, ehpVar.a) && nullSafeIsEqual(this.b, ehpVar.b);
     }
 
     public final int hashCode() {
@@ -38,6 +38,6 @@ public final class ehp {
         StringBuilder sb = new StringBuilder();
         sb.append("w90Proto(dynamic_voice_live_img_url=" /* cnb.z(-304440166841130L) */);
         yg.u(sb, this.a, -303714317368106L);
-        return bjs.q(sb, this.b, ')');
+        return concat(sb, this.b, ')');
     }
 }

@@ -9,12 +9,12 @@ import java.util.function.UnaryOperator;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class brp extends brx implements List<brx>, bsw {
+public final class brp extends brx implements List<brx>, IEmpty {
     public static final bro Companion = new bro();
     public final List a;
 
     public brp(List list) {
-        bzo.q(list, "content");
+        throwIfVar1IsNull(list, "content");
         this.a = list;
     }
 
@@ -43,13 +43,13 @@ public final class brp extends brx implements List<brx>, bsw {
 
     @Override // java.util.List, java.util.Collection
     public final boolean containsAll(Collection collection) {
-        bzo.q(collection, "elements");
+        throwIfVar1IsNull(collection, "elements");
         return this.a.containsAll(collection);
     }
 
     @Override // java.util.List, java.util.Collection
     public final boolean equals(Object obj) {
-        return bzo.f(this.a, obj);
+        return nullSafeIsEqual(this.a, obj);
     }
 
     @Override // java.util.List
@@ -164,7 +164,7 @@ public final class brp extends brx implements List<brx>, bsw {
 
     @Override // java.util.List, java.util.Collection
     public final Object[] toArray(Object[] objArr) {
-        bzo.q(objArr, "array");
+        throwIfVar1IsNull(objArr, "array");
         return bmy.ai(this, objArr);
     }
 }

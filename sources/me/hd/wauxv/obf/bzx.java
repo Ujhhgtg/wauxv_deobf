@@ -12,7 +12,7 @@ public final class bzx {
     public bzv d;
 
     public bzx(Matcher matcher, CharSequence charSequence) {
-        bzo.q(charSequence, "input");
+        throwIfVar1IsNull(charSequence, "input");
         this.a = matcher;
         this.b = charSequence;
         this.c = new bzw(this);
@@ -23,7 +23,7 @@ public final class bzx {
             this.d = new bzv(this, 0);
         }
         bzv bzvVar = this.d;
-        bzo.n(bzvVar);
+        throwIfVar1IsNull(bzvVar);
         return bzvVar;
     }
 
@@ -40,7 +40,7 @@ public final class bzx {
             return null;
         }
         Matcher matcher2 = matcher.pattern().matcher(charSequence);
-        bzo.p(matcher2, "matcher(...)");
+        throwIfVar1IsNull(matcher2, "matcher(...)");
         return ewz.y(matcher2, iEnd, charSequence);
     }
 }

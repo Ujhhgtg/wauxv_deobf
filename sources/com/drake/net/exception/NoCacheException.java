@@ -1,7 +1,7 @@
 package com.drake.net.exception;
 
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cmz;
 import me.hd.wauxv.obf.nu;
 import me.hd.wauxv.obf.sj;
@@ -19,7 +19,7 @@ public final class NoCacheException extends NetException {
     public String getLocalizedMessage() {
         StringBuilder sb = new StringBuilder("cacheKey = ");
         Request request = getRequest();
-        bzo.q(request, "request");
+        throwIfVar1IsNull(request, "request");
         yg.t(request.tag(cmz.class));
         String str = request.method() + request.url();
         sj sjVar = sj.a;
@@ -29,9 +29,12 @@ public final class NoCacheException extends NetException {
         return sb.toString();
     }
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'super' call moved to the top of the method (can break code
+     * semantics)
+     */
     public NoCacheException(Request request, String str, Throwable th) {
         super(request, str, th);
-        bzo.q(request, "request");
+        throwIfVar1IsNull(request, "request");
     }
 }

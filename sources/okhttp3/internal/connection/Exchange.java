@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.net.ProtocolException;
 import me.hd.wauxv.obf.bcz;
 import me.hd.wauxv.obf.bda;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.dhy;
 import me.hd.wauxv.obf.dlc;
 import me.hd.wauxv.obf.emc;
@@ -31,7 +31,10 @@ public final class Exchange {
     private boolean hasFailure;
     private boolean isDuplex;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public final class RequestBodySink extends bcz {
         private long bytesReceived;
         private boolean closed;
@@ -39,10 +42,13 @@ public final class Exchange {
         private final long contentLength;
         final /* synthetic */ Exchange this$0;
 
-        /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+        /*
+         * JADX WARN: 'super' call moved to the top of the method (can break code
+         * semantics)
+         */
         public RequestBodySink(Exchange exchange, dhy dhyVar, long j) {
             super(dhyVar);
-            bzo.q(dhyVar, MethodDelegation.ImplementationDelegate.FIELD_NAME_PREFIX);
+            throwIfVar1IsNull(dhyVar, MethodDelegation.ImplementationDelegate.FIELD_NAME_PREFIX);
             this.this$0 = exchange;
             this.contentLength = j;
         }
@@ -55,7 +61,8 @@ public final class Exchange {
             return (E) this.this$0.bodyComplete(this.bytesReceived, false, true, e);
         }
 
-        @Override // me.hd.wauxv.obf.bcz, me.hd.wauxv.obf.dhy, java.io.Closeable, java.lang.AutoCloseable
+        @Override // me.hd.wauxv.obf.bcz, me.hd.wauxv.obf.dhy, java.io.Closeable,
+                  // java.lang.AutoCloseable
         public void close() throws IOException {
             if (this.closed) {
                 return;
@@ -84,7 +91,7 @@ public final class Exchange {
 
         @Override // me.hd.wauxv.obf.bcz, me.hd.wauxv.obf.dhy
         public void write(rh rhVar, long j) throws IOException {
-            bzo.q(rhVar, "source");
+            throwIfVar1IsNull(rhVar, "source");
             if (this.closed) {
                 throw new IllegalStateException("closed");
             }
@@ -98,11 +105,15 @@ public final class Exchange {
                     throw complete(e);
                 }
             }
-            throw new ProtocolException("expected " + this.contentLength + " bytes but received " + (this.bytesReceived + j));
+            throw new ProtocolException(
+                    "expected " + this.contentLength + " bytes but received " + (this.bytesReceived + j));
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public final class ResponseBodySource extends bda {
         private long bytesReceived;
         private boolean closed;
@@ -111,10 +122,13 @@ public final class Exchange {
         private boolean invokeStartEvent;
         final /* synthetic */ Exchange this$0;
 
-        /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+        /*
+         * JADX WARN: 'super' call moved to the top of the method (can break code
+         * semantics)
+         */
         public ResponseBodySource(Exchange exchange, dlc dlcVar, long j) {
             super(dlcVar);
-            bzo.q(dlcVar, MethodDelegation.ImplementationDelegate.FIELD_NAME_PREFIX);
+            throwIfVar1IsNull(dlcVar, MethodDelegation.ImplementationDelegate.FIELD_NAME_PREFIX);
             this.this$0 = exchange;
             this.contentLength = j;
             this.invokeStartEvent = true;
@@ -151,7 +165,7 @@ public final class Exchange {
 
         @Override // me.hd.wauxv.obf.bda, me.hd.wauxv.obf.dlc
         public long read(rh rhVar, long j) throws IOException {
-            bzo.q(rhVar, "sink");
+            throwIfVar1IsNull(rhVar, "sink");
             if (this.closed) {
                 throw new IllegalStateException("closed");
             }
@@ -181,11 +195,12 @@ public final class Exchange {
         }
     }
 
-    public Exchange(RealCall realCall, EventListener eventListener, ExchangeFinder exchangeFinder, ExchangeCodec exchangeCodec) {
-        bzo.q(realCall, "call");
-        bzo.q(eventListener, "eventListener");
-        bzo.q(exchangeFinder, "finder");
-        bzo.q(exchangeCodec, "codec");
+    public Exchange(RealCall realCall, EventListener eventListener, ExchangeFinder exchangeFinder,
+            ExchangeCodec exchangeCodec) {
+        throwIfVar1IsNull(realCall, "call");
+        throwIfVar1IsNull(eventListener, "eventListener");
+        throwIfVar1IsNull(exchangeFinder, "finder");
+        throwIfVar1IsNull(exchangeCodec, "codec");
         this.call = realCall;
         this.eventListener = eventListener;
         this.finder = exchangeFinder;
@@ -225,10 +240,10 @@ public final class Exchange {
     }
 
     public final dhy createRequestBody(Request request, boolean z) {
-        bzo.q(request, "request");
+        throwIfVar1IsNull(request, "request");
         this.isDuplex = z;
         RequestBody requestBodyBody = request.body();
-        bzo.n(requestBodyBody);
+        throwIfVar1IsNull(requestBodyBody);
         long jContentLength = requestBodyBody.contentLength();
         this.eventListener.requestBodyStart(this.call);
         return new RequestBodySink(this, this.codec.createRequestBody(request, jContentLength), jContentLength);
@@ -280,7 +295,8 @@ public final class Exchange {
     }
 
     public final boolean isCoalescedConnection$okhttp() {
-        return !bzo.f(this.finder.getAddress$okhttp().url().host(), this.connection.route().address().url().host());
+        return !nullSafeIsEqual(this.finder.getAddress$okhttp().url().host(),
+                this.connection.route().address().url().host());
     }
 
     public final boolean isDuplex$okhttp() {
@@ -301,11 +317,12 @@ public final class Exchange {
     }
 
     public final ResponseBody openResponseBody(Response response) throws IOException {
-        bzo.q(response, "response");
+        throwIfVar1IsNull(response, "response");
         try {
             String strHeader$default = Response.header$default(response, "Content-Type", null, 2, null);
             long jReportedContentLength = this.codec.reportedContentLength(response);
-            return new RealResponseBody(strHeader$default, jReportedContentLength, emc.ah(new ResponseBodySource(this, this.codec.openResponseBodySource(response), jReportedContentLength)));
+            return new RealResponseBody(strHeader$default, jReportedContentLength, emc.ah(
+                    new ResponseBodySource(this, this.codec.openResponseBodySource(response), jReportedContentLength)));
         } catch (IOException e) {
             this.eventListener.responseFailed(this.call, e);
             trackFailure(e);
@@ -329,7 +346,7 @@ public final class Exchange {
     }
 
     public final void responseHeadersEnd(Response response) {
-        bzo.q(response, "response");
+        throwIfVar1IsNull(response, "response");
         this.eventListener.responseHeadersEnd(this.call, response);
     }
 
@@ -346,7 +363,7 @@ public final class Exchange {
     }
 
     public final void writeRequestHeaders(Request request) throws IOException {
-        bzo.q(request, "request");
+        throwIfVar1IsNull(request, "request");
         try {
             this.eventListener.requestHeadersStart(this.call);
             this.codec.writeRequestHeaders(request);

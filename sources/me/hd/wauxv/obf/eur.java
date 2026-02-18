@@ -29,7 +29,7 @@ public final class eur extends emn {
                 eutVar.as.setVisibility(8);
                 eutVar.as.setTransitioning(false);
                 eutVar.bh = null;
-                io ioVar = eutVar.az;
+                DefaultConfig ioVar = eutVar.az;
                 if (ioVar != null) {
                     ioVar.ao(eutVar.ay);
                     eutVar.ay = null;

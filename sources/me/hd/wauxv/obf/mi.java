@@ -45,7 +45,10 @@ public final class mi extends ell {
     }
 
     @Override // me.hd.wauxv.obf.ell
-    /* JADX INFO: renamed from: _as, reason: merged with bridge method [inline-methods] */
+    /*
+     * JADX INFO: renamed from: _as, reason: merged with bridge method
+     * [inline-methods]
+     */
     public final void t(TimeInterpolator timeInterpolator) {
         this.e |= 1;
         ArrayList arrayList = this.a;
@@ -63,7 +66,7 @@ public final class mi extends ell {
             this.b = true;
         } else {
             if (i != 1) {
-                throw new AndroidRuntimeException(bjs.i(i, "Invalid parameter for TransitionSet ordering: "));
+                throw new AndroidRuntimeException(concatVar2Var1(i, "Invalid parameter for TransitionSet ordering: "));
             }
             this.b = false;
         }
@@ -229,8 +232,8 @@ public final class mi extends ell {
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:55:0x00c9  */
-    /* JADX WARN: Found duplicated region for block: B:63:0x00d9  */
+    /* JADX WARN: Found duplicated region for block: B:55:0x00c9 */
+    /* JADX WARN: Found duplicated region for block: B:63:0x00d9 */
     /* JADX WARN: Found duplicated region for block: B:74:? A[RETURN, SYNTHETIC] */
     @Override // me.hd.wauxv.obf.ell
     public final void q(long j, long j2) {
@@ -357,7 +360,7 @@ public final class mi extends ell {
     public final String x(String str) {
         String strX = super.x(str);
         for (int i = 0; i < this.a.size(); i++) {
-            StringBuilder sbR = bjs.r(strX, "\n");
+            StringBuilder sbR = concat(strX, "\n");
             sbR.append(((ell) this.a.get(i)).x(str + "  "));
             strX = sbR.toString();
         }
@@ -365,7 +368,10 @@ public final class mi extends ell {
     }
 
     @Override // me.hd.wauxv.obf.ell
-    /* JADX INFO: renamed from: z, reason: merged with bridge method [inline-methods] */
+    /*
+     * JADX INFO: renamed from: z, reason: merged with bridge method
+     * [inline-methods]
+     */
     public final void r(long j) {
         ArrayList arrayList;
         this.ai = j;

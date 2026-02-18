@@ -13,11 +13,11 @@ import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.NoSuchElementException;
-import me.hd.wauxv.obf.abt;
+import me.hd.wauxv.obf.QueryDidNotReturnUniqueResultRuntimeException;
 import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.bda;
-import me.hd.wauxv.obf.bsw;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.IEmpty;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cnh;
 import me.hd.wauxv.obf.cyk;
 import me.hd.wauxv.obf.cyl;
@@ -77,7 +77,10 @@ public final class DiskLruCache implements Closeable, Flushable {
     public static final String REMOVE = "REMOVE";
     public static final String READ = "READ";
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         public /* synthetic */ Companion(akd akdVar) {
             this();
@@ -87,7 +90,10 @@ public final class DiskLruCache implements Closeable, Flushable {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public final class Editor {
         private boolean done;
         private final Entry entry;
@@ -95,7 +101,7 @@ public final class DiskLruCache implements Closeable, Flushable {
         private final boolean[] written;
 
         public Editor(DiskLruCache diskLruCache, Entry entry) {
-            bzo.q(entry, "entry");
+            throwIfVar1IsNull(entry, "entry");
             this.this$0 = diskLruCache;
             this.entry = entry;
             this.written = entry.getReadable$okhttp() ? null : new boolean[diskLruCache.getValueCount$okhttp()];
@@ -108,7 +114,7 @@ public final class DiskLruCache implements Closeable, Flushable {
                     if (this.done) {
                         throw new IllegalStateException("Check failed.");
                     }
-                    if (bzo.f(this.entry.getCurrentEditor$okhttp(), this)) {
+                    if (nullSafeIsEqual(this.entry.getCurrentEditor$okhttp(), this)) {
                         diskLruCache.completeEdit$okhttp(this, false);
                     }
                     this.done = true;
@@ -125,7 +131,7 @@ public final class DiskLruCache implements Closeable, Flushable {
                     if (this.done) {
                         throw new IllegalStateException("Check failed.");
                     }
-                    if (bzo.f(this.entry.getCurrentEditor$okhttp(), this)) {
+                    if (nullSafeIsEqual(this.entry.getCurrentEditor$okhttp(), this)) {
                         diskLruCache.completeEdit$okhttp(this, true);
                     }
                     this.done = true;
@@ -136,7 +142,7 @@ public final class DiskLruCache implements Closeable, Flushable {
         }
 
         public final void detach$okhttp() {
-            if (bzo.f(this.entry.getCurrentEditor$okhttp(), this)) {
+            if (nullSafeIsEqual(this.entry.getCurrentEditor$okhttp(), this)) {
                 if (this.this$0.civilizedFileSystem) {
                     this.this$0.completeEdit$okhttp(this, false);
                 } else {
@@ -160,16 +166,18 @@ public final class DiskLruCache implements Closeable, Flushable {
                     if (this.done) {
                         throw new IllegalStateException("Check failed.");
                     }
-                    if (!bzo.f(this.entry.getCurrentEditor$okhttp(), this)) {
+                    if (!nullSafeIsEqual(this.entry.getCurrentEditor$okhttp(), this)) {
                         return new pc();
                     }
                     if (!this.entry.getReadable$okhttp()) {
                         boolean[] zArr = this.written;
-                        bzo.n(zArr);
+                        throwIfVar1IsNull(zArr);
                         zArr[i] = true;
                     }
                     try {
-                        return new FaultHidingSink(diskLruCache.getFileSystem$okhttp().sink(this.entry.getDirtyFiles$okhttp().get(i)), new DiskLruCache$Editor$newSink$1$1(diskLruCache, this));
+                        return new FaultHidingSink(
+                                diskLruCache.getFileSystem$okhttp().sink(this.entry.getDirtyFiles$okhttp().get(i)),
+                                new DiskLruCache$Editor$newSink$1$1(diskLruCache, this));
                     } catch (FileNotFoundException unused) {
                         return new pc();
                     }
@@ -186,7 +194,8 @@ public final class DiskLruCache implements Closeable, Flushable {
                     throw new IllegalStateException("Check failed.");
                 }
                 dlc dlcVarSource = null;
-                if (!this.entry.getReadable$okhttp() || !bzo.f(this.entry.getCurrentEditor$okhttp(), this) || this.entry.getZombie$okhttp()) {
+                if (!this.entry.getReadable$okhttp() || !nullSafeIsEqual(this.entry.getCurrentEditor$okhttp(), this)
+                        || this.entry.getZombie$okhttp()) {
                     return null;
                 }
                 try {
@@ -198,7 +207,10 @@ public final class DiskLruCache implements Closeable, Flushable {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public final class Entry {
         private final List<File> cleanFiles;
         private Editor currentEditor;
@@ -212,7 +224,7 @@ public final class DiskLruCache implements Closeable, Flushable {
         private boolean zombie;
 
         public Entry(DiskLruCache diskLruCache, String str) {
-            bzo.q(str, "key");
+            throwIfVar1IsNull(str, "key");
             this.this$0 = diskLruCache;
             this.key = str;
             this.lengths = new long[diskLruCache.getValueCount$okhttp()];
@@ -305,10 +317,10 @@ public final class DiskLruCache implements Closeable, Flushable {
         }
 
         public final void setLengths$okhttp(List<String> list) throws IOException {
-            bzo.q(list, "strings");
+            throwIfVar1IsNull(list, "strings");
             if (list.size() != this.this$0.getValueCount$okhttp()) {
                 invalidLengths(list);
-                throw new abt();
+                throw new QueryDidNotReturnUniqueResultRuntimeException();
             }
             try {
                 int size = list.size();
@@ -317,7 +329,7 @@ public final class DiskLruCache implements Closeable, Flushable {
                 }
             } catch (NumberFormatException unused) {
                 invalidLengths(list);
-                throw new abt();
+                throw new QueryDidNotReturnUniqueResultRuntimeException();
             }
         }
 
@@ -340,7 +352,8 @@ public final class DiskLruCache implements Closeable, Flushable {
         public final Snapshot snapshot$okhttp() {
             DiskLruCache diskLruCache = this.this$0;
             if (Util.assertionsEnabled && !Thread.holdsLock(diskLruCache)) {
-                throw new AssertionError("Thread " + Thread.currentThread().getName() + " MUST hold lock on " + diskLruCache);
+                throw new AssertionError(
+                        "Thread " + Thread.currentThread().getName() + " MUST hold lock on " + diskLruCache);
             }
             if (!this.readable) {
                 return null;
@@ -370,14 +383,17 @@ public final class DiskLruCache implements Closeable, Flushable {
         }
 
         public final void writeLengths$okhttp(rl rlVar) {
-            bzo.q(rlVar, "writer");
+            throwIfVar1IsNull(rlVar, "writer");
             for (long j : this.lengths) {
                 rlVar.writeByte(32).ai(j);
             }
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public final class Snapshot implements Closeable {
         private final String key;
         private final long[] lengths;
@@ -387,9 +403,9 @@ public final class DiskLruCache implements Closeable, Flushable {
 
         /* JADX WARN: Multi-variable type inference failed */
         public Snapshot(DiskLruCache diskLruCache, String str, long j, List<? extends dlc> list, long[] jArr) {
-            bzo.q(str, "key");
-            bzo.q(list, "sources");
-            bzo.q(jArr, "lengths");
+            throwIfVar1IsNull(str, "key");
+            throwIfVar1IsNull(list, "sources");
+            throwIfVar1IsNull(jArr, "lengths");
             this.this$0 = diskLruCache;
             this.key = str;
             this.sequenceNumber = j;
@@ -422,16 +438,22 @@ public final class DiskLruCache implements Closeable, Flushable {
         }
     }
 
-    /* JADX INFO: renamed from: okhttp3.internal.cache.DiskLruCache$snapshots$1, reason: invalid class name */
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
-    public static final class AnonymousClass1 implements Iterator<Snapshot>, bsw {
+    /*
+     * JADX INFO: renamed from: okhttp3.internal.cache.DiskLruCache$snapshots$1,
+     * reason: invalid class name
+     */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
+    public static final class AnonymousClass1 implements Iterator<Snapshot>, IEmpty {
         private final Iterator<Entry> delegate;
         private Snapshot nextSnapshot;
         private Snapshot removeSnapshot;
 
         public AnonymousClass1() {
             Iterator<Entry> it = new ArrayList(DiskLruCache.this.getLruEntries$okhttp().values()).iterator();
-            bzo.p(it, "ArrayList(lruEntries.values).iterator()");
+            throwIfVar1IsNull(it, "ArrayList(lruEntries.values).iterator()");
             this.delegate = it;
         }
 
@@ -479,16 +501,19 @@ public final class DiskLruCache implements Closeable, Flushable {
             Snapshot snapshot = this.nextSnapshot;
             this.removeSnapshot = snapshot;
             this.nextSnapshot = null;
-            bzo.n(snapshot);
+            throwIfVar1IsNull(snapshot);
             return snapshot;
         }
     }
 
-    /* JADX WARN: Type inference failed for: r5v3, types: [okhttp3.internal.cache.DiskLruCache$cleanupTask$1] */
+    /*
+     * JADX WARN: Type inference failed for: r5v3, types:
+     * [okhttp3.internal.cache.DiskLruCache$cleanupTask$1]
+     */
     public DiskLruCache(FileSystem fileSystem, File file, int i, int i2, long j, TaskRunner taskRunner) {
-        bzo.q(fileSystem, "fileSystem");
-        bzo.q(file, "directory");
-        bzo.q(taskRunner, "taskRunner");
+        throwIfVar1IsNull(fileSystem, "fileSystem");
+        throwIfVar1IsNull(file, "directory");
+        throwIfVar1IsNull(taskRunner, "taskRunner");
         this.fileSystem = fileSystem;
         this.directory = file;
         this.appVersion = i;
@@ -546,7 +571,8 @@ public final class DiskLruCache implements Closeable, Flushable {
         }
     }
 
-    public static /* synthetic */ Editor edit$default(DiskLruCache diskLruCache, String str, long j, int i, Object obj) {
+    public static /* synthetic */ Editor edit$default(DiskLruCache diskLruCache, String str, long j, int i,
+            Object obj) {
         if ((i & 2) != 0) {
             j = ANY_SEQUENCE_NUMBER;
         }
@@ -560,7 +586,8 @@ public final class DiskLruCache implements Closeable, Flushable {
     }
 
     private final rl newJournalWriter() {
-        return emc.ag(new FaultHidingSink(this.fileSystem.appendingSink(this.journalFile), new DiskLruCache$newJournalWriter$faultHidingSink$1(this)));
+        return emc.ag(new FaultHidingSink(this.fileSystem.appendingSink(this.journalFile),
+                new DiskLruCache$newJournalWriter$faultHidingSink$1(this)));
     }
 
     private final void processJournal() {
@@ -568,7 +595,7 @@ public final class DiskLruCache implements Closeable, Flushable {
         Iterator<Entry> it = this.lruEntries.values().iterator();
         while (it.hasNext()) {
             Entry next = it.next();
-            bzo.p(next, "i.next()");
+            throwIfVar1IsNull(next, "i.next()");
             Entry entry = next;
             int i = 0;
             if (entry.getCurrentEditor$okhttp() == null) {
@@ -598,8 +625,11 @@ public final class DiskLruCache implements Closeable, Flushable {
             String strM3 = cylVarAh.m(Long.MAX_VALUE);
             String strM4 = cylVarAh.m(Long.MAX_VALUE);
             String strM5 = cylVarAh.m(Long.MAX_VALUE);
-            if (!bzo.f(MAGIC, strM) || !bzo.f(VERSION_1, strM2) || !bzo.f(String.valueOf(this.appVersion), strM3) || !bzo.f(String.valueOf(this.valueCount), strM4) || strM5.length() > 0) {
-                throw new IOException("unexpected journal header: [" + strM + ", " + strM2 + ", " + strM4 + ", " + strM5 + ']');
+            if (!nullSafeIsEqual(MAGIC, strM) || !nullSafeIsEqual(VERSION_1, strM2)
+                    || !nullSafeIsEqual(String.valueOf(this.appVersion), strM3)
+                    || !nullSafeIsEqual(String.valueOf(this.valueCount), strM4) || strM5.length() > 0) {
+                throw new IOException(
+                        "unexpected journal header: [" + strM + ", " + strM2 + ", " + strM4 + ", " + strM5 + ']');
             }
             int i = 0;
             while (true) {
@@ -637,7 +667,7 @@ public final class DiskLruCache implements Closeable, Flushable {
         int iAh2 = dnj.ah(' ', i, 4, str);
         if (iAh2 == -1) {
             strSubstring = str.substring(i);
-            bzo.p(strSubstring, "this as java.lang.String).substring(startIndex)");
+            throwIfVar1IsNull(strSubstring, "this as java.lang.String).substring(startIndex)");
             String str2 = REMOVE;
             if (iAh == str2.length() && dnr.bp(str, str2, false)) {
                 this.lruEntries.remove(strSubstring);
@@ -645,7 +675,7 @@ public final class DiskLruCache implements Closeable, Flushable {
             }
         } else {
             strSubstring = str.substring(i, iAh2);
-            bzo.p(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
+            throwIfVar1IsNull(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
         }
         Entry entry = this.lruEntries.get(strSubstring);
         if (entry == null) {
@@ -656,8 +686,8 @@ public final class DiskLruCache implements Closeable, Flushable {
             String str3 = CLEAN;
             if (iAh == str3.length() && dnr.bp(str, str3, false)) {
                 String strSubstring2 = str.substring(iAh2 + 1);
-                bzo.p(strSubstring2, "this as java.lang.String).substring(startIndex)");
-                List<String> listAr = dnj.ar(strSubstring2, new char[]{' '});
+                throwIfVar1IsNull(strSubstring2, "this as java.lang.String).substring(startIndex)");
+                List<String> listAr = dnj.ar(strSubstring2, new char[] { ' ' });
                 entry.setReadable$okhttp(true);
                 entry.setCurrentEditor$okhttp(null);
                 entry.setLengths$okhttp(listAr);
@@ -692,7 +722,8 @@ public final class DiskLruCache implements Closeable, Flushable {
 
     private final void validateKey(String str) {
         if (!LEGAL_KEY_PATTERN.f(str)) {
-            throw new IllegalArgumentException(dkz.o('\"', "keys must match regex [a-z0-9_-]{1,120}: \"", str).toString());
+            throw new IllegalArgumentException(
+                    dkz.o('\"', "keys must match regex [a-z0-9_-]{1,120}: \"", str).toString());
         }
     }
 
@@ -702,15 +733,16 @@ public final class DiskLruCache implements Closeable, Flushable {
         try {
             if (this.initialized && !this.closed) {
                 Collection<Entry> collectionValues = this.lruEntries.values();
-                bzo.p(collectionValues, "lruEntries.values");
+                throwIfVar1IsNull(collectionValues, "lruEntries.values");
                 for (Entry entry : (Entry[]) collectionValues.toArray(new Entry[0])) {
-                    if (entry.getCurrentEditor$okhttp() != null && (currentEditor$okhttp = entry.getCurrentEditor$okhttp()) != null) {
+                    if (entry.getCurrentEditor$okhttp() != null
+                            && (currentEditor$okhttp = entry.getCurrentEditor$okhttp()) != null) {
                         currentEditor$okhttp.detach$okhttp();
                     }
                 }
                 trimToSize();
                 rl rlVar = this.journalWriter;
-                bzo.n(rlVar);
+                throwIfVar1IsNull(rlVar);
                 rlVar.close();
                 this.journalWriter = null;
                 this.closed = true;
@@ -723,16 +755,16 @@ public final class DiskLruCache implements Closeable, Flushable {
     }
 
     public final synchronized void completeEdit$okhttp(Editor editor, boolean z) {
-        bzo.q(editor, "editor");
+        throwIfVar1IsNull(editor, "editor");
         Entry entry$okhttp = editor.getEntry$okhttp();
-        if (!bzo.f(entry$okhttp.getCurrentEditor$okhttp(), editor)) {
+        if (!nullSafeIsEqual(entry$okhttp.getCurrentEditor$okhttp(), editor)) {
             throw new IllegalStateException("Check failed.");
         }
         if (z && !entry$okhttp.getReadable$okhttp()) {
             int i = this.valueCount;
             for (int i2 = 0; i2 < i; i2++) {
                 boolean[] written$okhttp = editor.getWritten$okhttp();
-                bzo.n(written$okhttp);
+                throwIfVar1IsNull(written$okhttp);
                 if (!written$okhttp[i2]) {
                     editor.abort();
                     throw new IllegalStateException("Newly created entry didn't create value for index " + i2);
@@ -764,7 +796,7 @@ public final class DiskLruCache implements Closeable, Flushable {
         }
         this.redundantOpCount++;
         rl rlVar = this.journalWriter;
-        bzo.n(rlVar);
+        throwIfVar1IsNull(rlVar);
         if (entry$okhttp.getReadable$okhttp() || z) {
             entry$okhttp.setReadable$okhttp(true);
             rlVar.q(CLEAN).writeByte(32);
@@ -794,7 +826,7 @@ public final class DiskLruCache implements Closeable, Flushable {
     }
 
     public final Editor edit(String str) {
-        bzo.q(str, "key");
+        throwIfVar1IsNull(str, "key");
         return edit$default(this, str, 0L, 2, null);
     }
 
@@ -802,9 +834,9 @@ public final class DiskLruCache implements Closeable, Flushable {
         try {
             initialize();
             Collection<Entry> collectionValues = this.lruEntries.values();
-            bzo.p(collectionValues, "lruEntries.values");
+            throwIfVar1IsNull(collectionValues, "lruEntries.values");
             for (Entry entry : (Entry[]) collectionValues.toArray(new Entry[0])) {
-                bzo.p(entry, "entry");
+                throwIfVar1IsNull(entry, "entry");
                 removeEntry$okhttp(entry);
             }
             this.mostRecentTrimFailed = false;
@@ -819,13 +851,13 @@ public final class DiskLruCache implements Closeable, Flushable {
             checkNotClosed();
             trimToSize();
             rl rlVar = this.journalWriter;
-            bzo.n(rlVar);
+            throwIfVar1IsNull(rlVar);
             rlVar.flush();
         }
     }
 
     public final synchronized Snapshot get(String str) {
-        bzo.q(str, "key");
+        throwIfVar1IsNull(str, "key");
         initialize();
         checkNotClosed();
         validateKey(str);
@@ -839,7 +871,7 @@ public final class DiskLruCache implements Closeable, Flushable {
         }
         this.redundantOpCount++;
         rl rlVar = this.journalWriter;
-        bzo.n(rlVar);
+        throwIfVar1IsNull(rlVar);
         rlVar.q(READ).writeByte(32).q(str).writeByte(10);
         if (journalRebuildRequired()) {
             TaskQueue.schedule$default(this.cleanupQueue, this.cleanupTask, 0L, 2, null);
@@ -894,7 +926,8 @@ public final class DiskLruCache implements Closeable, Flushable {
                     this.initialized = true;
                     return;
                 } catch (IOException e) {
-                    Platform.Companion.get().log("DiskLruCache " + this.directory + " is corrupt: " + e.getMessage() + ", removing", 5, e);
+                    Platform.Companion.get().log(
+                            "DiskLruCache " + this.directory + " is corrupt: " + e.getMessage() + ", removing", 5, e);
                     try {
                         delete();
                         this.closed = false;
@@ -971,7 +1004,7 @@ public final class DiskLruCache implements Closeable, Flushable {
     }
 
     public final synchronized boolean remove(String str) {
-        bzo.q(str, "key");
+        throwIfVar1IsNull(str, "key");
         initialize();
         checkNotClosed();
         validateKey(str);
@@ -988,7 +1021,7 @@ public final class DiskLruCache implements Closeable, Flushable {
 
     public final boolean removeEntry$okhttp(Entry entry) {
         rl rlVar;
-        bzo.q(entry, "entry");
+        throwIfVar1IsNull(entry, "entry");
         if (!this.civilizedFileSystem) {
             if (entry.getLockingSourceCount$okhttp() > 0 && (rlVar = this.journalWriter) != null) {
                 rlVar.q(DIRTY);
@@ -1058,7 +1091,7 @@ public final class DiskLruCache implements Closeable, Flushable {
     }
 
     public final synchronized Editor edit(String str, long j) {
-        bzo.q(str, "key");
+        throwIfVar1IsNull(str, "key");
         initialize();
         checkNotClosed();
         validateKey(str);
@@ -1074,7 +1107,7 @@ public final class DiskLruCache implements Closeable, Flushable {
         }
         if (!this.mostRecentTrimFailed && !this.mostRecentRebuildFailed) {
             rl rlVar = this.journalWriter;
-            bzo.n(rlVar);
+            throwIfVar1IsNull(rlVar);
             rlVar.q(DIRTY).writeByte(32).q(str).writeByte(10);
             rlVar.flush();
             if (this.hasJournalErrors) {

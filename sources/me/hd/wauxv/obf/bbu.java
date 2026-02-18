@@ -41,7 +41,8 @@ public final class bbu implements ate {
                     return;
                 }
                 if (this.g == null) {
-                    ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(0, 1, 15L, TimeUnit.SECONDS, new LinkedBlockingDeque(), new acq("emojiCompat"));
+                    ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(0, 1, 15L, TimeUnit.SECONDS,
+                            new LinkedBlockingDeque(), new acq("emojiCompat"));
                     threadPoolExecutor.allowCoreThreadTimeOut(true);
                     this.h = threadPoolExecutor;
                     this.g = threadPoolExecutor;
@@ -80,12 +81,12 @@ public final class bbu implements ate {
             Context context = this.a;
             bbt bbtVar = this.b;
             awpVar.getClass();
-            Object[] objArr = {bbtVar};
+            Object[] objArr = { bbtVar };
             ArrayList arrayList = new ArrayList(1);
             Object obj = objArr[0];
             Objects.requireNonNull(obj);
             arrayList.add(obj);
-            ek ekVarC = bbs.c(context, Collections.unmodifiableList(arrayList));
+            ek ekVarC = bbs.createInstanceWithArgs(context, Collections.unmodifiableList(arrayList));
             int i = ekVarC.c;
             if (i != 0) {
                 throw new RuntimeException(yg.f(i, "fetchFonts failed (", ")"));

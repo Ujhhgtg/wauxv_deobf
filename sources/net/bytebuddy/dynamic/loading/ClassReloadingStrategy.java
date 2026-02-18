@@ -38,10 +38,16 @@ public class ClassReloadingStrategy implements ClassLoadingStrategy<ClassLoader>
     private final Map<String, Class<?>> preregisteredTypes;
     private final Strategy strategy;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface BootstrapInjection {
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public enum Disabled implements BootstrapInjection {
             INSTANCE;
 
@@ -51,7 +57,10 @@ public class ClassReloadingStrategy implements ClassLoadingStrategy<ClassLoader>
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         @HashCodeAndEqualsPlugin.Enhance
         public static class Enabled implements BootstrapInjection {
             private final File folder;
@@ -73,14 +82,18 @@ public class ClassReloadingStrategy implements ClassLoadingStrategy<ClassLoader>
 
             @Override // net.bytebuddy.dynamic.loading.ClassReloadingStrategy.BootstrapInjection
             public ClassInjector make(Instrumentation instrumentation) {
-                return ClassInjector.UsingInstrumentation.of(this.folder, ClassInjector.UsingInstrumentation.Target.BOOTSTRAP, instrumentation);
+                return ClassInjector.UsingInstrumentation.of(this.folder,
+                        ClassInjector.UsingInstrumentation.Target.BOOTSTRAP, instrumentation);
             }
         }
 
         ClassInjector make(Instrumentation instrumentation);
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     @JavaDispatcher.Proxied("java.lang.instrument.Instrumentation")
     public interface Dispatcher {
         @JavaDispatcher.Proxied("addTransformer")
@@ -96,7 +109,10 @@ public class ClassReloadingStrategy implements ClassLoadingStrategy<ClassLoader>
         void retransformClasses(Instrumentation instrumentation, Class<?>[] clsArr);
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public enum Strategy {
         REDEFINITION(true) { // from class: net.bytebuddy.dynamic.loading.ClassReloadingStrategy.Strategy.1
             @Override // net.bytebuddy.dynamic.loading.ClassReloadingStrategy.Strategy
@@ -108,7 +124,8 @@ public class ClassReloadingStrategy implements ClassLoadingStrategy<ClassLoader>
             public void reset(Instrumentation instrumentation, ClassFileLocator classFileLocator, List<Class<?>> list) {
                 HashMap map = new HashMap(list.size());
                 for (Class<?> cls : list) {
-                    map.put(cls, new ClassDefinition(cls, classFileLocator.locate(TypeDescription.ForLoadedType.getName(cls)).resolve()));
+                    map.put(cls, new ClassDefinition(cls,
+                            classFileLocator.locate(TypeDescription.ForLoadedType.getName(cls)).resolve()));
                 }
                 apply(instrumentation, map);
             }
@@ -121,7 +138,8 @@ public class ClassReloadingStrategy implements ClassLoadingStrategy<ClassLoader>
                 throw new IllegalArgumentException("Does not support redefinition: " + instrumentation);
             }
         },
-        RETRANSFORMATION(0 == true ? 1 : 0) { // from class: net.bytebuddy.dynamic.loading.ClassReloadingStrategy.Strategy.2
+        RETRANSFORMATION(0 == true ? 1 : 0) { // from class:
+                                              // net.bytebuddy.dynamic.loading.ClassReloadingStrategy.Strategy.2
             @Override // net.bytebuddy.dynamic.loading.ClassReloadingStrategy.Strategy
             public void apply(Instrumentation instrumentation, Map<Class<?>, ClassDefinition> map) {
                 ClassRedefinitionTransformer classRedefinitionTransformer = new ClassRedefinitionTransformer(map);
@@ -143,7 +161,7 @@ public class ClassReloadingStrategy implements ClassLoadingStrategy<ClassLoader>
             public void reset(Instrumentation instrumentation, ClassFileLocator classFileLocator, List<Class<?>> list) {
                 for (Class<?> cls : list) {
                     if (!ClassReloadingStrategy.DISPATCHER.isModifiableClass(instrumentation, cls)) {
-                        throw new IllegalArgumentException(bjs.l(cls, "Cannot modify type: "));
+                        throw new IllegalArgumentException(concatVar2Var1(cls, "Cannot modify type: "));
                     }
                 }
                 Dispatcher dispatcher = ClassReloadingStrategy.DISPATCHER;
@@ -164,13 +182,15 @@ public class ClassReloadingStrategy implements ClassLoadingStrategy<ClassLoader>
             }
         };
 
-
         @AlwaysNull
         private static final byte[] NO_REDEFINITION = null;
         private static final boolean REDEFINE_CLASSES = true;
         private final boolean redefinition;
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static class ClassRedefinitionTransformer implements ClassFileTransformer {
             private final Map<Class<?>, ClassDefinition> redefinedClasses;
 
@@ -186,7 +206,8 @@ public class ClassReloadingStrategy implements ClassLoadingStrategy<ClassLoader>
             }
 
             @MaybeNull
-            public byte[] transform(@MaybeNull ClassLoader classLoader, @MaybeNull String str, @MaybeNull Class<?> cls, @MaybeNull ProtectionDomain protectionDomain, byte[] bArr) {
+            public byte[] transform(@MaybeNull ClassLoader classLoader, @MaybeNull String str, @MaybeNull Class<?> cls,
+                    @MaybeNull ProtectionDomain protectionDomain, byte[] bArr) {
                 ClassDefinition classDefinitionRemove;
                 if (str != null && (classDefinitionRemove = this.redefinedClasses.remove(cls)) != null) {
                     return classDefinitionRemove.getDefinitionClassFile();
@@ -195,12 +216,16 @@ public class ClassReloadingStrategy implements ClassLoadingStrategy<ClassLoader>
             }
         }
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public enum ClassResettingTransformer implements ClassFileTransformer {
             INSTANCE;
 
             @MaybeNull
-            public byte[] transform(@MaybeNull ClassLoader classLoader, @MaybeNull String str, @MaybeNull Class<?> cls, @MaybeNull ProtectionDomain protectionDomain, byte[] bArr) {
+            public byte[] transform(@MaybeNull ClassLoader classLoader, @MaybeNull String str, @MaybeNull Class<?> cls,
+                    @MaybeNull ProtectionDomain protectionDomain, byte[] bArr) {
                 return Strategy.NO_REDEFINITION;
             }
         }
@@ -211,7 +236,8 @@ public class ClassReloadingStrategy implements ClassLoadingStrategy<ClassLoader>
             return this.redefinition;
         }
 
-        public abstract void reset(Instrumentation instrumentation, ClassFileLocator classFileLocator, List<Class<?>> list);
+        public abstract void reset(Instrumentation instrumentation, ClassFileLocator classFileLocator,
+                List<Class<?>> list);
 
         public abstract Strategy validate(Instrumentation instrumentation);
 
@@ -275,7 +301,8 @@ public class ClassReloadingStrategy implements ClassLoadingStrategy<ClassLoader>
     }
 
     public ClassReloadingStrategy enableBootstrapInjection(File file) {
-        return new ClassReloadingStrategy(this.instrumentation, this.strategy, new BootstrapInjection.Enabled(file), this.preregisteredTypes);
+        return new ClassReloadingStrategy(this.instrumentation, this.strategy, new BootstrapInjection.Enabled(file),
+                this.preregisteredTypes);
     }
 
     public boolean equals(@MaybeNull Object obj) {
@@ -286,11 +313,17 @@ public class ClassReloadingStrategy implements ClassLoadingStrategy<ClassLoader>
             return false;
         }
         ClassReloadingStrategy classReloadingStrategy = (ClassReloadingStrategy) obj;
-        return this.strategy.equals(classReloadingStrategy.strategy) && this.instrumentation.equals(classReloadingStrategy.instrumentation) && this.bootstrapInjection.equals(classReloadingStrategy.bootstrapInjection) && this.preregisteredTypes.equals(classReloadingStrategy.preregisteredTypes);
+        return this.strategy.equals(classReloadingStrategy.strategy)
+                && this.instrumentation.equals(classReloadingStrategy.instrumentation)
+                && this.bootstrapInjection.equals(classReloadingStrategy.bootstrapInjection)
+                && this.preregisteredTypes.equals(classReloadingStrategy.preregisteredTypes);
     }
 
     public int hashCode() {
-        return this.preregisteredTypes.hashCode() + ((this.bootstrapInjection.hashCode() + ((this.strategy.hashCode() + ((this.instrumentation.hashCode() + (getClass().hashCode() * 31)) * 31)) * 31)) * 31);
+        return this.preregisteredTypes.hashCode() + ((this.bootstrapInjection.hashCode()
+                + ((this.strategy.hashCode() + ((this.instrumentation.hashCode() + (getClass().hashCode() * 31)) * 31))
+                        * 31))
+                * 31);
     }
 
     @Override // net.bytebuddy.dynamic.loading.ClassLoadingStrategy
@@ -314,7 +347,8 @@ public class ClassReloadingStrategy implements ClassLoadingStrategy<ClassLoader>
         try {
             this.strategy.apply(this.instrumentation, concurrentHashMap);
             if (!linkedHashMap.isEmpty()) {
-                map3.putAll((classLoader == null ? this.bootstrapInjection.make(this.instrumentation) : new ClassInjector.UsingReflection(classLoader)).inject(linkedHashMap));
+                map3.putAll((classLoader == null ? this.bootstrapInjection.make(this.instrumentation)
+                        : new ClassInjector.UsingReflection(classLoader)).inject(linkedHashMap));
             }
             return map3;
         } catch (ClassNotFoundException e) {
@@ -333,7 +367,8 @@ public class ClassReloadingStrategy implements ClassLoadingStrategy<ClassLoader>
     }
 
     public ClassReloadingStrategy reset(Class<?>... clsArr) {
-        return clsArr.length == 0 ? this : reset(ClassFileLocator.ForClassLoader.of(clsArr[0].getClassLoader()), clsArr);
+        return clsArr.length == 0 ? this
+                : reset(ClassFileLocator.ForClassLoader.of(clsArr[0].getClassLoader()), clsArr);
     }
 
     public static ClassReloadingStrategy fromInstalledAgent(Strategy strategy) {
@@ -354,7 +389,8 @@ public class ClassReloadingStrategy implements ClassLoadingStrategy<ClassLoader>
         }
     }
 
-    public ClassReloadingStrategy(Instrumentation instrumentation, Strategy strategy, BootstrapInjection bootstrapInjection, Map<String, Class<?>> map) {
+    public ClassReloadingStrategy(Instrumentation instrumentation, Strategy strategy,
+            BootstrapInjection bootstrapInjection, Map<String, Class<?>> map) {
         this.instrumentation = instrumentation;
         this.strategy = strategy.validate(instrumentation);
         this.bootstrapInjection = bootstrapInjection;

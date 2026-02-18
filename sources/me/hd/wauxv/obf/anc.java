@@ -98,7 +98,7 @@ public class anc extends bdj implements DialogInterface.OnCancelListener, Dialog
             this.t = false;
             dialog.show();
             View decorView = this.s.getWindow().getDecorView();
-            bzo.q(decorView, "<this>");
+            throwIfVar1IsNull(decorView, "<this>");
             decorView.setTag(R.id.view_tree_lifecycle_owner, this);
             decorView.setTag(R.id.view_tree_view_model_store_owner, this);
             decorView.setTag(R.id.view_tree_saved_state_registry_owner, this);
@@ -128,7 +128,8 @@ public class anc extends bdj implements DialogInterface.OnCancelListener, Dialog
     public final void ae(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
         Bundle bundle2;
         super.ae(layoutInflater, viewGroup, bundle);
-        if (this.bz != null || this.s == null || bundle == null || (bundle2 = bundle.getBundle("android:savedDialogState")) == null) {
+        if (this.bz != null || this.s == null || bundle == null
+                || (bundle2 = bundle.getBundle("android:savedDialogState")) == null) {
             return;
         }
         this.s.onRestoreInstanceState(bundle2);
@@ -161,7 +162,7 @@ public class anc extends bdj implements DialogInterface.OnCancelListener, Dialog
             beg begVarCs = cs();
             int i = this.p;
             if (i < 0) {
-                throw new IllegalArgumentException(bjs.i(i, "Bad id: "));
+                throw new IllegalArgumentException(concatVar2Var1(i, "Bad id: "));
             }
             begVarCs.bu(new bed(begVarCs, null, i), z);
             this.p = -1;

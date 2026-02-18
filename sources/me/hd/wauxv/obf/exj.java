@@ -10,7 +10,10 @@ public final class exj extends nh {
     public final /* synthetic */ aki a;
     public final /* synthetic */ Member b;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'super' call moved to the top of the method (can break code
+     * semantics)
+     */
     public exj(but butVar, aki akiVar, Member member, exg exgVar) {
         super(exgVar);
         this.a = akiVar;
@@ -20,17 +23,17 @@ public final class exj extends nh {
     @Override // me.hd.wauxv.obf.nh
     public final void c(blq blqVar) {
         Object objX;
-        int i = bmm.a;
+        int i = HookParamWrapper.a;
         aki akiVar = this.a;
-        bmm bmmVar = new bmm();
-        bmmVar.b = blqVar;
+        HookParamWrapper hookParam = new HookParamWrapper();
+        hookParam.b = blqVar;
         Member member = this.b;
         try {
-            bgf bgfVar = (bgf) akiVar.g;
+            IHasInvokeMethod bgfVar = (IHasInvokeMethod) akiVar.g;
             if (bgfVar != null) {
-                bgfVar.invoke(bmmVar);
+                bgfVar.invoke(hookParam);
             }
-            if (((bgf) akiVar.g) != null) {
+            if (((IHasInvokeMethod) akiVar.g) != null) {
                 ArrayList arrayList = ewq.a;
                 StringBuilder sb = new StringBuilder("After Hook Member [");
                 sb.append(member);
@@ -50,22 +53,22 @@ public final class exj extends nh {
     @Override // me.hd.wauxv.obf.nh
     public final void d(blq blqVar) {
         Object objX;
-        int i = bmm.a;
+        int i = HookParamWrapper.a;
         aki akiVar = this.a;
-        bmm bmmVar = new bmm();
-        bmmVar.b = blqVar;
+        HookParamWrapper hookParam = new HookParamWrapper();
+        hookParam.b = blqVar;
         Member member = this.b;
         try {
-            bgf bgfVar = (bgf) akiVar.f;
+            IHasInvokeMethod bgfVar = (IHasInvokeMethod) akiVar.f;
             if (bgfVar != null) {
-                bgfVar.invoke(bmmVar);
+                bgfVar.invoke(hookParam);
             }
             Member member2 = ((bmh) blqVar.a).b.method;
             Method method = member2 instanceof Method ? (Method) member2 : null;
             Class<?> returnType = method != null ? method.getReturnType() : null;
             Object objG = ((bmi) blqVar.d).g(null, Boolean.FALSE);
             aki.k(akiVar, returnType, objG != null ? objG.getClass() : null);
-            if (((bgf) akiVar.f) != null) {
+            if (((IHasInvokeMethod) akiVar.f) != null) {
                 ArrayList arrayList = ewq.a;
                 StringBuilder sb = new StringBuilder("Before Hook Member [");
                 sb.append(member);

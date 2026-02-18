@@ -10,7 +10,7 @@ public abstract class nd {
     public final int c;
 
     public nd(DexKitBridge dexKitBridge, int i, int i2) {
-        bzo.q(dexKitBridge, "bridge");
+        throwIfVar1IsNull(dexKitBridge, "bridge");
         this.a = dexKitBridge;
         this.b = i;
         this.c = i2;

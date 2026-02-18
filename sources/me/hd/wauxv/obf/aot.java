@@ -13,7 +13,10 @@ public abstract class aot extends dpy {
     }
 
     public final void aa(Throwable th) {
-        cna.z(l().c(), new aht("Fatal exception in coroutines machinery for " + this + ". Please read KDoc to 'handleFatalException' method and report this incident to maintainers", th));
+        cna.z(l().c(),
+                new aht("Fatal exception in coroutines machinery for " + this
+                        + ". Please read KDoc to 'handleFatalException' method and report this incident to maintainers",
+                        th));
     }
 
     public void j(CancellationException cancellationException) {
@@ -35,30 +38,35 @@ public abstract class aot extends dpy {
 
     public abstract Object o();
 
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException
-    	at java.base/java.util.Objects.requireNonNull(Objects.java:209)
-    	at java.base/java.util.ArrayList.batchRemove(ArrayList.java:816)
-    	at java.base/java.util.ArrayList.removeAll(ArrayList.java:791)
-    	at jadx.core.dex.visitors.finaly.TryCatchEdgeBlockMap.getAllInScope(TryCatchEdgeBlockMap.java:91)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(MarkFinallyVisitor.java:204)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:119)
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException
+     * at java.base/java.util.Objects.requireNonNull(Objects.java:209)
+     * at java.base/java.util.ArrayList.batchRemove(ArrayList.java:816)
+     * at java.base/java.util.ArrayList.removeAll(ArrayList.java:791)
+     * at jadx.core.dex.visitors.finaly.TryCatchEdgeBlockMap.getAllInScope(
+     * TryCatchEdgeBlockMap.java:91)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.getTryBlockData(
+     * MarkFinallyVisitor.java:204)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:119)
      */
     @Override // java.lang.Runnable
     public final void run() {
         try {
             afw afwVarL = l();
-            bzo.o(afwVarL, "null cannot be cast to non-null type kotlinx.coroutines.internal.DispatchedContinuation<T of kotlinx.coroutines.DispatchedTask>");
+            throwIfVar1IsNull(afwVarL,
+                    "null cannot be cast to non-null type kotlinx.coroutines.internal.DispatchedContinuation<T of kotlinx.coroutines.DispatchedTask>");
             aor aorVar = (aor) afwVarL;
             afx afxVar = aorVar.e;
             ahh ahhVar = afxVar.m;
             Object obj = aorVar.g;
-            bzo.n(ahhVar);
+            throwIfVar1IsNull(ahhVar);
             Object objAl = bhv.al(ahhVar, obj);
             brf brfVar = null;
-            enk enkVarAu = objAl != bhv.q ? bzo.au(afxVar, ahhVar, objAl) : null;
+            enk enkVarAu = objAl != bhv.q ? KotlinHelpers.au(afxVar, ahhVar, objAl) : null;
             try {
-                bzo.n(ahhVar);
+                throwIfVar1IsNull(ahhVar);
                 Object objO = o();
                 Throwable thM = m(objO);
                 if (thM == null) {

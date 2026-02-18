@@ -70,9 +70,9 @@ public final class wf extends ClickableSpan {
             default:
                 cem cemVar3 = (cem) this.c;
                 TextInputEditText textInputEditText = cemVar3.c;
-                csm csmVar = (csm) this.b;
-                textInputEditText.setText((CharSequence) csmVar.a);
-                cemVar3.d.setText((CharSequence) csmVar.b);
+                Pair pairVar = (Pair) this.b;
+                textInputEditText.setText((CharSequence) pairVar.first);
+                cemVar3.d.setText((CharSequence) pairVar.second);
                 break;
         }
     }

@@ -42,7 +42,10 @@ public class d implements g.a {
     public static Map<String, Integer> m;
     public static LocationListener n;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class a implements LocationListener {
         @Override // android.location.LocationListener
         public void onLocationChanged(Location location) {
@@ -55,12 +58,12 @@ public class d implements g.a {
                 double speed = location.hasSpeed() ? location.getSpeed() : 0.0d;
                 JSONObject jSONObject = new JSONObject();
                 d.j = jSONObject;
-                jSONObject.put(com.umeng.analytics.pro.f.C, latitude);
-                d.j.put(com.umeng.analytics.pro.f.D, longitude);
+                jSONObject.put("lat", latitude);
+                d.j.put("lnd", longitude);
                 d.j.put("alt", altitude);
                 d.j.put("acc", speed);
                 d.j.put("lts", time);
-                g.a(d.g, 203, e.a, d.k);
+                g.a(d.g, 203, e.cachedConstructors, d.k);
             } catch (Throwable unused2) {
             }
         }
@@ -78,7 +81,10 @@ public class d implements g.a {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public class b implements Runnable {
         public final /* synthetic */ String a;
 
@@ -92,7 +98,10 @@ public class d implements g.a {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public class c implements Runnable {
         public final /* synthetic */ String a;
 
@@ -106,8 +115,14 @@ public class d implements g.a {
         }
     }
 
-    /* JADX INFO: renamed from: com.uyumao.d$d, reason: collision with other inner class name */
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: renamed from: com.uyumao.d$d, reason: collision with other inner
+     * class name
+     */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public class RunnableC0019d implements Runnable {
         public final /* synthetic */ String a;
 
@@ -121,7 +136,10 @@ public class d implements g.a {
         }
     }
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static class e {
         public static final d a = new d();
     }
@@ -168,9 +186,9 @@ public class d implements g.a {
             jSONObject2.put("ov", Build.VERSION.RELEASE);
             jSONObject2.put("chn", UMUtils.getChannel(context));
             if (UMUtils.getActiveUser(context) != null && UMUtils.getActiveUser(context).length == 2) {
-                jSONObject2.put(com.umeng.analytics.pro.f.N, UMUtils.getActiveUser(context)[1]);
+                jSONObject2.put("puid", UMUtils.getActiveUser(context)[1]);
             } else {
-                jSONObject2.put(com.umeng.analytics.pro.f.N, "");
+                jSONObject2.put("puid", "");
             }
             jSONObject2.put(bt.af, UMUtils.getZid(context));
             jSONObject2.put("sv", UYMManager.getSdkVersion());
@@ -212,9 +230,14 @@ public class d implements g.a {
         return h;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:290:0x017a A[Catch: all -> 0x017d, TRY_LEAVE, TryCatch #3 {all -> 0x017d, blocks: (B:288:0x0175, B:290:0x017a), top: B:341:0x0175 }] */
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException
+    /*
+     * JADX WARN: Found duplicated region for block: B:290:0x017a A[Catch: all ->
+     * 0x017d, TRY_LEAVE, TryCatch #3 {all -> 0x017d, blocks: (B:288:0x0175,
+     * B:290:0x017a), top: B:341:0x0175 }]
+     */
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException
      */
     @Override // com.uyumao.g.a
     public void a(Object obj, int i2) {
@@ -232,14 +255,16 @@ public class d implements g.a {
             LocationListener locationListener = n;
             if (context != null && locationListener != null) {
                 try {
-                    if (com.uyumao.e.a(context, "android.permission.ACCESS_FINE_LOCATION") && com.uyumao.e.a(context, "android.permission.ACCESS_COARSE_LOCATION") && (locationManager = (LocationManager) context.getSystemService("location")) != null) {
+                    if (com.uyumao.e.a(context, "android.permission.ACCESS_FINE_LOCATION")
+                            && com.uyumao.e.a(context, "android.permission.ACCESS_COARSE_LOCATION")
+                            && (locationManager = (LocationManager) context.getSystemService("location")) != null) {
                         locationManager.removeUpdates(locationListener);
                     }
                 } catch (Throwable unused) {
                 }
             }
             j = null;
-            g.a(g, 203, e.a, k);
+            g.a(g, 203, e.cachedConstructors, k);
             return;
         }
         try {
@@ -277,7 +302,8 @@ public class d implements g.a {
                         }
                         break;
                     case 102:
-                        if (com.uyumao.e.b().booleanValue() && e && obj != null && (obj instanceof JSONObject) && (jSONArrayA = com.uyumao.e.a(g)) != null && jSONArrayA.length() > 0) {
+                        if (com.uyumao.e.b().booleanValue() && e && obj != null && (obj instanceof JSONObject)
+                                && (jSONArrayA = com.uyumao.e.a(g)) != null && jSONArrayA.length() > 0) {
                             JSONObject jSONObjectA2 = a(g);
                             a(jSONObjectA2, (JSONObject) obj);
                             try {
@@ -304,7 +330,10 @@ public class d implements g.a {
                                 LocationListener locationListener2 = n;
                                 if (context2 != null && locationListener2 != null) {
                                     try {
-                                        if (com.uyumao.e.a(context2, "android.permission.ACCESS_FINE_LOCATION") && com.uyumao.e.a(context2, "android.permission.ACCESS_COARSE_LOCATION") && (locationManager2 = (LocationManager) context2.getSystemService("location")) != null) {
+                                        if (com.uyumao.e.a(context2, "android.permission.ACCESS_FINE_LOCATION")
+                                                && com.uyumao.e.a(context2, "android.permission.ACCESS_COARSE_LOCATION")
+                                                && (locationManager2 = (LocationManager) context2
+                                                        .getSystemService("location")) != null) {
                                             List<String> providers = locationManager2.getProviders(true);
                                             if (providers.contains("gps")) {
                                                 str = "gps";
@@ -316,9 +345,9 @@ public class d implements g.a {
                                     } catch (Throwable unused6) {
                                     }
                                 }
-                                g.a(g, 256, 202, e.a, k, 30000L);
+                                g.a(g, 256, 202, e.cachedConstructors, k, 30000L);
                             } else {
-                                g.a(g, 203, e.a, k);
+                                g.a(g, 203, e.cachedConstructors, k);
                             }
                         }
                         break;
@@ -330,7 +359,8 @@ public class d implements g.a {
                         } else if (obj != null && (obj instanceof JSONObject)) {
                             JSONObject jSONObject4 = (JSONObject) obj;
                             WeakReference<Future<?>> weakReference = com.uyumao.e.c;
-                            if (weakReference == null || (future = weakReference.get()) == null || future.isDone() || future.isCancelled()) {
+                            if (weakReference == null || (future = weakReference.get()) == null || future.isDone()
+                                    || future.isCancelled()) {
                                 com.uyumao.e.c = new WeakReference<>(s.a(new r(jSONObject4)));
                             }
                             break;

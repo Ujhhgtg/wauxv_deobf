@@ -1,7 +1,7 @@
 package me.hd.wauxv.data.bean.info;
 
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cnb;
 import me.hd.wauxv.obf.dkz;
 import me.hd.wauxv.obf.dts;
@@ -28,7 +28,8 @@ public final class FriendInfo {
         this.createTime = j;
     }
 
-    public static /* synthetic */ FriendInfo copy$default(FriendInfo friendInfo, String str, String str2, String str3, String str4, int i, String str5, long j, int i2, Object obj) {
+    public static /* synthetic */ FriendInfo copy$default(FriendInfo friendInfo, String str, String str2, String str3,
+            String str4, int i, String str5, long j, int i2, Object obj) {
         if ((i2 & 1) != 0) {
             str = friendInfo.wxid;
         }
@@ -96,7 +97,11 @@ public final class FriendInfo {
             return false;
         }
         FriendInfo friendInfo = (FriendInfo) obj;
-        return bzo.f(this.wxid, friendInfo.wxid) && bzo.f(this.alias, friendInfo.alias) && bzo.f(this.remark, friendInfo.remark) && bzo.f(this.nickname, friendInfo.nickname) && this.type == friendInfo.type && bzo.f(this.sourceExtInfo, friendInfo.sourceExtInfo) && this.createTime == friendInfo.createTime;
+        return nullSafeIsEqual(this.wxid, friendInfo.wxid) && nullSafeIsEqual(this.alias, friendInfo.alias)
+                && nullSafeIsEqual(this.remark, friendInfo.remark)
+                && nullSafeIsEqual(this.nickname, friendInfo.nickname) && this.type == friendInfo.type
+                && nullSafeIsEqual(this.sourceExtInfo, friendInfo.sourceExtInfo)
+                && this.createTime == friendInfo.createTime;
     }
 
     public final String getAlias() {
@@ -128,7 +133,9 @@ public final class FriendInfo {
     }
 
     public int hashCode() {
-        return Long.hashCode(this.createTime) + bjs.e(this.sourceExtInfo, dts.a(this.type, bjs.e(this.nickname, bjs.e(this.remark, bjs.e(this.alias, this.wxid.hashCode() * 31, 31), 31), 31), 31), 31);
+        return Long.hashCode(this.createTime) + bjs.e(this.sourceExtInfo, dts.a(this.type,
+                bjs.e(this.nickname, bjs.e(this.remark, bjs.e(this.alias, this.wxid.hashCode() * 31, 31), 31), 31), 31),
+                31);
     }
 
     public final void setAlias(String str) {

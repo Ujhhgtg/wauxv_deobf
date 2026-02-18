@@ -17,7 +17,8 @@ public final class eju {
     public final String k;
     public final String l;
 
-    public /* synthetic */ eju(int i, String str, String str2, String str3, String str4, String str5, Boolean bool, Boolean bool2, String str6, String str7, String str8, String str9, String str10) {
+    public /* synthetic */ eju(int i, String str, String str2, String str3, String str4, String str5, Boolean bool,
+            Boolean bool2, String str6, String str7, String str8, String str9, String str10) {
         if (4095 != (i & 4095)) {
             bht.ah(i, 4095, ejs.b.getDescriptor());
             throw null;
@@ -44,7 +45,13 @@ public final class eju {
             return false;
         }
         eju ejuVar = (eju) obj;
-        return bzo.f(this.a, ejuVar.a) && bzo.f(this.b, ejuVar.b) && bzo.f(this.c, ejuVar.c) && bzo.f(this.d, ejuVar.d) && bzo.f(this.e, ejuVar.e) && bzo.f(this.f, ejuVar.f) && bzo.f(this.g, ejuVar.g) && bzo.f(this.h, ejuVar.h) && bzo.f(this.i, ejuVar.i) && bzo.f(this.j, ejuVar.j) && bzo.f(this.k, ejuVar.k) && bzo.f(this.l, ejuVar.l);
+        return nullSafeIsEqual(this.a, ejuVar.a) && nullSafeIsEqual(this.b, ejuVar.b)
+                && nullSafeIsEqual(this.c, ejuVar.c) && nullSafeIsEqual(this.d, ejuVar.d)
+                && nullSafeIsEqual(this.e, ejuVar.e) && nullSafeIsEqual(this.f, ejuVar.f)
+                && nullSafeIsEqual(this.g, ejuVar.g)
+                && nullSafeIsEqual(this.h, ejuVar.h) && nullSafeIsEqual(this.i, ejuVar.i)
+                && nullSafeIsEqual(this.j, ejuVar.j)
+                && nullSafeIsEqual(this.k, ejuVar.k) && nullSafeIsEqual(this.l, ejuVar.l);
     }
 
     public final int hashCode() {
@@ -88,6 +95,6 @@ public final class eju {
         yg.u(sb, this.i, -350778568997674L);
         yg.u(sb, this.j, -351251015400234L);
         yg.u(sb, this.k, -351165116054314L);
-        return bjs.q(sb, this.l, ')');
+        return concat(sb, this.l, ')');
     }
 }

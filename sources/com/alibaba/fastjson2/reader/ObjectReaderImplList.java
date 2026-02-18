@@ -84,7 +84,8 @@ public final class ObjectReaderImplList implements ObjectReader {
         CLASS_UNMODIFIABLE_LIST = Collections.unmodifiableList(list).getClass();
         CLASS_UNMODIFIABLE_SET = Collections.unmodifiableSet(set).getClass();
         CLASS_UNMODIFIABLE_SORTED_SET = Collections.unmodifiableSortedSet(Collections.emptySortedSet()).getClass();
-        CLASS_UNMODIFIABLE_NAVIGABLE_SET = Collections.unmodifiableNavigableSet(Collections.emptyNavigableSet()).getClass();
+        CLASS_UNMODIFIABLE_NAVIGABLE_SET = Collections.unmodifiableNavigableSet(Collections.emptyNavigableSet())
+                .getClass();
         INSTANCE = new ObjectReaderImplList(ArrayList.class, ArrayList.class, ArrayList.class, Object.class, null);
     }
 
@@ -108,10 +109,10 @@ public final class ObjectReaderImplList implements ObjectReader {
             return list2;
         } catch (IllegalAccessException e) {
             e = e;
-            throw new IllegalStateException(bjs.l(cls, "Failed to get singleton of "), e);
+            throw new IllegalStateException(concatVar2Var1(cls, "Failed to get singleton of "), e);
         } catch (NoSuchFieldException e2) {
             e = e2;
-            throw new IllegalStateException(bjs.l(cls, "Failed to get singleton of "), e);
+            throw new IllegalStateException(concatVar2Var1(cls, "Failed to get singleton of "), e);
         }
     }
 
@@ -130,17 +131,18 @@ public final class ObjectReaderImplList implements ObjectReader {
             return set2;
         } catch (IllegalAccessException e) {
             e = e;
-            throw new IllegalStateException(bjs.l(cls, "Failed to get singleton of "), e);
+            throw new IllegalStateException(concatVar2Var1(cls, "Failed to get singleton of "), e);
         } catch (NoSuchFieldException e2) {
             e = e2;
-            throw new IllegalStateException(bjs.l(cls, "Failed to get singleton of "), e);
+            throw new IllegalStateException(concatVar2Var1(cls, "Failed to get singleton of "), e);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     public static /* synthetic */ Object lambda$of$0(Type type, Object obj) {
         Collection collection = (Collection) obj;
-        return (collection.isEmpty() && (type instanceof Class)) ? EnumSet.noneOf((Class) type) : EnumSet.copyOf(collection);
+        return (collection.isEmpty() && (type instanceof Class)) ? EnumSet.noneOf((Class) type)
+                : EnumSet.copyOf(collection);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -210,90 +212,117 @@ public final class ObjectReaderImplList implements ObjectReader {
         return Collections.singleton(collection.iterator().next());
     }
 
-    /* JADX WARN: Failed to clean up code after switch over string restore
-    jadx.core.utils.exceptions.JadxRuntimeException: Can't remove SSA var: r12v1 int, still in use, count: 2, list:
-      (r12v1 int) from 0x0218: PHI (r12v10 int) = (r12v1 int), (r12v2 int), (r12v3 int), (r12v4 int), (r12v6 int), (r12v7 int), (r12v8 int), (r12v9 int), (r12v11 int) binds: [B:140:0x0215, B:166:?, B:165:?, B:138:0x020d, B:164:?, B:134:0x0202, B:163:?, B:130:0x01f7, B:126:0x01ec] A[DONT_GENERATE, DONT_INLINE, REMOVE]
-      (r12v1 int) from 0x00cf: CONSTRUCTOR (r3v22 java.util.function.Function) = (r12v1 int) A[MD:(int):void (m), REMOVE] (LINE:208) call: me.hd.wauxv.obf.cpv.<init>(int):void type: CONSTRUCTOR
-    	at jadx.core.utils.InsnRemover.removeSsaVar(InsnRemover.java:162)
-    	at jadx.core.utils.InsnRemover.unbindResult(InsnRemover.java:127)
-    	at jadx.core.utils.InsnRemover.lambda$unbindInsns$1(InsnRemover.java:99)
-    	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-    	at jadx.core.utils.InsnRemover.unbindInsns(InsnRemover.java:98)
-    	at jadx.core.utils.InsnRemover.perform(InsnRemover.java:73)
-    	at jadx.core.utils.InsnRemover.removeAllMarked(InsnRemover.java:271)
-    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.markCodeForRemoval(SwitchOverStringVisitor.java:160)
-    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.restoreSwitchOverString(SwitchOverStringVisitor.java:124)
-    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.visitRegion(SwitchOverStringVisitor.java:71)
-    	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:77)
-    	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:82)
+    /*
+     * JADX WARN: Failed to clean up code after switch over string restore
+     * jadx.core.utils.exceptions.JadxRuntimeException: Can't remove SSA var: r12v1
+     * int, still in use, count: 2, list:
+     * (r12v1 int) from 0x0218: PHI (r12v10 int) = (r12v1 int), (r12v2 int), (r12v3
+     * int), (r12v4 int), (r12v6 int), (r12v7 int), (r12v8 int), (r12v9 int),
+     * (r12v11 int) binds: [B:140:0x0215, B:166:?, B:165:?, B:138:0x020d, B:164:?,
+     * B:134:0x0202, B:163:?, B:130:0x01f7, B:126:0x01ec] A[DONT_GENERATE,
+     * DONT_INLINE, REMOVE]
+     * (r12v1 int) from 0x00cf: CONSTRUCTOR (r3v22 java.util.function.Function) =
+     * (r12v1 int) A[MD:(int):void (m), REMOVE] (LINE:208) call:
+     * me.hd.wauxv.obf.cpv.<init>(int):void type: CONSTRUCTOR
+     * at jadx.core.utils.InsnRemover.removeSsaVar(InsnRemover.java:162)
+     * at jadx.core.utils.InsnRemover.unbindResult(InsnRemover.java:127)
+     * at jadx.core.utils.InsnRemover.lambda$unbindInsns$1(InsnRemover.java:99)
+     * at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+     * at jadx.core.utils.InsnRemover.unbindInsns(InsnRemover.java:98)
+     * at jadx.core.utils.InsnRemover.perform(InsnRemover.java:73)
+     * at jadx.core.utils.InsnRemover.removeAllMarked(InsnRemover.java:271)
+     * at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.markCodeForRemoval(
+     * SwitchOverStringVisitor.java:160)
+     * at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.
+     * restoreSwitchOverString(SwitchOverStringVisitor.java:124)
+     * at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.visitRegion(
+     * SwitchOverStringVisitor.java:71)
+     * at jadx.core.dex.visitors.regions.DepthRegionTraversal.
+     * traverseIterativeStepInternal(DepthRegionTraversal.java:77)
+     * at jadx.core.dex.visitors.regions.DepthRegionTraversal.
+     * traverseIterativeStepInternal(DepthRegionTraversal.java:82)
      */
     /* JADX WARN: Found duplicated region for block: B:116:0x01a0 A[MOVE_INLINED] */
-    /* JADX WARN: Found duplicated region for block: B:119:0x01b6  */
-    /* JADX WARN: Found duplicated region for block: B:122:0x01ce  */
-    /* JADX WARN: Found duplicated region for block: B:126:0x01ec  */
-    /* JADX WARN: Found duplicated region for block: B:127:0x01ee  */
-    /* JADX WARN: Found duplicated region for block: B:130:0x01f7  */
-    /* JADX WARN: Found duplicated region for block: B:131:0x01f9  */
-    /* JADX WARN: Found duplicated region for block: B:134:0x0202  */
-    /* JADX WARN: Found duplicated region for block: B:135:0x0204  */
-    /* JADX WARN: Found duplicated region for block: B:138:0x020d  */
-    /* JADX WARN: Found duplicated region for block: B:139:0x020f  */
-    /* JADX WARN: Found duplicated region for block: B:143:0x021b  */
-    /* JADX WARN: Found duplicated region for block: B:145:0x021f A[ADDED_TO_REGION] */
-    /* JADX WARN: Found duplicated region for block: B:150:0x022b A[ADDED_TO_REGION] */
-    /* JADX WARN: Found duplicated region for block: B:155:0x0239  */
-    /* JADX WARN: Found duplicated region for block: B:157:0x0245  */
-    /* JADX WARN: Found duplicated region for block: B:159:0x024f  */
-    /* JADX WARN: Found duplicated region for block: B:161:0x0259  */
+    /* JADX WARN: Found duplicated region for block: B:119:0x01b6 */
+    /* JADX WARN: Found duplicated region for block: B:122:0x01ce */
+    /* JADX WARN: Found duplicated region for block: B:126:0x01ec */
+    /* JADX WARN: Found duplicated region for block: B:127:0x01ee */
+    /* JADX WARN: Found duplicated region for block: B:130:0x01f7 */
+    /* JADX WARN: Found duplicated region for block: B:131:0x01f9 */
+    /* JADX WARN: Found duplicated region for block: B:134:0x0202 */
+    /* JADX WARN: Found duplicated region for block: B:135:0x0204 */
+    /* JADX WARN: Found duplicated region for block: B:138:0x020d */
+    /* JADX WARN: Found duplicated region for block: B:139:0x020f */
+    /* JADX WARN: Found duplicated region for block: B:143:0x021b */
+    /*
+     * JADX WARN: Found duplicated region for block: B:145:0x021f A[ADDED_TO_REGION]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:150:0x022b A[ADDED_TO_REGION]
+     */
+    /* JADX WARN: Found duplicated region for block: B:155:0x0239 */
+    /* JADX WARN: Found duplicated region for block: B:157:0x0245 */
+    /* JADX WARN: Found duplicated region for block: B:159:0x024f */
+    /* JADX WARN: Found duplicated region for block: B:161:0x0259 */
     /* JADX WARN: Found duplicated region for block: B:163:? A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:164:? A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:165:? A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:166:? A[SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:20:0x004e  */
-    /* JADX WARN: Found duplicated region for block: B:23:0x005b  */
-    /* JADX WARN: Found duplicated region for block: B:56:0x00aa A[PHI: r0 r3
-      0x00aa: PHI (r0v3 java.lang.Class) = 
-      (r0v2 java.lang.Class)
-      (r0v2 java.lang.Class)
-      (r0v2 java.lang.Class)
-      (r0v2 java.lang.Class)
-      (r0v2 java.lang.Class)
-      (r0v2 java.lang.Class)
-      (r0v2 java.lang.Class)
-      (r0v2 java.lang.Class)
-      (r0v2 java.lang.Class)
-      (r0v2 java.lang.Class)
-      (r0v2 java.lang.Class)
-      (r0v2 java.lang.Class)
-      (r0v2 java.lang.Class)
-      (r0v2 java.lang.Class)
-      (r0v6 java.lang.Class)
-      (r0v2 java.lang.Class)
-      (r0v2 java.lang.Class)
-      (r0v2 java.lang.Class)
-      (r0v2 java.lang.Class)
-     binds: [B:22:0x0059, B:24:0x005d, B:26:0x0061, B:28:0x0065, B:30:0x0069, B:80:0x0113, B:122:0x01ce, B:120:0x01bc, B:119:0x01b6, B:118:0x01ad, B:98:0x015b, B:102:0x016b, B:104:0x0173, B:108:0x0183, B:71:0x00e1, B:68:0x00d7, B:65:0x00cd, B:59:0x00b2, B:55:0x00a3] A[DONT_GENERATE, DONT_INLINE]
-      0x00aa: PHI (r3v2 java.util.function.Function) = 
-      (r3v1 java.util.function.Function)
-      (r3v1 java.util.function.Function)
-      (r3v1 java.util.function.Function)
-      (r3v1 java.util.function.Function)
-      (r3v1 java.util.function.Function)
-      (r3v1 java.util.function.Function)
-      (r3v11 java.util.function.Function)
-      (r3v13 java.util.function.Function)
-      (r3v14 java.util.function.Function)
-      (r3v15 java.util.function.Function)
-      (r3v1 java.util.function.Function)
-      (r3v1 java.util.function.Function)
-      (r3v1 java.util.function.Function)
-      (r3v1 java.util.function.Function)
-      (r3v20 java.util.function.Function)
-      (r3v21 java.util.function.Function)
-      (r3v22 java.util.function.Function)
-      (r3v25 java.util.function.Function)
-      (r3v26 java.util.function.Function)
-     binds: [B:22:0x0059, B:24:0x005d, B:26:0x0061, B:28:0x0065, B:30:0x0069, B:80:0x0113, B:122:0x01ce, B:120:0x01bc, B:119:0x01b6, B:118:0x01ad, B:98:0x015b, B:102:0x016b, B:104:0x0173, B:108:0x0183, B:71:0x00e1, B:68:0x00d7, B:65:0x00cd, B:59:0x00b2, B:55:0x00a3] A[DONT_GENERATE, DONT_INLINE]] */
+    /* JADX WARN: Found duplicated region for block: B:20:0x004e */
+    /* JADX WARN: Found duplicated region for block: B:23:0x005b */
+    /*
+     * JADX WARN: Found duplicated region for block: B:56:0x00aa A[PHI: r0 r3
+     * 0x00aa: PHI (r0v3 java.lang.Class) =
+     * (r0v2 java.lang.Class)
+     * (r0v2 java.lang.Class)
+     * (r0v2 java.lang.Class)
+     * (r0v2 java.lang.Class)
+     * (r0v2 java.lang.Class)
+     * (r0v2 java.lang.Class)
+     * (r0v2 java.lang.Class)
+     * (r0v2 java.lang.Class)
+     * (r0v2 java.lang.Class)
+     * (r0v2 java.lang.Class)
+     * (r0v2 java.lang.Class)
+     * (r0v2 java.lang.Class)
+     * (r0v2 java.lang.Class)
+     * (r0v2 java.lang.Class)
+     * (r0v6 java.lang.Class)
+     * (r0v2 java.lang.Class)
+     * (r0v2 java.lang.Class)
+     * (r0v2 java.lang.Class)
+     * (r0v2 java.lang.Class)
+     * binds: [B:22:0x0059, B:24:0x005d, B:26:0x0061, B:28:0x0065, B:30:0x0069,
+     * B:80:0x0113, B:122:0x01ce, B:120:0x01bc, B:119:0x01b6, B:118:0x01ad,
+     * B:98:0x015b, B:102:0x016b, B:104:0x0173, B:108:0x0183, B:71:0x00e1,
+     * B:68:0x00d7, B:65:0x00cd, B:59:0x00b2, B:55:0x00a3] A[DONT_GENERATE,
+     * DONT_INLINE]
+     * 0x00aa: PHI (r3v2 java.util.function.Function) =
+     * (r3v1 java.util.function.Function)
+     * (r3v1 java.util.function.Function)
+     * (r3v1 java.util.function.Function)
+     * (r3v1 java.util.function.Function)
+     * (r3v1 java.util.function.Function)
+     * (r3v1 java.util.function.Function)
+     * (r3v11 java.util.function.Function)
+     * (r3v13 java.util.function.Function)
+     * (r3v14 java.util.function.Function)
+     * (r3v15 java.util.function.Function)
+     * (r3v1 java.util.function.Function)
+     * (r3v1 java.util.function.Function)
+     * (r3v1 java.util.function.Function)
+     * (r3v1 java.util.function.Function)
+     * (r3v20 java.util.function.Function)
+     * (r3v21 java.util.function.Function)
+     * (r3v22 java.util.function.Function)
+     * (r3v25 java.util.function.Function)
+     * (r3v26 java.util.function.Function)
+     * binds: [B:22:0x0059, B:24:0x005d, B:26:0x0061, B:28:0x0065, B:30:0x0069,
+     * B:80:0x0113, B:122:0x01ce, B:120:0x01bc, B:119:0x01b6, B:118:0x01ad,
+     * B:98:0x015b, B:102:0x016b, B:104:0x0173, B:108:0x0183, B:71:0x00e1,
+     * B:68:0x00d7, B:65:0x00cd, B:59:0x00b2, B:55:0x00a3] A[DONT_GENERATE,
+     * DONT_INLINE]]
+     */
     public static ObjectReader of(Type type, Class cls, long j) {
         Type type2;
         Type rawType;
@@ -328,7 +357,8 @@ public final class ObjectReaderImplList implements ObjectReader {
                 int i2 = 2;
                 cls3 = ArrayList.class;
                 cplVar = null;
-                if (cls2 != Iterable.class || cls2 == Collection.class || cls2 == List.class || cls2 == AbstractCollection.class || cls2 == AbstractList.class) {
+                if (cls2 != Iterable.class || cls2 == Collection.class || cls2 == List.class
+                        || cls2 == AbstractCollection.class || cls2 == AbstractList.class) {
                     cplVar2 = cplVar;
                     cls4 = cls3;
                 } else if (cls2 == Queue.class || cls2 == Deque.class || cls2 == AbstractSequentialList.class) {
@@ -379,25 +409,32 @@ public final class ObjectReaderImplList implements ObjectReader {
                                             cplVar = GuavaSupport.immutableListConverter();
                                         } else if (typeName2.equals("java.util.Collections$SynchronizedCollection")) {
                                             cplVar = new cpl(21);
-                                        } else if (typeName2.equals("com.google.common.collect.SingletonImmutableSet")) {
+                                        } else if (typeName2
+                                                .equals("com.google.common.collect.SingletonImmutableSet")) {
                                             cplVar = GuavaSupport.immutableSetConverter();
-                                        } else if (typeName2.equals("java.util.Collections$SynchronizedRandomAccessList")) {
+                                        } else if (typeName2
+                                                .equals("java.util.Collections$SynchronizedRandomAccessList")) {
                                             cplVar = new cpl(14);
                                         } else if (typeName2.equals("java.util.Collections$SynchronizedNavigableSet")) {
                                             cplVar = new cpl(26);
                                         } else if (!typeName2.equals("java.util.SubList")) {
                                             if (typeName2.equals("com.google.common.collect.SingletonImmutableList")) {
                                                 cplVar = GuavaSupport.immutableListConverter();
-                                            } else if (!typeName2.equals("java.util.RandomAccessSubList") && !typeName2.equals("java.util.AbstractList$SubList")) {
+                                            } else if (!typeName2.equals("java.util.RandomAccessSubList")
+                                                    && !typeName2.equals("java.util.AbstractList$SubList")) {
                                                 if (typeName2.equals("com.google.common.collect.ImmutableSet")) {
                                                     cplVar = GuavaSupport.immutableSetConverter();
-                                                } else if (!typeName2.equals("com.google.common.collect.Lists$TransformingRandomAccessList")) {
-                                                    if (typeName2.equals("com.google.common.collect.Lists.TransformingSequentialList")) {
+                                                } else if (!typeName2.equals(
+                                                        "com.google.common.collect.Lists$TransformingRandomAccessList")) {
+                                                    if (typeName2.equals(
+                                                            "com.google.common.collect.Lists.TransformingSequentialList")) {
                                                         cplVar2 = null;
                                                         cls4 = LinkedList.class;
-                                                    } else if (typeName2.equals("com.google.common.collect.AbstractMapBasedMultimap$RandomAccessWrappedList")) {
+                                                    } else if (typeName2.equals(
+                                                            "com.google.common.collect.AbstractMapBasedMultimap$RandomAccessWrappedList")) {
                                                         cplVar = GuavaSupport.immutableListConverter();
-                                                    } else if (typeName2.equals("com.google.common.collect.RegularImmutableSet")) {
+                                                    } else if (typeName2
+                                                            .equals("com.google.common.collect.RegularImmutableSet")) {
                                                         cplVar = GuavaSupport.immutableSetConverter();
                                                     } else {
                                                         cplVar2 = null;
@@ -432,7 +469,11 @@ public final class ObjectReaderImplList implements ObjectReader {
                         Class cls7 = (Class) type3;
                         return new ObjectReaderImplList(cls7, getKotlinEmptySet(cls7));
                     default:
-                        return (type2 == String.class || cplVar2 != null) ? (type2 == Long.class || cplVar2 != null) ? new ObjectReaderImplList(type3, cls2, cls4, type2, cplVar2) : new ObjectReaderImplListInt64(cls2, cls4) : new ObjectReaderImplListStr(cls2, cls4);
+                        return (type2 == String.class || cplVar2 != null)
+                                ? (type2 == Long.class || cplVar2 != null)
+                                        ? new ObjectReaderImplList(type3, cls2, cls4, type2, cplVar2)
+                                        : new ObjectReaderImplListInt64(cls2, cls4)
+                                : new ObjectReaderImplListStr(cls2, cls4);
                 }
             }
             type2 = type4;
@@ -567,7 +608,8 @@ public final class ObjectReaderImplList implements ObjectReader {
             return function != null ? function.apply(arrayList) : arrayList;
         }
         ObjectReaderProvider defaultObjectReaderProvider = JSONFactory.getDefaultObjectReaderProvider();
-        Collection arrayList2 = this.instanceType == ArrayList.class ? new ArrayList(collection.size()) : (Collection) createInstance(0L);
+        Collection arrayList2 = this.instanceType == ArrayList.class ? new ArrayList(collection.size())
+                : (Collection) createInstance(0L);
         for (Object objCreateInstance : collection) {
             if (objCreateInstance == null) {
                 arrayList2.add(null);
@@ -606,7 +648,8 @@ public final class ObjectReaderImplList implements ObjectReader {
                             if (!(objectReader instanceof ObjectReaderImplEnum)) {
                                 throw new JSONException("can not convert from " + cls + " to " + this.itemType);
                             }
-                            objCreateInstance = ((ObjectReaderImplEnum) objectReader).getEnum((String) objCreateInstance);
+                            objCreateInstance = ((ObjectReaderImplEnum) objectReader)
+                                    .getEnum((String) objCreateInstance);
                         }
                     }
                 }
@@ -627,19 +670,23 @@ public final class ObjectReaderImplList implements ObjectReader {
         return this.listClass;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:113:0x01f5  */
-    /* JADX WARN: Found duplicated region for block: B:119:0x020d  */
-    /* JADX WARN: Found duplicated region for block: B:121:0x0213  */
-    /* JADX WARN: Found duplicated region for block: B:123:0x021d  */
-    /* JADX WARN: Found duplicated region for block: B:124:0x021f  */
-    /* JADX WARN: Found duplicated region for block: B:126:0x022a  */
-    /* JADX WARN: Found duplicated region for block: B:128:0x0230  */
+    /* JADX WARN: Found duplicated region for block: B:113:0x01f5 */
+    /* JADX WARN: Found duplicated region for block: B:119:0x020d */
+    /* JADX WARN: Found duplicated region for block: B:121:0x0213 */
+    /* JADX WARN: Found duplicated region for block: B:123:0x021d */
+    /* JADX WARN: Found duplicated region for block: B:124:0x021f */
+    /* JADX WARN: Found duplicated region for block: B:126:0x022a */
+    /* JADX WARN: Found duplicated region for block: B:128:0x0230 */
     /* JADX WARN: Found duplicated region for block: B:129:0x0233 A[MOVE_INLINED] */
     /* JADX WARN: Found duplicated region for block: B:131:0x0241 A[MOVE_INLINED] */
     /* JADX WARN: Found duplicated region for block: B:132:0x0255 A[MOVE_INLINED] */
-    /* JADX WARN: Found duplicated region for block: B:137:0x026f  */
+    /* JADX WARN: Found duplicated region for block: B:137:0x026f */
     /* JADX WARN: Found duplicated region for block: B:139:0x0274 A[RETURN] */
-    /* JADX WARN: Found duplicated region for block: B:146:0x026d A[EDGE_INSN: B:146:0x026d->B:136:0x026d BREAK  A[LOOP:1: B:135:0x026a->B:134:0x0266], SYNTHETIC] */
+    /*
+     * JADX WARN: Found duplicated region for block: B:146:0x026d A[EDGE_INSN:
+     * B:146:0x026d->B:136:0x026d BREAK A[LOOP:1: B:135:0x026a->B:134:0x0266],
+     * SYNTHETIC]
+     */
     @Override // com.alibaba.fastjson2.reader.ObjectReader
     public Object readJSONBObject(JSONReader jSONReader, Type type, Object obj, long j) {
         Type type2;
@@ -733,7 +780,8 @@ public final class ObjectReaderImplList implements ObjectReader {
                         jSONBObject2 = null;
                     }
                 } else {
-                    jSONBObject2 = this.itemObjectReader.readJSONBObject(jSONReader2, this.itemType, Integer.valueOf(i2), j);
+                    jSONBObject2 = this.itemObjectReader.readJSONBObject(jSONReader2, this.itemType,
+                            Integer.valueOf(i2), j);
                 }
                 objArr[i2] = jSONBObject2;
                 i2++;
@@ -829,7 +877,8 @@ public final class ObjectReaderImplList implements ObjectReader {
                         if (objectReaderCheckAutoType != null) {
                             type3 = type4;
                             objectReader = objectReader2;
-                            jSONBObject = objectReaderCheckAutoType.readJSONBObject(jSONReader, type3, Integer.valueOf(i2), j);
+                            jSONBObject = objectReaderCheckAutoType.readJSONBObject(jSONReader, type3,
+                                    Integer.valueOf(i2), j);
                         } else {
                             type3 = type4;
                             objectReader = objectReader2;
@@ -915,7 +964,8 @@ public final class ObjectReaderImplList implements ObjectReader {
         if (jSONReader.readIfNull()) {
             return null;
         }
-        Collection hashSet = jSONReader.nextIfSet() ? new HashSet() : (Collection) createInstance(context.getFeatures() | j);
+        Collection hashSet = jSONReader.nextIfSet() ? new HashSet()
+                : (Collection) createInstance(context.getFeatures() | j);
         char cCurrent = jSONReader.current();
         if (cCurrent == '\"') {
             String string = jSONReader.readString();
@@ -955,7 +1005,8 @@ public final class ObjectReaderImplList implements ObjectReader {
         int i = 0;
         if (cCurrent != '[') {
             Class cls = this.itemClass;
-            if ((cls == Object.class || this.itemObjectReader == null) && !(cls == Object.class && jSONReader.isObject())) {
+            if ((cls == Object.class || this.itemObjectReader == null)
+                    && !(cls == Object.class && jSONReader.isObject())) {
                 throw new JSONException(jSONReader.info());
             }
             hashSet.add(this.itemObjectReader.readObject(jSONReader, this.itemType, 0, 0L));
@@ -1048,7 +1099,8 @@ public final class ObjectReaderImplList implements ObjectReader {
                         return this.constructor.newInstance(null);
                     }
                     return this.instanceType.newInstance();
-                } catch (IllegalAccessException | InstantiationException | RuntimeException | InvocationTargetException unused) {
+                } catch (IllegalAccessException | InstantiationException | RuntimeException
+                        | InvocationTargetException unused) {
                     this.instanceError = true;
                     jSONException = new JSONException("create list error, type " + this.instanceType);
                 }

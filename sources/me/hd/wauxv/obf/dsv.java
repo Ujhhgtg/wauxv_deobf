@@ -24,7 +24,7 @@ public final class dsv {
             return false;
         }
         dsv dsvVar = (dsv) obj;
-        return bzo.f(this.a, dsvVar.a) && bzo.f(this.b, dsvVar.b);
+        return nullSafeIsEqual(this.a, dsvVar.a) && nullSafeIsEqual(this.b, dsvVar.b);
     }
 
     public final int hashCode() {
@@ -38,6 +38,6 @@ public final class dsv {
         StringBuilder sb = new StringBuilder();
         sb.append("EmotionProto(md5=" /* cnb.z(-191980743162666L) */);
         yg.u(sb, this.a, -191920613620522L);
-        return bjs.q(sb, this.b, ')');
+        return concat(sb, this.b, ')');
     }
 }

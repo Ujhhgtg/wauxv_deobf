@@ -42,7 +42,7 @@ public final class exf {
     }
 
     public static String j(String str) {
-        return bjs.i(dnj.ba(str).toString().hashCode(), "yuki_hook_host_data_channel_");
+        return concatVar2Var1(dnj.ba(str).toString().hashCode(), "yuki_hook_host_data_channel_");
     }
 
     public static String k(Context context) {
@@ -54,7 +54,7 @@ public final class exf {
             }
             str = packageName;
         }
-        return bjs.i(dnj.ba(str).toString().hashCode(), "yuki_hook_module_data_channel_");
+        return concatVar2Var1(dnj.ba(str).toString().hashCode(), "yuki_hook_module_data_channel_");
     }
 
     public final boolean l(Context context) {
@@ -67,14 +67,19 @@ public final class exf {
             if (!(context instanceof Application) && !a) {
                 Context context2 = context == null ? this.h : context;
                 Object systemService = context2 != null ? context2.getSystemService("activity") : null;
-                ActivityManager activityManager = systemService instanceof ActivityManager ? (ActivityManager) systemService : null;
+                ActivityManager activityManager = systemService instanceof ActivityManager
+                        ? (ActivityManager) systemService
+                        : null;
                 if (activityManager == null || (runningTasks = activityManager.getRunningTasks(9999)) == null) {
                     size = 0;
                 } else {
                     ArrayList arrayList = new ArrayList();
                     for (Object obj : runningTasks) {
                         ActivityManager.RunningTaskInfo runningTaskInfo = (ActivityManager.RunningTaskInfo) obj;
-                        if (bzo.f(context != null ? context.getClass().getName() : null, (runningTaskInfo == null || (componentName = runningTaskInfo.topActivity) == null) ? null : componentName.getClassName())) {
+                        if (nullSafeIsEqual(context != null ? context.getClass().getName() : null,
+                                (runningTaskInfo == null || (componentName = runningTaskInfo.topActivity) == null)
+                                        ? null
+                                        : componentName.getClassName())) {
                             arrayList.add(obj);
                         }
                     }
@@ -121,7 +126,7 @@ public final class exf {
             if (z) {
                 chm chmVarM = m(application, str);
                 final int i = 0;
-                chm.n(chmVarM, "module_generated_version_get", new bgf(this) { // from class: me.hd.wauxv.obf.exc
+                chm.n(chmVarM, "module_generated_version_get", new IHasInvokeMethod(this) { // from class: me.hd.wauxv.obf.exc
                     public final /* synthetic */ exf b;
 
                     {
@@ -132,7 +137,8 @@ public final class exf {
                     public final Object invoke(Object obj) {
                         switch (i) {
                             case 0:
-                                this.b.m(application, (String) obj).ao(chm.l(new tw("module_generated_version_result", exf.b), arj.s(), -1, -1));
+                                this.b.m(application, (String) obj).trimStackTraceToClass(
+                                        chm.l(new tw("module_generated_version_result", exf.b), arj.s(), -1, -1));
                                 break;
                             default:
                                 chm chmVarM2 = this.b.m(application, (String) obj);
@@ -144,7 +150,7 @@ public final class exf {
                     }
                 });
                 final int i2 = 1;
-                chm.n(chmVarM, "yuki_logger_inmemory_data_get", new bgf(this) { // from class: me.hd.wauxv.obf.exc
+                chm.n(chmVarM, "yuki_logger_inmemory_data_get", new IHasInvokeMethod(this) { // from class: me.hd.wauxv.obf.exc
                     public final /* synthetic */ exf b;
 
                     {
@@ -155,7 +161,8 @@ public final class exf {
                     public final Object invoke(Object obj) {
                         switch (i2) {
                             case 0:
-                                this.b.m(application, (String) obj).ao(chm.l(new tw("module_generated_version_result", exf.b), arj.s(), -1, -1));
+                                this.b.m(application, (String) obj).trimStackTraceToClass(
+                                        chm.l(new tw("module_generated_version_result", exf.b), arj.s(), -1, -1));
                                 break;
                             default:
                                 chm chmVarM2 = this.b.m(application, (String) obj);

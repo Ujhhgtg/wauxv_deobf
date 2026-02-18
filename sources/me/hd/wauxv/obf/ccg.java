@@ -48,7 +48,8 @@ public class ccg {
             Display defaultDisplay = ((WindowManager) context.getSystemService("window")).getDefaultDisplay();
             Point point = new Point();
             defaultDisplay.getRealSize(point);
-            if (Math.min(point.x, point.y) >= context.getResources().getDimensionPixelSize(R.dimen.abc_cascading_menus_min_smallest_width)) {
+            if (Math.min(point.x, point.y) >= context.getResources()
+                    .getDimensionPixelSize(R.dimen.abc_cascading_menus_min_smallest_width)) {
                 dmhVar = new tm(context, this.h, this.g, this.f);
             } else {
                 dmhVar = new dmh(this.d, this.e, this.h, this.g, this.f);
@@ -66,7 +67,7 @@ public class ccg {
 
     public final boolean p() {
         cce cceVar = this.l;
-        return cceVar != null && cceVar.e();
+        return cceVar != null && cceVar.getThisObject();
     }
 
     public final void q(int i, int i2, boolean z, boolean z2) {

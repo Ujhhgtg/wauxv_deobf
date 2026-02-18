@@ -8,7 +8,7 @@ import me.hd.wauxv.data.bean.MsgInfoBean;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class cfv extends doo implements bnc {
+public final class cfv extends BaseHook implements bnc {
     public static final cfv a;
     public static final String b;
     public static final String c;
@@ -33,7 +33,11 @@ public final class cfv extends doo implements bnc {
         int color2;
         view.setPadding(32, 20, 32, 20);
         ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
-        bzo.o(layoutParams, "null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams" /* cnb.z(-449330888571690L) */);
+        throwIfVar1IsNull(layoutParams,
+                "null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams" /*
+                                                                                                  * cnb.z(-
+                                                                                                  * 449330888571690L)
+                                                                                                  */);
         ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) layoutParams;
         marginLayoutParams.leftMargin = 16;
         marginLayoutParams.rightMargin = 16;
@@ -61,13 +65,13 @@ public final class cfv extends doo implements bnc {
     public final void e() {
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String f() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getName() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String g() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getCategory() {
         return b;
     }
 
@@ -85,7 +89,10 @@ public final class cfv extends doo implements bnc {
             }
             if (type != ewg.c.w) {
                 if (type == ewg.i.w) {
-                    View viewV2 = cnh.v(view, cnb.ab(ewk.c) ? "bkg" /* cnb.z(-426915454253866L) */ : "" /* cnb.z(-428513182087978L) */);
+                    View viewV2 = cnh.v(view, cnb.ab(ewk.c) ? "bkg" /* cnb.z(-426915454253866L) */ : "" /*
+                                                                                                         * cnb.z(-
+                                                                                                         * 428513182087978L)
+                                                                                                         */);
                     if (viewV2 != null) {
                         l(viewV2, msgInfoBean.isSend());
                         return;
@@ -109,12 +116,12 @@ public final class cfv extends doo implements bnc {
         }
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String o() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getDescription() {
         return h;
     }
 
-    @Override // me.hd.wauxv.obf.doo
+    @Override // me.hd.wauxv.obf.BaseHook
     public final bgf p() {
         return j;
     }

@@ -27,14 +27,17 @@ public final class tx implements Serializable {
             return false;
         }
         tx txVar = (tx) obj;
-        return bzo.f(this.a, txVar.a) && this.b == txVar.b && this.c == txVar.c && this.d == txVar.d && bzo.f(this.e, txVar.e);
+        return nullSafeIsEqual(this.a, txVar.a) && this.b == txVar.b && this.c == txVar.c && this.d == txVar.d
+                && nullSafeIsEqual(this.e, txVar.e);
     }
 
     public final int hashCode() {
-        return this.e.hashCode() + dts.a(this.d, dts.a(this.c, (Boolean.hashCode(this.b) + (this.a.hashCode() * 31)) * 31, 31), 31);
+        return this.e.hashCode()
+                + dts.a(this.d, dts.a(this.c, (Boolean.hashCode(this.b) + (this.a.hashCode() * 31)) * 31, 31), 31);
     }
 
     public final String toString() {
-        return "ChannelDataWrapper(wrapperId=" + this.a + ", isSegmentsType=" + this.b + ", segmentsSize=" + this.c + ", segmentsIndex=" + this.d + ", instance=" + this.e + ")";
+        return "ChannelDataWrapper(wrapperId=" + this.a + ", isSegmentsType=" + this.b + ", segmentsSize=" + this.c
+                + ", segmentsIndex=" + this.d + ", instance=" + this.e + ")";
     }
 }

@@ -16,7 +16,7 @@ public final class b implements Runnable {
         this.a = context;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:11:0x004d  */
+    /* JADX WARN: Found duplicated region for block: B:11:0x004d */
     @Override // java.lang.Runnable
     public void run() {
         JSONArray jSONArray;
@@ -39,7 +39,7 @@ public final class b implements Runnable {
             if (j.a == null && context != null) {
                 j.a = context.getApplicationContext();
             }
-            c.a(this.a, c.a(this.a, j.a.a.a(), jSONArray), jSONArray != null);
+            c.a(this.a, c.a(this.a, j.a.cachedConstructors.a(), jSONArray), jSONArray != null);
         } catch (Throwable th) {
             th.printStackTrace();
         }

@@ -27,11 +27,14 @@ public final class etz {
             return false;
         }
         etz etzVar = (etz) obj;
-        return bzo.f(this.a, etzVar.a) && this.b == etzVar.b && Float.compare(this.c, etzVar.c) == 0 && Float.compare(this.d, etzVar.d) == 0 && Float.compare(this.e, etzVar.e) == 0 && Float.compare(this.f, etzVar.f) == 0;
+        return nullSafeIsEqual(this.a, etzVar.a) && this.b == etzVar.b && Float.compare(this.c, etzVar.c) == 0
+                && Float.compare(this.d, etzVar.d) == 0 && Float.compare(this.e, etzVar.e) == 0
+                && Float.compare(this.f, etzVar.f) == 0;
     }
 
     public final int hashCode() {
-        return Float.hashCode(this.f) + ((Float.hashCode(this.e) + ((Float.hashCode(this.d) + ((Float.hashCode(this.c) + dts.a(this.b, this.a.hashCode() * 31, 31)) * 31)) * 31)) * 31);
+        return Float.hashCode(this.f) + ((Float.hashCode(this.e) + ((Float.hashCode(this.d)
+                + ((Float.hashCode(this.c) + dts.a(this.b, this.a.hashCode() * 31, 31)) * 31)) * 31)) * 31);
     }
 
     public final String toString() {

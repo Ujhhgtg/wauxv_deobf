@@ -6,7 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.logging.Logger;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cqj;
 import me.hd.wauxv.obf.dhy;
 import me.hd.wauxv.obf.dlc;
@@ -21,15 +21,21 @@ public interface FileSystem {
     public static final Companion Companion = Companion.$$INSTANCE;
     public static final FileSystem SYSTEM = new Companion.SystemFileSystem();
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public static final class Companion {
         static final /* synthetic */ Companion $$INSTANCE = new Companion();
 
-        /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+        /*
+         * JADX INFO: compiled from:
+         * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+         */
         public static final class SystemFileSystem implements FileSystem {
             @Override // okhttp3.internal.io.FileSystem
             public dhy appendingSink(File file) {
-                bzo.q(file, "file");
+                throwIfVar1IsNull(file, "file");
                 int i = 1;
                 try {
                     Logger logger = cqj.a;
@@ -43,7 +49,7 @@ public interface FileSystem {
 
             @Override // okhttp3.internal.io.FileSystem
             public void delete(File file) throws IOException {
-                bzo.q(file, "file");
+                throwIfVar1IsNull(file, "file");
                 if (file.delete() || !file.exists()) {
                     return;
                 }
@@ -52,7 +58,7 @@ public interface FileSystem {
 
             @Override // okhttp3.internal.io.FileSystem
             public void deleteContents(File file) throws IOException {
-                bzo.q(file, "directory");
+                throwIfVar1IsNull(file, "directory");
                 File[] fileArrListFiles = file.listFiles();
                 if (fileArrListFiles == null) {
                     throw new IOException("not a readable directory: " + file);
@@ -69,14 +75,14 @@ public interface FileSystem {
 
             @Override // okhttp3.internal.io.FileSystem
             public boolean exists(File file) {
-                bzo.q(file, "file");
+                throwIfVar1IsNull(file, "file");
                 return file.exists();
             }
 
             @Override // okhttp3.internal.io.FileSystem
             public void rename(File file, File file2) throws IOException {
-                bzo.q(file, "from");
-                bzo.q(file2, "to");
+                throwIfVar1IsNull(file, "from");
+                throwIfVar1IsNull(file2, "to");
                 delete(file2);
                 if (file.renameTo(file2)) {
                     return;
@@ -86,7 +92,7 @@ public interface FileSystem {
 
             @Override // okhttp3.internal.io.FileSystem
             public dhy sink(File file) {
-                bzo.q(file, "file");
+                throwIfVar1IsNull(file, "file");
                 try {
                     return emc.az(file);
                 } catch (FileNotFoundException unused) {
@@ -97,13 +103,13 @@ public interface FileSystem {
 
             @Override // okhttp3.internal.io.FileSystem
             public long size(File file) {
-                bzo.q(file, "file");
+                throwIfVar1IsNull(file, "file");
                 return file.length();
             }
 
             @Override // okhttp3.internal.io.FileSystem
             public dlc source(File file) {
-                bzo.q(file, "file");
+                throwIfVar1IsNull(file, "file");
                 Logger logger = cqj.a;
                 return new ln(new FileInputStream(file), ekc.NONE);
             }

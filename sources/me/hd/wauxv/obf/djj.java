@@ -5,7 +5,7 @@ import org.luckypray.dexkit.DexKitBridge;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class djj extends bws implements bng {
+public final class djj extends bws implements IRequiresDexLocate {
     public static final djj a = new djj();
 
     public static Object b(String str) {
@@ -18,9 +18,9 @@ public final class djj extends bws implements bng {
         a.getClass();
         cdeVarT.a = emn.bb(djiVar).getDeclaringClass();
         Object objE = ((cdk) bjs.h(cdeVarT)).e(new Object[0]);
-        bzo.n(objE);
+        throwIfVar1IsNull(objE);
         Object objInvoke = methodBb.invoke(objE, str);
-        bzo.n(objInvoke);
+        throwIfVar1IsNull(objInvoke);
         return objInvoke;
     }
 
@@ -29,7 +29,7 @@ public final class djj extends bws implements bng {
     }
 
     @Override // me.hd.wauxv.obf.bng
-    public final void h(DexKitBridge dexKitBridge) {
+    public final void locateDex(DexKitBridge dexKitBridge) {
         emn.aj(dji.a, dexKitBridge, new dhg(25));
     }
 }

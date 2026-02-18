@@ -16,7 +16,7 @@ import me.hd.wauxv.R;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class bbj extends doo implements bnp {
+public final class bbj extends BaseHook implements bnp {
     public static final bbj a;
     public static final String b;
     public static final List c;
@@ -46,22 +46,22 @@ public final class bbj extends doo implements bnp {
     public final void e() {
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String f() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getName() {
         return j;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String g() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getCategory() {
         return i;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String o() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getDescription() {
         return l;
     }
 
-    @Override // me.hd.wauxv.obf.doo
+    @Override // me.hd.wauxv.obf.BaseHook
     public final bgf p() {
         return m;
     }
@@ -70,12 +70,15 @@ public final class bbj extends doo implements bnp {
     public final void t(Activity activity, ViewGroup viewGroup, Object obj) {
         if (z()) {
             ViewParent parent = viewGroup.getParent();
-            bzo.o(parent, "null cannot be cast to non-null type android.view.ViewGroup" /* cnb.z(-553449485761322L) */);
+            throwIfVar1IsNull(parent, "null cannot be cast to non-null type android.view.ViewGroup" /*
+                                                                                                     * cnb.z(-
+                                                                                                     * 553449485761322L)
+                                                                                                     */);
             ViewGroup viewGroup2 = (ViewGroup) parent;
             a.getClass();
             io ioVar = new io(viewGroup2, (List) h.getValue(), 18, false);
             Context context = viewGroup2.getContext();
-            bzo.q(context, com.umeng.analytics.pro.f.X);
+            throwIfVar1IsNull(context, "context");
             ant antVar = new ant(context);
             antVar.b = true;
             antVar.g = new nu(26);
@@ -91,21 +94,26 @@ public final class bbj extends doo implements bnp {
             Resources.Theme theme = antVar.getContext().getTheme();
             int[] iArr = cxv.a;
             TypedArray typedArrayObtainStyledAttributes = theme.obtainStyledAttributes(null, iArr, 0, 0);
-            bzo.p(typedArrayObtainStyledAttributes, "obtainStyledAttributes(...)");
+            throwIfVar1IsNull(typedArrayObtainStyledAttributes, "obtainStyledAttributes(...)");
             try {
                 antVar.h = typedArrayObtainStyledAttributes.getInteger(3, 40);
                 antVar.i = typedArrayObtainStyledAttributes.getInteger(9, 600);
                 antVar.j = typedArrayObtainStyledAttributes.getInteger(1, 600);
-                Interpolator interpolatorLoadInterpolator = AnimationUtils.loadInterpolator(antVar.getContext(), typedArrayObtainStyledAttributes.getResourceId(10, R.anim.default_menu_interpolator));
-                bzo.o(interpolatorLoadInterpolator, "null cannot be cast to non-null type android.view.animation.Interpolator");
+                Interpolator interpolatorLoadInterpolator = AnimationUtils.loadInterpolator(antVar.getContext(),
+                        typedArrayObtainStyledAttributes.getResourceId(10, R.anim.default_menu_interpolator));
+                throwIfVar1IsNull(interpolatorLoadInterpolator,
+                        "null cannot be cast to non-null type android.view.animation.Interpolator");
                 antVar.setOpenInterpolatorAnimator(interpolatorLoadInterpolator);
-                Interpolator interpolatorLoadInterpolator2 = AnimationUtils.loadInterpolator(antVar.getContext(), typedArrayObtainStyledAttributes.getResourceId(2, R.anim.default_menu_interpolator));
-                bzo.o(interpolatorLoadInterpolator2, "null cannot be cast to non-null type android.view.animation.Interpolator");
+                Interpolator interpolatorLoadInterpolator2 = AnimationUtils.loadInterpolator(antVar.getContext(),
+                        typedArrayObtainStyledAttributes.getResourceId(2, R.anim.default_menu_interpolator));
+                throwIfVar1IsNull(interpolatorLoadInterpolator2,
+                        "null cannot be cast to non-null type android.view.animation.Interpolator");
                 antVar.setCloseInterpolatorAnimator(interpolatorLoadInterpolator2);
                 antVar.setMainButtonColor(typedArrayObtainStyledAttributes.getColor(5, -16777216));
                 antVar.setMainButtonIconColor(typedArrayObtainStyledAttributes.getColor(7, -1));
                 if (typedArrayObtainStyledAttributes.hasValue(6)) {
-                    antVar.setMainButtonIcon(antVar.getResources().getDrawable(typedArrayObtainStyledAttributes.getResourceId(6, 0), null));
+                    antVar.setMainButtonIcon(antVar.getResources()
+                            .getDrawable(typedArrayObtainStyledAttributes.getResourceId(6, 0), null));
                 }
                 int integer = typedArrayObtainStyledAttributes.getInteger(11, 0);
                 for (cuy cuyVar2 : cuy.values()) {
@@ -116,8 +124,9 @@ public final class bbj extends doo implements bnp {
                 }
                 antVar.setPositionGravity(cuyVar);
                 typedArrayObtainStyledAttributes.recycle();
-                TypedArray typedArrayObtainStyledAttributes2 = antVar.getContext().getTheme().obtainStyledAttributes(null, iArr, 0, 0);
-                bzo.p(typedArrayObtainStyledAttributes2, "obtainStyledAttributes(...)");
+                TypedArray typedArrayObtainStyledAttributes2 = antVar.getContext().getTheme()
+                        .obtainStyledAttributes(null, iArr, 0, 0);
+                throwIfVar1IsNull(typedArrayObtainStyledAttributes2, "obtainStyledAttributes(...)");
                 try {
                     int integer2 = typedArrayObtainStyledAttributes2.getInteger(4, 1);
                     axq axqVar = axq.a;
@@ -125,7 +134,8 @@ public final class bbj extends doo implements bnp {
                         axqVar = axq.b;
                     }
                     antVar.setExpandDirection(axqVar);
-                    antVar.e = typedArrayObtainStyledAttributes2.getLayoutDimension(8, (int) antVar.getResources().getDimension(R.dimen.default_margin_between_menu_items));
+                    antVar.e = typedArrayObtainStyledAttributes2.getLayoutDimension(8,
+                            (int) antVar.getResources().getDimension(R.dimen.default_margin_between_menu_items));
                     typedArrayObtainStyledAttributes2.recycle();
                     antVar.setMainButtonColor(Color.parseColor((cnh.aa(antVar.getContext()) ? bbf.a : bbg.a).o()));
                     antVar.setMainButtonIcon(antVar.getContext().getDrawable(R.drawable.ic_float_button_icon_24dp));

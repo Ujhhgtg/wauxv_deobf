@@ -23,7 +23,8 @@ public final class ci extends AnimatorListenerAdapter {
         this.b = obj;
     }
 
-    @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
+    @Override // android.animation.AnimatorListenerAdapter,
+              // android.animation.Animator.AnimatorListener
     public void onAnimationCancel(Animator animator) {
         switch (this.a) {
             case 0:
@@ -40,7 +41,8 @@ public final class ci extends AnimatorListenerAdapter {
         }
     }
 
-    @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
+    @Override // android.animation.AnimatorListenerAdapter,
+              // android.animation.Animator.AnimatorListener
     public final void onAnimationEnd(Animator animator) {
         switch (this.a) {
             case 0:
@@ -78,7 +80,7 @@ public final class ci extends AnimatorListenerAdapter {
                 ((HideBottomViewOnScrollBehavior) this.b)._r = null;
                 break;
             case 5:
-                bzo.q(animator, "animation");
+                throwIfVar1IsNull(animator, "animation");
                 super.onAnimationEnd(animator);
                 bfu onMenuClosed = ((ccz) this.b).getOnMenuClosed();
                 if (onMenuClosed != null) {
@@ -95,7 +97,8 @@ public final class ci extends AnimatorListenerAdapter {
         }
     }
 
-    @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
+    @Override // android.animation.AnimatorListenerAdapter,
+              // android.animation.Animator.AnimatorListener
     public void onAnimationStart(Animator animator) {
         switch (this.a) {
             case 1:
@@ -106,7 +109,8 @@ public final class ci extends AnimatorListenerAdapter {
                     MaterialCheckBox materialCheckBox = ((cap) arrayList.get(i)).b;
                     ColorStateList colorStateList = materialCheckBox.o;
                     if (colorStateList != null) {
-                        feVar.setTint(colorStateList.getColorForState(materialCheckBox.s, colorStateList.getDefaultColor()));
+                        feVar.setTint(
+                                colorStateList.getColorForState(materialCheckBox.s, colorStateList.getDefaultColor()));
                     }
                 }
                 break;

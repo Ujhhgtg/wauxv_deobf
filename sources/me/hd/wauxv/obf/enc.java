@@ -8,14 +8,14 @@ public final class enc extends cvl {
     @Override // me.hd.wauxv.obf.s
     public final int e(Object obj) {
         long[] jArr = ((ena) obj).a;
-        bzo.q(jArr, "$this$collectionSize");
+        throwIfVar1IsNull(jArr, "$this$collectionSize");
         return jArr.length;
     }
 
     @Override // me.hd.wauxv.obf.aax, me.hd.wauxv.obf.s
     public final void g(acm acmVar, int i, Object obj) {
         enb enbVar = (enb) obj;
-        bzo.q(enbVar, "builder");
+        throwIfVar1IsNull(enbVar, "builder");
         long jW = acmVar.m(this.o, i).w();
         enbVar.d(enbVar.e() + 1);
         long[] jArr = enbVar.a;
@@ -27,7 +27,7 @@ public final class enc extends cvl {
     @Override // me.hd.wauxv.obf.s
     public final Object h(Object obj) {
         long[] jArr = ((ena) obj).a;
-        bzo.q(jArr, "$this$toBuilder");
+        throwIfVar1IsNull(jArr, "$this$toBuilder");
         enb enbVar = new enb();
         enbVar.a = jArr;
         enbVar.b = jArr.length;
@@ -43,7 +43,7 @@ public final class enc extends cvl {
     @Override // me.hd.wauxv.obf.cvl
     public final void m(acn acnVar, Object obj, int i) {
         long[] jArr = ((ena) obj).a;
-        bzo.q(acnVar, "encoder");
+        throwIfVar1IsNull(acnVar, "encoder");
         for (int i2 = 0; i2 < i; i2++) {
             acnVar.h(this.o, i2).ab(jArr[i2]);
         }

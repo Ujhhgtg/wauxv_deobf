@@ -4,7 +4,7 @@ import org.luckypray.dexkit.DexKitBridge;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class bop extends bws implements bng {
+public final class bop extends bws implements IRequiresDexLocate {
     public static final bop a = new bop();
 
     public static String b(Object obj) {
@@ -15,12 +15,12 @@ public final class bop extends bws implements bng {
         a.getClass();
         cdeVarT.a = emn.az(boo.a);
         Object objE = ((cdk) bjs.h(cdeVarT)).e(new Object[0]);
-        bzo.n(objE);
+        throwIfVar1IsNull(objE);
         cde cdeVarT2 = dqc.bi(objE).t();
         cdeVarT2.a = dal.b(String.class);
         cge.a.getClass();
-        Object objJ = ((cdk) dkz.n(new Object[]{emn.az(cgd.a)}, 1, cdeVarT2)).j(obj);
-        bzo.n(objJ);
+        Object objJ = ((cdk) dkz.n(new Object[] { emn.az(cgd.a) }, 1, cdeVarT2)).j(obj);
+        throwIfVar1IsNull(objJ);
         return (String) objJ;
     }
 
@@ -29,7 +29,7 @@ public final class bop extends bws implements bng {
     }
 
     @Override // me.hd.wauxv.obf.bng
-    public final void h(DexKitBridge dexKitBridge) {
+    public final void locateDex(DexKitBridge dexKitBridge) {
         emn.aj(boo.a, dexKitBridge, new blx(13));
     }
 }

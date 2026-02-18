@@ -50,7 +50,8 @@ public abstract class bri extends bxl implements aox, bou {
                 if (obj2 == this) {
                     return;
                 }
-                bzo.o(obj2, "null cannot be cast to non-null type kotlinx.coroutines.internal.LockFreeLinkedListNode");
+                throwIfVar1IsNull(obj2,
+                        "null cannot be cast to non-null type kotlinx.coroutines.internal.LockFreeLinkedListNode");
                 bxl bxlVar = (bxl) obj2;
                 AtomicReferenceFieldUpdater atomicReferenceFieldUpdater3 = bxl.m;
                 dbf dbfVar = (dbf) atomicReferenceFieldUpdater3.get(bxlVar);
@@ -73,7 +74,7 @@ public abstract class bri extends bxl implements aox, bou {
         if (brmVar != null) {
             return brmVar;
         }
-        bzo.ar("job");
+        throwLateinitPropNotInitYet("job");
         throw null;
     }
 

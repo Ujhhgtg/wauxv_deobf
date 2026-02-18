@@ -86,7 +86,8 @@ public class erp implements ccl, cbu, cqk, jm, cby, afj, afl, cdw, ako, axv {
                         while (i < childCount) {
                             View childAt = coordinatorLayout.getChildAt(i);
                             WeakHashMap weakHashMap3 = eqz.a;
-                            if (!childAt.getFitsSystemWindows() || ((agu) childAt.getLayoutParams()).a == null || !evoVar.ac()) {
+                            if (!childAt.getFitsSystemWindows() || ((agu) childAt.getLayoutParams()).a == null
+                                    || !evoVar.ac()) {
                                 i++;
                             }
                         }
@@ -111,16 +112,25 @@ public class erp implements ccl, cbu, cqk, jm, cby, afj, afl, cdw, ako, axv {
     public void a(int i) {
     }
 
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getInstructions()" because "finallyBlockTerminus" is null
-    	at jadx.core.dex.visitors.finaly.traverser.state.TraverserActivePathState.<init>(TraverserActivePathState.java:253)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.findCommonInsns(MarkFinallyVisitor.java:422)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.extractFinally(MarkFinallyVisitor.java:302)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.processTryBlock(MarkFinallyVisitor.java:222)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:150)
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getInstructions()" because
+     * "finallyBlockTerminus" is null
+     * at
+     * jadx.core.dex.visitors.finaly.traverser.state.TraverserActivePathState.<init>
+     * (TraverserActivePathState.java:253)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.findCommonInsns(
+     * MarkFinallyVisitor.java:422)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.extractFinally(
+     * MarkFinallyVisitor.java:302)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.processTryBlock(
+     * MarkFinallyVisitor.java:222)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:150)
      */
     public void aa(int i, ArrayList arrayList) {
-        io ioVar = (io) this.v;
+        DefaultConfig ioVar = (DefaultConfig) this.v;
         ArrayList arrayList2 = (ArrayList) ioVar.d;
         ReentrantLock reentrantLock = (ReentrantLock) ioVar.c;
         reentrantLock.lock();
@@ -197,7 +207,8 @@ public class erp implements ccl, cbu, cqk, jm, cby, afj, afl, cdw, ako, axv {
                 return new ajr((afr) ikVar.c, (jx) ikVar.d);
             default:
                 awc awcVar = (awc) this.v;
-                return new awh((bia) awcVar.a, (bia) awcVar.b, (bia) awcVar.c, (bia) awcVar.d, (awd) awcVar.e, (awd) awcVar.f, (jx) awcVar.g);
+                return new awh((bia) awcVar.a, (bia) awcVar.b, (bia) awcVar.c, (bia) awcVar.d, (awd) awcVar.e,
+                        (awd) awcVar.f, (jx) awcVar.g);
         }
     }
 
@@ -305,7 +316,8 @@ public class erp implements ccl, cbu, cqk, jm, cby, afj, afl, cdw, ako, axv {
             return;
         }
         int i2 = i + 1;
-        handler.postAtTime(new tk(this, i2 < arrayList.size() ? (tl) arrayList.get(i2) : null, cbzVar, cbwVar), cbwVar, SystemClock.uptimeMillis() + 200);
+        handler.postAtTime(new tk(this, i2 < arrayList.size() ? (tl) arrayList.get(i2) : null, cbzVar, cbwVar), cbwVar,
+                SystemClock.uptimeMillis() + 200);
     }
 
     @Override // me.hd.wauxv.obf.afj
@@ -349,16 +361,25 @@ public class erp implements ccl, cbu, cqk, jm, cby, afj, afl, cdw, ako, axv {
         return new rv((nu) this.v, 1);
     }
 
-    /* JADX WARN: Undo finally extract visitor
-    java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getInstructions()" because "finallyBlockTerminus" is null
-    	at jadx.core.dex.visitors.finaly.traverser.state.TraverserActivePathState.<init>(TraverserActivePathState.java:253)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.findCommonInsns(MarkFinallyVisitor.java:422)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.extractFinally(MarkFinallyVisitor.java:302)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.processTryBlock(MarkFinallyVisitor.java:222)
-    	at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.java:150)
+    /*
+     * JADX WARN: Undo finally extract visitor
+     * java.lang.NullPointerException: Cannot invoke
+     * "jadx.core.dex.nodes.BlockNode.getInstructions()" because
+     * "finallyBlockTerminus" is null
+     * at
+     * jadx.core.dex.visitors.finaly.traverser.state.TraverserActivePathState.<init>
+     * (TraverserActivePathState.java:253)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.findCommonInsns(
+     * MarkFinallyVisitor.java:422)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.extractFinally(
+     * MarkFinallyVisitor.java:302)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.processTryBlock(
+     * MarkFinallyVisitor.java:222)
+     * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
+     * java:150)
      */
     public void x(int i) {
-        io ioVar = (io) this.v;
+        DefaultConfig ioVar = (DefaultConfig) this.v;
         ArrayList arrayList = (ArrayList) ioVar.d;
         ReentrantLock reentrantLock = (ReentrantLock) ioVar.c;
         reentrantLock.lock();
@@ -414,8 +435,8 @@ public class erp implements ccl, cbu, cqk, jm, cby, afj, afl, cdw, ako, axv {
 
     public erp(erq erqVar, ero eroVar, ahx ahxVar) {
         this.t = 0;
-        bzo.q(erqVar, "store");
-        bzo.q(ahxVar, "defaultCreationExtras");
+        throwIfVar1IsNull(erqVar, "store");
+        throwIfVar1IsNull(ahxVar, "defaultCreationExtras");
         this.v = new chm(erqVar, eroVar, ahxVar);
     }
 
@@ -426,7 +447,7 @@ public class erp implements ccl, cbu, cqk, jm, cby, afj, afl, cdw, ako, axv {
 
     public erp(EditText editText) {
         this.t = 19;
-        this.v = new io(editText, 16);
+        this.v = new DefaultConfig(editText, 16);
     }
 
     public erp(int i) {

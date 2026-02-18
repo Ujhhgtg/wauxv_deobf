@@ -8,7 +8,10 @@ import me.hd.wauxv.ui.fragment.policy.PolicyFragment;
 public final class cup extends CountDownTimer {
     public final /* synthetic */ PolicyFragment a;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'super' call moved to the top of the method (can break code
+     * semantics)
+     */
     public cup(PolicyFragment policyFragment) {
         super(30000L, 1000L);
         this.a = policyFragment;
@@ -19,13 +22,13 @@ public final class cup extends CountDownTimer {
         cbm cbmVar = PolicyFragment.a;
         PolicyFragment policyFragment = this.a;
         eqj eqjVar = policyFragment.d;
-        bzo.n(eqjVar);
+        throwIfVar1IsNull(eqjVar);
         ((bew) eqjVar).b.setEnabled(true);
         eqj eqjVar2 = policyFragment.d;
-        bzo.n(eqjVar2);
+        throwIfVar1IsNull(eqjVar2);
         ((bew) eqjVar2).b.setText("已同意并重启" /* cnb.z(-419498045733674L) */);
         eqj eqjVar3 = policyFragment.d;
-        bzo.n(eqjVar3);
+        throwIfVar1IsNull(eqjVar3);
         ((bew) eqjVar3).b.setOnClickListener(new cun(policyFragment, 1));
     }
 
@@ -33,7 +36,10 @@ public final class cup extends CountDownTimer {
     public final void onTick(long j) {
         cbm cbmVar = PolicyFragment.a;
         eqj eqjVar = this.a.d;
-        bzo.n(eqjVar);
-        ((bew) eqjVar).b.setText("已同意并重启 (" /* cnb.z(-419515225602858L) */ + (j / ((long) 1000)) + "s)" /* cnb.z(-419476570897194L) */);
+        throwIfVar1IsNull(eqjVar);
+        ((bew) eqjVar).b.setText("已同意并重启 (" /* cnb.z(-419515225602858L) */ + (j / ((long) 1000)) + "s)" /*
+                                                                                                         * cnb.z(-
+                                                                                                         * 419476570897194L)
+                                                                                                         */);
     }
 }

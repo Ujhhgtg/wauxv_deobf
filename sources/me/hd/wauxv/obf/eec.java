@@ -6,7 +6,7 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class eec {
     public static final eeb Companion = new eeb();
-    public static final btt[] a = {null, ewz.am(btx.a, new dtr(25))};
+    public static final btt[] a = { null, ewz.am(btx.a, new dtr(25)) };
     public final Integer b;
     public final List c;
 
@@ -27,7 +27,7 @@ public final class eec {
             return false;
         }
         eec eecVar = (eec) obj;
-        return bzo.f(this.b, eecVar.b) && bzo.f(this.c, eecVar.c);
+        return nullSafeIsEqual(this.b, eecVar.b) && nullSafeIsEqual(this.c, eecVar.c);
     }
 
     public final int hashCode() {

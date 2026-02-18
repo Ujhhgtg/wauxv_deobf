@@ -35,7 +35,10 @@ public final class eei {
     public final dte y;
     public final Boolean z;
 
-    public /* synthetic */ eei(int i, String str, Integer num, String str2, String str3, String str4, String str5, String str6, String str7, String str8, Float f, Integer num2, Integer num3, Integer num4, String str9, String str10, Integer num5, String str11, String str12, Integer num6, String str13, String str14, Long l, ehv ehvVar, String str15, dte dteVar, Boolean bool, Boolean bool2, ein einVar, dws dwsVar, efd efdVar) {
+    public /* synthetic */ eei(int i, String str, Integer num, String str2, String str3, String str4, String str5,
+            String str6, String str7, String str8, Float f, Integer num2, Integer num3, Integer num4, String str9,
+            String str10, Integer num5, String str11, String str12, Integer num6, String str13, String str14, Long l,
+            ehv ehvVar, String str15, dte dteVar, Boolean bool, Boolean bool2, ein einVar, dws dwsVar, efd efdVar) {
         if (1073741823 != (i & 1073741823)) {
             bht.ah(i, 1073741823, eeg.b.getDescriptor());
             throw null;
@@ -80,7 +83,21 @@ public final class eei {
             return false;
         }
         eei eeiVar = (eei) obj;
-        return bzo.f(this.a, eeiVar.a) && bzo.f(this.b, eeiVar.b) && bzo.f(this.c, eeiVar.c) && bzo.f(this.d, eeiVar.d) && bzo.f(this.e, eeiVar.e) && bzo.f(this.f, eeiVar.f) && bzo.f(this.g, eeiVar.g) && bzo.f(this.h, eeiVar.h) && bzo.f(this.i, eeiVar.i) && bzo.f(this.j, eeiVar.j) && bzo.f(this.k, eeiVar.k) && bzo.f(this.l, eeiVar.l) && bzo.f(this.m, eeiVar.m) && bzo.f(this.n, eeiVar.n) && bzo.f(this.o, eeiVar.o) && bzo.f(this.p, eeiVar.p) && bzo.f(this.q, eeiVar.q) && bzo.f(this.r, eeiVar.r) && bzo.f(this.s, eeiVar.s) && bzo.f(this.t, eeiVar.t) && bzo.f(this.u, eeiVar.u) && bzo.f(this.v, eeiVar.v) && bzo.f(this.w, eeiVar.w) && bzo.f(this.x, eeiVar.x) && bzo.f(this.y, eeiVar.y) && bzo.f(this.z, eeiVar.z) && bzo.f(this.aa, eeiVar.aa) && bzo.f(this.ab, eeiVar.ab) && bzo.f(this.ac, eeiVar.ac) && bzo.f(this.ad, eeiVar.ad);
+        return nullSafeIsEqual(this.a, eeiVar.a) && nullSafeIsEqual(this.b, eeiVar.b)
+                && nullSafeIsEqual(this.c, eeiVar.c) && nullSafeIsEqual(this.d, eeiVar.d)
+                && nullSafeIsEqual(this.e, eeiVar.e) && nullSafeIsEqual(this.f, eeiVar.f)
+                && nullSafeIsEqual(this.g, eeiVar.g) && nullSafeIsEqual(this.h, eeiVar.h)
+                && nullSafeIsEqual(this.i, eeiVar.i) && nullSafeIsEqual(this.j, eeiVar.j)
+                && nullSafeIsEqual(this.k, eeiVar.k) && nullSafeIsEqual(this.l, eeiVar.l)
+                && nullSafeIsEqual(this.m, eeiVar.m) && nullSafeIsEqual(this.n, eeiVar.n)
+                && nullSafeIsEqual(this.o, eeiVar.o) && nullSafeIsEqual(this.p, eeiVar.p)
+                && nullSafeIsEqual(this.q, eeiVar.q) && nullSafeIsEqual(this.r, eeiVar.r)
+                && nullSafeIsEqual(this.s, eeiVar.s) && nullSafeIsEqual(this.t, eeiVar.t)
+                && nullSafeIsEqual(this.u, eeiVar.u) && nullSafeIsEqual(this.v, eeiVar.v)
+                && nullSafeIsEqual(this.w, eeiVar.w) && nullSafeIsEqual(this.x, eeiVar.x)
+                && nullSafeIsEqual(this.y, eeiVar.y) && nullSafeIsEqual(this.z, eeiVar.z)
+                && nullSafeIsEqual(this.aa, eeiVar.aa) && nullSafeIsEqual(this.ab, eeiVar.ab)
+                && nullSafeIsEqual(this.ac, eeiVar.ac) && nullSafeIsEqual(this.ad, eeiVar.ad);
     }
 
     public final int hashCode() {

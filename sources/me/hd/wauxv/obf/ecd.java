@@ -30,7 +30,9 @@ public final class ecd {
             return false;
         }
         ecd ecdVar = (ecd) obj;
-        return bzo.f(this.a, ecdVar.a) && bzo.f(this.b, ecdVar.b) && bzo.f(this.c, ecdVar.c) && bzo.f(this.d, ecdVar.d) && bzo.f(this.e, ecdVar.e);
+        return nullSafeIsEqual(this.a, ecdVar.a) && nullSafeIsEqual(this.b, ecdVar.b)
+                && nullSafeIsEqual(this.c, ecdVar.c) && nullSafeIsEqual(this.d, ecdVar.d)
+                && nullSafeIsEqual(this.e, ecdVar.e);
     }
 
     public final int hashCode() {

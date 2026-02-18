@@ -6,9 +6,9 @@ import java.util.LinkedHashMap;
 /* JADX INFO: loaded from: classes.dex */
 public final class chq extends ahx {
     public chq(ahx ahxVar) {
-        bzo.q(ahxVar, "initialExtras");
+        throwIfVar1IsNull(ahxVar, "initialExtras");
         LinkedHashMap linkedHashMap = ahxVar.c;
-        bzo.q(linkedHashMap, "initialExtras");
+        throwIfVar1IsNull(linkedHashMap, "initialExtras");
         this.c.putAll(linkedHashMap);
     }
 

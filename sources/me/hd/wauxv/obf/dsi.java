@@ -24,7 +24,7 @@ public final class dsi {
             return false;
         }
         dsi dsiVar = (dsi) obj;
-        return bzo.f(this.a, dsiVar.a) && bzo.f(this.b, dsiVar.b);
+        return nullSafeIsEqual(this.a, dsiVar.a) && nullSafeIsEqual(this.b, dsiVar.b);
     }
 
     public final int hashCode() {
@@ -38,6 +38,6 @@ public final class dsi {
         StringBuilder sb = new StringBuilder();
         sb.append("AppJumpWordingKeyProto(installedWordingKey=" /* cnb.z(-148734717459242L) */);
         yg.u(sb, this.a, -145762600090410L);
-        return bjs.q(sb, this.b, ')');
+        return concat(sb, this.b, ')');
     }
 }

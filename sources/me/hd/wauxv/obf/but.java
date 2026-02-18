@@ -72,7 +72,8 @@ public final class but implements aja, app, cqk, evw {
             deoVar.i();
         }
         if (depVar.ap().c.compareTo(buh.d) >= 0) {
-            throw new IllegalStateException(("performRestore cannot be called when owner is " + depVar.ap().c).toString());
+            throw new IllegalStateException(
+                    ("performRestore cannot be called when owner is " + depVar.ap().c).toString());
         }
         if (deoVar.g) {
             throw new IllegalStateException("SavedStateRegistry was already restored.");
@@ -92,7 +93,7 @@ public final class but implements aja, app, cqk, evw {
 
     public void ab(Bundle bundle) {
         deo deoVar = (deo) this.b;
-        Bundle bundleR = bht.r((csm[]) Arrays.copyOf(new csm[0], 0));
+        Bundle bundleR = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
         Bundle bundle2 = deoVar.f;
         if (bundle2 != null) {
             bundleR.putAll(bundle2);
@@ -140,7 +141,7 @@ public final class but implements aja, app, cqk, evw {
     }
 
     public void ad(String str, den denVar) {
-        bzo.q(denVar, com.umeng.analytics.pro.f.M);
+        throwIfVar1IsNull(denVar, com.umeng.analytics.pro.f.M);
         deo deoVar = (deo) this.b;
         synchronized (deoVar.c) {
             if (deoVar.d.containsKey(str)) {
@@ -164,7 +165,7 @@ public final class but implements aja, app, cqk, evw {
             if (czxVar == bycVar.l(iK)) {
                 Object[] objArr = bycVar.c;
                 Object obj = objArr[iK];
-                Object obj2 = bzo.c;
+                Object obj2 = KotlinHelpers.c;
                 if (obj == obj2) {
                     break;
                 }
@@ -198,7 +199,8 @@ public final class but implements aja, app, cqk, evw {
                 ((LinkedHashSet) gzVar2.b).add(bud.class.getName());
             }
         } catch (NoSuchMethodException e) {
-            throw new IllegalArgumentException("Class " + bud.class.getSimpleName() + " must have default constructor in order to be automatically recreated", e);
+            throw new IllegalArgumentException("Class " + bud.class.getSimpleName()
+                    + " must have default constructor in order to be automatically recreated", e);
         }
     }
 
@@ -207,7 +209,9 @@ public final class but implements aja, app, cqk, evw {
         int iPreceding;
         int iMax;
         BreakIterator breakIterator = (BreakIterator) this.b;
-        return (i2 <= 0 || Character.isWhitespace(((char[]) this.c)[i2 + (-1)]) || breakIterator.isBoundary(i2) || (iPreceding = breakIterator.preceding(i2)) == -1 || (iMax = Math.max(i, Math.min(i2, iPreceding))) <= i) ? i2 : iMax;
+        return (i2 <= 0 || Character.isWhitespace(((char[]) this.c)[i2 + (-1)]) || breakIterator.isBoundary(i2)
+                || (iPreceding = breakIterator.preceding(i2)) == -1
+                || (iMax = Math.max(i, Math.min(i2, iPreceding))) <= i) ? i2 : iMax;
     }
 
     public void d(dmc dmcVar) {
@@ -251,7 +255,8 @@ public final class but implements aja, app, cqk, evw {
         Bundle bundle;
         deo deoVar = (deo) this.b;
         if (!deoVar.g) {
-            throw new IllegalStateException("You can 'consumeRestoredStateForKey' only after the corresponding component has moved to the 'CREATED' state");
+            throw new IllegalStateException(
+                    "You can 'consumeRestoredStateForKey' only after the corresponding component has moved to the 'CREATED' state");
         }
         Bundle bundle2 = deoVar.f;
         if (bundle2 == null) {
@@ -373,7 +378,8 @@ public final class but implements aja, app, cqk, evw {
     }
 
     public Object n(char c) {
-        for (elz elzVar = ((elz[]) this.b)[Math.abs(((c << 6) * ((c & 1) != 0 ? 3 : 1)) ^ c) % 64]; elzVar != null; elzVar = elzVar.a) {
+        for (elz elzVar = ((elz[]) this.b)[Math.abs(((c << 6) * ((c & 1) != 0 ? 3 : 1)) ^ c)
+                % 64]; elzVar != null; elzVar = elzVar.a) {
             if (elzVar.b == c) {
                 return elzVar.c;
             }
@@ -439,7 +445,8 @@ public final class but implements aja, app, cqk, evw {
             List<dck> list = (List) ((HashMap) this.b).get((String) it.next());
             if (list != null) {
                 for (dck dckVar : list) {
-                    if ((dckVar.a.isAssignableFrom(cls) && cls2.isAssignableFrom(dckVar.b)) && !arrayList.contains(dckVar.b)) {
+                    if ((dckVar.a.isAssignableFrom(cls) && cls2.isAssignableFrom(dckVar.b))
+                            && !arrayList.contains(dckVar.b)) {
                         arrayList.add(dckVar.b);
                     }
                 }
@@ -494,7 +501,7 @@ public final class but implements aja, app, cqk, evw {
                 Map.Entry entry = (Map.Entry) it.next();
                 String str = (String) entry.getKey();
                 den denVar2 = (den) entry.getValue();
-                if (bzo.f(str, "androidx.lifecycle.internal.SavedStateHandlesProvider")) {
+                if (nullSafeIsEqual(str, "androidx.lifecycle.internal.SavedStateHandlesProvider")) {
                     denVar = denVar2;
                 }
             } while (denVar == null);
@@ -514,7 +521,7 @@ public final class but implements aja, app, cqk, evw {
                         string = sbY.toString();
                     }
                 }
-                StringBuilder sbR = bjs.r(string, "] ");
+                StringBuilder sbR = concat(string, "] ");
                 sbR.append((dla) this.b);
                 return sbR.toString();
             case 21:
@@ -524,7 +531,7 @@ public final class but implements aja, app, cqk, evw {
         }
     }
 
-    /* JADX WARN: Found duplicated region for block: B:10:0x0012  */
+    /* JADX WARN: Found duplicated region for block: B:10:0x0012 */
     public int u(int i) {
         int i2;
         int[] iArr = (int[]) this.b;
@@ -775,7 +782,7 @@ public final class but implements aja, app, cqk, evw {
 
     public but(WindowInsetsAnimation.Bounds bounds) {
         this.a = 21;
-        this.b = bps.h(bounds.getLowerBound());
-        this.c = bps.h(bounds.getUpperBound());
+        this.b = bps.locateDex(bounds.getLowerBound());
+        this.c = bps.locateDex(bounds.getUpperBound());
     }
 }

@@ -30,7 +30,9 @@ public final class ean {
             return false;
         }
         ean eanVar = (ean) obj;
-        return bzo.f(this.a, eanVar.a) && bzo.f(this.b, eanVar.b) && bzo.f(this.c, eanVar.c) && bzo.f(this.d, eanVar.d) && bzo.f(this.e, eanVar.e);
+        return nullSafeIsEqual(this.a, eanVar.a) && nullSafeIsEqual(this.b, eanVar.b)
+                && nullSafeIsEqual(this.c, eanVar.c) && nullSafeIsEqual(this.d, eanVar.d)
+                && nullSafeIsEqual(this.e, eanVar.e);
     }
 
     public final int hashCode() {

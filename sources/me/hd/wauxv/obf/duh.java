@@ -48,9 +48,15 @@ public final class duh {
     public final String y;
     public final String z;
 
-    public /* synthetic */ duh(int i, int i2, String str, String str2, String str3, String str4, String str5, String str6, Float f, Float f2, String str7, String str8, String str9, String str10, String str11, Integer num, Integer num2, Integer num3, String str12, String str13, Integer num4, Integer num5, String str14, String str15, Integer num6, String str16, String str17, String str18, String str19, String str20, String str21, String str22, String str23, String str24, String str25, String str26, Integer num7, String str27, String str28, Integer num8, Integer num9, String str29, String str30, String str31, eat eatVar) {
+    public /* synthetic */ duh(int i, int i2, String str, String str2, String str3, String str4, String str5,
+            String str6, Float f, Float f2, String str7, String str8, String str9, String str10, String str11,
+            Integer num, Integer num2, Integer num3, String str12, String str13, Integer num4, Integer num5,
+            String str14, String str15, Integer num6, String str16, String str17, String str18, String str19,
+            String str20, String str21, String str22, String str23, String str24, String str25, String str26,
+            Integer num7, String str27, String str28, Integer num8, Integer num9, String str29, String str30,
+            String str31, eat eatVar) {
         if ((2047 != (i2 & 2047)) || (-1 != i)) {
-            bht.ag(new int[]{i, i2}, new int[]{-1, 2047}, duf.b.getDescriptor());
+            bht.ag(new int[] { i, i2 }, new int[] { -1, 2047 }, duf.b.getDescriptor());
             throw null;
         }
         this.a = str;
@@ -106,7 +112,28 @@ public final class duh {
             return false;
         }
         duh duhVar = (duh) obj;
-        return bzo.f(this.a, duhVar.a) && bzo.f(this.b, duhVar.b) && bzo.f(this.c, duhVar.c) && bzo.f(this.d, duhVar.d) && bzo.f(this.e, duhVar.e) && bzo.f(this.f, duhVar.f) && bzo.f(this.g, duhVar.g) && bzo.f(this.h, duhVar.h) && bzo.f(this.i, duhVar.i) && bzo.f(this.j, duhVar.j) && bzo.f(this.k, duhVar.k) && bzo.f(this.l, duhVar.l) && bzo.f(this.m, duhVar.m) && bzo.f(this.n, duhVar.n) && bzo.f(this.o, duhVar.o) && bzo.f(this.p, duhVar.p) && bzo.f(this.q, duhVar.q) && bzo.f(this.r, duhVar.r) && bzo.f(this.s, duhVar.s) && bzo.f(this.t, duhVar.t) && bzo.f(this.u, duhVar.u) && bzo.f(this.v, duhVar.v) && bzo.f(this.w, duhVar.w) && bzo.f(this.x, duhVar.x) && bzo.f(this.y, duhVar.y) && bzo.f(this.z, duhVar.z) && bzo.f(this.aa, duhVar.aa) && bzo.f(this.ab, duhVar.ab) && bzo.f(this.ac, duhVar.ac) && bzo.f(this.ad, duhVar.ad) && bzo.f(this.ae, duhVar.ae) && bzo.f(this.af, duhVar.af) && bzo.f(this.ag, duhVar.ag) && bzo.f(this.ah, duhVar.ah) && bzo.f(this.ai, duhVar.ai) && bzo.f(this.aj, duhVar.aj) && bzo.f(this.ak, duhVar.ak) && bzo.f(this.al, duhVar.al) && bzo.f(this.am, duhVar.am) && bzo.f(this.an, duhVar.an) && bzo.f(this.ao, duhVar.ao) && bzo.f(this.ap, duhVar.ap) && bzo.f(this.aq, duhVar.aq);
+        return nullSafeIsEqual(this.a, duhVar.a) && nullSafeIsEqual(this.b, duhVar.b)
+                && nullSafeIsEqual(this.c, duhVar.c) && nullSafeIsEqual(this.d, duhVar.d)
+                && nullSafeIsEqual(this.e, duhVar.e) && nullSafeIsEqual(this.f, duhVar.f)
+                && nullSafeIsEqual(this.g, duhVar.g) && nullSafeIsEqual(this.h, duhVar.h)
+                && nullSafeIsEqual(this.i, duhVar.i) && nullSafeIsEqual(this.j, duhVar.j)
+                && nullSafeIsEqual(this.k, duhVar.k) && nullSafeIsEqual(this.l, duhVar.l)
+                && nullSafeIsEqual(this.m, duhVar.m) && nullSafeIsEqual(this.n, duhVar.n)
+                && nullSafeIsEqual(this.o, duhVar.o) && nullSafeIsEqual(this.p, duhVar.p)
+                && nullSafeIsEqual(this.q, duhVar.q) && nullSafeIsEqual(this.r, duhVar.r)
+                && nullSafeIsEqual(this.s, duhVar.s) && nullSafeIsEqual(this.t, duhVar.t)
+                && nullSafeIsEqual(this.u, duhVar.u) && nullSafeIsEqual(this.v, duhVar.v)
+                && nullSafeIsEqual(this.w, duhVar.w) && nullSafeIsEqual(this.x, duhVar.x)
+                && nullSafeIsEqual(this.y, duhVar.y) && nullSafeIsEqual(this.z, duhVar.z)
+                && nullSafeIsEqual(this.aa, duhVar.aa) && nullSafeIsEqual(this.ab, duhVar.ab)
+                && nullSafeIsEqual(this.ac, duhVar.ac) && nullSafeIsEqual(this.ad, duhVar.ad)
+                && nullSafeIsEqual(this.ae, duhVar.ae) && nullSafeIsEqual(this.af, duhVar.af)
+                && nullSafeIsEqual(this.ag, duhVar.ag) && nullSafeIsEqual(this.ah, duhVar.ah)
+                && nullSafeIsEqual(this.ai, duhVar.ai) && nullSafeIsEqual(this.aj, duhVar.aj)
+                && nullSafeIsEqual(this.ak, duhVar.ak) && nullSafeIsEqual(this.al, duhVar.al)
+                && nullSafeIsEqual(this.am, duhVar.am) && nullSafeIsEqual(this.an, duhVar.an)
+                && nullSafeIsEqual(this.ao, duhVar.ao) && nullSafeIsEqual(this.ap, duhVar.ap)
+                && nullSafeIsEqual(this.aq, duhVar.aq);
     }
 
     public final int hashCode() {

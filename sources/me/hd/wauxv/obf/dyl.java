@@ -30,7 +30,9 @@ public final class dyl {
             return false;
         }
         dyl dylVar = (dyl) obj;
-        return bzo.f(this.a, dylVar.a) && bzo.f(this.b, dylVar.b) && bzo.f(this.c, dylVar.c) && bzo.f(this.d, dylVar.d) && bzo.f(this.e, dylVar.e);
+        return nullSafeIsEqual(this.a, dylVar.a) && nullSafeIsEqual(this.b, dylVar.b)
+                && nullSafeIsEqual(this.c, dylVar.c) && nullSafeIsEqual(this.d, dylVar.d)
+                && nullSafeIsEqual(this.e, dylVar.e);
     }
 
     public final int hashCode() {
@@ -53,6 +55,6 @@ public final class dyl {
         bjs.w(sb, this.b, -207769042942762L);
         bjs.w(sb, this.c, -207696028498730L);
         bjs.w(sb, this.d, -207627309021994L);
-        return bjs.p(sb, this.e, ')');
+        return concat(sb, this.e, ')');
     }
 }

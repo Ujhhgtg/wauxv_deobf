@@ -26,23 +26,26 @@ public final class blu {
         this.d = list;
     }
 
-    /* JADX WARN: Code restructure failed: missing block: B:12:0x0046, code lost:
-    
-        if (r4 != null) goto L19;
+    /*
+     * JADX WARN: Code restructure failed: missing block: B:12:0x0046, code lost:
+     * 
+     * if (r4 != null) goto L19;
      */
     /*
-        Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
-    */
-    public static final android.view.View h(me.hd.wauxv.obf.blu r18, java.lang.Class r19, java.lang.String r20, android.content.Context r21) throws me.hd.wauxv.obf.cth {
+     * Code decompiled incorrectly, please refer to instructions dump.
+     * To view partially-correct add '--show-bad-code' argument
+     */
+    public static final android.view.View h(me.hd.wauxv.obf.blu r18, java.lang.Class r19, java.lang.String r20,
+            android.content.Context r21) throws me.hd.wauxv.obf.cth {
         /*
-            Method dump skipped, instruction units count: 661
-            To view this dump add '--comments-level debug' option
-        */
-        throw new UnsupportedOperationException("Method not decompiled: me.hd.wauxv.obf.blu.h(me.hd.wauxv.obf.blu, java.lang.Class, java.lang.String, android.content.Context):android.view.View");
+         * Method dump skipped, instruction units count: 661
+         * To view this dump add '--comments-level debug' option
+         */
+        throw new UnsupportedOperationException(
+                "Method not decompiled: me.hd.wauxv.obf.blu.h(me.hd.wauxv.obf.blu, java.lang.Class, java.lang.String, android.content.Context):android.view.View");
     }
 
-    /* JADX WARN: Found duplicated region for block: B:18:0x00bf  */
+    /* JADX WARN: Found duplicated region for block: B:18:0x00bf */
     public static final blr i(blu bluVar, Class cls, ViewGroup viewGroup, boolean z, Context context) {
         Object objF;
         blr blrVar = new blr(bluVar, cls, viewGroup, z, context);
@@ -66,7 +69,8 @@ public final class blu {
                         cde cdeVarT = bmuVarBh.t();
                         cdeVarT.ab = "nativeLoad";
                         Class cls3 = Integer.TYPE;
-                        cdeVarT.z(Arrays.copyOf(new Object[]{dal.b(cls3), dal.b(String.class), dal.b(cls3), dal.b(evt.b())}, 4));
+                        cdeVarT.z(Arrays.copyOf(
+                                new Object[] { dal.b(cls3), dal.b(String.class), dal.b(cls3), dal.b(evt.b()) }, 4));
                         cdeVarT.ak(cdyVar);
                         cdk cdkVar = (cdk) aaz.g(cdeVarT.aj());
                         objF = cdkVar != null ? cdkVar.f(0, str, 1, null) : null;
@@ -82,7 +86,8 @@ public final class blu {
                         bmuVarBh2.v(false);
                         cde cdeVarT2 = bmuVarBh2.t();
                         cdeVarT2.ab = "nativeLoad";
-                        cdeVarT2.z(Arrays.copyOf(new Object[]{dal.b(String.class), dal.b(cls2), dal.b(cls2), dal.b(cls2)}, 4));
+                        cdeVarT2.z(Arrays.copyOf(
+                                new Object[] { dal.b(String.class), dal.b(cls2), dal.b(cls2), dal.b(cls2) }, 4));
                         cdeVarT2.ak(cdyVar);
                         cdk cdkVar2 = (cdk) aaz.g(cdeVarT2.aj());
                         if (cdkVar2 != null) {
@@ -104,13 +109,15 @@ public final class blu {
                     boolean zB2 = eu.b(36);
                     Class cls4 = Long.TYPE;
                     if (zB2) {
-                        adtVarM.z(Arrays.copyOf(new Object[]{dal.b(AssetManager.class), dal.b(cls4), dal.b(cls2)}, 3));
+                        adtVarM.z(
+                                Arrays.copyOf(new Object[] { dal.b(AssetManager.class), dal.b(cls4), dal.b(cls2) }, 3));
                     } else {
-                        adtVarM.z(Arrays.copyOf(new Object[]{dal.b(AssetManager.class), dal.b(cls4)}, 2));
+                        adtVarM.z(Arrays.copyOf(new Object[] { dal.b(AssetManager.class), dal.b(cls4) }, 2));
                     }
                     adu aduVar = (adu) aaz.g(adtVarM.a());
                     if (aduVar != null) {
-                        AutoCloseable autoCloseable = eu.b(36) ? (AutoCloseable) aduVar.c(null, ewm.e, Boolean.FALSE) : (AutoCloseable) aduVar.c(null, ewm.e);
+                        AutoCloseable autoCloseable = eu.b(36) ? (AutoCloseable) aduVar.c(null, ewm.e, Boolean.FALSE)
+                                : (AutoCloseable) aduVar.c(null, ewm.e);
                         if (autoCloseable != null) {
                             ewm.f = autoCloseable;
                             ewm.g = true;
@@ -129,7 +136,7 @@ public final class blu {
         if (view != null) {
             return view;
         }
-        throw new cth(bjs.o("View with id \"", str, "\" not found."));
+        throw new cth(concat("View with id \"", str, "\" not found."));
     }
 
     public final View k() throws cth {

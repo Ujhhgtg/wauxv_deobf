@@ -7,7 +7,7 @@ public final class cre extends cwl {
 
     @Override // me.hd.wauxv.obf.cwl, me.hd.wauxv.obf.acm
     public final int f(dfx dfxVar) {
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         if (this.ac) {
             return -1;
         }
@@ -17,13 +17,13 @@ public final class cre extends cwl {
 
     @Override // me.hd.wauxv.obf.cwl, me.hd.wauxv.obf.ajt
     public final acm p(dfx dfxVar) {
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         emc emcVarH = dfxVar.h();
-        if (!bzo.f(emcVarH, dnt.a) && !bzo.f(emcVarH, dnt.n) && !(emcVarH instanceof cur)) {
+        if (!nullSafeIsEqual(emcVarH, dnt.a) && !nullSafeIsEqual(emcVarH, dnt.n) && !(emcVarH instanceof cur)) {
             throw new dgb("Type " + dfxVar.h() + " cannot be directly child of oneof element");
         }
         long j_br = _br();
-        if (j_br == 19500 && bzo.f(this.aj, dfxVar)) {
+        if (j_br == 19500 && nullSafeIsEqual(this.aj, dfxVar)) {
             return this;
         }
         if (ajn.w(j_br)) {

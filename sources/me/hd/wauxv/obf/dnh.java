@@ -14,7 +14,7 @@ public final class dnh implements btd {
     @Override // me.hd.wauxv.obf.btd
     public final void c(avt avtVar, Object obj) {
         String str = (String) obj;
-        bzo.q(str, "value");
+        throwIfVar1IsNull(str, "value");
         avtVar.ad(str);
     }
 

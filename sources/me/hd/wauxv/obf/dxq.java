@@ -24,7 +24,7 @@ public final class dxq {
             return false;
         }
         dxq dxqVar = (dxq) obj;
-        return bzo.f(this.a, dxqVar.a) && bzo.f(this.b, dxqVar.b);
+        return nullSafeIsEqual(this.a, dxqVar.a) && nullSafeIsEqual(this.b, dxqVar.b);
     }
 
     public final int hashCode() {
@@ -38,6 +38,6 @@ public final class dxq {
         StringBuilder sb = new StringBuilder();
         sb.append("ft1Proto(follow_num=" /* cnb.z(-184614874250026L) */);
         bjs.w(sb, this.a, -184490320198442L);
-        return bjs.p(sb, this.b, ')');
+        return concat(sb, this.b, ')');
     }
 }

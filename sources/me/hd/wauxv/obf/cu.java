@@ -22,8 +22,9 @@ public final class cu implements Parcelable.Creator {
                 cvVar.a = parcel.readInt();
                 return cvVar;
             case 1:
-                bzo.q(parcel, "parcel");
-                return new dp(parcel.readInt() == 0 ? null : (Intent) Intent.CREATOR.createFromParcel(parcel), parcel.readInt());
+                throwIfVar1IsNull(parcel, "parcel");
+                return new dp(parcel.readInt() == 0 ? null : (Intent) Intent.CREATOR.createFromParcel(parcel),
+                        parcel.readInt());
             case 2:
                 jc jcVar = new jc(parcel);
                 jcVar.a = parcel.readByte() != 0;
@@ -80,7 +81,10 @@ public final class cu implements Parcelable.Creator {
                 nrVar.e = parcel.createBooleanArray()[0];
                 return nrVar;
             case 7:
-                return new st((cet) parcel.readParcelable(cet.class.getClassLoader()), (cet) parcel.readParcelable(cet.class.getClassLoader()), (ajk) parcel.readParcelable(ajk.class.getClassLoader()), (cet) parcel.readParcelable(cet.class.getClassLoader()), parcel.readInt());
+                return new st((cet) parcel.readParcelable(cet.class.getClassLoader()),
+                        (cet) parcel.readParcelable(cet.class.getClassLoader()),
+                        (ajk) parcel.readParcelable(ajk.class.getClassLoader()),
+                        (cet) parcel.readParcelable(cet.class.getClassLoader()), parcel.readInt());
             case 8:
                 return new ajk(parcel.readLong());
             case 9:
@@ -105,10 +109,11 @@ public final class cu implements Parcelable.Creator {
             case 11:
                 return new bey(parcel);
             case 12:
-                bzo.q(parcel, "inParcel");
+                throwIfVar1IsNull(parcel, "inParcel");
                 Parcelable parcelable = parcel.readParcelable(IntentSender.class.getClassLoader());
-                bzo.n(parcelable);
-                return new bql((IntentSender) parcelable, (Intent) parcel.readParcelable(Intent.class.getClassLoader()), parcel.readInt(), parcel.readInt());
+                throwIfVar1IsNull(parcelable);
+                return new bql((IntentSender) parcelable, (Intent) parcel.readParcelable(Intent.class.getClassLoader()),
+                        parcel.readInt(), parcel.readInt());
             case 13:
                 bvk bvkVar = new bvk();
                 bvkVar.a = parcel.readInt();

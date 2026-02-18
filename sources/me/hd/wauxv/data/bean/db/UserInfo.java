@@ -1,7 +1,7 @@
 package me.hd.wauxv.data.bean.db;
 
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cnb;
 import me.hd.wauxv.obf.dkz;
 import me.hd.wauxv.obf.dts;
@@ -19,7 +19,8 @@ public final class UserInfo {
         this.value = str;
     }
 
-    public static /* synthetic */ UserInfo copy$default(UserInfo userInfo, int i, int i2, String str, int i3, Object obj) {
+    public static /* synthetic */ UserInfo copy$default(UserInfo userInfo, int i, int i2, String str, int i3,
+            Object obj) {
         if ((i3 & 1) != 0) {
             i = userInfo.id;
         }
@@ -56,7 +57,7 @@ public final class UserInfo {
             return false;
         }
         UserInfo userInfo = (UserInfo) obj;
-        return this.id == userInfo.id && this.type == userInfo.type && bzo.f(this.value, userInfo.value);
+        return this.id == userInfo.id && this.type == userInfo.type && nullSafeIsEqual(this.value, userInfo.value);
     }
 
     public final int getId() {
@@ -92,6 +93,6 @@ public final class UserInfo {
         sb.append("UserInfo(id=" /* cnb.z(-15010910698282L) */);
         dkz.ac(sb, this.id, -14937896254250L);
         dkz.ac(sb, this.type, -14903536515882L);
-        return bjs.q(sb, this.value, ')');
+        return concat(sb, this.value, ')');
     }
 }

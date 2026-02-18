@@ -20,7 +20,7 @@ public final class bva implements ddo {
     public final Object f;
 
     public bva(int i) {
-        this.c = new io(24);
+        this.c = new DefaultConfig(24);
         this.d = new byf(0);
         this.e = new HashMap();
         this.f = new HashMap();
@@ -44,7 +44,7 @@ public final class bva implements ddo {
 
     public void h(int i) {
         while (this.b > i) {
-            Object objAv = ((io) this.c).av();
+            Object objAv = ((DefaultConfig) this.c).av();
             cmz.m(objAv);
             rs rsVarJ = j(objAv.getClass());
             this.b -= rsVarJ.c() * rsVarJ.b(objAv);
@@ -113,7 +113,7 @@ public final class bva implements ddo {
 
     public Object k(bye byeVar, Class cls) {
         rs rsVarJ = j(cls);
-        Object objAg = ((io) this.c).ag(byeVar);
+        Object objAg = ((DefaultConfig) this.c).ag(byeVar);
         if (objAg != null) {
             this.b -= rsVarJ.c() * rsVarJ.b(objAg);
             g(rsVarJ.b(objAg), cls);
@@ -158,7 +158,7 @@ public final class bva implements ddo {
             bye byeVar = (bye) cutVarB;
             byeVar.b = iB;
             byeVar.c = cls;
-            ((io) this.c).as(byeVar, obj);
+            ((DefaultConfig) this.c).as(byeVar, obj);
             NavigableMap navigableMapL = l(cls);
             Integer num = (Integer) navigableMapL.get(Integer.valueOf(byeVar.b));
             Integer numValueOf = Integer.valueOf(byeVar.b);

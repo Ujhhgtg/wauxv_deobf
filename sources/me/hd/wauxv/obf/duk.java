@@ -15,7 +15,8 @@ public final class duk {
     public final String g;
     public final String h;
 
-    public /* synthetic */ duk(int i, String str, Integer num, String str2, String str3, String str4, String str5, String str6, String str7) {
+    public /* synthetic */ duk(int i, String str, Integer num, String str2, String str3, String str4, String str5,
+            String str6, String str7) {
         if (255 != (i & Opcodes.CONST_METHOD_TYPE)) {
             bht.ah(i, Opcodes.CONST_METHOD_TYPE, dui.b.getDescriptor());
             throw null;
@@ -38,7 +39,11 @@ public final class duk {
             return false;
         }
         duk dukVar = (duk) obj;
-        return bzo.f(this.a, dukVar.a) && bzo.f(this.b, dukVar.b) && bzo.f(this.c, dukVar.c) && bzo.f(this.d, dukVar.d) && bzo.f(this.e, dukVar.e) && bzo.f(this.f, dukVar.f) && bzo.f(this.g, dukVar.g) && bzo.f(this.h, dukVar.h);
+        return nullSafeIsEqual(this.a, dukVar.a) && nullSafeIsEqual(this.b, dukVar.b)
+                && nullSafeIsEqual(this.c, dukVar.c) && nullSafeIsEqual(this.d, dukVar.d)
+                && nullSafeIsEqual(this.e, dukVar.e) && nullSafeIsEqual(this.f, dukVar.f)
+                && nullSafeIsEqual(this.g, dukVar.g)
+                && nullSafeIsEqual(this.h, dukVar.h);
     }
 
     public final int hashCode() {
@@ -70,6 +75,6 @@ public final class duk {
         yg.u(sb, this.e, -297976241060650L);
         yg.u(sb, this.f, -298478752234282L);
         yg.u(sb, this.g, -298379967986474L);
-        return bjs.q(sb, this.h, ')');
+        return concat(sb, this.h, ')');
     }
 }

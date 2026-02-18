@@ -39,7 +39,7 @@ public abstract class bmy {
     public static final ex i = new ex(11);
 
     public static ahh aa(ahf ahfVar, ahh ahhVar) {
-        bzo.q(ahhVar, com.umeng.analytics.pro.f.X);
+        throwIfVar1IsNull(ahhVar, "context");
         return ahhVar == auz.a ? ahfVar : (ahh) ahhVar._u(ahfVar, new fq(3));
     }
 
@@ -48,7 +48,15 @@ public abstract class bmy {
             return null;
         }
         StringBuilder sb = new StringBuilder();
-        sb.append("SELECT contact.*\nFROM rcontact contact\nLEFT JOIN rconversation conversation ON contact.username = conversation.username\nWHERE " /* cnb.z(-73525545138986L) */);
+        sb.append(
+                "SELECT contact.*\nFROM rcontact contact\nLEFT JOIN rconversation conversation ON contact.username = conversation.username\nWHERE " /*
+                                                                                                                                                     * cnb
+                                                                                                                                                     * .
+                                                                                                                                                     * z
+                                                                                                                                                     * (
+                                                                                                                                                     * -
+                                                                                                                                                     * 73525545138986L)
+                                                                                                                                                     */);
         int length = aerVarArr.length;
         int i2 = 0;
         int i3 = 0;
@@ -76,7 +84,15 @@ public abstract class bmy {
             i2++;
             i3 = i4;
         }
-        sb.append("ORDER BY\nCASE WHEN conversation.username IS NOT NULL THEN 0 ELSE 1 END,\nCOALESCE(conversation.conversationTime, 0) DESC,\ncontact.username" /* cnb.z(-72889889979178L) */);
+        sb.append(
+                "ORDER BY\nCASE WHEN conversation.username IS NOT NULL THEN 0 ELSE 1 END,\nCOALESCE(conversation.conversationTime, 0) DESC,\ncontact.username" /*
+                                                                                                                                                                * cnb
+                                                                                                                                                                * .
+                                                                                                                                                                * z
+                                                                                                                                                                * (
+                                                                                                                                                                * -
+                                                                                                                                                                * 72889889979178L)
+                                                                                                                                                                */);
         return arj.ac(sb.toString());
     }
 
@@ -113,7 +129,8 @@ public abstract class bmy {
     }
 
     public static void ag(Class cls, ReflectiveOperationException reflectiveOperationException) {
-        throw new RuntimeException(bjs.l(cls, "Unable to instantiate GlideModule implementation for "), reflectiveOperationException);
+        throw new RuntimeException(concatVar2Var1(cls, "Unable to instantiate GlideModule implementation for "),
+                reflectiveOperationException);
     }
 
     public static final Object[] ah(Collection collection) {
@@ -138,10 +155,10 @@ public abstract class bmy {
                             }
                         }
                         objArrCopyOf = Arrays.copyOf(objArrCopyOf, i4);
-                        bzo.p(objArrCopyOf, "copyOf(...)");
+                        throwIfVar1IsNull(objArrCopyOf, "copyOf(...)");
                     } else if (!it.hasNext()) {
                         Object[] objArrCopyOf2 = Arrays.copyOf(objArrCopyOf, i3);
-                        bzo.p(objArrCopyOf2, "copyOf(...)");
+                        throwIfVar1IsNull(objArrCopyOf2, "copyOf(...)");
                         return objArrCopyOf2;
                     }
                     i2 = i3;
@@ -162,7 +179,7 @@ public abstract class bmy {
                     objArrCopyOf = objArr;
                 } else {
                     Object objNewInstance = Array.newInstance(objArr.getClass().getComponentType(), size);
-                    bzo.o(objNewInstance, "null cannot be cast to non-null type kotlin.Array<kotlin.Any?>");
+                    throwIfVar1IsNull(objNewInstance, "null cannot be cast to non-null type kotlin.Array<kotlin.Any?>");
                     objArrCopyOf = (Object[]) objNewInstance;
                 }
                 while (true) {
@@ -180,14 +197,14 @@ public abstract class bmy {
                             }
                         }
                         objArrCopyOf = Arrays.copyOf(objArrCopyOf, i4);
-                        bzo.p(objArrCopyOf, "copyOf(...)");
+                        throwIfVar1IsNull(objArrCopyOf, "copyOf(...)");
                     } else if (!it.hasNext()) {
                         if (objArrCopyOf == objArr) {
                             objArr[i3] = null;
                             return objArr;
                         }
                         Object[] objArrCopyOf2 = Arrays.copyOf(objArrCopyOf, i3);
-                        bzo.p(objArrCopyOf2, "copyOf(...)");
+                        throwIfVar1IsNull(objArrCopyOf2, "copyOf(...)");
                         return objArrCopyOf2;
                     }
                     i2 = i3;
@@ -206,13 +223,16 @@ public abstract class bmy {
         int length;
         List list;
         int iAh;
-        bzo.q(file, "<this>");
+        throwIfVar1IsNull(file, "<this>");
         String path = file.getPath();
-        bzo.n(path);
+        throwIfVar1IsNull(path);
         char c = File.separatorChar;
         int iAh2 = dnj.ah(c, 0, 4, path);
         if (iAh2 != 0) {
-            length = (iAh2 <= 0 || path.charAt(iAh2 + (-1)) != ':') ? (iAh2 == -1 && path.length() > 0 && cmz.u(path.charAt(dnj.ae(path)), ':', false)) ? path.length() : 0 : iAh2 + 1;
+            length = (iAh2 <= 0 || path.charAt(iAh2 + (-1)) != ':')
+                    ? (iAh2 == -1 && path.length() > 0 && cmz.u(path.charAt(dnj.ae(path)), ':', false)) ? path.length()
+                            : 0
+                    : iAh2 + 1;
         } else if (path.length() <= 1 || path.charAt(1) != c || (iAh = dnj.ah(c, 2, 4, path)) < 0) {
             length = 1;
         } else {
@@ -220,13 +240,13 @@ public abstract class bmy {
             length = iAh3 >= 0 ? iAh3 + 1 : path.length();
         }
         String strSubstring = path.substring(0, length);
-        bzo.p(strSubstring, "substring(...)");
+        throwIfVar1IsNull(strSubstring, "substring(...)");
         String strSubstring2 = path.substring(length);
-        bzo.p(strSubstring2, "substring(...)");
+        throwIfVar1IsNull(strSubstring2, "substring(...)");
         if (strSubstring2.length() == 0) {
             list = avd.a;
         } else {
-            List listAr = dnj.ar(strSubstring2, new char[]{c});
+            List listAr = dnj.ar(strSubstring2, new char[] { c });
             ArrayList arrayList = new ArrayList(abb.ak(listAr, 10));
             Iterator it = listAr.iterator();
             while (it.hasNext()) {
@@ -241,27 +261,32 @@ public abstract class bmy {
         return new bpj(str, new bpk(btdVar));
     }
 
-    /* JADX WARN: Found duplicated region for block: B:188:0x0292  */
-    /* JADX WARN: Found duplicated region for block: B:205:0x02db  */
-    /* JADX WARN: Found duplicated region for block: B:207:0x02de  */
-    /* JADX WARN: Found duplicated region for block: B:209:0x02e4  */
-    /* JADX WARN: Found duplicated region for block: B:232:0x0376  */
-    /* JADX WARN: Found duplicated region for block: B:234:0x0392  */
+    /* JADX WARN: Found duplicated region for block: B:188:0x0292 */
+    /* JADX WARN: Found duplicated region for block: B:205:0x02db */
+    /* JADX WARN: Found duplicated region for block: B:207:0x02de */
+    /* JADX WARN: Found duplicated region for block: B:209:0x02e4 */
+    /* JADX WARN: Found duplicated region for block: B:232:0x0376 */
+    /* JADX WARN: Found duplicated region for block: B:234:0x0392 */
     /* JADX WARN: Found duplicated region for block: B:236:0x0397 A[MOVE_INLINED] */
     /* JADX WARN: Found duplicated region for block: B:240:0x03c3 A[MOVE_INLINED] */
-    /* JADX WARN: Found duplicated region for block: B:251:0x042b  */
-    /* JADX WARN: Found duplicated region for block: B:406:0x06a7  */
-    /* JADX WARN: Found duplicated region for block: B:409:0x06b2  */
-    /* JADX WARN: Found duplicated region for block: B:410:0x06b5  */
-    /* JADX WARN: Found duplicated region for block: B:413:0x06bb  */
-    /* JADX WARN: Found duplicated region for block: B:414:0x06be  */
-    /* JADX WARN: Found duplicated region for block: B:416:0x06c2  */
-    /* JADX WARN: Found duplicated region for block: B:418:0x06ca  */
-    /* JADX WARN: Found duplicated region for block: B:421:0x06d2  */
-    /* JADX WARN: Found duplicated region for block: B:423:0x06d6 A[ADDED_TO_REGION] */
-    /* JADX WARN: Found duplicated region for block: B:433:0x06f2 A[ADDED_TO_REGION, REMOVE, SYNTHETIC] */
-    /* JADX WARN: Found duplicated region for block: B:66:0x00f3  */
-    /* JADX WARN: Found duplicated region for block: B:75:0x0114  */
+    /* JADX WARN: Found duplicated region for block: B:251:0x042b */
+    /* JADX WARN: Found duplicated region for block: B:406:0x06a7 */
+    /* JADX WARN: Found duplicated region for block: B:409:0x06b2 */
+    /* JADX WARN: Found duplicated region for block: B:410:0x06b5 */
+    /* JADX WARN: Found duplicated region for block: B:413:0x06bb */
+    /* JADX WARN: Found duplicated region for block: B:414:0x06be */
+    /* JADX WARN: Found duplicated region for block: B:416:0x06c2 */
+    /* JADX WARN: Found duplicated region for block: B:418:0x06ca */
+    /* JADX WARN: Found duplicated region for block: B:421:0x06d2 */
+    /*
+     * JADX WARN: Found duplicated region for block: B:423:0x06d6 A[ADDED_TO_REGION]
+     */
+    /*
+     * JADX WARN: Found duplicated region for block: B:433:0x06f2 A[ADDED_TO_REGION,
+     * REMOVE, SYNTHETIC]
+     */
+    /* JADX WARN: Found duplicated region for block: B:66:0x00f3 */
+    /* JADX WARN: Found duplicated region for block: B:75:0x0114 */
     public static void k(adr adrVar, bvm bvmVar, ArrayList arrayList, int i2) {
         int i3;
         tp[] tpVarArr;
@@ -793,7 +818,8 @@ public abstract class bmy {
                                 if (adqVar18 != adqVar2) {
                                     bvmVar2.w(adbVar18.i, adbVar19.i, adbVar18.n(), 5);
                                 } else if (adbVar21 != null) {
-                                    bvmVar2.t(adbVar18.i, adbVar19.i, adbVar18.n(), 0.5f, adbVar20.i, adbVar21.i, adbVar20.n(), 5);
+                                    bvmVar2.t(adbVar18.i, adbVar19.i, adbVar18.n(), 0.5f, adbVar20.i, adbVar21.i,
+                                            adbVar20.n(), 5);
                                 }
                             }
                             if (adbVar21 != null && adqVar18 != adqVar2) {
@@ -821,7 +847,8 @@ public abstract class bmy {
                                 adbVar3 = adbVarArr3[i9];
                             }
                             if (dlaVar4 == null && dlaVar5 != null) {
-                                bvmVar2.t(adbVar22.i, dlaVar4, adbVar22.n(), 0.5f, dlaVar5, adbVar3.i, adbVarArr12[i9].n(), 5);
+                                bvmVar2.t(adbVar22.i, dlaVar4, adbVar22.n(), 0.5f, dlaVar5, adbVar3.i,
+                                        adbVarArr12[i9].n(), 5);
                             }
                         }
                     } else {
@@ -1018,18 +1045,19 @@ public abstract class bmy {
             return dehVar;
         }
         ClassLoader classLoader = deh.class.getClassLoader();
-        bzo.n(classLoader);
+        throwIfVar1IsNull(classLoader);
         bundle.setClassLoader(classLoader);
         bzg bzgVar = new bzg(bundle.size());
         for (String str : bundle.keySet()) {
-            bzo.n(str);
+            throwIfVar1IsNull(str);
             bzgVar.put(str, bundle.get(str));
         }
         bzgVar.p();
         bzgVar.n = true;
         if (bzgVar.j <= 0) {
             bzgVar = bzg.a;
-            bzo.o(bzgVar, "null cannot be cast to non-null type kotlin.collections.Map<K of kotlin.collections.builders.MapBuilder, V of kotlin.collections.builders.MapBuilder>");
+            throwIfVar1IsNull(bzgVar,
+                    "null cannot be cast to non-null type kotlin.collections.Map<K of kotlin.collections.builders.MapBuilder, V of kotlin.collections.builders.MapBuilder>");
         }
         deh dehVar2 = new deh();
         new LinkedHashMap();
@@ -1046,7 +1074,7 @@ public abstract class bmy {
     }
 
     public static final void o(cus cusVar, acm acmVar, String str) {
-        bzo.q(cusVar, "<this>");
+        throwIfVar1IsNull(cusVar, "<this>");
         cbm cbmVarA = acmVar.a();
         cusVar.getClass();
         cbmVarA.getClass();
@@ -1056,8 +1084,8 @@ public abstract class bmy {
     }
 
     public static final void p(cus cusVar, avt avtVar, Object obj) {
-        bzo.q(cusVar, "<this>");
-        bzo.q(obj, "value");
+        throwIfVar1IsNull(cusVar, "<this>");
+        throwIfVar1IsNull(obj, "value");
         cbm cbmVarP = avtVar.p();
         cusVar.getClass();
         cbmVarP.getClass();
@@ -1065,17 +1093,36 @@ public abstract class bmy {
     }
 
     public static final doo[] q() {
-        return new doo[]{gu.a, gw.a, gx.a, gy.a, cf.a, qo.a, qw.a, wh.a, aio.a, air.a, cfm.a, cfv.a, chh.a, ddh.a, fu.a, ga.a, gd.a, lz.a, mf.a, mh.a, mm.a, xg.a, any.a, aoa.a, aoe.a, aog.a, cgb.a, cgr.c, cgz.c, csq.a, cww.a, cxg.a, cxl.a, dhm.a, die.a, bcu.a, ble.a, blg.a, blh.a, blk.a, blm.a, blo.a, cud.a, fs.a, aiu.a, azr.a, elx.a, un.a, uo.a, cie.a, cif.a, fp.a, cnl.a, bjm.a, bjx.a, atx.a, bxj.a, etr.a, dlv.a, dav.a, dax.a, day.a, dbe.a, aun.a, cgc.a, chc.a, etl.a, etw.a, ctp.b, cxb.b, zr.a, cha.a, crm.a, cwy.a, cez.b, cfa.b, cfc.b, lx.a, md.a, zw.a, anv.a, cdo.a, cho.a, deu.a, dha.a, dpf.a, dad.a, dae.a, daf.a, ge.a, gf.a, gh.a, diq.a, div.a, diz.b, dja.b, djh.a, djv.a, dkh.a, dkl.a, xf.a, bbj.a, vg.a, vt.a, dhh.a, dhi.b, dhj.b, ete.a, etg.a, ee.a, cia.a, doj.a, dok.a, bie.a, bii.a, aqy.a, cym.a, cyn.a, elv.a, dhn.a, eud.a, eue.a, euf.a, elu.a, am.a, cnq.a, xs.a, xt.a, eti.a, etx.a, dka.a, dkd.a, aoy.a, ddc.a, boq.a, boh.a, cwt.a, cwu.a, eky.a, emo.a, arb.a, cou.a, cov.a, chb.a, cnn.a, cny.a, anw.a, euc.a, ety.a, cxm.a, cxo.a, eth.a, ara.a, bcw.a, cnx.a, cxn.a, eub.a, chz.a, cxh.a, dru.a, etm.a, etn.a, eto.a, csy.a, epv.a, ya.a, crn.a, cro.a, crp.a, crq.a, crr.a, crs.a, lq.a, sk.a, sl.a, sm.a, eol.a, aqz.a, cnp.a, cno.a, dez.a, xl.a, dqr.a, cow.a, cnm.a, cvx.a, azu.a, ewu.a, ewv.a, ewx.a, avj.a, big.a, bih.a, coa.a, cvw.a, eww.a, ayk.a, cob.a, dgj.a, og.a, cnz.a, dda.a, xk.a, csa.a, fn.a, amc.a, dig.a, gm.a, abl.a};
+        return new doo[] { gu.a, gw.a, gx.a, gy.a, cf.a, qo.a, qw.a, wh.a, CustomBalanceHook.a,
+                CustomContactCountHook.a, cfm.a, cfv.a,
+                chh.a, ddh.a,
+                fu.a, ga.a, gd.a, lz.a, mf.a, mh.a, mm.a, xg.a, any.a, aoa.a, aoe.a, aog.a, cgb.a, cgr.c, cgz.c, csq.a,
+                cww.a, cxg.a, cxl.a, dhm.a, die.a, bcu.a, ble.a, blg.a, blh.a, blk.a, blm.a, blo.a, cud.a, fs.a,
+                CustomUnReadCountHook.a,
+                azr.a, elx.a, un.a, uo.a, cie.a, cif.a, fp.a, cnl.a, bjm.a, bjx.a, atx.a, bxj.a, etr.a, dlv.a, dav.a,
+                dax.a, day.a, dbe.a, aun.a, cgc.a, chc.a, etl.a, etw.a, ctp.b, cxb.b, zr.a, cha.a, crm.a, cwy.a, cez.b,
+                cfa.b, cfc.b, lx.a, md.a, zw.a, anv.a, cdo.a, cho.a, deu.a, dha.a, dpf.a, dad.a, dae.a, daf.a, ge.a,
+                gf.a, gh.a, diq.a, div.a, diz.b, dja.b, djh.a, djv.a, SnsUploadAppInfoHook.a, dkl.a, xf.a, bbj.a, vg.a,
+                vt.a, dhh.a,
+                dhi.b, ShowContactInfoHook.b, ete.a, etg.a, ee.a, cia.a, doj.a, dok.a, bie.a, bii.a, aqy.a, cym.a,
+                cyn.a, elv.a, dhn.a, eud.a, eue.a, euf.a, elu.a, AccbilityDisableClick.a, cnq.a, xs.a, xt.a, eti.a,
+                etx.a, dka.a, dkd.a,
+                aoy.a, ddc.a, boq.a, boh.a, cwt.a, cwu.a, eky.a, emo.a, arb.a, cou.a, cov.a, chb.a, cnn.a, cny.a, anw.a,
+                euc.a, ety.a, cxm.a, cxo.a, eth.a, ara.a, bcw.a, cnx.a, cxn.a, eub.a, chz.a, cxh.a, dru.a, etm.a, etn.a,
+                eto.a, csy.a, epv.a, ya.a, crn.a, cro.a, crp.a, crq.a, crr.a, crs.a, lq.a, sk.a, sl.a, sm.a, eol.a,
+                aqz.a, cnp.a, cno.a, dez.a, xl.a, dqr.a, cow.a, cnm.a, cvx.a, azu.a, ewu.a, ewv.a, ewx.a, avj.a, big.a,
+                bih.a, coa.a, cvw.a, eww.a, ayk.a, cob.a, dgj.a, og.a, cnz.a, dda.a, xk.a, csa.a, fn.a, amc.a, dig.a,
+                gm.a, CommandProcessorHook.a };
     }
 
     public static String r(anr anrVar, int i2) {
-        bzo.q(anrVar, com.umeng.analytics.pro.f.X);
+        throwIfVar1IsNull(anrVar, "context");
         if (i2 <= 16777215) {
             return String.valueOf(i2);
         }
         try {
             String resourceName = anrVar.b.getResources().getResourceName(i2);
-            bzo.n(resourceName);
+            throwIfVar1IsNull(resourceName);
             return resourceName;
         } catch (Resources.NotFoundException unused) {
             return String.valueOf(i2);
@@ -1084,7 +1131,7 @@ public abstract class bmy {
 
     public static ArrayList s() throws IOException {
         ArrayList arrayList = new ArrayList();
-        Cursor cursorAb = ab(new aer[]{aer.a});
+        Cursor cursorAb = ab(new aer[] { aer.a });
         if (cursorAb == null) {
             return arrayList;
         }
@@ -1092,7 +1139,9 @@ public abstract class bmy {
             try {
                 FriendInfo friendInfoS = cnb.s(cursorAb);
                 Object objB = acv.b(acv.a, eom.a.f);
-                bzo.o(objB, "null cannot be cast to non-null type kotlin.String" /* cnb.z(-121955596368682L) */);
+                throwIfVar1IsNull(objB, "null cannot be cast to non-null type kotlin.String" /*
+                                                                                              * cnb.z(-121955596368682L)
+                                                                                              */);
                 if (!((String) objB).equals(friendInfoS.getWxid())) {
                     arrayList.add(friendInfoS);
                 }
@@ -1111,7 +1160,7 @@ public abstract class bmy {
 
     public static ArrayList t() throws IOException {
         ArrayList arrayList = new ArrayList();
-        Cursor cursorAb = ab(new aer[]{aer.b});
+        Cursor cursorAb = ab(new aer[] { aer.b });
         if (cursorAb == null) {
             return arrayList;
         }
@@ -1135,9 +1184,9 @@ public abstract class bmy {
     }
 
     public static final int u(dfx dfxVar, brn brnVar, String str) {
-        bzo.q(dfxVar, "<this>");
-        bzo.q(brnVar, "json");
-        bzo.q(str, "name");
+        throwIfVar1IsNull(dfxVar, "<this>");
+        throwIfVar1IsNull(brnVar, "json");
+        throwIfVar1IsNull(str, "name");
         brt brtVar = brnVar.b;
         brtVar.getClass();
         y(brnVar, dfxVar);
@@ -1149,7 +1198,7 @@ public abstract class bmy {
         ls lsVar = new ls(dfxVar, 3, brnVar);
         erpVar.getClass();
         erpVar.getClass();
-        bzo.q(dfxVar, "descriptor");
+        throwIfVar1IsNull(dfxVar, "descriptor");
         Map map = (Map) ((ConcurrentHashMap) erpVar.v).get(dfxVar);
         nu nuVar = h;
         Object obj = map != null ? map.get(nuVar) : null;
@@ -1186,8 +1235,8 @@ public abstract class bmy {
     }
 
     public static final boolean w(brn brnVar, dfx dfxVar) {
-        bzo.q(dfxVar, "<this>");
-        bzo.q(brnVar, "json");
+        throwIfVar1IsNull(dfxVar, "<this>");
+        throwIfVar1IsNull(brnVar, "json");
         brnVar.b.getClass();
         List annotations = dfxVar.getAnnotations();
         if (annotations != null && annotations.isEmpty()) {
@@ -1203,14 +1252,14 @@ public abstract class bmy {
     }
 
     public static ahh x(ahf ahfVar, ahg ahgVar) {
-        bzo.q(ahgVar, "key");
-        return bzo.f(ahfVar.getKey(), ahgVar) ? auz.a : ahfVar;
+        throwIfVar1IsNull(ahgVar, "key");
+        return nullSafeIsEqual(ahfVar.getKey(), ahgVar) ? auz.a : ahfVar;
     }
 
     public static final void y(brn brnVar, dfx dfxVar) {
-        bzo.q(dfxVar, "<this>");
-        bzo.q(brnVar, "json");
-        if (bzo.f(dfxVar.h(), dnt.a)) {
+        throwIfVar1IsNull(dfxVar, "<this>");
+        throwIfVar1IsNull(brnVar, "json");
+        if (nullSafeIsEqual(dfxVar.h(), dnt.a)) {
             brnVar.b.getClass();
         }
     }
@@ -1219,7 +1268,8 @@ public abstract class bmy {
         try {
             Class<?> cls = Class.forName(str);
             try {
-                throw new RuntimeException(dkz.r(cls.getDeclaredConstructor(null).newInstance(null), "Expected instanceof GlideModule, but found: "));
+                throw new RuntimeException(dkz.r(cls.getDeclaredConstructor(null).newInstance(null),
+                        "Expected instanceof GlideModule, but found: "));
             } catch (IllegalAccessException e) {
                 ag(cls, e);
                 throw null;

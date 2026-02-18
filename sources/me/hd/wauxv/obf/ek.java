@@ -32,10 +32,10 @@ public class ek implements dcq, bm, sg {
         this.a = i;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:30:0x009f  */
+    /* JADX WARN: Found duplicated region for block: B:30:0x009f */
     /* JADX WARN: Found duplicated region for block: B:31:0x00a3 A[DONT_INVERT] */
-    /* JADX WARN: Found duplicated region for block: B:34:0x00ab  */
-    /* JADX WARN: Found duplicated region for block: B:7:0x0017  */
+    /* JADX WARN: Found duplicated region for block: B:34:0x00ab */
+    /* JADX WARN: Found duplicated region for block: B:7:0x0017 */
     public static final Object e(ek ekVar, ajx ajxVar, nc ncVar) throws Throwable {
         bst bstVar;
         LinkedHashMap linkedHashMap;
@@ -185,8 +185,11 @@ public class ek implements dcq, bm, sg {
         aso asoVar = asvVar.b;
         CodeEditor codeEditor = asvVar.a;
         int i = this.c;
-        dfo insertHandleDescriptor = i != 1 ? i != 2 ? codeEditor.getInsertHandleDescriptor() : codeEditor.getRightHandleDescriptor() : codeEditor.getLeftHandleDescriptor();
-        dfo rightHandleDescriptor = this.c == 1 ? codeEditor.getRightHandleDescriptor() : codeEditor.getLeftHandleDescriptor();
+        dfo insertHandleDescriptor = i != 1
+                ? i != 2 ? codeEditor.getInsertHandleDescriptor() : codeEditor.getRightHandleDescriptor()
+                : codeEditor.getLeftHandleDescriptor();
+        dfo rightHandleDescriptor = this.c == 1 ? codeEditor.getRightHandleDescriptor()
+                : codeEditor.getLeftHandleDescriptor();
         float x = motionEvent.getX() + asoVar.b.getCurrX();
         int i2 = insertHandleDescriptor.b;
         RectF rectF = insertHandleDescriptor.a;
@@ -305,7 +308,8 @@ public class ek implements dcq, bm, sg {
             ejVar.ai(-3, str4, egVar.l);
         }
         if (egVar.p != null) {
-            AlertController$RecycleListView alertController$RecycleListView = (AlertController$RecycleListView) egVar.b.inflate(ejVar.aa, (ViewGroup) null);
+            AlertController$RecycleListView alertController$RecycleListView = (AlertController$RecycleListView) egVar.b
+                    .inflate(ejVar.aa, (ViewGroup) null);
             int i = egVar.s ? ejVar.ab : ejVar.ac;
             ListAdapter eiVar = egVar.p;
             if (eiVar == null) {
@@ -348,7 +352,7 @@ public class ek implements dcq, bm, sg {
                 i3 = i4;
             }
             char[] cArrCopyOf = Arrays.copyOf(cArr, i3);
-            bzo.p(cArrCopyOf, "copyOf(...)");
+            throwIfVar1IsNull(cArrCopyOf, "copyOf(...)");
             this.d = cArrCopyOf;
         }
     }
@@ -417,7 +421,7 @@ public class ek implements dcq, bm, sg {
                 if (afwVar == null) {
                     break;
                 }
-                if (bzo.f(ahqVar, obj)) {
+                if (nullSafeIsEqual(ahqVar, obj)) {
                     try {
                         bss bssVar2 = ajxVar.a;
                         emc.af(3, bssVar2);
@@ -501,14 +505,14 @@ public class ek implements dcq, bm, sg {
     public bsp o(boolean z) {
         yi yiVar = (yi) this.d;
         String strS = !z ? yiVar.s() : yiVar.r();
-        return (z || !bzo.f(strS, "null")) ? new bsf(strS, z) : bsi.INSTANCE;
+        return (z || !nullSafeIsEqual(strS, "null")) ? new bsf(strS, z) : bsi.INSTANCE;
     }
 
     public void p() {
         tz tzVar = tz.a;
         char[] cArr = (char[]) this.d;
         tzVar.getClass();
-        bzo.q(cArr, "array");
+        throwIfVar1IsNull(cArr, "array");
         synchronized (tzVar) {
             int i = tzVar.b;
             if (cArr.length + i < kv.a) {
@@ -519,18 +523,20 @@ public class ek implements dcq, bm, sg {
     }
 
     public void q(Object obj) {
-        bmm bmmVar = (bmm) this.d;
+        HookParamWrapper hookParam = (HookParamWrapper) this.d;
         int i = this.c;
         if (i < 0) {
             throw new IllegalStateException("HookParam Method args index must be >= 0");
         }
-        if (bmmVar.d().length == 0) {
+        if (hookParam.getArgs().length == 0) {
             throw new IllegalStateException("HookParam Method args is empty, mabe not has args");
         }
-        if (i > bmmVar.d().length - 1) {
-            throw new IllegalStateException(("HookParam Method args index out of bounds, max is " + (bmmVar.d().length - 1)).toString());
+        if (i > hookParam.getArgs().length - 1) {
+            throw new IllegalStateException(
+                    ("HookParam Method args index out of bounds, max is " + (hookParam.getArgs().length - 1))
+                            .toString());
         }
-        Object[] objArrI = bmmVar.b.i();
+        Object[] objArrI = hookParam.b.i();
         if (objArrI != null) {
             objArrI[i] = obj;
         }
@@ -565,7 +571,7 @@ public class ek implements dcq, bm, sg {
     public String toString() {
         switch (this.a) {
             case 8:
-                return bjs.i(this.c, "Args of index ");
+                return concatVar2Var1(this.c, "Args of index ");
             case 9:
                 return new String((char[]) this.d, 0, this.c);
             default:
@@ -574,7 +580,7 @@ public class ek implements dcq, bm, sg {
     }
 
     public void u(String str) {
-        bzo.q(str, "text");
+        throwIfVar1IsNull(str, "text");
         int length = str.length();
         if (length == 0) {
             return;
@@ -592,7 +598,7 @@ public class ek implements dcq, bm, sg {
 
     public ek(brt brtVar, yi yiVar) {
         this.a = 10;
-        bzo.q(brtVar, "configuration");
+        throwIfVar1IsNull(brtVar, "configuration");
         this.d = yiVar;
     }
 
@@ -636,10 +642,13 @@ public class ek implements dcq, bm, sg {
             }
             return;
         }
-        throw new IllegalArgumentException(bjs.i(i, "invalid size: "));
+        throw new IllegalArgumentException(concatVar2Var1(i, "invalid size: "));
     }
 
-    /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'this' call moved to the top of the method (can break code
+     * semantics)
+     */
     public ek(Context context) {
         this(context, el.d(context, 0));
         this.a = 0;

@@ -6,12 +6,12 @@ import java.util.Iterator;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class kk implements Collection, bsw {
+public final class kk implements Collection, IEmpty {
     public final Object[] a;
     public final boolean b;
 
     public kk(Object[] objArr, boolean z) {
-        bzo.q(objArr, "values");
+        throwIfVar1IsNull(objArr, "values");
         this.a = objArr;
         this.b = z;
     }
@@ -34,19 +34,19 @@ public final class kk implements Collection, bsw {
     @Override // java.util.Collection
     public final boolean contains(Object obj) {
         Object[] objArr = this.a;
-        bzo.q(objArr, "<this>");
+        throwIfVar1IsNull(objArr, "<this>");
         return la.s(objArr, obj) >= 0;
     }
 
     @Override // java.util.Collection
     public final boolean containsAll(Collection collection) {
-        bzo.q(collection, "elements");
+        throwIfVar1IsNull(collection, "elements");
         if (collection.isEmpty()) {
             return true;
         }
         for (Object obj : collection) {
             Object[] objArr = this.a;
-            bzo.q(objArr, "<this>");
+            throwIfVar1IsNull(objArr, "<this>");
             if (la.s(objArr, obj) < 0) {
                 return false;
             }
@@ -87,18 +87,18 @@ public final class kk implements Collection, bsw {
     @Override // java.util.Collection
     public final Object[] toArray() {
         Object[] objArr = this.a;
-        bzo.q(objArr, "<this>");
+        throwIfVar1IsNull(objArr, "<this>");
         if (this.b && objArr.getClass().equals(Object[].class)) {
             return objArr;
         }
         Object[] objArrCopyOf = Arrays.copyOf(objArr, objArr.length, Object[].class);
-        bzo.p(objArrCopyOf, "copyOf(...)");
+        throwIfVar1IsNull(objArrCopyOf, "copyOf(...)");
         return objArrCopyOf;
     }
 
     @Override // java.util.Collection
     public final Object[] toArray(Object[] objArr) {
-        bzo.q(objArr, "array");
+        throwIfVar1IsNull(objArr, "array");
         return bmy.ai(this, objArr);
     }
 }

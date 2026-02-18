@@ -45,7 +45,7 @@ public final class el extends acj implements DialogInterface, he {
         this.b = new btl() { // from class: me.hd.wauxv.obf.id
             @Override // me.hd.wauxv.obf.btl
             public final boolean b(KeyEvent keyEvent) {
-                return this.a.h(keyEvent);
+                return this.a.locateDex(keyEvent);
             }
         };
         ho hoVarE = e();
@@ -88,7 +88,7 @@ public final class el extends acj implements DialogInterface, he {
         return emc.am(this.b, getWindow().getDecorView(), this, keyEvent);
     }
 
-    public final ho e() {
+    public final ho getThisObject() {
         if (this.a == null) {
             hm hmVar = ho.a;
             this.a = new ic(getContext(), getWindow(), this, this);
@@ -267,7 +267,8 @@ public final class el extends acj implements DialogInterface, he {
                 if (drawable != null) {
                     ejVar.t.setImageDrawable(drawable);
                 } else {
-                    ejVar.u.setPadding(ejVar.t.getPaddingLeft(), ejVar.t.getPaddingTop(), ejVar.t.getPaddingRight(), ejVar.t.getPaddingBottom());
+                    ejVar.u.setPadding(ejVar.t.getPaddingLeft(), ejVar.t.getPaddingTop(), ejVar.t.getPaddingRight(),
+                            ejVar.t.getPaddingBottom());
                     ejVar.t.setVisibility(8);
                 }
             }
@@ -283,7 +284,8 @@ public final class el extends acj implements DialogInterface, he {
             if (nestedScrollView2 != null) {
                 nestedScrollView2.setClipToPadding(true);
             }
-            View viewFindViewById9 = (ejVar.e == null && ejVar.f == null) ? null : viewGroupAh.findViewById(R.id.titleDividerNoCustom);
+            View viewFindViewById9 = (ejVar.e == null && ejVar.f == null) ? null
+                    : viewGroupAh.findViewById(R.id.titleDividerNoCustom);
             if (viewFindViewById9 != null) {
                 viewFindViewById9.setVisibility(0);
             }
@@ -295,7 +297,10 @@ public final class el extends acj implements DialogInterface, he {
         }
         AlertController$RecycleListView alertController$RecycleListView = ejVar.f;
         if (alertController$RecycleListView != null && (!z3 || i2 == 0)) {
-            alertController$RecycleListView.setPadding(alertController$RecycleListView.getPaddingLeft(), i2 != 0 ? alertController$RecycleListView.getPaddingTop() : alertController$RecycleListView.a, alertController$RecycleListView.getPaddingRight(), z3 ? alertController$RecycleListView.getPaddingBottom() : alertController$RecycleListView.b);
+            alertController$RecycleListView.setPadding(alertController$RecycleListView.getPaddingLeft(),
+                    i2 != 0 ? alertController$RecycleListView.getPaddingTop() : alertController$RecycleListView.a,
+                    alertController$RecycleListView.getPaddingRight(),
+                    z3 ? alertController$RecycleListView.getPaddingBottom() : alertController$RecycleListView.b);
         }
         if (!z2) {
             View view2 = ejVar.f;

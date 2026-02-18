@@ -7,17 +7,17 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public abstract class aba extends dqc {
     public static int af(List list) {
-        bzo.q(list, "<this>");
+        throwIfVar1IsNull(list, "<this>");
         return list.size() - 1;
     }
 
     public static List ag(Object... objArr) {
-        bzo.q(objArr, "elements");
+        throwIfVar1IsNull(objArr, "elements");
         return objArr.length > 0 ? la.a(objArr) : avd.a;
     }
 
     public static ArrayList ah(Object... objArr) {
-        bzo.q(objArr, "elements");
+        throwIfVar1IsNull(objArr, "elements");
         return objArr.length == 0 ? new ArrayList() : new ArrayList(new kk(objArr, true));
     }
 

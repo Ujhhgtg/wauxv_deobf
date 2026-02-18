@@ -61,7 +61,7 @@ public class byj {
         View view = (View) ((ArrayList) this.f).get(0);
         dmb dmbVar = (dmb) view.getLayoutParams();
         StaggeredGridLayoutManager staggeredGridLayoutManager = (StaggeredGridLayoutManager) this.g;
-        this.b = staggeredGridLayoutManager.c.h(view);
+        this.b = staggeredGridLayoutManager.c.locateDex(view);
         if (dmbVar.b && (dmcVarP = staggeredGridLayoutManager.al.p(dmbVar.c.z())) != null && dmcVarP.b == -1) {
             int i = this.b;
             int i2 = this.e;
@@ -92,7 +92,7 @@ public class byj {
         int i3 = i2 > i ? 1 : -1;
         while (i != i2) {
             View view = (View) ((ArrayList) this.f).get(i);
-            int iH = staggeredGridLayoutManager.c.h(view);
+            int iH = staggeredGridLayoutManager.c.locateDex(view);
             int iE = staggeredGridLayoutManager.c.e(view);
             boolean z = iH <= iJ;
             boolean z2 = iE >= iN;
@@ -105,7 +105,7 @@ public class byj {
     }
 
     public Object o(Object obj) {
-        bzo.q(obj, "key");
+        throwIfVar1IsNull(obj, "key");
         synchronized (((awp) this.g)) {
             bpg bpgVar = (bpg) this.f;
             bpgVar.getClass();
@@ -139,7 +139,8 @@ public class byj {
             int size = arrayList.size() - 1;
             while (size >= 0) {
                 View view2 = (View) arrayList.get(size);
-                if ((staggeredGridLayoutManager.h && czg.el(view2) >= i) || ((!staggeredGridLayoutManager.h && czg.el(view2) <= i) || !view2.hasFocusable())) {
+                if ((staggeredGridLayoutManager.h && czg.el(view2) >= i)
+                        || ((!staggeredGridLayoutManager.h && czg.el(view2) <= i) || !view2.hasFocusable())) {
                     break;
                 }
                 size--;
@@ -151,7 +152,8 @@ public class byj {
         int i3 = 0;
         while (i3 < size2) {
             View view3 = (View) arrayList.get(i3);
-            if ((staggeredGridLayoutManager.h && czg.el(view3) <= i) || ((!staggeredGridLayoutManager.h && czg.el(view3) >= i) || !view3.hasFocusable())) {
+            if ((staggeredGridLayoutManager.h && czg.el(view3) <= i)
+                    || ((!staggeredGridLayoutManager.h && czg.el(view3) >= i) || !view3.hasFocusable())) {
                 break;
             }
             i3++;
@@ -209,7 +211,8 @@ public class byj {
                     try {
                         int i = this.d;
                         int i2 = this.e + i;
-                        str = "LruCache[maxSize=" + this.b + ",hits=" + this.d + ",misses=" + this.e + ",hitRate=" + (i2 != 0 ? (i * 100) / i2 : 0) + "%]";
+                        str = "LruCache[maxSize=" + this.b + ",hits=" + this.d + ",misses=" + this.e + ",hitRate="
+                                + (i2 != 0 ? (i * 100) / i2 : 0) + "%]";
                     } catch (Throwable th) {
                         throw th;
                     }
@@ -236,7 +239,7 @@ public class byj {
 
     public Object v(Object obj, Object obj2) {
         Object objPut;
-        bzo.q(obj, "key");
+        throwIfVar1IsNull(obj, "key");
         synchronized (((awp) this.g)) {
             this.c++;
             bpg bpgVar = (bpg) this.f;
@@ -255,7 +258,7 @@ public class byj {
                     }
                     if (this.c > i && !((bpg) this.f).a.isEmpty()) {
                         Set setEntrySet = ((bpg) this.f).a.entrySet();
-                        bzo.p(setEntrySet, "<get-entries>(...)");
+                        throwIfVar1IsNull(setEntrySet, "<get-entries>(...)");
                         Map.Entry entry = (Map.Entry) aaz.f(setEntrySet);
                         if (entry == null) {
                             return objPut;
@@ -264,10 +267,10 @@ public class byj {
                         Object value = entry.getValue();
                         bpg bpgVar2 = (bpg) this.f;
                         bpgVar2.getClass();
-                        bzo.q(key, "key");
+                        throwIfVar1IsNull(key, "key");
                         bpgVar2.a.remove(key);
                         int i2 = this.c;
-                        bzo.q(value, "value");
+                        throwIfVar1IsNull(value, "value");
                         this.c = i2 - 1;
                     }
                     return objPut;

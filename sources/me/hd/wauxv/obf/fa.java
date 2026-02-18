@@ -12,9 +12,9 @@ import java.util.ArrayList;
 /* JADX INFO: loaded from: classes.dex */
 public final class fa implements dcj {
     public final /* synthetic */ int a;
-    public final io b;
+    public final DefaultConfig b;
 
-    public /* synthetic */ fa(io ioVar, int i) {
+    public /* synthetic */ fa(DefaultConfig ioVar, int i) {
         this.a = i;
         this.b = ioVar;
     }
@@ -23,9 +23,9 @@ public final class fa implements dcj {
     public final dcg c(Object obj, int i, int i2, crw crwVar) {
         switch (this.a) {
             case 0:
-                return io.e(ImageDecoder.createSource((ByteBuffer) obj), i, i2, crwVar);
+                return DefaultConfig.e(ImageDecoder.createSource((ByteBuffer) obj), i, i2, crwVar);
             default:
-                return io.e(ImageDecoder.createSource(sf.c((InputStream) obj)), i, i2, crwVar);
+                return DefaultConfig.e(ImageDecoder.createSource(sf.c((InputStream) obj)), i, i2, crwVar);
         }
     }
 
@@ -36,7 +36,7 @@ public final class fa implements dcj {
                 ImageHeaderParser$ImageType imageHeaderParser$ImageTypeAa = bhv.aa((ArrayList) this.b.c, (ByteBuffer) obj);
                 return imageHeaderParser$ImageTypeAa == ImageHeaderParser$ImageType.ANIMATED_WEBP || (Build.VERSION.SDK_INT >= 31 && imageHeaderParser$ImageTypeAa == ImageHeaderParser$ImageType.ANIMATED_AVIF);
             default:
-                io ioVar = this.b;
+                DefaultConfig ioVar = this.b;
                 ImageHeaderParser$ImageType imageHeaderParser$ImageTypeZ = bhv.z((ArrayList) ioVar.c, (InputStream) obj, (bva) ioVar.d);
                 return imageHeaderParser$ImageTypeZ == ImageHeaderParser$ImageType.ANIMATED_WEBP || (Build.VERSION.SDK_INT >= 31 && imageHeaderParser$ImageTypeZ == ImageHeaderParser$ImageType.ANIMATED_AVIF);
         }

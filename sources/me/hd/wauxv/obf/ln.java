@@ -11,7 +11,7 @@ public final class ln implements dlc {
     public final Object c;
 
     public ln(InputStream inputStream, ekc ekcVar) {
-        bzo.q(ekcVar, "timeout");
+        throwIfVar1IsNull(ekcVar, "timeout");
         this.b = inputStream;
         this.c = ekcVar;
     }
@@ -50,7 +50,7 @@ public final class ln implements dlc {
     public final long read(rh rhVar, long j) throws IOException {
         switch (this.a) {
             case 0:
-                bzo.q(rhVar, "sink");
+                throwIfVar1IsNull(rhVar, "sink");
                 lo loVar = (lo) this.b;
                 dlc dlcVar = (dlc) this.c;
                 loVar.enter();
@@ -72,7 +72,7 @@ public final class ln implements dlc {
                     throw th;
                 }
             default:
-                bzo.q(rhVar, "sink");
+                throwIfVar1IsNull(rhVar, "sink");
                 if (j == 0) {
                     return 0L;
                 }

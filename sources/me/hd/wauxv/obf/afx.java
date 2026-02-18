@@ -8,7 +8,10 @@ public abstract class afx extends nc {
     public final ahh m;
     public transient afw n;
 
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /*
+     * JADX WARN: 'super' call moved to the top of the method (can break code
+     * semantics)
+     */
     public afx(afw afwVar) {
         super(afwVar);
         ahh ahhVarC = afwVar != null ? afwVar.c() : null;
@@ -18,7 +21,7 @@ public abstract class afx extends nc {
     @Override // me.hd.wauxv.obf.afw
     public final ahh c() {
         ahh ahhVar = this.m;
-        bzo.n(ahhVar);
+        throwIfVar1IsNull(ahhVar);
         return ahhVar;
     }
 
@@ -27,9 +30,9 @@ public abstract class afx extends nc {
         afw afwVar = this.n;
         if (afwVar != null && afwVar != this) {
             ahh ahhVar = this.m;
-            bzo.n(ahhVar);
+            throwIfVar1IsNull(ahhVar);
             ahf ahfVar_w = ahhVar._w(arj.a);
-            bzo.n(ahfVar_w);
+            throwIfVar1IsNull(ahfVar_w);
             aor aorVar = (aor) afwVar;
             AtomicReferenceFieldUpdater atomicReferenceFieldUpdater = aor.a;
             while (atomicReferenceFieldUpdater.get(aorVar) == cnf.af) {

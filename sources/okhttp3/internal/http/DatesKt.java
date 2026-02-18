@@ -5,7 +5,7 @@ import java.text.ParsePosition;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import okhttp3.internal.Util;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -14,7 +14,9 @@ public final class DatesKt {
     private static final DateFormat[] BROWSER_COMPATIBLE_DATE_FORMATS;
     private static final String[] BROWSER_COMPATIBLE_DATE_FORMAT_STRINGS;
     public static final long MAX_DATE = 253402300799999L;
-    private static final DatesKt$STANDARD_DATE_FORMAT$1 STANDARD_DATE_FORMAT = new ThreadLocal<DateFormat>() { // from class: okhttp3.internal.http.DatesKt$STANDARD_DATE_FORMAT$1
+    private static final DatesKt$STANDARD_DATE_FORMAT$1 STANDARD_DATE_FORMAT = new ThreadLocal<DateFormat>() { // from
+                                                                                                               // class:
+                                                                                                               // okhttp3.internal.http.DatesKt$STANDARD_DATE_FORMAT$1
         @Override // java.lang.ThreadLocal
         public DateFormat initialValue() {
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss 'GMT'", Locale.US);
@@ -24,15 +26,22 @@ public final class DatesKt {
         }
     };
 
-    /* JADX WARN: Type inference failed for: r0v0, types: [okhttp3.internal.http.DatesKt$STANDARD_DATE_FORMAT$1] */
+    /*
+     * JADX WARN: Type inference failed for: r0v0, types:
+     * [okhttp3.internal.http.DatesKt$STANDARD_DATE_FORMAT$1]
+     */
     static {
-        String[] strArr = {"EEE, dd MMM yyyy HH:mm:ss zzz", "EEEE, dd-MMM-yy HH:mm:ss zzz", "EEE MMM d HH:mm:ss yyyy", "EEE, dd-MMM-yyyy HH:mm:ss z", "EEE, dd-MMM-yyyy HH-mm-ss z", "EEE, dd MMM yy HH:mm:ss z", "EEE dd-MMM-yyyy HH:mm:ss z", "EEE dd MMM yyyy HH:mm:ss z", "EEE dd-MMM-yyyy HH-mm-ss z", "EEE dd-MMM-yy HH:mm:ss z", "EEE dd MMM yy HH:mm:ss z", "EEE,dd-MMM-yy HH:mm:ss z", "EEE,dd-MMM-yyyy HH:mm:ss z", "EEE, dd-MM-yyyy HH:mm:ss z", "EEE MMM d yyyy HH:mm:ss z"};
+        String[] strArr = { "EEE, dd MMM yyyy HH:mm:ss zzz", "EEEE, dd-MMM-yy HH:mm:ss zzz", "EEE MMM d HH:mm:ss yyyy",
+                "EEE, dd-MMM-yyyy HH:mm:ss z", "EEE, dd-MMM-yyyy HH-mm-ss z", "EEE, dd MMM yy HH:mm:ss z",
+                "EEE dd-MMM-yyyy HH:mm:ss z", "EEE dd MMM yyyy HH:mm:ss z", "EEE dd-MMM-yyyy HH-mm-ss z",
+                "EEE dd-MMM-yy HH:mm:ss z", "EEE dd MMM yy HH:mm:ss z", "EEE,dd-MMM-yy HH:mm:ss z",
+                "EEE,dd-MMM-yyyy HH:mm:ss z", "EEE, dd-MM-yyyy HH:mm:ss z", "EEE MMM d yyyy HH:mm:ss z" };
         BROWSER_COMPATIBLE_DATE_FORMAT_STRINGS = strArr;
         BROWSER_COMPATIBLE_DATE_FORMATS = new DateFormat[strArr.length];
     }
 
     public static final Date toHttpDateOrNull(String str) {
-        bzo.q(str, "<this>");
+        throwIfVar1IsNull(str, "<this>");
         if (str.length() == 0) {
             return null;
         }
@@ -67,9 +76,9 @@ public final class DatesKt {
     }
 
     public static final String toHttpDateString(Date date) {
-        bzo.q(date, "<this>");
+        throwIfVar1IsNull(date, "<this>");
         String str = STANDARD_DATE_FORMAT.get().format(date);
-        bzo.p(str, "STANDARD_DATE_FORMAT.get().format(this)");
+        throwIfVar1IsNull(str, "STANDARD_DATE_FORMAT.get().format(this)");
         return str;
     }
 }

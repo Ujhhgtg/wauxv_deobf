@@ -24,7 +24,7 @@ public final class dxe {
             return false;
         }
         dxe dxeVar = (dxe) obj;
-        return bzo.f(this.a, dxeVar.a) && bzo.f(this.b, dxeVar.b);
+        return nullSafeIsEqual(this.a, dxeVar.a) && nullSafeIsEqual(this.b, dxeVar.b);
     }
 
     public final int hashCode() {
@@ -38,6 +38,6 @@ public final class dxe {
         StringBuilder sb = new StringBuilder();
         sb.append("f52Proto(template_id=" /* cnb.z(-191388037675818L) */);
         yg.u(sb, this.a, -191345088002858L);
-        return bjs.p(sb, this.b, ')');
+        return concat(sb, this.b, ')');
     }
 }

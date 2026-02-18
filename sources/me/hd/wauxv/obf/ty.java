@@ -11,7 +11,7 @@ public final class ty extends cvj {
     @Override // me.hd.wauxv.obf.cvj
     public final Object c() {
         char[] cArrCopyOf = Arrays.copyOf(this.a, this.b);
-        bzo.p(cArrCopyOf, "copyOf(...)");
+        throwIfVar1IsNull(cArrCopyOf, "copyOf(...)");
         return cArrCopyOf;
     }
 
@@ -24,7 +24,7 @@ public final class ty extends cvj {
                 i = length;
             }
             char[] cArrCopyOf = Arrays.copyOf(cArr, i);
-            bzo.p(cArrCopyOf, "copyOf(...)");
+            throwIfVar1IsNull(cArrCopyOf, "copyOf(...)");
             this.a = cArrCopyOf;
         }
     }

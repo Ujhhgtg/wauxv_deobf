@@ -21,9 +21,9 @@ public final /* synthetic */ class ald implements Runnable {
         switch (this.a) {
             case 0:
                 aln alnVar = this.b;
-                bzo.q(alnVar, "this$0");
+                throwIfVar1IsNull(alnVar, "this$0");
                 dlr dlrVar = this.c;
-                bzo.q(dlrVar, "$operation");
+                throwIfVar1IsNull(dlrVar, "$operation");
                 alnVar.i(dlrVar);
                 break;
             case 1:
@@ -33,7 +33,7 @@ public final /* synthetic */ class ald implements Runnable {
                 if (arrayList.contains(dlrVar2)) {
                     int i = dlrVar2.a;
                     View view = dlrVar2.c.bz;
-                    bzo.p(view, "operation.fragment.mView");
+                    throwIfVar1IsNull(view, "operation.fragment.mView");
                     bjs.a(i, view, alnVar2.a);
                 }
                 break;

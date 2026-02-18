@@ -6,7 +6,7 @@ import me.hd.wauxv.data.bean.MsgInfoBean;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class chc extends doo implements bna {
+public final class chc extends BaseHook implements bna {
     public static final chc a = new chc("MsgRepeatHook" /* cnb.z(-520799144377130L) */);
     public static final String b = "菜单" /* cnb.z(-520661705423658L) */;
     public static final String c = "消息复读" /* cnb.z(-520666000390954L) */;
@@ -16,13 +16,13 @@ public final class chc extends doo implements bna {
     public final void e() {
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String f() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getName() {
         return c;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String g() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getCategory() {
         return b;
     }
 
@@ -30,29 +30,35 @@ public final class chc extends doo implements bna {
     public final List l(MsgInfoBean msgInfoBean) {
         if (z()) {
             if (msgInfoBean.isText()) {
-                return dqc.bf(new wj(R.id.MenuItem_Chat_MsgRepeat, "复读" /* cnb.z(-520790554442538L) */, R.drawable.ic_menu_repeat_24dp, new cbk(15)));
+                return dqc.bf(new wj(R.id.MenuItem_Chat_MsgRepeat, "复读" /* cnb.z(-520790554442538L) */,
+                        R.drawable.ic_menu_repeat_24dp, new cbk(15)));
             }
             if (msgInfoBean.isImage()) {
-                return dqc.bf(new wj(R.id.MenuItem_Chat_MsgRepeat, "复读" /* cnb.z(-520726129933098L) */, R.drawable.ic_menu_repeat_24dp, new cbk(16)));
+                return dqc.bf(new wj(R.id.MenuItem_Chat_MsgRepeat, "复读" /* cnb.z(-520726129933098L) */,
+                        R.drawable.ic_menu_repeat_24dp, new cbk(16)));
             }
             if (msgInfoBean.isVoice()) {
-                return dqc.bf(new wj(R.id.MenuItem_Chat_MsgRepeat, "复读" /* cnb.z(-520747604769578L) */, R.drawable.ic_menu_repeat_24dp, new cbk(17)));
+                return dqc.bf(new wj(R.id.MenuItem_Chat_MsgRepeat, "复读" /* cnb.z(-520747604769578L) */,
+                        R.drawable.ic_menu_repeat_24dp, new cbk(17)));
             }
             if (msgInfoBean.isVideo()) {
-                return dqc.bf(new wj(R.id.MenuItem_Chat_MsgRepeat, "复读" /* cnb.z(-520751899736874L) */, R.drawable.ic_menu_repeat_24dp, new cbk(18)));
+                return dqc.bf(new wj(R.id.MenuItem_Chat_MsgRepeat, "复读" /* cnb.z(-520751899736874L) */,
+                        R.drawable.ic_menu_repeat_24dp, new cbk(18)));
             }
             if (msgInfoBean.isEmoji()) {
-                return dqc.bf(new wj(R.id.MenuItem_Chat_MsgRepeat, "复读" /* cnb.z(-520704655096618L) */, R.drawable.ic_menu_repeat_24dp, new cbk(19)));
+                return dqc.bf(new wj(R.id.MenuItem_Chat_MsgRepeat, "复读" /* cnb.z(-520704655096618L) */,
+                        R.drawable.ic_menu_repeat_24dp, new cbk(19)));
             }
             if (msgInfoBean.isQuote()) {
-                return dqc.bf(new wj(R.id.MenuItem_Chat_MsgRepeat, "复读" /* cnb.z(-520708950063914L) */, R.drawable.ic_menu_repeat_24dp, new cbk(20)));
+                return dqc.bf(new wj(R.id.MenuItem_Chat_MsgRepeat, "复读" /* cnb.z(-520708950063914L) */,
+                        R.drawable.ic_menu_repeat_24dp, new cbk(20)));
             }
         }
         return avd.a;
     }
 
-    @Override // me.hd.wauxv.obf.doo
-    public final String o() {
+    @Override // me.hd.wauxv.obf.BaseHook
+    public final String getDescription() {
         return h;
     }
 }

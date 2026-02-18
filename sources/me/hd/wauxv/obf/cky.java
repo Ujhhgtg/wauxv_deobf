@@ -26,15 +26,46 @@ public final class cky extends et {
 
     @Override // me.hd.wauxv.obf.et
     public final void d(Throwable th) {
-        bzo.q(th, "e");
+        throwIfVar1IsNull(th, "e");
         f(th);
     }
 
     @Override // me.hd.wauxv.obf.et
     public final void f(Throwable th) {
-        bzo.q(th, "e");
+        throwIfVar1IsNull(th, "e");
         ckv.i.getClass();
-        String string = th instanceof UnknownHostException ? ckv.j().getString(R.string.net_host_error) : th instanceof URLParseException ? ckv.j().getString(R.string.net_url_error) : th instanceof NetConnectException ? ckv.j().getString(R.string.net_connect_error) : th instanceof NetSocketTimeoutException ? ckv.j().getString(R.string.net_connect_timeout_error, th.getMessage()) : th instanceof DownloadFileException ? ckv.j().getString(R.string.net_download_error) : th instanceof ConvertException ? ckv.j().getString(R.string.net_parse_error) : th instanceof RequestParamsException ? ckv.j().getString(R.string.net_request_error) : th instanceof ServerResponseException ? ckv.j().getString(R.string.net_server_error) : th instanceof NullPointerException ? ckv.j().getString(R.string.net_null_error) : th instanceof NoCacheException ? ckv.j().getString(R.string.net_no_cache_error) : th instanceof ResponseException ? th.getMessage() : th instanceof HttpFailureException ? ckv.j().getString(R.string.request_failure) : th instanceof NetException ? ckv.j().getString(R.string.net_error) : ckv.j().getString(R.string.net_other_error);
+        String string = th instanceof UnknownHostException ? ckv.j().getString(R.string.net_host_error)
+                : th instanceof URLParseException ? ckv.j().getString(R.string.net_url_error)
+                        : th instanceof NetConnectException ? ckv.j().getString(R.string.net_connect_error)
+                                : th instanceof NetSocketTimeoutException
+                                        ? ckv.j().getString(R.string.net_connect_timeout_error, th.getMessage())
+                                        : th instanceof DownloadFileException
+                                                ? ckv.j().getString(R.string.net_download_error)
+                                                : th instanceof ConvertException
+                                                        ? ckv.j().getString(R.string.net_parse_error)
+                                                        : th instanceof RequestParamsException
+                                                                ? ckv.j().getString(R.string.net_request_error)
+                                                                : th instanceof ServerResponseException
+                                                                        ? ckv.j().getString(R.string.net_server_error)
+                                                                        : th instanceof NullPointerException
+                                                                                ? ckv.j().getString(
+                                                                                        R.string.net_null_error)
+                                                                                : th instanceof NoCacheException
+                                                                                        ? ckv.j().getString(
+                                                                                                R.string.net_no_cache_error)
+                                                                                        : th instanceof ResponseException
+                                                                                                ? th.getMessage()
+                                                                                                : th instanceof HttpFailureException
+                                                                                                        ? ckv.j()
+                                                                                                                .getString(
+                                                                                                                        R.string.request_failure)
+                                                                                                        : th instanceof NetException
+                                                                                                                ? ckv.j()
+                                                                                                                        .getString(
+                                                                                                                                R.string.net_error)
+                                                                                                                : ckv.j()
+                                                                                                                        .getString(
+                                                                                                                                R.string.net_other_error);
         cnf.ay(th);
         if (string == null) {
             return;

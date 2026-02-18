@@ -28,7 +28,8 @@ public final class eha {
             return false;
         }
         eha ehaVar = (eha) obj;
-        return bzo.f(this.a, ehaVar.a) && bzo.f(this.b, ehaVar.b) && bzo.f(this.c, ehaVar.c) && bzo.f(this.d, ehaVar.d);
+        return nullSafeIsEqual(this.a, ehaVar.a) && nullSafeIsEqual(this.b, ehaVar.b)
+                && nullSafeIsEqual(this.c, ehaVar.c) && nullSafeIsEqual(this.d, ehaVar.d);
     }
 
     public final int hashCode() {
@@ -48,6 +49,6 @@ public final class eha {
         bjs.w(sb, this.a, -299359220529962L);
         bjs.w(sb, this.b, -299372105431850L);
         bjs.w(sb, this.c, -300982718167850L);
-        return bjs.p(sb, this.d, ')');
+        return concat(sb, this.d, ')');
     }
 }

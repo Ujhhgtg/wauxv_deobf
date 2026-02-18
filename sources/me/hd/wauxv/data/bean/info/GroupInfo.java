@@ -1,7 +1,7 @@
 package me.hd.wauxv.data.bean.info;
 
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cnb;
 import me.hd.wauxv.obf.yg;
 
@@ -20,7 +20,8 @@ public final class GroupInfo {
         this.groupData = groupData;
     }
 
-    public static /* synthetic */ GroupInfo copy$default(GroupInfo groupInfo, String str, String str2, String str3, GroupData groupData, int i, Object obj) {
+    public static /* synthetic */ GroupInfo copy$default(GroupInfo groupInfo, String str, String str2, String str3,
+            GroupData groupData, int i, Object obj) {
         if ((i & 1) != 0) {
             str = groupInfo.roomId;
         }
@@ -64,7 +65,8 @@ public final class GroupInfo {
             return false;
         }
         GroupInfo groupInfo = (GroupInfo) obj;
-        return bzo.f(this.roomId, groupInfo.roomId) && bzo.f(this.remark, groupInfo.remark) && bzo.f(this.name, groupInfo.name) && bzo.f(this.groupData, groupInfo.groupData);
+        return nullSafeIsEqual(this.roomId, groupInfo.roomId) && nullSafeIsEqual(this.remark, groupInfo.remark)
+                && nullSafeIsEqual(this.name, groupInfo.name) && nullSafeIsEqual(this.groupData, groupInfo.groupData);
     }
 
     public final GroupData getGroupData() {

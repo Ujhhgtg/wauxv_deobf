@@ -28,7 +28,8 @@ public final class dvr {
             return false;
         }
         dvr dvrVar = (dvr) obj;
-        return bzo.f(this.a, dvrVar.a) && bzo.f(this.b, dvrVar.b) && bzo.f(this.c, dvrVar.c) && bzo.f(this.d, dvrVar.d);
+        return nullSafeIsEqual(this.a, dvrVar.a) && nullSafeIsEqual(this.b, dvrVar.b)
+                && nullSafeIsEqual(this.c, dvrVar.c) && nullSafeIsEqual(this.d, dvrVar.d);
     }
 
     public final int hashCode() {
@@ -49,6 +50,6 @@ public final class dvr {
         sb.append(this.b);
         sb.append(", img_type=" /* cnb.z(-168852344273706L) */);
         bjs.w(sb, this.c, -168835164404522L);
-        return bjs.p(sb, this.d, ')');
+        return concat(sb, this.d, ')');
     }
 }

@@ -6,7 +6,7 @@ import java.io.EOFException;
 import java.io.IOException;
 import java.net.ProtocolException;
 import java.util.concurrent.TimeUnit;
-import me.hd.wauxv.obf.bzo;
+import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.rf;
 import me.hd.wauxv.obf.rh;
 import me.hd.wauxv.obf.rm;
@@ -33,7 +33,10 @@ public final class WebSocketReader implements Closeable {
     private boolean readingCompressedMessage;
     private final rm source;
 
-    /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+    /*
+     * JADX INFO: compiled from:
+     * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
+     */
     public interface FrameCallback {
         void onReadClose(int i, String str);
 
@@ -47,8 +50,8 @@ public final class WebSocketReader implements Closeable {
     }
 
     public WebSocketReader(boolean z, rm rmVar, FrameCallback frameCallback, boolean z2, boolean z3) {
-        bzo.q(rmVar, "source");
-        bzo.q(frameCallback, "frameCallback");
+        throwIfVar1IsNull(rmVar, "source");
+        throwIfVar1IsNull(frameCallback, "frameCallback");
         this.isClient = z;
         this.source = rmVar;
         this.frameCallback = frameCallback;
@@ -69,13 +72,13 @@ public final class WebSocketReader implements Closeable {
             if (!this.isClient) {
                 rh rhVar = this.controlFrameBuffer;
                 rf rfVar = this.maskCursor;
-                bzo.n(rfVar);
+                throwIfVar1IsNull(rfVar);
                 rhVar.v(rfVar);
                 this.maskCursor.i(0L);
                 WebSocketProtocol webSocketProtocol = WebSocketProtocol.INSTANCE;
                 rf rfVar2 = this.maskCursor;
                 byte[] bArr = this.maskKey;
-                bzo.n(bArr);
+                throwIfVar1IsNull(bArr);
                 webSocketProtocol.toggleMask(rfVar2, bArr);
                 this.maskCursor.close();
             }
@@ -158,7 +161,8 @@ public final class WebSocketReader implements Closeable {
             int iAnd2 = Util.and(this.source.readByte(), Opcodes.CONST_METHOD_TYPE);
             boolean z5 = (iAnd2 & 128) != 0;
             if (z5 == this.isClient) {
-                throw new ProtocolException(this.isClient ? "Server-sent frames must not be masked." : "Client-sent frames must be masked.");
+                throw new ProtocolException(this.isClient ? "Server-sent frames must not be masked."
+                        : "Client-sent frames must be masked.");
             }
             long j = iAnd2 & 127;
             this.frameLength = j;
@@ -168,7 +172,8 @@ public final class WebSocketReader implements Closeable {
                 long j2 = this.source.readLong();
                 this.frameLength = j2;
                 if (j2 < 0) {
-                    throw new ProtocolException("Frame length 0x" + Util.toHexString(this.frameLength) + " > 0x7FFFFFFFFFFFFFFF");
+                    throw new ProtocolException(
+                            "Frame length 0x" + Util.toHexString(this.frameLength) + " > 0x7FFFFFFFFFFFFFFF");
                 }
             }
             if (this.isControlFrame && this.frameLength > 125) {
@@ -177,7 +182,7 @@ public final class WebSocketReader implements Closeable {
             if (z5) {
                 rm rmVar = this.source;
                 byte[] bArr = this.maskKey;
-                bzo.n(bArr);
+                throwIfVar1IsNull(bArr);
                 rmVar.readFully(bArr);
             }
         } catch (Throwable th) {
@@ -194,13 +199,13 @@ public final class WebSocketReader implements Closeable {
                 if (!this.isClient) {
                     rh rhVar = this.messageFrameBuffer;
                     rf rfVar = this.maskCursor;
-                    bzo.n(rfVar);
+                    throwIfVar1IsNull(rfVar);
                     rhVar.v(rfVar);
                     this.maskCursor.i(this.messageFrameBuffer.b - this.frameLength);
                     WebSocketProtocol webSocketProtocol = WebSocketProtocol.INSTANCE;
                     rf rfVar2 = this.maskCursor;
                     byte[] bArr = this.maskKey;
-                    bzo.n(bArr);
+                    throwIfVar1IsNull(bArr);
                     webSocketProtocol.toggleMask(rfVar2, bArr);
                     this.maskCursor.close();
                 }

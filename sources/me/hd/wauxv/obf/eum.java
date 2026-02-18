@@ -100,7 +100,7 @@ public final class eum {
         sb.append(" [");
         String strM = yg.m(sb, "] <", this.c);
         for (adq adqVar : this.b) {
-            StringBuilder sbR = bjs.r(strM, " ");
+            StringBuilder sbR = concat(strM, " ");
             sbR.append(adqVar.br);
             strM = sbR.toString();
         }

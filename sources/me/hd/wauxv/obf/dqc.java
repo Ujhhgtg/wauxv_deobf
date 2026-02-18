@@ -18,17 +18,18 @@ import net.bytebuddy.pool.TypePool;
 /* JADX INFO: loaded from: classes.dex */
 public abstract class dqc {
     public static char[] as = null;
-    public static final String[] at = {"standard", "accelerate", "decelerate", "linear"};
+    public static final String[] at = { "standard", "accelerate", "decelerate", "linear" };
     public static final btd[] au = new btd[0];
     public static boolean av = true;
 
-    public static final dfz aw(String str, emc emcVar, dfx[] dfxVarArr, bgf bgfVar) {
-        bzo.q(str, "serialName");
+    public static final dfz aw(String str, emc emcVar, dfx[] dfxVarArr, IHasInvokeMethod bgfVar) {
+        throwIfVar1IsNull(str, "serialName");
         if (dnj.ak(str)) {
             throw new IllegalArgumentException("Blank serial names are prohibited");
         }
         if (emcVar.equals(dnt.a)) {
-            throw new IllegalArgumentException("For StructureKind.CLASS please use 'buildClassSerialDescriptor' instead");
+            throw new IllegalArgumentException(
+                    "For StructureKind.CLASS please use 'buildClassSerialDescriptor' instead");
         }
         zd zdVar = new zd(str);
         bgfVar.invoke(zdVar);
@@ -36,12 +37,13 @@ public abstract class dqc {
     }
 
     public static dfz ax(String str, emc emcVar, dfx[] dfxVarArr) {
-        bzo.q(str, "serialName");
+        throwIfVar1IsNull(str, "serialName");
         if (dnj.ak(str)) {
             throw new IllegalArgumentException("Blank serial names are prohibited");
         }
         if (emcVar.equals(dnt.a)) {
-            throw new IllegalArgumentException("For StructureKind.CLASS please use 'buildClassSerialDescriptor' instead");
+            throw new IllegalArgumentException(
+                    "For StructureKind.CLASS please use 'buildClassSerialDescriptor' instead");
         }
         zd zdVar = new zd(str);
         return new dfz(str, emcVar, zdVar.b.size(), la.ab(dfxVarArr), zdVar);
@@ -49,11 +51,13 @@ public abstract class dqc {
 
     public static cdk ay(String str) {
         cdk cdkVar = null;
-        String str2 = "com.highcapable.yukihookapi.hook.xposed.bridge.status.YukiXposedModuleStatus_Impl_Impl_me_hd_wauxv" instanceof dcx ? null : "com.highcapable.yukihookapi.hook.xposed.bridge.status.YukiXposedModuleStatus_Impl_Impl_me_hd_wauxv";
+        String str2 = "com.highcapable.yukihookapi.hook.xposed.bridge.status.YukiXposedModuleStatus_Impl_Impl_me_hd_wauxv" instanceof dcx
+                ? null
+                : "com.highcapable.yukihookapi.hook.xposed.bridge.status.YukiXposedModuleStatus_Impl_Impl_me_hd_wauxv";
         if (str2 == null) {
             str2 = "";
         }
-        Class clsF = zf.f(str2, 3, null);
+        Class clsF = ReflectionWrapper.f(str2, 3, null);
         if (clsF != null) {
             int i = bte.a;
             bmu bmuVarBh = bh(clsF);
@@ -102,7 +106,7 @@ public abstract class dqc {
         return ens.a;
     }
 
-    /* JADX WARN: Found duplicated region for block: B:49:0x0167  */
+    /* JADX WARN: Found duplicated region for block: B:49:0x0167 */
     public static void bb(ayd aydVar, int i) {
         int i2;
         MappedByteBuffer mappedByteBufferAw;
@@ -269,7 +273,8 @@ public abstract class dqc {
 
     public static Set bc() {
         try {
-            Object objInvoke = Class.forName("android.text.EmojiConsistency").getMethod("getEmojiConsistencySet", null).invoke(null, null);
+            Object objInvoke = Class.forName("android.text.EmojiConsistency").getMethod("getEmojiConsistencySet", null)
+                    .invoke(null, null);
             if (objInvoke == null) {
                 return Collections.EMPTY_SET;
             }
@@ -296,7 +301,7 @@ public abstract class dqc {
 
     public static List bf(Object obj) {
         List listSingletonList = Collections.singletonList(obj);
-        bzo.p(listSingletonList, "singletonList(...)");
+        throwIfVar1IsNull(listSingletonList, "singletonList(...)");
         return listSingletonList;
     }
 
@@ -309,15 +314,17 @@ public abstract class dqc {
     }
 
     public static bmu bi(Object obj) {
-        return obj instanceof bsv ? new bmu(awp.c(obj, cnf.bd((bsv) obj), 14)) : obj instanceof Class ? new bmu(awp.c(obj, (Class) obj, 14)) : new bmu(awp.c(obj, obj.getClass(), 14));
+        return obj instanceof bsv ? new bmu(awp.c(obj, cnf.bd((bsv) obj), 14))
+                : obj instanceof Class ? new bmu(awp.c(obj, (Class) obj, 14)) : new bmu(awp.c(obj, obj.getClass(), 14));
     }
 
     public static bqf bj(bqi bqiVar, int i) {
-        bzo.q(bqiVar, "<this>");
+        throwIfVar1IsNull(bqiVar, "<this>");
         boolean z = i > 0;
         Integer numValueOf = Integer.valueOf(i);
         if (!z) {
-            throw new IllegalArgumentException("Step must be positive, was: " + numValueOf + TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
+            throw new IllegalArgumentException("Step must be positive, was: " + numValueOf
+                    + TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
         }
         int i2 = bqiVar.a;
         int i3 = bqiVar.b;
@@ -329,10 +336,10 @@ public abstract class dqc {
 
     public static void bk(ViewGroup viewGroup, boolean z) {
         if (Build.VERSION.SDK_INT >= 29) {
-            erd.b(viewGroup, z);
+            erd.tryGetClassByName(viewGroup, z);
         } else if (av) {
             try {
-                erd.b(viewGroup, z);
+                erd.tryGetClassByName(viewGroup, z);
             } catch (NoSuchMethodError unused) {
                 av = false;
             }
@@ -343,9 +350,14 @@ public abstract class dqc {
         String strO;
         String str2 = "in the polymorphic scope of '" + zcVar.d() + '\'';
         if (str == null) {
-            strO = dkz.o(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, "Class discriminator was missing and no default serializers were registered ", str2);
+            strO = dkz.o(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH,
+                    "Class discriminator was missing and no default serializers were registered ", str2);
         } else {
-            strO = "Serializer for subclass '" + str + "' is not found " + str2 + ".\nCheck if class with serial name '" + str + "' exists and serializer is registered in a corresponding SerializersModule.\nTo be registered automatically, class '" + str + "' has to be '@Serializable', and the base class '" + zcVar.d() + "' has to be sealed and '@Serializable'.";
+            strO = "Serializer for subclass '" + str + "' is not found " + str2 + ".\nCheck if class with serial name '"
+                    + str
+                    + "' exists and serializer is registered in a corresponding SerializersModule.\nTo be registered automatically, class '"
+                    + str + "' has to be '@Serializable', and the base class '" + zcVar.d()
+                    + "' has to be sealed and '@Serializable'.";
         }
         throw new dgb(strO);
     }

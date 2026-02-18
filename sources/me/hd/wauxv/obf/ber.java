@@ -13,7 +13,7 @@ public final class ber extends cjg {
     public final void d(Context context, AttributeSet attributeSet) {
         super.d(context, attributeSet);
         TypedArray typedArrayObtainAttributes = context.getResources().obtainAttributes(attributeSet, cyd.b);
-        bzo.p(typedArrayObtainAttributes, "obtainAttributes(...)");
+        throwIfVar1IsNull(typedArrayObtainAttributes, "obtainAttributes(...)");
         String string = typedArrayObtainAttributes.getString(0);
         if (string != null) {
             this.a = string;
@@ -26,7 +26,7 @@ public final class ber extends cjg {
         if (this == obj) {
             return true;
         }
-        return obj != null && (obj instanceof ber) && super.equals(obj) && bzo.f(this.a, ((ber) obj).a);
+        return obj != null && (obj instanceof ber) && super.equals(obj) && nullSafeIsEqual(this.a, ((ber) obj).a);
     }
 
     @Override // me.hd.wauxv.obf.cjg
@@ -48,7 +48,7 @@ public final class ber extends cjg {
             sb.append(str);
         }
         String string = sb.toString();
-        bzo.p(string, "toString(...)");
+        throwIfVar1IsNull(string, "toString(...)");
         return string;
     }
 }

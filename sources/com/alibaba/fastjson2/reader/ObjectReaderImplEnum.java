@@ -39,7 +39,8 @@ public final class ObjectReaderImplEnum implements ObjectReader {
         }
         this.valueField = member;
         Class<?> cls2 = null;
-        Class<?> type = member instanceof Field ? ((Field) member).getType() : member instanceof Method ? ((Method) member).getReturnType() : null;
+        Class<?> type = member instanceof Field ? ((Field) member).getType()
+                : member instanceof Method ? ((Method) member).getReturnType() : null;
         this.valueFieldType = type;
         if (type != null) {
             this.stringValues = new String[enumArr.length];
@@ -49,7 +50,8 @@ public final class ObjectReaderImplEnum implements ObjectReader {
             for (int i = 0; i < enumArr.length; i++) {
                 Enum r9 = enumArr[i];
                 try {
-                    Object objInvoke = member instanceof Field ? ((Field) member).get(r9) : ((Method) member).invoke(r9, null);
+                    Object objInvoke = member instanceof Field ? ((Field) member).get(r9)
+                            : ((Method) member).invoke(r9, null);
                     if (type == String.class) {
                         this.stringValues[i] = (String) objInvoke;
                     } else {
@@ -73,8 +75,10 @@ public final class ObjectReaderImplEnum implements ObjectReader {
     }
 
     private void oomCheck(Type type) {
-        if ((type instanceof ParameterizedType) && List.class.isAssignableFrom((Class) ((ParameterizedType) type).getRawType())) {
-            throw new JSONException("ObjectReaderImplEnum parses error, JSONReader not forward when field type belongs to collection to avoid OOM");
+        if ((type instanceof ParameterizedType)
+                && List.class.isAssignableFrom((Class) ((ParameterizedType) type).getRawType())) {
+            throw new JSONException(
+                    "ObjectReaderImplEnum parses error, JSONReader not forward when field type belongs to collection to avoid OOM");
         }
     }
 
@@ -153,7 +157,7 @@ public final class ObjectReaderImplEnum implements ObjectReader {
             if (r1 != null) {
                 return r1;
             }
-            throw new JSONException(bjs.i(i, "None enum ordinal or value "));
+            throw new JSONException(concatVar2Var1(i, "None enum ordinal or value "));
         } catch (Exception e) {
             throw new JSONException("parse enum error, class " + this.enumClass.getName() + ", value " + i, e);
         }
@@ -212,7 +216,10 @@ public final class ObjectReaderImplEnum implements ObjectReader {
             try {
                 return this.createMethod.invoke(null, obj2);
             } catch (IllegalAccessException | InvocationTargetException e) {
-                throw new JSONException(jSONReader.info("create enum error, enumClass " + this.enumClass.getName() + ", paramValue " + obj2), e);
+                throw new JSONException(
+                        jSONReader.info(
+                                "create enum error, enumClass " + this.enumClass.getName() + ", paramValue " + obj2),
+                        e);
             }
         }
         int i2 = 0;
@@ -241,7 +248,8 @@ public final class ObjectReaderImplEnum implements ObjectReader {
                 }
             }
             if (enumValueOf == null && jSONReader.isEnabled(JSONReader.Feature.ErrorOnEnumNotMatch)) {
-                throw new JSONException(jSONReader.info("parse enum error, class " + this.enumClass.getName() + ", " + this.valueField.getName() + " " + int32Value));
+                throw new JSONException(jSONReader.info("parse enum error, class " + this.enumClass.getName() + ", "
+                        + this.valueField.getName() + " " + int32Value));
             }
         } else if (!jSONReader.nextIfNullOrEmptyString()) {
             if (this.stringValues != null && jSONReader.isString()) {
@@ -297,7 +305,8 @@ public final class ObjectReaderImplEnum implements ObjectReader {
                 }
             }
             if (enumValueOf == null && jSONReader.isEnabled(JSONReader.Feature.ErrorOnEnumNotMatch)) {
-                throw new JSONException(jSONReader.info("parse enum error, class " + this.enumClass.getName() + ", value " + jSONReader.getString()));
+                throw new JSONException(jSONReader.info(
+                        "parse enum error, class " + this.enumClass.getName() + ", value " + jSONReader.getString()));
             }
         }
         if (enumValueOf == null && jSONReader.getOffset() == offset) {

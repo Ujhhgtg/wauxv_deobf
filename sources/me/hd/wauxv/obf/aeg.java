@@ -7,7 +7,7 @@ import org.luckypray.dexkit.DexKitBridge;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class aeg extends bws implements bng {
+public final class aeg extends bws implements IRequiresDexLocate {
     public static final aeg a = new aeg();
 
     public static List b(String str) throws IllegalAccessException, NoSuchMethodException, InvocationTargetException {
@@ -23,7 +23,7 @@ public final class aeg extends bws implements bng {
     }
 
     @Override // me.hd.wauxv.obf.bng
-    public final void h(DexKitBridge dexKitBridge) {
+    public final void locateDex(DexKitBridge dexKitBridge) {
         emn.aj(aee.a, dexKitBridge, new act(10));
         emn.aj(aed.a, dexKitBridge, new act(11));
         emn.aj(aef.a, dexKitBridge, new act(12));

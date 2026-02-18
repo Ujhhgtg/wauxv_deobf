@@ -24,7 +24,7 @@ public abstract class ajf {
             }
             abe.am(arrayList, aboVar);
             for (Object obj : arrayList) {
-                String strG = ((doo) obj).g();
+                String strG = ((BaseHook) obj).g();
                 Object arrayList2 = linkedHashMap.get(strG);
                 if (arrayList2 == null) {
                     arrayList2 = new ArrayList();
@@ -35,7 +35,7 @@ public abstract class ajf {
             ArrayList arrayList3 = new ArrayList();
             for (Map.Entry entry : linkedHashMap.entrySet()) {
                 String str = (String) entry.getKey();
-                List<doo> list = (List) entry.getValue();
+                List<BaseHook> list = (List) entry.getValue();
                 List listBf = dqc.bf(new nz(str));
                 ArrayList arrayList4 = new ArrayList(abb.ak(list, 10));
                 for (doo dooVar : list) {

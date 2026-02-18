@@ -37,7 +37,7 @@ public final class bur {
         bul akzVar;
         Object obj;
         bup bupVar;
-        bzo.q(buoVar, "observer");
+        throwIfVar1IsNull(buoVar, "observer");
         l("addObserver");
         buh buhVar = this.c;
         buh buhVar2 = buh.a;
@@ -59,7 +59,7 @@ public final class bur {
             Class<?> cls = buoVar.getClass();
             if (buu.d(cls) == 2) {
                 Object obj2 = buu.b.get(cls);
-                bzo.n(obj2);
+                throwIfVar1IsNull(obj2);
                 List list = (List) obj2;
                 if (list.size() == 1) {
                     buu.c((Constructor) list.get(0), buoVar);
@@ -109,9 +109,10 @@ public final class bur {
                 bue bueVar = bug.Companion;
                 buh buhVar4 = buqVar.a;
                 bueVar.getClass();
-                bzo.q(buhVar4, "state");
+                throwIfVar1IsNull(buhVar4, "state");
                 int iOrdinal = buhVar4.ordinal();
-                bug bugVar = iOrdinal != 1 ? iOrdinal != 2 ? iOrdinal != 3 ? null : bug.ON_RESUME : bug.ON_START : bug.ON_CREATE;
+                bug bugVar = iOrdinal != 1 ? iOrdinal != 2 ? iOrdinal != 3 ? null : bug.ON_RESUME : bug.ON_START
+                        : bug.ON_CREATE;
                 if (bugVar == null) {
                     throw new IllegalStateException("no event up from " + buqVar.a);
                 }
@@ -133,7 +134,7 @@ public final class bur {
         ArrayList arrayList = this.h;
         buh buhVar2 = arrayList.isEmpty() ? null : (buh) dkz.l(1, arrayList);
         buh buhVar3 = this.c;
-        bzo.q(buhVar3, "state1");
+        throwIfVar1IsNull(buhVar3, "state1");
         if (buhVar == null || buhVar.compareTo(buhVar3) >= 0) {
             buhVar = buhVar3;
         }
@@ -144,13 +145,14 @@ public final class bur {
         if (this.a) {
             ((kj) kj.c().b).getClass();
             if (Looper.getMainLooper().getThread() != Thread.currentThread()) {
-                throw new IllegalStateException(bjs.o("Method ", str, " must be called on the main thread").toString());
+                throw new IllegalStateException(
+                        concat("Method ", str, " must be called on the main thread").toString());
             }
         }
     }
 
     public final void m(bug bugVar) {
-        bzo.q(bugVar, "event");
+        throwIfVar1IsNull(bugVar, "event");
         l("handleLifecycleEvent");
         n(bugVar.a());
     }
@@ -161,15 +163,19 @@ public final class bur {
         }
         bup bupVar = (bup) this.d.get();
         buh buhVar2 = this.c;
-        bzo.q(buhVar2, "current");
-        bzo.q(buhVar, "next");
+        throwIfVar1IsNull(buhVar2, "current");
+        throwIfVar1IsNull(buhVar, "next");
         buh buhVar3 = buh.b;
         buh buhVar4 = buh.a;
         if (buhVar2 == buhVar3 && buhVar == buhVar4) {
-            throw new IllegalStateException(("State must be at least '" + buh.c + "' to be moved to '" + buhVar + "' in component " + bupVar).toString());
+            throw new IllegalStateException(
+                    ("State must be at least '" + buh.c + "' to be moved to '" + buhVar + "' in component " + bupVar)
+                            .toString());
         }
         if (buhVar2 == buhVar4 && buhVar2 != buhVar) {
-            throw new IllegalStateException(("State is '" + buhVar4 + "' and cannot be moved to `" + buhVar + "` in component " + bupVar).toString());
+            throw new IllegalStateException(
+                    ("State is '" + buhVar4 + "' and cannot be moved to `" + buhVar + "` in component " + bupVar)
+                            .toString());
         }
         this.c = buhVar;
         if (this.f || this.e != 0) {
@@ -185,13 +191,13 @@ public final class bur {
     }
 
     public final void o(buo buoVar) {
-        bzo.q(buoVar, "observer");
+        throwIfVar1IsNull(buoVar, "observer");
         l("removeObserver");
         this.b.c(buoVar);
     }
 
     public final void p(buh buhVar) {
-        bzo.q(buhVar, "state");
+        throwIfVar1IsNull(buhVar, "state");
         l("setCurrentState");
         n(buhVar);
     }
@@ -199,16 +205,17 @@ public final class bur {
     public final void q() {
         bup bupVar = (bup) this.d.get();
         if (bupVar == null) {
-            throw new IllegalStateException("LifecycleOwner of this LifecycleRegistry is already garbage collected. It is too late to change lifecycle state.");
+            throw new IllegalStateException(
+                    "LifecycleOwner of this LifecycleRegistry is already garbage collected. It is too late to change lifecycle state.");
         }
         while (true) {
             ayg aygVar = this.b;
             if (aygVar.g != 0) {
                 deb debVar = aygVar.d;
-                bzo.n(debVar);
+                throwIfVar1IsNull(debVar);
                 buh buhVar = ((buq) debVar.b).a;
                 deb debVar2 = this.b.e;
-                bzo.n(debVar2);
+                throwIfVar1IsNull(debVar2);
                 buh buhVar2 = ((buq) debVar2.b).a;
                 if (buhVar == buhVar2 && this.c == buhVar2) {
                     break;
@@ -216,7 +223,7 @@ public final class bur {
                 this.g = false;
                 buh buhVar3 = this.c;
                 deb debVar3 = this.b.d;
-                bzo.n(debVar3);
+                throwIfVar1IsNull(debVar3);
                 int iCompareTo = buhVar3.compareTo(((buq) debVar3.b).a);
                 ArrayList arrayList = this.h;
                 if (iCompareTo < 0) {
@@ -225,16 +232,18 @@ public final class bur {
                     aygVar2.f.put(deaVar, Boolean.FALSE);
                     while (deaVar.hasNext() && !this.g) {
                         Map.Entry entry = (Map.Entry) deaVar.next();
-                        bzo.n(entry);
+                        throwIfVar1IsNull(entry);
                         buo buoVar = (buo) entry.getKey();
                         buq buqVar = (buq) entry.getValue();
                         while (buqVar.a.compareTo(this.c) > 0 && !this.g && this.b.a.containsKey(buoVar)) {
                             bue bueVar = bug.Companion;
                             buh buhVar4 = buqVar.a;
                             bueVar.getClass();
-                            bzo.q(buhVar4, "state");
+                            throwIfVar1IsNull(buhVar4, "state");
                             int iOrdinal = buhVar4.ordinal();
-                            bug bugVar = iOrdinal != 2 ? iOrdinal != 3 ? iOrdinal != 4 ? null : bug.ON_PAUSE : bug.ON_STOP : bug.ON_DESTROY;
+                            bug bugVar = iOrdinal != 2
+                                    ? iOrdinal != 3 ? iOrdinal != 4 ? null : bug.ON_PAUSE : bug.ON_STOP
+                                    : bug.ON_DESTROY;
                             if (bugVar == null) {
                                 throw new IllegalStateException("no event down from " + buqVar.a);
                             }
@@ -259,9 +268,11 @@ public final class bur {
                             bue bueVar2 = bug.Companion;
                             buh buhVar5 = buqVar2.a;
                             bueVar2.getClass();
-                            bzo.q(buhVar5, "state");
+                            throwIfVar1IsNull(buhVar5, "state");
                             int iOrdinal2 = buhVar5.ordinal();
-                            bug bugVar2 = iOrdinal2 != 1 ? iOrdinal2 != 2 ? iOrdinal2 != 3 ? null : bug.ON_RESUME : bug.ON_START : bug.ON_CREATE;
+                            bug bugVar2 = iOrdinal2 != 1
+                                    ? iOrdinal2 != 2 ? iOrdinal2 != 3 ? null : bug.ON_RESUME : bug.ON_START
+                                    : bug.ON_CREATE;
                             if (bugVar2 == null) {
                                 throw new IllegalStateException("no event up from " + buqVar2.a);
                             }

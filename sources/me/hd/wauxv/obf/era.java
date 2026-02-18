@@ -59,7 +59,8 @@ public final class era {
         float width = this.u.getWidth() / 2;
         float fSin = (((float) Math.sin((Math.min(1.0f, Math.abs(i) / r0) - 0.5f) * 0.47123894f)) * width) + width;
         int iAbs = Math.abs(i2);
-        return Math.min(iAbs > 0 ? Math.round(Math.abs(fSin / iAbs) * 1000.0f) * 4 : (int) (((Math.abs(i) / i3) + 1.0f) * 256.0f), 600);
+        return Math.min(iAbs > 0 ? Math.round(Math.abs(fSin / iAbs) * 1000.0f) * 4
+                : (int) (((Math.abs(i) / i3) + 1.0f) * 256.0f), 600);
     }
 
     public final boolean ab() {
@@ -99,7 +100,8 @@ public final class era {
         for (int childCount = coordinatorLayout.getChildCount() - 1; childCount >= 0; childCount--) {
             this.r.getClass();
             View childAt = coordinatorLayout.getChildAt(childCount);
-            if (i >= childAt.getLeft() && i < childAt.getRight() && i2 >= childAt.getTop() && i2 < childAt.getBottom()) {
+            if (i >= childAt.getLeft() && i < childAt.getRight() && i2 >= childAt.getTop()
+                    && i2 < childAt.getBottom()) {
                 return childAt;
             }
         }
@@ -159,7 +161,8 @@ public final class era {
         }
         float f6 = f3 / f4;
         cnf cnfVar = this.r;
-        overScroller.startScroll(left, top, i5, i6, (int) ((aa(i6, i4, cnfVar.f()) * f6) + (aa(i5, i3, cnfVar.e(view)) * f5)));
+        overScroller.startScroll(left, top, i5, i6,
+                (int) ((aa(i6, i4, cnfVar.f()) * f6) + (aa(i5, i3, cnfVar.e(view)) * f5)));
         aj(2);
         return true;
     }
@@ -168,7 +171,8 @@ public final class era {
         if ((this.l & (1 << i)) != 0) {
             return true;
         }
-        Log.e("ViewDragHelper", "Ignoring pointerId=" + i + " because ACTION_DOWN was not received for this pointer before ACTION_MOVE. It likely happened because  ViewDragHelper did not receive all the events in the event stream.");
+        Log.e("ViewDragHelper", "Ignoring pointerId=" + i
+                + " because ACTION_DOWN was not received for this pointer before ACTION_MOVE. It likely happened because  ViewDragHelper did not receive all the events in the event stream.");
         return false;
     }
 
@@ -228,7 +232,8 @@ public final class era {
                 int i5 = (int) x2;
                 int i6 = (int) y2;
                 View view = this.s;
-                if (view != null && i5 >= view.getLeft() && i5 < view.getRight() && i6 >= view.getTop() && i6 < view.getBottom()) {
+                if (view != null && i5 >= view.getLeft() && i5 < view.getRight() && i6 >= view.getTop()
+                        && i6 < view.getBottom()) {
                     i2 = 1;
                 }
                 if (i2 != 0) {
@@ -280,7 +285,7 @@ public final class era {
                 int left2 = this.s.getLeft();
                 int top2 = this.s.getTop();
                 if (i8 != 0) {
-                    left = cnfVar.c(this.s, left);
+                    left = cnfVar.createInstanceWithArgs(this.s, left);
                     WeakHashMap weakHashMap = eqz.a;
                     this.s.offsetLeftAndRight(left - left2);
                 }
@@ -451,8 +456,8 @@ public final class era {
         throw new IllegalStateException("Cannot settleCapturedViewAt outside of a call to Callback#onViewReleased");
     }
 
-    /* JADX WARN: Found duplicated region for block: B:52:0x00d6  */
-    /* JADX WARN: Found duplicated region for block: B:61:0x0114  */
+    /* JADX WARN: Found duplicated region for block: B:52:0x00d6 */
+    /* JADX WARN: Found duplicated region for block: B:61:0x0114 */
     public final boolean al(MotionEvent motionEvent) {
         View viewAc;
         int actionMasked = motionEvent.getActionMasked();
@@ -523,7 +528,7 @@ public final class era {
                     } else {
                         int left = viewAc3.getLeft();
                         cnf cnfVar = this.r;
-                        int iC = cnfVar.c(viewAc3, ((int) f) + left);
+                        int iC = cnfVar.createInstanceWithArgs(viewAc3, ((int) f) + left);
                         int top = viewAc3.getTop();
                         int iD = cnfVar.d(viewAc3, ((int) f2) + top);
                         int iE = cnfVar.e(viewAc3);
@@ -590,7 +595,9 @@ public final class era {
         ViewParent parent = view.getParent();
         CoordinatorLayout coordinatorLayout = this.u;
         if (parent != coordinatorLayout) {
-            throw new IllegalArgumentException("captureChildView: parameter must be a descendant of the ViewDragHelper's tracked parent view (" + coordinatorLayout + ")");
+            throw new IllegalArgumentException(
+                    "captureChildView: parameter must be a descendant of the ViewDragHelper's tracked parent view ("
+                            + coordinatorLayout + ")");
         }
         this.s = view;
         this.d = i;
