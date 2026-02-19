@@ -417,7 +417,7 @@ public class ek implements dcq, IHandlesSwipeDismiss, sg {
             ajxVar.e = ahqVar;
             while (true) {
                 obj = ajxVar.e;
-                afw afwVar = ajxVar.d;
+                kotlinx$coroutines$internal$DispatchedContinuation afwVar = ajxVar.d;
                 if (afwVar == null) {
                     break;
                 }

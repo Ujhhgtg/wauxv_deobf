@@ -19,7 +19,7 @@ public final class ble extends SwitchHook implements IDexFind {
         List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(blc.a));
         ble bleVar = a;
         HookManager hookManagerVarAb = PackageParam.createHook(bleVar, listBf);
-        bleVar.y(hookManagerVarAb, new bep(10));
+        bleVar.hookBefore(hookManagerVarAb, new bep(10));
         hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 

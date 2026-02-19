@@ -169,8 +169,8 @@ public final /* synthetic */ class amb implements IInvokable {
                 return kotlinUnitVar;
             case 8:
                 bah bahVar = (bah) obj;
-                cdj cdjVar = new cdj();
-                cdjVar.t(".msgsource.sec_msg_node.clip-len" /* ".msgsource.sec_msg_node.clip-len" /* ".msgsource.sec_msg_node.clip-len" /* cnb.z(-448476190079786L)  */);
+                DexFinder cdjVar = new DexFinder();
+                cdjVar.usingStrings(".msgsource.sec_msg_node.clip-len" /* ".msgsource.sec_msg_node.clip-len" /* ".msgsource.sec_msg_node.clip-len" /* cnb.z(-448476190079786L)  */);
                 bahVar.getClass();
                 bahVar.d = cdjVar;
                 return kotlinUnitVar;
@@ -182,8 +182,8 @@ public final /* synthetic */ class amb implements IInvokable {
                 return kotlinUnitVar;
             case 11:
                 bah bahVar2 = (bah) obj;
-                cdj cdjVar2 = new cdj();
-                cdjVar2.t("MicroMsg.PluginPatMsg" /* "MicroMsg.PluginPatMsg" /* "MicroMsg.PluginPatMsg" /* cnb.z(-447995153742634L)  */, "DisableSendPat" /*
+                DexFinder cdjVar2 = new DexFinder();
+                cdjVar2.usingStrings("MicroMsg.PluginPatMsg" /* "MicroMsg.PluginPatMsg" /* "MicroMsg.PluginPatMsg" /* cnb.z(-447995153742634L)  */, "DisableSendPat" /*
                                                                                                     * cnb.z(-
                                                                                                     * 447883484592938L)
                                                                                                     */);
@@ -251,8 +251,8 @@ public final /* synthetic */ class amb implements IInvokable {
                 return kotlinUnitVar;
             case 15:
                 bah bahVar3 = (bah) obj;
-                cdj cdjVar3 = new cdj();
-                cdjVar3.t("MicroMsg.BaseSceneSetting" /* "MicroMsg.BaseSceneSetting" /* "MicroMsg.BaseSceneSetting" /* cnb.z(-444245647293226L)  */,
+                DexFinder cdjVar3 = new DexFinder();
+                cdjVar3.usingStrings("MicroMsg.BaseSceneSetting" /* "MicroMsg.BaseSceneSetting" /* "MicroMsg.BaseSceneSetting" /* cnb.z(-444245647293226L)  */,
                         "playSound Failed Throwable t = " /* "playSound Failed Throwable t = " /* "playSound Failed Throwable t = " /* cnb.z(-444700913826602L)  */);
                 bahVar3.getClass();
                 bahVar3.d = cdjVar3;
@@ -268,8 +268,8 @@ public final /* synthetic */ class amb implements IInvokable {
                 String[] strArr2 = { "com.tencent.mm.ui.chatting.component" /* "com.tencent.mm.ui.chatting.component" /* "com.tencent.mm.ui.chatting.component" /* cnb.z(-446388835973930L)  */ };
                 bahVar4.getClass();
                 bahVar4.a = SomeStaticHelpers.ab(strArr2);
-                cdj cdjVar4 = new cdj();
-                cdjVar4.t("MicroMsg.SignallingComponent" /* "MicroMsg.SignallingComponent" /* "MicroMsg.SignallingComponent" /* cnb.z(-446212742314794L)  */,
+                DexFinder cdjVar4 = new DexFinder();
+                cdjVar4.usingStrings("MicroMsg.SignallingComponent" /* "MicroMsg.SignallingComponent" /* "MicroMsg.SignallingComponent" /* cnb.z(-446212742314794L)  */,
                         "[doDirectSend] mChattingContext is null!" /* "[doDirectSend] mChattingContext is null!" /* "[doDirectSend] mChattingContext is null!" /* cnb.z(-445572792187690L)  */);
                 bahVar4.d = cdjVar4;
                 return kotlinUnitVar;
@@ -329,7 +329,7 @@ public final /* synthetic */ class amb implements IInvokable {
                 return kotlinUnitVar;
             case 24:
                 bah bahVar5 = (bah) obj;
-                cdj cdjVar5 = new cdj();
+                DexFinder cdjVar5 = new DexFinder();
                 cls = String.class;
                 Class<String> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 if (clsBf == null) {
@@ -338,7 +338,7 @@ public final /* synthetic */ class amb implements IInvokable {
                 cdjVar5.r(clsBf);
                 Class<String> clsBf2 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 cdjVar5.q(clsBf2 != null ? clsBf2 : String.class);
-                cdjVar5.t("MicroMsg.DynamicConfig" /* "MicroMsg.DynamicConfig" /* "MicroMsg.DynamicConfig" /* cnb.z(-36481452210986L)  */, "DynamicConfig hadnot load" /*
+                cdjVar5.usingStrings("MicroMsg.DynamicConfig" /* "MicroMsg.DynamicConfig" /* "MicroMsg.DynamicConfig" /* cnb.z(-36481452210986L)  */, "DynamicConfig hadnot load" /*
                                                                                                                * cnb.z(-
                                                                                                                * 36365488093994L)
                                                                                                                */);

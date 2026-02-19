@@ -32,7 +32,7 @@ public final class diq extends SwitchHook {
             HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
             diq diqVar = a;
             HookManager hookManagerVarAd = diqVar.createImmediateHook(methodHookWrapperVar, hookPriorityEnumVar);
-            diqVar.x(hookManagerVarAd, new dhg(11));
+            diqVar.hookAfter(hookManagerVarAd, new dhg(11));
             hookManagerVarAd.initInstantCollectionAndApplyHooks();
         }
     }

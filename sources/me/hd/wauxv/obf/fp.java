@@ -16,7 +16,7 @@ public final class fp extends SwitchHook implements IDexFind {
         List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(fo.a));
         fp fpVar = a;
         HookManager hookManagerVarAb = PackageParam.createHook(fpVar, listBf);
-        fpVar.y(hookManagerVarAb, new bn(5));
+        fpVar.hookBefore(hookManagerVarAb, new bn(5));
         hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 

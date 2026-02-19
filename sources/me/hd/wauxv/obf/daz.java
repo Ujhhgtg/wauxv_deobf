@@ -31,7 +31,7 @@ public final /* synthetic */ class daz implements IInvokable {
                 bagVar.a = SomeStaticHelpers.ab(strArr);
                 zb zbVar = new zb();
                 fj fjVar = new fj(1);
-                fjVar.d = bzu.Contains;
+                fjVar.usingStringsType = UsingStringsTypeEnum.Contains;
                 fm fmVar = new fm();
                 String strZ = "dalvik.annotation.Signature" /* "dalvik.annotation.Signature" /* "dalvik.annotation.Signature" /* "dalvik.annotation.Signature" /* cnb.z(-519794122029866L)   */;
                 zb zbVar2 = new zb();
@@ -41,7 +41,7 @@ public final /* synthetic */ class daz implements IInvokable {
                 fh fhVar = new fh();
                 fhVar.a = new dnf("value" /* "value" /* "value" /* "value" /* cnb.z(-519639503207210L)   */, dneVar, false);
                 fj fjVar2 = new fj(0);
-                fjVar2.d = bzu.Equals;
+                fjVar2.usingStringsType = UsingStringsTypeEnum.Equals;
                 fj.e(fjVar2, "Lcom/tencent/mm/sdk/event/IListener<" /* "Lcom/tencent/mm/sdk/event/IListener<" /* "Lcom/tencent/mm/sdk/event/IListener<" /* "Lcom/tencent/mm/sdk/event/IListener<" /* cnb.z(-519596553534250L)   */);
                 fj.e(fjVar2, this.c);
                 fj.e(fjVar2, ">;" /* ">;" /* ">;" /* ">;" /* cnb.z(-520021755296554L)   */);

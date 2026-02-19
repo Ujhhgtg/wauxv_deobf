@@ -18,7 +18,7 @@ public final class gf extends SwitchHook {
         HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         gf gfVar = a;
         HookManager hookManagerVarAd = gfVar.createImmediateHook(methodHookWrapperVar, hookPriorityEnumVar);
-        gfVar.y(hookManagerVarAd, new bn(27));
+        gfVar.hookBefore(hookManagerVarAd, new bn(27));
         hookManagerVarAd.initInstantCollectionAndApplyHooks();
     }
 

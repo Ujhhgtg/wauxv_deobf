@@ -19,7 +19,7 @@ public final class DisableSendStatusHook extends SwitchHook implements IDexFind 
         List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(aof.a));
         DisableSendStatusHook aogVar = a;
         HookManager hookManagerVarAb = PackageParam.createHook(aogVar, listBf);
-        aogVar.y(hookManagerVarAb, new amb(16));
+        aogVar.hookBefore(hookManagerVarAb, new amb(16));
         hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 

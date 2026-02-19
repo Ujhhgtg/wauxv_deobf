@@ -7,7 +7,7 @@ import java.io.File;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CancellationException;
-import me.hd.wauxv.obf.afw;
+import me.hd.wauxv.obf.kotlinx$coroutines$internal$DispatchedContinuation;
 import me.hd.wauxv.obf.ahp;
 import me.hd.wauxv.obf.ajm;
 import me.hd.wauxv.obf.arj;
@@ -38,7 +38,7 @@ public final class PluginHttpMethod$download$1$invokeSuspend$$inlined$Get$defaul
     public final /* synthetic */ cue e;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public PluginHttpMethod$download$1$invokeSuspend$$inlined$Get$default$1(String str, cue cueVar, afw afwVar) {
+    public PluginHttpMethod$download$1$invokeSuspend$$inlined$Get$default$1(String str, cue cueVar, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         super(2, afwVar);
         this.d = str;
         this.e = cueVar;
@@ -46,11 +46,11 @@ public final class PluginHttpMethod$download$1$invokeSuspend$$inlined$Get$defaul
 
     @Override // me.hd.wauxv.obf.bgj
     public final Object g(Object obj, Object obj2) {
-        return ((PluginHttpMethod$download$1$invokeSuspend$$inlined$Get$default$1) h((ahp) obj, (afw) obj2)).i(Kotlin$Unit.INSTANCE);
+        return ((PluginHttpMethod$download$1$invokeSuspend$$inlined$Get$default$1) h((ahp) obj, (kotlinx$coroutines$internal$DispatchedContinuation) obj2)).i(Kotlin$Unit.INSTANCE);
     }
 
     @Override // me.hd.wauxv.obf.nc
-    public final afw h(Object obj, afw afwVar) {
+    public final kotlinx$coroutines$internal$DispatchedContinuation h(Object obj, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         PluginHttpMethod$download$1$invokeSuspend$$inlined$Get$default$1 pluginHttpMethod$download$1$invokeSuspend$$inlined$Get$default$1 = new PluginHttpMethod$download$1$invokeSuspend$$inlined$Get$default$1(this.d, this.e, afwVar);
         pluginHttpMethod$download$1$invokeSuspend$$inlined$Get$default$1.a = obj;
         return pluginHttpMethod$download$1$invokeSuspend$$inlined$Get$default$1;

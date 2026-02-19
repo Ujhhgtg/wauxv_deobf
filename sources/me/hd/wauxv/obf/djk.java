@@ -62,8 +62,8 @@ public final /* synthetic */ class djk implements IInvokable {
                 String[] strArr = { "com.tencent.mm.plugin.sns.ui.listener" /* "com.tencent.mm.plugin.sns.ui.listener" /* "com.tencent.mm.plugin.sns.ui.listener" /* cnb.z(-56500294777642L)  */ };
                 bahVar.getClass();
                 bahVar.a = SomeStaticHelpers.ab(strArr);
-                cdj cdjVar = new cdj();
-                cdjVar.t("delete comment fail!!! snsInfo is null" /* "delete comment fail!!! snsInfo is null" /* "delete comment fail!!! snsInfo is null" /* cnb.z(-53571127081770L)  */,
+                DexFinder cdjVar = new DexFinder();
+                cdjVar.usingStrings("delete comment fail!!! snsInfo is null" /* "delete comment fail!!! snsInfo is null" /* "delete comment fail!!! snsInfo is null" /* cnb.z(-53571127081770L)  */,
                         "send photo fail, mediaObj is null" /* "send photo fail, mediaObj is null" /* "send photo fail, mediaObj is null" /* cnb.z(-53403623357226L)  */,
                         "mediaObj is null, send failed!" /* "mediaObj is null, send failed!" /* "mediaObj is null, send failed!" /* cnb.z(-53824530152234L)  */);
                 bahVar.d = cdjVar;
@@ -73,8 +73,8 @@ public final /* synthetic */ class djk implements IInvokable {
                 String[] strArr2 = { "com.tencent.mm.plugin.sns.ui.listener" /* "com.tencent.mm.plugin.sns.ui.listener" /* "com.tencent.mm.plugin.sns.ui.listener" /* cnb.z(-56994216016682L)  */ };
                 bahVar2.getClass();
                 bahVar2.a = SomeStaticHelpers.ab(strArr2);
-                cdj cdjVar2 = new cdj();
-                cdjVar2.t("MicroMsg.TimelineOnCreateContextMenuListener" /* "MicroMsg.TimelineOnCreateContextMenuListener" /* "MicroMsg.TimelineOnCreateContextMenuListener" /* cnb.z(-56264071576362L)  */,
+                DexFinder cdjVar2 = new DexFinder();
+                cdjVar2.usingStrings("MicroMsg.TimelineOnCreateContextMenuListener" /* "MicroMsg.TimelineOnCreateContextMenuListener" /* "MicroMsg.TimelineOnCreateContextMenuListener" /* cnb.z(-56264071576362L)  */,
                         "onMMCreateContextMenu error" /* "onMMCreateContextMenu error" /* "onMMCreateContextMenu error" /* cnb.z(-56105157786410L)  */);
                 bahVar2.d = cdjVar2;
                 return kotlinUnitVar;
@@ -107,12 +107,12 @@ public final /* synthetic */ class djk implements IInvokable {
                 return kotlinUnitVar;
             case 6:
                 bah bahVar3 = (bah) obj;
-                cdj cdjVar3 = new cdj();
-                cdj.l(cdjVar3, "com.tencent.mm.plugin.mvvmlist.MvvmList" /* "com.tencent.mm.plugin.mvvmlist.MvvmList" /* "com.tencent.mm.plugin.mvvmlist.MvvmList" /* cnb.z(-556339998751530L)  */);
+                DexFinder cdjVar3 = new DexFinder();
+                DexFinder.setClassEquals(cdjVar3, "com.tencent.mm.plugin.mvvmlist.MvvmList" /* "com.tencent.mm.plugin.mvvmlist.MvvmList" /* "com.tencent.mm.plugin.mvvmlist.MvvmList" /* cnb.z(-556339998751530L)  */);
                 cls3 = Void.class;
                 Class<Void> clsBf2 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls3));
                 cdjVar3.r(clsBf2 != null ? clsBf2 : Void.class);
-                cdjVar3.t("submitRefreshAll" /* "submitRefreshAll" /* "submitRefreshAll" /* cnb.z(-556168200059690L)  */);
+                cdjVar3.usingStrings("submitRefreshAll" /* "submitRefreshAll" /* "submitRefreshAll" /* cnb.z(-556168200059690L)  */);
                 bahVar3.getClass();
                 bahVar3.d = cdjVar3;
                 return kotlinUnitVar;
@@ -121,19 +121,19 @@ public final /* synthetic */ class djk implements IInvokable {
                 return kotlinUnitVar;
             case 8:
                 bah bahVar4 = (bah) obj;
-                cdj cdjVar4 = new cdj();
+                DexFinder cdjVar4 = new DexFinder();
                 Class<String> clsBf3 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 cls = clsBf3 != null ? clsBf3 : String.class;
                 cls4 = Integer.class;
                 Class<Integer> clsBf4 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls4));
                 cdjVar4.q(cls, clsBf4 != null ? clsBf4 : Integer.class);
                 fj fjVar = new fj();
-                cdj cdjVar5 = new cdj();
-                cdjVar5.t("produceMediaObjByPath" /* "produceMediaObjByPath" /* "produceMediaObjByPath" /* cnb.z(-352380591799082L)  */,
+                DexFinder cdjVar5 = new DexFinder();
+                cdjVar5.usingStrings("produceMediaObjByPath" /* "produceMediaObjByPath" /* "produceMediaObjByPath" /* cnb.z(-352380591799082L)  */,
                         "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* cnb.z(-352268922649386L)  */);
                 fjVar.f(cdjVar5);
-                cdj cdjVar6 = new cdj();
-                cdjVar6.t("produceSightByPath" /* "produceSightByPath" /* "produceSightByPath" /* cnb.z(-353724916562730L)  */,
+                DexFinder cdjVar6 = new DexFinder();
+                cdjVar6.usingStrings("produceSightByPath" /* "produceSightByPath" /* "produceSightByPath" /* cnb.z(-353724916562730L)  */,
                         "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* cnb.z(-353660492053290L)  */);
                 fjVar.f(cdjVar6);
                 cdjVar4.j = fjVar;
@@ -145,14 +145,14 @@ public final /* synthetic */ class djk implements IInvokable {
                 return kotlinUnitVar;
             case 10:
                 bah bahVar5 = (bah) obj;
-                cdj cdjVar7 = new cdj();
+                DexFinder cdjVar7 = new DexFinder();
                 Class<String> clsBf5 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 if (clsBf5 == null) {
                     clsBf5 = cls;
                 }
                 Class<String> clsBf6 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 cdjVar7.q(clsBf5, clsBf6 != null ? clsBf6 : String.class);
-                cdjVar7.t("MicroMsg.snsMediaStorage" /* "MicroMsg.snsMediaStorage" /* "MicroMsg.snsMediaStorage" /* cnb.z(-377939942177578L)  */,
+                cdjVar7.usingStrings("MicroMsg.snsMediaStorage" /* "MicroMsg.snsMediaStorage" /* "MicroMsg.snsMediaStorage" /* cnb.z(-377939942177578L)  */,
                         "convertImg2WxamWithoutZip origPath:%s OutOfMemoryError! rollback" /*
                                                                                             * "convertImg2WxamWithoutZip origPath:%s OutOfMemoryError! rollback" /* "convertImg2WxamWithoutZip origPath:%s OutOfMemoryError! rollback" /* cnb.z(-377832567995178L)  */
                                                                                             */);
@@ -255,8 +255,8 @@ public final /* synthetic */ class djk implements IInvokable {
                 return kotlinUnitVar;
             case 16:
                 bah bahVar6 = (bah) obj;
-                cdj cdjVar8 = new cdj();
-                cdjVar8.t("MicroMsg.UploadPackHelper" /* "MicroMsg.UploadPackHelper" /* "MicroMsg.UploadPackHelper" /* cnb.z(-561652873296682L)  */,
+                DexFinder cdjVar8 = new DexFinder();
+                cdjVar8.usingStrings("MicroMsg.UploadPackHelper" /* "MicroMsg.UploadPackHelper" /* "MicroMsg.UploadPackHelper" /* cnb.z(-561652873296682L)  */,
                         "commit sns info ret %d, typeFlag %d sightMd5 %s" /* "commit sns info ret %d, typeFlag %d sightMd5 %s" /* "commit sns info ret %d, typeFlag %d sightMd5 %s" /* cnb.z(-561008628202282L)  */);
                 bahVar6.getClass();
                 bahVar6.d = cdjVar8;
@@ -429,8 +429,8 @@ public final /* synthetic */ class djk implements IInvokable {
                 return kotlinUnitVar;
             case 21:
                 bah bahVar7 = (bah) obj;
-                cdj cdjVar9 = new cdj();
-                cdjVar9.t("MicroMsg.snsMediaStorage" /* "MicroMsg.snsMediaStorage" /* "MicroMsg.snsMediaStorage" /* cnb.z(-548432963959594L)  */,
+                DexFinder cdjVar9 = new DexFinder();
+                cdjVar9.usingStrings("MicroMsg.snsMediaStorage" /* "MicroMsg.snsMediaStorage" /* "MicroMsg.snsMediaStorage" /* cnb.z(-548432963959594L)  */,
                         "SnsCompressResolutionFor2G" /* "SnsCompressResolutionFor2G" /* "SnsCompressResolutionFor2G" /* cnb.z(-547775833963306L)  */,
                         "SnsCompressResolutionFor3G" /* "SnsCompressResolutionFor3G" /* "SnsCompressResolutionFor3G" /* cnb.z(-547694229584682L)  */,
                         "SnsCompressResolutionFor4G" /* "SnsCompressResolutionFor4G" /* "SnsCompressResolutionFor4G" /* cnb.z(-548076481674026L)  */,
@@ -445,20 +445,20 @@ public final /* synthetic */ class djk implements IInvokable {
                 bag bagVar2 = (bag) obj;
                 zb zbVar2 = new zb();
                 fj fjVar2 = new fj();
-                cdj cdjVar10 = new cdj();
+                DexFinder cdjVar10 = new DexFinder();
                 cdjVar10.s("compareContent" /* "compareContent" /* "compareContent" /* cnb.z(-359033496140586L)  */);
                 fjVar2.f(cdjVar10);
-                cdj cdjVar11 = new cdj();
+                DexFinder cdjVar11 = new DexFinder();
                 cdjVar11.s("op" /* "op" /* "op" /* cnb.z(-359020611238698L)  */);
                 fjVar2.f(cdjVar11);
-                cdj cdjVar12 = new cdj();
+                DexFinder cdjVar12 = new DexFinder();
                 fj fjVar3 = new fj();
-                cdj cdjVar13 = new cdj();
-                cdjVar13.t("getCommentInfo" /* "getCommentInfo" /* "getCommentInfo" /* cnb.z(-359523122412330L)  */,
+                DexFinder cdjVar13 = new DexFinder();
+                cdjVar13.usingStrings("getCommentInfo" /* "getCommentInfo" /* "getCommentInfo" /* cnb.z(-359523122412330L)  */,
                         "com.tencent.mm.plugin.sns.ui.SnsCommentFooter" /* "com.tencent.mm.plugin.sns.ui.SnsCommentFooter" /* "com.tencent.mm.plugin.sns.ui.SnsCommentFooter" /* cnb.z(-359441518033706L)  */);
                 fjVar3.f(cdjVar13);
-                cdj cdjVar14 = new cdj();
-                cdjVar14.t("initCommentInfo" /* "initCommentInfo" /* "initCommentInfo" /* cnb.z(-359295489145642L)  */,
+                DexFinder cdjVar14 = new DexFinder();
+                cdjVar14.usingStrings("initCommentInfo" /* "initCommentInfo" /* "initCommentInfo" /* cnb.z(-359295489145642L)  */,
                         "com.tencent.mm.plugin.sns.ui.SnsSingleTextViewUI" /* "com.tencent.mm.plugin.sns.ui.SnsSingleTextViewUI" /* "com.tencent.mm.plugin.sns.ui.SnsSingleTextViewUI" /* cnb.z(-358677013855018L)  */);
                 fjVar3.f(cdjVar14);
                 cdjVar12.j = fjVar3;
@@ -484,8 +484,8 @@ public final /* synthetic */ class djk implements IInvokable {
                 String[] strArr4 = { "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* cnb.z(-359858129861418L)  */ };
                 bahVar8.getClass();
                 bahVar8.a = SomeStaticHelpers.ab(strArr4);
-                cdj cdjVar15 = new cdj();
-                cdjVar15.t("getSnsVideoFullPath" /* "getSnsVideoFullPath" /* "getSnsVideoFullPath" /* cnb.z(-356971911838506L)  */,
+                DexFinder cdjVar15 = new DexFinder();
+                cdjVar15.usingStrings("getSnsVideoFullPath" /* "getSnsVideoFullPath" /* "getSnsVideoFullPath" /* cnb.z(-356971911838506L)  */,
                         "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* cnb.z(-356920372230954L)  */);
                 bahVar8.d = cdjVar15;
                 return kotlinUnitVar;
@@ -494,8 +494,8 @@ public final /* synthetic */ class djk implements IInvokable {
                 String[] strArr5 = { "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* cnb.z(-357255379680042L)  */ };
                 bahVar9.getClass();
                 bahVar9.a = SomeStaticHelpers.ab(strArr5);
-                cdj cdjVar16 = new cdj();
-                cdjVar16.t("getDownloadVideoPath" /* "getDownloadVideoPath" /* "getDownloadVideoPath" /* cnb.z(-357117940726570L)  */,
+                DexFinder cdjVar16 = new DexFinder();
+                cdjVar16.usingStrings("getDownloadVideoPath" /* "getDownloadVideoPath" /* "getDownloadVideoPath" /* cnb.z(-357117940726570L)  */,
                         "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* cnb.z(-356512350337834L)  */);
                 bahVar9.d = cdjVar16;
                 return kotlinUnitVar;

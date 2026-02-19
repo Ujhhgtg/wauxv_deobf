@@ -30,11 +30,11 @@ public abstract class BaseBaseHook extends ewy {
         this.v = true;
     }
 
-    public final void x(HookManager hookManagerVar, IInvokable bgfVar) {
+    public final void hookAfter(HookManager hookManagerVar, IInvokable bgfVar) {
         hookManagerVar.m(new bme(bgfVar, this, 0));
     }
 
-    public final void y(HookManager hookManagerVar, IInvokable bgfVar) {
+    public final void hookBefore(HookManager hookManagerVar, IInvokable bgfVar) {
         hookManagerVar.n(new bme(bgfVar, this, 1));
     }
 

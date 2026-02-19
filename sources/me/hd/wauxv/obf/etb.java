@@ -14,7 +14,7 @@ public final class etb extends doi implements bgj {
     public final /* synthetic */ String r;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public /* synthetic */ etb(String str, String str2, String str3, String str4, afw afwVar, int i) {
+    public /* synthetic */ etb(String str, String str2, String str3, String str4, kotlinx$coroutines$internal$DispatchedContinuation afwVar, int i) {
         super(2, afwVar);
         this.a = i;
         this.f = str;
@@ -26,7 +26,7 @@ public final class etb extends doi implements bgj {
     @Override // me.hd.wauxv.obf.bgj
     public final Object g(Object obj, Object obj2) {
         ahp ahpVar = (ahp) obj;
-        afw afwVar = (afw) obj2;
+        kotlinx$coroutines$internal$DispatchedContinuation afwVar = (kotlinx$coroutines$internal$DispatchedContinuation) obj2;
         switch (this.a) {
             case 0:
                 break;
@@ -35,7 +35,7 @@ public final class etb extends doi implements bgj {
     }
 
     @Override // me.hd.wauxv.obf.nc
-    public final afw h(Object obj, afw afwVar) {
+    public final kotlinx$coroutines$internal$DispatchedContinuation h(Object obj, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         switch (this.a) {
             case 0:
                 etb etbVar = new etb(this.f, this.o, this.p, this.r, afwVar, 0);
@@ -56,7 +56,7 @@ public final class etb extends doi implements bgj {
         String str2 = this.p;
         String str3 = this.o;
         ahq ahqVar = ahq.a;
-        afw afwVar = null;
+        kotlinx$coroutines$internal$DispatchedContinuation afwVar = null;
         String str4 = this.f;
         switch (i) {
             case 0:

@@ -24,7 +24,7 @@ public final /* synthetic */ class wi implements bfu {
                 MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(obj).getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT.returnType = dal.getKClassFromClass(MenuItem.class);
                 Class cls = Integer.TYPE;
-                return (MethodHookWrapper) StaticHelpers6.n(
+                return (MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(
                         new Object[] { dal.getKClassFromClass(cls), dal.getKClassFromClass(cls), dal.getKClassFromClass(cls), dal.getKClassFromClass(CharSequence.class), dal.getKClassFromClass(cls) }, 5,
                         methodResolverVarT);
             case 1:

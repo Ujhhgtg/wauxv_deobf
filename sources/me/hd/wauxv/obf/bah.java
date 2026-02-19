@@ -10,7 +10,7 @@ import java.util.List;
 public final class bah extends dqc {
     public List a;
     public List b;
-    public cdj d;
+    public DexFinder d;
 
     @Override // me.hd.wauxv.obf.dqc
     public final int c(bbb bbbVar) {
@@ -52,7 +52,7 @@ public final class bah extends dqc {
         } else {
             iV = 0;
         }
-        cdj cdjVar = this.d;
+        DexFinder cdjVar = this.d;
         int iC = cdjVar != null ? cdjVar.c(bbbVar) : 0;
         bbbVar.ab(7);
         bbbVar.q(6, iC);

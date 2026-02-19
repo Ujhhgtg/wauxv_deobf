@@ -16,7 +16,7 @@ public final class elx extends SwitchHook implements IDexFind {
         List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(elw.a));
         elx elxVar = a;
         HookManager hookManagerVarAb = PackageParam.createHook(elxVar, listBf);
-        elxVar.y(hookManagerVarAb, new dos(7));
+        elxVar.hookBefore(hookManagerVarAb, new dos(7));
         hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 

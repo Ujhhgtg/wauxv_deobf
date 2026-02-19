@@ -18,7 +18,7 @@ public final class zb extends dqc {
         fj fjVar = zbVar.b;
         if (fjVar == null) {
             fjVar = new fj(2);
-            fjVar.d = bzu.Contains;
+            fjVar.usingStringsType = UsingStringsTypeEnum.Contains;
         }
         zbVar.b = fjVar;
         zb zbVar2 = new zb();

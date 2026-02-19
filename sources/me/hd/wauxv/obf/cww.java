@@ -16,7 +16,7 @@ public final class cww extends SwitchHook implements IDexFind {
         List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(cwv.a));
         cww cwwVar = a;
         HookManager hookManagerVarAb = PackageParam.createHook(cwwVar, listBf);
-        cwwVar.y(hookManagerVarAb, new cvc(1));
+        cwwVar.hookBefore(hookManagerVarAb, new cvc(1));
         hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 

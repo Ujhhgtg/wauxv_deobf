@@ -66,7 +66,7 @@ public final /* synthetic */ class us implements IInvokable {
     private final Object c(Object obj) {
         Class cls;
         bah bahVar = (bah) obj;
-        cdj cdjVar = new cdj();
+        DexFinder cdjVar = new DexFinder();
         cdjVar.s("create" /* "create" /* "create" /* "create" /* cnb.z(-50289772067626L)   */);
         cls = View.class;
         Class<View> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
@@ -211,12 +211,12 @@ public final /* synthetic */ class us implements IInvokable {
 
     private final Object f(Object obj) {
         bah bahVar = (bah) obj;
-        cdj cdjVar = new cdj();
-        cdjVar.t(
+        DexFinder cdjVar = new DexFinder();
+        cdjVar.usingStrings(
                 (cnb.ab(ewk.d) || cnb.ac(ewh.d)) ? "MicroMsg.MvvmChattingItem"
                         /* "MicroMsg.MvvmChattingItem" /* "MicroMsg.MvvmChattingItem" /* "MicroMsg.MvvmChattingItem" /* cnb.z(-49873160239914L)   */ : "MicroMsg.ChattingDataAdapterV2" /* "MicroMsg.ChattingDataAdapterV2" /* "MicroMsg.ChattingDataAdapterV2" /* "MicroMsg.ChattingDataAdapterV2" /* cnb.z(-49778670959402L)   */,
                 "dealItemView" /* "dealItemView" /* "dealItemView" /* "dealItemView" /* cnb.z(-38083475012394L)   */);
-        cdj.k(cdjVar, "[onBindView] " /* "[onBindView] " /* "[onBindView] " /* "[onBindView] " /* cnb.z(-38010460568362L)   */);
+        DexFinder.k(cdjVar, "[onBindView] " /* "[onBindView] " /* "[onBindView] " /* "[onBindView] " /* cnb.z(-38010460568362L)   */);
         bahVar.getClass();
         bahVar.d = cdjVar;
         return Kotlin$Unit.INSTANCE;
@@ -373,9 +373,9 @@ public final /* synthetic */ class us implements IInvokable {
                 return kotlinUnitVar;
             case 1:
                 bah bahVar = (bah) obj;
-                cdj cdjVar = new cdj();
-                cdj.l(cdjVar, "com.tencent.mm.ui.conversation.MainUI" /* "com.tencent.mm.ui.conversation.MainUI" /* "com.tencent.mm.ui.conversation.MainUI" /* "com.tencent.mm.ui.conversation.MainUI" /* cnb.z(-577252194515754L)   */);
-                cdjVar.t("MicroMsg.MainUI" /* "MicroMsg.MainUI" /* "MicroMsg.MainUI" /* "MicroMsg.MainUI" /* cnb.z(-577690281179946L)   */, "onTabCreate, %d" /*
+                DexFinder cdjVar = new DexFinder();
+                DexFinder.setClassEquals(cdjVar, "com.tencent.mm.ui.conversation.MainUI" /* "com.tencent.mm.ui.conversation.MainUI" /* "com.tencent.mm.ui.conversation.MainUI" /* "com.tencent.mm.ui.conversation.MainUI" /* cnb.z(-577252194515754L)   */);
+                cdjVar.usingStrings("MicroMsg.MainUI" /* "MicroMsg.MainUI" /* "MicroMsg.MainUI" /* "MicroMsg.MainUI" /* cnb.z(-577690281179946L)   */, "onTabCreate, %d" /*
                                                                                               * "onTabCreate, %d" /* "onTabCreate, %d" /* "onTabCreate, %d" /* cnb.z(-577621561703210L)  */
                                                                                               */);
                 bahVar.getClass();
@@ -624,9 +624,9 @@ public final /* synthetic */ class us implements IInvokable {
                 return kotlinUnitVar;
             case 5:
                 bah bahVar2 = (bah) obj;
-                cdj cdjVar2 = new cdj();
-                cdj.l(cdjVar2, "com.tencent.mm.ui.conversation.MainUI" /* "com.tencent.mm.ui.conversation.MainUI" /* "com.tencent.mm.ui.conversation.MainUI" /* "com.tencent.mm.ui.conversation.MainUI" /* cnb.z(-569031627111210L)   */);
-                cdjVar2.t("MicroMsg.MainUI" /* "MicroMsg.MainUI" /* "MicroMsg.MainUI" /* "MicroMsg.MainUI" /* cnb.z(-569400994298666L)   */, "onTabCreate, %d" /*
+                DexFinder cdjVar2 = new DexFinder();
+                DexFinder.setClassEquals(cdjVar2, "com.tencent.mm.ui.conversation.MainUI" /* "com.tencent.mm.ui.conversation.MainUI" /* "com.tencent.mm.ui.conversation.MainUI" /* "com.tencent.mm.ui.conversation.MainUI" /* cnb.z(-569031627111210L)   */);
+                cdjVar2.usingStrings("MicroMsg.MainUI" /* "MicroMsg.MainUI" /* "MicroMsg.MainUI" /* "MicroMsg.MainUI" /* cnb.z(-569400994298666L)   */, "onTabCreate, %d" /*
                                                                                                * cnb.z(-
                                                                                                * 569332274821930L)
                                                                                                */);
@@ -723,10 +723,10 @@ public final /* synthetic */ class us implements IInvokable {
                 return kotlinUnitVar;
             case 9:
                 bah bahVar3 = (bah) obj;
-                cdj cdjVar3 = new cdj();
+                DexFinder cdjVar3 = new DexFinder();
                 uq.a.getClass();
                 cdjVar3.o(ajn.tryGetClassByClassName("com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* cnb.z(-75127567940394L)   */));
-                cdjVar3.t("MicroMsg.ChatFooter" /* "MicroMsg.ChatFooter" /* "MicroMsg.ChatFooter" /* "MicroMsg.ChatFooter" /* cnb.z(-422800875584298L)   */,
+                cdjVar3.usingStrings("MicroMsg.ChatFooter" /* "MicroMsg.ChatFooter" /* "MicroMsg.ChatFooter" /* "MicroMsg.ChatFooter" /* cnb.z(-422800875584298L)   */,
                         "canSend true ! sendBtn is visible" /* "canSend true ! sendBtn is visible" /* "canSend true ! sendBtn is visible" /* "canSend true ! sendBtn is visible" /* cnb.z(-423299091790634L)   */);
                 bahVar3.getClass();
                 bahVar3.d = cdjVar3;
@@ -736,8 +736,8 @@ public final /* synthetic */ class us implements IInvokable {
                 String[] strArr = { "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* cnb.z(-52514565126954L)   */ };
                 bahVar4.getClass();
                 bahVar4.a = SomeStaticHelpers.ab(strArr);
-                cdj cdjVar4 = new cdj();
-                cdjVar4.t("MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* cnb.z(-51788715653930L)   */, "msg is null!" /*
+                DexFinder cdjVar4 = new DexFinder();
+                cdjVar4.usingStrings("MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* cnb.z(-51788715653930L)   */, "msg is null!" /*
                                                                                                  * cnb.z(-
                                                                                                  * 51745765980970L)
                                                                                                  */);
@@ -899,8 +899,8 @@ public final /* synthetic */ class us implements IInvokable {
                 String[] strArr2 = { "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* cnb.z(-52205327481642L)   */ };
                 bahVar5.getClass();
                 bahVar5.a = SomeStaticHelpers.ab(strArr2);
-                cdj cdjVar5 = new cdj();
-                cdjVar5.t("MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* cnb.z(-52029233822506L)   */,
+                DexFinder cdjVar5 = new DexFinder();
+                cdjVar5.usingStrings("MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* cnb.z(-52029233822506L)   */,
                         "context item select failed, null dataTag" /* "context item select failed, null dataTag" /* "context item select failed, null dataTag" /* "context item select failed, null dataTag" /* cnb.z(-51986284149546L)   */);
                 bahVar5.d = cdjVar5;
                 return kotlinUnitVar;
@@ -1004,8 +1004,8 @@ public final /* synthetic */ class us implements IInvokable {
                 String[] strArr3 = { "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* cnb.z(-50259707296554L)   */ };
                 bahVar6.getClass();
                 bahVar6.a = SomeStaticHelpers.ab(strArr3);
-                cdj cdjVar6 = new cdj();
-                cdjVar6.t("MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* cnb.z(-50066433768234L)   */,
+                DexFinder cdjVar6 = new DexFinder();
+                cdjVar6.usingStrings("MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* cnb.z(-50066433768234L)   */,
                         "attachAvatarClickListener: getBizKfWorker:%s" /* "attachAvatarClickListener: getBizKfWorker:%s" /* "attachAvatarClickListener: getBizKfWorker:%s" /* "attachAvatarClickListener: getBizKfWorker:%s" /* cnb.z(-50573239909162L)   */);
                 bahVar6.d = cdjVar6;
                 return kotlinUnitVar;

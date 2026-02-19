@@ -34,7 +34,7 @@ public final class MsgFormatHook extends SwitchHook implements IDexFind {
         List listBf = dqc.toSingletonList(constructorBa);
         MsgFormatHook msgFormatHookVar = a;
         HookManager hookManagerVarAb = PackageParam.createHook(msgFormatHookVar, listBf);
-        msgFormatHookVar.y(hookManagerVarAb, new StillAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(constructorBa, 7));
+        msgFormatHookVar.hookBefore(hookManagerVarAb, new StillAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(constructorBa, 7));
         hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 

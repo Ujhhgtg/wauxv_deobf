@@ -17,7 +17,7 @@ public final class day extends SwitchHook {
         HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         day dayVar = a;
         HookManager hookManagerVarAd = dayVar.createImmediateHook(constructorHookWrapperVar, hookPriorityEnumVar);
-        dayVar.x(hookManagerVarAd, new cvc(26));
+        dayVar.hookAfter(hookManagerVarAd, new cvc(26));
         hookManagerVarAd.initInstantCollectionAndApplyHooks();
     }
 

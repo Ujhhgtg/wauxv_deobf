@@ -16,7 +16,7 @@ public final class AntiRevoke1Hook extends SwitchHook implements IDexFind {
         List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(ft.a));
         AntiRevoke1Hook fuVar = a;
         HookManager hookManagerVarAb = PackageParam.createHook(fuVar, listBf);
-        fuVar.y(hookManagerVarAb, new bn(11));
+        fuVar.hookBefore(hookManagerVarAb, new bn(11));
         hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 

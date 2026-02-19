@@ -21,7 +21,7 @@ public final class CustomContactCountHook extends SwitchHook {
         HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         CustomContactCountHook airVar = a;
         HookManager hookManagerVarAd = airVar.createImmediateHook(methodHookWrapperVar, hookPriorityEnumVar);
-        airVar.y(hookManagerVarAd, new age(25));
+        airVar.hookBefore(hookManagerVarAd, new age(25));
         hookManagerVarAd.initInstantCollectionAndApplyHooks();
     }
 

@@ -5,7 +5,7 @@ package me.hd.wauxv.obf;
 public abstract class dcw extends nc implements bgq {
     public final int f;
 
-    public dcw(int i, afw afwVar) {
+    public dcw(int i, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         super(afwVar);
         if (afwVar != null && afwVar.c() != auz.a) {
             throw new IllegalArgumentException("Coroutines with restricted suspension must have EmptyCoroutineContext");

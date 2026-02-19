@@ -34,8 +34,8 @@ public final class xf extends SwitchHook implements bmz, bng {
         HookManager hookManagerVarAb = PackageParam.createHook(this, dqc.toSingletonList(StaticHelpers7.toDexMethod(xa.a)));
         ws wsVar = new ws(3);
         xf xfVar = a;
-        xfVar.y(hookManagerVarAb, wsVar);
-        xfVar.x(hookManagerVarAb, new ws(4));
+        xfVar.hookBefore(hookManagerVarAb, wsVar);
+        xfVar.hookAfter(hookManagerVarAb, new ws(4));
         hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 

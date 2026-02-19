@@ -16,7 +16,7 @@ public final class ckx extends doi implements bgj {
      * JADX WARN: 'super' call moved to the top of the method (can break code
      * semantics)
      */
-    public ckx(Pair pair, String str, String str2, afw afwVar) {
+    public ckx(Pair pair, String str, String str2, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         super(2, afwVar);
         this.e = pair;
         this.f = str;
@@ -26,7 +26,7 @@ public final class ckx extends doi implements bgj {
     @Override // me.hd.wauxv.obf.bgj
     public final Object g(Object obj, Object obj2) {
         ahp ahpVar = (ahp) obj;
-        afw afwVar = (afw) obj2;
+        kotlinx$coroutines$internal$DispatchedContinuation afwVar = (kotlinx$coroutines$internal$DispatchedContinuation) obj2;
         switch (this.a) {
             case 0:
                 break;
@@ -41,7 +41,7 @@ public final class ckx extends doi implements bgj {
      * me.hd.wauxv.obf.doi]
      */
     @Override // me.hd.wauxv.obf.nc
-    public final afw h(Object obj, afw afwVar) {
+    public final kotlinx$coroutines$internal$DispatchedContinuation h(Object obj, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         switch (this.a) {
             case 0:
                 ckx ckxVar = new ckx((cky) this.f, (bgj) this.o, afwVar);
@@ -65,7 +65,7 @@ public final class ckx extends doi implements bgj {
         ahp ahpVar;
         int i = this.a;
         Object obj2 = this.f;
-        afw afwVar = null;
+        kotlinx$coroutines$internal$DispatchedContinuation afwVar = null;
         Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         Serializable serializable = this.o;
         ahq ahqVar = ahq.a;
@@ -146,7 +146,7 @@ public final class ckx extends doi implements bgj {
      * JADX WARN: 'super' call moved to the top of the method (can break code
      * semantics)
      */
-    public ckx(String str, String str2, afw afwVar) {
+    public ckx(String str, String str2, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         super(2, afwVar);
         this.f = str;
         this.o = str2;
@@ -157,7 +157,7 @@ public final class ckx extends doi implements bgj {
      * semantics)
      */
     /* JADX WARN: Multi-variable type inference failed */
-    public ckx(cky ckyVar, bgj bgjVar, afw afwVar) {
+    public ckx(cky ckyVar, bgj bgjVar, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         super(2, afwVar);
         this.f = ckyVar;
         this.o = (doi) bgjVar;

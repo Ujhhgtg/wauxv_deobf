@@ -45,7 +45,7 @@ public final /* synthetic */ class dos implements IInvokable {
                 return Kotlin$Unit.INSTANCE;
             case 1:
                 bah bahVar = (bah) obj;
-                cdj cdjVar = new cdj();
+                DexFinder cdjVar = new DexFinder();
                 cls = Object.class;
                 Class<Object> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 if (clsBf == null) {
@@ -230,16 +230,16 @@ public final /* synthetic */ class dos implements IInvokable {
                 String[] strArr2 = { "com.tencent.mm.sdk.platformtools" /* "com.tencent.mm.sdk.platformtools" /* "com.tencent.mm.sdk.platformtools" /* cnb.z(-491898309442346L)  */ };
                 bahVar2.getClass();
                 bahVar2.a = SomeStaticHelpers.ab(strArr2);
-                cdj cdjVar2 = new cdj();
+                DexFinder cdjVar2 = new DexFinder();
                 if (cnb.ab(ewk.e) || cnb.ac(ewh.d)) {
-                    cdjVar2.t("MicroMsg.BitmapUtil" /* "MicroMsg.BitmapUtil" /* "MicroMsg.BitmapUtil" /* cnb.z(-491773755390762L)  */, "saveBitmapToImage failed: %s" /*
+                    cdjVar2.usingStrings("MicroMsg.BitmapUtil" /* "MicroMsg.BitmapUtil" /* "MicroMsg.BitmapUtil" /* cnb.z(-491773755390762L)  */, "saveBitmapToImage failed: %s" /*
                                                                                                                     * cnb
                                                                                                                     * .z
                                                                                                                     * (-
                                                                                                                     * 488973436713770L)
                                                                                                                     */);
                 } else {
-                    cdj.l(cdjVar2, "com.tencent.mm.sdk.platformtools.BitmapUtil" /* "com.tencent.mm.sdk.platformtools.BitmapUtil" /* "com.tencent.mm.sdk.platformtools.BitmapUtil" /* cnb.z(-488814522923818L)  */);
+                    DexFinder.setClassEquals(cdjVar2, "com.tencent.mm.sdk.platformtools.BitmapUtil" /* "com.tencent.mm.sdk.platformtools.BitmapUtil" /* "com.tencent.mm.sdk.platformtools.BitmapUtil" /* cnb.z(-488814522923818L)  */);
                     cdjVar2.s("saveBitmapToImage" /* "saveBitmapToImage" /* "saveBitmapToImage" /* cnb.z(-489209659915050L)  */);
                 }
                 bahVar2.d = cdjVar2;
@@ -258,8 +258,8 @@ public final /* synthetic */ class dos implements IInvokable {
                 String[] strArr3 = { "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* cnb.z(-382067405749034L)  */ };
                 bahVar3.getClass();
                 bahVar3.a = SomeStaticHelpers.ab(strArr3);
-                cdj cdjVar3 = new cdj();
-                cdjVar3.t("setSdkId" /* "setSdkId" /* "setSdkId" /* cnb.z(-381929966795562L)  */,
+                DexFinder cdjVar3 = new DexFinder();
+                cdjVar3.usingStrings("setSdkId" /* "setSdkId" /* "setSdkId" /* cnb.z(-381929966795562L)  */,
                         "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* cnb.z(-381908491959082L)  */);
                 bahVar3.d = cdjVar3;
                 return Kotlin$Unit.INSTANCE;
@@ -268,8 +268,8 @@ public final /* synthetic */ class dos implements IInvokable {
                 String[] strArr4 = { "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* cnb.z(-382350873590570L)  */ };
                 bahVar4.getClass();
                 bahVar4.a = SomeStaticHelpers.ab(strArr4);
-                cdj cdjVar4 = new cdj();
-                cdjVar4.t("setContentDes" /* "setContentDes" /* "setContentDes" /* cnb.z(-382213434637098L)  */,
+                DexFinder cdjVar4 = new DexFinder();
+                cdjVar4.usingStrings("setContentDes" /* "setContentDes" /* "setContentDes" /* cnb.z(-382213434637098L)  */,
                         "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* cnb.z(-382136125225770L)  */);
                 bahVar4.d = cdjVar4;
                 return Kotlin$Unit.INSTANCE;
@@ -293,8 +293,8 @@ public final /* synthetic */ class dos implements IInvokable {
                 String[] strArr5 = { "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* cnb.z(-379090993412906L)  */ };
                 bahVar5.getClass();
                 bahVar5.a = SomeStaticHelpers.ab(strArr5);
-                cdj cdjVar5 = new cdj();
-                cdjVar5.t("MicroMsg.UploadPackHelper" /* "MicroMsg.UploadPackHelper" /* "MicroMsg.UploadPackHelper" /* cnb.z(-378403798645546L)  */,
+                DexFinder cdjVar5 = new DexFinder();
+                cdjVar5.usingStrings("MicroMsg.UploadPackHelper" /* "MicroMsg.UploadPackHelper" /* "MicroMsg.UploadPackHelper" /* cnb.z(-378403798645546L)  */,
                         "commit sns info ret %d, typeFlag %d sightMd5 %s" /* "commit sns info ret %d, typeFlag %d sightMd5 %s" /* "commit sns info ret %d, typeFlag %d sightMd5 %s" /* cnb.z(-378240589888298L)  */);
                 bahVar5.d = cdjVar5;
                 return Kotlin$Unit.INSTANCE;
@@ -303,14 +303,14 @@ public final /* synthetic */ class dos implements IInvokable {
                 String[] strArr6 = { "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* cnb.z(-380512627587882L)  */ };
                 bahVar6.getClass();
                 bahVar6.a = SomeStaticHelpers.ab(strArr6);
-                cdj cdjVar6 = new cdj();
+                DexFinder cdjVar6 = new DexFinder();
                 cls3 = Integer.class;
                 Class<Integer> clsBf4 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls3));
                 cls3 = clsBf4 != null ? clsBf4 : Integer.class;
                 cls4 = Context.class;
                 Class<Context> clsBf5 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls4));
                 cdjVar6.ensureParameterNotNull(cls3, clsBf5 != null ? clsBf5 : Context.class);
-                cdjVar6.t("initSnsObj" /* "initSnsObj" /* "initSnsObj" /* cnb.z(-380924944448298L)  */,
+                cdjVar6.usingStrings("initSnsObj" /* "initSnsObj" /* "initSnsObj" /* cnb.z(-380924944448298L)  */,
                         "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* cnb.z(-380912059546410L)  */);
                 bahVar6.d = cdjVar6;
                 return Kotlin$Unit.INSTANCE;
@@ -319,8 +319,8 @@ public final /* synthetic */ class dos implements IInvokable {
                 String[] strArr7 = { "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* cnb.z(-378949259492138L)  */ };
                 bahVar7.getClass();
                 bahVar7.a = SomeStaticHelpers.ab(strArr7);
-                cdj cdjVar7 = new cdj();
-                cdjVar7.t("setSdkAppName" /* "setSdkAppName" /* "setSdkAppName" /* cnb.z(-378811820538666L)  */,
+                DexFinder cdjVar7 = new DexFinder();
+                cdjVar7.usingStrings("setSdkAppName" /* "setSdkAppName" /* "setSdkAppName" /* cnb.z(-378811820538666L)  */,
                         "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* cnb.z(-379284266941226L)  */);
                 bahVar7.d = cdjVar7;
                 return Kotlin$Unit.INSTANCE;
@@ -329,8 +329,8 @@ public final /* synthetic */ class dos implements IInvokable {
                 String[] strArr8 = { "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* cnb.z(-382492607511338L)  */ };
                 bahVar8.getClass();
                 bahVar8.a = SomeStaticHelpers.ab(strArr8);
-                cdj cdjVar8 = new cdj();
-                cdjVar8.t("setUploadList" /* "setUploadList" /* "setUploadList" /* cnb.z(-381805412743978L)  */,
+                DexFinder cdjVar8 = new DexFinder();
+                cdjVar8.usingStrings("setUploadList" /* "setUploadList" /* "setUploadList" /* cnb.z(-381805412743978L)  */,
                         "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* cnb.z(-381728103332650L)  */);
                 bahVar8.d = cdjVar8;
                 return Kotlin$Unit.INSTANCE;
@@ -353,7 +353,7 @@ public final /* synthetic */ class dos implements IInvokable {
                 return Kotlin$Unit.INSTANCE;
             case 25:
                 bah bahVar9 = (bah) obj;
-                cdj cdjVar9 = new cdj();
+                DexFinder cdjVar9 = new DexFinder();
                 cls5 = String.class;
                 Class<String> clsBf6 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls5));
                 if (clsBf6 == null) {

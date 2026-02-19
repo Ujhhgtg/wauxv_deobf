@@ -46,7 +46,7 @@ public final class BottomTabCustomHook extends SwitchHook {
         HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         BottomTabCustomHook bottomTabCustomHookVar = INSTANCE;
         HookManager hookManagerVarAd = bottomTabCustomHookVar.createImmediateHook(constructorHookWrapperVar, hookPriorityEnumVar);
-        bottomTabCustomHookVar.x(hookManagerVarAd, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(12));
+        bottomTabCustomHookVar.hookAfter(hookManagerVarAd, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(12));
         hookManagerVarAd.initInstantCollectionAndApplyHooks();
     }
 

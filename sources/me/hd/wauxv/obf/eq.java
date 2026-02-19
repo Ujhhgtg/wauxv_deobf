@@ -8,14 +8,14 @@ public final class eq extends doi implements bgj {
     public /* synthetic */ Object e;
     public Object f;
 
-    public /* synthetic */ eq(int i, afw afwVar) {
+    public /* synthetic */ eq(int i, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         super(i, afwVar);
     }
 
     @Override // me.hd.wauxv.obf.bgj
     public final Object g(Object obj, Object obj2) {
         ahp ahpVar = (ahp) obj;
-        afw afwVar = (afw) obj2;
+        kotlinx$coroutines$internal$DispatchedContinuation afwVar = (kotlinx$coroutines$internal$DispatchedContinuation) obj2;
         switch (this.a) {
             case 0:
                 break;
@@ -27,7 +27,7 @@ public final class eq extends doi implements bgj {
 
     /* JADX WARN: Type inference failed for: r1v1, types: [me.hd.wauxv.obf.bgj, me.hd.wauxv.obf.doi] */
     @Override // me.hd.wauxv.obf.nc
-    public final afw h(Object obj, afw afwVar) {
+    public final kotlinx$coroutines$internal$DispatchedContinuation h(Object obj, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         switch (this.a) {
             case 0:
                 eq eqVar = new eq((bgj) this.f, afwVar);
@@ -62,13 +62,13 @@ public final class eq extends doi implements bgj {
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     /* JADX WARN: Multi-variable type inference failed */
-    public eq(bgj bgjVar, afw afwVar) {
+    public eq(bgj bgjVar, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         super(2, afwVar);
         this.f = (doi) bgjVar;
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public eq(bqq bqqVar, zn znVar, afw afwVar) {
+    public eq(bqq bqqVar, zn znVar, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         super(2, afwVar);
         this.e = bqqVar;
         this.f = znVar;

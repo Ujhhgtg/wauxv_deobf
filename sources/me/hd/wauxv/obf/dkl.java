@@ -17,8 +17,8 @@ public final class dkl extends SwitchHook implements IDexFind {
         List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(dki.a));
         dkl dklVar = a;
         HookManager hookManagerVarAb = PackageParam.createHook(dklVar, listBf);
-        dklVar.y(hookManagerVarAb, new djk(18));
-        dklVar.x(hookManagerVarAb, new djk(19));
+        dklVar.hookBefore(hookManagerVarAb, new djk(18));
+        dklVar.hookAfter(hookManagerVarAb, new djk(19));
         hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 

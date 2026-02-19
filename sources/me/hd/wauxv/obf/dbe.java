@@ -19,7 +19,7 @@ public final class dbe extends SwitchHook implements IDexFind {
             List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod((DexDescData) it.next()));
             dbe dbeVar = a;
             HookManager hookManagerVarAb = PackageParam.createHook(dbeVar, listBf);
-            dbeVar.y(hookManagerVarAb, new cvc(27));
+            dbeVar.hookBefore(hookManagerVarAb, new cvc(27));
             hookManagerVarAb.initInstantCollectionAndApplyHooks();
         }
     }

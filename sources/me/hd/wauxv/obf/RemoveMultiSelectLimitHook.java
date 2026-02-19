@@ -44,7 +44,7 @@ public final class RemoveMultiSelectLimitHook extends SwitchHook implements IDex
         List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(dau.a));
         RemoveMultiSelectLimitHook davVar = a;
         HookManager hookManagerVarAb = PackageParam.createHook(davVar, listBf);
-        davVar.y(hookManagerVarAb, new cvc(20));
+        davVar.hookBefore(hookManagerVarAb, new cvc(20));
         hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 

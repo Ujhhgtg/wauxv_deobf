@@ -27,10 +27,10 @@ public final class atx extends SwitchHook implements IDexFind {
         List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(att.a));
         atx atxVar = a;
         HookManager hookManagerVarAb = PackageParam.createHook(atxVar, listBf);
-        atxVar.x(hookManagerVarAb, new atn(8));
+        atxVar.hookAfter(hookManagerVarAb, new atn(8));
         hookManagerVarAb.initInstantCollectionAndApplyHooks();
         HookManager hookManagerVarAb2 = PackageParam.createHook(atxVar, dqc.toSingletonList(StaticHelpers7.toDexMethod(ats.a)));
-        atxVar.y(hookManagerVarAb2, new atn(5));
+        atxVar.hookBefore(hookManagerVarAb2, new atn(5));
         hookManagerVarAb2.initInstantCollectionAndApplyHooks();
     }
 

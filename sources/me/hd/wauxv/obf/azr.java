@@ -27,7 +27,7 @@ public final class azr extends SwitchHook implements IDexFind {
         List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(azp.a));
         azr azrVar = a;
         HookManager hookManagerVarAb = PackageParam.createHook(azrVar, listBf);
-        azrVar.x(hookManagerVarAb, new ayz(8));
+        azrVar.hookAfter(hookManagerVarAb, new ayz(8));
         hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 

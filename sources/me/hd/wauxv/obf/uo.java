@@ -17,7 +17,7 @@ public final class uo extends SwitchHook {
         HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         uo uoVar = a;
         HookManager hookManagerVarAd = uoVar.createImmediateHook(methodHookWrapperVar, hookPriorityEnumVar);
-        uoVar.y(hookManagerVarAd, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(23));
+        uoVar.hookBefore(hookManagerVarAd, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(23));
         hookManagerVarAd.initInstantCollectionAndApplyHooks();
     }
 

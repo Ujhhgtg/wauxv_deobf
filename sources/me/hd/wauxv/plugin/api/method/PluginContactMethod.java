@@ -93,7 +93,7 @@ public final class PluginContactMethod {
         xn.a.getClass();
         MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(xn.b()).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.returnType = dal.getKClassFromClass(List.class);
-        List<String> list = (List) ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.getKClassFromClass(String.class) }, 1, methodResolverVarT)).j(str);
+        List<String> list = (List) ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(String.class) }, 1, methodResolverVarT)).j(str);
         return list == null ? EmptyReadonlyList.INSTANCE : list;
     }
 

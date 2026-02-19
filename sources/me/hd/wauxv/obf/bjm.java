@@ -97,7 +97,7 @@ public final class bjm extends SwitchHook implements bnc {
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
         Dispatchers$Default alcVar = aou.a;
-        KotlinHelpers2.bf(akq.f, new eq(2, (afw) null));
+        KotlinHelpers2.bf(akq.f, new eq(2, (kotlinx$coroutines$internal$DispatchedContinuation) null));
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

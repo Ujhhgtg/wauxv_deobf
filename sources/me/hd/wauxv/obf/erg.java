@@ -11,18 +11,18 @@ public final class erg extends dcw implements bgj {
     public final /* synthetic */ View e;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public erg(View view, afw afwVar) {
+    public erg(View view, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         super(2, afwVar);
         this.e = view;
     }
 
     @Override // me.hd.wauxv.obf.bgj
     public final Object g(Object obj, Object obj2) {
-        return ((erg) h((dfu) obj, (afw) obj2)).i(Kotlin$Unit.INSTANCE);
+        return ((erg) h((dfu) obj, (kotlinx$coroutines$internal$DispatchedContinuation) obj2)).i(Kotlin$Unit.INSTANCE);
     }
 
     @Override // me.hd.wauxv.obf.nc
-    public final afw h(Object obj, afw afwVar) {
+    public final kotlinx$coroutines$internal$DispatchedContinuation h(Object obj, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         erg ergVar = new erg(this.e, afwVar);
         ergVar.d = obj;
         return ergVar;

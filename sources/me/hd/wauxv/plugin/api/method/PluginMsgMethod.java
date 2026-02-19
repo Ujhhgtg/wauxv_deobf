@@ -182,14 +182,14 @@ public final class PluginMsgMethod {
         ctc ctcVar = ctc.a;
         MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(dgf.b(StaticHelpers7.az(ctcVar))).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.returnType = dal.getKClassFromClass(String.class);
-        Object objJ = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.getKClassFromClass(String.class), dal.getKClassFromClass(String.class) }, 2, methodResolverVarT)).j(str2, str);
+        Object objJ = ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(String.class), dal.getKClassFromClass(String.class) }, 2, methodResolverVarT)).j(str2, str);
         throwIfVar1IsNull(objJ);
         String str3 = (String) objJ;
         int iCurrentTimeMillis = (int) (System.currentTimeMillis() / ((long) 1000));
         ctdVar.getClass();
         MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(dgf.b(StaticHelpers7.az(ctcVar))).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT2.returnType = dal.getKClassFromClass(Pair.class);
-        Object objJ2 = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.getKClassFromClass(String.class), dal.getKClassFromClass(String.class), dal.getKClassFromClass(String.class),
+        Object objJ2 = ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(String.class), dal.getKClassFromClass(String.class), dal.getKClassFromClass(String.class),
                 dal.getKClassFromClass(String.class), dal.getKClassFromClass(Integer.TYPE), dal.getKClassFromClass(Long.TYPE) }, 6, methodResolverVarT2))
                 .j(str, strB, str2, str3, Integer.valueOf(iCurrentTimeMillis), 0L);
         throwIfVar1IsNull(objJ2);
@@ -219,7 +219,7 @@ public final class PluginMsgMethod {
         methodResolverVarT.addAccessModifiers(AccessModifierEnum.STATIC);
         Class cls = Integer.TYPE;
         methodResolverVarT.returnType = dal.getKClassFromClass(cls);
-        Object objJ = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.getKClassFromClass(cls) }, 1, methodResolverVarT)).j(Integer.valueOf(type));
+        Object objJ = ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(cls) }, 1, methodResolverVarT)).j(Integer.valueOf(type));
         throwIfVar1IsNull(objJ);
         jSONObject4.put(strZ4, ((Number) objJ).intValue());
         jSONObject4.put("svrid" /* "svrid" /* "svrid" /* cnb.z(-114873195297578L)  */, msgInfoBean.getMsgSvrId());

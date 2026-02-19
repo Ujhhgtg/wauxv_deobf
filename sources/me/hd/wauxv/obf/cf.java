@@ -98,11 +98,11 @@ public final class cf extends SwitchHook {
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
         int i2 = 0;
-        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.getKClassFromClass(View.class) }, 1, yg.s(-431025737956138L).getMethodResolverBasedOnPreviouslyProvidedConfig());
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(View.class) }, 1, yg.s(-431025737956138L).getMethodResolverBasedOnPreviouslyProvidedConfig());
         HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         cf cfVar = a;
         HookManager hookManagerVarAd = cfVar.createImmediateHook(methodHookWrapperVar, hookPriorityEnumVar);
-        cfVar.x(hookManagerVarAd, new bn(2));
+        cfVar.hookAfter(hookManagerVarAd, new bn(2));
         hookManagerVarAd.initInstantCollectionAndApplyHooks();
     }
 

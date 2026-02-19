@@ -96,23 +96,23 @@ public final /* synthetic */ class gi implements bgf {
                 return kotlinUnitVar;
             case 6:
                 bah bahVar = (bah) obj;
-                cdj cdjVar = new cdj();
-                cdjVar.t("inserTime" /* "inserTime" /* "inserTime" /* "inserTime" /* cnb.z(-637124038621994L)   */, "cmdId" /* "cmdId" /* "cmdId" /* "cmdId" /* cnb.z(-637098268818218L)   */, "buffer" /* "buffer" /* "buffer" /* "buffer" /* cnb.z(-637055319145258L)   */);
+                DexFinder cdjVar = new DexFinder();
+                cdjVar.usingStrings("inserTime" /* "inserTime" /* "inserTime" /* "inserTime" /* cnb.z(-637124038621994L)   */, "cmdId" /* "cmdId" /* "cmdId" /* "cmdId" /* cnb.z(-637098268818218L)   */, "buffer" /* "buffer" /* "buffer" /* "buffer" /* cnb.z(-637055319145258L)   */);
                 bahVar.getClass();
                 bahVar.d = cdjVar;
                 return kotlinUnitVar;
             case 7:
                 bah bahVar2 = (bah) obj;
-                cdj cdjVar2 = new cdj();
-                cdjVar2.t("MicroMsg.SecInfoReporterImpl" /* "MicroMsg.SecInfoReporterImpl" /* "MicroMsg.SecInfoReporterImpl" /* "MicroMsg.SecInfoReporterImpl" /* cnb.z(-634108971580202L)   */, "data is null." /* "data is null." /* "data is null." /* "data is null." /* cnb.z(-633950057790250L)   */);
+                DexFinder cdjVar2 = new DexFinder();
+                cdjVar2.usingStrings("MicroMsg.SecInfoReporterImpl" /* "MicroMsg.SecInfoReporterImpl" /* "MicroMsg.SecInfoReporterImpl" /* "MicroMsg.SecInfoReporterImpl" /* cnb.z(-634108971580202L)   */, "data is null." /* "data is null." /* "data is null." /* "data is null." /* cnb.z(-633950057790250L)   */);
                 cdjVar2.u(8108);
                 bahVar2.getClass();
                 bahVar2.d = cdjVar2;
                 return kotlinUnitVar;
             case 8:
                 bah bahVar3 = (bah) obj;
-                cdj cdjVar3 = new cdj();
-                cdjVar3.t("MicroMsg.SecInfoReporterImpl" /* "MicroMsg.SecInfoReporterImpl" /* "MicroMsg.SecInfoReporterImpl" /* "MicroMsg.SecInfoReporterImpl" /* cnb.z(-637008074505002L)   */, "data is null." /* "data is null." /* "data is null." /* "data is null." /* cnb.z(-634117561514794L)   */);
+                DexFinder cdjVar3 = new DexFinder();
+                cdjVar3.usingStrings("MicroMsg.SecInfoReporterImpl" /* "MicroMsg.SecInfoReporterImpl" /* "MicroMsg.SecInfoReporterImpl" /* "MicroMsg.SecInfoReporterImpl" /* cnb.z(-637008074505002L)   */, "data is null." /* "data is null." /* "data is null." /* "data is null." /* cnb.z(-634117561514794L)   */);
                 cdjVar3.u(771);
                 bahVar3.getClass();
                 bahVar3.d = cdjVar3;
@@ -125,8 +125,8 @@ public final /* synthetic */ class gi implements bgf {
                 String[] strArr = {"com.tencent.mm.ui.chatting.manager" /* "com.tencent.mm.ui.chatting.manager" /* "com.tencent.mm.ui.chatting.manager" /* "com.tencent.mm.ui.chatting.manager" /* cnb.z(-100351910869802L)   */};
                 bahVar4.getClass();
                 bahVar4.a = SomeStaticHelpers.ab(strArr);
-                cdj cdjVar4 = new cdj();
-                cdjVar4.t("[get] " /* "[get] " /* "[get] " /* "[get] " /* cnb.z(-97418448206634L)   */, " is not a interface!" /* " is not a interface!" /* " is not a interface!" /* " is not a interface!" /* cnb.z(-97439923043114L)   */);
+                DexFinder cdjVar4 = new DexFinder();
+                cdjVar4.usingStrings("[get] " /* "[get] " /* "[get] " /* "[get] " /* cnb.z(-97418448206634L)   */, " is not a interface!" /* " is not a interface!" /* " is not a interface!" /* " is not a interface!" /* cnb.z(-97439923043114L)   */);
                 bahVar4.d = cdjVar4;
                 return kotlinUnitVar;
             case 11:
@@ -165,7 +165,7 @@ public final /* synthetic */ class gi implements bgf {
                 return kotlinUnitVar;
             case 13:
                 bah bahVar5 = (bah) obj;
-                cdj cdjVar5 = new cdj();
+                DexFinder cdjVar5 = new DexFinder();
                 cdjVar5.v("NetSceneJSOperateWxData" /* "NetSceneJSOperateWxData" /* "NetSceneJSOperateWxData" /* "NetSceneJSOperateWxData" /* cnb.z(-412832256490282L)   */, "<init> hash[%d] appId [%s], data [%s], grantScope [%s], versionType [%d], opt [%d], extScene [%d]  sessionId [%s]  avatarOpt [%d]" /* "<init> hash[%d] appId [%s], data [%s], grantScope [%s], versionType [%d], opt [%d], extScene [%d]  sessionId [%s]  avatarOpt [%d]" /* "<init> hash[%d] appId [%s], data [%s], grantScope [%s], versionType [%d], opt [%d], extScene [%d]  sessionId [%s]  avatarOpt [%d]" /* "<init> hash[%d] appId [%s], data [%s], grantScope [%s], versionType [%d], opt [%d], extScene [%d]  sessionId [%s]  avatarOpt [%d]" /* cnb.z(-412729177275178L)   */);
                 bahVar5.getClass();
                 bahVar5.d = cdjVar5;
@@ -181,8 +181,8 @@ public final /* synthetic */ class gi implements bgf {
                 String[] strArr2 = {"com.tencent.mm.plugin.appbrand.jsapi.auth" /* "com.tencent.mm.plugin.appbrand.jsapi.auth" /* "com.tencent.mm.plugin.appbrand.jsapi.auth" /* "com.tencent.mm.plugin.appbrand.jsapi.auth" /* cnb.z(-409525131672362L)   */};
                 bahVar6.getClass();
                 bahVar6.a = SomeStaticHelpers.ab(strArr2);
-                cdj cdjVar6 = new cdj();
-                cdjVar6.t("MicroMsg.AppBrand.JsApiAdOperateWXData[AppBrandSplashAd]" /* "MicroMsg.AppBrand.JsApiAdOperateWXData[AppBrandSplashAd]" /* "MicroMsg.AppBrand.JsApiAdOperateWXData[AppBrandSplashAd]" /* "MicroMsg.AppBrand.JsApiAdOperateWXData[AppBrandSplashAd]" /* cnb.z(-409361922915114L)   */, "cgi callback, callbackId:%s, service not running or preloaded" /* "cgi callback, callbackId:%s, service not running or preloaded" /* "cgi callback, callbackId:%s, service not running or preloaded" /* "cgi callback, callbackId:%s, service not running or preloaded" /* cnb.z(-410766377220906L)   */);
+                DexFinder cdjVar6 = new DexFinder();
+                cdjVar6.usingStrings("MicroMsg.AppBrand.JsApiAdOperateWXData[AppBrandSplashAd]" /* "MicroMsg.AppBrand.JsApiAdOperateWXData[AppBrandSplashAd]" /* "MicroMsg.AppBrand.JsApiAdOperateWXData[AppBrandSplashAd]" /* "MicroMsg.AppBrand.JsApiAdOperateWXData[AppBrandSplashAd]" /* cnb.z(-409361922915114L)   */, "cgi callback, callbackId:%s, service not running or preloaded" /* "cgi callback, callbackId:%s, service not running or preloaded" /* "cgi callback, callbackId:%s, service not running or preloaded" /* "cgi callback, callbackId:%s, service not running or preloaded" /* cnb.z(-410766377220906L)   */);
                 bahVar6.d = cdjVar6;
                 return kotlinUnitVar;
             case 17:
@@ -237,8 +237,8 @@ public final /* synthetic */ class gi implements bgf {
                 String[] strArr3 = {"com.tencent.mm.pluginsdk.model.app" /* "com.tencent.mm.pluginsdk.model.app" /* "com.tencent.mm.pluginsdk.model.app" /* "com.tencent.mm.pluginsdk.model.app" /* cnb.z(-120147415137066L)   */};
                 bahVar7.getClass();
                 bahVar7.a = SomeStaticHelpers.ab(strArr3);
-                cdj cdjVar7 = new cdj();
-                cdjVar7.t("MicroMsg.AppMsgLogic" /* "MicroMsg.AppMsgLogic" /* "MicroMsg.AppMsgLogic" /* "MicroMsg.AppMsgLogic" /* cnb.z(-108469399059242L)   */, "summerbig sendAppMsg attachFilePath[%s], content[%s]" /* "summerbig sendAppMsg attachFilePath[%s], content[%s]" /* "summerbig sendAppMsg attachFilePath[%s], content[%s]" /* "summerbig sendAppMsg attachFilePath[%s], content[%s]" /* cnb.z(-108362024876842L)   */);
+                DexFinder cdjVar7 = new DexFinder();
+                cdjVar7.usingStrings("MicroMsg.AppMsgLogic" /* "MicroMsg.AppMsgLogic" /* "MicroMsg.AppMsgLogic" /* "MicroMsg.AppMsgLogic" /* cnb.z(-108469399059242L)   */, "summerbig sendAppMsg attachFilePath[%s], content[%s]" /* "summerbig sendAppMsg attachFilePath[%s], content[%s]" /* "summerbig sendAppMsg attachFilePath[%s], content[%s]" /* "summerbig sendAppMsg attachFilePath[%s], content[%s]" /* cnb.z(-108362024876842L)   */);
                 bahVar7.d = cdjVar7;
                 return kotlinUnitVar;
             case 22:
@@ -318,8 +318,8 @@ public final /* synthetic */ class gi implements bgf {
                 return kotlinUnitVar;
             case 26:
                 bah bahVar8 = (bah) obj;
-                cdj cdjVar8 = new cdj();
-                cdjVar8.t("MicroMsg.ForceNotifyStorage" /* "MicroMsg.ForceNotifyStorage" /* "MicroMsg.ForceNotifyStorage" /* "MicroMsg.ForceNotifyStorage" /* cnb.z(-443760315988778L)   */, "[onNewXmlReceived] ret:%s isAdd:%s info:%s" /* "[onNewXmlReceived] ret:%s isAdd:%s info:%s" /* "[onNewXmlReceived] ret:%s isAdd:%s info:%s" /* "[onNewXmlReceived] ret:%s isAdd:%s info:%s" /* cnb.z(-443674416642858L)   */);
+                DexFinder cdjVar8 = new DexFinder();
+                cdjVar8.usingStrings("MicroMsg.ForceNotifyStorage" /* "MicroMsg.ForceNotifyStorage" /* "MicroMsg.ForceNotifyStorage" /* "MicroMsg.ForceNotifyStorage" /* cnb.z(-443760315988778L)   */, "[onNewXmlReceived] ret:%s isAdd:%s info:%s" /* "[onNewXmlReceived] ret:%s isAdd:%s info:%s" /* "[onNewXmlReceived] ret:%s isAdd:%s info:%s" /* "[onNewXmlReceived] ret:%s isAdd:%s info:%s" /* cnb.z(-443674416642858L)   */);
                 bahVar8.getClass();
                 bahVar8.d = cdjVar8;
                 return kotlinUnitVar;

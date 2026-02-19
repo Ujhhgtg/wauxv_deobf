@@ -2,7 +2,7 @@ package me.hd.wauxv.plugin.api.method;
 
 import java.io.File;
 import java.util.Map;
-import me.hd.wauxv.obf.afw;
+import me.hd.wauxv.obf.kotlinx$coroutines$internal$DispatchedContinuation;
 import me.hd.wauxv.obf.ahp;
 import me.hd.wauxv.obf.ahq;
 import me.hd.wauxv.obf.ajm;
@@ -42,7 +42,7 @@ public final class PluginHttpMethod {
         public final /* synthetic */ PluginCallBack.DownloadCallback r;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(String str, Map map, String str2, long j, PluginCallBack.DownloadCallback downloadCallback, afw afwVar) {
+        public AnonymousClass1(String str, Map map, String str2, long j, PluginCallBack.DownloadCallback downloadCallback, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
             super(2, afwVar);
             this.e = str;
             this.f = map;
@@ -53,11 +53,11 @@ public final class PluginHttpMethod {
 
         @Override // me.hd.wauxv.obf.bgj
         public final Object g(Object obj, Object obj2) {
-            return ((AnonymousClass1) h((ahp) obj, (afw) obj2)).i(Kotlin$Unit.INSTANCE);
+            return ((AnonymousClass1) h((ahp) obj, (kotlinx$coroutines$internal$DispatchedContinuation) obj2)).i(Kotlin$Unit.INSTANCE);
         }
 
         @Override // me.hd.wauxv.obf.nc
-        public final afw h(Object obj, afw afwVar) {
+        public final kotlinx$coroutines$internal$DispatchedContinuation h(Object obj, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
             AnonymousClass1 anonymousClass1 = new AnonymousClass1(this.e, this.f, this.o, this.p, this.r, afwVar);
             anonymousClass1.d = obj;
             return anonymousClass1;
@@ -105,7 +105,7 @@ public final class PluginHttpMethod {
         public final /* synthetic */ PluginCallBack.HttpCallback p;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public C00241(String str, Map map, long j, PluginCallBack.HttpCallback httpCallback, afw afwVar) {
+        public C00241(String str, Map map, long j, PluginCallBack.HttpCallback httpCallback, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
             super(2, afwVar);
             this.e = str;
             this.f = map;
@@ -115,11 +115,11 @@ public final class PluginHttpMethod {
 
         @Override // me.hd.wauxv.obf.bgj
         public final Object g(Object obj, Object obj2) {
-            return ((C00241) h((ahp) obj, (afw) obj2)).i(Kotlin$Unit.INSTANCE);
+            return ((C00241) h((ahp) obj, (kotlinx$coroutines$internal$DispatchedContinuation) obj2)).i(Kotlin$Unit.INSTANCE);
         }
 
         @Override // me.hd.wauxv.obf.nc
-        public final afw h(Object obj, afw afwVar) {
+        public final kotlinx$coroutines$internal$DispatchedContinuation h(Object obj, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
             C00241 c00241 = new C00241(this.e, this.f, this.o, this.p, afwVar);
             c00241.d = obj;
             return c00241;
@@ -171,7 +171,7 @@ public final class PluginHttpMethod {
         public final /* synthetic */ PluginCallBack.HttpCallback r;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public C00251(String str, Map map, Map map2, long j, PluginCallBack.HttpCallback httpCallback, afw afwVar) {
+        public C00251(String str, Map map, Map map2, long j, PluginCallBack.HttpCallback httpCallback, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
             super(2, afwVar);
             this.e = str;
             this.f = map;
@@ -182,11 +182,11 @@ public final class PluginHttpMethod {
 
         @Override // me.hd.wauxv.obf.bgj
         public final Object g(Object obj, Object obj2) {
-            return ((C00251) h((ahp) obj, (afw) obj2)).i(Kotlin$Unit.INSTANCE);
+            return ((C00251) h((ahp) obj, (kotlinx$coroutines$internal$DispatchedContinuation) obj2)).i(Kotlin$Unit.INSTANCE);
         }
 
         @Override // me.hd.wauxv.obf.nc
-        public final afw h(Object obj, afw afwVar) {
+        public final kotlinx$coroutines$internal$DispatchedContinuation h(Object obj, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
             C00251 c00251 = new C00251(this.e, this.f, this.o, this.p, this.r, afwVar);
             c00251.d = obj;
             return c00251;

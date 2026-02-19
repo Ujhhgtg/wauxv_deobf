@@ -16,7 +16,7 @@ public final class blm extends SwitchHook implements IDexFind {
         List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(bll.a));
         blm blmVar = a;
         HookManager hookManagerVarAb = PackageParam.createHook(blmVar, listBf);
-        blmVar.y(hookManagerVarAb, new bep(18));
+        blmVar.hookBefore(hookManagerVarAb, new bep(18));
         hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 

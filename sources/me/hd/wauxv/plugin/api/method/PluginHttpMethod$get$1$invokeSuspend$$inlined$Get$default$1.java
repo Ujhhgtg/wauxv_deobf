@@ -4,7 +4,7 @@ import android.content.Context;
 import com.drake.net.exception.ConvertException;
 import com.drake.net.exception.NetException;
 import java.util.concurrent.CancellationException;
-import me.hd.wauxv.obf.afw;
+import me.hd.wauxv.obf.kotlinx$coroutines$internal$DispatchedContinuation;
 import me.hd.wauxv.obf.ahp;
 import me.hd.wauxv.obf.ajm;
 import me.hd.wauxv.obf.arj;
@@ -31,7 +31,7 @@ public final class PluginHttpMethod$get$1$invokeSuspend$$inlined$Get$default$1 e
     public final /* synthetic */ cug e;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public PluginHttpMethod$get$1$invokeSuspend$$inlined$Get$default$1(String str, cug cugVar, afw afwVar) {
+    public PluginHttpMethod$get$1$invokeSuspend$$inlined$Get$default$1(String str, cug cugVar, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         super(2, afwVar);
         this.d = str;
         this.e = cugVar;
@@ -39,11 +39,11 @@ public final class PluginHttpMethod$get$1$invokeSuspend$$inlined$Get$default$1 e
 
     @Override // me.hd.wauxv.obf.bgj
     public final Object g(Object obj, Object obj2) {
-        return ((PluginHttpMethod$get$1$invokeSuspend$$inlined$Get$default$1) h((ahp) obj, (afw) obj2)).i(Kotlin$Unit.INSTANCE);
+        return ((PluginHttpMethod$get$1$invokeSuspend$$inlined$Get$default$1) h((ahp) obj, (kotlinx$coroutines$internal$DispatchedContinuation) obj2)).i(Kotlin$Unit.INSTANCE);
     }
 
     @Override // me.hd.wauxv.obf.nc
-    public final afw h(Object obj, afw afwVar) {
+    public final kotlinx$coroutines$internal$DispatchedContinuation h(Object obj, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         PluginHttpMethod$get$1$invokeSuspend$$inlined$Get$default$1 pluginHttpMethod$get$1$invokeSuspend$$inlined$Get$default$1 = new PluginHttpMethod$get$1$invokeSuspend$$inlined$Get$default$1(this.d, this.e, afwVar);
         pluginHttpMethod$get$1$invokeSuspend$$inlined$Get$default$1.a = obj;
         return pluginHttpMethod$get$1$invokeSuspend$$inlined$Get$default$1;

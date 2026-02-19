@@ -16,7 +16,7 @@ public final class dad extends SwitchHook implements IDexFind {
         HookManager hookManagerVarAb = PackageParam.createHook(this, dqc.toSingletonList(StaticHelpers7.toDexMethod(dac.a)));
         cvc cvcVar = new cvc(16);
         dad dadVar = a;
-        dadVar.x(hookManagerVarAb, cvcVar);
+        dadVar.hookAfter(hookManagerVarAb, cvcVar);
         hookManagerVarAb.initInstantCollectionAndApplyHooks();
         cma.a.getClass();
         Class declaringClass = StaticHelpers7.ba(clz.a).getDeclaringClass();
@@ -26,9 +26,9 @@ public final class dad extends SwitchHook implements IDexFind {
             MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(cls).getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT.name = "onGYNetEnd" /* "onGYNetEnd" /* "onGYNetEnd" /* cnb.z(-540848051714858L)  */;
             HookManager hookManagerVarAd = dadVar.createImmediateHook((MethodHookWrapper) StaticHelpers6
-                    .n(new Object[] { dal.getKClassFromClass(Integer.TYPE), dal.getKClassFromClass(String.class), dal.getKClassFromClass(JSONObject.class) }, 3, methodResolverVarT),
+                    .setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(Integer.TYPE), dal.getKClassFromClass(String.class), dal.getKClassFromClass(JSONObject.class) }, 3, methodResolverVarT),
                     HookPriorityEnum.ENUM_DEFAULT);
-            dadVar.y(hookManagerVarAd, new cvc(17));
+            dadVar.hookBefore(hookManagerVarAd, new cvc(17));
             hookManagerVarAd.initInstantCollectionAndApplyHooks();
         }
     }

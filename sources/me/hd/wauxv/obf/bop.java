@@ -19,7 +19,7 @@ public final class bop extends bws implements IDexFind {
         MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(objE).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT2.returnType = dal.getKClassFromClass(String.class);
         cge.a.getClass();
-        Object objJ = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { StaticHelpers7.az(cgd.a) }, 1, methodResolverVarT2)).j(obj);
+        Object objJ = ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { StaticHelpers7.az(cgd.a) }, 1, methodResolverVarT2)).j(obj);
         throwIfVar1IsNull(objJ);
         return (String) objJ;
     }

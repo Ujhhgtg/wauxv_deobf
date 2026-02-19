@@ -16,7 +16,7 @@ public final class dha extends SwitchHook implements IDexFind {
         List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(dgz.a));
         dha dhaVar = a;
         HookManager hookManagerVarAb = PackageParam.createHook(dhaVar, listBf);
-        dhaVar.y(hookManagerVarAb, new dbj(27));
+        dhaVar.hookBefore(hookManagerVarAb, new dbj(27));
         hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 

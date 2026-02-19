@@ -177,7 +177,7 @@ public abstract class ajn {
         return ReflectionWrapper.tryGetClassByName(HostInfoRegistry.getClassLoader(), str);
     }
 
-    public static final String ah(afw afwVar) {
+    public static final String ah(kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         Object objX;
         if (afwVar instanceof DispatchedContinuation) {
             return ((DispatchedContinuation) afwVar).toString();

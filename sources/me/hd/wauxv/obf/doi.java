@@ -5,7 +5,7 @@ package me.hd.wauxv.obf;
 public abstract class doi extends afx implements bgq {
     public final int q;
 
-    public doi(int i, afw afwVar) {
+    public doi(int i, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         super(afwVar);
         this.q = i;
     }

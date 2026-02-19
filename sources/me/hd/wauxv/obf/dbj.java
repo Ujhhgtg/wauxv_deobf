@@ -53,7 +53,7 @@ public final /* synthetic */ class dbj implements IInvokable {
                 return Kotlin$Unit.INSTANCE;
             case 2:
                 bah bahVar = (bah) obj;
-                cdj cdjVar = new cdj();
+                DexFinder cdjVar = new DexFinder();
                 cls = Object.class;
                 Class<Object> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 if (clsBf == null) {
@@ -65,7 +65,7 @@ public final /* synthetic */ class dbj implements IInvokable {
                 cls2 = clsBf2 != null ? clsBf2 : String.class;
                 Class<Object> clsBf3 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 cdjVar.q(cls2, clsBf3 != null ? clsBf3 : Object.class);
-                cdjVar.t("String" /* "String" /* "String" /* cnb.z(-55147380079402L)  */, "Int" /* "Int" /* "Int" /* cnb.z(-55100135439146L)  */,
+                cdjVar.usingStrings("String" /* "String" /* "String" /* cnb.z(-55147380079402L)  */, "Int" /* "Int" /* "Int" /* cnb.z(-55100135439146L)  */,
                         "Long" /* "Long" /* "Long" /* cnb.z(-55048595831594L)  */, "Float" /* "Float" /* "Float" /* cnb.z(-55078660602666L)  */);
                 bahVar.getClass();
                 bahVar.d = cdjVar;
@@ -99,8 +99,8 @@ public final /* synthetic */ class dbj implements IInvokable {
                         || nullSafeIsEqual(str, MethodDescription.CONSTRUCTOR_INTERNAL_NAME)) ? false : true);
             case 5:
                 bah bahVar2 = (bah) obj;
-                cdj cdjVar2 = new cdj();
-                cdjVar2.t("workerScope" /* "workerScope" /* "workerScope" /* cnb.z(-455554296183594L)  */, "username" /* "username" /* "username" /* cnb.z(-455537116314410L)  */);
+                DexFinder cdjVar2 = new DexFinder();
+                cdjVar2.usingStrings("workerScope" /* "workerScope" /* "workerScope" /* cnb.z(-455554296183594L)  */, "username" /* "username" /* "username" /* cnb.z(-455537116314410L)  */);
                 bahVar2.getClass();
                 bahVar2.d = cdjVar2;
                 return Kotlin$Unit.INSTANCE;
@@ -108,7 +108,7 @@ public final /* synthetic */ class dbj implements IInvokable {
                 return Boolean.valueOf(nullSafeIsEqual(((cdf) obj).h().methodName, MethodDescription.CONSTRUCTOR_INTERNAL_NAME));
             case 7:
                 bah bahVar3 = (bah) obj;
-                cdj cdjVar3 = new cdj();
+                DexFinder cdjVar3 = new DexFinder();
                 cls3 = ImageView.class;
                 Class<ImageView> clsBf4 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls3));
                 cls3 = clsBf4 != null ? clsBf4 : ImageView.class;
@@ -121,14 +121,14 @@ public final /* synthetic */ class dbj implements IInvokable {
                 cls6 = Boolean.class;
                 Class<Boolean> clsBf7 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls6));
                 cdjVar3.q(cls3, cls4, cls5, clsBf7 != null ? clsBf7 : Boolean.class);
-                cdjVar3.t("MicroMsg.AvatarDrawable" /* "MicroMsg.AvatarDrawable" /* "MicroMsg.AvatarDrawable" /* cnb.z(-455657375398698L)  */);
+                cdjVar3.usingStrings("MicroMsg.AvatarDrawable" /* "MicroMsg.AvatarDrawable" /* "MicroMsg.AvatarDrawable" /* cnb.z(-455657375398698L)  */);
                 bahVar3.getClass();
                 bahVar3.d = cdjVar3;
                 return Kotlin$Unit.INSTANCE;
             case 8:
                 ddh ddhVar = ddh.a;
                 HookManager hookManagerVarAb = PackageParam.createHook(ddhVar, dqc.toSingletonList((Method) obj));
-                ddhVar.y(hookManagerVarAb, new dbj(14));
+                ddhVar.hookBefore(hookManagerVarAb, new dbj(14));
                 hookManagerVarAb.initInstantCollectionAndApplyHooks();
                 return Kotlin$Unit.INSTANCE;
             case 9:
@@ -161,8 +161,8 @@ public final /* synthetic */ class dbj implements IInvokable {
                 return Kotlin$Unit.INSTANCE;
             case 15:
                 bah bahVar4 = (bah) obj;
-                cdj cdjVar4 = new cdj();
-                cdjVar4.t("workerScope" /* "workerScope" /* "workerScope" /* cnb.z(-457096189442858L)  */, "username" /* "username" /* "username" /* cnb.z(-457079009573674L)  */);
+                DexFinder cdjVar4 = new DexFinder();
+                cdjVar4.usingStrings("workerScope" /* "workerScope" /* "workerScope" /* cnb.z(-457096189442858L)  */, "username" /* "username" /* "username" /* cnb.z(-457079009573674L)  */);
                 bahVar4.getClass();
                 bahVar4.d = cdjVar4;
                 return Kotlin$Unit.INSTANCE;
@@ -171,15 +171,15 @@ public final /* synthetic */ class dbj implements IInvokable {
                 return Kotlin$Unit.INSTANCE;
             case 17:
                 bah bahVar5 = (bah) obj;
-                cdj cdjVar5 = new cdj();
+                DexFinder cdjVar5 = new DexFinder();
                 fj fjVar = new fj();
-                cdj cdjVar6 = new cdj();
-                cdjVar6.t("MicroMsg.ChattingUI.VideoComponent" /* "MicroMsg.ChattingUI.VideoComponent" /* "MicroMsg.ChattingUI.VideoComponent" /* cnb.z(-101528731908906L)  */,
+                DexFinder cdjVar6 = new DexFinder();
+                cdjVar6.usingStrings("MicroMsg.ChattingUI.VideoComponent" /* "MicroMsg.ChattingUI.VideoComponent" /* "MicroMsg.ChattingUI.VideoComponent" /* cnb.z(-101528731908906L)  */,
                         "send video path: %s, toUser:%s, origin:%b" /* "send video path: %s, toUser:%s, origin:%b" /* "send video path: %s, toUser:%s, origin:%b" /* cnb.z(-102993315756842L)  */,
                         "ChattingUI_importMultiVideo" /* "ChattingUI_importMultiVideo" /* "ChattingUI_importMultiVideo" /* cnb.z(-102830106999594L)  */);
                 fjVar.f(cdjVar6);
                 cdjVar5.j = fjVar;
-                cdj.m(cdjVar5, 9);
+                DexFinder.m(cdjVar5, 9);
                 cls7 = Runnable.class;
                 Class<Runnable> clsBf8 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls7));
                 cls7 = clsBf8 != null ? clsBf8 : Runnable.class;
@@ -289,13 +289,13 @@ public final /* synthetic */ class dbj implements IInvokable {
                 return Kotlin$Unit.INSTANCE;
             case 24:
                 bah bahVar6 = (bah) obj;
-                cdj cdjVar7 = new cdj();
-                cdj.k(cdjVar7, "deviceinfo" /* "deviceinfo" /* "deviceinfo" /* cnb.z(-370870426008362L)  */);
-                cdj.k(cdjVar7, "MANUFACTURER" /* "MANUFACTURER" /* "MANUFACTURER" /* cnb.z(-370840361237290L)  */);
-                cdj.k(cdjVar7, "MODEL" /* "MODEL" /* "MODEL" /* cnb.z(-376814660746026L)  */);
-                cdj.k(cdjVar7, "VERSION_RELEASE" /* "VERSION_RELEASE" /* "VERSION_RELEASE" /* cnb.z(-376771711073066L)  */);
-                cdj.k(cdjVar7, "VERSION_INCREMENTAL" /* "VERSION_INCREMENTAL" /* "VERSION_INCREMENTAL" /* cnb.z(-376702991596330L)  */);
-                cdj.k(cdjVar7, "DISPLAY" /* "DISPLAY" /* "DISPLAY" /* cnb.z(-376651451988778L)  */);
+                DexFinder cdjVar7 = new DexFinder();
+                DexFinder.k(cdjVar7, "deviceinfo" /* "deviceinfo" /* "deviceinfo" /* cnb.z(-370870426008362L)  */);
+                DexFinder.k(cdjVar7, "MANUFACTURER" /* "MANUFACTURER" /* "MANUFACTURER" /* cnb.z(-370840361237290L)  */);
+                DexFinder.k(cdjVar7, "MODEL" /* "MODEL" /* "MODEL" /* cnb.z(-376814660746026L)  */);
+                DexFinder.k(cdjVar7, "VERSION_RELEASE" /* "VERSION_RELEASE" /* "VERSION_RELEASE" /* cnb.z(-376771711073066L)  */);
+                DexFinder.k(cdjVar7, "VERSION_INCREMENTAL" /* "VERSION_INCREMENTAL" /* "VERSION_INCREMENTAL" /* cnb.z(-376702991596330L)  */);
+                DexFinder.k(cdjVar7, "DISPLAY" /* "DISPLAY" /* "DISPLAY" /* cnb.z(-376651451988778L)  */);
                 bahVar6.getClass();
                 bahVar6.d = cdjVar7;
                 return Kotlin$Unit.INSTANCE;
@@ -304,8 +304,8 @@ public final /* synthetic */ class dbj implements IInvokable {
                 return Kotlin$Unit.INSTANCE;
             case 26:
                 bah bahVar7 = (bah) obj;
-                cdj cdjVar8 = new cdj();
-                cdjVar8.t("calling getService(...)" /* "calling getService(...)" /* "calling getService(...)" /* cnb.z(-368671402752810L)  */);
+                DexFinder cdjVar8 = new DexFinder();
+                cdjVar8.usingStrings("calling getService(...)" /* "calling getService(...)" /* "calling getService(...)" /* cnb.z(-368671402752810L)  */);
                 bahVar7.getClass();
                 bahVar7.d = cdjVar8;
                 return Kotlin$Unit.INSTANCE;
@@ -320,8 +320,8 @@ public final /* synthetic */ class dbj implements IInvokable {
                 String[] strArr2 = { "com.tencent.mm.pluginsdk.model.app" /* "com.tencent.mm.pluginsdk.model.app" /* "com.tencent.mm.pluginsdk.model.app" /* cnb.z(-514867794541354L)  */ };
                 bahVar8.getClass();
                 bahVar8.a = SomeStaticHelpers.ab(strArr2);
-                cdj cdjVar9 = new cdj();
-                cdjVar9.t("checkAppSignature get local signature failed" /* "checkAppSignature get local signature failed" /* "checkAppSignature get local signature failed" /* cnb.z(-516332378389290L)  */);
+                DexFinder cdjVar9 = new DexFinder();
+                cdjVar9.usingStrings("checkAppSignature get local signature failed" /* "checkAppSignature get local signature failed" /* "checkAppSignature get local signature failed" /* cnb.z(-516332378389290L)  */);
                 bahVar8.d = cdjVar9;
                 return Kotlin$Unit.INSTANCE;
         }

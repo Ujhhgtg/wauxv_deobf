@@ -16,7 +16,7 @@ public final class die extends SwitchHook implements IDexFind {
         List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(did.a));
         die dieVar = a;
         HookManager hookManagerVarAb = PackageParam.createHook(dieVar, listBf);
-        dieVar.y(hookManagerVarAb, new dhg(5));
+        dieVar.hookBefore(hookManagerVarAb, new dhg(5));
         hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 

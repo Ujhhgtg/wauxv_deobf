@@ -16,7 +16,7 @@ public final class dax extends SwitchHook implements IDexFind {
         List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(daw.a));
         dax daxVar = a;
         HookManager hookManagerVarAb = PackageParam.createHook(daxVar, listBf);
-        daxVar.y(hookManagerVarAb, new cvc(23));
+        daxVar.hookBefore(hookManagerVarAb, new cvc(23));
         hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 

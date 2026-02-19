@@ -26,16 +26,16 @@ public final class zw extends SwitchHook implements bnx {
         if (getIsEnabled() && i == 1) {
             cwd cwdVar = cwd.a;
             cwdVar.getClass();
-            cdq cdqVar = cdr.Companion;
-            cdr cdrVar = (cdr) cwdVar.c(cdqVar.serializer(), bArr);
-            cdrVar.j = 0;
-            cdrVar.k = "" /* "" /* "" /* cnb.z(-511500540181290L)  */;
-            cdrVar.l = "" /* "" /* "" /* cnb.z(-511513425083178L)  */;
-            cdrVar.al = "" /* "" /* "" /* cnb.z(-511509130115882L)  */;
+            ProtoModUserInfoCompanion cdqVar = ProtoModUserInfo.Companion;
+            ProtoModUserInfo protoModUserInfoVar = (ProtoModUserInfo) cwdVar.c(cdqVar.serializer(), bArr);
+            protoModUserInfoVar.j = 0;
+            protoModUserInfoVar.k = "" /* "" /* "" /* cnb.z(-511500540181290L)  */;
+            protoModUserInfoVar.l = "" /* "" /* "" /* cnb.z(-511513425083178L)  */;
+            protoModUserInfoVar.al = "" /* "" /* "" /* cnb.z(-511509130115882L)  */;
             btd btdVarSerializer = cdqVar.serializer();
             throwIfVar1IsNull(btdVarSerializer, "serializer");
             rw rwVar = new rw();
-            new cwn(cwdVar, new SyntheticPileOfMess(rwVar), btdVarSerializer.getDescriptor()).x(btdVarSerializer, cdrVar);
+            new cwn(cwdVar, new SyntheticPileOfMess(rwVar), btdVarSerializer.getDescriptor()).x(btdVarSerializer, protoModUserInfoVar);
             int i2 = rwVar.c;
             byte[] bArr2 = new byte[i2];
             SomeStaticHelpers._an(rwVar.b, 0, i2, bArr2, 2);

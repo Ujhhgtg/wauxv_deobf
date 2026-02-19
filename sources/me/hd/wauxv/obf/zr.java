@@ -18,10 +18,10 @@ public final class zr extends SwitchHook implements bnn {
     public final void initOnce() {
         int i2 = 0;
         HookManager hookManagerVarAd = createImmediateHook(
-                (MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.getKClassFromClass(Integer.TYPE), dal.getKClassFromClass(ViewGroup.class) }, 2,
+                (MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(Integer.TYPE), dal.getKClassFromClass(ViewGroup.class) }, 2,
                         dqc.bh(ajn.tryGetClassByClassName("com.tencent.mm.ui.LauncherUIBottomTabView" /* "com.tencent.mm.ui.LauncherUIBottomTabView" /* "com.tencent.mm.ui.LauncherUIBottomTabView" /* cnb.z(-523419074427690L)  */)).getMethodResolverBasedOnPreviouslyProvidedConfig()),
                 HookPriorityEnum.ENUM_DEFAULT);
-        a.x(hookManagerVarAd, new ws(25));
+        a.hookAfter(hookManagerVarAd, new ws(25));
         hookManagerVarAd.initInstantCollectionAndApplyHooks();
     }
 

@@ -118,7 +118,7 @@ public final /* synthetic */ class fq implements bgj {
                 MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(objE).getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT2.returnType = dal.getKClassFromClass(byte[].class);
                 Object objJ = ((MethodHookWrapper) StaticHelpers6
-                        .n(new Object[] { "com.tencent.mm.api.IEmojiInfo" /* "com.tencent.mm.api.IEmojiInfo" /* "com.tencent.mm.api.IEmojiInfo" /* cnb.z(-90430536416042L)  */ }, 1, methodResolverVarT2))
+                        .setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { "com.tencent.mm.api.IEmojiInfo" /* "com.tencent.mm.api.IEmojiInfo" /* "com.tencent.mm.api.IEmojiInfo" /* cnb.z(-90430536416042L)  */ }, 1, methodResolverVarT2))
                         .j(objB);
                 throwIfVar1IsNull(objJ);
                 byte[] bArr = (byte[]) objJ;

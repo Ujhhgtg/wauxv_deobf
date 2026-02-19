@@ -19,7 +19,7 @@ public final class CommandProcessorHook extends SwitchHook implements IDexFind {
         List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(abk.a));
         CommandProcessorHook ablVar = a;
         HookManager hookManagerVarAb = PackageParam.createHook(ablVar, listBf);
-        ablVar.y(hookManagerVarAb, new ws(26));
+        ablVar.hookBefore(hookManagerVarAb, new ws(26));
         hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 

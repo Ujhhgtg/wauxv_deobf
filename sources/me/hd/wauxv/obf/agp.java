@@ -45,7 +45,7 @@ public final class agp extends bws implements IDexFind {
         Class<?> declaringClass = StaticHelpers7.toDexMethod(agb.a).getDeclaringClass();
         KClass zcVarB = dal.getKClassFromClass(String.class);
         Class cls = Boolean.TYPE;
-        Object objJ = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { declaringClass, zcVarB, dal.getKClassFromClass(cls), dal.getKClassFromClass(cls) }, 4, methodResolverVarT)).j(obj,
+        Object objJ = ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { declaringClass, zcVarB, dal.getKClassFromClass(cls), dal.getKClassFromClass(cls) }, 4, methodResolverVarT)).j(obj,
                 str, false, true);
         throwIfVar1IsNull(objJ);
         ((Number) objJ).intValue();

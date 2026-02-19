@@ -57,8 +57,8 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                 String[] strArr = { "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* cnb.z(-359729280842538L)   */ };
                 bahVar.getClass();
                 bahVar.a = SomeStaticHelpers.ab(strArr);
-                cdj cdjVar = new cdj();
-                cdjVar.t("getSnsVideoPath" /* "getSnsVideoPath" /* "getSnsVideoPath" /* "getSnsVideoPath" /* cnb.z(-359591841889066L)   */,
+                DexFinder cdjVar = new DexFinder();
+                cdjVar.usingStrings("getSnsVideoPath" /* "getSnsVideoPath" /* "getSnsVideoPath" /* "getSnsVideoPath" /* cnb.z(-359591841889066L)   */,
                         "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* cnb.z(-360072878226218L)   */);
                 bahVar.d = cdjVar;
                 return kotlinUnitVar;
@@ -67,8 +67,8 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                 String[] strArr2 = { "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* cnb.z(-356297601973034L)   */ };
                 bahVar2.getClass();
                 bahVar2.a = SomeStaticHelpers.ab(strArr2);
-                cdj cdjVar2 = new cdj();
-                cdjVar2.t("getSnsVideoThumbImagePath" /* "getSnsVideoThumbImagePath" /* "getSnsVideoThumbImagePath" /* "getSnsVideoThumbImagePath" /* cnb.z(-356709918833450L)   */,
+                DexFinder cdjVar2 = new DexFinder();
+                cdjVar2.usingStrings("getSnsVideoThumbImagePath" /* "getSnsVideoThumbImagePath" /* "getSnsVideoThumbImagePath" /* "getSnsVideoThumbImagePath" /* cnb.z(-356709918833450L)   */,
                         "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* cnb.z(-356615429552938L)   */);
                 bahVar2.d = cdjVar2;
                 return kotlinUnitVar;
@@ -80,8 +80,8 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                 String[] strArr3 = { "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* cnb.z(-358230337256234L)   */ };
                 bahVar3.getClass();
                 bahVar3.a = SomeStaticHelpers.ab(strArr3);
-                cdj cdjVar3 = new cdj();
-                cdjVar3.t("MicroMsg.SnsVideoService" /* "MicroMsg.SnsVideoService" /* "MicroMsg.SnsVideoService" /* "MicroMsg.SnsVideoService" /* cnb.z(-357543142488874L)   */,
+                DexFinder cdjVar3 = new DexFinder();
+                cdjVar3.usingStrings("MicroMsg.SnsVideoService" /* "MicroMsg.SnsVideoService" /* "MicroMsg.SnsVideoService" /* "MicroMsg.SnsVideoService" /* cnb.z(-357543142488874L)   */,
                         "add video task, but url is weixin, do nothing" /* "add video task, but url is weixin, do nothing" /* "add video task, but url is weixin, do nothing" /* "add video task, but url is weixin, do nothing" /* cnb.z(-357384228698922L)   */);
                 bahVar3.d = cdjVar3;
                 return kotlinUnitVar;
@@ -123,8 +123,8 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                 String[] strArr4 = { "com.tencent.mm.plugin.sport.model" /* "com.tencent.mm.plugin.sport.model" /* "com.tencent.mm.plugin.sport.model" /* "com.tencent.mm.plugin.sport.model" /* cnb.z(-501029409913642L)   */ };
                 bahVar4.getClass();
                 bahVar4.a = SomeStaticHelpers.ab(strArr4);
-                cdj cdjVar4 = new cdj();
-                cdjVar4.t("MicroMsg.Sport.DeviceStepManager" /* "MicroMsg.Sport.DeviceStepManager" /* "MicroMsg.Sport.DeviceStepManager" /* "MicroMsg.Sport.DeviceStepManager" /* cnb.z(-500831841418026L)   */,
+                DexFinder cdjVar4 = new DexFinder();
+                cdjVar4.usingStrings("MicroMsg.Sport.DeviceStepManager" /* "MicroMsg.Sport.DeviceStepManager" /* "MicroMsg.Sport.DeviceStepManager" /* "MicroMsg.Sport.DeviceStepManager" /* cnb.z(-500831841418026L)   */,
                         "get today step from %s todayStep %d" /* "get today step from %s todayStep %d" /* "get today step from %s todayStep %d" /* "get today step from %s todayStep %d" /* cnb.z(-501257043180330L)   */);
                 bahVar4.d = cdjVar4;
                 return kotlinUnitVar;

@@ -16,7 +16,7 @@ public final class cho extends SwitchHook implements IDexFind {
         List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(chn.a));
         cho choVar = a;
         HookManager hookManagerVarAb = PackageParam.createHook(choVar, listBf);
-        choVar.y(hookManagerVarAb, new cgu(6));
+        choVar.hookBefore(hookManagerVarAb, new cgu(6));
         hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 

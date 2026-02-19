@@ -175,7 +175,7 @@ public final /* synthetic */ class atn implements IInvokable {
                 String[] strArr = { "com.tencent.mm.sdk.platformtools" /* "com.tencent.mm.sdk.platformtools" /* "com.tencent.mm.sdk.platformtools" /* cnb.z(-506887745305386L)  */ };
                 bahVar.getClass();
                 bahVar.a = SomeStaticHelpers.ab(strArr);
-                cdj cdjVar = new cdj();
+                DexFinder cdjVar = new DexFinder();
                 cls2 = Integer.class;
                 Class<Integer> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 if (clsBf == null) {
@@ -189,20 +189,20 @@ public final /* synthetic */ class atn implements IInvokable {
                 Class<Integer> clsBf3 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 cdjVar.q(clsBf2, clsBf3 != null ? clsBf3 : Integer.class);
                 fj fjVar = new fj();
-                cdj cdjVar2 = new cdj();
+                DexFinder cdjVar2 = new DexFinder();
                 cdjVar2.s("currentTimeMillis" /* "currentTimeMillis" /* "currentTimeMillis" /* cnb.z(-507312947067690L)  */);
                 fjVar.f(cdjVar2);
-                cdj cdjVar3 = new cdj();
+                DexFinder cdjVar3 = new DexFinder();
                 cdjVar3.s("nextInt" /* "nextInt" /* "nextInt" /* cnb.z(-507252817525546L)  */);
                 fjVar.f(cdjVar3);
-                fjVar.d = bzu.Contains;
+                fjVar.usingStringsType = UsingStringsTypeEnum.Contains;
                 cdjVar.i = fjVar;
                 bahVar.d = cdjVar;
                 return kotlinUnitVar;
             case 4:
                 bah bahVar2 = (bah) obj;
-                cdj cdjVar4 = new cdj();
-                cdjVar4.t("MicroMsg.EmojiPanelClickListener" /* "MicroMsg.EmojiPanelClickListener" /* "MicroMsg.EmojiPanelClickListener" /* cnb.z(-507218457787178L)  */,
+                DexFinder cdjVar4 = new DexFinder();
+                cdjVar4.usingStrings("MicroMsg.EmojiPanelClickListener" /* "MicroMsg.EmojiPanelClickListener" /* "MicroMsg.EmojiPanelClickListener" /* cnb.z(-507218457787178L)  */,
                         "penn send capture emoji click emoji: %s status: %d." /* "penn send capture emoji click emoji: %s status: %d." /* "penn send capture emoji click emoji: %s status: %d." /* cnb.z(-495531851774762L)  */);
                 bahVar2.getClass();
                 bahVar2.d = cdjVar4;
@@ -419,9 +419,9 @@ public final /* synthetic */ class atn implements IInvokable {
                 return kotlinUnitVar;
             case 10:
                 bah bahVar3 = (bah) obj;
-                cdj cdjVar5 = new cdj();
-                cdj.l(cdjVar5, "com.tencent.mm.storage.emotion.EmojiInfo" /* "com.tencent.mm.storage.emotion.EmojiInfo" /* "com.tencent.mm.storage.emotion.EmojiInfo" /* cnb.z(-75471165324074L)  */);
-                cdjVar5.t("save emoji thumb error" /* "save emoji thumb error" /* "save emoji thumb error" /* cnb.z(-75844827478826L)  */);
+                DexFinder cdjVar5 = new DexFinder();
+                DexFinder.setClassEquals(cdjVar5, "com.tencent.mm.storage.emotion.EmojiInfo" /* "com.tencent.mm.storage.emotion.EmojiInfo" /* "com.tencent.mm.storage.emotion.EmojiInfo" /* cnb.z(-75471165324074L)  */);
+                cdjVar5.usingStrings("save emoji thumb error" /* "save emoji thumb error" /* "save emoji thumb error" /* cnb.z(-75844827478826L)  */);
                 bahVar3.getClass();
                 bahVar3.d = cdjVar5;
                 return kotlinUnitVar;
@@ -549,7 +549,7 @@ public final /* synthetic */ class atn implements IInvokable {
                 return kotlinUnitVar;
             case 21:
                 bah bahVar4 = (bah) obj;
-                cdj cdjVar6 = new cdj();
+                DexFinder cdjVar6 = new DexFinder();
                 Class<String> clsBf5 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 if (clsBf5 == null) {
                     clsBf5 = cls;
@@ -564,7 +564,7 @@ public final /* synthetic */ class atn implements IInvokable {
                 cls3 = Boolean.class;
                 Class<Boolean> clsBf8 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls3));
                 cdjVar6.q(clsBf6, cls, clsBf8 != null ? clsBf8 : Boolean.class);
-                cdjVar6.t("MicroMsg.ExptService" /* "MicroMsg.ExptService" /* "MicroMsg.ExptService" /* cnb.z(-36588826393386L)  */,
+                cdjVar6.usingStrings("MicroMsg.ExptService" /* "MicroMsg.ExptService" /* "MicroMsg.ExptService" /* cnb.z(-36588826393386L)  */,
                         "Fail to query value, return default value '%s' instead." /* "Fail to query value, return default value '%s' instead." /* "Fail to query value, return default value '%s' instead." /* cnb.z(-42528766163754L)  */);
                 bahVar4.getClass();
                 bahVar4.d = cdjVar6;
@@ -703,8 +703,8 @@ public final /* synthetic */ class atn implements IInvokable {
                 String[] strArr3 = { "com.tencent.mm.plugin.fav.ui" /* "com.tencent.mm.plugin.fav.ui" /* "com.tencent.mm.plugin.fav.ui" /* cnb.z(-43383464655658L)  */ };
                 bahVar5.getClass();
                 bahVar5.a = SomeStaticHelpers.ab(strArr3);
-                cdj cdjVar7 = new cdj();
-                cdjVar7.t("MicroMsg.FavoriteIndexUI" /* "MicroMsg.FavoriteIndexUI" /* "MicroMsg.FavoriteIndexUI" /* cnb.z(-43241730734890L)  */, "onMMMenuItemSelected" /*
+                DexFinder cdjVar7 = new DexFinder();
+                cdjVar7.usingStrings("MicroMsg.FavoriteIndexUI" /* "MicroMsg.FavoriteIndexUI" /* "MicroMsg.FavoriteIndexUI" /* cnb.z(-43241730734890L)  */, "onMMMenuItemSelected" /*
                                                                                                             * cnb.z(-
                                                                                                             * 40385577483050L)
                                                                                                             */);
@@ -715,8 +715,8 @@ public final /* synthetic */ class atn implements IInvokable {
                 String[] strArr4 = { "com.tencent.mm.plugin.fav.ui" /* "com.tencent.mm.plugin.fav.ui" /* "com.tencent.mm.plugin.fav.ui" /* cnb.z(-43924630534954L)  */ };
                 bahVar6.getClass();
                 bahVar6.a = SomeStaticHelpers.ab(strArr4);
-                cdj cdjVar8 = new cdj();
-                cdjVar8.t("MicroMsg.FavoriteIndexUI" /* "MicroMsg.FavoriteIndexUI" /* "MicroMsg.FavoriteIndexUI" /* cnb.z(-43782896614186L)  */, (cnb.ab(ewk.b) || cnb.ac(ewh.c))
+                DexFinder cdjVar8 = new DexFinder();
+                cdjVar8.usingStrings("MicroMsg.FavoriteIndexUI" /* "MicroMsg.FavoriteIndexUI" /* "MicroMsg.FavoriteIndexUI" /* cnb.z(-43782896614186L)  */, (cnb.ab(ewk.b) || cnb.ac(ewh.c))
                         ? "[OnCreateContextMMMenu] pos = "
                         /* "[OnCreateContextMMMenu] pos = " /* "[OnCreateContextMMMenu] pos = " /* cnb.z(-43125766617898L)  */ : "onCreateContextMenu() pos:%s id:%s fav_id:%s" /*
                                                                                                         * cnb.z(-

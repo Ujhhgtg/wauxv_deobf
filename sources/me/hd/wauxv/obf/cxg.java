@@ -37,7 +37,7 @@ public final class cxg extends SwitchHook implements IDexFind {
             List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(cxe.a));
             cxg cxgVar = a;
             HookManager hookManagerVarAb = PackageParam.createHook(cxgVar, listBf);
-            cxgVar.y(hookManagerVarAb, new cvc(6));
+            cxgVar.hookBefore(hookManagerVarAb, new cvc(6));
             hookManagerVarAb.initInstantCollectionAndApplyHooks();
         }
     }

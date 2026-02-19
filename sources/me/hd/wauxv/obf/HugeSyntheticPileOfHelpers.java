@@ -523,7 +523,7 @@ public abstract class HugeSyntheticPileOfHelpers {
         }
     }
 
-    public static final void resumeCoroutine(Object obj, afw afwVar) throws aoq {
+    public static final void resumeCoroutine(Object obj, kotlinx$coroutines$internal$DispatchedContinuation afwVar) throws aoq {
         if (!(afwVar instanceof DispatchedContinuation)) {
             afwVar._bn(obj);
             return;

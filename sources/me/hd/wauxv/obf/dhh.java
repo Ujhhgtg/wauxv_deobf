@@ -26,12 +26,12 @@ public final class dhh extends SwitchHook {
         dhh dhhVar = a;
         HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         HookManager hookManagerVarAd = dhhVar.createImmediateHook(methodHookWrapperVar, hookPriorityEnumVar);
-        dhhVar.x(hookManagerVarAd, new dhg(0));
+        dhhVar.hookAfter(hookManagerVarAd, new dhg(0));
         hookManagerVarAd.initInstantCollectionAndApplyHooks();
         MethodResolver methodResolverVarT2 = bmuVarS.getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT2.name = "onPreferenceTreeClick" /* "onPreferenceTreeClick" /* "onPreferenceTreeClick" /* "onPreferenceTreeClick" /* cnb.z(-594822905723690L)   */;
-        HookManager hookManagerVarAd2 = dhhVar.createImmediateHook((MethodHookWrapper) StaticHelpers6.n(new Object[] { eoz.a, cvh.a.b() }, 2, methodResolverVarT2), hookPriorityEnumVar);
-        dhhVar.y(hookManagerVarAd2, new dhg(1));
+        HookManager hookManagerVarAd2 = dhhVar.createImmediateHook((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { eoz.a, cvh.a.b() }, 2, methodResolverVarT2), hookPriorityEnumVar);
+        dhhVar.hookBefore(hookManagerVarAd2, new dhg(1));
         hookManagerVarAd2.initInstantCollectionAndApplyHooks();
     }
 

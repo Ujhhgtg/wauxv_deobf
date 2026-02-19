@@ -18,7 +18,7 @@ public final class CustomBalanceHook extends SwitchHook {
         HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         CustomBalanceHook aioVar = a;
         HookManager hookManagerVarAd = aioVar.createImmediateHook(methodHookWrapperVar, hookPriorityEnumVar);
-        aioVar.y(hookManagerVarAd, new age(23));
+        aioVar.hookBefore(hookManagerVarAd, new age(23));
         hookManagerVarAd.initInstantCollectionAndApplyHooks();
     }
 

@@ -49,8 +49,8 @@ public final /* synthetic */ class bty implements IInvokable {
                 String[] strArr = { "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* cnb.z(-355859515308842L)  */ };
                 bahVar.getClass();
                 bahVar.a = SomeStaticHelpers.ab(strArr);
-                cdj cdjVar = new cdj();
-                cdjVar.t("getSnsDirectPath" /* "getSnsDirectPath" /* "getSnsDirectPath" /* cnb.z(-355722076355370L)  */,
+                DexFinder cdjVar = new DexFinder();
+                cdjVar.usingStrings("getSnsDirectPath" /* "getSnsDirectPath" /* "getSnsDirectPath" /* cnb.z(-355722076355370L)  */,
                         "com.tencent.mm.plugin.sns.model.LazyerImageLoader2" /* "com.tencent.mm.plugin.sns.model.LazyerImageLoader2" /* "com.tencent.mm.plugin.sns.model.LazyerImageLoader2" /* cnb.z(-356147278117674L)  */);
                 bahVar.d = cdjVar;
                 return kotlinUnitVar;
@@ -156,18 +156,18 @@ public final /* synthetic */ class bty implements IInvokable {
                 return kotlinUnitVar;
             case 5:
                 bah bahVar2 = (bah) obj;
-                cdj cdjVar2 = new cdj();
+                DexFinder cdjVar2 = new DexFinder();
                 cdjVar2.s("onLocationChanged" /* "onLocationChanged" /* "onLocationChanged" /* cnb.z(-492868972051242L)  */);
-                cdjVar2.t("MicroMsg.DefaultTencentLocationManager" /* "MicroMsg.DefaultTencentLocationManager" /* "MicroMsg.DefaultTencentLocationManager" /* cnb.z(-494458109950762L)  */,
+                cdjVar2.usingStrings("MicroMsg.DefaultTencentLocationManager" /* "MicroMsg.DefaultTencentLocationManager" /* "MicroMsg.DefaultTencentLocationManager" /* cnb.z(-494458109950762L)  */,
                         "[mlocationListener]error:%d, reason:%s" /* "[mlocationListener]error:%d, reason:%s" /* "[mlocationListener]error:%d, reason:%s" /* cnb.z(-494290606226218L)  */);
                 bahVar2.getClass();
                 bahVar2.d = cdjVar2;
                 return kotlinUnitVar;
             case 6:
                 bah bahVar3 = (bah) obj;
-                cdj cdjVar3 = new cdj();
+                DexFinder cdjVar3 = new DexFinder();
                 cdjVar3.s("onLocationChanged" /* "onLocationChanged" /* "onLocationChanged" /* cnb.z(-492744417999658L)  */);
-                cdjVar3.t("MicroMsg.SLocationListener" /* "MicroMsg.SLocationListener" /* "MicroMsg.SLocationListener" /* cnb.z(-492684288457514L)  */);
+                cdjVar3.usingStrings("MicroMsg.SLocationListener" /* "MicroMsg.SLocationListener" /* "MicroMsg.SLocationListener" /* cnb.z(-492684288457514L)  */);
                 bahVar3.getClass();
                 bahVar3.d = cdjVar3;
                 return kotlinUnitVar;
@@ -182,8 +182,8 @@ public final /* synthetic */ class bty implements IInvokable {
                 String[] strArr2 = { "com.tencent.mm.plugin.location.ui.impl" /* "com.tencent.mm.plugin.location.ui.impl" /* "com.tencent.mm.plugin.location.ui.impl" /* cnb.z(-494655678446378L)  */ };
                 bahVar4.getClass();
                 bahVar4.a = SomeStaticHelpers.ab(strArr2);
-                cdj cdjVar4 = new cdj();
-                cdjVar4.t("MicroMsg.MMPoiMapUI" /* "MicroMsg.MMPoiMapUI" /* "MicroMsg.MMPoiMapUI" /* cnb.z(-493938418907946L)  */, "invalid lat lng" /*
+                DexFinder cdjVar4 = new DexFinder();
+                cdjVar4.usingStrings("MicroMsg.MMPoiMapUI" /* "MicroMsg.MMPoiMapUI" /* "MicroMsg.MMPoiMapUI" /* cnb.z(-493938418907946L)  */, "invalid lat lng" /*
                                                                                                    * cnb.z(-
                                                                                                    * 493886879300394L)
                                                                                                    */);
@@ -191,9 +191,9 @@ public final /* synthetic */ class bty implements IInvokable {
                 return kotlinUnitVar;
             case 10:
                 bah bahVar5 = (bah) obj;
-                cdj cdjVar5 = new cdj();
+                DexFinder cdjVar5 = new DexFinder();
                 cdjVar5.s("onLocationChanged" /* "onLocationChanged" /* "onLocationChanged" /* cnb.z(-493066540546858L)  */);
-                cdjVar5.t("MicroMsg.SLocationListenerWgs84" /* "MicroMsg.SLocationListenerWgs84" /* "MicroMsg.SLocationListenerWgs84" /* cnb.z(-493006411004714L)  */);
+                cdjVar5.usingStrings("MicroMsg.SLocationListenerWgs84" /* "MicroMsg.SLocationListenerWgs84" /* "MicroMsg.SLocationListenerWgs84" /* cnb.z(-493006411004714L)  */);
                 bahVar5.getClass();
                 bahVar5.d = cdjVar5;
                 return kotlinUnitVar;
@@ -292,13 +292,13 @@ public final /* synthetic */ class bty implements IInvokable {
             case 12:
                 bxj bxjVar = bxj.a;
                 HookManager hookManagerVarAb = PackageParam.createHook(bxjVar, dqc.toSingletonList((Method) obj));
-                bxjVar.y(hookManagerVarAb, new StillAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(hookManagerVarAb, i2));
+                bxjVar.hookBefore(hookManagerVarAb, new StillAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(hookManagerVarAb, i2));
                 hookManagerVarAb.initInstantCollectionAndApplyHooks();
                 return kotlinUnitVar;
             case 13:
                 bxj bxjVar2 = bxj.a;
                 HookManager hookManagerVarAb2 = PackageParam.createHook(bxjVar2, dqc.toSingletonList((Method) obj));
-                bxjVar2.y(hookManagerVarAb2, new bty(4));
+                bxjVar2.hookBefore(hookManagerVarAb2, new bty(4));
                 hookManagerVarAb2.initInstantCollectionAndApplyHooks();
                 return kotlinUnitVar;
             case 14:
@@ -315,8 +315,8 @@ public final /* synthetic */ class bty implements IInvokable {
                 String[] strArr3 = { "com.tencent.mm.plugin.luckymoney.model" /* "com.tencent.mm.plugin.luckymoney.model" /* "com.tencent.mm.plugin.luckymoney.model" /* cnb.z(-374130306186026L)  */ };
                 bahVar6.getClass();
                 bahVar6.a = SomeStaticHelpers.ab(strArr3);
-                cdj cdjVar6 = new cdj();
-                cdjVar6.t("MicroMsg.LuckyMoneyUtil" /* "MicroMsg.LuckyMoneyUtil" /* "MicroMsg.LuckyMoneyUtil" /* cnb.z(-375612069903146L)  */, "exception:%s" /*
+                DexFinder cdjVar6 = new DexFinder();
+                cdjVar6.usingStrings("MicroMsg.LuckyMoneyUtil" /* "MicroMsg.LuckyMoneyUtil" /* "MicroMsg.LuckyMoneyUtil" /* cnb.z(-375612069903146L)  */, "exception:%s" /*
                                                                                                     * cnb.z(-
                                                                                                     * 375508990688042L)
                                                                                                     */);
@@ -351,7 +351,7 @@ public final /* synthetic */ class bty implements IInvokable {
                 return kotlinUnitVar;
             case 23:
                 bah bahVar7 = (bah) obj;
-                cdj cdjVar7 = new cdj();
+                DexFinder cdjVar7 = new DexFinder();
                 byr.a.getClass();
                 cdjVar7.o(StaticHelpers7.az(byp.a));
                 cls = Class.class;
@@ -375,16 +375,16 @@ public final /* synthetic */ class bty implements IInvokable {
                 return kotlinUnitVar;
             case 26:
                 bah bahVar8 = (bah) obj;
-                cdj cdjVar8 = new cdj();
+                DexFinder cdjVar8 = new DexFinder();
                 Class clsB = cvh.a.b();
                 cls2 = Integer.class;
                 Class<Integer> clsBf2 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 cdjVar8.q(clsB, clsBf2 != null ? clsBf2 : Integer.class);
                 fj fjVar = new fj();
-                cdj cdjVar9 = new cdj();
+                DexFinder cdjVar9 = new DexFinder();
                 cdjVar9.s("notifyDataSetChanged" /* "notifyDataSetChanged" /* "notifyDataSetChanged" /* cnb.z(-101850854456106L)  */);
                 fjVar.f(cdjVar9);
-                fjVar.d = bzu.Contains;
+                fjVar.usingStringsType = UsingStringsTypeEnum.Contains;
                 cdjVar8.i = fjVar;
                 bahVar8.getClass();
                 bahVar8.d = cdjVar8;
@@ -427,9 +427,9 @@ public final /* synthetic */ class bty implements IInvokable {
                 return kotlinUnitVar;
             default:
                 bah bahVar9 = (bah) obj;
-                cdj cdjVar10 = new cdj();
-                cdj.l(cdjVar10, "com.tencent.mm.ui.MainTabUI" /* "com.tencent.mm.ui.MainTabUI" /* "com.tencent.mm.ui.MainTabUI" /* cnb.z(-68212670593834L)  */);
-                cdjVar10.t("MicroMsg.LauncherUI.MainTabUI" /* "MicroMsg.LauncherUI.MainTabUI" /* "MicroMsg.LauncherUI.MainTabUI" /* cnb.z(-68676527061802L)  */, "doOnCreate" /*
+                DexFinder cdjVar10 = new DexFinder();
+                DexFinder.setClassEquals(cdjVar10, "com.tencent.mm.ui.MainTabUI" /* "com.tencent.mm.ui.MainTabUI" /* "com.tencent.mm.ui.MainTabUI" /* cnb.z(-68212670593834L)  */);
+                cdjVar10.usingStrings("MicroMsg.LauncherUI.MainTabUI" /* "MicroMsg.LauncherUI.MainTabUI" /* "MicroMsg.LauncherUI.MainTabUI" /* cnb.z(-68676527061802L)  */, "doOnCreate" /*
                                                                                                         * cnb.z(-
                                                                                                         * 68530498173738L)
                                                                                                         */);

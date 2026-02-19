@@ -17,7 +17,7 @@ public final class etr extends SwitchHook implements IDexFind {
         List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(etp.a));
         etr etrVar = a;
         HookManager hookManagerVarAb = PackageParam.createHook(etrVar, listBf);
-        etrVar.y(hookManagerVarAb, new epy(6));
+        etrVar.hookBefore(hookManagerVarAb, new epy(6));
         hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 

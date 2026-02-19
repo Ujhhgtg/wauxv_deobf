@@ -30,7 +30,7 @@ public final /* synthetic */ class bka implements IInvokable {
         Class cls;
         int i = this.a;
         int i2 = 2;
-        afw afwVar = null;
+        kotlinx$coroutines$internal$DispatchedContinuation afwVar = null;
         Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         Object obj2 = this.c;
         Object obj3 = this.b;

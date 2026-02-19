@@ -270,7 +270,7 @@ public final /* synthetic */ class qp implements cke, aww, awz, EventListener.Fa
         MethodResolver methodResolverVarT = dqc.getWrapperConfiguration((Button) kotlin$LazyVar2.getValue()).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.name = "setIconResource" /* "setIconResource" /* "setIconResource" /* "setIconResource" /* cnb.z(-394539990776618L)   */;
         Class cls = Integer.TYPE;
-        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.getKClassFromClass(cls) }, 1, methodResolverVarT);
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(cls) }, 1, methodResolverVarT);
         ael aelVar3 = aekVar.a;
         if (aelVar3 == null) {
             throwLateinitPropNotInitYet("info" /* "info" /* "info" /* "info" /* cnb.z(-394471271299882L)   */);
@@ -279,7 +279,7 @@ public final /* synthetic */ class qp implements cke, aww, awz, EventListener.Fa
         methodHookWrapperVar.e(Integer.valueOf(aelVar3.g));
         MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration((Button) kotlin$LazyVar3.getValue()).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT2.name = "setIconResource" /* "setIconResource" /* "setIconResource" /* "setIconResource" /* cnb.z(-393882860780330L)   */;
-        MethodHookWrapper methodHookWrapperVar2 = (MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.getKClassFromClass(cls) }, 1, methodResolverVarT2);
+        MethodHookWrapper methodHookWrapperVar2 = (MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(cls) }, 1, methodResolverVarT2);
         ael aelVar4 = aekVar.a;
         if (aelVar4 == null) {
             throwLateinitPropNotInitYet("info" /* "info" /* "info" /* "info" /* cnb.z(-393814141303594L)   */);

@@ -8,14 +8,14 @@ public final class bss extends dcw implements bgk {
     public final /* synthetic */ ek e;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public bss(ek ekVar, afw afwVar) {
+    public bss(ek ekVar, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         super(3, afwVar);
         this.e = ekVar;
     }
 
     @Override // me.hd.wauxv.obf.bgk
     public final Object b(Object obj, Object obj2, Object obj3) {
-        bss bssVar = new bss(this.e, (afw) obj3);
+        bss bssVar = new bss(this.e, (kotlinx$coroutines$internal$DispatchedContinuation) obj3);
         bssVar.d = (ajx) obj;
         return bssVar.i(Kotlin$Unit.INSTANCE);
     }

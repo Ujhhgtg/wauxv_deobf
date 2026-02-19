@@ -92,21 +92,21 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 return kotlinUnitVar;
             case 3:
                 bah bahVar = (bah) obj;
-                cdj cdjVar = new cdj();
-                cdj.l(cdjVar, "com.tencent.mm.ui.chatting.gallery.ImageGalleryUI" /* "com.tencent.mm.ui.chatting.gallery.ImageGalleryUI" /* "com.tencent.mm.ui.chatting.gallery.ImageGalleryUI" /* cnb.z(-441565587700522L)  */);
+                DexFinder cdjVar = new DexFinder();
+                DexFinder.setClassEquals(cdjVar, "com.tencent.mm.ui.chatting.gallery.ImageGalleryUI" /* "com.tencent.mm.ui.chatting.gallery.ImageGalleryUI" /* "com.tencent.mm.ui.chatting.gallery.ImageGalleryUI" /* cnb.z(-441565587700522L)  */);
                 if (cnb.ab(ewk.h) || cnb.ac(ewh.g)) {
-                    cdjVar.t("setHdImageActionDownloadable" /* "setHdImageActionDownloadable" /* "setHdImageActionDownloadable" /* cnb.z(-441917775018794L)  */);
+                    cdjVar.usingStrings("setHdImageActionDownloadable" /* "setHdImageActionDownloadable" /* "setHdImageActionDownloadable" /* cnb.z(-441917775018794L)  */);
                 } else {
-                    cdjVar.t("setImageHdImgBtnVisibility" /* "setImageHdImgBtnVisibility" /* "setImageHdImgBtnVisibility" /* cnb.z(-441827580705578L)  */);
+                    cdjVar.usingStrings("setImageHdImgBtnVisibility" /* "setImageHdImgBtnVisibility" /* "setImageHdImgBtnVisibility" /* cnb.z(-441827580705578L)  */);
                 }
                 bahVar.getClass();
                 bahVar.d = cdjVar;
                 return kotlinUnitVar;
             case 4:
                 bah bahVar2 = (bah) obj;
-                cdj cdjVar2 = new cdj();
-                cdj.l(cdjVar2, "com.tencent.mm.ui.chatting.gallery.ImageGalleryUI" /* "com.tencent.mm.ui.chatting.gallery.ImageGalleryUI" /* "com.tencent.mm.ui.chatting.gallery.ImageGalleryUI" /* cnb.z(-441127501036330L)  */);
-                cdjVar2.t("checkNeedShowOriginVideoBtn" /* "checkNeedShowOriginVideoBtn" /* "checkNeedShowOriginVideoBtn" /* cnb.z(-440929932540714L)  */);
+                DexFinder cdjVar2 = new DexFinder();
+                DexFinder.setClassEquals(cdjVar2, "com.tencent.mm.ui.chatting.gallery.ImageGalleryUI" /* "com.tencent.mm.ui.chatting.gallery.ImageGalleryUI" /* "com.tencent.mm.ui.chatting.gallery.ImageGalleryUI" /* cnb.z(-441127501036330L)  */);
+                cdjVar2.usingStrings("checkNeedShowOriginVideoBtn" /* "checkNeedShowOriginVideoBtn" /* "checkNeedShowOriginVideoBtn" /* cnb.z(-440929932540714L)  */);
                 bahVar2.getClass();
                 bahVar2.d = cdjVar2;
                 return kotlinUnitVar;
@@ -115,7 +115,7 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 return kotlinUnitVar;
             case 6:
                 bah bahVar3 = (bah) obj;
-                cdj cdjVar3 = new cdj();
+                DexFinder cdjVar3 = new DexFinder();
                 cls2 = ImageView.class;
                 Class<ImageView> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 cls2 = clsBf != null ? clsBf : ImageView.class;
@@ -127,7 +127,7 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 cls4 = clsBf3 != null ? clsBf3 : Float.class;
                 Class<Boolean> clsBf4 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 cdjVar3.q(cls2, cls3, cls4, clsBf4 != null ? clsBf4 : Boolean.class);
-                cdjVar3.t("MicroMsg.AvatarDrawable" /* "MicroMsg.AvatarDrawable" /* "MicroMsg.AvatarDrawable" /* cnb.z(-118858924948266L)  */);
+                cdjVar3.usingStrings("MicroMsg.AvatarDrawable" /* "MicroMsg.AvatarDrawable" /* "MicroMsg.AvatarDrawable" /* cnb.z(-118858924948266L)  */);
                 bahVar3.getClass();
                 bahVar3.d = cdjVar3;
                 return kotlinUnitVar;
@@ -140,18 +140,18 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 bagVar.getClass();
                 bagVar.a = SomeStaticHelpers.ab(strArr);
                 zb zbVar = new zb();
-                cdj cdjVar4 = new cdj();
+                DexFinder cdjVar4 = new DexFinder();
                 cdjVar4.s("onAccountInitialized" /* "onAccountInitialized" /* "onAccountInitialized" /* cnb.z(-361601886583594L)  */);
-                cdjVar4.t("//avatar" /* "//avatar" /* "//avatar" /* cnb.z(-361477332532010L)  */);
+                cdjVar4.usingStrings("//avatar" /* "//avatar" /* "//avatar" /* cnb.z(-361477332532010L)  */);
                 fj fjVar = zbVar.f;
                 if (fjVar == null) {
                     fjVar = new fj();
                 }
                 zbVar.f = fjVar;
                 fjVar.f(cdjVar4);
-                cdj cdjVar5 = new cdj();
+                DexFinder cdjVar5 = new DexFinder();
                 cdjVar5.s("onAccountReleased" /* "onAccountReleased" /* "onAccountReleased" /* cnb.z(-360906101881642L)  */);
-                cdjVar5.t("//avatar" /* "//avatar" /* "//avatar" /* cnb.z(-360845972339498L)  */);
+                cdjVar5.usingStrings("//avatar" /* "//avatar" /* "//avatar" /* cnb.z(-360845972339498L)  */);
                 fj fjVar2 = zbVar.f;
                 if (fjVar2 == null) {
                     fjVar2 = new fj();
@@ -432,13 +432,13 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
             case 15:
                 un unVar = un.a;
                 HookManager hookManagerVarAb = PackageParam.createHook(unVar, dqc.toSingletonList((Method) obj));
-                unVar.y(hookManagerVarAb, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(17));
+                unVar.hookBefore(hookManagerVarAb, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(17));
                 hookManagerVarAb.initInstantCollectionAndApplyHooks();
                 return kotlinUnitVar;
             case 16:
                 un unVar2 = un.a;
                 HookManager hookManagerVarAb2 = PackageParam.createHook(unVar2, dqc.toSingletonList((Method) obj));
-                unVar2.y(hookManagerVarAb2, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(18));
+                unVar2.hookBefore(hookManagerVarAb2, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(18));
                 hookManagerVarAb2.initInstantCollectionAndApplyHooks();
                 return kotlinUnitVar;
             case 17:
@@ -558,8 +558,8 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 return kotlinUnitVar;
             case 21:
                 bah bahVar4 = (bah) obj;
-                cdj cdjVar6 = new cdj();
-                cdjVar6.t("MicroMsg.FavSendFilter" /* "MicroMsg.FavSendFilter" /* "MicroMsg.FavSendFilter" /* cnb.z(-489398638476074L)  */,
+                DexFinder cdjVar6 = new DexFinder();
+                cdjVar6.usingStrings("MicroMsg.FavSendFilter" /* "MicroMsg.FavSendFilter" /* "MicroMsg.FavSendFilter" /* cnb.z(-489398638476074L)  */,
                         "[FAV_ITEM_TYPE_VOICE] canFilterVoice = true, back" /* "[FAV_ITEM_TYPE_VOICE] canFilterVoice = true, back" /* "[FAV_ITEM_TYPE_VOICE] canFilterVoice = true, back" /* cnb.z(-489299854228266L)  */);
                 bahVar4.getClass();
                 bahVar4.d = cdjVar6;
@@ -569,9 +569,9 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 String[] strArr3 = { "com.tencent.mm.plugin.fav.ui" /* "com.tencent.mm.plugin.fav.ui" /* "com.tencent.mm.plugin.fav.ui" /* cnb.z(-489652041546538L)  */ };
                 bahVar5.getClass();
                 bahVar5.a = SomeStaticHelpers.ab(strArr3);
-                cdj cdjVar7 = new cdj();
+                DexFinder cdjVar7 = new DexFinder();
                 cdjVar7.s("onItemClick" /* "onItemClick" /* "onItemClick" /* cnb.z(-477948255664938L)  */);
-                cdjVar7.t("onItemClick" /* "onItemClick" /* "onItemClick" /* cnb.z(-477931075795754L)  */, (cnb.ab(ewk.a) || cnb.ac(ewh.c))
+                cdjVar7.usingStrings("onItemClick" /* "onItemClick" /* "onItemClick" /* cnb.z(-477931075795754L)  */, (cnb.ab(ewk.a) || cnb.ac(ewh.c))
                         ? "com/tencent/mm/plugin/fav/ui/FavTopSearchUIC$initOnItemClickListener$1"
                         /* "com/tencent/mm/plugin/fav/ui/FavTopSearchUIC$initOnItemClickListener$1" /* "com/tencent/mm/plugin/fav/ui/FavTopSearchUIC$initOnItemClickListener$1" /* cnb.z(-477845176449834L)  */ : "com/tencent/mm/plugin/fav/ui/FavSearchUI$10" /*
                                                                                                         * cnb.z(-
@@ -672,7 +672,7 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 return kotlinUnitVar;
             case 25:
                 bah bahVar6 = (bah) obj;
-                cdj cdjVar8 = new cdj();
+                DexFinder cdjVar8 = new DexFinder();
                 uq.a.getClass();
                 cdjVar8.o(ajn.tryGetClassByClassName("com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* cnb.z(-75127567940394L)  */));
                 cdjVar8.r(Void.TYPE);
@@ -683,8 +683,8 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 Class<Boolean> clsBf8 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 cdjVar8.q(clsBf7, clsBf8 != null ? clsBf8 : Boolean.class);
                 fj fjVar3 = new fj();
-                cdj cdjVar9 = new cdj();
-                cdjVar9.t("MicroMsg.ChatFooter" /* "MicroMsg.ChatFooter" /* "MicroMsg.ChatFooter" /* cnb.z(-76476187671338L)  */, "this is a quote msg" /*
+                DexFinder cdjVar9 = new DexFinder();
+                cdjVar9.usingStrings("MicroMsg.ChatFooter" /* "MicroMsg.ChatFooter" /* "MicroMsg.ChatFooter" /* cnb.z(-76476187671338L)  */, "this is a quote msg" /*
                                                                                                       * cnb.z(-
                                                                                                       * 76905684400938L)
                                                                                                       */);

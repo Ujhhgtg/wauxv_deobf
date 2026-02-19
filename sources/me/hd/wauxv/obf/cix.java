@@ -200,7 +200,7 @@ public final class cix {
     }
 
     public final boolean ac() {
-        afw[] afwVarArr;
+        kotlinx$coroutines$internal$DispatchedContinuation[] afwVarArr;
         ArrayList arrayList = this.x;
         km kmVar = this.f;
         while (!kmVar.isEmpty() && (((cio) kmVar.last()).b instanceof cji)) {
@@ -228,7 +228,7 @@ public final class cix {
                     throw null;
                 }
                 dhb dhbVar = this.y;
-                afw[] afwVarArr2 = bhs.e;
+                kotlinx$coroutines$internal$DispatchedContinuation[] afwVarArr2 = bhs.e;
                 synchronized (dhbVar) {
                     int i2 = dhbVar.g;
                     Object[] objArrI = dhbVar.a;
@@ -256,7 +256,7 @@ public final class cix {
                     dhbVar.c = dhbVar.h() + ((long) dhbVar.g);
                     afwVarArr = afwVarArr2;
                 }
-                for (afw afwVar : afwVarArr) {
+                for (kotlinx$coroutines$internal$DispatchedContinuation afwVar : afwVarArr) {
                     if (afwVar != null) {
                         afwVar._bn(Kotlin$Unit.INSTANCE);
                     }

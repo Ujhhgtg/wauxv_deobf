@@ -22,7 +22,7 @@ public abstract class aot extends dpy {
     public void j(CancellationException cancellationException) {
     }
 
-    public abstract afw l();
+    public abstract kotlinx$coroutines$internal$DispatchedContinuation l();
 
     public Throwable m(Object obj) {
         abr abrVar = obj instanceof abr ? (abr) obj : null;
@@ -54,7 +54,7 @@ public abstract class aot extends dpy {
     @Override // java.lang.Runnable
     public final void run() {
         try {
-            afw afwVarL = l();
+            kotlinx$coroutines$internal$DispatchedContinuation afwVarL = l();
             throwIfVar1IsNull(afwVarL,
                     "null cannot be cast to non-null type kotlinx.coroutines.internal.DispatchedContinuation<T of kotlinx.coroutines.DispatchedTask>");
             DispatchedContinuation dispatchedContinuationVar = (DispatchedContinuation) afwVarL;

@@ -6,19 +6,19 @@ import java.lang.reflect.Method;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public abstract class nc implements afw, ahr, Serializable {
-    public final afw j;
+public abstract class nc implements kotlinx$coroutines$internal$DispatchedContinuation, ahr, Serializable {
+    public final kotlinx$coroutines$internal$DispatchedContinuation j;
 
-    public nc(afw afwVar) {
+    public nc(kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         this.j = afwVar;
     }
 
     @Override // me.hd.wauxv.obf.afw
     public final void _bn(Object obj) {
-        afw afwVar = this;
+        kotlinx$coroutines$internal$DispatchedContinuation afwVar = this;
         while (true) {
             nc ncVar = (nc) afwVar;
-            afw afwVar2 = ncVar.j;
+            kotlinx$coroutines$internal$DispatchedContinuation afwVar2 = ncVar.j;
             throwIfVar1IsNull(afwVar2);
             try {
                 obj = ncVar.i(obj);
@@ -37,7 +37,7 @@ public abstract class nc implements afw, ahr, Serializable {
         }
     }
 
-    public afw h(Object obj, afw afwVar) {
+    public kotlinx$coroutines$internal$DispatchedContinuation h(Object obj, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         throw new UnsupportedOperationException("create(Any?;Continuation) has not been overridden");
     }
 
@@ -45,7 +45,7 @@ public abstract class nc implements afw, ahr, Serializable {
 
     @Override // me.hd.wauxv.obf.ahr
     public final ahr k() {
-        afw afwVar = this.j;
+        kotlinx$coroutines$internal$DispatchedContinuation afwVar = this.j;
         if (afwVar instanceof ahr) {
             return (ahr) afwVar;
         }

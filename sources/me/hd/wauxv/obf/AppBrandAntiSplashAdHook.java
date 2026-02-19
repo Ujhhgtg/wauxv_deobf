@@ -26,7 +26,7 @@ public final class AppBrandAntiSplashAdHook extends SwitchHook implements IDexFi
         List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(gv.a));
         AppBrandAntiSplashAdHook gwVar = a;
         HookManager hookManagerVarAb = PackageParam.createHook(gwVar, listBf);
-        gwVar.y(hookManagerVarAb, new gi(14));
+        gwVar.hookBefore(hookManagerVarAb, new gi(14));
         hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 

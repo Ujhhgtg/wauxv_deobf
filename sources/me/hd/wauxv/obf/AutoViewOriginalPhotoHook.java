@@ -23,7 +23,7 @@ public final class AutoViewOriginalPhotoHook extends SwitchHook implements IDexF
             List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod((DexDescData) it.next()));
             AutoViewOriginalPhotoHook mmVar = a;
             HookManager hookManagerVarAb = PackageParam.createHook(mmVar, listBf);
-            mmVar.x(hookManagerVarAb, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(0));
+            mmVar.hookAfter(hookManagerVarAb, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(0));
             hookManagerVarAb.initInstantCollectionAndApplyHooks();
         }
     }

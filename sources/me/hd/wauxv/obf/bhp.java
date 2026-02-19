@@ -24,7 +24,7 @@ public final class bhp extends doi implements bgj {
      * JADX WARN: 'super' call moved to the top of the method (can break code
      * semantics)
      */
-    public bhp(String str, byx byxVar, MainActivity mainActivity, afw afwVar) {
+    public bhp(String str, byx byxVar, MainActivity mainActivity, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         super(2, afwVar);
         this.f = str;
         this.o = byxVar;
@@ -34,7 +34,7 @@ public final class bhp extends doi implements bgj {
     @Override // me.hd.wauxv.obf.bgj
     public final Object g(Object obj, Object obj2) {
         ahp ahpVar = (ahp) obj;
-        afw afwVar = (afw) obj2;
+        kotlinx$coroutines$internal$DispatchedContinuation afwVar = (kotlinx$coroutines$internal$DispatchedContinuation) obj2;
         switch (this.a) {
             case 0:
                 break;
@@ -45,7 +45,7 @@ public final class bhp extends doi implements bgj {
     }
 
     @Override // me.hd.wauxv.obf.nc
-    public final afw h(Object obj, afw afwVar) {
+    public final kotlinx$coroutines$internal$DispatchedContinuation h(Object obj, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         switch (this.a) {
             case 0:
                 bhp bhpVar = new bhp((String) this.f, (byx) this.o, (MainActivity) this.p, afwVar);
@@ -67,7 +67,7 @@ public final class bhp extends doi implements bgj {
         bvz bvzVar2;
         int i = this.a;
         Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
-        afw afwVar = null;
+        kotlinx$coroutines$internal$DispatchedContinuation afwVar = null;
         View.OnCreateContextMenuListener onCreateContextMenuListener = this.p;
         ahq ahqVar = ahq.a;
         int i2 = 2;
@@ -124,7 +124,7 @@ public final class bhp extends doi implements bgj {
                 if (bhq.b(bhqVar, string).b <= bhq.b(bhqVar, str).b) {
                     return kotlinUnitVar;
                 }
-                bhn bhnVar = new bhn(byxVar, bhlVar, mainActivity, (afw) null);
+                bhn bhnVar = new bhn(byxVar, bhlVar, mainActivity, (kotlinx$coroutines$internal$DispatchedContinuation) null);
                 this.e = null;
                 this.d = 2;
                 Kotlin$Lazy kotlin$LazyVar = doh.a;
@@ -238,7 +238,7 @@ public final class bhp extends doi implements bgj {
      * JADX WARN: 'super' call moved to the top of the method (can break code
      * semantics)
      */
-    public bhp(cua cuaVar, afw afwVar) {
+    public bhp(cua cuaVar, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         super(2, afwVar);
         this.p = cuaVar;
     }
@@ -247,7 +247,7 @@ public final class bhp extends doi implements bgj {
      * JADX WARN: 'super' call moved to the top of the method (can break code
      * semantics)
      */
-    public bhp(euh euhVar, TextView textView, ProgressBar progressBar, AlertDialog alertDialog, afw afwVar) {
+    public bhp(euh euhVar, TextView textView, ProgressBar progressBar, AlertDialog alertDialog, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         super(2, afwVar);
         this.e = euhVar;
         this.f = textView;

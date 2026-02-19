@@ -159,9 +159,9 @@ public final /* synthetic */ class age implements IInvokable {
                 String[] strArr = { "com.tencent.mm.ui.conversation" /* "com.tencent.mm.ui.conversation" /* "com.tencent.mm.ui.conversation" /* cnb.z(-35270271433514L)  */ };
                 bahVar.getClass();
                 bahVar.a = SomeStaticHelpers.ab(strArr);
-                cdj cdjVar = new cdj();
+                DexFinder cdjVar = new DexFinder();
                 cdjVar.s("onMMMenuItemSelected" /* "onMMMenuItemSelected" /* "onMMMenuItemSelected" /* cnb.z(-35669703392042L)  */);
-                cdjVar.t("com.tencent.mm.plugin.repairer.ui.RepairerChatroomDebugUI" /* "com.tencent.mm.plugin.repairer.ui.RepairerChatroomDebugUI" /* "com.tencent.mm.plugin.repairer.ui.RepairerChatroomDebugUI" /* cnb.z(-35631048686378L)  */);
+                cdjVar.usingStrings("com.tencent.mm.plugin.repairer.ui.RepairerChatroomDebugUI" /* "com.tencent.mm.plugin.repairer.ui.RepairerChatroomDebugUI" /* "com.tencent.mm.plugin.repairer.ui.RepairerChatroomDebugUI" /* cnb.z(-35631048686378L)  */);
                 bahVar.d = cdjVar;
                 return kotlinUnitVar;
             case 5:
@@ -169,13 +169,13 @@ public final /* synthetic */ class age implements IInvokable {
                 String[] strArr2 = { "com.tencent.mm.ui.conversation" /* "com.tencent.mm.ui.conversation" /* "com.tencent.mm.ui.conversation" /* cnb.z(-38985418144554L)  */ };
                 bahVar2.getClass();
                 bahVar2.a = SomeStaticHelpers.ab(strArr2);
-                cdj cdjVar2 = new cdj();
+                DexFinder cdjVar2 = new DexFinder();
                 cdjVar2.s("onCreateContextMenu" /* "onCreateContextMenu" /* "onCreateContextMenu" /* cnb.z(-38852274158378L)  */);
                 if (cnb.ab(ewk.l) || cnb.ac(ewh.m)) {
-                    cdjVar2.t("MicroMsg.ConversationLongClickListener" /* "MicroMsg.ConversationLongClickListener" /* "MicroMsg.ConversationLongClickListener" /* cnb.z(-35983236004650L)  */,
+                    cdjVar2.usingStrings("MicroMsg.ConversationLongClickListener" /* "MicroMsg.ConversationLongClickListener" /* "MicroMsg.ConversationLongClickListener" /* cnb.z(-35983236004650L)  */,
                             "onCreateContextMenu, contact is null, talker = " /* "onCreateContextMenu, contact is null, talker = " /* "onCreateContextMenu, contact is null, talker = " /* cnb.z(-35867271887658L)  */);
                 } else {
-                    cdjVar2.t("MicroMsg.ConversationClickListener" /* "MicroMsg.ConversationClickListener" /* "MicroMsg.ConversationClickListener" /* cnb.z(-36210869271338L)  */,
+                    cdjVar2.usingStrings("MicroMsg.ConversationClickListener" /* "MicroMsg.ConversationClickListener" /* "MicroMsg.ConversationClickListener" /* cnb.z(-36210869271338L)  */,
                             "onCreateContextMenu, contact is null, talker = " /* "onCreateContextMenu, contact is null, talker = " /* "onCreateContextMenu, contact is null, talker = " /* cnb.z(-36026185677610L)  */);
                 }
                 bahVar2.d = cdjVar2;
@@ -185,9 +185,9 @@ public final /* synthetic */ class age implements IInvokable {
                 return kotlinUnitVar;
             case 7:
                 bah bahVar3 = (bah) obj;
-                cdj cdjVar3 = new cdj();
-                cdj.l(cdjVar3, "com.tencent.mm.ui.conversation.ConversationListView" /* "com.tencent.mm.ui.conversation.ConversationListView" /* "com.tencent.mm.ui.conversation.ConversationListView" /* cnb.z(-120813135067946L)  */);
-                cdjVar3.t("[checkEmptyFooter] isRealFull:" /* "[checkEmptyFooter] isRealFull:" /* "[checkEmptyFooter] isRealFull:" /* cnb.z(-120074400693034L)  */);
+                DexFinder cdjVar3 = new DexFinder();
+                DexFinder.setClassEquals(cdjVar3, "com.tencent.mm.ui.conversation.ConversationListView" /* "com.tencent.mm.ui.conversation.ConversationListView" /* "com.tencent.mm.ui.conversation.ConversationListView" /* cnb.z(-120813135067946L)  */);
+                cdjVar3.usingStrings("[checkEmptyFooter] isRealFull:" /* "[checkEmptyFooter] isRealFull:" /* "[checkEmptyFooter] isRealFull:" /* cnb.z(-120074400693034L)  */);
                 bahVar3.getClass();
                 bahVar3.d = cdjVar3;
                 return kotlinUnitVar;
@@ -205,10 +205,10 @@ public final /* synthetic */ class age implements IInvokable {
                 return kotlinUnitVar;
             case 12:
                 bah bahVar4 = (bah) obj;
-                cdj cdjVar4 = new cdj();
+                DexFinder cdjVar4 = new DexFinder();
                 agp.a.getClass();
                 cdjVar4.o(StaticHelpers7.az(agl.a));
-                cdjVar4.t("MicroMsg.ConversationStorage" /* "MicroMsg.ConversationStorage" /* "MicroMsg.ConversationStorage" /* cnb.z(-373460291287850L)  */, "get null with username:" /*
+                cdjVar4.usingStrings("MicroMsg.ConversationStorage" /* "MicroMsg.ConversationStorage" /* "MicroMsg.ConversationStorage" /* cnb.z(-373460291287850L)  */, "get null with username:" /*
                                                                                                                     * cnb
                                                                                                                     * .z
                                                                                                                     * (-
@@ -219,16 +219,16 @@ public final /* synthetic */ class age implements IInvokable {
                 return kotlinUnitVar;
             case 13:
                 bah bahVar5 = (bah) obj;
-                cdj cdjVar5 = new cdj();
+                DexFinder cdjVar5 = new DexFinder();
                 agp.a.getClass();
                 cdjVar5.o(StaticHelpers7.az(agl.a));
-                cdjVar5.t("updateUnreadByTalker %s" /* "updateUnreadByTalker %s" /* "updateUnreadByTalker %s" /* cnb.z(-371677879860010L)  */);
+                cdjVar5.usingStrings("updateUnreadByTalker %s" /* "updateUnreadByTalker %s" /* "updateUnreadByTalker %s" /* cnb.z(-371677879860010L)  */);
                 bahVar5.getClass();
                 bahVar5.d = cdjVar5;
                 return kotlinUnitVar;
             case 14:
                 bah bahVar6 = (bah) obj;
-                cdj cdjVar6 = new cdj();
+                DexFinder cdjVar6 = new DexFinder();
                 agp.a.getClass();
                 cdjVar6.o(StaticHelpers7.az(agl.a));
                 cdjVar6.p(new IntRange(2, 4, 1));
@@ -278,8 +278,8 @@ public final /* synthetic */ class age implements IInvokable {
                 String[] strArr4 = { "com.tencent.mm.ui" /* "com.tencent.mm.ui" /* "com.tencent.mm.ui" /* cnb.z(-78855599553322L)  */ };
                 bahVar7.getClass();
                 bahVar7.a = SomeStaticHelpers.ab(strArr4);
-                cdj cdjVar7 = new cdj();
-                cdjVar7.t("newcursor closeCursor,clear events" /* "newcursor closeCursor,clear events" /* "newcursor closeCursor,clear events" /* cnb.z(-78726750534442L)  */);
+                DexFinder cdjVar7 = new DexFinder();
+                cdjVar7.usingStrings("newcursor closeCursor,clear events" /* "newcursor closeCursor,clear events" /* "newcursor closeCursor,clear events" /* cnb.z(-78726750534442L)  */);
                 bahVar7.d = cdjVar7;
                 return kotlinUnitVar;
             case 21:

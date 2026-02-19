@@ -20,10 +20,10 @@ public final class DevLogHook extends SwitchHook {
         Class cls = Long.TYPE;
         KClass zcVarB = dal.getKClassFromClass(cls);
         Class cls2 = Integer.TYPE;
-        HookManager hookManagerVarAd = createImmediateHook((MethodHookWrapper) StaticHelpers6.n(new Object[] { zcVarB, dal.getKClassFromClass(cls2), dal.getKClassFromClass(String.class), dal.getKClassFromClass(String.class),
+        HookManager hookManagerVarAd = createImmediateHook((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { zcVarB, dal.getKClassFromClass(cls2), dal.getKClassFromClass(String.class), dal.getKClassFromClass(String.class),
                 dal.getKClassFromClass(String.class), dal.getKClassFromClass(cls2), dal.getKClassFromClass(cls2), dal.getKClassFromClass(cls), dal.getKClassFromClass(cls), dal.getKClassFromClass(String.class) }, 10,
                 methodResolverVarT), HookPriorityEnum.ENUM_DEFAULT);
-        a.y(hookManagerVarAd, new amb(0));
+        a.hookBefore(hookManagerVarAd, new amb(0));
         hookManagerVarAd.initInstantCollectionAndApplyHooks();
     }
 

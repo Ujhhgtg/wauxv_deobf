@@ -24,27 +24,27 @@ public final /* synthetic */ class ayu implements bfu {
                 int i2 = 0;
                 MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(contextMenu).getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT.returnType = dal.getKClassFromClass(MenuItem.class);
-                return (MethodHookWrapper) StaticHelpers6.n(new Object[]{dal.getKClassFromClass(cls), dal.getKClassFromClass(cls), dal.getKClassFromClass(cls), dal.getKClassFromClass(CharSequence.class), dal.getKClassFromClass(cls)}, 5, methodResolverVarT);
+                return (MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[]{dal.getKClassFromClass(cls), dal.getKClassFromClass(cls), dal.getKClassFromClass(cls), dal.getKClassFromClass(CharSequence.class), dal.getKClassFromClass(cls)}, 5, methodResolverVarT);
             case 1:
                 int i3 = 0;
                 MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(contextMenu).getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT2.returnType = dal.getKClassFromClass(MenuItem.class);
-                return (MethodHookWrapper) StaticHelpers6.n(new Object[]{dal.getKClassFromClass(cls), dal.getKClassFromClass(cls), dal.getKClassFromClass(cls), dal.getKClassFromClass(CharSequence.class), dal.getKClassFromClass(cls)}, 5, methodResolverVarT2);
+                return (MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[]{dal.getKClassFromClass(cls), dal.getKClassFromClass(cls), dal.getKClassFromClass(cls), dal.getKClassFromClass(CharSequence.class), dal.getKClassFromClass(cls)}, 5, methodResolverVarT2);
             case 2:
                 int i4 = 0;
                 MethodResolver methodResolverVarT3 = dqc.getWrapperConfiguration(contextMenu).getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT3.returnType = dal.getKClassFromClass(MenuItem.class);
-                return (MethodHookWrapper) StaticHelpers6.n(new Object[]{dal.getKClassFromClass(cls), dal.getKClassFromClass(CharSequence.class), dal.getKClassFromClass(cls)}, 3, methodResolverVarT3);
+                return (MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[]{dal.getKClassFromClass(cls), dal.getKClassFromClass(CharSequence.class), dal.getKClassFromClass(cls)}, 3, methodResolverVarT3);
             case 3:
                 int i5 = 0;
                 MethodResolver methodResolverVarT4 = dqc.getWrapperConfiguration(contextMenu).getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT4.returnType = dal.getKClassFromClass(MenuItem.class);
-                return (MethodHookWrapper) StaticHelpers6.n(new Object[]{dal.getKClassFromClass(cls), dal.getKClassFromClass(CharSequence.class), dal.getKClassFromClass(cls)}, 3, methodResolverVarT4);
+                return (MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[]{dal.getKClassFromClass(cls), dal.getKClassFromClass(CharSequence.class), dal.getKClassFromClass(cls)}, 3, methodResolverVarT4);
             default:
                 int i6 = 0;
                 MethodResolver methodResolverVarT5 = dqc.getWrapperConfiguration(contextMenu).getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT5.returnType = dal.getKClassFromClass(MenuItem.class);
-                return (MethodHookWrapper) StaticHelpers6.n(new Object[]{dal.getKClassFromClass(cls), dal.getKClassFromClass(CharSequence.class)}, 2, methodResolverVarT5);
+                return (MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[]{dal.getKClassFromClass(cls), dal.getKClassFromClass(CharSequence.class)}, 2, methodResolverVarT5);
         }
     }
 }

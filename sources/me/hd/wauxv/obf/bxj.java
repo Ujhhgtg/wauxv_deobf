@@ -46,8 +46,8 @@ public final class bxj extends SwitchHook implements IDexFind {
         MethodResolver methodResolverVarT = dqc.bh(i.w()).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.name = "onActivityResult" /* "onActivityResult" /* "onActivityResult" /* "onActivityResult" /* cnb.z(-496794572159786L)   */;
         Class cls = Integer.TYPE;
-        HookManager hookManagerVarAd = createImmediateHook((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.getKClassFromClass(cls), dal.getKClassFromClass(cls), dal.getKClassFromClass(Intent.class) }, 3, methodResolverVarT), HookPriorityEnum.ENUM_DEFAULT);
-        a.x(hookManagerVarAd, new bty(11));
+        HookManager hookManagerVarAd = createImmediateHook((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(cls), dal.getKClassFromClass(cls), dal.getKClassFromClass(Intent.class) }, 3, methodResolverVarT), HookPriorityEnum.ENUM_DEFAULT);
+        a.hookAfter(hookManagerVarAd, new bty(11));
         hookManagerVarAd.initInstantCollectionAndApplyHooks();
         Iterator it = OtherStaticHelpers.argsToList(bxc.a, bxd.a, bxb.a).iterator();
         while (it.hasNext()) {

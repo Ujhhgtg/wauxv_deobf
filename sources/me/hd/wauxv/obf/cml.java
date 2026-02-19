@@ -49,7 +49,7 @@ public final /* synthetic */ class cml implements IInvokable {
                 return kotlinUnitVar;
             case 2:
                 bah bahVar = (bah) obj;
-                cdj cdjVar = new cdj();
+                DexFinder cdjVar = new DexFinder();
                 cls3 = Pair.class;
                 Class<Pair> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls3));
                 cls3 = clsBf != null ? clsBf : Pair.class;
@@ -81,8 +81,8 @@ public final /* synthetic */ class cml implements IInvokable {
                 return kotlinUnitVar;
             case 5:
                 bah bahVar2 = (bah) obj;
-                cdj cdjVar2 = new cdj();
-                cdjVar2.t("account click info , key is %s, value is %s" /* "account click info , key is %s, value is %s" /* "account click info , key is %s, value is %s" /* cnb.z(-140501265152810L)  */);
+                DexFinder cdjVar2 = new DexFinder();
+                cdjVar2.usingStrings("account click info , key is %s, value is %s" /* "account click info , key is %s, value is %s" /* "account click info , key is %s, value is %s" /* cnb.z(-140501265152810L)  */);
                 bahVar2.getClass();
                 bahVar2.d = cdjVar2;
                 return kotlinUnitVar;
@@ -103,7 +103,7 @@ public final /* synthetic */ class cml implements IInvokable {
                 return kotlinUnitVar;
             case 8:
                 bah bahVar3 = (bah) obj;
-                cdj cdjVar3 = new cdj();
+                DexFinder cdjVar3 = new DexFinder();
                 Class<String> clsBf5 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 Class<String> cls5 = clsBf5 == null ? cls : clsBf5;
                 Class<String> clsBf6 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
@@ -138,7 +138,7 @@ public final /* synthetic */ class cml implements IInvokable {
                 return kotlinUnitVar;
             case 11:
                 bah bahVar4 = (bah) obj;
-                cdj cdjVar4 = new cdj();
+                DexFinder cdjVar4 = new DexFinder();
                 Class<Integer> clsBf12 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 Class<Integer> cls11 = clsBf12 == null ? cls2 : clsBf12;
                 Class<String> clsBf13 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
@@ -178,7 +178,7 @@ public final /* synthetic */ class cml implements IInvokable {
                 return kotlinUnitVar;
             case 14:
                 bah bahVar5 = (bah) obj;
-                cdj cdjVar5 = new cdj();
+                DexFinder cdjVar5 = new DexFinder();
                 Class<String> clsBf22 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 cls = clsBf22 != null ? clsBf22 : String.class;
                 Class<Integer> clsBf23 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
@@ -196,10 +196,10 @@ public final /* synthetic */ class cml implements IInvokable {
                 return kotlinUnitVar;
             case 17:
                 bah bahVar6 = (bah) obj;
-                cdj cdjVar6 = new cdj();
+                DexFinder cdjVar6 = new DexFinder();
                 cmy.a.getClass();
                 cdjVar6.o(StaticHelpers7.ba(cmw.a).getDeclaringClass());
-                cdjVar6.t("This NetSceneVerifyUser init NEVER use opcode == MM_VERIFYUSER_VERIFYOK" /*
+                cdjVar6.usingStrings("This NetSceneVerifyUser init NEVER use opcode == MM_VERIFYUSER_VERIFYOK" /*
                                                                                                      * cnb.z(-
                                                                                                      * 125602023602986L)
                                                                                                      */);
@@ -218,8 +218,8 @@ public final /* synthetic */ class cml implements IInvokable {
                 return kotlinUnitVar;
             case 19:
                 bah bahVar7 = (bah) obj;
-                cdj cdjVar7 = new cdj();
-                cdjVar7.t("This NetSceneVerifyUser init MUST use opcode == MM_VERIFYUSER_VERIFYOK" /*
+                DexFinder cdjVar7 = new DexFinder();
+                cdjVar7.usingStrings("This NetSceneVerifyUser init MUST use opcode == MM_VERIFYUSER_VERIFYOK" /*
                                                                                                     * cnb.z(-
                                                                                                     * 125906966281002L)
                                                                                                     */);
@@ -269,8 +269,8 @@ public final /* synthetic */ class cml implements IInvokable {
                 String[] strArr5 = { "com.tencent.mm.booter.notification" /* "com.tencent.mm.booter.notification" /* "com.tencent.mm.booter.notification" /* cnb.z(-67860483275562L)  */ };
                 bahVar8.getClass();
                 bahVar8.a = SomeStaticHelpers.ab(strArr5);
-                cdj cdjVar8 = new cdj();
-                cdjVar8.t("MicroMsg.MMNotification" /* "MicroMsg.MMNotification" /* "MicroMsg.MMNotification" /* cnb.z(-67658619812650L)  */,
+                DexFinder cdjVar8 = new DexFinder();
+                cdjVar8.usingStrings("MicroMsg.MMNotification" /* "MicroMsg.MMNotification" /* "MicroMsg.MMNotification" /* cnb.z(-67658619812650L)  */,
                         "notifyFirst talker:%s msgid:%d type:%d tipsFlag:%d content:%s" /* "notifyFirst talker:%s msgid:%d type:%d tipsFlag:%d content:%s" /* "notifyFirst talker:%s msgid:%d type:%d tipsFlag:%d content:%s" /* cnb.z(-68105296411434L)  */);
                 bahVar8.d = cdjVar8;
                 return kotlinUnitVar;
@@ -348,8 +348,8 @@ public final /* synthetic */ class cml implements IInvokable {
                 String[] strArr6 = { "com.tencent.mm.pluginsdk.ui.chat" /* "com.tencent.mm.pluginsdk.ui.chat" /* "com.tencent.mm.pluginsdk.ui.chat" /* cnb.z(-399298814540586L)  */ };
                 bahVar9.getClass();
                 bahVar9.a = SomeStaticHelpers.ab(strArr6);
-                cdj cdjVar9 = new cdj();
-                cdjVar9.t("MicroMsg.ChatFooter" /* "MicroMsg.ChatFooter" /* "MicroMsg.ChatFooter" /* cnb.z(-399174260489002L)  */, "send msg onClick" /*
+                DexFinder cdjVar9 = new DexFinder();
+                cdjVar9.usingStrings("MicroMsg.ChatFooter" /* "MicroMsg.ChatFooter" /* "MicroMsg.ChatFooter" /* cnb.z(-399174260489002L)  */, "send msg onClick" /*
                                                                                                     * cnb.z(-
                                                                                                     * 399672476695338L)
                                                                                                     */);
@@ -390,11 +390,11 @@ public final /* synthetic */ class cml implements IInvokable {
                 return kotlinUnitVar;
             default:
                 bah bahVar10 = (bah) obj;
-                cdj cdjVar10 = new cdj();
+                DexFinder cdjVar10 = new DexFinder();
                 cls4 = byte[].class;
                 Class<byte[]> clsBf24 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls4));
                 cdjVar10.r(clsBf24 != null ? clsBf24 : byte[].class);
-                cdjVar10.t("MicroMsg.OpLog.Operation" /* "MicroMsg.OpLog.Operation" /* "MicroMsg.OpLog.Operation" /* cnb.z(-67409511709482L)  */,
+                cdjVar10.usingStrings("MicroMsg.OpLog.Operation" /* "MicroMsg.OpLog.Operation" /* "MicroMsg.OpLog.Operation" /* cnb.z(-67409511709482L)  */,
                         "summeroplog Operation toByteArray err: " /* "summeroplog Operation toByteArray err: " /* "summeroplog Operation toByteArray err: " /* cnb.z(-55705725827882L)  */);
                 bahVar10.getClass();
                 bahVar10.d = cdjVar10;

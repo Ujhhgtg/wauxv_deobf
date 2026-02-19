@@ -8,7 +8,7 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class azl extends dqc {
     public List a;
-    public final bzu b = bzu.Contains;
+    public final UsingStringsTypeEnum b = UsingStringsTypeEnum.Contains;
     public bqh d;
 
     @Override // me.hd.wauxv.obf.dqc

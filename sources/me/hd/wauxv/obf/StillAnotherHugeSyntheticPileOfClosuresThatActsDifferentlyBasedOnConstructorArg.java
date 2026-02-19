@@ -130,12 +130,12 @@ public final /* synthetic */ class StillAnotherHugeSyntheticPileOfClosuresThatAc
                     MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods());
                     HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
                     HookManager hookManagerVarAd = bxjVar.createImmediateHook(methodHookWrapperVar, hookPriorityEnumVar);
-                    bxjVar.y(hookManagerVarAd, new bty(i));
+                    bxjVar.hookBefore(hookManagerVarAd, new bty(i));
                     hookManagerVarAd.initInstantCollectionAndApplyHooks();
                     MethodResolver methodResolverVarT2 = bmuVarBi.getMethodResolverBasedOnPreviouslyProvidedConfig();
                     methodResolverVarT2.name = "getLongitude" /* "getLongitude" /* "getLongitude" /* cnb.z(-492834612312874L)  */;
                     HookManager hookManagerVarAd2 = bxjVar.createImmediateHook((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT2.findMethods()), hookPriorityEnumVar);
-                    bxjVar.y(hookManagerVarAd2, new bty(i2));
+                    bxjVar.hookBefore(hookManagerVarAd2, new bty(i2));
                     hookManagerVarAd2.initInstantCollectionAndApplyHooks();
                 }
                 HookManager.l(hookManagerVar);

@@ -32,7 +32,7 @@ public final class deu extends SwitchHook {
         HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         deu deuVar = a;
         HookManager hookManagerVarAd = deuVar.createImmediateHook(methodHookWrapperVar, hookPriorityEnumVar);
-        deuVar.y(hookManagerVarAd, new dbj(19));
+        deuVar.hookBefore(hookManagerVarAd, new dbj(19));
         hookManagerVarAd.initInstantCollectionAndApplyHooks();
     }
 

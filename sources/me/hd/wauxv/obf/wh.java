@@ -44,7 +44,7 @@ public final class wh extends SwitchHook implements IDexFind, bns {
         List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(vu.a));
         wh whVar = a;
         HookManager hookManagerVarAb = PackageParam.createHook(whVar, listBf);
-        whVar.x(hookManagerVarAb, new us(8));
+        whVar.hookAfter(hookManagerVarAb, new us(8));
         hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 

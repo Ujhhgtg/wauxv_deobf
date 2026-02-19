@@ -24,7 +24,7 @@ public final class aub extends bws implements IDexFind {
         MethodResolver methodResolverVarT3 = dqc.getWrapperConfiguration(objE2).getMethodResolverBasedOnPreviouslyProvidedConfig();
         atz.a.getClass();
         methodResolverVarT3.returnType = StaticHelpers7.toDexMethod(aty.a).getDeclaringClass();
-        Object objE3 = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.getKClassFromClass(String.class) }, 1, methodResolverVarT3)).e(str);
+        Object objE3 = ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(String.class) }, 1, methodResolverVarT3)).e(str);
         throwIfVar1IsNull(objE3);
         return objE3;
     }

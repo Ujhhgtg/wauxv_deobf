@@ -14,7 +14,7 @@ public final class etc extends doi implements bgj {
     public final /* synthetic */ JSONObject p;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public /* synthetic */ etc(String str, String str2, JSONObject jSONObject, afw afwVar, int i) {
+    public /* synthetic */ etc(String str, String str2, JSONObject jSONObject, kotlinx$coroutines$internal$DispatchedContinuation afwVar, int i) {
         super(2, afwVar);
         this.a = i;
         this.f = str;
@@ -25,7 +25,7 @@ public final class etc extends doi implements bgj {
     @Override // me.hd.wauxv.obf.bgj
     public final Object g(Object obj, Object obj2) {
         ahp ahpVar = (ahp) obj;
-        afw afwVar = (afw) obj2;
+        kotlinx$coroutines$internal$DispatchedContinuation afwVar = (kotlinx$coroutines$internal$DispatchedContinuation) obj2;
         switch (this.a) {
             case 0:
                 break;
@@ -34,7 +34,7 @@ public final class etc extends doi implements bgj {
     }
 
     @Override // me.hd.wauxv.obf.nc
-    public final afw h(Object obj, afw afwVar) {
+    public final kotlinx$coroutines$internal$DispatchedContinuation h(Object obj, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         switch (this.a) {
             case 0:
                 etc etcVar = new etc(this.f, this.o, this.p, afwVar, 0);
@@ -55,7 +55,7 @@ public final class etc extends doi implements bgj {
         String str = this.o;
         String str2 = this.f;
         ahq ahqVar = ahq.a;
-        afw afwVar = null;
+        kotlinx$coroutines$internal$DispatchedContinuation afwVar = null;
         int i2 = 3;
         switch (i) {
             case 0:

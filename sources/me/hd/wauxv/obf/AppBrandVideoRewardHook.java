@@ -27,7 +27,7 @@ public final class AppBrandVideoRewardHook extends SwitchHook {
         HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         AppBrandVideoRewardHook gyVar = a;
         HookManager hookManagerVarAd = gyVar.createImmediateHook(methodHookWrapperVar, hookPriorityEnumVar);
-        gyVar.y(hookManagerVarAd, new gi(17));
+        gyVar.hookBefore(hookManagerVarAd, new gi(17));
         hookManagerVarAd.initInstantCollectionAndApplyHooks();
     }
 

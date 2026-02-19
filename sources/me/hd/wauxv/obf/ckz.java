@@ -9,7 +9,7 @@ public final class ckz extends afx {
     public int f;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public ckz(cla claVar, afw afwVar) {
+    public ckz(cla claVar, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         super(afwVar);
         this.e = claVar;
     }

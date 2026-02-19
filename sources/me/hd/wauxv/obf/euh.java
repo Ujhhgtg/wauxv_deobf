@@ -28,7 +28,7 @@ public final class euh extends doi implements bgk {
 
     @Override // me.hd.wauxv.obf.bgk
     public final Object b(Object obj, Object obj2, Object obj3) {
-        euh euhVar = new euh(3, (afw) obj3);
+        euh euhVar = new euh(3, (kotlinx$coroutines$internal$DispatchedContinuation) obj3);
         euhVar.x = (TextView) obj;
         euhVar.y = (ProgressBar) obj2;
         return euhVar.i(Kotlin$Unit.INSTANCE);

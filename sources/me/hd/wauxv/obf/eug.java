@@ -14,7 +14,7 @@ public final class eug extends doi implements bgj {
     public final /* synthetic */ ProgressBar o;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public eug(long j, TextView textView, int i, List list, ProgressBar progressBar, afw afwVar) {
+    public eug(long j, TextView textView, int i, List list, ProgressBar progressBar, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         super(2, afwVar);
         this.a = j;
         this.d = textView;
@@ -25,14 +25,14 @@ public final class eug extends doi implements bgj {
 
     @Override // me.hd.wauxv.obf.bgj
     public final Object g(Object obj, Object obj2) throws Throwable {
-        eug eugVar = (eug) h((ahp) obj, (afw) obj2);
+        eug eugVar = (eug) h((ahp) obj, (kotlinx$coroutines$internal$DispatchedContinuation) obj2);
         Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         eugVar.i(kotlinUnitVar);
         return kotlinUnitVar;
     }
 
     @Override // me.hd.wauxv.obf.nc
-    public final afw h(Object obj, afw afwVar) {
+    public final kotlinx$coroutines$internal$DispatchedContinuation h(Object obj, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         return new eug(this.a, this.d, this.e, this.f, this.o, afwVar);
     }
 

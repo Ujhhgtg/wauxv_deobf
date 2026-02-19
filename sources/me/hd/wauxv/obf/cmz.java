@@ -77,7 +77,7 @@ public abstract class cmz {
         threadCurrentThread2.getUncaughtExceptionHandler().uncaughtException(threadCurrentThread2, th);
     }
 
-    public static afw ab(afw afwVar) {
+    public static kotlinx$coroutines$internal$DispatchedContinuation ab(kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         throwIfVar1IsNull(afwVar, "<this>");
         afx afxVar = afwVar instanceof afx ? (afx) afwVar : null;
         if (afxVar == null || (afwVar = afxVar.n) != null) {
@@ -86,7 +86,7 @@ public abstract class cmz {
         ahh ahhVar = afxVar.m;
         throwIfVar1IsNull(ahhVar);
         afy afyVar = (afy) ahhVar._w(arj.a);
-        afw aorVar = afyVar != null ? new DispatchedContinuation((Dispatcher) afyVar, afxVar) : afxVar;
+        kotlinx$coroutines$internal$DispatchedContinuation aorVar = afyVar != null ? new DispatchedContinuation((Dispatcher) afyVar, afxVar) : afxVar;
         afxVar.n = aorVar;
         return aorVar;
     }

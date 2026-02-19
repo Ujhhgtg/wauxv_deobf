@@ -9,7 +9,7 @@ import java.util.List;
 public final class fj extends dqc {
     public final /* synthetic */ int a;
     public List b;
-    public Object d;
+    public Object usingStringsType;
 
     public /* synthetic */ fj(int i) {
         this.a = i;
@@ -75,7 +75,7 @@ public final class fj extends dqc {
                 } else {
                     iV2 = 0;
                 }
-                byte b = ((bzu) this.d).d;
+                byte b = ((UsingStringsTypeEnum) this.usingStringsType).d;
                 bbbVar.ab(4);
                 bbbVar.q(3, 0);
                 bbbVar.q(1, iV2);
@@ -97,7 +97,7 @@ public final class fj extends dqc {
                 } else {
                     iT = 0;
                 }
-                byte b2 = ((bzu) this.d).d;
+                byte b2 = ((UsingStringsTypeEnum) this.usingStringsType).d;
                 bbbVar.ab(3);
                 bbbVar.q(2, 0);
                 bbbVar.q(0, iT);
@@ -118,7 +118,7 @@ public final class fj extends dqc {
                 } else {
                     iT2 = 0;
                 }
-                byte b3 = ((bzu) this.d).d;
+                byte b3 = ((UsingStringsTypeEnum) this.usingStringsType).d;
                 bbbVar.ab(3);
                 bbbVar.q(2, 0);
                 bbbVar.q(0, iT2);
@@ -133,13 +133,13 @@ public final class fj extends dqc {
                     ArrayList arrayList5 = new ArrayList(StaticHelpers4.ak(list5, 10));
                     Iterator it5 = list5.iterator();
                     while (it5.hasNext()) {
-                        arrayList5.add(Integer.valueOf(((cdj) it5.next()).c(bbbVar)));
+                        arrayList5.add(Integer.valueOf(((DexFinder) it5.next()).c(bbbVar)));
                     }
                     iT3 = bbbVar.t(StaticHelpers5.y(arrayList5));
                 } else {
                     iT3 = 0;
                 }
-                byte b4 = ((bzu) this.d).d;
+                byte b4 = ((UsingStringsTypeEnum) this.usingStringsType).d;
                 bbbVar.ab(3);
                 bbbVar.q(2, 0);
                 bbbVar.q(0, iT3);
@@ -162,7 +162,7 @@ public final class fj extends dqc {
                 } else {
                     iT4 = 0;
                 }
-                bqh bqhVar = (bqh) this.d;
+                bqh bqhVar = (bqh) this.usingStringsType;
                 int iC = bqhVar != null ? bqhVar.c(bbbVar) : 0;
                 bbbVar.ab(2);
                 bbbVar.q(1, iC);
@@ -173,7 +173,7 @@ public final class fj extends dqc {
         }
     }
 
-    public void f(cdj cdjVar) {
+    public void f(DexFinder cdjVar) {
         List arrayList = this.b;
         if (arrayList == null) {
             arrayList = new ArrayList();
@@ -184,6 +184,6 @@ public final class fj extends dqc {
 
     public fj() {
         this.a = 3;
-        this.d = bzu.Contains;
+        this.usingStringsType = UsingStringsTypeEnum.Contains;
     }
 }

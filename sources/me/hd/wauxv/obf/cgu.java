@@ -45,10 +45,10 @@ public final /* synthetic */ class cgu implements IInvokable {
         switch (i) {
             case 0:
                 bah bahVar = (bah) obj;
-                cdj cdjVar = new cdj();
+                DexFinder cdjVar = new DexFinder();
                 cgy.a.getClass();
                 cdjVar.o(StaticHelpers7.az(cgv.a));
-                cdjVar.t("MsgInfo processAddMsg insert db error" /* "MsgInfo processAddMsg insert db error" /* "MsgInfo processAddMsg insert db error" /* cnb.z(-371609160383274L)  */);
+                cdjVar.usingStrings("MsgInfo processAddMsg insert db error" /* "MsgInfo processAddMsg insert db error" /* "MsgInfo processAddMsg insert db error" /* cnb.z(-371609160383274L)  */);
                 bahVar.getClass();
                 bahVar.d = cdjVar;
                 return kotlinUnitVar;
@@ -68,11 +68,11 @@ public final /* synthetic */ class cgu implements IInvokable {
                 return kotlinUnitVar;
             case 2:
                 bah bahVar2 = (bah) obj;
-                cdj cdjVar2 = new cdj();
+                DexFinder cdjVar2 = new DexFinder();
                 cgy.a.getClass();
                 cdjVar2.o(StaticHelpers7.az(cgv.a));
                 cdjVar2.p(new IntRange(2, 3, 1));
-                cdjVar2.t("notifymessage" /* "notifymessage" /* "notifymessage" /* cnb.z(-371201138490154L)  */, "msgId=?" /* "msgId=?" /* "msgId=?" /* cnb.z(-371123829078826L)  */,
+                cdjVar2.usingStrings("notifymessage" /* "notifymessage" /* "notifymessage" /* cnb.z(-371201138490154L)  */, "msgId=?" /* "msgId=?" /* "msgId=?" /* cnb.z(-371123829078826L)  */,
                         "update" /* "update" /* "update" /* cnb.z(-371089469340458L)  */);
                 bahVar2.getClass();
                 bahVar2.d = cdjVar2;
@@ -224,8 +224,8 @@ public final /* synthetic */ class cgu implements IInvokable {
                 return kotlinUnitVar;
             case 8:
                 bah bahVar3 = (bah) obj;
-                cdj cdjVar3 = new cdj();
-                cdjVar3.t("MicroMsg.PluginHelper" /* "MicroMsg.PluginHelper" /* "MicroMsg.PluginHelper" /* cnb.z(-518660250663722L)  */, "start multi webview!!!!!!!!!" /*
+                DexFinder cdjVar3 = new DexFinder();
+                cdjVar3.usingStrings("MicroMsg.PluginHelper" /* "MicroMsg.PluginHelper" /* "MicroMsg.PluginHelper" /* cnb.z(-518660250663722L)  */, "start multi webview!!!!!!!!!" /*
                                                                                                                   * cnb.
                                                                                                                   * z(-
                                                                                                                   * 518548581514026L)
@@ -411,7 +411,7 @@ public final /* synthetic */ class cgu implements IInvokable {
                 return kotlinUnitVar;
             case 25:
                 bah bahVar4 = (bah) obj;
-                cdj cdjVar4 = new cdj();
+                DexFinder cdjVar4 = new DexFinder();
                 Class<String> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 if (clsBf == null) {
                     clsBf = cls;
@@ -444,7 +444,7 @@ public final /* synthetic */ class cgu implements IInvokable {
                 return kotlinUnitVar;
             case 28:
                 bah bahVar5 = (bah) obj;
-                cdj cdjVar5 = new cdj();
+                DexFinder cdjVar5 = new DexFinder();
                 Class<String> clsBf5 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 if (clsBf5 == null) {
                     clsBf5 = cls;

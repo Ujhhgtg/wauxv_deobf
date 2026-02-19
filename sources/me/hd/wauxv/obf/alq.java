@@ -4,7 +4,7 @@ package me.hd.wauxv.obf;
 /* JADX INFO: loaded from: classes.dex */
 public class alq extends t implements alp {
     @Override // me.hd.wauxv.obf.alp
-    public final Object _be(afw afwVar) throws Throwable {
+    public final Object _be(kotlinx$coroutines$internal$DispatchedContinuation afwVar) throws Throwable {
         Object obj;
         do {
             obj = brm.r.get(this);

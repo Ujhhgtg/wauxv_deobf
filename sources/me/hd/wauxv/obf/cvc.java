@@ -80,11 +80,11 @@ public final /* synthetic */ class cvc implements IInvokable {
         switch (i) {
             case 0:
                 bah bahVar = (bah) obj;
-                cdj cdjVar = new cdj();
+                DexFinder cdjVar = new DexFinder();
                 cdjVar.o(cvh.a.b());
                 Class<String> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 cdjVar.q(clsBf != null ? clsBf : String.class);
-                cdjVar.t("Preference does not have a key assigned." /* "Preference does not have a key assigned." /* "Preference does not have a key assigned." /* cnb.z(-101232379165482L)  */);
+                cdjVar.usingStrings("Preference does not have a key assigned." /* "Preference does not have a key assigned." /* "Preference does not have a key assigned." /* cnb.z(-101232379165482L)  */);
                 bahVar.getClass();
                 bahVar.d = cdjVar;
                 return kotlinUnitVar;
@@ -141,9 +141,9 @@ public final /* synthetic */ class cvc implements IInvokable {
                 String[] strArr = { "com.tencent.mm.pluginsdk.ui.chat" /* "com.tencent.mm.pluginsdk.ui.chat" /* "com.tencent.mm.pluginsdk.ui.chat" /* cnb.z(-460343184718634L)  */ };
                 bahVar2.getClass();
                 bahVar2.a = SomeStaticHelpers.ab(strArr);
-                cdj cdjVar2 = new cdj();
+                DexFinder cdjVar2 = new DexFinder();
                 cdjVar2.s("onKey" /* "onKey" /* "onKey" /* cnb.z(-460201450797866L)  */);
-                cdjVar2.t("ChatFooterKtHelper" /* "ChatFooterKtHelper" /* "ChatFooterKtHelper" /* cnb.z(-460158501124906L)  */, "supportAutoComplete err" /*
+                cdjVar2.usingStrings("ChatFooterKtHelper" /* "ChatFooterKtHelper" /* "ChatFooterKtHelper" /* cnb.z(-460158501124906L)  */, "supportAutoComplete err" /*
                                                                                                           * cnb.z(-
                                                                                                           * 460661012298538L)
                                                                                                           */);
@@ -394,8 +394,8 @@ public final /* synthetic */ class cvc implements IInvokable {
                 String[] strArr2 = { "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* cnb.z(-461640264842026L)  */ };
                 bahVar3.getClass();
                 bahVar3.a = SomeStaticHelpers.ab(strArr2);
-                cdj cdjVar3 = new cdj();
-                cdjVar3.t("MicroMsg.msgquote.QuoteMsgSourceClickLogic" /* "MicroMsg.msgquote.QuoteMsgSourceClickLogic" /* "MicroMsg.msgquote.QuoteMsgSourceClickLogic" /* cnb.z(-460965954976554L)  */,
+                DexFinder cdjVar3 = new DexFinder();
+                cdjVar3.usingStrings("MicroMsg.msgquote.QuoteMsgSourceClickLogic" /* "MicroMsg.msgquote.QuoteMsgSourceClickLogic" /* "MicroMsg.msgquote.QuoteMsgSourceClickLogic" /* cnb.z(-460965954976554L)  */,
                         "handleItemClickToPositionEvent,quotedMsg is null!" /* "handleItemClickToPositionEvent,quotedMsg is null!" /* "handleItemClickToPositionEvent,quotedMsg is null!" /* cnb.z(-460746911644458L)  */);
                 bahVar3.d = cdjVar3;
                 return kotlinUnitVar;
@@ -404,8 +404,8 @@ public final /* synthetic */ class cvc implements IInvokable {
                 String[] strArr3 = { "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* cnb.z(-459956637661994L)  */ };
                 bahVar4.getClass();
                 bahVar4.a = SomeStaticHelpers.ab(strArr3);
-                cdj cdjVar4 = new cdj();
-                cdjVar4.t("MicroMsg.msgquote.QuoteMsgSourceClickLogic" /* "MicroMsg.msgquote.QuoteMsgSourceClickLogic" /* "MicroMsg.msgquote.QuoteMsgSourceClickLogic" /* cnb.z(-461481351052074L)  */,
+                DexFinder cdjVar4 = new DexFinder();
+                cdjVar4.usingStrings("MicroMsg.msgquote.QuoteMsgSourceClickLogic" /* "MicroMsg.msgquote.QuoteMsgSourceClickLogic" /* "MicroMsg.msgquote.QuoteMsgSourceClickLogic" /* cnb.z(-461481351052074L)  */,
                         "handleItemClickEvent,quotedMsg is null!" /* "handleItemClickEvent,quotedMsg is null!" /* "handleItemClickEvent,quotedMsg is null!" /* cnb.z(-461262307719978L)  */);
                 bahVar4.d = cdjVar4;
                 return kotlinUnitVar;
@@ -519,7 +519,7 @@ public final /* synthetic */ class cvc implements IInvokable {
                 return kotlinUnitVar;
             case 15:
                 bah bahVar5 = (bah) obj;
-                cdj cdjVar5 = new cdj();
+                DexFinder cdjVar5 = new DexFinder();
                 cls2 = CharSequence.class;
                 Class<CharSequence> clsBf2 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 cdjVar5.r(clsBf2 != null ? clsBf2 : CharSequence.class);
@@ -691,8 +691,8 @@ public final /* synthetic */ class cvc implements IInvokable {
                 String[] strArr4 = { "com.tencent.mm.plugin.luckymoney.ui" /* "com.tencent.mm.plugin.luckymoney.ui" /* "com.tencent.mm.plugin.luckymoney.ui" /* cnb.z(-537158674807594L)  */ };
                 bahVar6.getClass();
                 bahVar6.a = SomeStaticHelpers.ab(strArr4);
-                cdj cdjVar6 = new cdj();
-                cdjVar6.t("MicroMsg.LuckyMoneyDetailUI" /* "MicroMsg.LuckyMoneyDetailUI" /* "MicroMsg.LuckyMoneyDetailUI" /* cnb.z(-537588171537194L)  */, "try get user contact: %s" /*
+                DexFinder cdjVar6 = new DexFinder();
+                cdjVar6.usingStrings("MicroMsg.LuckyMoneyDetailUI" /* "MicroMsg.LuckyMoneyDetailUI" /* "MicroMsg.LuckyMoneyDetailUI" /* cnb.z(-537588171537194L)  */, "try get user contact: %s" /*
                                                                                                                     * cnb
                                                                                                                     * .z
                                                                                                                     * (-
@@ -708,12 +708,12 @@ public final /* synthetic */ class cvc implements IInvokable {
                 return kotlinUnitVar;
             case 22:
                 bah bahVar7 = (bah) obj;
-                cdj cdjVar7 = new cdj();
-                cdj.l(cdjVar7, "com.tencent.mm.ui.transmit.SelectConversationUI" /* "com.tencent.mm.ui.transmit.SelectConversationUI" /* "com.tencent.mm.ui.transmit.SelectConversationUI" /* cnb.z(-497559076338474L)  */);
+                DexFinder cdjVar7 = new DexFinder();
+                DexFinder.setClassEquals(cdjVar7, "com.tencent.mm.ui.transmit.SelectConversationUI" /* "com.tencent.mm.ui.transmit.SelectConversationUI" /* "com.tencent.mm.ui.transmit.SelectConversationUI" /* cnb.z(-497559076338474L)  */);
                 cls3 = Boolean.class;
                 Class<Boolean> clsBf3 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls3));
                 cdjVar7.r(clsBf3 != null ? clsBf3 : Boolean.class);
-                cdjVar7.t("max_limit_num" /* "max_limit_num" /* "max_limit_num" /* cnb.z(-497902673722154L)  */);
+                cdjVar7.usingStrings("max_limit_num" /* "max_limit_num" /* "max_limit_num" /* cnb.z(-497902673722154L)  */);
                 bahVar7.getClass();
                 bahVar7.d = cdjVar7;
                 return kotlinUnitVar;
@@ -733,8 +733,8 @@ public final /* synthetic */ class cvc implements IInvokable {
                 return kotlinUnitVar;
             case 25:
                 bah bahVar8 = (bah) obj;
-                cdj cdjVar8 = new cdj();
-                cdjVar8.t("MicroMsg.InputTextBoundaryCheck" /* "MicroMsg.InputTextBoundaryCheck" /* "MicroMsg.InputTextBoundaryCheck" /* cnb.z(-497365802810154L)  */,
+                DexFinder cdjVar8 = new DexFinder();
+                cdjVar8.usingStrings("MicroMsg.InputTextBoundaryCheck" /* "MicroMsg.InputTextBoundaryCheck" /* "MicroMsg.InputTextBoundaryCheck" /* cnb.z(-497365802810154L)  */,
                         "edit text view is null" /* "edit text view is null" /* "edit text view is null" /* cnb.z(-498877631298346L)  */);
                 bahVar8.getClass();
                 bahVar8.d = cdjVar8;
@@ -756,7 +756,7 @@ public final /* synthetic */ class cvc implements IInvokable {
                 return kotlinUnitVar;
             case 28:
                 bah bahVar9 = (bah) obj;
-                cdj cdjVar9 = new cdj();
+                DexFinder cdjVar9 = new DexFinder();
                 cdjVar9.s("callback" /* "callback" /* "callback" /* cnb.z(-519974510656298L)  */);
                 bahVar9.getClass();
                 bahVar9.d = cdjVar9;

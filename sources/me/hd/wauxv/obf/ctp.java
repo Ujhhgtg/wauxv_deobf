@@ -71,7 +71,7 @@ public final class ctp extends SwitchHook implements bnf, bng {
         List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(ctl.a));
         ctp ctpVar = b;
         HookManager hookManagerVarAb = PackageParam.createHook(ctpVar, listBf);
-        ctpVar.x(hookManagerVarAb, new Function1$VarIsObj(14));
+        ctpVar.hookAfter(hookManagerVarAb, new Function1$VarIsObj(14));
         hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 

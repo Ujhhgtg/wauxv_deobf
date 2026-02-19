@@ -153,7 +153,7 @@ public final class eui extends ewy {
         int i = 0;
         MethodResolver methodResolverVarT = dqc.bg(dal.getKClassFromClass(Instrumentation.class)).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.name = "callApplicationOnCreate" /* "callApplicationOnCreate" /* "callApplicationOnCreate" /* "callApplicationOnCreate" /* cnb.z(-82549271427882L)   */;
-        HookManager hookManagerVarAd = a.createImmediateHook((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.getKClassFromClass(Application.class) }, 1, methodResolverVarT), HookPriorityEnum.ENUM_DEFAULT);
+        HookManager hookManagerVarAd = a.createImmediateHook((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(Application.class) }, 1, methodResolverVarT), HookPriorityEnum.ENUM_DEFAULT);
         hookManagerVarAd.m(new epy(14));
         hookManagerVarAd.initInstantCollectionAndApplyHooks();
     }

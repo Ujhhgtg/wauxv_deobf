@@ -6,7 +6,7 @@ import java.nio.ByteBuffer;
 /* JADX INFO: loaded from: classes.dex */
 public final class an extends dqc {
     public int a;
-    public bzu b;
+    public UsingStringsTypeEnum b;
 
     @Override // me.hd.wauxv.obf.dqc
     public final int c(bbb bbbVar) {

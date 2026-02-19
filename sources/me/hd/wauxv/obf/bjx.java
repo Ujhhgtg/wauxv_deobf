@@ -57,7 +57,7 @@ public final class bjx extends SwitchHook implements IDexFind, bob {
         List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(bju.a));
         bjx bjxVar = a;
         HookManager hookManagerVarAb = PackageParam.createHook(bjxVar, listBf);
-        bjxVar.y(hookManagerVarAb, new bep(6));
+        bjxVar.hookBefore(hookManagerVarAb, new bep(6));
         hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 
@@ -93,7 +93,7 @@ public final class bjx extends SwitchHook implements IDexFind, bob {
             dlx.a.getClass();
             MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(dlx.b()).getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT.name = "rawQuery" /* "rawQuery" /* "rawQuery" /* cnb.z(-103246718827306L)  */;
-            Object objJ = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.getKClassFromClass(String.class), dal.getKClassFromClass(Object[].class) }, 2, methodResolverVarT)).j(
+            Object objJ = ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(String.class), dal.getKClassFromClass(Object[].class) }, 2, methodResolverVarT)).j(
                     "SELECT memberlist, memberCount FROM chatroom WHERE chatroomname = ?" /* "SELECT memberlist, memberCount FROM chatroom WHERE chatroomname = ?" /* "SELECT memberlist, memberCount FROM chatroom WHERE chatroomname = ?" /* cnb.z(-508193415363370L)  */,
                     new Object[] { asString });
             throwIfVar1IsNull(objJ);

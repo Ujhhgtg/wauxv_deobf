@@ -16,7 +16,7 @@ public final class cdo extends SwitchHook implements IDexFind {
         List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(cdm.a));
         cdo cdoVar = a;
         HookManager hookManagerVarAb = PackageParam.createHook(cdoVar, listBf);
-        cdoVar.y(hookManagerVarAb, new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(1));
+        cdoVar.hookBefore(hookManagerVarAb, new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(1));
         hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 

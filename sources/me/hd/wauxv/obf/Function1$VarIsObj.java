@@ -99,26 +99,26 @@ public final /* synthetic */ class Function1$VarIsObj implements IInvokable {
                         /* "Missing required view with ID: " /* "Missing required view with ID: " /* "Missing required view with ID: " /* cnb.z(-663864505006890L)   */.concat(viewK2.getResources().getResourceName(i7)));
             case 2:
                 bah bahVar = (bah) obj;
-                cdj cdjVar = new cdj();
+                DexFinder cdjVar = new DexFinder();
                 cls3 = ArrayList.class;
                 Class<ArrayList> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls3));
                 cdjVar.r(clsBf != null ? clsBf : ArrayList.class);
                 Class<Integer> clsBf2 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 cdjVar.q(clsBf2 != null ? clsBf2 : Integer.class);
-                cdjVar.t("MicroMsg.emoji.EmojiGroupInfoStorage" /* "MicroMsg.emoji.EmojiGroupInfoStorage" /* "MicroMsg.emoji.EmojiGroupInfoStorage" /* "MicroMsg.emoji.EmojiGroupInfoStorage" /* cnb.z(-472287488768810L)   */,
+                cdjVar.usingStrings("MicroMsg.emoji.EmojiGroupInfoStorage" /* "MicroMsg.emoji.EmojiGroupInfoStorage" /* "MicroMsg.emoji.EmojiGroupInfoStorage" /* "MicroMsg.emoji.EmojiGroupInfoStorage" /* cnb.z(-472287488768810L)   */,
                         "get Panel EmojiGroupInfo." /* "get Panel EmojiGroupInfo." /* "get Panel EmojiGroupInfo." /* "get Panel EmojiGroupInfo." /* cnb.z(-472661150923562L)   */);
                 bahVar.getClass();
                 bahVar.d = cdjVar;
                 return kotlinUnitVar;
             case 3:
                 bah bahVar2 = (bah) obj;
-                cdj cdjVar2 = new cdj();
-                cdjVar2.t("data" /* "data" /* "data" /* "data" /* cnb.z(-472566661643050L)   */);
+                DexFinder cdjVar2 = new DexFinder();
+                cdjVar2.usingStrings("data" /* "data" /* "data" /* "data" /* cnb.z(-472566661643050L)   */);
                 fj fjVar = new fj();
-                cdj cdjVar3 = new cdj();
-                cdjVar3.t("checkScrollToPosition: " /* "checkScrollToPosition: " /* "checkScrollToPosition: " /* "checkScrollToPosition: " /* cnb.z(-472579546544938L)   */);
+                DexFinder cdjVar3 = new DexFinder();
+                cdjVar3.usingStrings("checkScrollToPosition: " /* "checkScrollToPosition: " /* "checkScrollToPosition: " /* "checkScrollToPosition: " /* cnb.z(-472579546544938L)   */);
                 fjVar.f(cdjVar3);
-                fjVar.d = bzu.Contains;
+                fjVar.usingStringsType = UsingStringsTypeEnum.Contains;
                 cdjVar2.i = fjVar;
                 bahVar2.getClass();
                 bahVar2.d = cdjVar2;
@@ -207,7 +207,7 @@ public final /* synthetic */ class Function1$VarIsObj implements IInvokable {
                 break;
             case 10:
                 bah bahVar3 = (bah) obj;
-                cdj cdjVar4 = new cdj();
+                DexFinder cdjVar4 = new DexFinder();
                 Class clsAg = ajn.tryGetClassByClassName("com.tencent.mm.api.IEmojiInfo" /* "com.tencent.mm.api.IEmojiInfo" /* "com.tencent.mm.api.IEmojiInfo" /* "com.tencent.mm.api.IEmojiInfo" /* cnb.z(-472497942166314L)   */);
                 Class<Integer> clsBf4 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 if (clsBf4 == null) {
@@ -218,7 +218,7 @@ public final /* synthetic */ class Function1$VarIsObj implements IInvokable {
                 cls5 = clsBf5 != null ? clsBf5 : String.class;
                 Class<Integer> clsBf6 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 cdjVar4.q(clsAg, clsBf4, cls5, clsBf6 != null ? clsBf6 : Integer.class);
-                cdjVar4.t("emojiInfo" /* "emojiInfo" /* "emojiInfo" /* "emojiInfo" /* cnb.z(-472351913278250L)   */, "sosDocId" /* "sosDocId" /* "sosDocId" /* "sosDocId" /* cnb.z(-472326143474474L)   */);
+                cdjVar4.usingStrings("emojiInfo" /* "emojiInfo" /* "emojiInfo" /* "emojiInfo" /* cnb.z(-472351913278250L)   */, "sosDocId" /* "sosDocId" /* "sosDocId" /* "sosDocId" /* cnb.z(-472326143474474L)   */);
                 bahVar3.getClass();
                 bahVar3.d = cdjVar4;
                 return kotlinUnitVar;
@@ -357,8 +357,8 @@ public final /* synthetic */ class Function1$VarIsObj implements IInvokable {
                 String[] strArr = { "com.tencent.mm.ui.conversation" /* "com.tencent.mm.ui.conversation" /* "com.tencent.mm.ui.conversation" /* "com.tencent.mm.ui.conversation" /* cnb.z(-527301724863274L)   */ };
                 bahVar4.getClass();
                 bahVar4.a = SomeStaticHelpers.ab(strArr);
-                cdj cdjVar5 = new cdj();
-                cdjVar5.t("MicroMsg.ConversationWithCacheAdapter" /* "MicroMsg.ConversationWithCacheAdapter" /* "MicroMsg.ConversationWithCacheAdapter" /* "MicroMsg.ConversationWithCacheAdapter" /* cnb.z(-527701156821802L)   */,
+                DexFinder cdjVar5 = new DexFinder();
+                cdjVar5.usingStrings("MicroMsg.ConversationWithCacheAdapter" /* "MicroMsg.ConversationWithCacheAdapter" /* "MicroMsg.ConversationWithCacheAdapter" /* "MicroMsg.ConversationWithCacheAdapter" /* cnb.z(-527701156821802L)   */,
                         "handle show tip count, but talker is null" /* "handle show tip count, but talker is null" /* "handle show tip count, but talker is null" /* "handle show tip count, but talker is null" /* cnb.z(-527589487672106L)   */);
                 bahVar4.d = cdjVar5;
                 return kotlinUnitVar;
@@ -401,7 +401,7 @@ public final /* synthetic */ class Function1$VarIsObj implements IInvokable {
                 return kotlinUnitVar;
             case 27:
                 bah bahVar5 = (bah) obj;
-                cdj cdjVar6 = new cdj();
+                DexFinder cdjVar6 = new DexFinder();
                 cdjVar6.o(cvh.a.b());
                 Class<CharSequence> clsBf7 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 cdjVar6.q(clsBf7 != null ? clsBf7 : CharSequence.class);
@@ -411,7 +411,7 @@ public final /* synthetic */ class Function1$VarIsObj implements IInvokable {
                 return kotlinUnitVar;
             case 28:
                 bah bahVar6 = (bah) obj;
-                cdj cdjVar7 = new cdj();
+                DexFinder cdjVar7 = new DexFinder();
                 cdjVar7.o(cvh.a.b());
                 Class<CharSequence> clsBf8 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 cdjVar7.q(clsBf8 != null ? clsBf8 : CharSequence.class);

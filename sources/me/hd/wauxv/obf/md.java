@@ -17,16 +17,16 @@ public final class md extends SwitchHook {
         SyntheticPileOfMess bmuVarS = yg.s(-510474042997546L);
         MethodResolver methodResolverVarT = bmuVarS.getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.name = "onCreate" /* "onCreate" /* "onCreate" /* "onCreate" /* cnb.z(-511925741943594L)   */;
-        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.getKClassFromClass(Bundle.class) }, 1, methodResolverVarT);
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(Bundle.class) }, 1, methodResolverVarT);
         md mdVar = a;
         HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         HookManager hookManagerVarAd = mdVar.createImmediateHook(methodHookWrapperVar, hookPriorityEnumVar);
-        mdVar.y(hookManagerVarAd, new gi(28));
+        mdVar.hookBefore(hookManagerVarAd, new gi(28));
         hookManagerVarAd.initInstantCollectionAndApplyHooks();
         MethodResolver methodResolverVarT2 = bmuVarS.getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT2.name = "initView" /* "initView" /* "initView" /* "initView" /* cnb.z(-511887087237930L)   */;
         HookManager hookManagerVarAd2 = mdVar.createImmediateHook((MethodHookWrapper) bjs.h(methodResolverVarT2), hookPriorityEnumVar);
-        mdVar.x(hookManagerVarAd2, new gi(29));
+        mdVar.hookAfter(hookManagerVarAd2, new gi(29));
         hookManagerVarAd2.initInstantCollectionAndApplyHooks();
     }
 

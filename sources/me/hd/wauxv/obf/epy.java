@@ -65,8 +65,8 @@ public final /* synthetic */ class epy implements IInvokable {
         switch (i) {
             case 0:
                 bah bahVar = (bah) obj;
-                cdj cdjVar = new cdj();
-                cdjVar.t((cnb.ab(ewk.l) || cnb.ac(ewh.m)) ? "MicroMsg.C2CVideoPathFeatureService"
+                DexFinder cdjVar = new DexFinder();
+                cdjVar.usingStrings((cnb.ab(ewk.l) || cnb.ac(ewh.m)) ? "MicroMsg.C2CVideoPathFeatureService"
                         /* "MicroMsg.C2CVideoPathFeatureService" /* "MicroMsg.C2CVideoPathFeatureService" /* cnb.z(-374581277752106L)  */ : "MicroMsg.VideoInfoStorage" /* "MicroMsg.VideoInfoStorage" /* "MicroMsg.VideoInfoStorage" /* cnb.z(-374392299191082L)  */,
                         ".mp4" /* ".mp4" /* ".mp4" /* cnb.z(-374847565724458L)  */, "success restore file, from " /*
                                                                                               * "success restore file, from " /* "success restore file, from " /* cnb.z(-374860450626346L)  */
@@ -76,8 +76,8 @@ public final /* synthetic */ class epy implements IInvokable {
                 return kotlinUnitVar;
             case 1:
                 bah bahVar2 = (bah) obj;
-                cdj cdjVar2 = new cdj();
-                cdjVar2.t((cnb.ab(ewk.l) || cnb.ac(ewh.m)) ? "MicroMsg.C2CVideoPathFeatureService"
+                DexFinder cdjVar2 = new DexFinder();
+                cdjVar2.usingStrings((cnb.ab(ewk.l) || cnb.ac(ewh.m)) ? "MicroMsg.C2CVideoPathFeatureService"
                         /* "MicroMsg.C2CVideoPathFeatureService" /* "MicroMsg.C2CVideoPathFeatureService" /* cnb.z(-374705831803690L)  */ : "MicroMsg.VideoInfoStorage" /* "MicroMsg.VideoInfoStorage" /* "MicroMsg.VideoInfoStorage" /* cnb.z(-374035816905514L)  */,
                         ".jpg" /* ".jpg" /* ".jpg" /* cnb.z(-373872608148266L)  */, "success restore file, from " /*
                                                                                               * "success restore file, from " /* "success restore file, from " /* cnb.z(-373902672919338L)  */
@@ -183,8 +183,8 @@ public final /* synthetic */ class epy implements IInvokable {
                 return kotlinUnitVar;
             case 7:
                 bah bahVar3 = (bah) obj;
-                cdj cdjVar3 = new cdj();
-                cdjVar3.t("MicroMsg.VoiceStorage" /* "MicroMsg.VoiceStorage" /* "MicroMsg.VoiceStorage" /* cnb.z(-500067337239338L)  */, "update failed, no values set" /*
+                DexFinder cdjVar3 = new DexFinder();
+                cdjVar3.usingStrings("MicroMsg.VoiceStorage" /* "MicroMsg.VoiceStorage" /* "MicroMsg.VoiceStorage" /* cnb.z(-500067337239338L)  */, "update failed, no values set" /*
                                                                                                                   * cnb.
                                                                                                                   * z(-
                                                                                                                   * 499405912275754L)
@@ -220,8 +220,8 @@ public final /* synthetic */ class epy implements IInvokable {
                 return kotlinUnitVar;
             case 11:
                 bah bahVar4 = (bah) obj;
-                cdj cdjVar4 = new cdj();
-                cdjVar4.t("getAmrFullPath cost: " /* "getAmrFullPath cost: " /* "getAmrFullPath cost: " /* cnb.z(-107348412594986L)  */);
+                DexFinder cdjVar4 = new DexFinder();
+                cdjVar4.usingStrings("getAmrFullPath cost: " /* "getAmrFullPath cost: " /* "getAmrFullPath cost: " /* cnb.z(-107348412594986L)  */);
                 bahVar4.getClass();
                 bahVar4.d = cdjVar4;
                 return kotlinUnitVar;

@@ -58,8 +58,8 @@ public final /* synthetic */ class act implements IInvokable {
                 return kotlinUnitVar;
             case 3:
                 bah bahVar = (bah) obj;
-                cdj cdjVar = new cdj();
-                cdjVar.t("login_weixin_username" /* "login_weixin_username" /* "login_weixin_username" /* cnb.z(-109113644153642L)  */,
+                DexFinder cdjVar = new DexFinder();
+                cdjVar.usingStrings("login_weixin_username" /* "login_weixin_username" /* "login_weixin_username" /* cnb.z(-109113644153642L)  */,
                         "login_user_name" /* "login_user_name" /* "login_user_name" /* cnb.z(-109001975003946L)  */,
                         "last_login_nick_name" /* "last_login_nick_name" /* "last_login_nick_name" /* cnb.z(-108933255527210L)  */,
                         "last_login_bind_mobile" /* "last_login_bind_mobile" /* "last_login_bind_mobile" /* cnb.z(-109375637158698L)  */, "last_login_bind_email" /*
@@ -87,22 +87,22 @@ public final /* synthetic */ class act implements IInvokable {
                 azlVar.d = new bqh(2);
                 zbVar2.e = azlVar;
                 fj fjVar = new fj();
-                cdj cdjVar2 = new cdj();
+                DexFinder cdjVar2 = new DexFinder();
                 cdjVar2.s("compareContent" /* "compareContent" /* "compareContent" /* cnb.z(-103521596734250L)  */);
                 fjVar.f(cdjVar2);
-                cdj cdjVar3 = new cdj();
+                DexFinder cdjVar3 = new DexFinder();
                 cdjVar3.s("op" /* "op" /* "op" /* cnb.z(-103457172224810L)  */);
                 fjVar.f(cdjVar3);
-                cdj cdjVar4 = new cdj();
+                DexFinder cdjVar4 = new DexFinder();
                 fj fjVar2 = new fj();
-                cdj cdjVar5 = new cdj();
-                cdjVar5.t("MicroMsg.Label.ContactLabelUI" /* "MicroMsg.Label.ContactLabelUI" /* "MicroMsg.Label.ContactLabelUI" /* cnb.z(-103392747715370L)  */, "cpan[saveContact]" /*
+                DexFinder cdjVar5 = new DexFinder();
+                cdjVar5.usingStrings("MicroMsg.Label.ContactLabelUI" /* "MicroMsg.Label.ContactLabelUI" /* "MicroMsg.Label.ContactLabelUI" /* cnb.z(-103392747715370L)  */, "cpan[saveContact]" /*
                                                                                                                * cnb.z(-
                                                                                                                * 103865194117930L)
                                                                                                                */);
                 fjVar2.f(cdjVar5);
-                cdj cdjVar6 = new cdj();
-                cdjVar6.t("MicroMsg.Label.ContactLabelManagerImpl" /* "MicroMsg.Label.ContactLabelManagerImpl" /* "MicroMsg.Label.ContactLabelManagerImpl" /* cnb.z(-103736345099050L)  */,
+                DexFinder cdjVar6 = new DexFinder();
+                cdjVar6.usingStrings("MicroMsg.Label.ContactLabelManagerImpl" /* "MicroMsg.Label.ContactLabelManagerImpl" /* "MicroMsg.Label.ContactLabelManagerImpl" /* cnb.z(-103736345099050L)  */,
                         "add contact label faild." /* "add contact label faild." /* "add contact label faild." /* cnb.z(-105218108816170L)  */);
                 fjVar2.f(cdjVar6);
                 cdjVar4.j = fjVar2;
@@ -122,8 +122,8 @@ public final /* synthetic */ class act implements IInvokable {
                 String[] strArr2 = { "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* cnb.z(-360983411292970L)  */ };
                 bahVar2.getClass();
                 bahVar2.a = SomeStaticHelpers.ab(strArr2);
-                cdj cdjVar7 = new cdj();
-                cdjVar7.t("MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* cnb.z(-362516714617642L)  */,
+                DexFinder cdjVar7 = new DexFinder();
+                cdjVar7.usingStrings("MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* cnb.z(-362516714617642L)  */,
                         "cpan[getLabelIdByStr] label id is %s" /* "cpan[getLabelIdByStr] label id is %s" /* "cpan[getLabelIdByStr] label id is %s" /* cnb.z(-362332031023914L)  */);
                 bahVar2.d = cdjVar7;
                 return kotlinUnitVar;
@@ -136,8 +136,8 @@ public final /* synthetic */ class act implements IInvokable {
                 azlVar2.f(StaticHelpers7.toDexMethod(aeeVar).getDeclaringClass());
                 zbVar3.e = azlVar2;
                 fj fjVar3 = new fj();
-                cdj cdjVar8 = new cdj();
-                cdj.m(cdjVar8, 8);
+                DexFinder cdjVar8 = new DexFinder();
+                DexFinder.m(cdjVar8, 8);
                 cdjVar8.r(StaticHelpers7.toDexMethod(aeeVar).getDeclaringClass());
                 fj fjVar4 = new fj(i3);
                 fjVar4.b = StaticHelpers5.ab(EmptyReadonlyList.INSTANCE);
@@ -158,10 +158,10 @@ public final /* synthetic */ class act implements IInvokable {
                 return kotlinUnitVar;
             case 13:
                 bah bahVar3 = (bah) obj;
-                cdj cdjVar9 = new cdj();
+                DexFinder cdjVar9 = new DexFinder();
                 aeg.a.getClass();
                 cdjVar9.o(StaticHelpers7.toDexMethod(aee.a).getDeclaringClass());
-                cdjVar9.t("MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* cnb.z(-386474042194730L)  */,
+                cdjVar9.usingStrings("MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* cnb.z(-386474042194730L)  */,
                         "getAllContactLable time:%s count:%s stack:%s" /* "getAllContactLable time:%s count:%s stack:%s" /* "getAllContactLable time:%s count:%s stack:%s" /* cnb.z(-386289358601002L)  */,
                         "select * from ContactLabel where isTemporary = 0  order by createTime ASC " /*
                                                                                                       * cnb.z(-
@@ -175,17 +175,17 @@ public final /* synthetic */ class act implements IInvokable {
                 String[] strArr3 = { "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* cnb.z(-386830524480298L)  */ };
                 bahVar4.getClass();
                 bahVar4.a = SomeStaticHelpers.ab(strArr3);
-                cdj cdjVar10 = new cdj();
-                cdjVar10.t("MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* cnb.z(-386783279840042L)  */,
+                DexFinder cdjVar10 = new DexFinder();
+                cdjVar10.usingStrings("MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* cnb.z(-386783279840042L)  */,
                         "cpan[getLabelIdByStr] label id is %s" /* "cpan[getLabelIdByStr] label id is %s" /* "cpan[getLabelIdByStr] label id is %s" /* cnb.z(-386048840432426L)  */);
                 bahVar4.d = cdjVar10;
                 return kotlinUnitVar;
             case 15:
                 bah bahVar5 = (bah) obj;
-                cdj cdjVar11 = new cdj();
+                DexFinder cdjVar11 = new DexFinder();
                 aeg.a.getClass();
                 cdjVar11.o(StaticHelpers7.toDexMethod(aee.a).getDeclaringClass());
-                cdjVar11.t("MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* cnb.z(-383574939269930L)  */,
+                cdjVar11.usingStrings("MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* cnb.z(-383574939269930L)  */,
                         "getUserNameListById time:%s id:%s count:%s stack:%s" /* "getUserNameListById time:%s id:%s count:%s stack:%s" /* "getUserNameListById time:%s id:%s count:%s stack:%s" /* cnb.z(-382892039469866L)  */);
                 bahVar5.getClass();
                 bahVar5.d = cdjVar11;
@@ -200,14 +200,14 @@ public final /* synthetic */ class act implements IInvokable {
                 return kotlinUnitVar;
             case 19:
                 bah bahVar6 = (bah) obj;
-                cdj cdjVar12 = new cdj();
+                DexFinder cdjVar12 = new DexFinder();
                 aeo.a.getClass();
                 cdjVar12.o(StaticHelpers7.az(aem.a));
                 Class<String> clsBf3 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls3));
                 cls3 = clsBf3 != null ? clsBf3 : String.class;
                 Class<Boolean> clsBf4 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 cdjVar12.q(cls3, clsBf4 != null ? clsBf4 : Boolean.class);
-                cdjVar12.t("[get]username = %s" /* "[get]username = %s" /* "[get]username = %s" /* cnb.z(-384309378677546L)  */);
+                cdjVar12.usingStrings("[get]username = %s" /* "[get]username = %s" /* "[get]username = %s" /* cnb.z(-384309378677546L)  */);
                 bahVar6.getClass();
                 bahVar6.d = cdjVar12;
                 return kotlinUnitVar;
@@ -381,7 +381,7 @@ public final /* synthetic */ class act implements IInvokable {
                 return kotlinUnitVar;
             case 25:
                 bah bahVar7 = (bah) obj;
-                cdj cdjVar13 = new cdj();
+                DexFinder cdjVar13 = new DexFinder();
                 cls4 = MenuItem.class;
                 Class<MenuItem> clsBf7 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls4));
                 cdjVar13.r(clsBf7 != null ? clsBf7 : MenuItem.class);
@@ -412,8 +412,8 @@ public final /* synthetic */ class act implements IInvokable {
                 String[] strArr5 = { "com.tencent.mm.ui.conversation" /* "com.tencent.mm.ui.conversation" /* "com.tencent.mm.ui.conversation" /* cnb.z(-106210246261546L)  */ };
                 bahVar8.getClass();
                 bahVar8.a = SomeStaticHelpers.ab(strArr5);
-                cdj cdjVar14 = new cdj();
-                cdjVar14.t("MicroMsg.ConvDelLogic" /* "MicroMsg.ConvDelLogic" /* "MicroMsg.ConvDelLogic" /* cnb.z(-106626858089258L)  */, "del all notify message" /*
+                DexFinder cdjVar14 = new DexFinder();
+                cdjVar14.usingStrings("MicroMsg.ConvDelLogic" /* "MicroMsg.ConvDelLogic" /* "MicroMsg.ConvDelLogic" /* cnb.z(-106626858089258L)  */, "del all notify message" /*
                                                                                                              * cnb.z(-
                                                                                                              * 106583908416298L)
                                                                                                              */);
@@ -427,8 +427,8 @@ public final /* synthetic */ class act implements IInvokable {
                 String[] strArr6 = { "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* cnb.z(-78988743539498L)  */ };
                 bahVar9.getClass();
                 bahVar9.a = SomeStaticHelpers.ab(strArr6);
-                cdj cdjVar15 = new cdj();
-                cdjVar15.t("hidden_conv_parent" /* "hidden_conv_parent" /* "hidden_conv_parent" /* cnb.z(-78340203477802L)  */, "message_fold" /*
+                DexFinder cdjVar15 = new DexFinder();
+                cdjVar15.usingStrings("hidden_conv_parent" /* "hidden_conv_parent" /* "hidden_conv_parent" /* cnb.z(-78340203477802L)  */, "message_fold" /*
                                                                                                * "message_fold" /* "message_fold" /* cnb.z(-78207059491626L)  */
                                                                                                */,
                         "appbrandcustomerservicemsg" /* "appbrandcustomerservicemsg" /* "appbrandcustomerservicemsg" /* cnb.z(-78202764524330L)  */);

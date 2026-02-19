@@ -155,7 +155,7 @@ public final /* synthetic */ class djp implements bgf {
                 int i4 = 0;
                 MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(viewGroup).getMethodResolverBasedOnPreviouslyProvidedConfig();
                 Class cls = Integer.TYPE;
-                ((MethodHookWrapper) StaticHelpers6.n(new Object[]{dal.getKClassFromClass(cls), dal.getKClassFromClass(cls), dal.getKClassFromClass(cls)}, 3, methodResolverVarT)).e(0, 0, 0);
+                ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[]{dal.getKClassFromClass(cls), dal.getKClassFromClass(cls), dal.getKClassFromClass(cls)}, 3, methodResolverVarT)).e(0, 0, 0);
                 MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(viewGroup).getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT2.name = "getAdapter" /* "getAdapter" /* "getAdapter" /* "getAdapter" /* cnb.z(-555992106400554L)   */;
                 Object objE2 = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT2)).e(new Object[0]);

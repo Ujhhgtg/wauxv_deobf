@@ -20,7 +20,7 @@ public final class DisablePlayRingtoneHook extends SwitchHook implements IDexFin
         List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(aob.a));
         DisablePlayRingtoneHook aoeVar = a;
         HookManager hookManagerVarAb = PackageParam.createHook(aoeVar, listBf);
-        aoeVar.y(hookManagerVarAb, new amb(13));
+        aoeVar.hookBefore(hookManagerVarAb, new amb(13));
         hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 

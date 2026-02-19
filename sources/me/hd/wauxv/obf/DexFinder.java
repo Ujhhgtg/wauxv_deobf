@@ -6,7 +6,7 @@ import java.util.List;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class cdj extends dqc {
+public final class DexFinder extends dqc {
     public dnf a;
     public an b;
     public zb d;
@@ -17,7 +17,7 @@ public final class cdj extends dqc {
     public fj i;
     public fj j;
 
-    public static void k(cdj cdjVar, String str) {
+    public static void k(DexFinder cdjVar, String str) {
         List arrayList = cdjVar.g;
         if (arrayList == null) {
             arrayList = new ArrayList();
@@ -26,16 +26,16 @@ public final class cdj extends dqc {
         arrayList.add(new dnf(str, dne.Contains, false));
     }
 
-    public static void l(cdj cdjVar, String str) {
+    public static void setClassEquals(DexFinder cdjVar, String str) {
         zb zbVar = new zb();
         zbVar.j(str, dne.Equals);
         cdjVar.d = zbVar;
     }
 
-    public static void m(cdj cdjVar, int i) {
+    public static void m(DexFinder cdjVar, int i) {
         an anVar = new an();
         anVar.a = i;
-        anVar.b = bzu.Contains;
+        anVar.b = UsingStringsTypeEnum.Contains;
         cdjVar.b = anVar;
     }
 
@@ -91,10 +91,10 @@ public final class cdj extends dqc {
             ArrayList arrayList5 = new ArrayList(StaticHelpers4.ak(arrayList4, 10));
             Iterator it3 = arrayList4.iterator();
             while (it3.hasNext()) {
-                avk avkVar = ((cpf) it3.next()).a;
-                throwIfVar1IsNull(avkVar,
+                DexBaseQuery dexBaseQueryVar = ((cpf) it3.next()).a;
+                throwIfVar1IsNull(dexBaseQueryVar,
                         "null cannot be cast to non-null type org.luckypray.dexkit.query.base.BaseQuery");
-                arrayList5.add(Integer.valueOf(avkVar.c(bbbVar)));
+                arrayList5.add(Integer.valueOf(dexBaseQueryVar.c(bbbVar)));
             }
             int[] iArrY = StaticHelpers5.y(arrayList5);
             bbbVar.ac(4, iArrY.length, 4);
@@ -155,7 +155,7 @@ public final class cdj extends dqc {
         bqh bqhVar = new bqh();
         bqhVar.a = intRangeVar.first;
         bqhVar.b = intRangeVar.last;
-        fjVar.d = bqhVar;
+        fjVar.usingStringsType = bqhVar;
     }
 
     public final void q(Class... clsArr) {
@@ -192,7 +192,7 @@ public final class cdj extends dqc {
         this.a = new dnf(str, dne.Equals, false);
     }
 
-    public final void t(String... strArr) {
+    public final void usingStrings(String... strArr) {
         ArrayList arrayList = new ArrayList(strArr.length);
         for (String str : strArr) {
             arrayList.add(new dnf(str, dne.Equals, false));

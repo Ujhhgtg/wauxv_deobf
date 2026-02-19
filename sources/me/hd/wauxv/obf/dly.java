@@ -20,7 +20,7 @@ public final class dly extends bws {
         KClass zcVarB2 = dal.getKClassFromClass(String.class);
         KClass zcVarB3 = dal.getKClassFromClass(ContentValues.class);
         Class cls = Integer.TYPE;
-        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers6.n(new Object[] { zcVarB, zcVarB2, zcVarB3, dal.getKClassFromClass(cls) }, 4, methodResolverVarT);
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { zcVarB, zcVarB2, zcVarB3, dal.getKClassFromClass(cls) }, 4, methodResolverVarT);
         dly dlyVar = a;
         HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         HookManager hookManagerVarAd = dlyVar.createImmediateHook(methodHookWrapperVar, hookPriorityEnumVar);
@@ -28,7 +28,7 @@ public final class dly extends bws {
         hookManagerVarAd.initInstantCollectionAndApplyHooks();
         MethodResolver methodResolverVarT2 = bmuVarS.getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT2.name = "updateWithOnConflict" /* "updateWithOnConflict" /* "updateWithOnConflict" /* cnb.z(-52909702118186L)  */;
-        HookManager hookManagerVarAd2 = dlyVar.createImmediateHook((MethodHookWrapper) StaticHelpers6.n(
+        HookManager hookManagerVarAd2 = dlyVar.createImmediateHook((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(
                 new Object[] { dal.getKClassFromClass(String.class), dal.getKClassFromClass(ContentValues.class), dal.getKClassFromClass(String.class),
                         Array.newInstance((Class<?>) HugeSyntheticPileOfHelpers.getJavaClass(dal.getKClassFromClass(String.class)), 0).getClass(), dal.getKClassFromClass(cls) },
                 5, methodResolverVarT2), hookPriorityEnumVar);
@@ -37,7 +37,7 @@ public final class dly extends bws {
         MethodResolver methodResolverVarT3 = bmuVarS.getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT3.name = "rawQueryWithFactory" /* "rawQueryWithFactory" /* "rawQueryWithFactory" /* cnb.z(-52802327935786L)  */;
         HookManager hookManagerVarAd3 = dlyVar
-                .createImmediateHook((MethodHookWrapper) StaticHelpers6.n(
+                .createImmediateHook((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(
                         new Object[] {
                                 "com.tencent.wcdb.database.SQLiteDatabase$CursorFactory" /* "com.tencent.wcdb.database.SQLiteDatabase$CursorFactory" /* "com.tencent.wcdb.database.SQLiteDatabase$CursorFactory" /* cnb.z(-53231824665386L)  */,
                                 dal.getKClassFromClass(String.class),
@@ -51,7 +51,7 @@ public final class dly extends bws {
             SyntheticPileOfMess bmuVarS2 = yg.s(-54473070213930L);
             MethodResolver methodResolverVarT4 = bmuVarS2.getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT4.name = "updateWithOnConflict" /* "updateWithOnConflict" /* "updateWithOnConflict" /* cnb.z(-54855322303274L)  */;
-            HookManager hookManagerVarAd4 = dlyVar.createImmediateHook((MethodHookWrapper) StaticHelpers6.n(
+            HookManager hookManagerVarAd4 = dlyVar.createImmediateHook((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(
                     new Object[] { dal.getKClassFromClass(String.class), dal.getKClassFromClass(ContentValues.class), dal.getKClassFromClass(String.class),
                             Array.newInstance((Class<?>) HugeSyntheticPileOfHelpers.getJavaClass(dal.getKClassFromClass(String.class)), 0).getClass(), dal.getKClassFromClass(cls) },
                     5, methodResolverVarT4), hookPriorityEnumVar);

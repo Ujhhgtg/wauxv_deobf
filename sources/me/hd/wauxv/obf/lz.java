@@ -16,7 +16,7 @@ public final class lz extends SwitchHook implements IDexFind {
         List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(ly.a));
         lz lzVar = a;
         HookManager hookManagerVarAb = PackageParam.createHook(lzVar, listBf);
-        lzVar.x(hookManagerVarAb, new gi(24));
+        lzVar.hookAfter(hookManagerVarAb, new gi(24));
         hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 

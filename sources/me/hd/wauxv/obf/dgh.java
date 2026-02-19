@@ -14,7 +14,7 @@ public final class dgh extends doi implements bgj {
     public final /* synthetic */ View e;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public /* synthetic */ dgh(View view, afw afwVar, int i) {
+    public /* synthetic */ dgh(View view, kotlinx$coroutines$internal$DispatchedContinuation afwVar, int i) {
         super(2, afwVar);
         this.a = i;
         this.e = view;
@@ -23,7 +23,7 @@ public final class dgh extends doi implements bgj {
     @Override // me.hd.wauxv.obf.bgj
     public final Object g(Object obj, Object obj2) {
         ahp ahpVar = (ahp) obj;
-        afw afwVar = (afw) obj2;
+        kotlinx$coroutines$internal$DispatchedContinuation afwVar = (kotlinx$coroutines$internal$DispatchedContinuation) obj2;
         switch (this.a) {
             case 0:
                 break;
@@ -32,7 +32,7 @@ public final class dgh extends doi implements bgj {
     }
 
     @Override // me.hd.wauxv.obf.nc
-    public final afw h(Object obj, afw afwVar) {
+    public final kotlinx$coroutines$internal$DispatchedContinuation h(Object obj, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         switch (this.a) {
             case 0:
                 return new dgh((LinearLayout) this.e, afwVar, 0);

@@ -16,7 +16,7 @@ public final class lw extends doi implements bgj {
      * JADX WARN: 'super' call moved to the top of the method (can break code
      * semantics)
      */
-    public /* synthetic */ lw(int i, afw afwVar, int i2) {
+    public /* synthetic */ lw(int i, kotlinx$coroutines$internal$DispatchedContinuation afwVar, int i2) {
         super(i, afwVar);
         this.a = i2;
     }
@@ -24,7 +24,7 @@ public final class lw extends doi implements bgj {
     @Override // me.hd.wauxv.obf.bgj
     public final Object g(Object obj, Object obj2) throws Throwable {
         ahp ahpVar = (ahp) obj;
-        afw afwVar = (afw) obj2;
+        kotlinx$coroutines$internal$DispatchedContinuation afwVar = (kotlinx$coroutines$internal$DispatchedContinuation) obj2;
         switch (this.a) {
             case 0:
                 lw lwVar = (lw) h(ahpVar, afwVar);
@@ -59,7 +59,7 @@ public final class lw extends doi implements bgj {
     }
 
     @Override // me.hd.wauxv.obf.nc
-    public final afw h(Object obj, afw afwVar) {
+    public final kotlinx$coroutines$internal$DispatchedContinuation h(Object obj, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         switch (this.a) {
             case 0:
                 return new lw(2, afwVar, 0);
@@ -172,7 +172,7 @@ public final class lw extends doi implements bgj {
                                 atz.a.getClass();
                                 StaticHelpers7.toDexMethod(aty.a).invoke(objB, null, Boolean.TRUE);
                                 arrayList2
-                                        .add(StaticHelpers7.ba(PanelEmojiHookConstructorGroupItemInfo.INSTANCE).newInstance(objB, 2, "" /* "" /* "" /* "" /* cnb.z(-474215929084714L)   */, 0));
+                                        .add(StaticHelpers7.ba(PanelEmojiHook$ConstructorGroupItemInfo.INSTANCE).newInstance(objB, 2, "" /* "" /* "" /* "" /* cnb.z(-474215929084714L)   */, 0));
                             }
                         }
                     }

@@ -18,11 +18,11 @@ public final class DisableBrightnessHook extends SwitchHook {
         int i = 0;
         MethodResolver methodResolverVarT = yg.s(-511805482859306L).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.name = "setAttributes" /* "setAttributes" /* "setAttributes" /* cnb.z(-511633684167466L)  */;
-        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.getKClassFromClass(WindowManager.LayoutParams.class) }, 1, methodResolverVarT);
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(WindowManager.LayoutParams.class) }, 1, methodResolverVarT);
         HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         DisableBrightnessHook anvVar = a;
         HookManager hookManagerVarAd = anvVar.createImmediateHook(methodHookWrapperVar, hookPriorityEnumVar);
-        anvVar.y(hookManagerVarAd, new amb(4));
+        anvVar.hookBefore(hookManagerVarAd, new amb(4));
         hookManagerVarAd.initInstantCollectionAndApplyHooks();
     }
 

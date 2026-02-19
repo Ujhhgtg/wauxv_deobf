@@ -39,7 +39,7 @@ public final /* synthetic */ class d implements View.OnClickListener {
                 dlx.a.getClass();
                 MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(dlx.b()).getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT.name = "delete" /* "delete" /* "delete" /* cnb.z(-103225243990826L)  */;
-                Object objJ = ((MethodHookWrapper) StaticHelpers6.n(
+                Object objJ = ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(
                         new Object[] { dal.getKClassFromClass(String.class), dal.getKClassFromClass(String.class), dal.getKClassFromClass(String[].class) }, 3, methodResolverVarT))
                         .j(strZ, strZ2, strArr);
                 throwIfVar1IsNull(objJ);

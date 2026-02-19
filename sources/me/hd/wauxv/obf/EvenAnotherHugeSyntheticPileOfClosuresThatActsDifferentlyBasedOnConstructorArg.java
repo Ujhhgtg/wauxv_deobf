@@ -109,8 +109,8 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                 return kotlinUnitVar;
             case 3:
                 bah bahVar = (bah) obj;
-                cdj cdjVar = new cdj();
-                cdjVar.t("MicroMsg.QBarStringHandler" /* "MicroMsg.QBarStringHandler" /* "MicroMsg.QBarStringHandler" /* cnb.z(-517732537727786L)  */, "key_offline_scan_show_tips" /*
+                DexFinder cdjVar = new DexFinder();
+                cdjVar.usingStrings("MicroMsg.QBarStringHandler" /* "MicroMsg.QBarStringHandler" /* "MicroMsg.QBarStringHandler" /* cnb.z(-517732537727786L)  */, "key_offline_scan_show_tips" /*
                                                                                                                     * cnb
                                                                                                                     * .z
                                                                                                                     * (-
@@ -134,7 +134,7 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                 azlVar.e(aziVar);
                 zbVar.e = azlVar;
                 fj fjVar = new fj();
-                cdj cdjVar2 = new cdj();
+                DexFinder cdjVar2 = new DexFinder();
                 cdjVar2.s("onCreateMMMenu" /* "onCreateMMMenu" /* "onCreateMMMenu" /* cnb.z(-69363721829162L)  */);
                 fjVar.f(cdjVar2);
                 zbVar.f = fjVar;
@@ -142,7 +142,7 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                 return kotlinUnitVar;
             case 5:
                 bah bahVar2 = (bah) obj;
-                cdj cdjVar3 = new cdj();
+                DexFinder cdjVar3 = new DexFinder();
                 cdjVar3.s("onCreateMMMenu" /* "onCreateMMMenu" /* "onCreateMMMenu" /* cnb.z(-69282117450538L)  */);
                 bahVar2.getClass();
                 bahVar2.d = cdjVar3;
@@ -295,7 +295,7 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                 azlVar2.e(aziVar2);
                 zbVar3.e = azlVar2;
                 fj fjVar2 = new fj();
-                cdj cdjVar4 = new cdj();
+                DexFinder cdjVar4 = new DexFinder();
                 cdjVar4.s("onMMMenuItemSelected" /* "onMMMenuItemSelected" /* "onMMMenuItemSelected" /* cnb.z(-69642894703402L)  */);
                 fjVar2.f(cdjVar4);
                 zbVar3.f = fjVar2;
@@ -303,7 +303,7 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                 return kotlinUnitVar;
             case 13:
                 bah bahVar3 = (bah) obj;
-                cdj cdjVar5 = new cdj();
+                DexFinder cdjVar5 = new DexFinder();
                 cdjVar5.s("onMMMenuItemSelected" /* "onMMMenuItemSelected" /* "onMMMenuItemSelected" /* cnb.z(-66786741451562L)  */);
                 bahVar3.getClass();
                 bahVar3.d = cdjVar5;
@@ -580,7 +580,7 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                 return kotlinUnitVar;
             case 19:
                 bah bahVar4 = (bah) obj;
-                cdj cdjVar6 = new cdj();
+                DexFinder cdjVar6 = new DexFinder();
                 cdjVar6.p(new IntRange(12, 14, 1));
                 bahVar4.getClass();
                 bahVar4.d = cdjVar6;
@@ -883,8 +883,8 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                 String[] strArr5 = { "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* cnb.z(-66215510801194L)  */ };
                 bahVar5.getClass();
                 bahVar5.a = SomeStaticHelpers.ab(strArr5);
-                cdj cdjVar7 = new cdj();
-                cdjVar7.t("MicroMsg.MsgInfoStorage" /* "MicroMsg.MsgInfoStorage" /* "MicroMsg.MsgInfoStorage" /* cnb.z(-66116726553386L)  */,
+                DexFinder cdjVar7 = new DexFinder();
+                cdjVar7.usingStrings("MicroMsg.MsgInfoStorage" /* "MicroMsg.MsgInfoStorage" /* "MicroMsg.MsgInfoStorage" /* cnb.z(-66116726553386L)  */,
                         "protect:c2c msg should not here" /* "protect:c2c msg should not here" /* "protect:c2c msg should not here" /* cnb.z(-66013647338282L)  */);
                 bahVar5.d = cdjVar7;
                 return kotlinUnitVar;

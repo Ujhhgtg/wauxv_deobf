@@ -6,13 +6,13 @@ import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
 /* JADX INFO: loaded from: classes.dex */
 public abstract class afx extends nc {
     public final ahh m;
-    public transient afw n;
+    public transient kotlinx$coroutines$internal$DispatchedContinuation n;
 
     /*
      * JADX WARN: 'super' call moved to the top of the method (can break code
      * semantics)
      */
-    public afx(afw afwVar) {
+    public afx(kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         super(afwVar);
         ahh ahhVarC = afwVar != null ? afwVar.c() : null;
         this.m = ahhVarC;
@@ -27,7 +27,7 @@ public abstract class afx extends nc {
 
     @Override // me.hd.wauxv.obf.nc
     public final void l() {
-        afw afwVar = this.n;
+        kotlinx$coroutines$internal$DispatchedContinuation afwVar = this.n;
         if (afwVar != null && afwVar != this) {
             ahh ahhVar = this.m;
             throwIfVar1IsNull(ahhVar);

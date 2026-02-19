@@ -20,7 +20,7 @@ public final class ge extends SwitchHook {
         HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         ge geVar = a;
         HookManager hookManagerVarAd = geVar.createImmediateHook(constructorHookWrapperVar, hookPriorityEnumVar);
-        geVar.y(hookManagerVarAd, new bn(26));
+        geVar.hookBefore(hookManagerVarAd, new bn(26));
         hookManagerVarAd.initInstantCollectionAndApplyHooks();
     }
 

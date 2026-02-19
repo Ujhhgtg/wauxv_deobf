@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class cdr {
-    public static final cdq Companion = new cdq();
+public final class ProtoModUserInfo {
+    public static final ProtoModUserInfoCompanion Companion = new ProtoModUserInfoCompanion();
     public Integer a;
     public String aa;
     public String ab;
@@ -49,7 +49,7 @@ public final class cdr {
         if (this == obj) {
             return true;
         }
-        if (!cdr.class.equals(obj != null ? obj.getClass() : null)) {
+        if (!ProtoModUserInfo.class.equals(obj != null ? obj.getClass() : null)) {
             return false;
         }
         throwIfVar1IsNull(obj,
@@ -58,32 +58,32 @@ public final class cdr {
                                                                                                                   * z(-
                                                                                                                   * 339323891219242L)
                                                                                                                   */);
-        cdr cdrVar = (cdr) obj;
-        return nullSafeIsEqual(this.a, cdrVar.a) && nullSafeIsEqual(this.d, cdrVar.d)
-                && nullSafeIsEqual(this.g, cdrVar.g) && nullSafeIsEqual(this.h, cdrVar.h)
-                && nullSafeIsEqual(this.j, cdrVar.j) && nullSafeIsEqual(this.n, cdrVar.n)
-                && nullSafeIsEqual(this.p, cdrVar.p)
-                && nullSafeIsEqual(this.q, cdrVar.q) && nullSafeIsEqual(this.s, cdrVar.s)
-                && nullSafeIsEqual(this.t, cdrVar.t)
-                && nullSafeIsEqual(this.u, cdrVar.u) && nullSafeIsEqual(this.v, cdrVar.v)
-                && nullSafeIsEqual(this.w, cdrVar.w)
-                && nullSafeIsEqual(this.y, cdrVar.y) && nullSafeIsEqual(this.ac, cdrVar.ac)
-                && nullSafeIsEqual(this.ad, cdrVar.ad)
-                && nullSafeIsEqual(this.ae, cdrVar.ae) && nullSafeIsEqual(this.ag, cdrVar.ag)
-                && nullSafeIsEqual(this.ah, cdrVar.ah)
-                && nullSafeIsEqual(this.aj, cdrVar.aj) && nullSafeIsEqual(this.b, cdrVar.b)
-                && nullSafeIsEqual(this.c, cdrVar.c)
-                && nullSafeIsEqual(this.e, cdrVar.e) && nullSafeIsEqual(this.f, cdrVar.f)
-                && Arrays.equals(this.i, cdrVar.i)
-                && nullSafeIsEqual(this.k, cdrVar.k) && nullSafeIsEqual(this.l, cdrVar.l)
-                && nullSafeIsEqual(this.m, cdrVar.m)
-                && nullSafeIsEqual(this.o, cdrVar.o) && nullSafeIsEqual(this.r, cdrVar.r)
-                && nullSafeIsEqual(this.x, cdrVar.x)
-                && nullSafeIsEqual(this.z, cdrVar.z) && nullSafeIsEqual(this.aa, cdrVar.aa)
-                && nullSafeIsEqual(this.ab, cdrVar.ab)
-                && nullSafeIsEqual(this.af, cdrVar.af) && nullSafeIsEqual(this.ai, cdrVar.ai)
-                && nullSafeIsEqual(this.ak, cdrVar.ak)
-                && nullSafeIsEqual(this.al, cdrVar.al);
+        ProtoModUserInfo protoModUserInfoVar = (ProtoModUserInfo) obj;
+        return nullSafeIsEqual(this.a, protoModUserInfoVar.a) && nullSafeIsEqual(this.d, protoModUserInfoVar.d)
+                && nullSafeIsEqual(this.g, protoModUserInfoVar.g) && nullSafeIsEqual(this.h, protoModUserInfoVar.h)
+                && nullSafeIsEqual(this.j, protoModUserInfoVar.j) && nullSafeIsEqual(this.n, protoModUserInfoVar.n)
+                && nullSafeIsEqual(this.p, protoModUserInfoVar.p)
+                && nullSafeIsEqual(this.q, protoModUserInfoVar.q) && nullSafeIsEqual(this.s, protoModUserInfoVar.s)
+                && nullSafeIsEqual(this.t, protoModUserInfoVar.t)
+                && nullSafeIsEqual(this.u, protoModUserInfoVar.u) && nullSafeIsEqual(this.v, protoModUserInfoVar.v)
+                && nullSafeIsEqual(this.w, protoModUserInfoVar.w)
+                && nullSafeIsEqual(this.y, protoModUserInfoVar.y) && nullSafeIsEqual(this.ac, protoModUserInfoVar.ac)
+                && nullSafeIsEqual(this.ad, protoModUserInfoVar.ad)
+                && nullSafeIsEqual(this.ae, protoModUserInfoVar.ae) && nullSafeIsEqual(this.ag, protoModUserInfoVar.ag)
+                && nullSafeIsEqual(this.ah, protoModUserInfoVar.ah)
+                && nullSafeIsEqual(this.aj, protoModUserInfoVar.aj) && nullSafeIsEqual(this.b, protoModUserInfoVar.b)
+                && nullSafeIsEqual(this.c, protoModUserInfoVar.c)
+                && nullSafeIsEqual(this.e, protoModUserInfoVar.e) && nullSafeIsEqual(this.f, protoModUserInfoVar.f)
+                && Arrays.equals(this.i, protoModUserInfoVar.i)
+                && nullSafeIsEqual(this.k, protoModUserInfoVar.k) && nullSafeIsEqual(this.l, protoModUserInfoVar.l)
+                && nullSafeIsEqual(this.m, protoModUserInfoVar.m)
+                && nullSafeIsEqual(this.o, protoModUserInfoVar.o) && nullSafeIsEqual(this.r, protoModUserInfoVar.r)
+                && nullSafeIsEqual(this.x, protoModUserInfoVar.x)
+                && nullSafeIsEqual(this.z, protoModUserInfoVar.z) && nullSafeIsEqual(this.aa, protoModUserInfoVar.aa)
+                && nullSafeIsEqual(this.ab, protoModUserInfoVar.ab)
+                && nullSafeIsEqual(this.af, protoModUserInfoVar.af) && nullSafeIsEqual(this.ai, protoModUserInfoVar.ai)
+                && nullSafeIsEqual(this.ak, protoModUserInfoVar.ak)
+                && nullSafeIsEqual(this.al, protoModUserInfoVar.al);
     }
 
     public final int hashCode() {

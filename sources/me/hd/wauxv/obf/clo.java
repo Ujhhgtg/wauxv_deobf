@@ -38,7 +38,7 @@ public final /* synthetic */ class clo implements IInvokable {
                 return Kotlin$Unit.INSTANCE;
             case 1:
                 bah bahVar = (bah) obj;
-                cdj cdjVar = new cdj();
+                DexFinder cdjVar = new DexFinder();
                 cls = String.class;
                 Class<String> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 cls = clsBf != null ? clsBf : String.class;
@@ -67,7 +67,7 @@ public final /* synthetic */ class clo implements IInvokable {
                 return Kotlin$Unit.INSTANCE;
             case 4:
                 bah bahVar2 = (bah) obj;
-                cdj cdjVar2 = new cdj();
+                DexFinder cdjVar2 = new DexFinder();
                 cls4 = String.class;
                 Class<String> clsBf4 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls4));
                 if (clsBf4 == null) {
@@ -105,7 +105,7 @@ public final /* synthetic */ class clo implements IInvokable {
                 return Kotlin$Unit.INSTANCE;
             case 8:
                 bah bahVar3 = (bah) obj;
-                cdj cdjVar3 = new cdj();
+                DexFinder cdjVar3 = new DexFinder();
                 cls6 = String.class;
                 Class<String> clsBf9 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls6));
                 cls6 = clsBf9 != null ? clsBf9 : String.class;
@@ -126,8 +126,8 @@ public final /* synthetic */ class clo implements IInvokable {
                 return Kotlin$Unit.INSTANCE;
             case 10:
                 bah bahVar4 = (bah) obj;
-                cdj cdjVar4 = new cdj();
-                cdjVar4.t("/cgi-bin/micromsg-bin/modifycontactlabellist" /* "/cgi-bin/micromsg-bin/modifycontactlabellist" /* "/cgi-bin/micromsg-bin/modifycontactlabellist" /* "/cgi-bin/micromsg-bin/modifycontactlabellist" /* cnb.z(-110436494080810L)   */);
+                DexFinder cdjVar4 = new DexFinder();
+                cdjVar4.usingStrings("/cgi-bin/micromsg-bin/modifycontactlabellist" /* "/cgi-bin/micromsg-bin/modifycontactlabellist" /* "/cgi-bin/micromsg-bin/modifycontactlabellist" /* "/cgi-bin/micromsg-bin/modifycontactlabellist" /* cnb.z(-110436494080810L)   */);
                 cls10 = LinkedList.class;
                 Class<LinkedList> clsBf13 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls10));
                 cdjVar4.q(clsBf13 != null ? clsBf13 : LinkedList.class);
@@ -148,7 +148,7 @@ public final /* synthetic */ class clo implements IInvokable {
                 return Kotlin$Unit.INSTANCE;
             case 13:
                 bah bahVar5 = (bah) obj;
-                cdj cdjVar5 = new cdj();
+                DexFinder cdjVar5 = new DexFinder();
                 cls11 = String.class;
                 Class<String> clsBf14 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls11));
                 if (clsBf14 == null) {
@@ -185,7 +185,7 @@ public final /* synthetic */ class clo implements IInvokable {
                 return Kotlin$Unit.INSTANCE;
             case 16:
                 bah bahVar6 = (bah) obj;
-                cdj cdjVar6 = new cdj();
+                DexFinder cdjVar6 = new DexFinder();
                 Class clsBf19 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(Integer.class));
                 Class cls15 = clsBf19 == null ? Integer.class : clsBf19;
                 Class clsBf20 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(Integer.class));
@@ -215,22 +215,22 @@ public final /* synthetic */ class clo implements IInvokable {
                 return Kotlin$Unit.INSTANCE;
             case 19:
                 bah bahVar7 = (bah) obj;
-                cdj cdjVar7 = new cdj();
-                cdjVar7.t("MicroMsg.NetSceneQueue" /* "MicroMsg.NetSceneQueue" /* "MicroMsg.NetSceneQueue" /* "MicroMsg.NetSceneQueue" /* cnb.z(-136305082104618L)   */, "forbid in waiting: type=" /* "forbid in waiting: type=" /* "forbid in waiting: type=" /* "forbid in waiting: type=" /* cnb.z(-136189117987626L)   */, "forbid in running: type=" /* "forbid in running: type=" /* "forbid in running: type=" /* "forbid in running: type=" /* cnb.z(-136098923674410L)   */);
+                DexFinder cdjVar7 = new DexFinder();
+                cdjVar7.usingStrings("MicroMsg.NetSceneQueue" /* "MicroMsg.NetSceneQueue" /* "MicroMsg.NetSceneQueue" /* "MicroMsg.NetSceneQueue" /* cnb.z(-136305082104618L)   */, "forbid in waiting: type=" /* "forbid in waiting: type=" /* "forbid in waiting: type=" /* "forbid in waiting: type=" /* cnb.z(-136189117987626L)   */, "forbid in running: type=" /* "forbid in running: type=" /* "forbid in running: type=" /* "forbid in running: type=" /* cnb.z(-136098923674410L)   */);
                 bahVar7.getClass();
                 bahVar7.d = cdjVar7;
                 return Kotlin$Unit.INSTANCE;
             case 20:
                 bah bahVar8 = (bah) obj;
-                cdj cdjVar8 = new cdj();
+                DexFinder cdjVar8 = new DexFinder();
                 cme.a.getClass();
                 cdjVar8.o(StaticHelpers7.toDexMethod(cmc.a).getDeclaringClass());
                 fj fjVar = new fj();
-                cdj cdjVar9 = new cdj();
-                cdjVar9.t("MicroMsg.BigBallSysCmdMsgConsumer" /* "MicroMsg.BigBallSysCmdMsgConsumer" /* "MicroMsg.BigBallSysCmdMsgConsumer" /* "MicroMsg.BigBallSysCmdMsgConsumer" /* cnb.z(-135441793678122L)   */, "summercck emotionkv pcKeyStr len:%d, content[%s] pcId[%s]" /* "summercck emotionkv pcKeyStr len:%d, content[%s] pcId[%s]" /* "summercck emotionkv pcKeyStr len:%d, content[%s] pcId[%s]" /* "summercck emotionkv pcKeyStr len:%d, content[%s] pcId[%s]" /* cnb.z(-135244225182506L)   */);
+                DexFinder cdjVar9 = new DexFinder();
+                cdjVar9.usingStrings("MicroMsg.BigBallSysCmdMsgConsumer" /* "MicroMsg.BigBallSysCmdMsgConsumer" /* "MicroMsg.BigBallSysCmdMsgConsumer" /* "MicroMsg.BigBallSysCmdMsgConsumer" /* cnb.z(-135441793678122L)   */, "summercck emotionkv pcKeyStr len:%d, content[%s] pcId[%s]" /* "summercck emotionkv pcKeyStr len:%d, content[%s] pcId[%s]" /* "summercck emotionkv pcKeyStr len:%d, content[%s] pcId[%s]" /* "summercck emotionkv pcKeyStr len:%d, content[%s] pcId[%s]" /* cnb.z(-135244225182506L)   */);
                 fjVar.f(cdjVar9);
-                cdj cdjVar10 = new cdj();
-                cdjVar10.t("MicroMsg.CommandProcessor" /* "MicroMsg.CommandProcessor" /* "MicroMsg.CommandProcessor" /* "MicroMsg.CommandProcessor" /* cnb.z(-135562052762410L)   */, "summer processed log level[%s], need open debug ret false" /* "summer processed log level[%s], need open debug ret false" /* "summer processed log level[%s], need open debug ret false" /* "summer processed log level[%s], need open debug ret false" /* cnb.z(-132718784412458L)   */);
+                DexFinder cdjVar10 = new DexFinder();
+                cdjVar10.usingStrings("MicroMsg.CommandProcessor" /* "MicroMsg.CommandProcessor" /* "MicroMsg.CommandProcessor" /* "MicroMsg.CommandProcessor" /* cnb.z(-135562052762410L)   */, "summer processed log level[%s], need open debug ret false" /* "summer processed log level[%s], need open debug ret false" /* "summer processed log level[%s], need open debug ret false" /* "summer processed log level[%s], need open debug ret false" /* cnb.z(-132718784412458L)   */);
                 fjVar.f(cdjVar10);
                 cdjVar8.j = fjVar;
                 bahVar8.getClass();
@@ -252,7 +252,7 @@ public final /* synthetic */ class clo implements IInvokable {
                 return Kotlin$Unit.INSTANCE;
             case 23:
                 bah bahVar9 = (bah) obj;
-                cdj cdjVar11 = new cdj();
+                DexFinder cdjVar11 = new DexFinder();
                 Class clsBf28 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(Integer.class));
                 Class cls23 = clsBf28 == null ? Integer.class : clsBf28;
                 Class clsBf29 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(Integer.class));
@@ -292,7 +292,7 @@ public final /* synthetic */ class clo implements IInvokable {
                 return Kotlin$Unit.INSTANCE;
             case 26:
                 bah bahVar10 = (bah) obj;
-                cdj cdjVar12 = new cdj();
+                DexFinder cdjVar12 = new DexFinder();
                 cdjVar12.p(new IntRange(29, 30, 1));
                 bahVar10.getClass();
                 bahVar10.d = cdjVar12;
@@ -313,7 +313,7 @@ public final /* synthetic */ class clo implements IInvokable {
                 return Kotlin$Unit.INSTANCE;
             default:
                 bah bahVar11 = (bah) obj;
-                cdj cdjVar13 = new cdj();
+                DexFinder cdjVar13 = new DexFinder();
                 cls14 = String.class;
                 Class<String> clsBf35 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls14));
                 if (clsBf35 == null) {

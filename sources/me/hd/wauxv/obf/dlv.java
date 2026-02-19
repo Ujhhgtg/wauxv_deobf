@@ -17,7 +17,7 @@ public final class dlv extends SwitchHook implements IDexFind {
         List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(dlt.a));
         dlv dlvVar = a;
         HookManager hookManagerVarAb = PackageParam.createHook(dlvVar, listBf);
-        dlvVar.x(hookManagerVarAb, new SyntheticMessOfLambdas(5));
+        dlvVar.hookAfter(hookManagerVarAb, new SyntheticMessOfLambdas(5));
         hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 

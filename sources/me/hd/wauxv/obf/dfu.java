@@ -5,11 +5,11 @@ import java.util.NoSuchElementException;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class dfu implements Iterator, afw, IEmpty {
+public final class dfu implements Iterator, kotlinx$coroutines$internal$DispatchedContinuation, IEmpty {
     public int a;
     public Object d;
     public Iterator e;
-    public afw f;
+    public kotlinx$coroutines$internal$DispatchedContinuation f;
 
     @Override // me.hd.wauxv.obf.afw
     public final void _bn(Object obj) throws Throwable {
@@ -56,7 +56,7 @@ public final class dfu implements Iterator, afw, IEmpty {
                 this.e = null;
             }
             this.a = 5;
-            afw afwVar = this.f;
+            kotlinx$coroutines$internal$DispatchedContinuation afwVar = this.f;
             throwIfVar1IsNull(afwVar);
             this.f = null;
             afwVar._bn(Kotlin$Unit.INSTANCE);

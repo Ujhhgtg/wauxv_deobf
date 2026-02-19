@@ -47,8 +47,8 @@ public final /* synthetic */ class bn implements IInvokable {
         String[] strArr = { "com.tencent.mm.sdk.platformtools" /* "com.tencent.mm.sdk.platformtools" /* "com.tencent.mm.sdk.platformtools" /* cnb.z(-442909912464170L)  */ };
         bahVar.getClass();
         bahVar.a = SomeStaticHelpers.ab(strArr);
-        cdj cdjVar = new cdj();
-        cdjVar.t("MicroMsg.SDK.XmlParser" /* "MicroMsg.SDK.XmlParser" /* "MicroMsg.SDK.XmlParser" /* cnb.z(-442235602598698L)  */, "[ %s ]" /* "[ %s ]" /* "[ %s ]" /* cnb.z(-442119638481706L)  */);
+        DexFinder cdjVar = new DexFinder();
+        cdjVar.usingStrings("MicroMsg.SDK.XmlParser" /* "MicroMsg.SDK.XmlParser" /* "MicroMsg.SDK.XmlParser" /* cnb.z(-442235602598698L)  */, "[ %s ]" /* "[ %s ]" /* "[ %s ]" /* cnb.z(-442119638481706L)  */);
         bahVar.d = cdjVar;
         return Kotlin$Unit.INSTANCE;
     }
@@ -666,7 +666,7 @@ public final /* synthetic */ class bn implements IInvokable {
                 aqx aqxVar2 = new aqx();
                 byoVar.getClass();
                 int i11 = 0;
-                ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.getKClassFromClass(Context.class), dal.getKClassFromClass(String.class), dal.getKClassFromClass(String.class),
+                ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(Context.class), dal.getKClassFromClass(String.class), dal.getKClassFromClass(String.class),
                         dal.getKClassFromClass(String.class), dal.getKClassFromClass(String.class), dal.getKClassFromClass(DialogInterface.OnClickListener.class),
                         dal.getKClassFromClass(DialogInterface.OnClickListener.class) }, 7, dqc.bh(StaticHelpers7.az(byn.a)).getMethodResolverBasedOnPreviouslyProvidedConfig()))
                         .e(context4, str, strZ9, strZ10, strZ11, aqxVar, aqxVar2);
@@ -710,7 +710,7 @@ public final /* synthetic */ class bn implements IInvokable {
                 return kotlinUnitVar;
             case 7:
                 bah bahVar = (bah) obj;
-                cdj cdjVar = new cdj();
+                DexFinder cdjVar = new DexFinder();
                 String[] strArr = { "com.tencent.mm.plugin.brandservice.api.TransferResultInfo" /*
                                                                                                  * cnb.z(-
                                                                                                  * 476917463513898L)
@@ -731,7 +731,7 @@ public final /* synthetic */ class bn implements IInvokable {
                 fjVar.b = arrayList3;
                 arrayList3.add(cstVar);
                 cdjVar.f = fjVar;
-                cdjVar.t("MicroMsg.BaseTransferRequest" /* "MicroMsg.BaseTransferRequest" /* "MicroMsg.BaseTransferRequest" /* cnb.z(-476135779466026L)  */);
+                cdjVar.usingStrings("MicroMsg.BaseTransferRequest" /* "MicroMsg.BaseTransferRequest" /* "MicroMsg.BaseTransferRequest" /* cnb.z(-476135779466026L)  */);
                 bahVar.getClass();
                 bahVar.d = cdjVar;
                 return kotlinUnitVar;
@@ -782,8 +782,8 @@ public final /* synthetic */ class bn implements IInvokable {
                 return kotlinUnitVar;
             case 13:
                 bah bahVar2 = (bah) obj;
-                cdj cdjVar2 = new cdj();
-                cdjVar2.t("doRevokeMsg xmlSrvMsgId=%d talker=%s isGet=%s" /* "doRevokeMsg xmlSrvMsgId=%d talker=%s isGet=%s" /* "doRevokeMsg xmlSrvMsgId=%d talker=%s isGet=%s" /* cnb.z(-457229333429034L)  */);
+                DexFinder cdjVar2 = new DexFinder();
+                cdjVar2.usingStrings("doRevokeMsg xmlSrvMsgId=%d talker=%s isGet=%s" /* "doRevokeMsg xmlSrvMsgId=%d talker=%s isGet=%s" /* "doRevokeMsg xmlSrvMsgId=%d talker=%s isGet=%s" /* cnb.z(-457229333429034L)  */);
                 bahVar2.getClass();
                 bahVar2.d = cdjVar2;
                 return kotlinUnitVar;
@@ -939,7 +939,7 @@ public final /* synthetic */ class bn implements IInvokable {
                                 dlx.a.getClass();
                                 MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(dlx.b()).getMethodResolverBasedOnPreviouslyProvidedConfig();
                                 methodResolverVarT.name = "rawQuery" /* "rawQuery" /* "rawQuery" /* cnb.z(-103246718827306L)  */;
-                                Object objJ = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.getKClassFromClass(String.class), dal.getKClassFromClass(Object[].class) },
+                                Object objJ = ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(String.class), dal.getKClassFromClass(Object[].class) },
                                         2, methodResolverVarT)).j("SELECT createTime FROM message WHERE msgSvrId = ?" /*
                                                                                                             * cnb.z(-
                                                                                                             * 442695164099370L)

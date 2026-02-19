@@ -17,7 +17,7 @@ public final class gd extends SwitchHook implements IDexFind {
         List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(gb.a));
         gd gdVar = a;
         HookManager hookManagerVarAb = PackageParam.createHook(gdVar, listBf);
-        gdVar.x(hookManagerVarAb, new bn(24));
+        gdVar.hookAfter(hookManagerVarAb, new bn(24));
         hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 

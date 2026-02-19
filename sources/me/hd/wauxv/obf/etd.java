@@ -19,7 +19,7 @@ public final class etd extends doi implements bgj {
     public final /* synthetic */ String u;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public /* synthetic */ etd(String str, String str2, String str3, String str4, String str5, afw afwVar, int i) {
+    public /* synthetic */ etd(String str, String str2, String str3, String str4, String str5, kotlinx$coroutines$internal$DispatchedContinuation afwVar, int i) {
         super(2, afwVar);
         this.a = i;
         this.p = str;
@@ -32,7 +32,7 @@ public final class etd extends doi implements bgj {
     @Override // me.hd.wauxv.obf.bgj
     public final Object g(Object obj, Object obj2) {
         ahp ahpVar = (ahp) obj;
-        afw afwVar = (afw) obj2;
+        kotlinx$coroutines$internal$DispatchedContinuation afwVar = (kotlinx$coroutines$internal$DispatchedContinuation) obj2;
         switch (this.a) {
             case 0:
                 break;
@@ -41,7 +41,7 @@ public final class etd extends doi implements bgj {
     }
 
     @Override // me.hd.wauxv.obf.nc
-    public final afw h(Object obj, afw afwVar) {
+    public final kotlinx$coroutines$internal$DispatchedContinuation h(Object obj, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         switch (this.a) {
             case 0:
                 etd etdVar = new etd(this.p, this.r, this.s, this.t, this.u, afwVar, 0);
@@ -100,7 +100,7 @@ public final class etd extends doi implements bgj {
                     akq akqVar = akq.f;
                     dob dobVar = new dob();
                     akqVar.getClass();
-                    cla claVar = new cla(ajn.g(ahpVar, bmy.aa(akqVar, dobVar), new bhn(str8, beoVar, (afw) null, i3)));
+                    cla claVar = new cla(ajn.g(ahpVar, bmy.aa(akqVar, dobVar), new bhn(str8, beoVar, (kotlinx$coroutines$internal$DispatchedContinuation) null, i3)));
                     this.o = null;
                     this.d = strH;
                     this.e = strN;
@@ -153,7 +153,7 @@ public final class etd extends doi implements bgj {
                     akq akqVar2 = akq.f;
                     dob dobVar2 = new dob();
                     akqVar2.getClass();
-                    cla claVar2 = new cla(ajn.g(ahpVar2, bmy.aa(akqVar2, dobVar2), new bhn(str10, beoVar2, (afw) null, i5)));
+                    cla claVar2 = new cla(ajn.g(ahpVar2, bmy.aa(akqVar2, dobVar2), new bhn(str10, beoVar2, (kotlinx$coroutines$internal$DispatchedContinuation) null, i5)));
                     this.o = null;
                     this.d = strH2;
                     this.e = strN2;

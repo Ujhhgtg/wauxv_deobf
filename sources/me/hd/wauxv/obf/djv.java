@@ -61,7 +61,7 @@ public final class djv extends SwitchHook implements IDexFind, IDatabaseOperatio
         HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         djv djvVar = a;
         HookManager hookManagerVarAd = djvVar.createImmediateHook(methodHookWrapperVar, hookPriorityEnumVar);
-        djvVar.x(hookManagerVarAd, new djk(3));
+        djvVar.hookAfter(hookManagerVarAd, new djk(3));
         hookManagerVarAd.initInstantCollectionAndApplyHooks();
     }
 

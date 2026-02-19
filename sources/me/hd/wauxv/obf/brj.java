@@ -5,7 +5,7 @@ package me.hd.wauxv.obf;
 public final class brj extends CancellableContinuation {
     public final alq ab;
 
-    public brj(afw afwVar, alq alqVar) {
+    public brj(kotlinx$coroutines$internal$DispatchedContinuation afwVar, alq alqVar) {
         super(afwVar);
         this.ab = alqVar;
     }

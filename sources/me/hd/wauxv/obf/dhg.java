@@ -156,8 +156,8 @@ public final /* synthetic */ class dhg implements IInvokable {
                 return kotlinUnitVar;
             case 4:
                 bah bahVar = (bah) obj;
-                cdj cdjVar = new cdj();
-                cdjVar.t("MicroMsg.EmojiResHelper" /* "MicroMsg.EmojiResHelper" /* "MicroMsg.EmojiResHelper" /* "MicroMsg.EmojiResHelper" /* cnb.z(-458960205249322L)   */,
+                DexFinder cdjVar = new DexFinder();
+                cdjVar.usingStrings("MicroMsg.EmojiResHelper" /* "MicroMsg.EmojiResHelper" /* "MicroMsg.EmojiResHelper" /* "MicroMsg.EmojiResHelper" /* cnb.z(-458960205249322L)   */,
                         "parseSmileyPanelConfig parseXML exception:%s" /* "parseSmileyPanelConfig parseXML exception:%s" /* "parseSmileyPanelConfig parseXML exception:%s" /* "parseSmileyPanelConfig parseXML exception:%s" /* cnb.z(-458857126034218L)   */);
                 bahVar.getClass();
                 bahVar.d = cdjVar;
@@ -238,8 +238,8 @@ public final /* synthetic */ class dhg implements IInvokable {
                 String[] strArr = { "com.tencent.mm.plugin.webview.permission" /* "com.tencent.mm.plugin.webview.permission" /* "com.tencent.mm.plugin.webview.permission" /* "com.tencent.mm.plugin.webview.permission" /* cnb.z(-465505735408426L)   */ };
                 bahVar2.getClass();
                 bahVar2.a = SomeStaticHelpers.ab(strArr);
-                cdj cdjVar2 = new cdj();
-                cdjVar2.t("MicroMsg.LuggageGetA8Key" /* "MicroMsg.LuggageGetA8Key" /* "MicroMsg.LuggageGetA8Key" /* "MicroMsg.LuggageGetA8Key" /* cnb.z(-462580862679850L)   */,
+                DexFinder cdjVar2 = new DexFinder();
+                cdjVar2.usingStrings("MicroMsg.LuggageGetA8Key" /* "MicroMsg.LuggageGetA8Key" /* "MicroMsg.LuggageGetA8Key" /* "MicroMsg.LuggageGetA8Key" /* cnb.z(-462580862679850L)   */,
                         "WebView-Trace onSceneEnd resp or cb not found(%b/%b), reqUrl: %s, reason: %d" /*
                                                                                                         * cnb.z(-
                                                                                                         * 462421948889898L)
@@ -251,9 +251,9 @@ public final /* synthetic */ class dhg implements IInvokable {
                 return kotlinUnitVar;
             case 9:
                 bah bahVar3 = (bah) obj;
-                cdj cdjVar3 = new cdj();
-                cdj.l(cdjVar3, "com.tencent.mm.ui.HomeUI" /* "com.tencent.mm.ui.HomeUI" /* "com.tencent.mm.ui.HomeUI" /* "com.tencent.mm.ui.HomeUI" /* cnb.z(-636376714312490L)   */);
-                cdjVar3.t("MicroMsg.LauncherUI.HomeUI" /* "MicroMsg.LauncherUI.HomeUI" /* "MicroMsg.LauncherUI.HomeUI" /* "MicroMsg.LauncherUI.HomeUI" /* cnb.z(-635719584316202L)   */,
+                DexFinder cdjVar3 = new DexFinder();
+                DexFinder.setClassEquals(cdjVar3, "com.tencent.mm.ui.HomeUI" /* "com.tencent.mm.ui.HomeUI" /* "com.tencent.mm.ui.HomeUI" /* "com.tencent.mm.ui.HomeUI" /* cnb.z(-636376714312490L)   */);
+                cdjVar3.usingStrings("MicroMsg.LauncherUI.HomeUI" /* "MicroMsg.LauncherUI.HomeUI" /* "MicroMsg.LauncherUI.HomeUI" /* "MicroMsg.LauncherUI.HomeUI" /* cnb.z(-635719584316202L)   */,
                         "[initActionBar] isChattingForeground True!" /* "[initActionBar] isChattingForeground True!" /* "[initActionBar] isChattingForeground True!" /* "[initActionBar] isChattingForeground True!" /* cnb.z(-635569260460842L)   */);
                 bahVar3.getClass();
                 bahVar3.d = cdjVar3;
@@ -325,19 +325,19 @@ public final /* synthetic */ class dhg implements IInvokable {
                                     String strConcat = str4.concat(".thumbUrl.png" /* ".thumbUrl.png" /* ".thumbUrl.png" /* ".thumbUrl.png" /* cnb.z(-530763468503850L)   */);
                                     diqVar.getClass();
                                     Dispatchers$Default alcVar = aou.a;
-                                    KotlinHelpers2.bf(akq.f, new ckx(str5, strConcat, (afw) null));
+                                    KotlinHelpers2.bf(akq.f, new ckx(str5, strConcat, (kotlinx$coroutines$internal$DispatchedContinuation) null));
                                 }
                                 if (str6 != null) {
                                     String strConcat2 = str4.concat(".imageBgUrl.png" /* ".imageBgUrl.png" /* ".imageBgUrl.png" /* ".imageBgUrl.png" /* cnb.z(-530754878569258L)   */);
                                     diqVar.getClass();
                                     Dispatchers$Default alcVar2 = aou.a;
-                                    KotlinHelpers2.bf(akq.f, new ckx(str6, strConcat2, (afw) null));
+                                    KotlinHelpers2.bf(akq.f, new ckx(str6, strConcat2, (kotlinx$coroutines$internal$DispatchedContinuation) null));
                                 }
                                 if (str7 != null) {
                                     String strConcat3 = str4.concat(".videoBgUrl.png" /* ".videoBgUrl.png" /* ".videoBgUrl.png" /* ".videoBgUrl.png" /* cnb.z(-530686159092522L)   */);
                                     diqVar.getClass();
                                     Dispatchers$Default alcVar3 = aou.a;
-                                    KotlinHelpers2.bf(akq.f, new ckx(str7, strConcat3, (afw) null));
+                                    KotlinHelpers2.bf(akq.f, new ckx(str7, strConcat3, (kotlinx$coroutines$internal$DispatchedContinuation) null));
                                 }
                                 dnc.sendToast(null, 3, "下载完成" /* "下载完成" /* "下载完成" /* "下载完成" /* cnb.z(-530617439615786L)   */);
                             } else {
@@ -375,14 +375,14 @@ public final /* synthetic */ class dhg implements IInvokable {
                 String[] strArr3 = { "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* cnb.z(-352943232514858L)   */ };
                 bahVar4.getClass();
                 bahVar4.a = SomeStaticHelpers.ab(strArr3);
-                cdj cdjVar4 = new cdj();
+                DexFinder cdjVar4 = new DexFinder();
                 if (cdjVar4.f == null) {
                     cdjVar4.f = new fj(i5);
                 }
                 fj fjVar = cdjVar4.f;
                 throwIfVar1IsNull(fjVar);
-                fjVar.d = new bqh(4);
-                cdjVar4.t("addDownLoadSns" /* "addDownLoadSns" /* "addDownLoadSns" /* "addDownLoadSns" /* cnb.z(-352805793561386L)   */,
+                fjVar.usingStringsType = new bqh(4);
+                cdjVar4.usingStrings("addDownLoadSns" /* "addDownLoadSns" /* "addDownLoadSns" /* "addDownLoadSns" /* cnb.z(-352805793561386L)   */,
                         "com.tencent.mm.plugin.sns.model.DownloadManager" /* "com.tencent.mm.plugin.sns.model.DownloadManager" /* "com.tencent.mm.plugin.sns.model.DownloadManager" /* "com.tencent.mm.plugin.sns.model.DownloadManager" /* cnb.z(-352724189182762L)   */);
                 bahVar4.d = cdjVar4;
                 return kotlinUnitVar;
@@ -462,8 +462,8 @@ public final /* synthetic */ class dhg implements IInvokable {
                         /* "Missing required view with ID: " /* "Missing required view with ID: " /* "Missing required view with ID: " /* cnb.z(-660703409077034L)   */.concat(viewK.getResources().getResourceName(i12)));
             case 17:
                 bah bahVar5 = (bah) obj;
-                cdj cdjVar5 = new cdj();
-                cdjVar5.t("realTimeUpdate" /* "realTimeUpdate" /* "realTimeUpdate" /* "realTimeUpdate" /* cnb.z(-534272456784682L)   */,
+                DexFinder cdjVar5 = new DexFinder();
+                cdjVar5.usingStrings("realTimeUpdate" /* "realTimeUpdate" /* "realTimeUpdate" /* "realTimeUpdate" /* cnb.z(-534272456784682L)   */,
                         "com.tencent.mm.plugin.sns.ui.improve.item.ImproveTimelineItemMeasure" /*
                                                                                                 * cnb.z(-
                                                                                                 * 534208032275242L)
@@ -540,16 +540,16 @@ public final /* synthetic */ class dhg implements IInvokable {
                 return kotlinUnitVar;
             case 23:
                 bah bahVar6 = (bah) obj;
-                cdj cdjVar6 = new cdj();
-                cdjVar6.t("updateStruct" /* "updateStruct" /* "updateStruct" /* "updateStruct" /* cnb.z(-533636801624874L)   */,
+                DexFinder cdjVar6 = new DexFinder();
+                cdjVar6.usingStrings("updateStruct" /* "updateStruct" /* "updateStruct" /* "updateStruct" /* cnb.z(-533636801624874L)   */,
                         "com.tencent.mm.plugin.sns.ui.item.improve.TimelineItemMeasure" /* "com.tencent.mm.plugin.sns.ui.item.improve.TimelineItemMeasure" /* "com.tencent.mm.plugin.sns.ui.item.improve.TimelineItemMeasure" /* "com.tencent.mm.plugin.sns.ui.item.improve.TimelineItemMeasure" /* cnb.z(-533563787180842L)   */);
                 bahVar6.getClass();
                 bahVar6.d = cdjVar6;
                 return kotlinUnitVar;
             case 24:
                 bah bahVar7 = (bah) obj;
-                cdj cdjVar7 = new cdj();
-                cdjVar7.t("getInfo" /* "getInfo" /* "getInfo" /* "getInfo" /* cnb.z(-533396283456298L)   */,
+                DexFinder cdjVar7 = new DexFinder();
+                cdjVar7.usingStrings("getInfo" /* "getInfo" /* "getInfo" /* "getInfo" /* cnb.z(-533396283456298L)   */,
                         "com.tencent.mm.plugin.sns.ui.improve.repository.ImproveListItem" /* "com.tencent.mm.plugin.sns.ui.improve.repository.ImproveListItem" /* "com.tencent.mm.plugin.sns.ui.improve.repository.ImproveListItem" /* "com.tencent.mm.plugin.sns.ui.improve.repository.ImproveListItem" /* cnb.z(-533361923717930L)   */);
                 bahVar7.getClass();
                 bahVar7.d = cdjVar7;
@@ -559,10 +559,10 @@ public final /* synthetic */ class dhg implements IInvokable {
                 return kotlinUnitVar;
             case 26:
                 bah bahVar8 = (bah) obj;
-                cdj cdjVar8 = new cdj();
+                DexFinder cdjVar8 = new DexFinder();
                 Class<String> clsBf4 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 cdjVar8.q(clsBf4 != null ? clsBf4 : String.class);
-                cdjVar8.t("getByLocalId" /* "getByLocalId" /* "getByLocalId" /* "getByLocalId" /* cnb.z(-376969279568682L)   */,
+                cdjVar8.usingStrings("getByLocalId" /* "getByLocalId" /* "getByLocalId" /* "getByLocalId" /* cnb.z(-376969279568682L)   */,
                         "com.tencent.mm.plugin.sns.storage.SnsInfoStorage" /* "com.tencent.mm.plugin.sns.storage.SnsInfoStorage" /* "com.tencent.mm.plugin.sns.storage.SnsInfoStorage" /* "com.tencent.mm.plugin.sns.storage.SnsInfoStorage" /* cnb.z(-376947804732202L)   */);
                 bahVar8.getClass();
                 bahVar8.d = cdjVar8;

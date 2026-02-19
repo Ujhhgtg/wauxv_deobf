@@ -6,7 +6,7 @@ import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public class CancellableContinuation extends aot implements afw, ahr {
+public class CancellableContinuation extends aot implements kotlinx$coroutines$internal$DispatchedContinuation, ahr {
     public static final /* synthetic */ AtomicIntegerFieldUpdater a = AtomicIntegerFieldUpdater.newUpdater(CancellableContinuation.class,
             "_decisionAndIndex$volatile");
     public static final /* synthetic */ AtomicReferenceFieldUpdater d = AtomicReferenceFieldUpdater.newUpdater(CancellableContinuation.class,
@@ -16,10 +16,10 @@ public class CancellableContinuation extends aot implements afw, ahr {
     private volatile /* synthetic */ int _decisionAndIndex$volatile;
     private volatile /* synthetic */ Object _parentHandle$volatile;
     private volatile /* synthetic */ Object _state$volatile;
-    public final afw f;
+    public final kotlinx$coroutines$internal$DispatchedContinuation f;
     public final ahh g;
 
-    public CancellableContinuation(afw afwVar) {
+    public CancellableContinuation(kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         super(1);
         this.f = afwVar;
         this.g = afwVar.c();
@@ -135,7 +135,7 @@ public class CancellableContinuation extends aot implements afw, ahr {
 
     @Override // me.hd.wauxv.obf.ahr
     public final ahr k() {
-        afw afwVar = this.f;
+        kotlinx$coroutines$internal$DispatchedContinuation afwVar = this.f;
         if (afwVar instanceof ahr) {
             return (ahr) afwVar;
         }
@@ -143,7 +143,7 @@ public class CancellableContinuation extends aot implements afw, ahr {
     }
 
     @Override // me.hd.wauxv.obf.aot
-    public final afw l() {
+    public final kotlinx$coroutines$internal$DispatchedContinuation l() {
         return this.f;
     }
 
@@ -229,7 +229,7 @@ public class CancellableContinuation extends aot implements afw, ahr {
                     throw new IllegalStateException("Already resumed");
                 }
                 boolean z = i == 4;
-                afw afwVar = this.f;
+                kotlinx$coroutines$internal$DispatchedContinuation afwVar = this.f;
                 if (!z && (afwVar instanceof DispatchedContinuation)) {
                     boolean z2 = i == 1 || i == 2;
                     int i4 = this.z;
@@ -352,7 +352,7 @@ public class CancellableContinuation extends aot implements afw, ahr {
         if (this.z != 2) {
             return false;
         }
-        afw afwVar = this.f;
+        kotlinx$coroutines$internal$DispatchedContinuation afwVar = this.f;
         throwIfVar1IsNull(afwVar,
                 "null cannot be cast to non-null type kotlinx.coroutines.internal.DispatchedContinuation<*>");
         return DispatchedContinuation.a.get((DispatchedContinuation) afwVar) != null;
@@ -363,7 +363,7 @@ public class CancellableContinuation extends aot implements afw, ahr {
     }
 
     public final void x() throws aoq {
-        afw afwVar = this.f;
+        kotlinx$coroutines$internal$DispatchedContinuation afwVar = this.f;
         Throwable th = null;
         DispatchedContinuation dispatchedContinuationVar = afwVar instanceof DispatchedContinuation ? (DispatchedContinuation) afwVar : null;
         if (dispatchedContinuationVar != null) {
@@ -403,7 +403,7 @@ public class CancellableContinuation extends aot implements afw, ahr {
     }
 
     public final void y(Dispatcher dispatcherVar) throws aoq {
-        afw afwVar = this.f;
+        kotlinx$coroutines$internal$DispatchedContinuation afwVar = this.f;
         DispatchedContinuation dispatchedContinuationVar = afwVar instanceof DispatchedContinuation ? (DispatchedContinuation) afwVar : null;
         i(this, Kotlin$Unit.INSTANCE, (dispatchedContinuationVar != null ? dispatchedContinuationVar.d : null) == dispatcherVar ? 4 : this.z);
     }

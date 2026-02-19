@@ -225,7 +225,7 @@ public final /* synthetic */ class dfq implements bgj {
             case 14:
                 int iIntValue4 = ((Integer) obj).intValue();
                 List list2 = (List) obj2;
-                afw afwVar = null;
+                kotlinx$coroutines$internal$DispatchedContinuation afwVar = null;
                 if (iIntValue4 == 2) {
                     for (Object obj4 : list2) {
                         int i18 = i2 + 1;
@@ -312,7 +312,7 @@ public final /* synthetic */ class dfq implements bgj {
             case 16:
                 int iIntValue6 = ((Integer) obj).intValue();
                 List list4 = (List) obj2;
-                afw afwVar2 = null;
+                kotlinx$coroutines$internal$DispatchedContinuation afwVar2 = null;
                 if (iIntValue6 == 2) {
                     for (Object obj6 : list4) {
                         int i21 = i2 + 1;

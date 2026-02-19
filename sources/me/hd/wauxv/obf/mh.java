@@ -47,7 +47,7 @@ public final class mh extends SwitchHook implements bnc {
             long msgId = msgInfoBean.getMsgId();
             MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(objB).getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT.ai = new dos(4);
-            Object objJ = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.getKClassFromClass(Long.TYPE) }, 1, methodResolverVarT)).j(Long.valueOf(msgId));
+            Object objJ = ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(Long.TYPE) }, 1, methodResolverVarT)).j(Long.valueOf(msgId));
             throwIfVar1IsNull(objJ);
             if (nullSafeIsEqual(objJ.toString(), "NoTransform" /* "NoTransform" /* "NoTransform" /* cnb.z(-440878392933162L)  */)) {
                 mgVar.put(Long.valueOf(msgInfoBean.getMsgId()), bool);
@@ -58,7 +58,7 @@ public final class mh extends SwitchHook implements bnc {
                 Class clsAz = StaticHelpers7.az(cgd.a);
                 KClass zcVarB = dal.getKClassFromClass(Boolean.TYPE);
                 Class cls = Integer.TYPE;
-                ((MethodHookWrapper) StaticHelpers6.n(new Object[] { clsAz, zcVarB, dal.getKClassFromClass(cls), dal.getKClassFromClass(cls) }, 4, methodResolverVarT2)).e(origin,
+                ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { clsAz, zcVarB, dal.getKClassFromClass(cls), dal.getKClassFromClass(cls) }, 4, methodResolverVarT2)).e(origin,
                         Boolean.FALSE, -1, 0);
             }
         }

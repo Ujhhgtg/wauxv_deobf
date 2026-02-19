@@ -133,7 +133,7 @@ public final class BottomTabMaterialHook extends SwitchHook implements bnp {
             MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(obj).getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT.name = "onPageSelected" /* "onPageSelected" /* "onPageSelected" /* "onPageSelected" /* cnb.z(-437253440535338L)   */;
             HookManager hookManagerVarAd = createImmediateHook((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods()), HookPriorityEnum.ENUM_DEFAULT);
-            qwVar.x(hookManagerVarAd, new StillAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(qbVar, 1));
+            qwVar.hookAfter(hookManagerVarAd, new StillAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(qbVar, 1));
             hookManagerVarAd.initInstantCollectionAndApplyHooks();
         }
     }

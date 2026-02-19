@@ -100,7 +100,7 @@ public abstract /* synthetic */ class StaticHelpers6 {
         return StaticHelpers5.safeGetFirstInList(methodResolverVar.findMethods());
     }
 
-    public static Object n(Object[] objArr, int i, MethodResolver methodResolverVar) {
+    public static Object setParamsBasedOnVar1Var2AndResolveFirstMethod(Object[] objArr, int i, MethodResolver methodResolverVar) {
         methodResolverVar.setParams(Arrays.copyOf(objArr, i));
         return StaticHelpers5.safeGetFirstInList(methodResolverVar.findMethods());
     }

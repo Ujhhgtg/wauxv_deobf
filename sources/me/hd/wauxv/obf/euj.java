@@ -13,7 +13,7 @@ public final class euj extends bws {
             int i = 0;
             MethodResolver methodResolverVarT = yg.s(-57896159148842L).getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT.name = "onCreate" /* "onCreate" /* "onCreate" /* cnb.z(-58119497448234L)  */;
-            HookManager hookManagerVarAd = a.createImmediateHook((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.getKClassFromClass(Bundle.class) }, 1, methodResolverVarT), HookPriorityEnum.ENUM_LOWEST);
+            HookManager hookManagerVarAd = a.createImmediateHook((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(Bundle.class) }, 1, methodResolverVarT), HookPriorityEnum.ENUM_LOWEST);
             hookManagerVarAd.m(new epy(15));
             hookManagerVarAd.initInstantCollectionAndApplyHooks();
         }

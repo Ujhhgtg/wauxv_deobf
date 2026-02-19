@@ -84,7 +84,7 @@ public final class SnsUploadAppInfoHook extends SwitchHook implements IDexFind {
         List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(dke.a));
         SnsUploadAppInfoHook dkhVar = a;
         HookManager hookManagerVarAb = PackageParam.createHook(dkhVar, listBf);
-        dkhVar.y(hookManagerVarAb, new djk(14));
+        dkhVar.hookBefore(hookManagerVarAb, new djk(14));
         hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 
